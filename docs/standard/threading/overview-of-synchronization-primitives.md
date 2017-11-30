@@ -1,183 +1,186 @@
 ---
-title: "Overview of Synchronization Primitives | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization, threads"
-  - "threading [.NET Framework],synchronizing threads"
-  - "managed threading"
+title: "同步處理原始物件概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization, threads
+- threading [.NET Framework],synchronizing threads
+- managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Overview of Synchronization Primitives
-.NET Framework 提供同步處理原始物件的範圍，以便控制執行緒的互動，及避免競爭情形。  這些可以大致分為三個類別：鎖定、信號及連鎖作業。  
+# <a name="overview-of-synchronization-primitives"></a><span data-ttu-id="dbfa9-102">同步處理原始物件概觀</span><span class="sxs-lookup"><span data-stu-id="dbfa9-102">Overview of Synchronization Primitives</span></span>
+<span data-ttu-id="dbfa9-103"><a name="top"></a>.NET Framework 提供同步處理原始物件的範圍，以便控制執行緒的互動，及避免競爭情形。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-103"><a name="top"></a> The .NET Framework provides a range of synchronization primitives for controlling the interactions of threads and avoiding race conditions.</span></span> <span data-ttu-id="dbfa9-104">這些可以大致分為三個類別：鎖定、信號及連鎖作業。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-104">These can be roughly divided into three categories: locking, signaling, and interlocked operations.</span></span>  
   
- 這些分類不整齊，也未清楚定義：某些同步處理機制具有多個分類的特性，一次釋放單一執行緒的事件其作用就像是鎖定，釋放任何鎖定可以視為信號，而連鎖作業可以用來建構鎖定。  不過，類別仍然很有用。  
+ <span data-ttu-id="dbfa9-105">這些分類不整齊，也未清楚定義：某些同步處理機制具有多個分類的特性，一次釋放單一執行緒的事件其作用就像是鎖定，釋放任何鎖定可以視為信號，而連鎖作業可以用來建構鎖定。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-105">The categories are not tidy nor clearly defined: Some synchronization mechanisms have characteristics of multiple categories; events that release a single thread at a time are functionally like locks; the release of any lock can be thought of as a signal; and interlocked operations can be used to construct locks.</span></span> <span data-ttu-id="dbfa9-106">不過，類別仍然很有用。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-106">However, the categories are still useful.</span></span>  
   
- 請務必記得執行緒同步處理是合作式的。  如果即使一個執行緒略過同步處理機制，並直接存取受保護的資源，該同步處理機制便無法有效。  
+ <span data-ttu-id="dbfa9-107">請務必記得執行緒同步處理是合作式的。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-107">It is important to remember that thread synchronization is cooperative.</span></span> <span data-ttu-id="dbfa9-108">如果即使一個執行緒略過同步處理機制，並直接存取受保護的資源，該同步處理機制便無法有效。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-108">If even one thread bypasses a synchronization mechanism and accesses the protected resource directly, that synchronization mechanism cannot be effective.</span></span>  
   
- 本概觀包含下列各節：  
+ <span data-ttu-id="dbfa9-109">本概觀包含下列各節：</span><span class="sxs-lookup"><span data-stu-id="dbfa9-109">This overview contains the following sections:</span></span>  
   
--   [鎖定](#locking)  
+-   [<span data-ttu-id="dbfa9-110">鎖定</span><span class="sxs-lookup"><span data-stu-id="dbfa9-110">Locking</span></span>](#locking)  
   
--   [Signaling](#signaling)  
+-   [<span data-ttu-id="dbfa9-111">訊號</span><span class="sxs-lookup"><span data-stu-id="dbfa9-111">Signaling</span></span>](#signaling)  
   
--   [輕量型同步處理類型](#lightweight_synchronization_types)  
+-   [<span data-ttu-id="dbfa9-112">輕量型同步處理類型</span><span class="sxs-lookup"><span data-stu-id="dbfa9-112">Lightweight Synchronization Types</span></span>](#lightweight_synchronization_types)  
   
--   [SpinWait](#spinwait)  
+-   [<span data-ttu-id="dbfa9-113">SpinWait</span><span class="sxs-lookup"><span data-stu-id="dbfa9-113">SpinWait</span></span>](#spinwait)  
   
--   [Interlocked 作業](#interlocked_operations)  
+-   [<span data-ttu-id="dbfa9-114">Interlocked 作業</span><span class="sxs-lookup"><span data-stu-id="dbfa9-114">Interlocked Operations</span></span>](#interlocked_operations)  
   
 <a name="locking"></a>   
-## 鎖定  
- 鎖定能提供資源的控制，一次給一個執行緒，或給指定數目的執行緒。  正在使用鎖定時要求獨佔鎖定的執行緒會封鎖，直到鎖定可用為止。  
+## <a name="locking"></a><span data-ttu-id="dbfa9-115">鎖定</span><span class="sxs-lookup"><span data-stu-id="dbfa9-115">Locking</span></span>  
+ <span data-ttu-id="dbfa9-116">鎖定能提供資源的控制，一次給一個執行緒，或給指定數目的執行緒。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-116">Locks give control of a resource to one thread at a time, or to a specified number of threads.</span></span> <span data-ttu-id="dbfa9-117">正在使用鎖定時要求獨佔鎖定的執行緒會封鎖，直到鎖定可用為止。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-117">A thread that requests an exclusive lock when the lock is in use blocks until the lock becomes available.</span></span>  
   
-### 獨佔鎖定  
- 鎖定的最簡單形式是 C\# `lock` 陳述式 \(在 Visual Basic 中為 `SyncLock`\)，它能控制程式碼區塊的存取權。  這類區塊經常稱為重要區段。  `lock` 陳述式的實作是使用 <xref:System.Threading.Monitor> 類別的 <xref:System.Threading.Monitor.Enter%2A> 和 <xref:System.Threading.Monitor.Exit%2A> 方法，而且它會使用 `try…catch…finally` 以確保釋放鎖定。  
+### <a name="exclusive-locks"></a><span data-ttu-id="dbfa9-118">獨佔鎖定</span><span class="sxs-lookup"><span data-stu-id="dbfa9-118">Exclusive Locks</span></span>  
+ <span data-ttu-id="dbfa9-119">鎖定的最簡單形式是 C# 中的 `lock` 陳述式和 Visual Basic 中的 `SyncLock` 陳述式，它能控制程式碼區塊的存取權。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-119">The simplest form of locking is the `lock` statement in C# and the `SyncLock` statement in Visual Basic, which controls access to a block of code.</span></span> <span data-ttu-id="dbfa9-120">這類區塊經常稱為重要區段。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-120">Such a block is frequently referred to as a critical section.</span></span> <span data-ttu-id="dbfa9-121">`lock`陳述式藉由使用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>和<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>方法，並使用`try…catch…finally`區塊，以確保釋放鎖定。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-121">The `lock` statement is implemented by using the <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> methods, and it uses `try…catch…finally` block to ensure that the lock is released.</span></span>  
   
- 一般而言，使用 `lock` 陳述式保護小型區塊的程式碼，永遠不會跨越超出單一方法，是使用 <xref:System.Threading.Monitor> 類別最佳的方式。  雖然功能強大，但 <xref:System.Threading.Monitor> 類別容易發生遺棄的鎖定和死結。  
+ <span data-ttu-id="dbfa9-122">一般情況下，使用`lock`或`SyncLock`陳述式保護小型區塊的程式碼，永遠不會跨越超出單一方法，是要使用的最佳方式<xref:System.Threading.Monitor>類別。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-122">In general, using the `lock` or `SyncLock` statement to protect small blocks of code, never spanning more than a single method, is the best way to use the <xref:System.Threading.Monitor> class.</span></span> <span data-ttu-id="dbfa9-123">雖然功能強大，但 <xref:System.Threading.Monitor> 類別容易發生遺棄的鎖定和死結。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-123">Although powerful, the <xref:System.Threading.Monitor> class is prone to orphan locks and deadlocks.</span></span>  
   
-#### Monitor 類別  
- <xref:System.Threading.Monitor> 類別會提供額外的功能，可以用於搭配 `lock` 陳述式：  
+#### <a name="monitor-class"></a><span data-ttu-id="dbfa9-124">Monitor 類別</span><span class="sxs-lookup"><span data-stu-id="dbfa9-124">Monitor Class</span></span>  
+ <span data-ttu-id="dbfa9-125"><xref:System.Threading.Monitor> 類別會提供額外的功能，可以用於搭配 `lock` 陳述式：</span><span class="sxs-lookup"><span data-stu-id="dbfa9-125">The <xref:System.Threading.Monitor> class provides additional functionality, which can be used in conjunction with the `lock` statement:</span></span>  
   
--   <xref:System.Threading.Monitor.TryEnter%2A> 方法可讓遭到封鎖而等待資源的執行緒在指定的間隔之後放棄。  它會傳回布林值，指出成功或失敗，可用來偵測及避免可能的死結。  
+-   <span data-ttu-id="dbfa9-126"><xref:System.Threading.Monitor.TryEnter%2A> 方法可讓遭到封鎖而等待資源的執行緒在指定的間隔之後放棄。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-126">The <xref:System.Threading.Monitor.TryEnter%2A> method allows a thread that is blocked waiting for the resource to give up after a specified interval.</span></span> <span data-ttu-id="dbfa9-127">它會傳回布林值，指出成功或失敗，可用來偵測及避免可能的死結。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-127">It returns a Boolean value indicating success or failure, which can be used to detect and avoid potential deadlocks.</span></span>  
   
--   <xref:System.Threading.Monitor.Wait%2A> 方法由重要區段中的執行緒呼叫。  它會放棄資源的控制權並封鎖直到資源再次可用為止。  
+-   <span data-ttu-id="dbfa9-128"><xref:System.Threading.Monitor.Wait%2A> 方法由重要區段中的執行緒呼叫。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-128">The <xref:System.Threading.Monitor.Wait%2A> method is called by a thread in a critical section.</span></span> <span data-ttu-id="dbfa9-129">它會放棄資源的控制權並封鎖直到資源再次可用為止。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-129">It gives up control of the resource and blocks until the resource is available again.</span></span>  
   
--   <xref:System.Threading.Monitor.Pulse%2A> 和 <xref:System.Threading.Monitor.PulseAll%2A> 方法可以讓即將要釋放鎖定，或呼叫 <xref:System.Threading.Monitor.Wait%2A> 的執行緒，將一或多個執行緒放入就緒佇列，使它們可以取得鎖定。  
+-   <span data-ttu-id="dbfa9-130"><xref:System.Threading.Monitor.Pulse%2A> 和 <xref:System.Threading.Monitor.PulseAll%2A> 方法可以讓即將要釋放鎖定，或呼叫 <xref:System.Threading.Monitor.Wait%2A> 的執行緒，將一或多個執行緒放入就緒佇列，使它們可以取得鎖定。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-130">The <xref:System.Threading.Monitor.Pulse%2A> and <xref:System.Threading.Monitor.PulseAll%2A> methods allow a thread that is about to release the lock or to call <xref:System.Threading.Monitor.Wait%2A> to put one or more threads into the ready queue, so that they can acquire the lock.</span></span>  
   
- <xref:System.Threading.Monitor.Wait%2A> 方法多載上的等候逾時可讓等候中的執行緒可以逸出到就緒佇列。  
+ <span data-ttu-id="dbfa9-131"><xref:System.Threading.Monitor.Wait%2A> 方法多載上的等候逾時可讓等候中的執行緒可以逸出到就緒佇列。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-131">Timeouts on <xref:System.Threading.Monitor.Wait%2A> method overloads allow waiting threads to escape to the ready queue.</span></span>  
   
- <xref:System.Threading.Monitor> 類別可提供多個應用程式定義域中的鎖定 \(如果用於鎖定的物件衍生自 <xref:System.MarshalByRefObject> 的話\)。  
+ <span data-ttu-id="dbfa9-132"><xref:System.Threading.Monitor> 類別可提供多個應用程式定義域中的鎖定 (如果用於鎖定的物件衍生自 <xref:System.MarshalByRefObject> 的話)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-132">The <xref:System.Threading.Monitor> class can provide locking in multiple application domains if the object used for the lock derives from <xref:System.MarshalByRefObject>.</span></span>  
   
- <xref:System.Threading.Monitor> 具有執行緒相似性。  也就是進入監視器的執行緒必須藉由呼叫 <xref:System.Threading.Monitor.Exit%2A> 或 <xref:System.Threading.Monitor.Wait%2A> 結束。  
+ <span data-ttu-id="dbfa9-133"><xref:System.Threading.Monitor> 具有執行緒相似性。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-133"><xref:System.Threading.Monitor> has thread affinity.</span></span> <span data-ttu-id="dbfa9-134">也就是進入監視器的執行緒必須藉由呼叫 <xref:System.Threading.Monitor.Exit%2A> 或 <xref:System.Threading.Monitor.Wait%2A> 結束。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-134">That is, a thread that entered the monitor must exit by calling <xref:System.Threading.Monitor.Exit%2A> or <xref:System.Threading.Monitor.Wait%2A>.</span></span>  
   
- <xref:System.Threading.Monitor> 類別無法具現化。  其方法是靜態的 \(在 Visual Basic 中為 `Shared`\)，並且會對可具現化的鎖定物件進行操作。  
+ <span data-ttu-id="dbfa9-135"><xref:System.Threading.Monitor> 類別無法具現化。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-135">The <xref:System.Threading.Monitor> class is not instantiable.</span></span> <span data-ttu-id="dbfa9-136">其方法是靜態的 (在 Visual Basic 中為 `Shared`)，並且會對可具現化的鎖定物件進行操作。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-136">Its methods are static (`Shared` in Visual Basic), and act on an instantiable lock object.</span></span>  
   
- 如需概念的概觀，請參閱[監視器](../Topic/Monitors.md)。  
+ <span data-ttu-id="dbfa9-137">如需概念的概觀，請參閱[監視器](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-137">For a conceptual overview, see [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).</span></span>  
   
-#### Mutex 類別  
- 執行緒藉由呼叫其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法的多載來要求 <xref:System.Threading.Mutex>。  會提供具有逾時的多載，好讓執行緒放棄等候。  不同於 <xref:System.Threading.Monitor> 類別，mutex 可以是本機或全域。  全域 mutex，也稱為具名 mutex，可在作業系統各處看到，並可以用來同步處理多個應用程式定義域或處理序中的執行緒。  本機 mutex 衍生自 <xref:System.MarshalByRefObject>，而且可以跨應用程式定義域界限使用。  
+#### <a name="mutex-class"></a><span data-ttu-id="dbfa9-138">Mutex 類別</span><span class="sxs-lookup"><span data-stu-id="dbfa9-138">Mutex Class</span></span>  
+ <span data-ttu-id="dbfa9-139">執行緒藉由呼叫其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法的多載來要求 <xref:System.Threading.Mutex>。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-139">Threads request a <xref:System.Threading.Mutex> by calling an overload of its <xref:System.Threading.WaitHandle.WaitOne%2A> method.</span></span> <span data-ttu-id="dbfa9-140">會提供具有逾時的多載，好讓執行緒放棄等候。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-140">Overloads with timeouts are provided, to allow threads to give up the wait.</span></span> <span data-ttu-id="dbfa9-141">不同於 <xref:System.Threading.Monitor> 類別，mutex 可以是本機或全域。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-141">Unlike the <xref:System.Threading.Monitor> class, a mutex can be either local or global.</span></span> <span data-ttu-id="dbfa9-142">全域 mutex，也稱為具名 mutex，可在作業系統各處看到，並可以用來同步處理多個應用程式定義域或處理序中的執行緒。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-142">Global mutexes, also called named mutexes, are visible throughout the operating system, and can be used to synchronize threads in multiple application domains or processes.</span></span> <span data-ttu-id="dbfa9-143">本機 mutex 衍生自 <xref:System.MarshalByRefObject>，而且可以跨應用程式定義域界限使用。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-143">Local mutexes derive from <xref:System.MarshalByRefObject>, and can be used across application domain boundaries.</span></span>  
   
- 此外，<xref:System.Threading.Mutex> 衍生自 <xref:System.Threading.WaitHandle>，這表示它可以搭配 <xref:System.Threading.WaitHandle> 所提供的發出訊號機制使用，例如 <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法。  
+ <span data-ttu-id="dbfa9-144">此外，<xref:System.Threading.Mutex> 衍生自 <xref:System.Threading.WaitHandle>，這表示它可以搭配 <xref:System.Threading.WaitHandle> 所提供的發出訊號機制使用，例如 <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-144">In addition, <xref:System.Threading.Mutex> derives from <xref:System.Threading.WaitHandle>, which means that it can be used with the signaling mechanisms provided by <xref:System.Threading.WaitHandle>, such as the <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, and <xref:System.Threading.WaitHandle.SignalAndWait%2A> methods.</span></span>  
   
- 像 <xref:System.Threading.Monitor> 一樣，<xref:System.Threading.Mutex> 具有執行緒相似性。  不同於 <xref:System.Threading.Monitor>，<xref:System.Threading.Mutex> 是可具現化的物件。  
+ <span data-ttu-id="dbfa9-145">像 <xref:System.Threading.Monitor> 一樣，<xref:System.Threading.Mutex> 具有執行緒相似性。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-145">Like <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> has thread affinity.</span></span> <span data-ttu-id="dbfa9-146">不同於 <xref:System.Threading.Monitor>，<xref:System.Threading.Mutex> 是可具現化的物件。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-146">Unlike <xref:System.Threading.Monitor>, a <xref:System.Threading.Mutex> is an instantiable object.</span></span>  
   
- 如需概念的概觀，請參閱 [Mutexes](../../../docs/standard/threading/mutexes.md)。  
+ <span data-ttu-id="dbfa9-147">如需概念的概觀，請參閱 [Mutex](../../../docs/standard/threading/mutexes.md)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-147">For a conceptual overview, see [Mutexes](../../../docs/standard/threading/mutexes.md).</span></span>  
   
-#### SpinLock 類別  
- 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，當 <xref:System.Threading.Monitor> 所需的額外負荷降低效能時，您可以使用 <xref:System.Threading.SpinLock> 類別。  當 <xref:System.Threading.SpinLock> 遇到已鎖定的重要區段，它只會迴圈旋轉，直到鎖定可用為止。  如果鎖定維持的時間極短，旋轉可以提供比封鎖較佳的效能。  不過，如果鎖定維持時間超過數十個循環，<xref:System.Threading.SpinLock> 的效能和 <xref:System.Threading.Monitor> 相同，但會使用更多的 CPU 循環，因此可能會降低其他執行緒或處理序的效能。  
+#### <a name="spinlock-class"></a><span data-ttu-id="dbfa9-148">SpinLock 類別</span><span class="sxs-lookup"><span data-stu-id="dbfa9-148">SpinLock Class</span></span>  
+ <span data-ttu-id="dbfa9-149">從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用<xref:System.Threading.SpinLock>類別時所需的額外負荷<xref:System.Threading.Monitor>會降低效能。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-149">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use the <xref:System.Threading.SpinLock> class when the overhead required by <xref:System.Threading.Monitor> degrades performance.</span></span> <span data-ttu-id="dbfa9-150">當 <xref:System.Threading.SpinLock> 遇到已鎖定的重要區段，它只會迴圈旋轉，直到鎖定可用為止。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-150">When <xref:System.Threading.SpinLock> encounters a locked critical section, it simply spins in a loop until the lock becomes available.</span></span> <span data-ttu-id="dbfa9-151">如果鎖定維持的時間極短，旋轉可以提供比封鎖較佳的效能。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-151">If the lock is held for a very short time, spinning can provide better performance than blocking.</span></span> <span data-ttu-id="dbfa9-152">不過，如果將鎖定保留超過數十循環，<xref:System.Threading.SpinLock>也會執行為<xref:System.Threading.Monitor>，但會使用更多的 CPU 循環，因此可能會降低其他執行緒或處理程序的效能。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-152">However, if the lock is held for more than a few tens of cycles, <xref:System.Threading.SpinLock> performs just as well as <xref:System.Threading.Monitor>, but will use more CPU cycles and thus can degrade the performance of other threads or processes.</span></span>  
   
-### 其他鎖定  
- 鎖定不需要獨佔。  允許有限數量的執行緒並行存取資源通常很有用。  號誌和 Reader\-Writer 鎖定是設計來控制這種共用的資源存取。  
+### <a name="other-locks"></a><span data-ttu-id="dbfa9-153">其他鎖定</span><span class="sxs-lookup"><span data-stu-id="dbfa9-153">Other Locks</span></span>  
+ <span data-ttu-id="dbfa9-154">鎖定不需要獨佔。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-154">Locks need not be exclusive.</span></span> <span data-ttu-id="dbfa9-155">允許有限數量的執行緒並行存取資源通常很有用。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-155">It is often useful to allow a limited number of threads concurrent access to a resource.</span></span> <span data-ttu-id="dbfa9-156">號誌和 Reader-Writer 鎖定是設計來控制這種共用的資源存取。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-156">Semaphores and reader-writer locks are designed to control this kind of pooled resource access.</span></span>  
   
-#### ReaderWriterLock 類別  
- <xref:System.Threading.ReaderWriterLockSlim> 類別會處理變更資料的執行緒 \(寫入器\) 必須對資源具有獨佔存取權的情況。  當寫入器不在使用中時，任何數目的讀取器都可以存取資源 \(例如，藉由呼叫 <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> 方法\)。  當執行緒要求獨佔存取權 \(例如，藉由呼叫 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> 方法\)，後續的讀取器要求會封鎖直到所有現有讀取器都結束鎖定，且寫入器已進入並離開鎖定為止。  
+#### <a name="readerwriterlock-class"></a><span data-ttu-id="dbfa9-157">ReaderWriterLock 類別</span><span class="sxs-lookup"><span data-stu-id="dbfa9-157">ReaderWriterLock Class</span></span>  
+ <span data-ttu-id="dbfa9-158"><xref:System.Threading.ReaderWriterLockSlim> 類別會處理變更資料的執行緒 (寫入器) 必須對資源具有獨佔存取權的情況。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-158">The <xref:System.Threading.ReaderWriterLockSlim> class addresses the case where a thread that changes data, the writer, must have exclusive access to a resource.</span></span> <span data-ttu-id="dbfa9-159">當寫入器不在使用中時，任何數目的讀取器都可以存取資源 (例如，藉由呼叫 <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> 方法)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-159">When the writer is not active, any number of readers can access the resource (for example, by calling the <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A> method).</span></span> <span data-ttu-id="dbfa9-160">當執行緒要求獨佔存取權 (例如，藉由呼叫 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> 方法)，後續的讀取器要求會封鎖直到所有現有讀取器都結束鎖定，且寫入器已進入並離開鎖定為止。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-160">When a thread requests exclusive access, (for example, by calling the <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A> method), subsequent reader requests block until all existing readers have exited the lock, and the writer has entered and exited the lock.</span></span>  
   
- <xref:System.Threading.ReaderWriterLockSlim> 具有執行緒相似性。  
+ <span data-ttu-id="dbfa9-161"><xref:System.Threading.ReaderWriterLockSlim> 具有執行緒相似性。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-161"><xref:System.Threading.ReaderWriterLockSlim> has thread affinity.</span></span>  
   
- 如需概念的概觀，請參閱 [Reader\-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md)。  
+ <span data-ttu-id="dbfa9-162">如需概念的概觀，請參閱 [Reader-Writer 鎖定](../../../docs/standard/threading/reader-writer-locks.md)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-162">For a conceptual overview, see [Reader-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md).</span></span>  
   
-#### Semaphore 類別  
- <xref:System.Threading.Semaphore> 類別可讓指定數目的執行緒存取資源。  要求資源的其他執行緒會封鎖直到執行緒釋放號誌為止。  
+#### <a name="semaphore-class"></a><span data-ttu-id="dbfa9-163">Semaphore 類別</span><span class="sxs-lookup"><span data-stu-id="dbfa9-163">Semaphore Class</span></span>  
+ <span data-ttu-id="dbfa9-164"><xref:System.Threading.Semaphore> 類別可讓指定數目的執行緒存取資源。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-164">The <xref:System.Threading.Semaphore> class allows a specified number of threads to access a resource.</span></span> <span data-ttu-id="dbfa9-165">要求資源的其他執行緒會封鎖直到執行緒釋放號誌為止。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-165">Additional threads requesting the resource block until a thread releases the semaphore.</span></span>  
   
- 和 <xref:System.Threading.Mutex> 類別一樣，<xref:System.Threading.Semaphore> 衍生自 <xref:System.Threading.WaitHandle>。  也像 <xref:System.Threading.Mutex> 一樣，<xref:System.Threading.Semaphore> 可以是本機或全域。  它可以跨應用程式定義域界限使用。  
+ <span data-ttu-id="dbfa9-166">和 <xref:System.Threading.Mutex> 類別一樣，<xref:System.Threading.Semaphore> 衍生自 <xref:System.Threading.WaitHandle>。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-166">Like the <xref:System.Threading.Mutex> class, <xref:System.Threading.Semaphore> derives from <xref:System.Threading.WaitHandle>.</span></span> <span data-ttu-id="dbfa9-167">也像 <xref:System.Threading.Mutex> 一樣，<xref:System.Threading.Semaphore> 可以是本機或全域。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-167">Also like <xref:System.Threading.Mutex>, a <xref:System.Threading.Semaphore> can be either local or global.</span></span> <span data-ttu-id="dbfa9-168">它可以跨應用程式定義域界限使用。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-168">It can be used across application domain boundaries.</span></span>  
   
- 不同於 <xref:System.Threading.Monitor>，<xref:System.Threading.Mutex> 和 <xref:System.Threading.ReaderWriterLock>，<xref:System.Threading.Semaphore> 沒有執行緒相似性。  這表示它可用於一個執行緒取得號誌，而另一個釋放號誌的案例。  
+ <span data-ttu-id="dbfa9-169">不同於 <xref:System.Threading.Monitor>，<xref:System.Threading.Mutex> 和 <xref:System.Threading.ReaderWriterLock>，<xref:System.Threading.Semaphore> 沒有執行緒相似性。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-169">Unlike <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex>, and <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Semaphore> does not have thread affinity.</span></span> <span data-ttu-id="dbfa9-170">這表示它可用於一個執行緒取得號誌，而另一個釋放號誌的案例。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-170">This means it can be used in scenarios where one thread acquires the semaphore and another releases it.</span></span>  
   
- 如需概念的概觀，請參閱[Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。  
+ <span data-ttu-id="dbfa9-171">如需概念的概觀，請參閱 [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-171">For a conceptual overview, see [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).</span></span>  
   
- <xref:System.Threading.SemaphoreSlim?displayProperty=fullName> 是輕量型號誌，可用於在單一處理序界限內的同步處理。  
+ <span data-ttu-id="dbfa9-172"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 是輕量型號誌，可用於在單一處理序界限內的同步處理。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-172"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> is a lightweight semaphore for synchronization within a single process boundary.</span></span>  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="dbfa9-173">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dbfa9-173">Back to top</span></span>](#top)  
   
 <a name="signaling"></a>   
-## Signaling  
- 等待來自另一個執行緒之信號的最簡單方式，就是呼叫 <xref:System.Threading.Thread.Join%2A> 方法，它會封鎖直到另一個執行緒完成為止。  <xref:System.Threading.Thread.Join%2A> 有兩個多載，可讓封鎖的執行緒在經過指定的間隔之後突破等候。  
+## <a name="signaling"></a><span data-ttu-id="dbfa9-174">Signaling</span><span class="sxs-lookup"><span data-stu-id="dbfa9-174">Signaling</span></span>  
+ <span data-ttu-id="dbfa9-175">等待來自另一個執行緒之信號的最簡單方式，就是呼叫 <xref:System.Threading.Thread.Join%2A> 方法，它會封鎖直到另一個執行緒完成為止。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-175">The simplest way to wait for a signal from another thread is to call the <xref:System.Threading.Thread.Join%2A> method, which blocks until the other thread completes.</span></span> <span data-ttu-id="dbfa9-176"><xref:System.Threading.Thread.Join%2A> 有兩個多載，可讓封鎖的執行緒在經過指定的間隔之後突破等候。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-176"><xref:System.Threading.Thread.Join%2A> has two overloads that allow the blocked thread to break out of the wait after a specified interval has elapsed.</span></span>  
   
- 等候控制代碼會提供一組更豐富的等候和信號功能。  
+ <span data-ttu-id="dbfa9-177">等候控制代碼會提供一組更豐富的等候和信號功能。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-177">Wait handles provide a much richer set of waiting and signaling capabilities.</span></span>  
   
-### 等候控制代碼  
- 等候控制代碼衍生自 <xref:System.Threading.WaitHandle> 類別，而後者又是衍生自 <xref:System.MarshalByRefObject>。  因此，等候控制代碼可來跨應用程式定義域界限同步處理執行緒的活動。  
+### <a name="wait-handles"></a><span data-ttu-id="dbfa9-178">等候控制代碼</span><span class="sxs-lookup"><span data-stu-id="dbfa9-178">Wait Handles</span></span>  
+ <span data-ttu-id="dbfa9-179">等候控制代碼衍生自 <xref:System.Threading.WaitHandle> 類別，而後者又是衍生自 <xref:System.MarshalByRefObject>。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-179">Wait handles derive from the <xref:System.Threading.WaitHandle> class, which in turn derives from <xref:System.MarshalByRefObject>.</span></span> <span data-ttu-id="dbfa9-180">因此，等候控制代碼可來跨應用程式定義域界限同步處理執行緒的活動。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-180">Thus, wait handles can be used to synchronize the activities of threads across application domain boundaries.</span></span>  
   
- 執行緒會封鎖在等候控制代碼，方法是呼叫執行個體方法 <xref:System.Threading.WaitHandle.WaitOne%2A> 或其中一個靜態方法 <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.SignalAndWait%2A>。  釋放的方式取決於所呼叫的方法，以及等候控制代碼的類型。  
+ <span data-ttu-id="dbfa9-181">執行緒會封鎖在等候控制代碼，方法是呼叫執行個體方法 <xref:System.Threading.WaitHandle.WaitOne%2A> 或其中一個靜態方法 <xref:System.Threading.WaitHandle.WaitAll%2A>、<xref:System.Threading.WaitHandle.WaitAny%2A> 或 <xref:System.Threading.WaitHandle.SignalAndWait%2A>。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-181">Threads block on wait handles by calling the instance method <xref:System.Threading.WaitHandle.WaitOne%2A> or one of the static methods <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, or <xref:System.Threading.WaitHandle.SignalAndWait%2A>.</span></span> <span data-ttu-id="dbfa9-182">釋放的方式取決於所呼叫的方法，以及等候控制代碼的類型。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-182">How they are released depends on which method was called, and on the kind of wait handles.</span></span>  
   
- 如需概念的概觀，請參閱 [Wait Handles](../Topic/Wait%20Handles.md)。  
+ <span data-ttu-id="dbfa9-183">如需概念的概觀，請參閱[等候控制代碼](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-183">For a conceptual overview, see [Wait Handles](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).</span></span>  
   
-#### 事件等候控制代碼  
- 事件等候控制代碼包括 <xref:System.Threading.EventWaitHandle> 類別和其衍生的類別，<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>。  事件等候控制代碼藉由呼叫其 <xref:System.Threading.EventWaitHandle.Set%2A> 方法或使用 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法而收到信號時，執行緒會從事件等候控制代碼釋放。  
+#### <a name="event-wait-handles"></a><span data-ttu-id="dbfa9-184">事件等候控制代碼</span><span class="sxs-lookup"><span data-stu-id="dbfa9-184">Event Wait Handles</span></span>  
+ <span data-ttu-id="dbfa9-185">事件等候控制代碼包括 <xref:System.Threading.EventWaitHandle> 類別和其衍生的類別，<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent>。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-185">Event wait handles include the <xref:System.Threading.EventWaitHandle> class and its derived classes, <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent>.</span></span> <span data-ttu-id="dbfa9-186">事件等候控制代碼藉由呼叫其 <xref:System.Threading.EventWaitHandle.Set%2A> 方法或使用 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法而收到信號時，執行緒會從事件等候控制代碼釋放。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-186">Threads are released from an event wait handle when the event wait handle is signaled by calling its <xref:System.Threading.EventWaitHandle.Set%2A> method or by using the <xref:System.Threading.WaitHandle.SignalAndWait%2A> method.</span></span>  
   
- 事件等候控制代碼會自動重設自己 \(就像是每次收到信號時只允許一個執行緒通過的閘門\)，或必須手動重設 \(就像是大門會關閉直到收到信號為止，然後開啟直到有人關閉它為止\)。  顧名思義，<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 分別代表前者與後者。  <xref:System.Threading.ManualResetEventSlim?displayProperty=fullName> 是輕量型事件，可用於在單一處理序界限內的同步處理。  
+ <span data-ttu-id="dbfa9-187">事件等候控制代碼會自動重設自己 (就像是每次收到信號時只允許一個執行緒通過的閘門)，或必須手動重設 (就像是大門會關閉直到收到信號為止，然後開啟直到有人關閉它為止)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-187">Event wait handles either reset themselves automatically, like a turnstile that allows only one thread through each time it is signaled, or must be reset manually, like a gate that is closed until signaled and then open until someone closes it.</span></span> <span data-ttu-id="dbfa9-188">顧名思義，<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 分別代表前者與後者。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-188">As their names imply, <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent> represent the former and latter, respectively.</span></span> <span data-ttu-id="dbfa9-189"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 是輕量型事件，可用於在單一處理序界限內的同步處理。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-189"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> is a lightweight event for synchronization within a single process boundary.</span></span>  
   
- <xref:System.Threading.EventWaitHandle> 可以代表任一種事件，而且可以是本機或全域。  衍生的類別 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 一律是本機。  
+ <span data-ttu-id="dbfa9-190"><xref:System.Threading.EventWaitHandle> 可以代表任一種事件，而且可以是本機或全域。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-190">An <xref:System.Threading.EventWaitHandle> can represent either type of event, and can be either local or global.</span></span> <span data-ttu-id="dbfa9-191">衍生的類別 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 一律是本機。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-191">The derived classes <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent> are always local.</span></span>  
   
- 事件等候控制代碼沒有執行緒相似性。  任何執行緒可以發出信號給事件等候控制代碼。  
+ <span data-ttu-id="dbfa9-192">事件等候控制代碼沒有執行緒相似性。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-192">Event wait handles do not have thread affinity.</span></span> <span data-ttu-id="dbfa9-193">任何執行緒可以發出信號給事件等候控制代碼。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-193">Any thread can signal an event wait handle.</span></span>  
   
- 如需概念的概觀，請參閱 [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。  
+ <span data-ttu-id="dbfa9-194">如需概念的概觀，請參閱 [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-194">For a conceptual overview, see [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).</span></span>  
   
-#### Mutex 和 Semaphore 類別  
- 因為 <xref:System.Threading.Mutex> 和 <xref:System.Threading.Semaphore> 類別衍生自 <xref:System.Threading.WaitHandle>，它們可以搭配 <xref:System.Threading.WaitHandle> 的靜態方法使用。  例如，執行緒可以使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法等候，直到下列三個條件全都成立：<xref:System.Threading.EventWaitHandle> 收到信號、<xref:System.Threading.Mutex> 已釋放，且 <xref:System.Threading.Semaphore> 已釋放。  同樣地，執行緒可以使用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法等候，直到其中一個情況成立。  
+#### <a name="mutex-and-semaphore-classes"></a><span data-ttu-id="dbfa9-195">Mutex 和 Semaphore 類別</span><span class="sxs-lookup"><span data-stu-id="dbfa9-195">Mutex and Semaphore Classes</span></span>  
+ <span data-ttu-id="dbfa9-196">因為 <xref:System.Threading.Mutex> 和 <xref:System.Threading.Semaphore> 類別衍生自 <xref:System.Threading.WaitHandle>，它們可以搭配 <xref:System.Threading.WaitHandle> 的靜態方法使用。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-196">Because the <xref:System.Threading.Mutex> and <xref:System.Threading.Semaphore> classes derive from <xref:System.Threading.WaitHandle>, they can be used with the static methods of <xref:System.Threading.WaitHandle>.</span></span> <span data-ttu-id="dbfa9-197">例如，執行緒可以使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法等候，直到下列三個條件全都成立：<xref:System.Threading.EventWaitHandle> 收到信號、<xref:System.Threading.Mutex> 已釋放，且 <xref:System.Threading.Semaphore> 已釋放。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-197">For example, a thread can use the <xref:System.Threading.WaitHandle.WaitAll%2A> method to wait until all three of the following are true: an <xref:System.Threading.EventWaitHandle> is signaled, a <xref:System.Threading.Mutex> is released, and a <xref:System.Threading.Semaphore> is released.</span></span> <span data-ttu-id="dbfa9-198">同樣地，執行緒可以使用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法等候，直到其中一個情況成立。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-198">Similarly, a thread can use the <xref:System.Threading.WaitHandle.WaitAny%2A> method to wait until any one of those conditions is true.</span></span>  
   
- 針對 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore>，收到信號表示被釋放。  如果其中一種類型做為 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法的第一個引數，它會被釋放。  如果是具有執行緒相似性的 <xref:System.Threading.Mutex>，如果呼叫的執行緒未擁有 mutex，便會擲回例外狀況。  如先前所述，號誌沒有執行緒相似性。  
+ <span data-ttu-id="dbfa9-199">針對 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore>，收到信號表示被釋放。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-199">For a <xref:System.Threading.Mutex> or a <xref:System.Threading.Semaphore>, being signaled means being released.</span></span> <span data-ttu-id="dbfa9-200">如果其中一種類型做為 <xref:System.Threading.WaitHandle.SignalAndWait%2A> 方法的第一個引數，它會被釋放。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-200">If either type is used as the first argument of the <xref:System.Threading.WaitHandle.SignalAndWait%2A> method, it is released.</span></span> <span data-ttu-id="dbfa9-201">如果是具有執行緒相似性的 <xref:System.Threading.Mutex>，如果呼叫的執行緒未擁有 mutex，便會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-201">In the case of a <xref:System.Threading.Mutex>, which has thread affinity, an exception is thrown if the calling thread does not own the mutex.</span></span> <span data-ttu-id="dbfa9-202">如先前所述，號誌沒有執行緒相似性。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-202">As noted previously, semaphores do not have thread affinity.</span></span>  
   
-#### 屏障  
- <xref:System.Threading.Barrier> 類別提供循環同步處理多個執行緒的方法，使它們全都封鎖在相同的點，並等候所有其他執行緒完成。  當一或多個執行緒需要另一個執行緒的結果，才能繼續到演算法的下一個階段時，屏障很有用。  如需詳細資訊，請參閱 [Barrier](../../../docs/standard/threading/barrier.md)。  
+#### <a name="barrier"></a><span data-ttu-id="dbfa9-203">屏障</span><span class="sxs-lookup"><span data-stu-id="dbfa9-203">Barrier</span></span>  
+ <span data-ttu-id="dbfa9-204"><xref:System.Threading.Barrier> 類別提供循環同步處理多個執行緒的方法，使它們全都封鎖在相同的點，並等候所有其他執行緒完成。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-204">The <xref:System.Threading.Barrier> class provides a way to cyclically synchronize multiple threads so that they all block at the same point and wait for all other threads to complete.</span></span> <span data-ttu-id="dbfa9-205">當一或多個執行緒需要另一個執行緒的結果，才能繼續到演算法的下一個階段時，屏障很有用。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-205">A barrier is useful when one or more threads require the results of another thread before continuing to the next phase of an algorithm.</span></span> <span data-ttu-id="dbfa9-206">如需詳細資訊，請參閱[屏障](../../../docs/standard/threading/barrier.md)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-206">For more information, see [Barrier](../../../docs/standard/threading/barrier.md).</span></span>  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="dbfa9-207">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dbfa9-207">Back to top</span></span>](#top)  
   
 <a name="lightweight_synchronization_types"></a>   
-## 輕量型同步處理類型  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，您可以使用同步處理原始物件，它們會藉由儘可能避免對 Win32 核心物件 \(例如等候控制代碼\) 的昂貴依賴，來提供快速效能。  一般而言，您應該在等候時間很短，且原始同步處理類型已經嘗試過且發現無法令人滿意時，才使用這些類型。  輕量型的類型無法用在需要跨處理序通訊的情節。  
+## <a name="lightweight-synchronization-types"></a><span data-ttu-id="dbfa9-208">輕量型同步處理類型</span><span class="sxs-lookup"><span data-stu-id="dbfa9-208">Lightweight Synchronization Types</span></span>  
+ <span data-ttu-id="dbfa9-209">從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，您可以使用同步處理原始物件，它們會藉由儘可能避免對 Win32 核心物件 (例如等候控制代碼) 的昂貴依賴，來提供快速效能。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-209">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use synchronization primitives that provide fast performance by avoiding expensive reliance on Win32 kernel objects such as wait handles whenever possible.</span></span> <span data-ttu-id="dbfa9-210">一般而言，您應該在等候時間很短，且原始同步處理類型已經嘗試過且發現無法令人滿意時，才使用這些類型。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-210">In general, you should use these types when wait times are short and only when the original synchronization types have been tried and found to be unsatisfactory.</span></span> <span data-ttu-id="dbfa9-211">輕量型的類型無法用在需要跨處理序通訊的情節。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-211">The lightweight types cannot be used in scenarios that require cross-process communication.</span></span>  
   
--   <xref:System.Threading.SemaphoreSlim?displayProperty=fullName> 是 <xref:System.Threading.Semaphore?displayProperty=fullName> 的輕量版。  
+-   <span data-ttu-id="dbfa9-212"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 是 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 的輕量版。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-212"><xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> is a lightweight version of <xref:System.Threading.Semaphore?displayProperty=nameWithType>.</span></span>  
   
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=fullName> 是 <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 的輕量版。  
+-   <span data-ttu-id="dbfa9-213"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 是 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 的輕量版。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-213"><xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> is a lightweight version of <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.</span></span>  
   
--   <xref:System.Threading.CountdownEvent?displayProperty=fullName> 代表當計數為零時收到信號的事件。  
+-   <span data-ttu-id="dbfa9-214"><xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 代表當計數為零時收到信號的事件。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-214"><xref:System.Threading.CountdownEvent?displayProperty=nameWithType> represents an event that becomes signaled when its count is zero.</span></span>  
   
--   <xref:System.Threading.Barrier?displayProperty=fullName> 可讓多個執行緒彼此同步處理，而不需要由主要執行緒控制。  屏障可防止每個執行緒繼續，直到所有執行緒都已達到指定的點。  
+-   <span data-ttu-id="dbfa9-215"><xref:System.Threading.Barrier?displayProperty=nameWithType> 可讓多個執行緒彼此同步處理，而不需要由主要執行緒控制。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-215"><xref:System.Threading.Barrier?displayProperty=nameWithType> enables multiple threads to synchronize with one another without requiring control by a master thread.</span></span> <span data-ttu-id="dbfa9-216">屏障可防止每個執行緒繼續，直到所有執行緒都已達到指定的點。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-216">A barrier prevents each thread from continuing until all threads have reached a specified point.</span></span>  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="dbfa9-217">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dbfa9-217">Back to top</span></span>](#top)  
   
 <a name="spinwait"></a>   
-## SpinWait  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，當執行緒必須等待事件收到訊號或符合條件，但實際的等待時間預期會少於使用等候控制代碼或以其他方式封鎖目前執行緒的等候時間時，您可以使用 <xref:System.Threading.SpinWait?displayProperty=fullName> 結構。  使用 <xref:System.Threading.SpinWait>，您可以指定在等待時旋轉一小段時間，並且只有在指定的時間內未符合條件時放棄 \(例如，藉由等待或睡眠\)。  
+## <a name="spinwait"></a><span data-ttu-id="dbfa9-218">SpinWait</span><span class="sxs-lookup"><span data-stu-id="dbfa9-218">SpinWait</span></span>  
+ <span data-ttu-id="dbfa9-219">從開始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，您可以使用<xref:System.Threading.SpinWait?displayProperty=nameWithType>結構當執行緒必須等待事件收到訊號或條件符合，但是當實際的等待時間預期會少於使用等候控制代碼或 otherwi 所需的等待時間se 封鎖目前的執行緒。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-219">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use the <xref:System.Threading.SpinWait?displayProperty=nameWithType> structure when a thread has to wait for an event to be signaled or a condition to be met, but when the actual wait time is expected to be less than the waiting time required by using a wait handle or by otherwise blocking the current thread.</span></span> <span data-ttu-id="dbfa9-220">使用 <xref:System.Threading.SpinWait>，您可以指定在等待時旋轉一小段時間，並且只有在指定的時間內未符合條件時放棄 (例如，藉由等待或睡眠)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-220">By using <xref:System.Threading.SpinWait>, you can specify a short period of time to spin while waiting, and then yield (for example, by waiting or sleeping) only if the condition was not met in the specified time.</span></span>  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="dbfa9-221">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dbfa9-221">Back to top</span></span>](#top)  
   
 <a name="interlocked_operations"></a>   
-## Interlocked 作業  
- 連鎖的作業是由 <xref:System.Threading.Interlocked> 類別的靜態方法，在記憶體位置上執行的簡單不可部分完成作業。  這些不可部分完成的作業包括對 32 位元平台上之 64 位元值的相加、遞增和遞減、交換、根據比較結果的條件式交換，和讀取作業。  
+## <a name="interlocked-operations"></a><span data-ttu-id="dbfa9-222">Interlocked 作業</span><span class="sxs-lookup"><span data-stu-id="dbfa9-222">Interlocked Operations</span></span>  
+ <span data-ttu-id="dbfa9-223">連鎖的作業是由 <xref:System.Threading.Interlocked> 類別的靜態方法，在記憶體位置上執行的簡單不可部分完成作業。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-223">Interlocked operations are simple atomic operations performed on a memory location by static methods of the <xref:System.Threading.Interlocked> class.</span></span> <span data-ttu-id="dbfa9-224">這些不可部分完成的作業包括對 32 位元平台上之 64 位元值的相加、遞增和遞減、交換、根據比較結果的條件式交換，和讀取作業。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-224">Those atomic operations include addition, increment and decrement, exchange, conditional exchange depending on a comparison, and read operations for 64-bit values on 32-bit platforms.</span></span>  
   
 > [!NOTE]
->  不可部分完成性保證僅限於個別作業；當必須執行多項作業當做一個單位時，必須使用更廣泛的同步處理機制。  
+>  <span data-ttu-id="dbfa9-225">不可部分完成性保證僅限於個別作業；當必須執行多項作業當做一個單位時，必須使用更廣泛的同步處理機制。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-225">The guarantee of atomicity is limited to individual operations; when multiple operations must be performed as a unit, a more coarse-grained synchronization mechanism must be used.</span></span>  
   
- 雖然這些作業都不是鎖定或號誌，它們可用來建構鎖定和信號。  因為它們是 Windows 作業系統的原生作業，連鎖的作業都極為快速。  
+ <span data-ttu-id="dbfa9-226">雖然這些作業都不是鎖定或號誌，它們可用來建構鎖定和信號。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-226">Although none of these operations are locks or signals, they can be used to construct locks and signals.</span></span> <span data-ttu-id="dbfa9-227">因為它們是 Windows 作業系統的原生作業，連鎖的作業都極為快速。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-227">Because they are native to the Windows operating system, interlocked operations are extremely fast.</span></span>  
   
- 連鎖的作業可以搭配暫時性記憶體保證使用，撰寫呈現功能強大的非封鎖並行性的應用程式。  不過，它們需要精密、低階程式設計，因此大部分用途而言，簡單鎖定是較好的選擇。  
+ <span data-ttu-id="dbfa9-228">連鎖的作業可以搭配暫時性記憶體保證使用，撰寫呈現功能強大的非封鎖並行性的應用程式。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-228">Interlocked operations can be used with volatile memory guarantees to write applications that exhibit powerful non-blocking concurrency.</span></span> <span data-ttu-id="dbfa9-229">不過，它們需要精密、低階程式設計，因此大部分用途而言，簡單鎖定是較好的選擇。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-229">However, they require sophisticated, low-level programming, so for most purposes, simple locks are a better choice.</span></span>  
   
- 如需概念的概觀，請參閱[Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md)。  
+ <span data-ttu-id="dbfa9-230">如需概念的概觀，請參閱[連鎖作業](../../../docs/standard/threading/interlocked-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="dbfa9-230">For a conceptual overview, see [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md).</span></span>  
   
-## 請參閱  
- [Synchronizing Data for Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)   
- [監視器](../Topic/Monitors.md)   
- [Mutexes](../../../docs/standard/threading/mutexes.md)   
- [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)   
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)   
- [Wait Handles](../Topic/Wait%20Handles.md)   
- [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md)   
- [Reader\-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md)   
- [Barrier](../../../docs/standard/threading/barrier.md)   
- [SpinWait](../../../docs/standard/threading/spinwait.md)   
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a><span data-ttu-id="dbfa9-231">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dbfa9-231">See Also</span></span>  
+ [<span data-ttu-id="dbfa9-232">同步處理多執行緒處理的資料</span><span class="sxs-lookup"><span data-stu-id="dbfa9-232">Synchronizing Data for Multithreading</span></span>](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [<span data-ttu-id="dbfa9-233">監視</span><span class="sxs-lookup"><span data-stu-id="dbfa9-233">Monitors</span></span>](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [<span data-ttu-id="dbfa9-234">Mutex</span><span class="sxs-lookup"><span data-stu-id="dbfa9-234">Mutexes</span></span>](../../../docs/standard/threading/mutexes.md)  
+ [<span data-ttu-id="dbfa9-235">Semaphore 和 SemaphoreSlim</span><span class="sxs-lookup"><span data-stu-id="dbfa9-235">Semaphore and SemaphoreSlim</span></span>](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+ [<span data-ttu-id="dbfa9-236">EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="dbfa9-236">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+ [<span data-ttu-id="dbfa9-237">等候控制代碼</span><span class="sxs-lookup"><span data-stu-id="dbfa9-237">Wait Handles</span></span>](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [<span data-ttu-id="dbfa9-238">Interlocked 作業</span><span class="sxs-lookup"><span data-stu-id="dbfa9-238">Interlocked Operations</span></span>](../../../docs/standard/threading/interlocked-operations.md)  
+ [<span data-ttu-id="dbfa9-239">Reader-Writer 鎖定</span><span class="sxs-lookup"><span data-stu-id="dbfa9-239">Reader-Writer Locks</span></span>](../../../docs/standard/threading/reader-writer-locks.md)  
+ [<span data-ttu-id="dbfa9-240">barrier</span><span class="sxs-lookup"><span data-stu-id="dbfa9-240">Barrier</span></span>](../../../docs/standard/threading/barrier.md)  
+ [<span data-ttu-id="dbfa9-241">SpinWait</span><span class="sxs-lookup"><span data-stu-id="dbfa9-241">SpinWait</span></span>](../../../docs/standard/threading/spinwait.md)  
+ [<span data-ttu-id="dbfa9-242">SpinLock</span><span class="sxs-lookup"><span data-stu-id="dbfa9-242">SpinLock</span></span>](../../../docs/standard/threading/spinlock.md)

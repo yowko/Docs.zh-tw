@@ -1,76 +1,82 @@
 ---
-title: "在 .NET Framework 中變更大小寫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "區分大小寫"
-  - "小寫"
-  - "字串 [.NET Framework], 大小寫"
-  - "ToLower 方法"
-  - "ToUpper 方法"
-  - "大寫"
+title: "在 .NET Framework 中變更大小寫"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- strings [.NET Framework], case
+- case sensitivity
+- ToUpper method
+- ToLower method
+- uppercase
+- lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 .NET Framework 中變更大小寫
-如果您要撰寫接受使用者輸入的應用程式，則無法確定使用者輸入資料時會使用大寫或小寫。  通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。  下表描述三種變更大小寫的方法。  前兩種方法提供接受文化特性的多載。  
+# <a name="changing-case-in-net"></a><span data-ttu-id="3980c-102">在.NET 中的變更情況</span><span class="sxs-lookup"><span data-stu-id="3980c-102">Changing Case in .NET</span></span>
+<span data-ttu-id="3980c-103">如果您要撰寫接受使用者輸入的應用程式，則無法確定使用者輸入資料時會使用大寫或小寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-103">If you write an application that accepts input from a user, you can never be sure what case he or she will use to enter the data.</span></span> <span data-ttu-id="3980c-104">通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。</span><span class="sxs-lookup"><span data-stu-id="3980c-104">Often, you want strings to be cased consistently, particularly if you are displaying them in the user interface.</span></span> <span data-ttu-id="3980c-105">下表描述三種變更大小寫的方法。</span><span class="sxs-lookup"><span data-stu-id="3980c-105">The following table describes three case-changing methods.</span></span> <span data-ttu-id="3980c-106">前兩種方法提供接受文化特性的多載。</span><span class="sxs-lookup"><span data-stu-id="3980c-106">The first two methods provide an overload that accepts a culture.</span></span>  
   
-|方法名稱|用法|  
-|----------|--------|  
-|<xref:System.String.ToUpper%2A?displayProperty=fullName>|將字串中的所有字元轉換成大寫。|  
-|<xref:System.String.ToLower%2A?displayProperty=fullName>|將字串中的所有字元轉換成小寫。|  
-|<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName>|將字串轉換成字首大寫。|  
+|<span data-ttu-id="3980c-107">方法名稱</span><span class="sxs-lookup"><span data-stu-id="3980c-107">Method name</span></span>|<span data-ttu-id="3980c-108">用法</span><span class="sxs-lookup"><span data-stu-id="3980c-108">Use</span></span>|  
+|-----------------|---------|  
+|<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|<span data-ttu-id="3980c-109">將字串中的所有字元轉換成大寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-109">Converts all characters in a string to uppercase.</span></span>|  
+|<xref:System.String.ToLower%2A?displayProperty=nameWithType>|<span data-ttu-id="3980c-110">將字串中的所有字元轉換成小寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-110">Converts all characters in a string to lowercase.</span></span>|  
+|<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|<span data-ttu-id="3980c-111">將字串轉換成字首大寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-111">Converts a string to title case.</span></span>|  
   
 > [!WARNING]
->  請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=fullName> 和 <xref:System.String.ToLower%2A?displayProperty=fullName> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。  如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)一節。  
+>  <span data-ttu-id="3980c-112">請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。</span><span class="sxs-lookup"><span data-stu-id="3980c-112">Note that the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> and <xref:System.String.ToLower%2A?displayProperty=nameWithType> methods should not be used to convert strings in order to compare them or test them for equality.</span></span> <span data-ttu-id="3980c-113">如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)> 一節。</span><span class="sxs-lookup"><span data-stu-id="3980c-113">For more information, see the [Comparing strings of mixed case](#Comparing) section.</span></span>  
   
 <a name="Comparing"></a>   
-## 比較混合大小寫的字串  
- 若要比較混合大小寫的字串以決定其順序，請使用 `comparisonType` 參數呼叫 <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法的其中一個多載，並為 `comparisonType` 引數提供 <xref:System.StringComparison?displayProperty=fullName>、<xref:System.StringComparison?displayProperty=fullName> 或 <xref:System.StringComparison?displayProperty=fullName> 的值。  若要使用目前文化特性以外的特定文化特性進行比較，請使用 `culture` 和 `options` 參數呼叫 <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法的多載，並提供 <xref:System.Globalization.CompareOptions?displayProperty=fullName> 的值做為 `options` 引數。  
+## <a name="comparing-strings-of-mixed-case"></a><span data-ttu-id="3980c-114">比較混合大小寫的字串</span><span class="sxs-lookup"><span data-stu-id="3980c-114">Comparing strings of mixed case</span></span>  
+ <span data-ttu-id="3980c-115">若要比較混合大小寫的字串以決定其順序，請使用 `comparisonType` 參數呼叫 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的其中一個多載，並為 `comparisonType` 引數提供 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的值。</span><span class="sxs-lookup"><span data-stu-id="3980c-115">To compare strings of mixed case to determine their ordering, call one of the overloads of the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method with a `comparisonType` parameter, and provide a value of either <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>, or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for the `comparisonType` argument.</span></span> <span data-ttu-id="3980c-116">若要使用目前文化特性以外的特定文化特性進行比較，請使用 `culture` 和 `options` 參數呼叫 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的多載，並提供 <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> 的值做為 `options` 引數。</span><span class="sxs-lookup"><span data-stu-id="3980c-116">For a comparison using a specific culture other than the current culture, call an overload of the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method with both a `culture` and `options` parameter, and provide a value of <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> as the `options` argument.</span></span>  
   
- 若要比較混合大小寫的字串以決定字串是否相等，請使用 `comparisonType` 參數呼叫 <xref:System.String.Equals%2A?displayProperty=fullName> 方法的其中一個多載，並為 `comparisonType` 引數提供 <xref:System.StringComparison?displayProperty=fullName>、<xref:System.StringComparison?displayProperty=fullName> 或 <xref:System.StringComparison?displayProperty=fullName> 的值。  
+ <span data-ttu-id="3980c-117">若要比較混合大小寫的字串以決定字串是否相等，請使用 `comparisonType` 參數呼叫 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法的其中一個多載，並為 `comparisonType` 引數提供 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的值。</span><span class="sxs-lookup"><span data-stu-id="3980c-117">To compare strings of mixed case to determine whether they are equal, their, call one of the overloads of the <xref:System.String.Equals%2A?displayProperty=nameWithType> method with a `comparisonType` parameter, and provide a value of either <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>, or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for the `comparisonType` argument.</span></span>  
   
- 如需詳細資訊，請參閱[使用字串的最佳作法](../../../docs/standard/base-types/best-practices-strings.md)。  
+ <span data-ttu-id="3980c-118">如需詳細資訊，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="3980c-118">For more information, see [Best Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md).</span></span>  
   
-## ToUpper  
- <xref:System.String.ToUpper%2A?displayProperty=fullName> 方法會將字串中的所有字元變更為大寫。  下列範例會將字串 "Hello World\!" 從混合大小寫轉換成大寫。  
+## <a name="toupper"></a><span data-ttu-id="3980c-119">ToUpper</span><span class="sxs-lookup"><span data-stu-id="3980c-119">ToUpper</span></span>  
+ <span data-ttu-id="3980c-120"><xref:System.String.ToUpper%2A?displayProperty=nameWithType> 方法會將字串中的所有字元變更為大寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-120">The <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method changes all characters in a string to uppercase.</span></span> <span data-ttu-id="3980c-121">下列範例會將字串 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="3980c-121">The following example converts the string "Hello World!"</span></span> <span data-ttu-id="3980c-122">從混合大小寫轉換成大寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-122">from mixed case to uppercase.</span></span>  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。  若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 物件提供給 *culture* 參數。  如需示範如何使用 <xref:System.String.ToUpper%2A> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ <span data-ttu-id="3980c-123">上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。</span><span class="sxs-lookup"><span data-stu-id="3980c-123">The preceding example is culture-sensitive by default; it applies the casing conventions of the current culture.</span></span> <span data-ttu-id="3980c-124">若要執行不區分文化特性的大小寫變更或套用特定文化特性的大小寫慣例，請使用<xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>方法多載，並提供值的<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>或<xref:System.Globalization.CultureInfo?displayProperty=nameWithType>物件，代表指定之文化特性*文化特性*參數。</span><span class="sxs-lookup"><span data-stu-id="3980c-124">To perform a culture-insensitive case change or to apply the casing conventions of a particular culture, use the <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> method overload and supply a value of <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> or a <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> object that represents the specified culture to the *culture* parameter.</span></span> <span data-ttu-id="3980c-125">如需範例，示範如何使用<xref:System.String.ToUpper%2A>方法以執行不區分文化特性的大小寫變更，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="3980c-125">For an example that demonstrates how to use the <xref:System.String.ToUpper%2A> method to perform a culture-insensitive case change, see [Performing Culture-Insensitive Case Changes](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).</span></span>  
   
-## ToLower  
- <xref:System.String.ToLower%2A?displayProperty=fullName> 方法類似於前一個方法，但會改將字串中的所有字元轉換成小寫。  下列範例會將字串 "Hello World\!" 轉換成小寫。  
+## <a name="tolower"></a><span data-ttu-id="3980c-126">ToLower</span><span class="sxs-lookup"><span data-stu-id="3980c-126">ToLower</span></span>  
+ <span data-ttu-id="3980c-127"><xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法類似於前一個方法，但會改將字串中的所有字元轉換成小寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-127">The <xref:System.String.ToLower%2A?displayProperty=nameWithType> method is similar to the previous method, but instead converts all the characters in a string to lowercase.</span></span> <span data-ttu-id="3980c-128">下列範例會將字串 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="3980c-128">The following example converts the string "Hello World!"</span></span> <span data-ttu-id="3980c-129">轉換成小寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-129">to lowercase.</span></span>  
   
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。  若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 物件提供給 *culture* 參數。  如需示範如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ <span data-ttu-id="3980c-130">上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。</span><span class="sxs-lookup"><span data-stu-id="3980c-130">The preceding example is culture-sensitive by default; it applies the casing conventions of the current culture.</span></span> <span data-ttu-id="3980c-131">若要執行不區分文化特性的大小寫變更或套用特定文化特性的大小寫慣例，請使用<xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>方法多載，並提供值的<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>或<xref:System.Globalization.CultureInfo?displayProperty=nameWithType>物件，代表指定之文化特性*文化特性*參數。</span><span class="sxs-lookup"><span data-stu-id="3980c-131">To perform a culture-insensitive case change or to apply the casing conventions of a particular culture, use the <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> method overload and supply a value of <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> or a <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> object that represents the specified culture to the *culture* parameter.</span></span> <span data-ttu-id="3980c-132">如需範例，示範如何使用<xref:System.String.ToLower%28System.Globalization.CultureInfo%29>方法以執行不區分文化特性的大小寫變更，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="3980c-132">For an example that demonstrates how to use the <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> method to perform a culture-insensitive case change, see [Performing Culture-Insensitive Case Changes](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).</span></span>  
   
-## ToTitleCase  
- <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 會將每個字的第一個字元轉換成大寫，並將其餘字元轉換成小寫。  不過，全部大寫的字會假設為縮略字，而且不會轉換。  
+## <a name="totitlecase"></a><span data-ttu-id="3980c-133">ToTitleCase</span><span class="sxs-lookup"><span data-stu-id="3980c-133">ToTitleCase</span></span>  
+ <span data-ttu-id="3980c-134"><xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 會將每個字的第一個字元轉換成大寫，並將其餘字元轉換成小寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-134">The <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> converts the first character of each word to uppercase and the remaining characters to lowercase.</span></span> <span data-ttu-id="3980c-135">不過，全部大寫的字會假設為縮略字，而且不會轉換。</span><span class="sxs-lookup"><span data-stu-id="3980c-135">However, words that are entirely uppercase are assumed to be acronyms and are not converted.</span></span>  
   
- <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 方法區分文化特性；也就是說，它會使用特定文化特性的大小寫慣例。  若要呼叫方法，請先從特定文化特性的 <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=fullName> 屬性，擷取代表特定文化特性之大小寫慣例的 <xref:System.Globalization.TextInfo> 物件。  
+ <span data-ttu-id="3980c-136"><xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法區分文化特性；也就是說，它會使用特定文化特性的大小寫慣例。</span><span class="sxs-lookup"><span data-stu-id="3980c-136">The <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> method is culture-sensitive; that is, it uses the casing conventions of a particular culture.</span></span> <span data-ttu-id="3980c-137">若要呼叫方法，請先從特定文化特性的 <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 屬性，擷取代表特定文化特性之大小寫慣例的 <xref:System.Globalization.TextInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="3980c-137">In order to call the method, you first retrieve the <xref:System.Globalization.TextInfo> object that represents the casing conventions of the particular culture from the <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> property of a particular culture.</span></span>  
   
- 下列範例會將陣列中的每個字串傳遞給 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 方法。  這些字串包含適當的字首大寫字串和縮略字。  這些字串使用英文 \(美國\) 文化特性的大小寫慣例轉換成字首大寫。  
+ <span data-ttu-id="3980c-138">下列範例會將陣列中的每個字串傳遞給 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="3980c-138">The following example passes each string in an array to the <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> method.</span></span>  <span data-ttu-id="3980c-139">這些字串包含適當的字首大寫字串和縮略字。</span><span class="sxs-lookup"><span data-stu-id="3980c-139">The strings include proper title strings as well as acronyms.</span></span> <span data-ttu-id="3980c-140">這些字串使用英文 (美國) 文化特性的大小寫慣例轉換成字首大寫。</span><span class="sxs-lookup"><span data-stu-id="3980c-140">The strings are converted to title case by using the casing conventions of the English (United States) culture.</span></span>  
   
  [!code-csharp[System.Globalization.TextInfo.ToTitleCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/cs/totitlecase2.cs#1)]
  [!code-vb[System.Globalization.TextInfo.ToTitleCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/vb/totitlecase2.vb#1)]  
   
- 請注意，雖然它區分文化特性，但 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 方法不會提供語言正確的大小寫規則。  例如，在上述範例中，這個方法會將 "a tale of two cities"  轉換成 "A Tale Of Two Cities"。  不過，對於 en\-US 文化特性而言語言正確的字首大寫為 "A Tale of Two Cities"。  
+ <span data-ttu-id="3980c-141">請注意，雖然它區分文化特性，但 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法不會提供語言正確的大小寫規則。</span><span class="sxs-lookup"><span data-stu-id="3980c-141">Note that although it is culture-sensitive, the <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> method does not provide linguistically correct casing rules.</span></span> <span data-ttu-id="3980c-142">例如，在上述範例中，這個方法會將 "a tale of two cities"  轉換成 "A Tale Of Two Cities"。</span><span class="sxs-lookup"><span data-stu-id="3980c-142">For instance, in the previous example, the method converts "a tale of two cities" to "A Tale Of Two Cities".</span></span> <span data-ttu-id="3980c-143">不過，對於 en-US 文化特性而言語言正確的字首大寫為 "A Tale of Two Cities"。</span><span class="sxs-lookup"><span data-stu-id="3980c-143">However, the linguistically correct title casing for the en-US culture is "A Tale of Two Cities."</span></span>  
   
-## 請參閱  
- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)   
- [執行不區分文化特性的字串作業](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a><span data-ttu-id="3980c-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3980c-144">See Also</span></span>  
+ [<span data-ttu-id="3980c-145">基本字串作業</span><span class="sxs-lookup"><span data-stu-id="3980c-145">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)  
+ [<span data-ttu-id="3980c-146">執行不區分文化特性的字串作業</span><span class="sxs-lookup"><span data-stu-id="3980c-146">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

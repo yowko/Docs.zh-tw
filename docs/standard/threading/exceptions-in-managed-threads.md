@@ -1,86 +1,89 @@
 ---
-title: "Exceptions in Managed Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "unhandled exceptions,in managed threads"
-  - "threading [.NET Framework],unhandled exceptions"
-  - "threading [.NET Framework],exceptions in managed threads"
-  - "managed threading"
+title: "Managed 執行緒中的例外狀況"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unhandled exceptions,in managed threads
+- threading [.NET Framework],unhandled exceptions
+- threading [.NET Framework],exceptions in managed threads
+- managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Exceptions in Managed Threads
-在 .NET Framework 2.0 版中，Common Language Runtime 可讓執行緒中的大多數未處理的例外狀況可以自然地進行。  在多數情況下，這表示未處理的例外狀況會讓應用程式結束。  
+# <a name="exceptions-in-managed-threads"></a><span data-ttu-id="3259b-102">Managed 執行緒中的例外狀況</span><span class="sxs-lookup"><span data-stu-id="3259b-102">Exceptions in Managed Threads</span></span>
+<span data-ttu-id="3259b-103">從 .NET Framework version 2.0 開始，通用語言執行平台允許執行緒中大多數未處理的例外狀況自然地繼續。</span><span class="sxs-lookup"><span data-stu-id="3259b-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="3259b-104">在大多數情況下，這表示未處理的例外狀況導致應用程式終止。</span><span class="sxs-lookup"><span data-stu-id="3259b-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  
   
 > [!NOTE]
->  這是 .NET Framework 1.0 和 1.1 版之後的一項重大變更，可以為許多未處理的例外狀況提供類似捕手的機制；例如，執行緒集區執行緒中的未處理例外狀況。  請參閱本主題稍後的[舊版的變更](#ChangeFromPreviousVersions)。  
+>  <span data-ttu-id="3259b-105">這是 .NET Framework 1.0 和 1.1 的重大變更，其針對許多未處理的例外狀況提供了防護網 — 例如，執行緒集區執行緒中的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3259b-105">This is a significant change from the .NET Framework versions 1.0 and 1.1, which provide a backstop for many unhandled exceptions — for example, unhandled exceptions in thread pool threads.</span></span> <span data-ttu-id="3259b-106">請參閱本主題後面的[從舊版變更](#ChangeFromPreviousVersions)。</span><span class="sxs-lookup"><span data-stu-id="3259b-106">See [Change from Previous Versions](#ChangeFromPreviousVersions) later in this topic.</span></span>  
   
- Common Language Runtime 為某些用於控制程式流程的未處理之例外狀況提供了類似捕手的機制：  
+ <span data-ttu-id="3259b-107">通用語言執行平台針對用於控制程式流程的特定未處理例外狀況提供了防護網︰</span><span class="sxs-lookup"><span data-stu-id="3259b-107">The common language runtime provides a backstop for certain unhandled exceptions that are used for controlling program flow:</span></span>  
   
--   在執行緒中擲回 <xref:System.Threading.ThreadAbortException>，因為已呼叫 <xref:System.Threading.Thread.Abort%2A>。  
+-   <span data-ttu-id="3259b-108">A<xref:System.Threading.ThreadAbortException>因為在執行緒中擲回<xref:System.Threading.Thread.Abort%2A>呼叫。</span><span class="sxs-lookup"><span data-stu-id="3259b-108">A <xref:System.Threading.ThreadAbortException> is thrown in a thread because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   在執行緒中擲回 <xref:System.AppDomainUnloadedException>，因為執行緒執行所在的應用程式定義域正在卸載。  
+-   <span data-ttu-id="3259b-109"><xref:System.AppDomainUnloadedException>因為執行緒正在執行的應用程式定義域正在卸載在執行緒中擲回。</span><span class="sxs-lookup"><span data-stu-id="3259b-109">An <xref:System.AppDomainUnloadedException> is thrown in a thread because the application domain in which the thread is executing is being unloaded.</span></span>  
   
--   Common Language Runtime 或主應用程式處理序藉由擲回內部例外狀況來結束執行緒。  
+-   <span data-ttu-id="3259b-110">通用語言執行平台或主機處理序會藉由擲回內部例外狀況來終止執行緒。</span><span class="sxs-lookup"><span data-stu-id="3259b-110">The common language runtime or a host process terminates the thread by throwing an internal exception.</span></span>  
   
- 如果在 Common Language Runtime 建立的執行緒中有任何例外狀況未被處理，則此例外狀況會結束執行緒，但是 Common Language Runtime 不允許此例外狀況有進一步的動作。  
+ <span data-ttu-id="3259b-111">如果在通用語言執行平台所建立的執行緒中有上述任何未處理的例外狀況，則此例外狀況會終止執行緒，但通用語言執行平台不允許例外狀況進一步繼續作業。</span><span class="sxs-lookup"><span data-stu-id="3259b-111">If any of these exceptions are unhandled in threads created by the common language runtime, the exception terminates the thread, but the common language runtime does not allow the exception to proceed further.</span></span>  
   
- 如果這些例外狀況在主執行緒，或是從 Unmanaged 程式碼進入執行階段的執行緒中未被處理，則這些例外狀況會正常進行，因而造成應用程式終止。  
+ <span data-ttu-id="3259b-112">如果未在主要執行緒中，或在從 Unmanaged 程式碼進入執行平台的執行緒中處理這些例外狀況，這些例外狀況會正常進行，而導致應用程式終止。</span><span class="sxs-lookup"><span data-stu-id="3259b-112">If these exceptions are unhandled in the main thread, or in threads that entered the runtime from unmanaged code, they proceed normally, resulting in termination of the application.</span></span>  
   
 > [!NOTE]
->  執行階段有可能先擲回未處理的例外狀況之後，Managed 程式碼才會有機會安裝例外處理常式。  即使 Managed 程式碼沒有機會來處理這類例外狀況，還是允許此例外狀況自然地進行。  
+>  <span data-ttu-id="3259b-113">在任何 Managed 程式碼有機會安裝例外狀況處理常式之前，執行平台可能會擲回未處理的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3259b-113">It is possible for the runtime to throw an unhandled exception before any managed code has had a chance to install an exception handler.</span></span> <span data-ttu-id="3259b-114">即使 Managed 程式碼沒有機會處理這類例外狀況，但允許例外狀況自然地進行。</span><span class="sxs-lookup"><span data-stu-id="3259b-114">Even though managed code had no chance to handle such an exception, the exception is allowed to proceed naturally.</span></span>  
   
-## 在開發期間公開執行緒處理問題  
- 當允許執行緒在無訊息模式下失敗，而不結束應用程式時，可能會有一些嚴重的程式設計問題未被偵測到，  這會特別是執行一段時間的服務和其他應用程式的問題。  當執行緒失敗時，程式狀態會逐漸損毀。  如此一來，應用程式效能可能會降低，或應用程式可能會無回應。  
+## <a name="exposing-threading-problems-during-development"></a><span data-ttu-id="3259b-115">公開開發期間的執行緒問題</span><span class="sxs-lookup"><span data-stu-id="3259b-115">Exposing Threading Problems During Development</span></span>  
+ <span data-ttu-id="3259b-116">若允許執行緒以無訊息模式失敗，而不終止應用程式，則可能偵測不到嚴重的程式設計問題。</span><span class="sxs-lookup"><span data-stu-id="3259b-116">When threads are allowed to fail silently, without terminating the application, serious programming problems can go undetected.</span></span> <span data-ttu-id="3259b-117">這是長時間執行的服務和其他應用程式特有的問題。</span><span class="sxs-lookup"><span data-stu-id="3259b-117">This is a particular problem for services and other applications which run for extended periods.</span></span> <span data-ttu-id="3259b-118">因為執行緒失敗，所以程式狀態會逐漸變差。</span><span class="sxs-lookup"><span data-stu-id="3259b-118">As threads fail, program state gradually becomes corrupted.</span></span> <span data-ttu-id="3259b-119">應用程式效能可能會降低，或應用程式可能會停止回應。</span><span class="sxs-lookup"><span data-stu-id="3259b-119">Application performance may degrade, or the application might hang.</span></span>  
   
- 允許執行緒中未處理的例外狀況自然地進行，一直到作業系統結束程式為止，這樣的作法會在開發和測試期間暴露出這類的問題。  程式終止的錯誤報告可支援偵錯。  
+ <span data-ttu-id="3259b-120">允許執行緒中的未處理例外狀況自然地進行，直到作業系統終止程式，公開開發和測試期間的這類問題為止。</span><span class="sxs-lookup"><span data-stu-id="3259b-120">Allowing unhandled exceptions in threads to proceed naturally, until the operating system terminates the program, exposes such problems during development and testing.</span></span> <span data-ttu-id="3259b-121">程式終止的錯誤報告可支援偵錯。</span><span class="sxs-lookup"><span data-stu-id="3259b-121">Error reports on program terminations support debugging.</span></span>  
   
 <a name="ChangeFromPreviousVersions"></a>   
-## 舊版之後的變更  
- 最重大的變更與 Managed 執行緒有關。  在 .NET Framework 1.0 和 1.1 版中，在下列情況下，Common Language Runtime 會為未處理的例外狀況提供類似捕手的機制：  
+## <a name="change-from-previous-versions"></a><span data-ttu-id="3259b-122">從舊版變更</span><span class="sxs-lookup"><span data-stu-id="3259b-122">Change from Previous Versions</span></span>  
+ <span data-ttu-id="3259b-123">最重大的變更與 Managed 執行緒有關。</span><span class="sxs-lookup"><span data-stu-id="3259b-123">The most significant change pertains to managed threads.</span></span> <span data-ttu-id="3259b-124">在 .NET Framework 1.0 和 1.1 版中，通用語言執行平台會針對下列情況中未處理的例外狀況提供防護網：</span><span class="sxs-lookup"><span data-stu-id="3259b-124">In the .NET Framework versions 1.0 and 1.1, the common language runtime provides a backstop for unhandled exceptions in the following situations:</span></span>  
   
--   並沒有所謂的執行緒集區執行緒上的未處理之例外狀況這一回事；  當工作擲回未處理的例外狀況時，執行階段會將此例外狀況堆疊追蹤列印到主控台，然後將執行緒傳回到執行緒集區。  
+-   <span data-ttu-id="3259b-125">執行緒集區執行緒上不會有未處理的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3259b-125">There is no such thing as an unhandled exception on a thread pool thread.</span></span> <span data-ttu-id="3259b-126">當工作擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後將執行緒傳回到執行緒集區。</span><span class="sxs-lookup"><span data-stu-id="3259b-126">When a task throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then returns the thread to the thread pool.</span></span>  
   
--   以 <xref:System.Threading.Thread> 類別的 <xref:System.Threading.Thread.Start%2A> 方法所建立的執行緒上，並沒有所謂的未處理之例外狀況這一回事。  在這類執行緒上執行的程式碼擲回未處理的例外狀況時，執行階段會將此例外狀況堆疊追蹤列印到主控台，然後以正常方式結束執行緒。  
+-   <span data-ttu-id="3259b-127">沒有這類處理的例外狀況的執行緒上建立與<xref:System.Threading.Thread.Start%2A>方法<xref:System.Threading.Thread>類別。</span><span class="sxs-lookup"><span data-stu-id="3259b-127">There is no such thing as an unhandled exception on a thread created with the <xref:System.Threading.Thread.Start%2A> method of the <xref:System.Threading.Thread> class.</span></span> <span data-ttu-id="3259b-128">在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。</span><span class="sxs-lookup"><span data-stu-id="3259b-128">When code running on such a thread throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then gracefully terminates the thread.</span></span>  
   
--   並沒有所謂的完成項執行緒上的未處理之例外狀況這一回事；  當完成項擲回未處理的例外狀況時，執行階段會將此例外狀況堆疊追蹤列印到主控台，然後將允許此完成項執行緒繼續執行完成項。  
+-   <span data-ttu-id="3259b-129">完成項執行緒上不會有未處理的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3259b-129">There is no such thing as an unhandled exception on the finalizer thread.</span></span> <span data-ttu-id="3259b-130">當完成項擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後允許完成項執行緒繼續執行完成項。</span><span class="sxs-lookup"><span data-stu-id="3259b-130">When a finalizer throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then allows the finalizer thread to resume running finalizers.</span></span>  
   
- Managed 執行緒的前景或背景狀態並不會影響這個行為。  
+ <span data-ttu-id="3259b-131">Managed 執行緒的前景或背景狀態不會影響此行為。</span><span class="sxs-lookup"><span data-stu-id="3259b-131">The foreground or background status of a managed thread does not affect this behavior.</span></span>  
   
- 對於源自 Unmanaged 程式碼的執行緒上的例外狀況而言，其差異比較敏感。  執行階段 JIT 附加的對話方塊會先佔有 Managed 例外狀況或原生例外狀況的作業系統對話方塊 \(這些例外狀況位於透過機器碼傳遞的執行緒上\)。  在所有情況下，此處理序都會結束。  
+ <span data-ttu-id="3259b-132">若為源自於 Unmanaged 程式碼的執行緒上未處理的例外狀況，差別更加細微。</span><span class="sxs-lookup"><span data-stu-id="3259b-132">For unhandled exceptions on threads originating in unmanaged code, the difference is more subtle.</span></span> <span data-ttu-id="3259b-133">對於已通過機器碼之執行緒上的 Managed 例外狀況或原生例外狀況而言，執行階段 JIT-attach 對話方塊的順序優先於作業系統對話方塊。</span><span class="sxs-lookup"><span data-stu-id="3259b-133">The runtime JIT-attach dialog preempts the operating system dialog for managed exceptions or native exceptions on threads that have passed through native code.</span></span> <span data-ttu-id="3259b-134">在所有情況下，此處理序會終止。</span><span class="sxs-lookup"><span data-stu-id="3259b-134">The process terminates in all cases.</span></span>  
   
-### 移轉程式碼  
- 一般來說，此變更會暴露出之前未被辨認的程式設計問題，以便可以加以修復。  但是在某些情況下，程式設計人員可能利用了類似執行階段捕手機制這樣的好處來結束執行緒；  他們應該根據狀況來考量下列其中一個移轉策略：  
+### <a name="migrating-code"></a><span data-ttu-id="3259b-135">移轉程式碼</span><span class="sxs-lookup"><span data-stu-id="3259b-135">Migrating Code</span></span>  
+ <span data-ttu-id="3259b-136">一般而言，變更會公開先前無法辨識的程式設計問題，以便修正這些問題。</span><span class="sxs-lookup"><span data-stu-id="3259b-136">In general, the change will expose previously unrecognized programming problems so that they can be fixed.</span></span> <span data-ttu-id="3259b-137">不過，在某些情況下，程式設計人員可能已利用執行階段防護網來終止執行緒。</span><span class="sxs-lookup"><span data-stu-id="3259b-137">In some cases, however, programmers might have taken advantage of the runtime backstop, for example to terminate threads.</span></span> <span data-ttu-id="3259b-138">視情況而定，它們應該考慮下列其中一個移轉策略︰</span><span class="sxs-lookup"><span data-stu-id="3259b-138">Depending on the situation, they should consider one of the following migration strategies:</span></span>  
   
--   重組程式碼的結構，在收到信號時讓執行緒正常地結束。  
+-   <span data-ttu-id="3259b-139">重新建構程式碼，讓執行緒在收到訊號時依正常程序結束。</span><span class="sxs-lookup"><span data-stu-id="3259b-139">Restructure the code so the thread exits gracefully when a signal is received.</span></span>  
   
--   使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 方法來中止執行緒。  
+-   <span data-ttu-id="3259b-140">使用<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>方法來中止的執行緒。</span><span class="sxs-lookup"><span data-stu-id="3259b-140">Use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method to abort the thread.</span></span>  
   
--   如果一定要停止執行緒，才能進行處理序終止的作業，請讓此執行緒變成背景執行緒，讓它在處理序結束時會自動結束。  
+-   <span data-ttu-id="3259b-141">如果執行緒必須停止，處理序終止作業才能繼續，請讓執行緒成為背景執行緒，以便在處理序結束時自動終止。</span><span class="sxs-lookup"><span data-stu-id="3259b-141">If a thread must be stopped so that process termination can proceed, make the thread a background thread so that it is automatically terminated on process exit.</span></span>  
   
- 在所有情況下，這個策略都應該遵循例外狀況的設計方針。  請參閱[例外狀況的設計指導方針](../../../docs/standard/design-guidelines/exceptions.md)。  
+ <span data-ttu-id="3259b-142">在所有情況下，此策略應該遵循例外狀況的設計方針。</span><span class="sxs-lookup"><span data-stu-id="3259b-142">In all cases, the strategy should follow the design guidelines for exceptions.</span></span> <span data-ttu-id="3259b-143">請參閱[例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)。</span><span class="sxs-lookup"><span data-stu-id="3259b-143">See [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md).</span></span>  
   
-### 應用程式相容性旗標  
- 系統管理員可以將相容性旗標放在應用程式組態檔的 `<runtime>` 區段內，做為暫時性的相容性措施；  如此可讓 Common Language Runtime 還原成 1.0 和 1.1 版的行為。  
+### <a name="application-compatibility-flag"></a><span data-ttu-id="3259b-144">應用程式相容性旗標</span><span class="sxs-lookup"><span data-stu-id="3259b-144">Application Compatibility Flag</span></span>  
+ <span data-ttu-id="3259b-145">系統管理員可以在應用程式組態檔的 `<runtime>` 區段中放置相容性旗標，做為暫存的相容性度量。</span><span class="sxs-lookup"><span data-stu-id="3259b-145">As a temporary compatibility measure, administrators can place a compatibility flag in the `<runtime>` section of the application configuration file.</span></span> <span data-ttu-id="3259b-146">這會導致通用語言執行平台還原為 1.0 和 1.1 版的行為。</span><span class="sxs-lookup"><span data-stu-id="3259b-146">This causes the common language runtime to revert to the behavior of versions 1.0 and 1.1.</span></span>  
   
-```  
+```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## 主應用程式覆寫  
- 在 .NET Framework 2.0 版中，Unmanaged 主應用程式可以使用裝載在 API 中的 [ICLRPolicyManager](../../../ocs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，以覆寫 Common Language Runtime 的預設未處理之例外狀況原則。  [ICLRPolicyManager::SetUnhandledExceptionPolicy](../Topic/ICLRPolicyManager::SetUnhandledExceptionPolicy%20Method.md) 函式是用來設定未處理的例外狀況之原則。  
+## <a name="host-override"></a><span data-ttu-id="3259b-147">主機覆寫</span><span class="sxs-lookup"><span data-stu-id="3259b-147">Host Override</span></span>  
+ <span data-ttu-id="3259b-148">在 .NET Framework 2.0 版中，Unmanaged 主機可以使用裝載 API 中的 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，覆寫通用語言執行平台的預設未處理例外狀況原則。</span><span class="sxs-lookup"><span data-stu-id="3259b-148">In the .NET Framework version 2.0, an unmanaged host can use the [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interface in the Hosting API to override the default unhandled exception policy of the common language runtime.</span></span> <span data-ttu-id="3259b-149">[Iclrpolicymanager:: Setunhandledexceptionpolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函數用來設定未處理例外狀況的原則。</span><span class="sxs-lookup"><span data-stu-id="3259b-149">The [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) function is used to set the policy for unhandled exceptions.</span></span>  
   
-## 請參閱  
- [Managed Threading Basics](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a><span data-ttu-id="3259b-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3259b-150">See Also</span></span>  
+ [<span data-ttu-id="3259b-151">Managed 執行緒處理的基本概念</span><span class="sxs-lookup"><span data-stu-id="3259b-151">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)

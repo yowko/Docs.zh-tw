@@ -1,38 +1,39 @@
 ---
-title: "根據名稱或索引擷取的未排序節點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "根據名稱或索引擷取的未排序節點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 根據名稱或索引擷取的未排序節點
-根據全球資訊網協會 \(W3C\) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。  存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。  有三種方法或屬性會傳回 **XmlNamedNodeMap**：  
+# <a name="unordered-node-retrieval-by-name-or-index"></a><span data-ttu-id="9e257-102">根據名稱或索引擷取的未排序節點</span><span class="sxs-lookup"><span data-stu-id="9e257-102">Unordered Node Retrieval by Name or Index</span></span>
+<span data-ttu-id="9e257-103">**XmlNamedNodeMap** namednodemap 的 World Wide Web Consortium (W3C) 規格所述，而且需要參考節點能夠處理未排序的節點集，根據名稱或索引。</span><span class="sxs-lookup"><span data-stu-id="9e257-103">The **XmlNamedNodeMap** is described in the World Wide Web Consortium (W3C) specification as the NamedNodeMap and is required to handle an unordered set of nodes with the ability to reference nodes by their name or index.</span></span> <span data-ttu-id="9e257-104">您可以存取的唯一方式**XmlNamedNodeMap**時**XmlNamedNodeMap**透過方法或屬性會傳回。</span><span class="sxs-lookup"><span data-stu-id="9e257-104">The only way you have access to an **XmlNamedNodeMap** is when an **XmlNamedNodeMap** is returned through a method or property.</span></span> <span data-ttu-id="9e257-105">有三種方法或屬性會傳回**XmlNamedNodeMap**:</span><span class="sxs-lookup"><span data-stu-id="9e257-105">There are three methods or properties that return an **XmlNamedNodeMap**:</span></span>  
   
--   XmlElement.Attributes  
+-   <span data-ttu-id="9e257-106">XmlElement.Attributes</span><span class="sxs-lookup"><span data-stu-id="9e257-106">XmlElement.Attributes</span></span>  
   
--   XmlDocumentType.Entities  
+-   <span data-ttu-id="9e257-107">XmlDocumentType.Entities</span><span class="sxs-lookup"><span data-stu-id="9e257-107">XmlDocumentType.Entities</span></span>  
   
--   XmlDocumentType.Notations  
+-   <span data-ttu-id="9e257-108">XmlDocumentType.Notations</span><span class="sxs-lookup"><span data-stu-id="9e257-108">XmlDocumentType.Notations</span></span>  
   
- 例如，**XmlDocumentType.Entities** 屬性會取得文件類型宣告中宣告的 **XmlEntity** 節點之集合。  這個集合會以 **XmlNamedNodeMap** 傳回，而且您可以使用 **Count** 屬性重複集合並且顯示實體資訊。  如需重複 **XmlNamedNodeMap** 的範例，請參閱 [XmlDocumentType.Entities 屬性](frlrfSystemXmlXmlDocumentTypeClassEntitiesTopic)。  
+ <span data-ttu-id="9e257-109">例如， **XmlDocumentType.Entities**屬性取得的集合**XmlEntity**文件類型宣告中宣告的節點。</span><span class="sxs-lookup"><span data-stu-id="9e257-109">For example, the **XmlDocumentType.Entities** property gets the collection of **XmlEntity** nodes declared in the document type declaration.</span></span> <span data-ttu-id="9e257-110">這個集合會當成**XmlNamedNodeMap**，您可以逐一查看集合的使用和**計數**屬性並且顯示實體資訊。</span><span class="sxs-lookup"><span data-stu-id="9e257-110">This collection is returned as an **XmlNamedNodeMap**, and you can iterate through the collection with the use of the **Count** property and display entity information.</span></span> <span data-ttu-id="9e257-111">如需逐一查看**XmlNamedNodeMap**，請參閱<xref:System.Xml.XmlDocumentType.Entities%2A>。</span><span class="sxs-lookup"><span data-stu-id="9e257-111">For an example of iterating through an **XmlNamedNodeMap**, see <xref:System.Xml.XmlDocumentType.Entities%2A>.</span></span>  
   
- **XmlAttributeCollection** 衍生自 **XmlNamedNodeMap** 而且只有其屬性可以修改，標記法和實體則是唯讀。  使用屬性的 **XmlNamedNodeMap**，您可以根據它們的 XML 名稱取得這些屬性的節點。  這提供簡單的方法來管理項目節點上的屬性集合。  這與直接使用 **XmlNodeList** 相反，後者也實作 `IEnumerable` 介面，但是是使用索引存取子 \(Accessor\) 而不是字串。  **RemoveNamedItem** 和 **SetNamedItem** 方法只能用於 **XmlAttributeCollection**。  從屬性集合加入或移除，無論是使用 **AttributeCollection** 或 **XmlNamedNodeMap** 實作，都會在項目上修改屬性集合。  下列程式碼範例將說明如何移動屬性及建立新屬性。  
+ <span data-ttu-id="9e257-112">**XmlAttributeCollection**衍生自**XmlNamedNodeMap**和只有屬性可以修改，標記法和實體處於唯讀狀態。</span><span class="sxs-lookup"><span data-stu-id="9e257-112">The **XmlAttributeCollection** is derived from **XmlNamedNodeMap** and only attributes are modifiable, while notations and entities are read-only.</span></span> <span data-ttu-id="9e257-113">使用**XmlNamedNodeMap**屬性，您可以取得節點的那些屬性，根據其 XML 名稱。</span><span class="sxs-lookup"><span data-stu-id="9e257-113">Using the **XmlNamedNodeMap** for the attributes, you can get nodes for those attributes based on their XML names.</span></span> <span data-ttu-id="9e257-114">這提供簡單的方法來管理項目節點上的屬性集合。</span><span class="sxs-lookup"><span data-stu-id="9e257-114">This provides an easy method for manipulating the collection of attributes on an element node.</span></span> <span data-ttu-id="9e257-115">這可以對照直接與**XmlNodeList**，它也會實作**IEnumerable**介面，但使用索引存取子，而不是字串。</span><span class="sxs-lookup"><span data-stu-id="9e257-115">This can be contrasted directly with **XmlNodeList**, which also implements the **IEnumerable** interface, but with an index accessor rather than a string.</span></span> <span data-ttu-id="9e257-116">**RemoveNamedItem**和**SetNamedItem**方法只能用於**XmlAttributeCollection**。</span><span class="sxs-lookup"><span data-stu-id="9e257-116">The **RemoveNamedItem** and **SetNamedItem** methods are only used against an **XmlAttributeCollection**.</span></span> <span data-ttu-id="9e257-117">新增或移除從屬性集合，是否使用**AttributeCollection**或**XmlNamedNodeMap**實作中，修改項目的屬性集合。</span><span class="sxs-lookup"><span data-stu-id="9e257-117">Adding or removing from an attribute collection, whether using the **AttributeCollection** or the **XmlNamedNodeMap** implementation, modifies the attribute collection on the element.</span></span> <span data-ttu-id="9e257-118">下列程式碼範例將說明如何移動屬性及建立新屬性。</span><span class="sxs-lookup"><span data-stu-id="9e257-118">The following code example shows how to move an attribute and create a new attribute.</span></span>  
   
 ```vb  
 Imports System  
@@ -123,7 +124,7 @@ class test {
 }  
 ```  
   
- 若要查看會顯示從 **AttributeCollection** 移除屬性的其他程式碼範例，請參閱 [XmlNamedNodeMap.RemoveNamedItem 方法](frlrfSystemXmlXmlNamedNodeMapClassRemoveNamedItemTopic)。  如需方法和屬性的詳細資訊，請參閱 [XmlNamedNodeMap 成員](frlrfSystemXmlXmlNamedNodeMapMembersTopic)。  
+ <span data-ttu-id="9e257-119">若要查看其他程式碼範例顯示移除從屬性**AttributeCollection**，請參閱[XmlNamedNodeMap.RemoveNamedItem 方法](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)。</span><span class="sxs-lookup"><span data-stu-id="9e257-119">To see an additional code example which shows an attribute being removed from an **AttributeCollection**, see [XmlNamedNodeMap.RemoveNamedItem Method](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem).</span></span> <span data-ttu-id="9e257-120">如需有關的方法和屬性的詳細資訊，請參閱[XmlNamedNodeMap 成員](AllMembers.T:System.Xml.XmlNamedNodeMap)。</span><span class="sxs-lookup"><span data-stu-id="9e257-120">For more information on the methods and properties, see [XmlNamedNodeMap Members](AllMembers.T:System.Xml.XmlNamedNodeMap).</span></span>  
   
-## 請參閱  
- [XML 文件物件模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="9e257-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e257-121">See Also</span></span>  
+ [<span data-ttu-id="9e257-122">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="9e257-122">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

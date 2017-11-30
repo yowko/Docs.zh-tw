@@ -1,0 +1,65 @@
+---
+title: "官方.NET Docker 映像"
+description: "容器化的.NET 應用程式的.NET Microservices 架構 |官方.NET Docker 映像"
+keywords: "Docker, 微服務, ASP.NET, 容器"
+author: CESARDELATORRE
+ms.author: wiwagn
+ms.date: 10/18/2017
+ms.prod: .net-core
+ms.technology: dotnet-docker
+ms.topic: article
+ms.openlocfilehash: 6f14bd0cf55a552f3881d755ebe7389f000975d8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
+---
+# <a name="official-net-docker-images"></a><span data-ttu-id="9b334-104">官方.NET Docker 映像</span><span class="sxs-lookup"><span data-stu-id="9b334-104">Official .NET Docker images</span></span>
+
+<span data-ttu-id="9b334-105">官方.NET Docker 映像會建立和最佳化的 Microsoft 的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="9b334-105">The Official .NET Docker images are Docker images created and optimized by Microsoft.</span></span> <span data-ttu-id="9b334-106">它們是 Microsoft 的儲存機制中公開可用[Docker Hub](https://hub.docker.com/u/microsoft/)。</span><span class="sxs-lookup"><span data-stu-id="9b334-106">They are publicly available in the Microsoft repositories on [Docker Hub](https://hub.docker.com/u/microsoft/).</span></span> <span data-ttu-id="9b334-107">每個儲存機制可以包含多個映像，根據.NET 版本，並根據作業系統和版本 （Linux Debian、 Linux Alpine、 Windows Nano Server、 Windows Server Core 等）。</span><span class="sxs-lookup"><span data-stu-id="9b334-107">Each repository can contain multiple images, depending on .NET versions, and depending on the OS and versions (Linux Debian, Linux Alpine, Windows Nano Server, Windows Server Core, etc.).</span></span>
+
+<span data-ttu-id="9b334-108">Microsoft 的願景.NET 的儲存機制是讓細微且已取得焦點的儲存機制，其中儲存機制代表特定案例或工作負載。</span><span class="sxs-lookup"><span data-stu-id="9b334-108">Microsoft’s vision for .NET repositories is to have granular and focused repos, where a repo represents a specific scenario or workload.</span></span> <span data-ttu-id="9b334-109">比方說， [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/)應該使用映像，因為這些 ASP.NET Core 映像提供的其他最佳化作業是容器，使用 ASP.NET Core docker，可以更快開始時。</span><span class="sxs-lookup"><span data-stu-id="9b334-109">For instance, the [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) images should be used when using ASP.NET Core on Docker, because those ASP.NET Core images provide additional optimizations so containers can start faster.</span></span>
+
+<span data-ttu-id="9b334-110">相反地，.NET Core 映像 (microsoft/dotnet) 是針對.NET 核心為基礎的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="9b334-110">On the other hand, the .NET Core images (microsoft/dotnet) are intended for console apps based on .NET Core.</span></span> <span data-ttu-id="9b334-111">例如，批次程序、 Azure Webjob 和其他主控台案例應該使用.NET Core。</span><span class="sxs-lookup"><span data-stu-id="9b334-111">For example, batch processes, Azure WebJobs, and other console scenarios should use .NET Core.</span></span> <span data-ttu-id="9b334-112">這些映像不包含 ASP.NET Core 堆疊，造成較小的容器映像。</span><span class="sxs-lookup"><span data-stu-id="9b334-112">Those images do not include the ASP.NET Core stack, resulting in a smaller container image.</span></span>
+
+<span data-ttu-id="9b334-113">大部分的映像儲存機制提供更詳盡的標記幫助您選取不只是特定的 framework 版本，還可選擇的作業系統 （Linux distro 或 Windows 版本）。</span><span class="sxs-lookup"><span data-stu-id="9b334-113">Most image repos provide extensive tagging to help you select not just a specific framework version, but also to choose an OS (Linux distro or Windows version).</span></span>
+
+<span data-ttu-id="9b334-114">如需由 Microsoft 提供的官方.NET Docker 映像的進一步資訊，請參閱[.NET Docker Images 摘要](https://aka.ms/dotnetdockerimages)。</span><span class="sxs-lookup"><span data-stu-id="9b334-114">For further information about the official .NET Docker images provided by Microsoft, see the [.NET Docker Images summary](https://aka.ms/dotnetdockerimages).</span></span>
+
+## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a><span data-ttu-id="9b334-115">開發與實際執行的.NET core 和 Docker 映像最佳化</span><span class="sxs-lookup"><span data-stu-id="9b334-115">.NET Core and Docker image optimizations for development versus production</span></span>
+
+<span data-ttu-id="9b334-116">在開發人員建置 Docker images，Microsoft 會著重於以下案例：</span><span class="sxs-lookup"><span data-stu-id="9b334-116">When building Docker images for developers, Microsoft focused on the following main scenarios:</span></span>
+
+-   <span data-ttu-id="9b334-117">若要使用的映像*開發*和建置.NET Core 應用程式。</span><span class="sxs-lookup"><span data-stu-id="9b334-117">Images used to *develop* and build .NET Core apps.</span></span>
+
+-   <span data-ttu-id="9b334-118">若要使用的映像*執行*.NET Core 應用程式。</span><span class="sxs-lookup"><span data-stu-id="9b334-118">Images used to *run* .NET Core apps.</span></span>
+
+<span data-ttu-id="9b334-119">為什麼多個映像嗎？</span><span class="sxs-lookup"><span data-stu-id="9b334-119">Why multiple images?</span></span> <span data-ttu-id="9b334-120">當開發、 建置及執行容器化應用程式時，通常會有不同的優先權。</span><span class="sxs-lookup"><span data-stu-id="9b334-120">When developing, building, and running containerized applications, you usually have different priorities.</span></span> <span data-ttu-id="9b334-121">透過這些個別的工作提供不同的映像，Microsoft 會有助於最佳化的開發、 建置和部署應用程式的個別處理程序。</span><span class="sxs-lookup"><span data-stu-id="9b334-121">By providing different images for these separate tasks, Microsoft helps optimize the separate processes of developing, building, and deploying apps.</span></span>
+
+### <a name="during-development-and-build"></a><span data-ttu-id="9b334-122">在開發和組建</span><span class="sxs-lookup"><span data-stu-id="9b334-122">During development and build</span></span>
+
+<span data-ttu-id="9b334-123">在開發期間，重要的是您可以逐一如何快速查看變更，以及偵錯所做的變更的功能。</span><span class="sxs-lookup"><span data-stu-id="9b334-123">During development, what is important is how fast you can iterate changes, and the ability to debug the changes.</span></span> <span data-ttu-id="9b334-124">無法變更您的程式碼和快速查看變更的功能一樣重要影像的大小。</span><span class="sxs-lookup"><span data-stu-id="9b334-124">The size of the image is not as important as the ability to make changes to your code and see the changes quickly.</span></span> <span data-ttu-id="9b334-125">有些工具和 [容器組建代理程式]，使用程式開發 ASP.NET Core 映像 （microsoft/aspnetcore-建置），在開發期間，並建立處理程序時發生。</span><span class="sxs-lookup"><span data-stu-id="9b334-125">Some tools and "build-agent containers", use the development ASP.NET Core image (microsoft/aspnetcore-build) during development and build proces.</span></span> <span data-ttu-id="9b334-126">建置在 Docker 容器的內部時, 的重要層面是編譯您的應用程式所需的項目。</span><span class="sxs-lookup"><span data-stu-id="9b334-126">When building inside a Docker container, the important aspects are the elements that are needed in order to compile your app.</span></span> <span data-ttu-id="9b334-127">這包括編譯器和.NET 相依性，以及像 npm web 開發相依性的 Gulp、 Bower。</span><span class="sxs-lookup"><span data-stu-id="9b334-127">This includes the compiler and any other .NET dependencies, plus web development dependencies like npm, Gulp, and Bower.</span></span>
+
+<span data-ttu-id="9b334-128">這種類型的組建映像為何如此重要？</span><span class="sxs-lookup"><span data-stu-id="9b334-128">Why is this type of build image important?</span></span> <span data-ttu-id="9b334-129">您無法部署此映像到生產環境。</span><span class="sxs-lookup"><span data-stu-id="9b334-129">You do not deploy this image to production.</span></span> <span data-ttu-id="9b334-130">相反地，它是您用來建置您的內容到生產環境的映像的映像。</span><span class="sxs-lookup"><span data-stu-id="9b334-130">Instead, it is an image you use to build the content you place into a production image.</span></span> <span data-ttu-id="9b334-131">此映像會使用持續整合 (CI) 環境中建置環境。</span><span class="sxs-lookup"><span data-stu-id="9b334-131">This image would be used in your continuous integration (CI) environment or build environment.</span></span> <span data-ttu-id="9b334-132">比方說，而不是以手動方式直接在組建代理程式上安裝所有應用程式相依性主應用程式 (例如，VM)、 組建代理程式會具現化的.NET Core 建置映像建置的應用程式所需的所有依存性。</span><span class="sxs-lookup"><span data-stu-id="9b334-132">For instance, rather than manually installing all your application dependencies directly on a build agent host (a VM, for example), the build agent would instantiate a .NET Core build image with all the dependencies required to build the application.</span></span> <span data-ttu-id="9b334-133">組建代理程式只需要知道如何執行此 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="9b334-133">Your build agent only needs to know how to run this Docker image.</span></span> <span data-ttu-id="9b334-134">這可簡化 CI 環境，並使其更容易預測。</span><span class="sxs-lookup"><span data-stu-id="9b334-134">This simplifies your CI environment and makes it much more predictable.</span></span>
+
+### <a name="in-production"></a><span data-ttu-id="9b334-135">在生產環境中</span><span class="sxs-lookup"><span data-stu-id="9b334-135">In production</span></span>
+
+<span data-ttu-id="9b334-136">在生產環境中重要的是如何快速部署和啟動您的實際執行.NET Core 映像為基礎的容器。</span><span class="sxs-lookup"><span data-stu-id="9b334-136">What is important in production is how fast you can deploy and start your containers based on a production .NET Core image.</span></span> <span data-ttu-id="9b334-137">因此，執行階段僅映像會根據[microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/)很小，使它可以快速在網路上傳輸從 Docker 登錄您的 Docker 主機。</span><span class="sxs-lookup"><span data-stu-id="9b334-137">Therefore, the runtime-only image based on [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) is small so that it can travel quickly across the network from your Docker registry to your Docker hosts.</span></span> <span data-ttu-id="9b334-138">內容已準備好執行時，啟用最短的時間，使其無法啟動處理結果的容器。</span><span class="sxs-lookup"><span data-stu-id="9b334-138">The contents are ready to run, enabling the fastest time from starting the container to processing results.</span></span> <span data-ttu-id="9b334-139">在 Docker 模型中，您就不必從 C 編譯\#程式碼中，有當您執行 dotnet 組建或 dotnet 發行時使用組建容器。</span><span class="sxs-lookup"><span data-stu-id="9b334-139">In the Docker model, there is no need for compilation from C\# code, as there is when you run dotnet build or dotnet publish when using the build container.</span></span>
+
+<span data-ttu-id="9b334-140">此最佳化的映像在您放入的二進位檔和執行應用程式所需的其他內容。</span><span class="sxs-lookup"><span data-stu-id="9b334-140">In this optimized image you put only the binaries and other content needed to run the application.</span></span> <span data-ttu-id="9b334-141">Dotnet 所建立的內容，例如發行只包含已編譯的.NET 二進位檔、 影像、.js、 和.css 檔案。</span><span class="sxs-lookup"><span data-stu-id="9b334-141">For example, the content created by dotnet publish contains only the compiled .NET binaries, images, .js, and .css files.</span></span> <span data-ttu-id="9b334-142">經過一段時間，您會看到包含預先 jit 封裝映像。</span><span class="sxs-lookup"><span data-stu-id="9b334-142">Over time, you will see images that contain pre-jitted packages.</span></span>
+
+<span data-ttu-id="9b334-143">雖然有多個版本的.NET Core 和 ASP.NET Core 映像，但它們都共用一或多個圖層，其中包括基底的階層。</span><span class="sxs-lookup"><span data-stu-id="9b334-143">Although there are multiple versions of the .NET Core and ASP.NET Core images, they all share one or more layers, including the base layer.</span></span> <span data-ttu-id="9b334-144">因此，儲存映像所需的磁碟空間數量很它只包含自訂映像和其基底映像之間的差異。</span><span class="sxs-lookup"><span data-stu-id="9b334-144">Therefore, the amount of disk space needed to store an image is small; it consists only of the delta between your custom image and its base image.</span></span> <span data-ttu-id="9b334-145">結果是快速從登錄中提取映像。</span><span class="sxs-lookup"><span data-stu-id="9b334-145">The result is that it is quick to pull the image from your registry.</span></span>
+
+<span data-ttu-id="9b334-146">當您瀏覽在 Docker Hub.NET 映像儲存機制時，您會發現多個映像版本的分類或加上標記。</span><span class="sxs-lookup"><span data-stu-id="9b334-146">When you explore the .NET image repositories at Docker Hub, you will find multiple image versions classified or marked with tags.</span></span> <span data-ttu-id="9b334-147">這些標記可協助決定要根據版本需要下表中一樣使用，哪一個：</span><span class="sxs-lookup"><span data-stu-id="9b334-147">These tags help to decide which one to use, depending on the version you need, like those in the following table:</span></span>
+
+-   <span data-ttu-id="9b334-148">microsoft /**aspnetcore:2.0**</span><span class="sxs-lookup"><span data-stu-id="9b334-148">microsoft/**aspnetcore:2.0**</span></span>
+
+        ASP.NET Core, with runtime only and ASP.NET Core optimizations, on Linux and Windows (multi-arch)
+
+-   <span data-ttu-id="9b334-149">microsoft /**aspnetcore-2.0 組建：**</span><span class="sxs-lookup"><span data-stu-id="9b334-149">microsoft/**aspnetcore-build:2.0**</span></span>
+
+        ASP.NET Core, with SDKs included, on Linux and Windows (multi-arch)
+
+
+>[!div class="step-by-step"]
+<span data-ttu-id="9b334-150">[上一個](net-容器-os-targets.md) [下一步] (.../architect-microservice-container-applications/index.md)</span><span class="sxs-lookup"><span data-stu-id="9b334-150">[Previous] (net-container-os-targets.md) [Next] (../architect-microservice-container-applications/index.md)</span></span>

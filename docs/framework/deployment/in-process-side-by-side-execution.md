@@ -5,79 +5,72 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 同處理序並存執行
-從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，您就可以使用同處理序並存裝載功能，在單一處理序中執行多個 Common Language Runtime \(CLR\) 版本。  根據預設，不論系統針對處理序所載入 .NET Framework 版本為何，Managed COM 元件都會使用建置它們所用的 .NET Framework 版本來執行。  
+# <a name="in-process-side-by-side-execution"></a><span data-ttu-id="62314-102">同處理序並存執行</span><span class="sxs-lookup"><span data-stu-id="62314-102">In-Process Side-by-Side Execution</span></span>
+<span data-ttu-id="62314-103">從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。</span><span class="sxs-lookup"><span data-stu-id="62314-103">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use in-process side-by-side hosting to run multiple versions of the common language runtime (CLR) in a single process.</span></span> <span data-ttu-id="62314-104">根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。</span><span class="sxs-lookup"><span data-stu-id="62314-104">By default, managed COM components run with the .NET Framework version they were built with, regardless of the .NET Framework version that is loaded for the process.</span></span>  
   
-## 背景  
- 雖然 .NET Framework 一律會針對 Managed 程式碼應用程式提供並存裝載，但是在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，它並未針對 Managed COM 元件提供該項功能。  在過去，載入處理序中的 Managed COM 元件會使用已經載入的執行階段版本或已安裝的最新 .NET Framework 版本來執行。  如果這個版本與 COM 元件不相容，元件就會失敗。  
+## <a name="background"></a><span data-ttu-id="62314-105">背景</span><span class="sxs-lookup"><span data-stu-id="62314-105">Background</span></span>  
+ <span data-ttu-id="62314-106">.NET Framework 一律會提供 Managed 程式碼應用程式的並存裝載，但在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，未針對 Managed COM 元件提供該功能。</span><span class="sxs-lookup"><span data-stu-id="62314-106">The .NET Framework has always provided side-by-side hosting for managed code applications, but before the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], it did not provide that functionality for managed COM components.</span></span> <span data-ttu-id="62314-107">過去，載入至程序的 Managed COM 元件是與已載入的執行階段版本或 .NET Framework 的最新已安裝版本一起執行。</span><span class="sxs-lookup"><span data-stu-id="62314-107">In the past, managed COM components that were loaded into a process ran either with the version of the runtime that was already loaded or with the latest installed version of the .NET Framework.</span></span> <span data-ttu-id="62314-108">如果此版本與 COM 元件不相容，元件就會失敗。</span><span class="sxs-lookup"><span data-stu-id="62314-108">If this version was not compatible with the COM component, the component would fail.</span></span>  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供了一種達成並存裝載的新方式，可確保下列情況：  
+ <span data-ttu-id="62314-109">[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供新的方式進行並存裝載，以確保下列各項：</span><span class="sxs-lookup"><span data-stu-id="62314-109">The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] provides a new approach to side-by-side hosting that ensures the following:</span></span>  
   
--   安裝新的 .NET Framework 版本完全不會影響現有的應用程式。  
+-   <span data-ttu-id="62314-110">安裝新版的 .NET Framework 不會影響現有應用程式。</span><span class="sxs-lookup"><span data-stu-id="62314-110">Installing a new version of the .NET Framework has no effect on existing applications.</span></span>  
   
--   應用程式會針對建置它們所用的 .NET Framework 版本執行。  除非明確指示，否則它們不會使用新的 .NET Framework 版本。  不過，讓應用程式轉換成使用新的 .NET Framework 版本會比較方便。  
+-   <span data-ttu-id="62314-111">應用程式會針對用來建置的 .NET Framework 版本執行。</span><span class="sxs-lookup"><span data-stu-id="62314-111">Applications run against the version of the .NET Framework that they were built with.</span></span> <span data-ttu-id="62314-112">除非明確指示，否則它們不會使用新版 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="62314-112">They do not use the new version of the .NET Framework unless expressly directed to do so.</span></span> <span data-ttu-id="62314-113">不過，應用程式較容易轉換成使用新版 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="62314-113">However, it is easier for applications to transition to using a new version of the .NET Framework.</span></span>  
   
-## 對於使用者和開發人員的影響  
+## <a name="effects-on-users-and-developers"></a><span data-ttu-id="62314-114">使用者和開發人員的影響</span><span class="sxs-lookup"><span data-stu-id="62314-114">Effects on Users and Developers</span></span>  
   
--   **使用者和系統管理員**：  這些使用者現在可以更確信，當他們安裝新的執行階段版本時，不論是獨立安裝或與應用程式一起安裝，都完全不會影響他們的電腦。  現有的應用程式將繼續依照先前的方式執行。  
+-   <span data-ttu-id="62314-115">**一般使用者和系統管理員**.</span><span class="sxs-lookup"><span data-stu-id="62314-115">**End users and system administrators**.</span></span> <span data-ttu-id="62314-116">這些使用者現在可以更有信心，在單獨或與應用程式一起安裝新版執行階段時，不會對其電腦造成任何影響。</span><span class="sxs-lookup"><span data-stu-id="62314-116">These users can now have greater confidence that when they install a new version of the runtime, either independently or with an application, it will have no impact on their computers.</span></span> <span data-ttu-id="62314-117">現有應用程式會繼續與之前一樣地執行。</span><span class="sxs-lookup"><span data-stu-id="62314-117">Existing applications will continue to run as they did before.</span></span>  
   
--   **應用程式開發人員**：  並存裝載對於應用程式開發人員幾乎沒有任何影響。  根據預設，應用程式一定會針對建置它們所用的 .NET Framework 版本執行。這點不會變更。  不過，開發人員可以覆寫這個行為並且指示應用程式在更新的 .NET Framework 版本底下執行 \(請參閱[案例 2](#scenarios)\)。  
+-   <span data-ttu-id="62314-118">**應用程式開發人員**。</span><span class="sxs-lookup"><span data-stu-id="62314-118">**Application developers**.</span></span> <span data-ttu-id="62314-119">並存裝載幾乎不會影響應用程式開發人員。</span><span class="sxs-lookup"><span data-stu-id="62314-119">Side-by-side hosting has almost no effect on application developers.</span></span> <span data-ttu-id="62314-120">根據預設，應用程式一律會針對用來建置的 .NET Framework 版本執行；這並未變更。</span><span class="sxs-lookup"><span data-stu-id="62314-120">By default, applications always run against the version of the .NET Framework they were built on; this has not changed.</span></span> <span data-ttu-id="62314-121">不過，開發人員可以覆寫這個行為，並指示應用程式在較新版的 .NET Framework 下執行 (請參閱[情節 2](#scenarios))。</span><span class="sxs-lookup"><span data-stu-id="62314-121">However, developers can override this behavior and direct the application to run under a newer version of the .NET Framework (see [scenario 2](#scenarios)).</span></span>  
   
--   **程式庫開發人員和消費者**：  並存裝載不會解決程式庫開發人員所面臨的相容性問題。  應用程式直接載入的程式庫 \(透過直接參考或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 呼叫\) 會繼續使用將它載入其中的 <xref:System.AppDomain> 執行階段。  您應該針對想要支援的所有 .NET Framework 版本測試程式庫。  如果應用程式是使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段所編譯，但是包括使用舊版執行階段所建置的程式庫，該程式庫也會使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段。  不過，如果您擁有使用舊版執行階段所建置的應用程式以及使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 所建置的程式庫，就必須強制應用程式使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] \(請參閱[案例 3](#scenarios)\)。  
+-   <span data-ttu-id="62314-122">**程式庫開發人員和取用者**。</span><span class="sxs-lookup"><span data-stu-id="62314-122">**Library developers and consumers**.</span></span> <span data-ttu-id="62314-123">並存裝載無法解決程式庫開發人員所面對的相容性問題。</span><span class="sxs-lookup"><span data-stu-id="62314-123">Side-by-side hosting does not solve the compatibility problems that library developers face.</span></span> <span data-ttu-id="62314-124">應用程式直接透過直接參考或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 呼叫所載入的程式庫，會持續使用載入它之 <xref:System.AppDomain> 的執行階段。</span><span class="sxs-lookup"><span data-stu-id="62314-124">A library that is directly loaded by an application -- either through a direct reference or through an <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> call -- continues to use the runtime of the <xref:System.AppDomain> it is loaded into.</span></span> <span data-ttu-id="62314-125">您應該針對您想要支援的所有 .NET Framework 版本測試程式庫。</span><span class="sxs-lookup"><span data-stu-id="62314-125">You should test your libraries against all versions of the .NET Framework that you want to support.</span></span> <span data-ttu-id="62314-126">如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段來編譯應用程式，但應用程式包括使用舊版執行階段所建置的程式庫，則該程式庫也會使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段。</span><span class="sxs-lookup"><span data-stu-id="62314-126">If an application is compiled using the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] runtime but includes a library that was built using an earlier runtime, that library will use the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] runtime as well.</span></span> <span data-ttu-id="62314-127">不過，如果您的應用程式是使用舊版執行階段所建置，而且程式庫是使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 所建置，則您必須強制應用程式也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (請參閱[情節 3](#scenarios))。</span><span class="sxs-lookup"><span data-stu-id="62314-127">However, if you have an application that was built using an earlier runtime and a library that was built using the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you must force your application to also use the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (see [scenario 3](#scenarios)).</span></span>  
   
--   **Managed COM 元件開發人員**：  在過去，Managed COM 元件會自動使用電腦上已安裝的最新執行階段版本來執行。  不過，您現在可以針對建置 COM 元件所用的執行階段版本執行這些元件。  
+-   <span data-ttu-id="62314-128">**Managed COM 元件開發人員**。</span><span class="sxs-lookup"><span data-stu-id="62314-128">**Managed COM component developers**.</span></span> <span data-ttu-id="62314-129">過去，會使用電腦上所安裝的最新執行階段版本來自動執行 Managed COM 元件。</span><span class="sxs-lookup"><span data-stu-id="62314-129">In the past, managed COM components automatically ran using the latest version of the runtime installed on the computer.</span></span> <span data-ttu-id="62314-130">您現在可以針對建置它們的執行階段版本執行 COM 元件。</span><span class="sxs-lookup"><span data-stu-id="62314-130">You can now execute COM components against the version of the runtime they were built with.</span></span>  
   
-     如下表所示，雖然使用 .NET Framework 1.1 版所建置的元件可以與 4 版元件並存執行，不過它們無法與 2.0、3.0 或 3.5 版元件一起執行，因為並存裝載不適用於這些版本。  
+     <span data-ttu-id="62314-131">如下表所示，使用 .NET Framework 1.1 版所建置的元件可以與第 4 版元件並存執行，但它們無法與 2.0、3.0 或 3.5 版元件一起執行，因為這些版本無法使用並存裝載。</span><span class="sxs-lookup"><span data-stu-id="62314-131">As shown by the following table, components that were built with the .NET Framework version 1.1 can run side by side with version 4 components, but they cannot run with version 2.0, 3.0, or 3.5 components, because side-by-side hosting is not available for those versions.</span></span>  
   
-    |.NET Framework 版本|1.1|2.0 \- 3.5|4|  
-    |-----------------------|---------|----------------|-------|  
-    |1.1|不適用|沒有|有|  
-    |2.0 \- 3.5|沒有|不適用|有|  
-    |4|有|有|不適用|  
+    |<span data-ttu-id="62314-132">.NET Framework 版本</span><span class="sxs-lookup"><span data-stu-id="62314-132">.NET Framework version</span></span>|<span data-ttu-id="62314-133">1.1</span><span class="sxs-lookup"><span data-stu-id="62314-133">1.1</span></span>|<span data-ttu-id="62314-134">2.0 - 3.5</span><span class="sxs-lookup"><span data-stu-id="62314-134">2.0 - 3.5</span></span>|<span data-ttu-id="62314-135">4</span><span class="sxs-lookup"><span data-stu-id="62314-135">4</span></span>|  
+    |----------------------------|---------|----------------|-------|  
+    |<span data-ttu-id="62314-136">1.1</span><span class="sxs-lookup"><span data-stu-id="62314-136">1.1</span></span>|<span data-ttu-id="62314-137">不適用</span><span class="sxs-lookup"><span data-stu-id="62314-137">Not applicable</span></span>|<span data-ttu-id="62314-138">否</span><span class="sxs-lookup"><span data-stu-id="62314-138">No</span></span>|<span data-ttu-id="62314-139">是</span><span class="sxs-lookup"><span data-stu-id="62314-139">Yes</span></span>|  
+    |<span data-ttu-id="62314-140">2.0 - 3.5</span><span class="sxs-lookup"><span data-stu-id="62314-140">2.0 - 3.5</span></span>|<span data-ttu-id="62314-141">否</span><span class="sxs-lookup"><span data-stu-id="62314-141">No</span></span>|<span data-ttu-id="62314-142">不適用</span><span class="sxs-lookup"><span data-stu-id="62314-142">Not applicable</span></span>|<span data-ttu-id="62314-143">是</span><span class="sxs-lookup"><span data-stu-id="62314-143">Yes</span></span>|  
+    |<span data-ttu-id="62314-144">4</span><span class="sxs-lookup"><span data-stu-id="62314-144">4</span></span>|<span data-ttu-id="62314-145">是</span><span class="sxs-lookup"><span data-stu-id="62314-145">Yes</span></span>|<span data-ttu-id="62314-146">是</span><span class="sxs-lookup"><span data-stu-id="62314-146">Yes</span></span>|<span data-ttu-id="62314-147">不適用</span><span class="sxs-lookup"><span data-stu-id="62314-147">Not applicable</span></span>|  
   
 > [!NOTE]
->  .NET Framework 3.0 和 3.5 版是根據 2.0 版以累加方式建置的，而且不需要並存執行。  這些原本就是相同的版本。  
+>  <span data-ttu-id="62314-148">.NET Framework 3.0 和 3.5 版是根據 2.0 版透過累加方式所建置，不需要並存執行。</span><span class="sxs-lookup"><span data-stu-id="62314-148">.NET Framework versions 3.0 and 3.5 are built incrementally on version 2.0, and do not need to run side by side.</span></span> <span data-ttu-id="62314-149">這些本質上是相同的版本。</span><span class="sxs-lookup"><span data-stu-id="62314-149">These are inherently the same version.</span></span>  
   
 <a name="scenarios"></a>   
-## 常見的並存裝載案例  
+## <a name="common-side-by-side-hosting-scenarios"></a><span data-ttu-id="62314-150">常見並存裝載案例</span><span class="sxs-lookup"><span data-stu-id="62314-150">Common Side-by-Side Hosting Scenarios</span></span>  
   
--   **案例 1**：使用以舊版 .NET Framework 建置之 COM 元件的原生應用程式。  
+-   <span data-ttu-id="62314-151">**情節 1：**使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。</span><span class="sxs-lookup"><span data-stu-id="62314-151">**Scenario 1:** Native application that uses COM components built with earlier versions of the .NET Framework.</span></span>  
   
-     已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以及 COM 元件所使用的所有其他 .NET Framework 版本。  
+     <span data-ttu-id="62314-152">已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以及 COM 元件所使用的所有其他 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="62314-152">.NET Framework versions installed: The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] and all other versions of the .NET Framework used by the COM components.</span></span>  
   
-     處理方式：在這個案例中，不需要進行任何處理。  COM 元件將使用註冊它們所用的 .NET Framework 版本來執行。  
+     <span data-ttu-id="62314-153">處理方式：在此情節中，不執行任何動作。</span><span class="sxs-lookup"><span data-stu-id="62314-153">What to do: In this scenario, do nothing.</span></span> <span data-ttu-id="62314-154">COM 元件會與註冊它們的 .NET Framework 版本一起執行。</span><span class="sxs-lookup"><span data-stu-id="62314-154">The COM components will run with the version of the .NET Framework they were registered with.</span></span>  
   
--   **案例 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 所建置的 Managed 應用程式，而您想讓此應用程式使用 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 來執行，但是願意讓它在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上執行 \(如果 2.0 版不存在的話\)。  
+-   <span data-ttu-id="62314-155">**情節 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 所建置的 Managed 應用程式，您想要將它與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起執行，但要在 2.0 版不存在時於 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上執行。</span><span class="sxs-lookup"><span data-stu-id="62314-155">**Scenario 2**: Managed application built with the [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] that you would prefer to run with the [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], but are willing to run on the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] if version 2.0 is not present.</span></span>  
   
-     已安裝的 .NET Framework 版本：舊版 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
+     <span data-ttu-id="62314-156">已安裝的 .NET Framework 版本：舊版 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="62314-156">.NET Framework versions installed: An earlier version of the .NET Framework and the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].</span></span>  
   
-     處理方式：在應用程式目錄的[應用程式組態檔](../../../docs/framework/configure-apps/index.md)中，使用 [\<startup\> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime\> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)，其設定方式如下：  
+     <span data-ttu-id="62314-157">處理方式：在應用程式目錄的[應用程式組態檔](../../../docs/framework/configure-apps/index.md)中，使用 [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)，其設定方式如下：</span><span class="sxs-lookup"><span data-stu-id="62314-157">What to do: In the [application configuration file](../../../docs/framework/configure-apps/index.md) in the application directory, use the [\<startup> element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) and the [\<supportedRuntime> element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) set as follows:</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup >  
         <supportedRuntime version="v2.0.50727" />  
@@ -86,13 +79,13 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
--   **案例 3**：使用以舊版 .NET Framework 建置之 COM 元件的原生應用程式，而您想要使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 來執行此應用程式。  
+-   <span data-ttu-id="62314-158">**情節 3：**使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。</span><span class="sxs-lookup"><span data-stu-id="62314-158">**Scenario 3:** Native application that uses COM components built with earlier versions of the .NET Framework that you want to run with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].</span></span>  
   
-     已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
+     <span data-ttu-id="62314-159">已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="62314-159">.NET Framework versions installed: The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].</span></span>  
   
-     處理方式：在應用程式目錄的應用程式組態檔中，使用將 `useLegacyV2RuntimeActivationPolicy` 屬性設定為 `true` 的 `<startup>` 項目和 `<supportedRuntime>` 項目，其設定方式如下：  
+     <span data-ttu-id="62314-160">處理方式：在應用程式目錄的應用程式組態檔中，搭配使用 `<startup>` 項目與設為 `true` 的 `useLegacyV2RuntimeActivationPolicy` 屬性以及設定如下的 `<supportedRuntime>` 項目：</span><span class="sxs-lookup"><span data-stu-id="62314-160">What to do: In the application configuration file in the application directory, use the `<startup>` element with the `useLegacyV2RuntimeActivationPolicy` attribute set to `true` and the `<supportedRuntime>` element set as follows:</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup useLegacyV2RuntimeActivationPolicy="true">  
         <supportedRuntime version="v4.0" />  
@@ -100,10 +93,10 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
-## 範例  
- 下列範例將示範一個 Unmanaged COM 主機，它會使用編譯 Managed COM 元件所用的 .NET Framework 版本來執行此元件。  
+## <a name="example"></a><span data-ttu-id="62314-161">範例</span><span class="sxs-lookup"><span data-stu-id="62314-161">Example</span></span>  
+ <span data-ttu-id="62314-162">下列範例示範執行 Managed COM 元件的 Unmanaged COM 主機，方法是使用編譯元件使用的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="62314-162">The following example demonstrates an unmanaged COM host that is running a managed COM component by using the version of the .NET Framework that the component was compiled to use.</span></span>  
   
- 若要執行下列範例，請編譯和註冊下列使用 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]的 Managed COM 元件。  若要註冊元件，請在 \[**專案**\] 功能表上，按一下 \[**屬性**\]，再按一下 \[**組建**\] 索引標籤，然後選取 \[**註冊 COM Interop**\] 核取方塊。  
+ <span data-ttu-id="62314-163">若要執行下列範例，請編譯並註冊下列使用 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Managed COM 元件。</span><span class="sxs-lookup"><span data-stu-id="62314-163">To run the following example, compile and register the following managed COM component using the [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].</span></span> <span data-ttu-id="62314-164">若要註冊元件，請在 [專案] 功能表上按一下 [屬性]，再按一下 [組建] 索引標籤，然後選取 [註冊 COM Interop] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="62314-164">To register the component, on the **Project** menu, click **Properties**, click the **Build** tab, and then select the **Register for COM interop** check box.</span></span>  
   
 ```  
 using System;  
@@ -128,7 +121,7 @@ namespace BasicComObject
 }  
 ```  
   
- 編譯下列 Unmanaged C\+\+ 應用程式，以便啟動上一個範例所建立的 COM 物件。  
+ <span data-ttu-id="62314-165">編譯下列 Unmanaged C++ 應用程式，以啟用前一個範例所建立的 COM 物件。</span><span class="sxs-lookup"><span data-stu-id="62314-165">Compile the following unmanaged C++ application, which activates the COM object that is created by the previous example.</span></span>  
   
 ```  
 #include "stdafx.h"  
@@ -186,9 +179,8 @@ int _tmain(int argc, _TCHAR* argv[])
     CoUninitialize();  
     return 0;  
 }  
-  
 ```  
   
-## 請參閱  
- [\<startup\> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
- [\<supportedRuntime\> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a><span data-ttu-id="62314-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62314-166">See Also</span></span>  
+ [<span data-ttu-id="62314-167">\<啟動 > 項目</span><span class="sxs-lookup"><span data-stu-id="62314-167">\<startup> Element</span></span>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+ [<span data-ttu-id="62314-168">\<supportedRuntime> 項目</span><span class="sxs-lookup"><span data-stu-id="62314-168">\<supportedRuntime> Element</span></span>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

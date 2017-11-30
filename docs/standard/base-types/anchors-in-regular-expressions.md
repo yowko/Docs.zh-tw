@@ -1,180 +1,186 @@
 ---
-title: "規則運算式中的錨點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 規則運算式, 錨點"
-  - ".NET Framework 規則運算式, 基本無寬度的判斷提示"
-  - "錨點, 在規則運算式中"
-  - "基本無寬度的判斷提示"
-  - "中繼字元, 錨點"
-  - "中繼字元, 基本無寬度的判斷提示"
-  - "規則運算式, 錨點"
-  - "規則運算式, 基本無寬度的判斷提示"
+title: "規則運算式中的錨點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- atomic zero-width assertions
+- regular expressions, anchors
+- regular expressions, atomic zero-width assertions
+- anchors, in regular expressions
+- metacharacters, atomic zero-width assertions
+- metacharacters, anchors
+- .NET Framework regular expressions, anchors
+- .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 規則運算式中的錨點
-<a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如，`^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET Framework 中此規則運算式所支援的錨點。  
+# <a name="anchors-in-regular-expressions"></a><span data-ttu-id="51d3e-102">規則運算式中的錨點</span><span class="sxs-lookup"><span data-stu-id="51d3e-102">Anchors in Regular Expressions</span></span>
+<span data-ttu-id="51d3e-103"><a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。</span><span class="sxs-lookup"><span data-stu-id="51d3e-103"><a name="top"></a> Anchors, or atomic zero-width assertions, specify a position in the string where a match must occur.</span></span> <span data-ttu-id="51d3e-104">當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。</span><span class="sxs-lookup"><span data-stu-id="51d3e-104">When you use an anchor in your search expression, the regular expression engine does not advance through the string or consume characters; it looks for a match in the specified position only.</span></span> <span data-ttu-id="51d3e-105">例如， `^` 指定必須從行首或字串的開頭開始比對。</span><span class="sxs-lookup"><span data-stu-id="51d3e-105">For example, `^` specifies that the match must start at the beginning of a line or string.</span></span> <span data-ttu-id="51d3e-106">因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。</span><span class="sxs-lookup"><span data-stu-id="51d3e-106">Therefore, the regular expression `^http:` matches "http:" only when it occurs at the beginning of a line.</span></span> <span data-ttu-id="51d3e-107">下表列出 .NET 中此規則運算式所支援的錨點。</span><span class="sxs-lookup"><span data-stu-id="51d3e-107">The following table lists the anchors supported by the regular expressions in .NET.</span></span>  
   
-|錨點|描述|  
-|--------|--------|  
-|`^`|比對必須發生在字串的開頭或行首。 如需詳細資訊，請參閱[字串開頭或行首](#Start)。|  
-|`$`|比對必須發生在字串結尾或行尾，或是發生在字串結尾或行尾的 `\n` 之前。 如需詳細資訊，請參閱[字串結尾或行尾](#End)。|  
-|`\A`|比對只能發生在字串的開頭 \(不支援多行\)。 如需詳細資訊，請參閱[僅字串開頭](#StartOnly)。|  
-|`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。 如需詳細資訊，請參閱[字串結尾或結束新行之前](#EndOrNOnly)。|  
-|`\z`|比對只能發生在字串結尾。 如需詳細資訊，請參閱[僅字串結尾](#EndOnly)。|  
-|`\G`|比對必須從上一個比對結束的位置開始。 如需詳細資訊，請參閱[連續比對](#Contiguous)。|  
-|`\b`|比對必須發生在字邊界上。 如需詳細資訊，請參閱[字邊界](#WordBoundary)。|  
-|`\B`|比對不可發生在字邊界上。 如需詳細資訊，請參閱[非字邊界](#NonwordBoundary)。|  
+|<span data-ttu-id="51d3e-108">錨點</span><span class="sxs-lookup"><span data-stu-id="51d3e-108">Anchor</span></span>|<span data-ttu-id="51d3e-109">描述</span><span class="sxs-lookup"><span data-stu-id="51d3e-109">Description</span></span>|  
+|------------|-----------------|  
+|`^`|<span data-ttu-id="51d3e-110">比對必須發生在字串的開頭或行首。</span><span class="sxs-lookup"><span data-stu-id="51d3e-110">The match must occur at the beginning of the string or line.</span></span> <span data-ttu-id="51d3e-111">如需詳細資訊，請參閱 [字串開頭或行首](#Start)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-111">For more information, see [Start of String or Line](#Start).</span></span>|  
+|`$`|<span data-ttu-id="51d3e-112">比對必須發生在字串結尾或行尾，或是發生在字串結尾或行尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="51d3e-112">The match must occur at the end of the string or line, or before `\n` at the end of the string or line.</span></span> <span data-ttu-id="51d3e-113">如需詳細資訊，請參閱 [字串結尾或行尾](#End)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-113">For more information, see [End of String or Line](#End).</span></span>|  
+|`\A`|<span data-ttu-id="51d3e-114">比對只能發生在字串的開頭 (不支援多行)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-114">The match must occur at the beginning of the string only (no multiline support).</span></span> <span data-ttu-id="51d3e-115">如需詳細資訊，請參閱 [僅字串開頭](#StartOnly)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-115">For more information, see [Start of String Only](#StartOnly).</span></span>|  
+|`\Z`|<span data-ttu-id="51d3e-116">比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="51d3e-116">The match must occur at the end of the string, or before `\n` at the end of the string.</span></span> <span data-ttu-id="51d3e-117">如需詳細資訊，請參閱 [字串結尾或結束新行之前](#EndOrNOnly)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-117">For more information, see [End of String or Before Ending Newline](#EndOrNOnly).</span></span>|  
+|`\z`|<span data-ttu-id="51d3e-118">比對只能發生在字串結尾。</span><span class="sxs-lookup"><span data-stu-id="51d3e-118">The match must occur at the end of the string only.</span></span> <span data-ttu-id="51d3e-119">如需詳細資訊，請參閱 [僅字串結尾](#EndOnly)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-119">For more information, see [End of String Only](#EndOnly).</span></span>|  
+|`\G`|<span data-ttu-id="51d3e-120">比對必須從上一個比對結束的位置開始。</span><span class="sxs-lookup"><span data-stu-id="51d3e-120">The match must start at the position where the previous match ended.</span></span> <span data-ttu-id="51d3e-121">如需詳細資訊，請參閱 [連續比對](#Contiguous)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-121">For more information, see [Contiguous Matches](#Contiguous).</span></span>|  
+|`\b`|<span data-ttu-id="51d3e-122">比對必須發生在字邊界上。</span><span class="sxs-lookup"><span data-stu-id="51d3e-122">The match must occur on a word boundary.</span></span> <span data-ttu-id="51d3e-123">如需詳細資訊，請參閱 [字邊界](#WordBoundary)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-123">For more information, see [Word Boundary](#WordBoundary).</span></span>|  
+|`\B`|<span data-ttu-id="51d3e-124">比對不可發生在字邊界上。</span><span class="sxs-lookup"><span data-stu-id="51d3e-124">The match must not occur on a word boundary.</span></span> <span data-ttu-id="51d3e-125">如需詳細資訊，請參閱 [非字邊界](#NonwordBoundary)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-125">For more information, see [Non-Word Boundary](#NonwordBoundary).</span></span>|  
   
 <a name="Start"></a>   
-## 字串開頭或行首：^  
- `^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。 如果您將 `^` 與 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 選項搭配使用 \(請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)\)，則比對必須發生在每一行的行首。  
+## <a name="start-of-string-or-line-"></a><span data-ttu-id="51d3e-126">字串開頭或行首：^</span><span class="sxs-lookup"><span data-stu-id="51d3e-126">Start of String or Line: ^</span></span>  
+ <span data-ttu-id="51d3e-127">`^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。</span><span class="sxs-lookup"><span data-stu-id="51d3e-127">The `^` anchor specifies that the following pattern must begin at the first character position of the string.</span></span> <span data-ttu-id="51d3e-128">如果您使用`^`與<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>選項 (請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md))，比對必須發生在每一行的開頭。</span><span class="sxs-lookup"><span data-stu-id="51d3e-128">If you use `^` with the <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option (see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md)), the match must occur at the beginning of each line.</span></span>  
   
- 下列範例會在規則運算式中使用 `^` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName> 方法的兩個多載：  
+ <span data-ttu-id="51d3e-129">下列範例會在規則運算式中使用 `^` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="51d3e-129">The following example uses the `^` anchor in a regular expression that extracts information about the years during which some professional baseball teams existed.</span></span> <span data-ttu-id="51d3e-130">此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的兩個多載：</span><span class="sxs-lookup"><span data-stu-id="51d3e-130">The example calls two overloads of the <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> method:</span></span>  
   
--   在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 多載的呼叫只會尋找其中的第一個子字串。  
+-   <span data-ttu-id="51d3e-131">在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 多載的呼叫只會尋找其中的第一個子字串。</span><span class="sxs-lookup"><span data-stu-id="51d3e-131">The call to the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> overload finds only the first substring in the input string that matches the regular expression pattern.</span></span>  
   
--   對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 參數的呼叫 \(`options` 參數設為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>\) 會尋找所有五個子字串。  
+-   <span data-ttu-id="51d3e-132">對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 參數的呼叫 (`options` 參數設為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>) 會尋找所有五個子字串。</span><span class="sxs-lookup"><span data-stu-id="51d3e-132">The call to the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> overload with the `options` parameter set to <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> finds all five substrings.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
   
- 規則運算式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 的定義如下表所示。  
+ <span data-ttu-id="51d3e-133">規則運算式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 的定義如下表所示。</span><span class="sxs-lookup"><span data-stu-id="51d3e-133">The regular expression pattern `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` is defined as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`^`|開始在輸入字串的開頭比對 \(如果是使用 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 選項來呼叫此方法，則從行首開始比對\)。|  
-|`((\w+(\s?)){2,}`|比對一個或多個文字字元，後面接零，或接一個空格剛好兩次。 這是第一個擷取群組。 此運算式也定義了第二個和第三個擷取群組：第二個包含所擷取的文字，第三個則包含擷取到的空格。|  
-|`,\s`|比對後面接著空白字元的逗號。|  
-|`(\w+\s\w+)`|比對一或多個文字字元，後面接空格，再接一或多個文字字元。 這是第四個擷取群組。|  
-|`,`|比對逗號。|  
-|`\s\d{4}`|比對後面接著四個十進位數字的空格。|  
-|\(\-`(\d{4}&#124;present))?`|比對出現零次或一次的連字號，後面接著四個十進位數字或字串 "present"。 這是第六個擷取群組。 它也包括第七個擷取群組。|  
-|`,?`|比對出現零次或一次的逗號。|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|比對出現一或多次的下列項目：空格、四個十進位數字、出現零或一次的連字號 \(該連字號後面接著四個十進位數字或字串 "present"\)，以及零或一個逗號。 這是第五個擷取群組。|  
+|<span data-ttu-id="51d3e-134">模式</span><span class="sxs-lookup"><span data-stu-id="51d3e-134">Pattern</span></span>|<span data-ttu-id="51d3e-135">描述</span><span class="sxs-lookup"><span data-stu-id="51d3e-135">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="51d3e-136">開始在輸入字串的開頭比對 (如果是使用 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項來呼叫此方法，則從行首開始比對)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-136">Begin the match at the beginning of the input string (or the beginning of the line if the method is called with the <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option).</span></span>|  
+|`((\w+(\s?)){2,}`|<span data-ttu-id="51d3e-137">比對一個或多個文字字元，後面接零，或接一個空格剛好兩次。</span><span class="sxs-lookup"><span data-stu-id="51d3e-137">Match one or more word characters followed either by zero or by one space exactly two times.</span></span> <span data-ttu-id="51d3e-138">這是第一個擷取群組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-138">This is the first capturing group.</span></span> <span data-ttu-id="51d3e-139">此運算式也定義了第二個和第三個擷取群組：第二個包含所擷取的文字，第三個則包含擷取到的空格。</span><span class="sxs-lookup"><span data-stu-id="51d3e-139">This expression also defines a second and third capturing group: The second consists of the captured word, and the third consists of the captured spaces.</span></span>|  
+|`,\s`|<span data-ttu-id="51d3e-140">比對後面接著空白字元的逗號。</span><span class="sxs-lookup"><span data-stu-id="51d3e-140">Match a comma followed by a white-space character.</span></span>|  
+|`(\w+\s\w+)`|<span data-ttu-id="51d3e-141">比對一或多個文字字元，後面接空格，再接一或多個文字字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-141">Match one or more word characters followed by a space, followed by one or more word characters.</span></span> <span data-ttu-id="51d3e-142">這是第四個擷取群組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-142">This is the fourth capturing group.</span></span>|  
+|`,`|<span data-ttu-id="51d3e-143">比對逗號。</span><span class="sxs-lookup"><span data-stu-id="51d3e-143">Match a comma.</span></span>|  
+|`\s\d{4}`|<span data-ttu-id="51d3e-144">比對後面接著四個十進位數字的空格。</span><span class="sxs-lookup"><span data-stu-id="51d3e-144">Match a space followed by four decimal digits.</span></span>|  
+|<span data-ttu-id="51d3e-145">(-`(\d{4}&#124;present))?`</span><span class="sxs-lookup"><span data-stu-id="51d3e-145">(-`(\d{4}&#124;present))?`</span></span>|<span data-ttu-id="51d3e-146">比對出現零次或一次的連字號，後面接著四個十進位數字或字串 "present"。</span><span class="sxs-lookup"><span data-stu-id="51d3e-146">Match zero or one occurrence of a hyphen followed by four decimal digits or the string "present".</span></span> <span data-ttu-id="51d3e-147">這是第六個擷取群組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-147">This is the sixth capturing group.</span></span> <span data-ttu-id="51d3e-148">它也包括第七個擷取群組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-148">It also includes a seventh capturing group.</span></span>|  
+|`,?`|<span data-ttu-id="51d3e-149">比對出現零次或一次的逗號。</span><span class="sxs-lookup"><span data-stu-id="51d3e-149">Match zero or one occurrence of a comma.</span></span>|  
+|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|<span data-ttu-id="51d3e-150">比對出現一或多次的下列項目：空格、四個十進位數字、出現零或一次的連字號 (該連字號後面接著四個十進位數字或字串 "present")，以及零或一個逗號。</span><span class="sxs-lookup"><span data-stu-id="51d3e-150">Match one or more occurrences of the following: a space, four decimal digits, zero or one occurrence of a hyphen followed by four decimal digits or the string "present", and zero or one comma.</span></span> <span data-ttu-id="51d3e-151">這是第五個擷取群組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-151">This is the fifth capturing group.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-152">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-152">Back to top</span></span>](#top)  
   
 <a name="End"></a>   
-## 字串結尾或行尾：$  
- `$` 錨點指定前述的模式必須發生在輸入字串的結尾，或輸入字串結尾的 `\n` 之前。  
+## <a name="end-of-string-or-line-"></a><span data-ttu-id="51d3e-153">字串結尾或行尾：$</span><span class="sxs-lookup"><span data-stu-id="51d3e-153">End of String or Line: $</span></span>  
+ <span data-ttu-id="51d3e-154">`$` 錨點指定前述的模式必須發生在輸入字串的結尾，或輸入字串結尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="51d3e-154">The `$` anchor specifies that the preceding pattern must occur at the end of the input string, or before `\n` at the end of the input string.</span></span>  
   
- 如果您將 `$` 與 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 選項搭配使用，則該比對也會在行尾發生。 請注意，`$` 會比對 `\n`，但不會比對 `\r\n` \(歸位字元與新行字元的組合，亦即 CR\/LF\)。 若要比對 CR\/LF 字元組合，請在規則運算式模式中包含 `\r?$`。  
+ <span data-ttu-id="51d3e-155">如果您將 `$` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用，則該比對也會在行尾發生。</span><span class="sxs-lookup"><span data-stu-id="51d3e-155">If you use `$` with the <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option, the match can also occur at the end of a line.</span></span> <span data-ttu-id="51d3e-156">請注意， `$` 會比對 `\n` ，但不會比對 `\r\n` (歸位字元與新行字元的組合，亦即 CR/LF)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-156">Note that `$` matches `\n` but does not match `\r\n` (the combination of carriage return and newline characters, or CR/LF).</span></span> <span data-ttu-id="51d3e-157">若要比對 CR/LF 字元組合，請在規則運算式模式中包含 `\r?$` 。</span><span class="sxs-lookup"><span data-stu-id="51d3e-157">To match the CR/LF character combination, include `\r?$` in the regular expression pattern.</span></span>  
   
- 下列範例會將 `$` 錨點加入[字串開頭或行首](#Start)一節中範例所使用的規則運算式模式。 當與原始的輸入字串 \(包括五行文字\) 搭配使用時，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=fullName> 方法會找不到相符項目，因為第一行的結尾不符合 `$` 模式。 當原始的輸入字串分割成字串陣列時，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=fullName> 方法會成功地比對這五行。 當呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=fullName> 方法且 `options` 參數設定為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 時，會找不到相符項目，因為規則運算式模式並不考慮歸位字元項目 \(\\u\+000D\)。 不過，在將 `$` 取代為 `\r?$` 來修改規則運算式模式時，將 `options` 參數再次設定為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 來呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=fullName> 方法，則會找出五個相符項目。  
+ <span data-ttu-id="51d3e-158">下列範例會將 `$` 錨點加入 [字串開頭或行首](#Start) 一節中範例所使用的規則運算式模式。</span><span class="sxs-lookup"><span data-stu-id="51d3e-158">The following example adds the `$` anchor to the regular expression pattern used in the example in the [Start of String or Line](#Start) section.</span></span> <span data-ttu-id="51d3e-159">當與原始的輸入字串 (包括五行文字) 搭配使用時，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會找不到相符項目，因為第一行的結尾不符合 `$` 模式。</span><span class="sxs-lookup"><span data-stu-id="51d3e-159">When used with the original input string, which includes five lines of text, the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> method is unable to find a match, because the end of the first line does not match the `$` pattern.</span></span> <span data-ttu-id="51d3e-160">當原始的輸入字串分割成字串陣列時，<xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法會成功地比對這五行。</span><span class="sxs-lookup"><span data-stu-id="51d3e-160">When the original input string is split into a string array, the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> method succeeds in matching each of the five lines.</span></span> <span data-ttu-id="51d3e-161">當呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法且 `options` 參數設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 時，會找不到相符項目，因為規則運算式模式並不考慮歸位字元項目 (\u+000D)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-161">When the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> method is called with the `options` parameter set to <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, no matches are found because the regular expression pattern does not account for the carriage return element (\u+000D).</span></span> <span data-ttu-id="51d3e-162">不過，在將 `$` 取代為 `\r?$` 來修改規則運算式模式時，將 `options` 參數再次設定為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 來呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法，則會找出五個相符項目。</span><span class="sxs-lookup"><span data-stu-id="51d3e-162">However, when the regular expression pattern is modified by replacing `$` with `\r?$`, calling the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> method with the `options` parameter set to <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> again finds five matches.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-163">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-163">Back to top</span></span>](#top)  
   
 <a name="StartOnly"></a>   
-## 僅字串開頭：\\A  
- `\A` 錨點指定比對必須發生在輸入字串的開頭。 它與 `^` 錨點相同，不同處在於 `\A` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 選項。 因此，它可以只比對多行輸入字串中第一行的行首。  
+## <a name="start-of-string-only-a"></a><span data-ttu-id="51d3e-164">僅字串開頭：\A</span><span class="sxs-lookup"><span data-stu-id="51d3e-164">Start of String Only: \A</span></span>  
+ <span data-ttu-id="51d3e-165">`\A` 錨點指定比對必須發生在輸入字串的開頭。</span><span class="sxs-lookup"><span data-stu-id="51d3e-165">The `\A` anchor specifies that a match must occur at the beginning of the input string.</span></span> <span data-ttu-id="51d3e-166">它與 `^` 錨點相同，不同處在於 `\A` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。</span><span class="sxs-lookup"><span data-stu-id="51d3e-166">It is identical to the `^` anchor, except that `\A` ignores the <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option.</span></span> <span data-ttu-id="51d3e-167">因此，它可以只比對多行輸入字串中第一行的行首。</span><span class="sxs-lookup"><span data-stu-id="51d3e-167">Therefore, it can only match the start of the first line in a multiline input string.</span></span>  
   
- 下列範例是類似於 `^` 和 `$` 錨點的範例。 它會在規則運算式中使用 `\A` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 輸入字串包含五行。 在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=fullName> 方法的呼叫只會尋找其中的第一個子字串。 如範例所示，<xref:System.Text.RegularExpressions.RegexOptions> 選項不會有任何作用。  
+ <span data-ttu-id="51d3e-168">下列範例是類似於 `^` 和 `$` 錨點的範例。</span><span class="sxs-lookup"><span data-stu-id="51d3e-168">The following example is similar to the examples for the `^` and `$` anchors.</span></span> <span data-ttu-id="51d3e-169">它會在規則運算式中使用 `\A` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="51d3e-169">It uses the `\A` anchor in a regular expression that extracts information about the years during which some professional baseball teams existed.</span></span> <span data-ttu-id="51d3e-170">輸入字串包含五行。</span><span class="sxs-lookup"><span data-stu-id="51d3e-170">The input string includes five lines.</span></span> <span data-ttu-id="51d3e-171">在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的呼叫只會尋找其中的第一個子字串。</span><span class="sxs-lookup"><span data-stu-id="51d3e-171">The call to the <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> method finds only the first substring in the input string that matches the regular expression pattern.</span></span> <span data-ttu-id="51d3e-172">如範例所示， <xref:System.Text.RegularExpressions.RegexOptions.Multiline> 選項不會有任何作用。</span><span class="sxs-lookup"><span data-stu-id="51d3e-172">As the example shows, the <xref:System.Text.RegularExpressions.RegexOptions.Multiline> option has no effect.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring2.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-173">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-173">Back to top</span></span>](#top)  
   
 <a name="EndOrNOnly"></a>   
-## 字串結尾或結束新行之前：\\Z  
- `\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。 它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 選項。 因此在多行字串中，它只會比對最後一行的結尾，或 `\n` 前的上一行。  
+## <a name="end-of-string-or-before-ending-newline-z"></a><span data-ttu-id="51d3e-174">字串結尾或結束新行之前：\Z</span><span class="sxs-lookup"><span data-stu-id="51d3e-174">End of String or Before Ending Newline: \Z</span></span>  
+ <span data-ttu-id="51d3e-175">`\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="51d3e-175">The `\Z` anchor specifies that a match must occur at the end of the input string, or before `\n` at the end of the input string.</span></span> <span data-ttu-id="51d3e-176">它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。</span><span class="sxs-lookup"><span data-stu-id="51d3e-176">It is identical to the `$` anchor, except that `\Z` ignores the <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option.</span></span> <span data-ttu-id="51d3e-177">因此在多行字串中，它只會比對最後一行的結尾，或 `\n`前的上一行。</span><span class="sxs-lookup"><span data-stu-id="51d3e-177">Therefore, in a multiline string, it can only match the end of the last line, or the last line before `\n`.</span></span>  
   
- 請注意，`\Z` 會比對 `\n`，但不會比對 `\r\n` \(CR\/LF 字元組合\)。 若要比對 CR\/LF，請將 `\r?\Z` 包含在規則運算式模式中。  
+ <span data-ttu-id="51d3e-178">請注意， `\Z` 會比對 `\n` ，但不會比對 `\r\n` (CR/LF 字元組合)。</span><span class="sxs-lookup"><span data-stu-id="51d3e-178">Note that `\Z` matches `\n` but does not match `\r\n` (the CR/LF character combination).</span></span> <span data-ttu-id="51d3e-179">若要比對 CR/LF，請將 `\r?\Z` 包含在規則運算式模式中。</span><span class="sxs-lookup"><span data-stu-id="51d3e-179">To match CR/LF, include `\r?\Z` in the regular expression pattern.</span></span>  
   
- 下列範例會在規則運算式中使用 `\Z` 錨點，該規則運算式與[字串開頭或行首](#Start)一節中的範例類似，會擷取與某些職業棒球隊存在期間年份相關的資訊。 規則運算式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` 中的子運算式 `\r?\Z` 會比對字串的結尾，也會比對以 `\n` 或 `\r\n` 結尾的字串。 如此一來，陣列中的每個項目都會符合規則運算式模式。  
+ <span data-ttu-id="51d3e-180">下列範例會在規則運算式中使用 `\Z` 錨點，該規則運算式與 [字串開頭或行首](#Start) 一節中的範例類似，會擷取與某些職業棒球隊存在期間年份相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="51d3e-180">The following example uses the `\Z` anchor in a regular expression that is similar to the example in the [Start of String or Line](#Start) section, which extracts information about the years during which some professional baseball teams existed.</span></span> <span data-ttu-id="51d3e-181">規則運算式 `\r?\Z` 中的子運算式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` 會比對字串的結尾，也會比對以 `\n` 或 `\r\n`結尾的字串。</span><span class="sxs-lookup"><span data-stu-id="51d3e-181">The subexpression `\r?\Z` in the regular expression `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\Z` matches the end of a string, and also matches a string that ends with `\n` or `\r\n`.</span></span> <span data-ttu-id="51d3e-182">如此一來，陣列中的每個項目都會符合規則運算式模式。</span><span class="sxs-lookup"><span data-stu-id="51d3e-182">As a result, each element in the array matches the regular expression pattern.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-183">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-183">Back to top</span></span>](#top)  
   
 <a name="EndOnly"></a>   
-## 僅字串結尾：\\z  
- `\z` 錨點指定比對必須發生在輸入字串的結尾。 與 `$` 語言項目相同，`\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 選項。 不像 `\Z` 語言項目，`\z` 不會比對字串結尾處的 `\n` 字元。 因此，它可以只比對輸入字串的最後一行。  
+## <a name="end-of-string-only-z"></a><span data-ttu-id="51d3e-184">僅字串結尾：\z</span><span class="sxs-lookup"><span data-stu-id="51d3e-184">End of String Only: \z</span></span>  
+ <span data-ttu-id="51d3e-185">`\z` 錨點指定比對必須發生在輸入字串的結尾。</span><span class="sxs-lookup"><span data-stu-id="51d3e-185">The `\z` anchor specifies that a match must occur at the end of the input string.</span></span> <span data-ttu-id="51d3e-186">與 `$` 語言項目相同，`\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。</span><span class="sxs-lookup"><span data-stu-id="51d3e-186">Like the `$` language element, `\z` ignores the <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option.</span></span> <span data-ttu-id="51d3e-187">不像 `\Z` 語言項目， `\z` 不會比對字串結尾處的 `\n` 字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-187">Unlike the `\Z` language element, `\z` does not match a `\n` character at the end of a string.</span></span> <span data-ttu-id="51d3e-188">因此，它可以只比對輸入字串的最後一行。</span><span class="sxs-lookup"><span data-stu-id="51d3e-188">Therefore, it can only match the last line of the input string.</span></span>  
   
- 下列範例會在規則運算式中使用 `\z` 錨點，該規則運算式與上一節中的範例不同，它會擷取與某些職業棒球隊存在期間年份相關的資訊。 這個範例會將字串陣列中的五個項目與規則運算模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z` 進行比對。 有兩個字串以歸位字元與換行字元結尾，一個字串以換行字元結尾，以及兩個字串不以歸位字元也不以換行字元結尾。 如輸出所示，只有不含歸位字元或換行字元的字串會符合模式。  
+ <span data-ttu-id="51d3e-189">下列範例會在規則運算式中使用 `\z` 錨點，該規則運算式與上一節中的範例不同，它會擷取與某些職業棒球隊存在期間年份相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="51d3e-189">The following example uses the `\z` anchor in a regular expression that is otherwise identical to the example in the previous section, which extracts information about the years during which some professional baseball teams existed.</span></span> <span data-ttu-id="51d3e-190">這個範例會將字串陣列中的五個項目與規則運算模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`進行比對。</span><span class="sxs-lookup"><span data-stu-id="51d3e-190">The example tries to match each of five elements in a string array with the regular expression pattern `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`.</span></span> <span data-ttu-id="51d3e-191">有兩個字串以歸位字元與換行字元結尾，一個字串以換行字元結尾，以及兩個字串不以歸位字元也不以換行字元結尾。</span><span class="sxs-lookup"><span data-stu-id="51d3e-191">Two of the strings end with carriage return and line feed characters, one ends with a line feed character, and two end with neither a carriage return nor a line feed character.</span></span> <span data-ttu-id="51d3e-192">如輸出所示，只有不含歸位字元或換行字元的字串會符合模式。</span><span class="sxs-lookup"><span data-stu-id="51d3e-192">As the output shows, only the strings without a carriage return or line feed character match the pattern.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring3.cs#5)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-193">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-193">Back to top</span></span>](#top)  
   
 <a name="Contiguous"></a>   
-## 連續比對：\\G  
- `\G` 錨點指定比對必須發生在上一個比對結束的點。 當您將此錨點配合 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName> 或 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=fullName> 方法使用時，它可確保所有相符項目是連續的。  
+## <a name="contiguous-matches-g"></a><span data-ttu-id="51d3e-194">連續比對：\G</span><span class="sxs-lookup"><span data-stu-id="51d3e-194">Contiguous Matches: \G</span></span>  
+ <span data-ttu-id="51d3e-195">`\G` 錨點指定比對必須發生在上一個比對結束的點。</span><span class="sxs-lookup"><span data-stu-id="51d3e-195">The `\G` anchor specifies that a match must occur at the point where the previous match ended.</span></span> <span data-ttu-id="51d3e-196">當您將此錨點配合 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法使用時，它可確保所有相符項目是連續的。</span><span class="sxs-lookup"><span data-stu-id="51d3e-196">When you use this anchor with the <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> or <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> method, it ensures that all matches are contiguous.</span></span>  
   
- 下列範例會使用規則運算式從逗點分隔的字串中擷取齧齒動物物種的名稱。  
+ <span data-ttu-id="51d3e-197">下列範例會使用規則運算式從逗點分隔的字串中擷取齧齒動物物種的名稱。</span><span class="sxs-lookup"><span data-stu-id="51d3e-197">The following example uses a regular expression to extract the names of rodent species from a comma-delimited string.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/contiguous1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/contiguous1.vb#6)]  
   
- 規則運算式 `\G(\w+\s?\w*),?` 的解譯方式如下表所示。  
+ <span data-ttu-id="51d3e-198">規則運算式 `\G(\w+\s?\w*),?` 的解譯方式如下表所示。</span><span class="sxs-lookup"><span data-stu-id="51d3e-198">The regular expression `\G(\w+\s?\w*),?` is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\G`|從上一次比對結束的地方開始。|  
-|`\w+`|比對一個或多個文字字元。|  
-|`\s?`|比對零或一個空格。|  
-|`\w*`|比對零個或多個文字字元。|  
-|`(\w+\s?\w*)`|比對一或多個文字字元，後面接零或一個空格，再接零或多個文字字元。 這是第一個擷取群組。|  
-|`,?`|比對出現零次或一次的常值逗號字元。|  
+|<span data-ttu-id="51d3e-199">模式</span><span class="sxs-lookup"><span data-stu-id="51d3e-199">Pattern</span></span>|<span data-ttu-id="51d3e-200">描述</span><span class="sxs-lookup"><span data-stu-id="51d3e-200">Description</span></span>|  
+|-------------|-----------------|  
+|`\G`|<span data-ttu-id="51d3e-201">從上一次比對結束的地方開始。</span><span class="sxs-lookup"><span data-stu-id="51d3e-201">Begin where the last match ended.</span></span>|  
+|`\w+`|<span data-ttu-id="51d3e-202">比對一個或多個文字字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-202">Match one or more word characters.</span></span>|  
+|`\s?`|<span data-ttu-id="51d3e-203">比對零或一個空格。</span><span class="sxs-lookup"><span data-stu-id="51d3e-203">Match zero or one space.</span></span>|  
+|`\w*`|<span data-ttu-id="51d3e-204">比對零個或多個文字字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-204">Match zero or more word characters.</span></span>|  
+|`(\w+\s?\w*)`|<span data-ttu-id="51d3e-205">比對一或多個文字字元，後面接零或一個空格，再接零或多個文字字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-205">Match one or more word characters followed by zero or one space, followed by zero or more word characters.</span></span> <span data-ttu-id="51d3e-206">這是第一個擷取群組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-206">This is the first capturing group.</span></span>|  
+|`,?`|<span data-ttu-id="51d3e-207">比對出現零次或一次的常值逗號字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-207">Match zero or one occurrence of a literal comma character.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-208">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-208">Back to top</span></span>](#top)  
   
 <a name="WordBoundary"></a>   
-## 字邊界：\\b  
- `\b` 錨點指定比對必須發生在文字字元 \(`\w` 語言項目\) 和非文字字元 \(`\W` 語言項目\) 之間的邊界上。 文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。 \(如需詳細資訊，請參閱 [字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)\)。 比對也可能會在字串開頭或結尾的字邊界上發生。  
+## <a name="word-boundary-b"></a><span data-ttu-id="51d3e-209">字邊界：\b</span><span class="sxs-lookup"><span data-stu-id="51d3e-209">Word Boundary: \b</span></span>  
+ <span data-ttu-id="51d3e-210">`\b` 錨點指定比對必須發生在文字字元 ( `\w` 語言項目) 和非文字字元 ( `\W` 語言項目) 之間的邊界上。</span><span class="sxs-lookup"><span data-stu-id="51d3e-210">The `\b` anchor specifies that the match must occur on a boundary between a word character (the `\w` language element) and a non-word character (the `\W` language element).</span></span> <span data-ttu-id="51d3e-211">文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-211">Word characters consist of alphanumeric characters and underscores; a non-word character is any character that is not alphanumeric or an underscore.</span></span> <span data-ttu-id="51d3e-212">(如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。)比對也可能會在字串開頭或結尾的字邊界上發生。</span><span class="sxs-lookup"><span data-stu-id="51d3e-212">(For more information, see [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) The match may also occur on a word boundary at the beginning or end of the string.</span></span>  
   
- `\b` 錨點經常用來確保子運算式會比對整個字組，而非只比對字組的開頭或結尾。 在下列範例中的規則運算式 `\bare\w*\b` 說明這個的使用方式。 它會比對任何以子字串 "are" 為開頭的字組。 範例的輸出也說明了 `\b` 會比對輸入字串的開頭和結尾。  
+ <span data-ttu-id="51d3e-213">`\b` 錨點經常用來確保子運算式會比對整個字組，而非只比對字組的開頭或結尾。</span><span class="sxs-lookup"><span data-stu-id="51d3e-213">The `\b` anchor is frequently used to ensure that a subexpression matches an entire word instead of just the beginning or end of a word.</span></span> <span data-ttu-id="51d3e-214">在下列範例中的規則運算式 `\bare\w*\b` 說明這個的使用方式。</span><span class="sxs-lookup"><span data-stu-id="51d3e-214">The regular expression `\bare\w*\b` in the following example illustrates this usage.</span></span> <span data-ttu-id="51d3e-215">它會比對任何以子字串 "are" 為開頭的字組。</span><span class="sxs-lookup"><span data-stu-id="51d3e-215">It matches any word that begins with the substring "are".</span></span> <span data-ttu-id="51d3e-216">範例的輸出也說明了 `\b` 會比對輸入字串的開頭和結尾。</span><span class="sxs-lookup"><span data-stu-id="51d3e-216">The output from the example also illustrates that `\b` matches both the beginning and the end of the input string.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/word1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/word1.vb#7)]  
   
- 規則運算式模式的解譯方式如下表所示。  
+ <span data-ttu-id="51d3e-217">規則運算式模式的解譯方式如下表所示。</span><span class="sxs-lookup"><span data-stu-id="51d3e-217">The regular expression pattern is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|開始字緣比對。|  
-|`are`|比對子字串 "are"。|  
-|`\w*`|比對零個或多個文字字元。|  
-|`\b`|結束字緣比對。|  
+|<span data-ttu-id="51d3e-218">模式</span><span class="sxs-lookup"><span data-stu-id="51d3e-218">Pattern</span></span>|<span data-ttu-id="51d3e-219">描述</span><span class="sxs-lookup"><span data-stu-id="51d3e-219">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="51d3e-220">開始字緣比對。</span><span class="sxs-lookup"><span data-stu-id="51d3e-220">Begin the match at a word boundary.</span></span>|  
+|`are`|<span data-ttu-id="51d3e-221">比對子字串 "are"。</span><span class="sxs-lookup"><span data-stu-id="51d3e-221">Match the substring "are".</span></span>|  
+|`\w*`|<span data-ttu-id="51d3e-222">比對零個或多個文字字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-222">Match zero or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="51d3e-223">結束字緣比對。</span><span class="sxs-lookup"><span data-stu-id="51d3e-223">End the match at a word boundary.</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="51d3e-224">回到頁首</span><span class="sxs-lookup"><span data-stu-id="51d3e-224">Back to top</span></span>](#top)  
   
 <a name="NonwordBoundary"></a>   
-## 非字邊界：\\B  
- `\B` 錨點指定比對不得發生在字邊界上。 這和 `\b` 錨點相反。  
+## <a name="non-word-boundary-b"></a><span data-ttu-id="51d3e-225">非字邊界：\B</span><span class="sxs-lookup"><span data-stu-id="51d3e-225">Non-Word Boundary: \B</span></span>  
+ <span data-ttu-id="51d3e-226">`\B` 錨點指定比對不得發生在字邊界上。</span><span class="sxs-lookup"><span data-stu-id="51d3e-226">The `\B` anchor specifies that the match must not occur on a word boundary.</span></span> <span data-ttu-id="51d3e-227">這和 `\b` 錨點相反。</span><span class="sxs-lookup"><span data-stu-id="51d3e-227">It is the opposite of the `\b` anchor.</span></span>  
   
- 下列範例使用 `\B` 錨點來尋找在字組中出現的子字串 "qu"。 規則運算式模式 `\Bqu\w+` 會比對以 "qu" 開頭的子字串，其中字組開頭並非 "qu"，並且會繼續比對到字組的結尾。  
+ <span data-ttu-id="51d3e-228">下列範例使用 `\B` 錨點來尋找在字組中出現的子字串 "qu"。</span><span class="sxs-lookup"><span data-stu-id="51d3e-228">The following example uses the `\B` anchor to locate occurrences of the substring "qu" in a word.</span></span> <span data-ttu-id="51d3e-229">規則運算式模式 `\Bqu\w+` 會比對以 "qu" 開頭的子字串，其中字組開頭並非 "qu"，並且會繼續比對到字組的結尾。</span><span class="sxs-lookup"><span data-stu-id="51d3e-229">The regular expression pattern `\Bqu\w+` matches a substring that begins with a "qu" that does not start a word and that continues to the end of the word.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/nonword1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/nonword1.vb#8)]  
   
- 規則運算式模式的解譯方式如下表所示。  
+ <span data-ttu-id="51d3e-230">規則運算式模式的解譯方式如下表所示。</span><span class="sxs-lookup"><span data-stu-id="51d3e-230">The regular expression pattern is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\B`|不要在字邊界開始比對。|  
-|`qu`|比對子字串 "qu"。|  
-|`\w+`|比對一個或多個文字字元。|  
+|<span data-ttu-id="51d3e-231">模式</span><span class="sxs-lookup"><span data-stu-id="51d3e-231">Pattern</span></span>|<span data-ttu-id="51d3e-232">描述</span><span class="sxs-lookup"><span data-stu-id="51d3e-232">Description</span></span>|  
+|-------------|-----------------|  
+|`\B`|<span data-ttu-id="51d3e-233">不要在字邊界開始比對。</span><span class="sxs-lookup"><span data-stu-id="51d3e-233">Do not begin the match at a word boundary.</span></span>|  
+|`qu`|<span data-ttu-id="51d3e-234">比對子字串 "qu"。</span><span class="sxs-lookup"><span data-stu-id="51d3e-234">Match the substring "qu".</span></span>|  
+|`\w+`|<span data-ttu-id="51d3e-235">比對一個或多個文字字元。</span><span class="sxs-lookup"><span data-stu-id="51d3e-235">Match one or more word characters.</span></span>|  
   
-## 請參閱  
- [規則運算式語言 \- 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)   
- [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a><span data-ttu-id="51d3e-236">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51d3e-236">See Also</span></span>  
+ [<span data-ttu-id="51d3e-237">規則運算式語言 - 快速參考</span><span class="sxs-lookup"><span data-stu-id="51d3e-237">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [<span data-ttu-id="51d3e-238">規則運算式選項</span><span class="sxs-lookup"><span data-stu-id="51d3e-238">Regular Expression Options</span></span>](../../../docs/standard/base-types/regular-expression-options.md)

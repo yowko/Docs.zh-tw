@@ -1,79 +1,82 @@
 ---
-title: "Synchronizing Data for Multithreading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization, threads"
-  - "threading [.NET Framework], synchronizing threads"
-  - "managed threading"
+title: "同步處理多執行緒處理的資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization, threads
+- threading [.NET Framework], synchronizing threads
+- managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a17eba2f930fda06d643d78c73c117e89ae86928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Synchronizing Data for Multithreading
-當多個執行緒可以呼叫單一物件的屬性 \(Property\) 和方法時，同步處理那些呼叫是很重要的。  否則，一執行緒可能中斷另一執行緒正在執行的動作，而物件可能會成為無效狀態。  類別的成員若能免於這種中斷，這個類別就稱為安全執行緒。  
+# <a name="synchronizing-data-for-multithreading"></a><span data-ttu-id="42968-102">同步處理多執行緒處理的資料</span><span class="sxs-lookup"><span data-stu-id="42968-102">Synchronizing Data for Multithreading</span></span>
+<span data-ttu-id="42968-103">當多個執行緒可以對單一物件的屬性和方法進行呼叫時，請務必同步處理這些呼叫。</span><span class="sxs-lookup"><span data-stu-id="42968-103">When multiple threads can make calls to the properties and methods of a single object, it is critical that those calls be synchronized.</span></span> <span data-ttu-id="42968-104">否則某個執行緒可能會中斷另一個執行緒正在執行的作業，而且物件可能會處於無效狀態。</span><span class="sxs-lookup"><span data-stu-id="42968-104">Otherwise one thread might interrupt what another thread is doing, and the object could be left in an invalid state.</span></span> <span data-ttu-id="42968-105">其成員受到保護免於這種中斷的類別，稱為安全執行緒。</span><span class="sxs-lookup"><span data-stu-id="42968-105">A class whose members are protected from such interruptions is called thread-safe.</span></span>  
   
- Common Language Infrastructure 提供幾個策略，以同步處理對個體與靜態成員的存取：  
+ <span data-ttu-id="42968-106">通用語言基礎結構提供幾種策略來同步存取執行個體和靜態成員︰</span><span class="sxs-lookup"><span data-stu-id="42968-106">The Common Language Infrastructure provides several strategies to synchronize access to instance and static members:</span></span>  
   
--   同步程式碼區域 \-  您可以使用 <xref:System.Threading.Monitor> 類別或類別的編譯器支援，只針對需要的程式碼區塊進行同步處理，以增進效能。  
+-   <span data-ttu-id="42968-107">同步程式碼區域。</span><span class="sxs-lookup"><span data-stu-id="42968-107">Synchronized code regions.</span></span> <span data-ttu-id="42968-108">您可以使用<xref:System.Threading.Monitor>類別或是編譯器的這個類別，以同步處理程式碼區塊，僅支援需要可改善效能。</span><span class="sxs-lookup"><span data-stu-id="42968-108">You can use the <xref:System.Threading.Monitor> class or compiler support for this class to synchronize only the code block that needs it, improving performance.</span></span>  
   
--   手動同步處理 \-   您可使用 .NET Framework 類別庫所提供的同步處理物件。  請參閱[Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中包括 <xref:System.Threading.Monitor> 類別的討論內容。  
+-   <span data-ttu-id="42968-109">手動同步處理。</span><span class="sxs-lookup"><span data-stu-id="42968-109">Manual synchronization.</span></span> <span data-ttu-id="42968-110">您可以使用 .NET Framework 類別庫提供的同步處理物件。</span><span class="sxs-lookup"><span data-stu-id="42968-110">You can use the synchronization objects provided by the .NET Framework class library.</span></span> <span data-ttu-id="42968-111">請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中包含的討論<xref:System.Threading.Monitor>類別。</span><span class="sxs-lookup"><span data-stu-id="42968-111">See [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md), which includes a discussion of the <xref:System.Threading.Monitor> class.</span></span>  
   
--   同步內容 \-  您可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>，對 <xref:System.ContextBoundObject> 物件啟用簡單、自動化的同步處理。  
+-   <span data-ttu-id="42968-112">同步處理的內容。</span><span class="sxs-lookup"><span data-stu-id="42968-112">Synchronized contexts.</span></span> <span data-ttu-id="42968-113">您可以使用<xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>啟用簡單、 自動同步處理的<xref:System.ContextBoundObject>物件。</span><span class="sxs-lookup"><span data-stu-id="42968-113">You can use the <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> to enable simple, automatic synchronization for <xref:System.ContextBoundObject> objects.</span></span>  
   
--   <xref:System.Collections.Concurrent?displayProperty=fullName> 命名空間中的集合類別。  這些類別會提供內建同步化加入和移除作業。  如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。  
+-   <span data-ttu-id="42968-114">中的集合類別<xref:System.Collections.Concurrent?displayProperty=nameWithType>命名空間。</span><span class="sxs-lookup"><span data-stu-id="42968-114">Collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="42968-115">這些類別會提供內建同步處理新增和移除作業。</span><span class="sxs-lookup"><span data-stu-id="42968-115">These classes provide built-in synchronized add and remove operations.</span></span> <span data-ttu-id="42968-116">如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。</span><span class="sxs-lookup"><span data-stu-id="42968-116">For more information, see [Thread-Safe Collections](../../../docs/standard/collections/thread-safe/index.md).</span></span>  
   
- Common Language Runtime 提供將類別分為幾種的執行緒模型，可根據需求以各種不同方式同步處理。  下表說明指定同步分類提供欄位和方法的同步支援。  
+ <span data-ttu-id="42968-117">通用語言執行平台提供執行緒模型，其中類別分為一些分類，可以根據需求以各種不同的方式同步處理。</span><span class="sxs-lookup"><span data-stu-id="42968-117">The common language runtime provides a thread model in which classes fall into a number of categories that can be synchronized in a variety of different ways depending on the requirements.</span></span> <span data-ttu-id="42968-118">下表顯示為指定同步處理分類的欄位和方法提供哪些同步處理支援。</span><span class="sxs-lookup"><span data-stu-id="42968-118">The following table shows what synchronization support is provided for fields and methods with a given synchronization category.</span></span>  
   
-|分類|全域欄位|靜態欄位|靜態方法|執行個體欄位|執行個體方法|特定程式碼區塊|  
-|--------|----------|----------|----------|------------|------------|-------------|  
-|無同步處理|否|否|否|否|否|否|  
-|同步內容|否|否|否|是|是|否|  
-|同步程式碼區域|否|否|標記的才有|否|標記的才有|標記的才有|  
-|手動同步|Manual|Manual|Manual|Manual|Manual|Manual|  
+|<span data-ttu-id="42968-119">分類</span><span class="sxs-lookup"><span data-stu-id="42968-119">Category</span></span>|<span data-ttu-id="42968-120">全域欄位</span><span class="sxs-lookup"><span data-stu-id="42968-120">Global fields</span></span>|<span data-ttu-id="42968-121">靜態欄位</span><span class="sxs-lookup"><span data-stu-id="42968-121">Static fields</span></span>|<span data-ttu-id="42968-122">靜態方法</span><span class="sxs-lookup"><span data-stu-id="42968-122">Static methods</span></span>|<span data-ttu-id="42968-123">執行個體欄位</span><span class="sxs-lookup"><span data-stu-id="42968-123">Instance fields</span></span>|<span data-ttu-id="42968-124">執行個體方法</span><span class="sxs-lookup"><span data-stu-id="42968-124">Instance methods</span></span>|<span data-ttu-id="42968-125">特定程式碼區塊</span><span class="sxs-lookup"><span data-stu-id="42968-125">Specific code blocks</span></span>|  
+|--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
+|<span data-ttu-id="42968-126">沒有同步處理</span><span class="sxs-lookup"><span data-stu-id="42968-126">No Synchronization</span></span>|<span data-ttu-id="42968-127">否</span><span class="sxs-lookup"><span data-stu-id="42968-127">No</span></span>|<span data-ttu-id="42968-128">否</span><span class="sxs-lookup"><span data-stu-id="42968-128">No</span></span>|<span data-ttu-id="42968-129">否</span><span class="sxs-lookup"><span data-stu-id="42968-129">No</span></span>|<span data-ttu-id="42968-130">否</span><span class="sxs-lookup"><span data-stu-id="42968-130">No</span></span>|<span data-ttu-id="42968-131">否</span><span class="sxs-lookup"><span data-stu-id="42968-131">No</span></span>|<span data-ttu-id="42968-132">否</span><span class="sxs-lookup"><span data-stu-id="42968-132">No</span></span>|  
+|<span data-ttu-id="42968-133">同步處理的內容</span><span class="sxs-lookup"><span data-stu-id="42968-133">Synchronized Context</span></span>|<span data-ttu-id="42968-134">否</span><span class="sxs-lookup"><span data-stu-id="42968-134">No</span></span>|<span data-ttu-id="42968-135">否</span><span class="sxs-lookup"><span data-stu-id="42968-135">No</span></span>|<span data-ttu-id="42968-136">否</span><span class="sxs-lookup"><span data-stu-id="42968-136">No</span></span>|<span data-ttu-id="42968-137">是</span><span class="sxs-lookup"><span data-stu-id="42968-137">Yes</span></span>|<span data-ttu-id="42968-138">是</span><span class="sxs-lookup"><span data-stu-id="42968-138">Yes</span></span>|<span data-ttu-id="42968-139">否</span><span class="sxs-lookup"><span data-stu-id="42968-139">No</span></span>|  
+|<span data-ttu-id="42968-140">同步程式碼區域</span><span class="sxs-lookup"><span data-stu-id="42968-140">Synchronized Code Regions</span></span>|<span data-ttu-id="42968-141">否</span><span class="sxs-lookup"><span data-stu-id="42968-141">No</span></span>|<span data-ttu-id="42968-142">否</span><span class="sxs-lookup"><span data-stu-id="42968-142">No</span></span>|<span data-ttu-id="42968-143">只有當標記時</span><span class="sxs-lookup"><span data-stu-id="42968-143">Only if marked</span></span>|<span data-ttu-id="42968-144">否</span><span class="sxs-lookup"><span data-stu-id="42968-144">No</span></span>|<span data-ttu-id="42968-145">只有當標記時</span><span class="sxs-lookup"><span data-stu-id="42968-145">Only if marked</span></span>|<span data-ttu-id="42968-146">只有當標記時</span><span class="sxs-lookup"><span data-stu-id="42968-146">Only if marked</span></span>|  
+|<span data-ttu-id="42968-147">手動同步處理</span><span class="sxs-lookup"><span data-stu-id="42968-147">Manual Synchronization</span></span>|<span data-ttu-id="42968-148">手動</span><span class="sxs-lookup"><span data-stu-id="42968-148">Manual</span></span>|<span data-ttu-id="42968-149">手動</span><span class="sxs-lookup"><span data-stu-id="42968-149">Manual</span></span>|<span data-ttu-id="42968-150">手動</span><span class="sxs-lookup"><span data-stu-id="42968-150">Manual</span></span>|<span data-ttu-id="42968-151">手動</span><span class="sxs-lookup"><span data-stu-id="42968-151">Manual</span></span>|<span data-ttu-id="42968-152">手動</span><span class="sxs-lookup"><span data-stu-id="42968-152">Manual</span></span>|<span data-ttu-id="42968-153">手動</span><span class="sxs-lookup"><span data-stu-id="42968-153">Manual</span></span>|  
   
-## 無同步處理  
- 這是物件的預設值。  任何執行緒可隨時存取任何方法或欄位。  一次只能有一個執行緒存取這些物件。  
+## <a name="no-synchronization"></a><span data-ttu-id="42968-154">沒有同步處理</span><span class="sxs-lookup"><span data-stu-id="42968-154">No Synchronization</span></span>  
+ <span data-ttu-id="42968-155">這是物件的預設值。</span><span class="sxs-lookup"><span data-stu-id="42968-155">This is the default for objects.</span></span> <span data-ttu-id="42968-156">任何執行緒可以隨時存取任何方法或欄位。</span><span class="sxs-lookup"><span data-stu-id="42968-156">Any thread can access any method or field at any time.</span></span> <span data-ttu-id="42968-157">一次應該只有一個執行緒存取這些物件。</span><span class="sxs-lookup"><span data-stu-id="42968-157">Only one thread at a time should access these objects.</span></span>  
   
-## 手動同步  
- .NET Framework 類別庫提供了許多可用來同步處理執行緒的類別。  請參閱[Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+## <a name="manual-synchronization"></a><span data-ttu-id="42968-158">手動同步處理</span><span class="sxs-lookup"><span data-stu-id="42968-158">Manual Synchronization</span></span>  
+ <span data-ttu-id="42968-159">.NET Framework 類別庫提供一些類別來同步處理執行緒。</span><span class="sxs-lookup"><span data-stu-id="42968-159">The .NET Framework class library provides a number of classes for synchronizing threads.</span></span> <span data-ttu-id="42968-160">請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。</span><span class="sxs-lookup"><span data-stu-id="42968-160">See [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  
   
-## 同步程式碼區域  
- 您可以使用 <xref:System.Threading.Monitor> 類別或編譯器關鍵字來同步處理程式碼區塊、執行個體方法和靜態方法。  同步靜態欄位則無支援。  
+## <a name="synchronized-code-regions"></a><span data-ttu-id="42968-161">同步程式碼區域</span><span class="sxs-lookup"><span data-stu-id="42968-161">Synchronized Code Regions</span></span>  
+ <span data-ttu-id="42968-162">您可以使用<xref:System.Threading.Monitor>類別或編譯器關鍵字來同步處理的程式碼中，執行個體方法和靜態方法的區塊。</span><span class="sxs-lookup"><span data-stu-id="42968-162">You can use the <xref:System.Threading.Monitor> class or a compiler keyword to synchronize blocks of code, instance methods, and static methods.</span></span> <span data-ttu-id="42968-163">不支援同步處理的靜態欄位。</span><span class="sxs-lookup"><span data-stu-id="42968-163">There is no support for synchronized static fields.</span></span>  
   
- Visual Basic 和 C\# 支援以特定的語言關鍵字標示程式碼區塊、在 C\# 內使用 `lock` 陳述式或是在 Visual Basic 內使用 `SyncLock` 陳述式。  當程式碼由執行緒執行時，會嘗試取得鎖定。  如果已由另一個執行緒取得鎖定，則執行緒區塊會等候到可以使用鎖定為止。  當執行緒結束程式碼的同步化區塊時，鎖定會被釋放，不管執行緒如何結束該區塊。  
+ <span data-ttu-id="42968-164">Visual Basic 和 C# 都支援使用特定語言關鍵字來標示程式碼區塊，在 C# 中為 `lock`陳述式，在 Visual Basic 中為 `SyncLock` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="42968-164">Both Visual Basic and C# support the marking of blocks of code with a particular language keyword, the `lock` statement in C# or the `SyncLock` statement in Visual Basic.</span></span> <span data-ttu-id="42968-165">由執行緒執行程式碼時，會嘗試取得鎖定。</span><span class="sxs-lookup"><span data-stu-id="42968-165">When the code is executed by a thread, an attempt is made to acquire the lock.</span></span> <span data-ttu-id="42968-166">如果已經由另一個執行緒取得鎖定，則執行緒會封鎖，直到鎖定可用為止。</span><span class="sxs-lookup"><span data-stu-id="42968-166">If the lock has already been acquired by another thread, the thread blocks until the lock becomes available.</span></span> <span data-ttu-id="42968-167">當執行緒結束已同步處理的程式碼區塊時，鎖定會被釋放，不論執行緒如何結束區塊。</span><span class="sxs-lookup"><span data-stu-id="42968-167">When the thread exits the synchronized block of code, the lock is released, no matter how the thread exits the block.</span></span>  
   
 > [!NOTE]
->  `lock` 和 `SyncLock` 陳述式是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName> 所實作，好讓 <xref:System.Threading.Monitor> 的其他方法可以在同步化區域內與其搭配使用。  
+>  <span data-ttu-id="42968-168">`lock`和`SyncLock`陳述式會使用實作<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>和<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>，讓其他方法<xref:System.Threading.Monitor>可用於額外搭配這些同步處理的區域內。</span><span class="sxs-lookup"><span data-stu-id="42968-168">The `lock` and `SyncLock` statements are implemented using <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, so other methods of <xref:System.Threading.Monitor> can be used in conjunction with them within the synchronized region.</span></span>  
   
- 您也可以使用 **MethodImplAttribute** 和 **MethodImplOptions.Synchronized** 來裝飾方法，這樣產生的作用與使用 **Monitor** 或其中一個編譯器關鍵字來鎖定整個方法主體的作用相同。  
+ <span data-ttu-id="42968-169">您也可以使用 **MethodImplAttribute** 和 **MethodImplOptions.Synchronized** 來裝飾方法，其效果與使用 [監視] 或其中一個編譯器關鍵字來鎖定方法的整個主體相同。</span><span class="sxs-lookup"><span data-stu-id="42968-169">You can also decorate a method with a **MethodImplAttribute** and **MethodImplOptions.Synchronized**, which has the same effect as using **Monitor** or one of the compiler keywords to lock the entire body of the method.</span></span>  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> 可用來中斷執行緒繼續進行區塊化作業，例如等候存取程式碼的同步區域。  **Thread.Interrupt** 也可用來中斷執行緒繼續進行作業，例如 <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>。  
+ <span data-ttu-id="42968-170"><xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>可以用於切割執行緒封鎖作業，例如，等待同步處理的程式碼區域的存取。</span><span class="sxs-lookup"><span data-stu-id="42968-170"><xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> can be used to break a thread out of blocking operations such as waiting for access to a synchronized region of code.</span></span> <span data-ttu-id="42968-171">**Thread.Interrupt**也用來中斷執行緒作業，像是超出<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="42968-171">**Thread.Interrupt** is also used to break threads out of operations like <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.</span></span>  
   
 > [!IMPORTANT]
->  請勿為了保護 `static` 方法 \(Visual Basic 內的 `Shared` 方法\) 而鎖定型別，也就是 C\# 內的 `typeof(MyType)`、Visual Basic 內的 `GetType(MyType)` 或 C\+\+ 內的 `MyType::typeid`。  請改用私用靜態物件。  同樣地，不要在 C\# 中使用 `this` \(Visual Basic 中為 `Me`\) 來鎖定執行個體方法，  請改用私用物件。  類別或執行個體可能會被您自己以外的程式碼鎖定，這樣可能會造成死結或效能問題。  
+>  <span data-ttu-id="42968-172">不要鎖定型別 — 也就是，C# 中的 `typeof(MyType)`、Visual Basic 中的 `GetType(MyType)`或 C++ 中的 `MyType::typeid` — 以便保護 `static` 方法 (Visual Basic 中的 `Shared`方法)。</span><span class="sxs-lookup"><span data-stu-id="42968-172">Do not lock the type — that is, `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic, or `MyType::typeid` in C++ — in order to protect `static` methods (`Shared` methods in Visual Basic).</span></span> <span data-ttu-id="42968-173">請改為使用私用靜態物件。</span><span class="sxs-lookup"><span data-stu-id="42968-173">Use a private static object instead.</span></span> <span data-ttu-id="42968-174">同樣地，在 C# 中不要使用 `this`(在 Visual Basic 中不要使用 `Me`) 以鎖定執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="42968-174">Similarly, do not use `this` in C# (`Me` in Visual Basic) to lock instance methods.</span></span> <span data-ttu-id="42968-175">請改為使用私用物件。</span><span class="sxs-lookup"><span data-stu-id="42968-175">Use a private object instead.</span></span> <span data-ttu-id="42968-176">類別或執行個體會被您專屬的程式碼以外的程式碼鎖定，可能造成死結或效能問題。</span><span class="sxs-lookup"><span data-stu-id="42968-176">A class or instance can be locked by code other than your own, potentially causing deadlocks or performance problems.</span></span>  
   
-### 編譯器支援  
- Visual Basic 和 C\# 都支援使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=fullName> 來鎖定物件的語言關鍵字。  Visual Basic 支援 [SyncLock](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md) 陳述式，C\# 支援 [lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md) 陳述式。  
+### <a name="compiler-support"></a><span data-ttu-id="42968-177">編譯器支援</span><span class="sxs-lookup"><span data-stu-id="42968-177">Compiler Support</span></span>  
+ <span data-ttu-id="42968-178">Visual Basic 和 C# 支援的語言關鍵字，會使用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>和<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>鎖定物件。</span><span class="sxs-lookup"><span data-stu-id="42968-178">Both Visual Basic and C# support a language keyword that uses <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> to lock the object.</span></span> <span data-ttu-id="42968-179">Visual Basic 支援 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 陳述式；C# 支援 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 陳述式。</span><span class="sxs-lookup"><span data-stu-id="42968-179">Visual Basic supports the [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) statement; C# supports the [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) statement.</span></span>  
   
- 在這兩種情況下，如果程式碼區塊中擲回例外狀況，則 **lock** 會取得鎖定，或是 **SyncLock** 會自動釋出。  C\# 和 Visual Basic 編譯器會發出 **try**\/**finally** 區塊，其中 **Monitor.Enter** 在 try 的開頭，而 **Monitor.Exit** 在 **finally** 區塊中。  如果 **lock** 或 **SyncLock** 區塊中擲回例外狀況，則會執行 **finally** 處理常式，讓您進行任何清除工作。  
+ <span data-ttu-id="42968-180">在這兩種情況下，如果在程式碼區塊中擲回例外狀況，**lock** 或 **SyncLock** 取得的鎖定會自動釋放。</span><span class="sxs-lookup"><span data-stu-id="42968-180">In both cases, if an exception is thrown in the code block, the lock acquired by the **lock** or **SyncLock** is released automatically.</span></span> <span data-ttu-id="42968-181">C# 和 Visual Basic 編譯器會在嘗試開始時發出 **try**/**finally** 區塊與 **Monitor.Enter**，以及在 **finally** 區塊中發出 **Monitor.Exit**。</span><span class="sxs-lookup"><span data-stu-id="42968-181">The C# and Visual Basic compilers emit a **try**/**finally** block with **Monitor.Enter** at the beginning of the try, and **Monitor.Exit** in the **finally** block.</span></span> <span data-ttu-id="42968-182">如果在 **lock** 或 **SyncLock** 區塊內擲回例外狀況，會執行 **finally** 處理常式以允許您進行任何清除工作。</span><span class="sxs-lookup"><span data-stu-id="42968-182">If an exception is thrown inside the **lock** or **SyncLock** block, the **finally** handler runs to allow you to do any clean-up work.</span></span>  
   
-## 同步內容  
- 您可在任何 **ContextBoundObject** 上使用 **SynchronizationAttribute** 來同步處理所有執行個體方法和欄位。  同一內容領域中的所有物件都共用相同的鎖定。  多個執行緒可存取方法和欄位，不過只能以一次一個執行緒的方式進行。  
+## <a name="synchronized-context"></a><span data-ttu-id="42968-183">同步處理的內容</span><span class="sxs-lookup"><span data-stu-id="42968-183">Synchronized Context</span></span>  
+ <span data-ttu-id="42968-184">您可以在任何 **ContextBoundObject** 上使用 **SynchronizationAttribute**，以同步所有執行個體方法和欄位。</span><span class="sxs-lookup"><span data-stu-id="42968-184">You can use the **SynchronizationAttribute** on any **ContextBoundObject** to synchronize all instance methods and fields.</span></span> <span data-ttu-id="42968-185">相同內容網域中所有物件都共用相同的鎖定。</span><span class="sxs-lookup"><span data-stu-id="42968-185">All objects in the same context domain share the same lock.</span></span> <span data-ttu-id="42968-186">允許多個執行緒存取方法和欄位，但是一次只允許單一執行緒。</span><span class="sxs-lookup"><span data-stu-id="42968-186">Multiple threads are allowed to access the methods and fields, but only a single thread is allowed at any one time.</span></span>  
   
-## 請參閱  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)   
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md)   
- [SyncLock Statement](../../../ocs/visual-basic/language-reference/statements/synclock-statement.md)   
- [lock 陳述式](../Topic/lock%20Statement%20\(C%23%20Reference\).md)
+## <a name="see-also"></a><span data-ttu-id="42968-187">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42968-187">See Also</span></span>  
+ <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+ [<span data-ttu-id="42968-188">執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="42968-188">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
+ [<span data-ttu-id="42968-189">同步處理原始物件概觀</span><span class="sxs-lookup"><span data-stu-id="42968-189">Overview of Synchronization Primitives</span></span>](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ [<span data-ttu-id="42968-190">SyncLock 陳述式</span><span class="sxs-lookup"><span data-stu-id="42968-190">SyncLock Statement</span></span>](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+ [<span data-ttu-id="42968-191">lock 陳述式</span><span class="sxs-lookup"><span data-stu-id="42968-191">lock Statement</span></span>](~/docs/csharp/language-reference/keywords/lock-statement.md)

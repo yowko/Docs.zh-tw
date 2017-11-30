@@ -1,61 +1,67 @@
 ---
-title: "How to: Perform Action When a Dataflow Block Receives Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, receiving data"
+title: "如何：在資料流程區塊收到資料時執行動作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d049d20f5e685096a72857cd18a89688633883c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Perform Action When a Dataflow Block Receives Data
-會在收到資料時，*執行資料流程區塊* 型別呼叫使用者提供的委派。  <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=fullName>、 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=fullName>和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=fullName> 類別是執行資料流程區塊型別。  您可以使用 `delegate` 關鍵字 \(在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為`Sub` \)， <xref:System.Action%601>、 <xref:System.Func%602>或 Lambda 運算式，因為您提供給工作函式執行資料流程區塊時。  文件在執行區塊說明如何使用 <xref:System.Func%602> 和 Lambda 運算式來執行動作。  
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a><span data-ttu-id="a9bdf-102">如何：在資料流程區塊收到資料時執行動作</span><span class="sxs-lookup"><span data-stu-id="a9bdf-102">How to: Perform Action When a Dataflow Block Receives Data</span></span>
+<span data-ttu-id="a9bdf-103">「執行資料流程區塊」(Execution Dataflow Block) 類型會在收到資料時呼叫使用者提供的委派。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-103">*Execution dataflow block* types call a user-provided delegate when they receive data.</span></span> <span data-ttu-id="a9bdf-104"><xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-104">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, and <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> classes are execution dataflow block types.</span></span> <span data-ttu-id="a9bdf-105">當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 `Sub` 中為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-105">You can use the `delegate` keyword (`Sub` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, or a lambda expression when you provide a work function to an execution dataflow block.</span></span> <span data-ttu-id="a9bdf-106">本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-106">This document describes how to use <xref:System.Func%602> and lambda expressions to perform action in execution blocks.</span></span>  
   
 > [!TIP]
->  TPL 資料流程式庫 \(<xref:System.Threading.Tasks.Dataflow?displayProperty=fullName> 命名空間\) 並沒有和 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 配置在一起。  若要安裝 <xref:System.Threading.Tasks.Dataflow> 命名空間，請在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中開啟您的專案，從 \[專案\] 功能表中選擇 \[**管理 NuGet 封裝**\]，並且線上搜尋 `Microsoft.Tpl.Dataflow` 封裝。  
+>  <span data-ttu-id="a9bdf-107">TPL 資料流程程式庫 (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空間) 並未隨附於 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-107">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="a9bdf-108">若要安裝<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並在搜尋線上`Microsoft.Tpl.Dataflow`封裝。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-108">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-## 範例  
- 下列範例使用資料流讀取檔案從磁碟並計算等於零的位元組數。在該檔案中。  它會使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 讀取檔案和計算零位元組數目和 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 列印零位元組數目寫入主控台。  當區塊接收資料時， <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件指定要執行工作的 <xref:System.Func%602> 物件。  <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件使用 Lambda 運算式列印到主控台讀取零位元組數目。  
+## <a name="example"></a><span data-ttu-id="a9bdf-109">範例</span><span class="sxs-lookup"><span data-stu-id="a9bdf-109">Example</span></span>  
+ <span data-ttu-id="a9bdf-110">下列範例會使用資料流程從磁碟讀取檔案，並計算該檔案中等於零的位元組數。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-110">The following example uses dataflow to read a file from disk and computes the number of bytes in that file that are equal to zero.</span></span> <span data-ttu-id="a9bdf-111">它會使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 讀取檔案並計算零位元組的數目，並且使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 將零位元組的數目列印至主控台。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-111">It uses <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> to read the file and compute the number of zero bytes, and <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> to print the number of zero bytes to the console.</span></span> <span data-ttu-id="a9bdf-112"><xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件會指定 <xref:System.Func%602> 物件在區塊收到資料時執行工作。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-112">The <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object specifies a <xref:System.Func%602> object to perform work when the blocks receive data.</span></span> <span data-ttu-id="a9bdf-113"><xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件會使用 Lambda 運算式將讀取的零位元組數目列印至主控台。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-113">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object uses a lambda expression to print to the console the number of zero bytes that are read.</span></span>  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]
  [!code-vb[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#1)]  
   
- 雖然您可以提供 Lambda 運算式給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，這個範例會使用 <xref:System.Func%602> 可讓其他程式碼使用 `CountBytes` 方法。  因為工作會執行特定於這項工作並不能是有用的其他程式碼， <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件使用 Lambda 運算式。  如需 Lambda 運算式的方式提供較多有關工作平行程式庫中運作，請參閱 [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
+ <span data-ttu-id="a9bdf-114">雖然您可以提供 Lambda 運算式給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，但是這個範例會使用 <xref:System.Func%602> 讓其他程式碼能夠使用 `CountBytes` 方法。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-114">Although you can provide a lambda expression to a <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object, this example uses <xref:System.Func%602> to enable other code to use the `CountBytes` method.</span></span> <span data-ttu-id="a9bdf-115">由於要執行的工作是這個工作所專屬，而且對於其他程式碼可能不太實用，因此 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件會使用 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-115">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object uses a lambda expression because the work to be performed is specific to this task and is not likely to be useful from other code.</span></span> <span data-ttu-id="a9bdf-116">如需 Lambda 運算式如何在工作平行程式庫中運作的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-116">For more information about how lambda expressions work in the Task Parallel Library, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
- 委派部分抽象型別 [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) 文件摘要說明您可以提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派型別。  這個資料表也指定委派型別同步運作或非同步運作。  
+ <span data-ttu-id="a9bdf-117">委派類型的摘要一節中[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文件摘要說明您可以提供給委派型別<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>， <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>，和<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>物件。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-117">The section Summary of Delegate Types in the [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) document summarizes the delegate types that you can provide to <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, and <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> objects.</span></span> <span data-ttu-id="a9bdf-118">表中也會指出委派類型是以同步或非同步方式運作。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-118">The table also specifies whether the delegate type operates synchronously or asynchronously.</span></span>  
   
-## 編譯程式碼  
- 請複製範例程式碼並將它貼在 Visual Studio 專案中，或是貼在名為  `DataflowExecutionBlocks.cs`的檔案中 \([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 的 `DataflowExecutionBlocks.vb` \) ，然後在 Visual Studio 的 \[命令提示字元\] 視窗中執行下列命令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="a9bdf-119">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a9bdf-119">Compiling the Code</span></span>  
+ <span data-ttu-id="a9bdf-120">請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowExecutionBlocks.cs` 的檔案中 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為 `DataflowExecutionBlocks.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-120">Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), and then run the following command in a Visual Studio Command Prompt window.</span></span>  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
+ <span data-ttu-id="a9bdf-121">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**</span><span class="sxs-lookup"><span data-stu-id="a9bdf-121">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**</span></span>  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
+ <span data-ttu-id="a9bdf-122">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**</span><span class="sxs-lookup"><span data-stu-id="a9bdf-122">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**</span></span>  
   
-## 穩固程式設計  
- 這個範例提供 <xref:System.Func%602> 型別的委派給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件同步執行資料流程區塊的工作。  若要讓資料流程區塊的行為非同步，請提供 <xref:System.Func%601> 型別的委派給資料流程區塊。  當資料流程區塊非同步行為時，資料流程區塊的工作完成，只有在傳回的 <xref:System.Threading.Tasks.Task%601> 物件完成時。  下列範例會修改 `CountBytes` 方法並使用 [非同步](../Topic/async%20\(C%23%20Reference\).md) ，而 \([Async](../Topic/Async%20\(Visual%20Basic\).md) 和 [等候](../Topic/Await%20Operator%20\(Visual%20Basic\).md) 在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) 非同步計算是的總位元組數的 [等候](../Topic/await%20\(C%23%20Reference\).md) 運算子右邊的參數為提供的檔案。  <xref:System.IO.FileStream.ReadAsync%2A> 方法會執行的非同步讀取作業。  
+## <a name="robust-programming"></a><span data-ttu-id="a9bdf-123">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="a9bdf-123">Robust Programming</span></span>  
+ <span data-ttu-id="a9bdf-124">這個範例會將 <xref:System.Func%602> 類型的委派提供給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，以同步方式執行資料流程區塊的工作。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-124">This example provides a delegate of type <xref:System.Func%602> to the <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object to perform the task of the dataflow block synchronously.</span></span> <span data-ttu-id="a9bdf-125">若要讓資料流程區塊以非同步方式執行，請將 <xref:System.Func%601> 類型的委派提供給資料流程區塊。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-125">To enable the dataflow block to behave asynchronously, provide a delegate of type <xref:System.Func%601> to the dataflow block.</span></span> <span data-ttu-id="a9bdf-126">當資料流程區塊以非同步方式執行時，資料流程區塊的工作會在傳回的 <xref:System.Threading.Tasks.Task%601> 物件完成後才完成。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-126">When a dataflow block behaves asynchronously, the task of the dataflow block is complete only when the returned <xref:System.Threading.Tasks.Task%601> object finishes.</span></span> <span data-ttu-id="a9bdf-127">下列範例會修改 `CountBytes` 方法並使用 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 運算子 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md))，以非同步方式計算所提供檔案中零位元組的總數。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-127">The following example modifies the `CountBytes` method and uses the [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) operators ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) to asynchronously compute the total number of bytes that are zero in the provided file.</span></span> <span data-ttu-id="a9bdf-128"><xref:System.IO.FileStream.ReadAsync%2A> 方法會以非同步方式執行讀取作業。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-128">The <xref:System.IO.FileStream.ReadAsync%2A> method performs file read operations asynchronously.</span></span>  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  
   
- 您在執行資料流程區塊也可以使用非同步 Lambda 運算式來執行動作。  下列範例修改所使用的 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，讓它使用 Lambda 運算式執行非同步工作。  
+ <span data-ttu-id="a9bdf-129">您也可以使用非同步 Lambda 運算式在執行資料流程區塊中執行動作。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-129">You can also use asynchronous lambda expressions to perform action in an execution dataflow block.</span></span> <span data-ttu-id="a9bdf-130">下列範例會修改前一個範例中使用的 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，讓它使用 Lambda 運算式以非同步方式執行工作。</span><span class="sxs-lookup"><span data-stu-id="a9bdf-130">The following example modifies the <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object that is used in the previous example so that it uses a lambda expression to perform the work asynchronously.</span></span>  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## 請參閱  
- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="a9bdf-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9bdf-131">See Also</span></span>  
+ [<span data-ttu-id="a9bdf-132">資料流程</span><span class="sxs-lookup"><span data-stu-id="a9bdf-132">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

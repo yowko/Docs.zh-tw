@@ -1,49 +1,54 @@
 ---
-title: "Order Preservation in PLINQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, order preservation"
+title: "PLINQ 中的順序保留"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 060459cf8f408e40ddc394fbcda6a022ec6379de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Order Preservation in PLINQ
-使用 PLINQ 的目標是充分發揮效能，並兼顧正確性。  查詢執行的速度固然愈快愈好，但產生的結果也必須要正確。  在某些情況下，來源序列必須保有其順序，才能達到查詢的正確性；但排序是十分耗費運算資源的。  因此在預設情況下，PLINQ 不會保留來源序列的順序。  PLINQ 在這方面與 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 相似，但與會保留順序的 LINQ to Objects 不同。  
+# <a name="order-preservation-in-plinq"></a><span data-ttu-id="a7045-102">PLINQ 中的順序保留</span><span class="sxs-lookup"><span data-stu-id="a7045-102">Order Preservation in PLINQ</span></span>
+<span data-ttu-id="a7045-103">在 PLINQ，目標是為了達到最佳效能，同時維護正確性。</span><span class="sxs-lookup"><span data-stu-id="a7045-103">In PLINQ, the goal is to maximize performance while maintaining correctness.</span></span> <span data-ttu-id="a7045-104">查詢應該盡快執行，但仍會產生正確的結果。</span><span class="sxs-lookup"><span data-stu-id="a7045-104">A query should run as fast as possible but still produce the correct results.</span></span> <span data-ttu-id="a7045-105">在某些情況下，正確性需要保留; 來源序列的順序不過，順序可能會高度耗費計算能力。</span><span class="sxs-lookup"><span data-stu-id="a7045-105">In some cases, correctness requires the order of the source sequence to be preserved; however, ordering can be computationally expensive.</span></span> <span data-ttu-id="a7045-106">因此，根據預設，PLINQ 不會保留來源序列中的順序。</span><span class="sxs-lookup"><span data-stu-id="a7045-106">Therefore, by default, PLINQ does not preserve the order of the source sequence.</span></span> <span data-ttu-id="a7045-107">在這方面類似於 PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但是與 LINQ to Objects，它就會保留順序不同。</span><span class="sxs-lookup"><span data-stu-id="a7045-107">In this regard, PLINQ resembles [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], but is unlike LINQ to Objects, which does preserve ordering.</span></span>  
   
- 若要覆寫預設行為，您可以在來源序列上使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子開啟順序保留功能。  後續您可以使用 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 方法關閉查詢中的順序保留功能。  在這兩個方法中，都是根據判斷以平行或循序方式執行查詢的啟發學習法來處理查詢。  如需詳細資訊，請參閱[Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
+ <span data-ttu-id="a7045-108">若要覆寫預設行為，您可以開啟順序保留使用<xref:System.Linq.ParallelEnumerable.AsOrdered%2A>來源序列上的運算子。</span><span class="sxs-lookup"><span data-stu-id="a7045-108">To override the default behavior, you can turn on order-preservation by using the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operator on the source sequence.</span></span> <span data-ttu-id="a7045-109">您可以再關閉順序保留稍後在查詢中使用<xref:System.Linq.ParallelEnumerable.AsUnordered%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a7045-109">You can then turn off order preservation later in the query by using the <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> method.</span></span> <span data-ttu-id="a7045-110">這兩種方法，以根據啟發學習法，判斷是否要執行為平行查詢或為循序處理的查詢。</span><span class="sxs-lookup"><span data-stu-id="a7045-110">With both methods, the query is processed based on the heuristics that determine whether to execute the query as parallel or as sequential.</span></span> <span data-ttu-id="a7045-111">如需詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="a7045-111">For more information, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
- 下列範例說明未排序的平行查詢如何篩選所有符合條件的項目，而不嘗試以任何方式排序結果  
+ <span data-ttu-id="a7045-112">下列範例顯示未排序的平行查詢篩選之符合條件，但不會嘗試以任何方式排序結果的所有項目。</span><span class="sxs-lookup"><span data-stu-id="a7045-112">The following example shows an unordered parallel query that filters for all the elements that match a condition, without trying to order the results in any way.</span></span>  
   
  [!code-csharp[PLINQ#8](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#8)]
  [!code-vb[PLINQ#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#8)]  
   
- 此查詢不一定會產生來源序列中符合條件的前 1000 個城市，而是會產生符合條件的其中 1000 個城市。  PLINQ 查詢運算子會將來源序列分割成多個以並行工作的形式處理的子序列。  如果未指定順序保留，則每次分割所產生的結果就會以任意順序交付至下一個查詢階段。  此外，分割在繼續處理其餘項目之前，可能會產生其結果的子集。  產生的順序可能每次都不同。  您的應用程式無法控制這一點，因為這取決於作業系統排序執行緒的方式。  
+ <span data-ttu-id="a7045-113">此查詢不一定會產生符合的條件，但而 1000年城市符合條件的某些組來源序列中的前 1000 個城市。</span><span class="sxs-lookup"><span data-stu-id="a7045-113">This query does not necessarily produce the first 1000 cities in the source sequence that meet the condition, but rather some set of 1000 cities that meet the condition.</span></span> <span data-ttu-id="a7045-114">PLINQ 查詢運算子的資料分割成多個並行工作以處理的子來源序列。</span><span class="sxs-lookup"><span data-stu-id="a7045-114">PLINQ query operators partition the source sequence into multiple subsequences that are processed as concurrent tasks.</span></span> <span data-ttu-id="a7045-115">如果未指定保留順序，每個資料分割的結果都會傳送給查詢以任意順序的下一個階段。</span><span class="sxs-lookup"><span data-stu-id="a7045-115">If order preservation is not specified, the results from each partition are handed off to the next stage of the query in an arbitrary order.</span></span> <span data-ttu-id="a7045-116">此外，資料分割可能會產生其結果的子集，它會繼續處理其餘的項目之前。</span><span class="sxs-lookup"><span data-stu-id="a7045-116">Also, a partition may yield a subset of its results before it continues to process the remaining elements.</span></span> <span data-ttu-id="a7045-117">產生的順序可能會每次可能不同。</span><span class="sxs-lookup"><span data-stu-id="a7045-117">The resulting order may be different every time.</span></span> <span data-ttu-id="a7045-118">您的應用程式無法控制這點因為它相依於作業系統排程執行緒的方式。</span><span class="sxs-lookup"><span data-stu-id="a7045-118">Your application cannot control this because it depends on how the operating system schedules the threads.</span></span>  
   
- 下列範例會在來源序列上使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子覆寫預設行為。  如此可確保 <xref:System.Linq.ParallelEnumerable.Take%2A> 方法會傳回來源序列中符合條件的前 1000 個城市。  
+ <span data-ttu-id="a7045-119">下列範例會覆寫預設行為使用<xref:System.Linq.ParallelEnumerable.AsOrdered%2A>來源序列上的運算子。</span><span class="sxs-lookup"><span data-stu-id="a7045-119">The following example overrides the default behavior by using the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operator on the source sequence.</span></span> <span data-ttu-id="a7045-120">如此可確保<xref:System.Linq.ParallelEnumerable.Take%2A>方法會傳回符合條件的來源序列中的前 1000 個城市。</span><span class="sxs-lookup"><span data-stu-id="a7045-120">This ensures that the <xref:System.Linq.ParallelEnumerable.Take%2A> method returns the first 1000 cities in the source sequence that meet the condition.</span></span>  
   
  [!code-csharp[PLINQ#9](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#9)]
  [!code-vb[PLINQ#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#9)]  
   
- 但此查詢可能無法和未排序的查詢執行得一樣快，因為它必須在整個分割過程中追蹤原始順序，並在合併期間確保順序的一致性。  因此，建議您只有在必要時才使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>，且僅用於查詢中需要此項目的部分。  無須再保留順序時，請使用 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 加以關閉。  下列範例將撰寫兩個查詢以執行此作業。  
+ <span data-ttu-id="a7045-121">不過，此查詢可能無法執行的未排序的版本為快速因為它必須持續追蹤的資料分割的整個原始順序，以及在合併時確保順序一致。</span><span class="sxs-lookup"><span data-stu-id="a7045-121">However, this query probably does not run as fast as the unordered version because it must keep track of the original ordering throughout the partitions and at merge time ensure that the ordering is consistent.</span></span> <span data-ttu-id="a7045-122">因此，我們建議您改用<xref:System.Linq.ParallelEnumerable.AsOrdered%2A>只在必要時，並只針對這些組件的查詢需要它。</span><span class="sxs-lookup"><span data-stu-id="a7045-122">Therefore, we recommend that you use <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> only when it is required, and only for those parts of the query that require it.</span></span> <span data-ttu-id="a7045-123">當不再需要保留順序時，使用<xref:System.Linq.ParallelEnumerable.AsUnordered%2A>將它關閉。</span><span class="sxs-lookup"><span data-stu-id="a7045-123">When order preservation is no longer required, use <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> to turn it off.</span></span> <span data-ttu-id="a7045-124">下列範例會達到這撰寫兩個查詢。</span><span class="sxs-lookup"><span data-stu-id="a7045-124">The following example achieves this by composing two queries.</span></span>  
   
  [!code-csharp[PLINQ#6](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#6)]
  [!code-vb[PLINQ#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#6)]  
   
- 請注意，PLINQ 會為其餘查詢保留 order\-imposing 運算子所產生的序列順序。  換句話說，<xref:System.Linq.ParallelEnumerable.OrderBy%2A> 和 <xref:System.Linq.ParallelEnumerable.ThenBy%2A> 之類的運算子，會被視為後續接著會有 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 呼叫的運算子。  
+ <span data-ttu-id="a7045-125">請注意，會保留 PLINQ 查詢的其餘部分的順序諸運算子產生序列的排序。</span><span class="sxs-lookup"><span data-stu-id="a7045-125">Note that PLINQ preserves the ordering of a sequence produced by order-imposing operators for the rest of the query.</span></span> <span data-ttu-id="a7045-126">換句話說，運算子，例如<xref:System.Linq.ParallelEnumerable.OrderBy%2A>和<xref:System.Linq.ParallelEnumerable.ThenBy%2A>會視為已後面呼叫<xref:System.Linq.ParallelEnumerable.AsOrdered%2A>。</span><span class="sxs-lookup"><span data-stu-id="a7045-126">In other words, operators such as <xref:System.Linq.ParallelEnumerable.OrderBy%2A> and <xref:System.Linq.ParallelEnumerable.ThenBy%2A> are treated as if they were followed by a call to <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.</span></span>  
   
-## 查詢運算子和順序  
- 下列查詢運算子會在查詢的所有後續作業中執行順序保留，或在呼叫 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 後執行：  
+## <a name="query-operators-and-ordering"></a><span data-ttu-id="a7045-127">查詢運算子和排序</span><span class="sxs-lookup"><span data-stu-id="a7045-127">Query Operators and Ordering</span></span>  
+ <span data-ttu-id="a7045-128">下列查詢運算子導入到所有後續的作業，在查詢中，或直到順序保留<xref:System.Linq.ParallelEnumerable.AsUnordered%2A>稱為：</span><span class="sxs-lookup"><span data-stu-id="a7045-128">The following query operators introduce order preservation into all subsequent operations in a query, or until <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> is called:</span></span>  
   
 -   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 19
   
 -   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
- 下列 PLINQ 查詢運算子在某些情況下可能要有排序的來源序列，才能產生正確的結果：  
+ <span data-ttu-id="a7045-129">下列的 PLINQ 查詢運算子在某些情況下可能需要已排序的來源順序來產生正確的結果：</span><span class="sxs-lookup"><span data-stu-id="a7045-129">The following PLINQ query operators may in some cases require ordered source sequences to produce correct results:</span></span>  
   
 -   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
@@ -65,64 +70,64 @@ caps.handback.revision: 19
   
 -   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
- 有些 PLINQ 查詢運算子的行為會隨著其來源序列排序與否而不同。  這些運算子如下表所列。  
+ <span data-ttu-id="a7045-130">有些 PLINQ 查詢運算子的行為有所不同，取決於排序或未排序其來源序列。</span><span class="sxs-lookup"><span data-stu-id="a7045-130">Some PLINQ query operators behave differently, depending on whether their source sequence is ordered or unordered.</span></span> <span data-ttu-id="a7045-131">下表列出這些運算子。</span><span class="sxs-lookup"><span data-stu-id="a7045-131">The following table lists these operators.</span></span>  
   
-|運算子|來源序列已排序的結果|來源序列未排序的結果|  
-|---------|----------------|----------------|  
-|<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|不具關聯性或不具互換性之作業的不具決定性輸出|不具關聯性或不具互換性之作業的不具決定性輸出|  
-|<xref:System.Linq.ParallelEnumerable.All%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Any%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Average%2A>|不具關聯性或不具互換性之作業的不具決定性輸出|不具關聯性或不具互換性之作業的不具決定性輸出|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Concat%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Count%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Distinct%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|傳回指定的項目|任意項目|  
-|<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|傳回指定的項目|任意項目|  
-|<xref:System.Linq.ParallelEnumerable.Except%2A>|未排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.First%2A>|傳回指定的項目|任意項目|  
-|<xref:System.Linq.ParallelEnumerable.FirstOrDefault%2A>|傳回指定的項目|任意項目|  
-|<xref:System.Linq.ParallelEnumerable.ForAll%2A>|非決定性地平行執行|非決定性地平行執行|  
-|<xref:System.Linq.ParallelEnumerable.GroupBy%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.GroupJoin%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Intersect%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Join%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Last%2A>|傳回指定的項目|任意項目|  
-|<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|傳回指定的項目|任意項目|  
-|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Min%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|重新排序序列|啟動新的排序區段|  
-|<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|重新排序序列|啟動新的排序區段|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|不適用 \(與 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 相同的預設值\)|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|不適用 \(與 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 相同的預設值\)|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|反轉|不執行任何動作|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A> \(已編排索引\)|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A> \(已編排索引\)|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|排序比較|未排序比較|  
-|<xref:System.Linq.ParallelEnumerable.Single%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|略過前 *n*個項目|略過任 *n* 個項目|  
-|<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|排序結果|非決定性。  以目前的任意順序執行 SkipWhile|  
-|<xref:System.Linq.ParallelEnumerable.Sum%2A>|不具關聯性或不具互換性之作業的不具決定性輸出|不具關聯性或不具互換性之作業的不具決定性輸出|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|取用前 `n` 個項目|取用任 `n` 個項目|  
-|<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|排序結果|非決定性。  以目前的任意順序執行 TakeWhile|  
-|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|補充 `OrderBy`|補充 `OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|補充 `OrderBy`|補充 `OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ToArray%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|不適用|不適用|  
-|<xref:System.Linq.ParallelEnumerable.ToList%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Union%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A> \(已編排索引\)|排序結果|未排序結果|  
-|<xref:System.Linq.ParallelEnumerable.Zip%2A>|排序結果|未排序結果|  
+|<span data-ttu-id="a7045-132">運算子</span><span class="sxs-lookup"><span data-stu-id="a7045-132">Operator</span></span>|<span data-ttu-id="a7045-133">當來源序列排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-133">Result when the source sequence is ordered</span></span>|<span data-ttu-id="a7045-134">當來源序列是未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-134">Result when the source sequence is unordered</span></span>|  
+|--------------|------------------------------------------------|--------------------------------------------------|  
+|<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|<span data-ttu-id="a7045-135">不具決定性 nonassociative 或 noncommutative 作業輸出</span><span class="sxs-lookup"><span data-stu-id="a7045-135">Nondeterministic output for nonassociative or noncommutative operations</span></span>|<span data-ttu-id="a7045-136">不具決定性 nonassociative 或 noncommutative 作業輸出</span><span class="sxs-lookup"><span data-stu-id="a7045-136">Nondeterministic output for nonassociative or noncommutative operations</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.All%2A>|<span data-ttu-id="a7045-137">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-137">Not applicable</span></span>|<span data-ttu-id="a7045-138">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-138">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Any%2A>|<span data-ttu-id="a7045-139">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-139">Not applicable</span></span>|<span data-ttu-id="a7045-140">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-140">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|<span data-ttu-id="a7045-141">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-141">Not applicable</span></span>|<span data-ttu-id="a7045-142">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-142">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Average%2A>|<span data-ttu-id="a7045-143">不具決定性 nonassociative 或 noncommutative 作業輸出</span><span class="sxs-lookup"><span data-stu-id="a7045-143">Nondeterministic output for nonassociative or noncommutative operations</span></span>|<span data-ttu-id="a7045-144">不具決定性 nonassociative 或 noncommutative 作業輸出</span><span class="sxs-lookup"><span data-stu-id="a7045-144">Nondeterministic output for nonassociative or noncommutative operations</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|<span data-ttu-id="a7045-145">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-145">Ordered results</span></span>|<span data-ttu-id="a7045-146">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-146">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Concat%2A>|<span data-ttu-id="a7045-147">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-147">Ordered results</span></span>|<span data-ttu-id="a7045-148">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-148">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Count%2A>|<span data-ttu-id="a7045-149">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-149">Not applicable</span></span>|<span data-ttu-id="a7045-150">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-150">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|<span data-ttu-id="a7045-151">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-151">Not applicable</span></span>|<span data-ttu-id="a7045-152">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-152">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Distinct%2A>|<span data-ttu-id="a7045-153">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-153">Ordered results</span></span>|<span data-ttu-id="a7045-154">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-154">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|<span data-ttu-id="a7045-155">傳回指定的項目</span><span class="sxs-lookup"><span data-stu-id="a7045-155">Return specified element</span></span>|<span data-ttu-id="a7045-156">任意項目</span><span class="sxs-lookup"><span data-stu-id="a7045-156">Arbitrary element</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|<span data-ttu-id="a7045-157">傳回指定的項目</span><span class="sxs-lookup"><span data-stu-id="a7045-157">Return specified element</span></span>|<span data-ttu-id="a7045-158">任意項目</span><span class="sxs-lookup"><span data-stu-id="a7045-158">Arbitrary element</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Except%2A>|<span data-ttu-id="a7045-159">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-159">Unordered results</span></span>|<span data-ttu-id="a7045-160">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-160">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.First%2A>|<span data-ttu-id="a7045-161">傳回指定的項目</span><span class="sxs-lookup"><span data-stu-id="a7045-161">Return specified element</span></span>|<span data-ttu-id="a7045-162">任意項目</span><span class="sxs-lookup"><span data-stu-id="a7045-162">Arbitrary element</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.FirstOrDefault%2A>|<span data-ttu-id="a7045-163">傳回指定的項目</span><span class="sxs-lookup"><span data-stu-id="a7045-163">Return specified element</span></span>|<span data-ttu-id="a7045-164">任意項目</span><span class="sxs-lookup"><span data-stu-id="a7045-164">Arbitrary element</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ForAll%2A>|<span data-ttu-id="a7045-165">非確定性地以平行方式執行</span><span class="sxs-lookup"><span data-stu-id="a7045-165">Executes nondeterministically in parallel</span></span>|<span data-ttu-id="a7045-166">非確定性地以平行方式執行</span><span class="sxs-lookup"><span data-stu-id="a7045-166">Executes nondeterministically in parallel</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.GroupBy%2A>|<span data-ttu-id="a7045-167">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-167">Ordered results</span></span>|<span data-ttu-id="a7045-168">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-168">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.GroupJoin%2A>|<span data-ttu-id="a7045-169">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-169">Ordered results</span></span>|<span data-ttu-id="a7045-170">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-170">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Intersect%2A>|<span data-ttu-id="a7045-171">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-171">Ordered results</span></span>|<span data-ttu-id="a7045-172">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-172">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Join%2A>|<span data-ttu-id="a7045-173">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-173">Ordered results</span></span>|<span data-ttu-id="a7045-174">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-174">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Last%2A>|<span data-ttu-id="a7045-175">傳回指定的項目</span><span class="sxs-lookup"><span data-stu-id="a7045-175">Return specified element</span></span>|<span data-ttu-id="a7045-176">任意項目</span><span class="sxs-lookup"><span data-stu-id="a7045-176">Arbitrary element</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|<span data-ttu-id="a7045-177">傳回指定的項目</span><span class="sxs-lookup"><span data-stu-id="a7045-177">Return specified element</span></span>|<span data-ttu-id="a7045-178">任意項目</span><span class="sxs-lookup"><span data-stu-id="a7045-178">Arbitrary element</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.LongCount%2A>|<span data-ttu-id="a7045-179">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-179">Not applicable</span></span>|<span data-ttu-id="a7045-180">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-180">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Min%2A>|<span data-ttu-id="a7045-181">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-181">Not applicable</span></span>|<span data-ttu-id="a7045-182">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-182">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|<span data-ttu-id="a7045-183">重新排列順序</span><span class="sxs-lookup"><span data-stu-id="a7045-183">Reorders the sequence</span></span>|<span data-ttu-id="a7045-184">啟動新的排序區段</span><span class="sxs-lookup"><span data-stu-id="a7045-184">Starts new ordered section</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|<span data-ttu-id="a7045-185">重新排列順序</span><span class="sxs-lookup"><span data-stu-id="a7045-185">Reorders the sequence</span></span>|<span data-ttu-id="a7045-186">啟動新的排序區段</span><span class="sxs-lookup"><span data-stu-id="a7045-186">Starts new ordered section</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|<span data-ttu-id="a7045-187">不適用 (相同預設值為<xref:System.Linq.ParallelEnumerable.AsParallel%2A>)</span><span class="sxs-lookup"><span data-stu-id="a7045-187">Not applicable (same default as <xref:System.Linq.ParallelEnumerable.AsParallel%2A> )</span></span>|<span data-ttu-id="a7045-188">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-188">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|<span data-ttu-id="a7045-189">不適用 (相同預設值為<xref:System.Linq.ParallelEnumerable.AsParallel%2A>)</span><span class="sxs-lookup"><span data-stu-id="a7045-189">Not applicable (same default as <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)</span></span>|<span data-ttu-id="a7045-190">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-190">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|<span data-ttu-id="a7045-191">反轉</span><span class="sxs-lookup"><span data-stu-id="a7045-191">Reverses</span></span>|<span data-ttu-id="a7045-192">不執行任何動作</span><span class="sxs-lookup"><span data-stu-id="a7045-192">Does nothing</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|<span data-ttu-id="a7045-193">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-193">Ordered results</span></span>|<span data-ttu-id="a7045-194">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-194">Unordered results</span></span>|  
+|<span data-ttu-id="a7045-195"><xref:System.Linq.ParallelEnumerable.Select%2A>（索引）</span><span class="sxs-lookup"><span data-stu-id="a7045-195"><xref:System.Linq.ParallelEnumerable.Select%2A> (indexed)</span></span>|<span data-ttu-id="a7045-196">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-196">Ordered results</span></span>|<span data-ttu-id="a7045-197">未排序的結果。</span><span class="sxs-lookup"><span data-stu-id="a7045-197">Unordered results.</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|<span data-ttu-id="a7045-198">排序的結果。</span><span class="sxs-lookup"><span data-stu-id="a7045-198">Ordered results.</span></span>|<span data-ttu-id="a7045-199">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-199">Unordered results</span></span>|  
+|<span data-ttu-id="a7045-200"><xref:System.Linq.ParallelEnumerable.SelectMany%2A>（索引）</span><span class="sxs-lookup"><span data-stu-id="a7045-200"><xref:System.Linq.ParallelEnumerable.SelectMany%2A> (indexed)</span></span>|<span data-ttu-id="a7045-201">排序的結果。</span><span class="sxs-lookup"><span data-stu-id="a7045-201">Ordered results.</span></span>|<span data-ttu-id="a7045-202">未排序的結果。</span><span class="sxs-lookup"><span data-stu-id="a7045-202">Unordered results.</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|<span data-ttu-id="a7045-203">已排序的比較</span><span class="sxs-lookup"><span data-stu-id="a7045-203">Ordered comparison</span></span>|<span data-ttu-id="a7045-204">未排序的比較</span><span class="sxs-lookup"><span data-stu-id="a7045-204">Unordered comparison</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Single%2A>|<span data-ttu-id="a7045-205">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-205">Not applicable</span></span>|<span data-ttu-id="a7045-206">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-206">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|<span data-ttu-id="a7045-207">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-207">Not applicable</span></span>|<span data-ttu-id="a7045-208">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-208">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|<span data-ttu-id="a7045-209">略過第一次 *n* 項目</span><span class="sxs-lookup"><span data-stu-id="a7045-209">Skips first *n* elements</span></span>|<span data-ttu-id="a7045-210">略過任何 *n* 項目</span><span class="sxs-lookup"><span data-stu-id="a7045-210">Skips any *n* elements</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|<span data-ttu-id="a7045-211">排序的結果。</span><span class="sxs-lookup"><span data-stu-id="a7045-211">Ordered results.</span></span>|<span data-ttu-id="a7045-212">不具決定性。</span><span class="sxs-lookup"><span data-stu-id="a7045-212">Nondeterministic.</span></span> <span data-ttu-id="a7045-213">SkipWhile 對目前的任意順序</span><span class="sxs-lookup"><span data-stu-id="a7045-213">Performs SkipWhile on the current arbitrary order</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Sum%2A>|<span data-ttu-id="a7045-214">不具決定性 nonassociative 或 noncommutative 作業輸出</span><span class="sxs-lookup"><span data-stu-id="a7045-214">Nondeterministic output for nonassociative or noncommutative operations</span></span>|<span data-ttu-id="a7045-215">不具決定性 nonassociative 或 noncommutative 作業輸出</span><span class="sxs-lookup"><span data-stu-id="a7045-215">Nondeterministic output for nonassociative or noncommutative operations</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|<span data-ttu-id="a7045-216">會採用第一個`n`項目</span><span class="sxs-lookup"><span data-stu-id="a7045-216">Takes first `n` elements</span></span>|<span data-ttu-id="a7045-217">會採用任何`n`項目</span><span class="sxs-lookup"><span data-stu-id="a7045-217">Takes any `n` elements</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|<span data-ttu-id="a7045-218">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-218">Ordered results</span></span>|<span data-ttu-id="a7045-219">不具決定性。</span><span class="sxs-lookup"><span data-stu-id="a7045-219">Nondeterministic.</span></span> <span data-ttu-id="a7045-220">TakeWhile 對目前的任意順序</span><span class="sxs-lookup"><span data-stu-id="a7045-220">Performs TakeWhile on the current arbitrary order</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|<span data-ttu-id="a7045-221">增補`OrderBy`</span><span class="sxs-lookup"><span data-stu-id="a7045-221">Supplements `OrderBy`</span></span>|<span data-ttu-id="a7045-222">增補`OrderBy`</span><span class="sxs-lookup"><span data-stu-id="a7045-222">Supplements `OrderBy`</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|<span data-ttu-id="a7045-223">增補`OrderBy`</span><span class="sxs-lookup"><span data-stu-id="a7045-223">Supplements `OrderBy`</span></span>|<span data-ttu-id="a7045-224">增補`OrderBy`</span><span class="sxs-lookup"><span data-stu-id="a7045-224">Supplements `OrderBy`</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ToArray%2A>|<span data-ttu-id="a7045-225">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-225">Ordered results</span></span>|<span data-ttu-id="a7045-226">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-226">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|<span data-ttu-id="a7045-227">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-227">Not applicable</span></span>|<span data-ttu-id="a7045-228">不適用</span><span class="sxs-lookup"><span data-stu-id="a7045-228">Not applicable</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ToList%2A>|<span data-ttu-id="a7045-229">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-229">Ordered results</span></span>|<span data-ttu-id="a7045-230">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-230">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|<span data-ttu-id="a7045-231">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-231">Ordered results</span></span>|<span data-ttu-id="a7045-232">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-232">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Union%2A>|<span data-ttu-id="a7045-233">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-233">Ordered results</span></span>|<span data-ttu-id="a7045-234">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-234">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|<span data-ttu-id="a7045-235">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-235">Ordered results</span></span>|<span data-ttu-id="a7045-236">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-236">Unordered results</span></span>|  
+|<span data-ttu-id="a7045-237"><xref:System.Linq.ParallelEnumerable.Where%2A>（索引）</span><span class="sxs-lookup"><span data-stu-id="a7045-237"><xref:System.Linq.ParallelEnumerable.Where%2A> (indexed)</span></span>|<span data-ttu-id="a7045-238">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-238">Ordered results</span></span>|<span data-ttu-id="a7045-239">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-239">Unordered results</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Zip%2A>|<span data-ttu-id="a7045-240">排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-240">Ordered results</span></span>|<span data-ttu-id="a7045-241">未排序的結果</span><span class="sxs-lookup"><span data-stu-id="a7045-241">Unordered results</span></span>|  
   
- 未排序結果不是主動隨機排列，而是未套用任何特殊排序邏輯。  在某些情況中，未排序的查詢可能保有來源序列順序。  對於使用索引 Select 運算子的查詢，PLINQ 保證輸出項目會依遞增索引順序顯示，但不保證哪個索引會指派給項目。  
+ <span data-ttu-id="a7045-242">未排序的結果不主動打散;只要沒有任何特殊的順序邏輯套用至它們。</span><span class="sxs-lookup"><span data-stu-id="a7045-242">Unordered results are not actively shuffled; they simply do not have any special ordering logic applied to them.</span></span> <span data-ttu-id="a7045-243">在某些情況下，未排序的查詢可能會保留來源序列的排序。</span><span class="sxs-lookup"><span data-stu-id="a7045-243">In some cases, an unordered query may retain the ordering of the source sequence.</span></span> <span data-ttu-id="a7045-244">使用索引的 Select 運算子的查詢，PLINQ 可保證輸出項目的順序遞增索引，但不保證哪些索引會指派給哪些項目會將恰。</span><span class="sxs-lookup"><span data-stu-id="a7045-244">For queries that use the indexed Select operator, PLINQ guarantees that the output elements will come out in the order of increasing indices, but makes no guarantees about which indices will be assigned to which elements.</span></span>  
   
-## 請參閱  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a><span data-ttu-id="a7045-245">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a7045-245">See Also</span></span>  
+ [<span data-ttu-id="a7045-246">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="a7045-246">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ [<span data-ttu-id="a7045-247">平行程式設計</span><span class="sxs-lookup"><span data-stu-id="a7045-247">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

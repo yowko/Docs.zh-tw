@@ -1,119 +1,122 @@
 ---
-title: "如何：對 Web 使用者顯示當地語系化的日期和時間資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "顯示日期和時間資料"
-  - "格式化 [.NET Framework], 日期"
-  - "格式化 [.NET Framework], 當地語系化資料"
-  - "當地語系化 [.NET Framework], 日期和時間顯示"
-  - "當地語系化日期顯示 [.NET Framework]"
-  - "剖析字串 [.NET Framework], 日期和時間字串"
+title: "如何：對 Web 使用者顯示當地語系化的日期和時間資訊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- formatting [.NET Framework], dates
+- parsing strings [.NET Framework], date and time strings
+- localization [.NET Framework], date and time displays
+- formatting [.NET Framework], localized data
+- displaying date and time data
+- localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 21493e0e0c9e42cf5efc42d86c8f126fbae9b392
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：對 Web 使用者顯示當地語系化的日期和時間資訊
-由於網頁可在任何地方顯示，因此與使用者互動時，剖析和格式化日期與時間值的作業不應倚賴預設格式 \(大部分情況下為 Web 伺服器上本機文化特性的格式\)。  處理使用者輸入之日期和時間字串的 Web Form 應改用使用者偏好的文化特性剖析字串。  同樣地，對使用者顯示的日期和時間資料應使用符合使用者文化特性的格式。  本主題將說明如何執行這項作業。  
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a><span data-ttu-id="42954-102">如何：對 Web 使用者顯示當地語系化的日期和時間資訊</span><span class="sxs-lookup"><span data-stu-id="42954-102">How to: Display Localized Date and Time Information to Web Users</span></span>
+<span data-ttu-id="42954-103">網頁可以顯示世界中的任何位置，因為剖析和格式化日期和時間值的作業不應依賴預設格式 （這通常是網頁伺服器的本機文化特性格式） 與使用者互動時。</span><span class="sxs-lookup"><span data-stu-id="42954-103">Because a Web page can be displayed anywhere in the world, operations that parse and format date and time values should not rely on a default format (which most often is the format of the Web server's local culture) when interacting with the user.</span></span> <span data-ttu-id="42954-104">相反地，Web form 處理日期和時間字串輸入，使用者應該剖析使用使用者的慣用文化特性的字串。</span><span class="sxs-lookup"><span data-stu-id="42954-104">Instead, Web forms that handle date and time strings input by the user should parse the strings using the user's preferred culture.</span></span> <span data-ttu-id="42954-105">同樣地，日期和時間資料，應該會顯示給使用者，以符合使用者的文化特性的格式。</span><span class="sxs-lookup"><span data-stu-id="42954-105">Similarly, date and time data should be displayed to the user in a format that conforms to the user's culture.</span></span> <span data-ttu-id="42954-106">本主題顯示如何執行此動作。</span><span class="sxs-lookup"><span data-stu-id="42954-106">This topic shows how to do this.</span></span>  
   
-### 剖析使用者輸入的日期和時間字串  
+### <a name="to-parse-date-and-time-strings-input-by-the-user"></a><span data-ttu-id="42954-107">剖析日期和時間字串的使用者輸入</span><span class="sxs-lookup"><span data-stu-id="42954-107">To parse date and time strings input by the user</span></span>  
   
-1.  判斷 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 屬性傳回的字串陣列是否已填入。  如果尚未填入，則繼續進行步驟 6。  
+1.  <span data-ttu-id="42954-108">決定所傳回的字串陣列是否<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>屬性填入。</span><span class="sxs-lookup"><span data-stu-id="42954-108">Determine whether the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated.</span></span> <span data-ttu-id="42954-109">如果不是，繼續進行步驟 6。</span><span class="sxs-lookup"><span data-stu-id="42954-109">If it is not, continue to step 6.</span></span>  
   
-2.  如果 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，就會擷取它的第一個項目。  第一個項目指出使用者的預設或慣用的語言和區域。  
+2.  <span data-ttu-id="42954-110">如果傳回的字串陣列<xref:System.Web.HttpRequest.UserLanguages%2A>屬性填入，擷取其第一個元素。</span><span class="sxs-lookup"><span data-stu-id="42954-110">If the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is populated, retrieve its first element.</span></span> <span data-ttu-id="42954-111">第一個項目表示使用者的預設或慣用的語言和地區。</span><span class="sxs-lookup"><span data-stu-id="42954-111">The first element indicates the user's default or preferred language and region.</span></span>  
   
-3.  呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 建構函式以具現化 <xref:System.Globalization.CultureInfo> 物件，此物件代表使用者慣用的文化特性。  
+3.  <span data-ttu-id="42954-112">具現化<xref:System.Globalization.CultureInfo>物件，代表使用者的慣用文化特性，藉由呼叫<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>建構函式。</span><span class="sxs-lookup"><span data-stu-id="42954-112">Instantiate a <xref:System.Globalization.CultureInfo> object that represents the user's preferred culture by calling the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor.</span></span>  
   
-4.  呼叫 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 型別的 `TryParse` 或 `Parse` 方法嘗試轉換。  使用 `TryParse` 或 `Parse` 方法的多載與 `provider` 參數，並將下列任一項傳遞給該多載：  
+4.  <span data-ttu-id="42954-113">呼叫`TryParse`或`Parse`方法<xref:System.DateTime>或<xref:System.DateTimeOffset>再試一次轉換的類型。</span><span class="sxs-lookup"><span data-stu-id="42954-113">Call either the `TryParse` or the `Parse` method of the <xref:System.DateTime> or <xref:System.DateTimeOffset> type to try the conversion.</span></span> <span data-ttu-id="42954-114">使用的多載`TryParse`或`Parse`方法`provider`參數，並將它傳遞下列任一項：</span><span class="sxs-lookup"><span data-stu-id="42954-114">Use an overload of the `TryParse` or the `Parse` method with a `provider` parameter, and pass it either of the following:</span></span>  
   
-    -   在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
+    -   <span data-ttu-id="42954-115"><xref:System.Globalization.CultureInfo>步驟 3 中建立的物件。</span><span class="sxs-lookup"><span data-stu-id="42954-115">The <xref:System.Globalization.CultureInfo> object created in step 3.</span></span>  
   
-    -   在步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
+    -   <span data-ttu-id="42954-116"><xref:System.Globalization.DateTimeFormatInfo>所傳回的物件<xref:System.Globalization.CultureInfo.DateTimeFormat%2A>屬性<xref:System.Globalization.CultureInfo>步驟 3 中建立的物件。</span><span class="sxs-lookup"><span data-stu-id="42954-116">The <xref:System.Globalization.DateTimeFormatInfo> object that is returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> property of the <xref:System.Globalization.CultureInfo> object created in step 3.</span></span>  
   
-5.  如果轉換失敗，則針對 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性傳回的字串陣列中其餘每一個項目重複步驟 2 到 4。  
+5.  <span data-ttu-id="42954-117">如果轉換失敗，重複步驟 2 到 4 的字串陣列中每個剩餘的項目所傳回<xref:System.Web.HttpRequest.UserLanguages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="42954-117">If the conversion fails, repeat steps 2 through 4 for each remaining element in the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property.</span></span>  
   
-6.  如果轉換還是失敗，或者，如果 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列為空白，請使用由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 屬性所傳回的 Invariant 文化特性 \(不因文化特定而異\) 來剖析字串。  
+6.  <span data-ttu-id="42954-118">如果轉換仍失敗，或傳回的字串陣列<xref:System.Web.HttpRequest.UserLanguages%2A>屬性是空的傳回使用文化特性而異，剖析字串<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="42954-118">If the conversion still fails or if the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is empty, parse the string by using the invariant culture, which is returned by the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span>  
   
-### 剖析使用者要求的本地日期和時間  
+### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a><span data-ttu-id="42954-119">要剖析的本地日期和時間的使用者要求</span><span class="sxs-lookup"><span data-stu-id="42954-119">To parse the local date and time of the user's request</span></span>  
   
-1.  在 Web Form 中加入 <xref:System.Web.UI.WebControls.HiddenField> 控制項。  
+1.  <span data-ttu-id="42954-120">新增<xref:System.Web.UI.WebControls.HiddenField>的 Web 表單控制項。</span><span class="sxs-lookup"><span data-stu-id="42954-120">Add a <xref:System.Web.UI.WebControls.HiddenField> control to a Web form.</span></span>  
   
-2.  建立 JavaScript 函式，該函式會將目前的日期和時間以及本機時區與 Coordinated Universal Time \(UTC\) 之間的位移寫入 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 屬性，藉此處理 `Submit` 按鈕的 `onClick` 事件。  使用分隔符號 \(例如分號\) 分隔字串的兩個元件。  
+2.  <span data-ttu-id="42954-121">建立 JavaScript 函式會處理`onClick`事件`Submit`按鈕與國際標準時間 (UTC) 以撰寫目前的日期和時間和本機時區位移<xref:System.Web.UI.WebControls.HiddenField.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="42954-121">Create a JavaScript function that handles the `onClick` event of a `Submit` button by writing the current date and time and the local time zone's offset from Coordinated Universal Time (UTC) to the <xref:System.Web.UI.WebControls.HiddenField.Value%2A> property.</span></span> <span data-ttu-id="42954-122">使用 （例如分號） 分隔符號來分隔字串的兩個元件。</span><span class="sxs-lookup"><span data-stu-id="42954-122">Use a delimiter (such as a semicolon) to separate the two components of the string.</span></span>  
   
-3.  將指令碼的文字傳遞至 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=fullName> 方法，藉此使用 Web Form 的 <xref:System.Web.UI.Control.PreRender> 事件將函式插入 HTML 輸出資料流中。  
+3.  <span data-ttu-id="42954-123">使用 Web form<xref:System.Web.UI.Control.PreRender>事件，將函式插入至 HTML 輸出資料流傳遞到指令碼的文字<xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="42954-123">Use the Web form's <xref:System.Web.UI.Control.PreRender> event to inject the function into the HTML output stream by passing the text of the script to the <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> method.</span></span>  
   
-4.  藉由提供 JavaScript 函式的名稱給 `Submit` 按鈕的 `OnClientClick` 屬性，連接事件處理常式與 `Submit` 按鈕的 `onClick` 事件。  
+4.  <span data-ttu-id="42954-124">連接的事件處理常式`Submit`按鈕的`onClick`事件提供的 JavaScript 函式名稱`OnClientClick`屬性`Submit` 按鈕。</span><span class="sxs-lookup"><span data-stu-id="42954-124">Connect the event handler to the `Submit` button's `onClick` event by providing the name of the JavaScript function to the `OnClientClick` attribute of the `Submit` button.</span></span>  
   
-5.  為 `Submit` 按鈕的 <xref:System.Web.UI.WebControls.Button.Click> 事件建立處理常式。  
+5.  <span data-ttu-id="42954-125">建立的處理常式`Submit`按鈕的<xref:System.Web.UI.WebControls.Button.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="42954-125">Create a handler for the `Submit` button's <xref:System.Web.UI.WebControls.Button.Click> event.</span></span>  
   
-6.  判斷 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 屬性傳回的字串陣列是否已填入事件處理常式中。  如果尚未填入，則繼續進行步驟 14。  
+6.  <span data-ttu-id="42954-126">中的事件處理常式，判斷字串陣列是否已由<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>屬性填入。</span><span class="sxs-lookup"><span data-stu-id="42954-126">In the event handler, determine whether the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated.</span></span> <span data-ttu-id="42954-127">如果沒有，請繼續步驟 14。</span><span class="sxs-lookup"><span data-stu-id="42954-127">If it is not, continue to step 14.</span></span>  
   
-7.  如果 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，就會擷取它的第一個項目。  第一個項目指出使用者的預設或慣用的語言和區域。  
+7.  <span data-ttu-id="42954-128">如果傳回的字串陣列<xref:System.Web.HttpRequest.UserLanguages%2A>屬性填入，擷取其第一個元素。</span><span class="sxs-lookup"><span data-stu-id="42954-128">If the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is populated, retrieve its first element.</span></span> <span data-ttu-id="42954-129">第一個項目表示使用者的預設或慣用的語言和地區。</span><span class="sxs-lookup"><span data-stu-id="42954-129">The first element indicates the user's default or preferred language and region.</span></span>  
   
-8.  呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 建構函式以具現化 <xref:System.Globalization.CultureInfo> 物件，此物件代表使用者慣用的文化特性。  
+8.  <span data-ttu-id="42954-130">具現化<xref:System.Globalization.CultureInfo>物件，代表使用者的慣用文化特性，藉由呼叫<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>建構函式。</span><span class="sxs-lookup"><span data-stu-id="42954-130">Instantiate a <xref:System.Globalization.CultureInfo> object that represents the user's preferred culture by calling the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor.</span></span>  
   
-9. 將指派給 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 屬性的字串傳遞至 <xref:System.String.Split%2A> 方法，藉此將使用者本地日期和時間的字串表示，以及使用者本機時區位移的字串表示儲存到不同的陣列項目中。  
+9. <span data-ttu-id="42954-131">傳遞字串指派給<xref:System.Web.UI.WebControls.HiddenField.Value%2A>屬性<xref:System.String.Split%2A>方法，以將使用者的本機日期和時間的字串表示和使用者的當地時區位移的字串表示法儲存在個別的陣列項目。</span><span class="sxs-lookup"><span data-stu-id="42954-131">Pass the string assigned to the <xref:System.Web.UI.WebControls.HiddenField.Value%2A> property to the <xref:System.String.Split%2A> method to store the string representation of the user's local date and time and the string representation of the user's local time zone offset in separate array elements.</span></span>  
   
-10. 呼叫 <xref:System.DateTime.Parse%2A?displayProperty=fullName> 或 <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=fullName> 方法，將使用者要求的日期和時間轉換成 <xref:System.DateTime> 值。  使用方法多載與 `provider` 參數，並將下列任一項傳遞給該多載：  
+10. <span data-ttu-id="42954-132">呼叫<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>或<xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType>方法，將轉換的日期和時間的使用者要求以<xref:System.DateTime>值。</span><span class="sxs-lookup"><span data-stu-id="42954-132">Call either the <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> or <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> method to convert the date and time of the user's request to a <xref:System.DateTime> value.</span></span> <span data-ttu-id="42954-133">使用與方法多載`provider`參數，並將它傳遞下列任一項：</span><span class="sxs-lookup"><span data-stu-id="42954-133">Use an overload of the method with a `provider` parameter, and pass it either of the following:</span></span>  
   
-    -   在步驟 8 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
+    -   <span data-ttu-id="42954-134"><xref:System.Globalization.CultureInfo>步驟 8 中建立的物件。</span><span class="sxs-lookup"><span data-stu-id="42954-134">The <xref:System.Globalization.CultureInfo> object created in step 8.</span></span>  
   
-    -   在步驟 8 中所建立 <xref:System.Globalization.CultureInfo> 物件的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
+    -   <span data-ttu-id="42954-135"><xref:System.Globalization.DateTimeFormatInfo>所傳回的物件<xref:System.Globalization.CultureInfo.DateTimeFormat%2A>屬性<xref:System.Globalization.CultureInfo>步驟 8 中建立的物件。</span><span class="sxs-lookup"><span data-stu-id="42954-135">The <xref:System.Globalization.DateTimeFormatInfo> object that is returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> property of the <xref:System.Globalization.CultureInfo> object created in step 8.</span></span>  
   
-11. 如果步驟 10 中的剖析作業失敗，請移至步驟 13。  否則，請呼叫 <xref:System.UInt32.Parse%28System.String%29?displayProperty=fullName> 方法，將使用者時區位移的字串表示轉換成整數。  
+11. <span data-ttu-id="42954-136">如果在步驟 10 中的，剖析作業失敗，請移至步驟 13。</span><span class="sxs-lookup"><span data-stu-id="42954-136">If the parse operation in step 10 fails, go to step 13.</span></span> <span data-ttu-id="42954-137">否則，呼叫<xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType>方法，將使用者的時區時差的字串表示轉換成整數。</span><span class="sxs-lookup"><span data-stu-id="42954-137">Otherwise, call the <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> method to convert the string representation of the user's time zone offset to an integer.</span></span>  
   
-12. 具現化 <xref:System.DateTimeOffset>，它會藉由呼叫 <xref:System.DateTimeOffset.%23ctor%28System.DateTime%2CSystem.TimeSpan%29?displayProperty=fullName> 建構函式的方式呈現使用者的本機時間。  
+12. <span data-ttu-id="42954-138">具現化<xref:System.DateTimeOffset>表示藉由呼叫使用者的本機時間<xref:System.DateTimeOffset.%23ctor%28System.DateTime%2CSystem.TimeSpan%29?displayProperty=nameWithType>建構函式。</span><span class="sxs-lookup"><span data-stu-id="42954-138">Instantiate a <xref:System.DateTimeOffset> that represents the user's local time by calling the <xref:System.DateTimeOffset.%23ctor%28System.DateTime%2CSystem.TimeSpan%29?displayProperty=nameWithType> constructor.</span></span>  
   
-13. 如果步驟 10 中的轉換失敗，則針對 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性傳回的字串陣列中其餘每一個項目重複步驟 7 到 12。  
+13. <span data-ttu-id="42954-139">如果在步驟 10 中的轉換失敗，重複步驟 7 到 12 的字串陣列中每個剩餘的項目所傳回<xref:System.Web.HttpRequest.UserLanguages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="42954-139">If the conversion in step 10 fails, repeat steps 7 through 12 for each remaining element in the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property.</span></span>  
   
-14. 如果轉換還是失敗，或者，如果 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列為空白，請使用由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 屬性所傳回的 Invariant 文化特性 \(不因文化特定而異\) 來剖析字串。  然後重複步驟 7 到 12。  
+14. <span data-ttu-id="42954-140">如果轉換仍失敗，或傳回的字串陣列<xref:System.Web.HttpRequest.UserLanguages%2A>屬性是空的傳回使用文化特性而異，剖析字串<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="42954-140">If the conversion still fails or if the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is empty, parse the string by using the invariant culture, which is returned by the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="42954-141">然後重複步驟 7 到 12。</span><span class="sxs-lookup"><span data-stu-id="42954-141">Then repeat steps 7 through 12.</span></span>  
   
- 執行結果為 <xref:System.DateTimeOffset> 物件，表示網頁使用者的本地時間。  然後您可以呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A> 方法以判斷對等的 UTC。  您也可以呼叫 <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=fullName> 方法並且傳遞 <xref:System.TimeZoneInfo.Local%2A?displayProperty=fullName> 的值做為轉換時間的目標時區，藉此判斷 Web 伺服器上的對等日期和時間。  
+ <span data-ttu-id="42954-142">結果是<xref:System.DateTimeOffset>代表當地時間之使用者的 Web 網頁的物件。</span><span class="sxs-lookup"><span data-stu-id="42954-142">The result is a <xref:System.DateTimeOffset> object that represents the local time of the user of your Web page.</span></span> <span data-ttu-id="42954-143">您可以藉由呼叫接著判斷相等的 UTC<xref:System.DateTimeOffset.ToUniversalTime%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="42954-143">You can then determine the equivalent UTC by calling the <xref:System.DateTimeOffset.ToUniversalTime%2A> method.</span></span> <span data-ttu-id="42954-144">您也可以判斷相等的日期和時間在網頁伺服器上藉由呼叫<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType>方法，並將值傳遞<xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>做為要轉換的時間的時區。</span><span class="sxs-lookup"><span data-stu-id="42954-144">You can also determine the equivalent date and time on your Web server by calling the <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> method and passing a value of <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> as the time zone to convert the time to.</span></span>  
   
-## 範例  
- 以下範例同時包含 HTML 原始檔和 ASP.NET Web Form 的程式碼，會要求使用者輸入日期和時間值。  用戶端指令碼也會將使用者要求的本地日期和時間資訊，以及使用者時區與 UTC 之間的位移寫入隱藏欄位中。  伺服器會接著剖析這項資訊，並傳回顯示使用者輸入的網頁。  此外還會利用使用者的本地時間、伺服器上的時間及 UTC，顯示使用者要求的日期和時間。  
+## <a name="example"></a><span data-ttu-id="42954-145">範例</span><span class="sxs-lookup"><span data-stu-id="42954-145">Example</span></span>  
+ <span data-ttu-id="42954-146">下列範例包含的 HTML 原始檔並要求使用者輸入的日期和時間值的 ASP.NET Web 表單的程式碼。</span><span class="sxs-lookup"><span data-stu-id="42954-146">The following example contains both the HTML source and the code for an ASP.NET Web form that asks the user to input a date and time value.</span></span> <span data-ttu-id="42954-147">用戶端指令碼也將資訊寫入本機日期和時間的使用者要求和使用者的時區位移與 utc 之間隱藏的欄位。</span><span class="sxs-lookup"><span data-stu-id="42954-147">A client-side script also writes information on the local date and time of the user's request and the offset of the user's time zone from UTC to a hidden field.</span></span> <span data-ttu-id="42954-148">這項資訊會由伺服器傳回網頁上顯示使用者的輸入剖析。</span><span class="sxs-lookup"><span data-stu-id="42954-148">This information is then parsed by the server, which returns a Web page that displays the user's input.</span></span> <span data-ttu-id="42954-149">它也會顯示的日期和時間的使用者要求使用伺服器與 UTC 的使用者的本機時間的時間。</span><span class="sxs-lookup"><span data-stu-id="42954-149">It also displays the date and time of the user's request using the user's local time, the time on the server, and UTC.</span></span>  
   
- <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
- <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
+ [!code-aspx-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
+ [!code-aspx-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]
   
- 用戶端指令碼會呼叫 JavaScript `toLocaleString` 方法。  如此會產生一個字串，該字串符合使用者地區設定的格式設定慣例，這可增加在伺服器上剖析該字串的成功率。  
+ <span data-ttu-id="42954-150">用戶端指令碼會呼叫 JavaScript`toLocaleString`方法。</span><span class="sxs-lookup"><span data-stu-id="42954-150">The client-side script calls the JavaScript `toLocaleString` method.</span></span> <span data-ttu-id="42954-151">這會產生使用者的地區設定，這可能會更容易在伺服器上成功剖析的格式設定慣例的字串。</span><span class="sxs-lookup"><span data-stu-id="42954-151">This produces a string that follows the formatting conventions of the user's locale, which is more likely to be successfully parsed on the server.</span></span>  
   
- <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 屬性會從 HTTP 要求所包含 `Accept-Language` 標頭中的文化特性名稱填入。  不過，並非所有瀏覽器的要求都包含 `Accept-Language` 標頭，而且使用者可以完全隱藏標頭。  因此，剖析使用者輸入時務必有後援文化特性。  通常後援文化特性是 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 傳回的不因國別而異的文化特性。  使用者也可以將文字方塊中輸入的文化特性名稱提供給 Internet Explorer，如此可能讓文化特性名稱無效。  因此具現化 <xref:System.Globalization.CultureInfo> 物件時，務必使用例外狀況處理。  
+ <span data-ttu-id="42954-152"><xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>中所包含的文化特性名稱填入屬性`Accept-Language`包含在 HTTP 要求標頭。</span><span class="sxs-lookup"><span data-stu-id="42954-152">The <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated from the culture names that are contained in `Accept-Language` headers included in an HTTP request.</span></span> <span data-ttu-id="42954-153">不過，並非所有瀏覽器包括`Accept-Language`標頭中的要求，以及使用者也可以抑制標頭完全。</span><span class="sxs-lookup"><span data-stu-id="42954-153">However, not all browsers include `Accept-Language` headers in their requests, and users can also suppress the headers completely.</span></span> <span data-ttu-id="42954-154">這使得剖析使用者輸入時，必須有後援文化特性。</span><span class="sxs-lookup"><span data-stu-id="42954-154">This makes it important to have a fallback culture when parsing user input.</span></span> <span data-ttu-id="42954-155">後援文化特性通常是所傳回的文化特性而異<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="42954-155">Typically the fallback culture is the invariant culture returned by <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="42954-156">使用者也可以提供 Internet Explorer 具有文化特性名稱其輸入在文字方塊中，會建立文化特性名稱可能不是有效的可能性。</span><span class="sxs-lookup"><span data-stu-id="42954-156">Users can also provide Internet Explorer with culture names that they input in a text box, which creates the possibility that the culture names may not be valid.</span></span> <span data-ttu-id="42954-157">這使得重要具現化時使用例外狀況處理<xref:System.Globalization.CultureInfo>物件。</span><span class="sxs-lookup"><span data-stu-id="42954-157">This makes it important to use exception handling when instantiating a <xref:System.Globalization.CultureInfo> object.</span></span>  
   
- 從 Internet Explorer 提交的 HTTP 要求擷取時，<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 陣列會依使用者偏好設定填入。  陣列中的第一個項目包含使用者主要文化特性\/區域的名稱。  如果陣列包含任何額外的項目，Internet Explorer 會為這些項目指派任意限定規範，並且使用分號與文化特性名稱分隔。  例如，fr\-FR 文化特性的項目可能採用這個格式 `fr-FR;q=0.7`。  
+ <span data-ttu-id="42954-158">從 Internet Explorer 所送出的 HTTP 要求擷取時<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>陣列填入使用者的喜好順序。</span><span class="sxs-lookup"><span data-stu-id="42954-158">When retrieved from an HTTP request submitted by Internet Explorer, the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> array is populated in order of user preference.</span></span> <span data-ttu-id="42954-159">陣列中的第一個項目包含使用者的主要文化特性/地區的名稱。</span><span class="sxs-lookup"><span data-stu-id="42954-159">The first element in the array contains the name of the user's primary culture/region.</span></span> <span data-ttu-id="42954-160">如果陣列包含任何其他項目，Internet Explorer 任意指派這些品質規範，以分號分隔的文化特性名稱。</span><span class="sxs-lookup"><span data-stu-id="42954-160">If the array contains any additional items, Internet Explorer arbitrarily assigns them a quality specifier, which is delimited from the culture name by a semicolon.</span></span> <span data-ttu-id="42954-161">例如，為 FR-FR 文化特性的項目可能會`fr-FR;q=0.7`。</span><span class="sxs-lookup"><span data-stu-id="42954-161">For example, an entry for the fr-FR culture might take the form `fr-FR;q=0.7`.</span></span>  
   
- 範例會呼叫 <xref:System.Globalization.CultureInfo.%23ctor%2A> 建構函式，且其 `useUserOverride` 參數會設為 `false`，以建立新的 <xref:System.Globalization.CultureInfo> 物件。  如此可確定，如果文化特性名稱是伺服器上預設的文化特性名稱，則類別建構函式建立的 <xref:System.Globalization.CultureInfo> 物件會包含文化特性的預設設定，並且不會反映使用伺服器的 \[**地區及語言選項**\] 應用程式覆寫的任何設定。  伺服器上任何覆寫設定的值都不會出現在使用者的系統上，或是反映在使用者輸入中。  
+ <span data-ttu-id="42954-162">範例會呼叫<xref:System.Globalization.CultureInfo.%23ctor%2A>建構函式與它`useUserOverride`參數設定為`false`來建立新的<xref:System.Globalization.CultureInfo>物件。</span><span class="sxs-lookup"><span data-stu-id="42954-162">The example calls the <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor with its `useUserOverride` parameter set to `false` to create a new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="42954-163">如此可確保，如果文化特性名稱是在伺服器上的預設文化特性名稱的新<xref:System.Globalization.CultureInfo>類別建構函式所建立的物件包含文化特性的預設設定，並不會反映使用伺服器的覆寫任何設定**地區及語言選項**應用程式。</span><span class="sxs-lookup"><span data-stu-id="42954-163">This ensures that, if the culture name is the default culture name on the server, the new <xref:System.Globalization.CultureInfo> object created by the class constructor contains a culture's default settings and does not reflect any settings overridden by using the server's **Regional and Language Options** application.</span></span> <span data-ttu-id="42954-164">在伺服器上的任何覆寫設定的值是不存在於使用者的系統上，或會反映在使用者的輸入項目。</span><span class="sxs-lookup"><span data-stu-id="42954-164">The values from any overridden settings on the server are unlikely to exist on the user's system or to be reflected in the user's input.</span></span>  
   
- 由於這個範例會剖析兩個日期和時間的字串表示 \(一個由使用者輸入，另一個儲存到隱藏欄位\)，因此會預先定義可能需要的 <xref:System.Globalization.CultureInfo> 物件。  它會建立 <xref:System.Globalization.CultureInfo> 物件陣列，該陣列會比 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 屬性傳回的項目數大。  然後具現化每個語言\/區域字串的 <xref:System.Globalization.CultureInfo> 物件，同時還會具現化代表 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的 <xref:System.Globalization.CultureInfo> 物件。  
+ <span data-ttu-id="42954-165">這個範例會剖析的日期和時間 （一個由儲存的隱藏欄位的其他使用者輸入） 的兩個字串表示，因為它會定義可能<xref:System.Globalization.CultureInfo>事先可能需要的物件。</span><span class="sxs-lookup"><span data-stu-id="42954-165">Because this example parses two string representations of a date and time (one input by the user, the other stored to the hidden field), it defines the possible <xref:System.Globalization.CultureInfo> objects that may be required in advance.</span></span> <span data-ttu-id="42954-166">它會建立的陣列<xref:System.Globalization.CultureInfo>物件所傳回的元素數目大於<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="42954-166">It creates an array of <xref:System.Globalization.CultureInfo> objects that is one greater than the number of elements returned by the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="42954-167">它接著會執行個體化<xref:System.Globalization.CultureInfo>物件每個語言/地區字串，並也會具現化<xref:System.Globalization.CultureInfo>物件，代表<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="42954-167">It then instantiates a <xref:System.Globalization.CultureInfo> object for each language/region string, and also instantiates a <xref:System.Globalization.CultureInfo> object that represents <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span></span>  
   
- 您的程式碼可以呼叫 <xref:System.DateTime.Parse%2A> 或 <xref:System.DateTime.TryParse%2A> 方法，將使用者的日期和時間字串表示轉換成 <xref:System.DateTime> 值。  您可能需要針對單一剖析作業重複呼叫剖析方法。  因此 <xref:System.DateTime.TryParse%2A> 方法可能較佳，因為它會在剖析作業失敗時傳回 `false`。  相反地，對於 Web 應用程式而言，處理 <xref:System.DateTime.Parse%2A> 方法可能擲回的重複例外狀況可能是相當昂貴的方法。  
+ <span data-ttu-id="42954-168">您的程式碼可以呼叫任何一個<xref:System.DateTime.Parse%2A>或<xref:System.DateTime.TryParse%2A>方法來轉換使用者的字串表示的日期和時間<xref:System.DateTime>值。</span><span class="sxs-lookup"><span data-stu-id="42954-168">Your code can call either the <xref:System.DateTime.Parse%2A> or the <xref:System.DateTime.TryParse%2A> method to convert the user's string representation of a date and time to a <xref:System.DateTime> value.</span></span> <span data-ttu-id="42954-169">您可能需要單一的剖析作業重複的呼叫 parse 方法。</span><span class="sxs-lookup"><span data-stu-id="42954-169">Repeated calls to a parse method may be required for a single parsing operation.</span></span> <span data-ttu-id="42954-170">如此一來，<xref:System.DateTime.TryParse%2A>方法是更好，因為它會傳回`false`如果剖析作業會失敗。</span><span class="sxs-lookup"><span data-stu-id="42954-170">As a result, the <xref:System.DateTime.TryParse%2A> method is better because it returns `false` if a parse operation fails.</span></span> <span data-ttu-id="42954-171">相反地，處理重複可能擲回的例外狀況<xref:System.DateTime.Parse%2A>方法可以是非常花錢 Web 應用程式中的。</span><span class="sxs-lookup"><span data-stu-id="42954-171">In contrast, handling the repeated exceptions that may be thrown by the <xref:System.DateTime.Parse%2A> method can be a very expensive proposition in a Web application.</span></span>  
   
-## 編譯程式碼  
- 若要編譯程式碼，請建立沒有程式碼後置 \(Code\-behind\) 的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁。  然後將範例複製到網頁中，取代所有現有的程式碼。  [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁應包含下列控制項：  
+## <a name="compiling-the-code"></a><span data-ttu-id="42954-172">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="42954-172">Compiling the Code</span></span>  
+ <span data-ttu-id="42954-173">若要編譯程式碼，建立[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]沒有程式碼後置的網頁。</span><span class="sxs-lookup"><span data-stu-id="42954-173">To compile the code, create an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web page without a code-behind.</span></span> <span data-ttu-id="42954-174">然後將範例複製到網頁上，因此，它會取代所有現有的程式碼。</span><span class="sxs-lookup"><span data-stu-id="42954-174">Then copy the example into the Web page so that it replaces all the existing code.</span></span> <span data-ttu-id="42954-175">[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 頁面應包含下列控制項：</span><span class="sxs-lookup"><span data-stu-id="42954-175">The [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web page should contain the following controls:</span></span>  
   
--   <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考這個控制項。  將 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設為 \[輸入數字：\]。  
+-   <span data-ttu-id="42954-176">A<xref:System.Web.UI.WebControls.Label>控制項，程式碼中未參考。</span><span class="sxs-lookup"><span data-stu-id="42954-176">A <xref:System.Web.UI.WebControls.Label> control, which is not referenced in code.</span></span> <span data-ttu-id="42954-177">設定其<xref:System.Web.UI.WebControls.TextBox.Text%2A>屬性 」 輸入的數字:"。</span><span class="sxs-lookup"><span data-stu-id="42954-177">Set its <xref:System.Web.UI.WebControls.TextBox.Text%2A> property to "Enter a Number:".</span></span>  
   
--   名為 `DateString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。  
+-   <span data-ttu-id="42954-178">名為 `DateString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。</span><span class="sxs-lookup"><span data-stu-id="42954-178">A <xref:System.Web.UI.WebControls.TextBox> control named `DateString`.</span></span>  
   
--   名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。  將 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 \[確定\]。  
+-   <span data-ttu-id="42954-179">名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。</span><span class="sxs-lookup"><span data-stu-id="42954-179">A <xref:System.Web.UI.WebControls.Button> control named `OKButton`.</span></span> <span data-ttu-id="42954-180">設定其<xref:System.Web.UI.WebControls.Button.Text%2A>屬性為 [確定]。</span><span class="sxs-lookup"><span data-stu-id="42954-180">Set its <xref:System.Web.UI.WebControls.Button.Text%2A> property to "OK".</span></span>  
   
--   名為 `DateInfo` 的 <xref:System.Web.UI.WebControls.HiddenField> 控制項。  
+-   <span data-ttu-id="42954-181">名為 `DateInfo` 的 <xref:System.Web.UI.WebControls.HiddenField> 控制項。</span><span class="sxs-lookup"><span data-stu-id="42954-181">A <xref:System.Web.UI.WebControls.HiddenField> control named `DateInfo`.</span></span>  
   
-## .NET Framework 安全性  
- 為避免使用者將指令碼插入 HTML 資料流中，絕不可將使用者輸入直接回應 \(Echo\) 至伺服器回應中。  而是使用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=fullName> 方法將使用者輸入編碼。  
+## <a name="net-framework-security"></a><span data-ttu-id="42954-182">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="42954-182">.NET Framework Security</span></span>  
+ <span data-ttu-id="42954-183">若要防止使用者將指令碼插入 HTML 資料流，使用者輸入應該永遠不會直接回應伺服器在回應中。</span><span class="sxs-lookup"><span data-stu-id="42954-183">To prevent a user from injecting script into the HTML stream, user input should never be directly echoed back in the server response.</span></span> <span data-ttu-id="42954-184">相反地，它應該進行編碼，使用<xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="42954-184">Instead, it should be encoded by using the <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> method.</span></span>  
   
-## 請參閱  
- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)   
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)   
- [剖析日期和時間字串](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a><span data-ttu-id="42954-185">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42954-185">See Also</span></span>  
+ [<span data-ttu-id="42954-186">執行格式化作業</span><span class="sxs-lookup"><span data-stu-id="42954-186">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [<span data-ttu-id="42954-187">Standard Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="42954-187">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [<span data-ttu-id="42954-188">Custom Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="42954-188">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [<span data-ttu-id="42954-189">剖析日期和時間字串</span><span class="sxs-lookup"><span data-stu-id="42954-189">Parsing Date and Time Strings</span></span>](../../../docs/standard/base-types/parsing-datetime.md)

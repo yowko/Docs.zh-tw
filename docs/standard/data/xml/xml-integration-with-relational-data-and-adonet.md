@@ -1,60 +1,58 @@
 ---
-title: "XML 與關聯式資料和 ADO.NET 互相整合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XML 與關聯式資料和 ADO.NET 互相整合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5d03a0ca7518b06c08d98967d7c5ae864f1c04ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# XML 與關聯式資料和 ADO.NET 互相整合
-**XmlDataDocument** 類別是 **XmlDocument** 的衍生類別，而且含有 XML 資料。  **XmlDataDocument** 的好處是提供關聯式與階層式資料之間的橋樑。  可被結合到 **DataSet**，而且兩種類別都可以隨內含資料而同步變更的即是 **XmlDocument**。  結合 **DataSet** 的 **XmlDocument** 允許 XML 和關聯式資料互相整合，因而您的資料並不一定要成為 XML 或以關聯式格式表示。  兩種您都可以選擇，而不必受限於單一資料表示法。  
+# <a name="xml-integration-with-relational-data-and-adonet"></a><span data-ttu-id="4d48a-102">XML 與關聯式資料和 ADO.NET 互相整合</span><span class="sxs-lookup"><span data-stu-id="4d48a-102">XML Integration with Relational Data and ADO.NET</span></span>
+<span data-ttu-id="4d48a-103">**XmlDataDocument**類別是在衍生的類別的**XmlDocument**，而且含有 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="4d48a-103">The **XmlDataDocument** class is a derived class of the **XmlDocument**, and contains XML data.</span></span> <span data-ttu-id="4d48a-104">優點**XmlDataDocument**是提供關聯式及階層式資料之間的橋樑。</span><span class="sxs-lookup"><span data-stu-id="4d48a-104">The advantage of the **XmlDataDocument** is that it provides a bridge between relational and hierarchical data.</span></span> <span data-ttu-id="4d48a-105">它是**XmlDocument** ，可以繫結至**資料集**這兩個類別能同步處理兩個類別中包含的資料所做的變更。</span><span class="sxs-lookup"><span data-stu-id="4d48a-105">It is an **XmlDocument** that can be bound to a **DataSet** and both classes can synchronize changes made to data contained in the two classes.</span></span> <span data-ttu-id="4d48a-106">**XmlDocument**繫結至**資料集**允許 XML 與關聯式資料、 整合和您沒有將成為 XML 或以關聯式格式表示的資料。</span><span class="sxs-lookup"><span data-stu-id="4d48a-106">An **XmlDocument** that is bound to a **DataSet** allows XML to integrate with relational data, and you do not have to have your data represented as either XML or in a relational format.</span></span> <span data-ttu-id="4d48a-107">兩種您都可以選擇，而不必受限於單一資料表示法。</span><span class="sxs-lookup"><span data-stu-id="4d48a-107">You can do both and not be constrained to a single representation of the data.</span></span>  
   
- 資料以兩種型式提供的好處在於：  
+ <span data-ttu-id="4d48a-108">資料以兩種型式提供的好處在於：</span><span class="sxs-lookup"><span data-stu-id="4d48a-108">The benefits of having data available in two views are:</span></span>  
   
--   XML 文件的結構化部分可以對應到資料集，因此可以有效的儲存、索引和搜尋。  
+-   <span data-ttu-id="4d48a-109">XML 文件的結構化部分可以對應到資料集，因此可以有效的儲存、索引和搜尋。</span><span class="sxs-lookup"><span data-stu-id="4d48a-109">The structured portion of an XML document can be mapped to a dataset, and be efficiently stored, indexed, and searched.</span></span>  
   
--   轉換、驗證和巡覽可透過以關聯方式儲存的 XML 資料上的游標模型有效達成。  有時如果將 XML 儲存成 **XmlDocument** 模型，可以更有效地運用關聯式結構。  
+-   <span data-ttu-id="4d48a-110">轉換、驗證和巡覽可透過以關聯方式儲存的 XML 資料上的游標模型有效達成。</span><span class="sxs-lookup"><span data-stu-id="4d48a-110">Transformations, validation, and navigation can be done efficiently through a cursor model over the XML data that is stored relationally.</span></span> <span data-ttu-id="4d48a-111">有些時候，可以進行更有效率地運用關聯式結構如果 XML 儲存在**XmlDocument**模型。</span><span class="sxs-lookup"><span data-stu-id="4d48a-111">At times, it can be done more efficiently against relational structures than if the XML is stored in an **XmlDocument** model.</span></span>  
   
--   **DataSet** 可以儲存 XML 的部分資料。  換句話說，您可以使用 **XPath** 或 **XslTransform**，將有興趣的元件和屬性儲存到 **DataSet**。  從此，可以對較小、篩選過的資料子集進行變更，然後再將變更傳送到 **XmlDataDocument** 中較大的資料。  
+-   <span data-ttu-id="4d48a-112">**資料集**可以儲存 XML 的部分。</span><span class="sxs-lookup"><span data-stu-id="4d48a-112">The **DataSet** can store a portion of the XML.</span></span> <span data-ttu-id="4d48a-113">也就是說，您可以使用**XPath**或**XslTransform**商店**資料集**項目與感興趣的屬性。</span><span class="sxs-lookup"><span data-stu-id="4d48a-113">That is, you can use **XPath** or **XslTransform** to store to a **DataSet** only those elements and attributes of interest.</span></span> <span data-ttu-id="4d48a-114">從該處，才能進行變更以較小、 篩選的資料子集，將變更傳送到在較大的資料與**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-114">From there, changes can be made to the smaller, filtered subset of data, with the changes propagating to the larger data in the **XmlDataDocument**.</span></span>  
   
- 您也可以對從 SQL Server 載入 **DataSet** 的資料執行轉換。  另一種選擇是結合 .NET Framework 類別樣式管理的 WinForm 和 WebForm 控制項，成為自 XML 輸入資料流填入的 **DataSet**。  
+ <span data-ttu-id="4d48a-115">您也可以在已載入的資料上執行轉換**資料集**從 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="4d48a-115">You can also run a transform over data that was loaded into the **DataSet** from SQL Server.</span></span> <span data-ttu-id="4d48a-116">另一個選項是將繫結 .NET Framework 類別樣式管理的 WinForm 和 WebForm 控制項**資料集**填入 XML 輸入資料流。</span><span class="sxs-lookup"><span data-stu-id="4d48a-116">Another option is to bind .NET Framework classes-style-managed WinForm and WebForm controls to a **DataSet** that was populated from an XML input stream.</span></span>  
   
- 除了支援 **XslTransform** 之外，**XmlDataDocument** 還公開關聯式資料給 **XPath** 查詢和驗證。  基本上，關聯式資料和關聯式設備都提供所有的 XML 服務，如控制項結合、Codegen 等等，可以在不危害 XML 真實性的結構化 XML 設計上使用。  
+ <span data-ttu-id="4d48a-117">除了支援**XslTransform**、 **XmlDataDocument**公開關聯式資料給**XPath**查詢和驗證。</span><span class="sxs-lookup"><span data-stu-id="4d48a-117">In addition to supporting **XslTransform**, an **XmlDataDocument** exposes relational data to **XPath** queries and validation.</span></span>  <span data-ttu-id="4d48a-118">基本上，關聯式資料和關聯式設備都提供所有的 XML 服務，如控制項結合、Codegen 等等，可以在不危害 XML 真實性的結構化 XML 設計上使用。</span><span class="sxs-lookup"><span data-stu-id="4d48a-118">Basically, all XML services are available over relational data, and relational facilities, such as control binding, codegen, and so on, are available over a structured projection of XML without compromising XML fidelity.</span></span>  
   
- 因為 **XmlDataDocument** 繼承自 **XmlDocument**，因此會提供 W3C DOM 的實作。  **XmlDataDocument** 與 **DataSet** 有關，而且在 Dataset 中儲存其資料的子集，但仍然不會限制或更改將它做為 **XmlDocument** 來使用。  為使用 **XmlDocument** 而撰寫的程式碼不會隨 **XmlDataDocument** 而變更。  **DataSet** 藉由定義資料表、資料行、關聯和限制，提供相同資料的關聯式檢視，而且是獨立、記憶體中的使用者資料存放區。  
+ <span data-ttu-id="4d48a-119">因為**XmlDataDocument**繼承自**XmlDocument**，它會提供 W3C DOM 的實作</span><span class="sxs-lookup"><span data-stu-id="4d48a-119">Because **XmlDataDocument** is inherited from an **XmlDocument**, it provides an implementation of the W3C DOM.</span></span> <span data-ttu-id="4d48a-120">事實上， **XmlDataDocument**相關聯，並將內，其資料的子集**資料集**不會限制或改變其作為**XmlDocument**以任何方式。</span><span class="sxs-lookup"><span data-stu-id="4d48a-120">The fact that the **XmlDataDocument** is associated with, and stores a subset of its data within, a **DataSet** does not restrict or alter its use as an **XmlDocument** in any way.</span></span> <span data-ttu-id="4d48a-121">程式碼撰寫來取用**XmlDocument**而**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-121">Code written to consume an **XmlDocument** works unaltered against an **XmlDataDocument**.</span></span> <span data-ttu-id="4d48a-122">**資料集**藉由定義資料表、 資料行、 關聯和條件約束提供相同資料的關聯式檢視，而且是獨立、 記憶體中的使用者資料存放區。</span><span class="sxs-lookup"><span data-stu-id="4d48a-122">The **DataSet** provides the relational view of the same data by defining tables, columns, relations, and constraints, and is a stand-alone, in-memory user data store.</span></span>  
   
- 下圖說明 XML 資料和 **DataSet** 與 **XmlDataDocument** 的不同關係。  
+ <span data-ttu-id="4d48a-123">下圖顯示不同的關聯的 XML 資料具有**資料集**和**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-123">The following illustration shows the different associations that XML data has with the **DataSet** and **XmlDataDocument**.</span></span>  
   
- ![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ <span data-ttu-id="4d48a-124">![XML 資料集](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")</span><span class="sxs-lookup"><span data-stu-id="4d48a-124">![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")</span></span>  
   
- 圖例中顯示 XML 資料可直接載入 **DataSet**，它允許以關聯方式直接管理 XML。  或者，XML 也可以載入 **XmlDataDocument** 的 DOM 衍生類別中，之後並會載入且和 **DataSet** 同步。  因為 **DataSet** 和 **XmlDataDocument** 都與單一的資料集同步，所以一個存放區所做的資料變更會反映到另一個存放區。  
+ <span data-ttu-id="4d48a-125">下圖顯示的 XML 資料可以直接載入**資料集**，允許以關聯方式直接管理 XML。</span><span class="sxs-lookup"><span data-stu-id="4d48a-125">The illustration shows that XML data can be loaded directly into a **DataSet**, which allows direct manipulation with XML in the relational manner.</span></span> <span data-ttu-id="4d48a-126">或者，可以將 XML 載入至 DOM，也就是在衍生類別**XmlDataDocument**，並會載入且與同步處理**資料集**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-126">Or, the XML can be loaded into a derived class of the DOM, which is the **XmlDataDocument**, and subsequently loaded and synchronized with the **DataSet**.</span></span> <span data-ttu-id="4d48a-127">因為**資料集**和**XmlDataDocument**會透過一組同步處理的資料，一個存放區中的資料所做的變更會反映在其他存放區。</span><span class="sxs-lookup"><span data-stu-id="4d48a-127">Because the **DataSet** and **XmlDataDocument** are synchronized over a single set of data, changes made to the data in one store are reflected in the other store.</span></span>  
   
- **XmlDataDocument** 繼承了 **XmlDocument** 所有的編輯和巡覽功能。  有時在使用 **XmlDataDocument** 及其繼承的功能時，與 **DataSet** 同步會比將 XML 直接載入 **DataSet** 更恰當。  下表顯示在選擇載入 **DataSet** 的方法時，需要考量的項目。  
+ <span data-ttu-id="4d48a-128">**XmlDataDocument**繼承所有的編輯和巡覽功能**XmlDocument**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-128">The **XmlDataDocument** inherits all the editing and navigational features from the **XmlDocument**.</span></span> <span data-ttu-id="4d48a-129">有時候當使用**XmlDataDocument**其繼承的功能，與同步處理**資料集**，為更適當的選項，比將 XML 直接載入**資料集**.</span><span class="sxs-lookup"><span data-stu-id="4d48a-129">There are times when using the **XmlDataDocument** and its inherited features, synchronized with a **DataSet**, is a more appropriate option than loading XML directly into the **DataSet**.</span></span> <span data-ttu-id="4d48a-130">下表顯示當您選擇哪一種方法，要用來載入時被視為項目**資料集**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-130">The following table shows the items to be considered when choosing which method to use to load the **DataSet**.</span></span>  
   
-|直接將 XML 載入 DataSet 的時機|同步 DataSet 與 XmlDataDocument 的時機|  
-|----------------------------|--------------------------------------|  
-|使用 SQL 查詢 **DataSet** 中的資料比使用 Xpath 容易。|查詢 **DataSet** 中的資料需要使用 Xpath。|  
-|來源 XML 中項目順序的保留並不重要。|來源 XML 中項目順序的保留很重要。|  
-|項目和格式間的泛空白字元不需要保留在來源 XML 中。|在來源 XML 中保留泛空白字元和格式很重要。|  
+|<span data-ttu-id="4d48a-131">直接將 XML 載入 DataSet 的時機</span><span class="sxs-lookup"><span data-stu-id="4d48a-131">When to load XML directly into a DataSet</span></span>|<span data-ttu-id="4d48a-132">同步 DataSet 與 XmlDataDocument 的時機</span><span class="sxs-lookup"><span data-stu-id="4d48a-132">When to synchronize an XmlDataDocument with a DataSet</span></span>|  
+|----------------------------------------------|-----------------------------------------------------------|  
+|<span data-ttu-id="4d48a-133">查詢中的資料**資料集**較容易使用 SQL 比使用 XPath。</span><span class="sxs-lookup"><span data-stu-id="4d48a-133">Queries of data in the **DataSet** are easier using SQL than XPath.</span></span>|<span data-ttu-id="4d48a-134">XPath 查詢中的資料需要**資料集**。</span><span class="sxs-lookup"><span data-stu-id="4d48a-134">XPath queries are needed over data in the **DataSet**.</span></span>|  
+|<span data-ttu-id="4d48a-135">來源 XML 中項目順序的保留並不重要。</span><span class="sxs-lookup"><span data-stu-id="4d48a-135">Preservation of element ordering in the source XML is not critical.</span></span>|<span data-ttu-id="4d48a-136">來源 XML 中項目順序的保留很重要。</span><span class="sxs-lookup"><span data-stu-id="4d48a-136">Preservation of element ordering in the source XML is critical.</span></span>|  
+|<span data-ttu-id="4d48a-137">項目和格式間的泛空白字元不需要保留在來源 XML 中。</span><span class="sxs-lookup"><span data-stu-id="4d48a-137">White space between elements and formatting does not need to be preserved in the source XML.</span></span>|<span data-ttu-id="4d48a-138">在來源 XML 中保留泛空白字元和格式很重要。</span><span class="sxs-lookup"><span data-stu-id="4d48a-138">White space and formatting preservation in the source XML is critical.</span></span>|  
   
- 如果您需要從 **DataSet** 直接載入和寫入 XML，請參閱[從 XML 載入 DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) 和[將 DataSet 寫為 XML 資料](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。  
+ <span data-ttu-id="4d48a-139">如果載入和寫入 XML，直接傳入和傳出**資料集**滿足時，請參閱[從 XML 載入 DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)和[撰寫為 XML 資料的資料集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。</span><span class="sxs-lookup"><span data-stu-id="4d48a-139">If loading and writing XML directly into and out of a **DataSet** addresses your needs, see [Loading a DataSet from XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) and [Writing a DataSet as XML Data](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).</span></span>  
   
- 如果您需要從 **XmlDataDocument** 載入 **DataSet**，請參閱[使用 XML 文件同步處理 DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)。  
+ <span data-ttu-id="4d48a-140">如果載入**資料集**從**XmlDataDocument**滿足時，請參閱[使用 XML 文件同步處理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)。</span><span class="sxs-lookup"><span data-stu-id="4d48a-140">If loading the **DataSet** from an **XmlDataDocument** addresses your needs, see [Synchronizing a Datasetwith an XML Document](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).</span></span>  
   
-## 請參閱  
- [在 DataSet 中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="4d48a-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4d48a-141">See Also</span></span>  
+ [<span data-ttu-id="4d48a-142">在 DataSet 中使用 XML</span><span class="sxs-lookup"><span data-stu-id="4d48a-142">Using XML in a DataSet</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

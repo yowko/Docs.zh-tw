@@ -1,81 +1,87 @@
 ---
-title: "可當地語系化檢閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "世界性的應用程式，可當地語系化"
-  - "應用程式開發 [.NET Framework]，當地語系化"
-  - "可當地語系化 [.NET Framework]"
-  - "國際應用程式 [.NET Framework]，可當地語系化"
-  - "全球化 [.NET Framework]，可當地語系化"
-  - "文化特性，可當地語系化"
-  - "當地語系化 [.NET Framework]，可當地語系化"
-  - "全球化應用程式，可當地語系化"
-  - "當地語系化資源"
+title: "可當地語系化檢閱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- world-ready applications, localizability
+- application development [.NET Framework], localization
+- localizability [.NET Framework]
+- international applications [.NET Framework], localizability
+- globalization [.NET Framework], localizability
+- culture, localizability
+- localization [.NET Framework], localizability
+- global applications, localizability
+- localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 可當地語系化檢閱
-可當地語系化檢閱是世界性的應用程式開發的中間步驟。  它會驗證全球化應用程式準備好執行當地語系化，以及識別任何程式碼或需要特殊處理使用者介面的任何方面。  這個步驟也協助確保當地語系化流程將不引入任何功能缺失至您的應用程式中。  當可當地語系化檢閱提出的任何問題解決後，您的應用程式準備好執行當地語系化。  如果可當地語系化檢閱是完整，您不需要在當地語系化程序中修改任何原始程式碼。  
+# <a name="localizability-review"></a><span data-ttu-id="955f1-102">可當地語系化檢閱</span><span class="sxs-lookup"><span data-stu-id="955f1-102">Localizability Review</span></span>
+<span data-ttu-id="955f1-103">當地語系化能力審查是準備發行到全球之應用程式開發工作的中繼步驟。</span><span class="sxs-lookup"><span data-stu-id="955f1-103">The localizability review is an intermediate step in the development of a world-ready application.</span></span> <span data-ttu-id="955f1-104">這個步驟會確認全球化應用程式是否準備好進行當地語系化，以及識別使用者介面中需要特殊處理的任何程式碼或任何方面。</span><span class="sxs-lookup"><span data-stu-id="955f1-104">It verifies that a globalized application is ready for localization and identifies any code or any aspects of the user interface that require special handling.</span></span> <span data-ttu-id="955f1-105">另外還可協助確保當地語系化過程中，不會在應用程式中造成任何功能上的問題。</span><span class="sxs-lookup"><span data-stu-id="955f1-105">This step also helps ensure that the localization process will not introduce any functional defects into your application.</span></span> <span data-ttu-id="955f1-106">當地語系化能力審查提出的所有問題都獲得解決之後，您的應用程式就可以開始進行當地語系化。</span><span class="sxs-lookup"><span data-stu-id="955f1-106">When all the issues raised by the localizability review have been addressed, your application is ready for localization.</span></span> <span data-ttu-id="955f1-107">如果當地語系化能力審查相當徹底，您應該不需要在當地語系化過程期間修改任何原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="955f1-107">If the localizability review is thorough, you should not have to modify any source code during the localization process.</span></span>  
   
- 可當地語系化檢閱包括下列三個檢查：  
+ <span data-ttu-id="955f1-108">當地語系化能力審查包括下列三項檢查：</span><span class="sxs-lookup"><span data-stu-id="955f1-108">The localizability review consists of the following three checks:</span></span>  
   
--   [是否實作全球化建議?](#global)  
+-   [<span data-ttu-id="955f1-109">會實作全球化建議？</span><span class="sxs-lookup"><span data-stu-id="955f1-109">Are the globalization recommendations implemented?</span></span>](#global)  
   
--   [文化特性的功能正確處理?](#culture)  
+-   [<span data-ttu-id="955f1-110">區分文化特性的功能是否正確處理？</span><span class="sxs-lookup"><span data-stu-id="955f1-110">Are culture-sensitive features handled correctly?</span></span>](#culture)  
   
--   [您測試過使用國際資料的應用程式嗎?](#test)  
+-   [<span data-ttu-id="955f1-111">您已經測試操作國際資料的應用程式嗎？</span><span class="sxs-lookup"><span data-stu-id="955f1-111">Have you tested your application with international data?</span></span>](#test)  
   
 <a name="global"></a>   
-## 實作全球化建議  
- 如果已設計和開發的應用程式時未當地語系化，和如果您遵循 [全球化](../../../docs/standard/globalization-localization/globalization.md) 文章中討論的建議，可當地語系化檢閱主要是品質保證傳遞。  否則，在這個階段您應該檢閱及實作 [全球化](../../../docs/standard/globalization-localization/globalization.md)的建議，然後在原始程式碼更正防止當地語系化的錯誤。  
+## <a name="implementing-globalization-recommendations"></a><span data-ttu-id="955f1-112">實作全球化建議</span><span class="sxs-lookup"><span data-stu-id="955f1-112">Implementing globalization recommendations</span></span>  
+ <span data-ttu-id="955f1-113">如果您設計和開發您的應用程式當地語系化，請注意，如果您遵循建議的討論中，而且[全球化](../../../docs/standard/globalization-localization/globalization.md)發行項，則當地語系化能力檢閱將會大量地品質保證傳遞.</span><span class="sxs-lookup"><span data-stu-id="955f1-113">If you have designed and developed your application with localization in mind, and if you have followed the recommendations discussed in the [Globalization](../../../docs/standard/globalization-localization/globalization.md) article, the localizability review will largely be a quality assurance pass.</span></span> <span data-ttu-id="955f1-114">否則，在這個階段您應該檢閱並實作的建議[全球化](../../../docs/standard/globalization-localization/globalization.md)，並且修正原始程式碼中造成當地語系化無法順利的錯誤。</span><span class="sxs-lookup"><span data-stu-id="955f1-114">Otherwise, during this stage you should review and implement the recommendations for [globalization](../../../docs/standard/globalization-localization/globalization.md), and fix the errors in source code that prevent localization.</span></span>  
   
 <a name="culture"></a>   
-## 處理區分文化特性的功能  
- .NET Framework 不會提供在文化特性多個變更的區域的方式支援。  在大部分情況下，您必須以處理如下的功能區域撰寫自訂程式碼：  
+## <a name="handling-culture-sensitive-features"></a><span data-ttu-id="955f1-115">處理區分文化特性的功能</span><span class="sxs-lookup"><span data-stu-id="955f1-115">Handling culture-sensitive features</span></span>  
+ <span data-ttu-id="955f1-116">.NET Framework 在一些文化特性差異較大的區域並未提供程式設計方面的支援。</span><span class="sxs-lookup"><span data-stu-id="955f1-116">The .NET Framework does not provide programmatic support in a number of areas that vary widely by culture.</span></span> <span data-ttu-id="955f1-117">在大部分情況下，您必須撰寫自訂程式碼來處理下列領域：</span><span class="sxs-lookup"><span data-stu-id="955f1-117">In most cases, you have to write custom code to handle feature areas like the following:</span></span>  
   
--   位址  
+-   <span data-ttu-id="955f1-118">位址。</span><span class="sxs-lookup"><span data-stu-id="955f1-118">Addresses.</span></span>  
   
--   電話號碼。  
+-   <span data-ttu-id="955f1-119">電話號碼。</span><span class="sxs-lookup"><span data-stu-id="955f1-119">Telephone numbers.</span></span>  
   
--   紙張大小。  
+-   <span data-ttu-id="955f1-120">紙張大小。</span><span class="sxs-lookup"><span data-stu-id="955f1-120">Paper sizes.</span></span>  
   
--   用於長度、粗細、區域、大小和溫度的測量單位。  雖然 .NET Framework 不會提供內建支援在測量單位之間的轉換，您可以使用 <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=fullName> 屬性判斷特定國家或地區是否使用公制，如下列範例所示。  
+-   <span data-ttu-id="955f1-121">用於長度、粗細、面積、容積和溫度的測量單位。</span><span class="sxs-lookup"><span data-stu-id="955f1-121">Units of measure used for lengths, weights, area, volume, and temperatures.</span></span> <span data-ttu-id="955f1-122">雖然 .NET Framework 並未提供在測量單位之間進行轉換的內建支援，但是您可以使用 <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> 屬性判斷特定國家或地區是否使用公制，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="955f1-122">Although the .NET Framework does not offer built-in support for converting between units of measure, you can use the <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> property to determine whether a particular country or region uses the metric system, as the following example illustrates.</span></span>  
   
      [!code-csharp[Conceptual.Localizability#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.localizability/cs/ismetric1.cs#1)]
      [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]  
   
 <a name="test"></a>   
-## 測試應用程式  
- 在您當地語系化應用程式之前，您應該測試它使用作業系統的國際版本的國際資料。  雖然大部分使用者介面此時不會當地語系化，您可以偵測到問題如下所示：  
+## <a name="testing-your-application"></a><span data-ttu-id="955f1-123">測試應用程式</span><span class="sxs-lookup"><span data-stu-id="955f1-123">Testing your application</span></span>  
+ <span data-ttu-id="955f1-124">在您將應用程式當地語系化之前，應先使用國際版作業系統上的國際資料進行測試。</span><span class="sxs-lookup"><span data-stu-id="955f1-124">Before you localize your application, you should test it by using international data on international versions of the operating system.</span></span> <span data-ttu-id="955f1-125">雖然大部分使用者介面此時並不會當地語系化，但是您將能夠偵測出問題所在，如下所示：</span><span class="sxs-lookup"><span data-stu-id="955f1-125">Although most of the user interface will not be localized at this point, you will be able to detect problems such as the following:</span></span>  
   
--   無法跨作業系統版本正確的序列化資料。  
+-   <span data-ttu-id="955f1-126">無法跨作業系統版本正確還原序列化的序列化資料。</span><span class="sxs-lookup"><span data-stu-id="955f1-126">Serialized data that does not deserialize correctly across operating system versions.</span></span>  
   
--   不會反映目前文化特性慣例的數值資料。  例如，數字可能顯示具有不正確的群組分隔符號、小數點分隔符號、貨幣符號。  
+-   <span data-ttu-id="955f1-127">未反映目前文化特性慣例的數值資料。</span><span class="sxs-lookup"><span data-stu-id="955f1-127">Numeric data that does not reflect the conventions of the current culture.</span></span> <span data-ttu-id="955f1-128">例如，數字可能採用不正確的群組分隔符號、小數點分隔符號或貨幣符號顯示。</span><span class="sxs-lookup"><span data-stu-id="955f1-128">For example, numbers may be displayed with inaccurate group separators, decimal separators, or currency symbols.</span></span>  
   
--   不會反映目前文化特性慣例的日期和時間資料。  例如，表示月份日期，然後可以按錯誤順序出現的數字、日期分隔符號可能不正確或時區資訊可能會不正確。  
+-   <span data-ttu-id="955f1-129">未反映目前文化特性慣例的日期和時間資料。</span><span class="sxs-lookup"><span data-stu-id="955f1-129">Date and time data that does not reflect the conventions of the current culture.</span></span> <span data-ttu-id="955f1-130">例如，表示月份和日期的數字可能以不正確的順序出現、日期分隔符號可能不正確，或是時區資訊可能不正確。</span><span class="sxs-lookup"><span data-stu-id="955f1-130">For example, numbers that represent the month and day may appear in the wrong order, date separators may be incorrect, or time zone information may be incorrect.</span></span>  
   
--   找不到資源，因為您未識別應用程式的預設文化特性。  
+-   <span data-ttu-id="955f1-131">找不到資源，因為您尚未識別應用程式的預設文化特性。</span><span class="sxs-lookup"><span data-stu-id="955f1-131">Resources that cannot be found because you have not identified a default culture for your application.</span></span>  
   
--   依特定文化特性之例外狀況的順序顯示的字串。  
+-   <span data-ttu-id="955f1-132">特定文化特性的字串以異常的順序顯示。</span><span class="sxs-lookup"><span data-stu-id="955f1-132">Strings that are displayed in an unusual order for the specific culture.</span></span>  
   
--   傳回未預期的結果的字串比較或比較是否相等。  
+-   <span data-ttu-id="955f1-133">傳回未預期結果的字串比較或相等比較。</span><span class="sxs-lookup"><span data-stu-id="955f1-133">String comparisons or comparisons for equality that return unexpected results.</span></span>  
   
- 如果您遵循全球化建議，正確地開發應用程式、處理區分文化特性的功能、及在測試期間識別和發生當地語系化問題時，您可以繼續下一個步驟中，[當地語系化](../../../docs/standard/globalization-localization/localization.md)。  
+ <span data-ttu-id="955f1-134">如果您已開發應用程式時，所遵照全球化建議、 正確處理區分文化特性的功能識別並解決當地語系化問題所引發在測試期間，您可以繼續到下一個步驟中， [當地語系化](../../../docs/standard/globalization-localization/localization.md)。</span><span class="sxs-lookup"><span data-stu-id="955f1-134">If you've followed the globalization recommendations when developing your application, handled culture-sensitive features correctly, and identified and addressed the localization issues that arose during testing, you can proceed to the next step, [Localization](../../../docs/standard/globalization-localization/localization.md).</span></span>  
   
-## 請參閱  
- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)   
- [當地語系化](../../../docs/standard/globalization-localization/localization.md)   
- [全球化](../../../docs/standard/globalization-localization/globalization.md)   
- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a><span data-ttu-id="955f1-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="955f1-135">See Also</span></span>  
+ [<span data-ttu-id="955f1-136">全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="955f1-136">Globalization and Localization</span></span>](../../../docs/standard/globalization-localization/index.md)  
+ [<span data-ttu-id="955f1-137">當地語系化</span><span class="sxs-lookup"><span data-stu-id="955f1-137">Localization</span></span>](../../../docs/standard/globalization-localization/localization.md)  
+ [<span data-ttu-id="955f1-138">全球化</span><span class="sxs-lookup"><span data-stu-id="955f1-138">Globalization</span></span>](../../../docs/standard/globalization-localization/globalization.md)  
+ [<span data-ttu-id="955f1-139">桌面應用程式中的資源</span><span class="sxs-lookup"><span data-stu-id="955f1-139">Resources in Desktop Apps</span></span>](../../../docs/framework/resources/index.md)

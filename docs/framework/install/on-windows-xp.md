@@ -8,42 +8,39 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
+ms.openlocfilehash: f79ae387b123527b3795a2e12a68bd153b308f81
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/27/2017
 ---
+# <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a><span data-ttu-id="5c64f-104">在 Windows XP 和 Windows Server 2003 上安裝.NET Framework</span><span class="sxs-lookup"><span data-stu-id="5c64f-104">Install the .NET Framework on Windows XP and Windows Server 2003</span></span>
 
-# <a name="installing-the-net-framework-on-windows-xp"></a>在 Windows XP 上安裝 .NET Framework
+> [!NOTE]
+> <span data-ttu-id="5c64f-105">Microsoft 已不再支援 Windows XP。</span><span class="sxs-lookup"><span data-stu-id="5c64f-105">Windows XP is no longer supported by Microsoft.</span></span> <span data-ttu-id="5c64f-106">我們建議您升級為 Windows 10，而且會包含最新版本的.NET framework 支援。</span><span class="sxs-lookup"><span data-stu-id="5c64f-106">We recommend you upgrade to Windows 10, which is supported and includes the latest version of the .NET Framework.</span></span> <span data-ttu-id="5c64f-107">本文件僅供用來作為有幫助的疑難排解指南。</span><span class="sxs-lookup"><span data-stu-id="5c64f-107">This document is provided solely as a helpful troubleshooting guide.</span></span>
 
-> [!NOTE] 
-> Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且支援最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。 
+<span data-ttu-id="5c64f-108">.NET Framework 才能在 Windows 上執行許多應用程式。</span><span class="sxs-lookup"><span data-stu-id="5c64f-108">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="5c64f-109">您可以使用下列指示來安裝它。</span><span class="sxs-lookup"><span data-stu-id="5c64f-109">You can use the following instructions to install it.</span></span> <span data-ttu-id="5c64f-110">您可能已到達此頁面上之後嘗試執行的應用程式，並在您的電腦上看到下列對話方塊。</span><span class="sxs-lookup"><span data-stu-id="5c64f-110">You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.</span></span>
 
-您可能需要 .NET Framework，才能在 Windows XP 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
+![無法啟動此應用程式](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-45-and-later"></a>.NET Framework 4.5 和更新版本
+<span data-ttu-id="5c64f-112">這些指示將協助您安裝您所需要的.NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="5c64f-112">These instructions will help you install the .NET Framework versions you need.</span></span> <span data-ttu-id="5c64f-113">[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47)是最新版本。</span><span class="sxs-lookup"><span data-stu-id="5c64f-113">The [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) is the latest version.</span></span> <span data-ttu-id="5c64f-114">不支援在 Windows XP 和 Windows Server 2003 上。</span><span class="sxs-lookup"><span data-stu-id="5c64f-114">It is not supported on Windows XP and Windows Server 2003.</span></span> <span data-ttu-id="5c64f-115">其隨附於[Windows 10 年秋季建立者更新](https://www.microsoft.com/software-download/windows10)和[Windows Server 2016 版本 1709年](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)。</span><span class="sxs-lookup"><span data-stu-id="5c64f-115">It is included with the [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) and [Windows Server 2016 Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).</span></span>
 
-您無法在 Windows XP 上安裝 .NET Framework 4.5 或更新版本。 取而代之的是，您必須升級至較新的 Windows 版本，才能使用較新版的 .NET Framework。
+## <a name="net-framework-403"></a><span data-ttu-id="5c64f-116">.NET Framework 4.0.3</span><span class="sxs-lookup"><span data-stu-id="5c64f-116">.NET Framework 4.0.3</span></span>
 
-.NET Framework 4.7 隨附於 [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10)。
+<span data-ttu-id="5c64f-117">[.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834)是最新支援.NET Framework 版本 Windows XP 和 Windows Server 2003。</span><span class="sxs-lookup"><span data-stu-id="5c64f-117">The [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) is the latest supported .NET Framework version on Windows XP and Windows Server 2003.</span></span> <span data-ttu-id="5c64f-118">.NET Framework 4.0.3 會要求必須先安裝 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834)。</span><span class="sxs-lookup"><span data-stu-id="5c64f-118">The .NET Framework 4.0.3 requires that the [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834) is installed first.</span></span> <span data-ttu-id="5c64f-119">這兩個 .NET Framework 版本都已不再受 Microsoft 支援。</span><span class="sxs-lookup"><span data-stu-id="5c64f-119">Both of these .NET Framework versions are no longer supported by Microsoft.</span></span>
 
-## <a name="net-framework-403"></a>.NET Framework 4.0.3
+## <a name="net-framework-4"></a><span data-ttu-id="5c64f-120">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="5c64f-120">.NET Framework 4</span></span>
 
-您可以在 Windows XP 上安裝 [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834)。 .NET Framework 4.0.3 會要求必須先安裝 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834)。 這兩個 .NET Framework 版本都已不再受 Microsoft 支援。
+<span data-ttu-id="5c64f-121">您可以在 Windows XP 上安裝 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。</span><span class="sxs-lookup"><span data-stu-id="5c64f-121">You can install the [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) on Windows XP.</span></span> <span data-ttu-id="5c64f-122">Microsoft 已不再支援它。</span><span class="sxs-lookup"><span data-stu-id="5c64f-122">It's no longer supported by Microsoft.</span></span>
 
-## <a name="net-framework-4"></a>.NET Framework 4
+## <a name="net-framework-35"></a><span data-ttu-id="5c64f-123">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="5c64f-123">.NET Framework 3.5</span></span>
 
-您可以在 Windows XP 上安裝 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。 Microsoft 已不再支援它。
+<span data-ttu-id="5c64f-124">您可以在 Windows XP 上安裝 [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。</span><span class="sxs-lookup"><span data-stu-id="5c64f-124">You can install the [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) on Windows XP.</span></span>
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+<span data-ttu-id="5c64f-125">.NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="5c64f-125">The .NET Framework 3.5 can be used to run applications built for .NET Framework 1.0 through 3.5.</span></span>
 
-您可以在 Windows XP 上安裝 [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。
+## <a name="see-also"></a><span data-ttu-id="5c64f-126">請參閱</span><span class="sxs-lookup"><span data-stu-id="5c64f-126">See also</span></span>
 
-.NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
-
-## <a name="help"></a>說明
-
-如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)。
-
+<span data-ttu-id="5c64f-127">[下載.NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span><span class="sxs-lookup"><span data-stu-id="5c64f-127">[Download the .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span></span>  
+<span data-ttu-id="5c64f-128">[疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md) </span><span class="sxs-lookup"><span data-stu-id="5c64f-128">[Troubleshoot blocked .NET Framework installations and uninstallations](troubleshoot-blocked-installations-and-uninstallations.md) </span></span>  
+[<span data-ttu-id="5c64f-129">安裝.NET Framework 開發人員</span><span class="sxs-lookup"><span data-stu-id="5c64f-129">Install the .NET Framework for developers</span></span>](guide-for-developers.md)

@@ -1,667 +1,706 @@
 ---
-title: "自訂日期和時間格式字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自訂日期和時間格式字串"
-  - "自訂 DateTime 格式字串"
-  - "格式規範, 自訂日期和時間"
-  - "格式字串"
-  - "格式化 [.NET Framework], 日期"
-  - "格式化 [.NET Framework], 時間"
+title: "自訂日期和時間格式字串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- formatting [.NET Framework], dates
+- custom DateTime format string
+- format specifiers, custom date and time
+- format strings
+- custom date and time format strings
+- formatting [.NET Framework], time
+- date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 79
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 77
+caps.latest.revision: "79"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂日期和時間格式字串
-日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。  
+# <a name="custom-date-and-time-format-strings"></a><span data-ttu-id="690ff-102">自訂日期和時間格式字串</span><span class="sxs-lookup"><span data-stu-id="690ff-102">Custom Date and Time Format Strings</span></span>
+<span data-ttu-id="690ff-103">日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。</span><span class="sxs-lookup"><span data-stu-id="690ff-103">A date and time format string defines the text representation of a <xref:System.DateTime> or <xref:System.DateTimeOffset> value that results from a formatting operation .</span></span> <span data-ttu-id="690ff-104">另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。</span><span class="sxs-lookup"><span data-stu-id="690ff-104">It can also define the representation of a date and time value that is required in a parsing operation in order to successfully convert the string to a date and time.</span></span> <span data-ttu-id="690ff-105">自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。</span><span class="sxs-lookup"><span data-stu-id="690ff-105">A custom format string consists of one or more custom date and time format specifiers.</span></span> <span data-ttu-id="690ff-106">任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-106">Any string that is not a [standard date and time format string](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) is interpreted as a custom date and time format string.</span></span>  
   
- 自訂日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。  
+ <span data-ttu-id="690ff-107">自訂日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-107">Custom date and time format strings can be used with both <xref:System.DateTime> and <xref:System.DateTimeOffset> values.</span></span>  
   
 > [!TIP]
->  您可以下載[格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至日期和時間值或數值，並且顯示結果字串。  
+>  <span data-ttu-id="690ff-108">您可以下載[格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至日期和時間值或數值，並且顯示結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-108">You can download the [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), an application that enables you to apply format strings to either date and time or numeric values and displays the result string.</span></span>  
   
-<a name="table"></a> 在格式化作業中，自訂日期和時間格式字串可以搭配日期和時間執行個體的 `ToString` 方法或是支援複合格式的方法使用。 以下範例說明這兩種用法。  
+<span data-ttu-id="690ff-109"><a name="table"></a> 在格式化作業中，自訂日期和時間格式字串可以搭配日期和時間執行個體的 `ToString` 方法或是支援複合格式的方法使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-109"><a name="table"></a> In formatting operations, custom date and time format strings can be used either with the `ToString` method of a date and time instance or with a method that supports composite formatting.</span></span> <span data-ttu-id="690ff-110">以下範例說明這兩種用法。</span><span class="sxs-lookup"><span data-stu-id="690ff-110">The following example illustrates both uses.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]  
   
- 在剖析作業中，自訂日期和時間格式字串可以搭配 <xref:System.DateTime.ParseExact%2A?displayProperty=fullName>、<xref:System.DateTime.TryParseExact%2A?displayProperty=fullName>、<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=fullName> 和 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=fullName> 方法使用。 這些方法需要輸入字串完全符合特定模式，剖析作業才會成功。 下列範例說明呼叫 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=fullName> 方法來剖析必須包含日、月和兩位數年的日期。  
+ <span data-ttu-id="690ff-111">在剖析作業中，自訂日期和時間格式字串可以搭配 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 方法使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-111">In parsing operations, custom date and time format strings can be used with the <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, and <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="690ff-112">這些方法需要輸入字串完全符合特定模式，剖析作業才會成功。</span><span class="sxs-lookup"><span data-stu-id="690ff-112">These methods require that an input string conform exactly to a particular pattern for the parse operation to succeed.</span></span> <span data-ttu-id="690ff-113">下列範例說明呼叫 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法來剖析必須包含日、月和兩位數年的日期。</span><span class="sxs-lookup"><span data-stu-id="690ff-113">The following example illustrates a call to the <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> method to parse a date that must include a day, a month, and a two-digit year.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#18](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
  [!code-vb[Formatting.DateAndTime.Custom#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]  
   
- 下表說明自訂日期和時間格式規範，並顯示每個格式規範所產生的結果字串。 根據預設，結果字串會反映 en\-US 文化特性的格式設定慣例。 如果特定格式規範會產生當地語系化的結果字串，則範例也會註明結果字串適用的文化特性。 如需使用自訂日期和時間格式字串的詳細資訊，請參閱注意一節。  
+ <span data-ttu-id="690ff-114">下表說明自訂日期和時間格式規範，並顯示每個格式規範所產生的結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-114">The following table describes the custom date and time format specifiers and displays a result string produced by each format specifier.</span></span> <span data-ttu-id="690ff-115">根據預設，結果字串會反映 en-US 文化特性的格式設定慣例。</span><span class="sxs-lookup"><span data-stu-id="690ff-115">By default, result strings reflect the formatting conventions of the en-US culture.</span></span> <span data-ttu-id="690ff-116">如果特定格式規範會產生當地語系化的結果字串，則範例也會註明結果字串適用的文化特性。</span><span class="sxs-lookup"><span data-stu-id="690ff-116">If a particular format specifier produces a localized result string, the example also notes the culture to which the result string applies.</span></span> <span data-ttu-id="690ff-117">如需使用自訂日期和時間格式字串的詳細資訊，請參閱注意一節。</span><span class="sxs-lookup"><span data-stu-id="690ff-117">See the Notes section for additional information about using custom date and time format strings.</span></span>  
   
-|格式規範|描述|範例|  
-|----------|--------|--------|  
-|"d"|月份天數，從 1 到 31。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|2009\-06\-01T13:45:30 \-\> 1<br /><br /> 2009\-06\-15T13:45:30 \-\> 15|  
-|"dd"|月份天數，從 01 到 31。<br /><br /> 詳細資訊：["dd" 自訂格式規範](#ddSpecifier)。|2009\-06\-01T13:45:30 \-\> 01<br /><br /> 2009\-06\-15T13:45:30 \-\> 15|  
-|"ddd"|星期幾的縮寫名稱。<br /><br /> 詳細資訊：["ddd" 自訂格式規範](#dddSpecifier)。|2009\-06\-15T13:45:30 \-\> Mon \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Пн \(ru\-RU\)<br /><br /> 2009\-06\-15T13:45:30 \-\> lun. \(fr\-FR\)|  
-|"dddd"|星期幾的完整名稱。<br /><br /> 詳細資訊：["dddd" 自訂格式規範](#ddddSpecifier)。|2009\-06\-15T13:45:30 \-\> Monday \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> понедельник \(ru\-RU\)<br /><br /> 2009\-06\-15T13:45:30 \-\> lundi \(fr\-FR\)|  
-|"f"|日期和時間值中的十分之一秒。<br /><br /> 詳細資訊：["f" 自訂格式規範](#fSpecifier)。|2009\-06\-15T13:45:30.6170000 \-\> 6<br /><br /> 2009\-06\-15T13:45:30.05 \-\> 0|  
-|"ff"|日期和時間值中的百分之一秒。<br /><br /> 詳細資訊：["ff" 自訂格式規範](#ffSpecifier)。|2009\-06\-15T13:45:30.6170000 \-\> 61<br /><br /> 2009\-06\-15T13:45:30.0050000 \-\> 00|  
-|"fff"|日期和時間值中的千分之一秒。<br /><br /> 詳細資訊：["fff" 自訂格式規範](#fffSpecifier)。|6\/15\/2009 13:45:30.617 \-\> 617<br /><br /> 6\/15\/2009 13:45:30.0005 \-\> 000|  
-|"ffff"|日期和時間值中的萬分之一秒。<br /><br /> 詳細資訊：["ffff" 自訂格式規範](#ffffSpecifier)。|2009\-06\-15T13:45:30.6175000 \-\> 6175<br /><br /> 2009\-06\-15T13:45:30.0000500  \-\> 0000|  
-|"fffff"|日期和時間值中的十萬分之一秒。<br /><br /> 詳細資訊：["fffff" 自訂格式規範](#fffffSpecifier)。|2009\-06\-15T13:45:30.6175400 \-\> 61754<br /><br /> 6\/15\/2009 13:45:30.000005 \-\> 00000|  
-|"ffffff"|日期和時間值中的百萬分之一秒。<br /><br /> 詳細資訊：["ffffff" 自訂格式規範](#ffffffSpecifier)。|2009\-06\-15T13:45:30.6175420 \-\> 617542<br /><br /> 2009\-06\-15T13:45:30.0000005 \-\> 000000|  
-|"fffffff"|日期和時間值中的千萬分之一秒。<br /><br /> 詳細資訊：["fffffff" 自訂格式規範](#fffffffSpecifier)。|2009\-06\-15T13:45:30.6175425 \-\> 6175425<br /><br /> 2009\-06\-15T13:45:30.0001150 \-\> 0001150|  
-|"F"|如果不是零，則為日期和時間值中的十分之一秒。<br /><br /> 詳細資訊：["F" 自訂格式規範](#F_Specifier)。|2009\-06\-15T13:45:30.6170000 \-\> 6<br /><br /> 2009\-06\-15T13:45:30.0500000 \-\> \(沒有輸出\)|  
-|"FF"|如果不是零，則為日期和時間值中的百分之一秒。<br /><br /> 詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。|2009\-06\-15T13:45:30.6170000 \-\> 61<br /><br /> 2009\-06\-15T13:45:30.0050000 \-\> \(沒有輸出\)|  
-|"FFF"|如果不是零，則為日期和時間值中的千分之一秒。<br /><br /> 詳細資訊：["FFF" 自訂格式規範](#FFF_Specifier)。|2009\-06\-15T13:45:30.6170000 \-\> 617<br /><br /> 2009\-06\-15T13:45:30.0005000 \-\> \(沒有輸出\)|  
-|"FFFF"|如果不是零，則為日期和時間值中的萬分之一秒。<br /><br /> 詳細資訊：["FFFF" 自訂格式規範](#FFFF_Specifier)。|2009\-06\-15T13:45:30.5275000 \-\> 5275<br /><br /> 2009\-06\-15T13:45:30.0000500 \-\> \(沒有輸出\)|  
-|"FFFFF"|如果不是零，則為日期和時間值中的十萬分之一秒。<br /><br /> 詳細資訊：["FFFFF" 自訂格式規範](#FFFFF_Specifier)。|2009\-06\-15T13:45:30.6175400 \-\> 61754<br /><br /> 2009\-06\-15T13:45:30.0000050 \-\> \(沒有輸出\)|  
-|"FFFFFF"|如果不是零，則為日期和時間值中的百萬分之一秒。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#FFFFFF_Specifier)。|2009\-06\-15T13:45:30.6175420 \-\> 617542<br /><br /> 2009\-06\-15T13:45:30.0000005 \-\> \(沒有輸出\)|  
-|"FFFFFFF"|如果不是零，則為日期和時間值中的千萬分之一秒。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#FFFFFFF_Specifier)。|2009\-06\-15T13:45:30.6175425 \-\> 6175425<br /><br /> 2009\-06\-15T13:45:30.0001150 \-\> 000115|  
-|"g"、"gg"|週期或紀元。<br /><br /> 詳細資訊：["g" 或 "gg" 自訂格式規範](#gSpecifier)。|2009\-06\-15T13:45:30.6170000 \-\> A.D.|  
-|"h"|採用 12 小時制的小時，從 1 到 12。<br /><br /> 詳細資訊：["h" 自訂格式規範](#hSpecifier)。|2009\-06\-15T01:45:30 \-\> 1<br /><br /> 2009\-06\-15T13:45:30 \-\> 1|  
-|"hh"|採用 12 小時制的小時，從 01 到 12。<br /><br /> 詳細資訊：["hh" 自訂格式規範](#hhSpecifier)。|2009\-06\-15T01:45:30 \-\> 01<br /><br /> 2009\-06\-15T13:45:30 \-\> 01|  
-|"H"|採用 24 小時制的小時，從 0 到 23。<br /><br /> 詳細資訊：["H" 自訂格式規範](#H_Specifier)。|2009\-06\-15T01:45:30 \-\> 1<br /><br /> 2009\-06\-15T13:45:30 \-\> 13|  
-|"HH"|採用 24 小時制的小時，從 00 到 23。<br /><br /> 詳細資訊：["HH" 自訂格式規範](#HH_Specifier)。|2009\-06\-15T01:45:30 \-\> 01<br /><br /> 2009\-06\-15T13:45:30 \-\> 13|  
-|"K"|時區資訊。<br /><br /> 詳細資訊：["K" 自訂格式規範](#KSpecifier)。|搭配 <xref:System.DateTime> 值：<br /><br /> 2009\-06\-15T13:45:30, Kind Unspecified \-\><br /><br /> 2009\-06\-15T13:45:30, Kind Utc \-\> Z<br /><br /> 2009\-06\-15T13:45:30, Kind Local \-\> \-07:00 \(依據本機電腦設定\)<br /><br /> 搭配 <xref:System.DateTimeOffset> 值：<br /><br /> 2009\-06\-15T01:45:30\-07:00 \-\-\> \-07:00<br /><br /> 2009\-06\-15T08:45:30\+00:00 \-\-\> \+00:00|  
-|"m"|分鐘，從 0 到 59。<br /><br /> 詳細資訊：["m" 自訂格式規範](#mSpecifier)。|2009\-06\-15T01:09:30 \-\> 9<br /><br /> 2009\-06\-15T13:29:30 \-\> 29|  
-|"mm"|分鐘，從 00 到 59。<br /><br /> 詳細資訊：["mm" 自訂格式規範](#mmSpecifier)。|2009\-06\-15T01:09:30 \-\> 09<br /><br /> 2009\-06\-15T01:45:30 \-\> 45|  
-|"M"|月份，從 1 到 12。<br /><br /> 詳細資訊：["M" 自訂格式規範](#M_Specifier)。|2009\-06\-15T13:45:30 \-\> 6|  
-|"MM"|月份，從 01 到 12。<br /><br /> 詳細資訊：["MM" 自訂格式規範](#MM_Specifier)。|2009\-06\-15T13:45:30 \-\> 06|  
-|"MMM"|月份的縮寫名稱。<br /><br /> 詳細資訊：["MMM" 自訂格式規範](#MMM_Specifier)。|2009\-06\-15T13:45:30 \-\> Jun \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> juin \(fr\-FR\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Jun \(zu\-ZA\)|  
-|"MMMM"|月份的完整名稱。<br /><br /> 詳細資訊：["MMMM" 自訂格式規範](#MMMM_Specifier)。|2009\-06\-15T13:45:30 \-\> June \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> juni \(da\-DK\)<br /><br /> 2009\-06\-15T13:45:30 \-\> uJuni \(zu\-ZA\)|  
-|"s"|秒數，從 0 到 59。<br /><br /> 詳細資訊：["s" 自訂格式規範](#sSpecifier)。|2009\-06\-15T13:45:09 \-\> 9|  
-|"ss"|秒數，從 00 到 59。<br /><br /> 詳細資訊：["ss" 自訂格式規範](#ssSpecifier)。|2009\-06\-15T13:45:09 \-\> 09|  
-|"t"|AM\/PM 指示項的第一個字元。<br /><br /> 詳細資訊：["t" 自訂格式規範](#tSpecifier)。|2009\-06\-15T13:45:30 \-\> P \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 午 \(ja\-JP\)<br /><br /> 2009\-06\-15T13:45:30 \-\>  \(fr\-FR\)|  
-|"tt"|AM\/PM 指示項。<br /><br /> 詳細資訊：["tt" 自訂格式規範](#ttSpecifier)。|2009\-06\-15T13:45:30 \-\> PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 午後 \(ja\-JP\)<br /><br /> 2009\-06\-15T13:45:30 \-\>  \(fr\-FR\)|  
-|"y"|年份，從 0 到 99。<br /><br /> 詳細資訊：["y" 自訂格式規範](#ySpecifier)。|0001\-01\-01T00:00:00 \-\> 1<br /><br /> 0900\-01\-01T00:00:00 \-\> 0<br /><br /> 1900\-01\-01T00:00:00 \-\> 0<br /><br /> 2009\-06\-15T13:45:30 \-\> 9<br /><br /> 2019\-06\-15T13:45:30 \-\> 19|  
-|"yy"|年份，從 00 到 99。<br /><br /> 詳細資訊：["yy" 自訂格式規範](#yySpecifier)。|0001\-01\-01T00:00:00 \-\> 01<br /><br /> 0900\-01\-01T00:00:00 \-\> 00<br /><br /> 1900\-01\-01T00:00:00 \-\> 00<br /><br /> 2019\-06\-15T13:45:30 \-\> 19|  
-|"yyy"|年份，至少三位數。<br /><br /> 詳細資訊：["yyy" 自訂格式規範](#yyySpecifier)。|0001\-01\-01T00:00:00 \-\> 001<br /><br /> 0900\-01\-01T00:00:00 \-\> 900<br /><br /> 1900\-01\-01T00:00:00 \-\> 1900<br /><br /> 2009\-06\-15T13:45:30 \-\> 2009|  
-|"yyyy"|以四位數表示的年份。<br /><br /> 詳細資訊：["yyyy" 自訂格式規範](#yyyySpecifier)。|0001\-01\-01T00:00:00 \-\> 0001<br /><br /> 0900\-01\-01T00:00:00 \-\> 0900<br /><br /> 1900\-01\-01T00:00:00 \-\> 1900<br /><br /> 2009\-06\-15T13:45:30 \-\> 2009|  
-|"yyyyy"|以五位數表示的年份。<br /><br /> 詳細資訊：["yyyyy" 自訂格式規範](#yyyyySpecifier)。|0001\-01\-01T00:00:00 \-\> 00001<br /><br /> 2009\-06\-15T13:45:30 \-\> 02009|  
-|"z"|與 UTC 相差的時數，不加上前置零。<br /><br /> 詳細資訊：["z" 自訂格式規範](#zSpecifier)。|2009\-06\-15T13:45:30\-07:00 \-\> \-7|  
-|"zz"|與 UTC 相差的時數，單一位數值會加上前置零。<br /><br /> 詳細資訊：["zz" 自訂格式規範](#zzSpecifier)。|2009\-06\-15T13:45:30\-07:00 \-\> \-07|  
-|"zzz"|與 UTC 相差的時數和分鐘數。<br /><br /> 詳細資訊：["zzz" 自訂格式規範](#zzzSpecifier)。|2009\-06\-15T13:45:30\-07:00 \-\> \-07:00|  
-|":"|時間分隔符號。<br /><br /> 詳細資訊：[":" 自訂格式規範](#timeSeparator)。|2009\-06\-15T13:45:30 \-\> : \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> . \(it\-IT\)<br /><br /> 2009\-06\-15T13:45:30 \-\> : \(ja\-JP\)|  
-|"\/"|日期分隔符號。<br /><br /> 詳細資訊：["\/" 自訂格式規範](#dateSeparator)。|2009\-06\-15T13:45:30 \-\> \/ \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> \- \(ar\-DZ\)<br /><br /> 2009\-06\-15T13:45:30 \-\> . \(tr\-TR\)|  
-|"*字串*"<br /><br /> '*字串*'|常值字串分隔符號。|2009\-06\-15T13:45:30 \("arr:" h:m t\) \-\> arr: 1:45 P<br /><br /> 2009\-06\-15T13:45:30 \('arr:' h:m t\) \-\> arr: 1:45 P|  
-|%|將下列字元定義為自訂格式規範。<br /><br /> 詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。|2009\-06\-15T13:45:30 \(%h\) \-\> 1|  
-|\\|逸出字元。|2009\-06\-15T13:45:30 \(h \\h\) \-\> 1 h|  
-|任意字元|字元會原封不動地複製到結果字串。<br /><br /> 詳細資訊：[使用逸出字元](#escape)。|2009\-06\-15T01:45:30 \(arr hh:mm t\) \-\> arr 01:45 A|  
+|<span data-ttu-id="690ff-118">格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-118">Format specifier</span></span>|<span data-ttu-id="690ff-119">描述</span><span class="sxs-lookup"><span data-stu-id="690ff-119">Description</span></span>|<span data-ttu-id="690ff-120">範例</span><span class="sxs-lookup"><span data-stu-id="690ff-120">Examples</span></span>|  
+|----------------------|-----------------|--------------|  
+|<span data-ttu-id="690ff-121">"d"</span><span class="sxs-lookup"><span data-stu-id="690ff-121">"d"</span></span>|<span data-ttu-id="690ff-122">月份天數，從 1 到 31。</span><span class="sxs-lookup"><span data-stu-id="690ff-122">The day of the month, from 1 through 31.</span></span><br /><br /> <span data-ttu-id="690ff-123">詳細資訊：["d" 自訂格式規範](#dSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-123">More information: [The "d" Custom Format Specifier](#dSpecifier).</span></span>|<span data-ttu-id="690ff-124">2009-06-01T13:45:30 -> 1</span><span class="sxs-lookup"><span data-stu-id="690ff-124">2009-06-01T13:45:30 -> 1</span></span><br /><br /> <span data-ttu-id="690ff-125">2009-06-15T13:45:30 -> 15</span><span class="sxs-lookup"><span data-stu-id="690ff-125">2009-06-15T13:45:30 -> 15</span></span>|  
+|<span data-ttu-id="690ff-126">"dd"</span><span class="sxs-lookup"><span data-stu-id="690ff-126">"dd"</span></span>|<span data-ttu-id="690ff-127">月份天數，從 01 到 31。</span><span class="sxs-lookup"><span data-stu-id="690ff-127">The day of the month, from 01 through 31.</span></span><br /><br /> <span data-ttu-id="690ff-128">詳細資訊：["dd" 自訂格式規範](#ddSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-128">More information: [The "dd" Custom Format Specifier](#ddSpecifier).</span></span>|<span data-ttu-id="690ff-129">2009-06-01T13:45:30 -> 01</span><span class="sxs-lookup"><span data-stu-id="690ff-129">2009-06-01T13:45:30 -> 01</span></span><br /><br /> <span data-ttu-id="690ff-130">2009-06-15T13:45:30 -> 15</span><span class="sxs-lookup"><span data-stu-id="690ff-130">2009-06-15T13:45:30 -> 15</span></span>|  
+|<span data-ttu-id="690ff-131">"ddd"</span><span class="sxs-lookup"><span data-stu-id="690ff-131">"ddd"</span></span>|<span data-ttu-id="690ff-132">星期幾的縮寫名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-132">The abbreviated name of the day of the week.</span></span><br /><br /> <span data-ttu-id="690ff-133">詳細資訊：["ddd" 自訂格式規範](#dddSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-133">More information: [The "ddd" Custom Format Specifier](#dddSpecifier).</span></span>|<span data-ttu-id="690ff-134">2009-06-15T13:45:30 -> Mon (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-134">2009-06-15T13:45:30 -> Mon (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-135">2009-06-15T13:45:30 -> Пн (ru-RU)</span><span class="sxs-lookup"><span data-stu-id="690ff-135">2009-06-15T13:45:30 -> Пн (ru-RU)</span></span><br /><br /> <span data-ttu-id="690ff-136">2009-06-15T13:45:30 -> lun.</span><span class="sxs-lookup"><span data-stu-id="690ff-136">2009-06-15T13:45:30 -> lun.</span></span> <span data-ttu-id="690ff-137">(fr-FR)</span><span class="sxs-lookup"><span data-stu-id="690ff-137">(fr-FR)</span></span>|  
+|<span data-ttu-id="690ff-138">"dddd"</span><span class="sxs-lookup"><span data-stu-id="690ff-138">"dddd"</span></span>|<span data-ttu-id="690ff-139">星期幾的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-139">The full name of the day of the week.</span></span><br /><br /> <span data-ttu-id="690ff-140">詳細資訊：["dddd" 自訂格式規範](#ddddSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-140">More information: [The "dddd" Custom Format Specifier](#ddddSpecifier).</span></span>|<span data-ttu-id="690ff-141">2009-06-15T13:45:30 -> Monday (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-141">2009-06-15T13:45:30 -> Monday (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-142">2009-06-15T13:45:30 -> понедельник (ru-RU)</span><span class="sxs-lookup"><span data-stu-id="690ff-142">2009-06-15T13:45:30 -> понедельник (ru-RU)</span></span><br /><br /> <span data-ttu-id="690ff-143">2009-06-15T13:45:30 -> lundi (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="690ff-143">2009-06-15T13:45:30 -> lundi (fr-FR)</span></span>|  
+|<span data-ttu-id="690ff-144">"f"</span><span class="sxs-lookup"><span data-stu-id="690ff-144">"f"</span></span>|<span data-ttu-id="690ff-145">日期和時間值中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-145">The tenths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-146">詳細資訊：["f" 自訂格式規範](#fSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-146">More information: [The "f" Custom Format Specifier](#fSpecifier).</span></span>|<span data-ttu-id="690ff-147">2009-06-15T13:45:30.6170000 -> 6</span><span class="sxs-lookup"><span data-stu-id="690ff-147">2009-06-15T13:45:30.6170000 -> 6</span></span><br /><br /> <span data-ttu-id="690ff-148">2009-06-15T13:45:30.05 -> 0</span><span class="sxs-lookup"><span data-stu-id="690ff-148">2009-06-15T13:45:30.05 -> 0</span></span>|  
+|<span data-ttu-id="690ff-149">"ff"</span><span class="sxs-lookup"><span data-stu-id="690ff-149">"ff"</span></span>|<span data-ttu-id="690ff-150">日期和時間值中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-150">The hundredths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-151">詳細資訊：["ff" 自訂格式規範](#ffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-151">More information: [The "ff" Custom Format Specifier](#ffSpecifier).</span></span>|<span data-ttu-id="690ff-152">2009-06-15T13:45:30.6170000 -> 61</span><span class="sxs-lookup"><span data-stu-id="690ff-152">2009-06-15T13:45:30.6170000 -> 61</span></span><br /><br /> <span data-ttu-id="690ff-153">2009-06-15T13:45:30.0050000 -> 00</span><span class="sxs-lookup"><span data-stu-id="690ff-153">2009-06-15T13:45:30.0050000 -> 00</span></span>|  
+|<span data-ttu-id="690ff-154">"fff"</span><span class="sxs-lookup"><span data-stu-id="690ff-154">"fff"</span></span>|<span data-ttu-id="690ff-155">日期和時間值中的千分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-155">The milliseconds in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-156">詳細資訊：["fff" 自訂格式規範](#fffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-156">More information: [The "fff" Custom Format Specifier](#fffSpecifier).</span></span>|<span data-ttu-id="690ff-157">6/15/2009 13:45:30.617 -> 617</span><span class="sxs-lookup"><span data-stu-id="690ff-157">6/15/2009 13:45:30.617 -> 617</span></span><br /><br /> <span data-ttu-id="690ff-158">6/15/2009 13:45:30.0005 -> 000</span><span class="sxs-lookup"><span data-stu-id="690ff-158">6/15/2009 13:45:30.0005 -> 000</span></span>|  
+|<span data-ttu-id="690ff-159">"ffff"</span><span class="sxs-lookup"><span data-stu-id="690ff-159">"ffff"</span></span>|<span data-ttu-id="690ff-160">日期和時間值中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-160">The ten thousandths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-161">詳細資訊：["ffff" 自訂格式規範](#ffffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-161">More information: [The "ffff" Custom Format Specifier](#ffffSpecifier).</span></span>|<span data-ttu-id="690ff-162">2009-06-15T13:45:30.6175000 -> 6175</span><span class="sxs-lookup"><span data-stu-id="690ff-162">2009-06-15T13:45:30.6175000 -> 6175</span></span><br /><br /> <span data-ttu-id="690ff-163">2009-06-15T13:45:30.0000500  -> 0000</span><span class="sxs-lookup"><span data-stu-id="690ff-163">2009-06-15T13:45:30.0000500  -> 0000</span></span>|  
+|<span data-ttu-id="690ff-164">"fffff"</span><span class="sxs-lookup"><span data-stu-id="690ff-164">"fffff"</span></span>|<span data-ttu-id="690ff-165">日期和時間值中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-165">The hundred thousandths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-166">詳細資訊：["fffff" 自訂格式規範](#fffffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-166">More information: [The "fffff" Custom Format Specifier](#fffffSpecifier).</span></span>|<span data-ttu-id="690ff-167">2009-06-15T13:45:30.6175400 -> 61754</span><span class="sxs-lookup"><span data-stu-id="690ff-167">2009-06-15T13:45:30.6175400 -> 61754</span></span><br /><br /> <span data-ttu-id="690ff-168">6/15/2009 13:45:30.000005 -> 00000</span><span class="sxs-lookup"><span data-stu-id="690ff-168">6/15/2009 13:45:30.000005 -> 00000</span></span>|  
+|<span data-ttu-id="690ff-169">"ffffff"</span><span class="sxs-lookup"><span data-stu-id="690ff-169">"ffffff"</span></span>|<span data-ttu-id="690ff-170">日期和時間值中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-170">The millionths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-171">詳細資訊：["ffffff" 自訂格式規範](#ffffffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-171">More information: [The "ffffff" Custom Format Specifier](#ffffffSpecifier).</span></span>|<span data-ttu-id="690ff-172">2009-06-15T13:45:30.6175420 -> 617542</span><span class="sxs-lookup"><span data-stu-id="690ff-172">2009-06-15T13:45:30.6175420 -> 617542</span></span><br /><br /> <span data-ttu-id="690ff-173">2009-06-15T13:45:30.0000005 -> 000000</span><span class="sxs-lookup"><span data-stu-id="690ff-173">2009-06-15T13:45:30.0000005 -> 000000</span></span>|  
+|<span data-ttu-id="690ff-174">"fffffff"</span><span class="sxs-lookup"><span data-stu-id="690ff-174">"fffffff"</span></span>|<span data-ttu-id="690ff-175">日期和時間值中的千萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-175">The ten millionths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-176">詳細資訊：["fffffff" 自訂格式規範](#fffffffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-176">More information: [The "fffffff" Custom Format Specifier](#fffffffSpecifier).</span></span>|<span data-ttu-id="690ff-177">2009-06-15T13:45:30.6175425 -> 6175425</span><span class="sxs-lookup"><span data-stu-id="690ff-177">2009-06-15T13:45:30.6175425 -> 6175425</span></span><br /><br /> <span data-ttu-id="690ff-178">2009-06-15T13:45:30.0001150 -> 0001150</span><span class="sxs-lookup"><span data-stu-id="690ff-178">2009-06-15T13:45:30.0001150 -> 0001150</span></span>|  
+|<span data-ttu-id="690ff-179">"F"</span><span class="sxs-lookup"><span data-stu-id="690ff-179">"F"</span></span>|<span data-ttu-id="690ff-180">如果不是零，則為日期和時間值中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-180">If non-zero, the tenths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-181">詳細資訊：["F" 自訂格式規範](#F_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-181">More information: [The "F" Custom Format Specifier](#F_Specifier).</span></span>|<span data-ttu-id="690ff-182">2009-06-15T13:45:30.6170000 -> 6</span><span class="sxs-lookup"><span data-stu-id="690ff-182">2009-06-15T13:45:30.6170000 -> 6</span></span><br /><br /> <span data-ttu-id="690ff-183">2009-06-15T13:45:30.0500000 -> (沒有輸出)</span><span class="sxs-lookup"><span data-stu-id="690ff-183">2009-06-15T13:45:30.0500000 -> (no output)</span></span>|  
+|<span data-ttu-id="690ff-184">"FF"</span><span class="sxs-lookup"><span data-stu-id="690ff-184">"FF"</span></span>|<span data-ttu-id="690ff-185">如果不是零，則為日期和時間值中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-185">If non-zero, the hundredths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-186">詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-186">More information: [The "FF" Custom Format Specifier](#FF_Specifier).</span></span>|<span data-ttu-id="690ff-187">2009-06-15T13:45:30.6170000 -> 61</span><span class="sxs-lookup"><span data-stu-id="690ff-187">2009-06-15T13:45:30.6170000 -> 61</span></span><br /><br /> <span data-ttu-id="690ff-188">2009-06-15T13:45:30.0050000 -> (沒有輸出)</span><span class="sxs-lookup"><span data-stu-id="690ff-188">2009-06-15T13:45:30.0050000 -> (no output)</span></span>|  
+|<span data-ttu-id="690ff-189">"FFF"</span><span class="sxs-lookup"><span data-stu-id="690ff-189">"FFF"</span></span>|<span data-ttu-id="690ff-190">如果不是零，則為日期和時間值中的千分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-190">If non-zero, the milliseconds in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-191">詳細資訊：["FFF" 自訂格式規範](#FFF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-191">More information: [The "FFF" Custom Format Specifier](#FFF_Specifier).</span></span>|<span data-ttu-id="690ff-192">2009-06-15T13:45:30.6170000 -> 617</span><span class="sxs-lookup"><span data-stu-id="690ff-192">2009-06-15T13:45:30.6170000 -> 617</span></span><br /><br /> <span data-ttu-id="690ff-193">2009-06-15T13:45:30.0005000 -> (沒有輸出)</span><span class="sxs-lookup"><span data-stu-id="690ff-193">2009-06-15T13:45:30.0005000 -> (no output)</span></span>|  
+|<span data-ttu-id="690ff-194">"FFFF"</span><span class="sxs-lookup"><span data-stu-id="690ff-194">"FFFF"</span></span>|<span data-ttu-id="690ff-195">如果不是零，則為日期和時間值中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-195">If non-zero, the ten thousandths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-196">詳細資訊：["FFFF" 自訂格式規範](#FFFF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-196">More information: [The "FFFF" Custom Format Specifier](#FFFF_Specifier).</span></span>|<span data-ttu-id="690ff-197">2009-06-15T13:45:30.5275000 -> 5275</span><span class="sxs-lookup"><span data-stu-id="690ff-197">2009-06-15T13:45:30.5275000 -> 5275</span></span><br /><br /> <span data-ttu-id="690ff-198">2009-06-15T13:45:30.0000500 -> (沒有輸出)</span><span class="sxs-lookup"><span data-stu-id="690ff-198">2009-06-15T13:45:30.0000500 -> (no output)</span></span>|  
+|<span data-ttu-id="690ff-199">"FFFFF"</span><span class="sxs-lookup"><span data-stu-id="690ff-199">"FFFFF"</span></span>|<span data-ttu-id="690ff-200">如果不是零，則為日期和時間值中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-200">If non-zero, the hundred thousandths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-201">詳細資訊：["FFFFF" 自訂格式規範](#FFFFF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-201">More information: [The "FFFFF" Custom Format Specifier](#FFFFF_Specifier).</span></span>|<span data-ttu-id="690ff-202">2009-06-15T13:45:30.6175400 -> 61754</span><span class="sxs-lookup"><span data-stu-id="690ff-202">2009-06-15T13:45:30.6175400 -> 61754</span></span><br /><br /> <span data-ttu-id="690ff-203">2009-06-15T13:45:30.0000050 -> (沒有輸出)</span><span class="sxs-lookup"><span data-stu-id="690ff-203">2009-06-15T13:45:30.0000050 -> (no output)</span></span>|  
+|<span data-ttu-id="690ff-204">"FFFFFF"</span><span class="sxs-lookup"><span data-stu-id="690ff-204">"FFFFFF"</span></span>|<span data-ttu-id="690ff-205">如果不是零，則為日期和時間值中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-205">If non-zero, the millionths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-206">詳細資訊：["FFFFFF" 自訂格式規範](#FFFFFF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-206">More information: [The "FFFFFF" Custom Format Specifier](#FFFFFF_Specifier).</span></span>|<span data-ttu-id="690ff-207">2009-06-15T13:45:30.6175420 -> 617542</span><span class="sxs-lookup"><span data-stu-id="690ff-207">2009-06-15T13:45:30.6175420 -> 617542</span></span><br /><br /> <span data-ttu-id="690ff-208">2009-06-15T13:45:30.0000005 -> (沒有輸出)</span><span class="sxs-lookup"><span data-stu-id="690ff-208">2009-06-15T13:45:30.0000005 -> (no output)</span></span>|  
+|<span data-ttu-id="690ff-209">"FFFFFFF"</span><span class="sxs-lookup"><span data-stu-id="690ff-209">"FFFFFFF"</span></span>|<span data-ttu-id="690ff-210">如果不是零，則為日期和時間值中的千萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-210">If non-zero, the ten millionths of a second in a date and time value.</span></span><br /><br /> <span data-ttu-id="690ff-211">詳細資訊：["FFFFFFF" 自訂格式規範](#FFFFFFF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-211">More information: [The "FFFFFFF" Custom Format Specifier](#FFFFFFF_Specifier).</span></span>|<span data-ttu-id="690ff-212">2009-06-15T13:45:30.6175425 -> 6175425</span><span class="sxs-lookup"><span data-stu-id="690ff-212">2009-06-15T13:45:30.6175425 -> 6175425</span></span><br /><br /> <span data-ttu-id="690ff-213">2009-06-15T13:45:30.0001150 -> 000115</span><span class="sxs-lookup"><span data-stu-id="690ff-213">2009-06-15T13:45:30.0001150 -> 000115</span></span>|  
+|<span data-ttu-id="690ff-214">"g"、"gg"</span><span class="sxs-lookup"><span data-stu-id="690ff-214">"g", "gg"</span></span>|<span data-ttu-id="690ff-215">週期或紀元。</span><span class="sxs-lookup"><span data-stu-id="690ff-215">The period or era.</span></span><br /><br /> <span data-ttu-id="690ff-216">詳細資訊：["g" 或 "gg" 自訂格式規範](#gSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-216">More information: [The "g" or "gg" Custom Format Specifier](#gSpecifier).</span></span>|<span data-ttu-id="690ff-217">2009-06-15T13:45:30.6170000 -> A.D.</span><span class="sxs-lookup"><span data-stu-id="690ff-217">2009-06-15T13:45:30.6170000 -> A.D.</span></span>|  
+|<span data-ttu-id="690ff-218">"h"</span><span class="sxs-lookup"><span data-stu-id="690ff-218">"h"</span></span>|<span data-ttu-id="690ff-219">採用 12 小時制的小時，從 1 到 12。</span><span class="sxs-lookup"><span data-stu-id="690ff-219">The hour, using a 12-hour clock from 1 to 12.</span></span><br /><br /> <span data-ttu-id="690ff-220">詳細資訊：["h" 自訂格式規範](#hSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-220">More information: [The "h" Custom Format Specifier](#hSpecifier).</span></span>|<span data-ttu-id="690ff-221">2009-06-15T01:45:30 -> 1</span><span class="sxs-lookup"><span data-stu-id="690ff-221">2009-06-15T01:45:30 -> 1</span></span><br /><br /> <span data-ttu-id="690ff-222">2009-06-15T13:45:30 -> 1</span><span class="sxs-lookup"><span data-stu-id="690ff-222">2009-06-15T13:45:30 -> 1</span></span>|  
+|<span data-ttu-id="690ff-223">"hh"</span><span class="sxs-lookup"><span data-stu-id="690ff-223">"hh"</span></span>|<span data-ttu-id="690ff-224">採用 12 小時制的小時，從 01 到 12。</span><span class="sxs-lookup"><span data-stu-id="690ff-224">The hour, using a 12-hour clock from 01 to 12.</span></span><br /><br /> <span data-ttu-id="690ff-225">詳細資訊：["hh" 自訂格式規範](#hhSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-225">More information: [The "hh" Custom Format Specifier](#hhSpecifier).</span></span>|<span data-ttu-id="690ff-226">2009-06-15T01:45:30 -> 01</span><span class="sxs-lookup"><span data-stu-id="690ff-226">2009-06-15T01:45:30 -> 01</span></span><br /><br /> <span data-ttu-id="690ff-227">2009-06-15T13:45:30 -> 01</span><span class="sxs-lookup"><span data-stu-id="690ff-227">2009-06-15T13:45:30 -> 01</span></span>|  
+|<span data-ttu-id="690ff-228">"H"</span><span class="sxs-lookup"><span data-stu-id="690ff-228">"H"</span></span>|<span data-ttu-id="690ff-229">採用 24 小時制的小時，從 0 到 23。</span><span class="sxs-lookup"><span data-stu-id="690ff-229">The hour, using a 24-hour clock from 0 to 23.</span></span><br /><br /> <span data-ttu-id="690ff-230">詳細資訊：["H" 自訂格式規範](#H_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-230">More information: [The "H" Custom Format Specifier](#H_Specifier).</span></span>|<span data-ttu-id="690ff-231">2009-06-15T01:45:30 -> 1</span><span class="sxs-lookup"><span data-stu-id="690ff-231">2009-06-15T01:45:30 -> 1</span></span><br /><br /> <span data-ttu-id="690ff-232">2009-06-15T13:45:30 -> 13</span><span class="sxs-lookup"><span data-stu-id="690ff-232">2009-06-15T13:45:30 -> 13</span></span>|  
+|<span data-ttu-id="690ff-233">"HH"</span><span class="sxs-lookup"><span data-stu-id="690ff-233">"HH"</span></span>|<span data-ttu-id="690ff-234">採用 24 小時制的小時，從 00 到 23。</span><span class="sxs-lookup"><span data-stu-id="690ff-234">The hour, using a 24-hour clock from 00 to 23.</span></span><br /><br /> <span data-ttu-id="690ff-235">詳細資訊：["HH" 自訂格式規範](#HH_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-235">More information: [The "HH" Custom Format Specifier](#HH_Specifier).</span></span>|<span data-ttu-id="690ff-236">2009-06-15T01:45:30 -> 01</span><span class="sxs-lookup"><span data-stu-id="690ff-236">2009-06-15T01:45:30 -> 01</span></span><br /><br /> <span data-ttu-id="690ff-237">2009-06-15T13:45:30 -> 13</span><span class="sxs-lookup"><span data-stu-id="690ff-237">2009-06-15T13:45:30 -> 13</span></span>|  
+|<span data-ttu-id="690ff-238">"K"</span><span class="sxs-lookup"><span data-stu-id="690ff-238">"K"</span></span>|<span data-ttu-id="690ff-239">時區資訊。</span><span class="sxs-lookup"><span data-stu-id="690ff-239">Time zone information.</span></span><br /><br /> <span data-ttu-id="690ff-240">詳細資訊：["K" 自訂格式規範](#KSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-240">More information: [The "K" Custom Format Specifier](#KSpecifier).</span></span>|<span data-ttu-id="690ff-241">搭配 <xref:System.DateTime> 值：</span><span class="sxs-lookup"><span data-stu-id="690ff-241">With <xref:System.DateTime> values:</span></span><br /><br /> <span data-ttu-id="690ff-242">2009-06-15T13:45:30, Kind Unspecified -></span><span class="sxs-lookup"><span data-stu-id="690ff-242">2009-06-15T13:45:30, Kind Unspecified -></span></span><br /><br /> <span data-ttu-id="690ff-243">2009-06-15T13:45:30, Kind Utc -> Z</span><span class="sxs-lookup"><span data-stu-id="690ff-243">2009-06-15T13:45:30, Kind Utc -> Z</span></span><br /><br /> <span data-ttu-id="690ff-244">2009-06-15T13:45:30, Kind Local -> -07:00 (依據本機電腦設定)</span><span class="sxs-lookup"><span data-stu-id="690ff-244">2009-06-15T13:45:30, Kind Local -> -07:00 (depends on local computer settings)</span></span><br /><br /> <span data-ttu-id="690ff-245">搭配 <xref:System.DateTimeOffset> 值：</span><span class="sxs-lookup"><span data-stu-id="690ff-245">With <xref:System.DateTimeOffset> values:</span></span><br /><br /> <span data-ttu-id="690ff-246">2009-06-15T01:45:30-07:00 --> -07:00</span><span class="sxs-lookup"><span data-stu-id="690ff-246">2009-06-15T01:45:30-07:00 --> -07:00</span></span><br /><br /> <span data-ttu-id="690ff-247">2009-06-15T08:45:30+00:00 --> +00:00</span><span class="sxs-lookup"><span data-stu-id="690ff-247">2009-06-15T08:45:30+00:00 --> +00:00</span></span>|  
+|<span data-ttu-id="690ff-248">"m"</span><span class="sxs-lookup"><span data-stu-id="690ff-248">"m"</span></span>|<span data-ttu-id="690ff-249">分鐘，從 0 到 59。</span><span class="sxs-lookup"><span data-stu-id="690ff-249">The minute, from 0 through 59.</span></span><br /><br /> <span data-ttu-id="690ff-250">詳細資訊：["m" 自訂格式規範](#mSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-250">More information: [The "m" Custom Format Specifier](#mSpecifier).</span></span>|<span data-ttu-id="690ff-251">2009-06-15T01:09:30 -> 9</span><span class="sxs-lookup"><span data-stu-id="690ff-251">2009-06-15T01:09:30 -> 9</span></span><br /><br /> <span data-ttu-id="690ff-252">2009-06-15T13:29:30 -> 29</span><span class="sxs-lookup"><span data-stu-id="690ff-252">2009-06-15T13:29:30 -> 29</span></span>|  
+|<span data-ttu-id="690ff-253">"mm"</span><span class="sxs-lookup"><span data-stu-id="690ff-253">"mm"</span></span>|<span data-ttu-id="690ff-254">分鐘，從 00 到 59。</span><span class="sxs-lookup"><span data-stu-id="690ff-254">The minute, from 00 through 59.</span></span><br /><br /> <span data-ttu-id="690ff-255">詳細資訊：["mm" 自訂格式規範](#mmSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-255">More information: [The "mm" Custom Format Specifier](#mmSpecifier).</span></span>|<span data-ttu-id="690ff-256">2009-06-15T01:09:30 -> 09</span><span class="sxs-lookup"><span data-stu-id="690ff-256">2009-06-15T01:09:30 -> 09</span></span><br /><br /> <span data-ttu-id="690ff-257">2009-06-15T01:45:30 -> 45</span><span class="sxs-lookup"><span data-stu-id="690ff-257">2009-06-15T01:45:30 -> 45</span></span>|  
+|<span data-ttu-id="690ff-258">"M"</span><span class="sxs-lookup"><span data-stu-id="690ff-258">"M"</span></span>|<span data-ttu-id="690ff-259">月份，從 1 到 12。</span><span class="sxs-lookup"><span data-stu-id="690ff-259">The month, from 1 through 12.</span></span><br /><br /> <span data-ttu-id="690ff-260">詳細資訊：["M" 自訂格式規範](#M_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-260">More information: [The "M" Custom Format Specifier](#M_Specifier).</span></span>|<span data-ttu-id="690ff-261">2009-06-15T13:45:30 -> 6</span><span class="sxs-lookup"><span data-stu-id="690ff-261">2009-06-15T13:45:30 -> 6</span></span>|  
+|<span data-ttu-id="690ff-262">"MM"</span><span class="sxs-lookup"><span data-stu-id="690ff-262">"MM"</span></span>|<span data-ttu-id="690ff-263">月份，從 01 到 12。</span><span class="sxs-lookup"><span data-stu-id="690ff-263">The month, from 01 through 12.</span></span><br /><br /> <span data-ttu-id="690ff-264">詳細資訊：["MM" 自訂格式規範](#MM_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-264">More information: [The "MM" Custom Format Specifier](#MM_Specifier).</span></span>|<span data-ttu-id="690ff-265">2009-06-15T13:45:30 -> 06</span><span class="sxs-lookup"><span data-stu-id="690ff-265">2009-06-15T13:45:30 -> 06</span></span>|  
+|<span data-ttu-id="690ff-266">"MMM"</span><span class="sxs-lookup"><span data-stu-id="690ff-266">"MMM"</span></span>|<span data-ttu-id="690ff-267">月份的縮寫名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-267">The abbreviated name of the month.</span></span><br /><br /> <span data-ttu-id="690ff-268">詳細資訊：["MMM" 自訂格式規範](#MMM_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-268">More information: [The "MMM" Custom Format Specifier](#MMM_Specifier).</span></span>|<span data-ttu-id="690ff-269">2009-06-15T13:45:30 -> Jun (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-269">2009-06-15T13:45:30 -> Jun (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-270">2009-06-15T13:45:30 -> juin (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="690ff-270">2009-06-15T13:45:30 -> juin (fr-FR)</span></span><br /><br /> <span data-ttu-id="690ff-271">2009-06-15T13:45:30 -> Jun (zu-ZA)</span><span class="sxs-lookup"><span data-stu-id="690ff-271">2009-06-15T13:45:30 -> Jun (zu-ZA)</span></span>|  
+|<span data-ttu-id="690ff-272">"MMMM"</span><span class="sxs-lookup"><span data-stu-id="690ff-272">"MMMM"</span></span>|<span data-ttu-id="690ff-273">月份的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-273">The full name of the month.</span></span><br /><br /> <span data-ttu-id="690ff-274">詳細資訊：["MMMM" 自訂格式規範](#MMMM_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-274">More information: [The "MMMM" Custom Format Specifier](#MMMM_Specifier).</span></span>|<span data-ttu-id="690ff-275">2009-06-15T13:45:30 -> June (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-275">2009-06-15T13:45:30 -> June (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-276">2009-06-15T13:45:30 -> juni (da-DK)</span><span class="sxs-lookup"><span data-stu-id="690ff-276">2009-06-15T13:45:30 -> juni (da-DK)</span></span><br /><br /> <span data-ttu-id="690ff-277">2009-06-15T13:45:30 -> uJuni (zu-ZA)</span><span class="sxs-lookup"><span data-stu-id="690ff-277">2009-06-15T13:45:30 -> uJuni (zu-ZA)</span></span>|  
+|<span data-ttu-id="690ff-278">"s"</span><span class="sxs-lookup"><span data-stu-id="690ff-278">"s"</span></span>|<span data-ttu-id="690ff-279">秒數，從 0 到 59。</span><span class="sxs-lookup"><span data-stu-id="690ff-279">The second, from 0 through 59.</span></span><br /><br /> <span data-ttu-id="690ff-280">詳細資訊：["s" 自訂格式規範](#sSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-280">More information: [The "s" Custom Format Specifier](#sSpecifier).</span></span>|<span data-ttu-id="690ff-281">2009-06-15T13:45:09 -> 9</span><span class="sxs-lookup"><span data-stu-id="690ff-281">2009-06-15T13:45:09 -> 9</span></span>|  
+|<span data-ttu-id="690ff-282">"ss"</span><span class="sxs-lookup"><span data-stu-id="690ff-282">"ss"</span></span>|<span data-ttu-id="690ff-283">秒數，從 00 到 59。</span><span class="sxs-lookup"><span data-stu-id="690ff-283">The second, from 00 through 59.</span></span><br /><br /> <span data-ttu-id="690ff-284">詳細資訊：["ss" 自訂格式規範](#ssSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-284">More information: [The "ss" Custom Format Specifier](#ssSpecifier).</span></span>|<span data-ttu-id="690ff-285">2009-06-15T13:45:09 -> 09</span><span class="sxs-lookup"><span data-stu-id="690ff-285">2009-06-15T13:45:09 -> 09</span></span>|  
+|<span data-ttu-id="690ff-286">"t"</span><span class="sxs-lookup"><span data-stu-id="690ff-286">"t"</span></span>|<span data-ttu-id="690ff-287">AM/PM 指示項的第一個字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-287">The first character of the AM/PM designator.</span></span><br /><br /> <span data-ttu-id="690ff-288">詳細資訊：["t" 自訂格式規範](#tSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-288">More information: [The "t" Custom Format Specifier](#tSpecifier).</span></span>|<span data-ttu-id="690ff-289">2009-06-15T13:45:30 -> P (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-289">2009-06-15T13:45:30 -> P (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-290">2009-06-15T13:45:30 -> 午 (ja-JP)</span><span class="sxs-lookup"><span data-stu-id="690ff-290">2009-06-15T13:45:30 -> 午 (ja-JP)</span></span><br /><br /> <span data-ttu-id="690ff-291">2009-06-15T13:45:30 ->  (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="690ff-291">2009-06-15T13:45:30 ->  (fr-FR)</span></span>|  
+|<span data-ttu-id="690ff-292">"tt"</span><span class="sxs-lookup"><span data-stu-id="690ff-292">"tt"</span></span>|<span data-ttu-id="690ff-293">AM/PM 指示項。</span><span class="sxs-lookup"><span data-stu-id="690ff-293">The AM/PM designator.</span></span><br /><br /> <span data-ttu-id="690ff-294">詳細資訊：["tt" 自訂格式規範](#ttSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-294">More information: [The "tt" Custom Format Specifier](#ttSpecifier).</span></span>|<span data-ttu-id="690ff-295">2009-06-15T13:45:30 -> PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-295">2009-06-15T13:45:30 -> PM (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-296">2009-06-15T13:45:30 -> 午後 (ja-JP)</span><span class="sxs-lookup"><span data-stu-id="690ff-296">2009-06-15T13:45:30 -> 午後 (ja-JP)</span></span><br /><br /> <span data-ttu-id="690ff-297">2009-06-15T13:45:30 ->  (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="690ff-297">2009-06-15T13:45:30 ->  (fr-FR)</span></span>|  
+|<span data-ttu-id="690ff-298">"y"</span><span class="sxs-lookup"><span data-stu-id="690ff-298">"y"</span></span>|<span data-ttu-id="690ff-299">年份，從 0 到 99。</span><span class="sxs-lookup"><span data-stu-id="690ff-299">The year, from 0 to 99.</span></span><br /><br /> <span data-ttu-id="690ff-300">詳細資訊：["y" 自訂格式規範](#ySpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-300">More information: [The "y" Custom Format Specifier](#ySpecifier).</span></span>|<span data-ttu-id="690ff-301">0001-01-01T00:00:00 -> 1</span><span class="sxs-lookup"><span data-stu-id="690ff-301">0001-01-01T00:00:00 -> 1</span></span><br /><br /> <span data-ttu-id="690ff-302">0900-01-01T00:00:00 -> 0</span><span class="sxs-lookup"><span data-stu-id="690ff-302">0900-01-01T00:00:00 -> 0</span></span><br /><br /> <span data-ttu-id="690ff-303">1900-01-01T00:00:00 -> 0</span><span class="sxs-lookup"><span data-stu-id="690ff-303">1900-01-01T00:00:00 -> 0</span></span><br /><br /> <span data-ttu-id="690ff-304">2009-06-15T13:45:30 -> 9</span><span class="sxs-lookup"><span data-stu-id="690ff-304">2009-06-15T13:45:30 -> 9</span></span><br /><br /> <span data-ttu-id="690ff-305">2019-06-15T13:45:30 -> 19</span><span class="sxs-lookup"><span data-stu-id="690ff-305">2019-06-15T13:45:30 -> 19</span></span>|  
+|<span data-ttu-id="690ff-306">"yy"</span><span class="sxs-lookup"><span data-stu-id="690ff-306">"yy"</span></span>|<span data-ttu-id="690ff-307">年份，從 00 到 99。</span><span class="sxs-lookup"><span data-stu-id="690ff-307">The year, from 00 to 99.</span></span><br /><br /> <span data-ttu-id="690ff-308">詳細資訊：["yy" 自訂格式規範](#yySpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-308">More information: [The "yy" Custom Format Specifier](#yySpecifier).</span></span>|<span data-ttu-id="690ff-309">0001-01-01T00:00:00 -> 01</span><span class="sxs-lookup"><span data-stu-id="690ff-309">0001-01-01T00:00:00 -> 01</span></span><br /><br /> <span data-ttu-id="690ff-310">0900-01-01T00:00:00 -> 00</span><span class="sxs-lookup"><span data-stu-id="690ff-310">0900-01-01T00:00:00 -> 00</span></span><br /><br /> <span data-ttu-id="690ff-311">1900-01-01T00:00:00 -> 00</span><span class="sxs-lookup"><span data-stu-id="690ff-311">1900-01-01T00:00:00 -> 00</span></span><br /><br /> <span data-ttu-id="690ff-312">2019-06-15T13:45:30 -> 19</span><span class="sxs-lookup"><span data-stu-id="690ff-312">2019-06-15T13:45:30 -> 19</span></span>|  
+|<span data-ttu-id="690ff-313">"yyy"</span><span class="sxs-lookup"><span data-stu-id="690ff-313">"yyy"</span></span>|<span data-ttu-id="690ff-314">年份，至少三位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-314">The year, with a minimum of three digits.</span></span><br /><br /> <span data-ttu-id="690ff-315">詳細資訊：["yyy" 自訂格式規範](#yyySpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-315">More information: [The "yyy" Custom Format Specifier](#yyySpecifier).</span></span>|<span data-ttu-id="690ff-316">0001-01-01T00:00:00 -> 001</span><span class="sxs-lookup"><span data-stu-id="690ff-316">0001-01-01T00:00:00 -> 001</span></span><br /><br /> <span data-ttu-id="690ff-317">0900-01-01T00:00:00 -> 900</span><span class="sxs-lookup"><span data-stu-id="690ff-317">0900-01-01T00:00:00 -> 900</span></span><br /><br /> <span data-ttu-id="690ff-318">1900-01-01T00:00:00 -> 1900</span><span class="sxs-lookup"><span data-stu-id="690ff-318">1900-01-01T00:00:00 -> 1900</span></span><br /><br /> <span data-ttu-id="690ff-319">2009-06-15T13:45:30 -> 2009</span><span class="sxs-lookup"><span data-stu-id="690ff-319">2009-06-15T13:45:30 -> 2009</span></span>|  
+|<span data-ttu-id="690ff-320">"yyyy"</span><span class="sxs-lookup"><span data-stu-id="690ff-320">"yyyy"</span></span>|<span data-ttu-id="690ff-321">以四位數表示的年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-321">The year as a four-digit number.</span></span><br /><br /> <span data-ttu-id="690ff-322">詳細資訊：["yyyy" 自訂格式規範](#yyyySpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-322">More information: [The "yyyy" Custom Format Specifier](#yyyySpecifier).</span></span>|<span data-ttu-id="690ff-323">0001-01-01T00:00:00 -> 0001</span><span class="sxs-lookup"><span data-stu-id="690ff-323">0001-01-01T00:00:00 -> 0001</span></span><br /><br /> <span data-ttu-id="690ff-324">0900-01-01T00:00:00 -> 0900</span><span class="sxs-lookup"><span data-stu-id="690ff-324">0900-01-01T00:00:00 -> 0900</span></span><br /><br /> <span data-ttu-id="690ff-325">1900-01-01T00:00:00 -> 1900</span><span class="sxs-lookup"><span data-stu-id="690ff-325">1900-01-01T00:00:00 -> 1900</span></span><br /><br /> <span data-ttu-id="690ff-326">2009-06-15T13:45:30 -> 2009</span><span class="sxs-lookup"><span data-stu-id="690ff-326">2009-06-15T13:45:30 -> 2009</span></span>|  
+|<span data-ttu-id="690ff-327">"yyyyy"</span><span class="sxs-lookup"><span data-stu-id="690ff-327">"yyyyy"</span></span>|<span data-ttu-id="690ff-328">以五位數表示的年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-328">The year as a five-digit number.</span></span><br /><br /> <span data-ttu-id="690ff-329">詳細資訊：["yyyyy" 自訂格式規範](#yyyyySpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-329">More information: [The "yyyyy" Custom Format Specifier](#yyyyySpecifier).</span></span>|<span data-ttu-id="690ff-330">0001-01-01T00:00:00 -> 00001</span><span class="sxs-lookup"><span data-stu-id="690ff-330">0001-01-01T00:00:00 -> 00001</span></span><br /><br /> <span data-ttu-id="690ff-331">2009-06-15T13:45:30 -> 02009</span><span class="sxs-lookup"><span data-stu-id="690ff-331">2009-06-15T13:45:30 -> 02009</span></span>|  
+|<span data-ttu-id="690ff-332">"z"</span><span class="sxs-lookup"><span data-stu-id="690ff-332">"z"</span></span>|<span data-ttu-id="690ff-333">與 UTC 相差的時數，不加上前置零。</span><span class="sxs-lookup"><span data-stu-id="690ff-333">Hours offset from UTC, with no leading zeros.</span></span><br /><br /> <span data-ttu-id="690ff-334">詳細資訊：["z" 自訂格式規範](#zSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-334">More information: [The "z" Custom Format Specifier](#zSpecifier).</span></span>|<span data-ttu-id="690ff-335">2009-06-15T13:45:30-07:00 -> -7</span><span class="sxs-lookup"><span data-stu-id="690ff-335">2009-06-15T13:45:30-07:00 -> -7</span></span>|  
+|<span data-ttu-id="690ff-336">"zz"</span><span class="sxs-lookup"><span data-stu-id="690ff-336">"zz"</span></span>|<span data-ttu-id="690ff-337">與 UTC 相差的時數，單一位數值會加上前置零。</span><span class="sxs-lookup"><span data-stu-id="690ff-337">Hours offset from UTC, with a leading zero for a single-digit value.</span></span><br /><br /> <span data-ttu-id="690ff-338">詳細資訊：["zz" 自訂格式規範](#zzSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-338">More information: [The "zz" Custom Format Specifier](#zzSpecifier).</span></span>|<span data-ttu-id="690ff-339">2009-06-15T13:45:30-07:00 -> -07</span><span class="sxs-lookup"><span data-stu-id="690ff-339">2009-06-15T13:45:30-07:00 -> -07</span></span>|  
+|<span data-ttu-id="690ff-340">"zzz"</span><span class="sxs-lookup"><span data-stu-id="690ff-340">"zzz"</span></span>|<span data-ttu-id="690ff-341">與 UTC 相差的時數和分鐘數。</span><span class="sxs-lookup"><span data-stu-id="690ff-341">Hours and minutes offset from UTC.</span></span><br /><br /> <span data-ttu-id="690ff-342">詳細資訊：["zzz" 自訂格式規範](#zzzSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="690ff-342">More information: [The "zzz" Custom Format Specifier](#zzzSpecifier).</span></span>|<span data-ttu-id="690ff-343">2009-06-15T13:45:30-07:00 -> -07:00</span><span class="sxs-lookup"><span data-stu-id="690ff-343">2009-06-15T13:45:30-07:00 -> -07:00</span></span>|  
+|<span data-ttu-id="690ff-344">":"</span><span class="sxs-lookup"><span data-stu-id="690ff-344">":"</span></span>|<span data-ttu-id="690ff-345">時間分隔符號。</span><span class="sxs-lookup"><span data-stu-id="690ff-345">The time separator.</span></span><br /><br /> <span data-ttu-id="690ff-346">詳細資訊：[":" 自訂格式規範](#timeSeparator)。</span><span class="sxs-lookup"><span data-stu-id="690ff-346">More information: [The ":" Custom Format Specifier](#timeSeparator).</span></span>|<span data-ttu-id="690ff-347">2009-06-15T13:45:30 -> : (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-347">2009-06-15T13:45:30 -> : (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-348">2009-06-15T13:45:30 -> .</span><span class="sxs-lookup"><span data-stu-id="690ff-348">2009-06-15T13:45:30 -> .</span></span> <span data-ttu-id="690ff-349">(it-IT)</span><span class="sxs-lookup"><span data-stu-id="690ff-349">(it-IT)</span></span><br /><br /> <span data-ttu-id="690ff-350">2009-06-15T13:45:30 -> : (ja-JP)</span><span class="sxs-lookup"><span data-stu-id="690ff-350">2009-06-15T13:45:30 -> : (ja-JP)</span></span>|  
+|<span data-ttu-id="690ff-351">"/"</span><span class="sxs-lookup"><span data-stu-id="690ff-351">"/"</span></span>|<span data-ttu-id="690ff-352">日期分隔符號。</span><span class="sxs-lookup"><span data-stu-id="690ff-352">The date separator.</span></span><br /><br /> <span data-ttu-id="690ff-353">詳細資訊：["/" 自訂格式規範](#dateSeparator)。</span><span class="sxs-lookup"><span data-stu-id="690ff-353">More Information: [The "/" Custom Format Specifier](#dateSeparator).</span></span>|<span data-ttu-id="690ff-354">2009-06-15T13:45:30 -> / (en-US)</span><span class="sxs-lookup"><span data-stu-id="690ff-354">2009-06-15T13:45:30 -> / (en-US)</span></span><br /><br /> <span data-ttu-id="690ff-355">2009-06-15T13:45:30 -> - (ar-DZ)</span><span class="sxs-lookup"><span data-stu-id="690ff-355">2009-06-15T13:45:30 -> - (ar-DZ)</span></span><br /><br /> <span data-ttu-id="690ff-356">2009-06-15T13:45:30 -> .</span><span class="sxs-lookup"><span data-stu-id="690ff-356">2009-06-15T13:45:30 -> .</span></span> <span data-ttu-id="690ff-357">(tr-TR)</span><span class="sxs-lookup"><span data-stu-id="690ff-357">(tr-TR)</span></span>|  
+|<span data-ttu-id="690ff-358">"*string*"</span><span class="sxs-lookup"><span data-stu-id="690ff-358">"*string*"</span></span><br /><br /> <span data-ttu-id="690ff-359">'*string*'</span><span class="sxs-lookup"><span data-stu-id="690ff-359">'*string*'</span></span>|<span data-ttu-id="690ff-360">常值字串分隔符號。</span><span class="sxs-lookup"><span data-stu-id="690ff-360">Literal string delimiter.</span></span><br /><br /> <span data-ttu-id="690ff-361">詳細資訊︰[字元常值](#Literals)。</span><span class="sxs-lookup"><span data-stu-id="690ff-361">More information: [Character literals](#Literals).</span></span>|<span data-ttu-id="690ff-362">2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P</span><span class="sxs-lookup"><span data-stu-id="690ff-362">2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P</span></span><br /><br /> <span data-ttu-id="690ff-363">2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P</span><span class="sxs-lookup"><span data-stu-id="690ff-363">2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P</span></span>|  
+|%|<span data-ttu-id="690ff-364">將下列字元定義為自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-364">Defines the following character as a custom format specifier.</span></span><br /><br /> <span data-ttu-id="690ff-365">詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-365">More information:[Using Single Custom Format Specifiers](#UsingSingleSpecifiers).</span></span>|<span data-ttu-id="690ff-366">2009-06-15T13:45:30 (%h) -> 1</span><span class="sxs-lookup"><span data-stu-id="690ff-366">2009-06-15T13:45:30 (%h) -> 1</span></span>|  
+|\|<span data-ttu-id="690ff-367">逸出字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-367">The escape character.</span></span><br /><br /> <span data-ttu-id="690ff-368">詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。</span><span class="sxs-lookup"><span data-stu-id="690ff-368">More information: [Character literals](#Literals) and [Using the Escape Character](#escape).</span></span>|<span data-ttu-id="690ff-369">2009-06-15T13:45:30 (h \h) -> 1 h</span><span class="sxs-lookup"><span data-stu-id="690ff-369">2009-06-15T13:45:30 (h \h) -> 1 h</span></span>|  
+|<span data-ttu-id="690ff-370">任意字元</span><span class="sxs-lookup"><span data-stu-id="690ff-370">Any other character</span></span>|<span data-ttu-id="690ff-371">字元會原封不動地複製到結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-371">The character is copied to the result string unchanged.</span></span><br /><br /> <span data-ttu-id="690ff-372">詳細資訊︰[字元常值](#Literals)。</span><span class="sxs-lookup"><span data-stu-id="690ff-372">More information: [Character literals](#Literals).</span></span>|<span data-ttu-id="690ff-373">2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A</span><span class="sxs-lookup"><span data-stu-id="690ff-373">2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A</span></span>|  
   
- 下列各節提供每個自訂日期和時間格式規範的其他資訊。 除非特別註明，否則每個規範都會產生相同的字串表示，無論是與 <xref:System.DateTime> 值或 <xref:System.DateTimeOffset> 值搭配使用。  
+ <span data-ttu-id="690ff-374">下列各節提供每個自訂日期和時間格式規範的其他資訊。</span><span class="sxs-lookup"><span data-stu-id="690ff-374">The following sections provide additional information about each custom date and time format specifier.</span></span> <span data-ttu-id="690ff-375">除非特別註明，否則每個規範都會產生相同的字串表示，無論是與 <xref:System.DateTime> 值或 <xref:System.DateTimeOffset> 值搭配使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-375">Unless otherwise noted, each specifier produces an identical string representation regardless of whether it is used with a <xref:System.DateTime> value or a <xref:System.DateTimeOffset> value.</span></span>  
   
 <a name="dSpecifier"></a>   
-## "d" 自訂格式規範  
- "d" 自訂格式規範以 1 到 31 的數字來表示月份天數。 單一位數的天數會格式化為沒有前置零的數字。  
+## <a name="the-d-custom-format-specifier"></a><span data-ttu-id="690ff-376">"d" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-376">The "d" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-377">"d" 自訂格式規範以 1 到 31 的數字來表示月份天數。</span><span class="sxs-lookup"><span data-stu-id="690ff-377">The "d" custom format specifier represents the day of the month as a number from 1 through 31.</span></span> <span data-ttu-id="690ff-378">單一位數的天數會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-378">A single-digit day is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "d" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "d" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-379">如果單獨使用 "d" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "d" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-379">If the "d" format specifier is used without other custom format specifiers, it is interpreted as the "d" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-380">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-380">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在幾個格式字串中加入 "d" 自訂格式規範。  
+ <span data-ttu-id="690ff-381">下列範例會在幾個格式字串中加入 "d" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-381">The following example includes the "d" custom format specifier in several format strings.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#1)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-382">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-382">Back to table</span></span>](#table)  
   
 <a name="ddSpecifier"></a>   
-## "dd" 自訂格式規範  
- "dd" 自訂格式字串以 01 到 31 的數字來表示月份天數。 單一位數的天數會格式化為有前置零的數字。  
+## <a name="the-dd-custom-format-specifier"></a><span data-ttu-id="690ff-383">"dd" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-383">The "dd" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-384">"dd" 自訂格式字串以 01 到 31 的數字來表示月份天數。</span><span class="sxs-lookup"><span data-stu-id="690ff-384">The "dd" custom format string represents the day of the month as a number from 01 through 31.</span></span> <span data-ttu-id="690ff-385">單一位數的天數會格式化為有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-385">A single-digit day is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "dd" 自訂格式規範。  
+ <span data-ttu-id="690ff-386">下列範例會在自訂格式字串中加入 "dd" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-386">The following example includes the "dd" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-387">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-387">Back to table</span></span>](#table)  
   
 <a name="dddSpecifier"></a>   
-## "ddd" 自訂格式規範  
- "ddd" 自訂格式規範表示星期幾的縮寫名稱。 星期幾的當地語系化縮寫名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=fullName> 屬性。  
+## <a name="the-ddd-custom-format-specifier"></a><span data-ttu-id="690ff-388">"ddd" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-388">The "ddd" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-389">"ddd" 自訂格式規範表示星期幾的縮寫名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-389">The "ddd" custom format specifier represents the abbreviated name of the day of the week.</span></span> <span data-ttu-id="690ff-390">星期幾的當地語系化縮寫名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-390">The localized abbreviated name of the day of the week is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> property of the current or specified culture.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "ddd" 自訂格式規範。  
+ <span data-ttu-id="690ff-391">下列範例會在自訂格式字串中加入 "ddd" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-391">The following example includes the "ddd" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-392">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-392">Back to table</span></span>](#table)  
   
 <a name="ddddSpecifier"></a>   
-## "dddd" 自訂格式規範  
- "dddd" 自訂格式規範 \(加上任意個額外的 "d" 規範\) 表示星期幾的完整名稱。 星期幾的當地語系化名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=fullName> 屬性。  
+## <a name="the-dddd-custom-format-specifier"></a><span data-ttu-id="690ff-393">"dddd" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-393">The "dddd" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-394">"dddd" 自訂格式規範 (加上任意個額外的 "d" 規範) 表示星期幾的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-394">The "dddd" custom format specifier (plus any number of additional "d" specifiers) represents the full name of the day of the week.</span></span> <span data-ttu-id="690ff-395">星期幾的當地語系化名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-395">The localized name of the day of the week is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> property of the current or specified culture.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "dddd" 自訂格式規範。  
+ <span data-ttu-id="690ff-396">下列範例會在自訂格式字串中加入 "dddd" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-396">The following example includes the "dddd" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-397">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-397">Back to table</span></span>](#table)  
   
 <a name="fSpecifier"></a>   
-## "f" 自訂格式規範  
- "f" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。  
+## <a name="the-f-custom-format-specifier"></a><span data-ttu-id="690ff-398">"f" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-398">The "f" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-399">"f" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-399">The "f" custom format specifier represents the most significant digit of the seconds fraction; that is, it represents the tenths of a second in a date and time value.</span></span>  
   
- 如果單獨使用 "f" 格式規範，而沒有其他格式規範，則會將它解譯為 "f" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-400">如果單獨使用 "f" 格式規範，而沒有其他格式規範，則會將它解譯為 "f" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-400">If the "f" format specifier is used without other format specifiers, it is interpreted as the "f" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-401">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-401">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 當您使用 "f" 格式規範做為提供給 <xref:System.DateTime.ParseExact%2A>、<xref:System.DateTime.TryParseExact%2A>、<xref:System.DateTimeOffset.ParseExact%2A> 或 <xref:System.DateTimeOffset.TryParseExact%2A> 方法的一部分格式字串時，"f" 格式規範的數目表示秒數部分最重要的小數位數，必須存在此小數位數才能成功剖析字串。  
+ <span data-ttu-id="690ff-402">當您使用 "f" 格式規範做為提供給 <xref:System.DateTime.ParseExact%2A>、<xref:System.DateTime.TryParseExact%2A>、<xref:System.DateTimeOffset.ParseExact%2A> 或 <xref:System.DateTimeOffset.TryParseExact%2A> 方法的一部分格式字串時，"f" 格式規範的數目表示秒數部分最重要的小數位數，必須存在此小數位數才能成功剖析字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-402">When you use "f" format specifiers as part of a format string supplied to the <xref:System.DateTime.ParseExact%2A>, <xref:System.DateTime.TryParseExact%2A>, <xref:System.DateTimeOffset.ParseExact%2A>, or <xref:System.DateTimeOffset.TryParseExact%2A> method, the number of "f" format specifiers indicates the number of most significant digits of the seconds fraction that must be present to successfully parse the string.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "f" 自訂格式規範。  
+ <span data-ttu-id="690ff-403">下列範例會在自訂格式字串中加入 "f" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-403">The following example includes the "f" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-404">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-404">Back to table</span></span>](#table)  
   
 <a name="ffSpecifier"></a>   
-## "ff" 自訂格式規範  
- "ff" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。  
+## <a name="the-ff-custom-format-specifier"></a><span data-ttu-id="690ff-405">"ff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-405">The "ff" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-406">"ff" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-406">The "ff" custom format specifier represents the two most significant digits of the seconds fraction; that is, it represents the hundredths of a second in a date and time value.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "ff" 自訂格式規範。  
+ <span data-ttu-id="690ff-407">下列範例會在自訂格式字串中加入 "ff" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-407">following example includes the "ff" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-408">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-408">Back to table</span></span>](#table)  
   
 <a name="fffSpecifier"></a>   
-## "fff" 自訂格式規範  
- "fff" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。  
+## <a name="the-fff-custom-format-specifier"></a><span data-ttu-id="690ff-409">"fff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-409">The "fff" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-410">"fff" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-410">The "fff" custom format specifier represents the three most significant digits of the seconds fraction; that is, it represents the milliseconds in a date and time value.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "fff" 自訂格式規範。  
+ <span data-ttu-id="690ff-411">下列範例會在自訂格式字串中加入 "fff" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-411">The following example includes the "fff" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-412">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-412">Back to table</span></span>](#table)  
   
 <a name="ffffSpecifier"></a>   
-## "ffff" 自訂格式規範  
- "ffff" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。  
+## <a name="the-ffff-custom-format-specifier"></a><span data-ttu-id="690ff-413">"ffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-413">The "ffff" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-414">"ffff" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-414">The "ffff" custom format specifier represents the four most significant digits of the seconds fraction; that is, it represents the ten thousandths of a second in a date and time value.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-415">雖然時間值的秒數部分可以顯示到萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-415">Although it is possible to display the ten thousandths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-416">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-416">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-417">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-417">On the Windows NT version 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-418">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-418">Back to table</span></span>](#table)  
   
 <a name="fffffSpecifier"></a>   
-## "fffff" 自訂格式規範  
- "fffff" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。  
+## <a name="the-fffff-custom-format-specifier"></a><span data-ttu-id="690ff-419">"fffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-419">The "fffff" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-420">"fffff" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-420">The "fffff" custom format specifier represents the five most significant digits of the seconds fraction; that is, it represents the hundred thousandths of a second in a date and time value.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到十萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-421">雖然時間值的秒數部分可以顯示到十萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-421">Although it is possible to display the hundred thousandths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-422">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-422">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-423">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-423">On the Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-424">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-424">Back to table</span></span>](#table)  
   
 <a name="ffffffSpecifier"></a>   
-## "ffffff" 自訂格式規範  
- "ffffff" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。  
+## <a name="the-ffffff-custom-format-specifier"></a><span data-ttu-id="690ff-425">"ffffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-425">The "ffffff" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-426">"ffffff" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-426">The "ffffff" custom format specifier represents the six most significant digits of the seconds fraction; that is, it represents the millionths of a second in a date and time value.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到百萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-427">雖然時間值的秒數部分可以顯示到百萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-427">Although it is possible to display the millionths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-428">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-428">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-429">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-429">On the Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-430">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-430">Back to table</span></span>](#table)  
   
 <a name="fffffffSpecifier"></a>   
-## "fffffff" 自訂格式規範  
- "fffffff" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。  
+## <a name="the-fffffff-custom-format-specifier"></a><span data-ttu-id="690ff-431">"fffffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-431">The "fffffff" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-432">"fffffff" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-432">The "fffffff" custom format specifier represents the seven most significant digits of the seconds fraction; that is, it represents the ten millionths of a second in a date and time value.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到千萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-433">雖然時間值的秒數部分可以顯示到千萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-433">Although it is possible to display the ten millionths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-434">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-434">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-435">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-435">On the Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-436">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-436">Back to table</span></span>](#table)  
   
 <a name="F_Specifier"></a>   
-## "F" 自訂格式規範  
- "F" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。 如果數字為零，則不會顯示任何內容。  
+## <a name="the-f-custom-format-specifier"></a><span data-ttu-id="690ff-437">"F" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-437">The "F" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-438">"F" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-438">The "F" custom format specifier represents the most significant digit of the seconds fraction; that is, it represents the tenths of a second in a date and time value.</span></span> <span data-ttu-id="690ff-439">如果數字為零，則不會顯示任何內容。</span><span class="sxs-lookup"><span data-stu-id="690ff-439">Nothing is displayed if the digit is zero.</span></span>  
   
- 如果單獨使用 "F" 格式規範，而沒有其他格式規範，則會將它解譯為 "F" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-440">如果單獨使用 "F" 格式規範，而沒有其他格式規範，則會將它解譯為 "F" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-440">If the "F" format specifier is used without other format specifiers, it is interpreted as the "F" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-441">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-441">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 與 <xref:System.DateTime.ParseExact%2A>、<xref:System.DateTime.TryParseExact%2A>、<xref:System.DateTimeOffset.ParseExact%2A> 或 <xref:System.DateTimeOffset.TryParseExact%2A> 方法搭配使用的 "F" 格式規範數目，表示秒數部分最重要小數位數的上限，要成功剖析字串就不能超過此小數位數。  
+ <span data-ttu-id="690ff-442">與 <xref:System.DateTime.ParseExact%2A>、<xref:System.DateTime.TryParseExact%2A>、<xref:System.DateTimeOffset.ParseExact%2A> 或 <xref:System.DateTimeOffset.TryParseExact%2A> 方法搭配使用的 "F" 格式規範數目，表示秒數部分最重要小數位數的上限，要成功剖析字串就不能超過此小數位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-442">The number of "F" format specifiers used with the <xref:System.DateTime.ParseExact%2A>, <xref:System.DateTime.TryParseExact%2A>, <xref:System.DateTimeOffset.ParseExact%2A>, or <xref:System.DateTimeOffset.TryParseExact%2A> method indicates the maximum number of most significant digits of the seconds fraction that can be present to successfully parse the string.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "F" 自訂格式規範。  
+ <span data-ttu-id="690ff-443">下列範例會在自訂格式字串中加入 "F" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-443">The following example includes the "F" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-444">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-444">Back to table</span></span>](#table)  
   
 <a name="FF_Specifier"></a>   
-## "FF" 自訂格式規範  
- "FF" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。 不過，結尾的零或兩個零的數字都不會顯示。  
+## <a name="the-ff-custom-format-specifier"></a><span data-ttu-id="690ff-445">"FF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-445">The "FF" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-446">"FF" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-446">The "FF" custom format specifier represents the two most significant digits of the seconds fraction; that is, it represents the hundredths of a second in a date and time value.</span></span> <span data-ttu-id="690ff-447">不過，結尾的零或兩個零的數字都不會顯示。</span><span class="sxs-lookup"><span data-stu-id="690ff-447">However, trailing zeros or two zero digits are not displayed.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "FF" 自訂格式規範。  
+ <span data-ttu-id="690ff-448">下列範例會在自訂格式字串中加入 "FF" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-448">The following example includes the "FF" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-449">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-449">Back to table</span></span>](#table)  
   
 <a name="FFF_Specifier"></a>   
-## "FFF" 自訂格式規範  
- "FFF" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。 不過，結尾的零或三個零的數字都不會顯示。  
+## <a name="the-fff-custom-format-specifier"></a><span data-ttu-id="690ff-450">"FFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-450">The "FFF" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-451">"FFF" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-451">The "FFF" custom format specifier represents the three most significant digits of the seconds fraction; that is, it represents the milliseconds in a date and time value.</span></span> <span data-ttu-id="690ff-452">不過，結尾的零或三個零的數字都不會顯示。</span><span class="sxs-lookup"><span data-stu-id="690ff-452">However, trailing zeros or three zero digits are not displayed.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "FFF" 自訂格式規範。  
+ <span data-ttu-id="690ff-453">下列範例會在自訂格式字串中加入 "FFF" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-453">The following example includes the "FFF" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-454">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-454">Back to table</span></span>](#table)  
   
 <a name="FFFF_Specifier"></a>   
-## "FFFF" 自訂格式規範  
- "FFFF" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。 不過，結尾的零或四個零的數字都不會顯示。  
+## <a name="the-ffff-custom-format-specifier"></a><span data-ttu-id="690ff-455">"FFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-455">The "FFFF" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-456">"FFFF" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-456">The "FFFF" custom format specifier represents the four most significant digits of the seconds fraction; that is, it represents the ten thousandths of a second in a date and time value.</span></span> <span data-ttu-id="690ff-457">不過，結尾的零或四個零的數字都不會顯示。</span><span class="sxs-lookup"><span data-stu-id="690ff-457">However, trailing zeros or four zero digits are not displayed.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-458">雖然時間值的秒數部分可以顯示到萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-458">Although it is possible to display the ten thousandths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-459">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-459">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-460">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-460">On the Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-461">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-461">Back to table</span></span>](#table)  
   
 <a name="FFFFF_Specifier"></a>   
-## "FFFFF" 自訂格式規範  
- "FFFFF" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。 不過，結尾的零或五個零的數字都不會顯示。  
+## <a name="the-fffff-custom-format-specifier"></a><span data-ttu-id="690ff-462">"FFFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-462">The "FFFFF" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-463">"FFFFF" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-463">The "FFFFF" custom format specifier represents the five most significant digits of the seconds fraction; that is, it represents the hundred thousandths of a second in a date and time value.</span></span> <span data-ttu-id="690ff-464">不過，結尾的零或五個零的數字都不會顯示。</span><span class="sxs-lookup"><span data-stu-id="690ff-464">However, trailing zeros or five zero digits are not displayed.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到十萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-465">雖然時間值的秒數部分可以顯示到十萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-465">Although it is possible to display the hundred thousandths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-466">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-466">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-467">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-467">On the Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-468">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-468">Back to table</span></span>](#table)  
   
 <a name="FFFFFF_Specifier"></a>   
-## "FFFFFF" 自訂格式規範  
- "FFFFFF" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。 不過，結尾的零或六個零的數字都不會顯示。  
+## <a name="the-ffffff-custom-format-specifier"></a><span data-ttu-id="690ff-469">"FFFFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-469">The "FFFFFF" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-470">"FFFFFF" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-470">The "FFFFFF" custom format specifier represents the six most significant digits of the seconds fraction; that is, it represents the millionths of a second in a date and time value.</span></span> <span data-ttu-id="690ff-471">不過，結尾的零或六個零的數字都不會顯示。</span><span class="sxs-lookup"><span data-stu-id="690ff-471">However, trailing zeros or six zero digits are not displayed.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到百萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-472">雖然時間值的秒數部分可以顯示到百萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-472">Although it is possible to display the millionths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-473">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-473">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-474">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-474">On tfhe Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-475">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-475">Back to table</span></span>](#table)  
   
 <a name="FFFFFFF_Specifier"></a>   
-## "FFFFFFF" 自訂格式規範  
- "FFFFFFF" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。 不過，結尾的零或七個零的數字都不會顯示。  
+## <a name="the-fffffff-custom-format-specifier"></a><span data-ttu-id="690ff-476">"FFFFFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-476">The "FFFFFFF" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-477">"FFFFFFF" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-477">The "FFFFFFF" custom format specifier represents the seven most significant digits of the seconds fraction; that is, it represents the ten millionths of a second in a date and time value.</span></span> <span data-ttu-id="690ff-478">不過，結尾的零或七個零的數字都不會顯示。</span><span class="sxs-lookup"><span data-stu-id="690ff-478">However, trailing zeros or seven zero digits are not displayed.</span></span>  
   
- 雖然時間值的秒數部分可以顯示到千萬分之一秒，但該值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 \(含\) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10\-15 毫秒。  
+ <span data-ttu-id="690ff-479">雖然時間值的秒數部分可以顯示到千萬分之一秒，但該值可能沒有太大的意義。</span><span class="sxs-lookup"><span data-stu-id="690ff-479">Although it is possible to display the ten millionths of a second component of a time value, that value may not be meaningful.</span></span> <span data-ttu-id="690ff-480">日期和時間值的精確度會根據系統時鐘的解析度而定。</span><span class="sxs-lookup"><span data-stu-id="690ff-480">The precision of date and time values depends on the resolution of the system clock.</span></span> <span data-ttu-id="690ff-481">在 Windows NT 3.5 (含) 以上版本和 Windows Vista 作業系統中，時鐘的解析度大約為 10-15 毫秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-481">On the Windows NT 3.5 (and later) and Windows Vista operating systems, the clock's resolution is approximately 10-15 milliseconds.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-482">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-482">Back to table</span></span>](#table)  
   
 <a name="gSpecifier"></a>   
-## "g" 或 "gg" 自訂格式規範  
- "g" 或 "gg" 自訂格式規範 \(加上任意個額外的 "g" 規範\) 表示時期或時代，例如 A.D.。如果要格式化的日期沒有關聯的時期或時代字串，則格式化作業會忽略這個規範。  
+## <a name="the-g-or-gg-custom-format-specifier"></a><span data-ttu-id="690ff-483">"g" 或 "gg" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-483">The "g" or "gg" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-484">"g" 或 "gg" 自訂格式規範 (加上任意個額外的 "g" 規範) 表示時期或時代，例如 A.D.。</span><span class="sxs-lookup"><span data-stu-id="690ff-484">The "g" or "gg" custom format specifiers (plus any number of additional "g" specifiers) represents the period or era, such as A.D.</span></span> <span data-ttu-id="690ff-485">如果要格式化的日期沒有關聯的時期或時代字串，則格式化作業會忽略這個規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-485">The formatting operation ignores this specifier if the date to be formatted does not have an associated period or era string.</span></span>  
   
- 如果單獨使用 "g" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "g" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-486">如果單獨使用 "g" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "g" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-486">If the "g" format specifier is used without other custom format specifiers, it is interpreted as the "g" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-487">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-487">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "g" 自訂格式規範。  
+ <span data-ttu-id="690ff-488">下列範例會在自訂格式字串中加入 "g" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-488">The following example includes the "g" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#6)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-489">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-489">Back to table</span></span>](#table)  
   
 <a name="hSpecifier"></a>   
-## "h" 自訂格式規範  
- "h" 自訂格式規範以 1 到 12 的數字來表示小時，也就是以 12 小時制來表示小時，從午夜或中午開始計算整點時數。 午夜後的特定小時與下午的相同小時會難以區分。 小時是不進位的，而且單一位數的小時會格式化為沒有前置零的數字。 例如，假設時間為上午或下午 5:43，則此自訂格式規範會顯示 "5"。  
+## <a name="the-h-custom-format-specifier"></a><span data-ttu-id="690ff-490">"h" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-490">The "h" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-491">"h" 自訂格式規範以 1 到 12 的數字來表示小時，也就是以 12 小時制來表示小時，從午夜或中午開始計算整點時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-491">The "h" custom format specifier represents the hour as a number from 1 through 12; that is, the hour is represented by a 12-hour clock that counts the whole hours since midnight or noon.</span></span> <span data-ttu-id="690ff-492">午夜後的特定小時與下午的相同小時會難以區分。</span><span class="sxs-lookup"><span data-stu-id="690ff-492">A particular hour after midnight is indistinguishable from the same hour after noon.</span></span> <span data-ttu-id="690ff-493">小時是不進位的，而且單一位數的小時會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-493">The hour is not rounded, and a single-digit hour is formatted without a leading zero.</span></span> <span data-ttu-id="690ff-494">例如，假設時間為上午或下午 5:43，則此自訂格式規範會顯示 "5"。</span><span class="sxs-lookup"><span data-stu-id="690ff-494">For example, given a time of 5:43 in the morning or afternoon, this custom format specifier displays "5".</span></span>  
   
- 如果單獨使用 "h" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-495">如果單獨使用 "h" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-495">If the "h" format specifier is used without other custom format specifiers, it is interpreted as a standard date and time format specifier and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-496">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-496">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "h" 自訂格式規範。  
+ <span data-ttu-id="690ff-497">下列範例會在自訂格式字串中加入 "h" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-497">The following example includes the "h" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-498">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-498">Back to table</span></span>](#table)  
   
 <a name="hhSpecifier"></a>   
-## "hh" 自訂格式規範  
- "hh" 自訂格式規範 \(加上任意個額外的 "h" 規範\) 以 01 到 12 的數字來表示小時，也就是以 12 小時制來表示小時，從午夜或中午開始計算整點時數。 午夜後的特定小時與下午的相同小時會難以區分。 小時是不進位的，而且單一位數的小時會格式化為有前置零的數字。 例如，假設時間為上午或下午 5:43，則此格式規範會顯示 "05"。  
+## <a name="the-hh-custom-format-specifier"></a><span data-ttu-id="690ff-499">"hh" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-499">The "hh" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-500">"hh" 自訂格式規範 (加上任意個額外的 "h" 規範) 以 01 到 12 的數字來表示小時，也就是以 12 小時制來表示小時，從午夜或中午開始計算整點時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-500">The "hh" custom format specifier (plus any number of additional "h" specifiers) represents the hour as a number from 01 through 12; that is, the hour is represented by a 12-hour clock that counts the whole hours since midnight or noon.</span></span> <span data-ttu-id="690ff-501">午夜後的特定小時與下午的相同小時會難以區分。</span><span class="sxs-lookup"><span data-stu-id="690ff-501">A particular hour after midnight is indistinguishable from the same hour after noon.</span></span> <span data-ttu-id="690ff-502">小時是不進位的，而且單一位數的小時會格式化為有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-502">The hour is not rounded, and a single-digit hour is formatted with a leading zero.</span></span> <span data-ttu-id="690ff-503">例如，假設時間為上午或下午 5:43，則此格式規範會顯示 "05"。</span><span class="sxs-lookup"><span data-stu-id="690ff-503">For example, given a time of 5:43 in the morning or afternoon, this format specifier displays "05".</span></span>  
   
- 下列範例會在自訂格式字串中加入 "hh" 自訂格式規範。  
+ <span data-ttu-id="690ff-504">下列範例會在自訂格式字串中加入 "hh" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-504">The following example includes the "hh" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-505">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-505">Back to table</span></span>](#table)  
   
 <a name="H_Specifier"></a>   
-## "H" 自訂格式規範  
- "H" 自訂格式規範以 0 到 23 的數字來表示小時，也就是採用以零為起始的 24 小時制來表示小時，從午夜開始計算時數。 單一位數的小時會格式化為沒有前置零的數字。  
+## <a name="the-h-custom-format-specifier"></a><span data-ttu-id="690ff-506">"H" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-506">The "H" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-507">"H" 自訂格式規範以 0 到 23 的數字來表示小時，也就是採用以零為起始的 24 小時制來表示小時，從午夜開始計算時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-507">The "H" custom format specifier represents the hour as a number from 0 through 23; that is, the hour is represented by a zero-based 24-hour clock that counts the hours since midnight.</span></span> <span data-ttu-id="690ff-508">單一位數的小時會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-508">A single-digit hour is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "H" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-509">如果單獨使用 "H" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-509">If the "H" format specifier is used without other custom format specifiers, it is interpreted as a standard date and time format specifier and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-510">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-510">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "H" 自訂格式規範。  
+ <span data-ttu-id="690ff-511">下列範例會在自訂格式字串中加入 "H" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-511">The following example includes the "H" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#9)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-512">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-512">Back to table</span></span>](#table)  
   
 <a name="HH_Specifier"></a>   
-## "HH" 自訂格式規範  
- "HH" 自訂格式規範 \(加上任意個額外的 "H" 規範\) 以 00 到 23 的數字來表示小時，也就是採用以零為起始的 24 小時制來表示小時，從午夜開始計算時數。 單一位數的小時會格式化為具有前置零的數字。  
+## <a name="the-hh-custom-format-specifier"></a><span data-ttu-id="690ff-513">"HH" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-513">The "HH" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-514">"HH" 自訂格式規範 (加上任意個額外的 "H" 規範) 以 00 到 23 的數字來表示小時，也就是採用以零為起始的 24 小時制來表示小時，從午夜開始計算時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-514">The "HH" custom format specifier (plus any number of additional "H" specifiers) represents the hour as a number from 00 through 23; that is, the hour is represented by a zero-based 24-hour clock that counts the hours since midnight.</span></span> <span data-ttu-id="690ff-515">單一位數的小時會格式化為具有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-515">A single-digit hour is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "HH" 自訂格式規範。  
+ <span data-ttu-id="690ff-516">下列範例會在自訂格式字串中加入 "HH" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-516">The following example includes the "HH" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#10)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-517">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-517">Back to table</span></span>](#table)  
   
 <a name="KSpecifier"></a>   
-## "K" 自訂格式規範  
- "K" 自訂格式規範表示日期和時間值的時區資訊。 與 <xref:System.DateTime> 值搭配使用這個格式規範時，結果字串會由 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性的值定義：  
+## <a name="the-k-custom-format-specifier"></a><span data-ttu-id="690ff-518">"K" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-518">The "K" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-519">"K" 自訂格式規範表示日期和時間值的時區資訊。</span><span class="sxs-lookup"><span data-stu-id="690ff-519">The "K" custom format specifier represents the time zone information of a date and time value.</span></span> <span data-ttu-id="690ff-520">與 <xref:System.DateTime> 值搭配使用這個格式規範時，結果字串會由 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性的值定義：</span><span class="sxs-lookup"><span data-stu-id="690ff-520">When this format specifier is used with <xref:System.DateTime> values, the result string is defined by the value of the <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property:</span></span>  
   
--   若為本地時區 \(<xref:System.DateTime.Kind%2A?displayProperty=fullName> 的 <xref:System.DateTimeKind?displayProperty=fullName> 屬性值\)，此規範相當於 "zzz" 規範，所產生的結果字串會包含本地與國際標準時間 \(UTC\) 之間的時差，例如 "\-07:00"。  
+-   <span data-ttu-id="690ff-521">若為本地時區 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 的 <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 屬性值)，此規範相當於 "zzz" 規範，所產生的結果字串會包含本地與國際標準時間 (UTC) 之間的時差，例如 "-07:00"。</span><span class="sxs-lookup"><span data-stu-id="690ff-521">For the local time zone (a <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property value of <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), this specifier is equivalent to the "zzz" specifier and produces a result string containing the local offset from Coordinated Universal Time (UTC); for example, "-07:00".</span></span>  
   
--   若為 UTC 時間 \(<xref:System.DateTime.Kind%2A?displayProperty=fullName> 的 <xref:System.DateTimeKind?displayProperty=fullName> 屬性值\)，結果字串會包含 "Z" 字元來表示 UTC 日期。  
+-   <span data-ttu-id="690ff-522">若為 UTC 時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 的 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 屬性值)，結果字串會包含 "Z" 字元來表示 UTC 日期。</span><span class="sxs-lookup"><span data-stu-id="690ff-522">For a UTC time (a <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property value of <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), the result string includes a "Z" character to represent a UTC date.</span></span>  
   
--   若為未指定時區的時間 \(<xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性等於 <xref:System.DateTimeKind?displayProperty=fullName> 的時間\)，結果就相當於 <xref:System.String.Empty?displayProperty=fullName>。  
+-   <span data-ttu-id="690ff-523">若為未指定時區的時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性等於 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 的時間)，結果就相當於 <xref:System.String.Empty?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="690ff-523">For a time from an unspecified time zone (a time whose <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property equals <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), the result is equivalent to <xref:System.String.Empty?displayProperty=nameWithType>.</span></span>  
   
- 若為 <xref:System.DateTimeOffset> 值，"K" 格式規範相當於 "zz" 格式規範，所產生的結果字串會包含 <xref:System.DateTimeOffset> 值與 UTC 之間的時差。  
+ <span data-ttu-id="690ff-524">如<xref:System.DateTimeOffset>值，"K"格式規範相當於"zzz"格式規範，並產生結果字串會包含<xref:System.DateTimeOffset>值與 UTC 的時差。</span><span class="sxs-lookup"><span data-stu-id="690ff-524">For <xref:System.DateTimeOffset> values, the "K" format specifier is equivalent to the "zzz" format specifier, and produces a result string containing the <xref:System.DateTimeOffset> value's offset from UTC.</span></span>  
   
- 如果單獨使用 "K" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-525">如果單獨使用 "K" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-525">If the "K" format specifier is used without other custom format specifiers, it is interpreted as a standard date and time format specifier and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-526">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-526">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會顯示美國太平洋時區中，"K" 自訂格式規範與各種 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用所產生的結果字串。  
+ <span data-ttu-id="690ff-527">下列範例會顯示美國太平洋時區中，"K" 自訂格式規範與各種 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用所產生的結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-527">The following example displays the string that results from using the "K" custom format specifier with various <xref:System.DateTime> and <xref:System.DateTimeOffset> values on a system in the U.S. Pacific Time zone.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#12)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-528">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-528">Back to table</span></span>](#table)  
   
 <a name="mSpecifier"></a>   
-## "m" 自訂格式規範  
- "m" 自訂格式規範以 0 到 59 的數字來表示分鐘。 分鐘表示自上個整點以來已經過的完整分鐘數。 單一位數的分鐘會格式化為沒有前置零的數字。  
+## <a name="the-m-custom-format-specifier"></a><span data-ttu-id="690ff-529">"m" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-529">The "m" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-530">"m" 自訂格式規範以 0 到 59 的數字來表示分鐘。</span><span class="sxs-lookup"><span data-stu-id="690ff-530">The "m" custom format specifier represents the minute as a number from 0 through 59.</span></span> <span data-ttu-id="690ff-531">分鐘表示自上個整點以來已經過的完整分鐘數。</span><span class="sxs-lookup"><span data-stu-id="690ff-531">The minute represents whole minutes that have passed since the last hour.</span></span> <span data-ttu-id="690ff-532">單一位數的分鐘會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-532">A single-digit minute is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "m" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "m" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-533">如果單獨使用 "m" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "m" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-533">If the "m" format specifier is used without other custom format specifiers, it is interpreted as the "m" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-534">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-534">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "m" 自訂格式規範。  
+ <span data-ttu-id="690ff-535">下列範例會在自訂格式字串中加入 "m" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-535">The following example includes the "m" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-536">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-536">Back to table</span></span>](#table)  
   
 <a name="mmSpecifier"></a>   
-## "mm" 自訂格式規範  
- "mm" 自訂格式規範 \(加上任意個額外的 "m" 規範\) 以 00 到 59 的數字來表示分鐘。 分鐘表示自上個整點以來已經過的完整分鐘數。 單一位數的分鐘會格式化為具有前置零的數字。  
+## <a name="the-mm-custom-format-specifier"></a><span data-ttu-id="690ff-537">"mm" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-537">The "mm" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-538">"mm" 自訂格式規範 (加上任意個額外的 "m" 規範) 以 00 到 59 的數字來表示分鐘。</span><span class="sxs-lookup"><span data-stu-id="690ff-538">The "mm" custom format specifier (plus any number of additional "m" specifiers) represents the minute as a number from 00 through 59.</span></span> <span data-ttu-id="690ff-539">分鐘表示自上個整點以來已經過的完整分鐘數。</span><span class="sxs-lookup"><span data-stu-id="690ff-539">The minute represents whole minutes that have passed since the last hour.</span></span> <span data-ttu-id="690ff-540">單一位數的分鐘會格式化為具有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-540">A single-digit minute is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "mm" 自訂格式規範。  
+ <span data-ttu-id="690ff-541">下列範例會在自訂格式字串中加入 "mm" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-541">The following example includes the "mm" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-542">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-542">Back to table</span></span>](#table)  
   
 <a name="M_Specifier"></a>   
-## "M" 自訂格式規範  
- "M" 自訂格式規範以 1 到 12 的數字來表示月份 \(如果是有 13 個月的行事曆則從 1 到 13\)。 單一位數的月份會格式化為沒有前置零的數字。  
+## <a name="the-m-custom-format-specifier"></a><span data-ttu-id="690ff-543">"M" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-543">The "M" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-544">"M" 自訂格式規範以 1 到 12 的數字來表示月份 (如果是有 13 個月的行事曆則從 1 到 13)。</span><span class="sxs-lookup"><span data-stu-id="690ff-544">The "M" custom format specifier represents the month as a number from 1 through 12 (or from 1 through 13 for calendars that have 13 months).</span></span> <span data-ttu-id="690ff-545">單一位數的月份會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-545">A single-digit month is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "M" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "M" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-546">如果單獨使用 "M" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "M" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-546">If the "M" format specifier is used without other custom format specifiers, it is interpreted as the "M" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-547">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-547">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "M" 自訂格式規範。  
+ <span data-ttu-id="690ff-548">下列範例會在自訂格式字串中加入 "M" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-548">The following example includes the "M" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-549">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-549">Back to table</span></span>](#table)  
   
 <a name="MM_Specifier"></a>   
-## "MM" 自訂格式規範  
- "MM" 自訂格式規範以 01 到 12 的數字來表示月份 \(如果是有 13 個月的行事曆則從 1 到 13\)。 單一位數的月份會格式化為有前置零的數字。  
+## <a name="the-mm-custom-format-specifier"></a><span data-ttu-id="690ff-550">"MM" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-550">The "MM" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-551">"MM" 自訂格式規範以 01 到 12 的數字來表示月份 (如果是有 13 個月的行事曆則從 1 到 13)。</span><span class="sxs-lookup"><span data-stu-id="690ff-551">The "MM" custom format specifier represents the month as a number from 01 through 12 (or from 1 through 13 for calendars that have 13 months).</span></span> <span data-ttu-id="690ff-552">單一位數的月份會格式化為有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-552">A single-digit month is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "MM" 自訂格式規範。  
+ <span data-ttu-id="690ff-553">下列範例會在自訂格式字串中加入 "MM" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-553">The following example includes the "MM" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-554">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-554">Back to table</span></span>](#table)  
   
 <a name="MMM_Specifier"></a>   
-## "MMM" 自訂格式規範  
- "MMM" 自訂格式規範表示月份的縮寫名稱。 月份的當地語系化縮寫名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=fullName> 屬性。  
+## <a name="the-mmm-custom-format-specifier"></a><span data-ttu-id="690ff-555">"MMM" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-555">The "MMM" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-556">"MMM" 自訂格式規範表示月份的縮寫名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-556">The "MMM" custom format specifier represents the abbreviated name of the month.</span></span> <span data-ttu-id="690ff-557">月份的當地語系化縮寫名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-557">The localized abbreviated name of the month is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> property of the current or specified culture.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "MMM" 自訂格式規範。  
+ <span data-ttu-id="690ff-558">下列範例會在自訂格式字串中加入 "MMM" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-558">The following example includes the "MMM" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-559">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-559">Back to table</span></span>](#table)  
   
 <a name="MMMM_Specifier"></a>   
-## "MMMM" 自訂格式規範  
- "MMMM" 自訂格式規範表示月份的完整名稱。 月份的當地語系化名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=fullName> 屬性。  
+## <a name="the-mmmm-custom-format-specifier"></a><span data-ttu-id="690ff-560">"MMMM" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-560">The "MMMM" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-561">"MMMM" 自訂格式規範表示月份的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="690ff-561">The "MMMM" custom format specifier represents the full name of the month.</span></span> <span data-ttu-id="690ff-562">月份的當地語系化名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-562">The localized name of the month is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> property of the current or specified culture.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "MMMM" 自訂格式規範。  
+ <span data-ttu-id="690ff-563">下列範例會在自訂格式字串中加入 "MMMM" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-563">The following example includes the "MMMM" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-564">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-564">Back to table</span></span>](#table)  
   
 <a name="sSpecifier"></a>   
-## "s" 自訂格式規範  
- "s" 自訂格式規範以 0 到 59 的數字來表示秒數。 結果表示自上個分鐘以來已經過的完整秒數。 單一位數的秒數會格式化為沒有前置零的數字。  
+## <a name="the-s-custom-format-specifier"></a><span data-ttu-id="690ff-565">"s" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-565">The "s" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-566">"s" 自訂格式規範以 0 到 59 的數字來表示秒數。</span><span class="sxs-lookup"><span data-stu-id="690ff-566">The "s" custom format specifier represents the seconds as a number from 0 through 59.</span></span> <span data-ttu-id="690ff-567">結果表示自上個分鐘以來已經過的完整秒數。</span><span class="sxs-lookup"><span data-stu-id="690ff-567">The result represents whole seconds that have passed since the last minute.</span></span> <span data-ttu-id="690ff-568">單一位數的秒數會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-568">A single-digit second is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "s" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "s" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-569">如果單獨使用 "s" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "s" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-569">If the "s" format specifier is used without other custom format specifiers, it is interpreted as the "s" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-570">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-570">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "s" 自訂格式規範。  
+ <span data-ttu-id="690ff-571">下列範例會在自訂格式字串中加入 "s" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-571">The following example includes the "s" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-572">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-572">Back to table</span></span>](#table)  
   
 <a name="ssSpecifier"></a>   
-## "ss" 自訂格式規範  
- "ss" 自訂格式規範 \(加上任意個額外的 "s" 規範\) 以 00 到 59 的數字來表示秒數。 結果表示自上個分鐘以來已經過的完整秒數。 單一位數的秒數會格式化為具有前置零的數字。  
+## <a name="the-ss-custom-format-specifier"></a><span data-ttu-id="690ff-573">"ss" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-573">The "ss" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-574">"ss" 自訂格式規範 (加上任意個額外的 "s" 規範) 以 00 到 59 的數字來表示秒數。</span><span class="sxs-lookup"><span data-stu-id="690ff-574">The "ss" custom format specifier (plus any number of additional "s" specifiers) represents the seconds as a number from 00 through 59.</span></span> <span data-ttu-id="690ff-575">結果表示自上個分鐘以來已經過的完整秒數。</span><span class="sxs-lookup"><span data-stu-id="690ff-575">The result represents whole seconds that have passed since the last minute.</span></span> <span data-ttu-id="690ff-576">單一位數的秒數會格式化為具有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-576">A single-digit second is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "ss" 自訂格式規範。  
+ <span data-ttu-id="690ff-577">下列範例會在自訂格式字串中加入 "ss" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-577">The following example includes the "ss" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-578">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-578">Back to table</span></span>](#table)  
   
 <a name="tSpecifier"></a>   
-## "t" 自訂格式規範  
- "t" 自訂格式規範表示 AM\/PM 指示項的第一個字元。 適當的當地語系化指示項是擷取自目前或特定文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=fullName> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=fullName> 屬性。 AM 指示項用於從 0:00:00 \(午夜\) 到 11:59:59.999 為止的所有時間。 PM 指示項用於從 12:00:00 \(中午\) 到 23:59:59.999 為止的所有時間。  
+## <a name="the-t-custom-format-specifier"></a><span data-ttu-id="690ff-579">"t" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-579">The "t" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-580">"t" 自訂格式規範表示 AM/PM 指示項的第一個字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-580">The "t" custom format specifier represents the first character of the AM/PM designator.</span></span> <span data-ttu-id="690ff-581">適當的當地語系化指示項是擷取自目前或特定文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-581">The appropriate localized designator is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> or <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> property of the current or specific culture.</span></span> <span data-ttu-id="690ff-582">AM 指示項用於從 0:00:00 (午夜) 到 11:59:59.999 為止的所有時間。</span><span class="sxs-lookup"><span data-stu-id="690ff-582">The AM designator is used for all times from 0:00:00 (midnight) to 11:59:59.999.</span></span> <span data-ttu-id="690ff-583">PM 指示項用於從 12:00:00 (中午) 到 23:59:59.999 為止的所有時間。</span><span class="sxs-lookup"><span data-stu-id="690ff-583">The PM designator is used for all times from 12:00:00 (noon) to 23:59:59.999.</span></span>  
   
- 如果單獨使用 "t" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "t" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-584">如果單獨使用 "t" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "t" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-584">If the "t" format specifier is used without other custom format specifiers, it is interpreted as the "t" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-585">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-585">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "t" 自訂格式規範。  
+ <span data-ttu-id="690ff-586">下列範例會在自訂格式字串中加入 "t" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-586">The following example includes the "t" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-587">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-587">Back to table</span></span>](#table)  
   
 <a name="ttSpecifier"></a>   
-## "tt" 自訂格式規範  
- "tt" 自訂格式規範 \(加上任意個額外的 "t" 規範\) 表示整個 AM\/PM 指示項。 適當的當地語系化指示項是擷取自目前或特定文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=fullName> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=fullName> 屬性。 AM 指示項用於從 0:00:00 \(午夜\) 到 11:59:59.999 為止的所有時間。 PM 指示項用於從 12:00:00 \(中午\) 到 23:59:59.999 為止的所有時間。  
+## <a name="the-tt-custom-format-specifier"></a><span data-ttu-id="690ff-588">"tt" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-588">The "tt" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-589">"tt" 自訂格式規範 (加上任意個額外的 "t" 規範) 表示整個 AM/PM 指示項。</span><span class="sxs-lookup"><span data-stu-id="690ff-589">The "tt" custom format specifier (plus any number of additional "t" specifiers) represents the entire AM/PM designator.</span></span> <span data-ttu-id="690ff-590">適當的當地語系化指示項是擷取自目前或特定文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-590">The appropriate localized designator is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> or <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> property of the current or specific culture.</span></span> <span data-ttu-id="690ff-591">AM 指示項用於從 0:00:00 (午夜) 到 11:59:59.999 為止的所有時間。</span><span class="sxs-lookup"><span data-stu-id="690ff-591">The AM designator is used for all times from 0:00:00 (midnight) to 11:59:59.999.</span></span> <span data-ttu-id="690ff-592">PM 指示項用於從 12:00:00 (中午) 到 23:59:59.999 為止的所有時間。</span><span class="sxs-lookup"><span data-stu-id="690ff-592">The PM designator is used for all times from 12:00:00 (noon) to 23:59:59.999.</span></span>  
   
- 對於需要特別強調 AM 與 PM 的語言，請務必使用 "tt" 規範。 其中一種就是日文，日文的 AM 和 PM 指示項的第二個字元 \(非第一個字元\) 不同。  
+ <span data-ttu-id="690ff-593">對於需要特別強調 AM 與 PM 的語言，請務必使用 "tt" 規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-593">Make sure to use the "tt" specifier for languages for which it is necessary to maintain the distinction between AM and PM.</span></span> <span data-ttu-id="690ff-594">其中一種就是日文，日文的 AM 和 PM 指示項的第二個字元 (非第一個字元) 不同。</span><span class="sxs-lookup"><span data-stu-id="690ff-594">An example is Japanese, for which the AM and PM designators differ in the second character instead of the first character.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "tt" 自訂格式規範。  
+ <span data-ttu-id="690ff-595">下列範例會在自訂格式字串中加入 "tt" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-595">The following example includes the "tt" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-596">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-596">Back to table</span></span>](#table)  
   
 <a name="ySpecifier"></a>   
-## "y" 自訂格式規範  
- "y" 自訂格式規範以一位或兩位數來表示年份。 如果年份超過兩個位數，結果中只會出現兩個低位數字。 如果兩位數年份的第一個數字以零開始 \(例如 2008\)，則會格式化為沒有前置零的數字。  
+## <a name="the-y-custom-format-specifier"></a><span data-ttu-id="690ff-597">"y" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-597">The "y" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-598">"y" 自訂格式規範以一位或兩位數來表示年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-598">The "y" custom format specifier represents the year as a one-digit or two-digit number.</span></span> <span data-ttu-id="690ff-599">如果年份超過兩個位數，結果中只會出現兩個低位數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-599">If the year has more than two digits, only the two low-order digits appear in the result.</span></span> <span data-ttu-id="690ff-600">如果兩位數年份的第一個數字以零開始 (例如 2008)，則會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-600">If the first digit of a two-digit year begins with a zero (for example, 2008), the number is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "y" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "y" 標準日期和時間格式規範。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-601">如果單獨使用 "y" 格式規範，而沒有其他自訂格式規範，則會將它解譯為 "y" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-601">If the "y" format specifier is used without other custom format specifiers, it is interpreted as the "y" standard date and time format specifier.</span></span> <span data-ttu-id="690ff-602">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-602">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "y" 自訂格式規範。  
+ <span data-ttu-id="690ff-603">下列範例會在自訂格式字串中加入 "y" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-603">The following example includes the "y" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-604">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-604">Back to table</span></span>](#table)  
   
 <a name="yySpecifier"></a>   
-## "yy" 自訂格式規範  
- "yy" 自訂格式規範以兩位數來表示年份。 如果年份超過兩個位數，結果中只會出現兩個低位數字。 如果兩位數年份少於兩個有效位數，則會以前置零填補此數字來產生兩位數。  
+## <a name="the-yy-custom-format-specifier"></a><span data-ttu-id="690ff-605">"yy" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-605">The "yy" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-606">"yy" 自訂格式規範以兩位數來表示年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-606">The "yy" custom format specifier represents the year as a two-digit number.</span></span> <span data-ttu-id="690ff-607">如果年份超過兩個位數，結果中只會出現兩個低位數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-607">If the year has more than two digits, only the two low-order digits appear in the result.</span></span> <span data-ttu-id="690ff-608">如果兩位數年份少於兩個有效位數，則會以前置零填補此數字來產生兩位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-608">If the two-digit year has fewer than two significant digits, the number is padded with leading zeros to produce two digits.</span></span>  
   
- 在剖析作業中，使用 "yy" 自訂格式規範所剖析的兩位數年份，是根據格式提供者現行曆法的 <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=fullName> 屬性進行解譯。 下列範例會使用 en\-US 文化特性的預設西曆 \(在此案例中為目前的文化特性\)，剖析具有兩位數年份之日期的字串表示。 接著它會將目前文化特性的 <xref:System.Globalization.CultureInfo> 物件變更為使用已修改 <xref:System.Globalization.GregorianCalendar> 屬性的 <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A> 物件。  
+ <span data-ttu-id="690ff-609">在剖析作業中，使用 "yy" 自訂格式規範所剖析的兩位數年份，是根據格式提供者現行曆法的 <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=nameWithType> 屬性進行解譯。</span><span class="sxs-lookup"><span data-stu-id="690ff-609">In a parsing operation, a two-digit year that is parsed using the "yy" custom format specifier is interpreted based on the <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=nameWithType> property of the format provider's current calendar.</span></span> <span data-ttu-id="690ff-610">下列範例會使用 en-US 文化特性的預設西曆 (在此案例中為目前的文化特性)，剖析具有兩位數年份之日期的字串表示。</span><span class="sxs-lookup"><span data-stu-id="690ff-610">The following example parses the string representation of a date that has a two-digit year by using the default Gregorian calendar of the en-US culture, which, in this case, is the current culture.</span></span> <span data-ttu-id="690ff-611">接著它會將目前文化特性的 <xref:System.Globalization.CultureInfo> 物件變更為使用已修改 <xref:System.Globalization.GregorianCalendar> 屬性的 <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A> 物件。</span><span class="sxs-lookup"><span data-stu-id="690ff-611">It then changes the current culture's <xref:System.Globalization.CultureInfo> object to use a <xref:System.Globalization.GregorianCalendar> object whose <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A> property has been modified.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#19](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/parseexact2digityear1.cs#19)]
  [!code-vb[Formatting.DateAndTime.Custom#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/parseexact2digityear1.vb#19)]  
   
- 下列範例會在自訂格式字串中加入 "yy" 自訂格式規範。  
+ <span data-ttu-id="690ff-612">下列範例會在自訂格式字串中加入 "yy" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-612">The following example includes the "yy" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-613">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-613">Back to table</span></span>](#table)  
   
 <a name="yyySpecifier"></a>   
-## "yyy" 自訂格式規範  
- "yyy" 自訂格式規範以最少三位數來表示年份。 如果年份超過三個有效位數，它們會包含在結果字串中。 如果年份少於三個位數，則會以前置零填補此數字來產生三位數。  
+## <a name="the-yyy-custom-format-specifier"></a><span data-ttu-id="690ff-614">"yyy" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-614">The "yyy" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-615">"yyy" 自訂格式規範以最少三位數來表示年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-615">The "yyy" custom format specifier represents the year with a minimum of three digits.</span></span> <span data-ttu-id="690ff-616">如果年份超過三個有效位數，它們會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="690ff-616">If the year has more than three significant digits, they are included in the result string.</span></span> <span data-ttu-id="690ff-617">如果年份少於三個位數，則會以前置零填補此數字來產生三位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-617">If the year has fewer than three digits, the number is padded with leading zeros to produce three digits.</span></span>  
   
 > [!NOTE]
->  對於可具有五位數年份的泰國佛教曆法，此格式規範會顯示全部有效位數。  
+>  <span data-ttu-id="690ff-618">對於可具有五位數年份的泰國佛教曆法，此格式規範會顯示全部有效位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-618">For the Thai Buddhist calendar, which can have five-digit years, this format specifier displays all significant digits.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "yyy" 自訂格式規範。  
+ <span data-ttu-id="690ff-619">下列範例會在自訂格式字串中加入 "yyy" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-619">The following example includes the "yyy" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-620">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-620">Back to table</span></span>](#table)  
   
 <a name="yyyySpecifier"></a>   
-## "yyyy" 自訂格式規範  
- "yyyy" 自訂格式規範以最少四位數來表示年份。 如果年份超過四個有效位數，它們會包含在結果字串中。 如果年份少於四個位數，則會以前置零填補此數字，以產生四個位數。  
+## <a name="the-yyyy-custom-format-specifier"></a><span data-ttu-id="690ff-621">"yyyy" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-621">The "yyyy" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-622">"yyyy" 自訂格式規範以最少四位數來表示年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-622">The "yyyy" custom format specifier represents the year with a minimum of four digits.</span></span> <span data-ttu-id="690ff-623">如果年份超過四個有效位數，它們會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="690ff-623">If the year has more than four significant digits, they are included in the result string.</span></span> <span data-ttu-id="690ff-624">如果年份少於四個位數，則會以前置零填補此數字，以產生四個位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-624">If the year has fewer than four digits, the number is padded with leading zeros to produce four digits.</span></span>  
   
 > [!NOTE]
->  對於可具有五位數年份的泰國佛教曆法，此格式規範會顯示最少四個位數。  
+>  <span data-ttu-id="690ff-625">對於可具有五位數年份的泰國佛教曆法，此格式規範會顯示最少四個位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-625">For the Thai Buddhist calendar, which can have five-digit years, this format specifier displays a minimum of four digits.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "yyyy" 自訂格式規範。  
+ <span data-ttu-id="690ff-626">下列範例會在自訂格式字串中加入 "yyyy" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-626">The following example includes the "yyyy" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-627">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-627">Back to table</span></span>](#table)  
   
 <a name="yyyyySpecifier"></a>   
-## "yyyyy" 自訂格式規範  
- "yyyyy" 自訂格式規範 \(加上任意個額外的 "y" 規範\) 以最少五位數來表示年份。 如果年份超過五個有效位數，它們會包含在結果字串中。 如果年份少於五位數，則會以前置零填補此數字來產生五位數。  
+## <a name="the-yyyyy-custom-format-specifier"></a><span data-ttu-id="690ff-628">"yyyyy" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-628">The "yyyyy" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-629">"yyyyy" 自訂格式規範 (加上任意個額外的 "y" 規範) 以最少五位數來表示年份。</span><span class="sxs-lookup"><span data-stu-id="690ff-629">The "yyyyy" custom format specifier (plus any number of additional "y" specifiers) represents the year with a minimum of five digits.</span></span> <span data-ttu-id="690ff-630">如果年份超過五個有效位數，它們會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="690ff-630">If the year has more than five significant digits, they are included in the result string.</span></span> <span data-ttu-id="690ff-631">如果年份少於五位數，則會以前置零填補此數字來產生五位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-631">If the year has fewer than five digits, the number is padded with leading zeros to produce five digits.</span></span>  
   
- 如果有更多 "y" 規範，則會視需要以前置零填補此數字，以產生該 "y" 規範數目的位數。  
+ <span data-ttu-id="690ff-632">如果有更多 "y" 規範，則會視需要以前置零填補此數字，以產生該 "y" 規範數目的位數。</span><span class="sxs-lookup"><span data-stu-id="690ff-632">If there are additional "y" specifiers, the number is padded with as many leading zeros as necessary to produce the number of "y" specifiers.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "yyyyy" 自訂格式規範。  
+ <span data-ttu-id="690ff-633">下列範例會在自訂格式字串中加入 "yyyyy" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-633">The following example includes the "yyyyy" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-634">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-634">Back to table</span></span>](#table)  
   
 <a name="zSpecifier"></a>   
-## "z" 自訂格式規範  
- 搭配 <xref:System.DateTime> 值使用時，"z" 自訂格式規範表示本地作業系統時區與國際標準時間 \(UTC\) 之間的時差 \(帶正負號\)，以小時為單位。 它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性值。 因此，不建議將 "z" 格式規範搭配 <xref:System.DateTime> 值使用。  
+## <a name="the-z-custom-format-specifier"></a><span data-ttu-id="690ff-635">"z" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-635">The "z" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-636">搭配 <xref:System.DateTime> 值使用時，"z" 自訂格式規範表示本地作業系統時區與國際標準時間 (UTC) 之間的時差 (帶正負號)，以小時為單位。</span><span class="sxs-lookup"><span data-stu-id="690ff-636">With <xref:System.DateTime> values, the "z" custom format specifier represents the signed offset of the local operating system's time zone from Coordinated Universal Time (UTC), measured in hours.</span></span> <span data-ttu-id="690ff-637">它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性值。</span><span class="sxs-lookup"><span data-stu-id="690ff-637">It does not reflect the value of an instance's <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="690ff-638">因此，不建議將 "z" 格式規範搭配 <xref:System.DateTime> 值使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-638">For this reason, the "z" format specifier is not recommended for use with <xref:System.DateTime> values.</span></span>  
   
- 搭配 <xref:System.DateTimeOffset> 值使用時，此格式規範表示 <xref:System.DateTimeOffset> 值與 UTC 之間的時差，以小時為單位。  
+ <span data-ttu-id="690ff-639">搭配 <xref:System.DateTimeOffset> 值使用時，此格式規範表示 <xref:System.DateTimeOffset> 值與 UTC 之間的時差，以小時為單位。</span><span class="sxs-lookup"><span data-stu-id="690ff-639">With <xref:System.DateTimeOffset> values, this format specifier represents the <xref:System.DateTimeOffset> value's offset from UTC in hours.</span></span>  
   
- 顯示時差時，一定會有前置正負號。 加號 \(\+\) 表示早於 UTC 的時數，減號 \(\-\) 表示晚於 UTC 的時數。 單一位數的時差會格式化為沒有前置零的數字。  
+ <span data-ttu-id="690ff-640">顯示時差時，一定會有前置正負號。</span><span class="sxs-lookup"><span data-stu-id="690ff-640">The offset is always displayed with a leading sign.</span></span> <span data-ttu-id="690ff-641">加號 (+) 表示早於 UTC 的時數，減號 (-) 表示晚於 UTC 的時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-641">A plus sign (+) indicates hours ahead of UTC, and a minus sign (-) indicates hours behind UTC.</span></span> <span data-ttu-id="690ff-642">單一位數的時差會格式化為沒有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-642">A single-digit offset is formatted without a leading zero.</span></span>  
   
- 如果單獨使用 "z" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-643">如果單獨使用 "z" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-643">If the "z" format specifier is used without other custom format specifiers, it is interpreted as a standard date and time format specifier and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-644">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-644">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "z" 自訂格式規範。  
+ <span data-ttu-id="690ff-645">下列範例會在自訂格式字串中加入 "z" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-645">The following example includes the "z" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-646">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-646">Back to table</span></span>](#table)  
   
 <a name="zzSpecifier"></a>   
-## "zz" 自訂格式規範  
- 搭配 <xref:System.DateTime> 值使用時，"zz" 自訂格式規範表示本地作業系統時區與 UTC 之間的時差 \(帶正負號\)，以小時為單位。 它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性值。 因此，不建議將 "zz" 格式規範搭配 <xref:System.DateTime> 值使用。  
+## <a name="the-zz-custom-format-specifier"></a><span data-ttu-id="690ff-647">"zz" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-647">The "zz" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-648">搭配 <xref:System.DateTime> 值使用時，"zz" 自訂格式規範表示本地作業系統時區與 UTC 之間的時差 (帶正負號)，以小時為單位。</span><span class="sxs-lookup"><span data-stu-id="690ff-648">With <xref:System.DateTime> values, the "zz" custom format specifier represents the signed offset of the local operating system's time zone from UTC, measured in hours.</span></span> <span data-ttu-id="690ff-649">它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性值。</span><span class="sxs-lookup"><span data-stu-id="690ff-649">It does not reflect the value of an instance's <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="690ff-650">因此，不建議將 "zz" 格式規範搭配 <xref:System.DateTime> 值使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-650">For this reason, the "zz" format specifier is not recommended for use with <xref:System.DateTime> values.</span></span>  
   
- 搭配 <xref:System.DateTimeOffset> 值使用時，此格式規範表示 <xref:System.DateTimeOffset> 值與 UTC 之間的時差，以小時為單位。  
+ <span data-ttu-id="690ff-651">搭配 <xref:System.DateTimeOffset> 值使用時，此格式規範表示 <xref:System.DateTimeOffset> 值與 UTC 之間的時差，以小時為單位。</span><span class="sxs-lookup"><span data-stu-id="690ff-651">With <xref:System.DateTimeOffset> values, this format specifier represents the <xref:System.DateTimeOffset> value's offset from UTC in hours.</span></span>  
   
- 顯示時差時，一定會有前置正負號。 加號 \(\+\) 表示早於 UTC 的時數，減號 \(\-\) 表示晚於 UTC 的時數。 單一位數的時差會格式化為有前置零的數字。  
+ <span data-ttu-id="690ff-652">顯示時差時，一定會有前置正負號。</span><span class="sxs-lookup"><span data-stu-id="690ff-652">The offset is always displayed with a leading sign.</span></span> <span data-ttu-id="690ff-653">加號 (+) 表示早於 UTC 的時數，減號 (-) 表示晚於 UTC 的時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-653">A plus sign (+) indicates hours ahead of UTC, and a minus sign (-) indicates hours behind UTC.</span></span> <span data-ttu-id="690ff-654">單一位數的時差會格式化為有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-654">A single-digit offset is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "zz" 自訂格式規範。  
+ <span data-ttu-id="690ff-655">下列範例會在自訂格式字串中加入 "zz" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-655">The following example includes the "zz" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-656">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-656">Back to table</span></span>](#table)  
   
 <a name="zzzSpecifier"></a>   
-## "zzz" 自訂格式規範  
- 搭配 <xref:System.DateTime> 值使用時，"zzz" 自訂格式規範表示本地作業系統時區與 UTC 之間的時差 \(帶正負號\)，以小時和分鐘為單位。 它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性值。 因此，不建議將 "zzz" 格式規範搭配 <xref:System.DateTime> 值使用。  
+## <a name="the-zzz-custom-format-specifier"></a><span data-ttu-id="690ff-657">"zzz" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-657">The "zzz" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-658">搭配 <xref:System.DateTime> 值使用時，"zzz" 自訂格式規範表示本地作業系統時區與 UTC 之間的時差 (帶正負號)，以小時和分鐘為單位。</span><span class="sxs-lookup"><span data-stu-id="690ff-658">With <xref:System.DateTime> values, the "zzz" custom format specifier represents the signed offset of the local operating system's time zone from UTC, measured in hours and minutes.</span></span> <span data-ttu-id="690ff-659">它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性值。</span><span class="sxs-lookup"><span data-stu-id="690ff-659">It does not reflect the value of an instance's <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="690ff-660">因此，不建議將 "zzz" 格式規範搭配 <xref:System.DateTime> 值使用。</span><span class="sxs-lookup"><span data-stu-id="690ff-660">For this reason, the "zzz" format specifier is not recommended for use with <xref:System.DateTime> values.</span></span>  
   
- 搭配 <xref:System.DateTimeOffset> 值使用時，此格式規範表示 <xref:System.DateTimeOffset> 值與 UTC 之間的時差，以小時和分鐘為單位。  
+ <span data-ttu-id="690ff-661">搭配 <xref:System.DateTimeOffset> 值使用時，此格式規範表示 <xref:System.DateTimeOffset> 值與 UTC 之間的時差，以小時和分鐘為單位。</span><span class="sxs-lookup"><span data-stu-id="690ff-661">With <xref:System.DateTimeOffset> values, this format specifier represents the <xref:System.DateTimeOffset> value's offset from UTC in hours and minutes.</span></span>  
   
- 顯示時差時，一定會有前置正負號。 加號 \(\+\) 表示早於 UTC 的時數，減號 \(\-\) 表示晚於 UTC 的時數。 單一位數的時差會格式化為有前置零的數字。  
+ <span data-ttu-id="690ff-662">顯示時差時，一定會有前置正負號。</span><span class="sxs-lookup"><span data-stu-id="690ff-662">The offset is always displayed with a leading sign.</span></span> <span data-ttu-id="690ff-663">加號 (+) 表示早於 UTC 的時數，減號 (-) 表示晚於 UTC 的時數。</span><span class="sxs-lookup"><span data-stu-id="690ff-663">A plus sign (+) indicates hours ahead of UTC, and a minus sign (-) indicates hours behind UTC.</span></span> <span data-ttu-id="690ff-664">單一位數的時差會格式化為有前置零的數字。</span><span class="sxs-lookup"><span data-stu-id="690ff-664">A single-digit offset is formatted with a leading zero.</span></span>  
   
- 下列範例會在自訂格式字串中加入 "zzz" 自訂格式規範。  
+ <span data-ttu-id="690ff-665">下列範例會在自訂格式字串中加入 "zzz" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-665">The following example includes the "zzz" custom format specifier in a custom format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-666">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-666">Back to table</span></span>](#table)  
   
 <a name="timeSeparator"></a>   
-## ":" 自訂格式規範  
- ":" 自訂格式規範表示時間分隔符號，用於區別時、分、秒。 適當的當地語系化時間分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=fullName> 屬性。  
+## <a name="the--custom-format-specifier"></a><span data-ttu-id="690ff-667">":" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-667">The ":" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-668">":" 自訂格式規範表示時間分隔符號，用於區別時、分、秒。</span><span class="sxs-lookup"><span data-stu-id="690ff-668">The ":" custom format specifier represents the time separator, which is used to differentiate hours, minutes, and seconds.</span></span> <span data-ttu-id="690ff-669">適當的當地語系化時間分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-669">The appropriate localized time separator is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> property of the current or specified culture.</span></span>  
   
 > [!NOTE]
->  若要變更特定日期和時間字串的時間分隔符號，請在常值字串分隔符號內指定分隔字元。 例如，自訂格式字串 `hh'_'dd'_'ss` 產生的結果字串中，一律使用 "\_" \(底線\) 作為時間分隔符號。 若要變更文化特性所有日期的時間分隔符號，請變更目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=fullName> 屬性值，或是具現化 <xref:System.Globalization.DateTimeFormatInfo> 物件、將字元指派給它的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 屬性，並呼叫包含 <xref:System.IFormatProvider> 參數的格式化方法之多載。  
+>  <span data-ttu-id="690ff-670">若要變更特定日期和時間字串的時間分隔符號，請在常值字串分隔符號內指定分隔字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-670">To change the time separator for a particular date and time string, specify the separator character within a literal string delimiter.</span></span> <span data-ttu-id="690ff-671">例如，自訂格式字串 `hh'_'dd'_'ss` 產生的結果字串中，一律使用 "_" (底線) 作為時間分隔符號。</span><span class="sxs-lookup"><span data-stu-id="690ff-671">For example, the custom format string `hh'_'dd'_'ss` produces a result string in which "_" (an underscore) is always used as the time separator.</span></span> <span data-ttu-id="690ff-672">若要變更文化特性所有日期的時間分隔符號，請變更目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性值，或是具現化 <xref:System.Globalization.DateTimeFormatInfo> 物件、將字元指派給它的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 屬性，並呼叫包含 <xref:System.IFormatProvider> 參數的格式化方法之多載。</span><span class="sxs-lookup"><span data-stu-id="690ff-672">To change the time separator for all dates for a culture, either change the value of the <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> property of the current culture, or instantiate a <xref:System.Globalization.DateTimeFormatInfo> object, assign the character to its <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> property, and call an overload of the formatting method that includes an <xref:System.IFormatProvider> parameter.</span></span>  
   
- 如果單獨使用 ":" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-673">如果單獨使用 ":" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-673">If the ":" format specifier is used without other custom format specifiers, it is interpreted as a standard date and time format specifier and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-674">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-674">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-675">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-675">Back to table</span></span>](#table)  
   
 <a name="dateSeparator"></a>   
-## "\/" 自訂格式規範  
- "\/" 自訂格式規範表示日期分隔符號，用於區別年、月、日。 適當的當地語系化日期分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=fullName> 屬性。  
+## <a name="the--custom-format-specifier"></a><span data-ttu-id="690ff-676">"/" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-676">The "/" custom format specifier</span></span>  
+ <span data-ttu-id="690ff-677">"/" 自訂格式規範表示日期分隔符號，用於區別年、月、日。</span><span class="sxs-lookup"><span data-stu-id="690ff-677">The "/" custom format specifier represents the date separator, which is used to differentiate years, months, and days.</span></span> <span data-ttu-id="690ff-678">適當的當地語系化日期分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-678">The appropriate localized date separator is retrieved from the <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> property of the current or specified culture.</span></span>  
   
 > [!NOTE]
->  若要變更特定日期和時間字串的日期分隔符號，請在常值字串分隔符號內指定分隔字元。 例如，自訂格式字串 `mm'/'dd'/'yyyy` 產生的結果字串中，一律使用 "\/" 作為日期分隔符號。 若要變更文化特性的所有日期之日期分隔符號，請變更目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=fullName> 屬性值，或是具現化 <xref:System.Globalization.DateTimeFormatInfo> 物件、將字元指派給它的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A> 屬性，並呼叫包含 <xref:System.IFormatProvider> 參數的格式化方法之多載。  
+>  <span data-ttu-id="690ff-679">若要變更特定日期和時間字串的日期分隔符號，請在常值字串分隔符號內指定分隔字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-679">To change the date separator for a particular date and time string, specify the separator character within a literal string delimiter.</span></span> <span data-ttu-id="690ff-680">例如，自訂格式字串 `mm'/'dd'/'yyyy` 產生的結果字串中，一律使用 "/" 作為日期分隔符號。</span><span class="sxs-lookup"><span data-stu-id="690ff-680">For example, the custom format string `mm'/'dd'/'yyyy` produces a result string in which "/" is always used as the date separator.</span></span> <span data-ttu-id="690ff-681">若要變更文化特性的所有日期之日期分隔符號，請變更目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> 屬性值，或是具現化 <xref:System.Globalization.DateTimeFormatInfo> 物件、將字元指派給它的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A> 屬性，並呼叫包含 <xref:System.IFormatProvider> 參數的格式化方法之多載。</span><span class="sxs-lookup"><span data-stu-id="690ff-681">To change the date separator for all dates for a culture, either change the value of the <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> property of the current culture, or instantiate a <xref:System.Globalization.DateTimeFormatInfo> object, assign the character to its <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A> property, and call an overload of the formatting method that includes an <xref:System.IFormatProvider> parameter.</span></span>  
   
- 如果單獨使用 "\/" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題後面的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
+ <span data-ttu-id="690ff-682">如果單獨使用 "/" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-682">If the "/" format specifier is used without other custom format specifiers, it is interpreted as a standard date and time format specifier and throws a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-683">如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。</span><span class="sxs-lookup"><span data-stu-id="690ff-683">For more information about using a single format specifier, see [Using Single Custom Format Specifiers](#UsingSingleSpecifiers) later in this topic.</span></span>  
   
- [回到表格](#table)  
+ [<span data-ttu-id="690ff-684">回到表格</span><span class="sxs-lookup"><span data-stu-id="690ff-684">Back to table</span></span>](#table)  
+  
+<a name="Literals"></a>   
+## <a name="character-literals"></a><span data-ttu-id="690ff-685">字元常值</span><span class="sxs-lookup"><span data-stu-id="690ff-685">Character literals</span></span>  
+ <span data-ttu-id="690ff-686">自訂日期和時間格式字串中的下列字元是保留字元，一律會解譯為格式字元；若是 "、'、/ 和 \\，則解譯為特殊字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-686">The following characters in a custom date and time format string are reserved and are always interpreted as formatting characters or, in the case of ", ', /, and \\, as special characters.</span></span>  
+  
+||||||  
+|-|-|-|-|-|  
+|<span data-ttu-id="690ff-687">F</span><span class="sxs-lookup"><span data-stu-id="690ff-687">F</span></span>|<span data-ttu-id="690ff-688">H</span><span class="sxs-lookup"><span data-stu-id="690ff-688">H</span></span>|<span data-ttu-id="690ff-689">K</span><span class="sxs-lookup"><span data-stu-id="690ff-689">K</span></span>|<span data-ttu-id="690ff-690">M</span><span class="sxs-lookup"><span data-stu-id="690ff-690">M</span></span>|<span data-ttu-id="690ff-691">d</span><span class="sxs-lookup"><span data-stu-id="690ff-691">d</span></span>|  
+|<span data-ttu-id="690ff-692">f</span><span class="sxs-lookup"><span data-stu-id="690ff-692">f</span></span>|<span data-ttu-id="690ff-693">G</span><span class="sxs-lookup"><span data-stu-id="690ff-693">g</span></span>|<span data-ttu-id="690ff-694">h</span><span class="sxs-lookup"><span data-stu-id="690ff-694">h</span></span>|<span data-ttu-id="690ff-695">m</span><span class="sxs-lookup"><span data-stu-id="690ff-695">m</span></span>|<span data-ttu-id="690ff-696">秒</span><span class="sxs-lookup"><span data-stu-id="690ff-696">s</span></span>|  
+|<span data-ttu-id="690ff-697">t</span><span class="sxs-lookup"><span data-stu-id="690ff-697">t</span></span>|<span data-ttu-id="690ff-698">Y</span><span class="sxs-lookup"><span data-stu-id="690ff-698">y</span></span>|<span data-ttu-id="690ff-699">z</span><span class="sxs-lookup"><span data-stu-id="690ff-699">z</span></span>|%|<span data-ttu-id="690ff-700">:</span><span class="sxs-lookup"><span data-stu-id="690ff-700">:</span></span>|  
+|/|<span data-ttu-id="690ff-701">"</span><span class="sxs-lookup"><span data-stu-id="690ff-701">"</span></span>|<span data-ttu-id="690ff-702">'</span><span class="sxs-lookup"><span data-stu-id="690ff-702">'</span></span>|\||  
+  
+ <span data-ttu-id="690ff-703">所有其他字元一律會解譯為字元常值，並在格式化作業中，原封不動地包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="690ff-703">All other characters are always interpreted as character literals and, in a formatting operation, are included in the result string unchanged.</span></span>  <span data-ttu-id="690ff-704">在剖析作業中，它們必須完全符合輸入字串中的字元；這項比較會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="690ff-704">In a parsing operation, they must match the characters in the input string exactly; the comparison is case-sensitive.</span></span>  
+  
+ <span data-ttu-id="690ff-705">下列範例包含常值字元 "PST" (太平洋標準時間) 和 "PDT" (太平洋日光節約時間)，以表示格式字串中的當地時區。</span><span class="sxs-lookup"><span data-stu-id="690ff-705">The following example includes the literal characters "PST" (for Pacific Standard Time) and "PDT" (for Pacific Daylight Time) to represent the local time zone in a format string.</span></span> <span data-ttu-id="690ff-706">請注意，此字串會包含在結果字串中，而且包含當地時區字串的字串也會成功剖析。</span><span class="sxs-lookup"><span data-stu-id="690ff-706">Note that the string is included in the result string, and that a string that includes the local time zone string also parses successfully.</span></span>  
+  
+ [!code-csharp[Formatting.DateAndTime.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+ [!code-vb[Formatting.DateAndTime.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]  
+  
+ <span data-ttu-id="690ff-707">您可以使用兩種方式來指定將字元解譯為常值字元，而不是保留字元，以便包含在結果字串中，或在輸入字串中成功剖析：</span><span class="sxs-lookup"><span data-stu-id="690ff-707">There are two ways to indicate that characters are to be interpreted as literal characters and not as reserve characters, so that they can be included in a result string or successfully parsed in an input string:</span></span>  
+  
+-   <span data-ttu-id="690ff-708">將每個保留字元逸出。</span><span class="sxs-lookup"><span data-stu-id="690ff-708">By escaping each reserved character.</span></span> <span data-ttu-id="690ff-709">如需詳細資訊，請參閱[使用逸出字元](#escape)。</span><span class="sxs-lookup"><span data-stu-id="690ff-709">For more information, see [Using the Escape Character](#escape).</span></span>  
+  
+     <span data-ttu-id="690ff-710">下列範例包含常值字元 "pst" (太平洋標準時間)，以表示格式字串中的當地時區。</span><span class="sxs-lookup"><span data-stu-id="690ff-710">The following example includes the literal characters "pst" (for Pacific Standard time) to represent the local time zone in a format string.</span></span> <span data-ttu-id="690ff-711">由於 "s" 與 "t" 是自訂格式字串，因此必須逸出這兩個字元才能解譯為字元常值。</span><span class="sxs-lookup"><span data-stu-id="690ff-711">Because both "s" and "t" are custom format strings, both characters must be escaped to be interpreted as character literals.</span></span>  
+  
+     [!code-csharp[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+     [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]  
+  
+-   <span data-ttu-id="690ff-712">以雙引號或單引號括住整個常值字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-712">By enclosing the entire literal string in quotation marks or apostrophes.</span></span> <span data-ttu-id="690ff-713">下列範例類似上一個範例，不同之處在於 "pst" 會以雙引號括住，以表示整個分隔的字串都應該解譯為字元常值。</span><span class="sxs-lookup"><span data-stu-id="690ff-713">The following example is like the previous one, except that "pst" is enclosed in quotation marks to indicate that the entire delimited string should be interpreted as character literals.</span></span>  
+  
+     [!code-csharp[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+     [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]  
   
 <a name="Notes"></a>   
-## 備註  
+## <a name="notes"></a><span data-ttu-id="690ff-714">備註</span><span class="sxs-lookup"><span data-stu-id="690ff-714">Notes</span></span>  
   
 <a name="UsingSingleSpecifiers"></a>   
-### 使用單一自訂格式規範  
- 自訂日期和時間格式字串是由兩個或多個字元所組成。 日期和時間格式化方法會將任何單一字元字串解譯為標準日期和時間格式字串。 如果這些方法無法將該字元辨認為有效的格式規範，則會擲回 <xref:System.FormatException>。 例如，僅由規範 "h" 所組成的格式字串會解譯為標準日期和時間字串。 不過，在這種特殊情形下會擲回例外狀況，因為並沒有 "h" 標準日期和時間``格式規範。  
+### <a name="using-single-custom-format-specifiers"></a><span data-ttu-id="690ff-715">使用單一自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="690ff-715">Using single custom format specifiers</span></span>  
+ <span data-ttu-id="690ff-716">自訂日期和時間格式字串是由兩個或多個字元所組成。</span><span class="sxs-lookup"><span data-stu-id="690ff-716">A custom date and time format string consists of two or more characters.</span></span> <span data-ttu-id="690ff-717">日期和時間格式化方法會將任何單一字元字串解譯為標準日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-717">Date and time formatting methods interpret any single-character string as a standard date and time format string.</span></span> <span data-ttu-id="690ff-718">如果這些方法無法將該字元辨認為有效的格式規範，則會擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="690ff-718">If they do not recognize the character as a valid format specifier, they throw a <xref:System.FormatException>.</span></span> <span data-ttu-id="690ff-719">例如，僅由規範 "h" 所組成的格式字串會解譯為標準日期和時間字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-719">For example, a format string that consists only of the specifier "h" is interpreted as a standard date and time format string.</span></span> <span data-ttu-id="690ff-720">不過，在這種特殊情形下會擲回例外狀況，因為並沒有 "h" 標準日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-720">However, in this particular case, an exception is thrown because there is no "h" standard date and timeformat specifier.</span></span>  
   
- 若要使用任何自訂日期和時間格式規範做為格式字串中的唯一規範 \(也就是單獨使用 "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":" 或 "\/" 自訂格式規範\)，請在規範之前或之後加上一個空格，或在單一自訂日期和時間規範之前加上一個百分比 \("%"\) 格式規範。  
+ <span data-ttu-id="690ff-721">若要使用任何自訂日期和時間格式規範做為格式字串中的唯一規範 (也就是單獨使用 "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":" 或 "/" 自訂格式規範)，請在規範之前或之後加上一個空格，或在單一自訂日期和時間規範之前加上一個百分比 ("%") 格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-721">To use any of the custom date and time format specifiers as the only specifier in a format string (that is, to use the "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":", or "/" custom format specifier by itself), include a space before or after the specifier, or include a percent ("%") format specifier before the single custom date and time specifier.</span></span>  
   
- 例如，"`%h"` 會解譯為自訂日期和時間格式字串，該字串會顯示由目前日期和時間值所表示的小時。 您也可以使用 " h" 或 "h " 格式字串，然而這會在結果字串中的小時旁邊加上空格。 下列範例示範這三個格式字串。  
+ <span data-ttu-id="690ff-722">例如，"`%h"` 會解譯為自訂日期和時間格式字串，該字串會顯示由目前日期和時間值所表示的小時。</span><span class="sxs-lookup"><span data-stu-id="690ff-722">For example, "`%h"` is interpreted as a custom date and time format string that displays the hour represented by the current date and time value.</span></span> <span data-ttu-id="690ff-723">您也可以使用 " h" 或 "h " 格式字串，然而這會在結果字串中的小時旁邊加上空格。</span><span class="sxs-lookup"><span data-stu-id="690ff-723">You can also use the " h" or "h " format string, although this includes a space in the result string along with the hour.</span></span> <span data-ttu-id="690ff-724">下列範例示範這三個格式字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-724">The following example illustrates these three format strings.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]  
   
 <a name="escape"></a>   
-### 使用逸出字元  
- 格式字串中的 "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":" 或 "\/" 字元會解譯為自訂格式規範，而不是常值字元。 若要避免將字元解譯為格式規範，您可以在前面加上反斜線 \(\\\)，這是逸出字元。 逸出字元表示接下來的字元是字元常值，應該原封不動地放入結果字串中。  
+### <a name="using-the-escape-character"></a><span data-ttu-id="690ff-725">使用逸出字元</span><span class="sxs-lookup"><span data-stu-id="690ff-725">Using the Escape Character</span></span>  
+ <span data-ttu-id="690ff-726">格式字串中的 "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":" 或 "/" 字元會解譯為自訂格式規範，而不是常值字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-726">The "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":", or "/" characters in a format string are interpreted as custom format specifiers rather than as literal characters.</span></span> <span data-ttu-id="690ff-727">若要避免將字元解譯為格式規範，您可以在前面加上反斜線 (\\)，這是逸出字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-727">To prevent a character from being interpreted as a format specifier, you can precede it with a backslash (\\), which is the escape character.</span></span> <span data-ttu-id="690ff-728">逸出字元表示接下來的字元是字元常值，應該原封不動地放入結果字串中。</span><span class="sxs-lookup"><span data-stu-id="690ff-728">The escape character signifies that the following character is a character literal that should be included in the result string unchanged.</span></span>  
   
- 若要在結果字串中加上反斜線，您必須再加上一個反斜線 \(變成 `\\`\)，才能將反斜線解譯為常值。  
+ <span data-ttu-id="690ff-729">若要在結果字串中加上反斜線，您必須再加上一個反斜線 (變成`\\`)，才能將反斜線解譯為常值。</span><span class="sxs-lookup"><span data-stu-id="690ff-729">To include a backslash in a result string, you must escape it with another backslash (`\\`).</span></span>  
   
 > [!NOTE]
->  某些編譯器 \(例如 C\+\+ 和 C\# 編譯器\) 也可能會將單一反斜線字元解譯為逸出字元。 為了確保字串在格式化時能夠正確獲得解譯，您可以在 C\# 中的字串前面加上逐字字串常值字元 \(@ 字元\)，或在 C\# 和 C\+\+ 中的每個反斜線前面再加上一個反斜線字元。 下列 C\# 範例示範這兩種做法。  
+>  <span data-ttu-id="690ff-730">某些編譯器 (例如 C++ 和 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-730">Some compilers, such as the C++ and C# compilers, may also interpret a single backslash character as an escape character.</span></span> <span data-ttu-id="690ff-731">為了確保字串在格式化時能夠正確獲得解譯，您可以在 C# 中的字串前面加上逐字字串常值字元 (@ 字元)，或在 C# 和 C++ 中的每個反斜線前面再加上一個反斜線字元。</span><span class="sxs-lookup"><span data-stu-id="690ff-731">To ensure that a string is interpreted correctly when formatting, you can use the verbatim string literal character (the @ character) before the string in C#, or add another backslash character before each backslash in C# and C++.</span></span> <span data-ttu-id="690ff-732">下列 C# 範例示範這兩種做法。</span><span class="sxs-lookup"><span data-stu-id="690ff-732">The following C# example illustrates both approaches.</span></span>  
   
- 下列範例會使用逸出字元，以避免格式化作業將 "h" 和 "m" 字元解譯為格式規範。  
+ <span data-ttu-id="690ff-733">下列範例會使用逸出字元，以避免格式化作業將 "h" 和 "m" 字元解譯為格式規範。</span><span class="sxs-lookup"><span data-stu-id="690ff-733">The following example uses the escape character to prevent the formatting operation from interpreting the "h" and "m" characters as format specifiers.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Custom#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/escape1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Custom#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/escape1.vb#15)]  
   
-### 控制台設定值  
- \[控制台\] 中的 \[**地區及語言選項**\] 設定會影響格式化作業 \(其中包含許多自訂日期和時間格式規範\) 所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。  
+### <a name="control-panel-settings"></a><span data-ttu-id="690ff-734">控制台設定</span><span class="sxs-lookup"><span data-stu-id="690ff-734">Control Panel settings</span></span>  
+ <span data-ttu-id="690ff-735">[控制台] 中的 [地區及語言選項] 設定會影響格式化作業 (其中包含許多自訂日期和時間格式規範) 所產生的結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-735">The **Regional and Language Options** settings in Control Panel influence the result string produced by a formatting operation that includes many of the custom date and time format specifiers.</span></span> <span data-ttu-id="690ff-736">這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。</span><span class="sxs-lookup"><span data-stu-id="690ff-736">These settings are used to initialize the <xref:System.Globalization.DateTimeFormatInfo> object associated with the current thread culture, which provides values used to govern formatting.</span></span> <span data-ttu-id="690ff-737">使用不同設定的電腦會產生不同的結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-737">Computers that use different settings generate different result strings.</span></span>  
   
- 此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=fullName> 建構函式來具現化新的 <xref:System.Globalization.CultureInfo> 物件，而此物件代表的文化特性與目前系統文化特性相同，則 \[控制台\] 中的 \[**地區及語言選項**\] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
+ <span data-ttu-id="690ff-738">此外，如果您使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>建構函式來具現化新<xref:System.Globalization.CultureInfo>物件，代表相同的文化特性與目前的系統文化特性，所建立的任何自訂**地區及語言選項**在控制台中的項目會套用至新<xref:System.Globalization.CultureInfo>物件。</span><span class="sxs-lookup"><span data-stu-id="690ff-738">In addition, if you use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor to instantiate a new <xref:System.Globalization.CultureInfo> object that represents the same culture as the current system culture, any customizations established by the **Regional and Language Options** item in Control Panel will be applied to the new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="690ff-739">您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="690ff-739">You can use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructo to create a <xref:System.Globalization.CultureInfo> object that does not reflect a system's customizations.</span></span>  
   
-### DateTimeFormatInfo 屬性  
- 格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。 在 <xref:System.IFormatProvider> 參數中，您應該指定表示文化特性的 <xref:System.Globalization.CultureInfo> 物件，指定或 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
+### <a name="datetimeformatinfo-properties"></a><span data-ttu-id="690ff-740">DateTimeFormatInfo 屬性</span><span class="sxs-lookup"><span data-stu-id="690ff-740">DateTimeFormatInfo properties</span></span>  
+ <span data-ttu-id="690ff-741">格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。</span><span class="sxs-lookup"><span data-stu-id="690ff-741">Formatting is influenced by properties of the current <xref:System.Globalization.DateTimeFormatInfo> object, which is provided implicitly by the current thread culture or explicitly by the <xref:System.IFormatProvider> parameter of the method that invokes formatting.</span></span> <span data-ttu-id="690ff-742">在 <xref:System.IFormatProvider> 參數中，您應該指定表示文化特性的 <xref:System.Globalization.CultureInfo> 物件，指定或 <xref:System.Globalization.DateTimeFormatInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="690ff-742">For the <xref:System.IFormatProvider> parameter, you should specify a <xref:System.Globalization.CultureInfo> object, which represents a culture, or a <xref:System.Globalization.DateTimeFormatInfo> object.</span></span>  
   
- 許多自訂日期和時間格式規範所產生的結果字串，也取決於目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性。 您的應用程式可以變更對應的 <xref:System.Globalization.DateTimeFormatInfo> 屬性，藉此改變某些自訂日期和時間格式規範所產生的結果。 例如，"ddd" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字串陣列中找到的縮寫星期幾名稱加入至結果字串。 同樣地，"MMMM" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字串陣列中找到的完整月份名稱加到結果字串。  
+ <span data-ttu-id="690ff-743">許多自訂日期和時間格式規範所產生的結果字串，也取決於目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性。</span><span class="sxs-lookup"><span data-stu-id="690ff-743">The result string produced by many of the custom date and time format specifiers also depends on properties of the current <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="690ff-744">您的應用程式可以變更對應的 <xref:System.Globalization.DateTimeFormatInfo> 屬性，藉此改變某些自訂日期和時間格式規範所產生的結果。</span><span class="sxs-lookup"><span data-stu-id="690ff-744">Your application can change the result produced by some custom date and time format specifiers by changing the corresponding <xref:System.Globalization.DateTimeFormatInfo> property.</span></span> <span data-ttu-id="690ff-745">例如，"ddd" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字串陣列中找到的縮寫星期幾名稱加入至結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-745">For example, the "ddd" format specifier adds an abbreviated weekday name found in the <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> string array to the result string.</span></span> <span data-ttu-id="690ff-746">同樣地，"MMMM" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字串陣列中找到的完整月份名稱加到結果字串。</span><span class="sxs-lookup"><span data-stu-id="690ff-746">Similarly, the "MMMM" format specifier adds a full month name found in the <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> string array to the result string.</span></span>  
   
-## 請參閱  
- <xref:System.DateTime?displayProperty=fullName>   
- <xref:System.IFormatProvider?displayProperty=fullName>   
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)   
- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)   
- [範例：.NET Framework 4 格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a><span data-ttu-id="690ff-747">另請參閱</span><span class="sxs-lookup"><span data-stu-id="690ff-747">See Also</span></span>  
+ <xref:System.DateTime?displayProperty=nameWithType>  
+ <xref:System.IFormatProvider?displayProperty=nameWithType>  
+ [<span data-ttu-id="690ff-748">格式化類型</span><span class="sxs-lookup"><span data-stu-id="690ff-748">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="690ff-749">Standard Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="690ff-749">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [<span data-ttu-id="690ff-750">範例：.NET Framework 4 格式化公用程式</span><span class="sxs-lookup"><span data-stu-id="690ff-750">Sample: .NET Framework 4 Formatting Utility</span></span>](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

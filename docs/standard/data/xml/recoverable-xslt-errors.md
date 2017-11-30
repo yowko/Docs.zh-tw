@@ -1,67 +1,65 @@
 ---
-title: "可復原的 XSLT 錯誤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "可復原的 XSLT 錯誤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 可復原的 XSLT 錯誤
-＜W3C XSL 轉換 \(XSLT\) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。  這些領域視為 Discretionary 行為。  例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。  針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。  針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  
+# <a name="recoverable-xslt-errors"></a><span data-ttu-id="3c282-102">可復原的 XSLT 錯誤</span><span class="sxs-lookup"><span data-stu-id="3c282-102">Recoverable XSLT Errors</span></span>
+<span data-ttu-id="3c282-103">＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。</span><span class="sxs-lookup"><span data-stu-id="3c282-103">The W3C XSL Transformations (XSLT) Version 1.0 Recommendation includes areas in which the implementation provider may decide how to handle a situation.</span></span> <span data-ttu-id="3c282-104">這些領域視為 Discretionary 行為。</span><span class="sxs-lookup"><span data-stu-id="3c282-104">These areas are considered to be discretionary behavior.</span></span> <span data-ttu-id="3c282-105">例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="3c282-105">For example, in section 7.3 Creating Processing Instructions, the XSLT 1.0 recommendation states that it is an error if instantiating the content of `xsl:processing-instruction` creates nodes other than text nodes.</span></span> <span data-ttu-id="3c282-106">針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。</span><span class="sxs-lookup"><span data-stu-id="3c282-106">For some problems, the XSLT 1.0 recommendation indicates what decision should be made if the processor decides to recover from the error.</span></span> <span data-ttu-id="3c282-107">針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。</span><span class="sxs-lookup"><span data-stu-id="3c282-107">For the problem given in section 7.3, the W3C says that the implementation can recover from this error by ignoring the nodes and their content.</span></span>  
   
-## Discretionary 行為  
- 下表會列出 XSLT 1.0 版建議事項所允許的每個 Discretionary 行為，以及 <xref:System.Xml.Xsl.XslCompiledTransform> 類別如何處理這些行為。  
+## <a name="discretionary-behaviors"></a><span data-ttu-id="3c282-108">Discretionary 行為</span><span class="sxs-lookup"><span data-stu-id="3c282-108">Discretionary Behaviors</span></span>  
+ <span data-ttu-id="3c282-109">下表會列出 XSLT 1.0 版建議事項所允許的每個 Discretionary 行為，以及 <xref:System.Xml.Xsl.XslCompiledTransform> 類別如何處理這些行為。</span><span class="sxs-lookup"><span data-stu-id="3c282-109">The following table lists each of the discretionary behaviors allowed by the XSLT 1.0 recommendation, and how these behaviors are handled by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
   
--   「復原」表示 <xref:System.Xml.Xsl.XslCompiledTransform> 類別將從此錯誤復原。  <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=fullName> 事件可用於報告 XSLT 處理器的任何事件。  
+-   <span data-ttu-id="3c282-110">「復原」表示 <xref:System.Xml.Xsl.XslCompiledTransform> 類別將從此錯誤復原。</span><span class="sxs-lookup"><span data-stu-id="3c282-110">Recover indicates that the <xref:System.Xml.Xsl.XslCompiledTransform> class will recover from this error.</span></span> <span data-ttu-id="3c282-111"><xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 事件可用於報告 XSLT 處理器的任何事件。</span><span class="sxs-lookup"><span data-stu-id="3c282-111">The <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> event can be used to report any events from the XSLT processor.</span></span>  
   
--   「錯誤」表示引發此情況的例外狀況。  
+-   <span data-ttu-id="3c282-112">「錯誤」表示引發此情況的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3c282-112">Error indicates that an exception is raised for this condition.</span></span>  
   
--   您可以在 [W3C XSL 轉換 \(XSLT\) 1.0 版建議事項](http://go.microsoft.com/fwlink/?LinkId=49919) \(英文\) 和 [W3C XSL Transformations \(XSLT\) 1.0 版規格錯誤](http://go.microsoft.com/fwlink/?LinkId=49917) \(英文\) 中找到章節參考資料。  
+-   <span data-ttu-id="3c282-113">區段參考位於[W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://go.microsoft.com/fwlink/?LinkId=49919)和[W3C XSL 轉換 (XSLT) 1.0 版規格的 Errata 中](http://go.microsoft.com/fwlink/?LinkId=49917)。</span><span class="sxs-lookup"><span data-stu-id="3c282-113">The section references can be found in the [W3C XSL Transformations (XSLT) Version 1.0 Recommendation](http://go.microsoft.com/fwlink/?LinkId=49919) and the [W3C XSL Transformations (XSLT) Version 1.0 Specification Errata](http://go.microsoft.com/fwlink/?LinkId=49917).</span></span>  
   
-|XSLT 條件|區段|XslCompiledTransform 行為|  
-|-------------|--------|-----------------------------|  
-|文字節點同時符合 `xsl:strip-space` 及 `xsl:preserve-space`。|3.4|復原|  
-|來源節點符合一個以上的範本 \(Template\) 規則。|5.5|復原|  
-|命名空間 URI 會宣告成多個命名空間 URI 的別名，且全都具有相同的匯入優先順序。|7.1.1|復原|  
-|從屬性值產生之 `xsl:attribute` 及 `xsl:element` 中的 `name` 屬性不是 QName。|7.1.2, 7.1.3|錯誤\*|  
-|具有相同匯入及展開名稱的兩個屬性集具有通用的屬性，而且其他任何屬性集都不會包含具有相同名稱、更高重要性的通用屬性。|7.1.4|復原|  
-|將項目子系加入至項目後，將屬性加入至該項目。|7.1.3|錯誤\*|  
-|建立具有 xmlns 名稱的屬性|7.1.3|錯誤\*|  
-|將非項目的屬性加入至節點。|7.1.3|錯誤\*|  
-|具現化 `xsl:attribute` 屬性的內容期間，建立非文字節點的節點。|7.1.3|錯誤\*|  
-|`xsl:processing-instruction` 的 `name` 屬性不會同時產生 NCName 及處理指示目標。|7.3|錯誤\*|  
-|具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點。|7.3|錯誤\*|  
-|具現化 `xsl:processing-instruction` 內容的結果包含字串「?\>」|7.3|復原|  
-|具現化 `xsl:processing-instruction` 內容的結果包含字串 \-\-，或以 \- 為結尾。|7.4|復原|  
-|具現化 `xsl:comment` 內容的結果會建立非文字節點的節點。|7.4|錯誤\*|  
-|變數繫結項目內的範本會傳回屬性節點或命名空間節點。|11.2|錯誤\*|  
-|從傳遞至文件函式的 URI 上擷取資源時發生錯誤。|12.1|錯誤|  
-|文件函式中的 URI 參考包含片段識別項，且處理片段識別項時發生錯誤。|12.1|復原\*|  
-|有多個具有相同名稱、不同值的屬性，它們不是具有相同匯入優先順序之 `xsl:output` 中的具名 cdata\-section 項目。|16|復原|  
-|處理器不支援 `xsl:output` 編碼屬性中的編碼。|16.1|復原|  
-|針對文字節點，停用結果樹狀目錄中用於非文字節點之節點的輸出逸出。|16.4|復原\*|  
-|如果結果樹狀結構片段包含啟用輸出逸出的文字節點，則結果樹狀結構片段會轉換成數字或字串。|16.4|復原\*|  
-|針對不能以 XSLT 處理器用於輸出的編碼方式表示的字元，停用輸出逸出。|16.4|復原\*|  
-|在項目中加入項目子系或屬性後，加入命名空間節點。|勘誤表 25|錯誤\*|  
-|`xsl:number` 的 `value` 屬性為 NAN、無限或小於 0.5|勘誤表 24|復原|  
-|文件函式的第二個引數節點集是空的，且 URI 參考是相對的。|勘誤表 14|復原|  
+|<span data-ttu-id="3c282-114">XSLT 條件</span><span class="sxs-lookup"><span data-stu-id="3c282-114">XSLT condition</span></span>|<span data-ttu-id="3c282-115">區段</span><span class="sxs-lookup"><span data-stu-id="3c282-115">Section</span></span>|<span data-ttu-id="3c282-116">XslCompiledTransform 行為</span><span class="sxs-lookup"><span data-stu-id="3c282-116">XslCompiledTransform behavior</span></span>|  
+|--------------------|-------------|-----------------------------------|  
+|<span data-ttu-id="3c282-117">文字節點同時符合 `xsl:strip-space` 及 `xsl:preserve-space`。</span><span class="sxs-lookup"><span data-stu-id="3c282-117">A text node matches both `xsl:strip-space` and `xsl:preserve-space`.</span></span>|<span data-ttu-id="3c282-118">3.4</span><span class="sxs-lookup"><span data-stu-id="3c282-118">3.4</span></span>|<span data-ttu-id="3c282-119">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-119">Recover</span></span>|  
+|<span data-ttu-id="3c282-120">來源節點符合一個以上的範本 (Template) 規則。</span><span class="sxs-lookup"><span data-stu-id="3c282-120">A source node matches more than one template rule.</span></span>|<span data-ttu-id="3c282-121">5.5</span><span class="sxs-lookup"><span data-stu-id="3c282-121">5.5</span></span>|<span data-ttu-id="3c282-122">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-122">Recover</span></span>|  
+|<span data-ttu-id="3c282-123">命名空間 URI 會宣告成多個命名空間 URI 的別名，且全都具有相同的匯入優先順序。</span><span class="sxs-lookup"><span data-stu-id="3c282-123">A namespace URI is declared to be an alias for multiple namespace URIs, all having the same import precedence.</span></span>|<span data-ttu-id="3c282-124">7.1.1</span><span class="sxs-lookup"><span data-stu-id="3c282-124">7.1.1</span></span>|<span data-ttu-id="3c282-125">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-125">Recover</span></span>|  
+|<span data-ttu-id="3c282-126">從屬性值產生之 `name` 及 `xsl:attribute` 中的 `xsl:element` 屬性不是 QName。</span><span class="sxs-lookup"><span data-stu-id="3c282-126">The `name` attribute in `xsl:attribute` and `xsl:element` generated from an attribute value is not a QName.</span></span>|<span data-ttu-id="3c282-127">7.1.2, 7.1.3</span><span class="sxs-lookup"><span data-stu-id="3c282-127">7.1.2, 7.1.3</span></span>|<span data-ttu-id="3c282-128">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-128">Error*</span></span>|  
+|<span data-ttu-id="3c282-129">具有相同匯入及展開名稱的兩個屬性集具有通用的屬性，而且其他任何屬性集都不會包含具有相同名稱、更高重要性的通用屬性。</span><span class="sxs-lookup"><span data-stu-id="3c282-129">Two attribute sets with the same import and expanded-name have an attribute in common and there is no other attribute set containing the common attribute having the same name with higher importance.</span></span>|<span data-ttu-id="3c282-130">7.1.4</span><span class="sxs-lookup"><span data-stu-id="3c282-130">7.1.4</span></span>|<span data-ttu-id="3c282-131">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-131">Recover</span></span>|  
+|<span data-ttu-id="3c282-132">將項目子系加入至項目後，將屬性加入至該項目。</span><span class="sxs-lookup"><span data-stu-id="3c282-132">Adding an attribute to an element after children have been added to it.</span></span>|<span data-ttu-id="3c282-133">7.1.3</span><span class="sxs-lookup"><span data-stu-id="3c282-133">7.1.3</span></span>|<span data-ttu-id="3c282-134">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-134">Error*</span></span>|  
+|<span data-ttu-id="3c282-135">建立具有 xmlns 名稱的屬性</span><span class="sxs-lookup"><span data-stu-id="3c282-135">Creating an attribute with the name 'xmlns'</span></span>|<span data-ttu-id="3c282-136">7.1.3</span><span class="sxs-lookup"><span data-stu-id="3c282-136">7.1.3</span></span>|<span data-ttu-id="3c282-137">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-137">Error*</span></span>|  
+|<span data-ttu-id="3c282-138">將非項目的屬性加入至節點。</span><span class="sxs-lookup"><span data-stu-id="3c282-138">Adding an attribute to a node that is not an element.</span></span>|<span data-ttu-id="3c282-139">7.1.3</span><span class="sxs-lookup"><span data-stu-id="3c282-139">7.1.3</span></span>|<span data-ttu-id="3c282-140">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-140">Error*</span></span>|  
+|<span data-ttu-id="3c282-141">具現化 `xsl:attribute` 屬性的內容期間，建立非文字節點的節點。</span><span class="sxs-lookup"><span data-stu-id="3c282-141">Creating nodes other than text nodes during the instantiation of the content of the `xsl:attribute` attribute.</span></span>|<span data-ttu-id="3c282-142">7.1.3</span><span class="sxs-lookup"><span data-stu-id="3c282-142">7.1.3</span></span>|<span data-ttu-id="3c282-143">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-143">Error*</span></span>|  
+|<span data-ttu-id="3c282-144">`name` 的 `xsl:processing-instruction` 屬性不會同時產生 NCName 及處理指示目標。</span><span class="sxs-lookup"><span data-stu-id="3c282-144">The `name` attribute of an `xsl:processing-instruction` does not yield both an NCName and a processing instruction target.</span></span>|<span data-ttu-id="3c282-145">7.3</span><span class="sxs-lookup"><span data-stu-id="3c282-145">7.3</span></span>|<span data-ttu-id="3c282-146">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-146">Error*</span></span>|  
+|<span data-ttu-id="3c282-147">具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點。</span><span class="sxs-lookup"><span data-stu-id="3c282-147">Instantiating the content of `xsl:processing-instruction` creates nodes other than text nodes.</span></span>|<span data-ttu-id="3c282-148">7.3</span><span class="sxs-lookup"><span data-stu-id="3c282-148">7.3</span></span>|<span data-ttu-id="3c282-149">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-149">Error*</span></span>|  
+|<span data-ttu-id="3c282-150">具現化 `xsl:processing-instruction` 內容的結果包含字串「?>」</span><span class="sxs-lookup"><span data-stu-id="3c282-150">The result of instantiating the content of the `xsl:processing-instruction` contains the string "?>"</span></span>|<span data-ttu-id="3c282-151">7.3</span><span class="sxs-lookup"><span data-stu-id="3c282-151">7.3</span></span>|<span data-ttu-id="3c282-152">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-152">Recover</span></span>|  
+|<span data-ttu-id="3c282-153">具現化 `xsl:processing-instruction` 內容的結果包含字串 --，或以 - 為結尾。</span><span class="sxs-lookup"><span data-stu-id="3c282-153">The result of instantiating the content of the `xsl:processing-instruction` contains the string "--" or ends with "-".</span></span>|<span data-ttu-id="3c282-154">7.4</span><span class="sxs-lookup"><span data-stu-id="3c282-154">7.4</span></span>|<span data-ttu-id="3c282-155">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-155">Recover</span></span>|  
+|<span data-ttu-id="3c282-156">具現化 `xsl:comment` 內容的結果會建立非文字節點的節點。</span><span class="sxs-lookup"><span data-stu-id="3c282-156">The result of instantiating the content of the `xsl:comment` creates nodes other than text nodes.</span></span>|<span data-ttu-id="3c282-157">7.4</span><span class="sxs-lookup"><span data-stu-id="3c282-157">7.4</span></span>|<span data-ttu-id="3c282-158">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-158">Error*</span></span>|  
+|<span data-ttu-id="3c282-159">變數繫結項目內的範本會傳回屬性節點或命名空間節點。</span><span class="sxs-lookup"><span data-stu-id="3c282-159">The template within a variable-binding element returns an attribute node or a namespace node.</span></span>|<span data-ttu-id="3c282-160">11.2</span><span class="sxs-lookup"><span data-stu-id="3c282-160">11.2</span></span>|<span data-ttu-id="3c282-161">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-161">Error*</span></span>|  
+|<span data-ttu-id="3c282-162">從傳遞至文件函式的 URI 上擷取資源時發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="3c282-162">There is an error retrieving the resource from the URI passed into the document function.</span></span>|<span data-ttu-id="3c282-163">12.1</span><span class="sxs-lookup"><span data-stu-id="3c282-163">12.1</span></span>|<span data-ttu-id="3c282-164">錯誤</span><span class="sxs-lookup"><span data-stu-id="3c282-164">Error</span></span>|  
+|<span data-ttu-id="3c282-165">文件函式中的 URI 參考包含片段識別項，且處理片段識別項時發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="3c282-165">The URI reference in the document function contains a fragment identifier and there is an error processing the fragment identifier.</span></span>|<span data-ttu-id="3c282-166">12.1</span><span class="sxs-lookup"><span data-stu-id="3c282-166">12.1</span></span>|<span data-ttu-id="3c282-167">復原*</span><span class="sxs-lookup"><span data-stu-id="3c282-167">Recover*</span></span>|  
+|<span data-ttu-id="3c282-168">有多個具有相同名稱、不同值的屬性，它們不是具有相同匯入優先順序之 `xsl:output` 中的具名 cdata-section 項目。</span><span class="sxs-lookup"><span data-stu-id="3c282-168">There are multiple attributes with the same name, but different values, that are not named cdata-section elements in `xsl:output` with the same import precedence.</span></span>|<span data-ttu-id="3c282-169">16</span><span class="sxs-lookup"><span data-stu-id="3c282-169">16</span></span>|<span data-ttu-id="3c282-170">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-170">Recover</span></span>|  
+|<span data-ttu-id="3c282-171">處理器不支援 `xsl:output` 編碼屬性中的編碼。</span><span class="sxs-lookup"><span data-stu-id="3c282-171">The processor does not support the encoding in the `xsl:output` encoding attribute.</span></span>|<span data-ttu-id="3c282-172">16.1</span><span class="sxs-lookup"><span data-stu-id="3c282-172">16.1</span></span>|<span data-ttu-id="3c282-173">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-173">Recover</span></span>|  
+|<span data-ttu-id="3c282-174">針對文字節點，停用結果樹狀目錄中用於非文字節點之節點的輸出逸出。</span><span class="sxs-lookup"><span data-stu-id="3c282-174">Disabling output escaping for a text node that is used for something other than a text node in the result tree.</span></span>|<span data-ttu-id="3c282-175">16.4</span><span class="sxs-lookup"><span data-stu-id="3c282-175">16.4</span></span>|<span data-ttu-id="3c282-176">復原*</span><span class="sxs-lookup"><span data-stu-id="3c282-176">Recover*</span></span>|  
+|<span data-ttu-id="3c282-177">如果結果樹狀結構片段包含啟用輸出逸出的文字節點，則結果樹狀結構片段會轉換成數字或字串。</span><span class="sxs-lookup"><span data-stu-id="3c282-177">Converting a result tree fragment to a number or string if the result tree fragment contains a text node with output escaping enabled.</span></span>|<span data-ttu-id="3c282-178">16.4</span><span class="sxs-lookup"><span data-stu-id="3c282-178">16.4</span></span>|<span data-ttu-id="3c282-179">復原*</span><span class="sxs-lookup"><span data-stu-id="3c282-179">Recover*</span></span>|  
+|<span data-ttu-id="3c282-180">針對不能以 XSLT 處理器用於輸出的編碼方式表示的字元，停用輸出逸出。</span><span class="sxs-lookup"><span data-stu-id="3c282-180">Output escaping is disabled for a character that cannot be represented in the encoding that the XSLT processor is using for output.</span></span>|<span data-ttu-id="3c282-181">16.4</span><span class="sxs-lookup"><span data-stu-id="3c282-181">16.4</span></span>|<span data-ttu-id="3c282-182">復原*</span><span class="sxs-lookup"><span data-stu-id="3c282-182">Recover*</span></span>|  
+|<span data-ttu-id="3c282-183">在項目中加入項目子系或屬性後，加入命名空間節點。</span><span class="sxs-lookup"><span data-stu-id="3c282-183">Adding a namespace node to an element after children have been added to it or after attributes have been added to it.</span></span>|<span data-ttu-id="3c282-184">勘誤表 25</span><span class="sxs-lookup"><span data-stu-id="3c282-184">errata 25</span></span>|<span data-ttu-id="3c282-185">錯誤*</span><span class="sxs-lookup"><span data-stu-id="3c282-185">Error*</span></span>|  
+|<span data-ttu-id="3c282-186">`value` 的 `xsl:number` 屬性為 NAN、無限或小於 0.5</span><span class="sxs-lookup"><span data-stu-id="3c282-186">The `value` attribute of an `xsl:number` is NAN, infinite or less than 0.5</span></span>|<span data-ttu-id="3c282-187">勘誤表 24</span><span class="sxs-lookup"><span data-stu-id="3c282-187">errata 24</span></span>|<span data-ttu-id="3c282-188">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-188">Recover</span></span>|  
+|<span data-ttu-id="3c282-189">文件函式的第二個引數節點集是空的，且 URI 參考是相對的。</span><span class="sxs-lookup"><span data-stu-id="3c282-189">The second argument node-set to the document function is empty and the URI reference is relative.</span></span>|<span data-ttu-id="3c282-190">勘誤表 14</span><span class="sxs-lookup"><span data-stu-id="3c282-190">errata 14</span></span>|<span data-ttu-id="3c282-191">復原</span><span class="sxs-lookup"><span data-stu-id="3c282-191">Recover</span></span>|  
   
- <sup>*</sup> 此行為與 <xref:System.Xml.Xsl.XslTransform> 類別的行為不同。  如需詳細資訊，請參閱[XslTransform 類別中的 Discretionary 行為實作](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
+ <span data-ttu-id="3c282-192"><sup>*</sup>此行為是不同的<xref:System.Xml.Xsl.XslTransform>類別。</span><span class="sxs-lookup"><span data-stu-id="3c282-192"><sup>*</sup> This behavior is different than that of the <xref:System.Xml.Xsl.XslTransform> class.</span></span> <span data-ttu-id="3c282-193">如需詳細資訊，請參閱[實作的 Discretionary 行為 XslTransform 類別](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。</span><span class="sxs-lookup"><span data-stu-id="3c282-193">For more information, see [Implementation of Discretionary Behaviors in the XslTransform Class](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).</span></span>  
   
-## 請參閱  
- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="3c282-194">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c282-194">See Also</span></span>  
+ [<span data-ttu-id="3c282-195">XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="3c282-195">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)

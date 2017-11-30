@@ -1,421 +1,426 @@
 ---
-title: "標準日期和時間格式字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日期 [.NET Framework], 格式化"
-  - "格式規範, 日期和時間"
-  - "格式規範, 標準日期和時間"
-  - "格式字串"
-  - "格式化 [.NET Framework], 日期"
-  - "格式化 [.NET Framework], 時間"
-  - "標準日期和時間格式字串"
-  - "標準 DateTime 格式字串"
-  - "標準格式字串, 日期和時間"
-  - "時間 [.NET Framework], 格式化"
+title: "標準日期和時間格式字串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- formatting [.NET Framework], dates
+- custom DateTime format string
+- format specifiers, custom date and time
+- format strings
+- custom date and time format strings
+- formatting [.NET Framework], time
+- date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: 92
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 90
+caps.latest.revision: "92"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ca51c13a8c25575080c56b8d1ffe5723f34b539e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 標準日期和時間格式字串
-標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 任何包含一個字元以上 \(包含空白字元\) 之日期與時間格式的字串都會被解譯為自訂日期與時間格式字串。如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：  
+# <a name="standard-date-and-time-format-strings"></a><span data-ttu-id="5116f-102">標準日期和時間格式字串</span><span class="sxs-lookup"><span data-stu-id="5116f-102">Standard Date and Time Format Strings</span></span>
+<span data-ttu-id="5116f-103">標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。</span><span class="sxs-lookup"><span data-stu-id="5116f-103">A standard date and time format string uses a single format specifier to define the text representation of a date and time value.</span></span> <span data-ttu-id="5116f-104">任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="5116f-104">Any date and time format string that contains more than one character, including white space, is interpreted as a custom date and time format string; for more information, see [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).</span></span> <span data-ttu-id="5116f-105">標準或自訂格式字串有兩種使用方式：</span><span class="sxs-lookup"><span data-stu-id="5116f-105">A standard or custom format string can be used in two ways:</span></span>  
   
--   定義執行格式化作業後所產生的字串。  
+-   <span data-ttu-id="5116f-106">定義執行格式化作業後所產生的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-106">To define the string that results from a formatting operation.</span></span>  
   
--   定義日期和時間值的文字表示，可藉由剖析作業轉換成 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值。  
+-   <span data-ttu-id="5116f-107">定義日期和時間值的文字表示，可藉由剖析作業轉換成 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值。</span><span class="sxs-lookup"><span data-stu-id="5116f-107">To define the text representation of a date and time value that can be converted to a <xref:System.DateTime> or <xref:System.DateTimeOffset> value by a parsing operation.</span></span>  
   
- 標準日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。  
+ <span data-ttu-id="5116f-108">標準日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。</span><span class="sxs-lookup"><span data-stu-id="5116f-108">Standard date and time format strings can be used with both <xref:System.DateTime> and <xref:System.DateTimeOffset> values.</span></span>  
   
 > [!TIP]
->  您可以下載[格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  
+>  <span data-ttu-id="5116f-109">您可以下載 [格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-109">You can download the [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), an application that enables you to apply format strings to either numeric or date and time values and displays the result string.</span></span>  
   
-<a name="table"></a> 下表描述標準日期和時間的格式規範。 除非特別註明，否則特定標準日期和時間格式規範會產生相同的字串表示，無論是與 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值搭配使用。 如需使用標準日期和時間格式字串的詳細資訊，請參閱[注意](#Notes)一節。  
+<span data-ttu-id="5116f-110"><a name="table"></a>下表描述標準日期和時間的格式規範。</span><span class="sxs-lookup"><span data-stu-id="5116f-110"><a name="table"></a> The following table describes the standard date and time format specifiers.</span></span> <span data-ttu-id="5116f-111">除非特別註明，否則特定標準日期和時間格式規範會產生相同的字串表示，無論是與 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值搭配使用。</span><span class="sxs-lookup"><span data-stu-id="5116f-111">Unless otherwise noted, a particular standard date and time format specifier produces an identical string representation regardless of whether it is used with a <xref:System.DateTime> or a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="5116f-112">如需使用標準日期和時間格式字串的詳細資訊，請參閱[備註](#Notes)一節。</span><span class="sxs-lookup"><span data-stu-id="5116f-112">See the [Notes](#Notes) section for additional information about using standard date and time format strings.</span></span>  
   
-|格式規範|描述|範例|  
-|----------|--------|--------|  
-|"d"|簡短日期模式。<br /><br /> 詳細資訊：[簡短日期 \("d"\) 格式規範](#ShortDate)。|2009\-06\-15T13:45:30 \-\> 6\/15\/2009 \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 15\/06\/2009 \(fr\-FR\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 2009\/06\/15 \(ja\-JP\)|  
-|"D"|完整日期模式。<br /><br /> 詳細資訊：[完整日期 \("D"\) 格式規範](#LongDate)。|2009\-06\-15T13:45:30 \-\> Monday, June 15, 2009 \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 15 июня 2009 г \(ru\-RU\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Montag, 15 Juni 2009 \(de\-DE\)|  
-|"f"|完整日期\/時間模式 \(簡短時間\)。<br /><br /> 詳細資訊：[完整日期簡短時間 \("f"\) 格式規範](#FullDateShortTime)。|2009\-06\-15T13:45:30 \-\> Monday, June 15, 2009 1:45 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> den 15 juni 2009 13:45 \(sv\-SE\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ \(el\-GR\)|  
-|"F"|完整日期\/時間模式 \(完整時間\)。<br /><br /> 詳細資訊：[完整日期完整時間 \("F"\) 格式規範](#FullDateLongTime)。|2009\-06\-15T13:45:30 \-\> Monday, June 15, 2009 1:45:30 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> den 15 juni 2009 13:45:30 \(sv\-SE\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ \(el\-GR\)|  
-|"g"|一般日期\/時間模式 \(簡短時間\)。<br /><br /> 詳細資訊：[一般日期簡短時間 \("g"\) 格式規範](#GeneralDateShortTime)。|2009\-06\-15T13:45:30 \-\> 6\/15\/2009 1:45 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 15\/06\/2009 13:45 \(es\-ES\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 2009\/6\/15 13:45 \(zh\-CN\)|  
-|"G"|一般日期\/時間模式 \(完整時間\)。<br /><br /> 詳細資訊：[一般日期完整時間 \("G"\) 格式規範](#GeneralDateLongTime)。|2009\-06\-15T13:45:30 \-\> 6\/15\/2009 1:45:30 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 15\/06\/2009 13:45:30 \(es\-ES\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 2009\/6\/15 13:45:30 \(zh\-CN\)|  
-|"M"、"m"|月\/日模式。<br /><br /> 詳細資訊：[月 \("M"、"m"\) 格式規範](#MonthDay)。|2009\-06\-15T13:45:30 \-\> June 15 \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 15 juni \(da\-DK\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 15 Juni \(id\-ID\)|  
-|"O"、"o"|來回日期\/時間模式。<br /><br /> 詳細資訊：[來回 \("O"、"o"\) 格式規範](#Roundtrip)。|<xref:System.DateTime> 值：<br /><br /> 2009\-06\-15T13:45:30 \(DateTimeKind.Local\) \-\-\> 2009\-06\-15T13:45:30.0000000\-07:00<br /><br /> 2009\-06\-15T13:45:30 \(DateTimeKind.Utc\) \-\-\> 2009\-06\-15T13:45:30.0000000Z<br /><br /> 2009\-06\-15T13:45:30 \(DateTimeKind.Unspecified\) \-\-\> 2009\-06\-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> 值：<br /><br /> 2009\-06\-15T13:45:30\-07:00 \-\-\> 2009\-06\-15T13:45:30.0000000\-07:00|  
-|"R"、"r"|RFC1123 模式。<br /><br /> 詳細資訊：[RFC1123 \("R"、"r"\) 格式規範](#RFC1123)。|2009\-06\-15T13:45:30 \-\> Mon, 15 Jun 2009 20:45:30 GMT|  
-|"s"|可排序日期\/時間模式。<br /><br /> 詳細資訊：[可排序 \("s"\) 格式規範](#Sortable)。|2009\-06\-15T13:45:30 \(DateTimeKind.Local\) \-\> 2009\-06\-15T13:45:30<br /><br /> 2009\-06\-15T13:45:30 \(DateTimeKind.Utc\) \-\> 2009\-06\-15T13:45:30|  
-|"t"|簡短時間模式。<br /><br /> 詳細資訊：[簡短時間 \("t"\) 格式規範](#ShortTime)。|2009\-06\-15T13:45:30 \-\> 1:45 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 13:45 \(hr\-HR\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 01:45 م \(ar\-EG\)|  
-|"T"|完整時間模式。<br /><br /> 詳細資訊：[完整時間 \("T"\) 格式規範](#LongTime)。|2009\-06\-15T13:45:30 \-\> 1:45:30 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 13:45:30 \(hr\-HR\)<br /><br /> 2009\-06\-15T13:45:30 \-\> 01:45:30 م \(ar\-EG\)|  
-|"u"|國際可排序日期\/時間模式。<br /><br /> 詳細資訊：[國際可排序 \("u"\) 格式規範](#UniversalSortable)。|使用 <xref:System.DateTime> 值：2009\-06\-15T13:45:30 \-\> 2009\-06\-15 13:45:30Z<br /><br /> 使用 <xref:System.DateTimeOffset> 值：2009\-06\-15T13:45:30 \-\> 2009\-06\-15 20:45:30Z|  
-|"U"|國際完整日期\/時間模式。<br /><br /> 詳細資訊：[國際完整 \("U"\) 格式規範](#UniversalFull)。|2009\-06\-15T13:45:30 \-\> Monday, June 15, 2009 8:45:30 PM \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> den 15 juni 2009 20:45:30 \(sv\-SE\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ \(el\-GR\)|  
-|"Y", "y"|年月模式。<br /><br /> 詳細資訊：[年月 \("Y"\) 格式規範](#YearMonth)。|2009\-06\-15T13:45:30 \-\> June, 2009 \(en\-US\)<br /><br /> 2009\-06\-15T13:45:30 \-\> juni 2009 \(da\-DK\)<br /><br /> 2009\-06\-15T13:45:30 \-\> Juni 2009 \(id\-ID\)|  
-|任何其他單一字元|未知的規範。|擲回執行階段 <xref:System.FormatException>。|  
+|<span data-ttu-id="5116f-113">格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-113">Format specifier</span></span>|<span data-ttu-id="5116f-114">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-114">Description</span></span>|<span data-ttu-id="5116f-115">範例</span><span class="sxs-lookup"><span data-stu-id="5116f-115">Examples</span></span>|  
+|----------------------|-----------------|--------------|  
+|<span data-ttu-id="5116f-116">"d"</span><span class="sxs-lookup"><span data-stu-id="5116f-116">"d"</span></span>|<span data-ttu-id="5116f-117">簡短日期模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-117">Short date pattern.</span></span><br /><br /> <span data-ttu-id="5116f-118">詳細資訊：[簡短日期 ("d") 格式規範](#ShortDate)。</span><span class="sxs-lookup"><span data-stu-id="5116f-118">More information:[The Short Date ("d") Format Specifier](#ShortDate).</span></span>|<span data-ttu-id="5116f-119">2009-06-15T13:45:30 -> 6/15/2009 (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-119">2009-06-15T13:45:30 -> 6/15/2009 (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-120">2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="5116f-120">2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)</span></span><br /><br /> <span data-ttu-id="5116f-121">2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)</span><span class="sxs-lookup"><span data-stu-id="5116f-121">2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)</span></span>|  
+|<span data-ttu-id="5116f-122">"D"</span><span class="sxs-lookup"><span data-stu-id="5116f-122">"D"</span></span>|<span data-ttu-id="5116f-123">完整日期模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-123">Long date pattern.</span></span><br /><br /> <span data-ttu-id="5116f-124">詳細資訊：[完整日期 ("D") 格式規範](#LongDate)。</span><span class="sxs-lookup"><span data-stu-id="5116f-124">More information:[The Long Date ("D") Format Specifier](#LongDate).</span></span>|<span data-ttu-id="5116f-125">2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-125">2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-126">2009-06-15T13:45:30 -> 15 июня 2009 г</span><span class="sxs-lookup"><span data-stu-id="5116f-126">2009-06-15T13:45:30 -> 15 июня 2009 г.</span></span> <span data-ttu-id="5116f-127">(ru-RU)</span><span class="sxs-lookup"><span data-stu-id="5116f-127">(ru-RU)</span></span><br /><br /> <span data-ttu-id="5116f-128">2009-06-15T13:45:30 -> Montag, 15</span><span class="sxs-lookup"><span data-stu-id="5116f-128">2009-06-15T13:45:30 -> Montag, 15.</span></span> <span data-ttu-id="5116f-129">Juni 2009 (de-DE)</span><span class="sxs-lookup"><span data-stu-id="5116f-129">Juni 2009 (de-DE)</span></span>|  
+|<span data-ttu-id="5116f-130">"f"</span><span class="sxs-lookup"><span data-stu-id="5116f-130">"f"</span></span>|<span data-ttu-id="5116f-131">完整日期/時間模式 (簡短時間)。</span><span class="sxs-lookup"><span data-stu-id="5116f-131">Full date/time pattern (short time).</span></span><br /><br /> <span data-ttu-id="5116f-132">詳細資訊：[完整日期簡短時間 ("f") 格式規範](#FullDateShortTime)。</span><span class="sxs-lookup"><span data-stu-id="5116f-132">More information: [The Full Date Short Time ("f") Format Specifier](#FullDateShortTime).</span></span>|<span data-ttu-id="5116f-133">2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-133">2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-134">2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)</span><span class="sxs-lookup"><span data-stu-id="5116f-134">2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)</span></span><br /><br /> <span data-ttu-id="5116f-135">2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)</span><span class="sxs-lookup"><span data-stu-id="5116f-135">2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)</span></span>|  
+|<span data-ttu-id="5116f-136">"F"</span><span class="sxs-lookup"><span data-stu-id="5116f-136">"F"</span></span>|<span data-ttu-id="5116f-137">完整日期/時間模式 (完整時間)。</span><span class="sxs-lookup"><span data-stu-id="5116f-137">Full date/time pattern (long time).</span></span><br /><br /> <span data-ttu-id="5116f-138">詳細資訊：[完整日期完整時間 ("F") 格式規範](#FullDateLongTime)。</span><span class="sxs-lookup"><span data-stu-id="5116f-138">More information: [The Full Date Long Time ("F") Format Specifier](#FullDateLongTime).</span></span>|<span data-ttu-id="5116f-139">2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-139">2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-140">2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)</span><span class="sxs-lookup"><span data-stu-id="5116f-140">2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)</span></span><br /><br /> <span data-ttu-id="5116f-141">2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)</span><span class="sxs-lookup"><span data-stu-id="5116f-141">2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)</span></span>|  
+|<span data-ttu-id="5116f-142">"g"</span><span class="sxs-lookup"><span data-stu-id="5116f-142">"g"</span></span>|<span data-ttu-id="5116f-143">一般日期/時間模式 (簡短時間)。</span><span class="sxs-lookup"><span data-stu-id="5116f-143">General date/time pattern (short time).</span></span><br /><br /> <span data-ttu-id="5116f-144">詳細資訊：[一般日期簡短時間 ("g") 格式規範](#GeneralDateShortTime)。</span><span class="sxs-lookup"><span data-stu-id="5116f-144">More information: [The General Date Short Time ("g") Format Specifier](#GeneralDateShortTime).</span></span>|<span data-ttu-id="5116f-145">2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-145">2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-146">2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)</span><span class="sxs-lookup"><span data-stu-id="5116f-146">2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)</span></span><br /><br /> <span data-ttu-id="5116f-147">2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)</span><span class="sxs-lookup"><span data-stu-id="5116f-147">2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)</span></span>|  
+|<span data-ttu-id="5116f-148">"G"</span><span class="sxs-lookup"><span data-stu-id="5116f-148">"G"</span></span>|<span data-ttu-id="5116f-149">一般日期/時間模式 (完整時間)。</span><span class="sxs-lookup"><span data-stu-id="5116f-149">General date/time pattern (long time).</span></span><br /><br /> <span data-ttu-id="5116f-150">詳細資訊：[一般日期完整時間 ("G") 格式規範](#GeneralDateLongTime)。</span><span class="sxs-lookup"><span data-stu-id="5116f-150">More information: [The General Date Long Time ("G") Format Specifier](#GeneralDateLongTime).</span></span>|<span data-ttu-id="5116f-151">2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-151">2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-152">2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)</span><span class="sxs-lookup"><span data-stu-id="5116f-152">2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)</span></span><br /><br /> <span data-ttu-id="5116f-153">2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)</span><span class="sxs-lookup"><span data-stu-id="5116f-153">2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)</span></span>|  
+|<span data-ttu-id="5116f-154">"M"、"m"</span><span class="sxs-lookup"><span data-stu-id="5116f-154">"M", "m"</span></span>|<span data-ttu-id="5116f-155">月/日模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-155">Month/day pattern.</span></span><br /><br /> <span data-ttu-id="5116f-156">詳細資訊：[月 ("M"、"m") 格式規範](#MonthDay)。</span><span class="sxs-lookup"><span data-stu-id="5116f-156">More information: [The Month ("M", "m") Format Specifier](#MonthDay).</span></span>|<span data-ttu-id="5116f-157">2009-06-15T13:45:30 -> June 15 (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-157">2009-06-15T13:45:30 -> June 15 (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-158">2009-06-15T13:45:30 -> 15</span><span class="sxs-lookup"><span data-stu-id="5116f-158">2009-06-15T13:45:30 -> 15.</span></span> <span data-ttu-id="5116f-159">juni (da-DK)</span><span class="sxs-lookup"><span data-stu-id="5116f-159">juni (da-DK)</span></span><br /><br /> <span data-ttu-id="5116f-160">2009-06-15T13:45:30 -> 15 Juni (id-ID)</span><span class="sxs-lookup"><span data-stu-id="5116f-160">2009-06-15T13:45:30 -> 15 Juni (id-ID)</span></span>|  
+|<span data-ttu-id="5116f-161">"O"、"o"</span><span class="sxs-lookup"><span data-stu-id="5116f-161">"O", "o"</span></span>|<span data-ttu-id="5116f-162">來回日期/時間模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-162">Round-trip date/time pattern.</span></span><br /><br /> <span data-ttu-id="5116f-163">詳細資訊：[來回 ("O"、"o") 格式規範](#Roundtrip)。</span><span class="sxs-lookup"><span data-stu-id="5116f-163">More information: [The Round-trip ("O", "o") Format Specifier](#Roundtrip).</span></span>|<span data-ttu-id="5116f-164"><xref:System.DateTime> 值：</span><span class="sxs-lookup"><span data-stu-id="5116f-164"><xref:System.DateTime> values:</span></span><br /><br /> <span data-ttu-id="5116f-165">2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00</span><span class="sxs-lookup"><span data-stu-id="5116f-165">2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00</span></span><br /><br /> <span data-ttu-id="5116f-166">2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z</span><span class="sxs-lookup"><span data-stu-id="5116f-166">2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z</span></span><br /><br /> <span data-ttu-id="5116f-167">2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000</span><span class="sxs-lookup"><span data-stu-id="5116f-167">2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000</span></span><br /><br /> <span data-ttu-id="5116f-168"><xref:System.DateTimeOffset> 值：</span><span class="sxs-lookup"><span data-stu-id="5116f-168"><xref:System.DateTimeOffset> values:</span></span><br /><br /> <span data-ttu-id="5116f-169">2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00</span><span class="sxs-lookup"><span data-stu-id="5116f-169">2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00</span></span>|  
+|<span data-ttu-id="5116f-170">"R"、"r"</span><span class="sxs-lookup"><span data-stu-id="5116f-170">"R", "r"</span></span>|<span data-ttu-id="5116f-171">RFC1123 模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-171">RFC1123 pattern.</span></span><br /><br /> <span data-ttu-id="5116f-172">詳細資訊：[RFC1123 ("R"、"r") 格式規範](#RFC1123)。</span><span class="sxs-lookup"><span data-stu-id="5116f-172">More information: [The RFC1123 ("R", "r") Format Specifier](#RFC1123).</span></span>|<span data-ttu-id="5116f-173">2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT</span><span class="sxs-lookup"><span data-stu-id="5116f-173">2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT</span></span>|  
+|<span data-ttu-id="5116f-174">"s"</span><span class="sxs-lookup"><span data-stu-id="5116f-174">"s"</span></span>|<span data-ttu-id="5116f-175">可排序日期/時間模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-175">Sortable date/time pattern.</span></span><br /><br /> <span data-ttu-id="5116f-176">詳細資訊：[可排序 ("s") 格式規範](#Sortable)。</span><span class="sxs-lookup"><span data-stu-id="5116f-176">More information: [The Sortable ("s") Format Specifier](#Sortable).</span></span>|<span data-ttu-id="5116f-177">2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30</span><span class="sxs-lookup"><span data-stu-id="5116f-177">2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30</span></span><br /><br /> <span data-ttu-id="5116f-178">2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30</span><span class="sxs-lookup"><span data-stu-id="5116f-178">2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30</span></span>|  
+|<span data-ttu-id="5116f-179">"t"</span><span class="sxs-lookup"><span data-stu-id="5116f-179">"t"</span></span>|<span data-ttu-id="5116f-180">簡短時間模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-180">Short time pattern.</span></span><br /><br /> <span data-ttu-id="5116f-181">詳細資訊：[簡短時間 ("t") 格式規範](#ShortTime)。</span><span class="sxs-lookup"><span data-stu-id="5116f-181">More information: [The Short Time ("t") Format Specifier](#ShortTime).</span></span>|<span data-ttu-id="5116f-182">2009-06-15T13:45:30 -> 1:45 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-182">2009-06-15T13:45:30 -> 1:45 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-183">2009-06-15T13:45:30 -> 13:45 (hr-HR)</span><span class="sxs-lookup"><span data-stu-id="5116f-183">2009-06-15T13:45:30 -> 13:45 (hr-HR)</span></span><br /><br /> <span data-ttu-id="5116f-184">2009-06-15T13:45:30 -> 01:45 م (ar-EG)</span><span class="sxs-lookup"><span data-stu-id="5116f-184">2009-06-15T13:45:30 -> 01:45 م (ar-EG)</span></span>|  
+|<span data-ttu-id="5116f-185">"T"</span><span class="sxs-lookup"><span data-stu-id="5116f-185">"T"</span></span>|<span data-ttu-id="5116f-186">完整時間模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-186">Long time pattern.</span></span><br /><br /> <span data-ttu-id="5116f-187">詳細資訊：[完整時間 ("T") 格式規範](#LongTime)。</span><span class="sxs-lookup"><span data-stu-id="5116f-187">More information: [The Long Time ("T") Format Specifier](#LongTime).</span></span>|<span data-ttu-id="5116f-188">2009-06-15T13:45:30 -> 1:45:30 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-188">2009-06-15T13:45:30 -> 1:45:30 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-189">2009-06-15T13:45:30 -> 13:45:30 (hr-HR)</span><span class="sxs-lookup"><span data-stu-id="5116f-189">2009-06-15T13:45:30 -> 13:45:30 (hr-HR)</span></span><br /><br /> <span data-ttu-id="5116f-190">2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)</span><span class="sxs-lookup"><span data-stu-id="5116f-190">2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)</span></span>|  
+|<span data-ttu-id="5116f-191">"u"</span><span class="sxs-lookup"><span data-stu-id="5116f-191">"u"</span></span>|<span data-ttu-id="5116f-192">國際可排序日期/時間模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-192">Universal sortable date/time pattern.</span></span><br /><br /> <span data-ttu-id="5116f-193">詳細資訊：[國際可排序 ("u") 格式規範](#UniversalSortable)。</span><span class="sxs-lookup"><span data-stu-id="5116f-193">More information: [The Universal Sortable ("u") Format Specifier](#UniversalSortable).</span></span>|<span data-ttu-id="5116f-194">與<xref:System.DateTime>值： 2009年-06-15T13:45:30-> 2009年-06-15 13:45:30Z</span><span class="sxs-lookup"><span data-stu-id="5116f-194">With a <xref:System.DateTime> value: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z</span></span><br /><br /> <span data-ttu-id="5116f-195">與<xref:System.DateTimeOffset>值： 2009年-06-15T13:45:30-> 2009年-06-15 20:45:30Z</span><span class="sxs-lookup"><span data-stu-id="5116f-195">With a <xref:System.DateTimeOffset> value: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z</span></span>|  
+|<span data-ttu-id="5116f-196">"U"</span><span class="sxs-lookup"><span data-stu-id="5116f-196">"U"</span></span>|<span data-ttu-id="5116f-197">國際完整日期/時間模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-197">Universal full date/time pattern.</span></span><br /><br /> <span data-ttu-id="5116f-198">詳細資訊：[國際完整 ("U") 格式規範](#UniversalFull)。</span><span class="sxs-lookup"><span data-stu-id="5116f-198">More information: [The Universal Full ("U") Format Specifier](#UniversalFull).</span></span>|<span data-ttu-id="5116f-199">2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-199">2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-200">2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)</span><span class="sxs-lookup"><span data-stu-id="5116f-200">2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)</span></span><br /><br /> <span data-ttu-id="5116f-201">2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)</span><span class="sxs-lookup"><span data-stu-id="5116f-201">2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)</span></span>|  
+|<span data-ttu-id="5116f-202">"Y", "y"</span><span class="sxs-lookup"><span data-stu-id="5116f-202">"Y", "y"</span></span>|<span data-ttu-id="5116f-203">年月模式。</span><span class="sxs-lookup"><span data-stu-id="5116f-203">Year month pattern.</span></span><br /><br /> <span data-ttu-id="5116f-204">詳細資訊：[年月 ("Y") 格式規範](#YearMonth)。</span><span class="sxs-lookup"><span data-stu-id="5116f-204">More information: [The Year Month ("Y") Format Specifier](#YearMonth).</span></span>|<span data-ttu-id="5116f-205">2009-06-15T13:45:30 -> June, 2009 (en-US)</span><span class="sxs-lookup"><span data-stu-id="5116f-205">2009-06-15T13:45:30 -> June, 2009 (en-US)</span></span><br /><br /> <span data-ttu-id="5116f-206">2009-06-15T13:45:30 -> juni 2009 (da-DK)</span><span class="sxs-lookup"><span data-stu-id="5116f-206">2009-06-15T13:45:30 -> juni 2009 (da-DK)</span></span><br /><br /> <span data-ttu-id="5116f-207">2009-06-15T13:45:30 -> Juni 2009 (id-ID)</span><span class="sxs-lookup"><span data-stu-id="5116f-207">2009-06-15T13:45:30 -> Juni 2009 (id-ID)</span></span>|  
+|<span data-ttu-id="5116f-208">任何其他單一字元</span><span class="sxs-lookup"><span data-stu-id="5116f-208">Any other single character</span></span>|<span data-ttu-id="5116f-209">未知的規範。</span><span class="sxs-lookup"><span data-stu-id="5116f-209">Unknown specifier.</span></span>|<span data-ttu-id="5116f-210">擲回執行階段 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="5116f-210">Throws a run-time <xref:System.FormatException>.</span></span>|  
   
-## 標準格式字串的運作方式  
- 在格式化作業中，標準格式字串只是自訂格式字串的別名。 使用別名來表示自訂格式字串的好處是，儘管別名保持不變，自訂格式字串本身則可有變化。 這點非常重要，因為日期和時間值的字串表示通常會因文化特性而不同。 例如，"d" 標準格式字串表示日期和時間值將使用簡短日期模式顯示。 在不因文化特性而異 \(Invariant Culture\) 的情況下，此模式為 "MM\/dd\/yyyy"。 若為 fr\-FR 文化特性，則是 "dd\/MM\/yyyy"。 若為 ja\-JP 文化特性，則是 "yyyy\/MM\/dd"。  
+## <a name="how-standard-format-strings-work"></a><span data-ttu-id="5116f-211">標準格式字串的運作方式</span><span class="sxs-lookup"><span data-stu-id="5116f-211">How Standard Format Strings Work</span></span>  
+ <span data-ttu-id="5116f-212">在格式化作業中，標準格式字串只是自訂格式字串的別名。</span><span class="sxs-lookup"><span data-stu-id="5116f-212">In a formatting operation, a standard format string is simply an alias for a custom format string.</span></span> <span data-ttu-id="5116f-213">使用別名來表示自訂格式字串的好處是，儘管別名保持不變，自訂格式字串本身則可有變化。</span><span class="sxs-lookup"><span data-stu-id="5116f-213">The advantage of using an alias to refer to a custom format string is that, although the alias remains invariant, the custom format string itself can vary.</span></span> <span data-ttu-id="5116f-214">這點非常重要，因為日期和時間值的字串表示通常會因文化特性而不同。</span><span class="sxs-lookup"><span data-stu-id="5116f-214">This is important because the string representations of date and time values typically vary by culture.</span></span> <span data-ttu-id="5116f-215">例如，"d" 標準格式字串表示日期和時間值將使用簡短日期模式顯示。</span><span class="sxs-lookup"><span data-stu-id="5116f-215">For example, the "d" standard format string indicates that a date and time value is to be displayed using a short date pattern.</span></span> <span data-ttu-id="5116f-216">在不因文化特性而異 (Invariant Culture) 的情況下，此模式為 "MM/dd/yyyy"。</span><span class="sxs-lookup"><span data-stu-id="5116f-216">For the invariant culture, this pattern is "MM/dd/yyyy".</span></span> <span data-ttu-id="5116f-217">若為 fr-FR 文化特性，則是 "dd/MM/yyyy"。</span><span class="sxs-lookup"><span data-stu-id="5116f-217">For the fr-FR culture, it is "dd/MM/yyyy".</span></span> <span data-ttu-id="5116f-218">若為 ja-JP 文化特性，則是 "yyyy/MM/dd"。</span><span class="sxs-lookup"><span data-stu-id="5116f-218">For the ja-JP culture, it is "yyyy/MM/dd".</span></span>  
   
- 如果格式化作業中的標準格式字串對應至特定文化特性的自訂格式字串，您的應用程式可以定義特定文化特性，以下列其中一種方式使用自訂格式字串：  
+ <span data-ttu-id="5116f-219">如果格式化作業中的標準格式字串對應至特定文化特性的自訂格式字串，您的應用程式可以定義特定文化特性，以下列其中一種方式使用自訂格式字串：</span><span class="sxs-lookup"><span data-stu-id="5116f-219">If a standard format string in a formatting operation maps to a particular culture's custom format string, your application can define the specific culture whose custom format strings are used in one of these ways:</span></span>  
   
--   您可以使用預設 \(或目前的\) 文化特性。 下列範例顯示的日期使用了目前文化特性的簡短日期格式。 在此例中，目前的文化特性是 en\-US。  
+-   <span data-ttu-id="5116f-220">您可以使用預設 (或目前的) 文化特性。</span><span class="sxs-lookup"><span data-stu-id="5116f-220">You can use the default (or current) culture.</span></span> <span data-ttu-id="5116f-221">下列範例顯示的日期使用了目前文化特性的簡短日期格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-221">The following example displays a date using the current culture's short date format.</span></span> <span data-ttu-id="5116f-222">在此例中，目前的文化特性是 en-US。</span><span class="sxs-lookup"><span data-stu-id="5116f-222">In this case, the current culture is en-US.</span></span>  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   您可以將表示要用來進行格式化之文化特性的 <xref:System.Globalization.CultureInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。 下列範例顯示的日期使用了 pt\-BR 文化特性的簡短日期格式。  
+-   <span data-ttu-id="5116f-223">您可以將表示要用來進行格式化之文化特性的 <xref:System.Globalization.CultureInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。</span><span class="sxs-lookup"><span data-stu-id="5116f-223">You can pass a <xref:System.Globalization.CultureInfo> object representing the culture whose formatting is to be used to a method that has an <xref:System.IFormatProvider> parameter.</span></span> <span data-ttu-id="5116f-224">下列範例顯示的日期使用了 pt-BR 文化特性的簡短日期格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-224">The following example displays a date using the short date format of the pt-BR culture.</span></span>  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   您可以將提供格式化資訊的 <xref:System.Globalization.DateTimeFormatInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。 下列範例顯示的日期使用了取自於 hr\-HR 文化特性之 <xref:System.Globalization.DateTimeFormatInfo> 物件的簡短日期格式。  
+-   <span data-ttu-id="5116f-225">您可以將提供格式化資訊的 <xref:System.Globalization.DateTimeFormatInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。</span><span class="sxs-lookup"><span data-stu-id="5116f-225">You can pass a <xref:System.Globalization.DateTimeFormatInfo> object that provides formatting information to a method that has an <xref:System.IFormatProvider> parameter.</span></span> <span data-ttu-id="5116f-226">下列範例顯示的日期使用了取自於 hr-HR 文化特性之 <xref:System.Globalization.DateTimeFormatInfo> 物件的簡短日期格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-226">The following example displays a date using the short date format from a <xref:System.Globalization.DateTimeFormatInfo> object for the hr-HR culture.</span></span>  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  如需有關自訂格式化日期與時間值所使用之模式或字串的詳細資訊，請參閱 <xref:System.Globalization.NumberFormatInfo> 類別主題。  
+>  <span data-ttu-id="5116f-227">如需有關自訂格式化日期與時間值所使用之模式或字串的詳細資訊，請參閱 <xref:System.Globalization.NumberFormatInfo> 類別主題。</span><span class="sxs-lookup"><span data-stu-id="5116f-227">For information about customizing the patterns or strings used in formatting date and time values, see the <xref:System.Globalization.NumberFormatInfo> class topic.</span></span>  
   
- 在某些情況下，標準格式字串可做為不變之長自訂格式字串的簡便縮寫。 有四個標準格式字串屬於此分類："O" \(或 "o"\)、"R" \(或 "r"\)、"s" 和 "u"。 這些字串相當於不因文化特性而異所定義的自訂格式字串。 它們針對日期和時間值所產生的字串表示在各文化特性中都相同。 下表提供這四種標準日期和時間格式字串的相關資訊。  
+ <span data-ttu-id="5116f-228">在某些情況下，標準格式字串可做為不變之長自訂格式字串的簡便縮寫。</span><span class="sxs-lookup"><span data-stu-id="5116f-228">In some cases, the standard format string serves as a convenient abbreviation for a longer custom format string that is invariant.</span></span> <span data-ttu-id="5116f-229">有四個標準格式字串屬於此分類："O" (或 "o")、"R" (或 "r")、"s" 和 "u"。</span><span class="sxs-lookup"><span data-stu-id="5116f-229">Four standard format strings fall into this category: "O" (or "o"), "R" (or "r"), "s", and "u".</span></span> <span data-ttu-id="5116f-230">這些字串相當於不因文化特性而異所定義的自訂格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-230">These strings correspond to custom format strings defined by the invariant culture.</span></span> <span data-ttu-id="5116f-231">它們針對日期和時間值所產生的字串表示在各文化特性中都相同。</span><span class="sxs-lookup"><span data-stu-id="5116f-231">They produce string representations of date and time values that are intended to be identical across cultures.</span></span> <span data-ttu-id="5116f-232">下表提供這四種標準日期和時間格式字串的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="5116f-232">The following table provides information on these four standard date and time format strings.</span></span>  
   
-|標準格式字串|由 DateTimeFormatInfo.InvariantInfo 屬性定義|自訂格式字串|  
-|------------|---------------------------------------------|------------|  
-|"O" 或 "o"|無|yyyy'\-'MM'\-'dd'T'HH':'mm':'ss'.'fffffffzz|  
-|"R" 或 "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd、dd MMM yyyy HH':'mm':'ss 'GMT'|  
-|"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'\-'MM'\-'dd'T'HH':'mm':'ss|  
-|"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'\-'MM'\-'dd HH':'mm':'ss'Z'|  
+|<span data-ttu-id="5116f-233">標準格式字串</span><span class="sxs-lookup"><span data-stu-id="5116f-233">Standard format string</span></span>|<span data-ttu-id="5116f-234">由 DateTimeFormatInfo.InvariantInfo 屬性定義</span><span class="sxs-lookup"><span data-stu-id="5116f-234">Defined by DateTimeFormatInfo.InvariantInfo property</span></span>|<span data-ttu-id="5116f-235">自訂格式字串</span><span class="sxs-lookup"><span data-stu-id="5116f-235">Custom format string</span></span>|  
+|----------------------------|----------------------------------------------------------|--------------------------|  
+|<span data-ttu-id="5116f-236">"O" 或 "o"</span><span class="sxs-lookup"><span data-stu-id="5116f-236">"O" or "o"</span></span>|<span data-ttu-id="5116f-237">無</span><span class="sxs-lookup"><span data-stu-id="5116f-237">None</span></span>|<span data-ttu-id="5116f-238">yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz</span><span class="sxs-lookup"><span data-stu-id="5116f-238">yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz</span></span>|  
+|<span data-ttu-id="5116f-239">"R" 或 "r"</span><span class="sxs-lookup"><span data-stu-id="5116f-239">"R" or "r"</span></span>|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|<span data-ttu-id="5116f-240">ddd、dd MMM yyyy HH':'mm':'ss 'GMT'</span><span class="sxs-lookup"><span data-stu-id="5116f-240">ddd, dd MMM yyyy HH':'mm':'ss 'GMT'</span></span>|  
+|<span data-ttu-id="5116f-241">"s"</span><span class="sxs-lookup"><span data-stu-id="5116f-241">"s"</span></span>|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|<span data-ttu-id="5116f-242">yyyy'-'MM'-'dd'T'HH':'mm':'ss</span><span class="sxs-lookup"><span data-stu-id="5116f-242">yyyy'-'MM'-'dd'T'HH':'mm':'ss</span></span>|  
+|<span data-ttu-id="5116f-243">"u"</span><span class="sxs-lookup"><span data-stu-id="5116f-243">"u"</span></span>|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|<span data-ttu-id="5116f-244">yyyy'-'MM'-'dd HH':'mm':'ss'Z'</span><span class="sxs-lookup"><span data-stu-id="5116f-244">yyyy'-'MM'-'dd HH':'mm':'ss'Z'</span></span>|  
   
- 標準格式字串也可以在剖析作業中搭配 <xref:System.DateTime.ParseExact%2A?displayProperty=fullName> 或 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=fullName> 方法使用，這些方法都需要輸入字串完全符合特定模式，剖析作業才會成功。 許多標準格式字串都對應至多個自訂格式字串，因此日期和時間值可以用各種不同的格式表示，而剖析作業仍然會成功。 您可以藉由呼叫 <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=fullName> 方法判斷對應至標準格式字串的自訂格式字串。 下列範例會顯示對應至 "d" \(簡短日期模式\) 標準格式字串的自訂格式字串。  
+ <span data-ttu-id="5116f-245">標準格式字串也可以在剖析作業中搭配 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 方法使用，這些方法都需要輸入字串完全符合特定模式，剖析作業才會成功。</span><span class="sxs-lookup"><span data-stu-id="5116f-245">Standard format strings can also be used in parsing operations with the <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> methods, which require an input string to exactly conform to a particular pattern for the parse operation to succeed.</span></span> <span data-ttu-id="5116f-246">許多標準格式字串都對應至多個自訂格式字串，因此日期和時間值可以用各種不同的格式表示，而剖析作業仍然會成功。</span><span class="sxs-lookup"><span data-stu-id="5116f-246">Many standard format strings map to multiple custom format strings, so a date and time value can be represented in a variety of formats and the parse operation will still succeed.</span></span> <span data-ttu-id="5116f-247">您可以藉由呼叫 <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> 方法判斷對應至標準格式字串的自訂格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-247">You can determine the custom format string or strings that correspond to a standard format string by calling the <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="5116f-248">下列範例會顯示對應至 "d" (簡短日期模式) 標準格式字串的自訂格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-248">The following example displays the custom format strings that map to the "d" (short date pattern) standard format string.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
- 下列各節描述 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值的標準格式規範。  
+ <span data-ttu-id="5116f-249">下列各節描述 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值的標準格式規範。</span><span class="sxs-lookup"><span data-stu-id="5116f-249">The following sections describe the standard format specifiers for <xref:System.DateTime> and <xref:System.DateTimeOffset> values.</span></span>  
   
 <a name="ShortDate"></a>   
-## 簡短日期 \("d"\) 格式規範  
- "d" 標準格式規範表示由特定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> 屬性傳回的自訂格式字串為 "MM\/dd\/yyyy"。  
+## <a name="the-short-date-d-format-specifier"></a><span data-ttu-id="5116f-250">簡短日期 ("d") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-250">The Short Date ("d") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-251">"d" 標準格式規範表示由特定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-251">The "d" standard format specifier represents a custom date and time format string that is defined by a specific culture's <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-252">例如，不因文化特性而異的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> 屬性傳回的自訂格式字串為 "MM/dd/yyyy"。</span><span class="sxs-lookup"><span data-stu-id="5116f-252">For example, the custom format string that is returned by the <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> property of the invariant culture is "MM/dd/yyyy".</span></span>  
   
- 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。  
+ <span data-ttu-id="5116f-253">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-253">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that control the formatting of the returned string.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串的整體格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定義分隔日期之年份、月份和日期元件的字串。|  
+|<span data-ttu-id="5116f-254">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-254">Property</span></span>|<span data-ttu-id="5116f-255">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-255">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|<span data-ttu-id="5116f-256">定義結果字串的整體格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-256">Defines the overall format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|<span data-ttu-id="5116f-257">定義分隔日期之年份、月份和日期元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-257">Defines the string that separates the year, month, and day components of a date.</span></span>|  
   
- 下列範例使用 "d" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-258">下列範例使用 "d" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-258">The following example uses the "d" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-259">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-259">Back to table</span></span>](#table)  
   
 <a name="LongDate"></a>   
-## 完整日期 \("D"\) 格式規範  
- "D" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的自訂格式字串為 "dddd, dd MMMM yyyy"。  
+## <a name="the-long-date-d-format-specifier"></a><span data-ttu-id="5116f-260">完整日期 ("D") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-260">The Long Date ("D") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-261">"D" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-261">The "D" standard format specifier represents a custom date and time format string that is defined by the current <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-262">例如，不因文化特性而異的自訂格式字串為 "dddd, dd MMMM yyyy"。</span><span class="sxs-lookup"><span data-stu-id="5116f-262">For example, the custom format string for the invariant culture is "dddd, dd MMMM yyyy".</span></span>  
   
- 下表列出 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，這些屬性控制傳回之字串的格式設定。  
+ <span data-ttu-id="5116f-263">下表列出 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，這些屬性控制傳回之字串的格式設定。</span><span class="sxs-lookup"><span data-stu-id="5116f-263">The following table lists the properties of the <xref:System.Globalization.DateTimeFormatInfo> object that control the formatting of the returned string.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定義結果字串的整體格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
+|<span data-ttu-id="5116f-264">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-264">Property</span></span>|<span data-ttu-id="5116f-265">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-265">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|<span data-ttu-id="5116f-266">定義結果字串的整體格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-266">Defines the overall format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|<span data-ttu-id="5116f-267">定義可顯示在結果字串中的當地語系化日期名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-267">Defines the localized day names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|<span data-ttu-id="5116f-268">定義可顯示在結果字串中的當地語系化月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-268">Defines the localized month names that can appear in the result string.</span></span>|  
   
- 下列範例使用 "D" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-269">下列範例使用 "D" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-269">The following example uses the "D" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-270">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-270">Back to table</span></span>](#table)  
   
 <a name="FullDateShortTime"></a>   
-## 完整日期簡短時間 \("f"\) 格式規範  
- "f" 標準格式規範表示完整日期 \("D"\) 和簡短時間 \("t"\) 模式的組合，以空格分隔。  
+## <a name="the-full-date-short-time-f-format-specifier"></a><span data-ttu-id="5116f-271">完整日期簡短時間 ("f") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-271">The Full Date Short Time ("f") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-272">"f" 標準格式規範表示完整日期 ("D") 和簡短時間 ("t") 模式的組合，以空格分隔。</span><span class="sxs-lookup"><span data-stu-id="5116f-272">The "f" standard format specifier represents a combination of the long date ("D") and short time ("t") patterns, separated by a space.</span></span>  
   
- 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=fullName> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=fullName> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-273">結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。</span><span class="sxs-lookup"><span data-stu-id="5116f-273">The result string is affected by the formatting information of a specific <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="5116f-274">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-274">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-275">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-275">The custom format specifier returned by the <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> and <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> properties of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定義結果字串之日期元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-276">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-276">Property</span></span>|<span data-ttu-id="5116f-277">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-277">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|<span data-ttu-id="5116f-278">定義結果字串之日期元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-278">Defines the format of the date component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|<span data-ttu-id="5116f-279">定義結果字串之時間元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-279">Defines the format of the time component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|<span data-ttu-id="5116f-280">定義可顯示在結果字串中的當地語系化日期名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-280">Defines the localized day names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|<span data-ttu-id="5116f-281">定義可顯示在結果字串中的當地語系化月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-281">Defines the localized month names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-282">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-282">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-283">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-283">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-284">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-284">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- 下列範例使用 "f" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-285">下列範例使用 "f" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-285">The following example uses the "f" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-286">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-286">Back to table</span></span>](#table)  
   
 <a name="FullDateLongTime"></a>   
-## 完整日期完整時間 \("F"\) 格式規範  
- "F" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的自訂格式字串為 "dddd, dd MMMM yyyy HH:mm:ss"。  
+## <a name="the-full-date-long-time-f-format-specifier"></a><span data-ttu-id="5116f-287">完整日期完整時間 ("F") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-287">The Full Date Long Time ("F") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-288">"F" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-288">The "F" standard format specifier represents a custom date and time format string that is defined by the current <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-289">例如，不因文化特性而異的自訂格式字串為 "dddd, dd MMMM yyyy HH:mm:ss"。</span><span class="sxs-lookup"><span data-stu-id="5116f-289">For example, the custom format string for the invariant culture is "dddd, dd MMMM yyyy HH:mm:ss".</span></span>  
   
- 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-290">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-290">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-291">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-291">The custom format specifier that is returned by the <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> property of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定義結果字串的整體格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-292">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-292">Property</span></span>|<span data-ttu-id="5116f-293">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-293">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|<span data-ttu-id="5116f-294">定義結果字串的整體格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-294">Defines the overall format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|<span data-ttu-id="5116f-295">定義可顯示在結果字串中的當地語系化日期名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-295">Defines the localized day names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|<span data-ttu-id="5116f-296">定義可顯示在結果字串中的當地語系化月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-296">Defines the localized month names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-297">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-297">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-298">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-298">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-299">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-299">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- 下列範例使用 "F" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-300">下列範例使用 "F" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-300">The following example uses the "F" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-301">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-301">Back to table</span></span>](#table)  
   
 <a name="GeneralDateShortTime"></a>   
-## 一般日期簡短時間 \("g"\) 格式規範  
- "g" 標準格式規範表示簡短日期 \("d"\) 和簡短時間 \("t"\) 模式的組合，以空格分隔。  
+## <a name="the-general-date-short-time-g-format-specifier"></a><span data-ttu-id="5116f-302">一般日期簡短時間 ("g") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-302">The General Date Short Time ("g") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-303">"g" 標準格式規範表示簡短日期 ("d") 和簡短時間 ("t") 模式的組合，以空格分隔。</span><span class="sxs-lookup"><span data-stu-id="5116f-303">The "g" standard format specifier represents a combination of the short date ("d") and short time ("t") patterns, separated by a space.</span></span>  
   
- 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=fullName> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=fullName> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-304">結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。</span><span class="sxs-lookup"><span data-stu-id="5116f-304">The result string is affected by the formatting information of a specific <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="5116f-305">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-305">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-306">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-306">The custom format specifier that is returned by the <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> and <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> properties of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串之日期元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定義分隔日期之年份、月份和日期元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-307">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-307">Property</span></span>|<span data-ttu-id="5116f-308">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-308">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|<span data-ttu-id="5116f-309">定義結果字串之日期元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-309">Defines the format of the date component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|<span data-ttu-id="5116f-310">定義結果字串之時間元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-310">Defines the format of the time component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|<span data-ttu-id="5116f-311">定義分隔日期之年份、月份和日期元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-311">Defines the string that separates the year, month, and day components of a date.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-312">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-312">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-313">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-313">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-314">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-314">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- 下列範例使用 "g" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-315">下列範例使用 "g" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-315">The following example uses the "g" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-316">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-316">Back to table</span></span>](#table)  
   
 <a name="GeneralDateLongTime"></a>   
-## 一般日期完整時間 \("G"\) 格式規範  
- "G" 標準格式規範表示簡短日期 \("d"\) 和完整時間 \("T"\) 模式的組合，以空格分隔。  
+## <a name="the-general-date-long-time-g-format-specifier"></a><span data-ttu-id="5116f-317">一般日期完整時間 ("G") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-317">The General Date Long Time ("G") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-318">"G" 標準格式規範表示簡短日期 ("d") 和完整時間 ("T") 模式的組合，以空格分隔。</span><span class="sxs-lookup"><span data-stu-id="5116f-318">The "G" standard format specifier represents a combination of the short date ("d") and long time ("T") patterns, separated by a space.</span></span>  
   
- 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=fullName> 和 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=fullName> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-319">結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。</span><span class="sxs-lookup"><span data-stu-id="5116f-319">The result string is affected by the formatting information of a specific <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="5116f-320">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-320">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-321">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-321">The custom format specifier that is returned by the <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> and <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> properties of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串之日期元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定義結果字串之時間元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定義分隔日期之年份、月份和日期元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-322">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-322">Property</span></span>|<span data-ttu-id="5116f-323">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-323">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|<span data-ttu-id="5116f-324">定義結果字串之日期元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-324">Defines the format of the date component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|<span data-ttu-id="5116f-325">定義結果字串之時間元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-325">Defines the format of the time component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|<span data-ttu-id="5116f-326">定義分隔日期之年份、月份和日期元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-326">Defines the string that separates the year, month, and day components of a date.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-327">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-327">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-328">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-328">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-329">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-329">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- 下列範例使用 "G" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-330">下列範例使用 "G" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-330">The following example uses the "G" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-331">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-331">Back to table</span></span>](#table)  
   
 <a name="MonthDay"></a>   
-## 月 \("M"、"m"\) 格式規範  
- "M" 或 "m" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的自訂格式字串為 "MMMM dd"。  
+## <a name="the-month-m-m-format-specifier"></a><span data-ttu-id="5116f-332">月 ("M"、"m") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-332">The Month ("M", "m") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-333">"M" 或 "m" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-333">The "M" or "m" standard format specifier represents a custom date and time format string that is defined by the current <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-334">例如，不因文化特性而異的自訂格式字串為 "MMMM dd"。</span><span class="sxs-lookup"><span data-stu-id="5116f-334">For example, the custom format string for the invariant culture is "MMMM dd".</span></span>  
   
- 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。  
+ <span data-ttu-id="5116f-335">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-335">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that control the formatting of the returned string.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|定義結果字串的整體格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
+|<span data-ttu-id="5116f-336">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-336">Property</span></span>|<span data-ttu-id="5116f-337">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-337">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|<span data-ttu-id="5116f-338">定義結果字串的整體格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-338">Defines the overall format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|<span data-ttu-id="5116f-339">定義可顯示在結果字串中的當地語系化月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-339">Defines the localized month names that can appear in the result string.</span></span>|  
   
- 下列範例使用 "m" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-340">下列範例使用 "m" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-340">The following example uses the "m" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-341">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-341">Back to table</span></span>](#table)  
   
 <a name="Roundtrip"></a>   
-## 來回 \("O"、"o"\) 格式規範  
- "O" 或 "o" 標準格式規範可表示使用保存時區資訊之模式的自訂日期和時間格式字串，並發出符合 ISO 8601 的結果字串。 若為 <xref:System.DateTime> 值，此格式規範是設計來以純文字保存日期和時間值以及 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性。 如果將 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=fullName> 或 <xref:System.DateTime.ParseExact%2A?displayProperty=fullName> 方法的 `styles` 參數設定為 <xref:System.Globalization.DateTimeStyles?displayProperty=fullName>，則可以使用這兩個方法來剖析還原格式化字串。  
+## <a name="the-round-trip-o-o-format-specifier"></a><span data-ttu-id="5116f-342">來回 ("O"、"o") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-342">The Round-trip ("O", "o") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-343">"O" 或 "o" 標準格式規範可表示使用保存時區資訊之模式的自訂日期和時間格式字串，並發出符合 ISO 8601 的結果字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-343">The "O" or "o" standard format specifier represents a custom date and time format string using a pattern that preserves time zone information and emits a result string that complies with ISO 8601.</span></span> <span data-ttu-id="5116f-344">若為 <xref:System.DateTime> 值，此格式規範是設計來以純文字保存日期和時間值以及 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-344">For <xref:System.DateTime> values, this format specifier is designed to preserve date and time values along with the <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property in text.</span></span> <span data-ttu-id="5116f-345">如果將 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 或 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法的 `styles` 參數設定為 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>，則可以使用這兩個方法來剖析還原格式化字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-345">The formatted string can be parsed back by using the <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> or <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> method if the `styles` parameter is set to <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>.</span></span>  
   
- "O" 或 "o" 標準格式規範對應至 <xref:System.DateTime> 值的 "yyyy'\-'MM'\-'dd'T'HH':'mm':'ss'.'fffffffK" 自訂格式字串，也對應至 <xref:System.DateTimeOffset> 值的 "yyyy'\-'MM'\-'dd'T'HH':'mm':'ss'.'fffffffzzz" 自訂格式字串。 在此字串中，分隔個別字元 \(例如連字號、冒號和字母 "T"\) 的各組單引號表示個別字元為不可變更的常值。 所有格符號不會出現在輸出字串中。  
+ <span data-ttu-id="5116f-346">"O" 或 "o" 標準格式規範對應至 <xref:System.DateTime> 值的 "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" 自訂格式字串，也對應至 <xref:System.DateTimeOffset> 值的 "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzz" 自訂格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-346">The "O" or "o" standard format specifier corresponds to the "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" custom format string for <xref:System.DateTime> values and to the "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzz" custom format string for <xref:System.DateTimeOffset> values.</span></span> <span data-ttu-id="5116f-347">在此字串中，分隔個別字元 (例如連字號、冒號和字母 "T") 的各組單引號表示個別字元為不可變更的常值。</span><span class="sxs-lookup"><span data-stu-id="5116f-347">In this string, the pairs of single quotation marks that delimit individual characters, such as the hyphens, the colons, and the letter "T", indicate that the individual character is a literal that cannot be changed.</span></span> <span data-ttu-id="5116f-348">所有格符號不會出現在輸出字串中。</span><span class="sxs-lookup"><span data-stu-id="5116f-348">The apostrophes do not appear in the output string.</span></span>  
   
- "O" 或 "o" 標準格式規範 \(以及 "yyyy'\-'MM'\-'dd'T'HH':'mm':'ss'.'fffffffK" 自訂格式字串\) 利用 ISO 8601 表示時區資訊的三種方式，來保留 <xref:System.DateTime.Kind%2A> 值的 <xref:System.DateTime> 屬性。  
+ <span data-ttu-id="5116f-349">'O"或"o"標準格式規範 (以及"yyyy '-' MM'-'dd'T' HH': 'mm':'ss '。 'Ss'.'fffffffk"自訂格式字串） 利用 ISO 8601 表示時區的資訊，以保留的三種方式<xref:System.DateTime.Kind%2A>屬性<xref:System.DateTime>值：</span><span class="sxs-lookup"><span data-stu-id="5116f-349">The "O" or "o" standard format specifier (and the "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK"  custom format string) takes advantage of the three ways that ISO 8601 represents time zone information to preserve the <xref:System.DateTime.Kind%2A> property of <xref:System.DateTime> values:</span></span>  
   
--   <xref:System.DateTimeKind?displayProperty=fullName> 日期和時間值的時區元件是與 UTC 的時差 \(例如，\+01:00、\-07:00\)。 所有 <xref:System.DateTimeOffset> 值也都是以此格式表示。  
+-   <span data-ttu-id="5116f-350"><xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日期和時間值的時區元件是與 UTC 的時差 (例如，+01:00、-07:00)。</span><span class="sxs-lookup"><span data-stu-id="5116f-350">The time zone component of <xref:System.DateTimeKind.Local?displayProperty=nameWithType> date and time values is an offset from UTC (for example, +01:00, -07:00).</span></span> <span data-ttu-id="5116f-351">所有 <xref:System.DateTimeOffset> 值也都是以此格式表示。</span><span class="sxs-lookup"><span data-stu-id="5116f-351">All <xref:System.DateTimeOffset> values are also represented in this format.</span></span>  
   
--   <xref:System.DateTimeKind?displayProperty=fullName> 日期和時間值的時區元件使用 "Z" \(代表零時差\) 來表示 UTC。  
+-   <span data-ttu-id="5116f-352"><xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日期和時間值的時區元件使用 "Z" (代表零時差) 來表示 UTC。</span><span class="sxs-lookup"><span data-stu-id="5116f-352">The time zone component of <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> date and time values uses "Z" (which stands for zero offset) to represent UTC.</span></span>  
   
--   <xref:System.DateTimeKind?displayProperty=fullName> 日期和時間值沒有時區資訊。  
+-   <span data-ttu-id="5116f-353"><xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和時間值沒有時區資訊。</span><span class="sxs-lookup"><span data-stu-id="5116f-353"><xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> date and time values have no time zone information.</span></span>  
   
- 因為 "O" 或 "o" 標準格式規範符合國際標準，所以使用該規範的或剖析作業一律使用不因國別而異的文化特性和西曆。  
+ <span data-ttu-id="5116f-354">因為 "O" 或 "o" 標準格式規範符合國際標準，所以使用該規範的或剖析作業一律使用不因國別而異的文化特性和西曆。</span><span class="sxs-lookup"><span data-stu-id="5116f-354">Because the O" or "o" standard format specifier conforms to an international standard, the formatting or parsing operation that uses the specifier always uses the invariant culture and the Gregorian calendar.</span></span>  
   
- 傳遞至 <xref:System.DateTime> 與 <xref:System.DateTimeOffset> 的 `Parse`、`TryParse`、`ParseExact` 和 `TryParseExact` 方法的字串如果屬於其中一種格式，就可以使用 "O" 或 "o" 格式規範來剖析。 在 <xref:System.DateTime> 物件的案例中，您呼叫的剖析多載應該也要包含 `styles` 參數，且值為 <xref:System.Globalization.DateTimeStyles?displayProperty=fullName>。 請注意，如果您呼叫剖析方法時，使用對應於 "O" 或 "o" 格式規範的自訂格式字串，將不會取得與 "O" 或 "o" 相同的結果。 這是因為使用自訂格式字串的剖析方法，無法剖析缺少時區元件或使用 "Z" 來指示 UTC 之日期和時間值的字串表示法。  
+ <span data-ttu-id="5116f-355">傳遞至 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的字串如果是這些格式，就可以使用 "O" 或 "o" 格式規範來剖析。</span><span class="sxs-lookup"><span data-stu-id="5116f-355">Strings that are passed to the `Parse`, `TryParse`, `ParseExact`, and `TryParseExact` methods of <xref:System.DateTime> and <xref:System.DateTimeOffset> can be parsed by using the "O" or "o" format specifier if they are in one of these formats.</span></span> <span data-ttu-id="5116f-356">在 <xref:System.DateTime> 物件的案例中，您呼叫的剖析多載應該也要包含 `styles` 參數，且值為 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5116f-356">In the case of <xref:System.DateTime> objects, the parsing overload that you call should also include a `styles` parameter with a value of <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5116f-357">請注意，如果您呼叫剖析方法時，使用對應於 "O" 或 "o" 格式規範的自訂格式字串，將不會取得與 "O" 或 "o" 相同的結果。</span><span class="sxs-lookup"><span data-stu-id="5116f-357">Note that if you call a parsing method with the custom format string that corresponds to the "O" or "o" format specifier, you won't get the same results as "O" or "o".</span></span> <span data-ttu-id="5116f-358">這是因為使用自訂格式字串的剖析方法，無法剖析缺少時區元件或使用 "Z" 來指示 UTC 之日期和時間值的字串表示法。</span><span class="sxs-lookup"><span data-stu-id="5116f-358">This is because parsing methods that use a custom format string can't parse the string representation of date and time values that lack a time zone component or use "Z" to indicate UTC.</span></span>  
   
- 下列範例使用 "o" 格式規範，在美國太平洋時區系統上顯示一連串的 <xref:System.DateTime> 值以及 <xref:System.DateTimeOffset> 值。  
+ <span data-ttu-id="5116f-359">下列範例使用 "o" 格式規範，在美國太平洋時區系統上顯示一連串的 <xref:System.DateTime> 值以及 <xref:System.DateTimeOffset> 值。</span><span class="sxs-lookup"><span data-stu-id="5116f-359">The following example uses the "o" format specifier to display a series of <xref:System.DateTime> values and a <xref:System.DateTimeOffset> value on a system in the U.S. Pacific Time zone.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
- 下列範例使用 "o" 格式規範來建立格式化的字串，然後呼叫日期和時間 `Parse` 方法來還原原始日期和時間的值。  
+ <span data-ttu-id="5116f-360">下列範例使用 "o" 格式規範建立格式化字串，然後呼叫日期和時間 `Parse` 方法來還原原始日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-360">The following example uses the "o" format specifier to create a formatted string, and then restores the original date and time value by calling a date and time `Parse` method.</span></span>  
   
  [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-361">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-361">Back to table</span></span>](#table)  
   
 <a name="RFC1123"></a>   
-## RFC1123 \("R"、"r"\) 格式規範  
- "R" 或 "r" 標準格式規範表示由 <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 此模式反映已定義的標準，且屬性為唯讀。 因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。 自訂格式字串為 "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'"。 使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。  
+## <a name="the-rfc1123-r-r-format-specifier"></a><span data-ttu-id="5116f-362">RFC1123 ("R"、"r") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-362">The RFC1123 ("R", "r") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-363">"R" 或 "r" 標準格式規範表示由 <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-363">The "R" or "r" standard format specifier represents a custom date and time format string that is defined by the <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-364">此模式反映已定義的標準，且屬性為唯讀。</span><span class="sxs-lookup"><span data-stu-id="5116f-364">The pattern reflects a defined standard, and the property is read-only.</span></span> <span data-ttu-id="5116f-365">因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。</span><span class="sxs-lookup"><span data-stu-id="5116f-365">Therefore, it is always the same, regardless of the culture used or the format provider supplied.</span></span> <span data-ttu-id="5116f-366">自訂格式字串為 "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'"。</span><span class="sxs-lookup"><span data-stu-id="5116f-366">The custom format string is "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'".</span></span> <span data-ttu-id="5116f-367">使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。</span><span class="sxs-lookup"><span data-stu-id="5116f-367">When this standard format specifier is used, the formatting or parsing operation always uses the invariant culture.</span></span>  
   
- 在表示不因文化特性而異之 <xref:System.Globalization.DateTimeFormatInfo> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=fullName> 物件中，有下列屬性會影響結果字串。  
+ <span data-ttu-id="5116f-368">在表示不因文化特性而異之 <xref:System.Globalization.DateTimeFormatInfo> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> 物件中，有下列屬性會影響結果字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-368">The result string is affected by the following properties of the <xref:System.Globalization.DateTimeFormatInfo> object returned by the <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> property that represents the invariant culture.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|定義結果字串的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|定義可顯示在結果字串中的縮寫日期名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A>|定義可顯示在結果字串中的縮寫月份名稱。|  
+|<span data-ttu-id="5116f-369">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-369">Property</span></span>|<span data-ttu-id="5116f-370">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-370">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|<span data-ttu-id="5116f-371">定義結果字串的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-371">Defines the format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|<span data-ttu-id="5116f-372">定義可顯示在結果字串中的縮寫日期名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-372">Defines the abbreviated day names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A>|<span data-ttu-id="5116f-373">定義可顯示在結果字串中的縮寫月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-373">Defines the abbreviated month names that can appear in the result string.</span></span>|  
   
- 雖然 RFC 1123 標準以國際標準時間 \(UTC\) 來表示時間，但對於要進行格式化的 <xref:System.DateTime> 物件，格式化作業並不會修改這些物件的值。 因此，您必須先呼叫 <xref:System.DateTime> 方法將 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=fullName> 值轉換成 UTC，才能執行格式化作業。 相反地，<xref:System.DateTimeOffset> 值會自動執行這項轉換，因此在格式化作業之前，不需要呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=fullName> 方法。  
+ <span data-ttu-id="5116f-374">雖然 RFC 1123 標準以國際標準時間 (UTC) 來表示時間，但對於要進行格式化的 <xref:System.DateTime> 物件，格式化作業並不會修改這些物件的值。</span><span class="sxs-lookup"><span data-stu-id="5116f-374">Although the RFC 1123 standard expresses a time as Coordinated Universal Time (UTC), the formatting operation does not modify the value of the <xref:System.DateTime> object that is being formatted.</span></span> <span data-ttu-id="5116f-375">因此，您必須先呼叫 <xref:System.DateTime> 方法將 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> 值轉換成 UTC，才能執行格式化作業。</span><span class="sxs-lookup"><span data-stu-id="5116f-375">Therefore, you must convert the <xref:System.DateTime> value to UTC by calling the <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> method before you perform the formatting operation.</span></span> <span data-ttu-id="5116f-376">相反地，<xref:System.DateTimeOffset> 值會自動執行這項轉換，因此在格式化作業之前，不需要呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="5116f-376">In contrast, <xref:System.DateTimeOffset> values perform this conversion automatically; there is no need to call the <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> method before the formatting operation.</span></span>  
   
- 下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。  
+ <span data-ttu-id="5116f-377">下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。</span><span class="sxs-lookup"><span data-stu-id="5116f-377">The following example uses the "r" format specifier to display a <xref:System.DateTime> and a <xref:System.DateTimeOffset> value on a system in the U.S. Pacific Time zone.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-378">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-378">Back to table</span></span>](#table)  
   
 <a name="Sortable"></a>   
-## 可排序 \("s"\) 格式規範  
- "s" 標準格式規範表示由 <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 此模式反映已定義的標準 \(ISO 8601\)，且屬性為唯讀。 因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。 自訂格式字串為 "yyyy'\-'MM'\-'dd'T'HH':'mm':'ss"。  
+## <a name="the-sortable-s-format-specifier"></a><span data-ttu-id="5116f-379">可排序 ("s") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-379">The Sortable ("s") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-380">"s" 標準格式規範表示由 <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-380">The "s" standard format specifier represents a custom date and time format string that is defined by the <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-381">此模式反映已定義的標準 (ISO 8601)，且屬性為唯讀。</span><span class="sxs-lookup"><span data-stu-id="5116f-381">The pattern reflects a defined standard (ISO 8601), and the property is read-only.</span></span> <span data-ttu-id="5116f-382">因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。</span><span class="sxs-lookup"><span data-stu-id="5116f-382">Therefore, it is always the same, regardless of the culture used or the format provider supplied.</span></span> <span data-ttu-id="5116f-383">自訂格式字串為 "yyyy'-'MM'-'dd'T'HH':'mm':'ss"。</span><span class="sxs-lookup"><span data-stu-id="5116f-383">The custom format string is "yyyy'-'MM'-'dd'T'HH':'mm':'ss".</span></span>  
   
- "s" 格式規範的目的在於產生結果字串時，能夠根據日期和時間值，一致地以遞增或遞減順序排序。 如此一來，雖然 "s" 標準格式規範會以一致的格式來表示日期和時間值，但是格式化作業不會修改日期和時間物件的值 \(為了反映其 <xref:System.DateTime.Kind%2A?displayProperty=fullName> 屬性或其 <xref:System.DateTimeOffset.Offset%2A?displayProperty=fullName> 值已格式化該值\)。 例如，格式化日期和時間值 2014\-11\-15T18:32:17\+00:00 和 2014\-11\-15T18:32:17\+08:00 所產生的結果字串相同。  
+ <span data-ttu-id="5116f-384">"s" 格式規範的目的在於產生結果字串時，能夠根據日期和時間值，一致地以遞增或遞減順序排序。</span><span class="sxs-lookup"><span data-stu-id="5116f-384">The purpose of the "s" format specifier is to produce result strings that sort consistently in ascending or descending order based on date and time values.</span></span> <span data-ttu-id="5116f-385">如此一來，雖然 "s" 標準格式規範會以一致的格式來表示日期和時間值，但是格式化作業不會修改日期和時間物件的值 (為了反映其 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性或其 <xref:System.DateTimeOffset.Offset%2A?displayProperty=nameWithType> 值已格式化該值)。</span><span class="sxs-lookup"><span data-stu-id="5116f-385">As a result, although the "s" standard format specifier represents a date and time value in a consistent format, the formatting operation does not modify the value of the date and time object that is being formatted to reflect its <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property or its <xref:System.DateTimeOffset.Offset%2A?displayProperty=nameWithType> value.</span></span> <span data-ttu-id="5116f-386">例如，格式化日期和時間值 2014-11-15T18:32:17+00:00 和 2014-11-15T18:32:17+08:00 所產生的結果字串相同。</span><span class="sxs-lookup"><span data-stu-id="5116f-386">For example, the result strings produced by formatting the date and time values 2014-11-15T18:32:17+00:00 and 2014-11-15T18:32:17+08:00 are identical.</span></span>  
   
- 使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。  
+ <span data-ttu-id="5116f-387">使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。</span><span class="sxs-lookup"><span data-stu-id="5116f-387">When this standard format specifier is used, the formatting or parsing operation always uses the invariant culture.</span></span>  
   
- 下列範例會使用 "s" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。  
+ <span data-ttu-id="5116f-388">下列範例會使用 "s" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。</span><span class="sxs-lookup"><span data-stu-id="5116f-388">The following example uses the "s" format specifier to display a <xref:System.DateTime> and a <xref:System.DateTimeOffset> value on a system in the U.S. Pacific Time zone.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-389">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-389">Back to table</span></span>](#table)  
   
 <a name="ShortTime"></a>   
-## 簡短時間 \("t"\) 格式規範  
- "t" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的自訂格式字串為 "HH:mm"。  
+## <a name="the-short-time-t-format-specifier"></a><span data-ttu-id="5116f-390">簡短時間 ("t") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-390">The Short Time ("t") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-391">"t" 標準格式規範表示由目前 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-391">The "t" standard format specifier represents a custom date and time format string that is defined by the current <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-392">例如，不因文化特性而異的自訂格式字串為 "HH:mm"。</span><span class="sxs-lookup"><span data-stu-id="5116f-392">For example, the custom format string for the invariant culture is "HH:mm".</span></span>  
   
- 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=fullName> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-393">結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。</span><span class="sxs-lookup"><span data-stu-id="5116f-393">The result string is affected by the formatting information of a specific <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="5116f-394">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-394">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-395">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-395">The custom format specifier that is returned by the <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> property of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-396">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-396">Property</span></span>|<span data-ttu-id="5116f-397">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-397">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|<span data-ttu-id="5116f-398">定義結果字串之時間元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-398">Defines the format of the time component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-399">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-399">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-400">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-400">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-401">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-401">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- 下列範例使用 "t" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-402">下列範例使用 "t" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-402">The following example uses the "t" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-403">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-403">Back to table</span></span>](#table)  
   
 <a name="LongTime"></a>   
-## 完整時間 \("T"\) 格式規範  
- "T" 標準格式規範表示由特定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的自訂格式字串為 "HH:mm:ss"。  
+## <a name="the-long-time-t-format-specifier"></a><span data-ttu-id="5116f-404">完整時間 ("T") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-404">The Long Time ("T") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-405">"T" 標準格式規範表示由特定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-405">The "T" standard format specifier represents a custom date and time format string that is defined by a specific culture's <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-406">例如，不因文化特性而異的自訂格式字串為 "HH:mm:ss"。</span><span class="sxs-lookup"><span data-stu-id="5116f-406">For example, the custom format string for the invariant culture is "HH:mm:ss".</span></span>  
   
- 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=fullName> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-407">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-407">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-408">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-408">The custom format specifier that is returned by the <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> property of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定義結果字串之時間元件的格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-409">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-409">Property</span></span>|<span data-ttu-id="5116f-410">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-410">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|<span data-ttu-id="5116f-411">定義結果字串之時間元件的格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-411">Defines the format of the time component of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-412">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-412">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-413">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-413">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-414">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-414">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- 下列範例使用 "T" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-415">下列範例使用 "T" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-415">The following example uses the "T" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-416">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-416">Back to table</span></span>](#table)  
   
 <a name="UniversalSortable"></a>   
-## 國際可排序 \("u"\) 格式規範  
- "u" 標準格式規範表示由 <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 此模式反映已定義的標準，且屬性為唯讀。 因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。 自訂格式字串為 "yyyy'\-'MM'\-'dd HH':'mm':'ss'Z'"。 使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。  
+## <a name="the-universal-sortable-u-format-specifier"></a><span data-ttu-id="5116f-417">國際可排序 ("u") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-417">The Universal Sortable ("u") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-418">"u" 標準格式規範表示由 <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-418">The "u" standard format specifier represents a custom date and time format string that is defined by the <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-419">此模式反映已定義的標準，且屬性為唯讀。</span><span class="sxs-lookup"><span data-stu-id="5116f-419">The pattern reflects a defined standard, and the property is read-only.</span></span> <span data-ttu-id="5116f-420">因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。</span><span class="sxs-lookup"><span data-stu-id="5116f-420">Therefore, it is always the same, regardless of the culture used or the format provider supplied.</span></span> <span data-ttu-id="5116f-421">自訂格式字串為 "yyyy'-'MM'-'dd HH':'mm':'ss'Z'"。</span><span class="sxs-lookup"><span data-stu-id="5116f-421">The custom format string is "yyyy'-'MM'-'dd HH':'mm':'ss'Z'".</span></span> <span data-ttu-id="5116f-422">使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。</span><span class="sxs-lookup"><span data-stu-id="5116f-422">When this standard format specifier is used, the formatting or parsing operation always uses the invariant culture.</span></span>  
   
- 雖然結果字串應該以國際標準時間 \(UTC\) 來表示時間，但在格式化作業期間，原始 <xref:System.DateTime> 值不會執行任何轉換。 因此，您必須先呼叫 <xref:System.DateTime> 方法將 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=fullName> 值轉換成 UTC，才能將它格式化。  相反地，<xref:System.DateTimeOffset> 值會自動執行這項轉換，因此在格式化作業之前，不需要呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=fullName> 方法。  
+ <span data-ttu-id="5116f-423">雖然結果字串應該以國際標準時間 (UTC) 來表示時間，但在格式化作業期間，原始 <xref:System.DateTime> 值不會執行任何轉換。</span><span class="sxs-lookup"><span data-stu-id="5116f-423">Although the result string should express a time as Coordinated Universal Time (UTC), no conversion of the original <xref:System.DateTime> value is performed during the formatting operation.</span></span> <span data-ttu-id="5116f-424">因此，您必須先呼叫 <xref:System.DateTime> 方法將 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> 值轉換成 UTC，才能將它格式化。</span><span class="sxs-lookup"><span data-stu-id="5116f-424">Therefore, you must convert a <xref:System.DateTime> value to UTC by calling the <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> method before formatting it.</span></span>  <span data-ttu-id="5116f-425">相反地，<xref:System.DateTimeOffset> 值會自動執行這項轉換，因此在格式化作業之前，不需要呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="5116f-425">In contrast, <xref:System.DateTimeOffset> values perform this conversion automatically; there is no need to call the <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> method before the formatting operation.</span></span>  
   
- 下列範例使用 "u" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-426">下列範例使用 "u" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-426">The following example uses the "u" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Standard#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#13)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-427">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-427">Back to table</span></span>](#table)  
   
 <a name="UniversalFull"></a>   
-## 國際完整 \("U"\) 格式規範  
- "U" 標準格式規範表示由指定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 此模式與 "F" 模式相同。 不過，<xref:System.DateTime> 值在格式化之前會自動轉換為 UTC。  
+## <a name="the-universal-full-u-format-specifier"></a><span data-ttu-id="5116f-428">國際完整 ("U") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-428">The Universal Full ("U") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-429">"U" 標準格式規範表示由指定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-429">The "U" standard format specifier represents a custom date and time format string that is defined by a specified culture's <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="5116f-430">此模式與 "F" 模式相同。</span><span class="sxs-lookup"><span data-stu-id="5116f-430">The pattern is the same as the "F" pattern.</span></span> <span data-ttu-id="5116f-431">不過，<xref:System.DateTime> 值在格式化之前會自動轉換為 UTC。</span><span class="sxs-lookup"><span data-stu-id="5116f-431">However, the <xref:System.DateTime> value is automatically converted to UTC before it is formatted.</span></span>  
   
- 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。  
+ <span data-ttu-id="5116f-432">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-432">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that may control the formatting of the returned string.</span></span> <span data-ttu-id="5116f-433">由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-433">The custom format specifier that is returned by the <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> property of some cultures may not make use of all properties.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定義結果字串的整體格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|定義表示從午夜到中午之前時間 \(12 小時制\) 的字串。|  
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|定義表示從中午到午夜之前時間 \(12 小時制\) 的字串。|  
+|<span data-ttu-id="5116f-434">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-434">Property</span></span>|<span data-ttu-id="5116f-435">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-435">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|<span data-ttu-id="5116f-436">定義結果字串的整體格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-436">Defines the overall format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|<span data-ttu-id="5116f-437">定義可顯示在結果字串中的當地語系化日期名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-437">Defines the localized day names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|<span data-ttu-id="5116f-438">定義可顯示在結果字串中的當地語系化月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-438">Defines the localized month names that can appear in the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|<span data-ttu-id="5116f-439">定義分隔時間之小時、分鐘和秒鐘元件的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-439">Defines the string that separates the hour, minute, and second components of a time.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|<span data-ttu-id="5116f-440">定義表示從午夜到中午之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-440">Defines the string that indicates times from midnight to before noon in a 12-hour clock.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|<span data-ttu-id="5116f-441">定義表示從中午到午夜之前時間 (12 小時制) 的字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-441">Defines the string that indicates times from noon to before midnight in a 12-hour clock.</span></span>|  
   
- <xref:System.DateTimeOffset> 類型不支援 "U" 格式規範，如果使用它來格式化 <xref:System.FormatException> 值，則會擲回 <xref:System.DateTimeOffset>。  
+ <span data-ttu-id="5116f-442"><xref:System.DateTimeOffset> 類型不支援 "U" 格式規範，如果使用它來格式化 <xref:System.FormatException> 值，則會擲回 <xref:System.DateTimeOffset>。</span><span class="sxs-lookup"><span data-stu-id="5116f-442">The "U" format specifier is not supported by the <xref:System.DateTimeOffset> type and throws a <xref:System.FormatException> if it is used to format a <xref:System.DateTimeOffset> value.</span></span>  
   
- 下列範例使用 "U" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-443">下列範例使用 "U" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-443">The following example uses the "U" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-444">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-444">Back to table</span></span>](#table)  
   
 <a name="YearMonth"></a>   
-## 年月 \("Y"、"y"\) 格式規範  
- "Y" 或 "y" 標準格式規範表示由指定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=fullName> 屬性所定義的自訂日期和時間格式字串。 例如，不因文化特性而異的自訂格式字串為 "yyyy MMMM"。  
+## <a name="the-year-month-y-y-format-specifier"></a><span data-ttu-id="5116f-445">年月 ("Y"、"y") 格式規範</span><span class="sxs-lookup"><span data-stu-id="5116f-445">The Year Month ("Y", "y") Format Specifier</span></span>  
+ <span data-ttu-id="5116f-446">"Y" 或 "y" 標準格式規範表示由指定文化特性之 <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> 屬性所定義的自訂日期和時間格式字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-446">The "Y" or "y" standard format specifier represents a custom date and time format string that is defined by the <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> property of a specified culture.</span></span> <span data-ttu-id="5116f-447">例如，不因文化特性而異的自訂格式字串為 "yyyy MMMM"。</span><span class="sxs-lookup"><span data-stu-id="5116f-447">For example, the custom format string for the invariant culture is "yyyy MMMM".</span></span>  
   
- 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。  
+ <span data-ttu-id="5116f-448">下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。</span><span class="sxs-lookup"><span data-stu-id="5116f-448">The following table lists the <xref:System.Globalization.DateTimeFormatInfo> object properties that control the formatting of the returned string.</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|定義結果字串的整體格式。|  
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|  
+|<span data-ttu-id="5116f-449">屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-449">Property</span></span>|<span data-ttu-id="5116f-450">描述</span><span class="sxs-lookup"><span data-stu-id="5116f-450">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|<span data-ttu-id="5116f-451">定義結果字串的整體格式。</span><span class="sxs-lookup"><span data-stu-id="5116f-451">Defines the overall format of the result string.</span></span>|  
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|<span data-ttu-id="5116f-452">定義可顯示在結果字串中的當地語系化月份名稱。</span><span class="sxs-lookup"><span data-stu-id="5116f-452">Defines the localized month names that can appear in the result string.</span></span>|  
   
- 下列範例使用 "y" 格式規範來顯示日期和時間值。  
+ <span data-ttu-id="5116f-453">下列範例使用 "y" 格式規範來顯示日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="5116f-453">The following example uses the "y" format specifier to display a date and time value.</span></span>  
   
  [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="5116f-454">回到表格</span><span class="sxs-lookup"><span data-stu-id="5116f-454">Back to table</span></span>](#table)  
   
 <a name="Notes"></a>   
-## 備註  
+## <a name="notes"></a><span data-ttu-id="5116f-455">備註</span><span class="sxs-lookup"><span data-stu-id="5116f-455">Notes</span></span>  
   
-### 控制台設定值  
- \[控制台\] 中 \[**地區及語言選項\]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。  
+### <a name="control-panel-settings"></a><span data-ttu-id="5116f-456">控制台設定值</span><span class="sxs-lookup"><span data-stu-id="5116f-456">Control Panel Settings</span></span>  
+ <span data-ttu-id="5116f-457">[控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-457">The settings in the **Regional and Language Options** item in Control Panel influence the result string produced by a formatting operation.</span></span> <span data-ttu-id="5116f-458">這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。</span><span class="sxs-lookup"><span data-stu-id="5116f-458">These settings are used to initialize the <xref:System.Globalization.DateTimeFormatInfo> object associated with the current thread culture, which provides values used to govern formatting.</span></span> <span data-ttu-id="5116f-459">使用不同設定的電腦會產生不同的結果字串。</span><span class="sxs-lookup"><span data-stu-id="5116f-459">Computers that use different settings generate different result strings.</span></span>  
   
- 此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=fullName> 建構函式來具現化新的 <xref:System.Globalization.CultureInfo> 物件，而此物件代表的文化特性與目前系統文化特性相同，則 \[控制台\] 中的 \[**地區及語言選項**\] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
+ <span data-ttu-id="5116f-460">此外，如果您使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>建構函式來具現化新<xref:System.Globalization.CultureInfo>物件，代表相同的文化特性與目前的系統文化特性，所建立的任何自訂**地區及語言選項**在控制台中的項目會套用至新<xref:System.Globalization.CultureInfo>物件。</span><span class="sxs-lookup"><span data-stu-id="5116f-460">In addition, if you use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor to instantiate a new <xref:System.Globalization.CultureInfo> object that represents the same culture as the current system culture, any customizations established by the **Regional and Language Options** item in Control Panel will be applied to the new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="5116f-461">您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="5116f-461">You can use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor to create a <xref:System.Globalization.CultureInfo> object that does not reflect a system's customizations.</span></span>  
   
-### DateTimeFormatInfo 屬性  
- 格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。 針對 <xref:System.IFormatProvider> 參數，您的應用程式應指定代表文化特性的 <xref:System.Globalization.CultureInfo> 物件，或是指定代表特定文化特性之日期和時間格式化慣例的 <xref:System.Globalization.DateTimeFormatInfo> 物件。 許多標準日期和時間格式規範都是格式化模式的別名，這些模式是由目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性所定義。 您的應用程式可以變更對應 <xref:System.Globalization.DateTimeFormatInfo> 屬性的對應日期和時間格式模式，藉此改變某些標準日期和時間格式規範所產生的結果。  
+### <a name="datetimeformatinfo-properties"></a><span data-ttu-id="5116f-462">DateTimeFormatInfo 屬性</span><span class="sxs-lookup"><span data-stu-id="5116f-462">DateTimeFormatInfo Properties</span></span>  
+ <span data-ttu-id="5116f-463">格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。</span><span class="sxs-lookup"><span data-stu-id="5116f-463">Formatting is influenced by properties of the current <xref:System.Globalization.DateTimeFormatInfo> object, which is provided implicitly by the current thread culture or explicitly by the <xref:System.IFormatProvider> parameter of the method that invokes formatting.</span></span> <span data-ttu-id="5116f-464">針對 <xref:System.IFormatProvider> 參數，您的應用程式應指定代表文化特性的 <xref:System.Globalization.CultureInfo> 物件，或是指定代表特定文化特性之日期和時間格式化慣例的 <xref:System.Globalization.DateTimeFormatInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="5116f-464">For the <xref:System.IFormatProvider> parameter, your application should specify a <xref:System.Globalization.CultureInfo> object, which represents a culture, or a <xref:System.Globalization.DateTimeFormatInfo> object, which represents a particular culture's date and time formatting conventions.</span></span> <span data-ttu-id="5116f-465">許多標準日期和時間格式規範都是格式化模式的別名，這些模式是由目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性所定義。</span><span class="sxs-lookup"><span data-stu-id="5116f-465">Many of the standard date and time format specifiers are aliases for formatting patterns defined by properties of the current <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="5116f-466">您的應用程式可以變更對應 <xref:System.Globalization.DateTimeFormatInfo> 屬性的對應日期和時間格式模式，藉此改變某些標準日期和時間格式規範所產生的結果。</span><span class="sxs-lookup"><span data-stu-id="5116f-466">Your application can change the result produced by some standard date and time format specifiers by changing the corresponding date and time format patterns of the corresponding <xref:System.Globalization.DateTimeFormatInfo> property.</span></span>  
   
-## 請參閱  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)   
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)   
- [範例：.NET Framework 4 格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a><span data-ttu-id="5116f-467">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5116f-467">See Also</span></span>  
+ <xref:System.DateTime?displayProperty=nameWithType>  
+ <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+ [<span data-ttu-id="5116f-468">格式化類型</span><span class="sxs-lookup"><span data-stu-id="5116f-468">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="5116f-469">Custom Date and Time Format Strings</span><span class="sxs-lookup"><span data-stu-id="5116f-469">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [<span data-ttu-id="5116f-470">範例：.NET Framework 4 格式化公用程式</span><span class="sxs-lookup"><span data-stu-id="5116f-470">Sample: .NET Framework 4 Formatting Utility</span></span>](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

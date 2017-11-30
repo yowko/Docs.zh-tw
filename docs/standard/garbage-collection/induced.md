@@ -1,45 +1,47 @@
 ---
-title: "引發的集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "記憶體回收，強制"
+title: "引發的集合"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 92918e347b10dfcf3a0d6e2c08cec8c7a6963f5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 引發的集合
-大部分的情況下，記憶體回收行程會判斷執行回收的最佳時間，請讓記憶體回收行程獨立執行。  在極少數的情況下，強制回收可能會增進應用程式的效能。  此時，您可以使用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法以強制執行記憶體回收。  
+# <a name="induced-collections"></a><span data-ttu-id="ad6fc-102">引發的集合</span><span class="sxs-lookup"><span data-stu-id="ad6fc-102">Induced Collections</span></span>
+<span data-ttu-id="ad6fc-103">大部分情況下，記憶體回收行程會判斷執行回收的最佳時間，請讓記憶體回收行程獨立執行。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-103">In most cases, the garbage collector can determine the best time to perform a collection, and you should let it run independently.</span></span> <span data-ttu-id="ad6fc-104">在罕見的情況下，強制回收可能會改善您應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-104">There are rare situations when a forced collection might improve your application's performance.</span></span> <span data-ttu-id="ad6fc-105">在這些情況下，您可以藉由引發記憶體回收<xref:System.GC.Collect%2A?displayProperty=nameWithType>方法，以強制執行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-105">In these cases, you can induce garbage collection by using the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method to force a garbage collection.</span></span>  
   
- 當應用程式的程式碼中特定點上的記憶體使用量明顯減少時，請使用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法。  例如，如果您的應用程式使用內含多個控制項的複雜對話方塊，則當對話方塊關閉時，呼叫 <xref:System.GC.Collect%2A> 立即回收對話方塊使用的記憶體，可以提高效能。  請確定應用程式不會太過頻繁的引發記憶體回收，因為如果記憶體回收行程嘗試回收物件的次數並非最佳，就會降低效能。  您可以提供 <xref:System.GCCollectionMode?displayProperty=fullName> 列舉值給 <xref:System.GC.Collect%2A> 方法，只有在收集具有生產力時進行收集，如下一節所述。  
+ <span data-ttu-id="ad6fc-106">使用<xref:System.GC.Collect%2A?displayProperty=nameWithType>大幅降低記憶體正在使用您的應用程式程式碼中的特定點時的方法。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-106">Use the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method when there is a significant reduction in the amount of memory being used at a specific point in your application's code.</span></span> <span data-ttu-id="ad6fc-107">例如，如果您的應用程式會使用複雜的對話方塊中，有幾個控制項，呼叫<xref:System.GC.Collect%2A>關閉對話方塊時無法改善效能立即回收對話方塊中所使用的記憶體。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-107">For example, if your application uses a complex dialog box that has several controls, calling <xref:System.GC.Collect%2A> when the dialog box is closed could improve performance by immediately reclaiming the memory used by the dialog box.</span></span> <span data-ttu-id="ad6fc-108">請確定您的應用程式沒有太頻繁地進行記憶體回收，原因是如果記憶體回收行程嘗試在非最佳時間回收物件，則這樣可能會降低效能。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-108">Be sure that your application is not inducing garbage collection too frequently, because that can decrease performance if the garbage collector is trying to reclaim objects at non-optimal times.</span></span> <span data-ttu-id="ad6fc-109">您可以提供<xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType>列舉值，以<xref:System.GC.Collect%2A>只能在下一節中所述，集合會是高生產力、 時要收集的方法。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-109">You can supply a <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> enumeration value to the <xref:System.GC.Collect%2A> method to collect only when collection would be productive, as discussed in the next section.</span></span>  
   
-## GC 回收模式  
- 您可以使用其中一個包含 <xref:System.GCCollectionMode> 值的 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法多載，指定強制回收的行為，如下所述。  
+## <a name="gc-collection-mode"></a><span data-ttu-id="ad6fc-110">GC 收集模式</span><span class="sxs-lookup"><span data-stu-id="ad6fc-110">GC collection mode</span></span>  
+ <span data-ttu-id="ad6fc-111">您可以使用其中一個<xref:System.GC.Collect%2A?displayProperty=nameWithType>方法多載，包括<xref:System.GCCollectionMode>指定強制集合的行為，如下所示的值。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-111">You can use one of the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method overloads that includes a <xref:System.GCCollectionMode> value to specify the behavior for a forced collection as follows.</span></span>  
   
-|`GCCollectionMode` 值|描述|  
-|--------------------------|--------|  
-|<xref:System.GCCollectionMode>|使用執行中 .NET Framework 版本的預設記憶體回收之設定。|  
-|<xref:System.GCCollectionMode>|強制立即執行記憶體回收。  這相當於呼叫 <xref:System.GC.Collect?displayProperty=fullName> 多載。  這會產生所有層代的完整封鎖集合。<br /><br /> 您也可以在強制立即完整的封鎖記憶體回收之前，藉由將 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName> 屬性設為 <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=fullName> 壓縮大型物件堆積。|  
-|<xref:System.GCCollectionMode>|啟用記憶體回收以判斷現在是否是回收物件的最佳時間。<br /><br /> 記憶體回收行程會判斷，執行回收是否能有效提高生產力，如果不能就會返回而不回收物件。|  
+|<span data-ttu-id="ad6fc-112">`GCCollectionMode` 值</span><span class="sxs-lookup"><span data-stu-id="ad6fc-112">`GCCollectionMode` value</span></span>|<span data-ttu-id="ad6fc-113">說明</span><span class="sxs-lookup"><span data-stu-id="ad6fc-113">Description</span></span>|  
+|------------------------------|-----------------|  
+|<xref:System.GCCollectionMode.Default>|<span data-ttu-id="ad6fc-114">執行版本的.NET 中使用的預設記憶體回收集合設定。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-114">Uses the default garbage collection setting for the running version of .NET.</span></span>|  
+|<xref:System.GCCollectionMode.Forced>|<span data-ttu-id="ad6fc-115">強制立即進行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-115">Forces garbage collection to occur immediately.</span></span> <span data-ttu-id="ad6fc-116">這就相當於呼叫<xref:System.GC.Collect?displayProperty=nameWithType>多載。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-116">This is equivalent to calling the <xref:System.GC.Collect?displayProperty=nameWithType> overload.</span></span> <span data-ttu-id="ad6fc-117">它會導致完整封鎖回收所有層代。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-117">It results in a full blocking collection of all generations.</span></span><br /><br /> <span data-ttu-id="ad6fc-118">您也可以藉由設定壓縮大型物件堆積<xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>屬性<xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType>之前強制執行立即完全封鎖記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-118">You can also compact the large object heap by setting the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> before forcing an immediate full blocking garbage collection.</span></span>|  
+|<xref:System.GCCollectionMode.Optimized>|<span data-ttu-id="ad6fc-119">可讓記憶體回收行程判斷目前時間是否最適合回收物件。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-119">Enables the garbage collector to determine whether the current time is optimal to reclaim objects.</span></span><br /><br /> <span data-ttu-id="ad6fc-120">記憶體回收行程可能會判斷回收的生產力不足無法進行調整，在此情況下會返回，而不是回收物件。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-120">The garbage collector could determine that a collection would not be productive enough to be justified, in which case it will return without reclaiming objects.</span></span>|  
   
-## 背景或封鎖集合  
- 您可以呼叫 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=fullName> 方法多載，指定引發的集合是否封鎖。  所執行的集合類型需視方法的 `mode` 和 `blocking` 參數組合而定。  `mode` 是 <xref:System.GCCollectionMode> 列舉類型的成員，`blocking` 則是 <xref:System.Boolean> 的值。  下表摘要說明 `mode` 和 `blocking` 引數的互動。  
+## <a name="background-or-blocking-collections"></a><span data-ttu-id="ad6fc-121">背景或封鎖回收</span><span class="sxs-lookup"><span data-stu-id="ad6fc-121">Background or blocking collections</span></span>  
+ <span data-ttu-id="ad6fc-122">您可以呼叫<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType>方法多載來指定是否封鎖或不引發的集合。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-122">You can call the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> method overload to specify whether an induced collection is blocking or not.</span></span> <span data-ttu-id="ad6fc-123">執行集合的型別取決於方法的組合`mode`和`blocking`參數。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-123">The type of collection performed depends on a combination of the method's `mode` and `blocking` parameters.</span></span> <span data-ttu-id="ad6fc-124">`mode`成員的<xref:System.GCCollectionMode>列舉型別和`blocking`是<xref:System.Boolean>值。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-124">`mode` is a member of the <xref:System.GCCollectionMode> enumeration, and `blocking` is a <xref:System.Boolean> value.</span></span> <span data-ttu-id="ad6fc-125">下表摘要說明之間的互動`mode`和`blocking`引數。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-125">The following table summarizes the interaction of the `mode` and `blocking` arguments.</span></span>  
   
-|`mode`|`blocking` \= `true`|`blocking` \= `false`|  
+|`mode`|`blocking` = `true`|`blocking` = `false`|  
 |------------|--------------------------|---------------------------|  
-|<xref:System.GCCollectionMode> 或 <xref:System.GCCollectionMode>|封鎖集合儘快執行。  如果背景集合正在進行且層代為 0 或 1，則 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會立即觸發封鎖集合，並且在集合完成時傳回。  如果背景集合正在進行且 `generation` 參數為 2，則此方法會等候直到背景集合完成，觸發封鎖層代 2 集合，然後傳回。|集合儘快執行。  <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會要求背景集合，但不保證可取得。視情況而定，可能仍會執行封鎖集合。  如果背景集合已在進行中，方法會立即傳回。|  
-|<xref:System.GCCollectionMode>|可能會因記憶體回收行程和 `generation` 參數的狀態而執行封鎖集合。  記憶體回收行程會嘗試提供最佳效能。|可能會因記憶體回收行程的狀態而執行集合。  <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會要求背景集合，但不保證可取得。視情況而定，可能仍會執行封鎖集合。  記憶體回收行程會嘗試提供最佳效能。  如果背景集合已在進行中，方法會立即傳回。|  
+|<span data-ttu-id="ad6fc-126"><xref:System.GCCollectionMode.Forced> 或 <xref:System.GCCollectionMode.Default></span><span class="sxs-lookup"><span data-stu-id="ad6fc-126"><xref:System.GCCollectionMode.Forced> or <xref:System.GCCollectionMode.Default></span></span>|<span data-ttu-id="ad6fc-127">會盡快執行封鎖回收。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-127">A blocking collection is performed as soon as possible.</span></span> <span data-ttu-id="ad6fc-128">如果背景回收正在進行且層代 0 或 1，<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29>方法立即觸發封鎖的集合，並在完成集合後傳回。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-128">If a background collection is in progress and generation is 0 or 1, the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> method immediately triggers a blocking collection and returns when the collection is finished.</span></span> <span data-ttu-id="ad6fc-129">如果正在進行中的背景集合和`generation`參數為 2，則方法會等候直到背景回收完成時，封鎖的層代 2 回收，觸發程序，然後傳回。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-129">If a background collection is in progress and the `generation` parameter is 2, the method waits until the background collection is finished, triggers a blocking generation 2 collection, and then returns.</span></span>|<span data-ttu-id="ad6fc-130">會盡快執行回收。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-130">A collection is performed as soon as possible.</span></span> <span data-ttu-id="ad6fc-131"><xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29>方法要求背景集合，但這不保證; 根據情況，封鎖的集合可能仍會執行。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-131">The <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> method requests a background collection, but this is not guaranteed; depending on the circumstances, a blocking collection may still be performed.</span></span> <span data-ttu-id="ad6fc-132">如果已在進行背景回收，則這個方法會立即返回。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-132">If a background collection is already in progress, the method returns immediately.</span></span>|  
+|<xref:System.GCCollectionMode.Optimized>|<span data-ttu-id="ad6fc-133">封鎖的集合可能會執行，根據記憶體回收行程的狀態和`generation`參數。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-133">A blocking collection may be performed, depending on the state of the garbage collector and the `generation` parameter.</span></span> <span data-ttu-id="ad6fc-134">記憶體回收行程會嘗試提供最佳效能。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-134">The garbage collector tries to provide optimal performance.</span></span>|<span data-ttu-id="ad6fc-135">根據記憶體回收行程的狀態，可能會執行回收。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-135">A collection may be performed, depending on the state of the garbage collector.</span></span> <span data-ttu-id="ad6fc-136"><xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29>方法要求背景集合，但這不保證; 根據情況，封鎖的集合可能仍會執行。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-136">The <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> method requests a background collection, but this is not guaranteed; depending on the circumstances, a blocking collection may still be performed.</span></span> <span data-ttu-id="ad6fc-137">記憶體回收行程會嘗試提供最佳效能。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-137">The garbage collector tries to provide optimal performance.</span></span> <span data-ttu-id="ad6fc-138">如果已在進行背景回收，則這個方法會立即返回。</span><span class="sxs-lookup"><span data-stu-id="ad6fc-138">If a background collection is already in progress, the method returns immediately.</span></span>|  
   
-## 請參閱  
- [Latency Modes](../../../docs/standard/garbage-collection/latency.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="ad6fc-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ad6fc-139">See Also</span></span>  
+ [<span data-ttu-id="ad6fc-140">延遲模式</span><span class="sxs-lookup"><span data-stu-id="ad6fc-140">Latency Modes</span></span>](../../../docs/standard/garbage-collection/latency.md)  
+ [<span data-ttu-id="ad6fc-141">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="ad6fc-141">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

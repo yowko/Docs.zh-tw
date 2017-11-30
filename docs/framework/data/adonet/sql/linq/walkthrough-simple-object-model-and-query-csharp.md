@@ -1,146 +1,149 @@
 ---
-title: "逐步解說：簡單的物件模型和查詢 (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "逐步解說：簡單的物件模型和查詢 (C#)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d082b7d53330bf755f9f4322ae24d8ad3dc0ac7a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 逐步解說：簡單的物件模型和查詢 (C#)
-這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。  接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
+# <a name="walkthrough-simple-object-model-and-query-c"></a><span data-ttu-id="244b9-102">逐步解說：簡單的物件模型和查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="244b9-102">Walkthrough: Simple Object Model and Query (C#)</span></span>
+<span data-ttu-id="244b9-103">這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。</span><span class="sxs-lookup"><span data-stu-id="244b9-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario with minimal complexities.</span></span> <span data-ttu-id="244b9-104">您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。</span><span class="sxs-lookup"><span data-stu-id="244b9-104">You will create an entity class that models the Customers table in the sample Northwind database.</span></span> <span data-ttu-id="244b9-105">接著，您會建立簡單查詢，以便列出位於倫敦的客戶。</span><span class="sxs-lookup"><span data-stu-id="244b9-105">You will then create a simple query to list customers who are located in London.</span></span>  
   
- 這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。  一般來說，您會使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來建立物件模型。  
+ <span data-ttu-id="244b9-106">這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。</span><span class="sxs-lookup"><span data-stu-id="244b9-106">This walkthrough is code-oriented by design to help show [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] concepts.</span></span> <span data-ttu-id="244b9-107">一般來說，您會使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來建立物件模型。</span><span class="sxs-lookup"><span data-stu-id="244b9-107">Normally speaking, you would use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to create your object model.</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- 本逐步解說的內容是依據 Visual C\# 開發設定所撰寫的。  
+ <span data-ttu-id="244b9-108">本逐步解說的內容是依據 Visual C# 開發設定所撰寫的。</span><span class="sxs-lookup"><span data-stu-id="244b9-108">This walkthrough was written by using Visual C# Development Settings.</span></span>  
   
-## 必要條件  
+## <a name="prerequisites"></a><span data-ttu-id="244b9-109">必要條件</span><span class="sxs-lookup"><span data-stu-id="244b9-109">Prerequisites</span></span>  
   
--   本逐步解說會使用專用資料夾 \("c:\\linqtest5"\) 來保存檔案。  請先建立這個資料夾，再開始逐步解說。  
+-   <span data-ttu-id="244b9-110">本逐步解說會使用專用資料夾 ("c:\linqtest5") 來保存檔案。</span><span class="sxs-lookup"><span data-stu-id="244b9-110">This walkthrough uses a dedicated folder ("c:\linqtest5") to hold files.</span></span> <span data-ttu-id="244b9-111">請先建立這個資料夾，再開始逐步解說。</span><span class="sxs-lookup"><span data-stu-id="244b9-111">Create this folder before you begin the walkthrough.</span></span>  
   
--   這個逐步解說需要使用 Northwind 範例資料庫。  如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。  如需相關指示，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  下載此資料庫之後，請將檔案複製到 c:\\linqtest5 資料夾。  
+-   <span data-ttu-id="244b9-112">這個逐步解說需要使用 Northwind 範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="244b9-112">This walkthrough requires the Northwind sample database.</span></span> <span data-ttu-id="244b9-113">如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。</span><span class="sxs-lookup"><span data-stu-id="244b9-113">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="244b9-114">如需指示，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。</span><span class="sxs-lookup"><span data-stu-id="244b9-114">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="244b9-115">下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。</span><span class="sxs-lookup"><span data-stu-id="244b9-115">After you have downloaded the database, copy the file to the c:\linqtest5 folder.</span></span>  
   
-## 概觀  
- 此逐步解說包含六個主要工作：  
+## <a name="overview"></a><span data-ttu-id="244b9-116">概觀</span><span class="sxs-lookup"><span data-stu-id="244b9-116">Overview</span></span>  
+ <span data-ttu-id="244b9-117">此逐步解說包含六個主要工作：</span><span class="sxs-lookup"><span data-stu-id="244b9-117">This walkthrough consists of six main tasks:</span></span>  
   
--   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中建立 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案。  
+-   <span data-ttu-id="244b9-118">在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中建立 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案。</span><span class="sxs-lookup"><span data-stu-id="244b9-118">Creating a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span></span>  
   
--   將類別對應至資料庫資料表。  
+-   <span data-ttu-id="244b9-119">將類別對應至資料庫資料表。</span><span class="sxs-lookup"><span data-stu-id="244b9-119">Mapping a class to a database table.</span></span>  
   
--   指定類別的屬性以表示資料庫資料表。  
+-   <span data-ttu-id="244b9-120">指定類別的屬性以表示資料庫資料表。</span><span class="sxs-lookup"><span data-stu-id="244b9-120">Designating properties on the class to represent database columns.</span></span>  
   
--   指定與 Northwind 資料庫的連接。  
+-   <span data-ttu-id="244b9-121">指定與 Northwind 資料庫的連接。</span><span class="sxs-lookup"><span data-stu-id="244b9-121">Specifying the connection to the Northwind database.</span></span>  
   
--   建立要對資料庫執行的簡單查詢。  
+-   <span data-ttu-id="244b9-122">建立要對資料庫執行的簡單查詢。</span><span class="sxs-lookup"><span data-stu-id="244b9-122">Creating a simple query to run against the database.</span></span>  
   
--   執行查詢並觀察結果。  
+-   <span data-ttu-id="244b9-123">執行查詢並觀察結果。</span><span class="sxs-lookup"><span data-stu-id="244b9-123">Executing the query and observing the results.</span></span>  
   
-## 建立 LINQ to SQL 方案  
- 在第一個工作中，您要建立一個 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案內含必要的參考，以建置並執行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 專案。  
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="244b9-124">建立 LINQ to SQL 方案</span><span class="sxs-lookup"><span data-stu-id="244b9-124">Creating a LINQ to SQL Solution</span></span>  
+ <span data-ttu-id="244b9-125">在第一個工作中，您要建立一個 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案內含必要的參考，以建置並執行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 專案。</span><span class="sxs-lookup"><span data-stu-id="244b9-125">In this first task, you create a [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
   
-#### 若要建立 LINQ to SQL 方案  
+#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="244b9-126">若要建立 LINQ to SQL 方案</span><span class="sxs-lookup"><span data-stu-id="244b9-126">To create a LINQ to SQL solution</span></span>  
   
-1.  指向 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] \[**檔案**\] 功能表上的 \[**新增**\]，然後按一下 \[**專案**\]。  
+1.  <span data-ttu-id="244b9-127">在[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**檔案**功能表上，指向**新增**，然後按一下 **專案**。</span><span class="sxs-lookup"><span data-stu-id="244b9-127">On the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2.  在 \[**新增專案**\] 對話方塊的 \[**專案類型**\] 窗格中，按一下 \[**Visual C\#**\]。  
+2.  <span data-ttu-id="244b9-128">在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual C#**。</span><span class="sxs-lookup"><span data-stu-id="244b9-128">In the **Project types** pane of the **New Project** dialog box, click **Visual C#**.</span></span>  
   
-3.  按一下 \[**範本**\] 窗格中的 \[**主控台應用程式**\]。  
+3.  <span data-ttu-id="244b9-129">按一下 [範本] 窗格中的 [主控台應用程式]。</span><span class="sxs-lookup"><span data-stu-id="244b9-129">In the **Templates** pane, click **Console Application**.</span></span>  
   
-4.  在 \[**名稱**\] 方塊中，輸入 LinqConsoleApp。  
+4.  <span data-ttu-id="244b9-130">在**名稱**方塊中，輸入**LinqConsoleApp**。</span><span class="sxs-lookup"><span data-stu-id="244b9-130">In the **Name** box, type **LinqConsoleApp**.</span></span>  
   
-5.  在 \[**位置**\] 方塊中，確認您要儲存專案檔的位置。  
+5.  <span data-ttu-id="244b9-131">在**位置**方塊中，確認您要儲存專案檔。</span><span class="sxs-lookup"><span data-stu-id="244b9-131">In the **Location** box, verify where you want to store your project files.</span></span>  
   
-6.  按一下 \[**確定**\]。  
+6.  <span data-ttu-id="244b9-132">按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="244b9-132">Click **OK**.</span></span>  
   
-## 加入 LINQ 參考和指示詞  
- 本逐步解說使用的組件，可能在您的專案中預設為不安裝。  如果 System.Data.Linq 並未列為專案中的參考 \(展開 \[**方案總管**\] 中的 \[**參考**\] 節點\)，請按照下列步驟所述將它加入。  
+## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="244b9-133">加入 LINQ 參考和指示詞</span><span class="sxs-lookup"><span data-stu-id="244b9-133">Adding LINQ References and Directives</span></span>  
+ <span data-ttu-id="244b9-134">本逐步解說使用的組件，可能在您的專案中預設為不安裝。</span><span class="sxs-lookup"><span data-stu-id="244b9-134">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="244b9-135">如果 System.Data.Linq 未列為專案中參考 (展開**參考**節點**方案總管 中**)，請將它加入下列步驟所述。</span><span class="sxs-lookup"><span data-stu-id="244b9-135">If System.Data.Linq is not listed as a reference in your project (expand the **References** node in **Solution Explorer**), add it, as explained in the following steps.</span></span>  
   
-#### 若要加入 System.Data.Linq  
+#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="244b9-136">若要加入 System.Data.Linq</span><span class="sxs-lookup"><span data-stu-id="244b9-136">To add System.Data.Linq</span></span>  
   
-1.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下 \[**參考**\]，再按一下 \[**加入參考**\]。  
+1.  <span data-ttu-id="244b9-137">在**方案總管] 中**，以滑鼠右鍵按一下**參考**，然後按一下 [**加入參考**。</span><span class="sxs-lookup"><span data-stu-id="244b9-137">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
   
-2.  按一下 \[**加入參考**\] 對話方塊中的 \[**.NET**\]，然後按一下 System.Data.Linq 組件，再按一下 \[**確定**\]。  
+2.  <span data-ttu-id="244b9-138">在**加入參考**對話方塊中，按一下  **.NET**，按一下 System.Data.Linq 組件，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="244b9-138">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
   
-     組件隨即加入至專案。  
+     <span data-ttu-id="244b9-139">組件隨即加入至專案。</span><span class="sxs-lookup"><span data-stu-id="244b9-139">The assembly is added to the project.</span></span>  
   
-3.  將下列指示詞加在 **Program.cs** 的上方：  
+3.  <span data-ttu-id="244b9-140">在最上方加入下列指示詞**Program.cs**:</span><span class="sxs-lookup"><span data-stu-id="244b9-140">Add the following directives at the top of **Program.cs**:</span></span>  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
-## 將類別對應至資料庫資料表  
- 在這個步驟中，您會建立類別並將它對應至資料庫資料表。  這類類別稱為「*實體類別*」\(Entity Class\)。  請注意，只要加入 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性，即可完成對應。  <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性會指定資料庫中資料表的名稱。  
+## <a name="mapping-a-class-to-a-database-table"></a><span data-ttu-id="244b9-141">將類別對應至資料庫資料表</span><span class="sxs-lookup"><span data-stu-id="244b9-141">Mapping a Class to a Database Table</span></span>  
+ <span data-ttu-id="244b9-142">在這個步驟中，您會建立類別並將它對應至資料庫資料表。</span><span class="sxs-lookup"><span data-stu-id="244b9-142">In this step, you create a class and map it to a database table.</span></span> <span data-ttu-id="244b9-143">這類類別稱為*實體類別*。</span><span class="sxs-lookup"><span data-stu-id="244b9-143">Such a class is termed an *entity class*.</span></span> <span data-ttu-id="244b9-144">請注意，只要加入 <xref:System.Data.Linq.Mapping.TableAttribute> 屬性，即可完成對應。</span><span class="sxs-lookup"><span data-stu-id="244b9-144">Note that the mapping is accomplished by just adding the <xref:System.Data.Linq.Mapping.TableAttribute> attribute.</span></span> <span data-ttu-id="244b9-145"><xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性會指定資料庫中資料表的名稱。</span><span class="sxs-lookup"><span data-stu-id="244b9-145">The <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property specifies the name of the table in the database.</span></span>  
   
-#### 若要建立實體類別並將它對應至資料庫資料表  
+#### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a><span data-ttu-id="244b9-146">若要建立實體類別並將它對應至資料庫資料表</span><span class="sxs-lookup"><span data-stu-id="244b9-146">To create an entity class and map it to a database table</span></span>  
   
--   在 Program.cs 中的 `Program` 類別宣告正上方輸入或貼上下列程式碼：  
+-   <span data-ttu-id="244b9-147">在 Program.cs 中的 `Program` 類別宣告正上方輸入或貼上下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="244b9-147">Type or paste the following code into Program.cs immediately above the `Program` class declaration:</span></span>  
   
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
   
-## 指定類別的屬性以表示資料庫資料行  
- 在這個步驟中，您會完成下列幾項工作：  
+## <a name="designating-properties-on-the-class-to-represent-database-columns"></a><span data-ttu-id="244b9-148">指定類別的屬性以表示資料庫資料行</span><span class="sxs-lookup"><span data-stu-id="244b9-148">Designating Properties on the Class to Represent Database Columns</span></span>  
+ <span data-ttu-id="244b9-149">在這個步驟中，您會完成下列幾項工作：</span><span class="sxs-lookup"><span data-stu-id="244b9-149">In this step, you accomplish several tasks.</span></span>  
   
--   您會使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 \(Attribute\) 指定實體類別的 `CustomerID` 和 `City` 屬性 \(Property\)，以表示資料庫資料表中的資料行。  
+-   <span data-ttu-id="244b9-150">您會使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute) 指定實體類別的 `CustomerID` 和 `City` 屬性 (Property)，以表示資料庫資料表中的資料行。</span><span class="sxs-lookup"><span data-stu-id="244b9-150">You use the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to designate `CustomerID` and `City` properties on the entity class as representing columns in the database table.</span></span>  
   
--   您會指定 `CustomerID` 屬性 \(Property\)，以表示資料庫中的主索引鍵資料行。  
+-   <span data-ttu-id="244b9-151">您會指定 `CustomerID` 屬性 (Property)，以表示資料庫中的主索引鍵資料行。</span><span class="sxs-lookup"><span data-stu-id="244b9-151">You designate the `CustomerID` property as representing a primary key column in the database.</span></span>  
   
--   您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。  然後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以直接儲存和擷取值，而不必使用可能含有商務邏輯的公用存取子。  
+-   <span data-ttu-id="244b9-152">您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。</span><span class="sxs-lookup"><span data-stu-id="244b9-152">You designate `_CustomerID` and `_City` fields for private storage.</span></span> <span data-ttu-id="244b9-153">然後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以直接儲存和擷取值，而不必使用可能含有商務邏輯的公用存取子。</span><span class="sxs-lookup"><span data-stu-id="244b9-153">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can then store and retrieve values directly, instead of using public accessors that might include business logic.</span></span>  
   
-#### 若要表示兩個資料庫資料行的特性  
+#### <a name="to-represent-characteristics-of-two-database-columns"></a><span data-ttu-id="244b9-154">若要表示兩個資料庫資料行的特性</span><span class="sxs-lookup"><span data-stu-id="244b9-154">To represent characteristics of two database columns</span></span>  
   
--   在 Program.cs 中 `Customer` 類別的大括號內輸入或貼上列程式碼：  
+-   <span data-ttu-id="244b9-155">在 Program.cs 中 `Customer` 類別的大括號內輸入或貼上列程式碼：</span><span class="sxs-lookup"><span data-stu-id="244b9-155">Type or paste the following code into Program.cs inside the curly braces for the `Customer` class.</span></span>  
   
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
   
-## 指定與 Northwind 資料庫的連接  
- 在這個步驟中，您會使用 <xref:System.Data.Linq.DataContext> 物件，在程式碼架構的資料結構與資料庫本身間建立連接。  <xref:System.Data.Linq.DataContext> 為主要通道，您可透過該通道擷取資料庫中的物件以及送出變更。  
+## <a name="specifying-the-connection-to-the-northwind-database"></a><span data-ttu-id="244b9-156">指定與 Northwind 資料庫的連接</span><span class="sxs-lookup"><span data-stu-id="244b9-156">Specifying the Connection to the Northwind Database</span></span>  
+ <span data-ttu-id="244b9-157">在這個步驟中，您會使用 <xref:System.Data.Linq.DataContext> 物件，在程式碼架構的資料結構與資料庫本身間建立連接。</span><span class="sxs-lookup"><span data-stu-id="244b9-157">In this step you use a <xref:System.Data.Linq.DataContext> object to establish a connection between your code-based data structures and the database itself.</span></span> <span data-ttu-id="244b9-158"><xref:System.Data.Linq.DataContext> 為主要通道，您可透過該通道擷取資料庫中的物件以及送出變更。</span><span class="sxs-lookup"><span data-stu-id="244b9-158">The <xref:System.Data.Linq.DataContext> is the main channel through which you retrieve objects from the database and submit changes.</span></span>  
   
- 您也可以宣告 `Table<Customer>` 做為邏輯具型別資料表，供您查詢資料庫中的 Customers 資料表。  您會在後面幾個步驟中，建立和執行這些查詢。  
+ <span data-ttu-id="244b9-159">您也可以宣告 `Table<Customer>` 做為邏輯具型別資料表，供您查詢資料庫中的 Customers 資料表。</span><span class="sxs-lookup"><span data-stu-id="244b9-159">You also declare a `Table<Customer>` to act as the logical, typed table for your queries against the Customers table in the database.</span></span> <span data-ttu-id="244b9-160">您會在後面幾個步驟中，建立和執行這些查詢。</span><span class="sxs-lookup"><span data-stu-id="244b9-160">You will create and execute these queries in later steps.</span></span>  
   
-#### 若要指定資料庫連接  
+#### <a name="to-specify-the-database-connection"></a><span data-ttu-id="244b9-161">若要指定資料庫連接</span><span class="sxs-lookup"><span data-stu-id="244b9-161">To specify the database connection</span></span>  
   
--   將下列程式碼輸入或貼到 `Main` 方法中。  
+-   <span data-ttu-id="244b9-162">將下列程式碼輸入或貼到 `Main` 方法中。</span><span class="sxs-lookup"><span data-stu-id="244b9-162">Type or paste the following code into the `Main` method.</span></span>  
   
-     請注意，`northwnd.mdf` 檔案會假設位於 linqtest5 資料夾中。  如需詳細資訊，請參閱本逐步解說稍早的「必要條件」一節。  
+     <span data-ttu-id="244b9-163">請注意，`northwnd.mdf` 檔案會假設位於 linqtest5 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="244b9-163">Note that the `northwnd.mdf` file is assumed to be in the linqtest5 folder.</span></span> <span data-ttu-id="244b9-164">如需詳細資訊，請參閱本逐步解說稍早的「必要條件」一節。</span><span class="sxs-lookup"><span data-stu-id="244b9-164">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
   
      [!code-csharp[DLinqWalk1CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#4)]  
   
-## 建立簡單查詢  
- 在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。  這個步驟中的查詢程式碼只會描述查詢，  而不會實際執行。  這種方法也稱為「*延後執行*」\(Deferred Execution\)。  如需詳細資訊，請參閱 [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)。  
+## <a name="creating-a-simple-query"></a><span data-ttu-id="244b9-165">建立簡單查詢</span><span class="sxs-lookup"><span data-stu-id="244b9-165">Creating a Simple Query</span></span>  
+ <span data-ttu-id="244b9-166">在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。</span><span class="sxs-lookup"><span data-stu-id="244b9-166">In this step, you create a query to find which customers in the database Customers table are located in London.</span></span> <span data-ttu-id="244b9-167">這個步驟中的查詢程式碼只會描述查詢，</span><span class="sxs-lookup"><span data-stu-id="244b9-167">The query code in this step just describes the query.</span></span> <span data-ttu-id="244b9-168">而不會實際執行。</span><span class="sxs-lookup"><span data-stu-id="244b9-168">It does not execute it.</span></span> <span data-ttu-id="244b9-169">這種方法稱為*延後執行*。</span><span class="sxs-lookup"><span data-stu-id="244b9-169">This approach is known as *deferred execution*.</span></span> <span data-ttu-id="244b9-170">如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="244b9-170">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- 此外，您還會產生記錄檔輸出，以顯示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所產生的 SQL 命令。  這項記錄功能 \(其使用 <xref:System.Data.Linq.DataContext.Log%2A>\) 有助於進行偵錯，以及判斷要傳送至資料庫的命令是否正確地表示您的查詢。  
+ <span data-ttu-id="244b9-171">此外，您還會產生記錄檔輸出，以顯示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所產生的 SQL 命令。</span><span class="sxs-lookup"><span data-stu-id="244b9-171">You will also produce a log output to show the SQL commands that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates.</span></span> <span data-ttu-id="244b9-172">這項記錄功能 (其使用 <xref:System.Data.Linq.DataContext.Log%2A>) 有助於進行偵錯，以及判斷要傳送至資料庫的命令是否正確地表示您的查詢。</span><span class="sxs-lookup"><span data-stu-id="244b9-172">This logging feature (which uses <xref:System.Data.Linq.DataContext.Log%2A>) is helpful in debugging, and in determining that the commands being sent to the database accurately represent your query.</span></span>  
   
-#### 建立簡單查詢  
+#### <a name="to-create-a-simple-query"></a><span data-ttu-id="244b9-173">建立簡單查詢</span><span class="sxs-lookup"><span data-stu-id="244b9-173">To create a simple query</span></span>  
   
--   在 `Main` 方法中的 `Table<Customer>` 宣告之後輸入或貼上下列程式碼。  
+-   <span data-ttu-id="244b9-174">在 `Main` 方法中的 `Table<Customer>` 宣告之後輸入或貼上下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="244b9-174">Type or paste the following code into the `Main` method after the `Table<Customer>` declaration.</span></span>  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   
-## 執行查詢  
- 在這個步驟中，您要實際執行這個查詢。  而在需要結果時，才會評估您在前面的步驟中建立的查詢運算式。  當您開始 `foreach` 反覆運算時，會對資料庫執行 SQL 命令，並且將物件具體化。  
+## <a name="executing-the-query"></a><span data-ttu-id="244b9-175">執行查詢</span><span class="sxs-lookup"><span data-stu-id="244b9-175">Executing the Query</span></span>  
+ <span data-ttu-id="244b9-176">在這個步驟中，您要實際執行這個查詢。</span><span class="sxs-lookup"><span data-stu-id="244b9-176">In this step, you actually execute the query.</span></span> <span data-ttu-id="244b9-177">而在需要結果時，才會評估您在前面的步驟中建立的查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="244b9-177">The query expressions you created in the previous steps are not evaluated until the results are needed.</span></span> <span data-ttu-id="244b9-178">當您開始 `foreach` 反覆運算時，會對資料庫執行 SQL 命令，並且將物件具體化。</span><span class="sxs-lookup"><span data-stu-id="244b9-178">When you begin the `foreach` iteration, a SQL command is executed against the database and objects are materialized.</span></span>  
   
-#### 查詢查詢  
+#### <a name="to-execute-the-query"></a><span data-ttu-id="244b9-179">查詢查詢</span><span class="sxs-lookup"><span data-stu-id="244b9-179">To execute the query</span></span>  
   
-1.  在 `Main` 方法的尾端輸入或貼上下列程式碼 \(在查詢描述之後\)。  
+1.  <span data-ttu-id="244b9-180">在 `Main` 方法的尾端輸入或貼上下列程式碼 (在查詢描述之後)。</span><span class="sxs-lookup"><span data-stu-id="244b9-180">Type or paste the following code at the end of the `Main` method (after the query description).</span></span>  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  按 F5，進行應用程式偵錯。  
+2.  <span data-ttu-id="244b9-181">按 F5，進行應用程式偵錯。</span><span class="sxs-lookup"><span data-stu-id="244b9-181">Press F5 to debug the application.</span></span>  
   
     > [!NOTE]
-    >  如果應用程式產生執行階段錯誤，請參閱[從逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md) 的＜疑難排解＞一節。  
+    >  <span data-ttu-id="244b9-182">如果您的應用程式產生執行階段錯誤，請參閱 < 疑難排解 > 一節的[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。</span><span class="sxs-lookup"><span data-stu-id="244b9-182">If your application generates a run-time error, see the Troubleshooting section of [Learning by Walkthroughs](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).</span></span>  
   
-     主控台視窗中的查詢結果應如下所示：  
+     <span data-ttu-id="244b9-183">主控台視窗中的查詢結果應如下所示：</span><span class="sxs-lookup"><span data-stu-id="244b9-183">The query results in the console window should appear as follows:</span></span>  
   
      `ID=AROUT, City=London`  
   
@@ -154,12 +157,12 @@ caps.handback.revision: 3
   
      `ID=SEVES, City=London`  
   
-3.  在主控台視窗中按 Enter 鍵，以關閉應用程式。  
+3.  <span data-ttu-id="244b9-184">在主控台視窗中按 Enter 鍵，以關閉應用程式。</span><span class="sxs-lookup"><span data-stu-id="244b9-184">Press Enter in the console window to close the application.</span></span>  
   
-## 後續步驟  
- [逐步解說：跨關聯性查詢 \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) 主題會從此逐步解說結束的地方繼續。  ＜跨關聯性查詢＞逐步解說會示範 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何跨資料表進行查詢，這類似於關聯式資料庫中的「*聯結*」\(Join\)。  
+## <a name="next-steps"></a><span data-ttu-id="244b9-185">後續步驟</span><span class="sxs-lookup"><span data-stu-id="244b9-185">Next Steps</span></span>  
+ <span data-ttu-id="244b9-186">[逐步解說： 跨關聯性查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主題會繼續本逐步解說結束的位置。</span><span class="sxs-lookup"><span data-stu-id="244b9-186">The [Walkthrough: Querying Across Relationships (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) topic continues where this walkthrough ends.</span></span> <span data-ttu-id="244b9-187">跨關聯性查詢 > 逐步解說將示範如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]跨資料表，類似於查詢*聯結*關聯式資料庫中。</span><span class="sxs-lookup"><span data-stu-id="244b9-187">The Query Across Relationships walkthrough demonstrates how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can query across tables, similar to *joins* in a relational database.</span></span>  
   
- 如果您想執行＜跨關聯性查詢＞逐步解說，請務必儲存您剛在本逐步解說完成的方案，這是必要的條件。  
+ <span data-ttu-id="244b9-188">如果您想執行＜跨關聯性查詢＞逐步解說，請務必儲存您剛在本逐步解說完成的方案，這是必要的條件。</span><span class="sxs-lookup"><span data-stu-id="244b9-188">If you want to do the Query Across Relationships walkthrough, make sure to save the solution for the walkthrough you have just completed, which is a prerequisite.</span></span>  
   
-## 請參閱  
- [從逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a><span data-ttu-id="244b9-189">另請參閱</span><span class="sxs-lookup"><span data-stu-id="244b9-189">See Also</span></span>  
+ [<span data-ttu-id="244b9-190">依逐步解說學習</span><span class="sxs-lookup"><span data-stu-id="244b9-190">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

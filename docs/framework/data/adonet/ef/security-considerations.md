@@ -1,178 +1,177 @@
 ---
-title: "安全性考量 (Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "安全性考量 (Entity Framework)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 107b222d37d62505c021f277a660741b52a9cdbb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 安全性考量 (Entity Framework)
-本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。  您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。  如需詳細資訊，請參閱[安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
+# <a name="security-considerations-entity-framework"></a><span data-ttu-id="cd845-102">安全性考量 (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="cd845-102">Security Considerations (Entity Framework)</span></span>
+<span data-ttu-id="cd845-103">本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。</span><span class="sxs-lookup"><span data-stu-id="cd845-103">This topic describes security considerations that are specific to developing, deploying, and running [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applications.</span></span> <span data-ttu-id="cd845-104">您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。</span><span class="sxs-lookup"><span data-stu-id="cd845-104">You should also follow recommendations for creating secure [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span> <span data-ttu-id="cd845-105">如需詳細資訊，請參閱[安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="cd845-105">For more information, see [Security Overview](../../../../../docs/framework/data/adonet/security-overview.md).</span></span>  
   
-## 一般安全性考量  
- 下列安全性考量適用於使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的所有應用程式。  
+## <a name="general-security-considerations"></a><span data-ttu-id="cd845-106">一般安全性考量</span><span class="sxs-lookup"><span data-stu-id="cd845-106">General Security Considerations</span></span>  
+ <span data-ttu-id="cd845-107">下列安全性考量適用於使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的所有應用程式。</span><span class="sxs-lookup"><span data-stu-id="cd845-107">The following security considerations apply to all applications that use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
-#### 僅使用信任的資料來源提供者。  
- 若要與資料來源通訊，提供者必須進行下列作業：  
+#### <a name="use-only-trusted-data-source-providers"></a><span data-ttu-id="cd845-108">僅使用信任的資料來源提供者。</span><span class="sxs-lookup"><span data-stu-id="cd845-108">Use only trusted data source providers.</span></span>  
+ <span data-ttu-id="cd845-109">若要與資料來源通訊，提供者必須進行下列作業：</span><span class="sxs-lookup"><span data-stu-id="cd845-109">To communicate with the data source, a provider must do the following:</span></span>  
   
--   從 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 接收連接字串 \(Connection String\)。  
+-   <span data-ttu-id="cd845-110">從 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 接收連接字串 (Connection String)。</span><span class="sxs-lookup"><span data-stu-id="cd845-110">Receive the connection string from the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
--   將命令樹轉譯成資料來源的原生 \(Native\) 查詢語言。  
+-   <span data-ttu-id="cd845-111">將命令樹轉譯成資料來源的原生 (Native) 查詢語言。</span><span class="sxs-lookup"><span data-stu-id="cd845-111">Translate the command tree to the data source's native query language.</span></span>  
   
--   組合並傳回結果集。  
+-   <span data-ttu-id="cd845-112">組合並傳回結果集。</span><span class="sxs-lookup"><span data-stu-id="cd845-112">Assemble and return result sets.</span></span>  
   
- 進行登入作業期間，以使用者密碼為基礎的資訊會透過基礎資料來源的網路程式庫傳遞至伺服器。  惡意提供者可能會竊取使用者認證、產生惡意查詢，或竄改結果集。  
+ <span data-ttu-id="cd845-113">進行登入作業期間，以使用者密碼為基礎的資訊會透過基礎資料來源的網路程式庫傳遞至伺服器。</span><span class="sxs-lookup"><span data-stu-id="cd845-113">During the logon operation, information that is based on the user password is passed to the server through the network libraries of the underlying data source.</span></span> <span data-ttu-id="cd845-114">惡意提供者可能會竊取使用者認證、產生惡意查詢，或竄改結果集。</span><span class="sxs-lookup"><span data-stu-id="cd845-114">A malicious provider can steal user credentials, generate malicious queries, or tamper with the result set.</span></span>  
   
-#### 加密您的連接以便保護機密資料。  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會直接處理資料加密 \(Encryption\)。  如果使用者透過公用 \(Public\) 網路存取資料，您的應用程式就應該建立資料來源的加密連接，以便提升安全性。  如需詳細資訊，請參閱資料來源的安全性相關文件。  若為 SQL Server 資料來源，請參閱[加密 SQL Server 的連接](http://go.microsoft.com/fwlink/?LinkId=119544)。  
+#### <a name="encrypt-your-connection-to-protect-sensitive-data"></a><span data-ttu-id="cd845-115">加密您的連接以便保護機密資料。</span><span class="sxs-lookup"><span data-stu-id="cd845-115">Encrypt your connection to protect sensitive data.</span></span>  
+ <span data-ttu-id="cd845-116">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會直接處理資料加密 (Encryption)。</span><span class="sxs-lookup"><span data-stu-id="cd845-116">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] does not directly handle data encryption.</span></span> <span data-ttu-id="cd845-117">如果使用者透過公用 (Public) 網路存取資料，您的應用程式就應該建立資料來源的加密連接，以便提升安全性。</span><span class="sxs-lookup"><span data-stu-id="cd845-117">If users access data over a public network, your application should establish an encrypted connection to the data source to increase security.</span></span> <span data-ttu-id="cd845-118">如需詳細資訊，請參閱資料來源的安全性相關文件。</span><span class="sxs-lookup"><span data-stu-id="cd845-118">For more information, see the security-related documentation for your data source.</span></span> <span data-ttu-id="cd845-119">SQL Server 資料來源，請參閱[加密對 SQL Server 的連線](http://go.microsoft.com/fwlink/?LinkId=119544)。</span><span class="sxs-lookup"><span data-stu-id="cd845-119">For a SQL Server data source, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkId=119544).</span></span>  
   
-#### 保護連接字串的安全。  
- 保護應用程式時的最重要目標之一就是保護資料來源的存取。  如果連接字串未受保護，或者建構方式不當，它就會成為可能的弱點。  如果您以純文字方式儲存連接資訊，或將它保存在記憶體中，就會面臨危害整個系統的風險。  下面是保護連接字串安全的建議方法：  
+#### <a name="secure-the-connection-string"></a><span data-ttu-id="cd845-120">保護連接字串的安全。</span><span class="sxs-lookup"><span data-stu-id="cd845-120">Secure the connection string.</span></span>  
+ <span data-ttu-id="cd845-121">保護應用程式時的最重要目標之一就是保護資料來源的存取。</span><span class="sxs-lookup"><span data-stu-id="cd845-121">Protecting access to your data source is one of the most important goals when securing an application.</span></span> <span data-ttu-id="cd845-122">如果連接字串未受保護，或者建構方式不當，它就會成為可能的弱點。</span><span class="sxs-lookup"><span data-stu-id="cd845-122">A connection string presents a potential vulnerability if it is not secured or if it is improperly constructed.</span></span> <span data-ttu-id="cd845-123">如果您以純文字方式儲存連接資訊，或將它保存在記憶體中，就會面臨危害整個系統的風險。</span><span class="sxs-lookup"><span data-stu-id="cd845-123">When you store connection information in plain text or persist it in memory, you risk compromising your entire system.</span></span> <span data-ttu-id="cd845-124">下面是保護連接字串安全的建議方法：</span><span class="sxs-lookup"><span data-stu-id="cd845-124">The following are the recommended methods for securing connection strings:</span></span>  
   
--   使用 Windows 驗證搭配 SQL Server 資料來源。  
+-   <span data-ttu-id="cd845-125">使用 Windows 驗證搭配 SQL Server 資料來源。</span><span class="sxs-lookup"><span data-stu-id="cd845-125">Use Windows Authentication with a SQL Server data source.</span></span>  
   
-     當您使用 Windows 驗證來連接至 SQL Server 資料來源時，連接字串不會包含登入和密碼資訊。  
+     <span data-ttu-id="cd845-126">當您使用 Windows 驗證來連接至 SQL Server 資料來源時，連接字串不會包含登入和密碼資訊。</span><span class="sxs-lookup"><span data-stu-id="cd845-126">When you use Windows Authentication to connect to a SQL Server data source, the connection string does not contain logon and password information.</span></span>  
   
--   使用受保護的組態來加密組態檔區段。  
+-   <span data-ttu-id="cd845-127">使用受保護的組態來加密組態檔區段。</span><span class="sxs-lookup"><span data-stu-id="cd845-127">Encrypt configuration file sections using protected configuration.</span></span>  
   
-     ASP.NET 提供了一項稱為受保護組態的功能，可讓您加密組態檔中的機密資訊。  雖然主要是針對 ASP.NET 所設計，不過您也可以使用受保護的組態來加密 Windows 應用程式中組態檔的區段。  如需全新受保護組態功能的詳細描述，請參閱[Encrypting Configuration Information Using Protected Configuration](../Topic/Encrypting%20Configuration%20Information%20Using%20Protected%20Configuration.md)。  
+     <span data-ttu-id="cd845-128">ASP.NET 提供了一項稱為受保護組態的功能，可讓您加密組態檔中的機密資訊。</span><span class="sxs-lookup"><span data-stu-id="cd845-128">ASP.NET provides a feature called protected configuration that enables you to encrypt sensitive information in a configuration file.</span></span> <span data-ttu-id="cd845-129">雖然主要是針對 ASP.NET 所設計，不過您也可以使用受保護的組態來加密 Windows 應用程式中組態檔的區段。</span><span class="sxs-lookup"><span data-stu-id="cd845-129">Although primarily designed for ASP.NET, you can also use protected configuration to encrypt sections of configuration files in Windows applications.</span></span> <span data-ttu-id="cd845-130">新的受保護的組態功能的詳細說明，請參閱[加密組態資訊使用受保護的組態](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。</span><span class="sxs-lookup"><span data-stu-id="cd845-130">For a detailed description of the new protected configuration capabilities, see [Encrypting Configuration Information Using Protected Configuration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).</span></span>  
   
--   將連接字串儲存在受保護的組態檔中。  
+-   <span data-ttu-id="cd845-131">將連接字串儲存在受保護的組態檔中。</span><span class="sxs-lookup"><span data-stu-id="cd845-131">Store connection strings in secured configuration files.</span></span>  
   
-     請勿將連接字串內嵌在原始程式碼中。  您可以將連接字串儲存在組態檔中，如此就不需要將它們內嵌在應用程式的程式碼中。  根據預設，Entity Data Model 精靈會將連接字串儲存在應用程式組態檔中。  您必須保護這個檔案的安全，避免未經授權的存取。  
+     <span data-ttu-id="cd845-132">請勿將連接字串內嵌在原始程式碼中。</span><span class="sxs-lookup"><span data-stu-id="cd845-132">You should never embed connection strings in your source code.</span></span> <span data-ttu-id="cd845-133">您可以將連接字串儲存在組態檔中，如此就不需要將它們內嵌在應用程式的程式碼中。</span><span class="sxs-lookup"><span data-stu-id="cd845-133">You can store connection strings in configuration files, which eliminates the need to embed them in your application's code.</span></span> <span data-ttu-id="cd845-134">根據預設，Entity Data Model 精靈會將連接字串儲存在應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="cd845-134">By default, the Entity Data Model Wizard stores connection strings in the application configuration file.</span></span> <span data-ttu-id="cd845-135">您必須保護這個檔案的安全，避免未經授權的存取。</span><span class="sxs-lookup"><span data-stu-id="cd845-135">You must secure this file to prevent unauthorized access.</span></span>  
   
--   以動態方式建立連接時使用連接字串產生器 \(Builder\)。  
+-   <span data-ttu-id="cd845-136">以動態方式建立連接時使用連接字串產生器 (Builder)。</span><span class="sxs-lookup"><span data-stu-id="cd845-136">Use connection string builders when dynamically creating connections.</span></span>  
   
-     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 \(Class\)。  這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。  如需詳細資訊，請參閱[HOW TO：建立 EntityConnection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  此外，您可以使用適當的字串產生器類別，建構作為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 連接字串之一部分的資料來源連接字串。  如需 ADO.NET 提供者之連接字串產生器的詳細資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+     <span data-ttu-id="cd845-137">如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。</span><span class="sxs-lookup"><span data-stu-id="cd845-137">If you must construct connection strings at runtime, use the <xref:System.Data.EntityClient.EntityConnectionStringBuilder> class.</span></span> <span data-ttu-id="cd845-138">這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="cd845-138">This string builder class helps prevent connection string injection attacks by validating and escaping invalid input information.</span></span> <span data-ttu-id="cd845-139">如需詳細資訊，請參閱[如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。</span><span class="sxs-lookup"><span data-stu-id="cd845-139">For more information, see [How to: Build an EntityConnection Connection String](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).</span></span> <span data-ttu-id="cd845-140">也使用適當的字串產生器類別來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。</span><span class="sxs-lookup"><span data-stu-id="cd845-140">Also use the appropriate string builder class to construct the data source connection string that is part of the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] connection string.</span></span> <span data-ttu-id="cd845-141">ADO.NET 提供者的連接字串產生器的相關資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。</span><span class="sxs-lookup"><span data-stu-id="cd845-141">For information about connection string builders for ADO.NET providers, see [Connection String Builders](../../../../../docs/framework/data/adonet/connection-string-builders.md).</span></span>  
   
- 如需詳細資訊，請參閱[保護連接資訊](../../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+ <span data-ttu-id="cd845-142">如需詳細資訊，請參閱[保護連線資訊](../../../../../docs/framework/data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="cd845-142">For more information, see [Protecting Connection Information](../../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
-#### 請勿將 EntityConnection 公開 \(Expose\) 給未受信任的使用者。  
- <xref:System.Data.EntityClient.EntityConnection> 物件會公開基礎連接的連接字串。  擁有 <xref:System.Data.EntityClient.EntityConnection> 物件存取權的使用者也可以變更基礎連接的 <xref:System.Data.ConnectionState>。  <xref:System.Data.EntityClient.EntityConnection> 類別不具備執行緒安全。  
+#### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a><span data-ttu-id="cd845-143">請勿將 EntityConnection 公開 (Expose) 給未受信任的使用者。</span><span class="sxs-lookup"><span data-stu-id="cd845-143">Do not expose an EntityConnection to untrusted users.</span></span>  
+ <span data-ttu-id="cd845-144"><xref:System.Data.EntityClient.EntityConnection> 物件會公開基礎連接的連接字串。</span><span class="sxs-lookup"><span data-stu-id="cd845-144">An <xref:System.Data.EntityClient.EntityConnection> object exposes the connection string of the underlying connection.</span></span> <span data-ttu-id="cd845-145">擁有 <xref:System.Data.EntityClient.EntityConnection> 物件存取權的使用者也可以變更基礎連接的 <xref:System.Data.ConnectionState>。</span><span class="sxs-lookup"><span data-stu-id="cd845-145">A user with access to an <xref:System.Data.EntityClient.EntityConnection> object can also change the <xref:System.Data.ConnectionState> of the underlying connection.</span></span> <span data-ttu-id="cd845-146"><xref:System.Data.EntityClient.EntityConnection> 類別不具備執行緒安全。</span><span class="sxs-lookup"><span data-stu-id="cd845-146">The <xref:System.Data.EntityClient.EntityConnection> class is not thread safe.</span></span>  
   
-#### 請勿在安全性內容外部傳遞連接。  
- 已經建立連接之後，您就不得在安全性內容外部傳遞連接。  例如，某個具有開啟連接之權限的執行緒不應該將連接儲存在全域位置中。  如果可以在全域位置中使用此連接，則其他惡意執行緒可能會在沒有明確授與權限的情況下，使用開啟的連接。  
+#### <a name="do-not-pass-connections-outside-the-security-context"></a><span data-ttu-id="cd845-147">請勿在安全性內容外部傳遞連接。</span><span class="sxs-lookup"><span data-stu-id="cd845-147">Do not pass connections outside the security context.</span></span>  
+ <span data-ttu-id="cd845-148">已經建立連接之後，您就不得在安全性內容外部傳遞連接。</span><span class="sxs-lookup"><span data-stu-id="cd845-148">After a connection has been established, you must not pass it outside the security context.</span></span> <span data-ttu-id="cd845-149">例如，某個具有開啟連接之權限的執行緒不應該將連接儲存在全域位置中。</span><span class="sxs-lookup"><span data-stu-id="cd845-149">For example, one thread with permission to open a connection should not store the connection in a global location.</span></span> <span data-ttu-id="cd845-150">如果可以在全域位置中使用此連接，則其他惡意執行緒可能會在沒有明確授與權限的情況下，使用開啟的連接。</span><span class="sxs-lookup"><span data-stu-id="cd845-150">If the connection is available in a global location, then another malicious thread can use the open connection without having that permission explicitly granted to it.</span></span>  
   
-#### 請注意，登入資訊和密碼可能會顯示在記憶體傾印中。  
- 當連接字串提供了資料來源的登入和密碼資訊時，這項資訊就會保留在記憶體中，直到記憶體回收作業回收了這些資源為止。  這樣做可讓人無法判斷密碼字串不再位於記憶體中的時間。  如果應用程式損毀，記憶體傾印檔可能會包含機密安全性資訊，而且執行應用程式的使用者和擁有電腦管理存取權的任何使用者都可以檢視此記憶體傾印檔。  您可以使用 Windows 驗證來連接到 Microsoft SQL Server。  
+#### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a><span data-ttu-id="cd845-151">請注意，登入資訊和密碼可能會顯示在記憶體傾印中。</span><span class="sxs-lookup"><span data-stu-id="cd845-151">Be aware that logon information and passwords may be visible in a memory dump.</span></span>  
+ <span data-ttu-id="cd845-152">當連接字串提供了資料來源的登入和密碼資訊時，這項資訊就會保留在記憶體中，直到記憶體回收作業回收了這些資源為止。</span><span class="sxs-lookup"><span data-stu-id="cd845-152">When data source logon and password information is supplied in the connection string, this information is maintained in memory until garbage collection reclaims the resources.</span></span> <span data-ttu-id="cd845-153">這樣做可讓人無法判斷密碼字串不再位於記憶體中的時間。</span><span class="sxs-lookup"><span data-stu-id="cd845-153">This makes it impossible to determine when a password string is no longer in memory.</span></span> <span data-ttu-id="cd845-154">如果應用程式損毀，記憶體傾印檔可能會包含機密安全性資訊，而且執行應用程式的使用者和擁有電腦管理存取權的任何使用者都可以檢視此記憶體傾印檔。</span><span class="sxs-lookup"><span data-stu-id="cd845-154">If an application crashes, a memory dump file may contain sensitive security information, and the user running the application and any user with administrative access to the computer can view the memory dump file.</span></span> <span data-ttu-id="cd845-155">您可以使用 Windows 驗證來連接到 Microsoft SQL Server。</span><span class="sxs-lookup"><span data-stu-id="cd845-155">Use Windows Authentication for connections to Microsoft SQL Server.</span></span>  
   
-#### 只授與資料來源中的必要權限給使用者。  
- 資料來源管理員應該只授與必要的權限給使用者。  即使 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 不支援修改資料的 DML 陳述式 \(Statement\) \(例如 INSERT、UPDATE 或 DELETE\)，使用者仍然可以存取資料來源的連接。  不過，惡意使用者可能會使用這個連接，以資料來源的原生語言執行 DML 陳述式。  
+#### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a><span data-ttu-id="cd845-156">只授與資料來源中的必要權限給使用者。</span><span class="sxs-lookup"><span data-stu-id="cd845-156">Grant users only the necessary permissions in the data source.</span></span>  
+ <span data-ttu-id="cd845-157">資料來源管理員應該只授與必要的權限給使用者。</span><span class="sxs-lookup"><span data-stu-id="cd845-157">A data source administrator should grant only the necessary permissions to users.</span></span> <span data-ttu-id="cd845-158">即使 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 不支援修改資料的 DML 陳述式 (Statement) (例如 INSERT、UPDATE 或 DELETE)，使用者仍然可以存取資料來源的連接。</span><span class="sxs-lookup"><span data-stu-id="cd845-158">Even though [!INCLUDE[esql](../../../../../includes/esql-md.md)] does not support DML statements that modify data, such as INSERT, UPDATE, or DELETE, users can still access the connection to the data source.</span></span> <span data-ttu-id="cd845-159">不過，惡意使用者可能會使用這個連接，以資料來源的原生語言執行 DML 陳述式。</span><span class="sxs-lookup"><span data-stu-id="cd845-159">A malicious user could use this connection to execute DML statements in the native language of the data source.</span></span>  
   
-#### 使用最低權限來執行應用程式。  
- 當您允許 Managed 應用程式以完全信任的權限執行時，[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 就不會限制應用程式對電腦的存取。  這樣做可能會讓應用程式存在安全性弱點，進而危害整個系統。  若要在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中使用程式碼存取安全性和其他安全性機制，您應該使用部分信任的權限以及讓應用程式正常運作所需的最低權限集合來執行應用程式。  下列程式碼存取權限是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所需的最低權限：  
+#### <a name="run-applications-with-the-minimum-permissions"></a><span data-ttu-id="cd845-160">使用最低權限來執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="cd845-160">Run applications with the minimum permissions.</span></span>  
+ <span data-ttu-id="cd845-161">當您允許 Managed 應用程式以完全信任的權限執行時，[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 就不會限制應用程式對電腦的存取。</span><span class="sxs-lookup"><span data-stu-id="cd845-161">When you allow a managed application to run with full-trust permission, the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] does not limit the application's access to your computer.</span></span> <span data-ttu-id="cd845-162">這樣做可能會讓應用程式存在安全性弱點，進而危害整個系統。</span><span class="sxs-lookup"><span data-stu-id="cd845-162">This may enable a security vulnerability in your application to compromise the entire system.</span></span> <span data-ttu-id="cd845-163">若要在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中使用程式碼存取安全性和其他安全性機制，您應該使用部分信任的權限以及讓應用程式正常運作所需的最低權限集合來執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="cd845-163">To use code access security and other security mechanisms in the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], you should run applications by using partial-trust permissions and with the minimum set of permissions that are needed to enable the application to function.</span></span> <span data-ttu-id="cd845-164">下列程式碼存取權限是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所需的最低權限：</span><span class="sxs-lookup"><span data-stu-id="cd845-164">The following code access permissions are the minimum permissions your [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application needs:</span></span>  
   
--   <xref:System.Security.Permissions.FileIOPermission>：<xref:System.Security.Permissions.FileIOPermissionAccess> \(用以開啟指定的中繼資料檔案\) 或 <xref:System.Security.Permissions.FileIOPermissionAccess> \(用以搜尋中繼資料檔案的目錄\)。  
+-   <span data-ttu-id="cd845-165"><xref:System.Security.Permissions.FileIOPermission>：<xref:System.Security.Permissions.FileIOPermissionAccess.Write> (用以開啟指定的中繼資料檔案) 或 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> (用以搜尋中繼資料檔案的目錄)。</span><span class="sxs-lookup"><span data-stu-id="cd845-165"><xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> to open the specified metadata files or <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> to search a directory for metadata files.</span></span>  
   
--   <xref:System.Security.Permissions.ReflectionPermission>：<xref:System.Security.Permissions.ReflectionPermissionFlag> \(用以支援 LINQ to Entities 查詢\)。  
+-   <span data-ttu-id="cd845-166"><xref:System.Security.Permissions.ReflectionPermission>：<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (用以支援 LINQ to Entities 查詢)。</span><span class="sxs-lookup"><span data-stu-id="cd845-166"><xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> to support LINQ to Entities queries.</span></span>  
   
--   <xref:System.Transactions.DistributedTransactionPermission>：<xref:System.Security.Permissions.PermissionState> \(用以在 <xref:System.Transactions> <xref:System.Transactions.Transaction> 中登記\)。  
+-   <span data-ttu-id="cd845-167"><xref:System.Transactions.DistributedTransactionPermission>：<xref:System.Security.Permissions.PermissionState.Unrestricted> (用以在 <xref:System.Transactions><xref:System.Transactions.Transaction> 中登記)。</span><span class="sxs-lookup"><span data-stu-id="cd845-167"><xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> to enlist in a <xref:System.Transactions><xref:System.Transactions.Transaction>.</span></span>  
   
--   <xref:System.Security.Permissions.SecurityPermission>：<xref:System.Security.Permissions.SecurityPermissionFlag> \(用以使用 <xref:System.Runtime.Serialization.ISerializable> 介面來序列化例外狀況 \(Exception\)\)。  
+-   <span data-ttu-id="cd845-168"><xref:System.Security.Permissions.SecurityPermission>：<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (用以使用 <xref:System.Runtime.Serialization.ISerializable> 介面來序列化例外狀況 (Exception))。</span><span class="sxs-lookup"><span data-stu-id="cd845-168"><xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> to serialize exceptions by using the <xref:System.Runtime.Serialization.ISerializable> interface.</span></span>  
   
--   開啟資料庫連接和針對資料庫執行命令的權限，例如 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 資料庫的 <xref:System.Data.SqlClient.SqlClientPermission>。  
+-   <span data-ttu-id="cd845-169">開啟資料庫連接及執行命令，針對資料庫中，例如權限<xref:System.Data.SqlClient.SqlClientPermission>如[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]資料庫。</span><span class="sxs-lookup"><span data-stu-id="cd845-169">Permission to open a database connection and execute commands against the database, such as <xref:System.Data.SqlClient.SqlClientPermission> for a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database.</span></span>  
   
- 如需詳細資訊，請參閱[程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
+ <span data-ttu-id="cd845-170">如需詳細資訊，請參閱 [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。</span><span class="sxs-lookup"><span data-stu-id="cd845-170">For more information, see [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).</span></span>  
   
-#### 請勿安裝未受信任的應用程式。  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會強制執行任何安全性權限，而且將會以同處理序方式叫用 \(Invoke\) 使用者提供的資料物件程式碼，不論它是否受信任都一樣。  請確定資料存放區和應用程式都會執行用戶端的驗證與授權。  
+#### <a name="do-not-install-untrusted-applications"></a><span data-ttu-id="cd845-171">請勿安裝未受信任的應用程式。</span><span class="sxs-lookup"><span data-stu-id="cd845-171">Do not install untrusted applications.</span></span>  
+ <span data-ttu-id="cd845-172">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會強制執行任何安全性權限，而且將會以同處理序方式叫用 (Invoke) 使用者提供的資料物件程式碼，不論它是否受信任都一樣。</span><span class="sxs-lookup"><span data-stu-id="cd845-172">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] does not enforce any security permissions and will invoke any user-supplied data object code in process regardless of whether it is trusted or not.</span></span> <span data-ttu-id="cd845-173">請確定資料存放區和應用程式都會執行用戶端的驗證與授權。</span><span class="sxs-lookup"><span data-stu-id="cd845-173">Ensure that authentication and authorization of the client is performed by the data store and by your application.</span></span>  
   
-#### 限制所有組態檔的存取權。  
- 管理員必須限制指定應用程式組態之所有檔案的寫入存取權，包括 enterprisesec.config、security.config、machine.conf 和應用程式組態檔 \<*application*\>.exe.config。  
+#### <a name="restrict-access-to-all-configuration-files"></a><span data-ttu-id="cd845-174">限制所有組態檔的存取權。</span><span class="sxs-lookup"><span data-stu-id="cd845-174">Restrict access to all configuration files.</span></span>  
+ <span data-ttu-id="cd845-175">系統管理員必須限制對指定的應用程式，包括 enterprisesec.config、 security.config、 machine.conf 組態的所有檔案和應用程式組態檔的寫入存取\<*應用程式*>.exe.config。</span><span class="sxs-lookup"><span data-stu-id="cd845-175">An administrator must restrict write access to all files that specify configuration for an application, including to enterprisesec.config, security.config, machine.conf, and the application configuration file \<*application*>.exe.config.</span></span>  
   
- 提供者非變異名稱可在 app.config 中修改。  用戶端應用程式必須負責使用強式名稱 \(Strong Name\) 透過標準提供者 Factory 模型存取基礎提供者。  
+ <span data-ttu-id="cd845-176">提供者非變異名稱可在 app.config 中修改。用戶端應用程式必須負責使用強式名稱 (Strong Name) 透過標準提供者 Factory 模型存取基礎提供者。</span><span class="sxs-lookup"><span data-stu-id="cd845-176">The provider invariant name is modifiable in the app.config. The client application must take responsibility for accessing the underlying provider through the standard provider factory model by using a strong name.</span></span>  
   
-#### 限制模型和對應檔的權限。  
- 管理員必須將模型和對應檔 \(.edmx、.csdl、.ssdl 和 .msl\) 的寫入存取權限制為只有修改模型或對應的使用者。  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]只需要在執行階段擁有這些檔案的讀取存取權限。  管理員也應該限制 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具所產生之物件層和預先編譯檢視原始程式碼檔的存取權。  
+#### <a name="restrict-permissions-to-the-model-and-mapping-files"></a><span data-ttu-id="cd845-177">限制模型和對應檔的權限。</span><span class="sxs-lookup"><span data-stu-id="cd845-177">Restrict permissions to the model and mapping files.</span></span>  
+ <span data-ttu-id="cd845-178">管理員必須將模型和對應檔 (.edmx、.csdl、.ssdl 和 .msl) 的寫入存取權限制為只有修改模型或對應的使用者。</span><span class="sxs-lookup"><span data-stu-id="cd845-178">An administrator must restrict write access to the model and mapping files (.edmx, .csdl, .ssdl, and .msl) to only users who modify the model or mappings.</span></span> <span data-ttu-id="cd845-179">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]只在執行階段需要這些檔案的讀取權限。</span><span class="sxs-lookup"><span data-stu-id="cd845-179">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] only requires read access to these files at run time.</span></span> <span data-ttu-id="cd845-180">管理員也應該限制 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具所產生之物件層和預先編譯檢視原始程式碼檔的存取權。</span><span class="sxs-lookup"><span data-stu-id="cd845-180">An administrator should also restrict access to object layer and pre-compiled view source code files that are generated by the [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] tools.</span></span>  
   
-## 查詢的安全性考量  
- 查詢概念模型時適用下列安全性考量。  這些考量適用於使用 EntityClient 的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢以及使用 LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)] 的物件，並查詢產生器方法。  
+## <a name="security-considerations-for-queries"></a><span data-ttu-id="cd845-181">查詢的安全性考量</span><span class="sxs-lookup"><span data-stu-id="cd845-181">Security Considerations for Queries</span></span>  
+ <span data-ttu-id="cd845-182">查詢概念模型時適用下列安全性考量。</span><span class="sxs-lookup"><span data-stu-id="cd845-182">The following security considerations apply when querying a conceptual model.</span></span> <span data-ttu-id="cd845-183">這些考量適用於使用 EntityClient 的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢以及使用 LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)] 的物件，並查詢產生器方法。</span><span class="sxs-lookup"><span data-stu-id="cd845-183">These considerations apply to [!INCLUDE[esql](../../../../../includes/esql-md.md)] queries using EntityClient and to object queries using LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)], and query builder methods.</span></span>  
   
-#### 避免 SQL 插入式攻擊。  
- 應用程式經常會接受外部輸入 \(來自使用者或其他外部代理程式\) 以及根據該項輸入執行動作。  任何直接或間接衍生自使用者或外部代理程式的輸入都可能會具有使用目標語言語法以便執行未授權動作的內容。  當目標語言是 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 等結構化查詢語言 \(SQL\) 時，這種操作方式就稱為 SQL 插入式攻擊。  惡意使用者可能會將命令直接插入查詢中，並且卸除資料庫資料表、導致阻斷服務攻擊，或以其他方式變更正在執行之作業的本質。  
+#### <a name="prevent-sql-injection-attacks"></a><span data-ttu-id="cd845-184">避免 SQL 插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="cd845-184">Prevent SQL injection attacks.</span></span>  
+ <span data-ttu-id="cd845-185">應用程式經常會接受外部輸入 (來自使用者或其他外部代理程式) 以及根據該項輸入執行動作。</span><span class="sxs-lookup"><span data-stu-id="cd845-185">Applications frequently take external input (from a user or another external agent) and perform actions based on that input.</span></span> <span data-ttu-id="cd845-186">任何直接或間接衍生自使用者或外部代理程式的輸入都可能會具有使用目標語言語法以便執行未授權動作的內容。</span><span class="sxs-lookup"><span data-stu-id="cd845-186">Any input that is directly or indirectly derived from the user or an external agent might have content that uses the syntax of the target language in order to perform unauthorized actions.</span></span> <span data-ttu-id="cd845-187">當目標語言是 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 等結構化查詢語言 (SQL) 時，這種操作方式就稱為 SQL 插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="cd845-187">When the target language is a Structured Query Language (SQL), such as [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], this manipulation is known as a SQL injection attack.</span></span> <span data-ttu-id="cd845-188">惡意使用者可能會將命令直接插入查詢中，並且卸除資料庫資料表、導致阻斷服務攻擊，或以其他方式變更正在執行之作業的本質。</span><span class="sxs-lookup"><span data-stu-id="cd845-188">A malicious user can inject commands directly into the query and drop a database table, cause a denial of service, or otherwise change the nature of the operation being performed.</span></span>  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)] 插入式攻擊：  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]<span data-ttu-id="cd845-189"> 插入式攻擊：</span><span class="sxs-lookup"><span data-stu-id="cd845-189"> injection attacks:</span></span>  
   
-     使用者可能會透過提供惡意輸入給查詢述詞 \(Predicate\) 和參數名稱所使用的值，在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中執行 SQL 插入式攻擊。  若要避免 SQL 插入式攻擊的風險，請勿結合使用者輸入與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文字。  
+     <span data-ttu-id="cd845-190">使用者可能會透過提供惡意輸入給查詢述詞 (Predicate) 和參數名稱所使用的值，在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中執行 SQL 插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="cd845-190">SQL injection attacks can be performed in [!INCLUDE[esql](../../../../../includes/esql-md.md)] by supplying malicious input to values that are used in a query predicate and in parameter names.</span></span> <span data-ttu-id="cd845-191">若要避免 SQL 插入式攻擊的風險，請勿結合使用者輸入與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文字。</span><span class="sxs-lookup"><span data-stu-id="cd845-191">To avoid the risk of SQL injection, you should never combine user input with [!INCLUDE[esql](../../../../../includes/esql-md.md)] command text.</span></span>  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 \(Literal\) 的任何位置接受參數。  您應該使用參數化的查詢，而不是將常值從外部代理程式直接插入到查詢中。您也應該考慮使用查詢產生器方法，安全建構 [Entity SQL](http://msdn.microsoft.com/zh-tw/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)]<span data-ttu-id="cd845-192"> 查詢會在可接受常值 (Literal) 的任何位置接受參數。</span><span class="sxs-lookup"><span data-stu-id="cd845-192"> queries accept parameters everywhere that literals are accepted.</span></span> <span data-ttu-id="cd845-193">您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。</span><span class="sxs-lookup"><span data-stu-id="cd845-193">You should use parameterized queries instead of injecting literals from an external agent directly into the query.</span></span> <span data-ttu-id="cd845-194">您也應該考慮使用查詢產生器方法安全地建構[Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0)。</span><span class="sxs-lookup"><span data-stu-id="cd845-194">You should also consider using query builder methods to safely construct [Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).</span></span>  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 插入式攻擊：  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]<span data-ttu-id="cd845-195"> 插入式攻擊：</span><span class="sxs-lookup"><span data-stu-id="cd845-195"> injection attacks:</span></span>  
   
-     雖然可以在 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢不同的是，[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 查詢並非使用字串操作或串連所撰寫，而且它們不會遭受傳統 SQL 插入式攻擊的威脅。  
+     <span data-ttu-id="cd845-196">雖然可以在 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。</span><span class="sxs-lookup"><span data-stu-id="cd845-196">Although query composition is possible in [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], it is performed through the object model API.</span></span> <span data-ttu-id="cd845-197">與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢不同的是，[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 查詢並非使用字串操作或串連所撰寫，而且它們不會遭受傳統 SQL 插入式攻擊的威脅。</span><span class="sxs-lookup"><span data-stu-id="cd845-197">Unlike [!INCLUDE[esql](../../../../../includes/esql-md.md)] queries, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] queries are not composed by using string manipulation or concatenation, and they are not susceptible to traditional SQL injection attacks.</span></span>  
   
-#### 避免非常龐大的結果集。  
- 如果用戶端正在執行耗用資源與結果集大小成正比的作業，非常龐大的結果集可能會導致用戶端系統關閉。  意外龐大的結果集可能會在下列狀況下發生：  
+#### <a name="prevent-very-large-result-sets"></a><span data-ttu-id="cd845-198">避免非常龐大的結果集。</span><span class="sxs-lookup"><span data-stu-id="cd845-198">Prevent very large result sets.</span></span>  
+ <span data-ttu-id="cd845-199">如果用戶端正在執行耗用資源與結果集大小成正比的作業，非常龐大的結果集可能會導致用戶端系統關閉。</span><span class="sxs-lookup"><span data-stu-id="cd845-199">A very large result set could cause the client system to shut down if the client is performing operations that consume resources proportional to the size of the result set.</span></span> <span data-ttu-id="cd845-200">意外龐大的結果集可能會在下列狀況下發生：</span><span class="sxs-lookup"><span data-stu-id="cd845-200">Unexpectedly large result sets can occur under the following conditions:</span></span>  
   
--   在針對大型資料庫而且不包含適當篩選條件的查詢中。  
+-   <span data-ttu-id="cd845-201">在針對大型資料庫而且不包含適當篩選條件的查詢中。</span><span class="sxs-lookup"><span data-stu-id="cd845-201">In queries against a large database that do not include appropriate filter conditions.</span></span>  
   
--   在針對伺服器建立 Cartesian 聯結 \(Join\) 的查詢中。  
+-   <span data-ttu-id="cd845-202">在針對伺服器建立 Cartesian 聯結 (Join) 的查詢中。</span><span class="sxs-lookup"><span data-stu-id="cd845-202">In queries that create Cartesian joins on the server.</span></span>  
   
--   在巢狀 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢中。  
+-   <span data-ttu-id="cd845-203">在巢狀 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢中。</span><span class="sxs-lookup"><span data-stu-id="cd845-203">In nested [!INCLUDE[esql](../../../../../includes/esql-md.md)] queries.</span></span>  
   
- 接受使用者輸入時，您必須確定輸入不會導致結果集變成超過系統能夠處理的大小。  您也可以使用 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 中的 <xref:System.Linq.Queryable.Take%2A> 方法或 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中的 [LIMIT](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) 運算子來限制結果集的大小。  
+ <span data-ttu-id="cd845-204">接受使用者輸入時，您必須確定輸入不會導致結果集變成超過系統能夠處理的大小。</span><span class="sxs-lookup"><span data-stu-id="cd845-204">When accepting user input, you must make sure that the input cannot cause result sets to become larger than what the system can handle.</span></span> <span data-ttu-id="cd845-205">您也可以使用<xref:System.Linq.Queryable.Take%2A>方法中的[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]或[限制](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)中的運算子[!INCLUDE[esql](../../../../../includes/esql-md.md)]限制結果集的大小。</span><span class="sxs-lookup"><span data-stu-id="cd845-205">You can also use the <xref:System.Linq.Queryable.Take%2A> method in [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] or the [LIMIT](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operator in [!INCLUDE[esql](../../../../../includes/esql-md.md)] to limit the size of the result set.</span></span>  
   
-#### 避免在將方法公開至可能未受信任的呼叫端時傳回 IQueryable 結果。  
- 基於下列原因，應避免從公開至可能未受信任之呼叫端的方法傳回 <xref:System.Linq.IQueryable%601> 類型：  
+#### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a><span data-ttu-id="cd845-206">避免在將方法公開至可能未受信任的呼叫端時傳回 IQueryable 結果。</span><span class="sxs-lookup"><span data-stu-id="cd845-206">Avoid Returning IQueryable Results When Exposing Methods to Potentially Untrusted Callers.</span></span>  
+ <span data-ttu-id="cd845-207">基於下列原因，應避免從公開至可能未受信任之呼叫端的方法傳回 <xref:System.Linq.IQueryable%601> 類型：</span><span class="sxs-lookup"><span data-stu-id="cd845-207">Avoid returning <xref:System.Linq.IQueryable%601> types from methods that are exposed to potentially untrusted callers for the following reasons:</span></span>  
   
--   會公開 <xref:System.Linq.IQueryable%601> 類型的查詢消費者可能會針對結果呼叫方法，而該些方法會公開安全資料或增加結果集的大小。  例如，請考慮下列方法簽章：  
+-   <span data-ttu-id="cd845-208">會公開 <xref:System.Linq.IQueryable%601> 類型的查詢消費者可能會針對結果呼叫方法，而該些方法會公開安全資料或增加結果集的大小。</span><span class="sxs-lookup"><span data-stu-id="cd845-208">A consumer of a query that exposes an <xref:System.Linq.IQueryable%601> type could call methods on the result that expose secure data or increase the size of the result set.</span></span> <span data-ttu-id="cd845-209">例如，請考慮下列方法簽章：</span><span class="sxs-lookup"><span data-stu-id="cd845-209">For example, consider the following method signature:</span></span>  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     此查詢的消費者可能會針對傳回的 `IQueryable<Customer>`呼叫 `.Include("Orders")` ，以擷取查詢未打算公開的資料。  將方法的傳回型別變更為 <xref:System.Collections.Generic.IEnumerable%601> 並呼叫會具體化結果的方法 \(例如 `.ToList()`\)，便可以避免發生此情況。  
+     <span data-ttu-id="cd845-210">此查詢的消費者可能會針對傳回的 `.Include("Orders")`呼叫 `IQueryable<Customer>` ，以擷取查詢未打算公開的資料。</span><span class="sxs-lookup"><span data-stu-id="cd845-210">A consumer of this query could call `.Include("Orders")` on the returned `IQueryable<Customer>` to retrieve data that the query did not intend to expose.</span></span> <span data-ttu-id="cd845-211">將方法的傳回型別變更為 <xref:System.Collections.Generic.IEnumerable%601> 並呼叫會具體化結果的方法 (例如 `.ToList()`)，便可以避免發生此情況。</span><span class="sxs-lookup"><span data-stu-id="cd845-211">This can be avoided by changing the return type of the method to <xref:System.Collections.Generic.IEnumerable%601> and calling a method (such as `.ToList()`) that materializes the results.</span></span>  
   
--   因為 <xref:System.Linq.IQueryable%601> 查詢會在反覆查看結果時執行，所以會公開 <xref:System.Linq.IQueryable%601> 型別的查詢消費者可以攔截被擲回的例外狀況。  例外狀況可能包含消費者不適用的資訊。  
+-   <span data-ttu-id="cd845-212">因為 <xref:System.Linq.IQueryable%601> 查詢會在反覆查看結果時執行，所以會公開 <xref:System.Linq.IQueryable%601> 型別的查詢消費者可以攔截被擲回的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="cd845-212">Because <xref:System.Linq.IQueryable%601> queries are executed when the results are iterated over, a consumer of a query that exposes an <xref:System.Linq.IQueryable%601> type could catch exceptions that are thrown.</span></span> <span data-ttu-id="cd845-213">例外狀況可能包含消費者不適用的資訊。</span><span class="sxs-lookup"><span data-stu-id="cd845-213">Exceptions could contain information not intended for the consumer.</span></span>  
   
-## 實體的安全性考量  
- 下列安全性考量會在產生和使用實體類型時適用。  
+## <a name="security-considerations-for-entities"></a><span data-ttu-id="cd845-214">實體的安全性考量</span><span class="sxs-lookup"><span data-stu-id="cd845-214">Security Considerations for Entities</span></span>  
+ <span data-ttu-id="cd845-215">下列安全性考量會在產生和使用實體類型時適用。</span><span class="sxs-lookup"><span data-stu-id="cd845-215">The following security considerations apply when generating and working with entity types.</span></span>  
   
-#### 請勿在應用程式定義域中共用 ObjectContext。  
- 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。  您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。  如需詳細資訊，請參閱[Serializing Objects](http://msdn.microsoft.com/zh-tw/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
+#### <a name="do-not-share-an-objectcontext-across-application-domains"></a><span data-ttu-id="cd845-216">請勿在應用程式定義域中共用 ObjectContext。</span><span class="sxs-lookup"><span data-stu-id="cd845-216">Do not share an ObjectContext across application domains.</span></span>  
+ <span data-ttu-id="cd845-217">與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。</span><span class="sxs-lookup"><span data-stu-id="cd845-217">Sharing an <xref:System.Data.Objects.ObjectContext> with more than one application domain may expose information in the connection string.</span></span> <span data-ttu-id="cd845-218">您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。</span><span class="sxs-lookup"><span data-stu-id="cd845-218">Instead, you should transfer serialized objects or object graphs to the other application domain and then attach those objects to an <xref:System.Data.Objects.ObjectContext> in that application domain.</span></span> <span data-ttu-id="cd845-219">如需詳細資訊，請參閱[序列化物件](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。</span><span class="sxs-lookup"><span data-stu-id="cd845-219">For more information, see [Serializing Objects](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).</span></span>  
   
-#### 避免型別安全 \(Type Safety\) 違規。  
- 如果違反了型別安全，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 便無法保證物件中資料的完整性。  如果您允許未受信任的應用程式使用完全信任的程式碼存取安全性來執行，可能就會發生型別安全違規。  
+#### <a name="prevent-type-safety-violations"></a><span data-ttu-id="cd845-220">避免型別安全 (Type Safety) 違規。</span><span class="sxs-lookup"><span data-stu-id="cd845-220">Prevent type safety violations.</span></span>  
+ <span data-ttu-id="cd845-221">如果違反了型別安全，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 便無法保證物件中資料的完整性。</span><span class="sxs-lookup"><span data-stu-id="cd845-221">If type safety is violated, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cannot guarantee the integrity of data in objects.</span></span> <span data-ttu-id="cd845-222">如果您允許未受信任的應用程式使用完全信任的程式碼存取安全性來執行，可能就會發生型別安全違規。</span><span class="sxs-lookup"><span data-stu-id="cd845-222">Type safety violations could occur if you allow untrusted applications to run with full-trust code access security.</span></span>  
   
-#### 處理例外狀況。  
- 存取 try\-catch 區塊內 <xref:System.Data.Objects.ObjectContext> 的方法和屬性。  攔截例外狀況可避免未處理的例外狀況將 <xref:System.Data.Objects.ObjectStateManager> 中的項目或模型資訊 \(例如資料表名稱\) 公開給應用程式的使用者。  
+#### <a name="handle-exceptions"></a><span data-ttu-id="cd845-223">處理例外狀況。</span><span class="sxs-lookup"><span data-stu-id="cd845-223">Handle exceptions.</span></span>  
+ <span data-ttu-id="cd845-224">存取 try-catch 區塊內 <xref:System.Data.Objects.ObjectContext> 的方法和屬性。</span><span class="sxs-lookup"><span data-stu-id="cd845-224">Access methods and properties of an <xref:System.Data.Objects.ObjectContext> within a try-catch block.</span></span> <span data-ttu-id="cd845-225">攔截例外狀況可避免未處理的例外狀況將 <xref:System.Data.Objects.ObjectStateManager> 中的項目或模型資訊 (例如資料表名稱) 公開給應用程式的使用者。</span><span class="sxs-lookup"><span data-stu-id="cd845-225">Catching exceptions prevents unhandled exceptions from exposing entries in the <xref:System.Data.Objects.ObjectStateManager> or model information (such as table names) to users of your application.</span></span>  
   
-## ASP.NET 應用程式的安全性考量  
- 當您在 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 應用程式中使用路徑時，應該考量下列事項。  
+## <a name="security-considerations-for-aspnet-applications"></a><span data-ttu-id="cd845-226">ASP.NET 應用程式的安全性考量</span><span class="sxs-lookup"><span data-stu-id="cd845-226">Security Considerations for ASP.NET Applications</span></span>  
+ <span data-ttu-id="cd845-227">當您在 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 應用程式中使用路徑時，應該考量下列事項。</span><span class="sxs-lookup"><span data-stu-id="cd845-227">The following should be considered when you work with paths in [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applications.</span></span>  
   
-#### 確認主應用程式 \(Host\) 是否執行路徑檢查。  
- 使用 `|DataDirectory|` \(以垂直線符號括住\) 替代字串時，[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 會確認是否支援已解析的路徑。  例如，不允許在 `DataDirectory` 後面使用 ".."。  裝載 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 的處理序會執行解析 Web 應用程式根目錄運算子 \(`~`\) 的相同檢查。  IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。  您應該了解部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所在之主應用程式的行為。  
+#### <a name="verify-whether-your-host-performs-path-checks"></a><span data-ttu-id="cd845-228">確認主應用程式 (Host) 是否執行路徑檢查。</span><span class="sxs-lookup"><span data-stu-id="cd845-228">Verify whether your host performs path checks.</span></span>  
+ <span data-ttu-id="cd845-229">使用 `|DataDirectory|` (以垂直線符號括住) 替代字串時，[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 會確認是否支援已解析的路徑。</span><span class="sxs-lookup"><span data-stu-id="cd845-229">When the `|DataDirectory|` (enclosed in pipe symbols) substitution string is used, [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] verifies that the resolved path is supported.</span></span> <span data-ttu-id="cd845-230">例如，不允許在 `DataDirectory` 後面使用 ".."。</span><span class="sxs-lookup"><span data-stu-id="cd845-230">For example, ".." is not allowed behind `DataDirectory`.</span></span> <span data-ttu-id="cd845-231">裝載 `~` 的處理序會執行解析 Web 應用程式根目錄運算子 ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]) 的相同檢查。</span><span class="sxs-lookup"><span data-stu-id="cd845-231">That same check for resolving the Web application root operator (`~`) is performed by the process hosting [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].</span></span> <span data-ttu-id="cd845-232">IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。</span><span class="sxs-lookup"><span data-stu-id="cd845-232">IIS performs this check; however, hosts other than IIS may not verify that the resolved path is supported.</span></span> <span data-ttu-id="cd845-233">您應該了解部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所在之主應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="cd845-233">You should know the behavior of the host on which you deploy an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application.</span></span>  
   
-#### 請勿針對已解析的路徑名稱提出任何假設。  
- 雖然根目錄運算子 \(`~`\) 和 `DataDirectory` 替代字串解析而成的值應該在應用程式的執行階段期間維持不變，但是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會限制主應用程式修改這些值。  
+#### <a name="do-not-make-assumptions-about-resolved-path-names"></a><span data-ttu-id="cd845-234">請勿針對已解析的路徑名稱提出任何假設。</span><span class="sxs-lookup"><span data-stu-id="cd845-234">Do not make assumptions about resolved path names.</span></span>  
+ <span data-ttu-id="cd845-235">雖然根目錄運算子 (`~`) 和 `DataDirectory` 替代字串解析而成的值應該在應用程式的執行階段期間維持不變，但是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會限制主應用程式修改這些值。</span><span class="sxs-lookup"><span data-stu-id="cd845-235">Although the values to which the root operator (`~`) and the `DataDirectory` substitution string resolve should remain constant during the application's runtime, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] does not restrict the host from modifying these values.</span></span>  
   
-#### 在部署之前確認路徑長度。  
- 部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之前，您應該確認根目錄運算子 \(~\) 和 `DataDirectory` 替代字串的值並未超過作業系統中路徑長度的限制。  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者不會確定路徑長度是否在有效限制內。  
+#### <a name="verify-the-path-length-before-deployment"></a><span data-ttu-id="cd845-236">在部署之前確認路徑長度。</span><span class="sxs-lookup"><span data-stu-id="cd845-236">Verify the path length before deployment.</span></span>  
+ <span data-ttu-id="cd845-237">部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之前，您應該確認根目錄運算子 (~) 和 `DataDirectory` 替代字串的值並未超過作業系統中路徑長度的限制。</span><span class="sxs-lookup"><span data-stu-id="cd845-237">Before deploying an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application, you should ensure that the values of the root operator (~) and `DataDirectory` substitution string do not exceed the limits of the path length in the operating system.</span></span> [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]<span data-ttu-id="cd845-238"> 資料提供者不會確定路徑長度是否在有效限制內。</span><span class="sxs-lookup"><span data-stu-id="cd845-238"> data providers do not ensure that the path length is within valid limits.</span></span>  
   
-## ADO.NET 中繼資料的安全性考量  
- 下列安全性考量會在產生和使用模型與對應檔時適用。  
+## <a name="security-considerations-for-adonet-metadata"></a><span data-ttu-id="cd845-239">ADO.NET 中繼資料的安全性考量</span><span class="sxs-lookup"><span data-stu-id="cd845-239">Security Considerations for ADO.NET Metadata</span></span>  
+ <span data-ttu-id="cd845-240">下列安全性考量會在產生和使用模型與對應檔時適用。</span><span class="sxs-lookup"><span data-stu-id="cd845-240">The following security considerations apply when generating and working with model and mapping files.</span></span>  
   
-#### 請勿透過記錄公開機密資訊。  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 中繼資料服務元件不會記錄任何私人資訊。  如果存在由於存取限制而無法傳回的結果，資料庫管理系統和檔案系統應該會傳回零筆結果，而非引發可能包含機密資訊的例外狀況。  
+#### <a name="do-not-expose-sensitive-information-through-logging"></a><span data-ttu-id="cd845-241">請勿透過記錄公開機密資訊。</span><span class="sxs-lookup"><span data-stu-id="cd845-241">Do not expose sensitive information through logging.</span></span>  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]<span data-ttu-id="cd845-242"> 中繼資料服務元件不會記錄任何私人資訊。</span><span class="sxs-lookup"><span data-stu-id="cd845-242"> metadata service components do not log any private information.</span></span> <span data-ttu-id="cd845-243">如果存在由於存取限制而無法傳回的結果，資料庫管理系統和檔案系統應該會傳回零筆結果，而非引發可能包含機密資訊的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="cd845-243">If there are results that cannot be returned because of access restrictions, database management systems and file systems should return zero results instead of raising an exception that could contain sensitive information.</span></span>  
   
-#### 請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
- 應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 \(Instance\)。  您應該改為根據這類來源明確建構並填入工作區 \(Workspace\)。  
+#### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a><span data-ttu-id="cd845-244">請勿接受來自未受信任來源的 MetadataWorkspace 物件。</span><span class="sxs-lookup"><span data-stu-id="cd845-244">Do not accept MetadataWorkspace objects from untrusted sources.</span></span>  
+ <span data-ttu-id="cd845-245">應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。</span><span class="sxs-lookup"><span data-stu-id="cd845-245">Applications should not accept instances of the <xref:System.Data.Metadata.Edm.MetadataWorkspace> class from untrusted sources.</span></span> <span data-ttu-id="cd845-246">您應該改為根據這類來源明確建構並填入工作區 (Workspace)。</span><span class="sxs-lookup"><span data-stu-id="cd845-246">Instead, you should explicitly construct and populate a workspace from such a source.</span></span>  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [部署考量因素](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)   
- [移轉考量因素](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="cd845-247">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd845-247">See Also</span></span>  
+ [<span data-ttu-id="cd845-248">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="cd845-248">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="cd845-249">部署考量</span><span class="sxs-lookup"><span data-stu-id="cd845-249">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [<span data-ttu-id="cd845-250">移轉考量</span><span class="sxs-lookup"><span data-stu-id="cd845-250">Migration Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

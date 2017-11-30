@@ -1,33 +1,32 @@
 ---
-title: "在不同存放區上的 XSLT 轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "在不同存放區上的 XSLT 轉換"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b909b754c1d0d3007e06cd04376413d02cbc2f76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 在不同存放區上的 XSLT 轉換
+# <a name="xslt-transformations-over-different-stores"></a><span data-ttu-id="9f7b8-102">在不同存放區上的 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="9f7b8-102">XSLT Transformations Over Different Stores</span></span>
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。  您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 \(XSLT\)。  如需詳細資訊，請參閱 [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 和 [從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+>  <span data-ttu-id="9f7b8-103">
+          <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-103">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="9f7b8-104">您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-104">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="9f7b8-105">請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[移轉從 XslTransform 類別](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-105">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- ADO.NET 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 類別都提供了統一的程式設計模型以存取資料。  資料同時被表示為 XML 資料 \(以標記分隔的文字\) 和關聯式資料 \(由資料列和資料行組成的資料表\)。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 可將任何資料流的 XML 資料讀取至 XML 文件物件模型 \(DOM\) 節點樹狀結構，在此處，資料可透過程式設計方式加以存取，而 ADO.NET 所提供的方法則可存取及管理 <xref:System.Data.DataSet> 物件內的關聯式資料。  
+ <span data-ttu-id="9f7b8-106">ADO.NET 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 類別都提供了統一的程式設計模型以存取資料。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-106">The ADO.NET and the XML classes in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provide a unified programming model to access data.</span></span> <span data-ttu-id="9f7b8-107">資料同時被表示為 XML 資料 (以標記分隔的文字) 和關聯式資料 (由資料列和資料行組成的資料表)。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-107">That data is represented as both XML data, which is text delimited by tags, and relational data, which is tables consisting of rows and columns.</span></span> <span data-ttu-id="9f7b8-108">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 可將任何資料流的 XML 資料讀取至 XML 文件物件模型 (DOM) 節點樹狀結構，在此處，資料可透過程式設計方式加以存取，而 ADO.NET 所提供的方法則可存取及管理 <xref:System.Data.DataSet> 物件內的關聯式資料。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-108">The XML in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] reads XML data from any data stream into XML Document Object Model (DOM) node trees, where data can be accessed programmatically, while ADO.NET provides the means to access and manipulate relational data within a <xref:System.Data.DataSet> object.</span></span>  
   
- XML DOM 提供在 XML 文件中存取資料，和提供額外的類別，以在 XML 文件中讀取、寫入和巡覽。  <xref:System.Xml> 命名空間支援這些類別，並且將 XML DOM 與 ADO.NET 所提供的資料存取服務統一。  <xref:System.Xml.XmlDataDocument> 可提供資料的關聯式存取。  <xref:System.Xml.XmlDataDocument> 會將 XML 對應至 ADO.NET <xref:System.Data.DataSet> 中的關聯式資料。  任何以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 為基礎的應用程式都可使用 <xref:System.Xml> 命名空間中的類別來存取及管理 <xref:System.Xml.XmlDataDocument> 中的 XML 文件與關聯式資料。  這項實作支援收集和分送資料的 N\-Tier 架構。  如需詳細資訊，請參閱[XML 與關聯式資料和 ADO.NET 互相整合](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)。  
+ <span data-ttu-id="9f7b8-109">XML DOM 提供在 XML 文件中存取資料，和提供額外的類別，以在 XML 文件中讀取、寫入和巡覽。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-109">The XML DOM provides access to data in XML documents and additional classes to read, write, and navigate in XML documents.</span></span> <span data-ttu-id="9f7b8-110"><xref:System.Xml> 命名空間支援這些類別，並且將 XML DOM 與 ADO.NET 所提供的資料存取服務統一。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-110">These classes are supported in the <xref:System.Xml> namespace, which also unifies the XML DOM with the data access services provided by ADO.NET.</span></span> <span data-ttu-id="9f7b8-111"><xref:System.Xml.XmlDataDocument> 可提供資料的關聯式存取。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-111">The <xref:System.Xml.XmlDataDocument> provides relational access to data.</span></span> <span data-ttu-id="9f7b8-112"><xref:System.Xml.XmlDataDocument> 會將 XML 對應至 ADO.NET <xref:System.Data.DataSet> 中的關聯式資料。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-112">The <xref:System.Xml.XmlDataDocument> maps XML to relational data in an ADO.NET <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="9f7b8-113">任何以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 為基礎的應用程式都可使用 <xref:System.Xml> 命名空間中的類別來存取及管理 <xref:System.Xml.XmlDataDocument> 中的 XML 文件與關聯式資料。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-113">Any [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-based application can use the classes in the <xref:System.Xml> namespace to access and manipulate both XML documents and relational data in the <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="9f7b8-114">這項實作支援收集和分送資料的 N-Tier 架構。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-114">This implementation supports n-tiered architectures for collecting and distributing data.</span></span> <span data-ttu-id="9f7b8-115">如需詳細資訊，請參閱[XML 與關聯式資料和 ado.net 互相整合](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)。</span><span class="sxs-lookup"><span data-stu-id="9f7b8-115">For more information, see [XML Integration with Relational Data and ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).</span></span>  
   
-## 請參閱  
- [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="9f7b8-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9f7b8-116">See Also</span></span>  
+ [<span data-ttu-id="9f7b8-117">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="9f7b8-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

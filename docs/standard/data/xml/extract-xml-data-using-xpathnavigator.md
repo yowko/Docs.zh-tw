@@ -1,36 +1,37 @@
 ---
-title: "使用 XPathNavigator 擷取 XML 資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "使用 XPathNavigator 擷取 XML 資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c42539db3750ebc2a4220ef776b89bbabe6aaca3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 XPathNavigator 擷取 XML 資料
-可採用幾種不同方式表示 Microsoft .NET Framework 中的 XML 文件。  包括使用 <xref:System.String>，或使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別。  為便於在 XML 文件的不同表示之間進行切換，<xref:System.Xml.XPath.XPathNavigator> 類別提供了一些方法及屬性，可將 XML 當做 <xref:System.String>、<xref:System.Xml.XmlReader> 物件或 <xref:System.Xml.XmlWriter> 物件擷取。  
+# <a name="extract-xml-data-using-xpathnavigator"></a><span data-ttu-id="b70e5-102">使用 XPathNavigator 擷取 XML 資料</span><span class="sxs-lookup"><span data-stu-id="b70e5-102">Extract XML Data Using XPathNavigator</span></span>
+<span data-ttu-id="b70e5-103">可採用幾種不同方式表示 Microsoft .NET Framework 中的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="b70e5-103">There are several different ways to represent an XML document in the Microsoft .NET Framework.</span></span> <span data-ttu-id="b70e5-104">包括使用 <xref:System.String>，或使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別。</span><span class="sxs-lookup"><span data-stu-id="b70e5-104">This includes using a <xref:System.String>, or by using the <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, or <xref:System.Xml.XPath.XPathDocument> classes.</span></span> <span data-ttu-id="b70e5-105">為便於在 XML 文件的不同表示之間進行切換，<xref:System.Xml.XPath.XPathNavigator> 類別提供了一些方法及屬性，可將 XML 當做 <xref:System.String>、<xref:System.Xml.XmlReader> 物件或 <xref:System.Xml.XmlWriter> 物件擷取。</span><span class="sxs-lookup"><span data-stu-id="b70e5-105">To facilitate moving between these different representations of an XML document, the <xref:System.Xml.XPath.XPathNavigator> class provides a number of methods and properties for extracting the XML as a <xref:System.String>, <xref:System.Xml.XmlReader> object or <xref:System.Xml.XmlWriter> object.</span></span>  
   
-## 將 XPathNavigator 轉換為字串  
- 可使用 <xref:System.Xml.XPath.XPathNavigator> 類別的 <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 屬性，取得整個 XML 文件的標記，或僅取得單一節點及其子節點的標記。  
+## <a name="convert-an-xpathnavigator-to-a-string"></a><span data-ttu-id="b70e5-106">將 XPathNavigator 轉換為字串</span><span class="sxs-lookup"><span data-stu-id="b70e5-106">Convert an XPathNavigator to a String</span></span>  
+ <span data-ttu-id="b70e5-107">可使用 <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 屬性，取得整個 XML 文件的標記，或僅取得單一節點及其子節點的標記。</span><span class="sxs-lookup"><span data-stu-id="b70e5-107">The <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> property of the <xref:System.Xml.XPath.XPathNavigator> class is used to get the markup of the entire XML document or just the markup of a single node and its child nodes.</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 屬性僅取得節點之子節點的標記。  
+>  <span data-ttu-id="b70e5-108"><xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> 屬性僅取得節點之子節點的標記。</span><span class="sxs-lookup"><span data-stu-id="b70e5-108">The <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> property gets the markup of just the child nodes of a node.</span></span>  
   
- 下列程式碼範例顯示如何將 <xref:System.Xml.XPath.XPathNavigator> 物件中包含的整個 XML 文件與單一節點及其子節點，儲存為 <xref:System.String>。  
+ <span data-ttu-id="b70e5-109">下列程式碼範例顯示如何將 <xref:System.Xml.XPath.XPathNavigator> 物件中包含的整個 XML 文件與單一節點及其子節點，儲存為 <xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="b70e5-109">The following code example shows how to save an entire XML document contained in an <xref:System.Xml.XPath.XPathNavigator> object as a <xref:System.String>, as well as a single node and its child nodes.</span></span>  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("input.xml")  
@@ -56,14 +57,14 @@ navigator.MoveToChild(XPathNodeType.Element);
 string root = navigator.OuterXml;  
 ```  
   
-## 將 XPathNavigator 轉換為 XmlReader  
- 使用 <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> 方法，將 XML 文件或僅單一節點及其子節點的全部內容，以資料流方式傳送至 <xref:System.Xml.XmlReader> 物件。  
+## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a><span data-ttu-id="b70e5-110">將 XPathNavigator 轉換為 XmlReader</span><span class="sxs-lookup"><span data-stu-id="b70e5-110">Convert an XPathNavigator to an XmlReader</span></span>  
+ <span data-ttu-id="b70e5-111">使用 <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> 方法，將 XML 文件或僅單一節點及其子節點的全部內容，以資料流方式傳送至 <xref:System.Xml.XmlReader> 物件。</span><span class="sxs-lookup"><span data-stu-id="b70e5-111">The <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> method is used to stream the entire contents of an XML document or just a single node and its child nodes to an <xref:System.Xml.XmlReader> object.</span></span>  
   
- 以目前節點及其子節點建立 <xref:System.Xml.XmlReader> 物件時，會將 <xref:System.Xml.XmlReader> 物件的 <xref:System.Xml.XmlReader.ReadState%2A> 屬性設為 <xref:System.Xml.ReadState>。  當初次呼叫 <xref:System.Xml.XmlReader> 物件的 <xref:System.Xml.XmlReader.Read%2A> 方法時，<xref:System.Xml.XmlReader> 會移至 <xref:System.Xml.XPath.XPathNavigator> 的目前節點。  新的 <xref:System.Xml.XmlReader> 物件在到達 XML 樹狀目錄的尾端之前，會持續讀取。  此時，<xref:System.Xml.XmlReader.Read%2A> 方法會傳回 `false`，且 <xref:System.Xml.XmlReader> 物件的 <xref:System.Xml.XmlReader.ReadState%2A> 屬性會設為 <xref:System.Xml.ReadState>。  
+ <span data-ttu-id="b70e5-112">以目前節點及其子節點建立 <xref:System.Xml.XmlReader> 物件時，會將 <xref:System.Xml.XmlReader> 物件的 <xref:System.Xml.XmlReader.ReadState%2A> 屬性設為 <xref:System.Xml.ReadState.Initial>。</span><span class="sxs-lookup"><span data-stu-id="b70e5-112">When the <xref:System.Xml.XmlReader> object is created with the current node and its child nodes, the <xref:System.Xml.XmlReader> object's <xref:System.Xml.XmlReader.ReadState%2A> property is set to <xref:System.Xml.ReadState.Initial>.</span></span> <span data-ttu-id="b70e5-113">當初次呼叫 <xref:System.Xml.XmlReader> 物件的 <xref:System.Xml.XmlReader.Read%2A> 方法時，<xref:System.Xml.XmlReader> 會移至 <xref:System.Xml.XPath.XPathNavigator> 的目前節點。</span><span class="sxs-lookup"><span data-stu-id="b70e5-113">When the <xref:System.Xml.XmlReader> object's <xref:System.Xml.XmlReader.Read%2A> method is called for the first time, the <xref:System.Xml.XmlReader> is moved to the current node of the <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="b70e5-114">新的 <xref:System.Xml.XmlReader> 物件在到達 XML 樹狀目錄的尾端之前，會持續讀取。</span><span class="sxs-lookup"><span data-stu-id="b70e5-114">The new <xref:System.Xml.XmlReader> object continues to read until the end of the XML tree is reached.</span></span> <span data-ttu-id="b70e5-115">此時，<xref:System.Xml.XmlReader.Read%2A> 方法會傳回 `false`，且 <xref:System.Xml.XmlReader> 物件的 <xref:System.Xml.XmlReader.ReadState%2A> 屬性會設為 <xref:System.Xml.ReadState.EndOfFile>。</span><span class="sxs-lookup"><span data-stu-id="b70e5-115">At this point, the <xref:System.Xml.XmlReader.Read%2A> method returns `false` and the <xref:System.Xml.XmlReader> object's <xref:System.Xml.XmlReader.ReadState%2A> property is set to <xref:System.Xml.ReadState.EndOfFile>.</span></span>  
   
- 建立或移動 <xref:System.Xml.XmlReader> 物件，並不會變更 <xref:System.Xml.XPath.XPathNavigator> 物件的位置。  僅當定位在項目或根節點上時，<xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> 方法才有效。  
+ <span data-ttu-id="b70e5-116">建立或移動 <xref:System.Xml.XPath.XPathNavigator> 物件，並不會變更 <xref:System.Xml.XmlReader> 物件的位置。</span><span class="sxs-lookup"><span data-stu-id="b70e5-116">The <xref:System.Xml.XPath.XPathNavigator> object's position is unchanged by the creation or movement of the <xref:System.Xml.XmlReader> object.</span></span> <span data-ttu-id="b70e5-117">僅當定位在項目或根節點上時，<xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> 方法才有效。</span><span class="sxs-lookup"><span data-stu-id="b70e5-117">The <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> method is only valid when positioned on an element or root node.</span></span>  
   
- 下列範例顯示如何取得包含 <xref:System.Xml.XPath.XPathDocument> 物件中整個 XML 文件與單一節點及其子節點的 <xref:System.Xml.XmlReader> 物件。  
+ <span data-ttu-id="b70e5-118">下列範例顯示如何取得包含 <xref:System.Xml.XmlReader> 物件中整個 XML 文件與單一節點及其子節點的 <xref:System.Xml.XPath.XPathDocument> 物件。</span><span class="sxs-lookup"><span data-stu-id="b70e5-118">The following example shows how to get an <xref:System.Xml.XmlReader> object containing the entire XML document in an <xref:System.Xml.XPath.XPathDocument> object as well as a single node and its child nodes.</span></span>  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -119,16 +120,16 @@ while (book.Read())
 book.Close();  
 ```  
   
- 該範例採用 `books.xml` 檔案做為輸入。  
+ <span data-ttu-id="b70e5-119">該範例採用 `books.xml` 檔案做為輸入。</span><span class="sxs-lookup"><span data-stu-id="b70e5-119">The example takes the `books.xml` file as input.</span></span>  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-## 將 XPathNavigator 轉換為 XmlWriter  
- 使用 <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> 方法，將 XML 文件或僅單一節點及其子節點的全部內容，以資料流方式傳送至 <xref:System.Xml.XmlWriter> 物件。  
+## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a><span data-ttu-id="b70e5-120">將 XPathNavigator 轉換為 XmlWriter</span><span class="sxs-lookup"><span data-stu-id="b70e5-120">Converting an XPathNavigator to an XmlWriter</span></span>  
+ <span data-ttu-id="b70e5-121">使用 <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> 方法，將 XML 文件或僅單一節點及其子節點的全部內容，以資料流方式傳送至 <xref:System.Xml.XmlWriter> 物件。</span><span class="sxs-lookup"><span data-stu-id="b70e5-121">The <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> method is used to stream the entire contents of an XML document or just a single node and its child nodes to an <xref:System.Xml.XmlWriter> object.</span></span>  
   
- 建立 <xref:System.Xml.XmlWriter> 物件，並不會變更 <xref:System.Xml.XPath.XPathNavigator> 物件的位置。  
+ <span data-ttu-id="b70e5-122">建立 <xref:System.Xml.XPath.XPathNavigator> 物件，並不會變更 <xref:System.Xml.XmlWriter> 物件的位置。</span><span class="sxs-lookup"><span data-stu-id="b70e5-122">The <xref:System.Xml.XPath.XPathNavigator> object's position is unchanged by the creation of the <xref:System.Xml.XmlWriter> object.</span></span>  
   
- 下列範例顯示如何取得包含 <xref:System.Xml.XPath.XPathDocument> 物件中整個 XML 文件與單一節點及其子節點的 <xref:System.Xml.XmlWriter> 物件。  
+ <span data-ttu-id="b70e5-123">下列範例顯示如何取得包含 <xref:System.Xml.XmlWriter> 物件中整個 XML 文件與單一節點及其子節點的 <xref:System.Xml.XPath.XPathDocument> 物件。</span><span class="sxs-lookup"><span data-stu-id="b70e5-123">The following example shows how to get an <xref:System.Xml.XmlWriter> object containing the entire XML document in an <xref:System.Xml.XPath.XPathDocument> object as well as a single node and its child nodes.</span></span>  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -166,13 +167,13 @@ navigator.WriteSubtree(book);
 book.Close();  
 ```  
   
- 範例將在本主題的前面部分所找到的 `books.xml` 檔案當做輸入。  
+ <span data-ttu-id="b70e5-124">範例將在本主題的前面部分所找到的 `books.xml` 檔案當做輸入。</span><span class="sxs-lookup"><span data-stu-id="b70e5-124">The example takes the `books.xml` file found earlier in this topic as input.</span></span>  
   
-## 請參閱  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)   
- [使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)   
- [使用 XPathNavigator 存取強型別 XML 資料](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a><span data-ttu-id="b70e5-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b70e5-125">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="b70e5-126">使用 XPath 資料模型處理 XML 資料</span><span class="sxs-lookup"><span data-stu-id="b70e5-126">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="b70e5-127">使用 XPathNavigator 巡覽節點集</span><span class="sxs-lookup"><span data-stu-id="b70e5-127">Node Set Navigation Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [<span data-ttu-id="b70e5-128">巡覽屬性及命名空間節點使用 XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="b70e5-128">Attribute and Namespace Node Navigation Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [<span data-ttu-id="b70e5-129">存取強型別使用 XPathNavigator XML 資料</span><span class="sxs-lookup"><span data-stu-id="b70e5-129">Accessing Strongly Typed XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

@@ -1,126 +1,132 @@
 ---
-title: "Garbage Collection Notifications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, notifications"
+title: "記憶體回收告知"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords: garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Garbage Collection Notifications
-在某些情況下，由通用語言執行階段所執行的完整記憶體回收\(也就是第二代集合\)可能會降低效能。  特別是處理大量要求的伺服器，這可能會造成問題，因為在這種情況下，長時間的記憶體回收可能會導致要求逾時。  為避免完整回收在重要期間發生，您可由系統通知完整記憶體回收即將進行，然後採取動作將工作負載重新導向至另一個伺服器執行個體。  您也可以自行引發回收，只要目前伺服器執行個體不需要處理要求即可。  
+# <a name="garbage-collection-notifications"></a><span data-ttu-id="7f2f1-102">記憶體回收告知</span><span class="sxs-lookup"><span data-stu-id="7f2f1-102">Garbage Collection Notifications</span></span>
+<span data-ttu-id="7f2f1-103">在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-103">There are situations in which a full garbage collection (that is, a generation 2 collection) by the common language runtime may adversely affect performance.</span></span> <span data-ttu-id="7f2f1-104">這可以是特別處理大量要求，伺服器發生問題在此情況下，完整記憶體回收可能會導致要求逾時。若要避免在關鍵時間期間所發生的完整集合，可以通知您已接近完整記憶體回收，並採取行動，將工作負載重新導向至另一個伺服器執行個體。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-104">This can be an issue particularly with servers that process large volumes of requests; in this case, a long garbage collection can cause a request time-out. To prevent a full collection from occurring during a critical period, you can be notified that a full garbage collection is approaching and then take action to redirect the workload to another server instance.</span></span> <span data-ttu-id="7f2f1-105">您可以也自行引發回收，前提是目前的伺服器執行個體不需要處理要求。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-105">You can also induce a collection yourself, provided that the current server instance does not need to process requests.</span></span>  
   
- <xref:System.GC.RegisterForFullGCNotification%2A> 方法會註冊通知，當執行階段偵測到完整記憶體回收即將進行時，即發出通知。  此通知分為兩部分：何時即將進行完整記憶體回收，以及完整記憶體回收何時完成。  
+ <span data-ttu-id="7f2f1-106"><xref:System.GC.RegisterForFullGCNotification%2A>方法會註冊到執行階段偵測即將完整記憶體回收時，會引發通知。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-106">The <xref:System.GC.RegisterForFullGCNotification%2A> method registers for a notification to be raised when the runtime senses that a full garbage collection is approaching.</span></span> <span data-ttu-id="7f2f1-107">有兩個部分，此通知： 何時即將進行完整記憶體回收時和完整記憶體回收完成。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-107">There are two parts to this notification: when the full garbage collection is approaching and when the full garbage collection has completed.</span></span>  
   
 > [!WARNING]
->  只有封鎖中的記憶體回收會引發告知。  當 [\<gcConcurrent\>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 組態項目已啟用，背景記憶體回收就不會引發告知。  
+>  <span data-ttu-id="7f2f1-108">只有進行封鎖的記憶體回收會引發通知。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-108">Only blocking garbage collections raise notifications.</span></span> <span data-ttu-id="7f2f1-109">當[ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)組態項目已啟用，背景記憶體回收就不會引發通知。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-109">When the [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration element is enabled, background garbage collections will not raise notifications.</span></span>  
   
- 若要判斷何時發出通知，請使用 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法。  一般來說，您可以在 `while` 迴圈 \(Loop\) 中使用這些方法，以持續取得顯示通知狀態的 <xref:System.GCNotificationStatus> 列舉型別 \(Enumeration\)。  如果該值為 <xref:System.GCNotificationStatus>，您可以執行下列動作：  
+ <span data-ttu-id="7f2f1-110">若要判斷當已引發通知，請使用<xref:System.GC.WaitForFullGCApproach%2A>和<xref:System.GC.WaitForFullGCComplete%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-110">To determine when a notification has been raised, use the <xref:System.GC.WaitForFullGCApproach%2A> and <xref:System.GC.WaitForFullGCComplete%2A> methods.</span></span> <span data-ttu-id="7f2f1-111">一般而言，您可以使用這些方法進行`while`迴圈持續取得<xref:System.GCNotificationStatus>列舉型別，並顯示通知的狀態。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-111">Typically, you use these methods in a `while` loop to continually obtain a <xref:System.GCNotificationStatus> enumeration that shows the status of the notification.</span></span> <span data-ttu-id="7f2f1-112">如果該值為<xref:System.GCNotificationStatus.Succeeded>，您可以執行下列：</span><span class="sxs-lookup"><span data-stu-id="7f2f1-112">If that value is <xref:System.GCNotificationStatus.Succeeded>, you can do the following:</span></span>  
   
--   為回應 <xref:System.GC.WaitForFullGCApproach%2A> 方法所取得的通知，您可以重新導向工作負載並自行引發回收。  
+-   <span data-ttu-id="7f2f1-113">以回應通知，以取得<xref:System.GC.WaitForFullGCApproach%2A>方法，您可以將工作負載重新導向，並可能自行引發的集合。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-113">In response to a notification obtained with the <xref:System.GC.WaitForFullGCApproach%2A> method, you can redirect the workload and possibly induce a collection yourself.</span></span>  
   
--   為回應 <xref:System.GC.WaitForFullGCComplete%2A> 方法所取得的通知，您可以讓目前伺服器執行個體能夠再次處理要求。  您也可以收集資訊。  例如，您可以使用 <xref:System.GC.CollectionCount%2A> 方法記錄回收次數。  
+-   <span data-ttu-id="7f2f1-114">以回應通知，以取得<xref:System.GC.WaitForFullGCComplete%2A>方法，您可以讓目前的伺服器執行個體可用來一次處理要求。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-114">In response to a notification obtained with the <xref:System.GC.WaitForFullGCComplete%2A> method, you can make the current server instance available to process requests again.</span></span> <span data-ttu-id="7f2f1-115">您也可以收集資訊。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-115">You can also gather information.</span></span> <span data-ttu-id="7f2f1-116">例如，您可以使用<xref:System.GC.CollectionCount%2A>方法來記錄的集合數目。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-116">For example, you can use the <xref:System.GC.CollectionCount%2A> method to record the number of collections.</span></span>  
   
- <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法是設計一起運作。  若兩個方法未一起使用，可能產生不確定的結果。  
+ <span data-ttu-id="7f2f1-117"><xref:System.GC.WaitForFullGCApproach%2A>和<xref:System.GC.WaitForFullGCComplete%2A>方法用來搭配使用。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-117">The <xref:System.GC.WaitForFullGCApproach%2A> and the <xref:System.GC.WaitForFullGCComplete%2A> methods are designed to work together.</span></span> <span data-ttu-id="7f2f1-118">使用其中一個，而沒有其他可能產生未定的結果。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-118">Using one without the other can produce indeterminate results.</span></span>  
   
-## 完整記憶體回收  
- 當發生下列任何情況時，執行階段會引發完整記憶體回收：  
+## <a name="full-garbage-collection"></a><span data-ttu-id="7f2f1-119">完整記憶體回收</span><span class="sxs-lookup"><span data-stu-id="7f2f1-119">Full Garbage Collection</span></span>  
+ <span data-ttu-id="7f2f1-120">當下列任何案例都成立時，執行階段會導致完整記憶體回收：</span><span class="sxs-lookup"><span data-stu-id="7f2f1-120">The runtime causes a full garbage collection when any of the following scenarios are true:</span></span>  
   
--   已有足夠的記憶體升級為層代 2，導致下一次的層代 2 回收。  
+-   <span data-ttu-id="7f2f1-121">已有記憶體不足，無法升級至層代 2，導致下一個層代 2 回收。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-121">Enough memory has been promoted into generation 2 to cause the next generation 2 collection.</span></span>  
   
--   已有足夠的記憶體升級為大型物件堆積，導致下一次的層代 2 回收。  
+-   <span data-ttu-id="7f2f1-122">已有記憶體不足，無法升級為大型物件堆積，導致下一個層代 2 回收。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-122">Enough memory has been promoted into the large object heap to cause the next generation 2 collection.</span></span>  
   
--   其他因素導致層代 1 回收提升為層代 2 回收。  
+-   <span data-ttu-id="7f2f1-123">層代 1 的集合在擴大為第 2 代，因為其他因素的集合。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-123">A collection of generation 1 is escalated to a collection of generation 2 due to other factors.</span></span>  
   
- 您在 <xref:System.GC.RegisterForFullGCNotification%2A> 方法中指定的臨界值會套用到前兩種情況。  不過，在第一種情況下，您不一定會在設定的臨界值達到時收到通知，原因有兩個：  
+ <span data-ttu-id="7f2f1-124">您在中指定的臨界值<xref:System.GC.RegisterForFullGCNotification%2A>方法套用到前兩個案例。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-124">The thresholds you specify in the <xref:System.GC.RegisterForFullGCNotification%2A> method apply to the first two scenarios.</span></span> <span data-ttu-id="7f2f1-125">不過，在第一個案例中您會不一定會收到通知，原因有兩個您所指定的臨界值成比例的時間：</span><span class="sxs-lookup"><span data-stu-id="7f2f1-125">However, in the first scenario you will not always receive the notification at the time proportional to the threshold values you specify for two reasons:</span></span>  
   
--   執行階段不會檢查每次的小型物件配置 \(基於效能考量\)。  
+-   <span data-ttu-id="7f2f1-126">執行階段不會檢查每個的小型物件配置 （基於效能考量）。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-126">The runtime does not check each small object allocation (for performance reasons).</span></span>  
   
--   只有層代 1 回收會將記憶體升級為層代 2。  
+-   <span data-ttu-id="7f2f1-127">只有層代 1 回收將記憶體升級為第 2 代。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-127">Only generation 1 collections promote memory into generation 2.</span></span>  
   
- 第三種情況也會使得收到通知的時間變得不確定。  雖然這不是絕對有用的方法，但若能在這段期間重新導向要求或自行引發回收，有助於減少不當完整記憶體回收所帶來的影響。  
+ <span data-ttu-id="7f2f1-128">第三種案例也都是計算時，您會收到通知的不確定性。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-128">The third scenario also contributes to the uncertainty of when you will receive the notification.</span></span> <span data-ttu-id="7f2f1-129">雖然不保證，但它未證明是有用的方式將要求重新導向在這段期間，或自行引發回收時就更能容納，來避免、 完整記憶體回收的效果。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-129">Although this is not a guarantee, it does prove to be a useful way to mitigate the effects of an inopportune full garbage collection by redirecting the requests during this time or inducing the collection yourself when it can be better accommodated.</span></span>  
   
-## 通知臨界值參數  
- <xref:System.GC.RegisterForFullGCNotification%2A> 方法有兩個參數，分別指定層代 2 物件和大型物件堆積的臨界值。  當達到這些值時，就應發出記憶體回收通知。  下表描述這些參數。  
+## <a name="notification-threshold-parameters"></a><span data-ttu-id="7f2f1-130">通知閾值參數</span><span class="sxs-lookup"><span data-stu-id="7f2f1-130">Notification Threshold Parameters</span></span>  
+ <span data-ttu-id="7f2f1-131"><xref:System.GC.RegisterForFullGCNotification%2A>方法有兩個參數來指定層代 2 物件和大型物件堆積的臨界值。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-131">The <xref:System.GC.RegisterForFullGCNotification%2A> method has two parameters to specify the threshold values of the generation 2 objects and the large object heap.</span></span> <span data-ttu-id="7f2f1-132">當符合這些值時，應引發記憶體回收通知。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-132">When those values are met, a garbage collection notification should be raised.</span></span> <span data-ttu-id="7f2f1-133">下表描述這些參數。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-133">The following table describes these parameters.</span></span>  
   
-|參數|說明|  
-|--------|--------|  
-|`maxGenerationThreshold`|範圍從 1 到 99 的數字，根據層代 2 中升級的物件，指定何時應引發通知。|  
-|`largeObjectHeapThreshold`|範圍從 1 到 99 的數字，根據大型物件堆積中所配置的物件，指定何時應引發通知。|  
+|<span data-ttu-id="7f2f1-134">參數</span><span class="sxs-lookup"><span data-stu-id="7f2f1-134">Parameter</span></span>|<span data-ttu-id="7f2f1-135">說明</span><span class="sxs-lookup"><span data-stu-id="7f2f1-135">Description</span></span>|  
+|---------------|-----------------|  
+|`maxGenerationThreshold`|<span data-ttu-id="7f2f1-136">1 到 99 的數字，指定何時應該引發通知會根據層代 2 中升級的物件。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-136">A number between 1 and 99 that specifies when the notification should be raised based on the objects promoted in generation 2.</span></span>|  
+|`largeObjectHeapThreshold`|<span data-ttu-id="7f2f1-137">1 到 99 的數字，指定何時應該引發通知根據大型物件堆積中配置的物件。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-137">A number between 1 and 99 that specifies when the notification should be raised based on the objects that are allocated in the large object heap.</span></span>|  
   
- 如果您指定的值太高，您很可能會收到通知，但有可能會等一段很長的時間，執行階段才會引發回收。  如果您自行引發回收，您所回收的物件可能比執行階段引發的回收還多。  
+ <span data-ttu-id="7f2f1-138">如果您指定的值太高，則高的機率，您會收到通知，但它可能太長的等待期間才執行階段引發的集合。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-138">If you specify a value that is too high, there is a high probability that you will receive a notification, but it could be too long a period to wait before the runtime causes a collection.</span></span> <span data-ttu-id="7f2f1-139">如果您自行引發集合，您可能會回收比如果執行階段會導致集合會回收的多個物件。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-139">If you induce a collection yourself, you may reclaim more objects than would be reclaimed if the runtime causes the collection.</span></span>  
   
- 如果您指定的值太低，執行階段引發回收時可能沒有足夠的時間通知您。  
+ <span data-ttu-id="7f2f1-140">如果您指定的值太低，執行階段可能會導致集合之前，您有足夠的時間，會收到通知。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-140">If you specify a value that is too low, the runtime may cause the collection before you have had sufficient time to be notified.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="7f2f1-141">範例</span><span class="sxs-lookup"><span data-stu-id="7f2f1-141">Example</span></span>  
   
-### 說明  
- 在下列範例中，有一組伺服器處理收到的 Web 要求。  為模擬處理要求的工作負載，會將位元組陣列加入到 <xref:System.Collections.Generic.List%601> 集合。  每台伺服器都會註冊記憶體回收通知，並在 `WaitForFullGCProc` 使用者方法上啟動執行緒，以持續監視 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法傳回的 <xref:System.GCNotificationStatus> 列舉。  
+### <a name="description"></a><span data-ttu-id="7f2f1-142">描述</span><span class="sxs-lookup"><span data-stu-id="7f2f1-142">Description</span></span>  
+ <span data-ttu-id="7f2f1-143">在下列範例中，一組伺服器會處理傳入的 Web 要求。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-143">In the following example, a group of servers service incoming Web requests.</span></span> <span data-ttu-id="7f2f1-144">若要模擬的處理要求的工作負載，位元組陣列加入至<xref:System.Collections.Generic.List%601>集合。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-144">To simulate the workload of processing requests, byte arrays are added to a <xref:System.Collections.Generic.List%601> collection.</span></span> <span data-ttu-id="7f2f1-145">每個伺服器記憶體回收通知的註冊，並再啟動的執行緒上`WaitForFullGCProc`使用者的方法，以持續監視<xref:System.GCNotificationStatus>所傳回的列舉型別<xref:System.GC.WaitForFullGCApproach%2A>和<xref:System.GC.WaitForFullGCComplete%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-145">Each server registers for a garbage collection notification and then starts a thread on the `WaitForFullGCProc` user method to continuously monitor the <xref:System.GCNotificationStatus> enumeration that is returned by the <xref:System.GC.WaitForFullGCApproach%2A> and the <xref:System.GC.WaitForFullGCComplete%2A> methods.</span></span>  
   
- 當系統引發通知時，<xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法會呼叫各自的事件處理使用者方法：  
+ <span data-ttu-id="7f2f1-146"><xref:System.GC.WaitForFullGCApproach%2A>和<xref:System.GC.WaitForFullGCComplete%2A>引發通知時，方法會呼叫其各自的事件處理使用者方法：</span><span class="sxs-lookup"><span data-stu-id="7f2f1-146">The <xref:System.GC.WaitForFullGCApproach%2A> and the <xref:System.GC.WaitForFullGCComplete%2A> methods call their respective event-handling user methods when a notification is raised:</span></span>  
   
 -   `OnFullGCApproachNotify`  
   
-     此方法會呼叫 `RedirectRequests` 使用者方法，指示要求佇列伺服器暫停傳送要求至該伺服器。  模擬的方式是將類別層級變數 `bAllocate` 設為 `false`，這樣就不會再配置物件。  
+     <span data-ttu-id="7f2f1-147">這個方法會呼叫`RedirectRequests`使用者方法，指示要求佇列伺服器，暫停傳送要求至的伺服器。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-147">This method calls the `RedirectRequests` user method, which instructs the request queuing server to suspend sending requests to the server.</span></span> <span data-ttu-id="7f2f1-148">這藉由設定類別層級變數模擬`bAllocate`至`false`，如此會配置沒有任何物件。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-148">This is simulated by setting the class-level variable `bAllocate` to `false` so that no more objects are allocated.</span></span>  
   
-     接著會呼叫 `FinishExistingRequests` 使用者方法，以完成處理暫止的伺服器要求。  模擬的方式是清除 <xref:System.Collections.Generic.List%601> 集合。  
+     <span data-ttu-id="7f2f1-149">下一步`FinishExistingRequests`呼叫使用者的方法來完成處理擱置的伺服器要求。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-149">Next, the `FinishExistingRequests` user method is called to finish processing the pending server requests.</span></span> <span data-ttu-id="7f2f1-150">這藉由清除模擬<xref:System.Collections.Generic.List%601>集合。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-150">This is simulated by clearing the <xref:System.Collections.Generic.List%601> collection.</span></span>  
   
-     最後再引發記憶體回收，因為工作負載變輕。  
+     <span data-ttu-id="7f2f1-151">最後，因為在工作負載很輕，被引發記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-151">Finally, a garbage collection is induced because the workload is light.</span></span>  
   
 -   `OnFullGCCompleteNotify`  
   
-     此方法會呼叫使用者方法 `AcceptRequests` 以繼續接受要求，因為伺服器不再容易受到完整記憶體回收的影響。  模擬此動作的方式是將 `bAllocate` 變數設為 `true`，這樣物件就會繼續加入到 <xref:System.Collections.Generic.List%601> 集合。  
+     <span data-ttu-id="7f2f1-152">這個方法會呼叫使用者方法`AcceptRequests`繼續接受要求，因為伺服器不會再受到完整記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-152">This method calls the user method `AcceptRequests` to resume accepting requests because the server is no longer susceptible to a full garbage collection.</span></span> <span data-ttu-id="7f2f1-153">此動作設定模擬時`bAllocate`變數設為`true`，讓物件可以繼續加入<xref:System.Collections.Generic.List%601>集合。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-153">This action is simulated by setting the `bAllocate` variable to `true` so that objects can resume being added to the <xref:System.Collections.Generic.List%601> collection.</span></span>  
   
- 下列程式碼包含範例的 `Main` 方法。  
+ <span data-ttu-id="7f2f1-154">下列程式碼包含`Main`方法的範例。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-154">The following code contains the `Main` method of the example.</span></span>  
   
  [!code-cpp[GCNotification#2](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#2)]
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- 下列程式碼包含 `WaitForFullGCProc` 使用者方法，此方法包含持續進行的 while 迴圈，檢查是否有記憶體回收通知。  
+ <span data-ttu-id="7f2f1-155">下列程式碼包含`WaitForFullGCProc`包含連續的 while 迴圈，檢查記憶體回收通知的使用者方法。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-155">The following code contains the `WaitForFullGCProc` user method, that contains a continuous while loop to check for garbage collection notifications.</span></span>  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- 下列程式碼包含 `OnFullGCApproachNotify` 方法，此方法是從  
+ <span data-ttu-id="7f2f1-156">下列程式碼包含`OnFullGCApproachNotify`從呼叫的方法</span><span class="sxs-lookup"><span data-stu-id="7f2f1-156">The following code contains the `OnFullGCApproachNotify` method as called from the</span></span>  
   
- `WaitForFullGCProc` 方法呼叫的。  
+ <span data-ttu-id="7f2f1-157">`WaitForFullGCProc` 方法。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-157">`WaitForFullGCProc` method.</span></span>  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- 下列程式碼包含 `OnFullGCApproachComplete` 方法，此方法是從  
+ <span data-ttu-id="7f2f1-158">下列程式碼包含`OnFullGCApproachComplete`從呼叫的方法</span><span class="sxs-lookup"><span data-stu-id="7f2f1-158">The following code contains the `OnFullGCApproachComplete` method as called from the</span></span>  
   
- `WaitForFullGCProc` 方法呼叫的。  
+ <span data-ttu-id="7f2f1-159">`WaitForFullGCProc` 方法。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-159">`WaitForFullGCProc` method.</span></span>  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- 下列程式碼包含從 `OnFullGCApproachNotify` 和 `OnFullGCCompleteNotify` 方法呼叫的使用者方法。  這些使用者方法會重新導向要求、完成現有的要求，然後在完整記憶體回收執行之後繼續要求。  
+ <span data-ttu-id="7f2f1-160">下列程式碼包含了使用者方法的呼叫`OnFullGCApproachNotify`和`OnFullGCCompleteNotify`方法。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-160">The following code contains the user methods that are called from the `OnFullGCApproachNotify` and `OnFullGCCompleteNotify` methods.</span></span> <span data-ttu-id="7f2f1-161">使用者方法會將要求重新導向、 完成現有的要求，並完整記憶體回收發生後再繼續要求。</span><span class="sxs-lookup"><span data-stu-id="7f2f1-161">The user methods redirect requests, finish existing requests, and then resume requests after a full garbage collection has occurred.</span></span>  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]
  [!code-vb[GCNotification#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#9)]  
   
- 完整的程式碼範例如下：  
+ <span data-ttu-id="7f2f1-162">整個程式碼範例如下所示：</span><span class="sxs-lookup"><span data-stu-id="7f2f1-162">The entire code sample is as follows:</span></span>  
   
  [!code-cpp[GCNotification#1](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#1)]
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## 請參閱  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="7f2f1-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7f2f1-163">See Also</span></span>  
+ [<span data-ttu-id="7f2f1-164">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="7f2f1-164">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

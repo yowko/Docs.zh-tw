@@ -1,48 +1,54 @@
 ---
-title: "如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 15
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 11c22bf71109137ea328b8e1136180494364ce0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
-適用 Windows 市集應用程式的 .NET Framework 是完整 .NET Framework 的子集。 基於 Windows 市集應用程式的安全性和其他要求，您無法使用整套 .NET Framework API 開啟和讀取檔案。 如需詳細資訊，請參閱[適用於 Windows 市集應用程式的 .NET 概觀http:\/\/msdn.microsoft.com\/library\/windows\/apps\/br230302.aspx](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 不過，您可能會想要使用 .NET Framework API 進行其他資料流管理作業。 若要管理這些資料流，您可能會發現需要在 .NET Framework 資料流類型 \(例如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>\) 和 Windows 執行階段資料流 \(例如 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)、[IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx) 或 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx)\) 之間轉換。  
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a><span data-ttu-id="f6bb1-102">如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換</span><span class="sxs-lookup"><span data-stu-id="f6bb1-102">How to: Convert Between .NET Framework Streams and Windows Runtime Streams</span></span>
+<span data-ttu-id="f6bb1-103">適用 Windows 市集應用程式的 .NET Framework 是完整 .NET Framework 的子集。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-103">The .NET Framework for Windows Store apps is a subset of the full .NET Framework.</span></span> <span data-ttu-id="f6bb1-104">基於 Windows 市集應用程式的安全性和其他要求，您無法使用整套 .NET Framework API 開啟和讀取檔案。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-104">Because of security and other requirements for Windows Store apps, you cannot use the full set of .NET Framework APIs to open and read files.</span></span> <span data-ttu-id="f6bb1-105">如需詳細資訊，請參閱[適用於 Windows 市集應用程式的概觀](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-105">For more information, see [.NET for Windows Store apps overview](http://msdn.microsoft.com/library/windows/apps/br230302.aspx).</span></span> <span data-ttu-id="f6bb1-106">不過，您可能會想要使用 .NET Framework API 進行其他資料流管理作業。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-106">However, you may want to use .NET Framework APIs for other stream manipulation operations.</span></span> <span data-ttu-id="f6bb1-107">若要管理這些資料流，您可能會發現需要在 .NET Framework 資料流類型 (例如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>) 和 Windows 執行階段資料流 (例如 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)、 [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)或 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx)) 之間轉換。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-107">To manipulate these streams, you may find it necessary to convert between a .NET Framework stream type such as <xref:System.IO.MemoryStream> or <xref:System.IO.FileStream>, and a Windows Runtime stream such as [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx), or [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).</span></span>  
   
- <xref:System.IO.WindowsRuntimeStreamExtensions> 類別包含可簡化這些轉換的方法。 不過，.NET Framework 和 Windows 執行階段之間有一些基本差異，將會影響使用這些方法的結果。 下面各節將有詳細說明。  
+ <span data-ttu-id="f6bb1-108"><!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` 類別包含可簡化這些轉換的方法。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-108">The <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` class contains methods that make these conversions easy.</span></span> <span data-ttu-id="f6bb1-109">不過，.NET Framework 和 Windows 執行階段之間有一些基本差異，將會影響使用這些方法的結果。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-109">However, there are underlying differences between streams in the .NET Framework and the Windows Runtime that will affect the results of using these methods.</span></span> <span data-ttu-id="f6bb1-110">下面各節將有詳細說明。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-110">The details are described in the following sections.</span></span>  
   
 <a name="BKMK_ConvertingfromaWindowsRuntimestreamtoaNETFrameworkstream"></a>   
-## 從 Windows 執行階段資料流轉換為 .NET Framework 資料流  
- 您可以使用下列其中一種 <xref:System.IO.WindowsRuntimeStreamExtensions> 方法，從 Windows 執行階段資料流轉換為 .NET Framework 資料流：  
+## <a name="converting-from-a-windows-runtime-stream-to-a-net-framework-stream"></a><span data-ttu-id="f6bb1-111">從 Windows 執行階段資料流轉換為 .NET Framework 資料流</span><span class="sxs-lookup"><span data-stu-id="f6bb1-111">Converting from a Windows Runtime stream to a .NET Framework stream</span></span>  
+ <span data-ttu-id="f6bb1-112">您可以使用下列其中一種 <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` 方法，從 Windows 執行階段資料流轉換為 .NET Framework 資料流：</span><span class="sxs-lookup"><span data-stu-id="f6bb1-112">You can convert from a Windows Runtime stream to a .NET Framework stream by using one of the following <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` methods:</span></span>  
   
- <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A>  
- 將 Windows 執行階段中的隨機存取資料流轉換成適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流。  
+ <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStream`  
+ <span data-ttu-id="f6bb1-113">將 Windows 執行階段中的隨機存取資料流轉換成適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-113">Converts a random-access stream in the Windows Runtime to a managed stream in the .NET for Windows Store apps subset.</span></span>  
   
- <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite%2A>  
- 將 Windows 執行階段中的輸出資料流轉換成適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流。  
+ <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite`
+ <span data-ttu-id="f6bb1-114">將 Windows 執行階段中的輸出資料流轉換成適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-114">Converts an output stream in the Windows Runtime to a managed stream in the .NET for Windows Store apps subset.</span></span>  
   
- <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A>  
- 將 Windows 執行階段中的輸入資料流轉換成適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流。  
+ <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead`  
+ <span data-ttu-id="f6bb1-115">將 Windows 執行階段中的輸入資料流轉換成適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-115">Converts an input stream in the Windows Runtime to a managed stream in the .NET for Windows Store apps subset.</span></span>  
   
- Windows 執行階段提供了可支援唯讀、唯寫或讀寫的資料流類型，這些功能會在您將 Windows 執行階段資料流轉換成 .NET Framework 資料流時保留。 此外，如果您將 Windows 執行階段資料流轉換成 .NET Framework 資料流之後再反向轉換，則會得到原始的 Windows 執行階段執行個體。 最佳作法是使用符合您要轉換之 Windows 執行階段資料流功能的轉換方法。 不過，[IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) 可讀取和寫入 \(它會實作 [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx) 和 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)\)，因此您可以使用任何轉換方法，而原始資料流的功能將會保留。 例如，使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A> 轉換 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) 不會將轉換後的 .NET Framework 資料流限制為只可讀取，該資料流也可以寫入。  
+ <span data-ttu-id="f6bb1-116">Windows 執行階段提供了可支援唯讀、唯寫或讀寫的資料流類型，這些功能會在您將 Windows 執行階段資料流轉換成 .NET Framework 資料流時保留。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-116">The Windows Runtime offers stream types that support reading only, writing only or reading and writing, and these capabilities are maintained when you convert a Windows Runtime stream to a .NET Framework stream.</span></span> <span data-ttu-id="f6bb1-117">此外，如果您將 Windows 執行階段資料流轉換成 .NET Framework 資料流之後再反向轉換，則會得到原始的 Windows 執行階段執行個體。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-117">Furthermore, if you convert a Windows Runtime stream to a .NET Framework stream and back, you get the original Windows Runtime instance back.</span></span> <span data-ttu-id="f6bb1-118">最佳作法是使用符合您要轉換之 Windows 執行階段資料流功能的轉換方法。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-118">It’s best practice to use the conversion method that matches the capabilities of the Windows Runtime stream you would like to convert.</span></span> <span data-ttu-id="f6bb1-119">不過， [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) 可讀取和寫入 (它會實作 [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx) 和 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx))，因此您可以使用任何轉換方法，而原始資料流的功能將會保留。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-119">However, since [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) is readable and writeable (it implements both [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx) and [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)), you can use any of the conversion methods and the capabilities of the original stream are maintained.</span></span> <span data-ttu-id="f6bb1-120">例如，使用 <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead` 轉換 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) 不會將轉換後的 .NET Framework 資料流限制為只可讀取，該資料流也可以寫入。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-120">For example, using <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead` to convert an [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx) will not limit the converted .NET Framework stream to being readable only; it will also be writable.</span></span>  
   
-#### 若要從 Windows 執行階段隨機存取資料流轉換成 .NET Framework 資料流  
+#### <a name="to-convert-from-a-windows-runtime-random-access-stream-to-a-net-framework-stream"></a><span data-ttu-id="f6bb1-121">若要從 Windows 執行階段隨機存取資料流轉換成 .NET Framework 資料流</span><span class="sxs-lookup"><span data-stu-id="f6bb1-121">To convert from a Windows Runtime random-access stream to a .NET Framework stream</span></span>  
   
--   請使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> 方法。  
+-   <span data-ttu-id="f6bb1-122">請使用 <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStream` 方法。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-122">Use the <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsStream` method.</span></span>  
   
-     下列程式碼範例將示範如何提示使用者選取檔案、使用 Windows 執行階段 API 將檔案開啟，然後將檔案轉換成會讀取並輸出至文字區塊的 .NET Framework 資料流。 在這個情境中，您通常會在輸出結果之前，使用 .NET Framework API 管理資料流。  
+     <span data-ttu-id="f6bb1-123">下列程式碼範例將示範如何提示使用者選取檔案、使用 Windows 執行階段 API 將檔案開啟，然後將檔案轉換成會讀取並輸出至文字區塊的 .NET Framework 資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-123">The following code example shows how to prompt the user to select a file, open it with Windows Runtime APIs, and then convert it to a .NET Framework stream, which is read and output to a text block.</span></span> <span data-ttu-id="f6bb1-124">在這個情境中，您通常會在輸出結果之前，使用 .NET Framework API 管理資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-124">In this scenario, you would typically manipulate the stream with .NET Framework APIs before outputting the results.</span></span>  
   
-     若要執行這個範例，您必須建立包含名為 `TextBlock1` 的文字區塊及名為 `Button1` 的按鈕之 Windows 市集 XAML 應用程式。 按鈕點選事件必須與範例中所顯示的 `button1_Click` 方法相關聯。  
+     <span data-ttu-id="f6bb1-125">若要執行這個範例，您必須建立包含名為 `TextBlock1` 的文字區塊及名為  `Button1`的按鈕之 Windows 市集 XAML 應用程式。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-125">To run this example, you must create a Windows Store XAML app that contains a text block named `TextBlock1` and a button named  `Button1`.</span></span> <span data-ttu-id="f6bb1-126">按鈕點選事件必須與範例中所顯示的 `button1_Click` 方法相關聯。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-126">The button click event must be associated with the `button1_Click` method shown in the example.</span></span>  
   
      [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#imports)]
      [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#imports)]  
@@ -50,37 +56,37 @@ caps.handback.revision: 15
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#1)]  
   
 <a name="BKMK_ConvertingfromaNETFrameworkstreamtoaWindowsRuntimestream"></a>   
-## 從 .NET Framework 資料流轉換為 Windows 執行階段資料流  
- 您可以使用下列其中一種 <xref:System.IO.WindowsRuntimeStreamExtensions> 方法，從 .NET Framework 資料流轉換為 Windows 執行階段資料流：  
+## <a name="converting-from-a-net-framework-stream-to-a-windows-runtime-stream"></a><span data-ttu-id="f6bb1-127">從 .NET Framework 資料流轉換為 Windows 執行階段資料流</span><span class="sxs-lookup"><span data-stu-id="f6bb1-127">Converting from a .NET Framework stream to a Windows Runtime stream</span></span>  
+ <span data-ttu-id="f6bb1-128">您可以使用下列其中一種 <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` 方法，從 .NET Framework 資料流轉換為 Windows 執行階段資料流：</span><span class="sxs-lookup"><span data-stu-id="f6bb1-128">You can convert from a .NET Framework stream to a Windows Runtime stream by using one of the following <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions` methods:</span></span>  
   
- <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A>  
- 將適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流轉換成 Windows 執行階段中的輸入資料流。  
+ <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsInputStream`  
+ <span data-ttu-id="f6bb1-129">將適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流轉換成 Windows 執行階段中的輸入資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-129">Converts a managed stream in the .NET for Windows Store apps subset to an input stream in the Windows Runtime.</span></span>  
   
- <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A>  
- 將適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流轉換成 Windows 執行階段中的輸出資料流。  
+<!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A>  --> `System.IO.WindowsRuntimeStreamExtensions.AsOutputStream`
+ <span data-ttu-id="f6bb1-130">將適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流轉換成 Windows 執行階段中的輸出資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-130">Converts a managed stream in the .NET for Windows Store apps subset to an output stream in the Windows Runtime.</span></span>  
   
- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md)  
- 將適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流轉換成可在 Windows 執行階段中用於讀取或寫入的隨機存取資料流。  
+ [<span data-ttu-id="f6bb1-131">AsRandomAccessStream</span><span class="sxs-lookup"><span data-stu-id="f6bb1-131">AsRandomAccessStream</span></span>](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md)  
+ <span data-ttu-id="f6bb1-132">將適用於 Windows 市集應用程式的 .NET 子集中的 Managed 資料流轉換成可在 Windows 執行階段中用於讀取或寫入的隨機存取資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-132">Converts a managed stream in the .NET for Windows Store apps subset to a random-access stream that can be used for reading or writing in the Windows Runtime.</span></span>  
   
- 當您將 .NET Framework 資料流轉換成 Windows 執行階段資料流時，轉換後資料流的功能將取決於原始資料流。 例如，如果原始資料流同時支援讀取和寫入，而且您呼叫 <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A> 來轉換資料流，則傳回類型將會是 `IRandomAccessStream`，它會實作 `IInputStream` 和 `IOutputStream` 並支援讀取和寫入。  
+ <span data-ttu-id="f6bb1-133">當您將 .NET Framework 資料流轉換成 Windows 執行階段資料流時，轉換後資料流的功能將取決於原始資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-133">When you convert a .NET Framework stream to a Windows Runtime stream, the capabilities of the converted stream will depend on the original stream.</span></span> <span data-ttu-id="f6bb1-134">例如，如果原始資料流同時支援讀取和寫入，而且您呼叫 <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsInputStream` 來轉換資料流，則傳回類型將會是 `IRandomAccessStream`，它會實作  `IInputStream` 和 `IOutputStream`並支援讀取和寫入。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-134">For example, if the original stream supports both reading and writing, and you call <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A> --> `System.IO.WindowsRuntimeStreamExtensions.AsInputStream` to convert the stream, the returned type will be an `IRandomAccessStream`, which  implements  `IInputStream` and `IOutputStream`, and supports reading and writing</span></span>  
   
- .NET Framework 資料流不支援複製，即使是在轉換之後也一樣。 這表示，如果您將 .NET Framework 資料流轉換成 Windows 執行階段資料流，並呼叫 [GetInputStreamAt](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.inmemoryrandomaccessstream.getinputstreamat.aspx) 或 [GetOutputStreamAt](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.getoutputstreamat.aspx) \(它會直接呼叫 [CloneStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstreamoverstream.clonestream.aspx) 或呼叫 [CloneStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstreamoverstream.clonestream.aspx)\)，則例外狀況將會發生。  
+ <span data-ttu-id="f6bb1-135">.NET Framework 資料流不支援複製，即使是在轉換之後也一樣。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-135">.NET Framework streams do not support cloning, even after conversion.</span></span> <span data-ttu-id="f6bb1-136">這表示，如果您將 .NET Framework 資料流轉換成 Windows 執行階段資料流，並呼叫 [GetInputStreamAt](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.inmemoryrandomaccessstream.getinputstreamat.aspx) 或 [GetOutputStreamAt](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.getoutputstreamat.aspx)(它會直接呼叫 [CloneStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstreamoverstream.clonestream.aspx) 或呼叫 [CloneStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstreamoverstream.clonestream.aspx) )，則例外狀況將會發生。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-136">This means that if you convert a .NET Framework stream to a Windows Runtime stream and call [GetInputStreamAt](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.inmemoryrandomaccessstream.getinputstreamat.aspx) or [GetOutputStreamAt](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.getoutputstreamat.aspx), which call [CloneStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstreamoverstream.clonestream.aspx) or call [CloneStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstreamoverstream.clonestream.aspx) directly, an exception will occur.</span></span>  
   
-#### 若要從 .NET Framework 資料流轉換成 Windows 執行階段隨機存取資料流  
+#### <a name="to-convert-from-a-net-framework-stream-to-a-windows-runtime-random-access-stream"></a><span data-ttu-id="f6bb1-137">若要從 .NET Framework 資料流轉換成 Windows 執行階段隨機存取資料流</span><span class="sxs-lookup"><span data-stu-id="f6bb1-137">To convert from a .NET Framework stream to a Windows Runtime random-access stream</span></span>  
   
--   使用 [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 方法，如以下範例所示：  
+-   <span data-ttu-id="f6bb1-138">使用 [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 方法，如以下範例所示：</span><span class="sxs-lookup"><span data-stu-id="f6bb1-138">Use the [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) method, as shown in the following example.</span></span>  
   
     > [!IMPORTANT]
-    >  確定您使用的 .NET Framework 資料流支援搜尋，或將它複製到支援搜尋的資料流。 您可以使用 <xref:System.IO.Stream.CanSeek%2A?displayProperty=fullName> 屬性來判斷。  
+    >  <span data-ttu-id="f6bb1-139">確定您使用的 .NET Framework 資料流支援搜尋，或將它複製到支援搜尋的資料流。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-139">Ensure that the .NET Framework stream you are using supports seeking, or copy it to a stream that does.</span></span> <span data-ttu-id="f6bb1-140">您可以使用 <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> 屬性來判斷。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-140">You can use the <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> property to determine this.</span></span>  
   
-     若要執行這個範例，您必須建立以 .NET Framework 4.5.1 為目標且包含名為 `TextBlock2` 的文字區塊和名為 `Button2` 的按鈕之 Windows 市集 XAML 應用程式。 按鈕點選事件必須與這個範例中所顯示的 `button2_Click` 方法相關聯。  
+     <span data-ttu-id="f6bb1-141">若要執行這個範例，您必須建立以 .NET Framework 4.5.1 為目標且包含名為 `TextBlock2` 的文字區塊和名為 `Button2`的按鈕之 Windows 市集 XAML 應用程式。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-141">To run this example, you must create a Windows Store XAML app that targets the .NET Framework 4.5.1 and contains a text block named `TextBlock2` and a button named `Button2`.</span></span> <span data-ttu-id="f6bb1-142">按鈕點選事件必須與這個範例中所顯示的 `button2_Click` 方法相關聯。</span><span class="sxs-lookup"><span data-stu-id="f6bb1-142">The button click event must be associated with the `button2_Click` method shown in this example.</span></span>  
   
      [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#imports)]
      [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#imports)]  
     [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
-## 請參閱  
- [快速入門：讀取和寫入檔案 \(Windows\)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)   
- [適用於 Windows 市集應用程式的 .NET 概觀](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)   
- [適用於 Windows 市集應用程式的 .NET ——所支援的應用程式開發介面](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)
+## <a name="see-also"></a><span data-ttu-id="f6bb1-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f6bb1-143">See Also</span></span>  
+ [<span data-ttu-id="f6bb1-144">快速入門： 讀取和寫入檔案 (Windows)</span><span class="sxs-lookup"><span data-stu-id="f6bb1-144">Quickstart: Reading and writing a file (Windows)</span></span>](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+ [<span data-ttu-id="f6bb1-145">適用於 Windows 市集應用程式的概觀</span><span class="sxs-lookup"><span data-stu-id="f6bb1-145">.NET for Windows Store apps overview</span></span>](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [<span data-ttu-id="f6bb1-146">適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面</span><span class="sxs-lookup"><span data-stu-id="f6bb1-146">.NET for Windows Store apps – supported APIs</span></span>](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)

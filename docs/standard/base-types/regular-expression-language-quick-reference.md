@@ -1,230 +1,232 @@
 ---
-title: "規則運算式語言 - 快速參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.RegularExpressionBuilder"
-helpviewer_keywords: 
-  - ".NET Framework 規則運算式, 語言項目"
-  - "速查表"
-  - "使用規則運算式剖析文字, 語言項目"
-  - "使用規則運算式的模式比對, 語言項目"
-  - "regex 速查表"
-  - "規則運算式 [.NET Framework]"
-  - "規則運算式, 語言項目"
-  - "使用規則運算式搜尋, 語言項目"
+title: "規則運算式語言 - 快速參考"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.RegularExpressionBuilder
+helpviewer_keywords:
+- regex cheat sheet
+- parsing text with regular expressions, language elements
+- searching with regular expressions, language elements
+- pattern-matching with regular expressions, language elements
+- regular expressions, language elements
+- regular expressions [.NET Framework]
+- cheat sheet
+- .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 56
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 56
+caps.latest.revision: "56"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 規則運算式語言 - 快速參考
-<a name="top"></a> 規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
+# <a name="regular-expression-language---quick-reference"></a><span data-ttu-id="efb3c-102">規則運算式語言 - 快速參考</span><span class="sxs-lookup"><span data-stu-id="efb3c-102">Regular Expression Language - Quick Reference</span></span>
+<span data-ttu-id="efb3c-103"><a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-103"><a name="top"></a> A regular expression is a pattern that the regular expression engine attempts to match in input text.</span></span> <span data-ttu-id="efb3c-104">模式是由一個或多個字元常值、運算子或建構所組成。</span><span class="sxs-lookup"><span data-stu-id="efb3c-104">A pattern consists of one or more character literals, operators, or constructs.</span></span>  <span data-ttu-id="efb3c-105">如需簡介，請參閱[.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-105">For a brief introduction, see [.NET Regular Expressions](../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
- 本快速參考的每一節列出您可以用於定義規則運算式的特定某類字元、運算子和建構：  
+ <span data-ttu-id="efb3c-106">本快速參考的每一節列出您可以用於定義規則運算式的特定某類字元、運算子和建構：</span><span class="sxs-lookup"><span data-stu-id="efb3c-106">Each section in this quick reference lists a particular category of characters, operators, and constructs that you can use to define regular expressions:</span></span>  
   
- [逸出字元](#character_escapes)  
- [字元類別](#character_classes)  
- [錨點](#atomic_zerowidth_assertions)  
- [群組建構](#grouping_constructs)  
- [數量詞](#quantifiers)  
- [反向參考建構](#backreference_constructs)  
- [交替建構](#alternation_constructs)  
- [替代](#substitutions)  
- [規則運算式選項](#options)  
- [其他建構](#miscellaneous_constructs)  
+ [<span data-ttu-id="efb3c-107">逸出字元</span><span class="sxs-lookup"><span data-stu-id="efb3c-107">Character escapes</span></span>](#character_escapes)  
+ [<span data-ttu-id="efb3c-108">字元類別</span><span class="sxs-lookup"><span data-stu-id="efb3c-108">Character classes</span></span>](#character_classes)  
+ [<span data-ttu-id="efb3c-109">錨點</span><span class="sxs-lookup"><span data-stu-id="efb3c-109">Anchors</span></span>](#atomic_zerowidth_assertions)  
+ [<span data-ttu-id="efb3c-110">群組建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-110">Grouping constructs</span></span>](#grouping_constructs)  
+ [<span data-ttu-id="efb3c-111">數量詞</span><span class="sxs-lookup"><span data-stu-id="efb3c-111">Quantifiers</span></span>](#quantifiers)  
+ [<span data-ttu-id="efb3c-112">反向參考建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-112">Backreference constructs</span></span>](#backreference_constructs)  
+ [<span data-ttu-id="efb3c-113">替代建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-113">Alternation constructs</span></span>](#alternation_constructs)  
+ [<span data-ttu-id="efb3c-114">替代</span><span class="sxs-lookup"><span data-stu-id="efb3c-114">Substitutions</span></span>](#substitutions)  
+ [<span data-ttu-id="efb3c-115">規則運算式選項</span><span class="sxs-lookup"><span data-stu-id="efb3c-115">Regular expression options</span></span>](#options)  
+ [<span data-ttu-id="efb3c-116">其他建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-116">Miscellaneous constructs</span></span>](#miscellaneous_constructs)  
   
- 我們也有用兩種格式提供此資訊，可讓您下載及列印，以方便參考。  
+ <span data-ttu-id="efb3c-117">我們也有用兩種格式提供此資訊，可讓您下載及列印，以方便參考。</span><span class="sxs-lookup"><span data-stu-id="efb3c-117">We’ve also provided this information in two formats that you can download and print for easy reference:</span></span>  
   
- [以 Word \(.docx\) 格式下載](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
-[以 PDF \(.pdf\) 格式下載](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [<span data-ttu-id="efb3c-118">以 Word (.docx) 格式下載</span><span class="sxs-lookup"><span data-stu-id="efb3c-118">Download in Word (.docx) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="efb3c-119">下載 PDF (.pdf) 格式</span><span class="sxs-lookup"><span data-stu-id="efb3c-119">Download in PDF (.pdf) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
-## 逸出字元  
- 規則運算式中的反斜線字元 \(\\\) 表示接在後面的字元是特殊字元 \(如下表所示\)，或應該解譯為常值。 如需詳細資訊，請參閱[逸出字元](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)。  
+## <a name="character-escapes"></a><span data-ttu-id="efb3c-120">逸出字元</span><span class="sxs-lookup"><span data-stu-id="efb3c-120">Character Escapes</span></span>  
+ <span data-ttu-id="efb3c-121">規則運算式中的反斜線字元 (\\) 表示接在後面的字元是特殊字元 (如下表所示)，或應該解譯為常值。</span><span class="sxs-lookup"><span data-stu-id="efb3c-121">The backslash character (\\) in a regular expression indicates that the character that follows it either is a special character (as shown in the following table), or should be interpreted literally.</span></span> <span data-ttu-id="efb3c-122">如需詳細資訊，請參閱[逸出字元](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-122">For more information, see [Character Escapes](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).</span></span>  
   
-|逸出的字元|描述|模式|符合|  
-|-----------|--------|--------|--------|  
-|`\a`|比對警示字元 \\u0007。|`\a`|"Error\!" 中的 "\\u0007" \+ '\\u0007'|  
-|`\b`|在字元類別中，比對退格鍵 \\u0008。|`[\b]{3,}`|"\\b\\b\\b\\b" 中的 "\\b\\b\\b\\b"|  
-|`\t`|比對定位點 \\u0009。|`(\w+)\t`|"item1\\titem2\\t" 中的 "item1\\t"、"item2\\t"|  
-|`\r`|比對歸位字元 \\u000D \(`\r` 不等於新行字元 `\n`。\)|`\r\n(\w+)`|"\\r\\nThese are\\ntwo lines." 中的 "\\r\\nThese"|  
-|`\v`|比對垂直定位點 \\u000B。|`[\v]{2,}`|"\\v\\v\\v" 中的 "\\v\\v\\v"|  
-|`\f`|比對換頁字元 \\u000C。|`[\f]{2,}`|"\\f\\f\\f" 中的 "\\f\\f\\f"|  
-|`\n`|比對新行字元 \\u000A。|`\r\n(\w+)`|"\\r\\nThese are\\ntwo lines." 中的 "\\r\\nThese"|  
-|`\e`|比對逸出字元 \\u001B。|`\e`|"\\x001B" 中的 "\\x001B"|  
-|`\` *nnn*|使用八進位表示法指定字元 \(*nnn* 由兩位數或三位數組成\)。|`\w\040\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\x` *nn*|使用十六進位表示指定字元 \(*nn* 由剛好兩位數組成\)。|`\w\x20\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\c` *X*<br /><br /> `\c` *x*|比對 *X* 或 *x* 所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。|`\cC`|"\\x0003" \(Ctrl\-C\) 中的 "\\x0003"|  
-|`\u` *nnnn*|使用十六進位表示比對 Unicode 字元 \(剛好四位數，如 *nnnn* 所表示\)。|`\w\u0020\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\`|當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。 例如，`\*` 與 `\x2A` 相同，而 `\.` 與 `\x2E` 相同。 這可讓規則運算式引擎釐清語言項目 \(例如 \* 或 ?\) 和字元常值 \(以 `\*` 或 `\?` 表示\)。|`\d+[\+-x\*]\d+`|"\(2\+2\) \* 3\*9" 中的 "2\+2" 和 "3\*9"|  
+|<span data-ttu-id="efb3c-123">逸出的字元</span><span class="sxs-lookup"><span data-stu-id="efb3c-123">Escaped character</span></span>|<span data-ttu-id="efb3c-124">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-124">Description</span></span>|<span data-ttu-id="efb3c-125">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-125">Pattern</span></span>|<span data-ttu-id="efb3c-126">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-126">Matches</span></span>|  
+|-----------------------|-----------------|-------------|-------------|  
+|`\a`|<span data-ttu-id="efb3c-127">比對警示字元 \u0007。</span><span class="sxs-lookup"><span data-stu-id="efb3c-127">Matches a bell character, \u0007.</span></span>|`\a`|<span data-ttu-id="efb3c-128">"Error!" 中的 "\u0007"</span><span class="sxs-lookup"><span data-stu-id="efb3c-128">"\u0007" in "Error!"</span></span> <span data-ttu-id="efb3c-129">+ '\u0007'</span><span class="sxs-lookup"><span data-stu-id="efb3c-129">+ '\u0007'</span></span>|  
+|`\b`|<span data-ttu-id="efb3c-130">在字元類別中，比對退格鍵 \u0008。</span><span class="sxs-lookup"><span data-stu-id="efb3c-130">In a character class, matches a backspace, \u0008.</span></span>|`[\b]{3,}`|<span data-ttu-id="efb3c-131">"\b\b\b\b" 中的 "\b\b\b\b"</span><span class="sxs-lookup"><span data-stu-id="efb3c-131">"\b\b\b\b" in "\b\b\b\b"</span></span>|  
+|`\t`|<span data-ttu-id="efb3c-132">比對定位點 \u0009。</span><span class="sxs-lookup"><span data-stu-id="efb3c-132">Matches a tab, \u0009.</span></span>|`(\w+)\t`|<span data-ttu-id="efb3c-133">"item1\titem2\t" 中的 "item1\t"、"item2\t"</span><span class="sxs-lookup"><span data-stu-id="efb3c-133">"item1\t", "item2\t" in "item1\titem2\t"</span></span>|  
+|`\r`|<span data-ttu-id="efb3c-134">比對歸位字元 \u000D</span><span class="sxs-lookup"><span data-stu-id="efb3c-134">Matches a carriage return, \u000D.</span></span> <span data-ttu-id="efb3c-135">(`\r` 不等於新行字元 `\n`。)</span><span class="sxs-lookup"><span data-stu-id="efb3c-135">(`\r` is not equivalent to the newline character, `\n`.)</span></span>|`\r\n(\w+)`|<span data-ttu-id="efb3c-136">"\r\nThese are\ntwo lines." 中的 "\r\nThese"</span><span class="sxs-lookup"><span data-stu-id="efb3c-136">"\r\nThese" in "\r\nThese are\ntwo lines."</span></span>|  
+|`\v`|<span data-ttu-id="efb3c-137">比對垂直定位點 \u000B。</span><span class="sxs-lookup"><span data-stu-id="efb3c-137">Matches a vertical tab, \u000B.</span></span>|`[\v]{2,}`|<span data-ttu-id="efb3c-138">"\v\v\v" 中的 "\v\v\v"</span><span class="sxs-lookup"><span data-stu-id="efb3c-138">"\v\v\v" in "\v\v\v"</span></span>|  
+|`\f`|<span data-ttu-id="efb3c-139">比對換頁字元 \u000C。</span><span class="sxs-lookup"><span data-stu-id="efb3c-139">Matches a form feed, \u000C.</span></span>|`[\f]{2,}`|<span data-ttu-id="efb3c-140">"\f\f\f" 中的 "\f\f\f"</span><span class="sxs-lookup"><span data-stu-id="efb3c-140">"\f\f\f" in "\f\f\f"</span></span>|  
+|`\n`|<span data-ttu-id="efb3c-141">比對新行字元 \u000A。</span><span class="sxs-lookup"><span data-stu-id="efb3c-141">Matches a new line, \u000A.</span></span>|`\r\n(\w+)`|<span data-ttu-id="efb3c-142">"\r\nThese are\ntwo lines." 中的 "\r\nThese"</span><span class="sxs-lookup"><span data-stu-id="efb3c-142">"\r\nThese" in "\r\nThese are\ntwo lines."</span></span>|  
+|`\e`|<span data-ttu-id="efb3c-143">比對逸出字元 \u001B。</span><span class="sxs-lookup"><span data-stu-id="efb3c-143">Matches an escape, \u001B.</span></span>|`\e`|<span data-ttu-id="efb3c-144">"\x001B" 中的 "\x001B"</span><span class="sxs-lookup"><span data-stu-id="efb3c-144">"\x001B" in "\x001B"</span></span>|  
+|<span data-ttu-id="efb3c-145">`\` *nnn*</span><span class="sxs-lookup"><span data-stu-id="efb3c-145">`\` *nnn*</span></span>|<span data-ttu-id="efb3c-146">使用八進位表示法指定字元 (*nnn* 由兩位數或三位數組成)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-146">Uses octal representation to specify a character (*nnn* consists of two or three digits).</span></span>|`\w\040\w`|<span data-ttu-id="efb3c-147">"a b", "c d" in</span><span class="sxs-lookup"><span data-stu-id="efb3c-147">"a b", "c d" in</span></span><br /><br /> <span data-ttu-id="efb3c-148">"a bc d"</span><span class="sxs-lookup"><span data-stu-id="efb3c-148">"a bc d"</span></span>|  
+|<span data-ttu-id="efb3c-149">`\x` *nn*</span><span class="sxs-lookup"><span data-stu-id="efb3c-149">`\x` *nn*</span></span>|<span data-ttu-id="efb3c-150">使用十六進位表示指定字元 (*nn* 由剛好兩位數組成)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-150">Uses hexadecimal representation to specify a character (*nn* consists of exactly two digits).</span></span>|`\w\x20\w`|<span data-ttu-id="efb3c-151">"a b", "c d" in</span><span class="sxs-lookup"><span data-stu-id="efb3c-151">"a b", "c d" in</span></span><br /><br /> <span data-ttu-id="efb3c-152">"a bc d"</span><span class="sxs-lookup"><span data-stu-id="efb3c-152">"a bc d"</span></span>|  
+|<span data-ttu-id="efb3c-153">`\c` *X*</span><span class="sxs-lookup"><span data-stu-id="efb3c-153">`\c` *X*</span></span><br /><br /> <span data-ttu-id="efb3c-154">`\c` *x*</span><span class="sxs-lookup"><span data-stu-id="efb3c-154">`\c` *x*</span></span>|<span data-ttu-id="efb3c-155">比對 *X* 或 *x*所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。</span><span class="sxs-lookup"><span data-stu-id="efb3c-155">Matches the ASCII control character that is specified by *X* or *x*, where *X* or *x* is the letter of the control character.</span></span>|`\cC`|<span data-ttu-id="efb3c-156">"\x0003" (Ctrl-C) 中的 "\x0003"</span><span class="sxs-lookup"><span data-stu-id="efb3c-156">"\x0003" in "\x0003" (Ctrl-C)</span></span>|  
+|<span data-ttu-id="efb3c-157">`\u` *nnnn*</span><span class="sxs-lookup"><span data-stu-id="efb3c-157">`\u` *nnnn*</span></span>|<span data-ttu-id="efb3c-158">使用十六進位表示比對 Unicode 字元 (剛好四位數，如 *nnnn*所表示)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-158">Matches a Unicode character by using hexadecimal representation (exactly four digits, as represented by *nnnn*).</span></span>|`\w\u0020\w`|<span data-ttu-id="efb3c-159">"a b", "c d" in</span><span class="sxs-lookup"><span data-stu-id="efb3c-159">"a b", "c d" in</span></span><br /><br /> <span data-ttu-id="efb3c-160">"a bc d"</span><span class="sxs-lookup"><span data-stu-id="efb3c-160">"a bc d"</span></span>|  
+|`\`|<span data-ttu-id="efb3c-161">當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-161">When followed by a character that is not recognized as an escaped character in this and other tables in this topic, matches that character.</span></span> <span data-ttu-id="efb3c-162">例如， `\*` 與 `\x2A`相同，而 `\.` 與 `\x2E`相同。</span><span class="sxs-lookup"><span data-stu-id="efb3c-162">For example, `\*` is the same as `\x2A`, and `\.` is the same as `\x2E`.</span></span> <span data-ttu-id="efb3c-163">這可讓規則運算式引擎釐清語言項目 (例如\*或？) 和字元常值 (由`\*`或`\?`)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-163">This allows the regular expression engine to disambiguate language elements (such as \* or ?) and character literals (represented by `\*` or `\?`).</span></span>|`\d+[\+-x\*]\d+`|<span data-ttu-id="efb3c-164">"2 + 2"和"3\*9" 中"(2+2) \* 3\*9"</span><span class="sxs-lookup"><span data-stu-id="efb3c-164">"2+2" and "3\*9" in "(2+2) \* 3\*9"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-165">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-165">Back to top</span></span>](#top)  
   
 <a name="character_classes"></a>   
-## 字元類別  
- 字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
+## <a name="character-classes"></a><span data-ttu-id="efb3c-166">字元類別</span><span class="sxs-lookup"><span data-stu-id="efb3c-166">Character Classes</span></span>  
+ <span data-ttu-id="efb3c-167">字元類別會比對一組字元中的任何一個字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-167">A character class matches any one of a set of characters.</span></span> <span data-ttu-id="efb3c-168">字元類別包含下表列出的語言項目。</span><span class="sxs-lookup"><span data-stu-id="efb3c-168">Character classes include the language elements listed in the following table.</span></span> <span data-ttu-id="efb3c-169">如需詳細資訊，請參閱 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-169">For more information, see [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span></span>  
   
-|字元類別|描述|模式|符合|  
-|----------|--------|--------|--------|  
-|`[` *character\_group* `]`|比對 *character\_group* 中的任何單一字元。 根據預設，比對會區分大小寫。|`[ae]`|"gray" 中的 "a"<br /><br /> "lane" 中的 "a"、"e"|  
-|`[^` *character\_group* `]`|否定：比對不在 *character\_group* 中的任何單一字元。 根據預設，*character\_group* 中的字元會區分大小寫。|`[^aei]`|"reign" 中的 "r"、"g"、"n"|  
-|`[` *第一* `-` *last* `]`|字元範圍：比對從 *first* 至 *last* 範圍內的任何單一字元。|`[A-Z]`|"AB123" 中的 "A"、"B"|  
-|`.`|萬用字元：比對除 \\n 以外的任何單一字元。<br /><br /> 若要比對常值句號字元 \(. 或 `\u002E`\)，您必須在前面加上逸出字元 \(`\.`\)。|`a.e`|"nave" 中的 "ave"<br /><br /> "water" 中的 "ate"|  
-|`\p{` *name* `}`|比對 Unicode 一般分類中或 *name* 指定之具名區塊中的任何單一字元。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"City Lights" 中的 "C"、"L"<br /><br /> "ДЖem" 中的 "Д"、"Ж"|  
-|`\P{` *name* `}`|比對不在 Unicode 一般分類中或 *name* 所指定之具名區塊中的任何單一字元。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"City" 中的 "i"、"t"、"y"<br /><br /> "ДЖem" 中的 "e"、"m"|  
-|`\w`|比對任何文字字元。|`\w`|"ID A1.3" 中的 "I"、"D"、"A"、"1"、"3"|  
-|`\W`|比對任何非文字字元。|`\W`|"ID A1.3" 中的 " "、"."|  
-|`\s`|比對任何泛空白字元。|`\w\s`|"ID A1.3" 中的 "D "|  
-|`\S`|比對任何非泛空白字元。|`\s\S`|"int \_\_ctr" 中的 " \_"|  
-|`\d`|比對任何十進位數字。|`\d`|"4 \= IV" 中的 "4"|  
-|`\D`|比對十進位數字以外的任何字元。|`\D`|"4 \= IV" 中的 " "、"\="、" "、"I"、"V"|  
+|<span data-ttu-id="efb3c-170">字元類別</span><span class="sxs-lookup"><span data-stu-id="efb3c-170">Character class</span></span>|<span data-ttu-id="efb3c-171">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-171">Description</span></span>|<span data-ttu-id="efb3c-172">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-172">Pattern</span></span>|<span data-ttu-id="efb3c-173">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-173">Matches</span></span>|  
+|---------------------|-----------------|-------------|-------------|  
+|<span data-ttu-id="efb3c-174">`[` *character_group* `]`</span><span class="sxs-lookup"><span data-stu-id="efb3c-174">`[` *character_group* `]`</span></span>|<span data-ttu-id="efb3c-175">比對 *character_group*中的任何單一字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-175">Matches any single character in *character_group*.</span></span> <span data-ttu-id="efb3c-176">根據預設，比對會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="efb3c-176">By default, the match is case-sensitive.</span></span>|`[ae]`|<span data-ttu-id="efb3c-177">"gray" 中的 "a"</span><span class="sxs-lookup"><span data-stu-id="efb3c-177">"a" in "gray"</span></span><br /><br /> <span data-ttu-id="efb3c-178">"lane" 中的 "a"、"e"</span><span class="sxs-lookup"><span data-stu-id="efb3c-178">"a", "e" in "lane"</span></span>|  
+|<span data-ttu-id="efb3c-179">`[^` *character_group* `]`</span><span class="sxs-lookup"><span data-stu-id="efb3c-179">`[^` *character_group* `]`</span></span>|<span data-ttu-id="efb3c-180">否定：比對不在 *character_group*中的任何單一字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-180">Negation: Matches any single character that is not in *character_group*.</span></span> <span data-ttu-id="efb3c-181">根據預設， *character_group* 中的字元會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="efb3c-181">By default, characters in *character_group* are case-sensitive.</span></span>|`[^aei]`|<span data-ttu-id="efb3c-182">"reign" 中的 "r"、"g"、"n"</span><span class="sxs-lookup"><span data-stu-id="efb3c-182">"r", "g", "n" in "reign"</span></span>|  
+|<span data-ttu-id="efb3c-183">`[` *第一* `-` *last* `]`</span><span class="sxs-lookup"><span data-stu-id="efb3c-183">`[` *first* `-` *last* `]`</span></span>|<span data-ttu-id="efb3c-184">字元範圍：比對從 *first* 至 *last*範圍內的任何單一字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-184">Character range: Matches any single character in the range from *first* to *last*.</span></span>|`[A-Z]`|<span data-ttu-id="efb3c-185">"AB123" 中的 "A"、"B"</span><span class="sxs-lookup"><span data-stu-id="efb3c-185">"A", "B" in "AB123"</span></span>|  
+|`.`|<span data-ttu-id="efb3c-186">萬用字元：比對除 \n 以外的任何單一字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-186">Wildcard: Matches any single character except \n.</span></span><br /><br /> <span data-ttu-id="efb3c-187">若要比對常值句號字元 (.</span><span class="sxs-lookup"><span data-stu-id="efb3c-187">To match a literal period character (.</span></span> <span data-ttu-id="efb3c-188">或 `\u002E`)，您必須在前面加上逸出字元 (`\.`)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-188">or `\u002E`), you must precede it with the escape character (`\.`).</span></span>|`a.e`|<span data-ttu-id="efb3c-189">"nave" 中的 "ave"</span><span class="sxs-lookup"><span data-stu-id="efb3c-189">"ave" in "nave"</span></span><br /><br /> <span data-ttu-id="efb3c-190">"water" 中的 "ate"</span><span class="sxs-lookup"><span data-stu-id="efb3c-190">"ate" in "water"</span></span>|  
+|<span data-ttu-id="efb3c-191">`\p{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="efb3c-191">`\p{` *name* `}`</span></span>|<span data-ttu-id="efb3c-192">比對 Unicode 一般分類中或 *name*指定之具名區塊中的任何單一字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-192">Matches any single character in the Unicode general category or named block specified by *name*.</span></span>|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|<span data-ttu-id="efb3c-193">"City Lights" 中的 "C"、"L"</span><span class="sxs-lookup"><span data-stu-id="efb3c-193">"C", "L" in "City Lights"</span></span><br /><br /> <span data-ttu-id="efb3c-194">"ДЖem" 中的 "Д"、"Ж"</span><span class="sxs-lookup"><span data-stu-id="efb3c-194">"Д", "Ж" in "ДЖem"</span></span>|  
+|<span data-ttu-id="efb3c-195">`\P{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="efb3c-195">`\P{` *name* `}`</span></span>|<span data-ttu-id="efb3c-196">比對不在 Unicode 一般分類中或 *name*所指定之具名區塊中的任何單一字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-196">Matches any single character that is not in the Unicode general category or named block specified by *name*.</span></span>|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|<span data-ttu-id="efb3c-197">"City" 中的 "i"、"t"、"y"</span><span class="sxs-lookup"><span data-stu-id="efb3c-197">"i", "t", "y" in "City"</span></span><br /><br /> <span data-ttu-id="efb3c-198">"ДЖem" 中的 "e"、"m"</span><span class="sxs-lookup"><span data-stu-id="efb3c-198">"e", "m" in "ДЖem"</span></span>|  
+|`\w`|<span data-ttu-id="efb3c-199">比對任何文字字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-199">Matches any word character.</span></span>|`\w`|<span data-ttu-id="efb3c-200">"ID A1.3" 中的 "I"、"D"、"A"、"1"、"3"</span><span class="sxs-lookup"><span data-stu-id="efb3c-200">"I", "D", "A", "1", "3" in "ID A1.3"</span></span>|  
+|`\W`|<span data-ttu-id="efb3c-201">比對任何非文字字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-201">Matches any non-word character.</span></span>|`\W`|<span data-ttu-id="efb3c-202">"ID A1.3" 中的 " "、"."</span><span class="sxs-lookup"><span data-stu-id="efb3c-202">" ", "." in "ID A1.3"</span></span>|  
+|`\s`|<span data-ttu-id="efb3c-203">比對任何泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-203">Matches any white-space character.</span></span>|`\w\s`|<span data-ttu-id="efb3c-204">"ID A1.3" 中的 "D "</span><span class="sxs-lookup"><span data-stu-id="efb3c-204">"D " in "ID A1.3"</span></span>|  
+|`\S`|<span data-ttu-id="efb3c-205">比對任何非泛空白字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-205">Matches any non-white-space character.</span></span>|`\s\S`|<span data-ttu-id="efb3c-206">"int \__ctr" 中的 " _"</span><span class="sxs-lookup"><span data-stu-id="efb3c-206">" _" in "int \__ctr"</span></span>|  
+|`\d`|<span data-ttu-id="efb3c-207">比對任何十進位數字。</span><span class="sxs-lookup"><span data-stu-id="efb3c-207">Matches any decimal digit.</span></span>|`\d`|<span data-ttu-id="efb3c-208">"4 = IV" 中的 "4"</span><span class="sxs-lookup"><span data-stu-id="efb3c-208">"4" in "4 = IV"</span></span>|  
+|`\D`|<span data-ttu-id="efb3c-209">比對十進位數字以外的任何字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-209">Matches any character other than a decimal digit.</span></span>|`\D`|<span data-ttu-id="efb3c-210">"4 = IV" 中的 " "、"="、" "、"I"、"V"</span><span class="sxs-lookup"><span data-stu-id="efb3c-210">" ", "=", " ", "I", "V" in "4 = IV"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-211">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-211">Back to top</span></span>](#top)  
   
 <a name="atomic_zerowidth_assertions"></a>   
-## 錨點  
- 錨點 \(即原子零寬度判斷提示\) 會造成根據字串中的目前位置來決定比對成功或失敗，但不會造成引擎在字串中前進或是取用字元。 下表列出的 metacharacter 是錨點。 如需詳細資訊，請參閱[錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。  
+## <a name="anchors"></a><span data-ttu-id="efb3c-212">錨點</span><span class="sxs-lookup"><span data-stu-id="efb3c-212">Anchors</span></span>  
+ <span data-ttu-id="efb3c-213">錨點 (即原子零寬度判斷提示) 會造成根據字串中的目前位置來決定比對成功或失敗，但不會造成引擎在字串中前進或是取用字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-213">Anchors, or atomic zero-width assertions, cause a match to succeed or fail depending on the current position in the string, but they do not cause the engine to advance through the string or consume characters.</span></span> <span data-ttu-id="efb3c-214">下表列出的 metacharacter 是錨點。</span><span class="sxs-lookup"><span data-stu-id="efb3c-214">The metacharacters listed in the following table are anchors.</span></span> <span data-ttu-id="efb3c-215">如需詳細資訊，請參閱 [錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-215">For more information, see [Anchors](../../../docs/standard/base-types/anchors-in-regular-expressions.md).</span></span>  
   
-|判斷提示|描述|模式|符合|  
-|----------|--------|--------|--------|  
-|`^`|必須從字串開頭或行首來開始比對。|`^\d{3}`|"901\-333\-" 中的<br /><br /> "901\-333\-"|  
-|`$`|比對必須發生在字串結尾，或發生在字行或字串結尾的 `\n` 之前。|`-\d{3}$`|"\-333\-333\-" 中的<br /><br /> "\-333"|  
-|`\A`|比對必須發生在字串開頭。|`\A\d{3}`|"901\-333\-" 中的<br /><br /> "901\-333\-"|  
-|`\Z`|比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。|`-\d{3}\Z`|"\-333\-333\-" 中的<br /><br /> "\-333"|  
-|`\z`|比對必須發生在字串結尾。|`-\d{3}\z`|"\-333\-333\-" 中的<br /><br /> "\-333"|  
-|`\G`|比對必須發生在先前比對結束的位置。|`\G\(\d\)`|"\(1\)\(3\)\(5\)\[7\]\(9\)" 中的 "\(1\)"、"\(3\)"、"\(5\)"|  
-|`\b`|比對必須發生在 `\w` \(英數\) 和 `\W` \(非英數\) 字元之間的界限上。|`\b\w+\s\w+\b`|"them theme them them" 中的 "them theme"、"them them"|  
-|`\B`|比對不可以發生在 `\b` 界限上。|`\Bend\w*\b`|"end sends endure lender" 中的 "ends"、"ender"|  
+|<span data-ttu-id="efb3c-216">判斷提示</span><span class="sxs-lookup"><span data-stu-id="efb3c-216">Assertion</span></span>|<span data-ttu-id="efb3c-217">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-217">Description</span></span>|<span data-ttu-id="efb3c-218">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-218">Pattern</span></span>|<span data-ttu-id="efb3c-219">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-219">Matches</span></span>|  
+|---------------|-----------------|-------------|-------------|  
+|`^`|<span data-ttu-id="efb3c-220">必須從字串開頭或行首來開始比對。</span><span class="sxs-lookup"><span data-stu-id="efb3c-220">The match must start at the beginning of the string or line.</span></span>|`^\d{3}`|<span data-ttu-id="efb3c-221">"901-333-" 中的</span><span class="sxs-lookup"><span data-stu-id="efb3c-221">"901" in</span></span><br /><br /> <span data-ttu-id="efb3c-222">"901-333-"</span><span class="sxs-lookup"><span data-stu-id="efb3c-222">"901-333-"</span></span>|  
+|`$`|<span data-ttu-id="efb3c-223">比對必須發生在字串結尾，或發生在字行或字串結尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="efb3c-223">The match must occur at the end of the string or before `\n` at the end of the line or string.</span></span>|`-\d{3}$`|<span data-ttu-id="efb3c-224">"-333-333-" 中的</span><span class="sxs-lookup"><span data-stu-id="efb3c-224">"-333" in</span></span><br /><br /> <span data-ttu-id="efb3c-225">"-333"</span><span class="sxs-lookup"><span data-stu-id="efb3c-225">"-901-333"</span></span>|  
+|`\A`|<span data-ttu-id="efb3c-226">比對必須發生在字串開頭。</span><span class="sxs-lookup"><span data-stu-id="efb3c-226">The match must occur at the start of the string.</span></span>|`\A\d{3}`|<span data-ttu-id="efb3c-227">"901-333-" 中的</span><span class="sxs-lookup"><span data-stu-id="efb3c-227">"901" in</span></span><br /><br /> <span data-ttu-id="efb3c-228">"901-333-"</span><span class="sxs-lookup"><span data-stu-id="efb3c-228">"901-333-"</span></span>|  
+|`\Z`|<span data-ttu-id="efb3c-229">比對必須發生在字串結尾，或發生在字串結尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="efb3c-229">The match must occur at the end of the string or before `\n` at the end of the string.</span></span>|`-\d{3}\Z`|<span data-ttu-id="efb3c-230">"-333-333-" 中的</span><span class="sxs-lookup"><span data-stu-id="efb3c-230">"-333" in</span></span><br /><br /> <span data-ttu-id="efb3c-231">"-333"</span><span class="sxs-lookup"><span data-stu-id="efb3c-231">"-901-333"</span></span>|  
+|`\z`|<span data-ttu-id="efb3c-232">比對必須發生在字串結尾。</span><span class="sxs-lookup"><span data-stu-id="efb3c-232">The match must occur at the end of the string.</span></span>|`-\d{3}\z`|<span data-ttu-id="efb3c-233">"-333-333-" 中的</span><span class="sxs-lookup"><span data-stu-id="efb3c-233">"-333" in</span></span><br /><br /> <span data-ttu-id="efb3c-234">"-333"</span><span class="sxs-lookup"><span data-stu-id="efb3c-234">"-901-333"</span></span>|  
+|`\G`|<span data-ttu-id="efb3c-235">比對必須發生在先前比對結束的位置。</span><span class="sxs-lookup"><span data-stu-id="efb3c-235">The match must occur at the point where the previous match ended.</span></span>|`\G\(\d\)`|<span data-ttu-id="efb3c-236">"(1)(3)(5)[7](9\)" 中的 "(1)"、"(3)"、"(5)"</span><span class="sxs-lookup"><span data-stu-id="efb3c-236">"(1)", "(3)", "(5)" in "(1)(3)(5)[7](9\)"</span></span>|  
+|`\b`|<span data-ttu-id="efb3c-237">比對必須發生在 `\w` (英數) 和 `\W` (非英數) 字元之間的界限上。</span><span class="sxs-lookup"><span data-stu-id="efb3c-237">The match must occur on a boundary between a `\w` (alphanumeric) and a `\W` (nonalphanumeric) character.</span></span>|`\b\w+\s\w+\b`|<span data-ttu-id="efb3c-238">"them theme them them" 中的 "them theme"、"them them"</span><span class="sxs-lookup"><span data-stu-id="efb3c-238">"them theme", "them them" in "them theme them them"</span></span>|  
+|`\B`|<span data-ttu-id="efb3c-239">比對不可以發生在 `\b` 界限上。</span><span class="sxs-lookup"><span data-stu-id="efb3c-239">The match must not occur on a `\b` boundary.</span></span>|`\Bend\w*\b`|<span data-ttu-id="efb3c-240">"end sends endure lender" 中的 "ends"、"ender"</span><span class="sxs-lookup"><span data-stu-id="efb3c-240">"ends", "ender" in "end sends endure lender"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-241">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-241">Back to top</span></span>](#top)  
   
 <a name="grouping_constructs"></a>   
-## 群組建構  
- 群組建構會描寫規則運算式的子運算式，而且通常會擷取輸入字串的子字串。 群組建構包含下表列出的語言項目。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+## <a name="grouping-constructs"></a><span data-ttu-id="efb3c-242">群組建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-242">Grouping Constructs</span></span>  
+ <span data-ttu-id="efb3c-243">群組建構會描寫規則運算式的子運算式，而且通常會擷取輸入字串的子字串。</span><span class="sxs-lookup"><span data-stu-id="efb3c-243">Grouping constructs delineate subexpressions of a regular expression and typically capture substrings of an input string.</span></span> <span data-ttu-id="efb3c-244">群組建構包含下表列出的語言項目。</span><span class="sxs-lookup"><span data-stu-id="efb3c-244">Grouping constructs include the language elements listed in the following table.</span></span> <span data-ttu-id="efb3c-245">如需詳細資訊，請參閱 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-245">For more information, see [Grouping Constructs](grouping-constructs-in-regular-expressions.md).</span></span>  
   
-|群組建構|描述|模式|符合|  
-|----------|--------|--------|--------|  
-|`(` *子運算式* `)`|擷取符合的子運算式，並指派以一為起始的序號給它。|`(\w)\1`|"deep" 中的 "ee"|  
-|`(?<` *名稱* `>` *子運算式* `)`|將符合的子運算式擷取到具名群組中。|`(?<double>\w)\k<double>`|"deep" 中的 "ee"|  
-|`(?<` *名稱1* `-` *名稱2* `>` *子運算式* `)`|定義對稱群組定義。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)中的＜對稱群組定義＞一節。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"3\+2^\(\(1\-3\)\*\(3\-1\)\)" 中的 "\(\(1\-3\)\*\(3\-1\)\)"|  
-|`(?:` *子運算式* `)`|定義非擷取型群組。|`Write(?:Line)?`|"Console.WriteLine\(\)" 中的 "WriteLine"<br /><br /> "Console.Write\(value\)" 中的 "Write"|  
-|`(?imnsx-imnsx:` *子運算式* `)`|套用或停用 *subexpression* 內指定的選項。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|"A12xl A12XL a12xl" 中的 "A12xl"、"A12XL"|  
-|`(?=` *子運算式* `)`|零寬度右合樣 \(Positive Lookahead\) 判斷提示。|`\w+(?=\.)`|"He is. The dog ran. The sun is out." 中的 "is"、"ran" 和 "out"|  
-|`(?!` *子運算式* `)`|零寬度右不合樣 \(Negative Lookahead\) 判斷提示。|`\b(?!un)\w+\b`|"unsure sure unity used" 中的 "sure"、"used"|  
-|`(?<=` *子運算式* `)`|零寬度左合樣 \(Positive Lookbehind\) 判斷提示。|`(?<=19)\d{2}\b`|"1851 1999 1950 1905 2003" 中的 "99"、"50"、"05"|  
-|`(?<!` *子運算式* `)`|零寬度左不合樣 \(Negative Lookbehind\) 判斷提示。|`(?<!19)\d{2}\b`|"1851 1999 1950 1905 2003" 中的 "51"、"03"|  
-|`(?>` *子運算式* `)`|非回溯子運算式，也稱為窮盡 \(Greedy\) 子運算式。|`[13579](?>A+B+)`|"1ABB 3ABBC 5AB 5AC" 中的 "1ABB"、"3ABB" 和 "5AB"|  
+|<span data-ttu-id="efb3c-246">群組建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-246">Grouping construct</span></span>|<span data-ttu-id="efb3c-247">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-247">Description</span></span>|<span data-ttu-id="efb3c-248">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-248">Pattern</span></span>|<span data-ttu-id="efb3c-249">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-249">Matches</span></span>|  
+|------------------------|-----------------|-------------|-------------|  
+|<span data-ttu-id="efb3c-250">`(` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-250">`(` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-251">擷取符合的子運算式，並指派以一為起始的序號給它。</span><span class="sxs-lookup"><span data-stu-id="efb3c-251">Captures the matched subexpression and assigns it a one-based ordinal number.</span></span>|`(\w)\1`|<span data-ttu-id="efb3c-252">"deep" 中的 "ee"</span><span class="sxs-lookup"><span data-stu-id="efb3c-252">"ee" in "deep"</span></span>|  
+|<span data-ttu-id="efb3c-253">`(?<` *name* `>` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-253">`(?<` *name* `>` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-254">將符合的子運算式擷取到具名群組中。</span><span class="sxs-lookup"><span data-stu-id="efb3c-254">Captures the matched subexpression into a named group.</span></span>|`(?<double>\w)\k<double>`|<span data-ttu-id="efb3c-255">"deep" 中的 "ee"</span><span class="sxs-lookup"><span data-stu-id="efb3c-255">"ee" in "deep"</span></span>|  
+|<span data-ttu-id="efb3c-256">`(?<` *名稱1* `-` *名稱2* `>` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-256">`(?<` *name1* `-` *name2* `>` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-257">定義對稱群組定義。</span><span class="sxs-lookup"><span data-stu-id="efb3c-257">Defines a balancing group definition.</span></span> <span data-ttu-id="efb3c-258">如需詳細資訊，請參閱 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)中的＜對稱群組定義＞一節。</span><span class="sxs-lookup"><span data-stu-id="efb3c-258">For more information, see the "Balancing Group Definition" section in [Grouping Constructs](grouping-constructs-in-regular-expressions.md).</span></span>|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|<span data-ttu-id="efb3c-259">"3+2^((1-3)\*(3-1))" 中的 "((1-3)\*(3-1))"</span><span class="sxs-lookup"><span data-stu-id="efb3c-259">"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"</span></span>|  
+|<span data-ttu-id="efb3c-260">`(?:` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-260">`(?:` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-261">定義非擷取型群組。</span><span class="sxs-lookup"><span data-stu-id="efb3c-261">Defines a noncapturing group.</span></span>|`Write(?:Line)?`|<span data-ttu-id="efb3c-262">"Console.WriteLine()" 中的 "WriteLine"</span><span class="sxs-lookup"><span data-stu-id="efb3c-262">"WriteLine" in "Console.WriteLine()"</span></span><br /><br /> <span data-ttu-id="efb3c-263">"Console.Write(value)" 中的 "Write"</span><span class="sxs-lookup"><span data-stu-id="efb3c-263">"Write" in "Console.Write(value)"</span></span>|  
+|<span data-ttu-id="efb3c-264">`(?imnsx-imnsx:` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-264">`(?imnsx-imnsx:` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-265">套用或停用 *subexpression*內指定的選項。</span><span class="sxs-lookup"><span data-stu-id="efb3c-265">Applies or disables the specified options within *subexpression*.</span></span> <span data-ttu-id="efb3c-266">如需詳細資訊，請參閱 [Regular Expression Options](regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-266">For more information, see [Regular Expression Options](regular-expression-options.md).</span></span>|`A\d{2}(?i:\w+)\b`|<span data-ttu-id="efb3c-267">"A12xl A12XL a12xl" 中的 "A12xl"、"A12XL"</span><span class="sxs-lookup"><span data-stu-id="efb3c-267">"A12xl", "A12XL" in "A12xl A12XL a12xl"</span></span>|  
+|<span data-ttu-id="efb3c-268">`(?=` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-268">`(?=` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-269">零寬度右合樣 (Positive Lookahead) 判斷提示。</span><span class="sxs-lookup"><span data-stu-id="efb3c-269">Zero-width positive lookahead assertion.</span></span>|`\w+(?=\.)`|<span data-ttu-id="efb3c-270">"He is.</span><span class="sxs-lookup"><span data-stu-id="efb3c-270">"is", "ran", and "out" in "He is.</span></span> <span data-ttu-id="efb3c-271">The dog ran.</span><span class="sxs-lookup"><span data-stu-id="efb3c-271">The dog ran.</span></span> <span data-ttu-id="efb3c-272">The sun is out." 中的 "is"、"ran" 和 "out"</span><span class="sxs-lookup"><span data-stu-id="efb3c-272">The sun is out."</span></span>|  
+|<span data-ttu-id="efb3c-273">`(?!` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-273">`(?!` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-274">零寬度右不合樣 (Negative Lookahead) 判斷提示。</span><span class="sxs-lookup"><span data-stu-id="efb3c-274">Zero-width negative lookahead assertion.</span></span>|`\b(?!un)\w+\b`|<span data-ttu-id="efb3c-275">"unsure sure unity used" 中的 "sure"、"used"</span><span class="sxs-lookup"><span data-stu-id="efb3c-275">"sure", "used" in "unsure sure unity used"</span></span>|  
+|<span data-ttu-id="efb3c-276">`(?<=` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-276">`(?<=` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-277">零寬度左合樣 (Positive Lookbehind) 判斷提示。</span><span class="sxs-lookup"><span data-stu-id="efb3c-277">Zero-width positive lookbehind assertion.</span></span>|`(?<=19)\d{2}\b`|<span data-ttu-id="efb3c-278">"1851 1999 1950 1905 2003" 中的 "99"、"50"、"05"</span><span class="sxs-lookup"><span data-stu-id="efb3c-278">"99", "50", "05" in "1851 1999 1950 1905 2003"</span></span>|  
+|<span data-ttu-id="efb3c-279">`(?<!` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-279">`(?<!` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-280">零寬度左不合樣 (Negative Lookbehind) 判斷提示。</span><span class="sxs-lookup"><span data-stu-id="efb3c-280">Zero-width negative lookbehind assertion.</span></span>|`(?<!19)\d{2}\b`|<span data-ttu-id="efb3c-281">"1851 1999 1950 1905 2003" 中的 "51"、"03"</span><span class="sxs-lookup"><span data-stu-id="efb3c-281">"51", "03" in "1851 1999 1950 1905 2003"</span></span>|  
+|<span data-ttu-id="efb3c-282">`(?>` *子運算式* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-282">`(?>` *subexpression* `)`</span></span>|<span data-ttu-id="efb3c-283">非回溯子運算式，也稱為窮盡 (Greedy) 子運算式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-283">Nonbacktracking (or "greedy") subexpression.</span></span>|`[13579](?>A+B+)`|<span data-ttu-id="efb3c-284">"1ABB 3ABBC 5AB 5AC" 中的 "1ABB"、"3ABB" 和 "5AB"</span><span class="sxs-lookup"><span data-stu-id="efb3c-284">"1ABB", "3ABB", and "5AB" in "1ABB 3ABBC 5AB 5AC"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-285">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-285">Back to top</span></span>](#top)  
   
 <a name="quantifiers"></a>   
-## 數量詞  
- 數量詞指定上一個項目 \(可能是字元、群組或字元類別\) 必須在輸入字串中出現多少次，才算符合。 數量詞包含下表列出的語言項目。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+## <a name="quantifiers"></a><span data-ttu-id="efb3c-286">數量詞</span><span class="sxs-lookup"><span data-stu-id="efb3c-286">Quantifiers</span></span>  
+ <span data-ttu-id="efb3c-287">數量詞指定上一個項目 (可能是字元、群組或字元類別) 必須在輸入字串中出現多少次，才算符合。</span><span class="sxs-lookup"><span data-stu-id="efb3c-287">A quantifier specifies how many instances of the previous element (which can be a character, a group, or a character class) must be present in the input string for a match to occur.</span></span> <span data-ttu-id="efb3c-288">數量詞包含下表列出的語言項目。</span><span class="sxs-lookup"><span data-stu-id="efb3c-288">Quantifiers include the language elements listed in the following table.</span></span> <span data-ttu-id="efb3c-289">如需詳細資訊，請參閱 [Quantifiers](quantifiers-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-289">For more information, see [Quantifiers](quantifiers-in-regular-expressions.md).</span></span>  
   
-|數量詞|描述|模式|符合|  
-|---------|--------|--------|--------|  
-|`*`|比對上一個項目零次或多次。|`\d*\.\d`|".0"、"19.9"、"219.9"|  
-|`+`|比對上一個項目一次或多次。|`"be+"`|"been" 中的 "bee"、"bent" 中的 "be"|  
-|`?`|比對上一個項目零次或一次。|`"rai?n"`|"ran"、"rain"|  
-|`{` *n* `}`|比對上一個項目剛好 *n* 次。|`",\d{3}"`|"1,043.6" 中的 ",043"、"9,876,543,210" 中的 ",876"、",543" 和 ",210"|  
-|`{` *n* `,}`|比對上一個項目至少 *n* 次。|`"\d{2,}"`|"166"、"29"、"1930"|  
-|`{` *n* `,` *m* `}`|比對上一個項目至少 *n* 次，但不超過 *m* 次。|`"\d{3,5}"`|"166"、"17668"<br /><br /> "193024" 中的 "19302"|  
-|`*?`|比對上一個項目零次以上，但越少次越好。|`\d*?\.\d`|".0"、"19.9"、"219.9"|  
-|`+?`|比對上一個項目一次或多次，但越少次越好。|`"be+?"`|"been" 中的 "be"、"bent" 中的 "be"|  
-|`??`|比對上一個項目零次或一次，但越少次越好。|`"rai??n"`|"ran"、"rain"|  
-|`{` *n* `}?`|比對前一個項目剛好 *n* 次。|`",\d{3}?"`|"1,043.6" 中的 ",043"、"9,876,543,210" 中的 ",876"、",543" 和 ",210"|  
-|`{` *n* `,}?`|比對前一個項目至少 *n* 次，但愈少次愈好。|`"\d{2,}?"`|"166"、"29"、"1930"|  
-|`{` *n* `,` *m* `}?`|比對前一個項目*n* 次到 *m* 次，但越少次越好。|`"\d{3,5}?"`|"166"、"17668"<br /><br /> "193024" 中的 "193"、"024"|  
+|<span data-ttu-id="efb3c-290">數量詞</span><span class="sxs-lookup"><span data-stu-id="efb3c-290">Quantifier</span></span>|<span data-ttu-id="efb3c-291">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-291">Description</span></span>|<span data-ttu-id="efb3c-292">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-292">Pattern</span></span>|<span data-ttu-id="efb3c-293">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-293">Matches</span></span>|  
+|----------------|-----------------|-------------|-------------|  
+|`*`|<span data-ttu-id="efb3c-294">比對上一個項目零次或多次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-294">Matches the previous element zero or more times.</span></span>|`\d*\.\d`|<span data-ttu-id="efb3c-295">".0"、"19.9"、"219.9"</span><span class="sxs-lookup"><span data-stu-id="efb3c-295">".0", "19.9", "219.9"</span></span>|  
+|`+`|<span data-ttu-id="efb3c-296">比對上一個項目一次或多次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-296">Matches the previous element one or more times.</span></span>|`"be+"`|<span data-ttu-id="efb3c-297">"been" 中的 "bee"、"bent" 中的 "be"</span><span class="sxs-lookup"><span data-stu-id="efb3c-297">"bee" in "been", "be" in "bent"</span></span>|  
+|`?`|<span data-ttu-id="efb3c-298">比對上一個項目零次或一次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-298">Matches the previous element zero or one time.</span></span>|`"rai?n"`|<span data-ttu-id="efb3c-299">"ran"、"rain"</span><span class="sxs-lookup"><span data-stu-id="efb3c-299">"ran", "rain"</span></span>|  
+|<span data-ttu-id="efb3c-300">`{` *n* `}`</span><span class="sxs-lookup"><span data-stu-id="efb3c-300">`{` *n* `}`</span></span>|<span data-ttu-id="efb3c-301">比對上一個項目剛好 *n* 次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-301">Matches the previous element exactly *n* times.</span></span>|`",\d{3}"`|<span data-ttu-id="efb3c-302">"1,043.6" 中的 ",043"、"9,876,543,210" 中的 ",876"、",543" 和 ",210"</span><span class="sxs-lookup"><span data-stu-id="efb3c-302">",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"</span></span>|  
+|<span data-ttu-id="efb3c-303">`{` *n* `,}`</span><span class="sxs-lookup"><span data-stu-id="efb3c-303">`{` *n* `,}`</span></span>|<span data-ttu-id="efb3c-304">比對上一個項目至少 *n* 次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-304">Matches the previous element at least *n* times.</span></span>|`"\d{2,}"`|<span data-ttu-id="efb3c-305">"166"、"29"、"1930"</span><span class="sxs-lookup"><span data-stu-id="efb3c-305">"166", "29", "1930"</span></span>|  
+|<span data-ttu-id="efb3c-306">`{` *n* `,` *m* `}`</span><span class="sxs-lookup"><span data-stu-id="efb3c-306">`{` *n* `,` *m* `}`</span></span>|<span data-ttu-id="efb3c-307">比對上一個項目至少 *n* 次，但不超過 *m* 次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-307">Matches the previous element at least *n* times, but no more than *m* times.</span></span>|`"\d{3,5}"`|<span data-ttu-id="efb3c-308">"166"、"17668"</span><span class="sxs-lookup"><span data-stu-id="efb3c-308">"166", "17668"</span></span><br /><br /> <span data-ttu-id="efb3c-309">"193024" 中的 "19302"</span><span class="sxs-lookup"><span data-stu-id="efb3c-309">"19302" in "193024"</span></span>|  
+|`*?`|<span data-ttu-id="efb3c-310">比對上一個項目零次以上，但越少次越好。</span><span class="sxs-lookup"><span data-stu-id="efb3c-310">Matches the previous element zero or more times, but as few times as possible.</span></span>|`\d*?\.\d`|<span data-ttu-id="efb3c-311">".0"、"19.9"、"219.9"</span><span class="sxs-lookup"><span data-stu-id="efb3c-311">".0", "19.9", "219.9"</span></span>|  
+|`+?`|<span data-ttu-id="efb3c-312">比對上一個項目一次或多次，但越少次越好。</span><span class="sxs-lookup"><span data-stu-id="efb3c-312">Matches the previous element one or more times, but as few times as possible.</span></span>|`"be+?"`|<span data-ttu-id="efb3c-313">"been" 中的 "be"、"bent" 中的 "be"</span><span class="sxs-lookup"><span data-stu-id="efb3c-313">"be" in "been", "be" in "bent"</span></span>|  
+|`??`|<span data-ttu-id="efb3c-314">比對上一個項目零次或一次，但越少次越好。</span><span class="sxs-lookup"><span data-stu-id="efb3c-314">Matches the previous element zero or one time, but as few times as possible.</span></span>|`"rai??n"`|<span data-ttu-id="efb3c-315">"ran"、"rain"</span><span class="sxs-lookup"><span data-stu-id="efb3c-315">"ran", "rain"</span></span>|  
+|<span data-ttu-id="efb3c-316">`{` *n* `}?`</span><span class="sxs-lookup"><span data-stu-id="efb3c-316">`{` *n* `}?`</span></span>|<span data-ttu-id="efb3c-317">比對前一個項目剛好 *n* 次。</span><span class="sxs-lookup"><span data-stu-id="efb3c-317">Matches the preceding element exactly *n* times.</span></span>|`",\d{3}?"`|<span data-ttu-id="efb3c-318">"1,043.6" 中的 ",043"、"9,876,543,210" 中的 ",876"、",543" 和 ",210"</span><span class="sxs-lookup"><span data-stu-id="efb3c-318">",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"</span></span>|  
+|<span data-ttu-id="efb3c-319">`{` *n* `,}?`</span><span class="sxs-lookup"><span data-stu-id="efb3c-319">`{` *n* `,}?`</span></span>|<span data-ttu-id="efb3c-320">比對上一個項目至少 *n* 次，但愈少次愈好。</span><span class="sxs-lookup"><span data-stu-id="efb3c-320">Matches the previous element at least *n* times, but as few times as possible.</span></span>|`"\d{2,}?"`|<span data-ttu-id="efb3c-321">"166"、"29"、"1930"</span><span class="sxs-lookup"><span data-stu-id="efb3c-321">"166", "29", "1930"</span></span>|  
+|<span data-ttu-id="efb3c-322">`{` *n* `,` *m* `}?`</span><span class="sxs-lookup"><span data-stu-id="efb3c-322">`{` *n* `,` *m* `}?`</span></span>|<span data-ttu-id="efb3c-323">比對前一個項目 *n* 次到 *m* 次，但愈少次愈好。</span><span class="sxs-lookup"><span data-stu-id="efb3c-323">Matches the previous element between *n* and *m* times, but as few times as possible.</span></span>|`"\d{3,5}?"`|<span data-ttu-id="efb3c-324">"166"、"17668"</span><span class="sxs-lookup"><span data-stu-id="efb3c-324">"166", "17668"</span></span><br /><br /> <span data-ttu-id="efb3c-325">"193024" 中的 "193"、"024"</span><span class="sxs-lookup"><span data-stu-id="efb3c-325">"193", "024" in "193024"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-326">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-326">Back to top</span></span>](#top)  
   
 <a name="backreference_constructs"></a>   
-## 反向參考建構  
- 反向參考可於後來在相同規則運算式中再識別先前符合的子運算式。 下表列出 .NET Framework 中的規則運算式所支援的反向參考建構。 如需詳細資訊，請參閱[反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。  
+## <a name="backreference-constructs"></a><span data-ttu-id="efb3c-327">反向參考建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-327">Backreference Constructs</span></span>  
+ <span data-ttu-id="efb3c-328">反向參考可於後來在相同規則運算式中再識別先前符合的子運算式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-328">A backreference allows a previously matched subexpression to be identified subsequently in the same regular expression.</span></span> <span data-ttu-id="efb3c-329">下表列出在.NET 中的規則運算式所支援的反向參考建構。</span><span class="sxs-lookup"><span data-stu-id="efb3c-329">The following table lists the backreference constructs supported by regular expressions in .NET.</span></span> <span data-ttu-id="efb3c-330">如需詳細資訊，請參閱 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-330">For more information, see [Backreference Constructs](backreference-constructs-in-regular-expressions.md).</span></span>  
   
-|反向參考建構|描述|模式|符合|  
-|------------|--------|--------|--------|  
-|`\` *數字*|反向參考。 比對編號子運算式的值。|`(\w)\1`|"seek" 中的 "ee"|  
-|`\k<` *name* `>`|命名的反向參考。 比對具名運算式的值。|`(?<char>\w)\k<char>`|"seek" 中的 "ee"|  
+|<span data-ttu-id="efb3c-331">反向參考建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-331">Backreference construct</span></span>|<span data-ttu-id="efb3c-332">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-332">Description</span></span>|<span data-ttu-id="efb3c-333">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-333">Pattern</span></span>|<span data-ttu-id="efb3c-334">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-334">Matches</span></span>|  
+|-----------------------------|-----------------|-------------|-------------|  
+|<span data-ttu-id="efb3c-335">`\` *數字*</span><span class="sxs-lookup"><span data-stu-id="efb3c-335">`\` *number*</span></span>|<span data-ttu-id="efb3c-336">反向參考。</span><span class="sxs-lookup"><span data-stu-id="efb3c-336">Backreference.</span></span> <span data-ttu-id="efb3c-337">比對編號子運算式的值。</span><span class="sxs-lookup"><span data-stu-id="efb3c-337">Matches the value of a numbered subexpression.</span></span>|`(\w)\1`|<span data-ttu-id="efb3c-338">"seek" 中的 "ee"</span><span class="sxs-lookup"><span data-stu-id="efb3c-338">"ee" in "seek"</span></span>|  
+|<span data-ttu-id="efb3c-339">`\k<` *name* `>`</span><span class="sxs-lookup"><span data-stu-id="efb3c-339">`\k<` *name* `>`</span></span>|<span data-ttu-id="efb3c-340">命名的反向參考。</span><span class="sxs-lookup"><span data-stu-id="efb3c-340">Named backreference.</span></span> <span data-ttu-id="efb3c-341">比對具名運算式的值。</span><span class="sxs-lookup"><span data-stu-id="efb3c-341">Matches the value of a named expression.</span></span>|`(?<char>\w)\k<char>`|<span data-ttu-id="efb3c-342">"seek" 中的 "ee"</span><span class="sxs-lookup"><span data-stu-id="efb3c-342">"ee" in "seek"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-343">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-343">Back to top</span></span>](#top)  
   
 <a name="alternation_constructs"></a>   
-## 交替建構  
- 交替建構會修改規則運算式來啟用二選一比對。 這些建構包含下表列出的語言項目。 如需詳細資訊，請參閱[替代建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。  
+## <a name="alternation-constructs"></a><span data-ttu-id="efb3c-344">交替建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-344">Alternation Constructs</span></span>  
+ <span data-ttu-id="efb3c-345">交替建構會修改規則運算式來啟用二選一比對。</span><span class="sxs-lookup"><span data-stu-id="efb3c-345">Alternation constructs modify a regular expression to enable either/or matching.</span></span> <span data-ttu-id="efb3c-346">這些建構包含下表列出的語言項目。</span><span class="sxs-lookup"><span data-stu-id="efb3c-346">These constructs include the language elements listed in the following table.</span></span> <span data-ttu-id="efb3c-347">如需詳細資訊，請參閱 [Alternation Constructs](alternation-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-347">For more information, see [Alternation Constructs](alternation-constructs-in-regular-expressions.md).</span></span>  
   
-|交替建構|描述|模式|符合|  
-|----------|--------|--------|--------|  
-|`&#124;`|比對由分隔號 \(&#124;\) 字元所隔開的任何一個項目。|`th(e&#124;is&#124;at)`|後面這個字串中的 "the"、"this"："this is the day. "|  
-|`(?(` *運算式* `)` *是* `&#124;` *no* `)`|如果 *expression* 所指定的規則運算式模式相符，則比對 *yes*，否則比對選擇性的 *no* 部分。*expression* 會解譯為零寬度判斷提示。|`(?(A)A\d{2}\b&#124;\b\d{3}\b)`|"A10 C103 910" 中的 "A10"、"910"|  
-|`(?(` *name* `)` *是* `&#124;` *no* `)`|如果 *name* \(具名或編號擷取群組\) 有相符項目，則比對 *yes*，否則比對選擇性的 *no*。|`(?<quoted>")?(?(quoted).+?"&#124;\S+\s)`|"Dogs.jpg "Yiska playing.jpg"" 中的 Dogs.jpg、"Yiska playing.jpg"|  
+|<span data-ttu-id="efb3c-348">交替建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-348">Alternation construct</span></span>|<span data-ttu-id="efb3c-349">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-349">Description</span></span>|<span data-ttu-id="efb3c-350">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-350">Pattern</span></span>|<span data-ttu-id="efb3c-351">相符項</span><span class="sxs-lookup"><span data-stu-id="efb3c-351">Matches</span></span>|  
+|---------------------------|-----------------|-------------|-------------|  
+|<code>&#124;</code>|<span data-ttu-id="efb3c-352">比對由分隔號 (&#124;) 字元所隔開的任何一個元素。</span><span class="sxs-lookup"><span data-stu-id="efb3c-352">Matches any one element separated by the vertical bar (&#124;) character.</span></span>|<code>th(e&#124;is&#124;at)</code>|<span data-ttu-id="efb3c-353">後面這個字串中的 "the"、"this"："this is the day.</span><span class="sxs-lookup"><span data-stu-id="efb3c-353">"the", "this" in "this is the day.</span></span> <span data-ttu-id="efb3c-354">"</span><span class="sxs-lookup"><span data-stu-id="efb3c-354">"</span></span>|  
+|<span data-ttu-id="efb3c-355">`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-355">`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`</span></span>|<span data-ttu-id="efb3c-356">如果 *expression* 所指定的規則運算式模式相符，則比對 *yes* ，否則比對選擇性的 *no* 部分。</span><span class="sxs-lookup"><span data-stu-id="efb3c-356">Matches *yes* if the regular expression pattern designated by *expression* matches; otherwise, matches the optional *no* part.</span></span> <span data-ttu-id="efb3c-357">*expression* 會解譯為零寬度判斷提示。</span><span class="sxs-lookup"><span data-stu-id="efb3c-357">*expression* is interpreted as a zero-width assertion.</span></span>|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|<span data-ttu-id="efb3c-358">"A10 C103 910" 中的 "A10"、"910"</span><span class="sxs-lookup"><span data-stu-id="efb3c-358">"A10", "910" in "A10 C103 910"</span></span>|  
+|<span data-ttu-id="efb3c-359">`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-359">`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`</span></span>|<span data-ttu-id="efb3c-360">如果 *name* (具名或編號擷取群組) 有相符項目，則比對 *yes*，否則比對選擇性的 *no*。</span><span class="sxs-lookup"><span data-stu-id="efb3c-360">Matches *yes* if *name*, a named or numbered capturing group, has a match; otherwise, matches the optional *no*.</span></span>|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|<span data-ttu-id="efb3c-361">"Dogs.jpg "Yiska playing.jpg"" 中的 Dogs.jpg、"Yiska playing.jpg"</span><span class="sxs-lookup"><span data-stu-id="efb3c-361">Dogs.jpg, "Yiska playing.jpg" in "Dogs.jpg "Yiska playing.jpg""</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-362">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-362">Back to top</span></span>](#top)  
   
 <a name="substitutions"></a>   
-## 替代  
- 替代是取代模式中支援的規則運算式語言項目。 如需詳細資訊，請參閱[替代](../../../docs/standard/base-types/substitutions-in-regular-expressions.md)。 下表列出的 metacharacter 是原子零寬度判斷提示。  
+## <a name="substitutions"></a><span data-ttu-id="efb3c-363">替代</span><span class="sxs-lookup"><span data-stu-id="efb3c-363">Substitutions</span></span>  
+ <span data-ttu-id="efb3c-364">替代是取代模式中支援的規則運算式語言項目。</span><span class="sxs-lookup"><span data-stu-id="efb3c-364">Substitutions are regular expression language elements that are supported in replacement patterns.</span></span> <span data-ttu-id="efb3c-365">如需詳細資訊，請參閱 [Substitutions](substitutions-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-365">For more information, see [Substitutions](substitutions-in-regular-expressions.md).</span></span> <span data-ttu-id="efb3c-366">下表列出的 metacharacter 是原子零寬度判斷提示。</span><span class="sxs-lookup"><span data-stu-id="efb3c-366">The metacharacters listed in the following table are atomic zero-width assertions.</span></span>  
   
-|字元|描述|模式|取代模式|輸入字串|結果字串|  
-|--------|--------|--------|----------|----------|----------|  
-|`$` *數字*|替代群組 *number* 所比對的子字串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
-|`${` *name* `}`|替代具名群組 *name* 所比對的子字串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
-|`$$`|替代常值 "$"。|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
-|`$&`|替代整個符合項目的複本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|`$``|替代輸入字串中符合字串前面的所有文字。|`B+`|`$``|"AABBCC"|"AAAACC"|  
-|`$'`|替代輸入字串中符合字串後面的所有文字。|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|替代已擷取的最後一個群組。|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
-|`$_`|替代整個輸入字串。|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
+|<span data-ttu-id="efb3c-367">字元</span><span class="sxs-lookup"><span data-stu-id="efb3c-367">Character</span></span>|<span data-ttu-id="efb3c-368">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-368">Description</span></span>|<span data-ttu-id="efb3c-369">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-369">Pattern</span></span>|<span data-ttu-id="efb3c-370">取代模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-370">Replacement pattern</span></span>|<span data-ttu-id="efb3c-371">輸入字串</span><span class="sxs-lookup"><span data-stu-id="efb3c-371">Input string</span></span>|<span data-ttu-id="efb3c-372">結果字串</span><span class="sxs-lookup"><span data-stu-id="efb3c-372">Result string</span></span>|  
+|---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
+|<span data-ttu-id="efb3c-373">`$` *數字*</span><span class="sxs-lookup"><span data-stu-id="efb3c-373">`$` *number*</span></span>|<span data-ttu-id="efb3c-374">替代群組 *number*所比對的子字串。</span><span class="sxs-lookup"><span data-stu-id="efb3c-374">Substitutes the substring matched by group *number*.</span></span>|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|<span data-ttu-id="efb3c-375">"one two"</span><span class="sxs-lookup"><span data-stu-id="efb3c-375">"one two"</span></span>|<span data-ttu-id="efb3c-376">"two one"</span><span class="sxs-lookup"><span data-stu-id="efb3c-376">"two one"</span></span>|  
+|<span data-ttu-id="efb3c-377">`${` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="efb3c-377">`${` *name* `}`</span></span>|<span data-ttu-id="efb3c-378">替代具名群組 *name*所比對的子字串。</span><span class="sxs-lookup"><span data-stu-id="efb3c-378">Substitutes the substring matched by the named group *name*.</span></span>|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|<span data-ttu-id="efb3c-379">"one two"</span><span class="sxs-lookup"><span data-stu-id="efb3c-379">"one two"</span></span>|<span data-ttu-id="efb3c-380">"two one"</span><span class="sxs-lookup"><span data-stu-id="efb3c-380">"two one"</span></span>|  
+|`$$`|<span data-ttu-id="efb3c-381">替代常值 "$"。</span><span class="sxs-lookup"><span data-stu-id="efb3c-381">Substitutes a literal "$".</span></span>|`\b(\d+)\s?USD`|`$$$1`|<span data-ttu-id="efb3c-382">"103 USD"</span><span class="sxs-lookup"><span data-stu-id="efb3c-382">"103 USD"</span></span>|<span data-ttu-id="efb3c-383">"$103"</span><span class="sxs-lookup"><span data-stu-id="efb3c-383">"$103"</span></span>|  
+|`$&`|<span data-ttu-id="efb3c-384">替代整個符合項目的複本。</span><span class="sxs-lookup"><span data-stu-id="efb3c-384">Substitutes a copy of the whole match.</span></span>|`\$?\d*\.?\d+`|`**$&**`|<span data-ttu-id="efb3c-385">"$1.30"</span><span class="sxs-lookup"><span data-stu-id="efb3c-385">"$1.30"</span></span>|<span data-ttu-id="efb3c-386">"\*\*$1.30\*\*"</span><span class="sxs-lookup"><span data-stu-id="efb3c-386">"\*\*$1.30\*\*"</span></span>|  
+|<code>$`</code>|<span data-ttu-id="efb3c-387">替代輸入字串中符合字串前面的所有文字。</span><span class="sxs-lookup"><span data-stu-id="efb3c-387">Substitutes all the text of the input string before the match.</span></span>|`B+`|<code>$`</code>|<span data-ttu-id="efb3c-388">"AABBCC"</span><span class="sxs-lookup"><span data-stu-id="efb3c-388">"AABBCC"</span></span>|<span data-ttu-id="efb3c-389">"AAAACC"</span><span class="sxs-lookup"><span data-stu-id="efb3c-389">"AAAACC"</span></span>|  
+|`$'`|<span data-ttu-id="efb3c-390">替代輸入字串中符合字串後面的所有文字。</span><span class="sxs-lookup"><span data-stu-id="efb3c-390">Substitutes all the text of the input string after the match.</span></span>|`B+`|`$'`|<span data-ttu-id="efb3c-391">"AABBCC"</span><span class="sxs-lookup"><span data-stu-id="efb3c-391">"AABBCC"</span></span>|<span data-ttu-id="efb3c-392">"AACCCC"</span><span class="sxs-lookup"><span data-stu-id="efb3c-392">"AACCCC"</span></span>|  
+|`$+`|<span data-ttu-id="efb3c-393">替代已擷取的最後一個群組。</span><span class="sxs-lookup"><span data-stu-id="efb3c-393">Substitutes the last group that was captured.</span></span>|`B+(C+)`|`$+`|<span data-ttu-id="efb3c-394">"AABBCCDD"</span><span class="sxs-lookup"><span data-stu-id="efb3c-394">"AABBCCDD"</span></span>|<span data-ttu-id="efb3c-395">AACCDD</span><span class="sxs-lookup"><span data-stu-id="efb3c-395">AACCDD</span></span>|  
+|`$_`|<span data-ttu-id="efb3c-396">替代整個輸入字串。</span><span class="sxs-lookup"><span data-stu-id="efb3c-396">Substitutes the entire input string.</span></span>|`B+`|`$_`|<span data-ttu-id="efb3c-397">"AABBCC"</span><span class="sxs-lookup"><span data-stu-id="efb3c-397">"AABBCC"</span></span>|<span data-ttu-id="efb3c-398">"AAAABBCCCC"</span><span class="sxs-lookup"><span data-stu-id="efb3c-398">"AAAABBCCCC"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-399">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-399">Back to top</span></span>](#top)  
   
 <a name="options"></a>   
-## 規則運算式選項  
- 您可以指定選項，以控制規則運算式引擎如何解譯規則運算式模式。 這些選項中有許多可以指定為內嵌 \(在規則運算式模式中\) 或是一個或多個 <xref:System.Text.RegularExpressions.RegexOptions> 常數。 這個快速參考只列出內嵌選項。 如需內嵌和 <xref:System.Text.RegularExpressions.RegexOptions> 選項的詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)一文。  
+## <a name="regular-expression-options"></a><span data-ttu-id="efb3c-400">規則運算式選項</span><span class="sxs-lookup"><span data-stu-id="efb3c-400">Regular Expression Options</span></span>  
+ <span data-ttu-id="efb3c-401">您可以指定選項，以控制規則運算式引擎如何解譯規則運算式模式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-401">You can specify options that control how the regular expression engine interprets a regular expression pattern.</span></span> <span data-ttu-id="efb3c-402">這些選項中有許多可以指定為內嵌 (在規則運算式模式中) 或是一個或多個 <xref:System.Text.RegularExpressions.RegexOptions> 常數。</span><span class="sxs-lookup"><span data-stu-id="efb3c-402">Many of these options can be specified either inline (in the regular expression pattern) or as one or more <xref:System.Text.RegularExpressions.RegexOptions> constants.</span></span> <span data-ttu-id="efb3c-403">這個快速參考只列出內嵌選項。</span><span class="sxs-lookup"><span data-stu-id="efb3c-403">This quick reference lists only inline options.</span></span> <span data-ttu-id="efb3c-404">如需內嵌和 <xref:System.Text.RegularExpressions.RegexOptions> 選項的詳細資訊，請參閱 [Regular Expression Options](regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-404">For more information about inline and <xref:System.Text.RegularExpressions.RegexOptions> options, see the article [Regular Expression Options](regular-expression-options.md).</span></span>  
   
- 您可以透過兩種方式指定內嵌選項：  
+ <span data-ttu-id="efb3c-405">您可以透過兩種方式指定內嵌選項：</span><span class="sxs-lookup"><span data-stu-id="efb3c-405">You can specify an inline option in two ways:</span></span>  
   
--   使用[其他建構](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)`(?imnsx-imnsx)`，其中選項或選項集合前面的減號 \(\-\) 會關閉這些選項。 例如，`(?i-mn)` 會開啟不區分大小寫的比對 \(`i`\)、關閉多行模式 \(`m`\)，以及關閉未命名的群組擷取 \(`n`\)。 選項會從定義該選項的位置開始套用至規則運算式模式並且保持生效，直到模式結尾或出現另一個建構反轉選項為止。  
+-   <span data-ttu-id="efb3c-406">使用 [其他建構](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，其中選項或選項集合前面的減號 (-) 會關閉這些選項。</span><span class="sxs-lookup"><span data-stu-id="efb3c-406">By using the [miscellaneous construct](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, where a minus sign (-) before an option or set of options turns those options off.</span></span> <span data-ttu-id="efb3c-407">例如， `(?i-mn)` 會開啟不區分大小寫的比對 (`i`)、關閉多行模式 (`m`)，以及關閉未命名的群組擷取 (`n`)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-407">For example, `(?i-mn)` turns case-insensitive matching (`i`) on, turns multiline mode (`m`) off, and turns unnamed group captures (`n`) off.</span></span> <span data-ttu-id="efb3c-408">選項會從定義該選項的位置開始套用至規則運算式模式並且保持生效，直到模式結尾或出現另一個建構反轉選項為止。</span><span class="sxs-lookup"><span data-stu-id="efb3c-408">The option applies to the regular expression pattern from the point at which the option is defined, and is effective either to the end of the pattern or to the point where another construct reverses the option.</span></span>  
   
--   使用[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子運算式*`)`，只針對指定的群組定義選項。  
+-   <span data-ttu-id="efb3c-409">使用 [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子運算式*`)`，只針對指定的群組定義選項。</span><span class="sxs-lookup"><span data-stu-id="efb3c-409">By using the [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`, which defines options for the specified group only.</span></span>  
   
- .NET Framework 規則運算式引擎支援下列內嵌選項。  
+ <span data-ttu-id="efb3c-410">.NET 規則運算式引擎支援下列內嵌選項。</span><span class="sxs-lookup"><span data-stu-id="efb3c-410">The .NET regular expression engine supports the following inline options.</span></span>  
   
-|選項|描述|模式|符合|  
-|--------|--------|--------|--------|  
-|`i`|使用不區分大小寫的比對方式。|`\b(?i)a(?-i)a\w+\b`|"aardvark AAAuto aaaAuto Adam breakfast" 中的 "aardvark"、"aaaAuto"|  
-|`m`|使用多行模式。`^` 和 `$` 符合行的開頭與結尾，而不是字串的開始和結尾。|如需範例，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜多行模式＞一節。||  
-|`n`|不擷取未命名的群組。|如需範例，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜僅明確擷取＞一節。||  
-|`s`|使用單行模式。|如需範例，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜單行模式＞一節。||  
-|`x`|忽略規則運算式模式中未逸出的空白字元。|`\b(?x) \d+ \s \w+`|"1 aardvark 2 cats IV centurions" 中的 "1 aardvark"、"2 cats"|  
+|<span data-ttu-id="efb3c-411">選項</span><span class="sxs-lookup"><span data-stu-id="efb3c-411">Option</span></span>|<span data-ttu-id="efb3c-412">描述</span><span class="sxs-lookup"><span data-stu-id="efb3c-412">Description</span></span>|<span data-ttu-id="efb3c-413">模式</span><span class="sxs-lookup"><span data-stu-id="efb3c-413">Pattern</span></span>|<span data-ttu-id="efb3c-414">符合</span><span class="sxs-lookup"><span data-stu-id="efb3c-414">Matches</span></span>|  
+|------------|-----------------|-------------|-------------|  
+|`i`|<span data-ttu-id="efb3c-415">使用不區分大小寫的比對方式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-415">Use case-insensitive matching.</span></span>|`\b(?i)a(?-i)a\w+\b`|<span data-ttu-id="efb3c-416">"aardvark AAAuto aaaAuto Adam breakfast" 中的 "aardvark"、"aaaAuto"</span><span class="sxs-lookup"><span data-stu-id="efb3c-416">"aardvark", "aaaAuto" in "aardvark AAAuto aaaAuto Adam breakfast"</span></span>|  
+|`m`|<span data-ttu-id="efb3c-417">使用多行模式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-417">Use multiline mode.</span></span> <span data-ttu-id="efb3c-418">`^` 和 `$` 符合行的開頭與結尾，而不是字串的開始和結尾。</span><span class="sxs-lookup"><span data-stu-id="efb3c-418">`^` and `$` match the beginning and end of a line, instead of the beginning and end of a string.</span></span>|<span data-ttu-id="efb3c-419">如需範例，請參閱 [Regular Expression Options](regular-expression-options.md)中的＜多行模式＞一節。</span><span class="sxs-lookup"><span data-stu-id="efb3c-419">For an example, see the "Multiline Mode" section in [Regular Expression Options](regular-expression-options.md).</span></span>||  
+|`n`|<span data-ttu-id="efb3c-420">不擷取未命名的群組。</span><span class="sxs-lookup"><span data-stu-id="efb3c-420">Do not capture unnamed groups.</span></span>|<span data-ttu-id="efb3c-421">如需範例，請參閱 [Regular Expression Options](regular-expression-options.md)中的＜僅明確擷取＞一節。</span><span class="sxs-lookup"><span data-stu-id="efb3c-421">For an example, see the "Explicit Captures Only" section in [Regular Expression Options](regular-expression-options.md).</span></span>||  
+|`s`|<span data-ttu-id="efb3c-422">使用單行模式。</span><span class="sxs-lookup"><span data-stu-id="efb3c-422">Use single-line mode.</span></span>|<span data-ttu-id="efb3c-423">如需範例，請參閱 [Regular Expression Options](regular-expression-options.md)中的＜單行模式＞一節。</span><span class="sxs-lookup"><span data-stu-id="efb3c-423">For an example, see the "Single-line Mode" section in [Regular Expression Options](regular-expression-options.md).</span></span>||  
+|`x`|<span data-ttu-id="efb3c-424">忽略規則運算式模式中未逸出的空白字元。</span><span class="sxs-lookup"><span data-stu-id="efb3c-424">Ignore unescaped white space in the regular expression pattern.</span></span>|`\b(?x) \d+ \s \w+`|<span data-ttu-id="efb3c-425">"1 aardvark 2 cats IV centurions" 中的 "1 aardvark"、"2 cats"</span><span class="sxs-lookup"><span data-stu-id="efb3c-425">"1 aardvark", "2 cats" in "1 aardvark 2 cats IV centurions"</span></span>|  
   
- [回到頁首](#top)  
+ [<span data-ttu-id="efb3c-426">回到頁首</span><span class="sxs-lookup"><span data-stu-id="efb3c-426">Back to top</span></span>](#top)  
   
 <a name="miscellaneous_constructs"></a>   
-## 其他建構  
- 其他建構會修改規則運算式模式或提供其相關資訊。 下表列出 .NET Framework 所支援的其他建構。 如需詳細資訊，請參閱[其他建構](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
+## <a name="miscellaneous-constructs"></a><span data-ttu-id="efb3c-427">其他建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-427">Miscellaneous Constructs</span></span>  
+ <span data-ttu-id="efb3c-428">其他建構會修改規則運算式模式或提供其相關資訊。</span><span class="sxs-lookup"><span data-stu-id="efb3c-428">Miscellaneous constructs either modify a regular expression pattern or provide information about it.</span></span> <span data-ttu-id="efb3c-429">下表列出.NET 所支援的其他建構。</span><span class="sxs-lookup"><span data-stu-id="efb3c-429">The following table lists the miscellaneous constructs supported by .NET.</span></span> <span data-ttu-id="efb3c-430">如需詳細資訊，請參閱 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-430">For more information, see [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).</span></span>  
   
-|建構|定義|範例|  
-|--------|--------|--------|  
-|`(?imnsx-imnsx)`|在模式中間設定或停用選項，例如不區分大小寫。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。|`\bA(?i)b\w+\b` 會比對 "ABA Able Act" 中的 "ABA"、"Able"|  
-|`(?#` *註解* `)`|內嵌註解。 註解會在第一個右括號結束。|`\bA(?#Matches words starting with A)\w+\b`|  
-|`#` \[至行尾\]|X 模式註解。 註解從未逸出的 `#` 開始，並延續到行尾。|`(?x)\bA\w+\b#Matches words starting with A`|  
+|<span data-ttu-id="efb3c-431">建構</span><span class="sxs-lookup"><span data-stu-id="efb3c-431">Construct</span></span>|<span data-ttu-id="efb3c-432">定義</span><span class="sxs-lookup"><span data-stu-id="efb3c-432">Definition</span></span>|<span data-ttu-id="efb3c-433">範例</span><span class="sxs-lookup"><span data-stu-id="efb3c-433">Example</span></span>|  
+|---------------|----------------|-------------|  
+|`(?imnsx-imnsx)`|<span data-ttu-id="efb3c-434">在模式中間設定或停用選項，例如不區分大小寫。如需詳細資訊，請參閱[規則運算式選項](regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="efb3c-434">Sets or disables options such as case insensitivity in the middle of a pattern.For more information, see [Regular Expression Options](regular-expression-options.md).</span></span>|<span data-ttu-id="efb3c-435">`\bA(?i)b\w+\b` 會比對 "ABA Able Act" 中的 "ABA"、"Able"</span><span class="sxs-lookup"><span data-stu-id="efb3c-435">`\bA(?i)b\w+\b` matches "ABA", "Able" in "ABA Able Act"</span></span>|  
+|<span data-ttu-id="efb3c-436">`(?#` *註解* `)`</span><span class="sxs-lookup"><span data-stu-id="efb3c-436">`(?#` *comment* `)`</span></span>|<span data-ttu-id="efb3c-437">內嵌註解。</span><span class="sxs-lookup"><span data-stu-id="efb3c-437">Inline comment.</span></span> <span data-ttu-id="efb3c-438">註解會在第一個右括號結束。</span><span class="sxs-lookup"><span data-stu-id="efb3c-438">The comment ends at the first closing parenthesis.</span></span>|`\bA(?#Matches words starting with A)\w+\b`|  
+|<span data-ttu-id="efb3c-439">`#` [至行尾]</span><span class="sxs-lookup"><span data-stu-id="efb3c-439">`#` [to end of line]</span></span>|<span data-ttu-id="efb3c-440">X 模式註解。</span><span class="sxs-lookup"><span data-stu-id="efb3c-440">X-mode comment.</span></span> <span data-ttu-id="efb3c-441">註解從未逸出的 `#` 開始，並延續到行尾。</span><span class="sxs-lookup"><span data-stu-id="efb3c-441">The comment starts at an unescaped `#` and continues to the end of the line.</span></span>|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## 請參閱  
- <xref:System.Text.RegularExpressions?displayProperty=fullName>   
- <xref:System.Text.RegularExpressions.Regex>   
- [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)   
- [規則運算式類別](../../../docs/standard/base-types/the-regular-expression-object-model.md)   
- [規則運算式範例](../../../docs/standard/base-types/regular-expression-examples.md)   
- [規則運算式 \- 快速參考 \(以 Word 格式下載\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)   
- [規則運算式 \- 快速參考 \(以 PDF 格式下載\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a><span data-ttu-id="efb3c-442">另請參閱</span><span class="sxs-lookup"><span data-stu-id="efb3c-442">See Also</span></span>  
+ <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+ <xref:System.Text.RegularExpressions.Regex>  
+ [<span data-ttu-id="efb3c-443">規則運算式</span><span class="sxs-lookup"><span data-stu-id="efb3c-443">Regular Expressions</span></span>](regular-expressions.md)  
+ [<span data-ttu-id="efb3c-444">規則運算式類別</span><span class="sxs-lookup"><span data-stu-id="efb3c-444">Regular Expression Classes</span></span>](the-regular-expression-object-model.md)  
+ [<span data-ttu-id="efb3c-445">規則運算式範例</span><span class="sxs-lookup"><span data-stu-id="efb3c-445">Regular Expression Examples</span></span>](regular-expression-examples.md)  
+ [<span data-ttu-id="efb3c-446">規則運算式-快速參考 （以 Word 格式下載）</span><span class="sxs-lookup"><span data-stu-id="efb3c-446">Regular Expressions - Quick Reference (download in Word format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="efb3c-447">規則運算式 - 快速參考 (以 PDF 格式下載)</span><span class="sxs-lookup"><span data-stu-id="efb3c-447">Regular Expressions - Quick Reference (download in PDF format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

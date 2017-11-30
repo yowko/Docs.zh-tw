@@ -1,0 +1,56 @@
+---
+title: "處理部分失敗的策略"
+description: "容器化的.NET 應用程式的.NET Microservices 架構 |處理部分失敗的策略"
+keywords: "Docker, 微服務, ASP.NET, 容器"
+author: CESARDELATORRE
+ms.author: wiwagn
+ms.date: 05/26/2017
+ms.prod: .net-core
+ms.technology: dotnet-docker
+ms.topic: article
+ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
+---
+# <a name="strategies-for-handling-partial-failure"></a><span data-ttu-id="46e27-104">處理部分失敗的策略</span><span class="sxs-lookup"><span data-stu-id="46e27-104">Strategies for handling partial failure</span></span>
+
+<span data-ttu-id="46e27-105">部分失敗的處理策略包括下列各項。</span><span class="sxs-lookup"><span data-stu-id="46e27-105">Strategies for dealing with partial failures include the following.</span></span>
+
+<span data-ttu-id="46e27-106">**使用非同步通訊 （例如，訊息為基礎的通訊） 跨內部 microservices**。</span><span class="sxs-lookup"><span data-stu-id="46e27-106">**Use asynchronous communication (for example, message-based communication) across internal microservices**.</span></span> <span data-ttu-id="46e27-107">時，強烈建議建立跨內部 microservices 長的鏈結的同步 HTTP 呼叫，因為該錯誤的設計最後會變得不正確的潛在性中斷問題的主要原因。</span><span class="sxs-lookup"><span data-stu-id="46e27-107">It is highly advisable not to create long chains of synchronous HTTP calls across the internal microservices because that incorrect design will eventually become the main cause of bad outages.</span></span> <span data-ttu-id="46e27-108">相反地，除了用戶端應用程式與 microservices 或更細緻的 API 閘道的第一個層級之間的前端通訊，最好是使用只非同步 （訊息） 通訊的初始要求過去的一次 /回應循環，跨內部 microservices。</span><span class="sxs-lookup"><span data-stu-id="46e27-108">On the contrary, except for the front-end communications between the client applications and the first level of microservices or fine-grained API Gateways, it is recommended to use only asynchronous (message-based) communication once past the initial request/response cycle, across the internal microservices.</span></span> <span data-ttu-id="46e27-109">最終一致性和事件驅動的架構將有助於減少漣漪效果。</span><span class="sxs-lookup"><span data-stu-id="46e27-109">Eventual consistency and event-driven architectures will help to minimize ripple effects.</span></span> <span data-ttu-id="46e27-110">這些方法會強制執行較高層級的微服務自主性，以及因此防止此註明的問題。</span><span class="sxs-lookup"><span data-stu-id="46e27-110">These approaches enforce a higher level of microservice autonomy and therefore prevent against the problem noted here.</span></span>
+
+<span data-ttu-id="46e27-111">**重試使用指數型輪詢**。</span><span class="sxs-lookup"><span data-stu-id="46e27-111">**Use retries with exponential backoff**.</span></span> <span data-ttu-id="46e27-112">這項技術有助於避免簡短，並藉由執行呼叫斷斷續續地發生失敗重試特定數目的時間，以防服務不是僅供一小段時間。</span><span class="sxs-lookup"><span data-stu-id="46e27-112">This technique helps to avoid short and intermittent failures by performing call retries a certain number of times, in case the service was not available only for a short time.</span></span> <span data-ttu-id="46e27-113">這可能是因為間歇性的網路問題或微服務/容器會移至叢集中不同節點。</span><span class="sxs-lookup"><span data-stu-id="46e27-113">This might occur due to intermittent network issues or when a microservice/container is moved to a different node in a cluster.</span></span> <span data-ttu-id="46e27-114">不過，如果這些重試設計不是正確斷路器，它可以 aggravate 漣漪，最終甚至導致[阻絕服務 (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack)。</span><span class="sxs-lookup"><span data-stu-id="46e27-114">However, if these retries are not designed properly with circuit breakers, it can aggravate the ripple effects, ultimately even causing a [Denial of Service (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).</span></span>
+
+<span data-ttu-id="46e27-115">**因應措施網路逾時**。</span><span class="sxs-lookup"><span data-stu-id="46e27-115">**Work around network timeouts**.</span></span> <span data-ttu-id="46e27-116">一般情況下，用戶端應該正確不無限期地封鎖和等候回應時，一律使用逾時。</span><span class="sxs-lookup"><span data-stu-id="46e27-116">In general, clients should be designed not to block indefinitely and to always use timeouts when waiting for a response.</span></span> <span data-ttu-id="46e27-117">使用逾時，可確保，資源會永遠不會繫結起來，無限期。</span><span class="sxs-lookup"><span data-stu-id="46e27-117">Using timeouts ensures that resources are never tied up indefinitely.</span></span>
+
+<span data-ttu-id="46e27-118">**使用斷路器模式**。</span><span class="sxs-lookup"><span data-stu-id="46e27-118">**Use the Circuit Breaker pattern**.</span></span> <span data-ttu-id="46e27-119">這種方法，用戶端處理序會追蹤失敗要求數目。</span><span class="sxs-lookup"><span data-stu-id="46e27-119">In this approach, the client process tracks the number of failed requests.</span></span> <span data-ttu-id="46e27-120">如果錯誤速率超過設定的限制時，「 斷路器 」 往返，以便進一步嘗試就會立即失敗。</span><span class="sxs-lookup"><span data-stu-id="46e27-120">If the error rate exceeds a configured limit, a “circuit breaker” trips so that further attempts fail immediately.</span></span> <span data-ttu-id="46e27-121">（如果大量的要求失敗，這就表示服務無法使用，傳送要求，則不必。）逾時期限之後用戶端應該再試一次，如果新的要求成功，關閉斷路器。</span><span class="sxs-lookup"><span data-stu-id="46e27-121">(If a large number of requests are failing, that suggests the service is unavailable and that sending requests is pointless.) After a timeout period, the client should try again and, if the new requests are successful, close the circuit breaker.</span></span>
+
+<span data-ttu-id="46e27-122">**提供後援**。</span><span class="sxs-lookup"><span data-stu-id="46e27-122">**Provide fallbacks**.</span></span> <span data-ttu-id="46e27-123">這種方法，用戶端處理序時，執行後援邏輯要求失敗，例如傳回快取的資料還是預設值。</span><span class="sxs-lookup"><span data-stu-id="46e27-123">In this approach, the client process performs fallback logic when a request fails, such as returning cached data or a default value.</span></span> <span data-ttu-id="46e27-124">這是一種方法適用於查詢，而且更複雜的更新或命令。</span><span class="sxs-lookup"><span data-stu-id="46e27-124">This is an approach suitable for queries, and is more complex for updates or commands.</span></span>
+
+<span data-ttu-id="46e27-125">**限制的佇列要求數目**。</span><span class="sxs-lookup"><span data-stu-id="46e27-125">**Limit the number of queued requests**.</span></span> <span data-ttu-id="46e27-126">用戶端應該也會造成未處理的用戶端微服務可以傳送給特定服務的要求數目上限。</span><span class="sxs-lookup"><span data-stu-id="46e27-126">Clients should also impose an upper bound on the number of outstanding requests that a client microservice can send to a particular service.</span></span> <span data-ttu-id="46e27-127">如果已達到限制，它是提出其他要求，可能毫無意義，而且每次嘗試應該會立即失敗。</span><span class="sxs-lookup"><span data-stu-id="46e27-127">If the limit has been reached, it is probably pointless to make additional requests, and those attempts should fail immediately.</span></span> <span data-ttu-id="46e27-128">方面的實作，Polly[艙隔離](https://github.com/App-vNext/Polly/wiki/Bulkhead)原則可用來達到此需求。</span><span class="sxs-lookup"><span data-stu-id="46e27-128">In terms of implementation, the Polly [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) policy can be used to fulfil this requirement.</span></span> <span data-ttu-id="46e27-129">這種方法是基本上與平行處理節流[SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1)做為實作。</span><span class="sxs-lookup"><span data-stu-id="46e27-129">This approach is essentially a parallelization throttle with [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) as the implementation.</span></span> <span data-ttu-id="46e27-130">它也允許艙以外的 「 佇列 」。</span><span class="sxs-lookup"><span data-stu-id="46e27-130">It also permits a "queue" outside the bulkhead.</span></span> <span data-ttu-id="46e27-131">您可以主動剖析之前執行過多的負載，（比方說，因為容量會被視為完整）。</span><span class="sxs-lookup"><span data-stu-id="46e27-131">You can proactively shed excess load even before execution (for example, because capacity is deemed full).</span></span> <span data-ttu-id="46e27-132">這可讓某些失敗情況下的其回應速度快過為斷路器，因為斷路器等候失敗。</span><span class="sxs-lookup"><span data-stu-id="46e27-132">This makes its response to certain failure scenarios faster than a circuit breaker would be, since the circuit breaker waits for the failures.</span></span> <span data-ttu-id="46e27-133">Polly BulkheadPolicy 物件會公開多滿艙和佇列，以及提供事件發生溢位因此也可用來自動化的水平延展的磁碟機。</span><span class="sxs-lookup"><span data-stu-id="46e27-133">The BulkheadPolicy object in Polly exposes how full the bulkhead and queue are, and offers events on overflow so can also be used to drive automated horizontal scaling.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="46e27-134">其他資源</span><span class="sxs-lookup"><span data-stu-id="46e27-134">Additional resources</span></span>
+
+-   <span data-ttu-id="46e27-135">**恢復模式**
+    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)</span><span class="sxs-lookup"><span data-stu-id="46e27-135">**Resiliency patterns**
+[*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)</span></span>
+
+-   <span data-ttu-id="46e27-136">**新增恢復功能和最佳化效能**
+    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)</span><span class="sxs-lookup"><span data-stu-id="46e27-136">**Adding Resilience and Optimizing Performance**
+[*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)</span></span>
+
+-   <span data-ttu-id="46e27-137">**艙。**</span><span class="sxs-lookup"><span data-stu-id="46e27-137">**Bulkhead.**</span></span> <span data-ttu-id="46e27-138">GitHub 儲存機制。</span><span class="sxs-lookup"><span data-stu-id="46e27-138">GitHub repo.</span></span> <span data-ttu-id="46e27-139">Polly 原則的實作。 \\</span><span class="sxs-lookup"><span data-stu-id="46e27-139">Implementation with Polly policy.\\</span></span>
+    [<span data-ttu-id="46e27-140">*https://github.com/App-vNext/Polly/wiki/Bulkhead*</span><span class="sxs-lookup"><span data-stu-id="46e27-140">*https://github.com/App-vNext/Polly/wiki/Bulkhead*</span></span>](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+
+-   <span data-ttu-id="46e27-141">**設計 Azure 的應用程式彈性**
+    [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)</span><span class="sxs-lookup"><span data-stu-id="46e27-141">**Designing resilient applications for Azure**
+[*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)</span></span>
+
+-   <span data-ttu-id="46e27-142">**暫時性錯誤處理**
+    <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults></span><span class="sxs-lookup"><span data-stu-id="46e27-142">**Transient fault handling**
+<https://docs.microsoft.com/azure/architecture/best-practices/transient-faults></span></span>
+
+
+>[!div class="step-by-step"]
+<span data-ttu-id="46e27-143">[上一個](控制代碼的部分-failure.md) [下一步] (實作-重試-指數-backoff.md)</span><span class="sxs-lookup"><span data-stu-id="46e27-143">[Previous] (handle-partial-failure.md) [Next] (implement-retries-exponential-backoff.md)</span></span>

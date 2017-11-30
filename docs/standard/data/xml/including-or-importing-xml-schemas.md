@@ -1,53 +1,55 @@
 ---
-title: "併入或匯入 XML 結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "併入或匯入 XML 結構描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 併入或匯入 XML 結構描述
-XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。  這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。  <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 \(SOM\) API 中的這些項目。  
+# <a name="including-or-importing-xml-schemas"></a><span data-ttu-id="c5203-102">併入或匯入 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="c5203-102">Including or Importing XML Schemas</span></span>
+<span data-ttu-id="c5203-103">XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。</span><span class="sxs-lookup"><span data-stu-id="c5203-103">An XML schema may contain `<xs:import />`, `<xs:include />`, and `<xs:redefine />` elements.</span></span> <span data-ttu-id="c5203-104">這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。</span><span class="sxs-lookup"><span data-stu-id="c5203-104">These schema elements refer to other XML schemas that can be used to supplement the structure of the schema that includes or imports them.</span></span> <span data-ttu-id="c5203-105"><xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。</span><span class="sxs-lookup"><span data-stu-id="c5203-105">The <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> and <xref:System.Xml.Schema.XmlSchemaRedefine> classes, map to these elements in the Schema Object Model (SOM) API.</span></span>  
   
-## 併入或匯入 XML 結構描述  
- 下列程式碼範例會為 [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md) 主題中建立的客戶結構描述補充位址結構描述。  為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。  
+## <a name="including-or-importing-an-xml-schema"></a><span data-ttu-id="c5203-106">併入或匯入 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="c5203-106">Including or Importing an XML Schema</span></span>  
+ <span data-ttu-id="c5203-107">下列程式碼範例補充客戶結構描述中建立[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)位址結構描述的主題。</span><span class="sxs-lookup"><span data-stu-id="c5203-107">The following code example supplements the customer schema created in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic with the address schema.</span></span> <span data-ttu-id="c5203-108">為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。</span><span class="sxs-lookup"><span data-stu-id="c5203-108">Supplementing the customer schema with the address schema makes address types available in the customer schema.</span></span>  
   
- 您可使用 `<xs:include />` 或 `<xs:import />` 項目加入位址結構描述，以按原樣使用位址結構描述的元件，或使用 `<xs:redefine />` 項目，修改其中任何元件以滿足客戶結構描述需要。  因為位址結構描述與客戶結構描述的 `targetNamespace` 不同，所以會使用 `<xs:import />` 項目及匯入語意。  
+ <span data-ttu-id="c5203-109">您可使用 `<xs:include />` 或 `<xs:import />` 項目加入位址結構描述，以按原樣使用位址結構描述的元件，或使用 `<xs:redefine />` 項目，修改其中任何元件以滿足客戶結構描述需要。</span><span class="sxs-lookup"><span data-stu-id="c5203-109">The address schema can be incorporated using either `<xs:include />` or `<xs:import />` elements to use the components of the address schema as-is, or using an `<xs:redefine />` element to modify any of its components to suit the need of the customer schema.</span></span> <span data-ttu-id="c5203-110">因為位址結構描述與客戶結構描述的 `targetNamespace` 不同，所以會使用 `<xs:import />` 項目及匯入語意。</span><span class="sxs-lookup"><span data-stu-id="c5203-110">Because the address schema has a `targetNamespace` that is different from that of the customer schema, the `<xs:import />` element and therefore import semantics is used.</span></span>  
   
- 程式碼範例使用下列步驟併入位址結構描述。  
+ <span data-ttu-id="c5203-111">程式碼範例使用下列步驟併入位址結構描述。</span><span class="sxs-lookup"><span data-stu-id="c5203-111">The code example includes the address schema in the following steps.</span></span>  
   
-1.  將客戶結構描述及位址結構描述加入至新的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，然後對它們進行編譯。  讀取或編譯結構描述時遇到的任何結構描述驗證警告及錯誤，都會由 <xref:System.Xml.Schema.ValidationEventHandler> 委派處理。  
+1.  <span data-ttu-id="c5203-112">將客戶結構描述及位址結構描述加入至新的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，然後對它們進行編譯。</span><span class="sxs-lookup"><span data-stu-id="c5203-112">Adds the customer schema and the address schema to a new <xref:System.Xml.Schema.XmlSchemaSet> object and then compiles them.</span></span> <span data-ttu-id="c5203-113">讀取或編譯結構描述時遇到的任何結構描述驗證警告及錯誤，都會由 <xref:System.Xml.Schema.ValidationEventHandler> 委派處理。</span><span class="sxs-lookup"><span data-stu-id="c5203-113">Any schema validation warnings and errors encountered reading or compiling the schemas are handled by the <xref:System.Xml.Schema.ValidationEventHandler> delegate.</span></span>  
   
-2.  透過重複處理 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 屬性，從 <xref:System.Xml.Schema.XmlSchemaSet> 中為客戶及位址結構描述擷取已編譯的 <xref:System.Xml.Schema.XmlSchema> 物件。  因為已編譯結構描述，因此可存取後結構描述編譯資訊集 \(PSCI\) 屬性。  
+2.  <span data-ttu-id="c5203-114">透過重複處理 <xref:System.Xml.Schema.XmlSchema> 屬性，從 <xref:System.Xml.Schema.XmlSchemaSet> 中為客戶及位址結構描述擷取已編譯的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 物件。</span><span class="sxs-lookup"><span data-stu-id="c5203-114">Retrieves the compiled <xref:System.Xml.Schema.XmlSchema> objects for both the customer and address schemas from the <xref:System.Xml.Schema.XmlSchemaSet> by iterating over the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property.</span></span> <span data-ttu-id="c5203-115">因為已編譯結構描述，因此可存取後結構描述編譯資訊集 (PSCI) 屬性。</span><span class="sxs-lookup"><span data-stu-id="c5203-115">Because the schemas are compiled, Post-Schema-Compilation-Infoset (PSCI) properties are accessible.</span></span>  
   
-3.  建立 <xref:System.Xml.Schema.XmlSchemaImport> 物件、將 import 的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 屬性設為位址結構描述的命名空間、將 import 的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 屬性設為位址結構描述的 <xref:System.Xml.Schema.XmlSchema> 物件，並將 import 加入客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性中。  
+3.  <span data-ttu-id="c5203-116">建立 <xref:System.Xml.Schema.XmlSchemaImport> 物件、將 import 的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 屬性設為位址結構描述的命名空間、將 import 的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 屬性設為位址結構描述的 <xref:System.Xml.Schema.XmlSchema> 物件，並將 import 加入客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性中。</span><span class="sxs-lookup"><span data-stu-id="c5203-116">Creates an <xref:System.Xml.Schema.XmlSchemaImport> object, sets the <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> property of the import to the namespace of the address schema, sets the <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> property of the import to the <xref:System.Xml.Schema.XmlSchema> object of the address schema, and adds the import to the <xref:System.Xml.Schema.XmlSchema.Includes%2A> property of the customer schema.</span></span>  
   
-4.  使用 <xref:System.Xml.Schema.XmlSchemaSet> 類別的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 及 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法，重新處理並編譯客戶結構描述之已修改的 <xref:System.Xml.Schema.XmlSchema> 物件，並將其寫入主控台。  
+4.  <span data-ttu-id="c5203-117">使用 <xref:System.Xml.Schema.XmlSchema> 類別的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 及 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法，重新處理並編譯客戶結構描述之已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，並將其寫入主控台。</span><span class="sxs-lookup"><span data-stu-id="c5203-117">Reprocesses and compiles the modified <xref:System.Xml.Schema.XmlSchema> object of the customer schema using the <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> and <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> methods of the <xref:System.Xml.Schema.XmlSchemaSet> class and writes it to the console.</span></span>  
   
-5.  最後，使用客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性，將匯入至客戶結構描述的所有結構描述遞迴寫入主控台。  <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性對所有加入至結構描述的 include、import 或 redefine 提供存取權。  
+5.  <span data-ttu-id="c5203-118">最後，使用客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性，將匯入至客戶結構描述的所有結構描述遞迴寫入主控台。</span><span class="sxs-lookup"><span data-stu-id="c5203-118">Finally, recursively writes all of the schemas imported into the customer schema to the console using the <xref:System.Xml.Schema.XmlSchema.Includes%2A> property of the customer schema.</span></span> <span data-ttu-id="c5203-119"><xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性對所有加入至結構描述的 include、import 或 redefine 提供存取權。</span><span class="sxs-lookup"><span data-stu-id="c5203-119">The <xref:System.Xml.Schema.XmlSchema.Includes%2A> property provides access to all the includes, imports, or redefines added to a schema.</span></span>  
   
- 下列是完整程式碼範例及寫入主控台的客戶與位址結構描述。  
+ <span data-ttu-id="c5203-120">下列是完整程式碼範例及寫入主控台的客戶與位址結構描述。</span><span class="sxs-lookup"><span data-stu-id="c5203-120">The following is the complete code example and the customer and address schemas written to the console.</span></span>  
   
  [!code-cpp[XmlSchemaImportExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaImportExample/CPP/XmlSchemaImportExample.cpp#1)]
  [!code-csharp[XmlSchemaImportExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaImportExample/CS/XmlSchemaImportExample.cs#1)]
  [!code-vb[XmlSchemaImportExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaImportExample/VB/XmlSchemaImportExample.vb#1)]  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema xmlns:tns="http://www.tempuri.org" targetNamespace="http://www.tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:import namespace="http://www.example.com/IPO" />  
@@ -103,12 +105,12 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
 </schema>  
 ```  
   
- 如需 `<xs:import />`、`<xs:include />` 及 `<xs:redefine />` 項目，還有 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別的詳細資訊，請參閱 [W3C XML 結構描述](http://go.microsoft.com/fwlink/?LinkId=45242) \(英文\) 及 <xref:System.Xml.Schema?displayProperty=fullName> 命名空間類別參考文件。  
+ <span data-ttu-id="c5203-121">如需有關`<xs:import />`， `<xs:include />`，和`<xs:redefine />`項目和<xref:System.Xml.Schema.XmlSchemaImport>，<xref:System.Xml.Schema.XmlSchemaInclude>和<xref:System.Xml.Schema.XmlSchemaRedefine>類別，請參閱[W3C XML 結構描述](http://go.microsoft.com/fwlink/?LinkId=45242)和<xref:System.Xml.Schema?displayProperty=nameWithType>命名空間類別參考文件。</span><span class="sxs-lookup"><span data-stu-id="c5203-121">For more information about the `<xs:import />`, `<xs:include />`, and `<xs:redefine />` elements and the <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> and <xref:System.Xml.Schema.XmlSchemaRedefine> classes, see the [W3C XML Schema](http://go.microsoft.com/fwlink/?LinkId=45242) and the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace class reference documentation.</span></span>  
   
-## 請參閱  
- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)   
- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)   
- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)   
- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+## <a name="see-also"></a><span data-ttu-id="c5203-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c5203-122">See Also</span></span>  
+ [<span data-ttu-id="c5203-123">XML 結構描述物件模型概觀</span><span class="sxs-lookup"><span data-stu-id="c5203-123">XML Schema Object Model Overview</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [<span data-ttu-id="c5203-124">讀取和寫入 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="c5203-124">Reading and Writing XML Schemas</span></span>](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [<span data-ttu-id="c5203-125">建置 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="c5203-125">Building XML Schemas</span></span>](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [<span data-ttu-id="c5203-126">周遊 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="c5203-126">Traversing XML Schemas</span></span>](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [<span data-ttu-id="c5203-127">編輯 XML 結構描述</span><span class="sxs-lookup"><span data-stu-id="c5203-127">Editing XML Schemas</span></span>](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [<span data-ttu-id="c5203-128">結構描述編譯的 XmlSchemaSet</span><span class="sxs-lookup"><span data-stu-id="c5203-128">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

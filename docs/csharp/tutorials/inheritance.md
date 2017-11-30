@@ -7,64 +7,66 @@ manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
+ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
-ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
+# <a name="inheritance-in-c-and-net"></a><span data-ttu-id="d8f57-104">C# 和 .NET 中的繼承</span><span class="sxs-lookup"><span data-stu-id="d8f57-104">Inheritance in C# and .NET</span></span>
 
-本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
+<span data-ttu-id="d8f57-105">本教學課程將介紹 C# 中的繼承。</span><span class="sxs-lookup"><span data-stu-id="d8f57-105">This tutorial introduces you to inheritance in C#.</span></span> <span data-ttu-id="d8f57-106">繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-106">Inheritance is a feature of object-oriented programming languages that allows you to define a base class that provides specific functionality (data and behavior) and to define derived classes that either inherit or override that functionality.</span></span>
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a><span data-ttu-id="d8f57-107">必要條件</span><span class="sxs-lookup"><span data-stu-id="d8f57-107">Prerequisites</span></span>
 
-本教學課程假設您已安裝 .NET Core。 如需安裝指示，請參閱[.NET Core 安裝指南 (英文)](https://www.microsoft.com/net/core)。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
+<span data-ttu-id="d8f57-108">本教學課程假設您已安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="d8f57-108">This tutorial assumes that you've installed .NET Core.</span></span> <span data-ttu-id="d8f57-109">如需安裝指示，請參閱[.NET Core 安裝指南 (英文)](https://www.microsoft.com/net/core)。</span><span class="sxs-lookup"><span data-stu-id="d8f57-109">For installation instructions, see [.NET Core installation guide](https://www.microsoft.com/net/core).</span></span> <span data-ttu-id="d8f57-110">您也需要程式碼編輯器。</span><span class="sxs-lookup"><span data-stu-id="d8f57-110">You also need a code editor.</span></span> <span data-ttu-id="d8f57-111">本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。</span><span class="sxs-lookup"><span data-stu-id="d8f57-111">This tutorial uses [Visual Studio Code](https://code.visualstudio.com), although you can use any code editor of your choice.</span></span>
 
-## <a name="running-the-examples"></a>執行範例
+## <a name="running-the-examples"></a><span data-ttu-id="d8f57-112">執行範例</span><span class="sxs-lookup"><span data-stu-id="d8f57-112">Running the examples</span></span>
 
-若要建立和執行本教學課程中的範例，請您從命令列使用 [DotNet](../../core/tools/dotnet.md) 公用程式。 每個範例都依照下列步驟執行︰
+<span data-ttu-id="d8f57-113">若要建立和執行本教學課程中的範例，請您從命令列使用 [DotNet](../../core/tools/dotnet.md) 公用程式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-113">To create and run the examples in this tutorial, you use the [dotnet](../../core/tools/dotnet.md) utility from the command line.</span></span> <span data-ttu-id="d8f57-114">每個範例都依照下列步驟執行︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-114">Follow these steps for each example:</span></span>
 
-1. 建立可儲存範例的目錄。
-1. 在命令提示字元處輸入 [dotnet new console](../../core/tools/dotnet-new.md) 命令，以建立新的 .NET Core 專案。
-1. 將範例程式碼複製並貼到您的程式碼編輯器。
-1. 從命令列輸入 [dotnet restore](../../core/tools/dotnet-restore.md)命令來載入或還原專案的相依性。
-1. 輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。
+1. <span data-ttu-id="d8f57-115">建立可儲存範例的目錄。</span><span class="sxs-lookup"><span data-stu-id="d8f57-115">Create a directory to store the example.</span></span>
+1. <span data-ttu-id="d8f57-116">在命令提示字元處輸入 [dotnet new console](../../core/tools/dotnet-new.md) 命令，以建立新的 .NET Core 專案。</span><span class="sxs-lookup"><span data-stu-id="d8f57-116">Enter the [dotnet new console](../../core/tools/dotnet-new.md) command at a command prompt to create a new .NET Core project.</span></span>
+1. <span data-ttu-id="d8f57-117">將範例程式碼複製並貼到您的程式碼編輯器。</span><span class="sxs-lookup"><span data-stu-id="d8f57-117">Copy and paste the code from the example into your code editor.</span></span>
+1. <span data-ttu-id="d8f57-118">從命令列輸入 [dotnet restore](../../core/tools/dotnet-restore.md)命令來載入或還原專案的相依性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-118">Enter the [dotnet restore](../../core/tools/dotnet-restore.md) command from the command line to load or restore the project's dependencies.</span></span>
 
-## <a name="background-what-is-inheritance"></a>背景︰什麼是繼承？
+  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-「繼承」是物件導向程式設計的其中一個基本屬性。 它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。 其成員可供繼承的類別稱為「基底類別」。 繼承基底類別成員的類別則稱為「衍生類別」。
+1. <span data-ttu-id="d8f57-119">輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。</span><span class="sxs-lookup"><span data-stu-id="d8f57-119">Enter the [dotnet run](../../core/tools/dotnet-run.md) command to compile and execute the example.</span></span>
 
-C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自單一類別。 不過，繼承可以轉移，這可讓您定義一組型別的繼承階層。 換句話說，型別 `D` 可繼承自型別 `C`，其繼承自型別 `B`，而該型別的繼承來源為基底類別型別 `A`。 因為繼承可以轉移，所以型別 `D` 可以使用型別 `A` 的成員。
 
-基底類別的所有成員不一定都由衍生類別繼承。 不會繼承的成員如下︰
+## <a name="background-what-is-inheritance"></a><span data-ttu-id="d8f57-120">背景︰什麼是繼承？</span><span class="sxs-lookup"><span data-stu-id="d8f57-120">Background: What is inheritance?</span></span>
 
-- [靜態建構函式](../programming-guide/classes-and-structs/static-constructors.md)，其會初始化類別的靜態資料。
+<span data-ttu-id="d8f57-121">「繼承」是物件導向程式設計的其中一個基本屬性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-121">*Inheritance* is one of the fundamental attributes of object-oriented programming.</span></span> <span data-ttu-id="d8f57-122">它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。</span><span class="sxs-lookup"><span data-stu-id="d8f57-122">It allows you to define a child class that reuses (inherits), extends, or modifies the behavior of a parent class.</span></span> <span data-ttu-id="d8f57-123">其成員可供繼承的類別稱為「基底類別」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-123">The class whose members are inherited is called the *base class*.</span></span> <span data-ttu-id="d8f57-124">繼承基底類別成員的類別則稱為「衍生類別」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-124">The class that inherits the members of the base class is called the *derived class*.</span></span>
 
-- [執行個體建構函式](../programming-guide/classes-and-structs/constructors.md)，您呼叫它來建立類別的新執行個體。 每個類別都必須定義自己的建構函式。
+<span data-ttu-id="d8f57-125">C# 和 .NET 只支援「單一繼承」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-125">C# and .NET support *single inheritance* only.</span></span> <span data-ttu-id="d8f57-126">也就是說，類別只能繼承自單一類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-126">That is, a class can only inherit from a single class.</span></span> <span data-ttu-id="d8f57-127">不過，繼承可以轉移，這可讓您定義一組型別的繼承階層。</span><span class="sxs-lookup"><span data-stu-id="d8f57-127">However, inheritance is transitive, which allows you to define an inheritance hierarchy for a set of types.</span></span> <span data-ttu-id="d8f57-128">換句話說，型別 `D` 可繼承自型別 `C`，其繼承自型別 `B`，而該型別的繼承來源為基底類別型別 `A`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-128">In other words, type `D` can inherit from type `C`, which inherits from type `B`, which inherits from the base class type `A`.</span></span> <span data-ttu-id="d8f57-129">因為繼承可以轉移，所以型別 `D` 可以使用型別 `A` 的成員。</span><span class="sxs-lookup"><span data-stu-id="d8f57-129">Because inheritance is transitive, the members of type `A` are available to type `D`.</span></span>
 
-- [完成項](../programming-guide/classes-and-structs/destructors.md)，由執行階段的記憶體回收行程呼叫以終結類別的執行個體。
+<span data-ttu-id="d8f57-130">基底類別的所有成員不一定都由衍生類別繼承。</span><span class="sxs-lookup"><span data-stu-id="d8f57-130">Not all members of a base class are inherited by derived classes.</span></span> <span data-ttu-id="d8f57-131">不會繼承的成員如下︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-131">The following members are not inherited:</span></span>
 
-由衍生類別繼承基底類別的所有其他成員時，是否可以看見它們，取決於其存取範圍。 成員存取範圍會影響其在衍生類別的可見性，如下所示︰
+- <span data-ttu-id="d8f57-132">[靜態建構函式](../programming-guide/classes-and-structs/static-constructors.md)，其會初始化類別的靜態資料。</span><span class="sxs-lookup"><span data-stu-id="d8f57-132">[Static constructors](../programming-guide/classes-and-structs/static-constructors.md), which initialize the static data of a class.</span></span>
 
-- [私用](../language-reference/keywords/private.md)成員只有以巢狀方式置於其基底類別時，才會顯示在衍生類別中。 否則，不會顯示在衍生類別中。 在下列範例中，`A.B` 是衍生自 `A` 的巢狀類別，而 `C` 則衍生自 `A`。 私用 `A.value` 欄位會顯示在 A.B 中。 不過，如果您移除 `C.GetValue` 方法中的註解，並嘗試編譯這個範例，它會產生編譯器錯誤 CS0122：「'A.value' 的保護層級導致無法對其進行存取」。
+- <span data-ttu-id="d8f57-133">[執行個體建構函式](../programming-guide/classes-and-structs/constructors.md)，您呼叫它來建立類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="d8f57-133">[Instance constructors](../programming-guide/classes-and-structs/constructors.md), which you call to create a new instance of the class.</span></span> <span data-ttu-id="d8f57-134">每個類別都必須定義自己的建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-134">Each class must define its own constructors.</span></span>
 
-  [!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+- <span data-ttu-id="d8f57-135">[完成項](../programming-guide/classes-and-structs/destructors.md)，由執行階段的記憶體回收行程呼叫以終結類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="d8f57-135">[Finalizers](../programming-guide/classes-and-structs/destructors.md), which are called by the runtime's garbage collector to destroy instances of a class.</span></span>
 
-- [受保護](../language-reference/keywords/protected.md)成員只會顯示在衍生類別中。
+<span data-ttu-id="d8f57-136">由衍生類別繼承基底類別的所有其他成員時，是否可以看見它們，取決於其存取範圍。</span><span class="sxs-lookup"><span data-stu-id="d8f57-136">While all other members of a base class are inherited by derived classes, whether they are visible or not depends on their accessibility.</span></span> <span data-ttu-id="d8f57-137">成員存取範圍會影響其在衍生類別的可見性，如下所示︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-137">A member's accessibility affects its visibility for derived classes as follows:</span></span>
 
-- [內部](../language-reference/keywords/protected.md)成員只會顯示在和基底類別位於相同組件的衍生類別中。 和基底類別位於不同組件的衍生類別中不會顯示它們。
+- <span data-ttu-id="d8f57-138">[私用](../language-reference/keywords/private.md)成員只有以巢狀方式置於其基底類別時，才會顯示在衍生類別中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-138">[Private](../language-reference/keywords/private.md) members are visible only in derived classes that are nested in their base class.</span></span> <span data-ttu-id="d8f57-139">否則，不會顯示在衍生類別中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-139">Otherwise, they are not visible in derived classes.</span></span> <span data-ttu-id="d8f57-140">在下列範例中，`A.B` 是衍生自 `A` 的巢狀類別，而 `C` 則衍生自 `A`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-140">In the following example, `A.B` is a nested class that derives from `A`, and `C` derives from `A`.</span></span> <span data-ttu-id="d8f57-141">私用 `A.value` 欄位會顯示在 A.B 中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-141">The private `A.value` field is visible in A.B.</span></span> <span data-ttu-id="d8f57-142">不過，如果您移除 `C.GetValue` 方法中的註解，並嘗試編譯這個範例，它會產生編譯器錯誤 CS0122：「'A.value' 的保護層級導致無法對其進行存取」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-142">However, if you remove the comments from the `C.GetValue` method and attempt to compile the example, it produces compiler error CS0122: "'A.value' is inaccessible due to its protection level."</span></span>
 
-- [公用](../language-reference/keywords/protected.md)成員會顯示在衍生類別中，它也是衍生類別公用介面的一部分。 公用繼承成員都可以呼叫，如同在衍生類別中定義一般。 在下列範例中，類別 `A` 定義名為 `Method1` 的方法，而類別 `B` 則繼承自 `A` 類別。 範例接著會將 `Method1` 視為 `B` 上的執行個體方法來呼叫。
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+- <span data-ttu-id="d8f57-143">[受保護](../language-reference/keywords/protected.md)成員只會顯示在衍生類別中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-143">[Protected](../language-reference/keywords/protected.md) members are visible only in derived classes.</span></span>
 
-衍生類別也可以提供替代實作來「覆寫」繼承的成員 。 基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。 根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。 如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「<member>無法覆寫繼承的成員<member>，因為其未標記為 virtual、abstract 或 override」。
+- <span data-ttu-id="d8f57-144">[內部](../language-reference/keywords/internal.md)成員只會顯示在和基底類別位於相同組件的衍生類別中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-144">[Internal](../language-reference/keywords/internal.md) members are visible only in derived classes that are located in the same assembly as the base class.</span></span> <span data-ttu-id="d8f57-145">和基底類別位於不同組件的衍生類別中不會顯示它們。</span><span class="sxs-lookup"><span data-stu-id="d8f57-145">They are not visible in derived classes located in a different assembly from the base class.</span></span>
+
+- <span data-ttu-id="d8f57-146">[公用](../language-reference/keywords/public.md)成員會顯示在衍生類別中，而且是在衍生的類別的公用介面的一部分。</span><span class="sxs-lookup"><span data-stu-id="d8f57-146">[Public](../language-reference/keywords/public.md) members are visible in derived classes and are part of the derived class' public interface.</span></span> <span data-ttu-id="d8f57-147">公用繼承成員都可以呼叫，如同在衍生類別中定義一般。</span><span class="sxs-lookup"><span data-stu-id="d8f57-147">Public inherited members can be called just as if they were defined in the derived class.</span></span> <span data-ttu-id="d8f57-148">在下列範例中，類別 `A` 定義名為 `Method1` 的方法，而類別 `B` 則繼承自 `A` 類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-148">In the following example, class `A` defines a method named `Method1`, and class `B` inherits from class `A`.</span></span> <span data-ttu-id="d8f57-149">範例接著會將 `Method1` 視為 `B` 上的執行個體方法來呼叫。</span><span class="sxs-lookup"><span data-stu-id="d8f57-149">The example then calls `Method1` as if it were an instance method on `B`.</span></span>
+
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+
+<span data-ttu-id="d8f57-150">衍生類別也可以提供替代實作來「覆寫」繼承的成員 。</span><span class="sxs-lookup"><span data-stu-id="d8f57-150">Derived classes can also *override* inherited members by providing an alternate implementation.</span></span> <span data-ttu-id="d8f57-151">基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。</span><span class="sxs-lookup"><span data-stu-id="d8f57-151">In order to be able to override a member, the member in the base class must be marked with the [virtual](../language-reference/keywords/virtual.md) keyword.</span></span> <span data-ttu-id="d8f57-152">根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。</span><span class="sxs-lookup"><span data-stu-id="d8f57-152">By default, base class members are not marked as `virtual` and cannot be overridden.</span></span> <span data-ttu-id="d8f57-153">如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「<member>無法覆寫繼承的成員<member>，因為其未標記為 virtual、abstract 或 override」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-153">Attempting to override a non-virtual member, as the following example does, generates compiler error CS0506: "<member> cannot override inherited member <member> because it is not marked virtual, abstract, or override.</span></span>
 
 ```csharp
 public class A
@@ -84,7 +86,7 @@ public class B : A
 }
 ```
 
-在某些情況下，衍生類別「必須」覆寫基底類別實作。 標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。 嘗試編譯下列範例會產生編譯器錯誤 CS0534：「<class> 未實作繼承的抽象成員 <member>」，因為類別 `B` 不會為 `A.Method1` 提供任何實作 。
+<span data-ttu-id="d8f57-154">在某些情況下，衍生類別「必須」覆寫基底類別實作。</span><span class="sxs-lookup"><span data-stu-id="d8f57-154">In some cases, a derived class *must* override the base class implementation.</span></span> <span data-ttu-id="d8f57-155">標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。</span><span class="sxs-lookup"><span data-stu-id="d8f57-155">Base class members marked with the [abstract](../language-reference/keywords/abstract.md) keyword require that derived classes override them.</span></span> <span data-ttu-id="d8f57-156">嘗試編譯下列範例會產生編譯器錯誤 CS0534：「<class> 未實作繼承的抽象成員 <member>」，因為類別 `B` 不會為 `A.Method1` 提供任何實作 。</span><span class="sxs-lookup"><span data-stu-id="d8f57-156">Attempting to compile the following example generates compiler error CS0534, "<class> does not implement inherited abstract member <member>', because class `B` provides no implementation for `A.Method1`.</span></span>
 
 ```csharp
 public abstract class A
@@ -101,7 +103,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-繼承只適用於類別和介面。 其他型別分類 (結構、委派及列舉) 均不支援繼承。 因此如下所示，嘗試編譯程式碼會產生編譯器錯誤 CS0527：「介面清單中的型別 'ValueType' 不是介面」。 錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。
+<span data-ttu-id="d8f57-157">繼承只適用於類別和介面。</span><span class="sxs-lookup"><span data-stu-id="d8f57-157">Inheritance applies only to classes and interfaces.</span></span> <span data-ttu-id="d8f57-158">其他型別分類 (結構、委派及列舉) 均不支援繼承。</span><span class="sxs-lookup"><span data-stu-id="d8f57-158">Other type categories (structs, delegates, and enums) do not support inheritance.</span></span> <span data-ttu-id="d8f57-159">因此如下所示，嘗試編譯程式碼會產生編譯器錯誤 CS0527：「介面清單中的型別 'ValueType' 不是介面」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-159">Because of this, attempting to compile code like the following produces compiler error CS0527: "Type 'ValueType' in interface list is not an interface."</span></span> <span data-ttu-id="d8f57-160">錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。</span><span class="sxs-lookup"><span data-stu-id="d8f57-160">The error message indicates that, although you can define the interfaces that a struct implements, inheritance is not supported.</span></span>
 
 ```csharp
 using System;
@@ -111,475 +113,193 @@ public struct ValueStructure : ValueType // Generates CS0527.
 }
 ```
 
-## <a name="implicit-inheritance"></a>隱含繼承
+## <a name="implicit-inheritance"></a><span data-ttu-id="d8f57-161">隱含繼承</span><span class="sxs-lookup"><span data-stu-id="d8f57-161">Implicit inheritance</span></span>
 
-除了透過單一繼承而繼承自的任何型別以外，<xref:System.Object> 或從中衍生的型別都會是 .NET 型別系統中所有型別的隱含繼承來源。 這樣可確保任何型別都可以使用一般功能。
+<span data-ttu-id="d8f57-162">除了透過單一繼承而繼承自的任何型別以外，<xref:System.Object> 或從中衍生的型別都會是 .NET 型別系統中所有型別的隱含繼承來源。</span><span class="sxs-lookup"><span data-stu-id="d8f57-162">Besides any types that they may inherit from through single inheritance, all types in the .NET type system implicitly inherit from <xref:System.Object> or a type derived from it.</span></span> <span data-ttu-id="d8f57-163">這樣可確保任何型別都可以使用一般功能。</span><span class="sxs-lookup"><span data-stu-id="d8f57-163">This ensures that common functionality is available to any type.</span></span>
 
-為了說明隱含繼承表示的意思，讓我們定義只有空的類別定義的新類別 `SimpleClass`︰
+<span data-ttu-id="d8f57-164">為了說明隱含繼承表示的意思，讓我們定義只有空的類別定義的新類別 `SimpleClass`︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-164">To see what implicit inheritance means, let's define a new class, `SimpleClass`, that is simply an empty class definition:</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-我們接下來可以使用反映 (可讓我們檢查型別的中繼資料以取得該型別的相關資訊) 來取得一份屬於 `SimpleClass` 型別的成員清單。 雖然我們尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。 其中之一是 C# 編譯器為 `SimpleClass` 型別自動提供的無參數 (或預設) 建構函式。 其餘八個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。
+<span data-ttu-id="d8f57-165">我們接下來可以使用反映 (可讓我們檢查型別的中繼資料以取得該型別的相關資訊) 來取得一份屬於 `SimpleClass` 型別的成員清單。</span><span class="sxs-lookup"><span data-stu-id="d8f57-165">We can then use reflection (which lets us inspect a type's metadata to get information about that type) to get a list of the members that belong to the `SimpleClass` type.</span></span> <span data-ttu-id="d8f57-166">雖然我們尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。</span><span class="sxs-lookup"><span data-stu-id="d8f57-166">Although we haven't defined any members in our `SimpleClass` class, output from the example indicates that it actually has nine members.</span></span> <span data-ttu-id="d8f57-167">其中之一是 C# 編譯器為 `SimpleClass` 型別自動提供的無參數 (或預設) 建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-167">One of these is a parameterless (or default) constructor that is automatically supplied for the `SimpleClass` type by the C# compiler.</span></span> <span data-ttu-id="d8f57-168">其餘八個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。</span><span class="sxs-lookup"><span data-stu-id="d8f57-168">The remaining eight are members of <xref:System.Object>, the type from which all classes and interfaces in the .NET type system ultimately implicitly inherit.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
-隱含繼承自 <xref:System.Object> 類別讓以下方法可以使用 `SimpleClass` 類別：
+<span data-ttu-id="d8f57-169">隱含繼承自 <xref:System.Object> 類別讓以下方法可以使用 `SimpleClass` 類別：</span><span class="sxs-lookup"><span data-stu-id="d8f57-169">Implicit inheritance from the <xref:System.Object> class makes these methods available to the `SimpleClass` class:</span></span>
 
-- 將 `SimpleClass` 物件轉換為其字串表示的公用 `ToString` 方法會傳回完整型別名稱。 在此情況下，`ToString` 方法會傳回字串 "SimpleClass"。
+- <span data-ttu-id="d8f57-170">將 `SimpleClass` 物件轉換為其字串表示的公用 `ToString` 方法會傳回完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="d8f57-170">The public `ToString` method, which converts a `SimpleClass` object to its string representation, returns the fully qualified type name.</span></span> <span data-ttu-id="d8f57-171">在此情況下，`ToString` 方法會傳回字串 "SimpleClass"。</span><span class="sxs-lookup"><span data-stu-id="d8f57-171">In this case, the `ToString` method returns the string "SimpleClass".</span></span>
 
-- 測試兩個物件是否相等的三種方法︰ 公用執行個體 `Equals(Object)` 方法、公用靜態 `Equals(Object, Object)` 方法以及公用靜態 `ReferenceEquals(Object, Object)` 方法。 根據預設，這些方法會測試參考是否相等。也就是說，兩個物件必須都參考相同的物件才會相等。
+- <span data-ttu-id="d8f57-172">測試兩個物件是否相等的三種方法︰ 公用執行個體 `Equals(Object)` 方法、公用靜態 `Equals(Object, Object)` 方法以及公用靜態 `ReferenceEquals(Object, Object)` 方法。</span><span class="sxs-lookup"><span data-stu-id="d8f57-172">Three methods that test for equality of two objects: the public instance `Equals(Object)` method, the public static `Equals(Object, Object)` method, and the public static `ReferenceEquals(Object, Object)` method.</span></span> <span data-ttu-id="d8f57-173">根據預設，這些方法會測試參考是否相等。也就是說，兩個物件必須都參考相同的物件才會相等。</span><span class="sxs-lookup"><span data-stu-id="d8f57-173">By default, these methods test for reference equality; that is, to be equal, two object variables must refer to the same object.</span></span>
 
-- 公用 `GetHashCode` 方法會計算出一個值，其允許在雜湊集合中使用該型別的執行個體。
+- <span data-ttu-id="d8f57-174">公用 `GetHashCode` 方法會計算出一個值，其允許在雜湊集合中使用該型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="d8f57-174">The public `GetHashCode` method, which computes a value that allows an instance of the type to be used in hashed collections.</span></span>
 
-- 公用 `GetType` 方法會傳回代表 `SimpleClass` 型別的 <xref:System.Type> 物件。
+- <span data-ttu-id="d8f57-175">公用 `GetType` 方法會傳回代表 `SimpleClass` 型別的 <xref:System.Type> 物件。</span><span class="sxs-lookup"><span data-stu-id="d8f57-175">The public `GetType` method, which returns a <xref:System.Type> object that represents the `SimpleClass` type.</span></span>
 
-- 受保護的 <xref:System.Object.Finalize%2A> 方法設計為在記憶體回收行程回收物件的記憶體之前釋放 Unmanaged 的資源。
+- <span data-ttu-id="d8f57-176">受保護的 <xref:System.Object.Finalize%2A> 方法設計為在記憶體回收行程回收物件的記憶體之前釋放 Unmanaged 的資源。</span><span class="sxs-lookup"><span data-stu-id="d8f57-176">The protected <xref:System.Object.Finalize%2A> method, which is designed to release unmanaged resources before an object's memory is reclaimed by the garbage collector.</span></span>
 
-- 受保護的 <xref:System.Object.MemberwiseClone%2A> 方法會建立目前物件的淺層複製 (Shallow Clone)。
+- <span data-ttu-id="d8f57-177">受保護的 <xref:System.Object.MemberwiseClone%2A> 方法會建立目前物件的淺層複製 (Shallow Clone)。</span><span class="sxs-lookup"><span data-stu-id="d8f57-177">The protected <xref:System.Object.MemberwiseClone%2A> method, which creates a shallow clone of the current object.</span></span>
 
-因為隱含繼承，所以我們能呼叫從 `SimpleClass`物件繼承的任何成員，如同 `SimpleClass` 類別中定義的實際成員一般。 例如，下列範例呼叫 `SimpleClass.ToString` 方法，其 `SimpleClass` 繼承自<xref:System.Object>。
+<span data-ttu-id="d8f57-178">因為隱含繼承，所以我們能呼叫從 `SimpleClass`物件繼承的任何成員，如同 `SimpleClass` 類別中定義的實際成員一般。</span><span class="sxs-lookup"><span data-stu-id="d8f57-178">Because of implicit inheritance, we can call any inherited member from a `SimpleClass` object just as if it was actually a member defined in the `SimpleClass` class.</span></span> <span data-ttu-id="d8f57-179">例如，下列範例呼叫 `SimpleClass.ToString` 方法，其 `SimpleClass` 繼承自<xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="d8f57-179">For instance, the following example calls the `SimpleClass.ToString` method, which `SimpleClass` inherits from <xref:System.Object>.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
-下表列出您可以在 C# 中建立型別分類和其隱含繼承自的類別。 每個基底型別都有一組不同的成員可透過繼承來使用以隱含地衍生型別。
+<span data-ttu-id="d8f57-180">下表列出您可以在 C# 中建立型別分類和其隱含繼承自的類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-180">The following table lists the categories of types that you can create in C# and the types from which they implicitly inherit.</span></span> <span data-ttu-id="d8f57-181">每個基底型別都有一組不同的成員可透過繼承來使用以隱含地衍生型別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-181">Each base type makes a different set of members available through inheritance to implicitly derived types.</span></span>
 
-| 型別分類 | 隱含繼承自                                                      |
+| <span data-ttu-id="d8f57-182">型別分類</span><span class="sxs-lookup"><span data-stu-id="d8f57-182">Type category</span></span> | <span data-ttu-id="d8f57-183">隱含繼承自</span><span class="sxs-lookup"><span data-stu-id="d8f57-183">Implicitly inherits from</span></span>                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| Class - 類別         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| Delegate - 委派      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
+| <span data-ttu-id="d8f57-184">Class - 類別</span><span class="sxs-lookup"><span data-stu-id="d8f57-184">class</span></span>         | <xref:System.Object>                                                          |
+| <span data-ttu-id="d8f57-185">struct</span><span class="sxs-lookup"><span data-stu-id="d8f57-185">struct</span></span>        | <span data-ttu-id="d8f57-186"><xref:System.ValueType>, <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="d8f57-186"><xref:System.ValueType>, <xref:System.Object></span></span>                                 |
+| <span data-ttu-id="d8f57-187">enum</span><span class="sxs-lookup"><span data-stu-id="d8f57-187">enum</span></span>          | <span data-ttu-id="d8f57-188"><xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="d8f57-188"><xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object></span></span>             |
+| <span data-ttu-id="d8f57-189">Delegate - 委派</span><span class="sxs-lookup"><span data-stu-id="d8f57-189">delegate</span></span>      | <span data-ttu-id="d8f57-190"><xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="d8f57-190"><xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object></span></span> |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>繼承和「是」關聯性
+## <a name="inheritance-and-an-is-a-relationship"></a><span data-ttu-id="d8f57-191">繼承和「是」關聯性</span><span class="sxs-lookup"><span data-stu-id="d8f57-191">Inheritance and an "is a" relationship</span></span>
 
-在正常情況下，繼承用來表示基底類別與一或多個衍生類別之間的「是」關聯性，其中的衍生類別是基底類別的特殊版本；衍生類別是基底類別的一種型別。 例如，`Publication` 類別代表任何類型的發行物，而 `Book` 和 `Magazine` 類別代表特定發行物型別。
+<span data-ttu-id="d8f57-192">在正常情況下，繼承用來表示基底類別與一或多個衍生類別之間的「是」關聯性，其中的衍生類別是基底類別的特殊版本；衍生類別是基底類別的一種型別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-192">Ordinarily, inheritance is used to express an "is a" relationship between a base class and one or more derived classes, where the derived classes are specialized versions of the base class; the derived class is a type of the base class.</span></span> <span data-ttu-id="d8f57-193">例如，`Publication` 類別代表任何類型的發行物，而 `Book` 和 `Magazine` 類別代表特定發行物型別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-193">For example, the `Publication` class represents a publication of any kind, and the `Book` and `Magazine` classes represent specific types of publications.</span></span>
 
 > [!NOTE]
-> 類別或結構可以再實作另一個介面。 介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。 介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。
+> <span data-ttu-id="d8f57-194">類別或結構可以再實作另一個介面。</span><span class="sxs-lookup"><span data-stu-id="d8f57-194">A class or struct can implement one more interfaces.</span></span> <span data-ttu-id="d8f57-195">介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。</span><span class="sxs-lookup"><span data-stu-id="d8f57-195">While interface implementation is often presented as a workaround for single inheritance or as a way of using inheritance with structs, it is intended to express a different relationship (a "can do" relationship) between an interface and its implementing type than inheritance.</span></span> <span data-ttu-id="d8f57-196">介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。</span><span class="sxs-lookup"><span data-stu-id="d8f57-196">An interface defines a subset of functionality (such as the ability to test for equality, to compare or sort objects, or to support culture-sensitive parsing and formatting) that the interface makes available to its implementing types.</span></span>
 
-請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 此 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
+<span data-ttu-id="d8f57-197">請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-197">Note that "is a" also expresses the relationship between a type and a specific instantiation of that type.</span></span> <span data-ttu-id="d8f57-198">在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。</span><span class="sxs-lookup"><span data-stu-id="d8f57-198">In the following example, `Automobile` is a class that has three unique read-only properties: `Make`, the manufacturer of the automobile; `Model`, the kind of automobile; and `Year`, its year of manufacture.</span></span> <span data-ttu-id="d8f57-199">此 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-199">Our `Automobile` class also has a constructor whose arguments are assigned to the property values, and it overrides the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to produce a string that uniquely identifies the `Automobile` instance rather than the `Automobile` class.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-在此情況下，我們不應該仰賴繼承來表示特定的車輛廠牌和款式。 例如，我們不需要定義 `Packard` 型別來表示 Packard Motor 汽車公司製造的汽車。 相反地，我們可以建立 `Automobile` 物件，將適當的值傳遞至它的類別建構函式，如下列範例所示。
+<span data-ttu-id="d8f57-200">在此情況下，我們不應該仰賴繼承來表示特定的車輛廠牌和款式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-200">In this case, we should not rely on inheritance to represent specific car makes and models.</span></span> <span data-ttu-id="d8f57-201">例如，我們不需要定義 `Packard` 型別來表示 Packard Motor 汽車公司製造的汽車。</span><span class="sxs-lookup"><span data-stu-id="d8f57-201">For example, we do not need to define a `Packard` type to represent automobiles manufactured by the Packard Motor Car Company.</span></span> <span data-ttu-id="d8f57-202">相反地，我們可以建立 `Automobile` 物件，將適當的值傳遞至它的類別建構函式，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="d8f57-202">Instead, we can represent them by creating an `Automobile` object with the appropriate values passed to its class constructor, as the following example does.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
-以繼承為基礎的是關聯性，最適合用於基底類別，以及會對基底類別新增額外成員或其需要的額外功能是基底類別所沒有的衍生類別。
+<span data-ttu-id="d8f57-203">以繼承為基礎的是關聯性，最適合用於基底類別，以及會對基底類別新增額外成員或其需要的額外功能是基底類別所沒有的衍生類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-203">An is-a relationship based on inheritance is best applied to a base class and to derived classes that add additional members to the base class or that require additional functionality not present in the base class.</span></span>
 
-## <a name="designing-the-base-class-and-derived-classes"></a>設計基底類別和衍生類別
+## <a name="designing-the-base-class-and-derived-classes"></a><span data-ttu-id="d8f57-204">設計基底類別和衍生類別</span><span class="sxs-lookup"><span data-stu-id="d8f57-204">Designing the base class and derived classes</span></span>
 
-讓我們來看設計基底類別和其衍生類別的流程。 在本節中，我們會定義基底類別 `Publication`，其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。我們也會定義衍生自 `Book` 類別的類別 `Publication`。 我們可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
+<span data-ttu-id="d8f57-205">讓我們來看設計基底類別和其衍生類別的流程。</span><span class="sxs-lookup"><span data-stu-id="d8f57-205">Let's look at the process of designing a base class and its derived classes.</span></span> <span data-ttu-id="d8f57-206">在本節中，我們會定義基底類別 `Publication`，其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。我們也會定義衍生自 `Book` 類別的類別 `Publication`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-206">In this section, we'll define a base class, `Publication`, which represents a publication of any kind, such as a book, a magazine, a newspaper, a journal, an article, etc. We'll also define a `Book` class that derives from `Publication`.</span></span> <span data-ttu-id="d8f57-207">我們可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-207">We could easily extend the example to define other derived classes, such as `Magazine`, `Journal`, `Newspaper`, and `Article`.</span></span>
 
-### <a name="the-base-publication-class"></a>基底 Publication 類別
+### <a name="the-base-publication-class"></a><span data-ttu-id="d8f57-208">基底 Publication 類別</span><span class="sxs-lookup"><span data-stu-id="d8f57-208">The base Publication class</span></span>
 
-在設計 `Publication` 類別時，我們需要做出幾個設計決策︰
+<span data-ttu-id="d8f57-209">在設計 `Publication` 類別時，我們需要做出幾個設計決策︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-209">In designing our `Publication` class, we need to make several design decisions:</span></span>
 
-- 基底 `Publication` 類別中包含哪些成員，以及 `Publication` 成員是否提供方法實作，或 `Publication` 是否為抽象基底類別，可做為其衍生類別的範本。
+- <span data-ttu-id="d8f57-210">基底 `Publication` 類別中包含哪些成員，以及 `Publication` 成員是否提供方法實作，或 `Publication` 是否為抽象基底類別，可做為其衍生類別的範本。</span><span class="sxs-lookup"><span data-stu-id="d8f57-210">What members to include in our base `Publication` class, and whether the `Publication` members provide method implementations, or whether `Publication` is an abstract base class that serves as a template for its derived classes.</span></span>
 
-  在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節包含的範例會使用抽象基底類別，來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
+  <span data-ttu-id="d8f57-211">在此情況下，`Publication` 類別會提供方法實作。</span><span class="sxs-lookup"><span data-stu-id="d8f57-211">In this case, the `Publication` class will provide method implementations.</span></span> <span data-ttu-id="d8f57-212">[設計抽象基底類別和其衍生類別](#abstract)一節包含的範例會使用抽象基底類別，來定義衍生類別必須覆寫的方法。</span><span class="sxs-lookup"><span data-stu-id="d8f57-212">The [Designing abstract base classes amd their derived classes](#abstract) section contains an example that uses an abstract base class to define the methods that derived classes must override.</span></span> <span data-ttu-id="d8f57-213">衍生類別可隨意提供適用於衍生型別的任何實作。</span><span class="sxs-lookup"><span data-stu-id="d8f57-213">Derived classes are free to provide any implementation that is suitable for the derived type.</span></span>
 
-  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 型別共用，我們就應該將成員加入其中。 如果無法有效地完成，我們就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
+  <span data-ttu-id="d8f57-214">能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。</span><span class="sxs-lookup"><span data-stu-id="d8f57-214">The ability to reuse code (that is, multiple derived classes share the declaration and implementation of base class methods and do not need to override them) is an advantage of non-abstract base classes.</span></span> <span data-ttu-id="d8f57-215">因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 型別共用，我們就應該將成員加入其中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-215">Therefore, we should add members to `Publication` if their code is likely to be shared by some or most specialized `Publication` types.</span></span> <span data-ttu-id="d8f57-216">如果無法有效地完成，我們就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。</span><span class="sxs-lookup"><span data-stu-id="d8f57-216">If we fail to do this efficiently, we'll end up having to provide largely identical member implementations in derived classes rather a single implementation in the base class.</span></span> <span data-ttu-id="d8f57-217">在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。</span><span class="sxs-lookup"><span data-stu-id="d8f57-217">The need to maintain duplicated code in multiple locations is a potential source of bugs.</span></span>
 
-  為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，我們希望只將所有獲大部分發行物通用的資料與功能納入 `Publication` 類別中。 衍生類別接著實作其所代表特定發行物類型的唯一成員。
+  <span data-ttu-id="d8f57-218">為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，我們希望只將所有獲大部分發行物通用的資料與功能納入 `Publication` 類別中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-218">Both to maximize code reuse and to create a logical and intuitive inheritance hierarchy, we want to be sure that we include in the `Publication` class only the data and functionality that is common to all or to most publications.</span></span> <span data-ttu-id="d8f57-219">衍生類別接著實作其所代表特定發行物類型的唯一成員。</span><span class="sxs-lookup"><span data-stu-id="d8f57-219">Derived classes then implement members that are unique to the particular kinds of publication that they represent.</span></span>
 
-- 擴充類別階層的程度。 我們想要開發有三種類別以上的階層，還是只想要一個基底類別和一或多個衍生類別？ 例如，`Publication` 可以是 `Periodical` 的基底類別，而後者又是 `Magazine`、`Journal` 及 `Newspaper` 的基底類別。
+- <span data-ttu-id="d8f57-220">擴充類別階層的程度。</span><span class="sxs-lookup"><span data-stu-id="d8f57-220">How far to extend our class hierarchy.</span></span> <span data-ttu-id="d8f57-221">我們想要開發有三種類別以上的階層，還是只想要一個基底類別和一或多個衍生類別？</span><span class="sxs-lookup"><span data-stu-id="d8f57-221">Do we want to develop a hierarchy of three or more classes, rather than simply a base class and one or more derived classes?</span></span> <span data-ttu-id="d8f57-222">例如，`Publication` 可以是 `Periodical` 的基底類別，而後者又是 `Magazine`、`Journal` 及 `Newspaper` 的基底類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-222">For example, `Publication` could be a base class of `Periodical`, which in turn is a base class of `Magazine`, `Journal` and `Newspaper`.</span></span>
 
-  針對本範例，我們將使用有 `Publication` 類別和單一衍生類別 `Book` 的簡單階層。 我們可以輕鬆地擴充範例，以建立一些衍生自 `Publication` (例如 `Magazine` 和 `Article`) 的其他類別。
+  <span data-ttu-id="d8f57-223">針對本範例，我們將使用有 `Publication` 類別和單一衍生類別 `Book` 的簡單階層。</span><span class="sxs-lookup"><span data-stu-id="d8f57-223">For our example, we'll use the simple hierarchy of a `Publication` class and a single derived classes, `Book`.</span></span> <span data-ttu-id="d8f57-224">我們可以輕鬆地擴充範例，以建立一些衍生自 `Publication` (例如 `Magazine` 和 `Article`) 的其他類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-224">We could easily extend the example to create a number of additional   classes that derive from `Publication`, such as `Magazine` and `Article`.</span></span>
 
-- 將基底類別具現化是否適當。 如果不適當，我們應該對該類別套用 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 如果直接呼叫其類別建構函式，嘗試具現化標示有 `abstract` 關鍵字的類別，C# 編譯器會產生錯誤 CS0144：「無法建立抽象類別或介面的執行個體」。 如果使用反映嘗試具現化該類別，反映方法會擲回 <xref:System.MemberAccessException>。 否則，可以呼叫其類別建構函式具現化 `Publication` 類別。
+- <span data-ttu-id="d8f57-225">將基底類別具現化是否適當。</span><span class="sxs-lookup"><span data-stu-id="d8f57-225">Whether it makes sense to instantiate the base class.</span></span> <span data-ttu-id="d8f57-226">如果不適當，我們應該對該類別套用 [abstract](../language-reference/keywords/abstract.md) 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="d8f57-226">If it does not, we should apply the [abstract](../language-reference/keywords/abstract.md) keyword to the class.</span></span> <span data-ttu-id="d8f57-227">如果直接呼叫其類別建構函式，嘗試具現化標示有 `abstract` 關鍵字的類別，C# 編譯器會產生錯誤 CS0144：「無法建立抽象類別或介面的執行個體」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-227">If an attempt is made to instantiate a class marked with the `abstract` keyword by a direct call to its class constructor, the C# compiler generates error CS0144, "Cannot create an instance of the abstract class or interface."</span></span> <span data-ttu-id="d8f57-228">如果使用反映嘗試具現化該類別，反映方法會擲回 <xref:System.MemberAccessException>。</span><span class="sxs-lookup"><span data-stu-id="d8f57-228">If an attempt is made to instantiate the class by using reflection, the reflection method throws a <xref:System.MemberAccessException>.</span></span> <span data-ttu-id="d8f57-229">否則，可以呼叫其類別建構函式具現化 `Publication` 類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-229">Otherwise, our `Publication` class can be instantiated by calling its class constructor.</span></span>
 
-  根據預設，可以呼叫其類別建構函式具現化基底類別。 請注意，我們不必明確地定義類別建構函式。 如果基底類別的原始程式碼中尚未存在建構函式，C# 編譯器會自動提供預設 (無參數) 建構函式。
+  <span data-ttu-id="d8f57-230">根據預設，可以呼叫其類別建構函式具現化基底類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-230">By default, a base class can be instantiated by calling its class constructor.</span></span> <span data-ttu-id="d8f57-231">請注意，我們不必明確地定義類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-231">Note that we do not have to explicitly define a class constructor.</span></span> <span data-ttu-id="d8f57-232">如果基底類別的原始程式碼中尚未存在建構函式，C# 編譯器會自動提供預設 (無參數) 建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-232">If one is not present in the base class' source code, the C# compiler automatically provides a default (parameterless) constructor.</span></span>
 
-  針對本範例，我們將 `Publication` 類別標記為 [abstract](../language-reference/keywords/abstract.md)，使它無法具現化。
+  <span data-ttu-id="d8f57-233">針對本範例，我們將 `Publication` 類別標記為 [abstract](../language-reference/keywords/abstract.md)，使它無法具現化。</span><span class="sxs-lookup"><span data-stu-id="d8f57-233">For our example, we'll mark the `Publication` class as [abstract](../language-reference/keywords/abstract.md) so that it cannot be instantiated.</span></span>
 
-- 衍生類別是否必須繼承特定成員的基底類別實作，或是有覆寫基底類別實作的選項。 我們都必須使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，以允許衍生類別覆寫基底類別方法。 根據預設，「不」可覆寫基底類別中定義的方法。
+- <span data-ttu-id="d8f57-234">衍生類別是否必須繼承特定成員的基底類別實作，或是有覆寫基底類別實作的選項。</span><span class="sxs-lookup"><span data-stu-id="d8f57-234">Whether derived classes must inherit the base class implementation of a particular members, or whether they have the option to override the base class implementation.</span></span> <span data-ttu-id="d8f57-235">我們都必須使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，以允許衍生類別覆寫基底類別方法。</span><span class="sxs-lookup"><span data-stu-id="d8f57-235">We have to use the [virtual](../language-reference/keywords/virtual.md) keyword to allow derived classes to override a base class method.</span></span> <span data-ttu-id="d8f57-236">根據預設，「不」可覆寫基底類別中定義的方法。</span><span class="sxs-lookup"><span data-stu-id="d8f57-236">By default, methods defined in the base class are *not* overridable.</span></span>
 
-- 衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。 根據預設，任何類別可以做為基底類別。 我們可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字 ，指出類別不可以做為任何其他類別的基底類別。 嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 <typeName>」。
+- <span data-ttu-id="d8f57-237">衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-237">Whether a derived class represents the final class in the inheritance hierarchy and cannot itself be used as a base class for additional derived classes.</span></span> <span data-ttu-id="d8f57-238">根據預設，任何類別可以做為基底類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-238">By default, any class can serve as a base class.</span></span> <span data-ttu-id="d8f57-239">我們可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字 ，指出類別不可以做為任何其他類別的基底類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-239">We can apply the [sealed](../language-reference/keywords/sealed.md) keyword to indicate that a class cannot serve as a base class for any additional classes.</span></span> <span data-ttu-id="d8f57-240">嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 <typeName>」。</span><span class="sxs-lookup"><span data-stu-id="d8f57-240">Attempting to derive from a sealed class generated compiler error CS0509, "cannot derive from sealed type <typeName>".</span></span>
 
-  針對本範例，我們會將衍生類別標記為 `sealed`。
+  <span data-ttu-id="d8f57-241">針對本範例，我們會將衍生類別標記為 `sealed`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-241">For our example, we'll mark our derived class as `sealed`.</span></span>
 
-下列範例示範 `Publication` 類別的原始程式碼，以及由 `Publication.PublicationType` 屬性所傳回的 `PublicationType` 列舉。 除了其繼承自 <xref:System.Object> 的成員以外，`Publication` 類別還會定義下列的唯一成員，以及定義成員覆寫︰
+<span data-ttu-id="d8f57-242">下列範例示範 `Publication` 類別的原始程式碼，以及由 `Publication.PublicationType` 屬性所傳回的 `PublicationType` 列舉。</span><span class="sxs-lookup"><span data-stu-id="d8f57-242">The following example shows the source code for the `Publication` class, as well as a `PublicationType` enumeration that is returned by the `Publication.PublicationType` property.</span></span> <span data-ttu-id="d8f57-243">除了其繼承自 <xref:System.Object> 的成員以外，`Publication` 類別還會定義下列的唯一成員，以及定義成員覆寫︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-243">In addition to the members that it inherits from <xref:System.Object>, the `Publication` class defines the following unique members and member overrides:</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
-- 建構函式
+- <span data-ttu-id="d8f57-244">建構函式</span><span class="sxs-lookup"><span data-stu-id="d8f57-244">A constructor</span></span>
 
-  因為 `Publication` 類別是 `abstract`，所以它無法從程式碼直接具現化，如下所示︰
+  <span data-ttu-id="d8f57-245">因為 `Publication` 類別是 `abstract`，所以它無法從程式碼直接具現化，如下所示︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-245">Because the `Publication` class is `abstract`, it cannot be instantiated directly from code like the following:</span></span>
 
   ```csharp
   var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
                                     PublicationType.Book);
   ```
 
-  不過，其執行個體建構函式可以從衍生類別建構函式直接呼叫，如 `Book` 類別的原始程式碼所示。
+  <span data-ttu-id="d8f57-246">不過，其執行個體建構函式可以從衍生類別建構函式直接呼叫，如 `Book` 類別的原始程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="d8f57-246">However, its instance constructor can be called directly from derived class constructors, as the source code for the `Book` class shows.</span></span>
 
-- 兩個發行物相關的屬性
+- <span data-ttu-id="d8f57-247">兩個發行物相關的屬性</span><span class="sxs-lookup"><span data-stu-id="d8f57-247">Two publication-related properties</span></span>
 
-  `Title` 是唯讀 <xref:System.String> 屬性，其值是透過呼叫 `Publication` 建構函式提供。
+  <span data-ttu-id="d8f57-248">`Title` 是唯讀 <xref:System.String> 屬性，其值是透過呼叫 `Publication` 建構函式提供。</span><span class="sxs-lookup"><span data-stu-id="d8f57-248">`Title` is a read-only <xref:System.String> property whose value is supplied by calling the `Publication` constructor.</span></span>
 
-  `Pages` 是可讀寫 <xref:System.Int32> 屬性，指出發行物的總頁數。 該值會儲存在名為 `totalPages` 的私用欄位中。 它必須為正數，否則會擲回 <xref:System.ArgumentOutOfRangeException>。
+  <span data-ttu-id="d8f57-249">`Pages` 是可讀寫 <xref:System.Int32> 屬性，指出發行物的總頁數。</span><span class="sxs-lookup"><span data-stu-id="d8f57-249">`Pages` is a read-write <xref:System.Int32> property that indicates how many total pages the publication has.</span></span> <span data-ttu-id="d8f57-250">該值會儲存在名為 `totalPages` 的私用欄位中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-250">The value is stored in a private field named `totalPages`.</span></span> <span data-ttu-id="d8f57-251">它必須為正數，否則會擲回 <xref:System.ArgumentOutOfRangeException>。</span><span class="sxs-lookup"><span data-stu-id="d8f57-251">It must be a positive number or an <xref:System.ArgumentOutOfRangeException> is thrown.</span></span>
 
-- 發行者相關的成員
+- <span data-ttu-id="d8f57-252">發行者相關的成員</span><span class="sxs-lookup"><span data-stu-id="d8f57-252">Publisher-related members</span></span>
 
-  兩個唯讀屬性 `Publisher` 和 `Type`。 這些值就是原先呼叫 `Publication` 類別建構函式所提供的值。
+  <span data-ttu-id="d8f57-253">兩個唯讀屬性 `Publisher` 和 `Type`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-253">Two read-only properties, `Publisher` and `Type`.</span></span> <span data-ttu-id="d8f57-254">這些值就是原先呼叫 `Publication` 類別建構函式所提供的值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-254">The values are originally supplied by the call to the `Publication` class constructor.</span></span>
 
-- 與發佈相關的成員
+- <span data-ttu-id="d8f57-255">與發佈相關的成員</span><span class="sxs-lookup"><span data-stu-id="d8f57-255">Publishing-related members</span></span>
 
-  `Publish` 和 `GetPublicationDate` 這兩個方法可設定和傳回發行日期。 當呼叫 `Publish` 方法並將傳遞給它的日期指派為私用 `datePublished` 欄位的引數時，它會將私用 `published` 旗標設定為 `true`。 如果 `published` 旗標是 `false`，`GetPublicationDate` 方法會傳回字串 "NYP"，如果是 `true`，則會傳回 `datePublished` 欄位的值。
+  <span data-ttu-id="d8f57-256">`Publish` 和 `GetPublicationDate` 這兩個方法可設定和傳回發行日期。</span><span class="sxs-lookup"><span data-stu-id="d8f57-256">Two methods, `Publish` and `GetPublicationDate`, set and return the publication date.</span></span> <span data-ttu-id="d8f57-257">當呼叫 `Publish` 方法並將傳遞給它的日期指派為私用 `datePublished` 欄位的引數時，它會將私用 `published` 旗標設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-257">The `Publish` method sets a private  `published` flag to `true` when it is called and assigns the date passed to it as an argument to the private `datePublished` field.</span></span> <span data-ttu-id="d8f57-258">如果 `published` 旗標是 `false`，`GetPublicationDate` 方法會傳回字串 "NYP"，如果是 `true`，則會傳回 `datePublished` 欄位的值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-258">The `GetPublicationDate` method returns the string "NYP" if the `published` flag is `false`, and the value of the `datePublished` field if it is `true`.</span></span>
 
-- 著作權相關的成員
+- <span data-ttu-id="d8f57-259">著作權相關的成員</span><span class="sxs-lookup"><span data-stu-id="d8f57-259">Copyright-related members</span></span>
 
-  `Copyright` 方法會將著作權所有人的名稱和著作權年份作為引數，並將它們指派給 `CopyrightName` 和 `CopyrightDate` 屬性。
+  <span data-ttu-id="d8f57-260">`Copyright` 方法會將著作權所有人的名稱和著作權年份作為引數，並將它們指派給 `CopyrightName` 和 `CopyrightDate` 屬性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-260">The `Copyright` method takes the name of the copyright holder and the year of the copyright as arguments and assigns them to the `CopyrightName` and `CopyrightDate` properties.</span></span>
 
-- 覆寫 `ToString` 方法
+- <span data-ttu-id="d8f57-261">覆寫 `ToString` 方法</span><span class="sxs-lookup"><span data-stu-id="d8f57-261">An override of the `ToString` method</span></span>
 
-  如果某型別不會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法，它會傳回該型別的完整名稱，該名稱很少用來區分不同的執行個體。 `Publication` 類別會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 以傳回 `Title` 屬性的值。
+  <span data-ttu-id="d8f57-262">如果某型別不會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法，它會傳回該型別的完整名稱，該名稱很少用來區分不同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="d8f57-262">If a type does not override the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method, it returns the fully qualified name of the type, which is of little use in differentiating one instance from another.</span></span> <span data-ttu-id="d8f57-263">`Publication` 類別會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 以傳回 `Title` 屬性的值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-263">The `Publication` class overrides <xref:System.Object.ToString%2A?displayProperty=nameWithType> to return the value of the `Title` property.</span></span>
 
-下圖說明基底 `Publication` 類別和其隱含繼承的 <xref:System.Object> 類別之間的關聯性。
+<span data-ttu-id="d8f57-264">下圖說明基底 `Publication` 類別和其隱含繼承的 <xref:System.Object> 類別之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-264">The following figure illustrates the relationship between our base `Publication` class and its implicitly inherited <xref:System.Object> class.</span></span>
 
 ![物件和發行物類別](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>`Book` 類別
+### <a name="the-book-class"></a><span data-ttu-id="d8f57-266">`Book` 類別</span><span class="sxs-lookup"><span data-stu-id="d8f57-266">The `Book` class</span></span>
 
-`Book` 類別代表特殊的發行物型別：書籍。 下列範例顯示 `Book` 類別的原始程式碼。
+<span data-ttu-id="d8f57-267">`Book` 類別代表特殊的發行物型別：書籍。</span><span class="sxs-lookup"><span data-stu-id="d8f57-267">The `Book` class represents a book as a specialized type of publication.</span></span> <span data-ttu-id="d8f57-268">下列範例顯示 `Book` 類別的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="d8f57-268">The following example shows the source code for the `Book` class.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
-除了其繼承自 `Publication` 的成員以外，`Book` 類別還會定義下列的唯一成員，以及定義成員覆寫︰
+<span data-ttu-id="d8f57-269">除了其繼承自 `Publication` 的成員以外，`Book` 類別還會定義下列的唯一成員，以及定義成員覆寫︰</span><span class="sxs-lookup"><span data-stu-id="d8f57-269">In addition to the members that it inherits from `Publication`, the `Book` class defines the following unique members and member overrides:</span></span>
 
-- 兩個建構函式
+- <span data-ttu-id="d8f57-270">兩個建構函式</span><span class="sxs-lookup"><span data-stu-id="d8f57-270">Two constructors</span></span>
 
-  這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至私用 `authorName` 欄位。 一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。
+  <span data-ttu-id="d8f57-271">這兩個 `Book` 建構函式共用三個常見參數。</span><span class="sxs-lookup"><span data-stu-id="d8f57-271">The two `Book` constructors share three common parameters.</span></span> <span data-ttu-id="d8f57-272">*title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。</span><span class="sxs-lookup"><span data-stu-id="d8f57-272">Two, *title* and *publisher*, correspond to parameters of the `Publication` constructor.</span></span> <span data-ttu-id="d8f57-273">第三個為 *author*，其會儲存至私用 `authorName` 欄位。</span><span class="sxs-lookup"><span data-stu-id="d8f57-273">The third is *author*, which is stored to a private `authorName` field.</span></span> <span data-ttu-id="d8f57-274">一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-274">One constructor includes an *isbn* parameter, which is stored in the `ISBN` auto-property.</span></span>
 
-  第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 這是定義建構函式的常見模式。 呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
+  <span data-ttu-id="d8f57-275">第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-275">The first constructor uses the [this](../language-reference/keywords/this.md) keyword to call the other constructor.</span></span> <span data-ttu-id="d8f57-276">這是定義建構函式的常見模式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-276">This is a common pattern in defining constructors.</span></span> <span data-ttu-id="d8f57-277">呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-277">Constructors with fewer parameters provide default values when calling the constructor with the greatest number of parameters.</span></span>
 
-  第二個建構函式使用 [base](../language-reference/keywords/base.md) 關鍵字，來將標題和發行者名稱傳遞給基底類別建構函式。 如果您在原始程式碼中沒有明確呼叫基底類別建構函式，C# 編譯器會自動呼叫基底類別的預設或無參數建構函式。
+  <span data-ttu-id="d8f57-278">第二個建構函式使用 [base](../language-reference/keywords/base.md) 關鍵字，來將標題和發行者名稱傳遞給基底類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-278">The second constructor uses the [base](../language-reference/keywords/base.md) keyword to pass the title and publisher name to the base class constructor.</span></span> <span data-ttu-id="d8f57-279">如果您在原始程式碼中沒有明確呼叫基底類別建構函式，C# 編譯器會自動呼叫基底類別的預設或無參數建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-279">If you don't make an explicit call to a base class constructor in your source code, the C# compiler automatically supplies a call to the base class' default or parameterless constructor.</span></span>
 
-- 唯讀 `ISBN` 屬性，會傳回 `Book` 物件的國際標準書號，一組有 10 或 13 位數的唯一數字。 ISBN 會作為引數提供給其中一個 `Book` 建構函式。 ISBN 會儲存在由編譯器自動產生的私用支援欄位中。
+- <span data-ttu-id="d8f57-280">唯讀 `ISBN` 屬性，會傳回 `Book` 物件的國際標準書號，一組有 10 或 13 位數的唯一數字。</span><span class="sxs-lookup"><span data-stu-id="d8f57-280">A read-only `ISBN` property, which returns the `Book` object's International Standard Book Number, a unique 10- or 13-digit number.</span></span> <span data-ttu-id="d8f57-281">ISBN 會作為引數提供給其中一個 `Book` 建構函式。</span><span class="sxs-lookup"><span data-stu-id="d8f57-281">The ISBN is supplied as an argument to one of the `Book` constructors.</span></span> <span data-ttu-id="d8f57-282">ISBN 會儲存在由編譯器自動產生的私用支援欄位中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-282">The ISBN is stored in a private backing field, which is auto-generated by the compiler.</span></span>
 
-- 唯讀 `Author` 屬性。 作者名稱會做為引數提供給那兩個 `Book` 建構函式，並會儲存在私用 `authorName` 欄位。
+- <span data-ttu-id="d8f57-283">唯讀 `Author` 屬性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-283">A read-only `Author` property.</span></span> <span data-ttu-id="d8f57-284">作者名稱會做為引數提供給那兩個 `Book` 建構函式，並會儲存在私用 `authorName` 欄位。</span><span class="sxs-lookup"><span data-stu-id="d8f57-284">The author name is supplied as an argument to both `Book` constructors and is stored in the private `authorName` field.</span></span>
 
-- 兩個價格相關的唯讀屬性，`Price` 和 `Currency`。 其值將在 `SetPrice` 方法呼叫中做為引數提供。 該價格會儲存在私用欄位 `bookPrice` 中。 `Currency` 屬性是三位數的 ISO 貨幣符號 (例如 USD 代表美元)，而且會儲存在私用 `ISOCurrencySymbol` 欄位。 ISO 貨幣符號可從 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 屬性擷取。
+- <span data-ttu-id="d8f57-285">兩個價格相關的唯讀屬性，`Price` 和 `Currency`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-285">Two read-only price-related properties, `Price` and `Currency`.</span></span> <span data-ttu-id="d8f57-286">其值將在 `SetPrice` 方法呼叫中做為引數提供。</span><span class="sxs-lookup"><span data-stu-id="d8f57-286">Their values are provided as arguments in a `SetPrice` method call.</span></span> <span data-ttu-id="d8f57-287">該價格會儲存在私用欄位 `bookPrice` 中。</span><span class="sxs-lookup"><span data-stu-id="d8f57-287">The price is stored in a private field, `bookPrice`.</span></span> <span data-ttu-id="d8f57-288">`Currency` 屬性是三位數的 ISO 貨幣符號 (例如 USD 代表美元)，而且會儲存在私用 `ISOCurrencySymbol` 欄位。</span><span class="sxs-lookup"><span data-stu-id="d8f57-288">The `Currency` property is the three-digit ISO currency symbol (for example, USD for the U.S. dollar) and is stored in the private `ISOCurrencySymbol` field.</span></span> <span data-ttu-id="d8f57-289">ISO 貨幣符號可從 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 屬性擷取。</span><span class="sxs-lookup"><span data-stu-id="d8f57-289">ISO currency symbols can be retrieved from the <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> property.</span></span>
 
-- `SetPrice` 方法會設定 `bookPrice` 和 `ISOCurrencySymbol` 欄位的值。 這些都是 `Price` 和 `Currency` 屬性所傳回的值。
+- <span data-ttu-id="d8f57-290">`SetPrice` 方法會設定 `bookPrice` 和 `ISOCurrencySymbol` 欄位的值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-290">A `SetPrice` method, which sets the values of the `bookPrice` and `ISOCurrencySymbol` fields.</span></span> <span data-ttu-id="d8f57-291">這些都是 `Price` 和 `Currency` 屬性所傳回的值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-291">These are the values returned by the `Price` and `Currency` properties.</span></span>
 
-- 覆寫 `ToString` 方法 (繼承自`Publication`)，以及 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 與 <xref:System.Object.GetHashCode%2A> 方法 (繼承自<xref:System.Object>)。
+- <span data-ttu-id="d8f57-292">覆寫 `ToString` 方法 (繼承自`Publication`)，以及 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 與 <xref:System.Object.GetHashCode%2A> 方法 (繼承自<xref:System.Object>)。</span><span class="sxs-lookup"><span data-stu-id="d8f57-292">Overrides to the `ToString` method (inherited from `Publication`) and the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> and <xref:System.Object.GetHashCode%2A> methods (inherited from <xref:System.Object>).</span></span>
 
-  除非遭到覆寫，否則 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法會測試參考是否相等。 也就是說，如果兩個物件變數都參考相同的物件，才會將兩者視為相等。 換句話說，在 `Book` 類別的情況下，如果兩個 `Book` 物件都有相同的 ISBN，兩者應該相等。
+  <span data-ttu-id="d8f57-293">除非遭到覆寫，否則 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法會測試參考是否相等。</span><span class="sxs-lookup"><span data-stu-id="d8f57-293">Unless it is overridden, the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> method tests for reference equality.</span></span> <span data-ttu-id="d8f57-294">也就是說，如果兩個物件變數都參考相同的物件，才會將兩者視為相等。</span><span class="sxs-lookup"><span data-stu-id="d8f57-294">That is, two object variables are considered to be equal if they refer to the same object.</span></span> <span data-ttu-id="d8f57-295">換句話說，在 `Book` 類別的情況下，如果兩個 `Book` 物件都有相同的 ISBN，兩者應該相等。</span><span class="sxs-lookup"><span data-stu-id="d8f57-295">In the case of the `Book` class, on the other hand, two `Book` objects should be equal if they have the same ISBN.</span></span>
 
-  當您覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法時，也必須覆寫 <xref:System.Object.GetHashCode%2A> 方法，以傳回值供執行階段用來在雜湊集合中儲存項目，藉以提高擷取效率。 雜湊碼應會傳回和相等測試一致的值。 因為我們已經覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 以傳回 `true`，所以如果兩個 `Book` 物件的 ISBN 屬性相等，我們會呼叫 `ISBN` 屬性所傳回字串的 <xref:System.String.GetHashCode%2A> 方法，以傳回計算出的雜湊碼。
+  <span data-ttu-id="d8f57-296">當您覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法時，也必須覆寫 <xref:System.Object.GetHashCode%2A> 方法，以傳回值供執行階段用來在雜湊集合中儲存項目，藉以提高擷取效率。</span><span class="sxs-lookup"><span data-stu-id="d8f57-296">When you override the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> method, you must also override the <xref:System.Object.GetHashCode%2A> method, which returns a value that the runtime uses to store items in hashed collections for efficient retrieval.</span></span> <span data-ttu-id="d8f57-297">雜湊碼應會傳回和相等測試一致的值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-297">The hash code should return a value that's consistent with the test for equality.</span></span> <span data-ttu-id="d8f57-298">因為我們已經覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 以傳回 `true`，所以如果兩個 `Book` 物件的 ISBN 屬性相等，我們會呼叫 `ISBN` 屬性所傳回字串的 <xref:System.String.GetHashCode%2A> 方法，以傳回計算出的雜湊碼。</span><span class="sxs-lookup"><span data-stu-id="d8f57-298">Since we've overridden <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> to return `true` if the ISBN properties of two `Book` objects are equal, we return the hash code computed by calling the <xref:System.String.GetHashCode%2A> method of the string returned by the `ISBN` property.</span></span>
 
-下圖說明 `Book` 類別和其 `Publication` 基底類別之間的關聯性。
+<span data-ttu-id="d8f57-299">下圖說明 `Book` 類別和其 `Publication` 基底類別之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-299">The following figure illustrates the relationship between the `Book` class and `Publication`, its base class.</span></span>
 
 ![發行物和書籍類別](media/book-class.jpg)
 
-我們現在可以具現化 `Book` 物件，叫用其唯一與繼承成員，然後將它做為引數傳遞給預期參數為型別 `Publication` 或型別 `Book` 的方法，如下列範例所示。
+<span data-ttu-id="d8f57-301">我們現在可以具現化 `Book` 物件，叫用其唯一與繼承成員，然後將它做為引數傳遞給預期參數為型別 `Publication` 或型別 `Book` 的方法，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="d8f57-301">We can now instantiate a `Book` object, invoke both its unique and inherited members, and pass it as an argument to a method that expects a parameter of type `Publication` or of type `Book`, as the following example shows.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
-## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>設計抽象基底類別及其衍生類別
+## <a name="designing-abstract-base-classes-and-their-derived-classes"></a><span data-ttu-id="d8f57-302">設計抽象基底類別及其衍生類別</span><span class="sxs-lookup"><span data-stu-id="d8f57-302">Designing abstract base classes and their derived classes</span></span>
 <a name="abstract"></a>
 
-在上述範例中，我們定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是抽象類別「」。它會做為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生型別都會有該型別的唯一實作。
+<span data-ttu-id="d8f57-303">在上述範例中，我們定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。</span><span class="sxs-lookup"><span data-stu-id="d8f57-303">In the previous example, we defined a base class that provided an implementation for a number of methods to allow derived classes to share code.</span></span> <span data-ttu-id="d8f57-304">不過，在許多情況下，基底類別不需要提供實作。</span><span class="sxs-lookup"><span data-stu-id="d8f57-304">In many cases, however, the base class is not expected to provide an implementation.</span></span> <span data-ttu-id="d8f57-305">相反地，基底類別是抽象類別「」。它會做為範本，定義每個衍生類別都必須實作的成員。</span><span class="sxs-lookup"><span data-stu-id="d8f57-305">Instead, the base class is an *abstract class*; it serves as a template that defines the members that each derived class must implement.</span></span> <span data-ttu-id="d8f57-306">通常在抽象基底類別中，每個衍生型別都會有該型別的唯一實作。</span><span class="sxs-lookup"><span data-stu-id="d8f57-306">Typically in the case of an abstract base class, the implementation of each derived type is unique to that type.</span></span>
 
-例如，每個封閉的二維幾何圖形都包括兩個屬性：面積 (其為圖形內部範圍) 以及周長或圖形邊緣的距離。 不過，計算這些屬性的方式，完全取決於特定圖形。 例如，計算圓形的周長 (圓周) 的公式，就和計算三角形周長的公式相當不同。
+<span data-ttu-id="d8f57-307">例如，每個封閉的二維幾何圖形都包括兩個屬性：面積 (其為圖形內部範圍) 以及周長或圖形邊緣的距離。</span><span class="sxs-lookup"><span data-stu-id="d8f57-307">For example, each closed two-dimensional geometric shape includes two properties: area, the inner extent of the shape; and perimeter, or the distance along the edges of the shape.</span></span> <span data-ttu-id="d8f57-308">不過，計算這些屬性的方式，完全取決於特定圖形。</span><span class="sxs-lookup"><span data-stu-id="d8f57-308">The way in which these properties are calculated, however, depends completely on the specific shape.</span></span> <span data-ttu-id="d8f57-309">例如，計算圓形的周長 (圓周) 的公式，就和計算三角形周長的公式相當不同。</span><span class="sxs-lookup"><span data-stu-id="d8f57-309">The formula for calculating the perimeter (or circumference) of a circle, for example, is very different from that of a triangle.</span></span>
 
-下列範例定義一個名為 `Shape` 的基底類別，其中定義兩個屬性︰`Area` 和 `Perimeter`。 請注意，除了標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的類別，每個執行個體成員也都標示 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 在此情況下，`Shape` 也會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法以傳回型別的名稱，而不是其完整名稱。 此外，它會定義兩個靜態成員 `GetArea` 和 `GetPerimeter`，讓呼叫端能夠輕鬆地擷取任何衍生類別執行個體的面積和周長。 當我們將衍生類別的執行個體傳遞給上述任一種方法時，執行階段都會呼叫衍生類別的方法覆寫。
+<span data-ttu-id="d8f57-310">下列範例定義一個名為 `Shape` 的基底類別，其中定義兩個屬性︰`Area` 和 `Perimeter`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-310">The following example defines an abstract base class named `Shape` that defines two properties: `Area` and `Perimeter`.</span></span> <span data-ttu-id="d8f57-311">請注意，除了標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的類別，每個執行個體成員也都標示 [abstract](../language-reference/keywords/abstract.md) 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="d8f57-311">Note that, in addition to marking the class with the [abstract](../language-reference/keywords/abstract.md) keyword, each instance member is also marked with the [abstract](../language-reference/keywords/abstract.md) keyword.</span></span> <span data-ttu-id="d8f57-312">在此情況下，`Shape` 也會覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法以傳回型別的名稱，而不是其完整名稱。</span><span class="sxs-lookup"><span data-stu-id="d8f57-312">In this case, `Shape` also overrides the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to return the name of the type, rather than its fully qualified name.</span></span> <span data-ttu-id="d8f57-313">此外，它會定義兩個靜態成員 `GetArea` 和 `GetPerimeter`，讓呼叫端能夠輕鬆地擷取任何衍生類別執行個體的面積和周長。</span><span class="sxs-lookup"><span data-stu-id="d8f57-313">And it defines two static members, `GetArea` and `GetPerimeter`, that allow callers to easily retrieve the area and perimeter of an instance of any derived class.</span></span> <span data-ttu-id="d8f57-314">當我們將衍生類別的執行個體傳遞給上述任一種方法時，執行階段都會呼叫衍生類別的方法覆寫。</span><span class="sxs-lookup"><span data-stu-id="d8f57-314">When we pass an instance of a derived class to either of these methods, the runtime calls the method override of the derived class.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-我們接著可以從代表特定圖形的 `Shape` 衍生一些類別。 下列範例定義三個類別：`Triangle`、`Rectangle` 和 `Circle`。 每個都使用該特定圖形的唯一公式來計算的面積和周長。 某些衍生類別也定義其所代表圖形特有的屬性，例如 `Rectangle.Diagonal` 和 `Circle.Diameter`。
+<span data-ttu-id="d8f57-315">我們接著可以從代表特定圖形的 `Shape` 衍生一些類別。</span><span class="sxs-lookup"><span data-stu-id="d8f57-315">We can then derive some classes from `Shape` that represent specific shapes.</span></span> <span data-ttu-id="d8f57-316">下列範例定義三個類別：`Triangle`、`Rectangle` 和 `Circle`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-316">The following example defines three classes, `Triangle`, `Rectangle`, and `Circle`.</span></span> <span data-ttu-id="d8f57-317">每個都使用該特定圖形的唯一公式來計算的面積和周長。</span><span class="sxs-lookup"><span data-stu-id="d8f57-317">Each uses a formula unique for that particular shape to compute the area and perimeter.</span></span> <span data-ttu-id="d8f57-318">某些衍生類別也定義其所代表圖形特有的屬性，例如 `Rectangle.Diagonal` 和 `Circle.Diameter`。</span><span class="sxs-lookup"><span data-stu-id="d8f57-318">Some of the derived classes also define properties, such as `Rectangle.Diagonal` and `Circle.Diameter`, that are unique to the shape that they represent.</span></span>
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-下列範例使用衍生自 `Shape` 的物件。 具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。 請注意，執行階段會從衍生型別的覆寫屬性擷取值。 範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。 
+<span data-ttu-id="d8f57-319">下列範例使用衍生自 `Shape` 的物件。</span><span class="sxs-lookup"><span data-stu-id="d8f57-319">The following example uses objects derived from `Shape`.</span></span> <span data-ttu-id="d8f57-320">具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。</span><span class="sxs-lookup"><span data-stu-id="d8f57-320">It instantiates an array of objects derived from `Shape` and calls the static methods of the `Shape` class, which wraps return `Shape` property values.</span></span> <span data-ttu-id="d8f57-321">請注意，執行階段會從衍生型別的覆寫屬性擷取值。</span><span class="sxs-lookup"><span data-stu-id="d8f57-321">Note that the runtime retrieves values from the overridden properties of the derived types.</span></span> <span data-ttu-id="d8f57-322">範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。</span><span class="sxs-lookup"><span data-stu-id="d8f57-322">The example also casts each `Shape` object in the array to its derived type and, if the cast succeeds, retrieves properties of that particular subclass of `Shape`.</span></span> 
 
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a><span data-ttu-id="d8f57-323">請參閱</span><span class="sxs-lookup"><span data-stu-id="d8f57-323">See also</span></span>
 
-[類別與物件](../tour-of-csharp/classes-and-objects.md)   
-[繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)
-
-本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
-
-## <a name="prerequisites"></a>必要條件
-
-本教學課程假設您已安裝 .NET Core。 如需安裝指示，請參閱[.NET Core 安裝指南 (英文)](https://www.microsoft.com/net/core)。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
-
-## <a name="running-the-examples"></a>執行範例
-
-若要建立和執行本教學課程中的範例，請您從命令列使用 [DotNet](../../core/tools/dotnet.md) 公用程式。 每個範例都依照下列步驟執行︰
-
-1. 建立可儲存範例的目錄。
-1. 在命令提示字元處輸入 [dotnet new console](../../core/tools/dotnet-new.md) 命令，以建立新的 .NET Core 專案。
-1. 將範例程式碼複製並貼到您的程式碼編輯器。
-1. 從命令列輸入 [dotnet restore](../../core/tools/dotnet-restore.md)命令來載入或還原專案的相依性。
-1. 輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。
-
-## <a name="background-what-is-inheritance"></a>背景︰什麼是繼承？
-
-「繼承」是物件導向程式設計的其中一個基本屬性。 它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。 其成員可供繼承的類別稱為「基底類別」。 繼承基底類別成員的類別則稱為「衍生類別」。
-
-C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自單一類別。 不過，繼承可以轉移，這可讓您定義一組型別的繼承階層。 換句話說，型別 `D` 可繼承自型別 `C`，其繼承自型別 `B`，而該型別的繼承來源為基底類別型別 `A`。 因為繼承可以轉移，所以型別 `D` 可以使用型別 `A` 的成員。
-
-基底類別的所有成員不一定都由衍生類別繼承。 不會繼承的成員如下︰
-
-- [靜態建構函式](../programming-guide/classes-and-structs/static-constructors.md)，其會初始化類別的靜態資料。
-
-- [執行個體建構函式](../programming-guide/classes-and-structs/constructors.md)，您呼叫它來建立類別的新執行個體。 每個類別都必須定義自己的建構函式。
-
-- [完成項](../programming-guide/classes-and-structs/destructors.md)，由執行階段的記憶體回收行程呼叫以終結類別的執行個體。
-
-由衍生類別繼承基底類別的所有其他成員時，是否可以看見它們，取決於其存取範圍。 成員存取範圍會影響其在衍生類別的可見性，如下所示︰
-
-- [私用](../language-reference/keywords/private.md)成員只有以巢狀方式置於其基底類別時，才會顯示在衍生類別中。 否則，不會顯示在衍生類別中。 在下列範例中，`A.B` 是衍生自 `A` 的巢狀類別，而 `C` 則衍生自 `A`。 私用 `A.value` 欄位會顯示在 A.B 中。 不過，如果您移除 `C.GetValue` 方法中的註解，並嘗試編譯這個範例，它會產生編譯器錯誤 CS0122：「'A.value' 的保護層級導致無法對其進行存取」。
-
-  [!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
-
-- [受保護](../language-reference/keywords/protected.md)成員只會顯示在衍生類別中。
-
-- [內部](../language-reference/keywords/protected.md)成員只會顯示在和基底類別位於相同組件的衍生類別中。 和基底類別位於不同組件的衍生類別中不會顯示它們。
-
-- [公用](../language-reference/keywords/protected.md)成員會顯示在衍生類別中，它也是衍生類別公用介面的一部分。 公用繼承成員都可以呼叫，如同在衍生類別中定義一般。 在下列範例中，類別 `A` 定義名為 `Method1` 的方法，而類別 `B` 則繼承自 `A` 類別。 範例接著會將 `Method1` 視為 `B` 上的執行個體方法來呼叫。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
-
-衍生類別也可以提供替代實作來「覆寫」繼承的成員 。 基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。 根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。 如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「<member>無法覆寫繼承的成員<member>，因為其未標記為 virtual、abstract 或 override」。
-
-```csharp
-public class A
-{
-    public void Method1()
-    {
-        // Do something.
-    }
-}
-
-public class B : A
-{
-    public override void Method1() // Generates CS0506.
-    {
-        // Do something else.
-    }
-}
-```
-
-在某些情況下，衍生類別「必須」覆寫基底類別實作。 標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。 嘗試編譯下列範例會產生編譯器錯誤 CS0534：「<class> 未實作繼承的抽象成員 <member>」，因為類別 `B` 不會為 `A.Method1` 提供任何實作 。
-
-```csharp
-public abstract class A
-{
-    public abstract void Method1();
-}
-
-public class B : A // Generates CS0534.
-{
-    public void Method3()
-    {
-        // Do something.
-    }
-}
-```
-
-繼承只適用於類別和介面。 其他型別分類 (結構、委派及列舉) 均不支援繼承。 因此如下所示，嘗試編譯程式碼會產生編譯器錯誤 CS0527：「介面清單中的型別 'ValueType' 不是介面」。 錯誤訊息指出，雖然您可以定義結構實作的介面，但不支援繼承。
-
-```csharp
-using System;
-
-public struct ValueStructure : ValueType // Generates CS0527.
-{
-}
-```
-
-## <a name="implicit-inheritance"></a>隱含繼承
-
-除了透過單一繼承而繼承自的任何型別以外，<xref:System.Object> 或從中衍生的型別都會是 .NET 型別系統中所有型別的隱含繼承來源。 這樣可確保任何型別都可以使用一般功能。
-
-為了說明隱含繼承表示的意思，讓我們定義只有空的類別定義的新類別 `SimpleClass`︰
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
-
-我們接下來可以使用反映 (可讓我們檢查型別的中繼資料以取得該型別的相關資訊) 來取得一份屬於 `SimpleClass` 型別的成員清單。 雖然我們尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。 其中之一是 C# 編譯器為 `SimpleClass` 型別自動提供的無參數 (或預設) 建構函式。 其餘八個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
-
-隱含繼承自 <xref:System.Object> 類別讓以下方法可以使用 `SimpleClass` 類別：
-
-- 將 `SimpleClass` 物件轉換為其字串表示的公用 `ToString` 方法會傳回完整型別名稱。 在此情況下，`ToString` 方法會傳回字串 "SimpleClass"。
-
-- 測試兩個物件是否相等的三種方法︰ 公用執行個體 `Equals(Object)` 方法、公用靜態 `Equals(Object, Object)` 方法以及公用靜態 `ReferenceEquals(Object, Object)` 方法。 根據預設，這些方法會測試參考是否相等。也就是說，兩個物件必須都參考相同的物件才會相等。
-
-- 公用 `GetHashCode` 方法會計算出一個值，其允許在雜湊集合中使用該型別的執行個體。
-
-- 公用 `GetType` 方法會傳回代表 `SimpleClass` 型別的 <xref:System.Type> 物件。
-
-- 受保護的 <xref:System.Object.Finalize%2A> 方法設計為在記憶體回收行程回收物件的記憶體之前釋放 Unmanaged 的資源。
-
-- 受保護的 <xref:System.Object.MemberwiseClone%2A> 方法會建立目前物件的淺層複製 (Shallow Clone)。
-
-因為隱含繼承，所以我們能呼叫從 `SimpleClass`物件繼承的任何成員，如同 `SimpleClass` 類別中定義的實際成員一般。 例如，下列範例呼叫 `SimpleClass.ToString` 方法，其 `SimpleClass` 繼承自<xref:System.Object>。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
-
-下表列出您可以在 C# 中建立型別分類和其隱含繼承自的類別。 每個基底型別都有一組不同的成員可透過繼承來使用以隱含地衍生型別。
-
-| 型別分類 | 隱含繼承自                                                      |
-| ------------- | ----------------------------------------------------------------------------- |
-| Class - 類別         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| Delegate - 委派      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
-
-## <a name="inheritance-and-an-is-a-relationship"></a>繼承和「是」關聯性
-
-在正常情況下，繼承用來表示基底類別與一或多個衍生類別之間的「是」關聯性，其中的衍生類別是基底類別的特殊版本；衍生類別是基底類別的一種型別。 例如，`Publication` 類別代表任何類型的發行物，而 `Book` 和 `Magazine` 類別代表特定發行物型別。
-
-> [!NOTE]
-> 類別或結構可以再實作另一個介面。 介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。 介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。
-
-請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 此 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
-
-在此情況下，我們不應該仰賴繼承來表示特定的車輛廠牌和款式。 例如，我們不需要定義 `Packard` 型別來表示 Packard Motor 汽車公司製造的汽車。 相反地，我們可以建立 `Automobile` 物件，將適當的值傳遞至它的類別建構函式，如下列範例所示。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
-
-以繼承為基礎的是關聯性，最適合用於基底類別，以及會對基底類別新增額外成員或其需要的額外功能是基底類別所沒有的衍生類別。
-
-## <a name="designing-the-base-class-and-derived-classes"></a>設計基底類別和衍生類別
-
-讓我們來看設計基底類別和其衍生類別的流程。 在本節中，我們會定義基底類別 `Publication`，其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。我們也會定義衍生自 `Book` 類別的類別 `Publication`。 我們可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
-
-### <a name="the-base-publication-class"></a>基底 Publication 類別
-
-在設計 `Publication` 類別時，我們需要做出幾個設計決策︰
-
-- 基底 `Publication` 類別中包含哪些成員，以及 `Publication` 成員是否提供方法實作，或 `Publication` 是否為抽象基底類別，可做為其衍生類別的範本。
-
-  在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節包含的範例會使用抽象基底類別，來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
-
-  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 型別共用，我們就應該將成員加入其中。 如果無法有效地完成，我們就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
-
-  為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，我們希望只將所有獲大部分發行物通用的資料與功能納入 `Publication` 類別中。 衍生類別接著實作其所代表特定發行物類型的唯一成員。
-
-- 擴充類別階層的程度。 我們想要開發有三種類別以上的階層，還是只想要一個基底類別和一或多個衍生類別？ 例如，`Publication` 可以是 `Periodical` 的基底類別，而後者又是 `Magazine`、`Journal` 及 `Newspaper` 的基底類別。
-
-  針對本範例，我們將使用有 `Publication` 類別和單一衍生類別 `Book` 的簡單階層。 我們可以輕鬆地擴充範例，以建立一些衍生自 `Publication` (例如 `Magazine` 和 `Article`) 的其他類別。
-
-- 將基底類別具現化是否適當。 如果不適當，我們應該對該類別套用 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 如果直接呼叫其類別建構函式，嘗試具現化標示有 `abstract` 關鍵字的類別，C# 編譯器會產生錯誤 CS0144：「無法建立抽象類別或介面的執行個體」。 如果使用反映嘗試具現化該類別，反映方法會擲回 <xref:System.MemberAccessException>。 否則，可以呼叫其類別建構函式具現化 `Publication` 類別。
-
-  根據預設，可以呼叫其類別建構函式具現化基底類別。 請注意，我們不必明確地定義類別建構函式。 如果基底類別的原始程式碼中尚未存在建構函式，C# 編譯器會自動提供預設 (無參數) 建構函式。
-
-  針對本範例，我們將 `Publication` 類別標記為 [abstract](../language-reference/keywords/abstract.md)，使它無法具現化。
-
-- 衍生類別是否必須繼承特定成員的基底類別實作，或是有覆寫基底類別實作的選項。 我們都必須使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，以允許衍生類別覆寫基底類別方法。 根據預設，「不」可覆寫基底類別中定義的方法。
-
-- 衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。 根據預設，任何類別可以做為基底類別。 我們可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字 ，指出類別不可以做為任何其他類別的基底類別。 嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 <typeName>」。
-
-  針對本範例，我們會將衍生類別標記為 `sealed`。
-
-下列範例示範 `Publication` 類別的原始程式碼，以及由 `Publication.PublicationType` 屬性所傳回的 `PublicationType` 列舉。 除了其繼承自 <xref:System.Object> 的成員以外，`Publication` 類別還會定義下列的唯一成員，以及定義成員覆寫︰
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
-
-- 建構函式
-
-  因為 `Publication` 類別是 `abstract`，所以它無法從程式碼直接具現化，如下所示︰
-
-  ```csharp
-  var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
-                                    PublicationType.Book);
-  ```
-
-  不過，其執行個體建構函式可以從衍生類別建構函式直接呼叫，如 `Book` 類別的原始程式碼所示。
-
-- 兩個發行物相關的屬性
-
-  `Title` 是唯讀 <xref:System.String> 屬性，其值是透過呼叫 `Publication` 建構函式提供。
-
-  `Pages` 是可讀寫 <xref:System.Int32> 屬性，指出發行物的總頁數。 該值會儲存在名為 `totalPages` 的私用欄位中。 它必須為正數，否則會擲回 <xref:System.ArgumentOutOfRangeException>。
-
-- 發行者相關的成員
-
-  兩個唯讀屬性 `Publisher` 和 `Type`。 這些值就是原先呼叫 `Publication` 類別建構函式所提供的值。
-
-- 與發佈相關的成員
-
-  `Publish` 和 `GetPublicationDate` 這兩個方法可設定和傳回發行日期。 當呼叫 `Publish` 方法並將傳遞給它的日期指派為私用 `datePublished` 欄位的引數時，它會將私用 `published` 旗標設定為 `true`。 如果 `published` 旗標是 `false`，`GetPublicationDate` 方法會傳回字串 "NYP"，如果是 `true`，則會傳回 `datePublished` 欄位的值。
-
-- 著作權相關的成員
-
-  `Copyright` 方法會將著作權所有人的名稱和著作權年份作為引數，並將它們指派給 `CopyrightName` 和 `CopyrightDate` 屬性。
-
-- 覆寫 `ToString` 方法
-
-  如果某型別不會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法，它會傳回該型別的完整名稱，該名稱很少用來區分不同的執行個體。 `Publication` 類別會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 以傳回 `Title` 屬性的值。
-
-下圖說明基底 `Publication` 類別和其隱含繼承的 <xref:System.Object> 類別之間的關聯性。
-
-![物件和發行物類別](media/publication-class.jpg)
-
-### <a name="the-book-class"></a>`Book` 類別
-
-`Book` 類別代表特殊的發行物型別：書籍。 下列範例顯示 `Book` 類別的原始程式碼。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
-
-除了其繼承自 `Publication` 的成員以外，`Book` 類別還會定義下列的唯一成員，以及定義成員覆寫︰
-
-- 兩個建構函式
-
-  這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至私用 `authorName` 欄位。 一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。
-
-  第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 這是定義建構函式的常見模式。 呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
-
-  第二個建構函式使用 [base](../language-reference/keywords/base.md) 關鍵字，來將標題和發行者名稱傳遞給基底類別建構函式。 如果您在原始程式碼中沒有明確呼叫基底類別建構函式，C# 編譯器會自動呼叫基底類別的預設或無參數建構函式。
-
-- 唯讀 `ISBN` 屬性，會傳回 `Book` 物件的國際標準書號，一組有 10 或 13 位數的唯一數字。 ISBN 會作為引數提供給其中一個 `Book` 建構函式。 ISBN 會儲存在由編譯器自動產生的私用支援欄位中。
-
-- 唯讀 `Author` 屬性。 作者名稱會做為引數提供給那兩個 `Book` 建構函式，並會儲存在私用 `authorName` 欄位。
-
-- 兩個價格相關的唯讀屬性，`Price` 和 `Currency`。 其值將在 `SetPrice` 方法呼叫中做為引數提供。 該價格會儲存在私用欄位 `bookPrice` 中。 `Currency` 屬性是三位數的 ISO 貨幣符號 (例如 USD 代表美元)，而且會儲存在私用 `ISOCurrencySymbol` 欄位。 ISO 貨幣符號可從 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 屬性擷取。
-
-- `SetPrice` 方法會設定 `bookPrice` 和 `ISOCurrencySymbol` 欄位的值。 這些都是 `Price` 和 `Currency` 屬性所傳回的值。
-
-- 覆寫 `ToString` 方法 (繼承自`Publication`)，以及 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 與 <xref:System.Object.GetHashCode%2A> 方法 (繼承自<xref:System.Object>)。
-
-  除非遭到覆寫，否則 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法會測試參考是否相等。 也就是說，如果兩個物件變數都參考相同的物件，才會將兩者視為相等。 換句話說，在 `Book` 類別的情況下，如果兩個 `Book` 物件都有相同的 ISBN，兩者應該相等。
-
-  當您覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法時，也必須覆寫 <xref:System.Object.GetHashCode%2A> 方法，以傳回值供執行階段用來在雜湊集合中儲存項目，藉以提高擷取效率。 雜湊碼應會傳回和相等測試一致的值。 因為我們已經覆寫 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 以傳回 `true`，所以如果兩個 `Book` 物件的 ISBN 屬性相等，我們會呼叫 `ISBN` 屬性所傳回字串的 <xref:System.String.GetHashCode%2A> 方法，以傳回計算出的雜湊碼。
-
-下圖說明 `Book` 類別和其 `Publication` 基底類別之間的關聯性。
-
-![發行物和書籍類別](media/book-class.jpg)
-
-我們現在可以具現化 `Book` 物件，叫用其唯一與繼承成員，然後將它做為引數傳遞給預期參數為型別 `Publication` 或型別 `Book` 的方法，如下列範例所示。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
-
-## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>設計抽象基底類別及其衍生類別
-<a name="abstract"></a>
-
-在上述範例中，我們定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是抽象類別「」。它會做為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生型別都會有該型別的唯一實作。
-
-例如，每個封閉的二維幾何圖形都包括兩個屬性：面積 (其為圖形內部範圍) 以及周長或圖形邊緣的距離。 不過，計算這些屬性的方式，完全取決於特定圖形。 例如，計算圓形的周長 (圓周) 的公式，就和計算三角形周長的公式相當不同。
-
-下列範例定義一個名為 `Shape` 的基底類別，其中定義兩個屬性︰`Area` 和 `Perimeter`。 請注意，除了標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的類別，每個執行個體成員也都標示 [abstract](../language-reference/keywords/abstract.md) 關鍵字。 在此情況下，`Shape` 也會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法以傳回型別的名稱，而不是其完整名稱。 此外，它會定義兩個靜態成員 `GetArea` 和 `GetPerimeter`，讓呼叫端能夠輕鬆地擷取任何衍生類別執行個體的面積和周長。 當我們將衍生類別的執行個體傳遞給上述任一種方法時，執行階段都會呼叫衍生類別的方法覆寫。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
-
-我們接著可以從代表特定圖形的 `Shape` 衍生一些類別。 下列範例定義三個類別：`Triangle`、`Rectangle` 和 `Circle`。 每個都使用該特定圖形的唯一公式來計算的面積和周長。 某些衍生類別也定義其所代表圖形特有的屬性，例如 `Rectangle.Diagonal` 和 `Circle.Diameter`。
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
-
-下列範例使用衍生自 `Shape` 的物件。 具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。 請注意，執行階段會從衍生型別的覆寫屬性擷取值。 範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。 
-
-[!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
-
-## <a name="see-also"></a>請參閱
-
-[類別與物件](../tour-of-csharp/classes-and-objects.md)   
-[繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)
+<span data-ttu-id="d8f57-324">[類別與物件](../tour-of-csharp/classes-and-objects.md) </span><span class="sxs-lookup"><span data-stu-id="d8f57-324">[Classes and objects](../tour-of-csharp/classes-and-objects.md) </span></span>  
+[<span data-ttu-id="d8f57-325">繼承 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="d8f57-325">Inheritance (C# Programming Guide)</span></span>](../programming-guide/classes-and-structs/inheritance.md)

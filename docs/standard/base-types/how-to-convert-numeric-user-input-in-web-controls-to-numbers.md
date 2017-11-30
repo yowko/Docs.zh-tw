@@ -1,77 +1,83 @@
 ---
-title: "如何：將使用者輸入 Web 控制項的數值轉換成數字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "將使用者輸入的數值轉換成數字"
-  - "格式化 [.NET Framework], 數字"
-  - "數字格式化 [.NET Framework]"
-  - "數字 [.NET Framework], 將使用者輸入的數值轉換成數字"
-  - "數值格式字串 [.NET Framework]"
-  - "剖析字串 [.NET Framework], 數值字串"
+title: "如何：將使用者輸入 Web 控制項的數值轉換成數字"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- parsing strings [.NET Framework], numeric strings
+- converting numeric user input to number
+- numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 92e28e3b303a7523b9da69b7eb283e0261fc681c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將使用者輸入 Web 控制項的數值轉換成數字
-由於網頁可在任何地方顯示，因此使用者可在 <xref:System.Web.UI.WebControls.TextBox> 控制項中輸入幾乎無限多種格式的數值。  所以，務必決定網頁使用者的地區設定和文化特性。  當您剖析使用者輸入時，就可以接著套用使用者地區設定和文化特性定義的格式化慣例。  
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a><span data-ttu-id="14aa7-102">如何：將使用者輸入 Web 控制項的數值轉換成數字</span><span class="sxs-lookup"><span data-stu-id="14aa7-102">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>
+<span data-ttu-id="14aa7-103">網頁可以顯示世界中的任何位置，因為使用者可以輸入數值資料<xref:System.Web.UI.WebControls.TextBox>幾乎無限數量的格式中的控制項。</span><span class="sxs-lookup"><span data-stu-id="14aa7-103">Because a Web page can be displayed anywhere in the world, users can input numeric data into a <xref:System.Web.UI.WebControls.TextBox> control in an almost unlimited number of formats.</span></span> <span data-ttu-id="14aa7-104">如此一來，它是使用者的非常重要，以判斷的地區設定和網頁文化特性。</span><span class="sxs-lookup"><span data-stu-id="14aa7-104">As a result, it is very important to determine the locale and culture of the Web page's user.</span></span> <span data-ttu-id="14aa7-105">當您剖析使用者輸入時，然後可以套用使用者的地區設定和文化特性所定義的格式設定慣例。</span><span class="sxs-lookup"><span data-stu-id="14aa7-105">When you parse user input, you can then apply the formatting conventions defined by the user's locale and culture.</span></span>  
   
-### 將 Web TextBox 控制項的數值輸入轉換成數字  
+### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a><span data-ttu-id="14aa7-106">若要將從 Web TextBox 控制項的數字輸入轉換為數值</span><span class="sxs-lookup"><span data-stu-id="14aa7-106">To convert numeric input from a Web TextBox control to a number</span></span>  
   
-1.  判斷 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 屬性傳回的字串陣列是否已填入。  如果尚未填入，則繼續進行步驟 6。  
+1.  <span data-ttu-id="14aa7-107">決定所傳回的字串陣列是否<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>屬性填入。</span><span class="sxs-lookup"><span data-stu-id="14aa7-107">Determine whether the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated.</span></span> <span data-ttu-id="14aa7-108">如果不是，繼續進行步驟 6。</span><span class="sxs-lookup"><span data-stu-id="14aa7-108">If it is not, continue to step 6.</span></span>  
   
-2.  如果 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，就會擷取它的第一個項目。  第一個項目指出使用者的預設或慣用的語言和區域。  
+2.  <span data-ttu-id="14aa7-109">如果傳回的字串陣列<xref:System.Web.HttpRequest.UserLanguages%2A>屬性填入，擷取其第一個元素。</span><span class="sxs-lookup"><span data-stu-id="14aa7-109">If the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is populated, retrieve its first element.</span></span> <span data-ttu-id="14aa7-110">第一個項目表示使用者的預設或慣用的語言和地區。</span><span class="sxs-lookup"><span data-stu-id="14aa7-110">The first element indicates the user's default or preferred language and region.</span></span>  
   
-3.  呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 建構函式以具現化 <xref:System.Globalization.CultureInfo> 物件，此物件代表使用者慣用的文化特性。  
+3.  <span data-ttu-id="14aa7-111">具現化<xref:System.Globalization.CultureInfo>物件，代表使用者的慣用文化特性，藉由呼叫<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>建構函式。</span><span class="sxs-lookup"><span data-stu-id="14aa7-111">Instantiate a <xref:System.Globalization.CultureInfo> object that represents the user's preferred culture by calling the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor.</span></span>  
   
-4.  呼叫要將使用者輸入轉換成之數值型別的 `TryParse` 或 `Parse` 方法。  使用 `TryParse` 或 `Parse` 方法的多載與 `provider` 參數，並將下列任一項傳遞給該多載：  
+4.  <span data-ttu-id="14aa7-112">呼叫`TryParse`或`Parse`來輸入您想要轉換的使用者數值類型的方法。</span><span class="sxs-lookup"><span data-stu-id="14aa7-112">Call either the `TryParse` or the `Parse` method of the numeric type that you want to convert the user's input to.</span></span> <span data-ttu-id="14aa7-113">使用的多載`TryParse`或`Parse`方法`provider`參數，並將它傳遞下列任一項：</span><span class="sxs-lookup"><span data-stu-id="14aa7-113">Use an overload of the `TryParse` or the `Parse` method with a `provider` parameter, and pass it either of the following:</span></span>  
   
-    -   在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
+    -   <span data-ttu-id="14aa7-114"><xref:System.Globalization.CultureInfo>步驟 3 中建立的物件。</span><span class="sxs-lookup"><span data-stu-id="14aa7-114">The <xref:System.Globalization.CultureInfo> object created in step 3.</span></span>  
   
-    -   在步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件的 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 屬性傳回的 <xref:System.Globalization.NumberFormatInfo> 物件。  
+    -   <span data-ttu-id="14aa7-115"><xref:System.Globalization.NumberFormatInfo>所傳回的物件<xref:System.Globalization.CultureInfo.NumberFormat%2A>屬性<xref:System.Globalization.CultureInfo>步驟 3 中建立的物件。</span><span class="sxs-lookup"><span data-stu-id="14aa7-115">The <xref:System.Globalization.NumberFormatInfo> object that is returned by the <xref:System.Globalization.CultureInfo.NumberFormat%2A> property of the <xref:System.Globalization.CultureInfo> object created in step 3.</span></span>  
   
-5.  如果轉換失敗，則針對 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性傳回的字串陣列中其餘每一個項目重複步驟 2 到 4。  
+5.  <span data-ttu-id="14aa7-116">如果轉換失敗，重複步驟 2 到 4 的字串陣列中每個剩餘的項目所傳回<xref:System.Web.HttpRequest.UserLanguages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="14aa7-116">If the conversion fails, repeat steps 2 through 4 for each remaining element in the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property.</span></span>  
   
-6.  如果轉換還是失敗，或者，如果 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列為空白，請使用由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 屬性所傳回的 Invariant 文化特性 \(不因文化特定而異\) 來剖析字串。  
+6.  <span data-ttu-id="14aa7-117">如果轉換仍失敗，或傳回的字串陣列<xref:System.Web.HttpRequest.UserLanguages%2A>屬性是空的傳回使用文化特性而異，剖析字串<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="14aa7-117">If the conversion still fails or if the string array returned by the <xref:System.Web.HttpRequest.UserLanguages%2A> property is empty, parse the string by using the invariant culture, which is returned by the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span>  
   
-## 範例  
- 以下範例是 Web Form 的完整程式碼後置頁，會要求使用者在 <xref:System.Web.UI.WebControls.TextBox> 控制項中輸入數值，並將它轉換成數字。  接著該數字會加倍，並且使用與原始輸入相同的格式化規則顯示。  
+## <a name="example"></a><span data-ttu-id="14aa7-118">範例</span><span class="sxs-lookup"><span data-stu-id="14aa7-118">Example</span></span>  
+ <span data-ttu-id="14aa7-119">下列範例是完整的程式碼後置頁面會要求使用者輸入的數字中的 Web form<xref:System.Web.UI.WebControls.TextBox>控制，並將其轉換為數字。</span><span class="sxs-lookup"><span data-stu-id="14aa7-119">The following example is the complete code-behind page for a Web form that asks the user to enter a numeric value in a <xref:System.Web.UI.WebControls.TextBox> control and converts it to a number.</span></span> <span data-ttu-id="14aa7-120">然後加倍，並使用相同的格式規則做為原始的輸入顯示該數字。</span><span class="sxs-lookup"><span data-stu-id="14aa7-120">That number is then doubled and displayed by using the same formatting rules as the original input.</span></span>  
   
  [!code-csharp[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/cs/NumericUserInput1.aspx.cs#1)]
  [!code-vb[Formatting.HowTo.ParseNumericInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseNumericInput/vb/NumericUserInput1.aspx.vb#1)]  
   
- <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 屬性會從 HTTP 要求所包含 `Accept-Language` 標頭中的文化特性名稱填入。  不過，並非所有瀏覽器的要求都包含 `Accept-Language` 標頭，而且使用者可以完全隱藏標頭。  因此，剖析使用者輸入時務必有後援文化特性。  通常後援文化特性是 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 傳回的不因國別而異的文化特性。  使用者也可以將文字方塊中輸入的文化特性名稱提供給 Internet Explorer，如此可能讓文化特性名稱無效。  因此具現化 <xref:System.Globalization.CultureInfo> 物件時，務必使用例外狀況處理。  
+ <span data-ttu-id="14aa7-121"><xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>中所包含的文化特性名稱填入屬性`Accept-Language`包含在 HTTP 要求標頭。</span><span class="sxs-lookup"><span data-stu-id="14aa7-121">The <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> property is populated from the culture names that are contained in `Accept-Language` headers included in an HTTP request.</span></span> <span data-ttu-id="14aa7-122">不過，並非所有瀏覽器包括`Accept-Language`標頭中的要求，以及使用者也可以抑制標頭完全。</span><span class="sxs-lookup"><span data-stu-id="14aa7-122">However, not all browsers include `Accept-Language` headers in their requests, and users can also suppress the headers completely.</span></span> <span data-ttu-id="14aa7-123">這使得剖析使用者輸入時，必須有後援文化特性。</span><span class="sxs-lookup"><span data-stu-id="14aa7-123">This makes it important to have a fallback culture when parsing user input.</span></span> <span data-ttu-id="14aa7-124">一般而言，後援文化特性是所傳回的文化特性而異<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="14aa7-124">Typically, the fallback culture is the invariant culture returned by <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="14aa7-125">使用者也可以提供 Internet Explorer 具有文化特性名稱其輸入在文字方塊中，會建立文化特性名稱可能不是有效的可能性。</span><span class="sxs-lookup"><span data-stu-id="14aa7-125">Users can also provide Internet Explorer with culture names that they input in a text box, which creates the possibility that the culture names may not be valid.</span></span> <span data-ttu-id="14aa7-126">這使得重要具現化時使用例外狀況處理<xref:System.Globalization.CultureInfo>物件。</span><span class="sxs-lookup"><span data-stu-id="14aa7-126">This makes it important to use exception handling when instantiating a <xref:System.Globalization.CultureInfo> object.</span></span>  
   
- 從 Internet Explorer 提交的 HTTP 要求擷取時，<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=fullName> 陣列會依使用者偏好設定填入。  陣列中的第一個項目包含使用者主要文化特性\/區域的名稱。  如果陣列包含任何額外的項目，Internet Explorer 會為這些項目指派任意限定規範，並且使用分號與文化特性名稱分隔。  例如，fr\-FR 文化特性的項目可能採用這個格式 `fr-FR;q=0.7`。  
+ <span data-ttu-id="14aa7-127">從 Internet Explorer 所送出的 HTTP 要求擷取時<xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>陣列填入使用者的喜好順序。</span><span class="sxs-lookup"><span data-stu-id="14aa7-127">When retrieved from an HTTP request submitted by Internet Explorer, the <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> array is populated in order of user preference.</span></span> <span data-ttu-id="14aa7-128">陣列中的第一個項目包含使用者的主要文化特性/地區的名稱。</span><span class="sxs-lookup"><span data-stu-id="14aa7-128">The first element in the array contains the name of the user's primary culture/region.</span></span> <span data-ttu-id="14aa7-129">如果陣列包含任何其他項目，Internet Explorer 任意指派這些品質規範，以分號分隔的文化特性名稱。</span><span class="sxs-lookup"><span data-stu-id="14aa7-129">If the array contains any additional items, Internet Explorer arbitrarily assigns them a quality specifier, which is delimited from the culture name by a semicolon.</span></span> <span data-ttu-id="14aa7-130">例如，為 FR-FR 文化特性的項目可能會`fr-FR;q=0.7`。</span><span class="sxs-lookup"><span data-stu-id="14aa7-130">For example, an entry for the fr-FR culture might take the form `fr-FR;q=0.7`.</span></span>  
   
- 範例會呼叫 <xref:System.Globalization.CultureInfo.%23ctor%2A> 建構函式，且其 `useUserOverride` 參數會設為 `false`，以建立新的 <xref:System.Globalization.CultureInfo> 物件。  如此可確定，如果文化特性名稱是伺服器上預設的文化特性名稱，則類別建構函式建立的 <xref:System.Globalization.CultureInfo> 物件會包含文化特性的預設設定，並且不會反映使用伺服器的 \[**地區及語言選項**\] 應用程式覆寫的任何設定。  伺服器上任何覆寫設定的值都不會出現在使用者的系統上，或是反映在使用者輸入中。  
+ <span data-ttu-id="14aa7-131">範例會呼叫<xref:System.Globalization.CultureInfo.%23ctor%2A>建構函式與它`useUserOverride`參數設定為`false`來建立新的<xref:System.Globalization.CultureInfo>物件。</span><span class="sxs-lookup"><span data-stu-id="14aa7-131">The example calls the <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor with its `useUserOverride` parameter set to `false` to create a new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="14aa7-132">如此可確保，如果文化特性名稱是在伺服器上的預設文化特性名稱的新<xref:System.Globalization.CultureInfo>類別建構函式所建立的物件包含文化特性的預設設定，並不會反映使用伺服器的覆寫任何設定**地區及語言選項**應用程式。</span><span class="sxs-lookup"><span data-stu-id="14aa7-132">This ensures that, if the culture name is the default culture name on the server, the new <xref:System.Globalization.CultureInfo> object created by the class constructor contains a culture's default settings and does not reflect any settings overridden by using the server's **Regional and Language Options** application.</span></span> <span data-ttu-id="14aa7-133">在伺服器上的任何覆寫設定的值是不存在於使用者的系統上，或會反映在使用者的輸入項目。</span><span class="sxs-lookup"><span data-stu-id="14aa7-133">The values from any overridden settings on the server are unlikely to exist on the user's system or to be reflected in the user's input.</span></span>  
   
- 您的程式碼可以呼叫使用者輸入將轉換成的數值型別之 `Parse` 或 `TryParse` 方法。  您可能需要針對單一剖析作業重複呼叫剖析方法。  因此 `TryParse` 方法可能較佳，因為它會在剖析作業失敗時傳回 `false`。  相反地，對於 Web 應用程式而言，處理 `Parse` 方法可能擲回的重複例外狀況可能是相當耗費資源的方法。  
+ <span data-ttu-id="14aa7-134">您的程式碼可以呼叫任何一個`Parse`或`TryParse`方法的使用者輸入的數字類型會轉換成。</span><span class="sxs-lookup"><span data-stu-id="14aa7-134">Your code can call either the `Parse` or the `TryParse` method of the numeric type that the user's input will be converted to.</span></span> <span data-ttu-id="14aa7-135">您可能需要單一的剖析作業重複的呼叫 parse 方法。</span><span class="sxs-lookup"><span data-stu-id="14aa7-135">Repeated calls to a parse method may be required for a single parsing operation.</span></span> <span data-ttu-id="14aa7-136">如此一來，`TryParse`方法是比較好，因為它會傳回`false`如果剖析作業會失敗。</span><span class="sxs-lookup"><span data-stu-id="14aa7-136">As a result, the `TryParse` method is better, because it returns `false` if a parse operation fails.</span></span> <span data-ttu-id="14aa7-137">相反地，處理重複可能擲回的例外狀況`Parse`方法可以是非常花錢 Web 應用程式中的。</span><span class="sxs-lookup"><span data-stu-id="14aa7-137">In contrast, handling the repeated exceptions that may be thrown by the `Parse` method can be a very expensive proposition in a Web application.</span></span>  
   
-## 編譯程式碼  
- 若要編譯程式碼，請將它複製到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 程式碼後置頁，以取代所有現有的程式碼。  [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁應包含下列控制項：  
+## <a name="compiling-the-code"></a><span data-ttu-id="14aa7-138">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="14aa7-138">Compiling the Code</span></span>  
+ <span data-ttu-id="14aa7-139">若要編譯程式碼，將複製到[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]因此它會取代所有現有的程式碼的程式碼後置頁面。</span><span class="sxs-lookup"><span data-stu-id="14aa7-139">To compile the code, copy it into an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] code-behind page so that it replaces all the existing code.</span></span> <span data-ttu-id="14aa7-140">[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 頁面應包含下列控制項：</span><span class="sxs-lookup"><span data-stu-id="14aa7-140">The [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web page should contain the following controls:</span></span>  
   
--   <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考這個控制項。  將 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設為 \[輸入數字：\]。  
+-   <span data-ttu-id="14aa7-141">A<xref:System.Web.UI.WebControls.Label>控制項，程式碼中未參考。</span><span class="sxs-lookup"><span data-stu-id="14aa7-141">A <xref:System.Web.UI.WebControls.Label> control, which is not referenced in code.</span></span> <span data-ttu-id="14aa7-142">設定其<xref:System.Web.UI.WebControls.TextBox.Text%2A>屬性 」 輸入的數字:"。</span><span class="sxs-lookup"><span data-stu-id="14aa7-142">Set its <xref:System.Web.UI.WebControls.TextBox.Text%2A> property to "Enter a Number:".</span></span>  
   
--   名為 `NumericString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。  
+-   <span data-ttu-id="14aa7-143">名為 `NumericString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。</span><span class="sxs-lookup"><span data-stu-id="14aa7-143">A <xref:System.Web.UI.WebControls.TextBox> control named `NumericString`.</span></span>  
   
--   名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。  將 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 \[確定\]。  
+-   <span data-ttu-id="14aa7-144">名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。</span><span class="sxs-lookup"><span data-stu-id="14aa7-144">A <xref:System.Web.UI.WebControls.Button> control named `OKButton`.</span></span> <span data-ttu-id="14aa7-145">設定其<xref:System.Web.UI.WebControls.Button.Text%2A>屬性為 [確定]。</span><span class="sxs-lookup"><span data-stu-id="14aa7-145">Set its <xref:System.Web.UI.WebControls.Button.Text%2A> property to "OK".</span></span>  
   
- 將類別的名稱從 `NumericUserInput` 變更為 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面之 `Page` 指示詞的 `Inherits` 屬性所定義的類別名稱。  接著，將 `NumericInput` 物件參考的名稱變更為 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面之 `form` 標記的 `id` 屬性所定義的名稱。  
+ <span data-ttu-id="14aa7-146">從類別的名稱變更`NumericUserInput`所定義的類別名稱`Inherits`屬性[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]網頁的`Page`指示詞。</span><span class="sxs-lookup"><span data-stu-id="14aa7-146">Change the name of the class from `NumericUserInput` to the name of the class that is defined by the `Inherits` attribute of the [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page's `Page` directive.</span></span> <span data-ttu-id="14aa7-147">變更名稱`NumericInput`物件所定義的名稱來參考`id`屬性[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]網頁的`form`標記。</span><span class="sxs-lookup"><span data-stu-id="14aa7-147">Change the name of the `NumericInput` object reference to the name defined by the `id` attribute of the [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page's `form` tag.</span></span>  
   
-## .NET Framework 安全性  
- 為避免使用者將指令碼插入 HTML 資料流中，絕不可將使用者輸入直接回應 \(Echo\) 至伺服器回應中。  而是使用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=fullName> 方法將使用者輸入編碼。  
+## <a name="net-framework-security"></a><span data-ttu-id="14aa7-148">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="14aa7-148">.NET Framework Security</span></span>  
+ <span data-ttu-id="14aa7-149">若要防止使用者將指令碼插入 HTML 資料流，使用者輸入應該永遠不會直接回應伺服器在回應中。</span><span class="sxs-lookup"><span data-stu-id="14aa7-149">To prevent a user from injecting script into the HTML stream, user input should never be directly echoed back in the server response.</span></span> <span data-ttu-id="14aa7-150">相反地，它應該進行編碼，使用<xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="14aa7-150">Instead, it should be encoded by using the <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> method.</span></span>  
   
-## 請參閱  
- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [剖析數值字串](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a><span data-ttu-id="14aa7-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="14aa7-151">See Also</span></span>  
+ [<span data-ttu-id="14aa7-152">執行格式化作業</span><span class="sxs-lookup"><span data-stu-id="14aa7-152">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [<span data-ttu-id="14aa7-153">剖析數值字串</span><span class="sxs-lookup"><span data-stu-id="14aa7-153">Parsing Numeric Strings</span></span>](../../../docs/standard/base-types/parsing-numeric.md)

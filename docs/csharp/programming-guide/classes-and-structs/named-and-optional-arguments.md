@@ -1,15 +1,12 @@
 ---
 title: "具名和選擇性引數 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], named
 - named arguments [C#]
@@ -19,132 +16,125 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介紹具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
+# <a name="named-and-optional-arguments-c-programming-guide"></a><span data-ttu-id="e9831-102">具名和選擇性引數 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="e9831-102">Named and Optional Arguments (C# Programming Guide)</span></span>
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]<span data-ttu-id="e9831-103"> 介紹具名和選擇性引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-103"> introduces named and optional arguments.</span></span> <span data-ttu-id="e9831-104">「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-104">*Named arguments* enable you to specify an argument for a particular parameter by associating the argument with the parameter's name rather than with the parameter's position in the parameter list.</span></span> <span data-ttu-id="e9831-105">「選擇性引數」可讓您省略某些參數的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-105">*Optional arguments* enable you to omit arguments for some parameters.</span></span> <span data-ttu-id="e9831-106">這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。</span><span class="sxs-lookup"><span data-stu-id="e9831-106">Both techniques can be used with methods, indexers, constructors, and delegates.</span></span>  
   
- 當您使用具名和選擇性引數時，會依照引數清單中的引數顯示順序來評估引數，不是依照參數清單的順序。  
+ <span data-ttu-id="e9831-107">當您使用具名和選擇性引數時，會依照引數清單中的引數顯示順序來評估引數，不是依照參數清單的順序。</span><span class="sxs-lookup"><span data-stu-id="e9831-107">When you use named and optional arguments, the arguments are evaluated in the order in which they appear in the argument list, not the parameter list.</span></span>  
   
- 具名和選擇性參數一起使用時，可讓您只為選擇性參數清單中的幾個參數提供引數。 這項功能大幅有助呼叫 COM 介面，例如 Microsoft Office Automation API。  
+ <span data-ttu-id="e9831-108">具名和選擇性參數一起使用時，可讓您只為選擇性參數清單中的幾個參數提供引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-108">Named and optional parameters, when used together, enable you to supply arguments for only a few parameters from a list of optional parameters.</span></span> <span data-ttu-id="e9831-109">這項功能大幅有助呼叫 COM 介面，例如 Microsoft Office Automation API。</span><span class="sxs-lookup"><span data-stu-id="e9831-109">This capability greatly facilitates calls to COM interfaces such as the Microsoft Office Automation APIs.</span></span>  
   
-## <a name="named-arguments"></a>具名引數  
- 具名引數讓您不需要記住或查詢呼叫方法參數清單中的參數順序。 參數名稱可以指定每個引數的參數。 例如，依函式定義的順序來傳送位置的體重和身高引數，可以標準方式呼叫計算身體質量指數 (BMI) 的函式。  
+## <a name="named-arguments"></a><span data-ttu-id="e9831-110">具名引數</span><span class="sxs-lookup"><span data-stu-id="e9831-110">Named Arguments</span></span>  
+ <span data-ttu-id="e9831-111">具名引數讓您不需要記住或查詢呼叫方法參數清單中的參數順序。</span><span class="sxs-lookup"><span data-stu-id="e9831-111">Named arguments free you from the need to remember or to look up the order of parameters in the parameter lists of called methods.</span></span> <span data-ttu-id="e9831-112">參數名稱可以指定每個引數的參數。</span><span class="sxs-lookup"><span data-stu-id="e9831-112">The parameter for each argument can be specified by parameter name.</span></span> <span data-ttu-id="e9831-113">例如，函式會列印訂單詳細資料 (例如，賣方名稱、 訂單數目和產品名稱) 可以被呼叫，以標準方式傳送引數的位置，由函式定義的順序。</span><span class="sxs-lookup"><span data-stu-id="e9831-113">For example, a function that prints order details (such as, seller name, order number & product name) can be called in the standard way by sending arguments by position, in the order defined by the function.</span></span>
   
- `CalculateBMI(123, 64);`  
+ `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- 如果您不記得參數的順序，但知道它們的名稱，您可以依照任何順序傳送引數：體重先或身高先。  
+ <span data-ttu-id="e9831-114">如果您不記得參數的順序，但知道它們的名稱，您可以依任意順序傳送的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-114">If you do not remember the order of the parameters but know their names, you can send the arguments in any order.</span></span>  
   
- `CalculateBMI(weight: 123, height: 64);`  
+ `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
- `CalculateBMI(height: 64, weight: 123);`  
+ `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 具名引數也藉由識別每個引數所代表的意義，改善程式碼的可讀性。  
+ <span data-ttu-id="e9831-115">具名引數也藉由識別每個引數所代表的意義，改善程式碼的可讀性。</span><span class="sxs-lookup"><span data-stu-id="e9831-115">Named arguments also improve the readability of your code by identifying what each argument represents.</span></span> <span data-ttu-id="e9831-116">在下列範例方法`sellerName`不可為 null 或空白。</span><span class="sxs-lookup"><span data-stu-id="e9831-116">In the example method below, the `sellerName` cannot be null or whitespace.</span></span> <span data-ttu-id="e9831-117">兩者`sellerName`和`productName`是字串型別，而不會傳送引數的位置，合理來釐清兩者，並減少混淆的人閱讀程式碼使用具名引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-117">As both `sellerName` and `productName` are string types, instead of sending arguments by position, it makes sense to use named arguments to disambiguate the two and reduce confusion for anyone reading the code.</span></span>
   
- 具名引數可以接在位置引數後面，如下所示。  
+ <span data-ttu-id="e9831-118">具名引數，使用具有位置引數時，是否有效，只要</span><span class="sxs-lookup"><span data-stu-id="e9831-118">Named arguments, when used with positional arguments, are valid as long as</span></span> 
+
+- <span data-ttu-id="e9831-119">這些後面沒有任何位置的引數，或</span><span class="sxs-lookup"><span data-stu-id="e9831-119">they're not followed by any positional arguments, or</span></span>
+
+ `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
+
+- <span data-ttu-id="e9831-120">_開頭為 C# 7.2_，正確的位置中使用。</span><span class="sxs-lookup"><span data-stu-id="e9831-120">_starting with C# 7.2_, they're used in the correct position.</span></span> <span data-ttu-id="e9831-121">在下列範例中，參數`orderNum`處於正確的位置，但未明確命名。</span><span class="sxs-lookup"><span data-stu-id="e9831-121">In the example below, the parameter `orderNum` is in the correct position but isn't explicitly named.</span></span>
+
+ `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- `CalculateBMI(123, height: 64);`  
+ <span data-ttu-id="e9831-122">不過，次序不對的具名引數均為無效，如果它們後面接著位置引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-122">However, out-of-order named arguments are invalid if they're followed by positional arguments.</span></span>
+
+ ```csharp
+ // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
+ PrintOrderDetails(productName: "Red Mug", 31, "Gift Shop");
+ ```
   
- 但位置引數不能接在具名引數後面。 下列陳述式會導致編譯器錯誤。  
+## <a name="example"></a><span data-ttu-id="e9831-123">範例</span><span class="sxs-lookup"><span data-stu-id="e9831-123">Example</span></span>  
+ <span data-ttu-id="e9831-124">下列程式碼會實作以及一些其他的本節中的範例。</span><span class="sxs-lookup"><span data-stu-id="e9831-124">The following code implements the examples from this section along with some additional ones.</span></span>  
   
- `//CalculateBMI(weight: 123, 64);`  
+ [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
-## <a name="example"></a>範例  
- 下列程式碼會實作本節的範例。  
+## <a name="optional-arguments"></a><span data-ttu-id="e9831-125">選擇性引數</span><span class="sxs-lookup"><span data-stu-id="e9831-125">Optional Arguments</span></span>  
+ <span data-ttu-id="e9831-126">方法、建構函式、索引子或委派的定義可以指定其參數為必要項目或選擇項目。</span><span class="sxs-lookup"><span data-stu-id="e9831-126">The definition of a method, constructor, indexer, or delegate can specify that its parameters are required or that they are optional.</span></span> <span data-ttu-id="e9831-127">任何呼叫都必須提供所有必要參數的引數，但可以省略選擇性參數的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-127">Any call must provide arguments for all required parameters, but can omit arguments for optional parameters.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ <span data-ttu-id="e9831-128">每個選擇性參數都有預設值，為其定義的一部分。</span><span class="sxs-lookup"><span data-stu-id="e9831-128">Each optional parameter has a default value as part of its definition.</span></span> <span data-ttu-id="e9831-129">如不傳送該參數的任何引數，則使用預設值。</span><span class="sxs-lookup"><span data-stu-id="e9831-129">If no argument is sent for that parameter, the default value is used.</span></span> <span data-ttu-id="e9831-130">預設值必須是下列其中一個運算式類型︰</span><span class="sxs-lookup"><span data-stu-id="e9831-130">A default value must be one of the following types of expressions:</span></span>  
   
-## <a name="optional-arguments"></a>選擇性引數  
- 方法、建構函式、索引子或委派的定義可以指定其參數為必要項目或選擇項目。 任何呼叫都必須提供所有必要參數的引數，但可以省略選擇性參數的引數。  
+-   <span data-ttu-id="e9831-131">常數運算式；</span><span class="sxs-lookup"><span data-stu-id="e9831-131">a constant expression;</span></span>  
   
- 每個選擇性參數都有預設值，為其定義的一部分。 如不傳送該參數的任何引數，則使用預設值。 預設值必須是下列其中一個運算式類型︰  
+-   <span data-ttu-id="e9831-132">`new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；</span><span class="sxs-lookup"><span data-stu-id="e9831-132">an expression of the form `new ValType()`, where `ValType` is a value type, such as an [enum](../../../csharp/language-reference/keywords/enum.md) or a [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);</span></span>  
   
--   常數運算式；  
+-   <span data-ttu-id="e9831-133">[default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 形式的運算式，其中 `ValType` 是實值型別。</span><span class="sxs-lookup"><span data-stu-id="e9831-133">an expression of the form [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md),  where `ValType` is a value type.</span></span>  
   
--   `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
+ <span data-ttu-id="e9831-134">選擇性參數是定義在參數清單的結尾，在任何必要參數之後。</span><span class="sxs-lookup"><span data-stu-id="e9831-134">Optional parameters are defined at the end of the parameter list, after any required parameters.</span></span> <span data-ttu-id="e9831-135">如果呼叫端為任何一個連續的選擇性參數提供引數，它就必須提供所有前面選擇性參數的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-135">If the caller provides an argument for any one of a succession of optional parameters, it must provide arguments for all preceding optional parameters.</span></span> <span data-ttu-id="e9831-136">不支援引數清單使用逗點分隔間距。</span><span class="sxs-lookup"><span data-stu-id="e9831-136">Comma-separated gaps in the argument list are not supported.</span></span> <span data-ttu-id="e9831-137">例如，在下列程式碼中，執行個體方法 `ExampleMethod` 使用一個必要參數及兩個選擇性參數來定義。</span><span class="sxs-lookup"><span data-stu-id="e9831-137">For example, in the following code, instance method `ExampleMethod` is defined with one required and two optional parameters.</span></span>  
   
--   [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 形式的運算式，其中 `ValType` 是實值型別。  
+ [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
- 選擇性參數是定義在參數清單的結尾，在任何必要參數之後。 如果呼叫端為任何一個連續的選擇性參數提供引數，它就必須提供所有前面選擇性參數的引數。 不支援引數清單使用逗點分隔間距。 例如，在下列程式碼中，執行個體方法 `ExampleMethod` 使用一個必要參數及兩個選擇性參數來定義。  
-  
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
-  
- 以下呼叫 `ExampleMethod` 子句會造成編譯器錯誤，因為提供了第三個參數的引數，但未提供第二個參數的引數。  
+ <span data-ttu-id="e9831-138">以下呼叫 `ExampleMethod` 子句會造成編譯器錯誤，因為提供了第三個參數的引數，但未提供第二個參數的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-138">The following call to `ExampleMethod` causes a compiler error, because an argument is provided for the third parameter but not for the second.</span></span>  
   
  `//anExample.ExampleMethod(3, ,4);`  
   
- 不過，如果您知道第三個參數的名稱，您可以使用具名引數來完成工作。  
+ <span data-ttu-id="e9831-139">不過，如果您知道第三個參數的名稱，您可以使用具名引數來完成工作。</span><span class="sxs-lookup"><span data-stu-id="e9831-139">However, if you know the name of the third parameter, you can use a named argument to accomplish the task.</span></span>  
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense 使用括弧表示選擇性參數，如下圖所示。  
+ <span data-ttu-id="e9831-140">IntelliSense 使用括弧表示選擇性參數，如下圖所示。</span><span class="sxs-lookup"><span data-stu-id="e9831-140">IntelliSense uses brackets to indicate optional parameters, as shown in the following illustration.</span></span>  
   
- ![IntelliSense 對於 ExampleMethod 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-ExampleMethod 的選擇性參數  
+ <span data-ttu-id="e9831-141">![IntelliSense 對於 ExampleMethod 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")</span><span class="sxs-lookup"><span data-stu-id="e9831-141">![IntelliSense Quick Info for method ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")</span></span>  
+<span data-ttu-id="e9831-142">ExampleMethod 的選擇性參數</span><span class="sxs-lookup"><span data-stu-id="e9831-142">Optional parameters in ExampleMethod</span></span>  
   
 > [!NOTE]
->  您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別來宣告選擇性參數。 `OptionalAttribute` 參數不需要預設值。  
+>  <span data-ttu-id="e9831-143">您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別來宣告選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="e9831-143">You can also declare optional parameters by using the .NET <xref:System.Runtime.InteropServices.OptionalAttribute> class.</span></span> <span data-ttu-id="e9831-144">`OptionalAttribute` 參數不需要預設值。</span><span class="sxs-lookup"><span data-stu-id="e9831-144">`OptionalAttribute` parameters do not require a default value.</span></span>  
   
-## <a name="example"></a>範例  
- 在下例中，`ExampleClass` 的建構函式有一個參數，而它是選擇性的。 `ExampleMethod` 執行個體方法有一個必要參數 `required` 和兩個選擇性參數 `optionalstr` 及 `optionalint`。 `Main` 中的程式碼會示範叫用建構函式和方法的不同方式。  
+## <a name="example"></a><span data-ttu-id="e9831-145">範例</span><span class="sxs-lookup"><span data-stu-id="e9831-145">Example</span></span>  
+ <span data-ttu-id="e9831-146">在下例中，`ExampleClass` 的建構函式有一個參數，而它是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="e9831-146">In the following example, the constructor for `ExampleClass` has one parameter, which is optional.</span></span> <span data-ttu-id="e9831-147">`ExampleMethod` 執行個體方法有一個必要參數 `required` 和兩個選擇性參數 `optionalstr` 及 `optionalint`。</span><span class="sxs-lookup"><span data-stu-id="e9831-147">Instance method `ExampleMethod` has one required parameter, `required`, and two optional parameters, `optionalstr` and `optionalint`.</span></span> <span data-ttu-id="e9831-148">`Main` 中的程式碼會示範叫用建構函式和方法的不同方式。</span><span class="sxs-lookup"><span data-stu-id="e9831-148">The code in `Main` shows the different ways in which the constructor and method can be invoked.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
-## <a name="com-interfaces"></a>COM 介面  
- 具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。  
+## <a name="com-interfaces"></a><span data-ttu-id="e9831-149">COM 介面</span><span class="sxs-lookup"><span data-stu-id="e9831-149">COM Interfaces</span></span>  
+ <span data-ttu-id="e9831-150">具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。</span><span class="sxs-lookup"><span data-stu-id="e9831-150">Named and optional arguments, along with support for dynamic objects and other enhancements, greatly improve interoperability with COM APIs, such as Office Automation APIs.</span></span>  
   
- 例如，Microsoft Office Excel [Range Interface](http://go.microsoft.com/fwlink/?LinkId=148196) (範圍介面) 的 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 方法有七個參數，它們都是選擇性參數。 下圖會顯示這些參數。  
+ <span data-ttu-id="e9831-151">例如，Microsoft Office Excel [Range Interface](http://go.microsoft.com/fwlink/?LinkId=148196) (範圍介面) 的 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 方法有七個參數，它們都是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="e9831-151">For example, the [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) method in the Microsoft Office Excel [Range](http://go.microsoft.com/fwlink/?LinkId=148196) interface has seven parameters, all of which are optional.</span></span> <span data-ttu-id="e9831-152">下圖會顯示這些參數。</span><span class="sxs-lookup"><span data-stu-id="e9831-152">These parameters are shown in the following illustration.</span></span>  
   
- ![IntelliSense 對於 AutoFormat 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-AutoFormat 參數  
+ <span data-ttu-id="e9831-153">![IntelliSense 對於 AutoFormat 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")</span><span class="sxs-lookup"><span data-stu-id="e9831-153">![IntelliSense Quick Info for the AutoFormat method.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")</span></span>  
+<span data-ttu-id="e9831-154">AutoFormat 參數</span><span class="sxs-lookup"><span data-stu-id="e9831-154">AutoFormat parameters</span></span>  
   
- 在 C# 3.0 和舊版中，每個參數都需要引數，如下例所示。  
+ <span data-ttu-id="e9831-155">在 C# 3.0 和舊版中，每個參數都需要引數，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="e9831-155">In C# 3.0 and earlier versions, an argument is required for each parameter, as shown in the following example.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
- 不過，您可以使用 C# 4.0 引入的具名和選擇性引數，大幅簡化對 `AutoFormat` 的呼叫。 如果您不想變更參數的預設值，具名和選擇性引數可讓您省略選擇性參數的引數。 在下列的呼叫中，只指定七個參數其中之一的值。  
+ <span data-ttu-id="e9831-156">不過，您可以使用 C# 4.0 引入的具名和選擇性引數，大幅簡化對 `AutoFormat` 的呼叫。</span><span class="sxs-lookup"><span data-stu-id="e9831-156">However, you can greatly simplify the call to `AutoFormat` by using named and optional arguments, introduced in C# 4.0.</span></span> <span data-ttu-id="e9831-157">如果您不想變更參數的預設值，具名和選擇性引數可讓您省略選擇性參數的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-157">Named and optional arguments enable you to omit the argument for an optional parameter if you do not want to change the parameter's default value.</span></span> <span data-ttu-id="e9831-158">在下列的呼叫中，只指定七個參數其中之一的值。</span><span class="sxs-lookup"><span data-stu-id="e9831-158">In the following call, a value is specified for only one of the seven parameters.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- 如需詳細資訊和範例，請參閱[如何︰在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何︰使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
+ <span data-ttu-id="e9831-159">如需詳細資訊和範例，請參閱[如何︰在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何︰使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。</span><span class="sxs-lookup"><span data-stu-id="e9831-159">For more information and examples, see [How to: Use Named and Optional Arguments in Office Programming](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) and [How to: Access Office Interop Objects by Using Visual C# Features](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).</span></span>  
   
-## <a name="overload-resolution"></a>Overload Resolution  
- 使用具名和選擇性引數會以下列方式影響多載解析︰  
+## <a name="overload-resolution"></a><span data-ttu-id="e9831-160">Overload Resolution</span><span class="sxs-lookup"><span data-stu-id="e9831-160">Overload Resolution</span></span>  
+ <span data-ttu-id="e9831-161">使用具名和選擇性引數會以下列方式影響多載解析︰</span><span class="sxs-lookup"><span data-stu-id="e9831-161">Use of named and optional arguments affects overload resolution in the following ways:</span></span>  
   
--   如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。  
+-   <span data-ttu-id="e9831-162">如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。</span><span class="sxs-lookup"><span data-stu-id="e9831-162">A method, indexer, or constructor is a candidate for execution if each of its parameters either is optional or corresponds, by name or by position, to a single argument in the calling statement, and that argument can be converted to the type of the parameter.</span></span>  
   
--   如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。 會忽略選擇性參數的省略引數。  
+-   <span data-ttu-id="e9831-163">如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-163">If more than one candidate is found, overload resolution rules for preferred conversions are applied to the arguments that are explicitly specified.</span></span> <span data-ttu-id="e9831-164">會忽略選擇性參數的省略引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-164">Omitted arguments for optional parameters are ignored.</span></span>  
   
--   如果兩個候選項目的評斷結果一樣好，則偏向沒有選擇性參數的候選項目，其會在呼叫中省略引數。 這是多載解析一般偏好參數較少之候選項目的結果。  
+-   <span data-ttu-id="e9831-165">如果兩個候選項目的評斷結果一樣好，則偏向沒有選擇性參數的候選項目，其會在呼叫中省略引數。</span><span class="sxs-lookup"><span data-stu-id="e9831-165">If two candidates are judged to be equally good, preference goes to a candidate that does not have optional parameters for which arguments were omitted in the call.</span></span> <span data-ttu-id="e9831-166">這是多載解析一般偏好參數較少之候選項目的結果。</span><span class="sxs-lookup"><span data-stu-id="e9831-166">This is a consequence of a general preference in overload resolution for candidates that have fewer parameters.</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="e9831-167">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="e9831-167">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)
-
+## <a name="see-also"></a><span data-ttu-id="e9831-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9831-168">See Also</span></span>  
+ [<span data-ttu-id="e9831-169">如何：在 Office 程式設計中使用具名和選擇性引數</span><span class="sxs-lookup"><span data-stu-id="e9831-169">How to: Use Named and Optional Arguments in Office Programming</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+ [<span data-ttu-id="e9831-170">使用動態型別</span><span class="sxs-lookup"><span data-stu-id="e9831-170">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [<span data-ttu-id="e9831-171">使用建構函式</span><span class="sxs-lookup"><span data-stu-id="e9831-171">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [<span data-ttu-id="e9831-172">使用索引子</span><span class="sxs-lookup"><span data-stu-id="e9831-172">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)

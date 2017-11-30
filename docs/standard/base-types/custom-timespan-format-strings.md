@@ -1,398 +1,404 @@
 ---
-title: "自訂 TimeSpan 格式字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自訂時間間隔格式字串"
-  - "自訂 TimeSpan 格式字串"
-  - "格式規範, 自訂時間間隔"
-  - "格式字串"
-  - "格式化 [.NET Framework], 時間"
-  - "格式化 [.NET Framework], 時間間隔"
+title: "自訂 TimeSpan 格式字串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format spexifiers, custom time interval
+- format strings
+- formatting [.NET Framework], time interval
+- custom time interval format strings
+- formatting [.NET Framework], time
+- custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7302b17beb5ce20ec2bd8865149fe2e0bae9cee4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 自訂 TimeSpan 格式字串
-<xref:System.TimeSpan> 格式字串會定義對 <xref:System.TimeSpan> 值執行格式化作業後所產生的字串表示。  自訂格式字串由一個或多個自訂 <xref:System.TimeSpan> 格式規範和任意數目的常值字元組成。  任何不是[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)的字串都會解譯為自訂 <xref:System.TimeSpan> 格式字串。  
+# <a name="custom-timespan-format-strings"></a><span data-ttu-id="96c86-102">自訂 TimeSpan 格式字串</span><span class="sxs-lookup"><span data-stu-id="96c86-102">Custom TimeSpan Format Strings</span></span>
+<span data-ttu-id="96c86-103">A<xref:System.TimeSpan>格式字串會定義的字串表示<xref:System.TimeSpan>格式化作業所產生的值。</span><span class="sxs-lookup"><span data-stu-id="96c86-103">A <xref:System.TimeSpan> format string defines the string representation of a <xref:System.TimeSpan> value that results from a formatting operation.</span></span> <span data-ttu-id="96c86-104">自訂格式字串所組成一或多個自訂<xref:System.TimeSpan>格式規範，以及任何數目的常值字元。</span><span class="sxs-lookup"><span data-stu-id="96c86-104">A custom format string consists of one or more custom <xref:System.TimeSpan> format specifiers along with any number of literal characters.</span></span> <span data-ttu-id="96c86-105">不是任何字串[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)解譯為自訂<xref:System.TimeSpan>格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-105">Any string that is not a [standard TimeSpan format string](../../../docs/standard/base-types/standard-timespan-format-strings.md) is interpreted as a custom <xref:System.TimeSpan> format string.</span></span>  
   
 > [!IMPORTANT]
->  自訂 <xref:System.TimeSpan> 格式規範不包含預留位置分隔符號，例如分隔天與小時、小時與分鐘或是秒與小數秒的符號。  這些符號必須包含在自訂格式字串中做為字串常值。  例如，`"dd\.hh\:mm"` 會定義句號 \(.\) 做為天數和時數之間的分隔符號，並定義冒號 \(:\) 做為時數和分鐘數之間的分隔符號。  
+>  <span data-ttu-id="96c86-106">自訂<xref:System.TimeSpan>格式規範不包括預留位置分隔符號符號，例如天分開小時、 分鐘、 小時或小數秒數的秒數的符號。</span><span class="sxs-lookup"><span data-stu-id="96c86-106">The custom <xref:System.TimeSpan> format specifiers do not include placeholder separator symbols, such as the symbols that separate days from hours, hours from minutes, or seconds from fractional seconds.</span></span> <span data-ttu-id="96c86-107">相反地，這些符號必須包含在自訂格式字串中作為字串常值。</span><span class="sxs-lookup"><span data-stu-id="96c86-107">Instead, these symbols must be included in the custom format string as string literals.</span></span> <span data-ttu-id="96c86-108">例如，`"dd\.hh\:mm"` 會定義句號 (.) 作為天與小時之間的分隔符號，並定義冒號 (:) 作為小時與分鐘之間的分隔符號。</span><span class="sxs-lookup"><span data-stu-id="96c86-108">For example, `"dd\.hh\:mm"` defines a period (.) as the separator between days and hours, and a colon (:) as the separator between hours and minutes.</span></span>  
 >   
->  自訂 <xref:System.TimeSpan> 格式的指定名稱，但並不包含可讓您區分正負時間間隔的符號。  為了包含正負號的符號，您必須使用條件邏輯去建構字串格式。  在[其他字元](#Other) 中有範例。  
+>  <span data-ttu-id="96c86-109">自訂 <xref:System.TimeSpan> 格式規範也不包括讓您區分正負時間間隔的正負號。</span><span class="sxs-lookup"><span data-stu-id="96c86-109">Custom <xref:System.TimeSpan> format specifiers also do not include a sign symbol that enables you to differentiate between negative and positive time intervals.</span></span> <span data-ttu-id="96c86-110">若要包括正負號，您必須使用條件邏輯建構格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-110">To include a sign symbol, you have to construct a format string by using conditional logic.</span></span> <span data-ttu-id="96c86-111">[其他字元](#Other)一節中將提供範例。</span><span class="sxs-lookup"><span data-stu-id="96c86-111">The [Other Characters](#Other) section includes an example.</span></span>  
   
- <xref:System.TimeSpan> 值的字串表示是透過呼叫 <xref:System.TimeSpan.ToString%2A?displayProperty=fullName> 方法的多載所產生，還有由支援複合格式的方法 \(例如 <xref:System.String.Format%2A?displayProperty=fullName>\) 所產生。  如需詳細資訊，請參閱[格式化類型](../../../docs/standard/base-types/formatting-types.md)與[複合格式](../../../docs/standard/base-types/composite-formatting.md)。  下列範例示範如何在格式化作業中使用自訂格式字串。  
+ <span data-ttu-id="96c86-112">字串表示<xref:System.TimeSpan>值的多載的呼叫所產生<xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>方法，以及方法，可支援複合格式，例如<xref:System.String.Format%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="96c86-112">The string representations of <xref:System.TimeSpan> values are produced by calls to the overloads of the <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> method, and by methods that support composite formatting, such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="96c86-113">如需詳細資訊，請參閱[格式化類型](../../../docs/standard/base-types/formatting-types.md)和[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="96c86-113">For more information, see [Formatting Types](../../../docs/standard/base-types/formatting-types.md) and [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span> <span data-ttu-id="96c86-114">下列範例說明使用的自訂格式字串在格式化作業中。</span><span class="sxs-lookup"><span data-stu-id="96c86-114">The following example illustrates the use of custom format strings in formatting operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customformatexample1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customformatexample1.vb#1)]  
   
- 自訂 <xref:System.TimeSpan> 格式字串也會由 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 和 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法用來定義剖析作業之輸入字串的必要格式 \(剖析會將值的字串表示轉換成該值\)。下列範例示範如何在剖析作業中使用標準格式字串。  
+ <span data-ttu-id="96c86-115">自訂<xref:System.TimeSpan>格式字串也會使用<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>和<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法來定義所需的格式輸入字串的剖析作業。</span><span class="sxs-lookup"><span data-stu-id="96c86-115">Custom <xref:System.TimeSpan> format strings are also used by the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> and <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> methods to define the required format of input strings for parsing operations.</span></span> <span data-ttu-id="96c86-116">(剖析會將值的字串表示轉換成該值)。下列範例說明剖析作業中標準格式字串的用法。</span><span class="sxs-lookup"><span data-stu-id="96c86-116">(Parsing converts the string representation of a value to that value.) The following example illustrates the use of standard format strings in parsing operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<a name="table"></a> 下表描述自訂日期和時間的格式規範。  
+<span data-ttu-id="96c86-117"><a name="table"></a>下表描述自訂日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-117"><a name="table"></a> The following table describes the custom date and time format specifiers.</span></span>  
   
-|格式規範|描述|範例|  
-|----------|--------|--------|  
-|"d"、"%d"|時間間隔中的完整天數。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` \-\-\> "6"<br /><br /> `d\.hh\:mm` \-\-\> "6.14:32"|  
-|"dd"\-"dddddddd"|時間間隔中的完整天數，視需要填補前置零。<br /><br /> 詳細資訊：["dd"\-"dddddddd" 自訂格式規範](#ddSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` \-\-\> "006"<br /><br /> `dd\.hh\:mm` \-\-\> "06.14:32"|  
-|"h"、"%h"|時間間隔中未計入天數內的完整時數。  一位數的小時不會有前置字元零。<br /><br /> 詳細資訊：["h" 自訂格式規範](#hSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` \-\-\> "14"<br /><br /> `hh\:mm` \-\-\> "14:32"|  
-|"hh"|時間間隔中未計入天數內的完整時數。  單數字的小時有一個前置字元零。<br /><br /> 詳細資訊：["hh" 自訂格式規範](#hhSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` \-\-\> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` \-\-\> 08|  
-|"m"、"%m"|時間間隔中未納入時數或天數內的完整分鐘數。  一位數的分不會有前置字元零。<br /><br /> 詳細資訊：["m" 自訂格式規範](#mSpecifier)。|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` \-\-\> "8"<br /><br /> `h\:m` \-\-\> "14:8"|  
-|"mm"|時間間隔中未納入時數或天數內的完整分鐘數。  單數字的分有一個前置字元零。<br /><br /> 詳細資訊：["mm" 自訂格式規範](#mmSpecifier)。|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` \-\-\> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` \-\-\> 6.08:05:17|  
-|"s"、"%s"|時間間隔中未納入時數、天數或分鐘數內的完整秒數。  一位數的秒不會有前置字元零。<br /><br /> 詳細資訊：["s" 自訂格式規範](#sSpecifier)。|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` \-\-\> 12<br /><br /> `s\.fff` \-\-\> 12.965|  
-|"ss"|時間間隔中未納入時數、天數或分鐘數內的完整秒數。單數字的秒有一個前置字元零。<br /><br /> 詳細資訊：["ss" 自訂格式規範](#ssSpecifier)。|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` \-\-\> 06<br /><br /> `ss\.fff` \-\-\> 06.965|  
-|"f"、"%f"|時間間隔中的十分之一秒。<br /><br /> 詳細資訊：["f" 自訂格式規範](#fSpecifier)。|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` \-\-\> 8<br /><br /> `ss\.f` \-\-\> 06.8|  
-|"ff"|時間間隔中的百分之一秒。<br /><br /> 詳細資訊：["ff" 自訂格式規範](#ffSpecifier)。|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` \-\-\> 89<br /><br /> `ss\.ff` \-\-\> 06.89|  
-|"fff"|時間間隔中的毫秒。<br /><br /> 詳細資訊：["fff" 自訂格式規範](#f3Specifier)。|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` \-\-\> 895<br /><br /> `ss\.fff` \-\-\> 06.895|  
-|"ffff"|時間間隔中的萬分之一秒。<br /><br /> 詳細資訊：["ffff" 自訂格式規範](#f4Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` \-\-\> 8954<br /><br /> `ss\.ffff` \-\-\> 06.8954|  
-|"fffff"|時間間隔中的十萬分之一秒。<br /><br /> 詳細資訊：["fffff" 自訂格式規範](#f5Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` \-\-\> 89543<br /><br /> `ss\.fffff` \-\-\> 06.89543|  
-|"ffffff"|時間間隔中的百萬分之一秒。<br /><br /> 詳細資訊：["ffffff" 自訂格式規範](#f6Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` \-\-\> 895432<br /><br /> `ss\.ffffff` \-\-\> 06.895432|  
-|"fffffff"|時間間隔中的千萬分之一秒 \(或小數刻度\)。<br /><br /> 詳細資訊：["fffffff" 自訂格式規範](#f7Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` \-\-\> 8954321<br /><br /> `ss\.fffffff` \-\-\> 06.8954321|  
-|"F"、"%F"|時間間隔中的十分之一秒。  如果數字為零，則不會顯示任何內容。<br /><br /> 詳細資訊：["F" 自訂格式規範](#F_Specifier)。|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|  
-|"FF"|時間間隔中的百分之一秒。  不包含小數點後最後幾個零或兩個位置都是零的數字。<br /><br /> 詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03.1|  
-|"FFF"|時間間隔中的毫秒。  不包含小數點後最後幾個零。<br /><br /> 詳細資訊：|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|  
-|"FFFF"|時間間隔中的萬分之一秒。  不包含小數點後最後幾個零。<br /><br /> 詳細資訊：["FFFF" 自訂格式規範](#F4_Specifier)。|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03.1|  
-|"FFFFF"|時間間隔中的十萬分之一秒。  不包含小數點後最後幾個零。<br /><br /> 詳細資訊：["FFFFF" 自訂格式規範](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|  
-|"FFFFFF"|時間間隔中的百萬分之一秒。  不顯示小數點後最後幾個零。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
-|"FFFFFFF"|時間間隔中的千萬分之一秒。  不顯示小數點後最後幾個零或七個位置都是零的數字。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
-|*'string*'|常值字串分隔符號。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` \-\-\> "14:32:17"|  
-|\\|逸出字元。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` \-\-\> "14:32:17"|  
-|任意字元|其他任何未逸出字元都會解譯為自訂格式規範。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` \-\-\> "14:32:17"|  
+|<span data-ttu-id="96c86-118">格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-118">Format specifier</span></span>|<span data-ttu-id="96c86-119">描述</span><span class="sxs-lookup"><span data-stu-id="96c86-119">Description</span></span>|<span data-ttu-id="96c86-120">範例</span><span class="sxs-lookup"><span data-stu-id="96c86-120">Example</span></span>|  
+|----------------------|-----------------|-------------|  
+|<span data-ttu-id="96c86-121">"d"、"%d"</span><span class="sxs-lookup"><span data-stu-id="96c86-121">"d", "%d"</span></span>|<span data-ttu-id="96c86-122">時間間隔中的完整天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-122">The number of whole days in the time interval.</span></span><br /><br /> <span data-ttu-id="96c86-123">詳細資訊：["d" 自訂格式規範](#dSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-123">More information: [The "d" Custom Format Specifier](#dSpecifier).</span></span>|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> <span data-ttu-id="96c86-124">`%d` --> "6"</span><span class="sxs-lookup"><span data-stu-id="96c86-124">`%d` --> "6"</span></span><br /><br /> <span data-ttu-id="96c86-125">`d\.hh\:mm` --> "6.14:32"</span><span class="sxs-lookup"><span data-stu-id="96c86-125">`d\.hh\:mm` --> "6.14:32"</span></span>|  
+|<span data-ttu-id="96c86-126">"dd"-"dddddddd"</span><span class="sxs-lookup"><span data-stu-id="96c86-126">"dd"-"dddddddd"</span></span>|<span data-ttu-id="96c86-127">時間間隔中的完整天數，視需要填補前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-127">The number of whole days in the time interval, padded with leading zeros as needed.</span></span><br /><br /> <span data-ttu-id="96c86-128">更多資訊： ["dd"-"dddddddd"自訂格式規範](#ddSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-128">More information: [The "dd"-"dddddddd" Custom Format Specifiers](#ddSpecifier).</span></span>|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> <span data-ttu-id="96c86-129">`ddd` --> "006"</span><span class="sxs-lookup"><span data-stu-id="96c86-129">`ddd` --> "006"</span></span><br /><br /> <span data-ttu-id="96c86-130">`dd\.hh\:mm` --> "06.14:32"</span><span class="sxs-lookup"><span data-stu-id="96c86-130">`dd\.hh\:mm` --> "06.14:32"</span></span>|  
+|<span data-ttu-id="96c86-131">"h"、"%h"</span><span class="sxs-lookup"><span data-stu-id="96c86-131">"h", "%h"</span></span>|<span data-ttu-id="96c86-132">時間間隔中未計入天數部分的完整時數。</span><span class="sxs-lookup"><span data-stu-id="96c86-132">The number of whole hours in the time interval that are not counted as part of days.</span></span> <span data-ttu-id="96c86-133">一位數的小時不會有前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-133">Single-digit hours do not have a leading zero.</span></span><br /><br /> <span data-ttu-id="96c86-134">詳細資訊：["h" 自訂格式規範](#hSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-134">More information: [The "h" Custom Format Specifier](#hSpecifier).</span></span>|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> <span data-ttu-id="96c86-135">`%h` --> "14"</span><span class="sxs-lookup"><span data-stu-id="96c86-135">`%h` --> "14"</span></span><br /><br /> <span data-ttu-id="96c86-136">`hh\:mm` --> "14:32"</span><span class="sxs-lookup"><span data-stu-id="96c86-136">`hh\:mm` --> "14:32"</span></span>|  
+|<span data-ttu-id="96c86-137">"hh"</span><span class="sxs-lookup"><span data-stu-id="96c86-137">"hh"</span></span>|<span data-ttu-id="96c86-138">時間間隔中未計入天數部分的完整時數。</span><span class="sxs-lookup"><span data-stu-id="96c86-138">The number of whole hours in the time interval that are not counted as part of days.</span></span> <span data-ttu-id="96c86-139">一位數的小時有前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-139">Single-digit hours have a leading zero.</span></span><br /><br /> <span data-ttu-id="96c86-140">詳細資訊：["hh" 自訂格式規範](#hhSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-140">More information: [The "hh" Custom Format Specifier](#hhSpecifier).</span></span>|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> <span data-ttu-id="96c86-141">`hh` --> "14"</span><span class="sxs-lookup"><span data-stu-id="96c86-141">`hh` --> "14"</span></span><br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> <span data-ttu-id="96c86-142">`hh` --> 08</span><span class="sxs-lookup"><span data-stu-id="96c86-142">`hh` --> 08</span></span>|  
+|<span data-ttu-id="96c86-143">"m"、"%m"</span><span class="sxs-lookup"><span data-stu-id="96c86-143">"m", "%m"</span></span>|<span data-ttu-id="96c86-144">時間間隔中未納入時數或天數部分的完整分鐘數。</span><span class="sxs-lookup"><span data-stu-id="96c86-144">The number of whole minutes in the time interval that are not included as part of hours or days.</span></span> <span data-ttu-id="96c86-145">一位數的分鐘不會有前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-145">Single-digit minutes do not have a leading zero.</span></span><br /><br /> <span data-ttu-id="96c86-146">詳細資訊：["m" 自訂格式規範](#mSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-146">More information: [The "m" Custom Format Specifier](#mSpecifier).</span></span>|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> <span data-ttu-id="96c86-147">`%m` --> "8"</span><span class="sxs-lookup"><span data-stu-id="96c86-147">`%m` --> "8"</span></span><br /><br /> <span data-ttu-id="96c86-148">`h\:m` --> "14:8"</span><span class="sxs-lookup"><span data-stu-id="96c86-148">`h\:m` --> "14:8"</span></span>|  
+|<span data-ttu-id="96c86-149">"mm"</span><span class="sxs-lookup"><span data-stu-id="96c86-149">"mm"</span></span>|<span data-ttu-id="96c86-150">時間間隔中未納入時數或天數部分的完整分鐘數。</span><span class="sxs-lookup"><span data-stu-id="96c86-150">The number of whole minutes in the time interval that are not included as part of hours or days.</span></span> <span data-ttu-id="96c86-151">一位數的分鐘有前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-151">Single-digit minutes have a leading zero.</span></span><br /><br /> <span data-ttu-id="96c86-152">詳細資訊：["mm" 自訂格式規範](#mmSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-152">More information: [The "mm" Custom Format Specifier](#mmSpecifier).</span></span>|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> <span data-ttu-id="96c86-153">`mm` --> "08"</span><span class="sxs-lookup"><span data-stu-id="96c86-153">`mm` --> "08"</span></span><br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> <span data-ttu-id="96c86-154">`d\.hh\:mm\:ss` --> 6.08:05:17</span><span class="sxs-lookup"><span data-stu-id="96c86-154">`d\.hh\:mm\:ss` --> 6.08:05:17</span></span>|  
+|<span data-ttu-id="96c86-155">"s"、"%s"</span><span class="sxs-lookup"><span data-stu-id="96c86-155">"s", "%s"</span></span>|<span data-ttu-id="96c86-156">時間間隔中未納入時數、天數或分鐘數部分的完整秒數。</span><span class="sxs-lookup"><span data-stu-id="96c86-156">The number of whole seconds in the time interval that are not included as part of hours, days, or minutes.</span></span> <span data-ttu-id="96c86-157">一位數的秒不會有前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-157">Single-digit seconds do not have a leading zero.</span></span><br /><br /> <span data-ttu-id="96c86-158">詳細資訊：["s" 自訂格式規範](#sSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-158">More information: [The "s" Custom Format Specifier](#sSpecifier).</span></span>|<span data-ttu-id="96c86-159">`TimeSpan.FromSeconds(12.965)`：</span><span class="sxs-lookup"><span data-stu-id="96c86-159">`TimeSpan.FromSeconds(12.965)`:</span></span><br /><br /> <span data-ttu-id="96c86-160">`%s` --> 12</span><span class="sxs-lookup"><span data-stu-id="96c86-160">`%s` --> 12</span></span><br /><br /> <span data-ttu-id="96c86-161">`s\.fff` --> 12.965</span><span class="sxs-lookup"><span data-stu-id="96c86-161">`s\.fff` --> 12.965</span></span>|  
+|<span data-ttu-id="96c86-162">"ss"</span><span class="sxs-lookup"><span data-stu-id="96c86-162">"ss"</span></span>|<span data-ttu-id="96c86-163">時間間隔中未納入時數、天數或分鐘數部分的完整秒數。</span><span class="sxs-lookup"><span data-stu-id="96c86-163">The number of whole seconds in the time interval that are not included as part of hours, days, or minutes.</span></span>  <span data-ttu-id="96c86-164">一位數的秒有前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-164">Single-digit seconds have a leading zero.</span></span><br /><br /> <span data-ttu-id="96c86-165">詳細資訊：["ss" 自訂格式規範](#ssSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-165">More information: [The "ss" Custom Format Specifier](#ssSpecifier).</span></span>|<span data-ttu-id="96c86-166">`TimeSpan.FromSeconds(6.965)`：</span><span class="sxs-lookup"><span data-stu-id="96c86-166">`TimeSpan.FromSeconds(6.965)`:</span></span><br /><br /> <span data-ttu-id="96c86-167">`ss` --> 06</span><span class="sxs-lookup"><span data-stu-id="96c86-167">`ss` --> 06</span></span><br /><br /> <span data-ttu-id="96c86-168">`ss\.fff` --> 06.965</span><span class="sxs-lookup"><span data-stu-id="96c86-168">`ss\.fff` --> 06.965</span></span>|  
+|<span data-ttu-id="96c86-169">"f"、"%f"</span><span class="sxs-lookup"><span data-stu-id="96c86-169">"f", "%f"</span></span>|<span data-ttu-id="96c86-170">時間間隔中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-170">The tenths of a second in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-171">詳細資訊：["f" 自訂格式規範](#fSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-171">More information: [The "f" Custom Format Specifier](#fSpecifier).</span></span>|<span data-ttu-id="96c86-172">`TimeSpan.FromSeconds(6.895)`：</span><span class="sxs-lookup"><span data-stu-id="96c86-172">`TimeSpan.FromSeconds(6.895)`:</span></span><br /><br /> <span data-ttu-id="96c86-173">`f` --> 8</span><span class="sxs-lookup"><span data-stu-id="96c86-173">`f` --> 8</span></span><br /><br /> <span data-ttu-id="96c86-174">`ss\.f` --> 06.8</span><span class="sxs-lookup"><span data-stu-id="96c86-174">`ss\.f` --> 06.8</span></span>|  
+|<span data-ttu-id="96c86-175">"ff"</span><span class="sxs-lookup"><span data-stu-id="96c86-175">"ff"</span></span>|<span data-ttu-id="96c86-176">時間間隔中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-176">The hundredths of a second in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-177">更多資訊：["Ff"自訂格式規範](#ffSpecifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-177">More information:[The "ff" Custom Format Specifier](#ffSpecifier).</span></span>|<span data-ttu-id="96c86-178">`TimeSpan.FromSeconds(6.895)`：</span><span class="sxs-lookup"><span data-stu-id="96c86-178">`TimeSpan.FromSeconds(6.895)`:</span></span><br /><br /> <span data-ttu-id="96c86-179">`ff` --> 89</span><span class="sxs-lookup"><span data-stu-id="96c86-179">`ff` --> 89</span></span><br /><br /> <span data-ttu-id="96c86-180">`ss\.ff` --> 06.89</span><span class="sxs-lookup"><span data-stu-id="96c86-180">`ss\.ff` --> 06.89</span></span>|  
+|<span data-ttu-id="96c86-181">"fff"</span><span class="sxs-lookup"><span data-stu-id="96c86-181">"fff"</span></span>|<span data-ttu-id="96c86-182">時間間隔中的毫秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-182">The milliseconds in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-183">詳細資訊：["fff" 自訂格式規範](#f3Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-183">More information: [The "fff" Custom Format Specifier](#f3Specifier).</span></span>|<span data-ttu-id="96c86-184">`TimeSpan.FromSeconds(6.895)`：</span><span class="sxs-lookup"><span data-stu-id="96c86-184">`TimeSpan.FromSeconds(6.895)`:</span></span><br /><br /> <span data-ttu-id="96c86-185">`fff` --> 895</span><span class="sxs-lookup"><span data-stu-id="96c86-185">`fff` --> 895</span></span><br /><br /> <span data-ttu-id="96c86-186">`ss\.fff` --> 06.895</span><span class="sxs-lookup"><span data-stu-id="96c86-186">`ss\.fff` --> 06.895</span></span>|  
+|<span data-ttu-id="96c86-187">"ffff"</span><span class="sxs-lookup"><span data-stu-id="96c86-187">"ffff"</span></span>|<span data-ttu-id="96c86-188">時間間隔中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-188">The ten-thousandths of a second in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-189">詳細資訊：["ffff" 自訂格式規範](#f4Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-189">More information: [The "ffff" Custom Format Specifier](#f4Specifier).</span></span>|<span data-ttu-id="96c86-190">`TimeSpan.Parse("0:0:6.8954321")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-190">`TimeSpan.Parse("0:0:6.8954321")`:</span></span><br /><br /> <span data-ttu-id="96c86-191">`ffff` --> 8954</span><span class="sxs-lookup"><span data-stu-id="96c86-191">`ffff` --> 8954</span></span><br /><br /> <span data-ttu-id="96c86-192">`ss\.ffff` --> 06.8954</span><span class="sxs-lookup"><span data-stu-id="96c86-192">`ss\.ffff` --> 06.8954</span></span>|  
+|<span data-ttu-id="96c86-193">"fffff"</span><span class="sxs-lookup"><span data-stu-id="96c86-193">"fffff"</span></span>|<span data-ttu-id="96c86-194">時間間隔中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-194">The hundred-thousandths of a second in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-195">詳細資訊：["fffff" 自訂格式規範](#f5Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-195">More information: [The "fffff" Custom Format Specifier](#f5Specifier).</span></span>|<span data-ttu-id="96c86-196">`TimeSpan.Parse("0:0:6.8954321")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-196">`TimeSpan.Parse("0:0:6.8954321")`:</span></span><br /><br /> <span data-ttu-id="96c86-197">`fffff` --> 89543</span><span class="sxs-lookup"><span data-stu-id="96c86-197">`fffff` --> 89543</span></span><br /><br /> <span data-ttu-id="96c86-198">`ss\.fffff` --> 06.89543</span><span class="sxs-lookup"><span data-stu-id="96c86-198">`ss\.fffff` --> 06.89543</span></span>|  
+|<span data-ttu-id="96c86-199">"ffffff"</span><span class="sxs-lookup"><span data-stu-id="96c86-199">"ffffff"</span></span>|<span data-ttu-id="96c86-200">時間間隔中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-200">The millionths of a second in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-201">詳細資訊：["ffffff" 自訂格式規範](#f6Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-201">More information: [The "ffffff" Custom Format Specifier](#f6Specifier).</span></span>|<span data-ttu-id="96c86-202">`TimeSpan.Parse("0:0:6.8954321")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-202">`TimeSpan.Parse("0:0:6.8954321")`:</span></span><br /><br /> <span data-ttu-id="96c86-203">`ffffff` --> 895432</span><span class="sxs-lookup"><span data-stu-id="96c86-203">`ffffff` --> 895432</span></span><br /><br /> <span data-ttu-id="96c86-204">`ss\.ffffff` --> 06.895432</span><span class="sxs-lookup"><span data-stu-id="96c86-204">`ss\.ffffff` --> 06.895432</span></span>|  
+|<span data-ttu-id="96c86-205">"fffffff"</span><span class="sxs-lookup"><span data-stu-id="96c86-205">"fffffff"</span></span>|<span data-ttu-id="96c86-206">時間間隔中的千萬分之一秒 (或小數刻度)。</span><span class="sxs-lookup"><span data-stu-id="96c86-206">The ten-millionths of a second (or the fractional ticks) in a time interval.</span></span><br /><br /> <span data-ttu-id="96c86-207">詳細資訊：["fffffff" 自訂格式規範](#f7Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-207">More information: [The "fffffff" Custom Format Specifier](#f7Specifier).</span></span>|<span data-ttu-id="96c86-208">`TimeSpan.Parse("0:0:6.8954321")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-208">`TimeSpan.Parse("0:0:6.8954321")`:</span></span><br /><br /> <span data-ttu-id="96c86-209">`fffffff` --> 8954321</span><span class="sxs-lookup"><span data-stu-id="96c86-209">`fffffff` --> 8954321</span></span><br /><br /> <span data-ttu-id="96c86-210">`ss\.fffffff` --> 06.8954321</span><span class="sxs-lookup"><span data-stu-id="96c86-210">`ss\.fffffff` --> 06.8954321</span></span>|  
+|<span data-ttu-id="96c86-211">"F"、"%F"</span><span class="sxs-lookup"><span data-stu-id="96c86-211">"F", "%F"</span></span>|<span data-ttu-id="96c86-212">時間間隔中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-212">The tenths of a second in a time interval.</span></span> <span data-ttu-id="96c86-213">如果數字為零，則不會顯示任何內容。</span><span class="sxs-lookup"><span data-stu-id="96c86-213">Nothing is displayed if the digit is zero.</span></span><br /><br /> <span data-ttu-id="96c86-214">詳細資訊：["F" 自訂格式規範](#F_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-214">More information: [The "F" Custom Format Specifier](#F_Specifier).</span></span>|<span data-ttu-id="96c86-215">`TimeSpan.Parse("00:00:06.32")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-215">`TimeSpan.Parse("00:00:06.32")`:</span></span><br /><br /> <span data-ttu-id="96c86-216">`%F`: 3</span><span class="sxs-lookup"><span data-stu-id="96c86-216">`%F`: 3</span></span><br /><br /> <span data-ttu-id="96c86-217">`TimeSpan.Parse("0:0:3.091")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-217">`TimeSpan.Parse("0:0:3.091")`:</span></span><br /><br /> <span data-ttu-id="96c86-218">`ss\.F`: 03.</span><span class="sxs-lookup"><span data-stu-id="96c86-218">`ss\.F`: 03.</span></span>|  
+|<span data-ttu-id="96c86-219">"FF"</span><span class="sxs-lookup"><span data-stu-id="96c86-219">"FF"</span></span>|<span data-ttu-id="96c86-220">時間間隔中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-220">The hundredths of a second in a time interval.</span></span> <span data-ttu-id="96c86-221">不包含小數點後的零或兩位數都是零的數字。</span><span class="sxs-lookup"><span data-stu-id="96c86-221">Any fractional trailing zeros or two zero digits are not included.</span></span><br /><br /> <span data-ttu-id="96c86-222">詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-222">More information: [The "FF" Custom Format Specifier](#FF_Specifier).</span></span>|<span data-ttu-id="96c86-223">`TimeSpan.Parse("00:00:06.329")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-223">`TimeSpan.Parse("00:00:06.329")`:</span></span><br /><br /> <span data-ttu-id="96c86-224">`FF`: 32</span><span class="sxs-lookup"><span data-stu-id="96c86-224">`FF`: 32</span></span><br /><br /> <span data-ttu-id="96c86-225">`TimeSpan.Parse("0:0:3.101")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-225">`TimeSpan.Parse("0:0:3.101")`:</span></span><br /><br /> <span data-ttu-id="96c86-226">`ss\.FF`: 03.1</span><span class="sxs-lookup"><span data-stu-id="96c86-226">`ss\.FF`: 03.1</span></span>|  
+|<span data-ttu-id="96c86-227">"FFF"</span><span class="sxs-lookup"><span data-stu-id="96c86-227">"FFF"</span></span>|<span data-ttu-id="96c86-228">時間間隔中的毫秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-228">The milliseconds in a time interval.</span></span> <span data-ttu-id="96c86-229">不包含小數點後的零。</span><span class="sxs-lookup"><span data-stu-id="96c86-229">Any fractional trailing zeros are not included.</span></span><br /><br /> <span data-ttu-id="96c86-230">詳細資訊：</span><span class="sxs-lookup"><span data-stu-id="96c86-230">More information:</span></span>|<span data-ttu-id="96c86-231">`TimeSpan.Parse("00:00:06.3291")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-231">`TimeSpan.Parse("00:00:06.3291")`:</span></span><br /><br /> <span data-ttu-id="96c86-232">`FFF`: 329</span><span class="sxs-lookup"><span data-stu-id="96c86-232">`FFF`: 329</span></span><br /><br /> <span data-ttu-id="96c86-233">`TimeSpan.Parse("0:0:3.1009")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-233">`TimeSpan.Parse("0:0:3.1009")`:</span></span><br /><br /> <span data-ttu-id="96c86-234">`ss\.FFF`: 03.1</span><span class="sxs-lookup"><span data-stu-id="96c86-234">`ss\.FFF`: 03.1</span></span>|  
+|<span data-ttu-id="96c86-235">"FFFF"</span><span class="sxs-lookup"><span data-stu-id="96c86-235">"FFFF"</span></span>|<span data-ttu-id="96c86-236">時間間隔中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-236">The ten-thousandths of a second in a time interval.</span></span> <span data-ttu-id="96c86-237">不包含小數點後的零。</span><span class="sxs-lookup"><span data-stu-id="96c86-237">Any fractional trailing zeros are not included.</span></span><br /><br /> <span data-ttu-id="96c86-238">詳細資訊：["FFFF" 自訂格式規範](#F4_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-238">More information: [The "FFFF" Custom Format Specifier](#F4_Specifier).</span></span>|<span data-ttu-id="96c86-239">`TimeSpan.Parse("00:00:06.32917")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-239">`TimeSpan.Parse("00:00:06.32917")`:</span></span><br /><br /> <span data-ttu-id="96c86-240">`FFFFF`: 3291</span><span class="sxs-lookup"><span data-stu-id="96c86-240">`FFFFF`: 3291</span></span><br /><br /> <span data-ttu-id="96c86-241">`TimeSpan.Parse("0:0:3.10009")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-241">`TimeSpan.Parse("0:0:3.10009")`:</span></span><br /><br /> <span data-ttu-id="96c86-242">`ss\.FFFF`: 03.1</span><span class="sxs-lookup"><span data-stu-id="96c86-242">`ss\.FFFF`: 03.1</span></span>|  
+|<span data-ttu-id="96c86-243">"FFFFF"</span><span class="sxs-lookup"><span data-stu-id="96c86-243">"FFFFF"</span></span>|<span data-ttu-id="96c86-244">時間間隔中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-244">The hundred-thousandths of a second in a time interval.</span></span> <span data-ttu-id="96c86-245">不包含小數點後的零。</span><span class="sxs-lookup"><span data-stu-id="96c86-245">Any fractional trailing zeros are not included.</span></span><br /><br /> <span data-ttu-id="96c86-246">詳細資訊：["FFFFF" 自訂格式規範](#F5_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-246">More information: [The "FFFFF" Custom Format Specifier](#F5_Specifier).</span></span>|<span data-ttu-id="96c86-247">`TimeSpan.Parse("00:00:06.329179")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-247">`TimeSpan.Parse("00:00:06.329179")`:</span></span><br /><br /> <span data-ttu-id="96c86-248">`FFFFF`: 32917</span><span class="sxs-lookup"><span data-stu-id="96c86-248">`FFFFF`: 32917</span></span><br /><br /> <span data-ttu-id="96c86-249">`TimeSpan.Parse("0:0:3.100009")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-249">`TimeSpan.Parse("0:0:3.100009")`:</span></span><br /><br /> <span data-ttu-id="96c86-250">`ss\.FFFFF`: 03.1</span><span class="sxs-lookup"><span data-stu-id="96c86-250">`ss\.FFFFF`: 03.1</span></span>|  
+|<span data-ttu-id="96c86-251">"FFFFFF"</span><span class="sxs-lookup"><span data-stu-id="96c86-251">"FFFFFF"</span></span>|<span data-ttu-id="96c86-252">時間間隔中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-252">The millionths of a second in a time interval.</span></span> <span data-ttu-id="96c86-253">不顯示小數點後的零。</span><span class="sxs-lookup"><span data-stu-id="96c86-253">Any fractional trailing zeros are not displayed.</span></span><br /><br /> <span data-ttu-id="96c86-254">詳細資訊：["FFFFFF" 自訂格式規範](#F6_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-254">More information: [The "FFFFFF" Custom Format Specifier](#F6_Specifier).</span></span>|<span data-ttu-id="96c86-255">`TimeSpan.Parse("00:00:06.3291791")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-255">`TimeSpan.Parse("00:00:06.3291791")`:</span></span><br /><br /> <span data-ttu-id="96c86-256">`FFFFFF`: 329179</span><span class="sxs-lookup"><span data-stu-id="96c86-256">`FFFFFF`: 329179</span></span><br /><br /> <span data-ttu-id="96c86-257">`TimeSpan.Parse("0:0:3.1000009")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-257">`TimeSpan.Parse("0:0:3.1000009")`:</span></span><br /><br /> <span data-ttu-id="96c86-258">`ss\.FFFFFF`: 03.1</span><span class="sxs-lookup"><span data-stu-id="96c86-258">`ss\.FFFFFF`: 03.1</span></span>|  
+|<span data-ttu-id="96c86-259">"FFFFFFF"</span><span class="sxs-lookup"><span data-stu-id="96c86-259">"FFFFFFF"</span></span>|<span data-ttu-id="96c86-260">時間間隔中的千萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-260">The ten-millions of a second in a time interval.</span></span> <span data-ttu-id="96c86-261">不顯示小數點後的零或七位數都是零。</span><span class="sxs-lookup"><span data-stu-id="96c86-261">Any fractional trailing zeros or seven zeros are not displayed.</span></span><br /><br /> <span data-ttu-id="96c86-262">詳細資訊：["FFFFFFF" 自訂格式規範](#F7_Specifier)。</span><span class="sxs-lookup"><span data-stu-id="96c86-262">More information: [The "FFFFFFF" Custom Format Specifier](#F7_Specifier).</span></span>|<span data-ttu-id="96c86-263">`TimeSpan.Parse("00:00:06.3291791")`：</span><span class="sxs-lookup"><span data-stu-id="96c86-263">`TimeSpan.Parse("00:00:06.3291791")`:</span></span><br /><br /> <span data-ttu-id="96c86-264">`FFFFFF`: 3291791</span><span class="sxs-lookup"><span data-stu-id="96c86-264">`FFFFFF`: 3291791</span></span><br /><br /> <span data-ttu-id="96c86-265">`TimeSpan.Parse("0:0:3.1900000")`:</span><span class="sxs-lookup"><span data-stu-id="96c86-265">`TimeSpan.Parse("0:0:3.1900000")`:</span></span><br /><br /> <span data-ttu-id="96c86-266">`ss\.FFFFFF`: 03.19</span><span class="sxs-lookup"><span data-stu-id="96c86-266">`ss\.FFFFFF`: 03.19</span></span>|  
+|<span data-ttu-id="96c86-267">*' 字串*'</span><span class="sxs-lookup"><span data-stu-id="96c86-267">*'string*'</span></span>|<span data-ttu-id="96c86-268">常值字串分隔符號。</span><span class="sxs-lookup"><span data-stu-id="96c86-268">Literal string delimiter.</span></span><br /><br /> <span data-ttu-id="96c86-269">更多資訊：[其他字元](#Other)。</span><span class="sxs-lookup"><span data-stu-id="96c86-269">More information: [Other Characters](#Other).</span></span>|`new TimeSpan(14, 32, 17):`<br /><br /> <span data-ttu-id="96c86-270">`hh':'mm':'ss` --> "14:32:17"</span><span class="sxs-lookup"><span data-stu-id="96c86-270">`hh':'mm':'ss` --> "14:32:17"</span></span>|  
+|\|<span data-ttu-id="96c86-271">逸出字元。</span><span class="sxs-lookup"><span data-stu-id="96c86-271">The escape character.</span></span><br /><br /> <span data-ttu-id="96c86-272">更多資訊：[其他字元](#Other)。</span><span class="sxs-lookup"><span data-stu-id="96c86-272">More information:[Other Characters](#Other).</span></span>|`new TimeSpan(14, 32, 17):`<br /><br /> <span data-ttu-id="96c86-273">`hh\:mm\:ss` --> "14:32:17"</span><span class="sxs-lookup"><span data-stu-id="96c86-273">`hh\:mm\:ss` --> "14:32:17"</span></span>|  
+|<span data-ttu-id="96c86-274">任意字元</span><span class="sxs-lookup"><span data-stu-id="96c86-274">Any other character</span></span>|<span data-ttu-id="96c86-275">其他任何未逸出字元都會解譯為自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-275">Any other unescaped character is interpreted as a custom format specifier.</span></span><br /><br /> <span data-ttu-id="96c86-276">更多資訊：[其他字元](#Other)。</span><span class="sxs-lookup"><span data-stu-id="96c86-276">More Information: [Other Characters](#Other).</span></span>|`new TimeSpan(14, 32, 17):`<br /><br /> <span data-ttu-id="96c86-277">`hh\:mm\:ss` --> "14:32:17"</span><span class="sxs-lookup"><span data-stu-id="96c86-277">`hh\:mm\:ss` --> "14:32:17"</span></span>|  
   
 <a name="dSpecifier"></a>   
-## "d" 自訂格式規範  
- "d" 自訂格式規範會輸出 <xref:System.TimeSpan.Days%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中的完整天數。  它會輸出 <xref:System.TimeSpan> 值中的完整天數，即使該值有多個位數也一樣。  如果 <xref:System.TimeSpan.Days%2A?displayProperty=fullName> 屬性的值為零，規範會輸出 "0"。  
+## <a name="the-d-custom-format-specifier"></a><span data-ttu-id="96c86-278">"d" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-278">The "d" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-279">"D"自訂格式規範輸出的值<xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>屬性，代表整日天數中的時間間隔。</span><span class="sxs-lookup"><span data-stu-id="96c86-279">The "d" custom format specifier outputs the value of the <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> property, which represents the number of whole days in the time interval.</span></span> <span data-ttu-id="96c86-280">它會輸出中的完整天數<xref:System.TimeSpan>值，即使值有一個以上的數字。</span><span class="sxs-lookup"><span data-stu-id="96c86-280">It outputs the full number of days in a <xref:System.TimeSpan> value, even if the value has more than one digit.</span></span> <span data-ttu-id="96c86-281">如果值<xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>屬性為零，規範輸出"0"。</span><span class="sxs-lookup"><span data-stu-id="96c86-281">If the value of the <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> property is zero, the specifier outputs "0".</span></span>  
   
- 如果單獨使用 "d" 自訂格式規範，請指定 "%d"，以免被錯誤解譯為標準格式字串。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-282">如果單獨使用 "d" 自訂格式規範，請指定 "%d"，以免被錯誤解譯為標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-282">If the "d" custom format specifier is used alone, specify "%d" so that it is not misinterpreted as a standard format string.</span></span> <span data-ttu-id="96c86-283">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-283">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#3)]  
   
- 以下範例說明使用 "d" 自訂格式規範。  
+ <span data-ttu-id="96c86-284">下列範例說明如何使用 "d" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-284">The following example illustrates the use of the "d" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#4)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-285">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-285">Back to table</span></span>](#table)  
   
 <a name="ddSpecifier"></a>   
-## "dd"\-"dddddddd" 自訂格式規範  
- "dd"、"ddd"、"dddd"、"ddddd"、"dddddd"、"ddddddd" 和 "dddddddd" 自訂格式規範會輸出 <xref:System.TimeSpan.Days%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中的完整天數。  
+## <a name="the-dd-dddddddd-custom-format-specifiers"></a><span data-ttu-id="96c86-286">"dd"-"dddddddd" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-286">The "dd"-"dddddddd" Custom Format Specifiers</span></span>  
+ <span data-ttu-id="96c86-287">"Dd"、"ddd"、"dddd"、"ddddd"、"dddddd"、"ddddddd 」 和 「 dddddddd"自訂格式規範輸出的值<xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>屬性，代表整日天數中的時間間隔。</span><span class="sxs-lookup"><span data-stu-id="96c86-287">The "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd", and "dddddddd" custom format specifiers output the value of the <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> property, which represents the number of whole days in the time interval.</span></span>  
   
- 輸出字串會納入格式規範中 "d" 字元數所指定的最少位數，並且視需要填補前置零。  如果天數位數超過格式規範中的 "d" 字元數，則結果字串中的輸出會是完整天數。  
+ <span data-ttu-id="96c86-288">輸出字串會包含格式規範中 "d" 字元數所指定的最少位數，並且視需要填補前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-288">The output string includes a minimum number of digits specified by the number of "d" characters in the format specifier, and it is padded with leading zeros as needed.</span></span> <span data-ttu-id="96c86-289">如果天數位數超過格式規範中的 "d" 字元數，則結果字串中的輸出會是完整天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-289">If the digits in the number of days exceed the number of "d" characters in the format specifier, the full number of days is output in the result string.</span></span>  
   
- 下列範例使用這些格式規範，顯示兩個 <xref:System.TimeSpan> 值的字串表示。  第一個時間間隔的天數部分值為零，第二個時間間隔的天數部分值為 365。  
+ <span data-ttu-id="96c86-290">下列範例會使用這些格式規範來顯示兩個字串表示<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-290">The following example uses these format specifiers to display the string representation of two <xref:System.TimeSpan> values.</span></span> <span data-ttu-id="96c86-291">第一個時間間隔的天數部分值為零，第二個時間間隔的天數部分值為 365。</span><span class="sxs-lookup"><span data-stu-id="96c86-291">The value of the days component of the first time interval is zero; the value of the days component of the second is 365.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#5)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-292">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-292">Back to table</span></span>](#table)  
   
 <a name="hSpecifier"></a>   
-## "h" 自訂格式規範  
- "h" 自訂格式規範會輸出 <xref:System.TimeSpan.Hours%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中未計入天數部分的完整時數。  如果 <xref:System.TimeSpan.Hours%2A?displayProperty=fullName> 屬性的值為 0 到 9，則會傳回一位數的字串值，如果 <xref:System.TimeSpan.Hours%2A?displayProperty=fullName> 屬性的值為 10 到 23，則會傳回兩位數的字串值。  
+## <a name="the-h-custom-format-specifier"></a><span data-ttu-id="96c86-293">"h" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-293">The "h" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-294">"H"自訂格式規範輸出的值<xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>屬性，代表不會計入為其日期元件的一部分的時間間隔內的整個小時數。</span><span class="sxs-lookup"><span data-stu-id="96c86-294">The "h" custom format specifier outputs the value of the <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> property, which represents the number of whole hours in the time interval that is not counted as part of its day component.</span></span> <span data-ttu-id="96c86-295">如果，則會傳回一個數字的字串值的值<xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>屬性是 0 到 9，且如果，則會傳回兩個位數的字串值的值<xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>屬性範圍是從 10 到 23。</span><span class="sxs-lookup"><span data-stu-id="96c86-295">It returns a one-digit string value if the value of the <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> property is 0 through 9, and it returns a two-digit string value if the value of the <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> property ranges from 10 to 23.</span></span>  
   
- 如果單獨使用 "h" 自訂格式規範，請指定 "%h"，以免被錯誤解譯為標準格式字串。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-296">如果單獨使用 "h" 自訂格式規範，請指定 "%h"，以免被錯誤解譯為標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-296">If the "h" custom format specifier is used alone, specify "%h" so that it is not misinterpreted as a standard format string.</span></span> <span data-ttu-id="96c86-297">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-297">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#6)]
  [!code-vb[Conceptual.TimeSpan.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#6)]  
   
- 通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。  您可以改用 "%h" 自訂格式規範，以將數值字串解譯為時數。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-298">通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-298">Ordinarily, in a parsing operation, an input string that includes only a single number is interpreted as the number of days.</span></span> <span data-ttu-id="96c86-299">您可以改用 "%h" 自訂格式規範會，將數值字串解譯為時數。</span><span class="sxs-lookup"><span data-stu-id="96c86-299">You can use the "%h" custom format specifier instead to interpret the numeric string as the number of hours.</span></span> <span data-ttu-id="96c86-300">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-300">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#8)]
  [!code-vb[Conceptual.TimeSpan.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#8)]  
   
- 以下範例說明使用 "h" 自訂格式規範。  
+ <span data-ttu-id="96c86-301">下列範例說明如何使用 "h" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-301">The following example illustrates the use of the "h" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#7)]
  [!code-vb[Conceptual.TimeSpan.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#7)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-302">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-302">Back to table</span></span>](#table)  
   
 <a name="hhSpecifier"></a>   
-## "hh" 自訂格式規範  
- "hh" 自訂格式規範會輸出 <xref:System.TimeSpan.Hours%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中未計入天數部分的完整時數。  對於從 0 到 9 的值，輸出字串會包含前置零。  
+## <a name="the-hh-custom-format-specifier"></a><span data-ttu-id="96c86-303">"hh" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-303">The "hh" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-304">"Hh"自訂格式規範輸出的值<xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>屬性，代表不會計入為其日期元件的一部分的時間間隔內的整個小時數。</span><span class="sxs-lookup"><span data-stu-id="96c86-304">The "hh" custom format specifier outputs the value of the <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> property, which represents the number of whole hours in the time interval that is not counted as part of its day component.</span></span> <span data-ttu-id="96c86-305">對於從 0 到 9 的值，輸出字串會包含前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-305">For values from 0 through 9, the output string includes a leading zero.</span></span>  
   
- 通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。  您可以改用 "hh" 自訂格式規範，以將數值字串解譯為時數。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-306">通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-306">Ordinarily, in a parsing operation, an input string that includes only a single number is interpreted as the number of days.</span></span> <span data-ttu-id="96c86-307">您可以改用 "hh" 自訂格式規範，將數值字串解譯為時數。</span><span class="sxs-lookup"><span data-stu-id="96c86-307">You can use the "hh" custom format specifier instead to interpret the numeric string as the number of hours.</span></span> <span data-ttu-id="96c86-308">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-308">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#9)]
  [!code-vb[Conceptual.TimeSpan.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#9)]  
   
- 以下範例說明使用 "hh" 自訂格式規範。  
+ <span data-ttu-id="96c86-309">下列範例說明如何使用 "hh" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-309">The following example illustrates the use of the "hh" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#10)]
  [!code-vb[Conceptual.TimeSpan.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#10)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-310">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-310">Back to table</span></span>](#table)  
   
 <a name="mSpecifier"></a>   
-## "m" 自訂格式規範  
- "m" 自訂格式規範會輸出 <xref:System.TimeSpan.Minutes%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中未計入天數部分的完整分鐘數。  如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=fullName> 屬性的值為 0 到 9，則會傳回一位數的字串值，如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=fullName> 屬性的值為 10 到 59，則會傳回兩位數的字串值。  
+## <a name="the-m-custom-format-specifier"></a><span data-ttu-id="96c86-311">"m" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-311">The "m" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-312">"M"自訂格式規範輸出的值<xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>屬性，代表整數分鐘數，就不會計算其日期元件的一部分的時間間隔內。</span><span class="sxs-lookup"><span data-stu-id="96c86-312">The "m" custom format specifier outputs the value of the <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> property, which represents the number of whole minutes in the time interval that is not counted as part of its day component.</span></span> <span data-ttu-id="96c86-313">如果，則會傳回一個數字的字串值的值<xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>屬性是 0 到 9，且如果，則會傳回兩個位數的字串值的值<xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>屬性範圍是從 10 到 59 之間。</span><span class="sxs-lookup"><span data-stu-id="96c86-313">It returns a one-digit string value if the value of the <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> property is 0 through 9, and it returns a two-digit string value if the value of the <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> property ranges from 10 to 59.</span></span>  
   
- 如果單獨使用 "m" 自訂格式規範，請指定 "%m"，以免被錯誤解譯為標準格式字串。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-314">如果單獨使用 "m" 自訂格式規範，請指定 "%m"，以免被錯誤解譯為標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-314">If the "m" custom format specifier is used alone, specify "%m" so that it is not misinterpreted as a standard format string.</span></span> <span data-ttu-id="96c86-315">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-315">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#6)]
  [!code-vb[Conceptual.TimeSpan.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#6)]  
   
- 通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。  您可以改用 "%m" 自訂格式規範，以將數值字串解譯為分鐘數。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-316">通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-316">Ordinarily, in a parsing operation, an input string that includes only a single number is interpreted as the number of days.</span></span> <span data-ttu-id="96c86-317">您可以改用 "%m" 自訂格式規範，將數值字串解譯為分鐘數。</span><span class="sxs-lookup"><span data-stu-id="96c86-317">You can use the "%m" custom format specifier instead to interpret the numeric string as the number of minutes.</span></span> <span data-ttu-id="96c86-318">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-318">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#11)]
  [!code-vb[Conceptual.TimeSpan.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#11)]  
   
- 以下範例說明使用 "m" 自訂格式規範。  
+ <span data-ttu-id="96c86-319">下列範例說明如何使用 "m" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-319">The following example illustrates the use of the "m" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#12)]
  [!code-vb[Conceptual.TimeSpan.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#12)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-320">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-320">Back to table</span></span>](#table)  
   
 <a name="mmSpecifier"></a>   
-## "mm" 自訂格式規範  
- "mm" 自訂格式規範會輸出 <xref:System.TimeSpan.Minutes%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中未納入時數或天數部分的完整分鐘數。  對於從 0 到 9 的值，輸出字串會包含前置零。  
+## <a name="the-mm-custom-format-specifier"></a><span data-ttu-id="96c86-321">"mm" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-321">The "mm" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-322">"Mm"自訂格式規範輸出的值<xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>屬性，代表整數分鐘數，就不會包含在其小時或天元件的時間間隔內。</span><span class="sxs-lookup"><span data-stu-id="96c86-322">The "mm" custom format specifier outputs the value of the <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> property, which represents the number of whole minutes in the time interval that is not included as part of its hours or days component.</span></span> <span data-ttu-id="96c86-323">對於從 0 到 9 的值，輸出字串會包含前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-323">For values from 0 through 9, the output string includes a leading zero.</span></span>  
   
- 通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。  您可以改用 "mm" 自訂格式規範，以將數值字串解譯為分鐘數。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-324">通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-324">Ordinarily, in a parsing operation, an input string that includes only a single number is interpreted as the number of days.</span></span> <span data-ttu-id="96c86-325">您可以改用 "mm" 自訂格式規範，將數值字串解譯為分鐘數。</span><span class="sxs-lookup"><span data-stu-id="96c86-325">You can use the "mm" custom format specifier instead to interpret the numeric string as the number of minutes.</span></span> <span data-ttu-id="96c86-326">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-326">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#13)]
  [!code-vb[Conceptual.TimeSpan.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#13)]  
   
- 以下範例說明使用 "mm" 自訂格式規範。  
+ <span data-ttu-id="96c86-327">下列範例說明如何使用 "mm" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-327">The following example illustrates the use of the "mm" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#14)]
  [!code-vb[Conceptual.TimeSpan.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#14)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-328">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-328">Back to table</span></span>](#table)  
   
 <a name="sSpecifier"></a>   
-## "s" 自訂格式規範  
- "s" 自訂格式規範會輸出 <xref:System.TimeSpan.Seconds%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中未納入時數、天數或分鐘數部分的完整秒數。  如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=fullName> 屬性的值為 0 到 9，則會傳回一位數的字串值，如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=fullName> 屬性的值為 10 到 59，則會傳回兩位數的字串值。  
+## <a name="the-s-custom-format-specifier"></a><span data-ttu-id="96c86-329">"s" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-329">The "s" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-330">"S"自訂格式規範輸出的值<xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>屬性，代表不是其小時、 天數或分鐘數元件的一部分的時間間隔中的完整秒數數目。</span><span class="sxs-lookup"><span data-stu-id="96c86-330">The "s" custom format specifier outputs the value of the <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> property, which represents the number of whole seconds in the time interval that is not included as part of its hours, days, or minutes component.</span></span> <span data-ttu-id="96c86-331">如果，則會傳回一個數字的字串值的值<xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>屬性是 0 到 9，且如果，則會傳回兩個位數的字串值的值<xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>屬性範圍是從 10 到 59 之間。</span><span class="sxs-lookup"><span data-stu-id="96c86-331">It returns a one-digit string value if the value of the <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> property is 0 through 9, and it returns a two-digit string value if the value of the <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> property ranges from 10 to 59.</span></span>  
   
- 如果單獨使用 "s" 自訂格式規範，請指定 "%s"，以免被錯誤解譯為標準格式字串。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-332">如果單獨使用 "s" 自訂格式規範，請指定 "%s"，以免被錯誤解譯為標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-332">If the "s" custom format specifier is used alone, specify "%s" so that it is not misinterpreted as a standard format string.</span></span> <span data-ttu-id="96c86-333">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-333">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#15)]
  [!code-vb[Conceptual.TimeSpan.Custom#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#15)]  
   
- 通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。  您可以改用 "%s" 自訂格式規範，以將數值字串解譯為秒數。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-334">通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-334">Ordinarily, in a parsing operation, an input string that includes only a single number is interpreted as the number of days.</span></span> <span data-ttu-id="96c86-335">您可以改用 "%s" 自訂格式規範，將數值字串解譯為秒數。</span><span class="sxs-lookup"><span data-stu-id="96c86-335">You can use the "%s" custom format specifier instead to interpret the numeric string as the number of seconds.</span></span> <span data-ttu-id="96c86-336">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-336">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#17)]
  [!code-vb[Conceptual.TimeSpan.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#17)]  
   
- 以下範例說明使用 "s" 自訂格式規範。  
+ <span data-ttu-id="96c86-337">下列範例說明如何使用 "s" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-337">The following example illustrates the use of the "s" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#16)]
  [!code-vb[Conceptual.TimeSpan.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#16)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-338">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-338">Back to table</span></span>](#table)  
   
 <a name="ssSpecifier"></a>   
-## "ss" 自訂格式規範  
- "ss" 自訂格式規範會輸出 <xref:System.TimeSpan.Seconds%2A?displayProperty=fullName> 屬性的值，這個屬性表示時間間隔中未納入時數、天數或分鐘數部分的完整秒數。  對於從 0 到 9 的值，輸出字串會包含前置零。  
+## <a name="the-ss-custom-format-specifier"></a><span data-ttu-id="96c86-339">"ss" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-339">The "ss" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-340">"Ss"自訂格式規範輸出的值<xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>屬性，代表不是其小時、 天數或分鐘數元件的一部分的時間間隔中的完整秒數數目。</span><span class="sxs-lookup"><span data-stu-id="96c86-340">The "ss" custom format specifier outputs the value of the <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> property, which represents the number of whole seconds in the time interval that is not included as part of its hours, days, or minutes component.</span></span> <span data-ttu-id="96c86-341">對於從 0 到 9 的值，輸出字串會包含前置零。</span><span class="sxs-lookup"><span data-stu-id="96c86-341">For values from 0 through 9, the output string includes a leading zero.</span></span>  
   
- 通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。  您可以改用 "ss" 自訂格式規範，以將數值字串解譯為秒數。  下列範例提供一個實例。  
+ <span data-ttu-id="96c86-342">通常在剖析作業中，只包含單一數字的輸入字串會解譯為天數。</span><span class="sxs-lookup"><span data-stu-id="96c86-342">Ordinarily, in a parsing operation, an input string that includes only a single number is interpreted as the number of days.</span></span> <span data-ttu-id="96c86-343">您可以改用 "ss" 自訂格式規範，將數值字串解譯為秒數。</span><span class="sxs-lookup"><span data-stu-id="96c86-343">You can use the "ss" custom format specifier instead to interpret the numeric string as the number of seconds.</span></span> <span data-ttu-id="96c86-344">下列範例提供一個實例。</span><span class="sxs-lookup"><span data-stu-id="96c86-344">The following example provides an illustration.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#18)]
  [!code-vb[Conceptual.TimeSpan.Custom#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#18)]  
   
- 以下範例說明使用 "ss" 自訂格式規範。  
+ <span data-ttu-id="96c86-345">下列範例說明如何使用 "ss" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-345">The following example illustrates the use of the "ss" custom format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customexamples1.cs#19)]
  [!code-vb[Conceptual.TimeSpan.Custom#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customexamples1.vb#19)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-346">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-346">Back to table</span></span>](#table)  
   
 <a name="fSpecifier"></a>   
-## "f" 自訂格式規範  
- "f" 自訂格式規範會輸出時間間隔中的十分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含一個小數位數。  
+## <a name="thef-custom-format-specifier"></a><span data-ttu-id="96c86-347">"F"自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-347">The"f" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-348">"f" 自訂格式規範會輸出時間間隔中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-348">The "f" custom format specifier outputs the tenths of a second in a time interval.</span></span> <span data-ttu-id="96c86-349">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-349">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-350">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含剛好一個小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-350">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly one fractional digit.</span></span>  
   
- 如果單獨使用 "f" 自訂格式規範，請指定 "%f"，以免被錯誤解譯為標準格式字串。  
+ <span data-ttu-id="96c86-351">如果單獨使用 "f" 自訂格式規範，請指定 "%f"，以免被錯誤解譯為標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-351">If the "f" custom format specifier is used alone, specify "%f" so that it is not misinterpreted as a standard format string.</span></span>  
   
- 下列範例使用 "f" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的十分之一秒。首先會使用 "f" 做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-352">下列範例使用"f"自訂格式規範來顯示的十分之一秒中<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-352">The following example uses the "f" custom format specifier to display the tenths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-353">首先會使用 "f" 作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-353">"f" is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-354">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-354">Back to table</span></span>](#table)  
   
 <a name="ffSpecifier"></a>   
-## "ff" 自訂格式規範  
- "ff" 自訂格式規範會輸出時間間隔中的百分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含兩個小數位數。  
+## <a name="the-ff-custom-format-specifier"></a><span data-ttu-id="96c86-355">"ff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-355">The "ff" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-356">"ff" 自訂格式規範會輸出時間間隔中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-356">The "ff" custom format specifier outputs the hundredths of a second in a time interval.</span></span> <span data-ttu-id="96c86-357">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-357">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-358">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含兩個小數。</span><span class="sxs-lookup"><span data-stu-id="96c86-358">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly two fractional digits.</span></span>  
   
- 下列範例使用 "ff" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的百分之一秒。首先會使用 "ff" 做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-359">下列範例使用"ff"自訂格式規範來顯示百分之一秒<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-359">The following example uses the "ff" custom format specifier to display the hundredths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-360">首先會使用 "ff" 作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-360">"ff" is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-361">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-361">Back to table</span></span>](#table)  
   
 <a name="f3Specifier"></a>   
-## "fff" 自訂格式規範  
- "fff" 自訂格式規範 \(有三個 "f" 字元\) 會輸出時間間隔中的毫秒。  在格式化作業中，會截斷其餘任何小數位數。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含三個小數位數。  
+## <a name="the-fff-custom-format-specifier"></a><span data-ttu-id="96c86-362">"fff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-362">The "fff" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-363">"fff" 自訂格式規範 (有三個 "f" 字元) 會輸出時間間隔中的毫秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-363">The "fff" custom format specifier (with three "f" characters) outputs the milliseconds in a time interval.</span></span> <span data-ttu-id="96c86-364">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-364">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-365">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含剛好三個小數。</span><span class="sxs-lookup"><span data-stu-id="96c86-365">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly three fractional digits.</span></span>  
   
- 下列範例使用 "fff" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的毫秒。首先會使用 "fff" 做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-366">下列範例使用"fff"自訂格式規範來顯示中的千分之一秒<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-366">The following example uses the "fff" custom format specifier to display the milliseconds in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-367">首先會使用 "fff" 作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-367">"fff" is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-368">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-368">Back to table</span></span>](#table)  
   
 <a name="f4Specifier"></a>   
-## "ffff" 自訂格式規範  
- "ffff" 自訂格式規範 \(有四個 "f" 字元\) 會輸出時間間隔中的萬分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含四個小數位數。  
+## <a name="the-ffff-custom-format-specifier"></a><span data-ttu-id="96c86-369">"ffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-369">The "ffff" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-370">"ffff" 自訂格式規範 (有四個 "f" 字元) 會輸出時間間隔中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-370">The "ffff" custom format specifier (with four "f" characters) outputs the ten-thousandths of a second in a time interval.</span></span> <span data-ttu-id="96c86-371">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-371">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-372">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含四個小數。</span><span class="sxs-lookup"><span data-stu-id="96c86-372">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly four fractional digits.</span></span>  
   
- 下列範例使用 "ffff" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的萬分之一秒。首先會使用 "ffff" 做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-373">下列範例使用"ffff"自訂格式規範來顯示在第二個則萬分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-373">The following example uses the "ffff" custom format specifier to display the ten-thousandths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-374">首先會使用 "ffff" 作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-374">"ffff" is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-375">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-375">Back to table</span></span>](#table)  
   
 <a name="f5Specifier"></a>   
-## "fffff" 自訂格式規範  
- "fffff" 自訂格式規範 \(有五個 "f" 字元\) 會輸出時間間隔中的十萬分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含五個小數位數。  
+## <a name="the-fffff-custom-format-specifier"></a><span data-ttu-id="96c86-376">"fffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-376">The "fffff" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-377">"fffff" 自訂格式規範 (有五個 "f" 字元) 會輸出時間間隔中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-377">The "fffff" custom format specifier (with five "f" characters) outputs the hundred-thousandths of a second in a time interval.</span></span> <span data-ttu-id="96c86-378">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-378">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-379">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含剛好 5 個小數。</span><span class="sxs-lookup"><span data-stu-id="96c86-379">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly five fractional digits.</span></span>  
   
- 下列範例使用 "fffff" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的十萬分之一秒。首先會使用 "fffff" 做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-380">下列範例使用"fffff"自訂格式規範來顯示在第二個則十萬分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-380">The following example uses the "fffff" custom format specifier to display the hundred-thousandths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-381">首先會使用 "fffff" 作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-381">"fffff" is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-382">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-382">Back to table</span></span>](#table)  
   
 <a name="f6Specifier"></a>   
-## "ffffff" 自訂格式規範  
- "ffffff" 自訂格式規範 \(有六個 "f" 字元\) 會輸出時間間隔中的百萬分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含六個小數位數。  
+## <a name="the-ffffff-custom-format-specifier"></a><span data-ttu-id="96c86-383">"ffffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-383">The "ffffff" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-384">"ffffff" 自訂格式規範 (有六個 "f" 字元) 會輸出時間間隔中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-384">The "ffffff" custom format specifier (with six "f" characters) outputs the millionths of a second in a time interval.</span></span> <span data-ttu-id="96c86-385">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-385">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-386">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含剛好六個小數點後數字。</span><span class="sxs-lookup"><span data-stu-id="96c86-386">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly six fractional digits.</span></span>  
   
- 下列範例使用 "ffffff" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的百萬分之一秒。  首先會使用它做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-387">下列範例使用"ffffff"自訂格式規範來顯示在第二個百萬分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-387">The following example uses the "ffffff" custom format specifier to display the millionths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-388">首先會使用它作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-388">It is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-389">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-389">Back to table</span></span>](#table)  
   
 <a name="f7Specifier"></a>   
-## "fffffff" 自訂格式規範  
- "fffffff" 自訂格式規範 \(有七個 "f" 字元\) 會輸出時間間隔中的千萬分之一秒 \(或刻度的小數值\)。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串必須確切包含七個小數位數。  
+## <a name="the-fffffff-custom-format-specifier"></a><span data-ttu-id="96c86-390">"fffffff" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-390">The "fffffff" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-391">"fffffff" 自訂格式規範 (有七個 "f" 字元) 會輸出時間間隔中的千萬分之一秒 (或刻度的小數值)。</span><span class="sxs-lookup"><span data-stu-id="96c86-391">The "fffffff" custom format specifier (with seven "f" characters) outputs the ten-millionths of a second (or the fractional number of ticks) in a time interval.</span></span> <span data-ttu-id="96c86-392">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法中，輸入的字串必須包含剛好七個小數。</span><span class="sxs-lookup"><span data-stu-id="96c86-392">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the input string must contain exactly seven fractional digits.</span></span>  
   
- 下列範例使用 "fffffff" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中刻度的小數值。  首先會使用它做為格式規範，然後再放在自訂格式字串中與 "s" 規範合併。  
+ <span data-ttu-id="96c86-393">下列範例使用"fffffff"自訂格式規範來小數的數字中的刻度顯示<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-393">The following example uses the "fffffff" custom format specifier to display the fractional number of ticks in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-394">首先會使用它作為唯一的格式規範，然後再放在自訂格式字串中與 "s" 規範結合。</span><span class="sxs-lookup"><span data-stu-id="96c86-394">It is used first as the only format specifier, and then combined with the "s" specifier in a custom format string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/fspecifiers1.cs#20)]
  [!code-vb[Conceptual.TimeSpan.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/fspecifiers1.vb#20)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-395">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-395">Back to table</span></span>](#table)  
   
 <a name="F_Specifier"></a>   
-## "F" 自訂格式規範  
- "F" 自訂格式規範會輸出時間間隔中的十分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  如果時間間隔十分之一秒的值為零，它就不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，十分之一秒的位數可以不存在。  
+## <a name="the-f-custom-format-specifier"></a><span data-ttu-id="96c86-396">"F" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-396">The "F" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-397">"F" 自訂格式規範會輸出時間間隔中的十分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-397">The "F" custom format specifier outputs the tenths of a second in a time interval.</span></span> <span data-ttu-id="96c86-398">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-398">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-399">如果時間間隔十分之一秒的值為零，它就不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-399">If the value of the time interval's tenths of a second is zero, it is not included in the result string.</span></span> <span data-ttu-id="96c86-400">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，第二個位數的十分之一與否是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-400">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the tenths of a second digit is optional.</span></span>  
   
- 如果單獨使用 "F" 自訂格式規範，請指定 "%F"，以免被錯誤解譯為標準格式字串。  
+ <span data-ttu-id="96c86-401">如果單獨使用 "F" 自訂格式規範，請指定 "%F"，以免被錯誤解譯為標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-401">If the "F" custom format specifier is used alone, specify "%F" so that it is not misinterpreted as a standard format string.</span></span>  
   
- 下列範例使用 "F" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的十分之一秒。  它也會在剖析作業中使用此自訂格式規範。  
+ <span data-ttu-id="96c86-402">下列範例使用"F"自訂格式規範來顯示的十分之一秒中<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-402">The following example uses the "F" custom format specifier to display the tenths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-403">它也會在剖析作業中使用此自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-403">It also uses this custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#21)]
  [!code-vb[Conceptual.TimeSpan.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#21)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-404">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-404">Back to table</span></span>](#table)  
   
 <a name="FF_Specifier"></a>   
-## "FF" 自訂格式規範  
- "FF" 自訂格式規範會輸出時間間隔中的百分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  如果小數點後有最後幾個零，這些零不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，百分之一秒的位數可以不存在。  
+## <a name="the-ff-custom-format-specifier"></a><span data-ttu-id="96c86-405">"FF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-405">The "FF" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-406">"FF" 自訂格式規範會輸出時間間隔中的百分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-406">The "FF" custom format specifier outputs the hundredths of a second in a time interval.</span></span> <span data-ttu-id="96c86-407">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-407">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-408">如果小數點後有任何零，這些零不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-408">If there are any trailing fractional zeros, they are not included in the result string.</span></span> <span data-ttu-id="96c86-409">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，十分之一的存在和第二位數百分之一是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-409">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the tenths and hundredths of a second digit is optional.</span></span>  
   
- 下列範例使用 "FF" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的百分之一秒。  它也會在剖析作業中使用此自訂格式規範。  
+ <span data-ttu-id="96c86-410">下列範例使用"FF"自訂格式規範來顯示百分之一秒<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-410">The following example uses the "FF" custom format specifier to display the hundredths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-411">它也會在剖析作業中使用此自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-411">It also uses this custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#22)]
  [!code-vb[Conceptual.TimeSpan.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#22)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-412">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-412">Back to table</span></span>](#table)  
   
 <a name="F3_Specifier"></a>   
-## "FFF" 自訂格式規範  
- "FFF" 自訂格式規範 \(有三個 "F" 字元\) 會輸出時間間隔中的毫秒。  在格式化作業中，會截斷其餘任何小數位數。  如果小數點後有最後幾個零，這些零不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，十分之一秒、百分之一秒和千分之一秒的位數可以不存在。  
+## <a name="the-fff-custom-format-specifier"></a><span data-ttu-id="96c86-413">"FFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-413">The "FFF" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-414">"FFF" 自訂格式規範 (有三個 "F" 字元) 會輸出時間間隔中的毫秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-414">The "FFF" custom format specifier (with three "F" characters) outputs the milliseconds in a time interval.</span></span> <span data-ttu-id="96c86-415">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-415">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-416">如果小數點後有任何零，這些零不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-416">If there are any trailing fractional zeros, they are not included in the result string.</span></span> <span data-ttu-id="96c86-417">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，在出現十分之一、 百分之一，與第二個位數的千分之一是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-417">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the tenths, hundredths, and thousandths of a second digit is optional.</span></span>  
   
- 下列範例使用 "FFF" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的千分之一秒。  它也會在剖析作業中使用此自訂格式規範。  
+ <span data-ttu-id="96c86-418">下列範例使用"FFF"自訂格式規範來顯示在第二個千分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-418">The following example uses the "FFF" custom format specifier to display the thousandths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-419">它也會在剖析作業中使用此自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-419">It also uses this custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#23)]
  [!code-vb[Conceptual.TimeSpan.Custom#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#23)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-420">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-420">Back to table</span></span>](#table)  
   
 <a name="F4_Specifier"></a>   
-## "FFFF" 自訂格式規範  
- "FFFF" 自訂格式規範 \(有四個 "F" 字元\) 會輸出時間間隔中的萬分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  如果小數點後有最後幾個零，這些零不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，十分之一秒、百分之一秒、千分之一秒和萬分之一秒的位數可以不存在。  
+## <a name="the-ffff-custom-format-specifier"></a><span data-ttu-id="96c86-421">"FFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-421">The "FFFF" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-422">"FFFF" 自訂格式規範 (有四個 "F" 字元) 會輸出時間間隔中的萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-422">The "FFFF" custom format specifier (with four "F" characters) outputs the ten-thousandths of a second in a time interval.</span></span> <span data-ttu-id="96c86-423">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-423">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-424">如果小數點後有任何零，這些零不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-424">If there are any trailing fractional zeros, they are not included in the result string.</span></span> <span data-ttu-id="96c86-425">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，在出現十分之一、 百分之一、 千分之一，與第二個位數的萬分之一是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-425">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the tenths, hundredths, thousandths, and ten-thousandths of a second digit is optional.</span></span>  
   
- 下列範例使用 "FFFF" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的萬分之一秒。  它也會在剖析作業中使用 "FFFF" 自訂格式規範。  
+ <span data-ttu-id="96c86-426">下列範例使用"FFFF"自訂格式規範來顯示在第二個則萬分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-426">The following example uses the "FFFF" custom format specifier to display the ten-thousandths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-427">它也會在剖析作業中使用 "FFFF" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-427">It also uses the "FFFF" custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#24](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#24)]
  [!code-vb[Conceptual.TimeSpan.Custom#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#24)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-428">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-428">Back to table</span></span>](#table)  
   
 <a name="F5_Specifier"></a>   
-## "FFFFF" 自訂格式規範  
- "FFFFF" 自訂格式規範 \(有五個 "F" 字元\) 會輸出時間間隔中的十萬分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  如果小數點後有最後幾個零，這些零不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，十分之一秒、百分之一秒、千分之一秒、萬分之一秒和十萬分之一秒的位數可以不存在。  
+## <a name="the-fffff-custom-format-specifier"></a><span data-ttu-id="96c86-429">"FFFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-429">The "FFFFF" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-430">"FFFFF" 自訂格式規範 (有五個 "F" 字元) 會輸出時間間隔中的十萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-430">The "FFFFF" custom format specifier (with five "F" characters) outputs the hundred-thousandths of a second in a time interval.</span></span> <span data-ttu-id="96c86-431">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-431">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-432">如果小數點後有任何零，這些零不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-432">If there are any trailing fractional zeros, they are not included in the result string.</span></span> <span data-ttu-id="96c86-433">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，在出現十分之一、 百分之一、 千分之一、 萬分之一，與第二個數字的五位數是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-433">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the tenths, hundredths, thousandths, ten-thousandths, and hundred-thousandths of a second digit is optional.</span></span>  
   
- 下列範例使用 "FFFFF" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的十萬分之一秒。  它也會在剖析作業中使用 "FFFFF" 自訂格式規範。  
+ <span data-ttu-id="96c86-434">下列範例使用"FFFFF"自訂格式規範來顯示在第二個則十萬分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-434">The following example uses the "FFFFF" custom format specifier to display the hundred-thousandths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-435">它也會在剖析作業中使用 "FFFFF" 自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-435">It also uses the "FFFFF" custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#25](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#25)]
  [!code-vb[Conceptual.TimeSpan.Custom#25](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#25)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-436">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-436">Back to table</span></span>](#table)  
   
 <a name="F6_Specifier"></a>   
-## "FFFFFF" 自訂格式規範  
- "FFFFFF" 自訂格式規範 \(有六個 "F" 字元\) 會輸出時間間隔中的百萬分之一秒。  在格式化作業中，會截斷其餘任何小數位數。  如果小數點後有最後幾個零，這些零不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，十分之一秒、百分之一秒、千分之一秒、萬分之一秒、十萬分之一秒和百萬分之一秒的位數可以不存在。  
+## <a name="the-ffffff-custom-format-specifier"></a><span data-ttu-id="96c86-437">"FFFFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-437">The "FFFFFF" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-438">"FFFFFF" 自訂格式規範 (有六個 "F" 字元) 會輸出時間間隔中的百萬分之一秒。</span><span class="sxs-lookup"><span data-stu-id="96c86-438">The "FFFFFF" custom format specifier (with six "F" characters) outputs the millionths of a second in a time interval.</span></span> <span data-ttu-id="96c86-439">在格式化作業中，會截斷其餘任何小數位數。</span><span class="sxs-lookup"><span data-stu-id="96c86-439">In a formatting operation, any remaining fractional digits are truncated.</span></span> <span data-ttu-id="96c86-440">如果小數點後有任何零，這些零不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-440">If there are any trailing fractional zeros, they are not included in the result string.</span></span> <span data-ttu-id="96c86-441">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，在出現十分之一、 百分之一、 千分之一、 萬分之一、 十萬分之一，與第二個位數的百萬分之一是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-441">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the tenths, hundredths, thousandths, ten-thousandths, hundred-thousandths, and millionths of a second digit is optional.</span></span>  
   
- 下列範例使用 "FFFFFF" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的百萬分之一秒。  它也會在剖析作業中使用此自訂格式規範。  
+ <span data-ttu-id="96c86-442">下列範例使用"FFFFFF"自訂格式規範來顯示在第二個百萬分之一<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-442">The following example uses the "FFFFFF" custom format specifier to display the millionths of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-443">它也會在剖析作業中使用此自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-443">It also uses this custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#26](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#26)]
  [!code-vb[Conceptual.TimeSpan.Custom#26](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#26)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-444">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-444">Back to table</span></span>](#table)  
   
 <a name="F7_Specifier"></a>   
-## "FFFFFFF" 自訂格式規範  
- "FFFFFFF" 自訂格式規範 \(有七個 "F" 字元\) 會輸出時間間隔中的千萬分之一秒 \(或刻度的小數值\)。  如果小數點後有最後幾個零，這些零不會包含在結果字串中。  在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> 方法的剖析作業中，輸入字串可以不存在七個小數位數。  
+## <a name="the-fffffff-custom-format-specifier"></a><span data-ttu-id="96c86-445">"FFFFFFF" 自訂格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-445">The "FFFFFFF" Custom Format Specifier</span></span>  
+ <span data-ttu-id="96c86-446">"FFFFFFF" 自訂格式規範 (有七個 "F" 字元) 會輸出時間間隔中的千萬分之一秒 (或刻度的小數值)。</span><span class="sxs-lookup"><span data-stu-id="96c86-446">The "FFFFFFF" custom format specifier (with seven "F" characters) outputs the ten-millionths of a second (or the fractional number of ticks) in a time interval.</span></span> <span data-ttu-id="96c86-447">如果小數點後有任何零，這些零不會包含在結果字串中。</span><span class="sxs-lookup"><span data-stu-id="96c86-447">If there are any trailing fractional zeros, they are not included in the result string.</span></span> <span data-ttu-id="96c86-448">在剖析作業中呼叫<xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>或<xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>方法，七個小數的數字，輸入字串中的目前狀態是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="96c86-448">In a parsing operation that calls the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> or <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> method, the presence of the seven fractional digits in the input string is optional.</span></span>  
   
- 下列範例使用 "FFFFFFF" 自訂格式規範，顯示 <xref:System.TimeSpan> 值中的小數秒部分。  它也會在剖析作業中使用此自訂格式規範。  
+ <span data-ttu-id="96c86-449">下列範例使用"FFFFFFF"自訂格式規範來顯示秒的小數部分<xref:System.TimeSpan>值。</span><span class="sxs-lookup"><span data-stu-id="96c86-449">The following example uses the "FFFFFFF" custom format specifier to display the fractional parts of a second in a <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="96c86-450">它也會在剖析作業中使用此自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-450">It also uses this custom format specifier in a parsing operation.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#27](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/f_specifiers1.cs#27)]
  [!code-vb[Conceptual.TimeSpan.Custom#27](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#27)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-451">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-451">Back to table</span></span>](#table)  
   
 <a name="Other"></a>   
-## 其他字元  
- 格式字串中其他任何未逸出的字元 \(包括空白字元\)，都會解譯為自訂格式規範。  在大多數情況下，其他任何未逸出的字元都會引發 <xref:System.FormatException>。  
+## <a name="other-characters"></a><span data-ttu-id="96c86-452">其他字元</span><span class="sxs-lookup"><span data-stu-id="96c86-452">Other Characters</span></span>  
+ <span data-ttu-id="96c86-453">格式字串中任何其他未逸出的字元 (包括空白字元)，都會解譯為自訂格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-453">Any other unescaped character in a format string, including a white-space character, is interpreted as a custom format specifier.</span></span> <span data-ttu-id="96c86-454">在大部分情況下，是否存在的任何其他未逸出方式字元導致<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="96c86-454">In most cases, the presence of any other unescaped character results in a <xref:System.FormatException>.</span></span>  
   
- 有兩個方式可以在格式字串中納入常值字元：  
+ <span data-ttu-id="96c86-455">有兩個方式可以在格式字串中納入常值字元：</span><span class="sxs-lookup"><span data-stu-id="96c86-455">There are two ways to include a literal character in a format string:</span></span>  
   
--   將字元置於單引號內 \(常值字串分隔符號\)。  
+-   <span data-ttu-id="96c86-456">用單引號 (常值字串分隔符號) 括住字元。</span><span class="sxs-lookup"><span data-stu-id="96c86-456">Enclose it in single quotation marks (the literal string delimiter).</span></span>  
   
--   在字元前面加上反斜線 \("\\"\)，這樣就會解譯為逸出字元。  也就是說，在 C\# 中格式字串必須以 @ 括住，或者常值字元前面必須加上額外的反斜線。  
+-   <span data-ttu-id="96c86-457">在其前面加一個反斜線 ("\\")，它解譯為逸出字元。</span><span class="sxs-lookup"><span data-stu-id="96c86-457">Precede it with a backslash ("\\"), which is interpreted as an escape character.</span></span> <span data-ttu-id="96c86-458">亦即在 C# 中，格式字串必須括以 @-quoted，或必須在常值字元前額外加上一道反斜線。</span><span class="sxs-lookup"><span data-stu-id="96c86-458">This means that, in C#, the format string must either be @-quoted, or the literal character must be preceded by an additional backslash.</span></span>  
   
-     某些情況下，為了包含逸出字元，您可能需要在格式字串中使用條件邏輯。  下列範例為了包含表示負的時間間隔之正負符號而使用條件邏輯。  
+     <span data-ttu-id="96c86-459">在某些情況下，您可能需要使用條件邏輯，才能在格式字串中包含逸出的常值。</span><span class="sxs-lookup"><span data-stu-id="96c86-459">In some cases, you may have to use conditional logic to include an escaped literal in a format string.</span></span> <span data-ttu-id="96c86-460">下列範例將使用條件邏輯包含代表負時間間隔的正負號。</span><span class="sxs-lookup"><span data-stu-id="96c86-460">The following example uses conditional logic to include a sign symbol for negative time intervals.</span></span>  
   
      [!code-csharp[Conceptual.TimeSpan.Custom#29](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/negativevalues1.cs#29)]
      [!code-vb[Conceptual.TimeSpan.Custom#29](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/negativevalues1.vb#29)]  
   
- .NET Framework 不會定義時間間隔中分隔符號的文法。  這表示天與小時、小時與分鐘、分鐘與秒以及秒與小數秒之間的分隔符號，都必須以格式字串中的字元常值方式處理。  
+ <span data-ttu-id="96c86-461">.NET 不會定義時間間隔中分隔符號的文法。</span><span class="sxs-lookup"><span data-stu-id="96c86-461">.NET does not define a grammar for separators in time intervals.</span></span> <span data-ttu-id="96c86-462">這表示天與小時、小時與分鐘、分鐘與秒以及秒與小數秒之間的分隔符號，都必須以格式字串中的字元常值方式處理。</span><span class="sxs-lookup"><span data-stu-id="96c86-462">This means that the separators between days and hours, hours and minutes, minutes and seconds, and seconds and fractions of a second must all be treated as character literals in a format string.</span></span>  
   
- 下列範例使用逸出字元和單引號，定義會在輸出字串中加上 "minutes" 一詞的自訂格式字串。  
+ <span data-ttu-id="96c86-463">下列範例使用逸出字元和單引號，定義會在輸出字串中加上 "minutes" 一詞的自訂格式字串。</span><span class="sxs-lookup"><span data-stu-id="96c86-463">The following example uses both the escape character and the single quote to define a custom format string that includes the word "minutes" in the output string.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Custom#28](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/literal1.cs#28)]
  [!code-vb[Conceptual.TimeSpan.Custom#28](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/literal1.vb#28)]  
   
- [回到表格](#table)  
+ [<span data-ttu-id="96c86-464">回到表格</span><span class="sxs-lookup"><span data-stu-id="96c86-464">Back to table</span></span>](#table)  
   
-## 請參閱  
- [格式化類型](../../../docs/standard/base-types/formatting-types.md)   
- [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+## <a name="see-also"></a><span data-ttu-id="96c86-465">另請參閱</span><span class="sxs-lookup"><span data-stu-id="96c86-465">See Also</span></span>  
+ [<span data-ttu-id="96c86-466">格式化類型</span><span class="sxs-lookup"><span data-stu-id="96c86-466">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="96c86-467">標準 TimeSpan 格式字串</span><span class="sxs-lookup"><span data-stu-id="96c86-467">Standard TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/standard-timespan-format-strings.md)

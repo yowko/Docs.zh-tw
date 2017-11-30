@@ -1,327 +1,333 @@
 ---
-title: "一般類型系統 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 類型"
-  - "一般類型系統"
-  - "跨語言互通性"
-  - "命名空間 [.NET Framework], 類型"
-  - "參考類型"
-  - "類型系統"
-  - "類型, 關於類型"
-  - "實值類型"
+title: "一般類型系統"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- type system
+- common type system
+- assemblies [.NET Framework], types
+- reference types
+- value types
+- cross-language interoperability
+- namespaces [.NET Framework], types
+- types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: 25
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 一般類型系統
-一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。  一般型別系統可執行下列功能：  
+# <a name="common-type-system"></a><span data-ttu-id="5b6ae-102">一般類型系統</span><span class="sxs-lookup"><span data-stu-id="5b6ae-102">Common Type System</span></span>
+<span data-ttu-id="5b6ae-103">一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-103">The common type system defines how types are declared, used, and managed in the common language runtime, and is also an important part of the runtime's support for cross-language integration.</span></span> <span data-ttu-id="5b6ae-104">一般型別系統可執行下列功能：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-104">The common type system performs the following functions:</span></span>  
   
--   建立利於提供跨語言整合、型別安全 \(Type Safety\) 和高效能程式碼執行的架構。  
+-   <span data-ttu-id="5b6ae-105">建立利於提供跨語言整合、型別安全 (Type Safety) 和高效能程式碼執行的架構。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-105">Establishes a framework that helps enable cross-language integration, type safety, and high-performance code execution.</span></span>  
   
--   提供可支援多種程式語言完整實作 \(Implementation\) 的物件導向模型。  
+-   <span data-ttu-id="5b6ae-106">提供可支援多種程式語言完整實作 (Implementation) 的物件導向模型。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-106">Provides an object-oriented model that supports the complete implementation of many programming languages.</span></span>  
   
--   定義語言必須遵守的規則，有助於確保以不同語言撰寫的物件可彼此互動。  
+-   <span data-ttu-id="5b6ae-107">定義語言必須遵守的規則，有助於確保以不同語言撰寫的物件可彼此互動。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-107">Defines rules that languages must follow, which helps ensure that objects written in different languages can interact with each other.</span></span>  
   
--   提供包含應用程式開發時使用之原始資料型別 \(例如 <xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.Int32> 與 <xref:System.UInt64>\) 的程式庫。  
+-   <span data-ttu-id="5b6ae-108">提供包含應用程式開發時使用之原始資料型別 (例如 <xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.Int32> 與 <xref:System.UInt64>) 的程式庫。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-108">Provides a library that contains the primitive data types (such as <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, and <xref:System.UInt64>) used in application development.</span></span>  
   
- 此主題包括下列章節：  
+ <span data-ttu-id="5b6ae-109">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-109">This topic contains the following sections:</span></span>  
   
--   [.NET Framework 中的型別](#types_in_the_net_framework)  
+-   [<span data-ttu-id="5b6ae-110">.NET 中的類型</span><span class="sxs-lookup"><span data-stu-id="5b6ae-110">Types in .NET</span></span>](#types_in_the_net_framework)  
   
--   [類型定義](#type_definitions)  
+-   [<span data-ttu-id="5b6ae-111">型別定義</span><span class="sxs-lookup"><span data-stu-id="5b6ae-111">Type Definitions</span></span>](#type_definitions)  
   
--   [型別成員](#type_members)  
+-   [<span data-ttu-id="5b6ae-112">型別成員</span><span class="sxs-lookup"><span data-stu-id="5b6ae-112">Type Members</span></span>](#type_members)  
   
--   [型別成員的特性](#characteristics_of_type_members)  
+-   [<span data-ttu-id="5b6ae-113">類型成員的特性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-113">Characteristics of Type Members</span></span>](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
-## .NET Framework 中的型別  
- .NET Framework 中的所有型別屬於實值型別或是參考型別。  
+## <a name="types-in-net"></a><span data-ttu-id="5b6ae-114">.NET 中的類型</span><span class="sxs-lookup"><span data-stu-id="5b6ae-114">Types in .NET</span></span>  
+ <span data-ttu-id="5b6ae-115">.NET 中的所有型別屬於實值型別或是參考型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-115">All types in .NET are either value types or reference types.</span></span>  
   
- 如果資料型別的物件是由物件的實際值來表示，那麼這個資料型別就是實值型別。  如果將實值型別的執行個體指派給變數，該變數會取得這個值的全新複本。  
+ <span data-ttu-id="5b6ae-116">如果資料型別的物件是由物件的實際值來表示，那麼這個資料型別就是實值型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-116">Value types are data types whose objects are represented by the object's actual value.</span></span> <span data-ttu-id="5b6ae-117">如果將實值型別的執行個體指派給變數，該變數會取得這個值的全新複本。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-117">If an instance of a value type is assigned to a variable, that variable is given a fresh copy of the value.</span></span>  
   
- 如果資料型別的物件是由物件之實際值的參考 \(類似於指標\) 來表示，那麼這個資料型別就是參考型別。  如果將參考型別指派給變數，該變數就會參考 \(指向\) 原始值。  不會進行複製。  
+ <span data-ttu-id="5b6ae-118">如果資料型別的物件是由物件之實際值的參考 (類似於指標) 來表示，那麼這個資料型別就是參考型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-118">Reference types are data types whose objects are represented by a reference (similar to a pointer) to the object's actual value.</span></span> <span data-ttu-id="5b6ae-119">如果將參考型別指派給變數，該變數就會參考 (指向) 原始值。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-119">If a reference type is assigned to a variable, that variable references (points to) the original value.</span></span> <span data-ttu-id="5b6ae-120">不會進行複製。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-120">No copy is made.</span></span>  
   
- .NET Framework 中的一般型別系統支援下列五種型別：  
+ <span data-ttu-id="5b6ae-121">.NET 中的一般型別系統支援下列五種型別：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-121">The common type system in .NET supports the following five categories of types:</span></span>  
   
--   [類別](#Classes)  
+-   [<span data-ttu-id="5b6ae-122">類別</span><span class="sxs-lookup"><span data-stu-id="5b6ae-122">Classes</span></span>](#Classes)  
   
--   [結構](#Structures)  
+-   [<span data-ttu-id="5b6ae-123">結構</span><span class="sxs-lookup"><span data-stu-id="5b6ae-123">Structures</span></span>](#Structures)  
   
--   [列舉](#Enumerations)  
+-   [<span data-ttu-id="5b6ae-124">列舉</span><span class="sxs-lookup"><span data-stu-id="5b6ae-124">Enumerations</span></span>](#Enumerations)  
   
--   [介面](#Interfaces)  
+-   [<span data-ttu-id="5b6ae-125">介面</span><span class="sxs-lookup"><span data-stu-id="5b6ae-125">Interfaces</span></span>](#Interfaces)  
   
--   [委派](#Delegates)  
+-   [<span data-ttu-id="5b6ae-126">委派</span><span class="sxs-lookup"><span data-stu-id="5b6ae-126">Delegates</span></span>](#Delegates)  
   
 <a name="Classes"></a>   
-### 類別  
- 類別是指可以直接衍生自其他類別且隱含衍生自 <xref:System.Object?displayProperty=fullName> 的參考型別。  類別會定義物件 \(類別的執行個體\) 可以執行的作業 \(方法、事件或屬性\) 以及物件包含的資料 \(欄位\)。  雖然類別通常包括定義和實作 \(不同於介面，例如介面只包含定義而不含實作\)，但是類別可以有一個或多個不具實作的成員。  
+### <a name="classes"></a><span data-ttu-id="5b6ae-127">類別</span><span class="sxs-lookup"><span data-stu-id="5b6ae-127">Classes</span></span>  
+ <span data-ttu-id="5b6ae-128">類別是指可以直接衍生自其他類別且隱含衍生自 <xref:System.Object?displayProperty=nameWithType> 的參考型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-128">A class is a reference type that can be derived directly from another class and that is derived implicitly from <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5b6ae-129">類別會定義物件 (類別的執行個體) 可以執行的作業 (方法、事件或屬性) 以及物件包含的資料 (欄位)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-129">The class defines the operations that an object (which is an instance of the class) can perform (methods, events, or properties) and the data that the object contains (fields).</span></span> <span data-ttu-id="5b6ae-130">雖然類別通常包括定義和實作 (不同於介面，例如介面只包含定義而不含實作)，但是類別可以有一個或多個不具實作的成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-130">Although a class generally includes both definition and implementation (unlike interfaces, for example, which contain only definition without implementation), it can have one or more members that have no implementation.</span></span>  
   
- 下表將說明類別可以具有的某些特性。  每一個支援執行階段的語言都會提供一種方式，指出類別或類別成員具有這些其中一個或多個特性。  然而，以 .NET Framework 為目標的程式設計語言則無法使用所有這些特性。  
+ <span data-ttu-id="5b6ae-131">下表將說明類別可以具有的某些特性。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-131">The following table describes some of the characteristics that a class may have.</span></span> <span data-ttu-id="5b6ae-132">每一個支援執行階段的語言都會提供一種方式，指出類別或類別成員具有這些其中一個或多個特性。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-132">Each language that supports the runtime provides a way to indicate that a class or class member has one or more of these characteristics.</span></span> <span data-ttu-id="5b6ae-133">然而，以 .NET 為目標的程式設計語言則無法使用所有這些特性。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-133">However, individual programming languages that target .NET may not make all these characteristics available.</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|sealed|指定無法從這個型別衍生出其他類別。|  
-|實作|指出類別會以提供介面成員實作的方式來使用一個或多個介面。|  
-|abstract|表示這個類別無法執行個體化。  若要使用這個特性，必須從它衍生出其他類別。|  
-|繼承|指出類別的執行個體可用於已指定基底類別 \(Base Class\) 的任何位置。  從基底類別繼承的衍生類別可以使用基底類別所提供的任何公用成員實作，或者衍生類別可以利用本身的實作來覆寫公用成員的實作。|  
-|exported 或 not exported|指出是否可在定義類別的組件中看見類別。  這項特性僅適用於最上層類別，並不適用於巢狀類別。|  
+|<span data-ttu-id="5b6ae-134">特性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-134">Characteristic</span></span>|<span data-ttu-id="5b6ae-135">描述</span><span class="sxs-lookup"><span data-stu-id="5b6ae-135">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="5b6ae-136">sealed</span><span class="sxs-lookup"><span data-stu-id="5b6ae-136">sealed</span></span>|<span data-ttu-id="5b6ae-137">指定無法從這個型別衍生出其他類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-137">Specifies that another class cannot be derived from this type.</span></span>|  
+|<span data-ttu-id="5b6ae-138">實作</span><span class="sxs-lookup"><span data-stu-id="5b6ae-138">implements</span></span>|<span data-ttu-id="5b6ae-139">指出類別會以提供介面成員實作的方式來使用一個或多個介面。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-139">Indicates that the class uses one or more interfaces by providing implementations of interface members.</span></span>|  
+|<span data-ttu-id="5b6ae-140">abstract</span><span class="sxs-lookup"><span data-stu-id="5b6ae-140">abstract</span></span>|<span data-ttu-id="5b6ae-141">表示這個類別無法執行個體化。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-141">Indicates that the class cannot be instantiated.</span></span> <span data-ttu-id="5b6ae-142">若要使用這個特性，必須從它衍生出其他類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-142">To use it, you must derive another class from it.</span></span>|  
+|<span data-ttu-id="5b6ae-143">繼承</span><span class="sxs-lookup"><span data-stu-id="5b6ae-143">inherits</span></span>|<span data-ttu-id="5b6ae-144">指出類別的執行個體可用於已指定基底類別 (Base Class) 的任何位置。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-144">Indicates that instances of the class can be used anywhere the base class is specified.</span></span> <span data-ttu-id="5b6ae-145">從基底類別繼承的衍生類別可以使用基底類別所提供的任何公用成員實作，或者衍生類別可以利用本身的實作來覆寫公用成員的實作。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-145">A derived class that inherits from a base class can use the implementation of any public members provided by the base class, or the derived class can override the implementation of the public members with its own implementation.</span></span>|  
+|<span data-ttu-id="5b6ae-146">exported 或 not exported</span><span class="sxs-lookup"><span data-stu-id="5b6ae-146">exported or not exported</span></span>|<span data-ttu-id="5b6ae-147">指出是否可在定義類別的組件中看見類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-147">Indicates whether a class is visible outside the assembly in which it is defined.</span></span> <span data-ttu-id="5b6ae-148">這項特性僅適用於最上層類別，並不適用於巢狀類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-148">This characteristic applies only to top-level classes and not to nested classes.</span></span>|  
   
 > [!NOTE]
->  類別也可以透過巢狀方式置於父類別或結構中。  巢狀類別也具有成員特性。  如需詳細資訊，請參閱[巢狀型別](#NestedTypes)。  
+>  <span data-ttu-id="5b6ae-149">類別也可以透過巢狀方式置於父類別或結構中。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-149">A class can also be nested in a parent class or structure.</span></span> <span data-ttu-id="5b6ae-150">巢狀類別也具有成員特性。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-150">Nested classes also have member characteristics.</span></span> <span data-ttu-id="5b6ae-151">如需詳細資訊，請參閱[巢狀型別](#NestedTypes)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-151">For more information, see [Nested Types](#NestedTypes).</span></span>  
   
- 沒有實作的類別成員是抽象成員。  有一個或多個抽象成員的類別本身就是抽象的；所以無法建立它的新執行個體。  有些以執行階段為目標的語言即使沒有任何抽象的成員，也允許您將類別標記為抽象。  當您需要封裝一組衍生類別在適當時可繼承或覆寫的基本功能時，可以使用抽象類別 \(Abstract Class\)。  非抽象的類別即稱為實體類別 \(Concrete Class\)。  
+ <span data-ttu-id="5b6ae-152">沒有實作的類別成員是抽象成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-152">Class members that have no implementation are abstract members.</span></span> <span data-ttu-id="5b6ae-153">有一個或多個抽象成員的類別本身就是抽象的；所以無法建立它的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-153">A class that has one or more abstract members is itself abstract; new instances of it cannot be created.</span></span> <span data-ttu-id="5b6ae-154">有些以執行階段為目標的語言即使沒有任何抽象的成員，也允許您將類別標記為抽象。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-154">Some languages that target the runtime let you mark a class as abstract even if none of its members are abstract.</span></span> <span data-ttu-id="5b6ae-155">當您需要封裝一組衍生類別在適當時可繼承或覆寫的基本功能時，可以使用抽象類別 (Abstract Class)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-155">You can use an abstract class when you want to encapsulate a basic set of functionality that derived classes can inherit or override when appropriate.</span></span> <span data-ttu-id="5b6ae-156">非抽象的類別即稱為實體類別 (Concrete Class)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-156">Classes that are not abstract are referred to as concrete classes.</span></span>  
   
- 一個類別可以實作任意數量的介面，但是除了所有類別都會隱含繼承的來源 <xref:System.Object?displayProperty=fullName> 以外，只能繼承一個基底類別。  所有類別都至少必須有一個建構函式，用來初始化類別的新執行個體。  如果您沒有明確定義建構函式，大多數的編譯器會自動提供預設 \(無參數\) 建構函式。  
+ <span data-ttu-id="5b6ae-157">一個類別可以實作任意數量的介面，但是除了所有類別都會隱含繼承的來源 <xref:System.Object?displayProperty=nameWithType> 以外，只能繼承一個基底類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-157">A class can implement any number of interfaces, but it can inherit from only one base class in addition to <xref:System.Object?displayProperty=nameWithType>, from which all classes inherit implicitly.</span></span> <span data-ttu-id="5b6ae-158">所有類別都至少必須有一個建構函式，用來初始化類別的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-158">All classes must have at least one constructor, which initializes new instances of the class.</span></span> <span data-ttu-id="5b6ae-159">如果您沒有明確定義建構函式，大多數的編譯器會自動提供預設 (無參數) 建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-159">If you do not explicitly define a constructor, most compilers will automatically provide a default (parameterless) constructor.</span></span>  
   
 <a name="Structures"></a>   
-### 結構  
- 結構是自 <xref:System.ValueType?displayProperty=fullName> \(衍生自 <xref:System.Object?displayProperty=fullName>\) 隱含繼承的實質型別。  在表示記憶體需求相當小的實質型別時，以及將值當做傳值參考傳遞給具有強型別參數的方法時，結構將相當實用。  在 .NET Framework 類別庫中，所有原始資料型別 \(<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>, <xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 與 <xref:System.UInt64>\) 都會定義為結構。  
+### <a name="structures"></a><span data-ttu-id="5b6ae-160">結構</span><span class="sxs-lookup"><span data-stu-id="5b6ae-160">Structures</span></span>  
+ <span data-ttu-id="5b6ae-161">結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-161">A structure is a value type that derives implicitly from <xref:System.ValueType?displayProperty=nameWithType>, which in turn is derived from <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5b6ae-162">在表示記憶體需求相當小的實質型別時，以及將值當做傳值參考傳遞給具有強型別參數的方法時，結構將相當實用。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-162">A structure is very useful for representing values whose memory requirements are small, and for passing values as by-value parameters to methods that have strongly typed parameters.</span></span> <span data-ttu-id="5b6ae-163">在.NET 中，所有的基本資料型別 (<xref:System.Boolean>， <xref:System.Byte>， <xref:System.Char>， <xref:System.DateTime>， <xref:System.Decimal>， <xref:System.Double>， <xref:System.Int16>， <xref:System.Int32>， <xref:System.Int64>， <xref:System.SByte>， <xref:System.Single>， <xref:System.UInt16>， <xref:System.UInt32>，和<xref:System.UInt64>) 會定義為結構。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-163">In .NET, all primitive data types (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, and <xref:System.UInt64>) are defined as structures.</span></span>  
   
- 與類別一樣，結構會定義資料 \(結構的欄位\) 以及可以在該資料上定義的作業 \(結構的方法\)。  這表示您可以在結構上呼叫方法，包括在 <xref:System.Object?displayProperty=fullName> 和 <xref:System.ValueType?displayProperty=fullName> 類別上定義的虛擬方法，以及在實值型別本身定義的任何方法。  換言之，除了靜態與非靜態方法之外，結構還可以具有欄位、屬性和事件。  您可以建立結構的執行個體，將它們當做參數傳遞，並將它們當做區域變數儲存或將它們儲存到其他實值型別或參考型別的欄位中。  結構也可以實作介面。  
+ <span data-ttu-id="5b6ae-164">與類別一樣，結構會定義資料 (結構的欄位) 以及可以在該資料上定義的作業 (結構的方法)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-164">Like classes, structures define both data (the fields of the structure) and the operations that can be performed on that data (the methods of the structure).</span></span> <span data-ttu-id="5b6ae-165">這表示您可以在結構上呼叫方法，包括在 <xref:System.Object?displayProperty=nameWithType> 和 <xref:System.ValueType?displayProperty=nameWithType> 類別上定義的虛擬方法，以及在實值型別本身定義的任何方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-165">This means that you can call methods on structures, including the virtual methods defined on the <xref:System.Object?displayProperty=nameWithType> and <xref:System.ValueType?displayProperty=nameWithType> classes, and any methods defined on the value type itself.</span></span> <span data-ttu-id="5b6ae-166">換言之，除了靜態與非靜態方法之外，結構還可以具有欄位、屬性和事件。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-166">In other words, structures can have fields, properties, and events, as well as static and nonstatic methods.</span></span> <span data-ttu-id="5b6ae-167">您可以建立結構的執行個體，將它們當做參數傳遞，並將它們當做區域變數儲存或將它們儲存到其他實值型別或參考型別的欄位中。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-167">You can create instances of structures, pass them as parameters, store them as local variables, or store them in a field of another value type or reference type.</span></span> <span data-ttu-id="5b6ae-168">結構也可以實作介面。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-168">Structures can also implement interfaces.</span></span>  
   
- 實值型別在許多層面上與類別不同。  首先，雖然它們隱含繼承自 <xref:System.ValueType?displayProperty=fullName>，但是卻無法直接繼承自任何型別。  同樣地，所有實值型別都是密封型別，表示無法從中衍生其他型別。  實值型別不需要建構函式。  
+ <span data-ttu-id="5b6ae-169">實值型別在許多層面上與類別不同。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-169">Value types also differ from classes in several respects.</span></span> <span data-ttu-id="5b6ae-170">首先，雖然它們隱含繼承自 <xref:System.ValueType?displayProperty=nameWithType>，但是卻無法直接繼承自任何型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-170">First, although they implicitly inherit from <xref:System.ValueType?displayProperty=nameWithType>, they cannot directly inherit from any type.</span></span> <span data-ttu-id="5b6ae-171">同樣地，所有實值型別都是密封型別，表示無法從中衍生其他型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-171">Similarly, all value types are sealed, which means that no other type can be derived from them.</span></span> <span data-ttu-id="5b6ae-172">實值型別不需要建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-172">They also do not require constructors.</span></span>  
   
- 對每一個實值型別而言，Common Language Runtime 都提供了對應的 Boxed 型別，這是具有與實值型別相同狀態和行為的類別。  實值型別的執行個體傳遞給接受型別為 <xref:System.Object?displayProperty=fullName> 之參數的方法時，會進行 Boxed 處理。  當控制項從接受實質型別做為傳址參數的方法呼叫傳回時，它會 Unboxed \(意即由類別的執行個體轉換回實質型別的執行個體\)。  需要 Boxed 型別時，有些語言會要求您使用特殊的語法；其他語言則會在需要時自動使用 Boxed 型別。  當您定義實值型別時，會同時定義 Boxed 和 Unboxed 型別。  
+ <span data-ttu-id="5b6ae-173">對每一個實值型別而言，Common Language Runtime 都提供了對應的 Boxed 型別，這是具有與實值型別相同狀態和行為的類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-173">For each value type, the common language runtime supplies a corresponding boxed type, which is a class that has the same state and behavior as the value type.</span></span> <span data-ttu-id="5b6ae-174">實值型別的執行個體傳遞給接受型別為 <xref:System.Object?displayProperty=nameWithType> 之參數的方法時，會進行 Boxed 處理。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-174">An instance of a value type is boxed when it is passed to a method that accepts a parameter of type <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5b6ae-175">當控制項從接受實質型別做為傳址參數的方法呼叫傳回時，它會 Unboxed (意即由類別的執行個體轉換回實質型別的執行個體)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-175">It is unboxed (that is, converted from an instance of a class back to an instance of a value type) when control returns from a method call that accepts a value type as a by-reference parameter.</span></span> <span data-ttu-id="5b6ae-176">需要 Boxed 型別時，有些語言會要求您使用特殊的語法；其他語言則會在需要時自動使用 Boxed 型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-176">Some languages require that you use special syntax when the boxed type is required; others automatically use the boxed type when it is needed.</span></span> <span data-ttu-id="5b6ae-177">當您定義實值型別時，會同時定義 Boxed 和 Unboxed 型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-177">When you define a value type, you are defining both the boxed and the unboxed type.</span></span>  
   
 <a name="Enumerations"></a>   
-### 列舉  
- 列舉 \(Enum\) 是直接繼承自 <xref:System.Enum?displayProperty=fullName> 的實值型別，並且可以為基礎的基本型別數值提供替代名稱。  列舉型別具有名稱、必須為內建帶正負號或不帶正負號之整數型別 \(例如 <xref:System.Byte>、<xref:System.Int32> 或 <xref:System.UInt64>\) 的基礎型別，以及一組欄位。  欄位為靜態的常值欄位，每一個欄位各代表一個常數。  相同的數值可指定給多個欄位。  發生這種情況時，必須將其中一個數值標記為反映和字串轉換的主要列舉值。  
+### <a name="enumerations"></a><span data-ttu-id="5b6ae-178">列舉</span><span class="sxs-lookup"><span data-stu-id="5b6ae-178">Enumerations</span></span>  
+ <span data-ttu-id="5b6ae-179">列舉 (Enum) 是直接繼承自 <xref:System.Enum?displayProperty=nameWithType> 的實值型別，並且可以為基礎的基本型別數值提供替代名稱。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-179">An enumeration (enum) is a value type that inherits directly from <xref:System.Enum?displayProperty=nameWithType> and that supplies alternate names for the values of an underlying primitive type.</span></span> <span data-ttu-id="5b6ae-180">列舉型別具有名稱、必須為內建帶正負號或不帶正負號之整數型別 (例如 <xref:System.Byte>、<xref:System.Int32> 或 <xref:System.UInt64>) 的基礎型別，以及一組欄位。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-180">An enumeration type has a name, an underlying type that must be one of the built-in signed or unsigned integer types (such as <xref:System.Byte>, <xref:System.Int32>, or <xref:System.UInt64>), and a set of fields.</span></span> <span data-ttu-id="5b6ae-181">欄位為靜態的常值欄位，每一個欄位各代表一個常數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-181">The fields are static literal fields, each of which represents a constant.</span></span> <span data-ttu-id="5b6ae-182">相同的數值可指定給多個欄位。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-182">The same value can be assigned to multiple fields.</span></span> <span data-ttu-id="5b6ae-183">發生這種情況時，必須將其中一個數值標記為反映和字串轉換的主要列舉值。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-183">When this occurs, you must mark one of the values as the primary enumeration value for reflection and string conversion.</span></span>  
   
- 您可以將基礎型別的值指定給列舉型別，反之亦然 \(Runtime 不需要轉型\)。  您可以建立列舉的執行個體，然後呼叫 <xref:System.Enum?displayProperty=fullName> 的方法以及在列舉的基礎型別上定義的任何方法。  但是，在需要基礎型別的執行個體時，有些語言可能不允許您將列舉型別當成參數傳遞，反之亦然。  
+ <span data-ttu-id="5b6ae-184">您可以將基礎型別的值指定給列舉型別，反之亦然 (Runtime 不需要轉型)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-184">You can assign a value of the underlying type to an enumeration and vice versa (no cast is required by the runtime).</span></span> <span data-ttu-id="5b6ae-185">您可以建立列舉的執行個體，然後呼叫 <xref:System.Enum?displayProperty=nameWithType> 的方法以及在列舉的基礎型別上定義的任何方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-185">You can create an instance of an enumeration and call the methods of <xref:System.Enum?displayProperty=nameWithType>, as well as any methods defined on the enumeration's underlying type.</span></span> <span data-ttu-id="5b6ae-186">但是，在需要基礎型別的執行個體時，有些語言可能不允許您將列舉型別當成參數傳遞，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-186">However, some languages might not let you pass an enumeration as a parameter when an instance of the underlying type is required (or vice versa).</span></span>  
   
- 下列限制適用於列舉型別：  
+ <span data-ttu-id="5b6ae-187">下列限制適用於列舉型別：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-187">The following additional restrictions apply to enumerations:</span></span>  
   
--   不能定義自己的方法。  
+-   <span data-ttu-id="5b6ae-188">不能定義自己的方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-188">They cannot define their own methods.</span></span>  
   
--   不能實作介面。  
+-   <span data-ttu-id="5b6ae-189">不能實作介面。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-189">They cannot implement interfaces.</span></span>  
   
--   不能定義屬性或事件。  
+-   <span data-ttu-id="5b6ae-190">不能定義屬性或事件。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-190">They cannot define properties or events.</span></span>  
   
--   除非是巢狀置於泛型型別中，否則不能是泛型。  換句話說，列舉型別不能有自己的型別參數。  
+-   <span data-ttu-id="5b6ae-191">除非是巢狀置於泛型型別中，否則不能是泛型。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-191">They cannot be generic, unless they are generic only because they are nested within a generic type.</span></span> <span data-ttu-id="5b6ae-192">換句話說，列舉型別不能有自己的型別參數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-192">That is, an enumeration cannot have type parameters of its own.</span></span>  
   
     > [!NOTE]
-    >  使用 Visual Basic、C\# 和 C\+\+ 建立的巢狀型別 \(包括列舉型別\) 包含所有封入泛型型別的型別參數，因此，即使沒有自己的型別參數，仍舊是泛型型別。  如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> 參考主題中的＜巢狀型別＞。  
+    >  <span data-ttu-id="5b6ae-193">使用 Visual Basic、C# 和 C++ 建立的巢狀型別 (包括列舉型別) 包含所有封入泛型型別的型別參數，因此，即使沒有自己的型別參數，仍舊是泛型型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-193">Nested types (including enumerations) created with Visual Basic, C#, and C++ include the type parameters of all enclosing generic types, and are therefore generic even if they do not have type parameters of their own.</span></span> <span data-ttu-id="5b6ae-194">如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 參考主題中的＜巢狀型別＞。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-194">For more information, see "Nested Types" in the <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> reference topic.</span></span>  
   
- <xref:System.FlagsAttribute> 屬性代表一種特殊的列舉型別，稱為位元欄位 \(Bit Field\)。  Runtime 本身無法區別傳統列舉型別和位元欄位，但是您所使用的語言或許可以區分出來。  在區分時，可在位元欄位上使用位元 \(Bitwise\) 運算子來產生未命名的數值，但是不能用於列舉型別。  列舉型別通常用於唯一的項目 \(Element\) 清單，例如該星期的天數、國別或區域名稱等。  位元欄位通常用於可能以組合形式出現的特性或數量清單，例如 `Red And Big And Fast`。  
+ <span data-ttu-id="5b6ae-195"><xref:System.FlagsAttribute> 屬性代表一種特殊的列舉型別，稱為位元欄位 (Bit Field)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-195">The <xref:System.FlagsAttribute> attribute denotes a special kind of enumeration called a bit field.</span></span> <span data-ttu-id="5b6ae-196">Runtime 本身無法區別傳統列舉型別和位元欄位，但是您所使用的語言或許可以區分出來。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-196">The runtime itself does not distinguish between traditional enumerations and bit fields, but your language might do so.</span></span> <span data-ttu-id="5b6ae-197">在區分時，可在位元欄位上使用位元 (Bitwise) 運算子來產生未命名的數值，但是不能用於列舉型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-197">When this distinction is made, bitwise operators can be used on bit fields, but not on enumerations, to generate unnamed values.</span></span> <span data-ttu-id="5b6ae-198">列舉型別通常用於唯一的項目 (Element) 清單，例如該星期的天數、國別或區域名稱等。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-198">Enumerations are generally used for lists of unique elements, such as days of the week, country or region names, and so on.</span></span> <span data-ttu-id="5b6ae-199">位元欄位通常用於可能以組合形式出現的特性或數量清單，例如 `Red And Big And Fast`。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-199">Bit fields are generally used for lists of qualities or quantities that might occur in combination, such as `Red And Big And Fast`.</span></span>  
   
- 下列範例顯示如何使用位元欄位和傳統列舉型別。  
+ <span data-ttu-id="5b6ae-200">下列範例顯示如何使用位元欄位和傳統列舉型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-200">The following example shows how to use both bit fields and traditional enumerations.</span></span>  
   
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
   
 <a name="Interfaces"></a>   
-### 介面  
- 介面會定義指定「可以執行」關聯性 \(Relationship\) 或「擁有」關聯性的合約。  介面常用來實作功能，例如比較和排序 \(<xref:System.IComparable> 和 <xref:System.IComparable%601> 介面\)、測試是否相等 \(<xref:System.IEquatable%601> 介面\)，或列舉集合中的項目 \(<xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601> 介面\)。  介面可以擁有屬性、方法和事件，這些都是抽象成員，也就是說，雖然介面會定義成員及其簽章，但每個介面成員的功能則是由實作介面的型別所定義。  這表示，實作介面的任何類別或結構都必須為介面中宣告的抽象成員提供定義。  介面可能會要求任何實作類別或結構也必須實作一個或多個其他介面。  
+### <a name="interfaces"></a><span data-ttu-id="5b6ae-201">介面</span><span class="sxs-lookup"><span data-stu-id="5b6ae-201">Interfaces</span></span>  
+ <span data-ttu-id="5b6ae-202">介面會定義指定「可以執行」關聯性 (Relationship) 或「擁有」關聯性的合約。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-202">An interface defines a contract that specifies a "can do" relationship or a "has a" relationship.</span></span> <span data-ttu-id="5b6ae-203">介面常用來實作功能，例如比較和排序 (<xref:System.IComparable> 和 <xref:System.IComparable%601> 介面)、測試是否相等 (<xref:System.IEquatable%601> 介面)，或列舉集合中的項目 (<xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601> 介面)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-203">Interfaces are often used to implement functionality, such as comparing and sorting (the <xref:System.IComparable> and <xref:System.IComparable%601> interfaces), testing for equality (the <xref:System.IEquatable%601> interface), or enumerating items in a collection (the <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601> interfaces).</span></span> <span data-ttu-id="5b6ae-204">介面可以擁有屬性、方法和事件，這些都是抽象成員，也就是說，雖然介面會定義成員及其簽章，但每個介面成員的功能則是由實作介面的型別所定義。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-204">Interfaces can have properties, methods, and events, all of which are abstract members; that is, although the interface defines the members and their signatures, it leaves it to the type that implements the interface to define the functionality of each interface member.</span></span> <span data-ttu-id="5b6ae-205">這表示，實作介面的任何類別或結構都必須為介面中宣告的抽象成員提供定義。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-205">This means that any class or structure that implements an interface must supply definitions for the abstract members declared in the interface.</span></span> <span data-ttu-id="5b6ae-206">介面可能會要求任何實作類別或結構也必須實作一個或多個其他介面。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-206">An interface can require any implementing class or structure to also implement one or more other interfaces.</span></span>  
   
- 下列限制適用於介面：  
+ <span data-ttu-id="5b6ae-207">下列限制適用於介面：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-207">The following restrictions apply to interfaces:</span></span>  
   
--   介面可宣告為任何存取範圍，但是介面成員必須全部具有公用存取範圍。  
+-   <span data-ttu-id="5b6ae-208">介面可宣告為任何存取範圍，但是介面成員必須全部具有公用存取範圍。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-208">An interface can be declared with any accessibility, but interface members must all have public accessibility.</span></span>  
   
--   介面無法定義建構函式。  
+-   <span data-ttu-id="5b6ae-209">介面無法定義建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-209">Interfaces cannot define constructors.</span></span>  
   
--   介面不能定義欄位。  
+-   <span data-ttu-id="5b6ae-210">介面不能定義欄位。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-210">Interfaces cannot define fields.</span></span>  
   
--   介面可以只定義執行個體成員，  不能定義靜態成員。  
+-   <span data-ttu-id="5b6ae-211">介面可以只定義執行個體成員，</span><span class="sxs-lookup"><span data-stu-id="5b6ae-211">Interfaces can define only instance members.</span></span> <span data-ttu-id="5b6ae-212">不能定義靜態成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-212">They cannot define static members.</span></span>  
   
- 由於可以使用相同簽章宣告成員的介面不只一個，而且這些成員可以具有分開的實作，因此每一種語言都必須提供規則，將實作對應到需要成員的介面。  
+ <span data-ttu-id="5b6ae-213">由於可以使用相同簽章宣告成員的介面不只一個，而且這些成員可以具有分開的實作，因此每一種語言都必須提供規則，將實作對應到需要成員的介面。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-213">Each language must provide rules for mapping an implementation to the interface that requires the member, because more than one interface can declare a member with the same signature, and these members can have separate implementations.</span></span>  
   
 <a name="Delegates"></a>   
-### 委派  
- 委派是參考型別，用途與 C\+\+ 中的函式指標類似。  委派是用於 .NET Framework 中的事件處理常式和回呼函式。  不同於函式指標，委派更具安全性、可以驗證，而且是型別安全 \(Type Safe\) 的。  委派型別可以代表具有相容簽章的執行個體方法或靜態方法。  
+### <a name="delegates"></a><span data-ttu-id="5b6ae-214">委派</span><span class="sxs-lookup"><span data-stu-id="5b6ae-214">Delegates</span></span>  
+ <span data-ttu-id="5b6ae-215">委派是參考型別，用途與 C++ 中的函式指標類似。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-215">Delegates are reference types that serve a purpose similar to that of function pointers in C++.</span></span> <span data-ttu-id="5b6ae-216">委派是用於 .NET 中的事件處理常式和回呼函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-216">They are used for event handlers and callback functions in .NET.</span></span> <span data-ttu-id="5b6ae-217">不同於函式指標，委派更具安全性、可以驗證，而且是型別安全 (Type Safe) 的。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-217">Unlike function pointers, delegates are secure, verifiable, and type safe.</span></span> <span data-ttu-id="5b6ae-218">委派型別可以代表具有相容簽章的執行個體方法或靜態方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-218">A delegate type can represent any instance method or static method that has a compatible signature.</span></span>  
   
- 如果委派參數的型別比方法參數的型別更嚴格，則委派的參數與對應的方法參數相容，因為這樣可保證傳遞給委派的引數能夠安全地傳遞給方法。  
+ <span data-ttu-id="5b6ae-219">如果委派參數的型別比方法參數的型別更嚴格，則委派的參數與對應的方法參數相容，因為這樣可保證傳遞給委派的引數能夠安全地傳遞給方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-219">A parameter of a delegate is compatible with the corresponding parameter of a method if the type of the delegate parameter is more restrictive than the type of the method parameter, because this guarantees that an argument passed to the delegate can be passed safely to the method.</span></span>  
   
- 同樣的，如果方法的傳回型別比委派的傳回型別更具限制性，由於此保證方法傳回的值會安全地轉換為委派的傳回型別，委派的傳回型別就會相容於方法的傳回型別。  
+ <span data-ttu-id="5b6ae-220">同樣的，如果方法的傳回型別比委派的傳回型別更具限制性，由於此保證方法傳回的值會安全地轉換為委派的傳回型別，委派的傳回型別就會相容於方法的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-220">Similarly, the return type of a delegate is compatible with the return type of a method if the return type of the method is more restrictive than the return type of the delegate, because this guarantees that the return value of the method can be cast safely to the return type of the delegate.</span></span>  
   
- 例如，具有 <xref:System.Collections.IEnumerable> 型別參數和 <xref:System.Object> 傳回型別的委派，即可代表具有 <xref:System.Object> 型別參數和 <xref:System.Collections.IEnumerable> 型別傳回值的方法。  如需詳細資訊和範例程式碼，請參閱 <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=fullName>。  
+ <span data-ttu-id="5b6ae-221">例如，具有 <xref:System.Collections.IEnumerable> 型別參數和 <xref:System.Object> 傳回型別的委派，即可代表具有 <xref:System.Object> 型別參數和 <xref:System.Collections.IEnumerable> 型別傳回值的方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-221">For example, a delegate that has a parameter of type <xref:System.Collections.IEnumerable> and a return type of <xref:System.Object> can represent a method that has a parameter of type <xref:System.Object> and a return value of type <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="5b6ae-222">如需詳細資訊和範例程式碼，請參閱 <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-222">For more information and example code, see <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.</span></span>  
   
- 委派會繫結到其所代表的方法。  除了繫結到方法以外，委派還可以繫結到物件。  物件表示方法的第一個參數，而且每一次叫用委派時，都會傳遞給方法。  如果方法是執行個體方法，那麼繫結物件會傳遞做為隱含的 `this` 參數 \(Visual Basic 中則為 `Me`\)；如果是靜態方法，物件會傳遞做為方法的第一個正式參數，而且委派簽章必須符合其餘參數。  如需詳細資訊和範例程式碼，請參閱 <xref:System.Delegate?displayProperty=fullName>。  
+ <span data-ttu-id="5b6ae-223">委派會繫結到其所代表的方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-223">A delegate is said to be bound to the method it represents.</span></span> <span data-ttu-id="5b6ae-224">除了繫結到方法以外，委派還可以繫結到物件。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-224">In addition to being bound to the method, a delegate can be bound to an object.</span></span> <span data-ttu-id="5b6ae-225">物件表示方法的第一個參數，而且每一次叫用委派時，都會傳遞給方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-225">The object represents the first parameter of the method, and is passed to the method every time the delegate is invoked.</span></span> <span data-ttu-id="5b6ae-226">如果方法是執行個體方法，那麼繫結物件會傳遞做為隱含的 `this` 參數 (Visual Basic 中則為 `Me`)；如果是靜態方法，物件會傳遞做為方法的第一個正式參數，而且委派簽章必須符合其餘參數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-226">If the method is an instance method, the bound object is passed as the implicit `this` parameter (`Me` in Visual Basic); if the method is static, the object is passed as the first formal parameter of the method, and the delegate signature must match the remaining parameters.</span></span> <span data-ttu-id="5b6ae-227">如需詳細資訊和範例程式碼，請參閱 <xref:System.Delegate?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-227">For more information and example code, see <xref:System.Delegate?displayProperty=nameWithType>.</span></span>  
   
- 所有的委派都繼承自 <xref:System.MulticastDelegate?displayProperty=fullName>，該項則繼承自 <xref:System.Delegate?displayProperty=fullName>。  C\#、Visual Basic 和 C\+\+ 語言並不允許從這些型別繼承，  而是提供關鍵字以宣告委派。  
+ <span data-ttu-id="5b6ae-228">所有的委派都繼承自 <xref:System.MulticastDelegate?displayProperty=nameWithType>，該項則繼承自 <xref:System.Delegate?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-228">All delegates inherit from <xref:System.MulticastDelegate?displayProperty=nameWithType>, which inherits from <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5b6ae-229">C#、Visual Basic 和 C++ 語言並不允許從這些型別繼承，</span><span class="sxs-lookup"><span data-stu-id="5b6ae-229">The C#, Visual Basic, and C++ languages do not allow inheritance from these types.</span></span> <span data-ttu-id="5b6ae-230">而是提供關鍵字以宣告委派。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-230">Instead, they provide keywords for declaring delegates.</span></span>  
   
- 由於委派繼承自 <xref:System.MulticastDelegate>，所以委派會具有引動過程清單，這是委派所代表方法的清單，在叫用 \(Invoke\) 委派時就會執行這些方法。  清單中的所有方法都會接收到叫用委派時所提供的引數。  
-  
-> [!NOTE]
->  在引動過程清單中具有一個以上方法的委派，即使擁有傳回型別，其傳回值也不會具有定義。  
-  
- 在許多情況下，例如回呼方法中，委派只代表一個方法，而且您所需要採取的動作，就是建立委派然後再叫用委派。  
-  
- 對於代表多個方法的委派，.NET Framework 提供 <xref:System.Delegate> 的方法和 <xref:System.MulticastDelegate> 委派類別，來支援對委派的引動過程清單加入方法 \(<xref:System.Delegate.Combine%2A?displayProperty=fullName> 方法\)、移除方法 \(<xref:System.Delegate.Remove%2A?displayProperty=fullName> 方法\)，以及取得引動過程清單 \(<xref:System.Delegate.GetInvocationList%2A?displayProperty=fullName> 方法\) 的諸如此類作業。  
+ <span data-ttu-id="5b6ae-231">由於委派繼承自 <xref:System.MulticastDelegate>，所以委派會具有引動過程清單，這是委派所代表方法的清單，在叫用 (Invoke) 委派時就會執行這些方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-231">Because delegates inherit from <xref:System.MulticastDelegate>, a delegate has an invocation list, which is a list of methods that the delegate represents and that are executed when the delegate is invoked.</span></span> <span data-ttu-id="5b6ae-232">清單中的所有方法都會接收到叫用委派時所提供的引數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-232">All methods in the list receive the arguments supplied when the delegate is invoked.</span></span>  
   
 > [!NOTE]
->  在 C\#、C\+\+ 和 Visual Basic 中，並不需要對事件處理常式委派使用這些方法，因為這些語言都提供加入和移除事件處理常式的語法。  
+>  <span data-ttu-id="5b6ae-233">在引動過程清單中具有一個以上方法的委派，即使擁有傳回型別，其傳回值也不會具有定義。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-233">The return value is not defined for a delegate that has more than one method in its invocation list, even if the delegate has a return type.</span></span>  
   
- [回到頁首](#top)  
+ <span data-ttu-id="5b6ae-234">在許多情況下，例如回呼方法中，委派只代表一個方法，而且您所需要採取的動作，就是建立委派然後再叫用委派。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-234">In many cases, such as with callback methods, a delegate represents only one method, and the only actions you have to take are creating the delegate and invoking it.</span></span>  
+  
+ <span data-ttu-id="5b6ae-235">對於代表多個方法的委派，.NET 提供的方法<xref:System.Delegate>和<xref:System.MulticastDelegate>委派類別，以支援委派的引動過程清單加入方法等作業 (<xref:System.Delegate.Combine%2A?displayProperty=nameWithType>方法)，移除 (方法<xref:System.Delegate.Remove%2A?displayProperty=nameWithType>方法)，以及取得引動過程清單 (<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>方法)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-235">For delegates that represent multiple methods, .NET provides methods of the <xref:System.Delegate> and <xref:System.MulticastDelegate> delegate classes to support operations such as adding a method to a delegate's invocation list (the <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> method), removing a method (the <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> method), and getting the invocation list (the <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> method).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="5b6ae-236">在 C#、C++ 和 Visual Basic 中，並不需要對事件處理常式委派使用這些方法，因為這些語言都提供加入和移除事件處理常式的語法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-236">It is not necessary to use these methods for event-handler delegates in C#, C++, and Visual Basic, because these languages provide syntax for adding and removing event handlers.</span></span>  
+  
+ 
   
 <a name="type_definitions"></a>   
-## 類型定義  
- 型別定義包括下列：  
+## <a name="type-definitions"></a><span data-ttu-id="5b6ae-237">類型定義</span><span class="sxs-lookup"><span data-stu-id="5b6ae-237">Type Definitions</span></span>  
+ <span data-ttu-id="5b6ae-238">型別定義包括下列：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-238">A type definition includes the following:</span></span>  
   
--   在型別上定義的任何屬性 \(Attribute\)  
+-   <span data-ttu-id="5b6ae-239">在型別上定義的任何屬性 (Attribute)</span><span class="sxs-lookup"><span data-stu-id="5b6ae-239">Any attributes defined on the type.</span></span>  
   
--   型別的存取範圍 \(可視性\)  
+-   <span data-ttu-id="5b6ae-240">型別的存取範圍 (可視性)</span><span class="sxs-lookup"><span data-stu-id="5b6ae-240">The type's accessibility (visibility).</span></span>  
   
--   型別的名稱  
+-   <span data-ttu-id="5b6ae-241">型別的名稱</span><span class="sxs-lookup"><span data-stu-id="5b6ae-241">The type's name.</span></span>  
   
--   型別的基底型別  
+-   <span data-ttu-id="5b6ae-242">型別的基底型別</span><span class="sxs-lookup"><span data-stu-id="5b6ae-242">The type's base type.</span></span>  
   
--   由型別實作的任何介面  
+-   <span data-ttu-id="5b6ae-243">由型別實作的任何介面</span><span class="sxs-lookup"><span data-stu-id="5b6ae-243">Any interfaces implemented by the type.</span></span>  
   
--   型別中每一個成員的定義  
+-   <span data-ttu-id="5b6ae-244">型別中每一個成員的定義</span><span class="sxs-lookup"><span data-stu-id="5b6ae-244">Definitions for each of the type's members.</span></span>  
   
-### 屬性  
- 屬性提供了其他的使用者定義中繼資料。  最常見的屬性用法是，用來將關於型別的其他資訊儲存在組件中，或者在設計階段或執行階段環境中修改型別成員的行為。  
+### <a name="attributes"></a><span data-ttu-id="5b6ae-245">屬性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-245">Attributes</span></span>  
+ <span data-ttu-id="5b6ae-246">屬性提供了其他的使用者定義中繼資料。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-246">Attributes provide additional user-defined metadata.</span></span> <span data-ttu-id="5b6ae-247">最常見的屬性用法是，用來將關於型別的其他資訊儲存在組件中，或者在設計階段或執行階段環境中修改型別成員的行為。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-247">Most commonly, they are used to store additional information about a type in its assembly, or to modify the behavior of a type member in either the design-time or run-time environment.</span></span>  
   
- 屬性本身都是繼承自 <xref:System.Attribute?displayProperty=fullName> 的類別。  每一種支援使用屬性的語言都有自己的語法，用於將屬性套用至語言項目。  屬性可以幾乎套用至所有語言項目，而可以套用屬性的特定項目是由套用到該屬性類別的 <xref:System.AttributeUsageAttribute> 定義。  
+ <span data-ttu-id="5b6ae-248">屬性本身都是繼承自 <xref:System.Attribute?displayProperty=nameWithType> 的類別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-248">Attributes are themselves classes that inherit from <xref:System.Attribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5b6ae-249">每一種支援使用屬性的語言都有自己的語法，用於將屬性套用至語言項目。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-249">Languages that support the use of attributes each have their own syntax for applying attributes to a language element.</span></span> <span data-ttu-id="5b6ae-250">屬性可以幾乎套用至所有語言項目，而可以套用屬性的特定項目是由套用到該屬性類別的 <xref:System.AttributeUsageAttribute> 定義。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-250">Attributes can be applied to almost any language element; the specific elements to which an attribute can be applied are defined by the <xref:System.AttributeUsageAttribute> that is applied to that attribute class.</span></span>  
   
-### 型別存取範圍  
- 所有型別都具有修飾詞 \(Modifier\)，負責控制其他型別的存取範圍。  下表說明執行階段所支援的型別存取範圍。  
+### <a name="type-accessibility"></a><span data-ttu-id="5b6ae-251">型別存取範圍</span><span class="sxs-lookup"><span data-stu-id="5b6ae-251">Type Accessibility</span></span>  
+ <span data-ttu-id="5b6ae-252">所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-252">All types have a modifier that governs their accessibility from other types.</span></span> <span data-ttu-id="5b6ae-253">下表說明執行階段所支援的型別存取範圍。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-253">The following table describes the type accessibilities supported by the runtime.</span></span>  
   
-|協助工具選項|描述|  
-|------------|--------|  
-|public|型別可供所有組件存取|  
-|組件|型別只能在本身的組件中存取|  
+|<span data-ttu-id="5b6ae-254">協助工具選項</span><span class="sxs-lookup"><span data-stu-id="5b6ae-254">Accessibility</span></span>|<span data-ttu-id="5b6ae-255">描述</span><span class="sxs-lookup"><span data-stu-id="5b6ae-255">Description</span></span>|  
+|-------------------|-----------------|  
+|<span data-ttu-id="5b6ae-256">public</span><span class="sxs-lookup"><span data-stu-id="5b6ae-256">public</span></span>|<span data-ttu-id="5b6ae-257">型別可供所有組件存取</span><span class="sxs-lookup"><span data-stu-id="5b6ae-257">The type is accessible by all assemblies.</span></span>|  
+|<span data-ttu-id="5b6ae-258">組件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-258">assembly</span></span>|<span data-ttu-id="5b6ae-259">型別只能在本身的組件中存取</span><span class="sxs-lookup"><span data-stu-id="5b6ae-259">The type is accessible only from within its assembly.</span></span>|  
   
- 巢狀型別的存取範圍是依據其存取範圍定義域，由成員的宣告存取範圍和立即包含型別的存取範圍定義域來決定。  但是，巢狀型別的存取範圍領域不能超過包含型別 \(Containing Type\) 的存取範圍領域。  
+ <span data-ttu-id="5b6ae-260">巢狀型別的存取範圍是依據其存取範圍定義域，由成員的宣告存取範圍和立即包含型別的存取範圍定義域來決定。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-260">The accessibility of a nested type depends on its accessibility domain, which is determined by both the declared accessibility of the member and the accessibility domain of the immediately containing type.</span></span> <span data-ttu-id="5b6ae-261">但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-261">However, the accessibility domain of a nested type cannot exceed that of the containing type.</span></span>  
   
- 在程式 `M` 的型別 `T` 中宣告的巢狀成員 `P`，它的存取範圍領域定義如下 \(請注意，`M` 本身也可能是型別\)：  
+ <span data-ttu-id="5b6ae-262">在程式 `M` 的型別 `T` 中宣告的巢狀成員 `P`，它的存取範圍領域定義如下 (請注意，`M` 本身也可能是型別)：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-262">The accessibility domain of a nested member `M` declared in a type `T` within a program `P` is defined as follows (noting that `M` might itself be a type):</span></span>  
   
--   如果 `M` 的宣告存取範圍是 `public`，`M` 的存取範圍領域就是 `T` 的存取範圍領域。  
+-   <span data-ttu-id="5b6ae-263">如果 `M` 的宣告存取範圍是 `public`，`M` 的存取範圍領域就是 `T` 的存取範圍領域。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-263">If the declared accessibility of `M` is `public`, the accessibility domain of `M` is the accessibility domain of `T`.</span></span>  
   
--   如果 `M` 的宣告存取範圍是 `protected internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字和從 `T` 以外宣告的 `P` 所衍生任何型別的程式文字的交集。  
+-   <span data-ttu-id="5b6ae-264">如果 `M` 的宣告存取範圍是 `protected internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字和從 `T` 以外宣告的 `P` 所衍生任何型別的程式文字的交集。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-264">If the declared accessibility of `M` is `protected internal`, the accessibility domain of `M` is the intersection of the accessibility domain of `T` with the program text of `P` and the program text of any type derived from `T` declared outside `P`.</span></span>  
   
--   如果 `M` 的宣告存取範圍是 `protected`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `T` 的程式文字和 `T` 所衍生之任一型別的交集。  
+-   <span data-ttu-id="5b6ae-265">如果 `M` 的宣告存取範圍是 `protected`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `T` 的程式文字和 `T` 所衍生之任一型別的交集。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-265">If the declared accessibility of `M` is `protected`, the accessibility domain of `M` is the intersection of the accessibility domain of `T` with the program text of `T` and any type derived from `T`.</span></span>  
   
--   如果 `M` 的宣告存取範圍是 `internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字的交集。  
+-   <span data-ttu-id="5b6ae-266">如果 `M` 的宣告存取範圍是 `internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字的交集。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-266">If the declared accessibility of `M` is `internal`, the accessibility domain of `M` is the intersection of the accessibility domain of `T` with the program text of `P`.</span></span>  
   
--   如果 `M` 的宣告存取範圍是 `private`，`M` 的存取範圍領域就是 `T` 的程式文字。  
+-   <span data-ttu-id="5b6ae-267">如果 `M` 的宣告存取範圍是 `private`，`M` 的存取範圍領域就是 `T` 的程式文字。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-267">If the declared accessibility of `M` is `private`, the accessibility domain of `M` is the program text of `T`.</span></span>  
   
-### 類型名稱  
- 一般型別系統對於名稱只有兩項限制：  
+### <a name="type-names"></a><span data-ttu-id="5b6ae-268">類型名稱</span><span class="sxs-lookup"><span data-stu-id="5b6ae-268">Type Names</span></span>  
+ <span data-ttu-id="5b6ae-269">一般型別系統對於名稱只有兩項限制：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-269">The common type system imposes only two restrictions on names:</span></span>  
   
--   所有名稱都是以 Unicode \(16 位元\) 字元字串的方式編碼。  
+-   <span data-ttu-id="5b6ae-270">所有名稱都是以 Unicode (16 位元) 字元字串的方式編碼。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-270">All names are encoded as strings of Unicode (16-bit) characters.</span></span>  
   
--   名稱的內嵌 \(16 位元\) 值不允許為 0x0000。  
+-   <span data-ttu-id="5b6ae-271">名稱的內嵌 (16 位元) 值不允許為 0x0000。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-271">Names are not permitted to have an embedded (16-bit) value of 0x0000.</span></span>  
   
- 然而，大部分語言會對型別名稱強制執行其他限制。  所有比較都是以位元組為基礎，因此會區分大小寫，而且與地區設定無關 \(Locale\-Independent\)。  
+ <span data-ttu-id="5b6ae-272">然而，大部分語言會對型別名稱強制執行其他限制。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-272">However, most languages impose additional restrictions on type names.</span></span> <span data-ttu-id="5b6ae-273">所有比較都是以位元組為基礎，因此會區分大小寫，而且與地區設定無關 (Locale-Independent)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-273">All comparisons are done on a byte-by-byte basis, and are therefore case-sensitive and locale-independent.</span></span>  
   
- 雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET Framework 模組中完整定義的   \(不過根據編譯器的支援，它可以分割成多個原始程式碼檔\)。 只有在命名空間中的型別名稱才必須是唯一的。  若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。  
+ <span data-ttu-id="5b6ae-274">雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET 模組中完整定義</span><span class="sxs-lookup"><span data-stu-id="5b6ae-274">Although a type might reference types from other modules and assemblies, a type must be fully defined within one .NET module.</span></span> <span data-ttu-id="5b6ae-275">(不過根據編譯器的支援，它可以分割成多個原始程式碼檔)。只有在命名空間中的型別名稱才必須是唯一的。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-275">(Depending on compiler support, however, it can be divided into multiple source code files.) Type names need be unique only within a namespace.</span></span> <span data-ttu-id="5b6ae-276">若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-276">To fully identify a type, the type name must be qualified by the namespace that contains the implementation of the type.</span></span>  
   
-### 基底型別和介面  
- 型別可繼承其他型別的數值和行為。  一般型別系統不允許型別繼承一個以上的基底型別。  
+### <a name="base-types-and-interfaces"></a><span data-ttu-id="5b6ae-277">基底型別和介面</span><span class="sxs-lookup"><span data-stu-id="5b6ae-277">Base Types and Interfaces</span></span>  
+ <span data-ttu-id="5b6ae-278">型別可繼承其他型別的數值和行為。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-278">A type can inherit values and behaviors from another type.</span></span> <span data-ttu-id="5b6ae-279">一般型別系統不允許型別繼承一個以上的基底型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-279">The common type system does not allow types to inherit from more than one base type.</span></span>  
   
- 型別可實作任意數目的介面。  若要實作介面，型別必須實作該介面的所有虛擬成員。  虛擬方法可由衍生型別 \(Derived Type\) 實作，並且可以用靜態或動態方式叫用 \(Invoke\)。  
+ <span data-ttu-id="5b6ae-280">型別可實作任意數目的介面。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-280">A type can implement any number of interfaces.</span></span> <span data-ttu-id="5b6ae-281">若要實作介面，型別必須實作該介面的所有虛擬成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-281">To implement an interface, a type must implement all the virtual members of that interface.</span></span> <span data-ttu-id="5b6ae-282">虛擬方法可由衍生型別 (Derived Type) 實作，並且可以用靜態或動態方式叫用 (Invoke)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-282">A virtual method can be implemented by a derived type and can be invoked either statically or dynamically.</span></span>  
   
- [回到頁首](#top)  
+  
   
 <a name="type_members"></a>   
-## 型別成員  
- 執行階段允許您定義能夠指定型別行為與狀態的型別成員。  型別成員包含下列：  
+## <a name="type-members"></a><span data-ttu-id="5b6ae-283">型別成員</span><span class="sxs-lookup"><span data-stu-id="5b6ae-283">Type Members</span></span>  
+ <span data-ttu-id="5b6ae-284">執行階段允許您定義能夠指定型別行為與狀態的型別成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-284">The runtime enables you to define members of your type, which specifies the behavior and state of a type.</span></span> <span data-ttu-id="5b6ae-285">型別成員包含下列：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-285">Type members include the following:</span></span>  
   
--   [欄位](#Fields)  
+-   [<span data-ttu-id="5b6ae-286">欄位</span><span class="sxs-lookup"><span data-stu-id="5b6ae-286">Fields</span></span>](#Fields)  
   
--   [屬性](#Properties)  
+-   [<span data-ttu-id="5b6ae-287">屬性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-287">Properties</span></span>](#Properties)  
   
--   [方法](#Methods)  
+-   [<span data-ttu-id="5b6ae-288">方法</span><span class="sxs-lookup"><span data-stu-id="5b6ae-288">Methods</span></span>](#Methods)  
   
--   [建構函式](#Constructors)  
+-   [<span data-ttu-id="5b6ae-289">建構函式</span><span class="sxs-lookup"><span data-stu-id="5b6ae-289">Constructors</span></span>](#Constructors)  
   
--   [事件](#Events)  
+-   [<span data-ttu-id="5b6ae-290">事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-290">Events</span></span>](#Events)  
   
--   [巢狀型別](#NestedTypes)  
+-   [<span data-ttu-id="5b6ae-291">巢狀類型</span><span class="sxs-lookup"><span data-stu-id="5b6ae-291">Nested types</span></span>](#NestedTypes)  
   
 <a name="Fields"></a>   
-### 欄位  
- 欄位會描述並包含型別狀態組件。  欄位可為執行階段支援的任何型別。  最常見的情形是，欄位為 `private` 或 `protected`，如此才能夠只在類別內部或從衍生類別存取這些欄位。  如果欄位的值可以本身型別以外進行修改，則通常會使用屬性集存取子。  公開欄位通常是唯讀的，而且可以是下兩種型別：  
+### <a name="fields"></a><span data-ttu-id="5b6ae-292">欄位</span><span class="sxs-lookup"><span data-stu-id="5b6ae-292">Fields</span></span>  
+ <span data-ttu-id="5b6ae-293">欄位會描述並包含型別狀態組件。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-293">A field describes and contains part of the type's state.</span></span> <span data-ttu-id="5b6ae-294">欄位可為執行階段支援的任何型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-294">Fields can be of any type supported by the runtime.</span></span> <span data-ttu-id="5b6ae-295">最常見的情形是，欄位為 `private` 或 `protected`，如此才能夠只在類別內部或從衍生類別存取這些欄位。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-295">Most commonly, fields are either `private` or `protected`, so that they are accessible only from within the class or from a derived class.</span></span> <span data-ttu-id="5b6ae-296">如果欄位的值可以本身型別以外進行修改，則通常會使用屬性集存取子。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-296">If the value of a field can be modified from outside its type, a property set accessor is typically used.</span></span> <span data-ttu-id="5b6ae-297">公開欄位通常是唯讀的，而且可以是下兩種型別：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-297">Publicly exposed fields are usually read-only and can be of two types:</span></span>  
   
--   常數，它的值是在設計階段指派。  雖然並不會使用 `static` \(Visual Basic 中則為 `Shared`\) 關鍵字定義，但是這些常數都是類別的靜態成員。  
+-   <span data-ttu-id="5b6ae-298">常數，它的值是在設計階段指派。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-298">Constants, whose value is assigned at design time.</span></span> <span data-ttu-id="5b6ae-299">雖然並不會使用 `static` (Visual Basic 中則為 `Shared`) 關鍵字定義，但是這些常數都是類別的靜態成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-299">These are static members of a class, although they are not defined using the `static` (`Shared` in Visual Basic) keyword.</span></span>  
   
--   唯讀變數，其值可以在類別建構函式中進行指派。  
+-   <span data-ttu-id="5b6ae-300">唯讀變數，其值可以在類別建構函式中進行指派。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-300">Read-only variables, whose values can be assigned in the class constructor.</span></span>  
   
- 下列範例說明兩種唯讀欄位的使用方法。  
+ <span data-ttu-id="5b6ae-301">下列範例說明兩種唯讀欄位的使用方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-301">The following example illustrates these two usages of read-only fields.</span></span>  
   
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
 <a name="Properties"></a>   
-### 屬性  
- 屬性會為型別的值或狀態命名，並且定義用來取得或設定屬性值的方法。  屬性可以是基本型別、基本型別的集合、使用者定義型別或使用者定義型別的集合。  屬性通常是用來保持型別的公用 \(Public\) 介面與型別的實際表示相互獨立。  這可以讓屬性反映並不直接儲存於類別中的值 \(例如，屬性傳回已計算的值時\)，或者在值指派給私用欄位之前先執行驗證。  下列範例說明第二種模式。  
+### <a name="properties"></a><span data-ttu-id="5b6ae-302">屬性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-302">Properties</span></span>  
+ <span data-ttu-id="5b6ae-303">屬性會為型別的值或狀態命名，並且定義用來取得或設定屬性值的方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-303">A property names a value or state of the type and defines methods for getting or setting the property's value.</span></span> <span data-ttu-id="5b6ae-304">屬性可以是基本型別、基本型別的集合、使用者定義型別或使用者定義型別的集合。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-304">Properties can be primitive types, collections of primitive types, user-defined types, or collections of user-defined types.</span></span> <span data-ttu-id="5b6ae-305">屬性通常是用來保持型別的公用 (Public) 介面與型別的實際表示相互獨立。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-305">Properties are often used to keep the public interface of a type independent from the type's actual representation.</span></span> <span data-ttu-id="5b6ae-306">這可以讓屬性反映並不直接儲存於類別中的值 (例如，屬性傳回已計算的值時)，或者在值指派給私用欄位之前先執行驗證。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-306">This enables properties to reflect values that are not directly stored in the class (for example, when a property returns a computed value) or to perform validation before values are assigned to private fields.</span></span> <span data-ttu-id="5b6ae-307">下列範例說明第二種模式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-307">The following example illustrates the latter pattern.</span></span>  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- 除了含有屬性本身之外，包含可讀取屬性之類型的 Microsoft 中繼語言 \(MSIL\) 也含有 `get_`*propertyname* 方法，而包含可寫入屬性之類型的 MSIL 則含有 `set_`*propertyname* 方法。  
+ <span data-ttu-id="5b6ae-308">除了含有屬性本身之外，包含可讀取屬性之類型的 Microsoft Intermediate Language (MSIL) 也含有 `get_`*propertyname* 方法，而包含可寫入屬性之型別的 MSIL 則含有 `set_`*propertyname* 方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-308">In addition to including the property itself, the Microsoft intermediate language (MSIL) for a type that contains a readable property includes a `get_`*propertyname* method, and the MSIL for a type that contains a writable property includes a `set_`*propertyname* method.</span></span>  
   
 <a name="Methods"></a>   
-### 方法  
- 方法會描述可以在類型上執行的作業。  方法的簽章會指定所有參數和傳回值可使用的型別。  
+### <a name="methods"></a><span data-ttu-id="5b6ae-309">方法</span><span class="sxs-lookup"><span data-stu-id="5b6ae-309">Methods</span></span>  
+ <span data-ttu-id="5b6ae-310">方法會描述可以在類型上執行的作業。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-310">A method describes operations that are available on the type.</span></span> <span data-ttu-id="5b6ae-311">方法的簽章會指定所有參數和傳回值可使用的型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-311">A method's signature specifies the allowable types of all its parameters and of its return value.</span></span>  
   
- 雖然大部分方法都會針對方法呼叫定義所需的精確參數數目，但有些方法可支援數目不定的參數。  這些方法最後一個宣告的參數是以 <xref:System.ParamArrayAttribute> 屬性標記。  語言編譯器通常會提供關鍵字，例如 C\# 中的 `params` 和 Visual Basic 中的 `ParamArray`，如此便不需要明確使用 <xref:System.ParamArrayAttribute>。  
+ <span data-ttu-id="5b6ae-312">雖然大部分方法都會針對方法呼叫定義所需的精確參數數目，但有些方法可支援數目不定的參數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-312">Although most methods define the precise number of parameters required for method calls, some methods support a variable number of parameters.</span></span> <span data-ttu-id="5b6ae-313">這些方法最後一個宣告的參數是以 <xref:System.ParamArrayAttribute> 屬性標記。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-313">The final declared parameter of these methods is marked with the <xref:System.ParamArrayAttribute> attribute.</span></span> <span data-ttu-id="5b6ae-314">語言編譯器通常會提供關鍵字，例如 C# 中的 `params` 和 Visual Basic 中的 `ParamArray`，如此便不需要明確使用 <xref:System.ParamArrayAttribute>。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-314">Language compilers typically provide a keyword, such as `params` in C# and `ParamArray` in Visual Basic, that makes explicit use of <xref:System.ParamArrayAttribute> unnecessary.</span></span>  
   
 <a name="Constructors"></a>   
-### 建構函式  
- 建構函式是一種特殊方法，它會建立類別或結構的新執行個體。  與其他任何方法一樣，建構函式可以包含參數，不過建構函式沒有傳回值，換言之，它們傳回 `void`。  
+### <a name="constructors"></a><span data-ttu-id="5b6ae-315">建構函式</span><span class="sxs-lookup"><span data-stu-id="5b6ae-315">Constructors</span></span>  
+ <span data-ttu-id="5b6ae-316">建構函式是一種特殊方法，它會建立類別或結構的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-316">A constructor is a special kind of method that creates new instances of a class or structure.</span></span> <span data-ttu-id="5b6ae-317">與其他任何方法一樣，建構函式可以包含參數，不過建構函式沒有傳回值，換言之，它們傳回 `void`。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-317">Like any other method, a constructor can include parameters; however, constructors have no return value (that is, they return `void`).</span></span>  
   
- 如果類別的原始程式碼沒有明確定義建構函式，則編譯器會包含預設 \(無參數\) 建構函式。  不過，如果類別的原始程式碼只定義參數化建構函式，Visual Basic 和 C\# 編譯器並不會產生無參數建構函式。  
+ <span data-ttu-id="5b6ae-318">如果類別的原始程式碼沒有明確定義建構函式，則編譯器會包含預設 (無參數) 建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-318">If the source code for a class does not explicitly define a constructor, the compiler includes a default (parameterless) constructor.</span></span> <span data-ttu-id="5b6ae-319">不過，如果類別的原始程式碼只定義參數化建構函式，Visual Basic 和 C# 編譯器並不會產生無參數建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-319">However, if the source code for a class defines only parameterized constructors, the Visual Basic and C# compilers do not generate a parameterless constructor.</span></span>  
   
- 如果結構的原始程式碼定義建構函式，它們必須是參數化建構函式；結構無法定義預設 \(無參數\) 建構函式，而且編譯器不會產生結構或其他實值型別的無參數建構函式。  所有實值型別都有隱含的預設建構函式。  這個建構函式是由 Common Language Runtime 實作，會將結構的所有欄位初始化為其預設值。  
+ <span data-ttu-id="5b6ae-320">如果結構的原始程式碼定義建構函式，它們必須是參數化建構函式；結構無法定義預設 (無參數) 建構函式，而且編譯器不會產生結構或其他實值型別的無參數建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-320">If the source code for a structure defines constructors, they must be parameterized; a structure cannot define a default (parameterless) constructor, and compilers do not generate parameterless constructors for structures or other value types.</span></span> <span data-ttu-id="5b6ae-321">所有實值型別都有隱含的預設建構函式。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-321">All value types do have an implicit default constructor.</span></span> <span data-ttu-id="5b6ae-322">這個建構函式是由 Common Language Runtime 實作，會將結構的所有欄位初始化為其預設值。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-322">This constructor is implemented by the common language runtime and initializes all fields of the structure to their default values.</span></span>  
   
 <a name="Events"></a>   
-### 事件  
- 事件 \(Event\) 會定義可以回應的事件 \(Incident\)，並且定義用於訂閱、取消訂閱和產生事件 \(Event\) 的方法。  事件通常是用來通知其他型別有狀態變更。  如需詳細資訊，請參閱[事件](../../../ml/index.xml)。  
+### <a name="events"></a><span data-ttu-id="5b6ae-323">事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-323">Events</span></span>  
+ <span data-ttu-id="5b6ae-324">事件 (Event) 會定義可以回應的事件 (Incident)，並且定義用於訂閱、取消訂閱和產生事件 (Event) 的方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-324">An event defines an incident that can be responded to, and defines methods for subscribing to, unsubscribing from, and raising the event.</span></span> <span data-ttu-id="5b6ae-325">事件通常是用來通知其他型別有狀態變更。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-325">Events are often used to inform other types of state changes.</span></span> <span data-ttu-id="5b6ae-326">如需詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-326">For more information, see [Events](../../../docs/standard/events/index.md).</span></span>  
   
 <a name="NestedTypes"></a>   
-### 巢狀類型  
- 巢狀型別是一種型別，它是某個其他型別的成員。  巢狀型別應該緊密地與其包含型別結合，且不能與一般用途的型別一樣實用。  當宣告的型別使用及建立巢狀型別的執行個體時，巢狀型別會很有用處，且不會在公用成員中公開此巢狀型別的使用。  
+### <a name="nested-types"></a><span data-ttu-id="5b6ae-327">巢狀類型</span><span class="sxs-lookup"><span data-stu-id="5b6ae-327">Nested Types</span></span>  
+ <span data-ttu-id="5b6ae-328">巢狀型別是一種型別，它是某個其他型別的成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-328">A nested type is a type that is a member of some other type.</span></span> <span data-ttu-id="5b6ae-329">巢狀型別應該緊密地與其包含型別結合，且不能與一般用途的型別一樣實用。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-329">Nested types should be tightly coupled to their containing type and must not be useful as a general-purpose type.</span></span> <span data-ttu-id="5b6ae-330">當宣告的型別使用及建立巢狀型別的執行個體時，巢狀型別會很有用處，且不會在公用成員中公開此巢狀型別的使用。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-330">Nested types are useful when the declaring type uses and creates instances of the nested type, and use of the nested type is not exposed in public members.</span></span>  
   
- 巢狀型別對於一些開發人員來說可能會覺得混淆，所以除非有強制性的理由，否則不應該讓巢狀型別公開可見。  在設計完善的程式庫中，開發人員應極少使用巢狀型別來將物件執行個體化或宣告變數。  
+ <span data-ttu-id="5b6ae-331">巢狀型別對於一些開發人員來說可能會覺得混淆，所以除非有強制性的理由，否則不應該讓巢狀型別公開可見。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-331">Nested types are confusing to some developers and should not be publicly visible unless there is a compelling reason for visibility.</span></span> <span data-ttu-id="5b6ae-332">在設計完善的程式庫中，開發人員應極少使用巢狀型別來將物件執行個體化或宣告變數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-332">In a well-designed library, developers should rarely have to use nested types to instantiate objects or declare variables.</span></span>  
   
- [回到頁首](#top)  
+  
   
 <a name="characteristics_of_type_members"></a>   
-## 型別成員的特性  
- 一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。  下表將描述成員特性。  
+## <a name="characteristics-of-type-members"></a><span data-ttu-id="5b6ae-333">型別成員的特性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-333">Characteristics of Type Members</span></span>  
+ <span data-ttu-id="5b6ae-334">一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-334">The common type system allows type members to have a variety of characteristics; however, languages are not required to support all these characteristics.</span></span> <span data-ttu-id="5b6ae-335">下表將描述成員特性。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-335">The following table describes member characteristics.</span></span>  
   
-|特性|適用於|描述|  
-|--------|---------|--------|  
-|abstract|方法、屬性和事件|型別不提供方法的實作。  繼承或實作抽象方法的型別必須提供方法的實作。  唯一的例外狀況 \(Exception\) 是當衍生型別本身也是抽象型別時。  所有抽象方法都是虛擬的。|  
-|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
-|final|方法、屬性和事件|在衍生型別中無法覆寫虛擬方法。|  
-|initialize\-only|欄位|只能初始化數值，在初始化之後即無法寫入。|  
-|執行個體|欄位、方法、屬性和事件|如果成員未標記為 `static` \(C\# 和 C\+\+\)、`Shared` \(Visual Basic\)、`virtual` \(C\# 和 C\+\+\) 或 `Overridable` \(Visual Basic\)，則為執行個體成員 \(沒有 instance 關鍵字\)。  在記憶體中，這類成員的複本數與使用它的物件數一樣。|  
-|常值|欄位|指定給欄位的數值是在編譯時間得知的內建實值型別的固定值。  常值 \(Literal\) 欄位有時候也稱為常數。|  
-|newslot 或 override|全部|定義成員與具有相同簽章的繼承成員之間的互動方式：<br /><br /> newslot<br /> 隱藏具有相同簽章的繼承成員。<br /><br /> 覆寫<br /> 取代繼承虛擬方法的定義。<br /><br /> 預設值為 newslot。|  
-|靜態|欄位、方法、屬性和事件|成員屬於定義於其上的型別，而非屬於特定的型別執行個體；即使沒有建立型別執行個體，成員仍然存在，而且供型別的所有執行個體共用。|  
-|虛擬|方法、屬性和事件|方法可由衍生型別實作，而且可以用靜態或動態方式叫用。  如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。  若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。|  
+|<span data-ttu-id="5b6ae-336">特性</span><span class="sxs-lookup"><span data-stu-id="5b6ae-336">Characteristic</span></span>|<span data-ttu-id="5b6ae-337">適用於</span><span class="sxs-lookup"><span data-stu-id="5b6ae-337">Can apply to</span></span>|<span data-ttu-id="5b6ae-338">描述</span><span class="sxs-lookup"><span data-stu-id="5b6ae-338">Description</span></span>|  
+|--------------------|------------------|-----------------|  
+|<span data-ttu-id="5b6ae-339">abstract</span><span class="sxs-lookup"><span data-stu-id="5b6ae-339">abstract</span></span>|<span data-ttu-id="5b6ae-340">方法、屬性和事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-340">Methods, properties, and events</span></span>|<span data-ttu-id="5b6ae-341">型別不提供方法的實作。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-341">The type does not supply the method's implementation.</span></span> <span data-ttu-id="5b6ae-342">繼承或實作抽象方法的型別必須提供方法的實作。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-342">Types that inherit or implement abstract methods must supply an implementation for the method.</span></span> <span data-ttu-id="5b6ae-343">唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-343">The only exception is when the derived type is itself an abstract type.</span></span> <span data-ttu-id="5b6ae-344">所有抽象方法都是虛擬的。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-344">All abstract methods are virtual.</span></span>|  
+|<span data-ttu-id="5b6ae-345">private、family、assembly、family 和 assembly、family 或 assembly 或是 public</span><span class="sxs-lookup"><span data-stu-id="5b6ae-345">private, family, assembly, family and assembly, family or assembly, or public</span></span>|<span data-ttu-id="5b6ae-346">全部</span><span class="sxs-lookup"><span data-stu-id="5b6ae-346">All</span></span>|<span data-ttu-id="5b6ae-347">定義成員的存取範圍：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-347">Defines the accessibility of the member:</span></span><br /><br /> <span data-ttu-id="5b6ae-348">private</span><span class="sxs-lookup"><span data-stu-id="5b6ae-348">private</span></span><br /> <span data-ttu-id="5b6ae-349">只能在與成員相同的型別或巢狀型別中存取。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-349">Accessible only from within the same type as the member, or within a nested type.</span></span><br /><br /> <span data-ttu-id="5b6ae-350">family</span><span class="sxs-lookup"><span data-stu-id="5b6ae-350">family</span></span><br /> <span data-ttu-id="5b6ae-351">可在與成員相同的型別和從它繼承而來的衍生型別中存取。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-351">Accessible from within the same type as the member, and from derived types that inherit from it.</span></span><br /><br /> <span data-ttu-id="5b6ae-352">組件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-352">assembly</span></span><br /> <span data-ttu-id="5b6ae-353">只能在已定義型別的組件中存取。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-353">Accessible only in the assembly in which the type is defined.</span></span><br /><br /> <span data-ttu-id="5b6ae-354">family 和 assembly</span><span class="sxs-lookup"><span data-stu-id="5b6ae-354">family and assembly</span></span><br /> <span data-ttu-id="5b6ae-355">只能從同時限定家族和組件存取的型別中存取。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-355">Accessible only from types that qualify for both family and assembly access.</span></span><br /><br /> <span data-ttu-id="5b6ae-356">family 或 assembly</span><span class="sxs-lookup"><span data-stu-id="5b6ae-356">family or assembly</span></span><br /> <span data-ttu-id="5b6ae-357">只能從限定家族或組件之一存取的型別中存取。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-357">Accessible only from types that qualify for either family or assembly access.</span></span><br /><br /> <span data-ttu-id="5b6ae-358">public</span><span class="sxs-lookup"><span data-stu-id="5b6ae-358">public</span></span><br /> <span data-ttu-id="5b6ae-359">可從任何型別中存取。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-359">Accessible from any type.</span></span>|  
+|<span data-ttu-id="5b6ae-360">final</span><span class="sxs-lookup"><span data-stu-id="5b6ae-360">final</span></span>|<span data-ttu-id="5b6ae-361">方法、屬性和事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-361">Methods, properties, and events</span></span>|<span data-ttu-id="5b6ae-362">在衍生型別中無法覆寫虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-362">The virtual method cannot be overridden in a derived type.</span></span>|  
+|<span data-ttu-id="5b6ae-363">initialize-only</span><span class="sxs-lookup"><span data-stu-id="5b6ae-363">initialize-only</span></span>|<span data-ttu-id="5b6ae-364">欄位</span><span class="sxs-lookup"><span data-stu-id="5b6ae-364">Fields</span></span>|<span data-ttu-id="5b6ae-365">只能初始化數值，在初始化之後即無法寫入。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-365">The value can only be initialized, and cannot be written after initialization.</span></span>|  
+|<span data-ttu-id="5b6ae-366">執行個體</span><span class="sxs-lookup"><span data-stu-id="5b6ae-366">instance</span></span>|<span data-ttu-id="5b6ae-367">欄位、方法、屬性和事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-367">Fields, methods, properties, and events</span></span>|<span data-ttu-id="5b6ae-368">如果成員未標記為 `static` (C# 和 C++)、`Shared` (Visual Basic)、`virtual` (C# 和 C++) 或 `Overridable` (Visual Basic)，則為執行個體成員 (沒有 instance 關鍵字)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-368">If a member is not marked as `static` (C# and C++), `Shared` (Visual Basic), `virtual` (C# and C++), or `Overridable` (Visual Basic), it is an instance member (there is no instance keyword).</span></span> <span data-ttu-id="5b6ae-369">在記憶體中，這類成員的複本數與使用它的物件數一樣。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-369">There will be as many copies of such members in memory as there are objects that use it.</span></span>|  
+|<span data-ttu-id="5b6ae-370">常值</span><span class="sxs-lookup"><span data-stu-id="5b6ae-370">literal</span></span>|<span data-ttu-id="5b6ae-371">欄位</span><span class="sxs-lookup"><span data-stu-id="5b6ae-371">Fields</span></span>|<span data-ttu-id="5b6ae-372">指定給欄位的數值是在編譯時間得知的內建實值型別的固定值。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-372">The value assigned to the field is a fixed value, known at compile time, of a built-in value type.</span></span> <span data-ttu-id="5b6ae-373">常值 (Literal) 欄位有時候也稱為常數。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-373">Literal fields are sometimes referred to as constants.</span></span>|  
+|<span data-ttu-id="5b6ae-374">newslot 或 override</span><span class="sxs-lookup"><span data-stu-id="5b6ae-374">newslot or override</span></span>|<span data-ttu-id="5b6ae-375">全部</span><span class="sxs-lookup"><span data-stu-id="5b6ae-375">All</span></span>|<span data-ttu-id="5b6ae-376">定義成員與具有相同簽章的繼承成員之間的互動方式：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-376">Defines how the member interacts with inherited members that have the same signature:</span></span><br /><br /> <span data-ttu-id="5b6ae-377">newslot</span><span class="sxs-lookup"><span data-stu-id="5b6ae-377">newslot</span></span><br /> <span data-ttu-id="5b6ae-378">隱藏具有相同簽章的繼承成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-378">Hides inherited members that have the same signature.</span></span><br /><br /> <span data-ttu-id="5b6ae-379">覆寫</span><span class="sxs-lookup"><span data-stu-id="5b6ae-379">override</span></span><br /> <span data-ttu-id="5b6ae-380">取代繼承虛擬方法的定義。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-380">Replaces the definition of an inherited virtual method.</span></span><br /><br /> <span data-ttu-id="5b6ae-381">預設值為 newslot。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-381">The default is newslot.</span></span>|  
+|<span data-ttu-id="5b6ae-382">靜態</span><span class="sxs-lookup"><span data-stu-id="5b6ae-382">static</span></span>|<span data-ttu-id="5b6ae-383">欄位、方法、屬性和事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-383">Fields, methods, properties, and events</span></span>|<span data-ttu-id="5b6ae-384">成員屬於定義於其上的型別，而非屬於特定的型別執行個體；即使沒有建立型別執行個體，成員仍然存在，而且供型別的所有執行個體共用。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-384">The member belongs to the type it is defined on, not to a particular instance of the type; the member exists even if an instance of the type is not created, and it is shared among all instances of the type.</span></span>|  
+|<span data-ttu-id="5b6ae-385">虛擬</span><span class="sxs-lookup"><span data-stu-id="5b6ae-385">virtual</span></span>|<span data-ttu-id="5b6ae-386">方法、屬性和事件</span><span class="sxs-lookup"><span data-stu-id="5b6ae-386">Methods, properties, and events</span></span>|<span data-ttu-id="5b6ae-387">方法可由衍生型別實作，而且可以用靜態或動態方式叫用。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-387">The method can be implemented by a derived type and can be invoked either statically or dynamically.</span></span> <span data-ttu-id="5b6ae-388">如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-388">If dynamic invocation is used, the type of the instance that makes the call at run time (rather than the type known at compile time) determines which implementation of the method is called.</span></span> <span data-ttu-id="5b6ae-389">若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-389">To invoke a virtual method statically, the variable might have to be cast to a type that uses the desired version of the method.</span></span>|  
   
-### 多載化  
- 每一個型別成員都具有唯一 \(Unique\) 的簽章。  方法簽章包含方法名稱和參數清單 \(方法引數的順序和型別\)。  只要簽章不相同，就可以在型別中定義具有相同名稱的多個方法。  定義兩個或多個具有相同名稱的方法時，就說這個方法是多載。  例如在 <xref:System.Char?displayProperty=fullName> 中，會多載 <xref:System.Char.IsDigit%2A> 方法。  其中一個方法採用 <xref:System.Char>，  另一個方法則採用 <xref:System.String> 與 <xref:System.Int32>。  
+### <a name="overloading"></a><span data-ttu-id="5b6ae-390">多載化</span><span class="sxs-lookup"><span data-stu-id="5b6ae-390">Overloading</span></span>  
+ <span data-ttu-id="5b6ae-391">每一個型別成員都具有唯一 (Unique) 的簽章。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-391">Each type member has a unique signature.</span></span> <span data-ttu-id="5b6ae-392">方法簽章包含方法名稱和參數清單 (方法引數的順序和型別)。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-392">Method signatures consist of the method name and a parameter list (the order and types of the method's arguments).</span></span> <span data-ttu-id="5b6ae-393">只要簽章不相同，就可以在型別中定義具有相同名稱的多個方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-393">Multiple methods with the same name can be defined within a type as long as their signatures differ.</span></span> <span data-ttu-id="5b6ae-394">定義兩個或多個具有相同名稱的方法時，就說這個方法是多載。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-394">When two or more methods with the same name are defined, the method is said to be overloaded.</span></span> <span data-ttu-id="5b6ae-395">例如在 <xref:System.Char?displayProperty=nameWithType> 中，會多載 <xref:System.Char.IsDigit%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-395">For example, in <xref:System.Char?displayProperty=nameWithType>, the <xref:System.Char.IsDigit%2A> method is overloaded.</span></span> <span data-ttu-id="5b6ae-396">其中一個方法採用 <xref:System.Char>，</span><span class="sxs-lookup"><span data-stu-id="5b6ae-396">One method takes a <xref:System.Char>.</span></span> <span data-ttu-id="5b6ae-397">另一個方法則採用 <xref:System.String> 與 <xref:System.Int32>。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-397">The other method takes a <xref:System.String> and an <xref:System.Int32>.</span></span>  
   
 > [!NOTE]
->  傳回型別並不會視為方法簽章的一部分。  換言之，如果這些方法的差異只在於傳回型別，就不能多載這些方法。  
+>  <span data-ttu-id="5b6ae-398">傳回型別並不會視為方法簽章的一部分。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-398">The return type is not considered part of a method's signature.</span></span> <span data-ttu-id="5b6ae-399">換言之，如果這些方法的差異只在於傳回型別，就不能多載這些方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-399">That is, methods cannot be overloaded if they differ only by return type.</span></span>  
   
-### 繼承、覆寫和隱藏成員  
- 衍生型別會繼承其基底型別的所有成員；也就是說，在衍生型別上會定義這些成員，並供衍生型別使用。  繼承成員的行為或品質可用下列兩種方式來修改：  
+### <a name="inheriting-overriding-and-hiding-members"></a><span data-ttu-id="5b6ae-400">繼承、覆寫和隱藏成員</span><span class="sxs-lookup"><span data-stu-id="5b6ae-400">Inheriting, Overriding, and Hiding Members</span></span>  
+ <span data-ttu-id="5b6ae-401">衍生型別會繼承其基底型別的所有成員；也就是說，在衍生型別上會定義這些成員，並供衍生型別使用。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-401">A derived type inherits all members of its base type; that is, these members are defined on, and available to, the derived type.</span></span> <span data-ttu-id="5b6ae-402">繼承成員的行為或品質可用下列兩種方式來修改：</span><span class="sxs-lookup"><span data-stu-id="5b6ae-402">The behavior or qualities of inherited members can be modified in two ways:</span></span>  
   
--   衍生型別可用相同的簽章定義新的成員，如此便可隱藏繼承的成員。  您可以將原先為 public 的成員設為 private 成員，或是為標記為 `final` 的繼承方法定義新的行為。  
+-   <span data-ttu-id="5b6ae-403">衍生型別可用相同的簽章定義新的成員，如此便可隱藏繼承的成員。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-403">A derived type can hide an inherited member by defining a new member with the same signature.</span></span> <span data-ttu-id="5b6ae-404">您可以將原先為 public 的成員設為 private 成員，或是為標記為 `final` 的繼承方法定義新的行為。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-404">This might be done to make a previously public member private or to define new behavior for an inherited method that is marked as `final`.</span></span>  
   
--   衍生型別可覆寫繼承的虛擬方法。  覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。  只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
+-   <span data-ttu-id="5b6ae-405">衍生型別可覆寫繼承的虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-405">A derived type can override an inherited virtual method.</span></span> <span data-ttu-id="5b6ae-406">覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-406">The overriding method provides a new definition of the method that will be invoked based on the type of the value at run time rather than the type of the variable known at compile time.</span></span> <span data-ttu-id="5b6ae-407">只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="5b6ae-407">A method can override a virtual method only if the virtual method is not marked as `final` and the new method is at least as accessible as the virtual method.</span></span>  
   
-## 請參閱  
- [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=217856)   
- [Common Language Runtime](../../../ocs/standard/clr.md)   
- [.NET Framework 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a><span data-ttu-id="5b6ae-408">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b6ae-408">See Also</span></span>  
+ [<span data-ttu-id="5b6ae-409">.NET 類別庫</span><span class="sxs-lookup"><span data-stu-id="5b6ae-409">.NET Class Library</span></span>](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [<span data-ttu-id="5b6ae-410">Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="5b6ae-410">Common Language Runtime</span></span>](../../../docs/standard/clr.md)  
+ [<span data-ttu-id="5b6ae-411">.NET 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="5b6ae-411">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)

@@ -1,100 +1,103 @@
 ---
-title: "Threads and Threading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "multiple threads"
-  - "threading [.NET Framework]"
-  - "threading [.NET Framework], multiple threads"
+title: "執行緒和執行緒處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple threads
+- threading [.NET Framework]
+- threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b57cac34009e13c27c6d34a0ab402f9ecbe08305
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Threads and Threading
-作業系統使用處理序來分隔它們正在執行的不同應用程式。  執行緒是作業系統分配處理器時間的基本單元，而一個處理序中可有多個執行緒執行程式碼。  每個執行緒都維護例外狀況處理常式 \(Exception Handler\)、排程優先權，以及系統用來在執行緒排程之前儲存其內容的一組結構。  執行緒內容包含執行緒在執行緒之主處理序的位址空間中順利繼續執行所需的所有資訊，其中包括執行緒的一組 CPU 暫存器和堆疊。  
+# <a name="threads-and-threading"></a><span data-ttu-id="b84d4-102">執行緒和執行緒處理</span><span class="sxs-lookup"><span data-stu-id="b84d4-102">Threads and Threading</span></span>
+<span data-ttu-id="b84d4-103">作業系統會使用處理程序，來分隔不同一起執行的應用程式。</span><span class="sxs-lookup"><span data-stu-id="b84d4-103">Operating systems use processes to separate the different applications that they are executing.</span></span> <span data-ttu-id="b84d4-104">執行緒會作業系統會配置處理器時間的基本單位，而且多個執行緒可執行該程序內的程式碼。</span><span class="sxs-lookup"><span data-stu-id="b84d4-104">Threads are the basic unit to which an operating system allocates processor time, and more than one thread can be executing code inside that process.</span></span> <span data-ttu-id="b84d4-105">每個執行緒各維護例外狀況處理常式、 排程的優先權和一組系統用來儲存的執行緒內容，直到它已排程的結構。</span><span class="sxs-lookup"><span data-stu-id="b84d4-105">Each thread maintains exception handlers, a scheduling priority, and a set of structures the system uses to save the thread context until it is scheduled.</span></span> <span data-ttu-id="b84d4-106">執行緒內容會包含執行緒順利繼續執行，包括在執行緒的主控件程序的位址空間中 CPU 暫存器和堆疊、 執行緒的集所需的所有資訊。</span><span class="sxs-lookup"><span data-stu-id="b84d4-106">The thread context includes all the information the thread needs to seamlessly resume execution, including the thread's set of CPU registers and stack, in the address space of the thread's host process.</span></span>  
   
- .NET Framework 會進一步將作業系統處理序細分為輕量型 Managed 子處理序 \(稱為應用程式定義域\)，由 <xref:System.AppDomain?displayProperty=fullName> 表示。  一個或多個 Managed 執行緒 \(由 <xref:System.Threading.Thread?displayProperty=fullName> 表示\) 可在相同 Managed 處理序內的一個或數個應用程式定義域中執行。  雖然每個應用程式定義域是由單一執行緒所啟動，但應用程式定義域中的程式碼可建立其他應用程式定義域和其他執行緒。  結果是，Managed 執行緒可在同樣 Managed 處理序中的各個應用程式定義域之間自由移動；而您只能有一個執行緒在數個應用程式定義域之間移動。  
+ <span data-ttu-id="b84d4-107">.NET Framework 進一步細分為輕量級 managed 子處理序，呼叫應用程式定義域，由的作業系統處理序<xref:System.AppDomain?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b84d4-107">The .NET Framework further subdivides an operating system process into lightweight managed subprocesses, called application domains, represented by <xref:System.AppDomain?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b84d4-108">一或多個 managed 的執行緒 (由<xref:System.Threading.Thread?displayProperty=nameWithType>) 可以在一個或多個相同的受管理處理序中的應用程式定義域中執行。</span><span class="sxs-lookup"><span data-stu-id="b84d4-108">One or more managed threads (represented by <xref:System.Threading.Thread?displayProperty=nameWithType>) can run in one or any number of application domains within the same managed process.</span></span> <span data-ttu-id="b84d4-109">雖然每個應用程式定義域與單一執行緒啟動時，應用程式定義域中的程式碼可以建立其他應用程式定義域和其他執行緒。</span><span class="sxs-lookup"><span data-stu-id="b84d4-109">Although each application domain is started with a single thread, code in that application domain can create additional application domains and additional threads.</span></span> <span data-ttu-id="b84d4-110">結果是在相同的 managed 處理序; 的應用程式網域之間移動 managed 的執行緒可以自由地您可能必須只有一個執行緒在多個應用程式網域的網域間移動。</span><span class="sxs-lookup"><span data-stu-id="b84d4-110">The result is that a managed thread can move freely between application domains inside the same managed process; you might have only one thread moving among several application domains.</span></span>  
   
- 支援先佔式多工的作業系統能夠從多個處理序產生同時執行多個執行緒的效果。  方法是將可用的處理器時間分給需要它的執行緒，依序將處理序時間量分配給每個執行緒。  目前執行的執行緒會在分配給它的時間量超過時暫止，同時另一個執行緒則繼續執行。  當系統從一執行緒切換至另一執行緒時，它會儲存先佔執行緒的執行緒內容，然後重新載入執行緒佇列中下一個執行緒的已存執行緒內容。  
+ <span data-ttu-id="b84d4-111">支援先佔式多工作業的作業系統從多個處理序，建立多個執行緒同時執行的效果。</span><span class="sxs-lookup"><span data-stu-id="b84d4-111">An operating system that supports preemptive multitasking creates the effect of simultaneous execution of multiple threads from multiple processes.</span></span> <span data-ttu-id="b84d4-112">其做法是除以需要它的執行緒之間可用的處理器時間，依序配置給每個執行緒的處理器時間配量。</span><span class="sxs-lookup"><span data-stu-id="b84d4-112">It does this by dividing the available processor time among the threads that need it, allocating a processor time slice to each thread one after another.</span></span> <span data-ttu-id="b84d4-113">當它的時間配量已超過，而另一個執行緒則繼續執行時，將暫停目前執行中執行緒。</span><span class="sxs-lookup"><span data-stu-id="b84d4-113">The currently executing thread is suspended when its time slice elapses, and another thread resumes running.</span></span> <span data-ttu-id="b84d4-114">系統會從一個執行緒切換到另一個，它會將儲存的先佔執行緒的執行緒內容，並重新載入已儲存的執行緒內容的執行緒佇列中的下一個執行緒。</span><span class="sxs-lookup"><span data-stu-id="b84d4-114">When the system switches from one thread to another, it saves the thread context of the preempted thread and reloads the saved thread context of the next thread in the thread queue.</span></span>  
   
- 時間量的長度則要視作業系統和處理器而定。  由於每段時間極短，因此即使只有一個處理器，多個執行緒看起來還是像同時執行一樣。  這就是多處理器系統上的實際狀況，其中可執行的執行緒會在可用的處理器中散發。  
+ <span data-ttu-id="b84d4-115">長度的時間配量取決於作業系統和處理器。</span><span class="sxs-lookup"><span data-stu-id="b84d4-115">The length of the time slice depends on the operating system and the processor.</span></span> <span data-ttu-id="b84d4-116">因為每個時間配量很小，即使只有一個處理器來執行相同的時間，會顯示多個執行緒。</span><span class="sxs-lookup"><span data-stu-id="b84d4-116">Because each time slice is small, multiple threads appear to be executing at the same time, even if there is only one processor.</span></span> <span data-ttu-id="b84d4-117">這是多處理器的系統上的實際狀況可執行的執行緒在可用的處理器之間的發佈位置。</span><span class="sxs-lookup"><span data-stu-id="b84d4-117">This is actually the case on multiprocessor systems, where the executable threads are distributed among the available processors.</span></span>  
   
-## 何時使用多個執行緒  
- 需要使用者互動的軟體必須儘快回應使用者的活動，以便提供豐富的使用者經驗。  不過，同時它也必須執行需要的計算以儘快提供使用者資料。  如果您的應用程式只使用一個執行緒，您可將[非同步程式設計](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)和 [.NET 遠端處理](http://msdn.microsoft.com/zh-tw/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或使用 ASP.NET 建立的 [XML Web Service](http://msdn.microsoft.com/zh-tw/1e64af78-d705-4384-b08d-591a45f4379c) 結合一起，如此在使用本身的處理時間之外還可加上其他電腦的處理時間，藉此增加對使用者的回應性，並減少您的應用程式處理資料的時間。  如果您是執行耗用大量的輸出入 \(I\/O\) 工作，您也可使用 I\/O 完成通訊埠來增加應用程式的回應速度。  
+## <a name="when-to-use-multiple-threads"></a><span data-ttu-id="b84d4-118">使用多個執行緒的時機</span><span class="sxs-lookup"><span data-stu-id="b84d4-118">When To Use Multiple Threads</span></span>  
+ <span data-ttu-id="b84d4-119">需要使用者互動的軟體必須儘可能提供豐富的使用者經驗快速回應使用者的活動。</span><span class="sxs-lookup"><span data-stu-id="b84d4-119">Software that requires user interaction must react to the user's activities as rapidly as possible to provide a rich user experience.</span></span> <span data-ttu-id="b84d4-120">不過，在相同的時間，它必須執行需要盡快對使用者顯示資料的計算。</span><span class="sxs-lookup"><span data-stu-id="b84d4-120">At the same time, however, it must do the calculations necessary to present data to the user as fast as possible.</span></span> <span data-ttu-id="b84d4-121">如果您的應用程式只使用一個執行緒的執行，您可以結合[非同步程式設計](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)與[.NET Framework 遠端處理](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或[XML Web service](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)建立使用 ASP.NET 的處理時間，其他電腦的功能使用的使用者及減少您的應用程式的資料處理時間增加自己回應性。</span><span class="sxs-lookup"><span data-stu-id="b84d4-121">If your application uses only one thread of execution, you can combine [asynchronous programming](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) with[.NET Framework remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) or [XML Web services](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c) created using ASP.NET to use the processing time of other computers in addition to that of your own to increase responsiveness to the user and decrease the data processing time of your application.</span></span> <span data-ttu-id="b84d4-122">如果您進行大量輸入/輸出工作，您也可以使用以提高應用程式的回應 I/O 完成通訊埠。</span><span class="sxs-lookup"><span data-stu-id="b84d4-122">If you are doing intensive input/output work, you can also use I/O completion ports to increase your application's responsiveness.</span></span>  
   
-### 多執行緒的優點  
- 不過，使用多個執行緒是現行最能夠增加對使用者的回應速度，而且又能幾乎同時處理完成工作所需的資料。  在具有一個處理器的電腦上，多個執行緒利用使用者事件之間的短暫時間來在背景 \(Background\) 處理資料就可達到這種效果。  例如，使用者可在另一個執行緒重新計算試算表其他部分時，在同一應用程式內編輯試算表。  
+### <a name="advantages-of-multiple-threads"></a><span data-ttu-id="b84d4-123">多執行緒的優點</span><span class="sxs-lookup"><span data-stu-id="b84d4-123">Advantages of Multiple Threads</span></span>  
+ <span data-ttu-id="b84d4-124">不過，使用多個執行緒，是最強大的技術可用來加快對使用者和處理幾乎相同的時間完成工作所需的資料。</span><span class="sxs-lookup"><span data-stu-id="b84d4-124">Using more than one thread, however, is the most powerful technique available to increase responsiveness to the user and process the data necessary to get the job done at almost the same time.</span></span> <span data-ttu-id="b84d4-125">一個處理器的電腦上多個執行緒可以建立此效果，請利用短暫的時間來處理在背景中的資料的使用者事件之間。</span><span class="sxs-lookup"><span data-stu-id="b84d4-125">On a computer with one processor, multiple threads can create this effect, taking advantage of the small periods of time in between user events to process the data in the background.</span></span> <span data-ttu-id="b84d4-126">例如，使用者可以編輯試算表，而另一個執行緒正在重新計算的試算表中同一個應用程式其他部分。</span><span class="sxs-lookup"><span data-stu-id="b84d4-126">For example, a user can edit a spreadsheet while another thread is recalculating other parts of the spreadsheet within the same application.</span></span>  
   
- 在相同的條件下，當在具有多個處理器的電腦上執行時，相同的應用程式會大幅提升使用者的滿意度。  您的單一應用程式定義域可使用多個執行緒來完成下列工作：  
+ <span data-ttu-id="b84d4-127">不需修改相同的應用程式，會大幅增加在具有一個以上處理器的電腦上執行時，使用者滿意度。</span><span class="sxs-lookup"><span data-stu-id="b84d4-127">Without modification, the same application would dramatically increase user satisfaction when run on a computer with more than one processor.</span></span> <span data-ttu-id="b84d4-128">單一應用程式定義域可以使用多個執行緒來完成下列工作：</span><span class="sxs-lookup"><span data-stu-id="b84d4-128">Your single application domain could use multiple threads to accomplish the following tasks:</span></span>  
   
--   在網路上與 Web 伺服器和資料庫通訊。  
+-   <span data-ttu-id="b84d4-129">在網路上的網頁伺服器，和資料庫通訊。</span><span class="sxs-lookup"><span data-stu-id="b84d4-129">Communicate over a network, to a Web server, and to a database.</span></span>  
   
--   執行需耗用大量時間的作業。  
+-   <span data-ttu-id="b84d4-130">執行需要大量時間的作業。</span><span class="sxs-lookup"><span data-stu-id="b84d4-130">Perform operations that take a large amount of time.</span></span>  
   
--   區分不同優先權的工作。  例如，高優先權執行緒處理時間緊急的工作，而低優先權執行緒執行其他工作。  
+-   <span data-ttu-id="b84d4-131">區分不同優先權的工作。</span><span class="sxs-lookup"><span data-stu-id="b84d4-131">Distinguish tasks of varying priority.</span></span> <span data-ttu-id="b84d4-132">例如，較高優先順序的執行緒管理時間緊急工作，並較低優先順序的執行緒會執行其他工作。</span><span class="sxs-lookup"><span data-stu-id="b84d4-132">For example, a high-priority thread manages time-critical tasks, and a low-priority thread performs other tasks.</span></span>  
   
--   允許使用者介面保持回應性，同時將時間分配給背景工作。  
+-   <span data-ttu-id="b84d4-133">允許在配置給背景工作的時間時保持回應性，使用者介面。</span><span class="sxs-lookup"><span data-stu-id="b84d4-133">Allow the user interface to remain responsive, while allocating time to background tasks.</span></span>  
   
-### 多執行緒的缺點  
- 建議您盡量少用執行緒，這樣可使作業系統資源的使用量降到最低並增進效能。  當您設計應用程式時，也應將執行緒處理的資源需求和可能發生的衝突列入考量。  資源需求如下：  
+### <a name="disadvantages-of-multiple-threads"></a><span data-ttu-id="b84d4-134">多執行緒的缺點</span><span class="sxs-lookup"><span data-stu-id="b84d4-134">Disadvantages of Multiple Threads</span></span>  
+ <span data-ttu-id="b84d4-135">建議您盡量，藉此將作業系統資源的使用降至最低並增進效能，使用執行緒數目。</span><span class="sxs-lookup"><span data-stu-id="b84d4-135">It is recommended that you use as few threads as possible, thereby minimizing the use of operating-system resources and improving performance.</span></span> <span data-ttu-id="b84d4-136">執行緒也有資源需求，並視為設計您的應用程式時可能發生的衝突。</span><span class="sxs-lookup"><span data-stu-id="b84d4-136">Threading also has resource requirements and potential conflicts to be considered when designing your application.</span></span> <span data-ttu-id="b84d4-137">資源需求如下所示：</span><span class="sxs-lookup"><span data-stu-id="b84d4-137">The resource requirements are as follows:</span></span>  
   
--   系統會為處理序、**AppDomain** 物件和執行緒所需的內容資訊耗用記憶體。  因此，可以建立的處理序、**AppDomain** 物件和執行緒數量就會受到可用記憶體的限制。  
+-   <span data-ttu-id="b84d4-138">系統會耗用記憶體的處理程序所需的內容資訊**AppDomain**物件和執行緒。</span><span class="sxs-lookup"><span data-stu-id="b84d4-138">The system consumes memory for the context information required by processes, **AppDomain** objects, and threads.</span></span> <span data-ttu-id="b84d4-139">因此，處理序的數目， **AppDomain**物件和可以建立的執行緒會受到可用記憶體。</span><span class="sxs-lookup"><span data-stu-id="b84d4-139">Therefore, the number of processes, **AppDomain** objects, and threads that can be created is limited by available memory.</span></span>  
   
--   記錄大量執行緒會耗用相當多的處理器時間。  如果同時有太多執行緒，則其中多數的進度會相當緩慢。  如果目前的執行緒大都在同一處理序中，則排到其他處理序中執行緒的機會就會減少。  
+-   <span data-ttu-id="b84d4-140">追蹤的大量執行緒會耗用大量的處理器時間。</span><span class="sxs-lookup"><span data-stu-id="b84d4-140">Keeping track of a large number of threads consumes significant processor time.</span></span> <span data-ttu-id="b84d4-141">如果有太多執行緒，大部分不是會使大量的進度。</span><span class="sxs-lookup"><span data-stu-id="b84d4-141">If there are too many threads, most of them will not make significant progress.</span></span> <span data-ttu-id="b84d4-142">如果目前執行緒的大部分一個處理序中，其他處理序中的執行緒排定較少。</span><span class="sxs-lookup"><span data-stu-id="b84d4-142">If most of the current threads are in one process, threads in other processes are scheduled less frequently.</span></span>  
   
--   控制其中使用許多執行緒的程式碼執行是相當複雜的一件事，而且可能會產生許多錯誤。  
+-   <span data-ttu-id="b84d4-143">控制使用多執行緒程式碼執行相當複雜，而且可以很多 bug 的來源。</span><span class="sxs-lookup"><span data-stu-id="b84d4-143">Controlling code execution with many threads is complex, and can be a source of many bugs.</span></span>  
   
--   您需要知道終結執行緒時可能發生何種情況，並知道如何處理。  
+-   <span data-ttu-id="b84d4-144">終結執行緒需要了解可能發生什麼事，以及處理這些問題。</span><span class="sxs-lookup"><span data-stu-id="b84d4-144">Destroying threads requires knowing what could happen and handling those issues.</span></span>  
   
- 提供資源的共用存取可能會產生衝突。  若要避免衝突發生，您必須同步或控制共用資源的存取。  無法適當同步存取 \(無論是在相同或不同的應用程式定義域中\) 可能會引發死結 \(兩個執行緒停止回應來等候對方完成工作\) 和競爭情形 \(因未預期且嚴重依賴兩事件執行時間而發生的異常結果\)。  系統提供可用來協調多個執行緒之間資源共用的同步物件 \(Synchronization Object\)。  減少執行緒的數量會使同步處理資源更為容易。  
+ <span data-ttu-id="b84d4-145">提供共用的資源的存取權可能會產生衝突。</span><span class="sxs-lookup"><span data-stu-id="b84d4-145">Providing shared access to resources can create conflicts.</span></span> <span data-ttu-id="b84d4-146">若要避免衝突，您必須同步處理，或控制共用資源的存取。</span><span class="sxs-lookup"><span data-stu-id="b84d4-146">To avoid conflicts, you must synchronize, or control the access to, shared resources.</span></span> <span data-ttu-id="b84d4-147">以同步存取正確 （在相同或不同的應用程式網域中） 的失敗可能會造成問題，像是死結 （兩個執行緒停止回應每個等候另一個完成時） 和競爭情形 （由於發生的異常結果非預期且嚴重依賴兩個事件的計時）。</span><span class="sxs-lookup"><span data-stu-id="b84d4-147">Failure to synchronize access properly (in the same or different application domains) can lead to problems such as deadlocks (in which two threads stop responding while each waits for the other to complete) and race conditions (when an anomalous result occurs due to an unexpected critical dependence on the timing of two events).</span></span> <span data-ttu-id="b84d4-148">系統會提供可以用來協調多個執行緒之間共用資源的同步處理物件。</span><span class="sxs-lookup"><span data-stu-id="b84d4-148">The system provides synchronization objects that can be used to coordinate resource sharing among multiple threads.</span></span> <span data-ttu-id="b84d4-149">減少執行緒數目，可以更輕鬆地同步處理資源。</span><span class="sxs-lookup"><span data-stu-id="b84d4-149">Reducing the number of threads makes it easier to synchronize resources.</span></span>  
   
- 需要同步的資源包括：  
+ <span data-ttu-id="b84d4-150">需要同步處理的資源包括：</span><span class="sxs-lookup"><span data-stu-id="b84d4-150">Resources that require synchronization include:</span></span>  
   
--   系統資源 \(例如通訊連接埠\)。  
+-   <span data-ttu-id="b84d4-151">系統資源 （例如通訊連接埠）。</span><span class="sxs-lookup"><span data-stu-id="b84d4-151">System resources (such as communications ports).</span></span>  
   
--   多個處理序共用的資源 \(例如檔案控制代碼，File Handle\)。  
+-   <span data-ttu-id="b84d4-152">資源 （例如檔案控制代碼） 的多個處理程序共用。</span><span class="sxs-lookup"><span data-stu-id="b84d4-152">Resources shared by multiple processes (such as file handles).</span></span>  
   
--   多個執行緒存取的單一應用程式定義域的資源 \(例如全域、靜態和執行個體欄位\)。  
+-   <span data-ttu-id="b84d4-153">單一應用程式網域的資源 (例如 全域、 靜態和執行個體欄位) 多個執行緒存取。</span><span class="sxs-lookup"><span data-stu-id="b84d4-153">The resources of a single application domain (such as global, static, and instance fields) accessed by multiple threads.</span></span>  
   
-### 執行緒處理和應用程式設計  
- 一般來說，針對不會阻礙其他執行緒的較短時間工作，以及當您的工作沒有特定排程時，使用 <xref:System.Threading.ThreadPool> 類別是處理多個執行緒最簡單的方法。  不過，要建立您自己的執行緒的原因如下：  
+### <a name="threading-and-application-design"></a><span data-ttu-id="b84d4-154">執行緒和應用程式的設計</span><span class="sxs-lookup"><span data-stu-id="b84d4-154">Threading and Application Design</span></span>  
+ <span data-ttu-id="b84d4-155">一般情況下，使用<xref:System.Threading.ThreadPool>類別是最簡單的方式處理多個執行緒進行相對較短的工作，不會封鎖其他執行緒，以及當您不希望特定排程的工作。</span><span class="sxs-lookup"><span data-stu-id="b84d4-155">In general, using the <xref:System.Threading.ThreadPool> class is the easiest way to handle multiple threads for relatively short tasks that will not block other threads and when you do not expect any particular scheduling of the tasks.</span></span> <span data-ttu-id="b84d4-156">不過，有多種原因，若要建立您自己的執行緒：</span><span class="sxs-lookup"><span data-stu-id="b84d4-156">However, there are a number of reasons to create your own threads:</span></span>  
   
--   如果您要使一項工作具有特定的優先權。  
+-   <span data-ttu-id="b84d4-157">如果您需要為特定優先順序的工作。</span><span class="sxs-lookup"><span data-stu-id="b84d4-157">If you need a task to have a particular priority.</span></span>  
   
--   如果您要使一項工作可長期執行 \(並因此而封鎖其他工作\)。  
+-   <span data-ttu-id="b84d4-158">如果您有可能會執行很長的時間 （並因此而封鎖其他工作） 的工作。</span><span class="sxs-lookup"><span data-stu-id="b84d4-158">If you have a task that might run a long time (and therefore block other tasks).</span></span>  
   
--   如果您必須將執行緒置入單一執行緒 Apartment 中 \(所有的 **ThreadPool** 執行緒均置於多執行緒 Apartment 中\)。  
+-   <span data-ttu-id="b84d4-159">如果您需要將執行緒放入單一執行緒 apartment (所有**ThreadPool**執行緒都會在多執行緒的 apartment)。</span><span class="sxs-lookup"><span data-stu-id="b84d4-159">If you need to place threads into a single-threaded apartment (all **ThreadPool** threads are in the multithreaded apartment).</span></span>  
   
--   如果您需要與執行緒關聯的穩定識別。  例如，您應使用專用執行緒來中止、暫止或以名稱尋找它。  
+-   <span data-ttu-id="b84d4-160">如果您需要一個與執行緒相關聯的固定識別。</span><span class="sxs-lookup"><span data-stu-id="b84d4-160">If you need a stable identity associated with the thread.</span></span> <span data-ttu-id="b84d4-161">比方說，您應該使用專用的執行緒中止的執行緒、 暫止，或依名稱探索它。</span><span class="sxs-lookup"><span data-stu-id="b84d4-161">For example, you should use a dedicated thread to abort that thread, suspend it, or discover it by name.</span></span>  
   
--   如果您需要執行與使用者介面互動的背景執行緒，.NET Framework 2.0 版提供了 <xref:System.ComponentModel.BackgroundWorker> 元件，可使用事件來進行溝通，並以跨執行緒方式封送處理至使用者介面執行緒。  
+-   <span data-ttu-id="b84d4-162">如果您需要執行與使用者介面互動的背景執行緒，.NET Framework 2.0 版提供<xref:System.ComponentModel.BackgroundWorker>通訊使用的事件，與跨執行緒封送處理，在使用者介面執行緒的元件。</span><span class="sxs-lookup"><span data-stu-id="b84d4-162">If you need to run background threads that interact with the user interface, the .NET Framework version 2.0 provides a <xref:System.ComponentModel.BackgroundWorker> component that communicates using events, with cross-thread marshaling to the user-interface thread.</span></span>  
   
-### 執行緒處理和例外狀況  
- 一定要處理執行緒中的例外狀況。  執行緒 \(甚至是背景執行緒\) 中未處理的例外狀況，通常會結束處理序。  此項規則有三個例外情形：  
+### <a name="threading-and-exceptions"></a><span data-ttu-id="b84d4-163">執行緒和例外狀況</span><span class="sxs-lookup"><span data-stu-id="b84d4-163">Threading and Exceptions</span></span>  
+ <span data-ttu-id="b84d4-164">處理執行緒中的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="b84d4-164">Do handle exceptions in threads.</span></span> <span data-ttu-id="b84d4-165">執行緒，甚至是背景執行緒中的未處理例外狀況通常會終止處理序。</span><span class="sxs-lookup"><span data-stu-id="b84d4-165">Unhandled exceptions in threads, even background threads, generally terminate the process.</span></span> <span data-ttu-id="b84d4-166">這項規則有三個例外狀況：</span><span class="sxs-lookup"><span data-stu-id="b84d4-166">There are three exceptions to this rule:</span></span>  
   
--   在執行緒中擲回 <xref:System.Threading.ThreadAbortException>，因為已呼叫 <xref:System.Threading.Thread.Abort%2A>。  
+-   <span data-ttu-id="b84d4-167">A<xref:System.Threading.ThreadAbortException>因為在執行緒中擲回<xref:System.Threading.Thread.Abort%2A>呼叫。</span><span class="sxs-lookup"><span data-stu-id="b84d4-167">A <xref:System.Threading.ThreadAbortException> is thrown in a thread because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   在執行緒中擲回 <xref:System.AppDomainUnloadedException>，因為正在卸載應用程式定義域。  
+-   <span data-ttu-id="b84d4-168"><xref:System.AppDomainUnloadedException>正在卸載應用程式定義域，因為在執行緒中擲回。</span><span class="sxs-lookup"><span data-stu-id="b84d4-168">An <xref:System.AppDomainUnloadedException> is thrown in a thread because the application domain is being unloaded.</span></span>  
   
--   Common Language Runtime 或主應用程式處理序會結束此執行緒。  
+-   <span data-ttu-id="b84d4-169">Common Language Runtime 或主應用程式處理序會結束這個執行緒。</span><span class="sxs-lookup"><span data-stu-id="b84d4-169">The common language runtime or a host process terminates the thread.</span></span>  
   
- 如需詳細資訊，請參閱 [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
+ <span data-ttu-id="b84d4-170">如需詳細資訊，請參閱[Managed 執行緒中的例外狀況](../../../docs/standard/threading/exceptions-in-managed-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="b84d4-170">For more information, see [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
   
 > [!NOTE]
->  在 .NET Framework 1.0 和 1.1 版中，Common Language Runtime 會以無訊息模式截獲某些例外狀況，例如，在執行緒集區執行緒中。  如此一來，可能會損壞應用程式狀態，而最後導致應用程式無回應，這樣可能會讓偵錯工作變得相當困難。  
+>  <span data-ttu-id="b84d4-171">在.NET framework 1.0 和 1.1 版中，通用語言執行平台以無訊息模式設陷某些例外狀況，例如在執行緒集區。</span><span class="sxs-lookup"><span data-stu-id="b84d4-171">In the .NET Framework versions 1.0 and 1.1, the common language runtime silently traps some exceptions, for example in thread pool threads.</span></span> <span data-ttu-id="b84d4-172">這可能會破壞應用程式狀態，最終導致應用程式沒有回應，這可能很難偵錯。</span><span class="sxs-lookup"><span data-stu-id="b84d4-172">This may corrupt application state and eventually cause applications to hang, which might be very difficult to debug.</span></span>  
   
-## 請參閱  
- <xref:System.Threading.ThreadPool>   
- <xref:System.ComponentModel.BackgroundWorker>   
- [Synchronizing Data for Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)   
- [The Managed Thread Pool](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a><span data-ttu-id="b84d4-173">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b84d4-173">See Also</span></span>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="b84d4-174">同步處理多執行緒處理的資料</span><span class="sxs-lookup"><span data-stu-id="b84d4-174">Synchronizing Data for Multithreading</span></span>](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [<span data-ttu-id="b84d4-175">Managed 執行緒集區</span><span class="sxs-lookup"><span data-stu-id="b84d4-175">The Managed Thread Pool</span></span>](../../../docs/standard/threading/the-managed-thread-pool.md)

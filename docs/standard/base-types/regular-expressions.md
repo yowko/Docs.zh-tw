@@ -1,126 +1,132 @@
 ---
-title: ".NET Framework 規則運算式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 規則運算式"
-  - ".NET Framework 規則運算式, 關於"
-  - "字元 [.NET Framework], 規則運算式"
-  - "使用規則運算式剖析文字"
-  - "使用規則運算式剖析文字, 概觀"
-  - "使用規則運算式的模式比對"
-  - "使用規則運算式的模式比對, 關於模式比對"
-  - "規則運算式 [.NET Framework]"
-  - "規則運算式 [.NET Framework], 關於規則運算式"
-  - "使用規則運算式搜尋"
-  - "使用規則運算式搜尋, 關於規則運算式"
-  - "字串 [.NET Framework], 規則運算式"
-  - "子字串"
+title: ".NET Framework 規則運算式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- pattern-matching with regular expressions, about pattern-matching
+- substrings
+- searching with regular expressions, about regular expressions
+- pattern-matching with regular expressions
+- searching with regular expressions
+- parsing text with regular expressions
+- regular expressions [.NET Framework], about regular expressions
+- regular expressions [.NET Framework]
+- .NET Framework regular expressions, about
+- characters [.NET Framework], regular expressions
+- parsing text with regular expressions, overview
+- .NET Framework regular expressions
+- strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cb612d524f32eb4a97ac358d6deb8d2889ee5391
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework 規則運算式
-規則運算式提供功能強大、彈性且有效率的方法來處理文字。  規則運算式的廣泛模式比對標記法可讓您快速剖析大量文字，以尋找特定的字元模式；驗證文字，以確保其符合預先定義的模式 \(例如電子郵件地址\)；擷取、編輯、取代或刪除文字子字串；以及將擷取的字串加入集合中，以產生報告。  對許多處理字串或剖析大型文字區塊的應用程式而言，規則運算式是不可或缺的工具。  
+# <a name="net-regular-expressions"></a><span data-ttu-id="6ff1e-102">.NET 規則運算式</span><span class="sxs-lookup"><span data-stu-id="6ff1e-102">.NET Regular Expressions</span></span>
+<span data-ttu-id="6ff1e-103">規則運算式提供功能強大、彈性且有效率的方法來處理文字。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-103">Regular expressions provide a powerful, flexible, and efficient method for processing text.</span></span> <span data-ttu-id="6ff1e-104">規則運算式的廣泛模式比對標記法可讓您快速剖析大量文字，以尋找特定的字元模式；驗證文字，以確保其符合預先定義的模式 (例如電子郵件地址)；擷取、編輯、取代或刪除文字子字串；以及將擷取的字串加入集合中，以產生報告。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-104">The extensive pattern-matching notation of regular expressions enables you to quickly parse large amounts of text to find specific character patterns; to validate text to ensure that it matches a predefined pattern (such as an e-mail address); to extract, edit, replace, or delete text substrings; and to add the extracted strings to a collection in order to generate a report.</span></span> <span data-ttu-id="6ff1e-105">對許多處理字串或剖析大型文字區塊的應用程式而言，規則運算式是不可或缺的工具。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-105">For many applications that deal with strings or that parse large blocks of text, regular expressions are an indispensable tool.</span></span>  
   
-## 規則運算式的運作方式  
- 使用規則運算式來處理文字的核心是規則運算式引擎，以 .NET Framework 中的 <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName> 物件來表示。  使用規則運算式來處理文字時，至少需要提供規則運算式引擎以及下列兩個資訊項目：  
+## <a name="how-regular-expressions-work"></a><span data-ttu-id="6ff1e-106">規則運算式的運作方式</span><span class="sxs-lookup"><span data-stu-id="6ff1e-106">How Regular Expressions Work</span></span>  
+ <span data-ttu-id="6ff1e-107">使用規則運算式處理文字的核心是規則運算式引擎，這由<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>.NET 中的物件。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-107">The centerpiece of text processing with regular expressions is the regular expression engine, which is represented by the <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> object in .NET.</span></span> <span data-ttu-id="6ff1e-108">使用規則運算式來處理文字時，至少需要提供規則運算式引擎以及下列兩個資訊項目：</span><span class="sxs-lookup"><span data-stu-id="6ff1e-108">At a minimum, processing text using regular expressions requires that the regular expression engine be provided with the following two items of information:</span></span>  
   
--   要在文字中識別的規則運算式模式。  
+-   <span data-ttu-id="6ff1e-109">要在文字中識別的規則運算式模式。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-109">The regular expression pattern to identify in the text.</span></span>  
   
-     在 .NET Framework 中，規則運算式模式是以特殊的語法或語言來定義，其相容於 Perl 5 規則運算式，並新增一些其他功能，例如由右至左比對。  如需詳細資訊，請參閱[規則運算式語言 \- 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)。  
+     <span data-ttu-id="6ff1e-110">在 .NET 中，規則運算式模式是以特殊的語法或語言來定義，其相容於 Perl 5 規則運算式，並新增一些其他功能，例如由右至左比對。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-110">In .NET, regular expression patterns are defined by a special syntax or language, which is compatible with Perl 5 regular expressions and adds some additional features such as right-to-left matching.</span></span> <span data-ttu-id="6ff1e-111">如需詳細資訊，請參閱[規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-111">For more information, see [Regular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).</span></span>  
   
--   要為規則運算式模式剖析的文字。  
+-   <span data-ttu-id="6ff1e-112">要為規則運算式模式剖析的文字。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-112">The text to parse for the regular expression pattern.</span></span>  
   
- <xref:System.Text.RegularExpressions.Regex> 類別的方法可讓您執行下列作業：  
+ <span data-ttu-id="6ff1e-113"><xref:System.Text.RegularExpressions.Regex> 類別的方法可讓您執行下列作業：</span><span class="sxs-lookup"><span data-stu-id="6ff1e-113">The methods of the <xref:System.Text.RegularExpressions.Regex> class let you perform the following operations:</span></span>  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=fullName> 方法，以判定規則運算式模式是否出現在輸入文字中。  如需使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法來驗證文字的範例，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+-   <span data-ttu-id="6ff1e-114">呼叫 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法，以判定規則運算式模式是否出現在輸入文字中。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-114">Determine whether the regular expression pattern occurs in the input text by calling the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="6ff1e-115">如需範例，會使用<xref:System.Text.RegularExpressions.Regex.IsMatch%2A>方法來驗證文字，請參閱[如何： 確認字串是否有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-115">For an example that uses the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method for validating text, see [How to: Verify that Strings Are in Valid Email Format](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).</span></span>  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=fullName> 或 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName> 方法，以擷取符合規則運算式模式的所有文字。  前一個方法會傳回 <xref:System.Text.RegularExpressions.Match?displayProperty=fullName> 物件，提供相符文字的相關資訊。  後一個方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中針對在所剖析文字中找到的每個相符項目，各包含一個 <xref:System.Text.RegularExpressions.Match?displayProperty=fullName> 物件。  
+-   <span data-ttu-id="6ff1e-116">呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法，以擷取符合規則運算式模式的所有文字。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-116">Retrieve one or all occurrences of text that matches the regular expression pattern by calling the <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> or <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="6ff1e-117">前一個方法會傳回 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 物件，提供相符文字的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-117">The former method returns a <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> object that provides information about the matching text.</span></span> <span data-ttu-id="6ff1e-118">後一個方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中針對在所剖析文字中找到的每個相符項目，各包含一個 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 物件。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-118">The latter returns a <xref:System.Text.RegularExpressions.MatchCollection> object that contains one <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> object for each match found in the parsed text.</span></span>  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> 方法，以取代符合規則運算式模式的文字。  如需使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 方法來變更日期格式，以及移除字串中無效字元的範例，請參閱[如何：從字串中刪除無效的字元](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)和[範例：變更日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)。  
+-   <span data-ttu-id="6ff1e-119">呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，以取代符合規則運算式模式的文字。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-119">Replace text that matches the regular expression pattern by calling the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="6ff1e-120">如需範例，使用<xref:System.Text.RegularExpressions.Regex.Replace%2A>方法來變更日期格式，並移除無效的字元字串，請參閱[如何： 刪除無效的字元，從字串](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)和[範例： 變更日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).</span><span class="sxs-lookup"><span data-stu-id="6ff1e-120">For examples that use the <xref:System.Text.RegularExpressions.Regex.Replace%2A> method to change date formats and remove invalid characters from a string, see [How to: Strip Invalid Characters from a String](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) and [Example: Changing Date Formats](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).</span></span>  
   
- 如需規則運算式物件模型概觀，請參閱[規則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)。  
+ <span data-ttu-id="6ff1e-121">如需規則運算式物件模型概觀，請參閱[規則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-121">For an overview of the regular expression object model, see [The Regular Expression Object Model](../../../docs/standard/base-types/the-regular-expression-object-model.md).</span></span>  
   
- 如需規則運算式語言的詳細資訊，請參閱[規則運算式語言 \- 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)，或下載並列印下列其中一本小手冊：  
+ <span data-ttu-id="6ff1e-122">如需有關規則運算式語言的詳細資訊，請參閱[規則運算式語言-快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)或下載並列印下列其中一個小手冊：</span><span class="sxs-lookup"><span data-stu-id="6ff1e-122">For more information about the regular expression language, see [Regular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) or download and print one of these brochures:</span></span>  
   
- [快速參考 \(Word \(.docx\) 格式\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)   
- [快速參考 \(PDF \(.pdf\) 格式\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [<span data-ttu-id="6ff1e-123">Word (.docx) 格式的快速參考</span><span class="sxs-lookup"><span data-stu-id="6ff1e-123">Quick Reference in Word (.docx) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="6ff1e-124">PDF (.pdf) 格式的快速參考</span><span class="sxs-lookup"><span data-stu-id="6ff1e-124">Quick Reference in PDF (.pdf) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-## 規則運算式範例  
- <xref:System.String> 類別包含數種字串搜尋和取代方法，可供您在大型字串中尋找常值字串時使用。  當您想要在大型字串中尋找數個子字串時，或是當您想要識別字串中的模式時，規則運算式最為好用，如下列範例所示。  
+## <a name="regular-expression-examples"></a><span data-ttu-id="6ff1e-125">規則運算式範例</span><span class="sxs-lookup"><span data-stu-id="6ff1e-125">Regular Expression Examples</span></span>  
+ <span data-ttu-id="6ff1e-126"><xref:System.String> 類別包含數種字串搜尋和取代方法，可供您在大型字串中尋找常值字串時使用。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-126">The <xref:System.String> class includes a number of string search and replacement methods that you can use when you want to locate literal strings in a larger string.</span></span> <span data-ttu-id="6ff1e-127">當您想要在大型字串中尋找數個子字串時，或是當您想要識別字串中的模式時，規則運算式最為好用，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-127">Regular expressions are most useful either when you want to locate one of several substrings in a larger string, or when you want to identify patterns in a string, as the following examples illustrate.</span></span>  
   
-### 範例 1：取代子字串  
- 假設郵寄清單包含的名稱有時候會包括稱謂 \(Mr.、Mrs.、Miss 或 Ms.\) 以及姓名。  當您從清單產生信封標籤時，如果不想包括稱謂，就可以使用規則運算式來移除稱謂，如下列範例所示。  
+### <a name="example-1-replacing-substrings"></a><span data-ttu-id="6ff1e-128">範例 1：取代子字串</span><span class="sxs-lookup"><span data-stu-id="6ff1e-128">Example 1: Replacing Substrings</span></span>  
+ <span data-ttu-id="6ff1e-129">假設郵寄清單包含的名稱有時候會包括稱謂 (Mr.、Mrs.、Miss 或 Ms.) 以及姓名。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-129">Assume that a mailing list contains names that sometimes include a title (Mr., Mrs., Miss, or Ms.) along with a first and last name.</span></span> <span data-ttu-id="6ff1e-130">當您從清單產生信封標籤時，如果不想包括稱謂，就可以使用規則運算式來移除稱謂，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-130">If you do not want to include the titles when you generate envelope labels from the list, you can use a regular expression to remove the titles, as the following example illustrates.</span></span>  
   
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- 規則運算式模式 `(Mr\.? |Mrs\.? |Miss |Ms\.? )` 會比對所出現的任何 "Mr "、"Mr. "  、"Mrs "、"Mrs. "  、"Miss "、"Ms " 或 "Ms. "  。  呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> 方法會將相符的字串取代為 <xref:System.String.Empty?displayProperty=fullName>；換句話說，就是將其從原始字串中移除。  
+ <span data-ttu-id="6ff1e-131">規則運算式模式`(Mr\.? |Mrs\.? |Miss |Ms\.? )`符合出現任何"Mr"、"Mr."、"Mrs"、"Mrs"、"Miss"、"Ms 或"Ms"。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-131">The regular expression pattern`(Mr\.? |Mrs\.? |Miss |Ms\.? )` matches any occurrence of "Mr ", "Mr. ", "Mrs ", "Mrs. ", "Miss ", "Ms or "Ms. ".</span></span> <span data-ttu-id="6ff1e-132">呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法會將相符的字串取代為 <xref:System.String.Empty?displayProperty=nameWithType>；換句話說，就是將其從原始字串中移除。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-132">The call to the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method replaces the matched string with <xref:System.String.Empty?displayProperty=nameWithType>; in other words, it removes it from the original string.</span></span>  
   
-### 範例 2：識別重複的文字  
- 不小心重複文字是作者常犯的錯誤。  規則運算式可用來識別重複的文字，如下列範例所示。  
+### <a name="example-2-identifying-duplicated-words"></a><span data-ttu-id="6ff1e-133">範例 2：識別重複的文字</span><span class="sxs-lookup"><span data-stu-id="6ff1e-133">Example 2: Identifying Duplicated Words</span></span>  
+ <span data-ttu-id="6ff1e-134">不小心重複文字是作者常犯的錯誤。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-134">Accidentally duplicating words is a common error that writers make.</span></span> <span data-ttu-id="6ff1e-135">規則運算式可用來識別重複的文字，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-135">A regular expression can be used to identify duplicated words, as the following example shows.</span></span>  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
- 規則運算式模式 `\b(\w+?)\s\1\b` 可解譯如下：  
+ <span data-ttu-id="6ff1e-136">規則運算式模式 `\b(\w+?)\s\1\b` 可解譯如下：</span><span class="sxs-lookup"><span data-stu-id="6ff1e-136">The regular expression pattern `\b(\w+?)\s\1\b` can be interpreted as follows:</span></span>  
   
 |||  
 |-|-|  
-|`\b`|從字緣開始。|  
-|\(\\w\+?\)|比對一或多個字元，但字元數愈少愈好。  這些一起構成可稱之為 `\1` 的群組。|  
-|`\s`|比對空白字元。|  
-|`\1`|比對等同於名為 `\1` 之群組的子字串。|  
-|`\b`|比對字邊界。|  
+|`\b`|<span data-ttu-id="6ff1e-137">從字緣開始。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-137">Start at a word boundary.</span></span>|  
+|<span data-ttu-id="6ff1e-138">(\w+?)</span><span class="sxs-lookup"><span data-stu-id="6ff1e-138">(\w+?)</span></span>|<span data-ttu-id="6ff1e-139">比對一或多個字元，但字元數愈少愈好。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-139">Match one or more word characters, but as few characters as possible.</span></span> <span data-ttu-id="6ff1e-140">這些一起構成可稱之為 `\1` 的群組。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-140">Together, they form a group that can be referred to as `\1`.</span></span>|  
+|`\s`|<span data-ttu-id="6ff1e-141">比對空白字元。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-141">Match a white-space character.</span></span>|  
+|`\1`|<span data-ttu-id="6ff1e-142">比對等同於名為 `\1` 之群組的子字串。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-142">Match the substring that is equal to the group named `\1`.</span></span>|  
+|`\b`|<span data-ttu-id="6ff1e-143">比對字邊界。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-143">Match a word boundary.</span></span>|  
   
- 呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName> 方法時，規則運算式選項設為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>。  因此，比對作業不區分大小寫，而且此範例會將子字串 "This this" 視為重複。  
+ <span data-ttu-id="6ff1e-144">呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法時，規則運算式選項設為 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-144">The <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> method is called with regular expression options set to <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6ff1e-145">因此，比對作業不區分大小寫，而且此範例會將子字串 "This this" 視為重複。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-145">Therefore, the match operation is case-insensitive, and the example identifies the substring "This this" as a duplication.</span></span>  
   
- 請注意，輸入字串包括子字串 "this?  This"。  不過，因為中間有標點符號，所以不會將其視為重複。  
+ <span data-ttu-id="6ff1e-146">請注意，輸入字串包括子字串 "this?</span><span class="sxs-lookup"><span data-stu-id="6ff1e-146">Note that the input string includes the substring "this?</span></span> <span data-ttu-id="6ff1e-147">This"。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-147">This".</span></span> <span data-ttu-id="6ff1e-148">不過，因為中間有標點符號，所以不會將其視為重複。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-148">However, because of the intervening punctuation mark, it is not identified as a duplication.</span></span>  
   
-### 範例 3：動態建立區分文化特性的規則運算式  
- 下列範例說明規則運算式結合 .NET Framework 全球化功能所提供的彈性，功能有多麼強大。  它會使用 <xref:System.Globalization.NumberFormatInfo> 物件來判定系統目前文化特性中的幣值格式，  然後利用該資訊動態建構可從文字擷取幣值的規則運算式。  針對每個比對，它會擷取僅包含數值字串的子群組，將其轉換成 <xref:System.Decimal> 值，並計算執行總計。  
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a><span data-ttu-id="6ff1e-149">範例 3：動態建立區分文化特性的規則運算式</span><span class="sxs-lookup"><span data-stu-id="6ff1e-149">Example 3: Dynamically Building a Culture-Sensitive Regular Expression</span></span>  
+ <span data-ttu-id="6ff1e-150">下列範例說明規則運算式結合 .NET 全球化功能所提供的彈性，功能有多麼強大。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-150">The following example illustrates the power of regular expressions combined with the flexibility offered by .NET's globalization features.</span></span> <span data-ttu-id="6ff1e-151">它會使用 <xref:System.Globalization.NumberFormatInfo> 物件來判定系統目前文化特性中的幣值格式，</span><span class="sxs-lookup"><span data-stu-id="6ff1e-151">It uses the <xref:System.Globalization.NumberFormatInfo> object to determine the format of currency values in the system's current culture.</span></span> <span data-ttu-id="6ff1e-152">然後利用該資訊動態建構可從文字擷取幣值的規則運算式。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-152">It then uses that information to dynamically construct a regular expression that extracts currency values from the text.</span></span> <span data-ttu-id="6ff1e-153">針對每個比對，它會擷取僅包含數值字串的子群組，將其轉換成 <xref:System.Decimal> 值，並計算執行總計。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-153">For each match, it extracts the subgroup that contains the numeric string only, converts it to a <xref:System.Decimal> value, and calculates a running total.</span></span>  
   
  [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
  [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
- 在目前文化特性為 English \- United States \(en\-US\) 的電腦上，此範例會動態建立規則運算式 `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`。  此規則運算式模式可解譯如下：  
+ <span data-ttu-id="6ff1e-154">在目前文化特性為 English - United States (en-US) 的電腦上，此範例會動態建立規則運算式 `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-154">On a computer whose current culture is English - United States (en-US), the example dynamically builds the regular expression `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`.</span></span> <span data-ttu-id="6ff1e-155">此規則運算式模式可解譯如下：</span><span class="sxs-lookup"><span data-stu-id="6ff1e-155">This regular expression pattern can be interpreted as follows:</span></span>  
   
 |||  
 |-|-|  
-|`\$`|在輸入字串中尋找單獨出現的貨幣符號 \($\)。  規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。  \($ 符號單獨出現表示規則運算式引擎應該嘗試在字串結尾處開始其比對。\) 為了確保目前文化特性的貨幣符號不會誤譯為規則運算式符號，此範例呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A> 方法以逸出字元。|  
-|`\s*`|尋找出現零或多次的空格字元。|  
-|`[-+]?`|尋找出現一或多次的正號或負號。|  
-|`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|此運算式外面括號將其定義成擷取群組或子運算式。  如果找到相符項目，從 <xref:System.Text.RegularExpressions.Group> 屬性傳回之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName> 物件，擷取此部分比對字串的相關資訊。  \(集合中的第一個項目代表整個比對。\)|  
-|`[0-9]{0,3}`|尋找出現零到三次的十進位數字 0 到 9。|  
-|`(,[0-9]{3})*`|尋找出現零或多次、後面接三個十進位數字的群組分隔符號。|  
-|`\.`|尋找單次出現的十進位分隔符號。|  
-|`[0-9]+`|尋找一或多個十進位數字。|  
-|`(\.[0-9]+)?`|尋找出現零或一次、後接至少一個十進位數字的十進位分隔符號。|  
+|`\$`|<span data-ttu-id="6ff1e-156">在輸入字串中尋找單獨出現的貨幣符號 ($)。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-156">Look for a single occurrence of the dollar symbol ($) in the input string.</span></span> <span data-ttu-id="6ff1e-157">規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-157">The regular expression pattern string includes a backslash to indicate that the dollar symbol is to be interpreted literally rather than as a regular expression anchor.</span></span> <span data-ttu-id="6ff1e-158">($ 符號單獨出現表示規則運算式引擎應該嘗試在字串結尾處開始其比對。)為了確保目前文化特性的貨幣符號不會誤譯為規則運算式符號，此範例呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A> 方法以逸出字元。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-158">(The $ symbol alone would indicate that the regular expression engine should try to begin its match at the end of a string.) To ensure that the current culture's currency symbol is not misinterpreted as a regular expression symbol, the example calls the <xref:System.Text.RegularExpressions.Regex.Escape%2A> method to escape the character.</span></span>|  
+|`\s*`|<span data-ttu-id="6ff1e-159">尋找出現零或多次的空格字元。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-159">Look for zero or more occurrences of a white-space character.</span></span>|  
+|`[-+]?`|<span data-ttu-id="6ff1e-160">尋找出現一或多次的正號或負號。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-160">Look for zero or one occurrence of either a positive sign or a negative sign.</span></span>|  
+|`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|<span data-ttu-id="6ff1e-161">此運算式外面括號將其定義成擷取群組或子運算式。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-161">The outer parentheses around this expression define it as a capturing group or a subexpression.</span></span> <span data-ttu-id="6ff1e-162">如果找到相符項目，從 <xref:System.Text.RegularExpressions.Group> 屬性傳回之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件，擷取此部分比對字串的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-162">If a match is found, information about this part of the matching string can be retrieved from the second <xref:System.Text.RegularExpressions.Group> object in the <xref:System.Text.RegularExpressions.GroupCollection> object returned by the <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="6ff1e-163">(集合中的第一個項目代表整個比對。)</span><span class="sxs-lookup"><span data-stu-id="6ff1e-163">(The first element in the collection represents the entire match.)</span></span>|  
+|`[0-9]{0,3}`|<span data-ttu-id="6ff1e-164">尋找出現零到三次的十進位數字 0 到 9。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-164">Look for zero to three occurrences of the decimal digits 0 through 9.</span></span>|  
+|`(,[0-9]{3})*`|<span data-ttu-id="6ff1e-165">尋找出現零或多次、後面接三個十進位數字的群組分隔符號。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-165">Look for zero or more occurrences of a group separator followed by three decimal digits.</span></span>|  
+|`\.`|<span data-ttu-id="6ff1e-166">尋找單次出現的十進位分隔符號。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-166">Look for a single occurrence of the decimal separator.</span></span>|  
+|`[0-9]+`|<span data-ttu-id="6ff1e-167">尋找一或多個十進位數字。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-167">Look for one or more decimal digits.</span></span>|  
+|`(\.[0-9]+)?`|<span data-ttu-id="6ff1e-168">尋找出現零或一次、後接至少一個十進位數字的十進位分隔符號。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-168">Look for zero or one occurrence of the decimal separator followed by at least one decimal digit.</span></span>|  
   
- 如果在輸入字串中找到上述每個子模式，則比對成功，並且會將包含此比對相關資訊的 <xref:System.Text.RegularExpressions.Match> 物件加入至 <xref:System.Text.RegularExpressions.MatchCollection> 物件。  
+ <span data-ttu-id="6ff1e-169">如果在輸入字串中找到上述每個子模式，則比對成功，並且會將包含此比對相關資訊的 <xref:System.Text.RegularExpressions.Match> 物件加入至 <xref:System.Text.RegularExpressions.MatchCollection> 物件。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-169">If each of these subpatterns is found in the input string, the match succeeds, and a <xref:System.Text.RegularExpressions.Match> object that contains information about the match is added to the <xref:System.Text.RegularExpressions.MatchCollection> object.</span></span>  
   
-## 相關主題  
+## <a name="related-topics"></a><span data-ttu-id="6ff1e-170">相關主題</span><span class="sxs-lookup"><span data-stu-id="6ff1e-170">Related Topics</span></span>  
   
-|標題|描述|  
-|--------|--------|  
-|[規則運算式語言 \- 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|  
-|[規則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供資訊和程式碼範例，說明如何使用規則運算式類別。|  
-|[規則運算式行為的詳細資訊](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|提供 .NET Framework 規則運算式之功能和行為的相關資訊。|  
-|[規則運算式範例](../../../docs/standard/base-types/regular-expression-examples.md)|提供程式碼範例，以說明規則運算式的一般用法。|  
+|<span data-ttu-id="6ff1e-171">標題</span><span class="sxs-lookup"><span data-stu-id="6ff1e-171">Title</span></span>|<span data-ttu-id="6ff1e-172">說明</span><span class="sxs-lookup"><span data-stu-id="6ff1e-172">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="6ff1e-173">規則運算式語言 - 快速參考</span><span class="sxs-lookup"><span data-stu-id="6ff1e-173">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|<span data-ttu-id="6ff1e-174">提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-174">Provides information on the set of characters, operators, and constructs that you can use to define regular expressions.</span></span>|  
+|[<span data-ttu-id="6ff1e-175">規則運算式物件模型</span><span class="sxs-lookup"><span data-stu-id="6ff1e-175">The Regular Expression Object Model</span></span>](../../../docs/standard/base-types/the-regular-expression-object-model.md)|<span data-ttu-id="6ff1e-176">提供資訊和程式碼範例，說明如何使用規則運算式類別。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-176">Provides information and code examples that illustrate how to use the regular expression classes.</span></span>|  
+|[<span data-ttu-id="6ff1e-177">規則運算式行為的詳細資訊</span><span class="sxs-lookup"><span data-stu-id="6ff1e-177">Details of Regular Expression Behavior</span></span>](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|<span data-ttu-id="6ff1e-178">提供的功能和.NET 規則運算式行為的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-178">Provides information about the capabilities and behavior of .NET regular expressions.</span></span>|  
+|[<span data-ttu-id="6ff1e-179">規則運算式範例</span><span class="sxs-lookup"><span data-stu-id="6ff1e-179">Regular Expression Examples</span></span>](../../../docs/standard/base-types/regular-expression-examples.md)|<span data-ttu-id="6ff1e-180">提供程式碼範例，以說明規則運算式的一般用法。</span><span class="sxs-lookup"><span data-stu-id="6ff1e-180">Provides code examples that illustrate typical uses of regular expressions.</span></span>|  
   
-## 參考  
- <xref:System.Text.RegularExpressions?displayProperty=fullName>   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>  
- [規則運算式 \- 快速參考 \(以 Word 格式下載\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [規則運算式 \- 快速參考 \(以 PDF 格式下載\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="reference"></a><span data-ttu-id="6ff1e-181">參考資料</span><span class="sxs-lookup"><span data-stu-id="6ff1e-181">Reference</span></span>  
+ <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+ <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
+ [<span data-ttu-id="6ff1e-182">規則運算式-快速參考 （以 Word 格式下載）</span><span class="sxs-lookup"><span data-stu-id="6ff1e-182">Regular Expressions - Quick Reference (download in Word format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="6ff1e-183">規則運算式 - 快速參考 (以 PDF 格式下載)</span><span class="sxs-lookup"><span data-stu-id="6ff1e-183">Regular Expressions - Quick Reference (download in PDF format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -1,48 +1,46 @@
 ---
-title: "XML 處理選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XML 處理選項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 18f8f9c76a1842517340eaa3f74b4778f869403e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# XML 處理選項
-請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。  
+# <a name="xml-processing-options"></a><span data-ttu-id="5c3a8-102">XML 處理選項</span><span class="sxs-lookup"><span data-stu-id="5c3a8-102">XML Processing Options</span></span>
+<span data-ttu-id="5c3a8-103">請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-103">See the following tables for a list of Microsoft technologies you can use to process XML data.</span></span>  
   
-## .NET Framework 選項  
+## <a name="net-framework-options"></a><span data-ttu-id="5c3a8-104">.NET Framework 選項</span><span class="sxs-lookup"><span data-stu-id="5c3a8-104">.NET Framework Options</span></span>  
   
-|**選項**|**處理類型**|**描述**|  
-|------------|--------------|------------|  
-|[LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br /> \(<xref:System.Xml.Linq> 命名空間\)|記憶體中|-   根據 .NET Framework Language\-Integrated Query \(LINQ\) 技術。<br />-   提供類似於物件、關聯式資料和 XML 資料適用之 SQL 的查詢體驗。<br />-   提供直覺式文件建立和轉換功能。<br />-   如果您要撰寫新程式碼，請使用這個選項。|  
-|<xref:System.Xml.XmlReader?displayProperty=fullName>|資料流形式|-   提供快速、非快取的順向方式來存取 XML 資料。<br />-   您可以使用 <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> 方法建立物件，並且使用 <xref:System.Xml.XmlReaderSettings> 類別來指定此物件上所要啟用的功能集合。|  
-|<xref:System.Xml.XmlWriter?displayProperty=fullName>|資料流形式|-   提供快速、非快取的順向方式來產生 XML 資料。<br />-   您可以使用 <xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName> 方法建立物件，並且使用 <xref:System.Xml.XmlWriterSettings> 類別來指定此物件上所要啟用的功能集合。|  
-|<xref:System.Xml.XmlDocument?displayProperty=fullName>|記憶體中|-   實作 [W3C 文件物件模型 \(DOM\) 層級 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)和 [DOM 層級 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建議事項。<br />-   您可以使用以常用 DOM 模型為基礎的方法與屬性來建立、插入、移除及修改節點。<br />-   如果您要修改現有的程式碼來利用 W3C DOM，請使用這個選項。|  
-|<xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>|記憶體中|-   使用資料指標模型提供幾個編輯選項和導覽功能。<br />-   XML 文件可包含在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中。<br />-   針對 XML 的唯讀處理提供了絕佳的效能。<br />-   如果您要修改包含 XPath 查詢或 XSLT 轉換的現有程式碼，請使用這個選項。|  
-|<xref:System.Xml.Xsl.XslCompiledTransform>|記憶體中|-   提供使用 XSL 轉換來轉換 XML 資料的選項。<br />-   [XSLT 編譯器 \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) 可讓您在應用程式中參考先行編譯的轉換。|  
+|<span data-ttu-id="5c3a8-105">**選項**</span><span class="sxs-lookup"><span data-stu-id="5c3a8-105">**Option**</span></span>|<span data-ttu-id="5c3a8-106">**處理類型**</span><span class="sxs-lookup"><span data-stu-id="5c3a8-106">**Processing type**</span></span>|<span data-ttu-id="5c3a8-107">**說明**</span><span class="sxs-lookup"><span data-stu-id="5c3a8-107">**Description**</span></span>|  
+|----------------|-------------------------|---------------------|  
+|[<span data-ttu-id="5c3a8-108">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="5c3a8-108">LINQ to XML</span></span>](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br /><span data-ttu-id="5c3a8-109">(<xref:System.Xml.Linq> 命名空間)</span><span class="sxs-lookup"><span data-stu-id="5c3a8-109">(<xref:System.Xml.Linq> namespace)</span></span>|<span data-ttu-id="5c3a8-110">記憶體中</span><span class="sxs-lookup"><span data-stu-id="5c3a8-110">In-memory</span></span>|<span data-ttu-id="5c3a8-111">-以.net framework language-integrated Query (LINQ) 技術為基礎。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-111">-   Based on the .NET Framework Language-Integrated Query (LINQ) technology.</span></span><br /><span data-ttu-id="5c3a8-112">-提供類似於 SQL 物件、 關聯式資料、 與 XML 資料的查詢體驗。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-112">-   Provides query experience that is similar to SQL for objects, relational data, and XML data.</span></span><br /><span data-ttu-id="5c3a8-113">-提供直覺式文件建立和轉換功能。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-113">-   Provides inituive document creation and transformation capabilities.</span></span><br /><span data-ttu-id="5c3a8-114">-如果您要撰寫新程式碼，請使用此選項。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-114">-   Use this option if you're writing new code.</span></span>|  
+|<xref:System.Xml.XmlReader?displayProperty=nameWithType>|<span data-ttu-id="5c3a8-115">資料流形式</span><span class="sxs-lookup"><span data-stu-id="5c3a8-115">Stream-based</span></span>|<span data-ttu-id="5c3a8-116">-提供快速、 非快取、 順向的方式來存取 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-116">-   Provides a fast, non-cached, forward-only way to access XML data.</span></span><br /><span data-ttu-id="5c3a8-117">-您可以使用來建立物件<xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>方法，並指定要啟用物件上使用的功能組<xref:System.Xml.XmlReaderSettings>類別。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-117">-   You can create objects by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> method, and specify the set of features to enable on the object by using the <xref:System.Xml.XmlReaderSettings> class.</span></span>|  
+|<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|<span data-ttu-id="5c3a8-118">資料流形式</span><span class="sxs-lookup"><span data-stu-id="5c3a8-118">Stream-based</span></span>|<span data-ttu-id="5c3a8-119">-提供快速、 非快取、 順向的方式，以產生 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-119">-   Provides a fast, non-cached, forward-only way to generate XML data.</span></span><br /><span data-ttu-id="5c3a8-120">-您可以使用來建立物件<xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>方法，並指定要啟用物件上使用的功能組<xref:System.Xml.XmlWriterSettings>類別。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-120">-   You can create objects by using the <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> method, and specify the set of features to enable on the object by using the <xref:System.Xml.XmlWriterSettings> class.</span></span>|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|<span data-ttu-id="5c3a8-121">記憶體中</span><span class="sxs-lookup"><span data-stu-id="5c3a8-121">In-memory</span></span>|<span data-ttu-id="5c3a8-122">-實作[W3C 文件物件模型 (DOM) 層級 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)和[DOM 層級 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建議。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-122">-   Implements the [W3C Document Object Model (DOM) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) and [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) recommendations.</span></span><br /><span data-ttu-id="5c3a8-123">-您可以建立、 插入、 移除及修改節點使用的方法和常用 DOM 模型為基礎的屬性。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-123">-   You can create, insert, remove, and modify nodes by using methods and properties based on the familiar DOM model.</span></span><br /><span data-ttu-id="5c3a8-124">-使用此選項，如果您要修改現有的程式碼來利用 W3C DOM</span><span class="sxs-lookup"><span data-stu-id="5c3a8-124">-   Use this option if you're modifying existing code that utilizes the W3C DOM.</span></span>|  
+|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="5c3a8-125">記憶體中</span><span class="sxs-lookup"><span data-stu-id="5c3a8-125">In-memory</span></span>|<span data-ttu-id="5c3a8-126">-提供數個編輯選項和使用資料指標模型的瀏覽功能。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-126">-   Offers several editing options and navigation capabilities using a cursor model.</span></span><br /><span data-ttu-id="5c3a8-127">XML 文件中可包含<xref:System.Xml.XPath.XPathDocument>或<xref:System.Xml.XmlDocument>物件。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-127">-   XML documents can be contained in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span><br /><span data-ttu-id="5c3a8-128">-提供了絕佳的唯讀處理 XML 的效能。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-128">-   Provides excellent performance for read-only processing of XML.</span></span><br /><span data-ttu-id="5c3a8-129">-如果您要修改包含 XPath 查詢或 XSLT 轉換的現有程式碼，請使用此選項。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-129">-   Use this option if you're modifying existing code with XPath queries or XSLT transformations.</span></span>|  
+|<xref:System.Xml.Xsl.XslCompiledTransform>|<span data-ttu-id="5c3a8-130">記憶體中</span><span class="sxs-lookup"><span data-stu-id="5c3a8-130">In-memory</span></span>|<span data-ttu-id="5c3a8-131">-提供來轉換使用 XSL 轉換 XML 資料的選項。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-131">-   Provides options for transforming XML data using XSL transformations.</span></span><br /><span data-ttu-id="5c3a8-132">- [XSLT 編譯器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)可讓您參考預先編譯您的應用程式中的轉換。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-132">-   The [XSLT Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) lets you reference pre-compiled transformations in your app.</span></span>|  
   
-## Win32 和 COM 架構的選項  
+## <a name="win32-and-com-based-options"></a><span data-ttu-id="5c3a8-133">Win32 和 COM 架構的選項</span><span class="sxs-lookup"><span data-stu-id="5c3a8-133">Win32 and COM-based Options</span></span>  
   
-|**選項**|**描述**|  
-|------------|------------|  
-|[XmlLite](http://go.microsoft.com/fwlink/?LinkId=93723)|-   一種快速、安全、非快取、順向的 XML 剖析器，可幫助您建置高效能的 XML 應用程式。<br />-   可搭配可使用動態連結程式庫 \(DLL\) 的任何語言一起使用；我們建議使用 C\+\+。|  
-|[MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|-   COM 架構的技術，用於處理 Windows 作業系統隨附的 XML。<br />-   提供 DOM 的原始實作 \(包含對於 XPath 和 XSLT 的支援\)。<br />-   包含 SAX2 事件架構剖析器。|  
+|<span data-ttu-id="5c3a8-134">**選項**</span><span class="sxs-lookup"><span data-stu-id="5c3a8-134">**Option**</span></span>|<span data-ttu-id="5c3a8-135">**說明**</span><span class="sxs-lookup"><span data-stu-id="5c3a8-135">**Description**</span></span>|  
+|----------------|---------------------|  
+|[<span data-ttu-id="5c3a8-136">XmlLite</span><span class="sxs-lookup"><span data-stu-id="5c3a8-136">XmlLite</span></span>](http://go.microsoft.com/fwlink/?LinkId=93723)|<span data-ttu-id="5c3a8-137">的順向的 XML 剖析器，可協助您建置高效能快速、 安全、 非快取，XML 應用程式。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-137">-   A fast, secure, non-caching, forward-only XML parser that helps you build high-performance XML apps.</span></span><br /><span data-ttu-id="5c3a8-138">-適用於任何語言都可以使用動態連結程式庫 (Dll)。我們建議使用 c + +。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-138">-   Works with any language that can use dynamic link libraries (DLLs); we recommend using C++.</span></span>|  
+|[<span data-ttu-id="5c3a8-139">MSXML</span><span class="sxs-lookup"><span data-stu-id="5c3a8-139">MSXML</span></span>](http://go.microsoft.com/fwlink/?LinkId=93722)|<span data-ttu-id="5c3a8-140">-COM 為基礎的技術處理隨附於 Windows 作業系統的 XML。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-140">-   COM-based technology for processing XML that is included with the Windows operating system.</span></span><br /><span data-ttu-id="5c3a8-141">-提供 DOM 的原始實作 XPath 和 XSLT 的支援。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-141">-   Provides a native implementation of the DOM with support for XPath and XSLT.</span></span><br /><span data-ttu-id="5c3a8-142">-包含 SAX2 事件架構剖析器。</span><span class="sxs-lookup"><span data-stu-id="5c3a8-142">-   Contains the SAX2 event-based parser.</span></span>|  
   
-## 請參閱  
- [使用 DOM 模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)   
- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [XSLT 編譯器 \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="5c3a8-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5c3a8-143">See Also</span></span>  
+ [<span data-ttu-id="5c3a8-144">使用 DOM 模型處理 XML 資料</span><span class="sxs-lookup"><span data-stu-id="5c3a8-144">Process XML Data Using the DOM Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [<span data-ttu-id="5c3a8-145">使用 XPath 資料模型處理 XML 資料</span><span class="sxs-lookup"><span data-stu-id="5c3a8-145">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="5c3a8-146">XSLT 編譯器 (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="5c3a8-146">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
