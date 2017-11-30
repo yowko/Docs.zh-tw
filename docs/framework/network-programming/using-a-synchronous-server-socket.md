@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - synchronous server sockets
@@ -25,23 +23,22 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce50fa5cf8664f93753312ee5f1db2b3058c3fd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-a-synchronous-server-socket"></a>使用同步伺服器通訊端
-同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。 同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。  
+# <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="2d0a3-102">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="2d0a3-102">Using a Synchronous Server Socket</span></span>
+<span data-ttu-id="2d0a3-103">同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="2d0a3-104">同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  
   
- 使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定 <xref:System.Net.Sockets.Socket> 以接聽端點之後，便已準備好使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受連入的連線要求。 應用程式會暫停，直到呼叫 **Accept** 方法收到連線要求為止。  
+ <span data-ttu-id="2d0a3-105">使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定 <xref:System.Net.Sockets.Socket> 以接聽端點之後，便已準備好使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受連入的連線要求。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-105">After a <xref:System.Net.Sockets.Socket> is set to listen on an endpoint using the <xref:System.Net.Sockets.Socket.Bind%2A> and <xref:System.Net.Sockets.Socket.Listen%2A> methods, it is ready to accept incoming connection requests using the <xref:System.Net.Sockets.Socket.Accept%2A> method.</span></span> <span data-ttu-id="2d0a3-106">應用程式會暫停，直到呼叫 **Accept** 方法收到連線要求為止。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-106">The application is suspended until a connection request is received when the **Accept** method is called.</span></span>  
   
- 收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。 下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。 **Socket** 未指定任何傳訊通訊協定，因此字串 "\<EOF>" 會標記訊息資料的結束。 它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。  
+ <span data-ttu-id="2d0a3-107">收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-107">When a connection request is received, **Accept** returns a new **Socket** instance that is associated with the connecting client.</span></span> <span data-ttu-id="2d0a3-108">下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-108">The following example reads data from the client, displays it on the console, and echoes the data back to the client.</span></span> <span data-ttu-id="2d0a3-109">**Socket** 未指定任何傳訊通訊協定，因此字串 "\<EOF>" 會標記訊息資料的結束。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-109">The **Socket** does not specify any messaging protocol, so the string "\<EOF>" marks the end of the message data.</span></span> <span data-ttu-id="2d0a3-110">它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-110">It assumes that a **Socket** named `listener` has been initialized and bound to an endpoint.</span></span>  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -87,8 +84,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [同步伺服器通訊端範例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="2d0a3-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d0a3-111">See Also</span></span>  
+ [<span data-ttu-id="2d0a3-112">使用非同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="2d0a3-112">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="2d0a3-113">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="2d0a3-113">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="2d0a3-114">透過通訊端接聽</span><span class="sxs-lookup"><span data-stu-id="2d0a3-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)

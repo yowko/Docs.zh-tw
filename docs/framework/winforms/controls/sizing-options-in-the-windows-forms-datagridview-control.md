@@ -1,59 +1,60 @@
 ---
-title: "Windows Form DataGridView 控制項中的調整大小選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料格, 調整資料行大小"
-  - "資料格, 調整資料列大小"
-  - "資料格, 調整大小選項"
-  - "DataGridView 控制項 [Windows Form], 調整資料行大小"
-  - "DataGridView 控制項 [Windows Form], 調整資料列大小"
-  - "DataGridView 控制項 [Windows Form], 調整大小選項"
+title: "Windows Form DataGridView 控制項中的調整大小選項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], row sizing
+- data grids [Windows Forms], column sizing
+- DataGridView control [Windows Forms], column sizing
+- DataGridView control [Windows Forms], sizing options
+- data grids [Windows Forms], row sizing
+- data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a4819f0c4596c34312bf689d57cca687641d6a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form DataGridView 控制項中的調整大小選項
-<xref:System.Windows.Forms.DataGridView> 的資料列、資料行和行首可以因不同事件而改變大小。  下列表格顯示了這些事件。  
+# <a name="sizing-options-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="cfb5a-102">Windows Form DataGridView 控制項中的調整大小選項</span><span class="sxs-lookup"><span data-stu-id="cfb5a-102">Sizing Options in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="cfb5a-103"><xref:System.Windows.Forms.DataGridView>資料列、 資料行和標頭可以變更大小，因為許多不同的項目。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-103"><xref:System.Windows.Forms.DataGridView> rows, columns, and headers can change size as a result of many different occurrences.</span></span> <span data-ttu-id="cfb5a-104">下表顯示這些項目。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-104">The following table shows these occurrences.</span></span>  
   
-|事件|描述|  
-|--------|--------|  
-|使用者調整大小|使用者可以透過拖曳滑鼠或按兩下資料列、資料行或行首分隔線來調整大小。|  
-|控制項調整大小|在資料行填入模式中，資料行寬度會隨著控制項寬度變更；例如，當控制項停駐在其父表單內，而使用者重新調整表單的大小時。|  
-|儲存格的值變更|在根據內容自動調整大小模式中，大小會依新的顯示值而變更。|  
-|方法呼叫|以程式設計方式所做的內容架構大小調整可以讓您根據儲存格在方法被呼叫時的值，機動調整大小。|  
-|屬性設定|您也可以設定特定的高度和寬度值。|  
+|<span data-ttu-id="cfb5a-105">項目</span><span class="sxs-lookup"><span data-stu-id="cfb5a-105">Occurrence</span></span>|<span data-ttu-id="cfb5a-106">描述</span><span class="sxs-lookup"><span data-stu-id="cfb5a-106">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="cfb5a-107">使用者調整大小</span><span class="sxs-lookup"><span data-stu-id="cfb5a-107">User resize</span></span>|<span data-ttu-id="cfb5a-108">使用者可以進行調整大小，拖曳或按兩下資料列、 資料行或標頭的分隔線。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-108">Users can make size adjustments by dragging or double-clicking row, column, or header dividers.</span></span>|  
+|<span data-ttu-id="cfb5a-109">控制項調整大小</span><span class="sxs-lookup"><span data-stu-id="cfb5a-109">Control resize</span></span>|<span data-ttu-id="cfb5a-110">在資料行填滿模式中，資料行寬度變更時變更控制項寬度。例如，當控制項停駐於父表單和使用者調整表單的大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-110">In column fill mode, column widths change when the control width changes; for example, when the control is docked to its parent form and the user resizes the form.</span></span>|  
+|<span data-ttu-id="cfb5a-111">儲存格值的變更</span><span class="sxs-lookup"><span data-stu-id="cfb5a-111">Cell value change</span></span>|<span data-ttu-id="cfb5a-112">在以內容為基礎的自動調整大小模式中，大小變更以符合新的顯示值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-112">In content-based automatic sizing modes, sizes change to fit new display values.</span></span>|  
+|<span data-ttu-id="cfb5a-113">方法呼叫</span><span class="sxs-lookup"><span data-stu-id="cfb5a-113">Method call</span></span>|<span data-ttu-id="cfb5a-114">調整大小以程式設計方式以內容為基礎，可讓您在方法呼叫時，根據資料格的值是投機的大小調整。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-114">Programmatic content-based resizing lets you make opportunistic size adjustments based on cell values at the time of the method call.</span></span>|  
+|<span data-ttu-id="cfb5a-115">屬性設定</span><span class="sxs-lookup"><span data-stu-id="cfb5a-115">Property setting</span></span>|<span data-ttu-id="cfb5a-116">您也可以設定特定的高度和寬度值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-116">You can also set specific height and width values.</span></span>|  
   
- 根據預設，使用者調整大小是啟用的，而自動調整是停用的，當儲存格值比資料行還要寬時則會被裁剪。  
+ <span data-ttu-id="cfb5a-117">根據預設，使用者重新調整大小啟用、 停用自動調整大小，以及儲存格寬度超過其資料行的值會被裁剪。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-117">By default, user resizing is enabled, automatic sizing is disabled, and cell values that are wider than their columns are clipped.</span></span>  
   
- 下列表格顯示了一些案例，在這些案例當中，您可以調整預設的行為，或使用特定的調整選項來達到特定的效果。  
+ <span data-ttu-id="cfb5a-118">下表顯示案例，您可以使用來調整預設行為，或使用特定的調整大小選項來達到特定的效果。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-118">The following table shows scenarios that you can use to adjust the default behavior or to use specific sizing options to achieve particular effects.</span></span>  
   
-|情節|實作|  
-|--------|--------|  
-|在相對少數的資料行佔用整個控制項的寬度，而且沒有顯示水平捲軸的情況下，使用資料行填入模式來顯示大小相近的資料。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>。|  
-|使用資料行填入模式來顯示大小不等的值。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>。  設定資料行的 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性，或將資料填入控制項之後，呼叫控制項的 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 方法來初始化相對資料行寬度。|  
-|使用資料行填入模式來顯示不同重要性的值。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>。  為永遠必須顯示其部分資料的資料行設定比較大的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，或在特定資料行使用填入模式以外的其他調整選項。|  
-|使用資料行填入模式來避免顯示控制項背景。|在最後一個資料行將 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>，在其他資料行使用其他調整選項。  如果其他資料行使用太多可用的空間，請設定最後一個資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 屬性。|  
-|顯示固定寬度的資料行，例如圖示或者 ID 資料行。|將資料行的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>，並將 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 設定為 <xref:System.Windows.Forms.DataGridViewTriState>。  設定資料行的 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 屬性，或將資料填入控制項之後，呼叫控制項的 <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> 方法來初始化資料行寬度。|  
-|每當儲存格內容變更時，自動調整大小以防止裁剪發生，並且將空間使用最佳化。|將自動調整大小屬性設定為代表內容架構調整模式的值。  若要避免在處理大量資料時的效能損失，請使用只會計算要顯示之資料列的調整模式。|  
-|調整大小以符合顯示的資料列中的值，避免在使用多個資料列時的效能損失。|以適當的調整模式列舉型別值來搭配自動調整大小或程式設計方式調整大小使用。  若要在捲動時調整大小以符合剛顯示的資料列中的值，請呼叫 <xref:System.Windows.Forms.DataGridView.Scroll> 事件處理常式中的調整大小方法。  若要自訂使用者按兩下的調整大小方法，只讓已顯示的資料列當中的值決定新大小，請呼叫 <xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick> 或 <xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick> 事件處理常式中的調整大小方法。|  
-|只有在特定時間才調整大小以符合儲存格內容，以避免效能損失或啟用使用者調整大小。|在事件處理常式中呼叫一個內容架構的調整大小方法。  例如，使用 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 事件在繫結後初始化大小，並處理 <xref:System.Windows.Forms.DataGridView.CellValidated> 或 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 事件，以根據使用者在繫結之資料來源的編輯或變更來調整大小。|  
-|為多行的儲存格內容調整資料列高度。|確定資料行的寬度足以顯示文字段落，再使用自動或程式設計方式的內容架構資料列調整來調整高度。  您同時也要確定在顯示具有多行內容的儲存格時，其 <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> 儲存格樣式值設定為 <xref:System.Windows.Forms.DataGridViewTriState>。<br /><br /> 通常，您將會使用自動資料行調整模式來維持資料行的寬度，或者在調整資料列高度之前，先將資料行設定為指定寬度。|  
+|<span data-ttu-id="cfb5a-119">情節</span><span class="sxs-lookup"><span data-stu-id="cfb5a-119">Scenario</span></span>|<span data-ttu-id="cfb5a-120">實作</span><span class="sxs-lookup"><span data-stu-id="cfb5a-120">Implementation</span></span>|  
+|--------------|--------------------|  
+|<span data-ttu-id="cfb5a-121">使用資料行填入模式顯示同樣的大小相當少量佔用整個控制項的寬度，而不會顯示水平捲軸的資料行中的資料。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-121">Use column fill mode for displaying similarly sized data in a relatively small number of columns that occupy the entire width of the control without displaying the horizontal scroll bar.</span></span>|<span data-ttu-id="cfb5a-122">將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-122">Set the <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> property to <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>.</span></span>|  
+|<span data-ttu-id="cfb5a-123">使用資料行填入模式，來顯示不同大小的值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-123">Use column fill mode with display values of varying sizes.</span></span>|<span data-ttu-id="cfb5a-124">將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-124">Set the <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> property to <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>.</span></span> <span data-ttu-id="cfb5a-125">初始化相對的資料行寬度將資料行設定<xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>屬性或透過呼叫控制項<xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>方法之後使用資料填入控制項。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-125">Initialize relative column widths by setting the column <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> properties or by calling the control <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> method after filling the control with data.</span></span>|  
+|<span data-ttu-id="cfb5a-126">使用資料行填滿模式，顯示不同重要性的值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-126">Use column fill mode with values of varying importance.</span></span>|<span data-ttu-id="cfb5a-127">將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-127">Set the <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> property to <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>.</span></span> <span data-ttu-id="cfb5a-128">設定大型<xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>必須永遠顯示其資料的部分或不使用調整大小選項以外的資料行填入模式的特定資料行的值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-128">Set large <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> values for columns that must always display some of their data or use a sizing option other than fill mode for specific columns.</span></span>|  
+|<span data-ttu-id="cfb5a-129">若要避免顯示控制項背景中使用資料行填入模式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-129">Use column fill mode to avoid displaying the control background.</span></span>|<span data-ttu-id="cfb5a-130">設定<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>的最後一個資料行的屬性<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>和其他資料行使用其他的調整大小選項。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-130">Set the <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> property of the last column to <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> and use other sizing options for the other columns.</span></span> <span data-ttu-id="cfb5a-131">如果其他資料行使用太多的可用空間，設定<xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>的最後一個資料行的屬性。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-131">If the other columns use too much of the available space, set the <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> property of the last column.</span></span>|  
+|<span data-ttu-id="cfb5a-132">顯示固定寬度資料行，例如圖示或識別碼資料行。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-132">Display a fixed-width column, such as an icon or ID column.</span></span>|<span data-ttu-id="cfb5a-133">設定<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>至<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None>和<xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>至<xref:System.Windows.Forms.DataGridViewTriState.False>資料行。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-133">Set <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> to <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None> and <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> to <xref:System.Windows.Forms.DataGridViewTriState.False> for the column.</span></span> <span data-ttu-id="cfb5a-134">藉由設定初始化其寬度<xref:System.Windows.Forms.DataGridViewColumn.Width%2A>屬性或透過呼叫控制項<xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>方法之後使用資料填入控制項。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-134">Initialize its width by setting the <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> property or by calling the control <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> method after filling the control with data.</span></span>|  
+|<span data-ttu-id="cfb5a-135">每當資料格內容變更，以避免裁剪及最佳化空間的使用會自動調整大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-135">Adjust sizes automatically whenever cell contents change to avoid clipping and to optimize the use of space.</span></span>|<span data-ttu-id="cfb5a-136">自動調整大小屬性設為值，表示以內容為基礎的調整大小模式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-136">Set an automatic sizing property to a value that represents a content-based sizing mode.</span></span> <span data-ttu-id="cfb5a-137">若要使用大量的資料時，請避免對效能帶來負面影響，請使用會顯示資料列計算的調整大小模式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-137">To avoid a performance penalty when working with large amounts of data, use a sizing mode that calculates displayed rows only.</span></span>|  
+|<span data-ttu-id="cfb5a-138">調整大小以符合以避免效能的負面影響，使用多個資料列時顯示的資料列的值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-138">Adjust sizes to fit values in displayed rows to avoid performance penalties when working with many rows.</span></span>|<span data-ttu-id="cfb5a-139">使用自動或以程式設計方式調整大小的適當調整大小模式的列舉值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-139">Use the appropriate sizing-mode enumeration values with automatic or programmatic resizing.</span></span> <span data-ttu-id="cfb5a-140">若要調整大小以符合顯示新資料列的值，在捲動時，調整大小的方法呼叫中<xref:System.Windows.Forms.DataGridView.Scroll>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-140">To adjust sizes to fit values in newly displayed rows while scrolling, call a resizing method in a <xref:System.Windows.Forms.DataGridView.Scroll> event handler.</span></span> <span data-ttu-id="cfb5a-141">若要自訂使用者按兩下調整大小，以便只顯示資料列中的值決定新的大小，呼叫調整大小的方法<xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick>或<xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-141">To customize user double-click resizing so that only values in displayed rows determine the new sizes, call a resizing method in a <xref:System.Windows.Forms.DataGridView.RowDividerDoubleClick> or <xref:System.Windows.Forms.DataGridView.ColumnDividerDoubleClick> event handler.</span></span>|  
+|<span data-ttu-id="cfb5a-142">調整大小以符合儲存格的內容只在特定時間，以避免效能的負面影響，或啟用使用者重新調整大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-142">Adjust sizes to fit cell contents only at specific times to avoid performance penalties or to enable user resizing.</span></span>|<span data-ttu-id="cfb5a-143">事件處理常式中呼叫的內容為基礎的調整大小方法。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-143">Call a content-based resizing method in an event handler.</span></span> <span data-ttu-id="cfb5a-144">例如，使用<xref:System.Windows.Forms.DataGridView.DataBindingComplete>來初始化繫結之後, 的大小，以及處理事件<xref:System.Windows.Forms.DataGridView.CellValidated>或<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件，以調整大小，以彌補使用者編輯或變更繫結的資料來源中。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-144">For example, use the <xref:System.Windows.Forms.DataGridView.DataBindingComplete> event to initialize sizes after binding, and handle the <xref:System.Windows.Forms.DataGridView.CellValidated> or <xref:System.Windows.Forms.DataGridView.CellValueChanged> event to adjust sizes to compensate for user edits or changes in a bound data source.</span></span>|  
+|<span data-ttu-id="cfb5a-145">調整多行的資料格內容的資料列高度。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-145">Adjust row heights for multiline cell contents.</span></span>|<span data-ttu-id="cfb5a-146">請確定資料行寬度是適合用來顯示的文字段落，並使用自動或以程式設計方式以內容為基礎的資料列大小調整高度。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-146">Ensure that column widths are appropriate for displaying paragraphs of text and use automatic or programmatic content-based row sizing to adjust the heights.</span></span> <span data-ttu-id="cfb5a-147">此外也請確認儲存格以多行的內容會顯示使用<xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>資料格的樣式值<xref:System.Windows.Forms.DataGridViewTriState.True>。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-147">Also ensure that cells with multiline content are displayed using a <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> cell style value of <xref:System.Windows.Forms.DataGridViewTriState.True>.</span></span><br /><br /> <span data-ttu-id="cfb5a-148">一般而言，您將使用資料行自動調整大小模式來維護資料行寬度，或將它們設定為特定的寬度之前的資料列高度會調整。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-148">Typically, you will use an automatic column sizing mode to maintain column widths or set them to specific widths before row heights are adjusted.</span></span>|  
   
-## 使用滑鼠調整大小  
- 根據預設，只要資料列、資料行和行首不是使用根據儲存格值自動調整的模式，使用者就可以調整其大小。  若要避免使用者在其他模式中 \(例如資料行填入模式\) 調整大小，請設定一或多個下列 <xref:System.Windows.Forms.DataGridView> 屬性：  
+## <a name="resizing-with-the-mouse"></a><span data-ttu-id="cfb5a-149">使用滑鼠調整大小</span><span class="sxs-lookup"><span data-stu-id="cfb5a-149">Resizing with the Mouse</span></span>  
+ <span data-ttu-id="cfb5a-150">根據預設，使用者可以調整資料列、 資料行和標頭不是使用資料格的值為基礎的自動調整大小模式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-150">By default, users can resize rows, columns, and headers that do not use an automatic sizing mode based on cell values.</span></span> <span data-ttu-id="cfb5a-151">若要防止使用者與其他模式，例如資料行填入模式中，調整設定一或多個下列<xref:System.Windows.Forms.DataGridView>屬性：</span><span class="sxs-lookup"><span data-stu-id="cfb5a-151">To prevent users from resizing with other modes, such as column fill mode, set one or more of the following <xref:System.Windows.Forms.DataGridView> properties:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
@@ -63,25 +64,25 @@ caps.handback.revision: 29
   
 -   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
- 您也可以設定資料列或資料行的 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 屬性，避免使用者調整個別資料列或資料行的大小。  根據預設，<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 屬性值是依照資料行的 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> 屬性值和資料列的 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> 屬性值來決定。  如果您明確地將 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 設定為 <xref:System.Windows.Forms.DataGridViewTriState> 或 <xref:System.Windows.Forms.DataGridViewTriState>，則這個指定值會覆寫控制項中資料列或資料行的屬性值。  將 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 設定為 <xref:System.Windows.Forms.DataGridViewTriState> 可以還原其繼承。  
+ <span data-ttu-id="cfb5a-152">您也可以防止使用者藉由設定調整個別的資料列或資料行其<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-152">You can also prevent users from resizing individual rows or columns by setting their <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> properties.</span></span> <span data-ttu-id="cfb5a-153">根據預設，<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>屬性值根據<xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>資料行的屬性值和<xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>資料列的屬性值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-153">By default, the <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> property value is based on the <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> property value for columns and the <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> property value for rows.</span></span> <span data-ttu-id="cfb5a-154">如果您明確地設定<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>至<xref:System.Windows.Forms.DataGridViewTriState.True>或<xref:System.Windows.Forms.DataGridViewTriState.False>，不過指定的值會覆寫控制項的值是該資料列或資料行。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-154">If you explicitly set <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> to <xref:System.Windows.Forms.DataGridViewTriState.True> or <xref:System.Windows.Forms.DataGridViewTriState.False>, however, the specified value overrides the control value is for that row or column.</span></span> <span data-ttu-id="cfb5a-155">設定<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>至<xref:System.Windows.Forms.DataGridViewTriState.NotSet>還原繼承。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-155">Set <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> to <xref:System.Windows.Forms.DataGridViewTriState.NotSet> to restore the inheritance.</span></span>  
   
- 因為 <xref:System.Windows.Forms.DataGridViewTriState> 還原了繼承值，除非資料列或資料行尚未加入至 <xref:System.Windows.Forms.DataGridView> 控制項，否則 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 屬性將永遠不會傳回 <xref:System.Windows.Forms.DataGridViewTriState> 值。  如果您必須判斷資料列或資料行的 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 屬性值是否為繼承而來，請檢查其 <xref:System.Windows.Forms.DataGridViewElement.State%2A> 屬性。  如果 <xref:System.Windows.Forms.DataGridViewElement.State%2A> 值包含了 <xref:System.Windows.Forms.DataGridViewElementStates> 旗標，則 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 屬性值就不是從繼承而來。  
+ <span data-ttu-id="cfb5a-156">因為<xref:System.Windows.Forms.DataGridViewTriState.NotSet>還原繼承的值，<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>永遠不會傳回屬性<xref:System.Windows.Forms.DataGridViewTriState.NotSet>值的資料列或資料行尚未加入至除非<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-156">Because <xref:System.Windows.Forms.DataGridViewTriState.NotSet> restores the value inheritance, the <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> property will never return a <xref:System.Windows.Forms.DataGridViewTriState.NotSet> value unless the row or column has not been added to a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="cfb5a-157">如果您需要確定是否<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>資料列或資料行的屬性值繼承時，檢查其<xref:System.Windows.Forms.DataGridViewElement.State%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-157">If you need to determine whether the <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> property value of a row or column is inherited, examine its <xref:System.Windows.Forms.DataGridViewElement.State%2A> property.</span></span> <span data-ttu-id="cfb5a-158">如果<xref:System.Windows.Forms.DataGridViewElement.State%2A>值包含<xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>旗標，<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>不繼承屬性值。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-158">If the <xref:System.Windows.Forms.DataGridViewElement.State%2A> value includes the <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> flag, the <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> property value is not inherited.</span></span>  
   
-## 自動調整大小  
- 在 <xref:System.Windows.Forms.DataGridView> 控制項中有兩種自動調整：資料行填入模式和內容架構的自動調整。  
+## <a name="automatic-sizing"></a><span data-ttu-id="cfb5a-159">自動調整大小</span><span class="sxs-lookup"><span data-stu-id="cfb5a-159">Automatic Sizing</span></span>  
+ <span data-ttu-id="cfb5a-160">有兩種類型中的自動調整大小的<xref:System.Windows.Forms.DataGridView>控制項： 資料行填入模式和以內容為基礎的自動調整大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-160">There are two kinds of automatic sizing in the <xref:System.Windows.Forms.DataGridView> control: column fill mode and content-based automatic sizing.</span></span>  
   
- 資料行填入模式會以控制項中看得見的資料行來填滿控制項顯示區域的寬度。  如需此模式的詳細資訊，請參閱[在 Windows Form DataGridView 控制項中的資料行填入模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)。  
+ <span data-ttu-id="cfb5a-161">資料行填入模式會導致以填滿控制項的顯示區域寬度控制項的可見資料行。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-161">Column fill mode causes the visible columns in the control to fill the width of the control's display area.</span></span> <span data-ttu-id="cfb5a-162">如需此模式的詳細資訊，請參閱[Windows Form DataGridView 控制項中的資料行填滿模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-162">For more information about this mode, see [Column Fill Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).</span></span>  
   
- 您也可以設定資料列、資料行和行首，讓它們根據儲存格的內容來自動調整大小。  這種情況下，只要儲存格內容發生變更，大小就會隨之調整。  
+ <span data-ttu-id="cfb5a-163">您也可以設定資料列、 資料行，以及自動調整大小以適合其儲存格內容的標頭。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-163">You can also configure rows, columns, and headers to automatically adjust their sizes to fit their cell contents.</span></span> <span data-ttu-id="cfb5a-164">在此情況下，每當資料格內容變更時，就會發生大小調整。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-164">In this case, size adjustment occurs whenever cell contents change.</span></span>  
   
 > [!NOTE]
->  如果您使用虛擬模式在一個自訂資料快取中維護儲存格值，當使用者編輯儲存格值時就會發生自動調整，但是如果您是從 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 事件處理常式之外更改快取的值，就不會發生自動調整。  這種情況下，可呼叫 <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> 方法，強制控制項更新儲存格顯示並套用目前的自動調整模式。  
+>  <span data-ttu-id="cfb5a-165">如果您維持儲存格的值，自訂資料快取中使用的虛擬模式時，自動調整大小發生於使用者編輯儲存格的值，但當您改變之外的快取的值不會發生<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-165">If you maintain cell values in a custom data cache using virtual mode, automatic sizing occurs when the user edits a cell value but does not occur when you alter a cached value outside of a <xref:System.Windows.Forms.DataGridView.CellValuePushed> event handler.</span></span> <span data-ttu-id="cfb5a-166">在此情況下，呼叫<xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>方法，以強制控制項更新資料格顯示，並且套用目前的自動調整大小模式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-166">In this case, call the <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> method to force the control to update the cell display and apply the current automatic sizing modes.</span></span>  
   
- 如果內容架構的自動調整只在一個維度上啟用 \(只在資料列或只在資料行啟用\)，而且同時啟用了 <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>，當另一個維度發生變更時，大小也會隨之調整。  例如，如果資料列設定了自動調整 \(資料行未設定\)，而且啟用了 <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>，使用者可以拖曳資料行分隔線來變更資料行寬度，資料列高度會自動調整，儲存格內容還是可以完整顯示。  
+ <span data-ttu-id="cfb5a-167">如果只有一個維度已啟用以內容為基礎的自動調整大小，是針對資料列，但是沒有資料行，或資料行，但不是資料列 — 和<xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>也是每次變更與其他維度時，也會發生啟用，大小調整。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-167">If content-based automatic sizing is enabled for one dimension only—that is, for rows but not columns, or for columns but not rows—and <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> is also enabled, size adjustment also occurs whenever the other dimension changes.</span></span> <span data-ttu-id="cfb5a-168">例如，如果資料列，但不是資料行設定為自動調整大小和<xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>已啟用，使用者可以拖曳資料行分隔線來變更資料行寬度及資料列的高度會自動調整儲存格的內容仍然完整顯示。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-168">For example, if rows but not columns are configured for automatic sizing and <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> is enabled, users can drag column dividers to change the width of a column and row heights will automatically adjust so that cell contents are still fully displayed.</span></span>  
   
- 如果您在資料列和資料行都設定了內容架構的自動調整，而且啟用了 <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>，當儲存格內容發生變更時，<xref:System.Windows.Forms.DataGridView> 控制項即會調整大小，並使用理想的儲存格長寬比來計算新的大小。  
+ <span data-ttu-id="cfb5a-169">如果您設定資料列和資料行的內容為基礎的自動調整大小和<xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>已啟用，<xref:System.Windows.Forms.DataGridView>控制項將會調整大小，每當儲存格內容變更，將會使用一個理想的儲存格的高度與寬度比時計算新的大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-169">If you configure both rows and columns for content-based automatic sizing and <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> is enabled, the <xref:System.Windows.Forms.DataGridView> control will adjust sizes whenever cell contents changed and will use an ideal cell height-to-width ratio when calculating new sizes.</span></span>  
   
- 若要設定行首和資料列 \(以及未覆寫控制項值的資料行\) 的調整模式，請設定一或多個下列 <xref:System.Windows.Forms.DataGridView> 屬性：  
+ <span data-ttu-id="cfb5a-170">若要設定標頭和資料列以及不會覆寫控制項值的資料行的調整模式，請設定一或多個下列<xref:System.Windows.Forms.DataGridView>屬性：</span><span class="sxs-lookup"><span data-stu-id="cfb5a-170">To configure the sizing mode for headers and rows and for columns that do not override the control value, set one or more of the following <xref:System.Windows.Forms.DataGridView> properties:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
@@ -91,26 +92,26 @@ caps.handback.revision: 29
   
 -   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
- 若要覆寫控制項對某一個別資料行的資料行調整模式，請將其 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> 以外的值。  資料行的調整模式實際上是藉由其 <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> 屬性來決定。  而這個屬性值則是根據資料行的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 屬性值而來，除非該值為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>，在這種情況下，控制項的 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 值是從繼承而來。  
+ <span data-ttu-id="cfb5a-171">若要覆寫控制項的資料行調整大小模式個別資料行，請將其<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>屬性以外的值為<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-171">To override the control's column sizing mode for an individual column, set its <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> property to a value other than <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>.</span></span> <span data-ttu-id="cfb5a-172">資料行的調整大小模式實際上由其<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-172">The sizing mode for a column is actually determined by its <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> property.</span></span> <span data-ttu-id="cfb5a-173">這個屬性的值為基礎的資料行<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>屬性值，除非該值<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>的情況下的控制項<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>值繼承。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-173">The value of this property is based on the column's <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> property value unless that value is <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, in which case the control's <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> value is inherited.</span></span>  
   
- 當您在處理大量資料時，請謹慎使用內容架構的自動調整。  若要避免效能損失，請使用只會計算所顯示資料列大小的自動調整模式，不要對控制項中的每個資料列進行分析。  若要達到最佳效能，請改以程式設計方式來調整大小，這樣您可以在特定的時間調整大小，例如，在新資料載入後立刻進行。  
+ <span data-ttu-id="cfb5a-174">使用以內容為基礎的自動調整大小謹慎使用大量的資料時。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-174">Use content-based automatic resizing with caution when working with large amounts of data.</span></span> <span data-ttu-id="cfb5a-175">若要避免效能的負面影響，請使用計算只根據顯示的資料列，而不是分析控制項中的每個資料列的大小自動調整大小模式。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-175">To avoid performance penalties, use the automatic sizing modes that calculate sizes based only on the displayed rows rather than analyzing every row in the control.</span></span> <span data-ttu-id="cfb5a-176">最大效能，使用以程式設計方式調整，改為因此您可以調整大小在特定時間，例如新的資料之後，立即載入。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-176">For maximum performance, use programmatic resizing instead so that you can resize at specific times, such as immediately after new data is loaded.</span></span>  
   
- 如果您將資料列或資料行的 <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> 屬性，或是控制項的 <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> 或 <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> 屬性設定為 `false`，內容架構的自動調整模式並不會影響這些隱藏的資料列、資料行或行首。  例如，如果某一個資料行為了容納一個較大的儲存格值而自動調整大小，在這之後該資料行被隱藏；即使包含了較大儲存格值的資料列被刪除，這個隱藏的資料行並不會改變其大小。  自動調整不會因為可視性的變更而發生，因此，將資料行的 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> 屬性變更回 `true` 並不會強制它根據目前的內容重新計算大小。  
+ <span data-ttu-id="cfb5a-177">以內容為基礎的自動調整大小模式不會影響資料列、 資料行或您隱藏資料列或資料行設定的標頭<xref:System.Windows.Forms.DataGridViewBand.Visible%2A>屬性或控制項<xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A>或<xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A>屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-177">Content-based automatic sizing modes do not affect rows, columns, or headers that you have hidden by setting the row or column <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> property or the control <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> or <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> properties to `false`.</span></span> <span data-ttu-id="cfb5a-178">例如，如果資料行隱藏的自動調整大小以容納大型的資料格的值之後，隱藏資料行不會變更其大小如果包含大型的資料格的值的資料列遭到刪除。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-178">For example, if a column is hidden after it is automatically sized to fit a large cell value, the hidden column will not change its size if the row containing the large cell value is deleted.</span></span> <span data-ttu-id="cfb5a-179">自動調整大小不會發生變更可見性，因此變更資料行<xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>屬性設回`true`將不會強制它重新計算其根據其目前內容的大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-179">Automatic sizing does not occur when visibility changes, so changing the column <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> property back to `true` will not force it to recalculate its size based on its current contents.</span></span>  
   
- 以程式設計方式所做的內容架構大小調整會影響資料列、資料行和行首，而不論其可視性為何。  
+ <span data-ttu-id="cfb5a-180">調整大小以程式設計方式以內容為基礎，會影響資料列、 資料行和標頭，不論其可見性。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-180">Programmatic content-based resizing affects rows, columns, and headers regardless of their visibility.</span></span>  
   
-## 以程式設計方式調整大小  
- 當自動調整停用時，您可以藉由下列屬性，以程式設計方式來設定資料列、資料行或行首確切的寬度或高度：  
+## <a name="programmatic-resizing"></a><span data-ttu-id="cfb5a-181">以程式設計方式調整大小</span><span class="sxs-lookup"><span data-stu-id="cfb5a-181">Programmatic Resizing</span></span>  
+ <span data-ttu-id="cfb5a-182">停用自動調整大小，以程式設計方式設定正確的寬度或高度的資料列、 資料行或藉由下列屬性的標頭：</span><span class="sxs-lookup"><span data-stu-id="cfb5a-182">When automatic sizing is disabled, you can programmatically set the exact width or height of rows, columns, or headers through the following properties:</span></span>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
- 您也可以使用下列方法，以程式設計方式來調整資料列、資料行和行首的大小，以符合其內容：  
+ <span data-ttu-id="cfb5a-183">您也可以也以程式設計方式調整資料列、 資料行和標頭，以適合其內容，使用下列方法：</span><span class="sxs-lookup"><span data-stu-id="cfb5a-183">You can also programmatically resize rows, columns, and headers to fit their contents using the following methods:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
@@ -124,45 +125,45 @@ caps.handback.revision: 29
   
 -   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
- 這些方法會對資料列、資料行或行首進行一次調整大小，而不會把它們調整為持續改變大小。  新的大小會自動計算，以在不裁剪的情況下顯示所有儲存格內容。  但是，當您要以程式設計方式調整其 <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> 屬性值為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode> 的資料行時，計算所得出的內容架構寬度會用來依比例調整資料行的 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性值，實際的資料行寬度則會根據這些新比例來計算，以使所有資料行填滿控制項中可用的顯示區域。  
+ <span data-ttu-id="cfb5a-184">這些方法會重新調整資料列、 資料行，或一次標頭而不是設定這些持續調整大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-184">These methods will resize rows, columns, or headers once rather than configuring them for continuous resizing.</span></span> <span data-ttu-id="cfb5a-185">新的大小會自動計算，以顯示所有儲存格內容，而不裁剪。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-185">The new sizes are automatically calculated to display all cell contents without clipping.</span></span> <span data-ttu-id="cfb5a-186">當您以程式設計方式調整資料行具有<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>屬性值<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>，不過，會按比例調整資料行使用以內容為基礎的計算的寬度<xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>屬性值和實際資料行的寬度然後根據計算這些新的比例，讓所有資料行填滿可用顯示區域的控制項。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-186">When you programmatically resize columns that have <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> property values of <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, however, the calculated content-based widths are used to proportionally adjust the column <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> property values, and the actually column widths are then calculated according to these new proportions so that all columns fill the available display area of the control.</span></span>  
   
- 以程式設計方式調整大小可有效避免持續調整大小所造成的效能損失。  您也可以用它來為使用者可調整大小的資料列、資料行和行首，以及為資料行填入模式提供初始的大小。  
+ <span data-ttu-id="cfb5a-187">以程式設計方式調整大小適合避免持續調整大小的效能負面影響。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-187">Programmatic resizing is useful to avoid performance penalties with continuous resizing.</span></span> <span data-ttu-id="cfb5a-188">它也很有用來提供使用者可調整大小的資料列、 資料行和標頭，以及資料行填入模式的初始大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-188">It is also useful to provide initial sizes for user-resizable rows, columns, and headers, and for column fill mode.</span></span>  
   
- 通常您會在特定時間呼叫程式設計方式的調整大小方法。  例如，您可能想在資料載入後立刻以程式設計方式調整所有資料行的大小，或者，您可能會想在某個特定儲存格值修改後，以程式設計方式其資料列的大小。  
+ <span data-ttu-id="cfb5a-189">您通常會在特定時間呼叫以程式設計方式調整大小的方法。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-189">You will typically call the programmatic resizing methods at specific times.</span></span> <span data-ttu-id="cfb5a-190">例如，您可能會在載入資料之後，立即以程式設計方式重新調整所有欄位，或可能會修改特定的資料格的值之後以程式設計方式調整都大小的特定資料列。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-190">For example, you might programmatically resize all columns immediately after loading data, or you might programmatically resize a specific row after a particular cell value has been modified.</span></span>  
   
-## 自訂內容架構的調整行為  
- 在使用衍生的 <xref:System.Windows.Forms.DataGridView> 儲存格、資料列和資料行型別時，您可以自訂調整行為，做法是覆寫 <xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=fullName>、<xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=fullName> 或 <xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=fullName> 方法，或呼叫衍生的 <xref:System.Windows.Forms.DataGridView> 控制項中受保護的調整大小方法多載。  受保護的調整大小方法多載在設計上是成對運作，可以達到理想的儲存格長寬比，避免造成過寬或過高的儲存格。  例如，如果您呼叫了 <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A> 方法的 `AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)` 多載，並且傳入一個 `false` 值給 <xref:System.Boolean> 參數，這個多載會計算資料列中儲存格理想的高度和寬度，但是它只會調整資料列的高度。  您必須接著呼叫 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 方法，以根據計算出的理想值調整資料行寬度。  
+## <a name="customizing-content-based-sizing-behavior"></a><span data-ttu-id="cfb5a-191">自訂內容為基礎的調整大小行為</span><span class="sxs-lookup"><span data-stu-id="cfb5a-191">Customizing Content-based Sizing Behavior</span></span>  
+ <span data-ttu-id="cfb5a-192">使用衍生時，您可以自訂調整大小行為<xref:System.Windows.Forms.DataGridView>資料格、 列和資料行的類型，藉由覆寫<xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=nameWithType>， <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=nameWithType>，或<xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=nameWithType>方法或藉由呼叫受保護的調整大小的方法多載中衍生<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-192">You can customize sizing behaviors when working with derived <xref:System.Windows.Forms.DataGridView> cell, row, and column types by overriding the <xref:System.Windows.Forms.DataGridViewCell.GetPreferredSize%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewRow.GetPreferredHeight%2A?displayProperty=nameWithType>, or <xref:System.Windows.Forms.DataGridViewColumn.GetPreferredWidth%2A?displayProperty=nameWithType> methods or by calling protected resizing method overloads in a derived <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="cfb5a-193">受保護的調整大小方法多載專為搭配成對達到理想的儲存格高度與寬度比例，避免過度寬或更高的資料格。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-193">The protected resizing method overloads are designed to work in pairs to achieve an ideal cell height-to-width ratio, avoiding overly wide or tall cells.</span></span> <span data-ttu-id="cfb5a-194">例如，如果您呼叫`AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)`多載<xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>方法並傳入的值`false`如<xref:System.Boolean>參數，多載會計算的理想高度和資料列，資料格的寬度，但它將會調整資料列高度只有。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-194">For example, if you call the `AutoResizeRows(DataGridViewAutoSizeRowsMode,Boolean)` overload of the <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A> method and pass in a value of `false` for the <xref:System.Boolean> parameter, the overload will calculate the ideal heights and widths for cells in the row, but it will adjust the row heights only.</span></span> <span data-ttu-id="cfb5a-195">然後您必須呼叫<xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>調整欄寬度，以在導出理想的方法。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-195">You must then call the <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> method to adjust the column widths to the calculated ideal.</span></span>  
   
-## 內容架構的調整選項  
- 調整大小屬性和方法所使用的列舉型別，對於內容架構的調整都具有類似的值。  使用這些值，您就可以限制要以哪些儲存格來計算慣用大小。  在所有調整大小的列舉型別中，如果值是參考已顯示的儲存格之名稱，就會將計算限制在已顯示資料列的儲存格這個範圍當中。  當您必須處理大量資料列時，排除一些資料列可以避免效能損失。  您也可以將計算限制在行首的儲存格值，或非行首的儲存格當中。  
+## <a name="content-based-sizing-options"></a><span data-ttu-id="cfb5a-196">以內容為基礎的調整大小選項</span><span class="sxs-lookup"><span data-stu-id="cfb5a-196">Content-based Sizing Options</span></span>  
+ <span data-ttu-id="cfb5a-197">調整大小屬性和方法所使用的列舉型別有類似的值，以內容為基礎的大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-197">The enumerations used by sizing properties and methods have similar values for content-based sizing.</span></span> <span data-ttu-id="cfb5a-198">使用這些值，您可以限制哪些儲存格用來計算的慣用的大小。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-198">With these values, you can limit which cells are used to calculate the preferred sizes.</span></span> <span data-ttu-id="cfb5a-199">所有的調整大小列舉名稱來指稱顯示的資料格的值會將計算中顯示的資料列的資料格限制。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-199">For all sizing enumerations, values with names that refer to displayed cells limit their calculations to cells in displayed rows.</span></span> <span data-ttu-id="cfb5a-200">排除的資料列適合您正在使用大量資料列時避免對效能帶來負面影響。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-200">Excluding rows is useful to avoid a performance penalty when you are working with a large quantity of rows.</span></span> <span data-ttu-id="cfb5a-201">您也可以限制在標頭或非行首儲存格的計算。</span><span class="sxs-lookup"><span data-stu-id="cfb5a-201">You can also restrict calculations to cell values in header or nonheader cells.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeRowMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>   
- <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>   
- <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>   
- <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>   
- [調整 Windows Form DataGridView 控制項中資料行和資料列的大小](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)   
- [在 Windows Form DataGridView 控制項中的資料行填入模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)   
- [如何：設定 Windows Form DataGridView 控制項的縮放模式](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="cfb5a-202">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cfb5a-202">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeRowMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeRowsMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>  
+ <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>  
+ <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>  
+ <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>  
+ [<span data-ttu-id="cfb5a-203">調整 Windows Forms DataGridView 控制項中資料行和資料列的大小</span><span class="sxs-lookup"><span data-stu-id="cfb5a-203">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="cfb5a-204">Windows Forms DataGridView 控制項中的資料行填入模式</span><span class="sxs-lookup"><span data-stu-id="cfb5a-204">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="cfb5a-205">操作說明：設定 Windows Forms DataGridView 控制項的縮放模式</span><span class="sxs-lookup"><span data-stu-id="cfb5a-205">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

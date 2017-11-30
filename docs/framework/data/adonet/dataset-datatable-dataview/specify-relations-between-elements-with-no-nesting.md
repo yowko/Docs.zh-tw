@@ -1,27 +1,30 @@
 ---
-title: "指定無巢狀項目間的關聯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "指定未巢狀放置之項目間的關聯"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 036085160e9e4817964754a85db627e4d4ba8654
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 指定無巢狀項目間的關聯
-項目未巢狀化時，不會建立任何隱含關聯，  但是您可以使用 **msdata:Relationship** 註釋，明確地指定無巢狀化項目間的關聯性。  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="f8cbc-102">指定未巢狀放置之項目間的關聯</span><span class="sxs-lookup"><span data-stu-id="f8cbc-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="f8cbc-103">項目未巢狀化時，不會建立任何隱含關聯，</span><span class="sxs-lookup"><span data-stu-id="f8cbc-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="f8cbc-104">不過，您可以明確地指定無巢狀使用的項目之間的關聯性**msdata: relationship**註解。</span><span class="sxs-lookup"><span data-stu-id="f8cbc-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- 下列範例顯示 XML 結構描述，其中已在非巢狀化的 **Order** 和 **OrderDetail** 項目間指定了 **msdata:Relationship** 註釋。  **msdata:Relationship** 註釋會指定為 **Schema** 項目的項目子系。  
+ <span data-ttu-id="f8cbc-105">下列範例顯示 XML 結構描述所在**msdata: relationship**註解會指定之間**順序**和**OrderDetail**項目，則不是巢狀結構。</span><span class="sxs-lookup"><span data-stu-id="f8cbc-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="f8cbc-106">**Msdata: relationship**註解指定為子元素**結構描述**項目。</span><span class="sxs-lookup"><span data-stu-id="f8cbc-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
              xmlns:xs="http://www.w3.org/2001/XMLSchema"   
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -60,7 +63,7 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- XML 結構描述定義語言 \(XSD\) 結構描述對應處理序建立了含有 **Order** 與 **OrderDetail** 資料表的 <xref:System.Data.DataSet>，以及在這兩個資料表之間指定的關聯性，如下所示。  
+ <span data-ttu-id="f8cbc-107">XML 結構描述定義語言 (XSD) 結構描述對應處理會建立<xref:System.Data.DataSet>與**順序**和**OrderDetail**資料表，如下所示，指定兩個資料表之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="f8cbc-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -71,7 +74,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## 請參閱  
- [從 XML 結構描述 \(XSD\) 產生 DataSet 關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [將 XML 結構描述 \(XSD\) 條件約束對應至 DataSet 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f8cbc-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8cbc-108">See Also</span></span>  
+ [<span data-ttu-id="f8cbc-109">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="f8cbc-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="f8cbc-110">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="f8cbc-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="f8cbc-111">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="f8cbc-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

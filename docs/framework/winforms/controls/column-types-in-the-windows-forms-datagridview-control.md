@@ -1,104 +1,105 @@
 ---
-title: "Windows Form DataGridView 控制項中的資料行類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料行 [Windows Form], 類型"
-  - "資料格, 資料行"
-  - "DataGridView 控制項 [Windows Form], 資料行類型"
+title: "Windows Form DataGridView 控制項中的資料行類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], types
+- DataGridView control [Windows Forms], column types
+- data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form DataGridView 控制項中的資料行類型
-<xref:System.Windows.Forms.DataGridView> 控制項使用數種資料行型別來顯示資訊，並讓使用者可以修改或新增資訊。  
+# <a name="column-types-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="c534f-102">Windows Form DataGridView 控制項中的資料行類型</span><span class="sxs-lookup"><span data-stu-id="c534f-102">Column Types in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="c534f-103"><xref:System.Windows.Forms.DataGridView>控制項使用數個資料行類型來顯示它的資訊，並讓使用者修改或新增資訊。</span><span class="sxs-lookup"><span data-stu-id="c534f-103">The <xref:System.Windows.Forms.DataGridView> control uses several column types to display its information and enable users to modify or add information.</span></span>  
   
- 當您繫結 <xref:System.Windows.Forms.DataGridView> 控制項，並將 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> 屬性設定為 `true` 時，會使用適合繫結資料來源所包含資料型別的預設資料行型別自動產生資料行。  
+ <span data-ttu-id="c534f-104">當您繫結<xref:System.Windows.Forms.DataGridView>控制以及設定<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>屬性`true`，會自動產生資料行使用適當繫結的資料來源中所包含的資料類型的預設資料行類型。</span><span class="sxs-lookup"><span data-stu-id="c534f-104">When you bind a <xref:System.Windows.Forms.DataGridView> control and set the <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> property to `true`, columns are automatically generated using default column types appropriate for the data types contained in the bound data source.</span></span>  
   
- 您也可以自行建立任何資料行類別的執行個體，並將這些執行個體加入至 <xref:System.Windows.Forms.DataGridView.Columns%2A> 屬性所傳回的集合。  您可建立這些執行個體做為未繫結的資料行，或者也可以用手動方式加以繫結。  例如，在您想要使用別種型別的資料行來取代自動產生的某種型別資料行時，以手動方式繫結資料行就非常有用。  
+ <span data-ttu-id="c534f-105">您也可以自行建立的任何資料行類別的執行個體，並將它們加入至所傳回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-105">You can also create instances of any of the column classes yourself and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A> property.</span></span> <span data-ttu-id="c534f-106">您可以建立這些執行個體做為未繫結的資料行，或您可以手動將其繫結。</span><span class="sxs-lookup"><span data-stu-id="c534f-106">You can create these instances for use as unbound columns, or you can manually bind them.</span></span> <span data-ttu-id="c534f-107">手動繫結資料行都可用，例如，當您想要取代另一個類型的資料行中的一種類型的自動產生資料行。</span><span class="sxs-lookup"><span data-stu-id="c534f-107">Manually bound columns are useful, for example, when you want to replace an automatically generated column of one type with a column of another type.</span></span>  
   
- 下表說明可以在 <xref:System.Windows.Forms.DataGridView> 控制項中使用的各種資料行類別。  
+ <span data-ttu-id="c534f-108">下表描述可用於不同的資料行類別<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="c534f-108">The following table describes the various column classes available for use in the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-|類別|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|與文字基礎的值搭配使用。  當繫結至數字或字串時會自動產生。|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|與 <xref:System.Boolean> 和 <xref:System.Windows.Forms.CheckState> 值搭配使用。  當繫結至這些型別的值時會自動產生。|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|用來顯示影像。  當繫結至位元組陣列、<xref:System.Drawing.Image> 物件或 <xref:System.Drawing.Icon> 物件時，便會自動產生。|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|用來顯示儲存格中的按鈕。  不會在繫結時自動產生。  通常用來做為未繫結資料行。|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|用來顯示儲存格中的下拉式清單。  不會在繫結時自動產生。  通常以手動方式繫結至資料。|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|用來顯示儲存格中的連結。  不會在繫結時自動產生。  通常以手動方式繫結至資料。|  
-|您的自訂資料行型別|您可以建立自己的資料行類別，方法是繼承 <xref:System.Windows.Forms.DataGridViewColumn> 類別或其中一個衍生類別，以提供自訂外觀、行為或裝載控制項。  如需詳細資訊，請參閱 [如何：擴充儲存格和資料行的行為和外觀以自訂 Windows Form DataGridView 控制項中的儲存格和資料行](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|<span data-ttu-id="c534f-109">類別</span><span class="sxs-lookup"><span data-stu-id="c534f-109">Class</span></span>|<span data-ttu-id="c534f-110">說明</span><span class="sxs-lookup"><span data-stu-id="c534f-110">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|<span data-ttu-id="c534f-111">搭配使用以文字為基礎的值。</span><span class="sxs-lookup"><span data-stu-id="c534f-111">Used with text-based values.</span></span> <span data-ttu-id="c534f-112">繫結至數字與字串時自動產生。</span><span class="sxs-lookup"><span data-stu-id="c534f-112">Generated automatically when binding to numbers and strings.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|<span data-ttu-id="c534f-113">搭配<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。</span><span class="sxs-lookup"><span data-stu-id="c534f-113">Used with <xref:System.Boolean> and <xref:System.Windows.Forms.CheckState> values.</span></span> <span data-ttu-id="c534f-114">繫結至這些類型的值時自動產生。</span><span class="sxs-lookup"><span data-stu-id="c534f-114">Generated automatically when binding to values of these types.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|<span data-ttu-id="c534f-115">用來顯示影像。</span><span class="sxs-lookup"><span data-stu-id="c534f-115">Used to display images.</span></span> <span data-ttu-id="c534f-116">繫結至位元組陣列時自動產生<xref:System.Drawing.Image>物件，或<xref:System.Drawing.Icon>物件。</span><span class="sxs-lookup"><span data-stu-id="c534f-116">Generated automatically when binding to byte arrays, <xref:System.Drawing.Image> objects, or <xref:System.Drawing.Icon> objects.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|<span data-ttu-id="c534f-117">用來在資料格中顯示的按鈕。</span><span class="sxs-lookup"><span data-stu-id="c534f-117">Used to display buttons in cells.</span></span> <span data-ttu-id="c534f-118">繫結時，不會自動產生。</span><span class="sxs-lookup"><span data-stu-id="c534f-118">Not automatically generated when binding.</span></span> <span data-ttu-id="c534f-119">通常做為未繫結的資料行。</span><span class="sxs-lookup"><span data-stu-id="c534f-119">Typically used as unbound columns.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|<span data-ttu-id="c534f-120">用來顯示下拉式清單中的資料格。</span><span class="sxs-lookup"><span data-stu-id="c534f-120">Used to display drop-down lists in cells.</span></span> <span data-ttu-id="c534f-121">繫結時，不會自動產生。</span><span class="sxs-lookup"><span data-stu-id="c534f-121">Not automatically generated when binding.</span></span> <span data-ttu-id="c534f-122">通常資料繫結以手動方式。</span><span class="sxs-lookup"><span data-stu-id="c534f-122">Typically data-bound manually.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|<span data-ttu-id="c534f-123">用來在儲存格中顯示的連結。</span><span class="sxs-lookup"><span data-stu-id="c534f-123">Used to display links in cells.</span></span> <span data-ttu-id="c534f-124">繫結時，不會自動產生。</span><span class="sxs-lookup"><span data-stu-id="c534f-124">Not automatically generated when binding.</span></span> <span data-ttu-id="c534f-125">通常資料繫結以手動方式。</span><span class="sxs-lookup"><span data-stu-id="c534f-125">Typically data-bound manually.</span></span>|  
+|<span data-ttu-id="c534f-126">自訂資料行類型</span><span class="sxs-lookup"><span data-stu-id="c534f-126">Your custom column type</span></span>|<span data-ttu-id="c534f-127">您可以建立您自己的資料行類別繼承<xref:System.Windows.Forms.DataGridViewColumn>類別或任何其衍生的類別，以提供自訂外觀、 行為或裝載的控制項。</span><span class="sxs-lookup"><span data-stu-id="c534f-127">You can create your own column class by inheriting the <xref:System.Windows.Forms.DataGridViewColumn> class or any of its derived classes to provide custom appearance, behavior, or hosted controls.</span></span> <span data-ttu-id="c534f-128">如需詳細資訊，請參閱[How to： 自訂資料格和擴充其行為和外觀的 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)</span><span class="sxs-lookup"><span data-stu-id="c534f-128">For more information, see [How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)</span></span>|  
   
- 這些資料行型別在下列章節中有更詳細的說明。  
+ <span data-ttu-id="c534f-129">在下列各節中詳細說明這些資料行類型。</span><span class="sxs-lookup"><span data-stu-id="c534f-129">These column types are described in more detail in the following sections.</span></span>  
   
-## DataGridViewTextBoxColumn  
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn> 是一般目的的資料行型別，與文字基礎的值 \(例如數字和字串\) 搭配使用。  在編輯模式中，<xref:System.Windows.Forms.TextBox> 控制項會顯示於現用儲存格，讓使用者可以修改儲存格值。  
+## <a name="datagridviewtextboxcolumn"></a><span data-ttu-id="c534f-130">DataGridViewTextBoxColumn</span><span class="sxs-lookup"><span data-stu-id="c534f-130">DataGridViewTextBoxColumn</span></span>  
+ <span data-ttu-id="c534f-131"><xref:System.Windows.Forms.DataGridViewTextBoxColumn>是以文字為基礎的值，例如數字與字串搭配使用的一般用途資料行類型。</span><span class="sxs-lookup"><span data-stu-id="c534f-131">The <xref:System.Windows.Forms.DataGridViewTextBoxColumn> is a general-purpose column type for use with text-based values such as numbers and strings.</span></span> <span data-ttu-id="c534f-132">在編輯模式下，<xref:System.Windows.Forms.TextBox>控制項會顯示在作用中的資料格，讓使用者修改資料格的值。</span><span class="sxs-lookup"><span data-stu-id="c534f-132">In editing mode, a <xref:System.Windows.Forms.TextBox> control is displayed in the active cell, enabling users to modify the cell value.</span></span>  
   
- 儲存格值會自動轉換為顯示的字串。  會自動剖析使用者輸入或修改的值，以建立適當資料型別的儲存格值。  您可以藉由處理 <xref:System.Windows.Forms.DataGridView> 控制項的 <xref:System.Windows.Forms.DataGridView.CellFormatting> 和 <xref:System.Windows.Forms.DataGridView.CellParsing> 事件自訂這些轉換。  
+ <span data-ttu-id="c534f-133">資料格的值會自動轉換成字串來顯示。</span><span class="sxs-lookup"><span data-stu-id="c534f-133">Cell values are automatically converted to strings for display.</span></span> <span data-ttu-id="c534f-134">若要建立適當的資料類型的資料格的值，會自動剖析值輸入或修改的使用者。</span><span class="sxs-lookup"><span data-stu-id="c534f-134">Values entered or modified by the user are automatically parsed to create a cell value of the appropriate data type.</span></span> <span data-ttu-id="c534f-135">您可以自訂這些轉換處理<xref:System.Windows.Forms.DataGridView.CellFormatting>和<xref:System.Windows.Forms.DataGridView.CellParsing>事件<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="c534f-135">You can customize these conversions by handling the <xref:System.Windows.Forms.DataGridView.CellFormatting> and <xref:System.Windows.Forms.DataGridView.CellParsing> events of the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- 資料行的儲存格值資料型別是在資料行的 <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> 屬性中加以指定。  
+ <span data-ttu-id="c534f-136">資料格的值資料類型資料行中指定<xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A>資料行屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-136">The cell value data type of a column is specified in the <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> property of the column.</span></span>  
   
-## DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 會與 <xref:System.Boolean> 和 <xref:System.Windows.Forms.CheckState> 值一起使用。  <xref:System.Boolean> 值會依 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 屬性值而定，顯示為兩種狀態或三種狀態的核取方塊。  當資料行繫結至 <xref:System.Windows.Forms.CheckState> 值時，根據預設 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 屬性值會為 `true`。  
+## <a name="datagridviewcheckboxcolumn"></a><span data-ttu-id="c534f-137">DataGridViewCheckBoxColumn</span><span class="sxs-lookup"><span data-stu-id="c534f-137">DataGridViewCheckBoxColumn</span></span>  
+ <span data-ttu-id="c534f-138"><xref:System.Windows.Forms.DataGridViewCheckBoxColumn>搭配<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。</span><span class="sxs-lookup"><span data-stu-id="c534f-138">The <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> is used with <xref:System.Boolean> and <xref:System.Windows.Forms.CheckState> values.</span></span> <span data-ttu-id="c534f-139"><xref:System.Boolean>值會顯示兩個狀態或三種狀態核取方塊，根據的值為<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-139"><xref:System.Boolean> values display as two-state or three-state check boxes, depending on the value of the <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> property.</span></span> <span data-ttu-id="c534f-140">當資料行繫結至<xref:System.Windows.Forms.CheckState>值<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>屬性值是`true`預設。</span><span class="sxs-lookup"><span data-stu-id="c534f-140">When the column is bound to <xref:System.Windows.Forms.CheckState> values, the <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> property value is `true` by default.</span></span>  
   
- 通常核取方塊值的目的是為了儲存 \(例如任何其他資料\) 或執行大量作業。  如果您想要在使用者按下核取方塊儲存格時立即回應，您可以處理 <xref:System.Windows.Forms.DataGridView.CellClick> 事件，但是這個事件會發生在更新此儲存格值之前。  如果當您按下此儲存格時需要有新的值，會有一個選項可以根據目前的值計算需要的值為何。  另一個方式是立即認可變更，以及處理 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 事件來予以回應。  若要在按下儲存格時認可變更，您必須處理 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 事件。  在處理常式中，如果目前的儲存格是核取方塊儲存格，則呼叫 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 方法，並傳入 <xref:System.Windows.Forms.DataGridViewDataErrorContexts> 值。  
+ <span data-ttu-id="c534f-141">一般而言，核取方塊儲存格的值是用於存放裝置，例如任何其他資料，或執行大量作業。</span><span class="sxs-lookup"><span data-stu-id="c534f-141">Typically, check box cell values are intended either for storage, like any other data, or for performing bulk operations.</span></span> <span data-ttu-id="c534f-142">如果您想要立即當使用者按一下核取方塊儲存格，您可以處理回應<xref:System.Windows.Forms.DataGridView.CellClick>事件，但是此事件發生於儲存格的值會更新之前。</span><span class="sxs-lookup"><span data-stu-id="c534f-142">If you want to respond immediately when users click a check box cell, you can handle the <xref:System.Windows.Forms.DataGridView.CellClick> event, but this event occurs before the cell value is updated.</span></span> <span data-ttu-id="c534f-143">如果您在按一下時需要新的值，其中一個選項是計算預期的值將會根據目前的值。</span><span class="sxs-lookup"><span data-stu-id="c534f-143">If you need the new value at the time of the click, one option is to calculate what the expected value will be based on the current value.</span></span> <span data-ttu-id="c534f-144">另一個方法是立即認可變更，並處理<xref:System.Windows.Forms.DataGridView.CellValueChanged>回應它的事件。</span><span class="sxs-lookup"><span data-stu-id="c534f-144">Another approach is to commit the change immediately, and handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event to respond to it.</span></span> <span data-ttu-id="c534f-145">若要在按下儲存格時，請認可變更，您必須處理<xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="c534f-145">To commit the change when the cell is clicked, you must handle the <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> event.</span></span> <span data-ttu-id="c534f-146">在處理常式中，核取方塊儲存格的目前儲存格時，呼叫<xref:System.Windows.Forms.DataGridView.CommitEdit%2A>方法並傳入<xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit>值。</span><span class="sxs-lookup"><span data-stu-id="c534f-146">In the handler, if the current cell is a check box cell, call the <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> method and pass in the <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> value.</span></span>  
   
-## DataGridViewImageColumn  
- <xref:System.Windows.Forms.DataGridViewImageColumn> 是用來顯示影像。  影像資料行可從資料來源自動填入，可以用手動方式為未繫結資料行填入，或動態填入 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件的處理常式。  
+## <a name="datagridviewimagecolumn"></a><span data-ttu-id="c534f-147">DataGridViewImageColumn</span><span class="sxs-lookup"><span data-stu-id="c534f-147">DataGridViewImageColumn</span></span>  
+ <span data-ttu-id="c534f-148"><xref:System.Windows.Forms.DataGridViewImageColumn>用來顯示影像。</span><span class="sxs-lookup"><span data-stu-id="c534f-148">The <xref:System.Windows.Forms.DataGridViewImageColumn> is used to display images.</span></span> <span data-ttu-id="c534f-149">Image 資料行可以從資料來源會自動填入、 手動填入未繫結的資料行，或處理常式中自動填入<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。</span><span class="sxs-lookup"><span data-stu-id="c534f-149">Image columns can be populated automatically from a data source, populated manually for unbound columns, or populated dynamically in a handler for the <xref:System.Windows.Forms.DataGridView.CellFormatting> event.</span></span>  
   
- 資料來源的影像資料行的自動填入能使用於各種影像格式的位元組陣列，包括 <xref:System.Drawing.Image> 類別支援的所有格式，以及 Microsoft® Access 和 Northwind 範例資料庫的 OLE 圖片格式。  
+ <span data-ttu-id="c534f-150">自動母體擴展的影像資料行從資料來源可搭配各種不同的影像格式，包括支援的所有格式的位元組陣列<xref:System.Drawing.Image>類別和 Microsoft® Access 和 Northwind 範例資料庫所使用的 OLE 圖片格式。</span><span class="sxs-lookup"><span data-stu-id="c534f-150">The automatic population of an image column from a data source works with byte arrays in a variety of image formats, including all formats supported by the <xref:System.Drawing.Image> class and the OLE Picture format used by Microsoft® Access and the Northwind sample database.</span></span>  
   
- 當您想提供 <xref:System.Windows.Forms.DataGridViewButtonColumn> 的功能，但又要有自訂外觀時，以手動方式填入影像資料行會很有用。  您可以處理 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName> 事件以回應在影像儲存格內按選的動作。  
+ <span data-ttu-id="c534f-151">手動擴展 image 資料行時，您想要提供的功能<xref:System.Windows.Forms.DataGridViewButtonColumn>，但使用自訂的外觀。</span><span class="sxs-lookup"><span data-stu-id="c534f-151">Populating an image column manually is useful when you want to provide the functionality of a <xref:System.Windows.Forms.DataGridViewButtonColumn>, but with a customized appearance.</span></span> <span data-ttu-id="c534f-152">您可以處理<xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>事件回應影像資料格內按一下。</span><span class="sxs-lookup"><span data-stu-id="c534f-152">You can handle the <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event to respond to clicks within an image cell.</span></span>  
   
- 當您想為計算值或非影像格式的值提供影像時，在 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件的處理常式中填入影像資料行的儲存格，會是很有用的方式。  例如，您可能有一個「風險」資料行，其中包含 `"high"`、`"middle"` 和 `"low"` 等您想要顯示為圖示的字串值。  此外，也可能有「影像」資料行，其中包含的是必須載入的影像的位置，而非影像的二進位內容。  
+ <span data-ttu-id="c534f-153">填入映像中的資料行的處理常式的儲存格<xref:System.Windows.Forms.DataGridView.CellFormatting>事件時，您想要提供映像的導出的值或非影像格式的值。</span><span class="sxs-lookup"><span data-stu-id="c534f-153">Populating the cells of an image column in a handler for the <xref:System.Windows.Forms.DataGridView.CellFormatting> event is useful when you want to provide images for calculated values or values in non-image formats.</span></span> <span data-ttu-id="c534f-154">例如，您可能有字串值的 「 風險 」 資料行這類`"high"`， `"middle"`，和`"low"`您想要顯示為圖示。</span><span class="sxs-lookup"><span data-stu-id="c534f-154">For example, you may have a "Risk" column with string values such as `"high"`, `"middle"`, and `"low"` that you want to display as icons.</span></span> <span data-ttu-id="c534f-155">或者，您可能會有 「 影像 」 資料行包含必須載入而不是二進位內容的映像的映像的位置。</span><span class="sxs-lookup"><span data-stu-id="c534f-155">Alternately, you may have an "Image" column that contains the locations of images that must be loaded rather than the binary content of the images.</span></span>  
   
-## DataGridViewButtonColumn  
- 藉由 <xref:System.Windows.Forms.DataGridViewButtonColumn>，可以顯示包含按鈕的儲存格資料行。  當您想為使用者提供在特定資料錄上執行動作的簡易方法 \(例如在不同的視窗中下訂單或顯示子資料錄\)，這將會很有用。  
+## <a name="datagridviewbuttoncolumn"></a><span data-ttu-id="c534f-156">DataGridViewButtonColumn</span><span class="sxs-lookup"><span data-stu-id="c534f-156">DataGridViewButtonColumn</span></span>  
+ <span data-ttu-id="c534f-157">與<xref:System.Windows.Forms.DataGridViewButtonColumn>，您可以顯示的資料格包含按鈕的資料行。</span><span class="sxs-lookup"><span data-stu-id="c534f-157">With the <xref:System.Windows.Forms.DataGridViewButtonColumn>, you can display a column of cells that contain buttons.</span></span> <span data-ttu-id="c534f-158">當您想要提供一個簡單的方式，為您的使用者執行動作的特定記錄，例如訂單或個別視窗中顯示子資料錄時，這非常有用。</span><span class="sxs-lookup"><span data-stu-id="c534f-158">This is useful when you want to provide an easy way for your users to perform actions on particular records, such as placing an order or displaying child records in a separate window.</span></span>  
   
- 當資料繫結 <xref:System.Windows.Forms.DataGridView> 控制項時，不會自動產生按鈕資料行。  若要使用按鈕資料行，您必須以手動方式加以建立，並將它們加入至 <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=fullName> 屬性傳回的集合。  
+ <span data-ttu-id="c534f-159">當資料繫結不會自動產生按鈕資料行<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="c534f-159">Button columns are not generated automatically when data-binding a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c534f-160">若要使用按鈕資料行，您必須手動建立關聯，並將它們加入至所傳回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-160">To use button columns, you must create them manually and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> property.</span></span>  
   
- 您可以透過處理 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName> 事件，回應使用者在按鈕儲存格中的按選動作。  
+ <span data-ttu-id="c534f-161">您可以藉由處理回應使用者按一下按鈕儲存格<xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="c534f-161">You can respond to user clicks in button cells by handling the <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event.</span></span>  
   
-## DataGridViewComboBoxColumn  
- 藉由 <xref:System.Windows.Forms.DataGridViewComboBoxColumn>，您可以顯示包含下拉式清單方塊的儲存格資料行。  若要在只能包含特定值的欄位中輸入資料 \(例如，Northwind 範例資料庫中 Products 資料表的 Category 資料行\)，這會非常有用。  
+## <a name="datagridviewcomboboxcolumn"></a><span data-ttu-id="c534f-162">DataGridViewComboBoxColumn</span><span class="sxs-lookup"><span data-stu-id="c534f-162">DataGridViewComboBoxColumn</span></span>  
+ <span data-ttu-id="c534f-163">與<xref:System.Windows.Forms.DataGridViewComboBoxColumn>，您可以顯示的資料行包含下拉式清單方塊的資料格。</span><span class="sxs-lookup"><span data-stu-id="c534f-163">With the <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, you can display a column of cells that contain drop-down list boxes.</span></span> <span data-ttu-id="c534f-164">這適用於資料輸入欄位只能包含特定值，例如 Northwind 範例資料庫中的 [產品] 資料表的類別資料行中。</span><span class="sxs-lookup"><span data-stu-id="c534f-164">This is useful for data entry in fields that can only contain particular values, such as the Category column of the Products table in the Northwind sample database.</span></span>  
   
- 您可以使用填入 <xref:System.Windows.Forms.ComboBox> 下拉式清單的相同方式，填入用於所有儲存格的下拉式清單；一種方法是透過 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 屬性傳回的集合，以手動方式進行，另一種方法則是透過 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 屬性，將清單繫結至資料來源。  如需詳細資訊，請參閱 [ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)。  
+ <span data-ttu-id="c534f-165">您可以填入所有儲存格使用相同的方式會填入下拉式清單<xref:System.Windows.Forms.ComboBox>下拉式清單中，以手動方式透過所傳回的集合<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>屬性，或繫結至資料來源透過<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>， <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>，和<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-165">You can populate the drop-down list used for all cells the same way you would populate a <xref:System.Windows.Forms.ComboBox> drop-down list, either manually through the collection returned by the <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> property, or by binding it to a data source through the <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, and <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> properties.</span></span> <span data-ttu-id="c534f-166">如需詳細資訊，請參閱[ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="c534f-166">For more information, see [ComboBox Control](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).</span></span>  
   
- 您可以繫結實際的儲存格值至 <xref:System.Windows.Forms.DataGridView> 控制項所使用的資料來源，方法是設定 <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=fullName> 的 <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> 屬性。  
+ <span data-ttu-id="c534f-167">您可以使用資料來源繫結的實際資料格值<xref:System.Windows.Forms.DataGridView>藉由設定控制<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>屬性<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c534f-167">You can bind the actual cell values to the data source used by the <xref:System.Windows.Forms.DataGridView> control by setting the <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> property of the <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.</span></span>  
   
- 下拉式方塊資料行不會在資料繫結 <xref:System.Windows.Forms.DataGridView> 控制項時自動產生。  若要使用下拉式方塊資料行，您必須以手動方式加以建立，並將它們加入至 <xref:System.Windows.Forms.DataGridView.Columns%2A> 屬性傳回的集合。  
+ <span data-ttu-id="c534f-168">當資料繫結不會自動產生下拉式方塊的資料行<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="c534f-168">Combo box columns are not generated automatically when data-binding a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c534f-169">若要使用下拉式方塊的資料行，您必須手動建立關聯，並將它們加入至所傳回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-169">To use combo box columns, you must create them manually and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A> property.</span></span>  
   
-## DataGridViewLinkColumn  
- 藉由 <xref:System.Windows.Forms.DataGridViewLinkColumn>，您可以顯示包含超連結的儲存格資料行。  這對於資料來源中的 URL 值，或做為特殊行為 \(例如使用子資料錄開啟視窗\) 按鈕資料行的替代方法，都非常有用。  
+## <a name="datagridviewlinkcolumn"></a><span data-ttu-id="c534f-170">DataGridViewLinkColumn</span><span class="sxs-lookup"><span data-stu-id="c534f-170">DataGridViewLinkColumn</span></span>  
+ <span data-ttu-id="c534f-171">與<xref:System.Windows.Forms.DataGridViewLinkColumn>，您可以顯示的資料行的資料格包含超連結。</span><span class="sxs-lookup"><span data-stu-id="c534f-171">With the <xref:System.Windows.Forms.DataGridViewLinkColumn>, you can display a column of cells that contain hyperlinks.</span></span> <span data-ttu-id="c534f-172">這是適用於資料來源中或特殊行為，例如開啟視窗的子記錄的按鈕資料行的替代方式的 URL 值。</span><span class="sxs-lookup"><span data-stu-id="c534f-172">This is useful for URL values in the data source or as an alternative to the button column for special behaviors such as opening a window with child records.</span></span>  
   
- 在資料繫結 <xref:System.Windows.Forms.DataGridView> 控制項時不會自動產生連結資料行。  若要使用連結資料行，您必須以手動方式加以建立，並將它們加入至 <xref:System.Windows.Forms.DataGridView.Columns%2A> 屬性傳回的集合。  
+ <span data-ttu-id="c534f-173">當資料繫結不會自動產生連結資料行<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="c534f-173">Link columns are not generated automatically when data-binding a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="c534f-174">若要使用連結的資料行，您必須手動建立關聯，並將它們加入至所傳回的集合<xref:System.Windows.Forms.DataGridView.Columns%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="c534f-174">To use link columns, you must create them manually and add them to the collection returned by the <xref:System.Windows.Forms.DataGridView.Columns%2A> property.</span></span>  
   
- 您可以透過處理 <xref:System.Windows.Forms.DataGridView.CellContentClick> 事件，回應使用者按選連結的動作。  這個事件有別於 <xref:System.Windows.Forms.DataGridView.CellClick> 和 <xref:System.Windows.Forms.DataGridView.CellMouseClick> 事件，後兩者是發生在使用者按選儲存格內的任何位置時。  
+ <span data-ttu-id="c534f-175">您可以藉由處理回應使用者按一下連結<xref:System.Windows.Forms.DataGridView.CellContentClick>事件。</span><span class="sxs-lookup"><span data-stu-id="c534f-175">You can respond to user clicks on links by handling the <xref:System.Windows.Forms.DataGridView.CellContentClick> event.</span></span> <span data-ttu-id="c534f-176">此事件會有所區別<xref:System.Windows.Forms.DataGridView.CellClick>和<xref:System.Windows.Forms.DataGridView.CellMouseClick>使用者按一下資料格中的任何地方時，會發生的事件。</span><span class="sxs-lookup"><span data-stu-id="c534f-176">This event is distinct from the <xref:System.Windows.Forms.DataGridView.CellClick> and <xref:System.Windows.Forms.DataGridView.CellMouseClick> events, which occur when a user clicks anywhere in a cell.</span></span>  
   
- <xref:System.Windows.Forms.DataGridViewLinkColumn> 類別會提供數種屬性，可在按選連結前、按選連結的期間和按選連結後修改連結的外觀。  
+ <span data-ttu-id="c534f-177"><xref:System.Windows.Forms.DataGridViewLinkColumn>類別提供數個屬性，修改連結的外觀之前,、 期間和之後按一下。</span><span class="sxs-lookup"><span data-stu-id="c534f-177">The <xref:System.Windows.Forms.DataGridViewLinkColumn> class provides several properties for modifying the appearance of links before, during, and after they are clicked.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- <xref:System.Windows.Forms.DataGridViewButtonColumn>   
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewImageColumn>   
- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewLinkColumn>   
- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [如何：顯示 Windows Form DataGridView 控制項的儲存格影像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)   
- [如何：使用 Windows Form DataGridView 控制項中的影像資料行](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)   
- [自訂 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="c534f-178">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c534f-178">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewImageColumn>  
+ <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+ [<span data-ttu-id="c534f-179">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="c534f-179">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="c534f-180">操作說明：顯示 Windows Form DataGridView 控制項的儲存格影像</span><span class="sxs-lookup"><span data-stu-id="c534f-180">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="c534f-181">操作說明：使用 Windows Forms DataGridView 控制項中的影像資料行</span><span class="sxs-lookup"><span data-stu-id="c534f-181">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="c534f-182">自訂 Windows Forms DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="c534f-182">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

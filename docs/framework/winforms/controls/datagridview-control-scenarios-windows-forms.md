@@ -1,100 +1,101 @@
 ---
-title: "DataGridView 控制項案例 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料 [Windows Form], 以表格式格式顯示"
-  - "資料格, 關於資料格"
-  - "DataGridView 控制項 [Windows Form], 案例"
+title: "DataGridView 控制項案例 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], about data grids
+- DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DataGridView 控制項案例 (Windows Form)
-透過 <xref:System.Windows.Forms.DataGridView> 控制項，您可以顯示各種資料來源的表格式資料。  為了使用簡便，您可以透過控制項直接手動填入 <xref:System.Windows.Forms.DataGridView> 並管理資料。  但是，您通常會將資料儲存在外部資料來源，並透過 <xref:System.Windows.Forms.BindingSource> 元件將控制項繫結至此元件。  
+# <a name="datagridview-control-scenarios-windows-forms"></a><span data-ttu-id="30a32-102">DataGridView 控制項案例 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="30a32-102">DataGridView Control Scenarios (Windows Forms)</span></span>
+<span data-ttu-id="30a32-103">與<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示各種資料來源的表格式資料。</span><span class="sxs-lookup"><span data-stu-id="30a32-103">With the <xref:System.Windows.Forms.DataGridView> control, you can display tabular data from a variety of data sources.</span></span> <span data-ttu-id="30a32-104">簡單的用途，您可以手動填入<xref:System.Windows.Forms.DataGridView>和操作直接透過控制項的資料。</span><span class="sxs-lookup"><span data-stu-id="30a32-104">For simple uses, you can manually populate a <xref:System.Windows.Forms.DataGridView> and manipulate the data directly through the control.</span></span> <span data-ttu-id="30a32-105">一般而言，不過，會將資料儲存在外部資料來源，然後將控制項繫結，透過<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="30a32-105">Typically, however, you will store your data in an external data source and bind the control to it through a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- 本主題描述涉及 <xref:System.Windows.Forms.DataGridView> 控制項的一些常見案例。  
+ <span data-ttu-id="30a32-106">本主題描述一些常見的案例涉及<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="30a32-106">This topic describes some of the common scenarios that involve the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-## 案例 1：顯示少量的資料  
- 您不必為了在 <xref:System.Windows.Forms.DataGridView> 控制項中顯示資料，而將資料儲存在外部資料來源。  如果您正在處理少量的資料，可以自行填入控制項並透過控制項管理資料。  這稱為*未繫結模式*。  如需詳細資訊，請參閱 [如何：建立未繫結的 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
+## <a name="scenario-1-displaying-small-amounts-of-data"></a><span data-ttu-id="30a32-107">案例 1： 顯示少量的資料</span><span class="sxs-lookup"><span data-stu-id="30a32-107">Scenario 1: Displaying Small Amounts of Data</span></span>  
+ <span data-ttu-id="30a32-108">您沒有將資料儲存在外部資料來源，以顯示在<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="30a32-108">You do not have to store your data in an external data source to display it in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="30a32-109">如果您正在使用少量的資料，您可以自行填入控制項，並管理透過控制項的資料。</span><span class="sxs-lookup"><span data-stu-id="30a32-109">If you are working with a small amount of data, you can populate the control yourself and manipulate the data through the control.</span></span> <span data-ttu-id="30a32-110">這稱為*未繫結的模式*。</span><span class="sxs-lookup"><span data-stu-id="30a32-110">This is called *unbound mode*.</span></span> <span data-ttu-id="30a32-111">如需詳細資訊，請參閱[How to： 建立未繫結的 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-111">For more information, see [How to: Create an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-### 案例重點  
+### <a name="scenario-key-points"></a><span data-ttu-id="30a32-112">案例重點</span><span class="sxs-lookup"><span data-stu-id="30a32-112">Scenario Key Points</span></span>  
   
--   在未繫結模式中，手動填入控制項。  
+-   <span data-ttu-id="30a32-113">在未繫結模式中，您手動填入控制項。</span><span class="sxs-lookup"><span data-stu-id="30a32-113">In unbound mode, you populate the control manually.</span></span>  
   
--   未繫結模式尤其適用於少量的唯讀資料。  
+-   <span data-ttu-id="30a32-114">尤其適用於小量的唯讀資料繫結的模式。</span><span class="sxs-lookup"><span data-stu-id="30a32-114">Unbound mode is particularly suited for small amounts of read-only data.</span></span>  
   
--   未繫結模式也適用於類似試算表或只有少部分填入的資料表。  
+-   <span data-ttu-id="30a32-115">未繫結的模式也適用於類似試算表或沒有嚴密填入的資料表。</span><span class="sxs-lookup"><span data-stu-id="30a32-115">Unbound mode is also suited for spreadsheet-like or sparsely populated tables.</span></span>  
   
-## 案例 2：檢視和更新儲存在外部資料來源的資料  
- 您可以將 <xref:System.Windows.Forms.DataGridView> 控制項當做使用者介面 \(UI\) 使用，這樣使用者就可以透過它來存取保存在資料來源 \(例如資料庫資料表或商務物件的集合\) 中的資料。  如需詳細資訊，請參閱 [如何：將資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
+## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a><span data-ttu-id="30a32-116">案例 2： 檢視和更新儲存在外部資料來源中的資料</span><span class="sxs-lookup"><span data-stu-id="30a32-116">Scenario 2: Viewing and Updating Data Stored in an External Data Source</span></span>  
+ <span data-ttu-id="30a32-117">您可以使用<xref:System.Windows.Forms.DataGridView>作為的使用者介面 (UI) 控制哪些使用者可以透過存取資料保留在資料來源，例如資料庫資料表或商務物件的集合。</span><span class="sxs-lookup"><span data-stu-id="30a32-117">You can use the <xref:System.Windows.Forms.DataGridView> control as a user interface (UI) through which users can access data kept in a data source such as a database table or a collection of business objects.</span></span> <span data-ttu-id="30a32-118">如需詳細資訊，請參閱[How to： 將資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-118">For more information, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
   
-### 案例重點  
+### <a name="scenario-key-points"></a><span data-ttu-id="30a32-119">案例重點</span><span class="sxs-lookup"><span data-stu-id="30a32-119">Scenario Key Points</span></span>  
   
--   繫結模式可以讓您連接資料來源、根據資料來源的屬性或資料庫資料行自動產生資料行，以及自動填入控制項。  
+-   <span data-ttu-id="30a32-120">繫結的模式可讓您連接到資料來源、 自動產生資料行是根據資料來源屬性或資料庫資料行，以及自動填入控制項。</span><span class="sxs-lookup"><span data-stu-id="30a32-120">Bound mode lets you connect to a data source, automatically generate columns based on the data source properties or database columns, and automatically populate the control.</span></span>  
   
--   繫結模式適用於使用者與資料互動頻繁的狀況。  它可以格式化資料以供顯示，並且可以將使用者指定的資料剖析為資料來源所預期的格式。  同時，可以偵測到資料輸入格式錯誤和資料庫條件約束 \(Constraint\) 錯誤，因此可以警告使用者以更正錯誤的儲存格。  
+-   <span data-ttu-id="30a32-121">繫結的模式適用於大量的使用者與資料互動。</span><span class="sxs-lookup"><span data-stu-id="30a32-121">Bound mode is suited for heavy user interaction with data.</span></span> <span data-ttu-id="30a32-122">可以格式化資料以供顯示，並指定使用者的資料可以剖析成資料來源所預期的格式。</span><span class="sxs-lookup"><span data-stu-id="30a32-122">Data can be formatted for display, and user-specified data can be parsed into the format expected by the data source.</span></span> <span data-ttu-id="30a32-123">如此可以警告使用者，可以更正錯誤的儲存格，可以偵測到資料輸入格式錯誤和資料庫條件約束錯誤。</span><span class="sxs-lookup"><span data-stu-id="30a32-123">Data entry formatting errors and database constraint errors can be detected so that users can be warned and erroneous cells can be corrected.</span></span>  
   
--   其他像是資料行排序、凍結和重新調整順序的功能，可以讓使用者以他們工作流程中最簡便的方式檢視資料。  
+-   <span data-ttu-id="30a32-124">其他功能，例如資料行排序，凍結和重新調整順序可以讓使用者在其工作流程最簡便的方式檢視資料。</span><span class="sxs-lookup"><span data-stu-id="30a32-124">Additional functionality such as column sorting, freezing, and reordering enable users to view data in the way most convenient for their workflow.</span></span>  
   
--   剪貼簿支援可以讓使用者將資料從應用程式中複製到其他應用程式中。  
+-   <span data-ttu-id="30a32-125">剪貼簿支援可讓使用者複製到其他應用程式的應用程式中的資料。</span><span class="sxs-lookup"><span data-stu-id="30a32-125">Clipboard support enables users to copy data from your application into other applications.</span></span>  
   
-## 案例 3：進階資料  
- 如果您有標準資料繫結模式無法處理的特殊需求，您可以實作「*虛擬模式*」來管理控制項與資料間的互動。  實作虛擬模式表示實作一或多個事件處理常式，讓控制項在需要關於儲存格的資訊時要求資訊。  
+## <a name="scenario-3-advanced-data"></a><span data-ttu-id="30a32-126">案例 3： 進階的資料</span><span class="sxs-lookup"><span data-stu-id="30a32-126">Scenario 3: Advanced Data</span></span>  
+ <span data-ttu-id="30a32-127">如果您有標準的資料繫結模型將不會處理的特殊需求，您可以藉由實作來管理控制項和資料之間的互動*虛擬模式*。</span><span class="sxs-lookup"><span data-stu-id="30a32-127">If you have special needs that the standard data binding model does not address, you can manage the interaction between the control and your data by implementing *virtual mode*.</span></span> <span data-ttu-id="30a32-128">需要實作虛擬模式表示實作一或多個事件處理常式，讓控制項要求有關資料格的資訊一樣重要。</span><span class="sxs-lookup"><span data-stu-id="30a32-128">Implementing virtual mode means implementing one or more event handlers that let the control request information about cells as the information is needed.</span></span>  
   
- 例如，如果您在處理大量的資料，您可能會想要實作虛擬模式以確保最佳的效率。  在維護與其他資料來源所擷取的資料行一起顯示的未繫結資料行的值時，虛擬模式也非常有用。  
+ <span data-ttu-id="30a32-129">例如，如果您使用大量的資料時，您可以實作虛擬模式，以確保最佳的效率。</span><span class="sxs-lookup"><span data-stu-id="30a32-129">For example, if you work with large amounts of data, you may want to implement virtual mode to ensure optimal efficiency.</span></span> <span data-ttu-id="30a32-130">虛擬模式也可用於維護，以及從另一個資料來源擷取的資料行顯示未繫結資料行的值。</span><span class="sxs-lookup"><span data-stu-id="30a32-130">Virtual mode is also useful for maintaining the values of unbound columns that you display along with columns retrieved from another data source.</span></span>  
   
- 如需虛擬模式的詳細資訊，請參閱 [逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+ <span data-ttu-id="30a32-131">如需虛擬模式的詳細資訊，請參閱[逐步解說： 在 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-131">For more information about virtual mode, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
-### 案例重點  
+### <a name="scenario-key-points"></a><span data-ttu-id="30a32-132">案例重點</span><span class="sxs-lookup"><span data-stu-id="30a32-132">Scenario Key Points</span></span>  
   
--   虛擬模式適用於需要微調效能以顯示大量的資料時。  
+-   <span data-ttu-id="30a32-133">虛擬模式適用於您要微調效能時，顯示非常大量的資料。</span><span class="sxs-lookup"><span data-stu-id="30a32-133">Virtual mode is suited for displaying very large amounts of data when you need to fine-tune performance.</span></span>  
   
-## 案例 4：自動調整資料列和資料行  
- 當您顯示定期更新的資料時，您可以自動調整資料列和資料行的大小，以確保可以看見所有的內容。  <xref:System.Windows.Forms.DataGridView> 控制項會提供幾個選項，讓您啟用或停用手動調整大小、在特定時間以程式設計的方式調整大小，以及在內容變更時自動調整大小。  如需詳細資訊，請參閱 [Windows Form DataGridView 控制項中的調整大小選項](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+## <a name="scenario-4-automatically-resizing-rows-and-columns"></a><span data-ttu-id="30a32-134">案例 4： 自動調整資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="30a32-134">Scenario 4: Automatically Resizing Rows and Columns</span></span>  
+ <span data-ttu-id="30a32-135">當您顯示經常更新的資料時，您可以自動調整資料列和資料行以確保所有內容都都可見。</span><span class="sxs-lookup"><span data-stu-id="30a32-135">When you display data that is regularly updated, you can automatically resize rows and columns to ensure that all content is visible.</span></span> <span data-ttu-id="30a32-136"><xref:System.Windows.Forms.DataGridView>控制項提供數個選項，可讓您啟用或停用手動調整大小，在特定時間，以程式設計方式調整或調整大小自動每當內容變更。</span><span class="sxs-lookup"><span data-stu-id="30a32-136">The <xref:System.Windows.Forms.DataGridView> control provides several options that let you enable or disable manual resizing, resize programmatically at specific times, or resize automatically whenever content changes.</span></span> <span data-ttu-id="30a32-137">如需詳細資訊，請參閱[Windows Form DataGridView 控制項中的調整大小選項](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-137">For more information, see [Sizing Options in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### 案例重點  
+### <a name="scenario-key-points"></a><span data-ttu-id="30a32-138">案例重點</span><span class="sxs-lookup"><span data-stu-id="30a32-138">Scenario Key Points</span></span>  
   
--   手動調整大小可以讓使用者調整儲存格的高度和寬度。  
+-   <span data-ttu-id="30a32-139">手動調整大小，可讓使用者調整儲存格的高度和寬度。</span><span class="sxs-lookup"><span data-stu-id="30a32-139">Manual resizing enables users to adjust cell heights and widths.</span></span>  
   
--   自動調整大小可以讓您維持儲存格的大小，以免裁剪到儲存格的內容。  
+-   <span data-ttu-id="30a32-140">自動調整大小，可讓您以維護儲存格的大小，讓儲存格內容永遠不會被截斷。</span><span class="sxs-lookup"><span data-stu-id="30a32-140">Automatic resizing enables you to maintain cell sizes so that cell content is never clipped.</span></span>  
   
--   以程式設計方式調整大小可以讓您在特定時間調整儲存格大小，以免持續自動調整大小會降低效能。  
+-   <span data-ttu-id="30a32-141">以程式設計方式調整大小，可讓您調整儲存格大小以避免持續自動調整大小的效能負面影響的特定時間。</span><span class="sxs-lookup"><span data-stu-id="30a32-141">Programmatic resizing enables you to resize cells at specific times to avoid the performance penalty of continuous automatic resizing.</span></span>  
   
-## 案例 5：簡單自訂  
- <xref:System.Windows.Forms.DataGridView> 控制項提供許多方式，讓您更改它的基本外觀和行為。  如需詳細資訊，請參閱 [Windows Form DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+## <a name="scenario-5-simple-customization"></a><span data-ttu-id="30a32-142">案例 5： 簡單的自訂</span><span class="sxs-lookup"><span data-stu-id="30a32-142">Scenario 5: Simple Customization</span></span>  
+ <span data-ttu-id="30a32-143"><xref:System.Windows.Forms.DataGridView>控制項提供許多方式來改變其基本外觀和行為。</span><span class="sxs-lookup"><span data-stu-id="30a32-143">The <xref:System.Windows.Forms.DataGridView> control provides many ways for you to alter its basic appearance and behavior.</span></span> <span data-ttu-id="30a32-144">如需詳細資訊，請參閱[Windows Form DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-144">For more information, see [Cell Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### 案例重點  
+### <a name="scenario-key-points"></a><span data-ttu-id="30a32-145">案例重點</span><span class="sxs-lookup"><span data-stu-id="30a32-145">Scenario Key Points</span></span>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle> 物件讓您為控制項的個別項目，在多個層級提供色彩、字型、格式和位置資訊。  
+-   <span data-ttu-id="30a32-146"><xref:System.Windows.Forms.DataGridViewCellStyle>物件可讓您提供色彩、 字型格式及多個層級和個別的項目控制項的位置資訊。</span><span class="sxs-lookup"><span data-stu-id="30a32-146"><xref:System.Windows.Forms.DataGridViewCellStyle> objects let you provide color, font, formatting, and positioning information at multiple levels and for individual elements of the control.</span></span>  
   
--   儲存格樣式可以進行分層並由多個項目共用，讓您可以重複使用程式碼。  
+-   <span data-ttu-id="30a32-147">儲存格樣式可以分層和多個項目，讓您重複使用程式碼共用。</span><span class="sxs-lookup"><span data-stu-id="30a32-147">Cell styles can be layered and shared by multiple elements, letting you reuse code.</span></span>  
   
-## 案例 6：進階自訂  
- <xref:System.Windows.Forms.DataGridView> 控制項提供許多方式，讓您自訂它的外觀和行為。  
+## <a name="scenario-6-advanced-customization"></a><span data-ttu-id="30a32-148">案例 6： 進階的自訂</span><span class="sxs-lookup"><span data-stu-id="30a32-148">Scenario 6: Advanced Customization</span></span>  
+ <span data-ttu-id="30a32-149"><xref:System.Windows.Forms.DataGridView>控制項提供許多方式，讓您自訂其外觀和行為。</span><span class="sxs-lookup"><span data-stu-id="30a32-149">The <xref:System.Windows.Forms.DataGridView> control provides many ways for you to customize its appearance and behavior.</span></span>  
   
-### 案例重點  
+### <a name="scenario-key-points"></a><span data-ttu-id="30a32-150">案例重點</span><span class="sxs-lookup"><span data-stu-id="30a32-150">Scenario Key Points</span></span>  
   
--   您可以提供自己的儲存格繪製程式碼。  如需詳細資訊，請參閱 [如何：在 Windows Form DataGridView 控制項中自訂儲存格的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)。  
+-   <span data-ttu-id="30a32-151">您可以提供您自己的儲存格繪製程式碼。</span><span class="sxs-lookup"><span data-stu-id="30a32-151">You can provide your own cell painting code.</span></span> <span data-ttu-id="30a32-152">如需詳細資訊，請參閱[How to： 自訂 Windows Form DataGridView 控制項中的儲存格外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-152">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).</span></span>  
   
--   您可以提供自己的資料列繪製程式碼。  例如，在使用合併多個資料行的內容建立資料列時，這就非常有用。  如需詳細資訊，請參閱 [如何：在 Windows Form DataGridView 控制項中自訂資料列的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)。  
+-   <span data-ttu-id="30a32-153">您可以提供您自己的資料列繪製。</span><span class="sxs-lookup"><span data-stu-id="30a32-153">You can provide your own row painting.</span></span> <span data-ttu-id="30a32-154">這是很有用，例如，以跨越多個資料行的內容中建立資料列。</span><span class="sxs-lookup"><span data-stu-id="30a32-154">This is useful, for example, to create rows with content that spans multiple columns.</span></span> <span data-ttu-id="30a32-155">如需詳細資訊，請參閱[How to： 自訂 Windows Form DataGridView 控制項中的資料列外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-155">For more information, see [How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).</span></span>  
   
--   您可以實作自己的儲存格和資料行類別，以自訂儲存格外觀。  如需詳細資訊，請參閱 [如何：擴充儲存格和資料行的行為和外觀以自訂 Windows Form DataGridView 控制項中的儲存格和資料行](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)。  
+-   <span data-ttu-id="30a32-156">您可以實作您自己的儲存格和資料行的類別，以自訂儲存格的外觀。</span><span class="sxs-lookup"><span data-stu-id="30a32-156">You can implement your own cell and column classes to customize cell appearance.</span></span> <span data-ttu-id="30a32-157">如需詳細資訊，請參閱[How to： 自訂資料格和擴充其行為和外觀的 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-157">For more information, see [How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).</span></span>  
   
--   您可以實作自己的儲存格和資料行類別，以裝載內建資料行型別所提供的控制項以外的控制項。  如需詳細資訊，請參閱 [如何：Windows Form DataGridView 儲存格中的主控制項](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
+-   <span data-ttu-id="30a32-158">您可以實作您自己的儲存格和資料行的類別，以提供的內建的資料行類型以外的主控制項。</span><span class="sxs-lookup"><span data-stu-id="30a32-158">You can implement your own cell and column classes to host controls other than the ones provided by the built-in column types.</span></span> <span data-ttu-id="30a32-159">如需詳細資訊，請參閱[How to： 在 Windows Form DataGridView 儲存格的主控制項](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。</span><span class="sxs-lookup"><span data-stu-id="30a32-159">For more information, see [How to: Host Controls in Windows Forms DataGridView Cells](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="30a32-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="30a32-160">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="30a32-161">DataGridView 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="30a32-161">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

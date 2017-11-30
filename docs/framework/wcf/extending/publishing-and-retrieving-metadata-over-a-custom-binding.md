@@ -1,41 +1,44 @@
 ---
-title: "發行與擷取自訂繫結上的中繼資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "發行與擷取自訂繫結上的中繼資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 83aba5cc938b926285f78efd1ab8d62493ad59d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 發行與擷取自訂繫結上的中繼資料
-<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 提供新增中繼資料端點到服務的支援。這些中繼資料端點可回應位於具有 `?wsdl`  查詢字串之 URL 的 HTTP GET 要求，並回應依照 WS\-MetadataExchange \(MEX\) 規格中定義的 WS\-Transfer GET 要求。MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=fullName> 合約。  
+# <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a><span data-ttu-id="4da9b-102">發行與擷取自訂繫結上的中繼資料</span><span class="sxs-lookup"><span data-stu-id="4da9b-102">Publishing and Retrieving Metadata Over a Custom Binding</span></span>
+<span data-ttu-id="4da9b-103"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供新增中繼資料端點到服務的支援。</span><span class="sxs-lookup"><span data-stu-id="4da9b-103">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> provides support for adding metadata endpoint to a service.</span></span> <span data-ttu-id="4da9b-104">這些中繼資料端點可以回應 HTTP GET 要求 URL，其中具有`?wsdl`querystring 和 Ws-transfer GET 要求 Ws-metadataexchange (MEX) 規格中所定義。</span><span class="sxs-lookup"><span data-stu-id="4da9b-104">These metadata endpoints can respond to HTTP GET requests at a URL that has a `?wsdl` querystring and to WS-Transfer GET requests as defined in the WS-MetadataExchange (MEX) specification.</span></span> <span data-ttu-id="4da9b-105">MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 合約。</span><span class="sxs-lookup"><span data-stu-id="4da9b-105">MEX endpoints implement the <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contract.</span></span>  
   
-## 發行自訂繫結上的中繼資料  
- 只要將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=fullName> 屬性設定為 `true`，便可啟用 HTTP GET 中繼資料端點和 HTTPS GET 中繼資料端點。這些端點的繫結無法設定。  
+## <a name="publishing-metadata-over-a-custom-binding"></a><span data-ttu-id="4da9b-106">發行自訂繫結上的中繼資料</span><span class="sxs-lookup"><span data-stu-id="4da9b-106">Publishing Metadata Over a Custom Binding</span></span>  
+ <span data-ttu-id="4da9b-107">只要將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> 屬性設定為 `true`，便可啟用 HTTP GET 中繼資料端點和 HTTPS GET 中繼資料端點。</span><span class="sxs-lookup"><span data-stu-id="4da9b-107">The HTTP GET metadata endpoints and HTTPS GET metadata endpoints are enabled by setting the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> properties to `true`.</span></span> <span data-ttu-id="4da9b-108">這些端點的繫結無法設定。</span><span class="sxs-lookup"><span data-stu-id="4da9b-108">The bindings for these endpoints cannot be configured.</span></span>  
   
- 不過，<xref:System.ServiceModel.Description.IMetadataExchange> 合約可搭配任何端點使用，包括那些使用自訂繫結的端點，因為 <xref:System.ServiceModel.Description.IMetadataExchange> 端點與任何其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務端點相同。如果您知道如何修改系統提供之繫結的組態，或者知道如何設定 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName>，則可設定繫結以搭配 <xref:System.ServiceModel.Description.IMetadataExchange> 端點使用。  
+ <span data-ttu-id="4da9b-109">不過，<xref:System.ServiceModel.Description.IMetadataExchange> 合約可搭配任何端點使用，包括那些使用自訂繫結的端點，因為 <xref:System.ServiceModel.Description.IMetadataExchange> 端點與任何其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務端點相同。</span><span class="sxs-lookup"><span data-stu-id="4da9b-109">The <xref:System.ServiceModel.Description.IMetadataExchange> contract, however, can be used with any endpoint, including those that use custom bindings, because <xref:System.ServiceModel.Description.IMetadataExchange> endpoints are identical to any other [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service endpoint.</span></span> <span data-ttu-id="4da9b-110">如果您知道如何修改系統提供之繫結的組態，或者知道如何設定 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，則可設定繫結以搭配 <xref:System.ServiceModel.Description.IMetadataExchange> 端點使用。</span><span class="sxs-lookup"><span data-stu-id="4da9b-110">If you know how to modify the configuration of a system-provided binding, or you know how to configure a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, then you can configure a binding for use with an <xref:System.ServiceModel.Description.IMetadataExchange> endpoint.</span></span>  
   
-## 擷取自訂繫結上的中繼資料  
- 您可以使用標準 HTTP 或 HTTPS GET 要求，從 HTTP Get 與 HTTPS Get 中繼資料端點擷取中繼資料。  
+## <a name="retrieving-metadata-over-a-custom-binding"></a><span data-ttu-id="4da9b-111">擷取自訂繫結上的中繼資料</span><span class="sxs-lookup"><span data-stu-id="4da9b-111">Retrieving Metadata Over a Custom Binding</span></span>  
+ <span data-ttu-id="4da9b-112">您可以使用標準 HTTP 或 HTTPS GET 要求，從 HTTP Get 與 HTTPS Get 中繼資料端點擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="4da9b-112">Metadata can be retrieved from HTTP Get and HTTPS Get metadata endpoints using standard HTTP or HTTPS GET requests.</span></span>  
   
- 若要從 MEX 中繼資料端點擷取中繼資料，一般可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援的其中一個標準 MEX 繫結。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=fullName>.<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 型別與 Svcutil.exe 工具會根據指定中繼資料端點的位址，自動選取其中一個標準 MEX 繫結。  
+ <span data-ttu-id="4da9b-113">若要從 MEX 中繼資料端點擷取中繼資料，一般可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援的其中一個標準 MEX 繫結。</span><span class="sxs-lookup"><span data-stu-id="4da9b-113">To retrieve metadata from a MEX metadata endpoint you can generally use one of the standard MEX bindings supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4da9b-114"> <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="4da9b-114"> <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4da9b-115"><xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 型別與 Svcutil.exe 工具會根據指定中繼資料端點的位址，自動選取其中一個標準 MEX 繫結。</span><span class="sxs-lookup"><span data-stu-id="4da9b-115">The <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> type and the Svcutil.exe tool automatically select one of these standard MEX bindings based on the address of the specified metadata endpoint.</span></span>  
   
- 如果 MEX 中繼資料端點使用的繫結異於其中一個標準 MEX 繫結，您可以使用程式碼或提供 <xref:System.ServiceModel.Description.IMetadataExchange> 用戶端端點組態，設定 <xref:System.ServiceModel.Description.MetadataExchangeClient> 所使用的繫結。Svcutil.exe 工具會自動從其組態檔載入 <xref:System.ServiceModel.Description.IMetadataExchange> 用戶端端點組態，此組態與中繼資料端點位址之 URI 配置的名稱相同。  
+ <span data-ttu-id="4da9b-116">如果 MEX 中繼資料端點使用的繫結異於其中一個標準 MEX 繫結，您可以使用程式碼或提供 <xref:System.ServiceModel.Description.MetadataExchangeClient> 用戶端端點組態，設定 <xref:System.ServiceModel.Description.IMetadataExchange> 所使用的繫結。</span><span class="sxs-lookup"><span data-stu-id="4da9b-116">If a MEX metadata endpoint uses a different binding than one of the standard MEX bindings, you can configure the binding used by the <xref:System.ServiceModel.Description.MetadataExchangeClient> using code or by providing an <xref:System.ServiceModel.Description.IMetadataExchange> client endpoint configuration.</span></span> <span data-ttu-id="4da9b-117">Svcutil.exe 工具會自動從其組態檔載入 <xref:System.ServiceModel.Description.IMetadataExchange> 用戶端端點組態，此組態與中繼資料端點位址之 URI 配置的名稱相同。</span><span class="sxs-lookup"><span data-stu-id="4da9b-117">The Svcutil.exe tool automatically loads from its configuration file an <xref:System.ServiceModel.Description.IMetadataExchange> client endpoint configuration that has the same name as the URI scheme for the metadata endpoint address.</span></span>  
   
-## 安全性  
- 發行自訂繫結上的中繼資料時，繫結務必要提供您中繼資料所需的安全性支援。例如，若要避免資訊洩漏，並且確定您的用戶端有權限可取得中繼資料，您可將 <xref:System.ServiceModel.Description.IMetadataExchange> 端點設為需要驗證和加密，讓中繼資料和應用程式更安全。[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例將示範此案例。  
+## <a name="security"></a><span data-ttu-id="4da9b-118">安全性</span><span class="sxs-lookup"><span data-stu-id="4da9b-118">Security</span></span>  
+ <span data-ttu-id="4da9b-119">發行自訂繫結上的中繼資料時，繫結務必要提供您中繼資料所需的安全性支援。</span><span class="sxs-lookup"><span data-stu-id="4da9b-119">When publishing metadata over a custom binding, ensure that the binding provides the security support that your metadata requires.</span></span> <span data-ttu-id="4da9b-120">例如，若要避免資訊洩漏，並且確定您的用戶端有權限可取得中繼資料，您可將 <xref:System.ServiceModel.Description.IMetadataExchange> 端點設為需要驗證和加密，讓中繼資料和應用程式更安全。</span><span class="sxs-lookup"><span data-stu-id="4da9b-120">For example, to prevent information disclosure and ensure your client has the right to obtain the metadata, you can make your metadata and your application more secure by configuring your <xref:System.ServiceModel.Description.IMetadataExchange> endpoint to require authentication and encryption.</span></span> <span data-ttu-id="4da9b-121">此範例[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示範此案例。</span><span class="sxs-lookup"><span data-stu-id="4da9b-121">The sample [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) demonstrates this scenario.</span></span>  
   
-## 請參閱  
- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)   
- [WS\-MetadataExchange 繫結](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)   
- [HOW TO：設定自訂 WS\-Metadata Exchange 繫結](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)   
- [HOW TO：透過非 MEX 繫結擷取中繼資料](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+## <a name="see-also"></a><span data-ttu-id="4da9b-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4da9b-122">See Also</span></span>  
+ [<span data-ttu-id="4da9b-123">保護服務安全</span><span class="sxs-lookup"><span data-stu-id="4da9b-123">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="4da9b-124">Ws-metadataexchange 繫結</span><span class="sxs-lookup"><span data-stu-id="4da9b-124">WS-MetadataExchange Bindings</span></span>](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [<span data-ttu-id="4da9b-125">如何： 設定自訂 Ws-metadata Exchange 繫結</span><span class="sxs-lookup"><span data-stu-id="4da9b-125">How to: Configure a Custom WS-Metadata Exchange Binding</span></span>](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [<span data-ttu-id="4da9b-126">如何： 擷取中繼資料透過非 MEX 繫結</span><span class="sxs-lookup"><span data-stu-id="4da9b-126">How to: Retrieve Metadata Over a non-MEX Binding</span></span>](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

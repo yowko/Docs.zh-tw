@@ -1,98 +1,103 @@
 ---
-title: "ListView 概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項, ListView"
-  - "ListView 控制項 [WPF], 關於 ListView 控制項"
+title: "ListView 概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], ListView
+- ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e0886e387b6de34673cd4990ef8b61e08674b531
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ListView 概觀
-<xref:System.Windows.Controls.ListView> 控制項可提供基礎結構，以在不同的版面配置或檢視顯示一組資料項目。  例如，使用者可能會想在資料表中顯示資料項目，並以資料行排序。  
+# <a name="listview-overview"></a><span data-ttu-id="d61f1-102">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="d61f1-102">ListView Overview</span></span>
+<span data-ttu-id="d61f1-103"><xref:System.Windows.Controls.ListView>控制項提供基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。</span><span class="sxs-lookup"><span data-stu-id="d61f1-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span> <span data-ttu-id="d61f1-104">例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。</span><span class="sxs-lookup"><span data-stu-id="d61f1-104">For example, a user may want to display data items in a table and also to sort its columns.</span></span>  
   
-   
   
 <a name="WhatisaListView"></a>   
-## 什麼是 ListView  
- <xref:System.Windows.Controls.ListView> 控制項是衍生自 <xref:System.Windows.Controls.ListBox> 的 <xref:System.Windows.Controls.ItemsControl>。  這種控制項的項目通常是資料集合的成員，而且會以 <xref:System.Windows.Controls.ListViewItem> 物件表示。  <xref:System.Windows.Controls.ListViewItem> 是一種 <xref:System.Windows.Controls.ContentControl>，只能包含單一子項目。  不過，這個子項目可以是任何視覺化項目。  
+## <a name="what-is-a-listview"></a><span data-ttu-id="d61f1-105">什麼是 ListView？</span><span class="sxs-lookup"><span data-stu-id="d61f1-105">What Is a ListView?</span></span>  
+ <span data-ttu-id="d61f1-106"><xref:System.Windows.Controls.ListView>控制項是<xref:System.Windows.Controls.ItemsControl>衍生自<xref:System.Windows.Controls.ListBox>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-106">The <xref:System.Windows.Controls.ListView> control is an <xref:System.Windows.Controls.ItemsControl> that is derived from <xref:System.Windows.Controls.ListBox>.</span></span> <span data-ttu-id="d61f1-107">一般而言，其項目是資料集合的成員而且以<xref:System.Windows.Controls.ListViewItem>物件。</span><span class="sxs-lookup"><span data-stu-id="d61f1-107">Typically, its items are members of a data collection and are represented as <xref:System.Windows.Controls.ListViewItem> objects.</span></span> <span data-ttu-id="d61f1-108">A<xref:System.Windows.Controls.ListViewItem>是<xref:System.Windows.Controls.ContentControl>而且只能包含單一子項目。</span><span class="sxs-lookup"><span data-stu-id="d61f1-108">A <xref:System.Windows.Controls.ListViewItem> is a <xref:System.Windows.Controls.ContentControl> and can contain only a single child element.</span></span> <span data-ttu-id="d61f1-109">不過，該子元素可以是任何視覺元素。</span><span class="sxs-lookup"><span data-stu-id="d61f1-109">However, that child element can be any visual element.</span></span>  
   
 <a name="DefiningaListViewView"></a>   
-## 定義 ListView 的檢視模式  
- 若要指定 <xref:System.Windows.Controls.ListView> 控制項內容的檢視模式，請設定 <xref:System.Windows.Controls.ListView.View%2A> 屬性。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的一種檢視模式是 <xref:System.Windows.Controls.GridView>，會在可以自訂資料行的資料表中顯示一組資料項目。  
+## <a name="defining-a-view-mode-for-a-listview"></a><span data-ttu-id="d61f1-110">定義 ListView 的檢視模式</span><span class="sxs-lookup"><span data-stu-id="d61f1-110">Defining a View Mode for a ListView</span></span>  
+ <span data-ttu-id="d61f1-111">若要指定內容的檢視模式<xref:System.Windows.Controls.ListView>控制項，您設定<xref:System.Windows.Controls.ListView.View%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d61f1-111">To specify a view mode for the content of a <xref:System.Windows.Controls.ListView> control, you set the <xref:System.Windows.Controls.ListView.View%2A> property.</span></span> <span data-ttu-id="d61f1-112">一個檢視模式的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供是<xref:System.Windows.Controls.GridView>，其中有可自訂的資料行的資料表中顯示資料的項目集合。</span><span class="sxs-lookup"><span data-stu-id="d61f1-112">One view mode that [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides is <xref:System.Windows.Controls.GridView>, which displays a collection of data items in a table that has customizable columns.</span></span>  
   
- 下列範例顯示如何定義 <xref:System.Windows.Controls.ListView> 控制項的 <xref:System.Windows.Controls.GridView>，以顯示員工資訊。  
+ <span data-ttu-id="d61f1-113">下列範例示範如何定義<xref:System.Windows.Controls.GridView>如<xref:System.Windows.Controls.ListView>控制項，以便顯示員工資訊。</span><span class="sxs-lookup"><span data-stu-id="d61f1-113">The following example shows how to define a <xref:System.Windows.Controls.GridView> for a <xref:System.Windows.Controls.ListView> control that displays employee information.</span></span>  
   
- [!code-xml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- 下圖顯示上述範例的資料顯示出來的樣子。  
+ <span data-ttu-id="d61f1-114">下圖顯示上一個範例的資料顯示方式。</span><span class="sxs-lookup"><span data-stu-id="d61f1-114">The following illustration shows how the data appears for the previous example.</span></span>  
   
- ![ListView 與 GridView 輸出](../../../../docs/framework/wpf/controls/media/listviewgridview.png "ListViewGridView")  
+ <span data-ttu-id="d61f1-115">![含有 GridView 輸出的 ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span><span class="sxs-lookup"><span data-stu-id="d61f1-115">![ListView with GridView output](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span></span>  
   
- 您可以定義繼承自 <xref:System.Windows.Controls.ViewBase> 類別的類別，以建立自訂檢視模式。  <xref:System.Windows.Controls.ViewBase> 類別可提供建立自訂檢視所需的基礎結構。  如需如何建立自訂檢視的詳細資訊，請參閱 [建立 ListView 的自訂檢視模式](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)。  
+ <span data-ttu-id="d61f1-116">您可以藉由定義繼承自一個類別來建立自訂檢視模式<xref:System.Windows.Controls.ViewBase>類別。</span><span class="sxs-lookup"><span data-stu-id="d61f1-116">You can create a custom view mode by defining a class that inherits from the <xref:System.Windows.Controls.ViewBase> class.</span></span> <span data-ttu-id="d61f1-117"><xref:System.Windows.Controls.ViewBase>類別提供您需要建立自訂檢視的基礎結構。</span><span class="sxs-lookup"><span data-stu-id="d61f1-117">The <xref:System.Windows.Controls.ViewBase> class provides the infrastructure that you need to create a custom view.</span></span> <span data-ttu-id="d61f1-118">如需有關如何建立自訂檢視的詳細資訊，請參閱[建立 ListView 的自訂檢視模式](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)。</span><span class="sxs-lookup"><span data-stu-id="d61f1-118">For more information about how to create a custom view, see [Create a Custom View Mode for a ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).</span></span>  
   
 <a name="BindingDatatoaListView"></a>   
-## 將資料繫結至 ListView  
- 請使用 <xref:System.Windows.Controls.ItemsControl.Items%2A> 和 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性指定 <xref:System.Windows.Controls.ListView> 控制項的項目。  下列範例會將 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性設為名為 `EmployeeInfoDataSource` 的資料集合。  
+## <a name="binding-data-to-a-listview"></a><span data-ttu-id="d61f1-119">將資料繫結至 ListView</span><span class="sxs-lookup"><span data-stu-id="d61f1-119">Binding Data to a ListView</span></span>  
+ <span data-ttu-id="d61f1-120">使用<xref:System.Windows.Controls.ItemsControl.Items%2A>和<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性，以指定的項目<xref:System.Windows.Controls.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="d61f1-120">Use the <xref:System.Windows.Controls.ItemsControl.Items%2A> and <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> properties to specify items for a <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="d61f1-121">下列範例會設定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>稱為資料收集屬性`EmployeeInfoDataSource`。</span><span class="sxs-lookup"><span data-stu-id="d61f1-121">The following example sets the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property to a data collection that is called `EmployeeInfoDataSource`.</span></span>  
   
- [!code-xml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
+ [!code-xaml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
- 在 <xref:System.Windows.Controls.GridView> 中，<xref:System.Windows.Controls.GridViewColumn> 物件會繫結至指定的資料欄位。  下列範例會指定 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 屬性的 <xref:System.Windows.Data.Binding>，以將 <xref:System.Windows.Controls.GridViewColumn> 物件繫結至資料欄位。  
+ <span data-ttu-id="d61f1-122">在<xref:System.Windows.Controls.GridView>，<xref:System.Windows.Controls.GridViewColumn>物件繫結至指定的資料欄位。</span><span class="sxs-lookup"><span data-stu-id="d61f1-122">In a <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> objects bind to specified data fields.</span></span> <span data-ttu-id="d61f1-123">下列範例會繫結<xref:System.Windows.Controls.GridViewColumn>藉由指定資料欄位的物件<xref:System.Windows.Data.Binding>如<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d61f1-123">The following example binds a <xref:System.Windows.Controls.GridViewColumn> object to a data field by specifying a <xref:System.Windows.Data.Binding> for the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property.</span></span>  
   
  [!code-csharp[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
  [!code-vb[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
- [!code-xml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
+ [!code-xaml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
- 您也可以指定 <xref:System.Windows.Data.Binding> 做為 <xref:System.Windows.DataTemplate> 定義的一部分，再使用定義設定資料行儲存格的樣式。  下列範例中，以 <xref:System.Windows.ResourceKey> 識別的 <xref:System.Windows.DataTemplate> 會設定 <xref:System.Windows.Controls.GridViewColumn> 的 <xref:System.Windows.Data.Binding>。  請注意，這個範例不會定義 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>，因為這麼做會覆寫 <xref:System.Windows.DataTemplate> 指定的繫結。  
+ <span data-ttu-id="d61f1-124">您也可以指定<xref:System.Windows.Data.Binding>一部分<xref:System.Windows.DataTemplate>定義您用來設定資料行中的資料格的樣式。</span><span class="sxs-lookup"><span data-stu-id="d61f1-124">You can also specify a <xref:System.Windows.Data.Binding> as part of a <xref:System.Windows.DataTemplate> definition that you use to style the cells in a column.</span></span> <span data-ttu-id="d61f1-125">在下列範例中， <xref:System.Windows.DataTemplate> ，以識別<xref:System.Windows.ResourceKey>設定<xref:System.Windows.Data.Binding>如<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-125">In the following example, the <xref:System.Windows.DataTemplate> that is identified with a <xref:System.Windows.ResourceKey> sets the <xref:System.Windows.Data.Binding> for a <xref:System.Windows.Controls.GridViewColumn>.</span></span> <span data-ttu-id="d61f1-126">請注意，此範例中並未定義<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>因為這樣做，會覆寫所指定的繫結<xref:System.Windows.DataTemplate>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-126">Note that this example does not define the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> because doing so overrides the binding that is specified by <xref:System.Windows.DataTemplate>.</span></span>  
   
- [!code-xml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- [!code-xml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 <a name="StylingaListView"></a>   
-## 設定實作 GridView 之 ListView 的樣式  
- <xref:System.Windows.Controls.ListView> 控制項包含 <xref:System.Windows.Controls.ListViewItem> 物件，這些物件代表顯示的資料項目。  您可以使用下列屬性定義資料項目的內容和樣式：  
+## <a name="styling-a-listview-that-implements-a-gridview"></a><span data-ttu-id="d61f1-127">為實作 GridView 的 ListView 設定樣式</span><span class="sxs-lookup"><span data-stu-id="d61f1-127">Styling a ListView That Implements a GridView</span></span>  
+ <span data-ttu-id="d61f1-128"><xref:System.Windows.Controls.ListView>控制項包含<xref:System.Windows.Controls.ListViewItem>物件，代表顯示資料項目。</span><span class="sxs-lookup"><span data-stu-id="d61f1-128">The <xref:System.Windows.Controls.ListView> control contains <xref:System.Windows.Controls.ListViewItem> objects, which represent the data items that are displayed.</span></span> <span data-ttu-id="d61f1-129">您可以使用下列屬性來定義資料項目的內容和樣式：</span><span class="sxs-lookup"><span data-stu-id="d61f1-129">You can use the following properties to define the content and style of data items:</span></span>  
   
--   在 <xref:System.Windows.Controls.ListView> 控制項上，使用 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>、<xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> 和 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 屬性。  
+-   <span data-ttu-id="d61f1-130">在<xref:System.Windows.Controls.ListView>控制，請使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>， <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>，和<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d61f1-130">On the <xref:System.Windows.Controls.ListView> control, use the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, and <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> properties.</span></span>  
   
--   在 <xref:System.Windows.Controls.ListViewItem> 控制項上，使用 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 和 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 屬性。  
+-   <span data-ttu-id="d61f1-131">在<xref:System.Windows.Controls.ListViewItem>控制，請使用<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d61f1-131">On the <xref:System.Windows.Controls.ListViewItem> control, use the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> and <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> properties.</span></span>  
   
- 為避免 <xref:System.Windows.Controls.GridView> 儲存格之間的對齊問題，請不要使用 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 設定屬性或加入會影響 <xref:System.Windows.Controls.ListView> 中項目寬度的內容。  例如，當您在 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 中設定 <xref:System.Windows.FrameworkElement.Margin%2A> 屬性時，就可能會發生對齊問題。  若要指定屬性或定義會影響 <xref:System.Windows.Controls.GridView> 中項目寬度的內容，請使用 <xref:System.Windows.Controls.GridView> 類別及其相關類別的屬性，例如 <xref:System.Windows.Controls.GridViewColumn>。  
+ <span data-ttu-id="d61f1-132">若要避免中儲存格之間的對齊問題<xref:System.Windows.Controls.GridView>，請勿使用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>設定屬性，或加入內容會影響中項目的寬度<xref:System.Windows.Controls.ListView>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-132">To avoid alignment issues between cells in a <xref:System.Windows.Controls.GridView>, do not use the <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> to set properties or add content that affects the width of an item in a <xref:System.Windows.Controls.ListView>.</span></span> <span data-ttu-id="d61f1-133">例如，當您設定可能會發生對齊問題<xref:System.Windows.FrameworkElement.Margin%2A>屬性<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-133">For example, an alignment issue can occur when you set the <xref:System.Windows.FrameworkElement.Margin%2A> property in the <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.</span></span> <span data-ttu-id="d61f1-134">指定屬性或定義會影響中的項目寬度的內容<xref:System.Windows.Controls.GridView>，使用的屬性<xref:System.Windows.Controls.GridView>類別和其相關的類別，例如<xref:System.Windows.Controls.GridViewColumn>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-134">To specify properties or define content that affects the width of items in a <xref:System.Windows.Controls.GridView>, use the properties of the <xref:System.Windows.Controls.GridView> class and its related classes, such as <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
- 如需如何使用 <xref:System.Windows.Controls.GridView> 及其支援類別的詳細資訊，請參閱 [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)。  
+ <span data-ttu-id="d61f1-135">如需有關如何使用<xref:System.Windows.Controls.GridView>和其支援的類別，請參閱[GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d61f1-135">For more information about how to use <xref:System.Windows.Controls.GridView> and its supporting classes, see [GridView Overview](../../../../docs/framework/wpf/controls/gridview-overview.md).</span></span>  
   
- 如果您定義了 <xref:System.Windows.Controls.ListView> 控制項的 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>，而且也定義了 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>，就必須將 <xref:System.Windows.Controls.ContentPresenter> 加入樣式中，<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 才能正常運作。  
+ <span data-ttu-id="d61f1-136">如果您定義<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>的<xref:System.Windows.Controls.ListView>控制，而且也定義<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>，您必須包含<xref:System.Windows.Controls.ContentPresenter>為了讓樣式<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>正常運作。</span><span class="sxs-lookup"><span data-stu-id="d61f1-136">If you define an <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> for a <xref:System.Windows.Controls.ListView> control and also define an <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, you must include a <xref:System.Windows.Controls.ContentPresenter> in the style in order for the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> to work correctly.</span></span>  
   
- 使用 <xref:System.Windows.Controls.GridView> 顯示的 <xref:System.Windows.Controls.ListView> 內容請不要使用 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 和 <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> 屬性。  若要指定 <xref:System.Windows.Controls.GridView> 資料行的內容對齊方式，請定義 <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>。  
+ <span data-ttu-id="d61f1-137">請勿使用<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>和<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>屬性<xref:System.Windows.Controls.ListView>使用所顯示的內容<xref:System.Windows.Controls.GridView>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-137">Do not use the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> and <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> properties for <xref:System.Windows.Controls.ListView> content that is displayed by using a <xref:System.Windows.Controls.GridView>.</span></span> <span data-ttu-id="d61f1-138">若要指定內容的對齊方式的資料行中<xref:System.Windows.Controls.GridView>，定義<xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>。</span><span class="sxs-lookup"><span data-stu-id="d61f1-138">To specify the alignment of content in a column of a <xref:System.Windows.Controls.GridView>, define a <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.</span></span>  
   
 <a name="UsingtheSameViewMoreThanOnce"></a>   
-## 共用相同檢視模式  
- 兩個 <xref:System.Windows.Controls.ListView> 控制項無法同時共用相同的檢視模式。  如果有一個以上的 <xref:System.Windows.Controls.ListView> 控制項嘗試使用相同的檢視模式，會發生例外狀況。  
+## <a name="sharing-the-same-view-mode"></a><span data-ttu-id="d61f1-139">共用相同的檢視模式</span><span class="sxs-lookup"><span data-stu-id="d61f1-139">Sharing the Same View Mode</span></span>  
+ <span data-ttu-id="d61f1-140">兩個<xref:System.Windows.Controls.ListView>控制項不能共用相同的檢視模式，在相同的時間。</span><span class="sxs-lookup"><span data-stu-id="d61f1-140">Two <xref:System.Windows.Controls.ListView> controls cannot share the same view mode at the same time.</span></span> <span data-ttu-id="d61f1-141">如果您嘗試使用相同的檢視模式與一個以上<xref:System.Windows.Controls.ListView>控制時，發生例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d61f1-141">If you try to use the same view mode with more than one <xref:System.Windows.Controls.ListView> control, an exception occurs.</span></span>  
   
- 若要指定多個 <xref:System.Windows.Controls.ListView> 可以同時使用的檢視模式，請使用樣板或樣式。  如需如何將檢視定義為 <xref:System.Windows.FrameworkElement.Resources%2A> 的範例，請參閱[具有多個檢視的 ListView 範例](http://go.microsoft.com/fwlink/?LinkID=160013) \(英文\)。  
+ <span data-ttu-id="d61f1-142">若要指定可以同時使用由多個檢視模式<xref:System.Windows.Controls.ListView>，使用範本或樣式。</span><span class="sxs-lookup"><span data-stu-id="d61f1-142">To specify a view mode that can be simultaneously used by more than one <xref:System.Windows.Controls.ListView>, use templates or styles.</span></span> <span data-ttu-id="d61f1-143">如需如何定義為檢視的範例<xref:System.Windows.FrameworkElement.Resources%2A>，請參閱[ListView 與多個檢視範例](http://go.microsoft.com/fwlink/?LinkID=160013)。</span><span class="sxs-lookup"><span data-stu-id="d61f1-143">For an example of how to define views as <xref:System.Windows.FrameworkElement.Resources%2A>, see [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).</span></span>  
   
 <a name="CreatingaCustomView"></a>   
-## 建立自訂檢視模式  
- 自訂檢視 \(如 <xref:System.Windows.Controls.GridView>\) 是衍生自 <xref:System.Windows.Controls.ViewBase> 抽象類別，能提供工具來顯示 <xref:System.Windows.Controls.ListViewItem> 物件所代表的資料項目。  
+## <a name="creating-a-custom-view-mode"></a><span data-ttu-id="d61f1-144">建立自訂檢視模式</span><span class="sxs-lookup"><span data-stu-id="d61f1-144">Creating a Custom View Mode</span></span>  
+ <span data-ttu-id="d61f1-145">自訂檢視，例如<xref:System.Windows.Controls.GridView>衍生自<xref:System.Windows.Controls.ViewBase>抽象類別，可提供工具來顯示資料的項目呈現為<xref:System.Windows.Controls.ListViewItem>物件。</span><span class="sxs-lookup"><span data-stu-id="d61f1-145">Customized views like <xref:System.Windows.Controls.GridView> are derived from the <xref:System.Windows.Controls.ViewBase> abstract class, which provides the tools to display data items that are represented as <xref:System.Windows.Controls.ListViewItem> objects.</span></span>  
   
- 如需自訂檢視模式的範例，請參閱[具有多個檢視的 ListView 範例](http://go.microsoft.com/fwlink/?LinkID=160013) \(英文\)。  
+ <span data-ttu-id="d61f1-146">如需自訂檢視模式的範例，請參閱[具有多個檢視的 ListView 範例 (英文)](http://go.microsoft.com/fwlink/?LinkID=160013)。</span><span class="sxs-lookup"><span data-stu-id="d61f1-146">For an example of a custom view mode, see [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Controls.GridView>   
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.ListViewItem>   
- <xref:System.Windows.Data.Binding>   
- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [控制項](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a><span data-ttu-id="d61f1-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d61f1-147">See Also</span></span>  
+ <xref:System.Windows.Controls.GridView>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.ListViewItem>  
+ <xref:System.Windows.Data.Binding>  
+ [<span data-ttu-id="d61f1-148">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="d61f1-148">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="d61f1-149">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="d61f1-149">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="d61f1-150">控制項</span><span class="sxs-lookup"><span data-stu-id="d61f1-150">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

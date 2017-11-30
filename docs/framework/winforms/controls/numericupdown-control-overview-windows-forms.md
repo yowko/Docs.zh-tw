@@ -1,39 +1,39 @@
 ---
-title: "NumericUpDown 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NumericUpDown"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "數字微調按鈕控制項, Windows Form"
-  - "NumericUpDown 控制項 [Windows Form], 關於 NumericUpDown 控制項"
-  - "微調按鈕控制項, Windows Form"
+title: "NumericUpDown 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NumericUpDown
+helpviewer_keywords:
+- numeric spin button control [Windows Forms], Windows Forms
+- NumericUpDown control [Windows Forms], about NumericUpDown control
+- spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e1afb128fd5e098a59fa2636f09998a2a463c926
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# NumericUpDown 控制項概觀 (Windows Form)
-<xref:System.Windows.Forms.NumericUpDown> 控制項看起來像文字方塊與一對箭號 \(使用者按一下以調整值\) 的組合。  這個控制項會顯示和設定固定數值選擇清單中的單一數值。  使用者可按一下向上和向下箭號、按下向上和向下鍵或在控制項的文字方塊部分輸入數字，以增加或減少數字。  按一下向上鍵會向最大值移動；按一下向下鍵則會向最小值移動。  
+# <a name="numericupdown-control-overview-windows-forms"></a><span data-ttu-id="2028d-102">NumericUpDown 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="2028d-102">NumericUpDown Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="2028d-103"><xref:System.Windows.Forms.NumericUpDown>控制項看起來像文字方塊中的組合和一對箭號，讓使用者可以按一下以調整值。</span><span class="sxs-lookup"><span data-stu-id="2028d-103">The <xref:System.Windows.Forms.NumericUpDown> control looks like a combination of a text box and a pair of arrows that the user can click to adjust a value.</span></span> <span data-ttu-id="2028d-104">控制項顯示，並設定單一數值的數字值的固定選擇清單中。</span><span class="sxs-lookup"><span data-stu-id="2028d-104">The control displays and sets a single numeric value from a list of fixed numeric-value choices.</span></span> <span data-ttu-id="2028d-105">使用者可以增加和減少數目，依序按一下向上和向下箭號，按向上鍵和向下鍵，或在控制項中輸入數字。</span><span class="sxs-lookup"><span data-stu-id="2028d-105">The user can increase and decrease the number by clicking the up and down arrows, by pressing the UP and DOWN ARROW keys, or by typing a number in the text box part of the control.</span></span> <span data-ttu-id="2028d-106">按一下向上鍵移動朝最大值。按一下向下鍵移動朝最小值。</span><span class="sxs-lookup"><span data-stu-id="2028d-106">Clicking the UP ARROW key moves the number toward the maximum; clicking the DOWN ARROW key moves the number toward the minimum.</span></span>  
   
- 例如，如果您想建立音樂播放應用程式的音量控制項，這個控制項因為具有靈活的功能，將是個明顯的好選擇。  <xref:System.Windows.Forms.NumericUpDown> 控制項使用於許多 Windows 控制台應用程式。  
+ <span data-ttu-id="2028d-107">具有靈活的功能，因為此控制項是明顯的選項，例如，如果您想要建立音樂的播放器應用程式的音量控制項。</span><span class="sxs-lookup"><span data-stu-id="2028d-107">Because of its versatile functionality, this control is an obvious choice, for example, if you want to create a volume control for a music player application.</span></span> <span data-ttu-id="2028d-108"><xref:System.Windows.Forms.NumericUpDown>控制項用在許多 Windows 控制台應用程式。</span><span class="sxs-lookup"><span data-stu-id="2028d-108">The <xref:System.Windows.Forms.NumericUpDown> control is used in many Windows Control Panel applications.</span></span>  
   
-## 主要屬性和方法  
- 顯示在控制項文字方塊中的數字，可以具有各種格式 \(包含十六進位\)。  如需詳細資訊，請參閱 [如何：為 Windows Form NumericUpDown 控制項設定格式](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)。  控制項的主要屬性為 <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> \(預設值為 100\)、<xref:System.Windows.Forms.NumericUpDown.Minimum%2A> \(預設值為 0\) 和 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> \(預設值為 1\)。  <xref:System.Windows.Forms.NumericUpDown.Value%2A> 屬性會設定控制項中目前選取的數值。  <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 屬性會設定使用者在按一下向上或向下箭號時數值的調整量。  當焦點離開控制項時，任何輸入都會根據最小和最大的數值加以驗證。  當使用者持續按向上和向下箭號時，您可以藉由 <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> 屬性加快控制項在數目之間移動的速度。  此控制項的主要方法是：<xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>。  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="2028d-109">索引鍵屬性和方法</span><span class="sxs-lookup"><span data-stu-id="2028d-109">Key Properties and Methods</span></span>  
+ <span data-ttu-id="2028d-110">在控制項的文字方塊中顯示的數字可以是各種不同的格式，包括十六進位。</span><span class="sxs-lookup"><span data-stu-id="2028d-110">The numbers displayed in the control's text box can be in a variety of formats, including hexadecimal.</span></span> <span data-ttu-id="2028d-111">如需詳細資訊，請參閱[How to： 設定 Windows Form NumericUpDown 控制項的格式](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)。</span><span class="sxs-lookup"><span data-stu-id="2028d-111">For more information, see [How to: Set the Format for the Windows Forms NumericUpDown Control](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span></span> <span data-ttu-id="2028d-112">控制項的索引鍵屬性是<xref:System.Windows.Forms.NumericUpDown.Value%2A>， <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> （預設值 100） <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> （預設值為 0） 和<xref:System.Windows.Forms.NumericUpDown.Increment%2A>（預設值 1）。</span><span class="sxs-lookup"><span data-stu-id="2028d-112">The key properties of the control are <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (default value 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (default value 0), and <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (default value 1).</span></span> <span data-ttu-id="2028d-113"><xref:System.Windows.Forms.NumericUpDown.Value%2A>屬性設定控制項中選取的目前數目。</span><span class="sxs-lookup"><span data-stu-id="2028d-113">The <xref:System.Windows.Forms.NumericUpDown.Value%2A> property sets the current number selected in the control.</span></span> <span data-ttu-id="2028d-114"><xref:System.Windows.Forms.NumericUpDown.Increment%2A>屬性會設定當使用者按一下向上或向下箭號調整的數字量。</span><span class="sxs-lookup"><span data-stu-id="2028d-114">The <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property sets the amount that the number is adjusted by when the user clicks an up or down arrow.</span></span> <span data-ttu-id="2028d-115">當焦點離開控制項時，任何輸入將會驗證最小和最大的數字值。</span><span class="sxs-lookup"><span data-stu-id="2028d-115">When focus moves off the control, any typed input will be validated against the minimum and maximum numeric values.</span></span> <span data-ttu-id="2028d-116">您可以增加時，使用者持續按下向上或向下箭號的數字，移動控制項的速度與<xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="2028d-116">You can increase the speed that the control moves through numbers, when the user continuously presses the up or down arrow, with the <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> property.</span></span> <span data-ttu-id="2028d-117">控制項的主要方法是<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>和<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>。</span><span class="sxs-lookup"><span data-stu-id="2028d-117">The key methods of the control are <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.NumericUpDown>   
- [NumericUpDown 控制項](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)   
- [如何：為 Windows Form NumericUpDown 控制項設定格式](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)   
- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2028d-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2028d-118">See Also</span></span>  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ [<span data-ttu-id="2028d-119">NumericUpDown 控制項</span><span class="sxs-lookup"><span data-stu-id="2028d-119">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [<span data-ttu-id="2028d-120">操作說明：為 Windows Forms NumericUpDown 控制項設定格式</span><span class="sxs-lookup"><span data-stu-id="2028d-120">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [<span data-ttu-id="2028d-121">TextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="2028d-121">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

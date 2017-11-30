@@ -1,42 +1,46 @@
 ---
-title: "如何：在 Windows Form 控制項中套用屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "屬性 [Windows Form], 套用"
-  - "控制項 [Windows Form], 套用屬性"
-  - "Windows Form 控制項, 套用屬性"
+title: "如何：在 Windows Form 控制項中套用屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], applying attributes
+- attributes [Windows Forms], applying
+- Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4697ef7a74916bcc7b922f265262a83b8f0316d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows Form 控制項中套用屬性
-若要開發與設計環境正確互動、並在執行階段正確執行的元件和控制項，需要正確套用屬性至類別及成員。  
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a><span data-ttu-id="d7636-102">如何：在 Windows Form 控制項中套用屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-102">How to: Apply Attributes in Windows Forms Controls</span></span>
+<span data-ttu-id="d7636-103">若要開發元件和控制項的設計環境中正確地互動，並且在執行階段正確地執行，您需要正確地將屬性套用至類別和成員。</span><span class="sxs-lookup"><span data-stu-id="d7636-103">To develop components and controls that interact correctly with the design environment and execute correctly at run time, you need to apply attributes correctly to classes and members.</span></span>  
   
-## 範例  
- 下列程式碼範例示範如何在自訂控制項上使用數種屬性。  控制項示範簡單的記錄功能。  當控制項繫結至資料來源時，會顯示由 <xref:System.Windows.Forms.DataGridView> 控制項中資料來源所傳送的值。  如果值超過 `Threshold` 屬性所指定的值，便會引發 `ThresholdExceeded` 事件。  
+## <a name="example"></a><span data-ttu-id="d7636-104">範例</span><span class="sxs-lookup"><span data-stu-id="d7636-104">Example</span></span>  
+ <span data-ttu-id="d7636-105">下列程式碼範例示範如何使用自訂控制項上的數個屬性。</span><span class="sxs-lookup"><span data-stu-id="d7636-105">The following code example demonstrates how to use several attributes on a custom control.</span></span> <span data-ttu-id="d7636-106">控制項示範簡單的記錄功能。</span><span class="sxs-lookup"><span data-stu-id="d7636-106">The control demonstrates a simple logging capability.</span></span> <span data-ttu-id="d7636-107">當控制項已繫結至資料來源時，它會顯示資料來源中所傳送的值<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7636-107">When the control is bound to a data source, it displays the values sent by the data source in a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="d7636-108">如果值超過所指定的值`Threshold`屬性，`ThresholdExceeded`就會引發事件。</span><span class="sxs-lookup"><span data-stu-id="d7636-108">If a value exceeds the value specified by the `Threshold` property, a `ThresholdExceeded` event is raised.</span></span>  
   
- `AttributesDemoControl` 記錄具有 `LogEntry` 類別的值。  `LogEntry` 類別為樣板類別 \(Template Class\)，此類別會根據記錄的型別進行參數化。  例如，如果 `AttributesDemoControl` 記錄了 `float` 型別的值，就會宣告並使用每個 `LogEntry` 執行個體，如下所示：  
+ <span data-ttu-id="d7636-109">`AttributesDemoControl`記錄值`LogEntry`類別。</span><span class="sxs-lookup"><span data-stu-id="d7636-109">The `AttributesDemoControl` logs values with a `LogEntry` class.</span></span> <span data-ttu-id="d7636-110">`LogEntry`類別是範本類別，這表示它參數化的型別，它會記錄上。</span><span class="sxs-lookup"><span data-stu-id="d7636-110">The `LogEntry` class is a template class, which means it is parameterized on the type that it logs.</span></span> <span data-ttu-id="d7636-111">例如，如果`AttributesDemoControl`是記錄類型的值`float`，每個`LogEntry`宣告執行個體，然後使用，如下所示。</span><span class="sxs-lookup"><span data-stu-id="d7636-111">For example, if the `AttributesDemoControl` is logging values of type `float`, each `LogEntry` instance is declared and used as follows.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#110)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
->  因為 `LogEntry` 是依據任意的型別參數化，所以必須使用反映 \(Reflection\) 才能在參數型別上作業。  為了讓臨界值功能起作用，參數型別 `T` 必須實作 <xref:System.IComparable> 介面。  
+>  <span data-ttu-id="d7636-112">因為`LogEntry`參數化的任意型別，由它必須使用反映來處理參數型別。</span><span class="sxs-lookup"><span data-stu-id="d7636-112">Because `LogEntry` is parameterized by an arbitrary type, it must use reflection to operate on the parameter type.</span></span> <span data-ttu-id="d7636-113">閾值功能運作，參數型別`T`必須實作<xref:System.IComparable>介面。</span><span class="sxs-lookup"><span data-stu-id="d7636-113">For the threshold feature to work, the parameter type `T` must implement the <xref:System.IComparable> interface.</span></span>  
   
- 裝載 `AttributesDemoControl` 的表單會定期查詢效能計數器。  每個值都封裝於適當型別的 `LogEntry`，並加入至表單的 <xref:System.Windows.Forms.BindingSource>。  `AttributesDemoControl` 透過資料繫結接收值，並將值顯示於 <xref:System.Windows.Forms.DataGridView> 控制項中。  
+ <span data-ttu-id="d7636-114">表單裝載`AttributesDemoControl`定期查詢效能計數器。</span><span class="sxs-lookup"><span data-stu-id="d7636-114">The form that hosts the `AttributesDemoControl` queries a performance counter periodically.</span></span> <span data-ttu-id="d7636-115">每個值會封裝在`LogEntry`適當的類型並加入至表單的<xref:System.Windows.Forms.BindingSource>。</span><span class="sxs-lookup"><span data-stu-id="d7636-115">Each value is packaged in a `LogEntry` of the appropriate type and added to the form's <xref:System.Windows.Forms.BindingSource>.</span></span> <span data-ttu-id="d7636-116">`AttributesDemoControl`透過其資料繫結接收值，並顯示中的值<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="d7636-116">The `AttributesDemoControl` receives the value through its data binding and displays the value in a <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -44,34 +48,34 @@ caps.handback.revision: 10
  [!code-csharp[System.ComponentModel.AttributesDemoControl#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#100)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#100)]  
   
- 第一個程式碼範例是 `AttributesDemoControl` 實作。  第二個程式碼範例示範使用 `AttributesDemoControl` 的表單。  
+ <span data-ttu-id="d7636-117">第一個程式碼範例是`AttributesDemoControl`實作。</span><span class="sxs-lookup"><span data-stu-id="d7636-117">The first code example is the `AttributesDemoControl` implementation.</span></span> <span data-ttu-id="d7636-118">第二個程式碼範例示範如何使用的表單`AttributesDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="d7636-118">The second code example demonstrates a form that uses the `AttributesDemoControl`.</span></span>  
   
-## 類別層級屬性  
- 有些屬性 \(Attribute\) 是套用在類別層級。  下列程式碼範例示範常用來套用至 Windows Form 控制項的屬性。  
+## <a name="class-level-attributes"></a><span data-ttu-id="d7636-119">類別層級屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-119">Class-level Attributes</span></span>  
+ <span data-ttu-id="d7636-120">某些屬性會套用在類別層級。</span><span class="sxs-lookup"><span data-stu-id="d7636-120">Some attributes are applied at the class level.</span></span> <span data-ttu-id="d7636-121">下列程式碼範例示範通常會套用到 Windows Form 控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="d7636-121">The following code example shows the attributes that are commonly applied to a Windows Forms control.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#20)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
-### TypeConverter 屬性  
- <xref:System.ComponentModel.TypeConverterAttribute> 是另一種常用的類別層級屬性。  下列程式碼範例會示範 `LogEntry` 類別的用法。  這個範例也針對 `LogEntry` 型別示範了 <xref:System.ComponentModel.TypeConverter> 的實作，稱為 `LogEntryTypeConverter`。  
+### <a name="typeconverter-attribute"></a><span data-ttu-id="d7636-122">TypeConverter 屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-122">TypeConverter Attribute</span></span>  
+ <span data-ttu-id="d7636-123"><xref:System.ComponentModel.TypeConverterAttribute>是另一個常用的類別層級屬性。</span><span class="sxs-lookup"><span data-stu-id="d7636-123"><xref:System.ComponentModel.TypeConverterAttribute> is another commonly used class-level attribute.</span></span> <span data-ttu-id="d7636-124">下列程式碼範例示範使用`LogEntry`類別。</span><span class="sxs-lookup"><span data-stu-id="d7636-124">The following code example shows its use for the `LogEntry` class.</span></span> <span data-ttu-id="d7636-125">此範例也會示範實作<xref:System.ComponentModel.TypeConverter>如`LogEntry`類型稱為`LogEntryTypeConverter`。</span><span class="sxs-lookup"><span data-stu-id="d7636-125">This example also shows an implementation of a <xref:System.ComponentModel.TypeConverter> for the `LogEntry` type, called `LogEntryTypeConverter`.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
   
-## 成員層級屬性  
- 有些屬性是套用在成員層級。  下列程式碼範例示範一些屬性 \(Attribute\)，這些屬性常套用至 Windows Form 控制項的屬性 \(Property\)。  
+## <a name="member-level-attributes"></a><span data-ttu-id="d7636-126">成員層級屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-126">Member-level Attributes</span></span>  
+ <span data-ttu-id="d7636-127">某些屬性會套用在成員層級。</span><span class="sxs-lookup"><span data-stu-id="d7636-127">Some attributes are applied at the member level.</span></span> <span data-ttu-id="d7636-128">下列程式碼範例顯示一些通常會套用到 Windows Form 控制項的屬性的屬性。</span><span class="sxs-lookup"><span data-stu-id="d7636-128">The following code examples show some attributes that are commonly applied to properties of Windows Forms controls.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#21)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
-### AmbientValue 屬性  
- 下列程式碼範例示範 <xref:System.ComponentModel.AmbientValueAttribute>，並顯示支援與設計環境互動的程式碼。  這種互動稱為「*環境性*」\(Ambience\)。  
+### <a name="ambientvalue-attribute"></a><span data-ttu-id="d7636-129">AmbientValue 屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-129">AmbientValue Attribute</span></span>  
+ <span data-ttu-id="d7636-130">下列範例會示範<xref:System.ComponentModel.AmbientValueAttribute>而顯示支援與設計環境互動的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7636-130">The following example demonstrates the <xref:System.ComponentModel.AmbientValueAttribute> and shows code that supports its interaction with the design environment.</span></span> <span data-ttu-id="d7636-131">這種互動稱為*氣氛*。</span><span class="sxs-lookup"><span data-stu-id="d7636-131">This interaction is called *ambience*.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
-### 資料繫結屬性  
- 下列程式碼示範複雜資料繫結的實作。  先前所示的類別層級 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> 會指定用做資料繫結的 `DataSource` 和 `DataMember` 屬性。  <xref:System.ComponentModel.AttributeProviderAttribute> 則會指定 `DataSource` 屬性將要繫結的型別。  
+### <a name="databinding-attributes"></a><span data-ttu-id="d7636-132">資料繫結屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-132">Databinding Attributes</span></span>  
+ <span data-ttu-id="d7636-133">下列範例會示範複雜資料繫結的實作。</span><span class="sxs-lookup"><span data-stu-id="d7636-133">The following examples demonstrate an implementation of complex data binding.</span></span> <span data-ttu-id="d7636-134">類別層級<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>、 顯示之前，指定`DataSource`和`DataMember`来用於資料繫結的屬性。</span><span class="sxs-lookup"><span data-stu-id="d7636-134">The class-level <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>, shown previously, specifies the `DataSource` and `DataMember` properties to use for data binding.</span></span> <span data-ttu-id="d7636-135"><xref:System.ComponentModel.AttributeProviderAttribute>指定成的型別`DataSource`屬性會繫結。</span><span class="sxs-lookup"><span data-stu-id="d7636-135">The <xref:System.ComponentModel.AttributeProviderAttribute> specifies the type to which the `DataSource` property will bind.</span></span>  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -79,13 +83,13 @@ caps.handback.revision: 10
  [!code-csharp[System.ComponentModel.AttributesDemoControl#26](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#26)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#26](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#26)]  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a><span data-ttu-id="d7636-136">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d7636-136">Compiling the Code</span></span>  
   
--   為了進行建置，裝載 `AttributesDemoControl` 的表單需要對 `AttributesDemoControl` 組件的參考。  
+-   <span data-ttu-id="d7636-137">表單裝載`AttributesDemoControl`需要參考`AttributesDemoControl`才能建置的組件。</span><span class="sxs-lookup"><span data-stu-id="d7636-137">The form that hosts the `AttributesDemoControl` requires a reference to the `AttributesDemoControl` assembly in order to build.</span></span>  
   
-## 請參閱  
- <xref:System.IComparable>   
- <xref:System.Windows.Forms.DataGridView>   
- [使用 .NET Framework 開發自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Windows Form 控制項中的屬性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)   
- [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](../Topic/How%20to:%20Serialize%20Collections%20of%20Standard%20Types%20with%20the%20DesignerSerializationVisibilityAttribute.md)
+## <a name="see-also"></a><span data-ttu-id="d7636-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7636-138">See Also</span></span>  
+ <xref:System.IComparable>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="d7636-139">使用 .NET Framework 開發自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="d7636-139">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="d7636-140">Windows Forms 控制項中的屬性</span><span class="sxs-lookup"><span data-stu-id="d7636-140">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [<span data-ttu-id="d7636-141">如何： 使用 designerserializationvisibilityattribute 序列化標準類型的序列化</span><span class="sxs-lookup"><span data-stu-id="d7636-141">How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

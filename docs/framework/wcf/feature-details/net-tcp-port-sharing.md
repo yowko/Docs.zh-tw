@@ -1,62 +1,65 @@
 ---
-title: "Net.TCP Port Sharing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "連接埠啟用 [WCF]"
-  - "連接埠共用 [WCF]"
+title: Net.TCP Port Sharing
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- port activation [WCF]
+- port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cc0736b0c13f286b999fc0e098a45364141945da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Net.TCP Port Sharing
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 針對高效能通訊提供全新的 TCP 架構網路通訊協定 \(net.tcp:\/\/\)。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時引進全新的系統元件 Net.TCP 連接埠共用服務，可讓多個使用者處理序共用 net.tcp 連接埠。  
+# <a name="nettcp-port-sharing"></a><span data-ttu-id="999de-102">Net.TCP Port Sharing</span><span class="sxs-lookup"><span data-stu-id="999de-102">Net.TCP Port Sharing</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="999de-103"> 針對高效能通訊提供全新的 TCP 架構網路通訊協定 (net.tcp://)。</span><span class="sxs-lookup"><span data-stu-id="999de-103"> provides a new TCP-based network protocol (net.tcp://) for high-performance communication.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="999de-104"> 同時引進全新的系統元件 Net.TCP 連接埠共用服務，可讓多個使用者處理序共用 net.tcp 連接埠。</span><span class="sxs-lookup"><span data-stu-id="999de-104"> also introduces a new system component, the Net.TCP Port Sharing Service that enables net.tcp ports to be shared across multiple user processes.</span></span>  
   
-## 源起與動機  
- TCP\/IP 通訊協定最初問世時，只有少數的應用程式通訊協定會使用它。  TCP\/IP 藉由將唯一的 16 位元連接埠號碼指派給每個應用程式通訊協定，以便透過連接埠號碼來區分各個應用程式。  例如，今日的 HTTP 流量已經過標準化使用 TCP 連接埠 80，而 SMTP 則是使用 TCP 連接埠 25，另外 FTP 則是使用 TCP 連接埠 20 和 21。  其他使用 TCP 做為傳輸的應用程式可以依照慣例或是透過正式標準化作業來選擇其他可用的連接埠號碼。  
+## <a name="background-and-motivation"></a><span data-ttu-id="999de-105">源起與動機</span><span class="sxs-lookup"><span data-stu-id="999de-105">Background and Motivation</span></span>  
+ <span data-ttu-id="999de-106">TCP/IP 通訊協定最初問世時，只有少數的應用程式通訊協定會使用它。</span><span class="sxs-lookup"><span data-stu-id="999de-106">When the TCP/IP protocol was first introduced, only a small number of application protocols made use of it.</span></span> <span data-ttu-id="999de-107">TCP/IP 藉由將唯一的 16 位元連接埠號碼指派給每個應用程式通訊協定，以便透過連接埠號碼來區分各個應用程式。</span><span class="sxs-lookup"><span data-stu-id="999de-107">TCP/IP used port numbers to differentiate between applications by assigning a unique 16-bit port number to each application protocol.</span></span> <span data-ttu-id="999de-108">例如，今日的 HTTP 流量已經過標準化使用 TCP 連接埠 80，而 SMTP 則是使用 TCP 連接埠 25，另外 FTP 則是使用 TCP 連接埠 20 和 21。</span><span class="sxs-lookup"><span data-stu-id="999de-108">For example, HTTP traffic today is standardized to use TCP port 80, SMTP uses TCP port 25, and FTP uses TCP ports 20 and 21.</span></span> <span data-ttu-id="999de-109">其他使用 TCP 做為傳輸的應用程式可以依照慣例或是透過正式標準化作業來選擇其他可用的連接埠號碼。</span><span class="sxs-lookup"><span data-stu-id="999de-109">Other applications using TCP as a transport can choose another available port number, either by convention or through formal standardization.</span></span>  
   
- 使用連接埠號碼來區分應用程式具有安全上的問題。  一般我們會設定防火牆來攔截所有連接埠上的 TCP 流量 \(除了少數幾個熟知的進入點之外\)，因此部署一個使用非標準連接埠的應用程式常常會因為企業與個人防火牆的緣故而變得很複雜，甚至不可能辦到。  透過標準、已知且已經允許的連接埠進行通訊的應用程式會降低外部攻擊面積。  許多網路應用程式會運用 HTTP 通訊協定，因為大部分的防火牆設定預設會允許 TCP 連接埠 80 上的流量。  
+ <span data-ttu-id="999de-110">使用連接埠號碼來區分應用程式具有安全上的問題。</span><span class="sxs-lookup"><span data-stu-id="999de-110">Using port numbers to distinguish between applications had security problems.</span></span> <span data-ttu-id="999de-111">一般我們會設定防火牆來攔截所有連接埠上的 TCP 流量 (除了少數幾個熟知的進入點之外)，因此部署一個使用非標準連接埠的應用程式常常會因為企業與個人防火牆的緣故而變得很複雜，甚至不可能辦到。</span><span class="sxs-lookup"><span data-stu-id="999de-111">Firewalls are generally configured to block TCP traffic on all ports except for a few well-known entry points, so deploying an application that uses a non-standard port is often complicated or even impossible due to the presence of corporate and personal firewalls.</span></span> <span data-ttu-id="999de-112">透過標準、已知且已經允許的連接埠進行通訊的應用程式會降低外部攻擊面積。</span><span class="sxs-lookup"><span data-stu-id="999de-112">Applications that can communicate over standard, well-known ports that are already permitted, reduce the external attack surface.</span></span> <span data-ttu-id="999de-113">許多網路應用程式會運用 HTTP 通訊協定，因為大部分的防火牆設定預設會允許 TCP 連接埠 80 上的流量。</span><span class="sxs-lookup"><span data-stu-id="999de-113">Many network applications make use of the HTTP protocol because most firewalls are configured by default to allow traffic on TCP port 80.</span></span>  
   
- 在 HTTP.SYS 模型中，許多不同的 HTTP 應用程式流量在經過多工處理後，可以傳入單一 TCP 連接埠，而這已經變成了 Windows 平台的標準做法。  這種做法提供防火牆管理員一個共同的控制點，同時讓應用程式開發人員在建置可以運用網路的新應用程式時，將部署成本降到最低。  
+ <span data-ttu-id="999de-114">在 HTTP.SYS 模型中，許多不同的 HTTP 應用程式流量在經過多工處理後，可以傳入單一 TCP 連接埠，而這已經變成了 Windows 平台的標準做法。</span><span class="sxs-lookup"><span data-stu-id="999de-114">The HTTP.SYS model in which traffic for many different HTTP applications is multiplexed onto a single TCP port has become standard on the Windows platform.</span></span> <span data-ttu-id="999de-115">這種做法提供防火牆管理員一個共同的控制點，同時讓應用程式開發人員在建置可以運用網路的新應用程式時，將部署成本降到最低。</span><span class="sxs-lookup"><span data-stu-id="999de-115">This provides a common point of control for firewall administrators while allowing application developers to minimize the deployment cost of building new applications that can make use of the network.</span></span>  
   
- 在多個 HTTP 應用程式之間共用連接埠的能力，一直都是網際網路資訊服務 \(IIS\) 的標準功能之一。  但是，一直到 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 引進了 HTTP.SYS \(核心模式 HTTP 通訊協定接聽項\) 之後，才讓這項基礎結構全面普及化。  事實上，HTTP.SYS 可讓任意使用者處理序共用專門用來處理 HTTP 流量的 TCP 連接埠。  這項功能可讓許多 HTTP 應用程式共存於同一部實體電腦內個別、隔離的處理序中，同時透過 TCP 連接埠 80 共用所需的網路基礎結構以便傳送與接收流量。  Net.TCP 連接埠共用服務可讓 net.tcp 應用程式共用同樣類型的連接埠。  
+ <span data-ttu-id="999de-116">在多個 HTTP 應用程式之間共用連接埠的能力，一直都是網際網路資訊服務 (IIS) 的標準功能之一。</span><span class="sxs-lookup"><span data-stu-id="999de-116">The ability to share ports across multiple HTTP applications has long been a feature of Internet Information Services (IIS).</span></span> <span data-ttu-id="999de-117">但是，一直到 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 引進了 HTTP.SYS (核心模式 HTTP 通訊協定接聽項) 之後，才讓這項基礎結構全面普及化。</span><span class="sxs-lookup"><span data-stu-id="999de-117">However, it was only with the introduction of HTTP.SYS (the kernel-mode HTTP protocol listener) with [!INCLUDE[iis601](../../../../includes/iis601-md.md)] that this infrastructure was fully generalized.</span></span> <span data-ttu-id="999de-118">事實上，HTTP.SYS 可讓任意使用者處理序共用專門用來處理 HTTP 流量的 TCP 連接埠。</span><span class="sxs-lookup"><span data-stu-id="999de-118">In effect, HTTP.SYS allows arbitrary user processes to share the TCP ports dedicated to HTTP traffic.</span></span> <span data-ttu-id="999de-119">這項功能可讓許多 HTTP 應用程式共存於同一部實體電腦內個別、隔離的處理序中，同時透過 TCP 連接埠 80 共用所需的網路基礎結構以便傳送與接收流量。</span><span class="sxs-lookup"><span data-stu-id="999de-119">This capability allows many HTTP applications to coexist on the same physical machine in separate, isolated processes while sharing the network infrastructure required to send and receive traffic over TCP port 80.</span></span> <span data-ttu-id="999de-120">Net.TCP 連接埠共用服務可讓 net.tcp 應用程式共用同樣類型的連接埠。</span><span class="sxs-lookup"><span data-stu-id="999de-120">The Net.TCP Port Sharing Service enables the same type of port sharing for net.tcp applications.</span></span>  
   
-## 連接埠共用架構  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的連接埠共用架構有三個主要元件：  
+## <a name="port-sharing-architecture"></a><span data-ttu-id="999de-121">連接埠共用架構</span><span class="sxs-lookup"><span data-stu-id="999de-121">Port Sharing Architecture</span></span>  
+ <span data-ttu-id="999de-122">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的連接埠共用架構有三個主要元件：</span><span class="sxs-lookup"><span data-stu-id="999de-122">The Port Sharing architecture in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has three main components:</span></span>  
   
--   背景工作處理序：任何使用共用連接埠並透過 net.tcp:\/\/ 進行通訊的處理序。  
+-   <span data-ttu-id="999de-123">背景工作處理序：任何使用共用連接埠並透過 net.tcp:// 進行通訊的處理序。</span><span class="sxs-lookup"><span data-stu-id="999de-123">A Worker Process: Any process communicating over net.tcp:// using shared ports.</span></span>  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 傳輸：可實作 net.tcp:\/\/ 通訊協定。  
+-   <span data-ttu-id="999de-124">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 傳輸：可實作 net.tcp:// 通訊協定。</span><span class="sxs-lookup"><span data-stu-id="999de-124">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP transport: Implements the net.tcp:// protocol.</span></span>  
   
--   Net.TCP 連接埠共用服務：可讓許多背景工作處理序共用相同的 TCP 連接埠。  
+-   <span data-ttu-id="999de-125">Net.TCP 連接埠共用服務：可讓許多背景工作處理序共用相同的 TCP 連接埠。</span><span class="sxs-lookup"><span data-stu-id="999de-125">The Net.TCP Port Sharing Service: Allows many worker processes to share the same TCP port.</span></span>  
   
- Net.TCP 連接埠共用服務一項使用者模式的 Windows 服務，可代表透過它進行連線的背景工作處理序接受 net.tcp:\/\/ 連線。  當通訊端連線抵達時，連接埠共用服務就會檢查傳入的訊息資料流以取得其目的地位址。  連接埠共用服務會根據這個位址，將資料流路由至最終會處理資料的應用程式中。  
+ <span data-ttu-id="999de-126">Net.TCP 連接埠共用服務一項使用者模式的 Windows 服務，可代表透過它進行連線的背景工作處理序接受 net.tcp:// 連線。</span><span class="sxs-lookup"><span data-stu-id="999de-126">The Net.TCP Port Sharing Service is a user-mode Windows service that accepts net.tcp:// connections on behalf of the worker processes that connect through it.</span></span> <span data-ttu-id="999de-127">當通訊端連線抵達時，連接埠共用服務就會檢查傳入的訊息資料流以取得其目的地位址。</span><span class="sxs-lookup"><span data-stu-id="999de-127">When a socket connection arrives, the port sharing service inspects the incoming message stream to obtain its destination address.</span></span> <span data-ttu-id="999de-128">連接埠共用服務會根據這個位址，將資料流路由至最終會處理資料的應用程式中。</span><span class="sxs-lookup"><span data-stu-id="999de-128">Based on this address, the port sharing service can route the data stream to the application that ultimately processes it.</span></span>  
   
- 當使用 net.tcp:\/\/ 連接埠共用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務開啟時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 傳輸基礎結構不會在應用程式處理序中直接開啟 TCP 通訊端。  反之，傳輸基礎結構會將服務的基底位址統一資源識別元 \(URI\) 註冊到 Net.TCP 連接埠共用服務，並等候連接埠共用服務代表自己接聽訊息。  連接埠共用服務會在訊息抵達時，將目的地為應用程式服務的訊息分派出去。  
+ <span data-ttu-id="999de-129">當使用 net.tcp:// 連接埠共用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務開啟時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 傳輸基礎結構不會在應用程式處理序中直接開啟 TCP 通訊端。</span><span class="sxs-lookup"><span data-stu-id="999de-129">When a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that uses net.tcp:// port sharing opens, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP transport infrastructure does not directly open a TCP socket in the application process.</span></span> <span data-ttu-id="999de-130">反之，傳輸基礎結構會將服務的基底位址統一資源識別元 (URI) 註冊到 Net.TCP 連接埠共用服務，並等候連接埠共用服務代表自己接聽訊息。</span><span class="sxs-lookup"><span data-stu-id="999de-130">Instead, the transport infrastructure registers the service’s base address Uniform Resource Identifier (URI) with the Net.TCP Port Sharing Service and waits for the port sharing service to listen for messages on its behalf.</span></span>  <span data-ttu-id="999de-131">連接埠共用服務會在訊息抵達時，將目的地為應用程式服務的訊息分派出去。</span><span class="sxs-lookup"><span data-stu-id="999de-131">The port sharing service dispatches messages addressed to the application service as they arrive.</span></span>  
   
-## 安裝連接埠共用  
- 儘管所有支援 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的作業系統都可使用 Net.TCP 連接埠共用服務，但是預設不會啟用此服務。  為了安全起見，第一次使用 Net.TCP 連接埠共用服務前，系統管理員必須先手動加以啟用。  Net.TCP Port Sharing Service 會公開組態選項，讓您操控連接埠共用服務所擁有的數個網路通訊端特徵。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HOW TO：啟用 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+## <a name="installing-port-sharing"></a><span data-ttu-id="999de-132">安裝連接埠共用</span><span class="sxs-lookup"><span data-stu-id="999de-132">Installing Port Sharing</span></span>  
+ <span data-ttu-id="999de-133">儘管所有支援 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的作業系統都可使用 Net.TCP 連接埠共用服務，但是預設不會啟用此服務。</span><span class="sxs-lookup"><span data-stu-id="999de-133">The Net.TCP Port Sharing Service is available on all operating systems that support [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], but the service is not enabled by default.</span></span> <span data-ttu-id="999de-134">為了安全起見，第一次使用 Net.TCP 連接埠共用服務前，系統管理員必須先手動加以啟用。</span><span class="sxs-lookup"><span data-stu-id="999de-134">As a security precaution, an administrator must manually enable the Net.TCP Port Sharing Service prior to first use.</span></span> <span data-ttu-id="999de-135">Net.TCP Port Sharing Service 會公開組態選項，讓您操控連接埠共用服務所擁有的數個網路通訊端特徵。</span><span class="sxs-lookup"><span data-stu-id="999de-135">The Net.TCP Port Sharing Service exposes configuration options that allow you to manipulate several characteristics of the network sockets owned by the port sharing service.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="999de-136">[How to： 啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。</span><span class="sxs-lookup"><span data-stu-id="999de-136"> [How to: Enable the Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).</span></span>  
   
-## 在應用程式中使用 Net.tcp Port Sharing  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用 net.tcp:\/\/ 連接埠共用的最簡單方式，就是使用 <xref:System.ServiceModel.NetTcpBinding> 來公開服務，然後使用 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 屬性來啟用 Net.TCP Port Sharing Service。  
+## <a name="using-nettcp-port-sharing-in-an-application"></a><span data-ttu-id="999de-137">在應用程式中使用 Net.tcp Port Sharing</span><span class="sxs-lookup"><span data-stu-id="999de-137">Using Net.tcp Port Sharing in an Application</span></span>  
+ <span data-ttu-id="999de-138">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用 net.tcp:// 連接埠共用的最簡單方式，就是使用 <xref:System.ServiceModel.NetTcpBinding> 來公開服務，然後使用 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 屬性來啟用 Net.TCP Port Sharing Service。</span><span class="sxs-lookup"><span data-stu-id="999de-138">The easiest way to use net.tcp:// port sharing in your [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application is to expose a service using the <xref:System.ServiceModel.NetTcpBinding> and then to enable Net.TCP Port Sharing Service using the <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> property.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何執行這項工作的詳細資訊，請參閱 [HOW TO：將 WCF 服務設為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="999de-139">如何執行這項操作，請參閱[How to： 將 WCF 服務設定為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。</span><span class="sxs-lookup"><span data-stu-id="999de-139"> how to do this, see [How to: Configure a WCF Service to Use Port Sharing](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).</span></span>  
   
-## 連接埠共用的安全性含意  
- 儘管 Net.TCP 連接埠共用服務會在應用程式與網路之間提供一層處理，您還是應該將使用連接埠共用的應用程式視為直接在網路上接聽一樣來加以保護。  具體來說，使用連接埠共用的應用程式應該評估執行時所需的處理序權限。  請考慮使用內建的網路服務帳戶來執行應用程式，在此情況下會以網路通訊所需的最低處理序權限來執行。  
+## <a name="security-implications-of-port-sharing"></a><span data-ttu-id="999de-140">連接埠共用的安全性含意</span><span class="sxs-lookup"><span data-stu-id="999de-140">Security Implications of Port Sharing</span></span>  
+ <span data-ttu-id="999de-141">儘管 Net.TCP 連接埠共用服務會在應用程式與網路之間提供一層處理，您還是應該將使用連接埠共用的應用程式視為直接在網路上接聽一樣來加以保護。</span><span class="sxs-lookup"><span data-stu-id="999de-141">Although the Net.TCP Port Sharing Service provides a layer of processing between applications and the network, applications that use port sharing should still be secured as if they were directly listening on the network.</span></span> <span data-ttu-id="999de-142">具體來說，使用連接埠共用的應用程式應該評估執行時所需的處理序權限。</span><span class="sxs-lookup"><span data-stu-id="999de-142">Specifically, applications that use port sharing should evaluate the process privileges under which they run.</span></span> <span data-ttu-id="999de-143">請考慮使用內建的網路服務帳戶來執行應用程式，在此情況下會以網路通訊所需的最低處理序權限來執行。</span><span class="sxs-lookup"><span data-stu-id="999de-143">Consider running your application using the built-in Network Service account, which runs with the minimal set of process privileges required for network communication.</span></span>  
   
-## 請參閱  
- [設定 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)   
- [裝載](../../../../docs/framework/wcf/feature-details/hosting.md)   
- [HOW TO：將 WCF 服務設為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)   
- [HOW TO：啟用 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a><span data-ttu-id="999de-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="999de-144">See Also</span></span>  
+ [<span data-ttu-id="999de-145">設定 Net.TCP Port Sharing Service</span><span class="sxs-lookup"><span data-stu-id="999de-145">Configuring the Net.TCP Port Sharing Service</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
+ [<span data-ttu-id="999de-146">裝載</span><span class="sxs-lookup"><span data-stu-id="999de-146">Hosting</span></span>](../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [<span data-ttu-id="999de-147">如何： 將 WCF 服務設定為使用連接埠共用</span><span class="sxs-lookup"><span data-stu-id="999de-147">How to: Configure a WCF Service to Use Port Sharing</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [<span data-ttu-id="999de-148">如何： 啟用 Net.TCP Port Sharing Service</span><span class="sxs-lookup"><span data-stu-id="999de-148">How to: Enable the Net.TCP Port Sharing Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

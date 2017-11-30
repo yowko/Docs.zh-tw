@@ -1,39 +1,42 @@
 ---
-title: "HOW TO：在 .NET Framework 4 下執行的 IIS 中，裝載以 .NET Framework 3.5 寫入的 WCF 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：在 .NET Framework 4 下執行的 IIS 中，裝載以 .NET Framework 3.5 寫入的 WCF 服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e2c9dbf92ddaf1c23cb09184f046cb536717015
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：在 .NET Framework 4 下執行的 IIS 中，裝載以 .NET Framework 3.5 寫入的 WCF 服務
-在執行 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 的電腦上裝載以 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 撰寫的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務時，可能會收到包含下列文字的 <xref:System.ServiceModel.ProtocolException>。  
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a><span data-ttu-id="a047b-102">HOW TO：在 .NET Framework 4 下執行的 IIS 中，裝載以 .NET Framework 3.5 寫入的 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="a047b-102">How to: Host a WCF Service Written with .NET Framework 3.5 in IIS Running Under .NET Framework 4</span></span>
+<span data-ttu-id="a047b-103">在執行 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 的電腦上裝載以 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 撰寫的 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 服務時，可能會收到包含下列文字的 <xref:System.ServiceModel.ProtocolException>。</span><span class="sxs-lookup"><span data-stu-id="a047b-103">When hosting a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service written with [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] on a machine running [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], you may get a <xref:System.ServiceModel.ProtocolException> with the following text.</span></span>  
   
 ```Output  
-未處理的例外狀況: System.ServiceModel.ProtocolException: 回應訊息的內容類型文字/html; 字元集=utf-8 與繫結 (應用程式/soap+xml; 字元集=utf-8) 的內容類型不符。如果使用自訂編碼器，請確定已正確實作 IsContentTypeSupported 方法。回應的前 1024 個位元為: '<html>    <head>        <title> 應用程式網域或應用程式集區目前執行的版本為 .NET Framework 4 或更新版本。如果此 Web 應用程式的 IIS 設定已設為 4.0 或更新版本，或您正在使用 ASP.NET Web 程式開發伺服器 4.0 或更新版本，就會發生此問題。此 Web 應用程式之 Web.config 檔案中的 <compilation> 項目未包含此 .NET Framework 版本所需的必要 'targetFrameworkMoniker' 屬性 (例如，'<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">')。請使用此屬性更新 Web.config 檔案，或設定 Web 應用程式使用其他版本的 .NET Framework。</title>...  
+Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
- 或者，如果您嘗試瀏覽至服務的 .svc 檔，則可能會看到包含下列文字的錯誤網頁。  
+ <span data-ttu-id="a047b-104">或者，如果您嘗試瀏覽至服務的 .svc 檔，則可能會看到包含下列文字的錯誤網頁。</span><span class="sxs-lookup"><span data-stu-id="a047b-104">Or if you try to browse to the service's .svc file you may see an error page with the following text.</span></span>  
   
 ```Output  
-應用程式網域或應用程式集區目前執行的版本為 .NET Framework 4.0 (含) 以後版本。如果此 Web 應用程式的 IIS 設定已設為 4.0 或更新版本，或您正在使用 ASP.NET Web 程式開發伺服器 4.0 或更新版本，就會發生此問題。此 Web 應用程式之 Web.config 檔案中的 <compilation> 項目未包含此 .NET Framework 版本所需的必要 'targetFrameworkMoniker' 屬性 ('<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">')。請使用此屬性更新 Web.config 檔案，或設定 Web 應用程式使用其他版本的 .NET Framework。  
+The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
- 因為應用程式網域 IIS 執行的是 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，而 WCF 服務預期在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 下執行，所以會發生這些錯誤。本主題說明要讓服務執行所需進行的修改。  
+ <span data-ttu-id="a047b-105">因為應用程式網域 IIS 執行的是 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，而 WCF 服務預期在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 下執行，所以會發生這些錯誤。</span><span class="sxs-lookup"><span data-stu-id="a047b-105">These errors occur because the application domain IIS is running within is running [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] and the WCF service is expecting to run under [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> <span data-ttu-id="a047b-106">本主題說明要讓服務執行所需進行的修改。</span><span class="sxs-lookup"><span data-stu-id="a047b-106">This topic explains the modifications required to get the service to run.</span></span>  
   
- 接著，尋找 \<`compilers`\> 項目，並且將 CompilerVersion 提供者選項的值變更為 4.0。根據預設，\<`compilers`\> 項目底下會有兩個 \<`compiler`\> 項目。您必須更新這兩個項目的 CompilerVersion 提供者選項，如下列範例所示。  
+ <span data-ttu-id="a047b-107">下一個尋找 <`compilers`> 項目和變更的項目的 CompilerVersion 提供者選項的值為 4.0。</span><span class="sxs-lookup"><span data-stu-id="a047b-107">Next find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="a047b-108">根據預設，有兩個 <`compiler`> 下的項目 <`compilers`> 項目。</span><span class="sxs-lookup"><span data-stu-id="a047b-108">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="a047b-109">您必須更新這兩個項目的 CompilerVersion 提供者選項，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="a047b-109">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
   
-```  
+```xml  
 <system.codedom>  
       <compilers>  
         <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4"  
@@ -51,13 +54,13 @@ caps.handback.revision: 5
     </system.codedom>  
 ```  
   
-### 加入必要的 targetFramework 屬性  
+### <a name="add-the-required-targetframework-attribute"></a><span data-ttu-id="a047b-110">加入必要的 targetFramework 屬性</span><span class="sxs-lookup"><span data-stu-id="a047b-110">Add the required targetFramework attribute</span></span>  
   
-1.  開啟服務的 Web.config 檔案並尋找 \<`compilation`\> 項目。  
+1.  <span data-ttu-id="a047b-111">開啟服務的 Web.config 檔並尋找 <`compilation`> 項目。</span><span class="sxs-lookup"><span data-stu-id="a047b-111">Open the service's Web.config file and look for the <`compilation`> element.</span></span>  
   
-2.  將 `targetFramework` 屬性加入至 \<`compilation`\> 項目，如下列範例所示。  
+2.  <span data-ttu-id="a047b-112">新增`targetFramework`屬性加入 <`compilation`> 項目，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="a047b-112">Add the `targetFramework` attribute to the <`compilation`> element as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <compilation debug="false"  
             targetFramework="4.0">  
   
@@ -71,9 +74,9 @@ caps.handback.revision: 5
           </compilation>  
     ```  
   
-3.  尋找 \<`compilers`\> 項目，並且將 CompilerVersion 提供者選項的值變更為 4.0。根據預設，\<`compilers`\> 項目底下會有兩個 \<`compiler`\> 項目。您必須更新這兩個項目的 CompilerVersion 提供者選項，如下列範例所示。  
+3.  <span data-ttu-id="a047b-113">尋找 <`compilers`> 項目和變更的項目的 CompilerVersion 提供者選項的值為 4.0。</span><span class="sxs-lookup"><span data-stu-id="a047b-113">Find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="a047b-114">根據預設，有兩個 <`compiler`> 下的項目 <`compilers`> 項目。</span><span class="sxs-lookup"><span data-stu-id="a047b-114">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="a047b-115">您必須更新這兩個項目的 CompilerVersion 提供者選項，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="a047b-115">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
   
-    ```  
+    ```xml  
     <system.codedom>  
           <compilers>  
             <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4"  

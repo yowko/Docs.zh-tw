@@ -1,84 +1,80 @@
 ---
-title: "AndAlso Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.AndAlso"
-  - "AndAlso"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "short-circuiting"
-  - "AndAlso operator"
-  - "operators [Visual Basic], short-circuiting"
-  - "operators [Visual Basic], conjunction"
-  - "short-circuit evaluation"
+title: "AndAlso 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.AndAlso
+- AndAlso
+helpviewer_keywords:
+- short-circuiting
+- AndAlso operator [Visual Basic]
+- operators [Visual Basic], short-circuiting
+- operators [Visual Basic], conjunction
+- short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# AndAlso Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-對兩個運算式執行最少運算邏輯交集運算。  
+# <a name="andalso-operator-visual-basic"></a><span data-ttu-id="a9774-102">AndAlso 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9774-102">AndAlso Operator (Visual Basic)</span></span>
+<span data-ttu-id="a9774-103">執行最少運算邏輯結合兩個運算式上。</span><span class="sxs-lookup"><span data-stu-id="a9774-103">Performs short-circuiting logical conjunction on two expressions.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="a9774-104">語法</span><span class="sxs-lookup"><span data-stu-id="a9774-104">Syntax</span></span>  
   
 ```  
-  
 result = expression1 AndAlso expression2  
 ```  
   
-## 組件  
+## <a name="parts"></a><span data-ttu-id="a9774-105">組件</span><span class="sxs-lookup"><span data-stu-id="a9774-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|詞彙|定義|  
-|`result`|必要項。  任何 `Boolean` 運算式。  結果是比較兩個運算式的 `Boolean` 結果。|  
-|`expression1`|必要項。  任何 `Boolean` 運算式。|  
-|`expression2`|必要項。  任何 `Boolean` 運算式。|  
+|<span data-ttu-id="a9774-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="a9774-106">Term</span></span>|<span data-ttu-id="a9774-107">定義</span><span class="sxs-lookup"><span data-stu-id="a9774-107">Definition</span></span>|  
+|---|---|  
+|`result`|<span data-ttu-id="a9774-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="a9774-108">Required.</span></span> <span data-ttu-id="a9774-109">任何 `Boolean` 運算式。</span><span class="sxs-lookup"><span data-stu-id="a9774-109">Any `Boolean` expression.</span></span> <span data-ttu-id="a9774-110">結果是`Boolean`比較兩個運算式的結果。</span><span class="sxs-lookup"><span data-stu-id="a9774-110">The result is the `Boolean` result of comparison of the two expressions.</span></span>|  
+|`expression1`|<span data-ttu-id="a9774-111">必要項。</span><span class="sxs-lookup"><span data-stu-id="a9774-111">Required.</span></span> <span data-ttu-id="a9774-112">任何 `Boolean` 運算式。</span><span class="sxs-lookup"><span data-stu-id="a9774-112">Any `Boolean` expression.</span></span>|  
+|`expression2`|<span data-ttu-id="a9774-113">必要項。</span><span class="sxs-lookup"><span data-stu-id="a9774-113">Required.</span></span> <span data-ttu-id="a9774-114">任何 `Boolean` 運算式。</span><span class="sxs-lookup"><span data-stu-id="a9774-114">Any `Boolean` expression.</span></span>|  
   
-## 備註  
- 若已編譯的程式碼依其他運算式的結果，能略過運算式的評估，則邏輯運算式就稱為「*最少運算*」\(Short\-Circuiting\)。  若所評估之第一個運算式的結果會決定運算的最終結果，則不需評估第二個運算式，因其無法改變最終結果。  若略過的是複雜或包含程序呼叫的運算式，則最少運算便可以提升效能。  
+## <a name="remarks"></a><span data-ttu-id="a9774-115">備註</span><span class="sxs-lookup"><span data-stu-id="a9774-115">Remarks</span></span>  
+ <span data-ttu-id="a9774-116">邏輯作業即為*最少運算*如果已編譯的程式碼就可以略過運算式的評估，依據另一個運算式的結果。</span><span class="sxs-lookup"><span data-stu-id="a9774-116">A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression.</span></span> <span data-ttu-id="a9774-117">如果評估的第一個運算式的結果判斷作業的最終結果，是不必評估第二個運算式，因為它不能變更的最終結果。</span><span class="sxs-lookup"><span data-stu-id="a9774-117">If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result.</span></span> <span data-ttu-id="a9774-118">如果近端網址略過的運算式很複雜，或它所涉及的程序呼叫，最少運算可以改善效能。</span><span class="sxs-lookup"><span data-stu-id="a9774-118">Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.</span></span>  
   
- 若將兩個運算式評估為 `True`，則 `result` 為 `True`。  下表說明如何決定 `result`。  
+ <span data-ttu-id="a9774-119">如果這兩個運算式評估為`True`，`result`是`True`。</span><span class="sxs-lookup"><span data-stu-id="a9774-119">If both expressions evaluate to `True`, `result` is `True`.</span></span> <span data-ttu-id="a9774-120">下表將說明如何`result`決定。</span><span class="sxs-lookup"><span data-stu-id="a9774-120">The following table illustrates how `result` is determined.</span></span>  
   
-||||  
-|-|-|-|  
-|如果 `expression1` 為|且 `expression2` 是|`result` 的值為|  
+|<span data-ttu-id="a9774-121">如果`expression1`是</span><span class="sxs-lookup"><span data-stu-id="a9774-121">If `expression1` is</span></span>|<span data-ttu-id="a9774-122">和`expression2`是</span><span class="sxs-lookup"><span data-stu-id="a9774-122">And `expression2` is</span></span>|<span data-ttu-id="a9774-123">值`result`是</span><span class="sxs-lookup"><span data-stu-id="a9774-123">The value of `result` is</span></span>|  
+|---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
-|`False`|\(不評估\)|`False`|  
+|`False`|<span data-ttu-id="a9774-124">（不會評估）</span><span class="sxs-lookup"><span data-stu-id="a9774-124">(not evaluated)</span></span>|`False`|  
   
-## 資料型別  
- `AndAlso` 運算子只針對 [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) 定義。  Visual Basic 會在必要時將每個運算元轉換成 `Boolean`，並且完全以 `Boolean` 執行運算。  若將結果指派給數字型別，Visual Basic 就會將它從 `Boolean` 轉換成該型別。  這可能會產生未預期的行為。  例如，轉換成 `Integer` 時，`5 AndAlso 12` 會導致 `–1`。  
+## <a name="data-types"></a><span data-ttu-id="a9774-125">資料類型</span><span class="sxs-lookup"><span data-stu-id="a9774-125">Data Types</span></span>  
+ <span data-ttu-id="a9774-126">`AndAlso`僅適用於定義運算子[布林資料型別](../../../visual-basic/language-reference/data-types/boolean-data-type.md)。</span><span class="sxs-lookup"><span data-stu-id="a9774-126">The `AndAlso` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md).</span></span> <span data-ttu-id="a9774-127">Visual Basic 會將轉換為所需的每個運算元`Boolean`，並執行作業完全`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="a9774-127">Visual Basic converts each operand as necessary to `Boolean` and performs the operation entirely in `Boolean`.</span></span> <span data-ttu-id="a9774-128">如果您將結果指派給數值類型時，Visual Basic 會將轉換從`Boolean`對該類型。</span><span class="sxs-lookup"><span data-stu-id="a9774-128">If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type.</span></span> <span data-ttu-id="a9774-129">這可能會產生非預期的行為。</span><span class="sxs-lookup"><span data-stu-id="a9774-129">This could produce unexpected behavior.</span></span> <span data-ttu-id="a9774-130">例如，`5 AndAlso 12`導致`–1`時轉換成`Integer`。</span><span class="sxs-lookup"><span data-stu-id="a9774-130">For example, `5 AndAlso 12` results in `–1` when converted to `Integer`.</span></span>  
   
-## 多載化  
- [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) 和 [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)可以「*多載*」\(Overload\)，也就是，當運算元具備類別或結構的類型時，該類別或結構就可以重新定義其行為。  多載 `And` 和 `IsFalse` 運算子會影響 `AndAlso` 運算子的行為。  如果您的程式碼在多載 `And` 和 `IsFalse` 之類別或結構上會使用 `AndAlso`，就一定要先瞭解其重新定義的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a><span data-ttu-id="a9774-131">多載化</span><span class="sxs-lookup"><span data-stu-id="a9774-131">Overloading</span></span>  
+ <span data-ttu-id="a9774-132">[與運算子](../../../visual-basic/language-reference/operators/and-operator.md)和[IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)可以*多載*，這表示，類別或結構可以重新定義其行為時運算元的類型，類別或結構。</span><span class="sxs-lookup"><span data-stu-id="a9774-132">The [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) and the [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="a9774-133">多載`And`和`IsFalse`運算子會影響行為`AndAlso`運算子。</span><span class="sxs-lookup"><span data-stu-id="a9774-133">Overloading the `And` and `IsFalse` operators affects the behavior of the `AndAlso` operator.</span></span> <span data-ttu-id="a9774-134">如果您的程式碼使用`AndAlso`上類別或結構的多載`And`和`IsFalse`，確定您了解其重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="a9774-134">If your code uses `AndAlso` on a class or structure that overloads `And` and `IsFalse`, be sure you understand their redefined behavior.</span></span> <span data-ttu-id="a9774-135">如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="a9774-135">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## 範例  
- 下列範例會使用 `AndAlso` 運算子，對兩個運算式執行邏輯交集。  結果是代表整個交集的運算式是否為 true 的 `Boolean` 值。  如果第一個運算式為 `False`，則不評估第二個運算式。  
+## <a name="example"></a><span data-ttu-id="a9774-136">範例</span><span class="sxs-lookup"><span data-stu-id="a9774-136">Example</span></span>  
+ <span data-ttu-id="a9774-137">下列範例會使用`AndAlso`運算子執行邏輯結合兩個運算式上。</span><span class="sxs-lookup"><span data-stu-id="a9774-137">The following example uses the `AndAlso` operator to perform a logical conjunction on two expressions.</span></span> <span data-ttu-id="a9774-138">結果是`Boolean`值，表示是否將整個共同運算式為 true。</span><span class="sxs-lookup"><span data-stu-id="a9774-138">The result is a `Boolean` value that represents whether the entire conjoined expression is true.</span></span> <span data-ttu-id="a9774-139">如果第一個運算式是`False`，則不會評估第二個。</span><span class="sxs-lookup"><span data-stu-id="a9774-139">If the first expression is `False`, the second is not evaluated.</span></span>  
   
  [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
   
- 前一個範例分別產生 `True`、`False` 和 `False` 的結果。  計算 `secondCheck` 時，不會評估第二個運算式，因為第一個運算式已經是 `False`。  然而，計算 `thirdCheck` 時會評估第二個運算式。  
+ <span data-ttu-id="a9774-140">上述範例產生的結果`True`， `False`，和`False`分別。</span><span class="sxs-lookup"><span data-stu-id="a9774-140">The preceding example produces results of `True`, `False`, and `False`, respectively.</span></span> <span data-ttu-id="a9774-141">在計算`secondCheck`，因為已經是第一個，不會評估第二個運算式`False`。</span><span class="sxs-lookup"><span data-stu-id="a9774-141">In the calculation of `secondCheck`, the second expression is not evaluated because the first is already `False`.</span></span> <span data-ttu-id="a9774-142">不過，第二個運算式會評估的計算`thirdCheck`。</span><span class="sxs-lookup"><span data-stu-id="a9774-142">However, the second expression is evaluated in the calculation of `thirdCheck`.</span></span>  
   
-## 範例  
- 下列範例會顯示 `Function` 程序，在陣列元素之間搜尋指定值。  如果陣列是空的，或陣列長度已超過，`While` 陳述式就不能根據搜尋值測試陣列元素。  
+## <a name="example"></a><span data-ttu-id="a9774-143">範例</span><span class="sxs-lookup"><span data-stu-id="a9774-143">Example</span></span>  
+ <span data-ttu-id="a9774-144">下列範例所示`Function`搜尋指定值陣列的項目之間的程序。</span><span class="sxs-lookup"><span data-stu-id="a9774-144">The following example shows a `Function` procedure that searches for a given value among the elements of an array.</span></span> <span data-ttu-id="a9774-145">如果陣列是空的或如果尚未超過陣列長度，`While`陳述式不會測試根據搜尋值的陣列項目。</span><span class="sxs-lookup"><span data-stu-id="a9774-145">If the array is empty, or if the array length has been exceeded, the `While` statement does not test the array element against the search value.</span></span>  
   
  [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
   
-## 請參閱  
- [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [And Operator](../../../visual-basic/language-reference/operators/and-operator.md)   
- [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="a9774-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9774-146">See Also</span></span>  
+ [<span data-ttu-id="a9774-147">邏輯/位元運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9774-147">Logical/Bitwise Operators (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [<span data-ttu-id="a9774-148">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="a9774-148">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="a9774-149">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="a9774-149">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="a9774-150">And 運算子</span><span class="sxs-lookup"><span data-stu-id="a9774-150">And Operator</span></span>](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [<span data-ttu-id="a9774-151">IsFalse 運算子</span><span class="sxs-lookup"><span data-stu-id="a9774-151">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [<span data-ttu-id="a9774-152">在 Visual Basic 中的邏輯和位元運算子</span><span class="sxs-lookup"><span data-stu-id="a9774-152">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

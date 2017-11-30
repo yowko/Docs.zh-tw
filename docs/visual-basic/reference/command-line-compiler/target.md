@@ -1,90 +1,73 @@
 ---
-title: "/target (Visual Basic) |Microsoft 文件"
-ms.date: 2015-07-20
+title: /target (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ccdb87188b924303057d5867dccece937defe74d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8a8a9fcd6fa6dfaace01f8fbb7fa407145acc16f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="target-visual-basic"></a>/target (Visual Basic)
-指定編譯器輸出格式。  
+# <a name="target-visual-basic"></a><span data-ttu-id="fc487-102">/target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc487-102">/target (Visual Basic)</span></span>
+<span data-ttu-id="fc487-103">指定編譯器輸出的格式。</span><span class="sxs-lookup"><span data-stu-id="fc487-103">Specifies the format of compiler output.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="fc487-104">語法</span><span class="sxs-lookup"><span data-stu-id="fc487-104">Syntax</span></span>  
   
 ```  
 /target:{exe | library | module | winexe | appcontainerexe | winmdobj}  
 ```  
   
-## <a name="remarks"></a>備註  
- 下表摘要說明的效果`/target`選項。  
+## <a name="remarks"></a><span data-ttu-id="fc487-105">備註</span><span class="sxs-lookup"><span data-stu-id="fc487-105">Remarks</span></span>  
+ <span data-ttu-id="fc487-106">下表摘要說明的效果`/target`選項。</span><span class="sxs-lookup"><span data-stu-id="fc487-106">The following table summarizes the effect of the `/target` option.</span></span>  
   
-|**選項**|**行為**|  
+|<span data-ttu-id="fc487-107">**選項**</span><span class="sxs-lookup"><span data-stu-id="fc487-107">**Option**</span></span>|<span data-ttu-id="fc487-108">**行為**</span><span class="sxs-lookup"><span data-stu-id="fc487-108">**Behavior**</span></span>|  
 |----------------|------------------|  
-|`/target:exe`|讓編譯器將建立可執行的主控台應用程式。<br /><br /> 這是預設選項，當未`/target`指定選項。 可執行檔會建立副檔名為.exe。<br /><br /> 除非另有指定`/out`選項，輸出檔名稱會採用包含的輸入檔名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`編譯為.exe 檔的原始程式檔中所需的程序。 使用`/main`編譯器選項以指定哪一個類別包含`Sub Main`程序。|  
-|`/target:library`|讓編譯器建立動態連結程式庫 (DLL)。<br /><br /> 動態連結程式庫檔案會建立副檔名為.dll。<br /><br /> 除非另有指定`/out`選項，輸出檔名稱會採用第一個輸入檔的名稱。<br /><br /> 當建置 DLL，`Sub Main`程序就不需要。|  
-|`/target:module`|讓編譯器產生的模組，可以加入組件。<br /><br /> 輸出檔會建立副檔名為.netmodule。<br /><br /> .NET common language runtime 無法載入組件沒有的檔案。 不過，您可以將這類檔案合併組件的組件資訊清單使用`/reference`。<br /><br /> 當一個模組中的程式碼參考另一個模組的內部型別時，這兩個模組都必須加入至組件資訊清單使用`/reference`。<br /><br /> [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項從模組匯入中繼資料。|  
-|`/target:winexe`|讓編譯器建立的可執行檔的 Windows 架構應用程式。<br /><br /> 可執行檔會建立副檔名為.exe。 Windows 架構應用程式是提供使用者介面，從[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]類別庫或使用 Win32 Api。<br /><br /> 除非另有指定`/out`選項，輸出檔名稱會採用包含的輸入檔名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`編譯為.exe 檔的原始程式檔中所需的程序。 當您的程式碼已有多個類別`Sub Main`程序中，使用`/main`編譯器選項以指定哪一個類別包含`Sub Main`程序|  
-|`/target:appcontainerexe`|讓編譯器建立的可執行 Windows 架構應用程式必須執行應用程式容器中。 這個設定設計用於[!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)]應用程式。<br /><br /> **Appcontainerexe**設定的特性 欄位中設定一個位元[可攜式執行檔](http://go.microsoft.com/fwlink/p/?LinkId=236960)檔案。 這個位元表示應用程式，必須執行應用程式容器中。 當這個位元設定時，如果發生錯誤`CreateProcess`方法嘗試啟動應用程式容器之外的應用程式。 此位元設定，除了**/target: appcontainerexe**相當於**/target: winexe**。<br /><br /> 可執行檔會建立副檔名為.exe。<br /><br /> 除非您另外指定使用`/out`選項，輸出檔名稱會採用包含的輸入檔名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`編譯為.exe 檔的原始程式檔中所需的程序。 如果您的程式碼會包含一個以上的類別具有`Sub Main`程序中，使用`/main`編譯器選項以指定哪一個類別包含`Sub Main`程序|  
-|`/target:winmdobj`|讓編譯器來建立中繼檔案，您可以將它轉換成 Windows 執行階段二進位檔 (.winmd) 檔案。 JavaScript 和 c + + 程式，除了 managed 的語言程式之外，可以使用.winmd 檔案。<br /><br /> 副檔名為.winmdobj 建立中繼檔案。<br /><br /> 除非您另外指定使用`/out`選項，輸出檔名稱會採用第一個輸入檔的名稱。 A`Sub Main`程序不是必要步驟。<br /><br /> .Winmdobj 檔案設計來做為輸入，<xref:Microsoft.Build.Tasks.WinMDExp>匯出工具產生 Windows 中繼資料 (WinMD) 檔案。</xref:Microsoft.Build.Tasks.WinMDExp> WinMD 檔案副檔名.winmd，且包含的程式碼，從原始程式庫和 WinMD 定義該 JavaScript、 c + + 和 Windows 執行階段使用。|  
+|`/target:exe`|<span data-ttu-id="fc487-109">讓編譯器將建立可執行的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="fc487-109">Causes the compiler to create an executable console application.</span></span><br /><br /> <span data-ttu-id="fc487-110">這是預設選項時沒有`/target`指定選項。</span><span class="sxs-lookup"><span data-stu-id="fc487-110">This is the default option when no `/target` option is specified.</span></span> <span data-ttu-id="fc487-111">可執行檔會建立副檔名為.exe。</span><span class="sxs-lookup"><span data-stu-id="fc487-111">The executable file is created with an .exe extension.</span></span><br /><br /> <span data-ttu-id="fc487-112">除非另有指定`/out`選項，輸出檔名稱會採用所包含的輸入檔的名稱`Sub Main`程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-112">Unless otherwise specified with the `/out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.</span></span><br /><br /> <span data-ttu-id="fc487-113">只有一個`Sub Main`會編譯成.exe 檔的原始程式檔中所需的程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-113">Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file.</span></span> <span data-ttu-id="fc487-114">使用`/main`編譯器選項以指定哪一個類別包含`Sub Main`程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-114">Use the `/main` compiler option to specify which class contains the `Sub Main` procedure.</span></span>|  
+|`/target:library`|<span data-ttu-id="fc487-115">會導致編譯器建立的動態連結程式庫 (DLL)。</span><span class="sxs-lookup"><span data-stu-id="fc487-115">Causes the compiler to create a dynamic-link library (DLL).</span></span><br /><br /> <span data-ttu-id="fc487-116">動態連結程式庫檔案被建立.dll 副檔名。</span><span class="sxs-lookup"><span data-stu-id="fc487-116">The dynamic-link library file is created with a .dll extension.</span></span><br /><br /> <span data-ttu-id="fc487-117">除非另有指定`/out`選項，輸出檔名稱會採用第一個輸入檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="fc487-117">Unless otherwise specified with the `/out` option, the output file name takes the name of the first input file.</span></span><br /><br /> <span data-ttu-id="fc487-118">當建置 DLL，`Sub Main`程序就不需要。</span><span class="sxs-lookup"><span data-stu-id="fc487-118">When building a DLL, a `Sub Main` procedure is not required.</span></span>|  
+|`/target:module`|<span data-ttu-id="fc487-119">會導致編譯器產生的模組，可以加入組件。</span><span class="sxs-lookup"><span data-stu-id="fc487-119">Causes the compiler to generate a module that can be added to an assembly.</span></span><br /><br /> <span data-ttu-id="fc487-120">.Netmodule 副檔名來建立輸出檔案。</span><span class="sxs-lookup"><span data-stu-id="fc487-120">The output file is created with an extension of .netmodule.</span></span><br /><br /> <span data-ttu-id="fc487-121">.NET common language runtime 無法載入沒有組件的檔案。</span><span class="sxs-lookup"><span data-stu-id="fc487-121">The .NET common language runtime cannot load a file that does not have an assembly.</span></span> <span data-ttu-id="fc487-122">不過，您可以將這類檔案合併的組件的組件資訊清單使用`/reference`。</span><span class="sxs-lookup"><span data-stu-id="fc487-122">However, you can incorporate such a file into the assembly manifest of an assembly by using `/reference`.</span></span><br /><br /> <span data-ttu-id="fc487-123">當其中一個模組中的程式碼參考另一個模組中的內部型別時，這兩個模組都必須加入至組件資訊清單使用`/reference`。</span><span class="sxs-lookup"><span data-stu-id="fc487-123">When code in one module references internal types in another module, both modules must be incorporated into an assembly manifest by using `/reference`.</span></span><br /><br /> <span data-ttu-id="fc487-124">[/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項從模組匯入中繼資料。</span><span class="sxs-lookup"><span data-stu-id="fc487-124">The [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.</span></span>|  
+|`/target:winexe`|<span data-ttu-id="fc487-125">可讓編譯器建立的可執行檔的 Windows 架構應用程式。</span><span class="sxs-lookup"><span data-stu-id="fc487-125">Causes the compiler to create an executable Windows-based application.</span></span><br /><br /> <span data-ttu-id="fc487-126">可執行檔會建立副檔名為.exe。</span><span class="sxs-lookup"><span data-stu-id="fc487-126">The executable file is created with an .exe extension.</span></span> <span data-ttu-id="fc487-127">Windows 應用程式是提供使用者介面，從[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別庫或搭配 Win32 Api。</span><span class="sxs-lookup"><span data-stu-id="fc487-127">A Windows-based application is one that provides a user interface from either the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library or with the Win32 APIs.</span></span><br /><br /> <span data-ttu-id="fc487-128">除非另有指定`/out`選項，輸出檔名稱會採用所包含的輸入檔的名稱`Sub Main`程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-128">Unless otherwise specified with the `/out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.</span></span><br /><br /> <span data-ttu-id="fc487-129">只有一個`Sub Main`會編譯成.exe 檔的原始程式檔中所需的程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-129">Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file.</span></span> <span data-ttu-id="fc487-130">在您的程式碼已有多個類別`Sub Main`程序，使用`/main`編譯器選項以指定哪一個類別包含`Sub Main`程序</span><span class="sxs-lookup"><span data-stu-id="fc487-130">In cases where your code has more than one class that has a `Sub Main` procedure, use the `/main` compiler option to specify which class contains the `Sub Main` procedure</span></span>|  
+|`/target:appcontainerexe`|<span data-ttu-id="fc487-131">可讓編譯器建立的可執行 windows 應用程式必須在應用程式容器中執行。</span><span class="sxs-lookup"><span data-stu-id="fc487-131">Causes the compiler to create an executable Windows-based application that must be run in an app container.</span></span> <span data-ttu-id="fc487-132">這個設定設計用於[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="fc487-132">This setting is designed to be used for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] applications.</span></span><br /><br /> <span data-ttu-id="fc487-133">**Appcontainerexe**設定中的 [特性] 欄位設定一個位元[可攜式執行檔](http://go.microsoft.com/fwlink/p/?LinkId=236960)檔案。</span><span class="sxs-lookup"><span data-stu-id="fc487-133">The **appcontainerexe** setting sets a bit in the Characteristics field of the [Portable Executable](http://go.microsoft.com/fwlink/p/?LinkId=236960) file.</span></span> <span data-ttu-id="fc487-134">此位元表示必須在應用程式容器中執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="fc487-134">This bit indicates that the app must be run in an app container.</span></span> <span data-ttu-id="fc487-135">如果設定此位元時，發生錯誤`CreateProcess`方法嘗試啟動應用程式容器之外的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fc487-135">When this bit is set, an error occurs if the `CreateProcess` method tries to launch the application outside of an app container.</span></span> <span data-ttu-id="fc487-136">此位元設定，除了**/target: appcontainerexe**相當於**/target: winexe**。</span><span class="sxs-lookup"><span data-stu-id="fc487-136">Aside from this bit setting, **/target:appcontainerexe** is equivalent to **/target:winexe**.</span></span><br /><br /> <span data-ttu-id="fc487-137">可執行檔會建立副檔名為.exe。</span><span class="sxs-lookup"><span data-stu-id="fc487-137">The executable file is created with an .exe extension.</span></span><br /><br /> <span data-ttu-id="fc487-138">除非您另外指定使用`/out`選項，輸出檔名稱會採用所包含的輸入檔的名稱`Sub Main`程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-138">Unless you specify otherwise by using the `/out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.</span></span><br /><br /> <span data-ttu-id="fc487-139">只有一個`Sub Main`會編譯成.exe 檔的原始程式檔中所需的程序。</span><span class="sxs-lookup"><span data-stu-id="fc487-139">Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file.</span></span> <span data-ttu-id="fc487-140">如果您的程式碼會包含一個以上的類別具有`Sub Main`程序，使用`/main`編譯器選項以指定哪一個類別包含`Sub Main`程序</span><span class="sxs-lookup"><span data-stu-id="fc487-140">If your code contains more than one class that has a `Sub Main` procedure, use the `/main` compiler option to specify which class contains the `Sub Main` procedure</span></span>|  
+|`/target:winmdobj`|<span data-ttu-id="fc487-141">會導致編譯器建立中繼檔案，您可以將它轉換成 Windows 執行階段二進位檔 (.winmd) 檔案。</span><span class="sxs-lookup"><span data-stu-id="fc487-141">Causes the compiler to create an intermediate file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="fc487-142">.Winmd 檔案可供 JavaScript 和 c + + 程式，除了 managed 的語言程式。</span><span class="sxs-lookup"><span data-stu-id="fc487-142">The .winmd file can be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span><br /><br /> <span data-ttu-id="fc487-143">副檔名為.winmdobj 建立中繼檔案。</span><span class="sxs-lookup"><span data-stu-id="fc487-143">The intermediate file is created with a .winmdobj extension.</span></span><br /><br /> <span data-ttu-id="fc487-144">除非您另外指定使用`/out`選項，輸出檔名稱會採用第一個輸入檔的名稱。</span><span class="sxs-lookup"><span data-stu-id="fc487-144">Unless you specify otherwise by using the `/out` option, the output file name takes the name of the first input file.</span></span> <span data-ttu-id="fc487-145">A`Sub Main`程序不是必要的。</span><span class="sxs-lookup"><span data-stu-id="fc487-145">A `Sub Main` procedure isn’t required.</span></span><br /><br /> <span data-ttu-id="fc487-146">.Winmdobj 檔案設計來做為輸入<xref:Microsoft.Build.Tasks.WinMDExp>匯出工具來產生 Windows 中繼資料 (WinMD) 檔案。</span><span class="sxs-lookup"><span data-stu-id="fc487-146">The .winmdobj file is designed to be used as input for the <xref:Microsoft.Build.Tasks.WinMDExp> export tool to produce a Windows metadata (WinMD) file.</span></span> <span data-ttu-id="fc487-147">WinMD 檔案副檔名.winmd，且包含的程式碼，原始的程式庫和 WinMD 定義該 JavaScript、 c + + 和 Windows 執行階段使用。</span><span class="sxs-lookup"><span data-stu-id="fc487-147">The WinMD file has a .winmd extension and contains both the code from the original library and the WinMD definitions that JavaScript, C++, and  the Windows Runtime use.</span></span>|  
   
- 除非您指定`/target:module`，`/target`造成[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]可以加入至輸出檔的組件資訊清單。  
+ <span data-ttu-id="fc487-148">除非您指定`/target:module`，`/target`導致[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]来加入至輸出檔的組件資訊清單。</span><span class="sxs-lookup"><span data-stu-id="fc487-148">Unless you specify `/target:module`, `/target` causes a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly manifest to be added to an output file.</span></span>  
   
- Vbc.exe 的每個執行個體，最多一個輸出檔。 如果您指定的編譯器選項，例如`/out`或`/target`一次以上，最後一個編譯器處理序會放入效果。 在編譯中的所有檔案的相關資訊會加入至資訊清單。 輸出檔案以外建立的所有`/target:module`包含資訊清單中的組件中繼資料。 使用[Ildasm.exe （IL 反組譯工具）](https://msdn.microsoft.com/library/f7dy01k1)檢視輸出檔中的中繼資料。  
+ <span data-ttu-id="fc487-149">會產生 Vbc.exe 的每個執行個體，最多一個輸出檔。</span><span class="sxs-lookup"><span data-stu-id="fc487-149">Each instance of Vbc.exe produces, at most, one output file.</span></span> <span data-ttu-id="fc487-150">如果您指定編譯器選項，例如`/out`或`/target`一次以上，編譯器處理序放效果的最後一個。</span><span class="sxs-lookup"><span data-stu-id="fc487-150">If you specify a compiler option such as `/out` or `/target` more than one time, the last one the compiler processes is put into effect.</span></span> <span data-ttu-id="fc487-151">在編譯中的所有檔案的相關資訊新增至資訊清單。</span><span class="sxs-lookup"><span data-stu-id="fc487-151">Information about all files in a compilation is added to the manifest.</span></span> <span data-ttu-id="fc487-152">所有輸出檔案以外建立與`/target:module`包含資訊清單中的組件中繼資料。</span><span class="sxs-lookup"><span data-stu-id="fc487-152">All output files except those created with `/target:module` contain assembly metadata in the manifest.</span></span> <span data-ttu-id="fc487-153">使用[Ildasm.exe （IL 解譯器）](https://msdn.microsoft.com/library/f7dy01k1)檢視輸出檔中的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="fc487-153">Use [Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1) to view the metadata in an output file.</span></span>  
   
- 簡短形式`/target`是`/t`。  
+ <span data-ttu-id="fc487-154">`/target` 的簡短形式為 `/t`。</span><span class="sxs-lookup"><span data-stu-id="fc487-154">The short form of `/target` is `/t`.</span></span>  
   
-### <a name="to-set-target-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中設定 /target  
+### <a name="to-set-target-in-the-visual-studio-ide"></a><span data-ttu-id="fc487-155">在 Visual Studio IDE 中設定 /target</span><span class="sxs-lookup"><span data-stu-id="fc487-155">To set /target in the Visual Studio IDE</span></span>  
   
-1.  在 **方案總管**中選取專案。 在**專案**] 功能表上，按一下 [**屬性**。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  <span data-ttu-id="fc487-156">在 **方案總管**中選取專案。</span><span class="sxs-lookup"><span data-stu-id="fc487-156">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="fc487-157">在 [專案] 功能表上，按一下 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="fc487-157">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="fc487-158">如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="fc487-158">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  按一下 [應用程式] **** 索引標籤。  
+2.  <span data-ttu-id="fc487-159">按一下 [應用程式]  索引標籤。</span><span class="sxs-lookup"><span data-stu-id="fc487-159">Click the **Application** tab.</span></span>  
   
-3.  修改中的值**應用程式類型**方塊。  
+3.  <span data-ttu-id="fc487-160">修改中的值**應用程式類型**方塊。</span><span class="sxs-lookup"><span data-stu-id="fc487-160">Modify the value in the **Application Type** box.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼編譯`in.vb`、 建立`in.dll`:  
+## <a name="example"></a><span data-ttu-id="fc487-161">範例</span><span class="sxs-lookup"><span data-stu-id="fc487-161">Example</span></span>  
+ <span data-ttu-id="fc487-162">下列程式碼編譯`in.vb`、 建立`in.dll`:</span><span class="sxs-lookup"><span data-stu-id="fc487-162">The following code compiles `in.vb`, creating `in.dll`:</span></span>  
   
 ```  
 vbc /target:library in.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/main](../../../visual-basic/reference/command-line-compiler/main.md)   
- [/out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)   
- [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)   
- [/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)   
- [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="fc487-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fc487-163">See Also</span></span>  
+ [<span data-ttu-id="fc487-164">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="fc487-164">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="fc487-165">/main</span><span class="sxs-lookup"><span data-stu-id="fc487-165">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)  
+ [<span data-ttu-id="fc487-166">/out (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc487-166">/out (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)  
+ [<span data-ttu-id="fc487-167">/reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc487-167">/reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [<span data-ttu-id="fc487-168">/addmodule</span><span class="sxs-lookup"><span data-stu-id="fc487-168">/addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+ [<span data-ttu-id="fc487-169">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="fc487-169">/moduleassemblyname</span></span>](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+ [<span data-ttu-id="fc487-170">組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="fc487-170">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="fc487-171">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="fc487-171">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

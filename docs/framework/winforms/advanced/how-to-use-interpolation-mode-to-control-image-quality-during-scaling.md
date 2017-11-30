@@ -1,57 +1,61 @@
 ---
-title: "如何：縮放期間使用插補法模式控制影像品質 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "影像 [Windows Form], 控制品質"
-  - "影像 [Windows Form], 縮放比例"
-  - "插補模式, 控制影像品質"
+title: "如何：縮放期間使用插補法模式控制影像品質"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- interpolation mode [Windows Forms], controlling image quality
+- images [Windows Forms], scaling
+- images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10a0ef4e7fd8514245a7659dd515d8f363a716ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：縮放期間使用插補法模式控制影像品質
-<xref:System.Drawing.Graphics> 物件的插補法模式會影響 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 縮放 \(延展和縮小\) 影像的方式。  <xref:System.Drawing.Drawing2D.InterpolationMode> 列舉型別定義了幾種插補法模式，下列清單顯示了其中幾種模式：  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="8f5dd-102">如何：縮放期間使用插補法模式控制影像品質</span><span class="sxs-lookup"><span data-stu-id="8f5dd-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
+<span data-ttu-id="8f5dd-103">插補模式<xref:System.Drawing.Graphics>物件會影響方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]標尺 （兩端之間自動縮放和壓縮） 映像。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="8f5dd-104"><xref:System.Drawing.Drawing2D.InterpolationMode>列舉會定義數個插補模式，其中有些下列清單所示：</span><span class="sxs-lookup"><span data-stu-id="8f5dd-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- 若要延展影像，必須將原始影像中的每一個像素對應至較大影像中的像素群組。  若要縮小影像，則必須將原始影像中的像素群組對應至較小影像中的單一像素。  執行這些對應的演算法有效性會決定縮放影像的品質。  可產生較高品質縮放影像的演算法通常需要較長的處理時間。  在上述清單中，<xref:System.Drawing.Drawing2D.InterpolationMode> 是品質最低的模式，<xref:System.Drawing.Drawing2D.InterpolationMode> 則是品質最高的模式。  
+ <span data-ttu-id="8f5dd-105">若要縮放影像，原始的映像中的每個像素必須對應到較大的映像中的像素為單位的群組。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="8f5dd-106">若要壓縮影像，原始的映像中的像素為單位的群組必須對應到較小的映像中的單一像素為單位。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="8f5dd-107">執行這些對應的演算法的效能決定縮放的影像品質。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="8f5dd-108">產生高品質縮放的影像的演算法通常需要更多的處理時間。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="8f5dd-109">在上述清單中，<xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>是最低品質模式和<xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>是最高品質的模式。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
   
- 若要設定插補法模式，請指派 <xref:System.Drawing.Drawing2D.InterpolationMode> 列舉型別的成員之一至 <xref:System.Drawing.Graphics> 物件的 <xref:System.Drawing.Graphics.InterpolationMode%2A> 屬性。  
+ <span data-ttu-id="8f5dd-110">若要設定的插補模式，將指定的成員<xref:System.Drawing.Drawing2D.InterpolationMode>列舉<xref:System.Drawing.Graphics.InterpolationMode%2A>屬性<xref:System.Drawing.Graphics>物件。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## 範例  
- 下列範例會繪製影像，然後用三種不同的插補法模式來縮小影像：  
+## <a name="example"></a><span data-ttu-id="8f5dd-111">範例</span><span class="sxs-lookup"><span data-stu-id="8f5dd-111">Example</span></span>  
+ <span data-ttu-id="8f5dd-112">下列範例會繪製影像，並再壓縮影像的三種不同的插補模式。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
   
- 下圖顯示的是原始影像和三個較小的影像。  
+ <span data-ttu-id="8f5dd-113">下圖顯示原始的映像和三個較小的影像。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-113">The following illustration shows the original image and the three smaller images.</span></span>  
   
- ![具有各種插補設定的影像](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")  
+ <span data-ttu-id="8f5dd-114">![具有各種插補設定的影像](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span><span class="sxs-lookup"><span data-stu-id="8f5dd-114">![Image with Varied Interpolation Settings](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e` \(即 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數\)。  
+## <a name="compiling-the-code"></a><span data-ttu-id="8f5dd-115">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8f5dd-115">Compiling the Code</span></span>  
+ <span data-ttu-id="8f5dd-116">上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。</span><span class="sxs-lookup"><span data-stu-id="8f5dd-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 請參閱  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="8f5dd-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8f5dd-117">See Also</span></span>  
+ [<span data-ttu-id="8f5dd-118">影像、點陣圖和中繼檔</span><span class="sxs-lookup"><span data-stu-id="8f5dd-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="8f5dd-119">使用影像、點陣圖、圖示和中繼檔</span><span class="sxs-lookup"><span data-stu-id="8f5dd-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,48 +1,47 @@
 ---
-title: "&lt;para&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<para> XML tag"
-  - "para XML tag"
+title: '&lt;para&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <para> XML tag
+- para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e2a034974ed94b18da374fbd372063ea4d575440
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;para&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定已將內容格式化成段落。  
+# <a name="ltparagt-visual-basic"></a><span data-ttu-id="6eddb-102">&lt;para&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6eddb-102">&lt;para&gt; (Visual Basic)</span></span>
+<span data-ttu-id="6eddb-103">指定內容的格式設段落。</span><span class="sxs-lookup"><span data-stu-id="6eddb-103">Specifies that the content is formatted as a paragraph.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="6eddb-104">語法</span><span class="sxs-lookup"><span data-stu-id="6eddb-104">Syntax</span></span>  
   
-```  
+```xml  
 <para>content</para>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a><span data-ttu-id="6eddb-105">參數</span><span class="sxs-lookup"><span data-stu-id="6eddb-105">Parameters</span></span>  
  `content`  
- 為段落內的文字。  
+ <span data-ttu-id="6eddb-106">段落的文字。</span><span class="sxs-lookup"><span data-stu-id="6eddb-106">The text of the paragraph.</span></span>  
   
-## 備註  
- `<para>` 標記 \(Tag\) 適合在標記內使用，例如 [\<summary\>](../../../visual-basic/language-reference/xmldoc/summary.md)、[\<remarks\>](../../../visual-basic/language-reference/xmldoc/remarks.md) 或 [\<returns\>](../../../visual-basic/language-reference/xmldoc/returns.md)，並能讓您將結構加入至文字。  
+## <a name="remarks"></a><span data-ttu-id="6eddb-107">備註</span><span class="sxs-lookup"><span data-stu-id="6eddb-107">Remarks</span></span>  
+ <span data-ttu-id="6eddb-108">`<para>`標記是供使用的標記內，例如[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)， [\<備註 >](../../../visual-basic/language-reference/xmldoc/remarks.md)，或[\<傳回 >](../../../visual-basic/language-reference/xmldoc/returns.md)，可讓您加入至文字的結構。</span><span class="sxs-lookup"><span data-stu-id="6eddb-108">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
   
- 使用 [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 進行編譯，將文件註解處理為檔案。  
+ <span data-ttu-id="6eddb-109">編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。</span><span class="sxs-lookup"><span data-stu-id="6eddb-109">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## 範例  
- 這個範例會使用 `<para>` 標記，將 `UpdateRecord` 方法的註解區段分割成兩個段落。  
+## <a name="example"></a><span data-ttu-id="6eddb-110">範例</span><span class="sxs-lookup"><span data-stu-id="6eddb-110">Example</span></span>  
+ <span data-ttu-id="6eddb-111">這個範例會使用`<para>`分割的 remarks 區段標記`UpdateRecord`方法分成兩個段落。</span><span class="sxs-lookup"><span data-stu-id="6eddb-111">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
-## 請參閱  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="6eddb-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6eddb-112">See Also</span></span>  
+ [<span data-ttu-id="6eddb-113">XML 註解標記</span><span class="sxs-lookup"><span data-stu-id="6eddb-113">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

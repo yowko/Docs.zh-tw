@@ -1,74 +1,78 @@
 ---
-title: "如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WebBrowser.ObjectForScripting"
-  - "WebBrowser.Document"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "通訊, DHTML 和用戶端應用程式"
-  - "DHTML, 內嵌在 Windows Form 中"
-  - "範例 [Windows Form], WebBrowser 控制項"
-  - "WebBrowser 控制項 [Windows Form], 在 DHTML 和用戶端應用程式之間通訊"
-  - "WebBrowser 控制項 [Windows Form], 範例"
+title: "如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords:
+- WebBrowser.ObjectForScripting
+- WebBrowser.Document
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], examples
+- communications [Windows Forms], DHTML and client applications
+- examples [Windows Forms], WebBrowser control
+- WebBrowser control [Windows Forms], communication between DHTML and client application
+- DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2ad99683f0e41e64a42032a9d64e589723fa8ed4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊
-您可以使用 <xref:System.Windows.Forms.WebBrowser> 控制項，將現有的動態 HTML \(DHTML\) Web 應用程式程式碼加入至 Windows Form 用戶端應用程式。  這適用於投資了大量的開發時間在建立 DHTML 控制項，而且您想要利用 Windows Form 的豐富使用者介面功能而又不需要重新撰寫現有程式碼的情況。  
+# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a><span data-ttu-id="70799-102">如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊</span><span class="sxs-lookup"><span data-stu-id="70799-102">How to: Implement Two-Way Communication Between DHTML Code and Client Application Code</span></span>
+<span data-ttu-id="70799-103">您可以使用 <xref:System.Windows.Forms.WebBrowser> 控制項，將現有的動態 HTML (DHTML) Web 應用程式程式碼加入至 Windows Form 用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="70799-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to add existing dynamic HTML (DHTML) Web application code to your Windows Forms client applications.</span></span> <span data-ttu-id="70799-104">這適用於投資了大量的開發時間在建立 DHTML 控制項，而且您想要利用 Windows Form 的豐富使用者介面功能而又不需要重新撰寫現有程式碼的情況。</span><span class="sxs-lookup"><span data-stu-id="70799-104">This is useful when you have invested significant development time in creating DHTML-based controls and you want to take advantage of the rich user interface capabilities of Windows Forms without having to rewrite existing code.</span></span>  
   
- <xref:System.Windows.Forms.WebBrowser> 控制項可讓您實作用戶端應用程式程式碼與網頁指令碼程式碼之間的雙向通訊，這是透過 <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 和 <xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性。  此外，您可以設定 <xref:System.Windows.Forms.WebBrowser> 控制，好讓您的 Web 控制項與應用程式表單上其他控制項順暢地混合，隱藏其 DHTML 實作。  若要順暢地混合控制項，請格式化所顯示的頁面，以便其背景色彩和視覺化樣式符合表單的其餘部分，並使用 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A><xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> 和 <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> 屬性停用標準瀏覽器功能。  
+ <span data-ttu-id="70799-105"><xref:System.Windows.Forms.WebBrowser> 控制項可讓您實作用戶端應用程式程式碼與網頁指令碼程式碼之間的雙向通訊，這是透過 <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 和 <xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="70799-105">The <xref:System.Windows.Forms.WebBrowser> control lets you implement two-way communication between your client application code and your Web page scripting code through the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> and <xref:System.Windows.Forms.WebBrowser.Document%2A> properties.</span></span> <span data-ttu-id="70799-106">此外，您可以設定 <xref:System.Windows.Forms.WebBrowser> 控制，好讓您的 Web 控制項與應用程式表單上其他控制項順暢地混合，隱藏其 DHTML 實作。</span><span class="sxs-lookup"><span data-stu-id="70799-106">Additionally, you can configure the <xref:System.Windows.Forms.WebBrowser> control so that your Web controls blend seamlessly with other controls on your application form, hiding their DHTML implementation.</span></span> <span data-ttu-id="70799-107">若要順暢地混合控制項，請格式化所顯示的頁面，以便其背景色彩和視覺化樣式符合表單的其餘部分，並使用 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A><xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> 和 <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> 屬性停用標準瀏覽器功能。</span><span class="sxs-lookup"><span data-stu-id="70799-107">To seamlessly blend the controls, format the page displayed so that its background color and visual style match the rest of the form, and use the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, and <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> properties to disable standard browser features.</span></span>  
   
-### 在 Windows Form 應用程式中內嵌 DHTML  
+### <a name="to-embed-dhtml-in-your-windows-forms-application"></a><span data-ttu-id="70799-108">在 Windows Form 應用程式中內嵌 DHTML</span><span class="sxs-lookup"><span data-stu-id="70799-108">To embed DHTML in your Windows Forms application</span></span>  
   
-1.  將 <xref:System.Windows.Forms.WebBrowser> 控制項的 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> 屬性設為 `false`，以防止 <xref:System.Windows.Forms.WebBrowser> 控制項開啟放到它上面的檔案。  
+1.  <span data-ttu-id="70799-109">將 <xref:System.Windows.Forms.WebBrowser> 控制項的 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> 屬性設為 `false`，以防止 <xref:System.Windows.Forms.WebBrowser> 控制項開啟放到它上面的檔案。</span><span class="sxs-lookup"><span data-stu-id="70799-109">Set the <xref:System.Windows.Forms.WebBrowser> control's <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
-2.  將控制項的 <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> 屬性設為 `false`，以防止使用者在 <xref:System.Windows.Forms.WebBrowser> 控制項上按一下滑鼠右鍵時顯示其捷徑功能表。  
+2.  <span data-ttu-id="70799-110">將控制項的 <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> 屬性設為 `false`，以防止使用者在 <xref:System.Windows.Forms.WebBrowser> 控制項上按一下滑鼠右鍵時顯示其捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="70799-110">Set the control's <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from displaying its shortcut menu when the user right-clicks it.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
-3.  將控制項的 <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> 屬性設為 `false`，以防止 <xref:System.Windows.Forms.WebBrowser> 控制項回應快速鍵。  
+3.  <span data-ttu-id="70799-111">將控制項的 <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> 屬性設為 `false`，以防止 <xref:System.Windows.Forms.WebBrowser> 控制項回應快速鍵。</span><span class="sxs-lookup"><span data-stu-id="70799-111">Set the control's <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from responding to shortcut keys.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
-4.  設定表單建構函式或 <xref:System.Windows.Forms.Form.Load> 事件處理常式中的 <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 屬性。  
+4.  <span data-ttu-id="70799-112">設定表單建構函式或 <xref:System.Windows.Forms.Form.Load> 事件處理常式中的 <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="70799-112">Set the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property in the form's constructor or a <xref:System.Windows.Forms.Form.Load> event handler.</span></span>  
   
-     下列程式碼會使用指令碼物件本身的表單類別。  
+     <span data-ttu-id="70799-113">下列程式碼會使用指令碼物件本身的表單類別。</span><span class="sxs-lookup"><span data-stu-id="70799-113">The following code uses the form class itself for the scripting object.</span></span>  
   
     > [!NOTE]
-    >  元件物件模型 \(COM\) 必須能夠存取指令碼物件。  若要讓 COM 可看見表單，請將 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 屬性加入到您的表單類別。  
+    >  <span data-ttu-id="70799-114">元件物件模型 (COM) 必須能夠存取指令碼物件。</span><span class="sxs-lookup"><span data-stu-id="70799-114">Component Object Model (COM) must be able to access the scripting object.</span></span> <span data-ttu-id="70799-115">若要讓 COM 可看見表單，請將 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 屬性加入到您的表單類別。</span><span class="sxs-lookup"><span data-stu-id="70799-115">To make your form visible to COM, add the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute to your form class.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
-5.  在您指令碼程式碼將使用的應用程式程式碼中實作公用屬性或方法。  
+5.  <span data-ttu-id="70799-116">在您指令碼程式碼將使用的應用程式程式碼中實作公用屬性或方法。</span><span class="sxs-lookup"><span data-stu-id="70799-116">Implement public properties or methods in your application code that your script code will use.</span></span>  
   
-     比方說，如果指令碼物件使用表單類別，請將下列程式碼加入至表單類別。  
+     <span data-ttu-id="70799-117">比方說，如果指令碼物件使用表單類別，請將下列程式碼加入至表單類別。</span><span class="sxs-lookup"><span data-stu-id="70799-117">For example, if you use the form class for the scripting object, add the following code to your form class.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
-6.  在指令碼程式碼中使用 `window.external` 物件來存取指定物件的公用屬性和方法。  
+6.  <span data-ttu-id="70799-118">在指令碼程式碼中使用 `window.external` 物件來存取指定物件的公用屬性和方法。</span><span class="sxs-lookup"><span data-stu-id="70799-118">Use the `window.external` object in your scripting code to access public properties and methods of the specified object.</span></span>  
   
-     下列 HTML 程式碼示範如何按一下按鈕以在指令碼物件上呼叫方法。  將此程式碼複製到您使用控制項 <xref:System.Windows.Forms.WebBrowser.Navigate%2A> 方法載入的 HTML 文件的 BODY 項目，或是您指派給控制項 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性的 HTML 文件的 BODY 項目。  
+     <span data-ttu-id="70799-119">下列 HTML 程式碼示範如何按一下按鈕以在指令碼物件上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="70799-119">The following HTML code demonstrates how to call a method on the scripting object from a button click.</span></span> <span data-ttu-id="70799-120">將此程式碼複製到您使用控制項 <xref:System.Windows.Forms.WebBrowser.Navigate%2A> 方法載入的 HTML 文件的 BODY 項目，或是您指派給控制項 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性的 HTML 文件的 BODY 項目。</span><span class="sxs-lookup"><span data-stu-id="70799-120">Copy this code into the BODY element of an HTML document that you load using the control's <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method or that you assign to the control's <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property.</span></span>  
   
     ```  
     <button onclick="window.external.Test('called from script code')">  
@@ -76,9 +80,9 @@ caps.handback.revision: 18
     </button>  
     ```  
   
-7.  實作您應用程式程式碼將使用之指令碼中的函式。  
+7.  <span data-ttu-id="70799-121">實作您應用程式程式碼將使用之指令碼中的函式。</span><span class="sxs-lookup"><span data-stu-id="70799-121">Implement functions in your script code that your application code will use.</span></span>  
   
-     下列 HTML SCRIPT 項目提供範例函式。  將此程式碼複製到您使用控制項 <xref:System.Windows.Forms.WebBrowser.Navigate%2A> 方法載入的 HTML 文件的 HEAD 項目，或是您指派給控制項 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性的 HTML 文件的 HEAD 項目。  
+     <span data-ttu-id="70799-122">下列 HTML SCRIPT 項目提供範例函式。</span><span class="sxs-lookup"><span data-stu-id="70799-122">The following HTML SCRIPT element provides an example function.</span></span> <span data-ttu-id="70799-123">將此程式碼複製到您使用控制項 <xref:System.Windows.Forms.WebBrowser.Navigate%2A> 方法載入的 HTML 文件的 HEAD 項目，或是您指派給控制項 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性的 HTML 文件的 HEAD 項目。</span><span class="sxs-lookup"><span data-stu-id="70799-123">Copy this code into the HEAD element of an HTML document that you load using the control's <xref:System.Windows.Forms.WebBrowser.Navigate%2A> method or that you assign to the control's <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property.</span></span>  
   
     ```  
     <script>  
@@ -88,33 +92,33 @@ caps.handback.revision: 18
     </script>  
     ```  
   
-8.  使用 <xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性來從用戶端應用程式程式碼存取指令碼。  
+8.  <span data-ttu-id="70799-124">使用 <xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性來從用戶端應用程式程式碼存取指令碼。</span><span class="sxs-lookup"><span data-stu-id="70799-124">Use the <xref:System.Windows.Forms.WebBrowser.Document%2A> property to access the script code from your client application code.</span></span>  
   
-     例如，將下列程式碼加入至按鈕 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  
+     <span data-ttu-id="70799-125">例如，將下列程式碼加入至按鈕 <xref:System.Windows.Forms.Control.Click> 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="70799-125">For example, add the following code to a button <xref:System.Windows.Forms.Control.Click> event handler.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#8)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]  
   
-9. 當您完成偵錯您 DHTML 時，請將控制項的 <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> 屬性設為 `true`，以防止 <xref:System.Windows.Forms.WebBrowser> 控制項顯示指令碼問題的錯誤訊息。  
+9. <span data-ttu-id="70799-126">當您完成偵錯您 DHTML 時，請將控制項的 <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> 屬性設為 `true`，以防止 <xref:System.Windows.Forms.WebBrowser> 控制項顯示指令碼問題的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="70799-126">When you are finished debugging your DHTML, set the control's <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> property to `true` to prevent the <xref:System.Windows.Forms.WebBrowser> control from displaying error messages for script code problems.</span></span>  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#9)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
   
-## 範例  
- 下列完整程式碼範例提供示範應用程式，您可以用它來了解這項功能。  HTML 程式碼會透過 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性載入至 <xref:System.Windows.Forms.WebBrowser> 控制項，而不會從個別的 HTML 檔案載入。  
+## <a name="example"></a><span data-ttu-id="70799-127">範例</span><span class="sxs-lookup"><span data-stu-id="70799-127">Example</span></span>  
+ <span data-ttu-id="70799-128">下列完整程式碼範例提供示範應用程式，您可以用它來了解這項功能。</span><span class="sxs-lookup"><span data-stu-id="70799-128">The following complete code example provides a demonstration application that you can use to understand this feature.</span></span> <span data-ttu-id="70799-129">HTML 程式碼會透過 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性載入至 <xref:System.Windows.Forms.WebBrowser> 控制項，而不會從個別的 HTML 檔案載入。</span><span class="sxs-lookup"><span data-stu-id="70799-129">The HTML code is loaded into the <xref:System.Windows.Forms.WebBrowser> control through the <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property instead of being loaded from a separate HTML file.</span></span>  
   
  [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  
   
-## 編譯程式碼  
- 此程式碼需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="70799-130">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="70799-130">Compiling the Code</span></span>  
+ <span data-ttu-id="70799-131">此程式碼需要：</span><span class="sxs-lookup"><span data-stu-id="70799-131">This code requires:</span></span>  
   
--   System 和 System.Windows.Forms 組件的參考。  
+-   <span data-ttu-id="70799-132">System 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="70799-132">References to the System and System.Windows.Forms assemblies.</span></span>  
   
- 如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的相關資訊，請參閱[從命令列建置](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) 或[使用 csc.exe 建置命令列](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  您也可以透過將程式碼貼入新的專案，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228%20\(v=vs.110\))。  
+ <span data-ttu-id="70799-133">如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="70799-133">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="70799-134">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="70799-134">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="70799-135">另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="70799-135">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=fullName>   
- [WebBrowser 控制項](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="70799-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70799-136">See Also</span></span>  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="70799-137">WebBrowser 控制項</span><span class="sxs-lookup"><span data-stu-id="70799-137">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)

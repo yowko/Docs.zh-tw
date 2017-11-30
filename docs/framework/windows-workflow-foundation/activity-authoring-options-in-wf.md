@@ -1,43 +1,47 @@
 ---
-title: "WF 中的活動撰寫選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WF 中的活動撰寫選項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fd3d86510300095d2d8950199fa01f06cee7cfd7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# WF 中的活動撰寫選項
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供了幾個建立自訂活動的選項。  用於撰寫指定活動的正確方法，要視所需的執行階段功能而定。  
+# <a name="activity-authoring-options-in-wf"></a><span data-ttu-id="e547a-102">WF 中的活動撰寫選項</span><span class="sxs-lookup"><span data-stu-id="e547a-102">Activity Authoring Options in WF</span></span>
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="e547a-103"> 提供了幾個建立自訂活動的選項。</span><span class="sxs-lookup"><span data-stu-id="e547a-103"> provides several options for creating custom activities.</span></span> <span data-ttu-id="e547a-104">用於撰寫指定活動的正確方法，要視所需的執行階段功能而定。</span><span class="sxs-lookup"><span data-stu-id="e547a-104">The correct method to use for authoring a given activity depends on what run-time features are required.</span></span>  
   
-## 決定要用於撰寫自訂活動的基底活動類別  
- 下表列出自訂活動基底類別中可用的功能。  
+## <a name="deciding-which-base-activity-class-to-use-for-authoring-custom-activities"></a><span data-ttu-id="e547a-105">決定要用於撰寫自訂活動的基底活動類別</span><span class="sxs-lookup"><span data-stu-id="e547a-105">Deciding Which Base Activity Class to Use for Authoring Custom Activities</span></span>  
+ <span data-ttu-id="e547a-106">下表列出自訂活動基底類別中可用的功能。</span><span class="sxs-lookup"><span data-stu-id="e547a-106">The following table lists the features available in the custom activity base classes.</span></span>  
   
-|基底活動類別|可用的功能|  
-|------------|-----------|  
-|<xref:System.Activities.Activity>|將系統提供的群組和自訂活動撰寫至複合活動。|  
-|<xref:System.Activities.CodeActivity>|提供可覆寫的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法來實作命令式功能。  同時也會提供對追蹤、變數和引數的存取。|  
-|<xref:System.Activities.NativeActivity>|提供 <xref:System.Activities.CodeActivity> 的所有功能，加上中止活動執行、取消子活動執行、使用書籤，以及排程活動、活動動作與功能等。|  
-|<xref:System.Activities.DynamicActivity>|提供 DOM 式方法來建構具有 WF 設計工具的活動以及透過 <xref:System.ComponentModel.IcustomTypeDescriptor> 的執行階段機制，不必定義新型別即可建立新活動。|  
+|<span data-ttu-id="e547a-107">基底活動類別</span><span class="sxs-lookup"><span data-stu-id="e547a-107">Base activity class</span></span>|<span data-ttu-id="e547a-108">可用的功能</span><span class="sxs-lookup"><span data-stu-id="e547a-108">Features available</span></span>|  
+|-------------------------|------------------------|  
+|<xref:System.Activities.Activity>|<span data-ttu-id="e547a-109">將系統提供的群組和自訂活動撰寫至複合活動。</span><span class="sxs-lookup"><span data-stu-id="e547a-109">Composes groups of system-provided and custom activities into a composite activity.</span></span>|  
+|<xref:System.Activities.CodeActivity>|<span data-ttu-id="e547a-110">提供可覆寫的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法來實作命令式功能。</span><span class="sxs-lookup"><span data-stu-id="e547a-110">Implements imperative functionality by providing an <xref:System.Activities.CodeActivity%601.Execute%2A> method that can be overridden.</span></span> <span data-ttu-id="e547a-111">同時也會提供對追蹤、變數和引數的存取。</span><span class="sxs-lookup"><span data-stu-id="e547a-111">Also provides access to tracking, variables, and arguments..</span></span>|  
+|<xref:System.Activities.NativeActivity>|<span data-ttu-id="e547a-112">提供 <xref:System.Activities.CodeActivity> 的所有功能，加上中止活動執行、取消子活動執行、使用書籤，以及排程活動、活動動作與功能等。</span><span class="sxs-lookup"><span data-stu-id="e547a-112">Provides all of the features of <xref:System.Activities.CodeActivity>, plus aborting activity execution, canceling child activity execution, using bookmarks, and scheduling activities, activity actions, and functions.</span></span>|  
+|<xref:System.Activities.DynamicActivity>|<span data-ttu-id="e547a-113">提供 DOM 式方法來建構活動之介面與 WF 設計工具和執行階段機制，透過<!--zz <xref:System.ComponentModel.IcustomTypeDescriptor>--> `IcustomTypeDescriptor`，不必定義新型別即可建立新的活動。</span><span class="sxs-lookup"><span data-stu-id="e547a-113">Provides a DOM-like approach to constructing activities that interfaces with the WF designer and the run-time machinery through <!--zz <xref:System.ComponentModel.IcustomTypeDescriptor>--> `IcustomTypeDescriptor`, allowing new activities to be created without defining new types.</span></span>|  
   
-## 使用 Activity 撰寫活動  
- 衍生自 <xref:System.Activities.Activity> 的活動會藉由組裝其他現有活動來撰寫功能。  這些活動可以是現有的自訂活動，與來自 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 活動庫的活動。  組裝這些活動是建立自訂功能最基本的方式。  當使用視覺設計環境來撰寫工作流程時，最常採用這個方法。  
+## <a name="authoring-activities-using-activity"></a><span data-ttu-id="e547a-114">使用 Activity 撰寫活動</span><span class="sxs-lookup"><span data-stu-id="e547a-114">Authoring Activities using Activity</span></span>  
+ <span data-ttu-id="e547a-115">衍生自 <xref:System.Activities.Activity> 的活動會藉由組裝其他現有活動來撰寫功能。</span><span class="sxs-lookup"><span data-stu-id="e547a-115">Activities that derive from <xref:System.Activities.Activity> compose functionality by assembling other existing activities.</span></span> <span data-ttu-id="e547a-116">這些活動可以是現有的自訂活動，與來自 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 活動庫的活動。</span><span class="sxs-lookup"><span data-stu-id="e547a-116">These activities can be existing custom activities and activities from the [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] activity library.</span></span> <span data-ttu-id="e547a-117">組裝這些活動是建立自訂功能最基本的方式。</span><span class="sxs-lookup"><span data-stu-id="e547a-117">Assembling these activities is the most basic way to create custom functionality.</span></span> <span data-ttu-id="e547a-118">當使用視覺設計環境來撰寫工作流程時，最常採用這個方法。</span><span class="sxs-lookup"><span data-stu-id="e547a-118">This approach is most typically taken when using a visual design environment for authoring workflows.</span></span>  
   
-## 使用 CodeActivity 或 AsyncCodeActivity 製作活動  
- 衍生自 <xref:System.Activities.CodeActivity> 或 <xref:System.Activities.AsyncCodeActivity> 的活動，可覆寫包含自訂命令式程式碼的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法，以實作命令式功能。  由執行階段執行活動時，就會執行自訂程式碼。  以這種方式建立的活動可以存取自訂功能，但卻無法存取執行階段的所有功能，例如完整存取執行環境、排定子活動、書籤建立或支援 Cancel 或 Abort 方法。  當 <xref:System.Activities.CodeActivity> 執行時，其可存取執行環境的縮減版 \(透過 <xref:System.Activities.CodeActivityContext> 或 <xref:System.Activities.AsyncCodeActivityContext> 類別\)。  使用 <xref:System.Activities.CodeActivity> 建立的活動可存取引數與變數解析、延伸與追蹤。  非同步排程活動可使用 <xref:System.Activities.AsyncCodeActivity> 來進行。  
+## <a name="authoring-activities-using-codeactivity-or-asynccodeactivity"></a><span data-ttu-id="e547a-119">使用 CodeActivity 或 AsyncCodeActivity 製作活動</span><span class="sxs-lookup"><span data-stu-id="e547a-119">Authoring Activities using CodeActivity or AsyncCodeActivity</span></span>  
+ <span data-ttu-id="e547a-120">衍生自 <xref:System.Activities.CodeActivity> 或 <xref:System.Activities.AsyncCodeActivity> 的活動，可覆寫包含自訂命令式程式碼的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法，以實作命令式功能。</span><span class="sxs-lookup"><span data-stu-id="e547a-120">Activities that derive from <xref:System.Activities.CodeActivity> or <xref:System.Activities.AsyncCodeActivity> can implement imperative functionality by overriding the <xref:System.Activities.CodeActivity%601.Execute%2A> method with custom imperative code.</span></span> <span data-ttu-id="e547a-121">由執行階段執行活動時，就會執行自訂程式碼。</span><span class="sxs-lookup"><span data-stu-id="e547a-121">The custom code is executed when the activity is executed by the runtime.</span></span> <span data-ttu-id="e547a-122">以這種方式建立的活動可以存取自訂功能，但卻無法存取執行階段的所有功能，例如完整存取執行環境、排定子活動、書籤建立或支援 Cancel 或 Abort 方法。</span><span class="sxs-lookup"><span data-stu-id="e547a-122">While activities created in this way have access to custom functionality, they do not have access to all of the features of the runtime, such as full access to the execution environment, the ability to schedule child activities, bookmark creation, or support for a Cancel or Abort method.</span></span> <span data-ttu-id="e547a-123">當 <xref:System.Activities.CodeActivity> 執行時，其可存取執行環境的縮減版 (透過 <xref:System.Activities.CodeActivityContext> 或 <xref:System.Activities.AsyncCodeActivityContext> 類別)。</span><span class="sxs-lookup"><span data-stu-id="e547a-123">When a <xref:System.Activities.CodeActivity> executes, it has access to a reduced version of the execution environment (through the <xref:System.Activities.CodeActivityContext> or <xref:System.Activities.AsyncCodeActivityContext> class).</span></span> <span data-ttu-id="e547a-124">使用 <xref:System.Activities.CodeActivity> 建立的活動可存取引數與變數解析、延伸與追蹤。</span><span class="sxs-lookup"><span data-stu-id="e547a-124">Activities created using <xref:System.Activities.CodeActivity> have access to argument and variable resolution, extensions, and tracking.</span></span> <span data-ttu-id="e547a-125">非同步排程活動可使用 <xref:System.Activities.AsyncCodeActivity> 來進行。</span><span class="sxs-lookup"><span data-stu-id="e547a-125">Asynchronous activity scheduling can be done using <xref:System.Activities.AsyncCodeActivity>.</span></span>  
   
-## 使用 NativeActivity 撰寫活動  
- 衍生自 <xref:System.Activities.NativeActivity> 的活動，就像衍生自 <xref:System.Activities.CodeActivity> 的活動一樣，會覆寫 <xref:System.Activities.NativeActivity.Execute%2A> 來建立命令式功能，但也可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 來存取工作流程執行階段的所有功能。  此內容可支援排定和取消子活動、執行 <xref:System.Activities.ActivityAction> 和 <xref:System.Activities.ActivityFunc> 物件、將交易流動到工作流程中、叫用非同步處理序、取消和中止執行、存取執行屬性和擴充，以及書籤 \(恢復暫停工作流程的控點\)。  
+## <a name="authoring-activities-using-nativeactivity"></a><span data-ttu-id="e547a-126">使用 NativeActivity 撰寫活動</span><span class="sxs-lookup"><span data-stu-id="e547a-126">Authoring Activities using NativeActivity</span></span>  
+ <span data-ttu-id="e547a-127">衍生自 <xref:System.Activities.NativeActivity> 的活動，就像衍生自 <xref:System.Activities.CodeActivity> 的活動一樣，會覆寫 <xref:System.Activities.NativeActivity.Execute%2A> 來建立命令式功能，但也可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 來存取工作流程執行階段的所有功能。</span><span class="sxs-lookup"><span data-stu-id="e547a-127">Activities that derive from <xref:System.Activities.NativeActivity>, like those that derive from <xref:System.Activities.CodeActivity>, create imperative functionality by overriding <xref:System.Activities.NativeActivity.Execute%2A>, but also have access to all of the functionality of the workflow runtime through the <xref:System.Activities.NativeActivityContext> that gets passed into the <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span> <span data-ttu-id="e547a-128">此內容可支援排定和取消子活動、 執行<xref:System.Activities.ActivityAction>和<!--zz <xref:System.Activities.ActivityFunc>-->`ActivityFunc`流動至工作流程、 叫用非同步處理序、 取消和中止執行、 交易的物件存取權執行屬性和擴充，以及書籤 （恢復暫停工作流程的控點）。</span><span class="sxs-lookup"><span data-stu-id="e547a-128">This context has support for scheduling and canceling child activities, executing <xref:System.Activities.ActivityAction> and <!--zz <xref:System.Activities.ActivityFunc>--> `ActivityFunc` objects, flowing transactions into a workflow, invoking asynchronous processes, canceling and aborting execution, access to execution properties and extensions, and bookmarks (handles for resuming paused workflows).</span></span>  
   
-## 使用 DynamicActivity 撰寫活動  
- 與其他三種活動型別不同，新功能並非從 <xref:System.Activities.DynamicActivity> \(類別已密封\) 衍生新型別來建立，而是使用活動文件物件模型 \(DOM\)，將功能組裝成 <xref:System.Activities.DynamicActivity.Properties%2A> 和 <xref:System.Activities.DynamicActivity.Implementation%2A> 屬性來建立。  
+## <a name="authoring-activities-using-dynamicactivity"></a><span data-ttu-id="e547a-129">使用 DynamicActivity 撰寫活動</span><span class="sxs-lookup"><span data-stu-id="e547a-129">Authoring Activities using DynamicActivity</span></span>  
+ <span data-ttu-id="e547a-130">與其他三種活動型別不同，新功能並非從 <xref:System.Activities.DynamicActivity> (類別已密封) 衍生新型別來建立，而是使用活動文件物件模型 (DOM)，將功能組裝成 <xref:System.Activities.DynamicActivity.Properties%2A> 和 <xref:System.Activities.DynamicActivity.Implementation%2A> 屬性來建立。</span><span class="sxs-lookup"><span data-stu-id="e547a-130">Unlike the other three types of activity, new functionality is not created by deriving new types from <xref:System.Activities.DynamicActivity> (the class is sealed), but instead, by assembling functionality into the <xref:System.Activities.DynamicActivity.Properties%2A> and <xref:System.Activities.DynamicActivity.Implementation%2A> properties using an activity document object model (DOM).</span></span>  
   
-## 撰寫傳回結果的活動  
- 許多活動都必須在執行過後傳回結果。  雖然永遠都可為了這個目的在活動上定義自訂的 <xref:System.Activities.OutArgument%601>，但我們還是建議改用 <xref:System.Activities.Activity%601>，或衍生自 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601>。  這裡每個基底類別都有活動可用來傳回值的 <xref:System.Activities.OutArgument%601> 具名「結果」。  唯有在只需要從活動傳回一個結果時，才應使用傳回結果的活動；如果需要傳回多個結果，請改用獨立的 <xref:System.Activities.OutArgument%601> 成員。
+## <a name="authoring-activities-that-return-a-result"></a><span data-ttu-id="e547a-131">撰寫傳回結果的活動</span><span class="sxs-lookup"><span data-stu-id="e547a-131">Authoring Activities that Return a Result</span></span>  
+ <span data-ttu-id="e547a-132">許多活動都必須在執行過後傳回結果。</span><span class="sxs-lookup"><span data-stu-id="e547a-132">Many activities must return a result after their execution.</span></span> <span data-ttu-id="e547a-133">雖然永遠都可為了這個目的在活動上定義自訂的 <xref:System.Activities.OutArgument%601>，但我們還是建議改用 <xref:System.Activities.Activity%601>，或衍生自 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601>。</span><span class="sxs-lookup"><span data-stu-id="e547a-133">Although it is possible to always define a custom <xref:System.Activities.OutArgument%601> on an activity for this purpose, it is suggested to instead use <xref:System.Activities.Activity%601>, or derive from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span> <span data-ttu-id="e547a-134">這裡每個基底類別都有活動可用來傳回值的 <xref:System.Activities.OutArgument%601> 具名「結果」。</span><span class="sxs-lookup"><span data-stu-id="e547a-134">Each of these base classes has an <xref:System.Activities.OutArgument%601> named Result that your activity can use for its return value.</span></span> <span data-ttu-id="e547a-135">唯有在只需要從活動傳回一個結果時，才應使用傳回結果的活動；如果需要傳回多個結果，請改用獨立的 <xref:System.Activities.OutArgument%601> 成員。</span><span class="sxs-lookup"><span data-stu-id="e547a-135">Activities that return a result should only be used if only one result needs to be returned from an activity; if multiple results need to be returned, separate <xref:System.Activities.OutArgument%601> members should be used instead.</span></span>

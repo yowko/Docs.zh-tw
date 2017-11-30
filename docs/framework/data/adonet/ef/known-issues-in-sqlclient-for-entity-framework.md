@@ -1,75 +1,74 @@
 ---
-title: "Entity Framework SqlClient 中的已知問題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "適用於 Entity Framework 的 SqlClient 已知問題"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Entity Framework SqlClient 中的已知問題
-本節說明與 .NET Framework Data Provider for SQL Server \(SqlClient\) 相關的已知問題。  
+# <a name="known-issues-in-sqlclient-for-entity-framework"></a><span data-ttu-id="77023-102">適用於 Entity Framework 的 SqlClient 已知問題</span><span class="sxs-lookup"><span data-stu-id="77023-102">Known Issues in SqlClient for Entity Framework</span></span>
+<span data-ttu-id="77023-103">本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。</span><span class="sxs-lookup"><span data-stu-id="77023-103">This section describes known issues related to the .NET Framework Data Provider for SQL Server (SqlClient).</span></span>  
   
-## 字串函式中的尾端空白  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 會忽略字串值中的尾端空白。  因此，在字串中傳遞尾端空白會導致無法預期的結果，甚至產生錯誤。  
+## <a name="trailing-spaces-in-string-functions"></a><span data-ttu-id="77023-104">字串函式中的尾端空白</span><span class="sxs-lookup"><span data-stu-id="77023-104">Trailing Spaces in String Functions</span></span>  
+ [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="77023-105"> 會忽略字串值中的尾端空白。</span><span class="sxs-lookup"><span data-stu-id="77023-105"> ignores trailing spaces in string values.</span></span> <span data-ttu-id="77023-106">因此，在字串中傳遞尾端空白會導致無法預期的結果，甚至產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="77023-106">Therefore, passing trailing spaces in the string can lead to unpredictable results, even failures.</span></span>  
   
- 如果字串中必須有尾端空白，應該考慮在尾端附加空白字元，這樣 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 才不會修剪該字串。  如果尾端空白是不必要的，則應該在查詢管線中傳遞前先行修剪掉。  
+ <span data-ttu-id="77023-107">如果字串中必須有尾端空白，應該考慮在尾端附加空白字元，這樣 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 才不會修剪該字串。</span><span class="sxs-lookup"><span data-stu-id="77023-107">If you have to have trailing spaces in your string, you should consider appending a white space character at the end, so that [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] does not trim the string.</span></span> <span data-ttu-id="77023-108">如果尾端空白是不必要的，則應該在查詢管線中傳遞前先行修剪掉。</span><span class="sxs-lookup"><span data-stu-id="77023-108">If the trailing spaces are not required, they should be trimmed before they are passed down the query pipeline.</span></span>  
   
-## RIGHT 函式  
- 如果將非 `null` 值傳遞做為第一個引數並將 0 傳遞做為第二個引數，成為 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，則會傳回 `NULL` 值，而非 `empty` 字串。  
+## <a name="right-function"></a><span data-ttu-id="77023-109">RIGHT 函式</span><span class="sxs-lookup"><span data-stu-id="77023-109">RIGHT Function</span></span>  
+ <span data-ttu-id="77023-110">如果將非 `null` 值傳遞做為第一個引數並將 0 傳遞做為第二個引數，成為 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，則會傳回 `NULL` 值，而非 `empty` 字串。</span><span class="sxs-lookup"><span data-stu-id="77023-110">If a non-`null` value is passed as a first argument and 0 is passed as a second argument to `RIGHT(nvarchar(max)`, 0`)` or `RIGHT(varchar(max)`, 0`)`, a `NULL` value will be returned instead of an `empty` string.</span></span>  
   
-## CROSS 和 OUTER APPLY 運算子  
- CROSS 和 OUTER APPLY 運算子是在 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 中引入的。  在某些案例中，查詢管線可能產生含有 CROSS APPLY 和 \(或\) OUTER APPLY 運算子的 Transact\-SQL 陳述式。  因為有些後端提供者 \(包括 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 版本\) 不支援這些運算子，因此這類的查詢無法在這些後端提供者上執行。  
+## <a name="cross-and-outer-apply-operators"></a><span data-ttu-id="77023-111">CROSS 和 OUTER APPLY 運算子</span><span class="sxs-lookup"><span data-stu-id="77023-111">CROSS and OUTER APPLY Operators</span></span>  
+ <span data-ttu-id="77023-112">CROSS 和 OUTER APPLY 運算子是在 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 中引入的。</span><span class="sxs-lookup"><span data-stu-id="77023-112">CROSS and OUTER APPLY operators were introduced in [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].</span></span> <span data-ttu-id="77023-113">在某些案例中，查詢管線可能產生含有 CROSS APPLY 和 (或) OUTER APPLY 運算子的 Transact-SQL 陳述式。</span><span class="sxs-lookup"><span data-stu-id="77023-113">In some cases the query pipeline might produce a Transact-SQL statement that contains CROSS APPLY and/or OUTER APPLY operators.</span></span> <span data-ttu-id="77023-114">因為有些後端提供者 (包括 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 版本) 不支援這些運算子，因此這類的查詢無法在這些後端提供者上執行。</span><span class="sxs-lookup"><span data-stu-id="77023-114">Because some backend providers, including versions of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], do not support these operators, such queries cannot be executed on these backend providers.</span></span>  
   
- 下列是可能會導致輸出查詢中出現 CROSS APPLY 和 \(或\) OUTER APPLY 運算子的部分典型案例：  
+ <span data-ttu-id="77023-115">下列是可能會導致輸出查詢中出現 CROSS APPLY 和 (或) OUTER APPLY 運算子的部分典型案例：</span><span class="sxs-lookup"><span data-stu-id="77023-115">The following are some typical scenarios that might lead to the presence of CROSS APPLY and/or OUTER APPLY operators in the output query:</span></span>  
   
--   具有分頁的相互關聯子查詢。  
+-   <span data-ttu-id="77023-116">具有分頁的相互關聯子查詢。</span><span class="sxs-lookup"><span data-stu-id="77023-116">A correlated subquery with paging.</span></span>  
   
--   相互關聯子查詢或巡覽產生的集合上的 `AnyElement`。  
+-   <span data-ttu-id="77023-117">相互關聯子查詢或巡覽產生的集合上的 `AnyElement`。</span><span class="sxs-lookup"><span data-stu-id="77023-117">An `AnyElement` over a correlated sub-query, or over a collection produced by navigation.</span></span>  
   
--   使用接受元素選擇器的群組方法的 LINQ 查詢。  
+-   <span data-ttu-id="77023-118">使用接受元素選擇器的群組方法的 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="77023-118">LINQ queries that use grouping methods that accept an element selector.</span></span>  
   
--   當中有明確指定 CROSS APPLY 或 OUTER APPLY 的查詢。  
+-   <span data-ttu-id="77023-119">當中有明確指定 CROSS APPLY 或 OUTER APPLY 的查詢。</span><span class="sxs-lookup"><span data-stu-id="77023-119">A query in which a CROSS APPLY or an OUTER APPLY is explicitly specified</span></span>  
   
--   具有 DEREF 建構對 REF 建構的查詢。  
+-   <span data-ttu-id="77023-120">具有 DEREF 建構對 REF 建構的查詢。</span><span class="sxs-lookup"><span data-stu-id="77023-120">A query that has a DEREF construct over a REF construct.</span></span>  
   
-## SKIP 運算子  
- 如果您使用的是 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，對非索引鍵資料行搭配使用 SKIP 和 ORDER BY，可能會傳回不正確的結果。  如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。  這是因為 SKIP 針對 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 轉譯的方式所造成的。  舉例來說，在下列查詢中，如果 `E.NonKeyColumn` 中有重複的值，就會略過超過五個資料行：  
+## <a name="skip-operator"></a><span data-ttu-id="77023-121">SKIP 運算子</span><span class="sxs-lookup"><span data-stu-id="77023-121">SKIP Operator</span></span>  
+ <span data-ttu-id="77023-122">如果您使用[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，非索引鍵資料行上，使用 SKIP 搭配 ORDER BY 可能會傳回不正確的結果。</span><span class="sxs-lookup"><span data-stu-id="77023-122">If you are using [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], using SKIP with ORDER BY on non-key columns might return incorrect results.</span></span> <span data-ttu-id="77023-123">如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。</span><span class="sxs-lookup"><span data-stu-id="77023-123">More than the specified number of rows might be skipped if the non-key column has duplicate data in it.</span></span> <span data-ttu-id="77023-124">這是因為 SKIP 針對 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 轉譯的方式所造成的。</span><span class="sxs-lookup"><span data-stu-id="77023-124">This is due to how SKIP is translated for [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].</span></span> <span data-ttu-id="77023-125">例如，在下列查詢中，超過五個資料列可能會略過如果`E.NonKeyColumn`有重複的值：</span><span class="sxs-lookup"><span data-stu-id="77023-125">For example, in the following query, more than five rows might be skipped if `E.NonKeyColumn` has duplicate values:</span></span>  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
-## 以正確的 SQL Server 版本為目標  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 是依據儲存體模型檔案 \(.ssdl\) 中 Schema 項目的 `ProviderManifestToken` 屬性所指定的 SQL Server 版本，做為 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查詢的目標版本。  這個版本可能會因您所連接的 SQL Server 實際版本而有所不同。  例如，如果您使用的是 SQL Server 2005，但 `ProviderManifestToken` 屬性設定為 2008，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查詢可能不會在伺服器上執行。例如，SQL Server 2008 導入新日期時間型別，使用新日期時間型別的查詢就不會在 SQL Server 較早的版本上執行。  如果使用的是 SQL Server 2005，但 `ProviderManifestToken` 屬性卻設為 2000，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查詢最佳化效果可能會打折，或者會收到例外狀況指出不支援該查詢。  如需詳細資訊，請參閱本主題前面的「CROSS 和 OUTER APPLY 運算子」一節。  
+## <a name="targeting-the-correct-sql-server-version"></a><span data-ttu-id="77023-126">以正確的 SQL Server 版本為目標</span><span class="sxs-lookup"><span data-stu-id="77023-126">Targeting the Correct SQL Server Version</span></span>  
+ <span data-ttu-id="77023-127">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]目標[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]查詢是根據 SQL Server 版本中所指定`ProviderManifestToken`儲存體模型 (.ssdl) 檔案中的結構描述項目的屬性。</span><span class="sxs-lookup"><span data-stu-id="77023-127">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] targets the [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] query based on the SQL Server version that is specified in the `ProviderManifestToken` attribute of the Schema element in the storage model (.ssdl) file.</span></span> <span data-ttu-id="77023-128">這個版本可能會因您所連接的 SQL Server 實際版本而有所不同。</span><span class="sxs-lookup"><span data-stu-id="77023-128">This version might differ from the version of the actual SQL Server you are connected to.</span></span> <span data-ttu-id="77023-129">例如，如果使用的是 SQL Server 2005，但 `ProviderManifestToken` 屬性卻設為 2008，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查詢可能無法在伺服器上執行。</span><span class="sxs-lookup"><span data-stu-id="77023-129">For example, if you are using SQL Server 2005, but your `ProviderManifestToken` attribute is set to 2008, the generated [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] query might not execute on the server.</span></span> <span data-ttu-id="77023-130">例如，使用 SQL Server 2008 中導入新的日期時間類型的查詢將不會執行較早版本的 SQL Server 上。</span><span class="sxs-lookup"><span data-stu-id="77023-130">For example, a query that uses the new date time types that were introduced in SQL Server 2008 will not execute on earlier versions of the SQL Server.</span></span> <span data-ttu-id="77023-131">如果您使用 SQL Server 2005，但您`ProviderManifestToken`屬性設為 2000，則產生[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]查詢可能會小於最佳化，或者您可能會收到例外狀況指出不支援該查詢。</span><span class="sxs-lookup"><span data-stu-id="77023-131">If you are using SQL Server 2005, but your `ProviderManifestToken` attribute is set to 2000, the generated [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] query might be less optimized, or you might get an exception that says that the query is not supported.</span></span> <span data-ttu-id="77023-132">如需詳細資訊，請參閱本主題前面的「CROSS 和 OUTER APPLY 運算子」一節。</span><span class="sxs-lookup"><span data-stu-id="77023-132">For more information, see the CROSS and OUTER APPLY Operators section, earlier in this topic.</span></span>  
   
- 某些資料庫行為取決於資料庫上設定的相容性層級。  如果 `ProviderManifestToken` 屬性是設為 2005 而 SQL Server 版本是 2005，但資料庫的相容性層級是設為 "80" \(SQL Server 2000\)，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 會以 SQL Server 2005 為目標，但由於相容性層級設定的關係，執行的方式可能與預期的方式不同。  例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。  
+ <span data-ttu-id="77023-133">某些資料庫行為取決於資料庫上設定的相容性層級。</span><span class="sxs-lookup"><span data-stu-id="77023-133">Certain database behaviors depend on the compatibility level set to the database.</span></span> <span data-ttu-id="77023-134">如果 `ProviderManifestToken` 屬性是設為 2005 而 SQL Server 版本是 2005，但資料庫的相容性層級是設為 "80" (SQL Server 2000)，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 會以 SQL Server 2005 為目標，但由於相容性層級設定的關係，執行的方式可能與預期的方式不同。</span><span class="sxs-lookup"><span data-stu-id="77023-134">If your `ProviderManifestToken` attribute is set to 2005 and your SQL Server version is 2005, but the compatibility level of a database is set to "80" (SQL Server 2000), the generated [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] will be targeting SQL Server 2005, but might not execute as expected due to the compatibility level setting.</span></span> <span data-ttu-id="77023-135">例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。</span><span class="sxs-lookup"><span data-stu-id="77023-135">For example, you might lose ordering information if a column name in the ORDER BY list matches a column name in the selector.</span></span>  
   
-## 投影中的巢狀查詢  
- 投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 \(Cartesian Product\) 查詢。  在包括 SLQ Server 的某些後端伺服器上，這樣可能會導致 TempDB 資料表變得相當大。  這樣會降低伺服器的效能。  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="77023-136">投影中的巢狀查詢</span><span class="sxs-lookup"><span data-stu-id="77023-136">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="77023-137">投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。</span><span class="sxs-lookup"><span data-stu-id="77023-137">Nested queries in a projection clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="77023-138">在包括 SLQ Server 的某些後端伺服器上，這樣可能會導致 TempDB 資料表變得相當大。</span><span class="sxs-lookup"><span data-stu-id="77023-138">On some back-end servers, including SLQ Server, this can cause the TempDB table to to get quite large.</span></span> <span data-ttu-id="77023-139">這樣會降低伺服器的效能。</span><span class="sxs-lookup"><span data-stu-id="77023-139">This can decrease server performance.</span></span>  
   
- 下列是投影子句中巢狀查詢的範例：  
+ <span data-ttu-id="77023-140">下列是投影子句中巢狀查詢的範例：</span><span class="sxs-lookup"><span data-stu-id="77023-140">The following is an example of  a nested query in a projection clause:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## 伺服器產生的 GUID 識別值  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支援伺服器產生的 GUID 識別值，但是提供者必須支援在資插入資料列之後，傳回伺服器產生的識別值。  從 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005 開始，您可以透過 [OUTPUT 子句](http://go.microsoft.com/fwlink/?LinkId=169400)，傳回 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 資料庫中伺服器產生的 GUID 類型。  
+## <a name="server-generated-guid-identity-values"></a><span data-ttu-id="77023-141">伺服器產生的 GUID 識別值</span><span class="sxs-lookup"><span data-stu-id="77023-141">Server Generated GUID Identity Values</span></span>  
+ <span data-ttu-id="77023-142">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支援伺服器產生的 GUID 識別值，但是提供者必須支援在資插入資料列之後，傳回伺服器產生的識別值。</span><span class="sxs-lookup"><span data-stu-id="77023-142">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports server-generated GUID type identity values, but the provider must support returning the server-generated identity value after a row was inserted.</span></span> <span data-ttu-id="77023-143">從開始[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]2005 中，您可以傳回伺服器產生的 GUID 類型中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]透過資料庫[OUTPUT 子句](http://go.microsoft.com/fwlink/?LinkId=169400)。</span><span class="sxs-lookup"><span data-stu-id="77023-143">Starting with [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, you can return the server-generated GUID type in a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database through the [OUTPUT clause](http://go.microsoft.com/fwlink/?LinkId=169400) .</span></span>  
   
-## 請參閱  
- [Entity Framework 函式的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)   
- [LINQ to Entities 中的已知問題和考量因素](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="77023-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="77023-144">See Also</span></span>  
+ [<span data-ttu-id="77023-145">適用於 Entity Framework 的 SqlClient</span><span class="sxs-lookup"><span data-stu-id="77023-145">SqlClient for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
+ [<span data-ttu-id="77023-146">已知的問題和考量在 LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="77023-146">Known Issues and Considerations in LINQ to Entities</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

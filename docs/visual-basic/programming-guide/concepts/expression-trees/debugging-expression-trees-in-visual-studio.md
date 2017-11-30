@@ -1,52 +1,44 @@
 ---
-title: "偵錯運算式樹狀架構，在 Visual Studio (Visual Basic) |Microsoft 文件"
+title: "偵錯運算式樹狀架構，在 Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: efbd8c19947c45b3ba15ce7b574000d56526ef45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ff1bee9c3c3fdeafab24368d2c7e8376d4ff7b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>在 Visual Studio (Visual Basic) 中的偵錯運算式樹狀架構
-當您偵錯您的應用程式時，您可以分析的結構與內容的運算式樹狀架構。 若要取得運算式樹狀結構的快速概觀，您可以使用`DebugView`屬性，亦即只適用於偵錯模式。 如需有關偵錯的詳細資訊，請參閱[Visual Studio 偵錯](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)。  
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a><span data-ttu-id="43706-102">偵錯運算式樹狀架構，在 Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43706-102">Debugging Expression Trees in Visual Studio (Visual Basic)</span></span>
+<span data-ttu-id="43706-103">當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。</span><span class="sxs-lookup"><span data-stu-id="43706-103">You can analyze the structure and content of expression trees when you debug your applications.</span></span> <span data-ttu-id="43706-104">若要取得運算式樹狀結構的快速概觀，您可以使用 `DebugView` 屬性，它只適用於偵錯模式。</span><span class="sxs-lookup"><span data-stu-id="43706-104">To get a quick overview of the expression tree structure, you can use the `DebugView` property, which is available only in debug mode.</span></span> <span data-ttu-id="43706-105">如需偵錯的詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="43706-105">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>  
   
- 若要更能代表內容的運算式樹狀架構，`DebugView`屬性會使用 Visual Studio 視覺化檢視。 如需詳細資訊，請參閱[建立自訂視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)。  
+ <span data-ttu-id="43706-106">為了更能代表運算式樹狀架構的內容，`DebugView` 屬性使用 Visual Studio 視覺化檢視。</span><span class="sxs-lookup"><span data-stu-id="43706-106">To better represent the content of expression trees, the `DebugView` property uses Visual Studio visualizers.</span></span> <span data-ttu-id="43706-107">如需詳細資訊，請參閱[建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)。</span><span class="sxs-lookup"><span data-stu-id="43706-107">For more information, see [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data).</span></span>  
   
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>若要開啟運算式樹狀架構視覺化檢視  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a><span data-ttu-id="43706-108">開啟運算式樹狀架構的視覺化檢視</span><span class="sxs-lookup"><span data-stu-id="43706-108">To open a visualizer for an expression tree</span></span>  
   
-1.  按一下放大鏡圖示旁邊出現`DebugView`屬性的運算式樹狀架構中**DataTips**、**監看式** 視窗中，**自動變數** 視窗中，或**區域變數**視窗。  
+1.  <span data-ttu-id="43706-109">在 [DataTips]、[監看式] 視窗，或是在 [自動變數] 視窗或 [區域變數] 視窗中，按一下出現在運算式樹狀架構 `DebugView` 屬性旁邊的放大鏡圖示。</span><span class="sxs-lookup"><span data-stu-id="43706-109">Click the magnifying glass icon that appears next to the `DebugView` property of an expression tree in **DataTips**, a **Watch** window, the **Autos** window, or the **Locals** window.</span></span>  
   
-     視覺化檢視的清單隨即顯示。  
+     <span data-ttu-id="43706-110">視覺化檢視的清單隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="43706-110">A list of visualizers is displayed.</span></span>  
   
-2.  按一下要使用的視覺化檢視。  
+2.  <span data-ttu-id="43706-111">按一下要使用的視覺化檢視。</span><span class="sxs-lookup"><span data-stu-id="43706-111">Click the visualizer you want to use.</span></span>  
   
- 下列各節中所述，每個運算式型別會顯示在視覺化檢視。  
+ <span data-ttu-id="43706-112">如下列各節中所述，每個運算式類型會顯示在視覺化檢視中。</span><span class="sxs-lookup"><span data-stu-id="43706-112">Each expression type is displayed in the visualizer as described in the following sections.</span></span>  
   
-## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression>變數名稱會加上"$"符號開頭。</xref:System.Linq.Expressions.ParameterExpression>  
+## <a name="parameterexpressions"></a><span data-ttu-id="43706-113">ParameterExpression</span><span class="sxs-lookup"><span data-stu-id="43706-113">ParameterExpressions</span></span>  
+ <span data-ttu-id="43706-114">顯示 <xref:System.Linq.Expressions.ParameterExpression> 變數名稱時，其開頭會加上 "$" 符號。</span><span class="sxs-lookup"><span data-stu-id="43706-114"><xref:System.Linq.Expressions.ParameterExpression> variable names are displayed with a "$" symbol at the beginning.</span></span>  
   
- 如果參數沒有名稱，指派自動產生的名稱，例如`$var1`或`$var2`。  
+ <span data-ttu-id="43706-115">如果參數沒有名稱，會指派自動產生的名稱給它，例如 `$var1` 或 `$var2`。</span><span class="sxs-lookup"><span data-stu-id="43706-115">If a parameter does not have a name, it is assigned an automatically generated name, such as `$var1` or `$var2`.</span></span>  
   
-### <a name="examples"></a>範例  
+### <a name="examples"></a><span data-ttu-id="43706-116">範例</span><span class="sxs-lookup"><span data-stu-id="43706-116">Examples</span></span>  
   
 -   `Expression`  
   
@@ -55,7 +47,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Parameter(GetType(Integer), "num")  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-117">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-117">`DebugView` property</span></span>  
   
      `$num`  
   
@@ -66,14 +58,14 @@ ms.lasthandoff: 03/13/2017
     Expression.Parameter(GetType(Integer))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-118">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-118">`DebugView` property</span></span>  
   
      `$var1`  
   
-## <a name="constantexpressions"></a>ConstantExpressions  
- 如<xref:System.Linq.Expressions.ConstantExpression>整數值的字串表示的物件和`null`，就會顯示常數的值。</xref:System.Linq.Expressions.ConstantExpression>  
+## <a name="constantexpressions"></a><span data-ttu-id="43706-119">ConstantExpression</span><span class="sxs-lookup"><span data-stu-id="43706-119">ConstantExpressions</span></span>  
+ <span data-ttu-id="43706-120">對於代表整數值、字串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression> 物件，會顯示常數的值。</span><span class="sxs-lookup"><span data-stu-id="43706-120">For <xref:System.Linq.Expressions.ConstantExpression> objects that represent integer values, strings, and `null`, the value of the constant is displayed.</span></span>  
   
-### <a name="examples"></a>範例  
+### <a name="examples"></a><span data-ttu-id="43706-121">範例</span><span class="sxs-lookup"><span data-stu-id="43706-121">Examples</span></span>  
   
 -   `Expression`  
   
@@ -82,9 +74,9 @@ ms.lasthandoff: 03/13/2017
     Dim expr As ConstantExpression = Expression.Constant(num)  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-122">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-122">`DebugView` property</span></span>  
   
-     10  
+     <span data-ttu-id="43706-123">10</span><span class="sxs-lookup"><span data-stu-id="43706-123">10</span></span>  
   
 -   `Expression`  
   
@@ -93,14 +85,14 @@ ms.lasthandoff: 03/13/2017
     Dim expr As ConstantExpression = Expression.Constant(num)  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-124">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-124">`DebugView` property</span></span>  
   
-     10 D  
+     <span data-ttu-id="43706-125">10D</span><span class="sxs-lookup"><span data-stu-id="43706-125">10D</span></span>  
   
-## <a name="blockexpression"></a>BlockExpression  
- 如果類型<xref:System.Linq.Expressions.BlockExpression>區塊中的最後一個運算式的型別不同的物件，型別會顯示於`DebugInfo`角括弧括住的屬性 (\<和 >)。</xref:System.Linq.Expressions.BlockExpression> 否則，類型<xref:System.Linq.Expressions.BlockExpression>不會顯示物件。</xref:System.Linq.Expressions.BlockExpression>  
+## <a name="blockexpression"></a><span data-ttu-id="43706-126">BlockExpression</span><span class="sxs-lookup"><span data-stu-id="43706-126">BlockExpression</span></span>  
+ <span data-ttu-id="43706-127">如果 <xref:System.Linq.Expressions.BlockExpression> 物件的類型與區塊中最後一個運算式的類型不同，類型會顯示於 `DebugInfo` 屬性中並加上角括弧 (\< 和 >)。</span><span class="sxs-lookup"><span data-stu-id="43706-127">If the type of a <xref:System.Linq.Expressions.BlockExpression> object differs from the type of the last expression in the block, the type is displayed in the `DebugInfo` property in angle brackets (\< and >).</span></span> <span data-ttu-id="43706-128">否則，不會顯示 <xref:System.Linq.Expressions.BlockExpression> 物件的類型。</span><span class="sxs-lookup"><span data-stu-id="43706-128">Otherwise, the type of the <xref:System.Linq.Expressions.BlockExpression> object is not displayed.</span></span>  
   
-### <a name="examples"></a>範例  
+### <a name="examples"></a><span data-ttu-id="43706-129">範例</span><span class="sxs-lookup"><span data-stu-id="43706-129">Examples</span></span>  
   
 -   `Expression`  
   
@@ -108,7 +100,7 @@ ms.lasthandoff: 03/13/2017
     Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-130">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-130">`DebugView` property</span></span>  
   
      `.Block() {`  
   
@@ -123,7 +115,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Block(GetType(Object), Expression.Constant("test"))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-131">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-131">`DebugView` property</span></span>  
   
      `.Block<System.Object>() {`  
   
@@ -131,12 +123,12 @@ ms.lasthandoff: 03/13/2017
   
      `}`  
   
-## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression>會顯示物件，以及其委派類型。</xref:System.Linq.Expressions.LambdaExpression>  
+## <a name="lambdaexpression"></a><span data-ttu-id="43706-132">LambdaExpression</span><span class="sxs-lookup"><span data-stu-id="43706-132">LambdaExpression</span></span>  
+ <span data-ttu-id="43706-133"><xref:System.Linq.Expressions.LambdaExpression> 物件會與其委派類型一起顯示。</span><span class="sxs-lookup"><span data-stu-id="43706-133"><xref:System.Linq.Expressions.LambdaExpression> objects are displayed together with their delegate types.</span></span>  
   
- 如果 lambda 運算式並沒有名稱，它指派自動產生的名稱，例如`#Lambda1`或`#Lambda2`。  
+ <span data-ttu-id="43706-134">如果 Lambda 運算式沒有名稱，會指派自動產生的名稱給它，例如 `#Lambda1` 或 `#Lambda2`。</span><span class="sxs-lookup"><span data-stu-id="43706-134">If a lambda expression does not have a name, it is assigned an automatically generated name, such as `#Lambda1` or `#Lambda2`.</span></span>  
   
-### <a name="examples"></a>範例  
+### <a name="examples"></a><span data-ttu-id="43706-135">範例</span><span class="sxs-lookup"><span data-stu-id="43706-135">Examples</span></span>  
   
 -   `Expression`  
   
@@ -145,7 +137,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-136">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-136">`DebugView` property</span></span>  
   
      `.Lambda #Lambda1<System.Func'1[System.Int32]>() {`  
   
@@ -160,7 +152,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1), "SampleLamda", Nothing)  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-137">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-137">`DebugView` property</span></span>  
   
      `.Lambda SampleLambda<System.Func'1[System.Int32]>() {`  
   
@@ -168,14 +160,14 @@ ms.lasthandoff: 03/13/2017
   
      `}`  
   
-## <a name="labelexpression"></a>LabelExpression  
- 如果您指定的預設值<xref:System.Linq.Expressions.LabelExpression>物件，這個值會顯示前<xref:System.Linq.Expressions.LabelTarget>物件。</xref:System.Linq.Expressions.LabelTarget> </xref:System.Linq.Expressions.LabelExpression>  
+## <a name="labelexpression"></a><span data-ttu-id="43706-138">LabelExpression</span><span class="sxs-lookup"><span data-stu-id="43706-138">LabelExpression</span></span>  
+ <span data-ttu-id="43706-139">如果您指定 <xref:System.Linq.Expressions.LabelExpression> 物件的預設值，這個值會顯示在 <xref:System.Linq.Expressions.LabelTarget> 物件之前。</span><span class="sxs-lookup"><span data-stu-id="43706-139">If you specify a default value for the <xref:System.Linq.Expressions.LabelExpression> object, this value is displayed before the <xref:System.Linq.Expressions.LabelTarget> object.</span></span>  
   
- `.Label`語彙基元表示標籤的開頭。 `.LabelTarget`權杖指出跳至目標目的地。  
+ <span data-ttu-id="43706-140">`.Label` 語彙基元表示標籤的開頭。</span><span class="sxs-lookup"><span data-stu-id="43706-140">The `.Label` token indicates the start of the label.</span></span> <span data-ttu-id="43706-141">`.LabelTarget` 語彙基元表示要跳至的目標目的地。</span><span class="sxs-lookup"><span data-stu-id="43706-141">The `.LabelTarget` token indicates the destination of the target to jump to.</span></span>  
   
- 如果標籤沒有名稱，指派自動產生的名稱，例如`#Label1`或`#Label2`。  
+ <span data-ttu-id="43706-142">如果標籤沒有名稱，會指派自動產生的名稱給它，例如 `#Label1` 或 `#Label2`。</span><span class="sxs-lookup"><span data-stu-id="43706-142">If a label does not have a name, it is assigned an automatically generated name, such as `#Label1` or `#Label2`.</span></span>  
   
-### <a name="examples"></a>範例  
+### <a name="examples"></a><span data-ttu-id="43706-143">範例</span><span class="sxs-lookup"><span data-stu-id="43706-143">Examples</span></span>  
   
 -   `Expression`  
   
@@ -186,7 +178,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Label(target, Expression.Constant(-1)))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-144">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-144">`DebugView` property</span></span>  
   
      `.Block() {`  
   
@@ -208,7 +200,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Goto(target), Expression.Label(target))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-145">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-145">`DebugView` property</span></span>  
   
      `.Block() {`  
   
@@ -220,10 +212,10 @@ ms.lasthandoff: 03/13/2017
   
      `}`  
   
-## <a name="checked-operators"></a>檢查的運算子  
- 檢查的運算子中會顯示以"#"符號前面的運算子。 例如，已檢查的加法運算子會顯示為`#+`。  
+## <a name="checked-operators"></a><span data-ttu-id="43706-146">檢查的運算子</span><span class="sxs-lookup"><span data-stu-id="43706-146">Checked Operators</span></span>  
+ <span data-ttu-id="43706-147">顯示檢查的運算子時，運算子前面會有 "#" 符號。</span><span class="sxs-lookup"><span data-stu-id="43706-147">Checked operators are displayed with the "#" symbol in front of the operator.</span></span> <span data-ttu-id="43706-148">例如，已檢查的加法運算子會顯示為 `#+`。</span><span class="sxs-lookup"><span data-stu-id="43706-148">For example, the checked addition operator is displayed as `#+`.</span></span>  
   
-### <a name="examples"></a>範例  
+### <a name="examples"></a><span data-ttu-id="43706-149">範例</span><span class="sxs-lookup"><span data-stu-id="43706-149">Examples</span></span>  
   
 -   `Expression`  
   
@@ -232,7 +224,7 @@ ms.lasthandoff: 03/13/2017
     Expression.Constant(1), Expression.Constant(2))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-150">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-150">`DebugView` property</span></span>  
   
      `1 #+ 2`  
   
@@ -243,11 +235,11 @@ ms.lasthandoff: 03/13/2017
     Expression.Constant(10.0), GetType(Integer))  
     ```  
   
-     `DebugView` 屬性  
+     <span data-ttu-id="43706-151">`DebugView` 屬性</span><span class="sxs-lookup"><span data-stu-id="43706-151">`DebugView` property</span></span>  
   
      `#(System.Int32)10D`  
   
-## <a name="see-also"></a>另請參閱  
- [運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Visual Studio 偵錯](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [建立自訂的視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+## <a name="see-also"></a><span data-ttu-id="43706-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="43706-152">See Also</span></span>  
+ [<span data-ttu-id="43706-153">運算式樹狀結構 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43706-153">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [<span data-ttu-id="43706-154">Visual Studio 偵錯</span><span class="sxs-lookup"><span data-stu-id="43706-154">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)  
+ [<span data-ttu-id="43706-155">建立自訂視覺化檢視</span><span class="sxs-lookup"><span data-stu-id="43706-155">Create Custom Visualizers</span></span>](/visualstudio/debugger/create-custom-visualizers-of-data)

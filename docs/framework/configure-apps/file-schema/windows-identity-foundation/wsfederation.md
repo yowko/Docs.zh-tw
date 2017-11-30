@@ -1,105 +1,112 @@
 ---
-title: "&lt;wsFederation&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;wsFederation&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e4779baa24e172affad2ed5e04451ad791d7cdf5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsFederation&gt;
-提供設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\)。  
+# <a name="ltwsfederationgt"></a><span data-ttu-id="87155-102">&lt;wsFederation&gt;</span><span class="sxs-lookup"><span data-stu-id="87155-102">&lt;wsFederation&gt;</span></span>
+<span data-ttu-id="87155-103">提供組態<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。</span><span class="sxs-lookup"><span data-stu-id="87155-103">Provides configuration for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).</span></span>  
   
-## 語法  
+<span data-ttu-id="87155-104">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="87155-104">\<system.identityModel.services></span></span>  
+<span data-ttu-id="87155-105">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="87155-105">\<federationConfiguration></span></span>  
+<span data-ttu-id="87155-106">\<wsFederation ></span><span class="sxs-lookup"><span data-stu-id="87155-106">\<wsFederation></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="87155-107">語法</span><span class="sxs-lookup"><span data-stu-id="87155-107">Syntax</span></span>  
+  
+```xml
 <system.identityModel.services>  
-  <federationConfiguration>  
-    <wsFederation authenticationType=xs:string (URI)  
-        freshness=xs:decimal  
-        homerealm=xs:string (URI)  
-        issuer=xs:string (URI)  
-        persistentCookiesOnPassiveRedirects=xs:boolean  
-        passiveRedirectEnabled=xs:boolean  
-        policy=xs:string (URI)  
-        realm=xs:string (URI)  
-        reply=xs:string (URI)  
-        request=xs:string (URI)  
-        requestPtr=xs:string (URI)  
-        requireHttps=xs:boolean  
-        resource=xs:string (URI)  
-        signInQueryString=xs:string  
-        signOutQueryString=xs:string  
-        signOutReply=xs:string (URL)  
-    </wsFederation>  
-  </federationConfiguration>  
+  <federationConfiguration>  
+    <wsFederation authenticationType=xs:string (URI)  
+                  freshness=xs:decimal  
+                  homerealm=xs:string (URI)  
+                  issuer=xs:string (URI)  
+                  persistentCookiesOnPassiveRedirects=xs:boolean  
+                  passiveRedirectEnabled=xs:boolean  
+                  policy=xs:string (URI)  
+                  realm=xs:string (URI)  
+                  reply=xs:string (URI)  
+                  request=xs:string (URI)  
+                  requestPtr=xs:string (URI)  
+                  requireHttps=xs:boolean  
+                  resource=xs:string (URI)  
+                  signInQueryString=xs:string  
+                  signOutQueryString=xs:string  
+                  signOutReply=xs:string (URL)  
+    </wsFederation>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="87155-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="87155-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="87155-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="87155-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="87155-110">屬性</span><span class="sxs-lookup"><span data-stu-id="87155-110">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|識別碼|URI，指定將驗證類型。  WS\-同盟登入要求 wauth 參數設定。  選擇項。  預設為空字串，指定在要求中不包含 wauth 參數。|  
-|短有效期限|您想要最長使用期限的驗證要求，以分鐘為單位。  WS\-同盟登入要求 wfresh 參數設定。  選擇項。  預設值是零。  選擇項。 **Warning:**  在下一版。NET Framework 4.5， `freshness`屬性即為型別`xs:string` ，其預設值會是`null`。|  
-|homeRealm|要用於驗證的身份識別提供者 \(IP\) 的主領域。  WS\-同盟登入要求 whr 參數設定。  選擇項。  預設為空字串，指定 whr 參數不包含在要求中。|  
-|issuer|預期的語彙基元發出者 URI。  設定基底 URL 的 WS\-同盟登入要求和教具借出所需的要求。|  
-|persistentCookiesOnPassiveRedirects|指定持續性的 cookie 是否會發出驗證。  選擇項。  預設值為"false"，不會發出 cookie。|  
-|passiveRedirectEnabled|指定是否啟用 WSFAM 會自動將未經授權的要求重新導向到 STS。  選擇項。  預設值為"true"，未經授權的要求會自動重新導向。|  
-|policy|指定的位置相關的原則，若要使用的登入要求的 URL。  預設為空字串。  WS\-同盟登入要求 wp 參數設定。  選擇項。  預設為空字串，指定 wp 參數不包含在要求中。|  
-|realm|URI，屬於提出要求的領域。  \(用來識別為安全性權杖服務 \(STS\) 的信賴憑證者 \(RP\) URI\)。要求 wtrealm WS\-同盟登入要求參數設定。  必要項。|  
-|回覆|識別要接收其回覆從安全性權杖服務 \(STS\) 信賴憑證者的合作對象 \(RP\) 應用程式想要的地址的 URL。  WS\-同盟登入要求 wreply 參數設定。  選擇項。  預設為空字串，指定在要求中不包含 wreply 參數。|  
-|要求|語彙基元發佈要求。  WS\-同盟登入要求 wreq 參數設定。  選擇項。  預設為空字串，指定在要求中不包含 wreq 參數。  不包含在要求中的 \[wreq 或 wreqptr 參數隱含了 STS 知道哪一種來發出權杖。|  
-|requestPtr|可指定位置的語彙基元發佈要求的 URL。  要求的 wreqptr 參數設定。  選擇項。  預設為空字串，指定在要求中不包含 wreqptr 參數。  不包含在要求中的 \[wreq 或 wreqptr 參數隱含了 STS 知道哪一種來發出權杖。|  
-|requireHttps|指定是否與安全性權杖服務 \(STS\) 通訊必須使用 HTTPS 通訊協定。  選擇項。  預設值為"true"，必須使用 HTTPS。|  
-|Resource \- 資源|URI，識別所存取的資源信賴憑證者 \(RP\)，為安全性權杖服務 \(STS\)。  選擇項。  WS\-同盟登入要求 wres 參數設定。  選擇項。  預設為空字串，指定在要求中不包含 wres 參數。 **Note:**  wres 是傳統的參數。  指定`realm`改為使用 wtrealm 參數的屬性。|  
-|signInQueryString|提供的擴充點的 WS\-同盟登入要求 URL 中指定應用程式所定義的查詢參數。  選擇項。  預設為空字串，指定無其他參數應包含在要求中。  參數會指定為使用下列形式的查詢字串片段： `“param1=value1&param2=value2&param3=value3”` ，以此類推。 **Note:**  在組態檔中 ' &"查詢字串中的字元必須使用其實體參考，來指定`&`。|  
-|signOutQueryString|提供的擴充點的 WS\-同盟登入要求 URL 中指定應用程式所定義的查詢參數。  選擇項。  預設為空字串，指定無其他參數應包含在要求中。  參數會指定為使用下列形式的查詢字串片段： `“param1=value1&param2=value2&param3=value3”` ，以此類推。 **Note:**  在組態檔中 ' &"查詢字串中的字元必須使用其實體參考，來指定`&`。|  
-|signOutReply|在重新導向的 URL 用戶端應該是由安全性權杖服務 \(STS\) 時指定被動教具借出透過 WS\-同盟通訊協定。  將 wreply 參數設定的 WS\-同盟教具借出要求。  選擇項。  預設為空字串，指定無其他參數應包含在要求中。|  
+|<span data-ttu-id="87155-111">屬性</span><span class="sxs-lookup"><span data-stu-id="87155-111">Attribute</span></span>|<span data-ttu-id="87155-112">說明</span><span class="sxs-lookup"><span data-stu-id="87155-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="87155-113">authenticationType</span><span class="sxs-lookup"><span data-stu-id="87155-113">authenticationType</span></span>|<span data-ttu-id="87155-114">URI，指定驗證類型。</span><span class="sxs-lookup"><span data-stu-id="87155-114">A URI that specifies the authentication type.</span></span> <span data-ttu-id="87155-115">WS-同盟登入要求 wauth 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-115">Sets the WS-Federation sign-in request wauth parameter.</span></span> <span data-ttu-id="87155-116">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-116">Optional.</span></span> <span data-ttu-id="87155-117">預設為空字串，指定 wauth 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-117">The default is an empty string, which specifies that the wauth parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="87155-118">有效期限</span><span class="sxs-lookup"><span data-stu-id="87155-118">freshness</span></span>|<span data-ttu-id="87155-119">所需最長使用期限的驗證要求，以分鐘為單位。</span><span class="sxs-lookup"><span data-stu-id="87155-119">The desired maximum age of authentication requests, in minutes.</span></span> <span data-ttu-id="87155-120">WS-同盟登入要求 wfresh 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-120">Sets the WS-Federation sign-in request wfresh parameter.</span></span> <span data-ttu-id="87155-121">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-121">Optional.</span></span> <span data-ttu-id="87155-122">預設值是零。</span><span class="sxs-lookup"><span data-stu-id="87155-122">The default is zero.</span></span> <span data-ttu-id="87155-123">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-123">Optional.</span></span> <span data-ttu-id="87155-124">**警告：**下一版的.NET Framework 4.5、`freshness`屬性都屬於類型`xs:string`和其預設值為`null`。</span><span class="sxs-lookup"><span data-stu-id="87155-124">**Warning:**  In the next release of .NET Framework 4.5, the `freshness` attribute will be of type `xs:string` and its default value will be `null`.</span></span>|  
+|<span data-ttu-id="87155-125">homeRealm</span><span class="sxs-lookup"><span data-stu-id="87155-125">homeRealm</span></span>|<span data-ttu-id="87155-126">要用於驗證的身分識別提供者 (IP) 主領域。</span><span class="sxs-lookup"><span data-stu-id="87155-126">The home realm of the identity provider (IP) to use for authentication.</span></span> <span data-ttu-id="87155-127">WS-同盟登入要求 whr 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-127">Sets the WS-Federation sign-in request whr parameter.</span></span> <span data-ttu-id="87155-128">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-128">Optional.</span></span> <span data-ttu-id="87155-129">預設為空字串，指定 whr 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-129">The default is an empty string, which specifies that the whr parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="87155-130">issuer</span><span class="sxs-lookup"><span data-stu-id="87155-130">issuer</span></span>|<span data-ttu-id="87155-131">預期的權杖簽發者的 URI。</span><span class="sxs-lookup"><span data-stu-id="87155-131">The URI of the intended token issuer.</span></span> <span data-ttu-id="87155-132">設定基底 URL 的 WS-同盟登入要求和所需的登出要求。</span><span class="sxs-lookup"><span data-stu-id="87155-132">Sets the base URL of WS-Federation sign-in requests and sign-out requests Required.</span></span>|  
+|<span data-ttu-id="87155-133">persistentCookiesOnPassiveRedirects</span><span class="sxs-lookup"><span data-stu-id="87155-133">persistentCookiesOnPassiveRedirects</span></span>|<span data-ttu-id="87155-134">指定是否要針對驗證，來發出永續性 cookie。</span><span class="sxs-lookup"><span data-stu-id="87155-134">Specifies whether persistent cookies are issued on authentication.</span></span> <span data-ttu-id="87155-135">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-135">Optional.</span></span> <span data-ttu-id="87155-136">預設值為"false"，不會發行 cookie。</span><span class="sxs-lookup"><span data-stu-id="87155-136">The default is "false", cookies are not issued.</span></span>|  
+|<span data-ttu-id="87155-137">passiveRedirectEnabled</span><span class="sxs-lookup"><span data-stu-id="87155-137">passiveRedirectEnabled</span></span>|<span data-ttu-id="87155-138">指定是否啟用 WSFAM 自動未經授權的要求重新導向至 STS。</span><span class="sxs-lookup"><span data-stu-id="87155-138">Specifies whether the WSFAM is enabled to automatically redirect unauthorized requests to an STS.</span></span> <span data-ttu-id="87155-139">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-139">Optional.</span></span> <span data-ttu-id="87155-140">預設值為"true"，未經授權的要求會自動重新導向。</span><span class="sxs-lookup"><span data-stu-id="87155-140">The default is "true", unauthorized requests are automatically redirected.</span></span>|  
+|<span data-ttu-id="87155-141">原則</span><span class="sxs-lookup"><span data-stu-id="87155-141">policy</span></span>|<span data-ttu-id="87155-142">指定的登入要求上使用相關的原則位置的 URL。</span><span class="sxs-lookup"><span data-stu-id="87155-142">A URL that specifies the location of the relevant policy to use on sign-in requests.</span></span> <span data-ttu-id="87155-143">預設為空字串。</span><span class="sxs-lookup"><span data-stu-id="87155-143">The default is an empty string.</span></span> <span data-ttu-id="87155-144">WS-同盟登入要求 wp 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-144">Sets the WS-Federation sign-in request wp parameter.</span></span> <span data-ttu-id="87155-145">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-145">Optional.</span></span> <span data-ttu-id="87155-146">預設為空字串，指定 wp 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-146">The default is an empty string, which specifies that the wp parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="87155-147">realm</span><span class="sxs-lookup"><span data-stu-id="87155-147">realm</span></span>|<span data-ttu-id="87155-148">要求領域的 URI。</span><span class="sxs-lookup"><span data-stu-id="87155-148">The URI of the requesting realm.</span></span> <span data-ttu-id="87155-149">(可識別信賴憑證者的合作對象 (RP) 的安全性權杖服務 (STS) URI)。設定要求 wtrealm WS-同盟登入要求的參數。</span><span class="sxs-lookup"><span data-stu-id="87155-149">(A URI that identifies the relying party (RP) to the security token service (STS).) Sets the request wtrealm WS-Federation sign-in request parameter.</span></span> <span data-ttu-id="87155-150">必要項。</span><span class="sxs-lookup"><span data-stu-id="87155-150">Required.</span></span>|  
+|<span data-ttu-id="87155-151">回覆</span><span class="sxs-lookup"><span data-stu-id="87155-151">reply</span></span>|<span data-ttu-id="87155-152">URL 識別的信賴憑證者的合作對象 (RP) 應用程式想要從安全性權杖服務 (STS) 都會收到回覆地址。</span><span class="sxs-lookup"><span data-stu-id="87155-152">A URL that identifies the address at which the relying party (RP) application would like to receive replies from the Security Token Service (STS).</span></span> <span data-ttu-id="87155-153">WS-同盟登入要求 wreply 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-153">Sets the WS-Federation sign-in request wreply parameter.</span></span> <span data-ttu-id="87155-154">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-154">Optional.</span></span> <span data-ttu-id="87155-155">預設為空字串，指定 wreply 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-155">The default is an empty string, which specifies that the wreply parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="87155-156">要求</span><span class="sxs-lookup"><span data-stu-id="87155-156">request</span></span>|<span data-ttu-id="87155-157">權杖發佈要求。</span><span class="sxs-lookup"><span data-stu-id="87155-157">The token issuance request.</span></span> <span data-ttu-id="87155-158">WS-同盟登入要求 wreq 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-158">Sets the WS-Federation sign-in request wreq parameter.</span></span> <span data-ttu-id="87155-159">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-159">Optional.</span></span> <span data-ttu-id="87155-160">預設為空字串，指定 wreq 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-160">The default is an empty string, which specifies that the wreq parameter is not included in the request.</span></span> <span data-ttu-id="87155-161">不包括在要求中的 wreq 或 wreqptr 參數表示 STS 知道要發出的權杖類型。</span><span class="sxs-lookup"><span data-stu-id="87155-161">Not including the wreq or the wreqptr parameter in the request implies that the STS knows what kind of token to issue.</span></span>|  
+|<span data-ttu-id="87155-162">requestPtr</span><span class="sxs-lookup"><span data-stu-id="87155-162">requestPtr</span></span>|<span data-ttu-id="87155-163">指定權杖發佈要求的位置的 URL。</span><span class="sxs-lookup"><span data-stu-id="87155-163">A URL that specifies the location of the token issuance request.</span></span> <span data-ttu-id="87155-164">設定要求的 wreqptr 參數。</span><span class="sxs-lookup"><span data-stu-id="87155-164">Sets the request wreqptr parameter.</span></span> <span data-ttu-id="87155-165">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-165">Optional.</span></span> <span data-ttu-id="87155-166">預設為空字串，指定 wreqptr 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-166">The default is an empty string, which specifies that the wreqptr parameter is not included in the request.</span></span> <span data-ttu-id="87155-167">不包括在要求中的 wreq 或 wreqptr 參數表示 STS 知道要發出的權杖類型。</span><span class="sxs-lookup"><span data-stu-id="87155-167">Not including the wreq or the wreqptr parameter in the request implies that the STS knows what kind of token to issue.</span></span>|  
+|<span data-ttu-id="87155-168">requireHttps</span><span class="sxs-lookup"><span data-stu-id="87155-168">requireHttps</span></span>|<span data-ttu-id="87155-169">指定與安全性權杖服務 (STS) 的通訊是否必須使用 HTTPS 通訊協定。</span><span class="sxs-lookup"><span data-stu-id="87155-169">Specifies whether communication with the security token service (STS) must use HTTPS protocol.</span></span> <span data-ttu-id="87155-170">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-170">Optional.</span></span> <span data-ttu-id="87155-171">預設值為"true"，則必須使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="87155-171">The default is "true", HTTPS must be used.</span></span>|  
+|<span data-ttu-id="87155-172">資源</span><span class="sxs-lookup"><span data-stu-id="87155-172">resource</span></span>|<span data-ttu-id="87155-173">URI 為識別所存取之資源的信賴憑證者的合作對象 (RP)，以安全性權杖服務 (STS)。</span><span class="sxs-lookup"><span data-stu-id="87155-173">A URI that identifies the resource being accessed, the relying party (RP), to the to the security token service (STS).</span></span> <span data-ttu-id="87155-174">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-174">Optional.</span></span> <span data-ttu-id="87155-175">WS-同盟登入要求 wres 參數設定。</span><span class="sxs-lookup"><span data-stu-id="87155-175">Sets the WS-Federation sign-in request wres parameter.</span></span> <span data-ttu-id="87155-176">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-176">Optional.</span></span> <span data-ttu-id="87155-177">預設為空字串，指定 wres 參數不包含在要求中。</span><span class="sxs-lookup"><span data-stu-id="87155-177">The default is an empty string, which specifies that the wres parameter is not included in the request.</span></span> <span data-ttu-id="87155-178">**注意：** wres 是傳統的參數。</span><span class="sxs-lookup"><span data-stu-id="87155-178">**Note:**  wres is a legacy parameter.</span></span> <span data-ttu-id="87155-179">指定`realm`改為使用 wtrealm 參數的屬性。</span><span class="sxs-lookup"><span data-stu-id="87155-179">Specify the `realm` attribute to use the wtrealm parameter instead.</span></span>|  
+|<span data-ttu-id="87155-180">signInQueryString</span><span class="sxs-lookup"><span data-stu-id="87155-180">signInQueryString</span></span>|<span data-ttu-id="87155-181">提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。</span><span class="sxs-lookup"><span data-stu-id="87155-181">Provides an extensibility point to specify application defined query parameters in the WS-Federation sign-in request URL.</span></span> <span data-ttu-id="87155-182">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-182">Optional.</span></span> <span data-ttu-id="87155-183">預設為空字串，指定應該在要求中包含其他任何參數。</span><span class="sxs-lookup"><span data-stu-id="87155-183">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span> <span data-ttu-id="87155-184">參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。</span><span class="sxs-lookup"><span data-stu-id="87155-184">The parameters are specified as a query string fragment using the following form: `"param1=value1&param2=value2&param3=value3"` and so on.</span></span> <span data-ttu-id="87155-185">**注意：**組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。</span><span class="sxs-lookup"><span data-stu-id="87155-185">**Note:**  In a configuration file the ‘&" character in the query string must be specified using its entity reference, `&`.</span></span>|  
+|<span data-ttu-id="87155-186">signOutQueryString</span><span class="sxs-lookup"><span data-stu-id="87155-186">signOutQueryString</span></span>|<span data-ttu-id="87155-187">提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。</span><span class="sxs-lookup"><span data-stu-id="87155-187">Provides an extensibility point to specify application defined query parameters in the WS-Federation sign-in request URL.</span></span> <span data-ttu-id="87155-188">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-188">Optional.</span></span> <span data-ttu-id="87155-189">預設為空字串，指定應該在要求中包含其他任何參數。</span><span class="sxs-lookup"><span data-stu-id="87155-189">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span> <span data-ttu-id="87155-190">參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。</span><span class="sxs-lookup"><span data-stu-id="87155-190">The parameters are specified as a query string fragment using the following form: `"param1=value1&param2=value2&param3=value3"` and so on.</span></span> <span data-ttu-id="87155-191">**注意：**組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。</span><span class="sxs-lookup"><span data-stu-id="87155-191">**Note:**  In a configuration file the ‘&" character in the query string must be specified using its entity reference, `&`.</span></span>|  
+|<span data-ttu-id="87155-192">signOutReply</span><span class="sxs-lookup"><span data-stu-id="87155-192">signOutReply</span></span>|<span data-ttu-id="87155-193">在被動登出透過 WS-同盟通訊協定中指定的用戶端應該重新導向安全性權杖服務 (STS) 的 URL。</span><span class="sxs-lookup"><span data-stu-id="87155-193">Specifies the URL to which the client should be redirected by the security token service (STS) during passive sign-out through the WS-Federation protocol.</span></span> <span data-ttu-id="87155-194">在 WS-同盟登出要求上設定 wreply 的參數。</span><span class="sxs-lookup"><span data-stu-id="87155-194">Sets the wreply parameter on a WS-Federation sign-out request.</span></span> <span data-ttu-id="87155-195">選擇項。</span><span class="sxs-lookup"><span data-stu-id="87155-195">Optional.</span></span> <span data-ttu-id="87155-196">預設為空字串，指定應該在要求中包含其他任何參數。</span><span class="sxs-lookup"><span data-stu-id="87155-196">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span>|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a><span data-ttu-id="87155-197">子元素</span><span class="sxs-lookup"><span data-stu-id="87155-197">Child Elements</span></span>  
+ <span data-ttu-id="87155-198">無</span><span class="sxs-lookup"><span data-stu-id="87155-198">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="87155-199">父項目</span><span class="sxs-lookup"><span data-stu-id="87155-199">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含設定的<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\)。|  
+|<span data-ttu-id="87155-200">項目</span><span class="sxs-lookup"><span data-stu-id="87155-200">Element</span></span>|<span data-ttu-id="87155-201">說明</span><span class="sxs-lookup"><span data-stu-id="87155-201">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="87155-202">\<federationConfiguration></span><span class="sxs-lookup"><span data-stu-id="87155-202">\<federationConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|<span data-ttu-id="87155-203">包含設定的設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。</span><span class="sxs-lookup"><span data-stu-id="87155-203">Contains the settings that configure the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span></span>|  
   
-## 備註  
- 您可以使用`<wsFederation>`元素來設定為 WSFAM 的 WS\-同盟參數的預設設定，以及預設的行為。  WS\-同盟參數設定定義在`<wsFederation>`項目集合對等的屬性所公開的<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>類別。  這些屬性會維持相同的每個由 WSFAM 所發出的要求。  您可以藉由新增 WSFAM ； 所公開的事件的事件處理常式處理要求期間以動態方式變更 WS\-同盟參數 例如， <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>事件。  如需詳細資訊，請參閱 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別的文件。  
+## <a name="remarks"></a><span data-ttu-id="87155-204">備註</span><span class="sxs-lookup"><span data-stu-id="87155-204">Remarks</span></span>  
+ <span data-ttu-id="87155-205">您可以使用`<wsFederation>`WSFAM 設定預設的 WS-同盟參數設定和預設行為的項目。</span><span class="sxs-lookup"><span data-stu-id="87155-205">You can use the `<wsFederation>` element to configure default WS-Federation parameter settings and default behavior for the WSFAM.</span></span> <span data-ttu-id="87155-206">定義在 WS-同盟參數設定`<wsFederation>`元素設定對等所公開的屬性<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>類別。</span><span class="sxs-lookup"><span data-stu-id="87155-206">WS-Federation parameter settings defined under the `<wsFederation>` element set equivalent properties exposed by the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> class.</span></span> <span data-ttu-id="87155-207">這些屬性保持不變 WSFAM 所發出的每個要求。</span><span class="sxs-lookup"><span data-stu-id="87155-207">These properties remain the same for every request issued by the WSFAM.</span></span> <span data-ttu-id="87155-208">您可以將 WSFAM; 所公開的事件的事件處理常式加入處理要求期間，動態變更 WS-同盟參數例如，<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>事件。</span><span class="sxs-lookup"><span data-stu-id="87155-208">You can change the WS-Federation parameters dynamically during request processing by adding event handlers for the events exposed by WSFAM; for example, the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> event.</span></span> <span data-ttu-id="87155-209">如需詳細資訊，請參閱文件<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>類別。</span><span class="sxs-lookup"><span data-stu-id="87155-209">For more information, see the documentation for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> class.</span></span>  
   
- `<wsFederation>`項目會以<xref:System.IdentityModel.Services.Configuration.WSFederationElement>類別。  組態物件本身由<xref:System.IdentityModel.Services.Configuration.WSFederationConfiguration>類別。  會有一個<xref:System.IdentityModel.Services.Configuration.WSFederationConfiguration>執行個體上設定<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件，便會透過<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>屬性，並提供 WSFAM 的設定。  
+ <span data-ttu-id="87155-210">`<wsFederation>`項目由<xref:System.IdentityModel.Services.Configuration.WSFederationElement>類別。</span><span class="sxs-lookup"><span data-stu-id="87155-210">The `<wsFederation>` element is represented by the <xref:System.IdentityModel.Services.Configuration.WSFederationElement> class.</span></span> <span data-ttu-id="87155-211">組態物件本身由<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>類別。</span><span class="sxs-lookup"><span data-stu-id="87155-211">The configuration object itself is represented by the <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> class.</span></span> <span data-ttu-id="87155-212">單一<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>執行個體上設定<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件透過存取<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>屬性，並提供 WSFAM 的組態。</span><span class="sxs-lookup"><span data-stu-id="87155-212">A single <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> instance is set on the <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> object that is accessed through the <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> property and provides configuration for the WSFAM.</span></span>  
   
-## 範例  
- 下列 XML 顯示`<wsFederation>` WSFAM 的設定值的指定項目。  
+## <a name="example"></a><span data-ttu-id="87155-213">範例</span><span class="sxs-lookup"><span data-stu-id="87155-213">Example</span></span>  
+ <span data-ttu-id="87155-214">下列 XML 會說明`<wsFederation>`指定 WSFAM 的設定項目。</span><span class="sxs-lookup"><span data-stu-id="87155-214">The following XML shows a `<wsFederation>` element that specifies settings for the WSFAM.</span></span>  
   
 > [!WARNING]
->  在這個範例中，WSFAM 不是需要使用 HTTPS。  這是因為`requireHttps`在`<wsFederation>`項目設定`false`。  這項設定不會建議大多數實際執行環境，因為它不會帶來安全性風險。  
+>  <span data-ttu-id="87155-215">在此範例中，WSFAM 不需要使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="87155-215">In this example, the WSFAM is not required to use HTTPS.</span></span> <span data-ttu-id="87155-216">這是因為`requireHttps`屬性`<wsFederation>`元素設定`false`。</span><span class="sxs-lookup"><span data-stu-id="87155-216">This is because the `requireHttps` attribute on the `<wsFederation>` element is set `false`.</span></span> <span data-ttu-id="87155-217">這項設定不會建議針對大部分的實際執行環境，因為它可能會有安全性風險。</span><span class="sxs-lookup"><span data-stu-id="87155-217">This setting is not recommended for most production environments as it may present a security risk.</span></span>  
   
-```  
+```xml
 <wsFederation passiveRedirectEnabled="true"   
-  issuer="http://localhost:15839/wsFederationSTS/Issue"   
-  realm="http://localhost:50969/"   
-  reply="http://localhost:50969/"   
-  requireHttps="false"   
-  signOutReply="http://localhost:50969/SignedOutPage.html"   
-  signOutQueryString="Param1=value2&Param2=value2"   
-  persistentCookiesOnPassiveRedirects="true" />  
-  
+              issuer="http://localhost:15839/wsFederationSTS/Issue"   
+              realm="http://localhost:50969/"   
+              reply="http://localhost:50969/"   
+              requireHttps="false"   
+              signOutReply="http://localhost:50969/SignedOutPage.html"   
+              signOutQueryString="Param1=value2&Param2=value2"   
+              persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## 請參閱  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>
+## <a name="see-also"></a><span data-ttu-id="87155-218">另請參閱</span><span class="sxs-lookup"><span data-stu-id="87155-218">See Also</span></span>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
+ <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

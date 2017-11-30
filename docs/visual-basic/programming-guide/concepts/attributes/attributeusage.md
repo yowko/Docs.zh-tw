@@ -1,33 +1,25 @@
 ---
-title: "AttributeUsage (Visual Basic) |Microsoft 文件"
+title: AttributeUsage (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf56f40033f9d1547d63fccd25e3c0561bb62cb1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-決定如何使用自訂屬性類別。 `AttributeUsage`是可以套用自訂屬性定義，來控制如何套用新屬性的屬性。 明確地套用時，預設值看起來像這樣︰  
+# <a name="attributeusage-visual-basic"></a><span data-ttu-id="97bd3-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97bd3-102">AttributeUsage (Visual Basic)</span></span>
+<span data-ttu-id="97bd3-103">決定如何使用自訂屬性類別。</span><span class="sxs-lookup"><span data-stu-id="97bd3-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="97bd3-104">`AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。</span><span class="sxs-lookup"><span data-stu-id="97bd3-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="97bd3-105">明確套用時，預設設定看起來會像這樣︰</span><span class="sxs-lookup"><span data-stu-id="97bd3-105">The default settings look like this when applied explicitly:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -38,9 +30,9 @@ Class NewAttribute
 End Class  
 ```  
   
- 在此範例中，`NewAttribute`類別可以套用至任何可屬性的程式碼的實體，但可以一次只能套用至每個實體。 它會由衍生類別，當套用至基底類別繼承。  
+ <span data-ttu-id="97bd3-106">在此範例中，`NewAttribute` 類別可以套用至任何可屬性化的程式碼實體，但只能對每個實體套用一次。</span><span class="sxs-lookup"><span data-stu-id="97bd3-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="97bd3-107">當套用至基底類別時，其由衍生類別所繼承。</span><span class="sxs-lookup"><span data-stu-id="97bd3-107">It is inherited by derived classes when applied to a base class.</span></span>  
   
- `AllowMultiple`和`Inherited`引數是選擇性的因此此程式碼有相同的效果︰  
+ <span data-ttu-id="97bd3-108">`AllowMultiple` 和 `Inherited` 是選擇性引數，因此這個程式碼具有相同的效果︰</span><span class="sxs-lookup"><span data-stu-id="97bd3-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -49,7 +41,7 @@ Class NewAttribute
 End Class  
 ```  
   
- 第一個`AttributeUsage`引數必須是一個或多個元素的<xref:System.AttributeTargets>列舉型別。</xref:System.AttributeTargets> 多個目標類型可以連結搭配 OR 運算子，就像這樣︰  
+ <span data-ttu-id="97bd3-109">第一個 `AttributeUsage` 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個元素。</span><span class="sxs-lookup"><span data-stu-id="97bd3-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="97bd3-110">您可以使用 OR 運算子來連結多個目標類型，與下面類似：</span><span class="sxs-lookup"><span data-stu-id="97bd3-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -62,7 +54,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- 如果`AllowMultiple`引數設定為`true`，則產生的屬性可以多次套用至單一實體，就像這樣︰  
+ <span data-ttu-id="97bd3-111">如果 `AllowMultiple` 引數設為 `true`，則可以將產生的屬性多次套用至單一實體，與下面類似：</span><span class="sxs-lookup"><span data-stu-id="97bd3-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -79,9 +71,9 @@ Class Class1
 End Class  
 ```  
   
- 在此情況下`MultiUseAttr`因為可以重複套用`AllowMultiple`設為`true`。 顯示套用多個屬性的兩種格式都有效。  
+ <span data-ttu-id="97bd3-112">在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttr`。</span><span class="sxs-lookup"><span data-stu-id="97bd3-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="97bd3-113">套用多個屬性所顯示的兩種格式都有效。</span><span class="sxs-lookup"><span data-stu-id="97bd3-113">Both formats shown for applying multiple attributes are valid.</span></span>  
   
- 如果`Inherited`設為`false`，則衍生自類別，其屬性的類別不繼承屬性。 例如:   
+ <span data-ttu-id="97bd3-114">如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。</span><span class="sxs-lookup"><span data-stu-id="97bd3-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="97bd3-115">例如: </span><span class="sxs-lookup"><span data-stu-id="97bd3-115">For example:</span></span>  
   
 ```vb  
 Imports System  
@@ -103,15 +95,15 @@ Class DClass
 End Class  
 ```  
   
- 在此情況下`Attr1`不會套用至`DClass`經由繼承。  
+ <span data-ttu-id="97bd3-116">在此情況下，不會透過繼承將 `Attr1` 套用至 `DClass`。</span><span class="sxs-lookup"><span data-stu-id="97bd3-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
   
-## <a name="remarks"></a>備註  
- `AttributeUsage`屬性是單次使用屬性-它無法套用一次以上至相同的類別。 `AttributeUsage`<xref:System.AttributeUsageAttribute>.</xref:System.AttributeUsageAttribute>的別名  
+## <a name="remarks"></a><span data-ttu-id="97bd3-117">備註</span><span class="sxs-lookup"><span data-stu-id="97bd3-117">Remarks</span></span>  
+ <span data-ttu-id="97bd3-118">`AttributeUsage` 屬性是單次使用的屬性--它無法多次套用至相同的類別。</span><span class="sxs-lookup"><span data-stu-id="97bd3-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="97bd3-119">`AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的別名。</span><span class="sxs-lookup"><span data-stu-id="97bd3-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
   
- 如需詳細資訊，請參閱[存取的屬性，使用反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
+ <span data-ttu-id="97bd3-120">如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="97bd3-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例示範的效果`Inherited`和`AllowMultiple`引數`AttributeUsage`屬性及可列舉的自訂屬性套用至類別的方式。  
+## <a name="example"></a><span data-ttu-id="97bd3-121">範例</span><span class="sxs-lookup"><span data-stu-id="97bd3-121">Example</span></span>  
+ <span data-ttu-id="97bd3-122">下列範例示範 `AttributeUsage` 屬性的 `Inherited` 和 `AllowMultiple` 引數的效果，以及如何列舉套用至類別的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="97bd3-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
   
 ```vb  
 Imports System  
@@ -166,7 +158,7 @@ Public Class TestAttributeUsage
 End Class  
 ```  
   
-## <a name="sample-output"></a>範例輸出  
+## <a name="sample-output"></a><span data-ttu-id="97bd3-123">範例輸出</span><span class="sxs-lookup"><span data-stu-id="97bd3-123">Sample Output</span></span>  
   
 ```  
 Attributes on Base Class:  
@@ -178,12 +170,12 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Attribute></xref:System.Attribute>   
- <xref:System.Reflection></xref:System.Reflection>   
- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)   
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [使用反映 (Visual Basic) 存取屬性](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="97bd3-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="97bd3-124">See Also</span></span>  
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [<span data-ttu-id="97bd3-125">Visual Basic 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="97bd3-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="97bd3-126">屬性</span><span class="sxs-lookup"><span data-stu-id="97bd3-126">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)  
+ [<span data-ttu-id="97bd3-127">反映 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97bd3-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="97bd3-128">屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97bd3-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
+ [<span data-ttu-id="97bd3-129">建立自訂屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97bd3-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="97bd3-130">使用反映存取屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97bd3-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

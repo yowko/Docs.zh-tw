@@ -1,49 +1,52 @@
 ---
-title: "如何：實作繫結驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "繫結, 驗證"
-  - "資料繫結, 繫結驗證"
-  - "繫結驗證"
+title: "操作說明：實作繫結驗證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validation of binding [WPF]
+- data binding [WPF], validation of binding
+- binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：實作繫結驗證
-本範例顯示如何使用 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 和樣式觸發程序，以提供視覺化回應，依據自訂驗證規則以在輸入無效值時通知使用者。  
+# <a name="how-to-implement-binding-validation"></a><span data-ttu-id="17148-102">操作說明：實作繫結驗證</span><span class="sxs-lookup"><span data-stu-id="17148-102">How to: Implement Binding Validation</span></span>
+<span data-ttu-id="17148-103">這個範例示範如何使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>樣式觸發程序提供視覺化回應，來通知使用者，當您輸入無效的值，根據自訂驗證規則。</span><span class="sxs-lookup"><span data-stu-id="17148-103">This example shows how to use an <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> and a style trigger to provide visual feedback to inform the user when an invalid value is entered, based on a custom validation rule.</span></span>  
   
-## 範例  
- 下列範例中 <xref:System.Windows.Controls.TextBox> 的文字內容，是繫結到名為 `ods` 的[繫結來源](GTMT)物件的 `Age` 屬性 \(型別 int\)。  繫結是設為使用名為 `AgeRangeRule` 的驗證規則，因此如果使用者輸入非數值字元或小於 21 或大於 130 的值，文字方塊旁邊會出現紅色驚嘆號，並在使用者移動滑鼠到文字方塊上方時出現具有錯誤訊息的工具提示。  
+## <a name="example"></a><span data-ttu-id="17148-104">範例</span><span class="sxs-lookup"><span data-stu-id="17148-104">Example</span></span>  
+ <span data-ttu-id="17148-105">文字內容<xref:System.Windows.Controls.TextBox>在下列範例中會繫結至`Age`屬性 （屬於類型 int) 的繫結來源物件，名為`ods`。</span><span class="sxs-lookup"><span data-stu-id="17148-105">The text content of the <xref:System.Windows.Controls.TextBox> in the following example is bound to the `Age` property (of type int) of a binding source object named `ods`.</span></span> <span data-ttu-id="17148-106">繫結是設為使用名為 `AgeRangeRule` 的驗證規則，因此如果使用者輸入非數值字元或小於 21 或大於 130 的值，文字方塊旁邊會出現紅色驚嘆號，並在使用者移動滑鼠到文字方塊上方時出現具有錯誤訊息的工具提示。</span><span class="sxs-lookup"><span data-stu-id="17148-106">The binding is set up to use a validation rule named `AgeRangeRule` so that if the user enters non-numeric characters or a value that is smaller than 21 or greater than 130, a red exclamation mark appears next to the text box and a tool tip with the error message appears when the user moves the mouse over the text box.</span></span>  
   
- [!code-xml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
+ [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
   
- 下列範例顯示 `AgeRangeRule` 的實作，該規則繼承自 <xref:System.Windows.Controls.ValidationRule> 並會覆寫 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 方法。  Int32.Parse\(\) 方法會針對值呼叫，以確認當中沒有包含任何無效的字元。  <xref:System.Windows.Controls.ValidationRule.Validate%2A> 方法傳回的 <xref:System.Windows.Controls.ValidationResult> 會依據剖析期間是否有攔截到例外狀況以及年齡值是否超出上下限，以指出值是否有效。  
+ <span data-ttu-id="17148-107">下列範例顯示實作`AgeRangeRule`，後者繼承自<xref:System.Windows.Controls.ValidationRule>和覆寫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="17148-107">The following example shows the implementation of `AgeRangeRule`, which inherits from <xref:System.Windows.Controls.ValidationRule> and overrides the <xref:System.Windows.Controls.ValidationRule.Validate%2A> method.</span></span> <span data-ttu-id="17148-108">Int32.Parse() 方法會針對值呼叫，以確認當中沒有包含任何無效的字元。</span><span class="sxs-lookup"><span data-stu-id="17148-108">The Int32.Parse() method is called on the value to make sure that it does not contain any invalid characters.</span></span> <span data-ttu-id="17148-109"><xref:System.Windows.Controls.ValidationRule.Validate%2A>方法會傳回<xref:System.Windows.Controls.ValidationResult>，指出值是否有效根據是否在剖析期間攔截到例外狀況，以及是否保留時間值超出的下限與上限。</span><span class="sxs-lookup"><span data-stu-id="17148-109">The <xref:System.Windows.Controls.ValidationRule.Validate%2A> method returns a <xref:System.Windows.Controls.ValidationResult> that indicates if the value is valid based on whether an exception is caught during the parsing and whether the age value is outside of the lower and upper bounds.</span></span>  
   
  [!code-csharp[BindValidation#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
   
- 下列範例顯示的自訂 <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` 會建立紅色驚嘆號，告知使用者發生驗證錯誤。  控制項樣板是用於重新定義控制項的外觀。  
+ <span data-ttu-id="17148-110">下列範例示範自訂<xref:System.Windows.Controls.ControlTemplate>`validationTemplate`會建立紅色驚嘆號，通知使用者的驗證錯誤。</span><span class="sxs-lookup"><span data-stu-id="17148-110">The following example shows the custom <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` that creates a red exclamation mark to notify the user of a validation error.</span></span> <span data-ttu-id="17148-111">控制項樣板是用於重新定義控制項的外觀。</span><span class="sxs-lookup"><span data-stu-id="17148-111">Control templates are used to redefine the appearance of a control.</span></span>  
   
- [!code-xml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
+ [!code-xaml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
   
- 如下列範例所示，顯示錯誤訊息的 <xref:System.Windows.Controls.ToolTip> 是使用名為 `textBoxInError` 的樣式建立的。  如果 <xref:System.Windows.Controls.Validation.HasError%2A> 的值為 `true`，觸發程序會將目前 <xref:System.Windows.Controls.TextBox> 的工具提示設定為其第一個驗證錯誤。  <xref:System.Windows.Data.Binding.RelativeSource%2A> 設定為 <xref:System.Windows.Data.RelativeSourceMode>，代表目前的項目。  
+ <span data-ttu-id="17148-112">下列範例所示<xref:System.Windows.Controls.ToolTip>，它會顯示錯誤訊息會建立名為樣式`textBoxInError`。</span><span class="sxs-lookup"><span data-stu-id="17148-112">As shown in the following example, the <xref:System.Windows.Controls.ToolTip> that shows the error message is created using the style named `textBoxInError`.</span></span> <span data-ttu-id="17148-113">如果值<xref:System.Windows.Controls.Validation.HasError%2A>是`true`，觸發程序設定的工具提示的目前<xref:System.Windows.Controls.TextBox>到其第一個驗證錯誤。</span><span class="sxs-lookup"><span data-stu-id="17148-113">If the value of <xref:System.Windows.Controls.Validation.HasError%2A> is `true`, the trigger sets the tool tip of the current <xref:System.Windows.Controls.TextBox> to its first validation error.</span></span> <span data-ttu-id="17148-114"><xref:System.Windows.Data.Binding.RelativeSource%2A>設<xref:System.Windows.Data.RelativeSourceMode.Self>、 參考至目前的項目。</span><span class="sxs-lookup"><span data-stu-id="17148-114">The <xref:System.Windows.Data.Binding.RelativeSource%2A> is set to <xref:System.Windows.Data.RelativeSourceMode.Self>, referring to the current element.</span></span>  
   
- [!code-xml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+ [!code-xaml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
   
- 如需完整範例，請參閱[繫結驗證範例](http://go.microsoft.com/fwlink/?LinkID=159972) \(英文\)。  
+ <span data-ttu-id="17148-115">如需完整範例，請參閱[繫結驗證範例 (英文)](http://go.microsoft.com/fwlink/?LinkID=159972)。</span><span class="sxs-lookup"><span data-stu-id="17148-115">For the complete example, see [Binding Validation Sample](http://go.microsoft.com/fwlink/?LinkID=159972).</span></span>  
   
- 請注意，如果您沒有提供自訂 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A>，就會在發生驗證錯誤時出現預設錯誤樣板，提供使用者視覺化的回應。  如需詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)中的＜資料驗證＞。  除此之外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的內建驗證規則，會攔截繫結來源屬性更新期間所擲回的例外狀況。  如需詳細資訊，請參閱 <xref:System.Windows.Controls.ExceptionValidationRule>。  
+ <span data-ttu-id="17148-116">請注意，如果您未提供自訂<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>預設錯誤範本顯示驗證錯誤時，提供的視覺化回饋給使用者。</span><span class="sxs-lookup"><span data-stu-id="17148-116">Note that if you do not provide a custom <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> the default error template appears to provide visual feedback to the user when there is a validation error.</span></span> <span data-ttu-id="17148-117">如需詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)中的＜資料驗證＞。</span><span class="sxs-lookup"><span data-stu-id="17148-117">See "Data Validation" in [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md) for more information.</span></span> <span data-ttu-id="17148-118">除此之外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的內建驗證規則，會攔截繫結來源屬性更新期間所擲回的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="17148-118">Also, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a built-in validation rule that catches exceptions that are thrown during the update of the binding source property.</span></span> <span data-ttu-id="17148-119">如需詳細資訊，請參閱<xref:System.Windows.Controls.ExceptionValidationRule>。</span><span class="sxs-lookup"><span data-stu-id="17148-119">For more information, see <xref:System.Windows.Controls.ExceptionValidationRule>.</span></span>  
   
-## 請參閱  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="17148-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17148-120">See Also</span></span>  
+ [<span data-ttu-id="17148-121">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="17148-121">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="17148-122">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="17148-122">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

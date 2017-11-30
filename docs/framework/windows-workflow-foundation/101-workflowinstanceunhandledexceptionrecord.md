@@ -1,49 +1,53 @@
 ---
-title: "101 - WorkflowInstanceUnhandledExceptionRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 101 - WorkflowInstanceUnhandledExceptionRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab7d50a0-5347-4390-8445-1def4dfdff6a
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0347bf20b17c964763fc2a9a8e1094cdb01586de
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 101 - WorkflowInstanceUnhandledExceptionRecord
-## 屬性  
+# <a name="101---workflowinstanceunhandledexceptionrecord"></a><span data-ttu-id="ceabc-102">101 - WorkflowInstanceUnhandledExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="ceabc-102">101 - WorkflowInstanceUnhandledExceptionRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="ceabc-103">屬性</span><span class="sxs-lookup"><span data-stu-id="ceabc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|101|  
-|關鍵字|EndToEndMonitoring，Troubleshooting，HealthMonitoring，WFTracking|  
-|層級|Error|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="ceabc-104">ID</span><span class="sxs-lookup"><span data-stu-id="ceabc-104">Id</span></span>|<span data-ttu-id="ceabc-105">101</span><span class="sxs-lookup"><span data-stu-id="ceabc-105">101</span></span>|  
+|<span data-ttu-id="ceabc-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="ceabc-106">Keywords</span></span>|<span data-ttu-id="ceabc-107">EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="ceabc-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="ceabc-108">層級</span><span class="sxs-lookup"><span data-stu-id="ceabc-108">Level</span></span>|<span data-ttu-id="ceabc-109">錯誤</span><span class="sxs-lookup"><span data-stu-id="ceabc-109">Error</span></span>|  
+|<span data-ttu-id="ceabc-110">通道</span><span class="sxs-lookup"><span data-stu-id="ceabc-110">Channel</span></span>|<span data-ttu-id="ceabc-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="ceabc-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 說明  
- 此事件是當工作流程執行個體發出 WorkflowInstanceUnhandledExceptionRecord 時，由 ETW 追蹤參與者發出。  
+## <a name="description"></a><span data-ttu-id="ceabc-112">描述</span><span class="sxs-lookup"><span data-stu-id="ceabc-112">Description</span></span>  
+ <span data-ttu-id="ceabc-113">此事件是當工作流程執行個體發出 WorkflowInstanceUnhandledExceptionRecord 時，由 ETW 追蹤參與者發出。</span><span class="sxs-lookup"><span data-stu-id="ceabc-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceUnhandledExceptionRecord.</span></span>  
   
-## 訊息  
- TrackRecord \= WorkflowInstanceUnhandledExceptionRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, SourceName \= %5, SourceId \= %6, SourceInstanceId \= %7, SourceTypeName\=%8, Exception\=%9, Annotations\= %10, ProfileName \= %11  
+## <a name="message"></a><span data-ttu-id="ceabc-114">訊息</span><span class="sxs-lookup"><span data-stu-id="ceabc-114">Message</span></span>  
+ <span data-ttu-id="ceabc-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11</span><span class="sxs-lookup"><span data-stu-id="ceabc-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11</span></span>  
   
-## 詳細資料  
+## <a name="details"></a><span data-ttu-id="ceabc-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="ceabc-116">Details</span></span>  
   
-|資料項目名稱|資料項目型別|說明|  
-|------------|------------|--------|  
-|InstanceId|xs:GUID|工作流程的執行個體 ID。|  
-|RecordNumber|xs:long|發出之記錄的序號。|  
-|EventTime|xs:dateTime|發出事件時的 UTC 時間。|  
-|ActivityDefinitionId|xs:string|工作流程中根活動的名稱。|  
-|SourceName|xs:string|錯誤造成之 unhandledException 的來源活動名稱|  
-|SourceId|xs:string|錯誤來源活動的活動識別碼。|  
-|SourceInstanceId|xs:string|錯誤來源活動的活動執行個體 ID。|  
-|SourceTypeName|xs:string|錯誤造成之 unhandledException 的來源活動型別名稱。|  
-|Exception|xs:string|未處理之例外狀況的例外狀況詳細資料。|  
-|Annotations|xs:string|加入至此事件中的附註。這些值會以下列格式儲存在 XML 項目中：\<items\>\<\> item  name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items。如果沒有指定的附註，則字串會包含 \<items\/\>。ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。如果事件大小超過 ETW 限制，則會捨棄附註並以 \<items\>...\<\/items\> 取代附註值來截斷事件。|  
-|ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。範例：'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
+|<span data-ttu-id="ceabc-117">資料項目名稱</span><span class="sxs-lookup"><span data-stu-id="ceabc-117">Data Item Name</span></span>|<span data-ttu-id="ceabc-118">資料項目型別</span><span class="sxs-lookup"><span data-stu-id="ceabc-118">Data Item Type</span></span>|<span data-ttu-id="ceabc-119">描述</span><span class="sxs-lookup"><span data-stu-id="ceabc-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="ceabc-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="ceabc-120">InstanceId</span></span>|<span data-ttu-id="ceabc-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="ceabc-121">xs:GUID</span></span>|<span data-ttu-id="ceabc-122">工作流程的執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="ceabc-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="ceabc-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="ceabc-123">RecordNumber</span></span>|<span data-ttu-id="ceabc-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="ceabc-124">xs:long</span></span>|<span data-ttu-id="ceabc-125">發出之記錄的序號。</span><span class="sxs-lookup"><span data-stu-id="ceabc-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="ceabc-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="ceabc-126">EventTime</span></span>|<span data-ttu-id="ceabc-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="ceabc-127">xs:dateTime</span></span>|<span data-ttu-id="ceabc-128">發出事件時的 UTC 時間。</span><span class="sxs-lookup"><span data-stu-id="ceabc-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="ceabc-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="ceabc-129">ActivityDefinitionId</span></span>|<span data-ttu-id="ceabc-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-130">xs:string</span></span>|<span data-ttu-id="ceabc-131">工作流程中根活動的名稱。</span><span class="sxs-lookup"><span data-stu-id="ceabc-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="ceabc-132">SourceName</span><span class="sxs-lookup"><span data-stu-id="ceabc-132">SourceName</span></span>|<span data-ttu-id="ceabc-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-133">xs:string</span></span>|<span data-ttu-id="ceabc-134">錯誤造成之 unhandledException 的來源活動名稱</span><span class="sxs-lookup"><span data-stu-id="ceabc-134">The source activity name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="ceabc-135">SourceId</span><span class="sxs-lookup"><span data-stu-id="ceabc-135">SourceId</span></span>|<span data-ttu-id="ceabc-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-136">xs:string</span></span>|<span data-ttu-id="ceabc-137">錯誤來源活動的活動識別碼。</span><span class="sxs-lookup"><span data-stu-id="ceabc-137">The activity id of the fault source activity</span></span>|  
+|<span data-ttu-id="ceabc-138">SourceInstanceId</span><span class="sxs-lookup"><span data-stu-id="ceabc-138">SourceInstanceId</span></span>|<span data-ttu-id="ceabc-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-139">xs:string</span></span>|<span data-ttu-id="ceabc-140">錯誤來源活動的活動執行個體 ID。</span><span class="sxs-lookup"><span data-stu-id="ceabc-140">The activity instance id of the fault source activity</span></span>|  
+|<span data-ttu-id="ceabc-141">SourceTypeName</span><span class="sxs-lookup"><span data-stu-id="ceabc-141">SourceTypeName</span></span>|<span data-ttu-id="ceabc-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-142">xs:string</span></span>|<span data-ttu-id="ceabc-143">錯誤造成之 unhandledException 的來源活動型別名稱。</span><span class="sxs-lookup"><span data-stu-id="ceabc-143">The source activity type name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="ceabc-144">例外狀況</span><span class="sxs-lookup"><span data-stu-id="ceabc-144">Exception</span></span>|<span data-ttu-id="ceabc-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-145">xs:string</span></span>|<span data-ttu-id="ceabc-146">未處理之例外狀況的例外狀況詳細資料。</span><span class="sxs-lookup"><span data-stu-id="ceabc-146">The exception details for the unhandled exception</span></span>|  
+|<span data-ttu-id="ceabc-147">標註</span><span class="sxs-lookup"><span data-stu-id="ceabc-147">Annotations</span></span>|<span data-ttu-id="ceabc-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-148">xs:string</span></span>|<span data-ttu-id="ceabc-149">加入至此事件中的附註。</span><span class="sxs-lookup"><span data-stu-id="ceabc-149">The annotations that were added to this event.</span></span>  <span data-ttu-id="ceabc-150">值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="ceabc-150">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="ceabc-151">如果沒有指定的註釋的字串，包含\<項目 / >。</span><span class="sxs-lookup"><span data-stu-id="ceabc-151">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="ceabc-152">ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。</span><span class="sxs-lookup"><span data-stu-id="ceabc-152">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="ceabc-153">如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="ceabc-153">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="ceabc-154">ProfileName</span><span class="sxs-lookup"><span data-stu-id="ceabc-154">ProfileName</span></span>|<span data-ttu-id="ceabc-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-155">xs:string</span></span>|<span data-ttu-id="ceabc-156">造成發送這個事件的名稱或追蹤設定檔。</span><span class="sxs-lookup"><span data-stu-id="ceabc-156">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="ceabc-157">HostReference</span><span class="sxs-lookup"><span data-stu-id="ceabc-157">HostReference</span></span>|<span data-ttu-id="ceabc-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-158">xs:string</span></span>|<span data-ttu-id="ceabc-159">若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。</span><span class="sxs-lookup"><span data-stu-id="ceabc-159">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="ceabc-160">其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName' 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="ceabc-160">It's format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="ceabc-161">AppDomain</span><span class="sxs-lookup"><span data-stu-id="ceabc-161">AppDomain</span></span>|<span data-ttu-id="ceabc-162">xs:string</span><span class="sxs-lookup"><span data-stu-id="ceabc-162">xs:string</span></span>|<span data-ttu-id="ceabc-163">由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="ceabc-163">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

@@ -1,30 +1,33 @@
 ---
-title: "與 ASMX Web 服務交互操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "與 ASMX Web 服務交互操作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 635502ea186e188bf9906d45e7753eba72fbd5d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 與 ASMX Web 服務交互操作
-這個範例會示範如何整合 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式與現有的 ASMX Web 服務。  
+# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="cb5c1-102">與 ASMX Web 服務交互操作</span><span class="sxs-lookup"><span data-stu-id="cb5c1-102">Interoperating with ASMX Web Services</span></span>
+<span data-ttu-id="cb5c1-103">這個範例會示範如何整合 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式與現有的 ASMX Web 服務。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-103">This sample demonstrates how to integrate a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application with an existing ASMX Web service.</span></span>  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+>  <span data-ttu-id="cb5c1-104">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 這個範例是由用戶端主控台程式 \(.exe\) 和網際網路資訊服務 \(IIS\) 所裝載的服務程式庫 \(.dll\) 所組成。此服務是 ASMX Web 服務，會實作定義要求\-回覆通訊模式的合約。此服務會公開數學作業 \(`Add`、`Subtract`、`Multiply` 和 `Divide`\)。用戶端會對數學運算作業提出同步要求，服務則會以結果回覆。您可以在主控台視窗中看到用戶端活動。  
+ <span data-ttu-id="cb5c1-105">這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="cb5c1-106">此服務是 ASMX Web 服務，會實作定義要求-回覆通訊模式的合約。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="cb5c1-107">此服務會公開數學作業 (`Add`、`Subtract`、`Multiply` 和 `Divide`)。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="cb5c1-108">用戶端會對數學運算作業提出同步要求，服務則會以結果回覆。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="cb5c1-109">您可以在主控台視窗中看到用戶端活動。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-109">Client activity is visible in the console window.</span></span>  
   
- 下列範例程式碼中示範的 ASMX Web 服務實作會計算並傳回適當的結果。  
+ <span data-ttu-id="cb5c1-110">下列範例程式碼中示範的 ASMX Web 服務實作會計算並傳回適當的結果。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
   
 ```  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -51,30 +54,28 @@ public class CalculatorService : System.Web.Services.WebService
             return n1 / n2;  
         }  
     }  
-  
 ```  
   
- 由於已設定，因此相同電腦上的用戶端可以在 http:\/\/localhost\/servicemodelsamples\/service.asmx 存取服務。若要讓遠端電腦上的用戶端存取服務，就必須指定完整的網域名稱，而不是 localhost。  
+ <span data-ttu-id="cb5c1-111">由於已設定，因此相同電腦上的用戶端可以在 http://localhost/servicemodelsamples/service.asmx 存取服務。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.asmx by a client on the same machine.</span></span> <span data-ttu-id="cb5c1-112">若要讓遠端電腦上的用戶端存取服務，就必須指定完整的網域名稱，而不是 localhost。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
   
- 通訊是透過 [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 所產生的用戶端來完成。用戶端會包含在 generatedClient.cs 檔案中。ASMX 服務必須可供使用才能產生 Proxy 程式碼，因為它可用於擷取更新的中繼資料。請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
+ <span data-ttu-id="cb5c1-113">透過用戶端所產生完成通訊[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="cb5c1-114">用戶端會包含在 generatedClient.cs 檔案中。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="cb5c1-115">ASMX 服務必須可供使用才能產生 Proxy 程式碼，因為它可用於擷取更新的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="cb5c1-116">請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
 ```  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- 透過使用產生的用戶端，您可以藉由設定適當的位址和繫結來存取服務端點。與服務相同，用戶端使用組態檔 \(App.config\) 來指定要通訊的端點。用戶端的端點組態是由服務端點的絕對位址、繫結和合約所組成，如下列範例組態所示。  
+ <span data-ttu-id="cb5c1-117">透過使用產生的用戶端，您可以藉由設定適當的位址和繫結來存取服務端點。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="cb5c1-118">與服務相同，用戶端使用組態檔 (App.config) 來指定要通訊的端點。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="cb5c1-119">用戶端的端點組態是由服務端點的絕對位址、繫結和合約所組成，如下列範例組態所示。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <client>  
    <endpoint   
       address="http://localhost/ServiceModelSamples/service.asmx"   
       binding="basicHttpBinding"   
       contract="Microsoft.ServiceModel.Samples.CalculatorServiceSoap" />  
 </client>  
-  
 ```  
   
- 用戶端實作會建構所產生之用戶端的執行個體。然後，產生的用戶端就可以用來與服務通訊。  
+ <span data-ttu-id="cb5c1-120">用戶端實作會建構所產生之用戶端的執行個體。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="cb5c1-121">然後，產生的用戶端就可以用來與服務通訊。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-121">The generated client can then be used to communicate with the service.</span></span>  
   
 ```  
 // Create a client.  
@@ -110,10 +111,9 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-  
 ```  
   
- 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ <span data-ttu-id="cb5c1-122">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="cb5c1-123">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -124,21 +124,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### 若要設定、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="cb5c1-124">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="cb5c1-124">To set up, build, and run the sample</span></span>  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="cb5c1-125">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  <span data-ttu-id="cb5c1-126">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要在單一或跨機器的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示進行。  
+3.  <span data-ttu-id="cb5c1-127">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="cb5c1-128">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cb5c1-129">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-129">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="cb5c1-130">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cb5c1-131">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="cb5c1-131">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="cb5c1-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb5c1-132">See Also</span></span>

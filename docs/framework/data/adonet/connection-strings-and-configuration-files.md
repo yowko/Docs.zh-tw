@@ -1,33 +1,39 @@
 ---
-title: "連接字串和組態檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "連接字串和組態檔"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fe56dc279471f77a3f9ae014f65faaa99a113624
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 連接字串和組態檔
-在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。  編譯到應用程式原始程式碼中的未加密連接字串，可透過 [Ildasm.exe \(IL Disassembler\)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具進行檢視。  此外，如果連接字串變更，應用程式就必須重新編譯。  基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
+# <a name="connection-strings-and-configuration-files"></a><span data-ttu-id="d72fc-102">連接字串和組態檔</span><span class="sxs-lookup"><span data-stu-id="d72fc-102">Connection Strings and Configuration Files</span></span>
+<span data-ttu-id="d72fc-103">在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。</span><span class="sxs-lookup"><span data-stu-id="d72fc-103">Embedding connection strings in your application's code can lead to security vulnerabilities and maintenance problems.</span></span> <span data-ttu-id="d72fc-104">您可以使用檢視編譯成應用程式的原始碼的未加密的連接字串[Ildasm.exe （IL 解譯器）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具。</span><span class="sxs-lookup"><span data-stu-id="d72fc-104">Unencrypted connection strings compiled into an application's source code can be viewed using the [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) tool.</span></span> <span data-ttu-id="d72fc-105">此外，如果連接字串變更，應用程式就必須重新編譯。</span><span class="sxs-lookup"><span data-stu-id="d72fc-105">Moreover, if the connection string ever changes, your application must be recompiled.</span></span> <span data-ttu-id="d72fc-106">基於上述理由，建議您將連接字串儲存在應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="d72fc-106">For these reasons, we recommend storing connection strings in an application configuration file.</span></span>  
   
-## 使用應用程式組態檔  
- 應用程式組態檔包含特定應用程式專屬的設定。  例如，ASP.NET 應用程式可能擁有一或多個 **web.config** 檔案，Windows 應用程式則可能具有選擇性的 **app.config** 檔案。  組態檔會共用通用的項目，但組態檔的名稱及位置則會根據應用程式的主機而不同。  
+## <a name="working-with-application-configuration-files"></a><span data-ttu-id="d72fc-107">使用應用程式組態檔</span><span class="sxs-lookup"><span data-stu-id="d72fc-107">Working with Application Configuration Files</span></span>  
+ <span data-ttu-id="d72fc-108">應用程式組態檔包含特定應用程式專屬的設定。</span><span class="sxs-lookup"><span data-stu-id="d72fc-108">Application configuration files contain settings that are specific to a particular application.</span></span> <span data-ttu-id="d72fc-109">例如，ASP.NET 應用程式可以有一或多個**web.config**檔案和 Windows 應用程式可以有選用**app.config**檔案。</span><span class="sxs-lookup"><span data-stu-id="d72fc-109">For example, an ASP.NET application can have one or more **web.config** files, and a Windows application can have an optional **app.config** file.</span></span> <span data-ttu-id="d72fc-110">組態檔會共用通用的項目，但組態檔的名稱及位置則會根據應用程式的主機而不同。</span><span class="sxs-lookup"><span data-stu-id="d72fc-110">Configuration files share common elements, although the name and location of a configuration file vary depending on the application's host.</span></span>  
   
-### connectionStrings 區段  
- 連接字串可以用索引鍵\/值組的方式，儲存在應用程式組態檔 **configuration** 項目的 **connectionStrings** 區段中。  子項目包含 **add**、**clear** 和 **remove**。  
+### <a name="the-connectionstrings-section"></a><span data-ttu-id="d72fc-111">connectionStrings 區段</span><span class="sxs-lookup"><span data-stu-id="d72fc-111">The connectionStrings Section</span></span>  
+ <span data-ttu-id="d72fc-112">連接字串可以儲存為索引鍵/值組**connectionStrings**區段**組態**的應用程式組態檔項目。</span><span class="sxs-lookup"><span data-stu-id="d72fc-112">Connection strings can be stored as key/value pairs in the **connectionStrings** section of the **configuration** element of an application configuration file.</span></span> <span data-ttu-id="d72fc-113">子項目包括**新增**，**清除**，和**移除**。</span><span class="sxs-lookup"><span data-stu-id="d72fc-113">Child elements include **add**, **clear**, and **remove**.</span></span>  
   
- 下列組態檔片段示範儲存連接字串的結構描述和語法。  **name** 屬性是用於唯一識別連接字串的名稱，可藉此在執行階段擷取該連接字串。  **providerName** 是 .NET Framework 資料提供者的非變異名稱，登錄於 machine.config 檔案。  
+ <span data-ttu-id="d72fc-114">下列組態檔片段示範儲存連接字串的結構描述和語法。</span><span class="sxs-lookup"><span data-stu-id="d72fc-114">The following configuration file fragment demonstrates the schema and syntax for storing a connection string.</span></span> <span data-ttu-id="d72fc-115">**名稱**屬性是可唯一識別連接字串，使它可以擷取在執行階段的名稱。</span><span class="sxs-lookup"><span data-stu-id="d72fc-115">The **name** attribute is a name that you provide to uniquely identify a connection string so that it can be retrieved at run time.</span></span> <span data-ttu-id="d72fc-116">**ProviderName**是註冊在 machine.config 檔案中的.NET Framework 資料提供者非變異名稱。</span><span class="sxs-lookup"><span data-stu-id="d72fc-116">The **providerName** is the invariant name of the .NET Framework data provider, which is registered in the machine.config file.</span></span>  
   
-```  
+```xml  
 <?xml version='1.0' encoding='utf-8'?>  
   <configuration>  
     <connectionStrings>  
@@ -40,14 +46,14 @@ caps.handback.revision: 4
 ```  
   
 > [!NOTE]
->  您可將部分連接字串儲存在組態檔中，然後在執行階段使用 <xref:System.Data.Common.DbConnectionStringBuilder> 類別 \(Class\) 加以完成。  在您無法預先知道連接字串的項目，或者不想將機密資訊儲存在組態檔中時，這種方法很有用。  如需詳細資訊，請參閱[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+>  <span data-ttu-id="d72fc-117">您可將部分連接字串儲存在組態檔中，然後在執行階段使用 <xref:System.Data.Common.DbConnectionStringBuilder> 類別 (Class) 加以完成。</span><span class="sxs-lookup"><span data-stu-id="d72fc-117">You can save part of a connection string in a configuration file and use the <xref:System.Data.Common.DbConnectionStringBuilder> class to complete it at run time.</span></span> <span data-ttu-id="d72fc-118">在您無法預先知道連接字串的項目，或者不想將機密資訊儲存在組態檔中時，這種方法很有用。</span><span class="sxs-lookup"><span data-stu-id="d72fc-118">This is useful in scenarios where you do not know elements of the connection string ahead of time, or when you do not want to save sensitive information in a configuration file.</span></span> <span data-ttu-id="d72fc-119">如需詳細資訊，請參閱[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-119">For more information, see [Connection String Builders](../../../../docs/framework/data/adonet/connection-string-builders.md).</span></span>  
   
-### 使用外部組態檔  
- 外部組態檔是包含組態檔片段 \(由單一區段組成\) 的個別檔案。  外部組態檔接著會由主組態檔來參考。  將 **connectionStrings** 區段儲存在實際分開的檔案中，對於在部署應用程式之後可能會編輯連接字串的情況很有用。  例如，標準的 ASP.NET 行為是在組態檔修改時重新啟動應用程式網域，而這可能導致狀態資訊遺失。  然而，修改外部組態檔並不會造成應用程式重新啟動。  外部組態檔並不僅限於 ASP.NET 才有，Windows 應用程式也可加以利用；  此外，也可以透過檔案存取安全性和權限，限制對外部組態檔的存取權。  執行階段的外部組態檔使用是透明的，而且不需要任何特殊的程式碼。  
+### <a name="using-external-configuration-files"></a><span data-ttu-id="d72fc-120">使用外部組態檔</span><span class="sxs-lookup"><span data-stu-id="d72fc-120">Using External Configuration Files</span></span>  
+ <span data-ttu-id="d72fc-121">外部組態檔是包含組態檔片段 (由單一區段組成) 的個別檔案。</span><span class="sxs-lookup"><span data-stu-id="d72fc-121">External configuration files are separate files that contain a fragment of a configuration file consisting of a single section.</span></span> <span data-ttu-id="d72fc-122">外部組態檔接著會由主組態檔來參考。</span><span class="sxs-lookup"><span data-stu-id="d72fc-122">The external configuration file is then referenced by the main configuration file.</span></span> <span data-ttu-id="d72fc-123">儲存**connectionStrings**實際分開的檔案中區段是在應用程式部署之後，編輯連接字串可能位置的情況下很有用。</span><span class="sxs-lookup"><span data-stu-id="d72fc-123">Storing the **connectionStrings** section in a physically separate file is useful in situations where connection strings may be edited after the application is deployed.</span></span> <span data-ttu-id="d72fc-124">例如，標準的 ASP.NET 行為是在組態檔修改時重新啟動應用程式網域，而這可能導致狀態資訊遺失。</span><span class="sxs-lookup"><span data-stu-id="d72fc-124">For example, the standard ASP.NET behavior is to restart an application domain when configuration files are modified, which results in state information being lost.</span></span> <span data-ttu-id="d72fc-125">然而，修改外部組態檔並不會造成應用程式重新啟動。</span><span class="sxs-lookup"><span data-stu-id="d72fc-125">However, modifying an external configuration file does not cause an application restart.</span></span> <span data-ttu-id="d72fc-126">外部組態檔並不僅限於 ASP.NET 才有，Windows 應用程式也可加以利用；</span><span class="sxs-lookup"><span data-stu-id="d72fc-126">External configuration files are not limited to ASP.NET; they can also be used by Windows applications.</span></span> <span data-ttu-id="d72fc-127">此外，也可以透過檔案存取安全性和權限，限制對外部組態檔的存取權。</span><span class="sxs-lookup"><span data-stu-id="d72fc-127">In addition, file access security and permissions can be used to restrict access to external configuration files.</span></span> <span data-ttu-id="d72fc-128">執行階段的外部組態檔使用是透明的，而且不需要任何特殊的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d72fc-128">Working with external configuration files at run time is transparent, and requires no special coding.</span></span>  
   
- 若要將連接字串儲存於外部組態檔，請建立僅包含 **connectionStrings** 區段的個別檔案。  請勿包含任何額外的項目、區段或屬性。  此範例說明外部組態檔的語法。  
+ <span data-ttu-id="d72fc-129">若要將連接字串儲存在外部組態檔中，建立個別的檔案只包含**connectionStrings** > 一節。</span><span class="sxs-lookup"><span data-stu-id="d72fc-129">To store connection strings in an external configuration file, create a separate file that contains only the **connectionStrings** section.</span></span> <span data-ttu-id="d72fc-130">請勿包含任何額外的項目、區段或屬性。</span><span class="sxs-lookup"><span data-stu-id="d72fc-130">Do not include any additional elements, sections, or attributes.</span></span> <span data-ttu-id="d72fc-131">此範例說明外部組態檔的語法。</span><span class="sxs-lookup"><span data-stu-id="d72fc-131">This example shows the syntax for an external configuration file.</span></span>  
   
-```  
+```xml  
 <connectionStrings>  
   <add name="Name"   
    providerName="System.Data.ProviderName"   
@@ -55,62 +61,62 @@ caps.handback.revision: 4
 </connectionStrings>  
 ```  
   
- 在主應用程式組態檔中，可以使用 **configSource** 屬性來指定外部檔案的完整名稱及位置。  此範例會參考名為 `connections.config` 的外部組態檔。  
+ <span data-ttu-id="d72fc-132">在主應用程式組態檔中，您會使用**configSource**屬性來指定完整的名稱和外部檔案的位置。</span><span class="sxs-lookup"><span data-stu-id="d72fc-132">In the main application configuration file, you use the **configSource** attribute to specify the fully qualified name and location of the external file.</span></span> <span data-ttu-id="d72fc-133">此範例會參考名為 `connections.config` 的外部組態檔。</span><span class="sxs-lookup"><span data-stu-id="d72fc-133">This example refers to an external configuration file named `connections.config`.</span></span>  
   
-```  
+```xml  
 <?xml version='1.0' encoding='utf-8'?>  
 <configuration>  
     <connectionStrings configSource="connections.config"/>  
 </configuration>  
 ```  
   
-## 在執行階段擷取連接字串  
- .NET Framework 2.0 在 <xref:System.Configuration> 命名空間 \(Namespace\) 中導入了新的類別，可簡化在執行階段從組態檔中擷取連接字串的作業。  您可以透過程式設計的方式，依名稱或提供者名稱擷取連接字串。  
+## <a name="retrieving-connection-strings-at-run-time"></a><span data-ttu-id="d72fc-134">在執行階段擷取連接字串</span><span class="sxs-lookup"><span data-stu-id="d72fc-134">Retrieving Connection Strings at Run Time</span></span>  
+ <span data-ttu-id="d72fc-135">.NET Framework 2.0 在 <xref:System.Configuration> 命名空間 (Namespace) 中導入了新的類別，可簡化在執行階段從組態檔中擷取連接字串的作業。</span><span class="sxs-lookup"><span data-stu-id="d72fc-135">The .NET Framework 2.0 introduced new classes in the <xref:System.Configuration> namespace to simplify retrieving connection strings from configuration files at run time.</span></span> <span data-ttu-id="d72fc-136">您可以透過程式設計的方式，依名稱或提供者名稱擷取連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-136">You can programmatically retrieve a connection string by name or by provider name.</span></span>  
   
 > [!NOTE]
->  **machine.config** 檔案也包含 **connectionStrings** 區段，後者則包含 Visual Studio 所使用的連接字串。  從 Windows 應用程式中的 **app.config** 檔案依提供者名稱擷取連接字串時，**machine.config** 中的連接字串會最先載入，然後再載入 **app.config** 的項目。  如果在 **connectionStrings** 項目之後緊接著加入 **clear**，就會從記憶體中的資料結構移除所有繼承的參考，如此便只會考量定義於本機 **app.config** 檔案中的連接字串。  
+>  <span data-ttu-id="d72fc-137">**Machine.config**檔案也包含**connectionStrings**區段，其中包含使用 Visual Studio 的連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-137">The **machine.config** file also contains a **connectionStrings** section, which contains connection strings used by Visual Studio.</span></span> <span data-ttu-id="d72fc-138">從提供者名稱擷取連接字串時**app.config** Windows 應用程式中的連接字串中的檔案**machine.config**取得已載入，然後再將項目從**app.config**。加入**清除**之後立即**connectionStrings**項目移除所有繼承的參考資料結構，在記憶體中，以便只連接字串會定義本機**app.config**視為檔案。</span><span class="sxs-lookup"><span data-stu-id="d72fc-138">When retrieving connection strings by provider name from the **app.config** file in a Windows application, the connection strings in **machine.config** get loaded first, and then the entries from **app.config**. Adding **clear** immediately after the **connectionStrings** element removes all inherited references from the data structure in memory, so that only the connection strings defined in the local **app.config** file are considered.</span></span>  
   
-### 使用組態類別  
- 從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。  <xref:System.Web.Configuration.WebConfigurationManager> 則會用於搭配 ASP.NET 組態檔。  這是為了在 Web 伺服器上使用組態檔而設計，可透過程式設計的方式存取 **system.web** 之類的組態檔區段。  
-  
-> [!NOTE]
->  您必須為呼叫端授與權限，才能在執行階段存取組態檔；所需的權限則根據應用程式類型、組態檔以及位置而有所不同。  如需詳細資訊，請參閱[Using the Configuration Classes](../Topic/Using%20the%20Configuration%20Classes.md)和 <xref:System.Web.Configuration.WebConfigurationManager> \(適用於 ASP.NET 應用程式\) 以及 <xref:System.Configuration.ConfigurationManager> \(適用於 Windows 應用程式\)。  
-  
- 您可以利用 <xref:System.Configuration.ConnectionStringSettingsCollection> 從應用程式組態檔擷取連接字串。  此項目包含 <xref:System.Configuration.ConnectionStringSettings> 物件的集合，而其中每個物件都代表 **connectionStrings** 區段中的單一項目。  其屬性會對應至連接字串屬性，讓您可以藉由指定名稱或提供者名稱而擷取連接字串。  
-  
-|屬性|描述|  
-|--------|--------|  
-|<xref:System.Configuration.ConnectionStringSettings.Name%2A>|連接字串的名稱。  對應至 **name** 屬性。|  
-|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|完整的提供者名稱。  對應至 **providerName** 屬性。|  
-|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|連接字串。  對應至 **connectionString** 屬性。|  
-  
-### 範例：列出所有連接字串  
- 此範例逐一查看 `ConnectionStringSettings` 集合，並在主控台 \(Console\) 視窗中顯示 <xref:System.Configuration.ConnectionStringSettings.Name%2A>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 和 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> 屬性。  
+### <a name="working-with-the-configuration-classes"></a><span data-ttu-id="d72fc-139">使用組態類別</span><span class="sxs-lookup"><span data-stu-id="d72fc-139">Working with the Configuration Classes</span></span>  
+ <span data-ttu-id="d72fc-140">從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。</span><span class="sxs-lookup"><span data-stu-id="d72fc-140">Starting with the .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> is used when working with configuration files on the local computer, replacing the deprecated <xref:System.Configuration.ConfigurationSettings>.</span></span> <span data-ttu-id="d72fc-141"><xref:System.Web.Configuration.WebConfigurationManager> 則會用於搭配 ASP.NET 組態檔。</span><span class="sxs-lookup"><span data-stu-id="d72fc-141"><xref:System.Web.Configuration.WebConfigurationManager> is used to work with ASP.NET configuration files.</span></span> <span data-ttu-id="d72fc-142">它設計來搭配 網頁伺服器上的組態檔，並允許以程式設計方式存取組態檔區段，例如**system.web**。</span><span class="sxs-lookup"><span data-stu-id="d72fc-142">It is designed to work with configuration files on a Web server, and allows programmatic access to configuration file sections such as **system.web**.</span></span>  
   
 > [!NOTE]
->  System.Configuration.dll 並未包含在所有專案類型中，您可能需要設定其參考，才能使用該組態類別。  特定應用程式組態檔的名稱和位置會根據應用程式類型及裝載處理序而不同。  
+>  <span data-ttu-id="d72fc-143">您必須為呼叫端授與權限，才能在執行階段存取組態檔；所需的權限則根據應用程式類型、組態檔以及位置而有所不同。</span><span class="sxs-lookup"><span data-stu-id="d72fc-143">Accessing configuration files at run time requires granting permissions to the caller; the required permissions depend on the type of application, configuration file, and location.</span></span> <span data-ttu-id="d72fc-144">如需詳細資訊，請參閱[使用組態類別](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)和<xref:System.Web.Configuration.WebConfigurationManager>ASP.NET 應用程式，以及<xref:System.Configuration.ConfigurationManager>Windows 應用程式。</span><span class="sxs-lookup"><span data-stu-id="d72fc-144">For more information, see [Using the Configuration Classes](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc) and <xref:System.Web.Configuration.WebConfigurationManager> for ASP.NET applications, and <xref:System.Configuration.ConfigurationManager> for Windows applications.</span></span>  
+  
+ <span data-ttu-id="d72fc-145">您可以利用 <xref:System.Configuration.ConnectionStringSettingsCollection> 從應用程式組態檔擷取連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-145">You can use the <xref:System.Configuration.ConnectionStringSettingsCollection> to retrieve connection strings from application configuration files.</span></span> <span data-ttu-id="d72fc-146">它包含的集合<xref:System.Configuration.ConnectionStringSettings>物件，其中每一個都代表單一項目中**connectionStrings** > 一節。</span><span class="sxs-lookup"><span data-stu-id="d72fc-146">It contains a collection of <xref:System.Configuration.ConnectionStringSettings> objects, each of which represents a single entry in the **connectionStrings** section.</span></span> <span data-ttu-id="d72fc-147">其屬性會對應至連接字串屬性，讓您可以藉由指定名稱或提供者名稱而擷取連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-147">Its properties map to connection string attributes, allowing you to retrieve a connection string by specifying the name or the provider name.</span></span>  
+  
+|<span data-ttu-id="d72fc-148">屬性</span><span class="sxs-lookup"><span data-stu-id="d72fc-148">Property</span></span>|<span data-ttu-id="d72fc-149">描述</span><span class="sxs-lookup"><span data-stu-id="d72fc-149">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Configuration.ConnectionStringSettings.Name%2A>|<span data-ttu-id="d72fc-150">連接字串的名稱。</span><span class="sxs-lookup"><span data-stu-id="d72fc-150">The name of the connection string.</span></span> <span data-ttu-id="d72fc-151">對應至**名稱**屬性。</span><span class="sxs-lookup"><span data-stu-id="d72fc-151">Maps to the **name** attribute.</span></span>|  
+|<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|<span data-ttu-id="d72fc-152">完整的提供者名稱。</span><span class="sxs-lookup"><span data-stu-id="d72fc-152">The fully qualified provider name.</span></span> <span data-ttu-id="d72fc-153">對應至**providerName**屬性。</span><span class="sxs-lookup"><span data-stu-id="d72fc-153">Maps to the **providerName** attribute.</span></span>|  
+|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|<span data-ttu-id="d72fc-154">連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-154">The connection string.</span></span> <span data-ttu-id="d72fc-155">對應至**connectionString**屬性。</span><span class="sxs-lookup"><span data-stu-id="d72fc-155">Maps to the **connectionString** attribute.</span></span>|  
+  
+### <a name="example-listing-all-connection-strings"></a><span data-ttu-id="d72fc-156">範例：列出所有連接字串</span><span class="sxs-lookup"><span data-stu-id="d72fc-156">Example: Listing All Connection Strings</span></span>  
+ <span data-ttu-id="d72fc-157">此範例逐一查看 `ConnectionStringSettings` 集合，並在主控台 (Console) 視窗中顯示 <xref:System.Configuration.ConnectionStringSettings.Name%2A>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 和 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="d72fc-157">This example iterates through the `ConnectionStringSettings` collection and displays the <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>, and <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> properties in the console window.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="d72fc-158">System.Configuration.dll 並未包含在所有專案類型中，您可能需要設定其參考，才能使用該組態類別。</span><span class="sxs-lookup"><span data-stu-id="d72fc-158">System.Configuration.dll is not included in all project types, and you may need to set a reference to it in order to use the configuration classes.</span></span> <span data-ttu-id="d72fc-159">特定應用程式組態檔的名稱和位置會根據應用程式類型及裝載處理序而不同。</span><span class="sxs-lookup"><span data-stu-id="d72fc-159">The name and location of a particular application configuration file varies by the type of application and the hosting process.</span></span>  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### 範例：依名稱擷取連接字串  
- 此範例示範如何藉由指定連接字串的名稱，從組態檔擷取連接字串。  程式碼會建立 <xref:System.Configuration.ConnectionStringSettings> 物件，並將提供的輸入參數與 <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> 名稱進行比對。  如果沒有找到符合的名稱，函式就會傳回 `null` \(在 Visual Basic 中則為 `Nothing`\)。  
+### <a name="example-retrieving-a-connection-string-by-name"></a><span data-ttu-id="d72fc-160">範例：依名稱擷取連接字串</span><span class="sxs-lookup"><span data-stu-id="d72fc-160">Example: Retrieving a Connection String by Name</span></span>  
+ <span data-ttu-id="d72fc-161">此範例示範如何藉由指定連接字串的名稱，從組態檔擷取連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-161">This example demonstrates how to retrieve a connection string from a configuration file by specifying its name.</span></span> <span data-ttu-id="d72fc-162">程式碼會建立 <xref:System.Configuration.ConnectionStringSettings> 物件，並將提供的輸入參數與 <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> 名稱進行比對。</span><span class="sxs-lookup"><span data-stu-id="d72fc-162">The code creates a <xref:System.Configuration.ConnectionStringSettings> object, matching the supplied input parameter to the <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> name.</span></span> <span data-ttu-id="d72fc-163">如果沒有找到符合的名稱，函式就會傳回 `null` (在 Visual Basic 中則為 `Nothing`)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-163">If no matching name is found, the function returns `null` (`Nothing` in Visual Basic).</span></span>  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### 範例：依提供者名稱擷取連接字串  
- 此範例示範如何藉由指定 *System.Data.ProviderName* 格式的提供者非變異名稱來擷取連接字串。  程式碼會逐一查看 <xref:System.Configuration.ConnectionStringSettingsCollection>，並針對第一個找到的 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 傳回連接字串。  如果找不到提供者名稱，函式就會傳回 `null` \(在 Visual Basic 中則為 `Nothing`\)。  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a><span data-ttu-id="d72fc-164">範例：依提供者名稱擷取連接字串</span><span class="sxs-lookup"><span data-stu-id="d72fc-164">Example: Retrieving a Connection String by Provider Name</span></span>  
+ <span data-ttu-id="d72fc-165">這個範例示範如何藉由指定的格式提供者非變異名稱擷取連接字串*System.Data.ProviderName*。</span><span class="sxs-lookup"><span data-stu-id="d72fc-165">This example demonstrates how to retrieve a connection string by specifying the provider-invariant name in the format *System.Data.ProviderName*.</span></span> <span data-ttu-id="d72fc-166">程式碼會逐一查看 <xref:System.Configuration.ConnectionStringSettingsCollection>，並針對第一個找到的 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 傳回連接字串。</span><span class="sxs-lookup"><span data-stu-id="d72fc-166">The code iterates through the <xref:System.Configuration.ConnectionStringSettingsCollection> and returns the connection string for the first <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> found.</span></span> <span data-ttu-id="d72fc-167">如果找不到提供者名稱，函式就會傳回 `null` (在 Visual Basic 中則為 `Nothing`)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-167">If the provider name is not found, the function returns `null` (`Nothing` in Visual Basic).</span></span>  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
-## 使用受保護的組態來加密組態檔區段  
- ASP.NET 2.0 導入了一項稱為「*受保護的組態*」\(Protected Configuration\) 的新功能，可用於加密組態檔中的機密資訊。  雖然主要是針對 ASP.NET 所設計，但這項功能仍可用來加密 Windows 應用程式中的組態檔區段。  如需受保護的組態功能的詳細描述，請參閱[Encrypting Configuration Information Using Protected Configuration](../Topic/Encrypting%20Configuration%20Information%20Using%20Protected%20Configuration.md)。  
+## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a><span data-ttu-id="d72fc-168">使用受保護的組態來加密組態檔區段</span><span class="sxs-lookup"><span data-stu-id="d72fc-168">Encrypting Configuration File Sections Using Protected Configuration</span></span>  
+ <span data-ttu-id="d72fc-169">ASP.NET 2.0 導入了新功能，稱為*受保護的組態*，，可讓您加密組態檔中的機密資訊。</span><span class="sxs-lookup"><span data-stu-id="d72fc-169">ASP.NET 2.0 introduced a new feature, called *protected configuration*, that enables you to encrypt sensitive information in a configuration file.</span></span> <span data-ttu-id="d72fc-170">雖然主要是針對 ASP.NET 所設計，但這項功能仍可用來加密 Windows 應用程式中的組態檔區段。</span><span class="sxs-lookup"><span data-stu-id="d72fc-170">Although primarily designed for ASP.NET, protected configuration can also be used to encrypt configuration file sections in Windows applications.</span></span> <span data-ttu-id="d72fc-171">受保護的組態功能的詳細說明，請參閱[加密組態資訊使用受保護的組態](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-171">For a detailed description of the protected configuration capabilities, see [Encrypting Configuration Information Using Protected Configuration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).</span></span>  
   
- 下列組態檔片段顯示加密之後的 **connectionStrings** 區段。  **configProtectionProvider** 會指定用於加密及解密連接字串的受保護組態提供者。  **EncryptedData** 區段包含加密文字。  
+ <span data-ttu-id="d72fc-172">下列組態檔片段示範**connectionStrings**區段之後已加密。</span><span class="sxs-lookup"><span data-stu-id="d72fc-172">The following configuration file fragment shows the **connectionStrings** section after it has been encrypted.</span></span> <span data-ttu-id="d72fc-173">**ConfigProtectionProvider**指定用來加密和解密連接字串的受保護的組態提供者。</span><span class="sxs-lookup"><span data-stu-id="d72fc-173">The **configProtectionProvider** specifies the protected configuration provider used to encrypt and decrypt the connection strings.</span></span> <span data-ttu-id="d72fc-174">**EncryptedData**區段包含加密文字。</span><span class="sxs-lookup"><span data-stu-id="d72fc-174">The **EncryptedData** section contains the cipher text.</span></span>  
   
-```  
+```xml  
 <connectionStrings configProtectionProvider="DataProtectionConfigurationProvider">  
   <EncryptedData>  
     <CipherData>  
@@ -120,12 +126,12 @@ caps.handback.revision: 4
 </connectionStrings>  
 ```  
   
- 在執行階段擷取加密的連接字串時，.NET Framework 會使用指定的提供者對 **CipherValue** 進行解密，並將其提供給應用程式使用。  您不需要撰寫任何額外的程式碼來管理解密程序。  
+ <span data-ttu-id="d72fc-175">.NET Framework 執行階段擷取加密的連接字串時，使用指定的提供者來解密**CipherValue** ，並提供您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="d72fc-175">When the encrypted connection string is retrieved at run time, the .NET Framework uses the specified provider to decrypt the **CipherValue** and make it available to your application.</span></span> <span data-ttu-id="d72fc-176">您不需要撰寫任何額外的程式碼來管理解密程序。</span><span class="sxs-lookup"><span data-stu-id="d72fc-176">You do not need to write any additional code to manage the decryption process.</span></span>  
   
-### 受保護的組態提供者  
- 受保護的組態提供者會在本機電腦上登錄於 **machine.config** 檔案的 **configProtectedData** 區段，如下列片段所示，此片段顯示 .NET Framework 所提供的兩個受保護的組態提供者。  為了便於讀取，這裡顯示的值已經過刪減。  
+### <a name="protected-configuration-providers"></a><span data-ttu-id="d72fc-177">受保護的組態提供者</span><span class="sxs-lookup"><span data-stu-id="d72fc-177">Protected Configuration Providers</span></span>  
+ <span data-ttu-id="d72fc-178">受保護的組態提供者會登錄在**c**區段**machine.config**所示，在下列的片段中，會顯示兩個檔案的本機電腦上，.NET Framework 所提供的受保護的組態提供者。</span><span class="sxs-lookup"><span data-stu-id="d72fc-178">Protected configuration providers are registered in the **configProtectedData** section of the **machine.config** file on the local computer, as shown in the following fragment, which shows the two protected configuration providers supplied with the .NET Framework.</span></span> <span data-ttu-id="d72fc-179">為了便於讀取，這裡顯示的值已經過刪減。</span><span class="sxs-lookup"><span data-stu-id="d72fc-179">The values shown here have been truncated for readability.</span></span>  
   
-```  
+```xml  
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
   <providers>  
     <add name="RsaProtectedConfigurationProvider"   
@@ -136,47 +142,47 @@ caps.handback.revision: 4
 </configProtectedData>  
 ```  
   
- 您可以將額外的受保護組態提供者加入至 **machine.config** 檔案來進行設定。  也可以從 <xref:System.Configuration.ProtectedConfigurationProvider> 抽象基底類別 \(Base Class\) 繼承而建立自己的受保護組態提供者。  下表說明 .NET Framework 所隨附的兩個組態檔。  
+ 您可以設定其他受保護的組態提供者藉由加入**machine.config**檔案。 也可以從 <xref:System.Configuration.ProtectedConfigurationProvider> 抽象基底類別 (Base Class) 繼承而建立自己的受保護組態提供者。 <span data-ttu-id="d72fc-182">下表說明 .NET Framework 所隨附的兩個組態檔。</span><span class="sxs-lookup"><span data-stu-id="d72fc-182">The following table describes the two configuration files included with the .NET Framework.</span></span>  
   
-|提供者|描述|  
-|---------|--------|  
-|<xref:System.Configuration.RSAProtectedConfigurationProvider>|使用 RSA 加密演算法來加密及解密資料。  RSA 演算法可用於公開金鑰 \(Public Key\) 加密及數位簽章。  這種演算法也稱為「公開金鑰」或非對稱加密，因為它會使用兩種不同的金鑰。  您可以使用 [ASP.NET IIS Registration Tool \(Aspnet\_regiis.exe\)](../Topic/ASP.NET%20IIS%20Registration%20Tool%20\(Aspnet_regiis.exe\).md) 來加密 Web.config 檔案中的區段並管理加密金鑰。  ASP.NET 會在處理檔案時對組態檔進行解密。  ASP.NET 應用程式的識別必須可以讀取用於對區段進行加密及解密的加密金鑰。|  
-|<xref:System.Configuration.DPAPIProtectedConfigurationProvider>|使用 Windows Data Protection API \(DPAPI\) 來加密組態區段。  DPAPI 使用 Windows 內建的密碼編譯服務，可以針對電腦特定或使用者帳戶特定的保護進行設定。  電腦特定的保護特別適用於相同伺服器上需要共用資訊的多個應用程式。  使用者特定的保護則可用於使用特定使用者識別執行的服務，例如共用的裝載環境。  每個應用程式都會在不同的識別之下執行，如此可限制對檔案和資料庫等資源的存取。|  
+|<span data-ttu-id="d72fc-183">提供者</span><span class="sxs-lookup"><span data-stu-id="d72fc-183">Provider</span></span>|<span data-ttu-id="d72fc-184">描述</span><span class="sxs-lookup"><span data-stu-id="d72fc-184">Description</span></span>|  
+|--------------|-----------------|  
+|<!--zz<xref:System.Configuration.RSAProtectedConfigurationProvider>-->`System.Configuration.RSAProtectedConfigurationProvider`|<span data-ttu-id="d72fc-185">使用 RSA 加密演算法來加密及解密資料。</span><span class="sxs-lookup"><span data-stu-id="d72fc-185">Uses the RSA encryption algorithm to encrypt and decrypt data.</span></span> <span data-ttu-id="d72fc-186">RSA 演算法可用於公開金鑰 (Public Key) 加密及數位簽章。</span><span class="sxs-lookup"><span data-stu-id="d72fc-186">The RSA algorithm can be used for both public key encryption and digital signatures.</span></span> <span data-ttu-id="d72fc-187">這種演算法也稱為「公開金鑰」或非對稱加密，因為它會使用兩種不同的金鑰。</span><span class="sxs-lookup"><span data-stu-id="d72fc-187">It is also known as "public key" or asymmetrical encryption because it employs two different keys.</span></span> <span data-ttu-id="d72fc-188">您可以使用[ASP.NET IIS 註冊工具 (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b)加密 Web.config 檔案中的區段和管理加密金鑰。</span><span class="sxs-lookup"><span data-stu-id="d72fc-188">You can use the [ASP.NET IIS Registration Tool (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) to encrypt sections in a Web.config file and manage the encryption keys.</span></span> <span data-ttu-id="d72fc-189">ASP.NET 會在處理檔案時對組態檔進行解密。</span><span class="sxs-lookup"><span data-stu-id="d72fc-189">ASP.NET decrypts the configuration file when it processes the file.</span></span> <span data-ttu-id="d72fc-190">ASP.NET 應用程式的識別必須可以讀取用於對區段進行加密及解密的加密金鑰。</span><span class="sxs-lookup"><span data-stu-id="d72fc-190">The identity of the ASP.NET application must have read access to the encryption key that is used to encrypt and decrypt the encrypted sections.</span></span>|  
+|<!--zz<xref:System.Configuration.DPAPIProtectedConfigurationProvider>-->`System.Configuration.DPAPIProtectedConfigurationProvider`|<span data-ttu-id="d72fc-191">使用 Windows Data Protection API (DPAPI) 來加密組態區段。</span><span class="sxs-lookup"><span data-stu-id="d72fc-191">Uses the Windows Data Protection API (DPAPI) to encrypt configuration sections.</span></span> <span data-ttu-id="d72fc-192">DPAPI 使用 Windows 內建的密碼編譯服務，可以針對電腦特定或使用者帳戶特定的保護進行設定。</span><span class="sxs-lookup"><span data-stu-id="d72fc-192">It uses the Windows built-in cryptographic services and can be configured for either machine-specific or user-account-specific protection.</span></span> <span data-ttu-id="d72fc-193">電腦特定的保護特別適用於相同伺服器上需要共用資訊的多個應用程式。</span><span class="sxs-lookup"><span data-stu-id="d72fc-193">Machine-specific protection is useful for multiple applications on the same server that need to share information.</span></span> <span data-ttu-id="d72fc-194">使用者特定的保護則可用於使用特定使用者識別執行的服務，例如共用的裝載環境。</span><span class="sxs-lookup"><span data-stu-id="d72fc-194">User-account-specific protection can be used with services that run with a specific user identity, such as a shared hosting environment.</span></span> <span data-ttu-id="d72fc-195">每個應用程式都會在不同的識別之下執行，如此可限制對檔案和資料庫等資源的存取。</span><span class="sxs-lookup"><span data-stu-id="d72fc-195">Each application runs under a separate identity which restricts access to resources such as files and databases.</span></span>|  
   
- 這兩種提供者都提供高度加密的資料。  不過，如果您打算在多個伺服器 \(例如 Web 伺服陣列\) 上使用相同的加密組態檔，則只有使用 `RsaProtectedConfigurationProvider` 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。  如需詳細資訊，請參閱[Importing and Exporting Protected Configuration RSA Key Containers](../Topic/Importing%20and%20Exporting%20Protected%20Configuration%20RSA%20Key%20Containers.md)。  
+ <span data-ttu-id="d72fc-196">這兩種提供者都提供高度加密的資料。</span><span class="sxs-lookup"><span data-stu-id="d72fc-196">Both providers offer strong encryption of data.</span></span> <span data-ttu-id="d72fc-197">不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 `RsaProtectedConfigurationProvider` 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。</span><span class="sxs-lookup"><span data-stu-id="d72fc-197">However, if you are planning to use the same encrypted configuration file on multiple servers, such as a Web farm, only the `RsaProtectedConfigurationProvider` enables you to export the encryption keys used to encrypt the data and import them on another server.</span></span> <span data-ttu-id="d72fc-198">如需詳細資訊，請參閱[匯入及匯出受保護組態的 RSA 金鑰容器](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-198">For more information, see [Importing and Exporting Protected Configuration RSA Key Containers](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).</span></span>  
   
-### 使用組態類別  
- <xref:System.Configuration> 命名空間 \(Namespace\) 提供類別 \(Class\)，以透過程式設計的方式使用組態設定。  <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。  如果要建立 ASP.NET 應用程式，則可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 類別，此類別不但提供相同的功能，還可用於存取 ASP.NET 應用程式獨有的設定，例如 **\<system.web\>** 中的設定。  
-  
-> [!NOTE]
->  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。  如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。  這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 \(Implementation\)。  如需詳細資訊，請參閱[Cryptographic Services](http://msdn.microsoft.com/zh-tw/68a1e844-c63c-44af-9247-f6716eb23781)。  
-  
-### App.config 範例  
- 此範例示範如何在 Windows 應用程式的 **app.config** 檔案中切換 **connectionStrings** 區段的加密。  在此範例中，程序會採用應用程式的名稱做為引數，例如 "MyApplication.exe"。  接下來會加密 **app.config** 檔案，並將它複製到在 "MyApplication.exe.config" 的名稱下包含可執行檔的資料夾。  
+### <a name="using-the-configuration-classes"></a><span data-ttu-id="d72fc-199">使用組態類別</span><span class="sxs-lookup"><span data-stu-id="d72fc-199">Using the Configuration Classes</span></span>  
+ <span data-ttu-id="d72fc-200"><xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。</span><span class="sxs-lookup"><span data-stu-id="d72fc-200">The <xref:System.Configuration> namespace provides classes to work with configuration settings programmatically.</span></span> <span data-ttu-id="d72fc-201"><xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。</span><span class="sxs-lookup"><span data-stu-id="d72fc-201">The <xref:System.Configuration.ConfigurationManager> class provides access to machine, application, and user configuration files.</span></span> <span data-ttu-id="d72fc-202">如果您要建立 ASP.NET 應用程式，您可以使用<xref:System.Web.Configuration.WebConfigurationManager>類別，可提供相同的功能，還可讓您存取 ASP.NET 應用程式，例如所特有的設定中找到時 **\<system.web >**。</span><span class="sxs-lookup"><span data-stu-id="d72fc-202">If you are creating an ASP.NET application, you can use the <xref:System.Web.Configuration.WebConfigurationManager> class, which provides the same functionality while also allowing you to access settings that are unique to ASP.NET applications, such as those found in **\<system.web>**.</span></span>  
   
 > [!NOTE]
->  連接字串只能在當初進行加密的電腦上進行解密。  
+>  <span data-ttu-id="d72fc-203"><xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。</span><span class="sxs-lookup"><span data-stu-id="d72fc-203">The <xref:System.Security.Cryptography> namespace contains classes that provide additional options for encrypting and decrypting data.</span></span> <span data-ttu-id="d72fc-204">如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。</span><span class="sxs-lookup"><span data-stu-id="d72fc-204">Use these classes if you require cryptographic services that are not available using protected configuration.</span></span> <span data-ttu-id="d72fc-205">這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-205">Some of these classes are wrappers for the unmanaged Microsoft CryptoAPI, while others are purely managed implementations.</span></span> <span data-ttu-id="d72fc-206">如需詳細資訊，請參閱[密碼編譯服務](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)。</span><span class="sxs-lookup"><span data-stu-id="d72fc-206">For more information, see [Cryptographic Services](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781).</span></span>  
   
- 程式碼會使用 <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> 方法來開啟 **app.config** 檔案進行編輯，<xref:System.Configuration.ConfigurationManager.GetSection%2A> 方法則會傳回 **connectionStrings** 區段。  接著程式碼會檢查 <xref:System.Configuration.SectionInformation.IsProtected%2A> 屬性，並呼叫 <xref:System.Configuration.SectionInformation.ProtectSection%2A> 來加密區段 \(如果尚未加密\)，  然後再叫用 <xref:System.Configuration.SectionInformation.UnProtectSection%2A> 方法來對區段進行解密。  <xref:System.Configuration.Configuration.Save%2A> 方法則會完成作業並儲存變更。  
+### <a name="appconfig-example"></a><span data-ttu-id="d72fc-207">App.config 範例</span><span class="sxs-lookup"><span data-stu-id="d72fc-207">App.config Example</span></span>  
+ <span data-ttu-id="d72fc-208">此範例示範如何切換加密**connectionStrings**一節中**app.config** Windows 應用程式檔案。</span><span class="sxs-lookup"><span data-stu-id="d72fc-208">This example demonstrates how to toggle encrypting the **connectionStrings** section in an **app.config** file for a Windows application.</span></span> <span data-ttu-id="d72fc-209">在此範例中，程序會採用應用程式的名稱做為引數，例如 "MyApplication.exe"。</span><span class="sxs-lookup"><span data-stu-id="d72fc-209">In this example, the procedure takes the name of the application as an argument, for example, "MyApplication.exe".</span></span> <span data-ttu-id="d72fc-210">**App.config**檔案接著會加密，並複製到在"MyApplication.exe.config"的名稱下可執行檔所在的資料夾。</span><span class="sxs-lookup"><span data-stu-id="d72fc-210">The **app.config** file will then be encrypted and copied to the folder that contains the executable under the name of "MyApplication.exe.config".</span></span>  
   
 > [!NOTE]
->  您必須在專案中設定 `System.Configuration.dll` 的參考，程式碼才能執行。  
+>  <span data-ttu-id="d72fc-211">連接字串只能在當初進行加密的電腦上進行解密。</span><span class="sxs-lookup"><span data-stu-id="d72fc-211">The connection string can only be decrypted on the computer on which it was encrypted.</span></span>  
+  
+ <span data-ttu-id="d72fc-212">程式碼會使用<xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A>方法來開啟**app.config**檔案進行編輯，而<xref:System.Configuration.ConfigurationManager.GetSection%2A>方法會傳回**connectionStrings** > 一節。</span><span class="sxs-lookup"><span data-stu-id="d72fc-212">The code uses the <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> method to open the **app.config** file for editing, and the <xref:System.Configuration.ConfigurationManager.GetSection%2A> method returns the **connectionStrings** section.</span></span> <span data-ttu-id="d72fc-213">接著程式碼會檢查 <xref:System.Configuration.SectionInformation.IsProtected%2A> 屬性，並呼叫 <xref:System.Configuration.SectionInformation.ProtectSection%2A> 來加密區段 (如果尚未加密)，</span><span class="sxs-lookup"><span data-stu-id="d72fc-213">The code then checks the <xref:System.Configuration.SectionInformation.IsProtected%2A> property, calling the <xref:System.Configuration.SectionInformation.ProtectSection%2A> to encrypt the section if it is not encrypted.</span></span> <span data-ttu-id="d72fc-214">然後再叫用 <xref:System.Configuration.SectionInformation.UnprotectSection%2A> 方法來對區段進行解密。</span><span class="sxs-lookup"><span data-stu-id="d72fc-214">The <xref:System.Configuration.SectionInformation.UnprotectSection%2A> method is invoked to decrypt the section.</span></span> <span data-ttu-id="d72fc-215"><xref:System.Configuration.Configuration.Save%2A> 方法則會完成作業並儲存變更。</span><span class="sxs-lookup"><span data-stu-id="d72fc-215">The <xref:System.Configuration.Configuration.Save%2A> method completes the operation and saves the changes.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="d72fc-216">您必須在專案中設定 `System.Configuration.dll` 的參考，程式碼才能執行。</span><span class="sxs-lookup"><span data-stu-id="d72fc-216">You must set a reference to `System.Configuration.dll` in your project for the code to run.</span></span>  
   
  [!code-csharp[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
-### Web.config 範例  
- 此範例使用 `WebConfigurationManager` 的 <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> 方法。  請注意，在此例中可以藉由波狀符號 \(Tilde\) 提供 **Web.config** 檔案的相對路徑。  程式碼需要 `System.Web.Configuration` 類別的參考。  
+### <a name="webconfig-example"></a><span data-ttu-id="d72fc-217">Web.config 範例</span><span class="sxs-lookup"><span data-stu-id="d72fc-217">Web.config Example</span></span>  
+ <span data-ttu-id="d72fc-218">此範例使用 <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> 的 `WebConfigurationManager` 方法。</span><span class="sxs-lookup"><span data-stu-id="d72fc-218">This example uses the <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> method of the `WebConfigurationManager`.</span></span> <span data-ttu-id="d72fc-219">請注意，在此情況下您可以提供的相對路徑**Web.config**使用波狀符號檔案。</span><span class="sxs-lookup"><span data-stu-id="d72fc-219">Note that in this case you can supply the relative path to the **Web.config** file by using a tilde.</span></span> <span data-ttu-id="d72fc-220">程式碼需要 `System.Web.Configuration` 類別的參考。</span><span class="sxs-lookup"><span data-stu-id="d72fc-220">The code requires a reference to the `System.Web.Configuration` class.</span></span>  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 如需保護 ASP.NET 應用程式的詳細資訊，請參閱 [NIB: ASP.NET Security](http://msdn.microsoft.com/zh-tw/04b37532-18d9-40b4-8e5f-ee09a70b311d)和 ASP.NET Developer Center 上的 [ASP.NET 2.0 安全性實行方法簡介](http://go.microsoft.com/fwlink/?LinkId=59997)。  
+ <span data-ttu-id="d72fc-221">保護 ASP.NET 應用程式的詳細資訊，請參閱[NIB: ASP.NET 安全性](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)和[ASP.NET 2.0 安全性作法一眼](http://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET 開發人員中心。</span><span class="sxs-lookup"><span data-stu-id="d72fc-221">For more information securing ASP.NET applications, see [NIB: ASP.NET Security](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) and [ASP.NET 2.0 Security Practices at a Glance](http://go.microsoft.com/fwlink/?LinkId=59997) on the ASP.NET Developer Center.</span></span>  
   
-## 請參閱  
- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)   
- [保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)   
- [Using the Configuration Classes](../Topic/Using%20the%20Configuration%20Classes.md)   
- [設定應用程式](../../../../docs/framework/configure-apps/index.md)   
- [ASP.NET Web Site Administration](../Topic/ASP.NET%20Web%20Site%20Administration.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d72fc-222">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d72fc-222">See Also</span></span>  
+ [<span data-ttu-id="d72fc-223">連接字串產生器</span><span class="sxs-lookup"><span data-stu-id="d72fc-223">Connection String Builders</span></span>](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [<span data-ttu-id="d72fc-224">保護連線資訊</span><span class="sxs-lookup"><span data-stu-id="d72fc-224">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [<span data-ttu-id="d72fc-225">使用組態類別</span><span class="sxs-lookup"><span data-stu-id="d72fc-225">Using the Configuration Classes</span></span>](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [<span data-ttu-id="d72fc-226">設定應用程式</span><span class="sxs-lookup"><span data-stu-id="d72fc-226">Configuring Apps</span></span>](../../../../docs/framework/configure-apps/index.md)  
+ [<span data-ttu-id="d72fc-227">ASP.NET 網站管理</span><span class="sxs-lookup"><span data-stu-id="d72fc-227">ASP.NET Web Site Administration</span></span>](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
+ [<span data-ttu-id="d72fc-228">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="d72fc-228">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,57 +1,62 @@
 ---
-title: "如何：判斷所按的輔助按鍵為何 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "alt 鍵"
-  - "control 鍵"
-  - "事件 [Windows Form], 鍵盤"
-  - "事件 [Windows Form], 滑鼠"
-  - "鍵盤輸入"
-  - "鍵盤, 鍵盤輸入"
-  - "索引鍵, alt 鍵"
-  - "索引鍵, control 鍵"
-  - "索引鍵, 判斷上次按下的"
-  - "索引鍵, 輔助按鍵"
-  - "索引鍵, shift 鍵"
-  - "Keys.Alt 列舉類型成員"
-  - "Keys.ControlKey 列舉類型成員"
-  - "Keys.Shift 列舉類型成員"
-  - "輔助按鍵"
-  - "shift 鍵"
-  - "使用者輸入, 檢查鍵盤"
+title: "如何：判斷所按的輔助按鍵為何"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- keyboard input
+- shift keys
+- events [Windows Forms], mouse
+- Keys.ControlKey enumeration member
+- keys [Windows Forms], control keys
+- user input [Windows Forms], checking for keyboard
+- keys [Windows Forms], determining last pressed
+- keys [Windows Forms], shift keys
+- keys [Windows Forms], modifier keys
+- control keys
+- keys [Windows Forms], alt keys
+- alt keys
+- Keys.Shift enumeration member
+- events [Windows Forms], keyboard
+- keyboards [Windows Forms], keyboard input
+- Keys.Alt enumeration member
+- modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6fdc93063bbc8c9428f2f01c6cd5c0578e77ab01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：判斷所按的輔助按鍵為何
-建立接受使用者按鍵輸入的應用程式時，您可能也會想要監視輔助按鍵 \(Modifier Key\)，例如 SHIFT、ALT 和 CTRL 鍵。  當按下輔助按鍵與其他按鍵或滑鼠按鍵的組合時，應用程式可以適當地回應。  例如，如果是按下字母 S，只會單純在螢幕上顯示 "s"，但如果是按下 CTRL\+S 則會儲存目前的文件。  如果您處理 <xref:System.Windows.Forms.Control.KeyDown> 事件，則事件處理常式所接收的 <xref:System.Windows.Forms.KeyEventArgs> 其 <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 屬性會指定所按下的輔助按鍵為何。  或者，<xref:System.Windows.Forms.KeyEventArgs> 的 <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> 屬性會指定，和位元 OR 結合的任一輔助按鍵是與哪個字母一起按下。  但是，如果您處理的是 <xref:System.Windows.Forms.Control.KeyPress> 事件或滑鼠事件，則事件處理常式不會接收這個資訊。  在這種情況下，您必須使用 <xref:System.Windows.Forms.Control> 類別的 <xref:System.Windows.Forms.Control.ModifierKeys%2A> 屬性。  不論是哪一種情況下，您都必須執行適當 <xref:System.Windows.Forms.Keys> 值的位元 AND 以及正在測試的值。  <xref:System.Windows.Forms.Keys> 列舉型別提供每個輔助按鍵的變異，所以請您務必以正確值執行位元 AND。  例如，SHIFT 鍵是以 <xref:System.Windows.Forms.Keys>、<xref:System.Windows.Forms.Keys>、<xref:System.Windows.Forms.Keys> 和 <xref:System.Windows.Forms.Keys> 表示，而測試 SHIFT 是否為輔助按鍵的正確值則是 <xref:System.Windows.Forms.Keys>。  同樣地，若要測試 CTLR 和 ALT 是否為輔助按鍵，則您應分別使用 <xref:System.Windows.Forms.Keys> 和 <xref:System.Windows.Forms.Keys> 值。  
+# <a name="how-to-determine-which-modifier-key-was-pressed"></a><span data-ttu-id="60bc3-102">如何：判斷所按的輔助按鍵為何</span><span class="sxs-lookup"><span data-stu-id="60bc3-102">How to: Determine Which Modifier Key Was Pressed</span></span>
+<span data-ttu-id="60bc3-103">當您建立應用程式可接受使用者按鍵輸入時，您可能也要監視輔助按鍵，例如 SHIFT、 ALT 和 CTRL 鍵。</span><span class="sxs-lookup"><span data-stu-id="60bc3-103">When you create an application that accepts the user's keystrokes, you may also want to monitor for modifier keys such as the SHIFT, ALT, and CTRL keys.</span></span> <span data-ttu-id="60bc3-104">與其他按鍵或滑鼠按鍵組合是按下輔助按鍵，您的應用程式能夠適當地回應。</span><span class="sxs-lookup"><span data-stu-id="60bc3-104">When a modifier key is pressed in combination with other keys, or with mouse clicks, your application can respond appropriately.</span></span> <span data-ttu-id="60bc3-105">例如，如果按下的代號 S 時，這只會出現在畫面上，"s"，但如果按下 CTRL + S 鍵的索引鍵，可能會儲存目前文件。</span><span class="sxs-lookup"><span data-stu-id="60bc3-105">For example, if the letter S is pressed, this may simply cause an "s" to appear on the screen, but if the keys CTRL+S are pressed, the current document may be saved.</span></span> <span data-ttu-id="60bc3-106">如果您處理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>接收到事件處理常式會指定哪些輔助按鍵按下按鍵。</span><span class="sxs-lookup"><span data-stu-id="60bc3-106">If you handle the <xref:System.Windows.Forms.Control.KeyDown> event, the <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property of the <xref:System.Windows.Forms.KeyEventArgs> received by the event handler specifies which modifier keys are pressed.</span></span> <span data-ttu-id="60bc3-107">或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>屬性<xref:System.Windows.Forms.KeyEventArgs>指定已按下也與位元 OR 運算結合任何輔助按鍵的字元。</span><span class="sxs-lookup"><span data-stu-id="60bc3-107">Alternatively, the <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> property of <xref:System.Windows.Forms.KeyEventArgs> specifies the character that was pressed as well as any modifier keys combined with a bitwise OR.</span></span> <span data-ttu-id="60bc3-108">不過，如果您要處理<xref:System.Windows.Forms.Control.KeyPress>事件或滑鼠事件，事件處理常式不會收到這項資訊。</span><span class="sxs-lookup"><span data-stu-id="60bc3-108">However, if you are handling the <xref:System.Windows.Forms.Control.KeyPress> event or a mouse event, the event handler does not receive this information.</span></span> <span data-ttu-id="60bc3-109">在此情況下，您必須使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>屬性<xref:System.Windows.Forms.Control>類別。</span><span class="sxs-lookup"><span data-stu-id="60bc3-109">In this case, you must use the <xref:System.Windows.Forms.Control.ModifierKeys%2A> property of the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="60bc3-110">在任一情況下，您必須執行的適當位元 AND<xref:System.Windows.Forms.Keys>值以及您要測試的值。</span><span class="sxs-lookup"><span data-stu-id="60bc3-110">In either case, you must perform a bitwise AND of the appropriate <xref:System.Windows.Forms.Keys> value and the value you are testing.</span></span> <span data-ttu-id="60bc3-111"><xref:System.Windows.Forms.Keys>列舉型別提供變化的每個輔助按鍵，因此是很重要，您執行位元，並使用正確的值。</span><span class="sxs-lookup"><span data-stu-id="60bc3-111">The <xref:System.Windows.Forms.Keys> enumeration offers variations of each modifier key, so it is important that you perform the bitwise AND with the correct value.</span></span> <span data-ttu-id="60bc3-112">SHIFT 鍵由例如<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>和<xref:System.Windows.Forms.Keys.LShiftKey>測試 SHIFT 修飾詞的索引鍵是正確的值<xref:System.Windows.Forms.Keys.Shift>。</span><span class="sxs-lookup"><span data-stu-id="60bc3-112">For example, the SHIFT key is represented by <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> and <xref:System.Windows.Forms.Keys.LShiftKey> The correct value to test SHIFT as a modifier key is <xref:System.Windows.Forms.Keys.Shift>.</span></span> <span data-ttu-id="60bc3-113">同樣地，若要測試 CTLR 和 ALT 修飾詞為您應該使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>分別值。</span><span class="sxs-lookup"><span data-stu-id="60bc3-113">Similarly, to test for CTLR and ALT as modifiers you should use the <xref:System.Windows.Forms.Keys.Control> and <xref:System.Windows.Forms.Keys.Alt> values, respectively.</span></span>  
   
 > [!NOTE]
->  Visual Basic 程式設計人員也可以透過 <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A> 屬性存取按鍵資訊。  
+>  <span data-ttu-id="60bc3-114">Visual Basic 程式設計人員也可以存取金鑰資訊透過<xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>屬性</span><span class="sxs-lookup"><span data-stu-id="60bc3-114">Visual Basic programmers can also access key information through the <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A> property</span></span>  
   
-### 若要判斷所按輔助按鍵為何  
+### <a name="to-determine-which-modifier-key-was-pressed"></a><span data-ttu-id="60bc3-115">若要判斷哪些輔助按鍵</span><span class="sxs-lookup"><span data-stu-id="60bc3-115">To determine which modifier key was pressed</span></span>  
   
--   若要判斷所按的特定輔助按鍵為何，請以 <xref:System.Windows.Forms.Control.ModifierKeys%2A> 屬性和 <xref:System.Windows.Forms.Keys> 列舉值來使用位元 `AND` 運算子。  下列程式碼範例會示範如何判斷在 <xref:System.Windows.Forms.Control.KeyPress> 事件處理常式內是否有按下 SHIFT 鍵。  
+-   <span data-ttu-id="60bc3-116">使用位元`AND`運算子搭配<xref:System.Windows.Forms.Control.ModifierKeys%2A>屬性和值的<xref:System.Windows.Forms.Keys>列舉型別來判斷是否要按下特定輔助按鍵。</span><span class="sxs-lookup"><span data-stu-id="60bc3-116">Use the bitwise `AND` operator with the <xref:System.Windows.Forms.Control.ModifierKeys%2A> property and a value of the <xref:System.Windows.Forms.Keys> enumeration to determine whether a particular modifier key is pressed.</span></span> <span data-ttu-id="60bc3-117">下列程式碼範例示範如何判斷是否內按下 SHIFT 鍵<xref:System.Windows.Forms.Control.KeyPress>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="60bc3-117">The following code example shows how to determine whether the SHIFT key is pressed within a <xref:System.Windows.Forms.Control.KeyPress> event handler.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/VB/form1.vb#5)]  
   
-## 請參閱  
- <xref:System.Windows.Forms.Keys>   
- <xref:System.Windows.Forms.Control.ModifierKeys%2A>   
- [Windows Form 應用程式中的鍵盤輸入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [How to: Determine If CapsLock is On in Visual Basic](http://msdn.microsoft.com/zh-tw/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+## <a name="see-also"></a><span data-ttu-id="60bc3-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="60bc3-118">See Also</span></span>  
+ <xref:System.Windows.Forms.Keys>  
+ <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
+ [<span data-ttu-id="60bc3-119">Windows Forms 應用程式中的鍵盤輸入</span><span class="sxs-lookup"><span data-stu-id="60bc3-119">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="60bc3-120">如何： 判斷 CapsLock 是否在中，在 Visual Basic 中</span><span class="sxs-lookup"><span data-stu-id="60bc3-120">How to: Determine If CapsLock is On in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/91e60f5c-dd61-4222-ba5f-39af803afd8c)

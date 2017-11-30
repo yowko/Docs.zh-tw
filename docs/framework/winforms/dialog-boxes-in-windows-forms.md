@@ -1,56 +1,57 @@
 ---
-title: "Windows Form 中的對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "對話方塊, Windows Form"
-  - "對話方塊, 在 Windows Form 中使用"
-  - "Windows Form 對話方塊"
+title: "Windows Form 中的對話方塊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dialog boxes [Windows Forms], Windows Forms
+- Windows Forms dialog boxes
+- dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1660bf08f10a7d4e0db4b7ae8d58fd631986974c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Form 中的對話方塊
-對話方塊用來與使用者互動，並擷取資訊。  簡單地說，對話方塊是一個其 <xref:System.Windows.Forms.FormBorderStyle> 列舉屬性設定為 `FixedDialog` 的表單。  您可以使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的 Windows Form 設計工具，建構自己的自訂對話方塊。  加入控制項，例如加入 `Label`、`Textbox` 和 `Button` 來依據您特定需求自訂對話方塊。  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 也包含預先定義的對話方塊，例如 \[開啟舊檔\] 和訊息方塊，您可為自己的應用程式採用這些對話方塊。  如需詳細資訊，請參閱[對話方塊控制項和元件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)。  
+# <a name="dialog-boxes-in-windows-forms"></a><span data-ttu-id="300a8-102">Windows Form 中的對話方塊</span><span class="sxs-lookup"><span data-stu-id="300a8-102">Dialog Boxes in Windows Forms</span></span>
+<span data-ttu-id="300a8-103">對話方塊用來與使用者互動，並擷取資訊。</span><span class="sxs-lookup"><span data-stu-id="300a8-103">Dialog boxes are used to interact with the user and retrieve information.</span></span> <span data-ttu-id="300a8-104">簡單地說，對話方塊是一個其 <xref:System.Windows.Forms.FormBorderStyle> 列舉屬性設定為 `FixedDialog` 的表單。</span><span class="sxs-lookup"><span data-stu-id="300a8-104">In simple terms, a dialog box is a form with its <xref:System.Windows.Forms.FormBorderStyle> enumeration property set to `FixedDialog`.</span></span> <span data-ttu-id="300a8-105">您可以使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的 Windows Form 設計工具，建構自己的自訂對話方塊。</span><span class="sxs-lookup"><span data-stu-id="300a8-105">You can construct your own custom dialog boxes by using the Windows Forms Designer in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span> <span data-ttu-id="300a8-106">加入控制項，例如加入 `Label`、`Textbox` 和 `Button` 來依據您特定需求自訂對話方塊。</span><span class="sxs-lookup"><span data-stu-id="300a8-106">Add controls such as `Label`, `Textbox`, and `Button` to customize dialog boxes to your specific needs.</span></span> <span data-ttu-id="300a8-107">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]也包含預先定義的對話方塊，例如**開啟舊檔**和訊息方塊，您可以調整您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="300a8-107">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also includes predefined dialog boxes, such as **File Open** and message boxes, which you can adapt for your own applications.</span></span> <span data-ttu-id="300a8-108">如需詳細資訊，請參閱[對話方塊控制項和元件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="300a8-108">For more information, see [Dialog-Box Controls and Components](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).</span></span>  
   
-## 在本節中  
- [如何：顯示 Windows Form 的對話方塊](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
- 提供顯示對話方塊的指示。  
+## <a name="in-this-section"></a><span data-ttu-id="300a8-109">本章節內容</span><span class="sxs-lookup"><span data-stu-id="300a8-109">In This Section</span></span>  
+ [<span data-ttu-id="300a8-110">操作說明：顯示 Windows Forms 的對話方塊</span><span class="sxs-lookup"><span data-stu-id="300a8-110">How to: Display Dialog Boxes for Windows Forms</span></span>](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
+ <span data-ttu-id="300a8-111">提供顯示對話方塊的指示。</span><span class="sxs-lookup"><span data-stu-id="300a8-111">Gives directions for showing dialog boxes.</span></span>  
   
--   [如何：使用多個屬性選擇性地擷取對話方塊資訊](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))  
+-   <span data-ttu-id="300a8-112">[如何： 擷取使用多個屬性選擇性地對話方塊資訊](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-112">[How to: Retrieve Dialog Box Information Selectively Using Multiple Properties](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))</span></span>  
   
--   [如何：從對話方塊的父表單擷取資訊](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))  
+-   <span data-ttu-id="300a8-113">[如何： 從對話方塊中的父表單擷取資訊](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-113">[How to: Retrieve Information from the Parent Form of a Dialog Box](http://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))</span></span>  
   
--   [使用者輸入到對話方塊](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))  
+-   <span data-ttu-id="300a8-114">[使用者輸入到對話方塊](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-114">[User Input to Dialog Boxes](http://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))</span></span>  
   
--   [如何：擷取對話方塊的結果](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))  
+-   <span data-ttu-id="300a8-115">[如何： 擷取對話方塊的結果](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-115">[How to: Retrieve the Result for Dialog Boxes](http://msdn.microsoft.com/library/40x40td1\(v=vs.110\))</span></span>  
   
--   [逐步解說：使用物件共同地擷取對話方塊資訊](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))  
+-   <span data-ttu-id="300a8-116">[逐步解說： 擷取使用物件共同地對話方塊資訊](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-116">[Walkthrough: Retrieving Dialog Box Information Collectively Using Objects](http://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))</span></span>  
   
--   [如何：關閉對話方塊並保留使用者輸入](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))  
+-   <span data-ttu-id="300a8-117">[如何： 關閉對話方塊並保留使用者輸入](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-117">[How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/library/65ad5907\(v=vs.110\))</span></span>  
   
--   [如何：在設計階段建立對話方塊](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))  
+-   <span data-ttu-id="300a8-118">[如何： 在設計階段建立對話方塊](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-118">[How to: Create Dialog Boxes at Design Time](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))</span></span>  
   
--   [如何：顯示訊息方塊](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))  
+-   <span data-ttu-id="300a8-119">[如何： 顯示訊息方塊](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="300a8-119">[How to: Display Message Boxes](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))</span></span>  
   
-## 相關章節  
- [對話方塊控制項和元件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- 列出預先定義的對話方塊控制項。  
+## <a name="related-sections"></a><span data-ttu-id="300a8-120">相關章節</span><span class="sxs-lookup"><span data-stu-id="300a8-120">Related Sections</span></span>  
+ [<span data-ttu-id="300a8-121">對話方塊控制項和元件</span><span class="sxs-lookup"><span data-stu-id="300a8-121">Dialog-Box Controls and Components</span></span>](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="300a8-122">列出預先定義的對話方塊控制項。</span><span class="sxs-lookup"><span data-stu-id="300a8-122">Lists the predefined dialog box controls.</span></span>  
   
- [變更 Windows Form 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- 包含主題連結，描述如何變更 Windows Form 應用程式的外觀。  
+ [<span data-ttu-id="300a8-123">變更 Windows Forms 的外觀</span><span class="sxs-lookup"><span data-stu-id="300a8-123">Changing the Appearance of Windows Forms</span></span>](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ <span data-ttu-id="300a8-124">包含主題連結，描述如何變更 Windows Forms 應用程式的外觀。</span><span class="sxs-lookup"><span data-stu-id="300a8-124">Contains links to topics that describe how to change the appearance of Windows Forms applications.</span></span>  
   
- [TabControl 控制項概觀](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- 說明如何將索引標籤控制項合併到對話方塊中。
+ [<span data-ttu-id="300a8-125">TabControl 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="300a8-125">TabControl Control Overview</span></span>](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ <span data-ttu-id="300a8-126">說明如何將索引標籤控制項合併到對話方塊中。</span><span class="sxs-lookup"><span data-stu-id="300a8-126">Explains how you incorporate the tab control into a dialog box.</span></span>

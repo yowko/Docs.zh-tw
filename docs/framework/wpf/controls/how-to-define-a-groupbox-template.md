@@ -1,32 +1,35 @@
 ---
-title: "如何：定義 GroupBox 範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項, GroupBox"
-  - "GroupBox 控制項, 建立範本"
+title: "如何：定義 GroupBox 範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], GroupBox
+- GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7b6312575dbf44b7c4ae872fbb87df41eb2e32ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：定義 GroupBox 範本
-這個範例說明如何建立 <xref:System.Windows.Controls.GroupBox> 控制項的範本。  
+# <a name="how-to-define-a-groupbox-template"></a><span data-ttu-id="111ac-102">如何：定義 GroupBox 範本</span><span class="sxs-lookup"><span data-stu-id="111ac-102">How to: Define a GroupBox Template</span></span>
+<span data-ttu-id="111ac-103">這個範例示範如何建立的範本<xref:System.Windows.Controls.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="111ac-103">This example shows how to create a template for a <xref:System.Windows.Controls.GroupBox> control.</span></span>  
   
-## 範例  
- 下列範例使用版面配置的 <xref:System.Windows.Controls.Grid> 控制項來定義 <xref:System.Windows.Controls.GroupBox> 控制項範本。  本範例使用 <xref:System.Windows.Controls.BorderGapMaskConverter> 定義 <xref:System.Windows.Controls.GroupBox> 的框線，因此，框線不會混淆 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 內容。  
+## <a name="example"></a><span data-ttu-id="111ac-104">範例</span><span class="sxs-lookup"><span data-stu-id="111ac-104">Example</span></span>  
+ <span data-ttu-id="111ac-105">下列範例會定義<xref:System.Windows.Controls.GroupBox>使用控制項範本<xref:System.Windows.Controls.Grid>版面配置控制項。</span><span class="sxs-lookup"><span data-stu-id="111ac-105">The following example defines a <xref:System.Windows.Controls.GroupBox> control template by using a <xref:System.Windows.Controls.Grid> control for layout.</span></span> <span data-ttu-id="111ac-106">範本使用<xref:System.Windows.Controls.BorderGapMaskConverter>來定義的框線<xref:System.Windows.Controls.GroupBox>以便框線並不會遮住<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>內容。</span><span class="sxs-lookup"><span data-stu-id="111ac-106">The template uses a <xref:System.Windows.Controls.BorderGapMaskConverter> to define the border of the <xref:System.Windows.Controls.GroupBox> so that the border does not obscure the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> content.</span></span>  
   
- [!code-xml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
+ [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
-## 請參閱  
- <xref:System.Windows.Controls.GroupBox>   
- [GroupBox How\-to Topics](http://msdn.microsoft.com/zh-tw/7692e155-a4c6-428c-b7e0-64b3740daca7)
+## <a name="see-also"></a><span data-ttu-id="111ac-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="111ac-107">See Also</span></span>  
+ <xref:System.Windows.Controls.GroupBox>  
+ [<span data-ttu-id="111ac-108">GroupBox How-to 主題</span><span class="sxs-lookup"><span data-stu-id="111ac-108">GroupBox How-to Topics</span></span>](http://msdn.microsoft.com/en-us/7692e155-a4c6-428c-b7e0-64b3740daca7)

@@ -1,38 +1,38 @@
 ---
-title: "ToolStripStatusLabel 控制項概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripStatusLabel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "狀態列"
-  - "ToolStripStatusLabel 控制項 [Windows Form], aboutToolStripStatusLabel 控制項"
+title: "ToolStripStatusLabel 控制項概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripStatusLabel
+helpviewer_keywords:
+- ToolStripStatusLabel control [Windows Forms], aboutToolStripStatusLabel control
+- status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2bd5da2474c59b9ea893b90f6b5f15343769f80c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# ToolStripStatusLabel 控制項概觀
-<xref:System.Windows.Forms.ToolStripStatusLabel> 是 <xref:System.Windows.Forms.StatusStrip> 的標籤 \(Label\)。  如同 <xref:System.Windows.Forms.Label> 或 <xref:System.Windows.Forms.ToolStripLabel>，<xref:System.Windows.Forms.ToolStripStatusLabel> 會為文字、影像或兩者提供不可點選的顯示區域。  <xref:System.Windows.Forms.ToolStripStatusLabel> 已由 <xref:System.Windows.Forms.StatusStrip> 所裝載。  
+# <a name="toolstripstatuslabel-control-overview"></a><span data-ttu-id="8be29-102">ToolStripStatusLabel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="8be29-102">ToolStripStatusLabel Control Overview</span></span>
+<span data-ttu-id="8be29-103"><xref:System.Windows.Forms.ToolStripStatusLabel>當做標籤<xref:System.Windows.Forms.StatusStrip>。</span><span class="sxs-lookup"><span data-stu-id="8be29-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> is a label for a <xref:System.Windows.Forms.StatusStrip>.</span></span> <span data-ttu-id="8be29-104">像<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.ToolStripLabel>、<xref:System.Windows.Forms.ToolStripStatusLabel>提供文字、 影像或兩者的不可點選的顯示區域。</span><span class="sxs-lookup"><span data-stu-id="8be29-104">Like the <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.ToolStripLabel>, the <xref:System.Windows.Forms.ToolStripStatusLabel> provides a non-clickable display area for text, images, or both.</span></span> <span data-ttu-id="8be29-105"><xref:System.Windows.Forms.ToolStripStatusLabel>由<xref:System.Windows.Forms.StatusStrip>。</span><span class="sxs-lookup"><span data-stu-id="8be29-105">The <xref:System.Windows.Forms.ToolStripStatusLabel> is hosted by a <xref:System.Windows.Forms.StatusStrip>.</span></span>  
   
-### 重要的 ToolStripStatusLabel 成員  
+### <a name="important-toolstripstatuslabel-members"></a><span data-ttu-id="8be29-106">重要 ToolStripStatusLabel 成員</span><span class="sxs-lookup"><span data-stu-id="8be29-106">Important ToolStripStatusLabel Members</span></span>  
   
-|名稱|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|取得或設定值，指出 <xref:System.Windows.Forms.ToolStripStatusLabel> 是否會在調整表單大小時自動填滿 <xref:System.Windows.Forms.StatusStrip> 上的可用空間。|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|取得或設定值，表示 <xref:System.Windows.Forms.ToolStripStatusLabel> 的哪一邊會顯示框線。|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|取得或設定 <xref:System.Windows.Forms.ToolStripStatusLabel> 的框線樣式。|  
+|<span data-ttu-id="8be29-107">名稱</span><span class="sxs-lookup"><span data-stu-id="8be29-107">Name</span></span>|<span data-ttu-id="8be29-108">說明</span><span class="sxs-lookup"><span data-stu-id="8be29-108">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|<span data-ttu-id="8be29-109">取得或設定值，指出是否<xref:System.Windows.Forms.ToolStripStatusLabel>自動填入可用的空間上<xref:System.Windows.Forms.StatusStrip>調整表單大小時</span><span class="sxs-lookup"><span data-stu-id="8be29-109">Gets or sets a value indicating whether the <xref:System.Windows.Forms.ToolStripStatusLabel> automatically fills the available space on the <xref:System.Windows.Forms.StatusStrip> as the form is resized</span></span>|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|<span data-ttu-id="8be29-110">取得或設定值，指出哪些邊<xref:System.Windows.Forms.ToolStripStatusLabel>顯示框線。</span><span class="sxs-lookup"><span data-stu-id="8be29-110">Gets or sets a value that indicates which sides of the <xref:System.Windows.Forms.ToolStripStatusLabel> show borders.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|<span data-ttu-id="8be29-111">取得或設定的框線樣式<xref:System.Windows.Forms.ToolStripStatusLabel>。</span><span class="sxs-lookup"><span data-stu-id="8be29-111">Gets or sets the border style of the <xref:System.Windows.Forms.ToolStripStatusLabel>.</span></span>|  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="8be29-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8be29-112">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>

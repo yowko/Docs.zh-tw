@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.FailedPipeConnect | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.FailedPipeConnect
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a827e0f-fb91-46bb-bd54-926d4b74d8a6
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9a64f5885fd32d2486c90ebe4f8e0c739a025d0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.FailedPipeConnect
-嘗試連接具名管道端點失敗。在指定的逾時期間內，進行另一次嘗試。  
+# <a name="systemservicemodelchannelsfailedpipeconnect"></a><span data-ttu-id="a594a-102">System.ServiceModel.Channels.FailedPipeConnect</span><span class="sxs-lookup"><span data-stu-id="a594a-102">System.ServiceModel.Channels.FailedPipeConnect</span></span>
+<span data-ttu-id="a594a-103">嘗試連接具名管道端點失敗。</span><span class="sxs-lookup"><span data-stu-id="a594a-103">An attempt to connect to the named pipe endpoint failed.</span></span> <span data-ttu-id="a594a-104">在指定的逾時期間內，進行另一次嘗試。</span><span class="sxs-lookup"><span data-stu-id="a594a-104">Another attempt is made within the specified timeout period.</span></span>  
   
-## 描述  
- 這個告知性追蹤表示無法連接到具名通道端點。如果具名通道端點找不到或忙碌中，可能就會發生這個問題。進行額外的嘗試，每個嘗試之間相隔短暫的時間，直到成功或 OpenTimeout 到期為止。  
+## <a name="description"></a><span data-ttu-id="a594a-105">描述</span><span class="sxs-lookup"><span data-stu-id="a594a-105">Description</span></span>  
+ <span data-ttu-id="a594a-106">這個告知性追蹤表示無法連接到具名通道端點。</span><span class="sxs-lookup"><span data-stu-id="a594a-106">This informational trace indicates a failure to connect to a named pipe endpoint.</span></span> <span data-ttu-id="a594a-107">如果具名通道端點找不到或忙碌中，可能就會發生這個問題。</span><span class="sxs-lookup"><span data-stu-id="a594a-107">This could happen if the named pipe endpoint is not found or is busy.</span></span> <span data-ttu-id="a594a-108">進行額外的嘗試，每個嘗試之間相隔短暫的時間，直到成功或 OpenTimeout 到期為止。</span><span class="sxs-lookup"><span data-stu-id="a594a-108">Additional attempts are made, each separated by a short amount of time, until one succeeds or the OpenTimeout expires.</span></span>  
   
-## 請參閱  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a594a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a594a-109">See Also</span></span>  
+ [<span data-ttu-id="a594a-110">追蹤</span><span class="sxs-lookup"><span data-stu-id="a594a-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a594a-111">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="a594a-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a594a-112">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="a594a-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,88 +1,94 @@
 ---
-title: "筆墨入門 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動畫, 漸層筆刷色彩"
-  - "筆刷, 建立色彩動畫"
-  - "漸層筆刷, 建立色彩動畫"
-  - "程序性程式碼替代 XAML"
-  - "XAML, 程序性程式碼替代"
+title: "筆墨入門"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- procedural code in lieu of XAML [WPF]
+- gradient brush [WPF], animating colors of
+- XAML [WPF], procedural code in lieu of
+- animation [WPF], gradient brush colors
+- brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc8ffe9ad68060d9dfbcafe99133a736237a2bb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 筆墨入門
-將數位筆墨加入應用程式要比以往更加簡單。  筆墨的演進發展對於 COM 和 Windows Forms 程式設計的方法，是達成與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 完全整合的必要關鍵。  您不一定要安裝個別的 SDK 或執行階段程式庫。  
+# <a name="getting-started-with-ink"></a><span data-ttu-id="0fd78-102">筆墨入門</span><span class="sxs-lookup"><span data-stu-id="0fd78-102">Getting Started with Ink</span></span>
+<span data-ttu-id="0fd78-103">數位筆跡併入您的應用程式是比以往更為容易。</span><span class="sxs-lookup"><span data-stu-id="0fd78-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="0fd78-104">從 COM 和 Windows Form 的方法達到完整地整合到程式設計必然發展筆墨[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0fd78-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="0fd78-105">您不需要安裝個別的 Sdk 或執行階段程式庫。</span><span class="sxs-lookup"><span data-stu-id="0fd78-105">You do not need to install separate SDKs or runtime libraries.</span></span>  
   
-## 必要條件  
- 您必須先安裝 Microsoft Visual Studio 2005 和 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]，才能使用下列範例。  也應該瞭解如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的應用程式。  如需開始使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的詳細資訊，請參閱[逐步解說：WPF 使用者入門](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="0fd78-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="0fd78-106">Prerequisites</span></span>  
+ <span data-ttu-id="0fd78-107">若要使用下列的範例，您必須先安裝 Microsoft Visual Studio 2005 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0fd78-107">To use the following examples, you must first install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span></span> <span data-ttu-id="0fd78-108">您也應該了解如何撰寫適用於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的應用程式。</span><span class="sxs-lookup"><span data-stu-id="0fd78-108">You should also understand how to write applications for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="0fd78-109">如需開始使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。</span><span class="sxs-lookup"><span data-stu-id="0fd78-109">For more information about getting started with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
   
-## 快速入門  
- 本節會協助您撰寫收集筆墨的簡單 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
+## <a name="quick-start"></a><span data-ttu-id="0fd78-110">快速入門</span><span class="sxs-lookup"><span data-stu-id="0fd78-110">Quick Start</span></span>  
+ <span data-ttu-id="0fd78-111">本節可協助您撰寫簡單[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]收集筆墨的應用程式。</span><span class="sxs-lookup"><span data-stu-id="0fd78-111">This section helps you write a simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that collects ink.</span></span>  
   
- 如果您尚未安裝 Microsoft Visual Studio 2005 和 [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]，請立即進行安裝。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式通常必須經過編譯，您才可以進行檢視，即使應用程式包含整個[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 亦然。  但是，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] 包含應用程式 XamlPad，XamlPad 是專為加入實作以 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 為基礎之 UI 的處理速度而設計的。  您可以使用該應用程式，來檢視和修補本文件前幾個範例。  從 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 建立已編譯應用程式的程序涵蓋在本文件稍後的部分。  
+ <span data-ttu-id="0fd78-112">如果您尚未這樣做，請安裝 Microsoft Visual Studio 2005 和[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0fd78-112">If you haven't already done so, install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="0fd78-113">應用程式通常必須經過編譯，您可以檢視它們，即使它們是完全組成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0fd78-113"> applications usually must be compiled before you can view them, even if they consist entirely of [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="0fd78-114">不過，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]包含應用程式，XamlPad，設計來加速實作的處理序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-基礎 UI。</span><span class="sxs-lookup"><span data-stu-id="0fd78-114">However, the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] includes an application, XamlPad, designed to speed up the process of implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-based UI.</span></span> <span data-ttu-id="0fd78-115">若要檢視和修補這份文件中的前幾個範例，您可以使用該應用程式。</span><span class="sxs-lookup"><span data-stu-id="0fd78-115">You can use that application to view and tinker with the first few samples in this document.</span></span> <span data-ttu-id="0fd78-116">建立的程序編譯的應用程式從[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]涵蓋在本文件稍後。</span><span class="sxs-lookup"><span data-stu-id="0fd78-116">The process of creating compiled applications from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is covered later in this document.</span></span>  
   
- 若要啟動 XAMLPad，按一下 \[**開始**\] 功能表，依序指向 \[**所有程式**\]、\[**Microsoft Winndows SDK**\] 和 \[**工具**\]，然後按一下 \[**XAMLPad**\]。  在呈現窗格中，XAMLPad 會呈現在程式碼窗格中寫入的 XAML 程式碼。  您可以編輯 XAML 程式碼，所做變更會立即顯示在呈現窗格中。  
+ <span data-ttu-id="0fd78-117">若要啟動 XAMLPad，按一下 **啟動**功能表上，指向**所有程式**，指向**Microsoft Winndows SDK**，指向**工具**，然後按一下**XAMLPad**。</span><span class="sxs-lookup"><span data-stu-id="0fd78-117">To launch XAMLPad, click the **Start** menu, point to **All Programs**, point to **Microsoft Winndows SDK**, point to **Tools**, and click **XAMLPad**.</span></span> <span data-ttu-id="0fd78-118">在 [轉譯] 窗格中，XAMLPad 會呈現撰寫程式碼窗格中的 XAML 程式碼。</span><span class="sxs-lookup"><span data-stu-id="0fd78-118">In the rendering pane, XAMLPad renders the XAML code written in the code pane.</span></span> <span data-ttu-id="0fd78-119">您可以編輯 XAML 程式碼，所做的變更會立即顯示在 [轉譯] 窗格中。</span><span class="sxs-lookup"><span data-stu-id="0fd78-119">You can edit the XAML code, and the changes immediately appear in the rendering pane.</span></span>  
   
-#### 取得筆墨  
- 若要啟動您第一個支援筆墨的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式：  
+#### <a name="got-ink"></a><span data-ttu-id="0fd78-120">有筆墨嗎？</span><span class="sxs-lookup"><span data-stu-id="0fd78-120">Got Ink?</span></span>  
+ <span data-ttu-id="0fd78-121">若要啟動您的第一個[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援筆墨的應用程式：</span><span class="sxs-lookup"><span data-stu-id="0fd78-121">To start your first [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that supports ink:</span></span>  
   
-1.  開啟 Microsoft Visual Studio 2005  
+1.  <span data-ttu-id="0fd78-122">開啟 Microsoft Visual Studio 2005</span><span class="sxs-lookup"><span data-stu-id="0fd78-122">Open Microsoft Visual Studio 2005</span></span>  
   
-2.  建立新的 \[**Windows Application \(WPF\)**\]  
+2.  <span data-ttu-id="0fd78-123">建立新**Windows 應用程式 (WPF)**</span><span class="sxs-lookup"><span data-stu-id="0fd78-123">Create a new **Windows Application (WPF)**</span></span>  
   
-3.  在 `<Grid>` 標籤之間輸入 `<InkCanvas/>`  
+3.  <span data-ttu-id="0fd78-124">型別`<InkCanvas/>`之間`<Grid>`標記</span><span class="sxs-lookup"><span data-stu-id="0fd78-124">Type `<InkCanvas/>` between the `<Grid>` tags</span></span>  
   
-4.  按下 **F5** 在偵錯工具中啟動應用程式  
+4.  <span data-ttu-id="0fd78-125">按**F5**來偵錯工具中啟動應用程式</span><span class="sxs-lookup"><span data-stu-id="0fd78-125">Press **F5** to launch your application in the debugger</span></span>  
   
-5.  使用手寫筆或滑鼠，在視窗中寫入 hello world  
+5.  <span data-ttu-id="0fd78-126">使用手寫筆或滑鼠，撰寫**hello world**視窗中</span><span class="sxs-lookup"><span data-stu-id="0fd78-126">Using a stylus or mouse, write **hello world** in the window</span></span>  
   
- 您只用了 12 個按鍵，就寫入相當於 "hello world" 應用程式的筆墨！  
+ <span data-ttu-id="0fd78-127">您已撰寫筆墨相當於使用只有 12 按鍵的"hello world"應用程式 ！</span><span class="sxs-lookup"><span data-stu-id="0fd78-127">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>  
   
-#### 為應用程式增添樂趣  
- 讓我們利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的某些功能。  將開始 \<Window\> 和結束 \<\/Window\> 標籤之間的所有內容取代為下列標記，即可在筆墨表面上取得漸層筆刷背景。  
+#### <a name="spice-up-your-application"></a><span data-ttu-id="0fd78-128">您的應用程式讓動</span><span class="sxs-lookup"><span data-stu-id="0fd78-128">Spice Up Your Application</span></span>  
+ <span data-ttu-id="0fd78-129">讓我們來看的某些功能的優點[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0fd78-129">Let’s take advantage of some features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  <span data-ttu-id="0fd78-130">取代開頭之間的所有內容\<視窗 > 並關閉\</Window > 以取得筆墨表面背景漸層筆刷下列標記的標記。</span><span class="sxs-lookup"><span data-stu-id="0fd78-130">Replace everything between the opening \<Window> and closing \</Window> tags with the following markup to get a gradient brush background on your inking surface.</span></span>  
   
- [!code-xml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
+ [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
+[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
   
-#### 使用動畫  
- 讓我們將漸層筆刷的色彩變成動畫，增添更多樂趣。  將下列 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加入至結束 `</InkCanvas>` 標籤之後，結束 `</Page>` 標籤之前。  
+#### <a name="using-animation"></a><span data-ttu-id="0fd78-131">使用動畫</span><span class="sxs-lookup"><span data-stu-id="0fd78-131">Using Animation</span></span>  
+ <span data-ttu-id="0fd78-132">玩看，我們製作動畫漸層筆刷的色彩。</span><span class="sxs-lookup"><span data-stu-id="0fd78-132">For fun, let's animate the colors of the gradient brush.</span></span> <span data-ttu-id="0fd78-133">加入下列[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]關閉後`</InkCanvas>`標記結束之前`</Page>`標記。</span><span class="sxs-lookup"><span data-stu-id="0fd78-133">Add the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] after the closing `</InkCanvas>` tag but before the closing `</Page>` tag.</span></span>  
   
- [!code-xml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
+ [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
   
-#### 在 XAML 背後加入某些程式碼  
- XAML 讓設計使用者介面變得非常容易的同時，任何實際的應用程式都必須加入程式碼，才能處理事件。  以下的簡單範例，會放大筆墨以回應滑鼠右鍵按一下的動作：  
+#### <a name="adding-some-code-behind-the-xaml"></a><span data-ttu-id="0fd78-134">加入一些程式碼背後的 XAML</span><span class="sxs-lookup"><span data-stu-id="0fd78-134">Adding Some Code Behind the XAML</span></span>  
+ <span data-ttu-id="0fd78-135">雖然 XAML 會很容易就能設計使用者介面，任何真實世界應用程式必須加入程式碼來處理事件。</span><span class="sxs-lookup"><span data-stu-id="0fd78-135">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="0fd78-136">以下是以滑鼠右鍵按一下回應來自滑鼠的筆墨會放大的簡單範例：</span><span class="sxs-lookup"><span data-stu-id="0fd78-136">Here is a simple example that zooms in on the ink in response to a right-click from a mouse:</span></span>  
   
- 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中設定 `MouseRightButtonUp` 處理常式：  
+ <span data-ttu-id="0fd78-137">設定`MouseRightButtonUp`處理常式中的您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="0fd78-137">Set the `MouseRightButtonUp` handler in your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span></span>  
   
- [!code-xml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
+ [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
   
- 在 Visual Studio 的 \[方案總管\] 中，展開 Windows1.xaml 並開啟程式碼後置檔案，如果您使用的是 Visual Basic，則請開啟 Window1.xaml.cs 或 Window1.xaml.vb。  加入下列事件處理常式程式碼：  
+ <span data-ttu-id="0fd78-138">在 Visual Studio 方案總管 中，展開 Windows1.xaml 並開啟 Window1.xaml.cs 或 Window1.xaml.vb，如果您使用 Visual Basic 的程式碼後置檔案。</span><span class="sxs-lookup"><span data-stu-id="0fd78-138">In Visual Studio’s Solution Explorer, expand Windows1.xaml and open the code-behind file, Window1.xaml.cs or Window1.xaml.vb if you are using Visual Basic.</span></span> <span data-ttu-id="0fd78-139">加入下列事件處理常式程式碼：</span><span class="sxs-lookup"><span data-stu-id="0fd78-139">Add the following event handler code:</span></span>  
   
  [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
  [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
   
- 現在，請執行您的應用程式。  加入某些筆墨，然後以滑鼠右鍵按一下，或使用手寫筆執行按住的對等動作。  
+ <span data-ttu-id="0fd78-140">現在，執行您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="0fd78-140">Now, run your application.</span></span> <span data-ttu-id="0fd78-141">加入某些筆墨然後以滑鼠右鍵按一下使用滑鼠，或執行按保留對等項目具有手寫筆。</span><span class="sxs-lookup"><span data-stu-id="0fd78-141">Add some ink and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>  
   
-#### 使用程序性程式碼，而不要使用 XAML  
- 您可以從程序性程式碼存取所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能。  以下是將 "Hello Ink World" 用於完全不使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用情形。  將下列程式碼貼到 Visual Studio 中的空白主控台應用程式。  將參考加入至 PresentationCore、PresentationFramework 和 WindowsBase 組件，並按下 **F5** 建置應用程式：  
+#### <a name="using-procedural-code-instead-of-xaml"></a><span data-ttu-id="0fd78-142">使用程序程式碼，而不 XAML</span><span class="sxs-lookup"><span data-stu-id="0fd78-142">Using Procedural Code Instead of XAML</span></span>  
+ <span data-ttu-id="0fd78-143">您可以存取所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序程式碼中的功能。</span><span class="sxs-lookup"><span data-stu-id="0fd78-143">You can access all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] features from procedural code.</span></span> <span data-ttu-id="0fd78-144">以下是"Hello 筆墨 World"應用程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，不使用任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]完全。</span><span class="sxs-lookup"><span data-stu-id="0fd78-144">Here is a "Hello Ink World" application for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] that doesn’t use any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] at all.</span></span> <span data-ttu-id="0fd78-145">將下列程式碼貼到空白 Visual Studio 中的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="0fd78-145">Paste the code below into an empty Console Application in Visual Studio.</span></span> <span data-ttu-id="0fd78-146">新增 PresentationCore、 PresentationFramework 和 WindowsBase 組件的參考，並按下建置應用程式**F5**:</span><span class="sxs-lookup"><span data-stu-id="0fd78-146">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies, and build the application by pressing **F5**:</span></span>  
   
  [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
-## 請參閱  
- [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)   
- [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)   
- [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)   
- [儲存筆墨](../../../../docs/framework/wpf/advanced/storing-ink.md)
+## <a name="see-also"></a><span data-ttu-id="0fd78-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0fd78-147">See Also</span></span>  
+ [<span data-ttu-id="0fd78-148">數位筆跡</span><span class="sxs-lookup"><span data-stu-id="0fd78-148">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [<span data-ttu-id="0fd78-149">收集筆墨</span><span class="sxs-lookup"><span data-stu-id="0fd78-149">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+ [<span data-ttu-id="0fd78-150">手寫辨識</span><span class="sxs-lookup"><span data-stu-id="0fd78-150">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+ [<span data-ttu-id="0fd78-151">儲存筆墨</span><span class="sxs-lookup"><span data-stu-id="0fd78-151">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)

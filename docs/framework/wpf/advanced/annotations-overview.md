@@ -1,83 +1,88 @@
 ---
-title: "附註概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件, 附註"
-  - "反白顯示"
-  - "自黏便箋"
+title: "附註概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- highlights [WPF]
+- documents [WPF], annotations
+- sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc4ef4473a200a424134a16d64655a5acf1488b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 附註概觀
-在書面文件上撰寫備註或註解是相當普遍的活動，導致一般人幾乎都將它視為理所當然。  這些備註或註解是我們加入文件的「附註」，以標記資訊或特別標明有興趣的項目，以供日後參照。  雖然在書面文件上撰寫備註很容易，但是在電子文件上加入個人註解的功能通常非常有限或根本完全無法使用。  
+# <a name="annotations-overview"></a><span data-ttu-id="c4866-102">附註概觀</span><span class="sxs-lookup"><span data-stu-id="c4866-102">Annotations Overview</span></span>
+<span data-ttu-id="c4866-103">在書面文件上撰寫附註或註解是相當稀鬆平常的事，我們幾乎將它視為理所當然。</span><span class="sxs-lookup"><span data-stu-id="c4866-103">Writing notes or comments on paper documents is such a commonplace activity that we almost take it for granted.</span></span> <span data-ttu-id="c4866-104">這些附註或註解是我們新增至文件的「註釋」，用以標記資訊，或反白顯示感興趣的項目以供日後參考。</span><span class="sxs-lookup"><span data-stu-id="c4866-104">These notes or comments are "annotations" that we add to a document to flag information or to highlight items of interest for later reference.</span></span> <span data-ttu-id="c4866-105">雖然在書面文件上撰寫附註很容易且平常，不過在電子文件中新增個人註解的功能通常非常有限，如果有的話。</span><span class="sxs-lookup"><span data-stu-id="c4866-105">Although writing notes on printed documents is easy and commonplace, the ability to add personal comments to electronic documents is typically very limited, if available at all.</span></span>  
   
- 本主題將回顧幾種常見的附註類型 \(特別是自黏便箋和醒目提示\)，並說明 [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 如何透過 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 文件檢視控制項，在應用程式中使用這幾種附註類型。  支援附註的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文件檢視控制項包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及衍生自 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 的控制項，例如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>。  
+ <span data-ttu-id="c4866-106">本主題會檢閱幾種常見的註釋，特別是自黏便箋和醒目提示，並說明 [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 如何協助透過 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 文件檢視控制項在應用程式中使用這些類型的註釋。</span><span class="sxs-lookup"><span data-stu-id="c4866-106">This topic reviews several common types of annotations, specifically sticky notes and highlights, and illustrates how the [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilitates these types of annotations in applications through the [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] document viewing controls.</span></span>  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="c4866-107">支援註解的文件檢視控制項包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及控制項衍生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>例如<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。</span><span class="sxs-lookup"><span data-stu-id="c4866-107"> document viewing controls that support annotations include <xref:System.Windows.Controls.FlowDocumentReader> and <xref:System.Windows.Controls.FlowDocumentScrollViewer>, as well as controls derived from <xref:System.Windows.Controls.Primitives.DocumentViewerBase> such as <xref:System.Windows.Controls.DocumentViewer> and <xref:System.Windows.Controls.FlowDocumentPageViewer>.</span></span>  
   
-   
   
 <a name="caf1_type_stickynotes"></a>   
-## 自黏便箋  
- 一般自黏便箋是將資訊寫在彩色便條紙，然後再將便條紙「貼」在文件上。  數位自黏便箋為電子文件提供類似的功能，但是增加了彈性，使您可以加入其他許多不同類型的內容，諸如輸入文字、手寫備註 \(如 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]「筆墨」筆劃\) 或 Web 連結等。  
+## <a name="sticky-notes"></a><span data-ttu-id="c4866-108">自黏便箋</span><span class="sxs-lookup"><span data-stu-id="c4866-108">Sticky Notes</span></span>  
+ <span data-ttu-id="c4866-109">典型的自黏便箋包含寫在一小張色紙上，然後「黏」在文件上的資訊。</span><span class="sxs-lookup"><span data-stu-id="c4866-109">A typical sticky note contains information written on a small piece of colored paper that is then "stuck" to a document.</span></span> <span data-ttu-id="c4866-110">數位自黏便箋為電子文件提供類似的功能，但新增了彈性，可以包含許多其他類型的內容，例如輸入的文字、手寫便箋 (比方說，[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]「筆跡」筆劃)，或 Web 連結。</span><span class="sxs-lookup"><span data-stu-id="c4866-110">Digital sticky notes provide similar functionality for electronic documents, but with the added flexibility to include many other types of content such as typed text, handwritten notes (for example, [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "ink" strokes), or Web links.</span></span>  
   
- 下圖顯示醒目提示、文字自黏便箋和筆墨自黏便箋等附註的部分範例。  
+ <span data-ttu-id="c4866-111">下圖顯示一些反白顯示、文字自黏便箋和筆跡自黏便箋註釋的範例。</span><span class="sxs-lookup"><span data-stu-id="c4866-111">The following illustration shows some examples of highlight, text sticky note, and ink sticky note annotations.</span></span>  
   
- ![反白顯示、文字和筆跡自黏便箋註釋。](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF\_StickyNote")  
+ <span data-ttu-id="c4866-112">![反白顯示、文字和筆跡自黏便箋註釋。](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")</span><span class="sxs-lookup"><span data-stu-id="c4866-112">![Highlight, text and ink sticky note annotations.](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")</span></span>  
   
- 下列範例示範可以在應用程式中啟用附註支援的方法。  
+ <span data-ttu-id="c4866-113">下列範例顯示您可用來在應用程式中啟用註釋支援的方法。</span><span class="sxs-lookup"><span data-stu-id="c4866-113">The following example shows the method that you can use to enable annotation support in your application.</span></span>  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## 醒目提示  
- 一般人在標記書面文件時，都會使用有創意的方法將注意力集中在有興趣的項目上，例如使用底線、螢光筆、或畫圈的方式標出重要的字句，或是在空白處畫記號或加上備註。  [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 中的醒目提示附註提供了類似的功能，可以用來標記顯示在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文件檢視控制項中的資訊。  
+## <a name="highlights"></a><span data-ttu-id="c4866-114">反白顯示</span><span class="sxs-lookup"><span data-stu-id="c4866-114">Highlights</span></span>  
+ <span data-ttu-id="c4866-115">人們使用有創意的方法，在標記書面文件時將注意力吸引到感興趣的項目，例如使用底線、反白顯示、圈起句子中的文字，或是在邊界繪製記號或標記法。</span><span class="sxs-lookup"><span data-stu-id="c4866-115">People use creative methods to draw attention to items of interest when they mark up a paper document, such as underlining, highlighting, circling words in a sentence, or drawing marks or notations in the margin.</span></span>  <span data-ttu-id="c4866-116">[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 中的反白顯示註釋提供類似於標記 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文件檢視控制項中所顯示資訊的功能。</span><span class="sxs-lookup"><span data-stu-id="c4866-116">Highlight annotations in [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] provide a similar feature for marking up information displayed in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] document viewing controls.</span></span>  
   
- 下圖顯示醒目提示附註的範例。  
+ <span data-ttu-id="c4866-117">下圖顯示反白顯示註釋的範例。</span><span class="sxs-lookup"><span data-stu-id="c4866-117">The following illustration shows an example of a highlight annotation.</span></span>  
   
- ![反白顯示註釋](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF\_Callouts")  
+ <span data-ttu-id="c4866-118">![反白顯示註釋](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")</span><span class="sxs-lookup"><span data-stu-id="c4866-118">![Highlight Annotation](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")</span></span>  
   
- 使用者建立附註的方式通常是先選取某段文字或有興趣的項目，然後再按一下滑鼠右鍵，顯示附註選項的 <xref:System.Windows.Controls.ContextMenu>。  下列範例顯示 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，可用來宣告 <xref:System.Windows.Controls.ContextMenu>，供使用者存取可以用來建立及管理附註的路由命令。  
+ <span data-ttu-id="c4866-119">使用者通常會先選取 一些文字或感興趣的項目，然後按一下滑鼠右鍵來顯示建立註解<xref:System.Windows.Controls.ContextMenu>的註解的選項。</span><span class="sxs-lookup"><span data-stu-id="c4866-119">Users typically create annotations by first selecting some text or an item of interest, and then right-clicking to display a <xref:System.Windows.Controls.ContextMenu> of annotation options.</span></span>  <span data-ttu-id="c4866-120">下列範例所示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]您可以使用宣告<xref:System.Windows.Controls.ContextMenu>路由的使用者可以存取來建立和管理註釋的命令。</span><span class="sxs-lookup"><span data-stu-id="c4866-120">The following example shows the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] you can use to declare a <xref:System.Windows.Controls.ContextMenu> with routed commands that users can access to create and manage annotations.</span></span>  
   
- [!code-xml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
-## 資料錨定  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 可將附註繫結到使用者選取的資料，而不是只繫結到畫面顯示的位置。  因此，如果文件檢視發生變更，例如當使用者捲動顯示視窗或調整其大小時，附註仍會跟隨著它所繫結的資料選取範圍。  例如，下圖顯示使用者在文字選取範圍所做的附註。  當文件檢視變更 \(捲動、調整大小、縮放或其他移動方式\) 時，醒目提示附註會隨著原始資料選取範圍一起移動。  
+## <a name="data-anchoring"></a><span data-ttu-id="c4866-121">資料錨定</span><span class="sxs-lookup"><span data-stu-id="c4866-121">Data Anchoring</span></span>  
+ <span data-ttu-id="c4866-122">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 將註釋繫結到使用者選取的資料，而不是繫結到顯示檢視上的位置。</span><span class="sxs-lookup"><span data-stu-id="c4866-122">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] binds annotations to the data that the user selects, not just to a position on the display view.</span></span> <span data-ttu-id="c4866-123">因此，如果文件檢視變更，例如當使用者捲動或調整顯示視窗大小時，註釋會與它繫結的資料選取範圍在一起。</span><span class="sxs-lookup"><span data-stu-id="c4866-123">Therefore, if the document view changes, such as when the user scrolls or resizes the display window, the annotation stays with the data selection to which it is bound.</span></span> <span data-ttu-id="c4866-124">例如，下圖說明使用者對文字選取範圍所做的註釋。</span><span class="sxs-lookup"><span data-stu-id="c4866-124">For example, the following graphic illustrates an annotation that the user has made on a text selection.</span></span> <span data-ttu-id="c4866-125">當文件檢視變更時 (捲動、調整大小、縮放比例或其他移動)，反白顯示註釋會隨著原始資料選取範圍移動。</span><span class="sxs-lookup"><span data-stu-id="c4866-125">When the document view changes (scrolls, resizes, scales, or otherwise moves), the highlight annotation moves with the original data selection.</span></span>  
   
- ![註釋資料錨定](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF\_DataAnchoring")  
+ <span data-ttu-id="c4866-126">![註釋資料錨定](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")</span><span class="sxs-lookup"><span data-stu-id="c4866-126">![Annotation Data Anchoring](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")</span></span>  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
-## 附註和標註物件配對  
- 您可以針對附註與對應的標註物件進行配對。  例如，假設某個簡單的文件讀取應用程式具有註解窗格，  註解窗格可能是清單方塊，會在錨定至文件的附註清單中顯示文字。  如果使用者選取清單方塊中的項目，應用程式就會在檢視中顯示對應附註物件錨定的文件段落。  
+## <a name="matching-annotations-with-annotated-objects"></a><span data-ttu-id="c4866-127">比對註釋與標註物件</span><span class="sxs-lookup"><span data-stu-id="c4866-127">Matching Annotations with Annotated Objects</span></span>  
+ <span data-ttu-id="c4866-128">您可以比對註釋與對應的標註物件。</span><span class="sxs-lookup"><span data-stu-id="c4866-128">You can match annotations with the corresponding annotated objects.</span></span> <span data-ttu-id="c4866-129">例如，請考慮具有註解窗格的簡單文件讀取應用程式。</span><span class="sxs-lookup"><span data-stu-id="c4866-129">For example, consider a simple document reader application that has a comments pane.</span></span> <span data-ttu-id="c4866-130">註解窗格可能是清單方塊，其中顯示來自錨定到文件之註釋清單的文字。</span><span class="sxs-lookup"><span data-stu-id="c4866-130">The comments pane might be a list box that displays the text from a list of annotations that are anchored to a document.</span></span> <span data-ttu-id="c4866-131">如果使用者在清單方塊中選取項目，則應用程式會將對應註釋物件所錨定之文件中的段落帶入檢視。</span><span class="sxs-lookup"><span data-stu-id="c4866-131">If the user selects an item in the list box, then the application brings into view the paragraph in the document that the corresponding annotation object is anchored to.</span></span>  
   
- 下列範例示範如何實作當做註解窗格之清單方塊的事件處理常式 \(Event Handler\)。  
+ <span data-ttu-id="c4866-132">下列範例示範如何為這類作為註解窗格的清單方塊實作事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="c4866-132">The following example demonstrates how to implement the event handler of such a list box that serves as the comments pane.</span></span>  
   
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- 另一個範例案例牽涉到可以透過電子郵件在文件讀取器 \(Reader\) 之間交換附註和自黏便箋的應用程式。  這項功能使這些應用程式可以在讀取器中巡覽到內含要交換之附註的頁面。  
+ <span data-ttu-id="c4866-133">另一個範例情節牽涉到使文件讀者能透過電子郵件交換註釋和自黏便箋的應用程式。</span><span class="sxs-lookup"><span data-stu-id="c4866-133">Another example scenario involves applications that enable the exchange of annotations and sticky notes between document readers through e-mail.</span></span> <span data-ttu-id="c4866-134">這項功能讓這些應用程式可讓讀者巡覽至包含要交換之註釋的頁面。</span><span class="sxs-lookup"><span data-stu-id="c4866-134">This feature enables these applications to navigate the reader to the page that contains the annotation that is being exchanged.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>   
- <xref:System.Windows.Controls.DocumentViewer>   
- <xref:System.Windows.Controls.FlowDocumentPageViewer>   
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>   
- <xref:System.Windows.Controls.FlowDocumentReader>   
- <xref:System.Windows.Annotations.IAnchorInfo>   
- [附註結構描述](../../../../docs/framework/wpf/advanced/annotations-schema.md)   
- [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)   
- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [How to: Add a Command to a MenuItem](http://msdn.microsoft.com/zh-tw/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a><span data-ttu-id="c4866-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4866-135">See Also</span></span>  
+ <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
+ <xref:System.Windows.Controls.DocumentViewer>  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+ <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+ <xref:System.Windows.Controls.FlowDocumentReader>  
+ <xref:System.Windows.Annotations.IAnchorInfo>  
+ [<span data-ttu-id="c4866-136">附註結構描述</span><span class="sxs-lookup"><span data-stu-id="c4866-136">Annotations Schema</span></span>](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+ [<span data-ttu-id="c4866-137">ContextMenu 概觀</span><span class="sxs-lookup"><span data-stu-id="c4866-137">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [<span data-ttu-id="c4866-138">命令概觀</span><span class="sxs-lookup"><span data-stu-id="c4866-138">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="c4866-139">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="c4866-139">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="c4866-140">如何：將命令新增至 MenuItem</span><span class="sxs-lookup"><span data-stu-id="c4866-140">How to: Add a Command to a MenuItem</span></span>](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)

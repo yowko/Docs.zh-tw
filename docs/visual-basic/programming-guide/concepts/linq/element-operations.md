@@ -1,50 +1,42 @@
 ---
-title: "項目作業 (Visual Basic) |Microsoft 文件"
+title: "項目作業 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 70a66b1cdbcc03a743fb43d497e40c8ae032c0aa
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0b476907182573d62ba76e8e9f7b02417805dc10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="element-operations-visual-basic"></a>項目作業 (Visual Basic)
-從序列中項目作業傳回單一特定項目。  
+# <a name="element-operations-visual-basic"></a><span data-ttu-id="202af-102">項目作業 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="202af-102">Element Operations (Visual Basic)</span></span>
+<span data-ttu-id="202af-103">項目作業會從序列中傳回單一特定的項目。</span><span class="sxs-lookup"><span data-stu-id="202af-103">Element operations return a single, specific element from a sequence.</span></span>  
   
- 執行項目作業的標準查詢運算子方法詳列於下一節。  
+ <span data-ttu-id="202af-104">下節列出執行項目作業的標準查詢運算子方法。</span><span class="sxs-lookup"><span data-stu-id="202af-104">The standard query operator methods that perform element operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>方法  
+## <a name="methods"></a><span data-ttu-id="202af-105">方法</span><span class="sxs-lookup"><span data-stu-id="202af-105">Methods</span></span>  
   
-|方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|  
+|<span data-ttu-id="202af-106">方法名稱</span><span class="sxs-lookup"><span data-stu-id="202af-106">Method Name</span></span>|<span data-ttu-id="202af-107">說明</span><span class="sxs-lookup"><span data-stu-id="202af-107">Description</span></span>|<span data-ttu-id="202af-108">Visual Basic 查詢運算式語法</span><span class="sxs-lookup"><span data-stu-id="202af-108">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="202af-109">更多資訊</span><span class="sxs-lookup"><span data-stu-id="202af-109">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|ElementAt|傳回集合中的指定索引處的項目。|不適用。|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=fullName></xref:System.Linq.Queryable.ElementAt%2A?displayProperty=fullName>|  
-|ElementAtOrDefault|傳回指定索引處的項目在集合的預設值，如果索引超出範圍。|不適用。|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=fullName></xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=fullName>|  
-|First|傳回集合的第一個項目或符合條件的第一個項目。|不適用。|<xref:System.Linq.Enumerable.First%2A?displayProperty=fullName></xref:System.Linq.Enumerable.First%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=fullName></xref:System.Linq.Queryable.First%2A?displayProperty=fullName>|  
-|FirstOrDefault|傳回集合的第一個項目或符合條件的第一個項目。 如果沒有這類項目，則傳回預設值。|不適用。|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=fullName></xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=fullName></xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=fullName></xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=fullName>|  
-|最後一筆|傳回最後一個元素的集合或符合條件的最後一個項目。|不適用。|<xref:System.Linq.Enumerable.Last%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Last%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=fullName></xref:System.Linq.Queryable.Last%2A?displayProperty=fullName>|  
-|LastOrDefault|傳回最後一個元素的集合或符合條件的最後一個項目。 如果沒有這類項目，則傳回預設值。|不適用。|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=fullName></xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=fullName></xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=fullName>|  
-|Single|傳回集合的唯一項目或符合條件的唯一項目。|不適用。|<xref:System.Linq.Enumerable.Single%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Single%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=fullName></xref:System.Linq.Queryable.Single%2A?displayProperty=fullName>|  
-|SingleOrDefault|傳回集合的唯一項目或符合條件的唯一項目。 如果沒有這個項目或集合未包含只有一個項目，則傳回預設值。|不適用。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=fullName></xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=fullName>|  
+|<span data-ttu-id="202af-110">ElementAt</span><span class="sxs-lookup"><span data-stu-id="202af-110">ElementAt</span></span>|<span data-ttu-id="202af-111">傳回位於集合中指定索引處的項目。</span><span class="sxs-lookup"><span data-stu-id="202af-111">Returns the element at a specified index in a collection.</span></span>|<span data-ttu-id="202af-112">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-113">ElementAtOrDefault</span><span class="sxs-lookup"><span data-stu-id="202af-113">ElementAtOrDefault</span></span>|<span data-ttu-id="202af-114">傳回位於集合中指定索引處的項目；如果索引超出範圍，則傳回預設值。</span><span class="sxs-lookup"><span data-stu-id="202af-114">Returns the element at a specified index in a collection or a default value if the index is out of range.</span></span>|<span data-ttu-id="202af-115">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-115">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-116">First</span><span class="sxs-lookup"><span data-stu-id="202af-116">First</span></span>|<span data-ttu-id="202af-117">傳回集合中的第一個項目或符合條件的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="202af-117">Returns the first element of a collection, or the first element that satisfies a condition.</span></span>|<span data-ttu-id="202af-118">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-119">FirstOrDefault</span><span class="sxs-lookup"><span data-stu-id="202af-119">FirstOrDefault</span></span>|<span data-ttu-id="202af-120">傳回集合中的第一個項目或符合條件的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="202af-120">Returns the first element of a collection, or the first element that satisfies a condition.</span></span> <span data-ttu-id="202af-121">如果沒有這類項目，則傳回預設值。</span><span class="sxs-lookup"><span data-stu-id="202af-121">Returns a default value if no such element exists.</span></span>|<span data-ttu-id="202af-122">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-122">Not applicable.</span></span>|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-123">最後一筆</span><span class="sxs-lookup"><span data-stu-id="202af-123">Last</span></span>|<span data-ttu-id="202af-124">傳回集合中的最後一個項目或符合條件的最後一個項目。</span><span class="sxs-lookup"><span data-stu-id="202af-124">Returns the last element of a collection, or the last element that satisfies a condition.</span></span>|<span data-ttu-id="202af-125">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-125">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-126">LastOrDefault</span><span class="sxs-lookup"><span data-stu-id="202af-126">LastOrDefault</span></span>|<span data-ttu-id="202af-127">傳回集合中的最後一個項目或符合條件的最後一個項目。</span><span class="sxs-lookup"><span data-stu-id="202af-127">Returns the last element of a collection, or the last element that satisfies a condition.</span></span> <span data-ttu-id="202af-128">如果沒有這類項目，則傳回預設值。</span><span class="sxs-lookup"><span data-stu-id="202af-128">Returns a default value if no such element exists.</span></span>|<span data-ttu-id="202af-129">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-130">Single</span><span class="sxs-lookup"><span data-stu-id="202af-130">Single</span></span>|<span data-ttu-id="202af-131">傳回集合中的唯一項目或符合條件的唯一項目。</span><span class="sxs-lookup"><span data-stu-id="202af-131">Returns the only element of a collection, or the only element that satisfies a condition.</span></span>|<span data-ttu-id="202af-132">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-132">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="202af-133">SingleOrDefault</span><span class="sxs-lookup"><span data-stu-id="202af-133">SingleOrDefault</span></span>|<span data-ttu-id="202af-134">傳回集合中的唯一項目或符合條件的唯一項目。</span><span class="sxs-lookup"><span data-stu-id="202af-134">Returns the only element of a collection, or the only element that satisfies a condition.</span></span> <span data-ttu-id="202af-135">如果沒有這類項目或集合不僅僅包含一個項目，則傳回預設值。</span><span class="sxs-lookup"><span data-stu-id="202af-135">Returns a default value if no such element exists or the collection does not contain exactly one element.</span></span>|<span data-ttu-id="202af-136">不適用。</span><span class="sxs-lookup"><span data-stu-id="202af-136">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq></xref:System.Linq>   
- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [如何︰ 查詢的最大檔案或目錄樹狀結構 (LINQ) (Visual Basic) 中的檔案](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+## <a name="see-also"></a><span data-ttu-id="202af-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="202af-137">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="202af-138">標準查詢運算子概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="202af-138">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="202af-139">如何： 查詢的最大檔案或目錄樹狀 (LINQ) (Visual Basic) 中的檔案</span><span class="sxs-lookup"><span data-stu-id="202af-139">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

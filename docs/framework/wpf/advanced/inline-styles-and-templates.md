@@ -1,47 +1,50 @@
 ---
-title: "內嵌樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "內嵌樣式"
-  - "內嵌樣板"
-  - "樣式, inline"
-  - "範本, inline"
+title: "內嵌樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inline templates [WPF]
+- styles [WPF], inline
+- templates [WPF], inline
+- inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2acb455db8f8bdc5a95bfd2462b651cebbb692c3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 內嵌樣式和範本
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供 <xref:System.Windows.Style> 物件和樣板物件 \(<xref:System.Windows.FrameworkTemplate> 子類別 \(Class\)\)，做為定義資源項目之視覺化外觀的一種方法，因此這些物件可以多次重複使用。  基於這個原因，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中採用 <xref:System.Windows.Style> 和 <xref:System.Windows.FrameworkTemplate> 型別的屬性 \(Attribute\) 幾乎都會建立現有樣式和樣板的資源參考，而不會定義新的內嵌樣式和樣板。  
+# <a name="inline-styles-and-templates"></a><span data-ttu-id="8de49-102">內嵌樣式和範本</span><span class="sxs-lookup"><span data-stu-id="8de49-102">Inline Styles and Templates</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="8de49-103">提供<xref:System.Windows.Style>物件和範本物件 (<xref:System.Windows.FrameworkTemplate>子類別) 做為在資源定義元素的視覺外觀的方式，以便它們可以用於多次。</span><span class="sxs-lookup"><span data-stu-id="8de49-103"> provides <xref:System.Windows.Style> objects and template objects (<xref:System.Windows.FrameworkTemplate> subclasses) as a way to define the visual appearance of an element in resources, so that they can be used multiple times.</span></span> <span data-ttu-id="8de49-104">基於這個理由中的屬性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可接受型別<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>幾乎資源參考現有的樣式和範本，而非定義新的內嵌。</span><span class="sxs-lookup"><span data-stu-id="8de49-104">For this reason, attributes in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] that take the types <xref:System.Windows.Style> and <xref:System.Windows.FrameworkTemplate> almost always make resource references to existing styles and templates rather than define new ones inline.</span></span>  
   
-## 內嵌樣式和樣板的限制  
- 在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，技術上樣式和樣本屬性 \(Property\) 可以使用兩種方式來設定。  您可以使用屬性 \(Attribute\) 語法參考資源內定義的樣式，例如 `<`*object*`Style="{StaticResource`*myResourceKey*`}" .../>`。  或者，您也可以使用屬性 \(Property\) 項目語法定義內嵌樣式，例如：  
+## <a name="limitations-of-inline-styles-and-templates"></a><span data-ttu-id="8de49-105">內嵌樣式和範本的限制</span><span class="sxs-lookup"><span data-stu-id="8de49-105">Limitations of Inline Styles and Templates</span></span>  
+ <span data-ttu-id="8de49-106">在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 樣式和樣板屬性技術上可以設定在兩種方式之一。</span><span class="sxs-lookup"><span data-stu-id="8de49-106">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], style and template properties can technically be set in one of two ways.</span></span> <span data-ttu-id="8de49-107">您可以使用屬性語法來參考已定義內的資源，例如樣式`<`*物件*`Style="{StaticResource`*myResourceKey*`}" .../>`。</span><span class="sxs-lookup"><span data-stu-id="8de49-107">You can use attribute syntax to reference a style that was defined within a resource, for example `<`*object*`Style="{StaticResource`*myResourceKey*`}" .../>`.</span></span> <span data-ttu-id="8de49-108">或者，您可以使用屬性項目語法來定義內嵌樣式，例如：</span><span class="sxs-lookup"><span data-stu-id="8de49-108">Or you can use property element syntax to define a style inline, for instance:</span></span>  
   
- `<` *object* `>`  
+ <span data-ttu-id="8de49-109">`<`*物件*`>`</span><span class="sxs-lookup"><span data-stu-id="8de49-109">`<` *object* `>`</span></span>  
   
- `<` *object* `.Style>`  
+ <span data-ttu-id="8de49-110">`<`*物件*`.Style>`</span><span class="sxs-lookup"><span data-stu-id="8de49-110">`<` *object* `.Style>`</span></span>  
   
- `<` `Style`  `.../>`  
+ <span data-ttu-id="8de49-111">`<` `Style`  `.../>`</span><span class="sxs-lookup"><span data-stu-id="8de49-111">`<` `Style`  `.../>`</span></span>  
   
- `</` *object* `.Style>`  
+ <span data-ttu-id="8de49-112">`</`*物件*`.Style>`</span><span class="sxs-lookup"><span data-stu-id="8de49-112">`</` *object* `.Style>`</span></span>  
   
- `</` *object* `>`  
+ <span data-ttu-id="8de49-113">`</`*物件*`>`</span><span class="sxs-lookup"><span data-stu-id="8de49-113">`</` *object* `>`</span></span>  
   
- 使用屬性 \(Attribute\) 是最常見的做法。  以內嵌方式定義而資源中沒有定義的樣式，其範圍一定只限於包含項目，而且比較不容易重複使用，因為這種樣式並沒有資源索引鍵。  一般來說，資源定義的樣式用途較廣也較為實用，而且比較符合將程式碼中的程式邏輯與標記中的設計分開的一般 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 程式撰寫模型 \(Programming Model\) 準則。  
+ <span data-ttu-id="8de49-114">屬性使用方式是更加普遍。</span><span class="sxs-lookup"><span data-stu-id="8de49-114">The attribute usage is much more common.</span></span> <span data-ttu-id="8de49-115">為內嵌定義和資源中沒有定義的樣式一定範圍內包含的項目，並不容易重複使用，因為它有沒有資源索引鍵。</span><span class="sxs-lookup"><span data-stu-id="8de49-115">A style that is defined inline and not defined in resources is necessarily scoped to the containing element only, and cannot be re-used as easily because it has no resource key.</span></span> <span data-ttu-id="8de49-116">一般情況下的資源定義樣式是更具彈性的且有用的而且比較為了保持一般[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]程式設計模型原則的程式碼邏輯分離標記中的設計。</span><span class="sxs-lookup"><span data-stu-id="8de49-116">In general a resource-defined style is more versatile and useful, and is more in keeping with the general [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programming model principle of separating program logic in code from design in markup.</span></span>  
   
- 通常，即使您只想在該位置使用該樣式或樣板，也沒有理由設定內嵌樣式或樣板。  可以採用樣式或樣板的項目大部分也都可以支援內容屬性和內容模型。  如果您只要使用透過執行一次樣式或樣板化所建立的邏輯樹狀結構，更簡單的做法是只在該內容屬性中填入直接標記中的對等子項目。  這種方法將會一併忽略樣式和樣板機制。  
+ <span data-ttu-id="8de49-117">通常沒有理由將樣式或範本的內嵌，即使您只想要使用該樣式或範本的位置。</span><span class="sxs-lookup"><span data-stu-id="8de49-117">Usually there is no reason to set a style or template inline, even if you only intend to use that style or template in that location.</span></span> <span data-ttu-id="8de49-118">可以採用樣式或範本的大部分項目也支援內容的屬性和內容模型。</span><span class="sxs-lookup"><span data-stu-id="8de49-118">Most elements that can take a style or template also support a content property and a content model.</span></span> <span data-ttu-id="8de49-119">如果您只使用任何邏輯樹狀結構中一次透過樣式或範本建立，就更容易只 equivalent 子系中的項目直接標記填滿該內容的屬性。</span><span class="sxs-lookup"><span data-stu-id="8de49-119">If you are only using whatever logical tree you create through styling or templating once, it would be even easier to just fill that content property with the equivalent child elements in direct markup.</span></span> <span data-ttu-id="8de49-120">這會完全略過的樣式和範本機制。</span><span class="sxs-lookup"><span data-stu-id="8de49-120">This would bypass the style and template mechanisms altogether.</span></span>  
   
- 樣式和樣板也可以使用由標記延伸啟用，而且能夠重複執行物件的其他語法。  在具有可行案例的這類延伸中，其中兩個是 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 和 <xref:System.Windows.Data.Binding>。  
+ <span data-ttu-id="8de49-121">傳回物件的標記延伸模組所啟用的其他語法是樣式和範本允許的。</span><span class="sxs-lookup"><span data-stu-id="8de49-121">Other syntaxes enabled by markup extensions that return an object are also possible for styles and templates.</span></span> <span data-ttu-id="8de49-122">有可能的案例的兩個這類延伸包括[TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)和<xref:System.Windows.Data.Binding>。</span><span class="sxs-lookup"><span data-stu-id="8de49-122">Two such extensions that have possible scenarios include [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) and <xref:System.Windows.Data.Binding>.</span></span>  
   
-## 請參閱  
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="8de49-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8de49-123">See Also</span></span>  
+ [<span data-ttu-id="8de49-124">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="8de49-124">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

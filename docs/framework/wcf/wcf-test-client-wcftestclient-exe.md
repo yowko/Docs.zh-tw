@@ -1,176 +1,179 @@
 ---
-title: "WCF 測試用戶端 (WcfTestClient.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 測試用戶端 (WcfTestClient.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: 45
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 45
+caps.latest.revision: "45"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc189ab1c68edfc41267e493a6ca6bccf9fe519a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# WCF 測試用戶端 (WcfTestClient.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 測試用戶端 \(WcfTestClient.exe\) 是一種 GUI 工具，可以讓使用者用來輸入測試參數、將該輸入送出至服務，以及檢視服務傳回的回應。  與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。  
+# <a name="wcf-test-client-wcftestclientexe"></a><span data-ttu-id="249e1-102">WCF 測試用戶端 (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="249e1-102">WCF Test Client (WcfTestClient.exe)</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="249e1-103"> 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可以讓使用者用來輸入測試參數、將該輸入送出至服務，以及檢視服務傳回的回應。</span><span class="sxs-lookup"><span data-stu-id="249e1-103"> Test Client (WcfTestClient.exe) is a GUI tool that enables users to input test parameters, submit that input to the service, and view the response that the service sends back.</span></span> <span data-ttu-id="249e1-104">與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。</span><span class="sxs-lookup"><span data-stu-id="249e1-104">It provides a seamless service testing experience when combined with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host.</span></span>  
   
- 您可以在下列位置中找到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 \(WcfTestClient.exe\)：C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\  
+ <span data-ttu-id="249e1-105">您可以在下列位置中找到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe)：C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span><span class="sxs-lookup"><span data-stu-id="249e1-105">You can find the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client (WcfTestClient.exe) in the following location: C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span></span>  
   
-## 使用測試用戶端的案例  
- 下列各節將討論一些可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端簡化開發程序的最常見案例。  
+## <a name="scenarios-for-using-test-client"></a><span data-ttu-id="249e1-106">使用測試用戶端的案例</span><span class="sxs-lookup"><span data-stu-id="249e1-106">Scenarios for Using Test Client</span></span>  
+ <span data-ttu-id="249e1-107">下列各節將討論一些可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端簡化開發程序的最常見案例。</span><span class="sxs-lookup"><span data-stu-id="249e1-107">The following sections discuss the most common scenarios in which you can use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to streamline your development process.</span></span>  
   
-### 在 Visual Studio 內部  
+### <a name="inside-visual-studio"></a><span data-ttu-id="249e1-108">在 Visual Studio 內部</span><span class="sxs-lookup"><span data-stu-id="249e1-108">Inside Visual Studio</span></span>  
   
-#### WCF 服務主機啟動具有單一服務的 WCF 測試用戶端  
- 在您建立新的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務專案並按下 F5 啟動偵錯工具之後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機會開始裝載專案中的服務。  然後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端便會開啟，並顯示組態檔中定義之服務端點的清單。  您可以測試參數並叫用服務，然後重複這個程序以持續測試及驗證服務。  
+#### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a><span data-ttu-id="249e1-109">WCF 服務主機啟動具有單一服務的 WCF 測試用戶端</span><span class="sxs-lookup"><span data-stu-id="249e1-109">WCF Service Host Starts WCF Test Client with a Single Service</span></span>  
+ <span data-ttu-id="249e1-110">在您建立新的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務專案並按下 F5 啟動偵錯工具之後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機會開始裝載專案中的服務。</span><span class="sxs-lookup"><span data-stu-id="249e1-110">After you create a new [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service project and press F5 to start the debugger, the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host begins to host the service in your project.</span></span> <span data-ttu-id="249e1-111">然後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端便會開啟，並顯示組態檔中定義之服務端點的清單。</span><span class="sxs-lookup"><span data-stu-id="249e1-111">Then, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client opens and displays a list of service endpoints defined in the configuration file.</span></span> <span data-ttu-id="249e1-112">您可以測試參數並叫用服務，然後重複這個程序以持續測試及驗證服務。</span><span class="sxs-lookup"><span data-stu-id="249e1-112">You can test the parameters and invoke the service, and repeat this process to continuously test and validate your service.</span></span>  
   
-#### WCF 服務主機啟動具有多個服務的 WCF 測試用戶端  
- 您也可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端協助偵錯包含多個服務的服務專案。  當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端開啟時，它會自動在您的專案中逐一查看服務清單，並開啟這些服務以進行測試。  
+#### <a name="wcf-service-host-starts-wcf-test-client-with-multiple-services"></a><span data-ttu-id="249e1-113">WCF 服務主機啟動具有多個服務的 WCF 測試用戶端</span><span class="sxs-lookup"><span data-stu-id="249e1-113">WCF Service Host Starts WCF Test Client with Multiple Services</span></span>  
+ <span data-ttu-id="249e1-114">您也可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端協助偵錯包含多個服務的服務專案。</span><span class="sxs-lookup"><span data-stu-id="249e1-114">You can also use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to help debug a service project that contains multiple services.</span></span> <span data-ttu-id="249e1-115">當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端開啟時，它會自動在您的專案中逐一查看服務清單，並開啟這些服務以進行測試。</span><span class="sxs-lookup"><span data-stu-id="249e1-115">When [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client opens, it automatically iterates the list of services in your project and opens them for testing.</span></span>  
   
-### 在 Visual Studio 外部  
- 您也可以在 Visual Studio 外部叫用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 \(WcfTestClient.exe\)，測試網際網路上的任意服務。  若要找出該工具，請移至下列位置：  
+### <a name="outside-visual-studio"></a><span data-ttu-id="249e1-116">在 Visual Studio 外部</span><span class="sxs-lookup"><span data-stu-id="249e1-116">Outside Visual Studio</span></span>  
+ <span data-ttu-id="249e1-117">您也可以在 Visual Studio 外部叫用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe)，測試網際網路上的任意服務。</span><span class="sxs-lookup"><span data-stu-id="249e1-117">You can also invoke the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client (WcfTestClient.exe) outside Visual Studio to test an arbitrary service on the Internet.</span></span> <span data-ttu-id="249e1-118">若要找出該工具，請移至下列位置：</span><span class="sxs-lookup"><span data-stu-id="249e1-118">To locate the tool, go to the following location:</span></span>  
   
- C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\  
+ <span data-ttu-id="249e1-119">C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span><span class="sxs-lookup"><span data-stu-id="249e1-119">C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\\</span></span>  
   
- 若要使用該工具，按兩下檔名即可從這個位置開啟，或者是從命令列進行啟動。  
+ <span data-ttu-id="249e1-120">若要使用該工具，按兩下檔名即可從這個位置開啟，或者是從命令列進行啟動。</span><span class="sxs-lookup"><span data-stu-id="249e1-120">To use the tool, double-click the file name to open it from this location, or launch it from a command line.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端可以採用任意數目的 URI 做為命令列引數。  這些引數是可以測試的服務 URI。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="249e1-121"> 測試用戶端可以採用任意數目的 URI 做為命令列引數。</span><span class="sxs-lookup"><span data-stu-id="249e1-121"> Test Client takes an arbitrary number of URIs as command line arguments.</span></span>  <span data-ttu-id="249e1-122">這些引數是可以測試的服務 URI。</span><span class="sxs-lookup"><span data-stu-id="249e1-122">These are the URIs of services that can be tested.</span></span>  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
- 開啟 \[[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端\] 視窗後，按一下 \[檔案\] \-\> \[新增服務\]，並輸入要開啟服務的端點位址。  
+ <span data-ttu-id="249e1-123">之後[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]開啟測試用戶端視窗中，按一下**檔案**->**加入服務**，並輸入您想要開啟的服務的端點位址。</span><span class="sxs-lookup"><span data-stu-id="249e1-123">After the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client window is opened, click **File**->**Add Service**, and enter the endpoint address of the service you want to open.</span></span>  
   
-## WCF 測試用戶端使用者介面  
- 您可以搭配單一服務或多個服務使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端。  
+## <a name="wcf-test-client-user-interface"></a><span data-ttu-id="249e1-124">WCF 測試用戶端使用者介面</span><span class="sxs-lookup"><span data-stu-id="249e1-124">WCF Test Client User Interface</span></span>  
+ <span data-ttu-id="249e1-125">您可以搭配單一服務或多個服務使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端。</span><span class="sxs-lookup"><span data-stu-id="249e1-125">You can use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client with a single service or multiple services.</span></span>  
   
-### 服務作業  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端主視窗的左窗格會列出所有可用的服務，以及它們各自的端點和作業。  
+### <a name="service-operations"></a><span data-ttu-id="249e1-126">服務作業</span><span class="sxs-lookup"><span data-stu-id="249e1-126">Service Operations</span></span>  
+ <span data-ttu-id="249e1-127">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端主視窗的左窗格會列出所有可用的服務，以及它們各自的端點和作業。</span><span class="sxs-lookup"><span data-stu-id="249e1-127">The left pane of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client main window lists all the available services, along with their respective endpoints and operations.</span></span>  
   
- 按兩下某項作業時，您可以在右窗格中具有該作業名稱的新索引標籤內，檢視其內容。  
+ <span data-ttu-id="249e1-128">按兩下某項作業時，您可以在右窗格中具有該作業名稱的新索引標籤內，檢視其內容。</span><span class="sxs-lookup"><span data-stu-id="249e1-128">When you double-click an operation, you can view its content in the right pane inside a new tab with the operation's name.</span></span>  
   
- 左窗格還會列出用戶端組態檔。  按兩下任何項目，即可在右窗格中新出現的索引視窗上看見檔案的內容。  
+ <span data-ttu-id="249e1-129">左窗格還會列出用戶端組態檔。</span><span class="sxs-lookup"><span data-stu-id="249e1-129">The left pane also lists client configuration files.</span></span> <span data-ttu-id="249e1-130">按兩下任何項目，即可在右窗格中新出現的索引視窗上看見檔案的內容。</span><span class="sxs-lookup"><span data-stu-id="249e1-130">Double-click any of the items to display the content of the file in a new tabbed window in the right pane.</span></span>  
   
-### 輸入測試參數  
- 若要檢視測試參數，請按兩下作業，在右窗格中開啟它。  參數預設會在 \[**已格式化**\] 檢視中顯示，您可以為參數輸入任意值來測試服務。  
+### <a name="entering-test-parameters"></a><span data-ttu-id="249e1-131">輸入測試參數</span><span class="sxs-lookup"><span data-stu-id="249e1-131">Entering Test Parameters</span></span>  
+ <span data-ttu-id="249e1-132">若要檢視測試參數，請按兩下作業，在右窗格中開啟它。</span><span class="sxs-lookup"><span data-stu-id="249e1-132">To view the test parameters, double-click an operation to open it in the right pane.</span></span> <span data-ttu-id="249e1-133">參數會顯示在**格式化**依預設，檢視，而且您可以輸入任意測試服務的參數值。</span><span class="sxs-lookup"><span data-stu-id="249e1-133">The parameters are showed in **Formatted** view by default, and you can enter arbitrary values for the parameters to test the service.</span></span>  
   
- 若要檢視訊息的 XML，請按一下 \[**XML**\]。  若要將參數傳送至服務，請按一下 \[**叫用**\]。  
+ <span data-ttu-id="249e1-134">若要檢視訊息的 XML，請按一下**XML**。</span><span class="sxs-lookup"><span data-stu-id="249e1-134">To view the message's XML, click **XML**.</span></span> <span data-ttu-id="249e1-135">若要將它們傳送至服務，按一下**Invoke**。</span><span class="sxs-lookup"><span data-stu-id="249e1-135">To send them to the service, click **Invoke**.</span></span>  
   
- 對於 DataSet 參數，請按一下 \[**編輯**\] 旁的 **...** 按鈕，在顯示 DataGrid 的新視窗中編輯參數。  請注意 \[**複製資料集**\] 和 \[**貼上資料集**\] 按鈕的外觀。  如果在第一次編輯時 DataSet 物件的結構描述為未知，DataGrid 為空白。  您必須將具有相同結構描述的 DataSet 物件貼入 DataGrid 中的目前物件   \(請注意，您必須在貼上作業前從其他地方複製結構描述\)。您也可以按一下 \[**複製資料集**\] 按鈕，複製 DataSet 物件供未來使用。  
+ <span data-ttu-id="249e1-136">資料集參數，按一下  **...**</span><span class="sxs-lookup"><span data-stu-id="249e1-136">For a DataSet parameter, click the **…**</span></span> <span data-ttu-id="249e1-137">下一步按鈕**編輯...**</span><span class="sxs-lookup"><span data-stu-id="249e1-137">button next to **Edit…**</span></span> <span data-ttu-id="249e1-138">若要在新視窗顯示 DataGrid 中進行編輯。</span><span class="sxs-lookup"><span data-stu-id="249e1-138">to edit it in a new window showing the DataGrid.</span></span> <span data-ttu-id="249e1-139">請注意，出現**複製資料集**和**貼上資料集**按鈕。</span><span class="sxs-lookup"><span data-stu-id="249e1-139">Notice the appearance of the **Copy DataSet** and **Paste DataSet** buttons.</span></span> <span data-ttu-id="249e1-140">如果在第一次編輯時 DataSet 物件的結構描述為未知，DataGrid 為空白。</span><span class="sxs-lookup"><span data-stu-id="249e1-140">If the schema of the DataSet object is unknown upon the first edit, the DataGrid is empty.</span></span> <span data-ttu-id="249e1-141">您必須將具有相同結構描述的 DataSet 物件貼入 DataGrid 中的目前物件 </span><span class="sxs-lookup"><span data-stu-id="249e1-141">You have to paste a DataSet object with the same schema into the current object in the DataGrid.</span></span> <span data-ttu-id="249e1-142">(請注意，您必須在貼上作業前從其他地方複製結構描述)。您也可以按一下 [複製 Dataset 物件供未來使用**複製資料集**] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="249e1-142">(Notice that you need to copy the schema from somewhere else before the paste operation.) You can also copy a Dataset object for future usage by clicking the **Copy DataSet** button.</span></span>  
   
- 服務的回應會出現在測試參數下方。  
+ <span data-ttu-id="249e1-143">服務的回應會出現在測試參數下方。</span><span class="sxs-lookup"><span data-stu-id="249e1-143">The service's response appears below the test parameters.</span></span>  
   
 > [!NOTE]
->  如果預期的傳回值是字串，則結果會顯示為引號括住的字串，即使提供的輸入並未以引號括住。  
+>  <span data-ttu-id="249e1-144">如果預期的傳回值是字串，則結果會顯示為引號括住的字串，即使提供的輸入並未以引號括住。</span><span class="sxs-lookup"><span data-stu-id="249e1-144">If the expected return value is a string, the result will be displayed as a quoted string even though the input provided was not in quotes.</span></span>  
   
- 如果您在建立服務合約時將特定作業指定為單向，就不會顯示任何服務回應。  訊息一旦排入佇列中準備傳遞，快顯對話方塊就會出現，通知您已成功傳送訊息。  
+ <span data-ttu-id="249e1-145">如果您在建立服務合約時將特定作業指定為單向，就不會顯示任何服務回應。</span><span class="sxs-lookup"><span data-stu-id="249e1-145">If you specified a particular operation as one-way when you created the contract for the service, no service response is displayed.</span></span> <span data-ttu-id="249e1-146">訊息一旦排入佇列中準備傳遞，快顯對話方塊就會出現，通知您已成功傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="249e1-146">As soon as the message is queued for delivery, a dialog box pops up to notify you that the message was successfully sent.</span></span>  
   
-### 工作階段支援  
- 服務作業索引標籤中的 \[**啟動新 Proxy**\] 核取方塊，可以讓您切換工作階段支援。  這個方塊預設為清除。  
+### <a name="session-support"></a><span data-ttu-id="249e1-147">工作階段支援</span><span class="sxs-lookup"><span data-stu-id="249e1-147">Session Support</span></span>  
+ <span data-ttu-id="249e1-148">**啟動新 proxy**服務作業的索引標籤中的核取方塊可讓您切換工作階段支援。</span><span class="sxs-lookup"><span data-stu-id="249e1-148">The **Start a new proxy** check box in a service operation's tab enables you to toggle session support.</span></span> <span data-ttu-id="249e1-149">這個方塊預設為清除。</span><span class="sxs-lookup"><span data-stu-id="249e1-149">This box is cleared by default.</span></span>  
   
- 在針對特定作業 \(或是相同服務端點中的其他作業\) 輸入測試參數時，並在清除該核取方塊的情況下多次按下 \[**叫用**\]，則這些作業會共用一個 Proxy，並且會在多個作業間保存服務狀態。  
+ <span data-ttu-id="249e1-150">當您輸入的特定作業 （或另一個作業中相同的服務端點） 的測試參數，並按一下**Invoke**多次清除該核取方塊，這些作業會共用一個 proxy，而服務狀態為保留跨多個作業。</span><span class="sxs-lookup"><span data-stu-id="249e1-150">When you enter test parameters for a specific operation (or another operation in the same service endpoint) and click **Invoke** multiple times with the check box cleared, these operations share one proxy and the service status is persisted across multiple operations.</span></span>  
   
- 如果有核取 \[**啟動新 Proxy**\] 核取方塊，則會針對每個 \[**叫用**\] 啟動新的 Proxy，稍早的工作階段會結束並重設服務狀態。  
+ <span data-ttu-id="249e1-151">如果**啟動新 proxy**核取方塊已核取，新的 proxy 啟動每個**Invoke**早的工作階段就會結束，且會重設服務狀態。</span><span class="sxs-lookup"><span data-stu-id="249e1-151">If the **Start a new proxy** check box is checked, a new proxy is started for each **Invoke**, the previous session scenario is ended, and the service status is reset.</span></span>  
   
-### 編輯用戶端組態  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端主視窗的左窗格會列出用戶端組態檔。  按兩下任何項目，即可在右窗格中顯示檔案的內容。  
+### <a name="editing-client-configuration"></a><span data-ttu-id="249e1-152">編輯用戶端組態</span><span class="sxs-lookup"><span data-stu-id="249e1-152">Editing Client Configuration</span></span>  
+ <span data-ttu-id="249e1-153">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端主視窗的左窗格會列出用戶端組態檔。</span><span class="sxs-lookup"><span data-stu-id="249e1-153">The left pane of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client main window lists client configuration files.</span></span> <span data-ttu-id="249e1-154">按兩下任何項目，即可在右窗格中顯示檔案的內容。</span><span class="sxs-lookup"><span data-stu-id="249e1-154">Double-click any of the items to display the contents of the file in the right pane.</span></span>  
   
-#### 使用服務組態編輯器進行編輯  
- 以滑鼠右鍵按一下左窗格中的 \[**組態檔**\]，並選取內容功能表 \[**使用 SvcConfigEditor 編輯**\]。  服務組態編輯器隨即啟動，並顯示用戶端組態內容。  您可以在該工具內編輯組態並進行儲存。  
+#### <a name="edit-with-service-configuration-editor"></a><span data-ttu-id="249e1-155">使用服務組態編輯器進行編輯</span><span class="sxs-lookup"><span data-stu-id="249e1-155">Edit with Service Configuration Editor</span></span>  
+ <span data-ttu-id="249e1-156">以滑鼠右鍵按一下**組態檔**在左的窗格中選取內容功能表**使用 SvcConfigEditor 編輯**。</span><span class="sxs-lookup"><span data-stu-id="249e1-156">Right-click **Config File** in the left pane and select the context menu **Edit with SvcConfigEditor**.</span></span> <span data-ttu-id="249e1-157">服務組態編輯器隨即啟動，並顯示用戶端組態內容。</span><span class="sxs-lookup"><span data-stu-id="249e1-157">Service Configuration Editor is launched with the client configuration content.</span></span> <span data-ttu-id="249e1-158">您可以在該工具內編輯組態並進行儲存。</span><span class="sxs-lookup"><span data-stu-id="249e1-158">You can edit the configuration and save it within the tool.</span></span>  
   
- 在服務組態編輯器中儲存檔案後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端會顯示警告訊息，通知您檔案已在外部經過修改並詢問您是否要重新載入。  
+ <span data-ttu-id="249e1-159">在服務組態編輯器中儲存檔案後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端會顯示警告訊息，通知您檔案已在外部經過修改並詢問您是否要重新載入。</span><span class="sxs-lookup"><span data-stu-id="249e1-159">After saving the file in Service Configuration Editor, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client displays a warning message to inform you that the file has been modified outside and asks whether you would like to reload it.</span></span>  
   
- 如果選取 \[**是**\]，\[Client.dll.config\] 索引標籤中的組態內容會反映出您在編輯器中進行的變更。  
+ <span data-ttu-id="249e1-160">如果您選取**是**，[Client.dll.config] 索引標籤中的組態內容會反映您在編輯器中所做的變更。</span><span class="sxs-lookup"><span data-stu-id="249e1-160">If you select **Yes**, the configuration content in the "Client.dll.config" tab reflects the changes you made in the editor.</span></span>  
   
- 如果選取 \[**否**\]，\[Client.dll.config\] 索引標籤中的組態內容會維持不變，而修改過的內容會自動儲存到原始程式檔中。  
+ <span data-ttu-id="249e1-161">如果您選取**否**，[Client.dll.config] 索引標籤中的組態內容會維持不變，和原始程式檔都會自動儲存修改過的內容。</span><span class="sxs-lookup"><span data-stu-id="249e1-161">If you select **No**, the configuration content in the "Client.dll.config" tab remains unchanged and the modified content is automatically saved to the source file.</span></span>  
   
-#### 還原至預設組態  
- 如果要取消所有變更並還原為預設用戶端組態，以滑鼠右鍵按一下左窗格中的 \[**組態檔**\]，並選取內容功能表 \[**還原至預設組態**\]。  預設組態值隨即載入，並會還原 \[Client.dll.config\] 索引標籤中的內容。  
+#### <a name="restore-to-default-configuration"></a><span data-ttu-id="249e1-162">還原至預設組態</span><span class="sxs-lookup"><span data-stu-id="249e1-162">Restore to Default Configuration</span></span>  
+ <span data-ttu-id="249e1-163">如果您想要取消所有變更並還原為預設用戶端設定，以滑鼠右鍵按一下**組態檔**在左的窗格中選取內容功能表**還原至預設組態**。載入預設組態值，並還原 Client.dll.config 索引標籤中的內容。</span><span class="sxs-lookup"><span data-stu-id="249e1-163">If you want to cancel all the changes and restore to the default client configuration, right-click **Config File** in the left pane and select the context menu **Restore to Default Config**. The default configuration value is loaded and content in "Client.dll.config" tab is restored.</span></span>  
   
-#### 驗證變更  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端中載入儲存的變更時，會針對 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 結構描述檢查組態是否有效。  如果發現錯誤，會顯示對話方塊說明錯誤詳細資料。  
+#### <a name="validate-changes"></a><span data-ttu-id="249e1-164">驗證變更</span><span class="sxs-lookup"><span data-stu-id="249e1-164">Validate Changes</span></span>  
+ <span data-ttu-id="249e1-165">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端中載入儲存的變更時，會針對 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 結構描述檢查組態是否有效。</span><span class="sxs-lookup"><span data-stu-id="249e1-165">When saved changes are being loaded in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client, the configuration is checked for validity against [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] schema.</span></span> <span data-ttu-id="249e1-166">如果發現錯誤，會顯示對話方塊說明錯誤詳細資料。</span><span class="sxs-lookup"><span data-stu-id="249e1-166">If errors are found, a dialog box is displayed to show error details.</span></span>  
   
- 在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援編輯 \(也就是編輯、還原等等\) 的功能表項目。  將更新過的組態載入至 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時，也會停用服務叫用。  
+ <span data-ttu-id="249e1-167">在 proxy 產生、 二進位編譯或服務叫用，已停用支援編輯 （亦即，[編輯]、 [還原]，等等） 的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="249e1-167">During proxy generation, binary compiling, or service invoking, menu items that support editing (that is, "Edit …", "Restore …", and so on) are disabled.</span></span> <span data-ttu-id="249e1-168">將更新過的組態載入至 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時，也會停用服務叫用。</span><span class="sxs-lookup"><span data-stu-id="249e1-168">Service invocation is also disabled when loading updated configuration to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span>  
   
-#### 保存用戶端組態  
- \[工具\] \-\> \[選項\] \-\> \[用戶端組態\] 索引標籤包含預設為啟用的 \[啟動服務時永遠重新產生組態\] 選項。  這個選項表示每當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端載入服務時，會依據最新的服務合約和服務 App.config 檔案，重新產生組態檔。  
+#### <a name="persist-client-configuration"></a><span data-ttu-id="249e1-169">保存用戶端組態</span><span class="sxs-lookup"><span data-stu-id="249e1-169">Persist Client Configuration</span></span>  
+ <span data-ttu-id="249e1-170">**工具**->**選項**->**用戶端設定** 索引標籤包含**永遠重新產生組態時啟動服務**選項，預設會啟用此選項。</span><span class="sxs-lookup"><span data-stu-id="249e1-170">The **Tools**->**Options**->**Client Configuration** tab contains an **Always Regenerate Config When Launching Services** option, which is enabled by default.</span></span> <span data-ttu-id="249e1-171">這個選項表示每當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端載入服務時，會依據最新的服務合約和服務 App.config 檔案，重新產生組態檔。</span><span class="sxs-lookup"><span data-stu-id="249e1-171">This option specifies that every time [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client loads a service, it regenerates a configuration file based on the latest service contract and service App.config files.</span></span>  
   
- 如果您已經編輯過 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端組態，並想要永遠使用這個更新檔來偵錯服務，您可以取消核取這個重新產生選項。  如此一來，即使在您更新服務並重新開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時，Client.dll.config 檔案仍然是您先前更新過的檔案，而非依據更新服務所重新產生的檔案。  
+ <span data-ttu-id="249e1-172">如果您編輯的用戶端設定您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務，而且想要永遠使用這個更新的檔案進行偵錯您的服務，您可以取消勾選**重新產生**選項。</span><span class="sxs-lookup"><span data-stu-id="249e1-172">If you have edited the client configuration for your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and want to always use this updated file to debug your service, you can uncheck the **Regenerate** option.</span></span> <span data-ttu-id="249e1-173">如此一來，即使在您更新服務並重新開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時，Client.dll.config 檔案仍然是您先前更新過的檔案，而非依據更新服務所重新產生的檔案。</span><span class="sxs-lookup"><span data-stu-id="249e1-173">By doing so, even when you update the service and reopen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client, the Client.dll.config file is the one you updated previously instead of a regenerated one based on the updated service.</span></span>  
   
- 但是，您可能需要編輯組態檔，讓其跟重新產生的 Proxy 一致。  如果重新產生的 Proxy 和組態檔因更新服務而不相符，則在叫用服務時將發生錯誤。  
+ <span data-ttu-id="249e1-174">但是，您可能需要編輯組態檔，讓其跟重新產生的 Proxy 一致。</span><span class="sxs-lookup"><span data-stu-id="249e1-174">However, you might need to edit the configuration file to make it consistent with the regenerated proxy.</span></span> <span data-ttu-id="249e1-175">如果重新產生的 Proxy 和組態檔因更新服務而不相符，則在叫用服務時將發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="249e1-175">If the regenerated proxy and configuration file are mismatched due to an updated service, errors will occur when the service is invoked.</span></span>  
   
 > [!CAUTION]
->  如果您修改過用戶端組態檔並選擇供往後重複使用，則可以在下列位置找到該檔案：  
+>  <span data-ttu-id="249e1-176">如果您修改過用戶端組態檔並選擇供往後重複使用，則可以在下列位置找到該檔案：</span><span class="sxs-lookup"><span data-stu-id="249e1-176">If you have modified the client configuration file and select to reuse it in the future, you can find the file in the following location:</span></span>  
 >   
->  \\Documents and Settings\\\[User Account\]\\My Documents\\Test Client Projects  
+>  <span data-ttu-id="249e1-177">\Documents and 設定\\[使用者帳戶] \My Documents\Test 用戶端專案。</span><span class="sxs-lookup"><span data-stu-id="249e1-177">\Documents and Settings\\[User Account]\My Documents\Test Client Projects.</span></span>  
 >   
->  任何儲存在用戶端組態檔中經過更新的認證資訊，皆受到這個資料夾的存取控制清單 \(ACL\) 所保護。  
+>  <span data-ttu-id="249e1-178">任何儲存在用戶端組態檔中經過更新的認證資訊，皆受到這個資料夾的存取控制清單 (ACL) 所保護。</span><span class="sxs-lookup"><span data-stu-id="249e1-178">Any updated credential information stored to the client configuration file is protected by the Access Control List (ACL) of this folder.</span></span>  
   
-### 新增、移除和重新整理服務  
+### <a name="adding-removing-and-refreshing-services"></a><span data-ttu-id="249e1-179">新增、移除和重新整理服務</span><span class="sxs-lookup"><span data-stu-id="249e1-179">Adding, Removing and Refreshing Services</span></span>  
   
-#### 新增服務  
- 按一下 \[檔案\] \-\> \[新增服務\]，將服務新增至 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端。  接著會要求您輸入要新增之服務的 URI \(端點位址\)。  服務位址可以是 Mex 位址或 WSDL 位址。  
+#### <a name="add-service"></a><span data-ttu-id="249e1-180">新增服務</span><span class="sxs-lookup"><span data-stu-id="249e1-180">Add Service</span></span>  
+ <span data-ttu-id="249e1-181">按一下**檔案**->**加入服務**要加入至服務[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端。</span><span class="sxs-lookup"><span data-stu-id="249e1-181">Click **File**->**Add Service** to add a service to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span> <span data-ttu-id="249e1-182">接著會要求您輸入要新增之服務的 URI (端點位址)。</span><span class="sxs-lookup"><span data-stu-id="249e1-182">You are then required to type the URI (endpoint address) of the service to be added.</span></span> <span data-ttu-id="249e1-183">服務位址可以是 Mex 位址或 WSDL 位址。</span><span class="sxs-lookup"><span data-stu-id="249e1-183">The service’s address can be a mex address or WSDL address.</span></span>  
   
- 您也可以在 \[**最近使用的服務**\] 子功能表中，找到 10 個最近新增的服務端點清單。  如果選取其中一個服務，該指定服務就會加入到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端中。  
+ <span data-ttu-id="249e1-184">您也可以尋找清單中的 10 個最近新增的服務端點的**最近使用的服務**子功能表。</span><span class="sxs-lookup"><span data-stu-id="249e1-184">You can also find a list of 10 recently added services' endpoints in the **Recent Services** submenu.</span></span> <span data-ttu-id="249e1-185">如果選取其中一個服務，該指定服務就會加入到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端中。</span><span class="sxs-lookup"><span data-stu-id="249e1-185">If you select one of them, the specified service is added to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span>  
   
- 您也可以滑鼠右鍵按一下服務樹狀目錄 \[**我的服務專案**\] 的根，並選取 \[**新增服務**\]，以達成相同結果。  
+ <span data-ttu-id="249e1-186">您也可以以滑鼠右鍵按一下服務樹狀目錄的根目錄**我的服務專案**，然後選取**加入服務**以達成相同結果。</span><span class="sxs-lookup"><span data-stu-id="249e1-186">You can also right-click the root of service tree **My Service Projects**, and select **Add Service** to achieve the same result.</span></span>  
   
- 在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援新增服務的功能表項目。  同時也會停用服務叫用。  
+ <span data-ttu-id="249e1-187">在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援新增服務的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="249e1-187">During proxy generation, binary compiling, or service invocation, menu items that support adding a service are disabled.</span></span> <span data-ttu-id="249e1-188">同時也會停用服務叫用。</span><span class="sxs-lookup"><span data-stu-id="249e1-188">Service invocation is also disabled.</span></span>  
   
-#### 移除服務  
- 以滑鼠右鍵按一下要移除之服務的服務根，並選取 \[**移除服務**\]，即可從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端移除服務。  
+#### <a name="remove-service"></a><span data-ttu-id="249e1-189">移除服務</span><span class="sxs-lookup"><span data-stu-id="249e1-189">Remove Service</span></span>  
+ <span data-ttu-id="249e1-190">以滑鼠右鍵按一下要移除，然後選取服務的服務根目錄**移除服務**若要移除服務，以從[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端。</span><span class="sxs-lookup"><span data-stu-id="249e1-190">Right-click the service root of the service to be removed, and select **Remove Service** to remove a service from [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span>  
   
- 在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援移除服務的功能表項目。  同時也會停用服務叫用。  
+ <span data-ttu-id="249e1-191">在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援移除服務的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="249e1-191">During proxy generation, binary compiling, or service invocation, menu items that support removing a service are disabled.</span></span> <span data-ttu-id="249e1-192">同時也會停用服務叫用。</span><span class="sxs-lookup"><span data-stu-id="249e1-192">Service invocation is also disabled.</span></span>  
   
-#### 重新整理服務  
- 如果在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端執行當中變更過服務，而您想要確認該服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端實作是最新的，請以滑鼠右鍵按一下服務的服務根，並選取 \[**重新整理服務**\]。  請注意，重新整理後會重設服務狀態。  
+#### <a name="refresh-service"></a><span data-ttu-id="249e1-193">重新整理服務</span><span class="sxs-lookup"><span data-stu-id="249e1-193">Refresh Service</span></span>  
+ <span data-ttu-id="249e1-194">如果變更服務，而[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端正在執行，而且您想要確保[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端實作，該服務處於最新狀態，以滑鼠右鍵按一下 服務根目錄的服務，然後選取**重新整理服務**。</span><span class="sxs-lookup"><span data-stu-id="249e1-194">If a change is made to the service while [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client is running and you want to ensure that the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client implementation for that service is up-to-date, right-click the service root of the service, and select **Refresh Service**.</span></span> <span data-ttu-id="249e1-195">請注意，重新整理後會重設服務狀態。</span><span class="sxs-lookup"><span data-stu-id="249e1-195">Note that after refreshing, the service status is reset.</span></span>  
   
- 在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援重新整理服務的功能表項目。  同時也會停用服務叫用。  
+ <span data-ttu-id="249e1-196">在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援重新整理服務的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="249e1-196">During proxy generation, binary compiling, or service invocation, menu items that support refreshing a service are disabled.</span></span> <span data-ttu-id="249e1-197">同時也會停用服務叫用。</span><span class="sxs-lookup"><span data-stu-id="249e1-197">Service invocation is also disabled.</span></span>  
   
-## 測試用戶端產生的檔案位置  
- 根據預設，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端會將產生的用戶端程式碼和組態檔儲存在 "%appdata%\\Local\\temp\\Test Client Projects" 資料夾。  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端結束後，便會刪除這個資料夾。  如果在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端中修改組態檔，並且是在停用 \[**啟動服務時永遠重新產生組態**\] 選項的情況下，修改過的檔案會複製到 "My Documents\\Test Client Projects Documents\\Test Client Projects" 下的 "Cached Config" 資料夾，並會有對應的 \(metadata\-address\-to\-file\-name\) XML 檔案做為索引。  
+## <a name="location-of-files-generated-by-the-test-client"></a><span data-ttu-id="249e1-198">測試用戶端產生的檔案位置</span><span class="sxs-lookup"><span data-stu-id="249e1-198">Location of Files Generated by the Test Client</span></span>  
+ <span data-ttu-id="249e1-199">根據預設，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端儲存在"%appdata%\Local\temp\Test Client Projects"資料夾中產生用戶端程式碼和組態檔。</span><span class="sxs-lookup"><span data-stu-id="249e1-199">By default, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client stores generated client code and configuration files in the "%appdata%\Local\temp\Test Client Projects" folder.</span></span> <span data-ttu-id="249e1-200">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端結束後，便會刪除這個資料夾。</span><span class="sxs-lookup"><span data-stu-id="249e1-200">This folder is deleted after [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client exits.</span></span> <span data-ttu-id="249e1-201">如果組態檔中修改[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端和**重新產生組態啟動服務時永遠**選項已停用，已修改的檔案會複製到"My Documents\Test 下的"Cached Config"資料夾Client Projects Documents\Test Client Projects 中 「 使用對應 （中繼資料-位址-到-檔名） 的 XML 檔案做為索引。</span><span class="sxs-lookup"><span data-stu-id="249e1-201">If a configuration file is modified in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client and the **Always Regenerate Config When Launching Services** option is disabled, the modified file is copied to the "Cached Config" folder under "My Documents\Test Client Projects Documents\Test Client Projects" with a mapping (metadata-address-to-file-name) XML file as an index.</span></span>  
   
- 您也可以在命令列啟動 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，使用 `/ProjectPath` 參數指定用於儲存產生檔案的新目標路徑，或是使用 `/RestoreProjectPath` 參數還原預設位置。  語法如下：  
+ <span data-ttu-id="249e1-202">您也可以在命令列啟動 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，使用 `/ProjectPath` 參數指定用於儲存產生檔案的新目標路徑，或是使用 `/RestoreProjectPath` 參數還原預設位置。</span><span class="sxs-lookup"><span data-stu-id="249e1-202">You can also start [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client in a command line, use the `/ProjectPath` switch to specify a new desired path for storing generated files, or use the `/RestoreProjectPath` switch to restore the default location.</span></span> <span data-ttu-id="249e1-203">語法如下：</span><span class="sxs-lookup"><span data-stu-id="249e1-203">The syntax is as follows:</span></span>  
   
  `wcfTestClient.exe /ProjectPath [desired location]`  
   
- 執行這個命令並不會開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，  只是會變更資料夾位置。  不論 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端是否正在執行，都可以執行這個命令。  新的位置會在重新啟動 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時套用。  有關位置的資訊可以儲存在登錄中，或者是 "%appdata%\\Local\\temp\\Test Client Projects" 資料夾的 "WcfTestClient.exe.option" 檔案中。  
+ <span data-ttu-id="249e1-204">執行這個命令並不會開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，</span><span class="sxs-lookup"><span data-stu-id="249e1-204">Running this command does not open [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client.</span></span> <span data-ttu-id="249e1-205">只是會變更資料夾位置。</span><span class="sxs-lookup"><span data-stu-id="249e1-205">Only the folder location is changed.</span></span> <span data-ttu-id="249e1-206">不論 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端是否正在執行，都可以執行這個命令。</span><span class="sxs-lookup"><span data-stu-id="249e1-206">You can run this command whether [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client is running or not.</span></span> <span data-ttu-id="249e1-207">新的位置會在重新啟動 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時套用。</span><span class="sxs-lookup"><span data-stu-id="249e1-207">The new location is applied when [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client is restarted.</span></span> <span data-ttu-id="249e1-208">在登錄中，或在"%appdata%\Local\temp\Test Client Projects"資料夾中的 wcftestclient.exe.option 檔案中，可以儲存的位置資訊。</span><span class="sxs-lookup"><span data-stu-id="249e1-208">The location information can be saved in registry, or in the WcfTestClient.exe.option file in the "%appdata%\Local\temp\Test Client Projects" folder.</span></span>  
   
-## WCF 測試用戶端支援的功能  
- 下列為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端支援的功能清單：  
+## <a name="features-supported-by-wcf-test-client"></a><span data-ttu-id="249e1-209">WCF 測試用戶端支援的功能</span><span class="sxs-lookup"><span data-stu-id="249e1-209">Features supported by WCF Test Client</span></span>  
+ <span data-ttu-id="249e1-210">下列為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端支援的功能清單：</span><span class="sxs-lookup"><span data-stu-id="249e1-210">The following is a list of features supported by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client:</span></span>  
   
--   服務叫用：要求\/回應和單向訊息。  
+-   <span data-ttu-id="249e1-211">服務叫用：要求/回應和單向訊息。</span><span class="sxs-lookup"><span data-stu-id="249e1-211">Service Invocation: Request/Response and One-way message.</span></span>  
   
--   繫結：Svcutil.exe 支援的所有繫結。  
+-   <span data-ttu-id="249e1-212">繫結：Svcutil.exe 支援的所有繫結。</span><span class="sxs-lookup"><span data-stu-id="249e1-212">Bindings: all bindings supported by Svcutil.exe.</span></span>  
   
--   控制工作階段。  
+-   <span data-ttu-id="249e1-213">控制工作階段。</span><span class="sxs-lookup"><span data-stu-id="249e1-213">Controlling Session.</span></span>  
   
--   訊息合約。  
+-   <span data-ttu-id="249e1-214">訊息合約。</span><span class="sxs-lookup"><span data-stu-id="249e1-214">Message Contract.</span></span>  
   
--   XML 序列化。  
+-   <span data-ttu-id="249e1-215">XML 序列化。</span><span class="sxs-lookup"><span data-stu-id="249e1-215">XML serialization.</span></span>  
   
- 下列為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端不支援的功能清單：  
+ <span data-ttu-id="249e1-216">下列為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端不支援的功能清單：</span><span class="sxs-lookup"><span data-stu-id="249e1-216">The following is a list of features not supported by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client:</span></span>  
   
--   型別：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的型別，包括相關 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 型別，以及 ADO.NET <xref:System.Data.DataTable> 型別。  
+-   <span data-ttu-id="249e1-217">型別：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的型別，包括相關 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 型別，以及 ADO.NET <xref:System.Data.DataTable> 型別。</span><span class="sxs-lookup"><span data-stu-id="249e1-217">Types: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, types that implement the <xref:System.Xml.Serialization.IXmlSerializable> interface, including the related <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> attribute, and the <xref:System.Xml.Linq.XDocument> and <xref:System.Xml.Linq.XElement> types and the ADO.NET <xref:System.Data.DataTable> type.</span></span>  
   
--   雙工合約。  
+-   <span data-ttu-id="249e1-218">雙工合約。</span><span class="sxs-lookup"><span data-stu-id="249e1-218">Duplex contract.</span></span>  
   
--   交易。  
+-   <span data-ttu-id="249e1-219">交易。</span><span class="sxs-lookup"><span data-stu-id="249e1-219">Transaction.</span></span>  
   
--   安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱\/密碼。  
+-   <span data-ttu-id="249e1-220">安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱/密碼。</span><span class="sxs-lookup"><span data-stu-id="249e1-220">Security: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , Certificate, and Username/Password.</span></span>  
   
--   繫結：WSFederationbinding、任何 Context 繫結和 Https 繫結、WebHttpbinding \(Json 回應訊息支援\)。  
+-   <span data-ttu-id="249e1-221">繫結：WSFederationbinding、任何 Context 繫結和 Https 繫結、WebHttpbinding (Json 回應訊息支援)。</span><span class="sxs-lookup"><span data-stu-id="249e1-221">Bindings: WSFederationbinding, any Context bindings and Https binding, WebHttpbinding (Json response message support).</span></span>  
   
-## 關閉 WCF 測試用戶端  
- 您可以透過下列方式關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端：  
+## <a name="closing-wcf-test-client"></a><span data-ttu-id="249e1-222">關閉 WCF 測試用戶端</span><span class="sxs-lookup"><span data-stu-id="249e1-222">Closing WCF Test Client</span></span>  
+ <span data-ttu-id="249e1-223">您可以透過下列方式關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端：</span><span class="sxs-lookup"><span data-stu-id="249e1-223">You can close [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client in the following ways:</span></span>  
   
--   按一下 \[**檔案**\] 功能表上的 \[**結束**\]。  或者，在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端主視窗中按一下 \[**關閉**\]。  如果 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端是由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 啟動的，這兩個動作也會關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機並停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。  
+-   <span data-ttu-id="249e1-224">在**檔案**功能表上，按一下 **結束**。</span><span class="sxs-lookup"><span data-stu-id="249e1-224">On the **File** menu, click **Exit**.</span></span> <span data-ttu-id="249e1-225">或者，在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端主視窗中，按一下 **關閉**。</span><span class="sxs-lookup"><span data-stu-id="249e1-225">Alternatively, in the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client main window, click **Close**.</span></span> <span data-ttu-id="249e1-226">如果 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端是由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 啟動的，這兩個動作也會關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機並停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。</span><span class="sxs-lookup"><span data-stu-id="249e1-226">Both of these actions also shut down [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host and stop the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugging process if [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client was launched by [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span>  
   
--   以滑鼠右鍵按一下通知區域中的 \[**WCF 服務主機**\] 圖示，然後按一下 \[**結束**\]。這會同時關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，並且停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。  
+-   <span data-ttu-id="249e1-227">以滑鼠右鍵按一下**WCF 服務主機**圖示在通知區域中，然後按一下**結束。**</span><span class="sxs-lookup"><span data-stu-id="249e1-227">Right-click the **WCF Service Host** icon in the notification area, and then click **Exit.**</span></span> <span data-ttu-id="249e1-228">這會同時關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，並且停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。</span><span class="sxs-lookup"><span data-stu-id="249e1-228">This shuts down both [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host and [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client and stops the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugging process.</span></span>  
   
-## 請參閱  
- [WCF 服務主機 \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+## <a name="see-also"></a><span data-ttu-id="249e1-229">另請參閱</span><span class="sxs-lookup"><span data-stu-id="249e1-229">See Also</span></span>  
+ [<span data-ttu-id="249e1-230">WCF 服務主機 (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="249e1-230">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

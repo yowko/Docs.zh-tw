@@ -1,54 +1,60 @@
 ---
-title: "如何：判斷資料格式是否出現在資料物件中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "資料格式 [WPF], 判斷是否存在"
-  - "DataFormats 類別 [WPF]"
-  - "拖放功能 [WPF], 資料格式存在"
+title: "如何：判斷資料格式是否出現在資料物件中"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataFormats class [WPF]
+- drag-and-drop [WPF], data formats present
+- data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9e5eaad64e18ff955340a8e91bfe8bd0e09dd8d7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：判斷資料格式是否出現在資料物件中
-下列範例顯示如何使用各種 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法多載，查詢資料物件中是否存在特定資料格式。  
+# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a><span data-ttu-id="b149f-102">如何：判斷資料格式是否出現在資料物件中</span><span class="sxs-lookup"><span data-stu-id="b149f-102">How to: Determine if a Data Format is Present in a Data Object</span></span>
+<span data-ttu-id="b149f-103">下列範例示範如何使用各種<xref:System.Windows.DataObject.GetDataPresent%2A>方法是否出現在 資料物件中特定的資料格式多載來查詢。</span><span class="sxs-lookup"><span data-stu-id="b149f-103">The following examples show how to use the various <xref:System.Windows.DataObject.GetDataPresent%2A> method overloads to query whether a particular data format is present in a data object.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="b149f-104">範例</span><span class="sxs-lookup"><span data-stu-id="b149f-104">Example</span></span>  
   
-### 描述  
- 下列範例程式碼使用 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 多載，藉由描述項字串來查詢是否存在特定資料格式。  
+### <a name="description"></a><span data-ttu-id="b149f-105">說明</span><span class="sxs-lookup"><span data-stu-id="b149f-105">Description</span></span>  
+ <span data-ttu-id="b149f-106">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%29>多載，以便查詢是否有特定的資料格式的描述項字串。</span><span class="sxs-lookup"><span data-stu-id="b149f-106">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload to query for the presence of a particular data format by descriptor string.</span></span>  
   
-### 程式碼  
+### <a name="code"></a><span data-ttu-id="b149f-107">程式碼</span><span class="sxs-lookup"><span data-stu-id="b149f-107">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_string)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_string)]  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="b149f-108">範例</span><span class="sxs-lookup"><span data-stu-id="b149f-108">Example</span></span>  
   
-### 描述  
- 下列範例程式碼使用 <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> 多載，藉由型別來查詢是否存在特定資料格式。  
+### <a name="description"></a><span data-ttu-id="b149f-109">說明</span><span class="sxs-lookup"><span data-stu-id="b149f-109">Description</span></span>  
+ <span data-ttu-id="b149f-110">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.Type%29>多載來查詢特定的資料格式的類型是否存在。</span><span class="sxs-lookup"><span data-stu-id="b149f-110">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> overload to query for the presence of a particular data format by type.</span></span>  
   
-### 程式碼  
+### <a name="code"></a><span data-ttu-id="b149f-111">程式碼</span><span class="sxs-lookup"><span data-stu-id="b149f-111">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_type)]  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="b149f-112">範例</span><span class="sxs-lookup"><span data-stu-id="b149f-112">Example</span></span>  
   
-### 描述  
- 下列範例程式碼使用 <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> 多載，藉由描述項字串來查詢資料，並指定自動轉換資料格式的處理方式。  
+### <a name="description"></a><span data-ttu-id="b149f-113">說明</span><span class="sxs-lookup"><span data-stu-id="b149f-113">Description</span></span>  
+ <span data-ttu-id="b149f-114">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29>依描述項字串多載來查詢資料，並指定如何處理自動轉換的資料格式。</span><span class="sxs-lookup"><span data-stu-id="b149f-114">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> overload to query for data by descriptor string, and specifying how to treat auto-convertible data formats.</span></span>  
   
-### 程式碼  
+### <a name="code"></a><span data-ttu-id="b149f-115">程式碼</span><span class="sxs-lookup"><span data-stu-id="b149f-115">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_autoconvert)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
   
-## 請參閱  
+## <a name="see-also"></a><span data-ttu-id="b149f-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b149f-116">See Also</span></span>  
  <xref:System.Windows.IDataObject>

@@ -1,68 +1,71 @@
 ---
-title: "x:Subclass Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Subclass"
-  - "xSubclass"
-  - "x:Subclass"
-helpviewer_keywords: 
-  - "x:Subclass attribute [XAML Services]"
-  - "XAML [XAML Services], x:Subclass attribute"
-  - "Subclass attribute in XAML [XAML Services]"
+title: "x:Subclass 指示詞"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Subclass
+- xSubclass
+- x:Subclass
+helpviewer_keywords:
+- x:Subclass attribute [XAML Services]
+- XAML [XAML Services], x:Subclass attribute
+- Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# x:Subclass Directive
-修改同時提供 `x:Class` 時的XAML 標記編譯行為。  不是建立以 `x:Class` 為基底的部分類別，而是將提供的 `x:Class` 建立成中繼類別，然後您的衍生類別就應該以 `x:Class` 為基底來提供。  
+# <a name="xsubclass-directive"></a><span data-ttu-id="808fe-102">x:Subclass 指示詞</span><span class="sxs-lookup"><span data-stu-id="808fe-102">x:Subclass Directive</span></span>
+<span data-ttu-id="808fe-103">修改 XAML 標記編譯行為時`x:Class`也會提供。</span><span class="sxs-lookup"><span data-stu-id="808fe-103">Modifies XAML markup compile behavior when `x:Class` is also provided.</span></span> <span data-ttu-id="808fe-104">而不是建立部分類別，根據`x:Class`，提供`x:Class`建立為中繼類別，而且應該然後根據您提供的衍生的類別`x:Class`。</span><span class="sxs-lookup"><span data-stu-id="808fe-104">Instead of creating a partial class that is based on `x:Class`, the provided `x:Class` is created as an intermediate class, and then your provided derived class is expected to be based on `x:Class`.</span></span>  
   
-## XAML Attribute Usage  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="808fe-105">XAML Attribute Usage</span><span class="sxs-lookup"><span data-stu-id="808fe-105">XAML Attribute Usage</span></span>  
   
 ```  
-<object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
+<object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
    ...  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="808fe-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="808fe-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`namespace`|選擇項。  指定包含 `classname` 的 CLR 命名空間。  如果指定了 `namespace`，點 \(.\) 就會分隔 `namespace` 與 `classname`。|  
-|`classname`|必要項。  所指定的部分類別 CLR 名稱會連接載入的 XAML 和該 XAML 的程式碼後置。  請參閱＜備註＞。|  
-|`subclassNamespace`|選擇項。  如果每個命名空間都能彼此解析，就可能與 `namespace` 不同。  指定包含 `subclassName` 的 CLR 命名空間。  如果指定了 `subclassName`，點 \(.\) 就會分隔 `subclassNamespace` 與 `subclassName`。|  
-|`subclassName`|必要項。  指定子類別的 CLR 名稱。|  
+|`namespace`|<span data-ttu-id="808fe-107">選擇項。</span><span class="sxs-lookup"><span data-stu-id="808fe-107">Optional.</span></span> <span data-ttu-id="808fe-108">指定 CLR 命名空間包含`classname`。</span><span class="sxs-lookup"><span data-stu-id="808fe-108">Specifies a CLR namespace that contains `classname`.</span></span> <span data-ttu-id="808fe-109">如果`namespace`指定，則句點 （.） 分隔`namespace`和`classname`。</span><span class="sxs-lookup"><span data-stu-id="808fe-109">If `namespace` is specified, a dot (.) separates `namespace` and `classname`.</span></span>|  
+|`classname`|<span data-ttu-id="808fe-110">必要項。</span><span class="sxs-lookup"><span data-stu-id="808fe-110">Required.</span></span> <span data-ttu-id="808fe-111">指定連接載入的 XAML 和程式碼後置該 XAML 的部分類別的 CLR 名稱。</span><span class="sxs-lookup"><span data-stu-id="808fe-111">Specifies the CLR name of the partial class that connects the loaded XAML and your code-behind for that XAML.</span></span> <span data-ttu-id="808fe-112">請參閱＜備註＞。</span><span class="sxs-lookup"><span data-stu-id="808fe-112">See Remarks.</span></span>|  
+|`subclassNamespace`|<span data-ttu-id="808fe-113">選擇項。</span><span class="sxs-lookup"><span data-stu-id="808fe-113">Optional.</span></span> <span data-ttu-id="808fe-114">可能會不同於`namespace`如果每個命名空間可以解析其他。</span><span class="sxs-lookup"><span data-stu-id="808fe-114">Can be different from `namespace` if each namespace can resolve the other.</span></span> <span data-ttu-id="808fe-115">指定 CLR 命名空間包含`subclassName`。</span><span class="sxs-lookup"><span data-stu-id="808fe-115">Specifies a CLR namespace that contains `subclassName`.</span></span> <span data-ttu-id="808fe-116">如果`subclassName`指定，則句點 （.） 分隔`subclassNamespace`和`subclassName`。</span><span class="sxs-lookup"><span data-stu-id="808fe-116">If `subclassName` is specified, a dot (.) separates `subclassNamespace` and `subclassName`.</span></span>|  
+|`subclassName`|<span data-ttu-id="808fe-117">必要項。</span><span class="sxs-lookup"><span data-stu-id="808fe-117">Required.</span></span> <span data-ttu-id="808fe-118">指定子類別的 CLR 名稱。</span><span class="sxs-lookup"><span data-stu-id="808fe-118">Specifies the CLR name of the subclass.</span></span>|  
   
-## 相依性  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) 也必須提供在相同的物件上提供，而且該物件必須是 XAML 產物的根項目。  
+## <a name="dependencies"></a><span data-ttu-id="808fe-119">相依性</span><span class="sxs-lookup"><span data-stu-id="808fe-119">Dependencies</span></span>  
+ <span data-ttu-id="808fe-120">[X:class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)也必須提供相同的物件，而該物件必須是在 XAML 生產的根項目。</span><span class="sxs-lookup"><span data-stu-id="808fe-120">[x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) must also be provided on the same object, and that object must be the root element of the XAML production.</span></span>  
   
-## 備註  
- `x:Subclass` 的使用方式主要適用於不支援部分類別宣告的語言。  
+## <a name="remarks"></a><span data-ttu-id="808fe-121">備註</span><span class="sxs-lookup"><span data-stu-id="808fe-121">Remarks</span></span>  
+ <span data-ttu-id="808fe-122">`x:Subclass`使用主要用於不支援部分類別宣告的語言。</span><span class="sxs-lookup"><span data-stu-id="808fe-122">`x:Subclass` usage is primarily intended for languages that do not support partial class declarations.</span></span>  
   
- 用來做為 `x:Subclass` 的類別不可以是巢狀類別，而且 `x:Subclass` 必須參考如＜相依性＞一節中所說明的根物件。  
+ <span data-ttu-id="808fe-123">做為類別`x:Subclass`不可為巢狀的類別，和`x:Subclass`必須參考根物件 「 相依性 」 一節中所述。</span><span class="sxs-lookup"><span data-stu-id="808fe-123">The class used as the `x:Subclass` cannot be a nested class, and `x:Subclass` must refer to the root object as explained in the "Dependencies" section.</span></span>  
   
- 否則 .NET Framework XAML 服務實作並未定義 `x:Subclass` 的概念意義。  這是因為 .NET Framework XAML Services 行為沒有指定 XAML 標記和支援程式碼藉以連接的整體程式設計模型。  與 `x:Class` 和 `x:Subclass` 相關之進一步概念的實作，會由使用程式設計模型或應用程式模型來定義連接 XAML 標記、已編譯標記和 CLR 架構程式碼後置之方式的特定架構來執行。  每個架構都可能有自己的建置動作，可以啟用某些行為，或者是必須包含在建置環境中的特定元件。  在架構內，建置動作也會根據在程式碼後置使用的特定 CLR 語言而有所不同。  
+ <span data-ttu-id="808fe-124">否則，概念的意義`x:Subclass`未定義的.NET Framework XAML 服務實作。</span><span class="sxs-lookup"><span data-stu-id="808fe-124">Otherwise, the conceptual meaning of `x:Subclass` is undefined by a .NET Framework XAML Services implementation.</span></span> <span data-ttu-id="808fe-125">這是因為.NET Framework XAML 服務的行為未指定的 xaml 標記和支援的程式碼已連線的整體程式設計模型。</span><span class="sxs-lookup"><span data-stu-id="808fe-125">This is because .NET Framework XAML Services behavior does not specify the overall programming model by which XAML markup and backing code are connected.</span></span> <span data-ttu-id="808fe-126">與相關的進一步概念實作`x:Class`和`x:Subclass`都是透過使用的程式設計模型或應用程式模型來定義如何連接 XAML 標記、 編譯的標記，並以 CLR 為基礎的程式碼後置的特定架構。</span><span class="sxs-lookup"><span data-stu-id="808fe-126">Implementations of further concepts related to `x:Class` and `x:Subclass` are performed by specific frameworks that use programming models or application models to define how to connect XAML markup, compiled markup, and CLR-based code-behind.</span></span> <span data-ttu-id="808fe-127">每個架構可能會有自己啟用的某些行為或在建置環境中必須包含的特定元件的建置動作。</span><span class="sxs-lookup"><span data-stu-id="808fe-127">Each framework might have its own build actions that enable some of the behavior, or specific components that must be included in the build environment.</span></span> <span data-ttu-id="808fe-128">在架構中，建置動作各有不同，根據特定 CLR 語言用於程式碼後置。</span><span class="sxs-lookup"><span data-stu-id="808fe-128">Within a framework, build actions can also vary based on the specific CLR language that is used for the code-behind.</span></span>  
   
-## WPF 使用注意事項  
- `x:Subclass` 可以是在頁面根之上，或是在應用程式定義中的 <xref:System.Windows.Application> 根上，該目錄已經具有 `x:Class`。  在頁面或應用程式根項目以外的其他任何項目上宣告 `x:Subclass` ，或是在沒有 `x:Class` 的位置指定它，都會產生編譯時期錯誤。  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="808fe-129">WPF 使用注意事項</span><span class="sxs-lookup"><span data-stu-id="808fe-129">WPF Usage Notes</span></span>  
+ <span data-ttu-id="808fe-130">`x:Subclass`可以是頁面根或<xref:System.Windows.Application>在應用程式定義中，已經有根`x:Class`。</span><span class="sxs-lookup"><span data-stu-id="808fe-130">`x:Subclass` can be on a page root or on the <xref:System.Windows.Application> root in the application definition, which already has `x:Class`.</span></span> <span data-ttu-id="808fe-131">宣告`x:Subclass`網頁或應用程式的根目錄，或未指定它以外的任何項目上`x:Class`存在，會導致編譯時期錯誤。</span><span class="sxs-lookup"><span data-stu-id="808fe-131">Declaring `x:Subclass` on any element other than a page or application root, or specifying it where no `x:Class` exists, causes a compile-time error.</span></span>  
   
- 建立可針對 `x:Subclass` 案例正確運作的衍生類別相當複雜。  您可能需要檢查中繼檔案 \(透過標記編譯，在您專案的 obj 資料夾中產生的 .g 檔案，其名稱包含 .xaml 檔案名稱\)。  這些中繼檔案可以幫助您在編譯應用程式中已聯結的部分類別中，判斷特定程式設計建構的來源。  
+ <span data-ttu-id="808fe-132">建立衍生類別是否正確地為該工作`x:Subclass`案例是相當複雜。</span><span class="sxs-lookup"><span data-stu-id="808fe-132">Creating derived classes that work correctly for the `x:Subclass` scenario is fairly complex.</span></span> <span data-ttu-id="808fe-133">您可能需要檢查中繼檔 （在 obj 資料夾，您的專案中編譯標記，其名稱中包含的.xaml 檔案名稱所產生的.g 檔案）。</span><span class="sxs-lookup"><span data-stu-id="808fe-133">You might need to examine the intermediate files (the .g files produced in the obj folder of your project by markup compile, with names that incorporate the .xaml file names).</span></span> <span data-ttu-id="808fe-134">這些中繼檔可協助您判斷在已編譯的應用程式中加入部分類別中的特定程式設計建構的來源。</span><span class="sxs-lookup"><span data-stu-id="808fe-134">These intermediate files can help you determine the origin of certain programming constructs in the joined partial classes in the compiled application.</span></span>  
   
- 衍生類別中的事件處理常式必須是 `internal override` \([!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] 中的 `Friend Overrides`\)，才能覆寫編譯期間在中繼類別中建立之處理常式的 Stub。  否則衍生類別實作會隱藏 \(遮蔽\) 中繼類別實作，而且不會叫用中繼類別處理常式。  
+ <span data-ttu-id="808fe-135">在衍生類別中的事件處理常式必須是`internal override`(`Friend Overrides`中[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]) 才能在編譯期間建立中繼類別中覆寫針對此處理常式的虛設常式。</span><span class="sxs-lookup"><span data-stu-id="808fe-135">Event handlers in the derived class must be `internal override` (`Friend Overrides` in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]) in order to override the stubs for the handlers as created in the intermediate class during compilation.</span></span> <span data-ttu-id="808fe-136">否則衍生的類別實作會隱藏 （陰影） 的中繼類別實作，而且不會叫用的中繼類別處理常式。</span><span class="sxs-lookup"><span data-stu-id="808fe-136">Otherwise, the derived class implementations hide (shadow) the intermediate class implementation and the intermediate class handlers are not invoked.</span></span>  
   
- 定義 `x:Class` 和 `x:Subclass` 時，您不需要提供 `x:Class` 所參考之類別的任何實作。  您只需要透過 `x:Class` 屬性 \(Attribute\) 指定其名稱，讓編譯器具有某些指引，可用於它在中繼檔案中建立的類別 \(在這種情況下，編譯器不會選取預設名稱\)。  您可為 `x:Class` 類別提供實作，但這不是同時使用 `x:Class` 和 `x:Subclass` 的一般情節。  
+ <span data-ttu-id="808fe-137">當您同時定義`x:Class`和`x:Subclass`，您不需要提供任何實作類別所參考的`x:Class`。</span><span class="sxs-lookup"><span data-stu-id="808fe-137">When you define both `x:Class` and `x:Subclass`, you do not need to provide any implementation for the class that is referenced by `x:Class`.</span></span> <span data-ttu-id="808fe-138">您只需要提供給它透過名稱`x:Class`屬性，讓編譯器在有一些指導方針所建立的中繼檔案 （編譯器不會選取預設名稱在此情況下） 的類別。</span><span class="sxs-lookup"><span data-stu-id="808fe-138">You only need to give it a name via the `x:Class` attribute so that the compiler has some guidance for the class that it creates in the intermediate files (the compiler does not select a default name in this case).</span></span> <span data-ttu-id="808fe-139">您可以提供`x:Class`類別的實作; 不過，這不使用這兩個的典型範例`x:Class`和`x:Subclass`。</span><span class="sxs-lookup"><span data-stu-id="808fe-139">You can give the `x:Class` class an implementation; however, this is not the typical scenario for using both `x:Class` and `x:Subclass`.</span></span>  
   
-## 請參閱  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [WPF 的 XAML 和自訂類別](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="808fe-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="808fe-140">See Also</span></span>  
+ [<span data-ttu-id="808fe-141">x:Class 指示詞</span><span class="sxs-lookup"><span data-stu-id="808fe-141">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [<span data-ttu-id="808fe-142">WPF 的 XAML 和自訂類別</span><span class="sxs-lookup"><span data-stu-id="808fe-142">XAML and Custom Classes for WPF</span></span>](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

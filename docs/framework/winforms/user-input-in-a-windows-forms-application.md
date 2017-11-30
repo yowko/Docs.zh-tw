@@ -1,45 +1,45 @@
 ---
-title: "Windows Form 應用程式中的使用者輸入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Form, 使用者輸入"
+title: "Windows Forms 應用程式中的使用者輸入"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb6f832b77404b57ab22e4ac472e7707f0e10dd5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form 應用程式中的使用者輸入
-在 Windows Form 中，使用者輸入是以 Windows 訊息的形式傳送至應用程式，  有一系列的可覆寫方法會在應用程式、表單和控制項層級處理這些訊息。  當這些方法接收滑鼠和鍵盤訊息時，它們會引發事件，這些事件可在經過處理後取得滑鼠或鍵盤輸入的資訊。  在許多情況中，Windows Form 應用程式只需經由處理這些事件就可以處理所有的使用者輸入。  在其他情況下，應用程式可能需要覆寫其中一個會處理訊息的方法，以便在應用程式、表單或控制項接收某特定訊息之前先將它攔截下來。  
+# <a name="user-input-in-a-windows-forms-application"></a><span data-ttu-id="f3d60-102">Windows Forms 應用程式中的使用者輸入</span><span class="sxs-lookup"><span data-stu-id="f3d60-102">User Input in a Windows Forms Application</span></span>
+<span data-ttu-id="f3d60-103">在 Windows Form 使用者輸入會傳送至應用程式的 Windows 訊息的形式。</span><span class="sxs-lookup"><span data-stu-id="f3d60-103">In Windows Forms, user input is sent to applications in the form of Windows messages.</span></span> <span data-ttu-id="f3d60-104">一系列的可覆寫方法處理這些訊息的應用程式表單，並控制層級。</span><span class="sxs-lookup"><span data-stu-id="f3d60-104">A series of overridable methods process these messages at the application, form, and control level.</span></span> <span data-ttu-id="f3d60-105">當這些方法會接收滑鼠和鍵盤訊息時，它們就會引發事件，可取得資訊滑鼠或鍵盤輸入來處理。</span><span class="sxs-lookup"><span data-stu-id="f3d60-105">When these methods receive mouse and keyboard messages, they raise events that can be handled to get information about the mouse or keyboard input.</span></span> <span data-ttu-id="f3d60-106">在許多情況下，Windows Forms 應用程式將能夠處理所有的使用者輸入，只要處理這些事件。</span><span class="sxs-lookup"><span data-stu-id="f3d60-106">In many cases, Windows Forms applications will be able to process all user input simply by handling these events.</span></span> <span data-ttu-id="f3d60-107">在其他情況下，應用程式可能需要覆寫其中一個處理訊息才能攔截特定的訊息之前收到由應用程式、 表單或控制項的方法。</span><span class="sxs-lookup"><span data-stu-id="f3d60-107">In other cases, an application may need to override one of the methods that process messages in order to intercept a particular message before it is received by the application, form, or control.</span></span>  
   
-## 滑鼠和鍵盤事件  
- 所有的 Windows Form 控制項都會繼承一組和滑鼠及鍵盤輸入有關的事件，  例如，某個控制項可以處理 <xref:System.Windows.Forms.Control.KeyPress> 事件以判斷某按鍵的字元碼，或者是某個控制項可以處理 <xref:System.Windows.Forms.Control.MouseClick> 事件以判斷按一下滑鼠的位置。  如需滑鼠和鍵盤事件的詳細資訊，請參閱[使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)和 [Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  
+## <a name="mouse-and-keyboard-events"></a><span data-ttu-id="f3d60-108">滑鼠和鍵盤事件</span><span class="sxs-lookup"><span data-stu-id="f3d60-108">Mouse and Keyboard Events</span></span>  
+ <span data-ttu-id="f3d60-109">所有 Windows Form 控制項都繼承一組滑鼠和鍵盤輸入的相關事件。</span><span class="sxs-lookup"><span data-stu-id="f3d60-109">All Windows Forms controls inherit a set of events related to mouse and keyboard input.</span></span> <span data-ttu-id="f3d60-110">控制項可以處理，例如<xref:System.Windows.Forms.Control.KeyPress>可以處理事件，以判斷已按下按鍵的字元碼或控制項<xref:System.Windows.Forms.Control.MouseClick>事件，以判斷按一下滑鼠的位置。</span><span class="sxs-lookup"><span data-stu-id="f3d60-110">For example, a control can handle the <xref:System.Windows.Forms.Control.KeyPress> event to determine the character code of a key that was pressed, or a control can handle the <xref:System.Windows.Forms.Control.MouseClick> event to determine the location of a mouse click.</span></span> <span data-ttu-id="f3d60-111">如需有關滑鼠和鍵盤事件的詳細資訊，請參閱[使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)和[Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="f3d60-111">For more information on the mouse and keyboard events, see [Using Keyboard Events](../../../docs/framework/winforms/using-keyboard-events.md) and [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span></span>  
   
-## 會處理使用者輸入訊息的方法  
- 表單和控制項可以存取 <xref:System.Windows.Forms.IMessageFilter> 介面以及一組可覆寫的方法，這些方法會在訊息佇列中的不同點處理 Windows 訊息。  這些方法全部都具有 <xref:System.Windows.Forms.Message> 參數，此參數會封裝 Windows 訊息的低階資訊。  您可以實作或覆寫這些方法以檢查訊息，然後再使用訊息或是將它傳遞至訊息佇列中的下一個消費者。  下表列出 Windows Form 中會處理所有 Windows 訊息的方法。  
+## <a name="methods-that-process-user-input-messages"></a><span data-ttu-id="f3d60-112">處理使用者輸入的訊息的方法</span><span class="sxs-lookup"><span data-stu-id="f3d60-112">Methods that Process User Input Messages</span></span>  
+ <span data-ttu-id="f3d60-113">表單和控制項有存取權<xref:System.Windows.Forms.IMessageFilter>介面和一組可覆寫處理 Windows 訊息的訊息佇列中的不同時期的方法。</span><span class="sxs-lookup"><span data-stu-id="f3d60-113">Forms and controls have access to the <xref:System.Windows.Forms.IMessageFilter> interface and a set of overridable methods that process Windows messages at different points in the message queue.</span></span> <span data-ttu-id="f3d60-114">這些方法都有<xref:System.Windows.Forms.Message>參數，封裝的 Windows 訊息的低層級詳細資料。</span><span class="sxs-lookup"><span data-stu-id="f3d60-114">These methods all have a <xref:System.Windows.Forms.Message> parameter, which encapsulates the low-level details of Windows messages.</span></span> <span data-ttu-id="f3d60-115">您可以實作，或覆寫這些方法來檢查訊息，然後使用訊息或將它傳遞至訊息佇列中下一個取用者。</span><span class="sxs-lookup"><span data-stu-id="f3d60-115">You can implement or override these methods to examine the message and then either consume the message or pass it on to the next consumer in the message queue.</span></span> <span data-ttu-id="f3d60-116">下表提供處理 Windows Form 中的所有 Windows 訊息的方法。</span><span class="sxs-lookup"><span data-stu-id="f3d60-116">The following table presents the methods that process all Windows messages in Windows Forms.</span></span>  
   
-|方法|備註|  
-|--------|--------|  
-|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|這個方法會在應用程式層級攔截已佇列的 \(也稱為已張貼的\) Windows 訊息。|  
-|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|這個方法會在 Windows 訊息被處理之前，在表單和控制項層級將它攔截。|  
-|<xref:System.Windows.Forms.Control.WndProc%2A>|這個方法會在表單和控制項層級處理 Windows 訊息。|  
-|<xref:System.Windows.Forms.Control.DefWndProc%2A>|這個方法會在表單和控制項層級執行 Windows 訊息的預設處理程序。  這可提供基本的視窗功能。|  
-|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|這個方法會在訊息被處理之後，在表單和控制項層級將它攔截。  您必須設定 <xref:System.Windows.Forms.ControlStyles> 樣式位元 \(Style Bit\)，才能呼叫這個方法。|  
+|<span data-ttu-id="f3d60-117">方法</span><span class="sxs-lookup"><span data-stu-id="f3d60-117">Method</span></span>|<span data-ttu-id="f3d60-118">注意</span><span class="sxs-lookup"><span data-stu-id="f3d60-118">Notes</span></span>|  
+|------------|-----------|  
+|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|<span data-ttu-id="f3d60-119">這個方法會攔截排入佇列 （也稱為已發佈） 應用程式層級的 Windows 訊息。</span><span class="sxs-lookup"><span data-stu-id="f3d60-119">This method intercepts queued (also known as posted) Windows messages at the application level.</span></span>|  
+|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|<span data-ttu-id="f3d60-120">已處理之前，這個方法會攔截在表單和控制項的層級的 Windows 訊息。</span><span class="sxs-lookup"><span data-stu-id="f3d60-120">This method intercepts Windows messages at the form and control level before they have been processed.</span></span>|  
+|<xref:System.Windows.Forms.Control.WndProc%2A>|<span data-ttu-id="f3d60-121">這個方法會處理 Windows 訊息，在表單和控制項的層級。</span><span class="sxs-lookup"><span data-stu-id="f3d60-121">This method processes Windows messages at the form and control level.</span></span>|  
+|<xref:System.Windows.Forms.Control.DefWndProc%2A>|<span data-ttu-id="f3d60-122">這個方法會執行預設處理 Windows 訊息，在表單和控制項的層級。</span><span class="sxs-lookup"><span data-stu-id="f3d60-122">This method performs the default processing of Windows messages at the form and control level.</span></span> <span data-ttu-id="f3d60-123">這可提供視窗的最少的功能。</span><span class="sxs-lookup"><span data-stu-id="f3d60-123">This provides the minimal functionality of a window.</span></span>|  
+|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|<span data-ttu-id="f3d60-124">經過處理後，這個方法會攔截在表單和控制項層級的訊息。</span><span class="sxs-lookup"><span data-stu-id="f3d60-124">This method intercepts messages at the form and control level, after they have been processed.</span></span> <span data-ttu-id="f3d60-125"><xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage>樣式位元必須設定要呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="f3d60-125">The <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> style bit must be set for this method to be called.</span></span>|  
   
- 另一組可覆寫的方法也會處理鍵盤和滑鼠訊息，這些方法是專門用來處理這類訊息。  如需詳細資訊，請參閱[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)和[滑鼠輸入在 Windows Form 中的運作方式](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  
+ <span data-ttu-id="f3d60-126">鍵盤和滑鼠訊息也會處理一組額外的可覆寫的方法專屬於這些類型的訊息。</span><span class="sxs-lookup"><span data-stu-id="f3d60-126">Keyboard and mouse messages are also processed by an additional set of overridable methods that are specific to those types of messages.</span></span> <span data-ttu-id="f3d60-127">如需詳細資訊，請參閱[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)和[滑鼠輸入的運作方式在 Windows Form 中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="f3d60-127">For more information, see [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md) and [How Mouse Input Works in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).</span></span>  
   
-## 請參閱  
- [Windows Form 中的使用者輸入](../../../docs/framework/winforms/user-input-in-windows-forms.md)   
- [Windows Form 應用程式中的鍵盤輸入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [Windows Form 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="f3d60-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f3d60-128">See Also</span></span>  
+ [<span data-ttu-id="f3d60-129">Windows Forms 中的使用者輸入</span><span class="sxs-lookup"><span data-stu-id="f3d60-129">User Input in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [<span data-ttu-id="f3d60-130">Windows Forms 應用程式中的鍵盤輸入</span><span class="sxs-lookup"><span data-stu-id="f3d60-130">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="f3d60-131">Windows Forms 應用程式中的滑鼠輸入</span><span class="sxs-lookup"><span data-stu-id="f3d60-131">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

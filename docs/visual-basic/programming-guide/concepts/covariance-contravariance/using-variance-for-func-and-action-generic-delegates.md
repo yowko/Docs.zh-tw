@@ -1,38 +1,27 @@
 ---
-title: "針對 Func 與 Action 委派 (Visual Basic) 使用變異數 |Microsoft 文件"
-ms.custom: 
-ms.date: 2015-07-20
+title: "針對 Func 與 Action 委派 (Visual Basic) 使用變異數"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c3f84d21f9fbc7e57ba079461194acf7612add
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f9b2ebf758bc0d67b2b623038a4beeb7149261
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>針對 Func 與 Action 委派 (Visual Basic) 中使用變異數
-這些範例示範如何使用共變數和反變數`Func`和`Action`允許重複使用的方法，並提供更多的彈性，您的程式碼中的泛型委派。  
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a><span data-ttu-id="e652d-102">針對 Func 與 Action 委派 (Visual Basic) 使用變異數</span><span class="sxs-lookup"><span data-stu-id="e652d-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>
+<span data-ttu-id="e652d-103">下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。</span><span class="sxs-lookup"><span data-stu-id="e652d-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
   
- 如需共變數和反變數的詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ <span data-ttu-id="e652d-104">如需共變數和反變數的詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="e652d-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span></span>  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有 Covariant 類型參數的委派  
- 下列範例說明共變數中的支援對泛型的優點`Func`委派。 `FindByTitle`方法使用的參數`String`類型，並傳回的物件`Employee`型別。 不過，您可以指派這個方法，以`Func(Of String, Person)`委派，因為`Employee`繼承`Person`。  
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="e652d-105">使用具有 Covariant 型別參數的委派</span><span class="sxs-lookup"><span data-stu-id="e652d-105">Using Delegates with Covariant Type Parameters</span></span>  
+ <span data-ttu-id="e652d-106">下列範例說明在泛型 `Func` 委派中支援共變數的好處。</span><span class="sxs-lookup"><span data-stu-id="e652d-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="e652d-107">`FindByTitle` 方法使用 `String` 類型的參數，並傳回 `Employee` 類型的物件。</span><span class="sxs-lookup"><span data-stu-id="e652d-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="e652d-108">不過，您可以將此方法指派給 `Func(Of String, Person)` 委派，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="e652d-108">However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -69,8 +58,8 @@ Class Finder
 End Class  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>具有 Contravariant 類型參數使用委派  
- 下列範例說明反變數中的支援對泛型的優點`Action`委派。 `AddToContacts`方法使用的參數`Person`型別。 不過，您可以指派這個方法，以`Action(Of Employee)`委派，因為`Employee`繼承`Person`。  
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="e652d-109">使用具有 Contravariant 型別參數的委派</span><span class="sxs-lookup"><span data-stu-id="e652d-109">Using Delegates with Contravariant Type Parameters</span></span>  
+ <span data-ttu-id="e652d-110">下列範例說明在泛型 `Action` 委派中支援反變數的好處。</span><span class="sxs-lookup"><span data-stu-id="e652d-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="e652d-111">`AddToContacts` 方法使用 `Person` 類型的參數。</span><span class="sxs-lookup"><span data-stu-id="e652d-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="e652d-112">不過，您可以將此方法指派給 `Action(Of Employee)` 委派，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="e652d-112">However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```vb  
 Public Class Person  
@@ -106,6 +95,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [共變數和反變數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)   
- [泛型](https://msdn.microsoft.com/library/ms172192)
+## <a name="see-also"></a><span data-ttu-id="e652d-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e652d-113">See Also</span></span>  
+ [<span data-ttu-id="e652d-114">共變數和反變數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e652d-114">Covariance and Contravariance (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
+ [<span data-ttu-id="e652d-115">泛型</span><span class="sxs-lookup"><span data-stu-id="e652d-115">Generics</span></span>](~/docs/standard/generics/index.md)

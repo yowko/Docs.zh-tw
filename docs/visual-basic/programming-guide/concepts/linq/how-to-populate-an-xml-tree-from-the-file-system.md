@@ -1,32 +1,28 @@
 ---
-title: "如何︰ 填入 XML 樹狀結構從檔案系統 (Visual Basic) |Microsoft 文件"
+title: "如何： 填入 XML 樹狀從檔案系統 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c55210365651c468b75b943dc46e08726e1ec939
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 6046cf5837aa033f2efb72c7b45f9526bedf871c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>如何︰ 填入 XML 樹狀結構從檔案系統 (Visual Basic)
-XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。 您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。 在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。 反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="380ee-102">如何： 填入 XML 樹狀從檔案系統 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="380ee-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
+<span data-ttu-id="380ee-103">XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。</span><span class="sxs-lookup"><span data-stu-id="380ee-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="380ee-104">您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。</span><span class="sxs-lookup"><span data-stu-id="380ee-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="380ee-105">在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。</span><span class="sxs-lookup"><span data-stu-id="380ee-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="380ee-106">反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。</span><span class="sxs-lookup"><span data-stu-id="380ee-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會使用遞迴，從本機檔案系統填入 XML 樹狀。 接著，它會查詢樹狀結構，計算樹狀結構中，所有檔案大小的總數。  
+## <a name="example"></a><span data-ttu-id="380ee-107">範例</span><span class="sxs-lookup"><span data-stu-id="380ee-107">Example</span></span>  
+ <span data-ttu-id="380ee-108">下列範例會使用遞迴，從本機檔案系統填入 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="380ee-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="380ee-109">接著，它會查詢樹狀結構，計算樹狀結構中，所有檔案大小的總數。</span><span class="sxs-lookup"><span data-stu-id="380ee-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```vb  
 Module Module1  
@@ -57,7 +53,7 @@ Module Module1
 End Module  
 ```  
   
- 此範例會產生與下列類似的輸出：  
+ <span data-ttu-id="380ee-110">此範例會產生與下列類似的輸出：</span><span class="sxs-lookup"><span data-stu-id="380ee-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -127,5 +123,5 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="380ee-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="380ee-111">See Also</span></span>  
+ [<span data-ttu-id="380ee-112">進階查詢技術 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="380ee-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

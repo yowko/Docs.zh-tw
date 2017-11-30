@@ -1,71 +1,77 @@
 ---
-title: "HOW TO：以非同步方式呼叫 WCF 服務作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：以非同步方式呼叫 WCF 服務作業"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f8f1419deb60b1f68e47c26c0edd5523a9d23768
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：以非同步方式呼叫 WCF 服務作業
-本主題涵蓋用戶端如何能夠非同步地存取服務作業。本主題中的服務會實作 `ICalculator` 介面。用戶端可以透過使用事件驅動的非同步呼叫模型，以非同步方式在這個介面上呼叫作業。\(如需事件架構的非同步呼叫模型的詳細資訊，請參閱[使用事件架構非同步模式設計多執行緒程式](http://go.microsoft.com/fwlink/?LinkId=248184)\)。如需示範如何在服務中以非同步方式實作作業的範例，請參閱 [HOW TO：實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。如需同步與非同步作業的詳細資訊，請參閱[同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
+# <a name="how-to-call-wcf-service-operations-asynchronously"></a><span data-ttu-id="7e899-102">HOW TO：以非同步方式呼叫 WCF 服務作業</span><span class="sxs-lookup"><span data-stu-id="7e899-102">How to: Call WCF Service Operations Asynchronously</span></span>
+<span data-ttu-id="7e899-103">本主題涵蓋用戶端如何能夠非同步地存取服務作業。</span><span class="sxs-lookup"><span data-stu-id="7e899-103">This topic covers how a client can access a service operation asynchronously.</span></span> <span data-ttu-id="7e899-104">本主題中的服務會實作 `ICalculator` 介面。</span><span class="sxs-lookup"><span data-stu-id="7e899-104">The service in this topic implements the `ICalculator` interface.</span></span> <span data-ttu-id="7e899-105">用戶端可以透過使用事件驅動的非同步呼叫模型，以非同步方式在這個介面上呼叫作業。</span><span class="sxs-lookup"><span data-stu-id="7e899-105">The client can call the operations on this interface asynchronously by using the event-driven asynchronous calling model.</span></span> <span data-ttu-id="7e899-106">(如需事件架構非同步呼叫模型的詳細資訊，請參閱[使用事件架構非同步模式的多執行緒程式設計](http://go.microsoft.com/fwlink/?LinkId=248184))。</span><span class="sxs-lookup"><span data-stu-id="7e899-106">(For more information about the event-based asynchronous calling model, see [Multithreaded Programming with the Event-based Asynchronous Pattern](http://go.microsoft.com/fwlink/?LinkId=248184)).</span></span> <span data-ttu-id="7e899-107">如需示範如何在服務中以非同步方式實作作業的範例，請參閱[How to： 實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="7e899-107">For an example that shows how to implement an operation asynchronously in a service, see [How to: Implement an Asynchronous Service Operation](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).</span></span> <span data-ttu-id="7e899-108">如需有關同步和非同步作業的詳細資訊，請參閱[同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="7e899-108">For more information about synchronous and asynchronous operations, see [Synchronous and Asynchronous Operations](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).</span></span>  
   
 > [!NOTE]
->  當使用 <xref:System.ServiceModel.ChannelFactory%601> 時，不支援事件驅動非同步呼叫模型。如需使用 <xref:System.ServiceModel.ChannelFactory%601> 進行非同步呼叫的詳細資訊，請參閱 [HOW TO：使用通道處理站以非同步方式呼叫作業](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
+>  <span data-ttu-id="7e899-109">當使用 <xref:System.ServiceModel.ChannelFactory%601> 時，不支援事件驅動非同步呼叫模型。</span><span class="sxs-lookup"><span data-stu-id="7e899-109">The event-driven asynchronous calling model is not supported when using a <xref:System.ServiceModel.ChannelFactory%601>.</span></span> <span data-ttu-id="7e899-110">如需有關使用非同步呼叫資訊<xref:System.ServiceModel.ChannelFactory%601>，請參閱[如何： 呼叫作業以非同步方式使用通道處理站](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。</span><span class="sxs-lookup"><span data-stu-id="7e899-110">For information about making asynchronous calls using the <xref:System.ServiceModel.ChannelFactory%601>, see [How to: Call Operations Asynchronously Using a Channel Factory](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).</span></span>  
   
-## 程序  
+## <a name="procedure"></a><span data-ttu-id="7e899-111">程序</span><span class="sxs-lookup"><span data-stu-id="7e899-111">Procedure</span></span>  
   
-#### 若要以非同步方式呼叫 WCF 服務作業  
+#### <a name="to-call-wcf-service-operations-asynchronously"></a><span data-ttu-id="7e899-112">若要以非同步方式呼叫 WCF 服務作業</span><span class="sxs-lookup"><span data-stu-id="7e899-112">To call WCF service operations asynchronously</span></span>  
   
-1.  配合 `/async` 和 `/tcv:Version35` 命令選項執行 [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，如下列命令所示。  
+1.  <span data-ttu-id="7e899-113">執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)與這兩個工具`/async`和`/tcv:Version35`一起命令選項，如下列命令所示。</span><span class="sxs-lookup"><span data-stu-id="7e899-113">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool with both the `/async` and the `/tcv:Version35` command options together as shown in the following command.</span></span>  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
-     除了同步作業和標準委派架構非同步作業外，這還會產生包含下列內容的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別：  
+     <span data-ttu-id="7e899-114">除了同步作業和標準委派架構非同步作業外，這還會產生包含下列內容的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別：</span><span class="sxs-lookup"><span data-stu-id="7e899-114">This generates, in addition to the synchronous and standard delegate-based asynchronous operations, a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class that contains:</span></span>  
   
-    -   兩個 \<`operationName`\>`Async` 作業，可與事件架構非同步呼叫方法一起使用。例如：  
+    -   <span data-ttu-id="7e899-115">兩個 <`operationName` > `Async`作業，以事件為基礎的非同步呼叫方法搭配使用。</span><span class="sxs-lookup"><span data-stu-id="7e899-115">Two <`operationName`>`Async` operations for use with the event-based asynchronous calling approach.</span></span> <span data-ttu-id="7e899-116">例如: </span><span class="sxs-lookup"><span data-stu-id="7e899-116">For example:</span></span>  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   \<`operationName`\>`Completed` 格式的作業完成事件，可與事件架構非同步呼叫方法一起使用。例如：  
+    -   <span data-ttu-id="7e899-117">作業已完成，事件表單的 <`operationName` > `Completed`事件為基礎的非同步呼叫方法搭配使用。</span><span class="sxs-lookup"><span data-stu-id="7e899-117">Operation completed events of the form <`operationName`>`Completed` for use with the event-based asynchronous calling approach.</span></span> <span data-ttu-id="7e899-118">例如: </span><span class="sxs-lookup"><span data-stu-id="7e899-118">For example:</span></span>  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   每個作業的 <xref:System.EventArgs?displayProperty=fullName> 型別 \(格式為 \<`operationName`\>`CompletedEventArgs`\)，可與事件架構非同步呼叫方法一起使用。例如：  
+    -   <span data-ttu-id="7e899-119"><xref:System.EventArgs?displayProperty=nameWithType>每個作業的類型 (格式的 <`operationName`>`CompletedEventArgs`) 使用事件架構非同步呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="7e899-119"><xref:System.EventArgs?displayProperty=nameWithType> types for each operation (of the form <`operationName`>`CompletedEventArgs`) for use with the event-based asynchronous calling approach.</span></span> <span data-ttu-id="7e899-120">例如: </span><span class="sxs-lookup"><span data-stu-id="7e899-120">For example:</span></span>  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
   
-2.  在呼叫應用程式中，建立要在非同步作業完成時呼叫的回呼方法，如下列範例程式碼所示。  
+2.  <span data-ttu-id="7e899-121">在呼叫應用程式中，建立要在非同步作業完成時呼叫的回呼方法，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="7e899-121">In the calling application, create a callback method to be called when the asynchronous operation is complete, as shown in the following sample code.</span></span>  
   
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3.  在呼叫作業之前，先使用型別為 \<`operationName`\>`EventArgs` 的新泛型 <xref:System.EventHandler%601?displayProperty=fullName>，將處理常式方法 \(在上述步驟中建立\) 加入至 \<`operationName`\>`Completed` 事件。接著，呼叫 \<`operationName`\>`Async` 方法。例如：  
+3.  <span data-ttu-id="7e899-122">在呼叫作業之前, 使用 新的泛型<xref:System.EventHandler%601?displayProperty=nameWithType>型別的 <`operationName` > `EventArgs`將 （在上一個步驟中建立） 的處理常式方法加入至 <`operationName` > `Completed`事件。</span><span class="sxs-lookup"><span data-stu-id="7e899-122">Prior to calling the operation, use a new generic <xref:System.EventHandler%601?displayProperty=nameWithType> of type <`operationName`>`EventArgs` to add the handler method (created in the preceding step) to the <`operationName`>`Completed` event.</span></span> <span data-ttu-id="7e899-123">然後呼叫 <`operationName` > `Async`方法。</span><span class="sxs-lookup"><span data-stu-id="7e899-123">Then call the <`operationName`>`Async` method.</span></span> <span data-ttu-id="7e899-124">例如: </span><span class="sxs-lookup"><span data-stu-id="7e899-124">For example:</span></span>  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="7e899-125">範例</span><span class="sxs-lookup"><span data-stu-id="7e899-125">Example</span></span>  
   
 > [!NOTE]
->  事件架構非同步模型的設計方針指出，如果傳回多個值，則其中一個值會傳回做為 `Result` 屬性，其他值則傳回做為 <xref:System.EventArgs> 物件上的屬性。這樣做的結果就是，如果用戶端使用事件架構非同步命令選項匯入中繼資料，且作業傳回多個值，則預設 <xref:System.EventArgs> 物件會傳回一個值做為 `Result` 屬性，而其餘則做為 <xref:System.EventArgs> 物件的屬性。如果您要接收訊息物件做為 `Result` 屬性，並讓傳回值做為該物件的屬性，請使用 `/messageContract` 命令選項。這會產生一個簽章，此簽章會將回應訊息傳回做為 <xref:System.EventArgs> 物件的 `Result` 屬性。然後，所有的內部傳回值都成為回應訊息物件的屬性。  
+>  <span data-ttu-id="7e899-126">事件架構非同步模型的設計方針指出，如果傳回多個值，則其中一個值會傳回做為 `Result` 屬性，其他值則傳回做為 <xref:System.EventArgs> 物件上的屬性。</span><span class="sxs-lookup"><span data-stu-id="7e899-126">The design guidelines for the event-based asynchronous model state that if more than one value is returned, one value is returned as the `Result` property and the others are returned as properties on the <xref:System.EventArgs> object.</span></span> <span data-ttu-id="7e899-127">這樣做的結果就是，如果用戶端使用事件架構非同步命令選項匯入中繼資料，且作業傳回多個值，則預設 <xref:System.EventArgs> 物件會傳回一個值做為 `Result` 屬性，而其餘則做為 <xref:System.EventArgs> 物件的屬性。如果您要接收訊息物件做為 `Result` 屬性，並讓傳回值做為該物件的屬性，請使用 `/messageContract` 命令選項。</span><span class="sxs-lookup"><span data-stu-id="7e899-127">One result of this is that if a client imports metadata using the event-based asynchronous command options and the operation returns more than one value, the default <xref:System.EventArgs> object returns one value as the `Result` property and the remainder are properties of the <xref:System.EventArgs> object.If you want to receive the message object as the `Result` property and have the returned values as properties on that object, use the `/messageContract` command option.</span></span> <span data-ttu-id="7e899-128">這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。</span><span class="sxs-lookup"><span data-stu-id="7e899-128">This generates a signature that returns the response message as the `Result` property on the <xref:System.EventArgs> object.</span></span> <span data-ttu-id="7e899-129">然後，所有的內部傳回值都成為回應訊息物件的屬性。</span><span class="sxs-lookup"><span data-stu-id="7e899-129">All internal return values are then properties of the response message object.</span></span>  
   
  [!code-csharp[EventAsync#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#6)]
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
-## 請參閱  
- [HOW TO：實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+## <a name="see-also"></a><span data-ttu-id="7e899-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e899-130">See Also</span></span>  
+ [<span data-ttu-id="7e899-131">如何：實作非同步服務作業</span><span class="sxs-lookup"><span data-stu-id="7e899-131">How to: Implement an Asynchronous Service Operation</span></span>](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

@@ -1,38 +1,38 @@
 ---
-title: "Label 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Label"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "影像 [Windows Form], 在標籤中顯示"
-  - "Label 控制項 [Windows Form], 關於 Label 控制項"
-  - "標籤"
+title: "Label 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Label
+helpviewer_keywords:
+- images [Windows Forms], displaying in labels
+- labels
+- Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f55cfb6afa8ad533aac84b391a7cd6fef83d72d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Label 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.Label> 控制項是用來顯示使用者無法編輯的文字或影像。  它們是用來識別表單的物件，例如，它可描述在按一下特定的控制項時將執行哪些動作，或顯示資訊以回應應用程式中的執行階段事件或處理序 \(Process\)。  例如，您可以使用標籤 \(Label\)，將描述性標題加入文字方塊、清單方塊、下拉式方塊等等。  您也可以撰寫程式碼以變更標籤顯示的文字，來回應執行階段的事件。  例如，如果應用程式需花數分鐘以處理變更，您可以顯示標籤中的處理狀態訊息。  
+# <a name="label-control-overview-windows-forms"></a><span data-ttu-id="5352f-102">Label 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="5352f-102">Label Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="5352f-103">Windows Form<xref:System.Windows.Forms.Label>控制項用來顯示文字或影像，使用者無法編輯。</span><span class="sxs-lookup"><span data-stu-id="5352f-103">Windows Forms <xref:System.Windows.Forms.Label> controls are used to display text or images that cannot be edited by the user.</span></span> <span data-ttu-id="5352f-104">它們可用來識別表單的物件，提供特定控制項的描述按一下將執行動作，例如，或在執行階段事件或應用程式中的處理序的回應中顯示資訊。</span><span class="sxs-lookup"><span data-stu-id="5352f-104">They are used to identify objects on a form — to provide a description of what a certain control will do if clicked, for example, or to display information in response to a run-time event or process in your application.</span></span> <span data-ttu-id="5352f-105">例如，您可以使用標籤，加入文字方塊、 清單方塊、 下拉式方塊和等等的描述性標題。</span><span class="sxs-lookup"><span data-stu-id="5352f-105">For example, you can use labels to add descriptive captions to text boxes, list boxes, combo boxes, and so on.</span></span> <span data-ttu-id="5352f-106">您也可以撰寫程式碼以變更在執行階段顯示的標籤，以回應事件的文字。</span><span class="sxs-lookup"><span data-stu-id="5352f-106">You can also write code that changes the text displayed by a label in response to events at run time.</span></span> <span data-ttu-id="5352f-107">例如，如果您的應用程式在幾分鐘的時間來處理變更，您可以在標籤中顯示處理狀態訊息。</span><span class="sxs-lookup"><span data-stu-id="5352f-107">For example, if your application takes a few minutes to process a change, you can display a processing-status message in a label.</span></span>  
   
-## 使用標籤控制項  
- 因為 <xref:System.Windows.Forms.Label> 控制項無法接收焦點 \(Focus\)，所以它也可用來建立其他控制項的便捷鍵 \(Access Key\)。  便捷鍵可讓使用者選取其他控制項，只要藉由按下 ALT 鍵及便捷鍵即可。  如需詳細資訊，請參閱[建立 Windows Form 控制項的便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)和 [如何：使用 Windows Form Label 控制項建立便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)。  
+## <a name="working-with-the-label-control"></a><span data-ttu-id="5352f-108">使用標籤控制項</span><span class="sxs-lookup"><span data-stu-id="5352f-108">Working with the Label Control</span></span>  
+ <span data-ttu-id="5352f-109">因為<xref:System.Windows.Forms.Label>控制項無法接收焦點，它也可用來建立其他控制項的便捷鍵。</span><span class="sxs-lookup"><span data-stu-id="5352f-109">Because the <xref:System.Windows.Forms.Label> control cannot receive the focus, it can also be used to create access keys for other controls.</span></span> <span data-ttu-id="5352f-110">便捷鍵可讓使用者選取另一個控制項，藉由按下 ALT 鍵及存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="5352f-110">An access key allows a user to select the other control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="5352f-111">如需詳細資訊，請參閱[建立存取金鑰的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)和[How to： 使用 Windows Form Label 控制項建立便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="5352f-111">For more information, see [Creating Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Create Access Keys with Windows Forms Label Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).</span></span>  
   
- 標籤中所顯示的標題是包含在 <xref:System.Windows.Forms.Label.Text%2A> 屬性中。  <xref:System.Windows.Forms.Label.TextAlign%2A> 屬性可讓您設定標籤中文字的對齊。  如需詳細資訊，請參閱 [如何：設定由 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)。  
+ <span data-ttu-id="5352f-112">在標籤中顯示的標題位於<xref:System.Windows.Forms.Label.Text%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="5352f-112">The caption displayed in the label is contained in the <xref:System.Windows.Forms.Label.Text%2A> property.</span></span> <span data-ttu-id="5352f-113"><xref:System.Windows.Forms.Label.TextAlign%2A>屬性可讓您設定標籤內文字的對齊方式。</span><span class="sxs-lookup"><span data-stu-id="5352f-113">The <xref:System.Windows.Forms.Label.TextAlign%2A> property allows you to set the alignment of the text within the label.</span></span> <span data-ttu-id="5352f-114">如需詳細資訊，請參閱[How to： 設定 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="5352f-114">For more information, see [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.Label>   
- [如何：調整 Windows Form Label 控制項大小以適合其內容](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)   
- [如何：使用 Windows Form Label 控制項建立便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+## <a name="see-also"></a><span data-ttu-id="5352f-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5352f-115">See Also</span></span>  
+ <xref:System.Windows.Forms.Label>  
+ [<span data-ttu-id="5352f-116">操作說明：調整 Windows Forms Label 控制項大小以適合其內容</span><span class="sxs-lookup"><span data-stu-id="5352f-116">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [<span data-ttu-id="5352f-117">操作說明：使用 Windows Forms Label 控制項建立便捷鍵</span><span class="sxs-lookup"><span data-stu-id="5352f-117">How to: Create Access Keys with Windows Forms Label Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)

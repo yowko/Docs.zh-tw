@@ -1,173 +1,179 @@
 ---
-title: "WPF 部分信任安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "偵錯部分信任的應用程式"
-  - "偵測使用權限"
-  - "功能安全性需求"
-  - "管理使用權限"
-  - "部分信任的應用程式, 偵錯"
-  - "部分信任安全性"
-  - "權限, 偵測"
-  - "權限, 管理"
-  - "Internet Explorer 安全性設定"
+title: "WPF 部分信任安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- partial trust security [WPF]
+- detecting permissions [WPF]
+- security settings for Internet Explorer [WPF]
+- partial trust applications [WPF], debugging
+- permissions [WPF], managing
+- debugging partial trust applications [WPF]
+- permissions [WPF], detecting
+- feature security requirements [WPF]
+- managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: 40
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 36
+caps.latest.revision: "40"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 部分信任安全性
-<a name="introduction"></a> 一般來說，應該禁止網際網路應用程式直接存取重要系統資源，以防產生惡意損害。  根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 和用戶端指令碼語言無法存取重要系統資源。  因為 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 瀏覽器裝載的應用程式可以從瀏覽器啟動，所以應該要受到類似的限制。  若要強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 會依賴[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 和 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] \(請參閱 [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)\)。  根據預設，瀏覽器裝載的應用程式會要求 \[網際網路\] 區域 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 權限集合，不論這些應用程式是從網際網路、近端內部網路或本機電腦啟動。  不是以完整權限集合執行的應用程式就是所謂的以部分信任執行。  
+# <a name="wpf-partial-trust-security"></a><span data-ttu-id="bee85-102">WPF 部分信任安全性</span><span class="sxs-lookup"><span data-stu-id="bee85-102">WPF Partial Trust Security</span></span>
+<span data-ttu-id="bee85-103"><a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。</span><span class="sxs-lookup"><span data-stu-id="bee85-103"><a name="introduction"></a> In general, Internet applications should be restricted from having direct access to critical system resources, to prevent malicious damage.</span></span> <span data-ttu-id="bee85-104">根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和用戶端指令碼語言都不能存取重要的系統資源。</span><span class="sxs-lookup"><span data-stu-id="bee85-104">By default, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] and client-side scripting languages are not able to access critical system resources.</span></span> <span data-ttu-id="bee85-105">因為[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]可以從瀏覽器啟動瀏覽器裝載的應用程式，其應符合一組類似的限制。</span><span class="sxs-lookup"><span data-stu-id="bee85-105">Because [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] browser-hosted applications can be launched from the browser, they should conform to a similar set of restrictions.</span></span> <span data-ttu-id="bee85-106">強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依賴兩者[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]和[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](請參閱[WPF 安全性策略-平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。</span><span class="sxs-lookup"><span data-stu-id="bee85-106">To enforce these restrictions, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] relies on both [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] and [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (see [WPF Security Strategy - Platform Security](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).</span></span> <span data-ttu-id="bee85-107">根據預設，瀏覽器裝載的應用程式要求網際網路區域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]組權限，不論是從網際網路、 近端內部網路或在本機電腦的啟動與否。</span><span class="sxs-lookup"><span data-stu-id="bee85-107">By default, browser-hosted applications request the Internet zone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set of permissions, irrespective of whether they are launched from the Internet, the local intranet, or the local computer.</span></span> <span data-ttu-id="bee85-108">使用少於完整權限集執行的應用程式便是以部分信任執行。</span><span class="sxs-lookup"><span data-stu-id="bee85-108">Applications that run with anything less than the full set of permissions are said to be running with partial trust.</span></span>  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供各種的支援，確保有最多的功能能夠安全地在部分信任的應用程式中使用，與 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 搭配使用則提供針對部分信任的額外程式設計支援。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="bee85-109">提供各種不同的支援，以確保，最多的功能，盡可能可安全地在部分信任，並連同[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]，提供額外的部分信任程式設計支援。</span><span class="sxs-lookup"><span data-stu-id="bee85-109"> provides a wide variety of support to ensure that as much functionality as possible can be used safely in partial trust, and along with [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], provides additional support for partial trust programming.</span></span>  
   
- 此主題包括下列章節：  
+ <span data-ttu-id="bee85-110">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="bee85-110">This topic contains the following sections:</span></span>  
   
--   [WPF 功能部分信任支援](#WPF_Feature_Partial_Trust_Support)  
+-   [<span data-ttu-id="bee85-111">WPF 功能部分信任支援</span><span class="sxs-lookup"><span data-stu-id="bee85-111">WPF Feature Partial Trust Support</span></span>](#WPF_Feature_Partial_Trust_Support)  
   
--   [部分信任程式設計](#Partial_Trust_Programming)  
+-   [<span data-ttu-id="bee85-112">部分信任程式設計</span><span class="sxs-lookup"><span data-stu-id="bee85-112">Partial Trust Programming</span></span>](#Partial_Trust_Programming)  
   
--   [管理使用權限](#Managing_Permissions)  
+-   [<span data-ttu-id="bee85-113">管理權限</span><span class="sxs-lookup"><span data-stu-id="bee85-113">Managing Permissions</span></span>](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
-## WPF 功能部分信任支援  
- 下表概略列出 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 的功能，這些功能可以安全地在 \[網際網路\] 區域權限集合限制之下使用。  
+## <a name="wpf-feature-partial-trust-support"></a><span data-ttu-id="bee85-114">WPF 功能部分信任支援</span><span class="sxs-lookup"><span data-stu-id="bee85-114">WPF Feature Partial Trust Support</span></span>  
+ <span data-ttu-id="bee85-115">下表列出的高階功能[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]，可放心地使用網際網路區域權限集的限制範圍內。</span><span class="sxs-lookup"><span data-stu-id="bee85-115">The following table lists the high-level features of [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] that are safe to use within the limits of the Internet zone permission set.</span></span>  
   
- 表 1：可以在部分信任下安全使用的 WPF 功能  
+ <span data-ttu-id="bee85-116">表 1：在部分信任中安全的 WPF 功能</span><span class="sxs-lookup"><span data-stu-id="bee85-116">Table 1: WPF Features that are Safe in Partial Trust</span></span>  
   
-|功能區域|功能|  
-|----------|--------|  
-|一般|瀏覽器視窗<br /><br /> 原始站台存取<br /><br /> IsolatedStorage \(512KB 限制\)<br /><br /> UIAutomation 提供者<br /><br /> 命令<br /><br /> 輸入法 \(IME\)<br /><br /> Tablet 手寫筆和筆墨\/筆跡<br /><br /> 使用滑鼠捕捉和移動事件模擬拖放<br /><br /> OpenFileDialog<br /><br /> XAML 還原序列化 \(透過 XamlReader.Load\)|  
-|Web 整合|瀏覽器下載對話方塊<br /><br /> 最上層使用者啟始的巡覽<br /><br /> mailto:links<br /><br /> 統一資源識別元參數<br /><br /> HTTPWebRequest<br /><br /> IFRAME 中裝載的 WPF 內容<br /><br /> 使用框架裝載相同站台的 HTML 網頁<br /><br /> 使用 WebBrowser 裝載相同站台的 HTML 網頁<br /><br /> Web 服務 \(ASMX\)<br /><br /> Web 服務 \(使用 Windows Communication Foundation\)<br /><br /> 指令碼<br /><br /> 文件物件模型|  
-|視覺效果|2D 和 3D<br /><br /> 動畫<br /><br /> 媒體 \(原始站台和跨網域\)<br /><br /> 影像\/音訊\/視訊|  
-|讀取|FlowDocument<br /><br /> XPS 文件<br /><br /> 內嵌和系統字型<br /><br /> CFF 和 TrueType 字型|  
-|編輯|拼字檢查<br /><br /> RichTextBox<br /><br /> 純文字和筆墨\/筆跡剪貼簿支援<br /><br /> 使用者啟始的貼上<br /><br /> 複製選取的內容|  
-|控制項|一般控制項|  
+|<span data-ttu-id="bee85-117">功能範圍</span><span class="sxs-lookup"><span data-stu-id="bee85-117">Feature Area</span></span>|<span data-ttu-id="bee85-118">功能</span><span class="sxs-lookup"><span data-stu-id="bee85-118">Feature</span></span>|  
+|------------------|-------------|  
+|<span data-ttu-id="bee85-119">一般</span><span class="sxs-lookup"><span data-stu-id="bee85-119">General</span></span>|<span data-ttu-id="bee85-120">瀏覽器視窗</span><span class="sxs-lookup"><span data-stu-id="bee85-120">Browser Window</span></span><br /><br /> <span data-ttu-id="bee85-121">原始站台存取</span><span class="sxs-lookup"><span data-stu-id="bee85-121">Site of Origin Access</span></span><br /><br /> <span data-ttu-id="bee85-122">IsolatedStorage (512 KB 限制)</span><span class="sxs-lookup"><span data-stu-id="bee85-122">IsolatedStorage (512KB Limit)</span></span><br /><br /> <span data-ttu-id="bee85-123">UIAutomation 提供者</span><span class="sxs-lookup"><span data-stu-id="bee85-123">UIAutomation Providers</span></span><br /><br /> <span data-ttu-id="bee85-124">命令</span><span class="sxs-lookup"><span data-stu-id="bee85-124">Commanding</span></span><br /><br /> <span data-ttu-id="bee85-125">輸入法 (IME)</span><span class="sxs-lookup"><span data-stu-id="bee85-125">Input Method Editors (IMEs)</span></span><br /><br /> <span data-ttu-id="bee85-126">平板電腦手寫筆和筆跡</span><span class="sxs-lookup"><span data-stu-id="bee85-126">Tablet Stylus and Ink</span></span><br /><br /> <span data-ttu-id="bee85-127">使用滑鼠捕捉和移動事件模擬拖放</span><span class="sxs-lookup"><span data-stu-id="bee85-127">Simulated Drag/Drop using Mouse Capture and Move Events</span></span><br /><br /> <span data-ttu-id="bee85-128">OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="bee85-128">OpenFileDialog</span></span><br /><br /> <span data-ttu-id="bee85-129">XAML 還原序列化 (透過 XamlReader.Load)</span><span class="sxs-lookup"><span data-stu-id="bee85-129">XAML Deserialization (via XamlReader.Load)</span></span>|  
+|<span data-ttu-id="bee85-130">Web 整合</span><span class="sxs-lookup"><span data-stu-id="bee85-130">Web Integration</span></span>|<span data-ttu-id="bee85-131">瀏覽器下載對話方塊</span><span class="sxs-lookup"><span data-stu-id="bee85-131">Browser Download Dialog</span></span><br /><br /> <span data-ttu-id="bee85-132">最上層使用者啟始的瀏覽</span><span class="sxs-lookup"><span data-stu-id="bee85-132">Top-Level User-Initiated Navigation</span></span><br /><br /> <span data-ttu-id="bee85-133">mailto:links</span><span class="sxs-lookup"><span data-stu-id="bee85-133">mailto:links</span></span><br /><br /> <span data-ttu-id="bee85-134">統一資源識別項參數</span><span class="sxs-lookup"><span data-stu-id="bee85-134">Uniform Resource Identifier Parameters</span></span><br /><br /> <span data-ttu-id="bee85-135">HTTPWebRequest</span><span class="sxs-lookup"><span data-stu-id="bee85-135">HTTPWebRequest</span></span><br /><br /> <span data-ttu-id="bee85-136">在 IFRAME 中裝載的 WPF 內容</span><span class="sxs-lookup"><span data-stu-id="bee85-136">WPF Content Hosted in an IFRAME</span></span><br /><br /> <span data-ttu-id="bee85-137">使用框架裝載相同站台的 HTML 頁面</span><span class="sxs-lookup"><span data-stu-id="bee85-137">Hosting of Same-Site HTML Pages using Frame</span></span><br /><br /> <span data-ttu-id="bee85-138">使用網頁瀏覽器裝載相同站台的 HTML 頁面</span><span class="sxs-lookup"><span data-stu-id="bee85-138">Hosting of Same Site HTML Pages using WebBrowser</span></span><br /><br /> <span data-ttu-id="bee85-139">Web 服務 (ASMX)</span><span class="sxs-lookup"><span data-stu-id="bee85-139">Web Services (ASMX)</span></span><br /><br /> <span data-ttu-id="bee85-140">Web 服務 (使用 Windows Communication Foundation)</span><span class="sxs-lookup"><span data-stu-id="bee85-140">Web Services (using Windows Communication Foundation)</span></span><br /><br /> <span data-ttu-id="bee85-141">正在處理指令碼</span><span class="sxs-lookup"><span data-stu-id="bee85-141">Scripting</span></span><br /><br /> <span data-ttu-id="bee85-142">文件物件模型</span><span class="sxs-lookup"><span data-stu-id="bee85-142">Document Object Model</span></span>|  
+|<span data-ttu-id="bee85-143">視覺效果</span><span class="sxs-lookup"><span data-stu-id="bee85-143">Visuals</span></span>|<span data-ttu-id="bee85-144">2D 和 3D</span><span class="sxs-lookup"><span data-stu-id="bee85-144">2D and 3D</span></span><br /><br /> <span data-ttu-id="bee85-145">動畫</span><span class="sxs-lookup"><span data-stu-id="bee85-145">Animation</span></span><br /><br /> <span data-ttu-id="bee85-146">媒體 (原始站台和跨網域)</span><span class="sxs-lookup"><span data-stu-id="bee85-146">Media (Site Of Origin and Cross-Domain)</span></span><br /><br /> <span data-ttu-id="bee85-147">影像處理/音訊/視訊</span><span class="sxs-lookup"><span data-stu-id="bee85-147">Imaging/Audio/Video</span></span>|  
+|<span data-ttu-id="bee85-148">讀取</span><span class="sxs-lookup"><span data-stu-id="bee85-148">Reading</span></span>|<span data-ttu-id="bee85-149">FlowDocuments</span><span class="sxs-lookup"><span data-stu-id="bee85-149">FlowDocuments</span></span><br /><br /> <span data-ttu-id="bee85-150">XPS 文件</span><span class="sxs-lookup"><span data-stu-id="bee85-150">XPS Documents</span></span><br /><br /> <span data-ttu-id="bee85-151">內嵌與系統字型</span><span class="sxs-lookup"><span data-stu-id="bee85-151">Embedded & System Fonts</span></span><br /><br /> <span data-ttu-id="bee85-152">CFF 與 TrueType 字型</span><span class="sxs-lookup"><span data-stu-id="bee85-152">CFF & TrueType Fonts</span></span>|  
+|<span data-ttu-id="bee85-153">編輯</span><span class="sxs-lookup"><span data-stu-id="bee85-153">Editing</span></span>|<span data-ttu-id="bee85-154">拼字檢查</span><span class="sxs-lookup"><span data-stu-id="bee85-154">Spell Checking</span></span><br /><br /> <span data-ttu-id="bee85-155">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="bee85-155">RichTextBox</span></span><br /><br /> <span data-ttu-id="bee85-156">純文字和筆跡剪貼簿支援</span><span class="sxs-lookup"><span data-stu-id="bee85-156">Plaintext and Ink Clipboard Support</span></span><br /><br /> <span data-ttu-id="bee85-157">使用者啟始的貼上</span><span class="sxs-lookup"><span data-stu-id="bee85-157">User-Initiated Paste</span></span><br /><br /> <span data-ttu-id="bee85-158">複製選取的內容</span><span class="sxs-lookup"><span data-stu-id="bee85-158">Copying Selected Content</span></span>|  
+|<span data-ttu-id="bee85-159">控制項</span><span class="sxs-lookup"><span data-stu-id="bee85-159">Controls</span></span>|<span data-ttu-id="bee85-160">一般控制項</span><span class="sxs-lookup"><span data-stu-id="bee85-160">General Controls</span></span>|  
   
- 上表涵蓋概略的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 功能。  如需詳細資訊，請參閱 [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] 文件中有關於每個 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 成員所需權限的說明。  此外，下列功能也具有關於部分信任執行的詳細資訊，包括特殊考量。  
+ <span data-ttu-id="bee85-161">下表涵蓋[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高的層級的功能。</span><span class="sxs-lookup"><span data-stu-id="bee85-161">This table covers the [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] features at a high level.</span></span> <span data-ttu-id="bee85-162">如需詳細資訊，[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]文件中每個成員所需的權限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bee85-162">For more detailed information, the [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documents the permissions that are required by each member in [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].</span></span> <span data-ttu-id="bee85-163">此外，下列功能有關於部分信任執行的更詳細資訊，包括特殊考量。</span><span class="sxs-lookup"><span data-stu-id="bee85-163">Additionally, the following features have more detailed information regarding partial trust execution, including special considerations.</span></span>  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] \(請參閱 [XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)\)。  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]<span data-ttu-id="bee85-164">(請參閱[XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md))。</span><span class="sxs-lookup"><span data-stu-id="bee85-164"> (see [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).</span></span>  
   
--   快顯 \(請參閱 <xref:System.Windows.Controls.Primitives.Popup?displayProperty=fullName>\)。  
+-   <span data-ttu-id="bee85-165">快顯視窗 (請參閱<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="bee85-165">Popups (see <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).</span></span>  
   
--   拖放 \(請參閱[拖放概觀](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)\)。  
+-   <span data-ttu-id="bee85-166">將拖放 (請參閱[拖曳和卸除概觀](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md))。</span><span class="sxs-lookup"><span data-stu-id="bee85-166">Drag and Drop (see [Drag and Drop Overview](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)).</span></span>  
   
--   剪貼簿 \(請參閱 <xref:System.Windows.Clipboard?displayProperty=fullName>\)。  
+-   <span data-ttu-id="bee85-167">剪貼簿 (請參閱<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="bee85-167">Clipboard (see <xref:System.Windows.Clipboard?displayProperty=nameWithType>).</span></span>  
   
--   影像處理 \(請參閱 <xref:System.Windows.Controls.Image?displayProperty=fullName>\)。  
+-   <span data-ttu-id="bee85-168">映像 (請參閱<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="bee85-168">Imaging (see <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).</span></span>  
   
--   序列化 \(請參閱 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=fullName>、<xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=fullName>\)。  
+-   <span data-ttu-id="bee85-169">序列化 (請參閱<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>， <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="bee85-169">Serialization (see <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).</span></span>  
   
--   開啟檔案對話方塊 \(請參閱 <xref:Microsoft.Win32.OpenFileDialog?displayProperty=fullName>\)。  
+-   <span data-ttu-id="bee85-170">開啟檔案對話方塊 (請參閱<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="bee85-170">Open File Dialog Box (see <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).</span></span>  
   
- 下表概述無法安全地在 \[網際網路\] 區域權限集合限制之下執行的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 功能。  
+ <span data-ttu-id="bee85-171">下表概述[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]不安全的網際網路在限制範圍內執行的功能區域權限集。</span><span class="sxs-lookup"><span data-stu-id="bee85-171">The following table outlines the [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] features that are not safe to run within the limits of the Internet zone permission set.</span></span>  
   
- 表 2：在部分信任下不安全的 WPF 功能  
+ <span data-ttu-id="bee85-172">表 2：在部分信任中不安全的 WPF 功能</span><span class="sxs-lookup"><span data-stu-id="bee85-172">Table 2: WPF Features that are Not Safe in Partial Trust</span></span>  
   
-|功能區域|功能|  
-|----------|--------|  
-|一般|視窗 \(應用程式定義的視窗和對話方塊\)<br /><br /> SaveFileDialog<br /><br /> 檔案系統<br /><br /> 登錄存取<br /><br /> 拖放<br /><br /> XAML 序列化 \(透過 XamlWriter.Save\)<br /><br /> UIAutomation 用戶端<br /><br /> 來源視窗存取 \(HwndHost\)<br /><br /> 完全語音支援<br /><br /> Windows Form 互通性|  
-|視覺效果|點陣圖效果<br /><br /> 影像編碼|  
-|編輯|RTF 剪貼簿<br /><br /> 完全 XAML 支援|  
+|<span data-ttu-id="bee85-173">功能範圍</span><span class="sxs-lookup"><span data-stu-id="bee85-173">Feature Area</span></span>|<span data-ttu-id="bee85-174">功能</span><span class="sxs-lookup"><span data-stu-id="bee85-174">Feature</span></span>|  
+|------------------|-------------|  
+|<span data-ttu-id="bee85-175">一般</span><span class="sxs-lookup"><span data-stu-id="bee85-175">General</span></span>|<span data-ttu-id="bee85-176">視窗 (應用程式定義的視窗和對話方塊)</span><span class="sxs-lookup"><span data-stu-id="bee85-176">Window (Application Defined Windows and Dialog Boxes)</span></span><br /><br /> <span data-ttu-id="bee85-177">SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="bee85-177">SaveFileDialog</span></span><br /><br /> <span data-ttu-id="bee85-178">檔案系統</span><span class="sxs-lookup"><span data-stu-id="bee85-178">File System</span></span><br /><br /> <span data-ttu-id="bee85-179">登錄存取</span><span class="sxs-lookup"><span data-stu-id="bee85-179">Registry Access</span></span><br /><br /> <span data-ttu-id="bee85-180">拖放</span><span class="sxs-lookup"><span data-stu-id="bee85-180">Drag and Drop</span></span><br /><br /> <span data-ttu-id="bee85-181">XAML 序列化 (透過 XamlWriter.Save)</span><span class="sxs-lookup"><span data-stu-id="bee85-181">XAML Serialization (via XamlWriter.Save)</span></span><br /><br /> <span data-ttu-id="bee85-182">UIAutomation 用戶端</span><span class="sxs-lookup"><span data-stu-id="bee85-182">UIAutomation Clients</span></span><br /><br /> <span data-ttu-id="bee85-183">來源視窗存取 (HwndHost)</span><span class="sxs-lookup"><span data-stu-id="bee85-183">Source Window Access (HwndHost)</span></span><br /><br /> <span data-ttu-id="bee85-184">完整的語音支援</span><span class="sxs-lookup"><span data-stu-id="bee85-184">Full Speech Support</span></span><br /><br /> <span data-ttu-id="bee85-185">Windows Forms 互通性</span><span class="sxs-lookup"><span data-stu-id="bee85-185">Windows Forms Interoperability</span></span>|  
+|<span data-ttu-id="bee85-186">視覺效果</span><span class="sxs-lookup"><span data-stu-id="bee85-186">Visuals</span></span>|<span data-ttu-id="bee85-187">點陣圖效果</span><span class="sxs-lookup"><span data-stu-id="bee85-187">Bitmap Effects</span></span><br /><br /> <span data-ttu-id="bee85-188">影像編碼</span><span class="sxs-lookup"><span data-stu-id="bee85-188">Image Encoding</span></span>|  
+|<span data-ttu-id="bee85-189">編輯</span><span class="sxs-lookup"><span data-stu-id="bee85-189">Editing</span></span>|<span data-ttu-id="bee85-190">RTF 格式剪貼簿</span><span class="sxs-lookup"><span data-stu-id="bee85-190">Rich Text Format Clipboard</span></span><br /><br /> <span data-ttu-id="bee85-191">完整的 XAML 支援</span><span class="sxs-lookup"><span data-stu-id="bee85-191">Full XAML support</span></span>|  
   
 <a name="Partial_Trust_Programming"></a>   
-## 部分信任程式設計  
- 對於 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 應用程式，超過預設使用權限集合的程式碼將會根據安全性區域而有不同的行為。  在某些情況下，使用者會在嘗試安裝此程式碼時收到警告。  使用者可以選擇繼續或取消安裝。  下表說明應用程式在每個安全性區域的行為，以及您要怎麼做才能讓應用程式獲得完全信任。  
+## <a name="partial-trust-programming"></a><span data-ttu-id="bee85-192">部分信任程式設計</span><span class="sxs-lookup"><span data-stu-id="bee85-192">Partial Trust Programming</span></span>  
+ <span data-ttu-id="bee85-193">如[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]應用程式中，超過預設權限集合的程式碼將會有不同的行為取決於內部網路安全性區域。</span><span class="sxs-lookup"><span data-stu-id="bee85-193">For [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] applications, code that exceeds the default permission set will have different behavior depending on the security zone.</span></span> <span data-ttu-id="bee85-194">在某些情況下，使用者會在嘗試安裝它時收到一則警告。</span><span class="sxs-lookup"><span data-stu-id="bee85-194">In some cases, the user will receive a warning when they attempt to install it.</span></span> <span data-ttu-id="bee85-195">使用者可以選擇繼續或取消安裝。</span><span class="sxs-lookup"><span data-stu-id="bee85-195">The user can choose to continue or cancel the installation.</span></span> <span data-ttu-id="bee85-196">下表描述每個安全性區域的應用程式行為，以及您必須針對應用程式執行什麼動作才能得到完全信任。</span><span class="sxs-lookup"><span data-stu-id="bee85-196">The following table describes the behavior of the application for each security zone and what you have to do for the application to receive full trust.</span></span>  
   
-|安全性區域|行為|取得完全信任|  
-|-----------|--------|------------|  
-|本機電腦|自動完全信任|不需任何動作。|  
-|內部網路和限制的網站|提示需有完全信任|使用憑證簽署 XBAP，以便使用者在提示中看見來源。|  
-|網際網路|失敗並顯示「未授與信任」|使用憑證簽署 XBAP。|  
+|<span data-ttu-id="bee85-197">安全性區域</span><span class="sxs-lookup"><span data-stu-id="bee85-197">Security Zone</span></span>|<span data-ttu-id="bee85-198">行為</span><span class="sxs-lookup"><span data-stu-id="bee85-198">Behavior</span></span>|<span data-ttu-id="bee85-199">取得完全信任</span><span class="sxs-lookup"><span data-stu-id="bee85-199">Getting Full Trust</span></span>|  
+|-------------------|--------------|------------------------|  
+|<span data-ttu-id="bee85-200">本機電腦</span><span class="sxs-lookup"><span data-stu-id="bee85-200">Local computer</span></span>|<span data-ttu-id="bee85-201">自動的完全信任</span><span class="sxs-lookup"><span data-stu-id="bee85-201">Automatic full trust</span></span>|<span data-ttu-id="bee85-202">不需要採取任何動作。</span><span class="sxs-lookup"><span data-stu-id="bee85-202">No action is needed.</span></span>|  
+|<span data-ttu-id="bee85-203">內部網路和信任的網站</span><span class="sxs-lookup"><span data-stu-id="bee85-203">Intranet and trusted sites</span></span>|<span data-ttu-id="bee85-204">完全信任的提示</span><span class="sxs-lookup"><span data-stu-id="bee85-204">Prompt for full trust</span></span>|<span data-ttu-id="bee85-205">使用憑證簽署 XBAP，讓使用者在提示中看到來源。</span><span class="sxs-lookup"><span data-stu-id="bee85-205">Sign the XBAP with a certificate so that the user sees the source in the prompt.</span></span>|  
+|<span data-ttu-id="bee85-206">網際網路</span><span class="sxs-lookup"><span data-stu-id="bee85-206">Internet</span></span>|<span data-ttu-id="bee85-207">因為「未授與信任」而失敗</span><span class="sxs-lookup"><span data-stu-id="bee85-207">Fails with "Trust Not Granted"</span></span>|<span data-ttu-id="bee85-208">使用憑證簽署 XBAP。</span><span class="sxs-lookup"><span data-stu-id="bee85-208">Sign the XBAP with a certificate.</span></span>|  
   
 > [!NOTE]
->  上表中說明的行為適用於未遵循 ClickOnce 信任部署模型的完全信任 XBAP。  
+>  <span data-ttu-id="bee85-209">上表中描述的行為是針對未遵循 ClickOnce 受信任部署模型的完全信任 XBAP。</span><span class="sxs-lookup"><span data-stu-id="bee85-209">The behavior described in the previous table is for full trust XBAPs that do not follow the ClickOnce Trusted Deployment model.</span></span>  
   
- 一般來說，會超過允許之權限的程式碼通常都是供獨立應用程式和瀏覽器裝載的應用程式共用的通用程式碼。  [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 和 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供數個方法可以管理這個案例。  
+ <span data-ttu-id="bee85-210">一般而言，可能超過允許權限的程式碼很可能是在獨立式與瀏覽器裝載的應用程式之間共用的通用程式碼。</span><span class="sxs-lookup"><span data-stu-id="bee85-210">In general, code that may exceed the allowed permissions is likely to be common code that is shared between both standalone and browser-hosted applications.</span></span> [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]<span data-ttu-id="bee85-211">和[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供數種技術來管理此案例。</span><span class="sxs-lookup"><span data-stu-id="bee85-211"> and [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] offer several techniques for managing this scenario.</span></span>  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
-### 使用 CAS 偵測權限  
- 在某些情況下，程式庫組件中的共用程式碼可能同時由獨立應用程式和 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 兩者使用。  在這些情況下，程式碼執行功能時需要的權限可能會比應用程式權限集合所允許的權限還多。  您的應用程式可以使用 [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] 安全性來偵測它是否有特定的權限。  體來說，它可以在期望有某特定權限的執行個體上呼叫 <xref:System.Security.CodeAccessPermission.Demand%2A> 方法來測試是否具有特定權限。  這會顯示在下列範例中，其中的程式碼會查詢它是否有權將檔案儲存至本機磁碟：  
+### <a name="detecting-permissions-using-cas"></a><span data-ttu-id="bee85-212">使用 CAS 偵測權限</span><span class="sxs-lookup"><span data-stu-id="bee85-212">Detecting Permissions Using CAS</span></span>  
+ <span data-ttu-id="bee85-213">在某些情況下，可能會在兩個獨立應用程式所使用的程式庫組件中的共用程式碼和[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bee85-213">In some situations, it is possible for shared code in library assemblies to be used by both standalone applications and [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span> <span data-ttu-id="bee85-214">在這些情況下，程式碼執行的功能，所需的權限可能會超過應用程式的已授與權限集合所允許的權限。</span><span class="sxs-lookup"><span data-stu-id="bee85-214">In these cases, code may execute functionality that could require more permissions than the application's awarded permission set allows.</span></span> <span data-ttu-id="bee85-215">您的應用程式可以偵測是否有特定權使用[!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)]安全性。</span><span class="sxs-lookup"><span data-stu-id="bee85-215">Your application can detect whether or not it has a certain permission by using [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] security.</span></span> <span data-ttu-id="bee85-216">具體來說，它可以測試是否有特定權藉由呼叫<xref:System.Security.CodeAccessPermission.Demand%2A>所需的權限的執行個體上的方法。</span><span class="sxs-lookup"><span data-stu-id="bee85-216">Specifically, it can test whether it has a specific permission by calling the <xref:System.Security.CodeAccessPermission.Demand%2A> method on the instance of the desired permission.</span></span> <span data-ttu-id="bee85-217">這會顯示在下列的範例中，程式碼會查詢它是否能夠將檔案儲存到本機磁碟︰</span><span class="sxs-lookup"><span data-stu-id="bee85-217">This is shown in the following example, which has code that queries for whether it has the ability to save a file to the local disk:</span></span>  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- 如果應用程式沒有所需的權限，這個 <xref:System.Security.CodeAccessPermission.Demand%2A> 呼叫會擲回安全性例外狀況。  否則表示已授與權限。  `IsPermissionGranted` 會封裝此行為並依適當情況傳回 `true` 或 `false`。  
+ <span data-ttu-id="bee85-218">如果應用程式沒有所需的權限，呼叫<xref:System.Security.CodeAccessPermission.Demand%2A>將會擲回安全性例外狀況。</span><span class="sxs-lookup"><span data-stu-id="bee85-218">If an application does not have the desired permission, the call to <xref:System.Security.CodeAccessPermission.Demand%2A> will throw a security exception.</span></span> <span data-ttu-id="bee85-219">否則，便已授與權限。</span><span class="sxs-lookup"><span data-stu-id="bee85-219">Otherwise, the permission has been granted.</span></span> <span data-ttu-id="bee85-220">`IsPermissionGranted`封裝這個行為，並傳回`true`或`false`依適當情況。</span><span class="sxs-lookup"><span data-stu-id="bee85-220">`IsPermissionGranted` encapsulates this behavior and returns `true` or `false` as appropriate.</span></span>  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
-### 功能上非失誤性降低  
- 遇到能夠從不同區域執行的程式碼時，如果能夠偵測該程式碼是否有權執行需要的作業，將有很大的幫助。  偵測區域是一回事，如果可能的話最好能夠提供替代方法給使用者。  例如，完全信任的應用程式通常可以讓使用者在任何位置建立檔案，而部分信任應用程式則只能在獨立的儲存區中建立檔案。  如果由完全信任應用程式 \(獨立應用程式\) 和部分信任應用程式 \(裝載瀏覽器的應用程式\) 兩者共用的組件中，有建立檔案的程式碼，而且這兩種應用程式都想讓使用者可以建立檔案，則共用程式碼應先偵測它是在部分信任或完全信任下執行，再於適當位置建立檔案。  下列程式碼會示範這兩種情形。  
+### <a name="graceful-degradation-of-functionality"></a><span data-ttu-id="bee85-221">功能正常降級</span><span class="sxs-lookup"><span data-stu-id="bee85-221">Graceful Degradation of Functionality</span></span>  
+ <span data-ttu-id="bee85-222">能夠偵測程式碼是否有權執行它需要做的事，對於可以從不同區域執行的程式碼而言很有趣。</span><span class="sxs-lookup"><span data-stu-id="bee85-222">Being able to detect whether code has the permission to do what it needs to do is interesting for code that can be executed from different zones.</span></span> <span data-ttu-id="bee85-223">不過偵測區域是一件事，可能的話，為使用者提供替代方式會好上許多。</span><span class="sxs-lookup"><span data-stu-id="bee85-223">While detecting the zone is one thing, it is far better to provide an alternative for the user, if possible.</span></span> <span data-ttu-id="bee85-224">比方說，完全信任應用程式通常可讓使用者在任何想要的地方建立檔案，而部分信任應用程式則只能在隔離儲存區建立檔案。</span><span class="sxs-lookup"><span data-stu-id="bee85-224">For example, a full trust application typically enables users to create files anywhere they want, while a partial trust application can only create files in isolated storage.</span></span> <span data-ttu-id="bee85-225">如果建立檔案的程式碼存在於完全信任 (獨立式) 應用程式和部分信任 (瀏覽器裝載) 應用程式所共用的組件中，而且兩個應用程式都想要讓使用者能夠建立檔案，則共用的程式碼應該先偵測它是在部分信任還是完全信任中執行，然後才能在適當位置中建立檔案。</span><span class="sxs-lookup"><span data-stu-id="bee85-225">If the code to create a file exists in an assembly that is shared by both full trust (standalone) applications and partial trust (browser-hosted) applications, and both applications want users to be able to create files, the shared code should detect whether it is running in partial or full trust before creating a file in the appropriate location.</span></span> <span data-ttu-id="bee85-226">下列程式碼可示範兩種情況。</span><span class="sxs-lookup"><span data-stu-id="bee85-226">The following code demonstrates both.</span></span>  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
   
- 在許多情況下，您應該可以找到部分信任替代方法。  
+ <span data-ttu-id="bee85-227">在許多情況下，您應該能夠找到部分信任的替代方法。</span><span class="sxs-lookup"><span data-stu-id="bee85-227">In many cases, you should be able to find a partial trust alternative.</span></span>  
   
- 在受控制的環境中，例如內部網路，自訂 Managed 架構可以跨用戶端群安裝至[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)] 中。  這些程式庫可執行需要完全信任的程式碼，並能透過 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 由只擁有部分信任的應用程式參考 \(如需詳細資訊，請參閱 [安全性](../../../docs/framework/wpf/security-wpf.md)和 [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)\)。  
+ <span data-ttu-id="bee85-228">可以跨基底到用戶端安裝在受控制的環境中，內部網路，例如自訂的受管理的架構[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bee85-228">In a controlled environment, such as an intranet, custom managed frameworks can be installed across the client base into the [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)].</span></span> <span data-ttu-id="bee85-229">這些程式庫可以執行需要完全信任程式碼，而且只使用允許部分信任應用程式，從參考<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(如需詳細資訊，請參閱[安全性](../../../docs/framework/wpf/security-wpf.md)和[WPF 安全性策略-平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。</span><span class="sxs-lookup"><span data-stu-id="bee85-229">These libraries can execute code that requires full trust, and be referenced from applications that are only allowed partial trust by using <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (for more information, see [Security](../../../docs/framework/wpf/security-wpf.md) and [WPF Security Strategy - Platform Security](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).</span></span>  
   
 <a name="Browser_Host_Detection"></a>   
-### 瀏覽器裝載偵測  
- 使用 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 檢查權限，是在需要以個別權限基準做檢查時相當適合的方法。  雖然這個方法依賴攔截例外狀況做為正常處理程序的一部分，但不建議在一般作業中使用，而且會有效能問題。  相反地，如果您的 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] 只在 \[網際網路\] 區域沙箱中執行，可以使用 <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=fullName> 屬性，它會針對 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 傳回 true。  
+### <a name="browser-host-detection"></a><span data-ttu-id="bee85-230">瀏覽器裝載偵測</span><span class="sxs-lookup"><span data-stu-id="bee85-230">Browser Host Detection</span></span>  
+ <span data-ttu-id="bee85-231">使用[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]檢查權限是當您需要檢查每個權限為基礎的適合的技巧。</span><span class="sxs-lookup"><span data-stu-id="bee85-231">Using [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] to check for permissions is a suitable technique when you need to check on a per-permission basis.</span></span> <span data-ttu-id="bee85-232">不過，這項技巧依賴在一般處理時攔截例外狀況，一般而言不建議這麼做，其可能會發生效能問題。</span><span class="sxs-lookup"><span data-stu-id="bee85-232">Although, this technique depends on catching exceptions as a part of normal processing, which is not recommended in general and can have performance issues.</span></span> <span data-ttu-id="bee85-233">相反地，如果您[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]僅在網際網路區域沙箱中的執行，您可以使用<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>屬性，傳回 true [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bee85-233">Instead, if your [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] only runs within the Internet zone sandbox, you can use the <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> property, which returns true for [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> 只會區分應用程式是否是在瀏覽器中執行，不會區分執行所使用的權限集合。  
+>  <span data-ttu-id="bee85-234"><xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>只會區別是否應用程式正在執行瀏覽器，以執行不的應用程式的權限集。</span><span class="sxs-lookup"><span data-stu-id="bee85-234"><xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> only distinguishes whether an application is running in a browser, not which set of permissions an application is running with.</span></span>  
   
 <a name="Managing_Permissions"></a>   
-## 管理使用權限  
- 根據預設，[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 會以部分信任執行 \(預設 \[網際網路\] 區域權限集合\)。  不過，根據應用程式需求的不同，可能會變更預設的權限集合。  例如，[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 如果是從近端內部網路啟動，就可以運用更高的權限集合，如下表所示。  
+## <a name="managing-permissions"></a><span data-ttu-id="bee85-235">管理權限</span><span class="sxs-lookup"><span data-stu-id="bee85-235">Managing Permissions</span></span>  
+ <span data-ttu-id="bee85-236">根據預設，[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]以部分信任 （預設網際網路區域權限集合） 來執行。</span><span class="sxs-lookup"><span data-stu-id="bee85-236">By default, [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] run with partial trust (default Internet zone permission set).</span></span> <span data-ttu-id="bee85-237">不過，根據應用程式的需求，也可以變更預設的權限集合。</span><span class="sxs-lookup"><span data-stu-id="bee85-237">However, depending on the requirements of the application, it is possible to change the set of permissions from the default.</span></span> <span data-ttu-id="bee85-238">例如，如果[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]啟動時從近端內部網路，它可以利用提高的權限集下, 表所示。</span><span class="sxs-lookup"><span data-stu-id="bee85-238">For example, if an [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] is launched from a local intranet, it can take advantage of an increased permission set, which is shown in the following table.</span></span>  
   
- 表 3：近端內部網路和網際網路權限  
+ <span data-ttu-id="bee85-239">表 3︰近端內部網路和網際網路權限</span><span class="sxs-lookup"><span data-stu-id="bee85-239">Table 3: LocalIntranet and Internet Permissions</span></span>  
   
-|使用權限|屬性|近端內部網路|網際網路|  
-|----------|--------|------------|----------|  
-|DNS|存取 DNS 伺服器|是|否|  
-|環境變數|讀取|是|否|  
-|檔案對話方塊|開啟|是|是|  
-|檔案對話方塊|不受限|是|否|  
-|隔離儲存區|依據使用者的組件隔離|是|否|  
-|隔離儲存區|未知的隔離|是|是|  
-|隔離儲存區|無限制的使用者配額|是|否|  
-|媒體|安全音訊、視訊及影像|是|是|  
-|列印|預設列印|是|否|  
-|列印|安全列印|是|是|  
-|反映|發出|是|否|  
-|安全性|Managed 程式碼執行|是|是|  
-|安全性|判斷提示授與的權限|是|否|  
-|使用者介面|不受限|是|否|  
-|使用者介面|安全的最上層視窗|是|是|  
-|使用者介面|專屬的剪貼簿|是|是|  
-|Web 瀏覽器|至 HTML 的安全架構巡覽|是|是|  
+|<span data-ttu-id="bee85-240">權限</span><span class="sxs-lookup"><span data-stu-id="bee85-240">Permission</span></span>|<span data-ttu-id="bee85-241">屬性</span><span class="sxs-lookup"><span data-stu-id="bee85-241">Attribute</span></span>|<span data-ttu-id="bee85-242">LocalIntranet</span><span class="sxs-lookup"><span data-stu-id="bee85-242">LocalIntranet</span></span>|<span data-ttu-id="bee85-243">網際網路</span><span class="sxs-lookup"><span data-stu-id="bee85-243">Internet</span></span>|  
+|----------------|---------------|-------------------|--------------|  
+|<span data-ttu-id="bee85-244">DNS</span><span class="sxs-lookup"><span data-stu-id="bee85-244">DNS</span></span>|<span data-ttu-id="bee85-245">存取 DNS 伺服器</span><span class="sxs-lookup"><span data-stu-id="bee85-245">Access DNS servers</span></span>|<span data-ttu-id="bee85-246">是</span><span class="sxs-lookup"><span data-stu-id="bee85-246">Yes</span></span>|<span data-ttu-id="bee85-247">否</span><span class="sxs-lookup"><span data-stu-id="bee85-247">No</span></span>|  
+|<span data-ttu-id="bee85-248">環境變數</span><span class="sxs-lookup"><span data-stu-id="bee85-248">Environment Variables</span></span>|<span data-ttu-id="bee85-249">讀取</span><span class="sxs-lookup"><span data-stu-id="bee85-249">Read</span></span>|<span data-ttu-id="bee85-250">是</span><span class="sxs-lookup"><span data-stu-id="bee85-250">Yes</span></span>|<span data-ttu-id="bee85-251">否</span><span class="sxs-lookup"><span data-stu-id="bee85-251">No</span></span>|  
+|<span data-ttu-id="bee85-252">檔案對話方塊</span><span class="sxs-lookup"><span data-stu-id="bee85-252">File Dialogs</span></span>|<span data-ttu-id="bee85-253">開啟</span><span class="sxs-lookup"><span data-stu-id="bee85-253">Open</span></span>|<span data-ttu-id="bee85-254">是</span><span class="sxs-lookup"><span data-stu-id="bee85-254">Yes</span></span>|<span data-ttu-id="bee85-255">是</span><span class="sxs-lookup"><span data-stu-id="bee85-255">Yes</span></span>|  
+|<span data-ttu-id="bee85-256">檔案對話方塊</span><span class="sxs-lookup"><span data-stu-id="bee85-256">File Dialogs</span></span>|<span data-ttu-id="bee85-257">無限制的</span><span class="sxs-lookup"><span data-stu-id="bee85-257">Unrestricted</span></span>|<span data-ttu-id="bee85-258">是</span><span class="sxs-lookup"><span data-stu-id="bee85-258">Yes</span></span>|<span data-ttu-id="bee85-259">否</span><span class="sxs-lookup"><span data-stu-id="bee85-259">No</span></span>|  
+|<span data-ttu-id="bee85-260">隔離儲存區</span><span class="sxs-lookup"><span data-stu-id="bee85-260">Isolated Storage</span></span>|<span data-ttu-id="bee85-261">依據使用者隔離組件</span><span class="sxs-lookup"><span data-stu-id="bee85-261">Assembly isolation by user</span></span>|<span data-ttu-id="bee85-262">是</span><span class="sxs-lookup"><span data-stu-id="bee85-262">Yes</span></span>|<span data-ttu-id="bee85-263">否</span><span class="sxs-lookup"><span data-stu-id="bee85-263">No</span></span>|  
+|<span data-ttu-id="bee85-264">隔離儲存區</span><span class="sxs-lookup"><span data-stu-id="bee85-264">Isolated Storage</span></span>|<span data-ttu-id="bee85-265">未知的隔離</span><span class="sxs-lookup"><span data-stu-id="bee85-265">Unknown isolation</span></span>|<span data-ttu-id="bee85-266">是</span><span class="sxs-lookup"><span data-stu-id="bee85-266">Yes</span></span>|<span data-ttu-id="bee85-267">是</span><span class="sxs-lookup"><span data-stu-id="bee85-267">Yes</span></span>|  
+|<span data-ttu-id="bee85-268">隔離儲存區</span><span class="sxs-lookup"><span data-stu-id="bee85-268">Isolated Storage</span></span>|<span data-ttu-id="bee85-269">無限制的使用者配額</span><span class="sxs-lookup"><span data-stu-id="bee85-269">Unlimited user quota</span></span>|<span data-ttu-id="bee85-270">是</span><span class="sxs-lookup"><span data-stu-id="bee85-270">Yes</span></span>|<span data-ttu-id="bee85-271">否</span><span class="sxs-lookup"><span data-stu-id="bee85-271">No</span></span>|  
+|<span data-ttu-id="bee85-272">媒體</span><span class="sxs-lookup"><span data-stu-id="bee85-272">Media</span></span>|<span data-ttu-id="bee85-273">安全的音訊、視訊和影像</span><span class="sxs-lookup"><span data-stu-id="bee85-273">Safe audio, video, and images</span></span>|<span data-ttu-id="bee85-274">是</span><span class="sxs-lookup"><span data-stu-id="bee85-274">Yes</span></span>|<span data-ttu-id="bee85-275">是</span><span class="sxs-lookup"><span data-stu-id="bee85-275">Yes</span></span>|  
+|<span data-ttu-id="bee85-276">列印</span><span class="sxs-lookup"><span data-stu-id="bee85-276">Printing</span></span>|<span data-ttu-id="bee85-277">預設列印</span><span class="sxs-lookup"><span data-stu-id="bee85-277">Default printing</span></span>|<span data-ttu-id="bee85-278">是</span><span class="sxs-lookup"><span data-stu-id="bee85-278">Yes</span></span>|<span data-ttu-id="bee85-279">否</span><span class="sxs-lookup"><span data-stu-id="bee85-279">No</span></span>|  
+|<span data-ttu-id="bee85-280">列印</span><span class="sxs-lookup"><span data-stu-id="bee85-280">Printing</span></span>|<span data-ttu-id="bee85-281">安全列印</span><span class="sxs-lookup"><span data-stu-id="bee85-281">Safe printing</span></span>|<span data-ttu-id="bee85-282">是</span><span class="sxs-lookup"><span data-stu-id="bee85-282">Yes</span></span>|<span data-ttu-id="bee85-283">是</span><span class="sxs-lookup"><span data-stu-id="bee85-283">Yes</span></span>|  
+|<span data-ttu-id="bee85-284">反射</span><span class="sxs-lookup"><span data-stu-id="bee85-284">Reflection</span></span>|<span data-ttu-id="bee85-285">發出</span><span class="sxs-lookup"><span data-stu-id="bee85-285">Emit</span></span>|<span data-ttu-id="bee85-286">是</span><span class="sxs-lookup"><span data-stu-id="bee85-286">Yes</span></span>|<span data-ttu-id="bee85-287">否</span><span class="sxs-lookup"><span data-stu-id="bee85-287">No</span></span>|  
+|<span data-ttu-id="bee85-288">安全性</span><span class="sxs-lookup"><span data-stu-id="bee85-288">Security</span></span>|<span data-ttu-id="bee85-289">Managed 程式碼執行</span><span class="sxs-lookup"><span data-stu-id="bee85-289">Managed code execution</span></span>|<span data-ttu-id="bee85-290">是</span><span class="sxs-lookup"><span data-stu-id="bee85-290">Yes</span></span>|<span data-ttu-id="bee85-291">是</span><span class="sxs-lookup"><span data-stu-id="bee85-291">Yes</span></span>|  
+|<span data-ttu-id="bee85-292">安全性</span><span class="sxs-lookup"><span data-stu-id="bee85-292">Security</span></span>|<span data-ttu-id="bee85-293">判斷提示授與權限</span><span class="sxs-lookup"><span data-stu-id="bee85-293">Assert granted permissions</span></span>|<span data-ttu-id="bee85-294">是</span><span class="sxs-lookup"><span data-stu-id="bee85-294">Yes</span></span>|<span data-ttu-id="bee85-295">否</span><span class="sxs-lookup"><span data-stu-id="bee85-295">No</span></span>|  
+|<span data-ttu-id="bee85-296">使用者介面</span><span class="sxs-lookup"><span data-stu-id="bee85-296">User Interface</span></span>|<span data-ttu-id="bee85-297">無限制的</span><span class="sxs-lookup"><span data-stu-id="bee85-297">Unrestricted</span></span>|<span data-ttu-id="bee85-298">是</span><span class="sxs-lookup"><span data-stu-id="bee85-298">Yes</span></span>|<span data-ttu-id="bee85-299">否</span><span class="sxs-lookup"><span data-stu-id="bee85-299">No</span></span>|  
+|<span data-ttu-id="bee85-300">使用者介面</span><span class="sxs-lookup"><span data-stu-id="bee85-300">User Interface</span></span>|<span data-ttu-id="bee85-301">安全的最上層視窗</span><span class="sxs-lookup"><span data-stu-id="bee85-301">Safe top level windows</span></span>|<span data-ttu-id="bee85-302">是</span><span class="sxs-lookup"><span data-stu-id="bee85-302">Yes</span></span>|<span data-ttu-id="bee85-303">是</span><span class="sxs-lookup"><span data-stu-id="bee85-303">Yes</span></span>|  
+|<span data-ttu-id="bee85-304">使用者介面</span><span class="sxs-lookup"><span data-stu-id="bee85-304">User Interface</span></span>|<span data-ttu-id="bee85-305">擁有剪貼簿</span><span class="sxs-lookup"><span data-stu-id="bee85-305">Own Clipboard</span></span>|<span data-ttu-id="bee85-306">是</span><span class="sxs-lookup"><span data-stu-id="bee85-306">Yes</span></span>|<span data-ttu-id="bee85-307">是</span><span class="sxs-lookup"><span data-stu-id="bee85-307">Yes</span></span>|  
+|<span data-ttu-id="bee85-308">網頁瀏覽器</span><span class="sxs-lookup"><span data-stu-id="bee85-308">Web Browser</span></span>|<span data-ttu-id="bee85-309">HTML 框架安全瀏覽</span><span class="sxs-lookup"><span data-stu-id="bee85-309">Safe frame navigation to HTML</span></span>|<span data-ttu-id="bee85-310">是</span><span class="sxs-lookup"><span data-stu-id="bee85-310">Yes</span></span>|<span data-ttu-id="bee85-311">是</span><span class="sxs-lookup"><span data-stu-id="bee85-311">Yes</span></span>|  
   
 > [!NOTE]
->  使用者啟始的「剪下及貼上」只適用於部分信任的情況。  
+>  <span data-ttu-id="bee85-312">在部分信任中，只有在使用者啟動時，才允許剪下和貼上。</span><span class="sxs-lookup"><span data-stu-id="bee85-312">Cut and Paste is only allowed in partial trust when user initiated.</span></span>  
   
- 如果您需要提高權限，則需變更專案設定和 ClickOnce 應用程式資訊清單。  如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  下列文件也能提供有用的資訊。  
+ <span data-ttu-id="bee85-313">如果您需要提高權限，您需要變更專案設定和 ClickOnce 應用程式資訊清單。</span><span class="sxs-lookup"><span data-stu-id="bee85-313">If you need to increase permissions, you need to change the project settings and the ClickOnce application manifest.</span></span> <span data-ttu-id="bee85-314">如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="bee85-314">For more information, see [WPF XAML Browser Applications Overview](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).</span></span> <span data-ttu-id="bee85-315">下列文件可能有用。</span><span class="sxs-lookup"><span data-stu-id="bee85-315">The following documents may also be helpful.</span></span>  
   
--   [Mage.exe \(資訊清單產生和編輯工具\)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+-   <span data-ttu-id="bee85-316">[Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="bee85-316">[Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).</span></span>  
   
--   [MageUI.exe \(圖形用戶端、資訊清單產生和編輯工具\)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+-   <span data-ttu-id="bee85-317">[MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。</span><span class="sxs-lookup"><span data-stu-id="bee85-317">[MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).</span></span>  
   
--   [保護 ClickOnce 應用程式](../Topic/Securing%20ClickOnce%20Applications.md).  
+-   <span data-ttu-id="bee85-318">[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。</span><span class="sxs-lookup"><span data-stu-id="bee85-318">[Securing ClickOnce Applications](/visualstudio/deployment/securing-clickonce-applications).</span></span>  
   
- 如果您的 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 需要完整信任，可以使用相同的工具提高要求的權限。  不過，[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 只有在安裝於本機電腦並從本機電腦、內部網路或是瀏覽器的信任或允許網站中列出的 URL 啟動時，才會獲得完全信任。  如果應用程式是從內部網路或信任的網站安裝，則使用者將收到通知權限提升的標準 ClickOnce 提示。  使用者可以選擇繼續或取消安裝。  
+ <span data-ttu-id="bee85-319">如果您[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]需要完全信任，您可以使用相同的工具，以增加要求的權限。</span><span class="sxs-lookup"><span data-stu-id="bee85-319">If your [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] requires full trust, you can use the same tools to increase the requested permissions.</span></span> <span data-ttu-id="bee85-320">雖然[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]如果它是安裝在並從本機電腦，也就是在內部網路，或從受信任或允許站台會列在瀏覽器的 URL，則只會接收完全信任。</span><span class="sxs-lookup"><span data-stu-id="bee85-320">Although an [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] will only receive full trust if it is installed on and launched from the local computer, the intranet, or from a URL that is listed in the browser's trusted or allowed sites.</span></span> <span data-ttu-id="bee85-321">如果應用程式是從內部網路或受信任的網站安裝，使用者會收到標準 ClickOnce 提示，通知他們權限已提高。</span><span class="sxs-lookup"><span data-stu-id="bee85-321">If the application is installed from the intranet or a trusted site, the user will receive the standard ClickOnce prompt notifying them of the elevated permissions.</span></span> <span data-ttu-id="bee85-322">使用者可以選擇繼續或取消安裝。</span><span class="sxs-lookup"><span data-stu-id="bee85-322">The user can choose to continue or cancel the installation.</span></span>  
   
- 或者，您可以使用 ClickOnce 信任部署模型從任何安全性區域進行完全信任的部署。  如需詳細資訊，請參閱[受信任的應用程式部署概觀](../Topic/Trusted%20Application%20Deployment%20Overview.md)和 [安全性](../../../docs/framework/wpf/security-wpf.md)。  
+ <span data-ttu-id="bee85-323">或者，您可以使用 ClickOnce 受信任部署模型，以從任何安全性區域進行完全信任部署。</span><span class="sxs-lookup"><span data-stu-id="bee85-323">Alternatively, you can use the ClickOnce Trusted Deployment model for full trust deployment from any security zone.</span></span> <span data-ttu-id="bee85-324">如需詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)和[安全性](../../../docs/framework/wpf/security-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="bee85-324">For more information, see [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) and [Security](../../../docs/framework/wpf/security-wpf.md).</span></span>  
   
-## 請參閱  
- [安全性](../../../docs/framework/wpf/security-wpf.md)   
- [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)   
- [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a><span data-ttu-id="bee85-325">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bee85-325">See Also</span></span>  
+ [<span data-ttu-id="bee85-326">安全性</span><span class="sxs-lookup"><span data-stu-id="bee85-326">Security</span></span>](../../../docs/framework/wpf/security-wpf.md)  
+ [<span data-ttu-id="bee85-327">WPF 安全性策略 – 平台安全性</span><span class="sxs-lookup"><span data-stu-id="bee85-327">WPF Security Strategy - Platform Security</span></span>](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [<span data-ttu-id="bee85-328">WPF 安全性策略 – 安全性工程</span><span class="sxs-lookup"><span data-stu-id="bee85-328">WPF Security Strategy - Security Engineering</span></span>](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

@@ -1,61 +1,65 @@
 ---
-title: "如何：轉譯影像色彩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "點陣圖 [Windows Form], 變更色彩"
-  - "影像色彩 [Windows Form]"
-  - "影像 [Windows Form], 變更色彩"
+title: "如何：轉譯影像色彩"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitmaps [Windows Forms], changing colors
+- images [Windows Forms], changing colors
+- image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c21d20b631d8e0cf68e370dd43b3f5e92144b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：轉譯影像色彩
-轉換會將四個色彩元素中的一或多個加上一個數值。  代表轉換的色彩矩陣項目列在下表中。  
+# <a name="how-to-translate-image-colors"></a><span data-ttu-id="8e85b-102">如何：轉譯影像色彩</span><span class="sxs-lookup"><span data-stu-id="8e85b-102">How to: Translate Image Colors</span></span>
+<span data-ttu-id="8e85b-103">翻譯將值加入至一個以上的四個色彩元件。</span><span class="sxs-lookup"><span data-stu-id="8e85b-103">A translation adds a value to one or more of the four color components.</span></span> <span data-ttu-id="8e85b-104">下表中，可以代表轉譯的色彩矩陣項目。</span><span class="sxs-lookup"><span data-stu-id="8e85b-104">The color matrix entries that represent translations are given in the following table.</span></span>  
   
-|要轉換的元素|矩陣項目|  
-|------------|----------|  
-|紅色|\[4\]\[0\]|  
-|綠色|\[4\]\[1\]|  
-|藍色|\[4\]\[2\]|  
-|Alpha|\[4\]\[3\]|  
+|<span data-ttu-id="8e85b-105">要轉換的元素</span><span class="sxs-lookup"><span data-stu-id="8e85b-105">Component to be translated</span></span>|<span data-ttu-id="8e85b-106">矩陣項目</span><span class="sxs-lookup"><span data-stu-id="8e85b-106">Matrix entry</span></span>|  
+|--------------------------------|------------------|  
+|<span data-ttu-id="8e85b-107">紅色</span><span class="sxs-lookup"><span data-stu-id="8e85b-107">Red</span></span>|<span data-ttu-id="8e85b-108">[4][0]</span><span class="sxs-lookup"><span data-stu-id="8e85b-108">[4][0]</span></span>|  
+|<span data-ttu-id="8e85b-109">綠色</span><span class="sxs-lookup"><span data-stu-id="8e85b-109">Green</span></span>|<span data-ttu-id="8e85b-110">[4][1]</span><span class="sxs-lookup"><span data-stu-id="8e85b-110">[4][1]</span></span>|  
+|<span data-ttu-id="8e85b-111">藍色</span><span class="sxs-lookup"><span data-stu-id="8e85b-111">Blue</span></span>|<span data-ttu-id="8e85b-112">[4][2]</span><span class="sxs-lookup"><span data-stu-id="8e85b-112">[4][2]</span></span>|  
+|<span data-ttu-id="8e85b-113">Alpha</span><span class="sxs-lookup"><span data-stu-id="8e85b-113">Alpha</span></span>|<span data-ttu-id="8e85b-114">[4][3]</span><span class="sxs-lookup"><span data-stu-id="8e85b-114">[4][3]</span></span>|  
   
-## 範例  
- 下列範例會從 ColorBars.bmp 檔案建構 <xref:System.Drawing.Image> 物件。  然後程式碼會將影像中每一個像素的紅色元素加上 0.75。  原始影像就繪製在變換影像的旁邊。  
+## <a name="example"></a><span data-ttu-id="8e85b-115">範例</span><span class="sxs-lookup"><span data-stu-id="8e85b-115">Example</span></span>  
+ <span data-ttu-id="8e85b-116">下列範例會建構<xref:System.Drawing.Image>ColorBars.bmp 檔案中的物件。</span><span class="sxs-lookup"><span data-stu-id="8e85b-116">The following example constructs an <xref:System.Drawing.Image> object from the file ColorBars.bmp.</span></span> <span data-ttu-id="8e85b-117">然後程式碼會加入 0.75 到映像中的每個像素的紅色元件。</span><span class="sxs-lookup"><span data-stu-id="8e85b-117">Then the code adds 0.75 to the red component of each pixel in the image.</span></span> <span data-ttu-id="8e85b-118">在原始圖像是繪製轉換後的映像的旁邊。</span><span class="sxs-lookup"><span data-stu-id="8e85b-118">The original image is drawn alongside the transformed image.</span></span>  
   
- 下圖左邊顯示的是原始的影像，右邊顯示的是轉換的影像。  
+ <span data-ttu-id="8e85b-119">下圖顯示在右側的原始左側映像，而且已轉換的映像。</span><span class="sxs-lookup"><span data-stu-id="8e85b-119">The following illustration shows the original image on the left and the transformed image on the right.</span></span>  
   
- ![轉譯色彩](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ <span data-ttu-id="8e85b-120">![轉譯色彩](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")</span><span class="sxs-lookup"><span data-stu-id="8e85b-120">![Translate Colors](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")</span></span>  
   
- 下表會列出紅色轉換前後四列的色彩向量。  請注意，由於色彩元素的最大值是 1，因此第二列中的紅色元素並不會變更   \(同理，色彩元素的最小值 0\)。  
+ <span data-ttu-id="8e85b-121">下表列出四個橫條的色彩向量之前和之後的紅色的翻譯。</span><span class="sxs-lookup"><span data-stu-id="8e85b-121">The following table lists the color vectors for the four bars before and after the red translation.</span></span> <span data-ttu-id="8e85b-122">請注意，因為色彩元件的最大值為 1，第二個資料列中的紅色元件不會變更。</span><span class="sxs-lookup"><span data-stu-id="8e85b-122">Note that because the maximum value for a color component is 1, the red component in the second row does not change.</span></span> <span data-ttu-id="8e85b-123">（同樣地，色彩元件的最小值為 0）。</span><span class="sxs-lookup"><span data-stu-id="8e85b-123">(Similarly, the minimum value for a color component is 0.)</span></span>  
   
-|原始|轉換的|  
-|--------|---------|  
-|黑色 \(0, 0, 0, 1\)|\(0.75, 0, 0, 1\)|  
-|紅色 \(1, 0, 0, 1\)|\(1, 0, 0, 1\)|  
-|綠色 \(0, 1, 0, 1\)|\(0.75, 1, 0, 1\)|  
-|藍色 \(0, 0, 1, 1\)|\(0.75, 0, 1, 1\)|  
+|<span data-ttu-id="8e85b-124">原始</span><span class="sxs-lookup"><span data-stu-id="8e85b-124">Original</span></span>|<span data-ttu-id="8e85b-125">轉譯</span><span class="sxs-lookup"><span data-stu-id="8e85b-125">Translated</span></span>|  
+|--------------|----------------|  
+|<span data-ttu-id="8e85b-126">黑色 （0，0，0，1）</span><span class="sxs-lookup"><span data-stu-id="8e85b-126">Black (0, 0, 0, 1)</span></span>|<span data-ttu-id="8e85b-127">(0.75, 0, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="8e85b-127">(0.75, 0, 0, 1)</span></span>|  
+|<span data-ttu-id="8e85b-128">紅色 （1，0，0，1）</span><span class="sxs-lookup"><span data-stu-id="8e85b-128">Red (1, 0, 0, 1)</span></span>|<span data-ttu-id="8e85b-129">(1, 0, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="8e85b-129">(1, 0, 0, 1)</span></span>|  
+|<span data-ttu-id="8e85b-130">綠色 （0、 1、 0，1）</span><span class="sxs-lookup"><span data-stu-id="8e85b-130">Green (0, 1, 0, 1)</span></span>|<span data-ttu-id="8e85b-131">(0.75, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="8e85b-131">(0.75, 1, 0, 1)</span></span>|  
+|<span data-ttu-id="8e85b-132">藍色 （0，0，1，1）</span><span class="sxs-lookup"><span data-stu-id="8e85b-132">Blue (0, 0, 1, 1)</span></span>|<span data-ttu-id="8e85b-133">(0.75, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="8e85b-133">(0.75, 0, 1, 1)</span></span>|  
   
  [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`\(即 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數\)。  請以系統中有效的影像檔名稱和路徑取代 `ColorBars.bmp` 。  
+## <a name="compiling-the-code"></a><span data-ttu-id="8e85b-134">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8e85b-134">Compiling the Code</span></span>  
+ <span data-ttu-id="8e85b-135">上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。</span><span class="sxs-lookup"><span data-stu-id="8e85b-135">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="8e85b-136">取代`ColorBars.bmp`映像檔案名稱與您系統為有效的路徑。</span><span class="sxs-lookup"><span data-stu-id="8e85b-136">Replace `ColorBars.bmp` with an image file name and path that are valid on your system.</span></span>  
   
-## 請參閱  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Windows Form 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [將影像重新著色](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a><span data-ttu-id="8e85b-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8e85b-137">See Also</span></span>  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [<span data-ttu-id="8e85b-138">Windows Forms 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="8e85b-138">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="8e85b-139">為影像重新著色</span><span class="sxs-lookup"><span data-stu-id="8e85b-139">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)

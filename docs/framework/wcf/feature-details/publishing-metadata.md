@@ -1,47 +1,49 @@
 ---
-title: "發行中繼資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "中繼資料 [WCF], 發行"
+title: "發行中繼資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1e0cf48d429282c692557fd66bc6ef1295e6a531
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 發行中繼資料
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務會藉由發行一或多個中繼資料端點以發行中繼資料。發行服務中繼資料會使用標準化的通訊協定 \(例如 WS\-MetadataExchange \(MEX\) 和 HTTP\/GET 要求\) 來提供中繼資料。中繼資料端點與其他服務端點相似的地方，在於兩者都有位址、繫結和合約，並且能夠透過組態或命令式程式碼新增至服務主機。  
+# <a name="publishing-metadata"></a><span data-ttu-id="c28b1-102">發行中繼資料</span><span class="sxs-lookup"><span data-stu-id="c28b1-102">Publishing Metadata</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="c28b1-103"> 服務會藉由發行一或多個中繼資料端點以發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c28b1-103"> services publish metadata by publishing one or more metadata endpoints.</span></span> <span data-ttu-id="c28b1-104">發行服務中繼資料會使用標準化的通訊協定 (例如 WS-MetadataExchange (MEX) 和 HTTP/GET 要求) 來提供中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c28b1-104">Publishing service metadata makes the metadata available using standardized protocols, such as WS-MetadataExchange (MEX) and HTTP/GET requests.</span></span> <span data-ttu-id="c28b1-105">中繼資料端點與其他服務端點相似的地方，在於兩者都有位址、繫結和合約，並且能夠透過組態或命令式程式碼新增至服務主機。</span><span class="sxs-lookup"><span data-stu-id="c28b1-105">Metadata endpoints are similar to other service endpoints in that they have an address, a binding, and a contract, and they can be added to a service host through configuration or imperative code.</span></span>  
   
-## 發行中繼資料端點  
- 若要發行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的中繼資料端點，您必須先將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 服務行為加入至服務。加入 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 執行個體可讓您的服務公開中繼資料端點。一旦您加入 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 服務行為之後，就可以接著公開支援 MEX 通訊協定或回應 HTTP\/GET 要求的中繼資料端點。  
+## <a name="publishing-metadata-endpoints"></a><span data-ttu-id="c28b1-106">發行中繼資料端點</span><span class="sxs-lookup"><span data-stu-id="c28b1-106">Publishing Metadata Endpoints</span></span>  
+ <span data-ttu-id="c28b1-107">若要發行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的中繼資料端點，您必須先將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 服務行為加入至服務。</span><span class="sxs-lookup"><span data-stu-id="c28b1-107">To publish metadata endpoints for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, you first must add the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> service behavior to the service.</span></span> <span data-ttu-id="c28b1-108">加入 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 執行個體可讓您的服務公開中繼資料端點。</span><span class="sxs-lookup"><span data-stu-id="c28b1-108">Adding a <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> instance allows your service to expose metadata endpoints.</span></span> <span data-ttu-id="c28b1-109">一旦您加入 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 服務行為之後，就可以接著公開支援 MEX 通訊協定或回應 HTTP/GET 要求的中繼資料端點。</span><span class="sxs-lookup"><span data-stu-id="c28b1-109">Once you add the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> service behavior, you can then expose metadata endpoints that support the MEX protocol or that respond to HTTP/GET requests.</span></span>  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 會使用 <xref:System.ServiceModel.Description.WsdlExporter> 匯出服務中所有服務端點的中繼資料。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]從服務匯出中繼資料的詳細資訊，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
+ <span data-ttu-id="c28b1-110"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 會使用 <xref:System.ServiceModel.Description.WsdlExporter> 匯出服務中所有服務端點的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c28b1-110">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> uses a <xref:System.ServiceModel.Description.WsdlExporter> to export metadata for all service endpoints in your service.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c28b1-111">匯出中繼資料從一項服務，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="c28b1-111"> exporting metadata from a service, see [Exporting and Importing Metadata](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).</span></span>  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 會加入 <xref:System.ServiceModel.Description.ServiceMetadataExtension> 執行個體做為服務主機的延伸。<xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=fullName> 為中繼資料發行通訊協定提供實作。您也可以藉由存取 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=fullName> 屬性，使用 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=fullName> 在執行階段取得服務的中繼資料。  
+ <span data-ttu-id="c28b1-112"><xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 會加入 <xref:System.ServiceModel.Description.ServiceMetadataExtension> 執行個體做為服務主機的延伸。</span><span class="sxs-lookup"><span data-stu-id="c28b1-112">The <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> adds a <xref:System.ServiceModel.Description.ServiceMetadataExtension> instance as an extension to your service host.</span></span> <span data-ttu-id="c28b1-113"><xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 為中繼資料發行通訊協定提供實作。</span><span class="sxs-lookup"><span data-stu-id="c28b1-113">The <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> provides the implementation for the metadata publishing protocols.</span></span> <span data-ttu-id="c28b1-114">您也可以藉由存取 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 屬性，使用 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType> 在執行階段取得服務的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c28b1-114">You can also use the <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> to get the service's metadata at runtime by accessing the <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType> property.</span></span>  
   
-### MEX 中繼資料端點  
- 若要加入使用 MEX 通訊協定的中繼資料端點，請將服務端點加入至使用 `IMetadataExchange` 服務合約的服務主機。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含使用此服務合約名稱的 <xref:System.ServiceModel.Description.IMetadataExchange> 介面，您可以用來做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計模型的一部分。WS\-MetadataExchange 端點或 MEX 端點可以使用靜態處理站方法在 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別上所公開的四個預設繫結中的其中一個，以比對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工具 \(例如 Svcutil.exe\) 使用的預設繫結。您也可以使用自己的自訂繫結設定 MEX 中繼資料端點。  
+### <a name="mex-metadata-endpoints"></a><span data-ttu-id="c28b1-115">MEX 中繼資料端點</span><span class="sxs-lookup"><span data-stu-id="c28b1-115">MEX Metadata Endpoints</span></span>  
+ <span data-ttu-id="c28b1-116">若要加入使用 MEX 通訊協定的中繼資料端點，請將服務端點加入至使用 `IMetadataExchange` 服務合約的服務主機。</span><span class="sxs-lookup"><span data-stu-id="c28b1-116">To add metadata endpoints that use the MEX protocol, add service endpoints to your service host that use the `IMetadataExchange` service contract.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c28b1-117"> 包含使用此服務合約名稱的 <xref:System.ServiceModel.Description.IMetadataExchange> 介面，您可以用來做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計模型的一部分。</span><span class="sxs-lookup"><span data-stu-id="c28b1-117"> includes an <xref:System.ServiceModel.Description.IMetadataExchange> interface with this service contract name that you can use as part of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programming model.</span></span> <span data-ttu-id="c28b1-118">WS-MetadataExchange 端點或 MEX 端點可以使用靜態處理站方法在 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別上所公開的四個預設繫結中的其中一個，以比對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工具 (例如 Svcutil.exe) 使用的預設繫結。</span><span class="sxs-lookup"><span data-stu-id="c28b1-118">WS-MetadataExchange endpoints, or MEX endpoints, can use one of the four default bindings that the static factory methods expose on the <xref:System.ServiceModel.Description.MetadataExchangeBindings> class to match the default bindings used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tools such as Svcutil.exe.</span></span> <span data-ttu-id="c28b1-119">您也可以使用自己的自訂繫結設定 MEX 中繼資料端點。</span><span class="sxs-lookup"><span data-stu-id="c28b1-119">You can also configure MEX metadata endpoints using your own custom binding.</span></span>  
   
-### HTTP GET 中繼資料端點  
- 若要將中繼資料端點加入至回應 HTTP\/GET 要求的服務，請將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 上的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 屬性設為 `true`。您也可以將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 上的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 屬性設為 `true`，以設定使用 HTTPS 的中繼資料端點。  
+### <a name="http-get-metadata-endpoints"></a><span data-ttu-id="c28b1-120">HTTP GET 中繼資料端點</span><span class="sxs-lookup"><span data-stu-id="c28b1-120">HTTP GET Metadata Endpoints</span></span>  
+ <span data-ttu-id="c28b1-121">若要將中繼資料端點加入至回應 HTTP/GET 要求的服務，請將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 上的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 屬性設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="c28b1-121">To add a metadata endpoint to your service that responds to HTTP/GET requests, set the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> to `true`.</span></span> <span data-ttu-id="c28b1-122">您也可以將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 上的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 屬性設為 `true`，以設定使用 HTTPS 的中繼資料端點。</span><span class="sxs-lookup"><span data-stu-id="c28b1-122">You can also configure a metadata endpoint that uses HTTPS by setting the <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> property on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> to `true`.</span></span>  
   
-## 本章節內容  
- [HOW TO：使用組態檔發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- 示範如何設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來發行中繼資料，以便讓用戶端能夠使用 `?wsdl` 查詢字串透過 WS\-MetadataExchange 或 HTTP\/GET 要求擷取中繼資料。  
+## <a name="in-this-section"></a><span data-ttu-id="c28b1-123">本章節內容</span><span class="sxs-lookup"><span data-stu-id="c28b1-123">In This Section</span></span>  
+ [<span data-ttu-id="c28b1-124">如何： 使用組態檔的服務發行中繼資料</span><span class="sxs-lookup"><span data-stu-id="c28b1-124">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ <span data-ttu-id="c28b1-125">示範如何設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來發行中繼資料，以便讓用戶端能夠使用 `?wsdl` 查詢字串透過 WS-MetadataExchange 或 HTTP/GET 要求擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c28b1-125">Demonstrates how to configure a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service to publish metadata so that clients can retrieve the metadata using a WS-MetadataExchange or an HTTP/GET request using the `?wsdl` query string.</span></span>  
   
- [HOW TO：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
- 示範如何在程式碼中啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的中繼資料發行，以便讓用戶端能夠使用 `?wsdl` 查詢字串透過 WS\-MetadataExchange 或 HTTP\/GET 要求擷取中繼資料。  
+ [<span data-ttu-id="c28b1-126">如何： 使用程式碼的服務發行中繼資料</span><span class="sxs-lookup"><span data-stu-id="c28b1-126">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ <span data-ttu-id="c28b1-127">示範如何在程式碼中啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的中繼資料發行，以便讓用戶端能夠使用 `?wsdl` 查詢字串透過 WS-MetadataExchange 或 HTTP/GET 要求擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c28b1-127">Demonstrates how to enable metadata publishing for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service in code so that clients can retrieve the metadata using a WS-MetadataExchange or an HTTP/GET request using the `?wsdl` query string.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="c28b1-128">參考資料</span><span class="sxs-lookup"><span data-stu-id="c28b1-128">Reference</span></span>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
   
  <xref:System.ServiceModel.Description.IMetadataExchange>  
@@ -50,5 +52,5 @@ caps.handback.revision: 10
   
  <xref:System.ServiceModel.Description.MetadataExchangeBindings>  
   
-## 請參閱  
- [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="c28b1-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c28b1-129">See Also</span></span>  
+ [<span data-ttu-id="c28b1-130">匯出和匯入中繼資料</span><span class="sxs-lookup"><span data-stu-id="c28b1-130">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

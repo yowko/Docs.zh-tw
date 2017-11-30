@@ -1,99 +1,102 @@
 ---
-title: "Default XAML Schema Context and WPF XAML Schema Context | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "預設 XAML 結構描述內容和 WPF XAML 結構描述內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: ccb89b67b222c11695131a1aa8423b89df1c9a70
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Default XAML Schema Context and WPF XAML Schema Context
-XAML 結構描述內容是一種概念實體，可限定使用特定 XAML 詞彙的 XAML 產物與物件寫入行為互動的方式，包括如何解析型別對應、如何載入組件、如何解譯特定讀取器和寫入器設定。  本主題說明 .NET Framework XAML 服務的功能，以及以 CLR 型別系統為基礎的相關預設 XAML 結構描述內容。  本主題還說明用於 WPF 的 XAML 結構描述內容。  
+# <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a><span data-ttu-id="8c359-102">預設 XAML 結構描述內容和 WPF XAML 結構描述內容</span><span class="sxs-lookup"><span data-stu-id="8c359-102">Default XAML Schema Context and WPF XAML Schema Context</span></span>
+<span data-ttu-id="8c359-103">XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞彙的 XAML 生產環境與撰寫的行為，包含型別對應的解析，載入組件的方式、 如何特定讀取器和寫入器物件之間的互動方式設定會被解譯。</span><span class="sxs-lookup"><span data-stu-id="8c359-103">A XAML schema context is a conceptual entity that qualifies how a XAML production that uses a particular XAML vocabulary interacts with the object writing behavior, including how type mapping resolves, how assemblies are loaded, how certain reader and writer settings are interpreted.</span></span> <span data-ttu-id="8c359-104">本主題描述.NET Framework XAML 服務和相關聯的預設 XAML 結構描述內容，以 CLR 型別系統為基礎的功能。</span><span class="sxs-lookup"><span data-stu-id="8c359-104">This topic describes the features of the .NET Framework XAML Services and the associated default XAML schema context, which is based on the CLR type system.</span></span> <span data-ttu-id="8c359-105">本主題也描述適用於 WPF XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="8c359-105">This topic also describes the XAML schema context that is used for WPF.</span></span>  
   
-## 預設 XAML 結構描述內容  
- .NET Framework XAML 服務會實作及使用預設 XAML 結構描述內容。  在 <xref:System.Xaml.XamlSchemaContext> 類別的 API 中，並非永遠完全看得見預設 XAML 結構描述內容行為。  但是，在許多情況下，可以透過 XAML 型別系統的通用 API \(如 <xref:System.Xaml.XamlMember> 或 <xref:System.Xaml.XamlType> 的成員\)，或透過在使用預設 XAML 結構描述內容的 XAML 讀取器和 XAML 寫入器上公開的 API，觀察到預設 XAML 結構描述內容所影響的行為。  
+## <a name="default-xaml-schema-context"></a><span data-ttu-id="8c359-106">預設 XAML 結構描述內容</span><span class="sxs-lookup"><span data-stu-id="8c359-106">Default XAML Schema Context</span></span>  
+ <span data-ttu-id="8c359-107">.NET framework XAML 服務實作並使用預設 XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="8c359-107">.NET Framework XAML Services both implements and uses a default XAML schema context.</span></span> <span data-ttu-id="8c359-108">預設 XAML 結構描述內容行為不一定完全可見的 API 中<xref:System.Xaml.XamlSchemaContext>類別。</span><span class="sxs-lookup"><span data-stu-id="8c359-108">The default XAML schema context behavior is not always fully visible in the API of the <xref:System.Xaml.XamlSchemaContext> class.</span></span> <span data-ttu-id="8c359-109">不過，在許多情況下會影響預設 XAML 結構描述內容的行為是透過通用 API 的 XAML 類型系統，例如的成員可觀察<xref:System.Xaml.XamlMember>或<xref:System.Xaml.XamlType>，或透過公開在 XAML 讀取器和 XAML 寫入器所使用的應用程式開發介面預設 XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="8c359-109">However, in many cases the behavior that the default XAML schema context influences is observable through common API of the XAML type system, such as members of <xref:System.Xaml.XamlMember> or <xref:System.Xaml.XamlType>, or through APIs exposed on XAML readers and XAML writers that are using the default XAML schema context.</span></span>  
   
- 您可以建立封裝預設行為的 <xref:System.Xaml.XamlSchemaContext>，方法是呼叫 <xref:System.Xaml.XamlSchemaContext> 建構函式。  這樣會明確建立預設 XAML 結構描述內容。  如果您使用未明確加上 <xref:System.Xaml.XamlSchemaContext> 輸入參數的 API 來初始化 XAML 讀取器或 XAML 寫入器，則會隱含地建立相同的預設 XAML 結構描述內容。  
+ <span data-ttu-id="8c359-110">您可以建立<xref:System.Xaml.XamlSchemaContext>藉由呼叫封裝的預設行為<xref:System.Xaml.XamlSchemaContext>建構函式。</span><span class="sxs-lookup"><span data-stu-id="8c359-110">You can create a <xref:System.Xaml.XamlSchemaContext> that encapsulates the default behavior by calling the <xref:System.Xaml.XamlSchemaContext> constructor.</span></span> <span data-ttu-id="8c359-111">此明確建立的預設 XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="8c359-111">This explicitly creates the default XAML schema context.</span></span> <span data-ttu-id="8c359-112">如果您的 XAML 讀取器或 XAML 寫入器使用 Api 時，不會明確地初始化隱含地建立相同的預設 XAML 結構描述內容<xref:System.Xaml.XamlSchemaContext>輸入的參數。</span><span class="sxs-lookup"><span data-stu-id="8c359-112">The same default XAML schema context is created implicitly, if you initialize a XAML reader or XAML writer using APIs that do not explicitly take a <xref:System.Xaml.XamlSchemaContext> input parameter.</span></span>  
   
- 預設 XAML 結構描述內容依賴 CLR 反映機制進行其型別對應行為。  這包括檢查定義端 CLR <xref:System.Type> 和相關的 <xref:System.Reflection.PropertyInfo> 或 <xref:System.Reflection.MethodInfo>。  另外，當 XAML 型別與 XAML 成員資訊使用 CLR 支援型別時，會使用 CLR 屬性化在型別或成員上填入細節。  預設 XAML 結構描述內容不需要型別系統延伸技巧 \(例如 `Invoker` 模式\)，因為 CLR 型別系統會提供必要的資訊。  
+ <span data-ttu-id="8c359-113">預設 XAML 結構描述內容依賴 CLR 反映型別對應的行為。</span><span class="sxs-lookup"><span data-stu-id="8c359-113">The default XAML schema context relies on CLR reflection for its type mapping behavior.</span></span> <span data-ttu-id="8c359-114">這包括檢查定義 CLR <xref:System.Type>，與相關<xref:System.Reflection.PropertyInfo>或<xref:System.Reflection.MethodInfo>。</span><span class="sxs-lookup"><span data-stu-id="8c359-114">This includes examining the defining CLR <xref:System.Type>, and related <xref:System.Reflection.PropertyInfo> or <xref:System.Reflection.MethodInfo>.</span></span> <span data-ttu-id="8c359-115">此外，型別或成員上的 CLR 屬性使用以便填滿的細節，以利 XAML 型別或使用 CLR 支援類型的 XAML 成員資訊。</span><span class="sxs-lookup"><span data-stu-id="8c359-115">Also, CLR attribution on types or members is used in order to fill in the specifics for XAML type or XAML member information that uses the CLR backing type.</span></span> <span data-ttu-id="8c359-116">預設 XAML 結構描述內容不需要型別系統延伸技術，例如`Invoker`模式，因為使用的 CLR 型別系統所需的資訊。</span><span class="sxs-lookup"><span data-stu-id="8c359-116">The default XAML schema context does not require type system extension techniques such as the `Invoker` pattern, because the necessary information is available from the CLR type system.</span></span>  
   
- 就組件載入邏輯而言，預設 XAML 結構描述內容主要依賴任何在 XAML 命名空間對應中提供的組件值。  另外，在載入內部型別之類的情節中，<xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A> 可以暗示組件進行載入。  
+ <span data-ttu-id="8c359-117">針對組件載入的邏輯的預設 XAML 結構描述內容依賴主要是根據 XAML 命名空間對應中提供的任何組件值。</span><span class="sxs-lookup"><span data-stu-id="8c359-117">For assembly loading logic, the default XAML schema context relies mainly on any assembly values provided in XAML namespace mappings.</span></span> <span data-ttu-id="8c359-118">此外，<xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>可以提示載入，案例，例如載入內部類型的組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-118">Also, <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A> can hint an assembly to load, for scenarios such as loading internal types.</span></span>  
   
-## WPF XAML 結構描述內容  
- 本主題之所以說明 WPF XAML 結構描述內容，是因為 WPF 實作展現了可以透過實作非預設 XAML 結構描述內容來提供的功能，頗值得注意。  另外，在解說 WPF XAML 的 WPF 文件中並未深入探討 XAML 結構描述內容概念；唯有與預設 XAML 結構描述內容運作方式一起整合討論，才可能完全了解 XAML 結構描述內容的行為。  WPF XAML 結構描述內容會實作下列行為。  
+## <a name="wpf-xaml-schema-context"></a><span data-ttu-id="8c359-119">WPF XAML 結構描述內容</span><span class="sxs-lookup"><span data-stu-id="8c359-119">WPF XAML Schema Context</span></span>  
+ <span data-ttu-id="8c359-120">本主題中說明的 WPF XAML 結構描述內容，因為的 WPF 實作提供有趣的功能，可以藉由實作非預設 XAML 結構描述內容中導入之類型的說明。</span><span class="sxs-lookup"><span data-stu-id="8c359-120">The WPF XAML schema context is described in this topic because the WPF implementation provides an interesting illustration of the kinds of features that can be introduced by implementing a non-default XAML schema context.</span></span> <span data-ttu-id="8c359-121">此外，XAML 結構描述內容概念並不討論關於太大，WPF XAML; WPF 文件中啟用 XAML 結構描述內容的行為可能只會完全可了解如果的預設 XAML 結構描述內容的運作方式的討論與整合。</span><span class="sxs-lookup"><span data-stu-id="8c359-121">Also, the XAML schema context concept is not discussed very much in the WPF documentation that addresses WPF XAML; the behavior that the XAML schema context enables might only be fully understandable if integrated with a discussion of how the default XAML schema context works.</span></span> <span data-ttu-id="8c359-122">WPF XAML 結構描述內容會實作下列的行為。</span><span class="sxs-lookup"><span data-stu-id="8c359-122">The WPF XAML schema context implements the following behavior.</span></span>  
   
- **查閱覆寫：**WPF 有一些 XAML 內容模型，而這些模型中有不需 <xref:System.Windows.Markup.ContentPropertyAttribute> 屬性化即可運作的 XAML 內容屬性。  WPF 的 <xref:System.Xaml.XamlType.LookupContentProperty%2A> 覆寫會實作這個行為。  
+ <span data-ttu-id="8c359-123">**查閱會覆寫：** WPF xaml 中有少數的內容模型中所沒有的函式的 XAML 內容屬性<xref:System.Windows.Markup.ContentPropertyAttribute>屬性化。</span><span class="sxs-lookup"><span data-stu-id="8c359-123">**Lookup overrides:** WPF has a few content  models for XAML where there are XAML content properties that function without being <xref:System.Windows.Markup.ContentPropertyAttribute> attributed.</span></span> <span data-ttu-id="8c359-124"><xref:System.Xaml.XamlType.LookupContentProperty%2A>覆寫的 WPF 實作這種行為。</span><span class="sxs-lookup"><span data-stu-id="8c359-124"><xref:System.Xaml.XamlType.LookupContentProperty%2A> overrides for WPF implement this behavior.</span></span>  
   
- **WPF 運算式延遲：**WPF 有數個運算式類別會將值延到有執行階段內容可用時才導出。  另外，範本延伸是一項依賴延遲技巧的執行階段行為。  
+ <span data-ttu-id="8c359-125">**WPF 運算式的延遲：** WPF 功能延後的值，直到執行階段內容可供使用的數個運算式類別。</span><span class="sxs-lookup"><span data-stu-id="8c359-125">**Deferral for WPF expressions:** WPF features several expression classes that defer a value until a runtime context is available.</span></span> <span data-ttu-id="8c359-126">此外，範本擴充是依賴延遲技術的執行階段行為。</span><span class="sxs-lookup"><span data-stu-id="8c359-126">Also, template expansion is a runtime behavior that relies on deferral techniques.</span></span>  
   
- **型別系統查閱最佳化：**WPF 有一套廣泛的 XAML 詞彙和物件模型，其中包含的基底類別成員定義會繼承給 WPF 所定義的數百個類別。  另外，WPF 本身分散於數個組件。  WPF 使用查閱資料表和其他技巧來最佳化其型別查閱機制。  此舉可改善預設 XAML 結構描述內容和其以 CLR 為基礎之型別查閱的效能。  如果型別不存在於查閱資料表，其行為會使用與預設 XAML 結構描述內容類似的 XAML 結構描述內容技巧。  
+ <span data-ttu-id="8c359-127">**輸入系統查閱最佳化：** WPF 必須廣泛 XAML 詞彙和物件模型，其中包含數百個 WPF 定義類別繼承的基底類別成員定義。</span><span class="sxs-lookup"><span data-stu-id="8c359-127">**Type system lookup optimizations:** WPF has an extensive XAML vocabulary and object model, including base class member definitions that inherit to literally hundreds of WPF-defined classes.</span></span> <span data-ttu-id="8c359-128">此外，WPF 本身橫跨數個組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-128">Also, WPF itself is spread across several assemblies.</span></span> <span data-ttu-id="8c359-129">WPF 可最佳化使用查閱資料表和其他技術其型別查閱。</span><span class="sxs-lookup"><span data-stu-id="8c359-129">WPF optimizes its type lookup using lookup tables and other techniques.</span></span> <span data-ttu-id="8c359-130">這提供效能改良的預設 XAML 結構描述內容和其 CLR 型別查閱。</span><span class="sxs-lookup"><span data-stu-id="8c359-130">This provides performance improvements over the default XAML schema context and its CLR-based type lookup.</span></span> <span data-ttu-id="8c359-131">在其中型別不在查閱資料表的情況下，行為會使用類似於預設 XAML 結構描述內容的 XAML 結構描述內容技巧。</span><span class="sxs-lookup"><span data-stu-id="8c359-131">In cases where types do not exist in a lookup table, the behavior uses XAML schema context techniques that are similar to the default XAML schema context.</span></span>  
   
- **XamlType 和 XamlMember 延伸：**WPF 會以相依性屬性延伸屬性概念，並以路由事件延伸事件概念。  為了提高這些概念在 XAML 處理作業中的能見度，WPF 會延伸 <xref:System.Xaml.XamlType> 和 <xref:System.Xaml.XamlMember>，在其中加入會報告相依性屬性和路由事件特性的內部屬性。  
+ <span data-ttu-id="8c359-132">**XamlType 和 XamlMember 副檔名：** WPF 擴充屬性具有相依性屬性的概念和事件概念與路由事件。</span><span class="sxs-lookup"><span data-stu-id="8c359-132">**XamlType and XamlMember extension:** WPF extends property concepts with dependency properties, and event concepts with routed events.</span></span> <span data-ttu-id="8c359-133">若要提供更好的可見度這些概念的 XAML 處理作業，WPF 擴充<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>，並將報告相依性屬性和路由傳送事件特性的內部屬性。</span><span class="sxs-lookup"><span data-stu-id="8c359-133">To give these concepts greater visibility for XAML processing operations, WPF extends <xref:System.Xaml.XamlType> and <xref:System.Xaml.XamlMember>, and adds internal properties that report dependency property and routed event characteristics.</span></span>  
   
-### 存取 WPF XAML 結構描述內容  
- 如果您使用以 WPF <xref:System.Windows.Markup.XamlReader?displayProperty=fullName> 或 <xref:System.Windows.Markup.XamlWriter?displayProperty=fullName> 為基礎的 XAML 技巧，則這些 XAML 讀取器和 XAML 寫入器實作已經在使用 WPF XAML 結構描述內容。  
+### <a name="accessing-the-wpf-xaml-schema-context"></a><span data-ttu-id="8c359-134">存取 WPF XAML 結構描述內容</span><span class="sxs-lookup"><span data-stu-id="8c359-134">Accessing the WPF XAML Schema Context</span></span>  
+ <span data-ttu-id="8c359-135">如果您使用 XAML 技術為基礎之 WPF 的<xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType>或<xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType>，WPF XAML 結構描述內容已在使用這些 XAML 讀取器和 XAML 寫入器實作。</span><span class="sxs-lookup"><span data-stu-id="8c359-135">If you are using XAML techniques that are based on the WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> or <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType>, the WPF XAML schema context is already in use on those XAML reader and XAML writer implementations.</span></span>  
   
- 如果您使用其他未以 WPF XAML 結構描述內容初始化的 XAML 讀取器或 XAML 寫入器實作，或許可以從 <xref:System.Windows.Markup.XamlReader.GetWpfSchemaContext%2A?displayProperty=fullName> 取得正常可用的 WPF XAML 結構描述內容。  然後，您可以在初始化其他使用 <xref:System.Xaml.XamlSchemaContext> 的 API 時使用此值。  例如，您可以呼叫 <xref:System.Xaml.XamlXmlReader.%23ctor%2A> 進行初始化並傳遞 WPF XAML 結構描述內容。  或者，您可以將 WPF XAML 結構描述內容使用於 XAML 型別系統作業。  這可能包括 <xref:System.Xaml.XamlType> 或 <xref:System.Xaml.XamlMember> 的建構初始化，或呼叫 <xref:System.Xaml.XamlSchemaContext.GetXamlType%2A?displayProperty=fullName>。  
+ <span data-ttu-id="8c359-136">如果您使用其他 XAML 讀取器或未初始化的 XAML 寫入器實作與 WPF XAML 結構描述內容，您可以取得可運作的 WPF XAML 結構描述內容從<xref:System.Windows.Markup.XamlReader.GetWpfSchemaContext%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-136">If you are using other XAML reader or XAML writer implementations that do not initialize with the WPF XAML schema context, you may be able to get a working WPF XAML schema context from <xref:System.Windows.Markup.XamlReader.GetWpfSchemaContext%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="8c359-137">您接著可以使用此值為使用其他 API 的初始化<xref:System.Xaml.XamlSchemaContext>。</span><span class="sxs-lookup"><span data-stu-id="8c359-137">You can then use this value as initialization for other API that use a <xref:System.Xaml.XamlSchemaContext>.</span></span> <span data-ttu-id="8c359-138">例如，您可以呼叫<xref:System.Xaml.XamlXmlReader.%23ctor%2A>初始化和傳遞 WPF XAML 結構描述內容。</span><span class="sxs-lookup"><span data-stu-id="8c359-138">For example, you could call <xref:System.Xaml.XamlXmlReader.%23ctor%2A> for initialization and pass the WPF XAML schema context.</span></span> <span data-ttu-id="8c359-139">或者，您可以使用 WPF XAML 結構描述內容，XAML 類型系統作業。</span><span class="sxs-lookup"><span data-stu-id="8c359-139">Or you could use the WPF XAML schema context for XAML type system operations.</span></span> <span data-ttu-id="8c359-140">這可能包括建構初始化<xref:System.Xaml.XamlType>或<xref:System.Xaml.XamlMember>，或呼叫<xref:System.Xaml.XamlSchemaContext.GetXamlType%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-140">This might include construction initialization of a <xref:System.Xaml.XamlType> or <xref:System.Xaml.XamlMember>, or calling <xref:System.Xaml.XamlSchemaContext.GetXamlType%2A?displayProperty=nameWithType>.</span></span>  
   
- 請注意，如果您從純粹 XAML 節點資料流觀點存取 WPF XAML 的特定部分，某些 WPF 架構功能可能尚未執行。  例如，尚未套用控制項的 WPF 範本。  因此，如果您存取的屬性在執行階段可能會以完整視覺化樹狀結構填入，您可能只會看見參考範本的屬性值。  另外，在非執行階段的情況下提供給 WPF 標記延伸的服務內容可能會不正確，而且可能會在嘗試寫入物件圖形時導致例外狀況。  
+ <span data-ttu-id="8c359-141">請注意，是否您從純 XAML 節點資料流角度存取 WPF XAML 的某些方面，WPF 架構功能可能未動作尚未。</span><span class="sxs-lookup"><span data-stu-id="8c359-141">Note that if you access certain aspects of WPF XAML from a pure XAML node stream perspectives, some of the WPF framework capabilities may not have acted yet.</span></span> <span data-ttu-id="8c359-142">例如，WPF 控制項的範本不尚未套用。</span><span class="sxs-lookup"><span data-stu-id="8c359-142">For example, WPF templates for controls are not yet applied.</span></span> <span data-ttu-id="8c359-143">因此如果您存取此屬性，在執行階段可能會填入完整的視覺化樹狀結構時，您可能只會看到參考範本的屬性值。</span><span class="sxs-lookup"><span data-stu-id="8c359-143">Thus if you access a property that at run time might be populated with a full visual tree, you might only see a property value that references a template.</span></span> <span data-ttu-id="8c359-144">WPF 標記延伸提供的服務內容也可能不正確所提供的非執行階段的情況下，如果，可能會導致例外狀況時，嘗試寫入物件圖形。</span><span class="sxs-lookup"><span data-stu-id="8c359-144">The service context provided for WPF markup extensions might also not be accurate if provided from a non-runtime situation, and can result in exceptions when attempting to write an object graph.</span></span>  
   
-## XAML 和組件載入  
- XAML 和 .NET Framework XAML 服務的組件載入機制已與 CLR 定義的 <xref:System.AppDomain> 概念整合。  XAML 結構描述內容會根據 <xref:System.AppDomain> 的用法以及其他因素，解讀出在執行階段或設計階段載入組件或尋找型別的方式。  根據 XAML 是 XAML 讀取器適用的鬆散 XAML、是由 `XamlBuildTask` 編譯成 DLL 的 XAML，或是由 WPF 的 `PresentationBuildTask` 所產生的 BAML，這個邏輯稍有不同。  
+## <a name="xaml-and-assembly-loading"></a><span data-ttu-id="8c359-145">XAML 和組件載入</span><span class="sxs-lookup"><span data-stu-id="8c359-145">XAML and Assembly Loading</span></span>  
+ <span data-ttu-id="8c359-146">組件載入的 XAML 和.NET Framework XAML 服務整合的 CLR 定義概念<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="8c359-146">Assembly loading for XAML and .NET Framework XAML Services integrates with the CLR-defined concept of <xref:System.AppDomain>.</span></span> <span data-ttu-id="8c359-147">XAML 結構描述內容將解釋如何載入組件或尋找在執行的階段或設計階段類型，根據使用<xref:System.AppDomain>和其他因素而定。</span><span class="sxs-lookup"><span data-stu-id="8c359-147">A XAML schema context interprets how to either load assemblies or find types at run time or design time, based on the use of <xref:System.AppDomain> and other factors.</span></span> <span data-ttu-id="8c359-148">邏輯是根據 XAML 是鬆散的 XAML，XAML 讀取器稍有不同，是編譯成 DLL 的 XAML `XamlBuildTask`，或 BAML 產生 WPF 的`PresentationBuildTask`。</span><span class="sxs-lookup"><span data-stu-id="8c359-148">The logic is slightly different depending on whether the XAML is loose XAML for a XAML reader, is XAML compiled into a DLL by `XamlBuildTask`, or is BAML generated by WPF's `PresentationBuildTask`.</span></span>  
   
- WPF 的 XAML 結構描述內容與 WPF 應用程式模型整合，後者會使用 <xref:System.AppDomain> 以及其他屬於 WPF 實作細節的因素。  
+ <span data-ttu-id="8c359-149">WPF 應用程式模型，接著會採用與整合，WPF 的 XAML 結構描述內容<xref:System.AppDomain>以及其他因素的 WPF 實作詳細資料。</span><span class="sxs-lookup"><span data-stu-id="8c359-149">The XAML schema context for WPF integrates with the WPF application model, which in turn uses <xref:System.AppDomain> as well as other factors that are WPF implementation details.</span></span>  
   
-#### XAML 讀取器輸入 \(鬆散 XAML\)  
+#### <a name="xaml-reader-input-loose-xaml"></a><span data-ttu-id="8c359-150">XAML 讀取器輸入 (鬆散的 XAML)</span><span class="sxs-lookup"><span data-stu-id="8c359-150">XAML reader input (loose XAML)</span></span>  
   
-1.  XAML 結構描述內容會在應用程式的 <xref:System.AppDomain> 中逐一查看，從最近載入的組件開始，尋找名稱所有層面皆符合的已載入組件。  如果找到符合的項目，該組件便會用於解析。  
+1.  <span data-ttu-id="8c359-151">XAML 結構描述內容逐一<xref:System.AppDomain>應用程式中，尋找符合名稱的所有層面的已載入組件的最近從最開始載入的組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-151">The XAML schema context iterates through the <xref:System.AppDomain> of the application, looking for an already-loaded assembly that matches all aspects of the name, starting from the most recently loaded assembly.</span></span> <span data-ttu-id="8c359-152">如果找到相符項目，該組件用於解析。</span><span class="sxs-lookup"><span data-stu-id="8c359-152">If a match is found, that assembly is used for resolution.</span></span>  
   
-2.  否則，下列其中一個以 CLR <xref:System.Reflection.Assembly> API 為基礎的技巧會用於載入組件：  
+2.  <span data-ttu-id="8c359-153">否則，下列技術的其中一個基礎 CLR <xref:System.Reflection.Assembly> API 可用來載入組件：</span><span class="sxs-lookup"><span data-stu-id="8c359-153">Otherwise, one of the following techniques based on CLR <xref:System.Reflection.Assembly> API are used to load an assembly:</span></span>  
   
-    -   如果在對應中是限定名稱，則在限定名稱上呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+    -   <span data-ttu-id="8c359-154">如果名稱限定在對應中，呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>上的限定名稱。</span><span class="sxs-lookup"><span data-stu-id="8c359-154">If the name is qualified in the mapping, call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> on the qualified name.</span></span>  
   
-    -   如果上一個步驟失敗，則使用簡短名稱 \(和公開金鑰語彙基元，如果有的話\) 來呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+    -   <span data-ttu-id="8c359-155">如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-155">If the previous step fails, use the short name (and public key token if present) to call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.</span></span>  
   
-    -   如果在對應中是未限定名稱，則呼叫 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>。  
+    -   <span data-ttu-id="8c359-156">如果名稱是在對應中不合格，呼叫<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-156">If the name is unqualified in the mapping, call <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.</span></span>  
   
-#### XamlBuildTask  
- `XamlBuildTask` 是用於 [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] 和 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]。  
+#### <a name="xamlbuildtask"></a><span data-ttu-id="8c359-157">XamlBuildTask</span><span class="sxs-lookup"><span data-stu-id="8c359-157">XamlBuildTask</span></span>  
+ <span data-ttu-id="8c359-158">`XamlBuildTask`用於[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]和[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="8c359-158">`XamlBuildTask` is used for [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] and [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].</span></span>  
   
- 請注意，透過 `XamlBuildTask` 的組件參考一律是完整限定的。  
+ <span data-ttu-id="8c359-159">請注意，組件參考透過`XamlBuildTask`一定是完整格式。</span><span class="sxs-lookup"><span data-stu-id="8c359-159">Note that assembly references through `XamlBuildTask` are always fully qualified.</span></span>  
   
-1.  在限定名稱上呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+1.  <span data-ttu-id="8c359-160">呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>上的限定名稱。</span><span class="sxs-lookup"><span data-stu-id="8c359-160">Call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> on the qualified name.</span></span>  
   
-2.  如果上一個步驟失敗，則使用簡短名稱 \(和公開金鑰語彙基元，如果有的話\) 來呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+2.  <span data-ttu-id="8c359-161">如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-161">If the previous step fails, use the short name (and public key token if present) to call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.</span></span>  
   
-#### BAML \(PresentationBuildTask\)  
- BAML 的組件載入機制有兩個層面：載入含有 BAML \(做為元件\) 的初始組件，以及針對 BAML 產物所參考的任何型別載入型別支援組件。  
+#### <a name="baml-presentationbuildtask"></a><span data-ttu-id="8c359-162">BAML (PresentationBuildTask)</span><span class="sxs-lookup"><span data-stu-id="8c359-162">BAML (PresentationBuildTask)</span></span>  
+ <span data-ttu-id="8c359-163">有 BAML 的組件載入至兩個層面： 載入初始的組件，其中包含做為元件，BAML 及載入 BAML 生產所參考的任何類型的型別支援組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-163">There are two aspects to assembly-loading for BAML: loading the initial assembly that contains the BAML as a component, and loading the type-backing assemblies for any types referenced by the BAML production.</span></span>  
   
-##### 初始標記的組件載入：  
- 要載入標記的來源組件之參考一律未限定。  
+##### <a name="assembly-load-for-initial-markup"></a><span data-ttu-id="8c359-164">組件載入初始的標記：</span><span class="sxs-lookup"><span data-stu-id="8c359-164">Assembly load for initial markup:</span></span>  
+ <span data-ttu-id="8c359-165">一律會不合格載入標記的來源組件的參考。</span><span class="sxs-lookup"><span data-stu-id="8c359-165">The reference to the assembly to load the markup from is always unqualified.</span></span>  
   
-1.  WPF XAML 結構描述內容會在 WPF 應用程式的 <xref:System.AppDomain> 中逐一查看，從最近載入的組件開始，尋找名稱所有層面皆符合的已載入組件。  如果找到符合的項目，該組件便會用於解析。  
+1.  <span data-ttu-id="8c359-166">WPF XAML 結構描述內容逐一<xref:System.AppDomain>WPF 應用程式中，尋找符合名稱的所有層面的已載入組件的最近從最開始載入的組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-166">The WPF XAML schema context iterates through the <xref:System.AppDomain> of the WPF application, looking for an already-loaded assembly that matches all aspects of the name, starting from the most recently loaded assembly.</span></span> <span data-ttu-id="8c359-167">如果找到相符項目，該組件用於解析。</span><span class="sxs-lookup"><span data-stu-id="8c359-167">If a match is found, that assembly is used for resolution.</span></span>  
   
-2.  如果上一個步驟失敗，則使用簡短名稱 \(和公開金鑰語彙基元，如果有的話\) 來呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+2.  <span data-ttu-id="8c359-168">如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-168">If the previous step fails, use the short name (and public key token if present) to call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.</span></span>  
   
-##### BAML 型別的組件參考：  
- BAML 產物中所用型別的組件參考一律是完整限定的 \(做為建置工作的輸出\)。  
+##### <a name="assembly-references-by-baml-types"></a><span data-ttu-id="8c359-169">BAML 類型的組件參考：</span><span class="sxs-lookup"><span data-stu-id="8c359-169">Assembly references by BAML types:</span></span>  
+ <span data-ttu-id="8c359-170">在 BAML 生產環境中使用類型的組件參考一律會完整名稱，做為建置工作的輸出。</span><span class="sxs-lookup"><span data-stu-id="8c359-170">Assembly references for types used in the BAML production are always fully qualified, as an output of the build task.</span></span>  
   
-1.  WPF XAML 結構描述內容會在 WPF 應用程式的 <xref:System.AppDomain> 中逐一查看，從最近載入的組件開始，尋找名稱所有層面皆符合的已載入組件。  如果找到符合的項目，該組件便會用於解析。  
+1.  <span data-ttu-id="8c359-171">WPF XAML 結構描述內容逐一<xref:System.AppDomain>WPF 應用程式中，尋找符合名稱的所有層面的已載入組件的最近從最開始載入的組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-171">The WPF XAML schema context iterates through the <xref:System.AppDomain> of the WPF application, looking for an already-loaded assembly that matches all aspects of the name, starting from the most recently loaded assembly.</span></span> <span data-ttu-id="8c359-172">如果找到相符項目，該組件用於解析。</span><span class="sxs-lookup"><span data-stu-id="8c359-172">If a match is found, that assembly is used for resolution.</span></span>  
   
-2.  否則，下列其中一個技巧會用於載入組件：  
+2.  <span data-ttu-id="8c359-173">否則，載入組件會使用其中一個的下列技術：</span><span class="sxs-lookup"><span data-stu-id="8c359-173">Otherwise, one of the following techniques is used to load an assembly:</span></span>  
   
-    -   在限定名稱上呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+    -   <span data-ttu-id="8c359-174">呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>上的限定名稱。</span><span class="sxs-lookup"><span data-stu-id="8c359-174">Call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> on the qualified name.</span></span>  
   
-    -   如果簡短名稱 \+ 公開金鑰語彙基元的組合符合當初載入 BAML 的來源組件，則使用該組件。  
+    -   <span data-ttu-id="8c359-175">如果簡短名稱 + 公開金鑰語彙基元組合 BAML 已從載入的組件中，使用該組件。</span><span class="sxs-lookup"><span data-stu-id="8c359-175">If a short name + public key token combination match the assembly that the BAML was loaded from, use that assembly.</span></span>  
   
-    -   使用簡短名稱 \+ 公開金鑰語彙基元來呼叫 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+    -   <span data-ttu-id="8c359-176">使用簡短名稱 + 公開金鑰語彙基元來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="8c359-176">Use short name + public key token to call <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.</span></span>  
   
-## 請參閱  
- [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="8c359-177">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8c359-177">See Also</span></span>  
+ [<span data-ttu-id="8c359-178">認識 XAML 節點資料流結構和概念</span><span class="sxs-lookup"><span data-stu-id="8c359-178">Understanding XAML Node Stream Structures and Concepts</span></span>](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

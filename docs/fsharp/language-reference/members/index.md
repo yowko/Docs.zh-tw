@@ -1,6 +1,6 @@
 ---
 title: "成員 (F#)"
-description: "成員 (F#)"
+description: "深入了解 F # 程式語言中的物件成員。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,38 +10,36 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: fe14657b25d122296a6826daba37ea99b6ee64b4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="members"></a><span data-ttu-id="6ef56-104">Members</span><span class="sxs-lookup"><span data-stu-id="6ef56-104">Members</span></span>
 
-# <a name="members"></a>Members
-
-本節描述 F# 物件類型的成員。
-
-
-## <a name="remarks"></a>備註
-「成員」是作為類型定義的一部分且以 `member` 關鍵字宣告的功能。 F# 物件類型 (例如記錄、類別、差別聯集、介面和結構) 支援成員。 如需詳細資訊，請參閱[記錄](../records.md)、[類別](../classes.md)、[差別聯集](../discriminated-Unions.md)、[介面](../interfaces.md)和[結構](../structures.md)。
-
-成員一般構成類型的公用介面，因此除非另外指定，否則成員為公用。 成員也可以宣告為私用或內用。 如需詳細資訊，請參閱[存取控制](../access-Control.md)。 類型的簽章也可以用來公開或不公開類型的特定成員。 如需詳細資訊，請參閱[簽章](../signatures.md)。
-
-只與類別搭配使用的私用欄位和 `do` 繫結，並不是真正的成員，因為它們永遠不是類型之公用介面的一部分，也不是以 `member` 關鍵字宣告，但本節中也會加以描述。
+<span data-ttu-id="6ef56-105">本節描述 F# 物件類型的成員。</span><span class="sxs-lookup"><span data-stu-id="6ef56-105">This section describes members of F# object types.</span></span>
 
 
-## <a name="related-topics"></a>相關主題
+## <a name="remarks"></a><span data-ttu-id="6ef56-106">備註</span><span class="sxs-lookup"><span data-stu-id="6ef56-106">Remarks</span></span>
+<span data-ttu-id="6ef56-107">「成員」是作為類型定義的一部分且以 `member` 關鍵字宣告的功能。</span><span class="sxs-lookup"><span data-stu-id="6ef56-107">*Members* are features that are part of a type definition and are declared with the `member` keyword.</span></span> <span data-ttu-id="6ef56-108">F# 物件類型 (例如記錄、類別、差別聯集、介面和結構) 支援成員。</span><span class="sxs-lookup"><span data-stu-id="6ef56-108">F# object types such as records, classes, discriminated unions, interfaces, and structures support members.</span></span> <span data-ttu-id="6ef56-109">如需詳細資訊，請參閱[記錄](../records.md)、[類別](../classes.md)、[差別聯集](../discriminated-Unions.md)、[介面](../interfaces.md)和[結構](../structures.md)。</span><span class="sxs-lookup"><span data-stu-id="6ef56-109">For more information, see [Records](../records.md), [Classes](../classes.md), [Discriminated Unions](../discriminated-Unions.md), [Interfaces](../interfaces.md), and [Structures](../structures.md).</span></span>
+
+<span data-ttu-id="6ef56-110">成員一般構成類型的公用介面，因此除非另外指定，否則成員為公用。</span><span class="sxs-lookup"><span data-stu-id="6ef56-110">Members typically make up the public interface for a type, which is why they are public unless otherwise specified.</span></span> <span data-ttu-id="6ef56-111">成員也可以宣告為私用或內用。</span><span class="sxs-lookup"><span data-stu-id="6ef56-111">Members can also be declared private or internal.</span></span> <span data-ttu-id="6ef56-112">如需詳細資訊，請參閱[存取控制](../access-Control.md)。</span><span class="sxs-lookup"><span data-stu-id="6ef56-112">For more information, see [Access Control](../access-Control.md).</span></span> <span data-ttu-id="6ef56-113">類型的簽章也可以用來公開或不公開類型的特定成員。</span><span class="sxs-lookup"><span data-stu-id="6ef56-113">Signatures for types can also be used to expose or not expose certain members of a type.</span></span> <span data-ttu-id="6ef56-114">如需詳細資訊，請參閱[簽章](../signatures.md)。</span><span class="sxs-lookup"><span data-stu-id="6ef56-114">For more information, see [Signatures](../signatures.md).</span></span>
+
+<span data-ttu-id="6ef56-115">只與類別搭配使用的私用欄位和 `do` 繫結，並不是真正的成員，因為它們永遠不是類型之公用介面的一部分，也不是以 `member` 關鍵字宣告，但本節中也會加以描述。</span><span class="sxs-lookup"><span data-stu-id="6ef56-115">Private fields and `do` bindings, which are used only with classes, are not true members, because they are never part of the public interface of a type and are not declared with the `member` keyword, but they are described in this section also.</span></span>
 
 
-|主題|描述|
+## <a name="related-topics"></a><span data-ttu-id="6ef56-116">相關主題</span><span class="sxs-lookup"><span data-stu-id="6ef56-116">Related Topics</span></span>
+
+
+|<span data-ttu-id="6ef56-117">主題</span><span class="sxs-lookup"><span data-stu-id="6ef56-117">Topic</span></span>|<span data-ttu-id="6ef56-118">描述</span><span class="sxs-lookup"><span data-stu-id="6ef56-118">Description</span></span>|
 |-----|-----------|
-|[類別中的 `let` 繫結](let-bindings-in-classes.md)|描述類別中私用欄位和函式的定義。|
-|[類別中的 `do` 繫結](do-bindings-in-classes.md)|描述物件初始設定程式碼的規格。|
-|[屬性](properties.md)|描述類別和其他類型中的屬性成員。|
-|[索引屬性](indexed-properties.md)|描述類別和其他類型中的類似陣列屬性。|
-|[方法](methods.md)|描述作為類型成員的函式。|
-|[建構函式](constructors.md)|描述初始化型別物件的特殊函式。|
-|[運算子多載](../operator-overloading.md)|描述型別之自訂運算子的定義。|
-|[事件](events.md)|描述 F# 中的事件定義和事件處理支援。|
-|[明確欄位：`val` 關鍵字](explicit-fields-the-val-keyword.md)|描述類型中未初始化欄位的定義。|
-
+|[<span data-ttu-id="6ef56-119">類別中的 `let` 繫結</span><span class="sxs-lookup"><span data-stu-id="6ef56-119">`let` Bindings in Classes</span></span>](let-bindings-in-classes.md)|<span data-ttu-id="6ef56-120">描述類別中私用欄位和函式的定義。</span><span class="sxs-lookup"><span data-stu-id="6ef56-120">Describes the definition of private fields and functions in classes.</span></span>|
+|[<span data-ttu-id="6ef56-121">類別中的 `do` 繫結</span><span class="sxs-lookup"><span data-stu-id="6ef56-121">`do` Bindings in Classes</span></span>](do-bindings-in-classes.md)|<span data-ttu-id="6ef56-122">描述物件初始設定程式碼的規格。</span><span class="sxs-lookup"><span data-stu-id="6ef56-122">Describes the specification of object initialization code.</span></span>|
+|[<span data-ttu-id="6ef56-123">屬性</span><span class="sxs-lookup"><span data-stu-id="6ef56-123">Properties</span></span>](properties.md)|<span data-ttu-id="6ef56-124">描述類別和其他類型中的屬性成員。</span><span class="sxs-lookup"><span data-stu-id="6ef56-124">Describes property members in classes and other types.</span></span>|
+|[<span data-ttu-id="6ef56-125">索引屬性</span><span class="sxs-lookup"><span data-stu-id="6ef56-125">Indexed Properties</span></span>](indexed-properties.md)|<span data-ttu-id="6ef56-126">描述類別和其他類型中的類似陣列屬性。</span><span class="sxs-lookup"><span data-stu-id="6ef56-126">Describes array-like properties in classes and other types.</span></span>|
+|[<span data-ttu-id="6ef56-127">方法</span><span class="sxs-lookup"><span data-stu-id="6ef56-127">Methods</span></span>](methods.md)|<span data-ttu-id="6ef56-128">描述作為類型成員的函式。</span><span class="sxs-lookup"><span data-stu-id="6ef56-128">Describes functions that are members of a type.</span></span>|
+|[<span data-ttu-id="6ef56-129">建構函式</span><span class="sxs-lookup"><span data-stu-id="6ef56-129">Constructors</span></span>](constructors.md)|<span data-ttu-id="6ef56-130">描述初始化型別物件的特殊函式。</span><span class="sxs-lookup"><span data-stu-id="6ef56-130">Describes special functions that initialize objects of a type.</span></span>|
+|[<span data-ttu-id="6ef56-131">運算子多載</span><span class="sxs-lookup"><span data-stu-id="6ef56-131">Operator Overloading</span></span>](../operator-overloading.md)|<span data-ttu-id="6ef56-132">描述型別之自訂運算子的定義。</span><span class="sxs-lookup"><span data-stu-id="6ef56-132">Describes the definition of customized operators for types.</span></span>|
+|[<span data-ttu-id="6ef56-133">事件</span><span class="sxs-lookup"><span data-stu-id="6ef56-133">Events</span></span>](events.md)|<span data-ttu-id="6ef56-134">描述 F# 中的事件定義和事件處理支援。</span><span class="sxs-lookup"><span data-stu-id="6ef56-134">Describes the definition of events and event handling support in F#.</span></span>|
+|[<span data-ttu-id="6ef56-135">明確欄位：`val` 關鍵字</span><span class="sxs-lookup"><span data-stu-id="6ef56-135">Explicit Fields: The `val` Keyword</span></span>](explicit-fields-the-val-keyword.md)|<span data-ttu-id="6ef56-136">描述類型中未初始化欄位的定義。</span><span class="sxs-lookup"><span data-stu-id="6ef56-136">Describes the definition of uninitialized fields in a type.</span></span>|

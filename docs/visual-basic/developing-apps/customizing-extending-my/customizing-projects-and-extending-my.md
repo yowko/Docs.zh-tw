@@ -1,55 +1,54 @@
 ---
-title: "Customizing Projects and Extending My with Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My namespace, customizing"
-  - "My namespace"
-  - "My namespace, extending"
+title: "使用 Visual Basic 自訂專案和擴充 My 物件"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My namespace [Visual Basic], customizing
+- My namespace
+- My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 397b345239f8707f0129ac14ab426f93372b4010
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Customizing Projects and Extending My with Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-您可以自訂專案範本以提供其他的 `My` 物件。  這樣可以讓其他開發人員更輕易地尋找和使用您的物件。  
+# <a name="customizing-projects-and-extending-my-with-visual-basic"></a><span data-ttu-id="0213e-102">使用 Visual Basic 自訂專案和擴充 My 物件</span><span class="sxs-lookup"><span data-stu-id="0213e-102">Customizing Projects and Extending My with Visual Basic</span></span>
+<span data-ttu-id="0213e-103">您可以自訂專案範本，提供額外`My`物件。</span><span class="sxs-lookup"><span data-stu-id="0213e-103">You can customize project templates to provide additional `My` objects.</span></span> <span data-ttu-id="0213e-104">這可簡化其他開發人員尋找並使用您的物件。</span><span class="sxs-lookup"><span data-stu-id="0213e-104">This makes it easy for other developers to find and use your objects.</span></span>  
   
-## 在本節中  
- [Extending the My Namespace in Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- 描述如何將自訂成員和值加入至 Visual Basic 中的 `My` 命名空間。  
+## <a name="in-this-section"></a><span data-ttu-id="0213e-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="0213e-105">In This Section</span></span>  
+ [<span data-ttu-id="0213e-106">擴充 Visual Basic 中的 My 命名空間</span><span class="sxs-lookup"><span data-stu-id="0213e-106">Extending the My Namespace in Visual Basic</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ <span data-ttu-id="0213e-107">描述如何加入自訂成員與值新增到`My`在 Visual Basic 中的命名空間。</span><span class="sxs-lookup"><span data-stu-id="0213e-107">Describes how to add custom members and values to the `My` namespace in Visual Basic.</span></span>  
   
- [Packaging and Deploying Custom My Extensions](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
- 描述如何使用 Visual Studio 範本發行自訂 `My` 命名空間擴充。  
+ [<span data-ttu-id="0213e-108">封裝和部署自訂的 My 擴充</span><span class="sxs-lookup"><span data-stu-id="0213e-108">Packaging and Deploying Custom My Extensions</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
+ <span data-ttu-id="0213e-109">描述如何將發行自訂`My`使用 Visual Studio 範本命名空間擴充功能。</span><span class="sxs-lookup"><span data-stu-id="0213e-109">Describes how to publish custom `My` namespace extensions by using Visual Studio templates.</span></span>  
   
- [Extending the Visual Basic Application Model](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- 描述如何覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 類別的成員，以便自行指定擴充功能。  
+ [<span data-ttu-id="0213e-110">擴充 Visual Basic 應用程式模型</span><span class="sxs-lookup"><span data-stu-id="0213e-110">Extending the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
+ <span data-ttu-id="0213e-111">描述如何覆寫的成員來指定您自己的擴充功能，應用程式模型<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。</span><span class="sxs-lookup"><span data-stu-id="0213e-111">Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.</span></span>  
   
- [Customizing Which Objects are Available in My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- 描述如何設定專案的 \_MYTYPE 條件式編譯常數，以便控制要啟用的 `My` 物件。  
+ [<span data-ttu-id="0213e-112">自訂 My 中可用的物件</span><span class="sxs-lookup"><span data-stu-id="0213e-112">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ <span data-ttu-id="0213e-113">描述如何控制哪個`My`藉由設定您的專案 _MYTYPE 條件式編譯常數，會啟用物件。</span><span class="sxs-lookup"><span data-stu-id="0213e-113">Describes how to control which `My` objects are enabled by setting your project's _MYTYPE conditional-compilation constant.</span></span>  
   
-## 相關章節  
- [Development with My](../../../visual-basic/developing-apps/development-with-my/index.md)  
- 描述在預設情況下，不同的專案類型可以使用的 `My` 物件。  
+## <a name="related-sections"></a><span data-ttu-id="0213e-114">相關章節</span><span class="sxs-lookup"><span data-stu-id="0213e-114">Related Sections</span></span>  
+ [<span data-ttu-id="0213e-115">使用 My 進行開發</span><span class="sxs-lookup"><span data-stu-id="0213e-115">Development with My</span></span>](../../../visual-basic/developing-apps/development-with-my/index.md)  
+ <span data-ttu-id="0213e-116">描述這`My`物件都在不同專案類型預設。</span><span class="sxs-lookup"><span data-stu-id="0213e-116">Describes which `My` objects are available in different project types by default.</span></span>  
   
- [Overview of the Visual Basic Application Model](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 描述用於控制 Windows Form 應用程式的 Visual Basic 模型。  
+ [<span data-ttu-id="0213e-117">Visual Basic 應用程式模型概觀</span><span class="sxs-lookup"><span data-stu-id="0213e-117">Overview of the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ <span data-ttu-id="0213e-118">描述 Visual Basic 的模型，用於控制 Windows Form 應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="0213e-118">Describes Visual Basic's model for controlling the behavior of Windows Forms applications.</span></span>  
   
- [How My Depends on Project Type](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- 描述在預設情況下，不同的專案類型可以使用的 `My` 物件。  
+ [<span data-ttu-id="0213e-119">My 如何相依於專案類型</span><span class="sxs-lookup"><span data-stu-id="0213e-119">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ <span data-ttu-id="0213e-120">描述這`My`物件都在不同專案類型預設。</span><span class="sxs-lookup"><span data-stu-id="0213e-120">Describes which `My` objects are available in different project types by default.</span></span>  
   
- [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- 討論編譯器 \(Compiler\) 如何使用條件式編譯，選取要編譯的特定程式碼區段，並且排除其他的程式碼區段。  
+ [<span data-ttu-id="0213e-121">條件式編譯</span><span class="sxs-lookup"><span data-stu-id="0213e-121">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ <span data-ttu-id="0213e-122">討論如何編譯器用來選取特定的編譯，並排除其他各節的程式碼區段的條件式編譯。</span><span class="sxs-lookup"><span data-stu-id="0213e-122">Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.</span></span>  
   
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- 描述提供與目前應用程式相關之屬性、方法和事件的 `My` 物件。  
+ <span data-ttu-id="0213e-123">描述`My`提供屬性、 方法和事件的物件與相關的目前應用程式。</span><span class="sxs-lookup"><span data-stu-id="0213e-123">Describes the `My` object that provides properties, methods, and events related to the current application.</span></span>  
   
-## 請參閱  
- [使用 Visual Basic 開發應用程式](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a><span data-ttu-id="0213e-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0213e-124">See Also</span></span>  
+ [<span data-ttu-id="0213e-125">使用 Visual Basic 開發應用程式</span><span class="sxs-lookup"><span data-stu-id="0213e-125">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)

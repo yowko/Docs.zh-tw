@@ -1,72 +1,69 @@
 ---
-title: "如何：自訂繪製 ToolStrip 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自訂繪圖"
-  - "繪製, 自訂"
-  - "繪製, 擁有人"
-  - "範例 [Windows Form], 工具列"
-  - "主控描繪"
-  - "ProfessionalColorTable 類別, 覆寫"
-  - "RenderMode 屬性"
-  - "工具列 [Windows Form], 變更色彩"
-  - "工具列 [Windows Form], 自訂繪圖"
-  - "ToolStrip 控制項 [Windows Forms], 變更色彩"
-  - "ToolStrip 控制項 [Windows Forms], 繪製"
-  - "ToolStripProfessionalRenderer 類別"
-  - "ToolStripRenderer 類別"
-  - "ToolStripRenderMode 類別"
-  - "ToolStripSystemRenderer 類別"
+title: "如何：自訂繪製 ToolStrip 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- toolbars [Windows Forms], custom drawing
+- drawing [Windows Forms], owner
+- ProfessionalColorTable class [Windows Forms], overriding
+- examples [Windows Forms], toolbars
+- drawing [Windows Forms], custom
+- toolbars [Windows Forms], changing colors
+- ToolStrip control [Windows Forms], drawing
+- ToolStrip control [Windows Forms], changing colors
+- custom drawing
+- owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: abb9891fb8e4dde1e94f2d8786ece299ff6579d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：自訂繪製 ToolStrip 控制項
-<xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 \(繪製\) 類別的項目：  
+# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="cc180-102">如何：自訂繪製 ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="cc180-102">How to: Custom Draw a ToolStrip Control</span></span>
+<span data-ttu-id="cc180-103"><xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：</span><span class="sxs-lookup"><span data-stu-id="cc180-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
+-   <span data-ttu-id="cc180-104"><xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。</span><span class="sxs-lookup"><span data-stu-id="cc180-104"><xref:System.Windows.Forms.ToolStripSystemRenderer> provides the appearance and style of your operating system.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 提供 Microsoft Office 的外觀和樣式。  
+-   <span data-ttu-id="cc180-105"><xref:System.Windows.Forms.ToolStripProfessionalRenderer> 提供 Microsoft Office 的外觀和樣式。</span><span class="sxs-lookup"><span data-stu-id="cc180-105"><xref:System.Windows.Forms.ToolStripProfessionalRenderer> provides the appearance and style of Microsoft Office.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> 為其他兩個呈現類別的抽象基底類別。  
+-   <span data-ttu-id="cc180-106"><xref:System.Windows.Forms.ToolStripRenderer> 為其他兩個呈現類別的抽象基底類別。</span><span class="sxs-lookup"><span data-stu-id="cc180-106"><xref:System.Windows.Forms.ToolStripRenderer> is the abstract base class for the other two rendering classes.</span></span>  
   
- 若要對 <xref:System.Windows.Forms.ToolStrip> 自訂繪圖 \(也稱為主控描繪\)，您可以覆寫其中一個轉譯器類別，並變更轉譯邏輯的層面。  
+ <span data-ttu-id="cc180-107">若要對 <xref:System.Windows.Forms.ToolStrip> 自訂繪圖 (也稱為主控描繪)，您可以覆寫其中一個轉譯器類別，並變更轉譯邏輯的層面。</span><span class="sxs-lookup"><span data-stu-id="cc180-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
   
- 下列程序會說明自訂繪圖的各種層面。  
+ <span data-ttu-id="cc180-108">下列程序會說明自訂繪圖的各種層面。</span><span class="sxs-lookup"><span data-stu-id="cc180-108">The following procedures describe various aspects of custom drawing.</span></span>  
   
-### 在提供的轉譯器之間切換  
+### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="cc180-109">在提供的轉譯器之間切換</span><span class="sxs-lookup"><span data-stu-id="cc180-109">To switch between the provided renderers</span></span>  
   
--   將 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 屬性設定為所要的 <xref:System.Windows.Forms.ToolStripRenderMode> 值。  
+-   <span data-ttu-id="cc180-110">將 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 屬性設定為所要的 <xref:System.Windows.Forms.ToolStripRenderMode> 值。</span><span class="sxs-lookup"><span data-stu-id="cc180-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
   
-     藉由 <xref:System.Windows.Forms.ToolStripRenderMode>，靜態 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 決定您應用程式的轉譯器。  <xref:System.Windows.Forms.ToolStripRenderMode> 的其他值為 <xref:System.Windows.Forms.ToolStripRenderMode>、<xref:System.Windows.Forms.ToolStripRenderMode> 和 <xref:System.Windows.Forms.ToolStripRenderMode>。  
+     <span data-ttu-id="cc180-111">藉由 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>，靜態 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 決定您應用程式的轉譯器。</span><span class="sxs-lookup"><span data-stu-id="cc180-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="cc180-112"><xref:System.Windows.Forms.ToolStripRenderMode> 的其他值為 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>、<xref:System.Windows.Forms.ToolStripRenderMode.Professional> 和 <xref:System.Windows.Forms.ToolStripRenderMode.System>。</span><span class="sxs-lookup"><span data-stu-id="cc180-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
   
-### 變更 Microsoft Office 樣式框線為直線  
+### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="cc180-113">變更 Microsoft Office 樣式框線為直線</span><span class="sxs-lookup"><span data-stu-id="cc180-113">To change the Microsoft Office–style borders to straight</span></span>  
   
--   請覆寫 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=fullName>，但不要呼叫基底類別。  
+-   <span data-ttu-id="cc180-114">請覆寫 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不要呼叫基底類別。</span><span class="sxs-lookup"><span data-stu-id="cc180-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
   
 > [!NOTE]
->  該方法有用於 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。  
+>  <span data-ttu-id="cc180-115">該方法有用於 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。</span><span class="sxs-lookup"><span data-stu-id="cc180-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
   
-### 變更 ProfessionalColorTable  
+### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="cc180-116">變更 ProfessionalColorTable</span><span class="sxs-lookup"><span data-stu-id="cc180-116">To change the ProfessionalColorTable</span></span>  
   
--   覆寫 <xref:System.Windows.Forms.ProfessionalColorTable> 和變更您想要的色彩。  
+-   <span data-ttu-id="cc180-117">覆寫 <xref:System.Windows.Forms.ProfessionalColorTable> 和變更您想要的色彩。</span><span class="sxs-lookup"><span data-stu-id="cc180-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
     System.EventArgs) Handles Me.Load  
         Dim t As MyColorTable = New MyColorTable  
@@ -116,47 +113,40 @@ caps.handback.revision: 11
         End Get  
     End Property  
     End Class  
-  
     ```  
   
-### 變更您應用程式中的所有 ToolStrip 控制項轉譯  
+### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="cc180-118">變更您應用程式中的所有 ToolStrip 控制項轉譯</span><span class="sxs-lookup"><span data-stu-id="cc180-118">To change the rendering for all ToolStrip controls in your application</span></span>  
   
-1.  使用 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=fullName> 屬性來選擇提供的轉譯器之其中一種。  
+1.  <span data-ttu-id="cc180-119">使用 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 屬性來選擇提供的轉譯器之其中一種。</span><span class="sxs-lookup"><span data-stu-id="cc180-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
   
-2.  使用 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName> 來指派自訂轉譯器。  
+2.  <span data-ttu-id="cc180-120">使用 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 來指派自訂轉譯器。</span><span class="sxs-lookup"><span data-stu-id="cc180-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
   
-3.  確保 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=fullName> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode> 的預設值。  
+3.  <span data-ttu-id="cc180-121">確保 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> 的預設值。</span><span class="sxs-lookup"><span data-stu-id="cc180-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
   
-### 關閉整個應用程式的 Microsoft Office 色彩  
+### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="cc180-122">關閉整個應用程式的 Microsoft Office 色彩</span><span class="sxs-lookup"><span data-stu-id="cc180-122">To turn off the Microsoft Office colors for the entire application</span></span>  
   
--   請設定 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=fullName> 為 `false`。  
+-   <span data-ttu-id="cc180-123">請設定 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 為 `false`。</span><span class="sxs-lookup"><span data-stu-id="cc180-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
   
-### 關閉 ToolStrip 控制項的 Microsoft Office 色彩  
+### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="cc180-124">關閉 ToolStrip 控制項的 Microsoft Office 色彩</span><span class="sxs-lookup"><span data-stu-id="cc180-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
   
--   使用與下列程式碼範例類似的程式碼。  
+-   <span data-ttu-id="cc180-125">使用與下列程式碼範例類似的程式碼。</span><span class="sxs-lookup"><span data-stu-id="cc180-125">Use code similar to the following code example.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Dim colorTable As ProfessionalColorTable()  
     colorTable.UseSystemColors = True  
     Dim toolStrip.Renderer As ToolStripProfessionalRenderer(colorTable)  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     ProfessionalColorTable colorTable = new ProfessionalColorTable();  
     colorTable.UseSystemColors = true;  
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
-  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolStripSystemRenderer>   
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>   
- <xref:System.Windows.Forms.ToolStripRenderer>   
- [使用內建主控描繪支援的控制項](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)   
- [如何：建立和設定 Windows Form 中的 ToolStrip 控制項自訂產生器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)   
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cc180-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc180-126">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripSystemRenderer>  
+ <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
+ <xref:System.Windows.Forms.ToolStripRenderer>  
+ [<span data-ttu-id="cc180-127">使用內建主控描繪支援的控制項</span><span class="sxs-lookup"><span data-stu-id="cc180-127">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [<span data-ttu-id="cc180-128">操作說明：建立和設定 Windows Forms 中的 ToolStrip 控制項自訂產生器</span><span class="sxs-lookup"><span data-stu-id="cc180-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+ [<span data-ttu-id="cc180-129">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="cc180-129">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

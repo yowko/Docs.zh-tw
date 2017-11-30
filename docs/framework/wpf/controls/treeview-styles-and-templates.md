@@ -1,89 +1,91 @@
 ---
-title: "TreeView 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], TreeView"
-  - "組件 [WPF], TreeView"
-  - "狀態 [WPF], TreeView"
-  - "樣式 [WPF], TreeView"
-  - "範本 [WPF], TreeView"
-  - "TreeView [WPF], 樣式和範本"
+title: "TreeView 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ControlTemplate [WPF], TreeView
+- templates [WPF], TreeView
+- parts [WPF], TreeView
+- states [WPF], TreeView
+- styles [WPF], TreeView
+- TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 78e5faf7aab684f2a8760204079a26a61b9c3fda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# TreeView 樣式和範本
-本主題說明 <xref:System.Windows.Controls.TreeView> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="treeview-styles-and-templates"></a><span data-ttu-id="4e598-102">TreeView 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="4e598-102">TreeView Styles and Templates</span></span>
+<span data-ttu-id="4e598-103">本主題描述樣式和範本<xref:System.Windows.Controls.TreeView>控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.TreeView> control.</span></span> <span data-ttu-id="4e598-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="4e598-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="4e598-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## TreeView 組件  
- <xref:System.Windows.Controls.TreeView> 控制項沒有任何具名組件。  
+## <a name="treeview-parts"></a><span data-ttu-id="4e598-106">樹狀檢視組件</span><span class="sxs-lookup"><span data-stu-id="4e598-106">TreeView Parts</span></span>  
+ <span data-ttu-id="4e598-107"><xref:System.Windows.Controls.TreeView>控制項沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="4e598-107">The <xref:System.Windows.Controls.TreeView> control does not have any named parts.</span></span>  
   
- 當您建立 <xref:System.Windows.Controls.TreeView> 的 <xref:System.Windows.Controls.ControlTemplate> 時，您的範本可能在 <xref:System.Windows.Controls.ScrollViewer> 內包含 <xref:System.Windows.Controls.ItemsPresenter> \(<xref:System.Windows.Controls.ItemsPresenter> 會顯示 <xref:System.Windows.Controls.TreeView> 中的每一個項目，而 <xref:System.Windows.Controls.ScrollViewer> 會啟用控制項內的捲動功能\)。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer> 的直接子系，您必須將 <xref:System.Windows.Controls.ItemsPresenter> 命名為 `ItemsPresenter`。  
+ <span data-ttu-id="4e598-108">當您建立<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.TreeView>，可能會包含您的範本<xref:System.Windows.Controls.ItemsPresenter>內<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="4e598-108">When you create a <xref:System.Windows.Controls.ControlTemplate> for an <xref:System.Windows.Controls.TreeView>, your template might contain a <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="4e598-109">(<xref:System.Windows.Controls.ItemsPresenter>會顯示每個項目<xref:System.Windows.Controls.TreeView>;<xref:System.Windows.Controls.ScrollViewer>可捲動控制項內)。</span><span class="sxs-lookup"><span data-stu-id="4e598-109">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.TreeView>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="4e598-110">如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子系<xref:System.Windows.Controls.ScrollViewer>，您必須提供<xref:System.Windows.Controls.ItemsPresenter>名稱`ItemsPresenter`。</span><span class="sxs-lookup"><span data-stu-id="4e598-110">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## TreeView 狀態  
- 下表列出 <xref:System.Windows.Controls.TreeView> 控制項的可見狀態。  
+## <a name="treeview-states"></a><span data-ttu-id="4e598-111">樹狀檢視狀態</span><span class="sxs-lookup"><span data-stu-id="4e598-111">TreeView States</span></span>  
+ <span data-ttu-id="4e598-112">下表列出的視覺狀態<xref:System.Windows.Controls.TreeView>控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-112">The following table lists the visual states for the <xref:System.Windows.Controls.TreeView> control.</span></span>  
   
-||||  
+|<span data-ttu-id="4e598-113">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="4e598-113">VisualState Name</span></span>|<span data-ttu-id="4e598-114">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="4e598-114">VisualStateGroup Name</span></span>|<span data-ttu-id="4e598-115">描述</span><span class="sxs-lookup"><span data-stu-id="4e598-115">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="4e598-116">驗證</span><span class="sxs-lookup"><span data-stu-id="4e598-116">Valid</span></span>|<span data-ttu-id="4e598-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4e598-117">ValidationStates</span></span>|<span data-ttu-id="4e598-118">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="4e598-118">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="4e598-119">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="4e598-119">InvalidFocused</span></span>|<span data-ttu-id="4e598-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4e598-120">ValidationStates</span></span>|<span data-ttu-id="4e598-121"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="4e598-122">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="4e598-122">InvalidUnfocused</span></span>|<span data-ttu-id="4e598-123">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4e598-123">ValidationStates</span></span>|<span data-ttu-id="4e598-124"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="4e598-124">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## TreeViewItem 組件  
- 下表列出 <xref:System.Windows.Controls.TreeViewItem> 控制項的具名組件。  
+## <a name="treeviewitem-parts"></a><span data-ttu-id="4e598-125">TreeViewItem 的組件</span><span class="sxs-lookup"><span data-stu-id="4e598-125">TreeViewItem Parts</span></span>  
+ <span data-ttu-id="4e598-126">下表列出的具名組件<xref:System.Windows.Controls.TreeViewItem>控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-126">The following table lists the named parts for the <xref:System.Windows.Controls.TreeViewItem> control.</span></span>  
   
-|組件|型別|描述|  
-|--------|--------|--------|  
-|PART\_Header|<xref:System.Windows.FrameworkElement>|視覺化項目，包含 <xref:System.Windows.Controls.TreeView> 控制項的標頭內容。|  
+|<span data-ttu-id="4e598-127">組件</span><span class="sxs-lookup"><span data-stu-id="4e598-127">Part</span></span>|<span data-ttu-id="4e598-128">類型</span><span class="sxs-lookup"><span data-stu-id="4e598-128">Type</span></span>|<span data-ttu-id="4e598-129">說明</span><span class="sxs-lookup"><span data-stu-id="4e598-129">Description</span></span>|  
+|----------|----------|-----------------|  
+|<span data-ttu-id="4e598-130">PART_Header</span><span class="sxs-lookup"><span data-stu-id="4e598-130">PART_Header</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="4e598-131">包含該標頭內容的視覺項目<xref:System.Windows.Controls.TreeView>控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-131">A visual element that contains that header content of the <xref:System.Windows.Controls.TreeView> control.</span></span>|  
   
-## TreeViewItem 狀態  
- 下表列出 <xref:System.Windows.Controls.TreeViewItem> 控制項的可見狀態。  
+## <a name="treeviewitem-states"></a><span data-ttu-id="4e598-132">TreeViewItem 狀態</span><span class="sxs-lookup"><span data-stu-id="4e598-132">TreeViewItem States</span></span>  
+ <span data-ttu-id="4e598-133">下表列出的視覺狀態<xref:System.Windows.Controls.TreeViewItem>控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-133">The following table lists the visual states for <xref:System.Windows.Controls.TreeViewItem> control.</span></span>  
   
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|--------------------|-------------------------|--------|  
-|Normal|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.TreeViewItem> 上方。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.TreeViewItem> 已停用。|  
-|Focused|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 有焦點。|  
-|Unfocused|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 沒有焦點。|  
-|Expanded|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 控制項已展開。|  
-|Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 控制項已收合。|  
-|HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> 有項目。|  
-|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> 沒有項目。|  
-|Selected|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 已選取。|  
-|SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 已選取但非作用中。|  
-|Unselected|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> 未選取。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="4e598-134">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="4e598-134">VisualState Name</span></span>|<span data-ttu-id="4e598-135">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="4e598-135">VisualStateGroup Name</span></span>|<span data-ttu-id="4e598-136">描述</span><span class="sxs-lookup"><span data-stu-id="4e598-136">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="4e598-137">一般</span><span class="sxs-lookup"><span data-stu-id="4e598-137">Normal</span></span>|<span data-ttu-id="4e598-138">CommonStates</span><span class="sxs-lookup"><span data-stu-id="4e598-138">CommonStates</span></span>|<span data-ttu-id="4e598-139">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="4e598-139">The default state.</span></span>|  
+|<span data-ttu-id="4e598-140">MouseOver</span><span class="sxs-lookup"><span data-stu-id="4e598-140">MouseOver</span></span>|<span data-ttu-id="4e598-141">CommonStates</span><span class="sxs-lookup"><span data-stu-id="4e598-141">CommonStates</span></span>|<span data-ttu-id="4e598-142">滑鼠指標位於<xref:System.Windows.Controls.TreeViewItem>。</span><span class="sxs-lookup"><span data-stu-id="4e598-142">The mouse pointer is positioned over the <xref:System.Windows.Controls.TreeViewItem>.</span></span>|  
+|<span data-ttu-id="4e598-143">已停用</span><span class="sxs-lookup"><span data-stu-id="4e598-143">Disabled</span></span>|<span data-ttu-id="4e598-144">CommonStates</span><span class="sxs-lookup"><span data-stu-id="4e598-144">CommonStates</span></span>|<span data-ttu-id="4e598-145"><xref:System.Windows.Controls.TreeViewItem>已停用。</span><span class="sxs-lookup"><span data-stu-id="4e598-145">The <xref:System.Windows.Controls.TreeViewItem> is disabled.</span></span>|  
+|<span data-ttu-id="4e598-146">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="4e598-146">Focused</span></span>|<span data-ttu-id="4e598-147">FocusStates</span><span class="sxs-lookup"><span data-stu-id="4e598-147">FocusStates</span></span>|<span data-ttu-id="4e598-148"><xref:System.Windows.Controls.TreeViewItem>具有焦點。</span><span class="sxs-lookup"><span data-stu-id="4e598-148">The <xref:System.Windows.Controls.TreeViewItem> has focus.</span></span>|  
+|<span data-ttu-id="4e598-149">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="4e598-149">Unfocused</span></span>|<span data-ttu-id="4e598-150">FocusStates</span><span class="sxs-lookup"><span data-stu-id="4e598-150">FocusStates</span></span>|<span data-ttu-id="4e598-151"><xref:System.Windows.Controls.TreeViewItem>沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="4e598-151">The <xref:System.Windows.Controls.TreeViewItem> does not have focus.</span></span>|  
+|<span data-ttu-id="4e598-152">展開的</span><span class="sxs-lookup"><span data-stu-id="4e598-152">Expanded</span></span>|<span data-ttu-id="4e598-153">ExpansionStates</span><span class="sxs-lookup"><span data-stu-id="4e598-153">ExpansionStates</span></span>|<span data-ttu-id="4e598-154"><xref:System.Windows.Controls.TreeViewItem>展開控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-154">The <xref:System.Windows.Controls.TreeViewItem> control is expanded.</span></span>|  
+|<span data-ttu-id="4e598-155">Collapsed</span><span class="sxs-lookup"><span data-stu-id="4e598-155">Collapsed</span></span>|<span data-ttu-id="4e598-156">ExpansionStates</span><span class="sxs-lookup"><span data-stu-id="4e598-156">ExpansionStates</span></span>|<span data-ttu-id="4e598-157"><xref:System.Windows.Controls.TreeViewItem>控制項摺疊。</span><span class="sxs-lookup"><span data-stu-id="4e598-157">The <xref:System.Windows.Controls.TreeViewItem> control is collapsed.</span></span>|  
+|<span data-ttu-id="4e598-158">HasItems</span><span class="sxs-lookup"><span data-stu-id="4e598-158">HasItems</span></span>|<span data-ttu-id="4e598-159">HasItemsStates</span><span class="sxs-lookup"><span data-stu-id="4e598-159">HasItemsStates</span></span>|<span data-ttu-id="4e598-160"><xref:System.Windows.Controls.TreeViewItem>有項目。</span><span class="sxs-lookup"><span data-stu-id="4e598-160">The <xref:System.Windows.Controls.TreeViewItem> has items.</span></span>|  
+|<span data-ttu-id="4e598-161">NoItems</span><span class="sxs-lookup"><span data-stu-id="4e598-161">NoItems</span></span>|<span data-ttu-id="4e598-162">HasItemsStates</span><span class="sxs-lookup"><span data-stu-id="4e598-162">HasItemsStates</span></span>|<span data-ttu-id="4e598-163"><xref:System.Windows.Controls.TreeViewItem>沒有任何項目。</span><span class="sxs-lookup"><span data-stu-id="4e598-163">The <xref:System.Windows.Controls.TreeViewItem> does not have items.</span></span>|  
+|<span data-ttu-id="4e598-164">已選取</span><span class="sxs-lookup"><span data-stu-id="4e598-164">Selected</span></span>|<span data-ttu-id="4e598-165">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="4e598-165">SelectionStates</span></span>|<span data-ttu-id="4e598-166"><xref:System.Windows.Controls.TreeViewItem>已選取。</span><span class="sxs-lookup"><span data-stu-id="4e598-166">The <xref:System.Windows.Controls.TreeViewItem> is selected.</span></span>|  
+|<span data-ttu-id="4e598-167">SelectedInactive</span><span class="sxs-lookup"><span data-stu-id="4e598-167">SelectedInactive</span></span>|<span data-ttu-id="4e598-168">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="4e598-168">SelectionStates</span></span>|<span data-ttu-id="4e598-169"><xref:System.Windows.Controls.TreeViewItem>選取但不在使用中。</span><span class="sxs-lookup"><span data-stu-id="4e598-169">The <xref:System.Windows.Controls.TreeViewItem> is selected but not active.</span></span>|  
+|<span data-ttu-id="4e598-170">未選取</span><span class="sxs-lookup"><span data-stu-id="4e598-170">Unselected</span></span>|<span data-ttu-id="4e598-171">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="4e598-171">SelectionStates</span></span>|<span data-ttu-id="4e598-172"><xref:System.Windows.Controls.TreeViewItem>未選取。</span><span class="sxs-lookup"><span data-stu-id="4e598-172">The <xref:System.Windows.Controls.TreeViewItem> is not selected.</span></span>|  
+|<span data-ttu-id="4e598-173">驗證</span><span class="sxs-lookup"><span data-stu-id="4e598-173">Valid</span></span>|<span data-ttu-id="4e598-174">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4e598-174">ValidationStates</span></span>|<span data-ttu-id="4e598-175">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="4e598-175">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="4e598-176">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="4e598-176">InvalidFocused</span></span>|<span data-ttu-id="4e598-177">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4e598-177">ValidationStates</span></span>|<span data-ttu-id="4e598-178"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="4e598-178">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="4e598-179">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="4e598-179">InvalidUnfocused</span></span>|<span data-ttu-id="4e598-180">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4e598-180">ValidationStates</span></span>|<span data-ttu-id="4e598-181"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="4e598-181">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## TreeView ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.TreeView> 控制項的 <xref:System.Windows.Controls.ControlTemplate> 及其關聯的型別。  
+## <a name="treeview-controltemplate-example"></a><span data-ttu-id="4e598-182">TreeView ControlTemplate 範例</span><span class="sxs-lookup"><span data-stu-id="4e598-182">TreeView ControlTemplate Example</span></span>  
+ <span data-ttu-id="4e598-183">下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.TreeView>控制項和其相關聯的類型。</span><span class="sxs-lookup"><span data-stu-id="4e598-183">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.TreeView> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
+ [!code-xaml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
- 前述範例使用了下列一或多項資源。  
+ <span data-ttu-id="4e598-184">上述範例使用下列一或多項資源。</span><span class="sxs-lookup"><span data-stu-id="4e598-184">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="4e598-185">如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。</span><span class="sxs-lookup"><span data-stu-id="4e598-185">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="4e598-186">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e598-186">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="4e598-187">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="4e598-187">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="4e598-188">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="4e598-188">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="4e598-189">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="4e598-189">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="4e598-190">透過建立 ControlTemplate 自訂現有控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="4e598-190">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

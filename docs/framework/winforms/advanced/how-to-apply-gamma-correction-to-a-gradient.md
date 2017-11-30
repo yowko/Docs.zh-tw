@@ -1,42 +1,46 @@
 ---
-title: "如何：將 Gamma 修正套用至漸層 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "漸層筆刷, Gamma 修正"
-  - "漸層, Gamma 修正"
+title: "如何：將 Gamma 修正套用至漸層"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gradient brushes [Windows Forms], gamma correction
+- gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2721a45381f2d0befe82d6d0db2630f3eae08d51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將 Gamma 修正套用至漸層
-您可以將筆刷的 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 屬性設定為 `true`，即可啟用線形漸層筆刷的 Gamma 修正。  將 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 屬性設定為 `false`，即可停用 Gamma 修正。  依照預設，Gamma 修正為停用狀態。  
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a><span data-ttu-id="57c27-102">如何：將 Gamma 修正套用至漸層</span><span class="sxs-lookup"><span data-stu-id="57c27-102">How to: Apply Gamma Correction to a Gradient</span></span>
+<span data-ttu-id="57c27-103">您可以藉由設定筆刷的啟用線性漸層筆刷的 gamma 修正<xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="57c27-103">You can enable gamma correction for a linear gradient brush by setting the brush's <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> property to `true`.</span></span> <span data-ttu-id="57c27-104">您可以藉由設定停用 gamma 修正<xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A>屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="57c27-104">You can disable gamma correction by setting the <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> property to `false`.</span></span> <span data-ttu-id="57c27-105">預設為停用 gamma 修正。</span><span class="sxs-lookup"><span data-stu-id="57c27-105">Gamma correction is disabled by default.</span></span>  
   
-## 範例  
- 下列範例建立線形漸層筆刷，並使用該筆刷填滿兩個矩形。  填滿第一個矩形時不使用 Gamma 修正，填滿第二個矩形時則會使用 Gamma 修正。  
+## <a name="example"></a><span data-ttu-id="57c27-106">範例</span><span class="sxs-lookup"><span data-stu-id="57c27-106">Example</span></span>  
+ <span data-ttu-id="57c27-107">範例會建立線形漸層筆刷，並使用該筆刷填滿兩個矩形。</span><span class="sxs-lookup"><span data-stu-id="57c27-107">The example creates a linear gradient brush and uses that brush to fill two rectangles.</span></span> <span data-ttu-id="57c27-108">Gamma 修正沒有填滿第一個矩形，第二個矩形會填入 gamma 修正。</span><span class="sxs-lookup"><span data-stu-id="57c27-108">The first rectangle is filled without gamma correction, and the second rectangle is filled with gamma correction.</span></span>  
   
- 下圖顯示的是兩個已填滿的矩形。  上面的矩形沒有 Gamma 修正，中間顯示為暗色，  下面的矩形有 Gamma 修正，顯示的濃度較為一致。  
+ <span data-ttu-id="57c27-109">下圖顯示兩個填滿的矩形。</span><span class="sxs-lookup"><span data-stu-id="57c27-109">The following illustration shows the two filled rectangles.</span></span> <span data-ttu-id="57c27-110">最上層的矩形中，並沒有 gamma 修正顯示暗色，中間。</span><span class="sxs-lookup"><span data-stu-id="57c27-110">The top rectangle, which does not have gamma correction, appears dark in the middle.</span></span> <span data-ttu-id="57c27-111">下方的矩形，gamma 修正，其看似具有濃度較為一致。</span><span class="sxs-lookup"><span data-stu-id="57c27-111">The bottom rectangle, which has gamma correction, appears to have more uniform intensity.</span></span>  
   
- ![漸層](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")  
+ <span data-ttu-id="57c27-112">![漸層停駐](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")</span><span class="sxs-lookup"><span data-stu-id="57c27-112">![Gradient](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")</span></span>  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e` \(即 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數\)。  
+## <a name="compiling-the-code"></a><span data-ttu-id="57c27-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="57c27-113">Compiling the Code</span></span>  
+ <span data-ttu-id="57c27-114">上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。</span><span class="sxs-lookup"><span data-stu-id="57c27-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 請參閱  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush>   
- [使用漸層筆刷填滿形狀](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="57c27-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="57c27-115">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush>  
+ [<span data-ttu-id="57c27-116">使用漸層筆刷填滿形狀</span><span class="sxs-lookup"><span data-stu-id="57c27-116">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

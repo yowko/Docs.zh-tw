@@ -1,64 +1,65 @@
 ---
-title: "Windows Form DataGrid 控制項的鍵盤快速鍵 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid 控制項 [Windows Form], 巡覽鍵"
-  - "鍵盤快速鍵, DataGrid 控制項"
+title: "Windows Form DataGrid 控制項的鍵盤快速鍵"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form DataGrid 控制項的鍵盤快速鍵
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a><span data-ttu-id="0e0f3-102">Windows Form DataGrid 控制項的鍵盤快速鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-102">Keyboard Shortcuts for the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。  如需詳細資訊，請參閱 [Windows Form DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <span data-ttu-id="0e0f3-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="0e0f3-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- 下列資料表將列出可用來在 Windows Form <xref:System.Windows.Forms.DataGrid> 控制項內巡覽的鍵盤快速鍵：  
+ <span data-ttu-id="0e0f3-105">下表列出可用於巡覽 Windows 表單中的鍵盤快速鍵<xref:System.Windows.Forms.DataGrid>控制項：</span><span class="sxs-lookup"><span data-stu-id="0e0f3-105">The following table lists the keyboard shortcuts that can be used for navigation within the Windows Forms <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
-|動作|快速鍵|  
-|--------|---------|  
-|完成儲存格輸入並移至下一個儲存格。<br /><br /> 如果焦點 \(Focus\) 在子資料表連結上，則會巡覽至該資料表。|ENTER|  
-|如果在儲存格編輯模式中，會取消儲存格編輯。<br /><br /> 如果在跑馬燈選取中，則會取消資料列上的編輯。|ESC|  
-|當編輯儲存格時刪除插入點前的字元。|退格鍵|  
-|當編輯儲存格時刪除插入點後的字元。|DELETE|  
-|移至目前資料列的第一個儲存格。|HOME|  
-|移至目前資料列的最後一個儲存格。|END|  
-|反白顯示目前儲存格中的字元並將插入點置於行尾。  行為與按兩下儲存格相同。|F2|  
-|如果焦點在儲存格上，則會移至資料列的下一個儲存格。<br /><br /> 如果焦點在資料列的最後一個儲存格上，則會移至資料列的第一個子資料表連結並展開它。<br /><br /> 如果焦點在子資料表連結上，則會移至下一個子連結。<br /><br /> 如果焦點在最後一個子連結上，則會移至下一個資料列的第一個儲存格。|TAB|  
-|如果焦點在儲存格上，則會移至資料列的上一個儲存格。<br /><br /> 如果焦點在資料列的第一個儲存格上，則會移至上一個資料列的最後一個展開的子資料表連結，或是移至上一個資料列的最後一個儲存格。<br /><br /> 如果焦點在子資料表連結上，則會移至上一個子連結。<br /><br /> 如果焦點在第一個子連結上，則會移至上一個資料列的最後一個儲存格。|SHIFT\+TAB|  
-|依定位順序移至下一個控制項。|CTRL\+TAB|  
-|依定位順序移至上一個控制項。|CTRL\+SHIFT\+TAB|  
-|如果在子資料表中，就會上移至父資料表。  行為與按一下 \[上一步\] 按鈕相同。|ALT\+ 向左鍵|  
-|展開子資料表連結。  ALT\+ 向下鍵會展開所有連結，而不只是選取的連結。|ALT\+ 向下鍵或 CTRL\+ 加號|  
-|摺疊子資料表連結。  ALT\+ 向上鍵會摺疊所有連結，而不只是選取的連結。|ALT\+ 向上鍵或 CTRL\+ 減號|  
-|依箭號方向移至最遠的非空白儲存格。|CTRL\+ARROW|  
-|依箭頭方向將選取擴充一個資料列 \(不包含子資料表連結\)。|SHIFT\+ 向上\/向下鍵|  
-|依箭頭方向將選取擴充至最遠的非空白資料列 \(不包含子資料表連結\)。|CTRL\+SHIFT\+ 向上\/向下鍵|  
-|移至最左上角的儲存格。|CTRL\+HOME|  
-|移至最右下角的儲存格。|CTRL\+END|  
-|將選取擴充至頂端列。|CTRL\+SHIFT\+HOME|  
-|將選取擴充至底端列。|CTRL\+SHIFT\+END|  
-|選取目前資料列 \(不包含子資料表連結\)。|SHIFT\+ 空格鍵|  
-|選取整個方格 \(不包含子資料表連結\)。|CTRL\+A|  
-|當在子資料表時顯示父資料列。|CTRL\+PAGE DOWN|  
-|當在子資料表時隱藏父資料列。|CTRL\+PAGE UP|  
-|將選取往螢幕下方擴充 \(不包含子資料表連結\)。|SHIFT\+PAGE DOWN|  
-|將選取往螢幕上方擴充 \(不包含子資料表連結\)。|SHIFT\+PAGE UP|  
-|呼叫目前資料列的 <xref:System.Windows.Forms.DataGrid.EndEdit%2A> 方法。|CTRL\+ENTER|  
-|當處於編輯模式時將 <xref:System.DBNull.Value?displayProperty=fullName> 值輸入儲存格中。|CTRL\+0|  
+|<span data-ttu-id="0e0f3-106">動作</span><span class="sxs-lookup"><span data-stu-id="0e0f3-106">Action</span></span>|<span data-ttu-id="0e0f3-107">快速鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-107">Shortcut</span></span>|  
+|------------|--------------|  
+|<span data-ttu-id="0e0f3-108">完成資料格的項目，並移至下一個儲存格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-108">Complete a cell entry and move down to the next cell.</span></span><br /><br /> <span data-ttu-id="0e0f3-109">如果焦點是在子資料表連結，請瀏覽至該資料表。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-109">If focus is on a child table link, navigate to that table.</span></span>|<span data-ttu-id="0e0f3-110">ENTER</span><span class="sxs-lookup"><span data-stu-id="0e0f3-110">ENTER</span></span>|  
+|<span data-ttu-id="0e0f3-111">如果在資料格的編輯模式，則會取消編輯儲存格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-111">Cancel cell editing if in cell edit mode.</span></span><br /><br /> <span data-ttu-id="0e0f3-112">如果在點線框選取取消編輯資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-112">If in marquee selection, cancel editing on the row.</span></span>|<span data-ttu-id="0e0f3-113">ESC</span><span class="sxs-lookup"><span data-stu-id="0e0f3-113">ESC</span></span>|  
+|<span data-ttu-id="0e0f3-114">編輯儲存格時，請刪除前插入點的字元。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-114">Delete the character before the insertion point when editing a cell.</span></span>|<span data-ttu-id="0e0f3-115">退格鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-115">BACKSPACE</span></span>|  
+|<span data-ttu-id="0e0f3-116">編輯儲存格時，請在插入點後刪除的字元。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-116">Delete the character after the insertion point when editing a cell.</span></span>|<span data-ttu-id="0e0f3-117">DELETE</span><span class="sxs-lookup"><span data-stu-id="0e0f3-117">DELETE</span></span>|  
+|<span data-ttu-id="0e0f3-118">移至目前的資料列中的第一個儲存格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-118">Move to the first cell in the current row.</span></span>|<span data-ttu-id="0e0f3-119">首頁</span><span class="sxs-lookup"><span data-stu-id="0e0f3-119">HOME</span></span>|  
+|<span data-ttu-id="0e0f3-120">移到最後一個目前的資料列中的資料格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-120">Move to the last cell in the current row.</span></span>|<span data-ttu-id="0e0f3-121">END</span><span class="sxs-lookup"><span data-stu-id="0e0f3-121">END</span></span>|  
+|<span data-ttu-id="0e0f3-122">反白顯示目前儲存格中的字元，並將插入點置於一行的結尾。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-122">Highlight characters in the current cell and position the insertion point at the end of the line.</span></span> <span data-ttu-id="0e0f3-123">相同的行為與按兩下儲存格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-123">Same behavior as double-clicking a cell.</span></span>|<span data-ttu-id="0e0f3-124">F2</span><span class="sxs-lookup"><span data-stu-id="0e0f3-124">F2</span></span>|  
+|<span data-ttu-id="0e0f3-125">如果焦點是在儲存格上，移至下一個儲存格的資料列中。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-125">If focus is on a cell, move to the next cell in the row.</span></span><br /><br /> <span data-ttu-id="0e0f3-126">如果焦點是資料列中的最後一個儲存格上，移至 資料列的第一個子資料表連結，然後展開它。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-126">If focus is on the last cell in a row, move to the first child table link of the row and expand it.</span></span><br /><br /> <span data-ttu-id="0e0f3-127">如果焦點是在子連結，移至下一個子連結。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-127">If focus is on a child link, move to the next child link.</span></span><br /><br /> <span data-ttu-id="0e0f3-128">如果焦點在最後一個子連結，移至下一個資料列的第一個資料格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-128">If focus is on the last child link, move to the first cell of the next row.</span></span>|<span data-ttu-id="0e0f3-129">TAB</span><span class="sxs-lookup"><span data-stu-id="0e0f3-129">TAB</span></span>|  
+|<span data-ttu-id="0e0f3-130">如果焦點是在儲存格上，移至先前的資料格的資料列中。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-130">If focus is on a cell, move to the previous cell in the row.</span></span><br /><br /> <span data-ttu-id="0e0f3-131">如果焦點是在資料列中的第一個儲存格上，移至先前的資料列的最後一個展開的子資料表連結，或移到最後一個資料格的上一個資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-131">If focus is on the first cell in a row, move to the last expanded child table link of the previous row, or move to the last cell of the previous row.</span></span><br /><br /> <span data-ttu-id="0e0f3-132">如果焦點是在子連結，移至前一個子連結。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-132">If focus is on a child link, move to the previous child link.</span></span><br /><br /> <span data-ttu-id="0e0f3-133">如果焦點是在第一個子連結，移至最後一個資料格的上一個資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-133">If focus is on the first child link, move to the last cell of the previous row.</span></span>|<span data-ttu-id="0e0f3-134">SHIFT+TAB</span><span class="sxs-lookup"><span data-stu-id="0e0f3-134">SHIFT+TAB</span></span>|  
+|<span data-ttu-id="0e0f3-135">移至定位順序中的下一個控制項。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-135">Move to the next control in the tab order.</span></span>|<span data-ttu-id="0e0f3-136">CTRL+TAB</span><span class="sxs-lookup"><span data-stu-id="0e0f3-136">CTRL+TAB</span></span>|  
+|<span data-ttu-id="0e0f3-137">移至定位順序中的上一個控制項。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-137">Move to the previous control in the tab order.</span></span>|<span data-ttu-id="0e0f3-138">CTRL+SHIFT+TAB</span><span class="sxs-lookup"><span data-stu-id="0e0f3-138">CTRL+SHIFT+TAB</span></span>|  
+|<span data-ttu-id="0e0f3-139">子資料表中，向上移動以父資料表。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-139">Move up to the parent table if in a child table.</span></span> <span data-ttu-id="0e0f3-140">如同按一下 [上一頁] 按鈕的行為相同。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-140">Same behavior as clicking the Back button.</span></span>|<span data-ttu-id="0e0f3-141">ALT+向左鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-141">ALT+LEFT ARROW</span></span>|  
+|<span data-ttu-id="0e0f3-142">展開子資料表連結。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-142">Expand child table links.</span></span> <span data-ttu-id="0e0f3-143">ALT + 向下鍵會展開所有連結，而不只是選取的連結。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-143">ALT+DOWN ARROW expands all links, not just the ones selected.</span></span>|<span data-ttu-id="0e0f3-144">ALT + 向下鍵或 CTRL + 加號</span><span class="sxs-lookup"><span data-stu-id="0e0f3-144">ALT+DOWN ARROW or CTRL+PLUS SIGN</span></span>|  
+|<span data-ttu-id="0e0f3-145">摺疊子資料表連結。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-145">Collapse child table links.</span></span> <span data-ttu-id="0e0f3-146">ALT + 向上鍵可摺疊所有連結，而不只是選取的連結。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-146">ALT+UP ARROW collapses all links, not just the ones selected.</span></span>|<span data-ttu-id="0e0f3-147">ALT + 向上鍵或 CTRL + 減號</span><span class="sxs-lookup"><span data-stu-id="0e0f3-147">ALT+UP ARROW or CTRL+MINUS SIGN</span></span>|  
+|<span data-ttu-id="0e0f3-148">移至箭頭的方向遠的非空白儲存格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-148">Move to the farthest nonblank cell in the direction of the arrow.</span></span>|<span data-ttu-id="0e0f3-149">CTRL + 方向鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-149">CTRL+ARROW</span></span>|  
+|<span data-ttu-id="0e0f3-150">延伸選取範圍一個資料列中 （不包括子資料表連結） 箭頭的方向。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-150">Extend the selection one row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="0e0f3-151">SHIFT + 向上/向下鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-151">SHIFT+UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="0e0f3-152">延伸選取範圍中 （不包括子資料表連結） 箭頭的方向遠的非空白資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-152">Extend the selection to farthest nonblank row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="0e0f3-153">CTRL + SHIFT + 向上/向下鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-153">CTRL+SHIFT+ UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="0e0f3-154">移至左上資料格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-154">Move to the upper-left cell.</span></span>|<span data-ttu-id="0e0f3-155">CTRL + HOME</span><span class="sxs-lookup"><span data-stu-id="0e0f3-155">CTRL+HOME</span></span>|  
+|<span data-ttu-id="0e0f3-156">移至右下資料格。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-156">Move to the lower-right cell.</span></span>|<span data-ttu-id="0e0f3-157">CTRL + END</span><span class="sxs-lookup"><span data-stu-id="0e0f3-157">CTRL+END</span></span>|  
+|<span data-ttu-id="0e0f3-158">延伸選取範圍至上方的資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-158">Extend the selection to the top row.</span></span>|<span data-ttu-id="0e0f3-159">CTRL + SHIFT + HOME</span><span class="sxs-lookup"><span data-stu-id="0e0f3-159">CTRL+SHIFT+HOME</span></span>|  
+|<span data-ttu-id="0e0f3-160">延伸選取範圍到底部資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-160">Extend the selection to the bottom row.</span></span>|<span data-ttu-id="0e0f3-161">CTRL + SHIFT + END</span><span class="sxs-lookup"><span data-stu-id="0e0f3-161">CTRL+SHIFT+END</span></span>|  
+|<span data-ttu-id="0e0f3-162">選取目前的資料列 （排除子資料表連結）。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-162">Select the current row (excluding child table links).</span></span>|<span data-ttu-id="0e0f3-163">SHIFT + 空格鍵</span><span class="sxs-lookup"><span data-stu-id="0e0f3-163">SHIFT+SPACEBAR</span></span>|  
+|<span data-ttu-id="0e0f3-164">選取整個方格 （排除子資料表連結）。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-164">Select the entire grid (excluding child table links).</span></span>|<span data-ttu-id="0e0f3-165">CTRL+A</span><span class="sxs-lookup"><span data-stu-id="0e0f3-165">CTRL+A</span></span>|  
+|<span data-ttu-id="0e0f3-166">顯示子資料表中的父資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-166">Display the parent row when in a child table.</span></span>|<span data-ttu-id="0e0f3-167">CTRL+PAGE DOWN</span><span class="sxs-lookup"><span data-stu-id="0e0f3-167">CTRL+PAGE DOWN</span></span>|  
+|<span data-ttu-id="0e0f3-168">隱藏在子資料表中的父資料列。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-168">Hide the parent row when in a child table.</span></span>|<span data-ttu-id="0e0f3-169">CTRL+PAGE UP</span><span class="sxs-lookup"><span data-stu-id="0e0f3-169">CTRL+PAGE UP</span></span>|  
+|<span data-ttu-id="0e0f3-170">延伸選取範圍向下移 （排除子資料表連結） 的一個螢幕。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-170">Extend the selection down one screen (excluding child table links).</span></span>|<span data-ttu-id="0e0f3-171">SHIFT+PAGE DOWN</span><span class="sxs-lookup"><span data-stu-id="0e0f3-171">SHIFT+PAGE DOWN</span></span>|  
+|<span data-ttu-id="0e0f3-172">向上延伸選取範圍 （不包括子資料表連結） 的一個螢幕。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-172">Extend the selection up one screen (excluding child table links).</span></span>|<span data-ttu-id="0e0f3-173">SHIFT+PAGE UP</span><span class="sxs-lookup"><span data-stu-id="0e0f3-173">SHIFT+PAGE UP</span></span>|  
+|<span data-ttu-id="0e0f3-174">呼叫<xref:System.Windows.Forms.DataGrid.EndEdit%2A>目前資料列的方法。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-174">Call the <xref:System.Windows.Forms.DataGrid.EndEdit%2A> method for the current row.</span></span>|<span data-ttu-id="0e0f3-175">CTRL+ENTER</span><span class="sxs-lookup"><span data-stu-id="0e0f3-175">CTRL+ENTER</span></span>|  
+|<span data-ttu-id="0e0f3-176">輸入<xref:System.DBNull.Value?displayProperty=nameWithType>處於編輯模式時在儲存格中的值。</span><span class="sxs-lookup"><span data-stu-id="0e0f3-176">Enter a <xref:System.DBNull.Value?displayProperty=nameWithType> value into a cell when in edit mode.</span></span>|<span data-ttu-id="0e0f3-177">CTRL+0</span><span class="sxs-lookup"><span data-stu-id="0e0f3-177">CTRL+0</span></span>|  
   
-## 請參閱  
- [DataGrid 控制項概觀](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0e0f3-178">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e0f3-178">See Also</span></span>  
+ [<span data-ttu-id="0e0f3-179">DataGrid 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="0e0f3-179">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="0e0f3-180">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="0e0f3-180">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

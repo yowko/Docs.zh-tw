@@ -1,34 +1,34 @@
 ---
-title: "Off (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Off"
-  - "vb.Off"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Off 關鍵字"
+title: Off (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Off
+- vb.Off
+helpviewer_keywords: Off keyword [Visual Basic]
 ms.assetid: e0b5aa68-bde1-4cdd-b9e4-152798ae1b8b
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cddbac85a54f000656a758468240ddfbaf5ebafd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Off (Visual Basic)
-關閉編譯器選項。  
+# <a name="off-visual-basic"></a><span data-ttu-id="9b11a-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b11a-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="9b11a-103">關閉編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="9b11a-103">Turns a compiler option off.</span></span>  
   
-## 備註  
- `Off` 關鍵字可用於以下內容：  
+## <a name="remarks"></a><span data-ttu-id="9b11a-104">備註</span><span class="sxs-lookup"><span data-stu-id="9b11a-104">Remarks</span></span>  
+ <span data-ttu-id="9b11a-105">`Off` 關鍵字可用於以下內容：</span><span class="sxs-lookup"><span data-stu-id="9b11a-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [Option Explicit 陳述式](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="9b11a-106">Option Explicit 陳述式</span><span class="sxs-lookup"><span data-stu-id="9b11a-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [Option Strict 陳述式](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="9b11a-107">Option Strict 陳述式</span><span class="sxs-lookup"><span data-stu-id="9b11a-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [Option Infer Statement](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="9b11a-108">Option Infer 陳述式</span><span class="sxs-lookup"><span data-stu-id="9b11a-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## 請參閱  
- [關鍵字](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="9b11a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b11a-109">See Also</span></span>  
+ [<span data-ttu-id="9b11a-110">關鍵字</span><span class="sxs-lookup"><span data-stu-id="9b11a-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

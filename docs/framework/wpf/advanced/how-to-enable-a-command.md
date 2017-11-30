@@ -1,47 +1,53 @@
 ---
-title: "如何：啟用命令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CommandBindings"
-  - "命令"
+title: "如何：啟用命令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- CommandBindings [WPF]
+- commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e90f7f69aebf48bbc27321d3808468a2df49f793
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：啟用命令
-下列範例示範如何在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中使用命令。  範例顯示如何建立 <xref:System.Windows.Input.RoutedCommand> 和 <xref:System.Windows.Controls.Button> 的關聯、建立 <xref:System.Windows.Input.CommandBinding>，以及建立實作 <xref:System.Windows.Input.RoutedCommand> 的事件處理常式。  如需使用命令的詳細資訊，請參閱[命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  
+# <a name="how-to-enable-a-command"></a><span data-ttu-id="4474b-102">如何：啟用命令</span><span class="sxs-lookup"><span data-stu-id="4474b-102">How to: Enable a Command</span></span>
+<span data-ttu-id="4474b-103">下列範例示範如何使用命令中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4474b-103">The following example demonstrates how to use commanding in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  <span data-ttu-id="4474b-104">此範例示範如何將<xref:System.Windows.Input.RoutedCommand>至<xref:System.Windows.Controls.Button>，建立<xref:System.Windows.Input.CommandBinding>，並建立事件處理常式實作<xref:System.Windows.Input.RoutedCommand>。</span><span class="sxs-lookup"><span data-stu-id="4474b-104">The example shows how to associate a <xref:System.Windows.Input.RoutedCommand> to a <xref:System.Windows.Controls.Button>, create a <xref:System.Windows.Input.CommandBinding>, and create the event handlers which implement the <xref:System.Windows.Input.RoutedCommand>.</span></span>  <span data-ttu-id="4474b-105">如需命令的詳細資訊，請參閱[指揮概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="4474b-105">For more information on commanding, see the [Commanding Overview](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span></span>  
   
-## 範例  
- 程式碼的第一個區段會建立由 <xref:System.Windows.Controls.Button> 和 <xref:System.Windows.Controls.StackPanel> 組成的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，並建立會將命令處理常式與 <xref:System.Windows.Input.RoutedCommand> 相關聯的 <xref:System.Windows.Input.CommandBinding>。  
+## <a name="example"></a><span data-ttu-id="4474b-106">範例</span><span class="sxs-lookup"><span data-stu-id="4474b-106">Example</span></span>  
+ <span data-ttu-id="4474b-107">程式碼的第一個區段會建立[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，其中包含的<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.StackPanel>，並建立<xref:System.Windows.Input.CommandBinding>將命令處理常式取代<xref:System.Windows.Input.RoutedCommand>。</span><span class="sxs-lookup"><span data-stu-id="4474b-107">The first section of code creates the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], which consists of a <xref:System.Windows.Controls.Button> and a <xref:System.Windows.Controls.StackPanel>, and creates a <xref:System.Windows.Input.CommandBinding> that associates the command handlers with the <xref:System.Windows.Input.RoutedCommand>.</span></span>  
   
- <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Input.ICommandSource.Command%2A> 屬性與 <xref:System.Windows.Input.ApplicationCommands.Close%2A> 命令相關聯。  
+ <span data-ttu-id="4474b-108"><xref:System.Windows.Input.ICommandSource.Command%2A>屬性<xref:System.Windows.Controls.Button>聯<xref:System.Windows.Input.ApplicationCommands.Close%2A>命令。</span><span class="sxs-lookup"><span data-stu-id="4474b-108">The <xref:System.Windows.Input.ICommandSource.Command%2A> property of the <xref:System.Windows.Controls.Button> is associated with the <xref:System.Windows.Input.ApplicationCommands.Close%2A> command.</span></span>  
   
- <xref:System.Windows.Input.CommandBinding> 是加入到根 <xref:System.Windows.Window> 的 <xref:System.Windows.Input.CommandBindingCollection>。  <xref:System.Windows.Input.CommandBinding.Executed> 和 <xref:System.Windows.Input.CommandBinding.CanExecute> 事件處理常式會附加到這個繫結，並與 <xref:System.Windows.Input.ApplicationCommands.Close%2A> 命令相關聯。  
+ <span data-ttu-id="4474b-109"><xref:System.Windows.Input.CommandBinding>加入至<xref:System.Windows.Input.CommandBindingCollection>根的<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="4474b-109">The <xref:System.Windows.Input.CommandBinding> is added to the <xref:System.Windows.Input.CommandBindingCollection> of the root <xref:System.Windows.Window>.</span></span> <span data-ttu-id="4474b-110"><xref:System.Windows.Input.CommandBinding.Executed>和<xref:System.Windows.Input.CommandBinding.CanExecute>事件處理常式會附加至這個繫結和相關聯<xref:System.Windows.Input.ApplicationCommands.Close%2A>命令。</span><span class="sxs-lookup"><span data-stu-id="4474b-110">The <xref:System.Windows.Input.CommandBinding.Executed> and <xref:System.Windows.Input.CommandBinding.CanExecute> event handlers are attached to this binding and associated with the <xref:System.Windows.Input.ApplicationCommands.Close%2A> command.</span></span>  
   
- 沒有 <xref:System.Windows.Input.CommandBinding>，就沒有命令邏輯，只有用於叫用命令的機制。  當按一下 <xref:System.Windows.Controls.Button> 時，會在命令目標上隨著 <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent> 後引發 <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent>。  這些事件會在項目樹狀結構中周遊，以查看該特定命令的 <xref:System.Windows.Input.CommandBinding>。  值得注意的是，因為 <xref:System.Windows.RoutedEvent> 會在項目樹狀結構中進行通道和反昇，必須在放置 <xref:System.Windows.Input.CommandBinding> 的地方特別留意。  如果 <xref:System.Windows.Input.CommandBinding> 位於命令目標的同層級 \(Sibling\) 中，或是位於不在 <xref:System.Windows.RoutedEvent> 的路由的其他節點中，就不會存取 <xref:System.Windows.Input.CommandBinding>。  
+ <span data-ttu-id="4474b-111">不含<xref:System.Windows.Input.CommandBinding>沒有命令邏輯，來叫用命令的機制。</span><span class="sxs-lookup"><span data-stu-id="4474b-111">Without the <xref:System.Windows.Input.CommandBinding> there is no command logic, only a mechanism to invoke the command.</span></span>  <span data-ttu-id="4474b-112">當<xref:System.Windows.Controls.Button>按一下時， <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent>後面接著命令目標上引發<xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>。</span><span class="sxs-lookup"><span data-stu-id="4474b-112">When the <xref:System.Windows.Controls.Button> is clicked, the <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent> is raised on the command target followed by the <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>.</span></span>  <span data-ttu-id="4474b-113">這些事件尋找項目樹狀目錄中周遊<xref:System.Windows.Input.CommandBinding>針對該特定命令。</span><span class="sxs-lookup"><span data-stu-id="4474b-113">These events traverse the element tree looking for a <xref:System.Windows.Input.CommandBinding> for that particular command.</span></span>  <span data-ttu-id="4474b-114">它是值得一提，因為<xref:System.Windows.RoutedEvent>通道和透過項目樹狀結構的泡泡，必須特別小心 where<xref:System.Windows.Input.CommandBinding>放。</span><span class="sxs-lookup"><span data-stu-id="4474b-114">It is worth noting that because <xref:System.Windows.RoutedEvent> tunnel and bubble through the element tree, care must be taken in where the <xref:System.Windows.Input.CommandBinding> is put.</span></span>   <span data-ttu-id="4474b-115">如果<xref:System.Windows.Input.CommandBinding>命令目標或不在的路由的另一個節點的同層級上<xref:System.Windows.RoutedEvent>、<xref:System.Windows.Input.CommandBinding>將無法存取。</span><span class="sxs-lookup"><span data-stu-id="4474b-115">If the <xref:System.Windows.Input.CommandBinding> is on a sibling of the command target or another node that is not on the route of the <xref:System.Windows.RoutedEvent>, the <xref:System.Windows.Input.CommandBinding> will not be accessed.</span></span>  
   
- [!code-xml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
+ [!code-xaml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
   
  [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
  [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
   
- 下一個程式碼區段會實作 <xref:System.Windows.Input.CommandManager.Executed> 和 <xref:System.Windows.Input.CommandBinding.CanExecute> 事件處理常式。  
+ <span data-ttu-id="4474b-116">下一節的程式碼實作<xref:System.Windows.Input.CommandManager.Executed>和<xref:System.Windows.Input.CommandBinding.CanExecute>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="4474b-116">The next section of code implements the <xref:System.Windows.Input.CommandManager.Executed> and <xref:System.Windows.Input.CommandBinding.CanExecute> event handlers.</span></span>  
   
- <xref:System.Windows.Input.CommandManager.Executed> 處理常式會呼叫方法關閉開啟的檔案。  <xref:System.Windows.Input.CommandBinding.CanExecute> 處理常式會呼叫方法判斷檔案是否開啟。  如果檔案是開啟的，<xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 會設定為 `true`，否則就設定為 `false`。  
+ <span data-ttu-id="4474b-117"><xref:System.Windows.Input.CommandManager.Executed>處理常式呼叫方法來關閉開啟的檔案。</span><span class="sxs-lookup"><span data-stu-id="4474b-117">The <xref:System.Windows.Input.CommandManager.Executed> handler calls a method to close the open file.</span></span>  <span data-ttu-id="4474b-118"><xref:System.Windows.Input.CommandBinding.CanExecute>處理常式會呼叫方法來判斷檔案是否為開啟。</span><span class="sxs-lookup"><span data-stu-id="4474b-118">The <xref:System.Windows.Input.CommandBinding.CanExecute> handler calls a method to determine whether a file is open.</span></span>  <span data-ttu-id="4474b-119">如果檔案為開啟，<xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A>設`true`，否則會設為`false`。</span><span class="sxs-lookup"><span data-stu-id="4474b-119">If a file is open, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> is set to `true`; otherwise, it is set to `false`.</span></span>  
   
  [!code-csharp[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
  [!code-vb[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
-## 請參閱  
- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4474b-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4474b-120">See Also</span></span>  
+ [<span data-ttu-id="4474b-121">命令概觀</span><span class="sxs-lookup"><span data-stu-id="4474b-121">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)

@@ -1,116 +1,121 @@
 ---
-title: "傳送和接收錯誤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "處理錯誤 [WCF], 傳送"
+title: "傳送和接收錯誤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b7a97ef253431b5519de2b3e45485a15ca3f5ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 傳送和接收錯誤
-SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。一般來說，服務會定義自訂錯誤內容，並指定透過哪項作業來傳回這些內容\(如需詳細資訊，請參閱 [定義並指定錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)\)。本主題將說明在發生錯誤情況時，服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤。如需 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中錯誤處理的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+# <a name="sending-and-receiving-faults"></a><span data-ttu-id="42820-102">傳送和接收錯誤</span><span class="sxs-lookup"><span data-stu-id="42820-102">Sending and Receiving Faults</span></span>
+<span data-ttu-id="42820-103">SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。</span><span class="sxs-lookup"><span data-stu-id="42820-103">SOAP faults convey error condition information from a service to a client and in the duplex case from a client to a service in an interoperable way.</span></span> <span data-ttu-id="42820-104">一般來說，服務會定義自訂錯誤內容，並指定透過哪項作業來傳回這些內容</span><span class="sxs-lookup"><span data-stu-id="42820-104">Typically a service defines custom fault content and specifies which operations can return them.</span></span> <span data-ttu-id="42820-105">(如需詳細資訊，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主題將說明在發生錯誤情況時，服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤。</span><span class="sxs-lookup"><span data-stu-id="42820-105">(For more information, see [Defining and Specifying Faults](../../../docs/framework/wcf/defining-and-specifying-faults.md).) This topic discusses how a service or duplex client can send those faults when the corresponding error condition has occurred and how a client or service application handles these faults.</span></span> <span data-ttu-id="42820-106">如需中的錯誤處理的概觀[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]應用程式，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。</span><span class="sxs-lookup"><span data-stu-id="42820-106">For an overview of error handling in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications, see [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).</span></span>  
   
-## 傳送 SOAP 錯誤  
- 已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=fullName> 的 SOAP 錯誤。未宣告的 SOAP 錯誤則是在作業的合約中未指定的 SOAP 錯誤。  
+## <a name="sending-soap-faults"></a><span data-ttu-id="42820-107">傳送 SOAP 錯誤</span><span class="sxs-lookup"><span data-stu-id="42820-107">Sending SOAP Faults</span></span>  
+ <span data-ttu-id="42820-108">已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>的 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="42820-108">Declared SOAP faults are those in which an operation has a <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> that specifies a custom SOAP fault type.</span></span> <span data-ttu-id="42820-109">未宣告的 SOAP 錯誤則是在作業的合約中未指定的 SOAP 錯誤。</span><span class="sxs-lookup"><span data-stu-id="42820-109">Undeclared SOAP faults are those that are not specified in the contract for an operation.</span></span>  
   
-### 傳送已宣告的錯誤  
- 若要傳送已宣告的 SOAP 錯誤，請偵測包含適當 SOAP 錯誤的錯誤情況並擲回新的 <xref:System.ServiceModel.FaultException%601?displayProperty=fullName>，其中的型別參數為該作業之 <xref:System.ServiceModel.FaultContractAttribute> 中所指定的新物件型別。下列程式碼範例將示範如何使用 <xref:System.ServiceModel.FaultContractAttribute> 來指定 `SampleMethod` 作業可以傳回 SOAP 錯誤，連同 `GreetingFault` 的詳細型別。  
+### <a name="sending-declared-faults"></a><span data-ttu-id="42820-110">傳送已宣告的錯誤</span><span class="sxs-lookup"><span data-stu-id="42820-110">Sending Declared Faults</span></span>  
+ <span data-ttu-id="42820-111">若要傳送已宣告的 SOAP 錯誤，請偵測包含適當 SOAP 錯誤的錯誤情況並擲回新的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>，其中的型別參數為該作業之 <xref:System.ServiceModel.FaultContractAttribute> 中所指定的新物件型別。</span><span class="sxs-lookup"><span data-stu-id="42820-111">To send a declared SOAP fault, detect the error condition for which the SOAP fault is appropriate and throw a new <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> where the type parameter is a new object of the type specified in the <xref:System.ServiceModel.FaultContractAttribute> for that operation.</span></span> <span data-ttu-id="42820-112">下列程式碼範例將示範如何使用 <xref:System.ServiceModel.FaultContractAttribute> 來指定 `SampleMethod` 作業可以傳回 SOAP 錯誤，連同 `GreetingFault` 的詳細型別。</span><span class="sxs-lookup"><span data-stu-id="42820-112">The following code example shows the use of <xref:System.ServiceModel.FaultContractAttribute> to specify that the `SampleMethod` operation can return a SOAP fault with the detail type of `GreetingFault`.</span></span>  
   
  [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
  [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
   
- 若要將 `GreetingFault` 錯誤資訊傳送到用戶端，請捕捉適當的錯誤情況並擲回包含新的 `GreetingFault` 物件之新的 <xref:System.ServiceModel.FaultException%601?displayProperty=fullName> \(屬於 `GreetingFault` 型別\) 做為引數，如下列程式碼範例所示。如果用戶端為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端應用程式，它會碰到 Managed 例外狀況 \(其中包含 `GreetingFault` 型別的 <xref:System.ServiceModel.FaultException%601?displayProperty=fullName>\)。  
+ <span data-ttu-id="42820-113">若要將 `GreetingFault` 錯誤資訊傳送到用戶端，請捕捉適當的錯誤情況並擲回包含新的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 物件之新的 `GreetingFault` (屬於 `GreetingFault` 型別) 做為引數，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="42820-113">To convey the `GreetingFault` error information to the client, catch the appropriate error condition and throw a new <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> of type `GreetingFault` with a new `GreetingFault` object as the argument, as in the following code example.</span></span> <span data-ttu-id="42820-114">如果用戶端為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端應用程式，它會碰到 Managed 例外狀況 (其中包含 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 型別的 `GreetingFault`)。</span><span class="sxs-lookup"><span data-stu-id="42820-114">If the client is an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client application, it experiences this as a managed exception where the type is <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> of type `GreetingFault`.</span></span>  
   
  [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
  [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
   
-### 傳送未宣告的錯誤  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中傳送未宣告的錯誤可以針對問題協助快速診斷與偵錯，但是在偵錯上，這項工具的功能很有限。在偵錯時，使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 屬性是較普遍的建議做法。當您將此值設為 true，用戶端會碰到諸如 <xref:System.ServiceModel.ExceptionDetail> 類別的 <xref:System.ServiceModel.FaultException%601> 例外狀況之類的錯誤。  
+### <a name="sending-undeclared-faults"></a><span data-ttu-id="42820-115">傳送未宣告的錯誤</span><span class="sxs-lookup"><span data-stu-id="42820-115">Sending Undeclared Faults</span></span>  
+ <span data-ttu-id="42820-116">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中傳送未宣告的錯誤可以針對問題協助快速診斷與偵錯，但是在偵錯上，這項工具的功能很有限。</span><span class="sxs-lookup"><span data-stu-id="42820-116">Sending undeclared faults can be very useful to quickly diagnose and debug problems in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications, but its usefulness as a debugging tool is limited.</span></span> <span data-ttu-id="42820-117">在偵錯時，使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性是較普遍的建議做法。</span><span class="sxs-lookup"><span data-stu-id="42820-117">More generally, when debugging it is recommended that you use the <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="42820-118">當您將此值設為 true，用戶端會碰到諸如 <xref:System.ServiceModel.FaultException%601> 類別的 <xref:System.ServiceModel.ExceptionDetail> 例外狀況之類的錯誤。</span><span class="sxs-lookup"><span data-stu-id="42820-118">When you set this value to true, clients experience such faults as <xref:System.ServiceModel.FaultException%601> exceptions of type <xref:System.ServiceModel.ExceptionDetail>.</span></span>  
   
 > [!IMPORTANT]
->  由於 Managed 例外狀況會暴露內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 設為 `true`，便可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得內部服務作業例外狀況的相關資訊，包括個人識別資訊或其他敏感資訊。  
+>  <span data-ttu-id="42820-119">由於 Managed 例外狀況會暴露內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`，便可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得內部服務作業例外狀況的相關資訊，包括個人識別資訊或其他敏感資訊。</span><span class="sxs-lookup"><span data-stu-id="42820-119">Because managed exceptions can expose internal application information, setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> to `true` can permit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients to obtain information about internal service operation exceptions, including personally identifiable or other sensitive information.</span></span>  
 >   
->  因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 設為 `true`。此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.ExceptionDetail> 型別之 <xref:System.ServiceModel.FaultException%601> 的合約。用戶端必須預期未知 SOAP 錯誤 \(以 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 物件的形式傳回至 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端\) 的可能性，才能正確取得偵錯資訊。  
+>  <span data-ttu-id="42820-120">因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="42820-120">Therefore, setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> to `true` is only recommended as a way of temporarily debugging a service application.</span></span> <span data-ttu-id="42820-121">此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.FaultException%601> 型別之 <xref:System.ServiceModel.ExceptionDetail> 的合約。</span><span class="sxs-lookup"><span data-stu-id="42820-121">In addition, the WSDL for a method that returns unhandled managed exceptions in this way does not contain the contract for the <xref:System.ServiceModel.FaultException%601> of type <xref:System.ServiceModel.ExceptionDetail>.</span></span> <span data-ttu-id="42820-122">用戶端必須接受有未知 SOAP 錯誤 (以 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 物件的形式傳回給 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 用戶端) 的可能性，才能正確取得偵錯資訊。</span><span class="sxs-lookup"><span data-stu-id="42820-122">Clients must expect the possibility of an unknown SOAP fault (returned to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients as <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> objects) to obtain the debugging information properly.</span></span>  
   
- 若要傳送未宣告的 SOAP 錯誤，請擲回 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 物件 \(亦即，不是泛型 <xref:System.ServiceModel.FaultException%601> 型別\)，並將字串傳送至建構函式。當您呼叫 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=fullName> 方法來提供字串時，就會將此公開到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端應用程式當做擲回的 <xref:System.ServiceModel.FaultException?displayProperty=fullName> 例外狀況方法。  
+ <span data-ttu-id="42820-123">若要傳送未宣告的 SOAP 錯誤，請擲回 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 物件 (亦即，不是泛型 <xref:System.ServiceModel.FaultException%601> 型別)，並將字串傳送至建構函式。</span><span class="sxs-lookup"><span data-stu-id="42820-123">To send an undeclared SOAP fault, throw a <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> object (that is, not the generic type <xref:System.ServiceModel.FaultException%601>) and pass the string to the constructor.</span></span> <span data-ttu-id="42820-124">當您呼叫 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 方法來提供字串時，就會將此公開到 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 用戶端應用程式當做擲回的 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 例外狀況方法。</span><span class="sxs-lookup"><span data-stu-id="42820-124">This is exposed to the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client applications as a thrown <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> exception where the string is available by calling the <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> method.</span></span>  
   
 > [!NOTE]
->  如果您宣告 String 型別的 SOAP 錯誤，則請將此項目做為 <xref:System.ServiceModel.FaultException%601> 擲回服務 \(當中的型別參數是一個 <xref:System.String?displayProperty=fullName>，而字串值則是指派給 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=fullName> 屬性，而且無法透過 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=fullName> 取得\)。  
+>  <span data-ttu-id="42820-125">如果您宣告 String 型別的 SOAP 錯誤，則請將此項目做為 <xref:System.ServiceModel.FaultException%601> 擲回服務 (當中的型別參數是一個 <xref:System.String?displayProperty=nameWithType>，而字串值則是指派給 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> 屬性，而且無法透過 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 取得)。</span><span class="sxs-lookup"><span data-stu-id="42820-125">If you declare a SOAP fault of type string, and then throw this in your service as a <xref:System.ServiceModel.FaultException%601> where the type parameter is a <xref:System.String?displayProperty=nameWithType> the string value is assigned to the <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> property, and is not available from <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.</span></span>  
   
-## 處理錯誤  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端中，於通訊期間發生且與用戶端應用程式相關的 SOAP 錯誤會引發為 Managed 例外狀況。儘管有許多例外狀況會在任何程式的執行期間發生，但是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式設計模型的應用程式仍然能夠處理下列兩種因通訊而產生的例外狀況型別。  
+## <a name="handling-faults"></a><span data-ttu-id="42820-126">處理錯誤</span><span class="sxs-lookup"><span data-stu-id="42820-126">Handling Faults</span></span>  
+ <span data-ttu-id="42820-127">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端中，於通訊期間發生且與用戶端應用程式相關的 SOAP 錯誤會引發為 Managed 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="42820-127">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients, SOAP faults that occur during communication that are of interest to client applications are raised as managed exceptions.</span></span> <span data-ttu-id="42820-128">儘管有許多例外狀況會在任何程式的執行期間發生，但是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式設計模型的應用程式仍然能夠處理下列兩種因通訊而產生的例外狀況型別。</span><span class="sxs-lookup"><span data-stu-id="42820-128">While there are many exceptions that can occur during the execution of any program, applications using the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client programming model can expect to handle exceptions of the following two types as a result of communication.</span></span>  
   
 -   <xref:System.TimeoutException>  
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- 當作業超出指定的逾時期間，就會擲回 <xref:System.TimeoutException> 物件。  
+ <span data-ttu-id="42820-129">當作業超出指定的逾時期間，就會擲回 <xref:System.TimeoutException> 物件。</span><span class="sxs-lookup"><span data-stu-id="42820-129"><xref:System.TimeoutException> objects are thrown when an operation exceeds the specified timeout period.</span></span>  
   
- 當服務或用戶端上出現一些可修復的通訊錯誤情況，就會擲回 <xref:System.ServiceModel.CommunicationException> 物件。  
+ <span data-ttu-id="42820-130">當服務或用戶端上出現一些可修復的通訊錯誤情況，就會擲回 <xref:System.ServiceModel.CommunicationException> 物件。</span><span class="sxs-lookup"><span data-stu-id="42820-130"><xref:System.ServiceModel.CommunicationException> objects are thrown when there is some recoverable communication error condition on either the service or the client.</span></span>  
   
- <xref:System.ServiceModel.CommunicationException> 類別包含兩個重要的衍生型別，分別是 <xref:System.ServiceModel.FaultException> 和泛型 <xref:System.ServiceModel.FaultException%601> 型別。  
+ <span data-ttu-id="42820-131"><xref:System.ServiceModel.CommunicationException> 類別包含兩個重要的衍生型別，分別是 <xref:System.ServiceModel.FaultException> 和泛型 <xref:System.ServiceModel.FaultException%601> 型別。</span><span class="sxs-lookup"><span data-stu-id="42820-131">The <xref:System.ServiceModel.CommunicationException> class has two important derived types, <xref:System.ServiceModel.FaultException> and the generic <xref:System.ServiceModel.FaultException%601> type.</span></span>  
   
- 當接聽項收到未預期的或於作業合約中指定的錯誤，就會擲回 <xref:System.ServiceModel.FaultException> 例外狀況；當針對應用程式進行偵錯，且服務的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 屬性設為 `true` 時，就很容易發生這個情況。  
+ <span data-ttu-id="42820-132">當接聽項收到未預期的或於作業合約中指定的錯誤，就會擲回 <xref:System.ServiceModel.FaultException> 例外狀況；當針對應用程式進行偵錯，且服務的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true` 時，就很容易發生這個情況。</span><span class="sxs-lookup"><span data-stu-id="42820-132"><xref:System.ServiceModel.FaultException> exceptions are thrown when a listener receives a fault that is not expected or specified in the operation contract; usually this occurs when the application is being debugged and the service has the <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property set to `true`.</span></span>  
   
- 收到作業合約中指定的錯誤時，用戶端會擲回 <xref:System.ServiceModel.FaultException%601> 例外狀況，以回應雙向作業 \(也就是具有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，且將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 設為 `false` 的方法\)。  
-  
-> [!NOTE]
->  當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=fullName> 屬性設為 `true` 時，用戶端就會碰到這種未宣告的 <xref:System.ServiceModel.FaultException%601> \(屬於 <xref:System.ServiceModel.ExceptionDetail> 型別\)。用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。  
-  
- 一般來說，只有 <xref:System.ServiceModel.FaultException%601>、<xref:System.TimeoutException>，和 <xref:System.ServiceModel.CommunicationException> 例外狀況會與用戶端及服務相關。  
+ <span data-ttu-id="42820-133">收到作業合約中指定的錯誤時，用戶端會擲回 <xref:System.ServiceModel.FaultException%601> 例外狀況，以回應雙向作業 (也就是具有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，且將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 設為 `false` 的方法)。</span><span class="sxs-lookup"><span data-stu-id="42820-133"><xref:System.ServiceModel.FaultException%601> exceptions are thrown on the client when a fault that is specified in the operation contract is received in response to a two-way operation (that is, a method with an <xref:System.ServiceModel.OperationContractAttribute> attribute with <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> set to `false`).</span></span>  
   
 > [!NOTE]
->  而其他例外狀況，當然一定會發生。未預期的例外狀況包含 <xref:System.OutOfMemoryException?displayProperty=fullName> 之類的災難性失敗；一般來說，應用程式應該不會捕捉到這類方法。  
+>  <span data-ttu-id="42820-134">當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true` 時，用戶端就會碰到這種未宣告的 <xref:System.ServiceModel.FaultException%601> (屬於 <xref:System.ServiceModel.ExceptionDetail> 型別)。</span><span class="sxs-lookup"><span data-stu-id="42820-134">When an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service has the <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> property set to `true` the client experiences this as an undeclared <xref:System.ServiceModel.FaultException%601> of type <xref:System.ServiceModel.ExceptionDetail>.</span></span> <span data-ttu-id="42820-135">用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。</span><span class="sxs-lookup"><span data-stu-id="42820-135">Clients can either catch this specific fault or handle the fault in a catch block for <xref:System.ServiceModel.FaultException>.</span></span>  
   
-### 以正確順序來捕捉錯誤例外狀況  
- 由於 <xref:System.ServiceModel.FaultException%601> 係衍生自 <xref:System.ServiceModel.FaultException>，而 <xref:System.ServiceModel.FaultException> 則是衍生自 <xref:System.ServiceModel.CommunicationException>，請務必以正確順序來捕捉這些例外狀況。例如，假如在您第一次捕捉 <xref:System.ServiceModel.CommunicationException> 時使用 try\/catch 區塊，則所有指定與未指定的 SOAP 錯誤都會就地處理；而且一律不會叫用任何後續的 catch 區塊來處理自訂 <xref:System.ServiceModel.FaultException%601> 例外狀況。  
-  
- 請記住，一項作業可以傳回的指定錯誤數量不限。每一項錯誤都具有唯一的型別，而且必須個別處理。  
-  
-### 關閉通道時處理例外狀況  
- 在先前的討論中，大部分都是關於處理應用程式訊息期間所傳送的錯誤 \(亦即，當用戶端應用程式呼叫 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件上的作業時，用戶端所明確傳送訊息\)。  
-  
- 就算是本機物件，處理物件也可能引發或遮罩在回收處理序期間所發生的例外狀況。當您使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件時，也會發生類似的情況。當您呼叫作業時，事實上您是透過已建立的連線來傳送訊息。如果連線無法完全關閉，或是已經關閉，則關閉通道會擲回例外狀況，就算所有作業都正常傳回也是一樣。  
-  
- 一般來說，用戶端物件通道可透過下列其中一種方式來關閉：  
-  
--   當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件已回收時。  
-  
--   當用戶端應用程式呼叫 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=fullName> 時。  
-  
--   當用戶端應用程式呼叫 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=fullName> 時。  
-  
--   當用戶端應用程式呼叫某個正在終止工作階段作業的作業時。  
-  
- 不管什麼情況，關閉通道都會讓通道開始關閉任何基礎通道，進而傳送訊息以支援應用程式層級的複雜功能。例如，當合約需要工作階段嘗試透過繫結來建立工作階段時 \(方法是藉由與服務通道交換訊息，直到建立工作階段為止\)。一旦通道關閉，基礎工作階段通道會通知服務，工作階段已經終止。在此情況下，如果通道已經中止、關閉，或是因為其他原因而無法使用 \(例如，當網路纜線已拔除時\)，用戶端通道將無法通知服務通道，告知工作階段已終止且可能擲回例外狀況。  
-  
-### 必要時中止通道  
- 由於關閉通道也可能會擲回例外狀況，因此我們建議您除了以正確順序來捕捉錯誤例外狀況外，務必記得要中止用來呼叫 catch 區塊的通道。  
-  
- 如果錯誤傳送了與某項作業相關的特定錯誤資訊，而其他作業也可能透過它來傳送資訊時，就不需要中止通道 \(儘管這些情況很罕見\)。在其他任何情況中，建議您中止通道。如需示範這些重點的範例，請參閱[預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
-  
- 下列程式碼範例將說明如何透過基本用戶端應用程式來處理 SOAP 錯誤例外狀況，包括已宣告與未宣告的錯誤。  
+ <span data-ttu-id="42820-136">一般來說，只有 <xref:System.ServiceModel.FaultException%601>、<xref:System.TimeoutException>，和 <xref:System.ServiceModel.CommunicationException> 例外狀況會與用戶端及服務相關。</span><span class="sxs-lookup"><span data-stu-id="42820-136">Typically, only <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException>, and <xref:System.ServiceModel.CommunicationException> exceptions are of interest to clients and services.</span></span>  
   
 > [!NOTE]
->  此範例程式碼不會使用 `using` 建構。由於關閉通道可能會擲回例外狀況，建議您先透過應用程式建立一個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端，然後在同一個 try 區塊中開啟、使用，並關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。如需詳細資訊，請參閱 [WCF 用戶端概觀](../../../docs/framework/wcf/wcf-client-overview.md)與[避免 Using 陳述式發生問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+>  <span data-ttu-id="42820-137">而其他例外狀況，當然一定會發生。</span><span class="sxs-lookup"><span data-stu-id="42820-137">Other exceptions, of course, do occur.</span></span> <span data-ttu-id="42820-138">未預期的例外狀況包含 <xref:System.OutOfMemoryException?displayProperty=nameWithType> 之類的災難性失敗；一般來說，應用程式應該不會捕捉到這類方法。</span><span class="sxs-lookup"><span data-stu-id="42820-138">Unexpected exceptions include catastrophic failures like <xref:System.OutOfMemoryException?displayProperty=nameWithType>; typically applications should not catch such methods.</span></span>  
+  
+### <a name="catch-fault-exceptions-in-the-correct-order"></a><span data-ttu-id="42820-139">以正確順序來捕捉錯誤例外狀況</span><span class="sxs-lookup"><span data-stu-id="42820-139">Catch Fault Exceptions in the Correct Order</span></span>  
+ <span data-ttu-id="42820-140">由於 <xref:System.ServiceModel.FaultException%601> 係衍生自 <xref:System.ServiceModel.FaultException>，而 <xref:System.ServiceModel.FaultException> 則是衍生自 <xref:System.ServiceModel.CommunicationException>，請務必以正確順序來捕捉這些例外狀況。</span><span class="sxs-lookup"><span data-stu-id="42820-140">Because <xref:System.ServiceModel.FaultException%601> derives from <xref:System.ServiceModel.FaultException>, and <xref:System.ServiceModel.FaultException> derives from <xref:System.ServiceModel.CommunicationException>, it is important to catch these exceptions in the proper order.</span></span> <span data-ttu-id="42820-141">例如，假如在您第一次捕捉 <xref:System.ServiceModel.CommunicationException> 時使用 try/catch 區塊，則所有指定與未指定的 SOAP 錯誤都會就地處理；而且一律不會叫用任何後續的 catch 區塊來處理自訂 <xref:System.ServiceModel.FaultException%601> 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="42820-141">If, for example, you have a try/catch block in which you first catch <xref:System.ServiceModel.CommunicationException>, all specified and unspecified SOAP faults are handled there; any subsequent catch blocks to handle a custom <xref:System.ServiceModel.FaultException%601> exception are never invoked.</span></span>  
+  
+ <span data-ttu-id="42820-142">請記住，一項作業可以傳回的指定錯誤數量不限。</span><span class="sxs-lookup"><span data-stu-id="42820-142">Remember that one operation can return any number of specified faults.</span></span> <span data-ttu-id="42820-143">每一項錯誤都具有唯一的型別，而且必須個別處理。</span><span class="sxs-lookup"><span data-stu-id="42820-143">Each fault is a unique type and must be handled separately.</span></span>  
+  
+### <a name="handle-exceptions-when-closing-the-channel"></a><span data-ttu-id="42820-144">關閉通道時處理例外狀況</span><span class="sxs-lookup"><span data-stu-id="42820-144">Handle Exceptions When Closing the Channel</span></span>  
+ <span data-ttu-id="42820-145">在先前的討論中，大部分都是關於處理應用程式訊息期間所傳送的錯誤 (亦即，當用戶端應用程式呼叫 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件上的作業時，用戶端所明確傳送訊息)。</span><span class="sxs-lookup"><span data-stu-id="42820-145">Most of the preceding discussion has to do with faults sent in the course of processing application messages, that is, messages explicitly sent by the client when the client application calls operations on the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client object.</span></span>  
+  
+ <span data-ttu-id="42820-146">就算是本機物件，處理物件也可能引發或遮罩在回收處理序期間所發生的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="42820-146">Even with local objects disposing the object can either raise or mask exceptions that occur during the recycling process.</span></span> <span data-ttu-id="42820-147">當您使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件時，也會發生類似的情況。</span><span class="sxs-lookup"><span data-stu-id="42820-147">Something similar can occur when you use [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client objects.</span></span> <span data-ttu-id="42820-148">當您呼叫作業時，事實上您是透過已建立的連線來傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="42820-148">When you call operations you are sending messages over an established connection.</span></span> <span data-ttu-id="42820-149">如果連線無法完全關閉，或是已經關閉，則關閉通道會擲回例外狀況，就算所有作業都正常傳回也是一樣。</span><span class="sxs-lookup"><span data-stu-id="42820-149">Closing the channel can throw exceptions if the connection cannot be cleanly closed or is already closed, even if all the operations returned properly.</span></span>  
+  
+ <span data-ttu-id="42820-150">一般來說，用戶端物件通道可透過下列其中一種方式來關閉：</span><span class="sxs-lookup"><span data-stu-id="42820-150">Typically, client object channels are closed in one of the following ways:</span></span>  
+  
+-   <span data-ttu-id="42820-151">當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件已回收時。</span><span class="sxs-lookup"><span data-stu-id="42820-151">When the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client object is recycled.</span></span>  
+  
+-   <span data-ttu-id="42820-152">當用戶端應用程式呼叫 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 時。</span><span class="sxs-lookup"><span data-stu-id="42820-152">When the client application calls <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.</span></span>  
+  
+-   <span data-ttu-id="42820-153">當用戶端應用程式呼叫 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 時。</span><span class="sxs-lookup"><span data-stu-id="42820-153">When the client application calls <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.</span></span>  
+  
+-   <span data-ttu-id="42820-154">當用戶端應用程式呼叫某個正在終止工作階段作業的作業時。</span><span class="sxs-lookup"><span data-stu-id="42820-154">When the client application calls an operation that is a terminating operation for a session.</span></span>  
+  
+ <span data-ttu-id="42820-155">不管什麼情況，關閉通道都會讓通道開始關閉任何基礎通道，進而傳送訊息以支援應用程式層級的複雜功能。</span><span class="sxs-lookup"><span data-stu-id="42820-155">In all cases, closing the channel instructs the channel to begin closing any underlying channels that may be sending messages to support complex functionality at the application level.</span></span> <span data-ttu-id="42820-156">例如，當合約需要工作階段嘗試透過繫結來建立工作階段時 (方法是藉由與服務通道交換訊息，直到建立工作階段為止)。</span><span class="sxs-lookup"><span data-stu-id="42820-156">For example, when a contract requires sessions a binding attempts to establish a session by exchanging messages with the service channel until a session is established.</span></span> <span data-ttu-id="42820-157">一旦通道關閉，基礎工作階段通道會通知服務，工作階段已經終止。</span><span class="sxs-lookup"><span data-stu-id="42820-157">When the channel is closed, the underlying session channel notifies the service that the session is terminated.</span></span> <span data-ttu-id="42820-158">在此情況下，如果通道已經中止、關閉，或是因為其他原因而無法使用 (例如，當網路纜線已拔除時)，用戶端通道將無法通知服務通道，告知工作階段已終止且可能擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="42820-158">In this case, if the channel has already aborted, closed, or is otherwise unusable (for example, when a network cable is unplugged), the client channel cannot inform the service channel that the session is terminated and an exception can result.</span></span>  
+  
+### <a name="abort-the-channel-if-necessary"></a><span data-ttu-id="42820-159">必要時中止通道</span><span class="sxs-lookup"><span data-stu-id="42820-159">Abort the Channel If Necessary</span></span>  
+ <span data-ttu-id="42820-160">由於關閉通道也可能會擲回例外狀況，因此我們建議您除了以正確順序來捕捉錯誤例外狀況外，務必記得要中止用來呼叫 catch 區塊的通道。</span><span class="sxs-lookup"><span data-stu-id="42820-160">Because closing the channel can also throw exceptions, then, it is recommended that in addition to catching fault exceptions in the correct order, it is important to abort the channel that was used in making the call in the catch block.</span></span>  
+  
+ <span data-ttu-id="42820-161">如果錯誤傳送了與某項作業相關的特定錯誤資訊，而其他作業也可能透過它來傳送資訊時，就不需要中止通道 (儘管這些情況很罕見)。</span><span class="sxs-lookup"><span data-stu-id="42820-161">If the fault conveys error information specific to an operation and it remains possible that others can use it, there is no need to abort the channel (although these cases are rare).</span></span> <span data-ttu-id="42820-162">在其他任何情況中，建議您中止通道。</span><span class="sxs-lookup"><span data-stu-id="42820-162">In all other cases, it is recommended that you abort the channel.</span></span> <span data-ttu-id="42820-163">如需示範所有這些點的範例，請參閱[預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)。</span><span class="sxs-lookup"><span data-stu-id="42820-163">For a sample that demonstrates all of these points, see [Expected Exceptions](../../../docs/framework/wcf/samples/expected-exceptions.md).</span></span>  
+  
+ <span data-ttu-id="42820-164">下列程式碼範例將說明如何透過基本用戶端應用程式來處理 SOAP 錯誤例外狀況，包括已宣告與未宣告的錯誤。</span><span class="sxs-lookup"><span data-stu-id="42820-164">The following code example shows how to handle SOAP fault exceptions in a basic client application, including a declared fault and an undeclared fault.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="42820-165">此範例程式碼不會使用 `using` 建構。</span><span class="sxs-lookup"><span data-stu-id="42820-165">This sample code does not use the `using` construct.</span></span> <span data-ttu-id="42820-166">由於關閉通道可能會擲回例外狀況，建議您先透過應用程式建立一個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端，然後在同一個 try 區塊中開啟、使用，並關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。</span><span class="sxs-lookup"><span data-stu-id="42820-166">Because closing channels can throw exceptions, it is recommended that applications create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client first, and then open, use, and close the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client in the same try block.</span></span> <span data-ttu-id="42820-167">如需詳細資訊，請參閱[WCF 用戶端概觀](../../../docs/framework/wcf/wcf-client-overview.md)和[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="42820-167">For details, see [WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md) and [Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).</span></span>  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## 請參閱  
- <xref:System.ServiceModel.FaultException>   
- <xref:System.ServiceModel.FaultException%601>   
- <xref:System.ServiceModel.CommunicationException?displayProperty=fullName>   
- [預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)   
- [避免 Using 陳述式發生問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="42820-168">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42820-168">See Also</span></span>  
+ <xref:System.ServiceModel.FaultException>  
+ <xref:System.ServiceModel.FaultException%601>  
+ <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
+ [<span data-ttu-id="42820-169">預期的例外狀況</span><span class="sxs-lookup"><span data-stu-id="42820-169">Expected Exceptions</span></span>](../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [<span data-ttu-id="42820-170">避免 Using 陳述式發生問題</span><span class="sxs-lookup"><span data-stu-id="42820-170">Avoiding Problems with the Using Statement</span></span>](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)

@@ -1,41 +1,43 @@
 ---
-title: "如何：變更 ListView 中資料行的水平對齊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView 控制項, 水平對齊"
+title: "如何：變更 ListView 中資料行的水平對齊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ed163de9a5b01a3ddab8ef42d21f38d35f48519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：變更 ListView 中資料行的水平對齊
-根據預設，<xref:System.Windows.Controls.ListViewItem> 中每個資料行的內容都是靠左對齊。  您可以藉由提供 <xref:System.Windows.DataTemplate> 並在 <xref:System.Windows.DataTemplate> 內的項目上設定 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 屬性，以變更每個資料行的對齊方式。  本主題示範 <xref:System.Windows.Controls.ListView> 如何依預設對齊內容，以及如何變更 <xref:System.Windows.Controls.ListView> 其中一個資料行的對齊方式。  
+# <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a><span data-ttu-id="13b34-102">如何：變更 ListView 中資料行的水平對齊</span><span class="sxs-lookup"><span data-stu-id="13b34-102">How to: Change the Horizontal Alignment of a Column in a ListView</span></span>
+<span data-ttu-id="13b34-103">根據預設，在每個資料行的內容<xref:System.Windows.Controls.ListViewItem>靠左對齊。</span><span class="sxs-lookup"><span data-stu-id="13b34-103">By default, the content of each column in a <xref:System.Windows.Controls.ListViewItem> is left-aligned.</span></span> <span data-ttu-id="13b34-104">您可以變更每個資料行的對齊方式，藉由提供<xref:System.Windows.DataTemplate>和設定<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>內項目的屬性<xref:System.Windows.DataTemplate>。</span><span class="sxs-lookup"><span data-stu-id="13b34-104">You can change the alignment of each column by providing a <xref:System.Windows.DataTemplate> and setting the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property on the element within the <xref:System.Windows.DataTemplate>.</span></span> <span data-ttu-id="13b34-105">本主題說明如何<xref:System.Windows.Controls.ListView>其內容的預設值，以及如何變更的一個資料行的對齊方式對齊<xref:System.Windows.Controls.ListView>。</span><span class="sxs-lookup"><span data-stu-id="13b34-105">This topic shows how a <xref:System.Windows.Controls.ListView> aligns its content by default and how to change the alignment of one column in a <xref:System.Windows.Controls.ListView>.</span></span>  
   
-## 範例  
- 在下列範例中，`Title` 和 `ISBN` 資料行中的資料是靠左對齊。  
+## <a name="example"></a><span data-ttu-id="13b34-106">範例</span><span class="sxs-lookup"><span data-stu-id="13b34-106">Example</span></span>  
+ <span data-ttu-id="13b34-107">在下列範例中的資料`Title`和`ISBN`資料行是靠左對齊。</span><span class="sxs-lookup"><span data-stu-id="13b34-107">In the following example, the data in the `Title` and `ISBN` columns is left-aligned.</span></span>  
   
- [!code-xml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- 若要變更 `ISBN` 資料行的對齊方式，您需要指定每個 <xref:System.Windows.Controls.ListViewItem> 的 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 屬性為 <xref:System.Windows.HorizontalAlignment>，讓每個 <xref:System.Windows.Controls.ListViewItem> 中的項目可以擴展或沿著每個資料行的整個寬度放置。  由於 <xref:System.Windows.Controls.ListView> 繫結至資料來源，您必須建立設定 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 的樣式。  接著，您需要使用 <xref:System.Windows.DataTemplate> 來顯示內容，而不是使用 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 屬性。  若要顯示每個範本的 `ISBN`，<xref:System.Windows.DataTemplate> 只要包含將 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 屬性設定為 <xref:System.Windows.HorizontalAlignment> 的 <xref:System.Windows.Controls.TextBlock> 即可。  
+ <span data-ttu-id="13b34-108">若要變更對齊方式`ISBN`資料行中，您需要指定<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>每個屬性<xref:System.Windows.Controls.ListViewItem>是<xref:System.Windows.HorizontalAlignment.Stretch>，以便在每個項目<xref:System.Windows.Controls.ListViewItem>可以跨越或放置沿著每個資料行的整個寬度。</span><span class="sxs-lookup"><span data-stu-id="13b34-108">To change the alignment of the `ISBN` column, you need to specify that the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> property of each <xref:System.Windows.Controls.ListViewItem> is <xref:System.Windows.HorizontalAlignment.Stretch>, so that the elements in each <xref:System.Windows.Controls.ListViewItem> can span or be positioned along the entire width of each column.</span></span> <span data-ttu-id="13b34-109">因為<xref:System.Windows.Controls.ListView>繫結至資料來源，您需要建立設定的樣式<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>。</span><span class="sxs-lookup"><span data-stu-id="13b34-109">Because the <xref:System.Windows.Controls.ListView> is bound to a data source, you need to create a style that sets the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>.</span></span> <span data-ttu-id="13b34-110">接下來，您必須使用<xref:System.Windows.DataTemplate>顯示內容，而不是使用<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="13b34-110">Next, you need to use a <xref:System.Windows.DataTemplate> to display the content instead of using the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property.</span></span> <span data-ttu-id="13b34-111">若要顯示`ISBN`的每個範本，<xref:System.Windows.DataTemplate>只可包含<xref:System.Windows.Controls.TextBlock>具有其<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性設定為<xref:System.Windows.HorizontalAlignment.Right>。</span><span class="sxs-lookup"><span data-stu-id="13b34-111">To display the `ISBN` of each template, the <xref:System.Windows.DataTemplate> can just contain a <xref:System.Windows.Controls.TextBlock> that has its <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property set to <xref:System.Windows.HorizontalAlignment.Right>.</span></span>  
   
- 下列範例定義將 `ISBN` 設為靠右對齊所需的樣式和 <xref:System.Windows.DataTemplate>，並變更 <xref:System.Windows.Controls.GridViewColumn> 來參考 <xref:System.Windows.DataTemplate>。  
+ <span data-ttu-id="13b34-112">下列範例定義的樣式和<xref:System.Windows.DataTemplate>需要製作`ISBN`靠右對齊的資料行並變更<xref:System.Windows.Controls.GridViewColumn>參考<xref:System.Windows.DataTemplate>。</span><span class="sxs-lookup"><span data-stu-id="13b34-112">The following example defines the style and <xref:System.Windows.DataTemplate> necessary to make the `ISBN` column right-aligned, and changes the <xref:System.Windows.Controls.GridViewColumn> to reference the <xref:System.Windows.DataTemplate>.</span></span>  
   
- [!code-xml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
-[!code-xml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
+ [!code-xaml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
+[!code-xaml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
-## 請參閱  
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)   
- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="13b34-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13b34-113">See Also</span></span>  
+ [<span data-ttu-id="13b34-114">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="13b34-114">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="13b34-115">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="13b34-115">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="13b34-116">使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料</span><span class="sxs-lookup"><span data-stu-id="13b34-116">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="13b34-117">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="13b34-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

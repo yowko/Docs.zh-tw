@@ -1,58 +1,62 @@
 ---
-title: "搭配 .NET Framework 3.5 Ruleset 使用變數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "搭配 .NET Framework 3.5 Ruleset 使用變數"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9b5cc982aaad92258102b313d8fc19a9ff1521a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 搭配 .NET Framework 3.5 Ruleset 使用變數
-這個範例示範如何建立使用 <xref:System.Activities.Statements.Interop> 活動整合 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中使用原則和規則所撰寫自訂活動的工作流程。工作流程會透過將變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。  
+# <a name="using-variables-with-a-net-framework-35-ruleset"></a><span data-ttu-id="cac59-102">搭配 .NET Framework 3.5 Ruleset 使用變數</span><span class="sxs-lookup"><span data-stu-id="cac59-102">Using Variables with a .NET Framework 3.5 Ruleset</span></span>
+<span data-ttu-id="cac59-103">這個範例示範如何建立使用 <xref:System.Activities.Statements.Interop> 活動整合 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中使用原則和規則所撰寫自訂活動的工作流程。</span><span class="sxs-lookup"><span data-stu-id="cac59-103">This sample demonstrates how to create a workflow that uses the <xref:System.Activities.Statements.Interop> activity to integrate a custom activity written in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] that uses policy and rules.</span></span> <span data-ttu-id="cac59-104">工作流程會透過將變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。</span><span class="sxs-lookup"><span data-stu-id="cac59-104">The workflow passes data to the custom activity by binding variables to the dependency properties exposed by the custom activity.</span></span>  
   
-## 範例逐步解說  
+## <a name="sample-walkthrough"></a><span data-ttu-id="cac59-105">範例逐步解說</span><span class="sxs-lookup"><span data-stu-id="cac59-105">Sample walkthrough</span></span>  
   
-#### 若要檢查 TravelRuleLibrary  
+#### <a name="to-examine-travelrulelibrary"></a><span data-ttu-id="cac59-106">若要檢查 TravelRuleLibrary</span><span class="sxs-lookup"><span data-stu-id="cac59-106">To examine TravelRuleLibrary</span></span>  
   
-1.  使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 開啟 \[InteropWith35RuleSet.sln\] 方案檔案。  
+1.  <span data-ttu-id="cac59-107">使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 開啟 [InteropWith35RuleSet.sln] 方案檔案。</span><span class="sxs-lookup"><span data-stu-id="cac59-107">Using [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], open the InteropWith35RuleSet.sln solution file.</span></span>  
   
-2.  在工作流程設計工具中開啟 \[TravelRuleSet.cs\]。  
+2.  <span data-ttu-id="cac59-108">在工作流程設計工具中開啟 [TravelRuleSet.cs]。</span><span class="sxs-lookup"><span data-stu-id="cac59-108">Open the TravelRuleSet.cs in the workflow designer.</span></span>  
   
-     包含 <xref:System.Workflow.Activities.PolicyActivity> 的自訂循序活動隨即顯示。  
+     <span data-ttu-id="cac59-109">包含 <xref:System.Workflow.Activities.PolicyActivity> 的自訂循序活動隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="cac59-109">A custom sequential activity that contains a <xref:System.Workflow.Activities.PolicyActivity> is displayed.</span></span>  
   
-3.  按兩下 \[DiscountPolicy\] 原則活動以檢查規則。  
+3.  <span data-ttu-id="cac59-110">按兩下 [DiscountPolicy] 原則活動以檢查規則。</span><span class="sxs-lookup"><span data-stu-id="cac59-110">Double-click the DiscountPolicy policy activity to examine the rules.</span></span>  
   
-     規則編輯器會出現並顯示規則。  
+     <span data-ttu-id="cac59-111">規則編輯器會出現並顯示規則。</span><span class="sxs-lookup"><span data-stu-id="cac59-111">The Rules editor pops up to show the rules.</span></span>  
   
-4.  以滑鼠右鍵按一下 \[`DiscountPolicy`\]，然後選取 \[**檢視程式碼**\] 選項對照 C\# 程式碼檢查活動的程式碼。  
+4.  <span data-ttu-id="cac59-112">以滑鼠右鍵按一下`DiscountPolicy`選取**檢視程式碼**選項，檢查程式碼旁置 C# 程式碼活動。</span><span class="sxs-lookup"><span data-stu-id="cac59-112">Right click the `DiscountPolicy` and select the **View Code** option to examine the code beside C# code for the activity.</span></span>  
   
-     您會看見 `DiscountLevel` 的相依性屬性設定。這相當於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的引數。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 引數的詳細資訊，請參閱[變數與引數](../../../../docs/framework/windows-workflow-foundation//variables-and-arguments.md)。  
+     <span data-ttu-id="cac59-113">您會看見 `DiscountLevel` 的相依性屬性設定。</span><span class="sxs-lookup"><span data-stu-id="cac59-113">Observe the dependency property setting for `DiscountLevel`.</span></span> <span data-ttu-id="cac59-114">這相當於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的引數。</span><span class="sxs-lookup"><span data-stu-id="cac59-114">This is equivalent to arguments in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="cac59-115">引數，請參閱[變數和引數](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。</span><span class="sxs-lookup"><span data-stu-id="cac59-115"> arguments, see [Variables and Arguments](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).</span></span>  
   
-## InteropWith35RuleSet  
- 這是循序工作流程專案，該專案會使用 <xref:System.Activities.Statements.Interop> 活動整合 `TravelRuleLibrary` 專案中建立的自訂規則集。變數會在 <xref:System.Activities.Statements.Sequence> 活動的最上層建立。<xref:System.Activities.Statements.Interop> 活動會用來與 `TravelRuleSet` 活動整合。<xref:System.Activities.Statements.Sequence> 上宣告的變數會用來繫結至相依性屬性。  
+## <a name="interopwith35ruleset"></a><span data-ttu-id="cac59-116">InteropWith35RuleSet</span><span class="sxs-lookup"><span data-stu-id="cac59-116">InteropWith35RuleSet</span></span>  
+ <span data-ttu-id="cac59-117">這是循序工作流程專案，該專案會使用 <xref:System.Activities.Statements.Interop> 活動整合 `TravelRuleLibrary` 專案中建立的自訂規則集。</span><span class="sxs-lookup"><span data-stu-id="cac59-117">This is a sequential workflow project that uses the <xref:System.Activities.Statements.Interop> activity to integrate with the custom Rule set created in the `TravelRuleLibrary` project.</span></span> <span data-ttu-id="cac59-118">變數會在 <xref:System.Activities.Statements.Sequence> 活動的最上層建立。</span><span class="sxs-lookup"><span data-stu-id="cac59-118">Variables are created on the top level <xref:System.Activities.Statements.Sequence> activity.</span></span> <span data-ttu-id="cac59-119"><xref:System.Activities.Statements.Interop> 活動會用來與 `TravelRuleSet` 活動整合。</span><span class="sxs-lookup"><span data-stu-id="cac59-119">The <xref:System.Activities.Statements.Interop> activity is used to integrate with the `TravelRuleSet` activity.</span></span> <span data-ttu-id="cac59-120"><xref:System.Activities.Statements.Sequence> 上宣告的變數會用來繫結至相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="cac59-120">The variables that are declared on the <xref:System.Activities.Statements.Sequence> are used to bind to the dependency properties.</span></span>  
   
-## 若要使用這個範例  
+## <a name="to-use-this-sample"></a><span data-ttu-id="cac59-121">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="cac59-121">To use this sample</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 \[InteropWith35RuleSet.sln\] 方案檔案。  
+1.  <span data-ttu-id="cac59-122">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 [InteropWith35RuleSet.sln] 方案檔案。</span><span class="sxs-lookup"><span data-stu-id="cac59-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InteropWith35RuleSet.sln solution file.</span></span>  
   
-2.  若要建置此方案，請按下 CTRL\+SHIFT\+B。  
+2.  <span data-ttu-id="cac59-123">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="cac59-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  若要執行此方案，請按下 CTRL\+F5。  
+3.  <span data-ttu-id="cac59-124">若要執行此方案，請按下 CTRL+F5。</span><span class="sxs-lookup"><span data-stu-id="cac59-124">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="cac59-125">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="cac59-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cac59-126">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="cac59-126">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="cac59-127">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="cac59-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cac59-128">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="cac59-128">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="cac59-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cac59-129">See Also</span></span>

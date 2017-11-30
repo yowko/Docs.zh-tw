@@ -1,86 +1,89 @@
 ---
-title: "UI Automation Support for the Header Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Header control type"
-  - "Header control type"
-  - "control types, Header"
+title: "Header 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Header control type
+- Header control type
+- control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-caps.latest.revision: 20
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: c6561c463132d2cb1bf952b67b391be2658a7752
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Header Control Type
+# <a name="ui-automation-support-for-the-header-control-type"></a><span data-ttu-id="420d0-102">Header 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="420d0-102">UI Automation Support for the Header Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱[Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="420d0-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="420d0-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="420d0-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="420d0-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供標題控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。  
+ <span data-ttu-id="420d0-105">本主題提供標題控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="420d0-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Header control type.</span></span> <span data-ttu-id="420d0-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="420d0-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="420d0-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。</span><span class="sxs-lookup"><span data-stu-id="420d0-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 標題控制項可為資料列或資料行資訊的標籤提供視覺容器。  
+ <span data-ttu-id="420d0-108">標題控制項可為資料列或資料行資訊的標籤提供視覺容器。</span><span class="sxs-lookup"><span data-stu-id="420d0-108">The header control provides a visual container for the labels for rows or columns of information.</span></span>  
   
- 下列章節會定義標題控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用於所有標題控制項。  
+ <span data-ttu-id="420d0-109">下列章節會定義標題控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="420d0-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Header control type.</span></span> <span data-ttu-id="420d0-110">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有標題控制項。</span><span class="sxs-lookup"><span data-stu-id="420d0-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all header controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述標題控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱[UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="420d0-111">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="420d0-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="420d0-112">下表描述標題控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="420d0-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to header controls and describes what can be contained in each view.</span></span> <span data-ttu-id="420d0-113">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="420d0-113">For more information about the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|頁首<br /><br /> -   HeaderItem \(1 個以上\)|無|  
+|<span data-ttu-id="420d0-114">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="420d0-114">Control View</span></span>|<span data-ttu-id="420d0-115">內容檢視</span><span class="sxs-lookup"><span data-stu-id="420d0-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="420d0-116">頁首</span><span class="sxs-lookup"><span data-stu-id="420d0-116">Header</span></span><br /><br /> <span data-ttu-id="420d0-117">-HeaderItem （1 或以上）</span><span class="sxs-lookup"><span data-stu-id="420d0-117">-   HeaderItem (1 or more)</span></span>|<span data-ttu-id="420d0-118">無</span><span class="sxs-lookup"><span data-stu-id="420d0-118">None</span></span>|  
   
- 標題控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中一律會有 1 個以上的子系。  
+ <span data-ttu-id="420d0-119">標題控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中一律會有 1 個以上的子系。</span><span class="sxs-lookup"><span data-stu-id="420d0-119">Header controls always have 1 or more children in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>  
   
- 標題控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中沒有任何子系。  
+ <span data-ttu-id="420d0-120">標題控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中沒有任何子系。</span><span class="sxs-lookup"><span data-stu-id="420d0-120">Header controls have zero children in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與標題控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="420d0-121">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="420d0-121">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="420d0-122">下表列示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與標題控制項特別有關。</span><span class="sxs-lookup"><span data-stu-id="420d0-122">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to header controls.</span></span> <span data-ttu-id="420d0-123">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="420d0-123">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|備註|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|如果有一個以上的資料列標題或資料行標題，標題控制項就需要名稱。 如此可識別標題內的資訊。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|標題控制項沒有靜態標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|頁首|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「標題」|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|水平|這個屬性值會公開標題控制項的位置，即表示它是資料列標題或資料行標題。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|此標題控制項不會包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此標題控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="420d0-124"> 屬性</span><span class="sxs-lookup"><span data-stu-id="420d0-124"> Property</span></span>|<span data-ttu-id="420d0-125">值</span><span class="sxs-lookup"><span data-stu-id="420d0-125">Value</span></span>|<span data-ttu-id="420d0-126">備註</span><span class="sxs-lookup"><span data-stu-id="420d0-126">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="420d0-127">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="420d0-127">See notes.</span></span>|<span data-ttu-id="420d0-128">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="420d0-128">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="420d0-129">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="420d0-129">See notes.</span></span>|<span data-ttu-id="420d0-130">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="420d0-130">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="420d0-131">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="420d0-131">See notes.</span></span>|<span data-ttu-id="420d0-132">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="420d0-132">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="420d0-133">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="420d0-133">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="420d0-134">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="420d0-134">See notes.</span></span>|<span data-ttu-id="420d0-135">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="420d0-135">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="420d0-136">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="420d0-136">See notes.</span></span>|<span data-ttu-id="420d0-137">如果有一個以上的資料列標題或資料行標題，標題控制項就需要名稱。</span><span class="sxs-lookup"><span data-stu-id="420d0-137">The header control needs a name if there is more than one row header or more than one column header.</span></span> <span data-ttu-id="420d0-138">如此可識別標題內的資訊。</span><span class="sxs-lookup"><span data-stu-id="420d0-138">This identifies the information within the header.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="420d0-139">`Null`.</span><span class="sxs-lookup"><span data-stu-id="420d0-139">`Null`.</span></span>|<span data-ttu-id="420d0-140">標題控制項沒有靜態標籤。</span><span class="sxs-lookup"><span data-stu-id="420d0-140">Header controls do not have a static label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="420d0-141">頁首</span><span class="sxs-lookup"><span data-stu-id="420d0-141">Header</span></span>|<span data-ttu-id="420d0-142">此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="420d0-142">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="420d0-143">「標題」</span><span class="sxs-lookup"><span data-stu-id="420d0-143">"header"</span></span>|<span data-ttu-id="420d0-144">此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="420d0-144">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|<span data-ttu-id="420d0-145">水平</span><span class="sxs-lookup"><span data-stu-id="420d0-145">Horizontal</span></span>|<span data-ttu-id="420d0-146">這個屬性值會公開標題控制項的位置，即表示它是資料列標題或資料行標題。</span><span class="sxs-lookup"><span data-stu-id="420d0-146">The value of this property exposes the position of the header control - whether it is a row header or column header.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="420d0-147">False</span><span class="sxs-lookup"><span data-stu-id="420d0-147">False</span></span>|<span data-ttu-id="420d0-148">此標題控制項不會包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中。</span><span class="sxs-lookup"><span data-stu-id="420d0-148">The header control is not included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="420d0-149">True</span><span class="sxs-lookup"><span data-stu-id="420d0-149">True</span></span>|<span data-ttu-id="420d0-150">此標題控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中。</span><span class="sxs-lookup"><span data-stu-id="420d0-150">The header control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列出所有標題控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱[UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="420d0-151">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="420d0-151">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="420d0-152">下表列出所有標題控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="420d0-152">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all header controls.</span></span> <span data-ttu-id="420d0-153">如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="420d0-153">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式|支援|備註|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|視情況而定|如果此標題控制項可以調整大小，即實作此控制項模式。|  
+|<span data-ttu-id="420d0-154">控制項模式</span><span class="sxs-lookup"><span data-stu-id="420d0-154">Control Pattern</span></span>|<span data-ttu-id="420d0-155">支援</span><span class="sxs-lookup"><span data-stu-id="420d0-155">Support</span></span>|<span data-ttu-id="420d0-156">備註</span><span class="sxs-lookup"><span data-stu-id="420d0-156">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|<span data-ttu-id="420d0-157">視情況而定</span><span class="sxs-lookup"><span data-stu-id="420d0-157">Depends</span></span>|<span data-ttu-id="420d0-158">如果此標題控制項可以調整大小，即實作此控制項模式。</span><span class="sxs-lookup"><span data-stu-id="420d0-158">Implement this control pattern if the header control can be resized.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列出所有標題控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱[UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="420d0-159">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="420d0-159">Required UI Automation Events</span></span>  
+ <span data-ttu-id="420d0-160">下表列出所有標題控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="420d0-160">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all header controls.</span></span> <span data-ttu-id="420d0-161">如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="420d0-161">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|備註|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="420d0-162"> 事件</span><span class="sxs-lookup"><span data-stu-id="420d0-162"> Event</span></span>|<span data-ttu-id="420d0-163">支援</span><span class="sxs-lookup"><span data-stu-id="420d0-163">Support</span></span>|<span data-ttu-id="420d0-164">備註</span><span class="sxs-lookup"><span data-stu-id="420d0-164">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="420d0-165"><xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="420d0-165"><xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="420d0-166">必要項</span><span class="sxs-lookup"><span data-stu-id="420d0-166">Required</span></span>|<span data-ttu-id="420d0-167">無</span><span class="sxs-lookup"><span data-stu-id="420d0-167">None</span></span>|  
+|<span data-ttu-id="420d0-168"><xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="420d0-168"><xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="420d0-169">必要項</span><span class="sxs-lookup"><span data-stu-id="420d0-169">Required</span></span>|<span data-ttu-id="420d0-170">無</span><span class="sxs-lookup"><span data-stu-id="420d0-170">None</span></span>|  
+|<span data-ttu-id="420d0-171"><xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="420d0-171"><xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="420d0-172">必要項</span><span class="sxs-lookup"><span data-stu-id="420d0-172">Required</span></span>|<span data-ttu-id="420d0-173">無</span><span class="sxs-lookup"><span data-stu-id="420d0-173">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|<span data-ttu-id="420d0-174">必要項</span><span class="sxs-lookup"><span data-stu-id="420d0-174">Required</span></span>|<span data-ttu-id="420d0-175">無</span><span class="sxs-lookup"><span data-stu-id="420d0-175">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|<span data-ttu-id="420d0-176">必要項</span><span class="sxs-lookup"><span data-stu-id="420d0-176">Required</span></span>|<span data-ttu-id="420d0-177">無</span><span class="sxs-lookup"><span data-stu-id="420d0-177">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.Header>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="420d0-178">另請參閱</span><span class="sxs-lookup"><span data-stu-id="420d0-178">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Header>  
+ [<span data-ttu-id="420d0-179">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="420d0-179">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="420d0-180">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="420d0-180">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

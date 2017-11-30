@@ -1,67 +1,71 @@
 ---
-title: "如何：從剪貼簿擷取資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "剪貼簿, 擷取資料"
-  - "貼上剪貼簿資料"
+title: "如何：從剪貼簿擷取資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- pasting Clipboard data
+- Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c2f71c6738f19e70826b95626377097de0cd9b3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：從剪貼簿擷取資料
-<xref:System.Windows.Forms.Clipboard> 類別提供了一些方法，可以用來與 Windows 作業系統的剪貼簿功能互動。  許多應用程式都將剪貼簿當做資料的暫時儲存機制。  例如，文書處理器在進行剪下和貼上作業時就會使用剪貼簿。  剪貼簿也非常適合用來將資料從一個應用程式傳送到另一個應用程式。  
+# <a name="how-to-retrieve-data-from-the-clipboard"></a><span data-ttu-id="85127-102">如何：從剪貼簿擷取資料</span><span class="sxs-lookup"><span data-stu-id="85127-102">How to: Retrieve Data from the Clipboard</span></span>
+<span data-ttu-id="85127-103"><xref:System.Windows.Forms.Clipboard>類別提供可用來與 Windows 作業系統的剪貼簿功能互動的方法。</span><span class="sxs-lookup"><span data-stu-id="85127-103">The <xref:System.Windows.Forms.Clipboard> class provides methods that you can use to interact with the Windows operating system Clipboard feature.</span></span> <span data-ttu-id="85127-104">許多應用程式的資料做為暫存的儲存機制使用剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="85127-104">Many applications use the Clipboard as a temporary repository for data.</span></span> <span data-ttu-id="85127-105">例如，文書處理器會使用剪貼簿剪下和貼上作業期間。</span><span class="sxs-lookup"><span data-stu-id="85127-105">For example, word processors use the Clipboard during cut-and-paste operations.</span></span> <span data-ttu-id="85127-106">也適用於將資訊傳送到另一個應用程式從剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="85127-106">The Clipboard is also useful for transferring information from one application to another.</span></span>  
   
- 有些應用程式會將資料以多種格式儲存在剪貼簿上，以增加其他可能使用這些資料的應用程式數目。  剪貼簿檔案格式是一個用來辨識格式的字串。  使用所辨識之格式的應用程式可以從剪貼簿擷取相關聯的資料。  <xref:System.Windows.Forms.DataFormats> 類別會提供預先定義的格式名稱，以供您使用。  您也可以使用自己的格式名稱，或將某個物件的型別當做其格式使用。  如需將資料加入至剪貼簿的詳細資訊，請參閱 [如何：將資料加入至剪貼簿](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)。  
+ <span data-ttu-id="85127-107">某些應用程式會將資料儲存在剪貼簿中，多個格式增加可能可以使用這些資料的其他應用程式數目。</span><span class="sxs-lookup"><span data-stu-id="85127-107">Some applications store data on the Clipboard in multiple formats to increase the number of other applications that can potentially use the data.</span></span> <span data-ttu-id="85127-108">剪貼簿格式會是識別格式的字串。</span><span class="sxs-lookup"><span data-stu-id="85127-108">A Clipboard format is a string that identifies the format.</span></span> <span data-ttu-id="85127-109">使用識別的格式的應用程式可以擷取剪貼簿相關聯的資料。</span><span class="sxs-lookup"><span data-stu-id="85127-109">An application that uses the identified format can retrieve the associated data on the Clipboard.</span></span> <span data-ttu-id="85127-110"><xref:System.Windows.Forms.DataFormats>類別會提供貴用戶使用的預先定義的格式名稱。</span><span class="sxs-lookup"><span data-stu-id="85127-110">The <xref:System.Windows.Forms.DataFormats> class provides predefined format names for your use.</span></span> <span data-ttu-id="85127-111">您也可以使用您自己的格式名稱，或使用物件的類型作為其格式。</span><span class="sxs-lookup"><span data-stu-id="85127-111">You can also use your own format names or use an object's type as its format.</span></span> <span data-ttu-id="85127-112">如需將資料加入至剪貼簿資訊，請參閱[如何： 加入資料到剪貼簿](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)。</span><span class="sxs-lookup"><span data-stu-id="85127-112">For information about adding data to the Clipboard, see [How to: Add Data to the Clipboard](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).</span></span>  
   
- 若要判斷剪貼簿是否包含特定格式的資料，請使用其中一個 `Contains`*Format* 方法或 <xref:System.Windows.Forms.Clipboard.GetData%2A> 方法。  若要從剪貼簿擷取資料，則請使用其中一個 `Get`*Format* 方法或 <xref:System.Windows.Forms.Clipboard.GetData%2A> 方法。  這些是 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]中的新方法。  
+ <span data-ttu-id="85127-113">若要判斷剪貼簿是否包含特定格式的資料，請使用其中`Contains`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="85127-113">To determine whether the Clipboard contains data in a particular format, use one of the `Contains`*Format* methods or the <xref:System.Windows.Forms.Clipboard.GetData%2A> method.</span></span> <span data-ttu-id="85127-114">若要從剪貼簿擷取資料，請使用其中一種`Get`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="85127-114">To retrieve data from the Clipboard, use one of the `Get`*Format* methods or the <xref:System.Windows.Forms.Clipboard.GetData%2A> method.</span></span> <span data-ttu-id="85127-115">這些方法的新功能[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="85127-115">These methods are new in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
- 若要使用 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 之前的版本從剪貼簿擷取資料，請使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法並呼叫所傳回之 <xref:System.Windows.Forms.IDataObject> 的方法。  例如，若要判斷傳回的物件中是否包含特定格式，請呼叫 <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> 方法。  
+ <span data-ttu-id="85127-116">存取資料，從剪貼簿使用版本早於[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]，使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>方法呼叫之方法的傳回和<xref:System.Windows.Forms.IDataObject>。</span><span class="sxs-lookup"><span data-stu-id="85127-116">To access data from the Clipboard by using versions earlier than [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], use the <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> method and call the methods of the returned <xref:System.Windows.Forms.IDataObject>.</span></span> <span data-ttu-id="85127-117">若要判斷是否可傳回之物件中的特定格式，例如，呼叫<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="85127-117">To determine whether a particular format is available in the returned object, for example, call the <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> method.</span></span>  
   
 > [!NOTE]
->  所有 Windows 應用程式都會共用系統剪貼簿。  因此，剪貼簿的內容會根據您切換至不同的應用程式而改變。  
+>  <span data-ttu-id="85127-118">所有的 Windows 應用程式共用系統剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="85127-118">All Windows-based applications share the system Clipboard.</span></span> <span data-ttu-id="85127-119">因此，內容可能會變更當您切換到另一個應用程式。</span><span class="sxs-lookup"><span data-stu-id="85127-119">Therefore, the contents are subject to change when you switch to another application.</span></span>  
 >   
->  <xref:System.Windows.Forms.Clipboard> 類別只能用在設定為單一執行緒 Apartment \(STA\) 模式的執行緒中。  若要使用這個類別，請確定 `Main` 方法已使用 <xref:System.STAThreadAttribute> 屬性加以標記。  
+>  <span data-ttu-id="85127-120"><xref:System.Windows.Forms.Clipboard>類別只可以用於設定為單一執行緒 apartment (STA) 模式的執行緒。</span><span class="sxs-lookup"><span data-stu-id="85127-120">The <xref:System.Windows.Forms.Clipboard> class can only be used in threads set to single thread apartment (STA) mode.</span></span> <span data-ttu-id="85127-121">若要使用這個類別，請確認您`Main`方法標示為<xref:System.STAThreadAttribute>屬性。</span><span class="sxs-lookup"><span data-stu-id="85127-121">To use this class, ensure that your `Main` method is marked with the <xref:System.STAThreadAttribute> attribute.</span></span>  
   
-### 若要以單一且通用的格式從剪貼簿擷取資料  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a><span data-ttu-id="85127-122">若要從單一的一般格式剪貼簿擷取資料</span><span class="sxs-lookup"><span data-stu-id="85127-122">To retrieve data from the Clipboard in a single, common format</span></span>  
   
-1.  請使用 <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>、<xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>、<xref:System.Windows.Forms.Clipboard.GetImage%2A> 或 <xref:System.Windows.Forms.Clipboard.GetText%2A> 方法。  或者，請先使用對應的 `Contains`*Format* 方法來判斷資料是否為特定格式。  這些方法只能在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]中取得。  
+1.  <span data-ttu-id="85127-123">使用<xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>， <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>， <xref:System.Windows.Forms.Clipboard.GetImage%2A>，或<xref:System.Windows.Forms.Clipboard.GetText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="85127-123">Use the <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, or <xref:System.Windows.Forms.Clipboard.GetText%2A> method.</span></span> <span data-ttu-id="85127-124">（選擇性） 使用 對應`Contains`*格式*以判斷資料是否可用於特定格式的方法。</span><span class="sxs-lookup"><span data-stu-id="85127-124">Optionally, use the corresponding `Contains`*Format* methods first to determine whether data is available in a particular format.</span></span> <span data-ttu-id="85127-125">這些方法都只[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="85127-125">These methods are available only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### 若要以自訂的格式從剪貼簿擷取資料  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a><span data-ttu-id="85127-126">從剪貼簿中的自訂格式，擷取資料</span><span class="sxs-lookup"><span data-stu-id="85127-126">To retrieve data from the Clipboard in a custom format</span></span>  
   
-1.  請使用具有自訂格式名稱的 <xref:System.Windows.Forms.Clipboard.GetData%2A> 方法。  這個方法只能在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]中取得。  
+1.  <span data-ttu-id="85127-127">使用<xref:System.Windows.Forms.Clipboard.GetData%2A>方法以自訂的格式名稱。</span><span class="sxs-lookup"><span data-stu-id="85127-127">Use the <xref:System.Windows.Forms.Clipboard.GetData%2A> method with a custom format name.</span></span> <span data-ttu-id="85127-128">這個方法是僅適用於[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="85127-128">This method is available only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
-     您也可以為 <xref:System.Windows.Forms.Clipboard.SetData%2A> 方法使用預先定義的格式名稱。  如需詳細資訊，請參閱 <xref:System.Windows.Forms.DataFormats>。  
+     <span data-ttu-id="85127-129">您也可以使用具有預先定義的格式名稱<xref:System.Windows.Forms.Clipboard.SetData%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="85127-129">You can also use predefined format names with the <xref:System.Windows.Forms.Clipboard.SetData%2A> method.</span></span> <span data-ttu-id="85127-130">如需詳細資訊，請參閱<xref:System.Windows.Forms.DataFormats>。</span><span class="sxs-lookup"><span data-stu-id="85127-130">For more information, see <xref:System.Windows.Forms.DataFormats>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### 若要以多種格式從剪貼簿擷取資料  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a><span data-ttu-id="85127-131">若要從以多種格式剪貼簿擷取資料</span><span class="sxs-lookup"><span data-stu-id="85127-131">To retrieve data from the Clipboard in multiple formats</span></span>  
   
-1.  請使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。  您必須使用這個方法，才能從 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 之前版本的剪貼簿擷取資料。  
+1.  <span data-ttu-id="85127-132">請使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="85127-132">Use the <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> method.</span></span> <span data-ttu-id="85127-133">您必須使用這個方法來擷取資料，從剪貼簿上的版本早於[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="85127-133">You must use this method to retrieve data from the Clipboard on versions earlier than [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## 請參閱  
- [拖放作業和剪貼簿支援](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)   
- [如何：將資料加入至剪貼簿](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
+## <a name="see-also"></a><span data-ttu-id="85127-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85127-134">See Also</span></span>  
+ [<span data-ttu-id="85127-135">拖放作業和剪貼簿支援</span><span class="sxs-lookup"><span data-stu-id="85127-135">Drag-and-Drop Operations and Clipboard Support</span></span>](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
+ [<span data-ttu-id="85127-136">操作說明：將資料新增至剪貼簿</span><span class="sxs-lookup"><span data-stu-id="85127-136">How to: Add Data to the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)

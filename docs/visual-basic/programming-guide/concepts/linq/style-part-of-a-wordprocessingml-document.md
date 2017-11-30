@@ -1,42 +1,38 @@
 ---
-title: "設定樣式的 WordprocessingML Document2 一部分 |Microsoft 文件"
+title: "WordprocessingML Document2 樣式部分"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f25a71f9464d24f9362465a9f14144f62cd183f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d16363f377cc8a41ae8192e753ad70a8062588d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 文件的樣式部分
-這個主題顯示 Office Open XML WordprocessingML 文件樣式部分的範例。  
+# <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="37150-102">WordprocessingML 文件的樣式部分</span><span class="sxs-lookup"><span data-stu-id="37150-102">Style Part of a WordprocessingML Document</span></span>
+<span data-ttu-id="37150-103">這個主題顯示 Office Open XML WordprocessingML 文件樣式部分的範例。</span><span class="sxs-lookup"><span data-stu-id="37150-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例為建立 Office Open XML WordprocessingML 文件樣式部分的 XML。  
+## <a name="example"></a><span data-ttu-id="37150-104">範例</span><span class="sxs-lookup"><span data-stu-id="37150-104">Example</span></span>  
+ <span data-ttu-id="37150-105">下列範例為建立 Office Open XML WordprocessingML 文件樣式部分的 XML。</span><span class="sxs-lookup"><span data-stu-id="37150-105">The following example is the XML that makes up the style part of an Office Open XML WordprocessingML document.</span></span>  
   
- 預設段落樣式擁有包含下列開頭標記的項目：  
+ <span data-ttu-id="37150-106">預設段落樣式擁有包含下列開頭標記的項目：</span><span class="sxs-lookup"><span data-stu-id="37150-106">The default paragraph style has an element with the following opening tag:</span></span>  
   
 ```  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
- 當您撰寫查詢來尋找預設樣式識別項前，您必須知道這個資訊，該查詢才能識別包含預設樣式之段落的樣式。  
+ <span data-ttu-id="37150-107">當您撰寫查詢來尋找預設樣式識別項前，您必須知道這個資訊，該查詢才能識別包含預設樣式之段落的樣式。</span><span class="sxs-lookup"><span data-stu-id="37150-107">You need to know this information when you write the query to find the default style identifier, so that the query can identify the style of paragraphs that have the default style.</span></span>  
   
- 請注意，與 Microsoft Word 所產生的一般文件相較，這些文件非常簡單。 在許多情況下，Word 會儲存大量的額外資訊、額外格式與中繼資料。 此外，Word 不會將文字行儲存成容易閱讀的格式 (像本範例一樣)，而是在沒有縮排的情況下儲存 XML。 但是，所有 WordprocessingML 文件都會共用相同的 XML 基本組織結構。 因此，此教學課程中所呈現的查詢將會使用更複雜的文件。  
+ <span data-ttu-id="37150-108">請注意，與 Microsoft Word 所產生的一般文件相較，這些文件非常簡單。</span><span class="sxs-lookup"><span data-stu-id="37150-108">Note that these documents are very simple when compared to typical documents that Microsoft Word generates.</span></span> <span data-ttu-id="37150-109">在許多情況下，Word 會儲存大量的額外資訊、額外格式與中繼資料。</span><span class="sxs-lookup"><span data-stu-id="37150-109">In many cases, Word saves a great deal of additional information, additional formatting and metadata.</span></span> <span data-ttu-id="37150-110">此外，Word 不會將文字行儲存成容易閱讀的格式 (像本範例一樣)，而是在沒有縮排的情況下儲存 XML。</span><span class="sxs-lookup"><span data-stu-id="37150-110">Furthermore, Word does not format the lines to be easily readable as in this example; instead, the XML is saved without indentation.</span></span> <span data-ttu-id="37150-111">但是，所有 WordprocessingML 文件都會共用相同的 XML 基本組織結構。</span><span class="sxs-lookup"><span data-stu-id="37150-111">However, all WordprocessingML documents share the same basic XML shape.</span></span> <span data-ttu-id="37150-112">因此，此教學課程中所呈現的查詢將會使用更複雜的文件。</span><span class="sxs-lookup"><span data-stu-id="37150-112">Because of this, the queries presented in this tutorial will work with more complicated documents.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -153,5 +149,5 @@ ms.lasthandoff: 03/13/2017
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="37150-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37150-113">See Also</span></span>  
+ [<span data-ttu-id="37150-114">Office 的詳細資料中開啟 XML WordprocessingML 文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="37150-114">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

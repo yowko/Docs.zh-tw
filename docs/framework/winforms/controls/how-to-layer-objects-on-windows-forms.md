@@ -1,55 +1,58 @@
 ---
-title: "如何：將 Windows Form 上的物件分層 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 分層"
-  - "控制項 [Windows Form], 位置"
-  - "Windows Form 控制項, 分層"
-  - "疊置順序"
-  - "疊置順序"
+title: "如何：將 Windows Form 上的物件分層"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms controls, layering
+- controls [Windows Forms], layering
+- z order
+- controls [Windows Forms], positioning
+- z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bda4cb3641ff890646614af35d38ff13621cc16b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將 Windows Form 上的物件分層
-在建立複雜的使用者介面，或使用多重文件介面 \(MDI\) 表單時，通常需要將控制項和子表單層級化，以建立更複雜的使用者介面 \(UI\)。  若要移動和追蹤上下文群組內的控制項和視窗，您可以利用其疊置順序來操控。  「*疊置順序*」是延著表單 Z 軸 \(深度\) 為表單上的控制項進行視覺分層。  疊置順序最上層的視窗覆蓋於其他的視窗之上。  所有其他的視窗則覆蓋於疊置順序最底層的視窗。  
+# <a name="how-to-layer-objects-on-windows-forms"></a><span data-ttu-id="a00b8-102">如何：將 Windows Form 上的物件分層</span><span class="sxs-lookup"><span data-stu-id="a00b8-102">How to: Layer Objects on Windows Forms</span></span>
+<span data-ttu-id="a00b8-103">當您建立複雜的使用者介面，或使用多個文件介面 (MDI) 表單時，您通常要控制項和子表單，以建立更複雜的使用者介面 (UI) 層級。</span><span class="sxs-lookup"><span data-stu-id="a00b8-103">When you create a complex user interface, or work with a multiple document interface (MDI) form, you will often want to layer both controls and child forms to create more complex user interfaces (UI).</span></span> <span data-ttu-id="a00b8-104">若要移動並追蹤的控制項和 windows 群組的內容中，您管理他們的疊置順序。</span><span class="sxs-lookup"><span data-stu-id="a00b8-104">To move and keep track of controls and windows within the context of a group, you manipulate their z-order.</span></span> <span data-ttu-id="a00b8-105">*疊置順序*會沿著表單 z （深度） 的表單上控制項的視覺化圖層。</span><span class="sxs-lookup"><span data-stu-id="a00b8-105">*Z-order* is the visual layering of controls on a form along the form's z-axis (depth).</span></span> <span data-ttu-id="a00b8-106">視窗頂端的疊置順序，與所有其他 windows 重疊。</span><span class="sxs-lookup"><span data-stu-id="a00b8-106">The window at the top of the z-order overlaps all other windows.</span></span> <span data-ttu-id="a00b8-107">所有其他視窗重疊視窗底部的疊置順序。</span><span class="sxs-lookup"><span data-stu-id="a00b8-107">All other windows overlap the window at the bottom of the z-order.</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="a00b8-108">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="a00b8-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a00b8-109">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="a00b8-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a00b8-110">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="a00b8-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要在設計階段分層控制項  
+### <a name="to-layer-controls-at-design-time"></a><span data-ttu-id="a00b8-111">在設計階段的圖層控制項</span><span class="sxs-lookup"><span data-stu-id="a00b8-111">To layer controls at design time</span></span>  
   
-1.  選取您想要分層的控制項。  
+1.  <span data-ttu-id="a00b8-112">選取您想要在圖層的控制項。</span><span class="sxs-lookup"><span data-stu-id="a00b8-112">Select a control that you want to layer.</span></span>  
   
-2.  在 \[**格式**\] 功能表上指向 \[**順序**\]，然後按一下 \[**提到最上層**\] 或 \[**移到最下層**\]。  
+2.  <span data-ttu-id="a00b8-113">在**格式**功能表上，指向**順序**，然後按一下 **提到最上層**或**下層**。</span><span class="sxs-lookup"><span data-stu-id="a00b8-113">On the **Format** menu, point to **Order**, and then click **Bring To Front** or **Send To Back**.</span></span>  
   
-### 若要以程式設計方式配置控制項  
+### <a name="to-layer-controls-programmatically"></a><span data-ttu-id="a00b8-114">以程式設計方式將層級控制</span><span class="sxs-lookup"><span data-stu-id="a00b8-114">To layer controls programmatically</span></span>  
   
--   使用 <xref:System.Windows.Forms.Control.BringToFront%2A> 和 <xref:System.Windows.Forms.Control.SendToBack%2A> 方法來操作控制項的疊置順序 \(Z\-order\)。  
+-   <span data-ttu-id="a00b8-115">使用<xref:System.Windows.Forms.Control.BringToFront%2A>和<xref:System.Windows.Forms.Control.SendToBack%2A>管理控制項疊置順序的方法。</span><span class="sxs-lookup"><span data-stu-id="a00b8-115">Use the <xref:System.Windows.Forms.Control.BringToFront%2A> and <xref:System.Windows.Forms.Control.SendToBack%2A> methods to manipulate the z-order of the controls.</span></span>  
   
-     例如，如果 <xref:System.Windows.Forms.TextBox> 控制項 `txtFirstName` 位於另一個控制項下方，且您想將它擺在上面，就可以使用下列程式碼：  
+     <span data-ttu-id="a00b8-116">例如，如果<xref:System.Windows.Forms.TextBox>控制項， `txtFirstName`，是下面另一個控制項，而且您想要有在最上層，請使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="a00b8-116">For example, if a <xref:System.Windows.Forms.TextBox> control, `txtFirstName`, is underneath another control and you want to have it on top, use the following code:</span></span>  
   
     ```vb  
     txtFirstName.BringToFront()  
-  
     ```  
   
     ```csharp  
     txtFirstName.BringToFront();  
-  
     ```  
   
     ```cpp  
@@ -57,11 +60,11 @@ caps.handback.revision: 14
     ```  
   
 > [!NOTE]
->  Windows Form 支援「*控制項內含項目*」。  控制項內含項目指的是將一些控制項擺在包含控制項之內，例如有一些 <xref:System.Windows.Forms.RadioButton> 控制項位於 <xref:System.Windows.Forms.GroupBox> 控制項之內。  您可以在包含控制項之內將控制項層級化。  移動群組方塊也就移動了控制項，因為控制項包含在其中。  
+>  <span data-ttu-id="a00b8-117">Windows Form 支援*控制項內含項目*。</span><span class="sxs-lookup"><span data-stu-id="a00b8-117">Windows Forms supports *control containment*.</span></span> <span data-ttu-id="a00b8-118">控制項內含項目都放多個控制項中包含的控制項，例如數目<xref:System.Windows.Forms.RadioButton>內控制<xref:System.Windows.Forms.GroupBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="a00b8-118">Control containment involves placing a number of controls within a containing control, such as a number of <xref:System.Windows.Forms.RadioButton> controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="a00b8-119">您可以再圖層內包含的控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="a00b8-119">You can then layer the controls within the containing control.</span></span> <span data-ttu-id="a00b8-120">移動群組方塊移動了控制項，因為它們包含在它之內。</span><span class="sxs-lookup"><span data-stu-id="a00b8-120">Moving the group box moves the controls as well, because they are contained inside it.</span></span>  
   
-## 請參閱  
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)   
- [排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [標記個別 Windows Form 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [依功能區分 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="a00b8-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a00b8-121">See Also</span></span>  
+ [<span data-ttu-id="a00b8-122">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="a00b8-122">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="a00b8-123">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="a00b8-123">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="a00b8-124">標記個別 Windows Forms 控制項並提供其捷徑</span><span class="sxs-lookup"><span data-stu-id="a00b8-124">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="a00b8-125">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="a00b8-125">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="a00b8-126">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="a00b8-126">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

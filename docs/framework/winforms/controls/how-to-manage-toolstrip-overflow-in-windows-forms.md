@@ -1,61 +1,62 @@
 ---
-title: "如何：管理 Windows Form 中的 ToolStrip 溢位 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CanOverflow 屬性"
-  - "範例 [Windows Form], 工具列"
-  - "Overflow 屬性"
-  - "工具列 [Windows Form], 管理溢位"
-  - "ToolStrip 控制項 [Windows Forms], 管理溢位"
+title: "如何：管理 Windows Form 中的 ToolStrip 溢位"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], managing overflow
+- toolbars [Windows Forms], managing overflow
+- examples [Windows Forms], toolbars
+- CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1ae4172dbdf82b4bd5bdd9a7f8afc1901fcfa3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：管理 Windows Form 中的 ToolStrip 溢位
-當分配的空間無法容納 <xref:System.Windows.Forms.ToolStrip> 控制項上的所有項目時，您可以啟用 <xref:System.Windows.Forms.ToolStrip> 上的溢位功能並且決定特定 <xref:System.Windows.Forms.ToolStripItem> 的溢位行為。  
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a><span data-ttu-id="a71e2-102">如何：管理 Windows Form 中的 ToolStrip 溢位</span><span class="sxs-lookup"><span data-stu-id="a71e2-102">How to: Manage ToolStrip Overflow in Windows Forms</span></span>
+<span data-ttu-id="a71e2-103">當上的所有項目<xref:System.Windows.Forms.ToolStrip>控制項無法放入配置的空間，您可以在啟用溢位功能<xref:System.Windows.Forms.ToolStrip>和決定特定的溢位行為<xref:System.Windows.Forms.ToolStripItem>s。</span><span class="sxs-lookup"><span data-stu-id="a71e2-103">When all the items on a <xref:System.Windows.Forms.ToolStrip> control do not fit in the allotted space, you can enable overflow functionality on the <xref:System.Windows.Forms.ToolStrip> and determine the overflow behavior of specific <xref:System.Windows.Forms.ToolStripItem>s.</span></span>  
   
- 如果 <xref:System.Windows.Forms.ToolStripItem> 所需的空間大於指定的空間，當您將它加入至設定為目前表單大小的 <xref:System.Windows.Forms.ToolStrip> 時，<xref:System.Windows.Forms.ToolStrip> 上會自動出現 <xref:System.Windows.Forms.ToolStripOverflowButton>。  <xref:System.Windows.Forms.ToolStripOverflowButton> 出現後，啟用溢位的項目會被移到下拉式溢位功能表中。  這可讓您自訂和排列 <xref:System.Windows.Forms.ToolStrip> 項目要如何適當地調整以配合不同的表單大小。  當項目發生溢位情形時，也可以利用 <xref:System.Windows.Forms.ToolStripItem.Placement%2A> 屬性、<xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=fullName> 屬性和 <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> 事件來變更項目的外觀。  不論在設計階段或是在執行階段放大表單，主要 <xref:System.Windows.Forms.ToolStrip> 上將能夠顯示更多的 <xref:System.Windows.Forms.ToolStripItem>，而在縮小表單之前，<xref:System.Windows.Forms.ToolStripOverflowButton> 甚至可能消失。  
+ <span data-ttu-id="a71e2-104">當您將加入<xref:System.Windows.Forms.ToolStripItem>s 需要更多的空間比分配給<xref:System.Windows.Forms.ToolStrip>指定表單的目前大小，<xref:System.Windows.Forms.ToolStripOverflowButton>上就會自動出現<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="a71e2-104">When you add <xref:System.Windows.Forms.ToolStripItem>s that require more space than is allotted to the <xref:System.Windows.Forms.ToolStrip> given the form's current size, a <xref:System.Windows.Forms.ToolStripOverflowButton> automatically appears on the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="a71e2-105"><xref:System.Windows.Forms.ToolStripOverflowButton>隨即出現，並啟用溢位的項目會變成下拉式溢位功能表。</span><span class="sxs-lookup"><span data-stu-id="a71e2-105">The <xref:System.Windows.Forms.ToolStripOverflowButton> appears, and overflow-enabled items are moved into the drop-down overflow menu.</span></span> <span data-ttu-id="a71e2-106">這可讓您自訂並優先處理如何您<xref:System.Windows.Forms.ToolStrip>項目適當地調整不同表單大小。</span><span class="sxs-lookup"><span data-stu-id="a71e2-106">This allows you to customize and prioritize how your <xref:System.Windows.Forms.ToolStrip> items properly adjust to different form sizes.</span></span> <span data-ttu-id="a71e2-107">您也可以變更的項目外觀，當它們分成使用溢位<xref:System.Windows.Forms.ToolStripItem.Placement%2A>和<xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType>屬性和<xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件。</span><span class="sxs-lookup"><span data-stu-id="a71e2-107">You can also change the appearance of your items when they fall into the overflow by using the <xref:System.Windows.Forms.ToolStripItem.Placement%2A> and <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> properties and the <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> event.</span></span> <span data-ttu-id="a71e2-108">如果您放大表單在設計階段或執行的階段，更<xref:System.Windows.Forms.ToolStripItem>s 可以顯示在主要<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripOverflowButton>可能甚至會消失，直到您減少表單的大小。</span><span class="sxs-lookup"><span data-stu-id="a71e2-108">If you enlarge the form at either design time or run time, more <xref:System.Windows.Forms.ToolStripItem>s can be displayed on the main <xref:System.Windows.Forms.ToolStrip> and the <xref:System.Windows.Forms.ToolStripOverflowButton> might even disappear until you decrease the size of the form.</span></span>  
   
-### 若要在 ToolStrip 控制項上啟用溢位  
+### <a name="to-enable-overflow-on-a-toolstrip-control"></a><span data-ttu-id="a71e2-109">若要啟用溢位在 ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="a71e2-109">To enable overflow on a ToolStrip control</span></span>  
   
--   請確認 <xref:System.Windows.Forms.ToolStrip> 的 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 屬性不是設定為 `false`。  預設為 `True`。  
+-   <span data-ttu-id="a71e2-110">請確認<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>屬性未設定為`false`如<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="a71e2-110">Ensure that the <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> property is not set to `false` for the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="a71e2-111">預設為 `True`。</span><span class="sxs-lookup"><span data-stu-id="a71e2-111">The default is `True`.</span></span>  
   
-     如果 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 是 `True` \(預設值\)，當 <xref:System.Windows.Forms.ToolStripItem> 的內容超過水平 <xref:System.Windows.Forms.ToolStrip> 的寬度或超過垂直 <xref:System.Windows.Forms.ToolStrip> 的高度時，<xref:System.Windows.Forms.ToolStripItem> 會設定為下拉式溢位功能表。  
+     <span data-ttu-id="a71e2-112">當<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>是`True`（預設）、<xref:System.Windows.Forms.ToolStripItem>傳送至下拉式溢位功能表時的內容<xref:System.Windows.Forms.ToolStripItem>超過水平寬度<xref:System.Windows.Forms.ToolStrip>或高度的垂直<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="a71e2-112">When <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> is `True` (the default), a <xref:System.Windows.Forms.ToolStripItem> is sent to the drop-down overflow menu when the content of the <xref:System.Windows.Forms.ToolStripItem> exceeds the width of a horizontal <xref:System.Windows.Forms.ToolStrip> or the height of a vertical <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### 若要指定特定 ToolStripItem 的溢位行為  
+### <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a><span data-ttu-id="a71e2-113">若要指定特定 ToolStripItem 的溢位行為</span><span class="sxs-lookup"><span data-stu-id="a71e2-113">To specify overflow behavior of a specific ToolStripItem</span></span>  
   
--   將 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 屬性設為所需的值。  其可能值為 `Always`、`Never` 和 `AsNeeded`。  The defaultis `AsNeeded`.  
+-   <span data-ttu-id="a71e2-114">設定<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>屬性<xref:System.Windows.Forms.ToolStripItem>所要的值。</span><span class="sxs-lookup"><span data-stu-id="a71e2-114">Set the <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> property of the <xref:System.Windows.Forms.ToolStripItem> to the desired value.</span></span> <span data-ttu-id="a71e2-115">這些可能是`Always`， `Never`，和`AsNeeded`。</span><span class="sxs-lookup"><span data-stu-id="a71e2-115">The possibilities are `Always`, `Never`, and `AsNeeded`.</span></span> <span data-ttu-id="a71e2-116">Defaultis `AsNeeded`。</span><span class="sxs-lookup"><span data-stu-id="a71e2-116">The defaultis `AsNeeded`.</span></span>  
   
     ```vb  
     toolStripTextBox1.Overflow = _  
     System.Windows.Forms.ToolStripItemOverflow.Never  
-  
     ```  
   
     ```csharp  
     toolStripTextBox1.Overflow = _  
     System.Windows.Forms.ToolStripItemOverflow.Never;  
-  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStripOverflowButton>   
- <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>   
- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>   
- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a><span data-ttu-id="a71e2-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a71e2-117">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStripOverflowButton>  
+ <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  
+ <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>  
+ [<span data-ttu-id="a71e2-118">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="a71e2-118">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="a71e2-119">ToolStrip 控制項架構</span><span class="sxs-lookup"><span data-stu-id="a71e2-119">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="a71e2-120">ToolStrip 技術摘要</span><span class="sxs-lookup"><span data-stu-id="a71e2-120">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

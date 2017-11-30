@@ -1,55 +1,60 @@
 ---
-title: "如何：在 Windows Form DataGridView 控制項中實作虛擬模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料 [Windows Form], 管理大型資料集"
-  - "DataGridView 控制項 [Windows Form], 大型資料集"
-  - "DataGridView 控制項 [Windows Form], 虛擬模式"
-  - "虛擬模式"
+title: "如何：在 Windows Forms DataGridView 控制項中實作虛擬模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- data [Windows Forms], managing large data sets
+- DataGridView control [Windows Forms], virtual mode
+- virtual mode
+- DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 986001f5bb725fa02d2b8b700224ca6016cec9f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows Form DataGridView 控制項中實作虛擬模式
-下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項 \(其 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為 `true`\) 來管理大量的資料。  
+# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="7729a-102">如何：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="7729a-102">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="7729a-103">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項 (其 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為 `true`) 來管理大量的資料。</span><span class="sxs-lookup"><span data-stu-id="7729a-103">The following code example demonstrates how to manage large sets of data using a <xref:System.Windows.Forms.DataGridView> control with its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property set to `true`.</span></span>  
   
- 如需此程式碼範例的完整說明，請參閱[逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+ <span data-ttu-id="7729a-104">如需此程式碼範例的完整說明，請參閱[逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="7729a-104">For a complete explanation of this code example, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="7729a-105">範例</span><span class="sxs-lookup"><span data-stu-id="7729a-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
  [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#000)]  
   
-## 編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="7729a-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="7729a-106">Compiling the Code</span></span>  
+ <span data-ttu-id="7729a-107">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="7729a-107">This example requires:</span></span>  
   
--   本系統以及 System.Windows.Forms 組件的參考。  
+-   <span data-ttu-id="7729a-108">本系統和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="7729a-108">References to the System and System.Windows.Forms assemblies.</span></span>  
   
- 如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的相關資訊，請參閱[從命令列建置](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) 或[使用 csc.exe 建置命令列](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  您也可以透過將程式碼貼入新的專案，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。  另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ <span data-ttu-id="7729a-109">如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="7729a-109">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="7729a-110">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="7729a-110">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="7729a-111">另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="7729a-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- <xref:System.Windows.Forms.DataGridView.CellValueNeeded>   
- <xref:System.Windows.Forms.DataGridView.CellValuePushed>   
- <xref:System.Windows.Forms.DataGridView.NewRowNeeded>   
- <xref:System.Windows.Forms.DataGridView.RowValidated>   
- <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>   
- <xref:System.Windows.Forms.DataGridView.CancelRowEdit>   
- <xref:System.Windows.Forms.DataGridView.UserDeletingRow>   
- [逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)   
- [Windows Form DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Windows Form DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="7729a-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7729a-112">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ <xref:System.Windows.Forms.DataGridView.CellValueNeeded>  
+ <xref:System.Windows.Forms.DataGridView.CellValuePushed>  
+ <xref:System.Windows.Forms.DataGridView.NewRowNeeded>  
+ <xref:System.Windows.Forms.DataGridView.RowValidated>  
+ <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>  
+ <xref:System.Windows.Forms.DataGridView.CancelRowEdit>  
+ <xref:System.Windows.Forms.DataGridView.UserDeletingRow>  
+ [<span data-ttu-id="7729a-113">逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="7729a-113">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [<span data-ttu-id="7729a-114">Windows Forms DataGridView 控制項中的效能微調</span><span class="sxs-lookup"><span data-stu-id="7729a-114">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="7729a-115">Windows Forms DataGridView 控制項中的虛擬模式</span><span class="sxs-lookup"><span data-stu-id="7729a-115">Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)

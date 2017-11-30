@@ -1,56 +1,59 @@
 ---
-title: "如何：實作 PriorityBinding | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "類別, PriorityBinding"
-  - "資料繫結, PriorityBinding 類別"
-  - "PriorityBinding 類別"
+title: "如何：實作 PriorityBinding"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9753462908928eaf177e100a16186826bf4828ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：實作 PriorityBinding
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 <xref:System.Windows.Data.PriorityBinding> 是透過指定繫結清單來運作。  繫結清單是從最高優先權排到最低優先權。  如果處理的最高優先權繫結順利傳回值，就絕不再需要處理清單中的其他繫結。  如果最高優先權繫結需要長時間評估，則在較高優先權繫結順利傳回值之前，會先使用下一個順利傳回值的最高優先權。  
+# <a name="how-to-implement-prioritybinding"></a><span data-ttu-id="ebb19-102">如何：實作 PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="ebb19-102">How to: Implement PriorityBinding</span></span>
+<span data-ttu-id="ebb19-103"><xref:System.Windows.Data.PriorityBinding>在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的運作方式是指定繫結的清單。</span><span class="sxs-lookup"><span data-stu-id="ebb19-103"><xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] works by specifying a list of bindings.</span></span> <span data-ttu-id="ebb19-104">繫結清單被依優先順序從高到最低優先順序。</span><span class="sxs-lookup"><span data-stu-id="ebb19-104">The list of bindings is ordered from highest priority to lowest priority.</span></span> <span data-ttu-id="ebb19-105">如果最高優先權繫結的傳回值已成功處理時就永遠不需要處理清單中的其他繫結。</span><span class="sxs-lookup"><span data-stu-id="ebb19-105">If the highest priority binding returns a value successfully when it is processed then there is never a need to process the other bindings in the list.</span></span> <span data-ttu-id="ebb19-106">這可能是最高的優先權繫結需要很長的時間進行評估的案例，優先順序較高的繫結成功傳回值之前，都會使用下一個最高優先順序成功傳回值。</span><span class="sxs-lookup"><span data-stu-id="ebb19-106">It could be the case that the highest priority binding takes a long time to be evaluated, the next highest priority that returns a value successfully will be used until a binding of a higher priority returns a value successfully.</span></span>  
   
-## 範例  
- 為了示範 <xref:System.Windows.Data.PriorityBinding> 的運作方式，已建立具有下列三個屬性的 `AsyncDataSource` 物件：`FastDP`、`SlowerDP` 和 `SlowestDP`。  
+## <a name="example"></a><span data-ttu-id="ebb19-107">範例</span><span class="sxs-lookup"><span data-stu-id="ebb19-107">Example</span></span>  
+ <span data-ttu-id="ebb19-108">若要示範如何<xref:System.Windows.Data.PriorityBinding>運作方式、`AsyncDataSource`物件已建立具有下列三個屬性： `FastDP`， `SlowerDP`，和`SlowestDP`。</span><span class="sxs-lookup"><span data-stu-id="ebb19-108">To demonstrate how <xref:System.Windows.Data.PriorityBinding> works, the `AsyncDataSource` object has been created with the following three properties: `FastDP`, `SlowerDP`, and `SlowestDP`.</span></span>  
   
- `FastDP` 的 get 存取子 \(Accessor\) 會傳回 `_fastDP` 資料成員的值。  
+ <span data-ttu-id="ebb19-109">Get 存取子的`FastDP`傳回的值`_fastDP`資料成員。</span><span class="sxs-lookup"><span data-stu-id="ebb19-109">The get accessor of `FastDP` returns the value of the `_fastDP` data member.</span></span>  
   
- `SlowerDP` 的 get 存取子會先等待 3 秒，再傳回 `_slowerDP` 資料成員的值。  
+ <span data-ttu-id="ebb19-110">Get 存取子的`SlowerDP`3 秒後再傳回的值會等到`_slowerDP`資料成員。</span><span class="sxs-lookup"><span data-stu-id="ebb19-110">The get accessor of `SlowerDP` waits for 3 seconds before returning the value of the `_slowerDP` data member.</span></span>  
   
- `SlowestDP` 的 get 存取子會先等待 5 秒，再傳回 `_slowestDP` 資料成員的值。  
+ <span data-ttu-id="ebb19-111">Get 存取子的`SlowestDP`等待 5 秒鐘，再傳回`_slowestDP`資料成員。</span><span class="sxs-lookup"><span data-stu-id="ebb19-111">The get accessor of `SlowestDP` waits for 5 seconds before returning the value of the `_slowestDP` data member.</span></span>  
   
 > [!NOTE]
->  這個範例僅供示範使用。  [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 方針建議不要定義數量級低於欄位集的屬性。  如需詳細資訊，請參閱 [NIB: Choosing Between Properties and Methods](http://msdn.microsoft.com/zh-tw/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
+>  <span data-ttu-id="ebb19-112">這個範例是僅針對示範目的。</span><span class="sxs-lookup"><span data-stu-id="ebb19-112">This example is for demonstration purposes only.</span></span> <span data-ttu-id="ebb19-113">[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]指導方針，建議您不要定義速度較慢比欄位集的屬性。</span><span class="sxs-lookup"><span data-stu-id="ebb19-113">The [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] guidelines recommend against defining properties that are orders of magnitude slower than a field set would be.</span></span> <span data-ttu-id="ebb19-114">如需詳細資訊，請參閱[NIB： 選擇之間指定屬性和方法](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af)。</span><span class="sxs-lookup"><span data-stu-id="ebb19-114">For more information, see [NIB: Choosing Between Properties and Methods](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af).</span></span>  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- <xref:System.Windows.Controls.TextBlock.Text%2A> 屬性會繫結至上面使用 <xref:System.Windows.Data.PriorityBinding> 的 `AsyncDS`：  
+ <span data-ttu-id="ebb19-115"><xref:System.Windows.Controls.TextBlock.Text%2A>屬性繫結至上述`AsyncDS`使用<xref:System.Windows.Data.PriorityBinding>:</span><span class="sxs-lookup"><span data-stu-id="ebb19-115">The <xref:System.Windows.Controls.TextBlock.Text%2A> property binds to the above `AsyncDS` using <xref:System.Windows.Data.PriorityBinding>:</span></span>  
   
- [!code-xml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- 當繫結引擎處理 <xref:System.Windows.Data.Binding> 物件時，是從繫結至 `SlowestDP` 屬性的第一個 <xref:System.Windows.Data.Binding> 開始。  在處理這個 <xref:System.Windows.Data.Binding> 時，因為它會休眠 5 秒，所以並不會順利傳回值，因此會處理下一個 <xref:System.Windows.Data.Binding> 項目。  又因為下一個 <xref:System.Windows.Data.Binding> 會休眠 3 秒，所以並不會順利傳回值。  繫結引擎接著會移至下一個繫結至 `FastDP` 屬性的 <xref:System.Windows.Data.Binding> 項目。  這個 <xref:System.Windows.Data.Binding> 會傳回 "Fast Value" 值。  <xref:System.Windows.Controls.TextBlock> 現在會顯示 "Fast Value" 值。  
+ <span data-ttu-id="ebb19-116">當繫結引擎處理<xref:System.Windows.Data.Binding>物件，與第一個啟動<xref:System.Windows.Data.Binding>，它繫結至`SlowestDP`屬性。</span><span class="sxs-lookup"><span data-stu-id="ebb19-116">When the binding engine processes the <xref:System.Windows.Data.Binding> objects, it starts with the first <xref:System.Windows.Data.Binding>, which is bound to the `SlowestDP` property.</span></span> <span data-ttu-id="ebb19-117">當這<xref:System.Windows.Data.Binding>是處理，但是不會傳回值已成功因為它正在睡眠中 5 秒，因此下一步<xref:System.Windows.Data.Binding>處理項目。</span><span class="sxs-lookup"><span data-stu-id="ebb19-117">When this <xref:System.Windows.Data.Binding> is processed, it does not return a value successfully because it is sleeping for 5 seconds, so the next <xref:System.Windows.Data.Binding> element is processed.</span></span> <span data-ttu-id="ebb19-118">下一步<xref:System.Windows.Data.Binding>沒有傳回值已成功因為睡眠 3 秒。</span><span class="sxs-lookup"><span data-stu-id="ebb19-118">The next <xref:System.Windows.Data.Binding> does not return a value successfully because it is sleeping for 3 seconds.</span></span> <span data-ttu-id="ebb19-119">繫結引擎，然後移到下一個<xref:System.Windows.Data.Binding>元素，其繫結至`FastDP`屬性。</span><span class="sxs-lookup"><span data-stu-id="ebb19-119">The binding engine then moves onto the next <xref:System.Windows.Data.Binding> element, which is bound to the `FastDP` property.</span></span> <span data-ttu-id="ebb19-120">這<xref:System.Windows.Data.Binding>傳回"Fast Value"的值。</span><span class="sxs-lookup"><span data-stu-id="ebb19-120">This <xref:System.Windows.Data.Binding> returns the value "Fast Value".</span></span> <span data-ttu-id="ebb19-121"><xref:System.Windows.Controls.TextBlock>現在會顯示 「 快速值 」 的值。</span><span class="sxs-lookup"><span data-stu-id="ebb19-121">The <xref:System.Windows.Controls.TextBlock> now displays the value "Fast Value".</span></span>  
   
- 而經過 3 秒之後，`SlowerDP` 屬性傳回 "Slower Value" 值。  <xref:System.Windows.Controls.TextBlock> 則會顯示 "Slower Value" 值。  
+ <span data-ttu-id="ebb19-122">在 3 秒超過之後`SlowerDP`屬性會傳回值 「 速度較慢的值 」。</span><span class="sxs-lookup"><span data-stu-id="ebb19-122">After 3 seconds elapses, the `SlowerDP` property returns the value "Slower Value".</span></span> <span data-ttu-id="ebb19-123"><xref:System.Windows.Controls.TextBlock>然後顯示值"慢 Value"。</span><span class="sxs-lookup"><span data-stu-id="ebb19-123">The <xref:System.Windows.Controls.TextBlock> then displays the value "Slower Value".</span></span>  
   
- 而經過 5 秒之後，`SlowestDP` 屬性傳回 "Slowest Value" 值。  該繫結由於列在最前面，所以具有最高優先權。  <xref:System.Windows.Controls.TextBlock> 現在會顯示 "Slowest Value" 值。  
+ <span data-ttu-id="ebb19-124">在 5 秒超過之後`SlowestDP`屬性會傳回值 「 最慢的值 」。</span><span class="sxs-lookup"><span data-stu-id="ebb19-124">After 5 seconds elapses, the `SlowestDP` property returns the value "Slowest Value".</span></span> <span data-ttu-id="ebb19-125">因為它會先列出，該繫結具有最高優先權。</span><span class="sxs-lookup"><span data-stu-id="ebb19-125">That binding has the highest priority because it is listed first.</span></span> <span data-ttu-id="ebb19-126"><xref:System.Windows.Controls.TextBlock>現在會顯示 「 最慢的值 」 的值。</span><span class="sxs-lookup"><span data-stu-id="ebb19-126">The <xref:System.Windows.Controls.TextBlock> now displays the value "Slowest Value".</span></span>  
   
- 如需視為繫結之成功傳回值的詳細資訊，請參閱 <xref:System.Windows.Data.PriorityBinding>。  
+ <span data-ttu-id="ebb19-127">請參閱<xref:System.Windows.Data.PriorityBinding>如需有關什麼被視為成功的傳回值，從繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="ebb19-127">See <xref:System.Windows.Data.PriorityBinding> for information about what is considered a successful return value from a binding.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=fullName>   
- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="ebb19-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ebb19-128">See Also</span></span>  
+ <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="ebb19-129">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="ebb19-129">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="ebb19-130">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="ebb19-130">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

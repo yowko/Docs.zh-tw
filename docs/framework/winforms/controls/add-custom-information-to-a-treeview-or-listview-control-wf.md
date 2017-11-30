@@ -1,37 +1,40 @@
 ---
-title: "如何：將自訂資訊加入 TreeView 或 ListView 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListItem"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "範例 [Windows Form], ListView 控制項"
-  - "範例 [Windows Form], TreeView 控制項"
-  - "ListView 控制項 [Windows Form], 加入自訂資訊"
-  - "Tag 屬性"
-  - "TreeView 控制項 [Windows Form], 加入自訂資訊"
+title: "如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: ListItem
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- examples [Windows Forms], ListView control
+- ListView control [Windows Forms], adding custom information
+- TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將自訂資訊加入 TreeView 或 ListView 控制項 (Windows Form)
-您可以在 Windows Form <xref:System.Windows.Forms.TreeView> 控制項或 <xref:System.Windows.Forms.ListView> 控制項的衍生項目中，建立衍生節點。  衍生讓您可以加入任何所需的欄位，以及處理它們的自訂方法和建構函式。  此功能的用法之一是將 Customer 物件附加至每個樹狀節點或清單項目。  這裡是 <xref:System.Windows.Forms.TreeView> 控制項的範例，但是 <xref:System.Windows.Forms.ListView> 控制項也可以使用相同的方式。  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a><span data-ttu-id="fe000-102">如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="fe000-102">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="fe000-103">您可以在 Windows Form 中建立衍生的節點<xref:System.Windows.Forms.TreeView>控制項或衍生的項目中<xref:System.Windows.Forms.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="fe000-103">You can create a derived node in a Windows Forms <xref:System.Windows.Forms.TreeView> control or a derived item in a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="fe000-104">衍生可讓您新增您所需的任何欄位，以及新增自訂方法和建構函式來處理它們。</span><span class="sxs-lookup"><span data-stu-id="fe000-104">Derivation allows you to add any fields you require, as well as custom methods and constructors for handling them.</span></span> <span data-ttu-id="fe000-105">這項功能的其中一個用途是將 Customer 物件附加至每個樹狀節點或清單項目。</span><span class="sxs-lookup"><span data-stu-id="fe000-105">One use of this feature is to attach a Customer object to each tree node or list item.</span></span> <span data-ttu-id="fe000-106">此處的範例為用於<xref:System.Windows.Forms.TreeView>控制項，但是相同的方法可用於<xref:System.Windows.Forms.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="fe000-106">The examples here are for a <xref:System.Windows.Forms.TreeView> control, but the same approach can be used for a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-### 若要衍生樹狀節點  
+### <a name="to-derive-a-tree-node"></a><span data-ttu-id="fe000-107">衍生樹狀節點</span><span class="sxs-lookup"><span data-stu-id="fe000-107">To derive a tree node</span></span>  
   
--   建立衍生自 <xref:System.Windows.Forms.TreeNode> 類別的新節點類別，此類別具有可以記錄檔案路徑的自訂欄位。  
+-   <span data-ttu-id="fe000-108">建立新的節點類別，衍生自<xref:System.Windows.Forms.TreeNode>類別，具有自訂欄位來記錄檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="fe000-108">Create a new node class, derived from the <xref:System.Windows.Forms.TreeNode> class, which has a custom field to record a file path.</span></span>  
   
     ```vb  
     Class myTreeNode  
@@ -45,7 +48,6 @@ caps.handback.revision: 13
           Me.Text = fp.Substring(fp.LastIndexOf("\"))  
        End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -59,7 +61,6 @@ caps.handback.revision: 13
           this.Text = fp.Substring(fp.LastIndexOf("\\"));  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -76,11 +77,11 @@ caps.handback.revision: 13
     };  
     ```  
   
-### 若要使用衍生的樹狀節點  
+### <a name="to-use-a-derived-tree-node"></a><span data-ttu-id="fe000-109">使用衍生樹狀節點</span><span class="sxs-lookup"><span data-stu-id="fe000-109">To use a derived tree node</span></span>  
   
-1.  您可以使用新衍生的樹狀節點做為函式呼叫 \(Function Call\) 的參數。  
+1.  <span data-ttu-id="fe000-110">您可以使用新的衍生樹狀節點做為函式呼叫的參數。</span><span class="sxs-lookup"><span data-stu-id="fe000-110">You can use the new derived tree node as a parameter to function calls.</span></span>  
   
-     在以下範例中，為文字檔位置所設定的路徑為 \[我的文件\] 資料夾。  這是可以做到的，因為您可預測到大部分執行 Windows 作業系統的電腦都會包含這個目錄。  這也可讓使用者以最基本的系統存取層級，便可安全執行應用程式。  
+     <span data-ttu-id="fe000-111">在下列範例中，針對文字檔案位置設定的路徑是 [我的文件] 資料夾。</span><span class="sxs-lookup"><span data-stu-id="fe000-111">In the example below, the path set for the location of the text file is the My Documents folder.</span></span> <span data-ttu-id="fe000-112">這是因為您可以假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。</span><span class="sxs-lookup"><span data-stu-id="fe000-112">This is done because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="fe000-113">也可讓具備最小系統存取層級的使用者安全地執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="fe000-113">This also allows users with minimal system access levels to safely run the application.</span></span>  
   
     ```vb  
     ' You should replace the bold text file   
@@ -88,7 +89,6 @@ caps.handback.revision: 13
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\ TextFile.txt ") )  
-  
     ```  
   
     ```csharp  
@@ -98,7 +98,6 @@ caps.handback.revision: 13
     treeView1.Nodes.Add(new myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\TextFile.txt") );  
-  
     ```  
   
     ```cpp  
@@ -110,7 +109,7 @@ caps.handback.revision: 13
        "\\TextFile.txt")));  
     ```  
   
-2.  如果您傳遞的是型別為 <xref:System.Windows.Forms.TreeNode> 類別的樹狀節點，則必須將它強制轉型 \(Cast\) 為衍生類別。  強制轉型是將某個型別的物件明確轉換為另一個型別的物件。  如需強制轉型的詳細資訊，請參閱[Implicit and Explicit Conversions](../Topic/Implicit%20and%20Explicit%20Conversions%20\(Visual%20Basic\).md) \([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\)、[\(\) 運算子](../Topic/\(\)%20Operator%20\(C%23%20Reference\).md) \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) 或 [轉型運算子：\(\)](../../../../amples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/spec_withstructure-xps/_rels/.rels) \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\)。  
+2.  <span data-ttu-id="fe000-114">如果您傳遞的樹狀節點和其類型為<xref:System.Windows.Forms.TreeNode>類別，則您必須轉換成您的衍生類別。</span><span class="sxs-lookup"><span data-stu-id="fe000-114">If you are passed the tree node and it is typed as a <xref:System.Windows.Forms.TreeNode> class, then you will need to cast to your derived class.</span></span> <span data-ttu-id="fe000-115">轉型是物件類型之間的明確轉換。</span><span class="sxs-lookup"><span data-stu-id="fe000-115">Casting is an explicit conversion from one type of object to another.</span></span> <span data-ttu-id="fe000-116">如需有關轉型的詳細資訊，請參閱[隱含和明確轉換](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]、[() 運算子](~/docs/csharp/language-reference/operators/invocation-operator.md)([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) 或[轉型運算子：()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])。</span><span class="sxs-lookup"><span data-stu-id="fe000-116">For more information on casting, see [Implicit and Explicit Conversions](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), [() Operator](~/docs/csharp/language-reference/operators/invocation-operator.md) ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]), or [Cast Operator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span></span>  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -118,7 +117,6 @@ caps.handback.revision: 13
        mynode = CType(e.node, myTreeNode)  
        MessageBox.Show("Node selected is " & mynode.filepath)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -128,7 +126,6 @@ caps.handback.revision: 13
        myTreeNode myNode = (myTreeNode)e.Node;  
        MessageBox.Show("Node selected is " + myNode.FilePath);  
     }  
-  
     ```  
   
     ```cpp  
@@ -142,6 +139,6 @@ caps.handback.revision: 13
        }  
     ```  
   
-## 請參閱  
- [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="fe000-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe000-117">See Also</span></span>  
+ [<span data-ttu-id="fe000-118">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="fe000-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="fe000-119">ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="fe000-119">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

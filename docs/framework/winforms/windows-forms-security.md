@@ -1,70 +1,71 @@
 ---
-title: "Windows Form 安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "存取控制, Windows Form"
-  - "設計工具存取安全性"
-  - "權限, Windows Form"
-  - "安全性 [Windows Form]"
-  - "安全性原則, Windows Form"
-  - "Windows Form, 安全性"
+title: "Windows Form 安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designer access security [Windows Forms]
+- permissions [Windows Forms], Windows Forms
+- Windows Forms, security
+- security [Windows Forms]
+- access control [Windows Forms], Windows Forms
+- security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Form 安全性
-Windows Form 的特色在於以程式碼為基底的安全性模型 \(也就是說，無論使用者是否執行程式碼，安全性層級都是針對程式碼設定的\)。  這是用來加強電腦系統上已有的任何安全性結構描述 \(Schema\)。  這些可包括瀏覽器的結構描述 \(例如 Internet Explorer 中可使用的以地區為基礎的安全性\) 或作業系統的結構描述 \(例如 Windows NT 的以認證為基礎的安全性\)。  
+# <a name="windows-forms-security"></a><span data-ttu-id="ee7a7-102">Windows Form 安全性</span><span class="sxs-lookup"><span data-stu-id="ee7a7-102">Windows Forms Security</span></span>
+<span data-ttu-id="ee7a7-103">Windows Form 功能的程式碼為基礎 （安全性層級會設定為程式碼，不論執行的程式碼的使用者） 的安全性模型。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-103">Windows Forms features a security model that is code-based (security levels are set for code, regardless of the user running the code).</span></span> <span data-ttu-id="ee7a7-104">這是除了可能已在您的電腦系統上的位置中任何安全性結構描述。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-104">This is in addition to any security schemas that may be in place already on your computer system.</span></span> <span data-ttu-id="ee7a7-105">這些可以包含位於瀏覽器 （例如區域為基礎的安全性在 Internet Explorer 中可用） 或作業系統 （例如 Windows NT 的認證為基礎的安全性）。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-105">These can include those in the browser (such as the zone-based security available in Internet Explorer) or the operating system (such as the credential-based security of Windows NT).</span></span>  
   
-## 在本節中  
- [Windows Form 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- 簡單說明 .NET Framework 安全性模型，以及確保應用程式中 Windows Form 安全性的必要基本步驟。  
+## <a name="in-this-section"></a><span data-ttu-id="ee7a7-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="ee7a7-106">In This Section</span></span>  
+ [<span data-ttu-id="ee7a7-107">Windows Forms 中的安全性概觀</span><span class="sxs-lookup"><span data-stu-id="ee7a7-107">Security in Windows Forms Overview</span></span>](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ <span data-ttu-id="ee7a7-108">簡要說明.NET Framework 安全性模型和基本的步驟，以確保 Windows Form 應用程式中的安全。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-108">Briefly explains the .NET Framework security model and the basic steps necessary to ensure the Windows Forms in your application are secure.</span></span>  
   
- [Windows Form 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- 描述如何在非完全信任的環境中存取檔案和資料。  
+ [<span data-ttu-id="ee7a7-109">Windows Forms 中更安全的檔案和資料存取</span><span class="sxs-lookup"><span data-stu-id="ee7a7-109">More Secure File and Data Access in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ <span data-ttu-id="ee7a7-110">描述如何存取檔案和非完全信任環境中的資料。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-110">Describes how to access files and data in a semi-trusted environment.</span></span>  
   
- [Windows Form 中更安全的列印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- 描述如何在非完全信任的環境中存取列印功能。  
+ [<span data-ttu-id="ee7a7-111">Windows Forms 中更安全的列印</span><span class="sxs-lookup"><span data-stu-id="ee7a7-111">More Secure Printing in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ <span data-ttu-id="ee7a7-112">描述如何存取非完全信任環境中的列印功能。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-112">Describes how to access printing features in a semi-trusted environment.</span></span>  
   
- [Windows Form 中的其他安全性考量](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- 說明在非完全信任的環境中，執行視窗操作 \(Manipulation\)、使用 \[剪貼簿\] 和呼叫 Unmanaged 程式碼。  
+ [<span data-ttu-id="ee7a7-113">Windows Forms 中的其他安全性考量</span><span class="sxs-lookup"><span data-stu-id="ee7a7-113">Additional Security Considerations in Windows Forms</span></span>](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ <span data-ttu-id="ee7a7-114">描述執行視窗操作、 使用剪貼簿，以及呼叫 unmanaged 程式碼在完全信任的環境中。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-114">Describes performing window manipulation, using the Clipboard, and making calls to unmanaged code in a semi-trusted environment.</span></span>  
   
-## 相關章節  
- [NIB: Default Security Policy](http://msdn.microsoft.com/zh-tw/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
- 列出完全信任、近端內部網路和網際網路使用權限集合中授與的預設使用權限。  
+## <a name="related-sections"></a><span data-ttu-id="ee7a7-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="ee7a7-115">Related Sections</span></span>  
+ [<span data-ttu-id="ee7a7-116">NIB： 預設的安全性原則</span><span class="sxs-lookup"><span data-stu-id="ee7a7-116">NIB: Default Security Policy</span></span>](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ <span data-ttu-id="ee7a7-117">列出在完全信任、 近端內部網路和網際網路權限集授與的預設權限。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-117">Lists the default permissions granted in the Full Trust, Local Intranet, and Internet permission sets.</span></span>  
   
- [NIB: General Security Policy Administration](http://msdn.microsoft.com/zh-tw/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
- 提供關於管理 .NET Framework 安全性原則和提高使用權限的資訊。  
+ [<span data-ttu-id="ee7a7-118">NIB： 一般安全性原則管理</span><span class="sxs-lookup"><span data-stu-id="ee7a7-118">NIB: General Security Policy Administration</span></span>](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ <span data-ttu-id="ee7a7-119">提供.NET Framework 安全性原則管理和提高權限的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-119">Gives information about the administering the .NET Framework security policy and elevating permissions.</span></span>  
   
- [Dangerous Permissions and Policy Administration](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
- 討論有些可能讓安全性系統受到傷害的 .NET Framework 使用權限。  
+ [<span data-ttu-id="ee7a7-120">危險的使用權限和原則管理</span><span class="sxs-lookup"><span data-stu-id="ee7a7-120">Dangerous Permissions and Policy Administration</span></span>](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
+ <span data-ttu-id="ee7a7-121">討論.net Framework 權限，也可能會讓安全性系統受到危害。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-121">Discusses some of the.NET Framework permissions that can potentially allow the security system to be circumvented.</span></span>  
   
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)  
- 說明針對 .NET Framework 安全撰寫程式碼之最佳實例的主題連結。  
+ [<span data-ttu-id="ee7a7-122">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="ee7a7-122">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="ee7a7-123">主題連結，說明安全地撰寫.NET Framework 程式碼的最佳作法。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-123">Links to topics that explain the best practices for securely writing code against the .NET Framework.</span></span>  
   
- [NIB: Requesting Permissions](http://msdn.microsoft.com/zh-tw/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
- 討論屬性的使用，讓 Runtime 知道程式碼執行時需要何種使用權限。  
+ [<span data-ttu-id="ee7a7-124">NIB： 要求權限</span><span class="sxs-lookup"><span data-stu-id="ee7a7-124">NIB: Requesting Permissions</span></span>](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ <span data-ttu-id="ee7a7-125">討論使用屬性，讓執行階段知道您的程式碼需要執行哪些權限。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-125">Discusses the use of attributes to let the runtime know what permissions your code needs to run.</span></span>  
   
- [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)  
- 涵蓋程式碼安全性基本層面的主題連結。  
+ [<span data-ttu-id="ee7a7-126">重要的安全性概念</span><span class="sxs-lookup"><span data-stu-id="ee7a7-126">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="ee7a7-127">涵蓋的程式碼安全性基本概念的主題連結。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-127">Links to topics that cover the basic aspects of code security.</span></span>  
   
- [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md)  
- 討論使用 .NET Framework Run Time 安全性原則的基本概念。  
+ [<span data-ttu-id="ee7a7-128">程式碼存取安全性的基本概念</span><span class="sxs-lookup"><span data-stu-id="ee7a7-128">Code Access Security Basics</span></span>](../../../docs/framework/misc/code-access-security-basics.md)  
+ <span data-ttu-id="ee7a7-129">討論.NET Framework 執行階段安全性原則所使用基本的概念。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-129">Discusses the basics of working with the .NET Framework run time security policy.</span></span>  
   
- [NIB: Determining When to Modify Security Policy](http://msdn.microsoft.com/zh-tw/af749b17-e461-409d-84b9-a3d44789db16)  
- 說明如何判斷您的應用程式何時需要偏離預設安全性原則。  
+ [<span data-ttu-id="ee7a7-130">NIB： 決定修改安全性原則</span><span class="sxs-lookup"><span data-stu-id="ee7a7-130">NIB: Determining When to Modify Security Policy</span></span>](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ <span data-ttu-id="ee7a7-131">說明如何判斷您的應用程式需要從預設的安全性原則有所分歧時。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-131">Explains how to determine when your applications need to diverge from the default security policy.</span></span>  
   
- [NIB: Deploying Security Policy](http://msdn.microsoft.com/zh-tw/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
- 討論部署安全性原則變更的最佳方式。
+ [<span data-ttu-id="ee7a7-132">NIB： 部署的安全性原則</span><span class="sxs-lookup"><span data-stu-id="ee7a7-132">NIB: Deploying Security Policy</span></span>](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ <span data-ttu-id="ee7a7-133">討論部署的安全性原則變更的最佳方式。</span><span class="sxs-lookup"><span data-stu-id="ee7a7-133">Discusses the best manner for deploying security policy changes.</span></span>

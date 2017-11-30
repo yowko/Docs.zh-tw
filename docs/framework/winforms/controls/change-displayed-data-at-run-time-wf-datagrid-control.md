@@ -1,47 +1,51 @@
 ---
-title: "如何：在執行階段時變更 Windows Form DataGrid 控制項中顯示的資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "儲存格, 變更 DataGrid 儲存格值"
-  - "DataGrid 控制項 [Windows Form], 資料繫結"
-  - "DataGrid 控制項 [Windows Form], 在執行階段動態變更"
+title: "如何：在執行階段時變更 Windows Form DataGrid 控制項中顯示的資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- DataGrid control [Windows Forms], dynamically changing at run time
+- DataGrid control [Windows Forms], data binding
+- cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 45772035a7f2229ca0e0320ee9b65eb128c4fc32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在執行階段時變更 Windows Form DataGrid 控制項中顯示的資料
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="3f183-102">如何：在執行階段時變更 Windows Form DataGrid 控制項中顯示的資料</span><span class="sxs-lookup"><span data-stu-id="3f183-102">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。  如需詳細資訊，請參閱 [Windows Form DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <span data-ttu-id="3f183-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="3f183-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="3f183-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="3f183-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- 當您使用設計階段功能建立了 Windows Form <xref:System.Windows.Forms.DataGrid> 後，可能也會希望在執行階段時動態變更資料格 <xref:System.Data.DataSet> 物件的項目。  這可能包含變更資料表的個別值，或變更繫結至 <xref:System.Windows.Forms.DataGrid> 控制項的資料來源。  個別值的變更是透過 <xref:System.Data.DataSet> 物件達成，而不是 <xref:System.Windows.Forms.DataGrid> 控制項。  
+ <span data-ttu-id="3f183-105">建立 Windows Form 之後<xref:System.Windows.Forms.DataGrid>使用設計階段功能，您可能也想要以動態方式變更項目的<xref:System.Data.DataSet>在執行階段方格的物件。</span><span class="sxs-lookup"><span data-stu-id="3f183-105">After you have created a Windows Forms <xref:System.Windows.Forms.DataGrid> using the design-time features, you may also wish to dynamically change elements of the <xref:System.Data.DataSet> object of the grid at run time.</span></span> <span data-ttu-id="3f183-106">這可包括對資料表的個別值或變更資料來源繫結至<xref:System.Windows.Forms.DataGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="3f183-106">This can include changes to either individual values of the table or changing which data source is bound to the <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="3f183-107">個別值的變更會透過<xref:System.Data.DataSet>物件，不<xref:System.Windows.Forms.DataGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="3f183-107">Changes to individual values are done through the <xref:System.Data.DataSet> object, not the <xref:System.Windows.Forms.DataGrid> control.</span></span>  
   
-### 若要以程式設計的方式變更資料  
+### <a name="to-change-data-programmatically"></a><span data-ttu-id="3f183-108">若要以程式設計方式變更資料</span><span class="sxs-lookup"><span data-stu-id="3f183-108">To change data programmatically</span></span>  
   
-1.  指定 <xref:System.Data.DataSet> 物件中要變更的資料表和資料表中要變更的資料列和欄位，並將儲存格設定為新的值。  
+1.  <span data-ttu-id="3f183-109">指定所需的資料表，從<xref:System.Data.DataSet>物件和想要的資料列和欄位從資料表和資料格設定為等於新值。</span><span class="sxs-lookup"><span data-stu-id="3f183-109">Specify the desired table from the <xref:System.Data.DataSet> object and the desired row and field from the table and set the cell equal to the new value.</span></span>  
   
     > [!NOTE]
-    >  若要指定 <xref:System.Data.DataSet> 的第一個資料表或資料表的第一個資料列，請使用 0。  
+    >  <span data-ttu-id="3f183-110">若要指定的第一個資料表<xref:System.Data.DataSet>或資料表，第一個資料列，請使用 0。</span><span class="sxs-lookup"><span data-stu-id="3f183-110">To specify the first table of the <xref:System.Data.DataSet> or the first row of the table, use 0.</span></span>  
   
-     下列範例顯示如何按一下 `Button1` 來變更資料集中第一個資料表的第一個資料列的第二個項目。  <xref:System.Data.DataSet> \(`ds`\) 和資料表 \(`0` 和`1`\) 已預先建立。  
+     <span data-ttu-id="3f183-111">下列範例示範如何變更資料集的第一個資料表的第一個資料列的第二個項目，依序按一下`Button1`。</span><span class="sxs-lookup"><span data-stu-id="3f183-111">The following example shows how to change the second entry of the first row of the first table of a dataset by clicking `Button1`.</span></span> <span data-ttu-id="3f183-112"><xref:System.Data.DataSet> (`ds`) 和資料表 (`0`和`1`) 先前所建立。</span><span class="sxs-lookup"><span data-stu-id="3f183-112">The <xref:System.Data.DataSet> (`ds`) and Tables (`0` and `1`) were previously created.</span></span>  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
        ds.tables(0).rows(0)(1) = "NewEntry"  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -49,7 +53,6 @@ caps.handback.revision: 16
     {  
        ds.Tables[0].Rows[0][1]="NewEntry";  
     }  
-  
     ```  
   
     ```cpp  
@@ -60,11 +63,10 @@ caps.handback.revision: 16
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]、[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 將下列程式碼加入表單的建構函式以註冊事件處理常式。  
+     <span data-ttu-id="3f183-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="3f183-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -72,19 +74,18 @@ caps.handback.revision: 16
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     在執行階段時，您可以使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法將 <xref:System.Windows.Forms.DataGrid> 控制項繫結至不同的資料來源。  例如，您可能有數個 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料控制項，而且分別連接至不同的資料庫。  
+     <span data-ttu-id="3f183-114">在執行的階段，您可以使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>繫結方法<xref:System.Windows.Forms.DataGrid>不同的資料來源的控制項。</span><span class="sxs-lookup"><span data-stu-id="3f183-114">At run time you can use the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to bind the <xref:System.Windows.Forms.DataGrid> control to a different data source.</span></span> <span data-ttu-id="3f183-115">例如，您可以有數個[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]資料控制項，每個已連線到不同的資料庫。</span><span class="sxs-lookup"><span data-stu-id="3f183-115">For example, you may have several [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] data controls, each connected to a different database.</span></span>  
   
-### 若要以程式設計的方式變更 DataSource  
+### <a name="to-change-the-datasource-programmatically"></a><span data-ttu-id="3f183-116">若要以程式設計方式變更資料來源</span><span class="sxs-lookup"><span data-stu-id="3f183-116">To change the DataSource programmatically</span></span>  
   
-1.  將 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法設定為您要繫結至的資料來源和資料表名稱。  
+1.  <span data-ttu-id="3f183-117">設定<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法的資料來源和您想要繫結至資料表的名稱。</span><span class="sxs-lookup"><span data-stu-id="3f183-117">Set the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to the name of the data source and table you want to bind to.</span></span>  
   
-     下列範例顯示如何使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法將資料來源變更為連接至 Pubs 資料庫中 Authors 資料表的 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料控制項 \(adoPubsAuthors\)。  
+     <span data-ttu-id="3f183-118">下列範例示範如何變更日期來源使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]連線到 Authors 資料表 Pubs 資料庫中的資料控制項 (adoPubsAuthors)。</span><span class="sxs-lookup"><span data-stu-id="3f183-118">The following example shows how to change the date source using the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method to an [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] data control (adoPubsAuthors) that is connected to the Authors table in the Pubs database.</span></span>  
   
     ```vb  
     Private Sub ResetSource()  
        DataGrid1.SetDataBinding(adoPubsAuthors, "Authors")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -92,7 +93,6 @@ caps.handback.revision: 16
     {  
        DataGrid1.SetDataBinding(adoPubsAuthors, "Authors");  
     }  
-  
     ```  
   
     ```cpp  
@@ -103,8 +103,8 @@ caps.handback.revision: 16
        }  
     ```  
   
-## 請參閱  
- [ADO.NET DataSet](../../../../docs/framework/data/adonet/ado-net-datasets.md)   
- [如何：刪除或隱藏 Windows Form DataGrid 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
- [如何：將資料表和資料行加入至 Windows Form DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)   
- [如何：將 Windows Form DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a><span data-ttu-id="3f183-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f183-119">See Also</span></span>  
+ [<span data-ttu-id="3f183-120">ADO.NET 資料集</span><span class="sxs-lookup"><span data-stu-id="3f183-120">ADO.NET DataSets</span></span>](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [<span data-ttu-id="3f183-121">操作說明：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行</span><span class="sxs-lookup"><span data-stu-id="3f183-121">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="3f183-122">操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="3f183-122">How to: Add Tables and Columns to the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="3f183-123">操作說明：將 Windows Forms DataGrid 控制項繫結至資料來源</span><span class="sxs-lookup"><span data-stu-id="3f183-123">How to: Bind the Windows Forms DataGrid Control to a Data Source</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

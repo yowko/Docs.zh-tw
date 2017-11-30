@@ -1,117 +1,117 @@
 ---
-title: "最佳做法：資料合約版本控制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "最佳做法 [WCF], 資料合約版本控制"
-  - "資料合約"
-  - "服務合約"
-  - "Windows Communication Foundation, 資料合約"
+title: "最佳做法：資料合約版本控制"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data contracts
+- service contracts
+- best practices [WCF], data contract versioning
+- Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b5d6c5cb24b2a8395399eb6a4d76024e2efacee0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 最佳做法：資料合約版本控制
-本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]資料合約的詳細資訊，請參閱 [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md) 中的主題。  
+# <a name="best-practices-data-contract-versioning"></a><span data-ttu-id="8ce91-102">最佳做法：資料合約版本控制</span><span class="sxs-lookup"><span data-stu-id="8ce91-102">Best Practices: Data Contract Versioning</span></span>
+<span data-ttu-id="8ce91-103">本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。</span><span class="sxs-lookup"><span data-stu-id="8ce91-103">This topic lists the best practices for creating data contracts that can evolve easily over time.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="8ce91-104">資料合約，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-104"> data contracts, see the topics in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  
   
-## 結構描述驗證注意事項  
- 在討論資料合約版本設定時，重要的是要注意，除了項目根據預設標示為選擇性以外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 匯出的資料合約結構描述沒有任何版本設定支援。  
+## <a name="note-on-schema-validation"></a><span data-ttu-id="8ce91-105">結構描述驗證注意事項</span><span class="sxs-lookup"><span data-stu-id="8ce91-105">Note on Schema Validation</span></span>  
+ <span data-ttu-id="8ce91-106">在討論資料合約版本設定時，重要的是要注意，除了項目根據預設標示為選擇性以外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 匯出的資料合約結構描述沒有任何版本設定支援。</span><span class="sxs-lookup"><span data-stu-id="8ce91-106">In discussing data contract versioning, it is important to note that the data contract schema exported by [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] does not have any versioning support, other than the fact that elements are marked as optional by default.</span></span>  
   
- 這表示即使最常見的版本設定案例 \(例如新增資料成員\)，也無法以與指定結構描述完全整合的方式來實作。  較新版的資料合約 \(例如具有新的資料成員\) 不會使用舊的結構描述來驗證。  
+ <span data-ttu-id="8ce91-107">這表示即使最常見的版本設定案例 (例如新增資料成員)，也無法以與指定結構描述完全整合的方式來實作。</span><span class="sxs-lookup"><span data-stu-id="8ce91-107">This means that even the most common versioning scenario, such as adding a new data member, cannot be implemented in a way that is seamless with regard to a given schema.</span></span> <span data-ttu-id="8ce91-108">較新版的資料合約 (例如具有新的資料成員) 不會使用舊的結構描述來驗證。</span><span class="sxs-lookup"><span data-stu-id="8ce91-108">The newer versions of a data contract (with a new data member, for example) do not validate using the old schema.</span></span>  
   
- 然而，有許多案例並不需要嚴格的結構描述相容性。  許多 Web 服務平台 \(包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和使用 ASP.NET 建立的 XML Web Service\) 都預設為不執行結構描述驗證，因此可容許結構描述未描述的額外項目。  當使用此類平台時，許多版本設定案例都更容易實作。  
+ <span data-ttu-id="8ce91-109">然而，有許多案例並不需要嚴格的結構描述相容性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-109">However, there are many scenarios in which strict schema compliance is not required.</span></span> <span data-ttu-id="8ce91-110">許多 Web 服務平台 (包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和使用 ASP.NET 建立的 XML Web Service) 都預設為不執行結構描述驗證，因此可容許結構描述未描述的額外項目。</span><span class="sxs-lookup"><span data-stu-id="8ce91-110">Many Web services platforms, including [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] and XML Web services created using ASP.NET, do not perform schema validation by default and therefore tolerate extra elements that are not described by the schema.</span></span> <span data-ttu-id="8ce91-111">當使用此類平台時，許多版本設定案例都更容易實作。</span><span class="sxs-lookup"><span data-stu-id="8ce91-111">When working with such platforms, many versioning scenarios are easier to implement.</span></span>  
   
- 因此，有兩組資料合約版本設定指導方針：一組適用於嚴格結構描述驗證很重要的案例，另一組適用於不重要的案例。  
+ <span data-ttu-id="8ce91-112">因此，有兩組資料合約版本設定指導方針：一組適用於嚴格結構描述驗證很重要的案例，另一組適用於不重要的案例。</span><span class="sxs-lookup"><span data-stu-id="8ce91-112">Thus, there are two sets of data contract versioning guidelines: one set for scenarios where strict schema validity is important, and another set for scenarios when it is not.</span></span>  
   
-## 需要結構描述驗證時的版本設定  
- 如果在所有方向中 \(新至舊以及舊至新\)，都需要嚴格結構描述驗證，資料合約應視為固定不變的。  如果需要版本設定，應使用不同的名稱或命名空間來建立新的資料合約，而且使用此資料型別的服務合約應依此進行版本設定。  
+## <a name="versioning-when-schema-validation-is-required"></a><span data-ttu-id="8ce91-113">需要結構描述驗證時的版本設定</span><span class="sxs-lookup"><span data-stu-id="8ce91-113">Versioning When Schema Validation Is Required</span></span>  
+ <span data-ttu-id="8ce91-114">如果在所有方向中 (新至舊以及舊至新)，都需要嚴格結構描述驗證，資料合約應視為固定不變的。</span><span class="sxs-lookup"><span data-stu-id="8ce91-114">If strict schema validity is required in all directions (new-to-old and old-to-new), data contracts should be considered immutable.</span></span> <span data-ttu-id="8ce91-115">如果需要版本設定，應使用不同的名稱或命名空間來建立新的資料合約，而且使用此資料型別的服務合約應依此進行版本設定。</span><span class="sxs-lookup"><span data-stu-id="8ce91-115">If versioning is required, a new data contract should be created, with a different name or namespace, and the service contract using the data type should be versioned accordingly.</span></span>  
   
- 例如，名為 `PoProcessing` 的訂單處理服務合約，以及採用符合 `PurchaseOrder` 資料合約之參數的 `PostPurchaseOrder` 作業。  如果 `PurchaseOrder` 合約必須變更，您必須建立新的資料合約，也就是包含變更的 `PurchaseOrder2`。  然後您必須在服務合約層處理版本設定。  例如，藉由建立採用 `PurchaseOrder2` 參數的 `PostPurchaseOrder2` 作業，或藉由建立 `PoProcessing2` 服務合約，其中 `PostPurchaseOrder` 作業是採用 `PurchaseOrder2` 資料合約。  
+ <span data-ttu-id="8ce91-116">例如，名為 `PoProcessing` 的訂單處理服務合約，以及採用符合 `PostPurchaseOrder` 資料合約之參數的 `PurchaseOrder` 作業。</span><span class="sxs-lookup"><span data-stu-id="8ce91-116">For example, a purchase order processing service contract named `PoProcessing` with a `PostPurchaseOrder` operation takes a parameter that conforms to a `PurchaseOrder` data contract.</span></span> <span data-ttu-id="8ce91-117">如果 `PurchaseOrder` 合約必須變更，您必須建立新的資料合約，也就是包含變更的 `PurchaseOrder2`。</span><span class="sxs-lookup"><span data-stu-id="8ce91-117">If the `PurchaseOrder` contract has to change, you must create a new data contract, that is, `PurchaseOrder2`, which includes the changes.</span></span> <span data-ttu-id="8ce91-118">然後您必須在服務合約層處理版本設定。</span><span class="sxs-lookup"><span data-stu-id="8ce91-118">You must then handle the versioning at the service contract level.</span></span> <span data-ttu-id="8ce91-119">例如，藉由建立採用 `PostPurchaseOrder2` 參數的 `PurchaseOrder2` 作業，或藉由建立 `PoProcessing2` 服務合約，其中 `PostPurchaseOrder` 作業是採用 `PurchaseOrder2` 資料合約。</span><span class="sxs-lookup"><span data-stu-id="8ce91-119">For example, by creating a `PostPurchaseOrder2` operation that takes the `PurchaseOrder2` parameter, or by creating a `PoProcessing2` service contract where the `PostPurchaseOrder` operation takes a `PurchaseOrder2` data contract.</span></span>  
   
- 請注意，其他資料合約所參照之資料合約中的變更也會延伸至服務模型層。  例如，在前面的案例中，`PurchaseOrder` 資料合約不需要變更。  然而，它包含 `Customer` 資料合約的資料成員，其中包含需要變更之 `Address` 資料合約的資料成員。  在該案例中，您將需要建立含有所需變更的 `Address2` 資料合約、包含 `Address2` 資料成員的 `Customer2` 資料合約，以及包含 `Customer2` 資料成員的 `PurchaseOrder2` 資料合約。  如同在前面的案例中，服務合約也必須進行版本設定。  
+ <span data-ttu-id="8ce91-120">請注意，其他資料合約所參照之資料合約中的變更也會延伸至服務模型層。</span><span class="sxs-lookup"><span data-stu-id="8ce91-120">Note that changes in data contracts that are referenced by other data contracts also extend to the service model layer.</span></span> <span data-ttu-id="8ce91-121">例如，在前面的案例中，`PurchaseOrder` 資料合約不需要變更。</span><span class="sxs-lookup"><span data-stu-id="8ce91-121">For example, in the previous scenario the `PurchaseOrder` data contract does not need to change.</span></span> <span data-ttu-id="8ce91-122">然而，它包含 `Customer` 資料合約的資料成員，其中包含需要變更之 `Address` 資料合約的資料成員。</span><span class="sxs-lookup"><span data-stu-id="8ce91-122">However, it contains a data member of a `Customer` data contract, which in turn contained a data member of the `Address` data contract, which does need to be changed.</span></span> <span data-ttu-id="8ce91-123">在該案例中，您將需要建立含有所需變更的 `Address2` 資料合約、包含 `Customer2` 資料成員的 `Address2` 資料合約，以及包含 `PurchaseOrder2` 資料成員的 `Customer2` 資料合約。</span><span class="sxs-lookup"><span data-stu-id="8ce91-123">In that case, you would need to create an `Address2` data contract with the required changes, a `Customer2` data contract that contains the `Address2` data member, and a `PurchaseOrder2` data contract that contains a `Customer2` data member.</span></span> <span data-ttu-id="8ce91-124">如同在前面的案例中，服務合約也必須進行版本設定。</span><span class="sxs-lookup"><span data-stu-id="8ce91-124">As in the previous case, the service contract would have to be versioned as well.</span></span>  
   
- 雖然在這些範例中，名稱已變更 \(附加一個 "2"\)，但建議您將新的命名空間加上版本號碼或日期，來變更命名空間而非名稱。  例如，`http://schemas.contoso.com/2005/05/21/PurchaseOrder` 資料合約會變更為 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 資料合約。  
+ <span data-ttu-id="8ce91-125">雖然在這些範例中，名稱已變更 (附加一個 "2")，但建議您將新的命名空間加上版本號碼或日期，來變更命名空間而非名稱。</span><span class="sxs-lookup"><span data-stu-id="8ce91-125">Although in these examples names are changed (by appending a "2"), the recommendation is to change namespaces instead of names by appending new namespaces with a version number or a date.</span></span> <span data-ttu-id="8ce91-126">例如，`http://schemas.contoso.com/2005/05/21/PurchaseOrder` 資料合約會變更為 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 資料合約。</span><span class="sxs-lookup"><span data-stu-id="8ce91-126">For example, the `http://schemas.contoso.com/2005/05/21/PurchaseOrder` data contract would change to the `http://schemas.contoso.com/2005/10/14/PurchaseOrder` data contract.</span></span>  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]最佳做法：[服務版本控制](../../../docs/framework/wcf/service-versioning.md)。  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="8ce91-127">最佳作法：[服務版本設定](../../../docs/framework/wcf/service-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-127"> Best Practices: [Service Versioning](../../../docs/framework/wcf/service-versioning.md).</span></span>  
   
- 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。  此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。  這些無關值會由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 儲存及傳回，因此造成傳送結構描述無效的訊息。  如果要避免這個問題，應關閉往返功能。  執行這項作業的方法有兩種。  
+ <span data-ttu-id="8ce91-128">雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-128">Occasionally, you must guarantee strict schema compliance for messages sent by your application, but cannot rely on the incoming messages to be strictly schema-compliant.</span></span> <span data-ttu-id="8ce91-129">此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。</span><span class="sxs-lookup"><span data-stu-id="8ce91-129">In this case, there is a danger that an incoming message might contain extraneous data.</span></span> <span data-ttu-id="8ce91-130">這些無關值會由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 儲存及傳回，因此造成傳送結構描述無效的訊息。</span><span class="sxs-lookup"><span data-stu-id="8ce91-130">The extraneous values are stored and returned by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] and thus results in schema-invalid messages being sent.</span></span> <span data-ttu-id="8ce91-131">如果要避免這個問題，應關閉往返功能。</span><span class="sxs-lookup"><span data-stu-id="8ce91-131">To avoid this problem, the round-tripping feature should be turned off.</span></span> <span data-ttu-id="8ce91-132">執行這項作業的方法有兩種。</span><span class="sxs-lookup"><span data-stu-id="8ce91-132">There are two ways to do this.</span></span>  
   
--   請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。  
+-   <span data-ttu-id="8ce91-133">請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。</span><span class="sxs-lookup"><span data-stu-id="8ce91-133">Do not implement the <xref:System.Runtime.Serialization.IExtensibleDataObject> interface on any of your types.</span></span>  
   
--   將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 屬性設定為 `true`，以套用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性至您的服務合約。  
+-   <span data-ttu-id="8ce91-134">將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>，以套用 `true` 屬性至您的服務合約。</span><span class="sxs-lookup"><span data-stu-id="8ce91-134">Apply a <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute to your service contract with the <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> property set to `true`.</span></span>  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 往返的詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="8ce91-135">反覆存取，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-135"> round-tripping, see [Forward-Compatible Data Contracts](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span></span>  
   
-## 不需要結構描述驗證時的版本設定  
- 嚴格結構描述相容性很少有需要。  許多平台都會容許結構描述未描述的額外項目。  只要容許這種情況，就可以使用[資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)和[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)中所述的完整功能組。  建議使用下列指導方針。  
+## <a name="versioning-when-schema-validation-is-not-required"></a><span data-ttu-id="8ce91-136">不需要結構描述驗證時的版本設定</span><span class="sxs-lookup"><span data-stu-id="8ce91-136">Versioning When Schema Validation Is Not Required</span></span>  
+ <span data-ttu-id="8ce91-137">嚴格結構描述相容性很少有需要。</span><span class="sxs-lookup"><span data-stu-id="8ce91-137">Strict schema compliance is rarely required.</span></span> <span data-ttu-id="8ce91-138">許多平台都會容許結構描述未描述的額外項目。</span><span class="sxs-lookup"><span data-stu-id="8ce91-138">Many platforms tolerate extra elements not described by a schema.</span></span> <span data-ttu-id="8ce91-139">這所容許之，如中所述功能的完整[資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)和[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)可用。</span><span class="sxs-lookup"><span data-stu-id="8ce91-139">As long as this is tolerated, the full set of features described in [Data Contract Versioning](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) and [Forward-Compatible Data Contracts](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) can be used.</span></span> <span data-ttu-id="8ce91-140">建議使用下列指導方針。</span><span class="sxs-lookup"><span data-stu-id="8ce91-140">The following guidelines are recommended.</span></span>  
   
- 有些指導方針必須確實遵守，才能對預期收到舊版本之處傳送新版本的型別，或對預期收到新版本之處傳送舊的版本。  其他的指導方針並非絕對必要，但在此處會列出，因為它們可能會受到未來結構描述版本設定的影響。  
+ <span data-ttu-id="8ce91-141">有些指導方針必須確實遵守，才能對預期收到舊版本之處傳送新版本的型別，或對預期收到新版本之處傳送舊的版本。</span><span class="sxs-lookup"><span data-stu-id="8ce91-141">Some of the guidelines must be followed exactly in order to send new versions of a type where an older one is expected or send an old one where the new one is expected.</span></span> <span data-ttu-id="8ce91-142">其他的指導方針並非絕對必要，但在此處會列出，因為它們可能會受到未來結構描述版本設定的影響。</span><span class="sxs-lookup"><span data-stu-id="8ce91-142">Other guidelines are not strictly required, but are listed here because they may be affected by the future of schema versioning.</span></span>  
   
-1.  請勿嘗試依型別繼承對資料合約進行版本設定。  如果要建立較新版本，請變更現有型別上的資料合約或建立不相關的新型別。  
+1.  <span data-ttu-id="8ce91-143">請勿嘗試依型別繼承對資料合約進行版本設定。</span><span class="sxs-lookup"><span data-stu-id="8ce91-143">Do not attempt to version data contracts by type inheritance.</span></span> <span data-ttu-id="8ce91-144">如果要建立較新版本，請變更現有型別上的資料合約或建立不相關的新型別。</span><span class="sxs-lookup"><span data-stu-id="8ce91-144">To create later versions, either change the data contract on an existing type or create a new unrelated type.</span></span>  
   
-2.  如果繼承沒有用來做為版本設定機制，並遵循特定規則，便允許搭配使用繼承和資料合約。  如果型別衍生自特定的基底型別，在未來版本中請勿讓它衍生自不同的基底型別 \(除非它有相同的資料合約\)。  這種情形有一個例外狀況：只有在不包含名稱與繼承中其他型別之任何可能版本中的其他成員相同的資料成員時，您才可以將型別插入資料合約類型和其基底型別之間的繼承中。  一般來說，在相同繼承階層之不同層級使用名稱相同的資料成員，會導致嚴重的版本設定問題，應加以避免。  
+2.  <span data-ttu-id="8ce91-145">如果繼承沒有用來做為版本設定機制，並遵循特定規則，便允許搭配使用繼承和資料合約。</span><span class="sxs-lookup"><span data-stu-id="8ce91-145">The use of inheritance together with data contracts is allowed, provided that inheritance is not used as a versioning mechanism and that certain rules are followed.</span></span> <span data-ttu-id="8ce91-146">如果型別衍生自特定的基底型別，在未來版本中請勿讓它衍生自不同的基底型別 (除非它有相同的資料合約)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-146">If a type derives from a certain base type, do not make it derive from a different base type in a future version (unless it has the same data contract).</span></span> <span data-ttu-id="8ce91-147">這種情形有一個例外狀況：只有在不包含名稱與繼承中其他型別之任何可能版本中的其他成員相同的資料成員時，您才可以將型別插入資料合約類型和其基底型別之間的繼承中。</span><span class="sxs-lookup"><span data-stu-id="8ce91-147">There is one exception to this: you can insert a type into the hierarchy between a data contract type and its base type, but only if it does not contain data members with the same names as other members in any possible versions of the other types in the hierarchy.</span></span> <span data-ttu-id="8ce91-148">一般來說，在相同繼承階層之不同層級使用名稱相同的資料成員，會導致嚴重的版本設定問題，應加以避免。</span><span class="sxs-lookup"><span data-stu-id="8ce91-148">In general, using data members with the same names at different levels of the same inheritance hierarchy can lead to serious versioning problems and should be avoided.</span></span>  
   
-3.  從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
+3.  <span data-ttu-id="8ce91-149">從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。</span><span class="sxs-lookup"><span data-stu-id="8ce91-149">Starting with the first version of a data contract, always implement <xref:System.Runtime.Serialization.IExtensibleDataObject> to enable round-tripping.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="8ce91-150">[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-150"> [Forward-Compatible Data Contracts](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span></span> <span data-ttu-id="8ce91-151">如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。</span><span class="sxs-lookup"><span data-stu-id="8ce91-151">If you have released one or more versions of a type without implementing this interface, implement it in the next version of the type.</span></span>  
   
-4.  在較新的版本中，請勿變更資料合約名稱或命名空間。  如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute> 的 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 屬性。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]命名的詳細資訊，請參閱[資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4.  <span data-ttu-id="8ce91-152">在較新的版本中，請勿變更資料合約名稱或命名空間。</span><span class="sxs-lookup"><span data-stu-id="8ce91-152">In later versions, do not change the data contract name or namespace.</span></span> <span data-ttu-id="8ce91-153">如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-153">If changing the name or namespace of the type underlying the data contract, be sure to preserve the data contract name and namespace by using the appropriate mechanisms, such as the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute>.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="8ce91-154">命名，請參閱[資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-154"> naming, see [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).</span></span>  
   
-5.  在較新的版本中，請勿變更任何資料成員的名稱。  如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 <xref:System.Runtime.Serialization.DataMemberAttribute> 的 `Name` 屬性來保留現有的資料成員名稱。  
+5.  <span data-ttu-id="8ce91-155">在較新的版本中，請勿變更任何資料成員的名稱。</span><span class="sxs-lookup"><span data-stu-id="8ce91-155">In later versions, do not change the names of any data members.</span></span> <span data-ttu-id="8ce91-156">如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性來保留現有的資料成員名稱。</span><span class="sxs-lookup"><span data-stu-id="8ce91-156">If changing the name of the field, property, or event underlying the data member, use the `Name` property of the <xref:System.Runtime.Serialization.DataMemberAttribute> to preserve the existing data member name.</span></span>  
   
-6.  在較新的版本中，請勿變更做為資料成員基礎之任何欄位、屬性或事件的型別，讓該資料成員的結果資料合約改變。  請記住，如果是為了判斷預期資料合約的目的，介面型別等於 <xref:System.Object>。  
+6.  <span data-ttu-id="8ce91-157">在較新的版本中，請勿變更做為資料成員基礎之任何欄位、屬性或事件的型別，讓該資料成員的結果資料合約改變。</span><span class="sxs-lookup"><span data-stu-id="8ce91-157">In later versions, do not change the type of any field, property, or event underlying a data member such that the resulting data contract for that data member changes.</span></span> <span data-ttu-id="8ce91-158">請記住，如果是為了判斷預期資料合約的目的，介面型別等於 <xref:System.Object>。</span><span class="sxs-lookup"><span data-stu-id="8ce91-158">Keep in mind that interface types are equivalent to <xref:System.Object> for the purposes of determining the expected data contract.</span></span>  
   
-7.  在較新的版本中，請勿藉由調整 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性的 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 屬性，來變更現有資料成員的順序。  
+7.  <span data-ttu-id="8ce91-159">在較新的版本中，請勿藉由調整 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 屬性的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性，來變更現有資料成員的順序。</span><span class="sxs-lookup"><span data-stu-id="8ce91-159">In later versions, do not change the order of the existing data members by adjusting the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute.</span></span>  
   
-8.  在較新的版本中，可以新增新的資料成員。  它們應永遠遵循下列規則：  
+8.  <span data-ttu-id="8ce91-160">在較新的版本中，可以新增新的資料成員。</span><span class="sxs-lookup"><span data-stu-id="8ce91-160">In later versions, new data members can be added.</span></span> <span data-ttu-id="8ce91-161">它們應永遠遵循下列規則：</span><span class="sxs-lookup"><span data-stu-id="8ce91-161">They should always follow these rules:</span></span>  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
+    1.  <span data-ttu-id="8ce91-162"><xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。</span><span class="sxs-lookup"><span data-stu-id="8ce91-162">The <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> property should always be left at its default value of `false`.</span></span>  
   
-    2.  如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。  [!INCLUDE[crabout](../../../includes/crabout-md.md)]回呼的詳細資訊，請參閱 [版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+    2.  <span data-ttu-id="8ce91-163">如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。</span><span class="sxs-lookup"><span data-stu-id="8ce91-163">If a default value of `null` or zero for the member is unacceptable, a callback method should be provided using the <xref:System.Runtime.Serialization.OnDeserializingAttribute> to provide a reasonable default in case the member is not present in the incoming stream.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="8ce91-164">回撥，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-164"> the callback, see [Version-Tolerant Serialization Callbacks](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).</span></span>  
   
-    3.  `DataMemberAttribute` 上的 `Order` 屬性應用於確定所有新增的資料成員都會出現在現有的資料成員之後。  執行這項操作的建議方法如下：資料合約第一個版本中的所有資料成員都不應設定其 `Order` 屬性。  資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。  資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。  您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
+    3.  <span data-ttu-id="8ce91-165">`Order` 上的 `DataMemberAttribute` 屬性應用於確定所有新增的資料成員都會出現在現有的資料成員之後。</span><span class="sxs-lookup"><span data-stu-id="8ce91-165">The `Order` property on the `DataMemberAttribute` should be used to make sure that all of the newly added data members appear after the existing data members.</span></span> <span data-ttu-id="8ce91-166">執行這項操作的建議方法如下：資料合約第一個版本中的所有資料成員都不應設定其 `Order` 屬性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-166">The recommended way of doing this is as follows: None of the data members in the first version of the data contract should have their `Order` property set.</span></span> <span data-ttu-id="8ce91-167">資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。</span><span class="sxs-lookup"><span data-stu-id="8ce91-167">All of the data members added in version 2 of the data contract should have their `Order` property set to 2.</span></span> <span data-ttu-id="8ce91-168">資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。</span><span class="sxs-lookup"><span data-stu-id="8ce91-168">All of the data members added in version 3 of the data contract should have their `Order` set to 3, and so on.</span></span> <span data-ttu-id="8ce91-169">您可以將一個以上的資料成員設定為相同的 `Order` 號碼。</span><span class="sxs-lookup"><span data-stu-id="8ce91-169">It is permissible to have more than one data member set to the same `Order` number.</span></span>  
   
-9. 即使 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性保持為在舊版中 `false` 的預設屬性，也請不要在新版中移除資料成員。  
+9. <span data-ttu-id="8ce91-170">即使 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性保持為在舊版中 `false` 的預設屬性，也請不要在新版中移除資料成員。</span><span class="sxs-lookup"><span data-stu-id="8ce91-170">Do not remove data members in later versions, even if the <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> property was left at its default property of `false` in prior versions.</span></span>  
   
-10. 請勿在版本之間變更任何現有資料成員上的 `IsRequired` 屬性。  
+10. <span data-ttu-id="8ce91-171">請勿在版本之間變更任何現有資料成員上的 `IsRequired` 屬性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-171">Do not change the `IsRequired` property on any existing data members from version to version.</span></span>  
   
-11. 對於所需要的資料成員 \(其中 `IsRequired` 為 `true`\)，請勿在版本之間變更 `EmitDefaultValue` 屬性。  
+11. <span data-ttu-id="8ce91-172">對於所需要的資料成員 (其中 `IsRequired` 為 `true`)，請勿在版本之間變更 `EmitDefaultValue` 屬性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-172">For required data members (where `IsRequired` is `true`), do not change the `EmitDefaultValue` property from version to version.</span></span>  
   
-12. 請勿嘗試建立分支版本階層。  也就是說，在不同版本之間，應該永遠有至少一個方向的路徑，只使用這些指導方針所允許的變更。  
+12. <span data-ttu-id="8ce91-173">請勿嘗試建立分支版本階層。</span><span class="sxs-lookup"><span data-stu-id="8ce91-173">Do not attempt to create branched versioning hierarchies.</span></span> <span data-ttu-id="8ce91-174">也就是說，在不同版本之間，應該永遠有至少一個方向的路徑，只使用這些指導方針所允許的變更。</span><span class="sxs-lookup"><span data-stu-id="8ce91-174">That is, there should always be a path in at least one direction from any version to any other version using only the changes permitted by these guidelines.</span></span>  
   
-     例如，如果 Person 資料合約的第 1 版只包含 Name 資料成員，您就不應建立只新增 Age 成員的合約第 2a 版，以及只新增 Address 成員的第 2b 版。  從 2a 到 2b 會包含移除 Age 及新增 Address；而另一個方向則會需要移除 Address 及新增 Age。  這些指導方針不允許移除成員。  
+     <span data-ttu-id="8ce91-175">例如，如果 Person 資料合約的第 1 版只包含 Name 資料成員，您就不應建立只新增 Age 成員的合約第 2a 版，以及只新增 Address 成員的第 2b 版。</span><span class="sxs-lookup"><span data-stu-id="8ce91-175">For example, if version 1 of a Person data contract contains only the Name data member, you should not create version 2a of the contract adding only the Age member and version 2b adding only the Address member.</span></span> <span data-ttu-id="8ce91-176">從 2a 到 2b 會包含移除 Age 及新增 Address；而另一個方向則會需要移除 Address 及新增 Age。</span><span class="sxs-lookup"><span data-stu-id="8ce91-176">Going from 2a to 2b would involve removing Age and adding Address; going in the other direction would entail removing Address and adding Age.</span></span> <span data-ttu-id="8ce91-177">這些指導方針不允許移除成員。</span><span class="sxs-lookup"><span data-stu-id="8ce91-177">Removing members is not permitted by these guidelines.</span></span>  
   
-13. 您通常不應該在新版的應用程式中建立現有資料合約類型的新子類型。  同樣地，您不應建立新的資料合約，用於取代宣告為物件或介面型別的資料成員。  只有在您知道可以將新型別新增至舊應用程式之所有執行個體的已知型別清單時，才允許建立這些新的類別。  例如，在您應用程式的第 1 版中，可能有 LibraryItem 資料合約類型以及 Book 和 Newspaper 資料合約子類型。  然後 LibraryItem 將會有包含 Book 和 Newspaper 的已知型別清單。  假設您現在要在第 2 版中新增 Magazine 型別，做為 LibraryItem 的子型別。  如果您將 Magazine 執行個體從第 2 版傳送至第 1 版，在已知型別的清單中會找不到 Magazine 資料合約，而且會擲回例外狀況。  
+13. <span data-ttu-id="8ce91-178">您通常不應該在新版的應用程式中建立現有資料合約類型的新子類型。</span><span class="sxs-lookup"><span data-stu-id="8ce91-178">You should generally not create new subtypes of existing data contract types in a new version of your application.</span></span> <span data-ttu-id="8ce91-179">同樣地，您不應建立新的資料合約，用於取代宣告為物件或介面型別的資料成員。</span><span class="sxs-lookup"><span data-stu-id="8ce91-179">Likewise, you should not create new data contracts that are used in place of data members declared as Object or as interface types.</span></span> <span data-ttu-id="8ce91-180">只有在您知道可以將新型別新增至舊應用程式之所有執行個體的已知型別清單時，才允許建立這些新的類別。</span><span class="sxs-lookup"><span data-stu-id="8ce91-180">Creating these new classes is allowed only when you know that you can add the new types to the known types list of all instances of your old application.</span></span> <span data-ttu-id="8ce91-181">例如，在您應用程式的第 1 版中，可能有 LibraryItem 資料合約類型以及 Book 和 Newspaper 資料合約子類型。</span><span class="sxs-lookup"><span data-stu-id="8ce91-181">For example, in version 1 of your application, you may have the LibraryItem data contract type with the Book and Newspaper data contract subtypes.</span></span> <span data-ttu-id="8ce91-182">然後 LibraryItem 將會有包含 Book 和 Newspaper 的已知型別清單。</span><span class="sxs-lookup"><span data-stu-id="8ce91-182">LibraryItem would then have a known types list that contains Book and Newspaper.</span></span> <span data-ttu-id="8ce91-183">假設您現在要在第 2 版中新增 Magazine 型別，做為 LibraryItem 的子型別。</span><span class="sxs-lookup"><span data-stu-id="8ce91-183">Suppose you now add a Magazine type in version 2 which is a subtype of LibraryItem.</span></span> <span data-ttu-id="8ce91-184">如果您將 Magazine 執行個體從第 2 版傳送至第 1 版，在已知型別的清單中會找不到 Magazine 資料合約，而且會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8ce91-184">If you send a Magazine instance from version 2 to version 1, the Magazine data contract is not found in the list of known types and an exception is thrown.</span></span>  
   
-14. 您不應在版本之間新增或移除列舉成員。  您也不應重新命名列舉成員，除非您使用 `EnumMemberAttribute` 屬性 \(Attribute\) 上的 Name 屬性 \(Property\) 讓它們的名稱在資料合約模型中保持相同。  
+14. <span data-ttu-id="8ce91-185">您不應在版本之間新增或移除列舉成員。</span><span class="sxs-lookup"><span data-stu-id="8ce91-185">You should not add or remove enumeration members between versions.</span></span> <span data-ttu-id="8ce91-186">您也不應重新命名列舉成員，除非您使用 `EnumMemberAttribute` 屬性 (Attribute) 上的 Name 屬性 (Property) 讓它們的名稱在資料合約模型中保持相同。</span><span class="sxs-lookup"><span data-stu-id="8ce91-186">You should also not rename enumeration members, unless you use the Name property on the `EnumMemberAttribute` attribute to keep their names in the data contract model the same.</span></span>  
   
-15. 集合在資料合約模型中是可互換的，如[資料合約中的集合型別](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)中所述。  這可允許更大程度的彈性。  然而，請確定您沒有在版本之間以不可互換的方式不慎變更集合型別。  例如，請勿從非自訂的集合 \(也就是沒有 `CollectionDataContractAttribute` 屬性\) 變更為自訂的集合，或從自訂的集合變更為非自訂的集合。  此外，請勿在版本之間變更 `CollectionDataContractAttribute` 上的屬性。  唯一允許的變更是，如果基礎集合型別的名稱或命名空間已變更，而您需要讓其資料合約名稱和命名空間和舊版本中的相同，則可新增 Name 或 Namespace 屬性。  
+15. <span data-ttu-id="8ce91-187">在資料合約模型中所述的集合互換[集合資料合約中的型別](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。</span><span class="sxs-lookup"><span data-stu-id="8ce91-187">Collections are interchangeable in the data contract model as described in [Collection Types in Data Contracts](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).</span></span> <span data-ttu-id="8ce91-188">這可允許更大程度的彈性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-188">This allows for a great degree of flexibility.</span></span> <span data-ttu-id="8ce91-189">然而，請確定您沒有在版本之間以不可互換的方式不慎變更集合型別。</span><span class="sxs-lookup"><span data-stu-id="8ce91-189">However, make sure that you do not inadvertently change a collection type in a non-interchangeable way from version to version.</span></span> <span data-ttu-id="8ce91-190">例如，請勿從非自訂的集合 (也就是沒有 `CollectionDataContractAttribute` 屬性) 變更為自訂的集合，或從自訂的集合變更為非自訂的集合。</span><span class="sxs-lookup"><span data-stu-id="8ce91-190">For example, do not change from a non-customized collection (that is, without the `CollectionDataContractAttribute` attribute) to a customized one or a customized collection to a non-customized one.</span></span> <span data-ttu-id="8ce91-191">此外，請勿在版本之間變更 `CollectionDataContractAttribute` 上的屬性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-191">Also, do not change the properties on the `CollectionDataContractAttribute` from version to version.</span></span> <span data-ttu-id="8ce91-192">唯一允許的變更是，如果基礎集合型別的名稱或命名空間已變更，而您需要讓其資料合約名稱和命名空間和舊版本中的相同，則可新增 Name 或 Namespace 屬性。</span><span class="sxs-lookup"><span data-stu-id="8ce91-192">The only allowed change is adding a Name or Namespace property if the underlying collection type's name or namespace has changed and you need to make its data contract name and namespace the same as in a previous version.</span></span>  
   
- 當情況特殊時，可以放心略過此處列出的一些指導方針。  在違背指導方針之前，請確定您完全瞭解其中的序列化、還原序列化以及結構描述機制。  
+ <span data-ttu-id="8ce91-193">當情況特殊時，可以放心略過此處列出的一些指導方針。</span><span class="sxs-lookup"><span data-stu-id="8ce91-193">Some of the guidelines listed here can be safely ignored when special circumstances apply.</span></span> <span data-ttu-id="8ce91-194">在違背指導方針之前，請確定您完全瞭解其中的序列化、還原序列化以及結構描述機制。</span><span class="sxs-lookup"><span data-stu-id="8ce91-194">Make sure you fully understand the serialization, deserialization, and schema mechanisms involved before deviating from the guidelines.</span></span>  
   
-## 請參閱  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>   
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>   
- <xref:System.Runtime.Serialization.IExtensibleDataObject>   
- <xref:System.ServiceModel.ServiceBehaviorAttribute>   
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>   
- <xref:System.Runtime.Serialization.ExtensionDataObject>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)   
- [資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)   
- [向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)   
- [版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a><span data-ttu-id="8ce91-195">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ce91-195">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject>  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute>  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
+ <xref:System.Runtime.Serialization.ExtensionDataObject>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ [<span data-ttu-id="8ce91-196">使用資料合約</span><span class="sxs-lookup"><span data-stu-id="8ce91-196">Using Data Contracts</span></span>](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="8ce91-197">資料合約版本控制</span><span class="sxs-lookup"><span data-stu-id="8ce91-197">Data Contract Versioning</span></span>](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [<span data-ttu-id="8ce91-198">資料合約名稱</span><span class="sxs-lookup"><span data-stu-id="8ce91-198">Data Contract Names</span></span>](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [<span data-ttu-id="8ce91-199">向前相容資料合約</span><span class="sxs-lookup"><span data-stu-id="8ce91-199">Forward-Compatible Data Contracts</span></span>](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [<span data-ttu-id="8ce91-200">版本相容序列化回呼</span><span class="sxs-lookup"><span data-stu-id="8ce91-200">Version-Tolerant Serialization Callbacks</span></span>](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

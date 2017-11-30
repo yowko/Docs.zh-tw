@@ -1,50 +1,53 @@
 ---
-title: "如何：手動管理已緩衝的圖形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BufferedGraphicsContext 類別"
-  - "重繪閃動, 手動管理圖形以減少"
-  - "圖形, 管理緩衝的"
+title: "如何：手動管理已緩衝的圖形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing by manually managing graphics
+- graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：手動管理已緩衝的圖形
-如果是比較進階的雙重緩衝狀況，您可以使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別實作自己的雙重緩衝邏輯。  負責配置及管理個別圖形緩衝區的類別是 <xref:System.Drawing.BufferedGraphicsContext> 類別。  每一個應用程式都有自己的預設 <xref:System.Drawing.BufferedGraphicsContext>，以管理該應用程式所有的預設雙重緩衝。  您可以呼叫 <xref:System.Drawing.BufferedGraphicsManager.Current%2A>，藉此擷取這個執行個體的參考。  
+# <a name="how-to-manually-manage-buffered-graphics"></a><span data-ttu-id="79bcb-102">如何：手動管理已緩衝的圖形</span><span class="sxs-lookup"><span data-stu-id="79bcb-102">How to: Manually Manage Buffered Graphics</span></span>
+<span data-ttu-id="79bcb-103">您可以使用更進階的雙重緩衝狀況，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]類別以實作您自己的雙重緩衝邏輯。</span><span class="sxs-lookup"><span data-stu-id="79bcb-103">For more advanced double buffering scenarios, you can use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes to implement your own double-buffering logic.</span></span> <span data-ttu-id="79bcb-104">類別負責配置及管理個別圖形緩衝區是<xref:System.Drawing.BufferedGraphicsContext>類別。</span><span class="sxs-lookup"><span data-stu-id="79bcb-104">The class responsible for allocating and managing individual graphics buffers is the <xref:System.Drawing.BufferedGraphicsContext> class.</span></span> <span data-ttu-id="79bcb-105">每個應用程式有自己的預設值<xref:System.Drawing.BufferedGraphicsContext>，管理所有的預設應用程式的雙重緩衝。</span><span class="sxs-lookup"><span data-stu-id="79bcb-105">Every application has its own default <xref:System.Drawing.BufferedGraphicsContext> that manages all of the default double buffering for that application.</span></span> <span data-ttu-id="79bcb-106">您可以藉由呼叫擷取此執行個體的參考<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。</span><span class="sxs-lookup"><span data-stu-id="79bcb-106">You can retrieve a reference to this instance by calling the <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span></span>  
   
-### 若要取得預設 BufferedGraphicsContext 的參考  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a><span data-ttu-id="79bcb-107">若要取得預設 BufferedGraphicsContext 的參考</span><span class="sxs-lookup"><span data-stu-id="79bcb-107">To obtain a reference to the default BufferedGraphicsContext</span></span>  
   
--   設定 <xref:System.Drawing.BufferedGraphicsManager.Current%2A> 屬性，如下列程式碼範例所示：  
+-   <span data-ttu-id="79bcb-108">設定<xref:System.Drawing.BufferedGraphicsManager.Current%2A>屬性，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="79bcb-108">Set the <xref:System.Drawing.BufferedGraphicsManager.Current%2A> property, as shown in the following code example.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  您不需要呼叫 <xref:System.Drawing.BufferedGraphicsContext> 參考 \(接收自 <xref:System.Drawing.BufferedGraphicsManager> 類別\) 上的 `Dispose` 方法。  <xref:System.Drawing.BufferedGraphicsManager> 會處理預設的 <xref:System.Drawing.BufferedGraphicsContext> 執行個體所有的記憶體配置與散發。  
+    >  <span data-ttu-id="79bcb-109">您不需要呼叫`Dispose`方法<xref:System.Drawing.BufferedGraphicsContext>參考，您會收到<xref:System.Drawing.BufferedGraphicsManager>類別。</span><span class="sxs-lookup"><span data-stu-id="79bcb-109">You do not need to call the `Dispose` method on the <xref:System.Drawing.BufferedGraphicsContext> reference that you receive from the <xref:System.Drawing.BufferedGraphicsManager> class.</span></span> <span data-ttu-id="79bcb-110"><xref:System.Drawing.BufferedGraphicsManager>會處理所有的記憶體配置和預設散發<xref:System.Drawing.BufferedGraphicsContext>執行個體。</span><span class="sxs-lookup"><span data-stu-id="79bcb-110">The <xref:System.Drawing.BufferedGraphicsManager> handles all of the memory allocation and distribution for default <xref:System.Drawing.BufferedGraphicsContext> instances.</span></span>  
   
-     如果是圖形密集的應用程式 \(例如動畫\)，有時候您也可以使用專屬的 <xref:System.Drawing.BufferedGraphicsContext> 以提高效能，而不使用由 <xref:System.Drawing.BufferedGraphicsManager> 所提供的 <xref:System.Drawing.BufferedGraphicsContext>。  這樣可讓您以個別的方式建立及管理圖形緩衝區，而不會因管理和應用程式相關聯的所有其他已緩衝圖形而增加效能負荷。  
+     <span data-ttu-id="79bcb-111">等動畫大量繪圖功能的應用程式，您有時可以改善效能使用專用<xref:System.Drawing.BufferedGraphicsContext>而不是<xref:System.Drawing.BufferedGraphicsContext>提供<xref:System.Drawing.BufferedGraphicsManager>。</span><span class="sxs-lookup"><span data-stu-id="79bcb-111">For graphically intensive applications such as animation, you can sometimes improve performance by using a dedicated <xref:System.Drawing.BufferedGraphicsContext> instead of the <xref:System.Drawing.BufferedGraphicsContext> provided by the <xref:System.Drawing.BufferedGraphicsManager>.</span></span> <span data-ttu-id="79bcb-112">這可讓您建立及管理圖形緩衝區個別，而不會管理所有其他已緩衝的圖形應用程式相關聯，但應用程式所耗用的記憶體更大的效能負荷。</span><span class="sxs-lookup"><span data-stu-id="79bcb-112">This enables you to create and manage graphics buffers individually, without incurring the performance overhead of managing all the other buffered graphics associated with your application, though the memory consumed by the application will be greater.</span></span>  
   
-### 若要建立專屬的 BufferedGraphicsContext  
+### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a><span data-ttu-id="79bcb-113">若要建立專用的 BufferedGraphicsContext</span><span class="sxs-lookup"><span data-stu-id="79bcb-113">To create a dedicated BufferedGraphicsContext</span></span>  
   
--   宣告及建立 <xref:System.Drawing.BufferedGraphicsContext> 類別的新執行個體，如下列程式碼範例所示：  
+-   <span data-ttu-id="79bcb-114">宣告和建立的新執行個體<xref:System.Drawing.BufferedGraphicsContext>類別，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="79bcb-114">Declare and create a new instance of the <xref:System.Drawing.BufferedGraphicsContext> class, as shown in the following code example.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
   
-## 請參閱  
- <xref:System.Drawing.BufferedGraphicsContext>   
- [雙重緩衝的圖形](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [如何：手動呈現已緩衝的圖形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)
+## <a name="see-also"></a><span data-ttu-id="79bcb-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="79bcb-115">See Also</span></span>  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ [<span data-ttu-id="79bcb-116">雙重緩衝的圖形</span><span class="sxs-lookup"><span data-stu-id="79bcb-116">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="79bcb-117">操作說明：手動轉譯已緩衝的圖形</span><span class="sxs-lookup"><span data-stu-id="79bcb-117">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)

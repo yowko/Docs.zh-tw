@@ -1,78 +1,80 @@
 ---
-title: "ClearType 概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ClearType, 技術"
-  - "印刷樣式, ClearType 技術"
+title: "ClearType 概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], ClearType technology
+- ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c6881482203d86beb3b32b9650ed58b5f7562b8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# ClearType 概觀
-本主題概要說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技術。  
+# <a name="cleartype-overview"></a><span data-ttu-id="c7212-102">ClearType 概觀</span><span class="sxs-lookup"><span data-stu-id="c7212-102">ClearType Overview</span></span>
+<span data-ttu-id="c7212-103">本主題提供於 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中找到之 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技術的概觀。</span><span class="sxs-lookup"><span data-stu-id="c7212-103">This topic provides an overview of the [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technology found in the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-   
   
 <a name="overview"></a>   
-## 技術概觀  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 開發的軟體技術，能夠改善現有 LCD \(液晶顯示，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器\) 文字的可讀性。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是在 LCD 螢幕的每個像素中存取個別的垂直色碼元素。  在 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 之前，電腦可以顯示的最小細節是單一像素，但是透過 LCD 監視器上執行 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，我們現在可以顯示寬度最小為十分之一個像素的文字特色。  極高解析度會增加文字顯示中微小細節的清晰度，讓長時間閱讀方便得多。  
+## <a name="technology-overview"></a><span data-ttu-id="c7212-104">技術概觀</span><span class="sxs-lookup"><span data-stu-id="c7212-104">Technology Overview</span></span>  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="c7212-105"> 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，後者改善了現有 LCD (液晶顯示器) 的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。</span><span class="sxs-lookup"><span data-stu-id="c7212-105"> is a software technology developed by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] that improves the readability of text on existing LCDs (Liquid Crystal Displays), such as laptop screens, Pocket PC screens and flat panel monitors.</span></span>  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="c7212-106"> 的運作方式是存取 LCD 螢幕中每個像素的個別垂直色帶項目。</span><span class="sxs-lookup"><span data-stu-id="c7212-106"> works by accessing the individual vertical color stripe elements in every pixel of an LCD screen.</span></span> <span data-ttu-id="c7212-107">在 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 之前，電腦能夠顯示的詳細資料最小層級是單一像素，但在 LCD 監視器上執行 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 之後，顯示的文字特性可以小到像素寬度的幾分之一。</span><span class="sxs-lookup"><span data-stu-id="c7212-107">Before [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], the smallest level of detail that a computer could display was a single pixel, but with [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] running on an LCD monitor, we can now display features of text as small as a fraction of a pixel in width.</span></span> <span data-ttu-id="c7212-108">額外的解析度可提高文字顯示細節的銳度，即使經過長時間也容易閱讀。</span><span class="sxs-lookup"><span data-stu-id="c7212-108">The extra resolution increases the sharpness of the tiny details in text display, making it much easier to read over long durations.</span></span>  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中提供的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是最新一代的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，其中包含幾項針對 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 提供之版本的改進功能。  
+ <span data-ttu-id="c7212-109">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是最新一代的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，其具有 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 中之版本的多項改進。</span><span class="sxs-lookup"><span data-stu-id="c7212-109">The [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] available in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is the latest generation of [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] which has several improvements over version found in [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].</span></span>  
   
 <a name="sub-pixel_positioning"></a>   
-## 子像素定位  
- 對舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 所做最重大的改進之處是子像素定義的使用。  不同於 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 實作，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以讓圖像 \(Glyph\) 從像素內部開始，而不只是像素的週框。  由於在定位像素上的這種額外解析度，使得圖像的間距和比例更為精準也更為一致。  
+## <a name="sub-pixel-positioning"></a><span data-ttu-id="c7212-110">子像素定位</span><span class="sxs-lookup"><span data-stu-id="c7212-110">Sub-pixel Positioning</span></span>  
+ <span data-ttu-id="c7212-111">前一版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的重大改進就是使用子像素定位。</span><span class="sxs-lookup"><span data-stu-id="c7212-111">A significant improvement over the previous version of [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] is the use of sub-pixel positioning.</span></span> <span data-ttu-id="c7212-112">不同於 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 實作，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 允許字符在像素內開始，不是只能在像素界限上開始。</span><span class="sxs-lookup"><span data-stu-id="c7212-112">Unlike the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] implementation found in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] found in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] allows glyphs to start within the pixel and not just the beginning boundary of the pixel.</span></span> <span data-ttu-id="c7212-113">因為定位字符有此額外的解析度，所以字符的間距和比例更精確且一致。</span><span class="sxs-lookup"><span data-stu-id="c7212-113">Because of this extra resolution in positioning glyphs, the spacing and proportions of the glyphs is more precise and consistent.</span></span>  
   
- 下列兩個範例顯示使用子像素定位時，圖像從任何子像素週框起始的外觀。  左邊的範例是使用舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器呈現的結果，並未採用子像素定位功能。  右邊的範例是使用新版的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器，利用子像素定義所呈現的外觀。  請注意右側影像中每個 **e** 和 **l** 都稍有不同，因為每個字母的起點都在不同的子像素中。  在螢幕上檢視正常大小的文字時，由於圖像影像的高對比，使得這項差異並不顯著。  只有在 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 中已加入複雜的色彩篩選功能，才會產生這種結果。  
+ <span data-ttu-id="c7212-114">下列兩例示範使用子像素定位時，字符如何能在任何子像素界限上開始。</span><span class="sxs-lookup"><span data-stu-id="c7212-114">The following two examples show how glyphs may begin on any sub-pixel boundary when sub-pixel positioning is used.</span></span> <span data-ttu-id="c7212-115">左邊的範例使用舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器轉譯，未採用子像素定位。</span><span class="sxs-lookup"><span data-stu-id="c7212-115">The example on the left is rendered using the earlier version of the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renderer, which did not employ sub-pixel positioning.</span></span> <span data-ttu-id="c7212-116">右邊的範例使用新版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器轉譯，採用子像素定位。</span><span class="sxs-lookup"><span data-stu-id="c7212-116">The example on the right is rendered using the new version of the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renderer, using sub-pixel positioning.</span></span> <span data-ttu-id="c7212-117">請注意右側映像中每個 **e** 和 **l** 的轉譯方式都略有不同，因為它們每一個都在不同的子像素上開始。</span><span class="sxs-lookup"><span data-stu-id="c7212-117">Note how each **e** and **l** in the right-hand image is rendered slightly differently because each starts on a different sub-pixel.</span></span> <span data-ttu-id="c7212-118">在螢幕上檢視正常大小的文字時，因為字符映像的高對比，所以這項差異不是很明顯。</span><span class="sxs-lookup"><span data-stu-id="c7212-118">When viewing the text at its normal size on the screen, this difference is not noticeable because of the high contrast of the glyph image.</span></span> <span data-ttu-id="c7212-119">這可能只是因為 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 納入的複雜色彩篩選。</span><span class="sxs-lookup"><span data-stu-id="c7212-119">This is only possible because of sophisticated color filtering that is incorporated in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].</span></span>  
   
- ![以兩種 ClearType 版本顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_01")  
-舊版和新版 ClearType 顯示的文字  
+ <span data-ttu-id="c7212-120">![以兩種 ClearType 版本顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")</span><span class="sxs-lookup"><span data-stu-id="c7212-120">![Text displayed with two versions of ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")</span></span>  
+<span data-ttu-id="c7212-121">以新舊版 ClearType 顯示的文字</span><span class="sxs-lookup"><span data-stu-id="c7212-121">Text displayed with earlier and later versions of ClearType</span></span>  
   
- 下列兩個範例比較舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器與新版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 產生器的輸出。  如右邊範例所示，子像素定位大幅改善了螢幕上的文字間距，尤其是尺寸較小，而使得子像素和完整像素之間差距代表了圖像寬度的明顯比例時。  請注意第二個影像中的字母間距較為平均。  子像素定位在文字螢幕整體外觀上的優勢已大幅提升，同時也代表 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 技術的一項重大革命。  
+ <span data-ttu-id="c7212-122">下列兩例比較舊版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器和新版 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 轉譯器的輸出。</span><span class="sxs-lookup"><span data-stu-id="c7212-122">The following two examples compare output from the earlier [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renderer with the new version of the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renderer.</span></span> <span data-ttu-id="c7212-123">顯示在右側的子像素定位，可大幅提升畫面中的類型間距，尤其是子像素和完整像素在字符寬度有明顯比例差異的小尺寸狀況。</span><span class="sxs-lookup"><span data-stu-id="c7212-123">The subpixel positioning, shown on the right, greatly improves the spacing of type on screen, especially at small sizes where the difference between a sub-pixel and a whole pixel represents a significant proportion of glyph width.</span></span> <span data-ttu-id="c7212-124">請注意，第二個映像中的字母間距更勻稱。</span><span class="sxs-lookup"><span data-stu-id="c7212-124">Note that spacing between the letters is more even in the second image.</span></span> <span data-ttu-id="c7212-125">文字畫面整體外觀的子像素定位累積優勢會大幅增加，並以 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 技術表現顯著的演進。</span><span class="sxs-lookup"><span data-stu-id="c7212-125">The cumulative benefit of sub-pixel positioning to the overall appearance of a screen of text is greatly increased, and represents a significant evolution in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] technology.</span></span>  
   
- ![以舊版 ClearType 顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_02")  
-舊版和新版 ClearType 的文字  
+ <span data-ttu-id="c7212-126">![以舊版 ClearType 顯示的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")</span><span class="sxs-lookup"><span data-stu-id="c7212-126">![Text displayed with earlier version of ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")</span></span>  
+<span data-ttu-id="c7212-127">以新舊版 ClearType 顯示的文字</span><span class="sxs-lookup"><span data-stu-id="c7212-127">Text with earlier and later versions of ClearType</span></span>  
   
 <a name="y-direction_antialiasing"></a>   
-## Y 方向消除鋸齒  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改善是 Y 方向消除鋸齒。  [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 沒有 Y 方向消除鋸齒，因此只能在 X 軸提供較佳的解析度，但 Y 軸的解析度則較差。  在淺曲線的上下端，鋸齒邊緣降低了文字的可讀性。  
+## <a name="y-direction-antialiasing"></a><span data-ttu-id="c7212-128">Y 方向消除鋸齒</span><span class="sxs-lookup"><span data-stu-id="c7212-128">Y-Direction Antialiasing</span></span>  
+ <span data-ttu-id="c7212-129">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改進是 Y 方向消除鋸齒功能。</span><span class="sxs-lookup"><span data-stu-id="c7212-129">Another improvement of [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is y-direction anti-aliasing.</span></span> <span data-ttu-id="c7212-130">[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 沒有 Y 方向消除鋸齒功能，能在 X 軸提供更好的解析度，Y 軸則否。</span><span class="sxs-lookup"><span data-stu-id="c7212-130">The [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] without y-direction anti-aliasing provides better resolution on the x-axis but not the y-axis.</span></span> <span data-ttu-id="c7212-131">微曲部分頂端和底端的鋸齒狀邊緣會降低其可讀性。</span><span class="sxs-lookup"><span data-stu-id="c7212-131">On the tops and bottoms of shallow curves, the jagged edges detract from its readability.</span></span>  
   
- 下列範例顯示沒有 Y 方向消除鋸齒的效果。  在這個案例中，字母上下兩端的鋸齒邊緣非常明顯。  
+ <span data-ttu-id="c7212-132">下例顯示不使用 Y 方向消除鋸齒的效果。</span><span class="sxs-lookup"><span data-stu-id="c7212-132">The following example shows the effect of having no y-direction antialiasing.</span></span> <span data-ttu-id="c7212-133">在此情況下，字母上方與下方的鋸齒狀邊緣很明顯。</span><span class="sxs-lookup"><span data-stu-id="c7212-133">In this case, the jagged edges on the top and bottom of the letter are apparent.</span></span>  
   
- ![微曲部分產生鋸齒狀邊緣的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_03")  
-淺曲線上有鋸齒邊緣的文字  
+ <span data-ttu-id="c7212-134">![微曲部分產生鋸齒狀邊緣的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")</span><span class="sxs-lookup"><span data-stu-id="c7212-134">![Text with jagged edges on shallow curves](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")</span></span>  
+<span data-ttu-id="c7212-135">微曲部分產生鋸齒狀邊緣的文字</span><span class="sxs-lookup"><span data-stu-id="c7212-135">Text with jagged edges on shallow curves</span></span>  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 提供 Y 方向層級的消除鋸齒功能，讓所有的鋸齒邊緣變得平滑。  這項功能對於改善東亞語系的可讀性尤其重要，因為在東亞語系中，表意文字之水平和垂直淺曲線的數量幾乎相等。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c7212-136"> 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 在 Y 方向層級上提供消除鋸齒功能，平滑所有的鋸齒狀邊緣。</span><span class="sxs-lookup"><span data-stu-id="c7212-136"> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides antialiasing on the y-direction level to smooth out any jagged edges.</span></span> <span data-ttu-id="c7212-137">這對改善東亞語言的可讀性特別重要，因為表意字元的水平和垂直微曲部分比重幾乎相同。</span><span class="sxs-lookup"><span data-stu-id="c7212-137">This is particularly important for improving the readability of East Asian languages where ideographs have an almost equal amount of horizontal and vertical shallow curves.</span></span>  
   
- 下列範例顯示 Y 方向消除鋸齒的效果。  在這個案例中，字母上下兩端顯示平滑的曲線。  
+ <span data-ttu-id="c7212-138">下例顯示使用 Y 方向消除鋸齒的效果。</span><span class="sxs-lookup"><span data-stu-id="c7212-138">The following example shows the effect of y-direction antialiasing.</span></span> <span data-ttu-id="c7212-139">在此情況下，字母的上方與下方會顯示平滑的曲線。</span><span class="sxs-lookup"><span data-stu-id="c7212-139">In this case, the top and bottom of the letter show a smooth curve.</span></span>  
   
- ![套用 ClearType Y 方向消除鋸齒功能的文字](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk\_mmgraphics\_text\_cleartype\_overview\_04")  
-使用 ClearType Y 方向消除鋸齒的文字  
+ <span data-ttu-id="c7212-140">![使用 ClearType y &#45; 反方向 &#45;文字; 別名](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")</span><span class="sxs-lookup"><span data-stu-id="c7212-140">![Text with ClearType y&#45;direction anti&#45;aliasing](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")</span></span>  
+<span data-ttu-id="c7212-141">以 ClearType Y 方向消除鋸齒功能顯示的文字</span><span class="sxs-lookup"><span data-stu-id="c7212-141">Text with ClearType y-direction antialiasing</span></span>  
   
 <a name="hardware_acceleration"></a>   
-## 硬體加速  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以利用硬體加速來提高效能，並降低 CPU 負載和系統記憶體需求。  透過圖形卡的像素著色器 \(Pixel Shader\) 和視訊記憶體，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 提供了快速呈現文字的功能，尤其是在使用動畫時。  
+## <a name="hardware-acceleration"></a><span data-ttu-id="c7212-142">硬體加速</span><span class="sxs-lookup"><span data-stu-id="c7212-142">Hardware Acceleration</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c7212-143"> 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以利用硬體加速提升效能，並降低 CPU 負載和系統記憶體需求。</span><span class="sxs-lookup"><span data-stu-id="c7212-143"> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] can take advantage of hardware acceleration for better performance and to reduce CPU load and system memory requirements.</span></span> <span data-ttu-id="c7212-144">使用圖形卡的像素著色器和視訊記憶體，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 可以更快速轉譯文字，特別是使用動畫時。</span><span class="sxs-lookup"><span data-stu-id="c7212-144">By using the pixel shaders and video memory of a graphics card, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] provides faster rendering of text, particularly when animation is used.</span></span>  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 不會修改全系統的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定。  停用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 會將 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的消除鋸齒設定為灰階模式。此外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 也不會修改 [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) 的設定。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c7212-145"> 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 不會修改整個系統的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定。</span><span class="sxs-lookup"><span data-stu-id="c7212-145"> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] does not modify the system-wide [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] settings.</span></span> <span data-ttu-id="c7212-146">停用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 會將 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 消除鋸齒設成灰階模式。</span><span class="sxs-lookup"><span data-stu-id="c7212-146">Disabling [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sets [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] antialiasing to grayscale mode.</span></span> <span data-ttu-id="c7212-147">此外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 不會修改 [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) 的設定。</span><span class="sxs-lookup"><span data-stu-id="c7212-147">In addition, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] does not modify the settings of the [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx).</span></span>  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的其中一項架構設計決策是讓無關解析度的配置加強支援日漸普及的高解析度 DPI 監視器。  這項決策的結果是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 無法在某些東亞字型中支援鋸齒文字呈現或點陣圖，因為這兩者都與解析度相關。  
+ <span data-ttu-id="c7212-148">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構設計決策之一，就是解析度獨立的版面配置能更有效地支援日益普及的高解析度 DPI 監視器。</span><span class="sxs-lookup"><span data-stu-id="c7212-148">One of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architectural design decisions is to have resolution independent layout better support higher resolution DPI monitors, which are becoming more widespread.</span></span> <span data-ttu-id="c7212-149">這樣做的後果是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 不支援別名文字轉譯或某些東亞文字字型的點陣圖，因為它們兩個都是解析度相依。</span><span class="sxs-lookup"><span data-stu-id="c7212-149">This has the consequence of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] not supporting aliased text rendering or the bitmaps in some East Asian fonts because they are both resolution dependent.</span></span>  
   
 <a name="further_information"></a>   
-## 詳細資訊  
- [ClearType 資訊](http://www.microsoft.com/typography/ClearTypeInfo.mspx) \(英文\)  
+## <a name="further-information"></a><span data-ttu-id="c7212-150">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="c7212-150">Further Information</span></span>  
+ [<span data-ttu-id="c7212-151">ClearType 資訊</span><span class="sxs-lookup"><span data-stu-id="c7212-151">ClearType Information</span></span>](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx) \(英文\)  
+ [<span data-ttu-id="c7212-152">ClearType Tuner PowerToy</span><span class="sxs-lookup"><span data-stu-id="c7212-152">ClearType Tuner PowerToy</span></span>](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
-## 請參閱  
- [ClearType 登錄設定](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+## <a name="see-also"></a><span data-ttu-id="c7212-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c7212-153">See Also</span></span>  
+ [<span data-ttu-id="c7212-154">ClearType 登錄設定</span><span class="sxs-lookup"><span data-stu-id="c7212-154">ClearType Registry Settings</span></span>](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

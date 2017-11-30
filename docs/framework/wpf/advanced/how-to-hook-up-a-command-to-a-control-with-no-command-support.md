@@ -1,55 +1,61 @@
 ---
-title: "如何：將命令與沒有命令支援的控制項連結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "類別, 控制項, 附加 RoutedCommand"
-  - "類別, RoutedCommand, 附加至控制項"
-  - "Control 類別, 附加 RoutedCommand"
-  - "RoutedCommand 類別, 附加至控制項"
+title: "如何：將命令與沒有命令支援的控制項連結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Control class [WPF], attaching a RoutedCommand
+- classes [WPF], Control [WPF], attaching a RoutedCommand
+- RoutedCommand class [WPF], attaching to a Control
+- classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將命令與沒有命令支援的控制項連結
-下列範例顯示如何將 <xref:System.Windows.Input.RoutedCommand> 與沒有命令內建支援的 <xref:System.Windows.Controls.Control> 連結。  如需將命令連結至多個來源的完整範例，請參閱[建立自訂 RoutedCommand 範例](http://go.microsoft.com/fwlink/?LinkID=159980) 範例 \(英文\)。  
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a><span data-ttu-id="e7b07-102">如何：將命令與沒有命令支援的控制項連結</span><span class="sxs-lookup"><span data-stu-id="e7b07-102">How to: Hook Up a Command to a Control with No Command Support</span></span>
+<span data-ttu-id="e7b07-103">下列範例示範如何連接<xref:System.Windows.Input.RoutedCommand>至<xref:System.Windows.Controls.Control>這不會不具有內建支援命令。</span><span class="sxs-lookup"><span data-stu-id="e7b07-103">The following example shows how to hook up a <xref:System.Windows.Input.RoutedCommand> to a <xref:System.Windows.Controls.Control> which does not have built in support for the command.</span></span>  <span data-ttu-id="e7b07-104">如需將命令連結至多個來源的完整範例，請參閱[建立自訂的 RoutedCommand 範例](http://go.microsoft.com/fwlink/?LinkID=159980)範例。</span><span class="sxs-lookup"><span data-stu-id="e7b07-104">For a complete sample which hooks up commands to multiple sources, see the [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980) sample.</span></span>  
   
-## 範例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供應用程式開發人員經常會遇到的通用命令程式庫。  組成命令程式庫的類別有：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands> 和 <xref:System.Windows.Documents.EditingCommands>。  
+## <a name="example"></a><span data-ttu-id="e7b07-105">範例</span><span class="sxs-lookup"><span data-stu-id="e7b07-105">Example</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="e7b07-106"> 提供應用程式設計人員經常遇到之常見命令的程式庫。</span><span class="sxs-lookup"><span data-stu-id="e7b07-106"> provides a library of common commands which application programmers encounter regularly.</span></span>  <span data-ttu-id="e7b07-107">構成命令程式庫的類別： <xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.ComponentCommands>， <xref:System.Windows.Input.NavigationCommands>， <xref:System.Windows.Input.MediaCommands>，和<xref:System.Windows.Documents.EditingCommands>。</span><span class="sxs-lookup"><span data-stu-id="e7b07-107">The classes which comprise the command library are: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, and <xref:System.Windows.Documents.EditingCommands>.</span></span>  
   
- 構成這些類別的靜態 <xref:System.Windows.Input.RoutedCommand> 物件不提供命令邏輯。  命令的邏輯是與具有 <xref:System.Windows.Input.CommandBinding> 的命令相關聯。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有許多控制項會對命令程式庫中的某些命令提供內建支援。  舉例來說，<xref:System.Windows.Controls.TextBox> 支援許多應用程式編輯命令，例如 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>、<xref:System.Windows.Input.ApplicationCommands.Copy%2A>、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.ApplicationCommands.Redo%2A> 和 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>。  應用程式開發人員不需要特別做什麼，就可以讓這些命令與這些控制項一起運作。  如果執行命令時 <xref:System.Windows.Controls.TextBox> 是命令目標，就會使用內建在控制項內的 <xref:System.Windows.Input.CommandBinding> 處理命令。  
+ <span data-ttu-id="e7b07-108">靜態<xref:System.Windows.Input.RoutedCommand>組成這些類別的物件不提供命令的邏輯。</span><span class="sxs-lookup"><span data-stu-id="e7b07-108">The static <xref:System.Windows.Input.RoutedCommand> objects which make up these classes do not supply command logic.</span></span>  <span data-ttu-id="e7b07-109">此命令的邏輯是與命令相關聯<xref:System.Windows.Input.CommandBinding>。</span><span class="sxs-lookup"><span data-stu-id="e7b07-109">The logic for the command is associated with the command with a <xref:System.Windows.Input.CommandBinding>.</span></span>  <span data-ttu-id="e7b07-110">中的許多控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有內建支援某些命令程式庫中的命令。</span><span class="sxs-lookup"><span data-stu-id="e7b07-110">Many controls in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] have built in support for some of the commands in the command library.</span></span>  <span data-ttu-id="e7b07-111"><xref:System.Windows.Controls.TextBox>例如，支援的許多應用程式編輯命令，例如<xref:System.Windows.Input.ApplicationCommands.Paste%2A>， <xref:System.Windows.Input.ApplicationCommands.Copy%2A>， <xref:System.Windows.Input.ApplicationCommands.Cut%2A>， <xref:System.Windows.Input.ApplicationCommands.Redo%2A>，和<xref:System.Windows.Input.ApplicationCommands.Undo%2A>。</span><span class="sxs-lookup"><span data-stu-id="e7b07-111"><xref:System.Windows.Controls.TextBox>, for example, supports many of the application edit commands such as <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, and <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.</span></span>  <span data-ttu-id="e7b07-112">應用程式開發人員不需要特別執行任何作業，即可取得這些命令來使用這些控制項。</span><span class="sxs-lookup"><span data-stu-id="e7b07-112">The application developer does not have to do anything special to get these commands to work with these controls.</span></span>  <span data-ttu-id="e7b07-113">如果<xref:System.Windows.Controls.TextBox>是命令目標執行命令時，它將處理命令使用<xref:System.Windows.Input.CommandBinding>內建控制項。</span><span class="sxs-lookup"><span data-stu-id="e7b07-113">If the <xref:System.Windows.Controls.TextBox> is the command target when the command is executed, it will handle the command using the <xref:System.Windows.Input.CommandBinding> that is built into the control.</span></span>  
   
- 下列範例顯示如何使用 <xref:System.Windows.Controls.Button> 做為 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 命令的命令來源。  <xref:System.Windows.Input.CommandBinding> 的建立，會將指定的 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 和 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 與 <xref:System.Windows.Input.RoutedCommand> 建立關聯。  
+ <span data-ttu-id="e7b07-114">下列範例示範如何使用<xref:System.Windows.Controls.Button>做為命令來源<xref:System.Windows.Input.ApplicationCommands.Open%2A>命令。</span><span class="sxs-lookup"><span data-stu-id="e7b07-114">The following shows how to use a <xref:System.Windows.Controls.Button> as the command source for the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  <span data-ttu-id="e7b07-115">A<xref:System.Windows.Input.CommandBinding>會建立指定該關聯<xref:System.Windows.Input.CanExecuteRoutedEventHandler>和<xref:System.Windows.Input.CanExecuteRoutedEventHandler>與<xref:System.Windows.Input.RoutedCommand>。</span><span class="sxs-lookup"><span data-stu-id="e7b07-115">A <xref:System.Windows.Input.CommandBinding> is created that associates the specified <xref:System.Windows.Input.CanExecuteRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> with the <xref:System.Windows.Input.RoutedCommand>.</span></span>  
   
- 首先會建立命令來源。  <xref:System.Windows.Controls.Button> 是用來做為命令來源。  
+ <span data-ttu-id="e7b07-116">首先，會建立命令來源。</span><span class="sxs-lookup"><span data-stu-id="e7b07-116">First, the command source is created.</span></span>  <span data-ttu-id="e7b07-117">A<xref:System.Windows.Controls.Button>做為命令來源。</span><span class="sxs-lookup"><span data-stu-id="e7b07-117">A <xref:System.Windows.Controls.Button> is used as the command source.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- 接著會建立 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 和 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>。  <xref:System.Windows.Input.ExecutedRoutedEventHandler> 會直接開啟 <xref:System.Windows.MessageBox> 以表示命令已執行。  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 會將 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 屬性設定為 `true`。  通常，CanExecute 處理常式會執行更健全的檢查，以查看命令是否可以在目前命令目標上執行。  
+ <span data-ttu-id="e7b07-118">下一步<xref:System.Windows.Input.ExecutedRoutedEventHandler>和<xref:System.Windows.Input.CanExecuteRoutedEventHandler>所建立。</span><span class="sxs-lookup"><span data-stu-id="e7b07-118">Next, the <xref:System.Windows.Input.ExecutedRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> are created.</span></span>  <span data-ttu-id="e7b07-119"><xref:System.Windows.Input.ExecutedRoutedEventHandler>只需開啟<xref:System.Windows.MessageBox>以表示執行的命令。</span><span class="sxs-lookup"><span data-stu-id="e7b07-119">The <xref:System.Windows.Input.ExecutedRoutedEventHandler> simply opens a <xref:System.Windows.MessageBox> to signify that the command executed.</span></span>  <span data-ttu-id="e7b07-120"><xref:System.Windows.Input.CanExecuteRoutedEventHandler>設定<xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="e7b07-120">The <xref:System.Windows.Input.CanExecuteRoutedEventHandler> sets the <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> property to `true`.</span></span>  <span data-ttu-id="e7b07-121">一般來說，則可以執行處理常式會執行更穩固的檢查，若要查看是否命令無法在目前命令目標上執行。</span><span class="sxs-lookup"><span data-stu-id="e7b07-121">Normally, the can execute handler would perform more robust checks to see if the command could execute on the current command target.</span></span>  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- 最後會在應用程式的根 <xref:System.Windows.Window> 上，建立會將路由事件處理常式與 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 命令建立關聯的 <xref:System.Windows.Input.CommandBinding>。  
+ <span data-ttu-id="e7b07-122">最後，<xref:System.Windows.Input.CommandBinding>根目錄上建立<xref:System.Windows.Window>應用程式相關聯的路由的事件處理常式的<xref:System.Windows.Input.ApplicationCommands.Open%2A>命令。</span><span class="sxs-lookup"><span data-stu-id="e7b07-122">Finally, a <xref:System.Windows.Input.CommandBinding> is created on the root <xref:System.Windows.Window> of the application that associates the routed events handlers to the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## 請參閱  
- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [將命令與含有命令支援的控制項連結](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a><span data-ttu-id="e7b07-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7b07-123">See Also</span></span>  
+ [<span data-ttu-id="e7b07-124">命令概觀</span><span class="sxs-lookup"><span data-stu-id="e7b07-124">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="e7b07-125">將命令與含有命令支援的控制項連結</span><span class="sxs-lookup"><span data-stu-id="e7b07-125">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

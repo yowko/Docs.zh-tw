@@ -1,30 +1,33 @@
 ---
-title: "服務描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "服務描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d3251d960b00d34c08826957e0db9c30bd5aae3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 服務描述
-服務描述範例會示範服務如何在執行階段擷取其服務描述資訊。此範例是以[使用者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，同時包含已定義可傳回有關服務之描述資訊的其他服務作業。傳回的資訊會列出服務的基底位址與端點。服務會使用 <xref:System.ServiceModel.OperationContext>、<xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.Description.ServiceDescription> 類別提供這項資訊。  
+# <a name="service-description"></a><span data-ttu-id="fc793-102">服務描述</span><span class="sxs-lookup"><span data-stu-id="fc793-102">Service Description</span></span>
+<span data-ttu-id="fc793-103">服務描述範例會示範服務如何在執行階段擷取其服務描述資訊。</span><span class="sxs-lookup"><span data-stu-id="fc793-103">The Service Description sample demonstrates how a service can retrieve its service description information at runtime.</span></span> <span data-ttu-id="fc793-104">範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，以定義要傳回之服務的描述性資訊的其他服務作業。</span><span class="sxs-lookup"><span data-stu-id="fc793-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), with an additional service operation defined to return descriptive information about the service.</span></span> <span data-ttu-id="fc793-105">傳回的資訊會列出服務的基底位址與端點。</span><span class="sxs-lookup"><span data-stu-id="fc793-105">The information that is returned lists the base addresses and endpoints for the service.</span></span> <span data-ttu-id="fc793-106">服務會使用 <xref:System.ServiceModel.OperationContext>、<xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.Description.ServiceDescription> 類別提供這項資訊。</span><span class="sxs-lookup"><span data-stu-id="fc793-106">The service provides this information using the <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, and <xref:System.ServiceModel.Description.ServiceDescription> classes.</span></span>  
   
- 在這個範例中，用戶端是主控台應用程式 \(.exe\)，而服務則是由網際網路資訊服務 \(IIS\) 所裝載。  
+ <span data-ttu-id="fc793-107">在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。</span><span class="sxs-lookup"><span data-stu-id="fc793-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+>  <span data-ttu-id="fc793-108">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="fc793-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 這個範例有個修改版本的計算機合約，名稱為 `IServiceDescriptionCalculator`。該合約會定義名為 `GetServiceDescriptionInfo` 的其他服務作業，此作業會將描述服務的基底位址或位址以及服務端點或端點的多行字串傳回至用戶端。  
+ <span data-ttu-id="fc793-109">這個範例有個修改版本的計算機合約，名稱為 `IServiceDescriptionCalculator`。</span><span class="sxs-lookup"><span data-stu-id="fc793-109">This sample has a modified version of the calculator contract called `IServiceDescriptionCalculator`.</span></span> <span data-ttu-id="fc793-110">該合約會定義名為 `GetServiceDescriptionInfo` 的其他服務作業，此作業會將描述服務的基底位址或位址以及服務端點或端點的多行字串傳回至用戶端。</span><span class="sxs-lookup"><span data-stu-id="fc793-110">The contract defines an additional service operation named `GetServiceDescriptionInfo` that returns a multi-line string to the client that describes the base address or addresses and service endpoint or endpoints for the service.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -41,10 +44,9 @@ public interface IServiceDescriptionCalculator
     [OperationContract]  
     string GetServiceDescriptionInfo();  
 }  
-  
 ```  
   
- `GetServiceDescriptionInfo` 的實作程式碼會使用 <xref:System.ServiceModel.Description.ServiceDescription> 來列出服務端點。因為服務端點可以有相對位址，所以它會先列出服務的基底位址。為了取得完整的這份資訊，該程式碼會使用 <xref:System.ServiceModel.OperationContext.Current%2A> 取得作業內容。<xref:System.ServiceModel.ServiceHost> 和其 <xref:System.ServiceModel.Description.ServiceDescription> 物件，都是擷取自此作業內容。為了列出服務的基底端點，該程式碼會逐一查看服務主機的 <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> 集合。為了列出服務的服務端點，該程式碼會逐一查看服務描述的端點集合。  
+ <span data-ttu-id="fc793-111">`GetServiceDescriptionInfo` 的實作程式碼會使用 <xref:System.ServiceModel.Description.ServiceDescription> 來列出服務端點。</span><span class="sxs-lookup"><span data-stu-id="fc793-111">The implementation code for `GetServiceDescriptionInfo` uses the <xref:System.ServiceModel.Description.ServiceDescription> to list the service endpoints.</span></span> <span data-ttu-id="fc793-112">因為服務端點可以有相對位址，所以它會先列出服務的基底位址。</span><span class="sxs-lookup"><span data-stu-id="fc793-112">Because service endpoints can have relative addresses, it first lists the base addresses for the service.</span></span> <span data-ttu-id="fc793-113">為了取得完整的這份資訊，該程式碼會使用 <xref:System.ServiceModel.OperationContext.Current%2A> 取得作業內容。</span><span class="sxs-lookup"><span data-stu-id="fc793-113">To get all of this information, the code obtains its operation context using <xref:System.ServiceModel.OperationContext.Current%2A>.</span></span> <span data-ttu-id="fc793-114"><xref:System.ServiceModel.ServiceHost> 和其 <xref:System.ServiceModel.Description.ServiceDescription> 物件，都是擷取自此作業內容。</span><span class="sxs-lookup"><span data-stu-id="fc793-114">The <xref:System.ServiceModel.ServiceHost> and its <xref:System.ServiceModel.Description.ServiceDescription> object are retrieved from the operation context.</span></span> <span data-ttu-id="fc793-115">為了列出服務的基底端點，該程式碼會逐一查看服務主機的 <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> 集合。</span><span class="sxs-lookup"><span data-stu-id="fc793-115">To list the base endpoints for the service, the code iterates through the service host's <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> collection.</span></span> <span data-ttu-id="fc793-116">為了列出服務的服務端點，該程式碼會逐一查看服務描述的端點集合。</span><span class="sxs-lookup"><span data-stu-id="fc793-116">To list the service endpoints for the service, the code iterates through the service description's endpoints collection.</span></span>  
   
 ```  
 public string GetServiceDescriptionInfo()  
@@ -69,10 +71,9 @@ public string GetServiceDescriptionInfo()
     }  
      return info;  
 }  
-  
 ```  
   
- 當執行範例時，您會看到計算機作業，然後服務資訊會由 `GetServiceDescriptionInfo` 作業傳回。在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ <span data-ttu-id="fc793-117">當執行範例時，您會看到計算機作業，然後服務資訊會由 `GetServiceDescriptionInfo` 作業傳回。</span><span class="sxs-lookup"><span data-stu-id="fc793-117">When you run the sample, you see the calculator operations and then the service information returned by the `GetServiceDescriptionInfo` operation.</span></span> <span data-ttu-id="fc793-118">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="fc793-118">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(15,3) = 18  
@@ -94,21 +95,21 @@ Service endpoints:
 Press <ENTER> to terminate client.  
 ```  
   
-### 若要設定、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="fc793-119">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="fc793-119">To set up, build, and run the sample</span></span>  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="fc793-120">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="fc793-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  <span data-ttu-id="fc793-121">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="fc793-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要在單一或跨機器的組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示進行。  
+3.  <span data-ttu-id="fc793-122">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="fc793-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="fc793-123">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="fc793-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fc793-124">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="fc793-124">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="fc793-125">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="fc793-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fc793-126">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="fc793-126">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="fc793-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fc793-127">See Also</span></span>

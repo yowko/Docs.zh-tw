@@ -1,43 +1,47 @@
 ---
-title: "如何：在 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定的項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox 控制項 [Windows Form], 存取項目"
-  - "下拉式方塊, 存取項目"
-  - "ComboBox 控制項 [Windows Form], 存取項目"
-  - "清單方塊, 存取項目"
-  - "ListBox 控制項 [Windows Form], 存取項目"
-  - "ListBox 控制項 [Windows Form], 傳回項目資訊"
+title: "如何：在 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定的項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定的項目
-在 Windows Form 下拉式方塊、清單方塊或選取的清單方塊中存取指定的項目是一項基本工作。  您可利用程式設計方式決定指定位置的清單內容。  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="9906e-102">如何：在 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定的項目</span><span class="sxs-lookup"><span data-stu-id="9906e-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="9906e-103">存取 Windows Form 下拉式方塊、 清單方塊中或核取的清單方塊中的特定項目是必要的工作。</span><span class="sxs-lookup"><span data-stu-id="9906e-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="9906e-104">它可讓您以程式設計方式判斷為何在清單中，在任何給定的位置。</span><span class="sxs-lookup"><span data-stu-id="9906e-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### 若要存取指定項目  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="9906e-105">若要存取特定的項目</span><span class="sxs-lookup"><span data-stu-id="9906e-105">To access a specific item</span></span>  
   
-1.  使用指定項目的索引來查詢 `Items`  集合：  
+1.  <span data-ttu-id="9906e-106">查詢`Items`集合中特定項目的索引：</span><span class="sxs-lookup"><span data-stu-id="9906e-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ caps.handback.revision: 13
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ caps.handback.revision: 13
        }  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [用來列出選項的 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a><span data-ttu-id="9906e-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9906e-107">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [<span data-ttu-id="9906e-108">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="9906e-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

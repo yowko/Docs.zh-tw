@@ -1,36 +1,39 @@
 ---
-title: "如何：將快取的項目當做筆刷使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BitmapCache [WPF], 使用"
-  - "BitmapCacheBrush [WPF], 使用"
-  - "快取的項目 [WPF], 當做筆刷使用"
-  - "CacheMode [WPF], 使用"
+title: "如何：將快取的項目當做筆刷使用"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BitmapCache [WPF], using
+- cached element [WPF], use as a brush
+- BitmapCacheBrush [WPF], using
+- CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d0f0c60e9df6a1ec816b1f9cf5769c93b382ae5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將快取的項目當做筆刷使用
-使用 <xref:System.Windows.Media.BitmapCacheBrush> 類別，可以有效率地重複使用快取的項目。  若要快取項目，請建立 <xref:System.Windows.Media.BitmapCache> 類別的新執行個體，並將它指派給項目的 <xref:System.Windows.UIElement.CacheMode%2A> 屬性。  
+# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="95c08-102">如何：將快取的項目當做筆刷使用</span><span class="sxs-lookup"><span data-stu-id="95c08-102">How to: Use a Cached Element as a Brush</span></span>
+<span data-ttu-id="95c08-103">使用<xref:System.Windows.Media.BitmapCacheBrush>有效率地重複使用快取之元素的類別。</span><span class="sxs-lookup"><span data-stu-id="95c08-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="95c08-104">若要快取項目，建立的新執行個體<xref:System.Windows.Media.BitmapCache>類別，並將它指派給項目的<xref:System.Windows.UIElement.CacheMode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="95c08-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
   
-## 範例  
- 下列程式碼範例顯示如何重複使用快取的項目。  快取的項目是顯示大型影像的 <xref:System.Windows.Controls.Image> 控制項。  使用 <xref:System.Windows.Media.BitmapCache> 類別，可以將 <xref:System.Windows.Controls.Image> 控制項快取為點陣圖，而將快取指派給 <xref:System.Windows.Media.BitmapCacheBrush>，就可以重複使用快取。  筆刷是指派給具有 25 個按鈕的背景，以顯示有效率的重複使用。  
+## <a name="example"></a><span data-ttu-id="95c08-105">範例</span><span class="sxs-lookup"><span data-stu-id="95c08-105">Example</span></span>  
+ <span data-ttu-id="95c08-106">下列程式碼範例示範如何重複使用快取的項目。</span><span class="sxs-lookup"><span data-stu-id="95c08-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="95c08-107">快取項目，則<xref:System.Windows.Controls.Image>顯示大型影像的控制項。</span><span class="sxs-lookup"><span data-stu-id="95c08-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="95c08-108"><xref:System.Windows.Controls.Image>控制項使用快取為點陣圖<xref:System.Windows.Media.BitmapCache>類別和快取會重複使用所指派到<xref:System.Windows.Media.BitmapCacheBrush>。</span><span class="sxs-lookup"><span data-stu-id="95c08-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="95c08-109">筆刷顯示有效率地重複使用指派給 25 個按鈕的背景。</span><span class="sxs-lookup"><span data-stu-id="95c08-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
   
- [!code-xml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
-## 請參閱  
- <xref:System.Windows.Media.BitmapCache>   
- <xref:System.Windows.Media.BitmapCacheBrush>   
- <xref:System.Windows.UIElement.CacheMode%2A>   
- [如何：透過快取項目改善轉譯效能](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+## <a name="see-also"></a><span data-ttu-id="95c08-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="95c08-110">See Also</span></span>  
+ <xref:System.Windows.Media.BitmapCache>  
+ <xref:System.Windows.Media.BitmapCacheBrush>  
+ <xref:System.Windows.UIElement.CacheMode%2A>  
+ [<span data-ttu-id="95c08-111">操作說明：透過快取元素改善轉譯效能</span><span class="sxs-lookup"><span data-stu-id="95c08-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

@@ -1,98 +1,101 @@
 ---
-title: "UI Automation Support for the Text Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Text control type"
-  - "UI Automation, Text control type"
-  - "control types, Text"
+title: "Text 控制項類型的 UI 自動化支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Text control type
+- UI Automation, Text control type
+- control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: edb2a41b7bb335ace8a937d64365ed40ecf8a4e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Text Control Type
+# <a name="ui-automation-support-for-the-text-control-type"></a><span data-ttu-id="383c6-102">Text 控制項類型的 UI 自動化支援</span><span class="sxs-lookup"><span data-stu-id="383c6-102">UI Automation Support for the Text Control Type</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 命名空間中定義之 Managed <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 類別的 .NET Framework 開發人員。 如需 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 的最新資訊，請參閱 Windows Automation API：使用者介面自動化[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)][!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)][UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+>  <span data-ttu-id="383c6-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="383c6-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="383c6-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="383c6-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題提供文字控制項類型的 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 支援相關資訊。 在 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 屬性。 這些條件包括 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 樹狀結構的特定方針、[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 屬性值和控制項模式。  
+ <span data-ttu-id="383c6-105">本主題提供文字控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。</span><span class="sxs-lookup"><span data-stu-id="383c6-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Text control type.</span></span> <span data-ttu-id="383c6-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。</span><span class="sxs-lookup"><span data-stu-id="383c6-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="383c6-107">這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的特定方針、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式。</span><span class="sxs-lookup"><span data-stu-id="383c6-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 文字控制項是代表螢幕上一段文字的基本使用者介面項目。  
+ <span data-ttu-id="383c6-108">文字控制項是代表螢幕上一段文字的基本使用者介面項目。</span><span class="sxs-lookup"><span data-stu-id="383c6-108">Text controls are the basic user interface item that represents a piece of text on the screen.</span></span>  
   
- 下列章節會定義文字控制項類型所需的 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 樹狀結構、屬性、控制項模式和事件。 無論是 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 需求都適用於所有文字控制項。  
+ <span data-ttu-id="383c6-109">下列章節會定義文字控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Text control type.</span></span> <span data-ttu-id="383c6-110">無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有文字控制項。</span><span class="sxs-lookup"><span data-stu-id="383c6-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all text controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必要的使用者介面自動化樹狀結構  
- 下表描述文字控制項之 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 樹狀結構的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="383c6-111">必要的使用者介面自動化樹狀結構</span><span class="sxs-lookup"><span data-stu-id="383c6-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="383c6-112">下表描述文字控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。</span><span class="sxs-lookup"><span data-stu-id="383c6-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to text controls and describes what can be contained in each view.</span></span> <span data-ttu-id="383c6-113">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)需求都適用於所有文字控制項。</span><span class="sxs-lookup"><span data-stu-id="383c6-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控制項檢視|內容檢視|  
-|-----------|----------|  
-|Text|Text \(如果內容\)|  
+|<span data-ttu-id="383c6-114">控制項檢視</span><span class="sxs-lookup"><span data-stu-id="383c6-114">Control View</span></span>|<span data-ttu-id="383c6-115">內容檢視</span><span class="sxs-lookup"><span data-stu-id="383c6-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="383c6-116">Text</span><span class="sxs-lookup"><span data-stu-id="383c6-116">Text</span></span>|<span data-ttu-id="383c6-117">Text (如果內容)</span><span class="sxs-lookup"><span data-stu-id="383c6-117">Text (if content)</span></span>|  
   
- 控制項可以單獨用來當做標籤或當做表單上的靜態文字。 它也可以包含下列結構內：  
+ <span data-ttu-id="383c6-118">控制項可以單獨用來當做標籤或當做表單上的靜態文字。</span><span class="sxs-lookup"><span data-stu-id="383c6-118">A text control can be used alone as a label or as static text on a form.</span></span> <span data-ttu-id="383c6-119">它也可以包含下列結構內：</span><span class="sxs-lookup"><span data-stu-id="383c6-119">It can also be contained within the structure of a:</span></span>  
   
--   ListItem  
+-   <span data-ttu-id="383c6-120">ListItem</span><span class="sxs-lookup"><span data-stu-id="383c6-120">ListItem</span></span>  
   
--   TreeItem  
+-   <span data-ttu-id="383c6-121">TreeItem</span><span class="sxs-lookup"><span data-stu-id="383c6-121">TreeItem</span></span>  
   
--   DataItem  
+-   <span data-ttu-id="383c6-122">DataItem</span><span class="sxs-lookup"><span data-stu-id="383c6-122">DataItem</span></span>  
   
- 文字控制項可能不在 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 樹狀結構的內容檢視，因為文字通常是透過另一個控制項的 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md) 顯示。 例如，用來標示下拉式方塊控制項的文字會透過控制項的 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 值公開。 因為下拉式方塊控制項是在使用者介面自動化樹狀結構的內容檢視中，所以文字控制項不需要在那個檢視中。 文字控制項在內容檢視中一律有 0 個子系  
+ <span data-ttu-id="383c6-123">文字控制項可能不在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視，因為文字通常是透過另一個控制項的 `NameProperty` 顯示。</span><span class="sxs-lookup"><span data-stu-id="383c6-123">Text controls may not be in the Content View of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree because text is often displayed through the `NameProperty` of another control.</span></span> <span data-ttu-id="383c6-124">例如，用來標示下拉式方塊控制項的文字會透過控制項的 `NameProperty` 值公開。</span><span class="sxs-lookup"><span data-stu-id="383c6-124">For example the text that is used to label a Combo Box control is exposed through the control's `NameProperty` value.</span></span> <span data-ttu-id="383c6-125">因為下拉式方塊控制項是在使用者介面自動化樹狀結構的內容檢視中，所以文字控制項不需要在那個檢視中。</span><span class="sxs-lookup"><span data-stu-id="383c6-125">Because the Combo Box control is in the content view of the UI Automation Tree, it is not necessary for the text control to be there.</span></span> <span data-ttu-id="383c6-126">文字控制項在內容檢視中一律有 0 個子系</span><span class="sxs-lookup"><span data-stu-id="383c6-126">Text controls always have 0 children in the content view</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必要的使用者介面自動化屬性  
- 下表列示 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性，其值或定義與文字控制項特別有關。 如需 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性的詳細資訊，請參閱[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="383c6-127">必要的使用者介面自動化屬性</span><span class="sxs-lookup"><span data-stu-id="383c6-127">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="383c6-128">下表列示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與文字控制項特別有關。</span><span class="sxs-lookup"><span data-stu-id="383c6-128">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to text controls.</span></span> <span data-ttu-id="383c6-129">如需有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性，請參閱[用戶端的使用者介面自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="383c6-129">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性|值|備註|  
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必須支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|文字列控制項的名稱一律為它所顯示的 txt。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|文字控制項沒有靜態文字標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|文字|此值與所有使用者介面架構的值相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|文字|對應到文字控制項類型的當地語系化字串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|視情況而定|如果文字控制項包含了未在另一個控制項的 NameProperty 中公開的資訊，文字控制項將會是內容。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|文字控制項必須一律為控制項。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="383c6-130"> 屬性</span><span class="sxs-lookup"><span data-stu-id="383c6-130"> Property</span></span>|<span data-ttu-id="383c6-131">值</span><span class="sxs-lookup"><span data-stu-id="383c6-131">Value</span></span>|<span data-ttu-id="383c6-132">備註</span><span class="sxs-lookup"><span data-stu-id="383c6-132">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="383c6-133">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="383c6-133">See notes.</span></span>|<span data-ttu-id="383c6-134">此屬性的值在應用程式中的所有控制項都不得重複。</span><span class="sxs-lookup"><span data-stu-id="383c6-134">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="383c6-135">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="383c6-135">See notes.</span></span>|<span data-ttu-id="383c6-136">包含整個控制項的最外層矩形。</span><span class="sxs-lookup"><span data-stu-id="383c6-136">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="383c6-137">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="383c6-137">See notes.</span></span>|<span data-ttu-id="383c6-138">如果有週框即受支援。</span><span class="sxs-lookup"><span data-stu-id="383c6-138">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="383c6-139">如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。</span><span class="sxs-lookup"><span data-stu-id="383c6-139">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="383c6-140">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="383c6-140">See notes.</span></span>|<span data-ttu-id="383c6-141">如果控制項可接收鍵盤焦點，就必定支援此屬性。</span><span class="sxs-lookup"><span data-stu-id="383c6-141">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="383c6-142">請參閱備註。</span><span class="sxs-lookup"><span data-stu-id="383c6-142">See notes.</span></span>|<span data-ttu-id="383c6-143">文字列控制項的名稱一律為它所顯示的 txt。</span><span class="sxs-lookup"><span data-stu-id="383c6-143">The text bar control's name is always the txt that it displays.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="383c6-144">文字控制項沒有靜態文字標籤。</span><span class="sxs-lookup"><span data-stu-id="383c6-144">Text controls do not have a static text label.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="383c6-145">Text</span><span class="sxs-lookup"><span data-stu-id="383c6-145">Text</span></span>|<span data-ttu-id="383c6-146">此值與所有使用者介面架構的值相同。</span><span class="sxs-lookup"><span data-stu-id="383c6-146">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="383c6-147">文字</span><span class="sxs-lookup"><span data-stu-id="383c6-147">"text"</span></span>|<span data-ttu-id="383c6-148">對應到文字控制項類型的當地語系化字串。</span><span class="sxs-lookup"><span data-stu-id="383c6-148">Localized string corresponding to the text control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="383c6-149">視情況而定</span><span class="sxs-lookup"><span data-stu-id="383c6-149">Depends</span></span>|<span data-ttu-id="383c6-150">如果文字控制項包含了未在另一個控制項的 NameProperty 中公開的資訊，文字控制項將會是內容。</span><span class="sxs-lookup"><span data-stu-id="383c6-150">The text control will be content if it contains information not exposed in another control's NameProperty.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="383c6-151">True</span><span class="sxs-lookup"><span data-stu-id="383c6-151">True</span></span>|<span data-ttu-id="383c6-152">文字控制項必須一律為控制項。</span><span class="sxs-lookup"><span data-stu-id="383c6-152">The text control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必要的使用者介面自動化控制項模式  
- 下表列出文字控制項必須支援的 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 控制項模式。 如需控制項模式的詳細資訊，請參閱 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="383c6-153">必要的使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="383c6-153">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="383c6-154">下表列出文字控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="383c6-154">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by text controls.</span></span> <span data-ttu-id="383c6-155">如需控制項模式的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="383c6-155">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控制項模式|支援|備註|  
-|-----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|永不|文字一律不支援 ValuePattern。 如果文字是可編輯的，則此為編輯控制項類型。|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|視情況而定|為了提供更優質的協助，文字應該支援文字控制項模式，不過這並非必要。 當文字有豐富的樣式和屬性 \(例如色彩、粗體和斜體\) 時，文字控制項模式相當有用。視架構而定。|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|視情況而定|如果文字項目包含在資料表控制項中，這必須受到支援。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|如果文字項目包含在資料表控制項中，這必須受到支援。|  
+|<span data-ttu-id="383c6-156">控制項模式</span><span class="sxs-lookup"><span data-stu-id="383c6-156">Control Pattern</span></span>|<span data-ttu-id="383c6-157">支援</span><span class="sxs-lookup"><span data-stu-id="383c6-157">Support</span></span>|<span data-ttu-id="383c6-158">備註</span><span class="sxs-lookup"><span data-stu-id="383c6-158">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="383c6-159">永不</span><span class="sxs-lookup"><span data-stu-id="383c6-159">Never</span></span>|<span data-ttu-id="383c6-160">文字一律不支援 ValuePattern。</span><span class="sxs-lookup"><span data-stu-id="383c6-160">Text never supports ValuePattern.</span></span> <span data-ttu-id="383c6-161">如果文字是可編輯的，則此為編輯控制項類型。</span><span class="sxs-lookup"><span data-stu-id="383c6-161">If the text is editable, this it is the Edit control type.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|<span data-ttu-id="383c6-162">視情況而定</span><span class="sxs-lookup"><span data-stu-id="383c6-162">Depends</span></span>|<span data-ttu-id="383c6-163">為了提供更優質的協助，文字應該支援文字控制項模式，不過這並非必要。</span><span class="sxs-lookup"><span data-stu-id="383c6-163">Text should support the Text control pattern for better accessibility; however, it is not required.</span></span> <span data-ttu-id="383c6-164">當文字有豐富的樣式和屬性 (例如色彩、粗體和斜體) 時，文字控制項模式相當有用。視架構而定。</span><span class="sxs-lookup"><span data-stu-id="383c6-164">The Text control pattern is useful when the text has rich style and attributes (for example, color, bold, and italics).Depends on framework.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|<span data-ttu-id="383c6-165">視情況而定</span><span class="sxs-lookup"><span data-stu-id="383c6-165">Depends</span></span>|<span data-ttu-id="383c6-166">如果文字項目包含在資料表控制項中，這必須受到支援。</span><span class="sxs-lookup"><span data-stu-id="383c6-166">If the text element is contained within a Table control, this must be supported.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="383c6-167">視情況而定</span><span class="sxs-lookup"><span data-stu-id="383c6-167">Depends</span></span>|<span data-ttu-id="383c6-168">如果文字項目包含在資料表控制項中，這必須受到支援。</span><span class="sxs-lookup"><span data-stu-id="383c6-168">If the text element is contained within a table control, this must be supported.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必要的使用者介面自動化事件  
- 下表列示所有文字控制項都必須支援的 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 事件。 如需事件的詳細資訊，請參閱 <xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="383c6-169">必要的使用者介面自動化事件</span><span class="sxs-lookup"><span data-stu-id="383c6-169">Required UI Automation Events</span></span>  
+ <span data-ttu-id="383c6-170">下表列示所有文字控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-170">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all text controls.</span></span> <span data-ttu-id="383c6-171">如需事件的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="383c6-171">For more information about events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 事件|支援|備註|  
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|永不|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="383c6-172"> 事件</span><span class="sxs-lookup"><span data-stu-id="383c6-172"> Event</span></span>|<span data-ttu-id="383c6-173">支援</span><span class="sxs-lookup"><span data-stu-id="383c6-173">Support</span></span>|<span data-ttu-id="383c6-174">備註</span><span class="sxs-lookup"><span data-stu-id="383c6-174">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|<span data-ttu-id="383c6-175">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-175">Required</span></span>|<span data-ttu-id="383c6-176">無</span><span class="sxs-lookup"><span data-stu-id="383c6-176">None</span></span>|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|<span data-ttu-id="383c6-177">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-177">Required</span></span>|<span data-ttu-id="383c6-178">無</span><span class="sxs-lookup"><span data-stu-id="383c6-178">None</span></span>|  
+|<span data-ttu-id="383c6-179"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-179"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="383c6-180">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-180">Required</span></span>|<span data-ttu-id="383c6-181">無</span><span class="sxs-lookup"><span data-stu-id="383c6-181">None</span></span>|  
+|<span data-ttu-id="383c6-182"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-182"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="383c6-183">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-183">Required</span></span>|<span data-ttu-id="383c6-184">無</span><span class="sxs-lookup"><span data-stu-id="383c6-184">None</span></span>|  
+|<span data-ttu-id="383c6-185"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-185"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="383c6-186">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-186">Required</span></span>|<span data-ttu-id="383c6-187">無</span><span class="sxs-lookup"><span data-stu-id="383c6-187">None</span></span>|  
+|<span data-ttu-id="383c6-188"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-188"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> property-changed event.</span></span>|<span data-ttu-id="383c6-189">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-189">Required</span></span>|<span data-ttu-id="383c6-190">無</span><span class="sxs-lookup"><span data-stu-id="383c6-190">None</span></span>|  
+|<span data-ttu-id="383c6-191"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="383c6-191"><xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="383c6-192">永不</span><span class="sxs-lookup"><span data-stu-id="383c6-192">Never</span></span>|<span data-ttu-id="383c6-193">無</span><span class="sxs-lookup"><span data-stu-id="383c6-193">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="383c6-194">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-194">Required</span></span>|<span data-ttu-id="383c6-195">無</span><span class="sxs-lookup"><span data-stu-id="383c6-195">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="383c6-196">必要項</span><span class="sxs-lookup"><span data-stu-id="383c6-196">Required</span></span>|<span data-ttu-id="383c6-197">無</span><span class="sxs-lookup"><span data-stu-id="383c6-197">None</span></span>|  
   
-## 請參閱  
- <xref:System.Windows.Automation.ControlType.Text>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="383c6-198">另請參閱</span><span class="sxs-lookup"><span data-stu-id="383c6-198">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Text>  
+ [<span data-ttu-id="383c6-199">UI 自動化控制項類型概觀</span><span class="sxs-lookup"><span data-stu-id="383c6-199">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="383c6-200">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="383c6-200">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)
