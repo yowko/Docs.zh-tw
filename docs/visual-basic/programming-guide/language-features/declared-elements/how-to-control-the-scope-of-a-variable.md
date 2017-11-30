@@ -1,73 +1,72 @@
 ---
-title: "How to: Control the Scope of a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], scope"
-  - "declared elements, scope"
-  - "visibility, declared elements"
-  - "variables [Visual Basic], visibility"
-  - "scope, declared elements"
-  - "scope, variables"
-  - "scope, Visual Basic"
-  - "declared elements, visibility"
-  - "visibility, variables"
+title: "如何：控制變數的範圍 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- variables [Visual Basic], visibility
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], variables
+- scope [Visual Basic], Visual Basic
+- declared elements [Visual Basic], visibility
+- visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7284d344e3bf0fdd0f900f2a820d6c8db4a4bf74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Control the Scope of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-一般而言，變數是位在宣告該變數之區域的「*範圍*」\(Scope\) 中，或是可見的以供參考。  在一些情況下，變數的「*存取層級*」\(Access Level\) 可能會影響它的範圍。  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>如何：控制變數的範圍 (Visual Basic)
+一般來說，變數是在*範圍*，或顯示整個區域宣告它的參考。 在某些情況下，變數的*存取層級*可能會影響其範圍。  
   
- 如需詳細資訊，請參閱 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
+ 如需詳細資訊，請參閱[在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
   
-## 在區塊或程序層級設定範圍  
+## <a name="scope-at-block-or-procedure-level"></a>在區塊或程序層級的範圍  
   
-#### 若要只可在區塊內看到變數  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>若要在區塊內才可見變數  
   
--   在區塊的初始和終止宣告陳述式 \(Declaration Statement\) 之間 \(例如 `For` 迴圈 \(Loop\) 的 `For` 和 `Next` 陳述式 \(Statement\) 之間\)，為變數放入 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
+-   位置[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)變數之間的初始和終止宣告陳述式的區塊，例如之間`For`和`Next`陳述式的`For`迴圈。  
   
-     您只可在該區塊內參考此變數。  
+     您可以參考此變數只能在區塊內。  
   
-#### 若要只可在程序內看到變數  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>若要在程序內才可見變數  
   
--   在程序內而在任意區塊外 \(例如 `With`...`End With` 區塊\)，為變數放入 `Dim` 陳述式。  
+-   位置`Dim`變數，程序內但是超出任何區塊陳述式 (例如`With`...`End With`區塊)。  
   
-     您只可在該程序內 \(包括該程序所含的所有區塊內\) 參考此變數。  
+     您可以參考此變數只會從內的程序，包括任何程序中所含的區塊內。  
   
-## 在模組或命名空間層級設定範圍  
- 為了方便起見，「*模組層級*」\(Module Level\) 這個詞彙也可套用在模組、類別和結構。  模組層級變數的存取層級可決定它的範圍。  包含模組、類別或結構的命名空間也會影響範圍。  
+## <a name="scope-at-module-or-namespace-level"></a>在模組或命名空間層級的範圍  
+ 為了方便起見，單一詞彙*模組層級*同樣適用於模組、 類別和結構。 模組層級變數的存取層級會決定其範圍。 包含模組、 類別或結構的命名空間也會影響範圍。  
   
-#### 若要在模組、類別或結構中都可看到變數  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>若要顯示整個模組、 類別或結構變數  
   
-1.  針對位在模組、類別或結構內而在任意程序外的變數放入 `Dim` 陳述式。  
+1.  位置`Dim`變數內模組、 類別或結構，但以外的任何程序陳述式。  
   
-2.  在 `Dim` 陳述式中加入 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 關鍵字。  
+2.  包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字`Dim`陳述式。  
   
-3.  您可在模組、類別或結構內的任何位置參考此變數，而不是模組、類別或結構的外部。  
+3.  您可以參考變數，從模組、 類別或結構中的任何位置，而不是從外部。  
   
-#### 若要在命名空間中看到變數  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>若要顯示在命名空間變數  
   
-1.  針對位在模組、類別或結構內而在任意程序外的變數放入 `Dim` 陳述式。  
+1.  位置`Dim`變數內模組、 類別或結構，但以外的任何程序陳述式。  
   
-2.  在 `Dim` 陳述式中包含 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 或 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 關鍵字。  
+2.  包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[公用](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字`Dim`陳述式。  
   
-3.  您可在包含該模組、類別或結構之命名空間內的任何位置參考此變數。  
+3.  您可以從任何地方參考此變數包含模組、 類別或結構的命名空間內。  
   
-## 範例  
- 下列範例在模組層級宣告變數，並將該變數的可視性限制成該模組內的程式碼。  
+## <a name="example"></a>範例  
+ 下列範例會宣告一個變數，在模組層級，並限制其可見性的模組中的程式碼。  
   
 ```  
 Module demonstrateScope  
@@ -81,24 +80,24 @@ Module demonstrateScope
 End Module  
 ```  
   
- 在上個範例中，模組 `demonstrateScope` 中定義的所有程序都可參考 `String` 變數 `strMsg`。  呼叫 `usePrivateVariable` 程序時，會在對話方塊中顯示字串 \(String\) 變數 `strMsg` 的內容。  
+ 在上述範例中，所有的程序則是在模組中定義`demonstrateScope`可以參考`String`變數`strMsg`。 當`usePrivateVariable`呼叫程序時，便會顯示字串變數的內容`strMsg`對話方塊中。  
   
- 將上個範例做了如下修改後，在宣告字串變數 `strMsg` 的命名空間內之任意位置的程式碼就可參考該變數。  
+ 與上述範例中，字串變數將`strMsg`可以參考其宣告的命名空間中的程式碼。  
   
 ```  
 Public strMsg As String  
 ```  
   
-## 穩固程式設計  
- 變數的範圍愈小，意外參考到另一個同名變數的機會就會愈小。  同時您還可以減少因參考比對而發生的問題。  
+## <a name="robust-programming"></a>穩固程式設計  
+ 範圍愈小的變數，您的意外來取代另一個具有相同名稱的變數參考到的機會。 您也可以減少問題的參考相符。  
   
-## .NET Framework 安全性  
- 變數的範圍愈小，惡意程式碼不適當使用此變數的機會就愈小。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 變數的範圍愈小，惡意程式碼不適當的機會使用它。  
   
-## 請參閱  
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [在 Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)

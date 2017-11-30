@@ -1,98 +1,95 @@
 ---
-title: "Mod 運算子 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Mod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "餘數 (Mod 運算子)"
-  - "除法運算子，Mod 運算子"
-  - "模數運算子，Visual Basic"
-  - "Mod 運算子 [Visual Basic]"
-  - "運算子 [Visual Basic]，除法"
-  - "算術運算子，MOD"
-  - "數學運算子"
+title: "Mod 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Mod
+helpviewer_keywords:
+- remainder (Mod operator)
+- division operator [Visual Basic], Mod operator
+- modulus operator [Visual Basic], Visual Basic
+- Mod operator [Visual Basic]
+- operators [Visual Basic], division
+- arithmetic operators [Visual Basic], Mod
+- math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Mod 運算子 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-將兩個數字相除，只傳回餘數。  
+# <a name="mod-operator-visual-basic"></a>Mod 運算子 (Visual Basic)
+兩數相除並只傳回餘數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 number1 Mod number2  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `number1`  
- 必要項。  任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
  `number2`  
- 必要項。  任何數值運算式。  
+ 必要項。 任何數值運算式。  
   
-## 支援類型  
- 所有數字型別 \(Numeric Type\)。  這包括不帶正負號和浮點型別，以及 `Decimal`。  
+## <a name="supported-types"></a>支援的型別  
+ 所有數字類型。 這包括不帶正負號和浮點類型和`Decimal`。  
   
-## 結果  
- 結果是 `number1` 除以 `number2` 後所留的餘數。  例如，運算式 `14 Mod 4` 會評估為 2。  
+## <a name="result"></a>結果  
+ 結果是後的餘數`number1`除以`number2`。 例如，運算式`14 Mod 4`評估為 2。  
   
-## 備註  
- 如果 `number1` 或 `number2` 是浮點數值，就會傳回除法運算的浮點數餘數。  結果的資料型別是可保留所有可能值的最小資料型別，這些可能值是由 `number1` 和 `number2` 之資料型別的除法運算所產生。  
+## <a name="remarks"></a>備註  
+ 如果有任一個`number1`或`number2`是浮點數的值，會傳回浮點除法的餘數。 結果的資料類型是最小的資料型別，可以產生除法運算的資料類型的所有可能值`number1`和`number2`。  
   
- 如果 `number1` 或 `number2` 評估為 [Nothing](../../../visual-basic/language-reference/nothing.md)，即視為零。  
+ 如果`number1`或`number2`評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，它會被視為零。  
   
- 相關運算子包括下列幾項：  
+ 相關的運算子包括：  
   
--   [\\ Operator](../../../visual-basic/language-reference/operators/integer-division-operator.md) 會傳回除法運算的整數商數。  例如，運算式 `14 \ 4` 會評估為 3。  
+-   [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)傳回除法的整數商數。 例如，運算式`14 \ 4`評估結果為 3。  
   
--   [\/ Operator](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 會以浮點數值傳回完整商數，包括餘數。  例如，運算式 `14 / 4` 會評估為 3.5。  
+-   [/ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)傳回完整的商數，包括其餘部分，做為浮點數。 例如，運算式`14 / 4`會評估為 3.5。  
   
-## 嘗試以零為除數  
- 如果 `number2` 評估為零，則 `Mod` 運算子的行為會視運算元的資料型別而定。  整數類除法會擲回 <xref:System.DivideByZeroException> 例外狀況。  浮點數除法會傳回 <xref:System.Double.NaN>。  
+## <a name="attempted-division-by-zero"></a>嘗試的除以零  
+ 如果`number2`評估為零，行為`Mod`運算子的運算元資料類型而定。 發生整數除以擲回<xref:System.DivideByZeroException>例外狀況。 傳回浮點除法<xref:System.Double.NaN>。  
   
-## 對等公式  
- 運算式 `a Mod b` 等於下列公式：  
+## <a name="equivalent-formula"></a>對等的公式  
+ 運算式`a Mod b`相當於下列公式：  
   
  `a - (b * (a \ b))`  
   
  `a - (b * Fix(a / b))`  
   
-## 浮點數非精度表示  
- 使用浮點數值 \(Floating\-Point Number\) 時，請記住它們在記憶體中不一定都會有精確的表示。  這樣可能會因為某些作業，例如值比較和 `Mod` 運算子，而導致無法預期的結果。  如需詳細資訊，請參閱[Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+## <a name="floating-point-imprecision"></a>浮點不精確而受到  
+ 當您使用浮點數時，請記得它們在記憶體中不一定有精確的表示。 這可能會導致非預期的結果從某些作業，例如值比較而`Mod`運算子。 如需詳細資訊，請參閱[疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
-## 多載化  
- `Mod` 運算子可以「*多載*」，這表示類別或結構可以重新定義其行為。  如果您的程式碼套用 `Mod` 到包含多載之類別或結構的執行個體，請確定您了解它重新定義的行為。  如需詳細資訊，請參閱[Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a>多載化  
+ `Mod`運算子可以是*多載*，這表示類別或結構可以重新定義它的行為。 如果您的程式碼適用於`Mod`至類別或結構，其中包含這類多載，這個執行個體，請務必了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
-## 範例  
- 下列範例會使用 `Mod` 運算子，將兩數相除並只傳回餘數。  如果任一數值是浮點數值，則結果是代表餘數的浮點數值。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Mod`運算子將兩數相除並只傳回餘數。 如果任一個數字是浮點數，結果會是代表餘數的浮點數。  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
-## 範例  
- 下列範例示範浮點數運算元的潛在不精確情況。  在第一個陳述式中，運算元是 `Double`，而 0.2 是預存值為 0.20000000000000001 的無限重複二進位小數。  在第二個陳述式中，常值型別字元 `D` 會將兩個運算元強制為 `Decimal`，而 0.2 具有精確表示。  
+## <a name="example"></a>範例  
+ 下列範例示範可能會不精確而受到浮點數運算元。 在第一個陳述式中，運算元都是`Double`，而且 0.2 無限重複的二進位小數 0.20000000000000001 預存值。 在第二個陳述式中，常值類型字元`D`強制兩個運算元`Decimal`，0.2 且精確地表示法。  
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [\\ Operator](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
+ [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

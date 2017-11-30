@@ -1,35 +1,34 @@
 ---
-title: "How to: Assign One Array to Another Array (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "covariance, arrays"
-  - "arrays [Visual Basic], assigning"
-  - "arrays [Visual Basic], covariance"
+title: "如何：指派一個陣列至另一個陣列 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- covariance, arrays
+- arrays [Visual Basic], assigning
+- arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0dd2d678bbfdeaa6b12b5b5a4f69d0fbca8c1944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Assign One Array to Another Array (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-由於陣列就是物件，所以陣列可以像其他物件型別一樣在指派陳述式 \(Assignment Statement\) 中使用。  陣列變數會保留構成陣列元素、陣序規範及長度資訊的資料指標，以及僅複製此指標的指派。  
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>如何：指派一個陣列至另一個陣列 (Visual Basic)
+因為陣列是物件，您可以使用類似其他物件類型的指派陳述式中。 陣列變數會保留從屬陣列元素和的順位和長度的資訊，將資料指標，並指派複製只有這個指標。  
   
-### 將陣列指派給另一個陣列  
+### <a name="to-assign-one-array-to-another-array"></a>若要指派一個陣列至另一個陣列  
   
-1.  請確定兩個陣列均具有相同的陣序規範 \(維度數目\) 及相容的元素資料型別。  
+1.  請確定這兩個陣列都具有相同的陣序 （維度數目） 和相容的項目資料類型。  
   
-2.  使用標準指派陳述式 \(Assignment Statement\)，將來源陣列指定給目的陣列。  請勿在陣列名稱之後加上括弧。  
+2.  使用標準的指派陳述式，將來源陣列指派到目的地陣列。 務必按照陣列名稱加上括弧。  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -37,22 +36,22 @@ caps.handback.revision: 18
     controlArray = formArray  
     ```  
   
- 當您將一個陣列指派給另一陣列時，會套用下列規則 \(Rule\)：  
+ 當您指派一個陣列至另一個時，適用下列規則：  
   
--   **相同陣序規範**： 目的陣列的陣序規範 \(維度數目\) 必須與來源陣列相同。  
+-   **相同的陣序規範。** 目的陣列的陣序 （維度數目） 必須與來源陣列的相同。  
   
-     如果兩個陣列的陣序規範相等的話，維度並不一定會相等。  指定維度中的元素數可能會在指派期間變更。  
+     提供兩個陣列的陣序規範相等，不需要相同維度。 指定維度中的項目數可以在指派期間變更。  
   
--   **元素型別**： 兩個陣列都必須具有「*參考型別*」\(Reference Type\) 元素，或是兩個陣列都必須具有「*實值型別*」\(Value Type\) 元素。  如需詳細資訊，請參閱 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+-   **項目型別。** 這兩個陣列必須有*參考型別*項目或兩個陣列必須有*實值型別*項目。 如需詳細資訊，請參閱[實值類型和參考型別](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
-    -   如果兩個陣列都具有實值型別元素，則元素資料型別必須完全相同。  唯一的例外狀況 \(Exception\) 是，您可以將 `Enum` 元素的陣列指派給 `Enum` 的基底型別 \(Base Type\) 陣列。  
+    -   如果這兩個陣列都具有值型別項目，項目資料類型必須完全相同。 唯一的例外是您可以指派的陣列`Enum`的基底的類型陣列的項目`Enum`。  
   
-    -   如果兩個陣列都具有參考型別元素，則來源元素型別必須衍生自目的元素型別。  在此情況下，兩個陣列的繼承 \(Inheritance\) 關係與其元素相同。  這稱為「*陣列共異變數*」\(Array Covariance\)。  
+    -   如果這兩個陣列都具有型別元素的參考，來源項目類型必須衍生自目的項目型別。 這種情況時，兩個陣列都具有相同的繼承關聯性，做為其項目。 這稱為*陣列共變數*。  
   
- 如果違反上述規則，例如，資料型別不相容或是陣序規範不相等，編譯器 \(Compiler\) 就會報告錯誤。  您可以將錯誤處理加入您的程式碼，確保陣列在指派前都是相容的。  如果您想避免擲回例外狀況，也可以使用 [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) 關鍵字。  
+ 編譯器會報告錯誤若違反上述規則，例如如果資料類型不相容或陣序規範不相等。 您可以加入錯誤處理以將您的程式碼，請確定陣列相容，然後再嘗試指派。 您也可以使用[TryCast 運算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)關鍵字，如果您想要避免擲回例外狀況。  
   
-## 請參閱  
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Troubleshooting Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+## <a name="see-also"></a>另請參閱  
+ [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

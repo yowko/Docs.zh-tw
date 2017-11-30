@@ -1,42 +1,46 @@
 ---
-title: "憑證驗證的傳輸安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "憑證驗證的傳輸安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 憑證驗證的傳輸安全性
-本主題討論使用傳輸安全性時，如何使用 X.509 憑證進行伺服器和用戶端驗證。如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。憑證必須由憑證授權單位發行，這個單位通常是憑證的第三方簽發者。在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。如需詳細資訊，請參閱 [Windows 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。在此案例中，服務是在使用安全通訊端層 \(SSL\) 設定的 Internet Information Services \(IIS\) 之下裝載。此服務使用 SSL \(X.509\) 憑證設定，以允許使用者驗證伺服器的身分識別。用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。服務和用戶端如何驗證彼此的身分識別的實際機制，不在本主題的範圍之內。如需詳細資訊，請參閱 [Wikipedia 上的數位簽章](http://go.microsoft.com/fwlink/?LinkId=253157)。  
+# <a name="transport-security-with-certificate-authentication"></a>憑證驗證的傳輸安全性
+本主題討論使用傳輸安全性時，如何使用 X.509 憑證進行伺服器和用戶端驗證。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。 憑證必須由憑證授權單位，通常是憑證的協力廠商簽發者發行。 在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。 如需詳細資訊，請參閱[Windows 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此案例中，服務是在使用安全通訊端層 (SSL) 設定的 Internet Information Services (IIS) 之下裝載。 此服務使用 SSL (X.509) 憑證設定，以允許使用者驗證伺服器的身分識別。 用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。 伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。 服務和用戶端如何驗證彼此的身分識別的實際機制，不在本主題的範圍之內。 如需詳細資訊，請參閱[維基百科上的數位簽章](http://go.microsoft.com/fwlink/?LinkId=253157)。  
   
- 此案例會實作要求\/回覆訊息模式，如下列圖表所示。  
+ 此案例會實作要求/回覆訊息模式，如下列圖表所示。  
   
- ![使用憑證進行安全傳輸](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968\-899f\-4538\-a9e8\-0eaa872a291c")  
+ ![使用憑證保護傳輸](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用憑證和服務的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和 [HOW TO：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。下表描述此案例的各種特性。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用憑證與服務，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。 下表描述此案例的各種特性。  
   
 |特性|描述|  
-|--------|--------|  
-|安全性模式|傳輸|  
+|--------------------|-----------------|  
+|安全性模式|Transport|  
 |互通性|使用現有 Web 服務用戶端和服務。|  
-|驗證 \(伺服器\)<br /><br /> 驗證 \(用戶端\)|是 \(使用 SSL 憑證\)<br /><br /> 是 \(使用 X.509 憑證\)|  
+|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 SSL 憑證)<br /><br /> 是 (使用 X.509 憑證)|  
 |資料完整性|是|  
 |資料機密性|是|  
-|傳輸|HTTPS|  
+|Transport|HTTPS|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## 設定服務  
- 由於此案例中的服務是在 IIS 之下裝載，因此該服務使用 web.config 檔案設定。以下的 web.config 示範如何設定 <xref:System.ServiceModel.WSHttpBinding> 使用傳輸安全性和 X.509 用戶端認證。  
+## <a name="configure-the-service"></a>設定服務  
+ 由於此案例中的服務是在 IIS 之下裝載，因此該服務使用 web.config 檔案設定。 以下的 web.config 示範如何設定 <xref:System.ServiceModel.WSHttpBinding> 使用傳輸安全性和 X.509 用戶端認證。  
   
 ```xml  
 <configuration>  
@@ -64,11 +68,10 @@ caps.handback.revision: 20
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 設定用戶端  
- 用戶端可以在程式碼或 app.config 檔案中設定。下列範例示範如何在程式碼中設定用戶端。  
+## <a name="configure-the-client"></a>設定用戶端  
+ 用戶端可以在程式碼或 app.config 檔案中設定。 下列範例示範如何在程式碼中設定用戶端。  
   
 ```vb  
 // Create the binding.  
@@ -100,7 +103,6 @@ cc.ClientCredentials.ClientCertificate.SetCertificate(
 Console.WriteLine(cc.Add(100, 1111));  
 //...  
 cc.Close();  
-  
 ```  
   
  或者，您可以在 App.config 檔案中設定用戶端，如下列範例所示：  
@@ -142,9 +144,8 @@ cc.Close();
   </system.serviceModel>  
   
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
-  
 ```  
   
-## 請參閱  
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱  
+ [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

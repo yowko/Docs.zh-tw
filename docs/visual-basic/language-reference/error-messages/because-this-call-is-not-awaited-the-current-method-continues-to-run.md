@@ -1,53 +1,35 @@
 ---
-title: "因為未等候此呼叫，目前會繼續執行方法呼叫完成之前 |Microsoft 文件"
-ms.date: 2015-07-20
+title: "因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
-helpviewer_keywords:
-- BC42358
+helpviewer_keywords: BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。 請考慮將 'Await' 運算子套用至呼叫的結果。  
   
- 目前的方法會呼叫非同步方法會傳回<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>和不套用[Await](../../../visual-basic/language-reference/operators/await-operator.md)結果的運算子。</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> 非同步方法的呼叫會啟動非同步工作。 不過，由於不會套用任何 `Await` 運算子，因此程式會繼續執行，而不等候工作完成。 在大部分情況下，不應該有此行為。 通常呼叫方法的其他方面取決於呼叫的結果，或至少被呼叫的方法必須完成，才能從包含呼叫的方法傳回。  
+ 目前的方法會呼叫傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 且不會將 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 運算子套用至結果的非同步方法。 非同步方法的呼叫會啟動非同步工作。 不過，由於不會套用任何 `Await` 運算子，因此程式會繼續執行，而不等候工作完成。 在大部分情況下，不應該有此行為。 通常呼叫方法的其他方面取決於呼叫的結果，或至少被呼叫的方法必須完成，才能從包含呼叫的方法傳回。  
   
- 同樣重要的問題是，在呼叫的非同步方法中引發的例外狀況會發生什麼情形。 傳回方法中引發的例外狀況<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>會儲存在傳回的工作。</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> 如果您未等候工作，也未明確檢查例外狀況，例外狀況就會遺失。 如果您等候工作，則其例外狀況會再次擲回。  
+ 同樣重要的問題是，在呼叫的非同步方法中引發的例外狀況會發生什麼情形。 在傳回 <xref:System.Threading.Tasks.Task> 或  <xref:System.Threading.Tasks.Task%601> 的方法中引發的例外狀況會儲存到傳回的工作中。 如果您未等候工作，也未明確檢查例外狀況，例外狀況就會遺失。 如果您等候工作，則其例外狀況會再次擲回。  
   
  因此最佳做法是一律等候呼叫。  
   
- 根據預設，這個訊息是一個警告。 如需隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
  **錯誤 ID︰** BC42358  
   
@@ -141,7 +123,7 @@ ms.lasthandoff: 03/13/2017
   
      包含按鈕和文字方塊的簡單視窗會出現在 MainWindow.xaml 的 [ **設計** ] 檢視中。  
   
-     如需 XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 如何建置簡單的 UI 的相關資訊，請參閱 < 若要建立 WPF 應用程式 > 和 < 設計簡單的 WPF MainWindow > 的章節[逐步解說︰ 存取 Web 使用 Async 和 Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)。  
+     如需 XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 如需如何建置您自己的簡單 UI 的資訊，請參閱[逐步解說：使用 Async 和 Await 存取 Web](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)的＜建立 WPF 應用程式＞和＜設計簡單的 WPF MainWindow＞章節。  
   
 4.  以下列程式碼取代 MainWindow.xaml.vb 中的程式碼。  
   
@@ -228,6 +210,5 @@ ms.lasthandoff: 03/13/2017
      預期的輸出會出現在程式碼結尾。  
   
 ## <a name="see-also"></a>另請參閱  
- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)  
  [使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)
-

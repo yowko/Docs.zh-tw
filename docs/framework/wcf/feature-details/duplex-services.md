@@ -1,32 +1,38 @@
 ---
-title: "雙工服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "雙工服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b5e0e2b1b2aa6292d53f1688ef124d9add42b5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 雙工服務
+# <a name="duplex-services"></a>雙工服務
 雙工服務合約為訊息交換模式，其中的兩個端點可以彼此獨立地傳送訊息。 因此，雙工服務可以將訊息傳送回用戶端端點，以提供類似事件的行為。 用戶端建立與服務的連線，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 請注意，雙工服務的類似事件行為只會在工作階段內運作。  
   
- 若要建立雙工合約，您可建立一組介面。 第一個是服務合約介面，說明用戶端可叫用的作業。 必須指定該服務合約*回呼合約*中<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=fullName>屬性。 回呼合約是一個介面，會定義服務可在用戶端端點上呼叫的作業。 雙工合約不需要工作階段，不過系統提供的雙工繫結會利用工作階段。  
+ 若要建立雙工合約，您可建立一組介面。 第一個是服務合約介面，說明用戶端可叫用的作業。 該服務合約必須指定*回呼合約*中<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>屬性。 回呼合約是一個介面，會定義服務可在用戶端端點上呼叫的作業。 雙工合約不需要工作階段，不過系統提供的雙工繫結會利用工作階段。  
   
  以下為雙工合約的範例。  
   
  [!code-csharp[c_DuplexServices#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#0)]
  [!code-vb[c_DuplexServices#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#0)]  
   
- `CalculatorService` 類別會實作主要的 `ICalculatorDuplex` 介面。 服務會使用<xref:System.ServiceModel.InstanceContextMode>執行個體模式維持各工作階段的結果。 而名為 `Callback` 的私用屬性會存取用戶端的回呼通道。 服務會使用回呼，以透過回呼介面將訊息傳回用戶端，如以下範例程式碼所示。  
+ `CalculatorService` 類別會實作主要的 `ICalculatorDuplex` 介面。 服務會使用 <xref:System.ServiceModel.InstanceContextMode.PerSession> 執行個體模式維持各工作階段的結果。 而名為 `Callback` 的私用屬性會存取用戶端的回呼通道。 服務會使用回呼，以透過回呼介面將訊息傳回用戶端，如以下範例程式碼所示。  
   
  [!code-csharp[c_DuplexServices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/service.cs#1)]
  [!code-vb[c_DuplexServices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/service.vb#1)]  
@@ -36,7 +42,7 @@ caps.handback.revision: 17
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]雙工合約需要所產生的用戶端<xref:System.ServiceModel.InstanceContext>在建構時提供的類別。 這<xref:System.ServiceModel.InstanceContext>類別用於與站台物件實作回呼介面並處理從服務傳回傳送的訊息。 <xref:System.ServiceModel.InstanceContext>類別的執行個體，建構`CallbackHandler`類別。 這個物件會處理回呼介面上，從服務傳回至用戶端的訊息。  
+ 針對雙工合約所產生的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，會要求在建構時提供 <xref:System.ServiceModel.InstanceContext> 類別。 這個 <xref:System.ServiceModel.InstanceContext> 類別會用來做為站台，讓物件實作回呼介面並處理服務傳回的訊息。 <xref:System.ServiceModel.InstanceContext> 類別是以 `CallbackHandler` 類別的執行個體所建構。 這個物件會處理回呼介面上，從服務傳回至用戶端的訊息。  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  
@@ -48,7 +54,7 @@ caps.handback.revision: 17
   
   
 > [!NOTE]
->  無法驗證通常使用安全對話的非雙工用戶端擲回<xref:System.ServiceModel.Security.MessageSecurityException>。 不過，如果使用安全對話的雙工用戶端驗證失敗，用戶端收到<xref:System.TimeoutException>改。  
+>  無法使用安全對話來進行驗證的非雙工用戶端通常會擲回 <xref:System.ServiceModel.Security.MessageSecurityException>。 不過，如果使用安全對話的雙工用戶端驗證失敗，則用戶端會收到 <xref:System.TimeoutException>。  
   
  如果您使用 `WSHttpBinding` 項目建立用戶端/服務，但是未包含用戶端回呼端點，則會收到以下錯誤。  
   
@@ -67,7 +73,7 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
   
  以下範例程式碼將示範如何在組態中指定用戶端端點位址。  
   
-```  
+```xml  
 <client>  
     <endpoint name ="ServerEndpoint"   
           address="http://localhost:12000/DuplexTestUsingConfig/Server"  
@@ -83,13 +89,12 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
          </binding>  
     </wsDualHttpBinding>  
 </bindings>  
-  
 ```  
   
 > [!WARNING]
 >  此雙工模型不會自動偵測服務或用戶端關閉其通道的時間。 因此，如果某個用戶端意外終止，預設不會通知此服務，或者如果某個用戶端意外終止，也不會通知此服務。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。  
   
 ## <a name="see-also"></a>另請參閱  
- [雙工](../../../../docs/framework/wcf/samples/duplex.md)   
- [指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)   
- [如何︰ 建立通道處理站，並用來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+ [雙工](../../../../docs/framework/wcf/samples/duplex.md)  
+ [指定用端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [如何： 建立通道處理站，並用來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
