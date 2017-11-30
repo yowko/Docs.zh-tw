@@ -1,52 +1,55 @@
 ---
-title: "如何：使用相對值指定轉換的原點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "圖形, 轉換的來源"
-  - "轉換的來源"
-  - "轉換, 來源"
+title: "操作說明：使用相對值指定轉換的原點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- origins of Transforms [WPF]
+- Transforms [WPF], origins of
+- graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec61fdedc78b785dccf2c235cd17fd20b6d5abc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用相對值指定轉換的原點
-本範例說明如何使用相對值指定套用到 <xref:System.Windows.FrameworkElement> 之 <xref:System.Windows.UIElement.RenderTransform%2A> 的原點。  
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a><span data-ttu-id="a5830-102">操作說明：使用相對值指定轉換的原點</span><span class="sxs-lookup"><span data-stu-id="a5830-102">How to: Specify the Origin of a Transform by Using Relative Values</span></span>
+<span data-ttu-id="a5830-103">此範例示範如何使用相對的值來指定來源的<xref:System.Windows.UIElement.RenderTransform%2A>套用至<xref:System.Windows.FrameworkElement>。</span><span class="sxs-lookup"><span data-stu-id="a5830-103">This example shows how to use relative values to specify the origin of a <xref:System.Windows.UIElement.RenderTransform%2A> that is applied to a <xref:System.Windows.FrameworkElement>.</span></span>  
   
- 當您使用 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性旋轉、縮放或[傾斜](GTMT) <xref:System.Windows.FrameworkElement> 時，預設設定會將轉換套用到項目左上角。  如果您要從項目的中心旋轉、縮放或傾斜，可以將轉換的中心設為項目的中心來因應。  不過，這方法需要知道項目的大小。  要將轉換套用到項目中心，更簡單的方式就是將項目的 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 屬性設為 \(0.5, 0.5\)，而不是在轉換本身設定中心值。  
+ <span data-ttu-id="a5830-104">當旋轉、 縮放或扭曲<xref:System.Windows.FrameworkElement>使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性，預設值的轉換套用至項目的左上角。</span><span class="sxs-lookup"><span data-stu-id="a5830-104">When you rotate, scale, or skew a <xref:System.Windows.FrameworkElement> by using the <xref:System.Windows.UIElement.RenderTransform%2A> property, the default setting applies the transform to the upper-left corner of the element.</span></span> <span data-ttu-id="a5830-105">如果您想要從元素的中心進行旋轉、縮放或扭曲，您可以將轉換的中心設為元素的中心。</span><span class="sxs-lookup"><span data-stu-id="a5830-105">If you want to rotate, scale, or skew from the center of the element, you can compensate by setting the center of the transform to the center of the element.</span></span> <span data-ttu-id="a5830-106">不過，使用此解決方案需要先知道元素的大小。</span><span class="sxs-lookup"><span data-stu-id="a5830-106">However, that solution requires that you know the size of the element.</span></span> <span data-ttu-id="a5830-107">將轉換套用至的元素中心的更簡單的方法是設定它<xref:System.Windows.UIElement.RenderTransformOrigin%2A>屬性 （0.5，0.5），而不是在本身的轉換上設定之中間值。</span><span class="sxs-lookup"><span data-stu-id="a5830-107">An easier way of applying a transform to the center of an element is to set its <xref:System.Windows.UIElement.RenderTransformOrigin%2A> property to (0.5, 0.5), instead of setting a center value on the transform itself.</span></span>  
   
-## 範例  
- 下列範例會使用 <xref:System.Windows.Media.RotateTransform> 順時針旋轉 <xref:System.Windows.Controls.Button> 45 度。  由於範例沒有指定中心，按鈕會以點 \(0, 0\)，也就是左上角為中心旋轉。  <xref:System.Windows.Media.RotateTransform> 會套用到 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性。  
+## <a name="example"></a><span data-ttu-id="a5830-108">範例</span><span class="sxs-lookup"><span data-stu-id="a5830-108">Example</span></span>  
+ <span data-ttu-id="a5830-109">下列範例會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Controls.Button>順時針旋轉 45 度。</span><span class="sxs-lookup"><span data-stu-id="a5830-109">The following example uses a <xref:System.Windows.Media.RotateTransform> to rotate a <xref:System.Windows.Controls.Button> 45 degrees clockwise.</span></span> <span data-ttu-id="a5830-110">由於範例沒有指定中心，因此按鈕會以點 (0, 0)，也就是左上角為中心旋轉。</span><span class="sxs-lookup"><span data-stu-id="a5830-110">Because the example does not specify a center, the button rotates about the point (0, 0), which is its upper-left corner.</span></span> <span data-ttu-id="a5830-111"><xref:System.Windows.Media.RotateTransform>套用至<xref:System.Windows.UIElement.RenderTransform%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="a5830-111">The <xref:System.Windows.Media.RotateTransform> is applied to the <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span>  
   
- 下圖顯示後面所接範例的轉換結果。  
+ <span data-ttu-id="a5830-112">下圖顯示後續範例的轉換結果。</span><span class="sxs-lookup"><span data-stu-id="a5830-112">The following illustration shows the transformation result for the example that follows.</span></span>  
   
- ![使用 RenderTransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm\_RenderTransformWithDefaultCenter")  
-使用 RenderTransform 屬性順時針旋轉 45 度  
+ <span data-ttu-id="a5830-113">![使用 rendertransform 經過轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")</span><span class="sxs-lookup"><span data-stu-id="a5830-113">![A button transformed using RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")</span></span>  
+<span data-ttu-id="a5830-114">使用 RenderTransform 屬性順時針旋轉 45 度</span><span class="sxs-lookup"><span data-stu-id="a5830-114">A 45 degree clockwise rotation by using the RenderTransform property</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- 下列範例也使用 <xref:System.Windows.Media.RotateTransform> 順時針旋轉 <xref:System.Windows.Controls.Button> 45 度，不過，此範例會將按鈕的 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 設為 \(0.5, 0.5\)。  因此，旋轉會套用到按鈕的中心，而非左上角。  
+ <span data-ttu-id="a5830-115">下列範例也會使用<xref:System.Windows.Media.RotateTransform>旋轉<xref:System.Windows.Controls.Button>45 度順時針旋轉; 不過，此範例會設定<xref:System.Windows.UIElement.RenderTransformOrigin%2A>按鈕的 （0.5，0.5）。</span><span class="sxs-lookup"><span data-stu-id="a5830-115">The following example also uses a <xref:System.Windows.Media.RotateTransform> to rotate a <xref:System.Windows.Controls.Button> 45 degrees clockwise; however, this example sets the <xref:System.Windows.UIElement.RenderTransformOrigin%2A> of the button to (0.5, 0.5).</span></span> <span data-ttu-id="a5830-116">因此，旋轉會套用到按鈕的中心，而非左上角。</span><span class="sxs-lookup"><span data-stu-id="a5830-116">As a result, the rotation is applied to the center of the button instead of to the upper-left corner.</span></span>  
   
- 下圖顯示後面所接範例的轉換結果。  
+ <span data-ttu-id="a5830-117">下圖顯示後續範例的轉換結果。</span><span class="sxs-lookup"><span data-stu-id="a5830-117">The following illustration shows the transformation result for the example that follows.</span></span>  
   
- ![對其中心轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm\_RenderTransformRelativeCenter")  
-使用 RenderTransform 屬性以 RenderTransformOrigin 為 \(0.5, 0.5\) 旋轉 45 度  
+ <span data-ttu-id="a5830-118">![對其中心轉換的按鈕](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")</span><span class="sxs-lookup"><span data-stu-id="a5830-118">![A button transformed about its center](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")</span></span>  
+<span data-ttu-id="a5830-119">使用 RenderTransform 屬性搭配 (0.5, 0.5) 的 RenderTransformOrigin 旋轉 45 度</span><span class="sxs-lookup"><span data-stu-id="a5830-119">A 45 degree rotation by using the RenderTransform property with a RenderTransformOrigin of (0.5, 0.5)</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- 如需轉換 <xref:System.Windows.FrameworkElement> 物件的詳細資訊，請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
+ <span data-ttu-id="a5830-120">如需有關轉換<xref:System.Windows.FrameworkElement>物件，請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a5830-120">For more information about transforming <xref:System.Windows.FrameworkElement> objects, see the [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Transform>   
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="a5830-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5830-121">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ [<span data-ttu-id="a5830-122">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="a5830-122">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="a5830-123">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="a5830-123">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

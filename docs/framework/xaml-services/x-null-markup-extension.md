@@ -1,57 +1,60 @@
 ---
-title: "x:Null Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NullExtension"
-  - "x:NullExtension"
-  - "x:Null"
-  - "Null"
-  - "xNull"
-helpviewer_keywords: 
-  - "Null markup extension in XAML [XAML Services]"
-  - "x:Null markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Null markup extension"
+title: "x:Null 標記延伸"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NullExtension
+- x:NullExtension
+- x:Null
+- Null
+- xNull
+helpviewer_keywords:
+- Null markup extension in XAML [XAML Services]
+- x:Null markup extension [XAML Services]
+- XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: a60d74bdf3343d02eaf912ac7700f36a649f659c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# x:Null Markup Extension
-指定 `null` 做為 XAML 成員的值。  
+# <a name="xnull-markup-extension"></a><span data-ttu-id="72513-102">x:Null 標記延伸</span><span class="sxs-lookup"><span data-stu-id="72513-102">x:Null Markup Extension</span></span>
+<span data-ttu-id="72513-103">指定`null`做為 XAML 成員的值。</span><span class="sxs-lookup"><span data-stu-id="72513-103">Specifies `null` as a value for a XAML member.</span></span>  
   
-## XAML Attribute Usage  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="72513-104">XAML Attribute Usage</span><span class="sxs-lookup"><span data-stu-id="72513-104">XAML Attribute Usage</span></span>  
   
+```xaml  
+<object property="{x:Null}" .../>  
 ```  
-<object property="{x:Null}" .../>  
-```  
   
-## 備註  
- [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] 和 [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] 中的 Null 參考關鍵字是 Null。  Null 參考的 [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] 關鍵字是 `Nothing`，但無論何種程式碼後置語言與 XAML 相關聯，您一定都會使用 `{x:Null}`。  
+## <a name="remarks"></a><span data-ttu-id="72513-105">備註</span><span class="sxs-lookup"><span data-stu-id="72513-105">Remarks</span></span>  
+ <span data-ttu-id="72513-106">中的 null 參考的關鍵字[!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]和[!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)]為 null。</span><span class="sxs-lookup"><span data-stu-id="72513-106">The keyword for a null reference in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] and [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] is null.</span></span> <span data-ttu-id="72513-107">[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] Null 參考的關鍵字是`Nothing`，但會一直使用`{x:Null}`與 XAML 用法不論關聯的 xaml 程式碼後置語言。</span><span class="sxs-lookup"><span data-stu-id="72513-107">The [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] keyword for a null reference is `Nothing`, but you always use `{x:Null}` as the XAML usage regardless which code-behind language you associate with the XAML.</span></span>  
   
- `x:Null` 標記延伸沒有可設定的屬性。  
+ <span data-ttu-id="72513-108">`x:Null`標記延伸可以沒有可設定的屬性。</span><span class="sxs-lookup"><span data-stu-id="72513-108">The `x:Null` markup extension has no settable properties.</span></span>  
   
- null 的使用方式通常都與 CLR <xref:System.Nullable%601> 值的 XAML 成員公開相關聯。  
+ <span data-ttu-id="72513-109">Null 使用量都通常與 CLR 的 XAML 成員公開<xref:System.Nullable%601>值。</span><span class="sxs-lookup"><span data-stu-id="72513-109">A null usage is often associated with the XAML member exposure of a CLR <xref:System.Nullable%601> value.</span></span>  
   
- 與所有的 XAML 標記延伸一樣，`x:Null` 標記延伸會使用大括號 \(`{,}`\) 將屬性值的處理逸出為常值或處理常式參考以外的值。  屬性語法是最常配合這個標記延伸使用的語法。  物件項目語法 `<x:Null />` 在技術上可能，但是很少使用，因為 `x:Null` 標記延伸並沒有位置參數或建構引數。  
+ <span data-ttu-id="72513-110">`x:Null`像所有的 XAML 標記延伸的標記延伸使用大括號 (`{,}`) 屬性值而不是常值或參考事件處理常式處理逸出。</span><span class="sxs-lookup"><span data-stu-id="72513-110">The `x:Null` markup extension, like all XAML markup extensions, uses the braces (`{,}`) for escaping the handling of attribute values to be other than literals or event-handler references.</span></span> <span data-ttu-id="72513-111">屬性語法是最常搭配這個標記延伸使用的語法。</span><span class="sxs-lookup"><span data-stu-id="72513-111">Attribute syntax is the syntax most frequently used with this markup extension.</span></span> <span data-ttu-id="72513-112">物件項目語法`<x:Null />`可行，但很少使用，因為`x:Null`標記延伸可以沒有位置參數或建構引數。</span><span class="sxs-lookup"><span data-stu-id="72513-112">An object element syntax `<x:Null />` is technically possible, but is rarely used because the `x:Null` markup extension has no positional parameters or construction arguments.</span></span>  
   
- 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ <span data-ttu-id="72513-113">如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="72513-113">For information about markup extensions, see [Markup Extensions and WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
- 在 .NET Framework XAML Services 中，這個標記延伸的處理是由 <xref:System.Windows.Markup.NullExtension> 類別所定義。  
+ <span data-ttu-id="72513-114">在.NET Framework XAML 服務，此標記延伸處理由定義<xref:System.Windows.Markup.NullExtension>類別。</span><span class="sxs-lookup"><span data-stu-id="72513-114">In .NET Framework XAML Services, the handling for this markup extension is defined by the <xref:System.Windows.Markup.NullExtension> class.</span></span>  
   
-## WPF 使用注意事項  
- 請注意，`null` 不一定是參考型別相依性屬性的初始未設定值。  每個相依性屬性的初始預設值都有所不同，而且可能取決於屬性特定的中繼資料。  由於其驗證回呼 \(Callback\) 實作 \(Implementation\) 的原因，許多相依性屬性都不會接受 `null` 做為值，不論是透過標記或程式碼都一樣。  如需相依性屬性的詳細資訊，請參閱[相依性屬性概觀](../../../ocs/framework/wpf/advanced/dependency-properties-overview.md)。  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="72513-115">WPF 使用注意事項</span><span class="sxs-lookup"><span data-stu-id="72513-115">WPF Usage Notes</span></span>  
+ <span data-ttu-id="72513-116">請注意，`null`不一定是參考類型的相依性屬性未設定的初始值。</span><span class="sxs-lookup"><span data-stu-id="72513-116">Note that `null` is not necessarily the initial unset value for a reference-type dependency property.</span></span> <span data-ttu-id="72513-117">初始預設值為每個相依性屬性可能會不同，可以根據特定屬性的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="72513-117">The initial default value can vary for each dependency property and can be based on property-specific metadata.</span></span> <span data-ttu-id="72513-118">不接受多個相依性屬性`null`做為值，方法是透過標記或程式碼，因為它們的驗證回呼實作。</span><span class="sxs-lookup"><span data-stu-id="72513-118">Many dependency properties do not accept `null` as a value, either through markup or code because of their validation callback implementations.</span></span> <span data-ttu-id="72513-119">如需相依性屬性的詳細資訊，請參閱[相依性屬性概觀](../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="72513-119">For more information about dependency properties, see [Dependency Properties Overview](../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.DependencyProperty.UnsetValue>   
- [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="72513-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72513-120">See Also</span></span>  
+ <xref:System.Windows.DependencyProperty.UnsetValue>  
+ [<span data-ttu-id="72513-121">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="72513-121">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="72513-122">標記延伸和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="72513-122">Markup Extensions and WPF XAML</span></span>](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

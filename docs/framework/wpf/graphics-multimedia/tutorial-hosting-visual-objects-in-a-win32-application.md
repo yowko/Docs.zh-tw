@@ -1,87 +1,93 @@
 ---
-title: "教學課程：在 Win32 應用程式中裝載視覺物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "裝載, Win32 程式碼中的視覺物件"
-  - "Win32 程式碼中的視覺物件"
-  - "Win32 程式碼, 視覺物件"
+title: "教學課程：在 Win32 應用程式中裝載視覺物件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- visual objects in Win32 code [WPF]
+- Win32 code [WPF], visual objects in
+- hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47402194e3588699625249848c96d58b37059138
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 教學課程：在 Win32 應用程式中裝載視覺物件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。  不過，若您已對 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼投入相當的心力，更有效的方法是將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，而不是重新撰寫程式碼。  為了提供在應用程式中同時 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形子系統的支援，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一種將物件裝載在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中的機制。  
+# <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a><span data-ttu-id="13e57-102">教學課程：在 Win32 應用程式中裝載視覺物件</span><span class="sxs-lookup"><span data-stu-id="13e57-102">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="13e57-103"> 提供用來建立應用程式的豐富環境。</span><span class="sxs-lookup"><span data-stu-id="13e57-103"> provides a rich environment for creating applications.</span></span> <span data-ttu-id="13e57-104">不過，當您擁有了大筆投資的[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]程式碼，它可能是更有效率地新增[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您的應用程式的功能，而非重新撰寫程式碼。</span><span class="sxs-lookup"><span data-stu-id="13e57-104">However, when you have a substantial investment in [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] code, it might be more effective to add [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] functionality to your application rather than rewrite your code.</span></span> <span data-ttu-id="13e57-105">為提供支援[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]同時使用應用程式中，圖形子系統[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供一個機制，用於裝載中的物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。</span><span class="sxs-lookup"><span data-stu-id="13e57-105">To provide support for [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics subsystems used concurrently in an application, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides a mechanism for hosting objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span>  
   
- 本教學課程說明如何撰寫範例應用程式[使用 Win32 互通性進行點擊測試範例](http://go.microsoft.com/fwlink/?LinkID=159995) \(英文\)，該應用程式會將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺物件裝載在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中。  
+ <span data-ttu-id="13e57-106">本教學課程說明如何撰寫的範例應用程式，[點擊測試的互通性的 Win32 範例](http://go.microsoft.com/fwlink/?LinkID=159995)、 該主機[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的 visual 物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。</span><span class="sxs-lookup"><span data-stu-id="13e57-106">This tutorial describes how to write a sample application, [Hit Test with Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995), that hosts [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span>  
   
-   
+
   
 <a name="requirements"></a>   
-## 需求  
- 本教學課程假設您已熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式設計的基本概念。  如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式設計的基本簡介，請參閱[逐步解說：WPF 使用者入門](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  如需 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式設計的簡介，請參閱討論此主題的各種書籍，尤其是 Charles Petzold 所著的《*Programming Windows*》。  
+## <a name="requirements"></a><span data-ttu-id="13e57-107">需求</span><span class="sxs-lookup"><span data-stu-id="13e57-107">Requirements</span></span>  
+ <span data-ttu-id="13e57-108">本教學課程假設您對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式設計已有基本的熟悉度。</span><span class="sxs-lookup"><span data-stu-id="13e57-108">This tutorial assumes a basic familiarity with both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programming.</span></span> <span data-ttu-id="13e57-109">如需基本簡介[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程式設計，請參閱[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。</span><span class="sxs-lookup"><span data-stu-id="13e57-109">For a basic introduction to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programming, see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span> <span data-ttu-id="13e57-110">如需簡介[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式設計，請參閱任一許多書籍主旨，特別*程式設計 Windows*由 Charles Petzold。</span><span class="sxs-lookup"><span data-stu-id="13e57-110">For an introduction to [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programming, see any of the numerous books on the subject, in particular *Programming Windows* by Charles Petzold.</span></span>  
   
 > [!NOTE]
->  本教學課程包括摘錄自相關範例的許多程式碼範例。  不過，為了方便閱讀，此課程並未包含完整的範例程式碼。  如需完整範例程式碼，請參閱[使用 Win32 互通性進行點擊測試範例](http://go.microsoft.com/fwlink/?LinkID=159995) \(英文\)。  
+>  <span data-ttu-id="13e57-111">本教學課程包含一些來自相關範例的程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="13e57-111">This tutorial includes a number of code examples from the associated sample.</span></span> <span data-ttu-id="13e57-112">不過，為了方便閱讀，並未包含完整的範例程式碼。</span><span class="sxs-lookup"><span data-stu-id="13e57-112">However, for readability, it does not include the complete sample code.</span></span> <span data-ttu-id="13e57-113">完整範例程式碼，請參閱[點擊測試的互通性的 Win32 範例](http://go.microsoft.com/fwlink/?LinkID=159995)。</span><span class="sxs-lookup"><span data-stu-id="13e57-113">For the complete sample code, see [Hit Test with Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995).</span></span>  
   
 <a name="creating_the_host_win32_window"></a>   
-## 建立裝載 Win32 視窗  
- 將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件裝載在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中的關鍵在於 <xref:System.Windows.Interop.HwndSource> 類別。  這個類別會將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件包裝在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中，讓您可以將這些物件當做子視窗加入 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中。  
+## <a name="creating-the-host-win32-window"></a><span data-ttu-id="13e57-114">建立 Win32 主機視窗</span><span class="sxs-lookup"><span data-stu-id="13e57-114">Creating the Host Win32 Window</span></span>  
+ <span data-ttu-id="13e57-115">要裝載的索引鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗是<xref:System.Windows.Interop.HwndSource>類別。</span><span class="sxs-lookup"><span data-stu-id="13e57-115">The key to hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window is the <xref:System.Windows.Interop.HwndSource> class.</span></span> <span data-ttu-id="13e57-116">這個類別會包裝[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗中，讓他們可併入您[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]做為子視窗。</span><span class="sxs-lookup"><span data-stu-id="13e57-116">This class wraps the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window, allowing them to be incorporated into your [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] as a child window.</span></span>  
   
- 下列範例顯示的程式碼可用來建立 <xref:System.Windows.Interop.HwndSource> 物件，做為視覺物件的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 容器視窗。  若要設定 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 的視窗樣式、位置和其他參數，請使用 <xref:System.Windows.Interop.HwndSourceParameters> 物件。  
+ <span data-ttu-id="13e57-117">下列範例示範建立的程式碼<xref:System.Windows.Interop.HwndSource>物件當做[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視覺物件的容器視窗。</span><span class="sxs-lookup"><span data-stu-id="13e57-117">The following example shows the code for creating the <xref:System.Windows.Interop.HwndSource> object as the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] container window for the visual objects.</span></span> <span data-ttu-id="13e57-118">若要設定的視窗樣式、 位置及其他參數[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中，使用<xref:System.Windows.Interop.HwndSourceParameters>物件。</span><span class="sxs-lookup"><span data-stu-id="13e57-118">To set the window style, position, and other parameters for the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window, use the <xref:System.Windows.Interop.HwndSourceParameters> object.</span></span>  
   
  [!code-csharp[VisualsHitTesting#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#101)]
  [!code-vb[VisualsHitTesting#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#101)]  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle%2A> 屬性的值不能設定為 WS\_EX\_TRANSPARENT。  這表示裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗不能是透明的。  因此，裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗的背景色彩會設定成與其父視窗相同的背景色彩。  
+>  <span data-ttu-id="13e57-119">值<xref:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle%2A>屬性不能設定為 WS_EX_TRANSPARENT。</span><span class="sxs-lookup"><span data-stu-id="13e57-119">The value of the <xref:System.Windows.Interop.HwndSourceParameters.ExtendedWindowStyle%2A> property cannot be set to WS_EX_TRANSPARENT.</span></span> <span data-ttu-id="13e57-120">這表示主機[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗不可為透明。</span><span class="sxs-lookup"><span data-stu-id="13e57-120">This means that the host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window cannot be transparent.</span></span> <span data-ttu-id="13e57-121">基於這個理由，主應用程式的背景色彩[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗設為其父視窗相同的背景色彩。</span><span class="sxs-lookup"><span data-stu-id="13e57-121">For this reason, the background color of the host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window is set to the same background color as its parent window.</span></span>  
   
 <a name="adding_visual_objects_to_the_host_win32_window"></a>   
-## 將視覺物件加入至裝載 Host Win32 視窗  
- 建立視覺物件的裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 容器視窗之後，您就可以將視覺物件加入視窗中。  您必須確定視覺物件的任何變化 \(例如動畫\) 都不會超過裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗周框的範圍。  
+## <a name="adding-visual-objects-to-the-host-win32-window"></a><span data-ttu-id="13e57-122">將視覺物件加入至主機 Win32 視窗</span><span class="sxs-lookup"><span data-stu-id="13e57-122">Adding Visual Objects to the Host Win32 Window</span></span>  
+ <span data-ttu-id="13e57-123">一旦您建立主機[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]容器視窗視覺化的物件，您可以將視覺物件加入它。</span><span class="sxs-lookup"><span data-stu-id="13e57-123">Once you have created a host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] container window for the visual objects, you can add visual objects to it.</span></span> <span data-ttu-id="13e57-124">您會想要確保視覺化的物件，例如動畫，任何轉換，不會延伸超出主機範圍[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗之周框。</span><span class="sxs-lookup"><span data-stu-id="13e57-124">You will want to ensure that any transformations of the visual objects, such as animations, do not extend beyond the bounds of the host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window's bounding rectangle.</span></span>  
   
- 下列範例顯示的程式碼可用來建立 <xref:System.Windows.Interop.HwndSource> 物件，並將視覺物件加入其中。  
+ <span data-ttu-id="13e57-125">下列範例示範建立的程式碼<xref:System.Windows.Interop.HwndSource>物件，並加入視覺物件。</span><span class="sxs-lookup"><span data-stu-id="13e57-125">The following example shows the code for creating the <xref:System.Windows.Interop.HwndSource> object and adding visual objects to it.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.HwndSource> 物件的 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 屬性會設定為加入至裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗的第一個視覺物件。  這個根 \(Root\) 視覺物件定義了視覺物件樹狀結構的最上層節點。  後續加入至裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗的任何物件都會變成子物件。  
+>  <span data-ttu-id="13e57-126"><xref:System.Windows.Interop.HwndSource.RootVisual%2A>屬性<xref:System.Windows.Interop.HwndSource>物件設定為加入至主機的第一個視覺物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。</span><span class="sxs-lookup"><span data-stu-id="13e57-126">The <xref:System.Windows.Interop.HwndSource.RootVisual%2A> property of the <xref:System.Windows.Interop.HwndSource> object is set to the first visual object added to the host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span> <span data-ttu-id="13e57-127">根視覺物件會定義視覺物件樹狀結構的最上層節點。</span><span class="sxs-lookup"><span data-stu-id="13e57-127">The root visual object defines the top-most node of the visual object tree.</span></span> <span data-ttu-id="13e57-128">任何後續的視覺物件加入至主機[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗將會新增為子物件。</span><span class="sxs-lookup"><span data-stu-id="13e57-128">Any subsequent visual objects added to the host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window are added as child objects.</span></span>  
   
  [!code-csharp[VisualsHitTesting#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#100)]
  [!code-vb[VisualsHitTesting#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#100)]  
   
 <a name="implementing_the_win32_message_filter"></a>   
-## 實作 Win32 訊息篩選  
- 視覺物件的裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗需要使用視窗訊息篩選程序來處理從應用程式佇列傳送到視窗的訊息。  視窗程序會接收 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 系統傳來的訊息。  這些訊息可能是輸入訊息或視窗管理訊息。  您可以選擇在視窗程序中處理訊息，或是將訊息傳送給系統進行預設處理。  
+## <a name="implementing-the-win32-message-filter"></a><span data-ttu-id="13e57-129">實作 Win32 訊息篩選器</span><span class="sxs-lookup"><span data-stu-id="13e57-129">Implementing the Win32 Message Filter</span></span>  
+ <span data-ttu-id="13e57-130">主機[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視覺物件的視窗需要視窗訊息篩選程序來處理從應用程式佇列傳送至視窗的訊息。</span><span class="sxs-lookup"><span data-stu-id="13e57-130">The host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window for the visual objects requires a window message filter procedure to handle messages that are sent to the window from the application queue.</span></span> <span data-ttu-id="13e57-131">視窗程序接收來自[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]系統。</span><span class="sxs-lookup"><span data-stu-id="13e57-131">The window procedure receives messages from the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] system.</span></span> <span data-ttu-id="13e57-132">這些可能是輸入訊息或視窗管理訊息。</span><span class="sxs-lookup"><span data-stu-id="13e57-132">These may be input messages or window-management messages.</span></span> <span data-ttu-id="13e57-133">您可以選擇性地在您的視窗程序中處理訊息，或者將訊息傳遞至系統進行預設處理。</span><span class="sxs-lookup"><span data-stu-id="13e57-133">You can optionally handle a message in your window procedure or pass the message to the system for default processing.</span></span>  
   
- 已定義為視覺物件父代 \(Parent\) 的 <xref:System.Windows.Interop.HwndSource> 物件必須參考您所提供的視窗訊息篩選程序。  當您建立 <xref:System.Windows.Interop.HwndSource> 物件時，請設定 <xref:System.Windows.Interop.HwndSourceParameters.HwndSourceHook%2A> 屬性來參考該視窗程序。  
+ <span data-ttu-id="13e57-134"><xref:System.Windows.Interop.HwndSource>您定義為視覺物件的父系必須參考您提供的視窗訊息篩選程序的物件。</span><span class="sxs-lookup"><span data-stu-id="13e57-134">The <xref:System.Windows.Interop.HwndSource> object that you defined as the parent for the visual objects must reference the window message filter procedure you provide.</span></span> <span data-ttu-id="13e57-135">當您建立<xref:System.Windows.Interop.HwndSource>物件、 設定<xref:System.Windows.Interop.HwndSourceParameters.HwndSourceHook%2A>屬性來參考的視窗程序。</span><span class="sxs-lookup"><span data-stu-id="13e57-135">When you create the <xref:System.Windows.Interop.HwndSource> object, set the <xref:System.Windows.Interop.HwndSourceParameters.HwndSourceHook%2A> property to reference the window procedure.</span></span>  
   
  [!code-csharp[VisualsHitTesting#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#102)]
  [!code-vb[VisualsHitTesting#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#102)]  
   
- 下列範例顯示的程式碼可用來處理滑鼠左右鍵訊息。  滑鼠點擊位置的座標值包含在 `lParam` 參數值中。  
+ <span data-ttu-id="13e57-136">下列範例顯示用來處理滑鼠左右按鈕訊息的程式碼。</span><span class="sxs-lookup"><span data-stu-id="13e57-136">The following example shows the code for handling the left and right mouse button up messages.</span></span> <span data-ttu-id="13e57-137">滑鼠座標值叫用位置的值包含`lParam`參數。</span><span class="sxs-lookup"><span data-stu-id="13e57-137">The coordinate value of the mouse hit position is contained in the value of the `lParam` parameter.</span></span>  
   
  [!code-csharp[VisualsHitTesting#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
  [!code-vb[VisualsHitTesting#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
 <a name="processing_the_win32_messages"></a>   
-## 處理 Win32 訊息  
- 下列範例中的程式碼示範如何針對裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中包含的視覺物件階層架構，執行點擊測試。  您可以使用 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 方法指定根視覺物件和要進行點擊測試的座標值，以識別某個點是否在視覺物件的幾何範圍內。  在這個案例中，根視覺物件是 <xref:System.Windows.Interop.HwndSource> 物件的 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 屬性值。  
+## <a name="processing-the-win32-messages"></a><span data-ttu-id="13e57-138">處理 Win32 訊息</span><span class="sxs-lookup"><span data-stu-id="13e57-138">Processing the Win32 Messages</span></span>  
+ <span data-ttu-id="13e57-139">下列範例中的程式碼示範如何針對包含在主機中的視覺物件階層執行點擊的測試[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。</span><span class="sxs-lookup"><span data-stu-id="13e57-139">The code in the following example shows how a hit test is performed against the hierarchy of visual objects contained in the host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span> <span data-ttu-id="13e57-140">您可以識別是否點內之幾何的視覺物件，使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法，以指定的根 visual 物件和要進行點擊測試的座標值。</span><span class="sxs-lookup"><span data-stu-id="13e57-140">You can identify whether a point is within the geometry of a visual object, by using the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method to specify the root visual object and the coordinate value to hit test against.</span></span> <span data-ttu-id="13e57-141">在此情況下，根 visual 物件是值<xref:System.Windows.Interop.HwndSource.RootVisual%2A>屬性<xref:System.Windows.Interop.HwndSource>物件。</span><span class="sxs-lookup"><span data-stu-id="13e57-141">In this case, the root visual object is the value of the <xref:System.Windows.Interop.HwndSource.RootVisual%2A> property of the <xref:System.Windows.Interop.HwndSource> object.</span></span>  
   
  [!code-csharp[VisualsHitTesting#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- 如需對視覺物件進行點擊測試的詳細資訊，請參閱[視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)。  
+ <span data-ttu-id="13e57-142">如需有關視覺物件的點擊測試的詳細資訊，請參閱[點擊測試視覺化的圖層中](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)。</span><span class="sxs-lookup"><span data-stu-id="13e57-142">For more information on hit testing against visual objects, see [Hit Testing in the Visual Layer](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Interop.HwndSource>   
- [使用 Win32 互通性進行點擊測試範例](http://go.microsoft.com/fwlink/?LinkID=159995)   
- [視覺分層中的點擊測試](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a><span data-ttu-id="13e57-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13e57-143">See Also</span></span>  
+ <xref:System.Windows.Interop.HwndSource>  
+ [<span data-ttu-id="13e57-144">點擊測試與 Win32 互通性範例</span><span class="sxs-lookup"><span data-stu-id="13e57-144">Hit Test with Win32 Interoperation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159995)  
+ [<span data-ttu-id="13e57-145">視覺分層中的點擊測試</span><span class="sxs-lookup"><span data-stu-id="13e57-145">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

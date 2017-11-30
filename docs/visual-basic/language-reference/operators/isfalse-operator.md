@@ -1,43 +1,41 @@
 ---
-title: "IsFalse Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.isfalse"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "AndAlso operator"
-  - "IsFalse operator"
+title: "IsFalse 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.isfalse
+helpviewer_keywords:
+- AndAlso operator [Visual Basic]
+- IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d85fc51a75f82c65cf226b8239a8eee6585bd18a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# IsFalse Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-判斷運算式是否為 `False`。  
+# <a name="isfalse-operator-visual-basic"></a><span data-ttu-id="88786-102">IsFalse 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88786-102">IsFalse Operator (Visual Basic)</span></span>
+<span data-ttu-id="88786-103">判斷運算式是否為`False`。</span><span class="sxs-lookup"><span data-stu-id="88786-103">Determines whether an expression is `False`.</span></span>  
   
- 您無法在程式碼中明確呼叫 `IsFalse`，但 Visual Basic 編譯器 \(Compiler\) 可利用它從 `AndAlso` 子句產生程式碼。  如果定義類別或結構，然後在 `AndAlso` 子句中使用該型別的變數，則必須在該類別或結構上定義 `IsFalse`。  
+ <span data-ttu-id="88786-104">您不能呼叫`IsFalse`明確地在您的程式碼，但 Visual Basic 編譯器可以用它來產生程式碼從`AndAlso`子句。</span><span class="sxs-lookup"><span data-stu-id="88786-104">You cannot call `IsFalse` explicitly in your code, but the Visual Basic compiler can use it to generate code from `AndAlso` clauses.</span></span> <span data-ttu-id="88786-105">如果您定義類別或結構，然後使用 在該類型的變數`AndAlso`子句，您必須定義`IsFalse`該類別或結構上。</span><span class="sxs-lookup"><span data-stu-id="88786-105">If you define a class or structure and then use a variable of that type in an `AndAlso` clause, you must define `IsFalse` on that class or structure.</span></span>  
   
- 編譯器會將 `IsFalse` 和 `IsTrue` 運算子視為「*相符的配對*」。  這表示如果定義其中一個，也必須定義另一個。  
+ <span data-ttu-id="88786-106">編譯器會考慮`IsFalse`和`IsTrue`運算子*相符配對*。</span><span class="sxs-lookup"><span data-stu-id="88786-106">The compiler considers the `IsFalse` and `IsTrue` operators as a *matched pair*.</span></span> <span data-ttu-id="88786-107">這表示，如果您定義其中一個，您也必須定義，另一個。</span><span class="sxs-lookup"><span data-stu-id="88786-107">This means that if you define one of them, you must also define the other one.</span></span>  
   
 > [!NOTE]
->  `IsFalse` 運算子可以「*多載*」，也就是，當運算元具備類別或結構的類型時，該類別或結構就可以重新定義其行為。  如果您的程式碼在這種類別或結構上使用此運算子，就一定要先瞭解其重新定義的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+>  <span data-ttu-id="88786-108">`IsFalse`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時其運算元的該類別或結構的類型。</span><span class="sxs-lookup"><span data-stu-id="88786-108">The `IsFalse` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure.</span></span> <span data-ttu-id="88786-109">如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="88786-109">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="88786-110">如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="88786-110">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## 範例  
- 下列程式碼範例所定義的結構大綱包含 `IsFalse` 和 `IsTrue` 運算子的定義。  
+## <a name="example"></a><span data-ttu-id="88786-111">範例</span><span class="sxs-lookup"><span data-stu-id="88786-111">Example</span></span>  
+ <span data-ttu-id="88786-112">下列程式碼範例定義的結構，其中包含定義外框`IsFalse`和`IsTrue`運算子。</span><span class="sxs-lookup"><span data-stu-id="88786-112">The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.</span></span>  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
   
-## 請參閱  
- [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   
- [How to: Define an Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md)
+## <a name="see-also"></a><span data-ttu-id="88786-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="88786-113">See Also</span></span>  
+ [<span data-ttu-id="88786-114">IsTrue 運算子</span><span class="sxs-lookup"><span data-stu-id="88786-114">IsTrue Operator</span></span>](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [<span data-ttu-id="88786-115">如何：定義運算子</span><span class="sxs-lookup"><span data-stu-id="88786-115">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [<span data-ttu-id="88786-116">AndAlso 運算子</span><span class="sxs-lookup"><span data-stu-id="88786-116">AndAlso Operator</span></span>](../../../visual-basic/language-reference/operators/andalso-operator.md)

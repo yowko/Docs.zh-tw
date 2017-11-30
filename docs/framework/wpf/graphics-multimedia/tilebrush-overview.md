@@ -1,138 +1,143 @@
 ---
-title: "TileBrush 概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筆刷, TileBrush"
-  - "TileBrush"
+title: "TileBrush 概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF]
+- brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# TileBrush 概觀
-<xref:System.Windows.Media.TileBrush> 物件讓您對使用影像、<xref:System.Windows.Media.Drawing> 或 <xref:System.Windows.Media.Visual> 繪製區域的方式擁有更多的控制。  本主題說明如何使用 <xref:System.Windows.Media.TileBrush> 功能對 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush> 繪製區域的方式取得更多的控制。  
+# <a name="tilebrush-overview"></a><span data-ttu-id="d5d9d-102">TileBrush 概觀</span><span class="sxs-lookup"><span data-stu-id="d5d9d-102">TileBrush Overview</span></span>
+<span data-ttu-id="d5d9d-103"><xref:System.Windows.Media.TileBrush>物件會提供您有大量的影像，以繪製區域的控制權來控制<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-103"><xref:System.Windows.Media.TileBrush> objects provide you with a great deal of control over how an area is painted with an image, <xref:System.Windows.Media.Drawing>, or <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="d5d9d-104">本主題描述如何使用<xref:System.Windows.Media.TileBrush>功能更充分掌控如何<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>繪製區域。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-104">This topic describes how to use <xref:System.Windows.Media.TileBrush> features to gain more control over how an <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> paints an area.</span></span>  
   
-   
   
 <a name="prerequisite"></a>   
-## 必要條件  
- 若要了解本主題，則了解如何使用 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush> 類別的基本功能是相當有用的。  如需這些型別的簡介，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="d5d9d-105">必要條件</span><span class="sxs-lookup"><span data-stu-id="d5d9d-105">Prerequisites</span></span>  
+ <span data-ttu-id="d5d9d-106">若要了解本主題，最好先了解如何使用的基本功能<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>類別。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-106">To understand this topic, it's helpful to understand how to use the basic features of the <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="d5d9d-107">如需這些類型的簡介，請參閱[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-107">For an introduction to these types, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="tilebrush"></a>   
-## 繪製含有並排的區域  
- <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush> 都是一種 <xref:System.Windows.Media.TileBrush> 物件。  並排顯示筆刷讓您對使用影像、繪圖或視覺資料繪製區域的方式擁有更多的控制。  例如，您可以用構成圖樣的一系列影像並排顯示來繪製區域，而不是只以單一自動縮放的影像來繪製區域。  
+## <a name="painting-an-area-with-tiles"></a><span data-ttu-id="d5d9d-108">以並排顯示繪製區域</span><span class="sxs-lookup"><span data-stu-id="d5d9d-108">Painting an Area with Tiles</span></span>  
+ <span data-ttu-id="d5d9d-109"><xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，是<xref:System.Windows.Media.VisualBrush>種<xref:System.Windows.Media.TileBrush>物件。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-109"><xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, are <xref:System.Windows.Media.VisualBrush> are types of <xref:System.Windows.Media.TileBrush> objects.</span></span> <span data-ttu-id="d5d9d-110">拼貼筆刷讓您對使用影像、繪圖或視覺效果繪製區域的方式擁有更多的控制。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-110">Tile brushes provide you with a great deal of control over how an area is painted with an image, drawing, or visual.</span></span> <span data-ttu-id="d5d9d-111">例如，您可以用構成圖樣的一系列影像並排顯示來繪製區域，而不是只以單一自動縮放的影像來繪製區域。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-111">For example, instead of just painting an area with a single stretched image, you can paint an area with a series of image tiles that create a pattern.</span></span>  
   
- 使用並排顯示筆刷繪製區域時牽涉到三個元件：內容、基底並排顯示及輸出區域。  
+ <span data-ttu-id="d5d9d-112">使用拼貼筆刷繪製區域會牽涉到三個元件：內容、基底並排顯示及輸出區域。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-112">Painting an area with a tile brush involves three components: content, the base tile, and the output area.</span></span>  
   
- ![TileBrush 元件](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk\_mmgraphics\_defaultcontentprojection2")  
-具有單一並排顯示之 TileBrush 的元件  
+ <span data-ttu-id="d5d9d-113">![TileBrush 元件](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span><span class="sxs-lookup"><span data-stu-id="d5d9d-113">![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span></span>  
+<span data-ttu-id="d5d9d-114">具有單一並排顯示之 TileBrush 的元件</span><span class="sxs-lookup"><span data-stu-id="d5d9d-114">Components of a TileBrush with a single tile</span></span>  
   
- ![並排顯示之 TileBrush 的元件](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm\_tiledprojection")  
-TileMode 為 Tile 之 TileBrush 的元件  
+ <span data-ttu-id="d5d9d-115">![元件的並排顯示 TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span><span class="sxs-lookup"><span data-stu-id="d5d9d-115">![Components of a tiled TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span></span>  
+<span data-ttu-id="d5d9d-116">TileMode 為 Tile 之 TileBrush 的元件</span><span class="sxs-lookup"><span data-stu-id="d5d9d-116">Components of a TileBrush with a TileMode of Tile</span></span>  
   
- 輸出區域就是要繪製的區域，例如 <xref:System.Windows.Shapes.Ellipse> 的 <xref:System.Windows.Shapes.Shape.Fill%2A> 或 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A>。  下一節會說明 <xref:System.Windows.Media.TileBrush> 的其他兩個元件。  
+ <span data-ttu-id="d5d9d-117">在輸出區域是區域正在繪製，例如<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>或<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-117">The output area is the area being painted, such as the <xref:System.Windows.Shapes.Shape.Fill%2A> of an <xref:System.Windows.Shapes.Ellipse> or the <xref:System.Windows.Controls.Control.Background%2A> of a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="d5d9d-118">下節說明的其他兩個元件<xref:System.Windows.Media.TileBrush>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-118">The next sections describe the other two components of a <xref:System.Windows.Media.TileBrush>.</span></span>  
   
 <a name="brushcontent"></a>   
-## 筆刷內容  
- <xref:System.Windows.Media.TileBrush> 有三種不同型別，每一種都以不同的內容類型繪製。  
+## <a name="brush-content"></a><span data-ttu-id="d5d9d-119">筆刷內容</span><span class="sxs-lookup"><span data-stu-id="d5d9d-119">Brush Content</span></span>  
+ <span data-ttu-id="d5d9d-120">有三種不同類型<xref:System.Windows.Media.TileBrush>和每個繪製不同類型的內容。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-120">There are three different types of <xref:System.Windows.Media.TileBrush> and each paints with a different type of content.</span></span>  
   
--   如果筆刷是 <xref:System.Windows.Media.ImageBrush>，則這個內容是影像。<xref:System.Windows.Media.ImageBrush.ImageSource%2A> 屬性會指定 <xref:System.Windows.Media.ImageBrush> 的內容。  
+-   <span data-ttu-id="d5d9d-121">如果筆刷為<xref:System.Windows.Media.ImageBrush>，此內容是映像<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性指定的內容<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-121">If the brush is an <xref:System.Windows.Media.ImageBrush>, this content is an image The <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property specifies the contents of the <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
--   如果筆刷是 <xref:System.Windows.Media.DrawingBrush>，則這個內容是繪圖。  <xref:System.Windows.Media.DrawingBrush.Drawing%2A> 屬性指定 <xref:System.Windows.Media.DrawingBrush> 的內容。  
+-   <span data-ttu-id="d5d9d-122">如果筆刷為<xref:System.Windows.Media.DrawingBrush>，此內容是一種繪圖。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-122">If the brush is a <xref:System.Windows.Media.DrawingBrush>, this content is a drawing.</span></span> <span data-ttu-id="d5d9d-123"><xref:System.Windows.Media.DrawingBrush.Drawing%2A>屬性指定的內容<xref:System.Windows.Media.DrawingBrush>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-123">The <xref:System.Windows.Media.DrawingBrush.Drawing%2A> property specifies the contents of the <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
--   如果筆刷是 <xref:System.Windows.Media.VisualBrush>，則這個內容是視覺項目。  <xref:System.Windows.Media.VisualBrush.Visual%2A> 屬性指定 <xref:System.Windows.Media.VisualBrush> 的內容。  
+-   <span data-ttu-id="d5d9d-124">如果筆刷為<xref:System.Windows.Media.VisualBrush>，此內容是視覺效果。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-124">If the brush is a <xref:System.Windows.Media.VisualBrush>, this content is a visual.</span></span> <span data-ttu-id="d5d9d-125"><xref:System.Windows.Media.VisualBrush.Visual%2A>屬性指定的內容<xref:System.Windows.Media.VisualBrush>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-125">The <xref:System.Windows.Media.VisualBrush.Visual%2A> property specifies the content of the <xref:System.Windows.Media.VisualBrush>.</span></span>  
   
- 您可以使用 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 屬性來指定 <xref:System.Windows.Media.TileBrush> 內容的位置和維度，不過通常會保留 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 的預設值。  根據預設，<xref:System.Windows.Media.TileBrush.Viewbox%2A> 會設定為完整包含筆刷的內容。  如需設定 <xref:System.Windows.Controls.Viewbox> 的詳細資訊，請參閱 <xref:System.Windows.Controls.Viewbox> 屬性頁面。  
+ <span data-ttu-id="d5d9d-126">您可以指定的位置和維度的<xref:System.Windows.Media.TileBrush>內容使用<xref:System.Windows.Media.TileBrush.Viewbox%2A>屬性，雖然通常會保留<xref:System.Windows.Media.TileBrush.Viewbox%2A>設為其預設值。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-126">You can specify the position and dimensions of <xref:System.Windows.Media.TileBrush> content by using the <xref:System.Windows.Media.TileBrush.Viewbox%2A> property, although it is common to leave the <xref:System.Windows.Media.TileBrush.Viewbox%2A> set to its default value.</span></span> <span data-ttu-id="d5d9d-127">根據預設，<xref:System.Windows.Media.TileBrush.Viewbox%2A>設定為完全包含 筆刷的內容。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-127">By default, the <xref:System.Windows.Media.TileBrush.Viewbox%2A> is configured to completely contain the brush's contents.</span></span> <span data-ttu-id="d5d9d-128">如需有關設定<xref:System.Windows.Controls.Viewbox>，請參閱<xref:System.Windows.Controls.Viewbox>屬性頁。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-128">For more information about configuring the <xref:System.Windows.Controls.Viewbox>, see the <xref:System.Windows.Controls.Viewbox> property page.</span></span>  
   
 <a name="thebasetile"></a>   
-## 基底並排顯示  
- <xref:System.Windows.Media.TileBrush> 會將其內容投射至基底並排顯示。  <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性會控制 <xref:System.Windows.Media.TileBrush> 內容如何自動縮放以填滿基底並排顯示。  <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性接受下列值 \(由 <xref:System.Windows.Media.Stretch> 列舉型別定義\)：  
+## <a name="the-base-tile"></a><span data-ttu-id="d5d9d-129">基底並排顯示</span><span class="sxs-lookup"><span data-stu-id="d5d9d-129">The Base Tile</span></span>  
+ <span data-ttu-id="d5d9d-130">A<xref:System.Windows.Media.TileBrush>投射基底的並排顯示其內容。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-130">A <xref:System.Windows.Media.TileBrush> projects its content onto a base tile.</span></span> <span data-ttu-id="d5d9d-131"><xref:System.Windows.Media.TileBrush.Stretch%2A>屬性會控制如何<xref:System.Windows.Media.TileBrush>內容會延伸以填滿基底的並排顯示。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-131">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property controls how <xref:System.Windows.Media.TileBrush> content is stretched to fill the base tile.</span></span> <span data-ttu-id="d5d9d-132"><xref:System.Windows.Media.TileBrush.Stretch%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.Stretch>列舉型別：</span><span class="sxs-lookup"><span data-stu-id="d5d9d-132">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property accepts the following values, defined by the <xref:System.Windows.Media.Stretch> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：筆刷內容不會自動縮放以填滿並排顯示。  
+-   <span data-ttu-id="d5d9d-133"><xref:System.Windows.Media.Stretch.None>: 筆刷的內容不會延伸以填滿並排顯示。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-133"><xref:System.Windows.Media.Stretch.None>: The brush's content is not stretched to fill the tile.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：筆刷內容會自動縮放以符合並排顯示。  因為內容的高度和寬度是分開縮放的，所以可能不會保留影像的原始外觀比例 \(Aspect Ratio\)。  也就是說，筆刷內容可能會扭曲以完全填滿輸出並排顯示。  
+-   <span data-ttu-id="d5d9d-134"><xref:System.Windows.Media.Stretch.Fill>: 筆刷的內容會調整為適合磚。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-134"><xref:System.Windows.Media.Stretch.Fill>: The brush's content is scaled to fit the tile.</span></span> <span data-ttu-id="d5d9d-135">因為內容的高度和寬度會分開縮放，所以可能不會保留內容的原始外觀比例。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-135">Because the content's height and width are scaled independently, the original aspect ratio of the content might not be preserved.</span></span> <span data-ttu-id="d5d9d-136">也就是說，筆刷的內容可能會變形以完全填滿輸出並排顯示。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-136">That is, the brush's content might be warped in order to completely fill the output tile.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：筆刷內容會縮放以完全符合並排顯示的大小。  內容的外觀比例會保留下來。  
+-   <span data-ttu-id="d5d9d-137"><xref:System.Windows.Media.Stretch.Uniform>: 筆刷的內容會調整，使其完全符合的區塊中。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-137"><xref:System.Windows.Media.Stretch.Uniform>: The brush's content is scaled so that it fits completely within the tile.</span></span> <span data-ttu-id="d5d9d-138">這會維持內容的外觀比例。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-138">The content's aspect ratio is preserved.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：筆刷內容會縮放以完全填滿輸出區域，並同時保留內容的原始外觀比例。  
+-   <span data-ttu-id="d5d9d-139"><xref:System.Windows.Media.Stretch.UniformToFill>: 筆刷的內容會調整，讓它完全填滿輸出區域，同時維持原始外觀比例的內容。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-139"><xref:System.Windows.Media.Stretch.UniformToFill>: The brush's content is scaled so that it completely fills the output area while preserving the content's original aspect ratio.</span></span>  
   
- 下圖說明不同的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 設定。  
+ <span data-ttu-id="d5d9d-140">下圖顯示不同<xref:System.Windows.Media.TileBrush.Stretch%2A>設定。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-140">The following image illustrates the different <xref:System.Windows.Media.TileBrush.Stretch%2A> settings.</span></span>  
   
- ![不同的 TileBrush Stretch 設定](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.png "img\_mmgraphics\_stretchenum")  
+ <span data-ttu-id="d5d9d-141">![不同的 TileBrush Stretch 設定](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span><span class="sxs-lookup"><span data-stu-id="d5d9d-141">![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span></span>  
   
- 在下列範例中，<xref:System.Windows.Media.ImageBrush> 的內容會設定為不會自動縮放以填滿輸出區域。  
+ <span data-ttu-id="d5d9d-142">在下列範例中，內容<xref:System.Windows.Media.ImageBrush>，讓它不會自動縮放以填滿輸出區域設定。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-142">In the following example, the content of an <xref:System.Windows.Media.ImageBrush> is set so that it does not stretch to fill the output area.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
- 根據預設，<xref:System.Windows.Media.TileBrush> 會產生單一並排顯示 \(基底並排顯示\) 並自動縮放該並排顯示以完全填滿輸出區域。  您可以藉由設定 <xref:System.Windows.Media.TileBrush.Viewport%2A> 和 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 屬性來變更基底並排顯示的大小和位置。  
+ <span data-ttu-id="d5d9d-143">根據預設，<xref:System.Windows.Media.TileBrush>會產生單一的並排顯示 （基底的並排顯示），並完全填滿輸出區域該磚會自動縮放。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-143">By default, a <xref:System.Windows.Media.TileBrush> generates a single tile (the base tile) and stretches that tile to completely fill the output area.</span></span> <span data-ttu-id="d5d9d-144">您可以藉由設定變更的大小和位置的基底的並排顯示<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-144">You can change the size and position of the base tile by setting the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties.</span></span>  
   
 <a name="basetilesize"></a>   
-### 基底並排顯示大小  
- <xref:System.Windows.Media.TileBrush.Viewport%2A> 屬性會判斷基底並排顯示的大小和位置，而 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 屬性則會判斷 <xref:System.Windows.Media.TileBrush.Viewport%2A> 是使用絕對或相對座標指定的。  如果是相對座標，則是相對於輸出區域的大小。  \(0,0\) 這個點表示輸出區域的左上角，而 \(1,1\) 則表示輸出區域的右下角。  若要指定 <xref:System.Windows.Media.TileBrush.Viewport%2A> 屬性使用絕對座標，請將 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 屬性設定為 <xref:System.Windows.Media.BrushMappingMode>。  
+### <a name="base-tile-size"></a><span data-ttu-id="d5d9d-145">基底並排顯示大小</span><span class="sxs-lookup"><span data-stu-id="d5d9d-145">Base Tile Size</span></span>  
+ <span data-ttu-id="d5d9d-146"><xref:System.Windows.Media.TileBrush.Viewport%2A>屬性決定的大小和位置的基底的並排顯示，而<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性會決定是否<xref:System.Windows.Media.TileBrush.Viewport%2A>指定使用絕對或相對座標。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-146">The <xref:System.Windows.Media.TileBrush.Viewport%2A> property determines the size and position of the base tile, and the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property determines whether the <xref:System.Windows.Media.TileBrush.Viewport%2A> is specified using absolute or relative coordinates.</span></span> <span data-ttu-id="d5d9d-147">如果是相對座標，則它們會相對於輸出區域的大小。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-147">If the coordinates are relative, they are relative to the size of the output area.</span></span> <span data-ttu-id="d5d9d-148">(0,0) 這個點表示輸出區域的左上角，而 (1,1) 則表示輸出區域的右下角。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-148">The point (0,0) represents the top left corner of the output area, and (1,1) represents the bottom right corner of the output area.</span></span> <span data-ttu-id="d5d9d-149">若要指定<xref:System.Windows.Media.TileBrush.Viewport%2A>屬性使用絕對座標，設定<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性<xref:System.Windows.Media.BrushMappingMode.Absolute>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-149">To specify that the <xref:System.Windows.Media.TileBrush.Viewport%2A> property uses absolute coordinates, set the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property to <xref:System.Windows.Media.BrushMappingMode.Absolute>.</span></span>  
   
- 下圖顯示使用相對與絕對 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 時 <xref:System.Windows.Media.TileBrush> 輸出之間的差異。  請注意，每個圖例都會顯示並排顯示模式，下一節會說明如何指定並排顯示模式。  
+ <span data-ttu-id="d5d9d-150">下圖顯示在輸出之間的差異<xref:System.Windows.Media.TileBrush>使用相對與絕對<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-150">The following illustration shows the difference in output between a <xref:System.Windows.Media.TileBrush> with relative versus absolute <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.</span></span> <span data-ttu-id="d5d9d-151">請注意，每個圖例都會顯示並排顯示圖樣，下一節會說明如何指定並排顯示圖樣。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-151">Notice that the illustrations each show a tiled pattern; the next section describes how to specify tile pattern.</span></span>  
   
- ![相對和絕對檢視區單元](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute\_and\_relative\_viewports")  
+ <span data-ttu-id="d5d9d-152">![相對和絕對檢視區單元](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")</span><span class="sxs-lookup"><span data-stu-id="d5d9d-152">![Absolute and Relative Viewport Units](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")</span></span>  
   
- 在下列範例中，會使用影像建立 50% 寬度和高度的並排顯示。  基底並排顯示位於輸出區域的 \(0,0\)。  
+ <span data-ttu-id="d5d9d-153">在下列範例中，會使用影像建立 50% 寬度和高度的並排顯示。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-153">In the following example, an image is used to create a tile that has a width and height of 50%.</span></span> <span data-ttu-id="d5d9d-154">基底並排顯示位於輸出區域的 (0,0)。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-154">The base tile is located at (0,0) of the output area.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
- 下一個範例會將 <xref:System.Windows.Media.ImageBrush> 的並排顯示設為 25 乘以 25 個[與裝置無關的像素](GTMT)。  因為 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 是絕對單位，所以不論要繪製的區域有多大，<xref:System.Windows.Media.ImageBrush> 並排顯示都一定是 25 乘以 25 個像素。  
+ <span data-ttu-id="d5d9d-155">下一個範例中設定的圖格<xref:System.Windows.Media.ImageBrush>到 25 的 25 裝置無關的像素。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-155">The next example sets the tiles of an <xref:System.Windows.Media.ImageBrush> to 25 by 25 device independent pixels.</span></span> <span data-ttu-id="d5d9d-156">因為<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>是絕對的<xref:System.Windows.Media.ImageBrush>磚都由 25 25 像素，不論所繪製的區域大小。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-156">Because the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> are absolute, the <xref:System.Windows.Media.ImageBrush> tiles are always 25 by 25 pixels, regardless of the size of the area being painted.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
   
 <a name="tilingbehavior"></a>   
-### 並排顯示行為  
- 當基底並排顯示不完全填滿輸出區域，而且指定的並排顯示模式不是 <xref:System.Windows.Media.TileMode> 時，<xref:System.Windows.Media.TileBrush> 會產生並排顯示圖樣。  當並排顯示筆刷的並排顯示不完全填滿輸出區域時，其 <xref:System.Windows.Media.TileBrush.TileMode%2A> 屬性會指定是否應該複製基底並排顯示以填滿輸出區域，如果是的話，應該如何複製基底並排顯示。  <xref:System.Windows.Media.TileBrush.TileMode%2A> 屬性接受下列值 \(由 <xref:System.Windows.Media.TileMode> 列舉定義\)：  
+### <a name="tiling-behavior"></a><span data-ttu-id="d5d9d-157">並排顯示行為</span><span class="sxs-lookup"><span data-stu-id="d5d9d-157">Tiling Behavior</span></span>  
+ <span data-ttu-id="d5d9d-158">A<xref:System.Windows.Media.TileBrush>產生其基底的並排顯示不未完全填滿輸出區域和並排顯示模式以外的並排顯示的模式<xref:System.Windows.Media.TileMode.None>指定。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-158">A <xref:System.Windows.Media.TileBrush> produces a tiled pattern when its base tile does not completely fill the output area and a tiling mode other then <xref:System.Windows.Media.TileMode.None> is specified.</span></span> <span data-ttu-id="d5d9d-159">拼貼筆刷的磚不未完全填滿輸出區域中，當其<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性指定是否應該重複來填滿輸出區域的基底的並排顯示而且如果是這樣，基底的並排顯示應重複。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-159">When a tile brush's tile does not completely fill the output area, its <xref:System.Windows.Media.TileBrush.TileMode%2A> property specifies whether the base tile should be duplicated to fill the output area and, if so, how the base tile should be duplicated.</span></span> <span data-ttu-id="d5d9d-160"><xref:System.Windows.Media.TileBrush.TileMode%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.TileMode>列舉型別：</span><span class="sxs-lookup"><span data-stu-id="d5d9d-160">The <xref:System.Windows.Media.TileBrush.TileMode%2A> property accepts the following values, defined by the <xref:System.Windows.Media.TileMode> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.TileMode>：只繪製基底並排顯示。  
+-   <span data-ttu-id="d5d9d-161"><xref:System.Windows.Media.TileMode.None>： 只基底的並排顯示繪製。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-161"><xref:System.Windows.Media.TileMode.None>: Only the base tile is drawn.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>：繪製基底並排顯示，並以重複的基底並排顯示填滿其餘區域，使得並排顯示的右邊緣與下一個並排顯示的左邊緣相鄰，上下邊緣也是一樣的情形。  
+-   <span data-ttu-id="d5d9d-162"><xref:System.Windows.Media.TileMode.Tile>： 繪製基底的並排顯示，並重複基底的並排顯示一個圖格的右邊緣是相鄰的左邊緣的下一步，並同樣的底端和頂端填滿剩餘的區域。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-162"><xref:System.Windows.Media.TileMode.Tile>: The base tile is drawn and the remaining area is filled by repeating the base tile such that the right edge of one tile is adjacent to the left edge of the next, and similarly for bottom and top.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>：與 <xref:System.Windows.Media.TileMode> 相同，但是替代欄的並排顯示會以水平方式翻轉。  
+-   <span data-ttu-id="d5d9d-163"><xref:System.Windows.Media.TileMode.FlipX>： 與相同<xref:System.Windows.Media.TileMode.Tile>，但會水平翻轉磚的替代資料行。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-163"><xref:System.Windows.Media.TileMode.FlipX>: The same as <xref:System.Windows.Media.TileMode.Tile>, but alternate columns of tiles are flipped horizontally.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>：與 <xref:System.Windows.Media.TileMode> 相同，但是替代欄的並排顯示會以垂直方式翻轉。  
+-   <span data-ttu-id="d5d9d-164"><xref:System.Windows.Media.TileMode.FlipY>： 與相同<xref:System.Windows.Media.TileMode.Tile>，但會垂直翻轉磚的替代資料列。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-164"><xref:System.Windows.Media.TileMode.FlipY>: The same as <xref:System.Windows.Media.TileMode.Tile>, but alternate rows of tiles are flipped vertically.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>：<xref:System.Windows.Media.TileMode> 和 <xref:System.Windows.Media.TileMode> 的組合。  
+-   <span data-ttu-id="d5d9d-165"><xref:System.Windows.Media.TileMode.FlipXY>： 的組合<xref:System.Windows.Media.TileMode.FlipX>和<xref:System.Windows.Media.TileMode.FlipY>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-165"><xref:System.Windows.Media.TileMode.FlipXY>: A combination of <xref:System.Windows.Media.TileMode.FlipX> and <xref:System.Windows.Media.TileMode.FlipY>.</span></span>  
   
- 下圖說明不同的並排顯示模式。  
+ <span data-ttu-id="d5d9d-166">下列影像說明不同的並排顯示模式。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-166">The following image illustrates the different tiling modes.</span></span>  
   
- ![不同的 TileBrush TileMode 設定](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.png "img\_mmgraphics\_tilemodes")  
+ <span data-ttu-id="d5d9d-167">![不同的 TileBrush TileMode 設定](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")</span><span class="sxs-lookup"><span data-stu-id="d5d9d-167">![Different TileBrush TileMode settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")</span></span>  
   
- 在下列範例中，會使用影像繪製 100 像素寬及 100 像素高的矩形。  藉由將筆刷的 <xref:System.Windows.Media.TileBrush.Viewport%2A> 設為 0,0,0.25,0.25，筆刷的並排顯示會佔輸出區域的 1\/4。  筆刷的 <xref:System.Windows.Media.TileBrush.TileMode%2A> 是設定為 <xref:System.Windows.Media.TileMode>，  所以會以並排顯示列填滿矩形。  
+ <span data-ttu-id="d5d9d-168">在下列範例中，會使用影像繪製 100 像素寬及 100 像素高的矩形。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-168">In the following example, an image is used to paint a rectangle that is 100 pixels wide and 100 pixels tall.</span></span> <span data-ttu-id="d5d9d-169">藉由設定筆刷的<xref:System.Windows.Media.TileBrush.Viewport%2A>已被設定至 0,0,0.25,0.25，基底拼貼筆刷的會是 1/4 輸出區域。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-169">By setting the brush's <xref:System.Windows.Media.TileBrush.Viewport%2A> has been set to 0,0,0.25,0.25, the brush's base tile is made to be 1/4 of the output area.</span></span> <span data-ttu-id="d5d9d-170">筆刷的<xref:System.Windows.Media.TileBrush.TileMode%2A>設<xref:System.Windows.Media.TileMode.FlipXY>。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-170">The brush's <xref:System.Windows.Media.TileBrush.TileMode%2A> is set to <xref:System.Windows.Media.TileMode.FlipXY>.</span></span> <span data-ttu-id="d5d9d-171">所以會以並排顯示列填滿矩形。</span><span class="sxs-lookup"><span data-stu-id="d5d9d-171">so that it fills the rectangle with rows of tiles.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## 請參閱  
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.VisualBrush>   
- <xref:System.Windows.Media.TileBrush>   
- [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)   
- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)   
- [VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a><span data-ttu-id="d5d9d-172">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5d9d-172">See Also</span></span>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
+ <xref:System.Windows.Media.TileBrush>  
+ [<span data-ttu-id="d5d9d-173">使用影像、繪圖和視覺效果繪製</span><span class="sxs-lookup"><span data-stu-id="d5d9d-173">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="d5d9d-174">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="d5d9d-174">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [<span data-ttu-id="d5d9d-175">Freezable 物件概觀</span><span class="sxs-lookup"><span data-stu-id="d5d9d-175">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="d5d9d-176">ImageBrush 範例</span><span class="sxs-lookup"><span data-stu-id="d5d9d-176">ImageBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [<span data-ttu-id="d5d9d-177">VisualBrush 範例</span><span class="sxs-lookup"><span data-stu-id="d5d9d-177">VisualBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160049)
