@@ -1,60 +1,66 @@
 ---
-title: "如何：在日期與時間值中顯示毫秒 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日期 [.NET Framework], 毫秒"
-  - "DateTime.ToString 方法"
-  - "顯示日期和時間資料"
-  - "毫秒 [.NET Framework]"
-  - "時間 [.NET Framework], 毫秒"
+title: "如何：在日期與時間值中顯示毫秒"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DateTime.ToString method
+- displaying date and time data
+- time [.NET Framework], milliseconds
+- dates [.NET Framework], milliseconds
+- milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 260d202eb0a218a6657bc719e36da6f39138e54e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在日期與時間值中顯示毫秒
-預設的日期和時間格式化方法 \(例如 <xref:System.DateTime.ToString?displayProperty=fullName>\) 包括時間值的時、分和秒，但不包括毫秒元件。  本主題將說明如何將日期和時間的毫秒元件加入格式化的日期和時間字串中。  
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：在日期與時間值中顯示毫秒
+預設的日期和時間格式化方法，例如<xref:System.DateTime.ToString?displayProperty=nameWithType>，包含小時、 分鐘和秒的時間值，但排除其毫秒元件。 本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。  
   
-### 顯示 DateTime 值的毫秒元件  
+### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>顯示 DateTime 值的毫秒部分  
   
-1.  如果您使用的是日期的字串表示，請使用靜態 <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> 或 <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=fullName> 方法，將它轉換成 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值。  
+1.  如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> 值。  
   
-2.  若要擷取時間毫秒元件的字串表示，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName> 或是 <xref:System.DateTimeOffset.ToString%2A> 方法，並且單獨傳遞 `fff` 或 `FFF` 自訂格式模式，或是連同其他自訂格式規範一併傳遞做為 `format` 參數。  
+2.  要擷取的字串表示時間的毫秒元件，請呼叫日期和時間值的<xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>或<xref:System.DateTimeOffset.ToString%2A>方法，然後傳遞`fff`或`FFF`單獨或與其他自訂格式的自訂格式模式規範為`format`參數。  
   
-## 範例  
- 這個範例會對主控台單獨顯示 <xref:System.DateTime> 的毫秒元件和 <xref:System.DateTimeOffset> 值，且兩者都會包含在較長的日期和時間字串中。  
+## <a name="example"></a>範例  
+ 此範例會顯示的毫秒數元件<xref:System.DateTime>和<xref:System.DateTimeOffset>主控台中，單獨和包含在較長的日期和時間字串的值。  
   
  [!code-csharp[Formatting.HowTo.Millisecond#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#1)]
  [!code-vb[Formatting.HowTo.Millisecond#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#1)]  
   
- `fff` 格式模式會包含毫秒值中任何結尾的零。  `FFF` 格式模式則會隱藏結尾的零。  以下範例會說明兩者之間的差異。  
+ `fff` 格式模式會包含毫秒值尾端的任何零。 `FFF` 格式模式則會加以隱藏。 下列範例會說明其間的差異。  
   
  [!code-csharp[Formatting.HowTo.Millisecond#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#2)]
  [!code-vb[Formatting.HowTo.Millisecond#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#2)]  
   
- 定義包含日期和時間之毫秒元件的完整格式規範會發生的問題在於，它會定義硬式編碼格式，而該格式可能不會對應到應用程式目前文化特性中時間項目的排列。  較佳的替代方案是擷取目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo> 物件所定義的其中一個日期和時間顯示模式，並且修改該模式以納入毫秒。  這個範例也會說明這個方法。  這個方法會從 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=fullName> 屬性擷取目前文化特性的完整日期和時間模式，然後在其秒模式後面插入自訂的模式 `.ffff`。  請注意，範例中會使用規則運算式在單一方法呼叫中執行這項操作。  
+ 定義包含日期和時間毫秒部分之完整自訂格式規範的問題在於，它會定義硬式編碼格式，而該格式可能不會對應至應用程式目前文化特性中時間項目的排列。 較佳替代方式是擷取一個日期和時間顯示目前的文化特性所定義的模式<xref:System.Globalization.DateTimeFormatInfo>物件，並將它修改為包含毫秒。 此範例也會說明這個方法。 它會擷取目前文化特性的完整日期和時間模式從<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType>屬性，然後將自訂模式`.ffff`其秒模式。 請注意，此範例使用規則運算式，以單一方法呼叫來執行這項操作。  
   
- 除了毫秒之外，您也可以使用自訂格式規範顯示秒的其他小數部分。  例如，`f` 或 `F` 自訂格式規範會顯示秒的十分位數，`ff` 或 `FF` 自訂格式規範會顯示秒的百分位數，而 `ffff` 或 `FFFF` 自訂格式規範則會顯示秒數小數點後的四位數字。  毫秒的小數部分會截斷，而不會進位到傳回的字串中。  這些格式規範會在下面的範例中使用。  
+ 除了毫秒之外，您也可以使用自訂格式規範顯示秒的其他小數部分。 例如，`f` 或 `F` 自訂格式規範會顯示十分之一秒，`ff` 或 `FF` 自訂格式規範會顯示百分之一秒，而 `ffff` 或 `FFFF` 自訂格式規範會顯示萬分之一秒。 毫秒的小數部分會在傳回的字串中被截斷，而不是四捨五入。 下列範例會使用這些格式規範。  
   
  [!code-csharp[Formatting.HowTo.Millisecond#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#3)]
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
->  另外，也可以顯示非常小的秒數小數單位，例如，秒數小數點後的四位數或五位數。  不過，這些值可能沒有太大的意義。  日期和時間值的精確度會根據系統時鐘的解析度而定。  在 Windows NT 3.5 \(含\) 以後版本及 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] 作業系統上，時鐘的解析度大約為 10\-15 毫秒。  
+>  您可以使用非常小的小數單位來顯示秒，例如萬分之一秒或十萬分之一秒。 不過，這些值可能沒有太大的意義。 日期和時間值的精確度會根據系統時鐘的解析度而定。 在 Windows NT 3.5 版和更新版本，和[!INCLUDE[windowsver](../../../includes/windowsver-md.md)]作業系統，時鐘的解析度會大約為 10-15 毫秒。  
   
-## 編譯程式碼  
- 使用 csc.exe 或 vb.exe 在命令列編輯程式碼。  若要編譯 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的程式碼，請將程式碼放在主控台應用程式專案範本中。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 在命令列使用 csc.exe 或 vb.exe 程式碼編譯。 若要編譯中的程式碼[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，將其放在主控台應用程式專案範本。  
   
-## 請參閱  
- <xref:System.Globalization.DateTimeFormatInfo>   
- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Globalization.DateTimeFormatInfo>  
+ [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

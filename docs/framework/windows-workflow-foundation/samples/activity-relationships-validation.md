@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 03ac8e41f8126c6b05eac82d143291a0de491969
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8d527b728d0b4ac86a8dd98afb45a09585bd0c96
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="activity-relationships-validation"></a>活動關聯性驗證
 這個範例包含三個活動：`CreateCity`、`CreateState` 和 `CreateCountry`。 `CreateCity` 必須在 `CreateState` 活動內部，而 `CreateState` 必須在 `CreateCountry` 活動內部。 基於此範例的目的，`CreateState` 活動的驗證邏輯為程式碼形式，而 `CreateCity` 活動的驗證邏輯為 XAML 形式。 這兩個條件約束有相同的行為。  
@@ -49,6 +49,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`  
-  
-## <a name="see-also"></a>另請參閱
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`

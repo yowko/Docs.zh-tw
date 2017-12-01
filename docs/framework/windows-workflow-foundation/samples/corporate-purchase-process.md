@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。  
@@ -180,6 +180,4 @@ ms.lasthandoff: 10/18/2017
   
 -   **View RFP**： 顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
--   **Connect As**： 使用者可以存取使用不同的身分識別選取所需的參與者中 RFP**以檢視**作用中 Rfp 方格中的下拉式方塊。  
-  
-## <a name="see-also"></a>另請參閱
+-   **Connect As**： 使用者可以存取使用不同的身分識別選取所需的參與者中 RFP**以檢視**作用中 Rfp 方格中的下拉式方塊。

@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: e3fdc37e22bf06cdfdad3141af5657a1b20911a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: f45d4ffc04b206db0dfefbdbbe683146e09c767f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-activity-validation"></a>外部活動驗證
 這個範例示範如何將驗證邏輯加入至不是您撰寫的內建活動。 驗證邏輯包含強制工作流程中的所有 <xref:System.Activities.Statements.If> 活動應設定 <xref:System.Activities.Statements.If.Then%2A> 屬性或 <xref:System.Activities.Statements.If.Else%2A> 屬性。 此外，驗證邏輯也包含檢查工作流程中的所有 <xref:System.Activities.Statements.Pick> 活動都有一個以上的分支，否則會產生警告。  
@@ -42,6 +42,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`  
-  
-## <a name="see-also"></a>另請參閱
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`

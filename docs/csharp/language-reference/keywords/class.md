@@ -1,42 +1,22 @@
 ---
 title: "類別 (C# 參考)"
-ms.date: 2017-07-18
+ms.date: 07/18/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- class keyword [C#]
+helpviewer_keywords: class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cd4fbca0ce7148c571075d31a0e1e4a986d75149
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -62,7 +42,7 @@ class TestClass
 
 直接在命名空間內宣告的類別 (未巢狀在其他類別內) 可以是 [public](../../../csharp/language-reference/keywords/public.md) 或 [internal](../../../csharp/language-reference/keywords/internal.md)。 類別預設為 `internal`。
 
-類別成員 (包括巢狀類別) 可以是 [public](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md)。 成員預設為 [private](../../../csharp/language-reference/keywords/private.md)。
+類別成員，包括巢狀的類別，可以是[公用](../../../csharp/language-reference/keywords/public.md)， `protected internal`，[保護](../../../csharp/language-reference/keywords/protected.md)，[內部](../../../csharp/language-reference/keywords/internal.md)，[私人](../../../csharp/language-reference/keywords/private.md)，或`private protected`. 成員預設為 [private](../../../csharp/language-reference/keywords/private.md)。
 
 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
 
@@ -99,7 +79,7 @@ class TestClass
 ## <a name="example"></a>範例
 下列範例示範如何宣告類別欄位、建構函式和方法。 它也會示範物件具現化和列印執行個體資料。 在此範例中，宣告兩個類別。 第一個類別 `Child`，包含兩個私用欄位 (`name` 和 `age`)、兩個公用建構函式和一個公用方法。 第二個類別 `StringTest` 是用來包含 `Main`。
 
-[!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
 
 ## <a name="comments"></a>註解
 請注意，在上述範例中，只能透過 `Child` 類別的公用方法來存取私用欄位 (`name` 和 `age`)。 例如，您無法使用如下的陳述式，從 `Main` 方法列印子系的名稱︰
@@ -118,8 +98,7 @@ Console.Write(child1.name);   // Error
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>另請參閱
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
  [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
-

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型 #
 
@@ -34,7 +34,7 @@ C# 提供解構元組的內建支援，讓您以單一作業將元組中的所�
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-解構元組的方式有兩種：
+有三種方法來拆解 tuple:
 
 - 您可以明確地宣告括弧內每個欄位的類型。 下列範例會使用此方法來解構 `QueryCityData` 方法傳回的 3 元組。
 
@@ -50,9 +50,15 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
     這樣做很麻煩，因此不建議使用。
 
+- 最後，您可能會毀滅 tuple 到已經宣告的變數。
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 請注意，您無法在括弧外指定特定類型，即使元組中的每個欄位都有相同的類型也是一樣。 這會產生編譯器錯誤 CS8136：「解構 'var (...)' 表單不允許特定的 'var' 類型」。
 
 請注意，您也必須將元組的每個項目指派給個別變數。 如果您省略任何項目，編譯器會產生錯誤 CS8132：「無法將 'x' 項目的元組解構為 'y' 變數」。
+
+請注意您不能混用宣告和解構指派給現有變數的左側。 編譯器會產生錯誤 CS8184，「 解構不能混用宣告和左右手邊的運算式。 」 當成員包含新的宣告和現有的變數。
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用 Discard 解構元組項目
 

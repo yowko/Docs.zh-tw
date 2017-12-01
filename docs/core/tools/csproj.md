@@ -4,19 +4,17 @@ description: "深入了解現有和 .NET Core csproj 檔案之間的差異"
 keywords: "參考, csproj, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/03/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
+ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
 本文件概述從 *project.json* 改為使用 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 時，新增至專案檔的變更。 如需一般專案檔語法以及參考的詳細資訊，請參閱 [MSBuild 專案檔](/visualstudio/msbuild/msbuild-project-file-schema-reference)文件。  
@@ -39,10 +37,11 @@ ms.lasthandoff: 07/28/2017
 ### <a name="recommendations"></a>建議
 由於會隱含參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件，因此建議使用下列最佳做法：
 
-* 絕不透過專案檔中的 `<PackageReference>` 項目明確參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件。
-* 如果您需要特定版本的執行階段，您應該使用專案中的 `<RuntimeFrameworkVersion>` 屬性 (例如 `1.0.4`)，而不是參考中繼套件。
+* 當目標為.NET Core 或.NET 標準，永遠都不需要的明確參考`Microsoft.NETCore.App`或`NetStandard.Library`透過 metapackages`<PackageReference>`專案檔中的項目。
+* 如果您需要特定版本的執行階段，當目標為.NET Core 時，您應該使用`<RuntimeFrameworkVersion>`專案中的屬性 (例如， `1.0.4`) 而不是參考 metapackage。
     * 如果您使用[獨立性部署](../deploying/index.md#self-contained-deployments-scd)，並需要 1.0.0 LTS 執行階段的特定更新程式版本，就可能會發生此情況。
-* 如果您需要特定版本的 `NetStandard.Library` 中繼套件，您可以使用 `<NetStandardImplicitPackageVersion>` 屬性並設定所需的版本。 
+* 如果您需要特定版本的`NetStandard.Library`metapackage 為目標的.NET 標準時，您可以使用`<NetStandardImplicitPackageVersion>`必要的屬性和設定的版本。
+* 請勿明確地新增或更新為參考`Microsoft.NETCore.App`或`NetStandard.Library`metapackage.NET Framework 的專案中。 如果任何版本的`NetStandard.Library`需要使用標準.NET 為基礎的 NuGet 套件，NuGet 會自動安裝該版本。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 專案中包含預設編譯
 隨著改為使用最新 SDK 版本中的 *csproj* 格式，編譯項目的預設包含項目和排除項目以及內嵌資源都已移至 SDK 屬性檔。 這表示您不再需要於專案檔中指定這些項目。 
@@ -51,11 +50,11 @@ ms.lasthandoff: 07/28/2017
 
 下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))： 
 
-| 項目              | 包含 Glob                               | 排除 Glob                                                     | 移除 Glob                  |
+| 項目           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| 編譯              | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc     | N/A                          |
-| 內嵌資源     | \*\*/\*.resx                                 | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                          |
-| 無                 | \*\*/\*                                      | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
+| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
+| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 如果您的專案有 Glob，而且您嘗試使用最新的 SDK 建置專案，您會收到下列錯誤：
 
@@ -72,6 +71,15 @@ ms.lasthandoff: 07/28/2017
 
 這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
+`<EnableDefaultCompileItems>`只會停用`Compile`globs 但不會影響其他 globs，像是隱含`None`glob，也適用於\*.cs 項目。 因此，**方案總管 中**會繼續顯示\*.cs 項目，做為專案的一部分，包含做為`None`項目。 您可以使用類似的方式，`<EnableDefaultNoneItems>`停用隱含`None`glob。
+
+若要停用**所有隱含 globs**，您可以設定`<EnableDefaultItems>`屬性`false`如下列範例所示：
+```xml
+<PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
+
 ### <a name="recommendation"></a>建議
 使用 csproj 時，建議您從專案中移除預設 Glob，並只使用 Glob 新增您的應用程式/程式庫在各種情況下 (例如執行階段與 NuGet 套件) 所需之成品的檔案路徑。
 
@@ -83,6 +91,7 @@ ms.lasthandoff: 07/28/2017
 
 如果專案具有多個目標架構，系統應該會透過將它們的其中之一指定為 MSBuild 屬性，來使命令的結果專注於該目標架構：
 
+`dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
 
 ## <a name="additions"></a>新增項目
 
@@ -187,7 +196,7 @@ ms.lasthandoff: 07/28/2017
 套件的易記標題，通常會用於 UI 顯示，以及 nuget.org 和 Visual Studio 套件管理員中。 如果未指定，則會改用套件識別碼。
 
 ### <a name="authors"></a>作者
-以分號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。 這些名稱會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。
+以分號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些名稱會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。
 
 ### <a name="description"></a>說明
 UI 顯示中的套件詳細描述。
@@ -260,4 +269,3 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 以分號分隔的索引鍵=值組清單。
-

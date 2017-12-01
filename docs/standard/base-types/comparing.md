@@ -1,59 +1,66 @@
 ---
-title: "在 .NET Framework 中比較字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Compare 方法"
-  - "CompareOrdinal 方法"
-  - "CompareTo 方法"
-  - "EndsWith 方法"
-  - "Equals 方法"
-  - "IndexOf 方法"
-  - "LastIndexOf 方法"
-  - "StartsWith 方法"
-  - "字串 [.NET Framework], 比較"
-  - "字串值的比較"
+title: "在.NET 中比較字串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- value comparisons of strings
+- LastIndexOf method
+- CompareTo method
+- IndexOf method
+- Compare method
+- strings [.NET Framework], comparing
+- CompareOrdinal method
+- EndsWith method
+- Equals method
+- StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 34aa922155943d1b4d39de2e7c33ebc1228e1083
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 .NET Framework 中比較字串
-.NET Framework 會提供數種方法來比較字串值。 下表列出並描述數值比較的方法。  
+# <a name="comparing-strings-in-net"></a>在.NET 中比較字串
+.NET 會提供數種方法來比較字串值。 下表列出並描述數值比較的方法。  
   
 |方法名稱|用法|  
-|----------|--------|  
-|<xref:System.String.Compare%2A?displayProperty=fullName>|比較兩個字串的值。 傳回整數值。|  
-|<xref:System.String.CompareOrdinal%2A?displayProperty=fullName>|比較兩個字串，而不考慮當地文化特性。 傳回整數值。|  
-|<xref:System.String.CompareTo%2A?displayProperty=fullName>|比較目前字串物件與另一個字串。 傳回整數值。|  
-|<xref:System.String.StartsWith%2A?displayProperty=fullName>|判斷字串是否以傳遞的字串開頭。 傳回布林值。|  
-|<xref:System.String.EndsWith%2A?displayProperty=fullName>|判斷字串是否以傳遞的字串結束。 傳回布林值。|  
-|<xref:System.String.Equals%2A?displayProperty=fullName>|判斷兩個字串是否相同。 傳回布林值。|  
-|<xref:System.String.IndexOf%2A?displayProperty=fullName>|從您正在檢查之字串的開頭開始，傳回字元或字串的索引位置。 傳回整數值。|  
-|<xref:System.String.LastIndexOf%2A?displayProperty=fullName>|從您正在檢查之字串的結尾開始，傳回字元或字串的索引位置。 傳回整數值。|  
+|-----------------|---------|  
+|<xref:System.String.Compare%2A?displayProperty=nameWithType>|比較兩個字串的值。 傳回整數值。|  
+|<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|比較兩個字串，而不考慮當地文化特性。 傳回整數值。|  
+|<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|比較目前字串物件與另一個字串。 傳回整數值。|  
+|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|判斷字串是否以傳遞的字串開頭。 傳回布林值。|  
+|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|判斷字串是否以傳遞的字串結束。 傳回布林值。|  
+|<xref:System.String.Equals%2A?displayProperty=nameWithType>|判斷兩個字串是否相同。 傳回布林值。|  
+|<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|從您正在檢查之字串的開頭開始，傳回字元或字串的索引位置。 傳回整數值。|  
+|<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|從您正在檢查之字串的結尾開始，傳回字元或字串的索引位置。 傳回整數值。|  
   
-## 比較  
- 靜態 <xref:System.String.Compare%2A?displayProperty=fullName> 方法提供全面的方式來比較兩個字串。 該方法會感知文化特性。 您可以使用這個函式來比較兩個字串或兩個字串的子字串。 此外，會假定多載為考慮或是忽略大小寫和文化特性變異數。 下表顯示這個方法可能會傳回的三個整數值。  
+## <a name="compare"></a>比較  
+ 靜態 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法提供全面的方式來比較兩個字串。 該方法會感知文化特性。 您可以使用這個函式來比較兩個字串或兩個字串的子字串。 此外，會假定多載為考慮或是忽略大小寫和文化特性變異數。 下表顯示這個方法可能會傳回的三個整數值。  
   
 |傳回值|條件|  
-|---------|--------|  
-|負整數|在此排序次序中，第一個字串優先於第二個字串。<br /><br /> \-或\-<br /><br /> 第一個字串是 `null`。|  
-|0|第一個字串和第二個字串相等。<br /><br /> \-或\-<br /><br /> 這兩個字串都是 `null`。|  
-|正整數<br /><br /> \-或\-<br /><br /> 1|在此排序次序中，第一個字串在第二個字串的後面。<br /><br /> \-或\-<br /><br /> 第二個字串是 `null`。|  
+|------------------|---------------|  
+|負整數|在此排序次序中，第一個字串優先於第二個字串。<br /><br /> -或-<br /><br /> 第一個字串是 `null`。|  
+|0|第一個字串和第二個字串相等。<br /><br /> -或-<br /><br /> 這兩個字串都是 `null`。|  
+|正整數<br /><br /> -或-<br /><br /> 1|在此排序次序中，第一個字串在第二個字串的後面。<br /><br /> -或-<br /><br /> 第二個字串是 `null`。|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=fullName> 方法主要是用於排序或字串排序時。 您不應該使用 <xref:System.String.Compare%2A?displayProperty=fullName> 方法來測試是否相等 \(也就是明確地尋找為 0 的傳回值，而不考慮字串是否小於或大於另一個字串\)。 相反地，若要判斷兩個字串是否相等，請使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 方法。  
+>  <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法主要是用於排序或字串排序時。 您不應該使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法來測試是否相等 (也就是明確地尋找為 0 的傳回值，而不考慮字串是否小於或大於另一個字串)。 相反地，若要判斷兩個字串是否相等，請使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
- 下列範例會使用 <xref:System.String.Compare%2A?displayProperty=fullName> 方法，以判斷兩個字串的相對值。  
+ 下列範例會使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法，以判斷兩個字串的相對值。  
   
  [!code-cpp[Conceptual.String.BasicOps#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#6)]
  [!code-csharp[Conceptual.String.BasicOps#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#6)]
@@ -61,13 +68,13 @@ caps.handback.revision: 15
   
  此範例會顯示 `-1` 至主控台。  
   
- 上述範例根據預設會區分文化特性。 若要執行不區分文化特性的字串比較，使用 <xref:System.String.Compare%2A?displayProperty=fullName> 方法的多載，可讓您藉由提供*文化特性*參數來指定要使用的文化特性。 如需範例示範如何使用 <xref:System.String.Compare%2A?displayProperty=fullName> 方法以執行不區分文化特性的比較，請參閱[執行不區分文化特性的字串比較](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ 上述範例根據預設會區分文化特性。 若要執行不區分文化特性的字串比較，使用的多載<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，可讓您指定要使用所提供的文化特性*文化特性*參數。 如需範例，示範如何使用<xref:System.String.Compare%2A?displayProperty=nameWithType>方法以執行不區分文化特性的比較，請參閱[執行不區分文化特性的字串比較](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
-## CompareOrdinal  
- <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 方法會比較兩個字串物件，而不考慮當地文化特性。 這個方法的傳回值與上表中**比較**方法所傳回的值相同。  
+## <a name="compareordinal"></a>CompareOrdinal  
+ <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法會比較兩個字串物件，而不考慮當地文化特性。 這個方法的傳回值與上表中 **比較** 方法所傳回的值相同。  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 方法主要是用於排序或字串排序時。 您不應該使用 <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 方法來測試是否相等 \(也就是明確地尋找為 0 的傳回值，而不考慮字串是否小於或大於另一個字串\)。 相反地，若要判斷兩個字串是否相等，請使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 方法。  
+>  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法主要是用於排序或字串排序時。 您不應該使用 <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法來測試是否相等 (也就是明確地尋找為 0 的傳回值，而不考慮字串是否小於或大於另一個字串)。 相反地，若要判斷兩個字串是否相等，請使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
  下列範例會使用 **CompareOrdinal** 方法，以判斷兩個字串的值。  
   
@@ -77,13 +84,13 @@ caps.handback.revision: 15
   
  此範例會顯示 `-32` 至主控台。  
   
-## CompareTo  
- <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法會比較目前字串物件封裝到另一個字串或物件中的字串。 這個方法的傳回值與上表中 <xref:System.String.Compare%2A?displayProperty=fullName> 方法所傳回的值相同。  
+## <a name="compareto"></a>CompareTo  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法會比較目前字串物件封裝到另一個字串或物件中的字串。 這個方法的傳回值與上表中 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法所傳回的值相同。  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法主要是用於排序或字串排序時。 您不應該使用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法來測試是否相等 \(也就是明確地尋找為 0 的傳回值，而不考慮字串是否小於或大於另一個字串\)。 相反地，若要判斷兩個字串是否相等，請使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 方法。  
+>  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法主要是用於排序或字串排序時。 您不應該使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法來測試是否相等 (也就是明確地尋找為 0 的傳回值，而不考慮字串是否小於或大於另一個字串)。 相反地，若要判斷兩個字串是否相等，請使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
   
- 下列範例會使用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法來比較 `string1` 物件和 `string2` 物件。  
+ 下列範例會使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法來比較 `string1` 物件和 `string2` 物件。  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
@@ -91,10 +98,10 @@ caps.handback.revision: 15
   
  此範例會顯示 `-1` 至主控台。  
   
- 根據預設，所有 <xref:System.String.CompareTo%2A?displayProperty=fullName> 方法的多載會執行區分文化特性和區分大小寫的比較。 此方法不提供可讓您執行不區分文化特性比較的多載。 為了讓程式碼更清楚，建議您改用 **String.Compare** 方法，對於區分文化特性的作業指定 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 或對於不區分文化特性的作業指定 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>。 如需範例示範如何使用 **String.Compare** 方法以執行區分文化特性和不區分文化特性的比較，請參閱[執行不區分文化特性的字串比較](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ 所有多載<xref:System.String.CompareTo%2A?displayProperty=nameWithType>預設方法執行區分文化特性和區分大小寫的比較。 此方法不提供可讓您執行不區分文化特性比較的多載。 程式碼更清楚，所以，我們建議您使用**String.Compare**方法，指定<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>區分文化特性的作業或<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>不區分文化特性的作業。 如需範例示範如何使用 **String.Compare** 方法以執行區分文化特性和不區分文化特性的比較，請參閱 [執行不區分文化特性的字串比較](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
-## 等於  
- **String.Equals** 方法可以輕易地判斷兩個字串是否相同。 這個區分大小寫的方法會傳回 **true** 或 **false** 布林值。 它可從現有的類別下使用，如下一個範例中所示。 下列範例會使用**等於**方法來判斷字串物件是否包含片語 "Hello World"。  
+## <a name="equals"></a>等於  
+ **String.Equals** 方法可以輕易地判斷兩個字串是否相同。 這個區分大小寫的方法會傳回 **true** 或 **false** 布林值。 它可從現有的類別下使用，如下一個範例中所示。 下列範例會使用 **等於** 方法來判斷字串物件是否包含片語 "Hello World"。  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
  [!code-csharp[Conceptual.String.BasicOps#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#9)]
@@ -110,8 +117,8 @@ caps.handback.revision: 15
   
  此範例會顯示 `True` 至主控台。  
   
-## StartsWith 和 EndsWith  
- 您可以使用 **String.StartsWith** 方法來判斷字串物件開頭是否為包含另一個字串的相同字元。 如果目前字串物件的開頭為傳遞的字串，則這個區分大小寫的方法會傳回 **true**，否則為 **false**。 下列範例會使用這個方法，以判斷字串物件開頭是否為 "Hello"。  
+## <a name="startswith-and-endswith"></a>StartsWith 和 EndsWith  
+ 您可以使用 **String.StartsWith** 方法來判斷字串物件開頭是否為包含另一個字串的相同字元。 如果目前字串物件的開頭為傳遞的字串，則這個區分大小寫的方法會傳回 **true** ，否則為 **false** 。 下列範例會使用這個方法，以判斷字串物件開頭是否為 "Hello"。  
   
  [!code-cpp[Conceptual.String.BasicOps#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#11)]
  [!code-csharp[Conceptual.String.BasicOps#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#11)]
@@ -125,9 +132,9 @@ caps.handback.revision: 15
  [!code-csharp[Conceptual.String.BasicOps#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#12)]
  [!code-vb[Conceptual.String.BasicOps#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#12)]  
   
- 此範例會顯示 `False`  至主控台。  
+ 此範例會顯示 `False` 至主控台。  
   
-## IndexOf 和 LastIndexOf  
+## <a name="indexof-and-lastindexof"></a>IndexOf 和 LastIndexOf  
  您可以使用 **String.IndexOf** 方法，以判斷字串中第一次出現特定字元的位置。 這個區分大小寫的方法從字串開頭開始算起，並使用以零為起始的索引傳回傳遞字元的位置。 如果找不到該字元，則會傳回 –1 的值。  
   
  下列範例會使用 **IndexOf** 方法在字串中搜尋 '`l`' 字元的第一次出現。  
@@ -148,8 +155,8 @@ caps.handback.revision: 15
   
  此範例會顯示 `9` 至主控台。  
   
- 當搭配 **String.Remove** 方法使用時，這兩種方法都很實用。 您可以使用 **IndexOf** 或 **LastIndexOf** 方法來擷取字元的位置，然後提供該位置給**移除**方法，以移除字元或以該字元開頭的單字。  
+ 當搭配 **String.Remove** 方法使用時，這兩種方法都很實用。 您可以使用 **IndexOf** 或 **LastIndexOf** 方法來擷取字元的位置，然後提供該位置給 **移除** 方法，以移除字元或以該字元開頭的單字。  
   
-## 請參閱  
- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)   
- [執行不區分文化特性的字串作業](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>另請參閱  
+ [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)  
+ [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

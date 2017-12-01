@@ -1,5 +1,5 @@
 ---
-title: "Linux 上 .NET Core 的先決條件"
+title: "Linux 上 .NET Core 的必要條件"
 description: "支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電腦上開發、部署和執行 .NET Core 應用程式。"
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
+ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
-ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先決條件
+# <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
 本文會說明在 Linux 開發 .NET Core 應用程式所需的相依性。 支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：
 
@@ -64,33 +62,35 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="linux-distribution-dependencies"></a>Linux 發行版本相依性
 
+下列被要作為範例。 確切的版本和名稱會有些許上您所選擇的 Linux 散發。
+
 ### <a name="ubuntu"></a>Ubuntu
 
 Ubuntu 發行版本需要安裝下列程式庫：
 
 * libunwind8
-* libunwind8-dev
-* gettext
-* libicu-dev
-* liblttng-ust-dev
-* libcurl4-openssl-dev
-* libssl-dev
-* uuid-dev
-* unzip
+* liblttng ust0
+* libcurl3
+* libssl1.0.0
+* libuuid1
+* libkrb5
+* zlib1g
+* libicu52 （適用於 14.X)
+* libicu55 （適用於 16.X)
+* libicu57 （適用於 17.X)
 
 ### <a name="centos"></a>CentOS
 
 CentOS 發行版本需要安裝下列程式庫：
 
-* deltarpm
-* epel-release
-* unzip
 * libunwind
-* gettext
-* libcurl-devel
-* openssl-devel
+* lttng ust
+* libcurl
+* openssl 程式庫
+* libuuid
+* krb5 程式庫
+* libicu
 * zlib
-* libicu-devel
 
 如需有關相依性的詳細資訊，請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) \(英文\)。
 
@@ -105,7 +105,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>使用 .NET Core 安裝程式指令碼以指令碼進行安裝
 
-`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。 您可以從 [CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain) 下載指令碼。
+`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。 您可以下載從指令碼： https://dot.net/v1/dotnet-install.sh
 
 安裝程式 bash 指令碼是用於自動化案例和非系統管理員安裝。 此指令碼也能讀取 PowerShell 參數，所以它們可以搭配 Linux/OS X 系統上的指令碼一起使用。
 
@@ -114,7 +114,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 ## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>安裝 Red Hat Enterprise Linux (RHEL) 7 的 .NET Core
 
-在 RHEL 7 上安裝 .NET Core：
+若要在 RHEL 7 上安裝 .NET Core：
 
 1. 啟用 Red Hat .NET 通道，位於 RHEL 7 訂閱底下。
     * Red Hat Enterprise 7 伺服器請使用：
@@ -347,7 +347,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 取得先決條件。
+2. 取得必要條件。
 
    ```bash
    sudo apt-get install curl libunwind8 gettext
@@ -454,7 +454,7 @@ Linux 上有兩個安裝程式套件選擇：
    dotnet --version
    ```
 
-## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>安裝 .NET Core for CentOS 7.1 (64 位元) 與 Oracle Linux 7.1 (64 位元)
+## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>安裝 .NET Core for CentOS 7.1 (64 位元) 以及 Oracle Linux 7.1 (64 位元)
 
 安裝 .NET Core for CentOS 7.1 (64 位元) 與 Oracle Linux 7.1 (64 位元)：
 
@@ -493,7 +493,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 取得先決條件。
+2. 取得必要條件。
 
    ```bash
    sudo yum install libunwind libicu
@@ -525,7 +525,7 @@ Linux 上有兩個安裝程式套件選擇：
    dotnet --version
    ```
 
-## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>安裝適用於 SUSE Linux Enterprise Server (64 位元) 的 .NET Core
+## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>安裝適用於 SUSE Linux Enterprise Server 的 .NET Core (64 位元)
 
 安裝適用於 SUSE Linux Enterprise Server (SLES) 12 SP2 (64 位元) 的 .NET Core 2.x：
 
@@ -558,7 +558,7 @@ Linux 上有兩個安裝程式套件選擇：
    dotnet --version
    ```
    
-## <a name="install-net-core-for-opensuse-64-bit"></a>安裝適用於 openSUSE (64 位元) 的 .NET Core
+## <a name="install-net-core-for-opensuse-64-bit"></a>安裝適用於 openSUSE 的 .NET Core (64 位元)
 
 安裝適用於 openSUSE 的 .NET Core 2.x 或適用於 openSUSE (64 位元) 的 .NET Core 1.x：
 
@@ -597,7 +597,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 取得先決條件。
+2. 取得必要條件。
 
    ```bash
    sudo zypper install libunwind libicu
@@ -633,4 +633,3 @@ Linux 上有兩個安裝程式套件選擇：
 > 如果支援的 Linux 發行版本/版本遇到 .NET Core 2.x 安裝問題，請參閱已安裝的發行版本/版本的 [2.0 已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.0)主題。 
 >
 > 如果支援的 Linux 發行版本/版本遇到 .NET Core 1.x 安裝問題，請參閱已安裝的發行版本/版本的 [1.0.0 已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主題。
-

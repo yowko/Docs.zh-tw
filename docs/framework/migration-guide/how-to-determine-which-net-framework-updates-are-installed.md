@@ -1,12 +1,9 @@
 ---
-title: "如何：判斷安裝的 .NET Framework 更新"
-ms.custom: 
-ms.date: 03/30/2017
+title: "如何： 判斷已安裝哪些.NET Framework 安全性更新和 hotfix"
+description: "了解如何判斷電腦上已安裝哪些.NET Framework 安全性更新和 hotfix。"
+ms.date: 11/21/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,69 +12,106 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ba734dd3a9585b52b96cb2d27743da6190961126
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c35705470a8e1b553eca2ca0c68d3b8b9b3f6fa6
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
-# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>如何：判斷安裝的 .NET Framework 更新
-電腦上所安裝之每一版 .NET Framework 已安裝的更新都會列在 Windows 登錄中。 您可以使用登錄編輯程式 (regedit.exe) 檢視這項資訊。  
-  
- 在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
-  
-### <a name="to-find-installed-updates"></a>尋找已安裝的更新  
-  
-1.  開啟 **regedit.exe** 程式。 在 Windows 8 (含) 以上版本中，開啟 [開始] 畫面，然後輸入名稱。 在舊版 Windows 中，於 [開始] 功能表上選擇 [執行]，然後在 [開啟] 方塊中輸入 **regedit.exe**。  
-  
-     您必須具有系統管理認證才能執行 regedit.exe。  
-  
-2.  在 [登錄編輯程式] 中，開啟下列子機碼：  
-  
-     HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates  
-  
-     已安裝的更新會列於子機碼下，這些子機碼可識別套用更新的 .NET Framework 版本。 每個更新都是透過知識庫 (KB) 號碼加以識別。  
-  
-## <a name="example"></a>範例  
- 下列程式碼以程式設計方式判斷電腦上所安裝的 .NET Framework 更新。 您必須具有系統管理認證才能執行這個範例。  
-  
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
- [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
-  
- 這個範例產生的輸出類似下面所述：  
-  
-```  
-Microsoft .NET Framework 3.5 SP1  
-  KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
-  SP1  
-    KB2657424  Security Update for Microsoft .NET Framework 3.5 SP1 (KB2657424)  
-    KB958484  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB958484)  
-    KB963707  Update for Microsoft .NET Framework 3.5 SP1 (KB963707)  
-Microsoft .NET Framework 4 Client Profile  
-  KB2160841  Security Update for Microsoft .NET Framework 4 Client Profile (KB2160841)  
-  KB2446708  Security Update for Microsoft .NET Framework 4 Client Profile (KB2446708)  
-  KB2468871  Update for Microsoft .NET Framework 4 Client Profile (KB2468871)  
-  KB2478663  Security Update for Microsoft .NET Framework 4 Client Profile (KB2478663)  
-  KB2518870  Security Update for Microsoft .NET Framework 4 Client Profile (KB2518870)  
-  KB2533523  Update for Microsoft .NET Framework 4 Client Profile (KB2533523)  
-  KB2539636  Security Update for Microsoft .NET Framework 4 Client Profile (KB2539636)  
-  KB2572078  Security Update for Microsoft .NET Framework 4 Client Profile (KB2572078)  
-  KB2633870  Security Update for Microsoft .NET Framework 4 Client Profile (KB2633870)  
-  KB2656351  Security Update for Microsoft .NET Framework 4 Client Profile (KB2656351)  
-Microsoft .NET Framework 4 Extended  
-  KB2416472  Security Update for Microsoft .NET Framework 4 Extended (KB2416472)  
-  KB2468871  Update for Microsoft .NET Framework 4 Extended (KB2468871)  
-  KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
-  KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
-  KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-```  
-  
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何： 判斷已安裝哪些.NET Framework 安全性更新和 hotfix
+
+本文將說明如何找出哪些.NET Framework 安全性更新，並在電腦上已安裝 hotfix。
+
+> [!NOTE]
+> 本文中所顯示的所有技術都需要具有系統管理權限的帳戶。
+
+## <a name="to-find-installed-updates-using-the-registry"></a>尋找已安裝的更新登錄
+
+Windows 登錄中列出的已安裝的安全性更新和 hotfix 的電腦上安裝的.NET Framework 的每個版本。 您可以使用登錄編輯程式 (*regedit.exe*) 若要檢視這項資訊的程式。
+
+1. 開啟 **regedit.exe** 程式。 在 Windows 8 和更新版本中，以滑鼠右鍵按一下**啟動** ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")，然後選取**執行**。 在**開啟**方塊中，輸入**regedit**選取**確定**。
+
+2. 在 [登錄編輯程式] 中，開啟下列子機碼：
+
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+
+     已安裝的更新會列於子機碼下，這些子機碼可識別套用更新的 .NET Framework 版本。 每個更新都是透過知識庫 (KB) 號碼加以識別。
+
+在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝的版本號碼相關的資訊，請參閱[How to： 判斷已安裝哪些.NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>若要尋找安裝的更新藉由查詢程式碼中登錄
+
+下列範例以程式設計方式判斷.NET Framework 安全性更新和 hotfix 安裝在電腦上：
+
+[!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
+[!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
+
+這個範例會產生類似下列的輸出：
+
+```console
+Microsoft .NET Framework 4 Client Profile
+  KB2468871
+  KB2468871v2
+  KB2478063
+  KB2533523
+  KB2544514
+  KB2600211
+  KB2600217
+Microsoft .NET Framework 4 Extended
+  KB2468871
+  KB2468871v2
+  KB2478063
+  KB2533523
+  KB2544514
+  KB2600211
+  KB2600217
+```
+
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>若要尋找安裝的更新藉由查詢在 PowerShell 中登錄
+
+下列範例會示範如何判斷.NET Framework 安全性更新和 hotfix 安裝在電腦上使用 PowerShell:
+
+```powershell
+ Get-ChildItem "HKLM:SOFTWARE\Wow6432Node\Microsoft\Updates\*" -Recurse | Where-Object {$_.name -like
+ "*.NET Framework*"}
+```
+
+這個範例會產生類似下列的輸出：
+
+```console
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Client Profile
+
+
+Name                           Property
+----                           --------
+KB2468871                      ThisVersionInstalled : Y
+KB2468871v2                    ThisVersionInstalled : Y
+KB2478063                      ThisVersionInstalled : Y
+KB2533523                      ThisVersionInstalled : Y
+KB2544514                      ThisVersionInstalled : Y
+KB2600211                      ThisVersionInstalled : Y
+KB2600217                      ThisVersionInstalled : Y
+
+
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Extended
+
+
+Name                           Property
+----                           --------
+KB2468871                      ThisVersionInstalled : Y
+KB2468871v2                    ThisVersionInstalled : Y
+KB2478063                      ThisVersionInstalled : Y
+KB2533523                      ThisVersionInstalled : Y
+KB2544514                      ThisVersionInstalled : Y
+KB2600211                      ThisVersionInstalled : Y
+KB2600217                      ThisVersionInstalled : Y
+```
+
 ## <a name="see-also"></a>請參閱
 
-[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[安裝 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[如何： 判斷已安裝哪些.NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
+[安裝.NET Framework 開發人員](../../../docs/framework/install/guide-for-developers.md)  
 [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)

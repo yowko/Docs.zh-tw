@@ -1,12 +1,9 @@
 ---
 title: "Lambda 運算式 (C# 程式設計手冊)"
-ms.date: 2017-03-03
+ms.date: 03/03/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -14,35 +11,19 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計手冊)
-Lambda 運算式是[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)，可用來建立[委派](../../../csharp/programming-guide/delegates/using-delegates.md)或[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)類型。 使用 Lambda 運算式可以撰寫區域函式，這些函式可以當做引數傳遞，或是當做函式呼叫的值傳回。 Lambda 運算式對於撰寫 LINQ 查詢運算式而言特別有用。  
+Lambda 運算式是 [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) ，可用來建立 [委派](../../../csharp/programming-guide/delegates/using-delegates.md) 或 [運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 類型。 使用 Lambda 運算式可以撰寫區域函式，這些函式可以當做引數傳遞，或是當做函式呼叫的值傳回。 Lambda 運算式對於撰寫 LINQ 查詢運算式而言特別有用。  
   
- 若要建立 Lambda 運算式，請在 Lambda 運算子 [=>](../../../csharp/language-reference/operators/lambda-operator.md) 的左邊指定輸入參數 (如果有的話)，並將運算式或陳述式區塊放在另一邊。 例如，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 的平方值。 您可以將這個運算式指派給委派類型，如下列範例所示：  
+ 若要建立 Lambda 運算式，請在 Lambda 運算子 [=>](../../../csharp/language-reference/operators/lambda-operator.md)的左邊指定輸入參數 (如果有的話)，並將運算式或陳述式區塊放在另一邊。 例如，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 的平方值。 您可以將這個運算式指派給委派類型，如下列範例所示：  
   
 ```csharp  
 delegate int del(int i);  
@@ -70,11 +51,11 @@ namespace ConsoleApplication1
 }  
 ```  
   
- `=>` 運算子與指派 (`=`) 具有相同的優先順序，而且為[右向關聯](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (請參閱＜運算子＞文章的＜關聯性＞一節)。  
+ `=>` 運算子與指派 (`=`) 具有相同的優先順序，而且為[右向關聯](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (請參閱＜運算子＞一文中的的＜關聯性＞一節)。  
   
  在以方法為基礎的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，Lambda 會用來做為標準查詢運算子方法的引數，例如 <xref:System.Linq.Enumerable.Where%2A>。  
   
- 當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable.Where%2A> 類別中的 <xref:System.Linq.Enumerable> 方法時 (就像是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]中所執行)，此參數會是委派類型 <xref:System.Func%602?displayProperty=fullName>。 Lambda 運算式是建立委派最方便的方式。 例如，當您在 <xref:System.Linq.Queryable?displayProperty=fullName> 類別中呼叫相同方法時 (就像是在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 中所執行)，參數類型就會是 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>，其中 Func 是最多擁有十六個輸入參數的任一個 Func 委派。 再次強調，Lambda 運算式就是建構該運算式樹狀架構非常簡潔的方式。 Lambda 會讓 `Where` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件類型並不相同。  
+ 當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable.Where%2A> 類別中的 <xref:System.Linq.Enumerable> 方法時 (就像是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]中所執行)，此參數會是委派類型 <xref:System.Func%602?displayProperty=nameWithType>。 Lambda 運算式是建立委派最方便的方式。 例如，當您在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 類別中呼叫相同方法時 (就像是在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 中所執行)，參數類型就會是 <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Func\>，其中 Func 是最多擁有十六個輸入參數的任一個 Func 委派。 再次強調，Lambda 運算式就是建構該運算式樹狀架構非常簡潔的方式。 Lambda 會讓 `Where` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件類型並不相同。  
   
  在上面的範例中，請注意委派簽章擁有一個 `int`類型的隱含類型輸入參數，而且會傳回 `int`。 由於 Lambda 運算式還有一個輸入參數 (`x`) 和可由編譯器隱含轉換為 `int` 類型的傳回值，因此 Lambda 運算式可以轉換為該類型的委派  (類型推斷將於下列各節中詳細討論)。使用輸入參數 5 叫用委派時，它傳回的結果會是 25。  
   
@@ -83,7 +64,7 @@ namespace ConsoleApplication1
  所有適用於匿名方法的限制，也都適用於 Lambda 運算式。 如需詳細資訊，請參閱[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。  
   
 ## <a name="expression-lambdas"></a>運算式 Lambda  
- 在 => 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 運算式 Lambda 會在[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：  
+ 在 => 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」。 運算式 Lambda 會在[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：  
   
 ```csharp
 (input-parameters) => expression
@@ -116,9 +97,9 @@ namespace ConsoleApplication1
 
  陳述式 Lambda 的主體可以包含任意數目的陳述式，但是實際上通常不會超過兩個或三個陳述式。  
   
- [StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
+[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
 
- [StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
+[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
 
  陳述式 Lambda 就像匿名方法，它不能用來建立運算式樹狀架構。  
   
@@ -181,7 +162,7 @@ public partial class Form1 : Form
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- 委派可以具現化為 `Func<int,bool> myFunc` ，其中 `int` 是輸入參數，而 `bool` 是傳回值。 傳回值一律在最後一個類型參數中指定。 `Func<int, string, bool>` 會定義具有兩個輸入參數 `int` 和 `string` 且傳回類型為 `bool` 的委派。 叫用下列 `Func` 委派時將會傳回 true 或 false，指出輸入參數是否等於 5：  
+ 委派可以具現化為 `Func<int,bool> myFunc` ，其中 `int` 是輸入參數，而 `bool` 是傳回值。 傳回值一律在最後一個類型參數中指定。 `Func<int, string, bool>` 會定義具有兩個輸入參數 `int` 和 `string`且傳回類型為 `bool`的委派。 叫用下列 `Func` 委派時將會傳回 true 或 false，指出輸入參數是否等於 5：  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
@@ -190,7 +171,7 @@ bool result = myFunc(4); // returns false of course
   
  您也可以在引數類型為 `Expression<Func>`時，於例如 System.Linq.Queryable 中定義的標準查詢運算子內提供 Lambda 運算式。 當您指定 `Expression<Func>` 引數時，Lambda 將會編譯為運算式樹狀架構。  
   
- 以下顯示標準查詢運算子，也就是 <xref:System.Linq.Enumerable.Count%2A> 方法：  
+ 標準查詢運算子，也就是 <xref:System.Linq.Enumerable.Count%2A> 方法，如下所示：  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -229,7 +210,7 @@ customers.Where(c => c.City == "London");
  請注意，Lambda 運算式本身並沒有類型，因為一般類型系統沒有內建的「Lambda 運算式」概念。 不過，有時候一般所稱的 Lambda 運算式「類型」會很實用。 在這類情況下，類型是指委派類型或是 Lambda 運算式轉換成的 <xref:System.Linq.Expressions.Expression> 類型。  
   
 ## <a name="variable-scope-in-lambda-expressions"></a>Lambda 運算式中的變數範圍  
- Lambda 可以參考「外部變數」**(請參閱[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md))，這些變數必須包含在定義 Lambda 函式的方法範圍內，或是在包含 Lambda 運算式的類型範圍內。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則：  
+ Lambda 可以參考「外部變數」(請參閱[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md))，這些變數必須包含在定義 Lambda 函式的方法範圍內，或是在包含 Lambda 運算式的類型範圍內。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則：  
   
 ```csharp  
 delegate bool D();  
@@ -275,7 +256,6 @@ class Test
         Console.ReadKey();  
     }  
 }  
-  
 ```  
   
  下列規則適用於 Lambda 運算式中的變數範圍：  
@@ -297,10 +277,10 @@ class Test
  [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) (委派、事件和 Lambda 運算式)  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
- [is](../../../csharp/language-reference/keywords/is.md)   
- [運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
- [Visual Studio 2008 C# 範例 (請參閱 LINQ 範例查詢檔案和 XQuery 程式)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
- [Recursive lambda expressions](http://go.microsoft.com/fwlink/?LinkId=112395) (遞迴的 Lambda 運算式)
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [運算式樹狀結構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Visual Studio 2008 C# 範例 （請參閱 LINQ 範例查詢檔案和 XQuery 程式）](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+ [Recursive lambda expressions (遞迴的 Lambda 運算式)](http://go.microsoft.com/fwlink/?LinkId=112395)

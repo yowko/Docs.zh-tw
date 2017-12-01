@@ -1,44 +1,29 @@
 ---
 title: "internal (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - internal_CSharpKeyword
 - internal
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- internal keyword [C#]
+helpviewer_keywords: internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a3b115022ed2b38dfcfbbfad3c5fc00e0203b255
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5674a78e2c317357c31d9e2661a25ce86cbf4f6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
-`internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：  
+`internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 
+  
+ > 此頁面都涵蓋`internal`存取。 `internal`關鍵字也是屬於[ `protected internal` ](./protected-internal.md)存取修飾詞。
+  
+內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：  
   
 ```  
 public class BaseClass   
@@ -47,9 +32,7 @@ public class BaseClass
     internal static int x = 0;  
 }  
 ```  
-  
- 具有存取修飾詞 `protected internal` 的類型或成員，可以從目前的組件或衍生自包含類別的類型存取。  
-  
+
  如需 `internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  如需組件的詳細資訊，請參閱[組件和全域組件快取](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)。  
@@ -111,13 +94,12 @@ public class TestAccess
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
  [protected](../../../csharp/language-reference/keywords/protected.md)
-

@@ -1,28 +1,29 @@
 ---
-title: "根據索引擷取的已排序節點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "根據索引擷取的已排序節點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 13d3077b1536d4e96cb9e4f1f09313dd793a906e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 根據索引擷取的已排序節點
-全球資訊網協會 \(W3C\) XML 文件物件模型 \(DOM\) 也說明了 NodeList；相對於能夠處理未排序節點集的 **XmlNamedNodeMap**，NodeList 具有處理已排序節點清單的功能。  Microsoft .NET Framework 中的 NodeList 稱為 **XmlNodeList**。  傳回 **XmlNodeList** 的方法和屬性有：  
+# <a name="ordered-node-retrieval-by-index"></a>根據索引擷取的已排序節點
+World Wide Web Consortium (W3C) XML 文件物件模型 (DOM) 也說明了 nodelist; 已處理的節點，而不是由處理未排序之集合的已排序的清單的能力**XmlNamedNodeMap**。 Microsoft.NET Framework 中的節點清單稱為**XmlNodeList**。 方法和屬性會傳回**XmlNodeList**是：  
   
 -   XmlNode.ChildNodes  
   
@@ -32,7 +33,7 @@ caps.handback.revision: 3
   
 -   XmlNode.SelectNodes  
   
- **XmlNodeList** 有一個 **Count** 屬性，可以用於將迴圈重複寫入 **XmlNodeList** 中的節點，如同下列程式碼範例所示：  
+ **XmlNodeList**具有**計數**屬性，可用於反覆查看的節點中的迴圈重複寫入**XmlNodeList**，如下列程式碼範例所示：  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -46,7 +47,6 @@ Dim doc as XmlDocument = new XmlDocument()
         ' Display all book titles in the Node List.  
         Console.WriteLine(elemList.ItemOf(i).InnerXml)  
     next  
-  
 ```  
   
 ```csharp  
@@ -62,7 +62,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- 除了 **Count** 屬性之外，還有 **GetEnumerator** 方法可對 **XmlNodeList** 中的節點集合提供 `foreach` 樣式反覆運算。  下列程式碼範例顯示 `foreach` 陳述式的使用情形。  
+ 除了**計數**屬性，沒有**GetEnumerator**提供方法，`foreach`樣式中的節點集合上反覆項目**XmlNodeList**. 下列程式碼範例顯示 `foreach` 陳述式的使用情形。  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -99,7 +99,7 @@ End While
   }  
 ```  
   
- 如需 **XmlNodeList** 上可以使用之方法和屬性的詳細資訊，請參閱 [XmlNodeList 成員](frlrfSystemXmlXmlNodeListMembersTopic)。  
+ 如需有關可用方法與屬性上**XmlNodeList**，請參閱<xref:System.Xml.XmlNodeList>。  
   
-## 請參閱  
- [XML 文件物件模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

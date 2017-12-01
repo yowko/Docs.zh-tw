@@ -1,38 +1,19 @@
 ---
 title: "欄位 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- fields [C#]
+helpviewer_keywords: fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
 「欄位」是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」。  
@@ -45,22 +26,22 @@ ms.lasthandoff: 07/28/2017
   
  請依序指定欄位的存取層級、欄位的類型和欄位的名稱，以在類別區塊中宣告欄位。 例如:   
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  若要存取物件中的欄位，請在物件名稱後面加上句號，再加上欄位的名稱，就像是 `objectname.fieldname`。 例如:   
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  您可以在宣告欄位時，使用指派運算子來指定欄位的初始值。 例如，若要將 `day` 欄位自動指派為 `"Monday"`，您可以如下列範例所示宣告 `day`：  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  欄位會在呼叫物件執行個體的建構函式之前立即初始化。 如果建構函式指派了欄位的值，該值會覆寫欄位宣告期間所指定的任何值。 如需詳細資訊，請參閱[使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)。  
   
 > [!NOTE]
 >  欄位初始設定式無法參考其他執行個體欄位。  
   
- 欄位可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected internal`。 這些存取修飾詞定義類別使用者如何存取欄位。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 欄位可以標示為[公用](../../../csharp/language-reference/keywords/public.md)，[私人](../../../csharp/language-reference/keywords/private.md)，[保護](../../../csharp/language-reference/keywords/protected.md)，[內部](../../../csharp/language-reference/keywords/internal.md)，[保護內部](../../../csharp/language-reference/keywords/protected-internal.md)或[受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取欄位。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  欄位可以選擇性地宣告為 [static](../../../csharp/language-reference/keywords/static.md)。 這可隨時向呼叫者提供欄位，即使沒有任何類別執行個體存在。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
@@ -70,10 +51,9 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-

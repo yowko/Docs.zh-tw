@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 727aa0ca3e1673a5bbd29884077ed5aa65d792f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 39f31e27f1e62d889df5a40a9ecb554c2547db8f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="sql-generation"></a>SQL 產生
 當您為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 撰寫提供者時，您必須將 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 命令樹轉譯成特定資料庫可以了解的 SQL，例如 SQL Server 的 Transact-SQL 或 Oracle 的 PL/SQL。 在本章節中，您將會學習如何為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供者開發 SQL 產生元件 (適用於 SELECT 查詢)。 插入的相關資訊，更新和刪除的查詢，請參閱[修改 SQL 產生](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="the-role-of-the-sql-generation-module"></a>SQL 產生模組的角色  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供者的 SQL 產生模組會將給定的查詢命令樹轉譯成單一 SQL SELECT 陳述式，此陳述式是以 SQL:1999 相容的資料庫為目標。 產生的 SQL 應該盡量擁有少一點的巢狀查詢。 SQL 產生模組不應該簡化查詢命令樹的輸出。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 將會進行這項處理，例如藉由除去聯結及摺疊連續的篩選節點。  
   
- <!--zz<xref:System.Data.Common.DBProviderServices> --> `System.Data.Common.DBProviderServices`類別是存取 SQL 產生層轉換成命令樹的起始點<!--zz<xref:System.Data.Common.DbCommands>--> `System.Data.Common.DbCommands`。  
+ <xref:System.Data.Common.DbProviderServices> 類別是存取 SQL 產生層的起點，可將命令樹轉換成 <xref:System.Data.Common.DbCommand>。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [命令樹的形狀](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  

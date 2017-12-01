@@ -1,23 +1,19 @@
 ---
 title: "目標 Framework"
 description: "了解 .NET Core 應用程式和程式庫的目標 Framework。"
-keywords: ".NET, .NET Core, 架構, TFM"
 author: richlander
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 09/22/2017
 ms.topic: article
+ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
+ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
-ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="target-frameworks"></a>目標 Framework
 
 當您以應用程式或程式庫中的架構為目標時，您將指定要提供給應用程式或程式庫的一組 API。 您可以在專案檔中使用目標 Framework Moniker (TFM) 來指定目標 Framework。
@@ -34,11 +30,11 @@ ms.lasthandoff: 08/25/2017
 
 下表定義最常用的目標 Framework、其參考方式，以及它們所實作的 [.NET Standard](~/docs/standard/net-standard.md) 版本。 這些目標 Framework 版本是最新穩定版本。 不顯示發行前版本。 目標 Framework Moniker (TFM) 是用於指定 .NET 應用程式或程式庫之目標 Framework 的標準化語彙基元格式。 
 
-| 目標 Framework      | 最新的版本 | Target Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
-| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 2.0.0          | netstandard2.0                 | N/A                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| .NET Core 應用程式 | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.7            | net47                          | 1.5                   | N/A |
+| 目標 Framework      | 最新的版本 | Target Framework Moniker (TFM) | 實作 <br/> .NET Standard 版本 |
+| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
+| .NET Standard         | 2.0            | netstandard2.0                 | N/A                                     |
+| .NET Core 應用程式 | 2.0            | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支援的目標 Framework 版本
 
@@ -47,8 +43,8 @@ ms.lasthandoff: 08/25/2017
 | 目標 Framework           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET 核心                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Windows 市集              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -143,4 +139,3 @@ public class MyClass
 [dotnet/standard GitHub 存放庫](https://github.com/dotnet/standard)  
 [NuGet 工具 GitHub 存放庫](https://github.com/joelverhagen/NuGetTools)  
 [Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (.NET 中的 Framework 設定檔)
-

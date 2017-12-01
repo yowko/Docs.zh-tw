@@ -1,65 +1,58 @@
 ---
 title: ".NET Framework 開發人員部署手冊"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 287005af09f3f022c368d3c8fab12ad02b30e944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework 開發人員部署手冊
-這個主題為想要搭配自己的應用程式來安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2 或 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1 或 4.6.2 的開發人員提供相關資訊。  
-  
- 如需下載連結，請參閱[可轉散發套件](#redist)一節。 您也可以從下列 Microsoft 下載中心頁面下載可轉散發套件和語言套件：  
-  
--   適用於所有作業系統的 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] \([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=780601)\)  
-  
--   適用於所有作業系統的 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] \([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=671729)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=671744)\)  
-  
--   適用於所有作業系統的 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=528222)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=528232)\)  
-  
--   適用於所有作業系統的 .NET Framework 4.5.2 \([Web 安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=397703)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=397706)\)  
-  
--   適用於所有作業系統的 .NET Framework 4.5.1 \([Web 安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=310158)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=310159)\)  
-  
--   [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)  
-  
- 重要注意事項：  
-  
+# <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
+本主題提供資訊的開發人員想要安裝[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 4.5.1、 4.5.2 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、 4.6.1、 4.6.2，或.NET Framework 4.7 或 4.7.1 與自己的應用程式。
+
+如需下載連結，請參閱[可轉散發套件](#redistributable-packages)一節。 您也可以從下列 Microsoft 下載中心頁面下載可轉散發套件和語言套件：
+
+- 適用於所有作業系統的.NET framework 4.7.1 ([web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=852095)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+
+- 適用於所有作業系統的 .NET Framework 4.7 ([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=825299) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+
+- 適用於所有作業系統的[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=780597) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=780601))
+
+- 適用於所有作業系統的[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=671729) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=671744))
+
+- 適用於所有作業系統的[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=528222) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=528232))
+
+- 適用於所有作業系統的 .NET Framework 4.5.2 ([Web 安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=397703) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=397706))
+
+- 適用於所有作業系統的 .NET Framework 4.5.1 ([Web 安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=310158) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=310159))
+
+- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+
+ 重要注意事項：
+
 > [!NOTE]
-> 片語「[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本」是指 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7。
+> 片語 「[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]及其點發行版本 」 是指[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]和所有更新的版本。
 
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2 和 4.7 是 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新；亦即，這些組件全部使用相同的執行階段版本，但組件版本會更新，並加入新的類型和成員。
+- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、 4.5.2、 4.6、 4.6.1、 4.6.2、 4.7 和 4.7.1 進行就地更新[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，這表示它們使用相同的執行階段版本，但組件版本會更新，並加入新的類型和成員。
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本是以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]為基礎累加建置。 在已安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]的系統上安裝 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 時，第 4 版組件就會被新版本取代。
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本是以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]為基礎累加建置。 當您安裝[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 4.5.1、 4.5.2、 4.6、 4.6.1、 4.6.2、 4.7 或已在系統上的 4.7.1[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]安裝，第 4 版組件取代成較新版本。
 
 - 如果您參考應用程式中的 Microsoft [Out-of-Band 封裝](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) ，應用程式封裝中就會包含該組件。
 
 - 您必須具有系統管理員權限才能安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本。
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會隨 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]提供，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地， [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 會隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 提供。 所有作業系統中都不包含 .NET Framework 4.5.2。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 包含在 Windows 10 中， [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含在 Windows 10 年 11 月更新中，而 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 則包含在 Windows 10 年度更新版中。  Windows 10 Creators Update 上已包含 .NET Framework 4.7。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會隨 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]提供，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地， [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 會隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 提供。 所有作業系統中都不包含 .NET Framework 4.5.2。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 包含在 Windows 10 中， [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含在 Windows 10 年 11 月更新中，而 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 則包含在 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 建立者的更新，以及.NET Framework 4.7.1 隨附於 Windows 10 年秋季建立者更新。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。
 
 - 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](../../../docs/framework/deployment/reducing-system-restarts.md)。
 
@@ -70,12 +63,12 @@ ms.lasthandoff: 07/28/2017
  如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)。
 
 ## <a name="deployment-options-for-your-app"></a>應用程式的部署選項
- 當您準備將應用程式發行到 Web 伺服器或其他集中位置供使用者進行安裝時，有數種部署方法可供您選擇。 其中有些方法是 Visual Studio 所提供。 下表列出應用程式的部署選項，並指定支援每個選項的 .NET Framework 可轉散發套件。 除了這些選項之外，您還可以為應用程式撰寫自訂安裝程式，如需詳細資訊，請參閱 [將 .NET Framework 安裝鏈結至您的應用程式安裝](#chaining)一節。
+ 當您準備將應用程式發行到 Web 伺服器或其他集中位置供使用者進行安裝時，有數種部署方法可供您選擇。 其中有些方法是 Visual Studio 所提供。 下表列出您的應用程式的部署選項，並指定支援每個選項的.NET Framework 可轉散發套件。 除了這些選項之外，您還可以為應用程式撰寫自訂安裝程式，如需詳細資訊，請參閱 [將 .NET Framework 安裝鏈結至您的應用程式安裝](#chaining)一節。
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|從 Web 安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web installer](#redistributable-packages)|
-|從光碟安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Offline installer](#redistributable-packages)|
+|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web installer](#redistributable-packages)|
+|從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Offline installer](#redistributable-packages)|
 |從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>可轉散發套件
@@ -83,23 +76,25 @@ ms.lasthandoff: 07/28/2017
 
 ||Web 安裝程式|離線安裝程式|
 |-|-------------------|-----------------------|
-|下載檔案|.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]：<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]：<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7： <br />[NDP462-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|下載檔案|.NET framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlin/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]：<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]：<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
 |是否需要網際網路連線？|是|否|
 |下載大小|較小 (僅包含目標平台的安裝程式)*|較大*|
 |語言套件|包含**|除非您使用以所有作業系統為目標的套件，否則必須 [單獨安裝](#chain_langpack)。|
-|部署方法|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
-|下載 ClickOnce 部署的位置|Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|您的伺服器或 Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|部署方法|支援所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
+|下載 ClickOnce 部署的位置|Microsoft 下載中心：<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|您的伺服器或 Microsoft 下載中心：<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
- \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果用來建立應用程式安裝程式的工具 (例如， [InstallShield](#installshield-deployment)) 提供了安裝程式檔案資料夾，而這個資料夾會在安裝完成後移除，則可藉由將離線安裝程式放入安裝程式資料夾的方式將它自動刪除。
+ \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果您使用的工具 (例如， [InstallAware](#installaware-deployment)或[InstallShield](#installshield-deployment)) 來建立您的應用程式安裝程式會提供安裝之後，會移除安裝程式檔案資料夾，可以是離線安裝程式自動將其放到安裝資料夾刪除。
 
  ** 如果您使用 Web 安裝程式搭配自訂安裝程式，則可以使用以使用者的多語系使用者介面 (MUI) 設定為基礎的預設語言設定，或是使用命令列的 `/LCID` 選項指定另一個語言套件。 例如，請參閱 [使用預設的 .NET Framework UI 進行鏈結](#chaining_default) 一節。
 
 ## <a name="deployment-methods"></a>部署方法
- 可用的部署方法有三種：
+ 四種部署方法有：
 
 - 您可以設定 .NET Framework 的相依性。 您可以使用下列其中一種方法，在應用程式安裝中將 .NET Framework 指定為必要條件：
 
     - 使用 [ClickOnce 部署](#clickonce-deployment) (Visual Studio 所提供)
+
+    - 建立[InstallAware 專案](#installaware-deployment)（適用於 Visual Studio 使用者免費版本）
 
     - 建立 [InstallShield 專案](#installshield-deployment) (Visual Studio 所提供)
 
@@ -116,7 +111,7 @@ ms.lasthandoff: 07/28/2017
  以下各節將詳細討論這些部署方法。
 
 ## <a name="setting-a-dependency-on-the-net-framework"></a>設定 .NET Framework 的相依性
-如果您使用 ClickOnce、InstallShield 或 WiX 部署應用程式，可以加入 .NET Framework 的相依性，讓它隨應用程式一併安裝。
+如果您使用 ClickOnce、 InstallAware、 InstallShield 或 WiX 部署應用程式時，您可以新增相依性，在.NET Framework 上讓它可以做為您的應用程式的一部分安裝即可。
 
 ### <a name="clickonce-deployment"></a>ClickOnce 部署
  ClickOnce 部署適用於以 Visual Basic 和 Visual C# 建立的專案，但不適用於 Visual C++ 建立的專案。
@@ -141,6 +136,10 @@ ms.lasthandoff: 07/28/2017
 
 8.  在 [ **屬性頁** ] 對話方塊中，選擇 [ **確定**]。
 
+<a name="installaware"></a> 
+### <a name="installaware-deployment"></a>InstallAware 部署
+InstallAware 建置 Windows 應用程式 (APPX)、 Windows Installer (MSI)、 原生程式碼 (EXE) 和來自單一來源的 APP-V 應用程式 (Application Virtualization) 封裝。 輕鬆地[包含任何版本的.NET Framework](https://www.installaware.com/one-click-pre-requisite-installer.htm)設定，選擇性地自訂安裝的[編輯預設指令碼](https://www.installaware.com/msicode.htm)。 例如，InstallAware 預先安裝 Windows 7 中，如果缺少.NET Framework 4.7 安裝程式失敗的憑證。 如需有關 InstallAware 的詳細資訊，請參閱[InstallAware Windows Installer](https://www.installaware.com/)網站。
+
 ### <a name="installshield-deployment"></a>InstallShield 部署
  在 Visual Studio 中，選擇 InstallShield 部署並加入 .NET Framework 的相依性：
 
@@ -150,14 +149,14 @@ ms.lasthandoff: 07/28/2017
 
 3.  在 [ **名稱** ] 方塊中輸入您的專案名稱，然後選擇 [ **確定**]。
 
-4.  如果您第一次建立安裝和部署專案，請選擇 [移至 InstallShield]  或 [啟用 InstallShield 限量版]  ，下載您 Microsoft Visual Studio 版本的 InstallShield 限量版。 重新啟動 Visual Studio。
+4.  如果您正在建立第一次安裝和部署專案，選擇**移至 InstallShield**或**啟用 InstallShield 限量版**您版本的下載 InstallShield Limited EditionMicrosoft Visual Studio。 重新啟動 Visual Studio。
 
 5.  移至 [ **專案助理** ] 精靈，並選擇 [ **應用程式檔案** ] 以加入 [專案輸出]。 您可以使用這個精靈設定其他專案屬性。
 
 6.  移至 [ **安裝需求** ] 然後選取作業系統以及要安裝的 .NET Framework 版本。
 
 7.  開啟安裝專案的捷徑功能表，然後選擇 [ **建置**]。
-
+ 
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) 部署
  Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows 安裝套件。 WiX 支援命令列環境，該環境可整合至您的建置程序中，用來建置 MSI 與 MSM 安裝封裝。 您可以使用 WiX [將 .NET Framework 指定為必要條件](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)，或是 [建立 Chainer](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) ，以便完全掌控 .NET Framework 部署經驗。 如需 WiX 的詳細資訊，請參閱 [Windows Installer XML (WiX) 工具組](http://wixtoolset.org/) 網站。
@@ -245,51 +244,58 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
  .NET Framework 安裝程式會在安裝成功時寫入登錄機碼。 您可以測試是否已安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本，方法是檢查登錄中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 資料夾是否有名為 `Release` 的 `DWORD` 值。 (請注意，"NET Framework Setup" 不是以句號開頭。)若這個機碼存在，表示該電腦上已安娤 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。 `Release` 的值會指出所安裝的 .NET Framework 版本。
 
 > [!IMPORTANT]
->  當您嘗試偵測是否有特定版本時，您應該檢查是否有值**大於或等於**版本關鍵字值。  
-  
-|版本|Release DWORD 的值|  
-|--------|----------------------|  
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安裝在 Windows 10 Anniversary Edition|394802|  
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安裝在 Windows 10 Anniversary Edition 以外的所有作業系統版本|394806|  
-|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安裝在 Windows 10 11 月更新|394254|  
-|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]安裝在 Windows 10 11 月更新以外的所有作業系統版本|394271|  
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安裝在 Windows 10|393295|  
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安裝在 Windows 10 以外的所有作業系統版本|393297|  
-|.NET Framework 4.5.2|379893|  
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 或 Windows Server 2012 R2 安裝。|378675|  
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 安裝在 [!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7|378758|  
-|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|  
-  
-<a name="detect_langpack"></a>   
-### 刪除語言套件  
- 您可以測試是否安裝特定的語言套件，方法是檢查登錄中 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\*LCID* 資料夾內名為 `Release` 的 DWORD 值。 \(請注意，"NET Framework Setup" 不是以句號開頭。\)*LCID* 可指定地區設定識別碼，請參閱[支援的語言](#supported_languages)，以取得這些項目的清單。  
-  
- 例如，若要檢查是否安裝了完整的日文語言套件 \(LCID\=1041\)，請檢查登錄中的下列值：  
-  
-```  
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041  
-Name: Release  
-Type: DWORD  
-```  
-  
- 若要判斷是否已針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1 或 4.6.2 安裝最終發行的語言套件版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 所述。  
-  
-<a name="chain_langpack"></a>   
-### 將語言套件鏈結至您的應用程式安裝  
- .NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 語言套件可從 Microsoft 下載中心取得：  
-  
--   [.NET Framework 4.6.2 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=780604)  
-  
--   [.NET Framework 4.6.1 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=671747)  
-  
--   [.NET Framework 4.6 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=528314)  
-  
--   [.NET Framework 4.5.2 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=397701)  
-  
--   [.NET Framework 4.5.1 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=322101)  
-  
--   [.NET Framework 4.5 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=245451)  
-  
+> 當您嘗試偵測是否有特定版本時，您應該檢查是否有值  **大於或等於** 版本關鍵字值。
+
+|版本|Release DWORD 的值|
+|-------------|--------------------------------|
+|.NET framework 安裝在 Windows 10 年秋季建立者更新 4.7.1|461308|
+|.NET framework 4.7.1 安裝在 Windows 10 年秋季建立者更新以外的所有作業系統版本|461310|
+|Windows 10 Creators Update 上安裝的 .NET Framework 4.7|460798|
+|.NET Framework 4.7 安裝在 Windows 10 Creators Update 以外的所有作業系統版本|460805|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安裝在 Windows 10 Anniversary Edition|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安裝在 Windows 10 Anniversary Edition 以外的所有作業系統版本|394806|
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安裝在 Windows 10 11 月更新|394254|
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安裝在 Windows 10 11 月更新以外的所有作業系統版本|394271|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安裝在 Windows 10|393295|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安裝在 Windows 10 以外的所有作業系統版本|393297|
+|.NET Framework 4.5.2|379893|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 或 Windows Server 2012 R2 安裝。|378675|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 安裝在 [!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7|378758|
+|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|
+
+### <a name="detecting-the-language-packs"></a>刪除語言套件
+ 您可以測試是否安裝特定的語言套件，方法是檢查登錄中 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 資料夾內名為 `Release` 的 DWORD 值。 (請注意，"NET Framework Setup" 不是以句號開頭。)*LCID* 可指定地區設定識別碼，請參閱[支援的語言](#supported-languages)，以取得這些項目的清單。
+
+ 例如，若要檢查是否安裝了完整的日文語言套件 (LCID=1041)，請檢查登錄中的下列值：
+
+```
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
+Name: Release
+Type: DWORD
+```
+
+ 若要判斷是否已為安裝最終發行版本的語言套件[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 4.5.1、 4.5.2、 4.6、 4.6.1、 4.6.2、 4.7 或 4.7.1，機碼的版本值在上一節中所述的 DWORD 值的核取[偵測.NETFramework](#detect_net)。
+
+<a name="chain_langpack"></a> 
+### <a name="chaining-the-language-packs-to-your-app-setup"></a>將語言套件鏈結至您的應用程式安裝
+ .NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 語言套件可從 Microsoft 下載中心取得：
+
+- [.NET framework 4.7.1 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=852090)
+
+- [.NET Framework 4.7 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=825306)
+
+- [.NET Framework 4.6.2 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=780604)
+
+- [.NET Framework 4.6.1 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=671747)
+
+- [.NET Framework 4.6 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=528314)
+
+- [.NET Framework 4.5.2 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=397701)
+
+- [.NET Framework 4.5.1 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=322101)
+
+- [.NET Framework 4.5 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=245451)
+
 > [!IMPORTANT]
 > 語言套件並不包含執行應用程式所需的 .NET Framework 元件，因此在安裝語言套件之前，必須先使用 Web 或離線安裝程式安裝 .NET Framework。
 
@@ -320,7 +326,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |5100|使用者的電腦不符合系統需求。|
 
 #### <a name="download-error-codes"></a>下載錯誤碼
- 請參閱 MSDN Library 中的下列內容：
+ 請參閱下列內容：
 
 - [背景智慧型傳送服務 (BITS) 錯誤碼](http://go.microsoft.com/fwlink/?LinkId=180946)
 
@@ -329,17 +335,17 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 - [WinHttp 錯誤碼](http://go.microsoft.com/fwlink/?LinkId=180948)
 
 #### <a name="other-error-codes"></a>其他錯誤碼
- 請參閱 MSDN Library 中的下列內容：
+ 請參閱下列內容：
 
 - [Windows 安裝程式錯誤碼](http://go.microsoft.com/fwlink/?LinkId=180949)
 
 - [Windows Update 代理程式結果碼](http://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
- 從 [!INCLUDE[win8](../../../includes/win8-md.md)] 開始，您可以使用 [控制台] 中的 [開啟或關閉 Windows 功能] 解除安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式] 解除安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7。
+ 從開始[!INCLUDE[win8](../../../includes/win8-md.md)]，您可以解除安裝[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 4.5.1、 4.5.2、 4.6、 4.6.1、 4.6.2、 4.7 或使用 4.7.1**開啟或關閉 Windows 功能**控制台 中。 在舊版 Windows 中，您可以解除安裝[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 4.5.1、 4.5.2、 4.6、 4.6.1、 4.6.2、 4.7 或使用 4.7.1**新增或移除程式**控制台 中。
 
 > [!IMPORTANT]
-> 在 Windows 7 和舊版作業系統上，解除安裝 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2 或 4.7 並不會還原 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 檔案，而解除安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 也不會還原 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
+> Windows 7 和舊版作業系統，解除安裝[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]，並不會還原 4.5.2、 4.6、 4.6.1、 4.6.2、 4.7 或 4.7.1[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]檔案，而解除安裝[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]並不會還原[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
 
 ## <a name="appendix"></a>附錄
 
@@ -394,10 +400,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|西班牙文 - 西班牙 (現代排序)|es|
 
 ## <a name="see-also"></a>請參閱
- [系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)   
- [系統需求](../../../docs/framework/get-started/system-requirements.md)   
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
- [疑難排解](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
- [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)   
+ [系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)  
+ [系統需求](../../../docs/framework/get-started/system-requirements.md)  
+ [安裝.NET Framework 開發人員](../../../docs/framework/install/guide-for-developers.md)  
+ [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+ [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)  
  [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
-

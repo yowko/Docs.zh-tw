@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
+ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的封裝相依性
 
 本文涵蓋撰寫 `project.json` 程式庫時，您需要了解的降低封裝相依性的內容。 在本文的最後，您會了解如何撰寫程式庫，令它只使用需要的相依性。 
@@ -32,11 +30,12 @@ ms.lasthandoff: 07/28/2017
 目前沒有任何修剪封裝參考的正式 `dotnet` 命令。  您必須改以手動作業。  一般程序如下所示︰
 
 1. 參考您 `project.json` 的 `dependencies` 區段的 `NETStandard.Library` 版本 `1.6.0`。
-2. 從命令列使用 `dotnet restore` 還原封裝。
+2. 還原封裝`dotnet restore`([請參閱附註](#dotnet-restore-note)) 從命令列。
 3. 檢查 `project.lock.json` 檔案，找出 `NETSTandard.Library` 區段。  它在靠近檔案開頭處。
 4. 複製 `dependencies` 下列出的所有封裝。
 5. 移除 `.NETStandard.Library` 參考，並以複製的封裝取而代之。
 6. 移除您不需要的封裝參考。
+
 
 您可以下列方法之一，找出不需要的封裝︰
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 07/28/2017
 }
 ```
 
-接下來，使用 `dotnet restore` 還原封裝、檢查 `project.lock.json` 檔案，找出所有還原的 `NETSTandard.Library` 封裝。
+接下來，您還原套件與`dotnet restore`([請參閱附註](#dotnet-restore-note))，檢查`project.lock.json`檔案，並尋找還原的所有套件`NETSTandard.Library`。
 
 以下是以 `netstandard1.0` 為目標時，`project.lock.json` 檔案中相關區段的樣貌：
 
@@ -158,3 +157,5 @@ ms.lasthandoff: 07/28/2017
 
 現在，它的使用量比之前依賴 `NETStandard.Library` 中繼封裝時小。
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

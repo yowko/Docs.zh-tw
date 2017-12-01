@@ -1,45 +1,51 @@
 ---
-title: "如何：在隔離儲存區中建立檔案和目錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "目錄 [.NET Framework]，隔離儲存區"
-  - "檔案 [.NET Framework]，隔離儲存區"
-  - "隔離儲存區，建立檔案和目錄"
-  - "資料存放區，建立檔案和目錄"
-  - "使用隔離儲存區儲存資料，建立檔案和目錄"
-  - "存放區，建立檔案和目錄"
-  - "使用隔離儲存區儲存資料，建立檔案和目錄"
+title: "如何：在隔離儲存區中建立檔案和目錄"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- directories [.NET Framework], isolated storage
+- files [.NET Framework], isolated storage
+- isolated storage, creating files and directories
+- data stores, creating files and directories
+- data storage using isolated storage, creating files and directories
+- stores, creating files and directories
+- storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 8b8a48473bf9ac91b89657d00d27031255491353
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在隔離儲存區中建立檔案和目錄
-在您取得存放區之後，您可以建立儲存資料的目錄和檔案。  存放區內，檔案和目錄名稱相對於虛擬檔案系統的根 \(Root\) 來指定。  
+# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在隔離儲存區中建立檔案和目錄
+取得隔離存放區之後，您可以建立目錄和檔案來儲存資料。 存放區內，檔案和目錄名稱被指定相對於根目錄的虛擬檔案系統。  
   
- 如果要建立目錄，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=fullName> 執行個體方法。  如果您指定不存在的目錄的子目錄，兩個目錄皆會被建立。  如果您指定已經存在的目錄，則不需建立目錄，且不會擲回例外狀況。  但是，如果您指定的目錄名稱內含無效字元，則會擲回 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外狀況。  
+ 若要建立目錄，使用<xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>執行個體方法。 如果您指定不存在目錄的子目錄，則會建立兩個目錄。 如果您指定的目錄已經存在，則方法會傳回而不需要建立一個目錄，並擲回任何例外狀況。 不過，如果您指定的目錄名稱包含無效的字元，<xref:System.IO.IsolatedStorage.IsolatedStorageException>擲回例外狀況。  
   
- 若要建立檔案，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=fullName> 方法。  
+ 若要建立檔案，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> 方法。  
   
- 在 Windows 作業系統中，隔離儲存區的檔案和目錄名稱不區分大小寫。  如此，如果您建立名為 `ThisFile.txt` 的檔案，並接著建立另一個名為 `THISFILE.TXT` 的檔案，只有一個檔案會被建立。  檔案名稱在顯示的場合保留它原來的大小寫。  
+ 在 Windows 作業系統、 隔離儲存區檔案和目錄名稱不區分大小寫。 也就是說，如果您建立名為`ThisFile.txt`，然後再建立另一個名為的檔案`THISFILE.TXT`，會建立一個檔案。 檔案名稱會保留其原始大小寫用於顯示用途。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例說明如何在隔離存放區中建立檔案和目錄。  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## 請參閱  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>   
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
  [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

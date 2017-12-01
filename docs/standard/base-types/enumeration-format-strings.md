@@ -1,56 +1,58 @@
 ---
-title: "列舉類型格式字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列舉類型格式字串"
-  - "格式規範, 列舉類型格式字串"
-  - "格式化 [.NET Framework], 列舉"
+title: "列舉格式字串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format specifiers, enumeration format strings
+- enumeration format strings
+- formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e0992d8591711073f9094c29fad980a8e652e686
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 列舉類型格式字串
-您可以使用 <xref:System.Enum.ToString%2A?displayProperty=fullName> 方法來建立表示數值、十六進位或列舉型別成員之字串值的新字串物件。  這個方法接受列舉型別格式字串的其中之一來指定您想要傳回的值。  
+# <a name="enumeration-format-strings"></a>列舉格式字串
+您可以使用<xref:System.Enum.ToString%2A?displayProperty=nameWithType>方法來建立新的字串物件，表示數字、 十六進位、 或列舉成員的字串值。 這個方法會採用其中一個列舉格式字串，來指定您想要傳回的值。  
   
- 下表列出列舉型別格式字串和它們傳回的值。  這些格式規範不區分大小寫。  
+ 下表列出列舉格式字串及其傳回的值。 這些格式規範不區分大小寫。  
   
-|格式字串|結果|  
-|----------|--------|  
-|G 或 g|將列舉型別項目顯示為字串值，如果可能的話，否則顯示目前執行個體的整數值。  如果列舉型別因設定 **Flags** 屬性 \(Attribute\) 而被定義，各個有效項目的字串值都會以逗號分隔而串連在一起。  如果 **Flags** 屬性未設定，無效值將顯示為數值項目。  以下範例說明 G 格式規範。<br /><br /> [!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
- [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]|  
-|F 或 f|將列舉型別項目顯示為字串值，如果可能的話。  如果值可以完整顯示為列舉型別中項目的總和 \(即使 **Flags** 屬性不出現\)，各個有效項目的字串值都會以逗號分隔而串連在一起。  如果值無法完全由列舉型別項目來決定，那麼這值便會格式化為整數值。  以下範例說明 F 格式規範。<br /><br /> [!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
- [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]|  
-|D 或 d|以盡可能簡短的表示，將列舉型別項目顯示為整數值。  以下範例說明 D 格式規範。<br /><br /> [!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)]
- [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]|  
-|X 或 x|將列舉型別項目顯示為十六進位值。  值以必要的前置零字元來表示，以確保這值最少有八位數長度。  以下範例說明 X 格式規範。<br /><br /> [!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
- [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]|  
+| 格式化字串 | 結果 |  
+| ------------- | ------ |  
+| G 或 g | 盡可能以字串值來顯示列舉項目；如果不可能，則會顯示目前執行個體的整數值。 如果列舉是使用 **Flags** 屬性集來定義，每個有效項目的字串值會串連在一起，並以逗號分隔。 如果未設定 **Flags** 屬性，則會以數值項目顯示無效的值。 下列範例說明 G 格式規範。<br><br>[!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)] |  
+| F 或 f | 盡可能以字串值來顯示列舉項目。 如果此值可完整顯示為列舉中的項目總合 (即使 **Flags** 屬性不存在)，每個有效項目的字串值會串連在一起，並以逗號分隔。 如果該值不完全取決於列舉項目，則會格式化為整數值。 下列範例說明 F 格式規範。<br><br>[!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)] |  
+| D 或 d | 盡可能以最短的整數值表示來顯示列舉項目。 下列範例說明 D 格式規範。<br><br>[!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)] |  
+| X 或 x | 以十六進位值來顯示列舉項目。 該值可視需要加上前置零來表示，以確保值的長度至少有八位數。 下列範例說明 X 格式規範。<br /><br /> [!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)] |  
   
-## 範例  
- 下列範例定義稱為 `Colors` 的列舉型別，它由三個項目組成：`Red`、`Blue` 和 `Green`。  
+## <a name="example"></a>範例  
+ 下列範例會定義名為 `Colors` 的列舉，該列舉是由三個項目所組成︰`Red`、`Blue` 和 `Green`。  
   
  [!code-csharp[Formatting.Enum#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
  [!code-vb[Formatting.Enum#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]  
   
- 列舉型別定義之後，可用下列方式來宣告執行個體。  
+ 定義列舉之後，可利用下列方式宣告執行個體。  
   
  [!code-csharp[Formatting.Enum#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
  [!code-vb[Formatting.Enum#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]  
   
- 然後 `Color.ToString(System.String)` 方法就可根據傳遞的格式規範，以不同方式顯示列舉值。  
+ 然後可使用 `Color.ToString(System.String)` 方法，根據傳遞給列舉值的格式規範，以不同的方式來顯示列舉值。  
   
  [!code-csharp[Formatting.Enum#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
  [!code-vb[Formatting.Enum#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)

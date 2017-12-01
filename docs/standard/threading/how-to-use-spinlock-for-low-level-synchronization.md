@@ -1,37 +1,42 @@
 ---
-title: "How to: Use SpinLock for Low-Level Synchronization | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SpinLock, how to use"
+title: "如何：使用 SpinLock 進行低階同步處理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 30ddc7d340b210aaad4a04ea43e89555d2701f20
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Use SpinLock for Low-Level Synchronization
-下列範例示範如何使用 <xref:System.Threading.SpinLock>。  
+# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>如何：使用 SpinLock 進行低階同步處理
+下列範例示範如何使用<xref:System.Threading.SpinLock>。  
   
-## 範例  
- 在上述範例中，關鍵的區段會執行最少量的工作，因此是 <xref:System.Threading.SpinLock> 很好的候選鎖定目標。  相較於標準鎖定，小幅遞增工作量可以增加 <xref:System.Threading.SpinLock> 的效能。  但是會有臨界點，超過這個點，SpinLock 就變得比標準鎖定耗費資源。  您可以使用程式碼剖希工具中新的並行程式碼剖析功能，查看哪一種鎖定類型會在程式中提供較佳的效能。  如需詳細資訊，請參閱[並行視覺化檢視](../Topic/Concurrency%20Visualizer.md)。  
+## <a name="example"></a>範例  
+ 在此範例中，關鍵區段執行少量工作，讓它的絕佳候選<xref:System.Threading.SpinLock>。 增加工作只需要編寫小量會增加的效能<xref:System.Threading.SpinLock>相較於標準的鎖定。 不過，在增加到達某一程度後，SpinLock 的成本就會變成高於標準鎖定。 您可以使用程式碼剖析工具中的並行分析功能，來查看哪一種鎖定型別可在您的程式中提供較佳的效能。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)。  
   
  [!code-csharp[CDS_SpinLock#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#02)]
  [!code-vb[CDS_SpinLock#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_vb.vb#02)]  
   
- 在不會持續佔用共用資源太久的情況下，<xref:System.Threading.SpinLock> 可能會很有用。  這種情況下，在多核心電腦上讓封鎖的執行緒空轉幾個時脈週期直到釋放鎖定為止，會比較有效率。  讓執行緒多空轉一陣子，執行緒就不會一直停滯不前，但這是很耗費 CPU 資源的程序。  <xref:System.Threading.SpinLock> 可以在特定情況下停止空轉作業，以避免耗盡邏輯處理器資源，或是破壞啟用超執行緒 \(Hyper\-Threading\) 之系統上的優先權順序。  
+ <xref:System.Threading.SpinLock>可能會很有用，當共用資源上的鎖定並不會保留很長。 在這類情況下，多核心電腦上的已封鎖執行緒可以有效率地微調幾個週期，直到鎖定釋放為止。 藉由微調，執行緒不會變成鎖定狀態 (這是需要大量 CPU 的程序)。 <xref:System.Threading.SpinLock>將會停止微調，以避免不足邏輯處理器或優先順序反轉具有超執行緒的系統上的某些條件下。  
   
- 上述範例會使用 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName> 類別，這個類別必須透過使用者同步處理進行多執行緒存取。  在以 .NET Framework 第 4 版 \(含\) 以後版本為目標的應用程式中有另一種選擇，即是使用 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>，這就不需要任何使用者鎖定。  
+ 這個範例會使用<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>類別，需要進行多執行緒存取的使用者同步處理。 在.NET Framework 第 4 版為目標的應用程式，另一個選項是使用<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>，不需要任何使用者的鎖定。  
   
- 請注意 <xref:System.Threading.SpinLock.Exit%2A> 呼叫中使用的 `false` \(在 Visual Basic 為 `False`\)。  這可提供最佳的效能。  請在 IA64 架構上指定 `true` \(`True`\) 以使用記憶體柵欄，記憶體柵欄會清空寫入緩衝區，以確保其他執行緒現在可以使用鎖定來執行結束。  
+ 請注意使用`false`(`False`在 Visual Basic 中) 的呼叫中<xref:System.Threading.SpinLock.Exit%2A>。 這可提供最佳效能。 在 IA64 架構上指定 `true` (`True`) 以使用記憶體範圍，記憶體範圍可排清寫入緩衝區以確保鎖定現已可供其他執行緒來結束。  
   
-## 請參閱  
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>另請參閱  
+ [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

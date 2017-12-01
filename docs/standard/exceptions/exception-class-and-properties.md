@@ -1,57 +1,52 @@
 ---
-title: "Exception 類別和屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Exception 類別"
-  - "例外狀況, Exception 類別"
+title: "Exception 類別和屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions, Exception class
+- Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-# Exception 類別和屬性
-<xref:System.Exception> 類別為例外狀況所繼承的基底類別 \(Base Class\)。  大部分的例外狀況物件都是 **Exception** 衍生類別的執行個體，但您可以將所有由 <xref:System.Object> 類別衍生出來的物件當做是例外狀況擲回。  注意，並非所有語言都支援擲回和攔截不是衍生自 **Exception** 的物件。  在幾乎所有的情形中，建議您只需擲回並攔截 **Exception** 物件。  
+# <a name="exception-class-and-properties"></a>Exception 類別和屬性
+
+<xref:System.Exception> 類別是例外狀況所繼承的基底類別。 例如 <xref:System.InvalidCastException> 類別的階層如下：
+
+```
+Object
+  Exception
+    SystemException
+       InvalidCastException
+```
+
+<xref:System.Exception> 類別具有下列屬性，讓您更容易了解例外狀況。
+
+| 屬性名稱 | 說明 |
+| ------------- | ----------- |
+| <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> 會將任意資料保存在索引鍵/值組。 |
+| <xref:System.Exception.HelpLink> | 可保留說明檔的 URL (或 URN)，以提供有關例外狀況原因的廣泛資訊。 |
+| <xref:System.Exception.InnerException> | 您可以在例外狀況處理期間，使用此屬性來建立及保留一系列的例外狀況。 您可以使用此屬性來建立新的例外狀況，其中包含先前攔截例外狀況。 <xref:System.Exception.InnerException> 屬性中的第二個例外狀況可以擷取原始的例外狀況，讓程式碼可以處理第二個例外狀況，以檢視其他額外的資訊。 例如，假設您有一個方法會接收格式不正確的引數。  此程式碼會嘗試讀取引數，但擲回例外狀況。 此方法會攔截例外狀況並擲回 <xref:System.FormatException>。 為了改善呼叫端判斷所擲回例外狀況原因的能力，有時需要讓方法攔截 Helper 常式所擲回的例外狀況，再擲回更清楚指出所發生錯誤的例外狀況。 您可以建立全新且更有意義的例外狀況，其中的內部例外狀況參考可設定為原始例外狀況。 這個更有意義的例外狀況接著會擲回給呼叫端。 請注意，透過這項功能，您可以建立一系列的連結例外狀況，每個例外狀況後面接著先前擲回的例外狀況。 |
+| <xref:System.Exception.Message> | 提供有關例外狀況原因的詳細資料。
+| <xref:System.Exception.Source> | 取得或設定造成錯誤的應用程式或物件的名稱。 |
+| <xref:System.Exception.StackTrace>| 包含可用來判斷發生錯誤位置的堆疊追蹤。 堆疊追蹤包括原始程式檔名稱和程式行號 (若有偵錯資訊的話)。 |
+
+大部分繼承自 <xref:System.Exception> 的類別不會實作其他成員或提供其他功能；它們只會繼承自 <xref:System.Exception>。 因此，您可以在例外狀況類別階層架構、例外狀況名稱和例外狀況所包含的資訊中，找到例外狀況的最重要資訊。
+
+我們建議您擲回並攔截物件必須衍生自<xref:System.Exception>，但您可以擲回的任何物件衍生自<xref:System.Object>當做例外狀況類別。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
   
- **Exception** 類別具有數個屬性，使得對例外狀況的了解更簡單。  這些屬性包括：  
-  
--   <xref:System.Exception.StackTrace%2A> 屬性。  
-  
-     這個屬性包含堆疊追蹤，可以用來確定何處錯誤發生。  堆疊追蹤包括來源檔名稱和程式行號 \(若有偵錯資訊的話\)。  
-  
--   <xref:System.Exception.InnerException%2A> 屬性。  
-  
-     這個屬性可以用來在例外處理期間建立和保留例外狀況的系列。  您可以使用這個屬性建立含有先前攔截的例外狀況的新例外狀況。  原始例外狀況在 **InnerException** 屬性中可以被第二個例外狀況擷取，並讓處理第二個例外狀況的程式碼得以檢查額外資訊。  
-  
-     例如，假定您有讀取檔案及格式化讀取資料的方法。  程式碼嘗試從檔案讀取，但有 FileException 被擲回。  方法攔截 FileException 並擲回 BadFormatException。  在這個情形中，FileException 可以儲存於 BadFormatException 的 **InnerException** 屬性。  
-  
-     若要改善呼叫端的能力以確定例外狀況被擲回的理由，則需要方法攔截 Helper 常式擲回的例外狀況，並接著擲回更能表明已發生錯誤的例外狀況。  您可以建立新的和較有意義的例外狀況，其中內部例外狀況參考可設定為原始例外狀況。  然後，這個更有意義的例外狀況可以擲回給呼叫端。  注意，有了這個功能，您就可以建立連結的例外狀況系列，這系列以最先擲回的例外狀況做為結尾。  
-  
--   <xref:System.Exception.Message%2A> 屬性。  
-  
-     這個屬性提供例外狀況起因的詳細資訊。  **Message** 是以擲回例外狀況之執行緒的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> 屬性指定的語言顯示。  
-  
--   <xref:System.Exception.HelpLink%2A> 屬性。  
-  
-     這個屬性可以儲存說明檔 \(提供大量例外狀況起因的資訊\) 的 URL \(或 URN\)。  
-  
--   <xref:System.Exception.Data%2A> 屬性  
-  
-     此屬性為 IDictionary，能夠在機碼值組中保留任意資料。  
-  
- 繼承自 **Exception** 的大部分類別並不實作額外成員或提供額外功能；它們僅是繼承自 **Exception**。  因此，例外狀況的最重要資訊可能存在於例外狀況的階層架構、例外狀況名稱和包含於例外狀況中的資訊。  
-  
-## 請參閱  
- [例外狀況階層架構](../../../docs/standard/exceptions/exception-hierarchy.md)   
- [例外狀況處理基礎觀念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [例外狀況的最佳作法](../../../docs/standard/exceptions/best-practices-for-exceptions.md)   
- [例外狀況](../../../docs/standard/exceptions/index.md)
+## <a name="see-also"></a>另請參閱  
+[例外狀況](index.md)

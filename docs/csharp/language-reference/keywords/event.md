@@ -1,43 +1,24 @@
 ---
 title: "event (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - event
 - remove
 - event_CSharpKeyword
 - add
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- event keyword [C#]
+helpviewer_keywords: event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 674e36625a68243afff75f6c5028309dc7aff02a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  
@@ -45,11 +26,11 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  下例範例示範如何宣告及引發使用 <xref:System.EventHandler> 作為基礎委派類型的事件。 如需同時示範如何使用泛型 <xref:System.EventHandler%601> 委派類型，以及如何訂閱事件並建立事件處理常式方法的完整程式碼範例，請參閱[如何：發行符合 .NET Framework 方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  事件是一種特殊的多點傳送委派，只能從宣告委派的類別或結構內叫用 (發行者類別)。 如果其他類別或結構訂閱了事件，當發行者類別引發事件時，就會呼叫其事件處理常式方法。 如需詳細資訊與程式碼範例，請參閱[事件](../../../csharp/programming-guide/events/index.md)及[委派](../../../csharp/programming-guide/delegates/index.md)。  
   
- 事件可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected internal`。 這些存取修飾詞定義類別使用者如何存取事件。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 事件可以標示為[公用](../../../csharp/language-reference/keywords/public.md)，[私人](../../../csharp/language-reference/keywords/private.md)，[保護](../../../csharp/language-reference/keywords/protected.md)，[內部](../../../csharp/language-reference/keywords/internal.md)，[保護內部](../../../csharp/language-reference/keywords/protected-internal.md)或[受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取事件。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
 ## <a name="keywords-and-events"></a>關鍵字和事件  
  下列關鍵字適用於事件。  
@@ -69,11 +50,10 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [add](../../../csharp/language-reference/keywords/add.md)   
- [remove](../../../csharp/language-reference/keywords/remove.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [add](../../../csharp/language-reference/keywords/add.md)  
+ [remove](../../../csharp/language-reference/keywords/remove.md)  
+ [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
  [如何：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
-

@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6e3ec30edc65fd136fff56b1469664a6ba3b44f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-ruleset-toolkit"></a>外部 Ruleset 工具組
 通常在工作流程應用程式內使用規則時，這些規則算是組件的一部分。 在某些案例中，您可能會想要將 RuleSet 與組件分開維護，讓它們不需要重新建置及部署工作流程組件便可加以更新。 這個範例可讓您用資料庫來管理及編輯 RuleSet，並可從執行階段的工作流程中存取這些 RuleSet。 這樣可讓執行中的工作流程執行個體自動納入 RuleSet 變更。  
@@ -143,6 +143,4 @@ ms.lasthandoff: 10/18/2017
 10. 現在，您可以用處理其他任何工作流程主控台應用程式的方式來執行 `RuleSetToolkitUsageSample` 專案。 在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中按 F5 或 Ctrl+F5，或直接執行 RuleSetToolkitUsageSample.exe 檔案。  
   
     > [!NOTE]
-    >  您必須先關閉 RuleSet 工具才可重新編譯此使用範例，因為工具會載入此使用範例組件。  
-  
-## <a name="see-also"></a>另請參閱
+    >  您必須先關閉 RuleSet 工具才可重新編譯此使用範例，因為工具會載入此使用範例組件。

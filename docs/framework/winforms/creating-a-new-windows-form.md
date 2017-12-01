@@ -16,14 +16,14 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31406d7ed98b462a39e0b57bf66988b1c440a33f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="creating-a-new-windows-form"></a>建立新的 Windows Form
-本主題包含主題的連結，說明如何建立第一個 Windows Forms 應用程式。 此外，本節中的主題會介紹一些在您開始建立 Windows Form 應用程式時應該了解的基本詞彙和方針。 . 若要深入了解 Windows Forms 應用程式、您可以在其上使用的控制項、事件和處理事件，以及如何處理使用者的輸入，請參閱相關的主題清單。  
+本主題包含主題的連結，說明如何建立第一個 Windows Forms 應用程式。 此外，本節中的主題會介紹一些在您開始建立 Windows Forms 應用程式時應該了解的基本詞彙和方針。 若要深入了解 Windows Form 應用程式，您可以使用它們、 事件和處理事件，以及如何處理來自使用者的輸入上的控制項，請參閱相關的主題清單。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [Windows Form 座標](../../../docs/framework/winforms/windows-forms-coordinates.md)。  

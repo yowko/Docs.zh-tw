@@ -1,22 +1,21 @@
 ---
 title: "自動記憶體管理和記憶體回收"
-description: "自動記憶體管理和記憶體回收"
+description: "了解如何自動記憶體管理是 Common Language Runtime 所提供服務的受管理的執行期間的其中一個。"
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>自動記憶體管理和記憶體回收
 
 自動記憶體管理是 Common Language Runtime 在 Managed 執行期間所提供的一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。
@@ -56,5 +55,4 @@ ms.lasthandoff: 03/02/2017
 [System.GC](xref:System.GC)
 
 [.NET 的記憶體回收](index.md)
-
 

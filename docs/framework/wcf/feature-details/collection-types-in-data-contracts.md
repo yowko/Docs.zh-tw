@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -165,7 +165,7 @@ ms.lasthandoff: 10/18/2017
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |參考型別|由參考型別實作的介面|範例|型別的處理方式|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封閉式泛型 (任何參數數目)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封閉式泛型 `IDictionary<object,object>`|  
-|封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>，封閉式|`MyType<T> : IDictionary\<string, bool>` 其中 T=`int`|封閉式泛型 (例如， `IDIctionary\<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType\<T,U,V> : IDictionary\<string,V>` 其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary\<Z,bool>` 其中 Z=`string`|封閉式泛型 (例如， `IDictionary\<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType\<T,U,V> : IDictionary\<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封閉式泛型 (例如， `IDictionary\<string,bool>`)|  
-|開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType\<K,V> : IDictionary\<K,V>`，K 與 V 都屬開放式|開放式泛型 (例如， `IDictionary\<K,V>`)|  
+|封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>，封閉式|`MyType<T> : IDictionary<string, bool>`其中 T =`int`|封閉式泛型 (例如，`IDIctionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>`其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>`其中 Z =`string`|封閉式泛型 (例如，`IDictionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType<T,U,V> : IDictionary<V,U>`，其中 T=`int`，U=`bool`，V=`string`|封閉式泛型 (例如，`IDictionary<string,bool>`)|  
+|開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType<K,V> : IDictionary<K,V>`，K 與 V 都屬開放式|開放式泛型 (例如，`IDictionary<K,V>`)|  
   
  如果型別同時實作 <xref:System.Collections.IDictionary> 與泛型 <xref:System.Collections.Generic.IDictionary%602>，這時就只會考慮泛型 <xref:System.Collections.Generic.IDictionary%602> 。  
   

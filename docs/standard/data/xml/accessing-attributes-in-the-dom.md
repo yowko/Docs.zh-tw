@@ -1,35 +1,36 @@
 ---
-title: "存取 DOM 中的屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "存取 DOM 中的屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a433ec5f83a50aa4fe4b2017a0dac3d2a5e5710c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 存取 DOM 中的屬性
-屬性 \(Attribute\) 是項目的屬性 \(Property\)，而不是項目的子系。  這個差別是很重要的，因為這關係到用來巡覽 XML 文件物件模型 \(DOM\) 的同層級節點、父節點和子節點的方法。  例如，**PreviousSibling** 和 **NextSibling** 方法無法用來從項目巡覽到屬性，或在屬性之間巡覽。  屬性 \(Attribute\) 反而是項目的屬性並且由項目所擁有，它有 **OwnerElement** 屬性而沒有 **parentNode** 屬性 \(Property\)，並且有不同的巡覽方法。  
+# <a name="accessing-attributes-in-the-dom"></a>存取 DOM 中的屬性
+屬性 (Attribute) 是項目的屬性 (Property)，而不是項目的子系。 這個差別是很重要的，因為這關係到用來巡覽 XML 文件物件模型 (DOM) 的同層級節點、父節點和子節點的方法。 例如， **PreviousSibling**和**NextSibling**方法不會用來巡覽的項目至屬性或屬性之間。 相反地，屬性是元素的屬性，而且由元素所擁有，具有**OwnerElement**屬性而非**parentNode**屬性，且具有不同的巡覽方法。  
   
- 當目前的節點是項目時，使用 **HasAttribute** 方法來查看是否有與項目相關的屬性。  一旦知道項目有屬性 \(Attribute\)，就有多種存取屬性 \(Attribute\) 的方法。  若要從項目中擷取單一屬性，您可以使用 **XmlElement** 的 **GetAttribute** 與 **GetAttributeNode** 方法，也可以取得所有的屬性並將其置於集合中。  如果您需要重複集合，那麼取得集合很有用。  如果想要有項目的所有屬性 \(Attribute\)，請使用項目的 **Attributes** 屬性 \(Property\) 來擷取所有的屬性 \(Attribute\) 置於集合中。  
+ 項目目前的節點時，請使用**HasAttribute**方法，以查看是否有任何項目相關聯的屬性。 一旦知道項目有屬性 (Attribute)，就有多種存取屬性 (Attribute) 的方法。 若要從項目擷取單一屬性，您可以使用**Xmlelement**和**Getattribute**方法**XmlElement**也可以取得所有屬性插入集合中。 如果您需要重複集合，那麼取得集合很有用。 如果您想從元素的所有屬性，請使用**屬性**要擷取的所有屬性置於集合的項目屬性。  
   
-## 擷取所有的屬性 \(Attribute\) 置於集合中  
- 如果想要將項目節點的所有屬性 \(Attribute\) 都置於集合之中，請呼叫 \(Call\) **XmlElement.Attributes** 屬性 \(Property\)。  這會取得包含項目之所有屬性的 **XmlAttributeCollection**。  **XmlAttributeCollection** 類別會從 **XmlNamedNode** 對應繼承。  所以，集合可以使用的方法和屬性除了 **XmlAttributeCollection** 類別特定的方法和屬性 \(如 **ItemOf** 屬性和 **Append** 方法\) 之外，還包括具名節點對應可使用的方法和屬性。  屬性集合中的每個項目都代表一個 **XmlAttribute** 節點。  若要找出項目上的屬性數目，請取得 **XmlAttributeCollection**，並且使用 **Count** 屬性來查看集合中有多少 **XmlAttribute** 節點。  
+## <a name="retrieving-all-attributes-into-a-collection"></a>擷取所有的屬性 (Attribute) 置於集合中  
+ 如果您想要將所有項目節點的屬性將加入至集合，呼叫**XmlElement.Attributes**屬性。 這會取得**XmlAttributeCollection** ，其中包含項目的所有屬性。 **XmlAttributeCollection**類別繼承自**XmlNamedNode**對應。 因此，方法和集合上可用的屬性包括具名的節點對應此外方法和屬性的特定**XmlAttributeCollection**類別，例如**ItemOf**屬性或**附加**方法。 屬性集合中的每個項目代表**XmlAttribute**節點。 若要尋找的屬性數目的項目上，取得**XmlAttributeCollection**，並使用**計數**屬性來查看多少**XmlAttribute**節點是在集合中。  
   
- 下列程式碼範例將說明如何擷取屬性集合，同時使用 **Count** 方法來計算迴圈索引並加以重複。  程式碼顯示如何從集合中擷取單一的屬性 \(Attribute\) 並顯示其值。  
+ 下列程式碼範例示範如何擷取屬性集合，使用**計數**方法迴圈索引並加以重複。 程式碼顯示如何從集合中擷取單一的屬性 (Attribute) 並顯示其值。  
   
 ```vb  
 Imports System  
@@ -124,7 +125,7 @@ public class Sample
   
  **輸出**  
   
- 顯示集合中的所有屬性 \(Attribute\)。  
+ 顯示集合中的所有屬性 (Attribute)。  
   
 ```  
 genre = novel  
@@ -134,13 +135,13 @@ Display the attribute information.
 sale item  
 ```  
   
- 屬性集合中的資訊可以由名稱或索引編號擷取。  上述範例顯示如何依名稱擷取資料。  下一個範例則顯示如何依索引編號擷取資料。  
+ 屬性集合中的資訊可以由名稱或索引編號擷取。 上述範例顯示如何依名稱擷取資料。 下一個範例則顯示如何依索引編號擷取資料。  
   
- 因為 **XmlAttributeCollection** 是集合並且可以依名稱或索引重複執行，此範例將說明如何使用以零起始的索引，並將下列檔案 **baseuri.xml** 作為輸入，來選取集合中的第一個屬性。  
+ 因為**XmlAttributeCollection**是集合，而且可以逐一查看依名稱或索引，此範例會顯示選取的集合，使用以零為起始的索引，並使用下列檔案中，第一個屬性**baseuri.xml**作為輸入。  
   
-### 輸入  
+### <a name="input"></a>輸入  
   
-```  
+```xml  
 <!-- XML fragment -->  
 <book genre="novel">  
   <title>Pride And Prejudice</title>  
@@ -196,8 +197,8 @@ public class Sample
 }  
 ```  
   
-## 擷取個別屬性 \(Attribute\) 節點  
- 若要從項目中擷取單一屬性節點，便會使用 <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=fullName> 方法。  它會傳回型別 **XmlAttribute** 的物件。  一旦有了 **XmlAttribute**，在 [XmlAttribute Members](frlrfsystemxmlxmlattributeclasstopic) 類別中可以使用的所有方法和屬性 \(Property\)，這個物件也都可以使用，例如尋找 **OwnerElement**。  
+## <a name="retrieving-an-individual-attribute-node"></a>擷取個別屬性 (Attribute) 節點  
+ 若要從項目中擷取單一屬性節點，便會使用 <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> 方法。 它會傳回型別的物件**XmlAttribute**。 一旦**XmlAttribute**，所有的方法和屬性中提供<xref:System.Xml.XmlAttribute?displayProperty=nameWithType>類別位於該物件，例如尋找**OwnerElement**。  
   
 ```vb  
 Imports System  
@@ -260,11 +261,11 @@ using System.Xml;
 }  
 ```  
   
- 如前一個範例所示，您也可以從屬性集合中擷取單一屬性節點。  下列程式碼範例顯示如何撰寫一行程式碼，從 XML 文件樹狀結構的根目錄，依索引編號擷取單一屬性 \(Attribute\)，它也稱為 **DocumentElement** 屬性 \(Property\)。  
+ 如前一個範例所示，您也可以從屬性集合中擷取單一屬性節點。 下列程式碼範例顯示如何一行程式碼可以撰寫可擷取單一屬性依索引編號從 XML 文件的根樹狀結構，也稱為**DocumentElement**屬性。  
   
 ```  
 XmlAttribute attr = doc.DocumentElement.Attributes[0];  
 ```  
   
-## 請參閱  
- [XML 文件物件模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

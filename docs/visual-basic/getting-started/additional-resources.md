@@ -1,12 +1,9 @@
 ---
 title: "Visual Basic 程式設計人員的其他資源"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, additional resources
 - Help
@@ -19,29 +16,14 @@ helpviewer_keywords:
 - support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Visual Basic 程式設計人員的其他資源
 下列網站提供指引，可協助您尋找常見問題的解答。  
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/28/2017
 |詞彙|定義|  
 |----------|----------------|  
 |[Code Gallery](http://code.msdn.microsoft.com/) (程式碼庫)|下載及與開發人員社群分享範例應用程式和其他資源。|  
-|[CodePlex](http://www.codeplex.com/)|其中存放了開放原始碼軟體專案。 您可以使用 CodePlex 尋找開放原始碼軟體或建立新專案，與全世界分享。|  
+|[GitHub](http://www.github.com/)|其中存放了開放原始碼軟體專案。 您可以使用 GitHub 來尋找開放原始碼軟體或建立新的專案，與全世界分享。|  
 |[Visual Basic 程式碼範例](http://msdn.microsoft.com/vbasic/ms789074)|提供 Visual Basic 中的應用程式、Web 和資料範例。|  
   
 ### <a name="forums"></a>論壇  
@@ -106,6 +88,5 @@ ms.lasthandoff: 07/28/2017
 |[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|提供論壇，以在 DevX 論壇中討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 新功能。|  
   
 ## <a name="see-also"></a>另請參閱  
- [快速入門](../../visual-basic/getting-started/index.md)   
+ [快速入門](../../visual-basic/getting-started/index.md)  
  [告訴我們](/visualstudio/ide/talk-to-us)
-

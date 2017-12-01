@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/21/2017
 
 如果您的應用程式 (Web/服務) 必須在多個平台 (Windows、Linux 和 macOS) 上執行，請使用 .NET Core。
 
-.NET Core 支援先前所述的作業系統作為您的開發工作站。 Visual Studio 提供適用於 Windows 和 Mac 的整合式開發環境 (IDE)。 您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。 Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。 大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。 這些協力廠商編輯器會透過 [Omnisharp](http://www.omnisharp.net/) 取得編輯器 IntelliSense。 您也可以避免使用任何程式碼編輯器，並直接使用 [.NET Core CLI 工具](../core/tools/index.md) (適用於所有支援的平台)。
+.NET Core 支援先前所述的作業系統作為您的開發工作站。 Visual Studio 提供 Windows 及 macOS 的整合式開發環境 (IDE)。 您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。 Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。 大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。 這些協力廠商編輯器會透過 [Omnisharp](http://www.omnisharp.net/) 取得編輯器 IntelliSense。 您也可以避免使用任何程式碼編輯器，並直接使用 [.NET Core CLI 工具](../core/tools/index.md) (適用於所有支援的平台)。
 
 ### <a name="microservices-architecture"></a>微服務架構
 
@@ -107,10 +106,9 @@ ms.lasthandoff: 08/21/2017
 某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，某些 Azure 服務 (例如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors) 需要 .NET Framework。 部分其他服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
 
 ## <a name="see-also"></a>請參閱
- [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)   
- [.NET Core 指南](../core/index.md)   
- [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)   
- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)   
- [.NET 元件概觀](components.md)   
+ [ASP.NET 與 ASP.NET Core 之間選擇](/aspnet/core/choose-aspnet-framework)  
+ [.NET Core 指南](../core/index.md)  
+ [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
+ [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
+ [.NET 偵錯概觀](components.md)  
  [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)
-

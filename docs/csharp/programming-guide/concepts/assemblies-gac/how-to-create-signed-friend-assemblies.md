@@ -1,30 +1,21 @@
 ---
 title: "如何：建立簽署的 Friend 組件 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：建立簽署的 Friend 組件 (C#)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
@@ -106,12 +97,11 @@ ms.lasthandoff: 07/28/2017
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `internal` 類型和成員的可見性。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [如何：建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Sn.exe (強式名稱工具)](https://msdn.microsoft.com/library/k5b5tt23)   
- [建立和使用強式名稱的組件](https://msdn.microsoft.com/library/xwb8f617)   
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [如何： 建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [Sn.exe (強式名稱工具)](https://msdn.microsoft.com/library/k5b5tt23)  
+ [建立和使用強式名稱的組件](https://msdn.microsoft.com/library/xwb8f617)  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
-

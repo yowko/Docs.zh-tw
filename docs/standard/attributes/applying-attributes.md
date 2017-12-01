@@ -1,59 +1,66 @@
 ---
-title: "套用屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 屬性"
-  - "屬性 [.NET Framework], 套用"
+title: "套用屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- assemblies [.NET Framework], attributes
+- attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e23649c5d833bef8b74ec5d3b9c22235756580e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 套用屬性
-使用下列程序將屬性套用到您的程式碼項目。  
+# <a name="applying-attributes"></a>套用屬性
+使用下列流程將屬性套用至程式碼的元素。  
   
-1.  從 .NET Framework 匯入它的命名空間 \(Namespace\) 來定義新屬性或使用現存的屬性。  
+1.  定義新屬性，或從 .NET Framework 匯入屬性的命名空間以使用現有的屬性。  
   
-2.  將屬性 \(Attribute\) 放在緊接於程式碼項目之前的位置，藉此將屬性套用到此項目。  
+2.  將屬性放在緊接於程式碼元素前面，以套用屬性。  
   
-     每個語言皆有自己的屬性語法。  在 C\+\+ 和 C\# 中，屬性是以方括號括住，並以可包含分行符號的泛空白字元 \(White Space\) 與項目分隔。  在 Visual Basic 中，屬性是以角括弧括住，並且必須位於相同的邏輯程式敘述行 \(Logical Line\)；如果需要使用分行符號，可以使用行接續符號字元。  在 J\# 中，會使用特殊的註解語法附加屬性。  
+     每個語言有其自己的屬性語法。 在 C++ 和 C# 中，屬性以方括弧括住，而且與元素之間以空白字元隔開，其中可包含分行符號。 在 Visual Basic 中，屬性以角括弧括住，而且必須在相同的邏輯行。如果想要分行符號，可以使用行接續字元。
   
 3.  指定屬性的位置參數和具名參數。  
   
-     位置參數是必要項，並且必須在任何具名參數之前，且會對應到一個屬性建構函式 \(Constructor\) 的參數。  具名參數是選擇性參數，且會對應到屬性 \(Attribute\) 的讀取\/寫入屬性 \(Property\)。  在 C\+\+、C\# 和 J\# 中，為每個選擇性參數指定 `name`\=`value`，其中 `name` 為屬性的名稱。  在 Visual Basic 中，指定 `name`:\=`value`。  
+     位置參數是必要的，而且必須位於任何具名參數前面。它們對應至屬性的其中一個建構函式的參數。 具名參數是選擇性，對應至屬性的讀寫屬性。 在 c + + 和 C# 中，指定`name` = `value`每一個選擇性參數，其中`name`是屬性的名稱。 在 Visual Basi 中，指定 `name`:=`value`。  
   
- 此屬性會在您編譯程式碼時發送至中繼資料內，並且透過執行階段反映服務，在 Common Language Runtime 和任何自訂工具或應用程式中使用。  
+ 當您編譯程式碼時，屬性會發出至中繼資料，並透過執行階段反映服務，提供給通用語言執行平台及任何自訂工具或應用程式使用。  
   
- 依照慣例，所有屬性名稱以 Attribute 作結尾。  然而，許多以執行階段為目標的語言，例如 Visual Basic 和 C\#，不需要您指定屬性的完整名稱。  例如，如果您想要初始化 <xref:System.ObsoleteAttribute?displayProperty=fullName>，就只需要以 **Obsolete** 參考它。  
+ 依照慣例，所有屬性名稱的結尾都是 Attribute。 不過，有幾種以 Visual Basic 和 C# 等執行階段為目標的語言，並不需要您指定屬性的全名。 例如，如果您想要初始化<xref:System.ObsoleteAttribute?displayProperty=nameWithType>，您只需要參考它做為**過時**。  
   
-## 將屬性套用至方法  
- 下列程式碼範例示範如何宣告 **System.ObsoleteAttribute**，其標記程式碼為過時的。  字串 `"Will be removed in next version"` 會傳遞至屬性。  當呼叫屬性所描述的程式碼時，這個屬性產生編譯器警告以顯示傳遞的字串。  
+## <a name="applying-an-attribute-to-a-method"></a>將屬性套用至方法  
+ 下列程式碼範例示範如何宣告 **System.ObsoleteAttribute**，將程式碼標記為已淘汰。 `"Will be removed in next version"` 字串會傳遞至屬性。 當呼叫這個屬性所描述的程式碼時，屬性會產生編譯器警告來顯示傳遞的字串。  
   
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
-## 在組件層級套用屬性  
- 如果您想要在組件 \(Assembly\) 層級套用屬性，請使用 **assembly** 關鍵字。\(在版本Visual Basic中使用`Assembly` 下列程式碼示範在組件層級套用 **AssemblyTitleAttribute**。  
+## <a name="applying-attributes-at-the-assembly-level"></a>在組件層級套用屬性  
+ 如果您想要在組件層級套用屬性，請使用 **assembly** 關鍵字 (在 Visual Basic 中為 `Assembly`)。 下列程式碼顯示在組件層級套用的 **AssemblyTitleAttribute**。  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- 當套用這個屬性後，`"My Assembly"` 字串將被放在檔案的中繼資料裡的組件資訊清單 \(Assembly Manifest\) 中。  您可以使用 [MSIL 反組譯工具 \(Ildasm.exe\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 或者建立擷取屬性的自訂程式來檢視屬性。  
+ 套用此屬性時，字串 `"My Assembly"` 會放在檔案的中繼資料部分中的組件資訊清單。 您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 或建立自訂程式擷取屬性，以檢視屬性。  
   
-## 請參閱  
- [屬性](../../../docs/standard/attributes/index.md)   
- [擷取儲存於屬性中的資訊](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)   
- [Concepts](../Topic/Attributed%20Programming%20Concepts.md)   
- [屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [屬性](../../../docs/standard/attributes/index.md)  
+ [擷取儲存於屬性中的資訊](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [概念](/cpp/windows/attributed-programming-concepts)  
+ [屬性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

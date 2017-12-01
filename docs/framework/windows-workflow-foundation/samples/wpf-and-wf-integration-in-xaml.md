@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f2fc2399dc1c98ad8890034ca3a9915d4ce86162
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 11ffdca834ba267fdd10ecb968699615089c6170
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML 中的 WPF 及 WF 整合
 這個範例示範如何建立在單一 XAML 文件中使用 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 和 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的應用程式。 為了完成這項作業，此範例會使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 擴充性。  
@@ -52,6 +52,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`  
-  
-## <a name="see-also"></a>另請參閱
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

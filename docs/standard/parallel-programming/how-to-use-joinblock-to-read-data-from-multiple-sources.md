@@ -1,52 +1,58 @@
 ---
-title: "How to: Use JoinBlock to Read Data From Multiple Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, joining blocks in"
-  - "dataflow blocks, joining in TPL"
+title: "如何：使用 JoinBlock 從多個來源讀取資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, joining blocks in
+- dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 41445e4874b94809840ecf9ebda6f27ccc955c9b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Use JoinBlock to Read Data From Multiple Sources
-當資料來源時，可取得這份文件說明如何使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別執行作業。  它也示範如何使用非窮盡聯結的方式以啟用多重聯結區塊而更有效率地共用資料來源的範例。  
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>如何：使用 JoinBlock 從多個來源讀取資料
+本文件將說明，如何在有多個來源的資料可用時，使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別執行作業。 另外也會示範如何使用非窮盡模式，讓多個聯結區塊更有效率地共用資料來源。  
   
 > [!TIP]
->  TPL 資料流程式庫 \(<xref:System.Threading.Tasks.Dataflow?displayProperty=fullName> 命名空間\) 並沒有和 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 配置在一起。  若要安裝 <xref:System.Threading.Tasks.Dataflow> 命名空間，請在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中開啟您的專案，從 \[專案\] 功能表中選擇 \[**管理 NuGet 封裝**\]，並且線上搜尋 `Microsoft.Tpl.Dataflow` 封裝。  
+>  TPL 資料流程程式庫 (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空間) 並未隨附於 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安裝<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並在搜尋線上`Microsoft.Tpl.Dataflow`封裝。  
   
-## 範例  
- 當資源可供使用時，下列範例定義三個資源類型、 `NetworkResource`、 `FileResource`和 `MemoryResource`，以及執行作業。  這個範例需要名為的 `NetworkResource` 和 `MemoryResource` 為執行第一個作業和 `FileResource` 和 `MemoryResource` 為執行第二個作業。  使這些作業發生時，所有必要的資源可用，這個範例會使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別。  當 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件接收來自任何來源中的資料時，它會傳送資料至其目標，在此例中為 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件。  從 `MemoryResource` 共用集區讀取的兩個 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件。  
+## <a name="example"></a>範例  
+ 下列範例會定義三個資源類型 `NetworkResource`、`FileResource` 和 `MemoryResource`，並且在有可用資源時執行作業。 這個範例需要 `NetworkResource` 和 `MemoryResource` 配對，以便執行第一個作業，而且需要 `FileResource` 和 `MemoryResource` 配對，以便執行第二個作業。 為了要讓這些作業在所有必要的資源可供使用時發生，這個範例會使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別。 當 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件接收來自所有來源的資料時，它會將該資料傳播至其目標，也就是這個範例中的 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件。 這兩個 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件都會從 `MemoryResource` 物件的共用集區讀取。  
   
  [!code-csharp[TPLDataflow_NonGreedyJoin#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_nongreedyjoin/cs/nongreedyjoin.cs#1)]
  [!code-vb[TPLDataflow_NonGreedyJoin#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_nongreedyjoin/vb/nongreedyjoin.vb#1)]  
   
- 若要讓 `MemoryResource` 物件共用集區的有效使用，這個範例會指定將 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 屬性設定為 `False` 建立 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件在非窮盡模式下執行之動作的 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> 物件。  非窮盡聯結區塊將所有傳入訊息，直到其中一個從每個來源中取得。  如果任何延後訊息由其他區塊接受，聯結區塊重新啟動處理序。  非窮盡模式啟用聯結共用一個或更多來源區塊取得順向進度的區塊，而其他區塊等待資料。  在此範例中，如果 `MemoryResource` 物件加入至 `memoryResources` 的集區，第一個聯結區塊收到第二個資料來源可以取得順向進度。  如果這個範例是使用窮盡模式，也就是預設值，會將區塊可能採用 `MemoryResource` 物件並等待第二個資源可供使用。  不過，如果其他聯結區塊都有自己的第二個資料來源可用就無法取得順向進度，因為 `MemoryResource` 物件由其他採用聯結區塊。  
+ 為了要讓 `MemoryResource` 物件共用集區的使用更有效率，這個範例會指定 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> 物件並將其 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 屬性設定為 `False`，建立以非窮盡模式執行的 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件。 非窮盡聯結區塊會延後所有傳入訊息，直到每個來源都有一個為止。 如果有任一個延後的訊息被另一個區塊所接受，聯結區塊就會重新啟動處理序。 非窮盡模式會在其他區塊等待資料的同時，讓共用一個或多個來源區塊的聯結區塊往前進行。 在這個範例中，如果 `MemoryResource` 物件已加入至 `memoryResources` 集區，則要接收其第二個資料來源的第一個聯結區塊就能繼續往前進行。 如果這個範例是使用窮盡模式，也就是預設值，則聯結區塊可能會採用 `MemoryResource` 物件並等待可供使用的第二個資源。 不過，如果其他聯結區塊都有自己的第二個資料來源可用，就無法繼續往前進行，因為 `MemoryResource` 物件已由另一個聯結區塊佔用。  
   
-## 編譯程式碼  
- 請複製範例程式碼並將它貼在 Visual Studio 專案中，或是貼在名為  `DataflowNonGreedyJoin.cs`的檔案中 \([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 的 `DataflowNonGreedyJoin.vb` \) ，然後在 Visual Studio 的 \[命令提示字元\] 視窗中執行下列命令。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowNonGreedyJoin.cs` 的檔案中 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為 `DataflowNonGreedyJoin.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   
-## 穩固程式設計  
- 使用非窮盡聯結也可以協助您避免在應用程式中的死結。  在軟體應用程式中，如果有兩個以上的處理序各擁有一項資源，而互相等候另一個處理序釋放另一項資源，即會發生「*死結*」\(Deadlock\)。  考量的應用程式定義兩個 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件。  兩個物件都讀取從兩個共用來源區塊中的資料。  在窮盡模式，如果有一個關聯的區塊是第一個來源讀取，而第二個聯結區塊是第二個來源讀取，應用程式可能會發生死結，因為兩個聯結區塊互相等候其他釋放其資源。  在非窮盡模式，其中每個聯結區塊會從來源讀取，只有在所有資料可用時，因此會消除死結的風險。  
+## <a name="robust-programming"></a>穩固程式設計  
+ 使用非窮盡聯結還可以協助您防止應用程式中發生死結。 在軟體應用程式中，*死結*兩個或多個處理序每個保留的資源，且會互相等候另一個處理序釋放其他一些資源時發生。 假設有一個應用程式定義了兩個 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件。 這兩個物件都會從兩個共用來源區塊讀取資料。 在窮盡模式下，如果其中一個聯結區塊是從第一個來源讀取，而第二個聯結區塊是從第二個來源讀取，則應用程式可能會發生死結，因為這兩個聯結區塊會互相等候彼此釋放其資源。 在非窮盡模式下，每個聯結區塊只會在所有資料都可用時才從其來源讀取，因此可排除死結的情況發生。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

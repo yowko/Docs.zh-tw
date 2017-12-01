@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
-ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -20,7 +19,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="name"></a>名稱
 
-`dotnet` - 用於執行命令列命令的一般驅動程式。
+`dotnet` - 用於執行命令列命令的一般驅動器。
 
 ## <a name="synopsis"></a>概要
 
@@ -36,7 +35,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>說明
 
-`dotnet` 是命令列介面 (CLI) 工具鏈的泛型驅動程式。 它會自行叫用，提供簡短的使用方式指示。
+`dotnet` 是命令列介面 (CLI) 工具鏈的通用驅動器。 它會自行叫用，提供簡短的使用方式指示。
 
 每個特定功能都是當成命令來實作。 若要使用這個功能，請在 `dotnet` 之後指定這個命令 (例如 [`dotnet build`](dotnet-build.md))。 這個命令後面的所有引數都是它自己的引數。
 
@@ -48,7 +47,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additionaldeps <PATH>`
 
-其他 *deps.json* 檔案的路徑。
+其他路徑*deps.json*檔案。
 
 `--additionalprobingpath <PATH>`
 
@@ -187,6 +186,8 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet restore`
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 建置所指定目錄中的專案和其相依性：
 
 `dotnet build`
@@ -208,4 +209,3 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 指定是否收集 .NET Core 工作使用資料，並將其傳送給 Microsoft。 設定為 `true` 取消遙測功能 (可接受的值為 `true`、`1` 或 `yes`)；否則，設定為 `false` 加入遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能為使用中。
-

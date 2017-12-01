@@ -3,16 +3,15 @@ title: "dotnet-add reference 命令 - .NET Core CLI"
 description: "dotnet add reference 命令提供方便的選項，以新增專案對專案參考。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/14/2017
 
 `PROJECT`
 
-指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個方案檔。
+指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。
 
 `PROJECT_REFERENCES`
 
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/14/2017
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-新增多個專案參考：
+目前目錄中加入多個專案的專案參考：
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

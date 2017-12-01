@@ -1,38 +1,19 @@
 ---
 title: "using 指示詞 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using directive [C#]
+helpviewer_keywords: using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1129efd8a1c4058a9648eab61f98cdcef7e9f2f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
 `using` 指示詞有三個用途：  
@@ -81,15 +62,15 @@ class Program
   
  建立 `using` 指示詞，以在命名空間中使用類型，而無需指定命名空間。 `using` 指示詞不會授予巢狀於您指定的命名空間中的任何命名空間的存取權。  
   
- 命名空間有兩種類型：使用者定義和系統定義。 使用者定義的命名空間是在程式碼中定義的命名空間。 如需系統定義的命名空間的清單，請參閱 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195)。  
+ 命名空間有兩種類型：使用者定義和系統定義。 使用者定義的命名空間是在程式碼中定義的命名空間。 如需系統定義的命名空間的清單，請參閱[.NET Framework 類別庫概觀](../../../standard/class-library-overview.md)。  
   
- 如需參考其他組件中的方法的範例，請參閱 [Creating and Using C# DLLs](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4) (建立和使用 C# DLL)。  
+ 如需參考其他組件中的方法的範例，請參閱[建立和使用組件使用命令列](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="example-1"></a>範例 1  
   
  下列範例示範如何定義和使用命名空間的 `using` 別名：  
   
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
  using alias 指示詞的右邊不能有開放式的泛型類型。 例如，您無法為 List\<T> 建立 using alias，但是您可以為 List\<int> 建立。  
   
@@ -97,17 +78,16 @@ class Program
   
  下列範例示範如何定義類別的 `using` 指示詞和 `using` 別名：  
   
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [使用命名空間](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [命名空間](../../../csharp/programming-guide/namespaces/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [使用命名空間](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [命名空間](../../../csharp/programming-guide/namespaces/index.md)  
  [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)
-

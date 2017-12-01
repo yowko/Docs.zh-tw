@@ -1,39 +1,40 @@
 ---
-title: "擴充 DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "擴充 DOM"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 擴充 DOM
-Microsoft .NET Framework 含有可提供 XML 文件物件模型 \(DOM\) 之實作的基底類別組。  <xref:System.Xml.XmlNode> 及其衍生類別會提供方法和屬性，讓您巡覽、查詢和修改 XML 文件的內容和結構。  
+# <a name="extending-the-dom"></a>擴充 DOM
+Microsoft.NET Framework 包含一組基本的類別提供的 XML 文件物件模型 (DOM) 實作。 <xref:System.Xml.XmlNode> 及其衍生類別會提供方法和屬性，讓您巡覽、查詢和修改 XML 文件的內容和結構。  
   
- 當 XML 內容載入使用 DOM 的記憶體時，建立的節點包含資訊，例如節點名稱、節點型別等等。  有時您可能會需要基底類別所沒有提供的特定節點資訊。  例如，您可能想要查看節點的行號和位置。  在這個案例中，您可以從現有 DOM 類別衍生新類別並且加入其他功能。  
+ 當 XML 內容載入使用 DOM 的記憶體時，建立的節點包含資訊，例如節點名稱、節點型別等等。 有時您可能會需要基底類別所沒有提供的特定節點資訊。 例如，您可能想要查看節點的行號和位置。 在這個案例中，您可以從現有 DOM 類別衍生新類別並且加入其他功能。  
   
  衍生新類別時有兩個一般方針：  
   
--   建議您絕不要從 <xref:System.Xml.XmlNode> 類別中進行衍生。  建議您從感興趣之節點型別的對應類別來衍生類別。  例如，如果您要傳回屬性節點的其他資訊，則可以從 <xref:System.Xml.XmlAttribute> 類別加以衍生。  
+-   建議您絕不要從 <xref:System.Xml.XmlNode> 類別中進行衍生。 建議您從感興趣之節點型別的對應類別來衍生類別。 例如，如果您要傳回屬性節點的其他資訊，則可以從 <xref:System.Xml.XmlAttribute> 類別加以衍生。  
   
 -   除了節點建立方法之外，建議在覆寫函式時，您一定要呼叫函式的基底版本，然後加入其他任何的處理。  
   
-## 建立您自己的節點執行個體  
- <xref:System.Xml.XmlDocument> 類別包含節點建立方法。  當 XML 檔載入時，會呼叫這些方法來建立節點。  您可以覆寫這些方法，這樣就會在文件載入時建立您的節點執行個體。  例如，如果擴充了 <xref:System.Xml.XmlElement> 類別，則會繼承 <xref:System.Xml.XmlDocument> 類別，並覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法。  
+## <a name="creating-your-own-node-instances"></a>建立您自己的節點執行個體  
+ <xref:System.Xml.XmlDocument> 類別包含節點建立方法。 當 XML 檔載入時，會呼叫這些方法來建立節點。 您可以覆寫這些方法，這樣就會在文件載入時建立您的節點執行個體。 例如，如果擴充了 <xref:System.Xml.XmlElement> 類別，則會繼承 <xref:System.Xml.XmlDocument> 類別，並覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法。  
   
  下列範例顯示如何覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，以傳回 <xref:System.Xml.XmlElement> 類別的實作。  
   
@@ -55,10 +56,10 @@ class LineInfoDocument : XmlDocument {
   }  
 ```  
   
-## 擴充類別  
- 若要擴充類別，請從其中一個現有的 DOM 類別衍生您的類別。  接著您可以覆寫基底類別中的虛擬方法或屬性，或加入您自己的方法或屬性。  
+## <a name="extending-a-class"></a>擴充類別  
+ 若要擴充類別，請從其中一個現有的 DOM 類別衍生您的類別。 接著您可以覆寫基底類別中的虛擬方法或屬性，或加入您自己的方法或屬性。  
   
- 在下列範例中會建立新類別，此新類別會實作 <xref:System.Xml.XmlElement> 類別和 <xref:System.Xml.IXmlLineInfo> 介面。  其他的方法和屬性會定義何者可讓使用者獲得指令行資訊。  
+ 在下列範例中會建立新類別，此新類別會實作 <xref:System.Xml.XmlElement> 類別和 <xref:System.Xml.IXmlLineInfo> 介面。 其他的方法和屬性會定義何者可讓使用者獲得指令行資訊。  
   
 ```vb  
 Class LineInfoElement  
@@ -122,7 +123,7 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.  
 ```  
   
-### 範例  
+### <a name="example"></a>範例  
  下列範例計算 XML 文件中項目的數目。  
   
 ```vb  
@@ -164,7 +165,7 @@ Class LineInfoElement
       CType(doc, LineInfoDocument).IncrementElementCount()  
    End Sub 'New  
 End Class 'LineInfoElement  
- _ 'End LineInfoElement class.   
+ _ 'End LineInfoElement class.  
   
 Public Class Test  
   
@@ -225,10 +226,10 @@ public class Test {
 }   
 ```  
   
-##### 輸入  
+##### <a name="input"></a>輸入  
  book.xml  
   
-```  
+```xml  
 <!--sample XML fragment-->  
 <book genre='novel' ISBN='1-861001-57-5' misc='sale-item'>  
   <title>The Handmaid's Tale</title>  
@@ -236,23 +237,23 @@ public class Test {
 </book>  
 ```  
   
-##### 輸出  
+##### <a name="output"></a>輸出  
   
 ```  
 Number of elements in book.xml: 3  
 ```  
   
- 如需顯示如何擴充 XML DOM 類別 \(System.Xml\) 的範例，請參閱 www.gotdotnet.com\/userfiles\/XMLDom\/extendDOM.zip。  
+ 如需顯示如何擴充 XML DOM 類別 (System.Xml) 的範例，請參閱 www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip。  
   
-## 節點事件處理常式  
- DOM 的 .NET Framework 實作也包含一個事件系統，當 XML 文件中的節點變更時，可以讓您接收和處理事件。  使用 <xref:System.Xml.XmlNodeChangedEventHandler> 和 <xref:System.Xml.XmlNodeChangedEventArgs> 類別，您可以擷取 `NodeChanged`、`NodeChanging`、`NodeInserted`、`NodeInserting`、`NodeRemoved` 和 `NodeRemoving` 事件。  
+## <a name="node-event-handler"></a>節點事件處理常式  
+ DOM 的 .NET Framework 實作也包含一個事件系統，當 XML 文件中的節點變更時，可以讓您接收和處理事件。 使用 <xref:System.Xml.XmlNodeChangedEventHandler> 和 <xref:System.Xml.XmlNodeChangedEventArgs> 類別，您可以擷取 `NodeChanged`、`NodeChanging`、`NodeInserted`、`NodeInserting`、`NodeRemoved` 和 `NodeRemoving` 事件。  
   
  事件處理程序在衍生類別中的執行方式，與在原始 DOM 類別中的執行方式相同。  
   
- 如需有關節點事件處理的詳細資訊，請參閱＜[事件](../../../../docs/standard/events/index.md)＞和＜[XmlNodeChangedEventHandler 委派](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic)＞。  
+ 如需有關節點事件處理的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)和<xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## 預設屬性和 CreateElement 方法  
- 如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。  這只是在編輯時才會發生的問題。  因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。  如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。  如需有關預設屬性的詳細資訊，請參閱＜[為 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)＞。  
+## <a name="default-attributes-and-the-createelement-method"></a>預設屬性和 CreateElement 方法  
+ 如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。 這只是在編輯時才會發生的問題。 因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。 如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。 如需有關預設屬性的詳細資訊，請參閱[的 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。  
   
-## 請參閱  
- [XML 文件物件模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
