@@ -10,47 +10,47 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acf9d2ace66702c5f0bc522d97ae92869891a38b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1516731181a7e60445ce19752c3bb1835cb5897
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="encoding-binary-objects-with-bytestream-encoder"></a><span data-ttu-id="4f6ca-102">以位元組資料流編碼器將二進位物件編碼</span><span class="sxs-lookup"><span data-stu-id="4f6ca-102">Encoding Binary Objects with ByteStream Encoder</span></span>
-<span data-ttu-id="4f6ca-103">使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 設定 <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement> 傳送及接收原始二進位資料。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-103">Sending and receiving raw binary data with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is configured using <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.</span></span>  
+# <a name="encoding-binary-objects-with-bytestream-encoder"></a><span data-ttu-id="8d41f-102">以位元組資料流編碼器將二進位物件編碼</span><span class="sxs-lookup"><span data-stu-id="8d41f-102">Encoding Binary Objects with ByteStream Encoder</span></span>
+<span data-ttu-id="8d41f-103">使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 設定 <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement> 傳送及接收原始二進位資料。</span><span class="sxs-lookup"><span data-stu-id="8d41f-103">Sending and receiving raw binary data with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is configured using <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.</span></span>  
   
-## <a name="byte-stream-message-encoder-architecture"></a><span data-ttu-id="4f6ca-104">位元組資料流訊息編碼器架構</span><span class="sxs-lookup"><span data-stu-id="4f6ca-104">Byte Stream Message Encoder Architecture</span></span>  
- <span data-ttu-id="4f6ca-105">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用的二進位訊息編碼器並沒有能力處理、驗證或識別訊息中的基礎二進位資料。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-105">The binary message encoder used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has no facility for processing, validating, or identifying the underlying binary data in the message.</span></span> <span data-ttu-id="4f6ca-106">資料封裝會編碼為 XML，傳送、接收及解碼。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-106">The data package is encoded into XML, sent, received, and decoded.</span></span> <span data-ttu-id="4f6ca-107">編碼器處理資料的時間，是在資料傳遞到傳輸之後，且在訊息傳送至訊息佇列之前。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-107">The encoder processes the data after being passed to the transport and before the message is sent to the message queue.</span></span> <span data-ttu-id="4f6ca-108">在功能上，二進位編碼器會將訊息資料包裝在 `<binary>` 項目中進行傳送，而在訊息接收到之後會移除這些項目。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-108">Functionally, the binary encoder wraps the message data in `<binary>` elements for sending and removes the elements after the message is received.</span></span>  
+## <a name="byte-stream-message-encoder-architecture"></a><span data-ttu-id="8d41f-104">位元組資料流訊息編碼器架構</span><span class="sxs-lookup"><span data-stu-id="8d41f-104">Byte Stream Message Encoder Architecture</span></span>  
+ <span data-ttu-id="8d41f-105">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用的二進位訊息編碼器並沒有能力處理、驗證或識別訊息中的基礎二進位資料。</span><span class="sxs-lookup"><span data-stu-id="8d41f-105">The binary message encoder used by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has no facility for processing, validating, or identifying the underlying binary data in the message.</span></span> <span data-ttu-id="8d41f-106">資料封裝會編碼為 XML，傳送、接收及解碼。</span><span class="sxs-lookup"><span data-stu-id="8d41f-106">The data package is encoded into XML, sent, received, and decoded.</span></span> <span data-ttu-id="8d41f-107">編碼器處理資料的時間，是在資料傳遞到傳輸之後，且在訊息傳送至訊息佇列之前。</span><span class="sxs-lookup"><span data-stu-id="8d41f-107">The encoder processes the data after being passed to the transport and before the message is sent to the message queue.</span></span> <span data-ttu-id="8d41f-108">在功能上，二進位編碼器會將訊息資料包裝在 `<binary>` 項目中進行傳送，而在訊息接收到之後會移除這些項目。</span><span class="sxs-lookup"><span data-stu-id="8d41f-108">Functionally, the binary encoder wraps the message data in `<binary>` elements for sending and removes the elements after the message is received.</span></span>  
   
-## <a name="using-the-byte-stream-message-encoder"></a><span data-ttu-id="4f6ca-109">使用位元組資料流訊息編碼器</span><span class="sxs-lookup"><span data-stu-id="4f6ca-109">Using the Byte Stream Message Encoder</span></span>  
- <span data-ttu-id="4f6ca-110">下列範例示範實作位元組資料流訊息編碼器的服務合約。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-110">The following example shows a service contract that implements the byte stream message encoder.</span></span>  
+## <a name="using-the-byte-stream-message-encoder"></a><span data-ttu-id="8d41f-109">使用位元組資料流訊息編碼器</span><span class="sxs-lookup"><span data-stu-id="8d41f-109">Using the Byte Stream Message Encoder</span></span>  
+ <span data-ttu-id="8d41f-110">下列範例示範實作位元組資料流訊息編碼器的服務合約。</span><span class="sxs-lookup"><span data-stu-id="8d41f-110">The following example shows a service contract that implements the byte stream message encoder.</span></span>  
   
 ```csharp  
 [OperationContract]  
 Void Myfunction(Stream stream);  
 ```  
   
- <span data-ttu-id="4f6ca-111">下列範例示範正在叫用的服務。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-111">The following example shows the service being invoked.</span></span>  
+ <span data-ttu-id="8d41f-111">下列範例示範正在叫用的服務。</span><span class="sxs-lookup"><span data-stu-id="8d41f-111">The following example shows the service being invoked.</span></span>  
   
 ```csharp  
 proxy.MyFunction(stream);  
 ```  
   
- <span data-ttu-id="4f6ca-112">如果使用實作訊息基礎結構 (例如路由器) 的服務，處理訊息時並不會檢查、驗證訊息，或是與訊息有其他形式的互動，如以下範例所示。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-112">In the case of using a service that implements a message infrastructure (such as a router), the message is processed without inspecting, validating, or otherwise interacting with the message, as shown in the following example.</span></span>  
+ <span data-ttu-id="8d41f-112">如果使用實作訊息基礎結構 (例如路由器) 的服務，處理訊息時並不會檢查、驗證訊息，或是與訊息有其他形式的互動，如以下範例所示。</span><span class="sxs-lookup"><span data-stu-id="8d41f-112">In the case of using a service that implements a message infrastructure (such as a router), the message is processed without inspecting, validating, or otherwise interacting with the message, as shown in the following example.</span></span>  
   
 ```csharp  
 [OperationContract]  
 void ProcessMessage(Message message) ;  
 ```  
   
-## <a name="scenarios"></a><span data-ttu-id="4f6ca-113">案例</span><span class="sxs-lookup"><span data-stu-id="4f6ca-113">Scenarios</span></span>  
- <span data-ttu-id="4f6ca-114">在下列案例中，位元組資料流編碼器很有用。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-114">The Byte Stream Encoder is useful in the following scenarios.</span></span>  
+## <a name="scenarios"></a><span data-ttu-id="8d41f-113">案例</span><span class="sxs-lookup"><span data-stu-id="8d41f-113">Scenarios</span></span>  
+ <span data-ttu-id="8d41f-114">在下列案例中，位元組資料流編碼器很有用。</span><span class="sxs-lookup"><span data-stu-id="8d41f-114">The Byte Stream Encoder is useful in the following scenarios.</span></span>  
   
--   <span data-ttu-id="4f6ca-115">使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，在電腦之間傳輸 JPEG 影像。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-115">Transferring a JPEG image between computers using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="4f6ca-116">在此案例中，影像將透過外部來源的傳輸送達，而且所傳送的資料是構成影像的未經處理位元組。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-116">In this scenario, the image will arrive through the transport from an outside source, and the data sent will be the raw bytes that make up the image.</span></span> <span data-ttu-id="4f6ca-117">服務將會接收二進位資料並顯示影像。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-117">A service will receive the binary data and display the image.</span></span>  
+-   <span data-ttu-id="8d41f-115">使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，在電腦之間傳輸 JPEG 影像。</span><span class="sxs-lookup"><span data-stu-id="8d41f-115">Transferring a JPEG image between computers using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="8d41f-116">在此案例中，影像將透過外部來源的傳輸送達，而且所傳送的資料是構成影像的未經處理位元組。</span><span class="sxs-lookup"><span data-stu-id="8d41f-116">In this scenario, the image will arrive through the transport from an outside source, and the data sent will be the raw bytes that make up the image.</span></span> <span data-ttu-id="8d41f-117">服務將會接收二進位資料並顯示影像。</span><span class="sxs-lookup"><span data-stu-id="8d41f-117">A service will receive the binary data and display the image.</span></span>  
   
--   <span data-ttu-id="4f6ca-118">從訊息佇列中讀取資訊並加以處理。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-118">Reading information out of a message queue and processing it.</span></span> <span data-ttu-id="4f6ca-119">系統將從訊息佇列管理員讀取訊息，並且在即將處理的訊息佇列通道中向上傳遞。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-119">The message will be read from a message queue manager, and passed up the message queue channel to be handled.</span></span> <span data-ttu-id="4f6ca-120">訊息佇列通道將做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道堆疊的佇列管理員。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-120">The message queue channel will act as a queue manager in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel stack.</span></span>  
+-   <span data-ttu-id="8d41f-118">從訊息佇列中讀取資訊並加以處理。</span><span class="sxs-lookup"><span data-stu-id="8d41f-118">Reading information out of a message queue and processing it.</span></span> <span data-ttu-id="8d41f-119">系統將從訊息佇列管理員讀取訊息，並且在即將處理的訊息佇列通道中向上傳遞。</span><span class="sxs-lookup"><span data-stu-id="8d41f-119">The message will be read from a message queue manager, and passed up the message queue channel to be handled.</span></span> <span data-ttu-id="8d41f-120">訊息佇列通道將做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道堆疊的佇列管理員。</span><span class="sxs-lookup"><span data-stu-id="8d41f-120">The message queue channel will act as a queue manager in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel stack.</span></span>  
   
- <span data-ttu-id="4f6ca-121">如果透過訊息佇列通道傳送訊息，寄件者將無法控制從佇列管理員接收的位元組。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-121">In the case of sending a message over a message queue channel, the sender has no control over the bytes received from the queue manager.</span></span> <span data-ttu-id="4f6ca-122">如果接收處理序無法讀取未經處理的位元組，接收的訊息格式將會呈現錯誤而且無法處理。系統會假設接收處理序能夠將接收的位元組轉譯回可用的格式。</span><span class="sxs-lookup"><span data-stu-id="4f6ca-122">If the receiving process has no capability to read raw bytes, the message will be received as badly formatted and will not be processed; it is assumed that the receiving process will have the capability of translating the received bytes back into a usable format.</span></span>
+ <span data-ttu-id="8d41f-121">如果透過訊息佇列通道傳送訊息，寄件者將無法控制從佇列管理員接收的位元組。</span><span class="sxs-lookup"><span data-stu-id="8d41f-121">In the case of sending a message over a message queue channel, the sender has no control over the bytes received from the queue manager.</span></span> <span data-ttu-id="8d41f-122">如果接收處理序無法讀取未經處理的位元組，接收的訊息格式將會呈現錯誤而且無法處理。系統會假設接收處理序能夠將接收的位元組轉譯回可用的格式。</span><span class="sxs-lookup"><span data-stu-id="8d41f-122">If the receiving process has no capability to read raw bytes, the message will be received as badly formatted and will not be processed; it is assumed that the receiving process will have the capability of translating the received bytes back into a usable format.</span></span>

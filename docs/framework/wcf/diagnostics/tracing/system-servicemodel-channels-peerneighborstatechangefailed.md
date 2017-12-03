@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 95153aa1-0e04-4857-83d9-9963f5e40b4e
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c70a9faabfb6b2d7a825cf0ff8c4ea1d546d49d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8bcaf08f1a67c0a4cc597b4df69f27c4d01b9dfb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a><span data-ttu-id="38644-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span><span class="sxs-lookup"><span data-stu-id="38644-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span></span>
-<span data-ttu-id="38644-103">芳鄰狀態已損毀。</span><span class="sxs-lookup"><span data-stu-id="38644-103">A neighbor's state was corrupted.</span></span>  
+# <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a><span data-ttu-id="b3754-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span><span class="sxs-lookup"><span data-stu-id="b3754-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span></span>
+<span data-ttu-id="b3754-103">芳鄰狀態已損毀。</span><span class="sxs-lookup"><span data-stu-id="b3754-103">A neighbor's state was corrupted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="38644-104">描述</span><span class="sxs-lookup"><span data-stu-id="38644-104">Description</span></span>  
- <span data-ttu-id="38644-105">嘗試變更芳鄰的狀態失敗時，會發生這個追蹤。</span><span class="sxs-lookup"><span data-stu-id="38644-105">This trace occurs upon a failed attempt to change a neighbor's state.</span></span> <span data-ttu-id="38644-106">這代表未預期的內部錯誤，或是損毀的記憶體。</span><span class="sxs-lookup"><span data-stu-id="38644-106">This indicates an unexpected internal error, or corrupted memory.</span></span>  
+## <a name="description"></a><span data-ttu-id="b3754-104">描述</span><span class="sxs-lookup"><span data-stu-id="b3754-104">Description</span></span>  
+ <span data-ttu-id="b3754-105">嘗試變更芳鄰的狀態失敗時，會發生這個追蹤。</span><span class="sxs-lookup"><span data-stu-id="b3754-105">This trace occurs upon a failed attempt to change a neighbor's state.</span></span> <span data-ttu-id="b3754-106">這代表未預期的內部錯誤，或是損毀的記憶體。</span><span class="sxs-lookup"><span data-stu-id="b3754-106">This indicates an unexpected internal error, or corrupted memory.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38644-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="38644-107">See Also</span></span>  
- [<span data-ttu-id="38644-108">追蹤</span><span class="sxs-lookup"><span data-stu-id="38644-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="38644-109">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="38644-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="38644-110">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="38644-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3754-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b3754-107">See Also</span></span>  
+ [<span data-ttu-id="b3754-108">追蹤</span><span class="sxs-lookup"><span data-stu-id="b3754-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b3754-109">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="b3754-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b3754-110">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="b3754-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

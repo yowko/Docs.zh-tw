@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a1768cd-d103-4cd3-a26c-b014465f9236
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 816e976010ca74091d57bfbe15bca2aa0f42c083
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7dc66193d542370ffa3f266611068b67f089257c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="transacted-operations-committed"></a><span data-ttu-id="7f8b2-102">認可的交易作業數</span><span class="sxs-lookup"><span data-stu-id="7f8b2-102">Transacted Operations Committed</span></span>
-<span data-ttu-id="7f8b2-103">計數器名稱：認可的交易作業數。</span><span class="sxs-lookup"><span data-stu-id="7f8b2-103">Counter Name: Transacted Operations Committed.</span></span>  
+# <a name="transacted-operations-committed"></a><span data-ttu-id="3f54a-102">認可的交易作業數</span><span class="sxs-lookup"><span data-stu-id="3f54a-102">Transacted Operations Committed</span></span>
+<span data-ttu-id="3f54a-103">計數器名稱：認可的交易作業數。</span><span class="sxs-lookup"><span data-stu-id="3f54a-103">Counter Name: Transacted Operations Committed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7f8b2-104">描述</span><span class="sxs-lookup"><span data-stu-id="7f8b2-104">Description</span></span>  
- <span data-ttu-id="7f8b2-105">此服務中已認可的交易作業數。</span><span class="sxs-lookup"><span data-stu-id="7f8b2-105">Number of transactional operations that have been committed in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="3f54a-104">描述</span><span class="sxs-lookup"><span data-stu-id="3f54a-104">Description</span></span>  
+ <span data-ttu-id="3f54a-105">此服務中已認可的交易作業數。</span><span class="sxs-lookup"><span data-stu-id="3f54a-105">Number of transactional operations that have been committed in this service.</span></span>

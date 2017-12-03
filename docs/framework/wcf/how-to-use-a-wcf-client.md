@@ -11,29 +11,29 @@ ms.topic: article
 helpviewer_keywords: WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
 caps.latest.revision: "38"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c4b0612cc18129f9f35ed3f475bca8941a20d3ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d9d2fb363aa753edc6d2d4002a948fbb35b75ad
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="aacda-102">HOW TO：使用 Windows Communication Foundation 用戶端</span><span class="sxs-lookup"><span data-stu-id="aacda-102">How to: Use a Windows Communication Foundation Client</span></span>
-<span data-ttu-id="aacda-103">這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的最後一個。</span><span class="sxs-lookup"><span data-stu-id="aacda-103">This is the last of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="aacda-104">六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。</span><span class="sxs-lookup"><span data-stu-id="aacda-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
+# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="a4b50-102">HOW TO：使用 Windows Communication Foundation 用戶端</span><span class="sxs-lookup"><span data-stu-id="a4b50-102">How to: Use a Windows Communication Foundation Client</span></span>
+<span data-ttu-id="a4b50-103">這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的最後一個。</span><span class="sxs-lookup"><span data-stu-id="a4b50-103">This is the last of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="a4b50-104">六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。</span><span class="sxs-lookup"><span data-stu-id="a4b50-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- <span data-ttu-id="aacda-105">在建立並設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Proxy 之後，就可以建立用戶端執行個體，也可以編譯用戶端應用程式並用於與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務通訊。</span><span class="sxs-lookup"><span data-stu-id="aacda-105">Once a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="aacda-106">本主題將說明具現化及使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的程序。</span><span class="sxs-lookup"><span data-stu-id="aacda-106">This topic describes procedures for instantiating and using a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="aacda-107">這個程序會執行三項工作：</span><span class="sxs-lookup"><span data-stu-id="aacda-107">This procedure does three things:</span></span>  
+ <span data-ttu-id="a4b50-105">在建立並設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Proxy 之後，就可以建立用戶端執行個體，也可以編譯用戶端應用程式並用於與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務通訊。</span><span class="sxs-lookup"><span data-stu-id="a4b50-105">Once a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="a4b50-106">本主題將說明具現化及使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的程序。</span><span class="sxs-lookup"><span data-stu-id="a4b50-106">This topic describes procedures for instantiating and using a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="a4b50-107">這個程序會執行三項工作：</span><span class="sxs-lookup"><span data-stu-id="a4b50-107">This procedure does three things:</span></span>  
   
-1.  <span data-ttu-id="aacda-108">具現化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。</span><span class="sxs-lookup"><span data-stu-id="aacda-108">Instantiates a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
+1.  <span data-ttu-id="a4b50-108">具現化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。</span><span class="sxs-lookup"><span data-stu-id="a4b50-108">Instantiates a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
   
-2.  <span data-ttu-id="aacda-109">從產生的 Proxy 呼叫服務作業。</span><span class="sxs-lookup"><span data-stu-id="aacda-109">Calls the service operations from the generated proxy.</span></span>  
+2.  <span data-ttu-id="a4b50-109">從產生的 Proxy 呼叫服務作業。</span><span class="sxs-lookup"><span data-stu-id="a4b50-109">Calls the service operations from the generated proxy.</span></span>  
   
-3.  <span data-ttu-id="aacda-110">在完成作業呼叫後即關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="aacda-110">Closes the client once the operation call is completed.</span></span>  
+3.  <span data-ttu-id="a4b50-110">在完成作業呼叫後即關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="a4b50-110">Closes the client once the operation call is completed.</span></span>  
   
-### <a name="to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="aacda-111">若要使用 Windows Communication Foundation 用戶端</span><span class="sxs-lookup"><span data-stu-id="aacda-111">To use a Windows Communication Foundation client</span></span>  
+### <a name="to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="a4b50-111">若要使用 Windows Communication Foundation 用戶端</span><span class="sxs-lookup"><span data-stu-id="a4b50-111">To use a Windows Communication Foundation client</span></span>  
   
-1.  <span data-ttu-id="aacda-112">開啟 GettingStartedClient 專案中的 Program.cs 或 Program.vb 檔案，並以下列程式碼取代現有的程式碼：</span><span class="sxs-lookup"><span data-stu-id="aacda-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>  
+1.  <span data-ttu-id="a4b50-112">開啟 GettingStartedClient 專案中的 Program.cs 或 Program.vb 檔案，並以下列程式碼取代現有的程式碼：</span><span class="sxs-lookup"><span data-stu-id="a4b50-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>  
   
     ```  
     using System;  
@@ -133,26 +133,26 @@ ms.lasthandoff: 11/21/2017
     End Module  
     ```  
   
-     <span data-ttu-id="aacda-113">注意匯入 GettingStartedClient.ServiceReference1 的 using 或 imports 陳述式。</span><span class="sxs-lookup"><span data-stu-id="aacda-113">Notice the using or imports statement that imports the GettingStartedClient.ServiceReference1.</span></span> <span data-ttu-id="aacda-114">這會匯入在 Visual Studio 中 [加入服務參考] 所產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="aacda-114">This imports the code generated by Add Service Reference in Visual Studio.</span></span> <span data-ttu-id="aacda-115">程式碼會具現化 WCF Proxy，然後呼叫計算機服務所公開的每一項服務作業、關閉 Proxy 並終止。</span><span class="sxs-lookup"><span data-stu-id="aacda-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy and terminates.</span></span>  
+     <span data-ttu-id="a4b50-113">注意匯入 GettingStartedClient.ServiceReference1 的 using 或 imports 陳述式。</span><span class="sxs-lookup"><span data-stu-id="a4b50-113">Notice the using or imports statement that imports the GettingStartedClient.ServiceReference1.</span></span> <span data-ttu-id="a4b50-114">這會匯入在 Visual Studio 中 [加入服務參考] 所產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="a4b50-114">This imports the code generated by Add Service Reference in Visual Studio.</span></span> <span data-ttu-id="a4b50-115">程式碼會具現化 WCF Proxy，然後呼叫計算機服務所公開的每一項服務作業、關閉 Proxy 並終止。</span><span class="sxs-lookup"><span data-stu-id="a4b50-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy and terminates.</span></span>  
   
- <span data-ttu-id="aacda-116">您現在已完成教學課程。</span><span class="sxs-lookup"><span data-stu-id="aacda-116">You have now completed the tutorial.</span></span> <span data-ttu-id="aacda-117">您定義服務合約、實作服務合約、產生 WCF Proxy、設定 WCF 用戶端應用程式，然後使用 Proxy 來呼叫服務作業。</span><span class="sxs-lookup"><span data-stu-id="aacda-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="aacda-118">若要測試應用程式，請先執行 GettingStartedHost 以啟動服務，然後再執行 GettingStartedClient。</span><span class="sxs-lookup"><span data-stu-id="aacda-118">To test out the application first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span> <span data-ttu-id="aacda-119">GettingStartedHost 的輸出應該看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="aacda-119">The output from GettingStartedHost should look like this:</span></span>  
+ <span data-ttu-id="a4b50-116">您現在已完成教學課程。</span><span class="sxs-lookup"><span data-stu-id="a4b50-116">You have now completed the tutorial.</span></span> <span data-ttu-id="a4b50-117">您定義服務合約、實作服務合約、產生 WCF Proxy、設定 WCF 用戶端應用程式，然後使用 Proxy 來呼叫服務作業。</span><span class="sxs-lookup"><span data-stu-id="a4b50-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="a4b50-118">若要測試應用程式，請先執行 GettingStartedHost 以啟動服務，然後再執行 GettingStartedClient。</span><span class="sxs-lookup"><span data-stu-id="a4b50-118">To test out the application first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span> <span data-ttu-id="a4b50-119">GettingStartedHost 的輸出應該看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="a4b50-119">The output from GettingStartedHost should look like this:</span></span>  
   
 ```Output  
 The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714  
 ```  
   
- <span data-ttu-id="aacda-120">GettingStartedClient 的輸出應該看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="aacda-120">The output from GettingStartedClient should look like this:</span></span>  
+ <span data-ttu-id="a4b50-120">GettingStartedClient 的輸出應該看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="a4b50-120">The output from GettingStartedClient should look like this:</span></span>  
   
 ```Output  
 Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aacda-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aacda-121">See Also</span></span>  
- [<span data-ttu-id="aacda-122">建置用戶端</span><span class="sxs-lookup"><span data-stu-id="aacda-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
- [<span data-ttu-id="aacda-123">如何：建立用戶端</span><span class="sxs-lookup"><span data-stu-id="aacda-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [<span data-ttu-id="aacda-124">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="aacda-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
- [<span data-ttu-id="aacda-125">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="aacda-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [<span data-ttu-id="aacda-126">如何： 建立雙工合約</span><span class="sxs-lookup"><span data-stu-id="aacda-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [<span data-ttu-id="aacda-127">如何： 存取使用雙工合約的服務</span><span class="sxs-lookup"><span data-stu-id="aacda-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [<span data-ttu-id="aacda-128">快速入門</span><span class="sxs-lookup"><span data-stu-id="aacda-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [<span data-ttu-id="aacda-129">自我裝載</span><span class="sxs-lookup"><span data-stu-id="aacda-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a><span data-ttu-id="a4b50-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4b50-121">See Also</span></span>  
+ [<span data-ttu-id="a4b50-122">建置用戶端</span><span class="sxs-lookup"><span data-stu-id="a4b50-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ [<span data-ttu-id="a4b50-123">如何：建立用戶端</span><span class="sxs-lookup"><span data-stu-id="a4b50-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="a4b50-124">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="a4b50-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="a4b50-125">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="a4b50-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="a4b50-126">如何： 建立雙工合約</span><span class="sxs-lookup"><span data-stu-id="a4b50-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="a4b50-127">如何： 存取使用雙工合約的服務</span><span class="sxs-lookup"><span data-stu-id="a4b50-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [<span data-ttu-id="a4b50-128">快速入門</span><span class="sxs-lookup"><span data-stu-id="a4b50-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="a4b50-129">自我裝載</span><span class="sxs-lookup"><span data-stu-id="a4b50-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

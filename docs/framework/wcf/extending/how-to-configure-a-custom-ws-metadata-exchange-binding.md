@@ -13,21 +13,21 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4202c0471c681257fa1ab1153d363e59615e10c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 497d7242b581a61aa156741a8c2f0ea278fe2372
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a><span data-ttu-id="3f5a7-102">HOW TO：設定自訂 WS-Metadata Exchange 繫結</span><span class="sxs-lookup"><span data-stu-id="3f5a7-102">How to: Configure a Custom WS-Metadata Exchange Binding</span></span>
-<span data-ttu-id="3f5a7-103">本主題說明如何設定自訂的 WS-Metadata Exchange 繫結。</span><span class="sxs-lookup"><span data-stu-id="3f5a7-103">This topic will explain how to configure a custom WS-Metadata exchange binding.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="3f5a7-104"> 包括四個系統定義的中繼資料繫結，但您可以使用想要的任何繫結來發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="3f5a7-104"> includes four system-defined metadata bindings, but you can publish metadata using any binding you want.</span></span> <span data-ttu-id="3f5a7-105">這個主題會告訴您如何使用 `wsHttpBinding` 發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="3f5a7-105">This topic will show you how to publish metadata using the `wsHttpBinding`.</span></span> <span data-ttu-id="3f5a7-106">這個繫結會提供讓您以安全的方法公開中繼資料的選項。</span><span class="sxs-lookup"><span data-stu-id="3f5a7-106">This binding gives you the option of exposing metadata in a secure way.</span></span> <span data-ttu-id="3f5a7-107">這篇文章中的程式碼根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="3f5a7-107">The code in this article is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a><span data-ttu-id="8728a-102">HOW TO：設定自訂 WS-Metadata Exchange 繫結</span><span class="sxs-lookup"><span data-stu-id="8728a-102">How to: Configure a Custom WS-Metadata Exchange Binding</span></span>
+<span data-ttu-id="8728a-103">本主題說明如何設定自訂的 WS-Metadata Exchange 繫結。</span><span class="sxs-lookup"><span data-stu-id="8728a-103">This topic will explain how to configure a custom WS-Metadata exchange binding.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="8728a-104"> 包括四個系統定義的中繼資料繫結，但您可以使用想要的任何繫結來發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="8728a-104"> includes four system-defined metadata bindings, but you can publish metadata using any binding you want.</span></span> <span data-ttu-id="8728a-105">這個主題會告訴您如何使用 `wsHttpBinding` 發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="8728a-105">This topic will show you how to publish metadata using the `wsHttpBinding`.</span></span> <span data-ttu-id="8728a-106">這個繫結會提供讓您以安全的方法公開中繼資料的選項。</span><span class="sxs-lookup"><span data-stu-id="8728a-106">This binding gives you the option of exposing metadata in a secure way.</span></span> <span data-ttu-id="8728a-107">這篇文章中的程式碼根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="8728a-107">The code in this article is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
-### <a name="using-a-configuration-file"></a><span data-ttu-id="3f5a7-108">使用組態檔</span><span class="sxs-lookup"><span data-stu-id="3f5a7-108">Using a configuration file</span></span>  
+### <a name="using-a-configuration-file"></a><span data-ttu-id="8728a-108">使用組態檔</span><span class="sxs-lookup"><span data-stu-id="8728a-108">Using a configuration file</span></span>  
   
-1.  <span data-ttu-id="3f5a7-109">在服務組態檔中，新增包含 `serviceMetadata` 標記的服務行為：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-109">In the service's configuration file, add a service behavior that contains the `serviceMetadata` tag:</span></span>  
+1.  <span data-ttu-id="8728a-109">在服務組態檔中，新增包含 `serviceMetadata` 標記的服務行為：</span><span class="sxs-lookup"><span data-stu-id="8728a-109">In the service's configuration file, add a service behavior that contains the `serviceMetadata` tag:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -39,14 +39,14 @@ ms.lasthandoff: 11/21/2017
     </behaviors>  
     ```  
   
-2.  <span data-ttu-id="3f5a7-110">將 `behaviorConfiguration` 屬性新增至參照這個新行為的服務標記：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-110">Add a `behaviorConfiguration` attribute to the service tag that references this new behavior:</span></span>  
+2.  <span data-ttu-id="8728a-110">將 `behaviorConfiguration` 屬性新增至參照這個新行為的服務標記：</span><span class="sxs-lookup"><span data-stu-id="8728a-110">Add a `behaviorConfiguration` attribute to the service tag that references this new behavior:</span></span>  
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">   
     ```  
   
-3.  <span data-ttu-id="3f5a7-111">新增指定 MEX 為位址、指定 `wsHttpBinding` 為繫結，並指定 <xref:System.ServiceModel.Description.IMetadataExchange> 為合約的中繼資料端點：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-111">Add a metadata endpoint specifying mex as the address, `wsHttpBinding` as the binding, and <xref:System.ServiceModel.Description.IMetadataExchange> as the contract:</span></span>  
+3.  <span data-ttu-id="8728a-111">新增指定 MEX 為位址、指定 `wsHttpBinding` 為繫結，並指定 <xref:System.ServiceModel.Description.IMetadataExchange> 為合約的中繼資料端點：</span><span class="sxs-lookup"><span data-stu-id="8728a-111">Add a metadata endpoint specifying mex as the address, `wsHttpBinding` as the binding, and <xref:System.ServiceModel.Description.IMetadataExchange> as the contract:</span></span>  
   
     ```xml  
     <endpoint address="mex"  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
               contract="IMetadataExchange" />  
     ```  
   
-4.  <span data-ttu-id="3f5a7-112">若要驗證中繼資料交換端點是否正常運作，請在用戶端組態檔中新增端點標記：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-112">To verify the metadata exchange endpoint is working correctly add an endpoint tag in the client configuration file:</span></span>  
+4.  <span data-ttu-id="8728a-112">若要驗證中繼資料交換端點是否正常運作，請在用戶端組態檔中新增端點標記：</span><span class="sxs-lookup"><span data-stu-id="8728a-112">To verify the metadata exchange endpoint is working correctly add an endpoint tag in the client configuration file:</span></span>  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
               contract="IMetadataExchange"/>  
     ```  
   
-5.  <span data-ttu-id="3f5a7-113">在用戶端的 Main() 方法中，建立新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 執行個體、將其 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 屬性設為 `true`、呼叫 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>，然後逐一查看傳回的中繼資料集合：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-113">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set its <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
+5.  <span data-ttu-id="8728a-113">在用戶端的 Main() 方法中，建立新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 執行個體、將其 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 屬性設為 `true`、呼叫 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>，然後逐一查看傳回的中繼資料集合：</span><span class="sxs-lookup"><span data-stu-id="8728a-113">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set its <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -74,21 +74,21 @@ ms.lasthandoff: 11/21/2017
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-### <a name="configuring-by-code"></a><span data-ttu-id="3f5a7-114">以程式碼設定</span><span class="sxs-lookup"><span data-stu-id="3f5a7-114">Configuring by code</span></span>  
+### <a name="configuring-by-code"></a><span data-ttu-id="8728a-114">以程式碼設定</span><span class="sxs-lookup"><span data-stu-id="8728a-114">Configuring by code</span></span>  
   
-1.  <span data-ttu-id="3f5a7-115">建立 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 繫結執行個體：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-115">Create a <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> binding instance:</span></span>  
+1.  <span data-ttu-id="8728a-115">建立 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 繫結執行個體：</span><span class="sxs-lookup"><span data-stu-id="8728a-115">Create a <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> binding instance:</span></span>  
   
     ```  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
-2.  <span data-ttu-id="3f5a7-116">建立 <xref:System.ServiceModel.ServiceHost> 執行個體：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-116">Create a <xref:System.ServiceModel.ServiceHost> instance:</span></span>  
+2.  <span data-ttu-id="8728a-116">建立 <xref:System.ServiceModel.ServiceHost> 執行個體：</span><span class="sxs-lookup"><span data-stu-id="8728a-116">Create a <xref:System.ServiceModel.ServiceHost> instance:</span></span>  
   
     ```  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
     ```  
   
-3.  <span data-ttu-id="3f5a7-117">新增服務端點，並新增 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 執行個體：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-117">Add a service endpoint and add a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance:</span></span>  
+3.  <span data-ttu-id="8728a-117">新增服務端點，並新增 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 執行個體：</span><span class="sxs-lookup"><span data-stu-id="8728a-117">Add a service endpoint and add a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance:</span></span>  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);  
@@ -97,13 +97,13 @@ ms.lasthandoff: 11/21/2017
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4.  <span data-ttu-id="3f5a7-118">新增中繼資料交換端點，指定 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 稍早建立：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-118">Add a metadata exchange endpoint, specifying the <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> created earlier:</span></span>  
+4.  <span data-ttu-id="8728a-118">新增中繼資料交換端點，指定 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 稍早建立：</span><span class="sxs-lookup"><span data-stu-id="8728a-118">Add a metadata exchange endpoint, specifying the <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> created earlier:</span></span>  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
-5.  <span data-ttu-id="3f5a7-119">若要驗證中繼資料交換端點是否正常運作，請在用戶端組態檔中新增端點標記：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-119">To verify that the metadata exchange endpoint is working correctly, add an endpoint tag in the client configuration file:</span></span>  
+5.  <span data-ttu-id="8728a-119">若要驗證中繼資料交換端點是否正常運作，請在用戶端組態檔中新增端點標記：</span><span class="sxs-lookup"><span data-stu-id="8728a-119">To verify that the metadata exchange endpoint is working correctly, add an endpoint tag in the client configuration file:</span></span>  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/21/2017
               contract="IMetadataExchange"/>  
     ```  
   
-6.  <span data-ttu-id="3f5a7-120">在用戶端的 Main() 方法中，建立新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 執行個體、將 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 屬性設為 `true`、呼叫 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>，然後逐一查看傳回的中繼資料集合：</span><span class="sxs-lookup"><span data-stu-id="3f5a7-120">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set the <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
+6.  <span data-ttu-id="8728a-120">在用戶端的 Main() 方法中，建立新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 執行個體、將 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 屬性設為 `true`、呼叫 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>，然後逐一查看傳回的中繼資料集合：</span><span class="sxs-lookup"><span data-stu-id="8728a-120">In the client's Main() method, create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> instance, set the <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `true`, call <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> and then iterate through the collection of metadata returned:</span></span>  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -123,9 +123,9 @@ ms.lasthandoff: 11/21/2017
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3f5a7-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f5a7-121">See Also</span></span>  
- [<span data-ttu-id="3f5a7-122">中繼資料發行行為</span><span class="sxs-lookup"><span data-stu-id="3f5a7-122">Metadata Publishing Behavior</span></span>](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- [<span data-ttu-id="3f5a7-123">擷取中繼資料</span><span class="sxs-lookup"><span data-stu-id="3f5a7-123">Retrieve Metadata</span></span>](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- [<span data-ttu-id="3f5a7-124">中繼資料</span><span class="sxs-lookup"><span data-stu-id="3f5a7-124">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [<span data-ttu-id="3f5a7-125">發行中繼資料</span><span class="sxs-lookup"><span data-stu-id="3f5a7-125">Publishing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [<span data-ttu-id="3f5a7-126">發行中繼資料端點</span><span class="sxs-lookup"><span data-stu-id="3f5a7-126">Publishing Metadata Endpoints</span></span>](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+## <a name="see-also"></a><span data-ttu-id="8728a-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8728a-121">See Also</span></span>  
+ [<span data-ttu-id="8728a-122">中繼資料發行行為</span><span class="sxs-lookup"><span data-stu-id="8728a-122">Metadata Publishing Behavior</span></span>](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
+ [<span data-ttu-id="8728a-123">擷取中繼資料</span><span class="sxs-lookup"><span data-stu-id="8728a-123">Retrieve Metadata</span></span>](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [<span data-ttu-id="8728a-124">中繼資料</span><span class="sxs-lookup"><span data-stu-id="8728a-124">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [<span data-ttu-id="8728a-125">發行中繼資料</span><span class="sxs-lookup"><span data-stu-id="8728a-125">Publishing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ [<span data-ttu-id="8728a-126">發行中繼資料端點</span><span class="sxs-lookup"><span data-stu-id="8728a-126">Publishing Metadata Endpoints</span></span>](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

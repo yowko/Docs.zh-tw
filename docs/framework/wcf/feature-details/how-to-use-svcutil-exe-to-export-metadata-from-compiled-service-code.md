@@ -10,45 +10,45 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 444fab903683b952d1a8c312c3f6032be880da68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2b6998333c3e49b24ad5bb96f36be65af94b6033
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a><span data-ttu-id="876a3-102">HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-102">How to: Use Svcutil.exe to Export Metadata from Compiled Service Code</span></span>
-<span data-ttu-id="876a3-103">Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：</span><span class="sxs-lookup"><span data-stu-id="876a3-103">Svcutil.exe can export metadata for services, contracts, and data types in compiled assemblies, as follows:</span></span>  
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a><span data-ttu-id="9b386-102">HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-102">How to: Use Svcutil.exe to Export Metadata from Compiled Service Code</span></span>
+<span data-ttu-id="9b386-103">Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：</span><span class="sxs-lookup"><span data-stu-id="9b386-103">Svcutil.exe can export metadata for services, contracts, and data types in compiled assemblies, as follows:</span></span>  
   
--   <span data-ttu-id="876a3-104">若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。</span><span class="sxs-lookup"><span data-stu-id="876a3-104">To export metadata for all compiled service contracts for a set of assemblies using Svcutil.exe, specify the assemblies as input parameters.</span></span> <span data-ttu-id="876a3-105">這是預設行為。</span><span class="sxs-lookup"><span data-stu-id="876a3-105">This is the default behavior.</span></span>  
+-   <span data-ttu-id="9b386-104">若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。</span><span class="sxs-lookup"><span data-stu-id="9b386-104">To export metadata for all compiled service contracts for a set of assemblies using Svcutil.exe, specify the assemblies as input parameters.</span></span> <span data-ttu-id="9b386-105">這是預設行為。</span><span class="sxs-lookup"><span data-stu-id="9b386-105">This is the default behavior.</span></span>  
   
--   <span data-ttu-id="876a3-106">若要使用 Svcutil.exe 針對編譯服務匯出中繼資料，請指定服務組件或將組件指定為輸入參數。</span><span class="sxs-lookup"><span data-stu-id="876a3-106">To export metadata for a compiled service using Svcutil.exe, specify the service assembly or assemblies as input parameters.</span></span> <span data-ttu-id="876a3-107">您必須使用 `/serviceName` 選項指示您想要匯出之服務的組態名稱。</span><span class="sxs-lookup"><span data-stu-id="876a3-107">You must use the `/serviceName` option to indicate the configuration name of the service you want to export.</span></span> <span data-ttu-id="876a3-108">Svcutil.exe 自動載入特定可執行組件的組態檔。</span><span class="sxs-lookup"><span data-stu-id="876a3-108">Svcutil.exe automatically loads the configuration file for the specified executable assembly.</span></span>  
+-   <span data-ttu-id="9b386-106">若要使用 Svcutil.exe 針對編譯服務匯出中繼資料，請指定服務組件或將組件指定為輸入參數。</span><span class="sxs-lookup"><span data-stu-id="9b386-106">To export metadata for a compiled service using Svcutil.exe, specify the service assembly or assemblies as input parameters.</span></span> <span data-ttu-id="9b386-107">您必須使用 `/serviceName` 選項指示您想要匯出之服務的組態名稱。</span><span class="sxs-lookup"><span data-stu-id="9b386-107">You must use the `/serviceName` option to indicate the configuration name of the service you want to export.</span></span> <span data-ttu-id="9b386-108">Svcutil.exe 自動載入特定可執行組件的組態檔。</span><span class="sxs-lookup"><span data-stu-id="9b386-108">Svcutil.exe automatically loads the configuration file for the specified executable assembly.</span></span>  
   
--   <span data-ttu-id="876a3-109">若要匯出組件集合內所有資料合約類型，請使用 `/dataContractOnly` 選項。</span><span class="sxs-lookup"><span data-stu-id="876a3-109">To export all data contract types within a set of assemblies, use the `/dataContractOnly` option.</span></span>  
+-   <span data-ttu-id="9b386-109">若要匯出組件集合內所有資料合約類型，請使用 `/dataContractOnly` 選項。</span><span class="sxs-lookup"><span data-stu-id="9b386-109">To export all data contract types within a set of assemblies, use the `/dataContractOnly` option.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="876a3-110">使用 `/reference` 選項為任何相依組件指定檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="876a3-110">Use the `/reference` option to specify the file paths to any dependent assemblies.</span></span>  
+>  <span data-ttu-id="9b386-110">使用 `/reference` 選項為任何相依組件指定檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="9b386-110">Use the `/reference` option to specify the file paths to any dependent assemblies.</span></span>  
   
-### <a name="to-export-metadata-for-compiled-service-contracts"></a><span data-ttu-id="876a3-111">若要匯出編譯服務合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-111">To export metadata for compiled service contracts</span></span>  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a><span data-ttu-id="9b386-111">若要匯出編譯服務合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-111">To export metadata for compiled service contracts</span></span>  
   
-1.  <span data-ttu-id="876a3-112">將您的服務合約實作編譯成一個或多個類別程式庫。1</span><span class="sxs-lookup"><span data-stu-id="876a3-112">Compile your service contract implementations into one or more class libraries.1</span></span>  
+1.  <span data-ttu-id="9b386-112">將您的服務合約實作編譯成一個或多個類別程式庫。1</span><span class="sxs-lookup"><span data-stu-id="9b386-112">Compile your service contract implementations into one or more class libraries.1</span></span>  
   
-2.  <span data-ttu-id="876a3-113">執行 Svcutil.exe 處理編譯組件。</span><span class="sxs-lookup"><span data-stu-id="876a3-113">Run Svcutil.exe on the compiled assemblies.</span></span>  
+2.  <span data-ttu-id="9b386-113">執行 Svcutil.exe 處理編譯組件。</span><span class="sxs-lookup"><span data-stu-id="9b386-113">Run Svcutil.exe on the compiled assemblies.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="876a3-114">您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="876a3-114">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
+    >  <span data-ttu-id="9b386-114">您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="9b386-114">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
   
     ```  
     svcutil.exe Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-a-compiled-service"></a><span data-ttu-id="876a3-115">若要匯出編譯服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-115">To export metadata for a compiled service</span></span>  
+### <a name="to-export-metadata-for-a-compiled-service"></a><span data-ttu-id="9b386-115">若要匯出編譯服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-115">To export metadata for a compiled service</span></span>  
   
-1.  <span data-ttu-id="876a3-116">將您的服務實作編譯為可執行組件</span><span class="sxs-lookup"><span data-stu-id="876a3-116">Compile your service implementation into an executable assembly.</span></span>  
+1.  <span data-ttu-id="9b386-116">將您的服務實作編譯為可執行組件</span><span class="sxs-lookup"><span data-stu-id="9b386-116">Compile your service implementation into an executable assembly.</span></span>  
   
-2.  <span data-ttu-id="876a3-117">為您的服務可執行程式建立組態檔案並新增服務組態。</span><span class="sxs-lookup"><span data-stu-id="876a3-117">Create a configuration file for your service executable and add a service configuration.</span></span>  
+2.  <span data-ttu-id="9b386-117">為您的服務可執行程式建立組態檔案並新增服務組態。</span><span class="sxs-lookup"><span data-stu-id="9b386-117">Create a configuration file for your service executable and add a service configuration.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -63,50 +63,50 @@ ms.lasthandoff: 11/21/2017
     </configuration>  
     ```  
   
-3.  <span data-ttu-id="876a3-118">使用 `/serviceName` 參數指定服務組態名稱，以 Svcutil.exe 處理編譯服務可執行檔。</span><span class="sxs-lookup"><span data-stu-id="876a3-118">Run Svcutil.exe on the compiled service executable using the `/serviceName` switch to specify the configuration name of the service.</span></span>  
+3.  <span data-ttu-id="9b386-118">使用 `/serviceName` 參數指定服務組態名稱，以 Svcutil.exe 處理編譯服務可執行檔。</span><span class="sxs-lookup"><span data-stu-id="9b386-118">Run Svcutil.exe on the compiled service executable using the `/serviceName` switch to specify the configuration name of the service.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="876a3-119">您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="876a3-119">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
+    >  <span data-ttu-id="9b386-119">您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="9b386-119">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### <a name="to-export-metadata-for-compiled-data-contracts"></a><span data-ttu-id="876a3-120">若要匯出編譯資料合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-120">To export metadata for compiled data contracts</span></span>  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a><span data-ttu-id="9b386-120">若要匯出編譯資料合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-120">To export metadata for compiled data contracts</span></span>  
   
-1.  <span data-ttu-id="876a3-121">將您的資料合約實作編譯成一個或多個類別程式庫。</span><span class="sxs-lookup"><span data-stu-id="876a3-121">Compile your data contract implementations into one or more class libraries.</span></span>  
+1.  <span data-ttu-id="9b386-121">將您的資料合約實作編譯成一個或多個類別程式庫。</span><span class="sxs-lookup"><span data-stu-id="9b386-121">Compile your data contract implementations into one or more class libraries.</span></span>  
   
-2.  <span data-ttu-id="876a3-122">執行 Svcutil.exe 處理編譯組件，將 `/dataContract` 參數指定只產生資料合約的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="876a3-122">Run Svcutil.exe on the compiled assemblies using the `/dataContract` switch to specify that only metadata for data contracts should be generated.</span></span>  
+2.  <span data-ttu-id="9b386-122">執行 Svcutil.exe 處理編譯組件，將 `/dataContract` 參數指定只產生資料合約的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="9b386-122">Run Svcutil.exe on the compiled assemblies using the `/dataContract` switch to specify that only metadata for data contracts should be generated.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="876a3-123">您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="876a3-123">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
+    >  <span data-ttu-id="9b386-123">您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="9b386-123">You might need to use the `/reference` switch to specify the file path to any dependent assemblies.</span></span>  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## <a name="example"></a><span data-ttu-id="876a3-124">範例</span><span class="sxs-lookup"><span data-stu-id="876a3-124">Example</span></span>  
- <span data-ttu-id="876a3-125">下列範例示範如何產生簡單服務實作與組態的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="876a3-125">The following example demonstrates how to generate metadata for a simple service implementation and configuration.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b386-124">範例</span><span class="sxs-lookup"><span data-stu-id="9b386-124">Example</span></span>  
+ <span data-ttu-id="9b386-125">下列範例示範如何產生簡單服務實作與組態的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="9b386-125">The following example demonstrates how to generate metadata for a simple service implementation and configuration.</span></span>  
   
- <span data-ttu-id="876a3-126">若要匯出服務合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-126">To export metadata for the service contract.</span></span>  
+ <span data-ttu-id="9b386-126">若要匯出服務合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-126">To export metadata for the service contract.</span></span>  
   
 ```  
 svcutil.exe Contracts.dll  
 ```  
   
- <span data-ttu-id="876a3-127">若要匯出資料合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-127">To export metadata for the data contracts.</span></span>  
+ <span data-ttu-id="9b386-127">若要匯出資料合約的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-127">To export metadata for the data contracts.</span></span>  
   
 ```  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
- <span data-ttu-id="876a3-128">若要匯出服務實作的中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-128">To export metadata for the service implementation.</span></span>  
+ <span data-ttu-id="9b386-128">若要匯出服務實作的中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-128">To export metadata for the service implementation.</span></span>  
   
 ```  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
- <span data-ttu-id="876a3-129">`<path>` 為 Contracts.dll 的路徑。</span><span class="sxs-lookup"><span data-stu-id="876a3-129">The `<path>` is the path to Contracts.dll.</span></span>  
+ <span data-ttu-id="9b386-129">`<path>` 為 Contracts.dll 的路徑。</span><span class="sxs-lookup"><span data-stu-id="9b386-129">The `<path>` is the path to Contracts.dll.</span></span>  
   
 ```  
 // The following service contract and data contracts are compiled into   
@@ -172,6 +172,6 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="876a3-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="876a3-130">See Also</span></span>  
- [<span data-ttu-id="876a3-131">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="876a3-131">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [<span data-ttu-id="876a3-132">匯出和匯入中繼資料</span><span class="sxs-lookup"><span data-stu-id="876a3-132">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="9b386-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b386-130">See Also</span></span>  
+ [<span data-ttu-id="9b386-131">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="9b386-131">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="9b386-132">匯出和匯入中繼資料</span><span class="sxs-lookup"><span data-stu-id="9b386-132">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

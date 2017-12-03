@@ -9,42 +9,42 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 16032a7df2df374d6201f8da18d563deceeeb5bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4e209cc0b016fe3bf0668463d9ccd3ee06784a25
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="custom-serialization-order-with-xmlserializer"></a><span data-ttu-id="e8c32-102">以 XmlSerializer 自訂序列化順序</span><span class="sxs-lookup"><span data-stu-id="e8c32-102">Custom Serialization Order With XmlSerializer</span></span>
-[<span data-ttu-id="e8c32-103">下載範例</span><span class="sxs-lookup"><span data-stu-id="e8c32-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
+# <a name="custom-serialization-order-with-xmlserializer"></a><span data-ttu-id="ab3b6-102">以 XmlSerializer 自訂序列化順序</span><span class="sxs-lookup"><span data-stu-id="ab3b6-102">Custom Serialization Order With XmlSerializer</span></span>
+[<span data-ttu-id="ab3b6-103">下載範例</span><span class="sxs-lookup"><span data-stu-id="ab3b6-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
   
- <span data-ttu-id="e8c32-104">這個範例會示範如何在 XML 序列化中，控制已序列化及已還原序列化之項目的順序。</span><span class="sxs-lookup"><span data-stu-id="e8c32-104">This sample shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
+ <span data-ttu-id="ab3b6-104">這個範例會示範如何在 XML 序列化中，控制已序列化及已還原序列化之項目的順序。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-104">This sample shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
   
- <span data-ttu-id="e8c32-105">如需序列化的詳細資訊，請檢視原始程式碼和 build.proj 檔案中的註解。</span><span class="sxs-lookup"><span data-stu-id="e8c32-105">Review comments in the source code and build.proj files for more information on serialization.</span></span>  
+ <span data-ttu-id="ab3b6-105">如需序列化的詳細資訊，請檢視原始程式碼和 build.proj 檔案中的註解。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-105">Review comments in the source code and build.proj files for more information on serialization.</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="e8c32-106">若要使用命令提示字元建置範例</span><span class="sxs-lookup"><span data-stu-id="e8c32-106">To build the sample using the Command Prompt</span></span>  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="ab3b6-106">若要使用命令提示字元建置範例</span><span class="sxs-lookup"><span data-stu-id="ab3b6-106">To build the sample using the Command Prompt</span></span>  
   
-1.  <span data-ttu-id="e8c32-107">開啟 [命令提示字元] 視窗，並巡覽至此範例的任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="e8c32-107">Open the Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1.  <span data-ttu-id="ab3b6-107">開啟 [命令提示字元] 視窗，並巡覽至此範例的任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-107">Open the Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  <span data-ttu-id="e8c32-108">在命令列鍵入 **msbuild CustomOrder.sln**。</span><span class="sxs-lookup"><span data-stu-id="e8c32-108">Type **msbuild CustomOrder.sln** at the command line.</span></span>  
+2.  <span data-ttu-id="ab3b6-108">在命令列鍵入 **msbuild CustomOrder.sln**。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-108">Type **msbuild CustomOrder.sln** at the command line.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="e8c32-109">若要使用 Visual Studio 建置範例</span><span class="sxs-lookup"><span data-stu-id="e8c32-109">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="ab3b6-109">若要使用 Visual Studio 建置範例</span><span class="sxs-lookup"><span data-stu-id="ab3b6-109">To build the sample using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="e8c32-110">開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="e8c32-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1.  <span data-ttu-id="ab3b6-110">開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  <span data-ttu-id="e8c32-111">按兩下 CustomOrder.sln 的圖示，在 Visual Studio 中開啟這個檔案。</span><span class="sxs-lookup"><span data-stu-id="e8c32-111">Double-click the icon for the CustomOrder.sln to open the file in Visual Studio.</span></span>  
+2.  <span data-ttu-id="ab3b6-111">按兩下 CustomOrder.sln 的圖示，在 Visual Studio 中開啟這個檔案。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-111">Double-click the icon for the CustomOrder.sln to open the file in Visual Studio.</span></span>  
   
-3.  <span data-ttu-id="e8c32-112">在 [建置] 功能表中，選取 [建置方案]。</span><span class="sxs-lookup"><span data-stu-id="e8c32-112">In the **Build** menu, select **Build Solution**.</span></span>  
+3.  <span data-ttu-id="ab3b6-112">在 [建置] 功能表中，選取 [建置方案]。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-112">In the **Build** menu, select **Build Solution**.</span></span>  
   
-4.  <span data-ttu-id="e8c32-113">此範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。</span><span class="sxs-lookup"><span data-stu-id="e8c32-113">The sample application is built in the default \bin or \bin\Debug subdirectory.</span></span>  
+4.  <span data-ttu-id="ab3b6-113">此範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。</span><span class="sxs-lookup"><span data-stu-id="ab3b6-113">The sample application is built in the default \bin or \bin\Debug subdirectory.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8c32-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e8c32-114">See Also</span></span>  
- [<span data-ttu-id="e8c32-115">基本序列化</span><span class="sxs-lookup"><span data-stu-id="e8c32-115">Basic Serialization</span></span>](../../../docs/standard/serialization/basic-serialization.md)  
- [<span data-ttu-id="e8c32-116">二進位序列化</span><span class="sxs-lookup"><span data-stu-id="e8c32-116">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)  
- [<span data-ttu-id="e8c32-117">使用屬性控制 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="e8c32-117">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [<span data-ttu-id="e8c32-118">XML 序列化簡介</span><span class="sxs-lookup"><span data-stu-id="e8c32-118">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [<span data-ttu-id="e8c32-119">序列化</span><span class="sxs-lookup"><span data-stu-id="e8c32-119">Serialization</span></span>](../../../docs/standard/serialization/index.md)  
- [<span data-ttu-id="e8c32-120">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="e8c32-120">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="ab3b6-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab3b6-114">See Also</span></span>  
+ [<span data-ttu-id="ab3b6-115">基本序列化</span><span class="sxs-lookup"><span data-stu-id="ab3b6-115">Basic Serialization</span></span>](../../../docs/standard/serialization/basic-serialization.md)  
+ [<span data-ttu-id="ab3b6-116">二進位序列化</span><span class="sxs-lookup"><span data-stu-id="ab3b6-116">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)  
+ [<span data-ttu-id="ab3b6-117">使用屬性控制 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="ab3b6-117">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [<span data-ttu-id="ab3b6-118">XML 序列化簡介</span><span class="sxs-lookup"><span data-stu-id="ab3b6-118">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="ab3b6-119">序列化</span><span class="sxs-lookup"><span data-stu-id="ab3b6-119">Serialization</span></span>](../../../docs/standard/serialization/index.md)  
+ [<span data-ttu-id="ab3b6-120">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="ab3b6-120">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)

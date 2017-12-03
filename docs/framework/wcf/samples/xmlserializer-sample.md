@@ -10,24 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc224de36f607bd1f15e10987c68b14a69e992b5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e18459d985447359d6314b68e48ce1ad4b0b9d2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="xmlserializer-sample"></a><span data-ttu-id="78009-102">XMLSerializer 範例</span><span class="sxs-lookup"><span data-stu-id="78009-102">XMLSerializer Sample</span></span>
-<span data-ttu-id="78009-103">這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。</span><span class="sxs-lookup"><span data-stu-id="78009-103">This sample demonstrates how to serialize and deserialize types that are compatible with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="78009-104">預設的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 格式器為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別。</span><span class="sxs-lookup"><span data-stu-id="78009-104">The default [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] formatter is the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span> <span data-ttu-id="78009-105">當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。</span><span class="sxs-lookup"><span data-stu-id="78009-105">The <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize and deserialize types when the <xref:System.Runtime.Serialization.DataContractSerializer> class cannot be used.</span></span> <span data-ttu-id="78009-106">這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。</span><span class="sxs-lookup"><span data-stu-id="78009-106">This is often the case when precise control over the XML is required - for example, if a piece of data must be an XML attribute and not an XML element.</span></span> <span data-ttu-id="78009-107">當建立非 <xref:System.Xml.Serialization.XmlSerializer> 服務的用戶端時，通常也會自動選取 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="78009-107">Also, the <xref:System.Xml.Serialization.XmlSerializer> often gets automatically selected when creating clients for non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
+# <a name="xmlserializer-sample"></a><span data-ttu-id="e8e0d-102">XMLSerializer 範例</span><span class="sxs-lookup"><span data-stu-id="e8e0d-102">XMLSerializer Sample</span></span>
+<span data-ttu-id="e8e0d-103">這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-103">This sample demonstrates how to serialize and deserialize types that are compatible with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="e8e0d-104">預設的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 格式器為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-104">The default [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] formatter is the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span> <span data-ttu-id="e8e0d-105">當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-105">The <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize and deserialize types when the <xref:System.Runtime.Serialization.DataContractSerializer> class cannot be used.</span></span> <span data-ttu-id="e8e0d-106">這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-106">This is often the case when precise control over the XML is required - for example, if a piece of data must be an XML attribute and not an XML element.</span></span> <span data-ttu-id="e8e0d-107">當建立非 <xref:System.Xml.Serialization.XmlSerializer> 服務的用戶端時，通常也會自動選取 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-107">Also, the <xref:System.Xml.Serialization.XmlSerializer> often gets automatically selected when creating clients for non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- <span data-ttu-id="78009-108">在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。</span><span class="sxs-lookup"><span data-stu-id="78009-108">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
+ <span data-ttu-id="e8e0d-108">在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-108">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="78009-109">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="78009-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="e8e0d-109">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="78009-110"><xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 必須套用至介面，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="78009-110">The <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.XmlSerializerFormatAttribute> must be applied to the interface as shown in the following sample code.</span></span>  
+ <span data-ttu-id="e8e0d-110"><xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 必須套用至介面，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-110">The <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.XmlSerializerFormatAttribute> must be applied to the interface as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
@@ -44,7 +44,7 @@ public interface IXmlSerializerCalculator
 }  
 ```  
   
- <span data-ttu-id="78009-111">`ComplexNumber` 類別的 Public 成員會由 <xref:System.Xml.Serialization.XmlSerializer> 序列化成 XML 屬性。</span><span class="sxs-lookup"><span data-stu-id="78009-111">The public members of `ComplexNumber` class are serialized by <xref:System.Xml.Serialization.XmlSerializer> as XML attributes.</span></span> <span data-ttu-id="78009-112"><xref:System.Runtime.Serialization.DataContractSerializer> 無法用來建立這類 XML 執行個體。</span><span class="sxs-lookup"><span data-stu-id="78009-112">The <xref:System.Runtime.Serialization.DataContractSerializer> cannot be used to create this kind of XML instance.</span></span>  
+ <span data-ttu-id="e8e0d-111">`ComplexNumber` 類別的 Public 成員會由 <xref:System.Xml.Serialization.XmlSerializer> 序列化成 XML 屬性。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-111">The public members of `ComplexNumber` class are serialized by <xref:System.Xml.Serialization.XmlSerializer> as XML attributes.</span></span> <span data-ttu-id="e8e0d-112"><xref:System.Runtime.Serialization.DataContractSerializer> 無法用來建立這類 XML 執行個體。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-112">The <xref:System.Runtime.Serialization.DataContractSerializer> cannot be used to create this kind of XML instance.</span></span>  
   
 ```  
 public class ComplexNumber  
@@ -80,7 +80,7 @@ public class ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="78009-113">服務實作會計算並傳回適當的結果，即接受並傳回 `ComplexNumber` 型別的值。</span><span class="sxs-lookup"><span data-stu-id="78009-113">The service implementation calculates and returns the appropriate result—accepting and returning values of the `ComplexNumber` type.</span></span>  
+ <span data-ttu-id="e8e0d-113">服務實作會計算並傳回適當的結果，即接受並傳回 `ComplexNumber` 型別的值。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-113">The service implementation calculates and returns the appropriate result—accepting and returning values of the `ComplexNumber` type.</span></span>  
   
 ```  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
@@ -94,7 +94,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- <span data-ttu-id="78009-114">用戶端實作也會使用複數。</span><span class="sxs-lookup"><span data-stu-id="78009-114">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="78009-115">服務合約和資料類型由產生 generatedClient.cs 原始程式檔中定義[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)取自服務中繼資料。</span><span class="sxs-lookup"><span data-stu-id="78009-115">Both the service contract and the data types are defined in the generatedClient.cs source file, which was generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span> <span data-ttu-id="78009-116">在這個範例中，Svcutil.exe 能夠偵測合約何時無法由 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化，而還原成發出 `XmlSerializable` 型別。</span><span class="sxs-lookup"><span data-stu-id="78009-116">Svcutil.exe can detect when a contract is not serializable by the <xref:System.Runtime.Serialization.DataContractSerializer> and reverts to emitting `XmlSerializable` types in this case.</span></span> <span data-ttu-id="78009-117">如果要強制使用 <xref:System.Xml.Serialization.XmlSerializer>，您可以將 /serializer:XmlSerializer (使用 XmlSerializer) 命令選項傳遞至 Svcutil.exe 工具。</span><span class="sxs-lookup"><span data-stu-id="78009-117">If you want to force the use of the <xref:System.Xml.Serialization.XmlSerializer>, you can pass the /serializer:XmlSerializer (use XmlSerializer) command option to the Svcutil.exe tool.</span></span>  
+ <span data-ttu-id="e8e0d-114">用戶端實作也會使用複數。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-114">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="e8e0d-115">服務合約和資料類型由產生 generatedClient.cs 原始程式檔中定義[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)取自服務中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-115">Both the service contract and the data types are defined in the generatedClient.cs source file, which was generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span> <span data-ttu-id="e8e0d-116">在這個範例中，Svcutil.exe 能夠偵測合約何時無法由 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化，而還原成發出 `XmlSerializable` 型別。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-116">Svcutil.exe can detect when a contract is not serializable by the <xref:System.Runtime.Serialization.DataContractSerializer> and reverts to emitting `XmlSerializable` types in this case.</span></span> <span data-ttu-id="e8e0d-117">如果要強制使用 <xref:System.Xml.Serialization.XmlSerializer>，您可以將 /serializer:XmlSerializer (使用 XmlSerializer) 命令選項傳遞至 Svcutil.exe 工具。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-117">If you want to force the use of the <xref:System.Xml.Serialization.XmlSerializer>, you can pass the /serializer:XmlSerializer (use XmlSerializer) command option to the Svcutil.exe tool.</span></span>  
   
 ```  
 // Create a client.  
@@ -116,7 +116,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
 }  
 ```  
   
- <span data-ttu-id="78009-118">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="78009-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="78009-119">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="78009-119">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="e8e0d-118">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="e8e0d-119">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-119">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -127,21 +127,21 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 1.41379310344828i
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="78009-120">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="78009-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e8e0d-120">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="e8e0d-120">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="78009-121">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="78009-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="e8e0d-121">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="78009-122">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="78009-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="e8e0d-122">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="78009-123">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="78009-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="e8e0d-123">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="78009-124">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="78009-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="78009-125">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="78009-125">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="e8e0d-124">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e8e0d-125">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-125">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="78009-126">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="78009-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="78009-127">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="78009-127">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="e8e0d-126">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e8e0d-127">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## <a name="see-also"></a><span data-ttu-id="78009-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78009-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8e0d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e8e0d-128">See Also</span></span>

@@ -9,41 +9,41 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b38aec2e3f06e1f998bbc042c70909d208d3b63
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01d51c9727847f00bdcf3f62945207882e3f41d6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="metadata-store-programmability"></a><span data-ttu-id="489b9-102">中繼資料存放區可程式性</span><span class="sxs-lookup"><span data-stu-id="489b9-102">Metadata Store Programmability</span></span>
-<span data-ttu-id="489b9-103">中繼資料存放區是讓任意中繼資料 (CLR 屬性形式) 與執行階段類型產生關聯的 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 功能。</span><span class="sxs-lookup"><span data-stu-id="489b9-103">The metadata store is a [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] feature that allows for the association of arbitrary metadata, in the form of CLR attributes, to types at runtime.</span></span> <span data-ttu-id="489b9-104">這啟用執行階段元件與其設計階段對應項目之間的鬆散結合，也提供變更設計階段元件但不影響執行階段的能力。</span><span class="sxs-lookup"><span data-stu-id="489b9-104">This allows for a loose coupling between the run-time components and their design-time counterparts, as well as the ability to change the design-time components without affecting the runtime.</span></span> <span data-ttu-id="489b9-105">此範例示範如何透過將屬性套用至我們沒有控制權的執行階段類型，對中繼資料存放區撰寫程式。</span><span class="sxs-lookup"><span data-stu-id="489b9-105">The sample shows how to program against the metadata store by applying attributes to a run-time type, the source for which we have no control over.</span></span> <span data-ttu-id="489b9-106">一般用語是主控應用程式註冊一組類型的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="489b9-106">The terminology typically used is that a hosting application registers the metadata for a set of types.</span></span>  
+# <a name="metadata-store-programmability"></a><span data-ttu-id="9d798-102">中繼資料存放區可程式性</span><span class="sxs-lookup"><span data-stu-id="9d798-102">Metadata Store Programmability</span></span>
+<span data-ttu-id="9d798-103">中繼資料存放區是讓任意中繼資料 (CLR 屬性形式) 與執行階段類型產生關聯的 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 功能。</span><span class="sxs-lookup"><span data-stu-id="9d798-103">The metadata store is a [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] feature that allows for the association of arbitrary metadata, in the form of CLR attributes, to types at runtime.</span></span> <span data-ttu-id="9d798-104">這啟用執行階段元件與其設計階段對應項目之間的鬆散結合，也提供變更設計階段元件但不影響執行階段的能力。</span><span class="sxs-lookup"><span data-stu-id="9d798-104">This allows for a loose coupling between the run-time components and their design-time counterparts, as well as the ability to change the design-time components without affecting the runtime.</span></span> <span data-ttu-id="9d798-105">此範例示範如何透過將屬性套用至我們沒有控制權的執行階段類型，對中繼資料存放區撰寫程式。</span><span class="sxs-lookup"><span data-stu-id="9d798-105">The sample shows how to program against the metadata store by applying attributes to a run-time type, the source for which we have no control over.</span></span> <span data-ttu-id="9d798-106">一般用語是主控應用程式註冊一組類型的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="9d798-106">The terminology typically used is that a hosting application registers the metadata for a set of types.</span></span>  
   
- <span data-ttu-id="489b9-107">在輸出中，您可能會注意到額外、 非預期的屬性， <!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`。</span><span class="sxs-lookup"><span data-stu-id="489b9-107">Within the output, you may notice an additional, unexpected attribute, <!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`.</span></span> <span data-ttu-id="489b9-108">這是在使用中繼資料 API 時加入的，對範例執行沒有影響。</span><span class="sxs-lookup"><span data-stu-id="489b9-108">This is added when using the Metadata API and has no impact on the running of the sample.</span></span>  
+ <span data-ttu-id="9d798-107">在輸出中，您可能會注意到額外、 非預期的屬性， <!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`。</span><span class="sxs-lookup"><span data-stu-id="9d798-107">Within the output, you may notice an additional, unexpected attribute, <!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`.</span></span> <span data-ttu-id="9d798-108">這是在使用中繼資料 API 時加入的，對範例執行沒有影響。</span><span class="sxs-lookup"><span data-stu-id="9d798-108">This is added when using the Metadata API and has no impact on the running of the sample.</span></span>  
   
- <span data-ttu-id="489b9-109">這個範例會示範下列情況：</span><span class="sxs-lookup"><span data-stu-id="489b9-109">This sample demonstrates:</span></span>  
+ <span data-ttu-id="9d798-109">這個範例會示範下列情況：</span><span class="sxs-lookup"><span data-stu-id="9d798-109">This sample demonstrates:</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="489b9-110">示範</span><span class="sxs-lookup"><span data-stu-id="489b9-110">Demonstrates</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="9d798-110">示範</span><span class="sxs-lookup"><span data-stu-id="9d798-110">Demonstrates</span></span>  
   
--   <span data-ttu-id="489b9-111">使用中繼資料存放區 API 的屬性插入。</span><span class="sxs-lookup"><span data-stu-id="489b9-111">Attribute injection using the metadata store API.</span></span>  
+-   <span data-ttu-id="9d798-111">使用中繼資料存放區 API 的屬性插入。</span><span class="sxs-lookup"><span data-stu-id="9d798-111">Attribute injection using the metadata store API.</span></span>  
   
--   <span data-ttu-id="489b9-112">使用回呼機制延後中繼資料註冊。</span><span class="sxs-lookup"><span data-stu-id="489b9-112">Using a callback mechanism to defer metadata registration.</span></span>  
+-   <span data-ttu-id="9d798-112">使用回呼機制延後中繼資料註冊。</span><span class="sxs-lookup"><span data-stu-id="9d798-112">Using a callback mechanism to defer metadata registration.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="489b9-113">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="489b9-113">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9d798-113">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="9d798-113">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="489b9-114">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 ProgrammingMetadataStore.sln 方案檔案。</span><span class="sxs-lookup"><span data-stu-id="489b9-114">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ProgrammingMetadataStore.sln solution file.</span></span>  
+1.  <span data-ttu-id="9d798-114">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 開啟 ProgrammingMetadataStore.sln 方案檔案。</span><span class="sxs-lookup"><span data-stu-id="9d798-114">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ProgrammingMetadataStore.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="489b9-115">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="489b9-115">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="9d798-115">若要建置此方案，請按 CTRL+SHIFT+B。</span><span class="sxs-lookup"><span data-stu-id="9d798-115">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="489b9-116">若要執行此方案，請按 F5。</span><span class="sxs-lookup"><span data-stu-id="489b9-116">To run the solution, press F5.</span></span>  
+3.  <span data-ttu-id="9d798-116">若要執行此方案，請按 F5。</span><span class="sxs-lookup"><span data-stu-id="9d798-116">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="489b9-117">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="489b9-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="489b9-118">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="489b9-118">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="9d798-117">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="9d798-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9d798-118">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="9d798-118">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="489b9-119">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="489b9-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="489b9-120">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="489b9-120">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="9d798-119">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="9d798-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9d798-120">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="9d798-120">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\MetadataStore`

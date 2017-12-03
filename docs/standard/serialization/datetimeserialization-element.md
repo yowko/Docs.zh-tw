@@ -13,22 +13,22 @@ helpviewer_keywords:
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f925e9e05ab0e9452d81d7a26d33f11506870034
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd6dda1f26e44c4864d5afea1427b2580ac1ed10
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltdatetimeserializationgt-element"></a><span data-ttu-id="cec38-102">&lt;dateTimeSerialization&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="cec38-102">&lt;dateTimeSerialization&gt; Element</span></span>
-<span data-ttu-id="cec38-103">判斷 <xref:System.DateTime> 物件的序列化模式。</span><span class="sxs-lookup"><span data-stu-id="cec38-103">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>  
+# <a name="ltdatetimeserializationgt-element"></a><span data-ttu-id="2a10e-102">&lt;dateTimeSerialization&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="2a10e-102">&lt;dateTimeSerialization&gt; Element</span></span>
+<span data-ttu-id="2a10e-103">判斷 <xref:System.DateTime> 物件的序列化模式。</span><span class="sxs-lookup"><span data-stu-id="2a10e-103">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>  
   
- <span data-ttu-id="cec38-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cec38-104">\<configuration></span></span>  
-<span data-ttu-id="cec38-105">\<dateTimeSerialization></span><span class="sxs-lookup"><span data-stu-id="cec38-105">\<dateTimeSerialization></span></span>  
+ <span data-ttu-id="2a10e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2a10e-104">\<configuration></span></span>  
+<span data-ttu-id="2a10e-105">\<dateTimeSerialization></span><span class="sxs-lookup"><span data-stu-id="2a10e-105">\<dateTimeSerialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cec38-106">語法</span><span class="sxs-lookup"><span data-stu-id="cec38-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a10e-106">語法</span><span class="sxs-lookup"><span data-stu-id="2a10e-106">Syntax</span></span>  
   
 ```xml  
 <dateTimeSerialization  
@@ -36,34 +36,34 @@ ms.lasthandoff: 11/21/2017
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cec38-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="cec38-107">Attributes and Elements</span></span>  
- <span data-ttu-id="cec38-108">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="cec38-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2a10e-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2a10e-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="2a10e-108">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2a10e-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cec38-109">屬性</span><span class="sxs-lookup"><span data-stu-id="cec38-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2a10e-109">屬性</span><span class="sxs-lookup"><span data-stu-id="2a10e-109">Attributes</span></span>  
   
-|<span data-ttu-id="cec38-110">屬性</span><span class="sxs-lookup"><span data-stu-id="cec38-110">Attributes</span></span>|<span data-ttu-id="cec38-111">描述</span><span class="sxs-lookup"><span data-stu-id="cec38-111">Description</span></span>|  
+|<span data-ttu-id="2a10e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="2a10e-110">Attributes</span></span>|<span data-ttu-id="2a10e-111">描述</span><span class="sxs-lookup"><span data-stu-id="2a10e-111">Description</span></span>|  
 |----------------|-----------------|  
-|`mode`|<span data-ttu-id="cec38-112">選擇項。</span><span class="sxs-lookup"><span data-stu-id="cec38-112">Optional.</span></span> <span data-ttu-id="cec38-113">指定序列化模式。</span><span class="sxs-lookup"><span data-stu-id="cec38-113">Specifies the serialization mode.</span></span> <span data-ttu-id="cec38-114">設定為其中一個 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 值。</span><span class="sxs-lookup"><span data-stu-id="cec38-114">Set to one of the <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> values.</span></span> <span data-ttu-id="cec38-115">預設值為 **RoundTrip**。</span><span class="sxs-lookup"><span data-stu-id="cec38-115">The default is **RoundTrip**.</span></span>|  
+|`mode`|<span data-ttu-id="2a10e-112">選擇項。</span><span class="sxs-lookup"><span data-stu-id="2a10e-112">Optional.</span></span> <span data-ttu-id="2a10e-113">指定序列化模式。</span><span class="sxs-lookup"><span data-stu-id="2a10e-113">Specifies the serialization mode.</span></span> <span data-ttu-id="2a10e-114">設定為其中一個 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 值。</span><span class="sxs-lookup"><span data-stu-id="2a10e-114">Set to one of the <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> values.</span></span> <span data-ttu-id="2a10e-115">預設值為 **RoundTrip**。</span><span class="sxs-lookup"><span data-stu-id="2a10e-115">The default is **RoundTrip**.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cec38-116">子元素</span><span class="sxs-lookup"><span data-stu-id="cec38-116">Child Elements</span></span>  
- <span data-ttu-id="cec38-117">無。</span><span class="sxs-lookup"><span data-stu-id="cec38-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2a10e-116">子元素</span><span class="sxs-lookup"><span data-stu-id="2a10e-116">Child Elements</span></span>  
+ <span data-ttu-id="2a10e-117">無。</span><span class="sxs-lookup"><span data-stu-id="2a10e-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cec38-118">父項目</span><span class="sxs-lookup"><span data-stu-id="cec38-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2a10e-118">父項目</span><span class="sxs-lookup"><span data-stu-id="2a10e-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="cec38-119">項目</span><span class="sxs-lookup"><span data-stu-id="cec38-119">Element</span></span>|<span data-ttu-id="cec38-120">描述</span><span class="sxs-lookup"><span data-stu-id="cec38-120">Description</span></span>|  
+|<span data-ttu-id="2a10e-119">項目</span><span class="sxs-lookup"><span data-stu-id="2a10e-119">Element</span></span>|<span data-ttu-id="2a10e-120">描述</span><span class="sxs-lookup"><span data-stu-id="2a10e-120">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cec38-121">system.xml.serialization</span><span class="sxs-lookup"><span data-stu-id="cec38-121">system.xml.serialization</span></span>|<span data-ttu-id="cec38-122">用來控制 XML 序列化的最上層項目。</span><span class="sxs-lookup"><span data-stu-id="cec38-122">The top-level element for controlling XML serialization.</span></span>|  
+|<span data-ttu-id="2a10e-121">system.xml.serialization</span><span class="sxs-lookup"><span data-stu-id="2a10e-121">system.xml.serialization</span></span>|<span data-ttu-id="2a10e-122">用來控制 XML 序列化的最上層項目。</span><span class="sxs-lookup"><span data-stu-id="2a10e-122">The top-level element for controlling XML serialization.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cec38-123">備註</span><span class="sxs-lookup"><span data-stu-id="cec38-123">Remarks</span></span>  
- <span data-ttu-id="cec38-124">在 .NET Framework 的 1.0、1.1 和 2.0 版以及更新版本中，將此屬性設定為 **Local** 時，<xref:System.DateTime> 物件一定會格式化為當地時間。</span><span class="sxs-lookup"><span data-stu-id="cec38-124">In versions 1.0, 1.1, 2.0 and later versions of the .NET Framework, when this property is set to **Local**, <xref:System.DateTime> objects are always formatted as the local time.</span></span> <span data-ttu-id="cec38-125">也就是說，本地時區資訊一定會包含在序列化資料中。</span><span class="sxs-lookup"><span data-stu-id="cec38-125">That is, local time zone information is always included with the serialized data.</span></span> <span data-ttu-id="cec38-126">將此屬性設定為 **Local**，確保與舊版 .NET Framework 的相容性。</span><span class="sxs-lookup"><span data-stu-id="cec38-126">Set this property to **Local** to ensure compatibility with older versions of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a10e-123">備註</span><span class="sxs-lookup"><span data-stu-id="2a10e-123">Remarks</span></span>  
+ <span data-ttu-id="2a10e-124">在 .NET Framework 的 1.0、1.1 和 2.0 版以及更新版本中，將此屬性設定為 **Local** 時，<xref:System.DateTime> 物件一定會格式化為當地時間。</span><span class="sxs-lookup"><span data-stu-id="2a10e-124">In versions 1.0, 1.1, 2.0 and later versions of the .NET Framework, when this property is set to **Local**, <xref:System.DateTime> objects are always formatted as the local time.</span></span> <span data-ttu-id="2a10e-125">也就是說，本地時區資訊一定會包含在序列化資料中。</span><span class="sxs-lookup"><span data-stu-id="2a10e-125">That is, local time zone information is always included with the serialized data.</span></span> <span data-ttu-id="2a10e-126">將此屬性設定為 **Local**，確保與舊版 .NET Framework 的相容性。</span><span class="sxs-lookup"><span data-stu-id="2a10e-126">Set this property to **Local** to ensure compatibility with older versions of the .NET Framework.</span></span>  
   
- <span data-ttu-id="cec38-127">在將此屬性設定為 **Roundtrip** 的 .NET Framework 2.0 版及更新版本中，會檢查 <xref:System.DateTime> 物件以判斷其位於當地時區、UTC 或非特定時區。</span><span class="sxs-lookup"><span data-stu-id="cec38-127">In version 2.0 and later versions of the .NET Framework that have this property set to **Roundtrip**, <xref:System.DateTime> objects are examined to determine whether they are in the local, UTC, or an unspecified time zone.</span></span> <span data-ttu-id="cec38-128">然後 <xref:System.DateTime> 物件會以保留此資訊的方式序列化。</span><span class="sxs-lookup"><span data-stu-id="cec38-128">The <xref:System.DateTime> objects are then serialized in such a way that this information is preserved.</span></span> <span data-ttu-id="cec38-129">這是預設行為，並建議所有新的應用程式不要與舊版 Framework 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="cec38-129">This is the default behavior and is the recommended behavior for all new applications that do not communicate with older versions of the framework.</span></span>  
+ <span data-ttu-id="2a10e-127">在將此屬性設定為 **Roundtrip** 的 .NET Framework 2.0 版及更新版本中，會檢查 <xref:System.DateTime> 物件以判斷其位於當地時區、UTC 或非特定時區。</span><span class="sxs-lookup"><span data-stu-id="2a10e-127">In version 2.0 and later versions of the .NET Framework that have this property set to **Roundtrip**, <xref:System.DateTime> objects are examined to determine whether they are in the local, UTC, or an unspecified time zone.</span></span> <span data-ttu-id="2a10e-128">然後 <xref:System.DateTime> 物件會以保留此資訊的方式序列化。</span><span class="sxs-lookup"><span data-stu-id="2a10e-128">The <xref:System.DateTime> objects are then serialized in such a way that this information is preserved.</span></span> <span data-ttu-id="2a10e-129">這是預設行為，並建議所有新的應用程式不要與舊版 Framework 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="2a10e-129">This is the default behavior and is the recommended behavior for all new applications that do not communicate with older versions of the framework.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cec38-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cec38-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2a10e-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2a10e-130">See Also</span></span>  
  <xref:System.DateTime>  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [<span data-ttu-id="cec38-131">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="cec38-131">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="cec38-132">\<schemaImporterExtensions>元素</span><span class="sxs-lookup"><span data-stu-id="cec38-132">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- [<span data-ttu-id="cec38-133">\<xmlSchemaImporterExtensions> 的 \<add> 項目</span><span class="sxs-lookup"><span data-stu-id="cec38-133">\<add> Element for \<xmlSchemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
- [<span data-ttu-id="cec38-134">\<system.xml.serialization> 項目</span><span class="sxs-lookup"><span data-stu-id="cec38-134">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
+ [<span data-ttu-id="2a10e-131">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="2a10e-131">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="2a10e-132">\<schemaImporterExtensions>元素</span><span class="sxs-lookup"><span data-stu-id="2a10e-132">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+ [<span data-ttu-id="2a10e-133">\<xmlSchemaImporterExtensions> 的 \<add> 項目</span><span class="sxs-lookup"><span data-stu-id="2a10e-133">\<add> Element for \<xmlSchemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+ [<span data-ttu-id="2a10e-134">\<system.xml.serialization> 項目</span><span class="sxs-lookup"><span data-stu-id="2a10e-134">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)

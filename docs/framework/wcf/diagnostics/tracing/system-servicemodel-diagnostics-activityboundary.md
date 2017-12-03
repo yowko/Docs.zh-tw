@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a24e3076-0c14-4271-9990-090c0dfed07f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97913b50d9b97919aefbcb666e4f557dd91a2818
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72f5c925deb047237ab9afda7953d02a6eb925a7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodeldiagnosticsactivityboundary"></a><span data-ttu-id="338bb-102">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="338bb-102">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>
-<span data-ttu-id="338bb-103">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="338bb-103">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>  
+# <a name="systemservicemodeldiagnosticsactivityboundary"></a><span data-ttu-id="83c8e-102">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="83c8e-102">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>
+<span data-ttu-id="83c8e-103">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="83c8e-103">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>  
   
-## <a name="description"></a><span data-ttu-id="338bb-104">描述</span><span class="sxs-lookup"><span data-stu-id="338bb-104">Description</span></span>  
- <span data-ttu-id="338bb-105">活動界限。</span><span class="sxs-lookup"><span data-stu-id="338bb-105">Activity boundary.</span></span>  
+## <a name="description"></a><span data-ttu-id="83c8e-104">描述</span><span class="sxs-lookup"><span data-stu-id="83c8e-104">Description</span></span>  
+ <span data-ttu-id="83c8e-105">活動界限。</span><span class="sxs-lookup"><span data-stu-id="83c8e-105">Activity boundary.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="338bb-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="338bb-106">See Also</span></span>  
- [<span data-ttu-id="338bb-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="338bb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="338bb-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="338bb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="338bb-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="338bb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="83c8e-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83c8e-106">See Also</span></span>  
+ [<span data-ttu-id="83c8e-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="83c8e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="83c8e-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="83c8e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="83c8e-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="83c8e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

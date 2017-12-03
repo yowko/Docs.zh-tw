@@ -10,25 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1b9f5139-e122-4716-9ef7-2f38e1813993
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5fa64c87bc4cd0c8dc677d8b4c59de45e31d3270
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f90ba7a245b36b24c190304f34a4481d1abda121
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a><span data-ttu-id="871c0-102">Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure</span><span class="sxs-lookup"><span data-stu-id="871c0-102">Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure</span></span>
-<span data-ttu-id="871c0-103">WS-AT 通訊協定服務無法使用所提供的協調內容登記異動。</span><span class="sxs-lookup"><span data-stu-id="871c0-103">The WS-AT protocol service failed to enlist on a transaction using the provided coordination context.</span></span>  
+# <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a><span data-ttu-id="62efa-102">Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure</span><span class="sxs-lookup"><span data-stu-id="62efa-102">Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure</span></span>
+<span data-ttu-id="62efa-103">WS-AT 通訊協定服務無法使用所提供的協調內容登記異動。</span><span class="sxs-lookup"><span data-stu-id="62efa-103">The WS-AT protocol service failed to enlist on a transaction using the provided coordination context.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="871c0-104">描述</span><span class="sxs-lookup"><span data-stu-id="871c0-104">Description</span></span>  
- <span data-ttu-id="871c0-105">當 MSDTC 無法登記指定之 2pc 通訊協定的交易時，便會進行追蹤。</span><span class="sxs-lookup"><span data-stu-id="871c0-105">Traced when MSDTC is unable to enlist on a transaction for a given 2pc protocol.</span></span>  <span data-ttu-id="871c0-106">這種情況可能因為交易不再存在、不再允許登記，或是已經存在太多登記而發生。</span><span class="sxs-lookup"><span data-stu-id="871c0-106">This can happen because the transaction no longer exists, enlisting is no longer allowed, or too many enlistments are already present.</span></span>  
+## <a name="description"></a><span data-ttu-id="62efa-104">描述</span><span class="sxs-lookup"><span data-stu-id="62efa-104">Description</span></span>  
+ <span data-ttu-id="62efa-105">當 MSDTC 無法登記指定之 2pc 通訊協定的交易時，便會進行追蹤。</span><span class="sxs-lookup"><span data-stu-id="62efa-105">Traced when MSDTC is unable to enlist on a transaction for a given 2pc protocol.</span></span>  <span data-ttu-id="62efa-106">這種情況可能因為交易不再存在、不再允許登記，或是已經存在太多登記而發生。</span><span class="sxs-lookup"><span data-stu-id="62efa-106">This can happen because the transaction no longer exists, enlisting is no longer allowed, or too many enlistments are already present.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="871c0-107">疑難排解</span><span class="sxs-lookup"><span data-stu-id="871c0-107">Troubleshooting</span></span>  
- <span data-ttu-id="871c0-108">請檢查追蹤訊息內的狀態字串，以判斷是否有任何可執行動作的項目存在。</span><span class="sxs-lookup"><span data-stu-id="871c0-108">Inspect the status string within the trace message to determine if any actionable item exists.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="62efa-107">疑難排解</span><span class="sxs-lookup"><span data-stu-id="62efa-107">Troubleshooting</span></span>  
+ <span data-ttu-id="62efa-108">請檢查追蹤訊息內的狀態字串，以判斷是否有任何可執行動作的項目存在。</span><span class="sxs-lookup"><span data-stu-id="62efa-108">Inspect the status string within the trace message to determine if any actionable item exists.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="871c0-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="871c0-109">See Also</span></span>  
- [<span data-ttu-id="871c0-110">追蹤</span><span class="sxs-lookup"><span data-stu-id="871c0-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="871c0-111">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="871c0-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="871c0-112">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="871c0-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="62efa-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62efa-109">See Also</span></span>  
+ [<span data-ttu-id="62efa-110">追蹤</span><span class="sxs-lookup"><span data-stu-id="62efa-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="62efa-111">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="62efa-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="62efa-112">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="62efa-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
