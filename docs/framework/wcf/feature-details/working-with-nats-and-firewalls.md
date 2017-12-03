@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8fd5058179d9e7974e725d69bb2bf0740ab7f00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5587300edf739eedb99084735eda81538ab61ef7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 與防火牆
 網路連線的用戶端與伺服器經常無法擁有直接且開放的通訊路徑。 網路上的端點電腦與中繼電腦都會針對封包進行篩選、路由、分析與轉換。 網路位址轉譯 (NAT) 與防火牆都是能夠參與網路通訊的常見中繼應用程式範例。  

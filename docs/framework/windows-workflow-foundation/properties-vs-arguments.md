@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9b3f06cf91591a373550f876f7b2111159067ba3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fcb38322d6b068095238add9334aa2d081c4a5d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="properties-vs-arguments"></a>屬性與。引數
 有許多選項可用來將資料傳入活動。 除了使用 <xref:System.Activities.InArgument> 以外，您也可以使用標準 CLR 屬性或公用 <xref:System.Activities.ActivityAction> 屬性來開發接收資料的活動。 本主題將討論如何選取適當的方法類型。  

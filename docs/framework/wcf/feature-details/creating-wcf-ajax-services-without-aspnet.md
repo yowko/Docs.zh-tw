@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 70926e1deb9b4911a7d89d49280b9a0e6068cc42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4ff3e41608c9b879bd64e004fcae5e87599e0b4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>建立不含 ASP.NET 的 WCF AJAX 服務
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX 服務可以從任何已啟用 JavaScript 的網頁存取，不需要 ASP.NET AJAX。 本主題會說明如何建立此類 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  

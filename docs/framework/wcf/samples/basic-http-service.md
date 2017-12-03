@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cf4d40bce37dea65f2a27421de736779e467e728
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9da2addce9c837499783664bb3b1417d30b937b0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服務
 這個範例會示範如何實作 HTTP、 RPC 服務，也就是一般所謂的"Pox"(Plain Old XML) 服務使用[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]REST 程式設計模型。 此範例由兩個元件所組成：自我裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服務 (Service.cs)，以及建立服務並呼叫該服務的主控台應用程式 (Program.cs)。  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 12b5c8db096c0261041c29385b0ebe2e1569078c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a2a45f0b923c9f30bb8df1c59be54e00d844551
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-custom-flow-control-activities"></a>建立自訂流程控制活動
 .Net Framework 包含各種流程控制活動，這些活動的運作方式與抽象程式設計結構 (例如 <xref:System.Activities.Statements.Flowchart>) 或標準程式設計陳述式 (例如 <xref:System.Activities.Statements.If>) 很相似。 本主題討論的其中一個範例專案中，架構[非泛型 ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)。  

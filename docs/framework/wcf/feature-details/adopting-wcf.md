@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 15fc02882148054fe53534c75905f51cfffe68fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>採用 Windows Communication Foundation
 您可以選擇使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 開發新項目，同時繼續維護使用 ASP.NET 開發的現有應用程式。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預期是最適合在任何情況下使用以 .NET Framework 建置之應用程式簡化通訊的選擇，因此，它可以當做標準工具，以 ASP.NET 無法使用的方式，來解決各種軟體通訊問題。  

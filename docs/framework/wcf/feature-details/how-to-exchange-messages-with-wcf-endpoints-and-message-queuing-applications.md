@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d09b8e662b2876fa5d5c5246ea7e7a4998cde9ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
 您可以使用 MSMQ 整合繫結來轉換傳入與傳出 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的 MSMQ 訊息，藉此將現有的訊息佇列 (MSMQ) 應用程式與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 進行整合。 這樣一來，您就可以從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端對 MSMQ 接收者應用程式進行呼叫，並從 MSMQ 傳送者應用程式對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務進行呼叫。  

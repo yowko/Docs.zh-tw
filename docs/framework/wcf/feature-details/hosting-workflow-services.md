@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad4e5af26291c210f4f46f20e5b9585e3e095ae7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
 您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息基礎結構，因此會以類似的方式裝載。 就像 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，工作流程服務可以裝載在任何 Managed 應用程式中、裝載在 Internet Information Services (IIS) 底下，或是裝載在 Windows Process Activation Services (WAS) 底下。 此外，工作流程服務也可以裝載在 Windows Server App Fabric 底下。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric，請參閱[Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=196494)，和[AppFabric 主控概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]主機的各種方式[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務，請參閱[裝載服務](../../../../docs/framework/wcf/hosting-services.md)。  

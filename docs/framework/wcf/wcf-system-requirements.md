@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64f1d2c25f9689f6915d0e29ad66fc65b42aa965
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 65f5c2e8ac0a767d3ecc4d270ac9280a8cc78bfc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-system-requirements"></a>WCF 系統需求
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建立分散式應用程式的通訊基礎結構。 下面列出可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 執行的需求。  

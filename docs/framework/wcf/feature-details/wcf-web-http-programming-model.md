@@ -14,14 +14,14 @@ helpviewer_keywords:
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f51ad4a228de0a4a2fae0fb325d045bb09263b3d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 程式設計模型
 開發人員可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型，公開 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務作業給非 SOAP 的端點。 本章節中的主題會詳細檢查這項功能。  

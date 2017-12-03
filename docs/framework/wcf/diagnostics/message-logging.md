@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 04e1b881d9aab1c35195794394cddf5172288cc1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="message-logging"></a>訊息記錄
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可讓您記錄傳入與傳出的訊息以便離線使用。 訊息記錄功能可讓您看到訊息與訊息本文的樣貌。 這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。 此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。 您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。  

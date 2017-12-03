@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51cf7c6e4db1ee0ff68bcc7fccb46fd643f04bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14f2aa18b1fba92f5559b463d90dcfb5b34e2a3f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication"></a>WCF 新聞訂閱
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的支援可讓您輕鬆使用 Atom、RSS 或其他自訂格式的新聞訂閱摘要，並且可讓您讀取和建立這些摘要，以及在服務端點上公開 (Expose) 這些摘要。 本節的各主題會詳細描述新聞訂閱的程式設計模型。  

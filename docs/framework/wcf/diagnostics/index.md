@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供豐富的功能，這些功能可協助您監視應用程式的各生命階段。 例如，您可以使用組態在部署時設定服務與用戶端。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含大量的效能計數器，可協助您測量應用程式的效能。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 亦會透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可以同時協助程式開發人員與 IT 專業人員，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式發生錯誤行為時進行疑難排解。  

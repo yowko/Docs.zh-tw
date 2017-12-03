@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: be5faf5e465eeacc190081c22d7bc59c3caf5825
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 67afc6dbc069678c8fb692f70bc0e7a0a12b1076
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>以 SerializationBinder 控制序列化與還原序列化
 在序列化期間，格式器會傳輸在建立正確型別和版本之物件執行個體時的必要資訊。 這項資訊通常包含物件的完整型別名稱和組件名稱。 根據預設，還原序列化會使用這項資訊建立完全相同物件的執行個體。 某些使用者可能因為執行還原序列化的電腦上不存在原始類別、原始類別已在組件之間移動，或是伺服器和用戶端上需要不同版本的類別，而需要控制要序列化和還原序列化的類別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][序列化繫結器的使用方式](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)。  

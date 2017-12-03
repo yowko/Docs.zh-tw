@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab46b1c908e8eb61ea49315e120973f1ea381bc6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="limiting-message-distribution"></a>限制訊息散發
 對等通道在設計上即是廣播 mesh。 其基本流動模型牽涉到將 mesh 的任何成員所傳送的每個訊息，散發給該 mesh 的所有其他成員。 當成員產生的每個訊息對所有其他成員而言，是相關的且有用的訊息的情況下 (例如聊天室的案例)，這就是理想的方式。 然而，許多應用程式偶爾會需要限制訊息的散發。 例如，在新成員加入 mesh 並想要擷取透過 mesh 傳送的上一個訊息時，這個要求並不需要流向 mesh 的每個成員。 您可以限制要求流向至近鄰，或者可以篩選掉本機產生的訊息。而訊息也可以傳送到 mesh 上的個別節點。 本主題討論使用躍點計數、訊息傳播篩選條件、本機篩選條件或直接連接，控制訊息在整個 mesh 間的轉送方式，並提供用於選擇適當方法的一般方針。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1158d1fc2d906737087fa4bdf7d2070e5ff4cfae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c9a42d644d4d51332c89764a4e6516c7d15e828d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 變更密碼編譯提供者的 X.509 憑證 &#39; s 私密金鑰
 本主題將說明如何變更用於提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何將提供者整合至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性架構中。 如需有關如何使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 115e2a69c7d990c7d4c59634644fb557e83ad405
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9275f1812111365ed6b0fb3be6957cd9ca883fdf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation 中的傳輸
 傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中所使用的主要傳輸有 HTTP、HTTPS、TCP 和具名管道。 本節中的主題將討論如何在這些傳輸之間進行選擇、設定傳輸，以及設定調整屬性。  

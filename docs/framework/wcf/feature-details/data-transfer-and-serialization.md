@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 41357c9a039414ac692bac69337b2963d5c6b341
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
 在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為服務或用戶端的開發人員的您，必須同時了解 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何處理資料與資料序列化，以建立有效率且容易維護的應用程式。  

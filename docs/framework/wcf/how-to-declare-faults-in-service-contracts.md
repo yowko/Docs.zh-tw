@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ebfe56a0e073534840ce81eebb64ce3f5db48a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f53f8396dc16f9f4538b772d376287cc1695ff47
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>HOW TO：在服務合約中宣告錯誤
 在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。 不過在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，藉由在服務合約中宣告 SOAP 錯誤，服務合約便可指定傳回用戶端的錯誤資訊。 如需例外狀況和錯誤之間的關聯性的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  

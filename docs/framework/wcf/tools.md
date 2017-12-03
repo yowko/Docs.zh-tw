@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9039ae27ea02b16b9b476c7c94856ea438176dad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1518f3f89a1c7e5096ab1bee3461be84a0a87777
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
 Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 工具的設計是為了讓您能夠更輕鬆地建立、部署和管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式。 本章節內容包含工具的詳細資訊。 請注意，並不支援這些工具。  

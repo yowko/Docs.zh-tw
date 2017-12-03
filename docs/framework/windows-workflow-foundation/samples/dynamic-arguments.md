@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fe6de5ec72edf752261beb5621f19772a1df150e
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 582f8815bd121199e564af7d1806f2e76f4595cd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="dynamic-arguments"></a>動態引數
 這個範例示範如何實作活動，由活動消費者 (而不是活動作者) 定義其引數。 其執行方式為覆寫執行階段建構活動中繼資料的方式。  

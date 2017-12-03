@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4cdbc12f57c733d8e8ba3753ce5a2f29ab28ffd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="end-to-end-tracing"></a>端對端追蹤
 「端對端 (e2e) 追蹤」可讓開發人員追蹤 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 基礎結構中程式碼執行的情況，以便調查程式碼路徑失敗的原因，或是針對容量規劃與效能分析提供詳細的追蹤。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供三種相互關聯的機制，協助診斷錯誤的成因：活動、傳輸和傳播。  

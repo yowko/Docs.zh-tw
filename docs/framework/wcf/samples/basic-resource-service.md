@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8ba436cba284201f14635162ed394abfa9a14db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-resource-service"></a>基本資源服務
 此範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 程式設計模型實作 HTTP 的服務，此模型會公開一組支援擷取、加入、刪除和取代作業的客戶。 此範例由兩個元件所組成：自我裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服務 (Service.cs)，以及建立服務並呼叫該服務的主控台應用程式 (program.cs)。  

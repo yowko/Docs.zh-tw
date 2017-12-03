@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>HOW TO：使用服務 Moniker 搭配中繼資料交換合約
 在開發一些新的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之後，您可能會決定想要能夠從指令檔或 Visual Basic 6.0 應用程式來呼叫這些服務。 有一種方法會產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端組件，請向 COM 註冊組件，在 GAC 中安裝組件，然後從您的 Visual Basic 程式碼參照 COM 型別。 當您散發應用程式時，也必須散發 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端組件。 然後使用者必須向 COM 註冊 WCF 用戶端組件，並將它放在 GAC 中。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] COM Interop 也讓您不需依賴 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端組件，就可以進行相同的服務呼叫。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Moniker 可讓您藉由指定服務 Moniker 用於擷取有關服務之型別資訊的中繼資料交換 (Mex) 端點 URI，從與 COM 相容的語言 (Visual Basic、VBScript、Visual Basic for Applications (VBA) 等等) 呼叫任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 本主題將說明如何使用指定 Mex 端點的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Moniker 來呼叫「使用者入門」[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例。  

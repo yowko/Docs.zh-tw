@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f9c721a0ef357feeb4df540cb5b7b74d067dc807
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55a7fe72b34fc8c099d921e7e295c184817825a3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>HOW TO：測試探索 Proxy
 本主題是四個主題中的第四個，示範如何實作探索 Proxy。 在先前的主題， [How to： 實作使用探索 Proxy 來尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，實作您[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用探索 proxy 來尋找服務，然後呼叫的用戶端應用程式服務。 本主題描述如何確認探索 Proxy、服務以及用戶端應用程式如預期般運作。  

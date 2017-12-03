@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1c1493e344bfe60a12ad16e3c0d257392b3545a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 整合
 在 Internet Information Service (IIS) 中裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，您會將一個 .svc 檔案置入虛擬目錄。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 向服務進行要求時，您可在 URI 中指定 .svc 檔案，例如：http://contoso.com/EmployeeServce.svc。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing> 整合功能可讓您裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服務，該服務不需要擴充即可回應 URI。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]路由，請參閱[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)範例。  

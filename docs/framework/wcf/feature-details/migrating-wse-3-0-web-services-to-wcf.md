@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea8bbbcb6241e632075e8ebeb29bbdd3d681dae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>從 WSE 3.0 Web 服務移轉至 WCF
 從 WSE 3.0 Web 服務移轉至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的好處，包括更好的效能、對其他傳輸、其他安全案例，以及 WS-* 規格的支援。 從 WSE 3.0 移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Web 服務可以感受到 200% 到 400% 的效能提升。 如需有關所支援的傳輸[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 如需所支援的案例的清單[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如需所支援的規格的清單[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[Web 服務通訊協定互通性手冊](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  

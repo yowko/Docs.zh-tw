@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communcation Foundation 繫結
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會區分應用程式的軟體撰寫方式，以及與其他軟體的通訊方式。 繫結可用來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用繫結來產生端點的基礎 Wire 表示，因此大部分的繫結詳細資料必須由參與通訊的各方同意才行。 要達到這個目的之最簡單方式，就是讓服務用戶端使用服務端點所使用的相同繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何執行這項操作，請參閱[使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  

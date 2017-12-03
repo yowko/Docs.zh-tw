@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3aebab3799af562d958eb8e3e83380e734fe9268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22d244fdc2c9fc3d3802e520d1fdd6f31bdc1c4e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定用戶端執行階段行為
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端就如同 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務，可以在設定之後修改執行階段行為，以配合用戶端應用程式。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  

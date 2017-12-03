@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2167b1709ed8db0be76a330eaf72d6d52445fd1b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c6f0d73ba01ec51fe2fcd00f33bbd3183e382c74
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 此範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 實作與設定一般服務和用戶端。 這個範例是所有其他基本技術範例的基礎。  

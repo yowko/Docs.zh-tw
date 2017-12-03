@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>批次處理異動中的訊息
 佇列的應用程式會使用異動來確保訊息的正確性與可靠的傳遞。 不過，交易是昂貴的作業，而且可能大幅降低訊息的處理能力。 要改善訊息處理能力的其中一種方式，就是讓應用程式在單一交易內讀取和處理多個訊息。 效能與復原之間的取捨：隨著批次中訊息數目的增加，交易復原時所需的復原工作量也會增加。 務必注意的是，在交易和工作階段中批次處理訊息之間的差異。 A*工作階段*是一組相關的訊息，由單一應用程式處理並且以單一單位進行認可。 工作階段通常是在有一組相關訊息必須一併處理時使用。 這類工作的範例為線上購物網站。 *批次*用來處理多個、 不相關的訊息，以增加訊息輸送量的方式。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作階段，請參閱[群組排入佇列的工作階段訊息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。 批次中的訊息同樣是由單一應用程式處理，並且以單一單位進行認可，但是批次中的訊息可能沒有任何關聯性。 將交易中的訊息批次處理是最佳的方法，而且不會改變應用程式執行的方式。  

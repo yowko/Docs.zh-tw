@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 02c6d346c6ebea27148c11f5f033f74dfb556e44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用追蹤來疑難排解應用程式
 [!INCLUDE[wf](../../../includes/wf-md.md)] 可讓您追蹤工作流程相關資訊，提供有關 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 應用程式或服務執行的詳細資訊。 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 主機可以在工作流程執行個體執行期間擷取工作流程事件。 如果您的工作流程產生錯誤或例外狀況，您可以使用 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 追蹤詳細資訊來疑難排解其處理程序。  

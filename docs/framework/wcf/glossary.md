@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
 caps.latest.revision: "243"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1f78b919a93bcf0bce5e326f7664caf7529d3e04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 的 Windows Communication Foundation 字彙
 以下是專為 Windows Communication Foundation 文件所定義的詞彙。  

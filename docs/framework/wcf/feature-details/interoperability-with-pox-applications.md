@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6dbdd72dce196ea58550cff956a7b0e6fe0b1a73
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cf05e3327d7c99d333ab4be045e3f72e6f2a8a3f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="interoperability-with-pox-applications"></a>與 POX 應用程式的互通性
 "Plain Old XML"(POX) 應用程式交換僅包含 XML 應用程式資料不是在 SOAP envelope 內包含的原始 HTTP 訊息來進行通訊。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可提供使用 POX 訊息的服務和用戶端。 在服務上可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作將端點公開給用戶端 (例如 Web 瀏覽器) 的服務，以及傳送和接收 POX 訊息的指令碼語言。 在用戶端上可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計模型來實作與 POX 式服務通訊的用戶端。  

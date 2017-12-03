@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1d19a4e925fef7fa904b6f866719d593b93db6fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="choosing-a-message-encoder"></a>選擇訊息編碼器
 本主題說明從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中所包含的訊息編碼器進行選擇的準則：二進位、文字和「訊息傳輸最佳化機制」(Message Transmission Optimization Mechanism，MTOM)。  

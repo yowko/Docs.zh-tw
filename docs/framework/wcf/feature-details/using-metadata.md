@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 599fdb099a1c22e28ce36527a43a66430cfc2e4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c0a7d5390681e7270381df109601d269f12a707a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-metadata"></a>使用中繼資料
 服務中繼資料中包含電腦可讀取的服務描述。 服務中繼資料包含服務端點、繫結、合約、作業和訊息的描述。 您可將服務中繼資料用於各種用途，包括自動產生用戶端來使用服務、實作服務描述，以及動態更新用戶端的繫結。  

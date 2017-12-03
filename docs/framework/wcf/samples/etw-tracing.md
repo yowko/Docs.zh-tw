@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
 caps.latest.revision: "42"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d45852a8e03ac63ea6412e6f5b176f06fe83eb03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ebffd082f5d1b07ab016c0e5e72d6ad23542147
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="etw-tracing"></a>ETW 追蹤
 這個範例示範如何使用 Event Tracing for Windows (ETW) 和範例隨附的 `ETWTraceListener`，以實作端對端 (E2E) 追蹤。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並包含 ETW 追蹤。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d59ebd85e4110c246ef938770debf60e9d16ac48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 40973353a0057bcd23c76c03eb1ce6406c95aca6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="feedback-and-community"></a>意見與社群
 我們十分感謝您對於 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 或 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 文件的意見與問題。 在 SDK 中每一頁的底部都有一句「請將您對這個主題的意見傳送至 Microsoft」。 請按一下 [意見] 連結，提供您對於特定主題的看法或建議。  

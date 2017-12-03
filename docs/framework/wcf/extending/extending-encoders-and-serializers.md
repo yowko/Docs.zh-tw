@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 97aec970-d73c-469c-9b93-8b86be701c44
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ebc113ac5695c82c2fbedb0655dd5bbe9223186
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 274efaec0efa2aed12689013db2ad70a2e32c1f9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-encoders-and-serializers"></a>擴充編碼器與序列化程式
 本章節中的主題會說明如何擴充 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]序列化系統。  

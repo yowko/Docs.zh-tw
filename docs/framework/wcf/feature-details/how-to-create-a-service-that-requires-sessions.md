@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2e238598ccd33d9e6e77a2d09ea3b19fdefcefbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f9cff53b598d4e477488bcb5b5e87be62e78bb9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>HOW TO：建立需要工作階段的服務
 工作階段會在兩個或更多的端點之間建立共用狀態，以啟用諸如回呼、多重躍點安全性之類的有用功能，並在用戶端與服務執行個體之間建立關聯。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]中的工作階段[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]應用程式，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。  

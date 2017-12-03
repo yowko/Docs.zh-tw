@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0d3cd2f53b81ae6114baa3c7eedd899126ed579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-services"></a>裝載服務
 如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務是設計為在支援 Managed 程式碼的 Windows 處理序中執行的。  

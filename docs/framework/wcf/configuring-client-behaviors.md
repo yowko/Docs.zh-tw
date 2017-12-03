@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6f16f32128c7223fa600802ae593d36286847dc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-client-behaviors"></a>設定用戶端行為
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 會以兩種方式設定行為：一種是參考行為組態 (定義於用戶端應用程式組態檔的 `<behavior>` 區段中)，另一種是透過呼叫應用程式，以程式設計的方式設定。 這個主題將描述這兩種方法。  

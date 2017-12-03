@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7a206ff3d82378e825cd612a6564366ef1e07977
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 680a86d453dd8ca7c78d0ca6ba60cbaa691e44f3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="services-and-transactions"></a>服務與異動
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式可以初始化用戶端內的交易，並協調服務作業中的交易。 用戶端可以初始化交易並叫用數個服務作業，同時確保服務作業已認可，或是復原為單一單位。  

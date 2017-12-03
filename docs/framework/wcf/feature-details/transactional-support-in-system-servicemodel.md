@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e7e54ed3-d1e5-4aa7-a653-1300c6b304eb
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 172cda7e675a37d49d2e57c8bc93e8c8882df72e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 92e75f8f23bb0bc6d11e9bb6fd6e83c35559b847
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel 中的異動式支援
 本節的各主題會描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的交易式功能。  
