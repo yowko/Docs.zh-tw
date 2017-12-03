@@ -98,13 +98,12 @@ return result;
 > API and delivered as part of the framework, the NuGet package requirement will
 > be removed.
 
-C# provides a rich syntax for classes and structs that is used to explain
-your design intent. But sometimes that rich syntax requires extra
-work with minimal benefit. You may often write methods that need a simple
-structure containing more than one data element. To support these scenarios
-*tuples* were added to C#. Tuples are lightweight data structures
-that contain multiple fields to represent the data members.
-The fields are not validated, and you cannot define your own methods
+本方法提供組件 <xref:System.ValueTuple> 改進。
+
+C# 提供許多解釋結構 ( structure ) 方法可以應用在您所設計程式結構上，然而在許多時候您可能需要以最小成本花費來設計程式
+並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *tuples* 類別能以更輕便的方式來表示多個個別元素結構。
+
+需要注意的是本方法所解釋的個別元素結構並未經過驗證，您無法為個別定義定義方法 ( methods ) 。
 
 > [!NOTE]
 > Tuples were available before C# 7,
@@ -114,7 +113,7 @@ The fields are not validated, and you cannot define your own methods
 > which enables semantic names for the fields of a tuple using new,
 > more efficient tuple types.
 
-You can create a tuple by assigning each member to a value:
+您可以建立一個 *tuples* 類別來描述個別元素結構。
 
 
 ```csharp
