@@ -9,17 +9,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 453917f7-5fb9-4572-a681-853f80b2b7c5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ea4814d72f3e4bfb37d5d1d32aba75876b41923
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d1277552b78dcae58fd7adbc236b37c43c72ba1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="additional-managed-reference"></a><span data-ttu-id="8480f-102">其他 Managed 參考</span><span class="sxs-lookup"><span data-stu-id="8480f-102">Additional Managed Reference</span></span>
-<span data-ttu-id="8480f-103">此主題記載[Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)類別。</span><span class="sxs-lookup"><span data-stu-id="8480f-103">This topic documents the [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md) class.</span></span>  
+# <a name="additional-managed-reference"></a><span data-ttu-id="a40d1-102">其他 Managed 參考</span><span class="sxs-lookup"><span data-stu-id="a40d1-102">Additional Managed Reference</span></span>
+<span data-ttu-id="a40d1-103">此主題記載[Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)類別。</span><span class="sxs-lookup"><span data-stu-id="a40d1-103">This topic documents the [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md) class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8480f-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="8480f-104">In This Section</span></span>  
- <span data-ttu-id="8480f-105">這個類別是由 wfd1 基礎結構所使用，不應由使用者呼叫。</span><span class="sxs-lookup"><span data-stu-id="8480f-105">This class is used by the wfd1 infrastructure and is not intended to be called by users.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="a40d1-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="a40d1-104">In This Section</span></span>  
+ <span data-ttu-id="a40d1-105">這個類別是由 wfd1 基礎結構所使用，不應由使用者呼叫。</span><span class="sxs-lookup"><span data-stu-id="a40d1-105">This class is used by the wfd1 infrastructure and is not intended to be called by users.</span></span>

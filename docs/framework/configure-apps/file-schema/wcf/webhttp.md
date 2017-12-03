@@ -10,54 +10,54 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1c51c8ac43549994752999db08dbb92d43bc7a86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b5388a680816bca6051525f5130308a3c7c2dc5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltwebhttpgt"></a><span data-ttu-id="a8ee5-102">&lt;webHttp&gt;</span><span class="sxs-lookup"><span data-stu-id="a8ee5-102">&lt;webHttp&gt;</span></span>
-<span data-ttu-id="a8ee5-103">此項目透過組態指定端點上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-103">This element specifies the <xref:System.ServiceModel.Description.WebHttpBehavior> on an endpoint through configuration.</span></span> <span data-ttu-id="a8ee5-104">此行為，當搭配[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準繫結，可讓 Web 程式設計模型[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服務。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-104">This behavior, when used in conjunction with the [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) standard binding, enables the Web programming model for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service.</span></span>  
+# <a name="ltwebhttpgt"></a><span data-ttu-id="5aa2b-102">&lt;webHttp&gt;</span><span class="sxs-lookup"><span data-stu-id="5aa2b-102">&lt;webHttp&gt;</span></span>
+<span data-ttu-id="5aa2b-103">此項目透過組態指定端點上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-103">This element specifies the <xref:System.ServiceModel.Description.WebHttpBehavior> on an endpoint through configuration.</span></span> <span data-ttu-id="5aa2b-104">此行為，當搭配[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)標準繫結，可讓 Web 程式設計模型[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服務。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-104">This behavior, when used in conjunction with the [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) standard binding, enables the Web programming model for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service.</span></span>  
   
- <span data-ttu-id="a8ee5-105">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="a8ee5-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-106">\<behaviors></span></span>  
-<span data-ttu-id="a8ee5-107">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-107">\<endpointBehaviors></span></span>  
-<span data-ttu-id="a8ee5-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-108">\<behavior></span></span>  
-<span data-ttu-id="a8ee5-109">\<webHttp ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-109">\<webHttp></span></span>  
+ <span data-ttu-id="5aa2b-105">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5aa2b-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-106">\<behaviors></span></span>  
+<span data-ttu-id="5aa2b-107">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-107">\<endpointBehaviors></span></span>  
+<span data-ttu-id="5aa2b-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-108">\<behavior></span></span>  
+<span data-ttu-id="5aa2b-109">\<webHttp ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-109">\<webHttp></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8ee5-110">語法</span><span class="sxs-lookup"><span data-stu-id="a8ee5-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5aa2b-110">語法</span><span class="sxs-lookup"><span data-stu-id="5aa2b-110">Syntax</span></span>  
   
 ```xml  
 <webHttp />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a8ee5-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="a8ee5-111">Attributes and Elements</span></span>  
- <span data-ttu-id="a8ee5-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5aa2b-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="5aa2b-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="5aa2b-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a8ee5-113">屬性</span><span class="sxs-lookup"><span data-stu-id="a8ee5-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5aa2b-113">屬性</span><span class="sxs-lookup"><span data-stu-id="5aa2b-113">Attributes</span></span>  
   
-|<span data-ttu-id="a8ee5-114">屬性</span><span class="sxs-lookup"><span data-stu-id="a8ee5-114">Attribute</span></span>|<span data-ttu-id="a8ee5-115">描述</span><span class="sxs-lookup"><span data-stu-id="a8ee5-115">Description</span></span>|  
+|<span data-ttu-id="5aa2b-114">屬性</span><span class="sxs-lookup"><span data-stu-id="5aa2b-114">Attribute</span></span>|<span data-ttu-id="5aa2b-115">描述</span><span class="sxs-lookup"><span data-stu-id="5aa2b-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="a8ee5-116">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="a8ee5-116">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="a8ee5-117">當此屬性設定為 `true` 時，WCF 基礎結構會判斷要使用的最佳格式。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-117">When this property is set to `true`, the WCF infrastructure determines the best format to use.</span></span> <span data-ttu-id="a8ee5-118">為了提供回溯相容性，自動格式選取預設為停用。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-118">Automatic format selection is disabled by default for backwards compatibility.</span></span> <span data-ttu-id="a8ee5-119">自動格式選取可以透過程式設計方式或透過組態啟用。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-119">Automatic format selection can be enabled programmatically or through configuration.</span></span>|  
-|<span data-ttu-id="a8ee5-120">defaultBodyStyle</span><span class="sxs-lookup"><span data-stu-id="a8ee5-120">defaultBodyStyle</span></span>|<span data-ttu-id="a8ee5-121">指定傳回訊息的預設本文樣式。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-121">Specifies the default body style of returned messages.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="a8ee5-122"><xref:System.ServiceModel.Web.WebMessageBodyStyle>和[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-122"> <xref:System.ServiceModel.Web.WebMessageBodyStyle> and [WCF Web HTTP Formatting](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).</span></span>|  
-|<span data-ttu-id="a8ee5-123">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="a8ee5-123">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="a8ee5-124">指定訊息的預設傳出回應格式。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-124">Specifies the default outgoing response format for messages.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="a8ee5-125">[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-125"> [WCF Web HTTP Formatting](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).</span></span>|  
-|<span data-ttu-id="a8ee5-126">faultExceptionEnabled</span><span class="sxs-lookup"><span data-stu-id="a8ee5-126">faultExceptionEnabled</span></span>|<span data-ttu-id="a8ee5-127">取得或設定旗標，指定內部伺服器錯誤 (HTTP 狀態碼：500) 發生時，是否產生 FaultException。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-127">Gets or sets the flag that specifies whether a FaultException is generated when an internal server error (HTTP status code: 500) occurs.</span></span>|  
-|<span data-ttu-id="a8ee5-128">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="a8ee5-128">helpEnabled</span></span>|<span data-ttu-id="a8ee5-129">取得或設定值，這個值會判斷是否已啟用說明頁面。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-129">Gets or sets a value that determines if the Help page is enabled.</span></span>|  
+|<span data-ttu-id="5aa2b-116">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="5aa2b-116">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="5aa2b-117">當此屬性設定為 `true` 時，WCF 基礎結構會判斷要使用的最佳格式。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-117">When this property is set to `true`, the WCF infrastructure determines the best format to use.</span></span> <span data-ttu-id="5aa2b-118">為了提供回溯相容性，自動格式選取預設為停用。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-118">Automatic format selection is disabled by default for backwards compatibility.</span></span> <span data-ttu-id="5aa2b-119">自動格式選取可以透過程式設計方式或透過組態啟用。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-119">Automatic format selection can be enabled programmatically or through configuration.</span></span>|  
+|<span data-ttu-id="5aa2b-120">defaultBodyStyle</span><span class="sxs-lookup"><span data-stu-id="5aa2b-120">defaultBodyStyle</span></span>|<span data-ttu-id="5aa2b-121">指定傳回訊息的預設本文樣式。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-121">Specifies the default body style of returned messages.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="5aa2b-122"><xref:System.ServiceModel.Web.WebMessageBodyStyle>和[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-122"> <xref:System.ServiceModel.Web.WebMessageBodyStyle> and [WCF Web HTTP Formatting](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).</span></span>|  
+|<span data-ttu-id="5aa2b-123">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="5aa2b-123">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="5aa2b-124">指定訊息的預設傳出回應格式。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-124">Specifies the default outgoing response format for messages.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="5aa2b-125">[WCF Web HTTP 格式化](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-125"> [WCF Web HTTP Formatting](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).</span></span>|  
+|<span data-ttu-id="5aa2b-126">faultExceptionEnabled</span><span class="sxs-lookup"><span data-stu-id="5aa2b-126">faultExceptionEnabled</span></span>|<span data-ttu-id="5aa2b-127">取得或設定旗標，指定內部伺服器錯誤 (HTTP 狀態碼：500) 發生時，是否產生 FaultException。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-127">Gets or sets the flag that specifies whether a FaultException is generated when an internal server error (HTTP status code: 500) occurs.</span></span>|  
+|<span data-ttu-id="5aa2b-128">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="5aa2b-128">helpEnabled</span></span>|<span data-ttu-id="5aa2b-129">取得或設定值，這個值會判斷是否已啟用說明頁面。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-129">Gets or sets a value that determines if the Help page is enabled.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a8ee5-130">子元素</span><span class="sxs-lookup"><span data-stu-id="a8ee5-130">Child Elements</span></span>  
- <span data-ttu-id="a8ee5-131">無。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-131">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5aa2b-130">子元素</span><span class="sxs-lookup"><span data-stu-id="5aa2b-130">Child Elements</span></span>  
+ <span data-ttu-id="5aa2b-131">無。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-131">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a8ee5-132">父項目</span><span class="sxs-lookup"><span data-stu-id="a8ee5-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5aa2b-132">父項目</span><span class="sxs-lookup"><span data-stu-id="5aa2b-132">Parent Elements</span></span>  
   
-|<span data-ttu-id="a8ee5-133">項目</span><span class="sxs-lookup"><span data-stu-id="a8ee5-133">Element</span></span>|<span data-ttu-id="a8ee5-134">說明</span><span class="sxs-lookup"><span data-stu-id="a8ee5-134">Description</span></span>|  
+|<span data-ttu-id="5aa2b-133">項目</span><span class="sxs-lookup"><span data-stu-id="5aa2b-133">Element</span></span>|<span data-ttu-id="5aa2b-134">說明</span><span class="sxs-lookup"><span data-stu-id="5aa2b-134">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a8ee5-135">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-135">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="a8ee5-136">指定端點行為組。</span><span class="sxs-lookup"><span data-stu-id="a8ee5-136">Specifies the set of endpoint behaviors.</span></span>|  
+|[<span data-ttu-id="5aa2b-135">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-135">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="5aa2b-136">指定端點行為組。</span><span class="sxs-lookup"><span data-stu-id="5aa2b-136">Specifies the set of endpoint behaviors.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a8ee5-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8ee5-137">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5aa2b-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5aa2b-137">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WebHttpElement>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [<span data-ttu-id="a8ee5-138">AJAX 整合與 JSON 支援</span><span class="sxs-lookup"><span data-stu-id="a8ee5-138">AJAX Integration and JSON Support</span></span>](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [<span data-ttu-id="a8ee5-139">\<w ></span><span class="sxs-lookup"><span data-stu-id="a8ee5-139">\<webHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)
+ [<span data-ttu-id="5aa2b-138">AJAX 整合與 JSON 支援</span><span class="sxs-lookup"><span data-stu-id="5aa2b-138">AJAX Integration and JSON Support</span></span>](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [<span data-ttu-id="5aa2b-139">\<w ></span><span class="sxs-lookup"><span data-stu-id="5aa2b-139">\<webHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)
