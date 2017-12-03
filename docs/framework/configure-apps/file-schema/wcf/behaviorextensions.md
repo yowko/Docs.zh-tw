@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed7c75fb7070b43b850a8f5b812abf0a52c3c16f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c520a8a06a593d8937ca840602ba5bcc7b2d44b4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 行為延伸可讓使用者建立使用者定義的行為項目。 這些項目可以和標準的 Windows Communication Foundation (WCF) 行為項目並列使用。 `behaviorExtensions` 區段會定義項目，讓項目可用於組態中。 以下是典型行為擴充的範例。  
