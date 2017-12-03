@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 134de9fce41ccdcd9c26277c6a52d67823199da3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c05cc5947a36bbe8573c5308cdfbbe3f6c990815
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 可讓開發人員使用組態檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也允許您以程式碼來設定服務。 在舊版 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 及更早版本) 的在自我裝載案例中，您可以輕鬆使用程式碼來設定服務，因為 <xref:System.ServiceModel.ServiceHost> 類別可讓您在呼叫 ServiceHost.Open 之前設定端點和行為。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了更簡單的方法，以程式碼來設定自我裝載和 Web 裝載服務。  

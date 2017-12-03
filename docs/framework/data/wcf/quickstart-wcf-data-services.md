@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5223f9b6e7854ec6575e8673bb874a1b9b60df7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08296be1002ee50e18a45c546645f4cc117d6bb5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入門 (WCF 資料服務)
 本快速入門可協助您熟悉[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]透過一系列的支援中的主題的工作[入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)。  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2d654ad24f8d23a47d2a3be3b07c42c104bb9b70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 25a6666127d16a8245093bdf11ae7d0e76fc8365
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 這是最後一項工作[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]快速入門。 在這項工作，您會加入至方案的主控台應用程式，請將參考加入[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]饋送到這個新的用戶端應用程式及存取[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]使用所產生的用戶端資料服務類別和用戶端從用戶端應用程式摘要程式庫。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f22fac02616070ecd6498ad0e158782001681ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 064f396d0a757e5b2f5f12c4a2a836b74f5e66a6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-your-application"></a>設定您的應用程式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用 .NET 組態系統，並讓您在機器和應用程式範圍內設定服務。  

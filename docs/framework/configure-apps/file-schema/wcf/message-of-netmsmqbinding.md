@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f3b03fcce02c51563ed006e62a3f77f76bede777
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d91d97a27c06e8e6e3ab624c45c6853b1cc23e8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;message&gt;
 定義此 `netMsmqBinding` 繫結上的 SOAP 訊息安全性設定。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |屬性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|設定訊息加密和金鑰包裝演算法，用來針對 MSMQ 傳輸上傳送的訊息實現訊息安全性。<br /><br /> 預設值是 `Aes256`。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
-|clientCredentialType|指定在為 MSMQ 傳輸上傳送的訊息執行用戶端驗證時，要使用的認證類型。 有效值包括以下的值：<br /><br /> -None： 這會允許服務與匿名用戶端互動。 服務和用戶端都不需要認證。<br />Windows： 這可讓 SOAP 交換加入 Windows 認證的已驗證的內容。 如此一定會執行 Kerberos 驗證。<br />-UserName： 這會讓服務要求用戶端會使用 UserName 認證進行驗證。 認證必須在此情況下使用指定`clientCredentials`行為**警告：** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]不支援傳送密碼摘要，或是衍生的金鑰使用的密碼，甚至對訊息安全性使用該金鑰。   因此，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護交換。 這個模式需要使用 `clientCredential` 行為和 `serviceCertificate` 在用戶端上指定服務憑證。 <br /><br /> -Certificate： 這會讓服務要求用戶端使用憑證來驗證。 此案例中的用戶端認證必須使用 `clientCredentials` 行為來指定。 此案例中的服務認證需要藉由指定 `clientCredentials`，以使用 `serviceCertificate` 行為來指定。<br />-CardSpace： 這可讓服務要求用戶端使用 CardSpace 來驗證。 `serviceCertiifcate` 行為中必須提供 `clientCredential`。<br /><br /> 預設值是 `Windows`。 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
+|clientCredentialType|指定在為 MSMQ 傳輸上傳送的訊息執行用戶端驗證時，要使用的認證類型。 有效值包括以下的值：<br /><br /> -None： 這會允許服務與匿名用戶端互動。 服務和用戶端都不需要認證。<br />Windows： 這可讓 SOAP 交換加入 Windows 認證的已驗證的內容。 如此一定會執行 Kerberos 驗證。<br />-UserName： 這會讓服務要求用戶端會使用 UserName 認證進行驗證。 認證必須在此情況下使用指定`clientCredentials`行為**警告：** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]不支援傳送密碼摘要，或是衍生的金鑰使用的密碼，甚至對訊息安全性使用該金鑰。 因此，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護交換。 這個模式需要使用 `clientCredential` 行為和 `serviceCertificate` 在用戶端上指定服務憑證。 <br /><br /> -Certificate： 這會讓服務要求用戶端使用憑證來驗證。 此案例中的用戶端認證必須使用 `clientCredentials` 行為來指定。 此案例中的服務認證需要藉由指定 `clientCredentials`，以使用 `serviceCertificate` 行為來指定。<br />-CardSpace： 這可讓服務要求用戶端使用 CardSpace 來驗證。 `serviceCertiifcate` 行為中必須提供 `clientCredential`。<br /><br /> 預設值是 `Windows`。 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
   
 ### <a name="child-elements"></a>子元素  
  無  

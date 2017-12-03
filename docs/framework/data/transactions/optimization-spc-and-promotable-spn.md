@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 66f60ba31983a6cfbfda0238d80a6e8ad81d30ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用單一階段交易認可和可提升單一階段告知進行最佳化
 本主題將說明 <xref:System.Transactions> 基礎結構所提供，用以最佳化效能的各項機制。  

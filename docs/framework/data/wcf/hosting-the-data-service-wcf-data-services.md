@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a11e7e499f705f4aace791320057e04205db58c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7fa76c5672b4117c446aca145b7cf98dae7801d4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立將資料公開為服務[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、 執行更新對資料來源，以及產生所需的回應訊息所需的功能[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 不過，無法繫結至資料服務，而且網路通訊端上接聽內送 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。  

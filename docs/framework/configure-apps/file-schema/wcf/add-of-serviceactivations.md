@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5166f7859bb3e914de8313de08427cda9bc06d6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c49845169265e48b232963ed5a2e6215be75d3fd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;serviceActivations&gt; 的 &lt;add&gt;
 組態項目，這個項目可讓您定義虛擬服務啟動設定，這些設定會對應至您的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務型別。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  

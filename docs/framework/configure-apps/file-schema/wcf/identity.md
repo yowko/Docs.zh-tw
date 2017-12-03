@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fa6bfdf72bd292599867bf7a9571ecd6b408a2c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 95b2ac18f6c04ad7ba31a8b1579506ac5c3b51ab
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 身分識別項目允許用戶端開發人員在設計階段指定服務的預期身分識別。 在用戶端和服務之間的信號交換過程中，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 基礎結構將確保預期服務的身分識別符合這個項目的值，因此可以通過驗證。 如需詳細資訊，請參閱[服務識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  

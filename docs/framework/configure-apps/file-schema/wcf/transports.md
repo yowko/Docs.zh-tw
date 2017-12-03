@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b9f3719406feb9c4e8686f479ee010bf6de5eb3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 911a770fb4dc6d11f17c1f287a53ddb6552c690a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transports"></a>傳輸
 傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 中使用的主要傳輸有 HTTP、HTTPS、TCP 和具名管道。 這個區段列出所有可讓您設定不同類型傳輸的組態項目。  

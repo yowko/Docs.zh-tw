@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3f794088f2494157e22b8551c6241786c7a73398
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a05927721e55f65db6984c3200e64088a187248
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-services-providers-wcf-data-services"></a>資料服務提供者 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]將資料公開為支援多個提供者模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題所提供的資訊能讓您針對您的資料來源，選擇最適合的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供者。  

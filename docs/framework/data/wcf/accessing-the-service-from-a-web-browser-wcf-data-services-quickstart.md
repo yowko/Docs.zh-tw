@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1f6598b1aff20a8b3471ca1ccb59bb5c6576efdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 在這個工作中，您將從 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 啟動 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，並且選擇性停用 Web 瀏覽器中的摘要讀取功能。 然後會擷取服務定義文件，以及提交至公開的資源的網頁瀏覽器透過 HTTP GET 要求來存取資料服務資源。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 99bb7c6be02bad85792dfce9de1f6ef8ba1dcd17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b56c431c0e8dbab7bd4680a6e692d9b4f6e0eec4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
 指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。  

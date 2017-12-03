@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b56fecef5ace38f728d8cc68df4dcfeb71bfedf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源繫結資料 (WCF Data Services)
 您可以在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端應用程式中，建立以產生之資料物件為基礎的資料來源。 當您加入的參考資料服務使用**加入服務參考** 對話方塊中，以及產生的用戶端資料類別建立的專案資料來源。 每一個實體集都會建立一個資料來源，並由資料服務公開。 您可以建立表單，以顯示服務的資料，這些資料來源項目從**資料來源**視窗拖曳至設計工具。 這些項目會成為繫結至資料來源的控制項。 在執行期間，此資料來源繫結至執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>類別，其中會填入到資料服務查詢所傳回的物件。 如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  

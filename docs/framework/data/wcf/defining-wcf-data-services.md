@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 888f0af14e31c432cd4ad737232a22ed6f079a3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e66c26c12f3f62ee61e02e16318e747793ff927
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="defining-wcf-data-services"></a>定義 WCF 資料服務
 本章節描述如何建立及設定[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]將資料公開為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立資料服務時，所需的基本步驟，請參閱[公開資料做為服務](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)。  

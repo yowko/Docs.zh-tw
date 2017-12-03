@@ -11,14 +11,14 @@ ms.topic: article
 f1_keywords: WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc89ed3ae41471af49fc92f31834f0ae268309dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60c7e2ddd4d4d57b675f2c12f8c5f567e8d23020
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>控制 WCF 服務主機的自動啟動功能
 在針對包含多個專案之相同 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 方案中的另一個專案進行偵錯時，您可以控制 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫專案中 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服務主機 (WcfSvcHost.exe) 的自動啟動功能。  

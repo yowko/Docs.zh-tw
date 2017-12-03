@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bdfd498dbac7f6a14b8d87a2414af606c33e9104
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9eb89906d9179f4475125dc5e1ce42e9196e1522
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
 與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立資料服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用資料提供者將此資料公開為[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 這些提供者包含 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  

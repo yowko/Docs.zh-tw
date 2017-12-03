@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d69a3cf60b60806085a9bb7ae292cc88ba99871e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 77a4b90b16a92e993d9283932b2a609f874c7568
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET Entity Framework 資料來源建立資料服務 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將實體資料公開為資料服務。 當資料來源為關聯式資料庫時，這個實體資料會由 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供。 本主題示範如何在以現有資料庫為基礎的 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 應用程式中建立 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 架構資料模型，並使用此資料模型建立新的資料服務。  

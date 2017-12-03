@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9e0d7ed9fdae7731fd4b023dcad656ebcdcf280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca580801e6bb8786071ec705d4a86d367b02f622
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>將資料繫結至控制項 (WCF 資料服務)
 有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合 (繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別) 包含 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要中的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用的執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>資料繫結，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫會處理這些事件，以確保所追蹤的物件<xref:System.Data.Services.Client.DataServiceContext>與繫結 UI 項目中的資料保持同步。  

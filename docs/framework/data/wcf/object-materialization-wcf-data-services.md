@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f671d3b41e0812916d1db342c211f2db6456ede3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>物件具體化 (WCF 資料服務)
 當您使用**加入服務參考**對話方塊，即可取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要中的.NET Framework 為基礎的用戶端應用程式時，對等的資料類別都會產生摘要所公開的資料模型中每個實體類型。 如需詳細資訊，請參閱[產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。 合併選項和識別解析為追蹤之物件的相關資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  

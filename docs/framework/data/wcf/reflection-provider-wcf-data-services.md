@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 865fbf4195b9005e4fbc9ebf6b1e3140b11df85d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>反映提供者 (WCF 資料服務)
 除了透過 Entity Framework 從資料模型公開資料外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還可以公開在實體架構模型中未嚴格定義的資料。 反映提供者會公開類別中的資料，而這些類別會傳回實作 <xref:System.Linq.IQueryable%601> 介面的類型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反映來推斷這些類別的資料模型，而且可以針對資源將定址架構的查詢轉譯為 Language Integrated Query (LINQ) 架構的查詢 (針對已公開的 <xref:System.Linq.IQueryable%601> 類型)。  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b458c0491ec91cd528b40fb19e93b7948f8c059a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 繫結
 繫結會指定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點與其他端點通訊的方式。 繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。 此外，您也可以透過繫結來設定其他特性，例如安全性與交易支援。  

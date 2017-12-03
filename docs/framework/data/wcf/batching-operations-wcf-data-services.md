@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e929e9771ba1d47016919f017f3476b17581d8a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bcb29fa522f706f5500ab3cb12f956d5e2236b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-operations-wcf-data-services"></a>批次處理作業 (WCF 資料服務)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]支援以批次要求的處理[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的服務。 如需詳細資訊，請參閱[OData： 批次處理](http://go.microsoft.com/fwlink/?LinkId=186075)。 在[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，會使用每個作業<xref:System.Data.Services.Client.DataServiceContext>，例如執行查詢，或儲存變更，正在傳送給資料服務的個別要求的結果。 若要保持作業集的邏輯範圍，您可以明確地定義作業批次。 這可確保批次中的所有作業，會傳送至單一 HTTP 要求中的資料服務，可讓伺服器以不可分割方式，處理作業，並減少往返次數至資料服務。  

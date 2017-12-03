@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6cb0fa7f328b158613836e6ab20bd33545dc3a5d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6512fa09bf83b03b1a294caffdfbbdf778ee0bb6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理並行存取
 <xref:System.Transactions.Transaction> 物件係使用 <xref:System.Transactions.Transaction.DependentClone%2A> 方法建立。 其唯一目的在於保證當其他程式碼片段 (例如，背景工作執行緒仍在執行交易工作時，不會認可交易。 當完成並準備好認可在複製之交易中所執行的工作時，可以使用 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法來通知交易的建立者。 這麼一來，您便可保持資料的一致性和正確性。  

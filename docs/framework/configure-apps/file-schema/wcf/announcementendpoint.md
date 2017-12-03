@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d49ea0b2dbabd5e747d912b76e493559b2a96ee7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 A[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並使用執行公告 AnnouncementClient。 用戶端想要從其他服務公告實際上做為接聽[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務; 因此您必須在該用戶端設定公告端點[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) > 一節。  

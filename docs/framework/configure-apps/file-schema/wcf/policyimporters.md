@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f8267a6f-bc09-4ec1-9b26-9445f137f663
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 358e4752b448d79aaa3039d133553166feb87ab4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ee6b62068a1d9532345dacd84e133064fd540f8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 這個組態項目會指定所有原則匯入工具，這個匯入工具控制匯入有關繫結的自訂原則判斷提示。 每個子項目是一個 <`policyImporter`>，用來搜尋有關繫結功能的自訂原則判斷提示，以及附加可實作判斷提示所需要功能的自訂繫結項目。  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a73e1b5c6cbb18e89b30550f02c0678e76d12ab4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 044d702c05d644e0eb11d3eb6ca291ebfc4dcf17
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="performing-recovery"></a>執行復原
 資源管理員會在資源失敗後重新登記異動參與者，以協助解析異動中的永久性登記。  

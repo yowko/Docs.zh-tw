@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b86f690848795b3e7880de42cc0860ec19b9cb9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指示詞語法
 指定 .svc 檔案中 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 指示詞所用的設定，以指示編譯器。 每個指示詞可以含有一個或多個該指示詞特有的屬性 (搭配值)。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 只有 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指示詞。  

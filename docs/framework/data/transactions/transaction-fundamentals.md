@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a21de968f5fbd241bd71169cf9f444b84c05b599
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f33e6ada38e3e1cb5b7b564f75ca43aa07ee1882
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transaction-fundamentals"></a>交易基礎觀念
 交易作業會將多項工作繫結在一起。 例如，想像應用程式正在執行兩項工作。 首先，它會在資料庫中建立新的表格。 接著，它會呼叫特定物件來收集與格式化資料，然後將資料插入新的表格中。 這兩項工作都是相關的，甚至是互相依存的，除非您可以在表格中填入資料，否則您會想要避免建立新的表格。 在單一交易範圍內執行這兩項工作，會將這兩項工作強制聯結在一起。 如果第二項工作失敗，第一項工作就會復原至建立新表格之前的時間點。  
