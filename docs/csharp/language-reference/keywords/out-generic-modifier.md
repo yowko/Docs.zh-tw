@@ -11,18 +11,18 @@ ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5c63fe2229d4b7190397d3ba98fa150c84a12fb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25019408387bbf085475482c74a3fc6001321b24
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (泛型修飾詞) (C# 參考)
 若為泛型型別參數，`out` 關鍵字會指定型別參數是 Covariant。 您可以在泛型介面及委派中使用 `out` 關鍵字。  
   
  共變數可讓您使用比泛型參數指定的衍生程度更高的衍生型別。 這可隱含轉換實作 Variant 介面的類別和隱含轉換委派型別。 參考型別支援共變數和反變數，但實值型別不支援它們。  
   
- 具有 Covariant 型別參數的介面可讓其方法傳回的衍生型別，衍生程度高過型別參數指定的衍生型別。 例如，因為在 .NET Framework 4 的 <xref:System.Collections.Generic.IEnumerable%601> 中，T 類型是 Covariant，所以您可以不使用任何特殊的轉換方法，將 `IEnumerabe(Of String)` 類型的物件指派給 `IEnumerable(Of Object)` 類型的物件。  
+ 具有 Covariant 型別參數的介面可讓其方法傳回的衍生型別，衍生程度高過型別參數指定的衍生型別。 例如，因為在 .NET Framework 4 的 <xref:System.Collections.Generic.IEnumerable%601> 中，T 類型是 Covariant，所以您可以不使用任何特殊的轉換方法，將 `IEnumerable(Of String)` 類型的物件指派給 `IEnumerable(Of Object)` 類型的物件。  
   
  Covariant 委派可以指派給同型別的另一個委派，但具有衍生程度較大的泛型型別參數。  
   

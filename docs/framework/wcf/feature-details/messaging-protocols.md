@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4052971746086061cb2ed091bd13c962318b2d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆疊利用編碼和傳輸通道將內部訊息表示法轉換為其 Wire 格式，並使用特定的傳輸予以傳送。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
@@ -307,7 +307,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3516：如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並具有以 `ReplyTo` 判斷提示 (未附加 `[address]` 判斷提示) 替代的原則，則傳送至端點的要求訊息必須要有其 `wsap:UsingAddressing` 屬性等於 "http://www.w3.org/2005/08/addressing/anonymous" 的 `cdp:CompositeDuplex` 標頭。  
   
- WS-Addressing WSDL 規格會試圖描述類似的通訊協定繫結，藉由引入具有三種文字值 (必要項、選擇性和禁止) 的 `<wsaw:Anonymous/>`wsa:ReplyTo 項目，指出`wsa:ReplyTo` 標頭 (第 3.2 節) 上的需求。 不巧的是，此類項目定義並無法特別當做 WS-Policy 內容的判斷提示使用，因為它需要網域專屬的延伸，以支援其他使用此類項目做為判斷提示的交集。 此類項目定義也指出了 `ReplyTo` 標頭的值，而非網路上的端點行為，如此將使其成為 HTTP 傳輸專屬的定義。  
+ WS-Addressing WSDL 規格會試圖描述類似的通訊協定繫結，藉由引入具有三種文字值 (必要項、選擇性和禁止) 的 `<wsaw:Anonymous/>` 項目，指出`wsa:ReplyTo` 標頭 (第 3.2 節) 上的需求。 不巧的是，此類項目定義並無法特別當做 WS-Policy 內容的判斷提示使用，因為它需要網域專屬的延伸，以支援其他使用此類項目做為判斷提示的交集。 此類項目定義也指出了 `ReplyTo` 標頭的值，而非網路上的端點行為，如此將使其成為 HTTP 傳輸專屬的定義。  
   
 #### <a name="action-definition"></a>動作定義  
  WS-Addressing 2004/08 為 `wsa:Action` 項目定義了 `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` 屬性。 WS-Addressing 1.0 WSDL 繫結 (WS-ADDR10-WSDL) 定義了一個類似的屬性，即 `wsaw10:Action`。  

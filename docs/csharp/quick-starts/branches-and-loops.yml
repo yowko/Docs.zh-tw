@@ -8,16 +8,16 @@ metadata:
   ms.custom: mvc
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: arrays-and-collections
-  nextTutorialTitle: "C# 中的陣列和集合"
+  nextTutorialHref: list-collection
+  nextTutorialTitle: "C# 中的集合"
 items:
 - durationInMinutes: 1
   content: "本快速入門將讓您了解如何撰寫程式碼來檢視變數，並根據這些變數來變更執行路徑。 您將以互動方式使用瀏覽器撰寫 C#，並查看編譯和執行程式碼的結果。 本快速入門包含一系列探索 C# 中分支和迴圈建構的課程。 這些課程會教導您 C# 語言的基本概念。\n"
-  ms.openlocfilehash: 4c3b3e1c64134b12d9d6970d5d13f7777e8e7b74
-  ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+  ms.openlocfilehash: 93183a172fb5a94751c99c0f59f59af0b045ac09
+  ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/27/2017
+  ms.lasthandoff: 11/28/2017
 - title: "使用 if 陳述式來做決策"
   durationInMinutes: 4
   content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nint a = 5;\nint b = 6;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10.\");\n```\n\n修改 `b` 的宣告，讓總和小於 10： \n\n```csharp\nint b = 3;\n```\n\n再按一下 [執行] 按鈕。 因為答案小於 10，所以不會印出任何東西。 您正在測試的**條件**為 False。 您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。\n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。     \n\n此第一個範例示範 `if` 和布林型別的功能。 「布林」是一個變數，可能具有兩種值的其中之一：`true` 或 `false`。 C# 為布林變數定義了一個特殊型別：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則，就會略過。 \n\n這個流程可以檢查條件，並根據條件來執行陳述式，因此非常實用。 讓我們來探索更多內容。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
