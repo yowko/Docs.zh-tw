@@ -1,18 +1,19 @@
 ---
 layout: HubPage
-hide_bc: true
+hide_bc: True
 title: ".NET 文件"
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 9e0f22f00ea2ef0e3919768a36410a5025300f6d
-ms.lasthandoff: 04/08/2017
-
+description: "了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。"
+ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/02/2017
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/net/tutorials/csharp/getting-started">
+                <a href="/dotnet/csharp/quick-starts">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/08/2017
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-1.1">
+                <a href="/dotnet/api/?view=netcore-2.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -86,8 +87,8 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/welcome">什麼是 .NET？</a></h3>
-                                                <p><a href="/dotnet/standard/getting-started">開始使用</a></p>
+                                                <h3><a href="/dotnet/standard/">.NET 指南</a></h3>
+                                                <p><a href="/dotnet/standard/get-started">開始使用</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET 教學課程</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET 架構概念</a></p>
                                             </div>
@@ -106,10 +107,11 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">.NET Core 指南</a></h3>
-                                                <p><a href="/dotnet/core/getting-started">開始使用</a></p>
+                                                <p><a href="/dotnet/core/get-started">開始使用</a></p>
                                                 <p><a href="/dotnet/core/tutorials">教學課程</a></p>
                                                 <p><a href="/dotnet/core/porting">從 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/index">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -127,7 +129,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">.NET Framework 指南</a></h3>
                                                 <p><a href="/dotnet/framework/get-started/">開始使用</a></p>
-                                                <p><a href="/dotnet/framework/development-guide">教學課程</a></p>
+                                                <p><a href="/dotnet/framework/development-guide">開發指南</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">用戶端開發</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
@@ -166,6 +168,7 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 指南</a></h3>
+                                                <p><a href="/dotnet/csharp/quick-starts">快速入門</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">開始使用</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">C# 的教學課程</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 語言參考</a></p>
@@ -215,7 +218,7 @@ ms.lasthandoff: 04/08/2017
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">參與 .NET 文件和範例的建立及編輯</a></p>
-                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/project-json">尋找文件的 Visual Studio 2015/project.json 版本</a></p>
+                                    <p><a href="/dotnet/project-json">尋找文件的 Visual Studio 2015/project.json 版本</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -273,7 +276,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <a href="https://www.asp.net/learn">
                                                     <h3>什麼是 ASP.NET？</h3>
-                                                    <p>了解 ASP.NET 網路平台。</p>
+                                                    <p>了解如何建置 ASP.NET Web 應用程式。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -329,7 +332,7 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>macOS 及 VS Code 上的 ASP.NET</h3>
+                                                    <h3>macOS 及 Visual Studio Code 上的 ASP.NET</h3>
                                                     <p>了解如何使用 Visual Studio Code 在 macOS 上設定、建置及部署 ASP.NET Core 應用程式。</p>
                                                 </a>
                                             </div>
@@ -371,7 +374,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started">
+                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
                                                     <h3>Azure 雲端服務與 ASP.NET</h3>
                                                     <p>了解如何在 Azure 中設定、監視及調整雲端服務。</p>
                                                 </a>
@@ -409,7 +412,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/documentation/services/storage/">
+                                                <a href="https://docs.microsoft.com/azure/storage/">
                                                     <h3>Azure 儲存體</h3>
                                                     <p>了解 Azure 儲存體，並了解如何使用 Azure Blob、表格、佇列及檔案建立應用程式。</p>
                                                 </a>
@@ -597,7 +600,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="http://docs.cryengine.com/display/CEPROG/CE%23+Programming">
+                                                <a href="http://docs.cryengine.com/display/CEPROG/C%23+Programming">
                                                 <h3>CRYENGINE</h3>
                                                 <p>了解如何使用 CRYENGINE 以 C# 建置遊戲。</p>
                                                 </a>
@@ -652,4 +655,3 @@ ms.lasthandoff: 04/08/2017
         </ul>
     </div>
 </div>
-
