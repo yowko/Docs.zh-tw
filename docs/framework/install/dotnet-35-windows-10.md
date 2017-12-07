@@ -3,37 +3,39 @@ title: "在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
 description: "了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。"
 author: rlander
 ms.author: mairaw
-keywords: ".NET Framework, 安裝"
-ms.date: 05/26/2017
+ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
-ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 51c412733b76777a78c4a739ce9b077acc86f069
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a><span data-ttu-id="3b7dc-104">在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="3b7dc-104">Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8</span></span>
+# <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a><span data-ttu-id="88f72-103">在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="88f72-103">Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8</span></span>
 
-<span data-ttu-id="3b7dc-105">您可能需要 .NET Framework 3.5，才能在 Windows 10、Windows 8.1 及 Windows 8 上執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-105">You may need the .NET Framework 3.5 to run an app on Windows 10, Windows 8.1, and Windows 8.</span></span> <span data-ttu-id="3b7dc-106">這些指示也適用於較舊的 Windows 版本。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-106">You can also use these instructions for earlier Windows versions.</span></span>
+<span data-ttu-id="88f72-104">您可能需要 .NET Framework 3.5，才能在 Windows 10、Windows 8.1 及 Windows 8 上執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="88f72-104">You may need the .NET Framework 3.5 to run an app on Windows 10, Windows 8.1, and Windows 8.</span></span> <span data-ttu-id="88f72-105">這些指示也適用於較舊的 Windows 版本。</span><span class="sxs-lookup"><span data-stu-id="88f72-105">You can also use these instructions for earlier Windows versions.</span></span>
 
-## <a name="install-the-net-framework-35-on-demand"></a><span data-ttu-id="3b7dc-107">視需要安裝 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="3b7dc-107">Install the .NET Framework 3.5 on Demand</span></span>
+## <a name="install-the-net-framework-35-on-demand"></a><span data-ttu-id="88f72-106">視需要安裝 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="88f72-106">Install the .NET Framework 3.5 on Demand</span></span>
 
-<span data-ttu-id="3b7dc-108">如果您嘗試執行需要 .NET Framework 3.5 的應用程式，可能會看到下列設定對話方塊。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-108">You may see the following configuration dialog if you try to run an app that requires the .NET Framework 3.5.</span></span> <span data-ttu-id="3b7dc-109">請選擇 [安裝此功能] 來啟用 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-109">Choose **Install this feature** to enable the .NET Framework 3.5.</span></span> <span data-ttu-id="3b7dc-110">這個選項需要網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-110">This option requires an Internet connection.</span></span>
+<span data-ttu-id="88f72-107">如果您嘗試執行需要 .NET Framework 3.5 的應用程式，可能會看到下列設定對話方塊。</span><span class="sxs-lookup"><span data-stu-id="88f72-107">You may see the following configuration dialog if you try to run an app that requires the .NET Framework 3.5.</span></span> <span data-ttu-id="88f72-108">請選擇 [安裝此功能] 來啟用 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="88f72-108">Choose **Install this feature** to enable the .NET Framework 3.5.</span></span> <span data-ttu-id="88f72-109">這個選項需要網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="88f72-109">This option requires an Internet connection.</span></span>
 
 ![.NET Framework 安裝對話方塊](./media/dotnet-framework-installation-dialog.jpg)
 
-## <a name="enable-the-net-framework-35-in-control-panel"></a><span data-ttu-id="3b7dc-112">在控制台中啟用 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="3b7dc-112">Enable the .NET Framework 3.5 in Control Panel</span></span>
+## <a name="enable-the-net-framework-35-in-control-panel"></a><span data-ttu-id="88f72-111">在控制台中啟用 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="88f72-111">Enable the .NET Framework 3.5 in Control Panel</span></span>
 
-<span data-ttu-id="3b7dc-113">您可以透過 Windows 的 [控制台] 啟用 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-113">You can enable the .NET Framework 3.5 through the Windows Control Panel.</span></span> <span data-ttu-id="3b7dc-114">這個選項需要網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-114">This option requires an Internet connection.</span></span>
+<span data-ttu-id="88f72-112">您可以透過 Windows 的 [控制台] 啟用 .NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="88f72-112">You can enable the .NET Framework 3.5 through the Windows Control Panel.</span></span> <span data-ttu-id="88f72-113">這個選項需要網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="88f72-113">This option requires an Internet connection.</span></span>
 
-1. <span data-ttu-id="3b7dc-115">按下鍵盤上的 Windows 鍵 ![Windows 標誌](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)，鍵入「Windows 功能」，然後按 Enter 鍵。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-115">Press the Windows key Windows ![Windows logo](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) on your keyboard, type "Windows Features", and press Enter.</span></span> <span data-ttu-id="3b7dc-116">[開啟或關閉 Windows 功能] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-116">The **Turn Windows features on or off** dialog box appears.</span></span>
+1. <span data-ttu-id="88f72-114">按下鍵盤上的 Windows 鍵 ![Windows 標誌](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)，鍵入「Windows 功能」，然後按 Enter 鍵。</span><span class="sxs-lookup"><span data-stu-id="88f72-114">Press the Windows key Windows ![Windows logo](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) on your keyboard, type "Windows Features", and press Enter.</span></span> <span data-ttu-id="88f72-115">[開啟或關閉 Windows 功能] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="88f72-115">The **Turn Windows features on or off** dialog box appears.</span></span>
 
-2. <span data-ttu-id="3b7dc-117">選取 [.NET Framework 3.5 (包括 .NET 2.0 和 3.0)] 核取方塊，選取 [確定]，然後在出現提示時重新啟動電腦。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-117">Select the **.NET Framework 3.5 (includes .NET 2.0 and 3.0)** check box, select **OK**, and reboot your computer if prompted.</span></span>
+2. <span data-ttu-id="88f72-116">選取 [.NET Framework 3.5 (包括 .NET 2.0 和 3.0)] 核取方塊，選取 [確定]，然後在出現提示時重新啟動電腦。</span><span class="sxs-lookup"><span data-stu-id="88f72-116">Select the **.NET Framework 3.5 (includes .NET 2.0 and 3.0)** check box, select **OK**, and reboot your computer if prompted.</span></span>
 
    ![使用控制台來安裝 .NET](./media/dotnet-control-panel.png)
 
-   <span data-ttu-id="3b7dc-119">您不需要選取 [Windows Communication Foundation (WCF) HTTP 啟用] 和 [Windows Communication Foundation (WCF) 非 HTTP 啟用] 的子項目，除非您是需要這項功能的開發人員或伺服器系統管理員。</span><span class="sxs-lookup"><span data-stu-id="3b7dc-119">You don't need to select the child items for **Windows Communication Foundation (WCF) HTTP Activation** and **Windows Communication Foundation (WCF) Non-HTTP Activation** unless you're a developer or server administrator who requires this functionality.</span></span>
+   <span data-ttu-id="88f72-118">您不需要選取 [Windows Communication Foundation (WCF) HTTP 啟用] 和 [Windows Communication Foundation (WCF) 非 HTTP 啟用] 的子項目，除非您是需要這項功能的開發人員或伺服器系統管理員。</span><span class="sxs-lookup"><span data-stu-id="88f72-118">You don't need to select the child items for **Windows Communication Foundation (WCF) HTTP Activation** and **Windows Communication Foundation (WCF) Non-HTTP Activation** unless you're a developer or server administrator who requires this functionality.</span></span>
+
+## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a><span data-ttu-id="88f72-119">進行 .NET Framework 3.5 安裝的疑難排解</span><span class="sxs-lookup"><span data-stu-id="88f72-119">Troubleshoot the installation of the .NET Framework 3.5</span></span>
+
+<span data-ttu-id="88f72-120">在安裝過程中，可能會出現錯誤 0x800f0906、0x800f0907、0x800f081f 或 0x800F0922，如果發生這種情況，請參考 [.NET Framework 3.5 安裝錯誤：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)，了解如何解決這些問題。</span><span class="sxs-lookup"><span data-stu-id="88f72-120">During installation, you may encounter error 0x800f0906, 0x800f0907, 0x800f081f, or 0x800F0922, in which case refer to [.NET Framework 3.5 installation error: 0x800f0906, 0x800f0907, or 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) to see how to resolve these issues.</span></span>
+
+<span data-ttu-id="88f72-121">若上一篇文章中探討的任一方法失敗，或是您沒有網際網路連線，則必須使用 Windows 安裝媒體。</span><span class="sxs-lookup"><span data-stu-id="88f72-121">If any of the methods discussed in the previous article fail or if you don't have an Internet connection, it's necessary to use your Windows installation media.</span></span> <span data-ttu-id="88f72-122">如需詳細資訊，請參閱[使用部署映像服務與管理 (DISM) 部署 .NET Framework 3.5](https://technet.microsoft.com/library/Dn482069.aspx)。</span><span class="sxs-lookup"><span data-stu-id="88f72-122">For more information, see [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](https://technet.microsoft.com/library/Dn482069.aspx).</span></span> <span data-ttu-id="88f72-123">如果您沒有安裝媒體，請參閱[建立 Windows 的安裝媒體](https://support.microsoft.com/help/15088/windows-create-installation-media)。</span><span class="sxs-lookup"><span data-stu-id="88f72-123">If you don't have the installation media, see [Create installation media for Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).</span></span>
