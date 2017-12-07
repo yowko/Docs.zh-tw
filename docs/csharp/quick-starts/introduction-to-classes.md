@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0ddb7508841087571c0cd095b1d1518e4aad50ff
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="introduction-to-classes"></a>類別簡介
 

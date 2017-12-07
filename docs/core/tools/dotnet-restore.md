@@ -4,15 +4,15 @@ description: "了解如何使用 dotnet restore 命令來還原相依性和專�
 keywords: "dotnet-restore, CLI, CLI 命令, .NET Core"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 887f562803226d99901a6ee13175c1a43956b0cd
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -53,6 +53,21 @@ dotnet restore [-h|--help]
 針對專案特定工具，`dotnet restore` 會先還原在其中封裝工具的套件，然後繼續還原其專案檔中所指定的工具相依性。
 
 *Nuget.Config* 檔案中的一些設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *NuGet.Config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於指定的資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [NuGet.Config 參考](/nuget/schema/nuget-config-file)。
+
+## <a name="implicit-dotnet-restore"></a>隱含 `dotnet restore`
+
+從 .NET Core 2.0 開始，當您發出下列命令時，`dotnet restore` 會於必要時隱含地執行：
+
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+多數情況下，您不再需要明確地使用 `dotnet restore` 命令。 
+
+但某些情況下，`dotnet restore` 並不適合隱含執行。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 為避免隱含執行 `dotnet restore`，在使用任一這些命令時可使用 `--no-restore` 參數，來停用隱含還原。
 
 ## <a name="arguments"></a>引數
 

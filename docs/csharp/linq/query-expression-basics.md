@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expression-basics"></a>查詢運算式基本概念
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
   
- 換句話說，下列兩個範例示範不是查詢變數的變數，即使每個變數都是使用查詢進行初始化也是一樣。 它們會儲存結果，因此不是查詢變數：  
+ 另一方面，下列兩個範例則是示範並非查詢變數的變數 (即使每個變數都是使用查詢進行初始化)。 它們會儲存結果，因此不是查詢變數：  
   
  [!code-csharp[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/21/2017
  如需詳細資訊，請參閱[如何：在分組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../programming-guide/index.md)  
+ [C# 程式設計指南](../programming-guide/index.md)  
  [LINQ 查詢運算式](index.md)  
  [查詢關鍵字 (LINQ)](../language-reference/keywords/query-keywords.md)  
  [標準查詢運算子概觀](../programming-guide/concepts/linq/standard-query-operators-overview.md)

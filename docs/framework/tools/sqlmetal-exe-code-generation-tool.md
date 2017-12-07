@@ -17,14 +17,14 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fa4cf7baa3ca3ba19a733438920357034e8de193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c54f304117c86066e18bfb40f3b3640819647ac0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 之 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]元件的程式碼和對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -143,6 +143,6 @@ sqlmetal [options] [<input file>]
 >  當您使用 **/pluralize** 選項搭配 Northwind 範例資料庫時，請注意以下行為： 當 SqlMetal 提供資料表的資料列類型名稱時，資料表名稱會是單數。 當它為資料表提供 <xref:System.Data.Linq.DataContext> 屬性時，資料表名稱會是複數。 碰巧的是，Northwind 範例資料庫中的資料表已經是複數。 因此您不會看見該部分的運作情形。 雖然一般會將資料庫資料表的名稱設為單數，在 .NET 中仍然常會把集合名稱設為複數。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 在 Visual Basic 或 C# 中產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [如何：以 Visual Basic 或 C# 產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
  [LINQ to SQL 中的程式碼產生](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [外部對應](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

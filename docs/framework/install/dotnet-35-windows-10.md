@@ -3,18 +3,14 @@ title: "在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
 description: "了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。"
 author: rlander
 ms.author: mairaw
-keywords: ".NET Framework, 安裝"
-ms.date: 05/26/2017
+ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
-ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 51c412733b76777a78c4a739ce9b077acc86f069
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5
 
@@ -37,3 +33,9 @@ ms.lasthandoff: 10/18/2017
    ![使用控制台來安裝 .NET](./media/dotnet-control-panel.png)
 
    您不需要選取 [Windows Communication Foundation (WCF) HTTP 啟用] 和 [Windows Communication Foundation (WCF) 非 HTTP 啟用] 的子項目，除非您是需要這項功能的開發人員或伺服器系統管理員。
+
+## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>進行 .NET Framework 3.5 安裝的疑難排解
+
+在安裝過程中，可能會出現錯誤 0x800f0906、0x800f0907、0x800f081f 或 0x800F0922，如果發生這種情況，請參考 [.NET Framework 3.5 安裝錯誤：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)，了解如何解決這些問題。
+
+若上一篇文章中探討的任一方法失敗，或是您沒有網際網路連線，則必須使用 Windows 安裝媒體。 如需詳細資訊，請參閱[使用部署映像服務與管理 (DISM) 部署 .NET Framework 3.5](https://technet.microsoft.com/library/Dn482069.aspx)。 如果您沒有安裝媒體，請參閱[建立 Windows 的安裝媒體](https://support.microsoft.com/help/15088/windows-create-installation-media)。
