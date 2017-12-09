@@ -138,8 +138,9 @@ var alphabetStart = (Alpha: "a", Beta: "b");
 (string First, string Second) firstLetters = (Alpha: "a", Beta: "b");
 ```
 
-前述列會產生警告 `CS8123`，告訴您指派右邊的名稱 `Alpha` 和 `Beta` 會被忽略，因為它們與左邊的
-名稱 `First` 和 `Second` 發生衝突。
+> [!NOTE]
+> 前述列會產生警告 `CS8123`，告訴您指派右邊的名稱 `Alpha` 和 `Beta` 會被忽略，因為它們與左邊的
+> 名稱 `First` 和 `Second` 發生衝突。
 
 上述範例說明宣告 Tuple 的基本語法。 Tuple 適合使用於 `private` 和 `internal` 方法的傳回型別
 。 Tuple 提供簡易的語法可讓方法傳回多個離散值︰可以節省了撰寫定義傳回型別之 `class` 或 `struct` 
