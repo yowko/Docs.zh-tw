@@ -24,7 +24,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="garbage-collection-etw-events"></a><span data-ttu-id="493ca-102">記憶體回收 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="493ca-102">Garbage Collection ETW Events</span></span>
-<span data-ttu-id="493ca-103"><a name="top"></a> 這些事件收集到記憶體回收的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="493ca-103"><a name="top"></a> These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="493ca-104">它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。</span><span class="sxs-lookup"><span data-stu-id="493ca-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
+<a name="top"></a> <span data-ttu-id="493ca-103">這些事件收集到記憶體回收的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="493ca-103">These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="493ca-104">它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。</span><span class="sxs-lookup"><span data-stu-id="493ca-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
   
  <span data-ttu-id="493ca-105">這個類別包含下列事件：</span><span class="sxs-lookup"><span data-stu-id="493ca-105">This category consists of the following events:</span></span>  
   

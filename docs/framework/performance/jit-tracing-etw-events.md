@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="jit-tracing-etw-events"></a><span data-ttu-id="b07a9-102">JIT 追蹤 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="b07a9-102">JIT Tracing ETW Events</span></span>
-<span data-ttu-id="b07a9-103"><a name="top"></a> 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="b07a9-103"><a name="top"></a> These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
+<a name="top"></a> <span data-ttu-id="b07a9-103">這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="b07a9-103">These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
   
  <span data-ttu-id="b07a9-104">JIT 追蹤事件包含下列兩種類別：</span><span class="sxs-lookup"><span data-stu-id="b07a9-104">JIT tracing events consist of the following two categories:</span></span>  
   

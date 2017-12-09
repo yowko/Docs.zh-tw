@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-etw-events"></a><span data-ttu-id="b8a02-102">安全性 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="b8a02-102">Security ETW Events</span></span>
-<span data-ttu-id="b8a02-103"><a name="top"></a> 強式名稱驗證和 Authenticode 驗證期間，會引發安全性事件。</span><span class="sxs-lookup"><span data-stu-id="b8a02-103"><a name="top"></a> Security events are raised during strong name verification and Authenticode verification.</span></span>  
+<a name="top"></a> <span data-ttu-id="b8a02-103">強式名稱驗證和 Authenticode 驗證期間，會引發安全性事件。</span><span class="sxs-lookup"><span data-stu-id="b8a02-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
   
  <span data-ttu-id="b8a02-104">這個類別包含下列事件：</span><span class="sxs-lookup"><span data-stu-id="b8a02-104">This category consists of the following events:</span></span>  
   

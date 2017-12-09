@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="acd9f-102">執行緒集區 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="acd9f-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="acd9f-103"><a name="top"></a> 這些事件會收集背景工作和 I/O 執行緒的資訊。</span><span class="sxs-lookup"><span data-stu-id="acd9f-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a> <span data-ttu-id="acd9f-103">這些事件會收集背景工作和 I/O 執行緒的資訊。</span><span class="sxs-lookup"><span data-stu-id="acd9f-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="acd9f-104">執行緒集區事件可分兩組：</span><span class="sxs-lookup"><span data-stu-id="acd9f-104">There are two groups of thread pool events:</span></span>  
   

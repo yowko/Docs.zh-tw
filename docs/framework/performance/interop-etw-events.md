@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-etw-events"></a><span data-ttu-id="e6a88-102">Interop ETW 事件</span><span class="sxs-lookup"><span data-stu-id="e6a88-102">Interop ETW Events</span></span>
-<span data-ttu-id="e6a88-103"><a name="top"></a> Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e6a88-103"><a name="top"></a> Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
+<a name="top"></a> <span data-ttu-id="e6a88-103">Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e6a88-103">Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
   
  <span data-ttu-id="e6a88-104">這個類別包含下列事件：</span><span class="sxs-lookup"><span data-stu-id="e6a88-104">This category consists of the following events:</span></span>  
   
