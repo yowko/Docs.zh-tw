@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="06982-125">索引子可具有一個以上的型式參數，例如，存取二維陣列時。</span><span class="sxs-lookup"><span data-stu-id="06982-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <span data-ttu-id="06982-126"><a name="BKMK_RelatedSections"></a> 相關章節</span><span class="sxs-lookup"><span data-stu-id="06982-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a> <span data-ttu-id="06982-126">相關章節</span><span class="sxs-lookup"><span data-stu-id="06982-126">Related Sections</span></span>  
   
 -   [<span data-ttu-id="06982-127">使用索引子</span><span class="sxs-lookup"><span data-stu-id="06982-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

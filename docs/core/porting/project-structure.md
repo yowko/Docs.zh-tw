@@ -30,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   <span data-ttu-id="685c8-116">*不支援的情節：*</span><span class="sxs-lookup"><span data-stu-id="685c8-116">*Unsupported scenarios:*</span></span>
   * <span data-ttu-id="685c8-117">需要開發人員使用 Visual Studio 2017 開啟現有的專案。</span><span class="sxs-lookup"><span data-stu-id="685c8-117">Requires developers to use Visual Studio 2017 to open existing projects.</span></span> <span data-ttu-id="685c8-118">若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。</span><span class="sxs-lookup"><span data-stu-id="685c8-118">To support older versions of Visual Studio, [keeping your project files in different folders](#support-vs) is a better option.</span></span>
 
-* <span data-ttu-id="685c8-119"><a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**][option-csproj-folder]</span><span class="sxs-lookup"><span data-stu-id="685c8-119"><a name="support-vs"></a>[**Keep existing projects and new .NET Core projects separate**][option-csproj-folder]</span></span>
+* <a name="support-vs"></a><span data-ttu-id="685c8-119">[**將現有的專案和新的 .NET Core 專案分開**][option-csproj-folder]</span><span class="sxs-lookup"><span data-stu-id="685c8-119">[**Keep existing projects and new .NET Core projects separate**][option-csproj-folder]</span></span>
 
   <span data-ttu-id="685c8-120">*適用於︰*</span><span class="sxs-lookup"><span data-stu-id="685c8-120">*What this is good for:*</span></span>
   * <span data-ttu-id="685c8-121">繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。</span><span class="sxs-lookup"><span data-stu-id="685c8-121">Continuing to support development on existing projects without having to upgrade for developers/contributors who may not have Visual Studio 2017.</span></span>

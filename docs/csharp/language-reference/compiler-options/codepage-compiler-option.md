@@ -13,34 +13,34 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
-# <a name="codepage-c-compiler-options"></a><span data-ttu-id="7b9c5-102">/codepage (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="7b9c5-102">/codepage (C# Compiler Options)</span></span>
-<span data-ttu-id="7b9c5-103">如果所需的頁面不是系統目前預設的字碼頁，這個選項可指定編譯期間使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  
+# <a name="codepage-c-compiler-options"></a><span data-ttu-id="c7add-102">/codepage (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="c7add-102">/codepage (C# Compiler Options)</span></span>
+<span data-ttu-id="c7add-103">如果所需的頁面不是系統目前預設的字碼頁，這個選項可指定編譯期間使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="c7add-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b9c5-104">語法</span><span class="sxs-lookup"><span data-stu-id="7b9c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7add-104">語法</span><span class="sxs-lookup"><span data-stu-id="c7add-104">Syntax</span></span>  
   
 ```console  
 /codepage:id  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="7b9c5-105">引數</span><span class="sxs-lookup"><span data-stu-id="7b9c5-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="c7add-105">引數</span><span class="sxs-lookup"><span data-stu-id="c7add-105">Arguments</span></span>  
  `id`  
- <span data-ttu-id="7b9c5-106">編譯過程中所有原始程式碼檔使用的字碼頁的 ID。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-106">The id of the code page to use for all source code files in the compilation.</span></span>  
+ <span data-ttu-id="c7add-106">編譯過程中所有原始程式碼檔使用的字碼頁的 ID。</span><span class="sxs-lookup"><span data-stu-id="c7add-106">The id of the code page to use for all source code files in the compilation.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7b9c5-107">備註</span><span class="sxs-lookup"><span data-stu-id="7b9c5-107">Remarks</span></span>  
- <span data-ttu-id="7b9c5-108">如果您編譯一或多個不是使用電腦的預設字碼頁建立的原始程式碼檔，則可以使用 **/codepage** 選項指定應該使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-108">If you compile one or more source code files that were not created to use the default code page on your computer, you can use the **/codepage** option to specify which code page should be used.</span></span> <span data-ttu-id="7b9c5-109">**/codepage** 會套用到您所編譯的所有原始程式碼檔。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-109">**/codepage** applies to all source code files in your compilation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c7add-107">備註</span><span class="sxs-lookup"><span data-stu-id="c7add-107">Remarks</span></span>  
+ <span data-ttu-id="c7add-108">如果您編譯一或多個不是使用電腦的預設字碼頁建立的原始程式碼檔，則可以使用 **/codepage** 選項指定應該使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="c7add-108">If you compile one or more source code files that were not created to use the default code page on your computer, you can use the **/codepage** option to specify which code page should be used.</span></span> <span data-ttu-id="c7add-109">**/codepage** 會套用到您所編譯的所有原始程式碼檔。</span><span class="sxs-lookup"><span data-stu-id="c7add-109">**/codepage** applies to all source code files in your compilation.</span></span>  
   
- <span data-ttu-id="7b9c5-110">如果原始程式檔是使用您電腦中正在作用中的同一個字碼頁所建立的，或者原始程式檔是使用 UNICODE 或 UTF-8 所建立的，則不需要使用 **/codepage**。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-110">If the source code files were created with the same codepage that is in effect on your computer or if the source code files were created with UNICODE or UTF-8, you need not use **/codepage**.</span></span>  
+ <span data-ttu-id="c7add-110">如果原始程式檔是使用您電腦中正在作用中的同一個字碼頁所建立的，或者原始程式檔是使用 UNICODE 或 UTF-8 所建立的，則不需要使用 **/codepage**。</span><span class="sxs-lookup"><span data-stu-id="c7add-110">If the source code files were created with the same codepage that is in effect on your computer or if the source code files were created with UNICODE or UTF-8, you need not use **/codepage**.</span></span>  
   
- <span data-ttu-id="7b9c5-111">如需如何尋找系統所支援之字碼頁的詳細資訊，請參閱 [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371)。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-111">See [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) for information on how to find which code pages are supported on your system.</span></span>  
+ <span data-ttu-id="c7add-111">如需如何尋找系統所支援之字碼頁的詳細資訊，請參閱 [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx)。</span><span class="sxs-lookup"><span data-stu-id="c7add-111">See [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx) for information on how to find which code pages are supported on your system.</span></span>  
   
- <span data-ttu-id="7b9c5-112">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="7b9c5-112">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="c7add-112">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="c7add-112">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b9c5-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b9c5-113">See Also</span></span>  
- [<span data-ttu-id="7b9c5-114">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="7b9c5-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="7b9c5-115">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="7b9c5-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="c7add-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c7add-113">See Also</span></span>  
+ [<span data-ttu-id="c7add-114">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="c7add-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="c7add-115">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="c7add-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

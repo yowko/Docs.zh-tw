@@ -13,33 +13,33 @@ ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ccf25e9a5d5d025f9024519b41c4afa17a5081f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a96a054b3d1f73b0fee209557388f7ea213ebbe9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
-# <a name="preferreduilang-c-compiler-options"></a><span data-ttu-id="9fbb4-102">/preferreduilang (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="9fbb4-102">/preferreduilang (C# Compiler Options)</span></span>
-<span data-ttu-id="9fbb4-103">使用 `/preferreduilang` 編譯器選項，您就可以指定 C# 編譯器顯示輸出的語言，例如錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="9fbb4-103">By using the `/preferreduilang` compiler option, you can specify the language in which the C# compiler displays output, such as error messages.</span></span>  
+# <a name="preferreduilang-c-compiler-options"></a><span data-ttu-id="da208-102">/preferreduilang (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="da208-102">/preferreduilang (C# Compiler Options)</span></span>
+<span data-ttu-id="da208-103">使用 `/preferreduilang` 編譯器選項，您就可以指定 C# 編譯器顯示輸出的語言，例如錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="da208-103">By using the `/preferreduilang` compiler option, you can specify the language in which the C# compiler displays output, such as error messages.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fbb4-104">語法</span><span class="sxs-lookup"><span data-stu-id="9fbb4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da208-104">語法</span><span class="sxs-lookup"><span data-stu-id="da208-104">Syntax</span></span>  
   
 ```console  
 /preferreduilang: language  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="9fbb4-105">引數</span><span class="sxs-lookup"><span data-stu-id="9fbb4-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="da208-105">引數</span><span class="sxs-lookup"><span data-stu-id="da208-105">Arguments</span></span>  
  `language`  
- <span data-ttu-id="9fbb4-106">編譯器輸出所用語言的[語言名稱](http://go.microsoft.com/fwlink/p/?LinkId=236992)。</span><span class="sxs-lookup"><span data-stu-id="9fbb4-106">The [language name](http://go.microsoft.com/fwlink/p/?LinkId=236992) of the language to use for compiler output.</span></span>  
+ <span data-ttu-id="da208-106">編譯器輸出所用語言的[語言名稱](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx)。</span><span class="sxs-lookup"><span data-stu-id="da208-106">The [language name](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx) of the language to use for compiler output.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9fbb4-107">備註</span><span class="sxs-lookup"><span data-stu-id="9fbb4-107">Remarks</span></span>  
- <span data-ttu-id="9fbb4-108">您可以使用 `/preferreduilang` 編譯器選項指定 C# 編譯器要用於錯誤訊息和其他命令列輸出的語言。</span><span class="sxs-lookup"><span data-stu-id="9fbb4-108">You can use the `/preferreduilang` compiler option to specify the language that you want the C# compiler to use for error messages and other command-line output.</span></span> <span data-ttu-id="9fbb4-109">如果尚未安裝此語言的語言套件，則會改用作業系統的語言設定，而且不會回報錯誤。</span><span class="sxs-lookup"><span data-stu-id="9fbb4-109">If the language pack for the language is not installed, the language setting of the operating system is used instead, and no error is reported.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da208-107">備註</span><span class="sxs-lookup"><span data-stu-id="da208-107">Remarks</span></span>  
+ <span data-ttu-id="da208-108">您可以使用 `/preferreduilang` 編譯器選項指定 C# 編譯器要用於錯誤訊息和其他命令列輸出的語言。</span><span class="sxs-lookup"><span data-stu-id="da208-108">You can use the `/preferreduilang` compiler option to specify the language that you want the C# compiler to use for error messages and other command-line output.</span></span> <span data-ttu-id="da208-109">如果尚未安裝此語言的語言套件，則會改用作業系統的語言設定，而且不會回報錯誤。</span><span class="sxs-lookup"><span data-stu-id="da208-109">If the language pack for the language is not installed, the language setting of the operating system is used instead, and no error is reported.</span></span>  
   
 ```csharp  
 csc.exe /preferreduilang:ja-JP  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9fbb4-110">需求</span><span class="sxs-lookup"><span data-stu-id="9fbb4-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da208-110">需求</span><span class="sxs-lookup"><span data-stu-id="da208-110">Requirements</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9fbb4-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9fbb4-111">See Also</span></span>  
- [<span data-ttu-id="9fbb4-112">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="9fbb4-112">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="da208-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da208-111">See Also</span></span>  
+ [<span data-ttu-id="da208-112">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="da208-112">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

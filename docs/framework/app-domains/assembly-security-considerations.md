@@ -33,7 +33,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="62ea9-102">組件安全性考量</span><span class="sxs-lookup"><span data-stu-id="62ea9-102">Assembly Security Considerations</span></span>
-<span data-ttu-id="62ea9-103"><a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。</span><span class="sxs-lookup"><span data-stu-id="62ea9-103"><a name="top"></a> When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="62ea9-104">是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。</span><span class="sxs-lookup"><span data-stu-id="62ea9-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
+<a name="top"></a> <span data-ttu-id="62ea9-103">當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。</span><span class="sxs-lookup"><span data-stu-id="62ea9-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="62ea9-104">是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。</span><span class="sxs-lookup"><span data-stu-id="62ea9-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
   
  <span data-ttu-id="62ea9-105">使用辨識項有兩種不同的方法：</span><span class="sxs-lookup"><span data-stu-id="62ea9-105">There are two distinct ways evidence is used:</span></span>  
   

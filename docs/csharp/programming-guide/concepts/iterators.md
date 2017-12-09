@@ -65,7 +65,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 > [!NOTE]
 >  <span data-ttu-id="27d1a-124">如需本主題中除簡易迭代器範例以外的其他所有範例，請加入 `System.Collections` 和 `System.Collections.Generic` 命名空間的 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="27d1a-124">For all examples in this topic except the Simple Iterator example, include [using](../../../csharp/language-reference/keywords/using-directive.md) directives for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>  
   
-##  <span data-ttu-id="27d1a-125"><a name="BKMK_SimpleIterator"></a> 簡易迭代器</span><span class="sxs-lookup"><span data-stu-id="27d1a-125"><a name="BKMK_SimpleIterator"></a> Simple Iterator</span></span>  
+##  <a name="BKMK_SimpleIterator"></a> <span data-ttu-id="27d1a-125">簡易迭代器</span><span class="sxs-lookup"><span data-stu-id="27d1a-125">Simple Iterator</span></span>  
  <span data-ttu-id="27d1a-126">下列範例在 [for](../../../csharp/language-reference/keywords/for.md) 迴圈內有一行 `yield return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="27d1a-126">The following example has a single `yield return` statement that is inside a [for](../../../csharp/language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="27d1a-127">在 `Main` 中，每次反覆運算 `foreach` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `yield return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="27d1a-127">In `Main`, each iteration of the `foreach` statement body creates a call to the iterator function, which proceeds to the next `yield return` statement.</span></span>  
   
 ```csharp  
@@ -93,7 +93,7 @@ public static System.Collections.Generic.IEnumerable<int>
 }  
 ```  
   
-##  <span data-ttu-id="27d1a-128"><a name="BKMK_CollectionClass"></a> 建立集合類別</span><span class="sxs-lookup"><span data-stu-id="27d1a-128"><a name="BKMK_CollectionClass"></a> Creating a Collection Class</span></span>  
+##  <a name="BKMK_CollectionClass"></a> <span data-ttu-id="27d1a-128">建立集合類別</span><span class="sxs-lookup"><span data-stu-id="27d1a-128">Creating a Collection Class</span></span>  
  <span data-ttu-id="27d1a-129">在以下範例中，`DaysOfTheWeek` 類別會實作 <xref:System.Collections.IEnumerable> 介面，而這個介面需使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="27d1a-129">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="27d1a-130">編譯器會隱含呼叫 `GetEnumerator` 方法，以傳回 <xref:System.Collections.IEnumerator>。</span><span class="sxs-lookup"><span data-stu-id="27d1a-130">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>  
   
  <span data-ttu-id="27d1a-131">`GetEnumerator` 方法使用 `yield return` 陳述式，一次傳回一個字串。</span><span class="sxs-lookup"><span data-stu-id="27d1a-131">The `GetEnumerator` method returns each string one at a time by using the `yield return` statement.</span></span>  
@@ -222,7 +222,7 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <span data-ttu-id="27d1a-135"><a name="BKMK_GenericList"></a> 搭配泛型清單使用迭代器</span><span class="sxs-lookup"><span data-stu-id="27d1a-135"><a name="BKMK_GenericList"></a> Using Iterators with a Generic List</span></span>  
+##  <a name="BKMK_GenericList"></a> <span data-ttu-id="27d1a-135">搭配泛型清單使用迭代器</span><span class="sxs-lookup"><span data-stu-id="27d1a-135">Using Iterators with a Generic List</span></span>  
  <span data-ttu-id="27d1a-136">在以下範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。</span><span class="sxs-lookup"><span data-stu-id="27d1a-136">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="27d1a-137">`Push` 方法會將值指派給 `T` 類型的陣列。</span><span class="sxs-lookup"><span data-stu-id="27d1a-137">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="27d1a-138"><xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `yield return` 陳述式以傳回陣列值。</span><span class="sxs-lookup"><span data-stu-id="27d1a-138">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `yield return` statement.</span></span>  
   
  <span data-ttu-id="27d1a-139">除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，您也必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="27d1a-139">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="27d1a-140">這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。</span><span class="sxs-lookup"><span data-stu-id="27d1a-140">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="27d1a-141">非泛型實作會延後到泛型實作。</span><span class="sxs-lookup"><span data-stu-id="27d1a-141">The non-generic implementation defers to the generic implementation.</span></span>  
@@ -339,7 +339,7 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <span data-ttu-id="27d1a-145"><a name="BKMK_SyntaxInformation"></a> 語法資訊</span><span class="sxs-lookup"><span data-stu-id="27d1a-145"><a name="BKMK_SyntaxInformation"></a> Syntax Information</span></span>  
+##  <a name="BKMK_SyntaxInformation"></a> <span data-ttu-id="27d1a-145">語法資訊</span><span class="sxs-lookup"><span data-stu-id="27d1a-145">Syntax Information</span></span>  
  <span data-ttu-id="27d1a-146">出現的迭代器可以是方法或 `get` 存取子。</span><span class="sxs-lookup"><span data-stu-id="27d1a-146">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="27d1a-147">迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態完成項中。</span><span class="sxs-lookup"><span data-stu-id="27d1a-147">An iterator cannot occur in an event, instance constructor, static constructor, or static finalizer.</span></span>  
   
  <span data-ttu-id="27d1a-148">`yield return` 陳述式中的運算式類型必須隱含轉換成迭代器的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="27d1a-148">An implicit conversion must exist from the expression type in the `yield return` statement to the return type of the iterator.</span></span>  
@@ -348,7 +348,7 @@ public class Stack<T> : IEnumerable<T>
   
  <span data-ttu-id="27d1a-150">在 C# 中，"yield" 不是保留字，只有在 `return` 或 `break` 關鍵字前面使用時才具有特殊意義。</span><span class="sxs-lookup"><span data-stu-id="27d1a-150">In C#, "yield" is not a reserved word and has special meaning only when it is used before a `return` or `break` keyword.</span></span>  
   
-##  <span data-ttu-id="27d1a-151"><a name="BKMK_Technical"></a> 技術實作</span><span class="sxs-lookup"><span data-stu-id="27d1a-151"><a name="BKMK_Technical"></a> Technical Implementation</span></span>  
+##  <a name="BKMK_Technical"></a> <span data-ttu-id="27d1a-151">技術實作</span><span class="sxs-lookup"><span data-stu-id="27d1a-151">Technical Implementation</span></span>  
  <span data-ttu-id="27d1a-152">雖然您將迭代器撰寫成方法，但編譯器會將其轉譯成巢狀類別，其實也就是狀態機器。</span><span class="sxs-lookup"><span data-stu-id="27d1a-152">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="27d1a-153">此類別會在用戶端程式碼中的 `foreach` 迴圈繼續期間追蹤迭代器的位置。</span><span class="sxs-lookup"><span data-stu-id="27d1a-153">This class keeps track of the position of the iterator as long the `foreach` loop in the client code continues.</span></span>  
   
  <span data-ttu-id="27d1a-154">若要查看編譯器的功能，您可以使用 Ildasm.exe 工具來檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。</span><span class="sxs-lookup"><span data-stu-id="27d1a-154">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>  
@@ -361,7 +361,7 @@ public class Stack<T> : IEnumerable<T>
   
  <span data-ttu-id="27d1a-161">如需其他資訊，請參閱 [C# 語言規格](../../../csharp/language-reference/language-specification/index.md)。</span><span class="sxs-lookup"><span data-stu-id="27d1a-161">For additional information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-##  <span data-ttu-id="27d1a-162"><a name="BKMK_UseOfIterators"></a> 迭代器的使用</span><span class="sxs-lookup"><span data-stu-id="27d1a-162"><a name="BKMK_UseOfIterators"></a> Use of Iterators</span></span>  
+##  <a name="BKMK_UseOfIterators"></a> <span data-ttu-id="27d1a-162">迭代器的使用</span><span class="sxs-lookup"><span data-stu-id="27d1a-162">Use of Iterators</span></span>  
  <span data-ttu-id="27d1a-163">當您需要使用複雜的程式碼來填入清單序列時，迭代器可讓您維持 `foreach` 迴圈的簡潔性。</span><span class="sxs-lookup"><span data-stu-id="27d1a-163">Iterators enable you to maintain the simplicity of a `foreach` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="27d1a-164">當您想要執行下列作業時，這會很有用：</span><span class="sxs-lookup"><span data-stu-id="27d1a-164">This can be useful when you want to do the following:</span></span>  
   
 -   <span data-ttu-id="27d1a-165">在第一次反覆運算 `foreach` 迴圈之後修改清單序列。</span><span class="sxs-lookup"><span data-stu-id="27d1a-165">Modify the list sequence after the first `foreach` loop iteration.</span></span>  

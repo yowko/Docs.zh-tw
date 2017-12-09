@@ -28,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [<span data-ttu-id="a35f4-107">呼叫端資訊屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-107">Caller Info Attributes</span></span>](#CallerInfo)  
   
-##  <span data-ttu-id="a35f4-108"><a name="Global"></a> 全域屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-108"><a name="Global"></a> Global Attributes</span></span>  
+##  <a name="Global"></a> <span data-ttu-id="a35f4-108">全域屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-108">Global Attributes</span></span>  
  <span data-ttu-id="a35f4-109">大部分屬性會套用至特定語言項目 (例如類別或方法)；不過，有些屬性是全域屬性，其套用至整個組件或模組。</span><span class="sxs-lookup"><span data-stu-id="a35f4-109">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="a35f4-110">例如，<xref:System.Reflection.AssemblyVersionAttribute> 屬性可以用來將版本資訊內嵌到組件，與下面類似：</span><span class="sxs-lookup"><span data-stu-id="a35f4-110">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```csharp  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="a35f4-152">定義自訂屬性，以指定組件資訊清單的組件設定 (例如零售或偵錯)。</span><span class="sxs-lookup"><span data-stu-id="a35f4-152">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="a35f4-153">定義組件資訊清單的易記預設別名。</span><span class="sxs-lookup"><span data-stu-id="a35f4-153">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <span data-ttu-id="a35f4-154"><a name="Obsolete"></a> Obsolete 屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-154"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+##  <a name="Obsolete"></a> <span data-ttu-id="a35f4-154">Obsolete 屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-154">Obsolete Attribute</span></span>  
  <span data-ttu-id="a35f4-155">`Obsolete` 屬性會將程式實體標記為不再建議使用的標記。</span><span class="sxs-lookup"><span data-stu-id="a35f4-155">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="a35f4-156">每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。</span><span class="sxs-lookup"><span data-stu-id="a35f4-156">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="a35f4-157">例如: </span><span class="sxs-lookup"><span data-stu-id="a35f4-157">For example:</span></span>  
   
 ```csharp  
@@ -119,7 +119,7 @@ b.NewMethod();
   
  <span data-ttu-id="a35f4-165">`Obsolete` 屬性是單次使用屬性，並且可以套用至任何允許屬性的實體。</span><span class="sxs-lookup"><span data-stu-id="a35f4-165">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="a35f4-166">`Obsolete` 是 <xref:System.ObsoleteAttribute> 的別名。</span><span class="sxs-lookup"><span data-stu-id="a35f4-166">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <span data-ttu-id="a35f4-167"><a name="Conditional"></a> 條件式屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-167"><a name="Conditional"></a> Conditional Attribute</span></span>  
+##  <a name="Conditional"></a> <span data-ttu-id="a35f4-167">條件式屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-167">Conditional Attribute</span></span>  
  <span data-ttu-id="a35f4-168">`Conditional` 屬性會根據前置處理識別碼來執行方法。</span><span class="sxs-lookup"><span data-stu-id="a35f4-168">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="a35f4-169">`Conditional` 屬性是 <xref:System.Diagnostics.ConditionalAttribute> 的別名，而且可以套用至方法或屬性類別。</span><span class="sxs-lookup"><span data-stu-id="a35f4-169">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
  <span data-ttu-id="a35f4-170">在此範例中，`Conditional` 會套用至方法，以啟用或停用程式特定診斷資訊的顯示︰</span><span class="sxs-lookup"><span data-stu-id="a35f4-170">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
@@ -224,7 +224,7 @@ class SampleClass
 }  
 ```  
   
-##  <span data-ttu-id="a35f4-185"><a name="CallerInfo"></a> 呼叫端資訊屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-185"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+##  <a name="CallerInfo"></a> <span data-ttu-id="a35f4-185">呼叫端資訊屬性</span><span class="sxs-lookup"><span data-stu-id="a35f4-185">Caller Info Attributes</span></span>  
  <span data-ttu-id="a35f4-186">使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。</span><span class="sxs-lookup"><span data-stu-id="a35f4-186">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="a35f4-187">您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="a35f4-187">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
  <span data-ttu-id="a35f4-188">若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。</span><span class="sxs-lookup"><span data-stu-id="a35f4-188">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="a35f4-189">每個選擇性參數都會指定預設值。</span><span class="sxs-lookup"><span data-stu-id="a35f4-189">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="a35f4-190">下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：</span><span class="sxs-lookup"><span data-stu-id="a35f4-190">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
