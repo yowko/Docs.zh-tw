@@ -101,66 +101,52 @@ return result;
 本方法提供組件 <xref:System.ValueTuple> 改進。
 
 C# 提供許多解釋結構 ( structure ) 方法可以應用在您所設計程式結構上，然而在許多時候您可能需要以最小成本花費來設計程式
-並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *tuples* 類別能以更輕便的方式來表示多個個別元素結構。
+並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *tuple* 類別能以更輕便的方式來表示多個個別元素結構。
 
-需要注意的是本方法所解釋的個別元素結構並未經過驗證，您無法為個別定義定義方法 ( methods ) 。
+需要注意本方法所解釋的個別元素結構並未經過驗證，您無法為個別定義定義方法 ( methods ) 。
 
 > [!NOTE]
-> Tuples were available before C# 7,
-> but they were inefficient and had no language support.
-> This meant that tuple elements could only be referenced as
-> `Item1`, `Item2` and so on. C# 7 introduces language support for tuples,
-> which enables semantic names for the fields of a tuple using new,
-> more efficient tuple types.
+> Tuple 僅止於 C# 7， 因為效率不佳原因已經沒有語言支援。 
+> 換句話說 Tuple 僅能被命名為`Item1`、`Item2` 等無效益之命名方式，
+> 對此 C# 7 引進新的支援方式，可讓語意的 tuple 使用新的、更有效率的 *tuple* 類型的欄位名稱。
 
-您可以建立一個 *tuples* 類別來描述個別元素結構。
-
+您可以建立一個 *tuple* 類別來描述個別元素結構。
 
 ```csharp
 var letters = ("a", "b");
 ```
 
-That assignment creates a tuple whose members are `Item1` and `Item2`,
-which you can use in the same way as <xref:System.Tuple>
-You can change the syntax to create a tuple that provides semantic
-names to each of the members of the tuple:
+*tuple* 類別將會建立其成員 tuple `Item1` 和 `Item2` ，您可以使用相同Tuple建立方式變更變數建立
+tuple，當中提供語意到每個 tuple 的成員名稱的語法：
 
 ```csharp
 (string Alpha, string Beta) namedLetters = ("a", "b");
 ```
 
-The `namedLetters` tuple contains fields referred to as `Alpha` and
-`Beta`. Those names exist only at compile time and are not preserved
-for example when inspecting the tuple using reflection at runtime.
+`namedLetters` 的 *tuple* 類別包含稱 Alpha 和 Beta 欄位。這些名稱僅止於編譯階段存在，
+並且不會保留例如時檢查在執行階段使用反映的 tuple。
 
-In a tuple assignment, you can also specify the names of the fields
-on the right-hand side of the assignment:
+在 Tuple 指派中，您可以在指派的右邊，指定欄位的名稱︰
 
 ```csharp
 var alphabetStart = (Alpha: "a", Beta: "b");
 ```
 
-You can specify names for the fields on both the
-left and right-hand side of the assignment:
+您也可以為指派的變數左側和右側指定欄位名稱：
 
 ```csharp
 (string First, string Second) firstLetters = (Alpha: "a", Beta: "b");
 ```
 
-The line above generates a warning, `CS8123`, telling you that the names on the right
-side of the assignment, `Alpha` and `Beta` are ignored because they conflict
-with the names on the left side, `First` and `Second`.
+前述列會產生警告 `CS8123`，告訴您指派右邊的名稱 `Alpha` 和 `Beta` 會被忽略，因為它們與左邊的
+名稱 `First` 和 `Second` 發生衝突。
 
-The examples above show the basic syntax to declare tuples. Tuples are
-most useful as return types for `private` and `internal` methods. Tuples
-provide a simple syntax for those methods to return multiple discrete values:
-You save the work of authoring a `class` or a `struct` that
-defines the type returned. There is no need for creating a new type.
+上述範例說明宣告 Tuple 的基本語法。 Tuple 適合使用於 `private` 和 `internal` 方法的傳回型別
+。 Tuple 提供簡易的語法可讓方法傳回多個離散值︰可以節省了撰寫定義傳回型別之 `class` 或 `struct` 
+的工作。 不需要建立新的類型。
 
-Creating a tuple is more efficient and more productive.
-It is a simpler, lightweight syntax to define a data structure that carries
-more than one value. The example method below returns the minimum and maximum
-values found in a sequence of integers:
+建立 Tuple 更有效率且更具生產力。 它是一個更簡單的輕量語法，可定義複數個值的資料結構。 下列範例
+方法會傳回在一個整數序列中找到的最小和最大值︰
 
 ```csharp
 private static (int Max, int Min) Range(IEnumerable<int> numbers)
@@ -176,34 +162,28 @@ private static (int Max, int Min) Range(IEnumerable<int> numbers)
 }
 ```
 
-Using tuples in this way offers several advantages:
+使用 Tuple 可提供以下數個優點︰
 
-* You save the work of authoring a `class` or a `struct` that defines the type returned. 
-* You do not need to create new type.
-* The language enhancements removes the need to call the <xref:System.Tuple.Create``1(``0)> methods.
+* 能節省撰寫定義傳回型別之 `class` 或 `struct` 的工作。
+* 無需要建立新的類型。
+* 語言增強功能讓您無需呼叫  <xref:System.Tuple.Create``1(``0)> 方法。
 
-The declaration for the method provides the names for the fields of the
-tuple that is returned. When you call the method, the return value is a 
-tuple whose fields are `Max` and `Min`:
+方法的宣告提供所傳回 *tuple*  類別的名稱。 當您呼叫的方法時，傳回值是一個 Tuple，其欄位為 `Max` 和`Min`：
 
 ```csharp
 var range = Range(numbers);
 ```
 
-There may be times when you want to unpackage the members of a tuple that
-were returned from a method.  You can do that by declaring separate variables
-for each of the values in the tuple. This is called *deconstructing* the tuple:
+有時候您可能會需要使用移除封裝方式從方法傳回 Tuple 成員。 您可以藉由為 Tuple 中的每個值宣告不同
+變數來完成。 而此移除封裝過程稱為「解構」Tuple：
 
 ```csharp
 (int max, int min) = Range(numbers);
 ```
 
-You can also provide a similar deconstruction for any type in .NET. This is
-done by writing a `Deconstruct` method as a member of the class. That
-`Deconstruct` method provides a set of `out` arguments for each of the
-properties you want to extract. Consider
-this `Point` class that provides a deconstructor method that extracts
-the `X` and `Y` coordinates:
+您也可以在 .NET 中為任何類型提供類似的解構。 這是藉由新增一個名稱為 `Deconstruct` 方法作為類別的成員而達成。
+`Deconstruct` 方法將會為您想要擷取的每個屬性提供一組 `out` 引數。 請參考以下 `Point` 類別範例，它會提供
+deconstructor 方法來擷取 `X` 和 `Y` 座標︰
 
 ```csharp
 public class Point
@@ -225,22 +205,20 @@ public class Point
 }
 ```
 
-You can extract the individual fields by assigning a tuple to a `Point`:
+您可以藉由指派 *tuples* 類別至 `Point` 方式來擷取個別的欄位：
 
 ```csharp
 var p = new Point(3.14, 2.71);
 (double X, double Y) = p;
 ```
 
-You are not bound by the names defined in the `Deconstruct` method. You
-can rename the extract variables as part of the assignment: 
+您不受限於 `Deconstruct` 方法中所定義的名稱。 您可以在指派過程中擷取變數為其重新命名︰
 
 ```csharp
 (double horizontalDistance, double verticalDistance) = p;
 ```
 
-You can learn more in depth about tuples in the
-[tuples topic](../tuples.md).
+您可以在 [tuples topic](../tuples.md)主題中深入了解 Tuple。
 
 ## Discards
 
