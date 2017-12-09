@@ -52,7 +52,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="9bb81-102">規則運算式物件模型</span><span class="sxs-lookup"><span data-stu-id="9bb81-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="9bb81-103"><a name="introduction"></a>本主題說明用於使用.NET 規則運算式物件模型。</span><span class="sxs-lookup"><span data-stu-id="9bb81-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="9bb81-104">它包含以下各節：</span><span class="sxs-lookup"><span data-stu-id="9bb81-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="9bb81-103">本主題說明用於使用.NET 規則運算式物件模型。</span><span class="sxs-lookup"><span data-stu-id="9bb81-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="9bb81-104">它包含以下各節：</span><span class="sxs-lookup"><span data-stu-id="9bb81-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="9bb81-105">規則運算式引擎</span><span class="sxs-lookup"><span data-stu-id="9bb81-105">The Regular Expression Engine</span></span>](#Engine)  
   

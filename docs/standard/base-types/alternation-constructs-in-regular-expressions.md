@@ -31,7 +31,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="b6887-102">規則運算式中的替代建構</span><span class="sxs-lookup"><span data-stu-id="b6887-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="b6887-103"><a name="top"></a> 交替建構會修改規則運算式來啟用二選一或條件式比對。</span><span class="sxs-lookup"><span data-stu-id="b6887-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="b6887-104">.NET 支援下列三種替代建構：</span><span class="sxs-lookup"><span data-stu-id="b6887-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a> <span data-ttu-id="b6887-103">交替建構會修改規則運算式來啟用二選一或條件式比對。</span><span class="sxs-lookup"><span data-stu-id="b6887-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="b6887-104">.NET 支援下列三種替代建構：</span><span class="sxs-lookup"><span data-stu-id="b6887-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="b6887-105">以 &#124; 進行的模式比對</span><span class="sxs-lookup"><span data-stu-id="b6887-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   

@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]  
   
-<span data-ttu-id="96c86-117"><a name="table"></a>下表描述自訂日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-117"><a name="table"></a> The following table describes the custom date and time format specifiers.</span></span>  
+<a name="table"></a><span data-ttu-id="96c86-117">下表描述自訂日期和時間格式規範。</span><span class="sxs-lookup"><span data-stu-id="96c86-117">The following table describes the custom date and time format specifiers.</span></span>  
   
 |<span data-ttu-id="96c86-118">格式規範</span><span class="sxs-lookup"><span data-stu-id="96c86-118">Format specifier</span></span>|<span data-ttu-id="96c86-119">描述</span><span class="sxs-lookup"><span data-stu-id="96c86-119">Description</span></span>|<span data-ttu-id="96c86-120">範例</span><span class="sxs-lookup"><span data-stu-id="96c86-120">Example</span></span>|  
 |----------------------|-----------------|-------------|  

@@ -251,7 +251,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  <span data-ttu-id="17f9d-219">如需陣列常值的詳細資訊，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="17f9d-219">For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-##  <span data-ttu-id="17f9d-220"><a name="default"></a>預設資料類型和值</span><span class="sxs-lookup"><span data-stu-id="17f9d-220"><a name="default"></a> Default Data Types and Values</span></span>  
+##  <a name="default"></a><span data-ttu-id="17f9d-220">預設資料類型和值</span><span class="sxs-lookup"><span data-stu-id="17f9d-220">Default Data Types and Values</span></span>  
  <span data-ttu-id="17f9d-221">下表說明在 `Dim` 陳述式中指定資料類型和初始設定式的各種組合結果。</span><span class="sxs-lookup"><span data-stu-id="17f9d-221">The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.</span></span>  
   
 |<span data-ttu-id="17f9d-222">指定了資料類型？</span><span class="sxs-lookup"><span data-stu-id="17f9d-222">Data type specified?</span></span>|<span data-ttu-id="17f9d-223">指定了初始設定式？</span><span class="sxs-lookup"><span data-stu-id="17f9d-223">Initializer specified?</span></span>|<span data-ttu-id="17f9d-224">範例</span><span class="sxs-lookup"><span data-stu-id="17f9d-224">Example</span></span>|<span data-ttu-id="17f9d-225">結果</span><span class="sxs-lookup"><span data-stu-id="17f9d-225">Result</span></span>|  

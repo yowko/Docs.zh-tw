@@ -132,7 +132,7 @@ Next [ counter ]
   
  <span data-ttu-id="8e1ed-193">預設值`step`為 1。</span><span class="sxs-lookup"><span data-stu-id="8e1ed-193">The default value of `step` is 1.</span></span>  
   
-###  <span data-ttu-id="8e1ed-194"><a name="BKMK_Counter"></a>計數器引數</span><span class="sxs-lookup"><span data-stu-id="8e1ed-194"><a name="BKMK_Counter"></a> Counter Argument</span></span>  
+###  <a name="BKMK_Counter"></a><span data-ttu-id="8e1ed-194">計數器引數</span><span class="sxs-lookup"><span data-stu-id="8e1ed-194">Counter Argument</span></span>  
  <span data-ttu-id="8e1ed-195">下表指出是否`counter`定義新的本機變數的範圍是整個`For…Next`迴圈。</span><span class="sxs-lookup"><span data-stu-id="8e1ed-195">The following table indicates whether `counter` defines a new local variable that’s scoped to the entire `For…Next` loop.</span></span> <span data-ttu-id="8e1ed-196">這項判斷取決於是否`datatype`存在以及是否`counter`已經定義過了。</span><span class="sxs-lookup"><span data-stu-id="8e1ed-196">This determination depends on whether `datatype` is present and whether `counter` is already defined.</span></span>  
   
 |<span data-ttu-id="8e1ed-197">是`datatype`存在嗎？</span><span class="sxs-lookup"><span data-stu-id="8e1ed-197">Is `datatype` present?</span></span>|<span data-ttu-id="8e1ed-198">是`counter`已經定義過了嗎？</span><span class="sxs-lookup"><span data-stu-id="8e1ed-198">Is `counter` already defined?</span></span>|<span data-ttu-id="8e1ed-199">結果 (是否`counter`定義新的本機變數的範圍是整個`For...Next`迴圈)</span><span class="sxs-lookup"><span data-stu-id="8e1ed-199">Result (whether `counter` defines a new local variable that’s scoped to the entire `For...Next` loop)</span></span>|  

@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="f3de9-102">Managed 執行程序</span><span class="sxs-lookup"><span data-stu-id="f3de9-102">Managed Execution Process</span></span>
-<span data-ttu-id="f3de9-103"><a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：</span><span class="sxs-lookup"><span data-stu-id="f3de9-103"><a name="introduction"></a> The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
+<a name="introduction"></a> <span data-ttu-id="f3de9-103">Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：</span><span class="sxs-lookup"><span data-stu-id="f3de9-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
   
 1.  <span data-ttu-id="f3de9-104">[選擇編譯器](#choosing_a_compiler)。</span><span class="sxs-lookup"><span data-stu-id="f3de9-104">[Choosing a compiler](#choosing_a_compiler).</span></span>  
   

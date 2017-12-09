@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="3ac91-102">記憶體回收的基本概念</span><span class="sxs-lookup"><span data-stu-id="3ac91-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="3ac91-103"><a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。</span><span class="sxs-lookup"><span data-stu-id="3ac91-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="3ac91-104">它提供了下列優點：</span><span class="sxs-lookup"><span data-stu-id="3ac91-104">It provides the following benefits:</span></span>  
+<a name="top"></a> <span data-ttu-id="3ac91-103">在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。</span><span class="sxs-lookup"><span data-stu-id="3ac91-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="3ac91-104">它提供了下列優點：</span><span class="sxs-lookup"><span data-stu-id="3ac91-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="3ac91-105">可讓您開發應用程式，而不需要釋放記憶體。</span><span class="sxs-lookup"><span data-stu-id="3ac91-105">Enables you to develop your application without having to free memory.</span></span>  
   
