@@ -12,11 +12,11 @@ ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2661f46d79b13808bfb169bfbfffc1a17b866b2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eab79d3ac48192f3c176ed44685ab58e50fc89be
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="explicit-c-reference"></a>explicit (C# 參考)
 `explicit` 關鍵字會宣告必須使用轉換叫用的使用者定義型別轉換運算子。 例如，此運算子會將稱為華氏的類別轉換成稱為攝氏的類別︰  
@@ -53,4 +53,4 @@ ms.lasthandoff: 11/21/2017
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)  
  [如何：在結構之間實作使用者定義的轉換](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
- [C# 中鏈結的使用者定義明確轉換](http://go.microsoft.com/fwlink/?LinkId=112384)
+ [C# 中鏈結的使用者定義明確轉換](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

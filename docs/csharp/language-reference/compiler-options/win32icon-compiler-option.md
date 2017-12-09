@@ -13,11 +13,11 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3f9419470d2f00a9f69aae24e925fea53d90cf10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon (C# 編譯器選項)
 **/win32icon** 選項會在輸出檔內插入一個 .ico 檔，讓輸出檔在檔案總管中具有所需的外觀。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  您想要新增至輸出檔的 .ico 檔案。  
   
 ## <a name="remarks"></a>備註  
- .ico 檔案可以使用 [Resource Compiler](http://go.microsoft.com/fwlink/?LinkId=148370) (資源編譯器) 建立。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .ico 檔案則是從 .rc 檔案建立。  
+ .ico 檔案可以使用 [Resource Compiler](https://msdn.microsoft.com/library/aa381042.aspx) (資源編譯器) 建立。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .ico 檔案則是從 .rc 檔案建立。  
   
  請參閱 [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (以參考) 或 [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (以附加) .NET Framework 資源檔。 請參閱 [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 以匯入 .res 檔案。  
   

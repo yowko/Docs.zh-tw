@@ -13,11 +13,11 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="codepage-c-compiler-options"></a>/codepage (C# 編譯器選項)
 如果所需的頁面不是系統目前預設的字碼頁，這個選項可指定編譯期間使用的字碼頁。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  如果原始程式檔是使用您電腦中正在作用中的同一個字碼頁所建立的，或者原始程式檔是使用 UNICODE 或 UTF-8 所建立的，則不需要使用 **/codepage**。  
   
- 如需如何尋找系統所支援之字碼頁的詳細資訊，請參閱 [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371)。  
+ 如需如何尋找系統所支援之字碼頁的詳細資訊，請參閱 [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx)。  
   
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   

@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "C# 中的集合"
 metadata:
@@ -8,14 +9,14 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "本快速入門將教導您 C#，以互動方式使用您的瀏覽器，撰寫 C# 程式碼並查看編譯和執行您的程式碼的結果。 它包含一系列針對建立、修改及探索集合和陣列的課程。\n"
   ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: zh-TW
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "本快速入門將教導您 C#，以互動方式使用您的瀏覽器，撰寫 C# 程式碼並查看編譯和執行您的程式碼的結果。 它包含一系列針對建立、修改及探索集合和陣列的課程。\n"
 - title: "建立清單"
   durationInMinutes: 2
   content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊 (以您的名稱取代 \"<name>\")，然後按一下 [執行] 按鈕：\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前的快速入門中學習到的概念，來在清單中執行迴圈。\n\n顯示名稱的程式碼會運用**字串插值**。  當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。 實際的字串會以它所產生的值取代 C# 程式碼。 在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A> 方法。\n\n讓我們繼續探索。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"

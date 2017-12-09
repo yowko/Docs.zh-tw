@@ -13,11 +13,11 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d034958b14c54540aa175a23067d47bd5d850bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="langversion-c-compiler-options"></a>/langversion (C# 編譯器選項)
 讓編譯器只接受所選擇 C# 語言規格中所含的語法。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
  [C# 語言規格參考](../../../csharp/language-reference/language-specification/index.md)：.NET Foundation  
  C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) 資訊技術 -- C# 語言規格：ISO 目錄  
  C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) 資訊技術 -- C# 語言規格：ISO 目錄  
- C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) PDF 格式的 ISO/IEC 23270:2006：ISO 自由可用標準  
+ C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) PDF 格式的 ISO/IEC 23270:2006：ISO 自由可用標準  
  C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# 語言規格版本 3.0：Microsoft Corporation  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) 標準 ECMA-334 第 4 版    
  C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) C# 語言規格版本 5.0：Microsoft Corporation  

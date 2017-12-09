@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "C# 中的數字"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   nextTutorialTitle: "分支和 C# 中的迴圈"
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "本快速入門將教導您在 C# 中的數字類型，以互動方式使用您的瀏覽器以 C# 撰寫，並查看編譯和執行您的程式碼的結果。 內容包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。\n"
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: zh-TW
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "本快速入門將教導您在 C# 中的數字類型，以互動方式使用您的瀏覽器以 C# 撰寫，並查看編譯和執行您的程式碼的結果。 內容包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。\n"
 - title: "探索整數運算"
   durationInMinutes: 4
   content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：\n\n- `-` 用於減法\n- `*` 用於乘法\n- `/` 用於除法\n\n> [!TIP]\n> 這個整個快速入門，您可以自行探索透過修改您在互動式視窗中撰寫程式碼。 本快速入門會提供您可以嘗試在每個步驟的範例。\n\n讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，按一下 [執行] 按鈕。\n\n減法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果您想要的話，也可以試著在同一行中執行多個數學運算。\n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。     \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
