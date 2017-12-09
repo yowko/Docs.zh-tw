@@ -1,8 +1,9 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: Hello C#
 metadata:
   title: "Hello C#。 您的第一個 C# 語言簡介。"
-  description: "在這個快速入門中，您將使用您的瀏覽器，若要了解 C# 以互動方式。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。"
+  description: "在此快速入門中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。"
   audience: Developer
   level: Beginner
   nextTutorialHref: numbers-in-csharp
@@ -10,20 +11,20 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-items:
-- durationInMinutes: 1
-  content: "本快速入門將教導您 C#，以互動方式使用您的瀏覽器以 C# 撰寫，並查看編譯和執行您的程式碼的結果。 它包含開頭為 \"Hello World\" 程式的一系列課程。 這些課程會教導您 C# 語言的基本概念。\n"
-  ms.openlocfilehash: 2089af6dbf418c87dfd28e1a2a8cf2814b40df6c
-  ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+  ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
+  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/22/2017
+  ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "此快速入門會以互動方式進行 C# 教學，您可使用瀏覽器撰寫 C#，並查看程式碼編譯及執行的結果。 它包含開頭為 \"Hello World\" 程式的一系列課程。 這些課程會教導您 C# 語言的基本概念。\n"
 - title: "執行您的第一個 C# 程式"
   durationInMinutes: 2
   content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n恭喜您！ 您已執行您的第一個 C# 程式。 這是一個會列印 \"Hello World!\" 訊息的簡單程式。 它會使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法來列印該訊息。 `Console` 是代表主控台視窗的型別。 `WriteLine` 是 `Console` 型別的方法，會將文字行列印至文字主控台。\n\n讓我們繼續探索。 本課程的其餘部分會探索使用 `string` 型別，它代表 C# 中的文字。 就像 `Console` 型別，`string` 型別也具有方法。 `string` 方法可以處理文字。 \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "宣告和使用變數"
   durationInMinutes: 3
-  content: "您的第一個程式會在螢幕上列印 `string` \"Hello World!\" 。 \n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。 \n\n您的第一個程式僅能列印一則訊息。 您可以使用**變數**來撰寫更有用的程式。 **變數**是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看吧！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行會宣告一個變數 `aFriend`，並為其指派一個值 \"Bill\"。 第二行會列印出名稱。\n\n您可以將不同的值指派給任何您宣告的變數。 您可以將名稱變更為您的任何一位朋友。 在互動式視窗中，在您已新增的程式碼之後加入這兩行：\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\n請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。\n\n您可能也注意到，最後兩個訊息中遺漏 \"Hello\" 這個字。 讓我們來修正。  將列印訊息的程式碼行修改為下列內容：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次按一下 [執行] 來查看結果。\n\n隨著進行，建立使用來列印字串`+`便顯得繁雜。 字串插值可讓您以更精簡、 可讀性方式拼湊字串。\n\n如果您將加入`$`之前開啟引號的字串，可以再包含字串運算式，例如`aFriend`變數，在大括號括住的字串。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次按一下 [執行] 來查看結果。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "您的第一個程式會在螢幕上列印 `string` \"Hello World!\" 。 \n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。 \n\n您的第一個程式僅能列印一則訊息。 您可以使用**變數**來撰寫更有用的程式。 **變數**是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看吧！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行會宣告一個變數 `aFriend`，並為其指派一個值 \"Bill\"。 第二行會列印出名稱。\n\n您可以將不同的值指派給任何您宣告的變數。 您可以將名稱變更為您的任何一位朋友。 在互動式視窗中，在您已新增的程式碼之後加入這兩行：\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\n請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。\n\n您可能也注意到，最後兩個訊息中遺漏 \"Hello\" 這個字。 讓我們來修正。  將列印訊息的程式碼行修改為下列內容：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次按一下 [執行] 來查看結果。\n\n隨著教學的進行，使用 `+` 建立要列印的字串便顯得繁雜。 字串插補可讓您以更精確且可讀性更高的方式拼湊字串。\n\n如果在字串的左引號前新增 `$`，即可接著把字串運算式 (如 `aFriend` 變數) 用大括號括住在字串內。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次按一下 [執行] 來查看結果。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "處理字串"
   durationInMinutes: 5
   content: "您上次的編輯是字串處理功能的初探。 讓我們來探索更多內容。\n\n`+` 在 C# 中稱為運算子。 使用像 `firstString + secondString` 這樣的方式套用至字串時，會建立一個新的字串，其中包含第一行的文字，後面接著第二行的文字。 如此稱為「字串串連」。 您可以結合任何數目的字串，包括字串變數。  試試這個：\n\n```csharp\nstring firstFriend = \"Maria\";\nstring secondFriend = \"Sage\";\nConsole.WriteLine($\"My friends are {firstFriend} and {secondFriend}\");\n```\n\n當您探索更多字串處理功能時，可以使用 `Length` 來找出字串長度。 `Length` 是字串的**屬性**，會傳回該字串的字元數。 在互動式視窗底端加入下列程式碼：\n\n```csharp\nConsole.WriteLine($\"The name {firstFriend} has {firstFriend.Length} letters.\");\nConsole.WriteLine($\"The name {secondFriend} has {secondFriend.Length} letters.\");\n```\n\n> [!TIP]\n> 這是您自行探索的好時機。 您已學到 `Console.WriteLine()` 將文字寫至螢幕。 您已學到如何宣告變數，以及將字串串連在一起。 在互動式視窗中實驗。 自行撰寫更多訊息。 使用 `+` 運算子建立字串。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
@@ -36,4 +37,4 @@ items:
 - title: "完成挑戰"
   durationInMinutes: 3
   content: "您是否有得到與下列程式碼類似的內容？\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.StartsWith(\"You\"));\nConsole.WriteLine(message.StartsWith(\"goodbye\"));\n\nConsole.WriteLine(message.EndsWith(\"hello\"));\nConsole.WriteLine(message.EndsWith(\"goodbye\"));\n```\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
-- content: "您已經完成 < Hello C# 「 快速入門。\n\n您可以繼續在開發環境上的這些快速入門。 .NET 主題[開始在 10 分鐘後](https://www.microsoft.com/net/core)已設定您的本機開發環境的指示。 完成之後，繼續進行[C# 中的數字](numbers-in-chsarp-local.md)本機環境中。\n\n有關處理 `string` 型別，您可以在 [C# 程式設計手冊](../programming-guide/index.md)的[字串](../programming-guide/strings/index.md)主題中深入了解。\0"
+- content: "您已完成 \"Hello C#\" 快速入門。\n\n您可以在自己的開發環境中繼續進行這些快速入門。 .NET 主題[只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \\(英文\\) 中有關於設定本機開發環境的指示。 完成之後，請在您的本機環境中繼續進行 [C# 中的數字](numbers-in-csharp-local.md)。\n\n有關處理 `string` 型別，您可以在 [C# 程式設計手冊](../programming-guide/index.md)的[字串](../programming-guide/strings/index.md)主題中深入了解。\0"
