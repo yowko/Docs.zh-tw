@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="c9448-111">已安裝 .NET Framework 4 或更新版本和不同版本 Excel 的第二台電腦。</span><span class="sxs-lookup"><span data-stu-id="c9448-111">A second computer on which the .NET Framework 4 or higher and a different version of Excel are installed.</span></span>  
   
-##  <span data-ttu-id="c9448-112"><a name="BKMK_createapp"></a> 若要建立應用程式以使用多個版本的 Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="c9448-112"><a name="BKMK_createapp"></a> To create an application that works with multiple versions of Microsoft Office</span></span>  
+##  <a name="BKMK_createapp"></a> <span data-ttu-id="c9448-112">若要建立應用程式以使用多個版本的 Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="c9448-112">To create an application that works with multiple versions of Microsoft Office</span></span>  
   
 1.  <span data-ttu-id="c9448-113">在安裝 Excel 的電腦上啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="c9448-113">Start Visual Studio on a computer on which Excel is installed.</span></span>  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
 9. <span data-ttu-id="c9448-131">按 CTRL+F5 建置並執行專案。</span><span class="sxs-lookup"><span data-stu-id="c9448-131">Press CTRL+F5 to build and run the project.</span></span> <span data-ttu-id="c9448-132">確認範例程式碼中指定的位置 (C:\SampleFolder\SampleWorkbook.xls) 已建立 Excel 活頁簿。</span><span class="sxs-lookup"><span data-stu-id="c9448-132">Verify that an Excel workbook has been created at the location specified in the example code: C:\SampleFolder\SampleWorkbook.xls.</span></span>  
   
-##  <span data-ttu-id="c9448-133"><a name="BKMK_publishapp"></a> 若要將應用程式發行到安裝不同版本的 Microsoft Office 電腦</span><span class="sxs-lookup"><span data-stu-id="c9448-133"><a name="BKMK_publishapp"></a> To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
+##  <a name="BKMK_publishapp"></a> <span data-ttu-id="c9448-133">若要將應用程式發行到安裝不同版本的 Microsoft Office 電腦</span><span class="sxs-lookup"><span data-stu-id="c9448-133">To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
   
 1.  <span data-ttu-id="c9448-134">在 Visual Studio 中，開啟本逐步解說所建立的專案。</span><span class="sxs-lookup"><span data-stu-id="c9448-134">Open the project created by this walkthrough in Visual Studio.</span></span>  
   

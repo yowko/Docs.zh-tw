@@ -63,7 +63,7 @@ End Sub
   
  <span data-ttu-id="ac96e-126">您可以明確提供選擇性引數來控制呼叫端資訊，或是隱藏呼叫端資訊。</span><span class="sxs-lookup"><span data-stu-id="ac96e-126">You can explicitly supply the optional arguments to control the caller information or to hide caller information.</span></span>  
   
-###  <span data-ttu-id="ac96e-127"><a name="MEMBERNAMES"></a> 成員名稱</span><span class="sxs-lookup"><span data-stu-id="ac96e-127"><a name="MEMBERNAMES"></a> Member Names</span></span>  
+###  <a name="MEMBERNAMES"></a> <span data-ttu-id="ac96e-127">成員名稱</span><span class="sxs-lookup"><span data-stu-id="ac96e-127">Member Names</span></span>  
  <span data-ttu-id="ac96e-128">您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。</span><span class="sxs-lookup"><span data-stu-id="ac96e-128">You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method.</span></span> <span data-ttu-id="ac96e-129">利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。</span><span class="sxs-lookup"><span data-stu-id="ac96e-129">By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values.</span></span> <span data-ttu-id="ac96e-130">這項優點對於下列工作特別有用：</span><span class="sxs-lookup"><span data-stu-id="ac96e-130">This benefit is especially useful for the following tasks:</span></span>  
   
 -   <span data-ttu-id="ac96e-131">使用追蹤和診斷常式。</span><span class="sxs-lookup"><span data-stu-id="ac96e-131">Using tracing and diagnostic routines.</span></span>  
