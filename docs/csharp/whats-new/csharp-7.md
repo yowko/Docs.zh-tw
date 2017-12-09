@@ -237,7 +237,41 @@ Discards are supported in the following scenarios:
 
 The following example defines a `QueryCityDataForYears` method that returns a 6-tuple that contains a data for a city for two different years. The method call in the example is concerned only with the two population values returned by the method and so treats the remaining values in the tuple as discards when it deconstructs the tuple.
 
-[!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
+```csharp
+using System;
+using System.Collections.Generic;
+
+public class Example
+{
+   public static void Main()
+   {
+       var (_, _, _, pop1, _, pop2) = QueryCityDataForYears("New York City", 1960, 2010);
+
+       Console.WriteLine($"Population change, 1960 to 2010: {pop2 - pop1:N0}");
+   }
+   
+   private static (string, double, int, int, int, int) QueryCityDataForYears(string name, int year1, int year2)
+   {
+      int population1 = 0, population2 = 0;
+      double area = 0;
+      
+      if (name == "New York City") {
+         area = 468.48; 
+         if (year1 == 1960) {
+            population1 = 7781984;
+         }
+         if (year2 == 2010) {
+            population2 = 8175133;
+         }
+      return (name, area, year1, population1, year2, population2);
+      }
+
+      return ("", 0, 0, 0, 0, 0);
+   }
+}
+// The example displays the following output:
+//      Population change, 1960 to 2010: 393,149
+```
 
 For more information, see [Discards](../discards.md).
  
@@ -266,13 +300,31 @@ that demonstrate how pattern matching expressions make algorithms that work
 with unrelated types easy. We'll start with a method that computes the sum
 of a number of die rolls:
 
-[!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
+```csharp
+public static int DiceSum(IEnumerable<int> values)
+{
+    return values.Sum();
+}
+```
 
 You might quickly find that you need to find the sum of die rolls where
 some of the rolls are made with more than one die. Part of the input
 sequence may be multiple results instead of a single number:
 
-[!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
+```csharp
+public static int DiceSum2(IEnumerable<object> values)
+{
+    var sum = 0;
+    foreach(var item in values)
+    {
+        if (item is int val)
+            sum += val;
+        else if (item is IEnumerable<object> subList)
+            sum += DiceSum2(subList);
+    }
+    return sum;
+}
+```
 
 The `is` pattern expression works quite well in this scenario. As part of
 checking the type, you write a variable initialization. This creates
@@ -288,7 +340,25 @@ The *match expression* has a familiar syntax, based on the `switch`
 statement already part of the C# language. Let's translate the existing code
 to use a match expression before adding new cases: 
 
-[!code-csharp[SumUsingSwitch](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#16_SumUsingSwitch "Sum using switch")]
+```cshsrp
+public static int DiceSum3(IEnumerable<object> values)
+{
+    var sum = 0;
+    foreach (var item in values)
+    {
+        switch (item)
+        {
+            case int val:
+                sum += val;
+                break;
+            case IEnumerable<object> subList:
+                sum += DiceSum3(subList);
+                break;
+        }
+    }
+    return sum;
+}
+```
 
 The match expressions have a slightly different syntax than the `is` expressions, where
 you declare the type and variable at the beginning of the `case` expression.
@@ -296,7 +366,33 @@ you declare the type and variable at the beginning of the `case` expression.
 The match expressions also support constants. This can save time by
 factoring out simple cases:
 
-[!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
+```csharp
+public static int DiceSum4(IEnumerable<object> values)
+{
+    var sum = 0;
+    foreach (var item in values)
+    {
+        switch (item)
+        {
+            case 0:
+                break;
+            case int val:
+                sum += val;
+                break;
+            case IEnumerable<object> subList when subList.Any():
+                sum += DiceSum4(subList);
+                break;
+            case IEnumerable<object> subList:
+                break;
+            case null:
+                break;
+            default:
+                throw new InvalidOperationException("unknown item type");
+        }
+    }
+    return sum;
+}
+```
 
 The code above adds cases for `0` as a special case of `int`, and `null`
 as a special case when there is no input. This demonstrates one important
@@ -327,11 +423,52 @@ use percentile dice to represent larger ranges of numbers.
 To add this kind of die to your collection, first define a type to represent
 the percentile die:
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+```csharp
+public struct PercentileDice
+{
+    public int OnesDigit { get; }
+    public int TensDigit { get; }
+
+    public PercentileDice(int tensDigit, int onesDigit)
+    {
+        this.OnesDigit = onesDigit;
+        this.TensDigit = tensDigit;
+    }
+}
+```
 
 Then, add a `case` match expression for the new type:
 
-[!code-csharp[SwitchWithNewTypes](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#19_SwitchWithNewTypes "Include Percentile Die type")]
+```csharp
+public static int DiceSum5(IEnumerable<object> values)
+{
+    var sum = 0;
+    foreach (var item in values)
+    {
+        switch (item)
+        {
+            case 0:
+                break;
+            case int val:
+                sum += val;
+                break;
+            case PercentileDice dice:
+                sum += dice.TensDigit + dice.OnesDigit;
+                break;
+            case IEnumerable<object> subList when subList.Any():
+                sum += DiceSum5(subList);
+                break;
+            case IEnumerable<object> subList:
+                break;
+            case null:
+                break;
+            default:
+                throw new InvalidOperationException("unknown item type");
+        }
+    }
+    return sum;
+}
+```
 
 The new syntax for pattern matching expressions makes it easier to create
 dispatch algorithms based on an object's type, or other properties, using
