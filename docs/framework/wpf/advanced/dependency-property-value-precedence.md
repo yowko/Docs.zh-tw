@@ -25,7 +25,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="dependency-property-value-precedence"></a><span data-ttu-id="2b01c-102">相依性屬性值優先順序</span><span class="sxs-lookup"><span data-stu-id="2b01c-102">Dependency Property Value Precedence</span></span>
-<span data-ttu-id="2b01c-103"><a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。</span><span class="sxs-lookup"><span data-stu-id="2b01c-103"><a name="introduction"></a> This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="2b01c-103">本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。</span><span class="sxs-lookup"><span data-stu-id="2b01c-103">This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  
     
   
 <a name="prerequisites"></a>   

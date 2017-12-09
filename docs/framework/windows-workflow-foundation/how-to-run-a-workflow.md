@@ -146,7 +146,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]  
   
-##  <span data-ttu-id="f4c37-159"><a name="BKMK_ToRunTheApplication"></a> 若要建置及執行應用程式</span><span class="sxs-lookup"><span data-stu-id="f4c37-159"><a name="BKMK_ToRunTheApplication"></a> To build and run the application</span></span>  
+##  <a name="BKMK_ToRunTheApplication"></a> <span data-ttu-id="f4c37-159">若要建置及執行應用程式</span><span class="sxs-lookup"><span data-stu-id="f4c37-159">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="f4c37-160">在 [ **方案總管** ] 中，以滑鼠右鍵按一下 [ **NumberGuessWorkflowHost** ]，並選取 [ **設定為啟始專案**]。</span><span class="sxs-lookup"><span data-stu-id="f4c37-160">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Set as StartUp Project**.</span></span>  
   

@@ -52,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="1d9a2-121">若要建置並執行應用程式</span><span class="sxs-lookup"><span data-stu-id="1d9a2-121">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <span data-ttu-id="1d9a2-122"><a name="BKMK_CreatePersistenceDatabase"></a>若要建立持續性資料庫</span><span class="sxs-lookup"><span data-stu-id="1d9a2-122"><a name="BKMK_CreatePersistenceDatabase"></a> To create the persistence database</span></span>  
+###  <a name="BKMK_CreatePersistenceDatabase"></a><span data-ttu-id="1d9a2-122">若要建立持續性資料庫</span><span class="sxs-lookup"><span data-stu-id="1d9a2-122">To create the persistence database</span></span>  
   
 1.  <span data-ttu-id="1d9a2-123">開啟 SQL Server Management Studio 並連接到本機伺服器，例如**。 \SQLEXPRESS**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-123">Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**.</span></span> <span data-ttu-id="1d9a2-124">以滑鼠右鍵按一下**資料庫**本機伺服器，然後選取節點**新資料庫**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-124">Right-click the **Databases** node on the local server, and select **New Database**.</span></span> <span data-ttu-id="1d9a2-125">將新資料庫命名**WF45GettingStartedTutorial**，接受所有其他值，然後選取**確定**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-125">Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.</span></span>  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/02/2017
     > [!WARNING]
     >  <span data-ttu-id="1d9a2-136">務必按照正確順序執行前面的兩個步驟。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-136">It is important to perform the previous two steps in the correct order.</span></span> <span data-ttu-id="1d9a2-137">如果未按照正確順序執行查詢，會發生錯誤，而且也無法正確地設定持續性資料庫。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-137">If the queries are executed out of order, errors occur and the persistence database is not configured correctly.</span></span>  
   
-###  <span data-ttu-id="1d9a2-138"><a name="BKMK_AddReference"></a>若要加入至 DurableInstancing 組件參考</span><span class="sxs-lookup"><span data-stu-id="1d9a2-138"><a name="BKMK_AddReference"></a> To add the reference to the DurableInstancing assemblies</span></span>  
+###  <a name="BKMK_AddReference"></a><span data-ttu-id="1d9a2-138">若要加入至 DurableInstancing 組件參考</span><span class="sxs-lookup"><span data-stu-id="1d9a2-138">To add the reference to the DurableInstancing assemblies</span></span>  
   
 1.  <span data-ttu-id="1d9a2-139">以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選取**加入參考**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-139">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.</span></span>  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  <span data-ttu-id="1d9a2-142">核取方塊旁的**System.runtime.durableinstancing**和**System.activities.durableinstancing**從**搜尋結果**清單，然後按**確定**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-142">Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.</span></span>  
   
-###  <span data-ttu-id="1d9a2-143"><a name="BKMK_CreateForm"></a>若要建立工作流程主控台表單</span><span class="sxs-lookup"><span data-stu-id="1d9a2-143"><a name="BKMK_CreateForm"></a> To create the workflow host form</span></span>  
+###  <a name="BKMK_CreateForm"></a><span data-ttu-id="1d9a2-143">若要建立工作流程主控台表單</span><span class="sxs-lookup"><span data-stu-id="1d9a2-143">To create the workflow host form</span></span>  
   
 > [!NOTE]
 >  <span data-ttu-id="1d9a2-144">此程序中的步驟描述如何手動加入及設定表單。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-144">The steps in this procedure describe how to add and configure the form manually.</span></span> <span data-ttu-id="1d9a2-145">如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-145">If desired, you can download the solution files for the tutorial and add the completed form to the project.</span></span> <span data-ttu-id="1d9a2-146">若要下載教學課程檔案，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-146">To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span> <span data-ttu-id="1d9a2-147">一旦下載檔案時，以滑鼠右鍵按一下**NumberGuessWorkflowHost**選擇**加入參考**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-147">Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**.</span></span> <span data-ttu-id="1d9a2-148">將參考加入**System.Windows.Forms**和**System.Drawing**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-148">Add a reference to **System.Windows.Forms** and **System.Drawing**.</span></span> <span data-ttu-id="1d9a2-149">如果您將加入新的表單，從這些參考會自動加入**新增**，**新項目**功能表上，但匯入表單時必須以手動方式新增。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-149">These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form.</span></span> <span data-ttu-id="1d9a2-150">一旦加入參考之後，以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**新增**，**現有項目**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-150">Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**.</span></span> <span data-ttu-id="1d9a2-151">瀏覽至`Form`資料夾在專案檔中，選取**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-151">Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**.</span></span> <span data-ttu-id="1d9a2-152">如果您選擇匯入表單，則您可以跳到下一節[添加屬性和 helper 方法的表單](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-152">If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).</span></span>  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/02/2017
   
  <span data-ttu-id="1d9a2-235">![WF45 使用者入門教學課程的工作流程主控台表單](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span><span class="sxs-lookup"><span data-stu-id="1d9a2-235">![WF45 Getting Started Tutorial Workflow Host Form](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span></span>  
   
-###  <span data-ttu-id="1d9a2-236"><a name="BKMK_AddHelperMethods"></a>若要加入的屬性和 helper 方法的表單</span><span class="sxs-lookup"><span data-stu-id="1d9a2-236"><a name="BKMK_AddHelperMethods"></a> To add the properties and helper methods of the form</span></span>  
+###  <a name="BKMK_AddHelperMethods"></a><span data-ttu-id="1d9a2-236">若要加入的屬性和 helper 方法的表單</span><span class="sxs-lookup"><span data-stu-id="1d9a2-236">To add the properties and helper methods of the form</span></span>  
  <span data-ttu-id="1d9a2-237">本節中的步驟會將設定表單 UI 的屬性和 Helper 方法加入到表單類別中，以支援執行及繼續使用數字猜測工作流程。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-237">The steps in this section add properties and helper methods to the form class that configure the UI of the form to support running and resuming number guess workflows.</span></span>  
   
 1.  <span data-ttu-id="1d9a2-238">以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管 中**選擇**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-238">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
@@ -431,7 +431,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="1d9a2-258"><a name="BKMK_ConfigureWorkflowApplication"></a>若要設定執行個體存放區、 工作流程開發週期處理常式，以及擴充功能</span><span class="sxs-lookup"><span data-stu-id="1d9a2-258"><a name="BKMK_ConfigureWorkflowApplication"></a> To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
+###  <a name="BKMK_ConfigureWorkflowApplication"></a><span data-ttu-id="1d9a2-258">若要設定執行個體存放區、 工作流程開發週期處理常式，以及擴充功能</span><span class="sxs-lookup"><span data-stu-id="1d9a2-258">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
   
 1.  <span data-ttu-id="1d9a2-259">將 `ConfigureWorkflowApplication` 方法加入至表單類別。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-259">Add a `ConfigureWorkflowApplication` method to the form class.</span></span>  
   
@@ -700,7 +700,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="1d9a2-277"><a name="BKMK_WorkflowVersionMap"></a>若要啟用啟動與繼續使用多個工作流程類型</span><span class="sxs-lookup"><span data-stu-id="1d9a2-277"><a name="BKMK_WorkflowVersionMap"></a> To enable starting and resuming multiple workflow types</span></span>  
+###  <a name="BKMK_WorkflowVersionMap"></a><span data-ttu-id="1d9a2-277">若要啟用啟動與繼續使用多個工作流程類型</span><span class="sxs-lookup"><span data-stu-id="1d9a2-277">To enable starting and resuming multiple workflow types</span></span>  
  <span data-ttu-id="1d9a2-278">主機必須提供工作流程定義，才能繼續工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-278">In order to resume a workflow instance, the host has to provide the workflow definition.</span></span> <span data-ttu-id="1d9a2-279">本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-279">In this tutorial there are three workflow types, and subsequent tutorial steps introduce multiple versions of these types.</span></span> <span data-ttu-id="1d9a2-280">`WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-280">`WorkflowIdentity` provides a way for a host application to associate identifying information with a persisted workflow instance.</span></span> <span data-ttu-id="1d9a2-281">本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-281">The steps in this section demonstrate how to create a utility class to assist with mapping the workflow identity from a persisted workflow instance to the corresponding workflow definition.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="1d9a2-282">`WorkflowIdentity`和版本控制，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-282"> `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).</span></span>  
   
 1.  <span data-ttu-id="1d9a2-283">以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**新增**，**類別**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-283">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="1d9a2-284">型別`WorkflowVersionMap`到**名稱**方塊，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-284">Type `WorkflowVersionMap` into the **Name** box and click **Add**.</span></span>  
@@ -817,7 +817,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="1d9a2-287">`WorkflowVersionMap` 包含三個工作流程識別，其對應於此教學課程中的三個工作流程定義，在下列章節中，啟動及繼續使用工作流程時會使用這些識別。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-287">`WorkflowVersionMap` contains three workflow identities that map to the three workflow definitions from this tutorial and is used in the following sections when workflows are started and resumed.</span></span>  
   
-###  <span data-ttu-id="1d9a2-288"><a name="BKMK_StartWorkflow"></a>若要啟動新的工作流程</span><span class="sxs-lookup"><span data-stu-id="1d9a2-288"><a name="BKMK_StartWorkflow"></a> To start a new workflow</span></span>  
+###  <a name="BKMK_StartWorkflow"></a><span data-ttu-id="1d9a2-288">若要啟動新的工作流程</span><span class="sxs-lookup"><span data-stu-id="1d9a2-288">To start a new workflow</span></span>  
   
 1.  <span data-ttu-id="1d9a2-289">加入 `Click` 的 `NewGame` 處理常式。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-289">Add a `Click` handler for `NewGame`.</span></span> <span data-ttu-id="1d9a2-290">若要加入處理常式，切換到**設計 檢視**的表單，並按兩下`NewGame`。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-290">To add the handler, switch to **Design View** for the form, and double-click `NewGame`.</span></span> <span data-ttu-id="1d9a2-291">會加入 `NewGame_Click` 處理常式，且表單的檢視會切換成程式碼檢視。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-291">A `NewGame_Click` handler is added and the view switches to code view for the form.</span></span> <span data-ttu-id="1d9a2-292">每當使用者按一下此按鈕，就會啟動新的工作流程。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-292">Whenever the user clicks this button a new workflow is started.</span></span>  
   
@@ -1012,7 +1012,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="1d9a2-303"><a name="BKMK_ResumeWorkflow"></a>若要繼續工作流程</span><span class="sxs-lookup"><span data-stu-id="1d9a2-303"><a name="BKMK_ResumeWorkflow"></a> To resume a workflow</span></span>  
+###  <a name="BKMK_ResumeWorkflow"></a><span data-ttu-id="1d9a2-303">若要繼續工作流程</span><span class="sxs-lookup"><span data-stu-id="1d9a2-303">To resume a workflow</span></span>  
   
 1.  <span data-ttu-id="1d9a2-304">加入 `Click` 的 `EnterGuess` 處理常式。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-304">Add a `Click` handler for `EnterGuess`.</span></span> <span data-ttu-id="1d9a2-305">若要加入處理常式，切換到**設計 檢視**的表單，並按兩下`EnterGuess`。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-305">To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`.</span></span> <span data-ttu-id="1d9a2-306">每當使用者按一下此按鈕，就會繼續使用該工作流程。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-306">Whenever the user clicks this button a workflow is resumed.</span></span>  
   
@@ -1228,7 +1228,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="1d9a2-318"><a name="BKMK_TerminateWorkflow"></a>終止工作流程</span><span class="sxs-lookup"><span data-stu-id="1d9a2-318"><a name="BKMK_TerminateWorkflow"></a> To terminate a workflow</span></span>  
+###  <a name="BKMK_TerminateWorkflow"></a><span data-ttu-id="1d9a2-318">終止工作流程</span><span class="sxs-lookup"><span data-stu-id="1d9a2-318">To terminate a workflow</span></span>  
   
 1.  <span data-ttu-id="1d9a2-319">加入 `Click` 的 `QuitGame` 處理常式。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-319">Add a `Click` handler for `QuitGame`.</span></span> <span data-ttu-id="1d9a2-320">若要加入處理常式，切換到**設計 檢視**的表單，並按兩下`QuitGame`。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-320">To add the handler, switch to **Design View** for the form, and double-click `QuitGame`.</span></span> <span data-ttu-id="1d9a2-321">每當使用者按一下此按鈕，就會終止目前選取的工作流程。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-321">Whenever the user clicks this button the currently selected workflow is terminated.</span></span>  
   
@@ -1302,7 +1302,7 @@ ms.lasthandoff: 12/02/2017
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <span data-ttu-id="1d9a2-327"><a name="BKMK_BuildAndRun"></a>若要建置並執行應用程式</span><span class="sxs-lookup"><span data-stu-id="1d9a2-327"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="1d9a2-327">若要建置並執行應用程式</span><span class="sxs-lookup"><span data-stu-id="1d9a2-327">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="1d9a2-328">按兩下**Program.cs** (或**Module1.vb**) 中**方案總管 中**以顯示程式碼。</span><span class="sxs-lookup"><span data-stu-id="1d9a2-328">Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.</span></span>  
   

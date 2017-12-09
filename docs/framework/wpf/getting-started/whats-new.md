@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/11/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a><span data-ttu-id="bbf92-102">WPF 4.5 版的新功能</span><span class="sxs-lookup"><span data-stu-id="bbf92-102">What&#39;s New in WPF Version 4.5</span></span>
-<span data-ttu-id="bbf92-103"><a name="introduction"></a>本主題包含新功能和增強功能的相關資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。</span><span class="sxs-lookup"><span data-stu-id="bbf92-103"><a name="introduction"></a> This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
+<a name="introduction"></a><span data-ttu-id="bbf92-103">本主題包含新功能和增強功能的相關資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。</span><span class="sxs-lookup"><span data-stu-id="bbf92-103">This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
   
  <span data-ttu-id="bbf92-104">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="bbf92-104">This topic contains the following sections:</span></span>  
   

@@ -49,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="160b5-117">若要啟用 啟動工作流程的舊版本</span><span class="sxs-lookup"><span data-stu-id="160b5-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <span data-ttu-id="160b5-118"><a name="BKMK_CreateProject"></a>若要建立 CreateUpdateMaps 專案</span><span class="sxs-lookup"><span data-stu-id="160b5-118"><a name="BKMK_CreateProject"></a> To create the CreateUpdateMaps project</span></span>  
+###  <a name="BKMK_CreateProject"></a><span data-ttu-id="160b5-118">若要建立 CreateUpdateMaps 專案</span><span class="sxs-lookup"><span data-stu-id="160b5-118">To create the CreateUpdateMaps project</span></span>  
   
 1.  <span data-ttu-id="160b5-119">以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管 中**選擇**新增**，**新專案**。</span><span class="sxs-lookup"><span data-stu-id="160b5-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="160b5-143"><a name="BKMK_StateMachine"></a>更新 StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="160b5-143"><a name="BKMK_StateMachine"></a> To update StateMachineNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_StateMachine"></a><span data-ttu-id="160b5-143">更新 StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="160b5-143">To update StateMachineNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="160b5-144">將 `CreateStateMachineUpdateMap` 加入至 `Program` 類別 (或 `Module1`)。</span><span class="sxs-lookup"><span data-stu-id="160b5-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>  
   
@@ -426,7 +426,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="160b5-151"><a name="BKMK_Flowchart"></a>更新 FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="160b5-151"><a name="BKMK_Flowchart"></a> To update FlowchartNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Flowchart"></a><span data-ttu-id="160b5-151">更新 FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="160b5-151">To update FlowchartNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="160b5-152">將下列 `CreateFlowchartUpdateMethod` 加入至 `Program` 類別 (或 `Module1`)。</span><span class="sxs-lookup"><span data-stu-id="160b5-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="160b5-153">此方法類似 `CreateStateMachineUpdateMap`。</span><span class="sxs-lookup"><span data-stu-id="160b5-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="160b5-154">它會從呼叫 `StartUpdate` 開始、更新流程圖工作流程定義，接著在儲存更新對應和更新的工作流程定後結束。</span><span class="sxs-lookup"><span data-stu-id="160b5-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -540,7 +540,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="160b5-155"><a name="BKMK_Sequential"></a>更新 SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="160b5-155"><a name="BKMK_Sequential"></a> To update SequentialNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Sequential"></a><span data-ttu-id="160b5-155">更新 SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="160b5-155">To update SequentialNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="160b5-156">將下列 `CreateSequentialUpdateMethod` 加入至 `Program` 類別 (或 `Module1`)。</span><span class="sxs-lookup"><span data-stu-id="160b5-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="160b5-157">這個方法類似另外兩個方法。</span><span class="sxs-lookup"><span data-stu-id="160b5-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="160b5-158">它會從呼叫 `StartUpdate` 開始、更新循序工作流程定義，接著在儲存更新對應和更新的工作流程定後結束。</span><span class="sxs-lookup"><span data-stu-id="160b5-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -620,7 +620,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="160b5-159"><a name="BKMK_CreateUpdateMaps"></a>若要建置及執行 CreateUpdateMaps 應用程式</span><span class="sxs-lookup"><span data-stu-id="160b5-159"><a name="BKMK_CreateUpdateMaps"></a> To build and run the CreateUpdateMaps application</span></span>  
+###  <a name="BKMK_CreateUpdateMaps"></a><span data-ttu-id="160b5-159">若要建置及執行 CreateUpdateMaps 應用程式</span><span class="sxs-lookup"><span data-stu-id="160b5-159">To build and run the CreateUpdateMaps application</span></span>  
   
 1.  <span data-ttu-id="160b5-160">更新 `Main` 方法，並加入下列三種方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="160b5-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="160b5-161">這些方法會加入至下列區段。</span><span class="sxs-lookup"><span data-stu-id="160b5-161">These methods are added in the following sections.</span></span> <span data-ttu-id="160b5-162">每個方法會更新對應的數字猜測工作流程，並建立描述更新的 `DynamicUpdateMap`。</span><span class="sxs-lookup"><span data-stu-id="160b5-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>  
   
@@ -654,7 +654,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="160b5-166">建立更新對應並更新工作流程定義後，下一步就是建置包含更新定義的更新工作流程組件。</span><span class="sxs-lookup"><span data-stu-id="160b5-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>  
   
-###  <span data-ttu-id="160b5-167"><a name="BKMK_BuildAssembly"></a>建置更新的工作流程組件</span><span class="sxs-lookup"><span data-stu-id="160b5-167"><a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly</span></span>  
+###  <a name="BKMK_BuildAssembly"></a><span data-ttu-id="160b5-167">建置更新的工作流程組件</span><span class="sxs-lookup"><span data-stu-id="160b5-167">To build the updated workflow assembly</span></span>  
   
 1.  <span data-ttu-id="160b5-168">開啟第二個 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 執行個體。</span><span class="sxs-lookup"><span data-stu-id="160b5-168">Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -685,7 +685,7 @@ ms.lasthandoff: 12/02/2017
   
 12. <span data-ttu-id="160b5-185">重新命名**NumberGuessWorkflowActivities.dll**至**NumberGuessWorkflowActivities_v15.dll**，並將它複製到**PreviousVersions** 中建立的資料夾[How to： 裝載工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。</span><span class="sxs-lookup"><span data-stu-id="160b5-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-###  <span data-ttu-id="160b5-186"><a name="BKMK_UpdateWorkflowVersionMap"></a>若要使用新的版本更新 WorkflowVersionMap</span><span class="sxs-lookup"><span data-stu-id="160b5-186"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="160b5-186">若要使用新的版本更新 WorkflowVersionMap</span><span class="sxs-lookup"><span data-stu-id="160b5-186">To update WorkflowVersionMap with the new versions</span></span>  
   
 1.  <span data-ttu-id="160b5-187">切換回 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的初始執行個體。</span><span class="sxs-lookup"><span data-stu-id="160b5-187">Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -1072,7 +1072,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  <span data-ttu-id="160b5-195">按 CTRL+SHIFT+B 以建置專案。</span><span class="sxs-lookup"><span data-stu-id="160b5-195">Press CTRL+SHIFT+B to build the project.</span></span>  
   
-###  <span data-ttu-id="160b5-196"><a name="BKMK_ApplyUpdate"></a>若要套用動態更新</span><span class="sxs-lookup"><span data-stu-id="160b5-196"><a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates</span></span>  
+###  <a name="BKMK_ApplyUpdate"></a><span data-ttu-id="160b5-196">若要套用動態更新</span><span class="sxs-lookup"><span data-stu-id="160b5-196">To apply the dynamic updates</span></span>  
   
 1.  <span data-ttu-id="160b5-197">以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管 中**選擇**新增**，**新專案**。</span><span class="sxs-lookup"><span data-stu-id="160b5-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -1447,7 +1447,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="160b5-261">**檢查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="160b5-261">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
 <span data-ttu-id="160b5-262">**請按任意鍵繼續...**</span><span class="sxs-lookup"><span data-stu-id="160b5-262">**Press any key to continue . . .**</span></span>  
   
-###  <span data-ttu-id="160b5-263"><a name="BKMK_BuildAndRun"></a>若要更新的工作流程執行應用程式</span><span class="sxs-lookup"><span data-stu-id="160b5-263"><a name="BKMK_BuildAndRun"></a> To run the application with the updated workflows</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="160b5-263">若要更新的工作流程執行應用程式</span><span class="sxs-lookup"><span data-stu-id="160b5-263">To run the application with the updated workflows</span></span>  
   
 1.  <span data-ttu-id="160b5-264">以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="160b5-264">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
@@ -1482,7 +1482,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="160b5-291">**請輸入介於 1 到 10 之間的數字** </span><span class="sxs-lookup"><span data-stu-id="160b5-291">**Please enter a number between 1 and 10** </span></span>  
 <span data-ttu-id="160b5-292">**6 是正確的。您猜到它了 4。**</span><span class="sxs-lookup"><span data-stu-id="160b5-292">**6 is correct. You guessed it in 4 turns.**</span></span>  
   
-###  <span data-ttu-id="160b5-293"><a name="BKMK_StartPreviousVersions"></a>若要啟用 啟動工作流程的舊版本</span><span class="sxs-lookup"><span data-stu-id="160b5-293"><a name="BKMK_StartPreviousVersions"></a> To enable starting previous versions of the workflows</span></span>  
+###  <a name="BKMK_StartPreviousVersions"></a><span data-ttu-id="160b5-293">若要啟用 啟動工作流程的舊版本</span><span class="sxs-lookup"><span data-stu-id="160b5-293">To enable starting previous versions of the workflows</span></span>  
  <span data-ttu-id="160b5-294">如果您執行完工作流程來進行更新，可以修改 `NumberGuessWorkflowHost` 應用程式，使其能啟動工作流程的舊版本。</span><span class="sxs-lookup"><span data-stu-id="160b5-294">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>  
   
 1.  <span data-ttu-id="160b5-295">按兩下**WorkflowHostForm**中**方案總管 中**，然後選取**WorkflowType**下拉式方塊。</span><span class="sxs-lookup"><span data-stu-id="160b5-295">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>  

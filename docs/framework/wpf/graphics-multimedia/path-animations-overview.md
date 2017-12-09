@@ -26,7 +26,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="42de9-102">路徑動畫概觀</span><span class="sxs-lookup"><span data-stu-id="42de9-102">Path Animations Overview</span></span>
-<span data-ttu-id="42de9-103"><a name="introduction"></a> 本主題將介紹路徑動畫，它可讓您使用幾何路徑來產生輸出值。</span><span class="sxs-lookup"><span data-stu-id="42de9-103"><a name="introduction"></a> This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="42de9-104">路徑動畫很適合用來沿著複雜路徑移動和旋轉物件。</span><span class="sxs-lookup"><span data-stu-id="42de9-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="42de9-103">本主題將介紹路徑動畫，它可讓您使用幾何路徑來產生輸出值。</span><span class="sxs-lookup"><span data-stu-id="42de9-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="42de9-104">路徑動畫很適合用來沿著複雜路徑移動和旋轉物件。</span><span class="sxs-lookup"><span data-stu-id="42de9-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a><span data-ttu-id="42de9-105">必要條件</span><span class="sxs-lookup"><span data-stu-id="42de9-105">Prerequisites</span></span>  
