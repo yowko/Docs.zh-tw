@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Visual F# 開發環境功能
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |安全性 （變更信任層級）|否||
 
 ## <a name="code-and-text-editor-features"></a>程式碼和文字編輯器功能
-在 F # 支援 Visual Studiocode 和文字編輯器的下列功能。 如需編輯 Visual Studio 中，與功能的文字編輯器中的程式碼的一般資訊，請參閱[程式碼和文字編輯器中撰寫程式碼](https://msdn.microsoft.com/library/efc4xwkb.aspx)。
+在 F # 支援 Visual Studiocode 和文字編輯器的下列功能。 如需編輯 Visual Studio 中，與功能的文字編輯器中的程式碼的一般資訊，請參閱[程式碼和文字編輯器中撰寫程式碼](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。
 
 |功能|描述|F # 支援的嗎？|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ ms.lasthandoff: 11/21/2017
 |自動格式化|使用標準的縮排和樣式重新格式化程式碼。|否|
 |書籤|可讓您在編輯器中儲存的位置。|是|
 |變更縮排|縮排或 unindents 所選的行。|是|
-|[尋找和取代文字](https://msdn.microsoft.com/library/139eef4h.aspx)|可讓您搜尋檔案、 專案或方案，而且可能要更換文字。|是|
+|[尋找和取代文字](/visualstudio/ide/finding-and-replacing-text)|可讓您搜尋檔案、 專案或方案，而且可能要更換文字。|是|
 |移至.NET Framework 應用程式開發介面的定義|當游標位於上.NET Framework API，則會顯示從.NET Framework 中繼資料產生的程式碼。|否|
 |移至使用者定義應用程式開發介面的定義|當游標位於程式實體的定義，將游標移至您的程式碼中定義實體位置上。|是|
 |移至行|可讓您移至特定行中的檔案、 行號。|是|
 |在檔案最上方導覽列|可讓您跳到程式碼中的位置，例如，函式名稱。|是|
-|大綱 請參閱[大綱](https://msdn.microsoft.com/library/td6a5x4s.aspx)。|可讓您摺疊程式碼來建立更簡潔的檢視區段。|是|
+|大綱 請參閱[大綱](/visualstudio/ide/outlining)。|可讓您摺疊程式碼來建立更簡潔的檢視區段。|是|
 |空白鍵轉定位鍵|將空格轉換成定位點。|是|
 |輸入顏色標示|顯示特殊的色彩中定義的型別名稱。|是|
 |快速尋找。 快速尋找、 尋找和取代 視窗，請參閱。|可讓您搜尋的檔案或專案中。|是|
 
 ## <a name="intellisense-features"></a>IntelliSense 功能
-下表摘要說明支援和不支援 F # 中的 IntelliSense 功能。 一般 IntelliSense 的詳細資訊，請參閱[使用 IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx)。
+下表摘要說明支援和不支援 F # 中的 IntelliSense 功能。 一般 IntelliSense 的詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。
 
 |功能|描述|F # 支援的嗎？|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ Visual Studio 2012 中不支援重構的 F # 程式碼。
 |呼叫階層|顯示在程式碼中呼叫函式的巢狀的結構。|否|
 |程式碼度量|收集有關您的程式碼行計數等資訊。|否|
 |類別檢視|提供類型為基礎的專案中的程式碼檢視。|否|
-|[錯誤清單視窗](https://msdn.microsoft.com/library/33df3b7a.aspx)|在程式碼中會顯示錯誤清單。|是|
+|[錯誤清單視窗](/visualstudio/ide/reference/error-list-window)|在程式碼中會顯示錯誤清單。|是|
 |[F# Interactive](../tutorials/fsharp-interactive/index.md)|可讓您輸入 （或複製和貼上） F # 程式碼以及它立即執行，與您專案的建置無關。 F # Interactive 視窗是讀取、 評估、 列印迴圈 (REPL)。|是|
 |物件瀏覽器|可讓您檢視組件中的類型。|F # 類型出現在已編譯的組件不會出現完全依照您撰寫它們。 您可以瀏覽的編譯表示 F # 型別，但您無法檢視的類型，顯示從 F #。|
-|[輸出視窗](https://msdn.microsoft.com/library/3hk6fby3.aspx)|顯示組建輸出。|是|
+|[輸出視窗](/visualstudio/ide/reference/output-window)|顯示組建輸出。|是|
 |效能分析|提供工具來測量程式碼的效能。|是|
 |屬性視窗|顯示並讓您編輯的物件擁有焦點的開發環境中的屬性。|是|
 |[伺服器總管](https://msdn.microsoft.com/library/x603htbk.aspx)|提供方法來與各種不同的伺服器資源互動。|是|

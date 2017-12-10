@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33c9bdf3cf055ea005542f8b2471963b16c16122
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keyfile"></a>/keyfile
 指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  請注意，金鑰檔可能只包含公開金鑰。  
   
- 請參閱[Creating and using strong-named Assemblies](https://msdn.microsoft.com/library/xwb8f617)如需有關簽署組件。  
+ 請參閱[Creating and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
   
 > [!NOTE]
 >  `/keyfile`選項不是可從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]開發環境中，只有在從命令列編譯時，它是可用。  

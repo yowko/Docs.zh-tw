@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教學課程： 建立型別提供者
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 或者，開啟 Visual Studio，開啟 偵錯 功能表，選擇`Debug/Attach to process…`，並附加至另一個`devenv`就可以在其中編輯指令碼的程序。 使用此方法，您可以更輕鬆地以互動方式 （具有完整的 IntelliSense 和其他功能） 的第二個執行個體中輸入運算式目標型別提供者中的特定邏輯。
 
-您可以停用 Just My Code 偵錯更容易辨識產生的程式碼中的錯誤。 如需如何啟用或停用此功能的資訊，請參閱[使用偵錯工具巡覽程式碼](https://msdn.microsoft.com/library/y740d9d3.aspx)。 此外，您也可以設定 first-chance 例外狀況來攔截開啟`Debug`功能表，然後選擇`Exceptions`或選擇 Ctrl + Alt + E 鍵以開啟`Exceptions` 對話方塊。 在對話方塊中，在`Common Language Runtime Exceptions`，選取`Thrown`核取方塊。
+您可以停用 Just My Code 偵錯更容易辨識產生的程式碼中的錯誤。 如需如何啟用或停用此功能的資訊，請參閱[使用偵錯工具巡覽程式碼](/visualstudio/debugger/navigating-through-code-with-the-debugger)。 此外，您也可以設定 first-chance 例外狀況來攔截開啟`Debug`功能表，然後選擇`Exceptions`或選擇 Ctrl + Alt + E 鍵以開啟`Exceptions` 對話方塊。 在對話方塊中，在`Common Language Runtime Exceptions`，選取`Thrown`核取方塊。
 
 
 ### <a name="implementation-of-the-type-provider"></a>型別提供者實作

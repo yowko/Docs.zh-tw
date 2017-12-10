@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Visual Studio 中設定專案
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |`Build`|[建置頁面、 專案設計工具 &#40;C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|可讓您控制如何編譯程式碼。|
 |`Build Events`|[建置事件頁面、 專案設計工具 &#40;C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|可讓您指定命令執行之前或之後的編譯。|
 |`Debug`|[專案設計工具、偵錯頁面](https://msdn.microsoft.com/library/2wcdezs5.aspx)|可讓您控制如何在偵錯期間執行應用程式。 這包括哪些命令列以使用與您的應用程式的起始目錄為何，以及任何特殊的偵錯的模式，您想要啟用，例如原生程式碼和 SQL。|
-|`Reference Paths`|[管理專案中的參考](https://msdn.microsoft.com/library/ez524kew.aspx)|可讓您指定要搜尋組件取決於程式碼的位置。|
+|`Reference Paths`|[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)|可讓您指定要搜尋組件取決於程式碼的位置。|
 
 ## <a name="f-specific-settings"></a>F #-特定的設定
 下表摘要說明特定 F # 設定：

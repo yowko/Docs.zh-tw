@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
-ms.openlocfilehash: 0857418141a2383795d736fd507fcab5dbeaba24
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4bc9861f489eb068ca58656ab4ee9d43e8d212d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="compiler-options"></a>編譯器選項
 
@@ -81,4 +81,4 @@ ms.lasthandoff: 10/18/2017
 |標題|描述|
 |-----|-----------|
 |[F# Interactive 選項](../tutorials/fsharp-interactive/fsharp-interactive-options.md)|描述 F # 解譯器，所支援的命令列選項 fsi.exe。|
-|[專案屬性參考](https://msdn.microsoft.com/library/16satcwx.aspx)|描述專案，包括提供建置選項的專案屬性頁的 UI。|
+|[專案屬性參考](/visualstudio/ide/reference/project-properties-reference)|描述專案，包括提供建置選項的專案屬性頁的 UI。|

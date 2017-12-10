@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署考量 (Entity Framework)
 本主題提供的資訊是有關部署使用 ADO.NET Entity Framework 進行資料存取的應用程式。 如需有關 Entity Framework 的詳細資訊，請參閱[入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  
   
  Entity Framework 提供一組整合的工具，可讓您更輕鬆在 Visual Studio 中進行開發。 如需詳細資訊，請參閱[ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)。 本主題未描述如何使用特定技術來部署 Entity Framework 架構應用程式。  
   
- Visual Studio 提供了散發及部署應用程式的機能，例如 ClickOnce 部署。 如需詳細資訊，請參閱[部署應用程式和元件](https://msdn.microsoft.com/library/wtzawcsz)Visual Studio 文件中。  
+ Visual Studio 提供了散發及部署應用程式的機能，例如 ClickOnce 部署。 如需詳細資訊，請參閱[部署應用程式和元件](/visualstudio/deployment/deploying-applications-services-and-components)Visual Studio 文件中。  
   
  以下考量適用於當您部署使用 Entity Framework 的應用程式時：  
   

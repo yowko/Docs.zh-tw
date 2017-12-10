@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>逐步解說：從 DBML 檔案產生 F# 類型
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 應用程式開發介面參考連結將帶您到 MSDN。  docs.microsoft.com API 參考不完整。
 
-這個 F # 3.0 的逐步解說描述如何從資料庫建立的資料類型，當您編碼.dbml 檔案中的結構描述資訊時。 LINQ to SQL 會使用這種檔案格式來表示資料庫結構描述。 您可以使用物件關聯式 (O/R) 的設計工具，Visual Studio 中產生 LINQ to SQL 結構描述檔案。 如需詳細資訊，請參閱[O/R 設計工具概觀](https://msdn.microsoft.com/library/bb384511.aspx)和[LINQ to SQL 中的程式碼產生](https://msdn.microsoft.com/library/bb386976)。
+這個 F # 3.0 的逐步解說描述如何從資料庫建立的資料類型，當您編碼.dbml 檔案中的結構描述資訊時。 LINQ to SQL 會使用這種檔案格式來表示資料庫結構描述。 您可以使用物件關聯式 (O/R) 的設計工具，Visual Studio 中產生 LINQ to SQL 結構描述檔案。 如需詳細資訊，請參閱[O/R 設計工具概觀](https://msdn.microsoft.com/library/bb384511.aspx)和[LINQ to SQL 中的程式碼產生](../../../../docs/framework/data/adonet/sql/linq/index.md)。
 
 資料庫標記語言 」 (DBML) 型別提供者可讓您撰寫程式碼，會使用基礎資料庫結構描述，而不需要您在編譯時期指定靜態連接字串的類型。 可以是如果您需要完成的應用程式將使用不同的資料庫，不同的認證或不同的連接字串比您用來開發應用程式可能很有用。 如果您有直接的資料庫連接，您可以在編譯時期使用，而且這是相同的資料庫和最終建置應用程式中使用的認證，您也可以使用 SQLDataConnection 類型提供者。 如需詳細資訊，請參閱[逐步解說： 存取 SQL 資料庫所使用的型別提供者](accessing-a-sql-database.md)。
 

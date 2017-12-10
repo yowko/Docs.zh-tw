@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d52ade26bc249625a77720fe05ad9c1ab58b04f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 指定通用語言執行平台 (CLR) 的哪個平台版本可以執行輸出檔。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用 `/platform:anycpu32bitpreferred` 編譯的可執行檔將在 32 位元 CLR 上執行。  
   
- 如需如何開發在 64 位元版本的 Windows 上執行的應用程式的詳細資訊，請參閱[64 位元應用程式](https://msdn.microsoft.com/library/ms241064)。  
+ 如需如何開發在 64 位元版本的 Windows 上執行的應用程式的詳細資訊，請參閱[64 位元應用程式](../../../../docs/framework/64-bit-apps.md)。  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中設定 /platform  
   

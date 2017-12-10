@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 887e84843201c64f7dd7b056b5e31d5ccd91bf23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keycontainer"></a>/keycontainer
 指定金鑰組的金鑰容器名稱，為組件提供強式名稱。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  您也可以使用 [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) 將加密資訊傳遞給編譯器。 如需部分簽署的組件，請使用 [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)。  
   
- 請參閱[Creating and using strong-named Assemblies](https://msdn.microsoft.com/library/xwb8f617)如需有關簽署組件。  
+ 請參閱[Creating and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
   
 > [!NOTE]
 >  `/keycontainer`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  

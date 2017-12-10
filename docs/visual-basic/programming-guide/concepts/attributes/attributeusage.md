@@ -12,11 +12,11 @@ ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 29d227cf50fe23d5619bf5fb6f9a598ea78ef077
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  
@@ -174,7 +174,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)  
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [屬性](../../../../../docs/standard/attributes/index.md)  
  [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

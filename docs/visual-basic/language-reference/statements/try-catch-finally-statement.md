@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08de4939960d8297269c82b1b040537dd43f3038
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 陳述式 (Visual Basic)
 提供了處理部分或所有可能的錯誤時繼續執行程式碼中指定的一段程式碼，可能發生的方式。  
@@ -194,5 +194,5 @@ End Try
  [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error 陳述式](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [使用程式碼片段的最佳作法](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [例外狀況處理](https://msdn.microsoft.com/library/dd997415)  
+ [例外狀況處理](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw 陳述式](../../../visual-basic/language-reference/statements/throw-statement.md)

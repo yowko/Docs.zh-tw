@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="delaysign"></a>/delaysign
 指定將要完整簽署還是部分簽署組件。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  例如，藉由使用`/delaysign+`，組織中的開發人員可以將不帶正負號的測試組件版本的測試人員可以向全域組件快取，並使用發佈。 組件上的工作完成時，負責組織的私用金鑰的人員可以完整簽署組件。 此劃分防止洩漏，同時允許使用組件的所有開發人員組織的私用金鑰。  
   
- 請參閱[Creating and using strong-named Assemblies](https://msdn.microsoft.com/library/xwb8f617)如需有關簽署組件。  
+ 請參閱[Creating and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>在 Visual Studio 中設定 /delaysign 整合式開發環境  
   

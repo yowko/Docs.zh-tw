@@ -14,11 +14,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 87c87852024412b7a7ed55a2c429842ce75a13a8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 建立和使用 COM 物件建立關聯的問題。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 10/22/2017
  描述如何使用現有 COM 物件作為新物件的基礎。  
   
 ## <a name="related-sections"></a>相關章節  
- [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)  
+ [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
  描述 Common Language Runtime 提供的互通性服務。  
   
  [將 COM 元件公開給 .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ ms.lasthandoff: 10/22/2017
  [將 .NET Framework 元件公開給 COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  描述如何從 COM 準備和使用 Managed 類型。  
   
- [套用 Interop 屬性](https://msdn.microsoft.com/library/d4w8x20h)  
+ [套用 Interop 屬性](../../../../docs/framework/interop/applying-interop-attributes.md)  
  涵蓋您可以在處理 Unmanaged 程式碼時使用的屬性。

@@ -18,11 +18,11 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02672e88709dbe01aedcc31c76819728ca30dfb9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>使用 Visual Basic 撰寫 LINQ 入門
 本章節包含概觀、 範例和背景資訊可協助您了解及使用 Visual Basic 和 Language-Integrated Query (LINQ)。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 10/18/2017
  [LINQ to DataSet 概觀](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  資料集來提供 LINQ 的概念性概觀。  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  說明 LINQ 到 SQL 技術，並提供連結至主題可協助您使用 LINQ to SQL。  
   
  [LINQ 的 Visual Studio IDE 和工具支援 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

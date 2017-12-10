@@ -12,11 +12,11 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7dc6fb3c53df9bec7808031513051e628096a0a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b0e558e50f75b10a77834a6e94ccb7aadc55fdcb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  
@@ -55,5 +55,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>另請參閱  
  [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ to DataSet 概觀](https://msdn.microsoft.com/library/bb399399)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)
+ [LINQ to DataSet 概觀](../../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
