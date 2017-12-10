@@ -80,7 +80,7 @@ if (!int.TryParse(input, out int result))
 return result;
 ```
 
-## Tuples
+## tuple方法
 
 > [!NOTE]
 > The new tuples features require the <xref:System.ValueTuple> types.
@@ -100,15 +100,15 @@ return result;
 
 本方法提供組件 <xref:System.ValueTuple> 改進。
 
-C# 提供許多解釋結構 ( structure ) 方法可以應用在您所設計程式結構上，然而在許多時候您可能需要以最小成本花費來設計程式
-並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *tuple* 類別能以更輕便的方式來表示多個個別元素結構。
+C# 提供許多解釋結構 ( Structure ) 方法可以應用在您所設計程式結構上，然而在許多時候您可能需要以最小成本花費來設計程式
+並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *Tuple* 類別能以更輕便的方式來表示多個個別元素結構。
 
-需要注意本方法所解釋的個別元素結構並未經過驗證，您無法為個別定義定義方法 ( methods ) 。
+需要注意本方法所解釋的個別元素結構並未經過驗證，您無法為個別定義定義方法 ( Methods ) 。
 
 > [!NOTE]
 > Tuple 僅止於 C# 7， 因為效率不佳原因已經沒有語言支援。 
 > 換句話說 Tuple 僅能被命名為`Item1`、`Item2` 等無效益之命名方式，
-> 對此 C# 7 引進新的支援方式，可讓語意的 tuple 使用新的、更有效率的 *tuple* 類型的欄位名稱。
+> 對此 C# 7 引進新的支援方式，可讓語意的 Tuple 使用新的、更有效率的 *Tuple* 類別的欄位命名方式。
 
 您可以建立一個 *tuple* 類別來描述個別元素結構。
 
@@ -116,15 +116,15 @@ C# 提供許多解釋結構 ( structure ) 方法可以應用在您所設計程�
 var letters = ("a", "b");
 ```
 
-*tuple* 類別將會建立其成員 tuple `Item1` 和 `Item2` ，您可以使用相同Tuple建立方式變更變數建立
-tuple，當中提供語意到每個 tuple 的成員名稱的語法：
+*Tuple* 類別將會建立其成員 Tuple `Item1` 和 `Item2` ，您可以使用相同 Tuple 建立方式變更變數建立
+Tuple，當中提供語意到每個 Tuple 的成員名稱的語法：
 
 ```csharp
 (string Alpha, string Beta) namedLetters = ("a", "b");
 ```
 
-`namedLetters` 的 *tuple* 類別包含稱 Alpha 和 Beta 欄位。這些名稱僅止於編譯階段存在，
-並且不會保留例如時檢查在執行階段使用反映的 tuple。
+`namedLetters` 的 *Tuple* 類別包含稱 Alpha 和 Beta 欄位。這些名稱僅止於編譯階段存在，
+並且不會保留例如時檢查在執行階段使用反映的 Tuple。
 
 在 Tuple 指派中，您可以在指派的右邊，指定欄位的名稱︰
 
@@ -147,7 +147,7 @@ var alphabetStart = (Alpha: "a", Beta: "b");
 的工作。 不需要建立新的類型。
 
 建立 Tuple 更有效率且更具生產力。 它是一個更簡單的輕量語法，可定義複數個值的資料結構。 下列範例
-方法會傳回在一個整數序列中找到的最小和最大值︰
+方法會擲回在一個整數序列中找到的最小和最大值︰
 
 ```csharp
 private static (int Max, int Min) Range(IEnumerable<int> numbers)
@@ -176,7 +176,7 @@ var range = Range(numbers);
 ```
 
 有時候您可能會需要使用移除封裝方式從方法傳回 Tuple 成員。 您可以藉由為 Tuple 中的每個值宣告不同
-變數來完成。 而此移除封裝過程稱為「解構」Tuple：
+變數來完成。 而此移除封裝過程稱為「解構Tuple」 ( Deconstructing Tuple ) ：
 
 ```csharp
 (int max, int min) = Range(numbers);
@@ -184,7 +184,7 @@ var range = Range(numbers);
 
 您也可以在 .NET 中為任何類型提供類似的解構。 這是藉由新增一個名稱為 `Deconstruct` 方法作為類別的成員而達成。
 `Deconstruct` 方法將會為您想要擷取的每個屬性提供一組 `out` 引數。 請參考以下 `Point` 類別範例，它會提供
-deconstructor 方法來擷取 `X` 和 `Y` 座標︰
+Deconstruct 方法來擷取 `X` 和 `Y` 座標︰
 
 ```csharp
 public class Point
@@ -206,7 +206,7 @@ public class Point
 }
 ```
 
-您可以藉由指派 *tuples* 類別至 `Point` 方式來擷取個別的欄位：
+您可以藉由指派 *tuple* 類別至 `Point` 方式來擷取個別的欄位：
 
 ```csharp
 var p = new Point(3.14, 2.71);
@@ -221,19 +221,22 @@ var p = new Point(3.14, 2.71);
 
 您可以在 [tuples topic](../tuples.md)主題中深入了解 Tuple。
 
-## Discards
+## 暫存變數
 
-Often when deconstructing a tuple or calling a method with `out` parameters, you're forced to define a variable whose value you don't care about and don't intend to use. C# adds support for *discards* to handle this scenario. A discard is a write-only variable whose name is `_` (the underscore character); you can assign all of the values that you intend to discard to the single variable. A discard is like an unassigned variable; apart from the assignment statement, the discard can't be used in code.
+本方法提供臨時性變數應用。
 
-Discards are supported in the following scenarios:
+正常情境下，當解構 tuple 或呼叫方法含有 `out` 修飾詞參數時， C# 會強迫定義其值，然而若您並不在意
+且不想要定義其值時， C# 能提供暫存變數捨棄處理情境。
 
-* When deconstructing tuples or user-defined types.
+所謂捨棄，是唯讀的變數，其名稱是`_`（底線字元）; 您可以指定您想要捨棄至單一變數的值。 捨棄就
+像是未指派的變數。有個例外已賦予值語句，捨棄是無法使用於代碼之中。
 
-* When calling methods with [out](../language-reference/keywords/out.md) parameters.
+暫存變數可支援下列情境：
 
-* In a pattern matching operation with the [is](../language-reference/keywords/is.md) and [switch](../language-reference/keywords/switch.md) statements.
-
-* As a standalone identifier when you want to explicitly identify the value of an assignment as a discard.
+* 當為解構 tuple 或使用者定義型別時。
+* 呼叫方法時為 [out](../language-reference/keywords/out.md) 修飾詞參數時。
+* 在模式比對時使用[is](../language-reference/keywords/is.md)模式和[switch](../language-reference/keywords/switch.md)陳述式時。
+* 為獨立的識別項 ( standalone identifier ) 時要明確地識別暫存變數指派的值時。
 
 The following example defines a `QueryCityDataForYears` method that returns a 6-tuple that contains a data for a city for two different years. The method call in the example is concerned only with the two population values returned by the method and so treats the remaining values in the tuple as discards when it deconstructs the tuple.
 
