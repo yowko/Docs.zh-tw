@@ -11,11 +11,11 @@ ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2993ef3f424aa6487681e194f21e0f82193342ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f9fc23cf7afbd28f0c9ae438cbce298cbf362fbd
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)。  
@@ -182,4 +182,4 @@ int Method3() { return 0; }
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
  [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)
+ [屬性](../../../../../docs/standard/attributes/index.md)

@@ -13,11 +13,11 @@ ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2965543066b0846a6a4f8a3199590049947122f2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
 互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。 在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。 COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Win32 API 都是 Unmanaged 程式碼的範例。  
@@ -49,5 +49,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)  
+ [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
  [逐步解說：Office 程式設計](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

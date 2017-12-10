@@ -12,11 +12,11 @@ ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f714bded446e62ac6165d691d2404249275178e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab40de46bf198cf683ec4847a42d88b3d4807e0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
 事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」*(raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」*(handle)) 事件的類別則稱為 *「訂閱者」*(subscriber)。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 -   事件通常用於對使用者的動作 (例如在圖形化使用者介面內按一下按鈕或選取功能表) 發出信號。  
   
--   當某事件擁有多個訂閱者時，便會在事件引發的同時叫用事件處理常式。 若要以非同步方式叫用事件，請參閱 [Calling Synchronous Methods Asynchronously](https://msdn.microsoft.com/library/2e08f6yc)。  
+-   當某事件擁有多個訂閱者時，便會在事件引發的同時叫用事件處理常式。 若要以非同步方式叫用事件，請參閱 [Calling Synchronous Methods Asynchronously](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)。  
   
 -   在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫中，事件會以 <xref:System.EventHandler> 委派和 <xref:System.EventArgs> 基底類別為基礎。  
   
@@ -67,5 +67,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.EventHandler>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [委派](../../../csharp/programming-guide/delegates/index.md)  
- [在 Windows Forms 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4.aspx)  
- [使用事件架構非同步模式設計多執行緒程式](https://msdn.microsoft.com/library/hkasytyf)
+ [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [使用事件架構非同步模式設計多執行緒程式](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
