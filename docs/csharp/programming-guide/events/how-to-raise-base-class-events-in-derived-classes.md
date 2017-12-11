@@ -9,11 +9,11 @@ ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 548409d3f632213f3ff1de0a27a70b9f42b18332
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9da65958ce827fab642f4a6310d0c68dfb951a6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何：在衍生類別中引發基底類別事件 (C# 程式設計手冊)
 下列簡單的範例示範在基底類別中宣告事件的標準方式，讓事件也可以從衍生類別引發。 這個模式會在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫的 Windows Forms 類別中廣泛使用。  
@@ -31,4 +31,4 @@ ms.lasthandoff: 11/21/2017
  [事件](../../../csharp/programming-guide/events/index.md)  
  [委派](../../../csharp/programming-guide/delegates/index.md)  
  [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [在 Windows Forms 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4.aspx)
+ [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

@@ -14,11 +14,11 @@ ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 307af0767d57612d8996f75c2f8814a83f20baf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b1bda4a3465af4ed95de720117ea2e03f9a86b84
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  為了確保 `My.Application.Log` 使用記錄檔接聽程式，您應該建立強式名稱的組件以包含記錄檔接聽程式。  
   
- 下一個程序提供一些簡單的步驟，以建立強式名稱的記錄檔接聽程式組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](https://msdn.microsoft.com/library/xwb8f617)。  
+ 下一個程序提供一些簡單的步驟，以建立強式名稱的記錄檔接聽程式組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>若要建立強式名稱的記錄檔接聽程式組件  
   

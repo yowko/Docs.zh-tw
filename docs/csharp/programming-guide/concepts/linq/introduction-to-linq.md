@@ -11,11 +11,11 @@ ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6fd14840cfffb1a59949251b26c168aada336de9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cc654dd020d3a20b028cd6545b00de84193174ac
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-c"></a>LINQ 簡介 (C#)
 Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技術，用來填補許多物件與資料之間的缺口。  
@@ -33,7 +33,7 @@ Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技
 ## <a name="next-steps"></a>後續步驟  
  若要深入了解 LINQ 的詳細資料，請先參閱[開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) 的＜使用者入門＞一節以熟悉一些基本概念，然後閱讀您感興趣的 LINQ 技術文件：  
   
--   SQL Server 資料庫：[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+-   SQL Server 資料庫：[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
 -   XML 文件：[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   

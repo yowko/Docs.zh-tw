@@ -11,11 +11,11 @@ ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  
@@ -148,7 +148,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [屬性](../../../../../docs/standard/attributes/index.md)  
  [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [屬性](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  

@@ -13,17 +13,17 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 37d32d938f49d0767594e0f141d5a463ad5fc95f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-the-data-service"></a>建立資料服務
-在這個工作中，您將建立使用的範例資料服務[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]Northwind 範例資料庫為基礎的摘要。 這個工作包含下列基本步驟：  
+在這個工作中，您將建立使用的範例資料服務[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind 範例資料庫為基礎的摘要。 這個工作包含下列基本步驟：  
   
 1.  建立 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式。  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  服務的名稱，輸入`Northwind`。  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio 會針對新的服務建立 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在**方案總管中**，服務將會具有名稱 Northwind，副檔名為.svc.cs 或.svc.vb。  
+     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio 會針對新的服務建立 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在**方案總管 中**，服務將會具有名稱 Northwind，副檔名。 為.svc.cs 或.svc.vb。  
   
 4.  在資料服務的程式碼裡，於定義資料服務和型別的類別定義中，取代註解 `/* TODO: put your data source class name here */`，該型別是資料模型的實體容器，在這個案例中是 `NorthwindEntities`。 類別定義看起來應如下列：  
   

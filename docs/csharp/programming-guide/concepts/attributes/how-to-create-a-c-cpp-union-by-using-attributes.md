@@ -11,11 +11,11 @@ ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 450fb922079ca6737b8db7754f25435b9c3b884b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9274b585c2fecf53b94d94f9bdfdaf4a47f1041
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何：使用屬性建立 C/C++ 等位 (C#)
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [屬性](../../../../../docs/standard/attributes/index.md)  
  [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  

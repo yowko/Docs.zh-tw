@@ -11,11 +11,11 @@ ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e0a8912aa60e4c2918bb812963d83fae8d529f1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  
@@ -241,6 +241,6 @@ class SampleClass
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [屬性](../../../../../docs/standard/attributes/index.md)  
  [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

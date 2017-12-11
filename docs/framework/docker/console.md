@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 
@@ -59,7 +59,7 @@ Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-u
 ## <a name="building-the-application"></a>建置應用程式
 主控台應用程式通常是透過安裝程式、FTP 或檔案共用部署來散發。 部署至容器時，這些資產必須加以編譯並暫存到建立 Docker 映像時可使用的位置。
 
-在 *build.ps1* 中，指令碼會使用 [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
+在 *build.ps1* 中，指令碼會使用 [MSBuild](/visualstudio/msbuild/msbuild) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
 
 在 `Invoke-MSBuild` 的呼叫中，`OutputPath` 會設定為 **publish**，而 `Configuration` 會設定為 [發行]。 
 

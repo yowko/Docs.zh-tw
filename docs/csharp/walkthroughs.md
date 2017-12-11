@@ -12,11 +12,11 @@ ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -37,19 +37,19 @@ ms.lasthandoff: 11/21/2017
  [建立和使用動態物件 (C# 和 Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  顯示如何建立可動態公開文字檔內容的自訂物件，以及如何建立使用 `IronPython` 程式庫的專案。  
    
- [使用 Visual C# 撰寫複合控制項](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ [使用 Visual C# 撰寫複合控制項](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  示範如何建立簡單的複合控制項，以及透過繼承來擴充其功能。  
   
- [建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ [建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  說明如何建立自訂控制項的自訂設計工具。  
   
- [使用 Visual C# 繼承來自 Windows Forms 的控制項](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ [使用 Visual C# 繼承來自 Windows Forms 的控制項](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  示範如何建立簡單的繼承按鈕控制項。 此按鈕繼承標準 Windows Form 按鈕的功能，並公開自訂成員。  
   
- [在設計階段偵錯自訂的 Windows Forms 控制項](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ [在設計階段偵錯自訂的 Windows Forms 控制項](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  說明如何偵錯自訂控制項的設計階段行為。
 
- [使用 Windows Forms 控制項中的智慧標籤執行一般工作](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ [使用 Windows Forms 控制項中的智慧標籤執行一般工作](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  示範一些經常執行的工作，例如，在 `TabControl` 上加入或移除索引標籤、將控制項固定到其父系，以及變更 `SplitContainer` 控制項的方向。  
   
  [在 C# 中撰寫查詢 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
