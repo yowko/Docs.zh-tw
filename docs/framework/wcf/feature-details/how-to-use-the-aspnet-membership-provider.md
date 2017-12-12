@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 74056ae23b08850b9c9a564248d6e276fc518a8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 950e748ae8ea883ac3e8d5257ef9ab07dffc4acc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>HOW TO：使用 ASP.NET 成員資格提供者
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者是能夠讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發人員建立網站的功能，而網站可以讓使用者建立專屬的使用者名稱和密碼組合。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 都可以使用該網站與其服務。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  在 Web.config 檔案中，在 <`system.web`> 項目，建立 <`membership`> 項目。  
   
-2.  在 `<membership>` 項目之下建立`<providers>` 項目。  
+2.  在 `<membership>` 項目之下建立`<providers>`項目。  
   
 3.  做為子項 <`providers`> 項目，加入`<clear />`排清的提供者集合的項目。  
   

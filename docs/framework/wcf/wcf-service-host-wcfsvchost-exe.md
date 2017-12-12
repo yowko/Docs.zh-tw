@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 caps.latest.revision: "27"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 709e73b0fe665d836dfa50a630de35d955e110eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 39d59e23b407a01e91f68022a1b67e590858235e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務主機 (WcfSvcHost.exe) 可讓您啟動 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe) 或自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 10/18/2017
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>不指定任何用戶端  
- 若要指定之後會使用任何用戶端[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務裝載，以滑鼠右鍵按一下您的專案中**方案總管中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取 [ **偵錯**] 索引標籤。按一下**起始專案**留下**命令列引數**對話方塊保留空白。  
+ 若要指定之後會使用任何用戶端[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務裝載，以滑鼠右鍵按一下您的專案中**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取 [**偵錯**] 索引標籤。按一下**起始專案**留下**命令列引數**對話方塊保留空白。  
   
 #### <a name="using-a-custom-host"></a>使用自訂主機  
  若要使用自訂主機，以滑鼠右鍵按一下您的專案中**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始外部程式**和輸入自訂主應用程式的完整路徑。 您也可以使用**命令列引數**對話方塊來指定要傳遞給主機的引數。  

@@ -1,5 +1,5 @@
 ---
-title: "在 C# 7-C# 手冊中最新消息"
+title: "C# 7 的新功能 - C# 指南"
 description: "取得 C# 語言未來版本 7 的新功能概觀。"
 keywords: "C#, .NET, .NET Core, 最新功能, 新功能"
 author: BillWagner
@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>C# 7 的新功能
 
 C# 7 新增許多新功能至 C# 語言︰
-* [`out`變數](#out-variables)
+* [`out` 變數](#out-variables)
     - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
 * [元組](#tuples)
     - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
 * [捨棄](#discards)
-    - 捨棄是您不在意指派的值時，指派中使用的暫時、 以唯寫的變數。 當解構 tuple 和使用者定義型別，以及時呼叫的方法會特別有用`out`參數。
+    - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構元組及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄特別實用。
 * [模式比對](#pattern-matching)
     - 您可以建立以任意類型和這些類型成員的值為基礎的分支邏輯。
 * [`ref` 區域變數和傳回](#ref-locals-and-returns)
@@ -82,30 +82,30 @@ return result;
 > 新的 Tuple 功能需要 <xref:System.ValueTuple> 類型。
 > 您必須新增 NuGet 套件 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)，以將它用於不包含類型的平台。
 >
-> 這類似於依賴架構中所傳遞類型的其他語言功能。 範例包括`async`和`await`依賴`INotifyCompletion`介面和 LINQ 依賴`IEnumerable<T>`。 不過，傳遞機制會變更，因為 .NET 變得與平台更為無關。 .NET Framework 可能不會永遠隨附於相同的步調，作為語言編譯器。 如果新語言功能依賴新類型，則在提供語言功能時，會以 NuGet 套件形式提供這些類型。 因為這些新類型會新增至 .NET Standard API 並傳遞為架構的一部分，所以將會移除 NuGet 套件需求。
+> 這類似於依賴架構中所傳遞類型的其他語言功能。 範例包含依賴 `INotifyCompletion` 介面的 `async` 和 `await`，以及依賴 `IEnumerable<T>` 的 LINQ。 不過，傳遞機制會變更，因為 .NET 變得與平台更為無關。 .NET Framework 可能不會永遠隨附於相同的步調，作為語言編譯器。 如果新語言功能依賴新類型，則在提供語言功能時，會以 NuGet 套件形式提供這些類型。 因為這些新類型會新增至 .NET Standard API 並傳遞為架構的一部分，所以將會移除 NuGet 套件需求。
 
 C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的。 但有時候豐富的語法需要額外的工作才能得到最少的好處。 您可能經常撰寫需要包含多個資料項目之簡單結構的方法。 為了支援這些案例，C# 已新增 *Tuple*。 Tuple 是輕量的資料結構，其中包含多個欄位來代表資料成員。
 不會驗證這些欄位，且您不能定義自己的方法
 
 > [!NOTE]
-> Tuple 才 C# 7、 但效率不佳和它們已經沒有語言支援。
-> 也就是說，僅無法當做參考 tuple 項目`Item1`， `Item2` ，依此類推。 C# 7 引進了語言支援，可讓語意的 tuple，使用新的、 更有效率的 tuple 類型的欄位名稱的 tuple。
+> 元組在 C# 7 之前即可使用，但效率不彰且沒有語言支援。
+> 這表示元組元素只能參考為 `Item1`及 `Item2` 等等。 C# 7 加入了元組的語言支援，讓元組欄位的語意名稱能使用全新且更具效率的元組型別。
 
 您可以指派每個成員到一個值，以建立 Tuple︰
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-指派會建立其成員的 tuple`Item1`和`Item2`，您可以使用相同的方式<xref:System.Tuple>您可以變更建立 tuple，其中提供語意到每個 tuple 的成員名稱的語法：
+指派會建立成員為 `Item1` 與 `Item2` 的元組，而您能使用與 <xref:System.Tuple> 相同的方式加以使用。您可以變更語法，以建立能夠為元組中每位成員提供語意名稱的元組：
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只在編譯階段存在，並且不保留例如時檢查在執行階段使用反映的 tuple。
+`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時間出現而不會保留，例如在執行階段使用反映調查元組時。
 
 在 Tuple 指派中，您也可以在指派的右邊，指定欄位的名稱︰
 
 [!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
 
-您可以指派的左側和右側端上指定的欄位名稱：
+您可以在指定指派左側及右側的欄位名稱︰
 
 [!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
 
@@ -151,19 +151,19 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 ## <a name="discards"></a>捨棄
 
-通常當解構 tuple 或呼叫方法時`out`參數，會強迫定義其值，您不在意且不想要使用的變數。 C# 加入支援*捨棄*處理這種狀況。 捨棄是唯寫的變數，其名稱是`_`（底線字元）; 您可以指定所有您想要捨棄至單一變數的值。 捨棄就像是未指派的變數。指派陳述式，除了放棄不能在程式碼。
+通常在您解構元組或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對*捨棄*的支援，來應付這種狀況。 捨棄是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 捨棄類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
 
-捨棄可支援下列案例：
+下列情況中支援捨棄：
 
-* 當解構 tuple 或使用者定義型別。
+* 解構元組或使用者定義型別時。
 
-* 呼叫方法時[出](../language-reference/keywords/out.md)參數。
+* 以 [out](../language-reference/keywords/out.md) 參數呼叫方法時。
 
-* 在模式比對作業使用[是](../language-reference/keywords/is.md)和[切換](../language-reference/keywords/switch.md)陳述式。
+* 執行 [is](../language-reference/keywords/is.md) 及 [switch](../language-reference/keywords/switch.md) 陳述式的模式比對作業時。
 
-* 為獨立的識別項時要明確地識別捨棄指派的值。
+* 作為獨立識別項，當您想要將指派的值明確識別為捨棄時。
 
-下列範例會定義`QueryCityDataForYears`方法會傳回包含兩個不同的年份的某個城市資料 6 個 tuple。 在範例中的方法呼叫只關心方法所傳回的兩個母體擴展值，因此處理 tuple，因為它將解構 tuple 時，就會捨棄其餘的值。
+下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份的城市資料之 6 元組。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構元組時，將元組中剩餘的值視作捨棄處理。
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
@@ -175,9 +175,9 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 模式比對支援 `is` 運算式和 `switch` 運算式。 每個都讓您能檢查物件和其屬性，以判斷該物件是否符合搜尋的模式。 您使用 `when` 關鍵字來指定其他規則給該模式。
 
-### <a name="is-expression"></a>`is`運算式
+### <a name="is-expression"></a>`is` 運算式
 
-`is`模式運算式擴充熟悉`is`運算子來查詢超過它的型別物件。
+`is` 模式運算式會擴充熟悉的 `is` 運算子，來查詢其類型之外的物件。
 
 舉個簡單的案例。 我們會將功能加入此案例中，示範模式比對運算式如何讓處理非相關類型的演算法變簡單。 我們將從計算數次擲骰子總和的方法開始︰
 
@@ -203,7 +203,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 [!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
 
-上述程式碼會新增 `0` 的案例作為 `int` 的特殊案例，並新增 `null` 作為沒有輸入時的特殊案例。 這示範了參數模式運算式中的一個重要新功能︰`case` 運算式的順序現在有其重要性。 `0` 案例必須出現在一般 `int` 案例之前。 否則，第一個符合的模式將是 `int` 案例，即使值是 `0`。 如果您不小心比對運算式，尚未處理更新的情況下，編譯器會加上旗標，並產生錯誤。
+上述程式碼會新增 `0` 的案例作為 `int` 的特殊案例，並新增 `null` 作為沒有輸入時的特殊案例。 這示範了參數模式運算式中的一個重要新功能︰`case` 運算式的順序現在有其重要性。 `0` 案例必須出現在一般 `int` 案例之前。 否則，第一個符合的模式將是 `int` 案例，即使值是 `0`。 如果您意外排列比對運算式，以致排列較後的案例已經過處理，則編譯器會將其加上旗標並產生錯誤。
 
 這個相同的行為可啟用空輸入序列的特殊案例。
 您可以看到，具有項目之 `IEnumerable` 項目的案例，必須出現在一般 `IEnumerable` 案例之前。
@@ -215,9 +215,9 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 > [!NOTE]
 > 兩個 10 面的百分位數骰子可以代表從 0 到 99 的每個數字。 一顆骰子的邊已標示為 `00`、`10`、`20`...`90`。 另一顆骰子的邊已標示為 `0`、`1`、`2`...`9`。 將兩個骰子值相加，您就可以得到 0 到 99 的每個數字。
 
-若要將這種骰子加入集合，請先定義代表百分位數骰子的類型︰
+若要將這種骰子新增至集合，請先定義代表百分位數骰子的類型。 `TensDigit` 屬性可儲存值 `0`、`10`、`20`，最高到 `90`：
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 然後，新增新類型的 `case` 比對運算式︰
 
@@ -277,14 +277,14 @@ public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
 
 現在，在上述範例中的第二個 `WriteLine` 陳述式會印出值 `24`，表示已修改矩陣中的儲存體。 區域變數已使用 `ref` 修飾詞宣告，而且它需要 `ref` 傳回。 您必須在宣告 `ref` 變數時先初始化，您無法分割宣告和初始化。
 
-C# 語言具有三個其他規則，以保護您防範誤用`ref`區域變數，並傳回：
+C# 語言有三個其他的規則可保護您免於濫用 `ref` 區域變數和傳回值︰
 
-* 您無法將指派標準方法的傳回值至`ref`本機變數。
+* 您無法將標準方法傳回值指派到 `ref` 區域變數。
     - 這可杜絕類似 `ref int i = sequence.Count();` 的陳述式
 * 您不能傳回 `ref` 給變數，而該變數存留期不超過方法的執行。
-    - 這表示您無法傳回區域變數或類似的範圍變數的參考。
-* `ref`區域變數，並傳回不能與非同步方法。
-    - 編譯器無法確定是否所參考的變數具有已設定為其最終值非同步方法傳回時。
+    - 這表示您無法將參考傳回區域變數或類似範圍的變數。
+* `ref` 區域變數及傳回值無法配合非同步方法使用。
+    - 當非同步方法傳回時，編譯器無法確定參考的變數是否已設定為其最終的值。
 
 新增 ref 區域變數和 ref 傳回能啟用更有效率的演算法，因為可以避免複製值，或是多次執行取值作業。 
 
@@ -366,7 +366,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> 您需要加入 NuGet 套件[ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)才能使用<xref:System.Threading.Tasks.ValueTask%601>型別。
+> 您必須新增 NuGet 套件 [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)，才可使用 <xref:System.Threading.Tasks.ValueTask%601> 類型。
 
 簡單的最佳化就是使用 `ValueTask` 取代過去使用 `Task` 之處。 不過，如果您想要以手動方式執行額外的最佳化，可以快取來自非同步工作的結果，並在後續的呼叫中重複使用結果。 `ValueTask` 結構有一個具有 `Task` 參數的建構函式，讓您可以從任何現有非同步方法的傳回值來建構 `ValueTask`︰
 
