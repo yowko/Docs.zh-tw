@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -63,9 +63,9 @@ ms.lasthandoff: 11/21/2017
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) 和[範例 COM 類別](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Interop 的效能改善](http://go.microsoft.com/fwlink/?LinkId=99564)  
+ [Improving Interop Performance](http://go.microsoft.com/fwlink/?LinkId=99564) (提升 Interop 效能)  
  [COM Interop 簡介](http://go.microsoft.com/fwlink/?LinkId=112406)  
- [Managed 和 Unmanaged 程式碼之間封送處理](http://go.microsoft.com/fwlink/?LinkId=112398)  
- [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)  
+ [在受控碼和非受控碼之間進行封送處理](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
  [進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)

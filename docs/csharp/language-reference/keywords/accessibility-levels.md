@@ -1,6 +1,6 @@
 ---
 title: "存取範圍層級 (C# 參考)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>存取範圍層級 (C# 參考)
+
 使用存取修飾詞 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md) 來指定成員的下列其中一個已宣告存取範圍層級。  
   
 |已宣告存取範圍|意義|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 11/21/2017
 |`internal`|存取限於目前組件。|  
 |`protected internal`|存取限於目前組件或衍生自包含類別的類型。|  
 |`private`|存取限於包含類型。|  
-|`private protected`|存取限於包含的類別或衍生自包含目前組件內類別的類型。|  
+|`private protected`|存取限於目前組件內包含類別或衍生自包含類別的類型。 自 C# 7.2 起可用。 |  
   
- 只有一個存取修飾詞的成員或型別，除了當您使用`protected internal`或`private protected`組合。  
+ 一個成員或類型只允許一個存取修飾詞，但合併使用 `protected internal` 或 `private protected` 時除外。  
   
  命名空間上不允許存取修飾詞。 命名空間沒有存取限制。  
   

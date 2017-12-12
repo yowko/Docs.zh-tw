@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   擴充方法是帶入命名空間層級的範圍。 例如，如果有多個靜態類別在名為 `Extensions` 的單一命名空間中包含擴充方法，則 `using Extensions;` 指示詞會將這些擴充方法全都帶入範圍中。  
   
- 針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](https://msdn.microsoft.com/library/51ket42z)。  
+ 針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](../../../../docs/framework/app-domains/assembly-versioning.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [平行程式設計範例 （這些包含許多擴充方法範例）](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [平行程式設計範例 (包括許多範例擴充方法)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [參數和其影響轉換規則執行個體](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [語言之間的擴充方法的互通性](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [擴充方法和局部調用委派](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Conversion rules for Instance parameters and their impact](http://go.microsoft.com/fwlink/?LinkId=112385) (執行個體參數的轉換規則與其影響)  
+ [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386) (語言之間擴充方法的互通性)  
+ [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387) (擴充方法和局部調用委派)  
  [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388) (擴充方法繫結和錯誤報告)
