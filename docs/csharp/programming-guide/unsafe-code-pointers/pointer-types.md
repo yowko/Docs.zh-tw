@@ -37,7 +37,7 @@ void* identifier; //allowed but not recommended
   
  指標型別不會從 [object](../../../csharp/language-reference/keywords/object.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。  
   
- 當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如:   
+ 當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如:   
   
 ```  
 int* p1, p2, p3;   // Ok  
