@@ -13,28 +13,28 @@ ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1a49d36b8580812c08e9ee080a9602d9fc2027ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c2372380d8162d3e7760bba4a43cdb1c568bf5b
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="6972a-103">??</span><span class="sxs-lookup"><span data-stu-id="6972a-103">??</span></span> <span data-ttu-id="6972a-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="6972a-104">Operator (C# Reference)</span></span>
-<span data-ttu-id="6972a-105">`??` 運算子稱為 null 聯合運算子。</span><span class="sxs-lookup"><span data-stu-id="6972a-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="6972a-106">如果運算元不是 null，則會傳回左方運算元，否則傳回右方運算元。</span><span class="sxs-lookup"><span data-stu-id="6972a-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="9ea06-103">??</span><span class="sxs-lookup"><span data-stu-id="9ea06-103">??</span></span> <span data-ttu-id="9ea06-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9ea06-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="9ea06-105">`??` 運算子稱為 null 聯合運算子。</span><span class="sxs-lookup"><span data-stu-id="9ea06-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="9ea06-106">如果運算元不是 null，則會傳回左方運算元，否則傳回右方運算元。</span><span class="sxs-lookup"><span data-stu-id="9ea06-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6972a-107">備註</span><span class="sxs-lookup"><span data-stu-id="6972a-107">Remarks</span></span>  
- <span data-ttu-id="6972a-108">可為 Null 的類型可以表示來自類型網域的值，或值可以是未定義 (這種情況下，值為 null)。</span><span class="sxs-lookup"><span data-stu-id="6972a-108">A nullable type can represent a value from the type’s domain, or the value can be undefined (in which case the value is null).</span></span> <span data-ttu-id="6972a-109">您可以使用`??`運算子的語法表達能力傳回適當的值 （右方運算元） 當左的運算元必須可為 null 的型別，其值為 null。</span><span class="sxs-lookup"><span data-stu-id="6972a-109">You can use the `??` operator’s syntactic expressiveness to return an appropriate value (the right hand operand) when the left operand has a nullable type whose value is null.</span></span> <span data-ttu-id="6972a-110">如果您嘗試在不使用 `??` 運算子的情況下，將可為 null 的實值類型指派給不可為 null 的實值類型，則會產生編譯時期錯誤。</span><span class="sxs-lookup"><span data-stu-id="6972a-110">If you try to assign a nullable value type to a non-nullable value type without using the `??` operator, you will generate a compile-time error.</span></span> <span data-ttu-id="6972a-111">如果您使用轉型，而可為 null 的實值類型目前為未定義，則會擲回 `InvalidOperationException` 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6972a-111">If you use a cast, and the nullable value type is currently undefined, an `InvalidOperationException` exception will be thrown.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ea06-107">備註</span><span class="sxs-lookup"><span data-stu-id="9ea06-107">Remarks</span></span>  
+ <span data-ttu-id="9ea06-108">可為 Null 的類型可以表示來自類型網域的值，或值可以是未定義 (這種情況下，值為 null)。</span><span class="sxs-lookup"><span data-stu-id="9ea06-108">A nullable type can represent a value from the type’s domain, or the value can be undefined (in which case the value is null).</span></span> <span data-ttu-id="9ea06-109">當左方運算元是可為 Null 的型別且其值為 null 時，您可使用 `??` 運算子的語法表達能力傳回適當的值 (右方運算元)。</span><span class="sxs-lookup"><span data-stu-id="9ea06-109">You can use the `??` operator’s syntactic expressiveness to return an appropriate value (the right hand operand) when the left operand has a nullable type whose value is null.</span></span> <span data-ttu-id="9ea06-110">如果您嘗試在不使用 `??` 運算子的情況下，將可為 null 的實值類型指派給不可為 null 的實值類型，則會產生編譯時期錯誤。</span><span class="sxs-lookup"><span data-stu-id="9ea06-110">If you try to assign a nullable value type to a non-nullable value type without using the `??` operator, you will generate a compile-time error.</span></span> <span data-ttu-id="9ea06-111">如果您使用轉型，而可為 null 的實值類型目前為未定義，則會擲回 `InvalidOperationException` 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9ea06-111">If you use a cast, and the nullable value type is currently undefined, an `InvalidOperationException` exception will be thrown.</span></span>  
   
- <span data-ttu-id="6972a-112">如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6972a-112">For more information, see [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  
+ <span data-ttu-id="9ea06-112">如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9ea06-112">For more information, see [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  
   
- <span data-ttu-id="6972a-113">?? 運算子的結果</span><span class="sxs-lookup"><span data-stu-id="6972a-113">The result of a ??</span></span> <span data-ttu-id="6972a-114">不視為常數，即使它的兩個引數都是常數。</span><span class="sxs-lookup"><span data-stu-id="6972a-114">operator is not considered to be a constant even if both its arguments are constants.</span></span>  
+ <span data-ttu-id="9ea06-113">?? 運算子的結果</span><span class="sxs-lookup"><span data-stu-id="9ea06-113">The result of a ??</span></span> <span data-ttu-id="9ea06-114">不視為常數，即使它的兩個引數都是常數。</span><span class="sxs-lookup"><span data-stu-id="9ea06-114">operator is not considered to be a constant even if both its arguments are constants.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6972a-115">範例</span><span class="sxs-lookup"><span data-stu-id="6972a-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9ea06-115">範例</span><span class="sxs-lookup"><span data-stu-id="9ea06-115">Example</span></span>  
  [!code-csharp[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="6972a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6972a-116">See Also</span></span>  
- [<span data-ttu-id="6972a-117">C# 參考</span><span class="sxs-lookup"><span data-stu-id="6972a-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="6972a-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="6972a-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="6972a-119">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="6972a-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
- [<span data-ttu-id="6972a-120">可為 Null 的型別</span><span class="sxs-lookup"><span data-stu-id="6972a-120">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
- [<span data-ttu-id="6972a-121">「增益」(Lift) 的真正意義是什麼？</span><span class="sxs-lookup"><span data-stu-id="6972a-121">What Exactly Does 'Lifted' mean?</span></span>](http://go.microsoft.com/fwlink/?LinkID=112382)
+## <a name="see-also"></a><span data-ttu-id="9ea06-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ea06-116">See Also</span></span>  
+ [<span data-ttu-id="9ea06-117">C# 參考</span><span class="sxs-lookup"><span data-stu-id="9ea06-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="9ea06-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9ea06-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9ea06-119">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="9ea06-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
+ [<span data-ttu-id="9ea06-120">可為 Null 的型別</span><span class="sxs-lookup"><span data-stu-id="9ea06-120">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
+ [<span data-ttu-id="9ea06-121">「增益」(Lift) 的真正意義是什麼？</span><span class="sxs-lookup"><span data-stu-id="9ea06-121">What Exactly Does 'Lifted' mean?</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
