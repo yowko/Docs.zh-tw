@@ -7,11 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f43f569cdb8b9e4be68b61ba7b5cc4686fdb871
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -146,7 +146,7 @@ dotnet /build_output/my_app.dll
 
 ## <a name="migration-from-projectjson"></a>從 project.json 移轉
 
-如果您使用 Preview 2 工具來產生 *project.json* 型專案，請參閱 [dotnet migrate](dotnet-migrate.md) 主題，來取得移轉專案至 MSBuild/*.csproj* 以搭配發行工具使用的詳細資訊。 針對在 Preview 2 工具發行之前建立的 .NET Core 專案，可以遵循[從 DNX 移轉到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指導方針來手動更新，然後使用 `dotnet migrate`，或者直接升級您的專案。
+如果您使用 Preview 2 工具來產生 *project.json* 型專案，請參閱 [dotnet migrate](dotnet-migrate.md) 主題，來取得移轉專案至 MSBuild/*.csproj* 以搭配發行工具使用的詳細資訊。 對於在 Preview 2 工具發行之前建立的 .NET Core 專案，請依照[從 DNX 移轉到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指導，手動更新專案，然後再使用 `dotnet migrate` 或直接升級您的專案。
 
 ## <a name="see-also"></a>請參閱
 

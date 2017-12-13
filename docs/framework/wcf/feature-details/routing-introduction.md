@@ -13,11 +13,11 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b1347ff4e04a638ed5973f20ae64ef0058dc025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
  下列範例會同時以程式設計方式和使用組態檔的方式，定義路由服務使用的服務和用戶端端點。  
   
 ```xml  
-<services>  
+    <services>  
       <!--ROUTING SERVICE -->  
       <service behaviorConfiguration="routingData"  
                name="System.ServiceModel.Routing.RoutingService">  
@@ -61,7 +61,8 @@ ms.lasthandoff: 11/21/2017
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      </service>  
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+      </service>  
     </services>  
     <behaviors>  
       <serviceBehaviors>  
