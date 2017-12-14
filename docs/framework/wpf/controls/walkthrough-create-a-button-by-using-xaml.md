@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目標是了解如何建立動畫的按鈕，以用於[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式。 本逐步解說會使用樣式和範本建立自訂的按鈕的資源，讓重複使用程式碼，以及從按鈕宣告按鈕邏輯分離。 這個逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
     </Application>  
     ```  
   
-     資源範圍取決於您用來定義資源。 定義中的資源`Application.Resoureses`app.xaml 檔案可讓要從任何地方使用應用程式的資源。 若要深入了解定義資源的範圍，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+     資源範圍取決於您用來定義資源。 定義中的資源`Application.Resources`app.xaml 檔案可讓要從任何地方使用應用程式的資源。 若要深入了解定義資源的範圍，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
 2.  **建立樣式，並定義與它的基本屬性值：**加入下列標記以`Application.Resources`區塊。 這個標記會建立<xref:System.Windows.Style>可套用至應用程式設定中的所有按鈕<xref:System.Windows.FrameworkElement.Width%2A>為 90 的按鈕和<xref:System.Windows.FrameworkElement.Margin%2A>為 10:  
   
@@ -328,7 +328,7 @@ ms.lasthandoff: 11/21/2017
   
      按 F5 執行應用程式，然後按一下其中一個按鈕。 請注意，按鈕會維持反白顯示之後，按一下因為仍有焦點。 如果您按一下另一個按鈕時，[新增] 按鈕時的最後一個失去它，就會取得焦點。  
   
-4.  **加入表示**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:**接下來我們將某些動畫加入至觸發程序。   加入下列任何位置內的標記`ControlTemplate.Triggers`區塊。  
+4.  **加入表示**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:**接下來我們將某些動畫加入至觸發程序。 加入下列任何位置內的標記`ControlTemplate.Triggers`區塊。  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

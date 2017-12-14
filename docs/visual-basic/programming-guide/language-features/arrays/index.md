@@ -1,10 +1,8 @@
 ---
 title: "Visual Basic 中的陣列"
 ms.custom: 
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords: vb.Array
@@ -12,262 +10,311 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-caps.latest.revision: "47"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 04deeccd19fd4edb3f2c88310d660eedf5c707d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.manager: wpickett
+ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
-「陣列」是一組值，這些值在邏輯上彼此相關，就像文法學校中，各年級的學生總數一樣。  如果您在尋找 Visual Basic for Applications (VBA) 陣列的說明，請參閱 [語言參考](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx)。  
-  
- 藉由使用陣列，您可以透過相同名稱參考這些相關值，並使用稱為索引或註標的數字來加以區分。 這些個別值稱為陣列的項目。 它們是從索引 0 到最高索引值的連續值。  
-  
- 相對於陣列，包含單一值的變數稱為 *「純量」(Scalar)* 變數。  
+陣列是一組值，會稱為*元素*，邏輯上彼此相關的。 例如，陣列可能包含文法學校中; 每一年級學生數目陣列的每個項目是單一年級的學生數目。 同樣地，陣列可能包含一位學生成績類別;陣列的每個項目是單一的等級。    
+
+它是可能的個別變數來儲存每個我們資料的項目。 例如，如果我們的應用程式會分析學生成績，我們可以使用個別的變數的每一位學生成績，例如`englishGrade1`，`englishGrade2`等等。這個方法有三個主要的限制：
+- 我們必須在執行階段知道我們必須處理完全多少等級。
+- 快速處理大量的等級會變得不便。 這反而能夠讓應用程式更有可能有嚴重的錯誤。
+- 它是難以維護。 我們將加入每個新等級需要，修改、 重新編譯，並重新部署應用程式。  
+ 
+ 藉由使用陣列，您可以參考相同的名稱，這些相關的值，並使用數字，會呼叫*索引*或*註標*來識別個別的項目，根據其在陣列中的位置。 其中一個陣列中的項目總數大於或等於 0 的陣列範圍內的索引。 當您使用 Visual Basic 語法來定義陣列的大小時，您會指定其最高的索引，不在陣列中的項目總數。 您可以使用陣列做為一個單位，而且能夠逐一查看其項目可讓您不必知道完全多少項目包含在設計階段。
   
  開始說明前，先提供一些簡單的範例：  
   
 ```vb  
-'Declare a single-dimension array of 5 values  
+' Declare a single-dimension array of 5 numbers.  
 Dim numbers(4) As Integer   
   
-'Declare a single-dimension array and set array element values  
+'Declare a single-dimension array and set its 4 values.  
 Dim numbers = New Integer() {1, 2, 4, 8}  
   
-'Redefine the size of an existing array retaining the current values  
-ReDim Preserve numbers(15)  
+' Change the size of an existing array to 16 elements and retain the current values.
+ReDim Preserve numbers(15)
   
-'Redefine the size of an existing array, resetting the values  
+' Redefine the size of an existing array and reset the values.
 ReDim numbers(15)  
   
-'Declare a multi-dimensional array  
+' Declare a 6 x 6 multidimensional array.
 Dim matrix(5, 5) As Double  
   
-'Declare a multi-dimensional array and set array element values  
-Dim matrix = New Integer(4, 4) {{1, 2}, {3, 4}, {5, 6}, {7, 8}}  
+' Declare a 4 x 3 multidimensional array and set array element values.  
+Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}  
   
-'Declare a jagged array  
+' Declare a jagged array  
 Dim sales()() As Double = New Double(11)() {}  
 ```  
   
- **本主題內容**  
+ ## <a name="in-this-article"></a>本文內容
   
--   [簡單陣列中的陣列項目](#BKMK_ArrayElements)  
+- [簡單陣列中的陣列項目](#array-elements-in-a-simple-array)  
   
--   [建立陣列](#BKMK_CreatingAnArray)  
+- [建立陣列](#creating-an-array)  
   
--   [在陣列中儲存值](#BKMK_StoringValues)  
+- [在陣列中儲存值](#storing-values-in-an-array)  
   
--   [在陣列填入初始值](#BKMK_Populating)  
+- [填入陣列常值的陣列](#populating-an-array-with-array-literals)  
   
-    -   [巢狀陣列常值](#BKMK_NestedArrayLiterals)  
+- [逐一查看陣列](#iterating-through-an-array)  
   
--   [逐一查看陣列](#BKMK_Iterating)  
+- [陣列大小](#BKMK_ArraySize)  
+
+- [陣列類型](#the-array-type)  
   
--   [做為傳回值和參數的陣列](#BKMK_ReturnValues)  
+- [以陣列做為傳回值和參數](#arrays-as-return-values-and-parameters)  
+- [不規則的陣列](#jagged-arrays)  
   
--   [不規則陣列](#BKMK_JaggedArrays)  
+- [零長度陣列](#zero-length-arrays)  
+
+- [分割陣列](#splitting-an-array)
   
--   [長度為零的陣列](#BKMK_ZeroLength)  
+- [使用集合取代陣列](#collections-as-an-alternative-to-arrays)  
   
--   [陣列大小](#BKMK_ArraySize)  
+##  <a name="array-elements-in-a-simple-array"></a>簡單陣列中的陣列項目  
+
+讓我們來建立名為陣列`students`儲存文法學校中每一年級的學生總數一樣。 項目的索引範圍從 0 到 6。 使用此陣列是簡單較宣告七個變數。
+
+下圖顯示`students`陣列。 對於陣列的每一項目︰  
   
--   [陣列類型及其他類型](#BKMK_ArrayTypes)  
+-   項目的索引代表年級 (索引 0 代表幼稚園)。
   
--   [使用集合取代陣列](#BKMK_Collections)  
-  
-##  <a name="BKMK_ArrayElements"></a> 簡單陣列中的陣列項目  
- 下列範例宣告含有文法學校中每一年級學生數目的陣列變數。  
-  
- [!code-vb[VbVbalrArrays#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#2)]  
-  
- 前述範例中的陣列 `students` 包含了七個項目。 項目的索引範圍從 0 到 6。 建立此陣列較宣告七個不同的變數來得簡單。  
-  
- 下圖顯示陣列 `students`。 對於陣列的每一項目︰  
-  
--   項目的索引代表年級 (索引 0 代表幼稚園)。  
-  
--   項目包含的值代表該年級的學生數目。  
+-   項目包含的值代表該年級的學生數目。
   
  ![顯示學生人數的陣列圖](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool")  
 "students" 陣列的項目  
+ 
+下列範例包含建立及使用陣列的 Visual Basic 程式碼：
+
+ [!code-vb[simple-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/simple-array.vb)]  
+
+此範例會執行三個動作：
+
+- 它會宣告`students`七個元素的陣列。 數目`6`在陣列宣告表示陣列中的最後一個索引，這是一個陣列中的項目數大於或等於。
+- 它會將值指派給陣列中每個元素。 陣列元素的存取使用的陣列名稱，包括在括號中的個別項目的索引。
+- 它會列出每個值的陣列。 此範例會使用[ `For` ](../../../language-reference/statements/for-next-statement.md)陳述式來存取陣列的每個項目依其索引編號。
   
- 下列範例說明參考陣列 `students`第一、第二和最後一個項目的方法。  
+ `students`在上述範例中的陣列是一維陣列，因為它會使用一個索引。 陣列，其中會使用一個以上的索引或註標稱為*多維度*。 如需詳細資訊，請參閱本文的其餘部分和[在 Visual Basic 中的陣列維度](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
   
- [!code-vb[VbVbalrArrays#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#3)]  
+##  <a name="creating-an-array"></a>建立陣列  
+ 
+您可以數種方式來定義陣列的大小： 
+
+- 宣告陣列時，您可以指定大小：
   
- 您可以只使用沒有索引的陣列變數名稱，用來當做整個陣列的參考。  
+    [!code-vb[creating1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]  
   
- 前述範例中的陣列 `students` 使用了一個索引，所以是一維陣列。 使用一個以上的索引或註標則稱為多維。 如需詳細資訊，請參閱本主題和 [Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)中的其他部分。  
+ - 您可以使用`New`子句提供陣列的大小，在建立時：  
   
-##  <a name="BKMK_CreatingAnArray"></a> 建立陣列  
- 您可以使用數種方式來定義陣列的大小。 您可以在宣告陣列時提供大小，如下列範例所示。  
+    [!code-vb[creating2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]  
   
- [!code-vb[VbVbalrArrays#12](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#12)]  
+ 如果您有現有的陣列，您可以重新定義其大小使用[ `Redim` ](../../../../visual-basic/language-reference/statements/redim-statement.md)陳述式。 您可以指定`Redim`陳述式保留陣列中的值，或您可以指定它建立的空陣列。 下列範例顯示 `Redim` 陳述式的不同使用方法，以修改現有陣列的大小。  
   
- 您也可以在建立陣列時使用 `New` 子句提供陣列大小，如下列範例所示。  
+ [!code-vb[redimensioning](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]  
   
- [!code-vb[VbVbalrArrays#11](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#11)]  
+ 如需詳細資訊，請參閱[ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)。  
   
- 如果您有現有的陣列，便可以使用 `Redim` 陣述式來重新定義其大小。 您可以指定 `Redim` 陳述式應保留陣列中的值，也可以指定建立空的新陣列。 下列範例顯示 `Redim` 陳述式的不同使用方法，以修改現有陣列的大小。  
+##  <a name="storing-values-in-an-array"></a>在陣列中儲存值
+ 
+ 您可以使用類型為 `Integer`的索引來存取陣列中的每一個位置。 使用括弧內的陣列索引即可參照各陣列的位置，從而儲存並擷取陣列中的值。 多維陣列的索引會以逗號 （，） 分隔。 各個陣列維度皆需一個索引。 
+
+下列範例顯示一些儲存和擷取值，在陣列中的陳述式。
   
- [!code-vb[VbVbalrArrays#13](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#13)]  
+ [!code-vb[store-and-retrieve](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/store-and-retrieve.vb)]  
   
- 如需詳細資訊，請參閱 [ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)。  
+## <a name="populating-an-array-with-array-literals"></a>填入陣列常值的陣列
+ 藉由使用陣列常值，您可以同時建立填入一組初始的值陣列。 陣列常值由大括弧 (`{}`) 括住的逗點分隔值清單構成。  
   
-##  <a name="BKMK_StoringValues"></a> 在陣列中儲存值  
- 您可以使用類型為 `Integer`的索引來存取陣列中的每一個位置。 使用括弧內的陣列索引即可參照各陣列的位置，從而儲存並擷取陣列中的值。 多維陣列的索引以逗號 (,) 分隔。 各個陣列維度皆需一個索引。 下列範例顯示一些將值儲存在陣列中的陳述式。  
+ 當您使用陣列常值來建立陣列時，可以提供陣列類型，或者使用類型推斷來判別陣列類型。 下列範例會示範這兩個選項。  
   
- [!code-vb[VbVbalrArrays#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#5)]  
+ [!code-vb[create-with-literals](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]  
   
- 下列範例顯示一些從陣列中取得值的陳述式。  
+ 當您使用類型推斷時，陣列的類型由*主類型*常值的清單中。 主控項的類型是陣列中的所有其他類型可以擴大範圍類型。 如果無法決定此唯一類型，則主類型將成為陣列中其他類型皆可縮小而成的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 例如，如果提供給陣列常值的值清單含有類型值 `Integer`、 `Long`和 `Double`，則結果陣列的類型是 `Double`。 因為`Integer`和`Long`只加寬`Double`，`Double`是主類型。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。 
+ 
+> [!NOTE] 
+> 您可以使用類型推斷只對定義為型別成員中的本機變數的陣列。 如果沒有明確的類型定義，定義與類別層級的陣列常值的陣列是屬於型別`Object[]`。 如需詳細資訊，請參閱[區域類型推斷](../variables/local-type-inference.md)。 
+
+請注意，前一個範例會定義`values`類型的陣列為`Double`即使所有陣列常值型別的`Integer`。 您可以建立此陣列，因為陣列常值中的值可以擴展為`Double`值。 
   
- [!code-vb[VbVbalrArrays#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#6)]  
+ 您也可以建立及擴展的多維度陣列使用*巢狀陣列常值*。 巢狀的陣列常值必須有維度的數目的結果陣列一致。 下列範例會使用巢狀的陣列常值建立整數的二維陣列。  
   
-##  <a name="BKMK_Populating"></a> 在陣列填入初始值  
- 您可以使用陣列常值來建立含有一組初始值的陣列。 陣列常值由大括弧 (`{}`) 括住的逗點分隔值清單構成。  
+ [!code-vb[nested-array-literals](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]  
   
- 當您使用陣列常值來建立陣列時，可以提供陣列類型，或者使用類型推斷來判別陣列類型。 下列程式碼顯示這兩種選項。  
+當使用巢狀的陣列常值來建立和填入的陣列，如果巢狀的陣列常值中的項目數目不相符，也會發生錯誤。 如果您明確宣告要有不同數量的維度多於陣列常值的陣列變數，也會發生錯誤。 
   
- [!code-vb[VbVbalrCollectionInitializers#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#3)]  
+就如同您可以為一維陣列，您可以依賴類型推斷使用巢狀的陣列常值建立多維陣列時。 推斷的型別是主控項的所有巢狀層級的所有陣列常值中的所有值的類型。 下列範例會建立類型的二維陣列`Double[,]`類型的值從`Integer`和`Double`。  
   
- 使用類型推斷時，陣列的類型是由提供當做陣列常值之值清單中的主類型決定。 在陣列常值中，只有主類型是其他類型皆可擴展而成的類型。 如果無法決定此唯一類型，則主類型將成為陣列中其他類型皆可縮小而成的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 例如，如果提供給陣列常值的值清單含有類型值 `Integer`、 `Long`和 `Double`，則結果陣列的類型是 `Double`。 `Integer` 和 `Long` 都只會擴展為 `Double`。 因此， `Double` 是主類型。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。 這些推斷規則適用於針對類別成員中定義之陣列 (即區域變數) 進行的類型推斷。 雖然您可以在建立類別層級的變數時使用陣列常值，但無法在該類別層級使用類型推斷。 因此，在類別層級指定的陣列常值，會將提供當做陣列常值之值的類型推斷為 `Object`。  
-  
- 您可以明確指定使用陣列常值建立之陣列的項目類型。 在這種情況下，陣列常值中的值必須擴展為陣列項目類型。 下列程式碼範例將從整數清單建立類型為 `Double` 的陣列。  
-  
- [!code-vb[VbVbalrCollectionInitializers#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#4)]  
-  
-###  <a name="BKMK_NestedArrayLiterals"></a> 巢狀陣列常值  
- 您可以使用巢狀陣列常值來建立多維陣列。 巢狀陣列常值必須具有維度與稱為「順位」(Rank) 的維度數目，該維度數目必須和結果陣列一致。 下列程式碼範例將使用陣列常值建立整數的二維陣列。  
-  
- [!code-vb[VbVbalrCollectionInitializers#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#7)]  
-  
- 在前面範例中，如果巢狀陣列常值中的項目數量不一致，將會發生錯誤。 如果陣列變數明確宣告為非二維，也會發生錯誤。  
-  
-> [!NOTE]
->  您可以在提供不同維度之巢狀陣列常值時，使用括弧括住內部陣列常值來避免錯誤。 括弧將強制評估陣列常值運算式，結果值則用於外部陣列常值，如下列程式碼所示。  
-  
- [!code-vb[VbVbalrCollectionInitializers#11](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#11)]  
-  
- 使用巢狀陣列常值來建立多維陣列時，可以使用類型推斷。 當您使用類型推斷時，推斷的類型是某個巢狀層次之所有陣列常值中所有值的主類型。 下列程式碼範例將從類型為 `Double` 和 `Integer` 的值建立類型為 `Double`的二維陣列。  
-  
- [!code-vb[VbVbalrCollectionInitializers#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#8)]  
+ [!code-vb[nested-type-inference](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]  
   
  如需其他範例，請參閱[如何：在 Visual Basic 中初始化陣列變數](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)。  
   
-##  <a name="BKMK_Iterating"></a> 逐一查看陣列  
- 當您逐一查看陣列時，您從最低的索引到最高的索引來存取陣列中的每個項目。  
+##  <a name="iterating-through-an-array"></a>逐一查看陣列  
+ 當您逐一查看陣列時，您存取陣列中的每個項目從最低到最高的索引，或從最高到最低。 一般而言，請使用使用[For...下一個陳述式](../../../../visual-basic/language-reference/statements/for-next-statement.md)或[每個...下一個陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)來逐一查看陣列的項目。 當您不知道陣列的上限時，您可以呼叫<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>方法來取得索引的最大值。 雖然幾乎是最低的索引值永遠為 0，您就可以呼叫<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>方法來取得索引的最小值。   
   
- 下列範例使用 [For...Next 陳述式](../../../../visual-basic/language-reference/statements/for-next-statement.md)，逐一查看一維陣列。 <xref:System.Array.GetUpperBound%2A> 方法會傳回索引能擁有的最大值。 最小的索引值一律為 0。  
+ 下列範例逐一查看一維陣列使用[ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md)陳述式。 
   
- [!code-vb[VbVbalrArrays#41](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#41)]  
+ [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- 下列範例會使用 `For...Next` 逐一查看多維陣列。 <xref:System.Array.GetUpperBound%2A> 方法具有可指定維度的參數。 `GetUpperBound(0)` 會傳回第一個維度的最高索引值，而 `GetUpperBound(1)` 則傳回第二個維度的最高索引值。  
+ 下列範例逐一查看多維陣列使用[ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md)陳述式。 <xref:System.Array.GetUpperBound%2A> 方法具有可指定維度的參數。 `GetUpperBound(0)`傳回第一個維度中，最高的索引和`GetUpperBound(1)`傳回第二個維度的最高的索引。
   
- [!code-vb[VbVbalrArrays#42](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#42)]  
+ [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
- 下列範例使用 [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，逐一查看一維陣列。  
+ 下列範例會使用[每個...下一個陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)來逐一查看一維陣列和二維陣列。  
   
- [!code-vb[VbVbalrArrays#43](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#43)]  
+ [!code-vb[iterate-for-each-next](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]  
   
- 下列範例會使用 `For Each...Next` 逐一查看多維陣列。 不過，如果您使用巢狀 `For…Next` 陳述式 (如上述範例)，而不是 `For Each…Next` 陳述式，就能更充分控制多維陣列中的項目。  
+## <a name="array-size"></a>陣列大小  
+
+ 陣列大小為其所有維度長度之乘積。 它代表目前包含於陣列中的項目總數。  例如，下列範例會宣告具有四個項目，每個維度中的 2 維度陣列。 範例輸出所示，陣列的大小為 16 (或 (3 + 1) * (3 + 1)。
+
+ [!code-vb[array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]  
+
+> [!NOTE] 
+> 這裡討論的陣列大小不適用於不規則陣列。 如需不規則的陣列，決定不規則陣列的大小資訊，請參閱[不規則陣列](#jagged-arrays)> 一節。
   
- [!code-vb[VbVbalrArrays#44](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#44)]  
+  您可以使用 <xref:System.Array.Length%2A?displayProperty=nameWithType> 屬性來尋找陣列的大小。 您可以使用，以尋找每個維度的多維陣列的長度<xref:System.Array.GetLength%2A?displayProperty=nameWithType>方法。  
   
-##  <a name="BKMK_ReturnValues"></a> 做為傳回值和參數的陣列  
- 若要從 `Function` 程序傳回陣列，請將陣列資料型別和維度數目指定為 [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)的傳回型別。 在該函式內，使用相同的資料類型和維度數目來宣告區域陣列變數。 在 [Return 陳述式](../../../../visual-basic/language-reference/statements/return-statement.md)中，包含沒有括弧的區域陣列變數。  
-  
- 若要將陣列指定為 `Sub` 程序或 `Function` 程序的參數，請為參數定義所指定的資料類型和維度數目。 在對程序的呼叫中，傳送具有相同資料類型和維數的陣列變數。  
-  
- 在下列範例中， `GetNumbers` 函式會傳回 `Integer()`。 這個陣列類型是類型 `Integer`的一維陣列。 `ShowNumbers` 程序接受 `Integer()` 引數。  
-  
- [!code-vb[VbVbalrArrays#51](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#51)]  
-  
- 在下列範例中， `GetNumbersMultiDim` 函式會傳回 `Integer(,)`。 這個陣列類型是類型 `Integer`的二維陣列。  `ShowNumbersMultiDim` 程序接受 `Integer(,)` 引數。  
-  
- [!code-vb[VbVbalrArrays#52](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#52)]  
-  
-##  <a name="BKMK_JaggedArrays"></a> 不規則陣列  
- 將其他陣列當做項目的陣列，就是所謂的「陣列的陣列」或不規則陣列。 不規則陣列和不規則陣列中的每個項目都可以有一或多個維度。 有時候應用程式中的資料結構會是非矩形的二維陣列。  
-  
- 下列範例包含一個月份陣列，而該陣列的每個項目則是日期陣列。 由於不同月份的天數也不同，因此這些項目不會形成矩形的二維陣列。 因此使用不規則陣列，而非多維陣列。  
-  
- [!code-vb[VbVbalrArrays#21](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#21)]  
-  
-##  <a name="BKMK_ZeroLength"></a> 長度為零的陣列  
- 沒有任何項目的陣列也稱為長度為零的陣列。 含有長度為零之陣列的變數並不會具有 `Nothing`值。 若要建立沒有項目的陣列，請將陣列的其中一個維度宣告為 -1，如下列範例所示。  
-  
- [!code-vb[VbVbalrArrays#14](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#14)]  
-  
- 在下列情況中，您可能需要建立長度為零的陣列：  
-  
--   為了避免發生 <xref:System.NullReferenceException> 例外狀況，程式碼必須存取 <xref:System.Array> 類別的成員 (例如 <xref:System.Array.Length%2A> 或 <xref:System.Array.Rank%2A>)，或者呼叫 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Basic 函式 (例如 <xref:Microsoft.VisualBasic.Information.UBound%2A>)。  
-  
--   您希望不需檢查 `Nothing` (以特殊情況處理)，讓取用程式碼更簡單。  
-  
--   程式碼會與應用程式開發介面互動，這個介面會要求您傳遞長度為零的陣列給一個或多個程序，或從一個或多個程序傳回長度為零的陣列。  
-  
-##  <a name="BKMK_ArraySize"></a> 陣列大小  
- 陣列大小為其所有維度長度之乘積。 它代表目前包含於陣列中的項目總數。  
-  
- 下列範例宣告一個三維陣列︰  
-  
-```vb
-Dim prices(3, 4, 5) As Long  
-```  
-  
- `prices` 變數中陣列的整體大小為 (3 + 1) x (4 + 1) x (5 + 1) = 120。  
-  
- 您可以使用 <xref:System.Array.Length%2A> 屬性來尋找陣列的大小。 您也可以使用 <xref:System.Array.GetLength%2A> 方法來尋找多維陣列中每一維的長度。  
-  
- 您可以指派新的陣列物件或者使用 `ReDim` 陳述式來調整陣列變數的大小。  
+ 藉由指派新的陣列物件，或使用，您可以調整大小的陣列變數[`ReDim`陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)陳述式。 下列範例會使用`ReDim`陳述式來變更 51 元素陣列的 100 個元素的陣列。
+
+ [!code-vb[resize-an-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]  
   
  處理陣列大小時，請注意幾點︰  
   
 |||  
 |---|---|  
-|維度長度|每個維度的索引都以 0 為起點，也就是它的範圍是由 0 到它的上限為止。 因此，指定維度的長度會比該維度的宣告上限多 1。|  
-|長度限制|陣列的每個維度長度都受限於 `Integer` 資料型別的最大值，也就是 (2 ^ 31) - 1。 然而，陣列之總大小也同時受限於系統可用的記憶體。 若您試圖對總大小超過可用的 RAM 之陣列進行初始化，通用語言執行平台將擲回 <xref:System.OutOfMemoryException> 例外狀況。|  
-|大小及項目大小|陣列大小與其項目的資料類型無關。 大小一律是指項目的總數，而不是它們於儲存體中所佔的位元組。|  
+|維度長度|每個維度的索引是以 0 為基礎，這表示它範圍從 0 到它的上限。 因此，指定維度的長度是比該維度的宣告上限大一。|  
+|長度限制|每個維度陣列的長度是限制的最大值為`Integer`資料類型，這是<xref:System.Int32.MaxValue?displayProperty=nameWithType>或 (2 ^31)-1。 然而，陣列之總大小也同時受限於系統可用的記憶體。 如果您嘗試初始化陣列，超過可用記憶體數量，執行階段會擲回<xref:System.OutOfMemoryException>。|  
+|大小及項目大小|陣列大小與其項目的資料類型無關。 大小一律代表項目，不是，它們會耗用記憶體中位元組的數目總數。|  
 |記憶體消耗量|對陣列在記憶體中的儲存方式做任何假設都是不安全的。 儲存體會因不同資料寬度的平台而有差異，所以相同陣列於 64 位元系統上所佔記憶體將較 32 位元系統來的多。 當您初始化陣列時，隨著系統組態不同，通用語言執行平台 (CLR) 會指派儲存體盡可能將項目存放在一起，或是根據實體硬體界限全部加以調整。 同時，陣列需要耗用儲存體以供其控制資訊使用，此消耗量會隨著維度增加而增加。|  
+
+## <a name="the-array-type"></a>陣列類型 
+ 每個陣列都是資料類型，這不同於其項目的資料類型。 沒有任何單一的資料類型適用於所有的陣列。 陣列的類型反而是由陣列的維度數目，或稱為 *「順位」*(rank) 以及陣列項目的資料類型所決定。 兩個陣列變數屬於相同的資料類型具有相同的陣序，其項目包含相同的資料類型。 陣列維度的長度不會影響陣列資料類型。  
   
-##  <a name="BKMK_ArrayTypes"></a> 陣列類型及其他類型  
- 每個陣列都具有其資料類型，但此資料類型不同於陣列項目的資料類型。 沒有任何單一的資料類型適用於所有的陣列。 陣列的類型反而是由陣列的維度數目，或稱為 *「順位」*(rank) 以及陣列項目的資料類型所決定。 只要兩個陣列變數具有相同的順位且其項目具有相同的資料類型，就視為具有相同的資料類型。 陣列中維度的長度不會影響陣列的資料類型。  
+ 每個陣列都繼承自 <xref:System.Array?displayProperty=nameWithType> 類別，而您可以將變數宣告為類型 `Array`，但不能建立類型為 `Array` 的陣列。 例如，雖然下列程式碼會宣告`arr`變數型別`Array`並呼叫<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>方法來具現化的陣列，陣列的型別證明是 Object []。
+
+ [!code-vb[array-class](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)] 
+
+此外，[ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)無法在宣告為 `Array` 型別的變數上運作。 基於這些原因，以及型別安全，建議每個陣列為特定型別宣告。  
   
- 每個陣列都繼承自 <xref:System.Array?displayProperty=nameWithType> 類別，而您可以將變數宣告為類型 `Array`，但不能建立類型為 `Array` 的陣列。 此外，[ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)無法在宣告為 `Array` 型別的變數上運作。 由於這些原因及類型安全，建議您將每個陣列宣告為特定類型，如前述範例中的 `Integer` 。  
+ 有幾個方法可以找出陣列或其項目的資料類型。 
   
- 有幾個方法可以找出陣列或其項目的資料類型。  
+-   您可以呼叫<xref:System.Object.GetType%2A>上變數，以取得方法<xref:System.Type>物件，表示執行階段變數的型別。 <xref:System.Type> 物件在其屬性和方法中保留了大量的資訊。  
   
--   您可以在變數上呼叫 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法，以接收變數之執行階段類型的 <xref:System.Type> 物件。 <xref:System.Type> 物件在其屬性和方法中保留了大量的資訊。  
+-   您可以將變數傳遞給<xref:Microsoft.VisualBasic.Information.TypeName%2A>函式可取得`String`與執行階段類型的名稱。  
   
--   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函式，以接收包含執行階段類型名稱的 `String` 。  
+ 下列範例會呼叫二者`GetType`方法和`TypeName`函式來判斷陣列的類型。 陣列類型是`Byte(,)`。 請注意，<xref:System.Type.BaseType%2A?displayProperty=nameWithType>屬性也會指出的位元組陣列的基底類型是<xref:System.Array>類別。  
   
--   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函式，以接收表示變數類型類別的 `VariantType` 值。  
+ [!code-vb[array-type](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]  
   
- 下列範例呼叫 `TypeName` 函式來判斷陣列的類型以及陣列中項目的類型。 陣列類型為 `Integer(,)` ，陣列中項目的類型為 `Integer`。  
+##  <a name="arrays-as-return-values-and-parameters"></a>以陣列做為傳回值和參數  
+ 若要從 `Function` 程序傳回陣列，請將陣列資料型別和維度數目指定為 [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)的傳回型別。 在該函式內，使用相同的資料類型和維度數目來宣告區域陣列變數。 在 [Return 陳述式](../../../../visual-basic/language-reference/statements/return-statement.md)中，包含沒有括弧的區域陣列變數。  
   
- [!code-vb[VbVbalrArrays#15](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#15)]  
+ 若要將陣列指定為 `Sub` 程序或 `Function` 程序的參數，請為參數定義所指定的資料類型和維度數目。 在程序的呼叫，傳遞相同的資料類型和維度數目的陣列變數。  
   
-##  <a name="BKMK_Collections"></a> 使用集合取代陣列  
- 陣列是最適用於建立和處理固定數目的強類型物件。 集合會提供較具彈性的方式來使用物件群組。 與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。  
+ 在下列範例中，`GetNumbers`函式會傳回`Integer()`，類型的一維陣列`Integer`。 `ShowNumbers` 程序接受 `Integer()` 引數。 
   
- 如果您需要變更陣列的大小，就必須使用 [ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)。 當您執行此動作時，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會建立新的陣列，並釋出先前的陣列以供處置。 這將佔用執行時間。 因此，如果您處理的項目數經常變更，或無法預測需要的最大項目數，您可以使用集合來達到較佳的效能。  
+ [!code-vb[return-value-and-params](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params.vb)]  
+  
+ 在下列範例中，`GetNumbersMultiDim`函式會傳回`Integer(,)`，類型的二維陣列`Integer`。  `ShowNumbersMultiDim` 程序接受 `Integer(,)` 引數。  
+  
+ [!code-vb[multidimensional-return-value](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params-2d.vb)]  
+  
+## <a name="jagged-arrays"></a>不規則陣列  
+ 
+有時候應用程式中的資料結構會是非矩形的二維陣列。 例如，您可能會使用陣列來儲存有關每個月份的天數高溫度資料。 陣列的第一個維度來表示月份，但是第二個維度則代表天數，而且在一個月的日數不是統一。 A*不規則的陣列*，也稱為*陣列的陣列*，適合使用這種情況。 不規則的陣列是的陣列，其元素也是陣列。 不規則陣列和不規則陣列中的每個項目都可以有一或多個維度。  
+  
+ 下列範例會使用一個月份陣列，其中每個項目是陣列的天數。 由於不同月份的天數內的不同數字，此範例會使用不規則的陣列。  此範例示範如何建立不規則的陣列、 指派值給它，並擷取並顯示其值。
+  
+ [!code-vb[jagged-arrays](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]  
+
+前一個範例將值指派給逐一元件為基礎的不規則陣列使用`For...Next`迴圈。 您也可以使用巢狀的陣列常值，以不規則陣列的項目指派值。 不過，嘗試使用巢狀陣列常值 (例如， ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) 會產生編譯器錯誤[BC30568](../../../,,/../misc/bc30568.md)。 若要更正錯誤，請以括弧括住內部陣列常值。 括號會強制陣列常值運算式會評估，並產生的值則用於外部陣列常值，如下列範例所示。  
+  
+ [!code-vb[jagged-array-initialization](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)] 
+
+不規則的陣列是一維陣列，其項目包含的陣列。 因此，<xref:System.Array.Length%2A?displayProperty=nameWithType>屬性和`Array.GetLength(0)`方法傳回一維陣列中的項目數和`Array.GetLength(1)`會擲回<xref:System.IndexOutOfRangeException>因為不規則的陣列不是多維度。 您擷取每個子陣列的值來判斷每個子陣列中的項目數<xref:System.Array.Length%2A?displayProperty=nameWithType>屬性。 下列範例說明如何判斷不規則陣列中的項目數。
+
+[!code-vb[jagged-array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)] 
+
+## <a name="zero-length-arrays"></a>零長度陣列  
+Visual Basic 區分未初始化的陣列 (其值是的陣列`Nothing`) 和*零長度陣列*或空陣列 （不含任何元素的陣列）。未初始化的陣列是不被建立維度，或已指派給它的任何值。 例如: 
+
+```vb
+Dim arr() As String
+```
+零長度陣列是以-1 的維度宣告。 例如: 
+
+```vb
+Dim arrZ(-1) As String
+```
+在下列情況中，您可能需要建立長度為零的陣列：  
+  
+-   不必擔心<xref:System.NullReferenceException>例外狀況，您的程式碼必須存取的成員<xref:System.Array>類別，例如<xref:System.Array.Length%2A>或<xref:System.Array.Rank%2A>，或呼叫 Visual Basic 函式，例如<xref:Microsoft.VisualBasic.Information.UBound%2A>。  
+  
+-   您想要保留您的程式碼不需要檢查是否有簡單`Nothing`做為特殊案例。  
+  
+-   程式碼會與應用程式開發介面互動，這個介面會要求您傳遞長度為零的陣列給一個或多個程序，或從一個或多個程序傳回長度為零的陣列。
+
+## <a name="splitting-an-array"></a>分割陣列
+
+在某些情況下，您可能需要分成多個陣列的單一陣列。 這牽涉到的點或點陣列需要分割，是用來識別，然後吐陣列痰到兩個或多個不同的陣列。 
+
+> [!NOTE] 
+> 本節將不會討論將單一字串分割成字串陣列，根據某些分隔符號。 如需將字串分割資訊，請參閱<xref:System.String.Split%2A?displayProperty=nameWithType>方法。
+
+將分割陣列最常用的準則如下：
+
+- 陣列中的項目數。 比方說，您可能想要分割數目大約等於組件的多個指定的項目數的陣列。 基於此目的，您可以使用任一方法所傳回的值<xref:System.Array.Length%2A?displayProperty=nameWithType>或<xref:System.Array.GetLength%2A?displayProperty=nameWithType>方法。
+
+- 做為分隔符號，指出陣列分岔的位置的項目值。 您可以搜尋特定的值，藉由呼叫<xref:System.Array.FindIndex%2A?displayProperty=nameWithType>和<xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType>方法。
+ 
+一旦您判定索引或索引的分割陣列，您可以藉由呼叫，然後建立個別的陣列<xref:System.Array.Copy%2A?displayProperty=nameWithType>方法。 
+
+下列範例會分割成大約相同大小的兩個陣列的陣列。 （如果陣列項目總數是奇數，第一個陣列有一個第二個的多個項目）。 
+
+[!code-vb[splitting-an-array-by-length](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)] 
+
+下列範例會分割成兩個陣列根據存在的元素，其值為"zzz"，會做為陣列分隔符號的字串陣列。 新的陣列不包含的項目，其中包含分隔符號。
+
+[!code-vb[splitting-an-array-by-delimiter](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)] 
+
+## <a name="joining-arrays"></a>加入陣列
+
+您也可以結合成單一大型陣列的數目的陣列。 若要這樣做，您也使用<xref:System.Array.Copy%2A?displayProperty=nameWithType>方法。 
+
+> [!NOTE] 
+> 本節將不會討論結合成單一字串的字串陣列。 聯結字串陣列的資訊，請參閱<xref:System.String.Join%2A?displayProperty=nameWithType>方法。
+
+然後再將每個陣列元素複製到新的陣列，您必須先確定，您已初始化陣列，使其足以 accompodate 新陣列。 您可以使用下列其中一種做法：
+
+- 使用[ `ReDim Preserve` ](../../../../visual-basic/language-reference/statements/redim-statement.md)陳述式，以動態方式加入新項目之前先展開陣列。 這是最簡單的技巧，但它可能會導致效能降低與過多的記憶體耗用量當您複製大型陣列。
+- 計算新的大型陣列所需的項目總數，然後將每個來源陣列的項目加入到它。
+
+下列範例會使用第二種方法，將四個陣列有十個項目加入至單一陣列。  
+
+[!code-vb[joining-an-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)] 
+
+在此情況下，原始陣列是所有小型的因為我們可以也會動態展開陣列，因為我們將每個新的陣列項目的新增。 下列範例正是如此。
+
+[!code-vb[joining-an-array-dynamically](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/join2.vb)] 
+
+##  <a name="collections-as-an-alternative-to-arrays"></a>使用集合取代陣列  
+ 陣列是最適用於建立和處理固定數目的強類型物件。 集合會提供較具彈性的方式來使用物件群組。 不同於陣列，而這需要您明確地變更與陣列的大小[`ReDim`陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)，集合成長和壓縮動態為應用程式變更的需要。  
+  
+ 當您使用`ReDim`重新維度化陣列，Visual Basic 建立新的陣列，並釋放前一個。 這將佔用執行時間。 因此，如果您正在經常變更，或您使用的項目數目無法預測您需要的項目數目上限，您通常會取得更佳的效能集合。  
   
  對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。  
   
- 如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
+ 如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。  
   
- 如需集合的詳細資訊，請參閱[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
-  
-### <a name="example"></a>範例  
- 下列範例使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 泛型類別 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 來建立 `Customer` 物件的清單集合。  
-  
- [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
-  
- `CustomerFile` 集合的宣告指定它僅可包含類型 `Customer`的項目。 同時也提供 200 個項目的初始容量。 程序 `AddNewCustomer` 會檢查新項目是否有效，然後將它加入集合中。 程序 `PrintCustomers` 會使用 `For Each` 迴圈以便穿越集合並顯示項目。  
+ 如需集合的詳細資訊，請參閱[集合](../../concepts/collections.md)。
   
 ## <a name="related-topics"></a>相關主題  
   
@@ -280,6 +327,6 @@ Dim prices(3, 4, 5) As Long
 |[陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|討論在使用陣列時會引發的一些常見問題。|  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Array>  
+ <xref:System.Array?displayProperty=nameWithType>  
  [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)
