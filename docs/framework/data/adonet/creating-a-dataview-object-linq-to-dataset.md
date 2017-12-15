@@ -16,11 +16,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b82b409f27b14109c8e13fc8909235befc7a8d1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4363e4e4e444a2c34b79e3b3ad8d8e2f36fe8e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>建立 DataView 物件 (LINQ to DataSet)
 目前有兩種方式可以在 <xref:System.Data.DataView> 內容中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 您可以從 <xref:System.Data.DataView> 的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢中建立 <xref:System.Data.DataTable>，也可以從具型別或不具型別的 <xref:System.Data.DataTable> 中建立此物件。 在這兩種情況下，您會建立<xref:System.Data.DataView>使用其中一種<xref:System.Data.DataTableExtensions.AsDataView%2A>擴充方法。<xref:System.Data.DataView>不是直接建構中[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]內容。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- 在您已經從查詢中建立 <xref:System.Data.DataView.RowFilter%2A> 之後，也可以使用以字串為基礎的 <xref:System.Data.DataView.Sort%2A> 和 <xref:System.Data.DataView> 屬性來排序和篩選此物件。 請注意，這樣做會清除繼承自查詢的排序和篩選資訊。 下列範例會從依據以 'S' 為開頭之姓氏篩選的 <xref:System.Data.DataView> 查詢中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 以字串為基礎的 <xref:System.Data.DataView.Sort%2A> 屬性會設定為按照遞增順序排序姓氏，然後再按照遞減順序排序名字：  
+ 您也可以使用以字串為基礎<xref:System.Data.DataView.RowFilter%2A>和<xref:System.Data.DataView.Sort%2A>屬性，以篩選和排序<xref:System.Data.DataView>從查詢建立之後。 請注意，這樣做會清除繼承自查詢的排序和篩選資訊。 下列範例會從依據以 'S' 為開頭之姓氏篩選的 <xref:System.Data.DataView> 查詢中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 以字串為基礎的 <xref:System.Data.DataView.Sort%2A> 屬性會設定為按照遞增順序排序姓氏，然後再按照遞減順序排序名字：  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  

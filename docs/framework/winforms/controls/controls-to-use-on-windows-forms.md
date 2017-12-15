@@ -16,11 +16,11 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows Form 上使用的控制項
 以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。 除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。 如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。 如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
@@ -83,9 +83,8 @@ ms.lasthandoff: 10/18/2017
  [ErrorProvider 元件](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  以非干擾方式，向使用者顯示錯誤資訊。  
   
- "FileDialog 類別"  
- 提供檔案對話方塊的基底類別功能。  
-  
+ [FileDialog 類別](../../../../docs/framework/winforms/controls/filedialog-class.md)檔案對話方塊中提供基底類別的功能。
+
  [FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  代表透過水平或垂直方式動態配置其內容的面板。  
   
@@ -173,8 +172,7 @@ ms.lasthandoff: 10/18/2017
  [SaveFileDialog 元件](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  選取要儲存的檔案和儲存位置。  
   
- "SoundPlayer 類別"  
- 可讓您輕鬆地在應用程式中包含音效。  
+ [SoundPlayer 類別](../../../../docs/framework/winforms/controls/soundplayer-class.md)可讓您輕鬆地在應用程式中包含音效。
   
  [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  允許使用者調整停駐的控制項大小。  

@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  某些資料庫行為取決於資料庫上設定的相容性層級。 如果 `ProviderManifestToken` 屬性是設為 2005 而 SQL Server 版本是 2005，但資料庫的相容性層級是設為 "80" (SQL Server 2000)，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 會以 SQL Server 2005 為目標，但由於相容性層級設定的關係，執行的方式可能與預期的方式不同。 例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的巢狀查詢  
- 投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。 在包括 SLQ Server 的某些後端伺服器上，這樣可能會導致 TempDB 資料表變得相當大。 這樣會降低伺服器的效能。  
+ 投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。 在包括 SLQ Server 的某些後端伺服器上，這可能導致 TempDB 資料表變得很大。 這樣會降低伺服器的效能。  
   
  下列是投影子句中巢狀查詢的範例：  
   

@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form 加入組態項目
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="single-pass-scaling"></a>單次縮放比例
 
-單一或多重傳遞縮放比例會影響使用者介面的認知的回應和視覺外觀的使用者介面項目，因為它們縮放。 從.NET Framework 4.7 開始，Windows Form 會使用單一行程縮放比例。 在舊版的.NET Framework 中，透過多個行程，這造成部分控制項，以調整多個必須執行縮放比例。 單一行程調整應該才可停用舊的行為取決於您的應用程式。  
+這些調整單一或多個行程調整影響使用者介面的認知的回應和視覺外觀的使用者介面項目。 從.NET Framework 4.7 開始，Windows Form 會使用單一行程縮放比例。 在舊版的.NET Framework 中，透過多個行程，這造成部分控制項，以調整多個必須執行縮放比例。 單一行程調整應該才可停用舊的行為取決於您的應用程式。  
 
 ## <a name="see-also"></a>請參閱
  

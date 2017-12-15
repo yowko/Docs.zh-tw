@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
 在應用程式，它可能會附加到事件來源的處理常式不會終結搭配此處理常式附加到來源的接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]導入了可用來解決這個問題，提供專用的管理員類別的特定事件，該事件的接聽項上實作介面的設計模式。 此設計模式又稱為*弱式事件模式*。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------------|  
 |使用現有的弱式事件管理員類別|如果您想要訂閱的事件都有對應<xref:System.Windows.WeakEventManager>，使用現有的弱式事件管理員。 如需包含 WPF 的弱式事件管理員的清單，請參閱中的繼承階層<xref:System.Windows.WeakEventManager>類別。 不過，請注意，有相對較少的弱式事件管理員隨附的 WPF 中，因此您可能需要選擇其中一種其他方法。|  
 |使用一般的弱式事件管理員類別|使用泛型<xref:System.Windows.WeakEventManager%602>時的現有<xref:System.Windows.WeakEventManager>無法使用，您想要輕鬆地實作，而且您不擔心效率。 泛型<xref:System.Windows.WeakEventManager%602>比現有或自訂的弱式事件管理員比較沒有效率。 例如，泛型類別會詳細反映來探索事件指定事件的名稱。 此外，程式碼以使用泛型來註冊事件<xref:System.Windows.WeakEventManager%602>更詳細資訊，比使用的現有或自訂<xref:System.Windows.WeakEventManager>。|  
-|建立自訂的弱式事件管理員類別|建立自訂<xref:System.Windows.WeakEventManager>時您的現有<xref:System.Windows.WeakEventManager>不提供，而且您想最佳的效率。 使用自訂<xref:System.Windows.WeakEventManager>來訂閱事件將會更有效率，但您沒有承受撰寫更多的程式碼開頭的成本。|  
+|建立自訂的弱式事件管理員類別|建立自訂<xref:System.Windows.WeakEventManager>時的現有<xref:System.Windows.WeakEventManager>不提供，而且您想最佳的效率。 使用自訂<xref:System.Windows.WeakEventManager>來訂閱事件將會更有效率，但您沒有承受撰寫更多的程式碼開頭的成本。|  
   
  下列章節說明如何實作弱式事件模式。  基於本討論內容的詳細資訊，來訂閱事件具有下列特性。  
   

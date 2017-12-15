@@ -1,6 +1,6 @@
 ---
 title: "迴圈：while...do 運算式 (F#)"
-description: "請參閱如何 while...執行運算式用來執行 （迴圈） 的反覆執行，而指定的測試條件為 true。"
+description: "請參閱如何時...執行運算式用來執行 （迴圈） 的反覆執行，而指定的測試條件為 true。"
 keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0416ffca-7ed9-4aff-9493-e001fdba8c9b
-ms.openlocfilehash: 6a186d75dcda383764949c2cd3b09bc9e3d1080a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5f10fda84a5e748856eb7b2c63ad46cc1fba44bb
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="loops-whiledo-expression"></a>迴圈：while...do 運算式
 

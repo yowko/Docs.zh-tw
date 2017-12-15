@@ -36,11 +36,11 @@ ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
 caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02ba9a999db20abce2106269522c9a3221a00cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 陳述式 (Visual Basic)
 名稱、 參數和定義的程式碼會宣告`Sub`程序。  
