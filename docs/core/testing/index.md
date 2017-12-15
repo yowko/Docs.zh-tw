@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
@@ -34,15 +34,18 @@ ms.lasthandoff: 12/01/2017
 
 進一步了解 .NET Core 專案的單元測試：
 
-[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 與 [Visual Basic](../../visual-basic/index.md) 都支援適用於 .NET Core 的單元測試專案。 您也可以選擇 [xUnit](http://xunit.github.io) 或 [MSTest](https://github.com/Microsoft/vstest-docs)。
+[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 與 [Visual Basic](../../visual-basic/index.md) 都支援適用於 .NET Core 的單元測試專案。 您也可以在 [xUnit](http://xunit.github.io)、[NUnit](http://nunit.org) 及 [MSTest](https://github.com/Microsoft/vstest-docs) 中選擇。
 
 您可以在這些逐步解說中了解那些組合：
 
 * 使用 [*XUnit* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-dotnet-test.md) 來建立單元測試。
+* 使用 [*NUnit* 及 *C#* 搭配 .NET Core CLI](unit-testing-with-nunit.md) 建立單元測試。
 * 使用 [*MSTest* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-mstest.md) 來建立單元測試。
 * 使用 [*XUnit* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md) 來建立單元測試。
+* 使用 [*NUnit* 及 *#* 搭配 .NET Core CLI](unit-testing-fsharp-with-nunit.md) 建立單元測試。
 * 使用 [*MSTest* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-mstest.md) 來建立單元測試。
 * 使用 [*XUnit* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md) 來建立單元測試。
+* 使用 [*Unit* 及 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-nunit.md) 來建立單元測試。
 * 使用 [*MSTest* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-mstest.md) 來建立單元測試。
 
 您可以為您的類別庫與您的單元測試庫選擇不同的語言。 您可以透過混合並比對上面提及的逐步解說來了解如何進行。
