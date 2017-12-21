@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -62,7 +62,7 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 
 - [內部](../language-reference/keywords/internal.md)成員只會顯示在和基底類別位於相同組件的衍生類別中。 和基底類別位於不同組件的衍生類別中不會顯示它們。
 
-- [公用](../language-reference/keywords/public.md)成員會顯示在衍生類別中，而且是在衍生的類別的公用介面的一部分。 公用繼承成員都可以呼叫，如同在衍生類別中定義一般。 在下列範例中，類別 `A` 定義名為 `Method1` 的方法，而類別 `B` 則繼承自 `A` 類別。 範例接著會將 `Method1` 視為 `B` 上的執行個體方法來呼叫。
+- [公用](../language-reference/keywords/public.md)成員會顯示在衍生類別中，同時也是衍生類別公用介面的一部分。 公用繼承成員都可以呼叫，如同在衍生類別中定義一般。 在下列範例中，類別 `A` 定義名為 `Method1` 的方法，而類別 `B` 則繼承自 `A` 類別。 範例接著會將 `Method1` 視為 `B` 上的執行個體方法來呼叫。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
@@ -179,7 +179,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 基底 `Publication` 類別中包含哪些成員，以及 `Publication` 成員是否提供方法實作，或 `Publication` 是否為抽象基底類別，可做為其衍生類別的範本。
 
-  在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節包含的範例會使用抽象基底類別，來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
+  在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節中所包含的範例，會使用抽象基底類別來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
 
   能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 型別共用，我們就應該將成員加入其中。 如果無法有效地完成，我們就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
 

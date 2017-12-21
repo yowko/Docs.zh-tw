@@ -3,15 +3,15 @@ title: "dotnet pack 命令 - .NET Core CLI"
 description: "dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -45,7 +45,7 @@ dotnet pack [-h|--help]
 
 `dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
 
-您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
+您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild /p 參數的方法。
 
 ## <a name="arguments"></a>引數
 
@@ -172,3 +172,7 @@ dotnet pack [-h|--help]
 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
 
 `dotnet pack /p:PackageVersion=2.1.0`
+
+將專案針對特定[目標 Framework](../../standard/frameworks.md) 進行封裝：
+
+`dotnet pack /p:TargetFrameworks=net45`

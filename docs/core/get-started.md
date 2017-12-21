@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -25,9 +25,9 @@ ms.lasthandoff: 10/18/2017
 
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
-* [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](./tutorials/with-visual-studio.md) - 了解如何使用 C# 和 Visual Studio 2017 建置、偵錯和發行簡單的 .NET Core 主控台應用程式。
+* [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](./tutorials/with-visual-studio.md) - 了解如何使用 C# 和 Visual Studio 2017 建置簡單的 .NET Core 主控台應用程式並進行偵錯和發行。
 * [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](./tutorials/library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 建置以 C# 撰寫的類別庫。
-* [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](./tutorials/vb-with-visual-studio.md) - 了解如何使用 Visual Basic 和 Visual Studio 2017 建置、偵錯和發行簡單的 .NET Core 主控台應用程式。 
+* [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](./tutorials/vb-with-visual-studio.md) - 了解如何使用 Visual Basic 和 Visual Studio 2017 建置簡單的 .NET Core 主控台應用程式並進行偵錯和發行。 
 * [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](./tutorials/vb-library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 建置以 Visual Basic 撰寫的類別庫。
 * [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) (在 Windows 上使用 C# 和 .NET Core 開始使用 Visual Studio Code) - 此 [Channel 9](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs)，建立您第一個 .NET Core 主控台應用程式。
 * [開始使用 .NET Core 和 Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - 這個 [Channel9](https://channel9.msdn.com) 影片會示範如何安裝與使用 [Visual Studio 2017](https://www.visualstudio.com/) (Microsoft 完整功能的 IDE)，以 .NET Core 建立您的第一個跨平台主控台應用程式。
@@ -37,14 +37,14 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux"></a>Linux
 
-在上安裝.NET Core [Linux](https://www.microsoft.com/net/core#linuxredhat)。
+在 [Linux](https://www.microsoft.com/net/core#linuxredhat) \(英文\) 上安裝 .NET Core。
 
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
 * [在 Ubuntu 上使用 C# 和 .NET Core 開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) \(英文\)：此 [Channel 9](https://channel9.msdn.com) \(英文\) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)，在 Ubuntu 14.04 上建立您第一個 .NET Core 主控台應用程式。
 
-請參閱[Prerequisites for Linux 開發](linux-prerequisites.md)主題，如需支援的 Linux 散發版本和版本的清單。
+如需支援的 Linux 發行和版本清單，請參閱 [Linux 開發的必要條件](linux-prerequisites.md)主題。
 
 ## <a name="os-x--macos"></a>OS X / macOS
 

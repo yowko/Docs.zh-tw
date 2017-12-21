@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
 .NET 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對開發人員而言，.NET Framework 提供全方位且一致的程式撰寫模型，可建置具有令人視覺震撼之使用者體驗及順暢且安全之通訊的應用程式。  
 
-本文提供在電腦上安裝所有版本 .NET Framework (從 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]) 的連結。 如果您是開發人員，也可以使用這些連結下載 .NET Framework 並隨應用程式轉散發。
+本文提供在電腦上安裝所有版本 .NET Framework (從 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]) 的連結。 如果您是開發人員，也可以使用這些連結下載 .NET Framework 並隨應用程式轉散發。 如需隨應用程式部署 .NET Framework 版本的相關資訊，請參閱 [.NET Framework 開發人員部署指南](../deployment/deployment-guide-for-developers.md)。
 
 > [!NOTE]
 > 本主題適用於希望在其本身的系統上安裝 .NET Framework，或希望將 .NET Framework 與其應用程式一併安裝的開發人員。 若使用者希望安裝 .NET Framework，請參閱討論在特定作業系統上安裝 .NET Framework 的其他主題，例如[在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework](on-windows-10.md)。  

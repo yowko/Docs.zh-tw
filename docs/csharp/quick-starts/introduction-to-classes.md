@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: b7598309f48cbccf2d270be53a4b40dae11e8df8
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-classes"></a>類別簡介
 
-本課程假設您已經安裝 [.NET Core SDK](http://dot.net/core) \(英文\)，以及您所偏好的文字編輯器。 如果尚未安裝文字編輯器，請嘗試使用 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)，或是適用於 Mac 或 Windows 的 [Visual Studio](https://www.visualstudio.com/)。
+本快速入門需要您具備可用於開發的電腦。 .NET 主題[只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \(英文\) 中有關於在 Mac、PC 或 Linux 上設定本機開發環境的指示。 您可以在[本機快速入門簡介](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="create-your-application"></a>建立您的應用程式
 

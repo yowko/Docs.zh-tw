@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>C# 快速入門：集合 #
 
-本快速入門會介紹如何使用 C# 語言和的基本概念<xref:System.Collections.Generic.List%601>類別。
+本快速入門提供 C# 語言的簡介，以及 <xref:System.Collections.Generic.List%601> 類別的基礎知識。
 
-本快速入門預期要有可用於開發的機器。 .NET 主題[開始在 10 分鐘後](https://www.microsoft.com/net/core)已設定 Mac、 電腦或 Linux 本機開發環境的指示。
+本快速入門需要您具備可用於開發的電腦。 .NET 主題[只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \(英文\) 中有關於在 Mac、PC 或 Linux 上設定本機開發環境的指示。 您可以在[本機快速入門簡介](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="a-basic-list-example"></a>基本的清單範例。
 
 建立名為 **list-quickstart** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console`。
 
 > [!NOTE]
-> 如果您剛完成[在 10 分鐘後開始使用.NET](https://www.microsoft.com/net)，您可以繼續使用您剛才建立的 myApp 應用程式。
+> 如果您剛完成[只要 10 分鐘立即上手 .NET](https://www.microsoft.com/net) \(英文\)，則可以繼續使用剛才建立的 myApp 應用程式。
  
 在您最愛的編輯器中開啟 **Program.cs**，並以下列內容取代現有的程式碼：
 
@@ -210,7 +210,7 @@ foreach(var item in fibonacciNumbers)
 > 若要僅專注於本節的內容，您可以對呼叫 `WorkingWithStrings();` 的程式碼進行註解化。 請在該呼叫之前放置兩個 `/` 字元，例如：`// WorkingWithStrings();`。 
 
 ## <a name="challenge"></a>挑戰
-看看您是否可以結合運用來自此課程和先前課程的心得。 請依費式數列數字，擴展您到目前為止所建立的內容。 請嘗試將程式碼撰寫成可產生該數列的前 20 個數字。
+看看您是否可以結合運用來自此課程和先前課程的概念。 請依費式數列數字，擴展您到目前為止所建立的內容。 請嘗試將程式碼撰寫成可產生該數列的前 20 個數字。 (小提示：第 20 個費式數列數字為 6765)。
 
 ## <a name="complete-challenge"></a>完成挑戰
 
@@ -218,6 +218,6 @@ foreach(var item in fibonacciNumbers)
 
 在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。 迴圈會持續重複，直到將 20 個項目新增至清單為止。
 
-恭喜您完成清單的快速入門。 您可以繼續使用[類別簡介](introduction-to-classes.md)開發環境中的快速入門。
+恭喜，您已完成清單的快速入門。 您可以在自己的開發環境中，繼續完成[類別簡介](introduction-to-classes.md)快速入門中的內容。
 
 您可以在關於[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主題中，深入了解 `List` 類型的使用方式。 您也能學習到許多其他的集合類型。
