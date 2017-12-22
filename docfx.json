@@ -15,48 +15,57 @@
         ]
       },
       {
-        "files": [ 
-          "**/*.md" 
+        "files": [
+          "**/*.md",
+          "**/*.yml"
         ],
         "src": "docs",
         "dest": ".",
         "exclude": [
-          "toc.md",
+          "api/overwrites/**",
+          "samples/**/*.*",
           "**/includes/**",
-          "***/contributing.md",
-          "framework/add-ins/**",
-          "framework/common-client-technologies/**",
-          "framework/debug-trace-profile/**",
-          "framework/interop/**",
-          "framework/mef/**",
-          "framework/net-native/**",
-          "framework/network-programming/**",
-          "framework/performance/**",
-          "framework/security/**",
-          "framework/serialization/**",
-          "framework/unmanaged-api/**",
-          "framework/wcf/**",
-          "framework/windows-services/**",
-          "framework/winforms/**",
-          "framework/wpf/**",
-          "framework/xaml-services/**",
-          "standard/cross-platform/**",
-          "standard/design-guidelines/**",
-          "csharp/misc/**",
-          "visual-basic/developing-apps/customizing-extending-my/**",
-          "visual-basic/developing-apps/development-with-my/**",
-          "visual-basic/developing-apps/includes/**",
-          "visual-basic/developing-apps/printing/**",
-          "visual-basic/developing-apps/using-ide/**",
-          "visual-basic/developing-apps/windows-forms/**",
-          "visual-basic/language-reference/**",
-          "visual-basic/misc/**",
-          "visual-basic/programming-guide/**",
-          "visual-basic/reference/**"
+          "***/contributing.md"
         ]
       },
       {
-        "files": [ "docs/toc.md", "toc.yml", "index.md" ]
+        "files": [
+          "**/*.md"
+        ],
+        "src": "_csharplang/spec",
+        "dest": "csharp/language-reference/language-specification",
+        "exclude": [
+          "README.md",
+          "LICENSE.md",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "_vblang/spec",
+        "dest": "visual-basic/reference/language-specification",
+        "exclude": [
+          "README.md",
+          "LICENSE.md",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "core/**/*.md",
+          "core/**/*.yml"
+        ]
+      },
+      {
+        "files": [
+          "index.md"
+        ]
+      },
+      {
+        "files": "toc.yml",
+        "dest": "breadcrumb"
       }
     ],
     "resource": [
@@ -73,38 +82,89 @@
         "dest": ".",
         "exclude": [
           "**/obj/**",
+          "samples/**/*.*",
           "_themes/DocPacker/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.svg",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.bmp"
+        ],
+        "src": "add",
+        "dest": ".",
+        "exclude": [
+          "metadata/**/*.*"
         ]
       }
     ],
     "overwrite": {
-      "files": [
-        "api/overwrites/**/*.md",
-        "apidoc/*.md"
-      ]
-    },
-    "externalReference": [
-    ],
+        "files": [
+          "api/overwrites/**/*.md",
+          "apidoc/*.md"
+        ]
+      },
+    "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/dotnet/toc.json",
-      "_displayLangs": [ "csharp" ],
+      "breadcrumb_path": "/dotnet/breadcrumb/toc.json",
+      "_displayLangs": [
+        "csharp"
+      ],
       "author": "dotnet-bot",
+      "bilingual_type": "hover over",
       "ms.author": "dotnetcontent",
       "manager": "wpickett",
-      "searchScope": [ ".NET" ],
+      "searchScope": [".NET"],
       "uhfHeaderId": "MSDocsHeader-DotNet",
       "apiPlatform": "dotnet"
     },
     "fileMetadata": {
       "ms.prod": {
-        "api/**.yml": ".net"
+        "api/**.yml": ".net",
+        "_csharplang/spec/*.md": ".net",
+        "_vblang/spec/*.md": ".net"
       },
       "ms.topic": {
-        "api/**.yml": "managed-reference"
+        "api/**.yml": "managed-reference",
+        "_csharplang/spec/*.md": "language-reference",
+        "_vblang/spec/*.md": "language-reference"
+     },
+      "langs": {
+        "api/**.yml": ["csharp", "vb", "cpp"],
+        "api/System.Convert.yml": ["csharp", "vb", "cpp", "fsharp"]        
+      },
+      "dev_langs": {
+        "docs/core/**/**.md": ["csharp"],
+        "docs/csharp/**/**.md": ["csharp"],
+        "docs/framework/**/**.md": ["csharp"],
+        "docs/fsharp/**/**.md": ["fsharp"],
+        "docs/standard/**/**.md": ["csharp"],
+        "docs/visual-basic/**/**.md": ["vb"]
+      },
+      "ROBOTS": {
+        "api/**.yml": "NOINDEX, NOFOLLOW"
+      },
+      "ms.author": {
+        "_csharplang/spec/*.md": "wiwagn",
+        "_vblang/spec/*.md": "wiwagn"
+      },
+      "ms.technology": {
+        "_csharplang/spec/*.md": "devlang-csharp",
+        "csharp/quick-starts/**": "csharp-interactive",
+        "_vblang/spec/*.md": "devlang-visual-basic"
+      },
+      "ms.date": {
+        "_csharplang/spec/*.md": "07/01/2017",
+        "_vblang/spec/*.md": "07/21/2017"
       }
     },
     "dest": "_site",
-    "template": [ "docs.html" ],
+    "template": [
+      "docs.html"
+    ],
     "xref": [
       "dotnet-xref/_zip/dotnet.zip",
       "dotnet-xref/_zip/vs.110.zip",
@@ -113,6 +173,7 @@
       "dotnet-xref/_zip/missingapi.yml",
       "dotnet-xref/_zip/msdnsmallset.yml",
       "dotnet-xref/_zip/roslyn.yml"
-    ]
+    ],
+    "lruSize": 0
   }
 }
