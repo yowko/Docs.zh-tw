@@ -19,7 +19,7 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.openlocfilehash: 55e5aa633e3d788ac8acaa09684c92b8608e7cfa
 ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
@@ -90,7 +90,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- 這個屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，它會初始化時[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，應該使用單一執行緒的 apartment 模型 (STA)，這是所需的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)](和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
+ 這個屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，它會初始化時[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，應該使用單一執行緒的 apartment 模型 (STA)，這是所需的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
   
 ## <a name="create-a-windows-presentation-framework-page"></a>建立 Windows Presentation Framework 頁面  
  接下來，您可以建立定義 DLL [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>。 通常是最簡單的方式建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>做為獨立應用程式，以及寫入和偵錯[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]部分的方式。  一旦完成，該專案可以開啟 dll 中以滑鼠右鍵按一下專案，按一下**屬性**、 移至應用程式，以及輸出類型變更為 Windows 類別庫。  
