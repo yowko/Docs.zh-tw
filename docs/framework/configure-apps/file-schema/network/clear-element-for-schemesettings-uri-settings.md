@@ -13,61 +13,62 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a2a4841635b5d6bcaa49d024dd92241573473036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ffbe875e99376a7c782f177438709bcbb0ccb528
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="f1134-102">&lt;清除&gt;schemeSettings （Uri 設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="f1134-102">&lt;clear&gt; Element for schemeSettings (Uri Settings)</span></span>
-<span data-ttu-id="f1134-103">清除所有現有的配置設定。</span><span class="sxs-lookup"><span data-stu-id="f1134-103">Clears all existing scheme settings.</span></span>  
+# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="20bb3-102">&lt;清除&gt;schemeSettings （Uri 設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="20bb3-102">&lt;clear&gt; Element for schemeSettings (Uri Settings)</span></span>
+<span data-ttu-id="20bb3-103">清除所有現有的配置設定。</span><span class="sxs-lookup"><span data-stu-id="20bb3-103">Clears all existing scheme settings.</span></span>  
   
- <span data-ttu-id="f1134-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f1134-104">\<configuration></span></span>  
-<span data-ttu-id="f1134-105">\<uri ></span><span class="sxs-lookup"><span data-stu-id="f1134-105">\<uri></span></span>  
-<span data-ttu-id="f1134-106">\<schemeSettings ></span><span class="sxs-lookup"><span data-stu-id="f1134-106">\<schemeSettings></span></span>  
-<span data-ttu-id="f1134-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="f1134-107">\<clear></span></span>  
+ <span data-ttu-id="20bb3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="20bb3-104">\<configuration></span></span>  
+<span data-ttu-id="20bb3-105">\<uri ></span><span class="sxs-lookup"><span data-stu-id="20bb3-105">\<uri></span></span>  
+<span data-ttu-id="20bb3-106">\<schemeSettings ></span><span class="sxs-lookup"><span data-stu-id="20bb3-106">\<schemeSettings></span></span>  
+<span data-ttu-id="20bb3-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="20bb3-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1134-108">語法</span><span class="sxs-lookup"><span data-stu-id="f1134-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20bb3-108">語法</span><span class="sxs-lookup"><span data-stu-id="20bb3-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f1134-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f1134-109">Attributes and Elements</span></span>  
- <span data-ttu-id="f1134-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f1134-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="20bb3-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="20bb3-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="20bb3-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="20bb3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f1134-111">屬性</span><span class="sxs-lookup"><span data-stu-id="f1134-111">Attributes</span></span>  
- <span data-ttu-id="f1134-112">無。</span><span class="sxs-lookup"><span data-stu-id="f1134-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="20bb3-111">屬性</span><span class="sxs-lookup"><span data-stu-id="20bb3-111">Attributes</span></span>  
+ <span data-ttu-id="20bb3-112">無。</span><span class="sxs-lookup"><span data-stu-id="20bb3-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="f1134-113">子元素</span><span class="sxs-lookup"><span data-stu-id="f1134-113">Child Elements</span></span>  
- <span data-ttu-id="f1134-114">無。</span><span class="sxs-lookup"><span data-stu-id="f1134-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="20bb3-113">子元素</span><span class="sxs-lookup"><span data-stu-id="20bb3-113">Child Elements</span></span>  
+ <span data-ttu-id="20bb3-114">無。</span><span class="sxs-lookup"><span data-stu-id="20bb3-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f1134-115">父項目</span><span class="sxs-lookup"><span data-stu-id="f1134-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="20bb3-115">父項目</span><span class="sxs-lookup"><span data-stu-id="20bb3-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="f1134-116">項目</span><span class="sxs-lookup"><span data-stu-id="f1134-116">Element</span></span>|<span data-ttu-id="f1134-117">說明</span><span class="sxs-lookup"><span data-stu-id="f1134-117">Description</span></span>|  
+|<span data-ttu-id="20bb3-116">項目</span><span class="sxs-lookup"><span data-stu-id="20bb3-116">Element</span></span>|<span data-ttu-id="20bb3-117">描述</span><span class="sxs-lookup"><span data-stu-id="20bb3-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f1134-118">\<schemeSettings> 項目 (URI 設定)</span><span class="sxs-lookup"><span data-stu-id="f1134-118">\<schemeSettings> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="f1134-119">指定如何針對特定配置剖析 <xref:System.Uri>。</span><span class="sxs-lookup"><span data-stu-id="f1134-119">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
+|[<span data-ttu-id="20bb3-118">\<schemeSettings> 項目 (URI 設定)</span><span class="sxs-lookup"><span data-stu-id="20bb3-118">\<schemeSettings> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="20bb3-119">指定如何針對特定配置剖析 <xref:System.Uri>。</span><span class="sxs-lookup"><span data-stu-id="20bb3-119">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1134-120">備註</span><span class="sxs-lookup"><span data-stu-id="f1134-120">Remarks</span></span>  
- <span data-ttu-id="f1134-121">根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，再執行路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="f1134-121">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="f1134-122">實作此點，做為安全性機制，攻擊，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f1134-122">This was implemented as a security mechanism against attacks like the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20bb3-120">備註</span><span class="sxs-lookup"><span data-stu-id="20bb3-120">Remarks</span></span>  
+ <span data-ttu-id="20bb3-121">根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，再執行路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="20bb3-121">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="20bb3-122">實作此點，做為安全性機制，攻擊，如下所示：</span><span class="sxs-lookup"><span data-stu-id="20bb3-122">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="f1134-123">如果這個 URI 傳遞到模組未處理的百分之編碼字元正確，它可能會導致伺服器正在執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="f1134-123">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
+ <span data-ttu-id="20bb3-123">如果這個 URI 傳遞到模組未處理的百分之編碼字元正確，它可能會導致伺服器正在執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="20bb3-123">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- <span data-ttu-id="f1134-124">基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="f1134-124">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="f1134-125">傳遞至上方惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式會導致下列 URI:</span><span class="sxs-lookup"><span data-stu-id="f1134-125">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
+ <span data-ttu-id="20bb3-124">基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="20bb3-124">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="20bb3-125">傳遞至上方惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式會導致下列 URI:</span><span class="sxs-lookup"><span data-stu-id="20bb3-125">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="f1134-126">此預設行為修改為不取消逸出百分比編碼的路徑分隔符號使用的特定結構描述的 schemeSettings 組態選項。</span><span class="sxs-lookup"><span data-stu-id="f1134-126">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
+ <span data-ttu-id="20bb3-126">此預設行為修改為不取消逸出百分比編碼的路徑分隔符號使用的特定結構描述的 schemeSettings 組態選項。</span><span class="sxs-lookup"><span data-stu-id="20bb3-126">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="f1134-127">組態檔</span><span class="sxs-lookup"><span data-stu-id="f1134-127">Configuration Files</span></span>  
- <span data-ttu-id="f1134-128">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="f1134-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="20bb3-127">組態檔</span><span class="sxs-lookup"><span data-stu-id="20bb3-127">Configuration Files</span></span>  
+ <span data-ttu-id="20bb3-128">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="20bb3-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1134-129">範例</span><span class="sxs-lookup"><span data-stu-id="f1134-129">Example</span></span>  
- <span data-ttu-id="f1134-130">下列範例示範使用組態<xref:System.Uri>類別來清除所有配置設定，並將支援的未逸出的 http 配置的百分比編碼路徑分隔符號。</span><span class="sxs-lookup"><span data-stu-id="f1134-130">The following example shows a configuration used by the <xref:System.Uri> class that clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
+## <a name="example"></a><span data-ttu-id="20bb3-129">範例</span><span class="sxs-lookup"><span data-stu-id="20bb3-129">Example</span></span>  
+ <span data-ttu-id="20bb3-130">下列範例示範使用組態<xref:System.Uri>類別來清除所有配置設定，並將支援的未逸出的 http 配置的百分比編碼路徑分隔符號。</span><span class="sxs-lookup"><span data-stu-id="20bb3-130">The following example shows a configuration used by the <xref:System.Uri> class that clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,11 +81,11 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f1134-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1134-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="20bb3-131">請參閱</span><span class="sxs-lookup"><span data-stu-id="20bb3-131">See Also</span></span>  
  <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
  <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
  <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
  <xref:System.Uri?displayProperty=nameWithType>  
- [<span data-ttu-id="f1134-132">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="f1134-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="20bb3-132">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="20bb3-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -19,64 +19,65 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 54142a75d178eb1c12e4b182df1dab9bff957ec6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltgcservergt-element"></a><span data-ttu-id="518ef-102">&lt;gcServer&gt;項目</span><span class="sxs-lookup"><span data-stu-id="518ef-102">&lt;gcServer&gt; Element</span></span>
-<span data-ttu-id="518ef-103">指定 Common Language Runtime 是否執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
+# <a name="ltgcservergt-element"></a><span data-ttu-id="7964b-102">&lt;gcServer&gt;項目</span><span class="sxs-lookup"><span data-stu-id="7964b-102">&lt;gcServer&gt; Element</span></span>
+<span data-ttu-id="7964b-103">指定 Common Language Runtime 是否執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
- <span data-ttu-id="518ef-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="518ef-104">\<configuration></span></span>  
-<span data-ttu-id="518ef-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="518ef-105">\<runtime></span></span>  
-<span data-ttu-id="518ef-106">\<gcServer ></span><span class="sxs-lookup"><span data-stu-id="518ef-106">\<gcServer></span></span>  
+ <span data-ttu-id="7964b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7964b-104">\<configuration></span></span>  
+<span data-ttu-id="7964b-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="7964b-105">\<runtime></span></span>  
+<span data-ttu-id="7964b-106">\<gcServer ></span><span class="sxs-lookup"><span data-stu-id="7964b-106">\<gcServer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="518ef-107">語法</span><span class="sxs-lookup"><span data-stu-id="518ef-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7964b-107">語法</span><span class="sxs-lookup"><span data-stu-id="7964b-107">Syntax</span></span>  
   
 ```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="518ef-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="518ef-108">Attributes and Elements</span></span>  
- <span data-ttu-id="518ef-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="518ef-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7964b-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="7964b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7964b-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="7964b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="518ef-110">屬性</span><span class="sxs-lookup"><span data-stu-id="518ef-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7964b-110">屬性</span><span class="sxs-lookup"><span data-stu-id="7964b-110">Attributes</span></span>  
   
-|<span data-ttu-id="518ef-111">屬性</span><span class="sxs-lookup"><span data-stu-id="518ef-111">Attribute</span></span>|<span data-ttu-id="518ef-112">描述</span><span class="sxs-lookup"><span data-stu-id="518ef-112">Description</span></span>|  
+|<span data-ttu-id="7964b-111">屬性</span><span class="sxs-lookup"><span data-stu-id="7964b-111">Attribute</span></span>|<span data-ttu-id="7964b-112">描述</span><span class="sxs-lookup"><span data-stu-id="7964b-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="518ef-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="518ef-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="518ef-114">指定執行階段是否執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
+|`enabled`|<span data-ttu-id="7964b-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="7964b-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="7964b-114">指定執行階段是否執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="518ef-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="518ef-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="7964b-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="7964b-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="518ef-116">值</span><span class="sxs-lookup"><span data-stu-id="518ef-116">Value</span></span>|<span data-ttu-id="518ef-117">說明</span><span class="sxs-lookup"><span data-stu-id="518ef-117">Description</span></span>|  
+|<span data-ttu-id="7964b-116">值</span><span class="sxs-lookup"><span data-stu-id="7964b-116">Value</span></span>|<span data-ttu-id="7964b-117">描述</span><span class="sxs-lookup"><span data-stu-id="7964b-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="518ef-118">不執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-118">Does not run server garbage collection.</span></span> <span data-ttu-id="518ef-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="518ef-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="518ef-120">執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-120">Runs server garbage collection.</span></span>|  
+|`false`|<span data-ttu-id="7964b-118">不執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-118">Does not run server garbage collection.</span></span> <span data-ttu-id="7964b-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="7964b-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="7964b-120">執行伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-120">Runs server garbage collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="518ef-121">子元素</span><span class="sxs-lookup"><span data-stu-id="518ef-121">Child Elements</span></span>  
- <span data-ttu-id="518ef-122">無。</span><span class="sxs-lookup"><span data-stu-id="518ef-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7964b-121">子元素</span><span class="sxs-lookup"><span data-stu-id="7964b-121">Child Elements</span></span>  
+ <span data-ttu-id="7964b-122">無。</span><span class="sxs-lookup"><span data-stu-id="7964b-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="518ef-123">父項目</span><span class="sxs-lookup"><span data-stu-id="518ef-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7964b-123">父項目</span><span class="sxs-lookup"><span data-stu-id="7964b-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="518ef-124">項目</span><span class="sxs-lookup"><span data-stu-id="518ef-124">Element</span></span>|<span data-ttu-id="518ef-125">描述</span><span class="sxs-lookup"><span data-stu-id="518ef-125">Description</span></span>|  
+|<span data-ttu-id="7964b-124">項目</span><span class="sxs-lookup"><span data-stu-id="7964b-124">Element</span></span>|<span data-ttu-id="7964b-125">描述</span><span class="sxs-lookup"><span data-stu-id="7964b-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="518ef-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="518ef-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="518ef-127">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="518ef-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="7964b-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="7964b-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="7964b-127">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="7964b-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="518ef-128">備註</span><span class="sxs-lookup"><span data-stu-id="518ef-128">Remarks</span></span>  
- <span data-ttu-id="518ef-129">Common Language Runtime (CLR) 支援兩種類型的記憶體回收：工作站記憶體回收 (可用於所有系統)，以及伺服器記憶體回收 (可用於多處理器系統)。</span><span class="sxs-lookup"><span data-stu-id="518ef-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="518ef-130">您可以使用 `<gcServer>` 項目來控制 CLR 執行的記憶體回收類型。</span><span class="sxs-lookup"><span data-stu-id="518ef-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="518ef-131">使用 <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> 屬性來決定是否啟用伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7964b-128">備註</span><span class="sxs-lookup"><span data-stu-id="7964b-128">Remarks</span></span>  
+ <span data-ttu-id="7964b-129">Common Language Runtime (CLR) 支援兩種類型的記憶體回收：工作站記憶體回收 (可用於所有系統)，以及伺服器記憶體回收 (可用於多處理器系統)。</span><span class="sxs-lookup"><span data-stu-id="7964b-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="7964b-130">您可以使用 `<gcServer>` 項目來控制 CLR 執行的記憶體回收類型。</span><span class="sxs-lookup"><span data-stu-id="7964b-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="7964b-131">使用 <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> 屬性來決定是否啟用伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- <span data-ttu-id="518ef-132">針對單一處理器電腦，預設的工作站記憶體回收應該是最快的選項。</span><span class="sxs-lookup"><span data-stu-id="518ef-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="518ef-133">無論是工作站或伺服器，都可以用於兩個處理器的電腦。</span><span class="sxs-lookup"><span data-stu-id="518ef-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="518ef-134">針對兩個以上的處理器，伺服器記憶體回收應該是最快的選項。</span><span class="sxs-lookup"><span data-stu-id="518ef-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
+ <span data-ttu-id="7964b-132">針對單一處理器電腦，預設的工作站記憶體回收應該是最快的選項。</span><span class="sxs-lookup"><span data-stu-id="7964b-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="7964b-133">無論是工作站或伺服器，都可以用於兩個處理器的電腦。</span><span class="sxs-lookup"><span data-stu-id="7964b-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="7964b-134">針對兩個以上的處理器，伺服器記憶體回收應該是最快的選項。</span><span class="sxs-lookup"><span data-stu-id="7964b-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- <span data-ttu-id="518ef-135">此項目只能用在應用程式組態檔中；如果是在或電腦組態檔中，就會忽略此項目。</span><span class="sxs-lookup"><span data-stu-id="518ef-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
+ <span data-ttu-id="7964b-135">此項目只能用在應用程式組態檔中；如果是在或電腦組態檔中，就會忽略此項目。</span><span class="sxs-lookup"><span data-stu-id="7964b-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="518ef-136">在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="518ef-137">從 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 開始，伺服器記憶體回收為並行。</span><span class="sxs-lookup"><span data-stu-id="518ef-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="518ef-138">若要使用非並行伺服器記憶體回收，`<gcServer>`元素`true`和[ \<gcConcurrent > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)至`false`。</span><span class="sxs-lookup"><span data-stu-id="518ef-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
+>  <span data-ttu-id="7964b-136">在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="7964b-137">從 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 開始，伺服器記憶體回收為並行。</span><span class="sxs-lookup"><span data-stu-id="7964b-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="7964b-138">若要使用非並行伺服器記憶體回收，`<gcServer>`元素`true`和[ \<gcConcurrent > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)至`false`。</span><span class="sxs-lookup"><span data-stu-id="7964b-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="518ef-139">範例</span><span class="sxs-lookup"><span data-stu-id="518ef-139">Example</span></span>  
- <span data-ttu-id="518ef-140">下列範例會啟用伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="518ef-140">The following example enables server garbage collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="7964b-139">範例</span><span class="sxs-lookup"><span data-stu-id="7964b-139">Example</span></span>  
+ <span data-ttu-id="7964b-140">下列範例會啟用伺服器記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7964b-140">The following example enables server garbage collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,8 +87,8 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="518ef-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="518ef-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7964b-141">請參閱</span><span class="sxs-lookup"><span data-stu-id="7964b-141">See Also</span></span>  
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="518ef-142">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="518ef-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="518ef-143">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="518ef-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="518ef-144">如何： 停用並行記憶體回收</span><span class="sxs-lookup"><span data-stu-id="518ef-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [<span data-ttu-id="7964b-142">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="7964b-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="7964b-143">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="7964b-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="7964b-144">如何： 停用並行記憶體回收</span><span class="sxs-lookup"><span data-stu-id="7964b-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)

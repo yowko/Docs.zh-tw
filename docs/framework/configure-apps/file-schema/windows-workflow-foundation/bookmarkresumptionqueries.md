@@ -12,25 +12,26 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 865f9223e936fa2b9304139680007d7c8cb5ef25
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fb3cf8457dc19081e9eb51091453764513da8ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltbookmarkresumptionqueriesgt"></a><span data-ttu-id="4bacb-102">&lt;bookmarkResumptionQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="4bacb-102">&lt;bookmarkResumptionQueries&gt;</span></span>
-<span data-ttu-id="4bacb-103">代表查詢的集合，這個集合可用來追蹤工作流程執行個體中的書籤繼續。</span><span class="sxs-lookup"><span data-stu-id="4bacb-103">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="4bacb-104">追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。</span><span class="sxs-lookup"><span data-stu-id="4bacb-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
+# <a name="ltbookmarkresumptionqueriesgt"></a><span data-ttu-id="4a1c7-102">&lt;bookmarkResumptionQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="4a1c7-102">&lt;bookmarkResumptionQueries&gt;</span></span>
+<span data-ttu-id="4a1c7-103">代表查詢的集合，這個集合可用來追蹤工作流程執行個體中的書籤繼續。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-103">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="4a1c7-104">追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
   
- <span data-ttu-id="4bacb-105">如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="4bacb-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="4a1c7-105">如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="4a1c7-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="4bacb-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="4bacb-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="4bacb-107">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="4bacb-107">\<tracking></span></span>  
-<span data-ttu-id="4bacb-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="4bacb-108">\<trackingProfile></span></span>  
-<span data-ttu-id="4bacb-109">\<工作流程 ></span><span class="sxs-lookup"><span data-stu-id="4bacb-109">\<workflow></span></span>  
-<span data-ttu-id="4bacb-110">\<bookmarkResumptionQueries ></span><span class="sxs-lookup"><span data-stu-id="4bacb-110">\<bookmarkResumptionQueries></span></span>  
-<span data-ttu-id="4bacb-111">\<bookmarkResumptionQuery ></span><span class="sxs-lookup"><span data-stu-id="4bacb-111">\<bookmarkResumptionQuery></span></span>  
+<span data-ttu-id="4a1c7-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="4a1c7-107">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-107">\<tracking></span></span>  
+<span data-ttu-id="4a1c7-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-108">\<trackingProfile></span></span>  
+<span data-ttu-id="4a1c7-109">\<工作流程 ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-109">\<workflow></span></span>  
+<span data-ttu-id="4a1c7-110">\<bookmarkResumptionQueries ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-110">\<bookmarkResumptionQueries></span></span>  
+<span data-ttu-id="4a1c7-111">\<bookmarkResumptionQuery ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-111">\<bookmarkResumptionQuery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bacb-112">語法</span><span class="sxs-lookup"><span data-stu-id="4bacb-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a1c7-112">語法</span><span class="sxs-lookup"><span data-stu-id="4a1c7-112">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -44,26 +45,26 @@ ms.lasthandoff: 12/02/2017
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4bacb-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="4bacb-113">Attributes and Elements</span></span>  
- <span data-ttu-id="4bacb-114">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="4bacb-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4a1c7-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="4a1c7-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="4a1c7-114">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4bacb-115">屬性</span><span class="sxs-lookup"><span data-stu-id="4bacb-115">Attributes</span></span>  
- <span data-ttu-id="4bacb-116">無。</span><span class="sxs-lookup"><span data-stu-id="4bacb-116">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4a1c7-115">屬性</span><span class="sxs-lookup"><span data-stu-id="4a1c7-115">Attributes</span></span>  
+ <span data-ttu-id="4a1c7-116">無。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-116">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="4bacb-117">子項目</span><span class="sxs-lookup"><span data-stu-id="4bacb-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4a1c7-117">子元素</span><span class="sxs-lookup"><span data-stu-id="4a1c7-117">Child Elements</span></span>  
   
-|<span data-ttu-id="4bacb-118">項目</span><span class="sxs-lookup"><span data-stu-id="4bacb-118">Element</span></span>|<span data-ttu-id="4bacb-119">說明</span><span class="sxs-lookup"><span data-stu-id="4bacb-119">Description</span></span>|  
+|<span data-ttu-id="4a1c7-118">項目</span><span class="sxs-lookup"><span data-stu-id="4a1c7-118">Element</span></span>|<span data-ttu-id="4a1c7-119">描述</span><span class="sxs-lookup"><span data-stu-id="4a1c7-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4bacb-120">\<bookmarkResumptionQuery ></span><span class="sxs-lookup"><span data-stu-id="4bacb-120">\<bookmarkResumptionQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionquery.md)|<span data-ttu-id="4bacb-121">查詢，可用來追蹤工作流程執行個體中的書籤繼續。</span><span class="sxs-lookup"><span data-stu-id="4bacb-121">A query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="4bacb-122">追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。</span><span class="sxs-lookup"><span data-stu-id="4bacb-122">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>|  
+|[<span data-ttu-id="4a1c7-120">\<bookmarkResumptionQuery ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-120">\<bookmarkResumptionQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionquery.md)|<span data-ttu-id="4a1c7-121">查詢，可用來追蹤工作流程執行個體中的書籤繼續。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-121">A query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="4a1c7-122">追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-122">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4bacb-123">父項目</span><span class="sxs-lookup"><span data-stu-id="4bacb-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4a1c7-123">父項目</span><span class="sxs-lookup"><span data-stu-id="4a1c7-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="4bacb-124">項目</span><span class="sxs-lookup"><span data-stu-id="4bacb-124">Element</span></span>|<span data-ttu-id="4bacb-125">說明</span><span class="sxs-lookup"><span data-stu-id="4bacb-125">Description</span></span>|  
+|<span data-ttu-id="4a1c7-124">項目</span><span class="sxs-lookup"><span data-stu-id="4a1c7-124">Element</span></span>|<span data-ttu-id="4a1c7-125">描述</span><span class="sxs-lookup"><span data-stu-id="4a1c7-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4bacb-126">\<工作流程 ></span><span class="sxs-lookup"><span data-stu-id="4bacb-126">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="4bacb-127">包含所有的查詢所識別的特定工作流程的組態項目**activityDefinitionId**屬性。</span><span class="sxs-lookup"><span data-stu-id="4bacb-127">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
+|[<span data-ttu-id="4a1c7-126">\<工作流程 ></span><span class="sxs-lookup"><span data-stu-id="4a1c7-126">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="4a1c7-127">包含所有的查詢所識別的特定工作流程的組態項目**activityDefinitionId**屬性。</span><span class="sxs-lookup"><span data-stu-id="4a1c7-127">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="4bacb-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4bacb-128">See Also</span></span>  
- <span data-ttu-id="4bacb-129"><xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="4bacb-129"><xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="4bacb-130"><xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="4bacb-130"><xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType></span></span>       
- [<span data-ttu-id="4bacb-131">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="4bacb-131">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="4bacb-132">追蹤設定檔</span><span class="sxs-lookup"><span data-stu-id="4bacb-132">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="4a1c7-128">請參閱</span><span class="sxs-lookup"><span data-stu-id="4a1c7-128">See Also</span></span>  
+ <span data-ttu-id="4a1c7-129"><xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="4a1c7-129"><xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="4a1c7-130"><xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="4a1c7-130"><xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="4a1c7-131">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="4a1c7-131">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="4a1c7-132">追蹤設定檔</span><span class="sxs-lookup"><span data-stu-id="4a1c7-132">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

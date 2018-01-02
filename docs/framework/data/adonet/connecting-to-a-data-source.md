@@ -13,28 +13,29 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0d21c571b659e9d7aef65893db18b034d614e2af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01a7342d6e081bec88aeef2c55461be2d936e4a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="1e839-102">在 ADO.NET 中連接至資料來源</span><span class="sxs-lookup"><span data-stu-id="1e839-102">Connecting to a Data Source in ADO.NET</span></span>
-<span data-ttu-id="1e839-103">在 ADO.NET 中使用**連接**物件連接至特定資料來源，藉由提供連接字串中的必要的驗證資訊。</span><span class="sxs-lookup"><span data-stu-id="1e839-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="1e839-104">**連接**的資料來源類型取決於您使用的物件。</span><span class="sxs-lookup"><span data-stu-id="1e839-104">The **Connection** object you use depends on the type of data source.</span></span>  
+# <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="8af35-102">在 ADO.NET 中連接至資料來源</span><span class="sxs-lookup"><span data-stu-id="8af35-102">Connecting to a Data Source in ADO.NET</span></span>
+<span data-ttu-id="8af35-103">在 ADO.NET 中使用**連接**物件連接至特定資料來源，藉由提供連接字串中的必要的驗證資訊。</span><span class="sxs-lookup"><span data-stu-id="8af35-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="8af35-104">**連接**的資料來源類型取決於您使用的物件。</span><span class="sxs-lookup"><span data-stu-id="8af35-104">The **Connection** object you use depends on the type of data source.</span></span>  
   
- <span data-ttu-id="1e839-105">內含在 .NET Framework 中的每個 .NET Framework 資料提供者都有 <xref:System.Data.Common.DbConnection> 物件：.NET Framework Data Provider for OLE DB 包含 <xref:System.Data.OleDb.OleDbConnection> 物件、.NET Framework Data Provider for SQL Server 包含 <xref:System.Data.SqlClient.SqlConnection> 物件、.NET Framework Data Provider for ODBC 包含 <xref:System.Data.Odbc.OdbcConnection> 物件，而且 .NET Framework Data Provider for Oracle 包含 <xref:System.Data.OracleClient.OracleConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="1e839-105">Each .NET Framework data provider included with the .NET Framework has a <xref:System.Data.Common.DbConnection> object: the .NET Framework Data Provider for OLE DB includes an <xref:System.Data.OleDb.OleDbConnection> object, the .NET Framework Data Provider for SQL Server includes a <xref:System.Data.SqlClient.SqlConnection> object, the .NET Framework Data Provider for ODBC includes an <xref:System.Data.Odbc.OdbcConnection> object, and the .NET Framework Data Provider for Oracle includes an <xref:System.Data.OracleClient.OracleConnection> object.</span></span>  
+ <span data-ttu-id="8af35-105">內含在 .NET Framework 中的每個 .NET Framework 資料提供者都有 <xref:System.Data.Common.DbConnection> 物件：.NET Framework Data Provider for OLE DB 包含 <xref:System.Data.OleDb.OleDbConnection> 物件、.NET Framework Data Provider for SQL Server 包含 <xref:System.Data.SqlClient.SqlConnection> 物件、.NET Framework Data Provider for ODBC 包含 <xref:System.Data.Odbc.OdbcConnection> 物件，而且 .NET Framework Data Provider for Oracle 包含 <xref:System.Data.OracleClient.OracleConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="8af35-105">Each .NET Framework data provider included with the .NET Framework has a <xref:System.Data.Common.DbConnection> object: the .NET Framework Data Provider for OLE DB includes an <xref:System.Data.OleDb.OleDbConnection> object, the .NET Framework Data Provider for SQL Server includes a <xref:System.Data.SqlClient.SqlConnection> object, the .NET Framework Data Provider for ODBC includes an <xref:System.Data.Odbc.OdbcConnection> object, and the .NET Framework Data Provider for Oracle includes an <xref:System.Data.OracleClient.OracleConnection> object.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1e839-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="1e839-106">In This Section</span></span>  
- [<span data-ttu-id="1e839-107">建立連線</span><span class="sxs-lookup"><span data-stu-id="1e839-107">Establishing the Connection</span></span>](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- <span data-ttu-id="1e839-108">描述如何使用**連接**物件來建立資料來源的連接。</span><span class="sxs-lookup"><span data-stu-id="1e839-108">Describes how to use a **Connection** object to establish a connection to a data source.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8af35-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="8af35-106">In This Section</span></span>  
+ [<span data-ttu-id="8af35-107">建立連線</span><span class="sxs-lookup"><span data-stu-id="8af35-107">Establishing the Connection</span></span>](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
+ <span data-ttu-id="8af35-108">描述如何使用**連接**物件來建立資料來源的連接。</span><span class="sxs-lookup"><span data-stu-id="8af35-108">Describes how to use a **Connection** object to establish a connection to a data source.</span></span>  
   
- [<span data-ttu-id="1e839-109">連線事件</span><span class="sxs-lookup"><span data-stu-id="1e839-109">Connection Events</span></span>](../../../../docs/framework/data/adonet/connection-events.md)  
- <span data-ttu-id="1e839-110">描述如何使用**InfoMessage**事件，以擷取從資料來源的參考用訊息。</span><span class="sxs-lookup"><span data-stu-id="1e839-110">Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.</span></span>  
+ [<span data-ttu-id="8af35-109">Connection 事件</span><span class="sxs-lookup"><span data-stu-id="8af35-109">Connection Events</span></span>](../../../../docs/framework/data/adonet/connection-events.md)  
+ <span data-ttu-id="8af35-110">描述如何使用**InfoMessage**事件，以擷取從資料來源的參考用訊息。</span><span class="sxs-lookup"><span data-stu-id="8af35-110">Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e839-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e839-111">See Also</span></span>  
- [<span data-ttu-id="1e839-112">連接字串</span><span class="sxs-lookup"><span data-stu-id="1e839-112">Connection Strings</span></span>](../../../../docs/framework/data/adonet/connection-strings.md)  
- [<span data-ttu-id="1e839-113">連接共用</span><span class="sxs-lookup"><span data-stu-id="1e839-113">Connection Pooling</span></span>](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [<span data-ttu-id="1e839-114">命令和參數</span><span class="sxs-lookup"><span data-stu-id="1e839-114">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [<span data-ttu-id="1e839-115">Dataadapter 和 Datareader</span><span class="sxs-lookup"><span data-stu-id="1e839-115">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [<span data-ttu-id="1e839-116">異動和並行存取</span><span class="sxs-lookup"><span data-stu-id="1e839-116">Transactions and Concurrency</span></span>](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [<span data-ttu-id="1e839-117">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="1e839-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="8af35-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="8af35-111">See Also</span></span>  
+ [<span data-ttu-id="8af35-112">連接字串</span><span class="sxs-lookup"><span data-stu-id="8af35-112">Connection Strings</span></span>](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [<span data-ttu-id="8af35-113">連接共用</span><span class="sxs-lookup"><span data-stu-id="8af35-113">Connection Pooling</span></span>](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [<span data-ttu-id="8af35-114">命令和參數</span><span class="sxs-lookup"><span data-stu-id="8af35-114">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="8af35-115">DataAdapter 和 DataReader</span><span class="sxs-lookup"><span data-stu-id="8af35-115">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="8af35-116">異動和並行存取</span><span class="sxs-lookup"><span data-stu-id="8af35-116">Transactions and Concurrency</span></span>](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [<span data-ttu-id="8af35-117">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="8af35-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

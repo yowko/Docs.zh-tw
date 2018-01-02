@@ -17,55 +17,56 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ff1eb93a6d81f83b60e2621296e0c9d995699898
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7bc4136fb917ee9b63b7cca26ba1834de21f542e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="16714-102">&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="16714-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
-<span data-ttu-id="16714-103">移除的接聽程式從**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="16714-103">Removes a listener from the **Listeners** collection.</span></span>  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="2caa3-102">&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="2caa3-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="2caa3-103">移除的接聽程式從**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="2caa3-103">Removes a listener from the **Listeners** collection.</span></span>  
   
- <span data-ttu-id="16714-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="16714-104">\<configuration></span></span>  
-<span data-ttu-id="16714-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="16714-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="16714-106">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="16714-106">\<trace></span></span>  
-<span data-ttu-id="16714-107">\<接聽項 ></span><span class="sxs-lookup"><span data-stu-id="16714-107">\<listeners></span></span>  
-<span data-ttu-id="16714-108">\<移除 ></span><span class="sxs-lookup"><span data-stu-id="16714-108">\<remove></span></span>  
+ <span data-ttu-id="2caa3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2caa3-104">\<configuration></span></span>  
+<span data-ttu-id="2caa3-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="2caa3-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="2caa3-106">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="2caa3-106">\<trace></span></span>  
+<span data-ttu-id="2caa3-107">\<接聽項 ></span><span class="sxs-lookup"><span data-stu-id="2caa3-107">\<listeners></span></span>  
+<span data-ttu-id="2caa3-108">\<移除 ></span><span class="sxs-lookup"><span data-stu-id="2caa3-108">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16714-109">語法</span><span class="sxs-lookup"><span data-stu-id="16714-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2caa3-109">語法</span><span class="sxs-lookup"><span data-stu-id="2caa3-109">Syntax</span></span>  
   
 ```xml  
 <remove name="listener name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="16714-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="16714-110">Attributes and Elements</span></span>  
- <span data-ttu-id="16714-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="16714-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2caa3-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2caa3-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="2caa3-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2caa3-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="16714-112">屬性</span><span class="sxs-lookup"><span data-stu-id="16714-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2caa3-112">屬性</span><span class="sxs-lookup"><span data-stu-id="2caa3-112">Attributes</span></span>  
   
-|<span data-ttu-id="16714-113">屬性</span><span class="sxs-lookup"><span data-stu-id="16714-113">Attribute</span></span>|<span data-ttu-id="16714-114">說明</span><span class="sxs-lookup"><span data-stu-id="16714-114">Description</span></span>|  
+|<span data-ttu-id="2caa3-113">屬性</span><span class="sxs-lookup"><span data-stu-id="2caa3-113">Attribute</span></span>|<span data-ttu-id="2caa3-114">描述</span><span class="sxs-lookup"><span data-stu-id="2caa3-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="16714-115">**name**</span><span class="sxs-lookup"><span data-stu-id="16714-115">**name**</span></span>|<span data-ttu-id="16714-116">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="16714-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="16714-117">要移除的接聽程式名稱**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="16714-117">The name of the listener to remove from the **Listeners** collection.</span></span>|  
+|<span data-ttu-id="2caa3-115">**name**</span><span class="sxs-lookup"><span data-stu-id="2caa3-115">**name**</span></span>|<span data-ttu-id="2caa3-116">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="2caa3-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="2caa3-117">要移除的接聽程式名稱**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="2caa3-117">The name of the listener to remove from the **Listeners** collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="16714-118">子元素</span><span class="sxs-lookup"><span data-stu-id="16714-118">Child Elements</span></span>  
- <span data-ttu-id="16714-119">無。</span><span class="sxs-lookup"><span data-stu-id="16714-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2caa3-118">子元素</span><span class="sxs-lookup"><span data-stu-id="2caa3-118">Child Elements</span></span>  
+ <span data-ttu-id="2caa3-119">無。</span><span class="sxs-lookup"><span data-stu-id="2caa3-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="16714-120">父項目</span><span class="sxs-lookup"><span data-stu-id="16714-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2caa3-120">父項目</span><span class="sxs-lookup"><span data-stu-id="2caa3-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="16714-121">項目</span><span class="sxs-lookup"><span data-stu-id="16714-121">Element</span></span>|<span data-ttu-id="16714-122">描述</span><span class="sxs-lookup"><span data-stu-id="16714-122">Description</span></span>|  
+|<span data-ttu-id="2caa3-121">項目</span><span class="sxs-lookup"><span data-stu-id="2caa3-121">Element</span></span>|<span data-ttu-id="2caa3-122">描述</span><span class="sxs-lookup"><span data-stu-id="2caa3-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="16714-123">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="16714-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`listeners`|<span data-ttu-id="16714-124">指定的接聽程式會收集，存放區，並將訊息路由。</span><span class="sxs-lookup"><span data-stu-id="16714-124">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="16714-125">接聽程式將追蹤輸出導向至適當的目標。</span><span class="sxs-lookup"><span data-stu-id="16714-125">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="16714-126">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="16714-126">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="16714-127">設定 ASP.NET 追蹤服務。</span><span class="sxs-lookup"><span data-stu-id="16714-127">Configures the ASP.NET trace service.</span></span>|  
+|`configuration`|<span data-ttu-id="2caa3-123">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="2caa3-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`listeners`|<span data-ttu-id="2caa3-124">指定的接聽程式會收集，存放區，並將訊息路由。</span><span class="sxs-lookup"><span data-stu-id="2caa3-124">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="2caa3-125">接聽程式將追蹤輸出導向至適當的目標。</span><span class="sxs-lookup"><span data-stu-id="2caa3-125">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="2caa3-126">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="2caa3-126">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="2caa3-127">設定 ASP.NET 追蹤服務。</span><span class="sxs-lookup"><span data-stu-id="2caa3-127">Configures the ASP.NET trace service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="16714-128">備註</span><span class="sxs-lookup"><span data-stu-id="16714-128">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2caa3-128">備註</span><span class="sxs-lookup"><span data-stu-id="2caa3-128">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="16714-129">移除<xref:System.Diagnostics.DefaultTraceListener>從`Listeners`集合改變行為<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>，和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="16714-129">Removing the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection alters the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="16714-130">呼叫`Assert`或`Fail`方法通常會在顯示的訊息方塊中，不過，如果不顯示訊息方塊<xref:System.Diagnostics.DefaultTraceListener>不在`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="16714-130">Calling an `Assert` or `Fail` method normally results in the display of a message box, however the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
+>  <span data-ttu-id="2caa3-129">移除<xref:System.Diagnostics.DefaultTraceListener>從`Listeners`集合改變行為<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>， <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>，和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="2caa3-129">Removing the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection alters the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="2caa3-130">呼叫`Assert`或`Fail`方法通常會在顯示的訊息方塊中，不過，如果不顯示訊息方塊<xref:System.Diagnostics.DefaultTraceListener>不在`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="2caa3-130">Calling an `Assert` or `Fail` method normally results in the display of a message box, however the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="16714-131">範例</span><span class="sxs-lookup"><span data-stu-id="16714-131">Example</span></span>  
- <span data-ttu-id="16714-132">下列範例示範如何從追蹤中移除預設的追蹤接聽項**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="16714-132">The following example shows how to remove the default trace listener from the trace **Listeners** collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="2caa3-131">範例</span><span class="sxs-lookup"><span data-stu-id="2caa3-131">Example</span></span>  
+ <span data-ttu-id="2caa3-132">下列範例示範如何從追蹤中移除預設的追蹤接聽項**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="2caa3-132">The following example shows how to remove the default trace listener from the trace **Listeners** collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -79,9 +80,9 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="16714-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="16714-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2caa3-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="2caa3-133">See Also</span></span>  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.EventLogTraceListener>  
- [<span data-ttu-id="16714-134">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="16714-134">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="2caa3-134">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="2caa3-134">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

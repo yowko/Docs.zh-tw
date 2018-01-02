@@ -16,65 +16,66 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e77e43ed9d7520cbbcf453d067a49de3a86de3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b17816ee6134dc6b3074256093c0cba07419baf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltnetfx40pinvokestackresiliencegt-element"></a><span data-ttu-id="45b4f-102">&lt;NetFx40_PInvokeStackResilience&gt;項目</span><span class="sxs-lookup"><span data-stu-id="45b4f-102">&lt;NetFx40_PInvokeStackResilience&gt; Element</span></span>
-<span data-ttu-id="45b4f-103">指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。</span><span class="sxs-lookup"><span data-stu-id="45b4f-103">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>  
+# <a name="ltnetfx40pinvokestackresiliencegt-element"></a><span data-ttu-id="65e0b-102">&lt;NetFx40_PInvokeStackResilience&gt;項目</span><span class="sxs-lookup"><span data-stu-id="65e0b-102">&lt;NetFx40_PInvokeStackResilience&gt; Element</span></span>
+<span data-ttu-id="65e0b-103">指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。</span><span class="sxs-lookup"><span data-stu-id="65e0b-103">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>  
   
- <span data-ttu-id="45b4f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="45b4f-104">\<configuration></span></span>  
-<span data-ttu-id="45b4f-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="45b4f-105">\<runtime></span></span>  
-<span data-ttu-id="45b4f-106">< NetFx40_PInvokeStackResilience ></span><span class="sxs-lookup"><span data-stu-id="45b4f-106"><NetFx40_PInvokeStackResilience></span></span>  
+ <span data-ttu-id="65e0b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="65e0b-104">\<configuration></span></span>  
+<span data-ttu-id="65e0b-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="65e0b-105">\<runtime></span></span>  
+<span data-ttu-id="65e0b-106">< NetFx40_PInvokeStackResilience ></span><span class="sxs-lookup"><span data-stu-id="65e0b-106"><NetFx40_PInvokeStackResilience></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45b4f-107">語法</span><span class="sxs-lookup"><span data-stu-id="45b4f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65e0b-107">語法</span><span class="sxs-lookup"><span data-stu-id="65e0b-107">Syntax</span></span>  
   
 ```xml  
 <NetFx40_PInvokeStackResilience  enabled="1|0"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="45b4f-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="45b4f-108">Attributes and Elements</span></span>  
- <span data-ttu-id="45b4f-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="45b4f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="65e0b-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="65e0b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="65e0b-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="65e0b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="45b4f-110">屬性</span><span class="sxs-lookup"><span data-stu-id="45b4f-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="65e0b-110">屬性</span><span class="sxs-lookup"><span data-stu-id="65e0b-110">Attributes</span></span>  
   
-|<span data-ttu-id="45b4f-111">屬性</span><span class="sxs-lookup"><span data-stu-id="45b4f-111">Attribute</span></span>|<span data-ttu-id="45b4f-112">描述</span><span class="sxs-lookup"><span data-stu-id="45b4f-112">Description</span></span>|  
+|<span data-ttu-id="65e0b-111">屬性</span><span class="sxs-lookup"><span data-stu-id="65e0b-111">Attribute</span></span>|<span data-ttu-id="65e0b-112">描述</span><span class="sxs-lookup"><span data-stu-id="65e0b-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="45b4f-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="45b4f-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="45b4f-114">指定是否執行階段偵測到不正確的平台叫用宣告，並自動在執行階段在 32 位元平台上修正堆疊。</span><span class="sxs-lookup"><span data-stu-id="45b4f-114">Specifies whether the runtime detects incorrect platform invoke declarations and automatically fixes the stack at run time on 32-bit platforms.</span></span>|  
+|`enabled`|<span data-ttu-id="65e0b-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="65e0b-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="65e0b-114">指定是否執行階段偵測到不正確的平台叫用宣告，並自動在執行階段在 32 位元平台上修正堆疊。</span><span class="sxs-lookup"><span data-stu-id="65e0b-114">Specifies whether the runtime detects incorrect platform invoke declarations and automatically fixes the stack at run time on 32-bit platforms.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="45b4f-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="45b4f-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="65e0b-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="65e0b-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="45b4f-116">值</span><span class="sxs-lookup"><span data-stu-id="45b4f-116">Value</span></span>|<span data-ttu-id="45b4f-117">說明</span><span class="sxs-lookup"><span data-stu-id="45b4f-117">Description</span></span>|  
+|<span data-ttu-id="65e0b-116">值</span><span class="sxs-lookup"><span data-stu-id="65e0b-116">Value</span></span>|<span data-ttu-id="65e0b-117">描述</span><span class="sxs-lookup"><span data-stu-id="65e0b-117">Description</span></span>|  
 |-----------|-----------------|  
-|`0`|<span data-ttu-id="45b4f-118">執行階段會更快的 interop 封送處理架構中導入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 其中不會偵測及修正不正確的平台叫用宣告。</span><span class="sxs-lookup"><span data-stu-id="45b4f-118">The runtime uses the faster interop marshaling architecture introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], which does not detect and fix incorrect platform invoke declarations.</span></span> <span data-ttu-id="45b4f-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="45b4f-119">This is the default.</span></span>|  
-|`1`|<span data-ttu-id="45b4f-120">執行階段會使用速度較慢轉換偵測及修正不正確的平台叫用宣告。</span><span class="sxs-lookup"><span data-stu-id="45b4f-120">The runtime uses slower transitions that detect and fix incorrect platform invoke declarations.</span></span>|  
+|`0`|<span data-ttu-id="65e0b-118">執行階段會更快的 interop 封送處理架構中導入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 其中不會偵測及修正不正確的平台叫用宣告。</span><span class="sxs-lookup"><span data-stu-id="65e0b-118">The runtime uses the faster interop marshaling architecture introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], which does not detect and fix incorrect platform invoke declarations.</span></span> <span data-ttu-id="65e0b-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="65e0b-119">This is the default.</span></span>|  
+|`1`|<span data-ttu-id="65e0b-120">執行階段會使用速度較慢轉換偵測及修正不正確的平台叫用宣告。</span><span class="sxs-lookup"><span data-stu-id="65e0b-120">The runtime uses slower transitions that detect and fix incorrect platform invoke declarations.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="45b4f-121">子元素</span><span class="sxs-lookup"><span data-stu-id="45b4f-121">Child Elements</span></span>  
- <span data-ttu-id="45b4f-122">無。</span><span class="sxs-lookup"><span data-stu-id="45b4f-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="65e0b-121">子元素</span><span class="sxs-lookup"><span data-stu-id="65e0b-121">Child Elements</span></span>  
+ <span data-ttu-id="65e0b-122">無。</span><span class="sxs-lookup"><span data-stu-id="65e0b-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="45b4f-123">父項目</span><span class="sxs-lookup"><span data-stu-id="45b4f-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="65e0b-123">父項目</span><span class="sxs-lookup"><span data-stu-id="65e0b-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="45b4f-124">項目</span><span class="sxs-lookup"><span data-stu-id="45b4f-124">Element</span></span>|<span data-ttu-id="45b4f-125">描述</span><span class="sxs-lookup"><span data-stu-id="45b4f-125">Description</span></span>|  
+|<span data-ttu-id="65e0b-124">項目</span><span class="sxs-lookup"><span data-stu-id="65e0b-124">Element</span></span>|<span data-ttu-id="65e0b-125">描述</span><span class="sxs-lookup"><span data-stu-id="65e0b-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="45b4f-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="45b4f-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="45b4f-127">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="45b4f-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="65e0b-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="65e0b-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="65e0b-127">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="65e0b-127">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="45b4f-128">備註</span><span class="sxs-lookup"><span data-stu-id="45b4f-128">Remarks</span></span>  
- <span data-ttu-id="45b4f-129">這個項目可讓您更快速 interop 封送處理為執行時期恢復功能，針對不正確的平台叫用宣告進行交易。</span><span class="sxs-lookup"><span data-stu-id="45b4f-129">This element enables you to trade faster interop marshaling for run-time resilience against incorrect platform invoke declarations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65e0b-128">備註</span><span class="sxs-lookup"><span data-stu-id="65e0b-128">Remarks</span></span>  
+ <span data-ttu-id="65e0b-129">這個項目可讓您更快速 interop 封送處理為執行時期恢復功能，針對不正確的平台叫用宣告進行交易。</span><span class="sxs-lookup"><span data-stu-id="65e0b-129">This element enables you to trade faster interop marshaling for run-time resilience against incorrect platform invoke declarations.</span></span>  
   
- <span data-ttu-id="45b4f-130">從開始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，簡化的 interop 封送處理架構提供從 managed 程式碼會轉換成 unmanaged 程式碼的效能大幅提升。</span><span class="sxs-lookup"><span data-stu-id="45b4f-130">Starting with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], a streamlined interop marshaling architecture provides a significant performance improvement for transitions from managed code to unmanaged code.</span></span> <span data-ttu-id="45b4f-131">在舊版的.NET Framework 中，封送處理的層級偵測到不正確平台叫用 32 位元平台上的宣告，並自動修正堆疊。</span><span class="sxs-lookup"><span data-stu-id="45b4f-131">In earlier versions of the .NET Framework, the marshaling layer detected incorrect platform invoke declarations on 32-bit platforms and automatically fixed the stack.</span></span> <span data-ttu-id="45b4f-132">新的封送處理架構會移除此步驟。</span><span class="sxs-lookup"><span data-stu-id="45b4f-132">The new marshaling architecture eliminates this step.</span></span> <span data-ttu-id="45b4f-133">如此一來，轉換會非常快速，但不正確的平台叫用宣告可能會導致程式失敗。</span><span class="sxs-lookup"><span data-stu-id="45b4f-133">As a result, transitions are very fast, but an incorrect platform invoke declaration can cause a program failure.</span></span>  
+ <span data-ttu-id="65e0b-130">從開始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，簡化的 interop 封送處理架構提供從 managed 程式碼會轉換成 unmanaged 程式碼的效能大幅提升。</span><span class="sxs-lookup"><span data-stu-id="65e0b-130">Starting with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], a streamlined interop marshaling architecture provides a significant performance improvement for transitions from managed code to unmanaged code.</span></span> <span data-ttu-id="65e0b-131">在舊版的.NET Framework 中，封送處理的層級偵測到不正確平台叫用 32 位元平台上的宣告，並自動修正堆疊。</span><span class="sxs-lookup"><span data-stu-id="65e0b-131">In earlier versions of the .NET Framework, the marshaling layer detected incorrect platform invoke declarations on 32-bit platforms and automatically fixed the stack.</span></span> <span data-ttu-id="65e0b-132">新的封送處理架構會移除此步驟。</span><span class="sxs-lookup"><span data-stu-id="65e0b-132">The new marshaling architecture eliminates this step.</span></span> <span data-ttu-id="65e0b-133">如此一來，轉換會非常快速，但不正確的平台叫用宣告可能會導致程式失敗。</span><span class="sxs-lookup"><span data-stu-id="65e0b-133">As a result, transitions are very fast, but an incorrect platform invoke declaration can cause a program failure.</span></span>  
   
- <span data-ttu-id="45b4f-134">若要可讓您輕鬆偵測不正確的宣告，在開發期間，Visual Studio 偵錯體驗已經過改良。</span><span class="sxs-lookup"><span data-stu-id="45b4f-134">To make it easy to detect incorrect declarations during development, the Visual Studio debugging experience has been improved.</span></span> <span data-ttu-id="45b4f-135">[PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) managed 偵錯助理 (MDA) 會通知您不正確的平台叫用宣告附加了偵錯工具執行您的應用程式時。</span><span class="sxs-lookup"><span data-stu-id="45b4f-135">The [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) managed debugging assistant (MDA) notifies you of incorrect platform invoke declarations when your application is running with the debugger attached.</span></span>  
+ <span data-ttu-id="65e0b-134">若要可讓您輕鬆偵測不正確的宣告，在開發期間，Visual Studio 偵錯體驗已經過改良。</span><span class="sxs-lookup"><span data-stu-id="65e0b-134">To make it easy to detect incorrect declarations during development, the Visual Studio debugging experience has been improved.</span></span> <span data-ttu-id="65e0b-135">[PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) managed 偵錯助理 (MDA) 會通知您不正確的平台叫用宣告附加了偵錯工具執行您的應用程式時。</span><span class="sxs-lookup"><span data-stu-id="65e0b-135">The [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) managed debugging assistant (MDA) notifies you of incorrect platform invoke declarations when your application is running with the debugger attached.</span></span>  
   
- <span data-ttu-id="45b4f-136">您的應用程式使用的元件，您無法重新編譯，，有不正確的平台叫用宣告，您可以使用位置的位址案例`NetFx40_PInvokeStackResilience`項目。</span><span class="sxs-lookup"><span data-stu-id="45b4f-136">To address scenarios where your application uses components that you cannot recompile, and that have incorrect platform invoke declarations, you can use the `NetFx40_PInvokeStackResilience` element.</span></span> <span data-ttu-id="45b4f-137">將這個項目加入至應用程式組態檔與`enabled="1"`opts 為相容性模式，與舊版的.NET Framework 中，但要付出速度較慢的轉換行為。</span><span class="sxs-lookup"><span data-stu-id="45b4f-137">Adding this element to your application configuration file with `enabled="1"` opts into a compatibility mode with the behavior of earlier versions of the .NET Framework, at the cost of slower transitions.</span></span> <span data-ttu-id="45b4f-138">針對舊版.NET Framework 的已編譯的組件會自動選擇加入此相容性模式中，而且不需要這個項目。</span><span class="sxs-lookup"><span data-stu-id="45b4f-138">Assemblies that have been compiled against earlier versions of the .NET Framework are automatically opted into this compatibility mode, and do not need this element.</span></span>  
+ <span data-ttu-id="65e0b-136">您的應用程式使用的元件，您無法重新編譯，，有不正確的平台叫用宣告，您可以使用位置的位址案例`NetFx40_PInvokeStackResilience`項目。</span><span class="sxs-lookup"><span data-stu-id="65e0b-136">To address scenarios where your application uses components that you cannot recompile, and that have incorrect platform invoke declarations, you can use the `NetFx40_PInvokeStackResilience` element.</span></span> <span data-ttu-id="65e0b-137">將這個項目加入至應用程式組態檔與`enabled="1"`opts 為相容性模式，與舊版的.NET Framework 中，但要付出速度較慢的轉換行為。</span><span class="sxs-lookup"><span data-stu-id="65e0b-137">Adding this element to your application configuration file with `enabled="1"` opts into a compatibility mode with the behavior of earlier versions of the .NET Framework, at the cost of slower transitions.</span></span> <span data-ttu-id="65e0b-138">針對舊版.NET Framework 的已編譯的組件會自動選擇加入此相容性模式中，而且不需要這個項目。</span><span class="sxs-lookup"><span data-stu-id="65e0b-138">Assemblies that have been compiled against earlier versions of the .NET Framework are automatically opted into this compatibility mode, and do not need this element.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="45b4f-139">組態檔</span><span class="sxs-lookup"><span data-stu-id="45b4f-139">Configuration File</span></span>  
- <span data-ttu-id="45b4f-140">此項目只能用於應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="45b4f-140">This element can be used only in the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="65e0b-139">組態檔</span><span class="sxs-lookup"><span data-stu-id="65e0b-139">Configuration File</span></span>  
+ <span data-ttu-id="65e0b-140">此項目只能用於應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="65e0b-140">This element can be used only in the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="45b4f-141">範例</span><span class="sxs-lookup"><span data-stu-id="45b4f-141">Example</span></span>  
- <span data-ttu-id="45b4f-142">下列範例會示範如何針對不正確的增加彈性選擇平台叫用的應用程式，但要付出之間的速度較慢轉換宣告 managed 和 unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="45b4f-142">The following example shows how to opt into increased resilience against incorrect platform invoke declarations for an application, at the cost of slower transitions between managed and unmanaged code.</span></span>  
+## <a name="example"></a><span data-ttu-id="65e0b-141">範例</span><span class="sxs-lookup"><span data-stu-id="65e0b-141">Example</span></span>  
+ <span data-ttu-id="65e0b-142">下列範例會示範如何針對不正確的增加彈性選擇平台叫用的應用程式，但要付出之間的速度較慢轉換宣告 managed 和 unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="65e0b-142">The following example shows how to opt into increased resilience against incorrect platform invoke declarations for an application, at the cost of slower transitions between managed and unmanaged code.</span></span>  
   
 ```xml  
 <configuration>  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="45b4f-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="45b4f-143">See Also</span></span>  
- [<span data-ttu-id="45b4f-144">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="45b4f-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="45b4f-145">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="45b4f-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="45b4f-146">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="45b4f-146">pInvokeStackImbalance</span></span>](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+## <a name="see-also"></a><span data-ttu-id="65e0b-143">請參閱</span><span class="sxs-lookup"><span data-stu-id="65e0b-143">See Also</span></span>  
+ [<span data-ttu-id="65e0b-144">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="65e0b-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="65e0b-145">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="65e0b-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="65e0b-146">pInvokeStackImbalance</span><span class="sxs-lookup"><span data-stu-id="65e0b-146">pInvokeStackImbalance</span></span>](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

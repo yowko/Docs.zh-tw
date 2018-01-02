@@ -13,22 +13,23 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a9b63848590fba6e07a4a32d8ffd70c277448adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc6e919600fbea15937a61eaa65299b3a372caaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltresolvergt"></a><span data-ttu-id="9735c-102">&lt;解析程式&gt;</span><span class="sxs-lookup"><span data-stu-id="9735c-102">&lt;resolver&gt;</span></span>
-<span data-ttu-id="9735c-103">指定對等解析程式，用於將對等網狀結構 ID 解析成一組對等節點位址，這組位址可表示參與網狀結構的數個節點。</span><span class="sxs-lookup"><span data-stu-id="9735c-103">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  
+# <a name="ltresolvergt"></a><span data-ttu-id="931cc-102">&lt;解析程式&gt;</span><span class="sxs-lookup"><span data-stu-id="931cc-102">&lt;resolver&gt;</span></span>
+<span data-ttu-id="931cc-103">指定對等解析程式，用於將對等網狀結構 ID 解析成一組對等節點位址，這組位址可表示參與網狀結構的數個節點。</span><span class="sxs-lookup"><span data-stu-id="931cc-103">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  
   
- <span data-ttu-id="9735c-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="9735c-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="9735c-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="9735c-105">\<bindings></span></span>  
-<span data-ttu-id="9735c-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="9735c-106">\<netPeerBinding></span></span>  
-<span data-ttu-id="9735c-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="9735c-107">\<binding></span></span>  
-<span data-ttu-id="9735c-108">\<解析程式 ></span><span class="sxs-lookup"><span data-stu-id="9735c-108">\<resolver></span></span>  
+ <span data-ttu-id="931cc-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="931cc-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="931cc-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="931cc-105">\<bindings></span></span>  
+<span data-ttu-id="931cc-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="931cc-106">\<netPeerBinding></span></span>  
+<span data-ttu-id="931cc-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="931cc-107">\<binding></span></span>  
+<span data-ttu-id="931cc-108">\<解析程式 ></span><span class="sxs-lookup"><span data-stu-id="931cc-108">\<resolver></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9735c-109">語法</span><span class="sxs-lookup"><span data-stu-id="9735c-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="931cc-109">語法</span><span class="sxs-lookup"><span data-stu-id="931cc-109">Syntax</span></span>  
   
 ```xml  
 <resolver mode="Auto/Custom/Pnrp"  
@@ -36,36 +37,36 @@ ms.lasthandoff: 12/02/2017
 </resolver>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9735c-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9735c-110">Attributes and Elements</span></span>  
- <span data-ttu-id="9735c-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9735c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="931cc-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="931cc-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="931cc-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="931cc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9735c-112">屬性</span><span class="sxs-lookup"><span data-stu-id="9735c-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="931cc-112">屬性</span><span class="sxs-lookup"><span data-stu-id="931cc-112">Attributes</span></span>  
   
-|<span data-ttu-id="9735c-113">屬性</span><span class="sxs-lookup"><span data-stu-id="9735c-113">Attribute</span></span>|<span data-ttu-id="9735c-114">描述</span><span class="sxs-lookup"><span data-stu-id="9735c-114">Description</span></span>|  
+|<span data-ttu-id="931cc-113">屬性</span><span class="sxs-lookup"><span data-stu-id="931cc-113">Attribute</span></span>|<span data-ttu-id="931cc-114">描述</span><span class="sxs-lookup"><span data-stu-id="931cc-114">Description</span></span>|  
 |---------------|-----------------|  
-|`mode`|<span data-ttu-id="9735c-115">字串，指定與此服務相關聯的對等解析程式執行個體是 PNRP 專用、自訂解析程式或自動判定。</span><span class="sxs-lookup"><span data-stu-id="9735c-115">A string that specifies whether the peer resolver instance associated with this service is either PNRP-specific, a custom resolver, or automatically determined.</span></span> <span data-ttu-id="9735c-116">此屬性的型別為 <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>。</span><span class="sxs-lookup"><span data-stu-id="9735c-116">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.</span></span>|  
-|`referralPolicy`|<span data-ttu-id="9735c-117">字串，指定在對等之間共用轉介的方法。</span><span class="sxs-lookup"><span data-stu-id="9735c-117">A string that specifies the way referrals are shared among peers.</span></span> <span data-ttu-id="9735c-118">此屬性的型別為 <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>。</span><span class="sxs-lookup"><span data-stu-id="9735c-118">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.</span></span>|  
+|`mode`|<span data-ttu-id="931cc-115">字串，指定與此服務相關聯的對等解析程式執行個體是 PNRP 專用、自訂解析程式或自動判定。</span><span class="sxs-lookup"><span data-stu-id="931cc-115">A string that specifies whether the peer resolver instance associated with this service is either PNRP-specific, a custom resolver, or automatically determined.</span></span> <span data-ttu-id="931cc-116">此屬性的型別為 <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>。</span><span class="sxs-lookup"><span data-stu-id="931cc-116">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.</span></span>|  
+|`referralPolicy`|<span data-ttu-id="931cc-117">字串，指定在對等之間共用轉介的方法。</span><span class="sxs-lookup"><span data-stu-id="931cc-117">A string that specifies the way referrals are shared among peers.</span></span> <span data-ttu-id="931cc-118">此屬性的型別為 <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>。</span><span class="sxs-lookup"><span data-stu-id="931cc-118">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9735c-119">子元素</span><span class="sxs-lookup"><span data-stu-id="9735c-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="931cc-119">子元素</span><span class="sxs-lookup"><span data-stu-id="931cc-119">Child Elements</span></span>  
   
-|<span data-ttu-id="9735c-120">項目</span><span class="sxs-lookup"><span data-stu-id="9735c-120">Element</span></span>|<span data-ttu-id="9735c-121">說明</span><span class="sxs-lookup"><span data-stu-id="9735c-121">Description</span></span>|  
+|<span data-ttu-id="931cc-120">項目</span><span class="sxs-lookup"><span data-stu-id="931cc-120">Element</span></span>|<span data-ttu-id="931cc-121">描述</span><span class="sxs-lookup"><span data-stu-id="931cc-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9735c-122">\<標頭 ></span><span class="sxs-lookup"><span data-stu-id="9735c-122">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|<span data-ttu-id="9735c-123">指定自訂對等解析程式服務的設定。</span><span class="sxs-lookup"><span data-stu-id="9735c-123">Specifies settings for a custom peer resolver service.</span></span>|  
+|[<span data-ttu-id="931cc-122">\<標頭 ></span><span class="sxs-lookup"><span data-stu-id="931cc-122">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|<span data-ttu-id="931cc-123">指定自訂對等解析程式服務的設定。</span><span class="sxs-lookup"><span data-stu-id="931cc-123">Specifies settings for a custom peer resolver service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="9735c-124">父項目</span><span class="sxs-lookup"><span data-stu-id="9735c-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="931cc-124">父項目</span><span class="sxs-lookup"><span data-stu-id="931cc-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="9735c-125">項目</span><span class="sxs-lookup"><span data-stu-id="9735c-125">Element</span></span>|<span data-ttu-id="9735c-126">說明</span><span class="sxs-lookup"><span data-stu-id="9735c-126">Description</span></span>|  
+|<span data-ttu-id="931cc-125">項目</span><span class="sxs-lookup"><span data-stu-id="931cc-125">Element</span></span>|<span data-ttu-id="931cc-126">描述</span><span class="sxs-lookup"><span data-stu-id="931cc-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9735c-127">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="9735c-127">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="9735c-128">定義的所有繫結功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="9735c-128">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="931cc-127">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="931cc-127">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="931cc-128">定義的所有繫結功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="931cc-128">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9735c-129">備註</span><span class="sxs-lookup"><span data-stu-id="9735c-129">Remarks</span></span>  
- <span data-ttu-id="9735c-130">對等名稱解析程式是對等通道用來尋找參與對等網狀結構之對等節點的探索服務。</span><span class="sxs-lookup"><span data-stu-id="9735c-130">A peer name resolver is a discovery service used by peer channels to find peer nodes that participate in a peer mesh.</span></span> <span data-ttu-id="9735c-131">您也可以使用這個解析程式將節點「註冊」到對等網狀結構，透過這樣的機制使得對等節點成為已知的，並且可從對等網狀結構中取得。</span><span class="sxs-lookup"><span data-stu-id="9735c-131">It is also used to "register" a node with a peer mesh, the mechanism by which the peer node becomes known and available from the peer mesh.</span></span> <span data-ttu-id="9735c-132">如需有關對等解析程式的詳細資訊，請參閱[對等解析程式](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)。</span><span class="sxs-lookup"><span data-stu-id="9735c-132">For more information on peer resolvers, see [Peer Resolvers](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="931cc-129">備註</span><span class="sxs-lookup"><span data-stu-id="931cc-129">Remarks</span></span>  
+ <span data-ttu-id="931cc-130">對等名稱解析程式是對等通道用來尋找參與對等網狀結構之對等節點的探索服務。</span><span class="sxs-lookup"><span data-stu-id="931cc-130">A peer name resolver is a discovery service used by peer channels to find peer nodes that participate in a peer mesh.</span></span> <span data-ttu-id="931cc-131">您也可以使用這個解析程式將節點「註冊」到對等網狀結構，透過這樣的機制使得對等節點成為已知的，並且可從對等網狀結構中取得。</span><span class="sxs-lookup"><span data-stu-id="931cc-131">It is also used to "register" a node with a peer mesh, the mechanism by which the peer node becomes known and available from the peer mesh.</span></span> <span data-ttu-id="931cc-132">如需有關對等解析程式的詳細資訊，請參閱[對等解析程式](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)。</span><span class="sxs-lookup"><span data-stu-id="931cc-132">For more information on peer resolvers, see [Peer Resolvers](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9735c-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9735c-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="931cc-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="931cc-133">See Also</span></span>  
  <xref:System.ServiceModel.PeerResolver>  
  <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>  
  <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
- [<span data-ttu-id="9735c-134">對等解析程式</span><span class="sxs-lookup"><span data-stu-id="9735c-134">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [<span data-ttu-id="9735c-135">PeerChannel 應用程式中加入自訂解析程式</span><span class="sxs-lookup"><span data-stu-id="9735c-135">Adding a Custom Resolver to a PeerChannel Application</span></span>](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [<span data-ttu-id="931cc-134">對等解析程式</span><span class="sxs-lookup"><span data-stu-id="931cc-134">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [<span data-ttu-id="931cc-135">PeerChannel 應用程式中加入自訂解析程式</span><span class="sxs-lookup"><span data-stu-id="931cc-135">Adding a Custom Resolver to a PeerChannel Application</span></span>](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)

@@ -13,19 +13,20 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae03b5d4a82c08978a3456e80428ba6ad8ac532a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltannouncementendpointgt"></a><span data-ttu-id="69568-102">&lt;announcementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="69568-102">&lt;announcementEndpoint&gt;</span></span>
-<span data-ttu-id="69568-103">這個組態項目會定義具有固定公告合約的標準端點。</span><span class="sxs-lookup"><span data-stu-id="69568-103">This configuration element defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="69568-104">服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。</span><span class="sxs-lookup"><span data-stu-id="69568-104">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="69568-105">A[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並使用執行公告 AnnouncementClient。</span><span class="sxs-lookup"><span data-stu-id="69568-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="69568-106">用戶端想要從其他服務公告實際上做為接聽[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務; 因此您必須在該用戶端設定公告端點[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) > 一節。</span><span class="sxs-lookup"><span data-stu-id="69568-106">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>  
+# <a name="ltannouncementendpointgt"></a><span data-ttu-id="0a04d-102">&lt;announcementEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="0a04d-102">&lt;announcementEndpoint&gt;</span></span>
+<span data-ttu-id="0a04d-103">這個組態項目會定義具有固定公告合約的標準端點。</span><span class="sxs-lookup"><span data-stu-id="0a04d-103">This configuration element defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="0a04d-104">服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。</span><span class="sxs-lookup"><span data-stu-id="0a04d-104">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="0a04d-105">A[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並使用執行公告 AnnouncementClient。</span><span class="sxs-lookup"><span data-stu-id="0a04d-105">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="0a04d-106">用戶端想要從其他服務公告實際上做為接聽[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務; 因此您必須在該用戶端設定公告端點[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) > 一節。</span><span class="sxs-lookup"><span data-stu-id="0a04d-106">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>  
   
-<span data-ttu-id="69568-107">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="69568-107">\<system.ServiceModel></span></span>  
-<span data-ttu-id="69568-108">\<Kind ></span><span class="sxs-lookup"><span data-stu-id="69568-108">\<standardEndpoints></span></span>  
+<span data-ttu-id="0a04d-107">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0a04d-107">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0a04d-108">\<Kind ></span><span class="sxs-lookup"><span data-stu-id="0a04d-108">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69568-109">語法</span><span class="sxs-lookup"><span data-stu-id="69568-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a04d-109">語法</span><span class="sxs-lookup"><span data-stu-id="0a04d-109">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -39,28 +40,28 @@ ms.lasthandoff: 12/02/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="69568-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="69568-110">Attributes and Elements</span></span>  
- <span data-ttu-id="69568-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="69568-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0a04d-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="0a04d-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="0a04d-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="0a04d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="69568-112">屬性</span><span class="sxs-lookup"><span data-stu-id="69568-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0a04d-112">屬性</span><span class="sxs-lookup"><span data-stu-id="0a04d-112">Attributes</span></span>  
   
-|<span data-ttu-id="69568-113">屬性</span><span class="sxs-lookup"><span data-stu-id="69568-113">Attribute</span></span>|<span data-ttu-id="69568-114">描述</span><span class="sxs-lookup"><span data-stu-id="69568-114">Description</span></span>|  
+|<span data-ttu-id="0a04d-113">屬性</span><span class="sxs-lookup"><span data-stu-id="0a04d-113">Attribute</span></span>|<span data-ttu-id="0a04d-114">描述</span><span class="sxs-lookup"><span data-stu-id="0a04d-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="69568-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="69568-115">discoveryVersion</span></span>|<span data-ttu-id="69568-116">字串，此字串會指定兩個 WS-Discovery 通訊協定版本的其中之一。</span><span class="sxs-lookup"><span data-stu-id="69568-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="69568-117">有效的值為 WSDiscovery11 和 WSDiscoveryApril2005。</span><span class="sxs-lookup"><span data-stu-id="69568-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="69568-118">這個值的型別為 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。</span><span class="sxs-lookup"><span data-stu-id="69568-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
-|<span data-ttu-id="69568-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="69568-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="69568-120">Timespan 值，這個值指定 Discovery 通訊協定傳送 Hello 訊息之前會等候的延遲值上限。</span><span class="sxs-lookup"><span data-stu-id="69568-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="69568-121">系統會等候一段隨機時間值 (介於 0 和此屬性的值之間)，之後才傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="69568-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="69568-122">這個屬性用於設定一小段隨機的延遲，避免網路關閉而所有服務同時再次上線時網路負荷過大。</span><span class="sxs-lookup"><span data-stu-id="69568-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
-|<span data-ttu-id="69568-123">name</span><span class="sxs-lookup"><span data-stu-id="69568-123">name</span></span>|<span data-ttu-id="69568-124">字串，這個字串會指定標準端點之組態的名稱。</span><span class="sxs-lookup"><span data-stu-id="69568-124">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="69568-125">這個名稱用於服務端點的 `endpointConfiguration` 屬性中，可將標準端點連結至其組態。</span><span class="sxs-lookup"><span data-stu-id="69568-125">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="0a04d-115">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="0a04d-115">discoveryVersion</span></span>|<span data-ttu-id="0a04d-116">字串，此字串會指定兩個 WS-Discovery 通訊協定版本的其中之一。</span><span class="sxs-lookup"><span data-stu-id="0a04d-116">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="0a04d-117">有效的值為 WSDiscovery11 和 WSDiscoveryApril2005。</span><span class="sxs-lookup"><span data-stu-id="0a04d-117">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="0a04d-118">這個值的型別為 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。</span><span class="sxs-lookup"><span data-stu-id="0a04d-118">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
+|<span data-ttu-id="0a04d-119">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="0a04d-119">maxAnnouncementDelay</span></span>|<span data-ttu-id="0a04d-120">Timespan 值，這個值指定 Discovery 通訊協定傳送 Hello 訊息之前會等候的延遲值上限。</span><span class="sxs-lookup"><span data-stu-id="0a04d-120">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="0a04d-121">系統會等候一段隨機時間值 (介於 0 和此屬性的值之間)，之後才傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="0a04d-121">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="0a04d-122">這個屬性用於設定一小段隨機的延遲，避免網路關閉而所有服務同時再次上線時網路負荷過大。</span><span class="sxs-lookup"><span data-stu-id="0a04d-122">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
+|<span data-ttu-id="0a04d-123">name</span><span class="sxs-lookup"><span data-stu-id="0a04d-123">name</span></span>|<span data-ttu-id="0a04d-124">字串，這個字串會指定標準端點之組態的名稱。</span><span class="sxs-lookup"><span data-stu-id="0a04d-124">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="0a04d-125">這個名稱用於服務端點的 `endpointConfiguration` 屬性中，可將標準端點連結至其組態。</span><span class="sxs-lookup"><span data-stu-id="0a04d-125">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="69568-126">子元素</span><span class="sxs-lookup"><span data-stu-id="69568-126">Child Elements</span></span>  
- <span data-ttu-id="69568-127">無。</span><span class="sxs-lookup"><span data-stu-id="69568-127">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0a04d-126">子元素</span><span class="sxs-lookup"><span data-stu-id="0a04d-126">Child Elements</span></span>  
+ <span data-ttu-id="0a04d-127">無。</span><span class="sxs-lookup"><span data-stu-id="0a04d-127">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="69568-128">父項目</span><span class="sxs-lookup"><span data-stu-id="69568-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0a04d-128">父項目</span><span class="sxs-lookup"><span data-stu-id="0a04d-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="69568-129">項目</span><span class="sxs-lookup"><span data-stu-id="69568-129">Element</span></span>|<span data-ttu-id="69568-130">說明</span><span class="sxs-lookup"><span data-stu-id="69568-130">Description</span></span>|  
+|<span data-ttu-id="0a04d-129">項目</span><span class="sxs-lookup"><span data-stu-id="0a04d-129">Element</span></span>|<span data-ttu-id="0a04d-130">描述</span><span class="sxs-lookup"><span data-stu-id="0a04d-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="69568-131">\<Kind ></span><span class="sxs-lookup"><span data-stu-id="69568-131">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="69568-132">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="69568-132">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="0a04d-131">\<Kind ></span><span class="sxs-lookup"><span data-stu-id="0a04d-131">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="0a04d-132">標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。</span><span class="sxs-lookup"><span data-stu-id="0a04d-132">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="69568-133">範例</span><span class="sxs-lookup"><span data-stu-id="69568-133">Example</span></span>  
- <span data-ttu-id="69568-134">下列範例示範透過 http 及 peernet 接聽公告訊息的用戶端。</span><span class="sxs-lookup"><span data-stu-id="69568-134">The following example demonstrates a client listening for announcements messages over http and peernet.</span></span>  
+## <a name="example"></a><span data-ttu-id="0a04d-133">範例</span><span class="sxs-lookup"><span data-stu-id="0a04d-133">Example</span></span>  
+ <span data-ttu-id="0a04d-134">下列範例示範透過 http 及 peernet 接聽公告訊息的用戶端。</span><span class="sxs-lookup"><span data-stu-id="0a04d-134">The following example demonstrates a client listening for announcements messages over http and peernet.</span></span>  
   
 ```xml  
 <services>  
@@ -88,5 +89,5 @@ ms.lasthandoff: 12/02/2017
 </standardEndpoints>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="69568-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69568-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0a04d-135">請參閱</span><span class="sxs-lookup"><span data-stu-id="0a04d-135">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

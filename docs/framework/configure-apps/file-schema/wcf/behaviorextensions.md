@@ -13,14 +13,15 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c520a8a06a593d8937ca840602ba5bcc7b2d44b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c5d359e05e04a98e0c5855ba4d78e8e63c1e6a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="f5862-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="f5862-102">&lt;behaviorExtensions&gt;</span></span>
-<span data-ttu-id="f5862-103">行為延伸可讓使用者建立使用者定義的行為項目。</span><span class="sxs-lookup"><span data-stu-id="f5862-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="f5862-104">這些項目可以和標準的 Windows Communication Foundation (WCF) 行為項目並列使用。</span><span class="sxs-lookup"><span data-stu-id="f5862-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="f5862-105">`behaviorExtensions` 區段會定義項目，讓項目可用於組態中。</span><span class="sxs-lookup"><span data-stu-id="f5862-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="f5862-106">以下是典型行為擴充的範例。</span><span class="sxs-lookup"><span data-stu-id="f5862-106">Here is an example of a typical behavior extension.</span></span>  
+# <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="b667e-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="b667e-102">&lt;behaviorExtensions&gt;</span></span>
+<span data-ttu-id="b667e-103">行為延伸可讓使用者建立使用者定義的行為項目。</span><span class="sxs-lookup"><span data-stu-id="b667e-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="b667e-104">這些項目可以和標準的 Windows Communication Foundation (WCF) 行為項目並列使用。</span><span class="sxs-lookup"><span data-stu-id="b667e-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="b667e-105">`behaviorExtensions` 區段會定義項目，讓項目可用於組態中。</span><span class="sxs-lookup"><span data-stu-id="b667e-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="b667e-106">以下是典型行為擴充的範例。</span><span class="sxs-lookup"><span data-stu-id="b667e-106">Here is an example of a typical behavior extension.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -33,9 +34,9 @@ ms.lasthandoff: 12/02/2017
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="f5862-107">若要將組態功能加入至項目，您必須寫入並註冊組態項目。</span><span class="sxs-lookup"><span data-stu-id="f5862-107">To add configuration abilities to the element, you need to write and register a configuration element.</span></span> <span data-ttu-id="f5862-108">如需這方面的詳細資訊，請參閱 <xref:System.Configuration>。</span><span class="sxs-lookup"><span data-stu-id="f5862-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="b667e-107">若要將組態功能加入至項目，您必須寫入並註冊組態項目。</span><span class="sxs-lookup"><span data-stu-id="b667e-107">To add configuration abilities to the element, you need to write and register a configuration element.</span></span> <span data-ttu-id="b667e-108">如需這方面的詳細資訊，請參閱 <xref:System.Configuration>。</span><span class="sxs-lookup"><span data-stu-id="b667e-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="f5862-109">在定義項目及其組態型別後，即可使用擴充，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="f5862-109">After the element and its configuration type are defined, the extension can be used, as shown in the following example.</span></span>  
+ <span data-ttu-id="b667e-109">在定義項目及其組態型別後，即可使用擴充，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="b667e-109">After the element and its configuration type are defined, the extension can be used, as shown in the following example.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -47,15 +48,15 @@ ms.lasthandoff: 12/02/2017
 </behaviors>  
 ```  
   
-## <a name="security"></a><span data-ttu-id="f5862-110">安全性</span><span class="sxs-lookup"><span data-stu-id="f5862-110">Security</span></span>  
- <span data-ttu-id="f5862-111">強烈建議您在 `machine.config` 和 `app.config` 檔案中註冊型別時，使用完整組件名稱。</span><span class="sxs-lookup"><span data-stu-id="f5862-111">It is strongly recommended that you use fully qualified assembly names when registering types in the `machine.config` and `app.config` files.</span></span> <span data-ttu-id="f5862-112">如果型別不是唯一定義的型別，則 CLR 型別載入器會以指定的順序在以下位置中搜尋該型別：</span><span class="sxs-lookup"><span data-stu-id="f5862-112">If the type is not uniquely defined, the CLR type loader searches for it in the following locations in the specified order:</span></span>  
+## <a name="security"></a><span data-ttu-id="b667e-110">安全性</span><span class="sxs-lookup"><span data-stu-id="b667e-110">Security</span></span>  
+ <span data-ttu-id="b667e-111">強烈建議您在 `machine.config` 和 `app.config` 檔案中註冊型別時，使用完整組件名稱。</span><span class="sxs-lookup"><span data-stu-id="b667e-111">It is strongly recommended that you use fully qualified assembly names when registering types in the `machine.config` and `app.config` files.</span></span> <span data-ttu-id="b667e-112">如果型別不是唯一定義的型別，則 CLR 型別載入器會以指定的順序在以下位置中搜尋該型別：</span><span class="sxs-lookup"><span data-stu-id="b667e-112">If the type is not uniquely defined, the CLR type loader searches for it in the following locations in the specified order:</span></span>  
   
- <span data-ttu-id="f5862-113">如果型別的組件為已知，則載入器會搜尋組態檔案的重新導向位置、GAC、使用組態資訊的目前組件，和應用程式基底目錄。</span><span class="sxs-lookup"><span data-stu-id="f5862-113">If the assembly of the type is known, the loader searches the configuration file's redirect locations, GAC, the current assembly using configuration information, and the application base directory.</span></span> <span data-ttu-id="f5862-114">如果組件為未知，則載入器會搜尋目前組件、mscorlib 和 `TypeResolve` 事件處理常式傳回的位置。</span><span class="sxs-lookup"><span data-stu-id="f5862-114">If the assembly is unknown, the loader searches the current assembly, mscorlib, and the location returned by the `TypeResolve` event handler.</span></span> <span data-ttu-id="f5862-115">這個 CLR 搜尋順序可以用型別轉送機制和 AppDomain.TypeResolve 事件等攔截程序 (Hook) 來修改。</span><span class="sxs-lookup"><span data-stu-id="f5862-115">This CLR search order can be modified with hooks such as the Type Forwarding mechanism and the AppDomain.TypeResolve event.</span></span>  
+ <span data-ttu-id="b667e-113">如果型別的組件為已知，則載入器會搜尋組態檔案的重新導向位置、GAC、使用組態資訊的目前組件，和應用程式基底目錄。</span><span class="sxs-lookup"><span data-stu-id="b667e-113">If the assembly of the type is known, the loader searches the configuration file's redirect locations, GAC, the current assembly using configuration information, and the application base directory.</span></span> <span data-ttu-id="b667e-114">如果組件為未知，則載入器會搜尋目前組件、mscorlib 和 `TypeResolve` 事件處理常式傳回的位置。</span><span class="sxs-lookup"><span data-stu-id="b667e-114">If the assembly is unknown, the loader searches the current assembly, mscorlib, and the location returned by the `TypeResolve` event handler.</span></span> <span data-ttu-id="b667e-115">這個 CLR 搜尋順序可以用型別轉送機制和 AppDomain.TypeResolve 事件等攔截程序 (Hook) 來修改。</span><span class="sxs-lookup"><span data-stu-id="b667e-115">This CLR search order can be modified with hooks such as the Type Forwarding mechanism and the AppDomain.TypeResolve event.</span></span>  
   
- <span data-ttu-id="f5862-116">攻擊者可能會利用 CLR 搜尋順序並執行未經授權的程式碼。</span><span class="sxs-lookup"><span data-stu-id="f5862-116">An attacker can exploit the CLR search order and execute unauthorized code.</span></span> <span data-ttu-id="f5862-117">使用完整 (強式) 名稱來唯一識別型別，可進一步增加您系統的安全性。</span><span class="sxs-lookup"><span data-stu-id="f5862-117">Using fully qualified (strong) names uniquely identifies a type and further increases security of your system.</span></span>  
+ <span data-ttu-id="b667e-116">攻擊者可能會利用 CLR 搜尋順序並執行未經授權的程式碼。</span><span class="sxs-lookup"><span data-stu-id="b667e-116">An attacker can exploit the CLR search order and execute unauthorized code.</span></span> <span data-ttu-id="b667e-117">使用完整 (強式) 名稱來唯一識別型別，可進一步增加您系統的安全性。</span><span class="sxs-lookup"><span data-stu-id="b667e-117">Using fully qualified (strong) names uniquely identifies a type and further increases security of your system.</span></span>  
   
- <span data-ttu-id="f5862-118">如需詳細資訊，請參閱[執行階段如何找出組件](http://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。</span><span class="sxs-lookup"><span data-stu-id="f5862-118">For more information, see [How the Runtime Locates Assemblies](http://go.microsoft.com/fwlink/?LinkId=95336) and <xref:System.AppDomain.TypeResolve>.</span></span>  
+ <span data-ttu-id="b667e-118">如需詳細資訊，請參閱[執行階段如何找出組件](http://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。</span><span class="sxs-lookup"><span data-stu-id="b667e-118">For more information, see [How the Runtime Locates Assemblies](http://go.microsoft.com/fwlink/?LinkId=95336) and <xref:System.AppDomain.TypeResolve>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5862-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f5862-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b667e-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="b667e-119">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
- [<span data-ttu-id="f5862-120">設定與擴充執行階段行為</span><span class="sxs-lookup"><span data-stu-id="f5862-120">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [<span data-ttu-id="b667e-120">使用行為來設定與擴充執行階段</span><span class="sxs-lookup"><span data-stu-id="b667e-120">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

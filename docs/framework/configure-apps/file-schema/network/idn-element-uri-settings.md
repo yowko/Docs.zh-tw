@@ -13,23 +13,24 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1f631f41c256e74e9b7bf7dc2d771ee156538820
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44e2db95ec354fff4356a3619fa8230faf67544d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="c89a1-102">&lt;idn&gt;項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="c89a1-102">&lt;idn&gt; Element (Uri Settings)</span></span>
-<span data-ttu-id="c89a1-103">指定是否國際化網域名稱 (IDN) 剖析會套用至網域名稱。</span><span class="sxs-lookup"><span data-stu-id="c89a1-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  
+# <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="fb5f3-102">&lt;idn&gt;項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="fb5f3-102">&lt;idn&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="fb5f3-103">指定是否國際化網域名稱 (IDN) 剖析會套用至網域名稱。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  
   
-## <a name="schema-hierarchy"></a><span data-ttu-id="c89a1-104">結構描述階層架構</span><span class="sxs-lookup"><span data-stu-id="c89a1-104">Schema Hierarchy</span></span>  
- [<span data-ttu-id="c89a1-105">\<configuration> 項目</span><span class="sxs-lookup"><span data-stu-id="c89a1-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="fb5f3-104">結構描述階層架構</span><span class="sxs-lookup"><span data-stu-id="fb5f3-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="fb5f3-105">\<configuration> 項目</span><span class="sxs-lookup"><span data-stu-id="fb5f3-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [<span data-ttu-id="c89a1-106">\<Uri > 項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="c89a1-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="fb5f3-106">\<Uri > 項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="fb5f3-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [<span data-ttu-id="c89a1-107">\<idn ></span><span class="sxs-lookup"><span data-stu-id="c89a1-107">\<idn></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [<span data-ttu-id="fb5f3-107">\<idn ></span><span class="sxs-lookup"><span data-stu-id="fb5f3-107">\<idn></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
-## <a name="syntax"></a><span data-ttu-id="c89a1-108">語法</span><span class="sxs-lookup"><span data-stu-id="c89a1-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb5f3-108">語法</span><span class="sxs-lookup"><span data-stu-id="fb5f3-108">Syntax</span></span>  
   
 ```xml  
 <idn  
@@ -37,62 +38,62 @@ ms.lasthandoff: 11/21/2017
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c89a1-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c89a1-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c89a1-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c89a1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fb5f3-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="fb5f3-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="fb5f3-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c89a1-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c89a1-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fb5f3-111">屬性</span><span class="sxs-lookup"><span data-stu-id="fb5f3-111">Attributes</span></span>  
   
-|<span data-ttu-id="c89a1-112">**目**</span><span class="sxs-lookup"><span data-stu-id="c89a1-112">**Element**</span></span>|<span data-ttu-id="c89a1-113">**說明**</span><span class="sxs-lookup"><span data-stu-id="c89a1-113">**Description**</span></span>|  
+|<span data-ttu-id="fb5f3-112">**目**</span><span class="sxs-lookup"><span data-stu-id="fb5f3-112">**Element**</span></span>|<span data-ttu-id="fb5f3-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="fb5f3-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="c89a1-114">指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱的預設值為 none。</span><span class="sxs-lookup"><span data-stu-id="c89a1-114">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name The default value is none.</span></span>|  
+|`enabled`|<span data-ttu-id="fb5f3-114">指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱的預設值為 none。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-114">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name The default value is none.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c89a1-115">子項目</span><span class="sxs-lookup"><span data-stu-id="c89a1-115">Child Elements</span></span>  
- <span data-ttu-id="c89a1-116">無</span><span class="sxs-lookup"><span data-stu-id="c89a1-116">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fb5f3-115">子項目</span><span class="sxs-lookup"><span data-stu-id="fb5f3-115">Child Elements</span></span>  
+ <span data-ttu-id="fb5f3-116">無</span><span class="sxs-lookup"><span data-stu-id="fb5f3-116">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c89a1-117">父項目</span><span class="sxs-lookup"><span data-stu-id="c89a1-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fb5f3-117">父項目</span><span class="sxs-lookup"><span data-stu-id="fb5f3-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="c89a1-118">**目**</span><span class="sxs-lookup"><span data-stu-id="c89a1-118">**Element**</span></span>|<span data-ttu-id="c89a1-119">**說明**</span><span class="sxs-lookup"><span data-stu-id="c89a1-119">**Description**</span></span>|  
+|<span data-ttu-id="fb5f3-118">**目**</span><span class="sxs-lookup"><span data-stu-id="fb5f3-118">**Element**</span></span>|<span data-ttu-id="fb5f3-119">**描述**</span><span class="sxs-lookup"><span data-stu-id="fb5f3-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="c89a1-120">uri</span><span class="sxs-lookup"><span data-stu-id="c89a1-120">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="c89a1-121">包含會指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址設定。</span><span class="sxs-lookup"><span data-stu-id="c89a1-121">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
+|[<span data-ttu-id="fb5f3-120">uri</span><span class="sxs-lookup"><span data-stu-id="fb5f3-120">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="fb5f3-121">包含會指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址設定。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-121">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c89a1-122">備註</span><span class="sxs-lookup"><span data-stu-id="c89a1-122">Remarks</span></span>  
- <span data-ttu-id="c89a1-123">現有<xref:System.Uri>類別已經過擴充，在.NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="c89a1-123">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="c89a1-124">3.0 SP1 和 2.0 SP1，可以支援國際資源識別項 (IRI) 和國際化網域名稱 (IDN)。</span><span class="sxs-lookup"><span data-stu-id="c89a1-124">3.0 SP1, and 2.0 SP1 with support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="c89a1-125">目前的使用者不會看到從.NET Framework 2.0 行為的任何變更，除非它們特別啟用 IRI 和 IDN 支援。</span><span class="sxs-lookup"><span data-stu-id="c89a1-125">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="c89a1-126">這可確保應用程式與舊版 .NET framework 相容。</span><span class="sxs-lookup"><span data-stu-id="c89a1-126">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fb5f3-122">備註</span><span class="sxs-lookup"><span data-stu-id="fb5f3-122">Remarks</span></span>  
+ <span data-ttu-id="fb5f3-123">現有<xref:System.Uri>類別已經過擴充，在.NET Framework 3.5。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-123">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="fb5f3-124">3.0 SP1 和 2.0 SP1，可以支援國際資源識別項 (IRI) 和國際化網域名稱 (IDN)。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-124">3.0 SP1, and 2.0 SP1 with support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="fb5f3-125">目前的使用者不會看到從.NET Framework 2.0 行為的任何變更，除非它們特別啟用 IRI 和 IDN 支援。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-125">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="fb5f3-126">這可確保應用程式與舊版 .NET framework 相容。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-126">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- <span data-ttu-id="c89a1-127">若要啟用 IRI 的支援，下列兩項變更是必要的：</span><span class="sxs-lookup"><span data-stu-id="c89a1-127">To enable support for IRI, the following two changes are required:</span></span>  
+ <span data-ttu-id="fb5f3-127">若要啟用 IRI 的支援，下列兩項變更是必要的：</span><span class="sxs-lookup"><span data-stu-id="fb5f3-127">To enable support for IRI, the following two changes are required:</span></span>  
   
-1.  <span data-ttu-id="c89a1-128">加入至 machine.config 檔案的.NET Framework 2.0 目錄下面這行</span><span class="sxs-lookup"><span data-stu-id="c89a1-128">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
+1.  <span data-ttu-id="fb5f3-128">加入至 machine.config 檔案的.NET Framework 2.0 目錄下面這行</span><span class="sxs-lookup"><span data-stu-id="fb5f3-128">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  <span data-ttu-id="c89a1-129">指定是否要國際化網域名稱 (IDN) 剖析套用至網域名稱，以及是否應該套用 IRI 剖析規則。</span><span class="sxs-lookup"><span data-stu-id="c89a1-129">Specify whether you want Internationalized Domain Name (IDN) parsing applied to the domain name and whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="c89a1-130">此作業可在 machine.config 或 app.config 檔案中完成。</span><span class="sxs-lookup"><span data-stu-id="c89a1-130">This can be done in the machine.config or in the app.config file.</span></span>  
+2.  <span data-ttu-id="fb5f3-129">指定是否要國際化網域名稱 (IDN) 剖析套用至網域名稱，以及是否應該套用 IRI 剖析規則。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-129">Specify whether you want Internationalized Domain Name (IDN) parsing applied to the domain name and whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="fb5f3-130">此作業可在 machine.config 或 app.config 檔案中完成。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-130">This can be done in the machine.config or in the app.config file.</span></span>  
   
- <span data-ttu-id="c89a1-131">有三個可能的值為 IDN 根據所使用的 DNS 伺服器：</span><span class="sxs-lookup"><span data-stu-id="c89a1-131">There are three possible values for IDN depending on the DNS servers that are used:</span></span>  
+ <span data-ttu-id="fb5f3-131">有三個可能的值為 IDN 根據所使用的 DNS 伺服器：</span><span class="sxs-lookup"><span data-stu-id="fb5f3-131">There are three possible values for IDN depending on the DNS servers that are used:</span></span>  
   
--   <span data-ttu-id="c89a1-132">啟用 idn = All</span><span class="sxs-lookup"><span data-stu-id="c89a1-132">idn enabled = All</span></span>  
+-   <span data-ttu-id="fb5f3-132">啟用 idn = All</span><span class="sxs-lookup"><span data-stu-id="fb5f3-132">idn enabled = All</span></span>  
   
-     <span data-ttu-id="c89a1-133">這個值會將任何 Unicode 網域名稱轉換成 Punycode 的對等 （IDN 名稱）。</span><span class="sxs-lookup"><span data-stu-id="c89a1-133">This value will convert any Unicode domain names to their Punycode equivalents (IDN names).</span></span>  
+     <span data-ttu-id="fb5f3-133">這個值會將任何 Unicode 網域名稱轉換成 Punycode 的對等 （IDN 名稱）。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-133">This value will convert any Unicode domain names to their Punycode equivalents (IDN names).</span></span>  
   
--   <span data-ttu-id="c89a1-134">啟用 idn = AllExceptIntranet</span><span class="sxs-lookup"><span data-stu-id="c89a1-134">idn enabled = AllExceptIntranet</span></span>  
+-   <span data-ttu-id="fb5f3-134">啟用 idn = AllExceptIntranet</span><span class="sxs-lookup"><span data-stu-id="fb5f3-134">idn enabled = AllExceptIntranet</span></span>  
   
-     <span data-ttu-id="c89a1-135">此值將轉換為不在近端內部網路使用 Punycode 對等項目 （IDN 名稱） 上的所有 Unicode 網域名稱。</span><span class="sxs-lookup"><span data-stu-id="c89a1-135">This value will convert all Unicode domain names not on the local Intranet to use the Punycode equivalents (IDN names).</span></span> <span data-ttu-id="c89a1-136">在此情況下，若要處理國際性近端內部網路上的名稱，用於內部網路的 DNS 伺服器應該支援 Unicode 名稱解析。</span><span class="sxs-lookup"><span data-stu-id="c89a1-136">In this case to handle international names on the local Intranet, the DNS servers that are used for the Intranet should support Unicode name resolution.</span></span>  
+     <span data-ttu-id="fb5f3-135">此值將轉換為不在近端內部網路使用 Punycode 對等項目 （IDN 名稱） 上的所有 Unicode 網域名稱。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-135">This value will convert all Unicode domain names not on the local Intranet to use the Punycode equivalents (IDN names).</span></span> <span data-ttu-id="fb5f3-136">在此情況下，若要處理國際性近端內部網路上的名稱，用於內部網路的 DNS 伺服器應該支援 Unicode 名稱解析。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-136">In this case to handle international names on the local Intranet, the DNS servers that are used for the Intranet should support Unicode name resolution.</span></span>  
   
--   <span data-ttu-id="c89a1-137">啟用 idn = 無</span><span class="sxs-lookup"><span data-stu-id="c89a1-137">idn enabled = None</span></span>  
+-   <span data-ttu-id="fb5f3-137">啟用 idn = 無</span><span class="sxs-lookup"><span data-stu-id="fb5f3-137">idn enabled = None</span></span>  
   
-     <span data-ttu-id="c89a1-138">此值不會將轉換使用 Punycode 任何 Unicode 網域名稱。</span><span class="sxs-lookup"><span data-stu-id="c89a1-138">This value will not convert any Unicode domain names to use Punycode.</span></span> <span data-ttu-id="c89a1-139">這是預設值是與.NET Framework 2.0 的行為一致。</span><span class="sxs-lookup"><span data-stu-id="c89a1-139">This is the default value which is consistent with the .NET Framework 2.0 behaviour.</span></span>  
+     <span data-ttu-id="fb5f3-138">此值不會將轉換使用 Punycode 任何 Unicode 網域名稱。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-138">This value will not convert any Unicode domain names to use Punycode.</span></span> <span data-ttu-id="fb5f3-139">這是預設值是與.NET Framework 2.0 的行為一致。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-139">This is the default value which is consistent with the .NET Framework 2.0 behaviour.</span></span>  
   
- <span data-ttu-id="c89a1-140">啟用 IDN 會將網域名稱中所有的 Unicode 標籤轉換成對等的 Punycode。</span><span class="sxs-lookup"><span data-stu-id="c89a1-140">Enabling IDN will convert all Unicode labels in a domain name to their Punycode equivalents.</span></span> <span data-ttu-id="c89a1-141">Punycode 名稱只包含 ASCII 字元，而且開頭一律為前置詞 xn--。</span><span class="sxs-lookup"><span data-stu-id="c89a1-141">Punycode names contain only ASCII characters and always start with the xn-- prefix.</span></span> <span data-ttu-id="c89a1-142">這是為了支援網際網路上現有的 DNS 伺服器，因為大部分的 DNS 伺服器僅支援 ASCII 字元 (請參閱 RFC 3940)。</span><span class="sxs-lookup"><span data-stu-id="c89a1-142">The reason for this is to support existing DNS servers on the Internet, since most DNS servers only support ASCII characters (see RFC 3940).</span></span>  
+ <span data-ttu-id="fb5f3-140">啟用 IDN 會將網域名稱中所有的 Unicode 標籤轉換成對等的 Punycode。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-140">Enabling IDN will convert all Unicode labels in a domain name to their Punycode equivalents.</span></span> <span data-ttu-id="fb5f3-141">Punycode 名稱只包含 ASCII 字元，而且開頭一律為前置詞 xn--。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-141">Punycode names contain only ASCII characters and always start with the xn-- prefix.</span></span> <span data-ttu-id="fb5f3-142">這是為了支援網際網路上現有的 DNS 伺服器，因為大部分的 DNS 伺服器僅支援 ASCII 字元 (請參閱 RFC 3940)。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-142">The reason for this is to support existing DNS servers on the Internet, since most DNS servers only support ASCII characters (see RFC 3940).</span></span>  
   
-### <a name="configuration-files"></a><span data-ttu-id="c89a1-143">組態檔</span><span class="sxs-lookup"><span data-stu-id="c89a1-143">Configuration Files</span></span>  
- <span data-ttu-id="c89a1-144">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="c89a1-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+### <a name="configuration-files"></a><span data-ttu-id="fb5f3-143">組態檔</span><span class="sxs-lookup"><span data-stu-id="fb5f3-143">Configuration Files</span></span>  
+ <span data-ttu-id="fb5f3-144">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c89a1-145">範例</span><span class="sxs-lookup"><span data-stu-id="c89a1-145">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fb5f3-145">範例</span><span class="sxs-lookup"><span data-stu-id="fb5f3-145">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c89a1-146">說明</span><span class="sxs-lookup"><span data-stu-id="c89a1-146">Description</span></span>  
- <span data-ttu-id="c89a1-147">下列範例示範使用組態<xref:System.Uri>類別，以支援 IRI 剖析和 IDN 名稱。</span><span class="sxs-lookup"><span data-stu-id="c89a1-147">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
+### <a name="description"></a><span data-ttu-id="fb5f3-146">描述</span><span class="sxs-lookup"><span data-stu-id="fb5f3-146">Description</span></span>  
+ <span data-ttu-id="fb5f3-147">下列範例示範使用組態<xref:System.Uri>類別，以支援 IRI 剖析和 IDN 名稱。</span><span class="sxs-lookup"><span data-stu-id="fb5f3-147">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c89a1-148">程式碼</span><span class="sxs-lookup"><span data-stu-id="c89a1-148">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="fb5f3-148">程式碼</span><span class="sxs-lookup"><span data-stu-id="fb5f3-148">Code</span></span>  
   
 ```xml  
 <configuration>  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c89a1-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c89a1-149">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fb5f3-149">請參閱</span><span class="sxs-lookup"><span data-stu-id="fb5f3-149">See Also</span></span>  
  <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [<span data-ttu-id="c89a1-150">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="c89a1-150">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="fb5f3-150">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="fb5f3-150">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

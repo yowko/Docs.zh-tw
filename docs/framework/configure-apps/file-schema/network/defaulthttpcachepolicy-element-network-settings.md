@@ -19,21 +19,22 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f2db2fd10ca20209c21c8add71d8ee4f26951ca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="08757-102">&lt;defaultHttpCachePolicy&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="08757-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="08757-103">說明 HTTP 快取是否作用中，並且描述預設的快取原則。</span><span class="sxs-lookup"><span data-stu-id="08757-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="89732-102">&lt;defaultHttpCachePolicy&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="89732-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="89732-103">說明 HTTP 快取是否作用中，並且描述預設的快取原則。</span><span class="sxs-lookup"><span data-stu-id="89732-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="08757-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="08757-104">\<configuration></span></span>  
-<span data-ttu-id="08757-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="08757-105">\<system.net></span></span>  
-<span data-ttu-id="08757-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="08757-106">\<requestCaching></span></span>  
-<span data-ttu-id="08757-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="08757-107">\<defaultHttpCachePolicy></span></span>  
+ <span data-ttu-id="89732-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="89732-104">\<configuration></span></span>  
+<span data-ttu-id="89732-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="89732-105">\<system.net></span></span>  
+<span data-ttu-id="89732-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="89732-106">\<requestCaching></span></span>  
+<span data-ttu-id="89732-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="89732-107">\<defaultHttpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08757-108">語法</span><span class="sxs-lookup"><span data-stu-id="08757-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89732-108">語法</span><span class="sxs-lookup"><span data-stu-id="89732-108">Syntax</span></span>  
   
 ```xml  
 <defaultHttpCachePolicy  
@@ -44,37 +45,37 @@ ms.lasthandoff: 11/21/2017
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="08757-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="08757-109">Attributes and Elements</span></span>  
- <span data-ttu-id="08757-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="08757-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="89732-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="89732-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="89732-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="89732-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="08757-111">屬性</span><span class="sxs-lookup"><span data-stu-id="08757-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="89732-111">屬性</span><span class="sxs-lookup"><span data-stu-id="89732-111">Attributes</span></span>  
   
-|<span data-ttu-id="08757-112">屬性</span><span class="sxs-lookup"><span data-stu-id="08757-112">Attribute</span></span>|<span data-ttu-id="08757-113">說明</span><span class="sxs-lookup"><span data-stu-id="08757-113">Description</span></span>|  
+|<span data-ttu-id="89732-112">屬性</span><span class="sxs-lookup"><span data-stu-id="89732-112">Attribute</span></span>|<span data-ttu-id="89732-113">描述</span><span class="sxs-lookup"><span data-stu-id="89732-113">Description</span></span>|  
 |---------------|-----------------|  
-|`maximumAge`|<span data-ttu-id="08757-114">快取的物件標示為已過期之前，請指定最大時間間隔。</span><span class="sxs-lookup"><span data-stu-id="08757-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
-|`maximumStale`|<span data-ttu-id="08757-115">指定的最長的時間超過快取的物件標示為已過期之前所計算的有效期限時間。</span><span class="sxs-lookup"><span data-stu-id="08757-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
-|`minimumFresh`|<span data-ttu-id="08757-116">指定要視為有效的快取物件的最小時間。</span><span class="sxs-lookup"><span data-stu-id="08757-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
-|`policyLevel`|<span data-ttu-id="08757-117">指定是否快取的原則會自動進行，或是否略過快取。</span><span class="sxs-lookup"><span data-stu-id="08757-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="08757-118">預設值是 `BypassCache`。</span><span class="sxs-lookup"><span data-stu-id="08757-118">The default value is `BypassCache`.</span></span>|  
+|`maximumAge`|<span data-ttu-id="89732-114">快取的物件標示為已過期之前，請指定最大時間間隔。</span><span class="sxs-lookup"><span data-stu-id="89732-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
+|`maximumStale`|<span data-ttu-id="89732-115">指定的最長的時間超過快取的物件標示為已過期之前所計算的有效期限時間。</span><span class="sxs-lookup"><span data-stu-id="89732-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
+|`minimumFresh`|<span data-ttu-id="89732-116">指定要視為有效的快取物件的最小時間。</span><span class="sxs-lookup"><span data-stu-id="89732-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
+|`policyLevel`|<span data-ttu-id="89732-117">指定是否快取的原則會自動進行，或是否略過快取。</span><span class="sxs-lookup"><span data-stu-id="89732-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="89732-118">預設值是 `BypassCache`。</span><span class="sxs-lookup"><span data-stu-id="89732-118">The default value is `BypassCache`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="08757-119">子項目</span><span class="sxs-lookup"><span data-stu-id="08757-119">Child Elements</span></span>  
- <span data-ttu-id="08757-120">無</span><span class="sxs-lookup"><span data-stu-id="08757-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="89732-119">子項目</span><span class="sxs-lookup"><span data-stu-id="89732-119">Child Elements</span></span>  
+ <span data-ttu-id="89732-120">無</span><span class="sxs-lookup"><span data-stu-id="89732-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="08757-121">父項目</span><span class="sxs-lookup"><span data-stu-id="08757-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="89732-121">父項目</span><span class="sxs-lookup"><span data-stu-id="89732-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="08757-122">項目</span><span class="sxs-lookup"><span data-stu-id="08757-122">Element</span></span>|<span data-ttu-id="08757-123">說明</span><span class="sxs-lookup"><span data-stu-id="08757-123">Description</span></span>|  
+|<span data-ttu-id="89732-122">項目</span><span class="sxs-lookup"><span data-stu-id="89732-122">Element</span></span>|<span data-ttu-id="89732-123">描述</span><span class="sxs-lookup"><span data-stu-id="89732-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="08757-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="08757-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="08757-125">控制網路要求的快取機制。</span><span class="sxs-lookup"><span data-stu-id="08757-125">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="89732-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="89732-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="89732-125">控制網路要求的快取機制。</span><span class="sxs-lookup"><span data-stu-id="89732-125">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="08757-126">備註</span><span class="sxs-lookup"><span data-stu-id="08757-126">Remarks</span></span>  
- <span data-ttu-id="08757-127">值`policyLevel`屬性是`BypassCache`或`Default`。</span><span class="sxs-lookup"><span data-stu-id="08757-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89732-126">備註</span><span class="sxs-lookup"><span data-stu-id="89732-126">Remarks</span></span>  
+ <span data-ttu-id="89732-127">值`policyLevel`屬性是`BypassCache`或`Default`。</span><span class="sxs-lookup"><span data-stu-id="89732-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
   
- <span data-ttu-id="08757-128">值`maximumAge`， `maximumStale`，和`minimumFresh`項目所使用的格式的其中一個明確的時間間隔*d*。*hh*:*公釐*:*ss* （天數、 時、 分、 秒為單位），或常數`minValue`或`maxValue`視情況。</span><span class="sxs-lookup"><span data-stu-id="08757-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
+ <span data-ttu-id="89732-128">值`maximumAge`， `maximumStale`，和`minimumFresh`項目所使用的格式的其中一個明確的時間間隔*d*。*hh*:*公釐*:*ss* （天數、 時、 分、 秒為單位），或常數`minValue`或`maxValue`視情況。</span><span class="sxs-lookup"><span data-stu-id="89732-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="08757-129">組態檔</span><span class="sxs-lookup"><span data-stu-id="08757-129">Configuration Files</span></span>  
- <span data-ttu-id="08757-130">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="08757-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="89732-129">組態檔</span><span class="sxs-lookup"><span data-stu-id="89732-129">Configuration Files</span></span>  
+ <span data-ttu-id="89732-130">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="89732-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="08757-131">範例</span><span class="sxs-lookup"><span data-stu-id="08757-131">Example</span></span>  
- <span data-ttu-id="08757-132">下列範例會示範如何指定新的最小時間，為六小時，最長使用期限時間為兩天和四個小時的最長過時時間。</span><span class="sxs-lookup"><span data-stu-id="08757-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
+## <a name="example"></a><span data-ttu-id="89732-131">範例</span><span class="sxs-lookup"><span data-stu-id="89732-131">Example</span></span>  
+ <span data-ttu-id="89732-132">下列範例會示範如何指定新的最小時間，為六小時，最長使用期限時間為兩天和四個小時的最長過時時間。</span><span class="sxs-lookup"><span data-stu-id="89732-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,8 +91,8 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="08757-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="08757-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="89732-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="89732-133">See Also</span></span>  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  
- [<span data-ttu-id="08757-134">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="08757-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="89732-134">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="89732-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

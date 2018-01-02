@@ -13,45 +13,46 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3782eb9cbe793fef450c8b1c58456a1d4f7b0b94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7a1870a8c331aae16ab14da62c64d6fb15ecd3bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltclientviagt"></a><span data-ttu-id="9292b-102">&lt;clientVia&gt;</span><span class="sxs-lookup"><span data-stu-id="9292b-102">&lt;clientVia&gt;</span></span>
-<span data-ttu-id="9292b-103">指定應建立傳輸通道的 URI。</span><span class="sxs-lookup"><span data-stu-id="9292b-103">Specifies the URI for which the transport channel should be created.</span></span> <span data-ttu-id="9292b-104">如需詳細資訊，請參閱<xref:System.ServiceModel.Description.ClientViaBehavior>。</span><span class="sxs-lookup"><span data-stu-id="9292b-104">For more information, see <xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span>  
+# <a name="ltclientviagt"></a><span data-ttu-id="6c2da-102">&lt;clientVia&gt;</span><span class="sxs-lookup"><span data-stu-id="6c2da-102">&lt;clientVia&gt;</span></span>
+<span data-ttu-id="6c2da-103">指定應建立傳輸通道的 URI。</span><span class="sxs-lookup"><span data-stu-id="6c2da-103">Specifies the URI for which the transport channel should be created.</span></span> <span data-ttu-id="6c2da-104">如需詳細資訊，請參閱<xref:System.ServiceModel.Description.ClientViaBehavior>。</span><span class="sxs-lookup"><span data-stu-id="6c2da-104">For more information, see <xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span>  
   
- <span data-ttu-id="9292b-105">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="9292b-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="9292b-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="9292b-106">\<behaviors></span></span>  
-<span data-ttu-id="9292b-107">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="9292b-107">\<endpointBehaviors></span></span>  
-<span data-ttu-id="9292b-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="9292b-108">\<behavior></span></span>  
-<span data-ttu-id="9292b-109">\<clientVia ></span><span class="sxs-lookup"><span data-stu-id="9292b-109">\<clientVia></span></span>  
+ <span data-ttu-id="6c2da-105">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="6c2da-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="6c2da-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="6c2da-106">\<behaviors></span></span>  
+<span data-ttu-id="6c2da-107">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="6c2da-107">\<endpointBehaviors></span></span>  
+<span data-ttu-id="6c2da-108">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="6c2da-108">\<behavior></span></span>  
+<span data-ttu-id="6c2da-109">\<clientVia ></span><span class="sxs-lookup"><span data-stu-id="6c2da-109">\<clientVia></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9292b-110">語法</span><span class="sxs-lookup"><span data-stu-id="9292b-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c2da-110">語法</span><span class="sxs-lookup"><span data-stu-id="6c2da-110">Syntax</span></span>  
   
 ```xml  
 <clientVia viaUri="String"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9292b-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9292b-111">Attributes and Elements</span></span>  
- <span data-ttu-id="9292b-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9292b-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6c2da-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="6c2da-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="6c2da-112">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="6c2da-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9292b-113">屬性</span><span class="sxs-lookup"><span data-stu-id="9292b-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6c2da-113">屬性</span><span class="sxs-lookup"><span data-stu-id="6c2da-113">Attributes</span></span>  
   
-|<span data-ttu-id="9292b-114">屬性</span><span class="sxs-lookup"><span data-stu-id="9292b-114">Attribute</span></span>|<span data-ttu-id="9292b-115">描述</span><span class="sxs-lookup"><span data-stu-id="9292b-115">Description</span></span>|  
+|<span data-ttu-id="6c2da-114">屬性</span><span class="sxs-lookup"><span data-stu-id="6c2da-114">Attribute</span></span>|<span data-ttu-id="6c2da-115">描述</span><span class="sxs-lookup"><span data-stu-id="6c2da-115">Description</span></span>|  
 |---------------|-----------------|  
-|`viaUri`|<span data-ttu-id="9292b-116">字串，指定表示訊息應採用之路徑的 URI。</span><span class="sxs-lookup"><span data-stu-id="9292b-116">A string that specifies a URI that indicates the route a message should take.</span></span>|  
+|`viaUri`|<span data-ttu-id="6c2da-116">字串，指定表示訊息應採用之路徑的 URI。</span><span class="sxs-lookup"><span data-stu-id="6c2da-116">A string that specifies a URI that indicates the route a message should take.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9292b-117">子元素</span><span class="sxs-lookup"><span data-stu-id="9292b-117">Child Elements</span></span>  
- <span data-ttu-id="9292b-118">無</span><span class="sxs-lookup"><span data-stu-id="9292b-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6c2da-117">子元素</span><span class="sxs-lookup"><span data-stu-id="6c2da-117">Child Elements</span></span>  
+ <span data-ttu-id="6c2da-118">無</span><span class="sxs-lookup"><span data-stu-id="6c2da-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9292b-119">父項目</span><span class="sxs-lookup"><span data-stu-id="9292b-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6c2da-119">父項目</span><span class="sxs-lookup"><span data-stu-id="6c2da-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="9292b-120">項目</span><span class="sxs-lookup"><span data-stu-id="9292b-120">Element</span></span>|<span data-ttu-id="9292b-121">說明</span><span class="sxs-lookup"><span data-stu-id="9292b-121">Description</span></span>|  
+|<span data-ttu-id="6c2da-120">項目</span><span class="sxs-lookup"><span data-stu-id="6c2da-120">Element</span></span>|<span data-ttu-id="6c2da-121">描述</span><span class="sxs-lookup"><span data-stu-id="6c2da-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9292b-122">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="9292b-122">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="9292b-123">指定端點行為。</span><span class="sxs-lookup"><span data-stu-id="9292b-123">Specifies an endpoint behavior.</span></span>|  
+|[<span data-ttu-id="6c2da-122">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="6c2da-122">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="6c2da-123">指定端點行為。</span><span class="sxs-lookup"><span data-stu-id="6c2da-123">Specifies an endpoint behavior.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="9292b-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9292b-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6c2da-124">請參閱</span><span class="sxs-lookup"><span data-stu-id="6c2da-124">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ClientViaElement>  
  <xref:System.ServiceModel.Description.ClientViaBehavior>
