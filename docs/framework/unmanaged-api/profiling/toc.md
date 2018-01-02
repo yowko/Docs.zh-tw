@@ -1,6 +1,6 @@
 # [程式碼剖析](index.md)
-## [程式碼剖析概觀](profiling-overview.md)
-## [設定程式碼剖析環境](setting-up-a-profiling-environment.md)
+## [分析概觀](profiling-overview.md)
+## [設定分析環境](setting-up-a-profiling-environment.md)
 ## [CLR 分析工具和 Windows 市集應用程式](clr-profilers-and-windows-store-apps.md)
 ## [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md)
 ## [分析介面](profiling-interfaces.md)

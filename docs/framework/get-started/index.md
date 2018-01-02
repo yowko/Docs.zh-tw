@@ -1,102 +1,94 @@
 ---
-title: ".NET Framework 使用者入門 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: ".NET Framework 使用者入門"
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 66e581e04aa0c3d33fb1ef9a7f4163d131f625bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 327aad36a560a772e9ddb4d8d721c2545f800151
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="get-started-with-the-net-framework"></a><span data-ttu-id="5d992-102">.NET Framework 使用者入門</span><span class="sxs-lookup"><span data-stu-id="5d992-102">Get started with the .NET Framework</span></span>
 
-# <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
-
-.NET Framework 是執行階段的執行環境，負責管理以 .NET Framework 為目標的應用程式。 其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。
+<span data-ttu-id="5d992-103">.NET Framework 是執行階段的執行環境，負責管理以 .NET Framework 為目標的應用程式。</span><span class="sxs-lookup"><span data-stu-id="5d992-103">The .NET Framework is a runtime execution environment that manages apps that target the .NET Framework.</span></span> <span data-ttu-id="5d992-104">其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。</span><span class="sxs-lookup"><span data-stu-id="5d992-104">It consists of the common language runtime, which provides memory management and other system services, and an extensive class library, which enables programmers to take advantage of robust, reliable code for all major areas of app development.</span></span>
 
 <a name="Introducing"></a>
-## <a name="what-is-the-net-framework"></a>什麼是 .NET Framework？
+## <a name="what-is-the-net-framework"></a><span data-ttu-id="5d992-105">什麼是 .NET Framework？</span><span class="sxs-lookup"><span data-stu-id="5d992-105">What is the .NET Framework?</span></span>
 
-.NET Framework 是受管理的執行環境，可為執行中的應用程式提供多樣的服務。 其由兩個主要元件組成：通用語言執行平台 (CLR) 和 .NET Framework 類別庫，前者是負責處理執行中應用程式的執行引擎，後者提供通過測試、可重複使用的程式碼程式庫，讓開發人員可從自己的應用程式中呼叫。 .NET Framework 提供給執行中應用程式的服務包括：
+<span data-ttu-id="5d992-106">.NET Framework 是受管理的執行環境，可為執行中的應用程式提供多樣的服務。</span><span class="sxs-lookup"><span data-stu-id="5d992-106">The .NET Framework is a managed execution environment that provides a variety of services to its running apps.</span></span> <span data-ttu-id="5d992-107">其由兩個主要元件組成：通用語言執行平台 (CLR) 和 .NET Framework 類別庫，前者是負責處理執行中應用程式的執行引擎，後者提供通過測試、可重複使用的程式碼程式庫，讓開發人員可從自己的應用程式中呼叫。</span><span class="sxs-lookup"><span data-stu-id="5d992-107">It consists of two major components: the common language runtime (CLR), which is the execution engine that handles running apps, and the .NET Framework Class Library, which provides a library of tested, reusable code that developers can call from their own apps.</span></span> <span data-ttu-id="5d992-108">.NET Framework 提供給執行中應用程式的服務包括：</span><span class="sxs-lookup"><span data-stu-id="5d992-108">The services that the .NET Framework provides to running apps include the following:</span></span>
 
-- 記憶體管理。 在許多程式設計語言中，程式設計人員負責配置和釋放記憶體，以及處理物件存留期。 在 .NET Framework 應用程式中，CLR 會代表應用程式提供這些服務。
+- <span data-ttu-id="5d992-109">記憶體管理。</span><span class="sxs-lookup"><span data-stu-id="5d992-109">Memory management.</span></span> <span data-ttu-id="5d992-110">在許多程式設計語言中，程式設計人員負責配置和釋放記憶體，以及處理物件存留期。</span><span class="sxs-lookup"><span data-stu-id="5d992-110">In many programming languages, programmers are responsible for allocating and releasing memory and for handling object lifetimes.</span></span> <span data-ttu-id="5d992-111">在 .NET Framework 應用程式中，CLR 會代表應用程式提供這些服務。</span><span class="sxs-lookup"><span data-stu-id="5d992-111">In .NET Framework apps, the CLR provides these services on behalf of the app.</span></span>
 
-- 一般型別系統。 在傳統的程式語言中，基本型別是由編譯器所定義，這會讓跨語言互通性變得很複雜。 在 .NET Framework 中，基底型別是由 .NET Framework 型別系統所定義，可在所有以 .NET Framework 為目標的語言之間通用。
+- <span data-ttu-id="5d992-112">一般型別系統。</span><span class="sxs-lookup"><span data-stu-id="5d992-112">A common type system.</span></span> <span data-ttu-id="5d992-113">在傳統的程式語言中，基本型別是由編譯器所定義，這會讓跨語言互通性變得很複雜。</span><span class="sxs-lookup"><span data-stu-id="5d992-113">In traditional programming languages, basic types are defined by the compiler, which complicates cross-language interoperability.</span></span> <span data-ttu-id="5d992-114">在 .NET Framework 中，基底型別是由 .NET Framework 型別系統所定義，可在所有以 .NET Framework 為目標的語言之間通用。</span><span class="sxs-lookup"><span data-stu-id="5d992-114">In the .NET Framework, basic types are defined by the .NET Framework type system and are common to all languages that target the .NET Framework.</span></span>
 
-- 廣泛類別庫。 程式設計人員不再需要撰寫大量的程式碼來處理常見的低階程式設計作業，而能夠使用 .NET Framework 類別庫中可立即存取的類型程式庫及其成員來完成這項工作。
+- <span data-ttu-id="5d992-115">廣泛類別庫。</span><span class="sxs-lookup"><span data-stu-id="5d992-115">An extensive class library.</span></span> <span data-ttu-id="5d992-116">程式設計人員不再需要撰寫大量的程式碼來處理常見的低階程式設計作業，而能夠使用 .NET Framework 類別庫中可立即存取的類型程式庫及其成員來完成這項工作。</span><span class="sxs-lookup"><span data-stu-id="5d992-116">Instead of having to write vast amounts of code to handle common low-level programming operations, programmers use a readily accessible library of types and their members from the .NET Framework Class Library.</span></span>
 
-- 開發架構和技術。 .NET Framework 包含特定應用程式開發領域所需的程式庫，例如 Web 應用程式所需的 ASP.NET、資料存取所需的 ADO.NET，以及服務導向應用程式所需的 Windows Communication Foundation。
+- <span data-ttu-id="5d992-117">開發架構和技術。</span><span class="sxs-lookup"><span data-stu-id="5d992-117">Development frameworks and technologies.</span></span> <span data-ttu-id="5d992-118">.NET Framework 包含特定應用程式開發領域所需的程式庫，例如 Web 應用程式所需的 ASP.NET、資料存取所需的 ADO.NET，以及服務導向應用程式所需的 Windows Communication Foundation。</span><span class="sxs-lookup"><span data-stu-id="5d992-118">The .NET Framework includes libraries for specific areas of app development, such as ASP.NET for web apps, ADO.NET for data access, and Windows Communication Foundation for service-oriented apps.</span></span>
 
-- 語言互通性。 以 .NET Framework 為目標的語言編譯器會發出名為通用中間語言 (CIL) 的中繼程式碼，這個程式碼接著會在執行階段由通用語言執行平台進行編譯。 有了此功能，使用某一種語言撰寫的常式就能供其他語言存取，而程式設計人員也能使用自己慣用的語言專心建立應用程式。
+- <span data-ttu-id="5d992-119">語言互通性。</span><span class="sxs-lookup"><span data-stu-id="5d992-119">Language interoperability.</span></span> <span data-ttu-id="5d992-120">以 .NET Framework 為目標的語言編譯器會發出名為通用中間語言 (CIL) 的中繼程式碼，這個程式碼接著會在執行階段由通用語言執行平台進行編譯。</span><span class="sxs-lookup"><span data-stu-id="5d992-120">Language compilers that target the .NET Framework emit an intermediate code named Common Intermediate Language (CIL), which, in turn, is compiled at runtime by the common language runtime.</span></span> <span data-ttu-id="5d992-121">有了此功能，使用某一種語言撰寫的常式就能供其他語言存取，而程式設計人員也能使用自己慣用的語言專心建立應用程式。</span><span class="sxs-lookup"><span data-stu-id="5d992-121">With this feature, routines written in one language are accessible to other languages, and programmers focus on creating apps in their preferred languages.</span></span>
 
-- 版本相容性。 在極少數例外狀況下，使用某一特定 .NET Framework 版本開發的應用程式可不經修改直接在較新的版本上執行。
+- <span data-ttu-id="5d992-122">版本相容性。</span><span class="sxs-lookup"><span data-stu-id="5d992-122">Version compatibility.</span></span> <span data-ttu-id="5d992-123">在極少數例外狀況下，使用某一特定 .NET Framework 版本開發的應用程式可不經修改直接在較新的版本上執行。</span><span class="sxs-lookup"><span data-stu-id="5d992-123">With rare exceptions, apps that are developed by using a particular version of the .NET Framework run without modification on a later version.</span></span>
 
-- 並存執行。 .NET Framework 允許同一部電腦上存在多個版本的 Common Language Runtime，藉此協助解決版本衝突。 這表示，多個應用程式版本不僅可共存，應用程式也可以建置時使用的 .NET Framework 版本上執行。 並存執行適用於.NET Framework 版本群組 1.0/1.1、 2.0/3.0/3.5 和 4/4.5.x/4.6.x/4.7。
+- <span data-ttu-id="5d992-124">並存執行。</span><span class="sxs-lookup"><span data-stu-id="5d992-124">Side-by-side execution.</span></span> <span data-ttu-id="5d992-125">.NET Framework 允許同一部電腦上存在多個版本的 Common Language Runtime，藉此協助解決版本衝突。</span><span class="sxs-lookup"><span data-stu-id="5d992-125">The .NET Framework helps resolve version conflicts by allowing multiple versions of the common language runtime to exist on the same computer.</span></span> <span data-ttu-id="5d992-126">這表示，多個應用程式版本不僅可共存，應用程式也可以建置時使用的 .NET Framework 版本上執行。</span><span class="sxs-lookup"><span data-stu-id="5d992-126">This means that multiple versions of apps can coexist and that an app can run on the version of the .NET Framework with which it was built.</span></span> <span data-ttu-id="5d992-127">並存執行適用於.NET Framework 版本群組 1.0/1.1、2.0/3.0/3.5 和 4/4.5.x/4.6.x/4.7.x。</span><span class="sxs-lookup"><span data-stu-id="5d992-127">Side-by-side execution applies to the .NET Framework version groups 1.0/1.1, 2.0/3.0/3.5, and 4/4.5.x/4.6.x/4.7.x.</span></span>
 
-- 多目標。 藉由以 [.NET Standard](~/docs/standard/net-standard.md) 為目標，開發人員就可以建立可在多個 .NET Framework 平台 (例如 Windows 7、Windows 8、Windows 8.1、Windows 10、Windows Phone 和 Xbox 360) 上運作的組件。
+- <span data-ttu-id="5d992-128">多目標。</span><span class="sxs-lookup"><span data-stu-id="5d992-128">Multitargeting.</span></span> <span data-ttu-id="5d992-129">藉由以 [.NET Standard](~/docs/standard/net-standard.md) 為目標，開發人員就可以建立可在多個 .NET Framework 平台 (例如 Windows 7、Windows 8、Windows 8.1、Windows 10、Windows Phone 和 Xbox 360) 上運作的組件。</span><span class="sxs-lookup"><span data-stu-id="5d992-129">By targeting [.NET Standard](~/docs/standard/net-standard.md), developers create assemblies that work on multiple .NET Framework platforms, such as Windows 7, Windows 8, Windows 8.1, Windows 10, Windows Phone, and Xbox 360.</span></span>
 
 <a name="ForUsers"></a>
-## <a name="the-net-framework-for-users"></a>適用於使用者的 .NET Framework
+## <a name="the-net-framework-for-users"></a><span data-ttu-id="5d992-130">適用於使用者的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5d992-130">The .NET Framework for users</span></span>
 
-如果您並未開發而是使用 .NET Framework 應用程式，就不需要具備任何有關 .NET Framework 或其作業的特定知識。 大致上，.NET Framework 對使用者而言是完全不存在的。
+<span data-ttu-id="5d992-131">如果您並未開發而是使用 .NET Framework 應用程式，就不需要具備任何有關 .NET Framework 或其作業的特定知識。</span><span class="sxs-lookup"><span data-stu-id="5d992-131">If you don't develop .NET Framework apps, but you use them, you aren't required to have specific knowledge about the .NET Framework or its operation.</span></span> <span data-ttu-id="5d992-132">大致上，.NET Framework 對使用者而言是完全不存在的。</span><span class="sxs-lookup"><span data-stu-id="5d992-132">For the most part, the .NET Framework is completely transparent to users.</span></span>
 
-如果您使用的是 Windows 作業系統，您的電腦上可能已經安裝了 .NET Framework。 此外，如果您安裝的應用程式需要 .NET Framework，應用程式的安裝程式可能會在您的電腦上安裝特定的 .NET Framework 版本。 在某些情況下，您可能會看到對話方塊，要求您安裝 .NET Framework。 如果在出現這個對話方塊時您剛好嘗試執行應用程式，而且電腦也可以存取網際網路，則可以前往網頁安裝缺少的 .NET Framework 版本。
+<span data-ttu-id="5d992-133">如果您使用的是 Windows 作業系統，您的電腦上可能已經安裝了 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="5d992-133">If you're using the Windows operating system, the .NET Framework may already be installed on your computer.</span></span> <span data-ttu-id="5d992-134">此外，如果您安裝的應用程式需要 .NET Framework，應用程式的安裝程式可能會在您的電腦上安裝特定的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="5d992-134">In addition, if you install an app that requires the .NET Framework, the app's setup program might install a specific version of the .NET Framework on your computer.</span></span> <span data-ttu-id="5d992-135">在某些情況下，您可能會看到對話方塊，要求您安裝 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="5d992-135">In some cases, you may see a dialog box that asks you to install the .NET Framework.</span></span> <span data-ttu-id="5d992-136">如果在出現這個對話方塊時您剛好嘗試執行應用程式，而且電腦也可以存取網際網路，則可以前往網頁安裝缺少的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="5d992-136">If you've just tried to run an app when this dialog box appears and if your computer has Internet access, you can go to a webpage that lets you install the missing version of the .NET Framework.</span></span>
 
-一般而言，您不應該將電腦上已安裝的 .NET Framework 版本解除安裝。 不這麼做的原因有兩個：
+<span data-ttu-id="5d992-137">一般而言，您不應該將電腦上已安裝的 .NET Framework 版本解除安裝。</span><span class="sxs-lookup"><span data-stu-id="5d992-137">In general, you shouldn't uninstall versions of the .NET Framework that are installed on your computer.</span></span> <span data-ttu-id="5d992-138">不這麼做的原因有兩個：</span><span class="sxs-lookup"><span data-stu-id="5d992-138">There are two reasons for this:</span></span>
 
-- 如果您使用的應用程式使用特定版本的 .NET Framework，移除該版本可能會造成應用程式無法執行。
+- <span data-ttu-id="5d992-139">如果您使用的應用程式使用特定版本的 .NET Framework，移除該版本可能會造成應用程式無法執行。</span><span class="sxs-lookup"><span data-stu-id="5d992-139">If an app that you use depends on a specific version of the .NET Framework, that app may break if that version is removed.</span></span>
 
-- 有些 .NET Framework 版本是舊版的就地更新。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是 2.0 版的就地更新，而 .NET Framework 4.7 是 4、4.5、4.5.1、4.5.2、4.6、4.6.1 和 4.6.2 版的就地更新。 如需詳細資訊，請參閱 [.NET Framework 版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)。
+- <span data-ttu-id="5d992-140">有些 .NET Framework 版本是舊版的就地更新。</span><span class="sxs-lookup"><span data-stu-id="5d992-140">Some versions of the .NET Framework are in-place updates to earlier versions.</span></span> <span data-ttu-id="5d992-141">例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是 2.0 版的就地更新，而 .NET Framework 4.7.1 是 4、4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7 版的就地更新。</span><span class="sxs-lookup"><span data-stu-id="5d992-141">For example, the [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] is an in-place update to version 2.0, and the .NET Framework 4.7.1 is an in-place update to versions 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, and 4.7.</span></span> <span data-ttu-id="5d992-142">如需詳細資訊，請參閱 [.NET Framework 版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="5d992-142">For more information, see [.NET Framework Versions and Dependencies](../../../docs/framework/migration-guide/versions-and-dependencies.md).</span></span>
 
-如果選擇移除 .NET Framework，請一律使用 [控制台] 中的 [程式和功能] 解除安裝。 請勿手動移除任何 .NET Framework 版本。
+<span data-ttu-id="5d992-143">如果選擇移除 .NET Framework，請一律使用 [控制台] 中的 [程式和功能] 解除安裝。</span><span class="sxs-lookup"><span data-stu-id="5d992-143">If you do choose to remove the .NET Framework, always use **Programs and Features** from Control Panel to uninstall it.</span></span> <span data-ttu-id="5d992-144">請勿手動移除任何 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="5d992-144">Never remove a version of the .NET Framework manually.</span></span>
 
-請注意，多個 .NET Framework 版本可以同時在單一電腦上並存。 這表示，您不需要解除安裝舊版，就可以直接安裝新版。
+<span data-ttu-id="5d992-145">請注意，多個 .NET Framework 版本可以同時在單一電腦上並存。</span><span class="sxs-lookup"><span data-stu-id="5d992-145">Note that multiple versions of the .NET Framework can coexist on a single computer at the same time.</span></span> <span data-ttu-id="5d992-146">這表示，您不需要解除安裝舊版，就可以直接安裝新版。</span><span class="sxs-lookup"><span data-stu-id="5d992-146">This means that you don't have to uninstall previous versions in order to install a later version.</span></span>
 
 <a name="ForDevelopers"></a> 
-## <a name="the-net-framework-for-developers"></a>適用於開發人員的 .NET Framework
+## <a name="the-net-framework-for-developers"></a><span data-ttu-id="5d992-147">適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5d992-147">The .NET Framework for developers</span></span>
 
-如果您是開發人員，可以選擇任何支援 .NET Framework 的程式設計語言來建立應用程式。 由於 .NET Framework 提供語言獨立性和互通性，因此不論開發時使用的語言為何，您都可以與其他 .NET Framework 應用程式和元件互動。
+<span data-ttu-id="5d992-148">如果您是開發人員，可以選擇任何支援 .NET Framework 的程式設計語言來建立應用程式。</span><span class="sxs-lookup"><span data-stu-id="5d992-148">If you're a developer, choose any programming language that supports the .NET Framework to create your apps.</span></span> <span data-ttu-id="5d992-149">由於 .NET Framework 提供語言獨立性和互通性，因此不論開發時使用的語言為何，您都可以與其他 .NET Framework 應用程式和元件互動。</span><span class="sxs-lookup"><span data-stu-id="5d992-149">Because the .NET Framework provides language independence and interoperability, you interact with other .NET Framework apps and components regardless of the language with which they were developed.</span></span>
 
-若要開發 .NET Framework 應用程式或元件，請執行下列步驟：
+<span data-ttu-id="5d992-150">若要開發 .NET Framework 應用程式或元件，請執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="5d992-150">To develop .NET Framework apps or components, do the following:</span></span>
 
-1. 如果未在作業系統上預先安裝，請安裝要當成應用程式目標的 .NET Framework 版本。 最新的產品版本是 .NET Framework 4.7，其已預先安裝於 Windows 10 Creators Update，在舊版 Windows 作業系統上則須自行下載。 如需 .NET Framework 系統需求，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。 其他.NET Framework 套件會在頻外發行，也就是在任何定期或排程發行週期以外輪流發行。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
+1. <span data-ttu-id="5d992-151">如果未在作業系統上預先安裝，請安裝要當成應用程式目標的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="5d992-151">If it's not preinstalled on your operating system, install the version of the .NET Framework that your app will target.</span></span> <span data-ttu-id="5d992-152">最新生產版本是 .NET Framework 4.7.1，其已預先安裝於 Windows 10 Fall Creators Update，在舊版 Windows 作業系統上則需要自行下載。</span><span class="sxs-lookup"><span data-stu-id="5d992-152">The most recent production version is the .NET Framework 4.7.1, which is preinstalled on Windows 10 Fall Creators Update and is available for download on earlier versions of the Windows operating system.</span></span> <span data-ttu-id="5d992-153">如需 .NET Framework 系統需求，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5d992-153">For .NET Framework system requirements, see [System Requirements](../../../docs/framework/get-started/system-requirements.md).</span></span> <span data-ttu-id="5d992-154">如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。</span><span class="sxs-lookup"><span data-stu-id="5d992-154">For information on installing other versions of the .NET Framework, see [Installation Guide](../../../docs/framework/install/guide-for-developers.md).</span></span> <span data-ttu-id="5d992-155">其他.NET Framework 套件會在頻外發行，也就是在任何定期或排程發行週期以外輪流發行。</span><span class="sxs-lookup"><span data-stu-id="5d992-155">Additional .NET Framework packages are released out of band, which means that they're released on a rolling basis outside of any regular or scheduled release cycle.</span></span> <span data-ttu-id="5d992-156">如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。</span><span class="sxs-lookup"><span data-stu-id="5d992-156">For information about these packages, see [The .NET Framework and Out-of-Band Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).</span></span>
 
-2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 Visual Basic、C#、Visual F# 和 C++/CLI。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](http://go.microsoft.com/fwlink/?LinkId=199862))。
+2. <span data-ttu-id="5d992-157">選取您要用來開發應用程式且 .NET Framework 也支援的語言。</span><span class="sxs-lookup"><span data-stu-id="5d992-157">Select the language or languages supported by the .NET Framework that you intend to use to develop your apps.</span></span> <span data-ttu-id="5d992-158">有多種語言可供選擇，包括 Microsoft 的 Visual Basic、C#、Visual F# 和 C++/CLI。</span><span class="sxs-lookup"><span data-stu-id="5d992-158">A number of languages are available, including Visual Basic, C#, Visual F#, and C++/CLI from Microsoft.</span></span> <span data-ttu-id="5d992-159">(可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](http://go.microsoft.com/fwlink/?LinkId=199862))。</span><span class="sxs-lookup"><span data-stu-id="5d992-159">(A programming language that allows you to develop apps for the .NET Framework adheres to the [Common Language Infrastructure (CLI) specification](http://go.microsoft.com/fwlink/?LinkId=199862).)</span></span>
 
-3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532)。 並有多個版本可供使用。
+3. <span data-ttu-id="5d992-160">選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。</span><span class="sxs-lookup"><span data-stu-id="5d992-160">Select and install the development environment to use to create your apps and that supports your selected programming language or languages.</span></span> <span data-ttu-id="5d992-161">適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532)。</span><span class="sxs-lookup"><span data-stu-id="5d992-161">The Microsoft integrated development environment (IDE) for .NET Framework apps is [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532).</span></span> <span data-ttu-id="5d992-162">並有多個版本可供使用。</span><span class="sxs-lookup"><span data-stu-id="5d992-162">It's available in a number of editions.</span></span>
 
-如需開發以 .NET Framework 為目標之應用程式的詳細資訊，請參閱[開發指南](../../../docs/framework/development-guide.md)。
+<span data-ttu-id="5d992-163">如需開發以 .NET Framework 為目標之應用程式的詳細資訊，請參閱[開發指南](../../../docs/framework/development-guide.md)。</span><span class="sxs-lookup"><span data-stu-id="5d992-163">For more information on developing apps that target the .NET Framework, see the [Development Guide](../../../docs/framework/development-guide.md).</span></span>
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a><span data-ttu-id="5d992-164">相關主題</span><span class="sxs-lookup"><span data-stu-id="5d992-164">Related topics</span></span>
 
-| 標題 | 描述 |
+| <span data-ttu-id="5d992-165">標題</span><span class="sxs-lookup"><span data-stu-id="5d992-165">Title</span></span> | <span data-ttu-id="5d992-166">描述</span><span class="sxs-lookup"><span data-stu-id="5d992-166">Description</span></span> |
 | ----- |------------ |
-| [概觀](../../../docs/framework/get-started/overview.md) | 替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。 |
-| [安裝指南 (英文)](../../../docs/framework/install/index.md) | 提供安裝 .NET Framework 的相關資訊。 |  
-| [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 的頻外發行以及如何將其運用在您的應用程式中。 |
-| [系統需求](../../../docs/framework/get-started/system-requirements.md) | 列出執行 .NET Framework 的硬體與軟體需求。 |
-| [.NET Core 和開放原始碼](../../../docs/framework/get-started/net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。 |
-| [.NET Core 文件](https://docs.microsoft.com/dotnet/) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
+| [<span data-ttu-id="5d992-167">概觀</span><span class="sxs-lookup"><span data-stu-id="5d992-167">Overview</span></span>](../../../docs/framework/get-started/overview.md) | <span data-ttu-id="5d992-168">替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="5d992-168">Provides detailed information for developers who build apps that target the .NET Framework.</span></span> |
+| [<span data-ttu-id="5d992-169">安裝指南 (英文)</span><span class="sxs-lookup"><span data-stu-id="5d992-169">Installation guide</span></span>](../../../docs/framework/install/index.md) | <span data-ttu-id="5d992-170">提供安裝 .NET Framework 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="5d992-170">Provides information about installing the .NET Framework.</span></span> |  
+| [<span data-ttu-id="5d992-171">.NET Framework 和不定期發行</span><span class="sxs-lookup"><span data-stu-id="5d992-171">The .NET Framework and Out-of-Band Releases</span></span>](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | <span data-ttu-id="5d992-172">描述 .NET Framework 的頻外發行以及如何將其運用在您的應用程式中。</span><span class="sxs-lookup"><span data-stu-id="5d992-172">Describes the .NET Framework out of band releases and how to use them in your app.</span></span> |
+| [<span data-ttu-id="5d992-173">系統需求</span><span class="sxs-lookup"><span data-stu-id="5d992-173">System Requirements</span></span>](../../../docs/framework/get-started/system-requirements.md) | <span data-ttu-id="5d992-174">列出執行 .NET Framework 的硬體與軟體需求。</span><span class="sxs-lookup"><span data-stu-id="5d992-174">Lists the hardware and software requirements for running the .NET Framework.</span></span> |
+| [<span data-ttu-id="5d992-175">.NET Core 和開放原始碼</span><span class="sxs-lookup"><span data-stu-id="5d992-175">.NET Core and Open-Source</span></span>](../../../docs/framework/get-started/net-core-and-open-source.md) | <span data-ttu-id="5d992-176">描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。</span><span class="sxs-lookup"><span data-stu-id="5d992-176">Describes .NET Core in relation to the .NET Framework and how to access the open-source .NET Core projects.</span></span> |
+| [<span data-ttu-id="5d992-177">.NET Core 文件</span><span class="sxs-lookup"><span data-stu-id="5d992-177">.NET Core documentation</span></span>](https://docs.microsoft.com/dotnet/) | <span data-ttu-id="5d992-178">提供適用於 .NET Core 的概念性及 API 參考文件。</span><span class="sxs-lookup"><span data-stu-id="5d992-178">Provides the conceptual and API reference documentation for .NET Core.</span></span> |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a><span data-ttu-id="5d992-179">請參閱</span><span class="sxs-lookup"><span data-stu-id="5d992-179">See also</span></span>
 
-[.NET Framework 指南](../../../docs/framework/index.md)   
-[新增功能](../../../docs/framework/whats-new/index.md)   
-[.NET API 瀏覽器](/dotnet/api/)   
-[開發指南](../../../docs/framework/development-guide.md)
-
+<span data-ttu-id="5d992-180">[.NET Framework 指南](../../../docs/framework/index.md) </span><span class="sxs-lookup"><span data-stu-id="5d992-180">[.NET Framework Guide](../../../docs/framework/index.md) </span></span>  
+<span data-ttu-id="5d992-181">[新增功能](../../../docs/framework/whats-new/index.md) </span><span class="sxs-lookup"><span data-stu-id="5d992-181">[What's New](../../../docs/framework/whats-new/index.md) </span></span>  
+<span data-ttu-id="5d992-182">[.NET API 瀏覽器](/dotnet/api/) </span><span class="sxs-lookup"><span data-stu-id="5d992-182">[.NET API Browser](/dotnet/api/) </span></span>  
+[<span data-ttu-id="5d992-183">開發指南</span><span class="sxs-lookup"><span data-stu-id="5d992-183">Development Guide</span></span>](../../../docs/framework/development-guide.md)

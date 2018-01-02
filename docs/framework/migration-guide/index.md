@@ -1,53 +1,46 @@
 ---
 title: ".NET Framework 4.7、4.6 和 4.5 移轉手冊 "
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0c1f9ffd1df3861c2e9b000faccae381b04295dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 820d1966172a93c06c6451c51bc7f360496f46b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7、4.6 和 4.5 移轉手冊 
-如果您使用舊版的 .NET Framework 建立應用程式，通常可以輕鬆地將它升級到 .NET Framework 4.5 及其點發行版本 (4.5.1 和 4.5.2)、.NET Framework 4.6 及其點發行版本 (4.6.1 和 4.6.2) 或 .NET Framework 4.7。 在 Visual Studio 中開啟專案。 如果您的專案是使用舊版所建立，則 [專案相容性] 對話方塊會自動開啟。 如需升級 Visual Studio 專案的詳細資訊，請參閱[移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目標及相容性](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs)。  
+# <a name="migration-guide-to-the-net-framework-47-46-and-45"></a><span data-ttu-id="4dfc5-102">.NET Framework 4.7、4.6 和 4.5 移轉手冊</span><span class="sxs-lookup"><span data-stu-id="4dfc5-102">Migration Guide to the .NET Framework 4.7, 4.6, and 4.5</span></span> 
+<span data-ttu-id="4dfc5-103">如果您使用舊版的 .NET Framework 建立應用程式，通常可以輕鬆地將它升級到 .NET Framework 4.5 及其點發行版本 (4.5.1 和 4.5.2)、.NET Framework 4.6 及其點發行版本 (4.6.1 和 4.6.2) 或 .NET Framework 4.7 及其點發行版本 (.NET Framework 4.7.1)。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-103">If you created your app using an earlier version of the .NET Framework, you can generally upgrade it to the .NET Framework 4.5 and its point releases (4.5.1 and 4.5.2), the .NET Framework 4.6 and its point releases (4.6.1 and 4.6.2), or the .NET Framework 4.7 and its point release, the .NET Framework 4.7.1, easily.</span></span> <span data-ttu-id="4dfc5-104">在 Visual Studio 中開啟專案。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-104">Open your project in Visual Studio.</span></span> <span data-ttu-id="4dfc5-105">如果您的專案是使用舊版 Visual Studio 所建立，則會自動開啟 [專案相容性] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-105">If your project was created in an earlier version of Visual Studio, the **Project Compatibility** dialog box automatically opens.</span></span> <span data-ttu-id="4dfc5-106">如需升級 Visual Studio 專案的詳細資訊，請參閱[移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目標及相容性](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs)。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-106">For more information about upgrading a project in Visual Studio, see [Port, Migrate, and Upgrade Visual Studio Projects](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) and [Visual Studio 2017 Platform Targeting and Compatibility](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).</span></span>  
   
- 不過，.NET Framework 中的某些變更需要變更您的程式碼。 您可能也會想要利用 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本或 .NET Framework 4.7 中的某些新功能。 針對新版 .NET Framework 對您應用程式所做之這些類型的變更通常稱為「移轉」。 如果您的應用程式不必移轉，您可以在 .NET Framework 4.5 或更新版本中執行而不需重新編譯。  
+ <span data-ttu-id="4dfc5-107">不過，.NET Framework 中的某些變更需要變更您的程式碼。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-107">However, some changes in the .NET Framework require changes to your code.</span></span> <span data-ttu-id="4dfc5-108">您也可能想要利用 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本、.NET Framework 4.7 及其點發行版本 (.NET Framework 4.7.1) 中的某些新功能。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-108">You may also want to take advantage of functionality that is new in the .NET Framework 4.5 and its point releases, in the .NET Framework 4.6 and its point releases, or in the .NET Framework 4.7 and its point release, the .NET Framework 4.7.1.</span></span> <span data-ttu-id="4dfc5-109">針對新版 .NET Framework 對您應用程式所做之這些類型的變更通常稱為「移轉」。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-109">Making these types of changes to your app for a new version of the .NET Framework is typically referred to as *migration*.</span></span> <span data-ttu-id="4dfc5-110">如果您的應用程式不必移轉，您可以在 .NET Framework 4.5 或更新版本中執行它，而不需要重新編譯。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-110">If your app doesn't have to be migrated, you can run it in the .NET Framework 4.5 or a later version without recompiling it.</span></span>  
   
-## <a name="migration-resources"></a>移轉資源  
- 將您的應用程式從舊版 .NET Framework 移轉至 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 版之前，請先檢閱下列文件：  
+## <a name="migration-resources"></a><span data-ttu-id="4dfc5-111">移轉資源</span><span class="sxs-lookup"><span data-stu-id="4dfc5-111">Migration resources</span></span>  
+ <span data-ttu-id="4dfc5-112">將您的應用程式從舊版 .NET Framework 移轉至 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1 版之前，請先檢閱下列文件：</span><span class="sxs-lookup"><span data-stu-id="4dfc5-112">Review the following documents before you migrate your app from earlier versions of the .NET Framework to version 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, or 4.7.1:</span></span>  
   
--   請參閱[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)，了解每個 .NET Framework 版本的基礎 CLR 版本，並檢閱成功設定應用程式目標的方針。  
+-   <span data-ttu-id="4dfc5-113">請參閱[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)，了解每個 .NET Framework 版本的基礎 CLR 版本，並檢閱成功設定應用程式目標的方針。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-113">See [Versions and Dependencies](../../../docs/framework/migration-guide/versions-and-dependencies.md) to understand the CLR version underlying each version of the .NET Framework and to review guidelines for targeting your apps successfully.</span></span>  
   
--   檢閱[應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)，了解可能影響應用程式的執行階段和重定目標變更，以及如何處理這些變更。  
+-   <span data-ttu-id="4dfc5-114">檢閱[應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)，了解可能影響應用程式的執行階段和重定目標變更，以及如何處理這些變更。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-114">Review [Application Compatibility](../../../docs/framework/migration-guide/application-compatibility.md) to find out about runtime and retargeting changes that might affect your app and how to handle them.</span></span>  
   
--   檢閱[類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)，以判斷您的程式碼中可能已淘汰的任何類型或成員，以及建議的替代做法。  
+-   <span data-ttu-id="4dfc5-115">檢閱[類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)，以判斷您的程式碼中可能已淘汰的任何類型或成員，以及建議的替代做法。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-115">Review [What's Obsolete in the Class Library](../../../docs/framework/whats-new/whats-obsolete.md) to determine any types or members in your code that have been made obsolete, and the recommended alternatives.</span></span>  
   
--   如需想要新增至應用程式之新功能的描述，請參閱[新功能](../../../docs/framework/whats-new/index.md)。  
+-   <span data-ttu-id="4dfc5-116">如需想要新增至應用程式之新功能的描述，請參閱[新功能](../../../docs/framework/whats-new/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4dfc5-116">See [What's New](../../../docs/framework/whats-new/index.md) for descriptions of new features that you may want to add to your app.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)   
- [從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
- [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   
- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
- [如何：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
- [新功能](../../../docs/framework/whats-new/index.md)   
- [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)   
- [.NET Framework Version and Assembly Information](http://go.microsoft.com/fwlink/?LinkId=201701) (.NET Framework 版本和組件資訊)   
- [Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/?LinkId=196607)[.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)
-
+## <a name="see-also"></a><span data-ttu-id="4dfc5-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4dfc5-117">See Also</span></span>  
+ [<span data-ttu-id="4dfc5-118">應用程式相容性</span><span class="sxs-lookup"><span data-stu-id="4dfc5-118">Application Compatibility</span></span>](../../../docs/framework/migration-guide/application-compatibility.md)  
+ [<span data-ttu-id="4dfc5-119">從 .NET Framework 1.1 移轉</span><span class="sxs-lookup"><span data-stu-id="4dfc5-119">Migrating from the .NET Framework 1.1</span></span>](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
+ [<span data-ttu-id="4dfc5-120">版本相容性</span><span class="sxs-lookup"><span data-stu-id="4dfc5-120">Version Compatibility</span></span>](../../../docs/framework/migration-guide/version-compatibility.md)  
+ [<span data-ttu-id="4dfc5-121">版本和相依性</span><span class="sxs-lookup"><span data-stu-id="4dfc5-121">Versions and Dependencies</span></span>](../../../docs/framework/migration-guide/versions-and-dependencies.md)  
+ [<span data-ttu-id="4dfc5-122">操作說明：設定應用程式以支援 .NET Framework 4 或 4.5</span><span class="sxs-lookup"><span data-stu-id="4dfc5-122">How to: Configure an App to Support .NET Framework 4 or 4.5</span></span>](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+ [<span data-ttu-id="4dfc5-123">新功能</span><span class="sxs-lookup"><span data-stu-id="4dfc5-123">What's New</span></span>](../../../docs/framework/whats-new/index.md)  
+ [<span data-ttu-id="4dfc5-124">類別庫中已淘汰的功能</span><span class="sxs-lookup"><span data-stu-id="4dfc5-124">What's Obsolete in the Class Library</span></span>](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [<span data-ttu-id="4dfc5-125">.NET Framework 版本和組件資訊</span><span class="sxs-lookup"><span data-stu-id="4dfc5-125">.NET Framework Version and Assembly Information</span></span>](http://go.microsoft.com/fwlink/?LinkId=201701)  
+ <span data-ttu-id="4dfc5-126">[Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/?LinkId=196607)[.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)</span><span class="sxs-lookup"><span data-stu-id="4dfc5-126">[Microsoft .NET Framework Support Lifecycle Policy](http://go.microsoft.com/fwlink/?LinkId=196607) [.NET Framework 4 migration issues](net-framework-4-migration-issues.md)</span></span>

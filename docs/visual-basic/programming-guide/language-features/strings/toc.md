@@ -4,6 +4,7 @@
 ### [字串操作方法的類型](types-of-string-manipulation-methods.md)
 ### [Nothing 和字串](nothing-and-strings.md)
 ### [文化特性如何影響字串](how-culture-affects-strings.md)
+### [字串插值](interpolated-strings.md)
 ### [以零為起始與以一為起始之字串存取的比較](zero-based-vs-one-based-string-access.md)
 ## [如何：使用 StringBuilder 建立字串](how-to-create-strings-using-a-stringbuilder.md)
 ## [如何：在字串內搜尋](how-to-search-within-a-string.md)

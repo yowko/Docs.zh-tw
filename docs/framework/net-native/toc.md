@@ -4,7 +4,7 @@
 ### [範例：針對動態程式設計進行疑難排解](example-troubleshooting-dynamic-programming.md)
 ### [範例：處理繫結資料時所發生的例外狀況](example-handling-exceptions-when-binding-data.md)
 ### [.NET Native 應用程式中的執行階段例外狀況](runtime-exceptions-in-net-native-apps.md)
-## [測量使用.NET Native 項啟動改良功能](measuring-startup-improvement-with-net-native.md)
+## [使用 .NET Native 測量啟動改善](measuring-startup-improvement-with-net-native.md)
 ## [反映和 .NET Native](reflection-and-net-native.md)
 ### [依賴反映的 API](apis-that-rely-on-reflection.md)
 ### [反映 API 參考](net-native-reflection-api-reference.md)

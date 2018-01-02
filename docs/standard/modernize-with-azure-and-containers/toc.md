@@ -1,0 +1,6 @@
+# [簡介](index.md)
+## [隨即轉移現有應用程式 Azure IaaS](lift-and-shift-existing-apps-azure-iaas.md)
+## [將關聯式資料庫移轉至 Azure](migrate-your-relational-databases-to-azure.md)
+## [隨即轉移現有應用程式 DevOps](lift-and-shift-existing-apps-devops/)
+## [逐步解說和技術開始入門概觀](walkthroughs-technical-get-started-overview.md)
+## [結論](conclusions.md)

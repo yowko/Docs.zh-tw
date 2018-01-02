@@ -1,148 +1,204 @@
 ---
 title: ".NET Framework 中的新功能"
-ms.custom: 
+ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
-helpviewer_keywords:
-- what's new [.NET Framework]
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-caps.latest.revision: 292
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
+ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 8d0818b770d94511736baf5d51abeba74a90c848
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/23/2017
 ---
-title: ".NET Framework 的新功能 | Microsoft Docs"
-ms.custom: 
-ms.date: 05/02/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- what's new [.NET Framework]
-ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-caps.latest.revision: 292
-author: rpetrusha
-ms.author: ronpet
-manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
----
-
-# <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
-<a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
+# <a name="whats-new-in-the-net-framework"></a><span data-ttu-id="e9141-102">.NET Framework 中的新功能</span><span class="sxs-lookup"><span data-stu-id="e9141-102">What's new in the .NET Framework</span></span>
+<a name="introduction"></a> <span data-ttu-id="e9141-103">此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：</span><span class="sxs-lookup"><span data-stu-id="e9141-103">This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>  
  
-[.NET Framework 4.7](#v47)   
-[.NET Framework 4.6.2](#v462)   
-[.NET Framework 4.6.1](#v461)   
-[.NET 2015 和 .NET Framework 4.6](#v46)   
-[.NET Framework 4.5.2](#v452)   
-[.NET Framework 4.5.1](#v451)   
-[.NET Framework 4.5](#core)   
+<span data-ttu-id="e9141-104">[.NET Framework 4.7.1](#v471)  </span><span class="sxs-lookup"><span data-stu-id="e9141-104">[.NET Framework 4.7.1](#v471)  </span></span>  
+<span data-ttu-id="e9141-105">[.NET Framework 4.7](#v47) </span><span class="sxs-lookup"><span data-stu-id="e9141-105">[.NET Framework 4.7](#v47) </span></span>  
+<span data-ttu-id="e9141-106">[.NET Framework 4.6.2](#v462) </span><span class="sxs-lookup"><span data-stu-id="e9141-106">[.NET Framework 4.6.2](#v462) </span></span>  
+<span data-ttu-id="e9141-107">[.NET Framework 4.6.1](#v461) </span><span class="sxs-lookup"><span data-stu-id="e9141-107">[.NET Framework 4.6.1](#v461) </span></span>  
+<span data-ttu-id="e9141-108">[.NET 2015 和 .NET Framework 4.6](#v46) </span><span class="sxs-lookup"><span data-stu-id="e9141-108">[.NET 2015 and .NET Framework 4.6](#v46) </span></span>  
+<span data-ttu-id="e9141-109">[.NET Framework 4.5.2](#v452) </span><span class="sxs-lookup"><span data-stu-id="e9141-109">[.NET Framework 4.5.2](#v452) </span></span>  
+<span data-ttu-id="e9141-110">[.NET Framework 4.5.1](#v451) </span><span class="sxs-lookup"><span data-stu-id="e9141-110">[.NET Framework 4.5.1](#v451) </span></span>  
+[<span data-ttu-id="e9141-111">.NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="e9141-111">.NET Framework 4.5</span></span>](#core)   
 
-此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。 如需 .NET Framework 的一般資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。 若要了解支援的平台，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md)。 如需下載連結和安裝指示，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。
+<span data-ttu-id="e9141-112">此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。</span><span class="sxs-lookup"><span data-stu-id="e9141-112">This article does not provide comprehensive information about each new feature and is subject to change.</span></span> <span data-ttu-id="e9141-113">如需 .NET Framework 的一般資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-113">For general information about the .NET Framework, see [Getting Started](../../../docs/framework/get-started/index.md).</span></span> <span data-ttu-id="e9141-114">若要了解支援的平台，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-114">For supported platforms, see [System Requirements](~/docs/framework/get-started/system-requirements.md).</span></span> <span data-ttu-id="e9141-115">如需下載連結和安裝指示，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-115">For download links and installation instructions, see [Installation Guide](../../../docs/framework/install/guide-for-developers.md).</span></span>
 
 > [!NOTE]
-> .NET Framework 小組也會不定期隨著 NuGet 發行相關功能，以擴充平台支援並引進新功能，例如不可變的集合和支援 SIMD 的向量類型。 如需詳細資訊，請參閱[其他類別庫和 API](../additional-apis/index.md) 以及 [.NET Framework 和不定期發行](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 請參閱 .NET Framework 的 [NuGet 套件完整清單](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或訂閱[我們的摘要](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
+> <span data-ttu-id="e9141-116">.NET Framework 小組也會不定期隨著 NuGet 發行相關功能，以擴充平台支援並引進新功能，例如不可變的集合和支援 SIMD 的向量類型。</span><span class="sxs-lookup"><span data-stu-id="e9141-116">The .NET Framework team also releases features out of band with NuGet to expand platform support and to introduce new functionality, such as immutable collections and SIMD-enabled vector types.</span></span> <span data-ttu-id="e9141-117">如需詳細資訊，請參閱[其他類別庫和 API](../additional-apis/index.md) 以及 [.NET Framework 和不定期發行](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-117">For more information, see [Additional Class Libraries and APIs](../additional-apis/index.md) and [The .NET Framework and Out-of-Band Releases](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).</span></span> <span data-ttu-id="e9141-118">請參閱 .NET Framework 的 [NuGet 套件完整清單](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或訂閱[我們的摘要](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。</span><span class="sxs-lookup"><span data-stu-id="e9141-118">See a [complete list of NuGet packages](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) for the .NET Framework, or subscribe to [our feed](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).</span></span>
+
+<a name="v471"></a> 
+## <a name="introducing-the-net-framework-471"></a><span data-ttu-id="e9141-119">.NET Framework 4.7.1 簡介</span><span class="sxs-lookup"><span data-stu-id="e9141-119">Introducing the .NET Framework 4.7.1</span></span>
+
+<span data-ttu-id="e9141-120">.NET Framework 4.7.1 建置於 .NET Framework 4.6、4.6.1、4.6.2 和 4.7 的基礎上，方法是新增許多新的修正和多項新功能，同時保有產品的高穩定性。</span><span class="sxs-lookup"><span data-stu-id="e9141-120">The .NET Framework 4.7.1 builds on the .NET Framework 4.6, 4.6.1, 4.6.2, and 4.7 by adding many new fixes and several new features while remaining a very stable product.</span></span>
+
+### <a name="downloading-and-installing-the-net-framework-471"></a><span data-ttu-id="e9141-121">下載並安裝 .NET Framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="e9141-121">Downloading and installing the .NET Framework 4.7.1</span></span>
+ 
+<span data-ttu-id="e9141-122">您可以從下列位置下載 .NET Framework 4.7.1：</span><span class="sxs-lookup"><span data-stu-id="e9141-122">You can download the .NET Framework 4.7.1  from the following locations:</span></span>
+
+- [<span data-ttu-id="e9141-123">.NET Framework 4.7.1 Web 安裝程式</span><span class="sxs-lookup"><span data-stu-id="e9141-123">.NET Framework 4.7.1 Web Installer</span></span>](http://go.microsoft.com/fwlink/?LinkId=852095)
+
+- [<span data-ttu-id="e9141-124">NET Framework 4.7.1 離線安裝程式</span><span class="sxs-lookup"><span data-stu-id="e9141-124">NET Framework 4.7.1 Offline Installer</span></span>](http://go.microsoft.com/fwlink/?LinkId=852107)
+
+<span data-ttu-id="e9141-125">.NET Framework 4.7.1 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。</span><span class="sxs-lookup"><span data-stu-id="e9141-125">The .NET Framework 4.7.1 can be installed on Windows 10, Windows 8.1, Windows 7 SP1, and the corresponding server platforms starting with Windows Server 2008 R2 SP1.</span></span> <span data-ttu-id="e9141-126">您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7.1。</span><span class="sxs-lookup"><span data-stu-id="e9141-126">You can install the .NET Framework 4.7.1 by using either the web installer or the offline installer.</span></span> <span data-ttu-id="e9141-127">針對大部分的使用者，我們建議使用 Web 安裝程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-127">The recommended way for most users is to use the web installer.</span></span>
+
+<span data-ttu-id="e9141-128">透過安裝 [.NET Framework 4.7.1 開發人員套件](http://go.microsoft.com/fwlink/?LinkId=852105)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.1 為目標。</span><span class="sxs-lookup"><span data-stu-id="e9141-128">You can target the .NET Framework 4.7.1 in Visual Studio 2012 or later by installing the [.NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105).</span></span> 
+
+### <a name="whats-new-in-the-net-framework-471"></a><span data-ttu-id="e9141-129">.NET Framework 4.7.1 的新功能</span><span class="sxs-lookup"><span data-stu-id="e9141-129">What's new in the .NET Framework 4.7.1</span></span>
+
+<span data-ttu-id="e9141-130">.NET Framework 4.7.1 包含下列領域的新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-130">The .NET Framework 4.7.1 includes new features in the following areas:</span></span>
+ 
+- [<span data-ttu-id="e9141-131">核心</span><span class="sxs-lookup"><span data-stu-id="e9141-131">Core</span></span>](#core471)
+- [<span data-ttu-id="e9141-132">Common Language Runtime (CLR)</span><span class="sxs-lookup"><span data-stu-id="e9141-132">Common language runtime (CLR)</span></span>](#clr)
+- [<span data-ttu-id="e9141-133">網路功能</span><span class="sxs-lookup"><span data-stu-id="e9141-133">Networking</span></span>](#net471)
+- [<span data-ttu-id="e9141-134">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-134">ASP.NET</span></span>](#asp-net471) 
+
+<span data-ttu-id="e9141-135">此外，.NET Framework 4.7.1 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。</span><span class="sxs-lookup"><span data-stu-id="e9141-135">In addition, a major focus in the .NET Framework 4.7.1 is improved accessibility, which allows an application to provide an appropriate experience for users of Assistive Technology.</span></span> <span data-ttu-id="e9141-136">如需 .NET Framework 4.7.1 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-136">For information on accessibility improvements in the .NET Framework 4.7.1, see [What's new in accessibility in the .NET Framework](whats-new-in-accessibility.md).</span></span> 
+
+<a name="core471" />
+#### <a name="core"></a><span data-ttu-id="e9141-137">核心</span><span class="sxs-lookup"><span data-stu-id="e9141-137">Core</span></span>
+
+<span data-ttu-id="e9141-138">**.NET Standard 2.0 的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-138">**Support for .NET Standard 2.0**</span></span>
+
+<span data-ttu-id="e9141-139">[.NET Standard](~/docs/standard/net-standard.md) 定義一組必須在每個 .NET 實作上提供的 API，而 .NET 實作支援該版本的標準。</span><span class="sxs-lookup"><span data-stu-id="e9141-139">[.NET Standard](~/docs/standard/net-standard.md) defines a set of APIs that must be available on each .NET implementation that supports that version of the standard.</span></span> <span data-ttu-id="e9141-140">.NET Framework 4.7.1 完全支援 .NET Standard 2.0，並新增[大約 200 個 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，而這些 API 定義於 .NET Standard 2.0，並在 .NET Framework 4.6.1、4.6.2 和 4.7 中遺失 </span><span class="sxs-lookup"><span data-stu-id="e9141-140">The .NET Framework 4.7.1 fully supports .NET Standard 2.0 and adds [about 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) that are defined in .NET Standard 2.0 and are missing from the .NET Framework 4.6.1, 4.6.2, and 4.7.</span></span> <span data-ttu-id="e9141-141">(請注意，只有在目標系統上一併部署其他 .NET Standard 支援檔案時，這些版本的 .NET Framework 才支援 .NET Standard 2.0)。如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜BCL - .NET Standard 2.0 支援＞。</span><span class="sxs-lookup"><span data-stu-id="e9141-141">(Note that these versions of the .NET Framework support .NET Standard 2.0 only if additional .NET Standard support files are also deployed on the target system.) For more information, see "BCL - .NET Standard 2.0 Support" in the [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog post.</span></span>
+
+<span data-ttu-id="e9141-142">**組態產生器的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-142">**Support for configuration builders**</span></span>
+
+<span data-ttu-id="e9141-143">組態產生器可讓開發人員在執行階段動態插入和建置應用程式的組態設定。</span><span class="sxs-lookup"><span data-stu-id="e9141-143">Configuration builders allow developers to inject and build configuration settings for applications dynamically at run time.</span></span> <span data-ttu-id="e9141-144">自訂組態產生器可以用來修改組態區段中的現有資料，或從頭開始全新建置組態區段。</span><span class="sxs-lookup"><span data-stu-id="e9141-144">Custom configuration builders can be used to modify existing data in a configuration section or to build a configuration section entirely from scratch.</span></span> <span data-ttu-id="e9141-145">如果沒有組態產生器，則 .config 檔案是靜態的，而且在啟動應用程式之前的某個時間定義其設定。</span><span class="sxs-lookup"><span data-stu-id="e9141-145">Without configuration builders, .config files are static, and their settings are defined some time before an application is launched.</span></span>
+
+<span data-ttu-id="e9141-146">若要建立自訂組態產生器，您可以從抽象 <xref:System.Configuration.ConfigurationBuilder> 類別衍生產生器，並覆寫其 <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> 和 <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="e9141-146">To create a custom configuration builder, you derive your builder from the abstract <xref:System.Configuration.ConfigurationBuilder> class and override its <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> and <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e9141-147">您也可以在 .config 檔案中定義產生器。</span><span class="sxs-lookup"><span data-stu-id="e9141-147">You also define your builders in your .config file.</span></span> <span data-ttu-id="e9141-148">如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜組態產生器＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-148">For more information, see the "Configuration Builders" section in the [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) blog post.</span></span> 
+
+<span data-ttu-id="e9141-149">**執行階段功能偵測**</span><span class="sxs-lookup"><span data-stu-id="e9141-149">**Run-time feature detection**</span></span>
+
+<span data-ttu-id="e9141-150"><xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> 類別提供機制，來判斷在編譯階段或執行階段，特定 .NET 實作上是否支援預先定義的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-150">The <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> class provides a mechanism for determine whether a predefined feature is supported on a given .NET implementation at compile time or run time.</span></span> <span data-ttu-id="e9141-151">在編譯階段，編譯器可以檢查是否有指定的欄位來判斷是否支援此功能；如果支援，則可以發出利用該功能的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-151">At compile time, a compiler can check whether a specified field exists to determine whether the feature is supported; if so, it can emit code that takes advantage of that feature.</span></span> <span data-ttu-id="e9141-152">在執行階段，應用程式可以先呼叫 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> 方法，再於執行階段發出程式碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-152">At run time, an application can call the <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> method before emitting code at runtime.</span></span> <span data-ttu-id="e9141-153">如需詳細資訊，請參閱[新增協助程式方法來描述執行階段所支援的功能](https://github.com/dotnet/corefx/issues/17116)。</span><span class="sxs-lookup"><span data-stu-id="e9141-153">For more information, see [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116).</span></span>
+
+<span data-ttu-id="e9141-154">**實值元組類型為可序列化**</span><span class="sxs-lookup"><span data-stu-id="e9141-154">**Value tuple types are serializable**</span></span>
+
+<span data-ttu-id="e9141-155">從 .NET Framework 4.7.1 開始，<xref:System.ValueTuple?displayProperty=fullName> 和其相關聯泛型型別會標示為 [Serializable](xref:System.SerializableAttribute)，以允許二進位序列化。</span><span class="sxs-lookup"><span data-stu-id="e9141-155">Starting with the .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=fullName> and its associated generic types are marked as [Serializable](xref:System.SerializableAttribute), which allows binary serialization.</span></span> <span data-ttu-id="e9141-156">這應該會讓將元組類型 (例如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>) 移轉至實值元組類型更為簡單。</span><span class="sxs-lookup"><span data-stu-id="e9141-156">This should make migrating Tuple types, such as <xref:System.Tuple%603> and <xref:System.Tuple%604>, to value tuple types easier.</span></span> <span data-ttu-id="e9141-157">如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ValueTuple 可序列化＞。</span><span class="sxs-lookup"><span data-stu-id="e9141-157">For more information, see "Compiler -- ValueTuple is Serializable" in the [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog post.</span></span>
+
+<span data-ttu-id="e9141-158">**唯讀參考的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-158">**Support for read-only references**</span></span>
+
+<span data-ttu-id="e9141-159">.NET Framework 4.7.1 新增 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="e9141-159">The .NET Framework 4.7.1 adds the <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>.</span></span> <span data-ttu-id="e9141-160">語言編譯器會使用此屬性來標示具有唯讀 ref 傳回類型或參數的成員。</span><span class="sxs-lookup"><span data-stu-id="e9141-160">This attribute is used by language compilers to mark members that have read-only ref return types or parameters.</span></span> <span data-ttu-id="e9141-161">如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ReadOnlyReferences 支援＞。</span><span class="sxs-lookup"><span data-stu-id="e9141-161">For more information, see "Compiler -- Support for ReadOnlyReferences" in the [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog post.</span></span> <span data-ttu-id="e9141-162">如需 ref 傳回值的資訊，請參閱 [ref 傳回值和 ref 區域變數 (C# 指南)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) 和 [ref 傳回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-162">For information on ref return values, see [Ref return values and ref locals (C# Guide)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) and [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).</span></span>
+
+<a name="clr" />
+#### <a name="common-language-runtime-clr"></a><span data-ttu-id="e9141-163">Common Language Runtime (CLR)</span><span class="sxs-lookup"><span data-stu-id="e9141-163">Common language runtime (CLR)</span></span>
+
+<span data-ttu-id="e9141-164">**記憶體回收效能改善**</span><span class="sxs-lookup"><span data-stu-id="e9141-164">**Garbage collection performance improvements**</span></span>
+
+<span data-ttu-id="e9141-165">.NET Framework 4.7.1 中的記憶體回收 (GC) 變更可改善整體效能，特別是大型物件堆積 (LOH) 配置。</span><span class="sxs-lookup"><span data-stu-id="e9141-165">Changes to garbage collection (GC) in the .NET Framework 4.7.1 improve overall performance, especially for Large Object Heap (LOH) allocations.</span></span> <span data-ttu-id="e9141-166">在 .NET Framework 4.7.1 中，會將不同的鎖定用於小型物件堆積 (SOH) 和 LOH 配置，這允許在背景 GC (BGC) 清除 SOH 時進行 LOH 配置。</span><span class="sxs-lookup"><span data-stu-id="e9141-166">In the .NET Framework 4.7.1, separate locks are used for Small Object Heap (SOH) and LOH allocations, which allows LOH allocations to occur when Background GC (BGC) is sweeping the SOH.</span></span> <span data-ttu-id="e9141-167">因此，進行大量 LOH 配置的應用程式應該會看到配置鎖定爭用降低並改善效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-167">As a result, applications that make a large number of LOH allocations should see a reduction in allocation lock contention and improved performance.</span></span> <span data-ttu-id="e9141-168">如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜執行階段 -- GC 效能改善＞。</span><span class="sxs-lookup"><span data-stu-id="e9141-168">For more information, see the "Runtime -- GC Performance Improvements" section in the [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) blog post.</span></span> 
+
+<span data-ttu-id="e9141-169">**可攜式 PDB 的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-169">**Support for portable PDBs**</span></span>
+
+<span data-ttu-id="e9141-170">從 4.7.1 版開始的 .NET Framework 支援可攜式 PDB。</span><span class="sxs-lookup"><span data-stu-id="e9141-170">The .NET Framework starting with version 4.7.1 supports portable PDBs.</span></span> <span data-ttu-id="e9141-171">雖然標準 PDB 檔案只能用於 Windows，但是可以在所有平台上建立和讀取可攜式 PDB 檔案。</span><span class="sxs-lookup"><span data-stu-id="e9141-171">While standard PDB files are Windows-only, portable PDB files can be created and read on all platforms.</span></span> <span data-ttu-id="e9141-172">在大部分情況下，於特定 .NET 實作上執行的應用程式可以辨識檔案格式。</span><span class="sxs-lookup"><span data-stu-id="e9141-172">In most cases, the file format is transparent to an application running on a particular .NET implementation.</span></span> <span data-ttu-id="e9141-173">例外狀況是在執行階段動態發出組件的應用程式；在此情況下，發出可攜式 PDB 的能力可以改善效能，並減少應用程式的記憶體耗用量。</span><span class="sxs-lookup"><span data-stu-id="e9141-173">An exception is an application that dynamically emits an assembly at run time; in this case, the ability to emit a portable PDB can offer a performance improvement and reduce the application's memory footprint.</span></span> 
+
+<span data-ttu-id="e9141-174">您可以在發出組件之前，將字串 "PortablePdb" 傳遞給 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> 方法，以在執行階段決定目前 .NET 實作上是否支援可攜式 PDB。</span><span class="sxs-lookup"><span data-stu-id="e9141-174">You can determine at run time whether portable PDBs are supported on the current .NET implementation by passing the string "PortablePdb" to the <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> method before emitting the assembly.</span></span>  
+ 
+<a name="net471"/>
+#### <a name="networking"></a><span data-ttu-id="e9141-175">網路功能</span><span class="sxs-lookup"><span data-stu-id="e9141-175">Networking</span></span>
+
+<span data-ttu-id="e9141-176">**Message.HashAlgorithm 的 SHA-2 支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-176">**SHA-2 support for Message.HashAlgorithm**</span></span>
+
+<span data-ttu-id="e9141-177">在 .NET Framework 4.7 和更舊版本中，<xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 屬性只支援 <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> 的值。</span><span class="sxs-lookup"><span data-stu-id="e9141-177">In the .NET Framework 4.7 and earlier versions, the <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> property supported values of <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> and <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> only.</span></span> <span data-ttu-id="e9141-178">從 .NET Framework 4.7.1 開始，也支援 <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>、<xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="e9141-178">Starting with the .NET Framework 4.7.1, <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType>, and <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType> are also supported.</span></span> <span data-ttu-id="e9141-179">實際使用的這個值取決於 MSMQ，因為 <xref:System.Messaging.Message> 執行個體本身不會進行任何雜湊處理，而只會將值傳入 MSMQ。</span><span class="sxs-lookup"><span data-stu-id="e9141-179">Whether this value is actually used depends on MSMQ, since the <xref:System.Messaging.Message> instance itself does no hashing but simply passes on values to MSMQ.</span></span> <span data-ttu-id="e9141-180">如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜Message.HashAlgorithm 的 SHA-2 支援＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-180">For more information, see the "SHA-2 support for Message.HashAlgorithm" section in the [.NET Framework 4.7.1 ASP.NET and Configuration features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features/) blog post.</span></span>
+
+<a name="asp-net471" />
+#### <a name="aspnet"></a><span data-ttu-id="e9141-181">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-181">ASP.NET</span></span>
+
+<span data-ttu-id="e9141-182">**ASP.NET 應用程式中的執行步驟**</span><span class="sxs-lookup"><span data-stu-id="e9141-182">**Execution steps in ASP.NET applications**</span></span>
+
+<span data-ttu-id="e9141-183">ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。</span><span class="sxs-lookup"><span data-stu-id="e9141-183">ASP.NET processes requests in a predefined pipeline that includes 23 events.</span></span> <span data-ttu-id="e9141-184">ASP.NET 會將每個事件處理常式執行為執行步驟。</span><span class="sxs-lookup"><span data-stu-id="e9141-184">ASP.NET executes each event handler as an execution step.</span></span> <span data-ttu-id="e9141-185">在 .NET Framework 4.7 之前的 ASP.NET 版本中，ASP.NET 因切換原生與受控執行緒而無法讓執行內容流動。</span><span class="sxs-lookup"><span data-stu-id="e9141-185">In versions of ASP.NET up to the .NET Framework 4.7, ASP.NET can't flow the execution context due to switching between native and managed threads.</span></span> <span data-ttu-id="e9141-186">相反地，ASP.NET 選擇性地只會讓 <xref:System.Web.HttpContext> 流動。</span><span class="sxs-lookup"><span data-stu-id="e9141-186">Instead, ASP.NET selectively flows only the <xref:System.Web.HttpContext>.</span></span> <span data-ttu-id="e9141-187">從 .NET Framework 4.7.1 開始，<xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> 方法也允許模組還原環境資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-187">Starting with the .NET Framework 4.7.1, the <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> method also allows modules to restore ambient data.</span></span> <span data-ttu-id="e9141-188">此功能的目標是關注於追蹤、分析、診斷或異動的程式庫，例如關心應用程式的執行流程。</span><span class="sxs-lookup"><span data-stu-id="e9141-188">This feature is targeted at libraries concerned with tracing, profiling, diagnostics, or transactions, for example, that care about the execution flow of the application.</span></span> <span data-ttu-id="e9141-189">如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET 執行步驟功能＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-189">For more information, see the "ASP.NET Execution Step Feature" in the [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) blog post.</span></span> 
+
+<span data-ttu-id="e9141-190">**ASP.NET HttpCookie 剖析**</span><span class="sxs-lookup"><span data-stu-id="e9141-190">**ASP.NET HttpCookie parsing**</span></span>
+
+<span data-ttu-id="e9141-191">.NET Framework 4.7.1 包含的新方法 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 提供標準化方式，以從字串建立 <xref:System.Web.HttpCookie> 物件，並精確地指派 Cookie 值 (例如到期日和路徑)。</span><span class="sxs-lookup"><span data-stu-id="e9141-191">The .NET Framework 4.7.1 includes a new method, <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, that provides a standardized way to create an <xref:System.Web.HttpCookie> object from a string and accurately assign cookie values such as expiration date and path.</span></span> <span data-ttu-id="e9141-192">如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET HttpCookie 剖析＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-192">For more information, see "ASP.NET HttpCookie parsing" in the [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) blog post.</span></span> 
+
+<span data-ttu-id="e9141-193">**ASP.NET 表單驗證認證的 SHA-2 雜湊選項**</span><span class="sxs-lookup"><span data-stu-id="e9141-193">**SHA-2 hash options for ASP.NET forms authentication credentials**</span></span>
+
+<span data-ttu-id="e9141-194">在 .NET Framework 4.7 和更舊版本中，ASP.NET 已允許開發人員使用 MD5 或 SHA1，將使用者認證與雜湊密碼儲存至組態檔。</span><span class="sxs-lookup"><span data-stu-id="e9141-194">In the .NET Framework 4.7 and earlier versions, ASP.NET allowed developers to store user credentials with hashed passwords in configuration files using either MD5 or SHA1.</span></span> <span data-ttu-id="e9141-195">從 .NET Framework 4.7.1 開始，ASP.NET 也支援新安全 SHA-2 雜湊選項 (例如 SHA256、SHA384 和 SHA512)。</span><span class="sxs-lookup"><span data-stu-id="e9141-195">Starting with the .NET Framework 4.7.1, ASP.NET also supports new secure SHA-2 hash options such as SHA256, SHA384, and SHA512.</span></span> <span data-ttu-id="e9141-196">SHA1 會保持預設值，而且可以在 Web 組態檔中定義非預設雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="e9141-196">SHA1 remains the default, and a non-default hash algorithm can be defined in the web configuration file.</span></span> <span data-ttu-id="e9141-197">例如: </span><span class="sxs-lookup"><span data-stu-id="e9141-197">For example:</span></span>
+
+```xml
+<system.web>
+    <authentication mode="Forms">
+        <forms loginUrl="~/login.aspx">
+          <credentials passwordFormat="SHA512">
+            <user name="jdoe" password="6D003E98EA1C7F04ABF8FCB375388907B7F3EE06F278DB966BE960E7CBBD103DF30CA6D61F7E7FD981B2E4E3A64D43C836A4BEDCA165C33B163E6BCDC538A664" />
+          </credentials>
+        </forms>
+    </authentication>
+</system.web>
+```
 
 <a name="v47"></a> 
-## <a name="introducing-the-net-framework-47"></a>.NET Framework 4.7 簡介
+### <a name="whats-new-in-the-net-framework-47"></a><span data-ttu-id="e9141-198">.NET Framework 4.7 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="e9141-198">What's new in the .NET Framework 4.7</span></span>
 
-.NET Framework 4.7 建置於 .NET Framework 4.6、4.6.1 和 4.6.2 的基礎上，加入許多新的修正和多項新功能，同時保有產品的高穩定性。
+<span data-ttu-id="e9141-199">.NET Framework 4.7 包含下列領域的新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-199">The .NET Framework 4.7 includes new features in the following areas:</span></span>
 
-### <a name="downloading-and-installing-the-net-framework-47"></a>下載並安裝 .NET Framework 4.7
- 
-您可以從下列位置下載 .NET Framework 4.7：
+- [<span data-ttu-id="e9141-200">核心</span><span class="sxs-lookup"><span data-stu-id="e9141-200">Core</span></span>](#Core47)
+- [<span data-ttu-id="e9141-201">網路功能</span><span class="sxs-lookup"><span data-stu-id="e9141-201">Networking</span></span>](#net47)
+- [<span data-ttu-id="e9141-202">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-202">ASP.NET</span></span>](#ASP-NET47)
+- [<span data-ttu-id="e9141-203">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="e9141-203">Windows Communication Foundation (WCF)</span></span>](#wcf47)
+- [<span data-ttu-id="e9141-204">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e9141-204">Windows Forms</span></span>](#wf47)
+- [<span data-ttu-id="e9141-205">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-205">Windows Presentation Foundation (WPF)</span></span>](#WPF47)
 
-- [.NET Framework 4.7 Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=825299)
-
-- [NET Framework 4.7 離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=825303)
-
-.NET Framework 4.7 可以安裝在 Windows 10、Windows 8.1、Windows 7，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7。 針對大部分的使用者，我們建議使用 Web 安裝程式。
-
-透過安裝 [.NET Framework 4.7 開發人員套件](http://go.microsoft.com/fwlink/?LinkId=825319)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7 為目標。
-
-### <a name="whats-new-in-the-net-framework-47"></a>.NET Framework 4.7 中的新增功能
-
-.NET Framework 4.7 包含下列領域的新功能：
-
-- [核心](#Core47)
-- [網路功能](#net47)
-- [ASP.NET](#ASP-NET47)
-- [Windows Communication Foundation (WCF)](#wcf47)
-- [Windows Forms](#wf47)
-- [Windows Presentation Foundation (WPF)](#WPF47)
-
-如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](http://gutithub.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣佈推出 .NET Framework 4.7 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。
+<span data-ttu-id="e9141-206">如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-206">For a list of new APIs added to the .NET Framework 4.7, see [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) on GitHub.</span></span> <span data-ttu-id="e9141-207">如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-207">For a list of feature improvements and bug fixes in the .NET Framework 4.7, see [.NET Framework 4.7 List of Changes](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) on GitHub.</span></span>  <span data-ttu-id="e9141-208">如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。</span><span class="sxs-lookup"><span data-stu-id="e9141-208">For additional information, see [Announcing the .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) in the .NET blog.</span></span>
 
 <a name="Core47" />
-#### <a name="core"></a>核心
+#### <a name="core"></a><span data-ttu-id="e9141-209">核心</span><span class="sxs-lookup"><span data-stu-id="e9141-209">Core</span></span>
 
-.NET Framework 4.7 改進了 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 所執行的序列化：
+<span data-ttu-id="e9141-210">.NET Framework 4.7 改進了 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 所執行的序列化：</span><span class="sxs-lookup"><span data-stu-id="e9141-210">The .NET Framework 4.7 improves serialization by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:</span></span>
 
-**橢圓曲線密碼編譯 (ECC) 的增強功能***
+<span data-ttu-id="e9141-211">**橢圓曲線密碼編譯 (ECC) 的增強功能***</span><span class="sxs-lookup"><span data-stu-id="e9141-211">**Enhanced functionality with Elliptic Curve Cryptography (ECC)***</span></span>
 
-在 .NET Framework 4.7 中，已將 `ImportParameters(ECParameters)` 方法新增到 <xref:System.Security.Cryptography.ECDsa> 和 <xref:System.Security.Cryptography.ECDiffieHellman> 類別，以允許物件代表已經建立的索引鍵。 也加入 `ExportParameters(Boolean)` 方法以使用明確的曲線參數匯出索引鍵。
+<span data-ttu-id="e9141-212">在 .NET Framework 4.7 中，已將 `ImportParameters(ECParameters)` 方法新增到 <xref:System.Security.Cryptography.ECDsa> 和 <xref:System.Security.Cryptography.ECDiffieHellman> 類別，以允許物件代表已經建立的索引鍵。</span><span class="sxs-lookup"><span data-stu-id="e9141-212">In the .NET Framework 4.7, `ImportParameters(ECParameters)` methods were added to the <xref:System.Security.Cryptography.ECDsa> and <xref:System.Security.Cryptography.ECDiffieHellman> classes to allow for an object to represent an already-established key.</span></span> <span data-ttu-id="e9141-213">也加入 `ExportParameters(Boolean)` 方法以使用明確的曲線參數匯出索引鍵。</span><span class="sxs-lookup"><span data-stu-id="e9141-213">An `ExportParameters(Boolean)` method was also added for exporting the key using explicit curve parameters.</span></span>
 
-.NET Framework 4.7 也新增了對其他曲線 (包括 Brainpool 曲線套件) 的支援，並已新增預先定義的定義，可透過新的 <xref:System.Security.Cryptography.ECDsa.Create%2A> 和 <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> Factory 方法輕鬆建立。
+<span data-ttu-id="e9141-214">.NET Framework 4.7 也新增了對其他曲線 (包括 Brainpool 曲線套件) 的支援，並已新增預先定義的定義，可透過新的 <xref:System.Security.Cryptography.ECDsa.Create%2A> 和 <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> Factory 方法輕鬆建立。</span><span class="sxs-lookup"><span data-stu-id="e9141-214">The .NET Framework 4.7 also adds support for additional curves (including the Brainpool curve suite), and has added predefined definitions for ease-of-creation through the new <xref:System.Security.Cryptography.ECDsa.Create%2A> and <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> factory methods.</span></span>
 
-您可以在 GitHub 上看到 [.NET Framework 4.7 密碼編譯增強功能的範例](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e)。
+<span data-ttu-id="e9141-215">您可以在 GitHub 上看到 [.NET Framework 4.7 密碼編譯增強功能的範例](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e)。</span><span class="sxs-lookup"><span data-stu-id="e9141-215">You can see an [example of .NET Framework 4.7 cryptography improvements](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e) on GitHub.</span></span>
 
-**DataContractJsonSerializer 對控制字元有更好的支援**
+<span data-ttu-id="e9141-216">**DataContractJsonSerializer 對控制字元有更好的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-216">**Better support for control characters by the DataContractJsonSerializer**</span></span>
 
-在 .NET Framework 4.7 中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將控制字元序列化以符合 ECMAScript 6 標準。 針對 .NET Framework 4.7 設計的應用程式預設會啟用此行為，而這對在 .NET Framework 4.7 環境下執行但針對舊版 .NET Framework 設計的應用程式則是選擇性功能。 如需詳細資訊，請參閱 [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+<span data-ttu-id="e9141-217">在 .NET Framework 4.7 中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將控制字元序列化以符合 ECMAScript 6 標準。</span><span class="sxs-lookup"><span data-stu-id="e9141-217">In the .NET Framework 4.7, the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializes control characters in conformity with the ECMAScript 6 standard.</span></span> <span data-ttu-id="e9141-218">針對 .NET Framework 4.7 設計的應用程式預設會啟用此行為，而這對在 .NET Framework 4.7 環境下執行但針對舊版 .NET Framework 設計的應用程式則是選擇性功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-218">This behavior is enabled by default for applications that target the .NET Framework 4.7, and is an opt-in feature for applications that are running under the .NET Framework 4.7 but target a previous version of the .NET Framework.</span></span> <span data-ttu-id="e9141-219">如需詳細資訊，請參閱 [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-219">For more information, see [Retargeting Changes in the .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md).</span></span>
 
 <a name="net47" />
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a><span data-ttu-id="e9141-220">網路功能</span><span class="sxs-lookup"><span data-stu-id="e9141-220">Networking</span></span>
 
-.NET Framework 4.7 新增與網路有關的下列功能︰
+<span data-ttu-id="e9141-221">.NET Framework 4.7 新增與網路有關的下列功能︰</span><span class="sxs-lookup"><span data-stu-id="e9141-221">The .NET Framework 4.7 adds the following network-related feature:</span></span>
 
-**TLS 通訊協定的預設作業系統支援***
+<span data-ttu-id="e9141-222">**TLS 通訊協定的預設作業系統支援***</span><span class="sxs-lookup"><span data-stu-id="e9141-222">**Default operating system support for TLS protocols***</span></span>
 
-<xref:System.Net.Security.SslStream?displayProperty=fullName> 和向上堆疊元件 (例如 HTTP、FTP 和 SMTP) 所使用的 TLS 堆疊可讓開發人員使用作業系統支援的預設 TLS 通訊協定。 開發人員不再需要為 TLS 版本進行硬式編碼。
+<span data-ttu-id="e9141-223"><xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和向上堆疊元件 (例如 HTTP、FTP 和 SMTP) 所使用的 TLS 堆疊可讓開發人員使用作業系統支援的預設 TLS 通訊協定。</span><span class="sxs-lookup"><span data-stu-id="e9141-223">The TLS stack, which is used by <xref:System.Net.Security.SslStream?displayProperty=nameWithType> and up-stack components such as HTTP, FTP, and SMTP, allows developers to use the default TLS protocols supported by the operating system.</span></span> <span data-ttu-id="e9141-224">開發人員不再需要為 TLS 版本進行硬式編碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-224">Developers need no longer hard-code a TLS version.</span></span>
 
 <a name="ASP-NET47" />
-#### <a name="aspnet"></a>ASP.NET
+#### <a name="aspnet"></a><span data-ttu-id="e9141-225">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-225">ASP.NET</span></span>
 
-在 .NET Framework 4.7 中，ASP.NET 包含下列新功能：
+<span data-ttu-id="e9141-226">在 .NET Framework 4.7 中，ASP.NET 包含下列新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-226">In the .NET Framework 4.7, ASP.NET includes the following new features:</span></span>
 
-**物件快取擴充性**
+<span data-ttu-id="e9141-227">**物件快取擴充性**</span><span class="sxs-lookup"><span data-stu-id="e9141-227">**Object Cache Extensibility**</span></span>
 
-從 .NET Framework 4.7 開始，ASP.NET 加入一組新的 API 讓開發人員取代預設的 ASP.NET 實作以快取記憶體內部物件和監視記憶體。 如果 ASP.NET 實作不適用，開發人員現在可以取代下列三個元件當中的任何一個元件︰
+<span data-ttu-id="e9141-228">從 .NET Framework 4.7 開始，ASP.NET 加入一組新的 API 讓開發人員取代預設的 ASP.NET 實作以快取記憶體內部物件和監視記憶體。</span><span class="sxs-lookup"><span data-stu-id="e9141-228">Starting with the .NET Framework 4.7, ASP.NET adds a new set of APIs that allow developers to replace the default ASP.NET implementations for in-memory object caching and memory monitoring.</span></span> <span data-ttu-id="e9141-229">如果 ASP.NET 實作不適用，開發人員現在可以取代下列三個元件當中的任何一個元件︰</span><span class="sxs-lookup"><span data-stu-id="e9141-229">Developers can now replace any of the following three components if the ASP.NET implementation is not adequate:</span></span>
 
-- **物件快取存放區**。 開發人員可以使用新的 **ICacheStoreProvider** 介面，透過新的快取提供者組態區段，為 ASP.NET 應用程式插入新的物件快取實作。
+- <span data-ttu-id="e9141-230">**物件快取存放區**。</span><span class="sxs-lookup"><span data-stu-id="e9141-230">**Object Cache Store**.</span></span> <span data-ttu-id="e9141-231">開發人員可以使用新的 **ICacheStoreProvider** 介面，透過新的快取提供者組態區段，為 ASP.NET 應用程式插入新的物件快取實作。</span><span class="sxs-lookup"><span data-stu-id="e9141-231">By using the new cache providers configuration section, developers can plug in new implementations of an object cache for an ASP.NET application by using the new **ICacheStoreProvider** interface.</span></span>
  
-- **記憶體監視**。 ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。 接近這些限制時，就會引發通知。 對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。 開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=fullName> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。
+- <span data-ttu-id="e9141-232">**記憶體監視**。</span><span class="sxs-lookup"><span data-stu-id="e9141-232">**Memory monitoring**.</span></span> <span data-ttu-id="e9141-233">ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-233">The default memory monitor in ASP.NET notifies applications when they are running close to the configured private bytes limit for the process, or when the machine is low on total available physical RAM.</span></span> <span data-ttu-id="e9141-234">接近這些限制時，就會引發通知。</span><span class="sxs-lookup"><span data-stu-id="e9141-234">When these limits are near, notifications are fired.</span></span> <span data-ttu-id="e9141-235">對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。</span><span class="sxs-lookup"><span data-stu-id="e9141-235">For some applications, notifications are fired too close to the configured limits to allow for useful reactions.</span></span> <span data-ttu-id="e9141-236">開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。</span><span class="sxs-lookup"><span data-stu-id="e9141-236">Developers can now write their own memory monitors to replace the default by using the <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> property.</span></span>
 
-- **記憶體限制反應**。 ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=fullName>。 就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=fullName> 的頻率或所修剪的快取量會沒有效率。 開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。
+- <span data-ttu-id="e9141-237">**記憶體限制反應**。</span><span class="sxs-lookup"><span data-stu-id="e9141-237">**Memory Limit Reactions**.</span></span> <span data-ttu-id="e9141-238">ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="e9141-238">By default, ASP.NET attempts to trim the object cache and periodically call <xref:System.GC.Collect%2A?displayProperty=nameWithType> when the private byte process limit is near.</span></span> <span data-ttu-id="e9141-239">就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 的頻率或所修剪的快取量會沒有效率。</span><span class="sxs-lookup"><span data-stu-id="e9141-239">For some applications, the frequency of calls to <xref:System.GC.Collect%2A?displayProperty=nameWithType> or the amount of cache that is trimmed are inefficient.</span></span> <span data-ttu-id="e9141-240">開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。</span><span class="sxs-lookup"><span data-stu-id="e9141-240">Developers can now replace or supplement the default behavior by subscribing **IObserver** implementations to the application's memory monitor.</span></span>
 
 <a name="wcf47" />
-#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+#### <a name="windows-communication-foundation-wcf"></a><span data-ttu-id="e9141-241">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="e9141-241">Windows Communication Foundation (WCF)</span></span>
 
-Windows Communication Foundation (WCF) 加入下列功能和變更：
+<span data-ttu-id="e9141-242">Windows Communication Foundation (WCF) 加入下列功能和變更：</span><span class="sxs-lookup"><span data-stu-id="e9141-242">Windows Communication Foundation (WFC) adds the following features and changes:</span></span>
 
-**能夠將預設的訊息安全性設定設定為 TLS 1.1 或 TLS 1.2**
+<span data-ttu-id="e9141-243">**能夠將預設的訊息安全性設定設定為 TLS 1.1 或 TLS 1.2**</span><span class="sxs-lookup"><span data-stu-id="e9141-243">**Ability to configure the default message security settings to TLS 1.1 or TLS 1.2**</span></span>
 
-從 .NET Framework 4.7 開始， 除了 SSL 3.0 和 TSL 1.0 之外，WCF 還可讓您設定 TSL 1.1 或 TLS 1.2 作為預設的訊息安全性通訊協定。 這是選擇性的設定。若要啟用，您必須在應用程式組態檔中加入下列項目︰
+<span data-ttu-id="e9141-244">從 .NET Framework 4.7 開始， 除了 SSL 3.0 和 TSL 1.0 之外，WCF 還可讓您設定 TSL 1.1 或 TLS 1.2 作為預設的訊息安全性通訊協定。</span><span class="sxs-lookup"><span data-stu-id="e9141-244">Starting with the .NET Framework 4.7, WCF allows you to configure TSL 1.1 or TLS 1.2 in addition to SSL 3.0 and TSL 1.0 as the default message security protocol.</span></span> <span data-ttu-id="e9141-245">這是選擇性的設定。若要啟用，您必須在應用程式組態檔中加入下列項目︰</span><span class="sxs-lookup"><span data-stu-id="e9141-245">This is an opt-in setting; to enable it, you must add the following entry to your application configuration file:</span></span>
 
 ```xml
 <runtime>
@@ -150,81 +206,81 @@ Windows Communication Foundation (WCF) 加入下列功能和變更：
 </runtime>
 ```
 
-**改進 WCF 應用程式和 WCF 序列化的可靠性**
+<span data-ttu-id="e9141-246">**改進 WCF 應用程式和 WCF 序列化的可靠性**</span><span class="sxs-lookup"><span data-stu-id="e9141-246">**Improved reliability of WCF applications and WCF serialization**</span></span>
 
-WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 它們包括：
+<span data-ttu-id="e9141-247">WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。</span><span class="sxs-lookup"><span data-stu-id="e9141-247">WCF includes a number of code changes that eliminate race conditions, thereby improving performance and the reliability of serialization options.</span></span> <span data-ttu-id="e9141-248">它們包括：</span><span class="sxs-lookup"><span data-stu-id="e9141-248">These include:</span></span>
 
-- 在呼叫 **SocketConnection.BeginRead** 和 **SocketConnection.Read** 時更有效地支援混合非同步和同步程式碼。
-- 改善中止與 **SharedConnectionListener** 和 **DuplexChannelBinder** 連線時的可靠性。
-- 改善呼叫 <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=fullName> 方法時的序列化作業可靠性。
-- 改善呼叫 **ChannelSynchronizer.RemoveWaiter** 方法移除等候者時的可靠性。
+- <span data-ttu-id="e9141-249">在呼叫 **SocketConnection.BeginRead** 和 **SocketConnection.Read** 時更有效地支援混合非同步和同步程式碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-249">Better support for mixing asynchronous and synchronous code in calls to **SocketConnection.BeginRead** and **SocketConnection.Read**.</span></span>
+- <span data-ttu-id="e9141-250">改善中止與 **SharedConnectionListener** 和 **DuplexChannelBinder** 連線時的可靠性。</span><span class="sxs-lookup"><span data-stu-id="e9141-250">Improved reliability when aborting a connection with **SharedConnectionListener** and **DuplexChannelBinder**.</span></span>
+- <span data-ttu-id="e9141-251">改善呼叫 <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType> 方法時的序列化作業可靠性。</span><span class="sxs-lookup"><span data-stu-id="e9141-251">Improved reliability of serialization operations when calling the <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType> method.</span></span>
+- <span data-ttu-id="e9141-252">改善呼叫 **ChannelSynchronizer.RemoveWaiter** 方法移除等候者時的可靠性。</span><span class="sxs-lookup"><span data-stu-id="e9141-252">Improved reliability when removing a waiter by calling the **ChannelSynchronizer.RemoveWaiter** method.</span></span>
 
 <a name="wf47" />
-#### <a name="windows-forms"></a>Windows Forms
+#### <a name="windows-forms"></a><span data-ttu-id="e9141-253">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e9141-253">Windows Forms</span></span>
 
-在 .NET Framework 4.7 中，Windows Forms 改善對高 DPI 監視器的支援。
+<span data-ttu-id="e9141-254">在 .NET Framework 4.7 中，Windows Forms 改善對高 DPI 監視器的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-254">In the .NET Framework 4.7, Windows Forms improves support for high DPI monitors.</span></span>
 
-**高 DPI 支援**
+<span data-ttu-id="e9141-255">**高 DPI 支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-255">**High DPI support**</span></span>
 
-從針對 .NET Framework 4.7 設計的應用程式開始，.NET Framework 具備 Windows Forms 應用程式的高 DPI 與動態 DPI 支援。 高 DPI 支援可改善高 DPI 監視器上表單和控制項的配置和外觀。 動態 DPI 則可在使用者變更執行中應用程式的 DPI 或顯示比例時，變更表單和控制項的配置和外觀。
+<span data-ttu-id="e9141-256">從針對 .NET Framework 4.7 設計的應用程式開始，.NET Framework 具備 Windows Forms 應用程式的高 DPI 與動態 DPI 支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-256">Starting with applications that target the .NET Framework 4.7, the .NET Framework features high DPI and dynamic DPI support for Windows Forms applications.</span></span> <span data-ttu-id="e9141-257">高 DPI 支援可改善高 DPI 監視器上表單和控制項的配置和外觀。</span><span class="sxs-lookup"><span data-stu-id="e9141-257">High DPI support improves the layout and appearance of forms and controls on high DPI monitors.</span></span> <span data-ttu-id="e9141-258">動態 DPI 則可在使用者變更執行中應用程式的 DPI 或顯示比例時，變更表單和控制項的配置和外觀。</span><span class="sxs-lookup"><span data-stu-id="e9141-258">Dynamic DPI changes the layout and appearance of forms and controls when the user changes the DPI or display scale factor of a running application.</span></span>
 
-高 DPI 支援是選擇性功能，您可以在應用程式組態檔中定義 [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) 區段來設定。 如需有關如何將高 DPI 支援和動態 DPI 支援加入至 Windows Forms 應用程式的詳細資訊，請參閱 [Windows Forms 中的高 DPI 支援](../winforms/high-dpi-support-in-windows-forms.md)。
+<span data-ttu-id="e9141-259">高 DPI 支援是選擇性功能，您可以在應用程式組態檔中定義 [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) 區段來設定。</span><span class="sxs-lookup"><span data-stu-id="e9141-259">High DPI support is an opt-in feature that you configure by defining a [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) section in your application configuration file.</span></span> <span data-ttu-id="e9141-260">如需有關如何將高 DPI 支援和動態 DPI 支援加入至 Windows Forms 應用程式的詳細資訊，請參閱 [Windows Forms 中的高 DPI 支援](../winforms/high-dpi-support-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-260">For more information on adding high DPI support and dynamic DPI support to your Windows Forms application, see [High DPI Support in Windows Forms](../winforms/high-dpi-support-in-windows-forms.md).</span></span>
 
 <a name="WPF47"></a> 
-#### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+#### <a name="windows-presentation-foundation-wpf"></a><span data-ttu-id="e9141-261">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-261">Windows Presentation Foundation (WPF)</span></span>
 
-在 .NET Framework 4.7 中，WPF 包含下列增強功能︰
+<span data-ttu-id="e9141-262">在 .NET Framework 4.7 中，WPF 包含下列增強功能︰</span><span class="sxs-lookup"><span data-stu-id="e9141-262">In the .NET Framework 4.7, WPF includes the following enhancements:</span></span>
 
-**根據 Windows WM_POINTER 訊息對觸控/手寫筆堆疊的支援**
+<span data-ttu-id="e9141-263">**根據 Windows WM_POINTER 訊息對觸控/手寫筆堆疊的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-263">**Support for a touch/stylus stack based on Windows WM_POINTER messages**</span></span>
 
-您現在可以選擇根據 [WM_POINTER 訊息 (英文)](https://msdn.microsoft.com/library/windows/desktop/hh454903.aspx) 來使用觸控/手寫筆堆疊，而不是根據 Windows Ink Services Platform (WISP)。 這是 .NET Framework 中的選擇性功能。 如需詳細資訊，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+<span data-ttu-id="e9141-264">您現在可以選擇根據 [WM_POINTER 訊息 (英文)](https://msdn.microsoft.com/library/windows/desktop/hh454903.aspx) 來使用觸控/手寫筆堆疊，而不是根據 Windows Ink Services Platform (WISP)。</span><span class="sxs-lookup"><span data-stu-id="e9141-264">You now have the option of using a touch/stylus stack based on [WM_POINTER messages](https://msdn.microsoft.com/library/windows/desktop/hh454903.aspx) instead of the Windows Ink Services Platform (WISP).</span></span> <span data-ttu-id="e9141-265">這是 .NET Framework 中的選擇性功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-265">This is an opt-in feature in the .NET Framework.</span></span> <span data-ttu-id="e9141-266">如需詳細資訊，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-266">For more information, see [Retargeting Changes in the .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).</span></span>
 
-**新的 WPF 列印 API 實作**
+<span data-ttu-id="e9141-267">**新的 WPF 列印 API 實作**</span><span class="sxs-lookup"><span data-stu-id="e9141-267">**New implementation for WPF printing APIs**</span></span>
 
-WPF 在 <xref:System.Printing.PrintQueue?displayProperty=fullName> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不是已被取代的 [XPS 列印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。 如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。 
+<span data-ttu-id="e9141-268">WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不是已被取代的 [XPS 列印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。</span><span class="sxs-lookup"><span data-stu-id="e9141-268">WPF's printing APIs in the <xref:System.Printing.PrintQueue?displayProperty=nameWithType> class call the Windows [Print Document Package API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) instead of the deprecated [XPS Print API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx).</span></span> <span data-ttu-id="e9141-269">如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-269">For the impact of this change on application compatibility, see [Retargeting Changes in the .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).</span></span> 
 
 <a name="v462"></a> 
-## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 的新功能
+## <a name="whats-new-in-the-net-framework-462"></a><span data-ttu-id="e9141-270">.NET Framework 4.6.2 的新功能</span><span class="sxs-lookup"><span data-stu-id="e9141-270">What's new in the .NET Framework 4.6.2</span></span>
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包含下列領域的新功能：
+<span data-ttu-id="e9141-271">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包含下列領域的新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-271">The [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] includes new features in the following areas:</span></span>
 
-- [ASP.NET](#ASPNET462)
+- [<span data-ttu-id="e9141-272">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-272">ASP.NET</span></span>](#ASPNET462)
 
-- [字元類別](#Strings)
+- [<span data-ttu-id="e9141-273">字元類別</span><span class="sxs-lookup"><span data-stu-id="e9141-273">Character categories</span></span>](#Strings)
 
-- [密碼編譯](#Crypto462)
+- [<span data-ttu-id="e9141-274">密碼編譯</span><span class="sxs-lookup"><span data-stu-id="e9141-274">Cryptography</span></span>](#Crypto462)
 
-- [SqlClient](#SQLClient)
+- [<span data-ttu-id="e9141-275">SqlClient</span><span class="sxs-lookup"><span data-stu-id="e9141-275">SqlClient</span></span>](#SQLClient)
 
-- [Windows Communication Foundation](#WCF)
+- [<span data-ttu-id="e9141-276">Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e9141-276">Windows Communication Foundation</span></span>](#WCF)
 
-- [Windows Presentation Foundation (WPF)](#WPF462)
+- [<span data-ttu-id="e9141-277">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-277">Windows Presentation Foundation (WPF)</span></span>](#WPF462)
 
-- [Windows Workflow Foundation (WF)](#WF462)
+- [<span data-ttu-id="e9141-278">Windows Workflow Foundation (WF)</span><span class="sxs-lookup"><span data-stu-id="e9141-278">Windows Workflow Foundation (WF)</span></span>](#WF462)
 
-- [ClickOnce](#ClickOnce)
+- [<span data-ttu-id="e9141-279">ClickOnce</span><span class="sxs-lookup"><span data-stu-id="e9141-279">ClickOnce</span></span>](#ClickOnce)
 
-- [將 Windows Forms 和 WPF 應用程式轉換成 UWP 應用程式](#UWPConvert)
+- [<span data-ttu-id="e9141-280">將 Windows Forms 和 WPF 應用程式轉換成 UWP 應用程式</span><span class="sxs-lookup"><span data-stu-id="e9141-280">Converting Windows Forms and WPF apps to UWP apps</span></span>](#UWPConvert)
 
-- [偵錯改進](#Debug462)
+- [<span data-ttu-id="e9141-281">偵錯改進</span><span class="sxs-lookup"><span data-stu-id="e9141-281">Debugging improvements</span></span>](#Debug462)
 
-如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](http://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣佈推出 .NET Framework 4.6.2 (英文)](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
+<span data-ttu-id="e9141-282">如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-282">For a list of new APIs added to the .NET Framework 4.6.2, see [.NET Framework 4.6.2 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) on GitHub.</span></span> <span data-ttu-id="e9141-283">如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](http://go.microsoft.com/fwlink/?LinkId=708778)。</span><span class="sxs-lookup"><span data-stu-id="e9141-283">For a list of feature improvements and bug fixes in the .NET Framework 4.6.2, see [.NET Framework 4.6.2 List of Changes](http://go.microsoft.com/fwlink/?LinkId=708778) on GitHub.</span></span>  <span data-ttu-id="e9141-284">如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。</span><span class="sxs-lookup"><span data-stu-id="e9141-284">For additional information, see [Announcing .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/) in the .NET blog.</span></span>
 
 <a name="ASPNET462"></a> 
-### <a name="aspnet"></a>ASP.NET
- 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 會包含下列增強功能︰
+### <a name="aspnet"></a><span data-ttu-id="e9141-285">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-285">ASP.NET</span></span>
+ <span data-ttu-id="e9141-286">在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 會包含下列增強功能︰</span><span class="sxs-lookup"><span data-stu-id="e9141-286">In the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET includes the following enhancements:</span></span>
 
- **改進對資料註解驗證程式的當地語系化錯誤訊息的支援**：資料註解驗證程式可讓您藉由將一或多個屬性新增至類別屬性來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 項目定義了驗證失敗時的錯誤訊息文字。 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
+ <span data-ttu-id="e9141-287">**改進對資料註解驗證程式的當地語系化錯誤訊息的支援**：資料註解驗證程式可讓您藉由將一或多個屬性新增至類別屬性來執行驗證。</span><span class="sxs-lookup"><span data-stu-id="e9141-287">**Improved support for localized error messages in data annotation validators** Data annotation validators enable you to perform validation by adding one or more attributes to a class property.</span></span> <span data-ttu-id="e9141-288">屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 項目定義了驗證失敗時的錯誤訊息文字。</span><span class="sxs-lookup"><span data-stu-id="e9141-288">The attribute's <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> element defines the text of the error message if validation fails.</span></span> <span data-ttu-id="e9141-289">從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。</span><span class="sxs-lookup"><span data-stu-id="e9141-289">Starting with the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET makes it easy to localize error messages.</span></span> <span data-ttu-id="e9141-290">錯誤訊息將會當地語系化，如果︰</span><span class="sxs-lookup"><span data-stu-id="e9141-290">Error messages will be localized if:</span></span>
 
-1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 提供在驗證屬性中。
+1.  <span data-ttu-id="e9141-291"><xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 提供在驗證屬性中。</span><span class="sxs-lookup"><span data-stu-id="e9141-291">The <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> is provided in the validation attribute.</span></span>
 
-2.  資源檔儲存在 App_LocalResources 資料夾中。
+2.  <span data-ttu-id="e9141-292">資源檔儲存在 App_LocalResources 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="e9141-292">The resource file is stored in the App_LocalResources folder.</span></span>
 
-3.  當地語系化的資源檔名稱格式為 `DataAnnotation.Localization.{`*name*`}.resx`，其中 *name* 是文化特性名稱，格式為 *languageCode*`-`*country/regionCode* 或 *languageCode*。
+3.  <span data-ttu-id="e9141-293">當地語系化的資源檔名稱格式為 `DataAnnotation.Localization.{`*name*`}.resx`，其中 *name* 是文化特性名稱，格式為 *languageCode*`-`*country/regionCode* 或 *languageCode*。</span><span class="sxs-lookup"><span data-stu-id="e9141-293">The name of the localized resources file has the form `DataAnnotation.Localization.{`*name*`}.resx`, where *name* is a culture name in the format *languageCode*`-`*country/regionCode* or *languageCode*.</span></span>
 
-4.  資源的索引鍵名稱是指派給 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 屬性的字串，其值是當地語系化的錯誤訊息。
+4.  <span data-ttu-id="e9141-294">資源的索引鍵名稱是指派給 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 屬性的字串，其值是當地語系化的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-294">The key name of the resource is the string assigned to the <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> attribute,  and its value is the localized error message.</span></span>
 
- 例如，下列資料註解屬性可針對無效評等，定義預設文化特性的錯誤訊息。
+ <span data-ttu-id="e9141-295">例如，下列資料註解屬性可針對無效評等，定義預設文化特性的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-295">For example, the following data annotation attribute defines the default culture's error message for an invalid rating.</span></span>
 
 ```csharp
 public class RatingInfo
@@ -243,17 +299,17 @@ Public Class RatingInfo
 End Class
 ```
 
- 然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。 檔案必須位於 `App.LocalResources` 資料夾中。 例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰
+ <span data-ttu-id="e9141-296">然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-296">You can then create a resource file, DataAnnotation.Localization.fr.resx, whose key is the error message string and whose value is the localized error message.</span></span> <span data-ttu-id="e9141-297">檔案必須位於 `App.LocalResources` 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="e9141-297">The file must be found in the `App.LocalResources` folder.</span></span> <span data-ttu-id="e9141-298">例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰</span><span class="sxs-lookup"><span data-stu-id="e9141-298">For example, the following is the key and its value in a localized French (fr) language error message:</span></span>
 
-| 名稱                                 | 值                                     |
+| <span data-ttu-id="e9141-299">名稱</span><span class="sxs-lookup"><span data-stu-id="e9141-299">Name</span></span>                                 | <span data-ttu-id="e9141-300">值</span><span class="sxs-lookup"><span data-stu-id="e9141-300">Value</span></span>                                     |
 | ------------------------------------ | ----------------------------------------- |
-| The rating must be between 1 and 10. | La note doit être comprise entre 1 et 10. |
+| <span data-ttu-id="e9141-301">The rating must be between 1 and 10.</span><span class="sxs-lookup"><span data-stu-id="e9141-301">The rating must be between 1 and 10.</span></span> | <span data-ttu-id="e9141-302">La note doit être comprise entre 1 et 10.</span><span class="sxs-lookup"><span data-stu-id="e9141-302">La note doit être comprise entre 1 et 10.</span></span> |
 
- 此檔案即可
+ <span data-ttu-id="e9141-303">此檔案即可</span><span class="sxs-lookup"><span data-stu-id="e9141-303">This file can then</span></span>
 
- 此外，資料註解當地語系化是可延伸的。 開發人員可以藉由實作 <xref:System.Web.Globalization.IStringLocalizerProvider> 介面，在資源檔以外的位置儲存當地語系化字串，而插入他們自己的字串當地語系化程式提供者。
+ <span data-ttu-id="e9141-304">此外，資料註解當地語系化是可延伸的。</span><span class="sxs-lookup"><span data-stu-id="e9141-304">In addition, data annotation localization is extensible.</span></span> <span data-ttu-id="e9141-305">開發人員可以藉由實作 <xref:System.Web.Globalization.IStringLocalizerProvider> 介面，在資源檔以外的位置儲存當地語系化字串，而插入他們自己的字串當地語系化程式提供者。</span><span class="sxs-lookup"><span data-stu-id="e9141-305">Developers can plug in their own string localizer provider by implementing the <xref:System.Web.Globalization.IStringLocalizerProvider> interface to store localization string somewhere other than in a resource file.</span></span>
 
- **對工作階段狀態存放區提供者的非同步支援**：ASP.NET 現在可允許使用工作傳回方法，搭配工作階段狀態存放區提供者，藉此可讓 ASP.NET 應用程式獲得非同步的延展性優勢。 為了支援工作階段狀態存放區提供者的非同步作業，ASP.NET 包含新介面 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>，它繼承自 <xref:System.Web.IHttpModule>，可讓開發人員實作自己的工作階段狀態模組和非同步工作階段存放區提供者。 介面定義如下：
+ <span data-ttu-id="e9141-306">**對工作階段狀態存放區提供者的非同步支援**：ASP.NET 現在可允許使用工作傳回方法，搭配工作階段狀態存放區提供者，藉此可讓 ASP.NET 應用程式獲得非同步的延展性優勢。</span><span class="sxs-lookup"><span data-stu-id="e9141-306">**Async support with session-state store providers** ASP.NET now allows task-returning methods to be used with session-state store providers, thereby allowing ASP.NET apps to get the scalability benefits of async.</span></span> <span data-ttu-id="e9141-307">為了支援工作階段狀態存放區提供者的非同步作業，ASP.NET 包含新介面 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=nameWithType>，它繼承自 <xref:System.Web.IHttpModule>，可讓開發人員實作自己的工作階段狀態模組和非同步工作階段存放區提供者。</span><span class="sxs-lookup"><span data-stu-id="e9141-307">To supports asynchronous operations with session state store providers, ASP.NET includes  a new interface, <xref:System.Web.SessionState.ISessionStateModule?displayProperty=nameWithType>, which inherits from <xref:System.Web.IHttpModule> and allows developers to implement their own session-state module and async session store providers.</span></span> <span data-ttu-id="e9141-308">介面定義如下：</span><span class="sxs-lookup"><span data-stu-id="e9141-308">The interface is defined as follows:</span></span>
 
 ```csharp
 public interface ISessionStateModule : IHttpModule {
@@ -262,43 +318,43 @@ public interface ISessionStateModule : IHttpModule {
 }
 ```
 
- 此外，<xref:System.Web.SessionState.SessionStateUtility> 類別包含兩個新方法：<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 和 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>，它們可用來支援非同步作業。
+ <span data-ttu-id="e9141-309">此外，<xref:System.Web.SessionState.SessionStateUtility> 類別包含兩個新方法：<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 和 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>，它們可用來支援非同步作業。</span><span class="sxs-lookup"><span data-stu-id="e9141-309">In addition, the <xref:System.Web.SessionState.SessionStateUtility> class includes two new methods, <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> and <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, that can be used to support asynchronous operations.</span></span>
 
- **對輸出快取提供者的非同步支援**：從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，工作傳回方法可以用於輸出快取提供者，以提供非同步的延展性優勢。  實作這些方法的提供者能減少 Web 伺服器上的執行緒阻斷，並改善 ASP.NET 服務的延展性。
+ <span data-ttu-id="e9141-310">**對輸出快取提供者的非同步支援**：從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，工作傳回方法可以用於輸出快取提供者，以提供非同步的延展性優勢。</span><span class="sxs-lookup"><span data-stu-id="e9141-310">**Async support for output-cache providers** Starting with the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], task-returning methods can be used with output-cache providers to provide the scalability benefits of async.</span></span>  <span data-ttu-id="e9141-311">實作這些方法的提供者能減少 Web 伺服器上的執行緒阻斷，並改善 ASP.NET 服務的延展性。</span><span class="sxs-lookup"><span data-stu-id="e9141-311">Providers that implement these methods reduce thread-blocking on a web server and improve the scalability of an ASP.NET service.</span></span>
 
- 已新增下列 API 來支援非同步輸出快取提供者︰
+ <span data-ttu-id="e9141-312">已新增下列 API 來支援非同步輸出快取提供者︰</span><span class="sxs-lookup"><span data-stu-id="e9141-312">The following APIs have been added to support asynchronous output-cache providers:</span></span>
 
-- <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=fullName> 類別，繼承自 <xref:System.Web.Caching.OutputCacheProvider?displayProperty=fullName>，並可讓開發人員實作非同步的輸出快取提供者。
+- <span data-ttu-id="e9141-313"><xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=nameWithType> 類別，繼承自 <xref:System.Web.Caching.OutputCacheProvider?displayProperty=nameWithType>，並可讓開發人員實作非同步的輸出快取提供者。</span><span class="sxs-lookup"><span data-stu-id="e9141-313">The <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=nameWithType> class, which inherits from <xref:System.Web.Caching.OutputCacheProvider?displayProperty=nameWithType> and allows developers to implement an asynchronous output-cache provider.</span></span>
 
-- <xref:System.Web.Caching.OutputCacheUtility> 類別，可提供用於設定輸出快取的 helper 方法。
+- <span data-ttu-id="e9141-314"><xref:System.Web.Caching.OutputCacheUtility> 類別，可提供用於設定輸出快取的 helper 方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-314">The <xref:System.Web.Caching.OutputCacheUtility> class, which provides helper methods for configuring the output cache.</span></span>
 
-- <xref:System.Web.HttpCachePolicy?displayProperty=fullName> 類別內的 18 個新方法。 這些包括 <xref:System.Web.HttpCachePolicy.GetCacheability%2A>、<xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>、<xref:System.Web.HttpCachePolicy.GetETag%2A>、<xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetNoStore%2A>、<xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>、<xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>、<xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetRevalidation%2A>、<xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>、<xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>、<xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> 和 <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>。
+- <span data-ttu-id="e9141-315"><xref:System.Web.HttpCachePolicy?displayProperty=nameWithType> 類別內的 18 個新方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-315">18 new methods in the <xref:System.Web.HttpCachePolicy?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="e9141-316">這些包括 <xref:System.Web.HttpCachePolicy.GetCacheability%2A>、<xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>、<xref:System.Web.HttpCachePolicy.GetETag%2A>、<xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetNoStore%2A>、<xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>、<xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>、<xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetRevalidation%2A>、<xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>、<xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>、<xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> 和 <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>。</span><span class="sxs-lookup"><span data-stu-id="e9141-316">These include <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetRevalidation%2A>, <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>, <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>, <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A>, and <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>.</span></span>
 
-- <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=fullName> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> 和 <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>。
+- <span data-ttu-id="e9141-317"><xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> 和 <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>。</span><span class="sxs-lookup"><span data-stu-id="e9141-317">2 new methods in the <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType> class:  <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> and <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>.</span></span>
 
-- <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=fullName> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> 和 <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>。
+- <span data-ttu-id="e9141-318"><xref:System.Web.HttpCacheVaryByHeaders?displayProperty=nameWithType> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> 和 <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>。</span><span class="sxs-lookup"><span data-stu-id="e9141-318">2 new methods in the <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=nameWithType> class: <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> and <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>.</span></span>
 
-- <xref:System.Web.HttpCacheVaryByParams?displayProperty=fullName> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByParams.GetParams%2A> 和 <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>。
+- <span data-ttu-id="e9141-319"><xref:System.Web.HttpCacheVaryByParams?displayProperty=nameWithType> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByParams.GetParams%2A> 和 <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>。</span><span class="sxs-lookup"><span data-stu-id="e9141-319">2 new methods in the <xref:System.Web.HttpCacheVaryByParams?displayProperty=nameWithType> class: <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> and <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>.</span></span>
 
-- <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=fullName> 類別中的 <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> 方法。
+- <span data-ttu-id="e9141-320"><xref:System.Web.Caching.AggregateCacheDependency?displayProperty=nameWithType> 類別中的 <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-320">In the <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=nameWithType> class, the <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> method.</span></span>
 
-- <xref:System.Web.Caching.CacheDependency> 中的 <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A> 方法。
+- <span data-ttu-id="e9141-321"><xref:System.Web.Caching.CacheDependency> 中的 <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-321">In the <xref:System.Web.Caching.CacheDependency>, the <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A> method.</span></span>
 
 <a name="Strings"></a> 
-### <a name="character-categories"></a>字元類別
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的字元是根據 [Unicode 標準 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)分類。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，字元是根據 Unicode 6.3 字元類別分類。
+### <a name="character-categories"></a><span data-ttu-id="e9141-322">字元類別</span><span class="sxs-lookup"><span data-stu-id="e9141-322">Character categories</span></span>
+ <span data-ttu-id="e9141-323">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的字元是根據 [Unicode 標準 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)分類。</span><span class="sxs-lookup"><span data-stu-id="e9141-323">Characters in the  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] are classified based on the [Unicode Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/).</span></span> <span data-ttu-id="e9141-324">在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，字元是根據 Unicode 6.3 字元類別分類。</span><span class="sxs-lookup"><span data-stu-id="e9141-324">In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] and [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], characters were classified based on Unicode 6.3 character categories.</span></span>
 
- 對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。 這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=fullName> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  字元和字串比較和排序不會受到這項變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。
+ <span data-ttu-id="e9141-325">對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-325">Support for Unicode 8.0 is limited to the classification of characters by the <xref:System.Globalization.CharUnicodeInfo> class and to types and methods that rely on it.</span></span> <span data-ttu-id="e9141-326">這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-326">These include the <xref:System.Globalization.StringInfo> class, the overloaded <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> method, and the [character classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) recognized by the .NET Framework regular expression engine.</span></span>  <span data-ttu-id="e9141-327">字元和字串比較和排序不會受到這項變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-327">Character and string comparison and sorting is unaffected by this change and continues to rely on the underlying operating system or, on Windows 7 systems, on character data provided by the .NET Framework.</span></span>
 
- 若要了解從 Unicode 6.0 到 Unicode 7.0 的字元類別變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 7.0.0 (Unicode 標準 7.0.0 版)](http://www.unicode.org/versions/Unicode7.0.0/)。 若要了解從 Unicode 7.0 到 Unicode 8.0 的變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 8.0.0 (Unicode 標準 8.0.0 版)](http://www.unicode.org/versions/Unicode8.0.0/)。
+ <span data-ttu-id="e9141-328">若要了解從 Unicode 6.0 到 Unicode 7.0 的字元類別變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 7.0.0 (Unicode 標準 7.0.0 版)](http://www.unicode.org/versions/Unicode7.0.0/)。</span><span class="sxs-lookup"><span data-stu-id="e9141-328">For changes in character categories from Unicode 6.0 to Unicode 7.0, see [The Unicode Standard, Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) at The Unicode Consortium website.</span></span> <span data-ttu-id="e9141-329">若要了解從 Unicode 7.0 到 Unicode 8.0 的變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 8.0.0 (Unicode 標準 8.0.0 版)](http://www.unicode.org/versions/Unicode8.0.0/)。</span><span class="sxs-lookup"><span data-stu-id="e9141-329">For changes from Unicode 7.0 to Unicode 8.0, see [The Unicode Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) at The Unicode Consortium website.</span></span>
 
 <a name="Crypto462"></a> 
-### <a name="cryptography"></a>密碼編譯
- **支援包含 FIPS 186-3 DSA 的 X509 憑證**：[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增了對 DSA (數位簽章演算法) X509 憑證的支援，X509 憑證的金鑰超過 FIPS 186-2 1024 位元的限制。
+### <a name="cryptography"></a><span data-ttu-id="e9141-330">密碼編譯</span><span class="sxs-lookup"><span data-stu-id="e9141-330">Cryptography</span></span>
+ <span data-ttu-id="e9141-331">**支援包含 FIPS 186-3 DSA 的 X509 憑證**：[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增了對 DSA (數位簽章演算法) X509 憑證的支援，X509 憑證的金鑰超過 FIPS 186-2 1024 位元的限制。</span><span class="sxs-lookup"><span data-stu-id="e9141-331">**Support for X509 certificates containing FIPS 186-3 DSA** The [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] adds support for DSA (Digital Signature Algorithm) X509 certificates whose keys exceed the FIPS 186-2 1024-bit limit.</span></span>
 
- 除了支援較大的 FIPS 186-3 金鑰大小，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 運算簽章。 FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=fullName> 類別所提供。
+ <span data-ttu-id="e9141-332">除了支援較大的 FIPS 186-3 金鑰大小，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 運算簽章。</span><span class="sxs-lookup"><span data-stu-id="e9141-332">In addition to supporting the larger key sizes of FIPS 186-3, the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] allows computing signatures with the SHA-2 family of hash algorithms (SHA256, SHA384, and SHA512).</span></span> <span data-ttu-id="e9141-333">FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 類別所提供。</span><span class="sxs-lookup"><span data-stu-id="e9141-333">FIPS 186-3 support is provided by the new <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> class.</span></span>
 
- 為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用這項功能，而不用轉型。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=fullName> 擴充方法來簽署資料，如下列範例所示。
+ <span data-ttu-id="e9141-334">為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用這項功能，而不用轉型。</span><span class="sxs-lookup"><span data-stu-id="e9141-334">In keeping with recent changes to the <xref:System.Security.Cryptography.RSA> class in the .NET Framework 4.6 and the <xref:System.Security.Cryptography.ECDsa> class in the .NET Framework 4.6.1, the <xref:System.Security.Cryptography.DSA> abstract base class in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] has additional methods to allow callers to use this functionality without casting.</span></span> <span data-ttu-id="e9141-335">您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 擴充方法來簽署資料，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="e9141-335">You can call the <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> extension method to sign data, as the following example shows.</span></span>
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -318,7 +374,7 @@ Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate
 End Function
 ```
 
- 然後您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=fullName> 擴充方法來確認簽署的資料，如下列範例所示。
+ <span data-ttu-id="e9141-336">然後您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> 擴充方法來確認簽署的資料，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="e9141-336">And you can call the <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> extension method to verify signed data, as the following example shows.</span></span>
 
 ```csharp
 public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certificate2 cert)
@@ -338,19 +394,19 @@ public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certif
 End Function
 ```
 
- **ECDiffieHellman 金鑰衍生常式的輸入更加清楚**：.NET Framework 3.5 以三個不同的金鑰衍生函式 (KDF) 常式，新增了對 Ellipic 曲線 Diffie-Hellman 金鑰協定的支援。 常式的輸入以及常式本身，是透過 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 物件上的屬性設定。 但由於不是每個常式都會讀取每個輸入屬性，所以很有可能對過去的開發人員造成混淆。
+ <span data-ttu-id="e9141-337">**ECDiffieHellman 金鑰衍生常式的輸入更加清楚**：.NET Framework 3.5 以三個不同的金鑰衍生函式 (KDF) 常式，新增了對 Ellipic 曲線 Diffie-Hellman 金鑰協定的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-337">**Increased clarity for inputs to ECDiffieHellman key derivation routines** The .NET Framework 3.5 added support for Ellipic Curve Diffie-Hellman Key Agreement with three different Key Derivation Function (KDF) routines.</span></span> <span data-ttu-id="e9141-338">常式的輸入以及常式本身，是透過 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 物件上的屬性設定。</span><span class="sxs-lookup"><span data-stu-id="e9141-338">The inputs to the routines, and the routines themselves, were configured via properties on the <xref:System.Security.Cryptography.ECDiffieHellmanCng> object.</span></span> <span data-ttu-id="e9141-339">但由於不是每個常式都會讀取每個輸入屬性，所以很有可能對過去的開發人員造成混淆。</span><span class="sxs-lookup"><span data-stu-id="e9141-339">But since not every routine read every input property, there was ample room for confusion on the past of the developer.</span></span>
 
- 為了在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決這個問題，下列三種方法已加入 <xref:System.Security.Cryptography.ECDiffieHellman> 基底類別，以便更清楚地表示這些 KDF 常式和其輸入︰
+ <span data-ttu-id="e9141-340">為了在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決這個問題，下列三種方法已加入 <xref:System.Security.Cryptography.ECDiffieHellman> 基底類別，以便更清楚地表示這些 KDF 常式和其輸入︰</span><span class="sxs-lookup"><span data-stu-id="e9141-340">To address this in the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], the following three methods have been added to the  <xref:System.Security.Cryptography.ECDiffieHellman> base class to more clearly represent these KDF routines and their inputs:</span></span>
 
-|ECDiffieHellman 方法|描述|
+|<span data-ttu-id="e9141-341">ECDiffieHellman 方法</span><span class="sxs-lookup"><span data-stu-id="e9141-341">ECDiffieHellman method</span></span>|<span data-ttu-id="e9141-342">描述</span><span class="sxs-lookup"><span data-stu-id="e9141-342">Description</span></span>|
 |----------------------------|-----------------|
-|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用公式衍生金鑰內容<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。|
-|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用公式衍生金鑰內容<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。|
-|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用 TLS 似隨機函式 (PRF) 衍生演算法衍生金鑰內容。|
+|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|<span data-ttu-id="e9141-343">使用公式衍生金鑰內容</span><span class="sxs-lookup"><span data-stu-id="e9141-343">Derives key material using the formula</span></span><br /><br /> <span data-ttu-id="e9141-344">HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)</span><span class="sxs-lookup"><span data-stu-id="e9141-344">HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)</span></span><br /><br /> <span data-ttu-id="e9141-345">HASH(secretPrepend OrElse *x* OrElse secretAppend)</span><span class="sxs-lookup"><span data-stu-id="e9141-345">HASH(secretPrepend OrElse *x* OrElse secretAppend)</span></span><br /><br /> <span data-ttu-id="e9141-346">其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。</span><span class="sxs-lookup"><span data-stu-id="e9141-346">where *x* is the computed result of the EC Diffie-Hellman algorithm.</span></span>|
+|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|<span data-ttu-id="e9141-347">使用公式衍生金鑰內容</span><span class="sxs-lookup"><span data-stu-id="e9141-347">Derives key material using the formula</span></span><br /><br /> <span data-ttu-id="e9141-348">HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)</span><span class="sxs-lookup"><span data-stu-id="e9141-348">HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)</span></span><br /><br /> <span data-ttu-id="e9141-349">HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)</span><span class="sxs-lookup"><span data-stu-id="e9141-349">HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)</span></span><br /><br /> <span data-ttu-id="e9141-350">其中 *x* 是 EC Diffie-Hellman 演算法的計算結果。</span><span class="sxs-lookup"><span data-stu-id="e9141-350">where *x* is the computed result of the EC Diffie-Hellman algorithm.</span></span>|
+|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|<span data-ttu-id="e9141-351">使用 TLS 似隨機函式 (PRF) 衍生演算法衍生金鑰內容。</span><span class="sxs-lookup"><span data-stu-id="e9141-351">Derives key material using the TLS pseudo-random function (PRF) derivation algorithm.</span></span>|
 
- **對必要金鑰對稱式加密的支援**：Windows 密碼編譯程式庫 (CNG) 新增了對儲存必要對稱金鑰和使用硬體儲存之對稱金鑰的支援，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 讓開發人員可以利用這項功能。  由於金鑰名稱和金鑰提供者的概念是因實作而定，使用此功能需要使用實體實作類型的建構函式，而不是慣用的 factory 方法 (例如呼叫 `Aes.Create`)。
+ <span data-ttu-id="e9141-352">**對必要金鑰對稱式加密的支援**：Windows 密碼編譯程式庫 (CNG) 新增了對儲存必要對稱金鑰和使用硬體儲存之對稱金鑰的支援，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 讓開發人員可以利用這項功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-352">**Support for persisted-key symmetric encryption** The Windows cryptography library (CNG) added support for storing persisted symmetric keys and using hardware-stored symmetric keys, and the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] mades it possible for developers to make use of this feature.</span></span>  <span data-ttu-id="e9141-353">由於金鑰名稱和金鑰提供者的概念是因實作而定，使用此功能需要使用實體實作類型的建構函式，而不是慣用的 factory 方法 (例如呼叫 `Aes.Create`)。</span><span class="sxs-lookup"><span data-stu-id="e9141-353">Since the notion of key names and key providers is implementation-specific, using this feature requires utilizing the constructor of the concrete implementation types instead of the preferred factory approach (such as calling `Aes.Create`).</span></span>
 
- AES (<xref:System.Security.Cryptography.AesCng>) 及 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 演算法具有必要金鑰的對稱加密支援。 例如: 
+ <span data-ttu-id="e9141-354">AES (<xref:System.Security.Cryptography.AesCng>) 及 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 演算法具有必要金鑰的對稱加密支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-354">Persisted-key symmetric encryption support exists for the AES (<xref:System.Security.Cryptography.AesCng>) and 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algorithms.</span></span> <span data-ttu-id="e9141-355">例如: </span><span class="sxs-lookup"><span data-stu-id="e9141-355">For example:</span></span>
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -389,58 +445,58 @@ Public Shared Function EncryptDataWithPersistedKey(data As Byte(), iv As Byte())
 End Function
 ```
 
- **SHA-2 雜湊的 SignedXml 支援**：[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 在 <xref:System.Security.Cryptography.Xml.SignedXml> 類別中新增了對 RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS#1 簽章方法及 SHA256、SHA384 和 SHA512 參考摘要演算法的支援。
+ <span data-ttu-id="e9141-356">**SHA-2 雜湊的 SignedXml 支援**：[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 在 <xref:System.Security.Cryptography.Xml.SignedXml> 類別中新增了對 RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS#1 簽章方法及 SHA256、SHA384 和 SHA512 參考摘要演算法的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-356">**SignedXml support for SHA-2 hashing** The [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] adds support to  the <xref:System.Security.Cryptography.Xml.SignedXml> class for RSA-SHA256, RSA-SHA384, and RSA-SHA512 PKCS#1 signature methods, and SHA256, SHA384, and SHA512 reference digest algorithms.</span></span>
 
- URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
+ <span data-ttu-id="e9141-357">URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：</span><span class="sxs-lookup"><span data-stu-id="e9141-357">The URI constants are all exposed on <xref:System.Security.Cryptography.Xml.SignedXml>:</span></span>
 
-|SignedXml 欄位|常數|
+|<span data-ttu-id="e9141-358">SignedXml 欄位</span><span class="sxs-lookup"><span data-stu-id="e9141-358">SignedXml field</span></span>|<span data-ttu-id="e9141-359">常數</span><span class="sxs-lookup"><span data-stu-id="e9141-359">Constant</span></span>|
 |---------------------|--------------|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA256Url>|"http://www.w3.org/2001/04/xmlenc#sha256"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA256Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA384Url>|"http://www.w3.org/2001/04/xmldsig-more#sha384"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA384Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|"http://www.w3.org/2001/04/xmlenc#sha512"|
-|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA256Url>|<span data-ttu-id="e9141-360">"http://www.w3.org/2001/04/xmlenc#sha256"</span><span class="sxs-lookup"><span data-stu-id="e9141-360">"http://www.w3.org/2001/04/xmlenc#sha256"</span></span>|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA256Url>|<span data-ttu-id="e9141-361">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"</span><span class="sxs-lookup"><span data-stu-id="e9141-361">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"</span></span>|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA384Url>|<span data-ttu-id="e9141-362">"http://www.w3.org/2001/04/xmldsig-more#sha384"</span><span class="sxs-lookup"><span data-stu-id="e9141-362">"http://www.w3.org/2001/04/xmldsig-more#sha384"</span></span>|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA384Url>|<span data-ttu-id="e9141-363">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"</span><span class="sxs-lookup"><span data-stu-id="e9141-363">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"</span></span>|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|<span data-ttu-id="e9141-364">"http://www.w3.org/2001/04/xmlenc#sha512"</span><span class="sxs-lookup"><span data-stu-id="e9141-364">"http://www.w3.org/2001/04/xmlenc#sha512"</span></span>|
+|<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|<span data-ttu-id="e9141-365">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"</span><span class="sxs-lookup"><span data-stu-id="e9141-365">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"</span></span>|
 
- 任何已註冊自訂 <xref:System.Security.Cryptography.SignatureDescription> 處理常式到 <xref:System.Security.Cryptography.CryptoConfig> 以新增這些演算法支援的程式，將會繼續如過去一般運作，但是因為現在有平台預設值，所以不再需要 <xref:System.Security.Cryptography.CryptoConfig> 註冊。
+ <span data-ttu-id="e9141-366">任何已註冊自訂 <xref:System.Security.Cryptography.SignatureDescription> 處理常式到 <xref:System.Security.Cryptography.CryptoConfig> 以新增這些演算法支援的程式，將會繼續如過去一般運作，但是因為現在有平台預設值，所以不再需要 <xref:System.Security.Cryptography.CryptoConfig> 註冊。</span><span class="sxs-lookup"><span data-stu-id="e9141-366">Any programs that have registered a custom <xref:System.Security.Cryptography.SignatureDescription> handler into <xref:System.Security.Cryptography.CryptoConfig> to add support for these algorithms will continue to function as they did in the past, but since there are now platform defaults, the <xref:System.Security.Cryptography.CryptoConfig> registration is no longer necessary.</span></span>
 
 <a name="SQLClient"></a> 
-### <a name="sqlclient"></a>SqlClient
- .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=fullName>) 包含 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的下列新功能：
+### <a name="sqlclient"></a><span data-ttu-id="e9141-367">SqlClient</span><span class="sxs-lookup"><span data-stu-id="e9141-367">SqlClient</span></span>
+ <span data-ttu-id="e9141-368">.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) 包含 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的下列新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-368">.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) includes the following new features in the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:</span></span>
 
- **Azure SQL Database 的連線共用和逾時**：如果啟用連線共用且發生逾時或其他登入錯誤，則會快取例外狀況，而在接下來的 5 秒到 1 分鐘，任何後續連線嘗試都會擲回快取的例外狀況。  如需詳細資訊，請參閱 [SQL Server 連線共用 (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。
+ <span data-ttu-id="e9141-369">**Azure SQL Database 的連線共用和逾時**：如果啟用連線共用且發生逾時或其他登入錯誤，則會快取例外狀況，而在接下來的 5 秒到 1 分鐘，任何後續連線嘗試都會擲回快取的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e9141-369">**Connection pooling and timeouts with Azure SQL databases** When connection pooling is enabled and a timeout or other login error occurs, an exception is cached, and the cached exception is thrown on any subsequent connection attempt for the next 5 seconds  to 1 minute.</span></span>  <span data-ttu-id="e9141-370">如需詳細資訊，請參閱 [SQL Server 連線共用 (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-370">For more details, see [SQL Server Connection Pooling (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).</span></span>
 
- 連線到 Azure SQL 資料庫時，這個行為並不理想，因為連線嘗試可能會因暫時性錯誤而失敗，但暫時性錯誤通常很快就可復原。 為了進一步最佳化連線重試體驗，在 Azure SQL 資料庫連線失敗時，已移除連線集區封鎖期間行為。
+ <span data-ttu-id="e9141-371">連線到 Azure SQL 資料庫時，這個行為並不理想，因為連線嘗試可能會因暫時性錯誤而失敗，但暫時性錯誤通常很快就可復原。</span><span class="sxs-lookup"><span data-stu-id="e9141-371">This behavior is not desirable when connecting to Azure SQL Databases, since connection attempts can fail with transient errors that are typically recovered quickly.</span></span> <span data-ttu-id="e9141-372">為了進一步最佳化連線重試體驗，在 Azure SQL 資料庫連線失敗時，已移除連線集區封鎖期間行為。</span><span class="sxs-lookup"><span data-stu-id="e9141-372">To better optimize the connection retry experience, the connection pool blocking period behavior is removed when connections to Azure SQL Databases fail.</span></span>
 
- 新增 `PoolBlockingPeriod` 關鍵字可讓您選取最適合您應用程式的封鎖期間。 這些值包括：
+ <span data-ttu-id="e9141-373">新增 `PoolBlockingPeriod` 關鍵字可讓您選取最適合您應用程式的封鎖期間。</span><span class="sxs-lookup"><span data-stu-id="e9141-373">The addition of the new `PoolBlockingPeriod` keyword lets you to select the blocking period best suited for your app.</span></span> <span data-ttu-id="e9141-374">這些值包括：</span><span class="sxs-lookup"><span data-stu-id="e9141-374">Values include:</span></span>
 
- `Auto`：對於連線到 Azure SQL Database 的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。 這是預設值。 如果伺服器端點名稱結尾是下列任一項，則會被視為 Azure SQL 資料庫︰
+ <span data-ttu-id="e9141-375">`Auto`：對於連線到 Azure SQL Database 的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。</span><span class="sxs-lookup"><span data-stu-id="e9141-375">`Auto` The connection pool blocking period for an application that connects to an Azure SQL Database is disabled, and the connection pool blocking period for an application that connects to any other SQL Server instance is enabled.</span></span> <span data-ttu-id="e9141-376">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="e9141-376">This is the default value.</span></span> <span data-ttu-id="e9141-377">如果伺服器端點名稱結尾是下列任一項，則會被視為 Azure SQL 資料庫︰</span><span class="sxs-lookup"><span data-stu-id="e9141-377">If the Server endpoint name ends with any of the following, they are considered Azure SQL Databases:</span></span>
 
-- .database.windows.net
+- <span data-ttu-id="e9141-378">.database.windows.net</span><span class="sxs-lookup"><span data-stu-id="e9141-378">.database.windows.net</span></span>
 
-- .database.chinacloudapi.cn
+- <span data-ttu-id="e9141-379">.database.chinacloudapi.cn</span><span class="sxs-lookup"><span data-stu-id="e9141-379">.database.chinacloudapi.cn</span></span>
 
-- .database.usgovcloudapi.net
+- <span data-ttu-id="e9141-380">.database.usgovcloudapi.net</span><span class="sxs-lookup"><span data-stu-id="e9141-380">.database.usgovcloudapi.net</span></span>
 
-- .database.cloudapi.de
+- <span data-ttu-id="e9141-381">.database.cloudapi.de</span><span class="sxs-lookup"><span data-stu-id="e9141-381">.database.cloudapi.de</span></span>
 
- `AlwaysBlock` 一律啟用連線集區封鎖期間。
+ <span data-ttu-id="e9141-382">`AlwaysBlock` 一律啟用連線集區封鎖期間。</span><span class="sxs-lookup"><span data-stu-id="e9141-382">`AlwaysBlock` The connection pool blocking period is always enabled.</span></span>
 
- `NeverBlock` 一律停用連線集區封鎖期間。
+ <span data-ttu-id="e9141-383">`NeverBlock` 一律停用連線集區封鎖期間。</span><span class="sxs-lookup"><span data-stu-id="e9141-383">`NeverBlock` The connection pool blocking period is always disabled.</span></span>
 
- **Always Encrypted 的增強功能** SQLClient 導入兩個 Always Encrypted 增強功能︰
+ <span data-ttu-id="e9141-384">**Always Encrypted 的增強功能** SQLClient 導入兩個 Always Encrypted 增強功能︰</span><span class="sxs-lookup"><span data-stu-id="e9141-384">**Enhancements for Always Encrypted** SQLClient introduces two enhancements for Always Encrypted:</span></span>
 
-- 為了改善對加密資料庫資料行的參數化查詢效能，現在會快取查詢參數的加密中繼資料。 當 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=fullName> 屬性設定為 `true` (此為預設值) 時，如果多次呼叫相同的查詢，則用戶端只會從伺服器擷取一次參數中繼資料。
+- <span data-ttu-id="e9141-385">為了改善對加密資料庫資料行的參數化查詢效能，現在會快取查詢參數的加密中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-385">To improve performance of parameterized queries against encrypted database columns, encryption metadata for query parameters is now cached.</span></span> <span data-ttu-id="e9141-386">當 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=nameWithType> 屬性設定為 `true` (此為預設值) 時，如果多次呼叫相同的查詢，則用戶端只會從伺服器擷取一次參數中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-386">With the <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=nameWithType> property set to `true` (which is the default value), if the same query is called multiple times, the client retrieves parameter metadata from the server only once.</span></span>
 
-- 金鑰快取中的資料行加密金鑰項目現在會在可設定的時間間隔之後收回，而此時間間隔是使用 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=fullName> 屬性設定。
+- <span data-ttu-id="e9141-387">金鑰快取中的資料行加密金鑰項目現在會在可設定的時間間隔之後收回，而此時間間隔是使用 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=nameWithType> 屬性設定。</span><span class="sxs-lookup"><span data-stu-id="e9141-387">Column encryption key entries in the key cache are now evicted after a configurable time interval, set using the <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=nameWithType> property.</span></span>
 
 <a name="WCF"></a> 
-### <a name="windows-communication-foundation"></a>Windows Communication Foundation
- 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Communication Foundation 已在下列領域增強︰
+### <a name="windows-communication-foundation"></a><span data-ttu-id="e9141-388">Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e9141-388">Windows Communication Foundation</span></span>
+ <span data-ttu-id="e9141-389">在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Communication Foundation 已在下列領域增強︰</span><span class="sxs-lookup"><span data-stu-id="e9141-389">In the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Communication Foundation has been enhanced in the following areas:</span></span>
 
- **支援使用 CNG 儲存之憑證的 WCF 傳輸安全性**：WCF 傳輸安全性支援使用 Windows 密碼編譯程式庫 (CNG) 儲存的憑證。 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，這項支援僅限於使用具有公開金鑰的憑證，且指數長度不能超過 32 位元。 當應用程式以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標時，這項功能預設為開啟。
+ <span data-ttu-id="e9141-390">**支援使用 CNG 儲存之憑證的 WCF 傳輸安全性**：WCF 傳輸安全性支援使用 Windows 密碼編譯程式庫 (CNG) 儲存的憑證。</span><span class="sxs-lookup"><span data-stu-id="e9141-390">**WCF transport security support for certificates stored using CNG** WCF transport security supports certificates stored using the Windows cryptography library (CNG).</span></span> <span data-ttu-id="e9141-391">在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，這項支援僅限於使用具有公開金鑰的憑證，且指數長度不能超過 32 位元。</span><span class="sxs-lookup"><span data-stu-id="e9141-391">In the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], this support is limited to using certificates with a public key that has an exponent no more than 32 bits in length.</span></span> <span data-ttu-id="e9141-392">當應用程式以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標時，這項功能預設為開啟。</span><span class="sxs-lookup"><span data-stu-id="e9141-392">When an application targets the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], this feature is on by default.</span></span>
 
- 如果應用程式是以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和舊版為目標，但卻執行於 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 當中，則可將下列這一行加入 app.config 或 web.config 檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段。
+ <span data-ttu-id="e9141-393">如果應用程式是以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和舊版為目標，但卻執行於 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 當中，則可將下列這一行加入 app.config 或 web.config 檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段。</span><span class="sxs-lookup"><span data-stu-id="e9141-393">For applications that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and earlier but are running on the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], this feature can be enabled by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the app.config or web.config file.</span></span>
 
 ```xml
 <AppContextSwitchOverrides
@@ -448,7 +504,7 @@ End Function
 />
 ```
 
-這也可以用程式設計方式，以如下的程式碼完成︰
+<span data-ttu-id="e9141-394">這也可以用程式設計方式，以如下的程式碼完成︰</span><span class="sxs-lookup"><span data-stu-id="e9141-394">This can also be done programmatically with code like the following:</span></span>
 
 ```csharp
 private const string DisableCngCertificates = @"Switch.System.ServiceModel.DisableCngCertificates";
@@ -460,7 +516,7 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **透過 DataContractJsonSerializer 類別更妥善支援多個日光節約時間調整規則**：客戶可以使用應用程式組態設定，來判斷 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 類別是否支援對單一時區使用多個調整規則。 這是一項選擇性功能。 若要啟用它，請將下列設定加入您的 app.config 檔︰
+ <span data-ttu-id="e9141-395">**透過 DataContractJsonSerializer 類別更妥善支援多個日光節約時間調整規則**：客戶可以使用應用程式組態設定，來判斷 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 類別是否支援對單一時區使用多個調整規則。</span><span class="sxs-lookup"><span data-stu-id="e9141-395">**Better support for multiple daylight saving time adjustment rules by the DataContractJsonSerializer class** Customers can use an application configuration setting to determine whether the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> class supports multiple adjustment rules for a single time zone.</span></span> <span data-ttu-id="e9141-396">這是一項選擇性功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-396">This is an opt-in feature.</span></span> <span data-ttu-id="e9141-397">若要啟用它，請將下列設定加入您的 app.config 檔︰</span><span class="sxs-lookup"><span data-stu-id="e9141-397">To enable it, add the following setting to your app.config file:</span></span>
 
 ```xml
 <runtime>
@@ -468,11 +524,11 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來還原序列化日期和時間資料。 <xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。
+<span data-ttu-id="e9141-398">啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來還原序列化日期和時間資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-398">When this feature is enabled, a <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> object  uses the <xref:System.TimeZoneInfo> type instead of the <xref:System.TimeZone> type to deserialize date and time data.</span></span> <span data-ttu-id="e9141-399"><xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。</span><span class="sxs-lookup"><span data-stu-id="e9141-399"><xref:System.TimeZoneInfo> supports multiple adjustment rules, which makes it possible to work with historic time zone data;   <xref:System.TimeZone> does not.</span></span>
 
-如需有關 <xref:System.TimeZoneInfo> 結構和時區調整的詳細資訊，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。
+<span data-ttu-id="e9141-400">如需有關 <xref:System.TimeZoneInfo> 結構和時區調整的詳細資訊，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-400">For more information on the <xref:System.TimeZoneInfo> structure and time zone adjustments, see [Time Zone Overview](../../../docs/standard/datetime/time-zone-overview.md).</span></span>
 
-**支援在使用 XMLSerializer 類別進行序列化和還原序列化時保留 UTC 時間** 通常，當使用 <xref:System.Xml.Serialization.XmlSerializer> 類別將 UTC <xref:System.DateTime> 值序列化時，它會建立一個序列化時間字串，該字串會保留日期和時間，但會假設時間為當地時間。  例如，如果您藉由呼叫下列程式碼將 UTC 日期和時間具現化︰
+<span data-ttu-id="e9141-401">**支援在使用 XMLSerializer 類別進行序列化和還原序列化時保留 UTC 時間** 通常，當使用 <xref:System.Xml.Serialization.XmlSerializer> 類別將 UTC <xref:System.DateTime> 值序列化時，它會建立一個序列化時間字串，該字串會保留日期和時間，但會假設時間為當地時間。</span><span class="sxs-lookup"><span data-stu-id="e9141-401">**Support for preserving a UTC time when serializing and deserializing with the XMLSerializer class** Ordinarily, when the <xref:System.Xml.Serialization.XmlSerializer> class is used to serialize a UTC <xref:System.DateTime> value, it creates a serialized time string that preserves the date and time but assumes the time is local.</span></span>  <span data-ttu-id="e9141-402">例如，如果您藉由呼叫下列程式碼將 UTC 日期和時間具現化︰</span><span class="sxs-lookup"><span data-stu-id="e9141-402">For example, if you instantiate a UTC date and time by calling the following code:</span></span>
 
 ```csharp
 DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
@@ -482,9 +538,9 @@ DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
 Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ```
 
-針對時間晚於 UTC 八小時的系統而言，結果是序列化時間字串 "03:00:00.0000000-08:00"。  序列化值一律會還原序列化為本機日期和時間值。
+<span data-ttu-id="e9141-403">針對時間晚於 UTC 八小時的系統而言，結果是序列化時間字串 "03:00:00.0000000-08:00"。</span><span class="sxs-lookup"><span data-stu-id="e9141-403">The result is the serialized time string "03:00:00.0000000-08:00" for a system eight hours behind UTC.</span></span>  <span data-ttu-id="e9141-404">序列化值一律會還原序列化為本機日期和時間值。</span><span class="sxs-lookup"><span data-stu-id="e9141-404">And serialized values are always deserialized as local date and time values.</span></span>
 
- 您可以使用應用程式組態設定來判斷當序列化和還原序列化 <xref:System.DateTime> 值時，<xref:System.Xml.Serialization.XmlSerializer> 是否保留 UTC 時區資訊︰
+ <span data-ttu-id="e9141-405">您可以使用應用程式組態設定來判斷當序列化和還原序列化 <xref:System.DateTime> 值時，<xref:System.Xml.Serialization.XmlSerializer> 是否保留 UTC 時區資訊︰</span><span class="sxs-lookup"><span data-stu-id="e9141-405">You can use an application configuration setting to determine whether the <xref:System.Xml.Serialization.XmlSerializer> preserves UTC time zone information when serializing and deserializing <xref:System.DateTime> values:</span></span>
 
 ```xml 
 <runtime>
@@ -493,18 +549,18 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 </runtime>
 ```
 
-啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來還原序列化日期和時間資料。 <xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。
+<span data-ttu-id="e9141-406">啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來還原序列化日期和時間資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-406">When this feature is enabled, a <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> object  uses the <xref:System.TimeZoneInfo> type instead of the <xref:System.TimeZone> type to deserialize date and time data.</span></span> <span data-ttu-id="e9141-407"><xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。</span><span class="sxs-lookup"><span data-stu-id="e9141-407"><xref:System.TimeZoneInfo> supports multiple adjustment rules, which makes it possible to work with historic time zone data;   <xref:System.TimeZone> does not.</span></span>
 
-如需有關 <xref:System.TimeZoneInfo> 結構和時區調整的詳細資訊，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。
+<span data-ttu-id="e9141-408">如需有關 <xref:System.TimeZoneInfo> 結構和時區調整的詳細資訊，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-408">For more information on the <xref:System.TimeZoneInfo> structure and time zone adjustments, see [Time Zone Overview](../../../docs/standard/datetime/time-zone-overview.md).</span></span>
 
- **NetNamedPipeBinding 最符合項目**：WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以確保它們一律連線到在最符合所要求之 URI 上接聽的服務。 當此應用程式設定設為 `false` (預設值) 時，用戶端可以使用 <xref:System.ServiceModel.NetNamedPipeBinding> 來嘗試連接到正在接聽所要求 URI 子字串之 URI 的服務。
+ <span data-ttu-id="e9141-409">**NetNamedPipeBinding 最符合項目**：WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以確保它們一律連線到在最符合所要求之 URI 上接聽的服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-409">**NetNamedPipeBinding best match** WCF has a new app setting that can be set on client applications to ensure they always connect to the service listening on the URI that best matches the one that they request.</span></span> <span data-ttu-id="e9141-410">當此應用程式設定設為 `false` (預設值) 時，用戶端可以使用 <xref:System.ServiceModel.NetNamedPipeBinding> 來嘗試連接到正在接聽所要求 URI 子字串之 URI 的服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-410">With this app setting set to `false` (the default), it is possible for clients using <xref:System.ServiceModel.NetNamedPipeBinding> to attempt to connect to a service listening on a URI that is a substring of the requested URI.</span></span>
 
- 例如，用戶端嘗試連接到接聽 `net.pipe://localhost/Service1` 的服務，但該電腦上以系統管理員權限執行的不同服務正在接聽 `net.pipe://localhost`。 當此應用程式設定是設為 `false` 時，用戶端會嘗試連線到錯誤的服務。 將應用程式設定設為 `true` 後，用戶端一律都會連接至最符合的服務。
+ <span data-ttu-id="e9141-411">例如，用戶端嘗試連接到接聽 `net.pipe://localhost/Service1` 的服務，但該電腦上以系統管理員權限執行的不同服務正在接聽 `net.pipe://localhost`。</span><span class="sxs-lookup"><span data-stu-id="e9141-411">For example, a client tries to connect to a service listening at `net.pipe://localhost/Service1`, but a different service on that machine running with administrator privilege is listening at `net.pipe://localhost`.</span></span> <span data-ttu-id="e9141-412">當此應用程式設定是設為 `false` 時，用戶端會嘗試連線到錯誤的服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-412">With this app setting set to `false`, the client would attempt to connect to the wrong service.</span></span> <span data-ttu-id="e9141-413">將應用程式設定設為 `true` 後，用戶端一律都會連接至最符合的服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-413">After setting the app setting to `true`, the client will always connect to the best matching service.</span></span>
 
 > [!NOTE]
->  使用 <xref:System.ServiceModel.NetNamedPipeBinding> 的用戶端會根據服務的基底位址 (如果存在的話) 來尋找服務，而不是根據完整的端點位址。 為了確保此設定一律適用，服務應該使用唯一的基底位址。
+>  <span data-ttu-id="e9141-414">使用 <xref:System.ServiceModel.NetNamedPipeBinding> 的用戶端會根據服務的基底位址 (如果存在的話) 來尋找服務，而不是根據完整的端點位址。</span><span class="sxs-lookup"><span data-stu-id="e9141-414">Clients using <xref:System.ServiceModel.NetNamedPipeBinding> find services based on the service's base address (if it exists) rather than the full endpoint address.</span></span> <span data-ttu-id="e9141-415">為了確保此設定一律適用，服務應該使用唯一的基底位址。</span><span class="sxs-lookup"><span data-stu-id="e9141-415">To ensure this setting always works the service should use a unique base address.</span></span>
 
- 若要啟用此變更，請先將下列應用程式設定加入用戶端應用程式的 App.config 或 Web.config 檔案︰
+ <span data-ttu-id="e9141-416">若要啟用此變更，請先將下列應用程式設定加入用戶端應用程式的 App.config 或 Web.config 檔案︰</span><span class="sxs-lookup"><span data-stu-id="e9141-416">To enable this change, add the following app setting to your client application's App.config or Web.config file:</span></span>
 
 ```xml
 <configuration>
@@ -514,27 +570,27 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 </configuration>
 ```
 
- **SSL 3.0 不是預設的通訊協定**：當使用 NetTcp 搭配傳輸安全性和憑證類型的認證時，SSL 3.0 已不再是用來交涉安全連線的預設通訊協定。 在大部分的情況下，應該不會影響現有的應用程式，因為 TLS 1.0 已包含在 NetTcp 的通訊協定清單中。 所有現有的用戶端應該能夠使用至少 TLS 1.0 來交涉連線。      如果需要 SSL3，請使用下列組態機制之一，將它加入交涉通訊協定的清單。
+ <span data-ttu-id="e9141-417">**SSL 3.0 不是預設的通訊協定**：當使用 NetTcp 搭配傳輸安全性和憑證類型的認證時，SSL 3.0 已不再是用來交涉安全連線的預設通訊協定。</span><span class="sxs-lookup"><span data-stu-id="e9141-417">**SSL 3.0 is not a default protocol** When using NetTcp with transport security and a credential type of certificate, SSL 3.0 is no longer a default protocol used for negotiating a secure connection.</span></span> <span data-ttu-id="e9141-418">在大部分的情況下，應該不會影響現有的應用程式，因為 TLS 1.0 已包含在 NetTcp 的通訊協定清單中。</span><span class="sxs-lookup"><span data-stu-id="e9141-418">In most cases, there should be no impact to existing apps, because TLS 1.0 is included in the protocol list for NetTcp.</span></span> <span data-ttu-id="e9141-419">所有現有的用戶端應該能夠使用至少 TLS 1.0 來交涉連線。</span><span class="sxs-lookup"><span data-stu-id="e9141-419">All existing clients should be able to negotiate a connection using at least TLS 1.0.</span></span> <span data-ttu-id="e9141-420">如果需要 SSL3，請使用下列組態機制之一，將它加入交涉通訊協定的清單。</span><span class="sxs-lookup"><span data-stu-id="e9141-420">If Ssl3 is required, use one of the following configuration mechanisms to add it to the list of negotiated protocols.</span></span>
 
-- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=fullName> 屬性
+- <span data-ttu-id="e9141-421"><xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=nameWithType> 屬性</span><span class="sxs-lookup"><span data-stu-id="e9141-421">The <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=nameWithType> property</span></span>
 
-- <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性
+- <span data-ttu-id="e9141-422"><xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 屬性</span><span class="sxs-lookup"><span data-stu-id="e9141-422">The <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> property</span></span>
 
-- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) 區段的 [\<transport>](../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) 區段
+- <span data-ttu-id="e9141-423">[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) 區段的 [\<transport>](../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) 區段</span><span class="sxs-lookup"><span data-stu-id="e9141-423">The [\<transport>](../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) section of the [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) section</span></span>
 
-- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 區段的 [\<sslStreamSecurity>](../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) 區段
+- <span data-ttu-id="e9141-424">[\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 區段的 [\<sslStreamSecurity>](../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) 區段</span><span class="sxs-lookup"><span data-stu-id="e9141-424">The [\<sslStreamSecurity>](../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) section of the [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) section</span></span>
 
 <a name="WPF462"></a> 
-### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
- 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Presentation Foundation 已在下列領域增強︰
+### <a name="windows-presentation-foundation-wpf"></a><span data-ttu-id="e9141-425">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-425">Windows Presentation Foundation (WPF)</span></span>
+ <span data-ttu-id="e9141-426">在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Presentation Foundation 已在下列領域增強︰</span><span class="sxs-lookup"><span data-stu-id="e9141-426">In the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Presentation Foundation has been enhanced in the following areas:</span></span>
 
- **群組排序**：使用 <xref:System.Windows.Data.CollectionView> 物件來分組資料的應用程式現在可以明確地宣告如何排序群組。 明確排序可以解決非直覺式排序的問題，此問題發生於應用程式以動態方式新增或移除群組時，或是變更分組時所干涉的項目屬性值時。 它也可以藉由將分組屬性的比較從完整集合排序移至群組排序，改善群組建立程序的效能。
+ <span data-ttu-id="e9141-427">**群組排序**：使用 <xref:System.Windows.Data.CollectionView> 物件來分組資料的應用程式現在可以明確地宣告如何排序群組。</span><span class="sxs-lookup"><span data-stu-id="e9141-427">**Group sorting** An application that uses a <xref:System.Windows.Data.CollectionView> object to group data can now explicitly declare how to  sort the groups.</span></span> <span data-ttu-id="e9141-428">明確排序可以解決非直覺式排序的問題，此問題發生於應用程式以動態方式新增或移除群組時，或是變更分組時所干涉的項目屬性值時。</span><span class="sxs-lookup"><span data-stu-id="e9141-428">Explicit sorting addresses the problem of non-intuitive ordering that occurs when an app dynamically adds or removes groups, or when it changes the value of item properties involved in grouping.</span></span> <span data-ttu-id="e9141-429">它也可以藉由將分組屬性的比較從完整集合排序移至群組排序，改善群組建立程序的效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-429">It can also improve the performance of the group creation process by moving comparisons of the grouping properties from the sort of the full collection to the sort of the groups.</span></span>
 
- 為了支援群組排序，新的 <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=fullName> 和 <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=fullName> 屬性會描述如何排序 <xref:System.ComponentModel.GroupDescription> 物件所產生的群組集合。 這相當於同名 <xref:System.Windows.Data.ListCollectionView> 屬性描述如何排序資料項目的方式。
+ <span data-ttu-id="e9141-430">為了支援群組排序，新的 <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> 和 <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> 屬性會描述如何排序 <xref:System.ComponentModel.GroupDescription> 物件所產生的群組集合。</span><span class="sxs-lookup"><span data-stu-id="e9141-430">To support group sorting, the new <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> and <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> properties describe how to sort the collection of groups produced by the <xref:System.ComponentModel.GroupDescription> object.</span></span> <span data-ttu-id="e9141-431">這相當於同名 <xref:System.Windows.Data.ListCollectionView> 屬性描述如何排序資料項目的方式。</span><span class="sxs-lookup"><span data-stu-id="e9141-431">This is analogous to the way the identically named <xref:System.Windows.Data.ListCollectionView> properties describe how to sort the data items.</span></span>
 
- <xref:System.Windows.Data.PropertyGroupDescription> 類別的兩個新靜態屬性，<xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> 和 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>，可用於大部分的案例。
+ <span data-ttu-id="e9141-432"><xref:System.Windows.Data.PropertyGroupDescription> 類別的兩個新靜態屬性，<xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> 和 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>，可用於大部分的案例。</span><span class="sxs-lookup"><span data-stu-id="e9141-432">Two new static properties of the <xref:System.Windows.Data.PropertyGroupDescription> class,  <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> and <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, can be used for the most common cases.</span></span>
 
- 比方說，下列 XAML 會依年齡將資料分組、以遞增順序排序年齡群組，並依據姓氏將每個年齡群組內項目分組。
+ <span data-ttu-id="e9141-433">比方說，下列 XAML 會依年齡將資料分組、以遞增順序排序年齡群組，並依據姓氏將每個年齡群組內項目分組。</span><span class="sxs-lookup"><span data-stu-id="e9141-433">For example, the following XAML groups data by age, sort the age groups in ascending order, and group the items within each age group by last name.</span></span>
 
 ```xaml
 <GroupDescriptions>
@@ -550,15 +606,15 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 </SortDescriptions>
 ```
 
- **螢幕小鍵盤支援**：螢幕小鍵盤支援可以啟用 WPF 應用程式中的焦點追蹤，方法是當可接受文字輸入的控制項觸控收到輸入時，自動叫用及關閉 Windows 10 中新的螢幕小鍵盤。
+ <span data-ttu-id="e9141-434">**螢幕小鍵盤支援**：螢幕小鍵盤支援可以啟用 WPF 應用程式中的焦點追蹤，方法是當可接受文字輸入的控制項觸控收到輸入時，自動叫用及關閉 Windows 10 中新的螢幕小鍵盤。</span><span class="sxs-lookup"><span data-stu-id="e9141-434">**Soft keyboard support** Soft Keyboard support enables focus tracking in a WPF applications by automatically invoking and dismissing the new Soft Keyboard in Windows 10 when the touch input is received by a control that can take textual input.</span></span>
 
- 在舊版的 .NET Framework 中，WPF 應用程式必須停用 WPF 畫筆/觸控筆勢支援，才能參加焦點追蹤。  如此一來，WPF 應用程式必須選擇完整 WPF 觸控支援，或是依賴 Windows 滑鼠升級。
+ <span data-ttu-id="e9141-435">在舊版的 .NET Framework 中，WPF 應用程式必須停用 WPF 畫筆/觸控筆勢支援，才能參加焦點追蹤。</span><span class="sxs-lookup"><span data-stu-id="e9141-435">In previous versions of the .NET Framework, WPF applications cannot opt into the focus tracking without disabling WPF pen/touch gesture support.</span></span>  <span data-ttu-id="e9141-436">如此一來，WPF 應用程式必須選擇完整 WPF 觸控支援，或是依賴 Windows 滑鼠升級。</span><span class="sxs-lookup"><span data-stu-id="e9141-436">As a result, WPF applications must choose between full WPF touch support or rely on Windows mouse promotion.</span></span>
 
- **個別監視器 DPI**：為了針對 WPF 應用程式支援最近激增的高 DPI 和混合式 DPI 環境，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 啟用了個別監視器感知。 如需如何啟用 WPF 應用程式之個別監視器 DPI 感知功能的詳細資訊，請參閱 GitHub 上的[範例和開發人員指南](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)。
+ <span data-ttu-id="e9141-437">**個別監視器 DPI**：為了針對 WPF 應用程式支援最近激增的高 DPI 和混合式 DPI 環境，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 啟用了個別監視器感知。</span><span class="sxs-lookup"><span data-stu-id="e9141-437">**Per-monitor DPI** To support the recent proliferation of high-DPI and hybrid-DPI environments for WPF apps, WPF in the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] enables per-monitor awareness.</span></span> <span data-ttu-id="e9141-438">如需如何啟用 WPF 應用程式之個別監視器 DPI 感知功能的詳細資訊，請參閱 GitHub 上的[範例和開發人員指南](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)。</span><span class="sxs-lookup"><span data-stu-id="e9141-438">See the [samples and developer guide](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) on GitHub for more information about how to enable your WPF app to become per-monitor DPI aware.</span></span>
 
- 在舊版 .NET Framework 中，WPF 應用程式是系統 DPI 感知。 換句話說，應用程式的 UI 會由作業系統進行適當的縮放，視應用程式呈現所在的監視器 DPI 而定。 ,
+ <span data-ttu-id="e9141-439">在舊版 .NET Framework 中，WPF 應用程式是系統 DPI 感知。</span><span class="sxs-lookup"><span data-stu-id="e9141-439">In previous versions of the .NET Framework, WPF apps are system-DPI aware.</span></span> <span data-ttu-id="e9141-440">換句話說，應用程式的 UI 會由作業系統進行適當的縮放，視應用程式呈現所在的監視器 DPI 而定。</span><span class="sxs-lookup"><span data-stu-id="e9141-440">In other words, the application's UI is scaled by the OS as appropriate, depending on the DPI of the monitor on which the app is rendered.</span></span> <span data-ttu-id="e9141-441">,</span><span class="sxs-lookup"><span data-stu-id="e9141-441">,</span></span>
 
- 若是在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 下執行的應用程式，您可以將組態陳述式加入應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，藉此停用 WPF 應用程式中的個別監視器 DPI 變更，如下所示︰
+ <span data-ttu-id="e9141-442">若是在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 下執行的應用程式，您可以將組態陳述式加入應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，藉此停用 WPF 應用程式中的個別監視器 DPI 變更，如下所示︰</span><span class="sxs-lookup"><span data-stu-id="e9141-442">For apps running under the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], you can disable per-monitor DPI changes in WPF apps by adding a configuration statement to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your application configuration file, as follows:</span></span>
 
 ```xml
 <runtime>
@@ -567,308 +623,308 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ```
 
 <a name="WF462"></a> 
-### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
- 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Workflow Foundation 已在下列領域增強︰
+### <a name="windows-workflow-foundation-wf"></a><span data-ttu-id="e9141-443">Windows Workflow Foundation (WF)</span><span class="sxs-lookup"><span data-stu-id="e9141-443">Windows Workflow Foundation (WF)</span></span>
+ <span data-ttu-id="e9141-444">在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Workflow Foundation 已在下列領域增強︰</span><span class="sxs-lookup"><span data-stu-id="e9141-444">In the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Foundation has been enhanced in the following area:</span></span>
 
- **之 WF 設計工具中的 C# 運算式和 IntelliSense 支援**：自 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 起，WF 在 Visual Studio 設計工具及程式碼工作流程中皆支援 C# 運算式。 Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。  Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。 如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
+ <span data-ttu-id="e9141-445">**之 WF 設計工具中的 C# 運算式和 IntelliSense 支援**：自 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 起，WF 在 Visual Studio 設計工具及程式碼工作流程中皆支援 C# 運算式。</span><span class="sxs-lookup"><span data-stu-id="e9141-445">**Support for C# expressions and IntelliSense in the Re-hosted WF Designer** Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF supports C# expressions in both the Visual Studio Designer and in code workflows.</span></span> <span data-ttu-id="e9141-446">Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。</span><span class="sxs-lookup"><span data-stu-id="e9141-446">The Re-hosted Workflow Designer is a key feature of WF that allows for the Workflow Designer to be in an application outside Visual Studio (for example, in WPF).</span></span>  <span data-ttu-id="e9141-447">Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-447">Windows Workflow Foundation provides the ability to support C# expressions and IntelliSense in the Re-hosted Workflow Designer.</span></span> <span data-ttu-id="e9141-448">如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。</span><span class="sxs-lookup"><span data-stu-id="e9141-448">For more information, see the [Windows Workflow Foundation blog](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).</span></span>
 
- `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`：在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 版本中，當客戶從 Visual Studio 重建工作流程專案時，WF 設計工具 IntelliSense 便會中斷。 雖然專案建置成功，但在設計工具中找不到工作流程類型，來自 IntelliSense 的遺漏工作流程類型警告也會出現在 [錯誤清單] 視窗中。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決了這個問題，並提供 IntelliSense。
+ <span data-ttu-id="e9141-449">`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`：在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 版本中，當客戶從 Visual Studio 重建工作流程專案時，WF 設計工具 IntelliSense 便會中斷。</span><span class="sxs-lookup"><span data-stu-id="e9141-449">`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` In versions of the .NET Framework prior to the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], WF Designer IntelliSense is broken when a customer rebuilds a workflow project from Visual Studio.</span></span> <span data-ttu-id="e9141-450">雖然專案建置成功，但在設計工具中找不到工作流程類型，來自 IntelliSense 的遺漏工作流程類型警告也會出現在 [錯誤清單] 視窗中。</span><span class="sxs-lookup"><span data-stu-id="e9141-450">While the project build is successful, the workflow types are not found on the designer, and warnings from IntelliSense for the missing workflow types appear in the **Error List** window.</span></span> <span data-ttu-id="e9141-451">[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決了這個問題，並提供 IntelliSense。</span><span class="sxs-lookup"><span data-stu-id="e9141-451">The [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] addresses this issue and makes IntelliSense available.</span></span>
 
- **開啟工作流程追蹤的工作流程 V1 應用程式現在在 FIPS 模式下執行**：啟用 FIPS 合規性模式的電腦，現在可以順利執行工作流程 V1 樣式的應用程式，並開啟工作流程追蹤。 若要啟用這種情況，您必須在 app.config 檔案中進行下列變更︰
+ <span data-ttu-id="e9141-452">**開啟工作流程追蹤的工作流程 V1 應用程式現在在 FIPS 模式下執行**：啟用 FIPS 合規性模式的電腦，現在可以順利執行工作流程 V1 樣式的應用程式，並開啟工作流程追蹤。</span><span class="sxs-lookup"><span data-stu-id="e9141-452">**Workflow V1 applications with Workflow Tracking on now run under FIPS-mode** Machines with FIPS Compliance Mode enabled can now successfully run a workflow Version 1-style application with Workflow tracking on.</span></span> <span data-ttu-id="e9141-453">若要啟用這種情況，您必須在 app.config 檔案中進行下列變更︰</span><span class="sxs-lookup"><span data-stu-id="e9141-453">To enable this scenario, you must make the following change to your app.config file:</span></span>
 
 ```xml
 <add key="microsoft:WorkflowRuntime:FIPSRequired" value="true" />
 ```
 
- 如果未啟用這種情況，執行應用程式會繼續產生例外狀況，訊息為：「此實作不屬於 Windows Platform FIPS 已驗證密碼編譯演算法的一部分。」
+ <span data-ttu-id="e9141-454">如果未啟用這種情況，執行應用程式會繼續產生例外狀況，訊息為：「此實作不屬於 Windows Platform FIPS 已驗證密碼編譯演算法的一部分。」</span><span class="sxs-lookup"><span data-stu-id="e9141-454">If this scenario is not enabled, running the application continues to generate an exception with the message, "This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms."</span></span>
 
- **搭配 Visual Studio 工作流程設計工具使用動態更新時的工作流程改進**：「工作流程設計工具」、「流程圖活動設計工具」及其他「工作流程活動設計工具」現在可順利載入和顯示在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 方法之後儲存的工作流程。 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 的版本中，若要在 Visual Studio 中，針對在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 之後儲存的工作流程載入 XAML 檔案，可能會導致下列問題︰
+ <span data-ttu-id="e9141-455">**搭配 Visual Studio 工作流程設計工具使用動態更新時的工作流程改進**：「工作流程設計工具」、「流程圖活動設計工具」及其他「工作流程活動設計工具」現在可順利載入和顯示在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法之後儲存的工作流程。</span><span class="sxs-lookup"><span data-stu-id="e9141-455">**Workflow Improvements when using Dynamic Update with Visual Studio Workflow Designer** The Workflow Designer, FlowChart Activity Designer, and other Workflow Activity Designers now successfully load and display workflows that have been saved after calling  the <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e9141-456">在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 的版本中，若要在 Visual Studio 中，針對在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 之後儲存的工作流程載入 XAML 檔案，可能會導致下列問題︰</span><span class="sxs-lookup"><span data-stu-id="e9141-456">In versions of the .NET Framework before the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], loading a XAML file in Visual Studio for a workflow that has been saved after calling <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> can result in the following issues:</span></span>
 
-- 工作流程設計工具無法正確載入 XAML 檔案 (當 <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName> 在一行的結尾時)。
+- <span data-ttu-id="e9141-457">工作流程設計工具無法正確載入 XAML 檔案 (當 <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> 在一行的結尾時)。</span><span class="sxs-lookup"><span data-stu-id="e9141-457">The Workflow Designer can't load the XAML file correctly (when the <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> is at the end of the line).</span></span>
 
-- 流程圖活動設計工具或其他工作流程活動設計工具可能會在預設位置顯示所有物件，而不是根據附加的屬性值。
+- <span data-ttu-id="e9141-458">流程圖活動設計工具或其他工作流程活動設計工具可能會在預設位置顯示所有物件，而不是根據附加的屬性值。</span><span class="sxs-lookup"><span data-stu-id="e9141-458">Flowchart Activity Designer or other Workflow Activity Designers may display all objects in their default locations as opposed to attached property values.</span></span>
 
 <a name="ClickOnce"></a> 
-### <a name="clickonce"></a>ClickOnce
- ClickOnce 已更新為除了已經支援的 TLS 1.0 通訊協定之外，還支援 TLS 1.1 和 TLS 1.2。 ClickOnce 會自動偵測需要哪個通訊協定。若要啟用 TLS 1.1 和 1.2 支援，並不需要在 ClickOnce 應用程式中執行額外的步驟。
+### <a name="clickonce"></a><span data-ttu-id="e9141-459">ClickOnce</span><span class="sxs-lookup"><span data-stu-id="e9141-459">ClickOnce</span></span>
+ <span data-ttu-id="e9141-460">ClickOnce 已更新為除了已經支援的 TLS 1.0 通訊協定之外，還支援 TLS 1.1 和 TLS 1.2。</span><span class="sxs-lookup"><span data-stu-id="e9141-460">ClickOnce has been updated to support TLS 1.1 and TLS 1.2 in addition to the 1.0 protocol, which it already supports.</span></span> <span data-ttu-id="e9141-461">ClickOnce 會自動偵測需要哪個通訊協定。若要啟用 TLS 1.1 和 1.2 支援，並不需要在 ClickOnce 應用程式中執行額外的步驟。</span><span class="sxs-lookup"><span data-stu-id="e9141-461">ClickOnce automatically detects which protocol is required; no extra steps within the ClickOnce application are required to enable TLS 1.1 and 1.2 support.</span></span>
 
 <a name="UWPConvert"></a> 
-### <a name="converting-windows-forms-and-wpf-apps-to--uwp-apps"></a>將 Windows Forms 和 WPF 應用程式轉換成 UWP 應用程式
- Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Windows Forms 應用程式) 移植到通用 Windows 平台 (UWP) 的功能。 此技術可作為橋樑，讓您能逐漸將現有的程式碼基底移轉到 UWP，從而將您的應用程式帶到所有 Windows 10 裝置。
+### <a name="converting-windows-forms-and-wpf-apps-to--uwp-apps"></a><span data-ttu-id="e9141-462">將 Windows Forms 和 WPF 應用程式轉換成 UWP 應用程式</span><span class="sxs-lookup"><span data-stu-id="e9141-462">Converting Windows Forms and WPF apps to  UWP apps</span></span>
+ <span data-ttu-id="e9141-463">Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Windows Forms 應用程式) 移植到通用 Windows 平台 (UWP) 的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-463">Windows now offers capabilities to bring existing Windows desktop apps, including WPF and Windows Forms apps, to the Universal Windows Platform (UWP).</span></span> <span data-ttu-id="e9141-464">此技術可作為橋樑，讓您能逐漸將現有的程式碼基底移轉到 UWP，從而將您的應用程式帶到所有 Windows 10 裝置。</span><span class="sxs-lookup"><span data-stu-id="e9141-464">This technology acts as a bridge by enabling you to gradually migrate your existing code base to UWP, thereby bringing your app to all Windows 10 devices.</span></span>
 
- 轉換後的傳統型應用程式會取得類似於 UWP 應用程式的應用程式識別，如此便可存取 UWP API，以啟用例如動態磚和通知等功能。 應用程式會繼續和之前一樣運作，而且會以完全信任應用程式的形式執行。 應用程式轉換後，應用程式容器處理序可以加入現有的完全信任處理序，以新增調適性使用者介面。 當所有的功能都移至應用程式容器處理序時，便可以移除完全信任處理序，新的 UWP 應用程式也可以供所有 Windows 10 裝置使用。
+ <span data-ttu-id="e9141-465">轉換後的傳統型應用程式會取得類似於 UWP 應用程式的應用程式識別，如此便可存取 UWP API，以啟用例如動態磚和通知等功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-465">Converted desktop apps gain an app identity similar to the app identity of UWP apps, which makes UWP APIs accessible to enable features such as Live Tiles and notifications.</span></span> <span data-ttu-id="e9141-466">應用程式會繼續和之前一樣運作，而且會以完全信任應用程式的形式執行。</span><span class="sxs-lookup"><span data-stu-id="e9141-466">The app continues to behave as before and runs as a full trust app.</span></span> <span data-ttu-id="e9141-467">應用程式轉換後，應用程式容器處理序可以加入現有的完全信任處理序，以新增調適性使用者介面。</span><span class="sxs-lookup"><span data-stu-id="e9141-467">Once the app is converted, an app container process can be added to the existing full trust process to add an adaptive user interface.</span></span> <span data-ttu-id="e9141-468">當所有的功能都移至應用程式容器處理序時，便可以移除完全信任處理序，新的 UWP 應用程式也可以供所有 Windows 10 裝置使用。</span><span class="sxs-lookup"><span data-stu-id="e9141-468">When all functionality is moved to the app container process, the full trust process can be removed and the new UWP app can be made available to all Windows 10 devices.</span></span>
 
 <a name="Debug462"></a> 
-### <a name="debugging-improvements"></a>偵錯改進
- *Unmanaged 偵錯 API* 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中已增強，可在擲回 <xref:System.NullReferenceException> 時執行額外的分析，因此可以判斷單行原始程式碼中哪個變數為 `null`。   為了支援這種情況，下列 API 已加入 Unmanaged 偵錯 API。
+### <a name="debugging-improvements"></a><span data-ttu-id="e9141-469">偵錯改進</span><span class="sxs-lookup"><span data-stu-id="e9141-469">Debugging improvements</span></span>
+ <span data-ttu-id="e9141-470">*Unmanaged 偵錯 API* 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中已增強，可在擲回 <xref:System.NullReferenceException> 時執行額外的分析，因此可以判斷單行原始程式碼中哪個變數為 `null`。</span><span class="sxs-lookup"><span data-stu-id="e9141-470">The *unmanaged debugging API* has been enhanced in the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] to perform additional analysis when a <xref:System.NullReferenceException> is thrown so that it is possible to determine which variable in a single line of source code is `null`.</span></span>   <span data-ttu-id="e9141-471">為了支援這種情況，下列 API 已加入 Unmanaged 偵錯 API。</span><span class="sxs-lookup"><span data-stu-id="e9141-471">To support this scenario, the following APIs have been added to the unmanaged debugging API.</span></span>
 
-- [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 介面，它們會公開 Managed 變數的原生主資料夾。 這可讓偵錯工具在 <xref:System.NullReferenceException> 發生時執行某些程式碼流程分析，以及回溯判斷對應至原生位置且為 `null` 的 Managed 變數。
+- <span data-ttu-id="e9141-472">[ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 介面，它們會公開 Managed 變數的原生主資料夾。</span><span class="sxs-lookup"><span data-stu-id="e9141-472">The [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md), and [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) interfaces, which expose the native homes of managed variables.</span></span> <span data-ttu-id="e9141-473">這可讓偵錯工具在 <xref:System.NullReferenceException> 發生時執行某些程式碼流程分析，以及回溯判斷對應至原生位置且為 `null` 的 Managed 變數。</span><span class="sxs-lookup"><span data-stu-id="e9141-473">This enables debuggers to do some code flow analysis when a  <xref:System.NullReferenceException> occurs and to work backwards to determine the managed variable that corresponds to the native location that was `null`.</span></span>
 
-- [ICorDebugType2::GetTypeID](../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) 方法提供 ICorDebugType 到 [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 的對應，可讓偵錯工具取得 [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，而不需 ICorDebugType 的執行個體。 [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 上的現有 API 便可以用來判斷類型的類別配置。
+- <span data-ttu-id="e9141-474">[ICorDebugType2::GetTypeID](../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) 方法提供 ICorDebugType 到 [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 的對應，可讓偵錯工具取得 [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，而不需 ICorDebugType 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="e9141-474">The [ICorDebugType2::GetTypeID](../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) method provides a mapping for ICorDebugType to [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which allows the debugger to obtain a [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) without an instance of the ICorDebugType.</span></span> <span data-ttu-id="e9141-475">[COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 上的現有 API 便可以用來判斷類型的類別配置。</span><span class="sxs-lookup"><span data-stu-id="e9141-475">Existing APIs on [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) can then be used to determine the class layout of the type.</span></span>
 
 <a name="v461"></a> 
-## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 的新功能
- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含下列領域的新功能：
+## <a name="whats-new-in-the-net-framework-461"></a><span data-ttu-id="e9141-476">.NET Framework 4.6.1 的新功能</span><span class="sxs-lookup"><span data-stu-id="e9141-476">What's new in the .NET Framework 4.6.1</span></span>
+ <span data-ttu-id="e9141-477">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含下列領域的新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-477">The [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] includes new features in the following areas:</span></span>
 
-- [加密](#Crypto)
+- [<span data-ttu-id="e9141-478">加密</span><span class="sxs-lookup"><span data-stu-id="e9141-478">Cryptography</span></span>](#Crypto)
 
-- [ADO.NET](#ADO.NET461)
+- [<span data-ttu-id="e9141-479">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-479">ADO.NET</span></span>](#ADO.NET461)
 
-- [Windows Presentation Foundation (WPF)](#WPF461)
+- [<span data-ttu-id="e9141-480">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-480">Windows Presentation Foundation (WPF)</span></span>](#WPF461)
 
-- [Windows Workflow Foundation](#WWF461)
+- [<span data-ttu-id="e9141-481">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="e9141-481">Windows Workflow Foundation</span></span>](#WWF461)
 
-- [程式碼剖析](#Profile461)
+- [<span data-ttu-id="e9141-482">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="e9141-482">Profiling</span></span>](#Profile461)
 
-- [NGen](#NGEN461)
+- [<span data-ttu-id="e9141-483">NGen</span><span class="sxs-lookup"><span data-stu-id="e9141-483">NGen</span></span>](#NGEN461)
 
- 如需 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 的詳細資訊，請參閱下列主題：
+ <span data-ttu-id="e9141-484">如需 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 的詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="e9141-484">For more information on the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], see the following topics:</span></span>
 
-- [.NET Framework 4.6.1 變更清單](http://go.microsoft.com/fwlink/?LinkId=622964)
+- <span data-ttu-id="e9141-485">[.NET Framework 4.6.1 變更清單](http://go.microsoft.com/fwlink/?LinkId=622964)</span><span class="sxs-lookup"><span data-stu-id="e9141-485">The [.NET Framework 4.6.1 list of changes](http://go.microsoft.com/fwlink/?LinkId=622964)</span></span>
 
-- [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [<span data-ttu-id="e9141-486">4.6.1 中的應用程式相容性</span><span class="sxs-lookup"><span data-stu-id="e9141-486">Application Compatibility in 4.6.1</span></span>](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
 
-- [.NET Framework API diff](http://go.microsoft.com/fwlink/?LinkId=622989) (於 GitHub)
+- <span data-ttu-id="e9141-487">[.NET Framework API diff](http://go.microsoft.com/fwlink/?LinkId=622989) (於 GitHub)</span><span class="sxs-lookup"><span data-stu-id="e9141-487">[The .NET Framework API diff](http://go.microsoft.com/fwlink/?LinkId=622989) (on GitHub)</span></span>
 
 <a name="Crypto"></a> 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>密碼編譯：支援包含 ECDSA 的 X509 憑證
- 加入 X509 憑證 RSACng 支援的 .NET Framework 4.6。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 加入了 ECDSA (橢圓曲線數位簽章演算法) X509 憑證的支援。
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a><span data-ttu-id="e9141-488">密碼編譯：支援包含 ECDSA 的 X509 憑證</span><span class="sxs-lookup"><span data-stu-id="e9141-488">Cryptography: Support for X509 certificates containing ECDSA</span></span>
+ <span data-ttu-id="e9141-489">加入 X509 憑證 RSACng 支援的 .NET Framework 4.6。</span><span class="sxs-lookup"><span data-stu-id="e9141-489">The .NET Framework 4.6 added RSACng support for X509 certificates.</span></span> <span data-ttu-id="e9141-490">[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 加入了 ECDSA (橢圓曲線數位簽章演算法) X509 憑證的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-490">The [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] adds support for ECDSA (Elliptic Curve Digital Signature Algorithm) X509 certificates.</span></span>
 
- ECDSA 提供較佳的效能，其密碼編譯演算法比 RSA 更安全，為傳輸層安全性 (TLS) 的效能和延展性提供了絕佳的選擇。 .NET Framework 實作會將呼叫包裝在現有的 Windows 功能中。
+ <span data-ttu-id="e9141-491">ECDSA 提供較佳的效能，其密碼編譯演算法比 RSA 更安全，為傳輸層安全性 (TLS) 的效能和延展性提供了絕佳的選擇。</span><span class="sxs-lookup"><span data-stu-id="e9141-491">ECDSA offers better performance and is a more secure cryptography algorithm than RSA, providing an excellent choice where Transport Layer Security (TLS) performance and scalability is a concern.</span></span> <span data-ttu-id="e9141-492">.NET Framework 實作會將呼叫包裝在現有的 Windows 功能中。</span><span class="sxs-lookup"><span data-stu-id="e9141-492">The .NET Framework implementation wraps calls into existing Windows functionality.</span></span>
 
- 下列範例程式碼示範使用 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含的 ECDSA X509 憑證新支援，產生位元組資料流的簽章是多麼的輕鬆。
+ <span data-ttu-id="e9141-493">下列範例程式碼示範使用 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含的 ECDSA X509 憑證新支援，產生位元組資料流的簽章是多麼的輕鬆。</span><span class="sxs-lookup"><span data-stu-id="e9141-493">The following example code shows how easy it is to generate a signature for a byte stream by using the new  support for ECDSA  X509 certificates included in the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].</span></span>
 
  [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
  [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
- 這為所需的程式碼提供標記的對比，以在 .NET Framework 4.6 中產生簽章。
+ <span data-ttu-id="e9141-494">這為所需的程式碼提供標記的對比，以在 .NET Framework 4.6 中產生簽章。</span><span class="sxs-lookup"><span data-stu-id="e9141-494">This offers a marked contrast to the code needed to generate a signature in the .NET Framework 4.6.</span></span>
 
  [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
  [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
-### <a name="adonet"></a>ADO.NET
- 下列項目已加入 ADO.NET：
+### <a name="adonet"></a><span data-ttu-id="e9141-495">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e9141-495">ADO.NET</span></span>
+ <span data-ttu-id="e9141-496">下列項目已加入 ADO.NET：</span><span class="sxs-lookup"><span data-stu-id="e9141-496">The following have been added to ADO.NET:</span></span>
 
- 硬體保護金鑰的 Always Encrypted 支援：ADO.NET 現在支援在硬體安全模組 (HSM) 中以原生方式儲存 Always Encrypted 資料行主要金鑰。 透過此支援，客戶不需要撰寫自訂的資料行主要金鑰存放區提供者並向應用程式註冊，即可以使用儲存在 HSM 的非對稱金鑰。
+ <span data-ttu-id="e9141-497">硬體保護金鑰的 Always Encrypted 支援：ADO.NET 現在支援在硬體安全模組 (HSM) 中以原生方式儲存 Always Encrypted 資料行主要金鑰。</span><span class="sxs-lookup"><span data-stu-id="e9141-497">Always Encrypted support for hardware protected keys ADO.NET now supports storing Always Encrypted column master keys natively in Hardware Security Modules (HSMs).</span></span> <span data-ttu-id="e9141-498">透過此支援，客戶不需要撰寫自訂的資料行主要金鑰存放區提供者並向應用程式註冊，即可以使用儲存在 HSM 的非對稱金鑰。</span><span class="sxs-lookup"><span data-stu-id="e9141-498">With this support, customers can leverage asymmetric keys stored in HSMs without having to write custom column master key store providers and registering them in applications.</span></span>
 
- 客戶必須在應用程式伺服器或用戶端電腦上安裝 HSM 廠商提供的 CSP 提供者或 CNG 金鑰存放區提供者，才能存取受到儲存在 HSM 之資料行主要金鑰保護的 Always Encrypted 資料。
+ <span data-ttu-id="e9141-499">客戶必須在應用程式伺服器或用戶端電腦上安裝 HSM 廠商提供的 CSP 提供者或 CNG 金鑰存放區提供者，才能存取受到儲存在 HSM 之資料行主要金鑰保護的 Always Encrypted 資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-499">Customers need to install the HSM vendor-provided CSP provider or CNG key store providers on the app servers or client computers in order to access Always Encrypted data protected with column master keys stored in a HSM.</span></span>
 
- 改善 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 連線行為：SqlClient 現在會自動提供更快的「AlwaysOn 可用性群組」(AG) 連線。 它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。 在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。 如果不在 `true` 設定連接關鍵字，應用程式可能會在連接到 AlwaysOn 可用性群組時發生逾時狀況。 使用此版本，應用程式就「不再」需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。 如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、嚴重損壞修復的 SqlClient 支援](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
+ <span data-ttu-id="e9141-500">改善 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 連線行為：SqlClient 現在會自動提供更快的「AlwaysOn 可用性群組」(AG) 連線。</span><span class="sxs-lookup"><span data-stu-id="e9141-500">Improve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> connection behavior for AlwaysOn SqlClient now automatically provides faster connection to an AlwaysOn Availability Group (AG).</span></span> <span data-ttu-id="e9141-501">它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。</span><span class="sxs-lookup"><span data-stu-id="e9141-501">It transparently detects whether your application is connecting to an AlwaysOn availability group (AG) on a different subnet and quickly discovers the current active server and provides a connection to the server.</span></span> <span data-ttu-id="e9141-502">在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。</span><span class="sxs-lookup"><span data-stu-id="e9141-502">Prior to this release, an application had to set the connection string to include `"MultisubnetFailover=true"` to indicate that it was connecting to an AlwaysOn Availability Group.</span></span> <span data-ttu-id="e9141-503">如果不在 `true` 設定連接關鍵字，應用程式可能會在連接到 AlwaysOn 可用性群組時發生逾時狀況。</span><span class="sxs-lookup"><span data-stu-id="e9141-503">Without setting the connection keyword to `true`, an application might experience a timeout while connecting to an AlwaysOn Availability Group.</span></span> <span data-ttu-id="e9141-504">使用此版本，應用程式就「不再」需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="e9141-504">With this release, an application does *not* need to set <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> to `true` anymore.</span></span> <span data-ttu-id="e9141-505">如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、嚴重損壞修復的 SqlClient 支援](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-505">For more information about SqlClient support for Always On Availability Groups, see [SqlClient Support for High Availability, Disaster Recovery](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).</span></span>
 
 <a name="WPF461"></a> 
-### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
- Windows Presentation Foundation 包含數個改進和變更。
+### <a name="windows-presentation-foundation-wpf"></a><span data-ttu-id="e9141-506">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-506">Windows Presentation Foundation (WPF)</span></span>
+ <span data-ttu-id="e9141-507">Windows Presentation Foundation 包含數個改進和變更。</span><span class="sxs-lookup"><span data-stu-id="e9141-507">Windows Presentation Foundation includes a number of improvements and changes.</span></span>
 
- 改善效能：[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 已修正引發觸控事件的延遲。 此外，<xref:System.Windows.Controls.RichTextBox> 控制項中的輸入也不會在快速輸入期間佔用呈現執行緒。
+ <span data-ttu-id="e9141-508">改善效能：[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 已修正引發觸控事件的延遲。</span><span class="sxs-lookup"><span data-stu-id="e9141-508">Improved performance The delay in firing touch events has been fixed in the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].</span></span> <span data-ttu-id="e9141-509">此外，<xref:System.Windows.Controls.RichTextBox> 控制項中的輸入也不會在快速輸入期間佔用呈現執行緒。</span><span class="sxs-lookup"><span data-stu-id="e9141-509">In addition, typing in a <xref:System.Windows.Controls.RichTextBox> control no longer ties up the render thread during fast input.</span></span>
 
- 改善拼字檢查：Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業系統支援其他語言的拼字檢查。  Windows 8.1 之前的 Windows 版本功能沒有任何變更。
+ <span data-ttu-id="e9141-510">改善拼字檢查：Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業系統支援其他語言的拼字檢查。</span><span class="sxs-lookup"><span data-stu-id="e9141-510">Spell checking improvements The spell checker in WPF has been updated on Windows 8.1 and later versions to leverage operating system support for spell-checking additional languages.</span></span>  <span data-ttu-id="e9141-511">Windows 8.1 之前的 Windows 版本功能沒有任何變更。</span><span class="sxs-lookup"><span data-stu-id="e9141-511">There is no change in functionality on Windows versions prior to Windows 8.1.</span></span>
 
- 如同舊版的 .NET Framework，依下列順序尋找資訊會偵測到 <xref:System.Windows.Controls.TextBox> 控制項或 <xref:System.Windows.Controls.RichTextBox> 區塊的語言：
+ <span data-ttu-id="e9141-512">如同舊版的 .NET Framework，依下列順序尋找資訊會偵測到 <xref:System.Windows.Controls.TextBox> 控制項或 <xref:System.Windows.Controls.RichTextBox> 區塊的語言：</span><span class="sxs-lookup"><span data-stu-id="e9141-512">As in previous versions of the .NET Framework, the language for a <xref:System.Windows.Controls.TextBox> control ora <xref:System.Windows.Controls.RichTextBox> block is detected by looking for information in the following order:</span></span>
 
-- `xml:lang` (如有)。
+- <span data-ttu-id="e9141-513">`xml:lang` (如有)。</span><span class="sxs-lookup"><span data-stu-id="e9141-513">`xml:lang`, if it is present.</span></span>
 
-- 目前的輸入語言。
+- <span data-ttu-id="e9141-514">目前的輸入語言。</span><span class="sxs-lookup"><span data-stu-id="e9141-514">Current input language.</span></span>
 
-- 目前的執行緒文化特性。
+- <span data-ttu-id="e9141-515">目前的執行緒文化特性。</span><span class="sxs-lookup"><span data-stu-id="e9141-515">Current thread culture.</span></span>
 
- 如需 WPF 語言支援的其他資訊，請參閱[討論 .NET Framework 4.6.1 功能的 WPF 部落格文章 (英文)](http://go.microsoft.com/fwlink/?LinkID=691819)。
+ <span data-ttu-id="e9141-516">如需 WPF 語言支援的其他資訊，請參閱[討論 .NET Framework 4.6.1 功能的 WPF 部落格文章 (英文)](http://go.microsoft.com/fwlink/?LinkID=691819)。</span><span class="sxs-lookup"><span data-stu-id="e9141-516">For additional information on language support in WPF, see the [WPF blog post on .NET Framework 4.6.1 features](http://go.microsoft.com/fwlink/?LinkID=691819).</span></span>
 
- 每個使用者自訂字典的額外支援：在 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，WPF 能夠辨識已全域註冊的自訂字典。 這是除了依照每個控制項登錄它們之外的可用功能。
+ <span data-ttu-id="e9141-517">每個使用者自訂字典的額外支援：在 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，WPF 能夠辨識已全域註冊的自訂字典。</span><span class="sxs-lookup"><span data-stu-id="e9141-517">Additional support for per-user custom dictionaries In [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], WPF recognizes custom dictionaries that are registered globally.</span></span> <span data-ttu-id="e9141-518">這是除了依照每個控制項登錄它們之外的可用功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-518">This capability is available in addition to the ability to register them per-control.</span></span>
 
- 在舊版的 WPF 中，自訂的字典無法辨識 [已排除單字] 和 [自動校正] 清單。 Windows 8.1 和 Windows 10 透過可置於 `%AppData%\Microsoft\Spelling\<language tag>` 目錄之下使用的檔案支援它們。  下列規則適用於這些檔案：
+ <span data-ttu-id="e9141-519">在舊版的 WPF 中，自訂的字典無法辨識 [已排除單字] 和 [自動校正] 清單。</span><span class="sxs-lookup"><span data-stu-id="e9141-519">In previous versions of WPF, custom dictionaries did not recognize Excluded Words and AutoCorrect lists.</span></span> <span data-ttu-id="e9141-520">Windows 8.1 和 Windows 10 透過可置於 `%AppData%\Microsoft\Spelling\<language tag>` 目錄之下使用的檔案支援它們。</span><span class="sxs-lookup"><span data-stu-id="e9141-520">They are supported on Windows 8.1 and Windows 10 through the use of files that can be placed under the `%AppData%\Microsoft\Spelling\<language tag>` directory.</span></span>  <span data-ttu-id="e9141-521">下列規則適用於這些檔案：</span><span class="sxs-lookup"><span data-stu-id="e9141-521">The following rules apply to these files:</span></span>
 
-- 檔案應有副檔名：.dic (用於加入的字詞)、.exc (用於排除的字詞) 或 .acl (用於自動校正)。
+- <span data-ttu-id="e9141-522">檔案應有副檔名：.dic (用於加入的字詞)、.exc (用於排除的字詞) 或 .acl (用於自動校正)。</span><span class="sxs-lookup"><span data-stu-id="e9141-522">The files should have extensions of .dic (for added words), .exc (for excluded words), or .acl (for AutoCorrect).</span></span>
 
-- 檔案應為以位元組順序標記 (BOM) 開始的 UTF-16 LE 純文字。
+- <span data-ttu-id="e9141-523">檔案應為以位元組順序標記 (BOM) 開始的 UTF-16 LE 純文字。</span><span class="sxs-lookup"><span data-stu-id="e9141-523">The files should be UTF-16 LE plaintext that starts with the Byte Order Mark (BOM).</span></span>
 
-- 每一行的組成應為單字 (在新增和排除的字詞清單中)，或以分隔號 ("&#124;") 分隔的自動校正組合單字 (在 [自動校正] 單字清單中)。
+- <span data-ttu-id="e9141-524">每一行的組成應為單字 (在新增和排除的字詞清單中)，或以分隔號 ("&#124;") 分隔的自動校正組合單字 (在 [自動校正] 單字清單中)。</span><span class="sxs-lookup"><span data-stu-id="e9141-524">Each line should consist of a word (in the added and excluded word lists), or an autocorrect pair with the words separated by a vertical bar ("&#124;") (in the AutoCorrect word list).</span></span>
 
-- 系統將這些檔案視為唯讀，而且不會加以修改。
+- <span data-ttu-id="e9141-525">系統將這些檔案視為唯讀，而且不會加以修改。</span><span class="sxs-lookup"><span data-stu-id="e9141-525">These files are considered read-only and are not modified by the system.</span></span>
 
 > [!NOTE]
->  WPF 拼字檢查 API 不直接支援這些新的檔案格式，而應用程式中向 WPF 提供的自訂字典應該繼續使用 .lex 檔案。
+>  <span data-ttu-id="e9141-526">WPF 拼字檢查 API 不直接支援這些新的檔案格式，而應用程式中向 WPF 提供的自訂字典應該繼續使用 .lex 檔案。</span><span class="sxs-lookup"><span data-stu-id="e9141-526">These new file-formats are not directly supported by the WPF spell checking API’s, and the custom dictionaries supplied to WPF in applications should continue to use .lex files.</span></span>
 
- 範例：MSDN 上有多個 [WPF 範例](https://msdn.microsoft.com/library/ms771633.aspx)。 [開放原始碼 GitHub 存放庫](https://github.com/Microsoft/WPF-Samples)中也將匯入 200 多個最熱門的範例 (根據使用量而定)。 您可以回傳意見調查表或提交 [GitHub 問題](https://github.com/Microsoft/WPF-Samples/issues)，以協助我們改進範例。
+ <span data-ttu-id="e9141-527">範例：MSDN 上有多個 [WPF 範例](https://msdn.microsoft.com/library/ms771633.aspx)。</span><span class="sxs-lookup"><span data-stu-id="e9141-527">Samples There are a number of [WPF Samples](https://msdn.microsoft.com/library/ms771633.aspx) on MSDN.</span></span> <span data-ttu-id="e9141-528">[開放原始碼 GitHub 存放庫](https://github.com/Microsoft/WPF-Samples)中也將匯入 200 多個最熱門的範例 (根據使用量而定)。</span><span class="sxs-lookup"><span data-stu-id="e9141-528">More than 200 of the most popular samples (based on their usage) will be moved into an [Open Source GitHub repository](https://github.com/Microsoft/WPF-Samples).</span></span> <span data-ttu-id="e9141-529">您可以回傳意見調查表或提交 [GitHub 問題](https://github.com/Microsoft/WPF-Samples/issues)，以協助我們改進範例。</span><span class="sxs-lookup"><span data-stu-id="e9141-529">Help us improve our samples by sending us a pull-request or opening a [GitHub issue](https://github.com/Microsoft/WPF-Samples/issues).</span></span>
 
- DirectX 擴充功能：WPF 包含一個 [NuGet 套件](http://go.microsoft.com/fwlink/?LinkID=691342)，此套件提供新的 <xref:System.Windows.Interop.D3DImage> 實作，可讓您輕鬆地與 DX10 和 Dx11 內容交互操作。 這個套件的程式碼為開放原始碼，並可於 [GitHub](https://github.com/Microsoft/WPFDXInterop) 取得。
+ <span data-ttu-id="e9141-530">DirectX 擴充功能：WPF 包含一個 [NuGet 套件](http://go.microsoft.com/fwlink/?LinkID=691342)，此套件提供新的 <xref:System.Windows.Interop.D3DImage> 實作，可讓您輕鬆地與 DX10 和 Dx11 內容交互操作。</span><span class="sxs-lookup"><span data-stu-id="e9141-530">DirectX extensions WPF includes a [NuGet package](http://go.microsoft.com/fwlink/?LinkID=691342) that provides new implementations of <xref:System.Windows.Interop.D3DImage> that make it easy for you to interoperate with DX10 and Dx11 content.</span></span> <span data-ttu-id="e9141-531">這個套件的程式碼為開放原始碼，並可於 [GitHub](https://github.com/Microsoft/WPFDXInterop) 取得。</span><span class="sxs-lookup"><span data-stu-id="e9141-531">The code for this package has been open sourced and is available [on GitHub](https://github.com/Microsoft/WPFDXInterop).</span></span>
 
 <a name="WWF461"></a> 
-### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation：教學課程
- <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> 方法現在可以使用 MSDTC 以外的分散式交易管理員升級交易。 要想這麼做，請將 GUID 交易升級程式識別碼指定給新的 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 多載。 如果這項作業成功，交易的功能上就會放置一些限制。 一旦登錄了非 MSDTC 的交易升級程式，下列方法就會擲回 <xref:System.Transactions.TransactionPromotionException>，因為這些方法需要升級至 MSDTC：
+### <a name="windows-workflow-foundation-transactions"></a><span data-ttu-id="e9141-532">Windows Workflow Foundation：教學課程</span><span class="sxs-lookup"><span data-stu-id="e9141-532">Windows Workflow Foundation: Transactions</span></span>
+ <span data-ttu-id="e9141-533"><xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 方法現在可以使用 MSDTC 以外的分散式交易管理員升級交易。</span><span class="sxs-lookup"><span data-stu-id="e9141-533">The <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> method can now use a distributed transaction manager other than MSDTC to promote the transaction.</span></span> <span data-ttu-id="e9141-534">要想這麼做，請將 GUID 交易升級程式識別碼指定給新的 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> 多載。</span><span class="sxs-lookup"><span data-stu-id="e9141-534">You do this by specifying a GUID transaction promoter identifier to the  new <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> overload .</span></span> <span data-ttu-id="e9141-535">如果這項作業成功，交易的功能上就會放置一些限制。</span><span class="sxs-lookup"><span data-stu-id="e9141-535">If this operation is successful, there are limitations placed on the capabilities of the transaction.</span></span> <span data-ttu-id="e9141-536">一旦登錄了非 MSDTC 的交易升級程式，下列方法就會擲回 <xref:System.Transactions.TransactionPromotionException>，因為這些方法需要升級至 MSDTC：</span><span class="sxs-lookup"><span data-stu-id="e9141-536">Once a non-MSDTC transaction promoter is enlisted, the following methods throw a <xref:System.Transactions.TransactionPromotionException> because these methods require promotion to MSDTC:</span></span>
 
-- <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>
+- <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
 
-- <xref:System.Transactions.TransactionInterop.GetDtcTransaction%2A?displayProperty=fullName>
+- <xref:System.Transactions.TransactionInterop.GetDtcTransaction%2A?displayProperty=nameWithType>
 
-- <xref:System.Transactions.TransactionInterop.GetExportCookie%2A?displayProperty=fullName>
+- <xref:System.Transactions.TransactionInterop.GetExportCookie%2A?displayProperty=nameWithType>
 
-- <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=fullName>
+- <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=nameWithType>
 
- 一旦登錄了非 MSDTC 的交易升級程式，即必須使用它定義的通訊協定，將它用於未來的永久性登錄。 使用 <xref:System.Transactions.Transaction.PromoterType%2A> 屬性可取得交易升級程式的 <xref:System.Guid>。 當交易升級時，交易升級程式會提供 <xref:System.Byte> 陣列，表示升級的語彙基元。 應用程式可以 <xref:System.Transactions.Transaction.GetPromotedToken%2A> 方法取得非 MSDTC 已升級交易的已升級語彙基元。
+ <span data-ttu-id="e9141-537">一旦登錄了非 MSDTC 的交易升級程式，即必須使用它定義的通訊協定，將它用於未來的永久性登錄。</span><span class="sxs-lookup"><span data-stu-id="e9141-537">Once a non-MSDTC transaction promoter is enlisted, it must be used for future durable enlistments by using protocols that it defines.</span></span> <span data-ttu-id="e9141-538">使用 <xref:System.Transactions.Transaction.PromoterType%2A> 屬性可取得交易升級程式的 <xref:System.Guid>。</span><span class="sxs-lookup"><span data-stu-id="e9141-538">The <xref:System.Guid> of the transaction promoter can be obtained by using the <xref:System.Transactions.Transaction.PromoterType%2A> property.</span></span> <span data-ttu-id="e9141-539">當交易升級時，交易升級程式會提供 <xref:System.Byte> 陣列，表示升級的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="e9141-539">When the transaction promotes, the transaction promoter provides a <xref:System.Byte> array that represents the promoted token.</span></span> <span data-ttu-id="e9141-540">應用程式可以 <xref:System.Transactions.Transaction.GetPromotedToken%2A> 方法取得非 MSDTC 已升級交易的已升級語彙基元。</span><span class="sxs-lookup"><span data-stu-id="e9141-540">An application can obtain the promoted token for a non-MSDTC promoted transaction with the <xref:System.Transactions.Transaction.GetPromotedToken%2A> method.</span></span>
 
- 新 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 多載的使用者必須遵循特定的呼叫序列，以便升級作業順利完成。 這些規則都會記錄在於方法的文件中。
+ <span data-ttu-id="e9141-541">新 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> 多載的使用者必須遵循特定的呼叫序列，以便升級作業順利完成。</span><span class="sxs-lookup"><span data-stu-id="e9141-541">Users of the new <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> overload must follow a specific call sequence in order for the promotion operation to complete successfully.</span></span> <span data-ttu-id="e9141-542">這些規則都會記錄在於方法的文件中。</span><span class="sxs-lookup"><span data-stu-id="e9141-542">These rules are documented in the method's documentation.</span></span>
 
 <a name="Profile461"></a> 
-### <a name="profiling"></a>程式碼剖析
- Unmanaged 程式碼剖析 API 已增強下列項目：
+### <a name="profiling"></a><span data-ttu-id="e9141-543">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="e9141-543">Profiling</span></span>
+ <span data-ttu-id="e9141-544">Unmanaged 程式碼剖析 API 已增強下列項目：</span><span class="sxs-lookup"><span data-stu-id="e9141-544">The unmanaged profiling API has been enhanced follows:</span></span>
 
- 為存取 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面中的 PDB 提供更好的支援：在 ASP.Net 5 中，由 Roslyn 在記憶體內編譯組件變得更加普遍。 對於製作程式碼剖析工具的開發人員，這表示過去在磁碟上序列化的 PDB 可能不再存在。 程式碼分析工具通常會使用 PDB 對應回工作原始程式行的程式碼，例如程式碼涵蓋範圍或逐行效能分析。 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面現在包含兩種新方法：[ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) 和 [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)，讓這些分析工具能夠存取記憶體中的 PDB 資料。分析工具使用新的 API，即可取得記憶體內的 PDB 內容作為位元組陣列，然後予以處理或序列化至磁碟。
+ <span data-ttu-id="e9141-545">為存取 [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面中的 PDB 提供更好的支援：在 ASP.Net 5 中，由 Roslyn 在記憶體內編譯組件變得更加普遍。</span><span class="sxs-lookup"><span data-stu-id="e9141-545">Better support for accessing PDBs in the [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) interface In ASP.Net 5, it is becoming much more common for assemblies to be compiled in-memory by Roslyn.</span></span> <span data-ttu-id="e9141-546">對於製作程式碼剖析工具的開發人員，這表示過去在磁碟上序列化的 PDB 可能不再存在。</span><span class="sxs-lookup"><span data-stu-id="e9141-546">For developers making profiling tools, this means that PDBs that historically were serialized on disk may no longer be present.</span></span> <span data-ttu-id="e9141-547">程式碼分析工具通常會使用 PDB 對應回工作原始程式行的程式碼，例如程式碼涵蓋範圍或逐行效能分析。</span><span class="sxs-lookup"><span data-stu-id="e9141-547">Profiler tools often use PDBs to map code back to source lines for tasks such as code coverage or line-by-line performance analysis.</span></span> <span data-ttu-id="e9141-548">[ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) 介面現在包含兩種新方法：[ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) 和 [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md)，讓這些分析工具能夠存取記憶體中的 PDB 資料。分析工具使用新的 API，即可取得記憶體內的 PDB 內容作為位元組陣列，然後予以處理或序列化至磁碟。</span><span class="sxs-lookup"><span data-stu-id="e9141-548">The [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) interface now includes two new methods, [ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) and [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), to provide these profiler tools with access to the in-memory PDB data, By using the new APIs, a profiler can obtain the contents of an in-memory PDB as a byte array and then process it or serialize it to disk.</span></span>
 
- 具有 ICorProfiler 介面的更佳檢測方式：使用 `ICorProfiler` API 的 ReJit 功能進行動態檢測的程式碼分析工具，現在可以修改某些中繼資料。 這類工具過去可以隨時檢測 IL，但只能在模組載入時修改中繼資料。 因為 IL 參考中繼資料，這會限制能夠執行的檢測種類。 我們已新增 [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) 方法，以支援在載入模組之後進行中繼資料子集的編輯；尤其還新增 `AssemblyRef`、`TypeRef`、`TypeSpec`、`MemberRef`、`MemberSpec` 和 `UserString` 記錄，藉此解除上述部分限制。 此變更讓更大範圍的即時檢測變成可能。
+ <span data-ttu-id="e9141-549">具有 ICorProfiler 介面的更佳檢測方式：使用 `ICorProfiler` API 的 ReJit 功能進行動態檢測的程式碼分析工具，現在可以修改某些中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-549">Better instrumentation with the ICorProfiler interface Profilers that are using the `ICorProfiler` API’s ReJit functionality for dynamic instrumentation can now modify some metadata.</span></span> <span data-ttu-id="e9141-550">這類工具過去可以隨時檢測 IL，但只能在模組載入時修改中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-550">Previously such tools could instrument IL at any time, but metadata could only be modified at module load time.</span></span> <span data-ttu-id="e9141-551">因為 IL 參考中繼資料，這會限制能夠執行的檢測種類。</span><span class="sxs-lookup"><span data-stu-id="e9141-551">Because IL refers to metadata, this limited the kinds of instrumentation that could be done.</span></span> <span data-ttu-id="e9141-552">我們已新增 [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) 方法，以支援在載入模組之後進行中繼資料子集的編輯；尤其還新增 `AssemblyRef`、`TypeRef`、`TypeSpec`、`MemberRef`、`MemberSpec` 和 `UserString` 記錄，藉此解除上述部分限制。</span><span class="sxs-lookup"><span data-stu-id="e9141-552">We have lifted some of those limits by adding the [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) method to support a subset of metadata edits after the module loads, in particular by adding new `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec`, and `UserString` records.</span></span> <span data-ttu-id="e9141-553">此變更讓更大範圍的即時檢測變成可能。</span><span class="sxs-lookup"><span data-stu-id="e9141-553">This change makes a much broader range of on-the-fly instrumentation possible.</span></span>
 
 <a name="NGEN461"></a> 
-### <a name="native-image-generator-ngen-pdbs"></a>原生映像產生器 PDB
- 跨電腦事件追蹤可讓客戶分析電腦 A 的程式，並使用電腦 B 上對應的原始程式查看程式碼剖析資料。使用舊版的 .NET Framework 時，使用者會將所有模組和原生映像從剖析的機器複製到包含 IL PDB 的分析機器，以建立來源與原生的對應。 雖然這個程序能在檔案較小時運作良好 (例如手機應用程式)，但是桌上型系統的檔案可能非常巨大，而需要大量的複製時間。
+### <a name="native-image-generator-ngen-pdbs"></a><span data-ttu-id="e9141-554">原生映像產生器 PDB</span><span class="sxs-lookup"><span data-stu-id="e9141-554">Native Image Generator (NGEN) PDBs</span></span>
+ <span data-ttu-id="e9141-555">跨電腦事件追蹤可讓客戶分析電腦 A 的程式，並使用電腦 B 上對應的原始程式查看程式碼剖析資料。使用舊版的 .NET Framework 時，使用者會將所有模組和原生映像從剖析的機器複製到包含 IL PDB 的分析機器，以建立來源與原生的對應。</span><span class="sxs-lookup"><span data-stu-id="e9141-555">Cross-machine event tracing allows customers to profile a program on Machine A and look at the profiling data with source line mapping on Machine B. Using previous versions of the .NET Framework, the user would copy all the modules and native images from the profiled machine to the analysis machine that contains the IL PDB to create the source-to-native mapping.</span></span> <span data-ttu-id="e9141-556">雖然這個程序能在檔案較小時運作良好 (例如手機應用程式)，但是桌上型系統的檔案可能非常巨大，而需要大量的複製時間。</span><span class="sxs-lookup"><span data-stu-id="e9141-556">While this process may work well when the files are relatively small, such as for phone applications, the files can be very large on desktop systems and require significant time to copy.</span></span>
 
- 使用 Ngen PDB，NGen 可以建立包含 IL 與原生對應的 PDB，不必依賴 IL PDB。 在我們的跨電腦事件追蹤案例中，您只需要將電腦 A 產生的原生映像 PDB 複製到電腦 B，並使用[偵錯介面存取 API](https://msdn.microsoft.com/library/ee8x173s.aspx)，讀取 IL PDB 的來源與 IL 對應及原生映像 PDB 的 IL 與原生對應。 結合兩個對應可提供來源與原生對應。 由於原生映像 PDB 遠小於所有模組和原生映像，電腦 A 到電腦 B 的複製程序會更快。
+ <span data-ttu-id="e9141-557">使用 Ngen PDB，NGen 可以建立包含 IL 與原生對應的 PDB，不必依賴 IL PDB。</span><span class="sxs-lookup"><span data-stu-id="e9141-557">With Ngen PDBs, NGen can create a PDB that contains the IL-to-native mapping without a dependency on the IL PDB.</span></span> <span data-ttu-id="e9141-558">在我們的跨電腦事件追蹤案例中，您只需要將電腦 A 產生的原生映像 PDB 複製到電腦 B，並使用[偵錯介面存取 API](https://msdn.microsoft.com/library/ee8x173s.aspx)，讀取 IL PDB 的來源與 IL 對應及原生映像 PDB 的 IL 與原生對應。</span><span class="sxs-lookup"><span data-stu-id="e9141-558">In our cross-machine event tracing scenario, all that is needed is to copy the native image PDB that is generated by Machine A to Machine B and to use [Debug Interface Access APIs](https://msdn.microsoft.com/library/ee8x173s.aspx) to read the IL PDB's source-to-IL mapping and the native image PDB's IL-to-native mapping.</span></span> <span data-ttu-id="e9141-559">結合兩個對應可提供來源與原生對應。</span><span class="sxs-lookup"><span data-stu-id="e9141-559">Combining both mappings provides a source-to-native mapping.</span></span> <span data-ttu-id="e9141-560">由於原生映像 PDB 遠小於所有模組和原生映像，電腦 A 到電腦 B 的複製程序會更快。</span><span class="sxs-lookup"><span data-stu-id="e9141-560">Since the native image PDB is much smaller than all the modules and native images, the process of copying from Machine A to Machine B is much faster.</span></span>
 
 <a name="v46"></a> 
-## <a name="whats-new-in-net-2015"></a>.NET 2015 的新功能
- .NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET 核心。 其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。
+## <a name="whats-new-in-net-2015"></a><span data-ttu-id="e9141-561">.NET 2015 的新功能</span><span class="sxs-lookup"><span data-stu-id="e9141-561">What's new in .NET 2015</span></span>
+ <span data-ttu-id="e9141-562">.NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET 核心。</span><span class="sxs-lookup"><span data-stu-id="e9141-562">.NET 2015 introduces the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] and .NET Core.</span></span> <span data-ttu-id="e9141-563">其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e9141-563">Some new features apply to both, and other features are specific to [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] or [!INCLUDE[net_core](../../../includes/net-core-md.md)].</span></span>
 
-- **ASP.NET 5**
+- <span data-ttu-id="e9141-564">**ASP.NET 5**</span><span class="sxs-lookup"><span data-stu-id="e9141-564">**ASP.NET 5**</span></span>
 
-     .NET 2015 包含 ASP.NET 5，是用於建置現代雲端式應用程式的精實 .NET 實作 。 ASP.NET 5 已模組化，因此您可以在應用程式中僅包含需要的功能。 這個平台可裝載於 IIS 上或自行裝載於自訂處理序中，而且您可以在同一部伺服器上執行具有不同 .NET Framework 版本的應用程式。 其中所包含的新環境組態系統是專為雲端部署所設計。
+     <span data-ttu-id="e9141-565">.NET 2015 包含 ASP.NET 5，是用於建置現代雲端式應用程式的精實 .NET 實作 。</span><span class="sxs-lookup"><span data-stu-id="e9141-565">.NET 2015 includes ASP.NET 5, which is a lean .NET implementation for building modern cloud-based apps.</span></span> <span data-ttu-id="e9141-566">ASP.NET 5 已模組化，因此您可以在應用程式中僅包含需要的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-566">ASP.NET 5 is modular so you can include only those features that are needed in your application.</span></span> <span data-ttu-id="e9141-567">這個平台可裝載於 IIS 上或自行裝載於自訂處理序中，而且您可以在同一部伺服器上執行具有不同 .NET Framework 版本的應用程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-567">It can be hosted on IIS or self-hosted in a custom process, and you can run apps with different versions of the .NET Framework on the same server.</span></span> <span data-ttu-id="e9141-568">其中所包含的新環境組態系統是專為雲端部署所設計。</span><span class="sxs-lookup"><span data-stu-id="e9141-568">It includes a new environment configuration system that is designed for cloud deployment.</span></span>
 
-     MVC、Web API 和網頁已整合成單一架構，稱為 MVC 6。 您可以透過 Visual Studio 2015 中的新工具來建置 ASP.NET 5 應用程式。 您現有的應用程式可在新的 .NET Framework 上運作；不過若要建置使用 MVC 6 或 SignalR 3 的應用程式，您必須使用 Visual Studio 2015 中的專案系統。
+     <span data-ttu-id="e9141-569">MVC、Web API 和網頁已整合成單一架構，稱為 MVC 6。</span><span class="sxs-lookup"><span data-stu-id="e9141-569">MVC, Web API, and Web Pages are unified into a single framework called MVC 6.</span></span> <span data-ttu-id="e9141-570">您可以透過 Visual Studio 2015 中的新工具來建置 ASP.NET 5 應用程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-570">You build ASP.NET 5 apps through the new tools in Visual Studio 2015.</span></span> <span data-ttu-id="e9141-571">您現有的應用程式可在新的 .NET Framework 上運作；不過若要建置使用 MVC 6 或 SignalR 3 的應用程式，您必須使用 Visual Studio 2015 中的專案系統。</span><span class="sxs-lookup"><span data-stu-id="e9141-571">Your existing applications will work on the new .NET Framework; however to build an app that uses MVC 6 or SignalR 3, you must use the project system in Visual Studio 2015.</span></span>
 
-     如需相關資訊，請參閱 [ASP.NET 5](http://go.microsoft.com/fwlink/?LinkId=518238)。
+     <span data-ttu-id="e9141-572">如需相關資訊，請參閱 [ASP.NET 5](http://go.microsoft.com/fwlink/?LinkId=518238)。</span><span class="sxs-lookup"><span data-stu-id="e9141-572">For information, see [ASP.NET 5](http://go.microsoft.com/fwlink/?LinkId=518238).</span></span>
 
-- **ASP.NET 更新**
+- <span data-ttu-id="e9141-573">**ASP.NET 更新**</span><span class="sxs-lookup"><span data-stu-id="e9141-573">**ASP.NET Updates**</span></span>
 
-    - **可非同步排清回應且以工作為基礎的 API**
+    - <span data-ttu-id="e9141-574">**可非同步排清回應且以工作為基礎的 API**</span><span class="sxs-lookup"><span data-stu-id="e9141-574">**Task-based API for Asynchronous Response Flushing**</span></span>
 
-         ASP.NET 現在提供一個以工作為基礎的簡單 API 來進行非同步回應清除，亦即 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=fullName>，其可使用您語言的 `async/await` 支援來非同步清除回應。
+         <span data-ttu-id="e9141-575">ASP.NET 現在提供一個以工作為基礎的簡單 API 來進行非同步回應清除，亦即 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>，其可使用您語言的 `async/await` 支援來非同步清除回應。</span><span class="sxs-lookup"><span data-stu-id="e9141-575">ASP.NET now provides a simple task-based API for asynchronous response flushing, <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>, that allows responses to be flushed asynchronously by using your language's `async/await` support.</span></span>
 
     - `Model binding supports task-returning methods`
 
-         [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的 ASP.NET 中已加入模型繫結功能，可保障 Web Form 頁面和使用者控制項中以 CRUD 為基礎之資料作業方式的可延伸性並以程式碼為重心。 模型繫結系統現在支援由 <xref:System.Threading.Tasks.Task>傳回的模型繫結方法。 這項功能可讓 Web Form 開發人員在使用包括 Entity Framework 的較新版 ORM 時，透過簡單的資料繫結系統獲得非同步延展性的優勢。
+         <span data-ttu-id="e9141-576">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的 ASP.NET 中已加入模型繫結功能，可保障 Web Form 頁面和使用者控制項中以 CRUD 為基礎之資料作業方式的可延伸性並以程式碼為重心。</span><span class="sxs-lookup"><span data-stu-id="e9141-576">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ASP.NET added the Model Binding feature that enabled an extensible, code-focused approach to CRUD-based data operations in Web Forms pages and user controls.</span></span> <span data-ttu-id="e9141-577">模型繫結系統現在支援由 <xref:System.Threading.Tasks.Task>傳回的模型繫結方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-577">The Model Binding system now supports <xref:System.Threading.Tasks.Task>-returning model binding methods.</span></span> <span data-ttu-id="e9141-578">這項功能可讓 Web Form 開發人員在使用包括 Entity Framework 的較新版 ORM 時，透過簡單的資料繫結系統獲得非同步延展性的優勢。</span><span class="sxs-lookup"><span data-stu-id="e9141-578">This feature allows Web Forms developers to get the scalability benefits of async with the ease of the data-binding system when using newer versions of ORMs, including the Entity Framework.</span></span>
 
-         非同步模型繫結是由 `aspnet:EnableAsyncModelBinding` 組態設定所控制。
+         <span data-ttu-id="e9141-579">非同步模型繫結是由 `aspnet:EnableAsyncModelBinding` 組態設定所控制。</span><span class="sxs-lookup"><span data-stu-id="e9141-579">Async model binding is controlled by the `aspnet:EnableAsyncModelBinding` configuration setting.</span></span>
 
-        ```
+        ```xml
         <appSettings>
            <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
         </appSettings>
         ```
 
-         若是目標為 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的應用程式，它會預設為 `true`。 若是在目標為舊版 .NET Framework 但在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 上執行的應用程式，則預設為 `false`。 您可將組態設定設為 `true` 以將其啟用。
+         <span data-ttu-id="e9141-580">若是目標為 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的應用程式，它會預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="e9141-580">On apps the target the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], it defaults to `true`.</span></span> <span data-ttu-id="e9141-581">若是在目標為舊版 .NET Framework 但在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 上執行的應用程式，則預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="e9141-581">On apps running on the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] that target an earlier version of the .NET Framework, it is `false` by default.</span></span> <span data-ttu-id="e9141-582">您可將組態設定設為 `true` 以將其啟用。</span><span class="sxs-lookup"><span data-stu-id="e9141-582">It can be enabled by setting the configuration setting to `true`.</span></span>
 
-    - **HTTP/2 支援 (Windows 10)**
+    - <span data-ttu-id="e9141-583">**HTTP/2 支援 (Windows 10)**</span><span class="sxs-lookup"><span data-stu-id="e9141-583">**HTTP/2 Support (Windows 10)**</span></span>
 
-         [HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) 是新版的 HTTP 通訊協定，可大幅改善連線的使用情況 (用戶端和伺服器之間較少往返)，並降低使用者網頁載入的延遲情形。  網頁 (與服務相反) 從 HTTP/2 獲益最明顯，因為通訊協定會針對做為單一體驗之一部分之要求的多個成品進行最佳化。 在 .NET Framework 4.6 中，HTTP/2 支援已加入 ASP.NET。 由於網路功能存在於多個層，因此 Windows、IIS 和 ASP.NET中需要新功能以啟用 HTTP/2。 您必須在 Windows 10 上執行才能搭配 ASP.NET 使用 HTTP/2。
+         <span data-ttu-id="e9141-584">[HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) 是新版的 HTTP 通訊協定，可大幅改善連線的使用情況 (用戶端和伺服器之間較少往返)，並降低使用者網頁載入的延遲情形。</span><span class="sxs-lookup"><span data-stu-id="e9141-584">[HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) is a new version of the HTTP protocol that provides much better connection utilization (fewer round-trips between client and server), resulting in lower latency web page loading for users.</span></span>  <span data-ttu-id="e9141-585">網頁 (與服務相反) 從 HTTP/2 獲益最明顯，因為通訊協定會針對做為單一體驗之一部分之要求的多個成品進行最佳化。</span><span class="sxs-lookup"><span data-stu-id="e9141-585">Web pages (as opposed to services) benefit the most from HTTP/2, since the protocol optimizes for multiple artifacts being requested as part of a single experience.</span></span> <span data-ttu-id="e9141-586">在 .NET Framework 4.6 中，HTTP/2 支援已加入 ASP.NET。</span><span class="sxs-lookup"><span data-stu-id="e9141-586">HTTP/2 support has been added to ASP.NET in the .NET Framework 4.6.</span></span> <span data-ttu-id="e9141-587">由於網路功能存在於多個層，因此 Windows、IIS 和 ASP.NET中需要新功能以啟用 HTTP/2。</span><span class="sxs-lookup"><span data-stu-id="e9141-587">Because networking functionality exists at multiple layers, new features were required in Windows, in IIS, and in ASP.NET to enable HTTP/2.</span></span> <span data-ttu-id="e9141-588">您必須在 Windows 10 上執行才能搭配 ASP.NET 使用 HTTP/2。</span><span class="sxs-lookup"><span data-stu-id="e9141-588">You must be running on Windows 10 to use HTTP/2 with ASP.NET.</span></span>
 
-         HTTP/2 也支援使用 <xref:System.Net.Http.HttpClient?displayProperty=fullName> API 的 Windows 10 通用平台 (UWP) 應用程式，並預設為啟用。
+         <span data-ttu-id="e9141-589">HTTP/2 也支援使用 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API 的 Windows 10 通用平台 (UWP) 應用程式，並預設為啟用。</span><span class="sxs-lookup"><span data-stu-id="e9141-589">HTTP/2 is also supported and on by default for Windows 10 Universal Windows Platform (UWP) apps that use the <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API.</span></span>
 
-         為了提供一個在 ASP.NET 應用程式中使用 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 功能的方式，已將含有 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 和 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> 這兩個多載的新方法新增到 <xref:System.Web.HttpResponse> 類別。
+         <span data-ttu-id="e9141-590">為了提供一個在 ASP.NET 應用程式中使用 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 功能的方式，已將含有 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 和 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> 這兩個多載的新方法新增到 <xref:System.Web.HttpResponse> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-590">In order to provide a way to use the [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) feature in ASP.NET applications, a new method with two overloads, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> and <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, has been added to the <xref:System.Web.HttpResponse> class.</span></span>
 
         > [!NOTE]
-        >  雖然 ASP.NET 5 支援 HTTP/2，但尚未加入 PUSH PROMISE 功能的支援。
+        >  <span data-ttu-id="e9141-591">雖然 ASP.NET 5 支援 HTTP/2，但尚未加入 PUSH PROMISE 功能的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-591">While ASP.NET 5 supports HTTP/2, support for the PUSH PROMISE feature has not yet been added.</span></span>
 
-         瀏覽器和網頁伺服器 (Windows 上的 IIS) 會執行所有工作。 您不需要為使用者進行任何繁重工作。
+         <span data-ttu-id="e9141-592">瀏覽器和網頁伺服器 (Windows 上的 IIS) 會執行所有工作。</span><span class="sxs-lookup"><span data-stu-id="e9141-592">The browser and the web server (IIS on Windows) do all the work.</span></span> <span data-ttu-id="e9141-593">您不需要為使用者進行任何繁重工作。</span><span class="sxs-lookup"><span data-stu-id="e9141-593">You don't have to do any heavy-lifting for your users.</span></span>
 
-         大部分的[主要瀏覽器都支援 HTTP/2](http://www.wikipedia.org/wiki/HTTP/2)，因此如果您的伺服器也支援 HTTP/2，使用者便很可能獲得其中的益處。
+         <span data-ttu-id="e9141-594">大部分的[主要瀏覽器都支援 HTTP/2](http://www.wikipedia.org/wiki/HTTP/2)，因此如果您的伺服器也支援 HTTP/2，使用者便很可能獲得其中的益處。</span><span class="sxs-lookup"><span data-stu-id="e9141-594">Most of the [major browsers support HTTP/2](http://www.wikipedia.org/wiki/HTTP/2), so it's likely that your users will benefit from HTTP/2 support if your server supports it.</span></span>
 
-    - **對權杖繫結通訊協定的支援**
+    - <span data-ttu-id="e9141-595">**對權杖繫結通訊協定的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-595">**Support for the Token Binding Protocol**</span></span>
 
-         Microsoft 與 Google 合作推出了驗證的新方法，稱為[權杖繫結通訊協定](https://github.com/TokenBinding/Internet-Drafts)。 其是假設犯罪者可能竊取位於瀏覽器快取中的驗證權杖，並用來存取本應安全無虞的資源 (例如您的銀行帳戶)，而不需要掌握您的密碼或其他特殊權限。 新的通訊協定旨在減輕這個問題。
+         <span data-ttu-id="e9141-596">Microsoft 與 Google 合作推出了驗證的新方法，稱為[權杖繫結通訊協定](https://github.com/TokenBinding/Internet-Drafts)。</span><span class="sxs-lookup"><span data-stu-id="e9141-596">Microsoft and Google have been collaborating on a new approach to authentication, called the [Token Binding Protocol](https://github.com/TokenBinding/Internet-Drafts).</span></span> <span data-ttu-id="e9141-597">其是假設犯罪者可能竊取位於瀏覽器快取中的驗證權杖，並用來存取本應安全無虞的資源 (例如您的銀行帳戶)，而不需要掌握您的密碼或其他特殊權限。</span><span class="sxs-lookup"><span data-stu-id="e9141-597">The premise is that authentication tokens (in your browser cache) can be stolen and used by criminals to access otherwise secure resources (e.g. your bank account) without requiring your password or any other privileged knowledge.</span></span> <span data-ttu-id="e9141-598">新的通訊協定旨在減輕這個問題。</span><span class="sxs-lookup"><span data-stu-id="e9141-598">The new protocol aims to mitigate this problem.</span></span>
 
-         權杖繫結通訊協定將在 Windows 10 中實作為瀏覽器功能。 ASP.NET 應用程式將會參與通訊協定，以便驗證權杖能驗證為合法。 用戶端和伺服器實作會建立通訊協定所指定的端對端保護。
+         <span data-ttu-id="e9141-599">權杖繫結通訊協定將在 Windows 10 中實作為瀏覽器功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-599">The Token Binding Protocol will be implemented in Windows 10 as a browser feature.</span></span> <span data-ttu-id="e9141-600">ASP.NET 應用程式將會參與通訊協定，以便驗證權杖能驗證為合法。</span><span class="sxs-lookup"><span data-stu-id="e9141-600">ASP.NET apps will participate in the protocol, so that authentication tokens are validated to be legitimate.</span></span> <span data-ttu-id="e9141-601">用戶端和伺服器實作會建立通訊協定所指定的端對端保護。</span><span class="sxs-lookup"><span data-stu-id="e9141-601">The client and the server implementations establish the end-to-end protection specified by the protocol.</span></span>
 
-    - **隨機字串雜湊演算法**
+    - <span data-ttu-id="e9141-602">**隨機字串雜湊演算法**</span><span class="sxs-lookup"><span data-stu-id="e9141-602">**Randomized string hash algorithms**</span></span>
 
-         .NET Framework 4.5 引進了[隨機字串雜湊演算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 不過，由於部分 ASP.NET 功能相依於穩定的雜湊程式碼，因此 ASP.NET 並不支援此演算法。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，現已支援隨機字串雜湊演算法。 若要啟用這項功能，請使用 `aspnet:UseRandomizedStringHashAlgorithm` 組態設定。
+         <span data-ttu-id="e9141-603">.NET Framework 4.5 引進了[隨機字串雜湊演算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-603">The .NET Framework 4.5 introduced a [randomized string hash algorithm](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).</span></span> <span data-ttu-id="e9141-604">不過，由於部分 ASP.NET 功能相依於穩定的雜湊程式碼，因此 ASP.NET 並不支援此演算法。</span><span class="sxs-lookup"><span data-stu-id="e9141-604">However, it was not supported by ASP.NET because of some ASP.NET features depended on a stable hash code.</span></span> <span data-ttu-id="e9141-605">在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，現已支援隨機字串雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="e9141-605">In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], randomized string hash algorithms are now supported.</span></span> <span data-ttu-id="e9141-606">若要啟用這項功能，請使用 `aspnet:UseRandomizedStringHashAlgorithm` 組態設定。</span><span class="sxs-lookup"><span data-stu-id="e9141-606">To enable this feature, use the `aspnet:UseRandomizedStringHashAlgorithm` config setting.</span></span>
 
-        ```
+        ```xml
         <appSettings>
            <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
         </appSettings>
         ```
 
-- **ADO.NET**
+- <span data-ttu-id="e9141-607">**ADO.NET**</span><span class="sxs-lookup"><span data-stu-id="e9141-607">**ADO.NET**</span></span>
 
-     ADO.NET 現在支援 SQL Server 2016 Community Technology Preview 2 (CTP2) 提供的 Always Encrypted 功能。 使用 Always Encrypted，SQL Server 可以對加密資料執行作業，而且最好的是加密金鑰是與應用程式一起位於客戶的受信任環境內，而不是伺服器上。 Always Encrypted 會保護客戶資料安全，因此，DBA 無法存取純文字資料。 資料的加密和解密透明地在驅動程式層級進行，以將變更現有應用程式的需求降到最少。 如需詳細資訊，請參閱 [Always Encrypted (資料庫引擎)](/sql/relational-databases/security/encryption/always-encrypted-database-engine) 和 [Always Encrypted (用戶端開發)](/sql/relational-databases/security/encryption/always-encrypted-client-development)。
+     <span data-ttu-id="e9141-608">ADO.NET 現在支援 SQL Server 2016 Community Technology Preview 2 (CTP2) 提供的 Always Encrypted 功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-608">ADO .NET now supports the Always Encrypted feature available in SQL Server 2016 Community Technology Preview 2 (CTP2).</span></span> <span data-ttu-id="e9141-609">使用 Always Encrypted，SQL Server 可以對加密資料執行作業，而且最好的是加密金鑰是與應用程式一起位於客戶的受信任環境內，而不是伺服器上。</span><span class="sxs-lookup"><span data-stu-id="e9141-609">With Always Encrypted, SQL Server can perform operations on encrypted data, and best of all the encryption key resides with the application inside the customer’s trusted environment and not on the server.</span></span> <span data-ttu-id="e9141-610">Always Encrypted 會保護客戶資料安全，因此，DBA 無法存取純文字資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-610">Always Encrypted secures customer data so DBAs do not have access to plain text data.</span></span> <span data-ttu-id="e9141-611">資料的加密和解密透明地在驅動程式層級進行，以將變更現有應用程式的需求降到最少。</span><span class="sxs-lookup"><span data-stu-id="e9141-611">Encryption and decryption of data happens transparently at the driver level, minimizing changes that have to be made to existing applications.</span></span> <span data-ttu-id="e9141-612">如需詳細資訊，請參閱 [Always Encrypted (資料庫引擎)](/sql/relational-databases/security/encryption/always-encrypted-database-engine) 和 [Always Encrypted (用戶端開發)](/sql/relational-databases/security/encryption/always-encrypted-client-development)。</span><span class="sxs-lookup"><span data-stu-id="e9141-612">For details, see [Always Encrypted (Database Engine)](/sql/relational-databases/security/encryption/always-encrypted-database-engine) and [Always Encrypted (client development)](/sql/relational-databases/security/encryption/always-encrypted-client-development).</span></span>
 
-- **Managed 程式碼的 64 位元 JIT 編譯器**
+- <span data-ttu-id="e9141-613">**Managed 程式碼的 64 位元 JIT 編譯器**</span><span class="sxs-lookup"><span data-stu-id="e9141-613">**64-bit JIT Compiler for managed code**</span></span>
 
-     .NET Framework 4.6 提供 64 位元 JIT 編譯器的新版本 (原本的代號是 RyuJIT)。 全新的 64 位元編譯器比舊版 64 位元 JIT 編譯器更大幅提升效能。 在 .NET Framework 4.6 之上執行的 64 位元處理序即會啟用全新的 64 位元編譯器。 若您的應用程式是編譯為 64 位元或 AnyCPU 並在 64 位元作業系統上執行，則會以 64 位元處理序執行。 雖然我們已盡量讓新編譯器的轉換透明化，但仍可能會有行為上的變更。 如果您在使用新的 JIT 編譯器遇到任何問題，歡迎您直接向我們反應。 如果您有任何可能與新的 64 位元 JIT 編譯器相關的問題，請透過 [Microsoft Connect](http://connect.microsoft.com/) 連絡我們。
+     <span data-ttu-id="e9141-614">.NET Framework 4.6 提供 64 位元 JIT 編譯器的新版本 (原本的代號是 RyuJIT)。</span><span class="sxs-lookup"><span data-stu-id="e9141-614">The .NET Framework 4.6 features a new version of the 64-bit JIT compiler (originally code-named RyuJIT).</span></span> <span data-ttu-id="e9141-615">全新的 64 位元編譯器比舊版 64 位元 JIT 編譯器更大幅提升效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-615">The new 64-bit compiler provides significant performance improvements over the older 64-bit JIT compiler.</span></span> <span data-ttu-id="e9141-616">在 .NET Framework 4.6 之上執行的 64 位元處理序即會啟用全新的 64 位元編譯器。</span><span class="sxs-lookup"><span data-stu-id="e9141-616">The new 64-bit compiler is enabled for 64-bit processes running on top of the .NET Framework 4.6.</span></span> <span data-ttu-id="e9141-617">若您的應用程式是編譯為 64 位元或 AnyCPU 並在 64 位元作業系統上執行，則會以 64 位元處理序執行。</span><span class="sxs-lookup"><span data-stu-id="e9141-617">Your app will run in a 64-bit process if it is compiled as 64-bit or AnyCPU and is running on a 64-bit operating system.</span></span> <span data-ttu-id="e9141-618">雖然我們已盡量讓新編譯器的轉換透明化，但仍可能會有行為上的變更。</span><span class="sxs-lookup"><span data-stu-id="e9141-618">While care has been taken to make the transition to the new compiler as transparent as possible, changes in behavior are possible.</span></span> <span data-ttu-id="e9141-619">如果您在使用新的 JIT 編譯器遇到任何問題，歡迎您直接向我們反應。</span><span class="sxs-lookup"><span data-stu-id="e9141-619">We would like to hear directly about any issues encountered when using the new JIT compiler.</span></span> <span data-ttu-id="e9141-620">如果您有任何可能與新的 64 位元 JIT 編譯器相關的問題，請透過 [Microsoft Connect](http://connect.microsoft.com/) 連絡我們。</span><span class="sxs-lookup"><span data-stu-id="e9141-620">Please contact us through [Microsoft Connect](http://connect.microsoft.com/) if you encounter an issue that may be related to the new 64-bit JIT compiler.</span></span>
 
-     新的 64 位元 JIT 編譯器也包含硬體 SIMD 加速功能，在與 <xref:System.Numerics> 命名空間中支援 SIMD 的類型結合時，可產生良好的效能改進。
+     <span data-ttu-id="e9141-621">新的 64 位元 JIT 編譯器也包含硬體 SIMD 加速功能，在與 <xref:System.Numerics> 命名空間中支援 SIMD 的類型結合時，可產生良好的效能改進。</span><span class="sxs-lookup"><span data-stu-id="e9141-621">The new 64-bit JIT compiler also includes hardware SIMD acceleration features when coupled with SIMD-enabled types in the <xref:System.Numerics> namespace, which can yield good performance improvements.</span></span>
 
-- **組件載入器改進**
+- <span data-ttu-id="e9141-622">**組件載入器改進**</span><span class="sxs-lookup"><span data-stu-id="e9141-622">**Assembly loader improvements**</span></span>
 
-     現在，組件載入器會在載入對應的 NGEN 映像之後即卸載 IL 組件，因此可以更有效率地使用記憶體。 此變更會減少虛擬記憶體，這對大型的 32 位元應用程式 (例如 Visual Studio) 特別有幫助，也可節省實體記憶體。
+     <span data-ttu-id="e9141-623">現在，組件載入器會在載入對應的 NGEN 映像之後即卸載 IL 組件，因此可以更有效率地使用記憶體。</span><span class="sxs-lookup"><span data-stu-id="e9141-623">The assembly loader now uses memory more efficiently by unloading IL assemblies after a corresponding NGEN image is loaded.</span></span> <span data-ttu-id="e9141-624">此變更會減少虛擬記憶體，這對大型的 32 位元應用程式 (例如 Visual Studio) 特別有幫助，也可節省實體記憶體。</span><span class="sxs-lookup"><span data-stu-id="e9141-624">This change decreases virtual memory, which is particularly beneficial for large 32-bit apps (such as Visual Studio), and also saves physical memory.</span></span>
 
-- **基底類別程式庫變更**
+- <span data-ttu-id="e9141-625">**基底類別程式庫變更**</span><span class="sxs-lookup"><span data-stu-id="e9141-625">**Base class library changes**</span></span>
 
-     為了能夠在主要情況下使用，[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 已新增許多 API。 其中包括下列變更和新功能：
+     <span data-ttu-id="e9141-626">為了能夠在主要情況下使用，[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 已新增許多 API。</span><span class="sxs-lookup"><span data-stu-id="e9141-626">Many new APIs have been added around to [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] to enable key scenarios.</span></span> <span data-ttu-id="e9141-627">其中包括下列變更和新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-627">These include the following changes and additions:</span></span>
 
-    - **IReadOnlyCollection\<T> 實作**
+    - <span data-ttu-id="e9141-628">**IReadOnlyCollection\<T> 實作**</span><span class="sxs-lookup"><span data-stu-id="e9141-628">**IReadOnlyCollection\<T> implementations**</span></span>
 
-         額外的集合會實作 <xref:System.Collections.Generic.IReadOnlyCollection%601>，例如 <xref:System.Collections.Generic.Queue%601> 和 <xref:System.Collections.Generic.Stack%601>。
+         <span data-ttu-id="e9141-629">額外的集合會實作 <xref:System.Collections.Generic.IReadOnlyCollection%601>，例如 <xref:System.Collections.Generic.Queue%601> 和 <xref:System.Collections.Generic.Stack%601>。</span><span class="sxs-lookup"><span data-stu-id="e9141-629">Additional collections implement <xref:System.Collections.Generic.IReadOnlyCollection%601> such as <xref:System.Collections.Generic.Queue%601> and <xref:System.Collections.Generic.Stack%601>.</span></span>
 
-    - **CultureInfo.CurrentCulture 和 CultureInfo.CurrentUICulture**
+    - <span data-ttu-id="e9141-630">**CultureInfo.CurrentCulture 和 CultureInfo.CurrentUICulture**</span><span class="sxs-lookup"><span data-stu-id="e9141-630">**CultureInfo.CurrentCulture and CultureInfo.CurrentUICulture**</span></span>
 
-         <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 屬性現在是讀寫，而不是唯讀。 如果您將新的 <xref:System.Globalization.CultureInfo> 物件指派給這些屬性，`Thread.CurrentThread.CurrentCulture` 屬性所定義的目前執行緒文化特性和 `Thread.CurrentThread.CurrentUICulture` 屬性所定義的目前 UI 執行緒文化特性也會隨著變更。
+         <span data-ttu-id="e9141-631"><xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 屬性現在是讀寫，而不是唯讀。</span><span class="sxs-lookup"><span data-stu-id="e9141-631">The <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> and <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> properties are now read-write rather than read-only.</span></span> <span data-ttu-id="e9141-632">如果您將新的 <xref:System.Globalization.CultureInfo> 物件指派給這些屬性，`Thread.CurrentThread.CurrentCulture` 屬性所定義的目前執行緒文化特性和 `Thread.CurrentThread.CurrentUICulture` 屬性所定義的目前 UI 執行緒文化特性也會隨著變更。</span><span class="sxs-lookup"><span data-stu-id="e9141-632">If you assign a new <xref:System.Globalization.CultureInfo> object to these properties, the current thread culture defined by the `Thread.CurrentThread.CurrentCulture` property and the current UI thread culture defined by the `Thread.CurrentThread.CurrentUICulture` properties also change.</span></span>
 
-    - **記憶體回收 (GC) 的增強功能**
+    - <span data-ttu-id="e9141-633">**記憶體回收 (GC) 的增強功能**</span><span class="sxs-lookup"><span data-stu-id="e9141-633">**Enhancements to garbage collection (GC)**</span></span>
 
-         <xref:System.GC> 類別現在包含 <xref:System.GC.TryStartNoGCRegion%2A> 和 <xref:System.GC.EndNoGCRegion%2A> 方法，可讓您在執行關鍵路徑期間不允許記憶體回收。
+         <span data-ttu-id="e9141-634"><xref:System.GC> 類別現在包含 <xref:System.GC.TryStartNoGCRegion%2A> 和 <xref:System.GC.EndNoGCRegion%2A> 方法，可讓您在執行關鍵路徑期間不允許記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="e9141-634">The <xref:System.GC> class now includes <xref:System.GC.TryStartNoGCRegion%2A> and <xref:System.GC.EndNoGCRegion%2A> methods that allow you to disallow garbage collection during the execution of a critical path.</span></span>
 
-         <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=fullName> 方法的新多載可讓您控制是否要對小型物件堆積和大型物件堆積進行清理和壓縮，還是只要進行清理。
+         <span data-ttu-id="e9141-635"><xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> 方法的新多載可讓您控制是否要對小型物件堆積和大型物件堆積進行清理和壓縮，還是只要進行清理。</span><span class="sxs-lookup"><span data-stu-id="e9141-635">A new overload of the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> method allows you to control whether both the small object heap and the large object heap are swept and compacted or swept only.</span></span>
 
-    - **啟用 SIMD 的類型**
+    - <span data-ttu-id="e9141-636">**啟用 SIMD 的類型**</span><span class="sxs-lookup"><span data-stu-id="e9141-636">**SIMD-enabled types**</span></span>
 
-         <xref:System.Numerics> 命名空間現在包含數種支援 SIMD 的類型，例如 <xref:System.Numerics.Matrix3x2>、<xref:System.Numerics.Matrix4x4>、<xref:System.Numerics.Plane>、<xref:System.Numerics.Quaternion>、<xref:System.Numerics.Vector2>、<xref:System.Numerics.Vector3> 和 <xref:System.Numerics.Vector4>。
+         <span data-ttu-id="e9141-637"><xref:System.Numerics> 命名空間現在包含數種支援 SIMD 的類型，例如 <xref:System.Numerics.Matrix3x2>、<xref:System.Numerics.Matrix4x4>、<xref:System.Numerics.Plane>、<xref:System.Numerics.Quaternion>、<xref:System.Numerics.Vector2>、<xref:System.Numerics.Vector3> 和 <xref:System.Numerics.Vector4>。</span><span class="sxs-lookup"><span data-stu-id="e9141-637">The <xref:System.Numerics> namespace now includes a number of SIMD-enabled types, such as <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, and <xref:System.Numerics.Vector4>.</span></span>
 
-         因為新的 64 位元 JIT 編譯器也包含硬體 SIMD 加速功能，所以在搭配支援 SIMD 的類型與新的 64 位元 JIT 編譯器時有特別顯著的效能改進。
+         <span data-ttu-id="e9141-638">因為新的 64 位元 JIT 編譯器也包含硬體 SIMD 加速功能，所以在搭配支援 SIMD 的類型與新的 64 位元 JIT 編譯器時有特別顯著的效能改進。</span><span class="sxs-lookup"><span data-stu-id="e9141-638">Because the new 64-bit JIT compiler also includes hardware SIMD acceleration features, there are especially significant performance improvements when using the SIMD-enabled types with the new 64-bit JIT compiler.</span></span>
 
-    - **加密更新**
+    - <span data-ttu-id="e9141-639">**加密更新**</span><span class="sxs-lookup"><span data-stu-id="e9141-639">**Cryptography updates**</span></span>
 
-         目前正在更新 <xref:System.Security.Cryptography?displayProperty=fullName> API 以支援 [Windows CNG 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx)。 舊版 .NET Framework 完全倚賴[舊版的 Windows 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx)作為 <xref:System.Security.Cryptography?displayProperty=fullName> 實作的基礎。 我們已經要求支援 CNG API，因為它支援[現代的加密演算法](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)，這些演算法對特定類別的應用程式來說非常重要。
+         <span data-ttu-id="e9141-640">目前正在更新 <xref:System.Security.Cryptography?displayProperty=nameWithType> API 以支援 [Windows CNG 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx)。</span><span class="sxs-lookup"><span data-stu-id="e9141-640">The <xref:System.Security.Cryptography?displayProperty=nameWithType> API is being updated to support the [Windows CNG cryptography APIs](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx).</span></span> <span data-ttu-id="e9141-641">舊版 .NET Framework 完全倚賴[舊版的 Windows 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx)作為 <xref:System.Security.Cryptography?displayProperty=nameWithType> 實作的基礎。</span><span class="sxs-lookup"><span data-stu-id="e9141-641">Previous versions of the .NET Framework have relied entirely on an [earlier version of the Windows Cryptography APIs](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx) as the basis for the <xref:System.Security.Cryptography?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="e9141-642">我們已經要求支援 CNG API，因為它支援[現代的加密演算法](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)，這些演算法對特定類別的應用程式來說非常重要。</span><span class="sxs-lookup"><span data-stu-id="e9141-642">We have had requests to support the CNG API, since it supports [modern cryptography algorithms](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support), which are important for certain categories of apps.</span></span>
 
-         .NET Framework 4.6 包含下列新的增強功能，可支援 Windows CNG 密碼編譯 API：
+         <span data-ttu-id="e9141-643">.NET Framework 4.6 包含下列新的增強功能，可支援 Windows CNG 密碼編譯 API：</span><span class="sxs-lookup"><span data-stu-id="e9141-643">The .NET Framework 4.6 includes the following new enhancements to support the Windows CNG cryptography APIs:</span></span>
 
-        - 一組適用於 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` 和 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` X509 憑證的擴充方法，其會在可能時傳回以 CNG 為基礎的實作，而不是以 CAPI 為基礎的實作 (有些智慧卡仍需要 CAPI，因此 API 可處理這類後援。)
+        - <span data-ttu-id="e9141-644">一組適用於 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` 和 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` X509 憑證的擴充方法，其會在可能時傳回以 CNG 為基礎的實作，而不是以 CAPI 為基礎的實作</span><span class="sxs-lookup"><span data-stu-id="e9141-644">A set of extension methods for X509 Certificates, `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` and `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)`, that return a CNG-based implementation rather than a CAPI-based implementation when possible.</span></span> <span data-ttu-id="e9141-645">(有些智慧卡仍需要 CAPI，因此 API 可處理這類後援。)</span><span class="sxs-lookup"><span data-stu-id="e9141-645">(Some smartcards, etc., still require CAPI, and the APIs handle the fallback).</span></span>
 
-        - <xref:System.Security.Cryptography.RSACng?displayProperty=fullName> 類別，可提供的 RSA 演算法的 CNG 實作。
+        - <span data-ttu-id="e9141-646"><xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> 類別，可提供的 RSA 演算法的 CNG 實作。</span><span class="sxs-lookup"><span data-stu-id="e9141-646">The <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> class, which provides a CNG implementation of the RSA algorithm.</span></span>
 
-        - RSA API 的增強功能，可讓一般動作不再需要轉型。 例如，當使用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 物件來加密資料時，需使用類似舊版 .NET Framework 中的下列程式碼。
+        - <span data-ttu-id="e9141-647">RSA API 的增強功能，可讓一般動作不再需要轉型。</span><span class="sxs-lookup"><span data-stu-id="e9141-647">Enhancements to the RSA API so that common actions no longer require casting.</span></span> <span data-ttu-id="e9141-648">例如，當使用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 物件來加密資料時，需使用類似舊版 .NET Framework 中的下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-648">For example, encrypting data using an <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> object requires code like the following in previous versions of the .NET Framework.</span></span>
 
              [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
              [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
-             您可將使用 .NET Framework 4.6 中新加密 API 的程式碼改寫如下，以避免轉型。
+             <span data-ttu-id="e9141-649">您可將使用 .NET Framework 4.6 中新加密 API 的程式碼改寫如下，以避免轉型。</span><span class="sxs-lookup"><span data-stu-id="e9141-649">Code that uses the new cryptography APIs in the .NET Framework 4.6 can be rewritten as follows to avoid the cast.</span></span>
 
              [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
              [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
-    - **支援日期和時間的 UNIX 時間來回轉換**
+    - <span data-ttu-id="e9141-650">**支援日期和時間的 UNIX 時間來回轉換**</span><span class="sxs-lookup"><span data-stu-id="e9141-650">**Support for converting dates and times to or from Unix time**</span></span>
 
-         <xref:System.DateTimeOffset> 結構已加入下列新方法，以支援日期和時間值的 Unix 時間來回轉換：
+         <span data-ttu-id="e9141-651"><xref:System.DateTimeOffset> 結構已加入下列新方法，以支援日期和時間值的 Unix 時間來回轉換：</span><span class="sxs-lookup"><span data-stu-id="e9141-651">The following new methods have been added to the <xref:System.DateTimeOffset> structure to support converting date and time values to or from Unix time:</span></span>
 
-        - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=nameWithType>
 
-        - <xref:System.DateTimeOffset.FromUnixTimeMilliseconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.FromUnixTimeMilliseconds%2A?displayProperty=nameWithType>
 
-        - <xref:System.DateTimeOffset.ToUnixTimeSeconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.ToUnixTimeSeconds%2A?displayProperty=nameWithType>
 
-        - <xref:System.DateTimeOffset.ToUnixTimeMilliseconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.ToUnixTimeMilliseconds%2A?displayProperty=nameWithType>
 
-    - **相容性參數**
+    - <span data-ttu-id="e9141-652">**相容性參數**</span><span class="sxs-lookup"><span data-stu-id="e9141-652">**Compatibility switches**</span></span>
 
-         新 <xref:System.AppContext> 類別加入了新的相容性功能，可讓程式庫作者為使用者提供新功能的統一退出機制。 它會建立元件之間的鬆散結合合約，以便溝通退出要求。 變更現有的功能時，此功能通常特別重要。 相反地，已經有新功能的隱含選擇加入。
+         <span data-ttu-id="e9141-653">新 <xref:System.AppContext> 類別加入了新的相容性功能，可讓程式庫作者為使用者提供新功能的統一退出機制。</span><span class="sxs-lookup"><span data-stu-id="e9141-653">The new <xref:System.AppContext> class adds a new compatibility feature that enables library writers to provide a uniform opt-out mechanism for new functionality for their users.</span></span> <span data-ttu-id="e9141-654">它會建立元件之間的鬆散結合合約，以便溝通退出要求。</span><span class="sxs-lookup"><span data-stu-id="e9141-654">It establishes a loosely-coupled contract between components in order to communicate an opt-out request.</span></span> <span data-ttu-id="e9141-655">變更現有的功能時，此功能通常特別重要。</span><span class="sxs-lookup"><span data-stu-id="e9141-655">This capability is typically important when a change is made to existing functionality.</span></span> <span data-ttu-id="e9141-656">相反地，已經有新功能的隱含選擇加入。</span><span class="sxs-lookup"><span data-stu-id="e9141-656">Conversely, there is already an implicit opt-in for new functionality.</span></span>
 
-         使用 <xref:System.AppContext>，程式庫會定義並公開相容性參數，而依賴它們的程式碼則可以設定這些參數來影響程式庫行為。 根據預設，程式庫可提供新的功能，且它們只會在已設定此參數時變更它 (亦即，它們提供先前的功能)。
+         <span data-ttu-id="e9141-657">使用 <xref:System.AppContext>，程式庫會定義並公開相容性參數，而依賴它們的程式碼則可以設定這些參數來影響程式庫行為。</span><span class="sxs-lookup"><span data-stu-id="e9141-657">With <xref:System.AppContext>, libraries define and expose compatibility switches, while code that depends on them can set those switches to affect the library behavior.</span></span> <span data-ttu-id="e9141-658">根據預設，程式庫可提供新的功能，且它們只會在已設定此參數時變更它 (亦即，它們提供先前的功能)。</span><span class="sxs-lookup"><span data-stu-id="e9141-658">By default, libraries provide the new functionality, and they only alter it (that is, they provide the previous functionality) if the switch is set.</span></span>
 
-         應用程式 (或程式庫) 可以宣告相依程式庫定義之參數的值 (一律為 <xref:System.Boolean> 值)。 參數一律隱含為 `false`。 將參數設定為 `true` 可啟用它。 明確地將參數設定為 `false` 提供了新行為。
+         <span data-ttu-id="e9141-659">應用程式 (或程式庫) 可以宣告相依程式庫定義之參數的值 (一律為 <xref:System.Boolean> 值)。</span><span class="sxs-lookup"><span data-stu-id="e9141-659">An application (or a library) can declare the value of a switch (which is always a <xref:System.Boolean> value) that a dependent library defines.</span></span> <span data-ttu-id="e9141-660">參數一律隱含為 `false`。</span><span class="sxs-lookup"><span data-stu-id="e9141-660">The switch is always implicitly `false`.</span></span> <span data-ttu-id="e9141-661">將參數設定為 `true` 可啟用它。</span><span class="sxs-lookup"><span data-stu-id="e9141-661">Setting the switch to `true` enables it.</span></span> <span data-ttu-id="e9141-662">明確地將參數設定為 `false` 提供了新行為。</span><span class="sxs-lookup"><span data-stu-id="e9141-662">Explicitly setting the switch to `false` provides the new behavior.</span></span>
 
         ```csharp
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
-         程式庫必須檢查取用者是否已宣告參數的值，然後適當地處理它。
+         <span data-ttu-id="e9141-663">程式庫必須檢查取用者是否已宣告參數的值，然後適當地處理它。</span><span class="sxs-lookup"><span data-stu-id="e9141-663">The library must check if a consumer has declared the value of the switch and then appropriately act on it.</span></span>
 
         ```csharp
         if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow)) 
@@ -890,77 +946,77 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
         }
         ```
 
-         使用一致的參數格式很有幫助，因為它們是程式庫公開的正式合約。 以下是兩種明顯的格式。
+         <span data-ttu-id="e9141-664">使用一致的參數格式很有幫助，因為它們是程式庫公開的正式合約。</span><span class="sxs-lookup"><span data-stu-id="e9141-664">It's beneficial to use a consistent format for switches, since they are a formal contract exposed by a library.</span></span> <span data-ttu-id="e9141-665">以下是兩種明顯的格式。</span><span class="sxs-lookup"><span data-stu-id="e9141-665">The following are two obvious formats.</span></span>
 
-        - *參數*.*命名空間*.*參數名稱*
+        - <span data-ttu-id="e9141-666">*參數*.*命名空間*.*參數名稱*</span><span class="sxs-lookup"><span data-stu-id="e9141-666">*Switch*.*namespace*.*switchname*</span></span>
 
-        - *參數*.*程式庫*.*參數名稱*
+        - <span data-ttu-id="e9141-667">*參數*.*程式庫*.*參數名稱*</span><span class="sxs-lookup"><span data-stu-id="e9141-667">*Switch*.*library*.*switchname*</span></span>
 
-    - **以工作為基礎的非同步模式 (TAP) 的變更**
+    - <span data-ttu-id="e9141-668">**以工作為基礎的非同步模式 (TAP) 的變更**</span><span class="sxs-lookup"><span data-stu-id="e9141-668">**Changes to the task-based asynchronous pattern (TAP)**</span></span>
 
-         在以 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 為目標的應用程式中，<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件會繼承呼叫端執行緒的文化特性和 UI 文化特性。 以舊版 .NET Framework 為目標或未以特定 .NET Framework 版本為目標的應用程式行為則不會受到影響。 如需詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 類別主題的＜文化特性和以工作為基礎的非同步作業＞一節。
+         <span data-ttu-id="e9141-669">在以 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 為目標的應用程式中，<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件會繼承呼叫端執行緒的文化特性和 UI 文化特性。</span><span class="sxs-lookup"><span data-stu-id="e9141-669">For apps that target the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects inherit the culture and UI culture of the calling thread.</span></span> <span data-ttu-id="e9141-670">以舊版 .NET Framework 為目標或未以特定 .NET Framework 版本為目標的應用程式行為則不會受到影響。</span><span class="sxs-lookup"><span data-stu-id="e9141-670">The behavior of apps that target previous versions of the .NET Framework, or that do not target a specific version of the .NET Framework, is unaffected.</span></span> <span data-ttu-id="e9141-671">如需詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 類別主題的＜文化特性和以工作為基礎的非同步作業＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-671">For more information, see the "Culture and task-based asynchronous operations" section of the <xref:System.Globalization.CultureInfo> class topic.</span></span>
 
-         若某環境資料是指定之非同步控制流程的本機環境資料，例如 `async` 方法，則可用 <xref:System.Threading.AsyncLocal%601?displayProperty=fullName> 類別來表示。 它可以用來跨執行緒保存資料。 您也可以定義每當因 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=fullName> 屬性已明確變更或因執行緒發生內容切換時而變更環境資料時，接收通知的回撥方法。
+         <span data-ttu-id="e9141-672">若某環境資料是指定之非同步控制流程的本機環境資料，例如 `async` 方法，則可用 <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> 類別來表示。</span><span class="sxs-lookup"><span data-stu-id="e9141-672">The <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> class allows you to represent ambient data that is local to a given asynchronous control flow, such as an `async` method.</span></span> <span data-ttu-id="e9141-673">它可以用來跨執行緒保存資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-673">It can be used to persist data across threads.</span></span> <span data-ttu-id="e9141-674">您也可以定義每當因 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> 屬性已明確變更或因執行緒發生內容切換時而變更環境資料時，接收通知的回撥方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-674">You can also define a callback method that is notified whenever the ambient data changes either because the <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> property was explicitly changed, or because the thread encountered a context transition.</span></span>
 
-         以工作為基礎的非同步模式 (TAP) 中已加入 <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=fullName>、<xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=fullName> 三種便利的方法，可傳回特定狀態中已完成的工作。
+         <span data-ttu-id="e9141-675">以工作為基礎的非同步模式 (TAP) 中已加入 <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType> 三種便利的方法，可傳回特定狀態中已完成的工作。</span><span class="sxs-lookup"><span data-stu-id="e9141-675">Three convenience methods, <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType>, and <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType>, have been added to the task-based asynchronous pattern (TAP) to return completed tasks in a particular state.</span></span>
 
-         <xref:System.IO.Pipes.NamedPipeClientStream> 類別現可支援與其新的 <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A> 進行非同步通訊。 方法。
+         <span data-ttu-id="e9141-676"><xref:System.IO.Pipes.NamedPipeClientStream> 類別現可支援與其新的 <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A> 進行非同步通訊。</span><span class="sxs-lookup"><span data-stu-id="e9141-676">The <xref:System.IO.Pipes.NamedPipeClientStream> class now supports asynchronous communication with its new <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>.</span></span> <span data-ttu-id="e9141-677">方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-677">method.</span></span>
 
-    - **EventSource 現在支援寫入事件記錄檔**
+    - <span data-ttu-id="e9141-678">**EventSource 現在支援寫入事件記錄檔**</span><span class="sxs-lookup"><span data-stu-id="e9141-678">**EventSource now supports writing to the Event log**</span></span>
 
-         不只電腦上建立的任何現有 ETW 工作階段，您現在還可以使用 <xref:System.Diagnostics.Tracing.EventSource> 類別，將管理或操作訊息記錄到事件記錄檔中。 以往，您必須使用 Microsoft.Diagnostics.Tracing.EventSource NuGet 套件，才能使用這項功能。 .NET Framework 4.6 現已內建此功能。
+         <span data-ttu-id="e9141-679">不只電腦上建立的任何現有 ETW 工作階段，您現在還可以使用 <xref:System.Diagnostics.Tracing.EventSource> 類別，將管理或操作訊息記錄到事件記錄檔中。</span><span class="sxs-lookup"><span data-stu-id="e9141-679">You now can use the <xref:System.Diagnostics.Tracing.EventSource> class to log administrative or operational messages to the event log, in addition to any existing ETW sessions created on the machine.</span></span> <span data-ttu-id="e9141-680">以往，您必須使用 Microsoft.Diagnostics.Tracing.EventSource NuGet 套件，才能使用這項功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-680">In the past, you had to use the Microsoft.Diagnostics.Tracing.EventSource NuGet package for this functionality.</span></span> <span data-ttu-id="e9141-681">.NET Framework 4.6 現已內建此功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-681">This functionality is now built-into the .NET Framework 4.6.</span></span>
 
-         NuGet 套件和 .NET Framework 4.6 已更新下列功能：
+         <span data-ttu-id="e9141-682">NuGet 套件和 .NET Framework 4.6 已更新下列功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-682">Both the NuGet package and the .NET Framework 4.6 have been updated with the following features:</span></span>
 
-        - **動態事件**
+        - <span data-ttu-id="e9141-683">**動態事件**</span><span class="sxs-lookup"><span data-stu-id="e9141-683">**Dynamic events**</span></span>
 
-             可「動態」定義事件，而不需建立事件方法。
+             <span data-ttu-id="e9141-684">可「動態」定義事件，而不需建立事件方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-684">Allows events defined "on the fly" without creating event methods.</span></span>
 
-        - **豐富型裝載**
+        - <span data-ttu-id="e9141-685">**豐富型裝載**</span><span class="sxs-lookup"><span data-stu-id="e9141-685">**Rich payloads**</span></span>
 
-             允許專用類別和陣列，以及基本類型做為裝載傳遞
+             <span data-ttu-id="e9141-686">允許專用類別和陣列，以及基本類型做為裝載傳遞</span><span class="sxs-lookup"><span data-stu-id="e9141-686">Allows specially attributed classes and arrays as well as primitive types to be passed as a payload</span></span>
 
-        - **活動追蹤**
+        - <span data-ttu-id="e9141-687">**活動追蹤**</span><span class="sxs-lookup"><span data-stu-id="e9141-687">**Activity tracking**</span></span>
 
-             可讓開始與結束事件使用識別碼來標記它們之間的事件，以代表目前作用中的所有活動。
+             <span data-ttu-id="e9141-688">可讓開始與結束事件使用識別碼來標記它們之間的事件，以代表目前作用中的所有活動。</span><span class="sxs-lookup"><span data-stu-id="e9141-688">Causes Start and Stop events to tag events between them with an ID that represents all currently active activities.</span></span>
 
-         為了支援這些功能，已將多載 <xref:System.Diagnostics.Tracing.EventSource.Write%2A> 方法加入<xref:System.Diagnostics.Tracing.EventSource> 類別。
+         <span data-ttu-id="e9141-689">為了支援這些功能，已將多載 <xref:System.Diagnostics.Tracing.EventSource.Write%2A> 方法加入<xref:System.Diagnostics.Tracing.EventSource> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-689">To support these features, the overloaded <xref:System.Diagnostics.Tracing.EventSource.Write%2A> method has been added to the <xref:System.Diagnostics.Tracing.EventSource> class.</span></span>
 
-- **Windows Presentation Foundation (WPF)**
+- <span data-ttu-id="e9141-690">**Windows Presentation Foundation (WPF)**</span><span class="sxs-lookup"><span data-stu-id="e9141-690">**Windows Presentation Foundation (WPF)**</span></span>
 
-    - **HDPI 改進**
+    - <span data-ttu-id="e9141-691">**HDPI 改進**</span><span class="sxs-lookup"><span data-stu-id="e9141-691">**HDPI improvements**</span></span>
 
-         現在，WPF 提供比 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 更好的 HDPI 支援。 已變更版面配置進位，以減少含邊界之控制項中的裁剪執行個體。 根據預設，這項功能只有當您將<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 設為 .NET 4.6 時才會啟用。  如果應用程式是以舊版 Framework 為目標，但卻執行於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 當中，則可將下列這一行加入 app.config 檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇加入新的行為：
+         <span data-ttu-id="e9141-692">現在，WPF 提供比 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 更好的 HDPI 支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-692">HDPI support in WPF is now better in the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)].</span></span> <span data-ttu-id="e9141-693">已變更版面配置進位，以減少含邊界之控制項中的裁剪執行個體。</span><span class="sxs-lookup"><span data-stu-id="e9141-693">Changes have been made to layout rounding to reduce instances of clipping in controls with borders.</span></span> <span data-ttu-id="e9141-694">根據預設，這項功能只有當您將<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 設為 .NET 4.6 時才會啟用。</span><span class="sxs-lookup"><span data-stu-id="e9141-694">By default, this feature is enabled only if your <xref:System.Runtime.Versioning.TargetFrameworkAttribute> is set to .NET 4.6.</span></span>  <span data-ttu-id="e9141-695">如果應用程式是以舊版 Framework 為目標，但卻執行於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 當中，則可將下列這一行加入 app.config 檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇加入新的行為：</span><span class="sxs-lookup"><span data-stu-id="e9141-695">Applications that target earlier versions of the framework but are running on the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] can opt in to the new behavior by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the app.config file:</span></span>
 
-        ```
+        ```xml
         <AppContextSwitchOverrides
         value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
         />
         ```
 
-         含不同 DPI 設定 (多 DPI 設定) 且跨多個監視器的 WPF 視窗，現可完全顯示，而不會有被遮蔽的區域。 您可將下列這一行加入 app.config 檔的 `<appSettings>` 區段，以選擇停用這項新的行為：
+         <span data-ttu-id="e9141-696">含不同 DPI 設定 (多 DPI 設定) 且跨多個監視器的 WPF 視窗，現可完全顯示，而不會有被遮蔽的區域。</span><span class="sxs-lookup"><span data-stu-id="e9141-696">WPF windows straddling multiple monitors with different DPI settings (Multi-DPI setup) are now completely rendered without blacked-out regions.</span></span> <span data-ttu-id="e9141-697">您可將下列這一行加入 app.config 檔的 `<appSettings>` 區段，以選擇停用這項新的行為：</span><span class="sxs-lookup"><span data-stu-id="e9141-697">You can opt out of this behavior by adding the following line to the `<appSettings>` section of the app.config file to disable this new behavior:</span></span>
 
-        ```
+        ```xml
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
-         <xref:System.Windows.Input.Cursor?displayProperty=fullName> 已支援自動依據 DPI 設定載入正確的游標。
+         <span data-ttu-id="e9141-698"><xref:System.Windows.Input.Cursor?displayProperty=nameWithType> 已支援自動依據 DPI 設定載入正確的游標。</span><span class="sxs-lookup"><span data-stu-id="e9141-698">Support for automatically loading the right cursor based on DPI setting has been added to  <xref:System.Windows.Input.Cursor?displayProperty=nameWithType>.</span></span>
 
-    - **觸控功能較佳**
+    - <span data-ttu-id="e9141-699">**觸控功能較佳**</span><span class="sxs-lookup"><span data-stu-id="e9141-699">**Touch is better**</span></span>
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 已將客戶向 [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) 回報的觸控行為異常問題解決。 Windows 市集應用程式和 WPF 應用程式的點兩下臨界值現與 Windows 8.1 和更新版本相同。
+         <span data-ttu-id="e9141-700">[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 已將客戶向 [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) 回報的觸控行為異常問題解決。</span><span class="sxs-lookup"><span data-stu-id="e9141-700">Customer reports on [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) that touch produces unpredictable behavior have been addressed in the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)].</span></span> <span data-ttu-id="e9141-701">Windows 市集應用程式和 WPF 應用程式的點兩下臨界值現與 Windows 8.1 和更新版本相同。</span><span class="sxs-lookup"><span data-stu-id="e9141-701">The double tap threshold for Windows Store applications and WPF applications is now the same in Windows 8.1 and above.</span></span>
 
-    - **支援透明的子視窗**
+    - <span data-ttu-id="e9141-702">**支援透明的子視窗**</span><span class="sxs-lookup"><span data-stu-id="e9141-702">**Transparent child window support**</span></span>
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中的 WPF 支援 Windows 8.1 和更新版本的透明子視窗功能。 這可讓您在最上層視窗中建立非矩形和透明的子視窗。 您可以將 <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=fullName> 屬性設為 `true`，藉此啟用這個功能。
+         <span data-ttu-id="e9141-703">[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中的 WPF 支援 Windows 8.1 和更新版本的透明子視窗功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-703">WPF in the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] supports transparent child windows in Windows 8.1 and above.</span></span> <span data-ttu-id="e9141-704">這可讓您在最上層視窗中建立非矩形和透明的子視窗。</span><span class="sxs-lookup"><span data-stu-id="e9141-704">This allows you to create non-rectangular and transparent child windows in your top-level windows.</span></span> <span data-ttu-id="e9141-705">您可以將 <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> 屬性設為 `true`，藉此啟用這個功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-705">You can enable this feature by setting the <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> property to `true`.</span></span>
 
-- **Windows Communication Foundation (WCF)**
+- <span data-ttu-id="e9141-706">**Windows Communication Foundation (WCF)**</span><span class="sxs-lookup"><span data-stu-id="e9141-706">**Windows Communication Foundation (WCF)**</span></span>
 
-    - **SSL 支援**
+    - <span data-ttu-id="e9141-707">**SSL 支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-707">**SSL support**</span></span>
 
-         搭配使用 NetTcp 與傳輸安全性和用戶端驗證時，除了 SSL 3.0 和 TLS 1.0 之外，WCF 現在還支援 TLS 1.1 和 TLS 1.2 的 SSL 版。 現在，您可以選取要使用哪一種通訊協定，或停用較不安全的舊版通訊協定。 若要完成這項作業，您可設定 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 屬性或於組態檔中加入下列內容。
+         <span data-ttu-id="e9141-708">搭配使用 NetTcp 與傳輸安全性和用戶端驗證時，除了 SSL 3.0 和 TLS 1.0 之外，WCF 現在還支援 TLS 1.1 和 TLS 1.2 的 SSL 版。</span><span class="sxs-lookup"><span data-stu-id="e9141-708">WCF now supports SSL version TLS 1.1 and TLS 1.2, in addition to SSL 3.0 and TLS 1.0, when using NetTcp with transport security and client authentication.</span></span> <span data-ttu-id="e9141-709">現在，您可以選取要使用哪一種通訊協定，或停用較不安全的舊版通訊協定。</span><span class="sxs-lookup"><span data-stu-id="e9141-709">It is now possible to select which protocol to use, or to disable old lesser secure protocols.</span></span> <span data-ttu-id="e9141-710">若要完成這項作業，您可設定 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 屬性或於組態檔中加入下列內容。</span><span class="sxs-lookup"><span data-stu-id="e9141-710">This can be done either by setting the <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> property or by adding the following to a configuration file.</span></span>
 
-        ```
+        ```xml
         <netTcpBinding>
            <binding>
               <security mode= "None|Transport|Message|TransportWithMessageCredential" >
@@ -973,146 +1029,146 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
         </netTcpBinding>
         ```
 
-    - **使用不同的 HTTP 連線傳送訊息**
+    - <span data-ttu-id="e9141-711">**使用不同的 HTTP 連線傳送訊息**</span><span class="sxs-lookup"><span data-stu-id="e9141-711">**Sending messages using different HTTP connections**</span></span>
 
-         現在，WCF 可讓使用者使用不同的底層 HTTP 連線以確保成功傳送特定訊息。 執行此作業的方法有兩種：
+         <span data-ttu-id="e9141-712">現在，WCF 可讓使用者使用不同的底層 HTTP 連線以確保成功傳送特定訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-712">WCF now allows users to ensure certain messages are sent using different underlying HTTP connections.</span></span> <span data-ttu-id="e9141-713">執行此作業的方法有兩種：</span><span class="sxs-lookup"><span data-stu-id="e9141-713">There are two ways to do this:</span></span>
 
-        - **使用連線群組名稱前置詞**
+        - <span data-ttu-id="e9141-714">**使用連線群組名稱前置詞**</span><span class="sxs-lookup"><span data-stu-id="e9141-714">**Using a connection group name prefix**</span></span>
 
-             使用者可以指定字串，讓 WCF 做為可達到連線群組名稱的前置詞。 系統會使用不同的基礎 HTTP 連線來傳送含有不同前置詞的兩個訊息。 您可以將鍵/值組加入訊息的 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=fullName> 屬性，以設定前置詞。 索引鍵是 "HttpTransportConnectionGroupNamePrefix"；值則為所需的前置詞。
+             <span data-ttu-id="e9141-715">使用者可以指定字串，讓 WCF 做為可達到連線群組名稱的前置詞。</span><span class="sxs-lookup"><span data-stu-id="e9141-715">Users can specify a string that WCF will use as a prefix achieve for the connection group name.</span></span> <span data-ttu-id="e9141-716">系統會使用不同的基礎 HTTP 連線來傳送含有不同前置詞的兩個訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-716">Two messages with different prefixes are sent using different underlying HTTP connections.</span></span> <span data-ttu-id="e9141-717">您可以將鍵/值組加入訊息的 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> 屬性，以設定前置詞。</span><span class="sxs-lookup"><span data-stu-id="e9141-717">You set the prefix by adding a key/value pair to the message's <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="e9141-718">索引鍵是 "HttpTransportConnectionGroupNamePrefix"；值則為所需的前置詞。</span><span class="sxs-lookup"><span data-stu-id="e9141-718">The key is "HttpTransportConnectionGroupNamePrefix"; the value is the desired prefix.</span></span>
 
-        - **使用不同的通道處理站**
+        - <span data-ttu-id="e9141-719">**使用不同的通道處理站**</span><span class="sxs-lookup"><span data-stu-id="e9141-719">**Using different channel factories**</span></span>
 
-             使用者也可以啟用功能，針對使用不同通道處理站建立之通道所傳送的訊息，使用不同的底層 HTTP 連線。 若要啟用此功能，使用者必須將下列 `appSetting` 設定為 `true`：
+             <span data-ttu-id="e9141-720">使用者也可以啟用功能，針對使用不同通道處理站建立之通道所傳送的訊息，使用不同的底層 HTTP 連線。</span><span class="sxs-lookup"><span data-stu-id="e9141-720">Users can also enable a feature that ensures that messages sent using channels created by different channel factories will use different underlying HTTP connections.</span></span> <span data-ttu-id="e9141-721">若要啟用此功能，使用者必須將下列 `appSetting` 設定為 `true`：</span><span class="sxs-lookup"><span data-stu-id="e9141-721">To enable this feature, users must set the following `appSetting` to `true`:</span></span>
 
-            ```
+            ```xml
             <appSettings>
                <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
             </appSettings>
             ```
 
-- **Windows Workflow Foundation (WWF)**
+- <span data-ttu-id="e9141-722">**Windows Workflow Foundation (WWF)**</span><span class="sxs-lookup"><span data-stu-id="e9141-722">**Windows Workflow Foundation (WWF)**</span></span>
 
-     現在，若有未處理的「非通訊協定」書籤時，您可以指定工作流程服務在不按照順序的作業要求逾時之前會保存該要求的秒數。 「非通訊協定」書籤是指與未處理的 Receive 活動無關的書籤。 有些活動會在其實作中建立非通訊協定書籤，因此可能不容易察覺到非通訊協定書籤的存在。 這些活動包括 State 和 Pick。 因此如果您有使用狀態機器或包含 Pick 活動的工作流程服務實作，就很可能會有非通訊協定書籤。 您可將如下一行加入 app.config 檔案的 `appSettings` 區段，以指定間隔：
+     <span data-ttu-id="e9141-723">現在，若有未處理的「非通訊協定」書籤時，您可以指定工作流程服務在不按照順序的作業要求逾時之前會保存該要求的秒數。</span><span class="sxs-lookup"><span data-stu-id="e9141-723">You can now specify the number of seconds a workflow service will hold on to an out-of-order operation request when there is an outstanding "non-protocol" bookmark before timing out the request.</span></span> <span data-ttu-id="e9141-724">「非通訊協定」書籤是指與未處理的 Receive 活動無關的書籤。</span><span class="sxs-lookup"><span data-stu-id="e9141-724">A "non-protocol" bookmark is a bookmark that is not related to outstanding Receive activities.</span></span> <span data-ttu-id="e9141-725">有些活動會在其實作中建立非通訊協定書籤，因此可能不容易察覺到非通訊協定書籤的存在。</span><span class="sxs-lookup"><span data-stu-id="e9141-725">Some activities create non-protocol bookmarks within their implementation, so it may not be obvious that a non-protocol bookmark exists.</span></span> <span data-ttu-id="e9141-726">這些活動包括 State 和 Pick。</span><span class="sxs-lookup"><span data-stu-id="e9141-726">These include State and Pick.</span></span> <span data-ttu-id="e9141-727">因此如果您有使用狀態機器或包含 Pick 活動的工作流程服務實作，就很可能會有非通訊協定書籤。</span><span class="sxs-lookup"><span data-stu-id="e9141-727">So if you have a workflow service implemented with a state machine or containing a Pick activity, you will most likely have non-protocol bookmarks.</span></span> <span data-ttu-id="e9141-728">您可將如下一行加入 app.config 檔案的 `appSettings` 區段，以指定間隔：</span><span class="sxs-lookup"><span data-stu-id="e9141-728">You specify the interval by adding a line like the following to the `appSettings` section of your app.config file:</span></span>
 
-    ```
+    ```xml
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
     ```
 
-     預設值為 60 秒。 如果 `value` 設定為 0，系統會立即拒絕不按照順序的要求，並顯示如下的錯誤文字：
+     <span data-ttu-id="e9141-729">預設值為 60 秒。</span><span class="sxs-lookup"><span data-stu-id="e9141-729">The default value is 60 seconds.</span></span> <span data-ttu-id="e9141-730">如果 `value` 設定為 0，系統會立即拒絕不按照順序的要求，並顯示如下的錯誤文字：</span><span class="sxs-lookup"><span data-stu-id="e9141-730">If `value` is set to 0, out-of-order requests are immediately rejected with a fault with text that looks like this:</span></span>
 
     ```
     Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees. 
     ```
 
-     如果收到不按照順序的作業訊息，但沒有非通訊協定書籤時，也會收到相同的訊息。
+     <span data-ttu-id="e9141-731">如果收到不按照順序的作業訊息，但沒有非通訊協定書籤時，也會收到相同的訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-731">This is the same message that you receive if an out-of-order operation message is received and there are no non-protocol bookmarks.</span></span>
 
-     如果 `FilterResumeTimeoutInSeconds` 項目的值是非零，並有非通訊協定的書籤，而逾時間隔也已過期，則作業會失敗並顯示逾時訊息。
+     <span data-ttu-id="e9141-732">如果 `FilterResumeTimeoutInSeconds` 項目的值是非零，並有非通訊協定的書籤，而逾時間隔也已過期，則作業會失敗並顯示逾時訊息。</span><span class="sxs-lookup"><span data-stu-id="e9141-732">If the value of the `FilterResumeTimeoutInSeconds` element is non-zero, there are non-protocol bookmarks, and the timeout interval expires, the operation fails with a timeout message.</span></span>
 
-- **交易**
+- <span data-ttu-id="e9141-733">**交易**</span><span class="sxs-lookup"><span data-stu-id="e9141-733">**Transactions**</span></span>
 
-     現在，若交易導致衍生自 <xref:System.Transactions.TransactionException> 的例外狀況擲回時，您可以針對該交易包含分散式的交易識別碼。 您可以在 app.config 檔的`appSettings` 區段中加入下列索引鍵，以完成這項作業：
+     <span data-ttu-id="e9141-734">現在，若交易導致衍生自 <xref:System.Transactions.TransactionException> 的例外狀況擲回時，您可以針對該交易包含分散式的交易識別碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-734">You can now include the distributed transaction identifier for the transaction that has caused an exception derived from <xref:System.Transactions.TransactionException> to be thrown.</span></span> <span data-ttu-id="e9141-735">您可以在 app.config 檔的`appSettings` 區段中加入下列索引鍵，以完成這項作業：</span><span class="sxs-lookup"><span data-stu-id="e9141-735">You do this by adding the following key to the `appSettings` section of your app.config file:</span></span>
 
-    ```
+    ```xml
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
     ```
 
-     預設值是 `false`。
+     <span data-ttu-id="e9141-736">預設值是 `false`。</span><span class="sxs-lookup"><span data-stu-id="e9141-736">The default value is `false`.</span></span>
 
-- **網路功能**
+- <span data-ttu-id="e9141-737">**網路功能**</span><span class="sxs-lookup"><span data-stu-id="e9141-737">**Networking**</span></span>
 
-    - **通訊端重複使用**
+    - <span data-ttu-id="e9141-738">**通訊端重複使用**</span><span class="sxs-lookup"><span data-stu-id="e9141-738">**Socket reuse**</span></span>
 
-         Windows 10 包含新的高延展性網路功能演算法，其可重複為對外 TCP 連線使用本機連接埠，以更妥善運用電腦資源。 .NET Framework 4.6 支援新的演算法，可讓 .NET 應用程式利用這個新行為。 在舊版的 Windows 中，並沒有人為的並行連線限制 (通常為動態連接埠範圍的預設大小 16,384)，因此當負載下的連接埠耗盡時，可能會限制服務的延展性。
+         <span data-ttu-id="e9141-739">Windows 10 包含新的高延展性網路功能演算法，其可重複為對外 TCP 連線使用本機連接埠，以更妥善運用電腦資源。</span><span class="sxs-lookup"><span data-stu-id="e9141-739">Windows 10 includes a new high-scalability networking algorithm that makes better use of machine resources by reusing local ports for outbound TCP connections.</span></span> <span data-ttu-id="e9141-740">.NET Framework 4.6 支援新的演算法，可讓 .NET 應用程式利用這個新行為。</span><span class="sxs-lookup"><span data-stu-id="e9141-740">The .NET Framework 4.6 supports the new algorithm, enabling .NET apps to take advantage of the new behavior.</span></span> <span data-ttu-id="e9141-741">在舊版的 Windows 中，並沒有人為的並行連線限制 (通常為動態連接埠範圍的預設大小 16,384)，因此當負載下的連接埠耗盡時，可能會限制服務的延展性。</span><span class="sxs-lookup"><span data-stu-id="e9141-741">In previous versions of Windows, there was an artificial concurrent connection limit (typically 16,384, the default size of the dynamic port range), which could limit the scalability of a service by causing port exhaustion when under load.</span></span>
 
-         為了讓連接埠可以重複使用，在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中加入了兩個新的 API，其可有效地移除並行連線的 64K 限制：
+         <span data-ttu-id="e9141-742">為了讓連接埠可以重複使用，在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中加入了兩個新的 API，其可有效地移除並行連線的 64K 限制：</span><span class="sxs-lookup"><span data-stu-id="e9141-742">In the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], two new APIs have been added to enable port reuse, which effectively removes the 64K limit on concurrent connections:</span></span>
 
-        - <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 列舉值。
+        - <span data-ttu-id="e9141-743"><xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 列舉值。</span><span class="sxs-lookup"><span data-stu-id="e9141-743">The <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> enumeration value.</span></span>
 
-        - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 屬性。
+        - <span data-ttu-id="e9141-744"><xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="e9141-744">The <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> property.</span></span>
 
-         除非 `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` 登錄機碼的 `HWRPortReuseOnSocketBind` 值設定為 0x1，否則 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 屬性皆預設為 `false`。 若要啟用 HTTP 連線上的本機連接埠重複使用，請將 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 屬性設為 `true`。 這會使得所有從 <xref:System.Net.Http.HttpClient> 和 <xref:System.Net.HttpWebRequest> 傳出的 TCP 通訊端連線都使用新的 Windows 10 通訊端選項 ([SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx))，而能夠重複使用本機連接埠。
+         <span data-ttu-id="e9141-745">除非 `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` 登錄機碼的 `HWRPortReuseOnSocketBind` 值設定為 0x1，否則 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> 屬性皆預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="e9141-745">By default, the <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> property is `false` unless the `HWRPortReuseOnSocketBind` value of the `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` registry key is set to 0x1.</span></span> <span data-ttu-id="e9141-746">若要啟用 HTTP 連線上的本機連接埠重複使用，請將 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> 屬性設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="e9141-746">To enable local port reuse on HTTP connections, set the <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="e9141-747">這會使得所有從 <xref:System.Net.Http.HttpClient> 和 <xref:System.Net.HttpWebRequest> 傳出的 TCP 通訊端連線都使用新的 Windows 10 通訊端選項 ([SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx))，而能夠重複使用本機連接埠。</span><span class="sxs-lookup"><span data-stu-id="e9141-747">This causes all outgoing TCP socket connections from <xref:System.Net.Http.HttpClient> and <xref:System.Net.HttpWebRequest> to use a new Windows 10 socket option, [SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx), that enables local port reuse.</span></span>
 
-         如果開發人員撰寫僅限通訊端的應用程式，即可在呼叫 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=fullName> 之類的方法時指定 <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 選項，以讓對外的通訊端在繫結期間重複使用本機連接埠。
+         <span data-ttu-id="e9141-748">如果開發人員撰寫僅限通訊端的應用程式，即可在呼叫 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> 之類的方法時指定 <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 選項，以讓對外的通訊端在繫結期間重複使用本機連接埠。</span><span class="sxs-lookup"><span data-stu-id="e9141-748">Developers writing a sockets-only application can specify the <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> option when calling a method such as <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> so that outbound sockets reuse local ports during binding.</span></span>
 
-    - **支援國際網域名稱和 PunyCode**
+    - <span data-ttu-id="e9141-749">**支援國際網域名稱和 PunyCode**</span><span class="sxs-lookup"><span data-stu-id="e9141-749">**Support for international domain names and PunyCode**</span></span>
 
-         <xref:System.Uri> 類別中已加入新屬性 <xref:System.Uri.IdnHost%2A>，可更妥善支援國際化網域名稱和 PunyCode。
+         <span data-ttu-id="e9141-750"><xref:System.Uri> 類別中已加入新屬性 <xref:System.Uri.IdnHost%2A>，可更妥善支援國際化網域名稱和 PunyCode。</span><span class="sxs-lookup"><span data-stu-id="e9141-750">A new property, <xref:System.Uri.IdnHost%2A>, has been added to the <xref:System.Uri> class to better support international domain names and PunyCode.</span></span>
 
-- **調整 Windows Forms 控制項的大小。**
+- <span data-ttu-id="e9141-751">**調整 Windows Forms 控制項的大小。**</span><span class="sxs-lookup"><span data-stu-id="e9141-751">**Resizing in Windows Forms controls.**</span></span>
 
-     這項功能在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中已擴充，現在包含 <xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn> 和 <xref:System.Windows.Forms.ToolStripSplitButton> 類型，以及 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 屬性所指定的矩形，可在繪製 <xref:System.Drawing.Design.UITypeEditor> 時使用。
+     <span data-ttu-id="e9141-752">這項功能在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中已擴充，現在包含 <xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn> 和 <xref:System.Windows.Forms.ToolStripSplitButton> 類型，以及 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 屬性所指定的矩形，可在繪製 <xref:System.Drawing.Design.UITypeEditor> 時使用。</span><span class="sxs-lookup"><span data-stu-id="e9141-752">This feature has been expanded in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] to include the <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> and <xref:System.Windows.Forms.ToolStripSplitButton> types and the rectangle specified by the <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> property used when drawing a <xref:System.Drawing.Design.UITypeEditor>.</span></span>
 
-     這是一項選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
+     <span data-ttu-id="e9141-753">這是一項選擇性功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-753">This is an opt-in feature.</span></span> <span data-ttu-id="e9141-754">若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：</span><span class="sxs-lookup"><span data-stu-id="e9141-754">To enable it, set the `EnableWindowsFormsHighDpiAutoResizing` element to `true` in the application configuration (app.config) file:</span></span>
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
     ```
 
-- **字碼頁編碼方式的支援**
+- <span data-ttu-id="e9141-755">**字碼頁編碼方式的支援**</span><span class="sxs-lookup"><span data-stu-id="e9141-755">**Support for code page encodings**</span></span>
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=fullName> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱<xref:System.Text.CodePagesEncodingProvider?displayProperty=fullName>。
+      [!INCLUDE[net_core](../../../includes/net-core-md.md)] primarily supports the Unicode encodings and by default provides limited support for code page encodings. You can add support for code page encodings available in the .NET Framework but unsupported in [!INCLUDE[net_core](../../../includes/net-core-md.md)] by registering code page encodings with the <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> method. For more information, see <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
-- **.NET Native**
+- <span data-ttu-id="e9141-756">**.NET Native**</span><span class="sxs-lookup"><span data-stu-id="e9141-756">**.NET Native**</span></span>
 
-     以 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 為目標並以 C# 或 Visual Basic 撰寫的 Windows 10 應用程式，現在可以利用將應用程式編譯成機器碼的新技術，而不是使用 IL。 所產生之應用程式的特色是啟動和執行都更快。 如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)。 如需 .NET Native 概觀，請參閱 [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)，其中探討 .NET Native 與 JIT 編譯和 NGEN 之間的差異，以及對您的程式碼所代表的意義。
+     <span data-ttu-id="e9141-757">以 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 為目標並以 C# 或 Visual Basic 撰寫的 Windows 10 應用程式，現在可以利用將應用程式編譯成機器碼的新技術，而不是使用 IL。</span><span class="sxs-lookup"><span data-stu-id="e9141-757">Windows apps for Windows 10 that target [!INCLUDE[net_core](../../../includes/net-core-md.md)] and are written in C# or Visual Basic can take advantage of a new technology that compiles apps to native code rather than IL.</span></span> <span data-ttu-id="e9141-758">所產生之應用程式的特色是啟動和執行都更快。</span><span class="sxs-lookup"><span data-stu-id="e9141-758">They produce apps characterized by faster startup and execution times.</span></span> <span data-ttu-id="e9141-759">如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-759">For more information, see [Compiling Apps with .NET Native](../../../docs/framework/net-native/index.md).</span></span> <span data-ttu-id="e9141-760">如需 .NET Native 概觀，請參閱 [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)，其中探討 .NET Native 與 JIT 編譯和 NGEN 之間的差異，以及對您的程式碼所代表的意義。</span><span class="sxs-lookup"><span data-stu-id="e9141-760">For an overview of .NET Native that examines how it differs from both JIT compilation and NGEN and what that means for your code, see [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md).</span></span>
 
-     當您使用 Visual Studio 2015 編譯您的應用程式時，它們預設會編譯成機器碼。 如需詳細資訊，請參閱 [.NET Native 使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)。
+     <span data-ttu-id="e9141-761">當您使用 Visual Studio 2015 編譯您的應用程式時，它們預設會編譯成機器碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-761">Your apps are compiled to native code by default when you compile them with Visual Studio 2015.</span></span> <span data-ttu-id="e9141-762">如需詳細資訊，請參閱 [.NET Native 使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-762">For more information, see [Getting Started with .NET Native](../../../docs/framework/net-native/getting-started-with-net-native.md).</span></span>
 
-     為了支援對 .NET Native 應用程式進行偵錯，Unmanaged 偵錯 API 已新增許多介面和列舉。 如需詳細資訊，請參閱[偵錯 (Unmanaged API 參考)](../../../docs/framework/unmanaged-api/debugging/index.md) 主題。
+     <span data-ttu-id="e9141-763">為了支援對 .NET Native 應用程式進行偵錯，Unmanaged 偵錯 API 已新增許多介面和列舉。</span><span class="sxs-lookup"><span data-stu-id="e9141-763">To support debugging .NET Native apps, a number of new interfaces and enumerations have been added to the unmanaged debugging API.</span></span> <span data-ttu-id="e9141-764">如需詳細資訊，請參閱[偵錯 (Unmanaged API 參考)](../../../docs/framework/unmanaged-api/debugging/index.md) 主題。</span><span class="sxs-lookup"><span data-stu-id="e9141-764">For more information, see the [Debugging (Unmanaged API Reference)](../../../docs/framework/unmanaged-api/debugging/index.md) topic.</span></span>
 
-- **開放原始碼 .NET Framework 套件**
+- <span data-ttu-id="e9141-765">**開放原始碼 .NET Framework 套件**</span><span class="sxs-lookup"><span data-stu-id="e9141-765">**Open-source .NET Framework packages**</span></span>
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 套件 (例如不可變的集合)、[SIMD API](http://go.microsoft.com/fwlink/?LinkID=518639) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取這些程式碼，請參閱 GitHub 上的 [NetFx](http://go.microsoft.com/fwlink/?LinkID=518634)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](http://go.microsoft.com/fwlink/?LinkID=518635)，並參閱 [.NET Core 和開放原始碼](../../../docs/framework/get-started/net-core-and-open-source.md)。
+      [!INCLUDE[net_core](../../../includes/net-core-md.md)] packages such as the immutable collections, [SIMD APIs](http://go.microsoft.com/fwlink/?LinkID=518639), and networking APIs such as those found in the <xref:System.Net.Http> namespace are now available as open source packages on [GitHub](https://github.com/). To access the code, see [NetFx on GitHub](http://go.microsoft.com/fwlink/?LinkID=518634). For more information and how to contribute to these packages, see [.NET Core and Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md), [.NET Home Page on GitHub](http://go.microsoft.com/fwlink/?LinkID=518635).
 
- [回到頁首](#introduction)
+ [<span data-ttu-id="e9141-766">回到頁首</span><span class="sxs-lookup"><span data-stu-id="e9141-766">Back to top</span></span>](#introduction)
 
 <a name="v452"></a> 
-## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
+## <a name="whats-new-in-the-net-framework-452"></a><span data-ttu-id="e9141-767">.NET Framework 4.5.2 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="e9141-767">What's new in the .NET Framework 4.5.2</span></span>
 
-- **ASP.NET 應用程式的全新 API。** 新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=fullName> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=fullName> 方法可讓您在回應清除至用戶端應用程式時，檢查及修改回應標頭和狀態碼。 請考慮使用這些方法來取代 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件，這些方法的效率更高且更可靠。
+- <span data-ttu-id="e9141-768">**ASP.NET 應用程式的全新 API。**</span><span class="sxs-lookup"><span data-stu-id="e9141-768">**New APIs for ASP.NET apps.**</span></span> <span data-ttu-id="e9141-769">新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> 方法可讓您在回應清除至用戶端應用程式時，檢查及修改回應標頭和狀態碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-769">The new <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> and <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> methods let you inspect and modify response headers and status code as the response is being flushed to the client app.</span></span> <span data-ttu-id="e9141-770">請考慮使用這些方法來取代 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件，這些方法的效率更高且更可靠。</span><span class="sxs-lookup"><span data-stu-id="e9141-770">Consider using these methods instead of the <xref:System.Web.HttpApplication.PreSendRequestHeaders> and <xref:System.Web.HttpApplication.PreSendRequestContent> events; they are more efficient and reliable.</span></span>
 
-     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=fullName> 方法可讓您排程小型背景工作項目。 完成所有背景工作項目之前，ASP.NET 會追蹤這些項目，並防止 IIS 突然終止背景工作處理序。 此方法只能在 ASP.NET Managed 應用程式網域內呼叫。
+     <span data-ttu-id="e9141-771"><xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> 方法可讓您排程小型背景工作項目。</span><span class="sxs-lookup"><span data-stu-id="e9141-771">The <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> method lets you schedule small background work items.</span></span> <span data-ttu-id="e9141-772">完成所有背景工作項目之前，ASP.NET 會追蹤這些項目，並防止 IIS 突然終止背景工作處理序。</span><span class="sxs-lookup"><span data-stu-id="e9141-772">ASP.NET tracks these items and prevents IIS from abruptly terminating the worker process until all background work items have completed.</span></span> <span data-ttu-id="e9141-773">此方法只能在 ASP.NET Managed 應用程式網域內呼叫。</span><span class="sxs-lookup"><span data-stu-id="e9141-773">This method can't be called outside an ASP.NET managed app domain.</span></span>
 
-     新的 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=fullName> 和 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=fullName> 屬性傳回布林值，指出是否已寫入回應標頭。 您可以使用這些屬性確定 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=fullName> 等的 API 呼叫成功 (如果已寫入標頭，則擲回例外狀況)。
+     <span data-ttu-id="e9141-774">新的 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> 屬性傳回布林值，指出是否已寫入回應標頭。</span><span class="sxs-lookup"><span data-stu-id="e9141-774">The new <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> and <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> properties return Boolean values that indicate whether the response headers have been written.</span></span> <span data-ttu-id="e9141-775">您可以使用這些屬性確定 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> 等的 API 呼叫成功 (如果已寫入標頭，則擲回例外狀況)。</span><span class="sxs-lookup"><span data-stu-id="e9141-775">You can use these properties to make sure that calls to APIs such as <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (which throw exceptions if the headers have been written) will succeed.</span></span>
 
-- **調整 Windows Forms 控制項的大小。** 此功能已擴充。 您現在可以使用系統 DPI 設定來調整下列其他控制項的元件大小 (例如下拉式方塊中的下拉式箭頭)：
+- <span data-ttu-id="e9141-776">**調整 Windows Forms 控制項的大小。**</span><span class="sxs-lookup"><span data-stu-id="e9141-776">**Resizing in Windows Forms controls.**</span></span> <span data-ttu-id="e9141-777">此功能已擴充。</span><span class="sxs-lookup"><span data-stu-id="e9141-777">This feature has been expanded.</span></span> <span data-ttu-id="e9141-778">您現在可以使用系統 DPI 設定來調整下列其他控制項的元件大小 (例如下拉式方塊中的下拉式箭頭)：</span><span class="sxs-lookup"><span data-stu-id="e9141-778">You can now use the system DPI setting to resize components of the following additional controls (for example, the drop-down arrow in combo boxes):</span></span>
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <span data-ttu-id="e9141-779"><xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn></span><span class="sxs-lookup"><span data-stu-id="e9141-779"><xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn></span></span>
 
-     這是一個選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
+     <span data-ttu-id="e9141-780">這是一個選擇性功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-780">This is an opt-in feature.</span></span> <span data-ttu-id="e9141-781">若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：</span><span class="sxs-lookup"><span data-stu-id="e9141-781">To enable it, set the `EnableWindowsFormsHighDpiAutoResizing` element to `true` in the application configuration (app.config) file:</span></span>
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
     ```
 
-- **新工作流程功能。** 使用 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 方法 (進而實作 <xref:System.Transactions.IPromotableSinglePhaseNotification> 介面) 的資源管理員可使用新的 <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> 方法來要求下列作業：
+- <span data-ttu-id="e9141-782">**新工作流程功能。**</span><span class="sxs-lookup"><span data-stu-id="e9141-782">**New workflow feature.**</span></span> <span data-ttu-id="e9141-783">使用 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 方法 (進而實作 <xref:System.Transactions.IPromotableSinglePhaseNotification> 介面) 的資源管理員可使用新的 <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> 方法來要求下列作業：</span><span class="sxs-lookup"><span data-stu-id="e9141-783">A resource manager that's using the <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> method (and therefore implementing the <xref:System.Transactions.IPromotableSinglePhaseNotification> interface) can use the new <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> method to request the following:</span></span>
 
-    - 將交易提升至 Microsoft 分散式交易協調器 (MSDTC) 交易。
+    - <span data-ttu-id="e9141-784">將交易提升至 Microsoft 分散式交易協調器 (MSDTC) 交易。</span><span class="sxs-lookup"><span data-stu-id="e9141-784">Promote the transaction to a Microsoft Distributed Transaction Coordinator (MSDTC) transaction.</span></span>
 
-    - 以支援單一階段認可的永久性登記 <xref:System.Transactions.IPromotableSinglePhaseNotification> 取代 <xref:System.Transactions.ISinglePhaseNotification>。
+    - <span data-ttu-id="e9141-785">以支援單一階段認可的永久性登記 <xref:System.Transactions.IPromotableSinglePhaseNotification> 取代 <xref:System.Transactions.ISinglePhaseNotification>。</span><span class="sxs-lookup"><span data-stu-id="e9141-785">Replace <xref:System.Transactions.IPromotableSinglePhaseNotification> with an <xref:System.Transactions.ISinglePhaseNotification>, which is a durable enlistment that supports single phase commits.</span></span>
 
-     您可以在相同的應用程式網域中完成這些作業，而不需要任何額外的 Unmanaged 程式碼來與 MSDTC 互動以進行提升。 僅當 <xref:System.Transactions?displayProperty=fullName> 對可提升登記未實作之 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法的呼叫未完成時，才會呼叫此新方法。
+     <span data-ttu-id="e9141-786">您可以在相同的應用程式網域中完成這些作業，而不需要任何額外的 Unmanaged 程式碼來與 MSDTC 互動以進行提升。</span><span class="sxs-lookup"><span data-stu-id="e9141-786">This can be done within the same app domain, and doesn't require any extra unmanaged code to interact with MSDTC to perform the promotion.</span></span> <span data-ttu-id="e9141-787">僅當 <xref:System.Transactions?displayProperty=nameWithType> 對可提升登記未實作之 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法的呼叫未完成時，才會呼叫此新方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-787">The new method can be called only when there's an outstanding call from <xref:System.Transactions?displayProperty=nameWithType> to the <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` method that's implemented by the promotable enlistment.</span></span>
 
-- **程式碼剖析改進。** 下列新的 Unmanaged 程式碼分析 API 提供更強大的程式碼分析功能：
+- <span data-ttu-id="e9141-788">**程式碼剖析改進。**</span><span class="sxs-lookup"><span data-stu-id="e9141-788">**Profiling improvements.**</span></span> <span data-ttu-id="e9141-789">下列新的 Unmanaged 程式碼分析 API 提供更強大的程式碼分析功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-789">The following new unmanaged profiling APIs provide more robust profiling:</span></span>
 
-     [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) [COR_PRF_HIGH_MONITOR 列舉](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) [GetAssemblyReferences 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) [GetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) [SetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) [AddAssemblyReference 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
+     <span data-ttu-id="e9141-790">[COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) [COR_PRF_HIGH_MONITOR 列舉](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) [GetAssemblyReferences 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) [GetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) [SetEventMask2 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) [AddAssemblyReference 方法](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)</span><span class="sxs-lookup"><span data-stu-id="e9141-790">[COR_PRF_ASSEMBLY_REFERENCE_INFO Structure](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) [COR_PRF_HIGH_MONITOR Enumeration](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) [GetAssemblyReferences Method](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) [GetEventMask2 Method](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) [SetEventMask2 Method](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) [AddAssemblyReference Method](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)</span></span>
 
-     之前的 `ICorProfiler` 實作支援相依組件的消極式載入。 新程式碼分析 API 要求可立即載入分析工具插入的相依組件，而不是在完全初始化應用程式之後才載入。 此變更不會影響現有 `ICorProfiler` API 的使用者。
+     <span data-ttu-id="e9141-791">之前的 `ICorProfiler` 實作支援相依組件的消極式載入。</span><span class="sxs-lookup"><span data-stu-id="e9141-791">Previous `ICorProfiler` implementations supported lazy loading of dependent assemblies.</span></span> <span data-ttu-id="e9141-792">新程式碼分析 API 要求可立即載入分析工具插入的相依組件，而不是在完全初始化應用程式之後才載入。</span><span class="sxs-lookup"><span data-stu-id="e9141-792">The new profiling APIs require dependent assemblies that are injected by the profiler to be loadable immediately, instead of being loaded after the app is fully initialized.</span></span> <span data-ttu-id="e9141-793">此變更不會影響現有 `ICorProfiler` API 的使用者。</span><span class="sxs-lookup"><span data-stu-id="e9141-793">This change doesn't affect users of the existing `ICorProfiler` APIs.</span></span>
 
-- **偵錯改進。** 下列新的 Unmanaged 偵錯 API 提供與分析工具更佳的整合。 您現在可以存取分析工具插入的中繼資料，並存取偵錯傾印時編譯器 ReJIT 要求所產生的區域變數和程式碼。
+- <span data-ttu-id="e9141-794">**偵錯改進。**</span><span class="sxs-lookup"><span data-stu-id="e9141-794">**Debugging improvements.**</span></span> <span data-ttu-id="e9141-795">下列新的 Unmanaged 偵錯 API 提供與分析工具更佳的整合。</span><span class="sxs-lookup"><span data-stu-id="e9141-795">The following new unmanaged debugging APIs provide better integration with a profiler.</span></span> <span data-ttu-id="e9141-796">您現在可以存取分析工具插入的中繼資料，並存取偵錯傾印時編譯器 ReJIT 要求所產生的區域變數和程式碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-796">You can now access metadata inserted by the profiler as well as local variables and code produced by compiler ReJIT requests when dump debugging.</span></span>
 
-     [SetWriteableMetadataUpdateMode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) [EnumerateLocalVariablesEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) [GetLocalVariableEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) [GetCodeEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) [GetActiveReJitRequestILCode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) [GetInstrumentedILMap 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
+     <span data-ttu-id="e9141-797">[SetWriteableMetadataUpdateMode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) [EnumerateLocalVariablesEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) [GetLocalVariableEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) [GetCodeEx 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) [GetActiveReJitRequestILCode 方法](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) [GetInstrumentedILMap 方法](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)</span><span class="sxs-lookup"><span data-stu-id="e9141-797">[SetWriteableMetadataUpdateMode Method](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) [EnumerateLocalVariablesEx Method](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) [GetLocalVariableEx Method](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) [GetCodeEx Method](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) [GetActiveReJitRequestILCode Method](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) [GetInstrumentedILMap Method](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)</span></span>
 
-- **事件追蹤變更。** .NET Framework 4.5.2 可對更大的表面區域進行 Windows 事件追蹤 (ETW) 的跨處理序活動追蹤。 此功能可讓進階電源管理 (APM) 廠商提供輕量型工具，以精確追蹤跨執行緒之個別要求和活動的成本。  僅當 ETW 控制器啟用這些事件時，才會引發事件；因此，這些變更不會影響之前撰寫的 ETW 程式碼或停用 ETW 時所執行的程式碼。
+- <span data-ttu-id="e9141-798">**事件追蹤變更。**</span><span class="sxs-lookup"><span data-stu-id="e9141-798">**Event tracing changes.**</span></span> <span data-ttu-id="e9141-799">.NET Framework 4.5.2 可對更大的表面區域進行 Windows 事件追蹤 (ETW) 的跨處理序活動追蹤。</span><span class="sxs-lookup"><span data-stu-id="e9141-799">The .NET Framework 4.5.2 enables out-of-process, Event Tracing for Windows (ETW)-based activity tracing for a larger surface area.</span></span> <span data-ttu-id="e9141-800">此功能可讓進階電源管理 (APM) 廠商提供輕量型工具，以精確追蹤跨執行緒之個別要求和活動的成本。</span><span class="sxs-lookup"><span data-stu-id="e9141-800">This enables Advanced Power Management (APM) vendors to provide lightweight tools that accurately track the costs of individual requests and activities that cross threads.</span></span>  <span data-ttu-id="e9141-801">僅當 ETW 控制器啟用這些事件時，才會引發事件；因此，這些變更不會影響之前撰寫的 ETW 程式碼或停用 ETW 時所執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e9141-801">These events are raised only when ETW controllers enable them; therefore, the changes don't affect previously written ETW code or code that runs with ETW disabled.</span></span>
 
-- **升級交易並將它轉換成永久性登記**
+- <span data-ttu-id="e9141-802">**升級交易並將它轉換成永久性登記**</span><span class="sxs-lookup"><span data-stu-id="e9141-802">**Promoting a transaction and converting it to a durable enlistment**</span></span>
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> 是新加入 .NET Framework 4.5.2 和 4.6 的 API：
+     <span data-ttu-id="e9141-803"><xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> 是新加入 .NET Framework 4.5.2 和 4.6 的 API：</span><span class="sxs-lookup"><span data-stu-id="e9141-803"><xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> is a new API added to the .NET Framework 4.5.2 and 4.6:</span></span>
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1122,282 +1178,282 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
                                               EnlistmentOptions enlistmentOptions)
     ```
 
-     此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 方法。 它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。 這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。 登記必須做為永久性登記，才可支援交易記錄和復原。 如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>。 此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。  只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 呼叫時，「才」可以呼叫此方法。 若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。
+     <span data-ttu-id="e9141-804">此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-804">The method may be used by an enlistment that was previously created by <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> in response to the <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e9141-805">它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。</span><span class="sxs-lookup"><span data-stu-id="e9141-805">It asks `System.Transactions` to promote the transaction to an MSDTC transaction and to "convert" the promotable enlistment to a durable enlistment.</span></span> <span data-ttu-id="e9141-806">這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。</span><span class="sxs-lookup"><span data-stu-id="e9141-806">After this method completes successfully, the <xref:System.Transactions.IPromotableSinglePhaseNotification> interface will no longer be referenced by `System.Transactions`, and any future notifications will arrive on the provided <xref:System.Transactions.ISinglePhaseNotification> interface.</span></span> <span data-ttu-id="e9141-807">登記必須做為永久性登記，才可支援交易記錄和復原。</span><span class="sxs-lookup"><span data-stu-id="e9141-807">The enlistment in question must act as a durable enlistment, supporting transaction logging and recovery.</span></span> <span data-ttu-id="e9141-808">如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="e9141-808">Refer to <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> for details.</span></span> <span data-ttu-id="e9141-809">此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。</span><span class="sxs-lookup"><span data-stu-id="e9141-809">In addition, the enlistment must support <xref:System.Transactions.ISinglePhaseNotification>.</span></span>  <span data-ttu-id="e9141-810">只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 呼叫時，「才」可以呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-810">This method can *only* be called while processing an <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> call.</span></span> <span data-ttu-id="e9141-811">若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e9141-811">If that is not the case, a <xref:System.Transactions.TransactionException> exception is thrown.</span></span>
 
- [回到頁首](#introduction)
+ [<span data-ttu-id="e9141-812">回到頁首</span><span class="sxs-lookup"><span data-stu-id="e9141-812">Back to top</span></span>](#introduction)
 
 <a name="v451"></a> 
-## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
- **2014 年 4 月更新**：
+## <a name="whats-new-in-the-net-framework-451"></a><span data-ttu-id="e9141-813">.NET Framework 4.5.1 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="e9141-813">What's new in the .NET Framework 4.5.1</span></span>
+ <span data-ttu-id="e9141-814">**2014 年 4 月更新**：</span><span class="sxs-lookup"><span data-stu-id="e9141-814">**April 2014 updates**:</span></span>
 
-- [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) 包含可攜式類別庫範本的更新，以便針對下列情況提供支援：
+- <span data-ttu-id="e9141-815">[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) 包含可攜式類別庫範本的更新，以便針對下列情況提供支援：</span><span class="sxs-lookup"><span data-stu-id="e9141-815">[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) includes updates to the Portable Class Library templates to support these scenarios:</span></span>
 
-    - 您可以使用以 Windows 8.1、Windows Phone 8.1 和 Windows Phone Silverlight 8.1 為目標之可攜式類別庫中的 Windows 執行階段 API。
+    - <span data-ttu-id="e9141-816">您可以使用以 Windows 8.1、Windows Phone 8.1 和 Windows Phone Silverlight 8.1 為目標之可攜式類別庫中的 Windows 執行階段 API。</span><span class="sxs-lookup"><span data-stu-id="e9141-816">You can use Windows Runtime APIs in portable libraries that target Windows 8.1, Windows Phone 8.1, and Windows Phone Silverlight 8.1.</span></span>
 
-    - 當您以 Windows 8.1 或 Windows Phone 8.1 為目標時，可將 XAML (Windows.UI.XAML 類別) 加入至可攜式類別庫中。 支援下列 XAML 範本：「空白網頁」、「資源字典」、「樣板化控制項」和「使用者控制項」。
+    - <span data-ttu-id="e9141-817">當您以 Windows 8.1 或 Windows Phone 8.1 為目標時，可將 XAML (Windows.UI.XAML 類別) 加入至可攜式類別庫中。</span><span class="sxs-lookup"><span data-stu-id="e9141-817">You can include XAML (Windows.UI.XAML types) in portable libraries when you target Windows 8.1 or Windows Phone 8.1.</span></span> <span data-ttu-id="e9141-818">支援下列 XAML 範本：「空白網頁」、「資源字典」、「樣板化控制項」和「使用者控制項」。</span><span class="sxs-lookup"><span data-stu-id="e9141-818">The following XAML templates are supported:  Blank Page, Resource Dictionary, Templated Control, and User Control.</span></span>
 
-    - 您可以建立可攜式 Windows 執行階段元件 (.winmd 檔案)，以便用於以 Windows 8.1 和 Windows Phone 8.1 為目標的市集應用程式。
+    - <span data-ttu-id="e9141-819">您可以建立可攜式 Windows 執行階段元件 (.winmd 檔案)，以便用於以 Windows 8.1 和 Windows Phone 8.1 為目標的市集應用程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-819">You can create a portable Windows Runtime component (.winmd file) for use in Store apps that target Windows 8.1 and Windows Phone 8.1.</span></span>
 
-    - 您可以像是可攜式類別庫一樣，重定 Windows 市集或 Windows Phone 市集類別庫的目標。
+    - <span data-ttu-id="e9141-820">您可以像是可攜式類別庫一樣，重定 Windows 市集或 Windows Phone 市集類別庫的目標。</span><span class="sxs-lookup"><span data-stu-id="e9141-820">You can retarget a Windows Store or Windows Phone Store class library like a Portable Class Library.</span></span>
 
-     如需這些變更的詳細資訊，請參閱[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
+     <span data-ttu-id="e9141-821">如需這些變更的詳細資訊，請參閱[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-821">For more information about these changes, see [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).</span></span>
 
-- .NET Framework 內容集現在包含 [!INCLUDE[net_native](../../../includes/net-native-md.md)] (用於建置及部署 Windows 應用程式的先行編譯技術) 的文件。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 會將您的應用程式直接編譯為機器碼 (而不是中繼語言 (IL)) 以提升效能。 如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)。
+- <span data-ttu-id="e9141-822">.NET Framework 內容集現在包含 [!INCLUDE[net_native](../../../includes/net-native-md.md)] (用於建置及部署 Windows 應用程式的先行編譯技術) 的文件。</span><span class="sxs-lookup"><span data-stu-id="e9141-822">The .NET Framework content set now includes documentation for [!INCLUDE[net_native](../../../includes/net-native-md.md)], which is a precompilation technology for building and deploying Windows apps.</span></span> [!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="e9141-823"> 會將您的應用程式直接編譯為機器碼 (而不是中繼語言 (IL)) 以提升效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-823"> compiles your apps directly to native code, rather than to intermediate language (IL), for better performance.</span></span> <span data-ttu-id="e9141-824">如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-824">For details, see [Compiling Apps with .NET Native](../../../docs/framework/net-native/index.md).</span></span>
 
-- [.NET Framework 參考來源](http://referencesource.microsoft.com/)提供新瀏覽體驗和增強功能。 您現在可以在線上瀏覽 .NET Framework 原始程式碼、[下載參考](http://referencesource.microsoft.com/download.html)以供離線檢視，並在偵錯時逐步執行原始程式碼 (包含修補程式和更新)。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/)。
+- <span data-ttu-id="e9141-825">[.NET Framework 參考來源](http://referencesource.microsoft.com/)提供新瀏覽體驗和增強功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-825">The [.NET Framework Reference Source](http://referencesource.microsoft.com/) provides a new browsing experience and enhanced functionality.</span></span> <span data-ttu-id="e9141-826">您現在可以在線上瀏覽 .NET Framework 原始程式碼、[下載參考](http://referencesource.microsoft.com/download.html)以供離線檢視，並在偵錯時逐步執行原始程式碼 (包含修補程式和更新)。</span><span class="sxs-lookup"><span data-stu-id="e9141-826">You can now browse through the .NET Framework source code online, [download the reference](http://referencesource.microsoft.com/download.html) for offline viewing, and step through the sources (including patches and updates) during debugging.</span></span> <span data-ttu-id="e9141-827">如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/)。</span><span class="sxs-lookup"><span data-stu-id="e9141-827">For more information, see the blog entry [A new look for .NET Reference Source](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/).</span></span>
 
- .NET Framework 4.5.1 的核心新功能和增強功能包括：
+ <span data-ttu-id="e9141-828">.NET Framework 4.5.1 的核心新功能和增強功能包括：</span><span class="sxs-lookup"><span data-stu-id="e9141-828">Core new features and enhancements in the .NET Framework 4.5.1 include:</span></span>
 
-- 組件的自動繫結重新導向。 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，當您編譯鎖定 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的應用程式時，如果您的應用程式或其元件參考相同組件的多個版本，就可能會將繫結重新導向加入至應用程式組態檔。 您也可以對鎖定舊版 .NET Framework 的專案啟用這項功能。 如需詳細資訊，請參閱[操作說明：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
+- <span data-ttu-id="e9141-829">組件的自動繫結重新導向。</span><span class="sxs-lookup"><span data-stu-id="e9141-829">Automatic binding redirection for assemblies.</span></span> <span data-ttu-id="e9141-830">從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，當您編譯鎖定 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的應用程式時，如果您的應用程式或其元件參考相同組件的多個版本，就可能會將繫結重新導向加入至應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="e9141-830">Starting with [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], when you compile an app that targets the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], binding redirects may be added to the app configuration file if your app or its components reference multiple versions of the same assembly.</span></span> <span data-ttu-id="e9141-831">您也可以對鎖定舊版 .NET Framework 的專案啟用這項功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-831">You can also enable this feature for projects that target older versions of the .NET Framework.</span></span> <span data-ttu-id="e9141-832">如需詳細資訊，請參閱[操作說明：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-832">For more information, see [How to: Enable and Disable Automatic Binding Redirection](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).</span></span>
 
-- 可收集診斷資訊，協助開發人員改進伺服器和雲端應用程式效能的功能。 如需詳細資訊，請參閱 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 類別中的 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 和 <xref:System.Diagnostics.Tracing.EventSource> 方法。
+- <span data-ttu-id="e9141-833">可收集診斷資訊，協助開發人員改進伺服器和雲端應用程式效能的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-833">Ability to collect diagnostics information to help developers improve the performance of server and cloud applications.</span></span> <span data-ttu-id="e9141-834">如需詳細資訊，請參閱 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 類別中的 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 和 <xref:System.Diagnostics.Tracing.EventSource> 方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-834">For more information, see the <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> and <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> methods in the <xref:System.Diagnostics.Tracing.EventSource> class.</span></span>
 
-- 可在記憶體回收期間明確壓縮大型物件堆積 (LOH) 的功能。 如需詳細資訊，請參閱 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName> 屬性 (Property)。
+- <span data-ttu-id="e9141-835">可在記憶體回收期間明確壓縮大型物件堆積 (LOH) 的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-835">Ability to explicitly compact the large object heap (LOH) during garbage collection.</span></span> <span data-ttu-id="e9141-836">如需詳細資訊，請參閱 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="e9141-836">For more information, see the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property.</span></span>
 
-- 其他效能改進功能包括 ASP.NET 應用程式暫止、多核心 JIT 改進功能，以及 .NET Framework 更新後應用程式更快速啟動。 如需詳細資訊，請參閱 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)和 [ASP.NET 應用程式暫止 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) 部落格文章。
+- <span data-ttu-id="e9141-837">其他效能改進功能包括 ASP.NET 應用程式暫止、多核心 JIT 改進功能，以及 .NET Framework 更新後應用程式更快速啟動。</span><span class="sxs-lookup"><span data-stu-id="e9141-837">Additional performance improvements such as ASP.NET app suspension, multi-core JIT improvements, and faster app startup after a .NET Framework update.</span></span> <span data-ttu-id="e9141-838">如需詳細資訊，請參閱 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)和 [ASP.NET 應用程式暫止 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) 部落格文章。</span><span class="sxs-lookup"><span data-stu-id="e9141-838">For details, see the [.NET Framework 4.5.1 announcement](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/) and the [ASP.NET app suspend](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) blog post.</span></span>
 
- Windows Forms 的增強功能包括：
+ <span data-ttu-id="e9141-839">Windows Forms 的增強功能包括：</span><span class="sxs-lookup"><span data-stu-id="e9141-839">Improvements to Windows Forms include:</span></span>
 
-- 調整 Windows Forms 控制項的大小。 您可以透過在應用程式的應用程式組態檔中選擇加入一個項目，使用系統 DPI 設定來調整控制項的元件大小 (例如屬性方格中出現的圖示)。 目前支援此功能的 Windows Forms 控制項如下：
+- <span data-ttu-id="e9141-840">調整 Windows Forms 控制項的大小。</span><span class="sxs-lookup"><span data-stu-id="e9141-840">Resizing in Windows Forms controls.</span></span> <span data-ttu-id="e9141-841">您可以透過在應用程式的應用程式組態檔中選擇加入一個項目，使用系統 DPI 設定來調整控制項的元件大小 (例如屬性方格中出現的圖示)。</span><span class="sxs-lookup"><span data-stu-id="e9141-841">You can use the system DPI setting to resize components of controls (for example, the icons that appear in a property grid) by opting in with an entry in the application configuration file (app.config) for your app.</span></span> <span data-ttu-id="e9141-842">目前支援此功能的 Windows Forms 控制項如下：</span><span class="sxs-lookup"><span data-stu-id="e9141-842">This feature is currently supported in the following Windows Forms controls:</span></span>
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    <xref:System.Windows.Forms.DataGridView> 的某些部分 (請參閱 [4.5.2 的新功能](#v452)以了解其他支援的控制項)
+     <span data-ttu-id="e9141-843"><xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    <xref:System.Windows.Forms.DataGridView> 的某些部分 (請參閱 [4.5.2 的新功能](#v452)以了解其他支援的控制項)</span><span class="sxs-lookup"><span data-stu-id="e9141-843"><xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    Some aspects of the <xref:System.Windows.Forms.DataGridView> (see [new features in 4.5.2](#v452) for additional controls supported)</span></span>
 
-     若要啟用此功能，請將新的 \<appSettings> 元素加入組態檔 (app.config) 中，並將 `EnableWindowsFormsHighDpiAutoResizing` 元素設定為 `true`：
+     <span data-ttu-id="e9141-844">若要啟用此功能，請將新的 \<appSettings> 元素加入組態檔 (app.config) 中，並將 `EnableWindowsFormsHighDpiAutoResizing` 元素設定為 `true`：</span><span class="sxs-lookup"><span data-stu-id="e9141-844">To enable this feature, add a new \<appSettings> element to the configuration file (app.config) and set the `EnableWindowsFormsHighDpiAutoResizing` element to `true`:</span></span>
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
     ```
 
- 在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 中對您的 .NET Framework 應用程式進行偵錯時的改進功能包括：
+ <span data-ttu-id="e9141-845">在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 中對您的 .NET Framework 應用程式進行偵錯時的改進功能包括：</span><span class="sxs-lookup"><span data-stu-id="e9141-845">Improvements when debugging your .NET Framework apps in [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] include:</span></span>
 
-- 在 Visual Studio Debugger 中傳回值。 當您在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱 MSDN Library 中的[檢查方法呼叫的傳回值](http://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx)。
+- <span data-ttu-id="e9141-846">在 Visual Studio Debugger 中傳回值。</span><span class="sxs-lookup"><span data-stu-id="e9141-846">Return values in the Visual Studio debugger.</span></span> <span data-ttu-id="e9141-847">當您在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。</span><span class="sxs-lookup"><span data-stu-id="e9141-847">When you debug a managed app in [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], the Autos window displays return types and values for methods.</span></span> <span data-ttu-id="e9141-848">這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-848">This information is available for desktop, Windows Store, and Windows Phone apps.</span></span> <span data-ttu-id="e9141-849">如需詳細資訊，請參閱 MSDN Library 中的[檢查方法呼叫的傳回值](http://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx)。</span><span class="sxs-lookup"><span data-stu-id="e9141-849">For more information, see [Examine return values of method calls](http://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) in the MSDN Library.</span></span>
 
-- 64 位元應用程式的 [編輯後繼續] 功能。 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 對桌面、Windows 市集和 Windows Phone 的 64 位元 Managed 應用程式支援 [編輯後繼續] 功能。 對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。
+- <span data-ttu-id="e9141-850">64 位元應用程式的 [編輯後繼續] 功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-850">Edit and Continue for 64-bit apps.</span></span> [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]<span data-ttu-id="e9141-851"> 對桌面、Windows 市集和 Windows Phone 的 64 位元 Managed 應用程式支援 [編輯後繼續] 功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-851"> supports the Edit and Continue feature for 64-bit managed apps for desktop, Windows Store, and Windows Phone.</span></span> <span data-ttu-id="e9141-852">對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。</span><span class="sxs-lookup"><span data-stu-id="e9141-852">The existing limitations remain in effect for both 32-bit and 64-bit apps (see the last section of the [Supported Code Changes (C#)](/visualstudio/debugger/supported-code-changes-csharp) article).</span></span>
 
-- 非同步感知偵錯。 為了在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 中更為容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鍊結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
+- <span data-ttu-id="e9141-853">非同步感知偵錯。</span><span class="sxs-lookup"><span data-stu-id="e9141-853">Async-aware debugging.</span></span> <span data-ttu-id="e9141-854">為了在 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 中更為容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鍊結，讓您可以更清楚地了解邏輯程式執行的方式。</span><span class="sxs-lookup"><span data-stu-id="e9141-854">To make it easier to debug asynchronous apps in [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], the call stack hides the infrastructure code provided by compilers to support asynchronous programming, and also chains in logical parent frames so you can follow logical program execution more clearly.</span></span> <span data-ttu-id="e9141-855">[工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。</span><span class="sxs-lookup"><span data-stu-id="e9141-855">A Tasks window replaces the Parallel Tasks window and displays tasks that relate to a particular breakpoint, and also displays any other tasks that are currently active or scheduled in the app.</span></span> <span data-ttu-id="e9141-856">您可以在 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e9141-856">You can read about this feature in the "Async-aware debugging" section of the [.NET Framework 4.5.1 announcement](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).</span></span>
 
-- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。 
+- <span data-ttu-id="e9141-857">對 Windows 執行階段元件提供更佳的例外狀況支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-857">Better exception support for Windows Runtime components.</span></span> <span data-ttu-id="e9141-858">在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。</span><span class="sxs-lookup"><span data-stu-id="e9141-858">In [!INCLUDE[win81](../../../includes/win81-md.md)], exceptions that arise from Windows Store apps preserve information about the error that caused the exception, even across language boundaries.</span></span> <span data-ttu-id="e9141-859">您可以在 [.NET Framework 4.5.1 公告](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="e9141-859">You can read about this feature in the "Windows Store app development" section of the [.NET Framework 4.5.1 announcement](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).</span></span> 
 
- 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您可以使用 [Managed 特性指引最佳化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)，針對 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式和桌面應用程式進行最佳化。
+ <span data-ttu-id="e9141-860">從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您可以使用 [Managed 特性指引最佳化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)，針對 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式和桌面應用程式進行最佳化。</span><span class="sxs-lookup"><span data-stu-id="e9141-860">Starting with [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], you can use the [Managed Profile Guided Optimization Tool (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) to optimize [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps as well as desktop apps.</span></span>
 
- 如需 ASP.NET 4.5.1 的新功能，請參閱 ASP.NET 網站上的 [ASP.NET 4.5.1 和 Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094)。
+ <span data-ttu-id="e9141-861">如需 ASP.NET 4.5.1 的新功能，請參閱 ASP.NET 網站上的 [ASP.NET 4.5.1 和 Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094)。</span><span class="sxs-lookup"><span data-stu-id="e9141-861">For new features in ASP.NET 4.5.1, see [ASP.NET 4.5.1 and Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094) on the ASP.NET site.</span></span>
 
- [回到頁首](#introduction)
+ [<span data-ttu-id="e9141-862">回到頁首</span><span class="sxs-lookup"><span data-stu-id="e9141-862">Back to top</span></span>](#introduction)
 
 <a name="core"></a> 
-## <a name="whats-new-in-the-net-framework-45"></a>.NET Framework 4.5 中的新增功能
+## <a name="whats-new-in-the-net-framework-45"></a><span data-ttu-id="e9141-863">.NET Framework 4.5 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="e9141-863">What's new in the .NET Framework 4.5</span></span>
 
-### <a name="core-new-features-and-improvements"></a>核心新功能和增強功能
+### <a name="core-new-features-and-improvements"></a><span data-ttu-id="e9141-864">核心新功能和增強功能</span><span class="sxs-lookup"><span data-stu-id="e9141-864">Core new features and improvements</span></span>
 
-- 可透過在部署期間偵測及關閉 .NET Framework 4 應用程式的方式，減少系統重新啟動次數的功能。 請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)。
+- <span data-ttu-id="e9141-865">可透過在部署期間偵測及關閉 .NET Framework 4 應用程式的方式，減少系統重新啟動次數的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-865">Ability to reduce system restarts by detecting and closing .NET Framework 4 applications during deployment.</span></span> <span data-ttu-id="e9141-866">請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-866">See [Reducing System Restarts During .NET Framework 4.5 Installations](../../../docs/framework/deployment/reducing-system-restarts.md).</span></span>
 
-- 在 64 位元平台上支援大於 2 GB 的陣列。 這項功能可以在應用程式組態檔中啟用。 請參閱 [\<gcAllowVeryLargeObjects> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)，其中也列出物件大小和陣列大小的其他限制。
+- <span data-ttu-id="e9141-867">在 64 位元平台上支援大於 2 GB 的陣列。</span><span class="sxs-lookup"><span data-stu-id="e9141-867">Support for arrays that are larger than 2 gigabytes (GB) on 64-bit platforms.</span></span> <span data-ttu-id="e9141-868">這項功能可以在應用程式組態檔中啟用。</span><span class="sxs-lookup"><span data-stu-id="e9141-868">This feature can be enabled in the application configuration file.</span></span> <span data-ttu-id="e9141-869">請參閱 [\<gcAllowVeryLargeObjects> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)，其中也列出物件大小和陣列大小的其他限制。</span><span class="sxs-lookup"><span data-stu-id="e9141-869">See the [\<gcAllowVeryLargeObjects> element](../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), which also lists other restrictions on object size and array size.</span></span>
 
-- 透過伺服器的背景記憶體回收改善效能。 當您在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中使用伺服器記憶體回收時，背景記憶體回收會自動啟用。 請參閱[記憶體回收的基本概念](../../../docs/standard/garbage-collection/fundamentals.md)主題的＜背景伺服器記憶體回收＞一節。
+- <span data-ttu-id="e9141-870">透過伺服器的背景記憶體回收改善效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-870">Better performance through background garbage collection for servers.</span></span> <span data-ttu-id="e9141-871">當您在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中使用伺服器記憶體回收時，背景記憶體回收會自動啟用。</span><span class="sxs-lookup"><span data-stu-id="e9141-871">When you use server garbage collection in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], background garbage collection is automatically enabled.</span></span> <span data-ttu-id="e9141-872">請參閱[記憶體回收的基本概念](../../../docs/standard/garbage-collection/fundamentals.md)主題的＜背景伺服器記憶體回收＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-872">See the Background Server Garbage Collection section of the [Fundamentals of Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md) topic.</span></span>
 
-- 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱 <xref:System.Runtime.ProfileOptimization>。
+- <span data-ttu-id="e9141-873">背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-873">Background just-in-time (JIT) compilation, which is optionally available on multi-core processors to improve application performance.</span></span> <span data-ttu-id="e9141-874">請參閱 <xref:System.Runtime.ProfileOptimization>。</span><span class="sxs-lookup"><span data-stu-id="e9141-874">See <xref:System.Runtime.ProfileOptimization>.</span></span>
 
-- 可限制規則運算式引擎在逾時之前，嘗試解析規則運算式之時間長度的功能。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 屬性。
+- <span data-ttu-id="e9141-875">可限制規則運算式引擎在逾時之前，嘗試解析規則運算式之時間長度的功能。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="e9141-875">Ability to limit how long the regular expression engine will attempt to resolve a regular expression before it times out. See the <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> property.</span></span>
 
-- 可定義應用程式定義域之預設文化特性的功能。 請參閱 <xref:System.Globalization.CultureInfo> 類別。
+- <span data-ttu-id="e9141-876">可定義應用程式定義域之預設文化特性的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-876">Ability to define the default culture for an application domain.</span></span> <span data-ttu-id="e9141-877">請參閱 <xref:System.Globalization.CultureInfo> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-877">See the <xref:System.Globalization.CultureInfo> class.</span></span>
 
-- 對 Unicode (UTF-16) 編碼的主控台支援。 請參閱 <xref:System.Console> 類別。
+- <span data-ttu-id="e9141-878">對 Unicode (UTF-16) 編碼的主控台支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-878">Console support for Unicode (UTF-16) encoding.</span></span> <span data-ttu-id="e9141-879">請參閱 <xref:System.Console> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-879">See the <xref:System.Console> class.</span></span>
 
-- 支援文化特性字串順序和比較資料的版本控制。 請參閱 <xref:System.Globalization.SortVersion> 類別。
+- <span data-ttu-id="e9141-880">支援文化特性字串順序和比較資料的版本控制。</span><span class="sxs-lookup"><span data-stu-id="e9141-880">Support for versioning of cultural string ordering and comparison data.</span></span> <span data-ttu-id="e9141-881">請參閱 <xref:System.Globalization.SortVersion> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-881">See the <xref:System.Globalization.SortVersion> class.</span></span>
 
-- 改善擷取資源時的效能。 請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。
+- <span data-ttu-id="e9141-882">改善擷取資源時的效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-882">Better performance when retrieving resources.</span></span> <span data-ttu-id="e9141-883">請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-883">See [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).</span></span>
 
-- 改善 Zip 壓縮，縮減壓縮檔的大小。 請參閱 <xref:System.IO.Compression?displayProperty=fullName> 命名空間。
+- <span data-ttu-id="e9141-884">改善 Zip 壓縮，縮減壓縮檔的大小。</span><span class="sxs-lookup"><span data-stu-id="e9141-884">Zip compression improvements to reduce the size of a compressed file.</span></span> <span data-ttu-id="e9141-885">請參閱 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間。</span><span class="sxs-lookup"><span data-stu-id="e9141-885">See the <xref:System.IO.Compression?displayProperty=nameWithType> namespace.</span></span>
 
-- 可透過 <xref:System.Reflection.Context.CustomReflectionContext> 類別自訂反映內容以覆寫預設反映行為的功能。
+- <span data-ttu-id="e9141-886">可透過 <xref:System.Reflection.Context.CustomReflectionContext> 類別自訂反映內容以覆寫預設反映行為的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-886">Ability to customize a reflection context to override default reflection behavior through the <xref:System.Reflection.Context.CustomReflectionContext> class.</span></span>
 
-- 在 <xref:System.Globalization.IdnMapping?displayProperty=fullName> 上使用 [!INCLUDE[win8](../../../includes/win8-md.md)] 類別時，支援 2008 版的應用程式國際化網域名稱 (Internationalized Domain Names in Applications，IDNA) 標準。
+- <span data-ttu-id="e9141-887">在 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 上使用 [!INCLUDE[win8](../../../includes/win8-md.md)] 類別時，支援 2008 版的應用程式國際化網域名稱 (Internationalized Domain Names in Applications，IDNA) 標準。</span><span class="sxs-lookup"><span data-stu-id="e9141-887">Support for the 2008 version of the Internationalized Domain Names in Applications (IDNA) standard when the <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> class is used  on [!INCLUDE[win8](../../../includes/win8-md.md)].</span></span>
 
-- 對作業系統委派字串比較，該字串比較會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上使用 .NET Framework 時實作 Unicode 6.0。 在其他平台上執行時，.NET Framework 會包含自己的字串比較資料 (該資料會實作 Unicode 5.x)。 請參閱 <xref:System.String> 類別以及 <xref:System.Globalization.SortVersion> 類別的＜備註＞一節。
+- <span data-ttu-id="e9141-888">對作業系統委派字串比較，該字串比較會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上使用 .NET Framework 時實作 Unicode 6.0。</span><span class="sxs-lookup"><span data-stu-id="e9141-888">Delegation of string comparison to the operating system, which implements Unicode 6.0, when the .NET Framework is used on [!INCLUDE[win8](../../../includes/win8-md.md)].</span></span> <span data-ttu-id="e9141-889">在其他平台上執行時，.NET Framework 會包含自己的字串比較資料 (該資料會實作 Unicode 5.x)。</span><span class="sxs-lookup"><span data-stu-id="e9141-889">When running on other platforms, the .NET Framework includes its own string comparison data, which implements Unicode 5.x.</span></span> <span data-ttu-id="e9141-890">請參閱 <xref:System.String> 類別以及 <xref:System.Globalization.SortVersion> 類別的＜備註＞一節。</span><span class="sxs-lookup"><span data-stu-id="e9141-890">See the <xref:System.String> class and the Remarks section of the <xref:System.Globalization.SortVersion> class.</span></span>
 
-- 可用每個應用程式定義域做為基準，計算字串之雜湊碼的功能。 請參閱 [\<UseRandomizedStringHashAlgorithm> 項目](../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。
+- <span data-ttu-id="e9141-891">可用每個應用程式定義域做為基準，計算字串之雜湊碼的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-891">Ability to compute the hash codes for strings on a per application domain basis.</span></span> <span data-ttu-id="e9141-892">請參閱 [\<UseRandomizedStringHashAlgorithm> 項目](../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-892">See [\<UseRandomizedStringHashAlgorithm> Element](../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).</span></span>
 
-- 類型反映支援在 <xref:System.Type> 和 <xref:System.Reflection.TypeInfo> 類別之間分割。 請參閱[適用於 Windows 市集應用程式之 .NET Framework 中的反映](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md)。
+- <span data-ttu-id="e9141-893">類型反映支援在 <xref:System.Type> 和 <xref:System.Reflection.TypeInfo> 類別之間分割。</span><span class="sxs-lookup"><span data-stu-id="e9141-893">Type reflection support split between <xref:System.Type> and <xref:System.Reflection.TypeInfo> classes.</span></span> <span data-ttu-id="e9141-894">請參閱[適用於 Windows 市集應用程式之 .NET Framework 中的反映](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-894">See [Reflection in the .NET Framework for Windows Store Apps](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md).</span></span>
 
-### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Managed Extensibility Framework (MEF) 提供下列新功能：
+### <a name="managed-extensibility-framework-mef"></a><span data-ttu-id="e9141-895">Managed Extensibility Framework (MEF)</span><span class="sxs-lookup"><span data-stu-id="e9141-895">Managed Extensibility Framework (MEF)</span></span>
+ <span data-ttu-id="e9141-896">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Managed Extensibility Framework (MEF) 提供下列新功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-896">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the Managed Extensibility Framework (MEF) provides the following new features:</span></span>
 
-- 支援泛型類型。
+- <span data-ttu-id="e9141-897">支援泛型類型。</span><span class="sxs-lookup"><span data-stu-id="e9141-897">Support for generic types.</span></span>
 
-- 以慣例為基礎的程式設計模型，可讓您依命名慣例而非屬性建立組件。
+- <span data-ttu-id="e9141-898">以慣例為基礎的程式設計模型，可讓您依命名慣例而非屬性建立組件。</span><span class="sxs-lookup"><span data-stu-id="e9141-898">Convention-based programming model that enables you to create parts based on naming conventions rather than attributes.</span></span>
 
-- 多個範圍。
+- <span data-ttu-id="e9141-899">多個範圍。</span><span class="sxs-lookup"><span data-stu-id="e9141-899">Multiple scopes.</span></span>
 
-- 可以在建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時使用的 MEF 子集。 您可透過 NuGet Gallery 取得這個子集的[可下載套件](http://go.microsoft.com/fwlink/?LinkId=256238)。 若要安裝套件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，並於線上搜尋 `Microsoft.Composition` 套件。
+- <span data-ttu-id="e9141-900">可以在建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時使用的 MEF 子集。</span><span class="sxs-lookup"><span data-stu-id="e9141-900">A subset of MEF that you can use when you create [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="e9141-901">您可透過 NuGet Gallery 取得這個子集的[可下載套件](http://go.microsoft.com/fwlink/?LinkId=256238)。</span><span class="sxs-lookup"><span data-stu-id="e9141-901">This subset is available as a [downloadable package](http://go.microsoft.com/fwlink/?LinkId=256238) from the NuGet Gallery.</span></span> <span data-ttu-id="e9141-902">若要安裝套件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，並於線上搜尋 `Microsoft.Composition` 套件。</span><span class="sxs-lookup"><span data-stu-id="e9141-902">To install the package, open your project in Visual Studio, choose **Manage NuGet Packages** from the **Project** menu, and search online for the `Microsoft.Composition` package.</span></span>
 
- 如需詳細資訊，請參閱 [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)。
+ <span data-ttu-id="e9141-903">如需詳細資訊，請參閱 [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-903">For more information, see [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md).</span></span>
 
-### <a name="asynchronous-file-operations"></a>非同步檔案作業
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，C# 和 Visual Basic 語言已加入新的非同步功能。 這些功能會加入執行非同步作業的工作模型。 若要使用這個全新的模型，請使用 I/O 類別中的非同步方法。 請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。
+### <a name="asynchronous-file-operations"></a><span data-ttu-id="e9141-904">非同步檔案作業</span><span class="sxs-lookup"><span data-stu-id="e9141-904">Asynchronous file operations</span></span>
+ <span data-ttu-id="e9141-905">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，C# 和 Visual Basic 語言已加入新的非同步功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-905">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], new asynchronous features were added to the C# and Visual Basic languages.</span></span> <span data-ttu-id="e9141-906">這些功能會加入執行非同步作業的工作模型。</span><span class="sxs-lookup"><span data-stu-id="e9141-906">These features add a task-based model for performing asynchronous operations.</span></span> <span data-ttu-id="e9141-907">若要使用這個全新的模型，請使用 I/O 類別中的非同步方法。</span><span class="sxs-lookup"><span data-stu-id="e9141-907">To use this new model, use the asynchronous methods in the I/O classes.</span></span> <span data-ttu-id="e9141-908">請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-908">See [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span>
 
 <a name="tools"></a> 
-### <a name="tools"></a>工具
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，資源檔產生器 (Resgen.exe) 可讓您從 .NET Framework 組件內嵌的 .resources 檔建立 .resw 檔，以供 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用。 如需詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
+### <a name="tools"></a><span data-ttu-id="e9141-909">工具</span><span class="sxs-lookup"><span data-stu-id="e9141-909">Tools</span></span>
+ <span data-ttu-id="e9141-910">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，資源檔產生器 (Resgen.exe) 可讓您從 .NET Framework 組件內嵌的 .resources 檔建立 .resw 檔，以供 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用。</span><span class="sxs-lookup"><span data-stu-id="e9141-910">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resource File Generator (Resgen.exe) enables you to create a .resw file for use in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps from a .resources file embedded in a .NET Framework assembly.</span></span> <span data-ttu-id="e9141-911">如需詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-911">For more information, see [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).</span></span>
 
- Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組件，改善應用程式啟動時間、記憶體使用量 (工作集大小) 和輸送量。 命令列工具會產生原生映像應用程式組件的設定檔資料。 請參閱 [Mpgo.exe (Managed 特性指引最佳化工具)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您可以使用 Mpgo.exe 最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式及桌面應用程式。
+ <span data-ttu-id="e9141-912">Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組件，改善應用程式啟動時間、記憶體使用量 (工作集大小) 和輸送量。</span><span class="sxs-lookup"><span data-stu-id="e9141-912">Managed Profile Guided Optimization (Mpgo.exe) enables you to improve application startup time, memory utilization (working set size), and throughput by optimizing native image assemblies.</span></span> <span data-ttu-id="e9141-913">命令列工具會產生原生映像應用程式組件的設定檔資料。</span><span class="sxs-lookup"><span data-stu-id="e9141-913">The command-line tool generates profile data for native image application assemblies.</span></span> <span data-ttu-id="e9141-914">請參閱 [Mpgo.exe (Managed 特性指引最佳化工具)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-914">See [Mpgo.exe (Managed Profile Guided Optimization Tool)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md).</span></span> <span data-ttu-id="e9141-915">從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您可以使用 Mpgo.exe 最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式及桌面應用程式。</span><span class="sxs-lookup"><span data-stu-id="e9141-915">Starting with [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], you can use Mpgo.exe to optimize [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps as well as desktop apps.</span></span>
 
 <a name="parallel"></a> 
-### <a name="parallel-computing"></a>平行運算
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 針對平行計算提供了許多新功能和改進功能。 這些功能包括提升效能、增強控制、改善非同步程式設計的支援、全新的資料流程程式庫，以及改善平行偵錯與效能分析的支援。 請參閱「.NET 平行程式設計」部落格中的[.NET 4.5 中的平行處理原則新增功能 (英文)](http://go.microsoft.com/fwlink/?LinkId=235061)。
+### <a name="parallel-computing"></a><span data-ttu-id="e9141-916">平行運算</span><span class="sxs-lookup"><span data-stu-id="e9141-916">Parallel computing</span></span>
+ <span data-ttu-id="e9141-917">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 針對平行計算提供了許多新功能和改進功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-917">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provides several new features and improvements for parallel computing.</span></span> <span data-ttu-id="e9141-918">這些功能包括提升效能、增強控制、改善非同步程式設計的支援、全新的資料流程程式庫，以及改善平行偵錯與效能分析的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-918">These include improved performance, increased control, improved support for asynchronous programming, a new dataflow library, and improved support for parallel debugging and performance analysis.</span></span> <span data-ttu-id="e9141-919">請參閱「.NET 平行程式設計」部落格中的[.NET 4.5 中的平行處理原則新增功能 (英文)](http://go.microsoft.com/fwlink/?LinkId=235061)。</span><span class="sxs-lookup"><span data-stu-id="e9141-919">See the entry [What’s New for Parallelism in .NET 4.5](http://go.microsoft.com/fwlink/?LinkId=235061) in the Parallel Programming with .NET blog.</span></span>
 
 <a name="web"></a> 
-### <a name="web"></a>Web
- ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理常式、效能增強功能及許多其他功能的模型繫結。 如需詳細資訊，請參閱下列資源：
+### <a name="web"></a><span data-ttu-id="e9141-920">Web</span><span class="sxs-lookup"><span data-stu-id="e9141-920">Web</span></span>
+ <span data-ttu-id="e9141-921">ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理常式、效能增強功能及許多其他功能的模型繫結。</span><span class="sxs-lookup"><span data-stu-id="e9141-921">ASP.NET 4.5 and 4.5.1 add model binding for Web Forms, WebSocket support, asynchronous handlers, performance enhancements, and many other features.</span></span> <span data-ttu-id="e9141-922">如需詳細資訊，請參閱下列資源：</span><span class="sxs-lookup"><span data-stu-id="e9141-922">For more information, see the following resources:</span></span>
 
-- MSDN Library 中的 [ASP.NET 4.5 和 Visual Studio 2012](http://msdn.microsoft.com/library/ac9bb7f6-f094-4af7-bad0-acf49a5dbc55)。
+- <span data-ttu-id="e9141-923">MSDN Library 中的 [ASP.NET 4.5 和 Visual Studio 2012](http://msdn.microsoft.com/library/ac9bb7f6-f094-4af7-bad0-acf49a5dbc55)。</span><span class="sxs-lookup"><span data-stu-id="e9141-923">[ASP.NET 4.5 and Visual Studio 2012](http://msdn.microsoft.com/library/ac9bb7f6-f094-4af7-bad0-acf49a5dbc55) in the MSDN Library.</span></span>
 
-- ASP.NET 網站上的 [ASP.NET 4.5.1 和 Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094)。
+- <span data-ttu-id="e9141-924">ASP.NET 網站上的 [ASP.NET 4.5.1 和 Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094)。</span><span class="sxs-lookup"><span data-stu-id="e9141-924">[ASP.NET 4.5.1 and Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094) on the ASP.NET site.</span></span>
 
 <a name="networking"></a> 
-### <a name="networking"></a>網路功能
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為 HTTP 應用程式提供了新的程式設計介面。 如需詳細資訊，請參閱新的 <xref:System.Net.Http?displayProperty=fullName> 和 <xref:System.Net.Http.Headers?displayProperty=fullName> 命名空間。
+### <a name="networking"></a><span data-ttu-id="e9141-925">網路功能</span><span class="sxs-lookup"><span data-stu-id="e9141-925">Networking</span></span>
+ <span data-ttu-id="e9141-926">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為 HTTP 應用程式提供了新的程式設計介面。</span><span class="sxs-lookup"><span data-stu-id="e9141-926">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provides a new programming interface for HTTP applications.</span></span> <span data-ttu-id="e9141-927">如需詳細資訊，請參閱新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空間。</span><span class="sxs-lookup"><span data-stu-id="e9141-927">For more information, see the new <xref:System.Net.Http?displayProperty=nameWithType> and <xref:System.Net.Http.Headers?displayProperty=nameWithType> namespaces.</span></span>
 
- 另外還包括對新的程式設計介面的支援，可使用現有的 <xref:System.Net.HttpListener> 和相關類別接受 WebSocket 連接並進行互動。 如需詳細資訊，請參閱新的 <xref:System.Net.WebSockets> 命名空間和 <xref:System.Net.HttpListener> 類別。
+ <span data-ttu-id="e9141-928">另外還包括對新的程式設計介面的支援，可使用現有的 <xref:System.Net.HttpListener> 和相關類別接受 WebSocket 連接並進行互動。</span><span class="sxs-lookup"><span data-stu-id="e9141-928">Support is also included for a new programming interface for accepting and interacting with a WebSocket connection by using the existing <xref:System.Net.HttpListener> and related classes.</span></span> <span data-ttu-id="e9141-929">如需詳細資訊，請參閱新的 <xref:System.Net.WebSockets> 命名空間和 <xref:System.Net.HttpListener> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-929">For more information, see the new <xref:System.Net.WebSockets> namespace and the <xref:System.Net.HttpListener> class.</span></span>
 
- 此外，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 還包括下列網路改進功能：
+ <span data-ttu-id="e9141-930">此外，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 還包括下列網路改進功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-930">In addition, the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] includes the following networking improvements:</span></span>
 
-- 符合 RFC 標準的 URI 支援。 如需詳細資訊，請參閱 <xref:System.Uri> 和相關類別。
+- <span data-ttu-id="e9141-931">符合 RFC 標準的 URI 支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-931">RFC-compliant URI support.</span></span> <span data-ttu-id="e9141-932">如需詳細資訊，請參閱 <xref:System.Uri> 和相關類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-932">For more information, see <xref:System.Uri> and related classes.</span></span>
 
-- 支援國際化網域名稱 (IDN) 剖析。 如需詳細資訊，請參閱 <xref:System.Uri> 和相關類別。
+- <span data-ttu-id="e9141-933">支援國際化網域名稱 (IDN) 剖析。</span><span class="sxs-lookup"><span data-stu-id="e9141-933">Support for Internationalized Domain Name (IDN) parsing.</span></span> <span data-ttu-id="e9141-934">如需詳細資訊，請參閱 <xref:System.Uri> 和相關類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-934">For more information, see <xref:System.Uri> and related classes.</span></span>
 
-- 支援電子郵件地址國際化 (EAI)。 如需詳細資訊，請參閱 <xref:System.Net.Mail>。
+- <span data-ttu-id="e9141-935">支援電子郵件地址國際化 (EAI)。</span><span class="sxs-lookup"><span data-stu-id="e9141-935">Support for Email Address Internationalization (EAI).</span></span> <span data-ttu-id="e9141-936">如需詳細資訊，請參閱 <xref:System.Net.Mail>。</span><span class="sxs-lookup"><span data-stu-id="e9141-936">For more information, see the <xref:System.Net.Mail> namespace.</span></span>
 
-- 改進的 IPv6 支援。 如需詳細資訊，請參閱 <xref:System.Net.NetworkInformation>。
+- <span data-ttu-id="e9141-937">改進的 IPv6 支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-937">Improved IPv6 support.</span></span> <span data-ttu-id="e9141-938">如需詳細資訊，請參閱 <xref:System.Net.NetworkInformation>。</span><span class="sxs-lookup"><span data-stu-id="e9141-938">For more information, see the <xref:System.Net.NetworkInformation> namespace.</span></span>
 
-- 雙重模式通訊端支援。 如需詳細資訊，請參閱 <xref:System.Net.Sockets.Socket> 和 <xref:System.Net.Sockets.TcpListener> 類別。
+- <span data-ttu-id="e9141-939">雙重模式通訊端支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-939">Dual-mode socket support.</span></span> <span data-ttu-id="e9141-940">如需詳細資訊，請參閱 <xref:System.Net.Sockets.Socket> 和 <xref:System.Net.Sockets.TcpListener> 類別。</span><span class="sxs-lookup"><span data-stu-id="e9141-940">For more information, see the <xref:System.Net.Sockets.Socket> and <xref:System.Net.Sockets.TcpListener> classes.</span></span>
 
 <a name="client"></a> 
-### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Windows Presentation Foundation (WPF) 包含以下層面的變更與改進功能：
+### <a name="windows-presentation-foundation-wpf"></a><span data-ttu-id="e9141-941">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="e9141-941">Windows Presentation Foundation (WPF)</span></span>
+ <span data-ttu-id="e9141-942">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Windows Presentation Foundation (WPF) 包含以下層面的變更與改進功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-942">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Foundation (WPF) contains changes and improvements in the following areas:</span></span>
 
-- 新的 <xref:System.Windows.Controls.Ribbon.Ribbon> 控制項可以讓您實作功能區使用者介面，其中裝載了 [快速存取工具列]、[應用程式功能表] 及索引標籤。
+- <span data-ttu-id="e9141-943">新的 <xref:System.Windows.Controls.Ribbon.Ribbon> 控制項可以讓您實作功能區使用者介面，其中裝載了 [快速存取工具列]、[應用程式功能表] 及索引標籤。</span><span class="sxs-lookup"><span data-stu-id="e9141-943">The new <xref:System.Windows.Controls.Ribbon.Ribbon> control, which enables you to implement a ribbon user interface that hosts a Quick Access Toolbar, Application Menu, and tabs.</span></span>
 
-- 新的 <xref:System.ComponentModel.INotifyDataErrorInfo> 介面支援同步和非同步資料驗證。
+- <span data-ttu-id="e9141-944">新的 <xref:System.ComponentModel.INotifyDataErrorInfo> 介面支援同步和非同步資料驗證。</span><span class="sxs-lookup"><span data-stu-id="e9141-944">The new <xref:System.ComponentModel.INotifyDataErrorInfo> interface, which supports synchronous and asynchronous data validation.</span></span>
 
-- <xref:System.Windows.Controls.VirtualizingPanel> 和 <xref:System.Windows.Threading.Dispatcher> 類別的新功能。
+- <span data-ttu-id="e9141-945"><xref:System.Windows.Controls.VirtualizingPanel> 和 <xref:System.Windows.Threading.Dispatcher> 類別的新功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-945">New features for the <xref:System.Windows.Controls.VirtualizingPanel> and <xref:System.Windows.Threading.Dispatcher> classes.</span></span>
 
-- 改善顯示大型群組資料集合時的效能，以及透過在非 UI 執行緒上存取集合提升效能。
+- <span data-ttu-id="e9141-946">改善顯示大型群組資料集合時的效能，以及透過在非 UI 執行緒上存取集合提升效能。</span><span class="sxs-lookup"><span data-stu-id="e9141-946">Improved performance when displaying large sets of grouped data, and by accessing collections on non-UI threads.</span></span>
 
-- 靜態屬性的資料繫結、實作 <xref:System.Reflection.ICustomTypeProvider> 介面之自訂類型的資料繫結，以及從繫結運算式擷取資料繫結資訊。
+- <span data-ttu-id="e9141-947">靜態屬性的資料繫結、實作 <xref:System.Reflection.ICustomTypeProvider> 介面之自訂類型的資料繫結，以及從繫結運算式擷取資料繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="e9141-947">Data binding to static properties, data binding to custom types that implement the <xref:System.Reflection.ICustomTypeProvider> interface, and retrieval of data binding information from a binding expression.</span></span>
 
-- 隨著值變更重新調整資料的位置 (即時繪圖)。
+- <span data-ttu-id="e9141-948">隨著值變更重新調整資料的位置 (即時繪圖)。</span><span class="sxs-lookup"><span data-stu-id="e9141-948">Repositioning of data as the values change (live shaping).</span></span>
 
-- 可查看項目容器的資料內容是否已中斷連線的功能。
+- <span data-ttu-id="e9141-949">可查看項目容器的資料內容是否已中斷連線的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-949">Ability to check whether the data context for an item container is disconnected.</span></span>
 
-- 可設定屬性變更與資料來源更新之間應該經過之時間長度的功能。
+- <span data-ttu-id="e9141-950">可設定屬性變更與資料來源更新之間應該經過之時間長度的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-950">Ability to set the amount of time that should elapse between property changes and data source updates.</span></span>
 
-- 改進對實作弱式事件模式的支援。 此外，事件現在可以接受標記延伸。
+- <span data-ttu-id="e9141-951">改進對實作弱式事件模式的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-951">Improved support for implementing weak event patterns.</span></span> <span data-ttu-id="e9141-952">此外，事件現在可以接受標記延伸。</span><span class="sxs-lookup"><span data-stu-id="e9141-952">Also, events can now accept markup extensions.</span></span>
 
 <a name="windows_communication_foundation"></a> 
-### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中已加入下列功能，這些功能可讓寫入和維護 Windows Communication Foundation (WCF) 應用程式更容易：
+### <a name="windows-communication-foundation-wcf"></a><span data-ttu-id="e9141-953">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="e9141-953">Windows Communication Foundation (WCF)</span></span>
+ <span data-ttu-id="e9141-954">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中已加入下列功能，這些功能可讓寫入和維護 Windows Communication Foundation (WCF) 應用程式更容易：</span><span class="sxs-lookup"><span data-stu-id="e9141-954">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the following features have been added to make it simpler to write and maintain Windows Communication Foundation (WCF) applications:</span></span>
 
-- 簡化產生的組態檔。
+- <span data-ttu-id="e9141-955">簡化產生的組態檔。</span><span class="sxs-lookup"><span data-stu-id="e9141-955">Simplification of generated configuration files.</span></span>
 
-- 支援合約優先開發。
+- <span data-ttu-id="e9141-956">支援合約優先開發。</span><span class="sxs-lookup"><span data-stu-id="e9141-956">Support for contract-first development.</span></span>
 
-- 可更輕鬆地設定 ASP.NET 相容性模式的功能。
+- <span data-ttu-id="e9141-957">可更輕鬆地設定 ASP.NET 相容性模式的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-957">Ability to configure ASP.NET compatibility mode more easily.</span></span>
 
-- 預設傳輸屬性值中所做的變更，可降低必須設定這些屬性的可能性。
+- <span data-ttu-id="e9141-958">預設傳輸屬性值中所做的變更，可降低必須設定這些屬性的可能性。</span><span class="sxs-lookup"><span data-stu-id="e9141-958">Changes in default transport property values to reduce the likelihood that you will have to set them.</span></span>
 
-- 對 <xref:System.Xml.XmlDictionaryReaderQuotas> 類別的更新，可降低必須手動設定 XML 字典讀取器配額的可能性。
+- <span data-ttu-id="e9141-959">對 <xref:System.Xml.XmlDictionaryReaderQuotas> 類別的更新，可降低必須手動設定 XML 字典讀取器配額的可能性。</span><span class="sxs-lookup"><span data-stu-id="e9141-959">Updates to the <xref:System.Xml.XmlDictionaryReaderQuotas> class to reduce the likelihood that you will have to manually configure quotas for XML dictionary readers.</span></span>
 
-- Visual Studio 會在建置流程中驗證 WCF 組態檔，如此您就可以在執行應用程式之前偵測組態錯誤。
+- <span data-ttu-id="e9141-960">Visual Studio 會在建置流程中驗證 WCF 組態檔，如此您就可以在執行應用程式之前偵測組態錯誤。</span><span class="sxs-lookup"><span data-stu-id="e9141-960">Validation of WCF configuration files by Visual Studio as part of the build process, so you can detect configuration errors before you run your application.</span></span>
 
-- 新增非同步資料流支援。
+- <span data-ttu-id="e9141-961">新增非同步資料流支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-961">New asynchronous streaming support.</span></span>
 
-- 新增 HTTPS 通訊協定對應，如此就能更容易使用 Internet Information Services (IIS) 透過 HTTPS 公開端點。
+- <span data-ttu-id="e9141-962">新增 HTTPS 通訊協定對應，如此就能更容易使用 Internet Information Services (IIS) 透過 HTTPS 公開端點。</span><span class="sxs-lookup"><span data-stu-id="e9141-962">New HTTPS protocol mapping to make it easier to expose an endpoint over HTTPS with Internet Information Services (IIS).</span></span>
 
-- 可藉由將 `?singleWSDL` 附加至服務 URL 的方式，在單一 WSDL 文件中產生中繼資料的功能。
+- <span data-ttu-id="e9141-963">可藉由將 `?singleWSDL` 附加至服務 URL 的方式，在單一 WSDL 文件中產生中繼資料的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-963">Ability to generate metadata in a single WSDL document by appending `?singleWSDL` to the service URL.</span></span>
 
-- Websocket 支援，可透過與 TCP 傳輸類似的效能特性在連接埠 80 與 443 之間進行真正的雙向通訊。
+- <span data-ttu-id="e9141-964">Websocket 支援，可透過與 TCP 傳輸類似的效能特性在連接埠 80 與 443 之間進行真正的雙向通訊。</span><span class="sxs-lookup"><span data-stu-id="e9141-964">Websockets support to enable true bidirectional communication over ports 80 and 443 with performance characteristics similar to the TCP transport.</span></span>
 
-- 支援在程式碼中設定服務。
+- <span data-ttu-id="e9141-965">支援在程式碼中設定服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-965">Support for configuring services in code.</span></span>
 
-- XML 編輯器工具提示。
+- <span data-ttu-id="e9141-966">XML 編輯器工具提示。</span><span class="sxs-lookup"><span data-stu-id="e9141-966">XML Editor tooltips.</span></span>
 
-- <xref:System.ServiceModel.ChannelFactory> 快取支援。
+- <span data-ttu-id="e9141-967"><xref:System.ServiceModel.ChannelFactory> 快取支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-967"><xref:System.ServiceModel.ChannelFactory> caching support.</span></span>
 
-- 支援二進位編碼器壓縮。
+- <span data-ttu-id="e9141-968">支援二進位編碼器壓縮。</span><span class="sxs-lookup"><span data-stu-id="e9141-968">Binary encoder compression support.</span></span>
 
-- 支援 UDP 傳輸，可讓開發人員撰寫使用「射後不理」(Fire and Forget) 傳訊功能的服務。 用戶端傳送訊息給服務，而不期待服務發出任何回應。
+- <span data-ttu-id="e9141-969">支援 UDP 傳輸，可讓開發人員撰寫使用「射後不理」(Fire and Forget) 傳訊功能的服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-969">Support for a UDP transport that enables developers to write services that use "fire and forget" messaging.</span></span> <span data-ttu-id="e9141-970">用戶端傳送訊息給服務，而不期待服務發出任何回應。</span><span class="sxs-lookup"><span data-stu-id="e9141-970">A client sends a message to a service and expects no response from the service.</span></span>
 
-- 可在使用 HTTP 傳輸和傳輸安全性時，於單一 WCF 端點上支援多種驗證模式的功能。
+- <span data-ttu-id="e9141-971">可在使用 HTTP 傳輸和傳輸安全性時，於單一 WCF 端點上支援多種驗證模式的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-971">Ability to support multiple authentication modes on a single WCF endpoint when using the HTTP transport and transport security.</span></span>
 
-- 支援使用國際化網域名稱 (IDN) 的 WCF 服務。
+- <span data-ttu-id="e9141-972">支援使用國際化網域名稱 (IDN) 的 WCF 服務。</span><span class="sxs-lookup"><span data-stu-id="e9141-972">Support for WCF services that use internationalized domain names (IDNs).</span></span>
 
- 如需詳細資訊，請參閱 [Windows Communication Foundation 中的新增功能](http://go.microsoft.com/fwlink/?LinkId=228173)。
+ <span data-ttu-id="e9141-973">如需詳細資訊，請參閱 [Windows Communication Foundation 中的新增功能](http://go.microsoft.com/fwlink/?LinkId=228173)。</span><span class="sxs-lookup"><span data-stu-id="e9141-973">For more information, see [What's New in Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=228173).</span></span>
 
 <a name="windows_workflow_foundation"></a> 
-### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Windows Workflow Foundation (WF) 已加入數項新功能，包括：
+### <a name="windows-workflow-foundation-wf"></a><span data-ttu-id="e9141-974">Windows Workflow Foundation (WF)</span><span class="sxs-lookup"><span data-stu-id="e9141-974">Windows Workflow Foundation (WF)</span></span>
+ <span data-ttu-id="e9141-975">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Windows Workflow Foundation (WF) 已加入數項新功能，包括：</span><span class="sxs-lookup"><span data-stu-id="e9141-975">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], several new features were added to Windows Workflow Foundation (WF), including:</span></span>
 
-- 狀態機器工作流程，最初是在 .NET Framework 4.0.1 中引進 ([.NET Framework 4 Platform Update 1](http://go.microsoft.com/fwlink/?LinkID=215092))。 這項更新包括數個可讓開發人員建立狀態機器工作流程的新類別和活動。 這些類別和活動已針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 進行更新，並加入下列功能：
+- <span data-ttu-id="e9141-976">狀態機器工作流程，最初是在 .NET Framework 4.0.1 中引進 ([.NET Framework 4 Platform Update 1](http://go.microsoft.com/fwlink/?LinkID=215092))。</span><span class="sxs-lookup"><span data-stu-id="e9141-976">State machine workflows, which were first introduced as part of the .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](http://go.microsoft.com/fwlink/?LinkID=215092)).</span></span> <span data-ttu-id="e9141-977">這項更新包括數個可讓開發人員建立狀態機器工作流程的新類別和活動。</span><span class="sxs-lookup"><span data-stu-id="e9141-977">This update included several new classes and activities that enabled developers to create state machine workflows.</span></span> <span data-ttu-id="e9141-978">這些類別和活動已針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 進行更新，並加入下列功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-978">These classes and activities were updated for the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] to include:</span></span>
 
-    - 可設定狀態中斷點的功能。
+    - <span data-ttu-id="e9141-979">可設定狀態中斷點的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-979">The ability to set breakpoints on states.</span></span>
 
-    - 可在工作流程設計工具中複製和貼上轉換的功能。
+    - <span data-ttu-id="e9141-980">可在工作流程設計工具中複製和貼上轉換的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-980">The ability to copy and paste transitions in the workflow designer.</span></span>
 
-    - 設計工具支援建立共用的觸發程序轉換。
+    - <span data-ttu-id="e9141-981">設計工具支援建立共用的觸發程序轉換。</span><span class="sxs-lookup"><span data-stu-id="e9141-981">Designer support for shared trigger transition creation.</span></span>
 
-    - 建立狀態機器工作流程的活動，包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>。
+    - <span data-ttu-id="e9141-982">建立狀態機器工作流程的活動，包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>。</span><span class="sxs-lookup"><span data-stu-id="e9141-982">Activities for creating state machine workflows, including: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, and <xref:System.Activities.Statements.Transition>.</span></span>
 
-- 增強的「工作流程設計工具」功能，如下所示：
+- <span data-ttu-id="e9141-983">增強的「工作流程設計工具」功能，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e9141-983">Enhanced Workflow Designer features such as the following:</span></span>
 
-    - 增強 Visual Studio 中的工作流程搜尋功能，包括「快速尋找」和「檔案中尋找」。
+    - <span data-ttu-id="e9141-984">增強 Visual Studio 中的工作流程搜尋功能，包括「快速尋找」和「檔案中尋找」。</span><span class="sxs-lookup"><span data-stu-id="e9141-984">Enhanced workflow search capabilities in Visual Studio, including **Quick Find** and **Find in Files**.</span></span>
 
-    - 可在第二個子活動加入至容器活動時自動建立「序列」活動，以及同時將這兩個活動包含在「序列」活動中的功能。
+    - <span data-ttu-id="e9141-985">可在第二個子活動加入至容器活動時自動建立「序列」活動，以及同時將這兩個活動包含在「序列」活動中的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-985">Ability to automatically create a Sequence activity when a second child activity is added to a container activity, and to include both activities in the Sequence activity.</span></span>
 
-    - 平移支援，不需使用捲軸就能變更工作流程的可見部分。
+    - <span data-ttu-id="e9141-986">平移支援，不需使用捲軸就能變更工作流程的可見部分。</span><span class="sxs-lookup"><span data-stu-id="e9141-986">Panning support, which enables the visible portion of a workflow to be changed without using the scroll bars.</span></span>
 
-    - 新的 [文件大綱] 檢視，這個檢視會以樹狀樣式大綱檢視顯示工作流程的元件，並讓您在 [文件大綱] 檢視中選取元件。
+    - <span data-ttu-id="e9141-987">新的 [文件大綱] 檢視，這個檢視會以樹狀樣式大綱檢視顯示工作流程的元件，並讓您在 [文件大綱] 檢視中選取元件。</span><span class="sxs-lookup"><span data-stu-id="e9141-987">A new **Document Outline** view that shows the components of a workflow in a tree-style outline view and lets you select a component in the **Document Outline** view.</span></span>
 
-    - 可將註釋加入至活動的功能。
+    - <span data-ttu-id="e9141-988">可將註釋加入至活動的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-988">Ability to add annotations to activities.</span></span>
 
-    - 可使用工作流程設計工具定義並取用活動委派的功能。
+    - <span data-ttu-id="e9141-989">可使用工作流程設計工具定義並取用活動委派的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-989">Ability to define and consume activity delegates by using the workflow designer.</span></span>
 
-    - 在狀態機器和流程圖工作流程中自動連接和自動插入活動和轉換。
+    - <span data-ttu-id="e9141-990">在狀態機器和流程圖工作流程中自動連接和自動插入活動和轉換。</span><span class="sxs-lookup"><span data-stu-id="e9141-990">Auto-connect and auto-insert for activities and transitions in state machine and flowchart workflows.</span></span>
 
-- 將工作流程的檢視狀態資訊儲存在 XAML 檔案的單一元素中，如此您就可以輕鬆尋找及編輯檢視狀態資訊。
+- <span data-ttu-id="e9141-991">將工作流程的檢視狀態資訊儲存在 XAML 檔案的單一元素中，如此您就可以輕鬆尋找及編輯檢視狀態資訊。</span><span class="sxs-lookup"><span data-stu-id="e9141-991">Storage of the view state information for a workflow in a single element in the XAML file, so you can easily locate and edit the view state information.</span></span>
 
-- NoPersistScope 容器活動，可防止保存子活動。
+- <span data-ttu-id="e9141-992">NoPersistScope 容器活動，可防止保存子活動。</span><span class="sxs-lookup"><span data-stu-id="e9141-992">A NoPersistScope container activity to prevent child activities from persisting.</span></span>
 
-- 支援 C# 運算式：
+- <span data-ttu-id="e9141-993">支援 C# 運算式：</span><span class="sxs-lookup"><span data-stu-id="e9141-993">Support for C# expressions:</span></span>
 
-    - 使用 Visual Basic 的工作流程專案會使用 Visual Basic 運算式，而 C# 工作流程專案則會使用 C# 運算式。
+    - <span data-ttu-id="e9141-994">使用 Visual Basic 的工作流程專案會使用 Visual Basic 運算式，而 C# 工作流程專案則會使用 C# 運算式。</span><span class="sxs-lookup"><span data-stu-id="e9141-994">Workflow projects that use Visual Basic will use Visual Basic expressions, and C# workflow projects will use C# expressions.</span></span>
 
-    - 在 Visual Studio 2010 中建立且具有 Visual Basic 運算式的 C# 工作流程專案，能夠與使用 C# 運算式的 C# 工作流程專案相容。
+    - <span data-ttu-id="e9141-995">在 Visual Studio 2010 中建立且具有 Visual Basic 運算式的 C# 工作流程專案，能夠與使用 C# 運算式的 C# 工作流程專案相容。</span><span class="sxs-lookup"><span data-stu-id="e9141-995">C# workflow projects that were created in Visual Studio 2010 and that have Visual Basic expressions are compatible with C# workflow projects that use C# expressions.</span></span>
 
-- 版本控制增強功能：
+- <span data-ttu-id="e9141-996">版本控制增強功能：</span><span class="sxs-lookup"><span data-stu-id="e9141-996">Versioning enhancements:</span></span>
 
-    - 新的 <xref:System.Activities.WorkflowIdentity> 類別，可提供已保存工作流程執行個體與其工作流程定義之間的對應。
+    - <span data-ttu-id="e9141-997">新的 <xref:System.Activities.WorkflowIdentity> 類別，可提供已保存工作流程執行個體與其工作流程定義之間的對應。</span><span class="sxs-lookup"><span data-stu-id="e9141-997">The new  <xref:System.Activities.WorkflowIdentity> class, which provides a mapping between a persisted workflow instance and its workflow definition.</span></span>
 
-    - 多個工作流程版本在相同主機中並存執行，包括 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。
+    - <span data-ttu-id="e9141-998">多個工作流程版本在相同主機中並存執行，包括 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。</span><span class="sxs-lookup"><span data-stu-id="e9141-998">Side-by-side execution of multiple workflow versions in the same host, including <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span>
 
-    - 在動態更新中，修改所保存工作流程執行個體定義的功能。
+    - <span data-ttu-id="e9141-999">在動態更新中，修改所保存工作流程執行個體定義的功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-999">In Dynamic Update, the ability to modify the definition of a persisted workflow instance.</span></span>
 
-- 開發合約優先 (Contract-first) 工作流程服務，可提供自動配合現有服務合約產生活動的支援。
+- <span data-ttu-id="e9141-1000">開發合約優先 (Contract-first) 工作流程服務，可提供自動配合現有服務合約產生活動的支援。</span><span class="sxs-lookup"><span data-stu-id="e9141-1000">Contract-first workflow service development, which provides support for automatically generating activities to match an existing service contract.</span></span>
 
- 如需詳細資訊，請參閱 [Windows Workflow Foundation 的新功能](http://go.microsoft.com/fwlink/?LinkId=228176)。
+ <span data-ttu-id="e9141-1001">如需詳細資訊，請參閱 [Windows Workflow Foundation 的新功能](http://go.microsoft.com/fwlink/?LinkId=228176)。</span><span class="sxs-lookup"><span data-stu-id="e9141-1001">For more information, see [What's New in Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=228176).</span></span>
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式是專為特定尺寸所設計，並且會利用 Windows 作業系統的強大功能。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可於使用 C# 或 Visual Basic 建置適用於 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時提供。 這個子集稱為 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 開發人員中心的[概觀](http://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]<span data-ttu-id="e9141-1002">應用程式是專為特定尺寸所設計，並且會利用 Windows 作業系統的強大功能。</span><span class="sxs-lookup"><span data-stu-id="e9141-1002"> apps are designed for specific form factors and leverage the power of the Windows operating system.</span></span> <span data-ttu-id="e9141-1003">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可於使用 C# 或 Visual Basic 建置適用於 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時提供。</span><span class="sxs-lookup"><span data-stu-id="e9141-1003">A subset of the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] or 4.5.1 is available for building [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps for Windows by using C# or Visual Basic.</span></span> <span data-ttu-id="e9141-1004">這個子集稱為 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 開發人員中心的[概觀](http://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。</span><span class="sxs-lookup"><span data-stu-id="e9141-1004">This subset is called [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] and is discussed in an [overview](http://go.microsoft.com/fwlink/?LinkId=228491) in the Windows Dev Center.</span></span>
 
 <a name="portable"></a> 
-### <a name="portable-class-libraries"></a>可攜式類別庫
- 在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的 Managed 組件。 使用可攜式類別庫專案時，可選擇做為目標的平台 (例如 Windows Phone 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])。 專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。 如需詳細資訊，請參閱[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
+### <a name="portable-class-libraries"></a><span data-ttu-id="e9141-1005">可攜式類別庫</span><span class="sxs-lookup"><span data-stu-id="e9141-1005">Portable Class Libraries</span></span>
+ <span data-ttu-id="e9141-1006">在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的 Managed 組件。</span><span class="sxs-lookup"><span data-stu-id="e9141-1006">The Portable Class Library project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] (and later versions) enables you to write and build managed assemblies that work on multiple .NET Framework platforms.</span></span> <span data-ttu-id="e9141-1007">使用可攜式類別庫專案時，可選擇做為目標的平台 (例如 Windows Phone 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])。</span><span class="sxs-lookup"><span data-stu-id="e9141-1007">Using a Portable Class Library project, you choose the platforms (such as Windows Phone and [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) to target.</span></span> <span data-ttu-id="e9141-1008">專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。</span><span class="sxs-lookup"><span data-stu-id="e9141-1008">The available types and members in your project are automatically restricted to the common types and members across these platforms.</span></span> <span data-ttu-id="e9141-1009">如需詳細資訊，請參閱[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。</span><span class="sxs-lookup"><span data-stu-id="e9141-1009">For more information, see [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).</span></span>
 
-## <a name="see-also"></a>另請參閱
- [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)   
- [Visual Studio 2017 中的新功能](/visualstudio/ide/whats-new-in-visual-studio)   
- [ASP.NET](/aspnet)   
- [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 
-
+## <a name="see-also"></a><span data-ttu-id="e9141-1010">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9141-1010">See Also</span></span>
+ <span data-ttu-id="e9141-1011">[.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) </span><span class="sxs-lookup"><span data-stu-id="e9141-1011">[The .NET Framework and Out-of-Band Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) </span></span>  
+ <span data-ttu-id="e9141-1012">[.NET Framework 協助工具的新功能](whats-new-in-accessibility.md) </span><span class="sxs-lookup"><span data-stu-id="e9141-1012">[What's new in accessibility in the .NET Framework](whats-new-in-accessibility.md) </span></span>  
+ <span data-ttu-id="e9141-1013">[Visual Studio 2017 中的新功能](/visualstudio/ide/whats-new-in-visual-studio) </span><span class="sxs-lookup"><span data-stu-id="e9141-1013">[What's New in Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio) </span></span>  
+ <span data-ttu-id="e9141-1014">[ASP.NET](/aspnet) </span><span class="sxs-lookup"><span data-stu-id="e9141-1014">[ASP.NET](/aspnet) </span></span>  
+ [<span data-ttu-id="e9141-1015">Visual C++ 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="e9141-1015">What’s New in Visual C++</span></span>](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 

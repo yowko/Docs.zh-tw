@@ -1,156 +1,138 @@
 ---
-title: "字串 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "字串 (C# 程式設計手冊)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 5ec9d6aebcb38e89aa21b86cbd005c594bf756e6
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/09/2017
 ---
-# <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
-字串是類型 <xref:System.String> 的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
+# <a name="strings-c-programming-guide"></a><span data-ttu-id="5b213-102">字串 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="5b213-102">Strings (C# Programming Guide)</span></span>
+<span data-ttu-id="5b213-103">字串是 <xref:System.String> 類型的物件，其值為文字。</span><span class="sxs-lookup"><span data-stu-id="5b213-103">A string is an object of type <xref:System.String> whose value is text.</span></span> <span data-ttu-id="5b213-104">就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。</span><span class="sxs-lookup"><span data-stu-id="5b213-104">Internally, the text is stored as a sequential read-only collection of <xref:System.Char> objects.</span></span> <span data-ttu-id="5b213-105">C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。</span><span class="sxs-lookup"><span data-stu-id="5b213-105">There is no null-terminating character at the end of a C# string; therefore a C# string can contain any number of embedded null characters ('\0').</span></span> <span data-ttu-id="5b213-106">字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。</span><span class="sxs-lookup"><span data-stu-id="5b213-106">The <xref:System.String.Length%2A> property of a string represents the number of `Char` objects it contains, not the number of Unicode characters.</span></span> <span data-ttu-id="5b213-107">若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-107">To access the individual Unicode code points in a string, use the <xref:System.Globalization.StringInfo> object.</span></span>  
   
-## <a name="string-vs-systemstring"></a>字串與System.String  
- 在 C# 中，`string` 關鍵字是 <xref:System.String> 的別名。 因此 `String` 和 `string` 為相等，而您可以使用您偏好的命名慣例。 `String` 類別提供許多方法來安全地建立、操作和比較字串。 此外，C# 語言會多載一些運算子，以簡化常見的字串作業。 如需關鍵字的詳細資訊，請參閱[字串](../../../csharp/language-reference/keywords/string.md)。 如需類型和其方法的詳細資訊，請參閱 <xref:System.String>。  
+## <a name="string-vs-systemstring"></a><span data-ttu-id="5b213-108">字串與System.String</span><span class="sxs-lookup"><span data-stu-id="5b213-108">string vs. System.String</span></span>  
+ <span data-ttu-id="5b213-109">在 C# 中，`string` 關鍵字是 <xref:System.String> 的別名。</span><span class="sxs-lookup"><span data-stu-id="5b213-109">In C#, the `string` keyword is an alias for <xref:System.String>.</span></span> <span data-ttu-id="5b213-110">因此 `String` 和 `string` 為相等，而您可以使用您偏好的命名慣例。</span><span class="sxs-lookup"><span data-stu-id="5b213-110">Therefore, `String` and `string` are equivalent, and you can use whichever naming convention you prefer.</span></span> <span data-ttu-id="5b213-111">`String` 類別提供許多方法來安全地建立、操作和比較字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-111">The `String` class provides many methods for safely creating, manipulating, and comparing strings.</span></span> <span data-ttu-id="5b213-112">此外，C# 語言會多載一些運算子，以簡化常見的字串作業。</span><span class="sxs-lookup"><span data-stu-id="5b213-112">In addition, the C# language overloads some operators to simplify common string operations.</span></span> <span data-ttu-id="5b213-113">如需關鍵字的詳細資訊，請參閱[字串](../../../csharp/language-reference/keywords/string.md)。</span><span class="sxs-lookup"><span data-stu-id="5b213-113">For more information about the keyword, see [string](../../../csharp/language-reference/keywords/string.md).</span></span> <span data-ttu-id="5b213-114">如需類型和其方法的詳細資訊，請參閱 <xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="5b213-114">For more information about the type and its methods, see <xref:System.String>.</span></span>  
   
-## <a name="declaring-and-initializing-strings"></a>宣告並初始化字串  
- 您可以透過多種方式宣告並初始化字串，如下列範例所示：  
+## <a name="declaring-and-initializing-strings"></a><span data-ttu-id="5b213-115">宣告並初始化字串</span><span class="sxs-lookup"><span data-stu-id="5b213-115">Declaring and Initializing Strings</span></span>  
+ <span data-ttu-id="5b213-116">您可以透過多種方式宣告並初始化字串，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="5b213-116">You can declare and initialize strings in various ways, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
   
- 請注意，除了使用字元陣列初始化字串以外，您不能使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 運算子建立字串物件。  
+ <span data-ttu-id="5b213-117">請注意，除了使用字元陣列初始化字串以外，您不能使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 運算子建立字串物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-117">Note that you do not use the [new](../../../csharp/language-reference/keywords/new-operator.md) operator to create a string object except when initializing the string with an array of chars.</span></span>  
   
- 使用 <xref:System.String.Empty> 常數值初始化字串，以建立字串長度為零的新 <xref:System.String> 物件。 零長度字串的字串常值表示法是 ""。 透過使用 <xref:System.String.Empty> 值 (而非 [null](../../../csharp/language-reference/keywords/null.md)) 來初始化字串，可以減少發生 <xref:System.NullReferenceException> 的機會。 在您嘗試存取字串之前，請使用靜態 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法來驗證該字串的值。  
+ <span data-ttu-id="5b213-118">使用 <xref:System.String.Empty> 常數值初始化字串，以建立字串長度為零的新 <xref:System.String> 物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-118">Initialize a string with the <xref:System.String.Empty> constant value to create a new <xref:System.String> object whose string is of zero length.</span></span> <span data-ttu-id="5b213-119">零長度字串的字串常值表示法是 ""。</span><span class="sxs-lookup"><span data-stu-id="5b213-119">The string literal representation of a zero-length string is "".</span></span> <span data-ttu-id="5b213-120">使用 <xref:System.String.Empty> 值初始化字串，而非 [null](../../../csharp/language-reference/keywords/null.md)，即可降低發生 <xref:System.NullReferenceException> 的機會。</span><span class="sxs-lookup"><span data-stu-id="5b213-120">By initializing strings with the <xref:System.String.Empty> value instead of [null](../../../csharp/language-reference/keywords/null.md), you can reduce the chances of a <xref:System.NullReferenceException> occurring.</span></span> <span data-ttu-id="5b213-121">使用靜態 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法，先驗證字串的值，再嘗試進行存取。</span><span class="sxs-lookup"><span data-stu-id="5b213-121">Use the static <xref:System.String.IsNullOrEmpty%28System.String%29> method to verify the value of a string before you try to access it.</span></span>  
   
-## <a name="immutability-of-string-objects"></a>字串物件的不變性  
- 字串物件為「不可變」：它們在建立之後將無法變更。 所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。 在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。 `+=` 運算子會建立新的字串，其中包含結合的內容。 新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。  
+## <a name="immutability-of-string-objects"></a><span data-ttu-id="5b213-122">字串物件的不變性</span><span class="sxs-lookup"><span data-stu-id="5b213-122">Immutability of String Objects</span></span>  
+ <span data-ttu-id="5b213-123">字串物件為「不可變」：它們在建立之後將無法變更。</span><span class="sxs-lookup"><span data-stu-id="5b213-123">String objects are *immutable*: they cannot be changed after they have been created.</span></span> <span data-ttu-id="5b213-124">所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。</span><span class="sxs-lookup"><span data-stu-id="5b213-124">All of the <xref:System.String> methods and C# operators that appear to modify a string actually return the results in a new string object.</span></span> <span data-ttu-id="5b213-125">在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。</span><span class="sxs-lookup"><span data-stu-id="5b213-125">In the following example, when the contents of `s1` and `s2` are concatenated to form a single string, the two original strings are unmodified.</span></span> <span data-ttu-id="5b213-126">`+=` 運算子會建立新的字串，其中包含結合的內容。</span><span class="sxs-lookup"><span data-stu-id="5b213-126">The `+=` operator creates a new string that contains the combined contents.</span></span> <span data-ttu-id="5b213-127">新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。</span><span class="sxs-lookup"><span data-stu-id="5b213-127">That new object is assigned to the variable `s1`, and the original object that was assigned to `s1` is released for garbage collection because no other variable holds a reference to it.</span></span>  
   
- [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
   
- 因為對字串的「修改」實際上是建立新的字串，當您建立對字串的參考時，必須特別謹慎。 如果您建立對字串的參考，然後「修改」原始字串，該參考將會繼續指向原始物件，而非修改字串時所建立的新物件。 下列程式碼說明這個行為：  
+ <span data-ttu-id="5b213-128">因為對字串的「修改」實際上是建立新的字串，當您建立對字串的參考時，必須特別謹慎。</span><span class="sxs-lookup"><span data-stu-id="5b213-128">Because a string "modification" is actually a new string creation, you must use caution when you create references to strings.</span></span> <span data-ttu-id="5b213-129">如果您建立對字串的參考，然後「修改」原始字串，該參考將會繼續指向原始物件，而非修改字串時所建立的新物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-129">If you create a reference to a string, and then "modify" the original string, the reference will continue to point to the original object instead of the new object that was created when the string was modified.</span></span> <span data-ttu-id="5b213-130">下列程式碼說明這個行為：</span><span class="sxs-lookup"><span data-stu-id="5b213-130">The following code illustrates this behavior:</span></span>  
   
- [!code-cs[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- 如需如何建立以修改為基礎 (例如原始字串上的搜尋與取代作業) 之新字串的詳細資訊，請參閱[如何：修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
+ <span data-ttu-id="5b213-131">如需如何建立以修改為基礎 (例如原始字串上的搜尋與取代作業) 之新字串的詳細資訊，請參閱[如何：修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="5b213-131">For more information about how to create new strings that are based on modifications such as search and replace operations on the original string, see [How to: Modify String Contents](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).</span></span>  
   
-## <a name="regular-and-verbatim-string-literals"></a>一般和逐字字串常值  
- 當您必須內嵌由 C# 所提供的逸出字元時，請使用一般字串常值，如下列範例所示︰  
+## <a name="regular-and-verbatim-string-literals"></a><span data-ttu-id="5b213-132">一般和逐字字串常值</span><span class="sxs-lookup"><span data-stu-id="5b213-132">Regular and Verbatim String Literals</span></span>  
+ <span data-ttu-id="5b213-133">當您必須內嵌由 C# 所提供的逸出字元時，請使用一般字串常值，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="5b213-133">Use regular string literals when you must embed escape characters provided by C#, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
   
- 當字串文字包含反斜線字元時 (例如檔案路徑)，基於方便性和可讀性，請使用逐字字串。 因為逐字字串會將新行字元保留為字串文字的一部分，因此可以將它們用來初始化多行字串。 使用雙引號在逐字字串中內嵌引號。 下列範例示範一些逐字字串的常見用法︰  
+ <span data-ttu-id="5b213-134">當字串文字包含反斜線字元時 (例如檔案路徑)，基於方便性和可讀性，請使用逐字字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-134">Use verbatim strings for convenience and better readability when the string text contains backslash characters, for example in file paths.</span></span> <span data-ttu-id="5b213-135">因為逐字字串會將新行字元保留為字串文字的一部分，因此可以將它們用來初始化多行字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-135">Because verbatim strings preserve new line characters as part of the string text, they can be used to initialize multiline strings.</span></span> <span data-ttu-id="5b213-136">使用雙引號在逐字字串中內嵌引號。</span><span class="sxs-lookup"><span data-stu-id="5b213-136">Use double quotation marks to embed a quotation mark inside a verbatim string.</span></span> <span data-ttu-id="5b213-137">下列範例示範一些逐字字串的常見用法︰</span><span class="sxs-lookup"><span data-stu-id="5b213-137">The following example shows some common uses for verbatim strings:</span></span>  
   
- [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
   
-## <a name="string-escape-sequences"></a>字串逸出序列  
+## <a name="string-escape-sequences"></a><span data-ttu-id="5b213-138">字串逸出序列</span><span class="sxs-lookup"><span data-stu-id="5b213-138">String Escape Sequences</span></span>  
   
-|逸出序列|字元名稱|Unicode 編碼|  
+|<span data-ttu-id="5b213-139">逸出序列</span><span class="sxs-lookup"><span data-stu-id="5b213-139">Escape sequence</span></span>|<span data-ttu-id="5b213-140">字元名稱</span><span class="sxs-lookup"><span data-stu-id="5b213-140">Character name</span></span>|<span data-ttu-id="5b213-141">Unicode 編碼</span><span class="sxs-lookup"><span data-stu-id="5b213-141">Unicode encoding</span></span>|  
 |---------------------|--------------------|----------------------|  
-|\\'|單引號|0x0027|  
-|\\"|雙引號|0x0022|  
-|\\\|反斜線|0x005C|  
-|\0|Null|0x0000|  
-|\a|警示|0x0007|  
-|\b|退格鍵|0x0008|  
-|\f|換頁字元|0x000C|  
-|\n|換行|0x000A|  
-|\r|歸位字元|0x000D|  
-|\t|水平 Tab|0x0009|  
-|\U|Surrogate 字組的 Unicode 逸出序列。|\Unnnnnnnn|  
-|\u|Unicode 逸出序列|\u0041 = "A"|  
-|\v|垂直 Tab|0x000B|  
-|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。|\x0041 = "A"|  
+|<span data-ttu-id="5b213-142">\\'</span><span class="sxs-lookup"><span data-stu-id="5b213-142">\\'</span></span>|<span data-ttu-id="5b213-143">單引號</span><span class="sxs-lookup"><span data-stu-id="5b213-143">Single quote</span></span>|<span data-ttu-id="5b213-144">0x0027</span><span class="sxs-lookup"><span data-stu-id="5b213-144">0x0027</span></span>|  
+|<span data-ttu-id="5b213-145">\\"</span><span class="sxs-lookup"><span data-stu-id="5b213-145">\\"</span></span>|<span data-ttu-id="5b213-146">雙引號</span><span class="sxs-lookup"><span data-stu-id="5b213-146">Double quote</span></span>|<span data-ttu-id="5b213-147">0x0022</span><span class="sxs-lookup"><span data-stu-id="5b213-147">0x0022</span></span>|  
+|\\\\ |<span data-ttu-id="5b213-148">反斜線</span><span class="sxs-lookup"><span data-stu-id="5b213-148">Backslash</span></span>|<span data-ttu-id="5b213-149">0x005C</span><span class="sxs-lookup"><span data-stu-id="5b213-149">0x005C</span></span>|  
+|<span data-ttu-id="5b213-150">\0</span><span class="sxs-lookup"><span data-stu-id="5b213-150">\0</span></span>|<span data-ttu-id="5b213-151">Null</span><span class="sxs-lookup"><span data-stu-id="5b213-151">Null</span></span>|<span data-ttu-id="5b213-152">0x0000</span><span class="sxs-lookup"><span data-stu-id="5b213-152">0x0000</span></span>|  
+|<span data-ttu-id="5b213-153">\a</span><span class="sxs-lookup"><span data-stu-id="5b213-153">\a</span></span>|<span data-ttu-id="5b213-154">警示</span><span class="sxs-lookup"><span data-stu-id="5b213-154">Alert</span></span>|<span data-ttu-id="5b213-155">0x0007</span><span class="sxs-lookup"><span data-stu-id="5b213-155">0x0007</span></span>|  
+|<span data-ttu-id="5b213-156">\b</span><span class="sxs-lookup"><span data-stu-id="5b213-156">\b</span></span>|<span data-ttu-id="5b213-157">退格鍵</span><span class="sxs-lookup"><span data-stu-id="5b213-157">Backspace</span></span>|<span data-ttu-id="5b213-158">0x0008</span><span class="sxs-lookup"><span data-stu-id="5b213-158">0x0008</span></span>|  
+|<span data-ttu-id="5b213-159">\f</span><span class="sxs-lookup"><span data-stu-id="5b213-159">\f</span></span>|<span data-ttu-id="5b213-160">換頁字元</span><span class="sxs-lookup"><span data-stu-id="5b213-160">Form feed</span></span>|<span data-ttu-id="5b213-161">0x000C</span><span class="sxs-lookup"><span data-stu-id="5b213-161">0x000C</span></span>|  
+|\n|<span data-ttu-id="5b213-162">換行</span><span class="sxs-lookup"><span data-stu-id="5b213-162">New line</span></span>|<span data-ttu-id="5b213-163">0x000A</span><span class="sxs-lookup"><span data-stu-id="5b213-163">0x000A</span></span>|  
+|<span data-ttu-id="5b213-164">\r</span><span class="sxs-lookup"><span data-stu-id="5b213-164">\r</span></span>|<span data-ttu-id="5b213-165">歸位字元</span><span class="sxs-lookup"><span data-stu-id="5b213-165">Carriage return</span></span>|<span data-ttu-id="5b213-166">0x000D</span><span class="sxs-lookup"><span data-stu-id="5b213-166">0x000D</span></span>|  
+|<span data-ttu-id="5b213-167">\t</span><span class="sxs-lookup"><span data-stu-id="5b213-167">\t</span></span>|<span data-ttu-id="5b213-168">水平 Tab</span><span class="sxs-lookup"><span data-stu-id="5b213-168">Horizontal tab</span></span>|<span data-ttu-id="5b213-169">0x0009</span><span class="sxs-lookup"><span data-stu-id="5b213-169">0x0009</span></span>|  
+|<span data-ttu-id="5b213-170">\U</span><span class="sxs-lookup"><span data-stu-id="5b213-170">\U</span></span>|<span data-ttu-id="5b213-171">Surrogate 字組的 Unicode 逸出序列。</span><span class="sxs-lookup"><span data-stu-id="5b213-171">Unicode escape sequence for surrogate pairs.</span></span>|<span data-ttu-id="5b213-172">\Unnnnnnnn</span><span class="sxs-lookup"><span data-stu-id="5b213-172">\Unnnnnnnn</span></span>|  
+|<span data-ttu-id="5b213-173">\u</span><span class="sxs-lookup"><span data-stu-id="5b213-173">\u</span></span>|<span data-ttu-id="5b213-174">Unicode 逸出序列</span><span class="sxs-lookup"><span data-stu-id="5b213-174">Unicode escape sequence</span></span>|<span data-ttu-id="5b213-175">\u0041 = "A"</span><span class="sxs-lookup"><span data-stu-id="5b213-175">\u0041 = "A"</span></span>|  
+|<span data-ttu-id="5b213-176">\v</span><span class="sxs-lookup"><span data-stu-id="5b213-176">\v</span></span>|<span data-ttu-id="5b213-177">垂直 Tab</span><span class="sxs-lookup"><span data-stu-id="5b213-177">Vertical tab</span></span>|<span data-ttu-id="5b213-178">0x000B</span><span class="sxs-lookup"><span data-stu-id="5b213-178">0x000B</span></span>|  
+|<span data-ttu-id="5b213-179">\x</span><span class="sxs-lookup"><span data-stu-id="5b213-179">\x</span></span>|<span data-ttu-id="5b213-180">類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。</span><span class="sxs-lookup"><span data-stu-id="5b213-180">Unicode escape sequence similar to "\u" except with variable length.</span></span>|<span data-ttu-id="5b213-181">\x0041 = "A"</span><span class="sxs-lookup"><span data-stu-id="5b213-181">\x0041 = "A"</span></span>|  
   
 > [!NOTE]
->  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。  
+>  <span data-ttu-id="5b213-182">在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-182">At compile time, verbatim strings are converted to ordinary strings with all the same escape sequences.</span></span> <span data-ttu-id="5b213-183">因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。</span><span class="sxs-lookup"><span data-stu-id="5b213-183">Therefore, if you view a verbatim string in the debugger watch window, you will see the escape characters that were added by the compiler, not the verbatim version from your source code.</span></span> <span data-ttu-id="5b213-184">例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。</span><span class="sxs-lookup"><span data-stu-id="5b213-184">For example, the verbatim string @"C:\files.txt" will appear in the watch window as "C:\\\files.txt".</span></span>  
   
-## <a name="format-strings"></a>格式字串  
- 格式字串是可在執行階段動態決定其內容的字串。 您可以透過使用靜態 <xref:System.String.Format%2A> 方法，並以大括號內嵌將於執行階段由其他值取代的預留位置，來建立格式字串。 下列範例會使用格式字串輸出迴圈每個反覆項目的結果︰  
+## <a name="format-strings"></a><span data-ttu-id="5b213-185">格式字串</span><span class="sxs-lookup"><span data-stu-id="5b213-185">Format Strings</span></span>  
+ <span data-ttu-id="5b213-186">格式字串是可在執行階段動態決定其內容的字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-186">A format string is a string whose contents can be determined dynamically at runtime.</span></span> <span data-ttu-id="5b213-187">您可以使用靜態 <xref:System.String.Format%2A> 方法，並以大括弧內嵌將於執行階段由其他值取代的預留位置，來建立格式字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-187">You create a format string by using the static <xref:System.String.Format%2A> method and embedding placeholders in braces that will be replaced by other values at runtime.</span></span> <span data-ttu-id="5b213-188">下列範例會使用格式字串輸出迴圈每個反覆項目的結果︰</span><span class="sxs-lookup"><span data-stu-id="5b213-188">The following example uses a format string to output the result of each iteration of a loop:</span></span>  
   
- [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
   
- <xref:System.Console.WriteLine%2A> 方法的其中一個多載會採用格式字串做為參數。 因此，您可以僅內嵌格式字串常值，而不需要明確呼叫方法。 不過，如果您使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法在 Visual Studio [輸出] 視窗中顯示偵錯輸出，您必須明確呼叫 <xref:System.String.Format%2A> 方法，因為 <xref:System.Diagnostics.Trace.WriteLine%2A> 僅接受字串，而非格式字串。 如需格式字串的詳細資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。  
+ <span data-ttu-id="5b213-189"><xref:System.Console.WriteLine%2A> 方法的其中一個多載會採用格式字串作為參數。</span><span class="sxs-lookup"><span data-stu-id="5b213-189">One overload of the <xref:System.Console.WriteLine%2A> method takes a format string as a parameter.</span></span> <span data-ttu-id="5b213-190">因此，您可以僅內嵌格式字串常值，而不需要明確呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="5b213-190">Therefore, you can just embed a format string literal without an explicit call to the method.</span></span> <span data-ttu-id="5b213-191">不過，如果您使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法，以在 Visual Studio [輸出] 視窗中顯示偵錯輸出，則必須明確呼叫 <xref:System.String.Format%2A> 方法，因為 <xref:System.Diagnostics.Trace.WriteLine%2A> 只接受字串，而不接受格式字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-191">However, if you use the <xref:System.Diagnostics.Trace.WriteLine%2A> method to display debug output in the Visual Studio **Output** window, you have to explicitly call the <xref:System.String.Format%2A> method because <xref:System.Diagnostics.Trace.WriteLine%2A> only accepts a string, not a format string.</span></span> <span data-ttu-id="5b213-192">如需格式字串的詳細資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。</span><span class="sxs-lookup"><span data-stu-id="5b213-192">For more information about format strings, see [Formatting Types](../../../standard/base-types/formatting-types.md).</span></span>  
   
-## <a name="substrings"></a>子字串  
- 子字串是包含在字串中的任何字元序列。 使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。 您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。 使用 <xref:System.String.Replace%2A> 方法，來以新字串取代所有指定的子字串。 和 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新的字串，而不會修改原始字串。 如需詳細資訊，請參閱[如何︰使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)以及[如何︰修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
+## <a name="substrings"></a><span data-ttu-id="5b213-193">子字串</span><span class="sxs-lookup"><span data-stu-id="5b213-193">Substrings</span></span>  
+ <span data-ttu-id="5b213-194">子字串是包含在字串中的任何字元序列。</span><span class="sxs-lookup"><span data-stu-id="5b213-194">A substring is any sequence of characters that is contained in a string.</span></span> <span data-ttu-id="5b213-195">使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-195">Use the <xref:System.String.Substring%2A> method to create a new string from a part of the original string.</span></span> <span data-ttu-id="5b213-196">您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。</span><span class="sxs-lookup"><span data-stu-id="5b213-196">You can search for one or more occurrences of a substring by using the <xref:System.String.IndexOf%2A> method.</span></span> <span data-ttu-id="5b213-197">使用 <xref:System.String.Replace%2A> 方法，以新字串取代所有指定的子字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-197">Use the <xref:System.String.Replace%2A> method to replace all occurrences of a specified substring with a new string.</span></span> <span data-ttu-id="5b213-198">與 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新字串，並不會修改原始字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-198">Like the <xref:System.String.Substring%2A> method, <xref:System.String.Replace%2A> actually returns a new string and does not modify the original string.</span></span> <span data-ttu-id="5b213-199">如需詳細資訊，請參閱[如何︰使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)以及[如何︰修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="5b213-199">For more information, see [How to: Search Strings Using String Methods](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) and [How to: Modify String Contents](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).</span></span>  
   
- [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
-## <a name="accessing-individual-characters"></a>存取個別字元  
- 您可以搭配索引值使用陣列標記法來取得個別字元的唯讀存取權，如下列範例所示：  
+## <a name="accessing-individual-characters"></a><span data-ttu-id="5b213-200">存取個別字元</span><span class="sxs-lookup"><span data-stu-id="5b213-200">Accessing Individual Characters</span></span>  
+ <span data-ttu-id="5b213-201">您可以搭配索引值使用陣列標記法來取得個別字元的唯讀存取權，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="5b213-201">You can use array notation with an index value to acquire read-only access to individual characters, as in the following example:</span></span>  
   
- [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
   
- 如果 <xref:System.String> 方法不提供修改字串中個別字元的必要功能，您可以使用 <xref:System.Text.StringBuilder> 物件「就地」修改個別字元，然後使用 <xref:System.Text.StringBuilder> 方法建立新的字串來儲存結果。 在下列範例中，假設您必須以特定方式修改原始字串，並儲存結果以供日後使用︰  
+ <span data-ttu-id="5b213-202">如果 <xref:System.String> 方法不提供修改字串中個別字元的必要功能，您可以使用 <xref:System.Text.StringBuilder> 物件「就地」修改個別字元，然後使用 <xref:System.Text.StringBuilder> 方法建立新的字串來儲存結果。</span><span class="sxs-lookup"><span data-stu-id="5b213-202">If the <xref:System.String> methods do not provide the functionality that you must have to modify individual characters in a string, you can use a <xref:System.Text.StringBuilder> object to modify the individual chars "in-place", and then create a new string to store the results by using the <xref:System.Text.StringBuilder> methods.</span></span> <span data-ttu-id="5b213-203">在下列範例中，假設您必須以特定方式修改原始字串，並儲存結果以供日後使用︰</span><span class="sxs-lookup"><span data-stu-id="5b213-203">In the following example, assume that you must modify the original string in a particular way and then store the results for future use:</span></span>  
   
- [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
   
-## <a name="null-strings-and-empty-strings"></a>Null 字串和空字串  
- 空字串為 <xref:System.String?displayProperty=fullName> 物件的執行個體，其中包含零個字元。 空字串經常用於各種程式設計案例中，來表示空白的文字欄位。 您可以在空字串上呼叫方法，因為它們是有效的 <xref:System.String?displayProperty=fullName> 物件。 空字串會以下列方式初始化︰  
+## <a name="null-strings-and-empty-strings"></a><span data-ttu-id="5b213-204">Null 字串和空字串</span><span class="sxs-lookup"><span data-stu-id="5b213-204">Null Strings and Empty Strings</span></span>  
+ <span data-ttu-id="5b213-205">空字串是 <xref:System.String?displayProperty=nameWithType> 物件的執行個體，其中包含零個字元。</span><span class="sxs-lookup"><span data-stu-id="5b213-205">An empty string is an instance of a <xref:System.String?displayProperty=nameWithType> object that contains zero characters.</span></span> <span data-ttu-id="5b213-206">空字串經常用於各種程式設計案例中，來表示空白的文字欄位。</span><span class="sxs-lookup"><span data-stu-id="5b213-206">Empty strings are used often in various programming scenarios to represent a blank text field.</span></span> <span data-ttu-id="5b213-207">您可以對空字串呼叫方法，因為它們是有效的 <xref:System.String?displayProperty=nameWithType> 物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-207">You can call methods on empty strings because they are valid <xref:System.String?displayProperty=nameWithType> objects.</span></span> <span data-ttu-id="5b213-208">空字串會以下列方式初始化︰</span><span class="sxs-lookup"><span data-stu-id="5b213-208">Empty strings are initialized as follows:</span></span>  
   
 ```  
 string s = String.Empty;  
 ```  
   
- 相較之下，Null 字串不會參考 <xref:System.String?displayProperty=fullName> 物件的執行個體，且在 Null 字串上呼叫任何方法都會導致 <xref:System.NullReferenceException>。 不過，您可以在搭配其他字串的串連和比較作業中使用 Null 字串。 下列範例說明對 Null 字串的參考會造成 (以及不會造成) 擲回例外狀況的一些情況︰  
+ <span data-ttu-id="5b213-209">相較之下，Null 字串指的不是 <xref:System.String?displayProperty=nameWithType> 物件執行個體，而且對 Null 字串呼叫方法的任何嘗試都會導致 <xref:System.NullReferenceException>。</span><span class="sxs-lookup"><span data-stu-id="5b213-209">By contrast, a null string does not refer to an instance of a <xref:System.String?displayProperty=nameWithType> object and any attempt to call a method on a null string causes a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="5b213-210">不過，您可以在搭配其他字串的串連和比較作業中使用 Null 字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-210">However, you can use null strings in concatenation and comparison operations with other strings.</span></span> <span data-ttu-id="5b213-211">下列範例說明對 Null 字串的參考會造成 (以及不會造成) 擲回例外狀況的一些情況︰</span><span class="sxs-lookup"><span data-stu-id="5b213-211">The following examples illustrate some cases in which a reference to a null string does and does not cause an exception to be thrown:</span></span>  
   
- [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
   
-## <a name="using-stringbuilder-for-fast-string-creation"></a>使用 StringBuilder 進行快速字串建立  
- .NET 中的字串作業已高度最佳化，在大部分的情況下不會大幅影響效能。 不過，在部分案例中 (例如執行數百或數千次的緊密迴圈)，字串作業可能會影響效能。 <xref:System.Text.StringBuilder> 類別會建立一個字串緩衝區，能在您的程式執行許多字串操作的情況下提供較佳的效能。 <xref:System.Text.StringBuilder> 字串也可讓您重新指派個別字元，這是內建字串資料類型所不支援的。 例如，下列程式碼能在不建立新字串的情況下變更字串內容：  
+## <a name="using-stringbuilder-for-fast-string-creation"></a><span data-ttu-id="5b213-212">使用 StringBuilder 進行快速字串建立</span><span class="sxs-lookup"><span data-stu-id="5b213-212">Using StringBuilder for Fast String Creation</span></span>  
+ <span data-ttu-id="5b213-213">.NET 中的字串作業已高度最佳化，在大部分的情況下不會大幅影響效能。</span><span class="sxs-lookup"><span data-stu-id="5b213-213">String operations in .NET are highly optimized and in most cases do not significantly impact performance.</span></span> <span data-ttu-id="5b213-214">不過，在部分案例中 (例如執行數百或數千次的緊密迴圈)，字串作業可能會影響效能。</span><span class="sxs-lookup"><span data-stu-id="5b213-214">However, in some scenarios such as tight loops that are executing many hundreds or thousands of times, string operations can affect performance.</span></span> <span data-ttu-id="5b213-215"><xref:System.Text.StringBuilder> 類別會建立一個字串緩衝區，能在您的程式執行許多字串操作的情況下提供較佳的效能。</span><span class="sxs-lookup"><span data-stu-id="5b213-215">The <xref:System.Text.StringBuilder> class creates a string buffer that offers better performance if your program performs many string manipulations.</span></span> <span data-ttu-id="5b213-216"><xref:System.Text.StringBuilder> 字串也可讓您重新指派內建字串資料類型所不支援的個別字元。</span><span class="sxs-lookup"><span data-stu-id="5b213-216">The <xref:System.Text.StringBuilder> string also enables you to reassign individual characters, something the built-in string data type does not support.</span></span> <span data-ttu-id="5b213-217">例如，下列程式碼能在不建立新字串的情況下變更字串內容：</span><span class="sxs-lookup"><span data-stu-id="5b213-217">This code, for example, changes the content of a string without creating a new string:</span></span>  
   
- [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
   
- 在下列範例中，將使用 <xref:System.Text.StringBuilder> 物件從一組數字類型建立字串：  
+ <span data-ttu-id="5b213-218">在下列範例中，將使用 <xref:System.Text.StringBuilder> 物件從一組數字類型建立字串：</span><span class="sxs-lookup"><span data-stu-id="5b213-218">In this example, a <xref:System.Text.StringBuilder> object is used to create a string from a set of numeric types:</span></span>  
   
- [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
-## <a name="strings-extension-methods-and-linq"></a>字串、擴充方法和 LINQ  
- 因為 <xref:System.String> 類型會實作 <xref:System.Collections.Generic.IEnumerable%601>，您可以在字串上使用 <xref:System.Linq.Enumerable> 類別中定義的擴充方法。 為了避免視覺雜亂，這些方法會從 <xref:System.String> 類型的 IntelliSense 中排除，不過您還是可以使用它們。 您也可以在字串上使用 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查詢運算式。 如需詳細資訊，請參閱 [LINQ 和字串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。  
+## <a name="strings-extension-methods-and-linq"></a><span data-ttu-id="5b213-219">字串、擴充方法和 LINQ</span><span class="sxs-lookup"><span data-stu-id="5b213-219">Strings, Extension Methods and LINQ</span></span>  
+ <span data-ttu-id="5b213-220">因為 <xref:System.String> 類型會實作 <xref:System.Collections.Generic.IEnumerable%601>，所以您可以對字串使用 <xref:System.Linq.Enumerable> 類別中所定義的擴充方法。</span><span class="sxs-lookup"><span data-stu-id="5b213-220">Because the <xref:System.String> type implements <xref:System.Collections.Generic.IEnumerable%601>, you can use the extension methods defined in the <xref:System.Linq.Enumerable> class on strings.</span></span> <span data-ttu-id="5b213-221">為了避免視覺雜亂，這些方法會從 <xref:System.String> 類型的 IntelliSense 中排除，不過您還是可以使用它們。</span><span class="sxs-lookup"><span data-stu-id="5b213-221">To avoid visual clutter, these methods are excluded from IntelliSense for the <xref:System.String> type, but they are available nevertheless.</span></span> <span data-ttu-id="5b213-222">您也可以在字串上使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="5b213-222">You can also use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions on strings.</span></span> <span data-ttu-id="5b213-223">如需詳細資訊，請參閱 [LINQ 和字串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="5b213-223">For more information, see [LINQ and Strings](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).</span></span>  
   
-## <a name="related-topics"></a>相關主題  
+## <a name="related-topics"></a><span data-ttu-id="5b213-224">相關主題</span><span class="sxs-lookup"><span data-stu-id="5b213-224">Related Topics</span></span>  
   
-|主題|描述|  
+|<span data-ttu-id="5b213-225">主題</span><span class="sxs-lookup"><span data-stu-id="5b213-225">Topic</span></span>|<span data-ttu-id="5b213-226">描述</span><span class="sxs-lookup"><span data-stu-id="5b213-226">Description</span></span>|  
 |-----------|-----------------|  
-|[如何：修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|提供說明如何修改字串內容的程式碼範例。|  
-|[如何：串連多個字串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|說明如何使用 `+` 運算子和 `Stringbuilder` 類別，在編譯時期和執行階段聯結字串。|  
-|[如何：比較字串](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|示範如何執行字串的循序比較。|  
-|[如何：使用 String.Split 剖析字串](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
-|[如何：使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|說明如何使用特定方法來搜尋字串。|  
-|[如何：使用規則運算式搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|說明如何使用規則運算式來搜尋字串。|  
-|[如何：判斷字串是否表示數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
-|[如何：將字串轉換為 DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|示範如何將類似 "01/24/2008" 的字串轉換為 <xref:System.DateTime?displayProperty=fullName> 物件。|  
-|[基本字串作業](https://msdn.microsoft.com/library/a292he7t)|提供使用 <xref:System.String?displayProperty=fullName> 和 <xref:System.Text.StringBuilder?displayProperty=fullName> 方法來執行基本字串作業的主題連結。|  
-|[剖析字串](https://msdn.microsoft.com/library/b4w53z0y)|描述如何將字元或空格插入字串中。|  
-|[比較字串](https://msdn.microsoft.com/library/fbh501kz)|包含如何比較字串的相關資訊，並提供以 C# 和 Visual Basic 撰寫的範例。|  
-|[使用 StringBuilder 類別](../../../standard/base-types/stringbuilder.md)|描述如何使用 <xref:System.Text.StringBuilder> 類別來建立及修改動態字串物件。|  
-|[LINQ 和字串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|提供如何使用 LINQ 查詢來執行各種字串作業的相關資訊。|  
-|[C# 程式設計指南](../../../csharp/programming-guide/index.md)|提供說明 C# 中程式設計建構的主題連結。|  
-
+|[<span data-ttu-id="5b213-227">如何：修改字串內容</span><span class="sxs-lookup"><span data-stu-id="5b213-227">How to: Modify String Contents</span></span>](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|<span data-ttu-id="5b213-228">提供說明如何修改字串內容的程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="5b213-228">Provides a code example that illustrates how to modify the contents of strings.</span></span>|  
+|[<span data-ttu-id="5b213-229">如何：串連多個字串</span><span class="sxs-lookup"><span data-stu-id="5b213-229">How to: Concatenate Multiple Strings</span></span>](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|<span data-ttu-id="5b213-230">說明如何使用 `+` 運算子和 `Stringbuilder` 類別，在編譯時期和執行階段聯結字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-230">Illustrates how to use the `+` operator and the `Stringbuilder` class to join strings together at compile time and run time.</span></span>|  
+|[<span data-ttu-id="5b213-231">如何：比較字串</span><span class="sxs-lookup"><span data-stu-id="5b213-231">How to: Compare Strings</span></span>](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|<span data-ttu-id="5b213-232">示範如何執行字串的循序比較。</span><span class="sxs-lookup"><span data-stu-id="5b213-232">Shows how to perform ordinal comparisons of strings.</span></span>|  
+|[<span data-ttu-id="5b213-233">如何：使用 String.Split 剖析字串</span><span class="sxs-lookup"><span data-stu-id="5b213-233">How to: Parse Strings Using String.Split </span></span>](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|<span data-ttu-id="5b213-234">包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="5b213-234">Contains a code example that illustrates how to use the `String.Split` method to parse strings.</span></span>|  
+|[<span data-ttu-id="5b213-235">如何：使用字串方法搜尋字串</span><span class="sxs-lookup"><span data-stu-id="5b213-235">How to: Search Strings Using String Methods</span></span>](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|<span data-ttu-id="5b213-236">說明如何使用特定方法來搜尋字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-236">Explains how to use specific methods to search strings.</span></span>|  
+|[<span data-ttu-id="5b213-237">如何：使用規則運算式搜尋字串</span><span class="sxs-lookup"><span data-stu-id="5b213-237">How to: Search Strings Using Regular Expressions</span></span>](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|<span data-ttu-id="5b213-238">說明如何使用規則運算式來搜尋字串。</span><span class="sxs-lookup"><span data-stu-id="5b213-238">Explains how to use regular expressions to search strings.</span></span>|  
+|[<span data-ttu-id="5b213-239">如何：判斷字串是否表示數值</span><span class="sxs-lookup"><span data-stu-id="5b213-239">How to: Determine Whether a String Represents a Numeric Value</span></span>](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|<span data-ttu-id="5b213-240">示範如何安全地剖析字串，以查看它是否有有效的數值。</span><span class="sxs-lookup"><span data-stu-id="5b213-240">Shows how to safely parse a string to see whether it has a valid numeric value.</span></span>|  
+|[<span data-ttu-id="5b213-241">如何：將字串轉換為 DateTime</span><span class="sxs-lookup"><span data-stu-id="5b213-241">How to: Convert a String to a DateTime</span></span>](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|<span data-ttu-id="5b213-242">示範如何將 "01/24/2008" 這類字串轉換為 <xref:System.DateTime?displayProperty=nameWithType> 物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-242">Shows how to convert a string such as "01/24/2008" to a <xref:System.DateTime?displayProperty=nameWithType> object.</span></span>|  
+|[<span data-ttu-id="5b213-243">基本字串作業</span><span class="sxs-lookup"><span data-stu-id="5b213-243">Basic String Operations</span></span>](../../../../docs/standard/base-types/basic-string-operations.md)|<span data-ttu-id="5b213-244">提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。</span><span class="sxs-lookup"><span data-stu-id="5b213-244">Provides links to topics that use <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> methods to perform basic string operations.</span></span>|  
+|[<span data-ttu-id="5b213-245">剖析字串</span><span class="sxs-lookup"><span data-stu-id="5b213-245">Parsing Strings</span></span>](../../../../docs/standard/base-types/parsing-strings.md)|<span data-ttu-id="5b213-246">描述如何將字元或空格插入字串中。</span><span class="sxs-lookup"><span data-stu-id="5b213-246">Describes how to insert characters or empty spaces into a string.</span></span>|  
+|[<span data-ttu-id="5b213-247">比較字串</span><span class="sxs-lookup"><span data-stu-id="5b213-247">Comparing Strings</span></span>](../../../../docs/standard/base-types/comparing.md)|<span data-ttu-id="5b213-248">包含如何比較字串的相關資訊，並提供以 C# 和 Visual Basic 撰寫的範例。</span><span class="sxs-lookup"><span data-stu-id="5b213-248">Includes information about how to compare strings and provides examples in C# and Visual Basic.</span></span>|  
+|[<span data-ttu-id="5b213-249">使用 StringBuilder 類別</span><span class="sxs-lookup"><span data-stu-id="5b213-249">Using the StringBuilder Class</span></span>](../../../standard/base-types/stringbuilder.md)|<span data-ttu-id="5b213-250">描述如何使用 <xref:System.Text.StringBuilder> 類別來建立及修改動態字串物件。</span><span class="sxs-lookup"><span data-stu-id="5b213-250">Describes how to create and modify dynamic string objects by using the <xref:System.Text.StringBuilder> class.</span></span>|  
+|[<span data-ttu-id="5b213-251">LINQ 和字串</span><span class="sxs-lookup"><span data-stu-id="5b213-251">LINQ and Strings</span></span>](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|<span data-ttu-id="5b213-252">提供如何使用 LINQ 查詢來執行各種字串作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="5b213-252">Provides information about how to perform various string operations by using LINQ queries.</span></span>|  
+|[<span data-ttu-id="5b213-253">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5b213-253">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)|<span data-ttu-id="5b213-254">提供說明 C# 中程式設計建構的主題連結。</span><span class="sxs-lookup"><span data-stu-id="5b213-254">Provides links to topics that explain programming constructs in C#.</span></span>|  

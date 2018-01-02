@@ -240,7 +240,7 @@
 ### [CorCallingConvention 列舉](corcallingconvention-enumeration.md)
 ### [CorCheckDuplicatesFor 列舉](corcheckduplicatesfor-enumeration.md)
 ### [CorDeclSecurity 列舉](cordeclsecurity-enumeration.md)
-### [CorElementType Enumeration1](corelementtype-enumeration.md)
+### [CorElementType 列舉 1](corelementtype-enumeration.md)
 ### [CorErrorIfEmitOutOfOrder 列舉](corerrorifemitoutoforder-enumeration.md)
 ### [CorEventAttr 列舉](coreventattr-enumeration.md)
 ### [CorFieldAttr 列舉](corfieldattr-enumeration.md)
