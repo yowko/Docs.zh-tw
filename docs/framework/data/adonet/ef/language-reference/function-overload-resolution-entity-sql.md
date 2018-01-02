@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f46bc1712946ec26f2ab1cbece7603a5336a831e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a303ca917a9f6cfee42d11456a1f80b52ffd2ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="function-overload-resolution-entity-sql"></a>函式多載解析 (Entity SQL)
 本主題描述如何解析 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 函式。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  針對使用者定義函式，即使存在更符合使用者定義函式且含簽章的模型定義函式，內嵌查詢函式的定義仍擁有較高的優先順序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [函式](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

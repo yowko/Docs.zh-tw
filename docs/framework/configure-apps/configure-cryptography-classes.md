@@ -20,16 +20,17 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 79eb9f9ef95dae24dd38fa93b137c9303815143b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 23bd6007beb870895316a565283ee7e7354c931b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-cryptography-classes"></a>設定密碼編譯類別
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]讓電腦系統管理員設定的預設密碼編譯演算法和.NET Framework 和適當地撰寫應用程式使用的演算法實作。  比方說，有自己的密碼編譯演算法實作的企業可以進行實作的預設值，而不是隨附於實作[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。 雖然使用密碼編譯的 managed 應用程式可以隨時明確繫結至特定的實作，但建議他們使用密碼編譯組態系統建立密碼編譯物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [將演算法名稱對應至密碼編譯類別](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
  描述如何將演算法名稱對應至密碼編譯類別。  
   

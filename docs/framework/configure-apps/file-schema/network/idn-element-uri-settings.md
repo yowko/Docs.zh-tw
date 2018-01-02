@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1f631f41c256e74e9b7bf7dc2d771ee156538820
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44e2db95ec354fff4356a3619fa8230faf67544d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析會套用至網域名稱。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱的預設值為 none。|  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含會指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址設定。|  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例示範使用組態<xref:System.Uri>類別，以支援 IRI 剖析和 IDN 名稱。  
   
 ### <a name="code"></a>程式碼  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

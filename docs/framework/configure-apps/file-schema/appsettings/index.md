@@ -13,11 +13,12 @@ ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d51d06895e61be60bbe9153eacb2028cb32a1fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 028fdbeb90a1499459803f24f3aa62923452edba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="app-settings-schema"></a>應用程式設定結構描述
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
-| 項目 | 說明 |
+| 元素 | 描述 |
 | ------- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 包含 **\<add>**、**\<clear>** 和 **\<remove>** 標記以控制應用程式設定。 具有選擇性 **file** 屬性。 |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | 定義設定。 **\<appSettings>** 的子系。 需要 **key** 和 **value** 屬性。 |
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/18/2017
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)

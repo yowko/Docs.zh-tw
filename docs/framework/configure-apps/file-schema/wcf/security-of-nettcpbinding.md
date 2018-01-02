@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3873c3fd04e2f52e6d2a3bdc64e82f87c84aaf5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08e9f1f3b2145d94f491933639211a6eabd3c9fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;security&gt;
 定義繫結的安全性設定。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<傳輸 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|定義傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>。|  
 |[\<訊息 >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>。|  
@@ -79,13 +80,13 @@ ms.lasthandoff: 11/21/2017
   
  這個組態項目會提供 `netTcpBinding` 的安全性規格。 這是一個安全、可靠且最佳的繫結，適用於跨電腦通訊。 根據預設，它會產生一個執行階段通訊堆疊，可支援 TCP (供訊息傳遞使用)、Windows 安全性 (供訊息安全性與驗證使用)、WS-ReliableMessaging (提升可靠性) 以及二進位訊息編碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.NetTcpSecurity>  
  <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
- [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)

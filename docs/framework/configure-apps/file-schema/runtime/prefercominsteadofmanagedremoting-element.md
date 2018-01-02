@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad60d73e30bf02fd52f9c8f3bd707b571959bdd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt;項目
 指定是否執行階段會使用 COM interop 而不是遠端執行功能的所有呼叫跨越應用程式定義域界限。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|執行階段會使用遠端處理跨應用程式定義域界限。 這是預設值。|  
 |`true`|執行階段會跨應用程式定義域界限使用 COM interop。|  
@@ -81,6 +82,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

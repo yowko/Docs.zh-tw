@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b7d2c0f52ea42fcb98be149ab005cd67c2db46a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;新增&gt;webRequestModules （網路設定） 的項目
 將自訂的 Web 要求模組加入至應用程式。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 要求模組所處理的要求 URI 前置詞。|  
 |`type`|完整限定的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)、 分隔逗號，可實作此 Web 要求的模組。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要求資訊從網路主機使用的模組。|  
   
@@ -91,6 +92,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebRequest>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

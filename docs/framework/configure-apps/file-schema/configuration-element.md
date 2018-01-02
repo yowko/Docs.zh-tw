@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2241f3e835defe308b94d0cbad96020518dfd19b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3874a613879d099ede4968b5bce349aefa015a38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-element"></a>\<設定 > 項目
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="child-elements"></a>子元素
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。|
 | [**\<啟動 >**設定結構描述](~/docs/framework/configure-apps/file-schema/startup/index.md) | 啟動設定結構描述中的所有項目。 |
@@ -66,6 +67,6 @@ ms.lasthandoff: 10/18/2017
 
 每個組態檔必須剛好包含一個**\<組態 >**項目。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

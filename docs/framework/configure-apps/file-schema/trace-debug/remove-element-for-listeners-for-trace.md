@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ff1eb93a6d81f83b60e2621296e0c9d995699898
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7bc4136fb917ee9b63b7cca26ba1834de21f542e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;
 移除的接聽程式從**接聽程式**集合。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**name**|必要屬性。<br /><br /> 要移除的接聽程式名稱**接聽程式**集合。|  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: be5969bf8653512da27785479ac7feae1f6c09a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e848a0fac5d41628d4d39f1771019eb870e6395b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatable-schema-definition"></a>DataTable 結構描述定義
 資料表的結構描述 (或結構) 是由資料行或條件約束來表示。 您可以使用 <xref:System.Data.DataTable> 物件以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 物件來定義 <xref:System.Data.UniqueConstraint> 的結構描述。 資料表的資料行可對應到資料來源中的資料行、包含運算式所得的值、自動累加其值或包含主索引鍵值。  
@@ -29,8 +30,8 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Data.DataTable.CaseSensitive%2A>屬性**DataTable**不會影響這個行為。 **CaseSensitive**屬性適用於資料中的資料表和強制執行條件約束，並依此類推，會影響排序、 搜尋、 篩選，但不是屬於資料行、 關聯和條件約束參考。  
   
-## <a name="in-this-section"></a>本章節內容  
- [將資料行加入至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+## <a name="in-this-section"></a>本節內容  
+ [將資料行新增至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  描述如何定義的資料行的資料表使用**DataColumn**物件。  
   
  [建立運算式資料行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  [DataTable 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  說明如何在資料表中定義資料行的外部索引鍵條件約束和唯一的條件約束。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6b9a5fb2f62c27d278570ad789deab30917bc432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c62be73db6d9d0b6ce67dd87021c589502d5fec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;項目 （網路設定）
 描述 FTP 快取是否作用中，並且描述預設的快取原則。  
@@ -46,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`policyLevel`|指定 FTP 快取原則。 預設值是 `Default`。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`Default`|如果資源是新的內容長度正確無誤，，到期、 修改和內容長度屬性會，傳回快取的資源。|  
 |`BypassCache`|從伺服器傳回的資源。|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  

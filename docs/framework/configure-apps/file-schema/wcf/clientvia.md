@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3782eb9cbe793fef450c8b1c58456a1d4f7b0b94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7a1870a8c331aae16ab14da62c64d6fb15ecd3bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
 指定應建立傳輸通道的 URI。 如需詳細資訊，請參閱<xref:System.ServiceModel.Description.ClientViaBehavior>。  
@@ -48,10 +49,10 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定端點行為。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ClientViaElement>  
  <xref:System.ServiceModel.Description.ClientViaBehavior>

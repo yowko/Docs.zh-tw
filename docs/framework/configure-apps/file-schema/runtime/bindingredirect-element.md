@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3bc8abc019ddb271c8c1246b280be754585bfd61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f8cd497871d8a58504cf790f84cc7e5a1d4e39b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;項目
 將一個組件版本重新導向至另一個版本。  
@@ -61,7 +62,7 @@ newVersion="new assembly version"/>
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
@@ -94,7 +95,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

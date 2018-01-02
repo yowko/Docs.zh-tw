@@ -10,11 +10,12 @@ ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 496967bc3638344d2b39d428b85270b575b325ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8ee722c7d5db9d58ab1a91f4b1299912981510af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler 自訂項目
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="parent-element"></a>父項目
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>備註
 
-**\<SectionName >**項目是所定義的自訂項目[ **\<區段 >** ](~/docs/framework/configure-apps/file-schema/section-element.md)標記[ **\<c >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)項目。 組態系統會傳回<xref:System.Collections.IDictionary>物件時呼叫<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>。
+ **\<SectionName >**項目是所定義的自訂項目[ **\<區段 >** ](~/docs/framework/configure-apps/file-schema/section-element.md)標記[ **\<c >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)項目。 組態系統會傳回<xref:System.Collections.IDictionary>物件時呼叫<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>。
 
 ## <a name="example"></a>範例
 
@@ -67,6 +68,6 @@ ms.lasthandoff: 10/18/2017
 
 此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

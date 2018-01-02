@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8836d9e57dd7c4d9cfdc20c5e4856e384e6d67b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c7e5c28325326d838da851ff4add12f8ae612c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 指定要用來取得安全性權杖的本機簽發者位址和繫結。  
@@ -51,14 +52,14 @@ endpointBehaviors 區段
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定本機簽發者的身分識別資訊。|  
 |[\<標頭 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|位址標頭集合，這些位址標頭是正確定址本機簽發者時的必要項目。 您可以使用 `add` 關鍵字將標頭加入這個集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|指定用來向服務驗證用戶端的自訂權杖。|  
   
@@ -87,16 +88,16 @@ endpointBehaviors 區段
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
  <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [如何： 設定本機簽發者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [如何：設定本機簽發者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)  
- [如何： 建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：建立同盟用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

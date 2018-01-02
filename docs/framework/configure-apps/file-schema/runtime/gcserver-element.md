@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 54142a75d178eb1c12e4b182df1dab9bff957ec6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt;項目
 指定 Common Language Runtime 是否執行伺服器記憶體回收。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不執行伺服器記憶體回收。 這是預設值。|  
 |`true`|執行伺服器記憶體回收。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  

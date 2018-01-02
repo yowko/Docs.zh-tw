@@ -20,11 +20,12 @@ caps.latest.revision: "70"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 547e6a5b800f1adf5ba9835470d2dd405ce97b14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltruntimegt-element"></a>&lt;執行階段&gt;項目
 提供 common language runtime 用來設定應用程式的資訊。  
@@ -45,9 +46,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<alwaysFlowImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。|  
 |[\<AppContextSwitchOverrides>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。|  
@@ -99,6 +100,6 @@ ms.lasthandoff: 11/21/2017
   
  中的項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) common language runtime 應用程式啟動時自動讀取 > 一節。 您也可以藉由提供其名稱定義的非預設應用程式定義域的組態檔<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>屬性; 它會讀取設定自動載入應用程式定義域時。 您應該很少，如果有的話，有需要的設定會直接讀取[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) > 一節，在您的應用程式組態檔中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

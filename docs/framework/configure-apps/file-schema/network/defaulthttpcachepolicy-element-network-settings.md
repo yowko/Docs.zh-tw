@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f2db2fd10ca20209c21c8add71d8ee4f26951ca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;項目 （網路設定）
 說明 HTTP 快取是否作用中，並且描述預設的快取原則。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`maximumAge`|快取的物件標示為已過期之前，請指定最大時間間隔。|  
 |`maximumStale`|指定的最長的時間超過快取的物件標示為已過期之前所計算的有效期限時間。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  

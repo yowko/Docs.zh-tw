@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d38e3786c595c3fe6cc9ea54b68784c927901731
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 27b80c831fdc66bd3b022645c3de9c0c31ee575a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdatacontractserializergt"></a>&lt;dataContractSerializer&gt;
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。 這個項目會出現在兩個不同的階層架構中。 其中一個列於接下來的＜結構描述階層架構＞一節，另一個則列於＜備註＞一節中。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="attributes"></a>屬性  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |ignoreExtensionDataObject|布林值，該值會指定當端點序列化或還原序列化時，是否略過端點所提供的資料。 此屬性只能在 `<dataContractSerializer>` 項目下的 `<behavior>` 設定。|  
 |maxItemsInObjectGraph|整數，指定要序列化或還原序列化的項目數上限。 此屬性為 65536。|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|服務行為之設定的集合。|  
 |[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。|  
@@ -69,9 +70,9 @@ ms.lasthandoff: 12/02/2017
   
  如需有關已知型別的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
  <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [資料傳輸與序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

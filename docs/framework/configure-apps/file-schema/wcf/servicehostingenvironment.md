@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3951c52a5bc510cc288b1289f2f6cc9c39255db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 此項目定義服務裝載環境為特定傳輸產生的類型。 如果這個項目是空白的，便會使用預設的類型。 這個項目只能用於應用程式或電腦層級的組態檔。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|組態項目的集合，這些項目會指定服務主機使用之基底位址的前置詞篩選條件。|  
 |[\<v >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|描述啟動設定的組態區段。|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/02/2017
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
  [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b36c52338754df0f4fd3c963848e36afeb140501
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d94d49fcb2c395de5172a730923dbe42f67cf35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt;項目
 指定是否為通用語言執行平台事件啟用 Windows 事件追蹤 (ETW)。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |值|描述|  
 |-----------|-----------------|  
 |true|啟用 ETW。 這是預設值為開頭的 Windows Windows Vista 和 Windows Server 2008 作業系統的版本。|  
-|false|停用 ETW。 這是舊版的 Windows 版本的預設值。|  
+|False|停用 ETW。 這是舊版的 Windows 版本的預設值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [控制 .NET Framework 記錄](../../../../../docs/framework/performance/controlling-logging.md)

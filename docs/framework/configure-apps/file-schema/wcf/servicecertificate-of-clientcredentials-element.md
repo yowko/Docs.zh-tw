@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3fbb3ef0fddd287fa3feb30732b26c651ac0067
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5f6f52eae3ed9ac3236f54c62ce8712656392f0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 項目
 指定對用戶端驗證服務時所使用的憑證。  
@@ -41,9 +42,9 @@ ms.lasthandoff: 12/02/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<defaultCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。|  
 |[\<但是在 scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。 這個集合通常用來指定聯合案例中安全性權杖服務的服務憑證。|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用戶端用來對服務驗證本身的認證。|  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/02/2017
   
  屬性的`serviceCertificate`項目是屬性的相同[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
@@ -70,4 +71,4 @@ ms.lasthandoff: 12/02/2017
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

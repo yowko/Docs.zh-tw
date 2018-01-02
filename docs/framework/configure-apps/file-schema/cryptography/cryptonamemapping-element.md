@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2156c6441190b530c48a70e67e93e4806d20b199
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0ddd8368b84ec1b218f2c48fddd898f83fc71fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;項目
 包含易記名稱的類別對應。  
@@ -46,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`cryptoClasses`|包含密碼編譯類別清單，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
 |`nameEntry`|將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)  

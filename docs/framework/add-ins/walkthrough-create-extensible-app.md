@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6609f30844421f94965fbe05114db96ed8edbb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>逐步解說：建立可延伸應用程式
 本逐步解說描述如何建立會執行簡單的計算機功能的增益集的管線。 不會示範真實世界的實例。相反地，它會示範在管線，以及如何增益集可以提供主機服務的基本功能。  
@@ -362,9 +363,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  型別**結束**按**Enter**鍵以關閉應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說： 啟用主機變更為回溯相容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
  [主控件與增益集之間的逐步解說： 傳遞集合](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
  [合約、 檢視和配接器](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)
+ [管線開發](../../../docs/framework/add-ins/pipeline-development.md)

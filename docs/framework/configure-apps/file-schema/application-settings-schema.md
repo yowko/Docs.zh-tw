@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d93a18b17e0d6b8e413903fb84dc6b427d94f6af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-schema"></a>應用程式設定結構描述
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
 
 應用程式設定會定義下列項目，它會使用組態檔的一部分。
 
-| 項目                    | 說明                                                                           |
+| 項目                    | 描述                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings >** | 包含所有**\<設定 >**應用程式特定的標記。                         |
 | **\<userSettings >**        | 包含所有**\<設定 >**特定於目前的使用者標記。                        |
@@ -51,10 +52,10 @@ ms.lasthandoff: 10/18/2017
 
 這個項目定義的設定。 它有下列屬性。
 
-| 屬性        | 說明 |
+| 屬性        | 描述 |
 | ---------------- | ----------- |
-| **name**         | 必要項。 設定的唯一識別碼。 透過 Visual Studio 建立的設定會儲存具有名稱`ProjectName.Properties.Settings`。 |
-| **serializedAs** | 必要項。 要用於序列化成文字值的格式。 有效值為：<br><br>- `string`。 值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`。 使用 XML 序列化序列化值。<br>- `binary`。 值序列化為文字編碼的二進位檔使用二進位序列化。<br />- `custom`。 設定提供者知道固有的這項設定和序列化並將它取消序列化。 |
+| **name**         | 必要。 設定的唯一識別碼。 透過 Visual Studio 建立的設定會儲存具有名稱`ProjectName.Properties.Settings`。 |
+| **serializedAs** | 必要。 要用於序列化成文字值的格式。 有效值為：<br><br>- `string`。 值序列化為字串，使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`。 使用 XML 序列化序列化值。<br>- `binary`。 值序列化為文字編碼的二進位檔使用二進位序列化。<br />- `custom`。 設定提供者知道固有的這項設定和序列化並將它取消序列化。 |
 
 ## <a name="value-element"></a>\<值 > 項目
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/18/2017
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [應用程式設定架構](~/docs/framework/winforms/advanced/application-settings-architecture.md)

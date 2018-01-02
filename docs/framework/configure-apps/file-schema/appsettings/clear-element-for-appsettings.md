@@ -12,11 +12,12 @@ ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ac1e9a86d0c3e1bb1f23b753fd9867effef03ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 54479cab9abc2c1a107cd055341404c0fe1308fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clear-element-for-appsettings"></a>\<清除 > 項目\<appSettings >
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="parent-element"></a>父項目
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 包含自訂應用程式設定，例如檔案路徑、 XML Web 服務 Url 或任何其他的自訂應用程式組態資訊。 |
 
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/18/2017
 </appSettings>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

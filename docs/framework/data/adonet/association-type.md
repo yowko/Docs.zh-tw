@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 476a92979ff0dc6292e64ce5514cc600a9dee50a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf109cac6446feb6cfe6b126cadcf4fc008d1579
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="association-type"></a>關聯類型
 *關聯型別*（亦稱為關聯） 是用於描述實體資料模型 (EDM) 中的關聯性的基本建置組塊。 在概念模型中，關聯代表兩個關聯性[實體類型](../../../../docs/framework/data/adonet/entity-type.md)(例如`Customer`和`Order`)。 在應用程式中，關聯的執行個體代表特定的關聯 (例如 `Customer` 執行個體和 `Order` 執行個體之間的關聯)。 關聯執行個體會在邏輯上群組於[關聯集](../../../../docs/framework/data/adonet/association-set.md)。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型的重要概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+## <a name="see-also"></a>請參閱  
+ [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

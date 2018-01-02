@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 49046c343ef749e597402f7e19a08fe1f2c98ca0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5db777f147e2eca7644d5b5f1a4bc18c8401ca8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt;項目
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不會啟用大於 2 GB 的總大小的陣列。 這是預設值。|  
 |`true`|在 64 位元平台時啟用大於 2 GB 的總大小的陣列。|  
@@ -85,6 +86,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b729141055f67f1d37cadfa4422417fe2d73139e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3d89fc465c1e82fab638b57dbf712f1396385f80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbindingsgt"></a>&lt;繫結&gt;
 這個區段保存標準和自訂繫結的集合。 每個項目都是 `binding` 項目，可由其唯一的 `name` 所識別。 服務會使用 `name` 來連結繫結，以便利用繫結。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
  自訂繫結是由其 `name` 屬性所識別。 如需有關自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  

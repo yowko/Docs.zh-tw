@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 157adb6c7317aa047976cdb9e30711d20c9e543b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttracegt-element"></a>&lt;追蹤&gt;項目
 包含用於收集、儲存及路由傳送追蹤訊息的接聽項。  
@@ -55,21 +56,21 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="autoflush-attribute"></a>autoflush 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不自動清除輸出緩衝區。 這是預設值。|  
 |`true`|自動清除輸出緩衝區。|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不會使用全域鎖定，接聽程式是否具備執行緒安全。否則，會使用全域鎖定。|  
 |`true`|會使用全域鎖定不論接聽程式是否具備執行緒安全。 這是預設值。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|指定的接聽程式會收集，存放區，並將訊息路由。|  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 07f356c0425b071ac320e702a9ba7cd6b9537341
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fd4b608964bca2e05424f2f76136fa69111adc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;設定&gt;項目 （網路設定）
 為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。  
@@ -52,9 +53,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|自訂所用參數<xref:System.Net.HttpListener>類別。|  
 |[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|可自訂 Web 要求參數。|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
@@ -75,6 +76,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

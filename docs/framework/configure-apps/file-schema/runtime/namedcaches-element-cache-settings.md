@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdafddcb05dd50f059c9f6804573beec085a4a2a
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.workload: dotnet
+ms.openlocfilehash: f4c4bd9901b053c96a260435c34ffa3ddd2c7283
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;項目 （快取設定）
 指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性參考的組態設定集合從一或多個`namedCaches`的組態檔項目。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/25/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`cacheMemoryLimitMegabytes`|整數值，以 mb 為單位，指定最大容許大小的執行個體<xref:System.Runtime.Caching.MemoryCache>可以成長到。 預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。|  
 |`name`|快取的名稱。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/25/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。|  
   
@@ -97,5 +98,5 @@ ms.lasthandoff: 10/25/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<memoryCache > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

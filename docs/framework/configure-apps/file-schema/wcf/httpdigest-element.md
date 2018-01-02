@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 374858701788c0c187fc718dae63371f62dcf1cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 項目
 指定對服務驗證用戶端時，所使用的摘要式類型認證。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
   
  此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][摘要式驗證在 IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
@@ -68,4 +69,4 @@ ms.lasthandoff: 12/02/2017
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

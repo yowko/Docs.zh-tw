@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4573c3a5e0cf64996f2a4e109736d966b754494a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a77f93a0dff198821509c2c26f67caa137073ced
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;項目
 指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。  
@@ -44,13 +45,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**developerInstallation**|指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。|  
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**true**|搜尋 DEVPATH 環境變數所指定的目錄中的組件。|  
 |**false**|不會搜尋 DEVPATH 環境變數所指定的目錄中的組件。 這是預設值|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [如何：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

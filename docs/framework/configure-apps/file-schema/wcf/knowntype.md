@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bedebb98e5fc48292c503eef30cee30c8d29c41c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 439d241d73df4db2820eac72c5e88e7d9023c6a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
 指定還原序列化期間要由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的型別。 項目會指定由「宣告型別」的欄位或屬性所傳回的「已知型別」。 如需詳細資訊，請參閱[資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<參數 >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|指定當宣告型別為泛型型別時的參數索引。|  
   
@@ -79,8 +80,8 @@ ms.lasthandoff: 12/02/2017
 </add>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

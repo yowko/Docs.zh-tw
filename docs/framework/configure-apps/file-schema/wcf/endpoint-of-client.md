@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec959a9eeea82c56d6a2ae5ec3a7befce67676e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
 指定通道端點的合約、繫結和位址屬性，用戶端會使用該通道端點連線至伺服器上的服務端點。  
@@ -56,14 +57,14 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<標頭 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|位址標頭的集合。|  
 |[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<用戶端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|組態區段，它會定義用戶端可以連線的端點清單。|  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/02/2017
 </endpoint>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
  <xref:System.ServiceModel.Configuration.ClientSection>  
  <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  

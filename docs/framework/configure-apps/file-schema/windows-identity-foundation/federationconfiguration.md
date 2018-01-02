@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9abe07c065dbea67c5ebc4a4490d9f88258130c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 時使用同盟驗證透過 WS-同盟通訊協定。 設定<xref:System.Security.Claims.ClaimsAuthorizationManager>時使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供的宣告型存取控制。  
@@ -41,20 +42,20 @@ ms.lasthandoff: 11/21/2017
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|這個同盟的組態項目的名稱。 這個屬性主要是提供的擴充點，未來的通訊協定。 選擇項。|  
-|identityConfigurationName|中所指定的身分識別組態區段名稱[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)来使用項目。 如果未指定此屬性，則會使用預設身分識別組態區段。 選擇項。|  
+|name|這個同盟的組態項目的名稱。 這個屬性主要是提供的擴充點，未來的通訊協定。 選擇性。|  
+|identityConfigurationName|中所指定的身分識別組態區段名稱[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)来使用項目。 如果未指定此屬性，則會使用預設身分識別組態區段。 選擇性。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<Requiressl >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|設定 SAM 所使用的 cookie 處理常式。 選擇項。|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。 選擇項。|  
-|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|設定 WS-同盟驗證模組 (WSFAM)。 選擇項。|  
+|[\<Requiressl >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|設定 SAM 所使用的 cookie 處理常式。 選擇性。|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。 選擇性。|  
+|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|設定 WS-同盟驗證模組 (WSFAM)。 選擇性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|使用 WS-同盟通訊協定進行驗證的組態區段。|  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 </system.identityModel.services>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
  <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>  

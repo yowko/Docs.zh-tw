@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27bcccab90c4627f2c9a1d241af3b1833ae13a18
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e7728f2ffc74462e43de32b07b819cc2371c9bc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;身分識別&gt;的 &lt;certificateReference&gt;
 指定 X.509 憑證驗證的設定。 使用這個身分識別連接至端點的安全 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 用戶端會確認伺服器提供的宣告是否包含用來建構這個身分識別的身分識別宣告。  
@@ -57,11 +58,11 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定設定，這個設定可讓其他端點與此端點交換訊息時啟用端點驗證。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  

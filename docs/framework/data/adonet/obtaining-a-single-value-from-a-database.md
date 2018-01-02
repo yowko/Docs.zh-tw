@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 513310ddfb578f127ee70059dec386f207180907
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 09231a360408efe3a167a9e613fdf85631c0be52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>從資料庫取得單一值
 或許您需要以單一數值傳回資料庫資訊，而非以資料表或資料流的形式。 比方說，您可能想要傳回的結果，例如計數彙總函式 (\*)、 sum (price) 或 AVG(Quantity)。 **命令**物件可讓您傳回單一值使用**ExecuteScalar**方法。 **ExecuteScalar**方法傳回時，做為純量值，結果集的第一個資料列的第一個資料行的值。  
@@ -30,8 +31,8 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/CS/source.cs#1)]
  [!code-vb[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/VB/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [執行命令](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [DbConnection、 DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
+ [DbConnection、DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

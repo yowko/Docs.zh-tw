@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 65f9d8a6182c5882a173a3a3733c1c0c220efbf6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b30f4e36ffd98289bb971e04b55b0249138e0efd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET 中的資料類型對應
 .NET Framework 是以一般型別系統為基礎，其中定義了型別在執行階段的宣告、使用和管理方式。 它同時包含了都衍生自 <xref:System.Object> 基底類型的實值型別 (Value Type) 和參考型別 (Reference Type)。 使用資料來源時，如果沒有明確指定資料型別，就會從資料提供者 (Data Provider) 推斷資料型別。 例如，<xref:System.Data.DataSet> 物件與任何特定資料來源無關。 `DataSet` 內的資料是由資料來源擷取而來，且變更會藉由 `DataAdapter` 存回資料來源； 也就是說，當 `DataAdapter` 將來自資料來源的值填入 <xref:System.Data.DataTable> 內的 `DataSet`時，`DataTable` 內資料行的結果資料型別屬於 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，而非 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者用於連接資料來源的特定型別。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者資料型別的 Null 值都是由 `DBNull.Value` 表示。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SQL Server 資料類型對應](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  列出 <xref:System.Data.SqlClient> 的推斷資料型別對應和資料存取子方法。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
  [浮點數](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
  說明開發人員在使用浮點數值 (Floating-Point Number) 時經常遇到的問題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 資料類型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [設定參數和參數資料類型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  

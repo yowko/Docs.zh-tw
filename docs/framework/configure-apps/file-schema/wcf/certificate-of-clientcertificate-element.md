@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aeb0479f661ed8f058f6c23ce79654ccb3a36fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0cbf4ac229d63ad1ab097e5dc2ffe76ccb144515
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a>&lt;clientCertificate&gt; 的 &lt;certificate&gt; 項目
 指定用來簽署與加密訊息的 X.509 憑證。  
@@ -57,7 +58,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)||  
   
@@ -86,10 +87,10 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 </serviceBehaviors>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>  
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>  
  <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [如何： 建立採用自訂憑證驗證程式服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [如何：建立使用自訂憑證驗證程式的服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

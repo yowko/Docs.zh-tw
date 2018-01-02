@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d48f3b304b337ba61f53bbd81cac8601bc68cb0a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 09496add0adcc11756b6aae01a0236fe590f819f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 指定自訂繫結的通道集區設定。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|啟用自訂繫結的封包路由。|  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 12/02/2017
   
 -   `maxOutboundChannelsPerEndpoint` 配額會設定伺服器和用戶端雙方的快取限制，並可用來改善可靠性。 預設值是依據最為保守穩當的資源配置所設定，這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
  <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
  <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  

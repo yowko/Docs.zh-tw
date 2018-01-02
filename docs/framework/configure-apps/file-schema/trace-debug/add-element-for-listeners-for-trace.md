@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bbb74d9a542833a96c61bcc09f6e4e5f0807843d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;
 加入至接聽程式**接聽程式**集合。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**type**|必要屬性。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |**initializeData**|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|將篩選加入至接聽程式在`Listeners`追蹤的集合。|  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  <xref:System.Diagnostics.EventLogTraceListener>  

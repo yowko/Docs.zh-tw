@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9417132dc2a21130958e6fa527f243c52d11eedc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a630a7b09915ca7c6207d432c5e30530a2e1f004
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 類別
 
@@ -46,6 +47,6 @@ internal class DataMemberListEditor : UITypeEditor
   
 **.NET framework 版本：**自 2.0 起可用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

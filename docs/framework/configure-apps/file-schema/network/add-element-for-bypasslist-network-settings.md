@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bed3abd5522b748a2bd24ba03c7be5d991deae9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;新增&gt;bypasslist （網路設定） 的項目
 將 proxy 略過清單中的 IP 位址或 DNS 名稱。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |**address**|描述 IP 位址或 DNS 名稱的規則運算式。|  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組規則運算式，其中說明不使用 proxy 的位址。|  
   
@@ -90,6 +91,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

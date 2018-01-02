@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71fdc7c68ff7e672a5adf044bbe0200563772a58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc5245be9b008f4bd8021c501860d789c60c73a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 這個區段會啟用電腦或應用程式組態檔中自訂繫結項目的使用。 您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為繫結項目延伸，以及將 `name` 屬性設定為自訂繫結項目，來將自訂繫結項目加入至這個集合。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 12/02/2017
 </customBinding>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)

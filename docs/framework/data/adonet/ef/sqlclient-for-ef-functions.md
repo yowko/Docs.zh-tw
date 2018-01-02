@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 08526aeebd01196c064154a35df267b8040df796
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b580f0611d18b03ba831a3f5a3d0481bd27b0869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>適用於 Entity Framework 的 SqlClient 函式
 適用於 Entity Framework 的 .NET Framework Data Provider for SQL Server (SqlClient) 提供了一組可執行數學和彙總 (Aggregation) 計算的函式，以及可執行 `System.DateTime` 和 `string` 作業的函式。 這些函式位於 `SQLServer` 命名空間 (Namespace) 中。  
@@ -26,19 +27,19 @@ ms.lasthandoff: 11/21/2017
   
  如需如何標準 SQL Server 函式的函式對應資訊，請參閱[概念模型標準與 SQL Server 函式對應](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [概念模型標準與 SQL Server 函式的對應](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
  [彙總函式](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
- [日期和時間函數](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
+ [日期和時間函式](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
   
  [數學函式](../../../../../docs/framework/data/adonet/ef/mathematical-functions.md)  
   
  [字串函式](../../../../../docs/framework/data/adonet/ef/string-functions.md)  
   
- [系統函數](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
+ [系統函式](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 參考](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

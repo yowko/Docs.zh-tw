@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73af93286530fe94145cb5c05f4c70eed110d6ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e46783c627657f1185e93b4ddbb7f996df064250
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>從 XML Web Service 使用資料集
 <xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 **資料集**是 「 序列化 」，它可以指定為輸入或輸出 XML Web services 但沒有任何額外的程式碼所需的內容串流**資料集**從 XML Web service用戶端的來回。 **資料集**是隱含地轉換成使用 DiffGram 格式的 XML 資料流，透過網路傳送，然後重新建構 XML 資料流，做為從**資料集**接收端上。 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 如需有關 DiffGram 格式的詳細資訊，請參閱[DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
@@ -269,12 +270,12 @@ ms.lasthandoff: 11/21/2017
     csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [使用 DataAdapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [DataAdapter 的參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Web 服務描述語言工具 (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

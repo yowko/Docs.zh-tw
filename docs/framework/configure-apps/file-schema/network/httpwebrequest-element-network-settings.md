@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0a4490870cb12ff221f75b043f01baad9b5c7c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dadb2d7635f132b44d6fca8c56f53b847ffb1ff9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;項目 （網路設定）
 可自訂 Web 要求參數。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|指定回應標頭的最大長度，以 kb 為單位。 預設值為 64。 -1 表示沒有大小限制，將會加諸於回應標頭。|  
 |`maximumErrorResponseLength`|指定錯誤回應，最大的長度，以 kb 為單位。 預設值為 64。 -1 表示沒有大小限制，將會加諸於錯誤回應。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

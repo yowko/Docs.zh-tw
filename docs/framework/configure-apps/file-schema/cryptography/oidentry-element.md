@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d6dfe38f8e632a31f7a20191678f1fff7fd88ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;項目
 將 ASN.1 物件識別碼 (OID) 對應至易記名稱。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**OID**|必要屬性。<br /><br /> 指定對應至您的類別所實作的演算法的 ASN.1 OID。|  
 |**name**|必要屬性。<br /><br /> 指定的值**名稱**屬性[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)標記。|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)  

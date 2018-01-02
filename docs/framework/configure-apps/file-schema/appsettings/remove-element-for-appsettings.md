@@ -12,11 +12,12 @@ ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 10202a38d54e4c9744dbd20fb5f226fa41f5dab5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e803561ef20bb17ed7c637eb487027466b65077
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-element-for-appsettings"></a>\<移除 > 項目\<appSettings >
 
@@ -36,13 +37,13 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="attribute"></a>屬性
 
-|         | 說明 |
+|         | 描述 |
 | ------- | ----------- |
 | **key** | 必要屬性。<br><br>指定要移除之索引鍵的名稱。 |
 
 ### <a name="parent-element"></a>父項目
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 包含自訂應用程式設定，例如檔案路徑、XML Web 服務 URL，或應用程式的任何其他自訂組態資訊。 |
 
@@ -60,6 +61,6 @@ ms.lasthandoff: 10/18/2017
 </appSettings>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

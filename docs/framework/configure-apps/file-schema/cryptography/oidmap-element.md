@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08f7eb8e4531d27586bede11bacf598e472b158f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;項目
 包含類別到 ASN.1 物件識別碼 (OID) 對應。  
@@ -46,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|對應 ASN.1 OID 為易記名稱。|  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)  

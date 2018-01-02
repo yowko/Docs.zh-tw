@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 14a758f1d69da4db8ed58809de20d3522ea7e4e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d880583016e6ccc0ae57fea10c35cb32726c93e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;項目 （網路設定）
 自訂所用參數<xref:System.Net.HttpListener>類別。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/21/2017
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Configuration.HttpListenerElement>  
  <xref:System.Net.HttpListener>  
  <xref:System.Net.HttpListenerRequest.Url%2A>  

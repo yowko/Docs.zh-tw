@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: de1acb37f3236598e9d8a74a188033d18b65ac8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4406caa4da1375bea9809843ca96774e24421d5d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;新增&gt;元素&lt;參數&gt;
 指定設定追蹤參數的層級。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**name**|必要屬性。<br /><br /> 指定參數的名稱。 這個屬性的值會對應到*displayName*傳遞至參數的建構函式的參數。|  
 |**value**|必要屬性。<br /><br /> 指定的交換器層級。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.Switch>  
  <xref:System.Diagnostics.TraceSwitch>  
  <xref:System.Diagnostics.BooleanSwitch>  

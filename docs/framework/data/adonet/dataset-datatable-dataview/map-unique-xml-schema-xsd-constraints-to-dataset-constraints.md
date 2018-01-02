@@ -13,18 +13,19 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 66183768b5b48608dc69a4021b27816595c43b4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 中的 XML 結構描述定義語言 (XSD) 結構描述**唯一**項目會指定元素或屬性上條件約束的唯一性。 在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。  
   
  下表概述**msdata**屬性中，您可以指定**唯一**項目。  
   
-|屬性名稱|說明|  
+|屬性名稱|描述|  
 |--------------------|-----------------|  
 |**即**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則，**名稱**屬性提供條件約束名稱的值。|  
 |**msdata**|如果`PrimaryKey="true"`存在於**唯一**項目，以建立唯一條件約束**IsPrimaryKey**屬性設定為**true**。|  
@@ -103,7 +104,7 @@ ConstraintName: SomeName
   IsPrimaryKey: False  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

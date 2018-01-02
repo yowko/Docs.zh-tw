@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1ef5633c53f537f34a3c72ede89f55b1beac09a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d06889144edd9c2c5d93292e3513f92be55ea035
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>使用一個或多個 REF CURSOR 填入資料集
 此 Microsoft Visual Basic 範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列來填入 <xref:System.Data.DataSet>。  
@@ -55,6 +56,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
   End Using  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Oracle REF Cursor](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+## <a name="see-also"></a>請參閱  
+ [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

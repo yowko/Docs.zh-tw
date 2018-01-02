@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5fb58c01f8a8e3135878036454a1265e6b92e939
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d0b09f5c845fc9a18c2a1dd919272c2924478eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;項目 （網路設定）
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
@@ -49,14 +50,14 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否使用 Web Proxy。 預設值是 `true`。|  
 |`useDefaultCredentials`|指定此主機的預設認證是否用來存取 Web Proxy。 預設值是 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組位址的規則運算式，說明不使用 Proxy。|  
 |[模組](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|將新的 Proxy 模組加入至應用程式。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

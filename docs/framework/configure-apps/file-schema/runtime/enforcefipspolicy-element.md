@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd593c17d752b35919985aad37f675c62e6ce34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fb8cb1ea4d011eb25aee14ddd53d3dc882f75d8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt;項目
 指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|如果您的電腦設定為需要與 FIPS 相容的密碼編譯演算法時，會強制執行這項需求。 如果類別實作的演算法不會符合 FIPS，建構函式或`Create`該電腦上執行時，該類別的方法擲回例外狀況。 這是預設值。|  
 |`false`|密碼編譯演算法所使用的應用程式不一定要符合 FIPS，不論電腦組態。|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [加密模型](../../../../../docs/standard/security/cryptography-model.md)

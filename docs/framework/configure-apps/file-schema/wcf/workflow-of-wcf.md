@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8177f04f921585b422c2567bd7282dba02fedb70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cc26971d27641053ccf55e8c0179c2606cf2db1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltworkflowgt-of-wcf"></a>WCF 的 &lt;workflow&gt;
 設定追蹤參與者，這些參與者會接聽執行階段直接發出的追蹤記錄並處理記錄，無論記錄的設定為何。 這包括寫入至特定的輸出 (例如檔案、主控台、ETW)、處理/彙總記錄，或任何其他可能需要的組合。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="attributes"></a>屬性  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |name|指定追蹤參與者名稱的字串。|  
 |profileName|指定追蹤設定檔名稱的字串，該設定檔定義了追蹤參與者已訂閱的追蹤記錄。|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<參與者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|追蹤參與者的清單。|  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
  <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
  <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  

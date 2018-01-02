@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 255cd8518bd9c6c6c199c75aa32ca086c801d23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; 的 &lt;add&gt;
 代表傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 之間的預設通訊協定對應和[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]繫結。 在執行階段建立預設的端點時，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會查看所設定的對應，並且決定要用於特定基礎位址的繫結。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="attributes"></a>屬性  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |繫結|指定在建立預設端點期間用於端點之繫結類型的字串。|  
 |bindingConfiguration|指定要參考之繫結組態區段名稱的字串。|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<p >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|代表用於定義傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 之間的預設通訊協定對應的組態區段和[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]繫結。|  
   
@@ -64,6 +65,6 @@ ms.lasthandoff: 12/02/2017
 </protocolMapping>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>      
  <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

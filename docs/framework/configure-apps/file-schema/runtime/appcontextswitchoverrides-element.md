@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83244e1df239110d86367423b91458aefb5d07a5
-ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
+ms.workload: dotnet
+ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/15/2017
   
 ### <a name="value-attribute"></a>屬性值  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |「 名稱 = 值 」|預先定義的參數名稱，以及其值 (`true`或`false`)。 多個參數名稱/值組以分號分隔 （";"）。 如需.NET Framework 所支援的預先定義的參數名稱的清單，請參閱 < 備註 > 一節。|  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/15/2017
   
  .NET Framework 支援下列參數：  
   
-|參數名稱|說明|導入|  
+|參數名稱|描述|導入|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|控制 Windows Presentation Foundation 是否使用傳統演算法的控制項配置。 如需詳細資訊，請參閱[風險降低：WPF 版面配置](~/docs/framework/migration-guide/mitigation-wpf-layout.md)。|.NET Framework 4.6|  
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|控制用來簽署封裝的組件的 PackageDigitalSignatureManager 的預設演算法是 SHA1 或 SHA256。|.NET Framework 4.7.1|
@@ -139,7 +140,7 @@ ms.lasthandoff: 12/15/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.AppContext?displayProperty=nameWithType>  
  [\<runtime > 項目](runtime-element.md)  
  [\<configuration> 項目](../configuration-element.md)

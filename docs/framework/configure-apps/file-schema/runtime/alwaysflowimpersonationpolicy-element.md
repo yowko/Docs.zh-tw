@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 52cdb26f6f78ed740efa1f27958368e8c7e2ae78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be1df955f7586848968cb32cd66a4c6889cfffa8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt;項目
 指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|身分識別不會流動到非同步的點，除非透過執行模擬的 Windows managed 方法例如<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>。 這是預設值。|  
 |`true`|Windows 識別一律流動到非同步的點，無論模擬執行的方式。|  
@@ -116,7 +117,7 @@ configuration>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<legacyImpersonationPolicy > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

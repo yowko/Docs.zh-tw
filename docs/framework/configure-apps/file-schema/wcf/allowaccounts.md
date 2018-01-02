@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20d411fbe052940fd8fc752e74d012f28ffa441b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a1716aa77808b2a9f8f3ca903dabf81b21b8f709
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 包含組態項目的集合，這些項目指定裝載 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務之處理序的使用者帳戶，並被授予共用服務的連線存取權。  
@@ -40,17 +41,17 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|加入裝載 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務之處理序的使用者帳戶，並獲授予共用服務的連線權限。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<net.pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md)或[ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|指定 Net Pipe 或 TCP 共用服務的組態設定。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
  <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  
  <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>  

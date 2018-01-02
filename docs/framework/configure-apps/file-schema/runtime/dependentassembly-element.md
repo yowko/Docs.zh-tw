@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 60c7e53c11a23b242e71fdb3e0b7597ae9fbda18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a968d2d1abf6e77cddd9d0a0367822ee4f9723ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt;項目
 封裝每一個組件的繫結原則和組件位置。 使用其中一個`dependentAssembly`每個組件的項目。  
@@ -47,9 +48,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`assemblyIdentity`|包含有關組件的識別資訊。 這個項目必須包含在每個`dependentAssembly`項目。|  
 |`codeBase`|指定執行階段可以找到位置共用的組件如果它不會安裝在電腦上。|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 71b11cbc34bdbb5d414aa250ea2c2fce85cfac0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dbabe9fbdc7ac4e611d96bf4bd696b716cf68156
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;接聽程式&gt;元素&lt;來源&gt;
 加入或移除接聽程式在<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 接聽程式追蹤將輸出導向至適當的目標，例如記錄檔、 視窗或文字檔。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceListener>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
  [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

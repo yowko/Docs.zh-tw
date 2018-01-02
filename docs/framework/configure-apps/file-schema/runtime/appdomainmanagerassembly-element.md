@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e07b7bd18f19439f64ed8eaef5bda3bad5cef77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52e09e898fdcdbf8d14d3648b19e40bdc302daf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a>&lt;appDomainManagerAssembly&gt;項目
 針對處理序中的預設應用程式網域，指定提供應用程式網域管理員的組件。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
  <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
  [\<appDomainManagerType > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  

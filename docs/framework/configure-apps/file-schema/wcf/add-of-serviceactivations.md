@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c49845169265e48b232963ed5a2e6215be75d3fd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 956134f0db25055fb9a2f9317a770989cfdab67f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;serviceActivations&gt; 的 &lt;add&gt;
 組態項目，這個項目可讓您定義虛擬服務啟動設定，這些設定會對應至您的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務型別。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|描述啟動設定的組態區段。|  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
   
  以組態為主的啟動支援透過 HTTP 和非 HTTP 通訊協定啟動。 這項作業需要 relatativeAddress 中的擴充，也就是 .svc、.xoml 或 .xamlx。 您可以將自己的擴充對應至已知的 buildProvider，這樣您就可以透過任何擴充啟動服務。 發生衝突時，`<serviceActivations>` 區段會覆寫 .svc 註冊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ServiceActivationElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>

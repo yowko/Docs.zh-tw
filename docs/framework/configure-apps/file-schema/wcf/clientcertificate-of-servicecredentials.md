@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc2dfd94ffbf8ce08dee9c14421f389861e99e77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0bd36f0c13aebb75bb9d2147e871224c162b862
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;clientCertificate&gt;
 定義雙工通訊模式中，用來簽署與加密服務至用戶端之訊息的 X.509 憑證。  
@@ -45,16 +46,16 @@ ms.lasthandoff: 12/02/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<驗證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|指定用戶端憑證的驗證選項。|  
 |[\<憑證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|指定要使用的憑證。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 12/02/2017
   
  設定在這個項目中的憑證，只能在繫結是以 `MutualCertificateDuplex` 訊息安全性驗證模式所設定的情況下，才可用來加密傳送給用戶端的訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>  
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
  <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>  
- [如何： 建立雙工合約](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [如何：建立雙面合約](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

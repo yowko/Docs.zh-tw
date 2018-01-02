@@ -16,11 +16,12 @@ ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c668cf3d2f2c0bcffda185cea01edfb9e55c6d6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: da9af8fd24f1bf6e6effd411ad37490a4ee08804
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-sections-schema"></a>組態區段結構描述
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/18/2017
 [**\<區段 >**](~/docs/framework/configure-apps/file-schema/section-element.md)   
 [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
-| [**\<清除 >**如 **\<c >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段或區段群組。 |
+| [**\<清除 >**如** \<c >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段或區段群組。 |
 | [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段或區段群組。 |
 | [**\<c >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
-| [**\<移除 >**如 **\<c >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 預先定義的區段或區段群組中移除。 |
-| [**\<區段 >**如 **\<c >**和 **\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
-| [**\<sectionGroup >**如 **\<c >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
+| [**\<移除 >**如** \<c >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 預先定義的區段或區段群組中移除。 |
+| [**\<區段 >**如** \<c >**和** \<sectionGroup >**](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
+| [**\<sectionGroup >**如** \<c >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |

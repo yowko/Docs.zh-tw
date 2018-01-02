@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a039500281f02aa6ae891065255174c2353ba33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt; 的 &lt;add&gt;
 指定用於宣告轉換的驗證原則。  
@@ -54,14 +55,14 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<authorizationPolicies >](../../../../../docs/framework/configure-apps/file-schema/wcf/authorizationpolicies.md)|指定授權原則型別的集合。|  
   
 ## <a name="remarks"></a>備註  
  每個授權原則包含一個必要的 `policyType` 屬性字串。 該屬性會指定授權原則，可讓一組輸入宣告轉換成另一組宣告。 它可以做為授與或拒絕存取控制 (Access Control) 的基礎。 如需有關授權原則的運作方式的詳細資訊，請參閱<xref:System.IdentityModel.Policy.IAuthorizationPolicy>和[授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
@@ -70,6 +71,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  [授權存取服務作業](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [如何： 建立自訂授權管理員服務](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [如何：為服務建立自訂授權管理員](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
  [授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)

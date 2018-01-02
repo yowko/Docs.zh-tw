@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 44ef28ca2188973ccd353f4e8615c7c95f5674a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 735a6596b22e6d6fdcff776dd79224230db5b7b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;項目 （Uri 設定）
 包含會指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址設定。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否要對網域名稱套用國際化網域名稱 (IDN) 剖析。|  
 |[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否套用國際資源識別項 (IRI) 剖析至<xref:System.Uri>，以及是否應該套用 IRI 剖析規則。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[組態](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空間的設定。|  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例示範使用組態<xref:System.Uri>類別，以支援 IRI 剖析和 IDN 名稱。 此範例也會清除所有配置設定，然後新增 支援的未逸出的 http 配置的百分比編碼路徑分隔符號。  
   
 ### <a name="code"></a>程式碼  
@@ -77,5 +78,5 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

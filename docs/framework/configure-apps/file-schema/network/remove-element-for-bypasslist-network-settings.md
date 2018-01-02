@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a87632ec9725aa24d085ca6c1bf1e54545b324fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a385401217c10a316268f48757e46e3d0cfea09c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;移除&gt;bypasslist （網路設定） 的項目
 Proxy 略過清單移除 IP 位址或 DNS 名稱。  
@@ -49,7 +50,7 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`address`|描述 IP 位址或 DNS 名稱的規則運算式。|  
   
@@ -58,7 +59,7 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組規則運算式，其中說明不使用 proxy 的位址。|  
   
@@ -88,6 +89,6 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

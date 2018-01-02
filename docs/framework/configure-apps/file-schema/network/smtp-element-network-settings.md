@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 17b4050c43354da7e7ba6c3ea13a0c7621faf0a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;項目 （網路設定）
 設定傳送電子郵件的傳遞格式、傳遞方法和寄件地址。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`deliveryFormat`|指定外送電子郵件的傳遞格式。 可接受的值為 SevenBit 和 International。|  
 |`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為網路、 pickupDirectoryFromIis 和 specifiedPickupDirectory。|  
@@ -58,14 +59,14 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|設定簡易郵件傳輸通訊協定 (SMTP) 伺服器的本機目錄。|  
 |`network`|設定外部的 SMTP 伺服器的網路選項。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[\<mailSettings> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpDeliveryFormat>  

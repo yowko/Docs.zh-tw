@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 34e6e7c505dab135452664fdb815ee3e905a2ad0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2739cc5eaa6a1e43c06849e1b00f7ac8bd531e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;
 清除追蹤的 `Listeners` 集合。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.Trace.Listeners%2A>  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  

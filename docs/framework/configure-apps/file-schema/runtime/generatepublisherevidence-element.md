@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 78293c396687f9c0c99ffdfbe94cf1f3c548289d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7f7debed03526dbd7a5b2e24ff8a370921fe020
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt;項目
 指定執行階段是否會建立<xref:System.Security.Policy.Publisher>用於程式碼存取安全性 (CAS) 的辨識項。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不會建立<xref:System.Security.Policy.Publisher>辨識項。|  
 |`true`|建立<xref:System.Security.Policy.Publisher>辨識項。 這是預設值。|  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

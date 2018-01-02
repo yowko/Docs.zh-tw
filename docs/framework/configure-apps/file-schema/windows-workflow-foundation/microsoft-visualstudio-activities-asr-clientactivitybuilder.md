@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb5f7f85ac2c11dfc0569006e3fa32589a076521
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76a764018a0939edbba98d9deda541dce3c34ffb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder
 使用這個類別來建立及設定 <xref:System.Activities.ActivityBuilder> 物件，此物件會提供工作流程活動的資料。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 12/02/2017
 public class ClientActivityBuilder   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)  
- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder...建構函式](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)
+ [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)

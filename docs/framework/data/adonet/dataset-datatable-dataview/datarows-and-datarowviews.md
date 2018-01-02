@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e342ce805880da848da1e17700c055aba2c74f19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac8209432cd975539983226cfba51f229d696bd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
 <xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。 **DataRowView**物件將值公開為物件陣列，會依名稱或序數參考的基礎資料表中的資料行編製索引。 您可以存取<xref:System.Data.DataRow>公開**DataRowView**使用<xref:System.Data.DataRowView.Row%2A>屬性**DataRowView**。  
@@ -69,7 +70,7 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataRowVersion>  
  <xref:System.Data.DataViewRowState>  
  <xref:System.Data.DataView>  

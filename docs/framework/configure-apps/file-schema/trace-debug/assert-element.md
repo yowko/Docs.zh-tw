@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 520dfec180157c9a05c5fc3beb51b5fc17f9088b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9670cf0faa3e7f69b8f99b09fa26741991a60481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassertgt-element"></a>&lt;判斷提示&gt;項目
 指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|顯示訊息方塊。 這是預設值。|  
 |`false`|不會顯示訊息方塊。|  
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.Debug>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

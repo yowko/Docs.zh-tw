@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7fdbb244663e5114880437a5a508270c80a9c79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;項目
 指定效能計數器共用之全域記憶體的大小。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  對於不同的共用記憶體的大小，DWORD FileMappingSize 在登錄機碼值 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<類別名稱 >*\Performance 參考首先，後面接著全域共用記憶體，在組態檔中指定的值。 如果 FileMappingSize 值不存在，則不同的共用的記憶體大小會設定一個第四個 (1/4) 組態檔中的全域設定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.PerformanceCounter>  
  <xref:System.Diagnostics.PerformanceCounterCategory>  
  <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  

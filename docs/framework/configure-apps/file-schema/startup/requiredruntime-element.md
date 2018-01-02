@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 633769573253d7516bc50f0210c30376e6aa230a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;項目
 指定應用程式只支援 Common Language Runtime 1.0 版。 這個項目已被取代，無法再使用。 [ `supportedRuntime` ](supportedruntime-element.md)應該改為使用項目。
@@ -53,7 +54,7 @@ safemode="true|false"/>
   
 ## <a name="safemode-attribute"></a>安全模式屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|執行階段啟始程式碼會在登錄中尋找。 這是預設值。|  
 |`true`|執行階段啟始程式碼不會看起來不在登錄中。|  
@@ -90,7 +91,7 @@ safemode="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [啟動設定結構描述](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<PaveOver> 指定要使用哪一個執行階段版本](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)

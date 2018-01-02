@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a6edccba458bfd3629cab851c5d818a69d26173
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e871533afc1a472bb5ee05e3e13275bdfb1acc8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-annotation-in-queries"></a>在查詢中使用附註
 附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 例如，您可能需要數個追蹤記錄之間加上"Mail Server"的多個工作流程 = ="Mail Server1"。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  這些追蹤查詢項目可用來建立追蹤設定檔。 追蹤設定檔可在組態中建立，或是使用程式碼建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>  
  <xref:System.Activities.Tracking.TrackingProfile>  
  [\<參與者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84e211a0ecd68634a08965a1a4cc1494e0df0713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2e006cf94e9ec048617856e997271cd450725b94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-configuration-schema"></a>WCF 組態結構描述
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 組態項目可讓您設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端應用程式。 您可使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。 由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。 否則，您可能會碰到 XML 項目標記或屬性找不到等問題， 因為 XML 項目標記與屬性有區分大小寫。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 > [!CAUTION]
 >  您應該透過適當的存取控制清單 (ACL) 保護應用程式組態檔 (app.config) 中的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 組態區段，以防任何潛在的安全性威脅侵入。  例如，您要確定只有適當人員才能存取或修改應用程式繫結上的安全性設定，或是服務組態檔的服務模型區段。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
  說明 `ServiceModel` 項目。  
   

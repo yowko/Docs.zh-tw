@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 43f0d30f8c18c4755f31d0c851c773207bc15b78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 391e5f2a7d9d8076ba9e9a3057e3d8899e2ce672
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;移除&gt;webRequestModules （網路設定） 的項目
 移除應用程式中自訂的 Web 要求模組。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 要求模組所處理的要求 URI 前置詞。|  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要求資訊從網路主機使用的模組。|  
   
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebRequest>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

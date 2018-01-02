@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cbe5eda4487d8cbde671dd427bdfc90431d0599
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13ae0e8cc59adec0b4e4bd9f2cf4c7ea31811602
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstategt-of-ltstatesgt"></a>&lt;states&gt; 的 &lt;state&gt;
 組態項目，其中包含應該發出追蹤記錄之已訂閱活動的狀態。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<狀態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states-of-activitystatequery.md)|組態元素的集合，其中包含應該發出追蹤記錄之已訂閱活動的狀態。|  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/02/2017
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
  [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  

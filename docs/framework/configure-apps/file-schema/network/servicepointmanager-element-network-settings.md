@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85ccad3e2c3b237e286f3737589a5e58994521bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38ffe6728ca05022caca8f5973b546f2b17412d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;項目 （網路設定）
 設定連線到網路資源。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|指定系統是否應該驗證憑證的名稱符合伺服器主機名稱，然後再使用的憑證。 預設值是 `true`。|  
 |`checkCertificateRevocationList`|指定系統是否應該檢查是否已撤銷的憑證之前使用的憑證。 預設值是 `false`。|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.ServicePointManager>  
  <xref:System.Net.Security.EncryptionPolicy>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

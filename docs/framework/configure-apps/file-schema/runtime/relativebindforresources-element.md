@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ffd5b62e0759b3a4f97e105e884912a41f0117de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8409b1fe86776397ceb3db5b338fb8aaadef9cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt;項目
 最佳化附屬組件的探查。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|執行階段不會最佳化附屬組件探查。 這是預設值。|  
 |`true`|執行階段會探查最佳化附屬組件。|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 -   它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

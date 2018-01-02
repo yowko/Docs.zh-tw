@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a801a5b98d5dcacaf07755fd07a1e4d3986e90cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b976587b452aaf5bc97069d6413c85e13f5f5b61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 類別
 
@@ -46,6 +47,6 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 **.NET framework 版本：**自 2.0 起可用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

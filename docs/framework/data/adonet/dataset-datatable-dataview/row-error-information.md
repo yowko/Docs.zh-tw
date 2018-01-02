@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 95cbac7f5bf2c28a3db206faca443edacc5b7be1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8600e7d1d14de9474bf3f9cfadb25e06f52b0b1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="row-error-information"></a>資料列錯誤資訊
 編輯 <xref:System.Data.DataTable> 中的值時，若要避免必須在每次發生資料列錯誤時都回應，則可以將錯誤資訊加入至資料列中，供日後使用。 針對這項用途，<xref:System.Data.DataRow> 物件會為每個資料列提供 <xref:System.Data.DataRow.RowError%2A> 屬性。 將資料加入至**RowError**屬性**DataRow**設定<xref:System.Data.DataRow.HasErrors%2A>屬性**DataRow**至**true**。 如果**DataRow**屬於**DataTable**，和**DataRow.HasErrors**是**true**、 **DataTable.HasErrors**屬性也是**true**。 這同樣適用於**資料集**的**DataTable**所屬。 在測試是否有錯誤時，您可以檢查**HasErrors**屬性來判斷錯誤資訊是否已新增的所有資料列。 如果**HasErrors**是**true**，您可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**傳回，並檢查的錯誤，資料列，如下列範例所示。  
@@ -87,7 +88,7 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9dd9faf63ade725bb8bea12b40390fd30c91973
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2687101aa868ae77ce0ae818afd9df906f8525c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;routing&gt; 的 &lt;filters&gt;
 
@@ -52,16 +53,16 @@ ms.lasthandoff: 12/02/2017
 
 ### <a name="child-elements"></a>子元素
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<篩選條件 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | 包含路由篩選條件，這些篩選條件會判斷傳入訊息時所使用之 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的型別。 |
 
 ### <a name="parent-elements"></a>父元素
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<路由 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 代表定義一組路由篩選條件的組態區段，這些篩選條件會判斷傳入訊息時所用之 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的型別及路由表 (定義當篩選條件相符時的訊息傳送目標端點)。 |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 33ef3ca88462595d81d269a92a643b43c9aea025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26f3d4f0b272168083bed2bbe249532181a6db67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 設定使用的組態為基礎的簽發者名稱登錄的受信任簽發者憑證的清單 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`<add thumbprint=xs:string name=xs:string>`|將憑證加入至受信任簽發者的集合。 使用指定的憑證`thumbprint`屬性。 這個屬性是必要，應該包含憑證指紋的 ASN.1 編碼格式。 `name`屬性是選擇性的而且可用來指定憑證的易記名稱。|  
 |`<clear>`|清除集合中的受信任簽發者的所有憑證。|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|設定簽發者名稱登錄。 **重要事項：** `type`屬性`<issuerNameRegistry>`元素必須參考<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別`<trustedIssuers>`為有效的項目。|  
   
@@ -85,6 +86,6 @@ ms.lasthandoff: 11/21/2017
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>  
  <xref:System.IdentityModel.Tokens.IssuerNameRegistry>

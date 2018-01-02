@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b3e1cb839e9e7fd81a5452c0e034c3552b230cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0343aef083076249325b9577f90964d066867f24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt;項目
 指定是否略過強式名稱的完全信任組件載入至完全信任的驗證<xref:System.AppDomain>。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|載入至完全信任組件時，不會驗證完整信任組件的強式名稱簽章<xref:System.AppDomain>。 這是預設值。|  
 |`false`|在完全信任組件的強式名稱簽章會驗證載入至完全信任組件時<xref:System.AppDomain>。 強式名稱簽章只會檢查簽章正確。它不會與另一個的強式名稱的相符項目。|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [如何：停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

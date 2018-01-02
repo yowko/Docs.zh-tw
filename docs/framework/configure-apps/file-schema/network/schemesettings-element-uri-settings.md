@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 4cf1d2013a51985f9d7772ac0ef86e5dbb120be9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19bcb64beb7b022d20bbde1210ae6d844690d891
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt;項目 （Uri 設定）
 指定如何針對特定配置剖析 <xref:System.Uri>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|新增配置名稱配置的設定。|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|清除所有現有的配置設定。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含會指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址設定。|  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
  <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  

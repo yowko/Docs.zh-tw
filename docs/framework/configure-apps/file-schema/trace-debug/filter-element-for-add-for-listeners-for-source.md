@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3b02f97caeef2a560682e5746c6c24986d5a3ad2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff5acf8edcda68979c04f5e62237464ee6f040a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;篩選&gt;元素&lt;新增&gt;如&lt;接聽程式&gt;如&lt;來源&gt;
 將篩選新增至追蹤來源之 `Listeners` 集合中的接聽項。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  

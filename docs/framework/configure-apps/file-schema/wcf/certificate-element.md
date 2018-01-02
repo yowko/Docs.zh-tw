@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00f1b1f93836f3890a4c3f3797b583a15aeb599f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfc971cae9c09a75c43f568ccbf1b4608704be30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificategt-element"></a>&lt;certificate&gt; 項目
 指定要用來簽署與加密對等用戶端之訊息的 X.509 憑證。  
@@ -58,7 +59,7 @@ storeLocation="LocalMachine/CurrentUser"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<對等 >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定驗證對等用戶端時所使用的認證。|  
   
@@ -85,13 +86,13 @@ storeLocation="LocalMachine/CurrentUser"
 </endpointBehaviors>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>  
  <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  
  <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [對等網路功能](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [對等通道訊息驗證](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [對等通道自訂驗證](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [保護對等通道應用程式](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+ [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

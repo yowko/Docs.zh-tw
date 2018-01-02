@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7ceb6d40a47c73c4580a8fc33acc3c395a2c5a06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53e52a09533f3e1ead240ec3284371603c82ce53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="association-end"></a>關聯 End
 *關聯 end*識別[實體類型](../../../../docs/framework/data/adonet/entity-type.md)的一個 end 上[關聯](../../../../docs/framework/data/adonet/association-type.md)以及關聯的結尾處，輸入可以存在的執行個體的實體數目。 關聯 End 會定義為關聯的部分。關聯必須具有兩個關聯 End。 [導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)允許從一個關聯 end 導覽至其他。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
-## <a name="see-also"></a>另請參閱  
- [實體資料模型的重要概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+## <a name="see-also"></a>請參閱  
+ [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

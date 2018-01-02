@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7cd561cf0e0a9e080b150bdaa412686126423c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6231f362a30f4766ccf5a43d33fa0dc7257ad57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt;項目
 決定 common language runtime 是否計算字串的雜湊程式碼上每個應用程式定義域做為基準。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`0`|Common language runtime 不會計算字串的雜湊程式碼在每個應用程式網域為基礎;單一演算法用來計算字串的雜湊碼。 這是預設值。|  
 |`1`|通用語言執行平台計算雜湊碼的字串上每個應用程式定義域做為基準。 不同的程序和不同的應用程式定義域中的相同字串將會有不同的雜湊碼。|  
@@ -103,7 +104,7 @@ String 'This is a string.' in domain 'PerDomain.exe': 5435776D
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

@@ -13,11 +13,12 @@ helpviewer_keywords:
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6c5c65be8a540fdbba64d5a604c0963f9797e0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsourcegt-element"></a>&lt;來源&gt;項目
 指定起始追蹤訊息的追蹤來源。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|包含收集、 儲存和路由傳送訊息的接聽程式。|  
   
@@ -87,6 +88,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
  [追蹤參數](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

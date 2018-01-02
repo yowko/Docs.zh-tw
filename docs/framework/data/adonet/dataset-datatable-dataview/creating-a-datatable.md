@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 923d19e9539c6d93f3714efcdaa6fe7a5da843ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 68f8272aa0f525c04120f129057e6151e42ffee1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-datatable"></a>建立 DataTable
 <xref:System.Data.DataTable> 表示記憶體中關聯式資料的某個資料表，它可以單獨建立及使用，也可以由其他 .NET Framework 物件所使用，而它最常見用法是做為 <xref:System.Data.DataSet> 的成員。  
@@ -59,7 +60,7 @@ DataSet customers = new DataSet();
 DataTable customersTable = customers.Tables.Add("CustomersTable");  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataTableCollection>  
  [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  

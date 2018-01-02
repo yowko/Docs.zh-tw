@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d5f629dd347f63c8fb8e624c475bfb0ecf658f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;p&gt;項目
 指定執行階段是否套用發行者原則。  
@@ -47,13 +48,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`apply`|指定是否套用發行者原則。|  
   
 ## <a name="apply-attribute"></a>套用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`yes`|套用發行者原則。 這是預設設定。|  
 |`no`|不套用發行者原則。|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

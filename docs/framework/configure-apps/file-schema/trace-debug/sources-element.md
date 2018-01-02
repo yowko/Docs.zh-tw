@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 58e9ff8787916132406a7e63aff511c9fb221b73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7abe1f4a536d9f321e0a8b300f9542255433c030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsourcesgt-element"></a>&lt;來源&gt;項目
 指定初始化追蹤訊息的追蹤來源。  
@@ -47,9 +48,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必要項目。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  

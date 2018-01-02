@@ -12,11 +12,12 @@ ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 70fc73c9e97274ac1165950038ee509fa8f2f9c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e48887cf7e227f463b92edd50f69746bbd8abd0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clear-element-for-configsections"></a>\<清除 > 項目\<c >
 
@@ -34,13 +35,13 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="attribute"></a>屬性
 
-|           | 說明 |
+|           | 描述 |
 | --------- | ----------- |
 | **name**  | 必要屬性。<br><br>指定區段或要移除的區段群組的名稱。 |
 
 ## <a name="parent-element"></a>父項目
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<c >**項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
 
@@ -93,6 +94,6 @@ ms.lasthandoff: 10/18/2017
 
 此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

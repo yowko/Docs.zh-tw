@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c5b30f1dc3ccade3028c31c57ffdab521802f086
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 272a4262295b5dd67414dd0ef6523f90b2125836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcodebasegt-element"></a>&lt;程式碼基底&gt;項目
 指定 common language runtime 可以找到組件的位置。  
@@ -64,7 +65,7 @@ href="URL of assembly"/>
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`buildproviders`|定義用來編譯自訂資源檔的組建提供者集合。 組建提供者的數量不限。|  
 |`compilation`|設定 ASP.NET 使用的所有編譯設定。|  
@@ -97,7 +98,7 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  

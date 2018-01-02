@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f2737e67fe1fe1e33b2600f448b02321f6ce1888
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35665bd79a14b74e192fed439e935936411d85c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt;項目 （網路設定）
 控制網路要求的快取機制。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`isPrivateCache`|指定是否快取之間提供隔離不同使用者的資訊。 預設值是 `true`。 這個值應該是`false`中介層應用程式。|  
 |`disableAllCaching`|指定，快取所有的 Web 回應已停用，而且不能以程式設計方式覆寫。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="policylevel-attribute"></a>policyLevel 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`Default`|如果資源是新的內容長度正確無誤，，到期、 修改和內容長度屬性會，傳回快取的資源。|  
 |`BypassCache`|從伺服器傳回的資源。|  
@@ -72,14 +73,14 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 說明 HTTP 快取是否作用中，並且描述預設的快取原則。|  
 |[\<defaultFtpCachePolicy > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並且描述預設的快取原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Cache?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

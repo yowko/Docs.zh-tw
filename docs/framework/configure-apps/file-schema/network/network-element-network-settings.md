@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 679351fd2d6f0727d40bd57c9ef2016738462eb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3e99a10403a735383ee5e1a78c1f85ac7fd8281
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;網路&gt;項目 （網路設定）
 設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`clientDomain`|指定要用於初始 SMTP 通訊協定的要求連接到 SMTP 郵件伺服器的用戶端網域名稱。 預設值是本機電腦傳送要求的本機主機名稱。|  
 |`defaultCredentials`|指定是否可用於存取 SMTP 交易的 SMTP 郵件伺服器的預設使用者認證。 預設值是 `false`。|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<smtp > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|設定簡易郵件傳輸通訊協定 (SMTP) 郵件傳送選項。|  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  

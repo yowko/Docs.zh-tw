@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 69a5f855251f1f2c9c94ae3b571b8b78881631fb
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;
 將接聽項新增至追蹤來源的 `Listeners` 集合。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/23/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`type`|必要屬性，除非您正在參考中的接聽程式`sharedListeners`集合中的情況下，您只需要依名稱參考它 (請參閱[範例](#example))。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。 A<xref:System.Configuration.ConfigurationException>如果類別沒有可接受 string 建構函式會擲回。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/23/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|將篩選新增至追蹤來源之 `Listeners` 集合中的接聽項。|  
   
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/23/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TraceListener>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  

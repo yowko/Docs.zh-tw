@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技術選項和方針
 ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念實體資料模型進行程式設計，藉以減少所需程式碼和維護的工作量。 這個平台包含 ADO.NET Entity Framework 和相關的技術。  
@@ -49,7 +50,7 @@ ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念
 ## <a name="wcf-data-services"></a>WCF 資料服務  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會在 Web 或內部網路上部署資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱[WCF 資料服務 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET 的新功能](../../../../docs/framework/data/adonet/whats-new.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

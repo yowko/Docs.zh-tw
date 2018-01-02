@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3d1adc163e889a0de6ad27347c8f122ac26d3524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fefb8e119d428d86501e1c8cdd5eec5ef0809cbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;通訊端&gt;項目 （網路設定）
 指定通訊端作業是否使用完成通訊埠。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|表示通訊端是否應該永遠使用完成通訊埠用於呼叫接受 」 方法。 預設值是 `false`。|  
 |`alwaysUseCompletionPortsForConnect`|表示通訊端是否應該永遠使用完成通訊埠的連接方法呼叫。 預設值是 `false`。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  可能值`ipProtectionLevel`屬性設定對應中指定的已定義的保護層級與<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>列舉型別，如下所示：  
   
-|**屬性值**|**說明**|  
+|**屬性值**|**描述**|  
 |-|-|  
 |EdgeRestricted|IP 保護層級是限制的邊緣。 若要在網際網路上操作所設計的應用程式會使用此值。 此設定不允許使用 Windows Teredo 實作的網路位址轉譯 (NAT) 周遊。 這些應用程式可能會略過 IPv4 防火牆，因此應用程式必須強行攻擊網際網路導向的開啟連接埠。 在 Windows Server 2003 和 Windows XP 中，通訊端上的 IP 保護層級的預設值是受限制的邊緣。|  
 |限制|IP 保護層級受到限制。 不會實作網際網路狀況的內部網路應用程式會使用此值。 這些應用程式通常未測試或對抗網際網路型攻擊。 這項設定會限制只連結-本機接收的流量。|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
  <xref:System.Net.Sockets?displayProperty=nameWithType>  

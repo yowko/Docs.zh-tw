@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31da2fbc7dca4c0c2c077991ddec39e8979b08b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fadb149e92b65988b8f9f322752bc63e1ee65f19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>在 SQL Server 中執行大量複製作業
 Microsoft SQL Server 包含名為的常用命令列公用程式**bcp**快速地大量將大型檔案複製到 SQL Server 資料庫中資料表或檢視。 <xref:System.Data.SqlClient.SqlBulkCopy> 類別可讓您撰寫會提供類似功能的 Managed 程式碼方案。 還可採用其他方式將資料載入 SQL Server 資料表 (例如，INSERT 陳述式)，但 <xref:System.Data.SqlClient.SqlBulkCopy> 的效能優勢明顯高於它們。  
@@ -35,7 +36,7 @@ Microsoft SQL Server 包含名為的常用命令列公用程式**bcp**快速地�
 > [!NOTE]
 >  使用.NET Framework 1.1 版或更早版本時 (不支援<xref:System.Data.SqlClient.SqlBulkCopy>類別)，您可以執行 SQL Server TRANSACT-SQL&AMP; **BULK INSERT**陳述式使用<xref:System.Data.SqlClient.SqlCommand>物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
  說明大量複製範例中使用的資料表，並提供用於在 AdventureWorks 資料庫中建立資料表的 SQL 指令碼。  
   
@@ -48,6 +49,6 @@ Microsoft SQL Server 包含名為的常用命令列公用程式**bcp**快速地�
  [異動和大量複製作業](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
  說明如何在交易內執行大量複製作業，包含如何認可或復原交易。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e04c8fcb56b497ab183e05a0d6f40cb3facfed73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 .NET Framework Data Provider for Oracle 包含<xref:System.Data.OracleClient.OracleLob>類別，用來處理 Oracle **LOB**資料型別。  
   
  **OracleLob**可能是下列其中一種<xref:System.Data.OracleClient.OracleType>資料類型：  
   
-|資料類型|說明|  
+|資料類型|描述|  
 |---------------|-----------------|  
 |**Blob**|Oracle **BLOB**包含最大值 4 gb 之二進位資料的資料類型。 這會對應到**陣列**型別的**位元組**。|  
 |**Clob**|Oracle **CLOB**設定在伺服器上，最大值 4 gb 的資料類型包含字元資料，根據預設字元。 這會對應到**字串**。|  
@@ -257,6 +258,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

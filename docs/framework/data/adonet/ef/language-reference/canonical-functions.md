@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b80eeedc67678d703664eb705408a72b7e4a2274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da48efc110669c170fc409e22cb8402f471b22e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canonical-functions"></a>標準函式
 本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。 標準函式無法由提供者擴允。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="canonical-functions-namespace"></a>標準函式命名空間  
  標準函式的命名空間為 <xref:System.Data.Metadata.Edm>。 <xref:System.Data.Metadata.Edm> 命名空間會自動包含在所有查詢中。 但是，如果匯入了另一個命名空間，包含與標準函式同名的函式 (在 <xref:System.Data.Metadata.Edm> 命名空間中)，您就必須指定命名空間。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [彙總標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  討論彙總 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [其他標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  討論未分類為位元運算、日期/時間、字串、數學或彙總的函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [概念模型標準與 SQL Server 函式的對應](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  

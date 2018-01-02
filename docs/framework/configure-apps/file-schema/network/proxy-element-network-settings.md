@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7178527f369c698b0ab53aa41cb28dd0126436b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0b397e66e0f73d10f482bc9151a6fbacf3e774d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt;項目 （網路設定）
 定義 Proxy 伺服器。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自動偵測 proxy。 預設值是 `unspecified`。|  
 |`bypassonlocal`|指定是否略過本機資源的 proxy。 本機資源包括本機伺服器 （http://localhost、 http://loopback 或 http://127.0.0.1） 及沒有句號 (http://webserver) URI。 預設值是 `unspecified`。|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
@@ -100,6 +101,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

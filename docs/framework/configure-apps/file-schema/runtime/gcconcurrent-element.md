@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 254b3be8f270a9186377b264094c919314efb27f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;項目
 指定 Common Language Runtime 是否會在個別的執行緒執行記憶體回收。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不會同時執行記憶體回收。|  
 |`true`|同時執行記憶體回收。 這是預設值。|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [記憶體回收的基本概念](../../../../../docs/standard/garbage-collection/fundamentals.md)

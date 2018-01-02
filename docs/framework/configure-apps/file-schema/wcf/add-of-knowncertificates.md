@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30b3216842b602745ad40d1743175350aba78296
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91a7174f98de2e2a5dd7eea738f51c3c6b9a1371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;knownCertificates&gt; 的 &lt;add&gt;
 將 X.509 憑證加入至已知憑證的集合。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|表示 X.509 憑證的集合，這些憑證是由安全性權杖服務 (STS) 提供的，可用來驗證安全性權杖。|  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 12/02/2017
  </serviceBehaviors>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
@@ -136,5 +137,5 @@ ms.lasthandoff: 12/02/2017
  [\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [如何： 設定聯合服務認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [如何：設定同盟服務的認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

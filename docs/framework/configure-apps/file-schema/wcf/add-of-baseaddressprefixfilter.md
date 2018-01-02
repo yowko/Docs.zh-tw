@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd0a0d7fc5a83c78a56df796714e70e2e2a61767
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;
 表示組態項目，這個項目會指定通過篩選條件，而且這些篩選條件提供了一項機制，可在將 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 應用程式裝載於網際網路資訊服務 (IIS) 時挑選適當的 IIS 繫結。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|組態項目的集合，這個集合會指定通過篩選條件，而且這些篩選條件提供了一項機制，可在將 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 應用程式裝載於 IIS 時挑選適當的 IIS 繫結。|  
   
@@ -89,7 +90,7 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  篩選條件不支援任何萬用字元。 此外，IIS 提供的 baseAddress 中，可能會有位址繫結至不在 `baseAddressPrefixFilters` 清單中的配置， 而且這些位址尚未經過篩選。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  

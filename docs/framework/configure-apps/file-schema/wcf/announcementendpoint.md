@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae03b5d4a82c08978a3456e80428ba6ad8ac532a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 A[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並使用執行公告 AnnouncementClient。 用戶端想要從其他服務公告實際上做為接聽[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務; 因此您必須在該用戶端設定公告端點[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) > 一節。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Kind >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   
@@ -88,5 +89,5 @@ ms.lasthandoff: 12/02/2017
 </standardEndpoints>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

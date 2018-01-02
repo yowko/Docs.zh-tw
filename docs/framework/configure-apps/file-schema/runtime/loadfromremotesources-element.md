@@ -16,11 +16,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 959073381ef936fa7c0b248419c8529deaee969f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;項目
 指定是否從遠端來源的組件應該被授與完全信任。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|請勿授與完全信任的應用程式從遠端來源。 這是預設值。|  
 |`true`|授與完全信任應用程式從遠端來源。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [更隱含使用了 CAS 原則： loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839)  
  [如何：在沙箱中執行部分信任的程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f6bed837ab7b0c6a4aebe6116c5ab28bbc62175
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt;項目
 指定 Windows 識別不會流經非同步點，而不論目前執行緒上執行內容的流程設定為何。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity>非同步而定的點之間的流量<xref:System.Threading.ExecutionContext>流程設定目前的執行緒。 這是預設值。|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity>不會流動到非同步的點，不論<xref:System.Threading.ExecutionContext>流程目前的執行緒上的設定。|  
@@ -123,7 +124,7 @@ configuration>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<alwaysFlowImpersonationPolicy > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

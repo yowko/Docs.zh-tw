@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms 物件
 提供存取目前的專案中所宣告的每個 Windows form 的執行個體的屬性。  
   
 ## <a name="remarks"></a>備註  
- `My.Forms`物件提供每個表單目前專案中的執行個體。 屬性的名稱是表單的屬性存取的名稱相同。 將表單加入專案的相關資訊，請參閱[How to： 將 Windows Form 加入至專案](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+ `My.Forms`物件提供每個表單目前專案中的執行個體。 屬性的名稱是表單的屬性存取的名稱相同。   
   
  您可以存取所提供的表單`My.Forms`使用的表單，而不加限定的名稱。 因為屬性名稱做為表單的類型名稱相同，這可讓您存取表單，如同它已有預設的執行個體。 例如，`My.Forms.Form1.Show` 等於 `Form1.Show`。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- 要讓範例能夠運作，您的專案必須擁有名為表單`SidebarMenu`。 如需詳細資訊，請參閱[How to： 將 Windows Form 加入至專案](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+ 要讓範例能夠運作，您的專案必須擁有名為表單`SidebarMenu`。  
   
  這段程式碼只會在 Windows 應用程式專案。  
   
@@ -71,12 +71,11 @@ ms.lasthandoff: 11/21/2017
 |Windows 服務|否|  
 |網站|否|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [物件](../../../visual-basic/language-reference/objects/index.md)  
- [如何： 將 Windows Form 加入專案](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
  [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [存取應用程式表單](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

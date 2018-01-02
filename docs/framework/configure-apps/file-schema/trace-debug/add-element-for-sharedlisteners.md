@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: fd8e7d18ca72cbeb558876eefcde17ebdc6c095f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 490e58d4514667c5ec781dd76644012b0c97509d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;新增&gt;元素&lt;sharedListeners&gt;
 將接聽項新增至 `sharedListeners` 集合。 `sharedListeners`是的接聽程式集合的任何[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以參考。  根據預設中的接聽程式`sharedListeners`集合未放置在`Listeners`集合。 必須將它們加入使用名稱來[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不可能取得接聽程式`sharedListeners`在執行階段程式碼中的集合。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|將篩選新增至 `sharedListeners` 集合中的接聽項。|  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TraceListener>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  

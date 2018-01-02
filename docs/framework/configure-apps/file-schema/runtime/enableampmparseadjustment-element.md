@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 44bd6297142b6f29d93e9a3bebdb89d32d4bf46a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed01035d7d5b154ebc6541eb6ac3dbae6a413fbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt;項目
 決定是否日期和時間剖析方法使用調整過的一組規則剖析日期字串，包含日、 月、 小時和 AM/PM 指示項。  
@@ -91,6 +92,6 @@ ms.lasthandoff: 11/21/2017
 |zh-TW|2017 年 1/5/4:00:00 AM|2017 年 4/10/6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<runtime > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
  [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

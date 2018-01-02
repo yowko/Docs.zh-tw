@@ -12,11 +12,12 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2b00af6f7d735d5db8fd746205ba225253cad133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d080a7c63ddda0577e66d2e7ddd433c7fd5fdbd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-element-for-appsettings"></a>\<新增 > 項目\<appSettings >
 
@@ -36,14 +37,14 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="attributes"></a>屬性
 
-|           | 說明 |
+|           | 描述 |
 | --------- | ----------- |
 | **key**   | 必要屬性。<br><br>指定要新增之索引鍵的名稱。 |
 | **value** | 必要屬性。<br><br>指定要新增之索引鍵的值。 |
 
 ## <a name="parent-element"></a>父項目
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 包含自訂應用程式設定，例如檔案路徑、XML Web 服務 URL，或應用程式的任何其他自訂組態資訊。 |
 
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/18/2017
 </appSettings>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
