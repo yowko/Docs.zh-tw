@@ -1,93 +1,74 @@
 ---
 title: "泛型 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0804ca0fcefcc53e06352accf9a2db19edb31037
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: de81058173b0985577474e8601aa84d4e83336a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="generics-c-programming-guide"></a>泛型 (C# 程式設計手冊)
-泛型是在 C# 語言和 Common Language Runtime (CLR) 的 2.0 版中新增的功能。 泛型將型別參數的概念引進 .NET Framework 中，使得類別和方法在設計時，可以先行擱置一或多個類型的規格，直到用戶端程式碼對類別或方法進行宣告或具現化時再行處理。 例如，您可以使用泛型型別參數 T，撰寫一個類別供其他用戶端程式碼使用，而不會在執行階段產生轉換或 boxing 作業的成本或風險，如下所示：  
+# <a name="generics-c-programming-guide"></a><span data-ttu-id="56c12-102">泛型 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="56c12-102">Generics (C# Programming Guide)</span></span>
+<span data-ttu-id="56c12-103">泛型是在 C# 語言和 Common Language Runtime (CLR) 的 2.0 版中新增的功能。</span><span class="sxs-lookup"><span data-stu-id="56c12-103">Generics were added to version 2.0 of the C# language and the common language runtime (CLR).</span></span> <span data-ttu-id="56c12-104">泛型將型別參數的概念引進 .NET Framework 中，使得類別和方法在設計時，可以先行擱置一或多個類型的規格，直到用戶端程式碼對類別或方法進行宣告或具現化時再行處理。</span><span class="sxs-lookup"><span data-stu-id="56c12-104">Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.</span></span> <span data-ttu-id="56c12-105">例如，您可以使用泛型型別參數 T，撰寫一個類別供其他用戶端程式碼使用，而不會在執行階段產生轉換或 boxing 作業的成本或風險，如下所示：</span><span class="sxs-lookup"><span data-stu-id="56c12-105">For example, by using a generic type parameter T you can write a single class that other client code can use without incurring the cost or risk of runtime casts or boxing operations, as shown here:</span></span>  
   
- [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="generics-overview"></a>泛型概觀  
+## <a name="generics-overview"></a><span data-ttu-id="56c12-106">泛型概觀</span><span class="sxs-lookup"><span data-stu-id="56c12-106">Generics Overview</span></span>  
   
--   使用泛型型別以最佳化程式碼重複使用、型別安全和效能。  
+-   <span data-ttu-id="56c12-107">使用泛型型別以最佳化程式碼重複使用、型別安全和效能。</span><span class="sxs-lookup"><span data-stu-id="56c12-107">Use generic types to maximize code reuse, type safety, and performance.</span></span>  
   
--   泛型的最常見用法是建立集合類別。  
+-   <span data-ttu-id="56c12-108">泛型的最常見用法是建立集合類別。</span><span class="sxs-lookup"><span data-stu-id="56c12-108">The most common use of generics is to create collection classes.</span></span>  
   
--   .NET Framework 類別庫包含 <xref:System.Collections.Generic> 命名空間中的數種新泛型集合類別。 您應該盡可能使用這些類別，而不是使用類似在 <xref:System.Collections> 命名空間中的 <xref:System.Collections.ArrayList> 類別。  
+-   <span data-ttu-id="56c12-109">.NET Framework 類別庫包含 <xref:System.Collections.Generic> 命名空間中的數種新泛型集合類別。</span><span class="sxs-lookup"><span data-stu-id="56c12-109">The .NET Framework class library contains several new generic collection classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="56c12-110">您應該盡可能使用這些類別，而不是使用類似在 <xref:System.Collections> 命名空間中的 <xref:System.Collections.ArrayList> 類別。</span><span class="sxs-lookup"><span data-stu-id="56c12-110">These should be used whenever possible instead of classes such as <xref:System.Collections.ArrayList> in the <xref:System.Collections> namespace.</span></span>  
   
--   您可以建立自己的泛型介面、類別、方法、事件和委派。  
+-   <span data-ttu-id="56c12-111">您可以建立自己的泛型介面、類別、方法、事件和委派。</span><span class="sxs-lookup"><span data-stu-id="56c12-111">You can create your own generic interfaces, classes, methods, events and delegates.</span></span>  
   
--   泛型類別可限制為允許存取特定資料類型上的方法。  
+-   <span data-ttu-id="56c12-112">泛型類別可限制為允許存取特定資料類型上的方法。</span><span class="sxs-lookup"><span data-stu-id="56c12-112">Generic classes may be constrained to enable access to methods on particular data types.</span></span>  
   
--   泛型資料類型中所使用的類型相關資訊，可在執行階段透過反映取得。  
+-   <span data-ttu-id="56c12-113">泛型資料類型中所使用的類型相關資訊，可在執行階段透過反映取得。</span><span class="sxs-lookup"><span data-stu-id="56c12-113">Information on the types that are used in a generic data type may be obtained at run-time by using reflection.</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- 如需詳細資訊：  
+## <a name="related-sections"></a><span data-ttu-id="56c12-114">相關章節</span><span class="sxs-lookup"><span data-stu-id="56c12-114">Related Sections</span></span>  
+ <span data-ttu-id="56c12-115">如需詳細資訊：</span><span class="sxs-lookup"><span data-stu-id="56c12-115">For more information:</span></span>  
   
--   [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+-   [<span data-ttu-id="56c12-116">泛型簡介</span><span class="sxs-lookup"><span data-stu-id="56c12-116">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
   
--   [泛型的優點](../../../csharp/programming-guide/generics/benefits-of-generics.md)  
+-   [<span data-ttu-id="56c12-117">泛型的優點</span><span class="sxs-lookup"><span data-stu-id="56c12-117">Benefits of Generics</span></span>](../../../csharp/programming-guide/generics/benefits-of-generics.md)  
   
--   [泛型型別參數](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+-   [<span data-ttu-id="56c12-118">泛型型別參數</span><span class="sxs-lookup"><span data-stu-id="56c12-118">Generic Type Parameters</span></span>](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
   
--   [型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+-   [<span data-ttu-id="56c12-119">型別參數的條件約束</span><span class="sxs-lookup"><span data-stu-id="56c12-119">Constraints on Type Parameters</span></span>](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
   
--   [泛型類別](../../../csharp/programming-guide/generics/generic-classes.md)  
+-   [<span data-ttu-id="56c12-120">泛型類別</span><span class="sxs-lookup"><span data-stu-id="56c12-120">Generic Classes</span></span>](../../../csharp/programming-guide/generics/generic-classes.md)  
   
--   [泛型介面](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+-   [<span data-ttu-id="56c12-121">泛型介面</span><span class="sxs-lookup"><span data-stu-id="56c12-121">Generic Interfaces</span></span>](../../../csharp/programming-guide/generics/generic-interfaces.md)  
   
--   [泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)  
+-   [<span data-ttu-id="56c12-122">泛型方法</span><span class="sxs-lookup"><span data-stu-id="56c12-122">Generic Methods</span></span>](../../../csharp/programming-guide/generics/generic-methods.md)  
   
--   [泛型委派](../../../csharp/programming-guide/generics/generic-delegates.md)  
+-   [<span data-ttu-id="56c12-123">泛型委派</span><span class="sxs-lookup"><span data-stu-id="56c12-123">Generic Delegates</span></span>](../../../csharp/programming-guide/generics/generic-delegates.md)  
   
--   [C++ 範本和 C# 泛型之間的差異](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+-   [<span data-ttu-id="56c12-124">C++ 範本和 C# 泛型之間的差異</span><span class="sxs-lookup"><span data-stu-id="56c12-124">Differences Between C++ Templates and C# Generics</span></span>](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   
--   [泛型和反映](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+-   [<span data-ttu-id="56c12-125">泛型和反映</span><span class="sxs-lookup"><span data-stu-id="56c12-125">Generics and Reflection</span></span>](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
   
--   [執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+-   [<span data-ttu-id="56c12-126">執行階段中的泛型</span><span class="sxs-lookup"><span data-stu-id="56c12-126">Generics in the Run Time</span></span>](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
--   [.NET Framework 類別庫中的泛型](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)  
+-   [<span data-ttu-id="56c12-127">.NET Framework 類別庫中的泛型</span><span class="sxs-lookup"><span data-stu-id="56c12-127">Generics in the .NET Framework Class Library</span></span>](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)  
   
-## <a name="c-language-specification"></a>C# 語言規格  
- 如需詳細資訊，請參閱＜[C# 語言規格](../../../csharp/language-reference/language-specification/index.md)＞。  
+## <a name="c-language-specification"></a><span data-ttu-id="56c12-128">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="56c12-128">C# Language Specification</span></span>  
+ <span data-ttu-id="56c12-129">如需詳細資訊，請參閱＜[C# 語言規格](../../../csharp/language-reference/language-specification/index.md)＞。</span><span class="sxs-lookup"><span data-stu-id="56c12-129">For more information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Generic>   
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
- [類型](../../../csharp/programming-guide/types/index.md)   
- [\<類型參數>](../../../csharp/programming-guide/xmldoc/typeparam.md)   
- [\<類型參數參考>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
-
+## <a name="see-also"></a><span data-ttu-id="56c12-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56c12-130">See Also</span></span>  
+ <xref:System.Collections.Generic>  
+ [<span data-ttu-id="56c12-131">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="56c12-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="56c12-132">型別</span><span class="sxs-lookup"><span data-stu-id="56c12-132">Types</span></span>](../../../csharp/programming-guide/types/index.md)  
+ [<span data-ttu-id="56c12-133">\<typeparam></span><span class="sxs-lookup"><span data-stu-id="56c12-133">\<typeparam></span></span>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
+ [<span data-ttu-id="56c12-134">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="56c12-134">\<typeparamref></span></span>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
