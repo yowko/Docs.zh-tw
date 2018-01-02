@@ -1,5 +1,5 @@
 # [追蹤和偵錯設定結構描述](index.md)
-## [< system.diagnostics >](system-diagnostics-element.md)
+## [<system.diagnostics>](system-diagnostics-element.md)
 ### [<assert>](assert-element.md)
 ### [<performanceCounters>](performancecounters-element.md)
 ### [<sharedListeners>](sharedlisteners-element.md)

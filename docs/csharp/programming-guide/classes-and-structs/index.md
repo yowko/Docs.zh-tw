@@ -2,13 +2,10 @@
 title: "類別和結構 (C# 程式設計手冊)"
 description: "說明類別和結構 (structs) 在 C# 中的用途。"
 keywords: "類別 (C#), 結構 (C#), 結構 (structs) (C#), 參考型別 (C#), 實值型別 (C#)"
-ms.date: 2016-01-17
+ms.date: 01/17/2016
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -17,29 +14,14 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
 類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  
@@ -57,7 +39,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  在下列範例中，`ProgrammingGuide` 命名空間中的 `CustomClass` 有三個成員：執行個體建構函式、名稱為 `Number` 的屬性，以及名稱為 `Multiply` 的方法。 `Program` 類別中的 `Main` 方法會建立 `CustomClass` 的執行個體 (物件)，且物件的方法和屬性會透過點標記法來存取。
   
- [!code-cs[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
+ [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
 ## <a name="encapsulation"></a>封裝  
  「封裝」有時被稱為物件導向程式設計的第一大支柱或原則。 根據封裝原則，類別或結構可以指定其各個成員針對類別或結構外部之程式碼的存取程度。 不應該在類別或組件之外使用的方法和變數，可隱藏以限制程式碼錯誤或惡意攻擊的可能性。  
@@ -88,7 +70,7 @@ ms.lasthandoff: 09/25/2017
 -   [巢狀型別](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>協助工具選項  
- 有些方法和屬性必須從類別或結構以外的程式碼呼叫或存取，它們稱為「用戶端程式碼」。 其他方法和屬性可能只會在類別或結構本身中使用。 請務必限制程式碼的可存取性，以確保只有目標用戶端程式碼可以存取。 您可以使用存取修飾詞 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、`protected internal` 和 [private](../../../csharp/language-reference/keywords/private.md)，來指定用戶端程式碼可以存取您的型別及其成員的程度。 預設可存取性為 `private`。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 有些方法和屬性必須從類別或結構以外的程式碼呼叫或存取，它們稱為「用戶端程式碼」。 其他方法和屬性可能只會在類別或結構本身中使用。 請務必限制程式碼的可存取性，以確保只有目標用戶端程式碼可以存取。 您可以使用存取修飾詞 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 和 [private protected](../../../csharp/language-reference/keywords/private-protected.md)，來指定用戶端程式碼可以存取您的類型和其成員的程度。 預設可存取性為 `private`。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
 ### <a name="inheritance"></a>繼承  
  類別 (而不是結構) 支援繼承的概念。 衍生自另一個類別 (「基底類別」) 的類別，會自動包含基底類別的所有 public、protected 和 internal 成員 (其建構函式和完成項除外)。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)和[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
@@ -127,4 +109,3 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-

@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/05/2017
 
 例外狀況是執行程式所遇到的錯誤狀況或未預期的行為。 若是程式碼或您呼叫的程式碼 (例如共用程式庫) 中有錯誤、無法使用作業系統資源、執行階段遇到非預期的狀況 (例如無法驗證的程式碼) 等等，就可能擲回例外狀況。 您的應用程式可從一些狀況中復原，但有些狀況就無法復原。 雖然您可以從應用程式的大部分例外狀況中復原，但卻無法從執行階段的大部分例外狀況中復原。
 
-在 .NET 中，例外狀況是從 [System.Exception](xref:System.Exception) 類別繼承的物件。 從發生問題的程式碼區域擲回例外狀況。 例外狀況會向上傳遞堆疊，直到應用程式處理或程式終止它。
+在 .NET 中，例外狀況是繼承自 <xref:System.Exception?displayProperty=nameWithType> 類別的物件。 從發生問題的程式碼區域擲回例外狀況。 例外狀況會向上傳遞堆疊，直到應用程式處理或程式終止它。
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>例外狀況與傳統錯誤處理方法的比較
 
@@ -58,13 +57,13 @@ ms.lasthandoff: 09/05/2017
 
 | 例外狀況類型 | 基底類型 | 描述 | 範例 |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
-| @System.IndexOutOfRangeException | @System.Exception | 只有當陣列索引不正確時，才由執行階段擲回。 | 在有效的陣列範圍之外編製陣列索引：`arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | 只有當參考 Null 物件時，才由執行階段擲回。 | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | 當處於無效狀態時，由方法擲回。 | 在從基礎集合將 Item 移除之後，呼叫 `Enumerator.GetNext()`。 |
-| @System.ArgumentException | @System.Exception | 適用於所有引數例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
-| @System.ArgumentNullException | @System.Exception | 由不允許引數為 Null 的方法擲回。 | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | 由驗證引數是在指定範圍內的方法擲回。 | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | 只有當陣列索引不正確時，才由執行階段擲回。 | 在有效的陣列範圍之外編製陣列索引：`arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | 只有當參考 Null 物件時，才由執行階段擲回。 | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | 當處於無效狀態時，由方法擲回。 | 在從基礎集合將 Item 移除之後，呼叫 `Enumerator.GetNext()`。 |
+| <xref:System.ArgumentException> | <xref:System.Exception> | 適用於所有引數例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | 由不允許引數為 Null 的方法擲回。 | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 由驗證引數是在指定範圍內的方法擲回。 | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>另請參閱
 
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/05/2017
 * [例外狀況的最佳做法](best-practices-for-exceptions.md)
 
 若要深入了解 .NET 中例外狀況的運作方式，請參閱 [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
-

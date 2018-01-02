@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>在 Linux 或 Windows Nano Server 主機上部署單一容器 .NET Core Web 應用程式
 
@@ -119,6 +118,8 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
+**注意**：從 .NET Core 2.0 開始，執行 dotnet publish 時會自動執行 dotnet restore 命令。
+
 請注意，此映像是 ASP.NET Core 組建映像。 該映像包含 SDK 和建置工具，可建置您的應用程式並建立所需的映像。 使用此檔案執行 **docker-compose** 專案會從映像啟動組建容器，然後在該容器中建置應用程式的映像。 您可以將 docker-compose 檔案指定為命令列的一部分，在 Docker 容器中建置您的應用程式，然後將它啟動。
 
 在 Visual Studio 中，您可以選取 **docker-compose** 專案作為啟始專案，然後按 Ctrl+F5 (F5 以偵錯)，以便在 Docker 容器中執行您的應用程式，就像是任何其他應用程式一樣。 當您啟動 **docker-compose** 專案時，Visual Studio 會使用 docker-compose.yml 檔案、docker-compose.override.yml 檔案及其中一個 docker-compose.vs.\* 檔案來執行 **docker-compose**。 一旦啟動應用程式，Visual Studio 會為您啟動瀏覽器。
@@ -145,4 +146,3 @@ services:
 
 >[!div class="step-by-step"]
 [上一個] (../docker-application-development-process/docker-app-development-workflow.md) [下一個] (../containerize-net-framework-applications/index.md)
-

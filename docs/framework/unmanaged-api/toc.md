@@ -10,6 +10,6 @@
 ## [中繼資料](metadata/)
 ## [程式碼剖析](profiling/)
 ## [強式命名](strong-naming/)
+## [WMI 和效能計數器](wmi/)
 ## [Tlbexp Helper 函式](tlbexp/)
-## [COR_PRF_ALLOWABLE_AFTER_ATTACH 位元遮罩](cor-prf-allowable-after-attach-bitmask.md)
 ## [GUID_ManagedName 屬性](guid-managedname-attribute.md)

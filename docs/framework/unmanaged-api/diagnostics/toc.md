@@ -171,7 +171,7 @@
 #### [CloseMapTokensToSourceSpans 方法](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)
 #### [MapTokenToSourceSpan 方法](isymunmanagedwriter5-maptokentosourcespan-method.md)
 #### [OpenMapTokensToSourceSpans 方法](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)
-## [診斷符號存放區列舉型別](diagnostics-symbol-store-enumerations.md)
+## [診斷符號存放區列舉](diagnostics-symbol-store-enumerations.md)
 ### [CorSymAddrKind 列舉](corsymaddrkind-enumeration.md)
 ### [CorSymSearchPolicyAttributes 列舉](corsymsearchpolicyattributes-enumeration.md)
 ### [CorSymVarFlag 列舉](corsymvarflag-enumeration.md)

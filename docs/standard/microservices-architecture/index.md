@@ -8,14 +8,12 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: f869656be4c211c9b028f8ac574eb3bf2de139e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 4307c21f32e914118c03393be7ed7a632c7a7f0b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務。 容器化 .NET 應用程式的架構
@@ -130,7 +128,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Microsoft 平台和工具的容器化 Docker 應用程式生命週期) (可下載的電子書) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Microsoft 平台和工具的容器化 Docker 應用程式生命週期** (可下載的電子書) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 
@@ -158,4 +156,3 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的參考應用程式，
 
 >[!div class="step-by-step"]
 [下一個] (container-docker-introduction/index.md)
-

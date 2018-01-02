@@ -1,40 +1,22 @@
 ---
 title: "例外狀況和例外處理 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 458f6770a89f28dce1e441cd38ec9a56a1c58bc1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 C# 語言的例外狀況處理功能可協助您處理在程式執行時發生的任何未預期或例外狀況。 例外狀況處理會使用 `try`、`catch` 和 `finally` 關鍵字來嘗試可能失敗的動作，以便在您決定這樣做很合理時處理失敗，之後再清除資源。 例外狀況可以由 Common Language Runtime (CLR)、.NET Framework 或任何協力廠商程式庫，或者應用程式程式碼來產生。 例外狀況是使用 `throw` 關鍵字所建立。  
@@ -43,7 +25,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
   
  在此範例中，方法會測試除數為零，並攔截錯誤。 如果沒有例外狀況處理，此程式就會終止並產生 **DivideByZeroException 未處理**的錯誤。  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## <a name="exceptions-overview"></a>例外狀況概觀  
  例外狀況具有下列屬性：  
@@ -87,15 +69,14 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.SystemException>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
- [例外狀況](../../../standard/exceptions/index.md)   
- [例外狀況階層架構](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
- [撰寫可靠的 .NET 程式碼](http://go.microsoft.com/fwlink/?LinkId=112400)   
+ <xref:System.SystemException>  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+ [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+ [例外狀況](../../../standard/exceptions/index.md)  
+ [例外狀況階層架構](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+ [撰寫可靠的 .NET 程式碼](http://go.microsoft.com/fwlink/?LinkId=112400)  
  [特定例外狀況的小型傾印](http://go.microsoft.com/fwlink/?LinkId=112408)
-

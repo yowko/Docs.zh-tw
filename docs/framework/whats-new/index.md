@@ -1,56 +1,28 @@
 ---
 title: ".NET Framework 中的新功能"
-ms.custom: 
+ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
-helpviewer_keywords:
-- what's new [.NET Framework]
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-caps.latest.revision: 292
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
+ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 8d0818b770d94511736baf5d51abeba74a90c848
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/23/2017
 ---
-title: ".NET Framework 的新功能 | Microsoft Docs"
-ms.custom: 
-ms.date: 05/02/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- what's new [.NET Framework]
-ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-caps.latest.revision: 292
-author: rpetrusha
-ms.author: ronpet
-manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
----
-
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 <a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
  
+[.NET Framework 4.7.1](#v471)    
 [.NET Framework 4.7](#v47)   
 [.NET Framework 4.6.2](#v462)   
 [.NET Framework 4.6.1](#v461)   
@@ -64,23 +36,107 @@ ms.lasthandoff: 05/22/2017
 > [!NOTE]
 > .NET Framework 小組也會不定期隨著 NuGet 發行相關功能，以擴充平台支援並引進新功能，例如不可變的集合和支援 SIMD 的向量類型。 如需詳細資訊，請參閱[其他類別庫和 API](../additional-apis/index.md) 以及 [.NET Framework 和不定期發行](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 請參閱 .NET Framework 的 [NuGet 套件完整清單](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或訂閱[我們的摘要](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
 
-<a name="v47"></a> 
-## <a name="introducing-the-net-framework-47"></a>.NET Framework 4.7 簡介
+<a name="v471"></a> 
+## <a name="introducing-the-net-framework-471"></a>.NET Framework 4.7.1 簡介
 
-.NET Framework 4.7 建置於 .NET Framework 4.6、4.6.1 和 4.6.2 的基礎上，加入許多新的修正和多項新功能，同時保有產品的高穩定性。
+.NET Framework 4.7.1 建置於 .NET Framework 4.6、4.6.1、4.6.2 和 4.7 的基礎上，方法是新增許多新的修正和多項新功能，同時保有產品的高穩定性。
 
-### <a name="downloading-and-installing-the-net-framework-47"></a>下載並安裝 .NET Framework 4.7
+### <a name="downloading-and-installing-the-net-framework-471"></a>下載並安裝 .NET Framework 4.7.1
  
-您可以從下列位置下載 .NET Framework 4.7：
+您可以從下列位置下載 .NET Framework 4.7.1：
 
-- [.NET Framework 4.7 Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=825299)
+- [.NET Framework 4.7.1 Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=852095)
 
-- [NET Framework 4.7 離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=825303)
+- [NET Framework 4.7.1 離線安裝程式](http://go.microsoft.com/fwlink/?LinkId=852107)
 
-.NET Framework 4.7 可以安裝在 Windows 10、Windows 8.1、Windows 7，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7。 針對大部分的使用者，我們建議使用 Web 安裝程式。
+.NET Framework 4.7.1 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7.1。 針對大部分的使用者，我們建議使用 Web 安裝程式。
 
-透過安裝 [.NET Framework 4.7 開發人員套件](http://go.microsoft.com/fwlink/?LinkId=825319)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7 為目標。
+透過安裝 [.NET Framework 4.7.1 開發人員套件](http://go.microsoft.com/fwlink/?LinkId=852105)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.1 為目標。 
 
+### <a name="whats-new-in-the-net-framework-471"></a>.NET Framework 4.7.1 的新功能
+
+.NET Framework 4.7.1 包含下列領域的新功能：
+ 
+- [核心](#core471)
+- [Common Language Runtime (CLR)](#clr)
+- [網路功能](#net471)
+- [ASP.NET](#asp-net471) 
+
+此外，.NET Framework 4.7.1 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.1 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。 
+
+<a name="core471" />
+#### <a name="core"></a>核心
+
+**.NET Standard 2.0 的支援**
+
+[.NET Standard](~/docs/standard/net-standard.md) 定義一組必須在每個 .NET 實作上提供的 API，而 .NET 實作支援該版本的標準。 .NET Framework 4.7.1 完全支援 .NET Standard 2.0，並新增[大約 200 個 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，而這些 API 定義於 .NET Standard 2.0，並在 .NET Framework 4.6.1、4.6.2 和 4.7 中遺失  (請注意，只有在目標系統上一併部署其他 .NET Standard 支援檔案時，這些版本的 .NET Framework 才支援 .NET Standard 2.0)。如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜BCL - .NET Standard 2.0 支援＞。
+
+**組態產生器的支援**
+
+組態產生器可讓開發人員在執行階段動態插入和建置應用程式的組態設定。 自訂組態產生器可以用來修改組態區段中的現有資料，或從頭開始全新建置組態區段。 如果沒有組態產生器，則 .config 檔案是靜態的，而且在啟動應用程式之前的某個時間定義其設定。
+
+若要建立自訂組態產生器，您可以從抽象 <xref:System.Configuration.ConfigurationBuilder> 類別衍生產生器，並覆寫其 <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> 和 <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>。 您也可以在 .config 檔案中定義產生器。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜組態產生器＞一節。 
+
+**執行階段功能偵測**
+
+<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> 類別提供機制，來判斷在編譯階段或執行階段，特定 .NET 實作上是否支援預先定義的功能。 在編譯階段，編譯器可以檢查是否有指定的欄位來判斷是否支援此功能；如果支援，則可以發出利用該功能的程式碼。 在執行階段，應用程式可以先呼叫 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> 方法，再於執行階段發出程式碼。 如需詳細資訊，請參閱[新增協助程式方法來描述執行階段所支援的功能](https://github.com/dotnet/corefx/issues/17116)。
+
+**實值元組類型為可序列化**
+
+從 .NET Framework 4.7.1 開始，<xref:System.ValueTuple?displayProperty=fullName> 和其相關聯泛型型別會標示為 [Serializable](xref:System.SerializableAttribute)，以允許二進位序列化。 這應該會讓將元組類型 (例如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>) 移轉至實值元組類型更為簡單。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ValueTuple 可序列化＞。
+
+**唯讀參考的支援**
+
+.NET Framework 4.7.1 新增 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>。 語言編譯器會使用此屬性來標示具有唯讀 ref 傳回類型或參數的成員。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ReadOnlyReferences 支援＞。 如需 ref 傳回值的資訊，請參閱 [ref 傳回值和 ref 區域變數 (C# 指南)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) 和 [ref 傳回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
+
+<a name="clr" />
+#### <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
+
+**記憶體回收效能改善**
+
+.NET Framework 4.7.1 中的記憶體回收 (GC) 變更可改善整體效能，特別是大型物件堆積 (LOH) 配置。 在 .NET Framework 4.7.1 中，會將不同的鎖定用於小型物件堆積 (SOH) 和 LOH 配置，這允許在背景 GC (BGC) 清除 SOH 時進行 LOH 配置。 因此，進行大量 LOH 配置的應用程式應該會看到配置鎖定爭用降低並改善效能。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜執行階段 -- GC 效能改善＞。 
+
+**可攜式 PDB 的支援**
+
+從 4.7.1 版開始的 .NET Framework 支援可攜式 PDB。 雖然標準 PDB 檔案只能用於 Windows，但是可以在所有平台上建立和讀取可攜式 PDB 檔案。 在大部分情況下，於特定 .NET 實作上執行的應用程式可以辨識檔案格式。 例外狀況是在執行階段動態發出組件的應用程式；在此情況下，發出可攜式 PDB 的能力可以改善效能，並減少應用程式的記憶體耗用量。 
+
+您可以在發出組件之前，將字串 "PortablePdb" 傳遞給 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> 方法，以在執行階段決定目前 .NET 實作上是否支援可攜式 PDB。  
+ 
+<a name="net471"/>
+#### <a name="networking"></a>網路功能
+
+**Message.HashAlgorithm 的 SHA-2 支援**
+
+在 .NET Framework 4.7 和更舊版本中，<xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 屬性只支援 <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> 的值。 從 .NET Framework 4.7.1 開始，也支援 <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>、<xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>。 實際使用的這個值取決於 MSMQ，因為 <xref:System.Messaging.Message> 執行個體本身不會進行任何雜湊處理，而只會將值傳入 MSMQ。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜Message.HashAlgorithm 的 SHA-2 支援＞一節。
+
+<a name="asp-net471" />
+#### <a name="aspnet"></a>ASP.NET
+
+**ASP.NET 應用程式中的執行步驟**
+
+ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET 會將每個事件處理常式執行為執行步驟。 在 .NET Framework 4.7 之前的 ASP.NET 版本中，ASP.NET 因切換原生與受控執行緒而無法讓執行內容流動。 相反地，ASP.NET 選擇性地只會讓 <xref:System.Web.HttpContext> 流動。 從 .NET Framework 4.7.1 開始，<xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> 方法也允許模組還原環境資料。 此功能的目標是關注於追蹤、分析、診斷或異動的程式庫，例如關心應用程式的執行流程。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET 執行步驟功能＞一節。 
+
+**ASP.NET HttpCookie 剖析**
+
+.NET Framework 4.7.1 包含的新方法 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 提供標準化方式，以從字串建立 <xref:System.Web.HttpCookie> 物件，並精確地指派 Cookie 值 (例如到期日和路徑)。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET HttpCookie 剖析＞一節。 
+
+**ASP.NET 表單驗證認證的 SHA-2 雜湊選項**
+
+在 .NET Framework 4.7 和更舊版本中，ASP.NET 已允許開發人員使用 MD5 或 SHA1，將使用者認證與雜湊密碼儲存至組態檔。 從 .NET Framework 4.7.1 開始，ASP.NET 也支援新安全 SHA-2 雜湊選項 (例如 SHA256、SHA384 和 SHA512)。 SHA1 會保持預設值，而且可以在 Web 組態檔中定義非預設雜湊演算法。 例如: 
+
+```xml
+<system.web>
+    <authentication mode="Forms">
+        <forms loginUrl="~/login.aspx">
+          <credentials passwordFormat="SHA512">
+            <user name="jdoe" password="6D003E98EA1C7F04ABF8FCB375388907B7F3EE06F278DB966BE960E7CBBD103DF30CA6D61F7E7FD981B2E4E3A64D43C836A4BEDCA165C33B163E6BCDC538A664" />
+          </credentials>
+        </forms>
+    </authentication>
+</system.web>
+```
+
+<a name="v47"></a> 
 ### <a name="whats-new-in-the-net-framework-47"></a>.NET Framework 4.7 中的新增功能
 
 .NET Framework 4.7 包含下列領域的新功能：
@@ -92,7 +148,7 @@ ms.lasthandoff: 05/22/2017
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](http://gutithub.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣佈推出 .NET Framework 4.7 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。
+如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。
 
 <a name="Core47" />
 #### <a name="core"></a>核心
@@ -118,7 +174,7 @@ ms.lasthandoff: 05/22/2017
 
 **TLS 通訊協定的預設作業系統支援***
 
-<xref:System.Net.Security.SslStream?displayProperty=fullName> 和向上堆疊元件 (例如 HTTP、FTP 和 SMTP) 所使用的 TLS 堆疊可讓開發人員使用作業系統支援的預設 TLS 通訊協定。 開發人員不再需要為 TLS 版本進行硬式編碼。
+<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和向上堆疊元件 (例如 HTTP、FTP 和 SMTP) 所使用的 TLS 堆疊可讓開發人員使用作業系統支援的預設 TLS 通訊協定。 開發人員不再需要為 TLS 版本進行硬式編碼。
 
 <a name="ASP-NET47" />
 #### <a name="aspnet"></a>ASP.NET
@@ -131,9 +187,9 @@ ms.lasthandoff: 05/22/2017
 
 - **物件快取存放區**。 開發人員可以使用新的 **ICacheStoreProvider** 介面，透過新的快取提供者組態區段，為 ASP.NET 應用程式插入新的物件快取實作。
  
-- **記憶體監視**。 ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。 接近這些限制時，就會引發通知。 對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。 開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=fullName> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。
+- **記憶體監視**。 ASP.NET 中的預設記憶體監視器會在應用程式執行到接近針對處理序所設定的私用位元組上限時，或在電腦可用的總實體 RAM 不足時，通知應用程式。 接近這些限制時，就會引發通知。 對於某些應用程式，通知在太接近設定的限制時才引發，將無法提供有用的反應。 開發人員現在可以使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 屬性來撰寫自己的記憶體監視器，以取代預設的監視器。
 
-- **記憶體限制反應**。 ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=fullName>。 就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=fullName> 的頻率或所修剪的快取量會沒有效率。 開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。
+- **記憶體限制反應**。 ASP.NET 預設會在快達到私用位元組處理限制時，嘗試修剪物件快取並定期呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。 就某些應用程式而言，呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 的頻率或所修剪的快取量會沒有效率。 開發人員現在可以向應用程式的記憶體監視器訂閱 **IObserver** 實作來取代或補充預設行為。
 
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
@@ -156,7 +212,7 @@ WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能�
 
 - 在呼叫 **SocketConnection.BeginRead** 和 **SocketConnection.Read** 時更有效地支援混合非同步和同步程式碼。
 - 改善中止與 **SharedConnectionListener** 和 **DuplexChannelBinder** 連線時的可靠性。
-- 改善呼叫 <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=fullName> 方法時的序列化作業可靠性。
+- 改善呼叫 <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType> 方法時的序列化作業可靠性。
 - 改善呼叫 **ChannelSynchronizer.RemoveWaiter** 方法移除等候者時的可靠性。
 
 <a name="wf47" />
@@ -181,7 +237,7 @@ WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能�
 
 **新的 WPF 列印 API 實作**
 
-WPF 在 <xref:System.Printing.PrintQueue?displayProperty=fullName> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不是已被取代的 [XPS 列印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。 如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。 
+WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不是已被取代的 [XPS 列印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。 如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。 
 
 <a name="v462"></a> 
 ## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 的新功能
@@ -208,21 +264,21 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=fullName> 類別中的�
 
 - [偵錯改進](#Debug462)
 
-如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](http://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣佈推出 .NET Framework 4.6.2 (英文)](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
+如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](http://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
 
 <a name="ASPNET462"></a> 
 ### <a name="aspnet"></a>ASP.NET
  在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 會包含下列增強功能︰
 
- **改進對資料註解驗證程式的當地語系化錯誤訊息的支援**：資料註解驗證程式可讓您藉由將一或多個屬性新增至類別屬性來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 項目定義了驗證失敗時的錯誤訊息文字。 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
+ **改進對資料註解驗證程式的當地語系化錯誤訊息的支援**：資料註解驗證程式可讓您藉由將一或多個屬性新增至類別屬性來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 項目定義了驗證失敗時的錯誤訊息文字。 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
 
-1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 提供在驗證屬性中。
+1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 提供在驗證屬性中。
 
 2.  資源檔儲存在 App_LocalResources 資料夾中。
 
 3.  當地語系化的資源檔名稱格式為 `DataAnnotation.Localization.{`*name*`}.resx`，其中 *name* 是文化特性名稱，格式為 *languageCode*`-`*country/regionCode* 或 *languageCode*。
 
-4.  資源的索引鍵名稱是指派給 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 屬性的字串，其值是當地語系化的錯誤訊息。
+4.  資源的索引鍵名稱是指派給 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 屬性的字串，其值是當地語系化的錯誤訊息。
 
  例如，下列資料註解屬性可針對無效評等，定義預設文化特性的錯誤訊息。
 
@@ -253,7 +309,7 @@ End Class
 
  此外，資料註解當地語系化是可延伸的。 開發人員可以藉由實作 <xref:System.Web.Globalization.IStringLocalizerProvider> 介面，在資源檔以外的位置儲存當地語系化字串，而插入他們自己的字串當地語系化程式提供者。
 
- **對工作階段狀態存放區提供者的非同步支援**：ASP.NET 現在可允許使用工作傳回方法，搭配工作階段狀態存放區提供者，藉此可讓 ASP.NET 應用程式獲得非同步的延展性優勢。 為了支援工作階段狀態存放區提供者的非同步作業，ASP.NET 包含新介面 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>，它繼承自 <xref:System.Web.IHttpModule>，可讓開發人員實作自己的工作階段狀態模組和非同步工作階段存放區提供者。 介面定義如下：
+ **對工作階段狀態存放區提供者的非同步支援**：ASP.NET 現在可允許使用工作傳回方法，搭配工作階段狀態存放區提供者，藉此可讓 ASP.NET 應用程式獲得非同步的延展性優勢。 為了支援工作階段狀態存放區提供者的非同步作業，ASP.NET 包含新介面 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=nameWithType>，它繼承自 <xref:System.Web.IHttpModule>，可讓開發人員實作自己的工作階段狀態模組和非同步工作階段存放區提供者。 介面定義如下：
 
 ```csharp
 public interface ISessionStateModule : IHttpModule {
@@ -268,19 +324,19 @@ public interface ISessionStateModule : IHttpModule {
 
  已新增下列 API 來支援非同步輸出快取提供者︰
 
-- <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=fullName> 類別，繼承自 <xref:System.Web.Caching.OutputCacheProvider?displayProperty=fullName>，並可讓開發人員實作非同步的輸出快取提供者。
+- <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=nameWithType> 類別，繼承自 <xref:System.Web.Caching.OutputCacheProvider?displayProperty=nameWithType>，並可讓開發人員實作非同步的輸出快取提供者。
 
 - <xref:System.Web.Caching.OutputCacheUtility> 類別，可提供用於設定輸出快取的 helper 方法。
 
-- <xref:System.Web.HttpCachePolicy?displayProperty=fullName> 類別內的 18 個新方法。 這些包括 <xref:System.Web.HttpCachePolicy.GetCacheability%2A>、<xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>、<xref:System.Web.HttpCachePolicy.GetETag%2A>、<xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetNoStore%2A>、<xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>、<xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>、<xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetRevalidation%2A>、<xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>、<xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>、<xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> 和 <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>。
+- <xref:System.Web.HttpCachePolicy?displayProperty=nameWithType> 類別內的 18 個新方法。 這些包括 <xref:System.Web.HttpCachePolicy.GetCacheability%2A>、<xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>、<xref:System.Web.HttpCachePolicy.GetETag%2A>、<xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetNoStore%2A>、<xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>、<xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>、<xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>、<xref:System.Web.HttpCachePolicy.GetRevalidation%2A>、<xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>、<xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>、<xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> 和 <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>。
 
-- <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=fullName> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> 和 <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>。
+- <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> 和 <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>。
 
-- <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=fullName> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> 和 <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>。
+- <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=nameWithType> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> 和 <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>。
 
-- <xref:System.Web.HttpCacheVaryByParams?displayProperty=fullName> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByParams.GetParams%2A> 和 <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>。
+- <xref:System.Web.HttpCacheVaryByParams?displayProperty=nameWithType> 類別內的 2 個新方法：<xref:System.Web.HttpCacheVaryByParams.GetParams%2A> 和 <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>。
 
-- <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=fullName> 類別中的 <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> 方法。
+- <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=nameWithType> 類別中的 <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> 方法。
 
 - <xref:System.Web.Caching.CacheDependency> 中的 <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A> 方法。
 
@@ -288,7 +344,7 @@ public interface ISessionStateModule : IHttpModule {
 ### <a name="character-categories"></a>字元類別
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的字元是根據 [Unicode 標準 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)分類。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，字元是根據 Unicode 6.3 字元類別分類。
 
- 對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。 這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=fullName> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  字元和字串比較和排序不會受到這項變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。
+ 對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。 這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  字元和字串比較和排序不會受到這項變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。
 
  若要了解從 Unicode 6.0 到 Unicode 7.0 的字元類別變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 7.0.0 (Unicode 標準 7.0.0 版)](http://www.unicode.org/versions/Unicode7.0.0/)。 若要了解從 Unicode 7.0 到 Unicode 8.0 的變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 8.0.0 (Unicode 標準 8.0.0 版)](http://www.unicode.org/versions/Unicode8.0.0/)。
 
@@ -296,9 +352,9 @@ public interface ISessionStateModule : IHttpModule {
 ### <a name="cryptography"></a>密碼編譯
  **支援包含 FIPS 186-3 DSA 的 X509 憑證**：[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增了對 DSA (數位簽章演算法) X509 憑證的支援，X509 憑證的金鑰超過 FIPS 186-2 1024 位元的限制。
 
- 除了支援較大的 FIPS 186-3 金鑰大小，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 運算簽章。 FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=fullName> 類別所提供。
+ 除了支援較大的 FIPS 186-3 金鑰大小，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 運算簽章。 FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 類別所提供。
 
- 為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用這項功能，而不用轉型。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=fullName> 擴充方法來簽署資料，如下列範例所示。
+ 為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用這項功能，而不用轉型。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 擴充方法來簽署資料，如下列範例所示。
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -318,7 +374,7 @@ Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate
 End Function
 ```
 
- 然後您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=fullName> 擴充方法來確認簽署的資料，如下列範例所示。
+ 然後您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> 擴充方法來確認簽署的資料，如下列範例所示。
 
 ```csharp
 public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certificate2 cert)
@@ -406,7 +462,7 @@ End Function
 
 <a name="SQLClient"></a> 
 ### <a name="sqlclient"></a>SqlClient
- .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=fullName>) 包含 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的下列新功能：
+ .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) 包含 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的下列新功能：
 
  **Azure SQL Database 的連線共用和逾時**：如果啟用連線共用且發生逾時或其他登入錯誤，則會快取例外狀況，而在接下來的 5 秒到 1 分鐘，任何後續連線嘗試都會擲回快取的例外狀況。  如需詳細資訊，請參閱 [SQL Server 連線共用 (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。
 
@@ -430,9 +486,9 @@ End Function
 
  **Always Encrypted 的增強功能** SQLClient 導入兩個 Always Encrypted 增強功能︰
 
-- 為了改善對加密資料庫資料行的參數化查詢效能，現在會快取查詢參數的加密中繼資料。 當 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=fullName> 屬性設定為 `true` (此為預設值) 時，如果多次呼叫相同的查詢，則用戶端只會從伺服器擷取一次參數中繼資料。
+- 為了改善對加密資料庫資料行的參數化查詢效能，現在會快取查詢參數的加密中繼資料。 當 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=nameWithType> 屬性設定為 `true` (此為預設值) 時，如果多次呼叫相同的查詢，則用戶端只會從伺服器擷取一次參數中繼資料。
 
-- 金鑰快取中的資料行加密金鑰項目現在會在可設定的時間間隔之後收回，而此時間間隔是使用 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=fullName> 屬性設定。
+- 金鑰快取中的資料行加密金鑰項目現在會在可設定的時間間隔之後收回，而此時間間隔是使用 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=nameWithType> 屬性設定。
 
 <a name="WCF"></a> 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
@@ -514,11 +570,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 </configuration>
 ```
 
- **SSL 3.0 不是預設的通訊協定**：當使用 NetTcp 搭配傳輸安全性和憑證類型的認證時，SSL 3.0 已不再是用來交涉安全連線的預設通訊協定。 在大部分的情況下，應該不會影響現有的應用程式，因為 TLS 1.0 已包含在 NetTcp 的通訊協定清單中。 所有現有的用戶端應該能夠使用至少 TLS 1.0 來交涉連線。      如果需要 SSL3，請使用下列組態機制之一，將它加入交涉通訊協定的清單。
+ **SSL 3.0 不是預設的通訊協定**：當使用 NetTcp 搭配傳輸安全性和憑證類型的認證時，SSL 3.0 已不再是用來交涉安全連線的預設通訊協定。 在大部分的情況下，應該不會影響現有的應用程式，因為 TLS 1.0 已包含在 NetTcp 的通訊協定清單中。 所有現有的用戶端應該能夠使用至少 TLS 1.0 來交涉連線。 如果需要 SSL3，請使用下列組態機制之一，將它加入交涉通訊協定的清單。
 
-- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=fullName> 屬性
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=nameWithType> 屬性
 
-- <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性
+- <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 屬性
 
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) 區段的 [\<transport>](../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) 區段
 
@@ -530,7 +586,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  **群組排序**：使用 <xref:System.Windows.Data.CollectionView> 物件來分組資料的應用程式現在可以明確地宣告如何排序群組。 明確排序可以解決非直覺式排序的問題，此問題發生於應用程式以動態方式新增或移除群組時，或是變更分組時所干涉的項目屬性值時。 它也可以藉由將分組屬性的比較從完整集合排序移至群組排序，改善群組建立程序的效能。
 
- 為了支援群組排序，新的 <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=fullName> 和 <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=fullName> 屬性會描述如何排序 <xref:System.ComponentModel.GroupDescription> 物件所產生的群組集合。 這相當於同名 <xref:System.Windows.Data.ListCollectionView> 屬性描述如何排序資料項目的方式。
+ 為了支援群組排序，新的 <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> 和 <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> 屬性會描述如何排序 <xref:System.ComponentModel.GroupDescription> 物件所產生的群組集合。 這相當於同名 <xref:System.Windows.Data.ListCollectionView> 屬性描述如何排序資料項目的方式。
 
  <xref:System.Windows.Data.PropertyGroupDescription> 類別的兩個新靜態屬性，<xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> 和 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>，可用於大部分的案例。
 
@@ -582,9 +638,9 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  如果未啟用這種情況，執行應用程式會繼續產生例外狀況，訊息為：「此實作不屬於 Windows Platform FIPS 已驗證密碼編譯演算法的一部分。」
 
- **搭配 Visual Studio 工作流程設計工具使用動態更新時的工作流程改進**：「工作流程設計工具」、「流程圖活動設計工具」及其他「工作流程活動設計工具」現在可順利載入和顯示在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 方法之後儲存的工作流程。 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 的版本中，若要在 Visual Studio 中，針對在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 之後儲存的工作流程載入 XAML 檔案，可能會導致下列問題︰
+ **搭配 Visual Studio 工作流程設計工具使用動態更新時的工作流程改進**：「工作流程設計工具」、「流程圖活動設計工具」及其他「工作流程活動設計工具」現在可順利載入和顯示在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法之後儲存的工作流程。 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 的版本中，若要在 Visual Studio 中，針對在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 之後儲存的工作流程載入 XAML 檔案，可能會導致下列問題︰
 
-- 工作流程設計工具無法正確載入 XAML 檔案 (當 <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName> 在一行的結尾時)。
+- 工作流程設計工具無法正確載入 XAML 檔案 (當 <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> 在一行的結尾時)。
 
 - 流程圖活動設計工具或其他工作流程活動設計工具可能會在預設位置顯示所有物件，而不是根據附加的屬性值。
 
@@ -695,19 +751,19 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 <a name="WWF461"></a> 
 ### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation：教學課程
- <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> 方法現在可以使用 MSDTC 以外的分散式交易管理員升級交易。 要想這麼做，請將 GUID 交易升級程式識別碼指定給新的 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 多載。 如果這項作業成功，交易的功能上就會放置一些限制。 一旦登錄了非 MSDTC 的交易升級程式，下列方法就會擲回 <xref:System.Transactions.TransactionPromotionException>，因為這些方法需要升級至 MSDTC：
+ <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 方法現在可以使用 MSDTC 以外的分散式交易管理員升級交易。 要想這麼做，請將 GUID 交易升級程式識別碼指定給新的 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> 多載。 如果這項作業成功，交易的功能上就會放置一些限制。 一旦登錄了非 MSDTC 的交易升級程式，下列方法就會擲回 <xref:System.Transactions.TransactionPromotionException>，因為這些方法需要升級至 MSDTC：
 
-- <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>
+- <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
 
-- <xref:System.Transactions.TransactionInterop.GetDtcTransaction%2A?displayProperty=fullName>
+- <xref:System.Transactions.TransactionInterop.GetDtcTransaction%2A?displayProperty=nameWithType>
 
-- <xref:System.Transactions.TransactionInterop.GetExportCookie%2A?displayProperty=fullName>
+- <xref:System.Transactions.TransactionInterop.GetExportCookie%2A?displayProperty=nameWithType>
 
-- <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=fullName>
+- <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=nameWithType>
 
  一旦登錄了非 MSDTC 的交易升級程式，即必須使用它定義的通訊協定，將它用於未來的永久性登錄。 使用 <xref:System.Transactions.Transaction.PromoterType%2A> 屬性可取得交易升級程式的 <xref:System.Guid>。 當交易升級時，交易升級程式會提供 <xref:System.Byte> 陣列，表示升級的語彙基元。 應用程式可以 <xref:System.Transactions.Transaction.GetPromotedToken%2A> 方法取得非 MSDTC 已升級交易的已升級語彙基元。
 
- 新 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 多載的使用者必須遵循特定的呼叫序列，以便升級作業順利完成。 這些規則都會記錄在於方法的文件中。
+ 新 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> 多載的使用者必須遵循特定的呼叫序列，以便升級作業順利完成。 這些規則都會記錄在於方法的文件中。
 
 <a name="Profile461"></a> 
 ### <a name="profiling"></a>程式碼剖析
@@ -739,7 +795,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
     - **可非同步排清回應且以工作為基礎的 API**
 
-         ASP.NET 現在提供一個以工作為基礎的簡單 API 來進行非同步回應清除，亦即 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=fullName>，其可使用您語言的 `async/await` 支援來非同步清除回應。
+         ASP.NET 現在提供一個以工作為基礎的簡單 API 來進行非同步回應清除，亦即 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>，其可使用您語言的 `async/await` 支援來非同步清除回應。
 
     - `Model binding supports task-returning methods`
 
@@ -747,7 +803,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          非同步模型繫結是由 `aspnet:EnableAsyncModelBinding` 組態設定所控制。
 
-        ```
+        ```xml
         <appSettings>
            <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
         </appSettings>
@@ -759,7 +815,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          [HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) 是新版的 HTTP 通訊協定，可大幅改善連線的使用情況 (用戶端和伺服器之間較少往返)，並降低使用者網頁載入的延遲情形。  網頁 (與服務相反) 從 HTTP/2 獲益最明顯，因為通訊協定會針對做為單一體驗之一部分之要求的多個成品進行最佳化。 在 .NET Framework 4.6 中，HTTP/2 支援已加入 ASP.NET。 由於網路功能存在於多個層，因此 Windows、IIS 和 ASP.NET中需要新功能以啟用 HTTP/2。 您必須在 Windows 10 上執行才能搭配 ASP.NET 使用 HTTP/2。
 
-         HTTP/2 也支援使用 <xref:System.Net.Http.HttpClient?displayProperty=fullName> API 的 Windows 10 通用平台 (UWP) 應用程式，並預設為啟用。
+         HTTP/2 也支援使用 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API 的 Windows 10 通用平台 (UWP) 應用程式，並預設為啟用。
 
          為了提供一個在 ASP.NET 應用程式中使用 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 功能的方式，已將含有 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 和 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> 這兩個多載的新方法新增到 <xref:System.Web.HttpResponse> 類別。
 
@@ -780,7 +836,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          .NET Framework 4.5 引進了[隨機字串雜湊演算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 不過，由於部分 ASP.NET 功能相依於穩定的雜湊程式碼，因此 ASP.NET 並不支援此演算法。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，現已支援隨機字串雜湊演算法。 若要啟用這項功能，請使用 `aspnet:UseRandomizedStringHashAlgorithm` 組態設定。
 
-        ```
+        ```xml
         <appSettings>
            <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
         </appSettings>
@@ -810,13 +866,13 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
     - **CultureInfo.CurrentCulture 和 CultureInfo.CurrentUICulture**
 
-         <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 屬性現在是讀寫，而不是唯讀。 如果您將新的 <xref:System.Globalization.CultureInfo> 物件指派給這些屬性，`Thread.CurrentThread.CurrentCulture` 屬性所定義的目前執行緒文化特性和 `Thread.CurrentThread.CurrentUICulture` 屬性所定義的目前 UI 執行緒文化特性也會隨著變更。
+         <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 屬性現在是讀寫，而不是唯讀。 如果您將新的 <xref:System.Globalization.CultureInfo> 物件指派給這些屬性，`Thread.CurrentThread.CurrentCulture` 屬性所定義的目前執行緒文化特性和 `Thread.CurrentThread.CurrentUICulture` 屬性所定義的目前 UI 執行緒文化特性也會隨著變更。
 
     - **記憶體回收 (GC) 的增強功能**
 
          <xref:System.GC> 類別現在包含 <xref:System.GC.TryStartNoGCRegion%2A> 和 <xref:System.GC.EndNoGCRegion%2A> 方法，可讓您在執行關鍵路徑期間不允許記憶體回收。
 
-         <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=fullName> 方法的新多載可讓您控制是否要對小型物件堆積和大型物件堆積進行清理和壓縮，還是只要進行清理。
+         <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> 方法的新多載可讓您控制是否要對小型物件堆積和大型物件堆積進行清理和壓縮，還是只要進行清理。
 
     - **啟用 SIMD 的類型**
 
@@ -826,13 +882,13 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
     - **加密更新**
 
-         目前正在更新 <xref:System.Security.Cryptography?displayProperty=fullName> API 以支援 [Windows CNG 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx)。 舊版 .NET Framework 完全倚賴[舊版的 Windows 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx)作為 <xref:System.Security.Cryptography?displayProperty=fullName> 實作的基礎。 我們已經要求支援 CNG API，因為它支援[現代的加密演算法](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)，這些演算法對特定類別的應用程式來說非常重要。
+         目前正在更新 <xref:System.Security.Cryptography?displayProperty=nameWithType> API 以支援 [Windows CNG 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx)。 舊版 .NET Framework 完全倚賴[舊版的 Windows 密碼編譯 API](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx)作為 <xref:System.Security.Cryptography?displayProperty=nameWithType> 實作的基礎。 我們已經要求支援 CNG API，因為它支援[現代的加密演算法](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)，這些演算法對特定類別的應用程式來說非常重要。
 
          .NET Framework 4.6 包含下列新的增強功能，可支援 Windows CNG 密碼編譯 API：
 
         - 一組適用於 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` 和 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` X509 憑證的擴充方法，其會在可能時傳回以 CNG 為基礎的實作，而不是以 CAPI 為基礎的實作 (有些智慧卡仍需要 CAPI，因此 API 可處理這類後援。)
 
-        - <xref:System.Security.Cryptography.RSACng?displayProperty=fullName> 類別，可提供的 RSA 演算法的 CNG 實作。
+        - <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType> 類別，可提供的 RSA 演算法的 CNG 實作。
 
         - RSA API 的增強功能，可讓一般動作不再需要轉型。 例如，當使用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 物件來加密資料時，需使用類似舊版 .NET Framework 中的下列程式碼。
 
@@ -848,13 +904,13 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          <xref:System.DateTimeOffset> 結構已加入下列新方法，以支援日期和時間值的 Unix 時間來回轉換：
 
-        - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=nameWithType>
 
-        - <xref:System.DateTimeOffset.FromUnixTimeMilliseconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.FromUnixTimeMilliseconds%2A?displayProperty=nameWithType>
 
-        - <xref:System.DateTimeOffset.ToUnixTimeSeconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.ToUnixTimeSeconds%2A?displayProperty=nameWithType>
 
-        - <xref:System.DateTimeOffset.ToUnixTimeMilliseconds%2A?displayProperty=fullName>
+        - <xref:System.DateTimeOffset.ToUnixTimeMilliseconds%2A?displayProperty=nameWithType>
 
     - **相容性參數**
 
@@ -900,9 +956,9 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          在以 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 為目標的應用程式中，<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件會繼承呼叫端執行緒的文化特性和 UI 文化特性。 以舊版 .NET Framework 為目標或未以特定 .NET Framework 版本為目標的應用程式行為則不會受到影響。 如需詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 類別主題的＜文化特性和以工作為基礎的非同步作業＞一節。
 
-         若某環境資料是指定之非同步控制流程的本機環境資料，例如 `async` 方法，則可用 <xref:System.Threading.AsyncLocal%601?displayProperty=fullName> 類別來表示。 它可以用來跨執行緒保存資料。 您也可以定義每當因 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=fullName> 屬性已明確變更或因執行緒發生內容切換時而變更環境資料時，接收通知的回撥方法。
+         若某環境資料是指定之非同步控制流程的本機環境資料，例如 `async` 方法，則可用 <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> 類別來表示。 它可以用來跨執行緒保存資料。 您也可以定義每當因 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> 屬性已明確變更或因執行緒發生內容切換時而變更環境資料時，接收通知的回撥方法。
 
-         以工作為基礎的非同步模式 (TAP) 中已加入 <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=fullName>、<xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=fullName> 三種便利的方法，可傳回特定狀態中已完成的工作。
+         以工作為基礎的非同步模式 (TAP) 中已加入 <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType> 三種便利的方法，可傳回特定狀態中已完成的工作。
 
          <xref:System.IO.Pipes.NamedPipeClientStream> 類別現可支援與其新的 <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A> 進行非同步通訊。 方法。
 
@@ -932,7 +988,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          現在，WPF 提供比 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 更好的 HDPI 支援。 已變更版面配置進位，以減少含邊界之控制項中的裁剪執行個體。 根據預設，這項功能只有當您將<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 設為 .NET 4.6 時才會啟用。  如果應用程式是以舊版 Framework 為目標，但卻執行於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 當中，則可將下列這一行加入 app.config 檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇加入新的行為：
 
-        ```
+        ```xml
         <AppContextSwitchOverrides
         value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
         />
@@ -940,11 +996,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          含不同 DPI 設定 (多 DPI 設定) 且跨多個監視器的 WPF 視窗，現可完全顯示，而不會有被遮蔽的區域。 您可將下列這一行加入 app.config 檔的 `<appSettings>` 區段，以選擇停用這項新的行為：
 
-        ```
+        ```xml
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
-         <xref:System.Windows.Input.Cursor?displayProperty=fullName> 已支援自動依據 DPI 設定載入正確的游標。
+         <xref:System.Windows.Input.Cursor?displayProperty=nameWithType> 已支援自動依據 DPI 設定載入正確的游標。
 
     - **觸控功能較佳**
 
@@ -952,7 +1008,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
     - **支援透明的子視窗**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中的 WPF 支援 Windows 8.1 和更新版本的透明子視窗功能。 這可讓您在最上層視窗中建立非矩形和透明的子視窗。 您可以將 <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=fullName> 屬性設為 `true`，藉此啟用這個功能。
+         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中的 WPF 支援 Windows 8.1 和更新版本的透明子視窗功能。 這可讓您在最上層視窗中建立非矩形和透明的子視窗。 您可以將 <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> 屬性設為 `true`，藉此啟用這個功能。
 
 - **Windows Communication Foundation (WCF)**
 
@@ -960,7 +1016,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          搭配使用 NetTcp 與傳輸安全性和用戶端驗證時，除了 SSL 3.0 和 TLS 1.0 之外，WCF 現在還支援 TLS 1.1 和 TLS 1.2 的 SSL 版。 現在，您可以選取要使用哪一種通訊協定，或停用較不安全的舊版通訊協定。 若要完成這項作業，您可設定 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 屬性或於組態檔中加入下列內容。
 
-        ```
+        ```xml
         <netTcpBinding>
            <binding>
               <security mode= "None|Transport|Message|TransportWithMessageCredential" >
@@ -979,13 +1035,13 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
         - **使用連線群組名稱前置詞**
 
-             使用者可以指定字串，讓 WCF 做為可達到連線群組名稱的前置詞。 系統會使用不同的基礎 HTTP 連線來傳送含有不同前置詞的兩個訊息。 您可以將鍵/值組加入訊息的 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=fullName> 屬性，以設定前置詞。 索引鍵是 "HttpTransportConnectionGroupNamePrefix"；值則為所需的前置詞。
+             使用者可以指定字串，讓 WCF 做為可達到連線群組名稱的前置詞。 系統會使用不同的基礎 HTTP 連線來傳送含有不同前置詞的兩個訊息。 您可以將鍵/值組加入訊息的 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> 屬性，以設定前置詞。 索引鍵是 "HttpTransportConnectionGroupNamePrefix"；值則為所需的前置詞。
 
         - **使用不同的通道處理站**
 
              使用者也可以啟用功能，針對使用不同通道處理站建立之通道所傳送的訊息，使用不同的底層 HTTP 連線。 若要啟用此功能，使用者必須將下列 `appSetting` 設定為 `true`：
 
-            ```
+            ```xml
             <appSettings>
                <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
             </appSettings>
@@ -995,7 +1051,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      現在，若有未處理的「非通訊協定」書籤時，您可以指定工作流程服務在不按照順序的作業要求逾時之前會保存該要求的秒數。 「非通訊協定」書籤是指與未處理的 Receive 活動無關的書籤。 有些活動會在其實作中建立非通訊協定書籤，因此可能不容易察覺到非通訊協定書籤的存在。 這些活動包括 State 和 Pick。 因此如果您有使用狀態機器或包含 Pick 活動的工作流程服務實作，就很可能會有非通訊協定書籤。 您可將如下一行加入 app.config 檔案的 `appSettings` 區段，以指定間隔：
 
-    ```
+    ```xml
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
     ```
 
@@ -1013,7 +1069,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      現在，若交易導致衍生自 <xref:System.Transactions.TransactionException> 的例外狀況擲回時，您可以針對該交易包含分散式的交易識別碼。 您可以在 app.config 檔的`appSettings` 區段中加入下列索引鍵，以完成這項作業：
 
-    ```
+    ```xml
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
     ```
 
@@ -1027,13 +1083,13 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
          為了讓連接埠可以重複使用，在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中加入了兩個新的 API，其可有效地移除並行連線的 64K 限制：
 
-        - <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 列舉值。
+        - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 列舉值。
 
-        - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 屬性。
+        - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> 屬性。
 
-         除非 `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` 登錄機碼的 `HWRPortReuseOnSocketBind` 值設定為 0x1，否則 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 屬性皆預設為 `false`。 若要啟用 HTTP 連線上的本機連接埠重複使用，請將 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 屬性設為 `true`。 這會使得所有從 <xref:System.Net.Http.HttpClient> 和 <xref:System.Net.HttpWebRequest> 傳出的 TCP 通訊端連線都使用新的 Windows 10 通訊端選項 ([SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx))，而能夠重複使用本機連接埠。
+         除非 `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` 登錄機碼的 `HWRPortReuseOnSocketBind` 值設定為 0x1，否則 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> 屬性皆預設為 `false`。 若要啟用 HTTP 連線上的本機連接埠重複使用，請將 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> 屬性設為 `true`。 這會使得所有從 <xref:System.Net.Http.HttpClient> 和 <xref:System.Net.HttpWebRequest> 傳出的 TCP 通訊端連線都使用新的 Windows 10 通訊端選項 ([SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx))，而能夠重複使用本機連接埠。
 
-         如果開發人員撰寫僅限通訊端的應用程式，即可在呼叫 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=fullName> 之類的方法時指定 <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 選項，以讓對外的通訊端在繫結期間重複使用本機連接埠。
+         如果開發人員撰寫僅限通訊端的應用程式，即可在呼叫 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> 之類的方法時指定 <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 選項，以讓對外的通訊端在繫結期間重複使用本機連接埠。
 
     - **支援國際網域名稱和 PunyCode**
 
@@ -1045,7 +1101,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      這是一項選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1053,7 +1109,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - **字碼頁編碼方式的支援**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=fullName> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱<xref:System.Text.CodePagesEncodingProvider?displayProperty=fullName>。
+      [!INCLUDE[net_core](../../../includes/net-core-md.md)] primarily supports the Unicode encodings and by default provides limited support for code page encodings. You can add support for code page encodings available in the .NET Framework but unsupported in [!INCLUDE[net_core](../../../includes/net-core-md.md)] by registering code page encodings with the <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> method. For more information, see <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1065,18 +1121,18 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - **開放原始碼 .NET Framework 套件**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 套件 (例如不可變的集合)、[SIMD API](http://go.microsoft.com/fwlink/?LinkID=518639) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取這些程式碼，請參閱 GitHub 上的 [NetFx](http://go.microsoft.com/fwlink/?LinkID=518634)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](http://go.microsoft.com/fwlink/?LinkID=518635)，並參閱 [.NET Core 和開放原始碼](../../../docs/framework/get-started/net-core-and-open-source.md)。
+      [!INCLUDE[net_core](../../../includes/net-core-md.md)] packages such as the immutable collections, [SIMD APIs](http://go.microsoft.com/fwlink/?LinkID=518639), and networking APIs such as those found in the <xref:System.Net.Http> namespace are now available as open source packages on [GitHub](https://github.com/). To access the code, see [NetFx on GitHub](http://go.microsoft.com/fwlink/?LinkID=518634). For more information and how to contribute to these packages, see [.NET Core and Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md), [.NET Home Page on GitHub](http://go.microsoft.com/fwlink/?LinkID=518635).
 
  [回到頁首](#introduction)
 
 <a name="v452"></a> 
 ## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
 
-- **ASP.NET 應用程式的全新 API。** 新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=fullName> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=fullName> 方法可讓您在回應清除至用戶端應用程式時，檢查及修改回應標頭和狀態碼。 請考慮使用這些方法來取代 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件，這些方法的效率更高且更可靠。
+- **ASP.NET 應用程式的全新 API。** 新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> 方法可讓您在回應清除至用戶端應用程式時，檢查及修改回應標頭和狀態碼。 請考慮使用這些方法來取代 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件，這些方法的效率更高且更可靠。
 
-     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=fullName> 方法可讓您排程小型背景工作項目。 完成所有背景工作項目之前，ASP.NET 會追蹤這些項目，並防止 IIS 突然終止背景工作處理序。 此方法只能在 ASP.NET Managed 應用程式網域內呼叫。
+     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> 方法可讓您排程小型背景工作項目。 完成所有背景工作項目之前，ASP.NET 會追蹤這些項目，並防止 IIS 突然終止背景工作處理序。 此方法只能在 ASP.NET Managed 應用程式網域內呼叫。
 
-     新的 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=fullName> 和 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=fullName> 屬性傳回布林值，指出是否已寫入回應標頭。 您可以使用這些屬性確定 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=fullName> 等的 API 呼叫成功 (如果已寫入標頭，則擲回例外狀況)。
+     新的 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> 屬性傳回布林值，指出是否已寫入回應標頭。 您可以使用這些屬性確定 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> 等的 API 呼叫成功 (如果已寫入標頭，則擲回例外狀況)。
 
 - **調整 Windows Forms 控制項的大小。** 此功能已擴充。 您現在可以使用系統 DPI 設定來調整下列其他控制項的元件大小 (例如下拉式方塊中的下拉式箭頭)：
 
@@ -1084,19 +1140,19 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      這是一個選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
     ```
 
-- **新工作流程功能。** 使用 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 方法 (進而實作 <xref:System.Transactions.IPromotableSinglePhaseNotification> 介面) 的資源管理員可使用新的 <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> 方法來要求下列作業：
+- **新工作流程功能。** 使用 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 方法 (進而實作 <xref:System.Transactions.IPromotableSinglePhaseNotification> 介面) 的資源管理員可使用新的 <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> 方法來要求下列作業：
 
     - 將交易提升至 Microsoft 分散式交易協調器 (MSDTC) 交易。
 
     - 以支援單一階段認可的永久性登記 <xref:System.Transactions.IPromotableSinglePhaseNotification> 取代 <xref:System.Transactions.ISinglePhaseNotification>。
 
-     您可以在相同的應用程式網域中完成這些作業，而不需要任何額外的 Unmanaged 程式碼來與 MSDTC 互動以進行提升。 僅當 <xref:System.Transactions?displayProperty=fullName> 對可提升登記未實作之 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法的呼叫未完成時，才會呼叫此新方法。
+     您可以在相同的應用程式網域中完成這些作業，而不需要任何額外的 Unmanaged 程式碼來與 MSDTC 互動以進行提升。 僅當 <xref:System.Transactions?displayProperty=nameWithType> 對可提升登記未實作之 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法的呼叫未完成時，才會呼叫此新方法。
 
 - **程式碼剖析改進。** 下列新的 Unmanaged 程式碼分析 API 提供更強大的程式碼分析功能：
 
@@ -1112,7 +1168,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - **升級交易並將它轉換成永久性登記**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> 是新加入 .NET Framework 4.5.2 和 4.6 的 API：
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> 是新加入 .NET Framework 4.5.2 和 4.6 的 API：
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1122,7 +1178,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
                                               EnlistmentOptions enlistmentOptions)
     ```
 
-     此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 方法。 它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。 這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。 登記必須做為永久性登記，才可支援交易記錄和復原。 如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>。 此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。  只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 呼叫時，「才」可以呼叫此方法。 若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。
+     此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。 它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。 這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。 登記必須做為永久性登記，才可支援交易記錄和復原。 如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>。 此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。  只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 呼叫時，「才」可以呼叫此方法。 若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。
 
  [回到頁首](#introduction)
 
@@ -1152,7 +1208,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - 可收集診斷資訊，協助開發人員改進伺服器和雲端應用程式效能的功能。 如需詳細資訊，請參閱 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 類別中的 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 和 <xref:System.Diagnostics.Tracing.EventSource> 方法。
 
-- 可在記憶體回收期間明確壓縮大型物件堆積 (LOH) 的功能。 如需詳細資訊，請參閱 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName> 屬性 (Property)。
+- 可在記憶體回收期間明確壓縮大型物件堆積 (LOH) 的功能。 如需詳細資訊，請參閱 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性 (Property)。
 
 - 其他效能改進功能包括 ASP.NET 應用程式暫止、多核心 JIT 改進功能，以及 .NET Framework 更新後應用程式更快速啟動。 如需詳細資訊，請參閱 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)和 [ASP.NET 應用程式暫止 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) 部落格文章。
 
@@ -1164,7 +1220,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
      若要啟用此功能，請將新的 \<appSettings> 元素加入組態檔 (app.config) 中，並將 `EnableWindowsFormsHighDpiAutoResizing` 元素設定為 `true`：
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1199,7 +1255,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱 <xref:System.Runtime.ProfileOptimization>。
 
-- 可限制規則運算式引擎在逾時之前，嘗試解析規則運算式之時間長度的功能。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 屬性。
+- 可限制規則運算式引擎在逾時之前，嘗試解析規則運算式之時間長度的功能。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> 屬性。
 
 - 可定義應用程式定義域之預設文化特性的功能。 請參閱 <xref:System.Globalization.CultureInfo> 類別。
 
@@ -1209,11 +1265,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - 改善擷取資源時的效能。 請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。
 
-- 改善 Zip 壓縮，縮減壓縮檔的大小。 請參閱 <xref:System.IO.Compression?displayProperty=fullName> 命名空間。
+- 改善 Zip 壓縮，縮減壓縮檔的大小。 請參閱 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間。
 
 - 可透過 <xref:System.Reflection.Context.CustomReflectionContext> 類別自訂反映內容以覆寫預設反映行為的功能。
 
-- 在 <xref:System.Globalization.IdnMapping?displayProperty=fullName> 上使用 [!INCLUDE[win8](../../../includes/win8-md.md)] 類別時，支援 2008 版的應用程式國際化網域名稱 (Internationalized Domain Names in Applications，IDNA) 標準。
+- 在 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 上使用 [!INCLUDE[win8](../../../includes/win8-md.md)] 類別時，支援 2008 版的應用程式國際化網域名稱 (Internationalized Domain Names in Applications，IDNA) 標準。
 
 - 對作業系統委派字串比較，該字串比較會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上使用 .NET Framework 時實作 Unicode 6.0。 在其他平台上執行時，.NET Framework 會包含自己的字串比較資料 (該資料會實作 Unicode 5.x)。 請參閱 <xref:System.String> 類別以及 <xref:System.Globalization.SortVersion> 類別的＜備註＞一節。
 
@@ -1257,7 +1313,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 <a name="networking"></a> 
 ### <a name="networking"></a>網路功能
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為 HTTP 應用程式提供了新的程式設計介面。 如需詳細資訊，請參閱新的 <xref:System.Net.Http?displayProperty=fullName> 和 <xref:System.Net.Http.Headers?displayProperty=fullName> 命名空間。
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為 HTTP 應用程式提供了新的程式設計介面。 如需詳細資訊，請參閱新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空間。
 
  另外還包括對新的程式設計介面的支援，可使用現有的 <xref:System.Net.HttpListener> 和相關類別接受 WebSocket 連接並進行互動。 如需詳細資訊，請參閱新的 <xref:System.Net.WebSockets> 命名空間和 <xref:System.Net.HttpListener> 類別。
 
@@ -1397,7 +1453,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 ## <a name="see-also"></a>另請參閱
  [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)   
+ [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)   
  [Visual Studio 2017 中的新功能](/visualstudio/ide/whats-new-in-visual-studio)   
  [ASP.NET](/aspnet)   
  [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 
-

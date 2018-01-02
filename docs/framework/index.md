@@ -1,36 +1,28 @@
 ---
 title: ".NET Framework 4.7、4.6 和 4.5"
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
-f1_keywords:
-- f61f02f2-2f20-483d-8f56-a9c8f3a54986
+ms.custom: updateeachrelease
+f1_keywords: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 helpviewer_keywords:
 - .NET Framework, documentation
 - documentation, .NET Framework
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
-caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f22d51a0c4fd4419fe2e499c7b0e96827696bf6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
 > [!NOTE]
-> 此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其點發行版以及 .NET Framework 4.7 的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
+> 此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7 和 4.7.1 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其點發行版以及 .NET Framework 4.7 和 4.7.1 版的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
 
 .NET Framework 這套開發平台可用於建置可在網路、Windows、Windows Phone、Windows Server 及 Microsoft Azure 上使用的 App。 這是由通用語言執行平台 (CLR) 和 .NET Framework 類別庫 (包括各種功能且支援許多產業標準) 所組成。
 
@@ -65,9 +57,8 @@ ms.lasthandoff: 07/28/2017
 [工具](../../docs/framework/tools/index.md)  
 說明透過使用 .NET Framework 技術，可協助您開發、設定及部署應用程式的工具。  
   
-[.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)   
+[.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7.1)   
 為每個包含在 .NET Framework 命名空間的類別提供語法、程式碼範例和相關資訊。  
   
 [其他類別庫和 API](../../docs/framework/additional-apis/index.md)  
 提供頻外 (OOB) 版本中所包含類別的文件，以及針對特定平台或 .NET Framework 實作之類別的文件。
-

@@ -8,21 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET Framework], events
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae0776501bffc23ae07cc88c7f0d1729ed01b6f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 .NET Framework 中的事件是以委派模型為基礎。 遵循觀察者設計模式的委派模型，它可讓訂閱者向提供者註冊，並且接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
@@ -38,7 +40,8 @@ ms.lasthandoff: 09/05/2017
   
  下列範例將示範如何宣告名為 `ThresholdReached` 的事件。 事件與 <xref:System.EventHandler> 委派有關，而且會在名為 `OnThresholdReached` 的方法中引發。  
   
- [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)] [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
+ [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
+ [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>委派  
  委派是保存方法之參考的類型。 委派是透過簽章宣告，該簽章會顯示所參考方法的傳回類型和參數，而且委派只能保留符合其簽章之方法的參考。 委派因此相當於 type-safe 函式指標或回呼。 委派宣告不足以定義委派類別。  
@@ -51,25 +54,28 @@ ms.lasthandoff: 09/05/2017
   
  對於無法使用 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派的情況，您可以定義委派。 需要定義委派的情況非常少見，例如，當您必須使用無法辨識泛型的程式碼時。 您會在宣告中以 `delegate` (C#) 和 `Delegate` (Visual Basic) 關鍵字標記委派。 下列範例將示範如何宣告名為 `ThresholdReachedEventHandler` 的委派。  
   
- [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)] [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
+ [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
+ [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>事件資料  
- 與事件相關聯的資料可以透過事件資料類別提供。 .NET Framework 提供了許多事件資料類別，可讓您在應用程式中使用。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 類別是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName> 事件的事件資料類別。 .NET Framework 會遵循以 `EventArgs` 結束所有事件資料類型的命名模式。 您可以藉由查看事件的委派，判斷與事件相關聯的事件資料類別。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委派會包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 類別做為其中一個參數。  
+ 與事件相關聯的資料可以透過事件資料類別提供。 .NET Framework 提供了許多事件資料類別，可讓您在應用程式中使用。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 類別是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> 事件的事件資料類別。 .NET Framework 會遵循以 `EventArgs` 結束所有事件資料類型的命名模式。 您可以藉由查看事件的委派，判斷與事件相關聯的事件資料類別。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委派會包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 類別做為其中一個參數。  
   
- <xref:System.EventArgs> 類別是所有事件資料類別的基底類型。 <xref:System.EventArgs> 也是您在事件沒有任何相關資料時使用的類別。 如果您建立的事件主要工作只是通知其他類別有事件發生，而不需要傳遞任何資料，請在委派中加入 <xref:System.EventArgs> 類別做為第二個參數。 您可以在未提供資料時傳遞 <xref:System.EventArgs.Empty?displayProperty=fullName> 值。 <xref:System.EventHandler> 委派會包含 <xref:System.EventArgs> 類別做為參數。  
+ <xref:System.EventArgs> 類別是所有事件資料類別的基底類型。 <xref:System.EventArgs> 也是您在事件沒有任何相關資料時使用的類別。 如果您建立的事件主要工作只是通知其他類別有事件發生，而不需要傳遞任何資料，請在委派中加入 <xref:System.EventArgs> 類別做為第二個參數。 您可以在未提供資料時傳遞 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 <xref:System.EventHandler> 委派會包含 <xref:System.EventArgs> 類別做為參數。  
   
  當您要建立自訂事件資料類別時，請建立衍生自 <xref:System.EventArgs> 的類別，然後提供傳遞事件相關資料所需的所有成員。 一般而言，您應該使用與 .NET Framework 相同的命名模式，並且以 `EventArgs` 結束事件資料類別名稱。  
   
  下列範例將示範名為 `ThresholdReachedEventArgs` 的事件資料類別。 其中包含所引發事件專屬的屬性。  
   
- [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)] [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
+ [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
+ [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>事件處理常式  
  若要回應事件，請在事件接收器中定義事件處理常式方法。 這個方法必須符合您要處理之事件的委派簽章。 在事件處理常式中，您會在事件引發時執行必要的動作，例如，在使用者按一下按鈕後收集使用者輸入。 若要在事件發生時收到通告，則事件處理常式方法必須訂閱事件。  
   
  下列範例將示範名為 `c_ThresholdReached` 的事件處理常式方法，該方法會比對 <xref:System.EventHandler> 委派的簽章。 方法會訂閱 `ThresholdReached` 事件。  
   
- [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)] [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
+ [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
+ [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>靜態和動態事件處理常式  
  .NET Framework 可讓訂閱者以靜態或動態方式註冊事件通知。 靜態事件處理常式在其處理事件之類別的整個生命週期內都有效。 動態事件處理常式會在程式執行期間明確地啟動及停用，通常是為了回應某些條件式邏輯。 比方說，如果只有在某些情況下才需要事件通知，或如果應用程式提供多個事件處理常式且執行階段條件會定義一個要使用的適當處理常式，即可使用動態事件處理常式。 上一節中的範例示範了如何以動態方式加入事件處理常式。 如需詳細資訊，請參閱[事件](../../visual-basic/programming-guide/language-features/events/index.md)和[事件](../../csharp/programming-guide/events/index.md)。  
@@ -89,11 +95,10 @@ ms.lasthandoff: 09/05/2017
 |[如何：使用 Web Form 應用程式中的事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.EventHandler>   
- <xref:System.EventHandler%601>   
- <xref:System.EventArgs>   
- <xref:System.Delegate>   
- [事件和路由事件概觀 (Windows 市集應用程式)](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)   
+ <xref:System.EventHandler>  
+ <xref:System.EventHandler%601>  
+ <xref:System.EventArgs>  
+ <xref:System.Delegate>  
+ [事件和路由事件概觀 (Windows 市集應用程式)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [事件 (C# 程式設計手冊)](../../csharp/programming-guide/events/index.md)
-

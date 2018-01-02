@@ -1,14 +1,10 @@
 ---
-title: "C# 運算子 | Microsoft Docs"
-ms.date: 2017-03-09
+title: "C# 運算子"
+ms.date: 03/09/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.operators
-dev_langs:
-- CSharp
+f1_keywords: cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -24,29 +20,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-operators"></a>C# 運算子
 C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。  您可以[多載](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。  
@@ -221,7 +202,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 ## <a name="arithmetic-overflow"></a>算術溢位  
  算術運算子 ([+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[*](../../../csharp/language-reference/operators/multiplication-operator.md)、[/](../../../csharp/language-reference/operators/division-operator.md)) 可產生數值型別所涉及之可能值範圍以外的結果。 您應該參考特定運算子一節以取得詳細資料，但一般而言：  
   
-- 整數算術溢位可能會擲回 <xref:System.OverflowException> 或捨棄結果的最高有效位元。 整數除以零一定會擲回 @System.DivideByZeroException。  
+- 整數算術溢位可能會擲回 <xref:System.OverflowException> 或捨棄結果的最高有效位元。 整數除以零一定會擲回 <xref:System.DivideByZeroException>。  
 
    發生整數溢位時，會發生的事取決於執行內容，可以是 [checked 或 unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)。 在 checked 內容中，會擲回 <xref:System.OverflowException>。 在 unchecked 內容中，會捨棄結果的最高有效位元並繼續執行。 因此，C# 可讓您選擇處理或忽略溢位。 根據預設，*unchecked* 內容中會發生算術運算。 
 
@@ -233,8 +214,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md) [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C#](../../../csharp/index.md) [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-

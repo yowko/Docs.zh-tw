@@ -13,9 +13,18 @@
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
-            - name: .NET 微服務 -- 容器化 .NET 應用程式的架構
+            - name: 將 ASP.NET Web 應用程式現代化電子書
+              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
+              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
+            - name: .NET 微服務 - 架構電子書
               tocHref: /dotnet/standard/microservices-architecture/
               topicHref: /dotnet/standard/microservices-architecture/index
+            - name: 將 .NET 應用程式現代化電子書
+              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
+              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
+            - name: .NET 微服務 - DevOps 電子書
+              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
+              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
             - name: 非同步程式設計模式
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -341,6 +350,9 @@
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
+            - name: 快速入門
+              tocHref: /dotnet/csharp/quick-starts/
+              topicHref: /dotnet/csharp/quick-starts/index
             - name: 使用者入門
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index

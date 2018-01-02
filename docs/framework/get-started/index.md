@@ -1,30 +1,23 @@
 ---
-title: ".NET Framework 使用者入門 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: ".NET Framework 使用者入門"
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 66e581e04aa0c3d33fb1ef9a7f4163d131f625bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 327aad36a560a772e9ddb4d8d721c2545f800151
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
 .NET Framework 是執行階段的執行環境，負責管理以 .NET Framework 為目標的應用程式。 其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。
@@ -46,7 +39,7 @@ ms.lasthandoff: 08/05/2017
 
 - 版本相容性。 在極少數例外狀況下，使用某一特定 .NET Framework 版本開發的應用程式可不經修改直接在較新的版本上執行。
 
-- 並存執行。 .NET Framework 允許同一部電腦上存在多個版本的 Common Language Runtime，藉此協助解決版本衝突。 這表示，多個應用程式版本不僅可共存，應用程式也可以建置時使用的 .NET Framework 版本上執行。 並存執行適用於.NET Framework 版本群組 1.0/1.1、 2.0/3.0/3.5 和 4/4.5.x/4.6.x/4.7。
+- 並存執行。 .NET Framework 允許同一部電腦上存在多個版本的 Common Language Runtime，藉此協助解決版本衝突。 這表示，多個應用程式版本不僅可共存，應用程式也可以建置時使用的 .NET Framework 版本上執行。 並存執行適用於.NET Framework 版本群組 1.0/1.1、2.0/3.0/3.5 和 4/4.5.x/4.6.x/4.7.x。
 
 - 多目標。 藉由以 [.NET Standard](~/docs/standard/net-standard.md) 為目標，開發人員就可以建立可在多個 .NET Framework 平台 (例如 Windows 7、Windows 8、Windows 8.1、Windows 10、Windows Phone 和 Xbox 360) 上運作的組件。
 
@@ -61,7 +54,7 @@ ms.lasthandoff: 08/05/2017
 
 - 如果您使用的應用程式使用特定版本的 .NET Framework，移除該版本可能會造成應用程式無法執行。
 
-- 有些 .NET Framework 版本是舊版的就地更新。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是 2.0 版的就地更新，而 .NET Framework 4.7 是 4、4.5、4.5.1、4.5.2、4.6、4.6.1 和 4.6.2 版的就地更新。 如需詳細資訊，請參閱 [.NET Framework 版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)。
+- 有些 .NET Framework 版本是舊版的就地更新。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是 2.0 版的就地更新，而 .NET Framework 4.7.1 是 4、4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7 版的就地更新。 如需詳細資訊，請參閱 [.NET Framework 版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)。
 
 如果選擇移除 .NET Framework，請一律使用 [控制台] 中的 [程式和功能] 解除安裝。 請勿手動移除任何 .NET Framework 版本。
 
@@ -74,7 +67,7 @@ ms.lasthandoff: 08/05/2017
 
 若要開發 .NET Framework 應用程式或元件，請執行下列步驟：
 
-1. 如果未在作業系統上預先安裝，請安裝要當成應用程式目標的 .NET Framework 版本。 最新的產品版本是 .NET Framework 4.7，其已預先安裝於 Windows 10 Creators Update，在舊版 Windows 作業系統上則須自行下載。 如需 .NET Framework 系統需求，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。 其他.NET Framework 套件會在頻外發行，也就是在任何定期或排程發行週期以外輪流發行。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
+1. 如果未在作業系統上預先安裝，請安裝要當成應用程式目標的 .NET Framework 版本。 最新生產版本是 .NET Framework 4.7.1，其已預先安裝於 Windows 10 Fall Creators Update，在舊版 Windows 作業系統上則需要自行下載。 如需 .NET Framework 系統需求，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。 其他.NET Framework 套件會在頻外發行，也就是在任何定期或排程發行週期以外輪流發行。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
 
 2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 Visual Basic、C#、Visual F# 和 C++/CLI。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](http://go.microsoft.com/fwlink/?LinkId=199862))。
 
@@ -99,4 +92,3 @@ ms.lasthandoff: 08/05/2017
 [新增功能](../../../docs/framework/whats-new/index.md)   
 [.NET API 瀏覽器](/dotnet/api/)   
 [開發指南](../../../docs/framework/development-guide.md)
-

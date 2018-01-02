@@ -15,20 +15,18 @@ helpviewer_keywords:
 - C# language
 - Visual C#
 ms.author: wiwagn
+ms.openlocfilehash: 5ecc77970dbd32ca743bcd09fc63d49299a164a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="c-guide"></a>C# 指南
 
 C# 指南提供與 C# 語言相關的豐富資訊。 此網站適用於許多不同的對象。 根據您的程式設計體驗，或是使用 C# 語言和 .NET 的體驗，您可能想要探索本指南的不同章節。
 
 * 全新的開發人員：
-    - 請從我們的[教學課程](tutorials/index.md)一節開始。 這些教學課程示範如何從頭開始建立 C# 程式。 這些教學課程提供建立程式的逐步程序。 您將了解語言概念，以及如何建置自己的 C# 程式。 如果您想要先閱讀概觀資訊，請嘗試我們的 [C# 語言教學](tour-of-csharp/index.md)。 它會說明 C# 語言的概念。 閱讀本節之後，您將對此語言具有基本的認識，且準備好嘗試進行教學課程，或自行建置一些項目。
+    - 從[快速入門](quick-starts/index.md)一節開始。 這可讓您在瀏覽器中以互動方式探索 C# 語言。 您可以在這裡繼續進行[教學課程](tutorials/index.md)一節。 這些教學課程示範如何從頭開始建立 C# 程式。 這些教學課程提供建立程式的逐步程序。 您將了解語言概念，以及如何建置自己的 C# 程式。 如果您想要先閱讀概觀資訊，請嘗試我們的 [C# 語言教學](tour-of-csharp/index.md)。 它會說明 C# 語言的概念。 閱讀本節之後，您將對此語言具有基本的認識，且準備好嘗試進行教學課程，或自行建置一些項目。
 
 * 新的 C# 開發人員： 
     - 如果您之前已經完成開發，但剛接觸 C#，請閱讀 [C# 語言教學](tour-of-csharp/index.md)。 您將了解此語言的基本語法和結構，而您可以使用此語言教學來對比 C# 與您曾用過的其他語言。 您也可以瀏覽[教學課程](tutorials/index.md)以嘗試基本的 C# 程式。
@@ -77,6 +75,5 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
     - Microsoft Word 格式之最新版本 C# 規格的連結。  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
  [.NET 程式開發](https://msdn.microsoft.com/library/ff361664)
-

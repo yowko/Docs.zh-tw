@@ -7,13 +7,11 @@ ms.author: ronpet
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
+ms.openlocfilehash: e54cabe67558300b5c5fb9552d78397850d4c782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: e43f72ebd26c34636c239d8ac9f749d52d3f60a0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="whats-new-in-net-core"></a>.NET Core 的新功能
 
@@ -24,19 +22,21 @@ ms.lasthandoff: 08/14/2017
 - [平台改善](#platform-improvements)
 - [API 變更](#api-changes-and-library-support)
 - [Visual Studio 整合](#visual-studio-integration)
-- [文件改善](#documentation-improvements) 
+- [文件改善](#documentation-improvements)
 
 ## <a name="tooling"></a>Tooling
 
 ### <a name="dotnet-restore-runs-implicitly"></a>dotnet restore 以隱含方式執行
 
-在舊版的 .NET Core 中，您在使用 [dotnet new](../tools/dotnet-new.md) 命令建立新專案之後，以及將新的相依性新增至專案時，都必須立即執行 [dotnet restore](../tools/dotnet-restore.md) 命令以下載相依性。 在 .NET Core 2.0 中，`dotnet restore` 會在 `dotnet new` 命令執行時以隱含方式執行。 如果在其他命令 (例如 `run`、`build` 和 `publish` 命令) 執行時需要更新相依性，dotnet restore 也會以隱含方式執行。
+在舊版的 .NET Core 中，您在使用 [dotnet new](../tools/dotnet-new.md) 命令建立新專案之後，以及將新的相依性新增至專案時，都必須立即執行 [dotnet restore](../tools/dotnet-restore.md) 命令以下載相依性。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 您也可以透過將 `--no-restore` 參數傳遞至 `new`、`run`、`build`、`publish`、`pack`，以及 `test` 命令，來停用 `dotnet restore` 的自動引動過程。 
 
 ### <a name="retargeting-to-net-core-20"></a>將目標重定至 .NET Core 2.0
 
-如果已安裝 .NET Core 2.0 SDK，原先以 .NET Core 1.x 為目標的專案可以將目標重定至 .NET Core 2.0。 
+如果已安裝 .NET Core 2.0 SDK，原先以 .NET Core 1.x 為目標的專案可以將目標重定至 .NET Core 2.0。
 
 若要將目標重定至 .NET Core 2.0，請透過將 `<TargetFramework>` 元素 (在專案檔中具有多個目標的情況下則是 `<TargetFrameworks>` 元素) 的值從 1.x 變更至 2.0 來編輯專案檔：
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/14/2017
 - .NET Core 類別庫
 - .NET Standard 類別庫
 - .NET Core 單元測試專案
-- .NET Core xUnit 測試專案 
+- .NET Core xUnit 測試專案
 
 例如，若要建立 Visual Basic "Hello World" 應用程式，請從命令列執行下列步驟：
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/14/2017
 1. 輸入 `dotnet new console -lang vb` 命令。
 
    該命令會建立具有 `.vbproj` 副檔名的專案檔，以及名為 *Program.vb* 的 Visual Basic 原始程式碼檔。 此檔案包含將 "Hello World!" 字串寫入至主控台視窗的原始程式碼。
-  
+
 1.  輸入 `dotnet run` 命令。 [.NET Core CLI 工具](../tools/index.md)會自動編譯並執行應用程式，該應用程式則會在主控台視窗中顯示 "Hello World!" 訊息。
 
 ### <a name="support-for-c-71"></a>針對 C# 7.1 的支援
@@ -98,11 +98,11 @@ ms.lasthandoff: 08/14/2017
 
 .NET Core 2.0 提供可在多個 Linux 發行版本上運作的單一 Linux 實作。 .NET Core 1.x 需要您下載發行版本特定的 Linux 實作。
 
-您也可以開發以單一作業系統形式的 Linux 作為目標的應用程式。 .NET Core 1.x 需要您個別以每個 Linux 發行版本作為目標。 
+您也可以開發以單一作業系統形式的 Linux 作為目標的應用程式。 .NET Core 1.x 需要您個別以每個 Linux 發行版本作為目標。
 
 ### <a name="support-for-the-apple-cryptographic-libraries"></a>針對 Apple 加密編譯程式庫的支援
 
-.NET Core 1.x 在 macOS 上需要 OpenSSL 工具組的加密編譯程式庫。 .NET Core 2.0 使用 Apple 加密編譯程式庫，且不需要 OpenSSL，因此您已不必安裝它。 
+.NET Core 1.x 在 macOS 上需要 OpenSSL 工具組的加密編譯程式庫。 .NET Core 2.0 使用 Apple 加密編譯程式庫，且不需要 OpenSSL，因此您已不必安裝它。
 
 ## <a name="api-changes-and-library-support"></a>API 變更和程式庫支援
 
@@ -118,7 +118,9 @@ ms.lasthandoff: 08/14/2017
 
 ### <a name="expanded-surface-area"></a>擴展的介面區
 
-.NET Core 2.0 上的可用 API 總數，比 .NET Core 1.1 所提供的 API 多出了超過一倍的數量。 
+.NET Core 2.0 上的可用 API 總數，比 .NET Core 1.1 所提供的 API 多出了超過一倍的數量。
+
+而從 .NET Framework 移植 [Windows 相容性套件](../porting/windows-compat-pack.md)也會變得簡單許多。
 
 ### <a name="support-for-net-framework-libraries"></a>針對 .NET Framework 程式庫的支援
 
@@ -130,13 +132,13 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 ### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>重定 .NET Core 應用程式和 .NET Standard 程式庫的目標
 
-如果已安裝 .NET Core 2.0 SDK，您可以將 .NET Core 1.x 專案的目標重定至 .NET Core 2.0，並將 .NET Standard 1.x 程式庫的目標重定至 .NET Standard 2.0。 
+如果已安裝 .NET Core 2.0 SDK，您可以將 .NET Core 1.x 專案的目標重定至 .NET Core 2.0，並將 .NET Standard 1.x 程式庫的目標重定至 .NET Standard 2.0。
 
 若要在 Visual Studio 中重定專案的目標，請開啟專案屬性對話方塊的 [應用程式] 索引標籤，並將 [目標 Framework] 的值變更為 [.NET Core 2.0] 或 [.NET Standard 2.0]。 另一個變更它的方法，則是以滑鼠右鍵按一下專案並選取 [編輯 \*.csproj 檔案] 選項。 如需詳細資訊，請參閱本主題稍早的[工具](#tooling)小節。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core 的即時單元測試支援
 
-每當您修改程式碼時，Live Unit Testing 會在背景自動執行任何受影響的單元測試，並會在 Visual Studio 環境中呈現即時的結果和程式碼涵蓋範圍。 .NET Core 2.0 現已支援 Live Unit Testing。 先前 Live Unit Testing 僅針對 .NET Framework 應用程式提供。 
+每當您修改程式碼時，Live Unit Testing 會在背景自動執行任何受影響的單元測試，並會在 Visual Studio 環境中呈現即時的結果和程式碼涵蓋範圍。 .NET Core 2.0 現已支援 Live Unit Testing。 先前 Live Unit Testing 僅針對 .NET Framework 應用程式提供。
 
 如需詳細資訊，請參閱 [Visual Studio 2017 的 Live Unit Testing](/visualstudio/test/live-unit-testing) 及 [Live Unit Testing 常見問題集](/visualstudio/test/live-unit-testing-faq)。
 
@@ -144,7 +146,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 如果您正在針對多目標 Framework 建置專案，現在已可以從最上層功能表選取目標平台。 在下圖中，名為 SCD1 的專案是以 64 位元的 Mac OS X 10.11 (`osx.10.11-x64`)，以及 64 位元的 Windows 10/Windows Server 2016 (`win10-x64`) 為目標。 您可以在選取專案按鈕 (在此情況下為執行偵錯組建) 之前選取目標 Framework。
 
-![於建置專案時選取目標 Framework](media/multitarget.png) 
+![於建置專案時選取目標 Framework](media/multitarget.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>針對 .NET Core SDK 的並存功能支援
 
@@ -154,7 +156,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 ### <a name="net-application-architecture"></a>.NET 應用程式架構
 
-[.NET 應用程式架構](https://www.microsoft.com/net/learn/architecture) \(英文\) 可讓您存取一系列針對使用 .NET 進行建置提供指引、最佳做法及範例應用程式的電子書：
+[.NET 應用程式架構](https://www.microsoft.com/net/learn/architecture)可讓您存取一系列針對使用 .NET 進行建置提供指引、最佳做法和範例應用程式的電子書：
 
 - 微服務和 Docker 容器。
 - 使用 ASP.NET 的 Web 應用程式。
@@ -163,4 +165,3 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 ## <a name="see-also"></a>請參閱
  [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)
-

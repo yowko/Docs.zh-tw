@@ -3,7 +3,7 @@
 ## [<cryptoClass> 元素](cryptoclass-element.md)
 ## [<cryptographySettings> 元素](cryptographysettings-element.md)
 ## [<cryptoNameMapping> 元素](cryptonamemapping-element.md)
-## [<mscorlib>密碼編譯設定的項目](mscorlib-element-for-cryptography-settings.md)
+## [密碼編譯設定的 <mscorlib> 項目](mscorlib-element-for-cryptography-settings.md)
 ## [<nameEntry> 元素](nameentry-element.md)
 ## [<oidEntry> 元素](oidentry-element.md)
 ## [<oidMap> 元素](oidmap-element.md)

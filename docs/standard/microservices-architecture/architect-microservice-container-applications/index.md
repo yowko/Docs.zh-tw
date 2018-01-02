@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 246605b301f6bcea4cced2cb7d1c494e9f66aa4a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 360b4745e768a751154f3f1445ffb0bf5b62c825
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>架構容器和微服務應用程式
 
@@ -29,11 +28,10 @@ ms.lasthandoff: 09/05/2017
 
 當您設計容器映像時，您會在 Dockerfile 中看到 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/) 定義。 這會定義處理序，其存留期間可控制容器的存留期。 當處理序完成時，容器生命週期即告結束。 容器可能代表長時間執行的處理序 (例如網頁伺服器)，但也可能代表短期處理序 (例如之前可能已實作為 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources) 的批次工作)。
 
-如果處理序失敗，容器會結束並由 Orchestrator 接管。 如果 Orchestrator 已設定為保留五個執行中的執行個體，且其中一個失敗，Orchestrator 將會建立另一個容器執行個體，來取代失敗的處理序。 在批次工作中，處理序是透過參數來啟動。 當處理序完成時，工作即告完成。
+如果處理序失敗，容器會結束並由 Orchestrator 接管。 如果 Orchestrator 已設定為保留五個執行中的執行個體，且其中一個失敗，Orchestrator 將會建立另一個容器執行個體，來取代失敗的處理序。 在批次工作中，處理序是透過參數來啟動。 當處理序完成時，工作即告完成。 本指引稍後會向下鑽研至協調器。
 
 您可能發現有時需要在單一容器中執行多個處理序。 在此情況下，由於每個容器只能有一個進入點，因此您可以在容器中執行指令碼來視需要啟動許多程式。 例如，您可以使用 [Supervisor](http://supervisord.org/) 或類似工具，在單一容器中啟動多個處理序。 不過，即使您可能發現在每個容器中保留多個處理序的架構，但該方法並不常見。
 
 
 >[!div class="step-by-step"]
 [上一個] (../net-core-net-framework-containers/official-net-docker-images.md) [下一個] (containerize-monolithic-applications.md)
-
