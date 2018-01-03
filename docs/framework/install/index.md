@@ -8,11 +8,12 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.openlocfilehash: 7661919fa50eb9b08cead2c8a04a1a8af5fbf3d2
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: 722d34e7084fc46a5b3b3a97c73e2e14b1cc9d24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installation-guide"></a>安裝指南
 
@@ -33,6 +34,6 @@ ms.lasthandoff: 12/17/2017
 ## <a name="see-also"></a>另請參閱
 
 [下載 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
-[針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](troubleshoot-blocked-installations-and-uninstallations.md)  
+[疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)  
 [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)  
 [部署適用於開發人員的 .NET Framework](../deployment/deployment-guide-for-developers.md)  

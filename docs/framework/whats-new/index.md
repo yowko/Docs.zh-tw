@@ -13,11 +13,12 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 <a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
@@ -264,7 +265,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [偵錯改進](#Debug462)
 
-如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 ](http://go.microsoft.com/fwlink/?LinkId=708778) \(英文\)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
+如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](http://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
 
 <a name="ASPNET462"></a> 
 ### <a name="aspnet"></a>ASP.NET

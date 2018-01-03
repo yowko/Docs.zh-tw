@@ -12,11 +12,12 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7d84b55abd6c7d72c3a74d17b4f24d00e117a0c
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload: dotnet
+ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/01/2017
 <a name="Introducing"></a>
 ## <a name="what-is-the-net-framework"></a>什麼是 .NET Framework？
 
-.NET Framework 是適用於 Windows 的 受控執行環境，可為執行中的應用程式提供多樣的服務。 它由兩個主要元件組成：通用語言執行平台 (CLR) 和 .NET Framework 類別庫，前者是負責處理執行中應用程式的執行引擎，後者提供通過測試、可重複使用的程式碼程式庫，讓開發人員可從自己的應用程式中呼叫。 .NET Framework 提供給執行中應用程式的服務包括：
+.NET Framework 是適用於 Windows 的 受控執行環境，可為執行中的應用程式提供多樣的服務。 其由兩個主要元件組成：通用語言執行平台 (CLR) 和 .NET Framework 類別庫，前者是負責處理執行中應用程式的執行引擎，後者提供通過測試、可重複使用的程式碼程式庫，讓開發人員可從自己的應用程式中呼叫。 .NET Framework 提供給執行中應用程式的服務包括：
 
 - 記憶體管理。 在許多程式設計語言中，程式設計人員負責配置和釋放記憶體，以及處理物件存留期。 在 .NET Framework 應用程式中，CLR 會代表應用程式提供這些服務。
 
