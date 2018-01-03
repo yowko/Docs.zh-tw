@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b992cafbc0f8c68cfa695f244b9ec82d9d344af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4f6742294c570501b20646c89455c7856f393f7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 考量 (WCF Data Services)
 本主題所提供的資訊是關於您要使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端時所撰寫和執行 LINQ 查詢的方式，以及使用 LINQ 查詢實作 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之資料服務的限制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]撰寫及執行針對查詢[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基礎資料服務，請參閱[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
@@ -222,7 +223,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  用戶端可能也可以評估用戶端上的其他 CLR 函數。 系統會針對無法在用戶端上評估，而且無法轉譯為有效要求 URI 以便在伺服器上進行評估的所有運算式，引發 <xref:System.NotSupportedException>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [查詢投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
  [物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  

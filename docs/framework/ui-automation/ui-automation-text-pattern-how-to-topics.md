@@ -18,22 +18,23 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96fab367bcec7f501e80f4533b2ee36e4cf86c77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80bd85af56608563b7a3c49912ce31a5f6dd0744
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 自動化文字模式 HOW-TO 主題
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本節說明如何使用 UI 自動化文字模式的主題。  
   
-## <a name="in-this-section"></a>本章節內容  
- [將內容加入到文字方塊中，使用 UI 自動化](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [尋找並反白顯示文字使用 UI 自動化](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+## <a name="in-this-section"></a>本節內容  
+ [使用 UI 自動化將內容新增至文字方塊](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [使用 UI 自動化尋找和反白顯示文字](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
  [使用 UI 自動化取得文字屬性](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [取得混合的文字屬性詳細資料，使用 UI 自動化](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [使用 UI 自動化取得混合文字屬性詳細資料](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
  [使用 UI 自動化周遊文字](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [存取內嵌物件使用 UI 自動化](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [使用 UI 自動化存取內嵌物件](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6951eb6c9df7a3fef09f5972f3cb5fcabe5496f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 顯示登入的狀態
 ## <a name="applies-to"></a>適用於  
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/18/2017
   
 1.  在 Visual Studio 中，以滑鼠右鍵按一下方案總管底下的 [TestService]，然後選取 [身分識別與存取]。  
   
-2.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [使用本機開發 STS 測試應用程式]，然後按一下 [套用]。  
+2.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
   
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>步驟 4 – 修改 ASP.NET 應用程式以顯示登入狀態  
  此步驟描述如何修改 ASP.NET 應用程式，以動態方式顯示目前的使用者是否已登入。 一旦設定了 STS 提供者，WIF 就會處理連入宣告。 現在，您需要設定應用程式的程式碼，以顯示驗證的結果。  

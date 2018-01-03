@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3143c6b78749f3339e7e7195b551b5a5c31fad12
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e2566c5ebe8c94610c8f7e258da7c77adb86a49f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directive-elements"></a>執行階段指示詞項目
 執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
  如果執行階段原則已套用至包含類型或方法，則會將該原則套用至類型。  
   
- [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
+ [\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)  
  將執行階段原則套用至組件中的所有類型。 這是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 和 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目的子項。  
   
  [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
@@ -76,5 +77,5 @@ ms.lasthandoff: 10/18/2017
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  將執行階段原則套用至傳遞給方法之 <xref:System.Type> 引數所表示的類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [rd.xml 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

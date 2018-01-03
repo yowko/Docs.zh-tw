@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
 當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者名稱，而另一個則可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="introduction-to-claims-based-identity"></a>宣告型識別簡介  
  下列詞彙和概念有助於了解這個新的識別架構。  
   
-### <a name="identity"></a>識別  
+### <a name="identity"></a>身分識別  
  為了描述 Windows Identity Foundation (WIF) 中的程式設計模型，我們將使用「身分識別」一詞來表示一組屬性，這組屬性可用來描述要在系統中保護其安全性的使用者或其他某些實體。  
   
 ### <a name="claim"></a>宣告  

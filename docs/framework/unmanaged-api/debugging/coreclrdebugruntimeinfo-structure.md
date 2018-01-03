@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e18416822aed6020fb0de8eb5bc7d38e4cd2eb9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: effcc44b3f3b0926c1d711955fa77aa3e71a1592
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo 結構
 代表載入遠端電腦上之處理序的 Common Language Runtime (CLR) 執行個體。  
@@ -41,7 +42,7 @@ struct  CoreClrDebugRuntimeInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`m_dwInternalID`|在目標電腦上執行之遠端偵錯 Proxy 所指派的執行階段識別項。|  
   

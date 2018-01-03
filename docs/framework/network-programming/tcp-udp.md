@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f62475e8b44d9cdda13322dc223509572c4ae541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 應用程式可以使用「傳輸控制通訊協定 (TCP)」和「使用者資料包通訊協定 (UDP)」服務，搭配 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些通訊協定類別建立在 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別之上，並負責傳送資料的細節。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  **UdpClient** 類別使用位元組陣列來保留 UDP 資料包。 您使用 <xref:System.Net.Sockets.UdpClient.Send%2A> 方法將資料傳送到網路，及使用 <xref:System.Net.Sockets.UdpClient.Receive%2A> 方法來接收連入的資料包。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 TCP 服務](../../../docs/framework/network-programming/using-tcp-services.md)  
  [使用 UDP 服務](../../../docs/framework/network-programming/using-udp-services.md)  
  [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  

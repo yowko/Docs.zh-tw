@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 969b2468b9b627d9b69f02209f30362edbbcce3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 698e8ef926740f33f8a0a192680b5cebb45c9d79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
 > [!NOTE]
@@ -135,6 +136,6 @@ ms.lasthandoff: 11/21/2017
 |`Required PublicAndInternal`|啟用公用及內部類型或成員的原則，並確保公用及內部類型和成員的中繼資料一律可供使用。 此設定不同於 `PublicAndInternal`，後者只會在工具鏈判斷為必要時，才會讓公用及內部類型和成員的中繼資料可供使用。|✓||  
 |`Required All`|需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。|✓||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

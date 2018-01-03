@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 18f2d06d3a6974b913af663a38a6155b38422232
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2714d53426bfee22b3d83d76b766816d9bc9d60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>範例：處理繫結資料時所發生的例外狀況
 > [!NOTE]
@@ -67,6 +68,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  不過，有一些方法可以將 `ViewModel` 指定至 XAML 頁面，讓工具鏈可以在編譯時將屬性繫結與正確的類型建立關聯，並且在不使用執行階段指示詞的情況下保留中繼資料。  例如，您可以在屬性 (property) 上套用 [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) 屬性 (attribute)。 這會導致 XAML 編譯器產生必要的查閱資訊，並避免 Default.rd.xml 檔案中需要執行階段指示詞。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [範例：針對動態程式設計進行疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

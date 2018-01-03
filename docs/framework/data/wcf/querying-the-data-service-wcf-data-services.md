@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d25f8357f5b375792e8a05833e8397085cc27b23
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 976f1e4d8a149f8104325fd5d006d245afee04a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您使用熟悉的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程式設計模式針對資料服務執行查詢，包括使用 Language Integrated Query (LINQ)。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫接收回應訊息，並將它轉譯成用戶端資料服務類別的執行個體。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。  
@@ -133,7 +134,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  您也可以分別呼叫 <xref:System.Int32> 或 <xref:System.Int64> 方法，藉此只取得集合中的實體總計數，以做為 <xref:System.Linq.Enumerable.Count%2A> 或做為 <xref:System.Linq.Enumerable.LongCount%2A> 值。 呼叫這些方法時，並未傳回 <xref:System.Data.Services.Client.QueryOperationResponse%601>；只會傳回計數值。 如需詳細資訊，請參閱[How to： 判斷數字的項目查詢所傳回](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [查詢投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
   
  [物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
@@ -142,15 +143,15 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [如何：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [如何： 將查詢選項加入至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [如何：將查詢選項新增至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [如何： 判斷查詢所傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [如何：判斷查詢傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [如何： 指定的資料服務要求用戶端認證](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [如何：指定資料服務要求的用戶端認證](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [如何： 設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [如何：設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [如何： 投影查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [如何：投影查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

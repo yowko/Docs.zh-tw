@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8528b2839c4972dd44f03db5f331acb672cfeb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0c5ee074e55d0d407f89c778c579aa5c4ce03a10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType 列舉
 指出回呼在回溯階段期間通知的事件。  
@@ -39,7 +40,7 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_UNWIND_BEGIN`|回溯處理序的開頭。|  
 |`DEBUG_EXCEPTION_INTERCEPTED`|攔截到例外狀況。|  
@@ -53,5 +54,5 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

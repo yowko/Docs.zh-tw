@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ec2bc90283aa39b8258ad14777cda7180c043c69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92a886ab09978aef6694c37d74af49b27c37c6c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltattributeimpliesgt-element-net-native"></a>&lt;AttributeImplies&gt; 項目 (.NET Native)
 定義套用包含屬性之程式碼元素的原則。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
 |`Browse`|反射|選擇性屬性。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
  反映、序列化和 interop 屬性都是選用性，但至少要有一個屬性存在。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  

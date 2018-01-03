@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3777167e1c4789500212970f7900ad7b69136a9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 51effb21befe178c0348d6a606eef4120977889f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-configuration-reference"></a>WIF 組態參考
 您可以在應用程式中將項目新增至組態檔，藉以設定 Windows Identity Foundation (WIF)。 本主題包含 WIF 組態元素之參考主題的連結。  

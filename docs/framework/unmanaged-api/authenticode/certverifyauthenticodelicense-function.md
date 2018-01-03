@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16d8067b4cd5d0a7b3db5be5b3b9ed4d689e1b0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bab3a3bcee52a302345ccdcfad81e7f67efdd8d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函式
 驗證 Authenticode XrML 授權的有效性。  
@@ -70,7 +71,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ## <a name="return-value"></a>傳回值  
  若成功，會傳回 `S_OK`。 反之則傳回錯誤碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)  
  [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

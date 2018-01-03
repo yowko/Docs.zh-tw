@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 92f070a919363e373cd898682c37ac7a199d2463
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4650cdaaffbe7e4e5818fb8cbd20f901ced26900
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
 -   [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)  

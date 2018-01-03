@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3cdbf82997d76def39f05ebf06b448e8e75001ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be07dc3ec6aac48382fab12285ee08bcb5fe7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/21/2017
   
  更新快取不會更改任何現有 <xref:System.Windows.Automation.AutomationElement> 參考的屬性。  
   
-## <a name="see-also"></a>另請參閱  
- [用戶端的使用者介面自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+## <a name="see-also"></a>請參閱  
+ [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
+ [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [FetchTimer 範例](http://msdn.microsoft.com/en-us/5b7d3294-de22-4f24-b2d6-d4785a304b90)

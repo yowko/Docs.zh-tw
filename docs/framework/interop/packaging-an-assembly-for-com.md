@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 149d0c2595844c5b71767e2ea3ee5b0c6002c080
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：  
@@ -88,7 +89,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 ## <a name="net-services-installation-tool"></a>.NET 服務安裝工具  
  [.NET 服務安裝工具 (Regsvcs.exe)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md) 會將 Managed 類別新增至 Windows 2000 元件服務，並將數項工作合併到單一工具。 除了載入和註冊組件之外，Regsvcs.exe 還可以在現有 COM+ 1.0 應用程式中產生、註冊和安裝型別程式庫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  

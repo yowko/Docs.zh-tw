@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba38c7e42126bb70161dcb72ffdd6965e8def044
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-name-resolution-protocol"></a>對等名稱解析通訊協定
 在對等環境中，對等使用特定名稱解析系統，才能從名稱或其他類型的識別碼解析彼此的網路位置 (位址、通訊協定和連接埠)。 過去，網域名稱系統 (DNS) 內本來就是暫時性連線以及其他缺點，而讓對等名稱解析變得複雜。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 -  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  

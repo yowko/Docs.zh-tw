@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 926794f4bb603548b74dd95fd9040d9471d70a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35d1a5489173dd79fb87a6ab6e82becd154c2b44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中撰寫安全的動態 SQL
 「SQL 插入」(SQL Injection) 是指惡意的使用者用來輸入 Transact-SQL 陳述式 (而非有效輸入) 的流程。 如果該輸入未經驗證而直接傳遞至伺服器，而且應用程式不慎執行了插入的程式碼，則攻擊就可能會危及或損毀資料。  
@@ -72,16 +73,16 @@ ms.lasthandoff: 11/21/2017
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[預存程序](http://go.microsoft.com/fwlink/?LinkId=98233)和[SQL 資料隱碼](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server 線上叢書中|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
 |[新的 SQL 截斷攻擊和如何加以避免](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/)MSDN Magazine 中。|說明如何分隔字元和字串、SQL 插入和截斷攻擊的修改。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [管理 SQL Server 中的預存程序的權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [簽署 SQL Server 中的預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [自訂 SQL Server 中的模擬權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

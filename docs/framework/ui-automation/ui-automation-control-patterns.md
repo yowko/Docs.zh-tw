@@ -17,19 +17,20 @@ caps.latest.revision: "60"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 13fd17a4b228c2ea017fef5450136085ffdbf458
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1b5c1c114fa4a7a7ebaf363ba0de28251ebae3c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns"></a>UI 自動化控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本節提供有關如何使用的詳細的資訊[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]控制項模式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [實作 UI 自動化 Dock 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
  [實作 UI 自動化 ExpandCollapse 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [實作 UI 自動化 Grid 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
@@ -47,4 +48,4 @@ ms.lasthandoff: 10/18/2017
  [實作 UI 自動化 Transform 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
  [實作 UI 自動化 Value 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
  [實作 UI 自動化 Window 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [操作說明主題](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [HOW-TO 主題](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)

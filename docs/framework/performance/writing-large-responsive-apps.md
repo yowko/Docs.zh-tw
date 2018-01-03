@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: wiwagn
+ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -469,7 +470,7 @@ class Compilation { /*...*/
   
 -   重點在於配置 - 這是編譯器平台小組花費最多時間提升新編譯器效能的地方。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [本主題的簡報的視訊](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [效能](../../../docs/framework/performance/index.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d51508abf27038e27b4a9d356c726bc8e15cb321
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新資料服務 (WCF 資料服務)
 當您使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫來取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]換行字元、 文件庫會轉譯成用戶端資料服務類別的執行個體摘要中的項目。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="saving-changes"></a>儲存變更  
  變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。 在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。 如需詳細資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。 您也可以透過 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法，非同步地儲存變更。 如需詳細資訊，請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  

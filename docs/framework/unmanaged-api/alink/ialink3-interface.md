@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b2f38283e4944c4f24668fa243d628e80daeac55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f4c4e8222acaf290ea9298a59d2ae77b81d2c913
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink3-interface"></a>IALink3 介面
 提供單一方法`SetManifestFile`，可讓您指定或重設連結器會在建立組件時使用的資訊清單檔。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SetManifestFile 方法](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
  可讓您指定或重設連結器會在建立組件時使用的資訊清單檔案。  
   

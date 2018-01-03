@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 014dc690d034c27f0f004172fb8108249bb5c89b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed448ea3af702706b45e27e923ebe540d83de868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt; 項目 (.NET Native)
 將執行階段反映原則套用至指定命名空間中的所有類型。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定命名空間的名稱。|  
 |`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
@@ -59,13 +60,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*namespace_name*|命名空間名稱。 如果 \<Namespace> 項目是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)、[\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 或 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目的子項，則 *namespace_name* 必須是完整命名空間名稱。 如果 \<Namespace> 項目是另一個 \<Namespace> 項目的子項，則 *namespace_name* 必須是相對的命名空間名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|針對命名空間中的所有類型，要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -79,11 +80,11 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為整個應用程式的類型和類型成員的容器，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 項目可以有零、一或多個 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目。|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將執行階段反映原則套用至指定組件中的所有類型。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目可以有零或一個 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目。|  
+|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目可以有零或一個 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目。|  
 |`<Namespace>`|將反映原則套用至父命名空間中的所有類型。|  
   
 ## <a name="remarks"></a>備註  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
   
  當它是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目的子項時，`<Namespace>` 項目會覆寫 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目定義的執行階段反映原則。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

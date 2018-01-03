@@ -15,28 +15,29 @@ caps.latest.revision: "80"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: efdd8624311ad6e3fe751d39d689e84663b4c61e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a0e4499816bd6cd4e2703d28d615a8732a0524e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility"></a>協助工具選項
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新協助工具架構。 它利用程式設計方式存取[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的相關資訊，來解決輔助技術產品和自動化測試架構的需求。 此外，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可讓控制項和應用程式開發人員提供其產品以供存取。  
   
  此文件描述 Managed 程式碼的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。 如需 C++ 中 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 程式設計的資訊，請參閱 [UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx) (Win32 應用程式的使用者介面自動化)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [協助工具最佳做法](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
  [使用者介面自動化基礎觀念](../../../docs/framework/ui-automation/index.md)  
  [Managed 程式碼的使用者介面自動化提供者](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
  [Managed 程式碼的使用者介面自動化用戶端](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
  [使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [使用者介面自動化文字模式](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
+ [UI 自動化控制項類型](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
  [使用者介面自動化規格和社群承諾](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>相關章節  

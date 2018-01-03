@@ -14,11 +14,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2def27790a1727bda524b8c14a93f7b78127a569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a2af80ddb558959171c255a61fae460729306e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-data-with-com-interop"></a>使用 COM Interop 封送處理資料
 COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和公開 Managed 物件給 COM 的支援。 廣泛支援封送處理資料至 COM 或對來自 COM 的資料封送處理，幾乎一律會提供正確的封送處理行為。  
@@ -31,7 +32,7 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
   
  下列各節將說明您可以 （或必須） 提供具有其他類型資訊的封送處理器時，自訂 interop 包裝函式的處理程序的主題連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 [如何： 手動建立包裝函式](how-to-create-wrappers-manually.md)   
 描述如何在 managed 的原始程式碼中手動建立 COM 包裝函式。 
  

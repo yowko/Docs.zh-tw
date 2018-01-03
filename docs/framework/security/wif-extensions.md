@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 52f2b474a5c3d9b9a1a2d412ef787f722a6dc380
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c21576fd9c9e1a778a40913c536d43f52ab4564
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-extensions"></a>WIF 擴充功能
 本節描述 Windows Identity Foundation 延伸模組。  

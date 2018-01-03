@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7406e256acaea0c535c222386c529c4087bbdc6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7486820d78d767b8eb79397d6179ac81efc27968
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-an-entry-point"></a>指定進入點
 進入點可識別函式在 DLL 中的位置。 在 Managed 專案中，目標函式的原始名稱或序數進入點可跨越交互操作界限識別該函式。 此外，您可以將進入點對應到不同的名稱，有效地重新命名函式。  
@@ -96,7 +97,7 @@ extern "C" int MsgBox(HWND hWnd,
                       unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
  [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  

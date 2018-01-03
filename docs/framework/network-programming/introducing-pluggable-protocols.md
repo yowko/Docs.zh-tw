@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 372f681fbdd4808b5f6a0012cf6ad01e278e05c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3cc7ad6b6270b74e2eb6aa4a2cc3a540175d540b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introducing-pluggable-protocols"></a>可插式通訊協定簡介
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的網際網路存取類別，可用來實作 Web 架構和以網際網路為基礎的應用程式。  
@@ -75,7 +76,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
   
  熟悉 Windows Sockets 介面的開發人員，或需要在通訊端層級由程式設計提供控制項的開發人員，會發現 **System.Net.Sockets** 類別符合他們的需要。 **System.Net.Sockets** 類別是在 **System.Net** 類別內從 Managed 程式碼到原生程式碼的轉換點。 在大部分情況下，**System.Net.Sockets** 類別會將資料封送處理到其 Windows 32 位元的對應項目，以及處理任何必要的安全性檢查。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  

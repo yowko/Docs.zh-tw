@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 03ef815f03a65cbf7e2dc936b21848e206132add
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11966eccfdbbdbab29d305915afd904a54f9c57b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 方法
 發出的最後一個資訊清單。 匯入所有其他檔案，並設定所有選項之後呼叫這個方法。 請勿呼叫這個方法未繫結的模組。  
@@ -56,7 +57,7 @@ HRESULT EmitManifest(
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

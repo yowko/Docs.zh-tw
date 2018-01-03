@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12820b6b2b864bfd00474abc118fe9b346b51bc5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1ada694ed8bdb8aea4551a24f423f896ba1bd61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]支援 Atom 和 JavaScript 物件標記法 (JSON) 格式的資料摘要。 當您使用 Atom 摘要，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供標準的方法，以序列化資料，例如實體和關聯性，可以包含在 HTTP 訊息的本文的 XML 格式。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定義包含實體中的資料與 Atom 項目之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -102,6 +103,6 @@ ms.lasthandoff: 12/02/2017
   
  如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [反映提供者](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
  [Entity Framework 提供者](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

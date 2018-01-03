@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e5bbc99c3c40b0864a7c1c25cb79a3d7c26e3a86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4e80c4bf5142a9bbbd2b7f75d67553db73f0ff22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>如何：將參考加入至類型程式庫
 Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資料的 interop 組件。 如有提供主要的 Interop 組件，Visual Studio 便會先使用現有的組件，然後再產生新的 Interop 組件。  
@@ -37,7 +38,7 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
   
 4.  從清單中選取類型程式庫，或瀏覽至 .tlb 檔案。  
   
-5.  選擇 [ **確定**]。  
+5.  選擇 [確定] 。  
   
 6.  在方案總管中，開啟所新增之參考的捷徑功能表，然後選擇 [屬性]。  
   
@@ -52,8 +53,8 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
   
 2.  使用 [/link (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) 或 [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) 編譯器選項加上 Interop 組件名稱，將 COM 類型的類型資訊嵌入您的可執行檔中。  
   
-## <a name="see-also"></a>另請參閱  
- [匯入型別程式庫作為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+## <a name="see-also"></a>請參閱  
+ [匯入類型程式庫做為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
  [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
  [逐步解說：從 Microsoft Office 組件內嵌類型資訊](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
  [逐步解說：從 Managed 組件內嵌類型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  

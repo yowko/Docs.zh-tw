@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c1565c9321e64536139e02b239fbeb4247a58a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3dec1175715bdbddc3c975924e91e238fa6d5f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish Coclass
 提供介面來發行應用程式定義域和處理序的相關資訊。  
@@ -42,7 +43,7 @@ coclass CorpubPublish {
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |[ICorPublish 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|提供方法讓這些處理序在發佈程序和應用程式定義域的相關資訊。|  
 |[ICorPublishAppDomain 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|代表，並提供有關應用程式定義域的程序中的資訊。|  
@@ -62,5 +63,5 @@ coclass CorpubPublish {
   
  **.NET framework 版本：**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

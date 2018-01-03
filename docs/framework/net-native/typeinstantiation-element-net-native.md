@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 442970c8253147313a38e1a1518219a96ec41945
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5dc19038af220cca63417a331a37d4a7d3b9f96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt; 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型類型。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定類型名稱。|  
 |`Arguments`|一般|必要屬性。 指定泛型類型引數。 如果有多個引數存在，會以逗號分隔。|  
@@ -61,25 +62,25 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*type_name*|類型名稱。 如果這個 `<TypeInstantiation>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素或另一個 `<TypeInstantiation>` 元素的子元素，*type_name* 就可以指定類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。 不裝飾類型名稱。 例如，針對 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 物件，`<TypeInstantiation>` 元素可能會像下面這樣：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>引數屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*type_argument*|指定泛型型別引數。 如果有多個引數存在，會以逗號分隔。 每個引數都必須包含完整的類型名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要為建構的泛型類型套用至此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|將反映原則套用至屬於此類型的事件。|  
 |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|將反映原則套用至屬於此類型的欄位。|  
@@ -92,11 +93,11 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為整個應用程式的類型和類型成員的容器，這些類型和類型成員的中繼資料可在執行階段用於反映。|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。|  
+|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
 |`<TypeInstantiation>`|將反映原則套用至建構的泛型類型及其所有成員。|  
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/21/2017
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

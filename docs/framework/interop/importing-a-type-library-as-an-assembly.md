@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7657540991099cca29dc911c8e42e5ddcd22802
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2866ef2b8f1c869da7c5989e892c1e3a5dd19fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。 這兩種類型資訊的來源有相當大的差異。 本主題描述從型別程式庫產生中繼資料的技術。 產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。  
@@ -78,7 +79,7 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
  如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
  [型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  

@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5eb97ea9db0fa7132b1ed4320bf73d124452c201
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來擷取二進位資料所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 12/02/2017
   
  如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
  [使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

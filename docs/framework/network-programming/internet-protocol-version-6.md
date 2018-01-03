@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版
 網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。 IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。 IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。 以下是目前 IPv4 通訊協定的主要問題：  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  您也可以在 [Technet 的 IPv6 區域](http://go.microsoft.com/fwlink/?LinkID=179658)找到 IPv6 的相關資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IPv6 通訊端範例](http://go.microsoft.com/fwlink/?LinkID=179568)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [通訊端](../../../docs/framework/network-programming/sockets.md)

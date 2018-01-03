@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0245b6b1e30174bb3496d3d6ab674ccc00fb9fee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae13daab0352ad4367c7ad6e06d6c12af23c75bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
 指定組件層級的屬性。  
@@ -58,7 +59,7 @@ HRESULT SetAssemblyProps(
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

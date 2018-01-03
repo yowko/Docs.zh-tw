@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 21edbfee91a759b0b48f9dd6c0c9e900cdff93f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7bfb79c5ab5406793a27f653b7e6a1abf2b2859
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipv6-routing"></a>IPv6 路由
 IPv6 的優點是彈性的路由機制。 因為 IPv4 網路識別碼過去和現在的配置方式，大型的路由表需要由位於網際網路骨幹的路由器維護。 這些路由器必須知道所有路由，才能轉送在網際網路上可能導向至任何節點的封包。 因為其能彙總位址，IPv6 可讓您彈性定址，並大幅降低路由表大小。 在這個新的定址架構中，中繼路由器必須只持續追蹤其網路的本機部分，才能正確地轉寄訊息。  
@@ -42,6 +43,6 @@ IPv6 的優點是彈性的路由機制。 因為 IPv4 網路識別碼過去和�
   
 -   重新導向。 由路由器傳送，以指出傳送節點之特定目的地的下一個較佳躍點位址。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [通訊端](../../../docs/framework/network-programming/sockets.md)

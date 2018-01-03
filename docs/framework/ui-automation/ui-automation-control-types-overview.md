@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c1a424f05f2d57f773e8367e102f553d69b7dc22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 39d76b5d68938569fbe2d5e35230ed70737fdecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自動化控制項類型概觀
 > [!NOTE]
@@ -60,9 +61,9 @@ ms.lasthandoff: 10/18/2017
   
 -   [Document 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
   
--   [編輯控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+-   [Edit 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
   
--   [群組控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+-   [Group 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
   
 -   [Header 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
   
@@ -72,17 +73,17 @@ ms.lasthandoff: 10/18/2017
   
 -   [Image 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
   
--   [清單控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+-   [List 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
   
 -   [ListItem 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
   
--   [功能表控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+-   [Menu 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
   
 -   [MenuBar 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
   
 -   [MenuItem 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
   
--   [窗格控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+-   [Pane 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
   
 -   [ProgressBar 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
   
@@ -90,9 +91,9 @@ ms.lasthandoff: 10/18/2017
   
 -   [ScrollBar 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
   
--   [分隔符號控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+-   [Separator 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
   
--   [滑桿控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+-   [Slider 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
   
 -   [Spinner 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
   
@@ -104,15 +105,15 @@ ms.lasthandoff: 10/18/2017
   
 -   [TabItem 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
   
--   [表格控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+-   [Table 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
   
--   [文字控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+-   [Text 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
   
 -   [Thumb 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
   
 -   [TitleBar 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
   
--   [工具列控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+-   [ToolBar 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
   
 -   [ToolTip 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
   
@@ -122,5 +123,5 @@ ms.lasthandoff: 10/18/2017
   
 -   [Window 控制項類型的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Automation.ControlType>

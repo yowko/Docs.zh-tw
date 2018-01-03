@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4746e2303949ddeabee36e4875e7480467f33e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 868ab986a0f7343e2efd2d4b5f7016d0554084cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>3.5 版中的通訊端效能增強功能
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別已經在版本 3.5 中增強，以供使用非同步網路 I/O 的應用程式使用，以達到最高的效能。 一系列新類別已新增在 <xref:System.Net.Sockets.Socket> 類別的一組增強功能當中，提供另一種非同步模式，可供專業化的高效能通訊端應用程式使用。 這些增強功能專為需要高效能的網路伺服器應用程式而設計。 應用程式可以獨佔方式，使用增強的非同步模式，或是只在其應用程式的目標熱區使用 (例如接收大量資料時)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  新非同步通訊端作業內容物件的存留期，取決於應用程式程式碼中的參考和非同步 I/O 參考。 應用程式不需要在送出作為其中一個非同步通訊端作業方法的參數之後，保留對非同步通訊端作業內容物件的參考。 在完成回呼傳回之前，它會一直被參考。 不過讓應用程式保留內容物件的參考有好處，它可以重複用於未來的非同步通訊端作業。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  

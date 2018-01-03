@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8a822e87f03c4fa7e1ce7449f09efd178b87cc99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="json-web-token-handler"></a>JSON Web 語彙基元處理常式
 適用於 Windows Identity Foundation 的 JSON Web 權杖處理常式擴充功能可讓您在應用程式中建立和驗證 JSON Web 權杖 (JWT)。 如同其他內建安全性權杖處理常式一樣，JWT 權杖處理常式可以設定為在 WIF 管線中執行，但是它也可以單獨用來在輕量型應用程式中執行權杖驗證。 使用 OAuth 2.0 承載權杖配置 (例如驗證 Microsoft Azure Active Directory) 時，JWT 權杖處理常式特別有用。  

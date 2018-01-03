@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0c9a007d88189172e6331c6876f2a18f341cd5cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fdd748da4bb414726e2eae88dcab59cf60259a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-properties-for-clients"></a>用戶端的 UI 自動化屬性
 > [!NOTE]
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(靜態屬性) 具有輸入焦點的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(靜態屬性) 根 <xref:System.Windows.Automation.AutomationElement>。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
  [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
  [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

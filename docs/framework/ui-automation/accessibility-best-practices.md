@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: d8714bb211c649d783cb1cfc46058e3b097def26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83b4c2ae04ab6be1f1a1327649bbf679a24580ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>藉由與裝置無關的呼叫使用標準輸入的 API  
  與裝置無關的呼叫會確保鍵盤和滑鼠功能是否相等，同時提供 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] 關於 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]必要的相關資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Automation.Peers>  
  [NumericUpDown 自訂控制項搭配主題和 UI 自動化支援範例](http://msdn.microsoft.com/en-us/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
  [鍵盤使用者介面設計指導方針](http://msdn2.microsoft.com/library/ms971323.aspx)

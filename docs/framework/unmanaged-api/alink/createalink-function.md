@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a102e9601f751ee8c7e325293e83467b1314ff41
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 54a5afd8ee42fa122f3e18415be0b1d06c2f9302
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createalink-function"></a>CreateALink 函式
 建立組件連結器的執行個體，並設定指定之介面的指標。  
@@ -41,7 +42,7 @@ HRESULT CreateALink (
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`riid`|其中一個組件連結器介面的實體名稱。|  
 |`ppInterface`|成功完成時包含位置的指標`riid`介面。|  
@@ -49,5 +50,5 @@ HRESULT CreateALink (
 ## <a name="requirements"></a>需求  
  **程式庫**: alink.dll  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

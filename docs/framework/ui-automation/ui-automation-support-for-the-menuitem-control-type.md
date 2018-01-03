@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 7b7fbd8f2f667c1a3276267700182fc7d113c73e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe4e46294f10d3b48dcf4162d64047ae2930d777
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="legacy-issues"></a>舊版問題  
  當勾選 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 功能表項目，並可利用程式設計方式判斷是否有必要支援切換模式時，才會支援切換模式。 由於 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 功能表項目不會公開是否能夠勾選，因此當未勾選功能表項目時，會支援叫用模式。 就算是應該只支援叫用模式的功能表項目，也會有一律支援叫用模式的例外狀況。 如此一來，用戶端就不會對支援叫用模式 (未勾選功能表項目時) 的項目一旦變成勾選時，是否就不再支援該模式的問題感到困惑。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Automation.ControlType.MenuItem>  
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  

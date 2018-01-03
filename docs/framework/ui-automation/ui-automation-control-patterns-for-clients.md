@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1d556b3da13b70a0a5e69eb72905e04a01dffa9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45eca9205e56d1245720425c36c6adfacae720a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>用戶端的 UI 自動化控制項模式
 > [!NOTE]
@@ -54,11 +55,11 @@ ms.lasthandoff: 11/21/2017
   
  實作自訂控制項類型的控制項可以有任何控制項模式組合，它們是代表其功能所需的組合。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [使用者介面自動化文字模式](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [叫用控制項使用 UI 自動化](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [取得使用 UI 自動化的核取方塊的切換狀態](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [使用 UI 自動化叫用控制項](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [使用 UI 自動化取得核取方塊的切換狀態](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [TextPattern 插入文字範例](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [TextPattern 搜尋和選取範例](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  

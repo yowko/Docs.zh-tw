@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: aa25f163199652618e35399c6548a9864a17370a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 182f7c1646e112026852efcb5bb110607fe19360
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/18/2017
   
 -   [操作說明：使用表單型驗證建置宣告感知 ASP.NET 應用程式](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)

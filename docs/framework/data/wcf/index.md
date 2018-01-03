@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (之前稱為 "ADO.NET Data Services") 是 .NET Framework 的一個元件，可讓您建立使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]的服務來透過 Web 或內部網路公開及取用資料，其方式是使用[具像狀態傳輸 (REST)](http://go.microsoft.com/fwlink/?LinkId=113919) 的語意。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會將資料公開為可由 URI 定址的資源。 資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會運用[實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)的實體關聯慣例，將資源公開為依關聯性相關的實體集。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [開放式資料通訊協定網站](http://go.microsoft.com/fwlink/?LinkID=184554)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [概觀](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中可取得之特性與功能的概觀。  
   
@@ -131,5 +132,5 @@ ms.lasthandoff: 12/02/2017
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  描述如何使用用戶端程式庫，從 .NET Framework 用戶端應用程式取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Representational State Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919) (具像狀態傳輸 (REST))

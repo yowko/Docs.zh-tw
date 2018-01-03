@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>使映像偵錯更容易
 當編譯 Unmanaged 程式碼時，您可以設定 IDE 參數或命令列選項，設定可執行映像進行偵錯。 例如，您可以在 Visual C++ 中使用 /**Zi** 命令列選項，要求它發出偵錯符號檔 (副檔名為 .pdb)。 同樣地，/**Od** 命令列選項會通知編譯器停用最佳化。 要是此為必要，產生的程式碼執行速度較慢，但更容易偵錯。  
@@ -63,7 +64,7 @@ AllowOptimize=0
 > [!NOTE]
 >  在 .NET Framework 1.0 版中，當指定 **/clr** 和 **/Zi** 編譯器選項時，Microsoft Visual C++ 編譯器會新增 **DebuggableAttribute**。 在 .NET Framework 1.1 版中，您必須在程式碼中手動新增 **DebugabbleAttribute**，或使用 **/ASSEMBLYDEBUG** 連結器選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯、追蹤和程式碼剖析](../../../docs/framework/debug-trace-profile/index.md)  
  [啟用 JIT 附加偵錯](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [啟用分析](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)

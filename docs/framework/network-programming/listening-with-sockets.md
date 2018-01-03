@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listening-with-sockets"></a>透過通訊端接聽
 接聽程式或伺服器通訊端會開啟網路的連接埠，等候用戶端連接到該連接埠。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 網路連線。  
@@ -68,7 +69,7 @@ listener.Listen(100);
   
  **Listen** 方法會採用單一參數，指定在伺服器忙碌錯誤傳回至連線的用戶端之前，允許的**通訊端**暫止連線數目。 在本例中，在伺服器忙碌回應傳回至用戶端編號 101 之前，連線佇列中最多放置 100 個用戶端。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
  [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
  [使用用戶端通訊端](../../../docs/framework/network-programming/using-client-sockets.md)  

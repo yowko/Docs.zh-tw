@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 323c748a8d40158e51a776e4493975c55b117885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fe9f839fedf5a56de66dd887abcfa7db74ad7c79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a>UI 自動化提供者引發事件
 > [!NOTE]
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/18/2017
   
  [!code-csharp[UIAProvider_snip#150](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#150)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: 93db69b67bfac3bcefbc818032aae64df0fd47b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: wiwagn
+ms.openlocfilehash: 60c25de889e5055241486078baf46657b6870afd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-performance-tips"></a>.NET 效能秘訣
 「效能」這個詞一般指的是程式的執行速度。 您有時可以遵循原始程式碼中的特定基本規則來增加執行速度。 在某些程式中，請務必仔細檢查程式碼，並使用程式碼剖析工具，確定以最快速度執行。 在其他程式中，您不需要執行這類最佳化，因為程式碼會以撰寫時的可接受速度快速執行。 本文列出效能可能會降低的一些常見區域和其改善祕訣，以及其他效能主題的連結。 如需效能規劃和測量的詳細資訊，請參閱[效能](../../../docs/framework/performance/index.md)。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [Rico Mariani's Performance Tidbits](http://go.microsoft.com/fwlink/?LinkId=115679) (Rico Mariani 的效能花絮)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [效能](../../../docs/framework/performance/index.md)  
  [程式設計概念](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7216f14fb0b8da27b870fc8e66b24f6d87fcaad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3dea98a381bf468182f24dff27af50e46ad38ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 如果您的應用程式將物件序列化和還原序列化，您可能需要將項目加入至執行階段指示詞 (.rd.xml) 檔案，以確保執行階段有必要的中繼資料存在。 有兩種類別的序列化程式，在執行階段指示詞檔案中，各需要不同的處理：  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
  如需範例中所使用語法的資訊，請參閱 [\<Type> 項目](../../../docs/framework/net-native/type-element-net-native.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99b5af9f33fa92c6e635ee0190893e377724d970
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 資料流支援
 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和應用程式之間的資料流支援 ([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的新功能) 可支援伺服器上非結構化的資料 (文件、影像及媒體檔案)。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料庫可以儲存二進位大型物件 (BLOB)，但擷取 BLOB 可能會佔用很多記憶體。  
@@ -526,5 +527,5 @@ namespace StreamingFromServerToAnother {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

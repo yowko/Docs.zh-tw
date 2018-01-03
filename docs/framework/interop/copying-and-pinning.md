@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-and-pinning"></a>複製和 Pin
 封送處理資料時，Interop 封送處理器可以複製或釘選所封送處理的資料。 複製資料時會將某個記憶體位置中的一份資料放入另一個記憶體位置。 下圖顯示複製實值型別與以傳址方式將類型從 Managed 複製至 Unmanaged 記憶體之間的差異。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
  以傳值方式傳遞 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 時，封送處理器會直接將 **StringBuilder** 的內部緩衝區參考傳遞給呼叫者。 呼叫者和被呼叫者必須同意緩衝區的大小。 呼叫者負責建立長度足夠的 **StringBuilder**。 被呼叫者必須採取必要的預防措施，確保緩衝區未溢位。 **StringBuilder** 是規則的例外狀況，而此規則預設會將以傳值方式傳遞的參考型別傳遞為 In 參數。 它一律會傳遞為 In/Out。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [使用 Interop 封送處理器進行記憶體管理](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
  [方向屬性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  

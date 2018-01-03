@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f996cf730acc355f3bf13287b79581d23e4e6a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90de9dd6bd32eb2142dceb98c142f3c50a0a5691
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 您可以使用 Windows 事件追蹤 (ETW) 來記錄通用語言執行平台 (CLR) 事件。 您可以使用下列工具來建立和檢視追蹤：  
@@ -115,6 +116,6 @@ Provider                                 GUID
   
      這個命令會讓 XPerf 以您可以檢視的逗點分隔值 (CSV) 檔案的形式傾印事件。 因為不同的事件有不同的欄位，所以這個 CSV 檔案中的資料前面會有多行標頭。 每行的第一個欄位都是事件類型，表示應使用哪一行的標頭來判斷其餘的欄位。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 效能工具組](http://go.microsoft.com/fwlink/?LinkID=161141)  
  [Common Language Runtime 中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

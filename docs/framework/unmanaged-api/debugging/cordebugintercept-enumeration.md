@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7d34b5f1bdff7a7089d780645b91503a8464849
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 814ee1285780d5a3b02aa5926ad4628e339a9114
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 列舉
 表示可以攔截這類型的程式碼 (也就是逐步執行)。  
@@ -44,7 +45,7 @@ typedef enum CorDebugIntercept {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`INTERCEPT_NONE`|無法攔截任何程式碼。|  
 |`INTERCEPT_CLASS_INIT`|可以攔截建構函式。|  
@@ -66,5 +67,5 @@ typedef enum CorDebugIntercept {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

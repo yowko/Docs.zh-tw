@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a009f37e1f16646df10e693a10827990b073c65c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 079c3798f17f4929124cd5cb027baa5d40a1167a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012 的識別和存取工具
 本主題說明適用於 Visual Studio 11 的新識別和存取工具。 您可以從下列 URL 下載此工具：[http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849)。或者，您也可以直接在 Visual Studio 11 的延伸模組管理員中搜尋「身分識別」以取得此工具。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/18/2017
   
 -   此工具會利用 Microsoft Azure Access Control Service (ACS) 功能並提供簡易核取方塊清單，其中列出您要使用的所有識別提供者：Facebook、Google、Live ID、Yahoo!、所有 OpenID 提供者以及所有 WS-Federation 提供者。 只要選取識別提供者、按一下 [確定]，然後按 F5，您的應用程式和 ACS 即可自動設定完成，成為 ACS 感知測試應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WIF 功能](../../../docs/framework/security/wif-features.md)

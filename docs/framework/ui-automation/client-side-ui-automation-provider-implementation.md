@@ -17,15 +17,16 @@ caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf8a054b832b1accdfa8e1d63b2d971a10f244b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 作業系統中，包括 [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] 、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，使用數個不同的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]架構。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 會公開使用者介面項目相關資訊給用戶端。 不過， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 本身不會知道這些架構中存在的不同控制項類型，也不具備從這些架構中擷取資訊的必要技術。 它會將這項工作交給稱為提供者的物件。 提供者會從特定控制項擷取資訊，並將該資訊傳遞給 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，再由它以一致的方式呈現給用戶端。  
   
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/21/2017
   
  最後兩個參數為選擇性的。 當用戶端要針對不同應用程式使用不同提供者時，它可以指定目標應用程式的映像名稱。 例如，在支援多個檢視模式的已知應用程式中，用戶端可以針對 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 清單檢視控制項使用一個提供者，而在另一個不支援多個檢視模式的已知應用程式中，則針對類似控制項使用另一個提供者。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立用戶端 UI 自動化提供者](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
  [在用戶端應用程式中實作 UI 自動化提供者](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

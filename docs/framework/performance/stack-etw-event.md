@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 55219fe755f49b6edbd3b53cc686bf4f9087aa08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1107c6608fe5136eb6159b1d4f0a438e95c4dabb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stack-etw-event"></a>堆疊 ETW 事件
 堆疊事件應該搭配其他事件一起使用，以在引發事件之後產生堆疊追蹤。 它會在啟用執行階段提供者時記錄。 這是非常高頻率的事件，因為每當引發另一個執行階段事件時，就會引發此事件。 基於這個理由，我們建議您小心使用此事件。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/18/2017
 |FrameCount|win:UInt32|堆疊追蹤裡的框架數。|  
 |堆疊|win:Pointer|指令指標的資料行。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

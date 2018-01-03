@@ -36,11 +36,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01d4fd0fbeeb0f111505fde0f8154c54b2bdcc38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipv6-addressing"></a>IPv6 定址
 網際網路通訊協定第 6 版 (IPv6) 的位址長度為 128 個位元長。 使用這類大型位址空間的其中一個原因是，將可用的位址細分到路由網域的階層，反映網際網路的拓撲。 另一個原因是，將連線裝置之網路網路介面卡 (或介面) 的位址對應至網路。 IPv6 特有的固有功能，是在其最低層級解析位址，即網路介面層級，且也擁有自動組態功能。  
@@ -81,6 +82,6 @@ ms.lasthandoff: 11/21/2017
   
  一般情況下，節點一律會有連結-本機位址。 它可能有網站-本機位址和一或多個全域位址。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [通訊端](../../../docs/framework/network-programming/sockets.md)

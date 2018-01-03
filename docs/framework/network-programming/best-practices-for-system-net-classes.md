@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e50df22f66d4d55298aad5f3cc501dfb39ffcd9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 83254955138c99ec0187e5cf74566266c2ecb303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 類別的最佳作法
 下列建議將協助您善加利用 <xref:System.Net> 中所含的類別：  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/18/2017
   
 -   存取需要認證的網站時，請使用 <xref:System.Net.CredentialCache> 類別建立認證的快取，而不是每個要求都提供它們。 **CredentialCache** 類別會搜尋快取，以透過要求找到要呈現的適當認證，讓您不需要負責根據 URL 來建立和呈現認證。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

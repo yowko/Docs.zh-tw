@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f4e4eebce1779f1b32a74819fea19fb23204b80c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c486faf43a1109b0391f40072ab267b72e1d07d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Application&gt; 項目 (.NET Native)
 做為容器，以包含整個應用程式中，可在執行階段將中繼資料用於反映的類型和類型成員，並將執行階段反映原則套用至應用程式中的所有程式元素。  
@@ -41,11 +42,11 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。 在「子元素」表格中，原則會指出可在執行階段供特定程式元素使用的中繼資料種類。  
+ 下列各節描述屬性、子項目和父項目。 在「子元素」表格中，原則會指出可在執行階段供特定程式元素使用的中繼資料種類。  
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
 |`Browse`|反射|選擇性屬性。 控制對類型相關資訊的查詢，或控制類型的列舉，但不會在執行階段啟用任何動態存取。|  
@@ -60,13 +61,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要讓這個原則在應用程式中套用至類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將原則套用至特定組件中的所有類型。|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將原則套用至特定命名空間中的所有類型。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|執行階段指示詞檔案的根項目。|  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
 -   做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 `<Application>` 元素的屬性會定義整個應用程式原則，這可能會被 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定義的子元素覆寫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<文件庫 > 項目](../../../docs/framework/net-native/library-element-net-native.md)  
  [\<指示詞 > 項目](../../../docs/framework/net-native/directives-element-net-native.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  

@@ -15,11 +15,12 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 165536656f0de6b53680565bee93f0bb8d607d48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b0a6d6a2a8139127b46484f972eb797642b4ee53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>限定互通的 .NET 類型
 如果您想要向 COM 應用程式公開組件中的類型，請考慮設計階段的 COM Interop 需求。 當您遵守下列方針時，Managed 類型 (類別、介面、結構和列舉) 會與 COM 類型緊密整合：  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
   
  匯出至 COM 時，會壓平合併 Managed 類型的繼承階層。 Managed 與 Unmanaged 環境之間的版本設定不同。 向 COM 公開之類型與其他 Managed 類型的版本設定特性不同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [類別介面簡介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  

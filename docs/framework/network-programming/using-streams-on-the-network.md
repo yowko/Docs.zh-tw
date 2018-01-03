@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f6cf68115f69e7238d2bec226258ab06c417d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-streams-on-the-network"></a>在網路上使用資料流
 網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  
@@ -111,6 +112,6 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)

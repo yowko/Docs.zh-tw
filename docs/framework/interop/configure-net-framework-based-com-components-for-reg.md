@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a704930f707895e7f343566fab544e2f8b32b22c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -115,9 +116,9 @@ ms.lasthandoff: 11/21/2017
   
     |屬性|描述|必要|  
     |---------------|-----------------|--------------|  
-    |`clsid`|指定要啟用之類別的識別碼。|是|  
+    |`clsid`|指定要啟用之類別的識別碼。|[是]|  
     |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
-    |`name`|代表 Managed 類別的字串。|是|  
+    |`name`|代表 Managed 類別的字串。|[是]|  
     |`progid`|要用於晚期繫結啟用的識別碼。|否|  
     |`threadingModel`|COM 執行緒模型。 「兩者」都是預設值。|否|  
     |`runtimeVersion`|指定要使用的 Common Language Runtime (CLR) 版本。 如果您未指定此屬性，而且尚未載入 CLR，則會載入具有 CLR 第 4 版前之最新已安裝 CLR 的元件。 如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動向前復原至 CLR 版本 4 之前的最新已安裝 CLR 版本 (通常是 v2.0.50727)。 如果已載入另一個版本的 CLR，並且可以透過並存同處理序方式載入指定的版本，則會載入指定的版本；否則，會使用載入的 CLR。 這可能會造成載入失敗。|否|  
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
      同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [免註冊的 COM Interop](../../../docs/framework/interop/registration-free-com-interop.md)  
  [免註冊 COM Interop 的需求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
  [設定 COM 元件，免註冊啟動](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  

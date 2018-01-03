@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1af6fc1b7802fe69f0585011322e2485695a030c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：啟用 WCF Web 服務應用程式的 WIF
 ## <a name="applies-to"></a>適用於  
@@ -153,7 +154,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  以滑鼠右鍵按一下 [Client] 專案底下的 [參考]，然後按一下 [加入服務參考]。  
   
-4.  在 [加入服務參考] 視窗中，按一下 [探索] 按鈕上的下拉箭號，然後按一下 [方案中的服務]。 [位址] 會自動填入您稍早建立的 WCF 服務，而 [命名空間] 則會設定為 **ServiceReference1**。 按一下 [確定]。  
+4.  在 [加入服務參考] 視窗中，按一下 [探索] 按鈕上的下拉箭號，然後按一下 [方案中的服務]。 [位址] 會自動填入您稍早建立的 WCF 服務，而 [命名空間] 則會設定為 **ServiceReference1**。 按一下 [確定 **Deploying Office Solutions**]。  
   
     > [!IMPORTANT]
     >  當您將服務參考新增至用戶端時，**TestService** 和 **LocalSTS** 都必須是在執行中。  

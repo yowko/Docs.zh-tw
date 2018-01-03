@@ -16,15 +16,16 @@ caps.latest.revision: "32"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1dfb4c1acd12b58d5c4f032ebe0ad8c56fc0db87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 30aac15a4394a8008e2c1f89dce76dd134acf7b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題描述如何[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]事件由使用者介面自動化用戶端。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
  在關閉，或當[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件不會再感興趣的應用程式、 使用者介面自動化用戶端應該呼叫下列方法之一。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|移除註冊使用已註冊的事件處理常式<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|移除註冊使用已註冊的事件處理常式<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>。|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  如需範例程式碼，請參閱[訂閱使用者介面自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
  [UI 自動化事件概觀](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
  [UI 自動化屬性概觀](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  

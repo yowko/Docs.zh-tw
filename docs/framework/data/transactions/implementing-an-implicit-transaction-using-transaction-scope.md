@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7733543fa1120d4cd8409fe131ddaffa7a76be41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
 <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
@@ -177,6 +178,6 @@ using(TransactionScope scope1 = new TransactionScope())
 ## <a name="interop-with-com"></a>和 COM+ 互通  
  當您建立新的 <xref:System.Transactions.TransactionScope> 執行個體時，可以使用其中一個建構函式中的 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別來指定與 COM+ 的互動方式。 如需詳細資訊，請參閱[互通性與 Enterprise Services 和 COM + 交易](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Transactions.Transaction.Clone%2A>  
  <xref:System.Transactions.TransactionScope>

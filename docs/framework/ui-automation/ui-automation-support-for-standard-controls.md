@@ -16,15 +16,16 @@ caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 71a5a2e4319debf1a4d8ddd08d7f0979443682b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
->  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題將說明針對 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]和 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]架構所開發的應用程式中，其標準控制項的 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 支援。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/18/2017
 |ToolbarWindow32|Separator|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
-|ReBarWindow32|ToolBar|  
+|ReBarWindow32|工具列|  
 |SysTreeView32|樹狀結構|  
 |SysTreeView32|TreeItem|  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/18/2017
 |SysDateTimePick32|自訂|  
 |SysMonthCal32|行事曆|  
 |MS_WINNOTE|ToolTip|  
-|VBBubble|ToolTip|  
+|VBBubble|工具提示|  
 |ScrollBar (當做獨立控制項使用時)|滑桿|  
 |SuperGrid|自訂|  
   
@@ -177,5 +178,5 @@ ms.lasthandoff: 10/18/2017
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>另請參閱  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>請參閱  
+ [UI 自動化控制項類型](../../../docs/framework/ui-automation/ui-automation-control-types.md)

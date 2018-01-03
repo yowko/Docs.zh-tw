@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 073a526e72f46864b2e08d33ec14a53034c144b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a34e49e4d11f442f15db2f06b330b8b84a165a08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblygt-element-net-native"></a>&lt;Assembly&gt; 項目 (.NET Native)
 將執行階段反映原則套用至指定組件中的所有類型。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定組件的簡單名稱。|  
 |`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
@@ -59,19 +60,19 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*assembly_name*|組件的簡單名稱，不包含其副檔名。 這個屬性 (Attribute) 會對應至 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性 (Property)。 例如，名為 Extensions.dll 之組件的名稱是 "Extensions"。<br /><br /> 您也可以指定常值字串 `*Application*`，以將原則套用至應用程式套件中的所有組件 (無論這些組件是否已載入)。 `*Application*` 永遠不會將原則套用至 .NET Framework 組件。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|針對組件中的所有類型，要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至子命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型。|  
@@ -79,10 +80,10 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為整個應用程式的類型和類型成員的容器，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 元素可以有零、一或多個 `<Assembly>` 元素。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
+|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
   
 ## <a name="remarks"></a>備註  
  `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 其不同於 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素，後者會指定程式庫，但會依據其子元素來定義執行階段反映原則。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  `Activate`、`Browse`、`Dynamic` 和 `Serialize` 都是選用屬性。 不過，`<Assembly>` 元素必須包含至少其中一個屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

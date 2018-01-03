@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 793158ef63a0de27786dc8bd9b306f10c228054e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 924cfec87b99cba9621af02d4e78e72094060ae8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列舉
 提供如何取得指令指標 (IP) 值的詳細資料。  
@@ -43,7 +44,7 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|原生程式碼是在初構中，因此 IP 值為 0。|  
 |`MAPPING_EPILOG`|原生程式碼處於終解中，因此 IP 值是方法的最後一個指令的位址。|  
@@ -64,5 +65,5 @@ typedef enum CorDebugMappingResult {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

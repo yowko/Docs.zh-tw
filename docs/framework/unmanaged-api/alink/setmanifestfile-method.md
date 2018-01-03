@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 807452326193d193f3bc603ebc7b74a5a0f1c281
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cf48153454fbb2c24dc3f1cfe1f82deefa4ee723
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
 可讓您指定或重設連結器會使用時，它會建立組件資訊清單檔案。  
@@ -50,7 +51,7 @@ HRESULT SetManifestFile(
 ## <a name="requirements"></a>需求  
  需要 aLink.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IALink3 介面](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b33a86eb235524ed9cbe5e07dd6625fedf884411
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cf205ef1707cee81e741f71d3dce771e53caee93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 追蹤 ETW 事件
 <a name="top"></a> 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。  
@@ -157,5 +158,5 @@ ms.lasthandoff: 10/18/2017
 |TailCallType|win:UnicodeString|Tail 呼叫的類型。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

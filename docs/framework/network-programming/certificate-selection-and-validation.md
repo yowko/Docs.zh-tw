@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db75c3288b8247f0717c4792c57bfb30bb2e4416
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54d1409b74793a8539f432ce0b43f410d578e934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-selection-and-validation"></a>憑證的選取和驗證
 <xref:System.Net> 類別支援數種方式來選取並驗證 <xref:System.Security.Cryptography.X509Certificates>，以進行安全通訊端層 (SSL) 連線。 用戶端可以選取一或多個憑證，以向伺服器驗證它自己。 伺服器可能需要用戶端憑證具有一或多個特定屬性，來進行驗證。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
   
  除了這些工具之外，<xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別還會提供從檔案系統載入憑證的方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

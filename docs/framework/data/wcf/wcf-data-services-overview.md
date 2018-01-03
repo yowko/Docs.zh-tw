@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88d586ead18e4129707728733029c735083b477c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c98ecc987f4710d344f6eab07563a14cbf4d9962
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]建立及取用 Web 或內部的資料服務會使用啟用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題提供 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所定義的模式和作法概觀以及 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所提供的功能，以便在 .NET Framework 應用程式中充分利用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
  ![WCF 資料服務架構圖表](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  

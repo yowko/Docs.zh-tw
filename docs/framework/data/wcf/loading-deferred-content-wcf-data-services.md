@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>載入延後內容 (WCF 資料服務)
 根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會限制查詢傳回的資料量。 不過，您可以在需要時，從資料服務明確載入其他資料，包括相關實體、分頁回應資料以及二進位資料流。 本主題描述如何將這些延後的內容載入至應用程式。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="binary-data-streams"></a>二進位資料流  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您存取二進位大型物件 (BLOB) 資料，做為資料流。 資料流會延後二進位資料的載入，直到需要為止，因此用戶端可以更有效地處理這些資料。 為了利用這個功能，資料服務必須實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者。 如需詳細資訊，請參閱[資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。 啟用資料流時，將會傳回沒有相關二進位資料的實體類型。 在此情況下，您必須使用<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>方法<xref:System.Data.Services.Client.DataServiceContext>類別，以從服務存取二進位資料的資料流。 同樣地，使用 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 方法，可加入或變更實體的二進位資料，作為資料流。 如需詳細資訊，請參閱[使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

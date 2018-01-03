@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b21e50c86a09092e7df65e5fddefb515f6838b2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 65e970563ec3958deddb0aa1d89e10b0da70f0a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 列舉
 識別堆疊框架的類型。 這個列舉型別由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。  
@@ -49,7 +50,7 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|null 值。 `ICorDebugInternalFrame::GetFrameType`方法不會傳回此值。|  
 |`STUBFRAME_M2U`|管理至 unmanaged 的虛設常式的框架。|  
@@ -72,5 +73,5 @@ typedef enum CorDebugInternalFrameType {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

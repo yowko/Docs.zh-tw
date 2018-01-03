@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6a5f9d115c601775cc4f5b1c61d71d739f7a405b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自動化用戶端的控制項模式對應
 > [!NOTE]
@@ -86,5 +87,5 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  如果控制項類型沒有所列的受支援控制項模式，但有一或多個有條件支援的控制項模式，就會一律支援其中一個條件式控制項模式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

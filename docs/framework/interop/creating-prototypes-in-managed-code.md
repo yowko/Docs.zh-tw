@@ -28,11 +28,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 59cfb9160ccd84c41d71ad29b417b05fb4a17233
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來標註方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
@@ -87,7 +88,7 @@ using namespace System::Runtime::InteropServices;
   
  下表列出一組平台叫用的完整屬性欄位。 在每個欄位裡，資料表包含預設值以及連結，關於如何使用這些欄位來定義 Unmanaged DLL 函式的詳細資訊。  
   
-|欄位|說明|  
+|欄位|描述|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|啟用或停用自動調整對應。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定用來傳遞方法引數的呼叫慣例。 預設值是 `WinAPI` ，它對應至適用於 32 位元 Intel 平台的 `__stdcall` 。|  
@@ -229,7 +230,7 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
  [指定進入點](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [指定字元集](../../../docs/framework/interop/specifying-a-character-set.md)  

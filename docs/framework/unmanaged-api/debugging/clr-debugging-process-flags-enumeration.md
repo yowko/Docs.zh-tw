@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5040b1e1eb7ec4bd814329de156fcdfeb9c383c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c6d66f9a11f28ca572e0f1eddc74f3a5197a19d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列舉
 提供值，可供[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
@@ -40,7 +41,7 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|此執行階段已傳送的非 catch 向上 managed 偵錯工具事件。 請參閱 < 備註 > 一節，區別趕上和非 catch 向上事件。|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|已暫止 managed 的事件是<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>要求。|  
@@ -59,6 +60,6 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

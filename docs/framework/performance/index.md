@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: aa4db0e3e136eee1d2037ad6041ac6945d313776
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[.NET Framework 應用程式中的快取](../../../docs/framework/performance/caching-in-net-framework-applications.md)|描述用於提升應用程式效能的快取資料技術。|  
 |[延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)|描述如何視需要初始化物件以提升效能，特別是在應用程式啟動時。|  

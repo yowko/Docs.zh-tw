@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d29321297a880ca961805687e51c7bb63f70ffbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d59f30e71001adee0e6e1e68be3cf9cfd1952161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 問題和例外狀況
 <xref:System.Net.WebRequest> 和其衍生的類別 (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>和 <xref:System.Net.FileWebRequest>) 會擲回例外狀況，以表示發生異常狀況。 有時候這些問題的解決方式並不明顯。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="solutions"></a>方案  
  請檢查 <xref:System.Net.WebException> 的 <xref:System.Net.WebException.Status%2A> 屬性來判斷問題。 下表顯示數個狀態值和一些可能的解決方式。  
   
-|狀態|詳細資料|解決方式|  
+|狀態|詳細資料|方案|  
 |------------|-------------|--------------|  
 |<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> -或-<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|基礎通訊端有問題。 連接可能已重設。|重新連線，然後重新傳送要求。<br /><br /> 確定已安裝最新的 Service Pack。<br /><br /> 增加 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType> 屬性的值。<br /><br /> 請設定 <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> 為 `false`。<br /><br /> 使用 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 屬性增加最大連線數目。<br /><br /> 檢查 Proxy 設定。<br /><br /> 如果使用 SSL，請確定伺服器處理序有權存取憑證存放區。<br /><br /> 如果要傳送大量資料，請將 <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> 設為 `false`。|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|無法驗證伺服器憑證。|嘗試使用 Internet Explorer 開啟 URI。 解決 IE 顯示的任何安全性警示。 如果您無法解決安全性警示，可以建立憑證原則類別，實作 <xref:System.Net.ICertificatePolicy> 以傳回 `true`，並將它傳遞給 <xref:System.Net.ServicePointManager.CertificatePolicy%2A>。<br /><br /> 請參閱 [http://support.microsoft.com/?id=823177](http://go.microsoft.com/fwlink/?LinkID=179653)。<br /><br /> 請確定簽署伺服器憑證之憑證授權單位的憑證，已新增在 Internet Explorer 的 [信任的憑證授權單位] 清單。<br /><br /> 請確定 URL 中的主機名稱符合伺服器憑證上的一般名稱。|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|網域名稱服務無法解析 Proxy 主機名稱。|正確設定 Proxy。 請參閱 [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655)。<br /><br /> 藉由將 <xref:System.Net.HttpWebRequest.Proxy%2A> 屬性設為 `null`，強制 <xref:System.Net.HttpWebRequest> 不要使用 Proxy。|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|伺服器的回應不是有效的 HTTP 回應。 .NET Framework 偵測到伺服器回應不符合 HTTP 1.1 RFC 時，就會發生這個問題。 回應包含不正確的標頭或不正確的標頭分隔符號時，可能會發生這個問題。RFC 2616 定義了 HTTP 1.1 和伺服器回應的有效格式。 如需詳細資訊，請參閱 [http://www.ietf.org](http://go.microsoft.com/fwlink/?LinkID=147388)。|取得交易的網路追蹤，並檢查回應中的標頭。<br /><br /> 如果您的應用程式需要伺服器回應而不剖析 (這可能是個安全性問題)，請在組態檔中將 `useUnsafeHeaderParsing` 設為 `true`。 請參閱 [\<httpWebRequest> 元素 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.HttpWebRequest>  
  <xref:System.Net.HttpWebResponse>  
  <xref:System.Net.Dns>

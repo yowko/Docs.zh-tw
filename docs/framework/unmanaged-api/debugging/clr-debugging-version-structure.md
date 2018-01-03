@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 98124b7b9efb2c92ebee6b6e99f73edc6cf173a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 092024f3f4e6fc1bc923ae2a299c5d9c21f1b1b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 結構
 定義用來偵錯之工具通用語言執行平台 (CLR) 的產品版本。  
@@ -43,7 +44,7 @@ WORD wRevision;
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`wStructVersion`|結構版本號碼|  
 |`wMajor`|主要版本號碼。|  
@@ -63,6 +64,6 @@ WORD wRevision;
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3f7bd3991fa57f11674b7ef0b9b62d12376fa765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9cc61d0bc32545b486f4472904b17ed0b59526e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporttype-method"></a>ExportType 方法
 指定類型為可匯出。  
@@ -66,7 +67,7 @@ HRESULT ExportType(
 ## <a name="requirements"></a>需求  
  需要 alink.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

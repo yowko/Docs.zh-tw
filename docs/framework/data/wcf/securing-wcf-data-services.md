@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93638fc9287b3b44ec066c51b9599d991f9b046d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-wcf-data-services"></a>保護 WCF Data Services 的安全
 本主題描述與開發、部署和執行 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，以及存取支援 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 之服務的應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="authentication-options-for-a-wcf-data-service"></a>用於 WCF Data Service 的驗證選項  
  下表列出了一些驗證機制，可協助您驗證 WCF Data Service 的要求。  
   
-|驗證選項|說明|  
+|驗證選項|描述|  
 |----------------------------|-----------------|  
 |匿名驗證|啟用 HTTP 匿名驗證時，任何原則都可以連線至資料服務。 匿名存取不需要認證。 只有在您想要允許任何人存取資料服務時，才使用此選項。|  
 |基本和摘要式驗證|驗證需要使用者名稱和密碼所組成的認證。 支援非 Windows 用戶端的驗證。 **安全性注意事項：**基本驗證認證 （使用者名稱和密碼） 會以純傳送，而且可以被攔截。 摘要式驗證會根據所提供的認證傳送雜湊，這讓它比基本驗證更安全。 兩者都很容易受到攔截式攻擊。 使用這些驗證方法時，您應該考慮使用安全通訊端層 (SSL)，加密用戶端與資料服務之間的通訊。 <br /><br /> Microsoft Internet Information Services (IIS) 會在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中，針對 HTTP 要求，同時提供基本和摘要式驗證的實作。 這個 Windows 驗證提供者實作可讓 .NET Framework 用戶端應用程式將要求之 HTTP 標頭中的認證提供給資料服務，以便密切地交涉 Windows 使用者的驗證。 如需詳細資訊，請參閱[摘要式驗證技術參考](http://go.microsoft.com/fwlink/?LinkId=200408)。<br /><br /> 當您想要讓您的資料服務根據 Windows 認證之外的特定自訂驗證服務使用基本驗證時，您必須實作一個自訂 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP 模組以進行驗證。<br /><br /> [!INCLUDE[crexample](../../../../includes/crexample-md.md)]如何使用自訂的基本驗證配置與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱文章[自訂的基本驗證](http://go.microsoft.com/fwlink/?LinkID=200388)中[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]和驗證數列。|  
@@ -120,6 +121,6 @@ context.Credentials = _
   
 -   建議用戶端應用程式一律驗證使用者輸入，以及接受自不受信任之服務的資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

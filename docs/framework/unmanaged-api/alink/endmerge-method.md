@@ -21,11 +21,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f29abf03c636fc552fe550534ca1b1395b43aae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58e9cecae43fb69f1ce2e90eb9d6551d287ca7b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endmerge-method"></a>EndMerge 方法
 表示所有自訂屬性，已合併到發出範圍。  
@@ -48,7 +49,7 @@ HRESULT EndMerge(
 ## <a name="requirements"></a>需求  
  需要 alink.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

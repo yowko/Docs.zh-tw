@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 057aed4012a884ea13806a4d1174d53dd27ab609
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e675681d1de3aa46645047da61ae8aac2ea0ba31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -82,9 +83,9 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允許用戶端對不支援範圍值的控制項，取得或設定一個值。 例如日期時間選擇器。|  
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開視窗 ( [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統的基本概念) 的特定資訊。 視窗控制項範例包括最上層應用程式視窗 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等等)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子視窗和對話方塊。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [用戶端的使用者介面自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+ [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

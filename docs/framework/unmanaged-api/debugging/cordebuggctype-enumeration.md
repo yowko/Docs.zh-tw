@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 14d6f28c2e5fa356c7f406ffb4c2787f0ace500a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2045c2edd129c2e4154d24b43d96f6ea8ad64cab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列舉
 指出記憶體回收行程是在工作站或伺服器上執行。  
@@ -41,7 +42,7 @@ typedef enum CorDebugGCType {
   
 ## <a name="members"></a>成員  
   
-|成員名稱|說明|  
+|成員名稱|描述|  
 |-----------------|-----------------|  
 |`CorDebugWorkstationGC`|在工作站上執行記憶體回收行程。|  
 |`CorDebugServerGC`|記憶體回收行程在伺服器上執行。|  
@@ -57,5 +58,5 @@ typedef enum CorDebugGCType {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

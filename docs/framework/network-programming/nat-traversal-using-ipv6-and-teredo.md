@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 466e3faed9b2877671ca265afdb613607b12f0de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7de0deafa8eea5aa69d368a740b245e84470e137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 周遊
 已進行支援網路位址轉譯 (NAT) 周遊的增強功能。 這些變更設計成與 IPv6 和 Teredo 搭配使用，但也適用於其他 IP 通道技術。 這些增強功能會影響 <xref:System.Net> 和相關命名空間中的類別。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  針對使用 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 和相關類別的應用程式，可以搭配使用 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 和 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 方法與 <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> 通訊端選項來查詢、啟用或停用 NAT 周遊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>  
  <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>  
  <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>  

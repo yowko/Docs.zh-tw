@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1662e5b0f8afd4ef92d2893a11c25457dbce024
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 與 Kerberos 驗證
 預設 NTLM 驗證和 Kerberos 驗證使用與呼叫端應用程式建立關聯的 Microsoft Windows NT 使用者認證，以嘗試向伺服器進行驗證。 使用非預設 NTLM 驗證時，應用程式會將驗證類型設為 NTLM，並使用 <xref:System.Net.NetworkCredential> 物件將使用者名稱、密碼和網域傳遞給主機，如下列範例所示。  
@@ -71,6 +72,6 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 > [!NOTE]
 >  NTLM 驗證未透過 Proxy 伺服器進行運作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本和摘要式驗證](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [網際網路驗證](../../../docs/framework/network-programming/internet-authentication.md)

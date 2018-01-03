@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1fc7a5d74c6842f94d841b006e444fda3bb4a1e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d459ac318f2c4a3911830d08e26b31ae5366e896
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 產生主要 Interop 組件
 有兩種方式可產生主要 Interop 組件：  
@@ -75,5 +76,5 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：登錄主要 Interop 組件](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

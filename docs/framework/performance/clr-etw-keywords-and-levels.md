@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 關鍵字和層級
 <a name="top"></a> Windows 事件追蹤 (ETW) 的事件可依分類和層級篩選。 事件 [CLR ETW 關鍵字](#keywords) 可以依分類啟用事件篩選；這些在執行階段和取消提供者時會加以組合使用。 [事件層級](#levels) 會標以旗標識別。  
@@ -130,7 +131,7 @@ ms.lasthandoff: 11/21/2017
   
  0x0 - 永遠記錄  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CLR ETW 提供者](../../../docs/framework/performance/clr-etw-providers.md)  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)  
  [Common Language Runtime 中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

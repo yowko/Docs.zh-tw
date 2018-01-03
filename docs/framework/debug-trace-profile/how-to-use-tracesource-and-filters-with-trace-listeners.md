@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4b557a9f9f462df2d1afe6d6b61871e0e9f40174
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 559926fffa52b234dda25ba2f0fd658aa2382c16
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：使用 TraceSource 和含有追蹤接聽項的篩選條件
 .NET Framework 2.0 版的其中一個新功能是增強型追蹤系統。 基本的前提不變：追蹤訊息透過接聽項的參數來傳送，將資料報告給關聯的輸出媒體。 2.0 版的主要不同之處是可以透過 <xref:System.Diagnostics.TraceSource> 類別的執行個體來起始追蹤。 <xref:System.Diagnostics.TraceSource> 類別預期作為增強型追蹤系統，並可用來取代較舊之 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 追蹤類別的靜態方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別仍然存在，但建議的做法是使用 <xref:System.Diagnostics.TraceSource> 類別進行追蹤。  
@@ -171,10 +172,10 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [如何： 建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [如何：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)

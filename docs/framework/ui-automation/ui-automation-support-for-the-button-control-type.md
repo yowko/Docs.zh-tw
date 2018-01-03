@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 54d00506a252c40bf3c8a67d5a228eae72e6464e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f9f2cb6ad3eb86fe60566fa19ecd59903d2c1d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>Button 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|如果此控制項支援叫用控制項模式，就必須支援這個事件。|  
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|視情況而定|如果此控制項支援切換控制項模式，就必須支援這個事件。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Automation.ControlType.Button>  
  [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

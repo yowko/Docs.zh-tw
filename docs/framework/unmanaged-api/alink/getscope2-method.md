@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 143d1d7cfd6f99a662fd7a79e2e2fa629f74967a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e57ce8fbe0b8e60c9f6f6295e9331c571aedf92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
 取得匯入範圍。  
@@ -58,7 +59,7 @@ HRESULT GetScope2(
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

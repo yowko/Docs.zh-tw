@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8313a6b06387f6fd0a5f95191ea57bdf034c372
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 6ad262c2c813b5baa9dbde475e40cd445bd06701
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Common Language Runtime 中的 ETW 事件
 Common language runtime (CLR) 透過各式各樣的偵錯和分析事件，提供有用的 Windows 事件追蹤 (ETW) 診斷資訊。 CLR ETW 事件會運用 Windows ETW 追蹤系統，來增強 Common Language Runtime 提供的現有分析和偵錯支援。  
@@ -30,7 +31,7 @@ Common language runtime (CLR) 透過各式各樣的偵錯和分析事件，提�
   
  這些事件主題中所描述的所有事件都需要 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (含) 以後版本。 Windows Vista 作業系統是支援的最低需求用戶端，而 Windows Server 2008 是支援的最低需求伺服器。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)  
  描述擷取及檢視 ETW 事件的工具與命令。  
   
@@ -43,5 +44,5 @@ Common language runtime (CLR) 透過各式各樣的偵錯和分析事件，提�
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)  
  提供 CLR ETW 事件、其關鍵字、層級和事件資料的詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Framework 中的 ETW 事件](../../../docs/framework/performance/etw-events.md)

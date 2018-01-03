@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4adcc157f4d79898a0418219993681920eb92965
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自動化提供者概觀
 > [!NOTE]
@@ -86,5 +87,5 @@ ms.lasthandoff: 10/18/2017
   
  片段的裝載對於提供 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 服務扮演重要角色， 可在片段根目錄中進行巡覽並提供某些預設屬性，讓自訂提供者不需要進行實作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

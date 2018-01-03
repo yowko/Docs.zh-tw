@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c682c75d4be78e9219a32e2a92520e9f9bfff823
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 601118d2dcc42f9e35da0e24c782b218efd7a025
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>&lt;GenericParameter&gt; 項目 (.NET Native)
 將原則套用到泛型類型或方法的參數類型。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 泛型參數的名稱。 例如，針對泛型委派的 <xref:System.Func%603>，`Name` 屬性的值是 "TResult"，以將執行階段原則套用至委派的傳回值。|  
 |`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
@@ -59,13 +60,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*generic_parameter_name*|必要屬性。 泛型類型參數的名稱。 例如，針對泛型委派的 <xref:System.Func%603>，"TResult" 的 *generic_parameter_name* 值會將執行階段原則套用至委派的傳回值。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/21/2017
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)  
  [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  

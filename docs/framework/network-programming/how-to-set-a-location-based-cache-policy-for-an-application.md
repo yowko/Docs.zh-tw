@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a145bf30930c9be81dc92f3a9f1eebda046b7e8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d54a34b5d7cf40a6eaa9d777b9b05a1be34f177
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：為應用程式設定以位置為基礎的快取原則
 以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
@@ -162,7 +163,7 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  

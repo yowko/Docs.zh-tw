@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a7e28eeabecfe0f1043328618f6e1be143f198a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: abf6e6896267b6d1c8449b020230381923f38f1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-etw-events"></a>安全性 ETW 事件
 <a name="top"></a> 強式名稱驗證和 Authenticode 驗證期間，會引發安全性事件。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/18/2017
 |ModulePath|win:UnicodeString|模組路徑。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

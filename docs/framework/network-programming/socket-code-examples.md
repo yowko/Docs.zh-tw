@@ -24,16 +24,17 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ac2363ce7c2affcc0b56f7ce8b9d41180b4c3a1f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df4a7711f3968616315af757e5f2c48650f9e0f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="socket-code-examples"></a>通訊端程式碼範例
 下列程式碼範例示範如何使用 <xref:System.Net.Sockets.Socket> 類別作為用戶端連接到遠端網路服務，以及作為伺服器接聽來自遠端用戶端的連線。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
  示範如何實作同步的 <xref:System.Net.Sockets.Socket> 用戶端，連接到伺服器，並顯示從伺服器傳回的資料。  
   

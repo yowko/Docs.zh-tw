@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 <a name="top"></a> Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。 Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [相關主題](#related_topics)  
   
--   [參考](#reference)  
+-   [參考資料](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>平台叫用和 COM Interop 模型  
@@ -151,7 +152,7 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)|描述 Interop 封送處理服務用來封送處理資料的規則。|  
 |[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|描述如何宣告方法參數，以及將引數傳遞給 Unmanaged 程式庫所匯出的函式。|  

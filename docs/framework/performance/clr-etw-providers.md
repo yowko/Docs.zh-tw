@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 18353939108d58eb2aaffee97e059e4430b25e3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b76b3a1d4969a5ed81e5fa90afb06050b780804
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
@@ -99,5 +100,5 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
  工具可以執行步驟 2 和 3 (啟動取消工作階段，然後終止分析)，而不是在使用者要求停止分析時立即關閉分析。 工具也可以執行步驟 4。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Common Language Runtime 中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

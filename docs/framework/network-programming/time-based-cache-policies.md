@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4cfa67d7fba06140838e04bdbff71102a2a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f712f223ef5787e50ef6a0c26949ff99c13dee33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="time-based-cache-policies"></a>以時間為基礎的快取原則
 以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在 [http://www.ietf.org](http://www.ietf.org/) 取得。如需示範如何為 HTTP 資源設定以時間為基礎之預設原則的程式碼範例，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [快取原則互動 - 最長使用期限和最小有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bcd971853707349bf0d60459cb46b0fea1e8a97b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 476d9dcb1c6700833b0a113028bdaaf0c5a375c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT 結構
 提供 Managed 堆積上的物件相關資訊。  
@@ -40,7 +41,7 @@ typedef struct _COR_HEAPOBJECT {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`address`|在記憶體中物件的位址。|  
 |`size`|物件，以位元組為單位的大小總計。|  
@@ -66,6 +67,6 @@ typedef struct _COR_HEAPOBJECT {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

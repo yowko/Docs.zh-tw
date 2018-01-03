@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a696b69cf08d15ecd39a87920ecaa1934c00578
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27b1b7b26ea788683f9b322306c55a4b3945f342
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 結構
 包含程式碼範圍的位移資訊。  
@@ -41,7 +42,7 @@ typedef struct {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`startOffset`|範圍開頭的位移。|  
 |`endOffset`|範圍結尾的位移。|  
@@ -55,7 +56,7 @@ typedef struct {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [StepRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

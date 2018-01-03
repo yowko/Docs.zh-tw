@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b33a3edc5780ecf07e7809ca327a304d748110f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9da05a84568a6168ed9f450afa48aa6864ed575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pinvokestackimbalance-mda"></a>pInvokeStackImbalance MDA
 假設 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性中已指定呼叫慣例並已宣告Managed 簽章中的參數，當 CLR 在平台叫用呼叫之後偵測到有堆疊深度不符合預期的堆疊深度時，便會啟動 `pInvokeStackImbalance` Managed 偵錯助理 (MDA)。  
@@ -68,7 +69,7 @@ parameters of the PInvoke signature match the target unmanaged signature.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

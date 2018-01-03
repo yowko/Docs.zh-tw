@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 25a6a78fad95b894e82a75159458f25264f0ee0f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7c9dfd42d0908032ed9a652f6f4f5736ba775ce8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 函式
 從 CSP PUBLICKEYBLOB 格式運算強式名稱公開金鑰語彙基元。  
@@ -44,5 +45,5 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 ## <a name="return-value"></a>傳回值  
  若函式成功則傳回 `S_OK`：反之則傳回 `S_FALSE`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

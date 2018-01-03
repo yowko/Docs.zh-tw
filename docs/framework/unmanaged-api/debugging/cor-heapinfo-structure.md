@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e316b964e3e983f50b81228709623e162529b05c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 991e018c3967693f5b87b71c77cdbadcd4ae0cfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 結構
 提供記憶體回收堆積的一般相關資訊，包括其是否可以列舉。  
@@ -42,7 +43,7 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`areGCStructuresValid`|`true`如果記憶體回收結構有效且可以列舉堆積。，否則， `false`。|  
 |`pointerSize`|以位元組為單位的目標架構上的指標大小。|  
@@ -64,6 +65,6 @@ typedef struct _COR_HEAPINFO {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

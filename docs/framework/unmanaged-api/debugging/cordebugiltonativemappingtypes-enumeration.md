@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03046ebb678df64ad3d151aaadba313645417979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44546c8d66eff111b70673ed63ab82d30fea0b6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 列舉
 指出特定範圍的 COR_DEBUG_IL_TO_NATIVE_MAP 結構的執行個體所代表的原生指令是否對應於特殊程式碼區域。  
@@ -40,7 +41,7 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`NO_MAPPING`|原生指令的範圍不是對應至任何特殊的程式碼區域。|  
 |`PROLOG`|原生指令的範圍會對應至初構。|  
@@ -55,6 +56,6 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

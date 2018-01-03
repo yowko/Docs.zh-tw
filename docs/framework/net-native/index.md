@@ -19,11 +19,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a79744d99571fa1428da1fade8f63c4c80ae7b6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]是隨附於 Visual Studio 2015 和更新版本的先行編譯技術來建置和部署 Windows 應用程式。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/18/2017
   
  針對適用於 Windows 10 的 Windows 應用程式，您要將應用程式封裝 (.appx 檔) 中的 .NET 機器碼編譯二進位檔上傳至 Windows 市集。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  如需有關使用 .NET 機器碼編譯來開發應用程式的詳細資訊，請參閱下列主題：  
   
 -   [開始使用 .NET 機器碼編譯：開發人員經驗逐步解說](../../../docs/framework/net-native/getting-started-with-net-native.md)  
@@ -89,5 +90,5 @@ ms.lasthandoff: 10/18/2017
   
 -   [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Native 常見問題集](http://msdn.microsoft.com/vstudio/dn642499.aspx)

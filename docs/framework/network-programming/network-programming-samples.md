@@ -12,16 +12,17 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b0e507e44fd9ce50269081c39eabc953e5b56dfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df1e1c16c52afc79219d7ea2503b200a420477df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.PeerToPeer>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [下載進度指示器技術範例](http://go.microsoft.com/fwlink/?LinkID=179556)  
  示範如何顯示檔案下載進度。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Net.Sockets>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
- [網路程式設計 how to 主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [.NET 的網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

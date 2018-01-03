@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3c0780971f060bfc28abac9e119d0004a2b5c39f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76b52129c0eab30bccde02389142bee2123e64f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>使用 UI 自動化叫用控制項
 > [!NOTE]
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/18/2017
 [!code-csharp[InvokePatternApp#1102](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1102)]
 [!code-vb[InvokePatternApp#1102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1102)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [InvokePattern 和 ExpandCollapsePattern 功能表項目範例](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

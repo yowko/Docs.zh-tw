@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 696aeb619f14a5ebe9a760cbd78a0d0fa876edc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df0281d3be467309d2ee7a44af8f897885a8b2bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>如何：修改電腦設定檔案以啟用 IPv6 支援
 下列程式碼範例示範如何修改電腦組態檔 *machine.config* 來啟用 IPv6 支援。 *machine.config* 檔案是儲存在 Windows 安裝目錄中的 *%Windir%\Microsoft.NET\Framework* 資料夾下。 另外還有一個 *machine.config* 檔案，位於電腦上所安裝之每個 .NET Framework 版本的 *%Windir%\Microsoft.NET\Framework* 下的資料夾中 (例如，*C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 <system.net>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IPv6 定址](../../../docs/framework/network-programming/ipv6-addressing.md)  
  [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<ipv6> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

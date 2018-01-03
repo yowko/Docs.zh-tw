@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 93c3e4251943afa383002043d9259184be82d929
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
@@ -259,7 +260,7 @@ namespace CacheLibrary
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
  <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  

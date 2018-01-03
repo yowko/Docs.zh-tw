@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  所有項目會繼承而來，桌面的根項目取自靜態<xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType>屬性。  
   
 > [!CAUTION]
->  一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子代可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
+>  一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子系可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Conditions  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="from-the-focused-control"></a>從取得焦點的控制項擷取  
  您可以從靜態 <xref:System.Windows.Automation.AutomationElement> 屬性擷取 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> ，其代表取得焦點的控制項。  
   
-## <a name="see-also"></a>另請參閱  
- [尋找 UI 自動化的項目，根據屬性條件](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [UI 自動化項目使用 TreeWalker 巡覽](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+## <a name="see-also"></a>請參閱  
+ [根據屬性條件尋找 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

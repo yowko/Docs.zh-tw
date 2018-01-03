@@ -17,11 +17,12 @@ caps.latest.revision: "31"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 68338a81f7beee9beaa4269b213d7afb03f49251
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88b0bc564e2ba512af40f7056f3d755e3204d153
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>CheckBox 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|核取方塊|此值與所有使用者介面架構的值相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|CheckBox|此值與所有使用者介面架構的值相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|這個屬性的值必須一律是 True。 這表示核取方塊控制項一律應包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|這個屬性的值必須一律是 True。 這表示核取方塊控制項一律應包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="default-action"></a>預設動作  
  核取方塊的預設動作是使選項按鈕成為焦點，並切換其目前的狀態。 如前所述，對使用者來說，核取方塊會顯示成二元 (是/否) 或 (開/關) 選項或三元 (開、關、未定) 選項。 如果核取方塊是二元的，那麼預設動作就會讓「開」狀態變成「關」，或是「關」狀態變成「開」。 若為三元狀態核取方塊，預設動作會循環核取方塊的狀態，順序就如同是使用者用滑鼠連續按控制項一樣。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Automation.ControlType.CheckBox>  
  [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

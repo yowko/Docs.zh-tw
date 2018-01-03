@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38be1f621425797e27fc41cb3192a628ebbfdb0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fee2b3e0e74ec13009a9b02d226c6a99b0e2f34b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函式
 擷取公開金鑰的 SHA-1 雜湊，此公開金鑰與用於簽署特定憑證的私密金鑰相關。  
@@ -44,5 +45,5 @@ HRESULT _AxlGetIssuerPublicKeyHash (
 ## <a name="return-value"></a>傳回值  
  若函式成功則傳回 `S_OK`：反之則傳回 `S_FALSE`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

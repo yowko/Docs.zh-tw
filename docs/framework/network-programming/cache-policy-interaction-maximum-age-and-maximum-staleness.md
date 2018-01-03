@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: baec376501feb70e4a9ceb3f33ac66fa76b91ac1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2fc28f120b76e51cd285f9b7d6a446f4835113a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>快取原則互動 — 最長使用期限和最長過時
 為了協助確保將最新內容傳回給用戶端應用程式，用戶端快取原則與伺服器重新驗證需求的互動一律會導致最保守的快取原則。 本主題中的所有範例都會說明在 1 月 1 日快取並在 1 月 4 日到期之資源的快取原則。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 -   如果快取原則設定 `maxAge` = 1 天且 `maxStale` = 1 天，則會在 1 月 2 日重新驗證內容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  

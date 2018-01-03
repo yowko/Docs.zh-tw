@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b543097d0fc85c502bd36f22225958f9239ccd71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41f7cfe76acfb4b6bbf66207685935c190a51901
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="proxy-configuration"></a>Proxy 組態
 Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回要求的資源，或將要求轉送至資源所在的伺服器。 Proxy 可透過減少傳送至遠端伺服器的要求數目，來提升網路效能。 Proxy 也可用來限制對資源的存取。  
@@ -106,7 +107,7 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
 </system.net>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.WebProxy>  
  <xref:System.Net.GlobalProxySelection>  
  [自動 Proxy 偵測](../../../docs/framework/network-programming/automatic-proxy-detection.md)

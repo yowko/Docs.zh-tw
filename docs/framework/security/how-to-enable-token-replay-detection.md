@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a7c72d77b4894376fb6cb8aed2d1c6641a3977da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>操作說明︰啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/18/2017
   
 4.  以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
   
-5.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [使用本機開發 STS 測試應用程式]，然後按一下 [套用]。  
+5.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
   
 6.  將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和**\<identityConfiguration>** 項目後面的位置，如下所示：  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: fc5554193d93f2a88fd9e6d1c1af7923a23b2280
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ## <a name="applies-to"></a>適用於  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示一些更重要的 WIF 4.5 命名空間以及它們所含的類別類型。 如需 WIF 3.5 與 WIF 4.5 間之命名空間對應方式以及已在 WIF 4.5 中卸除之命名空間和類別的詳細資訊，請參閱 [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。  
   
-|WIF 4.5 命名空間|說明|  
+|WIF 4.5 命名空間|描述|  
 |-----------------------|-----------------|  
 |<xref:System.IdentityModel?displayProperty=nameWithType>|包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。 包含下列 WIF 3.5 命名空間中的類別：`Microsoft.IdentityModel`、`Microsoft.IdentityModel.SecurityTokenService` 和 `Microsoft.IdentityModel.Threading`。|  
 |<xref:System.Security.Claims?displayProperty=nameWithType>|包含的類別代表宣告、宣告式身分識別、宣告式主體，以及其他宣告式身分識別模型成品。 包含 `Microsoft.IdentityModel.Claims` 命名空間中的類別。|  
@@ -179,7 +180,7 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  因為 WIF 3.5 和 WIF 4.5 中的許多類別都共用相同的名稱，所以同時使用 WIF 3.5 和 WIF 4.5 時，請一定要使用完整類別名稱，或使用命名空間別名來區分 WIF 3.5 和 WIF 4.5 中的類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
  [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
  [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)  
