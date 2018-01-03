@@ -21,16 +21,17 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb21ee1396a9dd0426b9b91711c2345ef66c09f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cc7709ef060642f12a8bc7d048e520427a5c674
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="15022-102">EmitAssemblyCustomAttribute 方法</span><span class="sxs-lookup"><span data-stu-id="15022-102">EmitAssemblyCustomAttribute Method</span></span>
-<span data-ttu-id="15022-103">呼叫以設定組件層級的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="15022-103">Call to set assembly-level custom attributes.</span></span>  
+# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="188fa-102">EmitAssemblyCustomAttribute 方法</span><span class="sxs-lookup"><span data-stu-id="188fa-102">EmitAssemblyCustomAttribute Method</span></span>
+<span data-ttu-id="188fa-103">呼叫以設定組件層級的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="188fa-103">Call to set assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15022-104">語法</span><span class="sxs-lookup"><span data-stu-id="15022-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="188fa-104">語法</span><span class="sxs-lookup"><span data-stu-id="188fa-104">Syntax</span></span>  
   
 ```  
 HRESULT EmitAssemblyCustomAttribute(  
@@ -44,35 +45,35 @@ HRESULT EmitAssemblyCustomAttribute(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15022-105">參數</span><span class="sxs-lookup"><span data-stu-id="15022-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="188fa-105">參數</span><span class="sxs-lookup"><span data-stu-id="188fa-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="15022-106">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="15022-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="188fa-106">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="188fa-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="15022-107">定義屬性的檔案。</span><span class="sxs-lookup"><span data-stu-id="15022-107">File that defiles the attribute.</span></span> <span data-ttu-id="15022-108">可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。</span><span class="sxs-lookup"><span data-stu-id="15022-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="188fa-107">定義屬性的檔案。</span><span class="sxs-lookup"><span data-stu-id="188fa-107">File that defiles the attribute.</span></span> <span data-ttu-id="188fa-108">可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。</span><span class="sxs-lookup"><span data-stu-id="188fa-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `tkType`  
- <span data-ttu-id="15022-109">自訂屬性的型別。</span><span class="sxs-lookup"><span data-stu-id="15022-109">Type of the custom attribute.</span></span>  
+ <span data-ttu-id="188fa-109">自訂屬性的型別。</span><span class="sxs-lookup"><span data-stu-id="188fa-109">Type of the custom attribute.</span></span>  
   
  `pCustomValue`  
- <span data-ttu-id="15022-110">自訂數值資料。</span><span class="sxs-lookup"><span data-stu-id="15022-110">Custom value data.</span></span>  
+ <span data-ttu-id="188fa-110">自訂數值資料。</span><span class="sxs-lookup"><span data-stu-id="188fa-110">Custom value data.</span></span>  
   
  `cbCustomValue`  
- <span data-ttu-id="15022-111">自訂數值資料的長度。</span><span class="sxs-lookup"><span data-stu-id="15022-111">Length of custom value data.</span></span>  
+ <span data-ttu-id="188fa-111">自訂數值資料的長度。</span><span class="sxs-lookup"><span data-stu-id="188fa-111">Length of custom value data.</span></span>  
   
  `bSecurity`  
- <span data-ttu-id="15022-112">如果組件簽署與相關的自訂屬性，則為 TRUE。</span><span class="sxs-lookup"><span data-stu-id="15022-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
+ <span data-ttu-id="188fa-112">如果組件簽署與相關的自訂屬性，則為 TRUE。</span><span class="sxs-lookup"><span data-stu-id="188fa-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
   
  `bAllowMulti`  
- <span data-ttu-id="15022-113">如果多個屬性都是發出，則為 TRUE。</span><span class="sxs-lookup"><span data-stu-id="15022-113">TRUE if multiple attributes are to be emitted.</span></span>  
+ <span data-ttu-id="188fa-113">如果多個屬性都是發出，則為 TRUE。</span><span class="sxs-lookup"><span data-stu-id="188fa-113">TRUE if multiple attributes are to be emitted.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15022-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="15022-114">Return Value</span></span>  
- <span data-ttu-id="15022-115">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="15022-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="188fa-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="188fa-114">Return Value</span></span>  
+ <span data-ttu-id="188fa-115">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="188fa-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15022-116">需求</span><span class="sxs-lookup"><span data-stu-id="15022-116">Requirements</span></span>  
- <span data-ttu-id="15022-117">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="15022-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="188fa-116">需求</span><span class="sxs-lookup"><span data-stu-id="188fa-116">Requirements</span></span>  
+ <span data-ttu-id="188fa-117">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="188fa-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15022-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15022-118">See Also</span></span>  
- [<span data-ttu-id="15022-119">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="15022-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="15022-120">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="15022-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="15022-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="15022-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="188fa-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="188fa-118">See Also</span></span>  
+ [<span data-ttu-id="188fa-119">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="188fa-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="188fa-120">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="188fa-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="188fa-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="188fa-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

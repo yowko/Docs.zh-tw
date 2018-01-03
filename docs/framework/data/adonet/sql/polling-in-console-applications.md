@@ -16,19 +16,20 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 767e9fbe4b0d600b4fcef7207fe3594dd76eaee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="polling-in-console-applications"></a><span data-ttu-id="1469f-102">在主控台應用程式中輪詢</span><span class="sxs-lookup"><span data-stu-id="1469f-102">Polling in Console Applications</span></span>
-<span data-ttu-id="1469f-103">ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作的同時，在一個執行緒上起始耗時的資料庫工作。</span><span class="sxs-lookup"><span data-stu-id="1469f-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="1469f-104">不過，在大多數案例中，最後仍會形成資料庫作業若未完成，則應用程式將無法繼續的狀況。</span><span class="sxs-lookup"><span data-stu-id="1469f-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="1469f-105">對於這些狀況，輪詢非同步作業以判定作業是否完成是很有用的。</span><span class="sxs-lookup"><span data-stu-id="1469f-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="1d031-102">在主控台應用程式中輪詢</span><span class="sxs-lookup"><span data-stu-id="1d031-102">Polling in Console Applications</span></span>
+<span data-ttu-id="1d031-103">ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作的同時，在一個執行緒上起始耗時的資料庫工作。</span><span class="sxs-lookup"><span data-stu-id="1d031-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="1d031-104">不過，在大多數案例中，最後仍會形成資料庫作業若未完成，則應用程式將無法繼續的狀況。</span><span class="sxs-lookup"><span data-stu-id="1d031-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="1d031-105">對於這些狀況，輪詢非同步作業以判定作業是否完成是很有用的。</span><span class="sxs-lookup"><span data-stu-id="1d031-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- <span data-ttu-id="1469f-106">您可使用 <xref:System.IAsyncResult.IsCompleted%2A> 屬性，查明作業是否已完成。</span><span class="sxs-lookup"><span data-stu-id="1469f-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
+ <span data-ttu-id="1d031-106">您可使用 <xref:System.IAsyncResult.IsCompleted%2A> 屬性，查明作業是否已完成。</span><span class="sxs-lookup"><span data-stu-id="1d031-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1469f-107">範例</span><span class="sxs-lookup"><span data-stu-id="1469f-107">Example</span></span>  
- <span data-ttu-id="1469f-108">下列主控台應用程式會更新資料內**AdventureWorks**範例資料庫中，以非同步方式執行其工作。</span><span class="sxs-lookup"><span data-stu-id="1469f-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="1469f-109">為了模擬長期執行的處理序，此範例會將 WAITFOR 陳述式插入命令文字中。</span><span class="sxs-lookup"><span data-stu-id="1469f-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="1469f-110">一般來說，您不會嘗試讓命令執行得較慢，但在此案例中這樣做會更容易示範非同步的行為。</span><span class="sxs-lookup"><span data-stu-id="1469f-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d031-107">範例</span><span class="sxs-lookup"><span data-stu-id="1d031-107">Example</span></span>  
+ <span data-ttu-id="1d031-108">下列主控台應用程式會更新資料內**AdventureWorks**範例資料庫中，以非同步方式執行其工作。</span><span class="sxs-lookup"><span data-stu-id="1d031-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="1d031-109">為了模擬長期執行的處理序，此範例會將 WAITFOR 陳述式插入命令文字中。</span><span class="sxs-lookup"><span data-stu-id="1d031-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="1d031-110">一般來說，您不會嘗試讓命令執行得較慢，但在此案例中這樣做會更容易示範非同步的行為。</span><span class="sxs-lookup"><span data-stu-id="1d031-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
 ```vb  
 Imports System  
@@ -200,6 +201,6 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1469f-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1469f-111">See Also</span></span>  
- [<span data-ttu-id="1469f-112">非同步作業</span><span class="sxs-lookup"><span data-stu-id="1469f-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [<span data-ttu-id="1469f-113">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="1469f-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1d031-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="1d031-111">See Also</span></span>  
+ [<span data-ttu-id="1d031-112">非同步作業</span><span class="sxs-lookup"><span data-stu-id="1d031-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="1d031-113">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="1d031-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,22 +13,23 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cbcd2af0b06eeb85c30c8a451877f5913e5d89e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81d80cfa69d5afcd39bb1cf78ab3b42aaee06aed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemdatetimeoffset-methods"></a><span data-ttu-id="77292-102">System.DateTimeOffset 方法</span><span class="sxs-lookup"><span data-stu-id="77292-102">System.DateTimeOffset Methods</span></span>
-<span data-ttu-id="77292-103">一旦在物件模型 (Object Model) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您從 LINQ to SQL 查詢內部呼叫大部分 <xref:System.DateTimeOffset?displayProperty=nameWithType> 方法、運算子和屬性。</span><span class="sxs-lookup"><span data-stu-id="77292-103">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call most of the <xref:System.DateTimeOffset?displayProperty=nameWithType> methods, operators, and properties from within your LINQ to SQL queries.</span></span>  
+# <a name="systemdatetimeoffset-methods"></a><span data-ttu-id="fe8d1-102">System.DateTimeOffset 方法</span><span class="sxs-lookup"><span data-stu-id="fe8d1-102">System.DateTimeOffset Methods</span></span>
+<span data-ttu-id="fe8d1-103">一旦在物件模型 (Object Model) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您從 LINQ to SQL 查詢內部呼叫大部分 <xref:System.DateTimeOffset?displayProperty=nameWithType> 方法、運算子和屬性。</span><span class="sxs-lookup"><span data-stu-id="fe8d1-103">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call most of the <xref:System.DateTimeOffset?displayProperty=nameWithType> methods, operators, and properties from within your LINQ to SQL queries.</span></span>  
   
- <span data-ttu-id="77292-104">不支援的方法只有繼承自 <xref:System.Object?displayProperty=nameWithType> 而且在 LINQ to SQL 查詢內容中沒有意義的方法，例如：`Finalize`、`GetHashCode`、`GetType` 和 `MemberwiseClone`。</span><span class="sxs-lookup"><span data-stu-id="77292-104">The only methods not supported are those inherited from <xref:System.Object?displayProperty=nameWithType> that do not make sense in the context of LINQ to SQL queries, such as: `Finalize`, `GetHashCode`, `GetType`, and `MemberwiseClone`.</span></span> <span data-ttu-id="77292-105">不支援這些方法的原因是，LINQ to SQL 無法轉譯它們，以便在 SQL Server 上執行。</span><span class="sxs-lookup"><span data-stu-id="77292-105">These methods are not supported because LINQ to SQL cannot translate them for execution on the SQL Server.</span></span>  
+ <span data-ttu-id="fe8d1-104">不支援的方法只有繼承自 <xref:System.Object?displayProperty=nameWithType> 而且在 LINQ to SQL 查詢內容中沒有意義的方法，例如：`Finalize`、`GetHashCode`、`GetType` 和 `MemberwiseClone`。</span><span class="sxs-lookup"><span data-stu-id="fe8d1-104">The only methods not supported are those inherited from <xref:System.Object?displayProperty=nameWithType> that do not make sense in the context of LINQ to SQL queries, such as: `Finalize`, `GetHashCode`, `GetType`, and `MemberwiseClone`.</span></span> <span data-ttu-id="fe8d1-105">不支援這些方法的原因是，LINQ to SQL 無法轉譯它們，以便在 SQL Server 上執行。</span><span class="sxs-lookup"><span data-stu-id="fe8d1-105">These methods are not supported because LINQ to SQL cannot translate them for execution on the SQL Server.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="77292-106">Common Language Runtime (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> 結構以及透過 LINQ to SQL 將它對應至 SQL `DATETIMEOFFSET` 資料行的功能都需要 .NET Framework 3.5 SP1 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="77292-106">The common language runtime (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> structure, and the ability to map it to a SQL `DATETIMEOFFSET` column with LINQ to SQL, requires the .NET Framework 3.5 SP1 or beyond.</span></span> <span data-ttu-id="77292-107">SQL `DATETIMEOFFSET` 資料行只能在 Microsoft SQL Server 2008 和更新版本中使用。</span><span class="sxs-lookup"><span data-stu-id="77292-107">The SQL `DATETIMEOFFSET` column is only available in Microsoft SQL Server 2008 and beyond.</span></span>  
+>  <span data-ttu-id="fe8d1-106">Common Language Runtime (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> 結構以及透過 LINQ to SQL 將它對應至 SQL `DATETIMEOFFSET` 資料行的功能都需要 .NET Framework 3.5 SP1 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="fe8d1-106">The common language runtime (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> structure, and the ability to map it to a SQL `DATETIMEOFFSET` column with LINQ to SQL, requires the .NET Framework 3.5 SP1 or beyond.</span></span> <span data-ttu-id="fe8d1-107">SQL `DATETIMEOFFSET` 資料行只能在 Microsoft SQL Server 2008 和更新版本中使用。</span><span class="sxs-lookup"><span data-stu-id="fe8d1-107">The SQL `DATETIMEOFFSET` column is only available in Microsoft SQL Server 2008 and beyond.</span></span>  
   
-## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="77292-108">SQLMethods 日期和時間方法</span><span class="sxs-lookup"><span data-stu-id="77292-108">SQLMethods Date and Time Methods</span></span>  
- <span data-ttu-id="77292-109">除了 <xref:System.DateTimeOffset> 結構所提供的方法以外，LINQ to SQL 還從 <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> 類別 (Class) 中提供了下表所列的方法，以便使用日期和時間。</span><span class="sxs-lookup"><span data-stu-id="77292-109">In addition to the methods offered by the <xref:System.DateTimeOffset> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
+## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="fe8d1-108">SQLMethods 日期和時間方法</span><span class="sxs-lookup"><span data-stu-id="fe8d1-108">SQLMethods Date and Time Methods</span></span>  
+ <span data-ttu-id="fe8d1-109">除了 <xref:System.DateTimeOffset> 結構所提供的方法以外，LINQ to SQL 還從 <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> 類別 (Class) 中提供了下表所列的方法，以便使用日期和時間。</span><span class="sxs-lookup"><span data-stu-id="fe8d1-109">In addition to the methods offered by the <xref:System.DateTimeOffset> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
   
 ||||  
 |-|-|-|  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="77292-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="77292-110">See Also</span></span>  
- [<span data-ttu-id="77292-111">查詢概念</span><span class="sxs-lookup"><span data-stu-id="77292-111">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [<span data-ttu-id="77292-112">建立物件模型</span><span class="sxs-lookup"><span data-stu-id="77292-112">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [<span data-ttu-id="77292-113">SQL CLR 型別對應</span><span class="sxs-lookup"><span data-stu-id="77292-113">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+## <a name="see-also"></a><span data-ttu-id="fe8d1-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="fe8d1-110">See Also</span></span>  
+ [<span data-ttu-id="fe8d1-111">查詢概念</span><span class="sxs-lookup"><span data-stu-id="fe8d1-111">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [<span data-ttu-id="fe8d1-112">建立物件模型</span><span class="sxs-lookup"><span data-stu-id="fe8d1-112">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [<span data-ttu-id="fe8d1-113">SQL-CLR 類型對應</span><span class="sxs-lookup"><span data-stu-id="fe8d1-113">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

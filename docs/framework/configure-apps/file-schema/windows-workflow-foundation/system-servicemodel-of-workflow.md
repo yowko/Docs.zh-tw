@@ -12,16 +12,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 650cc0850b76cd6c855ea1f20b639752d7bef8cf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 54f8ae10491ebeed683a2ec289e60b9a90afd43b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="06b6d-102">工作流程的 &lt;system.serviceModel&gt;</span><span class="sxs-lookup"><span data-stu-id="06b6d-102">&lt;system.serviceModel&gt; of workflow</span></span>
-<span data-ttu-id="06b6d-103">這個組態區段包含所有工作流程組態項目。</span><span class="sxs-lookup"><span data-stu-id="06b6d-103">This configuration section contains all the workflow configuration elements.</span></span>  
+# <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="9bd56-102">工作流程的 &lt;system.serviceModel&gt;</span><span class="sxs-lookup"><span data-stu-id="9bd56-102">&lt;system.serviceModel&gt; of workflow</span></span>
+<span data-ttu-id="9bd56-103">這個組態區段包含所有工作流程組態項目。</span><span class="sxs-lookup"><span data-stu-id="9bd56-103">This configuration section contains all the workflow configuration elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06b6d-104">語法</span><span class="sxs-lookup"><span data-stu-id="06b6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9bd56-104">語法</span><span class="sxs-lookup"><span data-stu-id="9bd56-104">Syntax</span></span>  
   
 ```xml  
 <system.ServiceModel>  
@@ -99,21 +100,21 @@ ms.lasthandoff: 12/02/2017
 </system.ServiceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="06b6d-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="06b6d-105">Attributes and Elements</span></span>  
- <span data-ttu-id="06b6d-106">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="06b6d-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9bd56-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9bd56-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="9bd56-106">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9bd56-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="06b6d-107">屬性</span><span class="sxs-lookup"><span data-stu-id="06b6d-107">Attributes</span></span>  
- <span data-ttu-id="06b6d-108">無</span><span class="sxs-lookup"><span data-stu-id="06b6d-108">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9bd56-107">屬性</span><span class="sxs-lookup"><span data-stu-id="9bd56-107">Attributes</span></span>  
+ <span data-ttu-id="9bd56-108">無</span><span class="sxs-lookup"><span data-stu-id="9bd56-108">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="06b6d-109">子元素</span><span class="sxs-lookup"><span data-stu-id="06b6d-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9bd56-109">子元素</span><span class="sxs-lookup"><span data-stu-id="9bd56-109">Child Elements</span></span>  
   
-|<span data-ttu-id="06b6d-110">項目</span><span class="sxs-lookup"><span data-stu-id="06b6d-110">Element</span></span>|<span data-ttu-id="06b6d-111">說明</span><span class="sxs-lookup"><span data-stu-id="06b6d-111">Description</span></span>|  
+|<span data-ttu-id="9bd56-110">項目</span><span class="sxs-lookup"><span data-stu-id="9bd56-110">Element</span></span>|<span data-ttu-id="9bd56-111">描述</span><span class="sxs-lookup"><span data-stu-id="9bd56-111">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="06b6d-112">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="06b6d-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="06b6d-113">這個區段會定義**serviceBehaviors**集合。</span><span class="sxs-lookup"><span data-stu-id="06b6d-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="06b6d-114">集合中的每個項目都會定義服務使用的行為項目。</span><span class="sxs-lookup"><span data-stu-id="06b6d-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="06b6d-115">每個行為項目由其唯一**名稱**屬性。</span><span class="sxs-lookup"><span data-stu-id="06b6d-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
-|[<span data-ttu-id="06b6d-116">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="06b6d-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="06b6d-117">代表定義工作流程服務之追蹤設定的組態區段。</span><span class="sxs-lookup"><span data-stu-id="06b6d-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="06b6d-118">如需工作流程追蹤和其設定的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[流程設定追蹤](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="06b6d-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
+|[<span data-ttu-id="9bd56-112">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="9bd56-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="9bd56-113">這個區段會定義**serviceBehaviors**集合。</span><span class="sxs-lookup"><span data-stu-id="9bd56-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="9bd56-114">集合中的每個項目都會定義服務使用的行為項目。</span><span class="sxs-lookup"><span data-stu-id="9bd56-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="9bd56-115">每個行為項目由其唯一**名稱**屬性。</span><span class="sxs-lookup"><span data-stu-id="9bd56-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[<span data-ttu-id="9bd56-116">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="9bd56-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="9bd56-117">代表定義工作流程服務之追蹤設定的組態區段。</span><span class="sxs-lookup"><span data-stu-id="9bd56-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="9bd56-118">如需工作流程追蹤和其設定的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[流程設定追蹤](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="9bd56-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="06b6d-119">父項目</span><span class="sxs-lookup"><span data-stu-id="06b6d-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9bd56-119">父項目</span><span class="sxs-lookup"><span data-stu-id="9bd56-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="06b6d-120">項目</span><span class="sxs-lookup"><span data-stu-id="06b6d-120">Element</span></span>|<span data-ttu-id="06b6d-121">說明</span><span class="sxs-lookup"><span data-stu-id="06b6d-121">Description</span></span>|  
+|<span data-ttu-id="9bd56-120">項目</span><span class="sxs-lookup"><span data-stu-id="9bd56-120">Element</span></span>|<span data-ttu-id="9bd56-121">描述</span><span class="sxs-lookup"><span data-stu-id="9bd56-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="06b6d-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="06b6d-122">\<configuration></span></span>|<span data-ttu-id="06b6d-123">.NET 組態檔中所有組態項目的根項目。</span><span class="sxs-lookup"><span data-stu-id="06b6d-123">The root element for all configuration elements in a .NET configuration file.</span></span>|
+|<span data-ttu-id="9bd56-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9bd56-122">\<configuration></span></span>|<span data-ttu-id="9bd56-123">.NET 組態檔中所有組態項目的根項目。</span><span class="sxs-lookup"><span data-stu-id="9bd56-123">The root element for all configuration elements in a .NET configuration file.</span></span>|

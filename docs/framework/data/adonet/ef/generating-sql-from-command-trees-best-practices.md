@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 06d2711d9dac203645c127fa86581a9888db3cb1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d94090eadaa634d1cc2912bf60c987c47c1b6a5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="40f89-102">從命令樹產生 SQL - 最佳作法</span><span class="sxs-lookup"><span data-stu-id="40f89-102">Generating SQL from Command Trees - Best Practices</span></span>
-<span data-ttu-id="40f89-103">輸出查詢命令樹會仔細地建立可用 SQL 表示之查詢的模型。</span><span class="sxs-lookup"><span data-stu-id="40f89-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="40f89-104">不過，從輸出命令樹產生 SQL 時，提供者寫入器會面臨某些常見的挑戰。</span><span class="sxs-lookup"><span data-stu-id="40f89-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="40f89-105">本主題將討論這些挑戰。</span><span class="sxs-lookup"><span data-stu-id="40f89-105">This topic discusses these challenges.</span></span> <span data-ttu-id="40f89-106">在下一個主題中，範例提供者將示範如何處理這些挑戰。</span><span class="sxs-lookup"><span data-stu-id="40f89-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  
+# <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="8718e-102">從命令樹產生 SQL - 最佳作法</span><span class="sxs-lookup"><span data-stu-id="8718e-102">Generating SQL from Command Trees - Best Practices</span></span>
+<span data-ttu-id="8718e-103">輸出查詢命令樹會仔細地建立可用 SQL 表示之查詢的模型。</span><span class="sxs-lookup"><span data-stu-id="8718e-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="8718e-104">不過，從輸出命令樹產生 SQL 時，提供者寫入器會面臨某些常見的挑戰。</span><span class="sxs-lookup"><span data-stu-id="8718e-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="8718e-105">本主題將討論這些挑戰。</span><span class="sxs-lookup"><span data-stu-id="8718e-105">This topic discusses these challenges.</span></span> <span data-ttu-id="8718e-106">在下一個主題中，範例提供者將示範如何處理這些挑戰。</span><span class="sxs-lookup"><span data-stu-id="8718e-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  
   
-## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a><span data-ttu-id="40f89-107">在 SQL SELECT 陳述式中分組 DbExpression 節點</span><span class="sxs-lookup"><span data-stu-id="40f89-107">Group DbExpression Nodes in a SQL SELECT Statement</span></span>  
- <span data-ttu-id="40f89-108">一般 SQL 陳述式具有下列形狀的巢狀結構：</span><span class="sxs-lookup"><span data-stu-id="40f89-108">A typical SQL statement has a nested structure of the following shape:</span></span>  
+## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a><span data-ttu-id="8718e-107">在 SQL SELECT 陳述式中分組 DbExpression 節點</span><span class="sxs-lookup"><span data-stu-id="8718e-107">Group DbExpression Nodes in a SQL SELECT Statement</span></span>  
+ <span data-ttu-id="8718e-108">一般 SQL 陳述式具有下列形狀的巢狀結構：</span><span class="sxs-lookup"><span data-stu-id="8718e-108">A typical SQL statement has a nested structure of the following shape:</span></span>  
   
 ```  
 SELECT …  
@@ -33,11 +34,11 @@ GROUP BY …
 ORDER BY …  
 ```  
   
- <span data-ttu-id="40f89-109">一個或多個子句可能是空的。</span><span class="sxs-lookup"><span data-stu-id="40f89-109">One or more clauses may be empty.</span></span>  <span data-ttu-id="40f89-110">巢狀 SELECT 陳述式可能會出現於任何一行。</span><span class="sxs-lookup"><span data-stu-id="40f89-110">A nested SELECT statement could occur in any of the lines.</span></span>  
+ <span data-ttu-id="8718e-109">一個或多個子句可能是空的。</span><span class="sxs-lookup"><span data-stu-id="8718e-109">One or more clauses may be empty.</span></span>  <span data-ttu-id="8718e-110">巢狀 SELECT 陳述式可能會出現於任何一行。</span><span class="sxs-lookup"><span data-stu-id="8718e-110">A nested SELECT statement could occur in any of the lines.</span></span>  
   
- <span data-ttu-id="40f89-111">將查詢命令樹轉譯成 SQL SELECT 陳述式的可能轉譯方式會針對每個關係運算子產生一個子查詢。</span><span class="sxs-lookup"><span data-stu-id="40f89-111">A possible translation of a query command tree into a SQL SELECT statement would produce one subquery for every relational operator.</span></span> <span data-ttu-id="40f89-112">不過，這種結果可能會導致難以讀取的非必要巢狀子查詢。</span><span class="sxs-lookup"><span data-stu-id="40f89-112">However, that would lead to unnecessary nested subqueries that would be difficult to read.</span></span>  <span data-ttu-id="40f89-113">在某些資料存放區上，查詢的執行效能可能會不佳。</span><span class="sxs-lookup"><span data-stu-id="40f89-113">On some data stores, the query may perform poorly.</span></span>  
+ <span data-ttu-id="8718e-111">將查詢命令樹轉譯成 SQL SELECT 陳述式的可能轉譯方式會針對每個關係運算子產生一個子查詢。</span><span class="sxs-lookup"><span data-stu-id="8718e-111">A possible translation of a query command tree into a SQL SELECT statement would produce one subquery for every relational operator.</span></span> <span data-ttu-id="8718e-112">不過，這種結果可能會導致難以讀取的非必要巢狀子查詢。</span><span class="sxs-lookup"><span data-stu-id="8718e-112">However, that would lead to unnecessary nested subqueries that would be difficult to read.</span></span>  <span data-ttu-id="8718e-113">在某些資料存放區上，查詢的執行效能可能會不佳。</span><span class="sxs-lookup"><span data-stu-id="8718e-113">On some data stores, the query may perform poorly.</span></span>  
   
- <span data-ttu-id="40f89-114">例如，請考量下列查詢命令樹：</span><span class="sxs-lookup"><span data-stu-id="40f89-114">As an example, consider the following query command tree</span></span>  
+ <span data-ttu-id="8718e-114">例如，請考量下列查詢命令樹：</span><span class="sxs-lookup"><span data-stu-id="8718e-114">As an example, consider the following query command tree</span></span>  
   
 ```  
 Project (  
@@ -49,7 +50,7 @@ a.x,
 )  
 ```  
   
- <span data-ttu-id="40f89-115">沒有效率的轉譯會產生：</span><span class="sxs-lookup"><span data-stu-id="40f89-115">An inefficient translation would produce:</span></span>  
+ <span data-ttu-id="8718e-115">沒有效率的轉譯會產生：</span><span class="sxs-lookup"><span data-stu-id="8718e-115">An inefficient translation would produce:</span></span>  
   
 ```  
 SELECT a.x  
@@ -58,11 +59,11 @@ FROM (   SELECT *
          WHERE b.y = 5) as a  
 ```  
   
- <span data-ttu-id="40f89-116">請注意，每個關聯運算式節點都會成為新的 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="40f89-116">Note that every relational expression node becomes a new SQL SELECT statement.</span></span>  
+ <span data-ttu-id="8718e-116">請注意，每個關聯運算式節點都會成為新的 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="8718e-116">Note that every relational expression node becomes a new SQL SELECT statement.</span></span>  
   
- <span data-ttu-id="40f89-117">因此，請務必盡可能將運算式節點彙總成單一 SQL SELECT 陳述式，同時保留正確性。</span><span class="sxs-lookup"><span data-stu-id="40f89-117">Therefore, it is important to aggregate as many expression nodes as possible into a single SQL SELECT statement while preserving correctness.</span></span>  
+ <span data-ttu-id="8718e-117">因此，請務必盡可能將運算式節點彙總成單一 SQL SELECT 陳述式，同時保留正確性。</span><span class="sxs-lookup"><span data-stu-id="8718e-117">Therefore, it is important to aggregate as many expression nodes as possible into a single SQL SELECT statement while preserving correctness.</span></span>  
   
- <span data-ttu-id="40f89-118">上述範例的這種彙總結果為：</span><span class="sxs-lookup"><span data-stu-id="40f89-118">The result of such aggregation for the example presented above would be:</span></span>  
+ <span data-ttu-id="8718e-118">上述範例的這種彙總結果為：</span><span class="sxs-lookup"><span data-stu-id="8718e-118">The result of such aggregation for the example presented above would be:</span></span>  
   
 ```  
 SELECT b.x   
@@ -70,10 +71,10 @@ FROM TableA as b
 WHERE b.y = 5  
 ```  
   
-## <a name="flatten-joins-in-a-sql-select-statement"></a><span data-ttu-id="40f89-119">在 SQL SELECT 陳述式中扁平化聯結</span><span class="sxs-lookup"><span data-stu-id="40f89-119">Flatten Joins in a SQL SELECT Statement</span></span>  
- <span data-ttu-id="40f89-120">將多個節點彙總成單一 SQL SELECT 陳述式的其中一個案例就是將多個聯結運算式彙總成單一 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="40f89-120">One case of aggregating multiple nodes into a single SQL SELECT statement is aggregating multiple join expressions into a single SQL SELECT statement.</span></span> <span data-ttu-id="40f89-121">DbJoinExpression 代表介於兩個輸入之間的單一聯結。</span><span class="sxs-lookup"><span data-stu-id="40f89-121">DbJoinExpression represents a single join between two inputs.</span></span> <span data-ttu-id="40f89-122">不過，您可以將多個聯結指定為單一 SQL SELECT 陳述式的一部分。</span><span class="sxs-lookup"><span data-stu-id="40f89-122">However, as part of a single SQL SELECT statement, more than one join can be specified.</span></span> <span data-ttu-id="40f89-123">在該案例中，這些聯結會依照指定的順序執行。</span><span class="sxs-lookup"><span data-stu-id="40f89-123">In that case the joins are performed in the order specified.</span></span>  
+## <a name="flatten-joins-in-a-sql-select-statement"></a><span data-ttu-id="8718e-119">在 SQL SELECT 陳述式中扁平化聯結</span><span class="sxs-lookup"><span data-stu-id="8718e-119">Flatten Joins in a SQL SELECT Statement</span></span>  
+ <span data-ttu-id="8718e-120">將多個節點彙總成單一 SQL SELECT 陳述式的其中一個案例就是將多個聯結運算式彙總成單一 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="8718e-120">One case of aggregating multiple nodes into a single SQL SELECT statement is aggregating multiple join expressions into a single SQL SELECT statement.</span></span> <span data-ttu-id="8718e-121">DbJoinExpression 代表介於兩個輸入之間的單一聯結。</span><span class="sxs-lookup"><span data-stu-id="8718e-121">DbJoinExpression represents a single join between two inputs.</span></span> <span data-ttu-id="8718e-122">不過，您可以將多個聯結指定為單一 SQL SELECT 陳述式的一部分。</span><span class="sxs-lookup"><span data-stu-id="8718e-122">However, as part of a single SQL SELECT statement, more than one join can be specified.</span></span> <span data-ttu-id="8718e-123">在該案例中，這些聯結會依照指定的順序執行。</span><span class="sxs-lookup"><span data-stu-id="8718e-123">In that case the joins are performed in the order specified.</span></span>  
   
- <span data-ttu-id="40f89-124">您可以更輕鬆地將左背面聯結 (顯示為另一個聯結之左子系的聯結) 扁平化為單一 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="40f89-124">Left spine joins, (joins that appear as a left child of another join) can be more easily flattened into a single SQL SELECT statement.</span></span> <span data-ttu-id="40f89-125">例如，請考量下列查詢命令樹：</span><span class="sxs-lookup"><span data-stu-id="40f89-125">For example, consider the following query command tree:</span></span>  
+ <span data-ttu-id="8718e-124">您可以更輕鬆地將左背面聯結 (顯示為另一個聯結之左子系的聯結) 扁平化為單一 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="8718e-124">Left spine joins, (joins that appear as a left child of another join) can be more easily flattened into a single SQL SELECT statement.</span></span> <span data-ttu-id="8718e-125">例如，請考量下列查詢命令樹：</span><span class="sxs-lookup"><span data-stu-id="8718e-125">For example, consider the following query command tree:</span></span>  
   
 ```  
 InnerJoin(  
@@ -86,7 +87,7 @@ InnerJoin(
 )  
 ```  
   
- <span data-ttu-id="40f89-126">這個命令樹可正確轉譯成：</span><span class="sxs-lookup"><span data-stu-id="40f89-126">This can be correctly translated into:</span></span>  
+ <span data-ttu-id="8718e-126">這個命令樹可正確轉譯成：</span><span class="sxs-lookup"><span data-stu-id="8718e-126">This can be correctly translated into:</span></span>  
   
 ```  
 SELECT *  
@@ -95,7 +96,7 @@ LEFT OUTER JOIN TableB as c ON b.y = c.x
 INNER JOIN TableC as d ON b.y = d.z  
 ```  
   
- <span data-ttu-id="40f89-127">不過，您無法輕鬆地扁平化非左背面聯結，而且不應該嘗試扁平化這些聯結。</span><span class="sxs-lookup"><span data-stu-id="40f89-127">However, non-left spine joins cannot easily be flattened, and you should not try to flatten them.</span></span> <span data-ttu-id="40f89-128">例如，下列查詢命令樹中的聯結：</span><span class="sxs-lookup"><span data-stu-id="40f89-128">For example, the joins in the following query command tree:</span></span>  
+ <span data-ttu-id="8718e-127">不過，您無法輕鬆地扁平化非左背面聯結，而且不應該嘗試扁平化這些聯結。</span><span class="sxs-lookup"><span data-stu-id="8718e-127">However, non-left spine joins cannot easily be flattened, and you should not try to flatten them.</span></span> <span data-ttu-id="8718e-128">例如，下列查詢命令樹中的聯結：</span><span class="sxs-lookup"><span data-stu-id="8718e-128">For example, the joins in the following query command tree:</span></span>  
   
 ```  
 InnerJoin(  
@@ -108,7 +109,7 @@ InnerJoin(
 )  
 ```  
   
- <span data-ttu-id="40f89-129">會轉譯成具有子查詢的 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="40f89-129">Would be translated to a SQL SELECT statement with a sub-query.</span></span>  
+ <span data-ttu-id="8718e-129">會轉譯成具有子查詢的 SQL SELECT 陳述式。</span><span class="sxs-lookup"><span data-stu-id="8718e-129">Would be translated to a SQL SELECT statement with a sub-query.</span></span>  
   
 ```  
 SELECT *  
@@ -120,33 +121,33 @@ INNER JOIN (SELECT *
 ON b.y = d.z  
 ```  
   
-## <a name="input-alias-redirecting"></a><span data-ttu-id="40f89-130">輸入別名重新導向</span><span class="sxs-lookup"><span data-stu-id="40f89-130">Input Alias Redirecting</span></span>  
- <span data-ttu-id="40f89-131">為了說明輸入別名重新導向，請考量關聯運算式的結構，例如 DbFilterExpression、DbProjectExpression、DbCrossJoinExpression、DbJoinExpression、DbSortExpression、DbGroupByExpression、DbApplyExpression 和 DbSkipExpression。</span><span class="sxs-lookup"><span data-stu-id="40f89-131">To explain input alias redirecting, consider the structure of the relational expressions, such as DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression, and DbSkipExpression.</span></span>  
+## <a name="input-alias-redirecting"></a><span data-ttu-id="8718e-130">輸入別名重新導向</span><span class="sxs-lookup"><span data-stu-id="8718e-130">Input Alias Redirecting</span></span>  
+ <span data-ttu-id="8718e-131">為了說明輸入別名重新導向，請考量關聯運算式的結構，例如 DbFilterExpression、DbProjectExpression、DbCrossJoinExpression、DbJoinExpression、DbSortExpression、DbGroupByExpression、DbApplyExpression 和 DbSkipExpression。</span><span class="sxs-lookup"><span data-stu-id="8718e-131">To explain input alias redirecting, consider the structure of the relational expressions, such as DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression, and DbSkipExpression.</span></span>  
   
- <span data-ttu-id="40f89-132">其中每一個型別都具有一個或多個描述輸入集合的 Input 屬性，而且對應至每個輸入的繫結變數會在集合周遊期間用來代表該輸入的每個項目。</span><span class="sxs-lookup"><span data-stu-id="40f89-132">Each of these types has one or more Input properties that describe an input collection, and a binding variable corresponding to each input is used to represent each element of that input during a collection traversal.</span></span> <span data-ttu-id="40f89-133">例如，參考 DbFilterExpression 之 Predicate 屬性或 DbProjectExpression 之 Projection 屬性中的輸入項目時，就會使用此繫結變數。</span><span class="sxs-lookup"><span data-stu-id="40f89-133">The binding variable is used when referring to the input element, for example in the Predicate property of a DbFilterExpression or the Projection property of a DbProjectExpression.</span></span>  
+ <span data-ttu-id="8718e-132">其中每一個型別都具有一個或多個描述輸入集合的 Input 屬性，而且對應至每個輸入的繫結變數會在集合周遊期間用來代表該輸入的每個項目。</span><span class="sxs-lookup"><span data-stu-id="8718e-132">Each of these types has one or more Input properties that describe an input collection, and a binding variable corresponding to each input is used to represent each element of that input during a collection traversal.</span></span> <span data-ttu-id="8718e-133">例如，參考 DbFilterExpression 之 Predicate 屬性或 DbProjectExpression 之 Projection 屬性中的輸入項目時，就會使用此繫結變數。</span><span class="sxs-lookup"><span data-stu-id="8718e-133">The binding variable is used when referring to the input element, for example in the Predicate property of a DbFilterExpression or the Projection property of a DbProjectExpression.</span></span>  
   
- <span data-ttu-id="40f89-134">將多個關聯運算式節點彙總成單一 SQL SELECT 陳述式，並且評估屬於關聯運算式一部分的運算式 (例如，屬於 DbProjectExpression 之 Projection 屬性的一部分) 時，它所使用的繫結變數可能不會與輸入的別名相同，因為多個運算式繫結必須重新導向至單一範圍。</span><span class="sxs-lookup"><span data-stu-id="40f89-134">When aggregating more relational expression nodes into a single SQL SELECT statement, and evaluating an expression that is part of a relational expression (for example part of the Projection property of a DbProjectExpression) the binding variable that it uses may not be the same as the alias of the input, as multiple expression bindings would have to be redirected to a single extent.</span></span>  <span data-ttu-id="40f89-135">這個問題就稱為別名重新命名。</span><span class="sxs-lookup"><span data-stu-id="40f89-135">This problem is called alias renaming.</span></span>  
+ <span data-ttu-id="8718e-134">將多個關聯運算式節點彙總成單一 SQL SELECT 陳述式，並且評估屬於關聯運算式一部分的運算式 (例如，屬於 DbProjectExpression 之 Projection 屬性的一部分) 時，它所使用的繫結變數可能不會與輸入的別名相同，因為多個運算式繫結必須重新導向至單一範圍。</span><span class="sxs-lookup"><span data-stu-id="8718e-134">When aggregating more relational expression nodes into a single SQL SELECT statement, and evaluating an expression that is part of a relational expression (for example part of the Projection property of a DbProjectExpression) the binding variable that it uses may not be the same as the alias of the input, as multiple expression bindings would have to be redirected to a single extent.</span></span>  <span data-ttu-id="8718e-135">這個問題就稱為別名重新命名。</span><span class="sxs-lookup"><span data-stu-id="8718e-135">This problem is called alias renaming.</span></span>  
   
- <span data-ttu-id="40f89-136">請考量本主題的第一個範例。</span><span class="sxs-lookup"><span data-stu-id="40f89-136">Consider the first example in this topic.</span></span> <span data-ttu-id="40f89-137">如果要進行自然轉譯並且轉譯 Projection a.x (DbPropertyExpression(a, x))，將它轉譯成 `a.x` 是正確的作法，因為我們已經將輸入的別名指定為 "a"，以符合繫結變數。</span><span class="sxs-lookup"><span data-stu-id="40f89-137">If doing the naïve translation and translating the Projection a.x (DbPropertyExpression(a, x)), it is correct to translate it into `a.x` because we have aliased the input as "a" to match the binding variable.</span></span>  <span data-ttu-id="40f89-138">不過，將這兩個節點彙總成單一 SQL SELECT 陳述式時，您就必須將相同的 DbPropertyExpression 轉譯成 `b.x`，因為輸入已經具有 "b" 的別名。</span><span class="sxs-lookup"><span data-stu-id="40f89-138">However, when aggregating both the nodes into a single SQL SELECT statement, you need to translate the same DbPropertyExpression into `b.x`, as the input has been aliased with "b".</span></span>  
+ <span data-ttu-id="8718e-136">請考量本主題的第一個範例。</span><span class="sxs-lookup"><span data-stu-id="8718e-136">Consider the first example in this topic.</span></span> <span data-ttu-id="8718e-137">如果要進行自然轉譯並且轉譯 Projection a.x (DbPropertyExpression(a, x))，將它轉譯成 `a.x` 是正確的作法，因為我們已經將輸入的別名指定為 "a"，以符合繫結變數。</span><span class="sxs-lookup"><span data-stu-id="8718e-137">If doing the naïve translation and translating the Projection a.x (DbPropertyExpression(a, x)), it is correct to translate it into `a.x` because we have aliased the input as "a" to match the binding variable.</span></span>  <span data-ttu-id="8718e-138">不過，將這兩個節點彙總成單一 SQL SELECT 陳述式時，您就必須將相同的 DbPropertyExpression 轉譯成 `b.x`，因為輸入已經具有 "b" 的別名。</span><span class="sxs-lookup"><span data-stu-id="8718e-138">However, when aggregating both the nodes into a single SQL SELECT statement, you need to translate the same DbPropertyExpression into `b.x`, as the input has been aliased with "b".</span></span>  
   
-## <a name="join-alias-flattening"></a><span data-ttu-id="40f89-139">聯結別名扁平化</span><span class="sxs-lookup"><span data-stu-id="40f89-139">Join Alias Flattening</span></span>  
- <span data-ttu-id="40f89-140">與輸出命令樹中任何其他關聯運算式不同的是，DbJoinExpression 所輸出的結果型別是包含兩個資料行的資料列，而且其中每一個資料行都會對應至其中一個輸入。</span><span class="sxs-lookup"><span data-stu-id="40f89-140">Unlike any other relational expression in an output command tree, the DbJoinExpression outputs a result type that is a row consisting of two columns, each of which corresponds to one of the inputs.</span></span> <span data-ttu-id="40f89-141">當 DbPropertyExpresssion 建置為存取源自聯結的純量屬性時，它就會位於另一個 DbPropertyExpresssion 上方。</span><span class="sxs-lookup"><span data-stu-id="40f89-141">When a DbPropertyExpresssion is built to access a scalar property originating from a join, it is over another DbPropertyExpresssion.</span></span>  
+## <a name="join-alias-flattening"></a><span data-ttu-id="8718e-139">聯結別名扁平化</span><span class="sxs-lookup"><span data-stu-id="8718e-139">Join Alias Flattening</span></span>  
+ <span data-ttu-id="8718e-140">與輸出命令樹中任何其他關聯運算式不同的是，DbJoinExpression 所輸出的結果型別是包含兩個資料行的資料列，而且其中每一個資料行都會對應至其中一個輸入。</span><span class="sxs-lookup"><span data-stu-id="8718e-140">Unlike any other relational expression in an output command tree, the DbJoinExpression outputs a result type that is a row consisting of two columns, each of which corresponds to one of the inputs.</span></span> <span data-ttu-id="8718e-141">當 DbPropertyExpresssion 建置為存取源自聯結的純量屬性時，它就會位於另一個 DbPropertyExpresssion 上方。</span><span class="sxs-lookup"><span data-stu-id="8718e-141">When a DbPropertyExpresssion is built to access a scalar property originating from a join, it is over another DbPropertyExpresssion.</span></span>  
   
- <span data-ttu-id="40f89-142">範例包括範例 2 中的 "a.b.y" 以及範例 3 中的 "b.c.y"。</span><span class="sxs-lookup"><span data-stu-id="40f89-142">Examples include "a.b.y" in example 2 and "b.c.y" in example 3.</span></span> <span data-ttu-id="40f89-143">不過，在對應的 SQL 陳述式中，這些項目都會當做 "b.y" 參考。</span><span class="sxs-lookup"><span data-stu-id="40f89-143">However in the corresponding SQL statements these are referred as "b.y".</span></span> <span data-ttu-id="40f89-144">這種重新指定別名的作業稱為聯結別名扁平化。</span><span class="sxs-lookup"><span data-stu-id="40f89-144">This re-aliasing is called join alias flattening.</span></span>  
+ <span data-ttu-id="8718e-142">範例包括範例 2 中的 "a.b.y" 以及範例 3 中的 "b.c.y"。</span><span class="sxs-lookup"><span data-stu-id="8718e-142">Examples include "a.b.y" in example 2 and "b.c.y" in example 3.</span></span> <span data-ttu-id="8718e-143">不過，在對應的 SQL 陳述式中，這些項目都會當做 "b.y" 參考。</span><span class="sxs-lookup"><span data-stu-id="8718e-143">However in the corresponding SQL statements these are referred as "b.y".</span></span> <span data-ttu-id="8718e-144">這種重新指定別名的作業稱為聯結別名扁平化。</span><span class="sxs-lookup"><span data-stu-id="8718e-144">This re-aliasing is called join alias flattening.</span></span>  
   
-## <a name="column-name-and-extent-alias-renaming"></a><span data-ttu-id="40f89-145">資料行名稱和範圍別名重新命名</span><span class="sxs-lookup"><span data-stu-id="40f89-145">Column Name and Extent Alias Renaming</span></span>  
- <span data-ttu-id="40f89-146">如果某個具有聯結的 SQL SELECT 查詢必須透過投影完成，從輸入列舉所有參與的資料行時，可能會發生名稱衝突，因為多個輸入可能具有相同的資料行名稱。</span><span class="sxs-lookup"><span data-stu-id="40f89-146">If a SQL SELECT query that has a join has to be completed with a projection, when enumerating all the participating columns from the inputs, a name collision may occur, as more than one input may have the same column name.</span></span> <span data-ttu-id="40f89-147">若要避免衝突，請針對資料行使用不同的名稱。</span><span class="sxs-lookup"><span data-stu-id="40f89-147">Use a different name for the column to avoid the collision.</span></span>  
+## <a name="column-name-and-extent-alias-renaming"></a><span data-ttu-id="8718e-145">資料行名稱和範圍別名重新命名</span><span class="sxs-lookup"><span data-stu-id="8718e-145">Column Name and Extent Alias Renaming</span></span>  
+ <span data-ttu-id="8718e-146">如果某個具有聯結的 SQL SELECT 查詢必須透過投影完成，從輸入列舉所有參與的資料行時，可能會發生名稱衝突，因為多個輸入可能具有相同的資料行名稱。</span><span class="sxs-lookup"><span data-stu-id="8718e-146">If a SQL SELECT query that has a join has to be completed with a projection, when enumerating all the participating columns from the inputs, a name collision may occur, as more than one input may have the same column name.</span></span> <span data-ttu-id="8718e-147">若要避免衝突，請針對資料行使用不同的名稱。</span><span class="sxs-lookup"><span data-stu-id="8718e-147">Use a different name for the column to avoid the collision.</span></span>  
   
- <span data-ttu-id="40f89-148">此外，在扁平化聯結時，參與的資料表 (或子查詢) 可能會具有衝突的別名，因此必須重新命名這些別名。</span><span class="sxs-lookup"><span data-stu-id="40f89-148">Also, when flattening joins, participating tables (or subqueries) may have colliding aliases in which case these need to be renamed.</span></span>  
+ <span data-ttu-id="8718e-148">此外，在扁平化聯結時，參與的資料表 (或子查詢) 可能會具有衝突的別名，因此必須重新命名這些別名。</span><span class="sxs-lookup"><span data-stu-id="8718e-148">Also, when flattening joins, participating tables (or subqueries) may have colliding aliases in which case these need to be renamed.</span></span>  
   
-## <a name="avoid-select-"></a><span data-ttu-id="40f89-149">避免使用 SELECT *</span><span class="sxs-lookup"><span data-stu-id="40f89-149">Avoid SELECT *</span></span>  
- <span data-ttu-id="40f89-150">請勿使用 `SELECT *`，從基底資料表中選取。</span><span class="sxs-lookup"><span data-stu-id="40f89-150">Do not use `SELECT *` to select from base tables.</span></span> <span data-ttu-id="40f89-151">中的儲存體模型[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式可能只包含資料庫資料表中的資料行的子集。</span><span class="sxs-lookup"><span data-stu-id="40f89-151">The storage model in an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application may only include a subset of the columns that are in the database table.</span></span> <span data-ttu-id="40f89-152">在此情況下，`SELECT *` 可能會產生錯誤的結果。</span><span class="sxs-lookup"><span data-stu-id="40f89-152">In this case, `SELECT *` may produce an incorrect result.</span></span> <span data-ttu-id="40f89-153">因此，您應該改用參與運算式之結果型別中的資料行名稱來指定所有參與的資料行。</span><span class="sxs-lookup"><span data-stu-id="40f89-153">Instead, you should specify all participating columns by using the column names from the result type of the participating expressions.</span></span>  
+## <a name="avoid-select-"></a><span data-ttu-id="8718e-149">避免使用 SELECT *</span><span class="sxs-lookup"><span data-stu-id="8718e-149">Avoid SELECT *</span></span>  
+ <span data-ttu-id="8718e-150">請勿使用 `SELECT *`，從基底資料表中選取。</span><span class="sxs-lookup"><span data-stu-id="8718e-150">Do not use `SELECT *` to select from base tables.</span></span> <span data-ttu-id="8718e-151">中的儲存體模型[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式可能只包含資料庫資料表中的資料行的子集。</span><span class="sxs-lookup"><span data-stu-id="8718e-151">The storage model in an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application may only include a subset of the columns that are in the database table.</span></span> <span data-ttu-id="8718e-152">在此情況下，`SELECT *` 可能會產生錯誤的結果。</span><span class="sxs-lookup"><span data-stu-id="8718e-152">In this case, `SELECT *` may produce an incorrect result.</span></span> <span data-ttu-id="8718e-153">因此，您應該改用參與運算式之結果型別中的資料行名稱來指定所有參與的資料行。</span><span class="sxs-lookup"><span data-stu-id="8718e-153">Instead, you should specify all participating columns by using the column names from the result type of the participating expressions.</span></span>  
   
-## <a name="reuse-of-expressions"></a><span data-ttu-id="40f89-154">重複使用運算式</span><span class="sxs-lookup"><span data-stu-id="40f89-154">Reuse of Expressions</span></span>  
- <span data-ttu-id="40f89-155">您可以在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 所傳遞的查詢命令樹中重複使用運算式。</span><span class="sxs-lookup"><span data-stu-id="40f89-155">Expressions may be reused in the query command tree passed by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="40f89-156">請勿假設每個運算式都只會出現在查詢命令樹中一次。</span><span class="sxs-lookup"><span data-stu-id="40f89-156">Do not assume that each expression appears only once in the query command tree.</span></span>  
+## <a name="reuse-of-expressions"></a><span data-ttu-id="8718e-154">重複使用運算式</span><span class="sxs-lookup"><span data-stu-id="8718e-154">Reuse of Expressions</span></span>  
+ <span data-ttu-id="8718e-155">您可以在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 所傳遞的查詢命令樹中重複使用運算式。</span><span class="sxs-lookup"><span data-stu-id="8718e-155">Expressions may be reused in the query command tree passed by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="8718e-156">請勿假設每個運算式都只會出現在查詢命令樹中一次。</span><span class="sxs-lookup"><span data-stu-id="8718e-156">Do not assume that each expression appears only once in the query command tree.</span></span>  
   
-## <a name="mapping-primitive-types"></a><span data-ttu-id="40f89-157">對應基本型別</span><span class="sxs-lookup"><span data-stu-id="40f89-157">Mapping Primitive Types</span></span>  
- <span data-ttu-id="40f89-158">將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。</span><span class="sxs-lookup"><span data-stu-id="40f89-158">When mapping conceptual (EDM) types to provider types, you should map to the widest type (Int32) so that all possible values fit.</span></span> <span data-ttu-id="40f89-159">此外，請避免對應至無法用於許多作業的型別，例如 BLOB 型別 (例如，`ntext` 中的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)])。</span><span class="sxs-lookup"><span data-stu-id="40f89-159">Also, avoid mapping to types that cannot be used for many operations, like BLOB types (for example, `ntext` in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).</span></span>  
+## <a name="mapping-primitive-types"></a><span data-ttu-id="8718e-157">對應基本型別</span><span class="sxs-lookup"><span data-stu-id="8718e-157">Mapping Primitive Types</span></span>  
+ <span data-ttu-id="8718e-158">將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。</span><span class="sxs-lookup"><span data-stu-id="8718e-158">When mapping conceptual (EDM) types to provider types, you should map to the widest type (Int32) so that all possible values fit.</span></span> <span data-ttu-id="8718e-159">此外，請避免對應至無法用於許多作業的型別，例如 BLOB 型別 (例如，`ntext` 中的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)])。</span><span class="sxs-lookup"><span data-stu-id="8718e-159">Also, avoid mapping to types that cannot be used for many operations, like BLOB types (for example, `ntext` in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40f89-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="40f89-160">See Also</span></span>  
- [<span data-ttu-id="40f89-161">SQL 產生</span><span class="sxs-lookup"><span data-stu-id="40f89-161">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a><span data-ttu-id="8718e-160">請參閱</span><span class="sxs-lookup"><span data-stu-id="8718e-160">See Also</span></span>  
+ [<span data-ttu-id="8718e-161">SQL 產生</span><span class="sxs-lookup"><span data-stu-id="8718e-161">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

@@ -27,18 +27,19 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ce50fa5cf8664f93753312ee5f1db2b3058c3fd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03f6dc6ea517aba410430fea69113b64dccc6ff6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="2d0a3-102">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="2d0a3-102">Using a Synchronous Server Socket</span></span>
-<span data-ttu-id="2d0a3-103">同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="2d0a3-104">同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  
+# <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="39dbe-102">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="39dbe-102">Using a Synchronous Server Socket</span></span>
+<span data-ttu-id="39dbe-103">同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。</span><span class="sxs-lookup"><span data-stu-id="39dbe-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="39dbe-104">同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。</span><span class="sxs-lookup"><span data-stu-id="39dbe-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  
   
- <span data-ttu-id="2d0a3-105">使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定 <xref:System.Net.Sockets.Socket> 以接聽端點之後，便已準備好使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受連入的連線要求。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-105">After a <xref:System.Net.Sockets.Socket> is set to listen on an endpoint using the <xref:System.Net.Sockets.Socket.Bind%2A> and <xref:System.Net.Sockets.Socket.Listen%2A> methods, it is ready to accept incoming connection requests using the <xref:System.Net.Sockets.Socket.Accept%2A> method.</span></span> <span data-ttu-id="2d0a3-106">應用程式會暫停，直到呼叫 **Accept** 方法收到連線要求為止。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-106">The application is suspended until a connection request is received when the **Accept** method is called.</span></span>  
+ <span data-ttu-id="39dbe-105">使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定 <xref:System.Net.Sockets.Socket> 以接聽端點之後，便已準備好使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受連入的連線要求。</span><span class="sxs-lookup"><span data-stu-id="39dbe-105">After a <xref:System.Net.Sockets.Socket> is set to listen on an endpoint using the <xref:System.Net.Sockets.Socket.Bind%2A> and <xref:System.Net.Sockets.Socket.Listen%2A> methods, it is ready to accept incoming connection requests using the <xref:System.Net.Sockets.Socket.Accept%2A> method.</span></span> <span data-ttu-id="39dbe-106">應用程式會暫停，直到呼叫 **Accept** 方法收到連線要求為止。</span><span class="sxs-lookup"><span data-stu-id="39dbe-106">The application is suspended until a connection request is received when the **Accept** method is called.</span></span>  
   
- <span data-ttu-id="2d0a3-107">收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-107">When a connection request is received, **Accept** returns a new **Socket** instance that is associated with the connecting client.</span></span> <span data-ttu-id="2d0a3-108">下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-108">The following example reads data from the client, displays it on the console, and echoes the data back to the client.</span></span> <span data-ttu-id="2d0a3-109">**Socket** 未指定任何傳訊通訊協定，因此字串 "\<EOF>" 會標記訊息資料的結束。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-109">The **Socket** does not specify any messaging protocol, so the string "\<EOF>" marks the end of the message data.</span></span> <span data-ttu-id="2d0a3-110">它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。</span><span class="sxs-lookup"><span data-stu-id="2d0a3-110">It assumes that a **Socket** named `listener` has been initialized and bound to an endpoint.</span></span>  
+ <span data-ttu-id="39dbe-107">收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。</span><span class="sxs-lookup"><span data-stu-id="39dbe-107">When a connection request is received, **Accept** returns a new **Socket** instance that is associated with the connecting client.</span></span> <span data-ttu-id="39dbe-108">下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。</span><span class="sxs-lookup"><span data-stu-id="39dbe-108">The following example reads data from the client, displays it on the console, and echoes the data back to the client.</span></span> <span data-ttu-id="39dbe-109">**Socket** 未指定任何傳訊通訊協定，因此字串 "\<EOF>" 會標記訊息資料的結束。</span><span class="sxs-lookup"><span data-stu-id="39dbe-109">The **Socket** does not specify any messaging protocol, so the string "\<EOF>" marks the end of the message data.</span></span> <span data-ttu-id="39dbe-110">它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。</span><span class="sxs-lookup"><span data-stu-id="39dbe-110">It assumes that a **Socket** named `listener` has been initialized and bound to an endpoint.</span></span>  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -84,7 +85,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2d0a3-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d0a3-111">See Also</span></span>  
- [<span data-ttu-id="2d0a3-112">使用非同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="2d0a3-112">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [<span data-ttu-id="2d0a3-113">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="2d0a3-113">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [<span data-ttu-id="2d0a3-114">透過通訊端接聽</span><span class="sxs-lookup"><span data-stu-id="2d0a3-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a><span data-ttu-id="39dbe-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="39dbe-111">See Also</span></span>  
+ [<span data-ttu-id="39dbe-112">使用非同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="39dbe-112">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="39dbe-113">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="39dbe-113">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="39dbe-114">透過通訊端接聽</span><span class="sxs-lookup"><span data-stu-id="39dbe-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)

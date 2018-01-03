@@ -13,42 +13,43 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 52a46758a8dd53adf583da40de36d640eee9c5d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5a8b921db06d600430fd4e10466070910119626d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="7a8e5-102">Null 常值和類型推斷 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7a8e5-102">Null Literals and Type Inference (Entity SQL)</span></span>
-<span data-ttu-id="7a8e5-103">Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="7a8e5-104">不過，對於 null 常值是否正確，推斷的型別[!INCLUDE[esql](../../../../../../includes/esql-md.md)]會加諸特定限制上可以使用 null 常值的地方。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  
+# <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="2d657-102">Null 常值和類型推斷 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2d657-102">Null Literals and Type Inference (Entity SQL)</span></span>
+<span data-ttu-id="2d657-103">Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。</span><span class="sxs-lookup"><span data-stu-id="2d657-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="2d657-104">不過，對於 null 常值是否正確，推斷的型別[!INCLUDE[esql](../../../../../../includes/esql-md.md)]會加諸特定限制上可以使用 null 常值的地方。</span><span class="sxs-lookup"><span data-stu-id="2d657-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  
   
-## <a name="typed-nulls"></a><span data-ttu-id="7a8e5-105">具型別的 Null</span><span class="sxs-lookup"><span data-stu-id="7a8e5-105">Typed Nulls</span></span>  
- <span data-ttu-id="7a8e5-106">具型別的 Null 可以在任何地方使用。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-106">Typed nulls can be used anywhere.</span></span> <span data-ttu-id="7a8e5-107">具型別的 Null 不需要型別推斷，因為該型別是已知的。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-107">Type inference is not required for typed nulls because the type is known.</span></span> <span data-ttu-id="7a8e5-108">例如，您可以使用下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 建構來建構 Int16 型別的 Null：</span><span class="sxs-lookup"><span data-stu-id="7a8e5-108">For example, you can construct a null of type Int16 with the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construct:</span></span>  
+## <a name="typed-nulls"></a><span data-ttu-id="2d657-105">具型別的 Null</span><span class="sxs-lookup"><span data-stu-id="2d657-105">Typed Nulls</span></span>  
+ <span data-ttu-id="2d657-106">具型別的 Null 可以在任何地方使用。</span><span class="sxs-lookup"><span data-stu-id="2d657-106">Typed nulls can be used anywhere.</span></span> <span data-ttu-id="2d657-107">具型別的 Null 不需要型別推斷，因為該型別是已知的。</span><span class="sxs-lookup"><span data-stu-id="2d657-107">Type inference is not required for typed nulls because the type is known.</span></span> <span data-ttu-id="2d657-108">例如，您可以使用下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 建構來建構 Int16 型別的 Null：</span><span class="sxs-lookup"><span data-stu-id="2d657-108">For example, you can construct a null of type Int16 with the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construct:</span></span>  
   
  `(cast(null as Int16))`  
   
-## <a name="free-floating-null-literals"></a><span data-ttu-id="7a8e5-109">自由浮動 Null 常值</span><span class="sxs-lookup"><span data-stu-id="7a8e5-109">Free-Floating Null Literals</span></span>  
- <span data-ttu-id="7a8e5-110">自由浮動 Null 常值可以在以下內容中使用：</span><span class="sxs-lookup"><span data-stu-id="7a8e5-110">Free-floating null literals can be used in the following contexts:</span></span>  
+## <a name="free-floating-null-literals"></a><span data-ttu-id="2d657-109">自由浮動 Null 常值</span><span class="sxs-lookup"><span data-stu-id="2d657-109">Free-Floating Null Literals</span></span>  
+ <span data-ttu-id="2d657-110">自由浮動 Null 常值可以在以下內容中使用：</span><span class="sxs-lookup"><span data-stu-id="2d657-110">Free-floating null literals can be used in the following contexts:</span></span>  
   
--   <span data-ttu-id="7a8e5-111">當做 CAST 或 TREAT 運算式的引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-111">As an argument to a CAST or TREAT expression.</span></span> <span data-ttu-id="7a8e5-112">建議使用這個方式來產生具型別的 Null 運算式。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-112">This is the recommended way to produce a typed null expression.</span></span>  
+-   <span data-ttu-id="2d657-111">當做 CAST 或 TREAT 運算式的引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-111">As an argument to a CAST or TREAT expression.</span></span> <span data-ttu-id="2d657-112">建議使用這個方式來產生具型別的 Null 運算式。</span><span class="sxs-lookup"><span data-stu-id="2d657-112">This is the recommended way to produce a typed null expression.</span></span>  
   
--   <span data-ttu-id="7a8e5-113">當做方法或函式的引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-113">As an argument to a method or a function.</span></span> <span data-ttu-id="7a8e5-114">套用標準多載規則。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-114">Standard overload rules apply.</span></span>  
+-   <span data-ttu-id="2d657-113">當做方法或函式的引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-113">As an argument to a method or a function.</span></span> <span data-ttu-id="2d657-114">套用標準多載規則。</span><span class="sxs-lookup"><span data-stu-id="2d657-114">Standard overload rules apply.</span></span>  
   
--   <span data-ttu-id="7a8e5-115">當做算術運算式的其中一個引數，例如 +、- 或 /。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-115">As one of the arguments to an arithmetic expression such as +, -, or /.</span></span> <span data-ttu-id="7a8e5-116">其他引數不能是 Null 常值，否則無法進行型別推斷。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-116">The other arguments cannot be null literals, otherwise type inference is not possible.</span></span>  
+-   <span data-ttu-id="2d657-115">當做算術運算式的其中一個引數，例如 +、- 或 /。</span><span class="sxs-lookup"><span data-stu-id="2d657-115">As one of the arguments to an arithmetic expression such as +, -, or /.</span></span> <span data-ttu-id="2d657-116">其他引數不能是 Null 常值，否則無法進行型別推斷。</span><span class="sxs-lookup"><span data-stu-id="2d657-116">The other arguments cannot be null literals, otherwise type inference is not possible.</span></span>  
   
--   <span data-ttu-id="7a8e5-117">當做邏輯運算式的任何引數 (AND、OR 或 NOT)。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-117">As any of the arguments to a logical expression (AND, OR, or NOT).</span></span> <span data-ttu-id="7a8e5-118">已知所有引數都具有 Boolean 型別。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-118">All the arguments are known to be of type Boolean.</span></span>  
+-   <span data-ttu-id="2d657-117">當做邏輯運算式的任何引數 (AND、OR 或 NOT)。</span><span class="sxs-lookup"><span data-stu-id="2d657-117">As any of the arguments to a logical expression (AND, OR, or NOT).</span></span> <span data-ttu-id="2d657-118">已知所有引數都具有 Boolean 型別。</span><span class="sxs-lookup"><span data-stu-id="2d657-118">All the arguments are known to be of type Boolean.</span></span>  
   
--   <span data-ttu-id="7a8e5-119">當做 IS NULL 或 IS NOT NULL 運算式的引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-119">As the argument to an IS NULL or IS NOT NULL expression.</span></span>  
+-   <span data-ttu-id="2d657-119">當做 IS NULL 或 IS NOT NULL 運算式的引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-119">As the argument to an IS NULL or IS NOT NULL expression.</span></span>  
   
--   <span data-ttu-id="7a8e5-120">當做 LIKE 運算式的其中一個或多個引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-120">As one or more of the arguments to a LIKE expression.</span></span> <span data-ttu-id="7a8e5-121">所有引數都必須是字串。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-121">All arguments are expected to be strings.</span></span>  
+-   <span data-ttu-id="2d657-120">當做 LIKE 運算式的其中一個或多個引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-120">As one or more of the arguments to a LIKE expression.</span></span> <span data-ttu-id="2d657-121">所有引數都必須是字串。</span><span class="sxs-lookup"><span data-stu-id="2d657-121">All arguments are expected to be strings.</span></span>  
   
--   <span data-ttu-id="7a8e5-122">當做具名型別建構函式 (Constructor) 的其中一個或多個引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-122">As one or more of the arguments to a named-type constructor.</span></span>  
+-   <span data-ttu-id="2d657-122">當做具名型別建構函式 (Constructor) 的其中一個或多個引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-122">As one or more of the arguments to a named-type constructor.</span></span>  
   
--   <span data-ttu-id="7a8e5-123">當做多重集 (Multiset) 建構函式的其中一個或多個引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-123">As one or more of the arguments to a multiset constructor.</span></span> <span data-ttu-id="7a8e5-124">多重集建構函式至少必須有一個引數為非 Null 常值的運算式。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-124">At least one argument to the multiset constructor must be an expression that is not a null literal.</span></span>  
+-   <span data-ttu-id="2d657-123">當做多重集 (Multiset) 建構函式的其中一個或多個引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-123">As one or more of the arguments to a multiset constructor.</span></span> <span data-ttu-id="2d657-124">多重集建構函式至少必須有一個引數為非 Null 常值的運算式。</span><span class="sxs-lookup"><span data-stu-id="2d657-124">At least one argument to the multiset constructor must be an expression that is not a null literal.</span></span>  
   
--   <span data-ttu-id="7a8e5-125">當做 CASE 運算式中的其中一個或多個 THEN 或 ELSE 運算式。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-125">As one or more of the THEN or ELSE expressions in a CASE expression.</span></span> <span data-ttu-id="7a8e5-126">CASE 運算式中至少必須有一個 THEN 或 ELSE 運算式為 Null 常值以外的運算式。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-126">At least one of the THEN or ELSE expressions in the CASE expression must be an expression other than a null literal.</span></span>  
+-   <span data-ttu-id="2d657-125">當做 CASE 運算式中的其中一個或多個 THEN 或 ELSE 運算式。</span><span class="sxs-lookup"><span data-stu-id="2d657-125">As one or more of the THEN or ELSE expressions in a CASE expression.</span></span> <span data-ttu-id="2d657-126">CASE 運算式中至少必須有一個 THEN 或 ELSE 運算式為 Null 常值以外的運算式。</span><span class="sxs-lookup"><span data-stu-id="2d657-126">At least one of the THEN or ELSE expressions in the CASE expression must be an expression other than a null literal.</span></span>  
   
- <span data-ttu-id="7a8e5-127">自由浮動 Null 常值不能在其他案例中使用。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-127">Free-floating null literals cannot be used in other scenarios.</span></span> <span data-ttu-id="7a8e5-128">例如，不能當做資料列建構函式的引數。</span><span class="sxs-lookup"><span data-stu-id="7a8e5-128">For example,  they cannot be used as arguments to a row constructor.</span></span>  
+ <span data-ttu-id="2d657-127">自由浮動 Null 常值不能在其他案例中使用。</span><span class="sxs-lookup"><span data-stu-id="2d657-127">Free-floating null literals cannot be used in other scenarios.</span></span> <span data-ttu-id="2d657-128">例如，不能當做資料列建構函式的引數。</span><span class="sxs-lookup"><span data-stu-id="2d657-128">For example,  they cannot be used as arguments to a row constructor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a8e5-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7a8e5-129">See Also</span></span>  
- [<span data-ttu-id="7a8e5-130">Entity SQL 概觀</span><span class="sxs-lookup"><span data-stu-id="7a8e5-130">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2d657-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="2d657-129">See Also</span></span>  
+ [<span data-ttu-id="2d657-130">Entity SQL 概觀</span><span class="sxs-lookup"><span data-stu-id="2d657-130">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

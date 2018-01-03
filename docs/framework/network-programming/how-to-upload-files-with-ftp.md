@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 08002bf223d96d49cffb67ec744659747fa49e26
-ms.sourcegitcommit: 32f5e1db8755ed7dfac0b4ec764fa809e5a7548c
+ms.workload: dotnet
+ms.openlocfilehash: 0772e77d699d11e29d17770bb2c737247ed1771d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="18b85-102">如何：透過 FTP 上傳檔案</span><span class="sxs-lookup"><span data-stu-id="18b85-102">How to: Upload Files with FTP</span></span>
-<span data-ttu-id="18b85-103">這個範例示範如何將檔案上傳至 FTP 伺服器。</span><span class="sxs-lookup"><span data-stu-id="18b85-103">This sample shows how to upload a file to an FTP server.</span></span>  
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="a4f3d-102">如何：透過 FTP 上傳檔案</span><span class="sxs-lookup"><span data-stu-id="a4f3d-102">How to: Upload Files with FTP</span></span>
+<span data-ttu-id="a4f3d-103">這個範例示範如何將檔案上傳至 FTP 伺服器。</span><span class="sxs-lookup"><span data-stu-id="a4f3d-103">This sample shows how to upload a file to an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18b85-104">範例</span><span class="sxs-lookup"><span data-stu-id="18b85-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a4f3d-104">範例</span><span class="sxs-lookup"><span data-stu-id="a4f3d-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -62,11 +63,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="18b85-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="18b85-105">Compiling the Code</span></span>  
- <span data-ttu-id="18b85-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="18b85-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a4f3d-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a4f3d-105">Compiling the Code</span></span>  
+ <span data-ttu-id="a4f3d-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="a4f3d-106">This example requires:</span></span>  
   
--   <span data-ttu-id="18b85-107">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="18b85-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="a4f3d-107">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="a4f3d-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="18b85-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="18b85-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a4f3d-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="a4f3d-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="18b85-109">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="18b85-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="a4f3d-109">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="a4f3d-109">.NET Framework Security</span></span>

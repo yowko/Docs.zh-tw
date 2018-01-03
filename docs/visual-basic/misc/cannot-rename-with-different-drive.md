@@ -9,18 +9,15 @@ ms.assetid: eddb087d-b2e9-4bc7-a567-0bb6c45e0d42
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3153d3fd249abaea3492c98328965e0ae9234dfe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8614adab3f95b3a887d698924ed8e90d07b9e8a7
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="cannot-rename-with-different-drive"></a><span data-ttu-id="6b456-102">無法以不同的磁碟機重新命名</span><span class="sxs-lookup"><span data-stu-id="6b456-102">Cannot rename with different drive</span></span>
-<span data-ttu-id="6b456-103">`Rename` 陳述式無法在檔案路徑中指定磁碟機代號。</span><span class="sxs-lookup"><span data-stu-id="6b456-103">The `Rename` statement cannot specify a drive letter in the file path.</span></span>  
+# <a name="cannot-rename-with-different-drive"></a><span data-ttu-id="69204-102">無法以不同的磁碟機重新命名</span><span class="sxs-lookup"><span data-stu-id="69204-102">Cannot rename with different drive</span></span>
+<span data-ttu-id="69204-103">`Rename` 陳述式無法在檔案路徑中指定磁碟機代號。</span><span class="sxs-lookup"><span data-stu-id="69204-103">The `Rename` statement cannot specify a drive letter in the file path.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6b456-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="6b456-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="69204-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="69204-104">To correct this error</span></span>  
   
--   <span data-ttu-id="6b456-105">請從檔案路徑移除磁碟機代號。</span><span class="sxs-lookup"><span data-stu-id="6b456-105">Remove the drive letter from the file path.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="6b456-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6b456-106">See Also</span></span>  
- [<span data-ttu-id="6b456-107">不在組建中：重新命名函式</span><span class="sxs-lookup"><span data-stu-id="6b456-107">NOT IN BUILD: Rename Function</span></span>](http://msdn.microsoft.com/en-us/464062d8-2320-4305-8a8c-1f43e96c94df)
+-   <span data-ttu-id="69204-105">請從檔案路徑移除磁碟機代號。</span><span class="sxs-lookup"><span data-stu-id="69204-105">Remove the drive letter from the file path.</span></span>

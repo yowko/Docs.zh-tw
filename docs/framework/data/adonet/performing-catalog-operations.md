@@ -16,16 +16,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 841f4e126a475799e7cc66f6f7afbcc9318a1096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="performing-catalog-operations"></a><span data-ttu-id="be331-102">執行資料庫目錄作業</span><span class="sxs-lookup"><span data-stu-id="be331-102">Performing Catalog Operations</span></span>
-<span data-ttu-id="be331-103">若要執行的命令來修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 陳述式，建立**命令**物件使用適當的 SQL 陳述式和**連接**物件。</span><span class="sxs-lookup"><span data-stu-id="be331-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="be331-104">執行命令並搭配**ExecuteNonQuery**方法**命令**物件。</span><span class="sxs-lookup"><span data-stu-id="be331-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="performing-catalog-operations"></a><span data-ttu-id="cf9c2-102">執行資料庫目錄作業</span><span class="sxs-lookup"><span data-stu-id="cf9c2-102">Performing Catalog Operations</span></span>
+<span data-ttu-id="cf9c2-103">若要執行的命令來修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 陳述式，建立**命令**物件使用適當的 SQL 陳述式和**連接**物件。</span><span class="sxs-lookup"><span data-stu-id="cf9c2-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="cf9c2-104">執行命令並搭配**ExecuteNonQuery**方法**命令**物件。</span><span class="sxs-lookup"><span data-stu-id="cf9c2-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="be331-105">下列程式碼範例會在 Microsoft SQL Server 資料庫中建立預存程序。</span><span class="sxs-lookup"><span data-stu-id="be331-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
+ <span data-ttu-id="cf9c2-105">下列程式碼範例會在 Microsoft SQL Server 資料庫中建立預存程序。</span><span class="sxs-lookup"><span data-stu-id="cf9c2-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -55,7 +56,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="be331-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be331-106">See Also</span></span>  
- [<span data-ttu-id="be331-107">使用命令來修改資料</span><span class="sxs-lookup"><span data-stu-id="be331-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [<span data-ttu-id="be331-108">命令和參數</span><span class="sxs-lookup"><span data-stu-id="be331-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [<span data-ttu-id="be331-109">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="be331-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="cf9c2-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="cf9c2-106">See Also</span></span>  
+ [<span data-ttu-id="cf9c2-107">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="cf9c2-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="cf9c2-108">命令和參數</span><span class="sxs-lookup"><span data-stu-id="cf9c2-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="cf9c2-109">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="cf9c2-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

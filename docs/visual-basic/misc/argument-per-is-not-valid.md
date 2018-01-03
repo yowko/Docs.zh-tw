@@ -9,20 +9,20 @@ ms.assetid: 5f3fadba-d32c-4e52-b949-85a907e6c12f
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6138e7e7990722a9a7cf6b7e495037c07413872a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d943e83c31e12301ac9d4063f9299f45899fc892
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="argument-39per39-is-not-valid"></a><span data-ttu-id="f1fca-102">引數 &#39;每個 &#39;不正確</span><span class="sxs-lookup"><span data-stu-id="f1fca-102">Argument &#39;Per&#39; is not valid</span></span>
-<span data-ttu-id="f1fca-103">為 `Per`提供的引數無效，該引數必須是指定範圍 1 到 `Double` 中付款期的 `NPer`。</span><span class="sxs-lookup"><span data-stu-id="f1fca-103">An argument supplied for `Per`, which must be a `Double` specifying payment period in the range 1 through `NPer`, is not valid.</span></span>  
+# <a name="argument-39per39-is-not-valid"></a><span data-ttu-id="1712b-102">引數 &#39;每個 &#39;不正確</span><span class="sxs-lookup"><span data-stu-id="1712b-102">Argument &#39;Per&#39; is not valid</span></span>
+<span data-ttu-id="1712b-103">為 `Per`提供的引數無效，該引數必須是指定範圍 1 到 `Double` 中付款期的 `NPer`。</span><span class="sxs-lookup"><span data-stu-id="1712b-103">An argument supplied for `Per`, which must be a `Double` specifying payment period in the range 1 through `NPer`, is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f1fca-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="f1fca-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1712b-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="1712b-104">To correct this error</span></span>  
   
--   <span data-ttu-id="f1fca-105">確定引數落在有效範圍內。</span><span class="sxs-lookup"><span data-stu-id="f1fca-105">Ensure that the argument falls within the valid range.</span></span>  
+-   <span data-ttu-id="1712b-105">確定引數落在有效範圍內。</span><span class="sxs-lookup"><span data-stu-id="1712b-105">Ensure that the argument falls within the valid range.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1fca-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1fca-106">See Also</span></span>  
- [<span data-ttu-id="f1fca-107">不在組建中： IPmt 函式</span><span class="sxs-lookup"><span data-stu-id="f1fca-107">NOT IN BUILD: IPmt Function</span></span>](http://msdn.microsoft.com/en-us/c0cce8e3-c661-4ed5-be52-70fe6e0e1b28)  
- [<span data-ttu-id="f1fca-108">不在組建中： PPmt 函式</span><span class="sxs-lookup"><span data-stu-id="f1fca-108">NOT IN BUILD: PPmt Function</span></span>](http://msdn.microsoft.com/en-us/9b20cd53-c9d6-4916-9e84-0eb84667a921)  
- [<span data-ttu-id="f1fca-109">以傳值和傳址方式傳遞引數</span><span class="sxs-lookup"><span data-stu-id="f1fca-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="1712b-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="1712b-106">See Also</span></span>  
+   
+   
+ [<span data-ttu-id="1712b-107">以傳值和傳址方式傳遞引數</span><span class="sxs-lookup"><span data-stu-id="1712b-107">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

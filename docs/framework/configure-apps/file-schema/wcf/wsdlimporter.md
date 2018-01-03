@@ -13,22 +13,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f4fe6c82d0a6f53dfa05a82622e0412280212cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc85c93dc73918d661195e33ce5094622db36af4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltwsdlimportergt"></a><span data-ttu-id="7e465-102">&lt;wsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="7e465-102">&lt;wsdlImporter&gt;</span></span>
-<span data-ttu-id="7e465-103">指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。</span><span class="sxs-lookup"><span data-stu-id="7e465-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  
+# <a name="ltwsdlimportergt"></a><span data-ttu-id="87699-102">&lt;wsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="87699-102">&lt;wsdlImporter&gt;</span></span>
+<span data-ttu-id="87699-103">指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。</span><span class="sxs-lookup"><span data-stu-id="87699-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  
   
-<span data-ttu-id="7e465-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="7e465-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="7e465-105">\<用戶端 ></span><span class="sxs-lookup"><span data-stu-id="7e465-105">\<client></span></span>  
-<span data-ttu-id="7e465-106">\<中繼資料 ></span><span class="sxs-lookup"><span data-stu-id="7e465-106">\<metadata></span></span>  
-<span data-ttu-id="7e465-107">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="7e465-107">\<wsdlImporters></span></span>  
-<span data-ttu-id="7e465-108">\<wsdlImporter ></span><span class="sxs-lookup"><span data-stu-id="7e465-108">\<wsdlImporter></span></span>  
+<span data-ttu-id="87699-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="87699-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="87699-105">\<用戶端 ></span><span class="sxs-lookup"><span data-stu-id="87699-105">\<client></span></span>  
+<span data-ttu-id="87699-106">\<中繼資料 ></span><span class="sxs-lookup"><span data-stu-id="87699-106">\<metadata></span></span>  
+<span data-ttu-id="87699-107">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="87699-107">\<wsdlImporters></span></span>  
+<span data-ttu-id="87699-108">\<wsdlImporter ></span><span class="sxs-lookup"><span data-stu-id="87699-108">\<wsdlImporter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e465-109">語法</span><span class="sxs-lookup"><span data-stu-id="7e465-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87699-109">語法</span><span class="sxs-lookup"><span data-stu-id="87699-109">Syntax</span></span>  
   
 ```xml  
 <metadata>  
@@ -38,32 +39,32 @@ ms.lasthandoff: 12/02/2017
 </metadata>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7e465-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="7e465-110">Attributes and Elements</span></span>  
- <span data-ttu-id="7e465-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="7e465-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="87699-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="87699-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="87699-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="87699-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7e465-112">屬性</span><span class="sxs-lookup"><span data-stu-id="7e465-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="87699-112">屬性</span><span class="sxs-lookup"><span data-stu-id="87699-112">Attributes</span></span>  
   
-|<span data-ttu-id="7e465-113">屬性</span><span class="sxs-lookup"><span data-stu-id="7e465-113">Attribute</span></span>|<span data-ttu-id="7e465-114">描述</span><span class="sxs-lookup"><span data-stu-id="7e465-114">Description</span></span>|  
+|<span data-ttu-id="87699-113">屬性</span><span class="sxs-lookup"><span data-stu-id="87699-113">Attribute</span></span>|<span data-ttu-id="87699-114">描述</span><span class="sxs-lookup"><span data-stu-id="87699-114">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="7e465-115">此項目的型別。</span><span class="sxs-lookup"><span data-stu-id="7e465-115">The type of this element.</span></span>|  
+|`type`|<span data-ttu-id="87699-115">此項目的型別。</span><span class="sxs-lookup"><span data-stu-id="87699-115">The type of this element.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7e465-116">子元素</span><span class="sxs-lookup"><span data-stu-id="7e465-116">Child Elements</span></span>  
- <span data-ttu-id="7e465-117">無。</span><span class="sxs-lookup"><span data-stu-id="7e465-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="87699-116">子元素</span><span class="sxs-lookup"><span data-stu-id="87699-116">Child Elements</span></span>  
+ <span data-ttu-id="87699-117">無。</span><span class="sxs-lookup"><span data-stu-id="87699-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7e465-118">父項目</span><span class="sxs-lookup"><span data-stu-id="7e465-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="87699-118">父項目</span><span class="sxs-lookup"><span data-stu-id="87699-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="7e465-119">項目</span><span class="sxs-lookup"><span data-stu-id="7e465-119">Element</span></span>|<span data-ttu-id="7e465-120">說明</span><span class="sxs-lookup"><span data-stu-id="7e465-120">Description</span></span>|  
+|<span data-ttu-id="87699-119">項目</span><span class="sxs-lookup"><span data-stu-id="87699-119">Element</span></span>|<span data-ttu-id="87699-120">描述</span><span class="sxs-lookup"><span data-stu-id="87699-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7e465-121">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="7e465-121">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="7e465-122">指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。</span><span class="sxs-lookup"><span data-stu-id="7e465-122">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>|  
+|[<span data-ttu-id="87699-121">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="87699-121">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="87699-122">指定所有 WSDL 匯入工具，此工具會使用 WS-Policy 附件匯入 Web 服務描述語言 (WSDL) 1.1 中繼資料。</span><span class="sxs-lookup"><span data-stu-id="87699-122">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7e465-123">備註</span><span class="sxs-lookup"><span data-stu-id="7e465-123">Remarks</span></span>  
- <span data-ttu-id="7e465-124">WSDL 匯入工具是用來匯入中繼資料，以及將該資訊轉換成表示合約和端點資訊的各種不同類別。</span><span class="sxs-lookup"><span data-stu-id="7e465-124">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="7e465-125">它可以選擇性地匯入合約和端點資訊，以及可公開 (Expose) 任何匯入錯誤並接受與匯入和轉換處理有關聯之型別資訊的屬性。</span><span class="sxs-lookup"><span data-stu-id="7e465-125">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="7e465-126">此外，它也支援匯入繫結資訊，以及可提供存取任何原則文件、WSDL 文件、WSDL 延伸和 XML 結構描述文件的屬性。</span><span class="sxs-lookup"><span data-stu-id="7e465-126">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87699-123">備註</span><span class="sxs-lookup"><span data-stu-id="87699-123">Remarks</span></span>  
+ <span data-ttu-id="87699-124">WSDL 匯入工具是用來匯入中繼資料，以及將該資訊轉換成表示合約和端點資訊的各種不同類別。</span><span class="sxs-lookup"><span data-stu-id="87699-124">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="87699-125">它可以選擇性地匯入合約和端點資訊，以及可公開 (Expose) 任何匯入錯誤並接受與匯入和轉換處理有關聯之型別資訊的屬性。</span><span class="sxs-lookup"><span data-stu-id="87699-125">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="87699-126">此外，它也支援匯入繫結資訊，以及可提供存取任何原則文件、WSDL 文件、WSDL 延伸和 XML 結構描述文件的屬性。</span><span class="sxs-lookup"><span data-stu-id="87699-126">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e465-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e465-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="87699-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="87699-127">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WsdlImporterElement>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
  <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
  <xref:System.ServiceModel.Description.WsdlImporter>  
- [<span data-ttu-id="7e465-128">WCF 用戶端組態</span><span class="sxs-lookup"><span data-stu-id="7e465-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [<span data-ttu-id="7e465-129">用戶端</span><span class="sxs-lookup"><span data-stu-id="7e465-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+ [<span data-ttu-id="87699-128">WCF 用戶端組態</span><span class="sxs-lookup"><span data-stu-id="87699-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [<span data-ttu-id="87699-129">用戶端</span><span class="sxs-lookup"><span data-stu-id="87699-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
