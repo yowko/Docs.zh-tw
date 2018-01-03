@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85a980191e727ec1a20cca618504d1d9cbc2c277
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務的偵錯和說明資訊功能。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
@@ -78,9 +79,9 @@ ms.lasthandoff: 12/02/2017
   
  選用的 `httpHelpPageBinding` 和 `httpHelpPageBinding` 屬性可讓您設定用來存取服務網頁的繫結。 如果未指定這些繫結，則會依適當情形，使用預設的繫結 (使用 HTTP 時為 `HttpTransportBindingElement`，使用 HTTPS 時則為 `HttpsTransportBindingElement`) 存取服務說明頁面。 請注意，這些屬性 (Attribute) 無法搭配內建的 WCF 繫結使用。 支援 xref:System.ServiceModel.Channels.IReplyChannel 的內部繫結項目具有唯一的繫結 > 將會支援。 此外，該繫結的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 屬性 (Property) 必須是 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
  <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
  [指定及處理合約與服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [處理例外狀況和錯誤](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
+ [處理例外狀況和失敗](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
  [服務偵錯行為](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
