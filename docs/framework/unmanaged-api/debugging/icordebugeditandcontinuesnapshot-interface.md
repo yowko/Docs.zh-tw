@@ -19,14 +19,15 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 64e5cb3d4cc03c08e209e0c2306c8981f7769836
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1d6156963ae5b9c0b25ef9a5d7f94a08b2c52ad9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="25e62-102">ICorDebugEditAndContinueSnapshot Interface1</span><span class="sxs-lookup"><span data-stu-id="25e62-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
-<span data-ttu-id="25e62-103">`ICorDebugEditAndContinueSnapshot` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="25e62-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="25e62-104">請勿使用這個介面。</span><span class="sxs-lookup"><span data-stu-id="25e62-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="ac324-102">ICorDebugEditAndContinueSnapshot Interface1</span><span class="sxs-lookup"><span data-stu-id="ac324-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
+<span data-ttu-id="ac324-103">`ICorDebugEditAndContinueSnapshot` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="ac324-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="ac324-104">請勿使用這個介面。</span><span class="sxs-lookup"><span data-stu-id="ac324-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25e62-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="25e62-105">See Also</span></span>  
- [<span data-ttu-id="25e62-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="25e62-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ac324-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="ac324-105">See Also</span></span>  
+ [<span data-ttu-id="ac324-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="ac324-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d54139f8d7562f7f1ceb6e704731cd890a5f99df
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cf2b84a6ab7cc1745fbf7330e66f94ea04635892
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugassemblygetname-method"></a><span data-ttu-id="f07d0-102">ICorDebugAssembly::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="f07d0-102">ICorDebugAssembly::GetName Method</span></span>
-<span data-ttu-id="f07d0-103">取得組件的名稱這`ICorDebugAssembly`執行個體所表示。</span><span class="sxs-lookup"><span data-stu-id="f07d0-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  
+# <a name="icordebugassemblygetname-method"></a><span data-ttu-id="5a4b8-102">ICorDebugAssembly::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="5a4b8-102">ICorDebugAssembly::GetName Method</span></span>
+<span data-ttu-id="5a4b8-103">取得組件的名稱這`ICorDebugAssembly`執行個體所表示。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f07d0-104">語法</span><span class="sxs-lookup"><span data-stu-id="f07d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a4b8-104">語法</span><span class="sxs-lookup"><span data-stu-id="5a4b8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -40,24 +41,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f07d0-105">參數</span><span class="sxs-lookup"><span data-stu-id="f07d0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5a4b8-105">參數</span><span class="sxs-lookup"><span data-stu-id="5a4b8-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="f07d0-106">[in] `szName` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="f07d0-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="5a4b8-106">[in] `szName` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="f07d0-107">[out]指定名稱的實際長度的整數指標。</span><span class="sxs-lookup"><span data-stu-id="f07d0-107">[out] A pointer to an integer that specifies the actual length of the name.</span></span>  
+ <span data-ttu-id="5a4b8-107">[out]指定名稱的實際長度的整數指標。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-107">[out] A pointer to an integer that specifies the actual length of the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="f07d0-108">[out]陣列，其中儲存的名稱。</span><span class="sxs-lookup"><span data-stu-id="f07d0-108">[out] An array that stores the name.</span></span>  
+ <span data-ttu-id="5a4b8-108">[out]陣列，其中儲存的名稱。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-108">[out] An array that stores the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f07d0-109">備註</span><span class="sxs-lookup"><span data-stu-id="f07d0-109">Remarks</span></span>  
- <span data-ttu-id="f07d0-110">`GetName`方法會傳回組件的完整路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="f07d0-110">The `GetName` method returns the full path and file name of the assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a4b8-109">備註</span><span class="sxs-lookup"><span data-stu-id="5a4b8-109">Remarks</span></span>  
+ <span data-ttu-id="5a4b8-110">`GetName`方法會傳回組件的完整路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-110">The `GetName` method returns the full path and file name of the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f07d0-111">需求</span><span class="sxs-lookup"><span data-stu-id="f07d0-111">Requirements</span></span>  
- <span data-ttu-id="f07d0-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f07d0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a4b8-111">需求</span><span class="sxs-lookup"><span data-stu-id="5a4b8-111">Requirements</span></span>  
+ <span data-ttu-id="5a4b8-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a4b8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f07d0-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f07d0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5a4b8-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5a4b8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f07d0-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f07d0-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5a4b8-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5a4b8-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f07d0-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f07d0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5a4b8-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a4b8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

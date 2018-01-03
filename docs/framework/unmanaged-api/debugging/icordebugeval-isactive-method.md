@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a695bfc4b7575a1a56dfba3dca515321a07239cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b574d74de1e042ab50e52eb3bb2fe217801bf1eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugevalisactive-method"></a><span data-ttu-id="1bad1-102">ICorDebugEval::IsActive 方法</span><span class="sxs-lookup"><span data-stu-id="1bad1-102">ICorDebugEval::IsActive Method</span></span>
-<span data-ttu-id="1bad1-103">取得值，指出目前是否正在執行此 ICorDebugEval 物件。</span><span class="sxs-lookup"><span data-stu-id="1bad1-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
+# <a name="icordebugevalisactive-method"></a><span data-ttu-id="56c12-102">ICorDebugEval::IsActive 方法</span><span class="sxs-lookup"><span data-stu-id="56c12-102">ICorDebugEval::IsActive Method</span></span>
+<span data-ttu-id="56c12-103">取得值，指出目前是否正在執行此 ICorDebugEval 物件。</span><span class="sxs-lookup"><span data-stu-id="56c12-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1bad1-104">語法</span><span class="sxs-lookup"><span data-stu-id="1bad1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56c12-104">語法</span><span class="sxs-lookup"><span data-stu-id="56c12-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -38,15 +39,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1bad1-105">參數</span><span class="sxs-lookup"><span data-stu-id="1bad1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="56c12-105">參數</span><span class="sxs-lookup"><span data-stu-id="56c12-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="1bad1-106">[out]值，指出這項評估是否作用中的指標。</span><span class="sxs-lookup"><span data-stu-id="1bad1-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
+ <span data-ttu-id="56c12-106">[out]值，指出這項評估是否作用中的指標。</span><span class="sxs-lookup"><span data-stu-id="56c12-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1bad1-107">需求</span><span class="sxs-lookup"><span data-stu-id="1bad1-107">Requirements</span></span>  
- <span data-ttu-id="1bad1-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1bad1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56c12-107">需求</span><span class="sxs-lookup"><span data-stu-id="56c12-107">Requirements</span></span>  
+ <span data-ttu-id="56c12-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56c12-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1bad1-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1bad1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="56c12-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="56c12-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1bad1-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1bad1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56c12-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56c12-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1bad1-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1bad1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="56c12-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56c12-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

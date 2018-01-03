@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a0cad44706ae4fda7f55f06aea93cae24203b894
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 973feab63d0a741fddb8cc96e1d48e1ae5a33892
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="21153-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="21153-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="21153-103">`GetMvid` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="21153-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="21153-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="21153-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="95079-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="95079-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="95079-103">`GetMvid` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="95079-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="95079-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="95079-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21153-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="21153-105">See Also</span></span>  
- [<span data-ttu-id="21153-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="21153-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="95079-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="95079-105">See Also</span></span>  
+ [<span data-ttu-id="95079-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="95079-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

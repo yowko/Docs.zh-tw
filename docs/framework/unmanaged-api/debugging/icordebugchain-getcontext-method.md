@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 060789990b547f263f9d8b46765a02e531789d15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ec212bb0de60c0cdff6b3fe26d6d4f6261d78fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="67425-102">ICorDebugChain::GetContext 方法</span><span class="sxs-lookup"><span data-stu-id="67425-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="67425-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="67425-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="5d8c2-102">ICorDebugChain::GetContext 方法</span><span class="sxs-lookup"><span data-stu-id="5d8c2-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="5d8c2-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="5d8c2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67425-104">語法</span><span class="sxs-lookup"><span data-stu-id="67425-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d8c2-104">語法</span><span class="sxs-lookup"><span data-stu-id="5d8c2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
