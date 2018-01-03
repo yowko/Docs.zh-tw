@@ -241,7 +241,7 @@
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
                 - name: 偵錯 (Unmanaged API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
-                  topicHref: /dotnet/framework/unmanaged-api/debuggin/index
+                  topicHref: /dotnet/framework/unmanaged-api/debugging/index
                 - name: 診斷符號存放區 (Unmanaged API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
@@ -311,7 +311,7 @@
                 - name: Windows Workflow (WF) 範例
                   tocHref: /dotnet/framework/windows-workflow-foundation/samples/
                   topicHref: /dotnet/framework/windows-workflow-foundation/samples/index
-            - name: Windows Form
+            - name: Windows Forms
               tocHref: /dotnet/framework/winforms/
               topicHref: /dotnet/framework/winforms/index
               items:
@@ -360,8 +360,8 @@
               tocHref: /dotnet/csharp/tutorials/
               topicHref: /dotnet/csharp/tutorials/index
             - name: 導覽
-              tocHref: /dotnet/csharp/tour/
-              topicHref: /dotnet/csharp/tour/index
+              tocHref: /dotnet/csharp/tour-of-csharp/
+              topicHref: /dotnet/csharp/tour-of-csharp/index
             - name: 新功能
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
@@ -371,6 +371,9 @@
             - name: 概念
               tocHref: /dotnet/csharp/concepts/
               topicHref: /dotnet/csharp/concepts/index
+            - name: .NET Compiler Platform SDK
+              tocHref: /dotnet/csharp/roslyn-sdk/
+              topicHref: /dotnet/csharp/roslyn-sdk/index
             - name: 程式設計手冊
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
@@ -392,7 +395,7 @@
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: 例外狀況和例外狀況處理
                   tocHref: /dotnet/csharp/programming-guide/exceptions/
-                  topicHref: /dotnet/csharp/programming-guide/èxceptions/index
+                  topicHref: /dotnet/csharp/programming-guide/exceptions/index
                 - name: 檔案系統和登錄
                   tocHref: /dotnet/csharp/programming-guide/file-system/
                   topicHref: /dotnet/csharp/programming-guide/file-system/index
@@ -407,7 +410,7 @@
                   topicHref: /dotnet/csharp/programming-guide/interfaces/index
                 - name: 互通性
                   tocHref: /dotnet/csharp/programming-guide/interop/
-                  topicHref: /dotnet/csharp/programming-guide/ìnterop/index
+                  topicHref: /dotnet/csharp/programming-guide/interop/index
                 - name: LINQ
                   tocHref: /dotnet/csharp/programming-guide/linq/
                   topicHref: /dotnet/csharp/programming-guide/linq/index
@@ -438,7 +441,7 @@
                       topicHref: /dotnet/csharp/programming-guide/concepts/covariance-contravariance/index
                     - name: 運算式樹狀架構
                       tocHref: /dotnet/csharp/programming-guide/concepts/expression-trees/
-                      topicHref: /dotnet/csharp/programming-guide/concepts/èxpression-trees/index
+                      topicHref: /dotnet/csharp/programming-guide/concepts/expression-trees/index
                     - name: LINQ
                       tocHref: /dotnet/csharp/programming-guide/concepts/linq/
                       topicHref: /dotnet/csharp/programming-guide/concepts/linq/index
@@ -513,7 +516,7 @@
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
                 - name: 運算式樹狀架構
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/
-                  topicHref: /dotnet/visual-basic/programming-guide/concepts/èxpression-trees/index
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/index
                 - name: LINQ
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/linq/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/linq/index
@@ -570,7 +573,7 @@
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/procedures/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/procedures/index
                 - name: 字串
-                  tocHref: /dotnet/visual-basic/programming-guide/language-features/`strings/
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/strings/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/strings/index
                 - name: 變數
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/variables/

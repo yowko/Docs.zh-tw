@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/21/2017
 | <xref:System.ArgumentNullException> | <xref:System.Exception> | 由不允許引數為 Null 的方法擲回。 | `String s = null; "Calculate".IndexOf (s);` |
 | <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 由驗證引數是在指定範圍內的方法擲回。 | `String s = "string"; s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [例外狀況類別和屬性](exception-class-and-properties.md)
 * [操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)

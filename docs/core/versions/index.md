@@ -8,11 +8,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 
@@ -249,7 +250,7 @@ GitHub 上的 .NET Core 存放庫每天都有認可和提取要求，進而產�
 
 各種中繼套件會更新，參考更新過的 .NET Core 程式庫套件。 [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) 中繼套件和 `netcore` 目標架構建立的版本是符合新版 `MAJOR` 版本號碼的重大更新。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [目標 Framework](../../standard/frameworks.md)   
 [.NET Core 發佈封裝](../build/distribution-packaging.md)   
 [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)   

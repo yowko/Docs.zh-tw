@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 87a70ac246e37c646f9be578a03dda7037cfdd2d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -74,7 +75,7 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 - 自封式部署
 - 有協力廠商相依性的自封式部署
 
-# <a name="see-also"></a>請參閱
+# <a name="see-also"></a>另請參閱
 
 [使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)   
 [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)   

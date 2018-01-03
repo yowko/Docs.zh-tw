@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
-ms.openlocfilehash: b2e62074992432dc5ee1360e17f87c782685dc35
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/18/2017
 
 使用 *artifacts/{os}-{arch}/stage2* 中的 `dotnet` 可執行檔來試用新建置的 CLI。 如果您想要在從目前主控台叫用 `dotnet` 時使用建置輸出，您也可以將 *artifacts/{os}-{arch}/stage2* 新增至 PATH。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
 * [.NET Core CLI 開發人員指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)

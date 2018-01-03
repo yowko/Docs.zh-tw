@@ -36,11 +36,14 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generics-in-the-net-framework"></a>.NET Framework 中的泛型
 <a name="top"></a> 泛型可讓您將方法、類別、結構或介面，修改成其發揮作用的精確資料類型。 例如，不使用 <xref:System.Collections.Hashtable> 類別，讓索引鍵和值可為任何類型；而改用 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，指定索引鍵所允許的類型以及值所允許的類型。 泛型的優點包括加強程式碼的重複使用程度以及類型安全性。  
@@ -79,7 +82,7 @@ ms.lasthandoff: 10/18/2017
   
 -   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
   
--   *「泛型類型參數」*(Generic type parameter) 或 *「類型參數」*(type parameter)，是泛型類型或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數，`TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
+-   「泛型型別參數」或「型別參數」，是泛型型別或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數，`TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
   
 -   *「建構的泛型類型」*(constructed generic type) 或 *「建構的類型」*(constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 10/18/2017
   
 -   泛型類型參數的*「共變數」* (covariance) 和 *「反變數」* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (「反變數」) than a target constructed type. 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
   
--   *「條件約束」* (Constraint)，是在泛型類型參數上的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
+-   「條件約束」是對泛型型別參數的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
 -   *「泛型方法定義」* (generic method definition)，是一種有兩個參數清單的方法：泛型類型參數清單和型式參數清單。 類型參數會顯示為傳回類型或型式參數的類型，如下程式碼所示。  
   
@@ -125,7 +128,7 @@ ms.lasthandoff: 10/18/2017
   
  下列是泛型的一些限制：  
   
--   泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 不過， [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支援內容繫結的泛型類型。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
+-   泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 不過，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支援內容繫結的泛型型別。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
   
 -   列舉不能有泛型類型參數。 列舉只能偶爾做為泛型 (例如，因為它位於使用 Visual Basic、C# 或 C++ 所定義的泛型類型中)。 如需詳細資訊，請參閱 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的＜列舉＞。  
   
@@ -167,7 +170,7 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)|描述 .NET Framework 中的泛型集合類別以及其他泛型類型。|  
 |[管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  

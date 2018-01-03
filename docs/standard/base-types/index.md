@@ -17,16 +17,19 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7746d53748260610a7f0e33611dd672fd644d269
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-base-types-in-net"></a>在 .NET 中使用基底類型
 本節說明 .NET 基底類型作業，包括格式化、轉換和一般作業。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [.NET Framework 中的型別轉換](../../../docs/standard/base-types/type-conversion.md)  
  描述如何將一個類型轉換為另一個類型。  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  [操作字串](../../../docs/standard/base-types/manipulating-strings.md)  
  描述如何操作和格式化字串。  
   
- [剖析字串](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  描述如何將字串轉換成 .NET Framework 類型。  
   
 ## <a name="related-sections"></a>相關章節  

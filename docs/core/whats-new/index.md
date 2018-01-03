@@ -7,11 +7,12 @@ ms.author: ronpet
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: e54cabe67558300b5c5fb9552d78397850d4c782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnetcore
+ms.openlocfilehash: 749f0502b5c80ed3d6b81d2036e7591e3f1fe08a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="whats-new-in-net-core"></a>.NET Core 的新功能
 
@@ -163,5 +164,5 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 - 使用 Xamarin 的行動應用程式。
 - 使用 Azure 部署至雲端的應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)

@@ -4,11 +4,14 @@ description: "了解如何將現有的應用程式隨即轉移到 Azure 雲端�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: b7ef8c0e68eee3b2b4247454929e92fb175cae0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e1a04a0d8ed151337e00c8147756644dfc9075a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>利用 Azure Cloud 及 Windows 容器將現有的 .NET 應用程式現代化 (v1.0)  
 
