@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f225dd26376d511518900c38e13d74503004da17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17c1d51c01614a25d52f90557bb10b6842419995
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="d5776-102">ICorDebugArrayValue::GetElementType 方法</span><span class="sxs-lookup"><span data-stu-id="d5776-102">ICorDebugArrayValue::GetElementType Method</span></span>
-<span data-ttu-id="d5776-103">取得值，指出陣列中元素的簡單類型。</span><span class="sxs-lookup"><span data-stu-id="d5776-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="89cf9-102">ICorDebugArrayValue::GetElementType 方法</span><span class="sxs-lookup"><span data-stu-id="89cf9-102">ICorDebugArrayValue::GetElementType Method</span></span>
+<span data-ttu-id="89cf9-103">取得值，指出陣列中元素的簡單類型。</span><span class="sxs-lookup"><span data-stu-id="89cf9-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5776-104">語法</span><span class="sxs-lookup"><span data-stu-id="d5776-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89cf9-104">語法</span><span class="sxs-lookup"><span data-stu-id="89cf9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementType (  
@@ -38,15 +39,15 @@ HRESULT GetElementType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d5776-105">參數</span><span class="sxs-lookup"><span data-stu-id="d5776-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="89cf9-105">參數</span><span class="sxs-lookup"><span data-stu-id="89cf9-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="d5776-106">[out]CorElementType 列舉，指出類型的值的指標。</span><span class="sxs-lookup"><span data-stu-id="d5776-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
+ <span data-ttu-id="89cf9-106">[out]CorElementType 列舉，指出類型的值的指標。</span><span class="sxs-lookup"><span data-stu-id="89cf9-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5776-107">需求</span><span class="sxs-lookup"><span data-stu-id="d5776-107">Requirements</span></span>  
- <span data-ttu-id="d5776-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d5776-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89cf9-107">需求</span><span class="sxs-lookup"><span data-stu-id="89cf9-107">Requirements</span></span>  
+ <span data-ttu-id="89cf9-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="89cf9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5776-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5776-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89cf9-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89cf9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5776-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5776-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89cf9-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89cf9-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5776-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5776-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="89cf9-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89cf9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

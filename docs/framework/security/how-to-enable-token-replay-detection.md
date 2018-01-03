@@ -13,67 +13,68 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a7c72d77b4894376fb6cb8aed2d1c6641a3977da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-enable-token-replay-detection"></a><span data-ttu-id="fdbda-102">操作說明︰啟用權杖重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="fdbda-102">How To: Enable Token Replay Detection</span></span>
-## <a name="applies-to"></a><span data-ttu-id="fdbda-103">適用於</span><span class="sxs-lookup"><span data-stu-id="fdbda-103">Applies To</span></span>  
+# <a name="how-to-enable-token-replay-detection"></a><span data-ttu-id="95ad8-102">操作說明︰啟用權杖重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="95ad8-102">How To: Enable Token Replay Detection</span></span>
+## <a name="applies-to"></a><span data-ttu-id="95ad8-103">適用於</span><span class="sxs-lookup"><span data-stu-id="95ad8-103">Applies To</span></span>  
   
--   <span data-ttu-id="fdbda-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="fdbda-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="95ad8-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="95ad8-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="fdbda-105">ASP.NET® Web Forms</span><span class="sxs-lookup"><span data-stu-id="fdbda-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="95ad8-105">ASP.NET® Web Forms</span><span class="sxs-lookup"><span data-stu-id="95ad8-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="fdbda-106">摘要</span><span class="sxs-lookup"><span data-stu-id="fdbda-106">Summary</span></span>  
- <span data-ttu-id="fdbda-107">此操作說明提供了在使用 WIF 的 ASP.NET 應用程式中啟用權杖重新執行偵測的詳細逐步程序。</span><span class="sxs-lookup"><span data-stu-id="fdbda-107">This How-To provides detailed step-by-step procedures for enabling token replay detection in an ASP.NET application that uses WIF.</span></span> <span data-ttu-id="fdbda-108">還提供了一些指示，說明如何測試應用程式來確認已啟用權杖重新執行偵測。</span><span class="sxs-lookup"><span data-stu-id="fdbda-108">It also provides instructions for how to test the application to verify that token replay detection is enabled.</span></span> <span data-ttu-id="fdbda-109">這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。</span><span class="sxs-lookup"><span data-stu-id="fdbda-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and instead uses the Development STS that comes with the Identity and Access tool.</span></span> <span data-ttu-id="fdbda-110">「開發 STS」並不會執行實際的驗證，而只是用於測試用途。</span><span class="sxs-lookup"><span data-stu-id="fdbda-110">The Development STS does not perform real authentication and is intended for testing purposes only.</span></span> <span data-ttu-id="fdbda-111">您必須安裝識別和存取工具才能完成這篇使用方法文章。</span><span class="sxs-lookup"><span data-stu-id="fdbda-111">You will need to install the Identity and Access tool to complete this How-To.</span></span> <span data-ttu-id="fdbda-112">您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)</span><span class="sxs-lookup"><span data-stu-id="fdbda-112">It can be downloaded from the following location: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)</span></span>  
+## <a name="summary"></a><span data-ttu-id="95ad8-106">摘要</span><span class="sxs-lookup"><span data-stu-id="95ad8-106">Summary</span></span>  
+ <span data-ttu-id="95ad8-107">此操作說明提供了在使用 WIF 的 ASP.NET 應用程式中啟用權杖重新執行偵測的詳細逐步程序。</span><span class="sxs-lookup"><span data-stu-id="95ad8-107">This How-To provides detailed step-by-step procedures for enabling token replay detection in an ASP.NET application that uses WIF.</span></span> <span data-ttu-id="95ad8-108">還提供了一些指示，說明如何測試應用程式來確認已啟用權杖重新執行偵測。</span><span class="sxs-lookup"><span data-stu-id="95ad8-108">It also provides instructions for how to test the application to verify that token replay detection is enabled.</span></span> <span data-ttu-id="95ad8-109">這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。</span><span class="sxs-lookup"><span data-stu-id="95ad8-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and instead uses the Development STS that comes with the Identity and Access tool.</span></span> <span data-ttu-id="95ad8-110">「開發 STS」並不會執行實際的驗證，而只是用於測試用途。</span><span class="sxs-lookup"><span data-stu-id="95ad8-110">The Development STS does not perform real authentication and is intended for testing purposes only.</span></span> <span data-ttu-id="95ad8-111">您必須安裝識別和存取工具才能完成這篇使用方法文章。</span><span class="sxs-lookup"><span data-stu-id="95ad8-111">You will need to install the Identity and Access tool to complete this How-To.</span></span> <span data-ttu-id="95ad8-112">您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)</span><span class="sxs-lookup"><span data-stu-id="95ad8-112">It can be downloaded from the following location: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="fdbda-113">內容</span><span class="sxs-lookup"><span data-stu-id="fdbda-113">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="95ad8-113">內容</span><span class="sxs-lookup"><span data-stu-id="95ad8-113">Contents</span></span>  
   
--   <span data-ttu-id="fdbda-114">目標</span><span class="sxs-lookup"><span data-stu-id="fdbda-114">Objectives</span></span>  
+-   <span data-ttu-id="95ad8-114">目標</span><span class="sxs-lookup"><span data-stu-id="95ad8-114">Objectives</span></span>  
   
--   <span data-ttu-id="fdbda-115">概觀</span><span class="sxs-lookup"><span data-stu-id="fdbda-115">Overview</span></span>  
+-   <span data-ttu-id="95ad8-115">概觀</span><span class="sxs-lookup"><span data-stu-id="95ad8-115">Overview</span></span>  
   
--   <span data-ttu-id="fdbda-116">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="fdbda-116">Summary of Steps</span></span>  
+-   <span data-ttu-id="95ad8-116">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="95ad8-116">Summary of Steps</span></span>  
   
--   <span data-ttu-id="fdbda-117">步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="fdbda-117">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Replay Detection</span></span>  
+-   <span data-ttu-id="95ad8-117">步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="95ad8-117">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Replay Detection</span></span>  
   
--   <span data-ttu-id="fdbda-118">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="fdbda-118">Step 2 – Test Your Solution</span></span>  
+-   <span data-ttu-id="95ad8-118">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="95ad8-118">Step 2 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="fdbda-119">目標</span><span class="sxs-lookup"><span data-stu-id="fdbda-119">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="95ad8-119">目標</span><span class="sxs-lookup"><span data-stu-id="95ad8-119">Objectives</span></span>  
   
--   <span data-ttu-id="fdbda-120">建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="fdbda-120">Create a simple ASP.NET application that uses WIF and the Development STS from the Identity and Access Tool</span></span>  
+-   <span data-ttu-id="95ad8-120">建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="95ad8-120">Create a simple ASP.NET application that uses WIF and the Development STS from the Identity and Access Tool</span></span>  
   
--   <span data-ttu-id="fdbda-121">啟用權杖重新執行偵測，並確認它能夠正常運作</span><span class="sxs-lookup"><span data-stu-id="fdbda-121">Enable token replay detection and verify that it is working</span></span>  
+-   <span data-ttu-id="95ad8-121">啟用權杖重新執行偵測，並確認它能夠正常運作</span><span class="sxs-lookup"><span data-stu-id="95ad8-121">Enable token replay detection and verify that it is working</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="fdbda-122">概觀</span><span class="sxs-lookup"><span data-stu-id="fdbda-122">Overview</span></span>  
- <span data-ttu-id="fdbda-123">當用戶端嘗試以用戶端已使用之 STS 權杖向信賴憑證者進行驗證時，就會發生重新執行攻擊。</span><span class="sxs-lookup"><span data-stu-id="fdbda-123">A replay attack occurs when a client attempts to authenticate to a relying party with an STS token that the client has already used.</span></span> <span data-ttu-id="fdbda-124">為了協助避免這種攻擊，WIF 會包含先前所使用之 STS 權杖的重新執行偵測快取。</span><span class="sxs-lookup"><span data-stu-id="fdbda-124">To help prevent this attack, WIF contains a replay detection cache of previously used STS tokens.</span></span> <span data-ttu-id="fdbda-125">啟用時，重新執行偵測會檢查傳入要求的權杖，並確認先前是否已使用該權杖。</span><span class="sxs-lookup"><span data-stu-id="fdbda-125">When enabled, replay detection checks the token of the incoming request and verifies whether or not the token has been previously used.</span></span> <span data-ttu-id="fdbda-126">如果已使用該權杖，就會拒絕要求並擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="fdbda-126">If the token has been used already, the request is refused and a <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> exception is thrown.</span></span>  
+## <a name="overview"></a><span data-ttu-id="95ad8-122">概觀</span><span class="sxs-lookup"><span data-stu-id="95ad8-122">Overview</span></span>  
+ <span data-ttu-id="95ad8-123">當用戶端嘗試以用戶端已使用之 STS 權杖向信賴憑證者進行驗證時，就會發生重新執行攻擊。</span><span class="sxs-lookup"><span data-stu-id="95ad8-123">A replay attack occurs when a client attempts to authenticate to a relying party with an STS token that the client has already used.</span></span> <span data-ttu-id="95ad8-124">為了協助避免這種攻擊，WIF 會包含先前所使用之 STS 權杖的重新執行偵測快取。</span><span class="sxs-lookup"><span data-stu-id="95ad8-124">To help prevent this attack, WIF contains a replay detection cache of previously used STS tokens.</span></span> <span data-ttu-id="95ad8-125">啟用時，重新執行偵測會檢查傳入要求的權杖，並確認先前是否已使用該權杖。</span><span class="sxs-lookup"><span data-stu-id="95ad8-125">When enabled, replay detection checks the token of the incoming request and verifies whether or not the token has been previously used.</span></span> <span data-ttu-id="95ad8-126">如果已使用該權杖，就會拒絕要求並擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 例外狀況。</span><span class="sxs-lookup"><span data-stu-id="95ad8-126">If the token has been used already, the request is refused and a <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> exception is thrown.</span></span>  
   
- <span data-ttu-id="fdbda-127">下列步驟示範啟用重新執行偵測所需的組態變更。</span><span class="sxs-lookup"><span data-stu-id="fdbda-127">The following steps demonstrate the configuration changes required to enable replay detection.</span></span>  
+ <span data-ttu-id="95ad8-127">下列步驟示範啟用重新執行偵測所需的組態變更。</span><span class="sxs-lookup"><span data-stu-id="95ad8-127">The following steps demonstrate the configuration changes required to enable replay detection.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="fdbda-128">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="fdbda-128">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="95ad8-128">步驟摘要</span><span class="sxs-lookup"><span data-stu-id="95ad8-128">Summary of Steps</span></span>  
   
--   <span data-ttu-id="fdbda-129">步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="fdbda-129">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Replay Detection</span></span>  
+-   <span data-ttu-id="95ad8-129">步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="95ad8-129">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Replay Detection</span></span>  
   
--   <span data-ttu-id="fdbda-130">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="fdbda-130">Step 2 – Test Your Solution</span></span>  
+-   <span data-ttu-id="95ad8-130">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="95ad8-130">Step 2 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a><span data-ttu-id="fdbda-131">步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="fdbda-131">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Replay Detection</span></span>  
- <span data-ttu-id="fdbda-132">在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式，並修改 *Web.config* 檔案以啟用重新執行偵測。</span><span class="sxs-lookup"><span data-stu-id="fdbda-132">In this step, you will create a new ASP.NET Web Forms application and modify the *Web.config* file to enable replay detection.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a><span data-ttu-id="95ad8-131">步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="95ad8-131">Step 1 – Create a Simple ASP.NET Web Forms Application and Enable Replay Detection</span></span>  
+ <span data-ttu-id="95ad8-132">在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式，並修改 *Web.config* 檔案以啟用重新執行偵測。</span><span class="sxs-lookup"><span data-stu-id="95ad8-132">In this step, you will create a new ASP.NET Web Forms application and modify the *Web.config* file to enable replay detection.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="fdbda-133">建立簡單的 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="fdbda-133">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="95ad8-133">建立簡單的 ASP.NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="95ad8-133">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="fdbda-134">啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。</span><span class="sxs-lookup"><span data-stu-id="fdbda-134">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="95ad8-134">啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。</span><span class="sxs-lookup"><span data-stu-id="95ad8-134">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="fdbda-135">在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="fdbda-135">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="95ad8-135">在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="95ad8-135">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="fdbda-136">在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。</span><span class="sxs-lookup"><span data-stu-id="fdbda-136">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="95ad8-136">在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。</span><span class="sxs-lookup"><span data-stu-id="95ad8-136">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  <span data-ttu-id="fdbda-137">以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。</span><span class="sxs-lookup"><span data-stu-id="fdbda-137">Right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
+4.  <span data-ttu-id="95ad8-137">以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。</span><span class="sxs-lookup"><span data-stu-id="95ad8-137">Right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
   
-5.  <span data-ttu-id="fdbda-138">[身分識別與存取] 視窗隨即出現。</span><span class="sxs-lookup"><span data-stu-id="fdbda-138">The **Identity and Access** window appears.</span></span> <span data-ttu-id="fdbda-139">在 [提供者] 底下，選取 [使用本機開發 STS 測試應用程式]，然後按一下 [套用]。</span><span class="sxs-lookup"><span data-stu-id="fdbda-139">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
+5.  <span data-ttu-id="95ad8-138">[身分識別與存取] 視窗隨即出現。</span><span class="sxs-lookup"><span data-stu-id="95ad8-138">The **Identity and Access** window appears.</span></span> <span data-ttu-id="95ad8-139">在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。</span><span class="sxs-lookup"><span data-stu-id="95ad8-139">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
   
-6.  <span data-ttu-id="fdbda-140">將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和**\<identityConfiguration>** 項目後面的位置，如下所示：</span><span class="sxs-lookup"><span data-stu-id="fdbda-140">Add the following **\<tokenReplayDetection>** element to the *Web.config* configuration file immediately following the **\<system.identityModel>** and **\<identityConfiguration>** elements, like shown:</span></span>  
+6.  <span data-ttu-id="95ad8-140">將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和**\<identityConfiguration>** 項目後面的位置，如下所示：</span><span class="sxs-lookup"><span data-stu-id="95ad8-140">Add the following **\<tokenReplayDetection>** element to the *Web.config* configuration file immediately following the **\<system.identityModel>** and **\<identityConfiguration>** elements, like shown:</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -81,13 +82,13 @@ ms.lasthandoff: 10/18/2017
             <tokenReplayDetection enabled="true"/>  
     ```  
   
-## <a name="step-2--test-your-solution"></a><span data-ttu-id="fdbda-141">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="fdbda-141">Step 2 – Test Your Solution</span></span>  
- <span data-ttu-id="fdbda-142">在此步驟中，您將測試啟用 WIF 的 ASP.NET 應用程式來確認已啟用重新執行偵測。</span><span class="sxs-lookup"><span data-stu-id="fdbda-142">In this step, you will test your WIF-enabled ASP.NET application to verify that replay detection has been enabled.</span></span>  
+## <a name="step-2--test-your-solution"></a><span data-ttu-id="95ad8-141">步驟 2 – 測試方案</span><span class="sxs-lookup"><span data-stu-id="95ad8-141">Step 2 – Test Your Solution</span></span>  
+ <span data-ttu-id="95ad8-142">在此步驟中，您將測試啟用 WIF 的 ASP.NET 應用程式來確認已啟用重新執行偵測。</span><span class="sxs-lookup"><span data-stu-id="95ad8-142">In this step, you will test your WIF-enabled ASP.NET application to verify that replay detection has been enabled.</span></span>  
   
-#### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a><span data-ttu-id="fdbda-143">測試啟用 WIF 的 ASP.NET 應用程式的重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="fdbda-143">To test your WIF-enabled ASP.NET application for replay detection</span></span>  
+#### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a><span data-ttu-id="95ad8-143">測試啟用 WIF 的 ASP.NET 應用程式的重新執行偵測</span><span class="sxs-lookup"><span data-stu-id="95ad8-143">To test your WIF-enabled ASP.NET application for replay detection</span></span>  
   
-1.  <span data-ttu-id="fdbda-144">按 **F5** 鍵執行方案。</span><span class="sxs-lookup"><span data-stu-id="fdbda-144">Run the solution by pressing the **F5** key.</span></span> <span data-ttu-id="fdbda-145">您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。</span><span class="sxs-lookup"><span data-stu-id="fdbda-145">You should be presented with the default ASP.NET Home Page and automatically authenticated with the username *Terry*, which is the default user that is returned by the Development STS.</span></span>  
+1.  <span data-ttu-id="95ad8-144">按 **F5** 鍵執行方案。</span><span class="sxs-lookup"><span data-stu-id="95ad8-144">Run the solution by pressing the **F5** key.</span></span> <span data-ttu-id="95ad8-145">您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。</span><span class="sxs-lookup"><span data-stu-id="95ad8-145">You should be presented with the default ASP.NET Home Page and automatically authenticated with the username *Terry*, which is the default user that is returned by the Development STS.</span></span>  
   
-2.  <span data-ttu-id="fdbda-146">請按瀏覽器的**上一頁**按鈕。</span><span class="sxs-lookup"><span data-stu-id="fdbda-146">Press the browser’s **Back** button.</span></span> <span data-ttu-id="fdbda-147">您應該會看到 **Server Error in ‘/’ Application** 頁面以及下列描述：*ID1062: Replay has been detected for: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*，後面接著 *AssertionId* 和 *Issuer*。</span><span class="sxs-lookup"><span data-stu-id="fdbda-147">You should be presented with a **Server Error in ‘/’ Application** page with the following description: *ID1062: Replay has been detected for: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*, followed by an *AssertionId* and an *Issuer*.</span></span>  
+2.  <span data-ttu-id="95ad8-146">請按瀏覽器的**上一頁**按鈕。</span><span class="sxs-lookup"><span data-stu-id="95ad8-146">Press the browser’s **Back** button.</span></span> <span data-ttu-id="95ad8-147">您應該會看到 **Server Error in ‘/’ Application** 頁面以及下列描述：*ID1062: Replay has been detected for: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*，後面接著 *AssertionId* 和 *Issuer*。</span><span class="sxs-lookup"><span data-stu-id="95ad8-147">You should be presented with a **Server Error in ‘/’ Application** page with the following description: *ID1062: Replay has been detected for: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*, followed by an *AssertionId* and an *Issuer*.</span></span>  
   
-     <span data-ttu-id="fdbda-148">因為在偵測到權杖重新執行時，會擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 類型的例外狀況，所以您會看到此錯誤頁面。</span><span class="sxs-lookup"><span data-stu-id="fdbda-148">You are seeing this error page because an exception of type <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> was thrown when the token replay was detected.</span></span> <span data-ttu-id="fdbda-149">發生此錯誤的原因是您在權杖第一次出現時，嘗試重新傳送初始 POST 要求。</span><span class="sxs-lookup"><span data-stu-id="fdbda-149">This error occurs because you are attempting to re-send the initial POST request when the token was first presented.</span></span> <span data-ttu-id="fdbda-150">**上一頁**按鈕不會造成後續的伺服器要求發生這種行為。</span><span class="sxs-lookup"><span data-stu-id="fdbda-150">The **Back** button will not cause this behavior on subsequent requests to the server.</span></span>
+     <span data-ttu-id="95ad8-148">因為在偵測到權杖重新執行時，會擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 類型的例外狀況，所以您會看到此錯誤頁面。</span><span class="sxs-lookup"><span data-stu-id="95ad8-148">You are seeing this error page because an exception of type <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> was thrown when the token replay was detected.</span></span> <span data-ttu-id="95ad8-149">發生此錯誤的原因是您在權杖第一次出現時，嘗試重新傳送初始 POST 要求。</span><span class="sxs-lookup"><span data-stu-id="95ad8-149">This error occurs because you are attempting to re-send the initial POST request when the token was first presented.</span></span> <span data-ttu-id="95ad8-150">**上一頁**按鈕不會造成後續的伺服器要求發生這種行為。</span><span class="sxs-lookup"><span data-stu-id="95ad8-150">The **Back** button will not cause this behavior on subsequent requests to the server.</span></span>

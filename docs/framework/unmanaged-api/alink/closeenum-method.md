@@ -21,16 +21,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6ade939969069fb35221d83f8c7e4e380e903a00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89f5b7069af0bfdfd732ed1ab4935771a565a20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="2b09d-102">CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="2b09d-102">CloseEnum Method</span></span>
-<span data-ttu-id="2b09d-103">關閉指定的列舉型別，並釋放相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="2b09d-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="6ff9e-102">CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="6ff9e-102">CloseEnum Method</span></span>
+<span data-ttu-id="6ff9e-103">關閉指定的列舉型別，並釋放相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="6ff9e-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b09d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2b09d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ff9e-104">語法</span><span class="sxs-lookup"><span data-stu-id="6ff9e-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseEnum(  
@@ -38,17 +39,17 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2b09d-105">參數</span><span class="sxs-lookup"><span data-stu-id="2b09d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6ff9e-105">參數</span><span class="sxs-lookup"><span data-stu-id="6ff9e-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="2b09d-106">要關閉的列舉控制代碼。</span><span class="sxs-lookup"><span data-stu-id="2b09d-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="6ff9e-106">要關閉的列舉控制代碼。</span><span class="sxs-lookup"><span data-stu-id="6ff9e-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2b09d-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="2b09d-107">Return Value</span></span>  
- <span data-ttu-id="2b09d-108">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="2b09d-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6ff9e-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="6ff9e-107">Return Value</span></span>  
+ <span data-ttu-id="6ff9e-108">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="6ff9e-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b09d-109">需求</span><span class="sxs-lookup"><span data-stu-id="2b09d-109">Requirements</span></span>  
- <span data-ttu-id="2b09d-110">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="2b09d-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ff9e-109">需求</span><span class="sxs-lookup"><span data-stu-id="6ff9e-109">Requirements</span></span>  
+ <span data-ttu-id="6ff9e-110">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="6ff9e-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b09d-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2b09d-111">See Also</span></span>  
- [<span data-ttu-id="2b09d-112">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="2b09d-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="2b09d-113">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="2b09d-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="2b09d-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="2b09d-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="6ff9e-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="6ff9e-111">See Also</span></span>  
+ [<span data-ttu-id="6ff9e-112">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="6ff9e-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="6ff9e-113">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="6ff9e-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="6ff9e-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="6ff9e-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

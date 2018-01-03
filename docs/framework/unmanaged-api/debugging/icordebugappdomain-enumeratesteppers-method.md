@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5e58059bbd3e9bf8d3db80d36e84e1f4496eb0bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b410eabee546307488449e577d9e102ac6a210b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugappdomainenumeratesteppers-method"></a><span data-ttu-id="03709-102">ICorDebugAppDomain::EnumerateSteppers 方法</span><span class="sxs-lookup"><span data-stu-id="03709-102">ICorDebugAppDomain::EnumerateSteppers Method</span></span>
-<span data-ttu-id="03709-103">應用程式定義域中取得所有作用中的 stepper 的列舉值。</span><span class="sxs-lookup"><span data-stu-id="03709-103">Gets an enumerator for all active steppers in the application domain.</span></span>  
+# <a name="icordebugappdomainenumeratesteppers-method"></a><span data-ttu-id="f05ac-102">ICorDebugAppDomain::EnumerateSteppers 方法</span><span class="sxs-lookup"><span data-stu-id="f05ac-102">ICorDebugAppDomain::EnumerateSteppers Method</span></span>
+<span data-ttu-id="f05ac-103">應用程式定義域中取得所有作用中的 stepper 的列舉值。</span><span class="sxs-lookup"><span data-stu-id="f05ac-103">Gets an enumerator for all active steppers in the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03709-104">語法</span><span class="sxs-lookup"><span data-stu-id="03709-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f05ac-104">語法</span><span class="sxs-lookup"><span data-stu-id="f05ac-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateSteppers (  
@@ -38,15 +39,15 @@ HRESULT EnumerateSteppers (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03709-105">參數</span><span class="sxs-lookup"><span data-stu-id="03709-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f05ac-105">參數</span><span class="sxs-lookup"><span data-stu-id="f05ac-105">Parameters</span></span>  
  `ppSteppers`  
- <span data-ttu-id="03709-106">[out]ICorDebugStepperEnum 物件，為所有使用中的 stepper 應用程式定義域中的列舉值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="03709-106">[out] A pointer to the address of an ICorDebugStepperEnum object that is the enumerator for all active steppers in the application domain.</span></span>  
+ <span data-ttu-id="f05ac-106">[out]ICorDebugStepperEnum 物件，為所有使用中的 stepper 應用程式定義域中的列舉值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="f05ac-106">[out] A pointer to the address of an ICorDebugStepperEnum object that is the enumerator for all active steppers in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03709-107">需求</span><span class="sxs-lookup"><span data-stu-id="03709-107">Requirements</span></span>  
- <span data-ttu-id="03709-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03709-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f05ac-107">需求</span><span class="sxs-lookup"><span data-stu-id="f05ac-107">Requirements</span></span>  
+ <span data-ttu-id="f05ac-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f05ac-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03709-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="03709-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f05ac-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f05ac-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="03709-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03709-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f05ac-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f05ac-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03709-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03709-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f05ac-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f05ac-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
