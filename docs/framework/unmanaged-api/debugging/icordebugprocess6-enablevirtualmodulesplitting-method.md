@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6e1f459636f1bb2b3844eebdb98bebd1deb73cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34a2c2571ba7f3560d861d0a5271cc3a955253a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 方法
 啟用或停用虛擬模組分割。  
@@ -38,7 +39,7 @@ HRESULT EnableVirtualModuleSplitting(
  虛擬模組分割可讓[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)辨認組建期間合併在一起的模組處理，並呈現以一組個別的模組，而不是以單一大型模組。 如此一來變更的各種行為[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)如下所述的方法。  
   
 > [!NOTE]
->  這個方法僅適用於 .NET 原生。  
+>  本方法只適用於 .NET 原生。  
   
  您可以呼叫這個方法並隨時變更 `enableSplitting` 的值。 不會造成中任何可設定狀態的功能變更[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)改變行為中所列的方法以外的物件[虛擬模組分割和未受管理的偵錯 Api](#APIs)在這些呼叫的一節。 呼叫這些方法時，使用虛擬模組確實會對效能帶來負面影響。 此外，大量記憶體中快取的虛擬化的中繼資料可能需要正確地實作[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)可能保留應用程式開發介面，而且這些快取，即使虛擬模組分割已關閉。  
   
@@ -120,6 +121,6 @@ HRESULT EnableVirtualModuleSplitting(
   
  **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorDebugProcess6 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: adefc0de4ba09419660c214df75365c90ec2c66e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c9b5126958b17ee2d1de5394ed07d78c3ffe29b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes 列舉
 指定 Managed 堆積上的記憶體區域產生方式。  
@@ -41,7 +42,7 @@ typedef enum CorDebugGenerationTypes {
   
 ## <a name="members"></a>成員  
   
-|成員名稱|說明|  
+|成員名稱|描述|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|層代 0。|  
 |`CorDebug_Gen1`|層代 1。|  
@@ -59,5 +60,5 @@ typedef enum CorDebugGenerationTypes {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

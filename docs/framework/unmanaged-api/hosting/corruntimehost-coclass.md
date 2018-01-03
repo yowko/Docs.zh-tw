@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3d7a272aff3a3c7d32042b76d37fdb15c9dcad4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 23bee1a79dfb54a696495fdb61a7ba9ba4b4c143
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost Coclass
 提供介面來管理 common language runtime 所執行的應用程式。  
@@ -42,7 +43,7 @@ coclass CorRuntimeHost {
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |[ICorConfiguration 介面](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|提供方法來設定 common language runtime (CLR)。|  
 |[ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|提供方法，讓主應用程式啟動和停止 common language runtime 明確地建立和設定應用程式定義域，若要存取的預設網域，並列舉處理序中執行的所有網域。|  
@@ -59,5 +60,5 @@ coclass CorRuntimeHost {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

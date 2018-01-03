@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 65d80734bfbe16c8b5052f8de1e4c6280b663707
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61231715a24978e7fe57b2c9e87e7968dc0fdbc5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中新增的 CLR 裝載介面
 本節說明 unmanaged 介面主機可用於將 common language runtime (CLR) 整合在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]， [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，及至其應用程式的更新版本。 這些介面提供主應用程式設定和執行階段載入處理序的方法。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/18/2017
   
 -   使用沒有 apartment 模型、 彙總，或登錄啟動[CoCreateInstance 函式](http://go.microsoft.com/fwlink/?LinkId=142894)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ICLRAppDomainResourceMonitor 介面](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
  提供方法，檢查應用程式定義域的記憶體和 CPU 使用量。  
   

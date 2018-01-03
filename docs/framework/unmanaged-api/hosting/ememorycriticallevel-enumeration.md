@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15a6786cb99a64d441d7e05fb91cd8ff0f3af92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4fb279402b2b677546f775b9a8badfbe2095fe4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 列舉
 包含值，表示故障的影響，當有特定記憶體配置要求卻無法滿足。  
@@ -40,7 +41,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`eAppDomainCritical`|表示配置要求此配置的網域中執行 managed 程式碼的重要。 如果無法配置記憶體，無法保證 CLR，網域是仍可使用。 主機會決定當無法滿足配置時要採取什麼動作。 它可以指示中止 CLR`AppDomain`自動執行，或允許繼續執行上呼叫方法[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。|  
 |`eProcessCritical`|表示配置是重要的程序中的 managed 程式碼執行。 執行完成項時，在啟動期間，而且會使用此值。 如果無法配置記憶體，CLR 就無法執行操作中處理程序。 如果配置失敗，CLR 會有效停用。 Clr 的所有後續呼叫會失敗並 HOST_E_CLRNOTAVAILABLE。|  
@@ -58,6 +59,6 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICLRMemoryNotificationCallback 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7c620c4a33032711abc0d7b82af908018bd44cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02a775be4976760b354a492e7252a67ef04eace9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 結構
 提供有關 common language runtime (CLR) 記憶體回收機制統計資料。  
@@ -48,7 +49,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`Flags`|表示要計算及傳回的欄位值。|  
 |`ExplicitGCCount`|指出所強制的外部要求的記憶體回收數目。|  
@@ -88,7 +89,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  [自動管理記憶體](../../../../docs/standard/automatic-memory-management.md)  
  [記憶體回收](../../../../docs/standard/garbage-collection/index.md)

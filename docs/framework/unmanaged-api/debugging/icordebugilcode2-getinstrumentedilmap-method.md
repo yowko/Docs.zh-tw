@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b740f378b4fd15fe6bf4a9832348869878e2a4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0499813bc2192d419dc21d9dbb84aff17894544f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap 方法
 [在 .NET Framework 4.5.2 及更新版本中支援]  
@@ -52,7 +53,7 @@ HRESULT GetInstrumentedILMap(
 ## <a name="remarks"></a>備註  
  如果分析工具來設定對應藉由呼叫[icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)方法，偵錯工具可以呼叫這個方法來擷取對應，並計算 IL 位移堆疊時，在內部使用對應追蹤及變數存留期。  
   
- 如果`cMap`為 0 和`pcMap`是非**null**，`pcMap`設為 可用的 COR_IL_MAP 值數目。 若 `cMap` 為非零，其代表 `map` 陣列的儲存容量。 方法傳回時，`map`包含最多`cMap`項目，和`pcMap`設定為實際寫入至 COR_IL_MAP 值數目`map`陣列。  
+ 如果`cMap`為 0 和`pcMap`是非**null**，`pcMap`設為 可用的 COR_IL_MAP 值數目。 如果 `cMap` 不是零，則代表 `map` 陣列的儲存體容量。 方法傳回時，`map`包含最多`cMap`項目，和`pcMap`設定為實際寫入至 COR_IL_MAP 值數目`map`陣列。  
   
  如果 IL 未經檢測，或是分析工具未提供對應，此方法會傳回 `S_OK`，並將 `pcMap` 設為 0。  
   
@@ -65,7 +66,7 @@ HRESULT GetInstrumentedILMap(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)  
  [ICorDebugILCode2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

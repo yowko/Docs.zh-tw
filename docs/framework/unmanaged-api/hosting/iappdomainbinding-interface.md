@@ -19,18 +19,19 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e02c1b9499bc2972f88c9045d3f59423edb6cb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3a6f26c8337f89d829f42e00a9e5e79731a15156
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding 介面
 提供稱為 common language runtime (CLR)，以通知主機應用程式已建立應用程式定義域的方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[OnAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|由 common language runtime (CLR)，以通知主機已建立應用程式定義域呼叫。|  
   
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

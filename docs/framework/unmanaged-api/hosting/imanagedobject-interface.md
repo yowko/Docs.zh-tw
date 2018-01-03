@@ -19,18 +19,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ece72d00dc8a1d99daa4202989879e95dcf0a4fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ac7b41a5d42a8e2bc32077f02ad850b421efe31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 介面
 提供方法來控制受管理的物件。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[GetObjectIdentity 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|取得此受管理物件識別。|  
 |[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|取得此受管理物件的字串表示。|  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

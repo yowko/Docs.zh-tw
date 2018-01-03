@@ -18,16 +18,17 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d68f71c7963903d1a56620329c1ad95ea82f7561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4712728a27ada0d6e8f5045b1727b73b857cdde3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-structures"></a>診斷符號存放區結構
 本主題描述診斷符號存放區應用程式開發介面使用的 unmanaged 的結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CALL_ID 結構](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
  提供偵錯工具所呼叫之函數的相關資訊。  
   
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>相關章節  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [診斷符號存放區列舉型別](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
   
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

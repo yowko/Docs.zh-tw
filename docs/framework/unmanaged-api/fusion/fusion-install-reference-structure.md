@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 244ea215b6668685920a454c1bd9da065076f38b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 36321606fe208233fb6114fe9568b655f0e1b400
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 結構
 表示應用程式建立應用程式已安裝在全域組件快取中的組件的參考。  
@@ -42,7 +43,7 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`cbSize`|結構，以位元組為單位的大小。|  
 |`dwFlags`|保留供未來擴充。 此值必須是 0 （零）。|  
@@ -57,6 +58,6 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
  [全域組件快取](../../../../docs/framework/app-domains/gac.md)

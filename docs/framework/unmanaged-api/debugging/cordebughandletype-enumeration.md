@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ef0b892d8dc277286114e8f9eda8d0f16833e1d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 408c66bd33ba12b2c674dd6c4a049acfb8c4c986
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列舉
 指出控制代碼類型。  
@@ -39,7 +40,7 @@ typedef enum CorDebugHandleType {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`HANDLE_STRONG`|控制代碼為強式，它可防止物件被記憶體回收所回收。|  
 |`HANDLE_WEAK_TRACK_RESURRECTION`|控制代碼很弱，這不會防止物件被記憶體回收所回收。<br /><br /> 收集物件時，控制代碼會變成無效。|  
@@ -53,5 +54,5 @@ typedef enum CorDebugHandleType {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

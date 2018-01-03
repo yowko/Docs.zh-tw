@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 69a203424320a176cd285c23d98111e71709042a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c0745428c6e9a51c5c7fa413838cf65eb907eea8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap 方法
 取得符號讀取器方法，指定方法語彙基元和編輯後繼續版本號碼。 版本號碼從 1 開始，就會遞增每次方法做為編輯後繼續作業結果變更時。  
@@ -55,5 +56,5 @@ HRESULT GetMethodByVersionPreRemap(
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl。 CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

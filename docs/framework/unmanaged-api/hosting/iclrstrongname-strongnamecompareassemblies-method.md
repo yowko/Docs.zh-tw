@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab69a0d0bb5894c2393e240b4f89b9a16dd98939
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 96fbeccf76de87a3582bf8c2084d0ca9ad7d27f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies 方法
 判斷兩個組件是否只有其強式名稱簽章不同。  
@@ -71,5 +72,5 @@ HRESULT StrongNameCompareAssemblies (
 ## <a name="remarks"></a>備註  
  組件的強式名稱簽章包含組件的文字名稱、 版本、 文化特性和公開金鑰語彙基元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

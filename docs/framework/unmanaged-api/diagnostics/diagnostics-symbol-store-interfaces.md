@@ -20,16 +20,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 50ef54c90609bf8ef1e3a943664daef95f50d926
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9a9550bf1e3e5500356584b1bdd53f5d3061e190
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>診斷符號存放區介面
 本主題描述 unmanaged 的介面，可讓編譯器產生供偵錯工具符號資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [IBindingDisplay 介面](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
  提供方法，顯示執行中應用程式的目前繫結資訊。  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 10/18/2017
  ISymUnmanagedWriter5 介面。  
   
 ## <a name="related-sections"></a>相關章節  
- [診斷符號存放區列舉型別](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
   
  [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   

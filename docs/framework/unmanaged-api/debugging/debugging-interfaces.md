@@ -17,16 +17,17 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: de2469d15eef40b9ef283d67aeca429d9d96a7ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e625818238a1fd18ef3885d2699e0f532efa40e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-interfaces"></a>偵錯介面
 本節說明 Unmanaged 介面，這類介面會處理通用語言執行平台 (CLR) 中所執行之程式的偵錯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ICLRDataEnumMemoryRegions 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)  
  提供方法來列舉呼叫端所指定的記憶體區域。  
   
@@ -54,10 +55,10 @@ ms.lasthandoff: 10/18/2017
  [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
  提供方法讓開發人員於 CLR 環境中為應用程式偵錯。  
   
- [ICorDebugAppDomain Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)  
+ [ICorDebugAppDomain 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)  
  提供偵錯應用程式定義域的方法。  
   
- [ICorDebugAppDomain2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-interface.md)  
+ [ICorDebugAppDomain2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-interface.md)  
  提供方法來使用陣列、指標、函式指標和 ByRef 類型。 這個介面是 `ICorDebugAppDomain` 介面的擴充。  
   
  [ICorDebugAppDomain3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)  
@@ -66,52 +67,52 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugAppDomain4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  
  以邏輯方式擴充[ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)介面，以從 COM 可呼叫包裝函式取得 managed 的物件。  
   
- [ICorDebugAppDomainEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
+ [ICorDebugAppDomainEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
  提供方法，此方法會傳回指定數目的 `ICorDebugAppDomain` 值 (從列舉類型中的下一個位置開始)。  
   
- [ICorDebugArrayValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-interface.md)  
+ [ICorDebugArrayValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-interface.md)  
  表示一維或多維陣列之 `ICorDebugHeapValue` 的子類別。  
   
- [ICorDebugAssembly Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)  
+ [ICorDebugAssembly 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)  
  表示組件。  
   
- [ICorDebugAssembly2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-interface.md)  
+ [ICorDebugAssembly2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-interface.md)  
  表示組件。 這個介面是 `ICorDebugAssembly` 介面的擴充。  
   
  [ICorDebugAssembly3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
  以邏輯方式擴充[ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)介面，以提供支援給容器組件及其所包含的組件。 **適用於僅限.NET Native。**  
   
- [ICorDebugAssemblyEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
+ [ICorDebugAssemblyEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugAssembly` 陣列。  
   
  [ICorDebugBlockingObjectEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
  提供列舉值的清單[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構。  
   
- [ICorDebugBoxValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-interface.md)  
+ [ICorDebugBoxValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-interface.md)  
  `ICorDebugHeapValue` 的子類別，表示 Boxed 值的類別物件。  
   
- [ICorDebugBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)  
+ [ICorDebugBreakpoint 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)  
  表示函式中的中斷點，或是某個值上的監看點。  
   
- [ICorDebugBreakpointEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-interface.md)  
+ [ICorDebugBreakpointEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugBreakpoint` 陣列。  
   
- [ICorDebugChain Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)  
+ [ICorDebugChain 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)  
  表示實體或邏輯呼叫堆疊的區段。  
   
- [ICorDebugChainEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-interface.md)  
+ [ICorDebugChainEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugChain` 陣列。  
   
- [ICorDebugClass Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
+ [ICorDebugClass 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
  表示類型，可以是基本類型或複雜類型 (亦即，使用者定義類型)。 如果是泛型類型，則 `ICorDebugClass` 表示未具現化的泛型類型。  
   
- [ICorDebugClass2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-interface.md)  
+ [ICorDebugClass2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-interface.md)  
  表示泛型類別，或是具有 <xref:System.Type> 類型之方法參數的類別。 這個介面延伸 `ICorDebugClass`。  
   
- [ICorDebugCode Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)  
+ [ICorDebugCode 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)  
  表示 Microsoft Intermediate Language (MSIL) 程式碼或機器碼的區段。  
   
- [ICorDebugCode2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)  
+ [ICorDebugCode2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)  
  提供方法來擴充 `ICorDebugCode` 的功能。  
   
  [ICorDebugCode3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
@@ -120,16 +121,16 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugCode4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)  
  提供方法，以允許列舉的本機變數和引數的函式中的偵錯工具。  
   
- [ICorDebugCodeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-interface.md)  
+ [ICorDebugCodeEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugCode` 陣列。  
   
  [ICorDebugComObjectValue 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)  
  提供擷取快取介面物件的方法。  
   
- [ICorDebugContext Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcontext-interface.md)  
+ [ICorDebugContext 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugcontext-interface.md)  
  表示內容物件。 尚未實作這個介面。  
   
- [ICorDebugController Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-interface.md)  
+ [ICorDebugController 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-interface.md)  
  表示可以控制程式碼執行內容的範圍 (<xref:System.Diagnostics.Process> 或 <xref:System.AppDomain> 其中一項)。  
   
  [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
@@ -147,19 +148,19 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugEditAndContinueErrorInfo 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)  
  已過時。 請勿使用這個介面。  
   
- [ICorDebugEditAndContinueSnapshot Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinuesnapshot-interface.md)  
+ [ICorDebugEditAndContinueSnapshot 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinuesnapshot-interface.md)  
  已過時。 請勿使用這個介面。  
   
- [ICorDebugEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)  
+ [ICorDebugEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)  
  當做抽象基底介面來偵錯列舉值。  
   
- [ICorDebugErrorInfoEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugerrorinfoenum-interface.md)  
+ [ICorDebugErrorInfoEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugerrorinfoenum-interface.md)  
  已過時。 請勿使用這個介面。  
   
- [ICorDebugEval Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-interface.md)  
+ [ICorDebugEval 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-interface.md)  
  提供方法讓偵錯工具執行所偵錯的程式碼內容中的程式碼。  
   
- [ICorDebugEval2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-interface.md)  
+ [ICorDebugEval2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-interface.md)  
  擴充 `ICorDebugEval` 來提供泛型類型的支援。  
   
  [ICorDebugExceptionDebugEvent 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
@@ -171,34 +172,34 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugExceptionObjectValue 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)  
  擴充[ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)介面，以提供從 managed 例外狀況物件的堆疊追蹤資訊。  
   
- [ICorDebugFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
+ [ICorDebugFrame 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
  表示目前堆疊上的框架。  
   
- [ICorDebugFrameEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-interface.md)  
+ [ICorDebugFrameEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugFrame` 陣列。  
   
- [ICorDebugFunction Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)  
+ [ICorDebugFunction 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)  
  表示 Managed 函式或方法。  
   
- [ICorDebugFunction2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-interface.md)  
+ [ICorDebugFunction2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-interface.md)  
  以邏輯方式擴充 `ICorDebugFunction`，為 Just My Code 逐步執行的偵錯提供支援。  
   
  [ICorDebugFunction3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
  以邏輯方式擴充[ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)介面，以提供對 ReJIT 要求的程式碼存取。  
   
- [ICorDebugFunctionBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)  
+ [ICorDebugFunctionBreakpoint 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)  
  擴充 `ICorDebugBreakpoint` 來支援函式內的中斷點。  
   
  [ICorDebugGCReferenceEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
  為將要記憶體回收的物件提供列舉值。  
   
- [ICorDebugGenericValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-interface.md)  
+ [ICorDebugGenericValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-interface.md)  
  套用至所有值之 `ICorDebugValue` 的子類別。 這個介面提供值的 Get 和 Set 方法。  
   
  [ICorDebugGuidToTypeEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
  為對應 GUID 和其相應 `ICorDebugType` 物件的物件提供列舉值。  
   
- [ICorDebugHandleValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-interface.md)  
+ [ICorDebugHandleValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-interface.md)  
  `ICorDebugReferenceValue` 的子類別，表示偵錯工具已建立記憶體回收控制代碼的參考值。  
   
  [ICorDebugHeapEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
@@ -207,10 +208,10 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugHeapSegmentEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
  為 Managed 堆積的記憶體區域提供列舉值。  
   
- [ICorDebugHeapValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-interface.md)  
+ [ICorDebugHeapValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-interface.md)  
  `ICorDebugValue` 的子類別，表示 CLR 記憶體回收行程所回收的物件。  
   
- [ICorDebugHeapValue2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-interface1.md)  
+ [ICorDebugHeapValue2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-interface1.md)  
  `ICorDebugHeapValue` 的擴充，其支援執行階段控制代碼。  
   
  [ICorDebugHeapValue3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)  
@@ -222,22 +223,22 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugILCode2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
  以邏輯方式擴充[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)介面，提供方法，傳回的語彙基元函式的區域變數簽章，而且，它將對應剖析工具檢測中繼語言 (IL) 位移至原始方法 IL位移。  
   
- [ICorDebugILFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
+ [ICorDebugILFrame 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
  表示 MSIL 程式碼的堆疊框架。  
   
- [ICorDebugILFrame2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-interface.md)  
+ [ICorDebugILFrame2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-interface.md)  
  `ICorDebugILFrame` 的邏輯擴充。  
   
  [ICorDebugILFrame3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)  
  提供封裝函式傳回值的方法。  
   
  [ICorDebugILFrame4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- 提供的方法可讓您在存取中繼語言 (IL) 程式碼的框架中，存取區域變數和程式碼。 參數可指定偵錯工具是否能夠存取在分析工具 ReJIT 檢測中加入的變數和程式碼。  
+ 提供的方法可讓您在中繼語言 (IL) 程式碼的框架中，存取區域變數和程式碼。 參數可指定偵錯工具是否能夠存取在分析工具 ReJIT 檢測中加入的變數和程式碼。  
   
  [ICorDebugInstanceFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
  代表執行個體欄位的偵錯符號資訊。 **適用於僅限.NET Native。**  
   
- [ICorDebugInternalFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-interface.md)  
+ [ICorDebugInternalFrame 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-interface.md)  
  識別偵錯工具的框架類型。  
   
  [ICorDebugInternalFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
@@ -267,46 +268,46 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugMetaDataLocator 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmetadatalocator-interface.md)  
  提供中繼資料資訊給偵錯工具。  
   
- [ICorDebugModule Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-interface.md)  
+ [ICorDebugModule 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-interface.md)  
  表示 CLR 模組，其為可執行檔或動態連結程式庫 (DLL)。  
   
- [ICorDebugModule2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-interface.md)  
+ [ICorDebugModule2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-interface.md)  
  當做 `ICorDebugModule` 的邏輯擴充。  
   
  [ICorDebugModule3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-interface.md)  
  建立動態模組的符號讀取器。  
   
- [ICorDebugModuleBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-interface.md)  
+ [ICorDebugModuleBreakpoint 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-interface.md)  
  擴充 `ICorDebugBreakpoint`，以提供特定模組的存取權。  
   
  [ICorDebugModuleDebugEvent 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
  擴充[ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)介面，以支援模組層級事件。 **適用於僅限.NET Native。**  
   
- [ICorDebugModuleEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
+ [ICorDebugModuleEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugModule` 陣列。  
   
  [ICorDebugMutableDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
  擴充[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)介面，以支援可變動的資料目標。  
   
- [ICorDebugNativeFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)  
+ [ICorDebugNativeFrame 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)  
  用於原生框架的 `ICorDebugFrame` 特定實作。  
   
  [ICorDebugNativeFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
  提供測試父子框架關聯的方法。  
   
- [ICorDebugObjectEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-interface.md)  
+ [ICorDebugObjectEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並根據物件陣列的相對虛擬位址 (RVA) 來列舉物件陣列。  
   
- [ICorDebugObjectValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)  
+ [ICorDebugObjectValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)  
  `ICorDebugValue` 的子類別，表示包含物件的值。  
   
- [ICorDebugObjectValue2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-interface.md)  
+ [ICorDebugObjectValue2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-interface.md)  
  擴充 `ICorDebugObjectValue` 來支援繼承和覆寫。  
   
- [ICorDebugProcess Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)  
+ [ICorDebugProcess 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)  
  表示執行 Managed 程式碼的處理序。  
   
- [ICorDebugProcess2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-interface1.md)  
+ [ICorDebugProcess2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-interface1.md)  
  `ICorDebugProcess` 的邏輯擴充。  
   
  [ICorDebugProcess3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)  
@@ -324,10 +325,10 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugProcess8 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)  
  以邏輯方式擴充[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)介面，以啟用或停用特定類型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外狀況回呼。  
   
- [ICorDebugProcessEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
+ [ICorDebugProcessEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugProcess` 陣列。  
   
- [ICorDebugReferenceValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-interface.md)  
+ [ICorDebugReferenceValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-interface.md)  
  支援參考類型的 `ICorDebugValue` 子類別。  
   
  [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
@@ -351,16 +352,16 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugStaticFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
  代表靜態欄位的偵錯符號資訊。 **適用於僅限.NET Native。**  
   
- [ICorDebugStepper Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)  
+ [ICorDebugStepper 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)  
  表示偵錯工具在程式碼執行作業中所執行的步驟，做為命令的發出和完成之間的識別項，並可提供方法來取消步驟。  
   
- [ICorDebugStepper2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-interface1.md)  
+ [ICorDebugStepper2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-interface1.md)  
  提供 Just My Code (JMC) 偵錯的支援。  
   
- [ICorDebugStepperEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-interface.md)  
+ [ICorDebugStepperEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugStepper` 陣列。  
   
- [ICorDebugStringValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-interface.md)  
+ [ICorDebugStringValue 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-interface.md)  
  套用至字串值之 `ICorDebugHeapValue` 的子類別。  
   
  [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
@@ -369,10 +370,10 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugSymbolProvider2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
  以邏輯方式擴充[ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)介面，以擷取其他偵錯符號資訊。 **適用於僅限.NET Native。**  
   
- [ICorDebugThread Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
+ [ICorDebugThread 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
  表示處理序中的執行緒。 `ICorDebugThread` 執行個體的存留期與其所表示的執行緒之存留期相同。  
   
- [ICorDebugThread2 Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interface.md)  
+ [ICorDebugThread2 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interface.md)  
  當做 `ICorDebugThread` 的邏輯擴充。  
   
  [ICorDebugThread3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)  
@@ -381,16 +382,16 @@ ms.lasthandoff: 10/18/2017
  [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
  提供執行緒封鎖資訊。  
   
- [ICorDebugThreadEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-interface1.md)  
+ [ICorDebugThreadEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-interface1.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugThread` 陣列。  
   
- [ICorDebugType Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)  
+ [ICorDebugType 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)  
  表示類型，可以是基本類型或複雜類型 (亦即，使用者定義類型)。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
   
  [ICorDebugType2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)  
  擴充[ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)介面擷取類型識別項的基底類型或複雜 （使用者定義） 的型別。  
   
- [ICorDebugTypeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
+ [ICorDebugTypeEnum 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugType` 陣列。  
   
  [ICorDebugUnmanagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)  

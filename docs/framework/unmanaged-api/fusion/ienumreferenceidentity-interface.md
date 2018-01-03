@@ -19,18 +19,19 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 49e1425e8e7e3d09dc36915916b887d2887dccff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1af31c72770947c33f358a9689bac6fd95ef53c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity 介面
 做為集合的列舉值`IReferenceIdentity`物件。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |`IEnumReferenceIdentity::Clone`|取得新的介面指標`IEnumReferenceIdentity`，其中包含這個相同的成員`IEnumReferenceIdentity`。|  
 |`IEnumReferenceIdentity::Next`|取得指定的數目`IReferenceIdentity`物件，從目前位置開始。|  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  [IReferenceIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

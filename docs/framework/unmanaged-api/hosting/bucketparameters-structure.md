@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7626ce6b2b6278be7cd9989718c13f7c98e4ace3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9db30133a01877c6ae048b9152f35b066219aa22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 結構
 儲存目前與事件相關聯的例外狀況事件和參數的型別名稱。  
@@ -40,7 +41,7 @@ typedef struct _BucketParameters {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`fInited`|`true`如果此結構的其餘部分是有效的。否則， `false`。|  
 |`pszEventTypeName`|事件類型的名稱。|  
@@ -53,5 +54,5 @@ typedef struct _BucketParameters {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

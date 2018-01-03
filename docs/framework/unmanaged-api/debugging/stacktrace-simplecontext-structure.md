@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 87ce3d50d6da6a7c23b13fa10123033efbb6c52c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 756c1d4129aebedea46443613d286a51562a3896
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 結構
 提供可用來代替完整 `CONTEXT` 結構的簡單內容。  
@@ -43,7 +44,7 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`StackOffset`|堆疊指標或在 x86 上的 enter 堆疊指標 (ESP) 平台。|  
 |`FrameOffset`|框架位移或 ebp 暫存器，在 x86 平台。|  
@@ -59,6 +60,6 @@ struct StackTrace_SimpleContext
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca09788ea403e2a60d6de0cb6834fdc90261b770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e15f40402b222037f7ed8b23be3df36acafc73c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 方法
 取得類型的介面指標來 IAppDomainSetup<xref:System.AppDomainSetup?displayProperty=nameWithType>執行個體。 `IAppDomainSetup`提供方法來設定應用程式定義域的層面，才能建立。  
@@ -63,7 +64,7 @@ HRESULT CreateDomainSetup (
   
  **.NET framework 版本：** 1.0、 1.1  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System._AppDomain>  
  <xref:System.AppDomain>  
  <xref:System.AppDomainSetup>  

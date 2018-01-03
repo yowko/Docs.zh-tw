@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7242e98a69083ca8d5a6d8d54e9b25279abb7bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64d55a951795cc5efc1bfc624dbe07575be153aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
 建立指定類型的值，其初始值為零或 null。  
@@ -68,7 +69,7 @@ HRESULT CreateValue (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
     
  [CreateValueForType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)  
  ICorDebugValue

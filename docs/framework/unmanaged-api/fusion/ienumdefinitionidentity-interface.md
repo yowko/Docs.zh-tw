@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc1f3a46ac7da58fb2c209f833173a1bc6b32ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79e2a35a455407715a05e826d31c5d5ab05a02ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 介面
 做為集合的列舉值`IDefinitionIdentity`物件。  
@@ -55,7 +56,7 @@ IEnumDefinitionIdentity : IUnknown {
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |`IEnumDefinitionIdentity::Clone`|取得新的介面指標`IEnumDefinitionIdentity`物件，其中包含這個相同的成員`IEnumDefinitionIdentity`。|  
 |`IEnumDefinitionIdentity::Next`|取得指定的數目`IDefinitionIdentity`物件，從目前位置開始。|  
@@ -69,6 +70,6 @@ IEnumDefinitionIdentity : IUnknown {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

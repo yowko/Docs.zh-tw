@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6042d5232995e68a4f59dfa68093446a03badfd6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89767da7178319ed1add3dda0620062893487bfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列舉
 提供用來判定偵錯工具是否從原生影像快取載入原生 (NGen) 影像的值。  
@@ -39,7 +40,7 @@ enum CorDebugNGENPolicy {
   
 ## <a name="members"></a>成員  
   
-|成員名稱|說明|  
+|成員名稱|描述|  
 |-----------------|-----------------|  
 |`DISABLE_LOCAL_NIC`|在[!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)]應用程式中，使用影像，從本機原生映像快取已停用。 在傳統型應用程式，這項設定沒有任何作用。|  
   
@@ -55,5 +56,5 @@ enum CorDebugNGENPolicy {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

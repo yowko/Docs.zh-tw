@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53616fb8e947d2a301dcfcb4e3870a9a9dc36ec1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d341b875f9f64b9aa1fcdcf21668dafea0beac12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 結構
 代表正在遠端電腦上執行的處理序。  
@@ -43,7 +44,7 @@ struct  CoreClrDebugProcInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`m_dwPID`|作業系統指派的處理序識別碼。|  
 |`m_dwInternalID`|在目標電腦上執行之遠端偵錯 Proxy 所指派的處理序識別碼。 這個識別碼回收的頻率比作業系統識別碼少。|  

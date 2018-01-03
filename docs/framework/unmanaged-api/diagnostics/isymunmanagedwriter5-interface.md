@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c5ac543ad98cc14382f0fb6d0d04fafa7136136e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 701b8de977d49a7d93f393b320bcb9d0d780c7bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5 介面
 ISymUnmanagedWriter5 介面。  
@@ -31,7 +32,7 @@ ISymUnmanagedWriter5 介面。
 ## <a name="methods"></a>方法  
  這個介面包含下列方法：  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[CloseMapTokensToSourceSpans 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|關閉對應資訊的語彙基元至來源範圍的特殊的自訂資料區段。 它已關閉之後，就可以加入沒有對應的詳細資訊。|  
 |[MapTokenToSourceSpan 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-maptokentosourcespan-method.md)|對應至指定的原始程式行的指定中繼資料語彙基元跨越指定的原始程式檔中。<br /><br /> 必須呼叫之間呼叫[OpenMapTokensToSourceSpans 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)和[CloseMapTokensToSourceSpans 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)。|  
@@ -40,6 +41,6 @@ ISymUnmanagedWriter5 介面。
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
  [ISymUnmanagedWriter4 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)

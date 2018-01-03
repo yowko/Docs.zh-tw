@@ -17,16 +17,17 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dfe29b9d66bf332c8df359abe01b3b4edc1c7c55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 62110d07903b05e68ddfc72c297a785bad72c87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-unmanaged-api-reference"></a>偵錯 (Unmanaged API 參考)
 偵錯 API 可讓偵錯工具偵錯在 Common Language Runtime (CLR) 環境中執行的程式碼。 要偵錯的程式碼可以是 CLR 支援的任何類型程式碼。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
  本節說明偵錯 API 所使用的 Unmanaged Coclass。  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6195b53d11877c6b7b2a52c3fd8d194dfb51810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc34c3a1049a24a27fae4d13288efbd5a98a4dc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 介面
 提供啟動或附加 Managed 偵錯工具至遠端目標處理序的功能。  
@@ -62,10 +63,10 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[Icordebugremote:: Createprocessex 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Managed 偵錯在遠端電腦上建立處理程序。|  
-|[Icordebugremote:: Debugactiveprocessex 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|啟動處理序在偵錯工具在遠端電腦上。|  
+|[ICorDebugRemote::CreateProcessEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Managed 偵錯在遠端電腦上建立處理程序。|  
+|[ICorDebugRemote::DebugActiveProcessEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|啟動處理序在偵錯工具在遠端電腦上。|  
   
 ## <a name="remarks"></a>備註  
  目前，這項功能僅適用於偵錯遠端 Macintosh 電腦執行的 Silverlight 架構應用程式目標支援。  
@@ -79,7 +80,7 @@ interface ICorDebugRemote : IUnknown
   
  **.NET framework 版本：** 4.5、 4、 3.5 SP1  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     

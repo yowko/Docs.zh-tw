@@ -19,18 +19,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c7b3bd04b348912a6d45c4efb41dfb87e7b5998
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca74970ea7c2b98ad65e279fc1cc128b2e55aeb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum 介面
 表示陣列的列舉值`IAssemblyName`物件。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|建立這樣的淺層複本`IAssemblyEnum`物件。|  
 |[GetNextAssembly 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|取得下一個指標`IAssemblyName`包含在這個`IAssemblyEnum`物件。|  
@@ -43,6 +44,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

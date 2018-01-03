@@ -17,16 +17,17 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c24882f2bd9819043bbc786bd2e5f35129a92744
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5e294275da45575a3aed457fb2428c4768e78d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-enumerations"></a>偵錯列舉
 本節說明偵錯 API 所使用的 Unmanaged 列舉。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CLR_DEBUGGING_PROCESS_FLAGS 列舉](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
  提供值，可供[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 10/18/2017
  描述包含原生例外狀況偵錯事件相關資訊之位元組陣列中的資料格式。  
   
  CorDebugRegister  
- 指定與給定處理器結構相關聯的暫存器。  
+ 指定與給定處理器架構相關聯的暫存器。  
   
  [CorDebugSetContextFlag 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
  指出內容是來自堆疊的作用中 (或分葉) 框架，還是藉由從其他框架回溯而計算出來的。  

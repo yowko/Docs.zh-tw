@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 937b26efa79605b585c420db608a938b3ee71f8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3dcd91001dfd823416b08ba49ba4ed12a2c4d058
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 列舉
 指出在切換偵錯/追蹤時所執行的作業。  
@@ -40,7 +41,7 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|建立偵錯/追蹤參數。|  
 |`SWITCH_MODIFY`|偵錯/追蹤交換器已修改。|  
@@ -55,5 +56,5 @@ typedef enum LogSwitchCallReason {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
