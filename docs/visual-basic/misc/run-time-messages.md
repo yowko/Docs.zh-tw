@@ -11,11 +11,11 @@ ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 執行階段訊息
 本節包含執行階段發生的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 錯誤訊息。  
@@ -304,7 +304,7 @@ ms.lasthandoff: 11/21/2017
   
  [找不到方法或資料成員](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.Log 無法判定可用磁碟空間量](../../visual-basic/misc/my-application-log-cannot-determine-the-amount-of-free-disk-space.md)  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
  [具名引數 '\<引數名稱 >' 已經指定多次](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
@@ -558,6 +558,6 @@ ms.lasthandoff: 11/21/2017
   
  [您必須指定目前資料夾或其中一個子資料夾底下的路徑](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>另請參閱  
- [NOTINBUILD 如何： 取得 Visual Basic 執行階段錯誤的相關資訊](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
+## <a name="see-also"></a>請參閱  
+   
  [錯誤訊息](../../visual-basic/language-reference/error-messages/index.md)

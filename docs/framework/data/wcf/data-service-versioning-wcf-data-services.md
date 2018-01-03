@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，做為使用 Uri 中的資料模型為基礎的資源。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 本主題也會描述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 如何處理支援不同版本 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定之用戶端與資料服務之間的交換。  
@@ -83,6 +84,6 @@ ms.lasthandoff: 12/02/2017
   
  傳回之中繼資料的 `DataServices` 項目還包含 `DataServiceVersion` 屬性，該值與回應訊息中 `DataServiceVersion` 標頭的值相同。 用戶端應用程式，例如**加入服務參考**對話方塊[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，使用此資訊來產生正常運作，與新版的用戶端資料服務類別[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]裝載的資料服務。 如需詳細資訊，請參閱[OData： 通訊協定版本控制](http://go.microsoft.com/fwlink/?LinkId=186071)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

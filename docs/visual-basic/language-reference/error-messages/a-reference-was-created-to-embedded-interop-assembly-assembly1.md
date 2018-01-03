@@ -15,11 +15,11 @@ ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc2fbb044fc839aa24abf3dc1ea864457efb0653
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aaaa7460ade00ad4232807ce11ee125e270742bf
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>已建立內嵌 interop 組件 &#39; 的參考&lt;assembly1&gt;&#39;，因為該組件的間接參考來自組件 &#39;&lt;assembly2&gt;&#39;
 已建立內嵌 Interop 組件 '\<assembly1>' 的參考，因為該組件的間接參考來自組件 '\<assembly2>'。 請考慮變更其中任何一個組件上的 [內嵌 Interop 類型] 屬性。  
@@ -37,6 +37,6 @@ ms.lasthandoff: 11/21/2017
   
 -   若要移除警告，您可以將 assembly1 的 `Embed Interop Types` 屬性設定為 `False`。 在此情況下，主要 interop 組件 (PIA) 提供 interop 類型資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)  
- [使用主要 Interop 組件設計程式](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)
+ [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)

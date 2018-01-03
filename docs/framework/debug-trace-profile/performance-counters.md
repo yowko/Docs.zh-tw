@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15486a55fc15ba2cc3cc64db50f317b39dfd77bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 本主題提供可以在[效能監視器](http://technet.microsoft.com/library/cc749249.aspx)中找到之效能計數器的清單。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="exception-performance-counters"></a>例外狀況效能計數器  
  效能主控台 .NET CLR 例外狀況分類包含計數器，此計數器提供應用程式擲回例外狀況的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of Exceps Thrown**|顯示自應用程式啟動後擲回例外狀況的總數。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 重新擲回的例外狀況會再計算一次。|  
 |**# of Exceps Thrown / Sec**|顯示每秒擲回的例外狀況數目。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 它不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。 如果擲回大量 (>100) 的例外狀況，這個計數器就是可能發生效能問題的指標。|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="interop-performance-counters"></a>Interop 效能計數器  
  效能主控台 .NET CLR Interop 分類包含計數器，此計數器提供應用程式與 COM 元件、COM + 服務以及外部類型程式庫互動的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of CCWs**|顯示目前的 COM 可呼叫包裝函式 (CCW) 數目。 CCW 是被 Unmanaged 的 COM 用戶端所參考的 Managed 物件之 Proxy。 這個計數器表示被 Unmanaged 的 COM 程式碼所參考的 Managed 物件數目。|  
 |**# of marshaling**|顯示自應用程式啟動後，已從 Managed 程式碼封送處理引數和傳回值至 Unmanaged 程式碼的總次數，反之亦然。 如果虛設常式是內嵌的，則不會遞增此計數器。 (虛設常式負責封送處理引數和傳回值)。 如果封送處理額外負荷很小，則虛設常式通常是內嵌的。|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="jit-performance-counters"></a>JIT 效能計數器  
  效能主控台 .NET CLR JIT 分類包含計數器，此計數器提供經 JIT 編譯之程式碼的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of IL Bytes JITted**|顯示自啟動應用程式後，在 Just-In-Time (JIT) 編譯器所編譯的 Microsoft 中繼語言 (MSIL) 位元組總數。 此計數器相當於 **Total # of IL Bytes Jitted** 計數器。|  
 |**# of Methods JITted**|顯示自應用程式啟動後被 JIT 編譯的方法總數。 此計數器不包含先行 JIT 編譯完成的方法。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="loading-performance-counters"></a>載入效能計數器  
  效能主控台 .NET CLR 載入分類包含計數器，此計數器提供已載入組件、類別和應用程式定義域的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**% Time Loading**|保留供未來使用。|  
 |**Assembly Search Length**|保留供未來使用。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="lock-and-thread-performance-counters"></a>鎖定和執行緒效能計數器  
  效能主控台 .NET CLR LocksAndThreads 分類包含計數器，此計數器提供應用程式使用之 Managed 鎖定及執行緒的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of current logical Threads**|顯示目前在應用程式中 Managed 執行緒物件數目。 此計數器會維持執行中的和已停止的執行緒計數。 這個計數器不是時間累積下的平均數；它僅顯示最後觀察到的值。|  
 |**# of current physical Threads**|顯示由 Common Language Runtime 建立及擁有的原生作業系統執行緒數目，這些執行緒用來做為 Managed 執行緒物件的基礎執行緒。 此計數器的值不包含在內部作業中執行階段所使用的執行緒；它是作業系統處理序中執行緒的子集。|  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="memory-performance-counters"></a>記憶體效能計數器  
  效能主控台 .NET CLR 記憶體分類包含計數器，此計數器提供記憶體回收行程的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# Bytes in all Heaps**|顯示 **Gen 1 Heap Size**、**Gen 2 Heap Size** 和 **Large Object Heap Size** 計數器的總和。 這個計數器表示目前在記憶體回收堆積中配置的記憶體，以位元組為單位。|  
 |**# GC Handles**|顯示目前使用中的記憶體回收控制代碼的數目。 記憶體回收控制代碼是 Common Language Runtime 和 Managed 環境的外部資源控制代碼。|  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="networking-performance-counters"></a>網路效能計數器  
  效能主控台 .NET CLR Networking 分類包含計數器，此計數器提供應用程式在網路上傳送和接收資料的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**Bytes Received**|自處理序啟動後，由 <xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 物件接收的累計位元組總數。 此數目包含資料和任何未經 TCP/IP 定義的通訊協定資訊。|  
 |**Bytes Sent**|自處理序啟動後，由 <xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 物件傳送的累計位元組數。 此數目包含資料和任何未經 TCP/IP 定義的通訊協定資訊。|  
@@ -251,7 +252,7 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="security-performance-counters"></a>安全性效能計數器  
  效能主控台 .NET CLR 安全性類別包含計數器，此計數器提供 Common Language Runtime 為應用程式執行安全性檢查的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# Link Time Checks**|顯示自應用程式啟動後連結時間程式碼存取安全性檢查的總數。 當呼叫端在 Just-In-Time (JIT) 編譯階段要求特定權限，則會執行連結時間程式碼存取安全性檢查。 對於每個呼叫端各執行一次連結時間檢查。 該計數並不表示嚴重的效能問題；它只會表示安全性系統的活動。|  
 |**% Time in RT checks**|自上一個樣本後，顯示花費在執行執行階段程式碼存取安全性檢查的已耗用時間百分比。 此計數器會在 .NET Framework 安全性檢查的結尾時更新。 這不是平均數；它代表最後觀察到的值。|  
@@ -259,6 +260,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|在最後一個執行階段程式碼存取安全性檢查期間顯示堆疊深度。 執行階段程式碼存取安全性檢查都是藉由查核堆疊來執行的。 這個計數器不是平均數；它僅顯示最後觀察到的值。|  
 |**Total Runtime Checks**|顯示自應用程式啟動後執行階段程式碼存取安全性檢查執行的總數。 當呼叫端要求特定權限時，會執行執行階段程式碼存取安全性檢查。 執行階段檢查在每次由呼叫端呼叫時進行，並且檢查目前呼叫端的執行緒堆疊。 搭配使用 **Stack Walk Depth** 計數器時，此計數器指出因安全性檢查而發生的效能降低。|  
   
-## <a name="see-also"></a>另請參閱  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+## <a name="see-also"></a>請參閱  
+ [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

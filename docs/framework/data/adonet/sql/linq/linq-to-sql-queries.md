@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a080dd13f4e9950c9e65b8031ffc77ddf18eaf9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 533786ffe1fa39928f90d94bbb0d80584bf85b8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL 查詢
 使用與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相同的語法，就可以定義 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢。 唯一的差別在於查詢中參考的物件會對應至資料庫中的項目。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 |遠端執行與本機執行||如需詳細資訊，請參閱[遠端與。本機執行](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)。|  
 |資料流 (Streaming) 與快取查詢|不適用於本機記憶體案例||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [基本 LINQ 查詢作業](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
  [LINQ 查詢作業中的型別關聯性](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  

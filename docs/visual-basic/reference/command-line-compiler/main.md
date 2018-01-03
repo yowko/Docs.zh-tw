@@ -14,11 +14,11 @@ ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2697b837a536b1b879196bd10843a2b76314747a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5bb11bc62e951339113f4b48e98e05362490ca1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main"></a>/main
 指定包含 `Sub Main` 程序的類別或模組。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="arguments"></a>引數  
  `location`  
- 必要項。 類別或模組，其中包含完整限定性條件`Sub Main`程式啟動時要呼叫的程序。 這可能是在表單中**/main:module**或**/main:namespace.module**。  
+ 必要。 類別或模組，其中包含完整限定性條件`Sub Main`程式啟動時要呼叫的程序。 這可能是在表單中**/main:module**或**/main:namespace.module**。  
   
 ## <a name="remarks"></a>備註  
  當您建立可執行檔或 Windows 可執行程式時，請使用此選項。 如果**/main**省略選項，編譯器就會搜尋有效的共用`Sub Main`所有公用類別和模組中。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
-     如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+       
   
 2.  按一下 [應用程式]  索引標籤。  
   
@@ -61,9 +61,8 @@ ms.lasthandoff: 11/21/2017
 vbc t2.vb t3.vb /main:Test2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [NIB: Visual Basic 版本的 Hello，World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
  [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

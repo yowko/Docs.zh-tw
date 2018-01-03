@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e1677d8e30b083efe99f916b28672ddb6c3dd99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 730ecffc9543c8a1184bc41ab77d9aec9b53b5a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>分析 LINQ to SQL 原始程式碼
 使用下列步驟，您就可以從 Northwind 範例資料庫產生 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 原始程式碼。 您可以比較物件模型的項目與資料庫的項目，進一步了解不同項目的對應方式。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 11/21/2017
   
     -   `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
-## <a name="see-also"></a>另請參閱  
- [參考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+## <a name="see-also"></a>請參閱  
+ [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

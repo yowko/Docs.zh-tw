@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2ee0e87c801e15a54229e559ce65cabf5f474a61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attribute-based-mapping"></a>屬性架構對應
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]對應至 SQL Server 資料庫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]任一個套用的屬性或使用外部對應檔案的物件模型。 本主題概述以屬性 (Attribute) 為基礎的方法。  
@@ -152,5 +153,5 @@ ms.lasthandoff: 10/18/2017
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DataAttribute>。  
   
-## <a name="see-also"></a>另請參閱  
- [參考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>請參閱  
+ [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -17,11 +17,11 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 下列各表列出所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言關鍵字。  
@@ -103,11 +103,10 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[陣列摘要](../../../visual-basic/language-reference/keywords/arrays-summary.md)|列出語言項目，可用來建立、定義以及使用陣列。|  
 |[集合物件摘要](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|列出用於集合的語言項目。|  
-|[編譯器指示詞摘要 (Visual Basic)](http://msdn.microsoft.com/en-us/874dad02-d4a5-4a9d-8a48-0191a0ac794a)|列出可控制編譯器行為的指示詞。|  
 |[控制流程摘要](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|列出陳述式，以用於迴圈和控制程序流程。|  
 |[轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)|列出函式，可用來轉換數字、日期、時間和字串。|  
 |[資料類型摘要](../../../visual-basic/language-reference/keywords/data-types-summary.md)|列出資料類型。 也會列出函式，可用來轉換不同資料類型與確認資料類型。|  
@@ -124,5 +123,5 @@ ms.lasthandoff: 12/02/2017
 |[登錄摘要](../../../visual-basic/language-reference/keywords/registry-summary.md)|列出函式，可用來讀取、儲存和刪除程式設定。|  
 |[字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出用來操作字串的函式。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

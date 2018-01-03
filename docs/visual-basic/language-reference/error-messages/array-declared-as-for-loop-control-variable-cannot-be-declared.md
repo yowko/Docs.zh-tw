@@ -13,11 +13,11 @@ ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0635e1b18b24a241fabad6d67da34f8dde9530db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef36f14d5323a4592afe59573e249d8cfb218df9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>宣告為 for 迴圈控制變數的陣列不能宣告它的初始大小
 A`For Each`迴圈會使用陣列做為其*元素*反覆運算變數，但初始化該陣列。  
@@ -38,7 +38,7 @@ For Each listElement(1) As Integer In arrayList
   
 -   從宣告中移除初始化*元素*反覆運算變數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [集合](../../../standard/collections/index.md)

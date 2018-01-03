@@ -19,11 +19,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer 陳述式
 可讓您在宣告變數時使用區域類型推斷。  
@@ -68,13 +68,13 @@ Option Infer 關閉時的 IntelliSense
   
 #### <a name="to-set-option-infer-in-the-ide"></a>在 IDE 中設定 Option Infer  
   
-1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[NIB： 使用專案設計工具管理專案屬性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
 2.  按一下 [編譯] 索引標籤。  
   
 3.  設定中的值**Option infer**方塊。  
   
- 當您建立新的專案， **Option Infer**上設定**編譯** 索引標籤設為**Option Infer**中設定**VB 預設值**對話方塊。 若要存取**VB 預設值**對話方塊**工具**功能表上，按一下 **選項**。 在**選項**對話方塊方塊中，展開 **專案和方案**，然後按一下  **VB 預設值**。 中的初始預設設定**VB 預設值**是`On`。  
+ 當您建立新的專案， **Option Infer**上設定**編譯** 索引標籤設為**Option Infer**中設定**VB 預設值**對話方塊。 若要存取**VB 預設值**對話方塊**工具**功能表上，按一下 **選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是`On`。  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>在命令列上設定 Option Infer  
   
@@ -88,7 +88,7 @@ Option Infer 關閉時的 IntelliSense
 |否|否|`Dim qty`|如果 `Option Strict` 已關閉 (預設值)，此變數會設定為 `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
 |否|是|`Dim qty = 5`|如果 `Option Infer` 已開啟 (預設值)，此變數會採用初始設定式的資料類型。 請參閱[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
 |是|否|`Dim qty As Integer`|變數會初始化為資料類型的預設值。 如需詳細資訊，請參閱[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。|  
-|是|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時間錯誤。|  
+|[是]|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時間錯誤。|  
   
 ## <a name="example"></a>範例  
  下列範例示範 `Option Infer` 陳述式如何啟用區域類型推斷。  
@@ -100,7 +100,7 @@ Option Infer 關閉時的 IntelliSense
   
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
  [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)  

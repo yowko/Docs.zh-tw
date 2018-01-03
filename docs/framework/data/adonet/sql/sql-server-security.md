@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 具有許多功能，可支援安全資料庫應用程式的建立。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  本節中的主題簡要說明與開發人員相關的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 安全性功能，並提供連結至《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》中的相關主題以及提供更深入探討的其他資源。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的架構和安全性功能。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
  [SQL Server 的安全性考量](http://go.microsoft.com/fwlink/?LinkId=98587)  
  《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》安全性主題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

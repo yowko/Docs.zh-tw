@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7405cf37aaa21f8773952c9e7ed941bc8ae3150b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99aa438c64fdb8f2d14207e6afb06afa8e5f014a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding"></a>資料繫結
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援與通用控制項，如方格控制項繫結。 具體來說，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]定義繫結至資料方格以及處理主從式繫結，都可以進行顯示和更新的基本模式。  
@@ -116,5 +117,5 @@ ms.lasthandoff: 10/18/2017
   
 -   如果實體是繫結在兩個不同方格中 (例如，一個是主版方格，而另一個詳細方格)，則主版方格中的 `Delete` 不會散佈至詳細方格。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

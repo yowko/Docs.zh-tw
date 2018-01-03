@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3311ac88355ac0d7214ec932719e1445757d9e1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令樹的形狀
 SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端特定的 SQL 查詢。 本章節將討論查詢命令樹的特性、屬性和結構。  
@@ -115,5 +116,5 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
 ### <a name="using-primitive-types"></a>使用基本型別  
  在輸出命令樹中參考基本型別時，通常會在概念模型的基本型別中參考這些型別。 但是對於某些運算式而言，提供者需要對應的存放區基本型別。 這類運算式的範例包括 DbCastExpression，也可能包括 DbNullExpression (如果提供者需要將 null 轉型為對應的型別)。 在這些情況下，提供者應該根據基本型別種類和它的 Facet，執行與提供者型別的對應。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

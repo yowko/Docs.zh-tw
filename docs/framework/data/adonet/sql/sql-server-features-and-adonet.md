@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27a46a4dbb98d5c2bdcd30c485ae1b3b047a1a13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2513f5ce139d23750c977f4f12396415cc4d913b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本節中的主題將討論使用 ADO.NET 來開發資料庫應用程式的 SQL Server 功能。  
@@ -28,11 +29,11 @@ ms.lasthandoff: 11/21/2017
   
 1.  [開發 (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=115245)  
   
-## <a name="in-this-section"></a>本章節內容  
- [列舉執行個體的 SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+## <a name="in-this-section"></a>本節內容  
+ [列舉 SQL Server 執行個體 (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  說明如何列舉 SQL Server 的作用中執行個體。  
   
- [適用於 SQL Server 提供者統計資料](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [SQL Server 的提供者統計資料](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  說明對取得 SQL Server 執行階段統計資料的支援。  
   
  [SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
@@ -47,16 +48,16 @@ ms.lasthandoff: 11/21/2017
  [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  說明當資料已經變更時，.NET Framework 應用程式如何向 SQL Server 要求通知。  
   
- [SQL Server 中的快照集隔離](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ [SQL Server 中的快照隔離](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  說明對快照集隔離的支援，這是設計用來在異動式應用程式中減少封鎖的資料列版本控制機制。  
   
- [高可用性、 嚴重損壞修復的 SqlClient 支援](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [高可用性、嚴重損壞修復的 SqlClient 支援](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  說明 SqlClient 對於高可用性、嚴重損壞修復 (AlwaysOn) 可用性群組的支援。  
   
  [LocalDB 的 SqlClient 支援](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  說明 SqlClient 對 LocalDB 資料庫的支援。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  

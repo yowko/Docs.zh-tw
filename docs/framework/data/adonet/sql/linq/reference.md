@@ -13,22 +13,23 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
   
  您也是鼓勵搜尋特定問題，Microsoft 文件，以及特別是參與[LINQ 論壇](http://go.microsoft.com/fwlink/?LinkId=76488)，您可以在其中討論與專家更複雜的主題的詳細資料。 此外，您還可以研讀詳述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的白皮書，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱[LINQ to SQL： 關聯式資料的.net language-integrated Query](http://go.microsoft.com/fwlink/?LinkId=93205)。  
   
-## <a name="in-this-section"></a>本章節內容  
- [資料型別和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+## <a name="in-this-section"></a>本節內容  
+ [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  描述如何 common language runtime (CLR) 建構在 SQL 中有對應的運算式才[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]明確提供的轉譯引擎的轉換。  
   
- [屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]屬性為基礎的方法，來對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]到 SQL Server 資料庫的物件模型。  
   
  [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  

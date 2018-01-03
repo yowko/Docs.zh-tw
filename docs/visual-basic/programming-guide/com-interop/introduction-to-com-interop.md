@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
 元件物件模型 (COM) 可讓您公開其功能給其他元件和主控件應用程式的物件。 COM 物件已被 Windows 程式設計多年的基礎，而針對 common language runtime (CLR) 所設計的應用程式會提供許多優點。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="importing-and-exporting-type-libraries"></a>匯入和匯出類型程式庫  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]包含的公用程式，可讓您從至類型程式庫匯入資訊的 Tlbimp[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。 您可以使用 Tlbexp 公用程式，從組件產生類型程式庫。  
   
- 如需 Tlbimp 和 Tlbexp 資訊，請參閱[Tlbimp.exe （類型程式庫匯入工具）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)和[Tlbexp.exe （類型程式庫匯出工具）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
+ 如需 Tlbimp 和 Tlbexp 資訊，請參閱[Tlbimp.exe （類型程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md)和[Tlbexp.exe （類型程式庫匯出工具）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
   
 ## <a name="interop-assemblies"></a>Interop 組件  
  Interop 組件是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件的橋接器之間 managed 和 unmanaged 程式碼，對應的對等項目至 COM 物件成員[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]管理成員。 Visual Basic.NET 所建立的 interop 組件可處理許多使用 COM 物件，例如封送處理的互通性的詳細資料。  
@@ -59,13 +59,13 @@ ms.lasthandoff: 12/09/2017
 ## <a name="interoperability-marshaling"></a>封送處理的互通性  
  所有[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式共用常見的類型，可讓互通性的物件，不論語言所使用的一組。 參數和傳回的 COM 物件的值有時候會使用與 managed 程式碼中使用的不同的資料類型。 *封送處理的互通性*是封裝參數和傳回值為對等資料類型的程序與 COM 物件中移動。 如需詳細資訊，請參閱[Interop 封送處理](../../../framework/interop/interop-marshaling.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
+ [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)  
  [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Tlbimp.exe (類型程式庫匯入工具)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (類型程式庫匯出工具)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Interop 封送處理](../../../framework/interop/interop-marshaling.md)  
  [免註冊的 COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

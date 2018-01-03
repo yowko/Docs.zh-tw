@@ -14,19 +14,20 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 資料服務使用者入門
 本節中的主題可協助您快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要說明基礎技術。 本節包括概念性內容和[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教學課程。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  下列主題將描述如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 來建立資料服務。  
   
- [將資料公開為服務](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  描述使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 建立資料服務所需的步驟。  
   
  [存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
@@ -49,5 +50,5 @@ ms.lasthandoff: 12/02/2017
   
  [快速入門](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)

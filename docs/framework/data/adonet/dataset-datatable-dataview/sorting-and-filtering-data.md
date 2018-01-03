@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 01c09d94fd3224e8fd875b7f6eea06b2d2c35cca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f514095e551967928d610451cfcaa9a829c0989f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-and-filtering-data"></a>排序及篩選資料
 <xref:System.Data.DataView> 提供數種可在 <xref:System.Data.DataTable> 中排序和篩選資料的方法：  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
      下表顯示的選項**DataViewRowState**。  
   
-    |DataViewRowState 選項|說明|  
+    |DataViewRowState 選項|描述|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**目前**的所有資料列版本**Unchanged**， **Added**，和**Modified**資料列。 這是預設值。|  
     |**加入**|**目前**的所有資料列版本**Added**資料列。|  
@@ -66,7 +67,7 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
    DataViewRowState.CurrentRows);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataViewRowState>  
  <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>  
  <xref:System.Data.DataTable>  

@@ -18,16 +18,16 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 718eff92a2ba472661f0067e1766e63e0703178a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>使用 Visual Basic 撰寫 LINQ 入門
 本章節包含概觀、 範例和背景資訊可協助您了解及使用 Visual Basic 和 Language-Integrated Query (LINQ)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [撰寫第一個 LINQ 查詢](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
  描述在撰寫基本 LINQ 查詢的三個階段： 取得資料來源、 撰寫查詢，以及執行查詢。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/09/2017
  [LINQ to DataSet 概觀](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  資料集來提供 LINQ 的概念性概觀。  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  說明 LINQ 到 SQL 技術，並提供連結至主題可協助您使用 LINQ to SQL。  
   
  [LINQ 的 Visual Studio IDE 和工具支援 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

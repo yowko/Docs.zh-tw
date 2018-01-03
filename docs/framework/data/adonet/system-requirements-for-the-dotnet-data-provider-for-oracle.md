@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 84bf37dfadf038bc418fc8c2c6746baa58d717b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb21a71a548766ee5439c6a558ea7f23d1f45364
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle 的系統需求
 Oracle 的 .NET Framework 資料提供者需要 Microsoft Data Access Components (MDAC) 2.6 (含) 以後版本。 建議使用 MDAC 2.8 SP1。  
@@ -47,6 +48,6 @@ Unicode=True
 ### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob 僅能更新完整的字元。  
  基於可用性的理由，<xref:System.Data.OracleClient.OracleLob>物件繼承自.NET Framework 資料流類別，並提供**ReadByte**和**WriteByte**方法。 它也會實作方法，例如**CopyTo**和**清除**，該區段的 Oracle **LOB**物件。 相反地，Oracle 用戶端軟體會提供數個應用程式開發介面來處理字元**LOB**s (**CLOB**和**NCLOB**)。 但是，這些 API 僅適用於完整字元。 由於此差別，Oracle 的資料提供者會實作支援**讀取**和**ReadByte**以位元組方式使用 utf-16 資料。 不過，其他的方法**OracleLob**物件僅允許完整字元作業。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

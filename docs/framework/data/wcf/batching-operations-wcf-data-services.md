@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bcb29fa522f706f5500ab3cb12f956d5e2236b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-operations-wcf-data-services"></a>批次處理作業 (WCF 資料服務)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]支援以批次要求的處理[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的服務。 如需詳細資訊，請參閱[OData： 批次處理](http://go.microsoft.com/fwlink/?LinkId=186075)。 在[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，會使用每個作業<xref:System.Data.Services.Client.DataServiceContext>，例如執行查詢，或儲存變更，正在傳送給資料服務的個別要求的結果。 若要保持作業集的邏輯範圍，您可以明確地定義作業批次。 這可確保批次中的所有作業，會傳送至單一 HTTP 要求中的資料服務，可讓伺服器以不可分割方式，處理作業，並減少往返次數至資料服務。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 12/02/2017
   
  您也可以透過非同步的方式儲存批次變更。 如需詳細資訊，請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

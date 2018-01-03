@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ff43b9279130ed710d9d88cbf2ba5ead4a6f0ebc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。 <xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。 當<xref:System.Data.DataSet>寫入為 DiffGram，它所擴展的所有必要資訊 DiffGram，以正確重新建立內容，但不是架構的<xref:System.Data.DataSet>，包括資料行值，同時從**原始**和**目前**資料列版本中，資料列錯誤資訊和資料列順序。  
@@ -91,7 +92,7 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
   
  以下表格說明 DiffGram 命名空間中定義的 DiffGram 註釋**描述 urn:-microsoft-schemas-microsoft-com:-diffgram-v1**。  
   
-|註釋|說明|  
+|註釋|描述|  
 |----------------|-----------------|  
 |**id**|配對中的項目 **\<before>： 之前 >**和 **\<diffgr:errors >**區塊中的項目 **\<** ***DataInstance***  **>** 區塊。 值與**diffgr: id**註釋會在表單中*[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
 |**parentId**|識別哪個項目從 **\<**  ***DataInstance***  **>** 區塊是目前項目的父項目。 值與**diffgr: parentid**註釋會在表單中*[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
@@ -101,7 +102,7 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
   
  <xref:System.Data.DataSet> 將其內容讀取或寫為 DiffGram 時，亦會包含其他附註。 下表描述這些其他註解命名空間中定義的**描述 urn:-microsoft-schemas-microsoft-com:-msdata**。  
   
-|註釋|說明|  
+|註釋|描述|  
 |----------------|-----------------|  
 |**RowOrder**|保留原始資料的資料列順序，並識別特定 <xref:System.Data.DataTable> 中資料列的索引。|  
 |**隱藏**|識別資料行做為具有**ColumnMapping**屬性設定為**MappingType.Hidden**。 格式會將屬性寫入**msdata： 隱藏** *[ColumnName]*="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 請注意，隱藏的資料行只有在包含資料時才會寫為 DiffGram 屬性。 否則便會予以忽略。|  
@@ -141,9 +142,9 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [將資料集內容寫入為 XML 資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [將資料集內容當作 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

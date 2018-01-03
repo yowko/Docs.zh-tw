@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>/keyfile
 指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。  
@@ -31,10 +31,10 @@ ms.lasthandoff: 12/09/2017
   
 ## <a name="arguments"></a>引數  
  `file`  
- 必要項。 包含索引鍵的檔案。 如果檔案名稱包含空格，將名稱括在引號 ("")。  
+ 必要。 包含索引鍵的檔案。 如果檔案名稱包含空格，將名稱括在引號 ("")。  
   
 ## <a name="remarks"></a>備註  
- 編譯器的公開金鑰插入組件資訊清單，然後使用私密金鑰簽署最終組件。 若要產生的金鑰檔案，請輸入`sn -k file`在命令列。 如需詳細資訊，請參閱 [Sn.exe (強式名稱工具)](https://msdn.microsoft.com/library/k5b5tt23)。  
+ 編譯器的公開金鑰插入組件資訊清單，然後使用私密金鑰簽署最終組件。 若要產生的金鑰檔案，請輸入`sn -k file`在命令列。 如需詳細資訊，請參閱 [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
  如果您使用編譯`/target:module`，金鑰檔的名稱是保留在模組中，而且併入編譯的組件時所建立的組件[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/09/2017
   
  請注意，金鑰檔可能只包含公開金鑰。  
   
- 請參閱[Creating and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
+ 請參閱[Creating and using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
   
 > [!NOTE]
 >  `/keyfile`選項不是可從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]開發環境中，只有在從命令列編譯時，它是可用。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/09/2017
 vbc /keyfile:myfile.sn input.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  

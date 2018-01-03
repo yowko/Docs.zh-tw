@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c8a3a3e794941c2713af0e5b098bd7f8d783eb4c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>適用於 Entity Framework 之 SqlClient 的類型
 .NET Framework Data Provider for SQL Server (SqlClient) 提供者資訊清單檔案包含下列的清單：提供者基本型別 (Primitive Type)、每個型別的 Facet、概念和儲存體模型基本型別之間的對應，以及概念和儲存體模型基本型別之間的提升及轉換規則。  
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/18/2017
 |`Unique`<br /><br /> `identifier`|相等比較： True<br /><br /> 可比較順序： True|`Edm.Guid`|N/A|  
 |`xml`|相等比較： False<br /><br /> 可比較順序： False|`Edm.String`|MaxLength:<br /><br /> -預設值： 1073741823<br /><br /> -常數： True<br /><br /> Unicode:<br /><br /> -預設值： True<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSDL、SSDL 和 MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

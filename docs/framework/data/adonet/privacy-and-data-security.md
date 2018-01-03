@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 87b83732f1a34db848733c658f35f151c4de4e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4109c15e5c1eaf843d57e10e636fa01555083e49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="privacy-and-data-security"></a>隱私權和資料安全性
 如何保護及管理 ADO.NET 應用程式中的機密資訊，是依據建立資訊時所使用的基礎產品及技術而定。 ADO.NET 並未直接針對資料的保護或加密提供服務。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Security.SecureString> 類別提供加密文字的方法，可用於在記憶體中使用「資料保護 API」(DPAPI) 加密文字。 之後在不再需要字串時，就可以將它從記憶體刪除。 沒有可用於快速讀取 `ToString` 內容的 <xref:System.Security.SecureString> 方法。 您可以不使用任何值來初始化 `SecureString` 的新執行個體，或者將 <xref:System.Char> 物件陣列的指標傳送給該項目來進行初始化。 之後就可以使用該類別的各種方法來使用字串。 如需詳細資訊，請下載[SecureString 應用程式範例](http://go.microsoft.com/fwlink/?LinkId=120418)，示範如何使用`SecureString`類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

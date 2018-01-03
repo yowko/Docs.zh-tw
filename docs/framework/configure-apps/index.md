@@ -34,11 +34,12 @@ caps.latest.revision: "28"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2bd01e697d6852b9eb50418e5b6f506a133cbc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：使用 DEVPATH 找出組件](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  說明如何在搜尋組件時指示執行階段使用 DEVPATH 環境變數。  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/21/2017
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  說明啟動、執行階段、網路和其他類型組態設定的結構描述階層架構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  [指定組件的位置](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  

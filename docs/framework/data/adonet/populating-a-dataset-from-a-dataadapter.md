@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3648340050e5ee3a761efcbedd89f649ff8d9c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>從 DataAdapter 填入資料集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是常駐記憶體的資料表示，可提供與資料來源無關的一致性關聯式程式設計模型。 `DataSet` 表示一組完整的資料，包括資料表、條件約束和資料表間的關係。 因為 `DataSet` 與資料來源無關，所以 `DataSet` 可包含應用程式的本機資料，以及來自多個資料來源的資料。 而您與現有資料來源的互動則是透過 `DataAdapter`。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  使用 `DataAdapter` 擷取所有的資料表要花很多時間，特別是資料表包含許多資料列時。 這是因為存取資料庫，尋找和處理資料，然後再將資料傳輸至用戶端的過程非常耗時。 在將所有資料表提取到用戶端時，所有在伺服器上的資料列都會鎖定。 若要提升效能，您可以使用 `WHERE` 子句大幅減少傳回用戶端的資料列數目。 您也可以藉由在 `SELECT` 陳述式中明確列出所需的資料行，以減少傳回用戶端的資料數量。 另一個不錯的解決方法就是以批次方式擷取資料列 (例如一次擷取數百個資料列)，同時僅在用戶端完成目前的批次作業後，才擷取下一批次。  
   
- `Fill` 方法會隱含地使用 `DataReader` 物件傳回用於在 `DataSet`內建立資料表的資料行名稱和型別，以及用於填入 `DataSet`內資料表資料列的資料。 資料表和資料行只有在不存在時才會建立；否則 `Fill` 會使用現有的 `DataSet` 結構描述。 資料行類型會建立為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]根據中的資料表類型[在 ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非主索引鍵已存在資料來源中而且 `DataAdapter`**。**`MissingSchemaAction` 設定為 `MissingSchemaAction`**.**`AddWithKey`。 如果 `Fill` 發現主索引鍵已在資料表中，它就會以資料列 (其主索引鍵的資料行值，符合從資料來源傳回的資料列對應值) 的資料來源資料，覆寫 `DataSet` 中的資料。 如果沒發現主索引鍵，則資料會附加在 `DataSet`的資料表內。 `Fill`使用您填入時可能會存在任何對應`DataSet`(請參閱[DataAdapter DataTable 和 DataColumn 對應](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
+ `Fill` 方法會隱含地使用 `DataReader` 物件傳回用於在 `DataSet`內建立資料表的資料行名稱和型別，以及用於填入 `DataSet`內資料表資料列的資料。 資料表和資料行只有在不存在時才會建立；否則 `Fill` 會使用現有的 `DataSet` 結構描述。 資料行類型會建立為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]根據中的資料表類型[在 ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非主索引鍵已存在資料來源中而且 `DataAdapter`**。**`MissingSchemaAction` 設定為 `MissingSchemaAction``AddWithKey`。 如果 `Fill` 發現主索引鍵已在資料表中，它就會以資料列 (其主索引鍵的資料行值，符合從資料來源傳回的資料列對應值) 的資料來源資料，覆寫 `DataSet` 中的資料。 如果沒發現主索引鍵，則資料會附加在 `DataSet`的資料表內。 `Fill`使用您填入時可能會存在任何對應`DataSet`(請參閱[DataAdapter DataTable 和 DataColumn 對應](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
   
 > [!NOTE]
 >  如果 `SelectCommand` 傳回 OUTER JOIN 的結果，則 `DataAdapter` 便不會為產生的 `PrimaryKey` 設定 `DataTable`值。 您必須自己定義 `PrimaryKey` ，確保正確解析重複的資料列。 如需詳細資訊，請參閱[定義主索引鍵](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
@@ -133,7 +134,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 導入了對於 <xref:System.Data.SqlTypes> 中 `DataSet`的支援。 如需詳細資訊，請參閱 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
   
 ## <a name="ole-db-chapters"></a>OLE DB 章節  
- 您可以使用階層式資料列集 (Rowset)，或稱章節 (OLE DB 型別 `DBTYPE_HCHAPTER`、ADO 型別 `adChapter`) 來填入 `DataSet`的內容。 若在 <xref:System.Data.OleDb.OleDbDataAdapter> 作業期間， `Fill` 遇到已章節化的資料行，則會針對該章節化的資料行建立 `DataTable` ，且該資料表會填入來自章節的資料行和資料列。 為章節化資料行所建立的資料表會以 "*ParentTableNameChapteredColumnName*" 的形式，取用父資料表名稱和章節化資料行名稱來命名。 如果 `DataSet` 中已有資料表，且與章節化資料行的名稱相符，則目前的資料表內會填入章節資料。 如果現有資料表內沒有資料行符合章節內找到的資料行，則會加入新資料行。  
+ 您可以使用階層式資料列集 (Rowset)，或稱章節 (OLE DB 型別 `DBTYPE_HCHAPTER`、ADO 型別 `adChapter`) 來填入 `DataSet` 的內容。 若在 <xref:System.Data.OleDb.OleDbDataAdapter> 作業期間， `Fill` 遇到已章節化的資料行，則會針對該章節化的資料行建立 `DataTable` ，且該資料表會填入來自章節的資料行和資料列。 為章節化資料行所建立的資料表會以 "*ParentTableNameChapteredColumnName*" 的形式，取用父資料表名稱和章節化資料行名稱來命名。 如果 `DataSet` 中已有資料表，且與章節化資料行的名稱相符，則目前的資料表內會填入章節資料。 如果現有資料表內沒有資料行符合章節內找到的資料行，則會加入新資料行。  
   
  在 `DataSet` 內的資料表中填入章節化資料行的資料前，會在階層式資料列集的父子資料表間建立關聯，方法是在父子資料表兩方均加入整數資料行，將父資料行設為自動遞增，然後使用加入自兩個資料表的資料行建立 `DataRelation` 。 加入的關聯以 "*ParentTableNameChapterColumnName*" 形式，使用父資料表和章節化資料行的名稱來命名。  
   
@@ -191,9 +192,9 @@ adapter.Fill(customers, "Customers");
 |ANATR|10308|1|  
 |ANATR|10625|1|  
   
-## <a name="see-also"></a>另請參閱  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+## <a name="see-also"></a>請參閱  
+ [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [使用 DbDataAdapter 修改資料](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [Multiple Active Result Sets (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Multiple Active Result Set (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

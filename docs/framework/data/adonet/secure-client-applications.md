@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b42c06b9507894568a4299f23b62010e44076194
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1218cda46a6a901c3dbf9fb11333b04d0133df42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-client-applications"></a>保護用戶端應用程式的安全
 應用程式通常含有許多部分，而這所有的部分都必須受到保護，以免產生漏洞而造成資料遺失，或因其他原因而危及系統。 建立安全的使用者介面可以避免許多問題，因為可以在攻擊者存取資料或系統資源之前就加以防堵。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[NIB: ASP.NET 安全性](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|討論如何保護 ASP.NET 應用程式。|  
 |[保護使用 ASP.NET 建立 XML Web 服務](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|討論如何實作 ASP.NET Web 服務的安全性。|  
@@ -69,13 +70,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remoting"></a>遠端處理  
  .NET 遠端處理可讓您輕鬆建置四處分散的應用程式，不論應用程式元件全都集中在同一台電腦或散佈在全世界各個角落。 您可以建置用戶端應用程式，讓它們使用相同電腦 (或其網路上可連接的任何其他電腦) 上其他處理序中的物件。 也可以使用 .NET 遠端處理，與同一處理序中的其他應用程式定義域通訊。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[遠端應用程式的組態](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097)|討論如何設定遠端處理應用程式以避免常見問題。|  
 |[在遠端處理中的安全性](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|說明驗證和加密，以及與遠端處理相關的其他安全性主題。|  
 |[安全性和遠端處理考量](../../../../docs/framework/misc/security-and-remoting-considerations.md)|說明受保護的物件和跨應用程式定義域的安全性問題。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [設定應用程式的安全性](/visualstudio/ide/securing-applications)  

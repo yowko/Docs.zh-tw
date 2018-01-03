@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;應用程式集區&gt;項目 （Web 設定）
 指定用來管理整個處理序的行為，以整合模式上執行 ASP.NET 應用程式時由 ASP.NET 組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|指定 ASP.NET 允許每一 CPU 的同時要求數。|  
 |`maxConcurrentThreadsPerCPU`|指定多少同時執行緒可以執行應用程式集區的每一個 CPU。 這會提供替代方法來控制 ASP.NET 的並行存取，因為您可以限制可用於每個 CPU 處理要求的 managed 執行緒的數目。 此設定預設值為 0，這表示，ASP.NET 不會限制每個 CPU，可以建立的執行緒數目雖然 CLR 執行緒集區也會限制可以建立的執行緒數目。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|包含 ASP.NET 裝載應用程式的互動方式的相關資訊。|  
   
@@ -104,5 +105,5 @@ ms.lasthandoff: 10/18/2017
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<system.web> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

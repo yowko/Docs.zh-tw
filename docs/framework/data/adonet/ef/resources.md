@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 928934070cfb428f467ddf9ee89e01af1f605328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9907876c92a815df7b1a3b449076823465745de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-resources"></a>Entity Framework 資源
 下列外部資源提供建立 Entity Framework 應用程式的資訊和支援。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
  [Entity Framework 常見問題集](http://go.microsoft.com/fwlink/?LinkID=213877)  
  包含有關 Entity Framework 常見問題集的部落格。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)  

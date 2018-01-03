@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fc87000e5b3f3a0f464929764eaeafaab4c3089a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 無法載入組件時，會啟用 `bindingFailure` Managed 偵錯助理 (MDA)。  
@@ -106,5 +107,5 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>請參閱  
+ [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

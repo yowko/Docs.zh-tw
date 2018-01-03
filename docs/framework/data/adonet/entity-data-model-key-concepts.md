@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f820ad757fa6bf5b8367c5c39beff5cc680e519a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c97d98415e1b303c5849f15c4a7bfcca6fd285a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-key-concepts"></a>實體資料模型索引鍵概念
 實體資料模型 (EDM) 會使用三個索引鍵概念描述資料結構：*實體類型*，*關聯型別*，和*屬性*。 描述任何 EDM 實作中的資料結構時，這些是最重要的概念。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/18/2017
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3965ced44bae21feef3d01d49149387fce4fa46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-typed-datasets"></a>註釋具類型資料集
 註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改您的基礎結構描述中的項目名稱可能會造成具型別的**資料集**來執行不存在於資料來源，也會遺失的資料來源中存在的物件參考的物件參考。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  下列表格顯示可供使用的註釋。  
   
-|註釋|說明|  
+|註釋|描述|  
 |----------------|-----------------|  
 |**Customer**|物件名稱。|  
 |**Customers**|物件集合名稱。|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示可以針對指定的值**nullValue**註解。  
   
-|nullValue 值|說明|  
+|nullValue 值|描述|  
 |---------------------|-----------------|  
 |*取代值*|指定要傳回的值。 傳回值必須與項目的型別相符。 例如，使用 `nullValue="0"` 可為 null 整數欄位傳回 0。|  
 |**_throw**|擲回例外狀況。 這是預設值。|  
@@ -232,7 +233,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataSet>  
  [具類型的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  

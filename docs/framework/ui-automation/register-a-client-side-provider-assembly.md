@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 638e7b07c159bf1daf91428a1b95a4e83f61dace
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5770bf0bbca3c3b06c41058a4e5cb7198eae93dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="register-a-client-side-provider-assembly"></a>註冊用戶端提供者組件
 > [!NOTE]
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[UIAClientSideProvider_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSClientProgram.cs#102)]
  [!code-vb[UIAClientSideProvider_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csclientprogram.vb#102)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立用戶端 UI 自動化提供者](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)

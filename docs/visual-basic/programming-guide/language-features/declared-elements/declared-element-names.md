@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>宣告項目名稱 (Visual Basic)
 每個宣告的項目都有名稱，也稱為*識別碼*，這是程式碼會使用來參考它。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/09/2017
  `xyz$wv`  
   
 > [!CAUTION]
->  項目名稱以底線開頭 (`_`) 不屬於[語言獨立性以及與語言無關的元件](../../../../../docs/standard/language-independence-and-language-independent-components.md)（cls） 標準，所以符合 CLS 標準的程式碼不能使用的元件，定義這類名稱。 不過，在項目名稱中的其他任何位置底線是符合 CLS 標準。  
+>  項目名稱以底線開頭 (`_`) 不屬於[語言獨立性以及與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)（cls） 標準，所以符合 CLS 標準的程式碼不能使用的元件，定義這類名稱。 不過，在項目名稱中的其他任何位置底線是符合 CLS 標準。  
   
 ### <a name="name-length-guidelines"></a>名稱長度指導方針  
  事實上，您的名稱應該越短越好但仍可清楚識別的項目。 這可改善程式碼的可讀性，並減少線條長度和原始程式檔的大小。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="names-and-locales"></a>名稱和地區設定  
  比較名稱與地區設定無關。 如果兩個名稱符合一個地區設定中，保證在所有地區設定中比對。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告項目](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
  [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
  [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  

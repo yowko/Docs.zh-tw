@@ -13,18 +13,19 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b60cffd357022454de001986a48ef06bdd1fe3f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804acd77887c1cf05caa2004e75ef01110909490
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>彙總函式 (適用於 Entity Framework 的 SqlClient)
 .NET Framework Data Provider for SQL Server (SqlClient) 有提供彙總函式。 彙總函式會對一組輸入值執行計算，並傳回值。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。  
   
  下表顯示 SqlClient 彙總函式。  
   
-|函式|說明|  
+|函式|描述|  
 |--------------|-----------------|  
 |`AVG(` `expression` `)`|傳回集合中各個值的平均值。<br /><br /> 會忽略 Null 值。<br /><br /> **引數**<br /><br /> `Int32`， `Int64`， `Double`，和`Decimal`。<br /><br /> **傳回值**<br /><br /> `expression` 的類型。<br /><br /> **範例**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
@@ -55,6 +56,6 @@ ms.lasthandoff: 11/21/2017
 |---------------------|---------------------|---------------------|  
 |[彙總函式 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115906)|[彙總函式 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkID=115903)|[彙總函式 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115907)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
  [彙總標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

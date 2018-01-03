@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08296be1002ee50e18a45c546645f4cc117d6bb5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入門 (WCF 資料服務)
 本快速入門可協助您熟悉[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]透過一系列的支援中的主題的工作[入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/02/2017
  [從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
  從 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 啟動服務，然後透過 Web 瀏覽器將 HTTP GET 要求提交至公開的摘要，以存取該服務。  
   
- [建立.NET Framework 用戶端應用程式](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [建立 .NET Framework 用戶端應用程式](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
  建立 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 用戶端應用程式來取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要、將資料繫結至 Windows 控制項、變更繫結控制項中的資料，然後將變更傳回資料服務。  
   
 > [!NOTE]
@@ -53,5 +54,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="next-steps"></a>後續步驟  
  [啟動快速入門](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)

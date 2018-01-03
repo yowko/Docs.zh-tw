@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>DataView
 <xref:System.Data.DataView> 允許您為儲存在 <xref:System.Data.DataTable> 內的資料建立不同的檢視，這是資料繫結應用程式中常用的功能。 使用**DataView**可以公開資料表以不同排序順序中的資料，您可以依資料列狀態或根據篩選條件運算式來篩選資料。  
@@ -28,14 +29,14 @@ ms.lasthandoff: 10/18/2017
   
  您可以使用<xref:System.Data.DataView.DataViewManager%2A>管理中的所有資料表的檢視設定**資料集**。 **DataViewManager**您提供便於管理每個資料表的預設檢視設定的方式。 當控制項繫結至一個以上的資料表**資料集**繫結至**DataViewManager**是理想的選擇。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  描述如何建立**DataView**如**DataTable**。  
   
- [排序及篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [排序和篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  描述如何設定的屬性**DataView**符合特定篩選準則，傳回的資料列子集，或在特定排序順序傳回資料。  
   
- [Datarow 和 Datarowview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ [DataRow 和 DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  描述如何存取資料所公開**DataView**。  
   
  [尋找資料列](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
@@ -44,13 +45,13 @@ ms.lasthandoff: 10/18/2017
  [子檢視和關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  描述如何建立資料的檢視，從父子式關聯性，使用**DataView**。  
   
- [修改 Dataview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ [修改 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  描述如何修改在基礎資料**DataTable**透過**DataView**，包括啟用或停用更新。  
   
- [處理 DataView 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [處理 DataView 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  描述如何使用**ListChanged**接收通知的事件時的內容或順序**DataView**正在更新。  
   
- [管理 Dataview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ [管理 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
  描述如何使用**DataViewManager**管理**DataView**設定中每個資料表**資料集**。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -69,5 +70,5 @@ ms.lasthandoff: 10/18/2017
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  說明 ADO.NET 的架構和元件，以及如何使用 ADO.NET 來存取現有資料來源和管理應用程式資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

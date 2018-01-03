@@ -16,16 +16,16 @@ ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1ba36440e3f9dd30c21f946ba52732a5ff53e62a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 7230e62a6ce201209df41ad457fbd93f3a5c866f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令列編譯器
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器提供從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。 本節包含 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器選項的說明。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
  說明 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器，其提供做為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE 內編譯程式的替代方法。  
   
@@ -36,8 +36,5 @@ ms.lasthandoff: 10/22/2017
  在功能群組中顯示編譯器選項。  
   
 ## <a name="related-sections"></a>相關章節  
- [NIB：使用專案設計工具管理專案屬性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
- 討論如何使用專案設計工具來指定專案的全域設定。  
-  
  [Visual Basic](../../../visual-basic/index.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 說明的起點。

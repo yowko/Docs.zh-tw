@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2000ae86f38ff2fd06dbe7424cbfdd74781c6c3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 組態結構描述
 本節中的主題提供 Windows Identity Foundation (WIF) 組態結構描述的相關資訊。 您也可以設定應用程式透過架構所公開的類別使用 WIF。 這些類別會在處理結構描述中相關項目的章節中說明。 以下顯示 WIF 組態結構描述所公開的基本 XML 標記結構描述。 已省略屬性。 醒目提示的註解表示結構描述的主要元件。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel.services>  
 ```  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) - 提供啟用應用程式中 WIF 選項的組態。  
   
  [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) - 提供使用 WIF 之被動同盟的組態。 設定工作階段驗證模組 (SAM) 和同盟驗證模組 (WSFAM)。  

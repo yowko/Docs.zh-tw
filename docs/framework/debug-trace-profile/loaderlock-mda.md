@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835f1fdbe2132feb929a5264d3b2772d8f66377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Managed 偵錯助理 (MDA) 偵測到在保留 Microsoft Windows 作業系統載入器鎖定的執行緒上，有執行 Managed 程式碼的嘗試。  所有這樣的執行都不合法，因為它可能會產生死結，並在作業系統載入器尚未初始化 DLL 之前就先使用 DLL。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
   
  針對 .NET Framework 2.0 版建置的混合 Managed/Unmanaged C++ 組件，較不容易發生這些問題，與使用 Unmanaged DLL 違反作業系統規則的應用程式，有相同的降低風險。  例如，如果 Unmanaged DLL 的 `DllMain` 進入點，呼叫 `CoCreateInstance` 取得已向 COM 公開的 Managed 物件，結果是在載入器鎖定內嘗試執行 Managed 程式碼。 如需 .NET Framework 2.0 版或更新版本中的載入器鎖定問題的詳細資訊，請參閱[初始化混合組件](/cpp/dotnet/initialization-of-mixed-assemblies)。  
   
-## <a name="resolution"></a>解決方法  
+## <a name="resolution"></a>解決方式  
  在 Visual C++ .NET 2002 和 Visual C++ .NET 2003 中，使用 `/clr` 編譯器選項編譯的 DLL，可能會在載入時出現不具決定性的死結；此問題稱為混合 DLL 載入或載入器鎖定問題。 在 Visual C++ 2005 及更新版本中，混合 DLL 載入程序的所有不具決定性問題幾乎都已獲得解決。 不過還是有些情況可能會發生載入器鎖定問題 (具決定性)。 如需其餘載入器鎖定問題的原因與解決方法的詳細說明，請參閱[初始化混合組件](/cpp/dotnet/initialization-of-mixed-assemblies)。 如果在該主題中找不出您的載入器鎖定問題，您必須檢查執行緒的堆疊，以判斷載入器鎖定發生的原因，以及如何修正此問題。 查看已啟動此 MDA 的執行緒堆疊追蹤。  在保留作業系統載入器鎖定時，執行緒嘗試以非法方式呼叫 Managed 程式碼。  您可能會在堆疊上看到 DLL 的 `DllMain` 或對等進入點。  可從這類進入點內部執行哪些合法作業的作業系統規則相當有限。  這些規則會排除所有 Managed 執行。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/18/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>請參閱  
+ [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

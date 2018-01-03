@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>ADO.NET 概觀
 ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML)，以及透過 OLE DB 和 ODBC 所公開的資料來源。 資料共用的消費者應用程式可使用 ADO.NET 來連接至這些資料來源，並且擷取、處理及更新其中所含的資料。  
@@ -32,7 +33,7 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
   
  **隱私權聲明**: System.Data.dll、 System.Data.Design.dll、 System.Data.OracleClient.dll、 System.Data.SqlXml.dll、 System.Data.Linq.dll、 System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 組件不相符區分使用者的私用資料和非私用資料。  這些組件不會收集、儲存或傳輸任何使用者的私用資料。 不過，協力廠商應用程式可能會使用這些組件來收集、儲存或傳輸使用者的私用資料。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ADO.NET 架構](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  提供 ADO.NET 架構和元件的概觀。  
   
@@ -42,13 +43,13 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
  [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  說明如何在 ADO.NET 中實作 Language-Integrated Query (LINQ)，並且提供相關主題的連結。  
   
- [.NET framework 資料提供者](../../../../docs/framework/data/adonet/data-providers.md)  
+ [.NET Framework 資料提供者](../../../../docs/framework/data/adonet/data-providers.md)  
  提供 .NET Framework 資料提供者的設計概觀，以及 ADO.NET 所包含的 .NET Framework 資料提供者概觀。  
   
  [ADO.NET 資料集](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  提供 `DataSet` 設計與元件的概觀。  
   
- [在 ADO.NET 中的並存執行](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [ADO.NET 中的並存執行](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  討論各個 ADO.NET 版本之間的差異，以及它們在並存執行與應用程式相容性上的影響。  
   
  [ADO.NET 程式碼範例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
@@ -67,7 +68,7 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  說明如何連接至資料來源、擷取資料和修改資料。 這包括 `DataReaders` 和 `DataAdapters`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

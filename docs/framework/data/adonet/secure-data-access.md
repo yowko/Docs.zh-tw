@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
 |[資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
@@ -43,18 +44,18 @@ ms.lasthandoff: 11/21/2017
   
  如需有關使用參數型命令的詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
-|[DataAdapter 的參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
+|[DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
 |[使用預存程序修改資料](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|說明如何指定參數並取得傳回值。|  
-|[管理 SQL Server 中的預存程序的權限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
+|[在 SQL Server 中使用預存程序來管理權限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
   
 ## <a name="script-exploits"></a>指令碼攻擊  
  指令碼攻擊是另一種形式的插入，此種攻擊會使用插入至網頁的惡意字元。 瀏覽器並不會驗證插入的字元，而會將其當做網頁的一部分來處理。  
   
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[指令碼擅用概觀](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|說明如何防衛指令碼和 SQL 陳述式攻擊。|  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[例外狀況處理基本概念](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|說明 try/catch/finally 結構化例外狀況處理 (Structured Exception Handling) 的基本形式。|  
 |[例外狀況的最佳做法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|說明處理例外狀況的最佳做法。|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  如需有關保護 Access 和 Excel 資料的詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[安全性考量和 Access 2007 的指引](http://go.microsoft.com/fwlink/?LinkId=98354)|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
 |[協助保護 Access 資料庫與使用者層級安全性 (MDB)](http://go.microsoft.com/fwlink/?LinkId=47697)|適用於 Access 2003。 提供實作使用者層級安全性以保護 Access 2003 資料的指示。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[COM + 角色為基礎的安全性和.NET Framework](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|討論如何整合 Managed 程式碼和 COM+ 安全性服務。|  
   
@@ -95,12 +96,12 @@ ms.lasthandoff: 11/21/2017
   
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|  
 |[進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  

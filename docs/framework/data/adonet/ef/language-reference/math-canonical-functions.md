@@ -13,18 +13,19 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b6e69a9dbc204cfa8f0abc7e641b0784a08d747c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1d8f959980be1c765a3eacba97992f42d9231201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="math-canonical-functions"></a>數學標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包括一些數學標準函式。  
   
  下表所示為數學 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
-|函式|說明|  
+|函式|描述|  
 |--------------|-----------------|  
 |`Abs(` `value` `)`|傳回 `value` 的絕對值。<br /><br /> **引數**<br /><br /> `Int16`， `Int32`， `Int64`， `Byte`， `Single`， `Double`，和`Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> `Abs(-2)`|  
 |`Ceiling(` `value` `)`|傳回大於或等於 `value` 的最小整數。<br /><br /> **引數**<br /><br /> A `Single`， `Double`，和`Decimal`。<br /><br /> **傳回值**<br /><br /> `value` 的類型。<br /><br /> **範例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/18/2017
   
  Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱[適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

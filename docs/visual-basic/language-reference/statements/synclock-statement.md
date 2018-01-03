@@ -17,11 +17,11 @@ ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclock-statement"></a>SyncLock 陳述式
 取得陳述式區塊的獨佔鎖定之前執行的區塊。  
@@ -36,10 +36,10 @@ End SyncLock
   
 ## <a name="parts"></a>組件  
  `lockobject`  
- 必要項。 評估為物件參考的運算式。  
+ 必要。 評估為物件參考的運算式。  
   
  `block`  
- 選擇項。 屬於已取得鎖定時要執行的陳述式區塊。  
+ 選擇性。 屬於已取得鎖定時要執行的陳述式區塊。  
   
  `End SyncLock`  
  終止`SyncLock`區塊。  
@@ -90,7 +90,7 @@ End SyncLock
 ### <a name="code"></a>程式碼  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例會使用執行緒和`SyncLock`。 只要`SyncLock`陳述式存在，陳述式區塊是關鍵區段和`balance`絕對不會是負數值。 您可以註解`SyncLock`和`End SyncLock`陳述式，以查看留下的效果`SyncLock`關鍵字。  
   
 ### <a name="code"></a>程式碼  
@@ -98,8 +98,8 @@ End SyncLock
   
 ### <a name="comments"></a>註解  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading>  
  <xref:System.Threading.Monitor>  
- [執行緒同步處理](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
- [執行緒處理](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)
+ [執行緒同步處理](../../programming-guide/concepts/threading/thread-synchronization.md)  
+ [執行緒處理](../../programming-guide/concepts/threading/index.md)

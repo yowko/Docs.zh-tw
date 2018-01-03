@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
 部分方法可讓開發人員程式碼中插入自訂邏輯。 通常，程式碼是類別的設計工具產生的一部分。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供到的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  
@@ -58,7 +58,7 @@ End Sub
   
  上述範例重複項目中宣告的簽章，但可能會有變化。 特別是，其他修飾詞可增加，例如`Overloads`或`Overrides`。 只有一個`Overrides`允許修飾詞。 如需有關方法的修飾詞的詳細資訊，請參閱[Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
-## <a name="use"></a>用法  
+## <a name="use"></a>使用  
  您呼叫的部分方法時，就會呼叫任何其他`Sub`程序。 如果已實作的方法，評估引數，並執行之方法主體。 不過請記住，實作部分方法是選擇性的。 如果未實作方法，它的呼叫沒有任何作用，並不會評估運算式做為引數傳遞給方法。  
   
 ## <a name="example"></a>範例  
@@ -78,10 +78,10 @@ End Sub
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Sub 程序](./sub-procedures.md)  
  [選擇性參數](./optional-parameters.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ to SQL 中的程式碼產生](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [使用部分方法加入商務邏輯](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+ [LINQ to SQL 中的程式碼產生](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [使用部分方法新增商務邏輯](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

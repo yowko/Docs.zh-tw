@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: acc68fd36d2887e5e951f9ba5adc20e8cfd87fd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>資料集和 XmlDataDocument 同步處理
 ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存取階層式資料，可以使用 .NET Framework 中提供的 XML 類別。 過去，這兩個資料表示一直是分開使用； 不過，.NET Framework 會啟用即時、 同步存取資料的關聯式及階層式表示**資料集**物件和<xref:System.Xml.XmlDataDocument>分別物件。  
@@ -99,8 +100,8 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
   
  同步處理時**資料集**與**XmlDataDocument**，結果可能不同，就不會根據您<xref:System.Data.DataRelation>巢狀物件。 如需詳細資訊，請參閱[巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
- [將 DataSet 與 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+## <a name="in-this-section"></a>本節內容  
+ [使用 XmlDataDocument 同步處理資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  示範如何同步處理的強型別**資料集**，具有最少的結構描述與**XmlDataDocument**。  
   
  [對資料集執行 XPath 查詢](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
@@ -113,7 +114,7 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  描述如何**資料集**XML 當成資料來源，包括載入和保存的內容互動**資料集**為 XML 資料。  
   
- [巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [巢狀 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  討論的重要性巢狀**DataRelation**物件代表的內容時**資料集**為 XML 資料，並說明如何建立這些關聯性。  
   
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -122,5 +123,5 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
  <xref:System.Xml.XmlDataDocument>  
  包含的相關參考資訊**XmlDataDocument**類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

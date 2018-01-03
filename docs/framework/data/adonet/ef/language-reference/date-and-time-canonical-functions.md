@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3ded6b669a5232246e2878ea26d3116774aea532
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6323c134af24759e2b9839fa26af06f7a0b9343
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="date-and-time-canonical-functions"></a>日期及時間標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包括日期和時間的標準函式。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>備註  
  下表顯示的日期和時間[!INCLUDE[esql](../../../../../../includes/esql-md.md)]標準函式。 `datetime`是<xref:System.DateTime>值。  
   
-|函式|說明|  
+|功能|描述|  
 |--------------|-----------------|  
 |`AddNanoseconds(` `expression`, `number``)`|將奈秒數的指定 `number` 加入至 `expression`。<br /><br /> **引數**<br /><br /> `expression`：`DateTime`、`DateTimeOffset` 或 `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **傳回值**<br /><br /> `expression` 的類型。|  
 |`AddMicroseconds(` `expression`, `number``)`|將毫秒數的指定 `number` 加入至 `expression`。<br /><br /> **引數**<br /><br /> `expression`：`DateTime`、`DateTimeOffset` 或 `Time`。<br /><br /> `number`: `Int32`.<br /><br /> **傳回值**<br /><br /> `expression` 的類型。|  
@@ -44,15 +45,15 @@ ms.lasthandoff: 10/18/2017
 |`CurrentUtcDateTime()`|傳回 <xref:System.DateTime> 值作為 UTS 時區內之伺服器目前的日期和時間。<br /><br /> **傳回值**<br /><br /> `DateTime`。|  
 |`Day(` `expression` `)`|以介於 1 到 31 之間的 `expression` 格式傳回 `Int32` 的日數部分。<br /><br /> **引數**<br /><br /> `DateTime` 和 `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `-- The following example returns 12.`<br /><br /> `Day(cast('03/12/1998' as DateTime))`|  
 |`DayOfYear(` `expression` `)`|以介於 1 到 366 之間的 `expression` 格式傳回的 `Int32` 天數部分，其中傳回的 366 代表閏年的最後一天。<br /><br /> **引數**<br /><br /> `DateTime` 或 `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffNanoseconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的奈秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffMilliseconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的毫秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffMicroseconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的微秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffSeconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffMinutes(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的分鐘差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffHours(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的小時差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffDays(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的天數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffMonths(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的月數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
-|`DiffYears(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的年數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。   <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffNanoseconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的奈秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffMilliseconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的毫秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffMicroseconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的微秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffSeconds(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的秒差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffMinutes(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的分鐘差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffHours(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的小時差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime`、`DateTimeOffset` 或 `Time`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffDays(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的天數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffMonths(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的月數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
+|`DiffYears(` `startExpression`, `endExpression``)`|傳回 `startExpression` 與 `endExpression` 之間的年數差。<br /><br /> **引數**<br /><br /> `startExpression`、`endExpression`：`DateTime` 或 `DateTimeOffset`。 **注意：** `startExpression`和`endExpression`必須屬於相同的型別。 <br /><br /> **傳回值**<br /><br /> `Int32`。|  
 |`GetTotalOffsetMinutes(` `datetimeoffset` `)`|傳回 `datetimeoffset` 與格林威治標準時間 (GMT) 間的時差分鐘數。 這項值通常介於 +780 到 -780 之間 (+ 或 - 13 小時)。 **注意：**僅支援 SQL Server 2008 中這個函式。 <br /><br /> **引數**<br /><br /> `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。|  
 |`Hour (` `expression` `)`|以介於 0 到 23 之間的 `expression` 格式傳回 `Int32` 的小時部分。<br /><br /> **引數**<br /><br /> `DateTime, Time` 和 `DateTimeOffset`。<br /><br /> **範例**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(` `expression` `)`|以介於 0 到 999 之間的 `expression` 格式傳回 `Int32` 的毫秒部分。<br /><br /> **引數**<br /><br /> `DateTime, Time` 和 `DateTimeOffset`。<br /><br /> **傳回值**<br /><br /> `Int32`。|  
@@ -66,5 +67,5 @@ ms.lasthandoff: 10/18/2017
   
  Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱[適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

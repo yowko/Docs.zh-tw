@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a6b277b2676409bebc059637daca5681b853f03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：設定網路追蹤
 應用程式或電腦組態檔都會保存可決定網路追蹤格式和內容的設定。 在執行這個程序之前，請確認已啟用追蹤。 如需啟用追蹤的詳細資訊，請參閱[啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
 |`maxdatasize`|選擇性 <xref:System.Int32> 屬性。 設定每一行追蹤所包含之網路資料的最大位元組數。 預設值為 1024。<br /><br /> 您必須在 \<source> 項目上設定這個屬性，如範例所示。 如果在 \<switches> 項目下的某項目上設定這個屬性，就會擲回例外狀況。|  
 |`Tracemode`|選擇性 <xref:System.String> 屬性。 設定為 `includehex` 以便使用十六進位和文字格式來顯示通訊協定追蹤。 設定為 `protocolonly` 則只會顯示文字。 預設值是 `includehex`。<br /><br /> 您必須在 \<switches> 項目上設定這個屬性，如範例所示。 如果在 \<source> 項目下的某項目上設定這個屬性，就會擲回例外狀況。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)  
  [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用單一階段交易認可和可提升單一階段告知進行最佳化
 本主題將說明 <xref:System.Transactions> 基礎結構所提供，用以最佳化效能的各項機制。  
@@ -69,6 +70,6 @@ ms.lasthandoff: 12/02/2017
   
  如果只有一個的變動登記和任何的永久性登記，變動登記會接收 SPC 通知。  如果有任何 volatile 登記和只有一個的永久性登記，volatile 登記收到 2PC。 當它完成時，永久性登記會收到 SPC。  
   
-## <a name="see-also"></a>另請參閱  
- [登記資源，以在交易中的參與者身分](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [認可交易，以在單一和多重階段](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>請參閱  
+ [將資源登記為異動中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [在單一階段和多重階段中認可異動](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

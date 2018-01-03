@@ -49,11 +49,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 下列可靠性規則會導向至 SQL Server；不過，它們也會套用至任何主機型伺服器應用程式。 SQL Server 這類伺服器絕對不能流失資源，也不能關閉。  不過，撰寫每個改變物件狀態之方法的退出程式碼，無法完成該作業。  目標不是撰寫 100% 可靠的 Managed 程式碼，來復原每個具有退出程式碼的位置中的任何錯誤。  這會是成功機率很低的煩人工作。  Common Language Runtime (CLR) 無法輕易地強烈保證 Managed 程式碼可撰寫可行的完美程式碼。  請注意，與 ASP.NET 不同，SQL Server 只會使用一個無法回收的處理序，而不需要關閉資料庫一段無法接受的時間。  
@@ -286,6 +287,6 @@ public static MyClass SingletonProperty
   
  這麼做會指示 Just-In-Time 編譯器在執行 `try` 區塊之前準備 finally 區塊中的所有程式碼。 這保證會建置 finally 區塊中的程式碼，而且在所有情況下都會執行該程式碼。 CER 中通常不會有空的 `try` 區塊。 使用 CER 可防止非同步執行緒中止和記憶體不足例外狀況。 請參閱 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>，以了解可額外處理極深層程式碼堆疊溢位的 CER 形式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server 程式設計和主機保護屬性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

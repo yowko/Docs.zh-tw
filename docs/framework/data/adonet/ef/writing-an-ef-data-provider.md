@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6cbb6d4c11c06c1771cb32021c6c148564a6034a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>撰寫 Entity Framework 資料提供者
 本節將討論如何撰寫 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供者來支援 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 以外的資料來源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 包含可支援 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的提供者。  
@@ -44,12 +45,12 @@ ms.lasthandoff: 10/18/2017
 ## <a name="sample"></a>範例  
  請參閱[Entity Framework 範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)某個[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不是支援的資料來源的提供者[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
  [修改 SQL 產生](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
  [提供者資訊清單規格](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
-## <a name="see-also"></a>另請參閱  
- [使用資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a>請參閱  
+ [處理資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

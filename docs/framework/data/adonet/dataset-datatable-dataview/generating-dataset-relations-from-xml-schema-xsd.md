@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 916b9ad24c2ae2334635760a520116b4c19df314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 產生資料集關聯
 您可以在 <xref:System.Data.DataSet> 內建立父子關係，以建立兩個或多個資料行之間的關聯。 有三種方式來代表**資料集**XML 結構描述定義語言 (XSD) 結構描述內的關聯性：  
@@ -90,14 +91,14 @@ msdata:childkey="" />
   
  對應處理會使用**關聯性**項目來建立之間的父子式關聯性**OrderNumber**中的資料行**順序**資料表和**OrderNo**中的資料行**OrderDetail**資料表中**資料集**。 對應處理只會指定關係，而不會像關聯式資料庫的主索引鍵/外部索引鍵條件約束一樣，自動為這些資料行的值指定任何條件約束。  
   
-### <a name="in-this-section"></a>本章節內容  
- [巢狀結構描述元素之間進行隱含關聯對應](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+### <a name="in-this-section"></a>本節內容  
+ [在巢狀結構描述項目之間進行隱含關聯對應](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  描述條件約束和關聯性中隱含建立**資料集**發生 XML 結構描述中巢狀項目時。  
   
- [對應指定之巢狀元素的關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ [針對巢狀項目指定的關聯進行對應](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  描述如何在中明確設定關聯**資料集**的 XML 結構描述中的巢狀項目。  
   
- [指定無巢狀項目之間的關聯性](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [指定未巢狀放置之項目間的關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  描述如何建立關聯性中的**資料集**無巢狀的 XML 結構描述項目之間。  
   
 ### <a name="related-sections"></a>相關章節  
@@ -107,5 +108,5 @@ msdata:childkey="" />
  [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  說明用來建立唯一外部索引鍵條件約束中的 XML 結構描述項目**資料集**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -12,22 +12,22 @@ ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ef4306da5c093b8302e377cc3b68d5700b8dfa8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 893d869b1abaf9caa6f4705f40750912081d7df2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>組件和全域組件快取 (Visual Basic)
 組件會構成 .NET 型應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會採用可執行檔 (.exe) 或動態連結程式庫 (.dll) 的格式，而且是 .NET Framework 的建置組塊。 它們為通用語言執行平台提供了感知型別實作所需的資訊。 您可以將組件視為型別和資源的集合，其構成功能的邏輯單元，而且是為了共同運作而建置。  
   
- 組件可以包含一或多個模組。 例如，大型專案的規劃方式可能是讓數個開發人員各自處理個別的模組，然後再全部組成單一組件。 如需模組的詳細資訊，請參閱[如何：建置多檔案組件](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)主題。  
+ 組件可以包含一或多個模組。 例如，大型專案的規劃方式可能是讓數個開發人員各自處理個別的模組，然後再全部組成單一組件。 如需模組的詳細資訊，請參閱[如何：建置多檔案組件](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md)主題。  
   
  組件包含下列屬性：  
   
 -   組件會實作為 .exe 或 .dll 檔。  
   
--   您可以將組件放在全域組件快取中，以在應用程式之間共用。 組件必須經強式命名後才能包含在全域組件快取內。 如需詳細資訊，請參閱[強式名稱的組件](../../../../../docs/framework/app-domains/strong-named-assemblies.md)。  
+-   您可以將組件放在全域組件快取中，以在應用程式之間共用。 組件必須經強式命名後才能包含在全域組件快取內。 如需詳細資訊，請參閱[強式名稱的組件](../../../../framework/app-domains/strong-named-assemblies.md)。  
   
 -   系統只會在需要時才將組件載入到記憶體。 如果不使用，則不會予以載入。 這表示使用組件可以有效地管理大型專案中的資源。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/09/2017
   
  因為組件包含有關內容、版本管理及相依性的資訊，所以您使用 Visual Basic 建立的應用程式不依賴 Windows 登錄值就能正常運作。 組件可減少 .dll 衝突，並讓您的應用程式更可靠，也更容易部署。 在許多情況下，您只要將 .NET 型應用程式的檔案複製到目標電腦，即完成安裝。  
   
- 如需詳細資訊，請參閱[組件資訊清單](../../../../../docs/framework/app-domains/assembly-manifest.md)。  
+ 如需詳細資訊，請參閱[組件資訊清單](../../../../framework/app-domains/assembly-manifest.md)。  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>加入組件的參考  
  若要使用組件，您必須加入對它的參考。 接著，您要使用 [Imports 陳述式](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)來選擇您想要使用之項目的命名空間。 在參考並匯入組件之後，您的應用程式即可使用所有可存取的類別、屬性、方法及其命名空間的其他成員，其程式碼就如同您原始程式檔的一部分。  
@@ -57,8 +57,8 @@ ms.lasthandoff: 12/09/2017
 > [!NOTE]
 >  若要在 Visual Studio 中建置組件，請在[建置] 功能表中選擇 [建置]。  
   
-## <a name="see-also"></a>另請參閱  
- [Common Language Runtime 中的組件](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+## <a name="see-also"></a>請參閱  
+ [Common Language Runtime 中的組件](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Friend 組件 (Visual Basic)](friend-assemblies.md)  
  [如何： 共用組件與其他應用程式 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
  [如何： 載入和卸載組件 (Visual Basic)](how-to-load-and-unload-assemblies.md)  

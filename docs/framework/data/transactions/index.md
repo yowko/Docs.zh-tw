@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a6dcd11d34f0b81d6d3982ef1c6ab211d94818b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c66e982715d0f7f97e7a4faa92c2de57f3b1471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-processing"></a>交易處理
 當您從線上書店購買一本書時，您以金錢來交易書籍 (以信用方式來支付)。 如果您的信用良好，接下來的一系列作業流程會確保您收到這本書，同時確保書店收到您支付的錢。 但是，如果在一系列交易過程中有任何一個環節出錯，整個交易就會失敗。 您將拿不到書，而書店也無法收到您支付的錢。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/02/2017
   
  本節將提供有關交易處理的一般資訊，以及如何使用 Microsoft .NET Framework 來撰寫交易式應用程式與資源管理員的特定資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [交易基礎概念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  簡介基礎交易處理名詞與概念。  
   

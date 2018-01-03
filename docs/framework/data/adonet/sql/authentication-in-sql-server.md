@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3b597d04ee53a094d9c50dff406f57e5fd57b00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c462b7c2e888ed0f6394435e0de2131e26dbef08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 支援兩種驗證模式：Windows 驗證模式和混合模式。  
@@ -84,11 +85,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[主體](http://msdn.microsoft.com/library/bb543165.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的登入和其他安全性主體。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [連接至資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  

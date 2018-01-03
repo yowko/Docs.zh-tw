@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3803d550fe345c6f485dd204cc119f8a927a3501
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> 是由資料表集合、關係和條件約束所組成。 在 ADO.NET 中，<xref:System.Data.DataTable>物件用來代表中的資料表**資料集**。 A **DataTable**表示一個資料表的記憶體中關聯式資料; 資料位於本機。網路架構應用程式它所在的但可以填入來自資料來源，例如 Microsoft SQL Server 使用**DataAdapter**如需詳細資訊，請參閱[填入資料集從 DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
   
  您可以使用一或多個資料表中的相關資料行，在資料表之間建立父子關係 (Parent-Child Relationship)。 您建立的關聯性**DataTable**物件，使用<xref:System.Data.DataRelation>。 **DataRelation**物件可以再用來傳回特定資料列相關的子系或父資料列。 如需詳細資訊，請參閱[加入 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  說明如何建立**DataTable**並將它加入**資料集**。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  說明如何加入、修改和刪除資料表中的資料。 說明如何使用**DataTable**事件，以檢視資料表中資料的變更。  
   
- [處理 DataTable 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [處理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  提供可用的事件資訊搭配**DataTable**，包括已修改資料行值，並加入或刪除資料列時的事件。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -65,5 +66,5 @@ ms.lasthandoff: 10/18/2017
  [類別庫概觀](../../../../../docs/standard/class-library-overview.md)  
  提供的.NET Framework 類別庫概觀包括**系統**命名空間以及它的第二層命名空間， **System.Data**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

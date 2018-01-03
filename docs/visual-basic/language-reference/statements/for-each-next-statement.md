@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 陳述式 (Visual Basic)
 每個項目集合中重複陳述式的群組。  
@@ -57,11 +57,11 @@ Next [ element ]
 |---|---|  
 |`element`|中需要`For Each`陳述式。 選擇性在`Next`陳述式。 變數。 用來逐一查看集合的元素。|  
 |`datatype`|若`element`不已宣告。 資料型別`element`。|  
-|`group`|必要項。 集合型別或物件類型的變數。 參考的集合`statements`會重複執行。|  
-|`statements`|選擇項。 一或多個陳述式之間`For Each`和`Next`中每個項目上執行的`group`。|  
-|`Continue For`|選擇項。 將控制權傳輸至開頭`For Each`迴圈。|  
-|`Exit For`|選擇項。 控制權轉移出`For Each`迴圈。|  
-|`Next`|必要項。 結束的定義`For Each`迴圈。|  
+|`group`|必要。 集合型別或物件類型的變數。 參考的集合`statements`會重複執行。|  
+|`statements`|選擇性。 一或多個陳述式之間`For Each`和`Next`中每個項目上執行的`group`。|  
+|`Continue For`|選擇性。 將控制權傳輸至開頭`For Each`迴圈。|  
+|`Exit For`|選擇性。 控制權轉移出`For Each`迴圈。|  
+|`Next`|必要。 結束的定義`For Each`迴圈。|  
   
 ## <a name="simple-example"></a>簡單的範例  
  使用`For Each`...`Next`循環播放，當您想要針對集合或陣列的每個項目重複一組陳述式。  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- 如需其他範例，請參閱[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)和[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 如需其他範例，請參閱[集合](../../../standard/collections/index.md)和[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="nested-loops"></a>巢狀的迴圈  
  您可以巢狀`For Each`將放入另一個迴圈內的迴圈。  
@@ -105,7 +105,7 @@ Next [ element ]
   
 -   那里無止盡的迴圈，即無法執行大型或甚至無限次數的迴圈。 如果您偵測到這種情況，您可以使用`Exit For`來逸出迴圈。 如需詳細資訊，請參閱[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
-## <a name="iterators"></a>Iterator  
+## <a name="iterators"></a>迭代器  
  您使用*迭代器*若要在集合上執行自訂反覆項目。 迭代器可以是函式或`Get`存取子。 它會使用`Yield`陳述式來傳回一次一個集合的每個項目。  
   
  您可以使用呼叫迭代器`For Each...Next`陳述式。 `For Each` 迴圈的每個反覆項目都會呼叫迭代器。 當`Yield`陳述式中的迭代器中的運算式，已達`Yield`陳述式會傳回，而且保留在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)， [Yield 陳述式](../../../visual-basic/language-reference/statements/yield-statement.md)，和[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
+ 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)， [Yield 陳述式](../../../visual-basic/language-reference/statements/yield-statement.md)，和[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
 ## <a name="technical-implementation"></a>技術實作  
  當`For Each`...`Next` 陳述式執行時，Visual Basic 會評估集合只有一個迴圈開始前的時間。 如果陳述式區塊變更`element`或`group`，這些變更不會影響在迴圈的反覆項目。  
@@ -179,8 +179,8 @@ End Sub
   
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="see-also"></a>請參閱  
+ [集合](../../../standard/collections/index.md)  
  [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [迴圈結構](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While 陳述式](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

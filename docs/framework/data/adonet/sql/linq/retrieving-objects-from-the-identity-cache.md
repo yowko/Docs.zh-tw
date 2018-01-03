@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d078476e881c3823d7772a9db4cdbdb23dac8bb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f728019c97bb59162d39a9f77e34e4e6f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>從識別快取擷取物件
 本主題描述 LINQ to SQL 查詢的類型，這些查詢可從 <xref:System.Data.Linq.DataContext> 所管理的識別快取傳回物件。  
@@ -74,8 +75,8 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [物件識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [物件識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+ [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

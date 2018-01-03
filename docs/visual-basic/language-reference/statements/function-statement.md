@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 名稱、 參數和定義的程式碼會宣告`Function`程序。  
@@ -59,11 +59,11 @@ End Function
   
 -   `attributelist`  
   
-     選擇項。 請參閱[屬性清單](attribute-list.md)。  
+     選擇性。 請參閱[屬性清單](attribute-list.md)。  
   
 -   `accessmodifier`  
   
-     選擇項。 可以是下列其中一項：  
+     選擇性。 可以是下列其中一項：  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -79,7 +79,7 @@ End Function
   
 -   `proceduremodifiers`  
   
-     選擇項。 可以是下列其中一項：  
+     選擇性。 可以是下列其中一項：  
   
     -   [多載](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -97,31 +97,31 @@ End Function
   
 -   `Shared`  
   
-     選擇項。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
+     選擇性。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
   
 -   `Shadows`  
   
-     選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+     選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
 -   `Async`  
   
-     選擇項。 請參閱[非同步](../../../visual-basic/language-reference/modifiers/async.md)。  
+     選擇性。 請參閱[非同步](../../../visual-basic/language-reference/modifiers/async.md)。  
   
 -   `Iterator`  
   
-     選擇項。 請參閱[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
+     選擇性。 請參閱[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
 -   `name`  
   
-     必要項。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必要。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `typeparamlist`  
   
-     選擇項。 泛型程序中的型別參數的清單。 請參閱[輸入清單](type-list.md)。  
+     選擇性。 泛型程序中的型別參數的清單。 請參閱[輸入清單](type-list.md)。  
   
 -   `parameterlist`  
   
-     選擇項。 本機變數的名稱，表示此程序的參數清單。 請參閱[參數清單](parameter-list.md)。  
+     選擇性。 本機變數的名稱，表示此程序的參數清單。 請參閱[參數清單](parameter-list.md)。  
   
 -   `returntype`  
   
@@ -129,7 +129,7 @@ End Function
   
 -   `Implements`  
   
-     選擇項。 表示此程序會實作一或多個`Function`程序，每一個定義中包含這個程序的類別或結構所實作的介面。 請參閱[實作陳述式](implements-statement.md)。  
+     選擇性。 表示此程序會實作一或多個`Function`程序，每一個定義中包含這個程序的類別或結構所實作的介面。 請參閱[實作陳述式](implements-statement.md)。  
   
 -   `implementslist`  
   
@@ -141,14 +141,14 @@ End Function
   
      `interface.definedname`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`interface`|必要項。 這個程序所實作的介面名稱所含的類別或結構。|  
-    |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|  
+    |`interface`|必要。 這個程序所實作的介面名稱所含的類別或結構。|  
+    |`definedname`|必要。 名稱，據以在 `interface` 中定義程序。|  
   
 -   `Handles`  
   
-     選擇項。 指出此程序可以處理一或多個特定事件。 請參閱[處理](handles-clause.md)。  
+     選擇性。 指出此程序可以處理一或多個特定事件。 請參閱[處理](handles-clause.md)。  
   
 -   `eventlist`  
   
@@ -160,14 +160,14 @@ End Function
   
      `eventvariable.event`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`eventvariable`|必要項。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
-    |`event`|必要項。 此程序處理事件的名稱。|  
+    |`eventvariable`|必要。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
+    |`event`|必要。 此程序處理事件的名稱。|  
   
 -   `statements`  
   
-     選擇項。 要執行此程序內的陳述式區塊。  
+     選擇性。 要執行此程序內的陳述式區塊。  
   
 -   `End Function`  
   
@@ -239,7 +239,7 @@ End Function
   
  Iterator 函式的傳回型別可以是<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>， <xref:System.Collections.IEnumerator>，或<xref:System.Collections.Generic.IEnumerator%601>。  
   
- 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Function`陳述式來宣告名稱、 參數和形成主體的程式碼`Function`程序。 `ParamArray`修飾詞會啟用要接受可變數目的引數的函式。  
@@ -258,7 +258,7 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Sub 陳述式](sub-statement.md)  
  [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
  [參數清單](parameter-list.md)  

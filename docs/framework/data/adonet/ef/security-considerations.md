@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 107b222d37d62505c021f277a660741b52a9cdbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 39de644f0701f11c4083d77071c70bb87147cac9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱[安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/21/2017
  當您在 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 應用程式中使用路徑時，應該考量下列事項。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>確認主應用程式 (Host) 是否執行路徑檢查。  
- 使用 `|DataDirectory|` (以垂直線符號括住) 替代字串時，[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 會確認是否支援已解析的路徑。 例如，不允許在 `DataDirectory` 後面使用 ".."。 裝載 `~` 的處理序會執行解析 Web 應用程式根目錄運算子 ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]) 的相同檢查。 IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。 您應該了解部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所在之主應用程式的行為。  
+ 使用 `|DataDirectory|` (以垂直線符號括住) 替代字串時，[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 會確認是否支援已解析的路徑。 例如，不允許在 `DataDirectory` 後面使用 "."。 裝載 `~` 的處理序會執行解析 Web 應用程式根目錄運算子 ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]) 的相同檢查。 IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。 您應該了解部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所在之主應用程式的行為。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>請勿針對已解析的路徑名稱提出任何假設。  
  雖然根目錄運算子 (`~`) 和 `DataDirectory` 替代字串解析而成的值應該在應用程式的執行階段期間維持不變，但是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會限制主應用程式修改這些值。  
@@ -171,7 +172,7 @@ ms.lasthandoff: 11/21/2017
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [移轉考量](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

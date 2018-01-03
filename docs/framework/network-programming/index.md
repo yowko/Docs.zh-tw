@@ -17,16 +17,17 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [可插式通訊協定簡介](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  說明如何存取網際網路資源而不用考慮需要的存取通訊協定。  
   
@@ -142,8 +143,8 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  為應用程式提供使用延伸保護設定驗證組態的支援。  
   
-## <a name="see-also"></a>另請參閱  
- [網路程式設計 how to 主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+## <a name="see-also"></a>請參閱  
+ [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN Code Gallery 上的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
  [HttpClient 範例](http://go.microsoft.com/fwlink/?LinkId=242550)

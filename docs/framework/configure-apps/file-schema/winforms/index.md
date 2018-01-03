@@ -11,11 +11,12 @@ ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b83f00f82de727812c5737915a6dc35ec98e4734
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f2d83f5dcf6fa93ceba4d670470bd768a2ee1f88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Form 組態區段
 Windows Forms 組態設定允許 Windows Forms 應用程式儲存並擷取有關自訂應用程式設定 (例如多重監視器支援、高 DPI 支援，以及其他預先定義的組態設定) 的資訊。
@@ -42,13 +43,13 @@ Windows Forms 應用程式組態設定是儲存在應用程式組態檔的 `Syst
 
 ### <a name="child-elements"></a>子元素
 
-元素  |說明 |
+項目  |描述 |
 ---------|---------|
 [`<add>`](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) | 新增具有指定值的組態設定金鑰 |
 
 ### <a name="parent-elements"></a>父元素
 
-元素  |說明 |
+元素  |描述 |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | 通用語言執行平台和 Windows Forms 應用程式所使用之每個組態檔中的根元素 |
 
@@ -58,7 +59,7 @@ Windows Forms 應用程式組態設定是儲存在應用程式組態檔的 `Syst
 
 `<System.Windows.Forms.ApplicationConfigurationSection>` 元素可以包含一或多個子 [`<add>`](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) 元素，每個子元素都能定義一個特定的組態設定。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [組態檔結構描述](../index.md)   
 [Windows Forms 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

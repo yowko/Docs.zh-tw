@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 25a6666127d16a8245093bdf11ae7d0e76fc8365
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 這是最後一項工作[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]快速入門。 在這項工作，您會加入至方案的主控台應用程式，請將參考加入[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]饋送到這個新的用戶端應用程式及存取[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]使用所產生的用戶端資料服務類別和用戶端從用戶端應用程式摘要程式庫。  
@@ -90,6 +91,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="next-steps"></a>後續步驟  
  您已成功建立存取範例 Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的用戶端應用程式。 您也已經完成 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 快速入門。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]存取[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從摘要[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式，請參閱[WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

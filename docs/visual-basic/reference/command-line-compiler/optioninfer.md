@@ -15,11 +15,11 @@ ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4400ee58214c8f9990d4b123e17ef0f6553a5a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioninfer"></a>/optioninfer
 可讓您在變數宣告中使用區域類型推斷。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 |詞彙|定義|  
 |---|---|  
-|`+` &#124; `-`|選擇項。 指定 `/optioninfer+` 以啟用區域類型推斷，或是指定 `/optioninfer-` 以封鎖它。 未指定值的 `/optioninfer` 選項與 `/optioninfer+` 相同。 不存在 `/optioninfer` 參數時的預設值也是 `/optioninfer+`。 預設值是在 Vbc.rsp 回應檔中設定。|  
+|`+` &#124; `-`|選擇性。 指定 `/optioninfer+` 以啟用區域類型推斷，或是指定 `/optioninfer-` 以封鎖它。 未指定值的 `/optioninfer` 選項與 `/optioninfer+` 相同。 不存在 `/optioninfer` 參數時的預設值也是 `/optioninfer+`。 預設值是在 Vbc.rsp 回應檔中設定。|  
   
 > [!NOTE]
 >  您可以使用 `/noconfig` 選項來保留編譯器的內部預設值而不是 vbc.rsp 中所指定的預設值。 這個選項的編譯器預設值是 `/optioninfer-`。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中設定 /optioninfer  
   
-1.  選取的專案中**方案總管 中**。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[NIB： 使用專案設計工具管理專案屬性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  選取的專案中**方案總管 中**。 在 [專案] 功能表上，按一下 [屬性]。  
   
 2.  在**編譯**索引標籤上，修改中的值**Option infer**方塊。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 vbc /optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
  [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  

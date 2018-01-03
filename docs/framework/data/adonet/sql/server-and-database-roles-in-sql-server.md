@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bcb42e018f5e62179924634bfa49fcbfc4c7d16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebae481ba2ab486066997b52d794d9bd631c8400
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  如需 SQL Server 預先定義角色的詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[伺服器層級角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的伺服器角色的權限](http://msdn.microsoft.com/library/ms175892.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的固定伺服器角色和與其相關聯的權限。|  
 |[資料庫層級角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的資料庫角色的權限](http://msdn.microsoft.com/library/ms189612.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
@@ -66,15 +67,15 @@ ms.lasthandoff: 11/21/2017
   
  如需有關 SQL Server 登入、使用者和角色的詳細資訊，請參閱下列資源。  
   
-|資源|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[識別和存取控制](http://msdn.microsoft.com/library/bb510418.aspx)SQL Server 線上叢書中|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
 |[主體](http://msdn.microsoft.com/library/ms181127.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [在 SQL Server 驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [擁有權和 SQL Server 中的使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [授權和 SQL Server 中的權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

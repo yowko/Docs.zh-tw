@@ -13,40 +13,41 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 87d895c8d5531d091d773e9f2d51b89408169022
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3059adbc9cd2c67035d5f6579e292df80cd87ef3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-change-conflicts"></a>如何：管理變更衝突
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]提供 Api，可協助您探索、 評估並解決並行衝突的集合。  
   
-## <a name="in-this-section"></a>本章節內容  
- [如何： 偵測及解決衝突的提交](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
+## <a name="in-this-section"></a>本節內容  
+ [如何：偵測和解決發生衝突的提交內容](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
  描述如何偵測和解決並行存取衝突。  
   
- [如何： 指定並行例外狀況會擲回](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
+ [如何：指定並行例外狀況的擲回時機](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
  描述如何指定應該通知您發生並行存取衝突的時機。  
   
- [如何： 指定的成員會用於測試並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
+ [如何：指定用於測試並行衝突的成員](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
  描述如何將成員加上屬性 (Attribute)，以指定是否要檢查這些屬性是否發生並行存取衝突。  
   
- [如何： 擷取實體衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
+ [如何：擷取實體衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
  描述如何蒐集實體衝突的相關資訊。  
   
- [如何： 擷取成員衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
+ [如何：擷取成員衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
  描述如何蒐集成員衝突的相關資訊。  
   
- [如何： 解決衝突，藉由保留資料庫值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
+ [如何：藉由保留資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
  描述如何以資料庫值覆寫目前值。  
   
- [如何： 覆寫資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
+ [如何：藉由覆寫資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
  描述如何覆寫資料庫值來保留目前值。  
   
- [如何： 藉由合併資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
+ [如何：藉由與資料庫值合併來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
  描述如何合併資料庫和目前值來解決衝突。  
   
 ## <a name="related-sections"></a>相關章節  
- [開放式並行存取： 概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  說明適用於 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中開放式並行存取 (Optimistic Concurrency) 的詞彙。

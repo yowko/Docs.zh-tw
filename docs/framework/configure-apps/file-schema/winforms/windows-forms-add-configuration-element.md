@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form 加入組態項目
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/14/2017
 
 ### <a name="key-attribute-names-and-associated-values"></a>`key`屬性名稱和相關聯的值
 
-| `key` 名稱 | 值 | 說明 |
+| `key` 名稱 | 值 | 描述 |
 | ---------- | ------ | ----------- |
 | 「 AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出是否錨定的控制項在單一行程中縮放。 若要停用單一"true"傳遞縮放比例。否則為 false。 請參閱中的 「 單一傳遞調整 」 一節[備註](#Remarks)如需詳細資訊。 |
 | 「 DpiAwareness" | 「 PerMonitorV2"&#124;"false" | 指出是否為 DPI 感知應用程式。 設定"PerMonitorV2 」 支援 Dpi 感知; 的索引鍵否則，將它設定為"false"。 DPI 感知是選擇性功能。若要利用 Windows Form 高 DPI 支援，您應該將其值設"PerMonitorV2"。 請參閱[備註](#remarks)節的詳細資訊。 |
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/14/2017
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 說明 |
+| 元素 | 描述 |
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | 設定新的 Windows Form 應用程式功能的支援。 |
 
@@ -78,13 +79,13 @@ ms.lasthandoff: 12/14/2017
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-從.NET Framework 4.7 下開頭為 Windows 10 建立者 Edition 和.NET Framework 目標版本的 Windows 版本所執行的 Windows Forms 應用程式可以設定為充分利用.NET Framework 中引進的高 DPI 改良功能4.7。 這些活動包括：
+從.NET Framework 4.7 下開頭為 Windows 10 建立者 Edition 和.NET Framework 目標版本的 Windows 版本所執行的 Windows Forms 應用程式可以設定為充分利用.NET Framework 中引進的高 DPI 改良功能4.7。 它們包括：
 
 - 支援動態 DPI 案例，已啟動的 Windows Form 應用程式之後變更 DPI 或小數位數因素的使用者。
 
 - 改良的縮放比例和 Windows Form 的數字的版面配置控制項，例如<xref:System.Windows.Forms.MonthCalendar>控制項和<xref:System.Windows.Forms.CheckedListBox>控制項。 
 
-高 DPI 感知是選擇性功能。根據預設，值`DpiAwareness`是`false`。 您可以選擇為 Windows Form 支援 DPI 感知藉由設定此機碼值`PerMonitorV2`應用程式組態檔中。 如果啟用 DPI 感知，則也會啟用所有的個別 DPI 功能。 這些活動包括：
+高 DPI 感知是選擇性功能。根據預設，值`DpiAwareness`是`false`。 您可以選擇為 Windows Form 支援 DPI 感知藉由設定此機碼值`PerMonitorV2`應用程式組態檔中。 如果啟用 DPI 感知，則也會啟用所有的個別 DPI 功能。 它們包括：
 
 - DPI 變更所控制的訊息`DisableDpiChangedMessageHandling`索引鍵。
 
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/14/2017
 
 這些調整單一或多個行程調整影響使用者介面的認知的回應和視覺外觀的使用者介面項目。 從.NET Framework 4.7 開始，Windows Form 會使用單一行程縮放比例。 在舊版的.NET Framework 中，透過多個行程，這造成部分控制項，以調整多個必須執行縮放比例。 單一行程調整應該才可停用舊的行為取決於您的應用程式。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  
 [Windows Form 的組態區段](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
 [Windows Forms 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

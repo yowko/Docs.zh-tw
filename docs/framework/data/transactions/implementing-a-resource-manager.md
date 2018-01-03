@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>實作資源管理員
 交易所使用的每項資源都會受到資源管理員的管理，而這些資源管理員在採取行動時必須經過交易管理員的協調。 資源管理員會和交易管理員一起合作以提供應用程式單元性 (Atomicity) 和隔離性 (Isolation) 的保證。 Microsoft SQL Server、永久性訊息佇列、記憶體中的雜湊資料表，通通都是資源管理員的範例。  
@@ -41,14 +42,14 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.Transactions.Transaction> 類別也會提供 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 方法，以便登記可提升單一階段登記 (PSPE)。 這樣一來永久性資源管理員 (RM) 就可以裝載並「擁有」交易，並可在稍後視需要將規模擴大為由 MSDTC 管理。 如需詳細資訊，請參閱[最佳化使用單一階段認可和可提升單一階段通知](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  如下列各主題所述，這些步驟通常會緊接著資源管理員。  
   
- [登記資源，以在交易中的參與者身分](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [將資源登記為異動中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  說明如何在交易中登記永久性或變動性資源。  
   
- [認可交易，以在單一和多重階段](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [在單一階段和多重階段中認可異動](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  說明資源管理員如何回應認可告知以及準備認可。  
   
@@ -56,10 +57,10 @@ ms.lasthandoff: 12/02/2017
   
  說明永久性資源管理員如何從故障中復原。  
   
- [在存取資源的安全性信任層級](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [存取資源的安全性信任層級](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  說明 System.Transactions 的三個信任層級如何對 <xref:System.Transactions> 所公開的資源型別限制其存取。  
   
- [使用單一階段認可，並可提升單一階段通知最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [使用單一階段認可和可提升單一階段通知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  說明可用來實作資源管理員的最佳化準則。

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 並不只有一種正確方式可以建立安全的 SQL Server 用戶端應用程式。 每個應用程式的需求、部署環境及使用者對象都有其獨特性。 初次部署時還相當安全的應用程式，隨著時間流逝，也可能變得不再那麼安全。 要精確預測未來可能發生什麼威脅是不可能的事。  
@@ -44,29 +45,29 @@ ms.lasthandoff: 11/21/2017
   
  即使在使用「Windows 驗證」時，也請務必為 `sa` 帳戶指派強式密碼。  
   
-## <a name="in-this-section"></a>本章節內容  
- [管理 SQL Server 中的預存程序的權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+## <a name="in-this-section"></a>本節內容  
+ [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  說明如何使用預存程序 (Stored Procedure) 管理權限並控制資料存取。 使用預存程序是許多安全性威脅的有效回應方式。  
   
- [撰寫安全動態 SQL，SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  說明使用預存程序撰寫安全動態 SQL 的技巧。  
   
- [簽署 SQL Server 中的預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  說明如何使用憑證簽署預存程序，讓使用者可以使用不能直接存取的資料。 如此預存程序就可以執行呼叫端並無直接執行權限的作業。  
   
- [自訂 SQL Server 中的模擬權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  說明如何使用 EXECUTE AS 子句模擬其他使用者。 模擬會將執行內容從呼叫端切換到指定的使用者。  
   
- [授與 SQL Server 中的資料列層級權限](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [在 SQL Server 中授與資料列層級權限](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  說明如何實作資料列層級權限以限制資料存取。  
   
  [在 SQL Server 中建立應用程式角色](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  說明應用程式角色的功能。  
   
- [SQL Server 中啟用跨資料庫存取](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [在 SQL Server 中啟用跨資料庫存取](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  說明如何在不危及安全性的前提下啟用跨資料庫存取。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

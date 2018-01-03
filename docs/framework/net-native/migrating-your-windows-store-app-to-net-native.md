@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 在 Windows 市集或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 還是會嘗試維持與 [適用於 Windows 市集應用程式的 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)的相容性。 大多數的情況下，在適用於 Windows 市集應用程式的 .NET 上運作的項目也會使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)]。  不過，在某些情況下，您可能會遇到行為上的變更。 本文件將在下列區域討論適用於 Windows 市集應用程式的標準 .NET 與 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之間的這些差異：  
@@ -37,13 +38,13 @@ ms.lasthandoff: 11/21/2017
   
 -   當應用程式在通用語言執行平台 (CLR) 上執行時，由 JIT 編譯器擲回的例外狀況 (例如 <xref:System.TypeLoadException>)，在由 [!INCLUDE[net_native](../../../includes/net-native-md.md)]處理時，通常會產生編譯時期錯誤。  
   
--   請勿從應用程式的 UI 執行緒呼叫 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法。 這可能會導致 [!INCLUDE[net_native](../../../includes/net-native-md.md)]上產生死結。  
+-   請勿從應用程式的 UI 執行緒呼叫 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法。 這可能會導致 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 上產生死結。  
   
 -   請不要依賴靜態類別建構函式引動過程順序。 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中，引動過程順序不同於是從標準執行階段上的順序。 (即使是使用標準執行階段，也不應該依賴靜態類別建構函式的執行順序。)  
   
 -   在任何執行緒上無限迴圈，而不進行呼叫 (例如 `while(true);`) 可能會導致應用程式中止。 同樣地，長時間或無限等待可能也會導致應用程式中止。  
   
--   某些泛型初始化循環不會在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中擲回例外狀況。 例如，下列程式碼會在標準 CLR 上擲回 <xref:System.TypeLoadException> 例外狀況。 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中則不會。  
+-   某些泛型初始化循環不會在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中擲回例外狀況。 例如，下列程式碼會在標準 CLR 上擲回 <xref:System.TypeLoadException> 例外狀況。 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中則不會。  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="other-reflection-related-differences"></a>其他與反映相關的差異  
  適用於 Windows 市集應用程式的 .NET 與 [!INCLUDE[net_native](../../../includes/net-native-md.md)]之間，有一些與其他個別反映相關的行為差異。  
   
- 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中：  
+ 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中：  
   
 -   不支援 .NET Framework 類別庫中，透過類型和成員的私用反映。 不過，您可以透過自己的私用類型和成員，以及協力廠商程式庫中的類型和成員來進行反映。  
   
@@ -682,7 +683,7 @@ ms.lasthandoff: 11/21/2017
   
  不支援為 Windows 市集應用程式在單元測試程式庫上啟用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] ，而且這麼做會導致專案無法建置。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [適用於 Windows 市集應用程式的概觀](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5ed85fde0b7c031a95ce3fee577cb07380a05eb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 038cf7ad9f6004f785fe35eccf38185272b0ed37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 如需優點的使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱[Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)和[實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -105,6 +106,6 @@ ms.lasthandoff: 11/21/2017
  維護狀態的應用程式。  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 應用程式必須經常維護 Web 網頁或使用者工作階段狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態或工作階段狀態，在伺服器上，並稍後擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱[附加和卸離物件](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)

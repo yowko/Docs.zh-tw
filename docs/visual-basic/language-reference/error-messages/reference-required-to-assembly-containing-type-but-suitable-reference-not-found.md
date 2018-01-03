@@ -14,11 +14,11 @@ ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04a1b16a10d2a3945d1efbe3a2bd0850f1da39fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>需要組件 &#39; 的參考&lt;assemblyidentity&gt;&#39; 包含類型 &#39;&lt;typename&gt;&#39;，但找不到適合的參考，因為專案 &#39; 之間的模稜兩可&lt;projectname1&gt;&#39; 和 &#39;&lt;專案名稱 2>&gt;&#39;
 運算式使用專案外部定義的類型 (例如類別、結構、介面、列舉或委派)。 不過，專案參考超過一個定義其類型的組件。  
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/21/2017
   
 2.  在專案屬性中，加入包含組件之檔案的參考，而這個組件定義所使用的類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)  
  [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB 如何：使用加入參考對話方塊以加入或移除參考](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  
  [針對中斷參考進行疑難排解](/visualstudio/ide/troubleshooting-broken-references)

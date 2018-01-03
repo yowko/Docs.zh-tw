@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
 指定的函式或`Get`存取子是迭代器。  
@@ -33,11 +33,9 @@ ms.lasthandoff: 11/21/2017
   
  迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態解構函式中。  
   
- 迭代器可以是匿名函式。 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 迭代器可以是匿名函式。 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
- 如需迭代器的詳細資訊，請參閱 [Iterators](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) (迭代器)。  
-  
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  `Iterator` 修飾詞可用於以下內容：  
   
 -   [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -54,9 +52,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- 如需其他範例，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 如需其他範例，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [迭代器](../../programming-guide/concepts/iterators.md)  
  [Yield 陳述式](../../../visual-basic/language-reference/statements/yield-statement.md)

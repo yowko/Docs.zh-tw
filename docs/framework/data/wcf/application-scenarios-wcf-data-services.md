@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a72445a73be44e8c7b039463ccd8b939ae6a148
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支援的公開及取用資料做為一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
@@ -28,14 +29,14 @@ ms.lasthandoff: 12/02/2017
  公開關聯式資料與資料庫從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。  
  -   [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [將資料公開為服務](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+-   [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [如何： 建立使用 ADO.NET Entity Framework 資料來源的資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [如何：使用 ADO.NET Entity Framework 資料來源建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
  將任意 CLR 資料類別公開為 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
- -   [將資料公開為服務](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ -   [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [如何： 建立資料服務，使用反映提供者](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [如何：使用反映提供者建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
 -   [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  建立以 .NET Framework 為基礎的用戶端應用程式，該應用程式會以非同步方式取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要，避免用戶端出現延遲問題。  
- -   [如何： 執行非同步資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
+ -   [如何：執行非同步資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
@@ -80,22 +81,22 @@ ms.lasthandoff: 12/02/2017
 -   [使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
  繫結[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要至 Windows Presentation Framework (WPF) 應用程式中的控制項。  
- -   [資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ -   [將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [如何：將資料繫結至 Windows Presentation Foundation 項目](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
--   [如何： 使用專案資料來源繫結資料](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
+-   [如何：使用專案資料來源繫結資料](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
   
  攔截傳入資料服務的內送訊息，針對查詢來執行資料驗證與以角色為基礎的篩選。  
- -   [如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
+ -   [如何：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
   
 -   [攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
   
  在資料服務建立端點以啟用自訂服務行為。  
- -   [如何： 定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ -   [如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
   
 -   [服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
  [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

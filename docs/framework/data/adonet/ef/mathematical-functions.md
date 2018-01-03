@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8390f1e1822d7581ab0352a8c81acbc7ce545507
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea933d1e6c0245f3bc6cc2a0767b593957b0598a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mathematical-functions"></a>數學函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將描述 SqlClient 數學函式。  
   
-|函式|說明|  
+|函式|描述|  
 |--------------|-----------------|  
 |`ABS(` `expression` `)`|執行絕對值函式。<br /><br /> **引數**<br /><br /> `expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。<br /><br /> **傳回值**<br /><br /> 指定之運算式的絕對值。<br /><br /> **範例**<br /><br /> `SqlServer.ABS(-2)`|  
 |`ACOS(` `expression` `)`|傳回指定之運算式的反餘弦函數 (Arccosine) 值。<br /><br /> **引數**<br /><br /> `expression`：`Double`。<br /><br /> **傳回值**<br /><br /> `Double`。<br /><br /> **範例**<br /><br /> `SqlServer.ACOS(.9)`|  
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/18/2017
 |---------------------|---------------------|---------------------|  
 |[數學函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115913)|[數學函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115911)|[數學函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115912)|  
   
-## <a name="see-also"></a>另請參閱  
- [適用於 Entity Framework 函式的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>請參閱  
+ [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

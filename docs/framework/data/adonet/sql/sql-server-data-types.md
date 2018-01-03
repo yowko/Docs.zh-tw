@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可能會導致資料遺失。 為了保留資料完整性，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 針對使用 SQL Server 資料提供了具型別的存取子方法。 您可以使用 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 來指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別。  
@@ -32,7 +33,7 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
   
 1.  [資料類型 (Database Engine)](http://go.microsoft.com/fwlink/?LinkID=107468)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SqlTypes 和資料集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  說明針對 `SqlTypes` 中的 `DataSet` 所提供的型別支援。  
   
@@ -45,7 +46,7 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
  [日期和時間資料](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
  說明如何使用 SQL Server 2008 所導入的新日期和時間資料型別。  
   
- [大型 Udt](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [大型 UDT](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  示範如何從 SQL Server 2008 所導入的大數值 UDT 中擷取資料。  
   
  [SQL Server 中的 XML 資料](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
@@ -64,7 +65,7 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
  <xref:System.Data.DbType>  
  說明 `DbType` 列舉型別及其所有成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [資料表值參數](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  

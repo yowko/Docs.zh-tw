@@ -1,6 +1,6 @@
 ---
 title: "開始使用 F # 的命令列工具"
-description: "了解如何使用 F # 與跨平台.NET Core CLI。"
+description: "跨平台.NET Core CLI 與了解如何使用 F # 在 Windows、 MacOS （Linux） 的任何作業系統上。"
 keywords: "Visual F#, F#, 函式程式設計, .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET 核心 CLI
 
-本文件涵蓋如何您可以開始使用.NET Core 上使用 F #。 它將會經歷建置在多專案方案中的使用主控台應用程式會呼叫類別庫。
+本文件涵蓋如何您可以使用 F # 的.NET Core CLI 開始 （Windows、 macOS 或 Linux） 的任何作業系統上。 它將會經歷建置在多專案方案中的使用主控台應用程式會呼叫類別庫。
 
 ## <a name="prerequisites"></a>必要條件
 

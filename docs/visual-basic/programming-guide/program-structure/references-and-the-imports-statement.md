@@ -18,11 +18,11 @@ ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 739934b65241a7846b5323d5e75446832d83e5d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60c62eae57ae127fcbb860fe72853604802cccd9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
 您可以使用外部物件至您的專案選擇**加入參考**命令**專案**功能表。 在參考[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以指向組件，就像型別程式庫，但包含更多資訊。  
@@ -56,10 +56,10 @@ ms.lasthandoff: 11/21/2017
   
  如果`Imports`陳述式不包含的別名名稱，在匯入的命名空間中定義的項目可以用於無限制的模組。 如果指定的別名名稱，就必須採用與限定詞的名稱包含在該命名空間內。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.ControlChars>  
  <xref:Microsoft.VisualBasic>  
- [NIB 如何：使用加入參考對話方塊以加入或移除參考](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [如何：使用命令列建立和使用組件](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  

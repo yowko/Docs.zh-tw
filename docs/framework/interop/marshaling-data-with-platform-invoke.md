@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。 若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="platform-invoke-data-types"></a>平台叫用資料類型  
  下表列出 Win32 API (Wtypes.h 中所列) 和 C 樣式函式中所使用的資料類型。 許多 Unmanaged 程式庫包含傳遞資料類型做為參數和傳回值的函式。 第三個行列出對應的 .NET Framework 內建實值類型或您在 Managed 程式碼中使用的類別。 在某些情況下，您可將本表格中所列的類型取代為相同大小的類型。  
   
-|在 Wtypes.h 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類別名稱|說明|  
+|在 Wtypes.h 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類別名稱|描述|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
 |**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 位元|  

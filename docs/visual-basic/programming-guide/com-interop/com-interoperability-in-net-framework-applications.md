@@ -15,11 +15,11 @@ ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 28ec54dc062d4fdea4836b0ecc8699982dace623
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 0c84143e22f33f572447c50e33559a52469b181a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 應用程式中的 COM 互通性 (Visual Basic)
 當您想要使用相同的應用程式中的 COM 物件和.NET Framework 物件時，您必須先解決物件存在於記憶體中的差異。 .NET Framework 物件位於 managed 記憶體中，控制由 common language runtime 的記憶體，而且可能會視需要移動由執行階段。 COM 物件位於 unmanaged 記憶體中，而且不應該將移到另一個記憶體位置。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供工具來控制這些互動 managed 和 unmanaged 元件。 如需 managed 程式碼的詳細資訊，請參閱[Common Language Runtime](../../../standard/clr.md)。  
@@ -35,14 +35,14 @@ ms.lasthandoff: 12/09/2017
  [COM Interop 包裝函式錯誤](/cpp/misc/com-interop-wrapper-error)  
  描述如果專案系統無法建立特定元件的 COM 互通性包裝函式的結果和選項。  
   
- [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
+ [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)  
  簡要說明 managed 和 unmanaged 程式碼之間的互動問題，並提供進一步的研究的連結。  
   
  [COM 包裝函式](../../../framework/interop/com-wrappers.md)  
  討論執行階段可呼叫包裝函式，可讓 managed 程式碼呼叫 COM 方法，以及 COM 可呼叫包裝函式，可讓 COM 用戶端呼叫.NET 物件方法。  
   
- [進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [進階 COM 互通性](../../../framework/interop/index.md)  
  提供包含相對於包裝函式、 例外狀況、 繼承、 執行緒、 事件、 轉換、 轉換和封送處理的 COM 互通性主題的連結。  
   
- [Tlbimp.exe (類型程式庫匯入工具)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
  討論可用來將轉換為通用語言執行階段組件中的等效定義 COM 類型程式庫中找到的類型定義的工具。

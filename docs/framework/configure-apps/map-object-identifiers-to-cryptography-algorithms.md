@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: dbfe394193925e38dad774d39d79ac813abef22a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bcde53450e3656ec958898864bb7d7200a4b03e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>對應物件識別項至密碼編譯演算法
 數位簽章確認，資料未遭竄改時每個程式傳送到另一個。 通常就是透過將數學函式套用至要簽署資料的雜湊計算數位簽章。 格式化時要簽署的雜湊值，有些數位簽章演算法就會附加在格式化作業的一部分 ASN.1 物件識別碼 (OID)。 OID 識別用來計算雜湊演算法。 您可以將演算法對應至物件識別碼，來擴充要使用的自訂演算法的新一代密碼編譯機制。 下列範例會示範如何將物件識別碼對應至新的雜湊演算法。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
   
  [ \<OidEntry > 項目](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)包含兩個屬性。 **OID**屬性是物件識別碼。 **名稱**屬性是值**名稱**屬性從[ \<y > 項目](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)。 物件識別元可以對應至簡單名稱之前，必須是從演算法名稱對應至類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定密碼編譯類別](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94942360aaa91a39c8f46414807490bcb6e0b093
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 38b4f61b334a41cedf812a900265af95f1f52e61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和遠端處理考量
 遠端處理可讓您設定應用程式定義域、處理序或電腦之間的透明呼叫。 不過，程式碼存取安全性堆疊查核行程無法跨處理序或電腦界限 (只會在同一個處理序的不同應用程式定義域之間套用)。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/18/2017
   
  預設應用程式定義域在建立子應用程式定義域時，通常會在每個子應用程式定義域中包含一個控制項物件。 這個控制項物件會管理新的應用程式定義域，有時會接受來自預設應用程式定義域的命令，但實際上不會直接連絡定義域。 預設應用程式定義域有時會對控制項物件呼叫其 Proxy。 不過也有些情況，必須對預設應用程式定義域回呼控制項物件。 在這些情況下，預設應用程式定義域會將以傳址方式封送處理的回呼物件，傳遞給控制項物件的建構函式。 再由控制項物件負責保護這個 Proxy。 如果控制項物件將 Proxy 放在公用類別的公用靜態欄位上，或公開 Proxy，可能會危害機制，導致對預設應用程式定義域回呼其他程式碼。 因此，控制項物件一律會受到隱含信任，以保密 Proxy。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

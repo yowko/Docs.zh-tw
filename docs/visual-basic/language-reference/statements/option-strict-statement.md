@@ -19,11 +19,11 @@ ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 238f64001b097b86306e0ed9630bd5df2e6a189f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-strict-statement"></a>Long
 不允許晚期繫結，且允許隱含型別，結果中，會限制為只有擴展轉換的隱含資料類型轉換`Object`型別。  
@@ -38,17 +38,17 @@ Option Strict { On | Off }
   
 |詞彙|定義|  
 |---|---|  
-|`On`|選擇項。 可讓`Option Strict`檢查。|  
-|`Off`|選擇項。 停用`Option Strict`檢查。|  
+|`On`|選擇性。 可讓`Option Strict`檢查。|  
+|`Off`|選擇性。 停用`Option Strict`檢查。|  
   
 ## <a name="remarks"></a>備註  
  當`Option Strict On`或`Option Strict`會出現在檔案中，在下列情況會導致編譯時間錯誤：  
   
--   隱含的縮小轉換  
+-   隱含縮小轉換  
   
 -   晚期繫結  
   
--   隱含類型導致`Object`類型  
+-   導致 `Object` 類型的隱含類型化  
   
 > [!NOTE]
 >  您可以設定的警告組態[編譯的頁面上，專案設計工具 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，有三個設定對應至三個條件會造成編譯時期錯誤。 如需如何使用這些設定的資訊，請參閱[在 IDE 中設定警告組態](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)本主題稍後。  
@@ -66,7 +66,7 @@ Option Strict { On | Off }
 -   它能加速程式碼執行。 其中一個原因是，如果您未指定資料類型的程式設計項目，Visual Basic 編譯器將其指派`Object`型別。 可能需要編譯的程式碼之間來回轉換`Object`和其他資料類型，這會降低效能。  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>隱含的縮小轉換錯誤  
- 是縮小轉換的隱含資料類型轉換時，就會發生隱含的縮小轉換錯誤。  
+ 隱含資料類型轉換是縮小轉換時，會發生隱含縮小轉換錯誤。  
   
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以將許多資料類型轉換成其他資料型別。 一種資料類型的值轉換為具有較少的有效位數或容量較小的資料類型時，就可能發生資料遺失。 如果這類縮小轉換會失敗，就會發生執行階段錯誤。 `Option Strict`可確保這些縮小轉換的編譯時期通知，以便加以避免。 如需詳細資訊，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)和[擴大和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
@@ -89,10 +89,10 @@ Option Strict { On | Off }
  隱含的縮小轉換錯誤會在編譯時期轉換中的項目隱藏`For Each…Next`迴圈控制變數的集合。 發生這種情況即使`Option Strict`上。 如需詳細資訊，請參閱 「 縮小轉換 」 一節[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
 ## <a name="late-binding-errors"></a>晚期繫結錯誤  
- 物件晚期繫結指派至屬性或方法宣告為類型的變數時`Object`。 如需詳細資訊，請參閱[早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+ 當物件指派給宣告為 `Object` 類型之變數的屬性或方法時，該物件即為「晚期繫結」。 如需詳細資訊，請參閱[早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
   
 ## <a name="implicit-object-type-errors"></a>隱含的物件類型錯誤  
- 隱含的物件類型錯誤發生時適當的類型不能是推斷為宣告的變數，因此一種`Object`會推斷而來。 這主要是當您使用時發生`Dim`陳述式來宣告變數，而不使用`As`子句，和`Option Infer`已關閉。 如需詳細資訊，請參閱[Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。  
+ 無法推斷宣告變數的適當類型時，會發生隱含物件類型錯誤，因此推斷類型為 `Object`。 這主要是發生在您使用 `Dim` 陳述式宣告變數而未使用 `As` 子句，並且 `Option Infer` 已設為關閉的時候。 如需詳細資訊，請參閱[Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。  
   
  方法參數`As`子句是選擇性的如果`Option Strict`已關閉。 不過，如果任何一個參數使用`As`子句，它們都必須使用它。 如果`Option Strict`已開啟，`As`子句是必要的每個參數定義。  
   
@@ -106,7 +106,7 @@ Option Strict { On | Off }
 |否|否|`Dim qty`|如果 `Option Strict` 已關閉 (預設值)，此變數會設定為 `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
 |否|是|`Dim qty = 5`|如果 `Option Infer` 已開啟 (預設值)，此變數會採用初始設定式的資料類型。 請參閱[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
 |是|否|`Dim qty As Integer`|變數會初始化為資料類型的預設值。 如需詳細資訊，請參閱[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。|  
-|是|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時間錯誤。|  
+|[是]|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時間錯誤。|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict 陳述式時不存在  
  如果不包含原始碼`Option Strict`陳述式，**選項嚴格**上設定[編譯的頁面上，專案設計工具 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)用。 **編譯網頁**已設定，可提供其他控制產生錯誤的狀況。  
@@ -116,7 +116,7 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>若要在 IDE 中設定 Option Strict  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
 2.  在**編譯**索引標籤上，設定中的值**Option Strict**方塊。  
   
@@ -127,16 +127,16 @@ Option Strict { On | Off }
   
 -   **晚期繫結，執行階段時呼叫可能失敗**  
   
--   **隱含類型。假設是 object**  
+-   **隱含類型，假設是 Object**  
   
- 當您將**Option Strict**至**上**，這三個這些警告的組態設定會設定為**錯誤**。 當您將**Option Strict**至**關閉**，所有三項設定會設定為**無**。  
+ 當您將 [Option Strict] 設定為 [On] 時，這三個警告組態設定都會設定為 [錯誤]。 當您將 [Option Strict] 設定為 [Off] 時，所有三個設定都會設定為 [無]。  
   
- 您可以個別變更每個警告的組態設定為**無**，**警告**，或**錯誤**。 如果所有三個警告的組態設定會設定為**錯誤**，`On`會出現在`Option strict`方塊。 如果這三個設定為**無**，`Off`出現在此方塊。 這些設定，任何其他組合**（自訂）**隨即出現。  
+ 您可以將每個警告組態個別變更為 [無]、[警告] 或 [錯誤]。 如果三個警告組態設定皆設為 [錯誤]，`On` 會出現在 `Option strict` 方塊中。 如果這三個都設定為 [無]，`Off` 會出現在此方塊中。 若為這些設定的其他任何組合，則會出現 [(自訂)]。  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>若要設定 Option Strict 預設設定為新專案  
  當您建立專案， **Option Strict**上設定**編譯** 索引標籤設為**Option Strict**中設定**選項**對話方塊。  
   
- 若要設定`Option Strict`在此對話方塊，請在**工具**功能表上，按一下**選項**。 在**選項**對話方塊方塊中，展開 **專案和方案**，然後按一下  **VB 預設值**。 中的初始預設設定**VB 預設值**是`Off`。  
+ 若要設定`Option Strict`在此對話方塊，請在**工具**功能表上，按一下**選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是`Off`。  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>若要在命令列上設定 Option Strict  
  包含[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項在**vbc**命令。  
@@ -158,7 +158,7 @@ Option Strict { On | Off }
   
  [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  

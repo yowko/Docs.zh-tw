@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e67c5c47dbe95d7c2b804f0ae87200db489d0306
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 試圖進行 COM 內容轉換期間，偵測到死結時，會啟用 `contextSwitchDeadlock` Managed 偵錯助理 (MDA)。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  此 MDA 在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 及較新版本的預設集中。 當 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中啟用裝載處理序時，您無法停用預設集中的 MDA。 預設會啟用裝載處理序，所以必須明確將其停用。 如需如何停用 MDA 的資訊，請參閱[診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)中的＜啟用和停用 MDA＞。  
   
-## <a name="resolution"></a>解決方法  
+## <a name="resolution"></a>解決方式  
  遵循有關 STA 訊息幫浦的 COM 規則。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

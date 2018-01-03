@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d523fdd0498aef7e662af5f4dc41b2394dcf42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理資料服務內容 (WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> 類別會封裝針對特定資料服務支援的作業。 雖然 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務沒有狀態，但是內容具有狀態。 因此，您可以使用<xref:System.Data.Services.Client.DataServiceContext>類別上的用戶端以支援資料服務互動之間維護狀態的功能變更管理之類。 這個類別也可以管理識別及追蹤變更。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="post-tunneling"></a>POST 通道  
  預設情況下，用戶端程式庫會使用 POST、GET、PUT/MERGE/PATCH 和 DELETE 的對應 HTTP 方法，將建立、讀取、更新和刪除要求傳送給 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務。 這樣做表示支持代表性狀態傳輸 (Representational State Transfer，REST) 的基本原則。 不過，並不是所有 Web 伺服器實作都會支援完整的 HTTP 方法集。 在某些情況下，支援的方法可能僅限於 GET 和 POST。 像防火牆這樣的媒介透過某些方法阻擋要求時，就可能發生這種情況。 由於 GET 和 POST 方法最常受到支援，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會使用 POST 要求來規定任何不受支援之 HTTP 方法的執行方式。 又稱為*方法通道*或*POST 通道*，這可讓用戶端傳送 POST 要求，指定在自訂的實際方法`X-HTTP-Method`標頭。 若要啟用 POST 通道以傳送要求，請將 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 執行個體上的 <xref:System.Data.Services.Client.DataServiceContext> 屬性設定為 `true`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  

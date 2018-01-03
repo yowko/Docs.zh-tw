@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)
 本逐步解說提供在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中顯示繫結資料的基本完整情節。  
@@ -25,9 +25,9 @@ ms.lasthandoff: 12/09/2017
 ## <a name="prerequisite"></a>必要條件  
  這個逐步解說需要使用 Northwind 範例資料庫。  
   
- 如果您的開發電腦上沒有這個資料庫，則可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=98088)下載。 如需指示，請參閱[下載範例資料庫](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 如果您的開發電腦上沒有這個資料庫，則可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=98088)下載。 如需指示，請參閱[下載範例資料庫](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  本逐步解說的第一個部分包含四項主要工作：  
   
 -   建立方案。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/09/2017
   
 4.  在 [名稱]  方塊中，輸入 `DataRepeaterApp`。  
   
-5.  按一下 [ **確定**]。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
      Windows Forms 設計工具隨即開啟。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/09/2017
   
          -或-  
   
-    -   按一下 [新增連接]  ，設定新的資料連接。 如需詳細資訊，請參閱 [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d)。  
+    -   按一下 [新增連接]  ，設定新的資料連接。 如需詳細資訊，請參閱[加入新連接](/visualstudio/data-tools/add-new-connections)。  
   
 5.  如果資料庫需要密碼，請選取選項來加入敏感性資料，然後按 [下一步] 。  
   
@@ -236,7 +236,7 @@ ms.lasthandoff: 12/09/2017
   
 7.  按 F5 執行應用程式。 當您在第一個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中選取各個客戶時，該客戶的訂單便會顯示在第二個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [操作說明：在 DataRepeater 控制項中顯示繫結資料](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
  [操作說明：在 DataRepeater 控制項中顯示未繫結的控制項](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  

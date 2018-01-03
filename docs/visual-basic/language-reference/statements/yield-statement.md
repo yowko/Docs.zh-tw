@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 陳述式 (Visual Basic)
 傳送至集合的下一個項目`For Each...Next`陳述式。  
@@ -34,7 +34,7 @@ Yield expression
   
 |詞彙|定義|  
 |---|---|  
-|`expression`|必要項。 隱含轉換為迭代器函式類型的運算式或`Get`存取子，其包含`Yield`陳述式。|  
+|`expression`|必要。 隱含轉換為迭代器函式類型的運算式或`Get`存取子，其包含`Yield`陳述式。|  
   
 ## <a name="remarks"></a>備註  
  `Yield`陳述式會傳回一次集合中的一個項目。 `Yield`陳述式會包含在迭代器函式或`Get`存取子，在集合上執行自訂反覆項目。  
@@ -47,7 +47,7 @@ Yield expression
   
  」 產生 「 不是保留的字，而且只有在使用中時，具有特殊意義`Iterator`函式或`Get`存取子。  
   
- 如需有關迭代器函式和`Get`存取子中，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 如需有關迭代器函式和`Get`存取子中，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Iterator 函式和 Get 存取子  
  迭代器函式宣告或`Get`存取子必須符合下列需求：  
@@ -60,7 +60,7 @@ Yield expression
   
  Iterator 函式不能出現在事件、 執行個體建構函式、 靜態的建構函式或靜態的解構函式。  
   
- Iterator 函式可以是匿名函式。 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ Iterator 函式可以是匿名函式。 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="exception-handling"></a>例外狀況處理  
  A`Yield`陳述式可以是內部`Try`區塊[再試一次...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 A`Try`區塊具有`Yield`陳述式可以有`Catch`封鎖了，而且可以有`Finally`區塊。  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- 如需其他範例，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 如需其他範例，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+## <a name="see-also"></a>請參閱  
  [陳述式](../../../visual-basic/language-reference/statements/index.md)

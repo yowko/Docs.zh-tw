@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 889e84db39af1257d709ef049e18d4397ea700d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b8c31f4e8b1463c184c9a8ff1cf64808783f030d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="odbc-schema-collections"></a>ODBC 結構描述集合
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 ODBC 驅動程式的結構描述集合支援。  
@@ -340,7 +341,7 @@ ms.lasthandoff: 10/18/2017
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|字串|  
+|IS_NULLABLE|String|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

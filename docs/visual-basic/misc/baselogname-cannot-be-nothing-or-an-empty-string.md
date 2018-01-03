@@ -9,11 +9,11 @@ ms.assetid: 8e7665e3-5343-45fa-bc79-64e235a0477f
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c2b02e92b616deb6d3cd33c09f318a4f7544e2a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c47c2b287b0aa3e1df55ceb7c9e91b19147084c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a>BaseLogName 不能為 Nothing 或空字串
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> 屬性的值不可為 `Nothing` 或空字串。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 -   將 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> 屬性設定為至少包含一個字元的字串。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A>  
- [My.Application.Log 物件](../../visual-basic/language-reference/objects/my-application-log-object.md)  
- [My.Log 物件](../../visual-basic/language-reference/objects/my-log-object.md)
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

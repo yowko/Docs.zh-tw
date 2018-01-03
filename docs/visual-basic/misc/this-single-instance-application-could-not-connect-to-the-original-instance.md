@@ -9,11 +9,11 @@ ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fbc8458231c36f3af9ca4de524e01e19a162ee47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cb8cef696ba93f922dfe0d92195a5fb5147b4cc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此單一執行個體應用程式無法連接到原始執行個體
 此單一執行個體應用程式無法連接到原始執行個體。 此問題的部分可能原因如下：  
@@ -36,7 +36,6 @@ ms.lasthandoff: 11/21/2017
   
 5.  記下錯誤發生時的情況，並致電 Microsoft 產品支援服務。  
   
-## <a name="see-also"></a>另請參閱  
- [NIB： 如何： 指定執行個體行為的應用程式 (Visual Basic)](http://msdn.microsoft.com/en-us/48539ad8-d960-4210-beab-ee65f6c6dc6e)  
+## <a name="see-also"></a>請參閱  
  [偵錯工具基礎](/visualstudio/debugger/debugger-basics)  
- [PAVEOVER 產品支援和協助工具](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+

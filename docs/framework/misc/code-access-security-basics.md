@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 08ce62f54e70fe1650914060ade0f52357f8a736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1fbeae8d01d9ef03c476679ea7fc59273b7a0a0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-access-security-basics"></a>程式碼存取安全性的基本概念
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -157,7 +158,7 @@ public class MyClass {
   
  如果您想要讓應用程式執行需要存取 Unmanaged 程式碼的作業，其應透過包裝所需功能的受信任 Managed 類別 (如果這種類別存在的話) 來執行。 如果安全類別庫中已經有包裝函式類別存在，請不要建立您自己的包裝函式類別。 包裝函式類別 (必須被授與高度信任，才能呼叫 Unmanaged 程式碼) 負責要求 (demand) 其呼叫端擁有適當的權限。 如果您使用包裝函式類別，您的程式碼只需要要求 (request) 以及被授與包裝函式類別所要求 (demand) 的權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Security.PermissionSet>  
  <xref:System.Security.Permissions.FileIOPermission>  
  <xref:System.Security.NamedPermissionSet>  

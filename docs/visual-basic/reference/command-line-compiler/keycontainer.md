@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b91025fb44164c03c43a3b5ed7341ab009f352e9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keycontainer"></a>/keycontainer
 指定金鑰組的金鑰容器名稱，為組件提供強式名稱。  
@@ -33,10 +33,10 @@ ms.lasthandoff: 12/09/2017
   
 |詞彙|定義|  
 |---|---|  
-|`container`|必要項。 包含索引鍵的容器檔案。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
+|`container`|必要。 包含索引鍵的容器檔案。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
   
 ## <a name="remarks"></a>備註  
- 藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。 若要產生的金鑰檔案，請輸入`sn -k``file`在命令列。 `-i`選項會安裝至容器的金鑰組。 如需詳細資訊，請參閱 [Sn.exe (強式名稱工具)](https://msdn.microsoft.com/library/k5b5tt23)。  
+ 藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。 若要產生的金鑰檔案，請輸入`sn -k``file`在命令列。 `-i`選項會安裝至容器的金鑰組。 如需詳細資訊，請參閱 [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
  如果您使用編譯`/target:module`，金鑰檔的名稱是保留在模組中，而且併入編譯的組件時所建立的組件[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/09/2017
   
  您也可以使用 [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) 將加密資訊傳遞給編譯器。 如需部分簽署的組件，請使用 [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)。  
   
- 請參閱[Creating and using strong-named Assemblies](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
+ 請參閱[Creating and using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
   
 > [!NOTE]
 >  `/keycontainer`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/09/2017
 vbc /keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  

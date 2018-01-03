@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 99111cb9e48bd5ccd4463afcee6b78bc2387cf7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 執行個體 (ADO.NET)
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 允許應用程式在目前網路內尋找 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會將此資訊公開至應用程式開發人員，並提供包含所有可見伺服器之相關資訊的 <xref:System.Data.DataTable>。 傳回這個資料表包含一份符合使用者嘗試建立新的連接時所提供的清單，並展開下拉式清單包含所有可用的伺服器上的網路上可用的伺服器執行個體**連線屬性** 對話方塊。 顯示的結果不一定是完整的。  
@@ -53,7 +54,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
  從方法呼叫傳回的資料表包含下列資料行 (其中都包含 `string` 值)：  
   
-|Column|說明|  
+|Column|描述|  
 |------------|-----------------|  
 |**伺服器名稱**|伺服器名稱。|  
 |**執行個體名稱**|伺服器執行個體的名稱。 如果伺服器做為預設執行個體執行，則此處為空白。|  
@@ -134,6 +135,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

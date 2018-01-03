@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>函式運算式 (Visual Basic)
 宣告參數與函式的 lambda 運算式定義的程式碼。  
@@ -37,9 +37,9 @@ End Function
   
 |詞彙|定義|  
 |---|---|  
-|`parameterlist`|選擇項。 本機變數的名稱，代表此程序參數的清單。 括號必須要有即使清單是空的。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`expression`|必要項。 在單一運算式。 運算式的類型是函式的傳回型別。|  
-|`statements`|必要項。 陳述式會使用傳回值的清單`Return`陳述式。 (請參閱[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。)傳回值的類型是函式的傳回型別。|  
+|`parameterlist`|選擇性。 本機變數的名稱，代表此程序參數的清單。 括號必須要有即使清單是空的。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`expression`|必要。 在單一運算式。 運算式的類型是函式的傳回型別。|  
+|`statements`|必要。 陳述式會使用傳回值的清單`Return`陳述式。 (請參閱[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。)傳回值的類型是函式的傳回型別。|  
   
 ## <a name="remarks"></a>備註  
  A *lambda 運算式*是函式不會計算並傳回值的名稱。 您可以使用 lambda 運算式任何位置使用委派類型，除了做為引數`RemoveHandler`。 如需委派和 lambda 運算式與委派的使用詳細資訊，請參閱[委派陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)和[寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
@@ -92,9 +92,9 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- 如需有關查詢方法的詳細資訊，請參閱[查詢](../../../visual-basic/language-reference/queries/queries.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+ 如需有關查詢方法的詳細資訊，請參閱[查詢](../../../visual-basic/language-reference/queries/queries.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀](../../programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
  [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  

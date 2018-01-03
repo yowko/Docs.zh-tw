@@ -14,11 +14,11 @@ ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04b79b3d14a9c4a9f9721860cd1ed44032dfa5d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d472795affe0df098d1551daf51a2f0ae20723ba
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="warnaserror-visual-basic"></a>/warnaserror (Visual Basic)
 可讓編譯器將第一個出現的警告視為錯誤。  
@@ -33,8 +33,8 @@ ms.lasthandoff: 11/21/2017
   
 |詞彙|定義|  
 |---|---|  
-|+ &#124; -|選擇項。 根據預設，`/warnaserror-`是作用中; 警告不會防止編譯器產生的輸出檔。 `/warnaserror`相同的選項為`/warnaserror+`，會導致警告視為錯誤。|  
-|`numberList`|選擇項。 以逗號分隔清單的警告 ID 編號的`/warnaserror`選項會套用。 如果未不指定任何警告 ID，則`/warnaserror`選項會套用至所有警告。|  
+|+ &#124; -|選擇性。 根據預設，`/warnaserror-`是作用中; 警告不會防止編譯器產生的輸出檔。 `/warnaserror`相同的選項為`/warnaserror+`，會導致警告視為錯誤。|  
+|`numberList`|選擇性。 以逗號分隔清單的警告 ID 編號的`/warnaserror`選項會套用。 如果未不指定任何警告 ID，則`/warnaserror`選項會套用至所有警告。|  
   
 ## <a name="remarks"></a>備註  
  `/warnaserror`選項會將所有警告都視為錯誤。 原本為警告而是會回報為錯誤報告的任何訊息。 編譯器會報告為警告的相同警告後面出現。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 |若要設定 /warnaserror 將所有警告視為錯誤，Visual Studio IDE 中|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.按一下 [編譯] 索引標籤。<br />3.請確定**停用所有警告**未選取核取方塊。<br />4.請檢查**將所有警告視為錯誤**核取方塊。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.請確定**停用所有警告**未選取核取方塊。<br />4.請檢查**將所有警告視為錯誤**核取方塊。|  
   
 |若要設定 /warnaserror 將特定警告視為錯誤，Visual Studio IDE 中|  
 |---|  
@@ -68,7 +68,7 @@ vbc /warnaserror in.vb
 vbc /warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [在 Visual Basic 中設定警告](/visualstudio/ide/configuring-warnings-in-visual-basic)

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a15b5cf1-9055-4481-918c-4c8a051b5829
-ms.openlocfilehash: 26478ccfbf88d43c0b194e77d9aacc313515283f
-ms.sourcegitcommit: 8d14e8c1b15009330c9880f8523686158924e1a4
+ms.openlocfilehash: e6535b11464f5de0515c05e6678f6328f48a676a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="results"></a>結果
 
@@ -51,7 +51,7 @@ type Request =
 let validateName req =
     match req.Name with
     | null -> Error "No name found."
-    | String.Empty -> Error "Name is empty."
+    | "" -> Error "Name is empty."
     | "bananas" -> Error "Bananas is not a name."
     | _ -> Ok req
 
@@ -59,9 +59,9 @@ let validateName req =
 let validateEmail req =
     match req.Email with
     | null -> Error "No email found."
-    | String.Empty -> Error "Email is empty."
+    | "" -> Error "Email is empty."
     | s when s.EndsWith("bananas.com") -> Error "No email from bananas.com is allowed."
-    | _ -> OK req
+    | _ -> Ok req
 
 let validateRequest reqResult =
     reqResult 
@@ -71,16 +71,16 @@ let validateRequest reqResult =
 let test() = 
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
-    let res1 = validateRequest (OK req1)
+    let res1 = validateRequest (Ok req1)
     match res1 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req1.Name req1.Email
+    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
     | Error e -> printfn "Error: %s" e
-    // Prints " "My request was valid!  Name: Phillip Email: phillip@consoto.biz"
+    // Prints: "My request was valid!  Name: Phillip Email: phillip@consoto.biz"
 
     let req2 = { Name = "Phillip"; Email = "phillip@bananas.com" }
-    let res2 = validateRequest (OK req2)
+    let res2 = validateRequest (Ok req2)
     match res2 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req1.Name req1.Email
+    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
     | Error e -> printfn "Error: %s" e
     // Prints: "Error: No email from bananas.com is allowed."
 
@@ -89,7 +89,7 @@ test()
 
 如您所見，是很容易就能鏈結在一起各種驗證函式如果您強制全部傳回`Result`。  此讓您分割成小片段，也就是當您需要的組合就像這樣的功能。  這也具有附加價值*強制*使用[模式比對](pattern-matching.md)驗證的結尾，進而強制執行程式正確性較高。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [差別聯集](discriminated-unions.md)
 

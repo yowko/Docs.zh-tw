@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906a9e7cafca14dc4ee13dcb9eb9e59736464fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c5d526ccd48ea5e822d5d29fb38dacd895c2556c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目可能只會存在於如果`mode`屬性`<cookieHandler>`元素是 「 預設 」 或 「 區塊 」。  
@@ -45,16 +46,16 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|chunkSize|大小上限，以字元為單位的任何一個 HTTP cookie 的 HTTP cookie 資料。 您必須小心時調整的區塊大小。 網頁瀏覽器的 cookie 和每個網域的允許數目大小有不同的限制。 例如，原始的 Netscape 規格約定這些限制： 300 cookie 加總，4096 個位元組，每個 cookie 標頭 （包括中繼資料，不只是 cookie 的值） 和每個網域的 20 cookie。 預設值是 2000年。 必要項。|  
+|chunkSize|大小上限，以字元為單位的任何一個 HTTP cookie 的 HTTP cookie 資料。 您必須小心時調整的區塊大小。 網頁瀏覽器的 cookie 和每個網域的允許數目大小有不同的限制。 例如，原始的 Netscape 規格約定這些限制： 300 cookie 加總，4096 個位元組，每個 cookie 標頭 （包括中繼資料，不只是 cookie 的值） 和每個網域的 20 cookie。 預設值是 2000年。 必要。|  
   
 ### <a name="child-elements"></a>子元素  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Requiressl >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|設定<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 用來讀取和寫入 cookie。|  
   
@@ -72,5 +73,5 @@ ms.lasthandoff: 10/18/2017
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Services.ChunkedCookieHandler>

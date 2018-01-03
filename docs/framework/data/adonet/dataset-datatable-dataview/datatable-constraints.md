@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fb1fd2c7aa057fcc83c82ab9d72129db2cac680e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatable-constraints"></a>DataTable 條件約束
 您可以使用條件約束，強制使用 <xref:System.Data.DataTable> 中的資料限制，以維持資料的完整性。 條件約束是指套用到資料行或相關資料行的自動規則，當資料列的值變更時，條件約束可決定採取的動作。 強制使用條件約束時`System.Data.DataSet.EnforceConstraints`屬性<xref:System.Data.DataSet>是**true**。 如需示範如何設定 `EnforceConstraints` 屬性的程式碼範例，請參閱 <xref:System.Data.DataSet.EnforceConstraints%2A> 參考主題。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A>和<xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>屬性**ForeignKeyConstraint**定義使用者嘗試刪除或更新相關資料表中的資料列時，要採取的動作。 下表描述可用的不同設定**DeleteRule**和**UpdateRule**屬性**ForeignKeyConstraint**。  
   
-|規則設定|說明|  
+|規則設定|描述|  
 |------------------|-----------------|  
 |**重疊顯示**|刪除或更新關聯資料列。|  
 |**SetNull**|在相關資料列中設定值**DBNull**。|  
@@ -68,7 +69,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
  下表列出可用的設定**AcceptRejectRule**。  
   
-|規則設定|說明|  
+|規則設定|描述|  
 |------------------|-----------------|  
 |**重疊顯示**|接受或拒絕子資料列的變更。|  
 |**無**|不對子資料列採取任何動作。 這是預設值。|  
@@ -102,7 +103,7 @@ UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataRelation>  
  <xref:System.Data.DataTable>  
  <xref:System.Data.ForeignKeyConstraint>  

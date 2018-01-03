@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 321489a2b32bafe4a73f56e0a5dba20f5661bdc2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主題說明如何成功運用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [編譯組件的 add 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ASP.NET 的信任層級和原則檔](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
  [securityPolicy 項目 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
- [交易管理擴大](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+ [異動管理擴大規模](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

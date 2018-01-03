@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>異動和並行存取
 異動是由單一命令或當做封裝 (Package) 執行的命令群組所組成。 交易可讓您將多項作業結合成單一工作單位。 如果交易的某一處失敗，則所有更新都會復原到交易之前的狀態。  
@@ -31,11 +32,11 @@ ms.lasthandoff: 11/21/2017
   
  包含不同資源管理員的交易 (例如 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 與 Oracle 之間的交易) 需要分散式交易。  
   
-## <a name="in-this-section"></a>本章節內容  
- [本機交易](../../../../docs/framework/data/adonet/local-transactions.md)  
+## <a name="in-this-section"></a>本節內容  
+ [本機異動](../../../../docs/framework/data/adonet/local-transactions.md)  
  示範如何針對資料庫執行異動。  
   
- [分散式的交易](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [分散式異動](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  說明如何在 ADO.NET 中執行分散式異動。  
   
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/21/2017
  [開放式並行存取](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  說明開放式與封閉式同步存取，以及如何測試並行違規。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [交易基礎概念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

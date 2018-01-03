@@ -31,11 +31,11 @@ ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 陳述式 (Visual Basic)
 重複指定的次數的陳述式群組。  
@@ -54,17 +54,17 @@ Next [ counter ]
   
 ## <a name="parts"></a>組件  
   
-|組件|說明|  
+|組件|描述|  
 |----------|-----------------|  
 |`counter`|中需要`For`陳述式。 數值變數。 For 迴圈控制變數。 如需詳細資訊，請參閱[計數器引數](#BKMK_Counter)本主題稍後。|  
-|`datatype`|選擇項。 資料型別`counter`。 如需詳細資訊，請參閱[計數器引數](#BKMK_Counter)本主題稍後。|  
-|`start`|必要項。 數值運算式。 `counter` 的初始值。|  
-|`end`|必要項。 數值運算式。 最終值`counter`。|  
-|`step`|選擇項。 數值運算式。 所用的數量`counter`就會遞增每次迴圈。|  
-|`statements`|選擇項。 一或多個陳述式之間`For`和`Next`執行指定的次數。|  
-|`Continue For`|選擇項。 將控制權傳輸至下一個迴圈反覆項目。|  
-|`Exit For`|選擇項。 控制權轉移出`For`迴圈。|  
-|`Next`|必要項。 結束的定義`For`迴圈。|  
+|`datatype`|選擇性。 資料型別`counter`。 如需詳細資訊，請參閱[計數器引數](#BKMK_Counter)本主題稍後。|  
+|`start`|必要。 數值運算式。 `counter` 的初始值。|  
+|`end`|必要。 數值運算式。 最終值`counter`。|  
+|`step`|選擇性。 數值運算式。 所用的數量`counter`就會遞增每次迴圈。|  
+|`statements`|選擇性。 一或多個陳述式之間`For`和`Next`執行指定的次數。|  
+|`Continue For`|選擇性。 將控制權傳輸至下一個迴圈反覆項目。|  
+|`Exit For`|選擇性。 控制權轉移出`For`迴圈。|  
+|`Next`|必要。 結束的定義`For`迴圈。|  
   
 > [!NOTE]
 >  `To`關鍵字用於此陳述式中指定計數器的範圍。 您也可以使用此關鍵字[選取...陳述式的大小寫](../../../visual-basic/language-reference/statements/select-case-statement.md)和陣列宣告中。 如需陣列宣告的詳細資訊，請參閱[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
@@ -139,7 +139,7 @@ Next [ counter ]
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |否|是|否，因為`counter`已經定義過了。 如果範圍`counter`不是本機程序，就會發生編譯時期警告。|  
 |否|否|可以。 資料型別，會從推斷`start`， `end`，和`step`運算式。 類型推斷的相關資訊，請參閱[Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。|  
-|是|是|是，但只有當現有`counter`程序之外定義變數。 該變數會維持獨立的。 如果現有的範圍`counter`變數是本機程序，就會發生編譯時期錯誤。|  
+|[是]|是|是，但只有當現有`counter`程序之外定義變數。 該變數會維持獨立的。 如果現有的範圍`counter`變數是本機程序，就會發生編譯時期錯誤。|  
 |是|否|可以。|  
   
  資料型別`counter`決定反覆項目，必須是下列類型的其中一種：  
@@ -179,11 +179,11 @@ Next [ counter ]
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Generic.List%601>  
  [迴圈結構](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While 陳述式](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
  [Do...Loop 陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [集合](../../programming-guide/concepts/collections.md)

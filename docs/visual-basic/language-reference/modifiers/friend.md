@@ -16,11 +16,11 @@ ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
 caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 32f993e4b9bcd126ebb6d70310fc0781e8b137b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df0e8ad1990fe7a1aa495e1794c942813cffb5bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計項目只能從包含其宣告的組件內存取。  
@@ -39,14 +39,14 @@ ms.lasthandoff: 11/21/2017
  如需的比較`Friend`和其他存取修飾詞，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
->  您可以指定另一個組件是 friend 組件，使其可以存取所有類型和成員標記為`Friend`。 如需詳細資訊，請參閱 [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055) (Friend 組件)。  
+>  您可以指定另一個組件是 friend 組件，使其可以存取所有類型和成員標記為`Friend`。 如需詳細資訊，請參閱 [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md) (Friend 組件)。  
   
 ## <a name="example"></a>範例  
  下列類別使用`Friend`修飾詞，以允許存取特定成員相同的組件中的其他程式設計項目。  
   
  [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  您可以使用`Friend`修飾詞在這些內容中：  
   
  [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  

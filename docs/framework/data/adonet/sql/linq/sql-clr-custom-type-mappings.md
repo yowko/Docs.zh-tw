@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 自訂類型對應
 當您使用 SQLMetal 命令列工具或物件關聯式設計工具 (O/R 設計工具) 時，系統就會自動指定 SQL Server 與 Common Language Runtime (CLR) 之間的型別對應。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="incorporating-database-changes"></a>合併資料庫變更  
  當資料庫變更時，您必須更新 DBML 檔案來反映這些變更。 其中一種更新方式是自動建立新的 DBML 檔案，然後重新進行型別對應自訂作業。 或者，您可以比較新 DBML 檔案與自訂 DBML 檔案之間的差異，然後手動更新自訂 DBML 檔案來反映資料庫變更。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL CLR 型別對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+## <a name="see-also"></a>請參閱  
+ [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

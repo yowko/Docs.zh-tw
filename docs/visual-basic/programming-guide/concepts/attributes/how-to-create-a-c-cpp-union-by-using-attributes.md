@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何： 使用屬性 (Visual Basic) 建立的 C/c + + 等位
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  
@@ -75,11 +75,11 @@ Structure TestExplicit
   
  `i1` 和 `i2` 這兩個整數欄位和 `lg` 共用相同的記憶體位置。 使用平台叫用時，這種結構配置控制項很有用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)  
- [屬性](../../../../../docs/standard/attributes/index.md)  
+ [屬性](../../../../standard/attributes/index.md)  
  [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

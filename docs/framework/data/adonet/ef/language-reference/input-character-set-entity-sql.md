@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 691f29a04b1b1f997be501330ec887d6815d7531
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1a830d9df1f94bd21689cba9a9893cb9c344dfdb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-character-set-entity-sql"></a>輸入字元集 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 接受以 UTF-16 編碼的 UNICODE 字元。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/18/2017
   
  簡單識別碼只能是拉丁字元。 如此可避免比較期間的模稜兩可 (Ambiguity)，因為會比較原始值。 例如，ABC 在日文字碼頁和拉丁文字碼頁中是不同的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

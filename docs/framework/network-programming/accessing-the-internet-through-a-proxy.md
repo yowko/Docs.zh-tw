@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 9e2be47cfd1ce56df7a0ad926166f8224a812449
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55bc8b3ef02238c217f03e8a3f0b554e13521e37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
 -   [如何：覆寫全域 Proxy 的選取範圍](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

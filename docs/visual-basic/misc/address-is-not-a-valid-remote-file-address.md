@@ -8,11 +8,11 @@ ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c9b527fafde8e221750fcda046bd7d17f251197
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b81c9a96ff90d429e5457283bbafb4ec3e021473
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;位址&gt;不是有效的遠端檔案位址
 \<位址 > 不是有效的遠端檔案位址。 有效位址應該包含通訊協定、路徑和檔案名稱。  
@@ -23,9 +23,8 @@ ms.lasthandoff: 11/21/2017
   
 -   檢查您所指定的位址以判斷失敗的位置，並提供必要的資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [My.Computer.Network.UploadFile 方法](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [My.Computer.Network.DownloadFile 方法](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
- [如何：上傳檔案](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+## <a name="see-also"></a>請參閱  
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [如何：下載檔案](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [使用 Visual Basic.NET Framework 中的網路作業](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+

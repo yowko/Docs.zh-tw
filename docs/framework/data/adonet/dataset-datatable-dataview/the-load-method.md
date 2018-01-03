@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6c6ce0b722d901e38b728a710e3c49848fb918a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-load-method"></a>Load 方法
 您可以使用 <xref:System.Data.DataTable.Load%2A> 方法，載入具有資料來源之資料列的 <xref:System.Data.DataTable>。 這是多載的方法，其最簡單的形式接受單一參數， **DataReader**。 在這種形式，它只會載入**DataTable**與資料列。 您可以選擇性地指定**LoadOption**參數來控制如何將資料加入至**DataTable**。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  下列表格簡短說明 <xref:System.Data.LoadOption> 列舉值。  
   
-|LoadOption 值|說明|  
+|LoadOption 值|描述|  
 |----------------------|-----------------|  
 |**OverwriteRow**|如果內送資料列具有相同**PrimaryKey**為已在一個資料列的值**DataTable**、**原始**和**目前**每個值資料行所取代之傳入的資料列中的值和**RowState**屬性設定為**Unchanged**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入的**RowState**值**Unchanged**。<br /><br /> 此選項會實際重新整理的內容**DataTable**使其符合資料來源的內容。|  
 |**PreserveCurrentValues （預設值）**|如果內送資料列具有相同**PrimaryKey**值為一個資料列已在**DataTable**、**原始**值設定為內容的內送的資料列，以及**目前**不會變更值。<br /><br /> 如果**RowState**是**Added**或**Modified**，設為**Modified**。<br /><br /> 如果**RowState**已**刪除**，它就會維持**刪除**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設**Unchanged**。|  
@@ -77,6 +78,6 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

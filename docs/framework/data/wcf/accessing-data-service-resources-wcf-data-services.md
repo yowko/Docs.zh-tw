@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c15ca5efcb23fa6705a4fcfa3eac6d6db09fcbad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>存取資料服務資源 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支援[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要與可由 Uri 定址的資源。 這些資源會根據實體-關聯性慣例來表示[實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  
@@ -106,5 +107,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
 ## <a name="consuming-the-returned-feed"></a>取用傳回的摘要  
  URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]資源可讓您將服務所公開的位址實體資料。 當您的網頁瀏覽器的網址欄位中輸入 URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]傳回要求之資源的摘要表示法。 如需詳細資訊，請參閱[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 雖然 Web 瀏覽器可用來測試資料服務資源傳回您預期的資料，可以也建立、 更新和刪除資料的實際執行資料服務通常會存取應用程式碼或指令碼語言，在網頁中的。 如需詳細資訊，請參閱[用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開放式資料通訊協定網站](http://go.microsoft.com/fwlink/?LinkID=182204)

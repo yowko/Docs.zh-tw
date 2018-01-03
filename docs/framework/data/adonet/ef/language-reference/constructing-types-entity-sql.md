@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 48dab533e26d6353c29667d81ea547f4b15d280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a10ac4f8b89259c7d5ff46ad99ad6c8a925726d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-types-entity-sql"></a>建構類型 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供三種建構函式： 資料列建構函式、 具名型別建構函式和集合建構函式。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  如需詳細資訊，請參閱[具名類型建構函式](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [類型系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

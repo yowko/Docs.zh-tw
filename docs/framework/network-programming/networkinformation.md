@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: acf15eb79fab479036f182c58b8ec94d3ac43ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 897f094f512e423f055f0abea04d5403552ba31c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> 命名空間可讓您收集網路事件、變更、統計資料和屬性的相關資訊。 您也可以使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 類別，來判斷是否可連線至遠端主機。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="determine-if-a-remote-host-is-reachable"></a>判斷是否可以連線遠端主機  
  您可以使用 <xref:System.Net.NetworkInformation.Ping> 類別，判斷網路上的遠端主機是否啟動且可連線。 如需詳細資訊，請參閱[如何：Ping 主機](../../../docs/framework/network-programming/how-to-ping-a-host.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Network Information Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179564) (網路資訊技術範例)  
  [NetStat 工具技術範例](http://go.microsoft.com/fwlink/?LinkID=179562)  

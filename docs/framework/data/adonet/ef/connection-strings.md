@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings"></a>連接字串
 連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。 它們也包含必要之模型和對應檔的相關資訊。  
@@ -117,8 +118,8 @@ Metadata=.\
   
  `DataDirectory` 替代字串和 ~ 運算子的解析並非遞迴方式。 例如，當 `DataDirectory` 包含 `~` 字元時，就會發生例外狀況。 這可防止無限遞迴 (Infinite Recursion)。  
   
-## <a name="see-also"></a>另請參閱  
- [使用資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
+## <a name="see-also"></a>請參閱  
+ [處理資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [管理連接與交易](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)

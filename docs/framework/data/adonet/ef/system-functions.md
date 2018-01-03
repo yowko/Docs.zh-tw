@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f2b7939371d99f8b503ac779f07b34f5fff497a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dda704e70fc7927f382e851189073ffa5dececb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-functions"></a>系統函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供下列系統函式：  
   
-|函式|說明|  
+|函式|描述|  
 |--------------|-----------------|  
 |`CHECKSUM (` `value`, [`value`, [`value`]]`)`|傳回總和檢查碼值。 `CHECKSUM` 用來建構雜湊索引。<br /><br /> **引數**<br /><br /> `value`: `Boolean`， `Byte`， `Int16`， `Int32`， `Int64`， `Single`， `Decimal`， `Double`， `DateTime`， `String`， `Binary`，或`Guid`。 您可以指定一個、兩個或三個值。<br /><br /> **傳回值**<br /><br /> 指定之運算式的絕對值。<br /><br /> **範例**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|採用 SQL Server 的內部格式，為 `DateTime` 值產生目前的日期和時間 (在 SQL Server 2008 中，精確度為 7，而在 SQL Server 2005 中，精確度為 3 )。<br /><br /> **傳回值**<br /><br /> `DateTime` 形式的目前系統日期和時間。<br /><br /> **範例**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
@@ -40,6 +41,6 @@ ms.lasthandoff: 11/21/2017
 |---------------------|---------------------|---------------------|  
 |[系統函式 Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115918)|[系統函式 Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115917)|[系統函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115919)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [適用於 Entity Framework 函式的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+ [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

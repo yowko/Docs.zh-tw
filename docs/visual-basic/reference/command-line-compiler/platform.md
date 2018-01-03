@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 指定通用語言執行平台 (CLR) 的哪個平台版本可以執行輸出檔。  
@@ -71,13 +71,11 @@ ms.lasthandoff: 12/09/2017
   
 -   使用 `/platform:anycpu32bitpreferred` 編譯的可執行檔將在 32 位元 CLR 上執行。  
   
- 如需如何開發在 64 位元版本的 Windows 上執行的應用程式的詳細資訊，請參閱[64 位元應用程式](../../../../docs/framework/64-bit-apps.md)。  
+ 如需如何開發在 64 位元版本的 Windows 上執行的應用程式的詳細資訊，請參閱[64 位元應用程式](../../../framework/64-bit-apps.md)。  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中設定 /platform  
   
 1.  在**方案總管 中**，選擇專案，開啟**專案**功能表，然後再按一下**屬性**。  
-  
-     如需詳細資訊，請參閱[NIB： 使用專案設計工具管理專案屬性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
   
 2.  在**編譯**索引標籤上，選取或清除**建議使用 32 位元**核取方塊，或在**目標 CPU**清單中，選擇一個值。  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/09/2017
 vbc /platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/target (Visual Basic)](target.md)  
  [Visual Basic 命令列編譯器](index.md)  
  [編譯命令列範例](sample-compilation-command-lines.md)

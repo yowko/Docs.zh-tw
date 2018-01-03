@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>實體資料模型
 實體資料模型 (EDM) 是描述資料結構的概念集，不論其預存形式為何。 EDM 借用 Peter Chen 於 1976 年描述的實體關聯模型 (Entity-Relationship Model)，但同時補強實體關聯模型並延伸其傳統用法。  
@@ -29,25 +30,25 @@ ms.lasthandoff: 11/21/2017
 ## <a name="in-this-section"></a>本章節內容  
  本節的主題描述實體資料模型的概念。 實作 EDM 介面的任何 DSL 都應包括此處描述的概念。 請注意， [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用 CSDL 來定義概念模型。 如需詳細資訊，請參閱[CSDL 規格](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)。  
   
- [實體資料模型的重要概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [實體資料模型： 命名空間](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [實體資料模型：命名空間](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [實體資料模型： 基本資料型別](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [實體資料模型：基本資料類型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [實體資料模型： 繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [關聯 end](../../../../docs/framework/data/adonet/association-end.md)  
+ [關聯 End](../../../../docs/framework/data/adonet/association-end.md)  
   
- [關聯 end 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [關聯 End 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
  [關聯集](../../../../docs/framework/data/adonet/association-set.md)  
   
- [關聯集 end](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [關聯集 End](../../../../docs/framework/data/adonet/association-set-end.md)  
   
- [關聯型別](../../../../docs/framework/data/adonet/association-type.md)  
+ [關聯類型](../../../../docs/framework/data/adonet/association-type.md)  
   
- [複雜型別](../../../../docs/framework/data/adonet/complex-type.md)  
+ [複雜類型](../../../../docs/framework/data/adonet/complex-type.md)  
   
  [實體容器](../../../../docs/framework/data/adonet/entity-container.md)  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [參考完整性條件約束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
  [.edmx 檔案概觀](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [CSDL 規格](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

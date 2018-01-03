@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>標準函式的對應 CLR 方法
 Entity Framework 提供一組標準函式，可實作在許多資料庫系統常見的功能，例如字串操作和數學函式。 這樣就可以讓開發人員以廣泛的資料庫系統為相標。 從某種查詢技術 (例如 LINQ to Entities) 呼叫時，這些標準函式會轉譯成所使用之提供者的正確對應存放函式。 這樣就可以利用跨資料來源的通用形式來表示函式引動過程，在不同的資料來源提供一致的查詢體驗。 如果運算元為數值型別，位元運算 AND、OR,、NOT 和 XOR 運算子也是對應到這些標準函式。 若為布林運算元，位元運算 AND、OR、NOT 和 XOR 運算子會計算這些運算元的邏輯 AND、OR、NOT 和 XOR 運算。 如需詳細資訊，請參閱[標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  
@@ -206,5 +207,5 @@ icrosoft。VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

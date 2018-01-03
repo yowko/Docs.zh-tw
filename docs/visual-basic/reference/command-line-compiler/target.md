@@ -14,11 +14,11 @@ ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8a8a9fcd6fa6dfaace01f8fbb7fa407145acc16f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 900693ac3793fb59133b31d8fc0136df63c11a10
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-visual-basic"></a>/target (Visual Basic)
 指定編譯器輸出的格式。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-target-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中設定 /target  
   
-1.  在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。   
   
 2.  按一下 [應用程式]  索引標籤。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 vbc /target:library in.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
  [/out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  

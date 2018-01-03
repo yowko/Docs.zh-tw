@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 55d139fe4a1448f1f9f4739421a90b4dc8729489
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89e1d99b5573f36fab4f2cfe675ab95e57a8fd2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="string-canonical-functions"></a>字串標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含字串標準函式。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>備註  
  下表將顯示字串 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
-|函式|說明|  
+|函式|描述|  
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|傳回包含附加至 `string2` 之 `string1` 的字串。<br /><br /> **引數**<br /><br /> `string1`：`string2` 附加至的字串。<br /><br /> `string2`：附加至 `string1` 的字串。<br /><br /> **傳回值**<br /><br /> `String`。 如果傳回值字串的長度超過允許的最大長度，就會發生錯誤。<br /><br /> **範例**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|如果 `true` 包含在 `target` 之中，傳回`string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `true` 包含在 `target` 中，則為 `string`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/18/2017
   
  Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱[適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

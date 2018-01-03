@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 828e5ae0a9db2542debf8e09e5d8875fcea0ba23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2ac06c78670b4113ab718c06423c04c0ea27c208
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-schema-collections"></a>Oracle 結構描述集合
 除通用結構描述集合之外，Microsoft .NET Framework Data Provider for Oracle 還支援下列特定的結構描述集合：  
@@ -111,10 +112,10 @@ ms.lasthandoff: 10/18/2017
 |LAST_ANALYZED|DateTime|最近分析此索引的日期。|  
 |DEGREE|String|掃描索引之每個執行個體的執行緒數目。|  
 |INSTANCES|String|要在其上掃描索引的執行個體數目。|  
-|PARTITIONED|字串|此索引是否已分割 (是 &#124;[否]）。|  
+|PARTITIONED|String|此索引是否已分割 (是 &#124;[否]）。|  
 |TEMPORARY|String|索引是否在暫存資料表上。|  
-|GENERATED|字串|索引的名稱是否是系統產生的 (Y &#124;N)。|  
-|SECONDARY|字串|索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
+|GENERATED|String|索引的名稱是否是系統產生的 (Y &#124;N)。|  
+|SECONDARY|String|索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
 |BUFFER_POOL|String|要用於索引區塊之預設緩衝集區的名稱。|  
 |USER_STATS|String|統計資料是否為使用者直接輸入的。|  
 |DURATION|String|表示暫存資料表的持續期間：1) SYS$SESSION：在工作階段持續期間保留資料列，2) SYS$TRANSACTION：COMMIT 後刪除資料列，3) 若為永久資料表，則是 Null。|  
@@ -156,7 +157,7 @@ ms.lasthandoff: 10/18/2017
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
 |GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124;N)。|  
-|SECONDARY|字串|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
+|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
 |CREATED|DateTime|建立物件的日期。|  
   
 ## <a name="sequences"></a>序列  
@@ -231,7 +232,7 @@ ms.lasthandoff: 10/18/2017
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
 |GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124;N)。|  
-|SECONDARY|字串|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
+|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
   
 ## <a name="packages"></a>封裝  
   
@@ -247,7 +248,7 @@ ms.lasthandoff: 10/18/2017
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
 |GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124;N)。|  
-|SECONDARY|字串|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
+|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
 |CREATED|DateTime|建立物件的日期。|  
   
 ## <a name="packagebodies"></a>PackageBodies  
@@ -264,7 +265,7 @@ ms.lasthandoff: 10/18/2017
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|  
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|  
 |GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124;N)。|  
-|SECONDARY|字串|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
+|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124;N)。|  
 |CREATED|DateTime|建立物件的日期。|  
   
 ## <a name="arguments"></a>引數  
@@ -389,5 +390,5 @@ ms.lasthandoff: 10/18/2017
 |CHAR_LENGTH|Decimal|字串資料型別的字元限制。|  
 |CHAR_USED|String|指出位元組限制 (B) 或字元限制 (C) 是否為字串的正式限制。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

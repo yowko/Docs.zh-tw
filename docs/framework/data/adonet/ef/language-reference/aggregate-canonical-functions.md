@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5a5aea48b1c70c550641f3450dff16e57dd4f62b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 071c6b41d24465a599afa87a296c0797e8ca6ed9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-canonical-functions"></a>彙總標準函式
 
@@ -77,6 +78,6 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 在[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，以群組為基礎的彙總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

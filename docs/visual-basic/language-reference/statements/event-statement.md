@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Event 陳述式
 宣告使用者定義的事件。  
@@ -63,28 +63,28 @@ End Event
   
 ## <a name="parts"></a>組件  
   
-|組件|說明|  
+|組件|描述|  
 |---|---|  
-|`attrlist`|選擇項。 套用至此事件的屬性清單。 以逗號分隔多個屬性。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。|  
-|`accessmodifier`|選擇項。 指定哪些程式碼可以存取此事件。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)— 任何可以存取宣告它之項目的程式碼可以存取它。<br />-   [受保護的](../../../visual-basic/language-reference/modifiers/protected.md)— 只有在其類別或衍生的類別中的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 只有在相同的組件中的程式碼可以存取它。<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)— 只有在宣告它的項目中的程式碼可以存取它。<br /><br /> 您可以指定 `Protected Friend` 以存取事件類別、衍生類別或相同組件中的程式碼。|  
-|`Shared`|選擇項。 指定此事件與類別或結構的特定執行個體不相關。|  
-|`Shadows`|選擇項。 指出這個事件會在基底類別中重新宣告並隱藏相同名稱的程式設計項目，或一組多載項目。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果 `Private` 項目會遮蔽基底類別項目，沒有 `Private` 項目存取權限的程式碼會改為存取基底類別項目。|  
-|`eventname`|必要項。 事件的名稱；依照標準變數命名慣例。|  
-|`parameterlist`|選擇項。 本機變數清單，表示此事件的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括號括住。|  
-|`Implements`|選擇項。 指出此事件會實作介面的事件。|  
+|`attrlist`|選擇性。 套用至此事件的屬性清單。 以逗號分隔多個屬性。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。|  
+|`accessmodifier`|選擇性。 指定哪些程式碼可以存取此事件。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)— 任何可以存取宣告它之項目的程式碼可以存取它。<br />-   [受保護的](../../../visual-basic/language-reference/modifiers/protected.md)— 只有在其類別或衍生的類別中的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 只有在相同的組件中的程式碼可以存取它。<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)— 只有在宣告它的項目中的程式碼可以存取它。<br /><br /> 您可以指定 `Protected Friend` 以存取事件類別、衍生類別或相同組件中的程式碼。|  
+|`Shared`|選擇性。 指定此事件與類別或結構的特定執行個體不相關。|  
+|`Shadows`|選擇性。 指出這個事件會在基底類別中重新宣告並隱藏相同名稱的程式設計項目，或一組多載項目。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果 `Private` 項目會遮蔽基底類別項目，沒有 `Private` 項目存取權限的程式碼會改為存取基底類別項目。|  
+|`eventname`|必要。 事件的名稱；依照標準變數命名慣例。|  
+|`parameterlist`|選擇性。 本機變數清單，表示此事件的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括號括住。|  
+|`Implements`|選擇性。 指出此事件會實作介面的事件。|  
 |`implementslist`|如果使用 `Implements`，則為必要項。 實作之 `Sub` 程序的清單。 以逗號分隔多個程序：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每個 `implementedprocedure` 都具有下列語法和組件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-必要。 介面名稱，該介面實作包含類別或結構的此程序。<br />-   `Definedname`-必要。 名稱，據以在 `interface` 中定義程序。 不一定要與 `name` 相同，這是此程序用來實作已定義程序的名稱。|  
-|`Custom`|必要項。 事件宣告為 `Custom` 必須定義自訂 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 存取子。|  
-|`delegatename`|選擇項。 委派的名稱，指定事件處理常式簽章。|  
-|`AddHandler`|必要項。 宣告 `AddHandler` 存取子，指定加入事件處理常式時要執行的陳述式，可以明確地使用 `AddHandler` 陳述式或隱含地使用 `Handles` 子句。|  
-|`End AddHandler`|必要項。 終止 `AddHandler` 區塊。|  
-|`value`|必要項。 參數名稱。|  
-|`RemoveHandler`|必要項。 宣告 `RemoveHandler` 存取子，指定使用 `RemoveHandler` 陳述式移除事件處理常式時要執行的陳述式。|  
-|`End RemoveHandler`|必要項。 終止 `RemoveHandler` 區塊。|  
-|`RaiseEvent`|必要項。 宣告 `RaiseEvent` 存取子，指定使用 `RaiseEvent` 陳述式引發事件處理常式時要執行的陳述式。 一般而言，這樣會叫用 `AddHandler` 和 `RemoveHandler` 存取子所維護的委派。|  
-|`End RaiseEvent`|必要項。 終止 `RaiseEvent` 區塊。|  
-|`delegatesignature`|必要項。 參數的清單，符合 `delegatename` 委派所需的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括號括住。|  
-|`statements`|選擇項。 陳述式，包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法的內文。|  
-|`End Event`|必要項。 終止 `Event` 區塊。|  
+|`Custom`|必要。 事件宣告為 `Custom` 必須定義自訂 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 存取子。|  
+|`delegatename`|選擇性。 委派的名稱，指定事件處理常式簽章。|  
+|`AddHandler`|必要。 宣告 `AddHandler` 存取子，指定加入事件處理常式時要執行的陳述式，可以明確地使用 `AddHandler` 陳述式或隱含地使用 `Handles` 子句。|  
+|`End AddHandler`|必要。 終止 `AddHandler` 區塊。|  
+|`value`|必要。 參數名稱。|  
+|`RemoveHandler`|必要。 宣告 `RemoveHandler` 存取子，指定使用 `RemoveHandler` 陳述式移除事件處理常式時要執行的陳述式。|  
+|`End RemoveHandler`|必要。 終止 `RemoveHandler` 區塊。|  
+|`RaiseEvent`|必要。 宣告 `RaiseEvent` 存取子，指定使用 `RaiseEvent` 陳述式引發事件處理常式時要執行的陳述式。 一般而言，這樣會叫用 `AddHandler` 和 `RemoveHandler` 存取子所維護的委派。|  
+|`End RaiseEvent`|必要。 終止 `RaiseEvent` 區塊。|  
+|`delegatesignature`|必要。 參數的清單，符合 `delegatename` 委派所需的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括號括住。|  
+|`statements`|選擇性。 陳述式，包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法的內文。|  
+|`End Event`|必要。 終止 `Event` 區塊。|  
   
 ## <a name="remarks"></a>備註  
  一旦已經宣告事件，使用 `RaiseEvent` 陳述式來引發事件。 一般事件可能會如下列片段所示宣告和引發：  
@@ -122,9 +122,9 @@ End Event
  按 F5 執行上述範例中，並且按一下按鈕**啟動**。 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
 > [!NOTE]
->  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱[執行緒](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
+>  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱[執行緒](../../programming-guide/concepts/threading/index.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
  [Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  

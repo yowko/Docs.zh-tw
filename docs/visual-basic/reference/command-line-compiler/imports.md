@@ -14,11 +14,11 @@ ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e8e9cd761263b3b61a4e6d3e33c5f7f875be7a1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6cdb7cff2221930113d6b49a640da0844f175f1b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imports-visual-basic"></a>/imports (Visual Basic)
 從指定的組件，匯入命名空間。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |詞彙|定義|  
 |---|---|  
-|`namespaceList`|必要項。 要匯入的命名空間的逗號分隔清單。|  
+|`namespaceList`|必要。 要匯入的命名空間的逗號分隔清單。|  
   
 ## <a name="remarks"></a>備註  
  `/imports`選項匯入目前的資料集的來源檔案，或從任何參考的組件內定義的命名空間。  
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/21/2017
   
 |若要設定 Visual Studio 整合式的開發環境中匯入 /|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.按一下 [參考] 節點。<br />3.旁邊的方塊中輸入命名空間名稱**加入使用者匯入** 按鈕。<br />4.按一下**加入使用者匯入** 按鈕。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [參考] 節點。<br />3.旁邊的方塊中輸入命名空間名稱**加入使用者匯入** 按鈕。<br />4.按一下**加入使用者匯入** 按鈕。|  
   
 ## <a name="example"></a>範例  
  下列程式碼會編譯時`/imports:system`指定。  
   
  [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/imports_1.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

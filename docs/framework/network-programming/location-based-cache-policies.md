@@ -25,11 +25,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="location-based-cache-policies"></a>以位置為基礎的快取原則
 以位置為基礎的快取原則，會根據所要求資源可以使用的位置，定義有效快取項目的有效期限。 如果使用它不違反伺服器指定的重新驗證需求，快取的資源即為有效。 使用 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 類別建構函式可以程式設計方式建立以位置為基礎的快取原則。 以位置為基礎的原則類型，是使用 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.HttpRequestCacheLevel> 列舉值傳遞至建構函式。 如需建立以位置為基礎之快取原則的程式碼範例，請參閱[如何：為應用程式設定以位置為基礎的快取原則](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)。 下列各節說明超文字傳輸通訊協定 (http 和 https) 資源的每種以位置為基礎的快取原則。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="revalidate-policy"></a>重新驗證原則  
  比較快取中的資源複本和伺服器上的複本。 如果伺服器上的複本較新，就會用它來滿足要求，並取代快取中的複本。 如果快取中的複本和伺服器上的版本相同，就使用快取的複本。 在 HTTP 快取通訊協定中，使用條件式要求即可達成。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
  [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  

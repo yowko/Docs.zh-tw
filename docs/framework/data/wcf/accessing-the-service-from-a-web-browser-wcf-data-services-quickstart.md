@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 在這個工作中，您將從 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 啟動 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，並且選擇性停用 Web 瀏覽器中的摘要讀取功能。 然後會擷取服務定義文件，以及提交至公開的資源的網頁瀏覽器透過 HTTP GET 要求來存取資料服務資源。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="next-steps"></a>後續步驟  
  您已順利從 Web 瀏覽器存取 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，且瀏覽器會將 HTTP GET 要求發出至指定的資源。 Web 瀏覽器可讓您輕鬆地實驗要求的定址語法並檢視結果。 不過，此方法通常並不適用於存取實際執行資料服務。 一般而言，應用程式會透過應用程式碼或指令碼語言與資料服務互動。 接下來，您將建立使用用戶端程式庫的用戶端應用程式，將資料服務資源視為 Common Language Runtime (CLR) 物件來加以存取：  
   
- [建立.NET Framework 用戶端應用程式](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [建立 .NET Framework 用戶端應用程式](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

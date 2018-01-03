@@ -26,11 +26,11 @@ ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 281b18322f5be4e7dadcb9533680b25016a44c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00753eddb641c07ef9c6e6282fe00c5e8d00547a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-compare-statement"></a>Option Compare 陳述式
 宣告比較字串資料時要使用的預設比較方法。  
@@ -72,13 +72,13 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>在 IDE 中設定選項比較  
   
-1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 如需詳細資訊，請參閱[NIB： 使用專案設計工具管理專案屬性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
 2.  按一下 [編譯] 索引標籤。  
   
 3.  設定中的值**Option Compare**方塊。  
   
- 當您建立專案， **Option Compare**上設定**編譯** 索引標籤設為**Option Compare**中設定**選項**對話方塊。 若要變更這項設定，在**工具**功能表上，按一下 **選項**。 在**選項**對話方塊方塊中，展開 **專案和方案**，然後按一下  **VB 預設值**。 中的初始預設設定**VB 預設值**是**二進位**。  
+ 當您建立專案， **Option Compare**上設定**編譯** 索引標籤設為**Option Compare**中設定**選項**對話方塊。 若要變更這項設定，在**工具**功能表上，按一下 **選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是**二進位**。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>在命令列上設定選項比較  
   
@@ -94,7 +94,7 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
  <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
  <xref:Microsoft.VisualBasic.Strings.Replace%2A>  

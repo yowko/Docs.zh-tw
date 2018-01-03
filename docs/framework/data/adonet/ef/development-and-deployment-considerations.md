@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 594d0516a739986580d37e86eab32da14c359e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="development-and-deployment-considerations"></a>開發及部署考量因素
 本節中的主題陳述在開發或部署以 ADO.NET Entity Framework 為基礎之應用程式時要考量的問題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [安全性考量](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
  [效能考量](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  

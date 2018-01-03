@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c0c919bb5be12005850b81059fc641f6f25b06bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f67ad1947d421a5221a34ad8392242e4d18039f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-linq-to-dataset"></a>安全性 (LINQ to DataSet)
 本主題討論 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性問題。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/18/2017
   
  從使用者或外部代理程式直接或間接衍生的任何輸入都可能具備運用目標語言之語法的內容，藉以執行未經授權的動作。 這是所謂的 SQL 插入式攻擊，這是以目標語言為 Transact-SQL 的攻擊模式來命名的。 直接插入到查詢的使用者輸入用於卸除資料庫資料表、造成阻絕服務，或變更要執行之作業的本質。 雖然可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢不是由在 TRANSACT-SQL 中並不容易受到 SQL 插入式攻擊，在傳統意義上，使用字串操作或串連組成。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

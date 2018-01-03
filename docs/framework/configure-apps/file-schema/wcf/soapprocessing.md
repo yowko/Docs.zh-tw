@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e83bfc0f868526ad5366032f08956a6c14a1056
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1aeb100e1b8e160d30566cd43d67cbf49c6b5c4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
 
 ### <a name="attributes"></a>屬性
 
-|                   | 說明 |
+|                   | 描述 |
 | ----------------- | ----------- |
 | `processMessages` | 布林值，這個值指定是否應該在 SOAP 訊息版本之間封送處理訊息。 |
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
 
 ### <a name="parent-elements"></a>父元素
 
-|     | 說明 |
+|     | 描述 |
 | --- | ----------- |
 | [**\<行為 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | 指定端點行為。 |
 

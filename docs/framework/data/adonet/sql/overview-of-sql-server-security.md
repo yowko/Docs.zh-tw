@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d93d077153cd15534175c1e60e63a765ce893c71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff0a78a852bdbf2fa1eb075273cad317c21fb182
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概觀
 具有重疊安全性層的深入防禦策略是抵禦安全性威脅的最佳方式。 SQL Server 提供了一種安全性架構，其設計目的是為了允許資料庫管理員和開發人員建立安全的資料庫應用程式並抵禦威脅。 每個 SQL Server 版本都會透過引進新的特性和功能來改善舊版 SQL Server。 不過，安全性無法一體適用。 每個應用程式的安全性需求都是唯一的。 開發人員必須瞭解哪些特性和功能的組合最適合用來抵禦已知威脅，以及預期未來可能會發生的威脅。  
@@ -30,26 +31,26 @@ ms.lasthandoff: 11/21/2017
   
  本節中的主題涵蓋了 SQL Server 安全性基本概念，並提供《SQL Server 線上叢書》相關版本中完整文件的連結。  
   
-## <a name="in-this-section"></a>本章節內容  
- [在 SQL Server 驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+## <a name="in-this-section"></a>本節內容  
+ [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  說明 SQL Server 中的登入和驗證，並提供其他資源的連結。  
   
- [伺服器和 SQL Server 中的資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  說明固定伺服器和資料庫角色、自訂資料庫角色和內建帳戶，並提供其他資源的連結。  
   
- [擁有權和 SQL Server 中的使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  說明物件擁有權和使用者結構描述分隔，並提供其他資源的連結。  
   
- [授權和 SQL Server 中的權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
  說明如何使用最小權限的原則來授與權限，並提供其他資源的連結。  
   
- [SQL Server 中的資料加密](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
+ [在 SQL Server 中加密資料](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
  說明 SQL Server 中的資料加密選項，並提供其他資源的連結。  
   
- [在 SQL Server CLR 整合安全性](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
+ [SQL Server 中的 CLR 整合安全性](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  提供 CLR 整合安全性資源的連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  

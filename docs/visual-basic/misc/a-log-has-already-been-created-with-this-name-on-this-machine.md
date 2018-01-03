@@ -8,11 +8,11 @@ ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c6c0b29660d222c4499a90ac6a5095f509cde6e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2052fd81fa5856914a676aa6985eeb51c892788
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>已在這部電腦上建立具有這個名稱的記錄檔。
 嘗試使用已在使用的名稱來建立記錄檔。  
@@ -23,8 +23,8 @@ ms.lasthandoff: 11/21/2017
   
 -   使用不同的記錄檔名稱。  
   
-## <a name="see-also"></a>另請參閱  
- [My.Application.Log 物件](../../visual-basic/language-reference/objects/my-application-log-object.md)  
+## <a name="see-also"></a>請參閱  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
  [如何：寫入記錄檔訊息](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [如何：在應用程式啟動或關閉時記錄訊息](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
  [如何：寫入應用程式事件記錄檔](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  

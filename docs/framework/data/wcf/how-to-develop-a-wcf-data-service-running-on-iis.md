@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 467c572d456bf2beca9f69359d362867aefbe5a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b93b6e8b6e687f2e39fd5792aba08eaa47fa29fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>HOW TO：開發在 IIS 上執行的 WCF Data Service
 本主題示範如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]來建立 ASP.NET Web 應用程式執行網際網路資訊服務 (IIS) 所裝載的 Northwind 範例資料庫為基礎的資料服務。 如需如何建立相同的 Northwind 資料服務，以在 ASP.NET 程式開發伺服器執行的 ASP.NET Web 應用程式的範例，請參閱[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  型別`NorthwindService`做為專案的名稱。  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
 6.  在**專案**功能表上，選取**NorthwindService 屬性**。  
   
@@ -169,5 +170,5 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
   
-## <a name="see-also"></a>另請參閱  
- [將資料公開為服務](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+## <a name="see-also"></a>請參閱  
+ [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)

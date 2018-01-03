@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7c1d438a83f090795a158ade1dfdbb7d2b2df863
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79cd52f137347ec24e7cc9a646d0306d95fe53d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-support"></a>異動支援
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援三種不同的交易模型。 以下按照執行檢查的順序列出這些模型。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="implicit-transaction"></a>隱含異動  
  當您呼叫<xref:System.Data.Linq.DataContext.SubmitChanges%2A>，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會查看此呼叫是否在範圍內<xref:System.Transactions.Transaction>或`Transaction`屬性 (`IDbTransaction`) 設定為使用者啟動的本機交易。 如果兩種交易，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]啟動本機交易 (`IDbTransaction`) 並用它來執行所產生的 SQL 命令。 當所有 SQL 命令已順利都完成時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]認可本機交易並傳回結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [如何： 使用異動括資料提交](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+ [如何：使用異動括住提交的資料](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

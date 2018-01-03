@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2fde543187d1904da93be255878d6c7a99de6bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77d6dbafc5a7c3afd9998fd8e9ae54ce60f90a45
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在引進 FILESTREAM 之前，儲存二進位資料需要特殊處理。 文字文件、影像和視訊等非結構化資料通常會儲存在資料庫外部，因而難以管理。  
@@ -217,7 +218,7 @@ namespace FileStreamTest
 ## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》中的資源  
  FILESTREAM 的完整文件位於《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》中的下列章節。  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[設計和實作 FILESTREAM 儲存體](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|提供 FILESTREAM 文件和相關主題的連結。|  
 |[FILESTREAM 概觀](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|  
@@ -225,7 +226,7 @@ namespace FileStreamTest
 |[在用戶端應用程式中使用 FILESTREAM 儲存體](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|  
 |[FILESTREAM 與其他 SQL Server 功能](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  

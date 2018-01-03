@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 陳述式 (Visual Basic)
 提供了處理部分或所有可能的錯誤時繼續執行程式碼中指定的一段程式碼，可能發生的方式。  
@@ -55,16 +55,16 @@ End Try
   
 |詞彙|定義|  
 |---|---|  
-|`tryStatements`|選擇項。 可能發生錯誤的陳述式。 可以是複合陳述式。|  
-|`Catch`|選擇項。 多個`Catch`允許的區塊。 如果發生例外狀況處理時`Try`區塊，每個`Catch`陳述式會檢查以判斷是否處理例外狀況，以文字順序`exception`代表已擲回的例外狀況。|  
-|`exception`|選擇項。 任何變數名稱。 `exception` 的初始值就是擲回之錯誤的值。 搭配`Catch`來指定錯誤攔截。 如果省略，`Catch`陳述式攔截任何例外狀況。|  
-|`type`|選擇項。 指定類別篩選條件類型。 如果值`exception`所指定型別的`type`或衍生類型的識別項會變成繫結至例外狀況物件。|  
-|`When`|選擇項。 A`Catch`陳述式搭配`When`子句會攔截例外狀況時，才`expression`評估為`True`。 A`When`檢查例外狀況，類型之後，才套用子句和`expression`可能會參考表示例外狀況的識別項。|  
-|`expression`|選擇項。 必須是隱含地轉換成`Boolean`。 描述一般篩選器的任何運算式。 通常用來篩選錯誤號碼。 搭配`When`關鍵字來指定的情況下會攔截錯誤。|  
-|`catchStatements`|選擇項。 陳述式來處理發生在相關聯的錯誤`Try`區塊。 可以是複合陳述式。|  
-|`Exit Try`|選擇項。 中斷的關鍵字`Try...Catch...Finally`結構。 使用程式碼後置節點就會繼續執行`End Try`陳述式。 `Finally`仍可執行陳述式。 中不允許`Finally`區塊。|  
-|`Finally`|選擇項。 A`Finally`當執行離開的任何部分時，就會永遠執行區塊`Try...Catch`陳述式。|  
-|`finallyStatements`|選擇項。 所有其他錯誤處理都發生之後執行的陳述式。|  
+|`tryStatements`|選擇性。 可能發生錯誤的陳述式。 可以是複合陳述式。|  
+|`Catch`|選擇性。 多個`Catch`允許的區塊。 如果發生例外狀況處理時`Try`區塊，每個`Catch`陳述式會檢查以判斷是否處理例外狀況，以文字順序`exception`代表已擲回的例外狀況。|  
+|`exception`|選擇性。 任何變數名稱。 `exception` 的初始值就是擲回之錯誤的值。 搭配`Catch`來指定錯誤攔截。 如果省略，`Catch`陳述式攔截任何例外狀況。|  
+|`type`|選擇性。 指定類別篩選條件類型。 如果值`exception`所指定型別的`type`或衍生類型的識別項會變成繫結至例外狀況物件。|  
+|`When`|選擇性。 A`Catch`陳述式搭配`When`子句會攔截例外狀況時，才`expression`評估為`True`。 A`When`檢查例外狀況，類型之後，才套用子句和`expression`可能會參考表示例外狀況的識別項。|  
+|`expression`|選擇性。 必須是隱含地轉換成`Boolean`。 描述一般篩選器的任何運算式。 通常用來篩選錯誤號碼。 搭配`When`關鍵字來指定的情況下會攔截錯誤。|  
+|`catchStatements`|選擇性。 陳述式來處理發生在相關聯的錯誤`Try`區塊。 可以是複合陳述式。|  
+|`Exit Try`|選擇性。 中斷的關鍵字`Try...Catch...Finally`結構。 使用程式碼後置節點就會繼續執行`End Try`陳述式。 `Finally`仍可執行陳述式。 中不允許`Finally`區塊。|  
+|`Finally`|選擇性。 A`Finally`當執行離開的任何部分時，就會永遠執行區塊`Try...Catch`陳述式。|  
+|`finallyStatements`|選擇性。 所有其他錯誤處理都發生之後執行的陳述式。|  
 |`End Try`|終止`Try...Catch...Finally`結構。|  
   
 ## <a name="remarks"></a>備註  
@@ -137,7 +137,7 @@ End Try
 ## <a name="iterators"></a>Iterator  
  Iterator 函式或`Get`存取子會對集合執行自訂反覆項目。 迭代器會使用[產生](../../../visual-basic/language-reference/statements/yield-statement.md)陳述式來傳回一次一個集合的每個項目。 您可以使用呼叫 iterator 函式[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
- A`Yield`陳述式可以是內部`Try`區塊。 A`Try`包含區塊`Yield`陳述式可以有`Catch`封鎖了，而且可以有`Finally`區塊。 請參閱 「 嘗試區塊在 Visual Basic 中 」 一節[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)的範例。  
+ A`Yield`陳述式可以是內部`Try`區塊。 A`Try`包含區塊`Yield`陳述式可以有`Catch`封鎖了，而且可以有`Finally`區塊。 請參閱 「 嘗試區塊在 Visual Basic 中 」 一節[迭代器](../../programming-guide/concepts/iterators.md)的範例。  
   
  A`Yield`陳述式不能在`Catch`區塊或`Finally`區塊。  
   
@@ -188,11 +188,11 @@ End Try
   
  [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:System.Exception>  
  [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error 陳述式](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [使用程式碼片段的最佳作法](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [例外狀況處理](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [例外狀況處理](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw 陳述式](../../../visual-basic/language-reference/statements/throw-statement.md)
