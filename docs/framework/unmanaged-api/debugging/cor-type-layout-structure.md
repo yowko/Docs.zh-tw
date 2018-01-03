@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fc23e33abf47d19792c25d36a62bf95a098ee7a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 250d78dd9983b75fa7e1b3cfd99215160fbc2b1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT 結構
 提供記憶體中物件配置的相關資訊。  
@@ -42,7 +43,7 @@ typedef struct COR_TYPE_LAYOUT {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`parentID`|此類型的父類型的識別項。 這會是 NULL 類型 id (token1 = 0，token2 = 0) 的型別 id 對應於<xref:System.Object?displayProperty=nameWithType>。|  
 |`objectSize`|此類型的物件的基底的大小。 這是針對非變數可調整大小的物件大小總計。|  
@@ -62,6 +63,6 @@ typedef struct COR_TYPE_LAYOUT {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

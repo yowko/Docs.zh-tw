@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 07b0490e322c70763a37b86fbb02e2f8b99bd768
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3530b5a7a747816a12e76d00fa7c299acf7657c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
 取得值，指出是否此"ICorDebugCode 」 表示已編譯的 Microsoft 中繼語言 (MSIL) 中的程式碼。  
@@ -51,5 +52,5 @@ HRESULT IsIL (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  
