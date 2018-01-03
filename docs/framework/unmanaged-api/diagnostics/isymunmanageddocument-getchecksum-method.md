@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b0b2ce6facf99b44f54e8880d4436ab7fe96e50a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 19cd8881bdbd482cb420717855593d7b9583ae51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="4b777-102">ISymUnmanagedDocument::GetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="4b777-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
-<span data-ttu-id="4b777-103">取得總和檢查碼。</span><span class="sxs-lookup"><span data-stu-id="4b777-103">Gets the checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="fd099-102">ISymUnmanagedDocument::GetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="fd099-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
+<span data-ttu-id="fd099-103">取得總和檢查碼。</span><span class="sxs-lookup"><span data-stu-id="fd099-103">Gets the checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4b777-104">語法</span><span class="sxs-lookup"><span data-stu-id="4b777-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd099-104">語法</span><span class="sxs-lookup"><span data-stu-id="fd099-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSum(  
@@ -39,18 +40,18 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4b777-105">參數</span><span class="sxs-lookup"><span data-stu-id="4b777-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fd099-105">參數</span><span class="sxs-lookup"><span data-stu-id="fd099-105">Parameters</span></span>  
  `cData`  
- <span data-ttu-id="4b777-106">[in]所提供的緩衝區長度`data`參數</span><span class="sxs-lookup"><span data-stu-id="4b777-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
+ <span data-ttu-id="fd099-106">[in]所提供的緩衝區長度`data`參數</span><span class="sxs-lookup"><span data-stu-id="fd099-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
   
  `pcData`  
- <span data-ttu-id="4b777-107">[out]大小和總和檢查碼，以位元組為單位的長度。</span><span class="sxs-lookup"><span data-stu-id="4b777-107">[out] The size and length of the checksum, in bytes.</span></span>  
+ <span data-ttu-id="fd099-107">[out]大小和總和檢查碼，以位元組為單位的長度。</span><span class="sxs-lookup"><span data-stu-id="fd099-107">[out] The size and length of the checksum, in bytes.</span></span>  
   
  `data`  
- <span data-ttu-id="4b777-108">[out]接收總和檢查碼的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="4b777-108">[out] The buffer that receives the checksum.</span></span>  
+ <span data-ttu-id="fd099-108">[out]接收總和檢查碼的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="fd099-108">[out] The buffer that receives the checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4b777-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="4b777-109">Return Value</span></span>  
- <span data-ttu-id="4b777-110">如果方法成功則為 S_OK否則，錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="4b777-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fd099-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="fd099-109">Return Value</span></span>  
+ <span data-ttu-id="fd099-110">如果方法成功則為 S_OK否則，錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="fd099-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b777-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b777-111">See Also</span></span>  
- [<span data-ttu-id="4b777-112">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="4b777-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fd099-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="fd099-111">See Also</span></span>  
+ [<span data-ttu-id="fd099-112">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="fd099-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

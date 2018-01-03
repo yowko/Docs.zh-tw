@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 68f918b74a5a4abd9820071b4a4772f9b57b9c88
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: de533738d6407645cd004872bb832fada2ce11a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="f99c3-102">ICorDebugValueBreakpoint::GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="f99c3-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
-<span data-ttu-id="f99c3-103">取得設定中斷點之物件的值表示 「 ICorDebugValue"物件的介面指標。</span><span class="sxs-lookup"><span data-stu-id="f99c3-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  
+# <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="3f898-102">ICorDebugValueBreakpoint::GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="3f898-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
+<span data-ttu-id="3f898-103">取得設定中斷點之物件的值表示 「 ICorDebugValue"物件的介面指標。</span><span class="sxs-lookup"><span data-stu-id="3f898-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f99c3-104">語法</span><span class="sxs-lookup"><span data-stu-id="f99c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f898-104">語法</span><span class="sxs-lookup"><span data-stu-id="3f898-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue (  
@@ -38,18 +39,18 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f99c3-105">參數</span><span class="sxs-lookup"><span data-stu-id="f99c3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3f898-105">參數</span><span class="sxs-lookup"><span data-stu-id="3f898-105">Parameters</span></span>  
  `ppValue`  
- <span data-ttu-id="f99c3-106">[out]位址指標`ICorDebugValue`物件。</span><span class="sxs-lookup"><span data-stu-id="f99c3-106">[out] A pointer to the address of an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="3f898-106">[out]位址指標`ICorDebugValue`物件。</span><span class="sxs-lookup"><span data-stu-id="3f898-106">[out] A pointer to the address of an `ICorDebugValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f99c3-107">需求</span><span class="sxs-lookup"><span data-stu-id="f99c3-107">Requirements</span></span>  
- <span data-ttu-id="f99c3-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f99c3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f898-107">需求</span><span class="sxs-lookup"><span data-stu-id="3f898-107">Requirements</span></span>  
+ <span data-ttu-id="3f898-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3f898-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f99c3-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f99c3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f898-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f898-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f99c3-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f99c3-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f898-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f898-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f99c3-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f99c3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3f898-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f898-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f99c3-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f99c3-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3f898-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="3f898-112">See Also</span></span>  
  

@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bfbde806f409f2639b2468e0ba962b1659d1ffc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 08d6146c6188e23f0846f51e88484d7f1544aff6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="0f808-102">ICorPublishAppDomain::GetID 方法</span><span class="sxs-lookup"><span data-stu-id="0f808-102">ICorPublishAppDomain::GetID Method</span></span>
-<span data-ttu-id="0f808-103">取得這個唯一識別碼[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="0f808-103">Gets the unique identifier for this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="4ea1d-102">ICorPublishAppDomain::GetID 方法</span><span class="sxs-lookup"><span data-stu-id="4ea1d-102">ICorPublishAppDomain::GetID Method</span></span>
+<span data-ttu-id="4ea1d-103">取得這個唯一識別碼[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="4ea1d-103">Gets the unique identifier for this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f808-104">語法</span><span class="sxs-lookup"><span data-stu-id="0f808-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ea1d-104">語法</span><span class="sxs-lookup"><span data-stu-id="4ea1d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -38,21 +39,21 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0f808-105">參數</span><span class="sxs-lookup"><span data-stu-id="0f808-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4ea1d-105">參數</span><span class="sxs-lookup"><span data-stu-id="4ea1d-105">Parameters</span></span>  
  `puId`  
- <span data-ttu-id="0f808-106">[out]應用程式定義域的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="0f808-106">[out] A pointer to the identifier of the application domain.</span></span>  
+ <span data-ttu-id="4ea1d-106">[out]應用程式定義域的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="4ea1d-106">[out] A pointer to the identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0f808-107">備註</span><span class="sxs-lookup"><span data-stu-id="0f808-107">Remarks</span></span>  
- <span data-ttu-id="0f808-108">只能在包含處理序的範圍中是唯一的識別項。</span><span class="sxs-lookup"><span data-stu-id="0f808-108">The identifier is unique only in the scope of the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ea1d-107">備註</span><span class="sxs-lookup"><span data-stu-id="4ea1d-107">Remarks</span></span>  
+ <span data-ttu-id="4ea1d-108">只能在包含處理序的範圍中是唯一的識別項。</span><span class="sxs-lookup"><span data-stu-id="4ea1d-108">The identifier is unique only in the scope of the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f808-109">需求</span><span class="sxs-lookup"><span data-stu-id="0f808-109">Requirements</span></span>  
- <span data-ttu-id="0f808-110">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0f808-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ea1d-109">需求</span><span class="sxs-lookup"><span data-stu-id="4ea1d-109">Requirements</span></span>  
+ <span data-ttu-id="4ea1d-110">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4ea1d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f808-111">**標頭：** CorPub.idl、 CorPub.h</span><span class="sxs-lookup"><span data-stu-id="0f808-111">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="4ea1d-111">**標頭：** CorPub.idl、 CorPub.h</span><span class="sxs-lookup"><span data-stu-id="4ea1d-111">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="0f808-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f808-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4ea1d-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4ea1d-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0f808-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f808-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4ea1d-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ea1d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f808-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f808-114">See Also</span></span>  
- [<span data-ttu-id="0f808-115">ICorPublishAppDomain 介面</span><span class="sxs-lookup"><span data-stu-id="0f808-115">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4ea1d-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="4ea1d-114">See Also</span></span>  
+ [<span data-ttu-id="4ea1d-115">ICorPublishAppDomain 介面</span><span class="sxs-lookup"><span data-stu-id="4ea1d-115">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

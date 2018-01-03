@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbd83560516e946c03a0ea71cf79fe6d3396bacb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 677b7c2858e4f3248e0d46e460b9eef09de724f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="f2514-102">SYMLINEDELTA 結構</span><span class="sxs-lookup"><span data-stu-id="f2514-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="f2514-103">提供符號處理常式已編輯移動的方法相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="f2514-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="192d7-102">SYMLINEDELTA 結構</span><span class="sxs-lookup"><span data-stu-id="192d7-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="192d7-103">提供符號處理常式已編輯移動的方法相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="192d7-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2514-104">語法</span><span class="sxs-lookup"><span data-stu-id="f2514-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="192d7-104">語法</span><span class="sxs-lookup"><span data-stu-id="192d7-104">Syntax</span></span>  
   
 ```  
 typedef struct _SYMLINEDELTA  
@@ -38,15 +39,15 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f2514-105">成員</span><span class="sxs-lookup"><span data-stu-id="f2514-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="192d7-105">成員</span><span class="sxs-lookup"><span data-stu-id="192d7-105">Members</span></span>  
   
-|<span data-ttu-id="f2514-106">成員</span><span class="sxs-lookup"><span data-stu-id="f2514-106">Member</span></span>|<span data-ttu-id="f2514-107">說明</span><span class="sxs-lookup"><span data-stu-id="f2514-107">Description</span></span>|  
+|<span data-ttu-id="192d7-106">成員</span><span class="sxs-lookup"><span data-stu-id="192d7-106">Member</span></span>|<span data-ttu-id="192d7-107">描述</span><span class="sxs-lookup"><span data-stu-id="192d7-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="f2514-108">方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="f2514-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="f2514-109">方法已移動的行數。</span><span class="sxs-lookup"><span data-stu-id="f2514-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="192d7-108">方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="192d7-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="192d7-109">方法已移動的行數。</span><span class="sxs-lookup"><span data-stu-id="192d7-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f2514-110">需求</span><span class="sxs-lookup"><span data-stu-id="f2514-110">Requirements</span></span>  
- <span data-ttu-id="f2514-111">**標頭：**於 CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="f2514-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="192d7-110">需求</span><span class="sxs-lookup"><span data-stu-id="192d7-110">Requirements</span></span>  
+ <span data-ttu-id="192d7-111">**標頭：**於 CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="192d7-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2514-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2514-112">See Also</span></span>  
- [<span data-ttu-id="f2514-113">診斷符號存放區結構</span><span class="sxs-lookup"><span data-stu-id="f2514-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a><span data-ttu-id="192d7-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="192d7-112">See Also</span></span>  
+ [<span data-ttu-id="192d7-113">診斷符號存放區結構</span><span class="sxs-lookup"><span data-stu-id="192d7-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

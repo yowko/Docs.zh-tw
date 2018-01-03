@@ -21,20 +21,21 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e04adddc51f4d43d32b9a30ffcbdc7dafe213c76
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bc654c30c40def337bd23e54eccd3e29cd0f81b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="702fa-102">ICatalogServices::NotAutodone 方法</span><span class="sxs-lookup"><span data-stu-id="702fa-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="702fa-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="702fa-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="479bd-102">ICatalogServices::NotAutodone 方法</span><span class="sxs-lookup"><span data-stu-id="479bd-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="479bd-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="479bd-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="702fa-104">語法</span><span class="sxs-lookup"><span data-stu-id="702fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="479bd-104">語法</span><span class="sxs-lookup"><span data-stu-id="479bd-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="702fa-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="702fa-105">See Also</span></span>  
- [<span data-ttu-id="702fa-106">裝載介面</span><span class="sxs-lookup"><span data-stu-id="702fa-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="479bd-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="479bd-105">See Also</span></span>  
+ [<span data-ttu-id="479bd-106">裝載介面</span><span class="sxs-lookup"><span data-stu-id="479bd-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

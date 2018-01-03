@@ -21,31 +21,32 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: de8f0ee3e2a1cc13a9bdb0f59aaecd4592ea7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9db774140ef55b2dfcb54ff701c2b842418a4923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="afca9-102">ISymUnmanagedScope::GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="afca9-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
-<span data-ttu-id="afca9-103">取得此範圍內定義的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="afca9-103">Gets a count of the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="44038-102">ISymUnmanagedScope::GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="44038-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
+<span data-ttu-id="44038-103">取得此範圍內定義的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="44038-103">Gets a count of the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afca9-104">語法</span><span class="sxs-lookup"><span data-stu-id="afca9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44038-104">語法</span><span class="sxs-lookup"><span data-stu-id="44038-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="afca9-105">參數</span><span class="sxs-lookup"><span data-stu-id="afca9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="44038-105">參數</span><span class="sxs-lookup"><span data-stu-id="44038-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="afca9-106">[out]指標`ULONG32`接收的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="afca9-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
+ <span data-ttu-id="44038-106">[out]指標`ULONG32`接收的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="44038-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="afca9-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="afca9-107">Return Value</span></span>  
- <span data-ttu-id="afca9-108">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="afca9-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="44038-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="44038-107">Return Value</span></span>  
+ <span data-ttu-id="44038-108">如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="44038-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afca9-109">需求</span><span class="sxs-lookup"><span data-stu-id="afca9-109">Requirements</span></span>  
- <span data-ttu-id="afca9-110">**標頭：**於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="afca9-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44038-109">需求</span><span class="sxs-lookup"><span data-stu-id="44038-109">Requirements</span></span>  
+ <span data-ttu-id="44038-110">**標頭：**於 CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="44038-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afca9-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="afca9-111">See Also</span></span>  
- [<span data-ttu-id="afca9-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="afca9-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="44038-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="44038-111">See Also</span></span>  
+ [<span data-ttu-id="44038-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="44038-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

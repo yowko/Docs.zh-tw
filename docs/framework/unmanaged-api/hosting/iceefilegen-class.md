@@ -19,21 +19,22 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f03ae47c38484e52ab4c967dc11ed930d619e16a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 04d0dc0d4ab53c17e818d17aa9c07f94bd05f703
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="5f33b-102">ICeeFileGen 類別</span><span class="sxs-lookup"><span data-stu-id="5f33b-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="5f33b-103">提供建立原生可攜式執行檔 (PE) 的功能。</span><span class="sxs-lookup"><span data-stu-id="5f33b-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="5f33b-104">介面將通常用於由編譯器所產生可執行檔將編譯的輸出。</span><span class="sxs-lookup"><span data-stu-id="5f33b-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="acaeb-102">ICeeFileGen 類別</span><span class="sxs-lookup"><span data-stu-id="acaeb-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="acaeb-103">提供建立原生可攜式執行檔 (PE) 的功能。</span><span class="sxs-lookup"><span data-stu-id="acaeb-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="acaeb-104">介面將通常用於由編譯器所產生可執行檔將編譯的輸出。</span><span class="sxs-lookup"><span data-stu-id="acaeb-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5f33b-105">`ICeeFileGen`支援的.NET Framework 基礎結構，並不是直接從您的程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="5f33b-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+>  <span data-ttu-id="acaeb-105">`ICeeFileGen`支援的.NET Framework 基礎結構，並不是直接從您的程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="acaeb-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="5f33b-106">此介面已被取代，而且將在未來版本中移除。</span><span class="sxs-lookup"><span data-stu-id="5f33b-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="acaeb-106">此介面已被取代，而且將在未來版本中移除。</span><span class="sxs-lookup"><span data-stu-id="acaeb-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f33b-107">語法</span><span class="sxs-lookup"><span data-stu-id="5f33b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="acaeb-107">語法</span><span class="sxs-lookup"><span data-stu-id="acaeb-107">Syntax</span></span>  
   
 ```  
 class ICeeFileGen {  
@@ -238,12 +239,12 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5f33b-108">需求</span><span class="sxs-lookup"><span data-stu-id="5f33b-108">Requirements</span></span>  
- <span data-ttu-id="5f33b-109">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5f33b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="acaeb-108">需求</span><span class="sxs-lookup"><span data-stu-id="acaeb-108">Requirements</span></span>  
+ <span data-ttu-id="acaeb-109">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="acaeb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f33b-110">**標頭：** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="5f33b-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="acaeb-110">**標頭：** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="acaeb-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="5f33b-111">**.NET framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="5f33b-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="acaeb-111">**.NET framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="acaeb-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f33b-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f33b-112">See Also</span></span>  
- [<span data-ttu-id="5f33b-113">裝載介面</span><span class="sxs-lookup"><span data-stu-id="5f33b-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="acaeb-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="acaeb-112">See Also</span></span>  
+ [<span data-ttu-id="acaeb-113">裝載介面</span><span class="sxs-lookup"><span data-stu-id="acaeb-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
