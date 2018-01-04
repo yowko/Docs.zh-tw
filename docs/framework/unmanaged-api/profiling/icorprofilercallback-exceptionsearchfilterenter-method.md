@@ -21,35 +21,36 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 129bc39fc9edd8f3101e7d03272bcab35c746d73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8196b9393a96619c17fa2771e3481cd47aafd4b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="cad57-102">ICorProfilerCallback::ExceptionSearchFilterEnter 方法</span><span class="sxs-lookup"><span data-stu-id="cad57-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
-<span data-ttu-id="cad57-103">通知分析工具的例外狀況處理的搜尋階段已開始執行使用者定義的例外狀況篩選條件。</span><span class="sxs-lookup"><span data-stu-id="cad57-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="40682-102">ICorProfilerCallback::ExceptionSearchFilterEnter 方法</span><span class="sxs-lookup"><span data-stu-id="40682-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
+<span data-ttu-id="40682-103">通知分析工具的例外狀況處理的搜尋階段已開始執行使用者定義的例外狀況篩選條件。</span><span class="sxs-lookup"><span data-stu-id="40682-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cad57-104">語法</span><span class="sxs-lookup"><span data-stu-id="cad57-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40682-104">語法</span><span class="sxs-lookup"><span data-stu-id="40682-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionSearchFilterEnter(  
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cad57-105">參數</span><span class="sxs-lookup"><span data-stu-id="cad57-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="40682-105">參數</span><span class="sxs-lookup"><span data-stu-id="40682-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="cad57-106">[in]包含篩選條件的函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="cad57-106">[in] The ID of the function that contains the filter.</span></span>  
+ <span data-ttu-id="40682-106">[in]包含篩選條件的函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="40682-106">[in] The ID of the function that contains the filter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cad57-107">需求</span><span class="sxs-lookup"><span data-stu-id="cad57-107">Requirements</span></span>  
- <span data-ttu-id="cad57-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cad57-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40682-107">需求</span><span class="sxs-lookup"><span data-stu-id="40682-107">Requirements</span></span>  
+ <span data-ttu-id="40682-108">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40682-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cad57-109">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cad57-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="40682-109">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="40682-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cad57-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cad57-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="40682-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40682-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cad57-111">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cad57-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="40682-111">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40682-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cad57-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cad57-112">See Also</span></span>  
- [<span data-ttu-id="cad57-113">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="cad57-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="cad57-114">ExceptionSearchFilterLeave 方法</span><span class="sxs-lookup"><span data-stu-id="cad57-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+## <a name="see-also"></a><span data-ttu-id="40682-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="40682-112">See Also</span></span>  
+ [<span data-ttu-id="40682-113">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="40682-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="40682-114">ExceptionSearchFilterLeave 方法</span><span class="sxs-lookup"><span data-stu-id="40682-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)

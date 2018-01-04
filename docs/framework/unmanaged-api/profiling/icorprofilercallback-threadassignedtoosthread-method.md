@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c70de2b53fd428361d5404aa406d2b2be67d0914
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 42c23a8190ea611d0333ebd96a31428574191b23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="c6659-102">ICorProfilerCallback::ThreadAssignedToOSThread 方法</span><span class="sxs-lookup"><span data-stu-id="c6659-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
-<span data-ttu-id="c6659-103">通知分析工具正在使用特定的作業系統執行緒實作 managed 的執行緒。</span><span class="sxs-lookup"><span data-stu-id="c6659-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
+# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="2796d-102">ICorProfilerCallback::ThreadAssignedToOSThread 方法</span><span class="sxs-lookup"><span data-stu-id="2796d-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
+<span data-ttu-id="2796d-103">通知分析工具正在使用特定的作業系統執行緒實作 managed 的執行緒。</span><span class="sxs-lookup"><span data-stu-id="2796d-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6659-104">語法</span><span class="sxs-lookup"><span data-stu-id="c6659-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2796d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2796d-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadAssignedToOSThread(  
@@ -38,24 +39,24 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c6659-105">參數</span><span class="sxs-lookup"><span data-stu-id="c6659-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2796d-105">參數</span><span class="sxs-lookup"><span data-stu-id="2796d-105">Parameters</span></span>  
  `managedThreadId`  
- <span data-ttu-id="c6659-106">[in]Managed 執行緒識別項。</span><span class="sxs-lookup"><span data-stu-id="c6659-106">[in] The identifier of the managed thread.</span></span>  
+ <span data-ttu-id="2796d-106">[in]Managed 執行緒識別項。</span><span class="sxs-lookup"><span data-stu-id="2796d-106">[in] The identifier of the managed thread.</span></span>  
   
  `osThreadId`  
- <span data-ttu-id="c6659-107">[in]作業系統執行緒的識別項。</span><span class="sxs-lookup"><span data-stu-id="c6659-107">[in] The identifier of the operating system thread.</span></span>  
+ <span data-ttu-id="2796d-107">[in]作業系統執行緒的識別項。</span><span class="sxs-lookup"><span data-stu-id="2796d-107">[in] The identifier of the operating system thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c6659-108">備註</span><span class="sxs-lookup"><span data-stu-id="c6659-108">Remarks</span></span>  
- <span data-ttu-id="c6659-109">`ThreadAssignedToOSThread`回呼存在，因此程式碼剖析工具可以維護 fiber 的 managed 執行緒的作業系統執行緒的精確的對應。</span><span class="sxs-lookup"><span data-stu-id="c6659-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2796d-108">備註</span><span class="sxs-lookup"><span data-stu-id="2796d-108">Remarks</span></span>  
+ <span data-ttu-id="2796d-109">`ThreadAssignedToOSThread`回呼存在，因此程式碼剖析工具可以維護 fiber 的 managed 執行緒的作業系統執行緒的精確的對應。</span><span class="sxs-lookup"><span data-stu-id="2796d-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6659-110">需求</span><span class="sxs-lookup"><span data-stu-id="c6659-110">Requirements</span></span>  
- <span data-ttu-id="c6659-111">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c6659-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2796d-110">需求</span><span class="sxs-lookup"><span data-stu-id="2796d-110">Requirements</span></span>  
+ <span data-ttu-id="2796d-111">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2796d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6659-112">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c6659-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2796d-112">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2796d-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c6659-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6659-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2796d-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2796d-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c6659-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6659-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2796d-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2796d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6659-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6659-115">See Also</span></span>  
- [<span data-ttu-id="c6659-116">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="c6659-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2796d-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="2796d-115">See Also</span></span>  
+ [<span data-ttu-id="2796d-116">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="2796d-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

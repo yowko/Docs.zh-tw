@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1910321942ebac26d8c377f9d156cdf97bd34b62
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ae9164753e919b80e635582b15da5263194e215f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cortokentype-enumeration"></a><span data-ttu-id="b46e3-102">CorTokenType 列舉</span><span class="sxs-lookup"><span data-stu-id="b46e3-102">CorTokenType Enumeration</span></span>
-<span data-ttu-id="b46e3-103">表示中繼資料語彙基元的類型。</span><span class="sxs-lookup"><span data-stu-id="b46e3-103">Indicates the type of a metadata token.</span></span>  
+# <a name="cortokentype-enumeration"></a><span data-ttu-id="8c6ca-102">CorTokenType 列舉</span><span class="sxs-lookup"><span data-stu-id="8c6ca-102">CorTokenType Enumeration</span></span>
+<span data-ttu-id="8c6ca-103">表示中繼資料語彙基元的類型。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-103">Indicates the type of a metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b46e3-104">語法</span><span class="sxs-lookup"><span data-stu-id="b46e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c6ca-104">語法</span><span class="sxs-lookup"><span data-stu-id="8c6ca-104">Syntax</span></span>  
   
 ```  
 typedef enum CorTokenType {  
@@ -63,46 +64,46 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b46e3-105">成員</span><span class="sxs-lookup"><span data-stu-id="b46e3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8c6ca-105">成員</span><span class="sxs-lookup"><span data-stu-id="8c6ca-105">Members</span></span>  
   
-|<span data-ttu-id="b46e3-106">成員</span><span class="sxs-lookup"><span data-stu-id="b46e3-106">Member</span></span>|<span data-ttu-id="b46e3-107">說明</span><span class="sxs-lookup"><span data-stu-id="b46e3-107">Description</span></span>|  
+|<span data-ttu-id="8c6ca-106">成員</span><span class="sxs-lookup"><span data-stu-id="8c6ca-106">Member</span></span>|<span data-ttu-id="8c6ca-107">描述</span><span class="sxs-lookup"><span data-stu-id="8c6ca-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdtModule`|<span data-ttu-id="b46e3-108">`mdModule`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-108">An `mdModule` token.</span></span>|  
-|`mdtTypeRef`|<span data-ttu-id="b46e3-109">`mdTypeRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-109">An `mdTypeRef` token.</span></span>|  
-|`mdtTypeDef`|<span data-ttu-id="b46e3-110">`mdTypeDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-110">An `mdTypeDef` token.</span></span>|  
-|`mdtFieldDef`|<span data-ttu-id="b46e3-111">`mdFieldDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-111">An `mdFieldDef` token.</span></span>|  
-|`mdtMethodDef`|<span data-ttu-id="b46e3-112">`mdMethodDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-112">An `mdMethodDef` token.</span></span>|  
-|`mdtParamDef`|<span data-ttu-id="b46e3-113">`mdParamDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-113">An `mdParamDef` token.</span></span>|  
-|`mdtInterfaceImpl`|<span data-ttu-id="b46e3-114">`mdInterfaceImpl`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-114">An `mdInterfaceImpl` token.</span></span>|  
-|`mdtMemberRef`|<span data-ttu-id="b46e3-115">`mdMemberRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-115">An `mdMemberRef` token.</span></span>|  
-|`mdtCustomAttribute`|<span data-ttu-id="b46e3-116">`mdCustomAttribute`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-116">An `mdCustomAttribute` token.</span></span>|  
-|`mdtPermission`|<span data-ttu-id="b46e3-117">`mdPermission`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-117">An `mdPermission` token.</span></span>|  
-|`mdtSignature`|<span data-ttu-id="b46e3-118">`mdSignature`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-118">An `mdSignature` token.</span></span>|  
-|`mdtEvent`|<span data-ttu-id="b46e3-119">`mdEvent`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-119">An `mdEvent` token.</span></span>|  
-|`mdtProperty`|<span data-ttu-id="b46e3-120">`mdProperty`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-120">An `mdProperty` token.</span></span>|  
-|`mdtModuleRef`|<span data-ttu-id="b46e3-121">`mdModuleRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-121">An `mdModuleRef` token.</span></span>|  
-|`mdtTypeSpec`|<span data-ttu-id="b46e3-122">`mdTypeSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-122">An `mdTypeSpec` token.</span></span>|  
-|`mdtAssembly`|<span data-ttu-id="b46e3-123">`mdAssembly`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-123">An `mdAssembly` token.</span></span>|  
-|`mdtAssemblyRef`|<span data-ttu-id="b46e3-124">`mdAssemblyRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-124">An `mdAssemblyRef` token.</span></span>|  
-|`mdtFile`|<span data-ttu-id="b46e3-125">`mdFile`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-125">An `mdFile` token.</span></span>|  
-|`mdtExportedType`|<span data-ttu-id="b46e3-126">`mdExportedType`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-126">An `mdExportedType` token.</span></span>|  
-|`mdtManifestResource`|<span data-ttu-id="b46e3-127">`mdManifestResource`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-127">An `mdManifestResource` token.</span></span>|  
-|`mdtGenericParam`|<span data-ttu-id="b46e3-128">`mdGenericParam`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-128">An `mdGenericParam` token.</span></span>|  
-|`mdtMethodSpec`|<span data-ttu-id="b46e3-129">`mdMethodSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-129">An `mdMethodSpec` token.</span></span>|  
-|`mdtGenericParamConstraint`|<span data-ttu-id="b46e3-130">`mdGenericParamConstraint`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-130">An `mdGenericParamConstraint` token.</span></span>|  
-|`mdtString`|<span data-ttu-id="b46e3-131">`mdString`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-131">An `mdString` token.</span></span>|  
-|`mdtName`|<span data-ttu-id="b46e3-132">`mdName`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b46e3-132">An `mdName` token.</span></span>|  
-|`mdtBaseType`|<span data-ttu-id="b46e3-133">未使用。</span><span class="sxs-lookup"><span data-stu-id="b46e3-133">Not used.</span></span>|  
+|`mdtModule`|<span data-ttu-id="8c6ca-108">`mdModule`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-108">An `mdModule` token.</span></span>|  
+|`mdtTypeRef`|<span data-ttu-id="8c6ca-109">`mdTypeRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-109">An `mdTypeRef` token.</span></span>|  
+|`mdtTypeDef`|<span data-ttu-id="8c6ca-110">`mdTypeDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-110">An `mdTypeDef` token.</span></span>|  
+|`mdtFieldDef`|<span data-ttu-id="8c6ca-111">`mdFieldDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-111">An `mdFieldDef` token.</span></span>|  
+|`mdtMethodDef`|<span data-ttu-id="8c6ca-112">`mdMethodDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-112">An `mdMethodDef` token.</span></span>|  
+|`mdtParamDef`|<span data-ttu-id="8c6ca-113">`mdParamDef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-113">An `mdParamDef` token.</span></span>|  
+|`mdtInterfaceImpl`|<span data-ttu-id="8c6ca-114">`mdInterfaceImpl`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-114">An `mdInterfaceImpl` token.</span></span>|  
+|`mdtMemberRef`|<span data-ttu-id="8c6ca-115">`mdMemberRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-115">An `mdMemberRef` token.</span></span>|  
+|`mdtCustomAttribute`|<span data-ttu-id="8c6ca-116">`mdCustomAttribute`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-116">An `mdCustomAttribute` token.</span></span>|  
+|`mdtPermission`|<span data-ttu-id="8c6ca-117">`mdPermission`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-117">An `mdPermission` token.</span></span>|  
+|`mdtSignature`|<span data-ttu-id="8c6ca-118">`mdSignature`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-118">An `mdSignature` token.</span></span>|  
+|`mdtEvent`|<span data-ttu-id="8c6ca-119">`mdEvent`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-119">An `mdEvent` token.</span></span>|  
+|`mdtProperty`|<span data-ttu-id="8c6ca-120">`mdProperty`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-120">An `mdProperty` token.</span></span>|  
+|`mdtModuleRef`|<span data-ttu-id="8c6ca-121">`mdModuleRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-121">An `mdModuleRef` token.</span></span>|  
+|`mdtTypeSpec`|<span data-ttu-id="8c6ca-122">`mdTypeSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-122">An `mdTypeSpec` token.</span></span>|  
+|`mdtAssembly`|<span data-ttu-id="8c6ca-123">`mdAssembly`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-123">An `mdAssembly` token.</span></span>|  
+|`mdtAssemblyRef`|<span data-ttu-id="8c6ca-124">`mdAssemblyRef`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-124">An `mdAssemblyRef` token.</span></span>|  
+|`mdtFile`|<span data-ttu-id="8c6ca-125">`mdFile`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-125">An `mdFile` token.</span></span>|  
+|`mdtExportedType`|<span data-ttu-id="8c6ca-126">`mdExportedType`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-126">An `mdExportedType` token.</span></span>|  
+|`mdtManifestResource`|<span data-ttu-id="8c6ca-127">`mdManifestResource`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-127">An `mdManifestResource` token.</span></span>|  
+|`mdtGenericParam`|<span data-ttu-id="8c6ca-128">`mdGenericParam`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-128">An `mdGenericParam` token.</span></span>|  
+|`mdtMethodSpec`|<span data-ttu-id="8c6ca-129">`mdMethodSpec`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-129">An `mdMethodSpec` token.</span></span>|  
+|`mdtGenericParamConstraint`|<span data-ttu-id="8c6ca-130">`mdGenericParamConstraint`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-130">An `mdGenericParamConstraint` token.</span></span>|  
+|`mdtString`|<span data-ttu-id="8c6ca-131">`mdString`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-131">An `mdString` token.</span></span>|  
+|`mdtName`|<span data-ttu-id="8c6ca-132">`mdName`語彙基元。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-132">An `mdName` token.</span></span>|  
+|`mdtBaseType`|<span data-ttu-id="8c6ca-133">未使用。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-133">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b46e3-134">備註</span><span class="sxs-lookup"><span data-stu-id="b46e3-134">Remarks</span></span>  
- <span data-ttu-id="b46e3-135">每個值會等於對應的中繼資料語彙基元中的第一個位元組的值。</span><span class="sxs-lookup"><span data-stu-id="b46e3-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c6ca-134">備註</span><span class="sxs-lookup"><span data-stu-id="8c6ca-134">Remarks</span></span>  
+ <span data-ttu-id="8c6ca-135">每個值會等於對應的中繼資料語彙基元中的第一個位元組的值。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b46e3-136">需求</span><span class="sxs-lookup"><span data-stu-id="b46e3-136">Requirements</span></span>  
- <span data-ttu-id="b46e3-137">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b46e3-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c6ca-136">需求</span><span class="sxs-lookup"><span data-stu-id="8c6ca-136">Requirements</span></span>  
+ <span data-ttu-id="8c6ca-137">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8c6ca-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b46e3-138">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b46e3-138">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8c6ca-138">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8c6ca-138">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b46e3-139">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b46e3-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8c6ca-139">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c6ca-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b46e3-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b46e3-140">See Also</span></span>  
- [<span data-ttu-id="b46e3-141">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="b46e3-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8c6ca-140">請參閱</span><span class="sxs-lookup"><span data-stu-id="8c6ca-140">See Also</span></span>  
+ [<span data-ttu-id="8c6ca-141">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="8c6ca-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

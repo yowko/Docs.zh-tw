@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab2bf1563e6dea947c29b1ac90defc9395c30b9a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd9c8deee8162ad94fbd5d5a37e862e8334a35d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4023---wasclosealllistenerchannelinstancescompleted"></a><span data-ttu-id="f3fb6-102">4023 - WasCloseAllListenerChannelInstancesCompleted</span><span class="sxs-lookup"><span data-stu-id="f3fb6-102">4023 - WasCloseAllListenerChannelInstancesCompleted</span></span>
-## <a name="properties"></a><span data-ttu-id="f3fb6-103">屬性</span><span class="sxs-lookup"><span data-stu-id="f3fb6-103">Properties</span></span>  
+# <a name="4023---wasclosealllistenerchannelinstancescompleted"></a><span data-ttu-id="cb6e7-102">4023 - WasCloseAllListenerChannelInstancesCompleted</span><span class="sxs-lookup"><span data-stu-id="cb6e7-102">4023 - WasCloseAllListenerChannelInstancesCompleted</span></span>
+## <a name="properties"></a><span data-ttu-id="cb6e7-103">屬性</span><span class="sxs-lookup"><span data-stu-id="cb6e7-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="f3fb6-104">ID</span><span class="sxs-lookup"><span data-stu-id="f3fb6-104">ID</span></span>|<span data-ttu-id="f3fb6-105">4023</span><span class="sxs-lookup"><span data-stu-id="f3fb6-105">4023</span></span>|  
-|<span data-ttu-id="f3fb6-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="f3fb6-106">Keywords</span></span>|<span data-ttu-id="f3fb6-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="f3fb6-107">ActivationServices</span></span>|  
-|<span data-ttu-id="f3fb6-108">層級</span><span class="sxs-lookup"><span data-stu-id="f3fb6-108">Level</span></span>|<span data-ttu-id="f3fb6-109">資訊</span><span class="sxs-lookup"><span data-stu-id="f3fb6-109">Information</span></span>|  
-|<span data-ttu-id="f3fb6-110">通道</span><span class="sxs-lookup"><span data-stu-id="f3fb6-110">Channel</span></span>|<span data-ttu-id="f3fb6-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="f3fb6-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="cb6e7-104">ID</span><span class="sxs-lookup"><span data-stu-id="cb6e7-104">ID</span></span>|<span data-ttu-id="cb6e7-105">4023</span><span class="sxs-lookup"><span data-stu-id="cb6e7-105">4023</span></span>|  
+|<span data-ttu-id="cb6e7-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="cb6e7-106">Keywords</span></span>|<span data-ttu-id="cb6e7-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="cb6e7-107">ActivationServices</span></span>|  
+|<span data-ttu-id="cb6e7-108">層級</span><span class="sxs-lookup"><span data-stu-id="cb6e7-108">Level</span></span>|<span data-ttu-id="cb6e7-109">資訊</span><span class="sxs-lookup"><span data-stu-id="cb6e7-109">Information</span></span>|  
+|<span data-ttu-id="cb6e7-110">通道</span><span class="sxs-lookup"><span data-stu-id="cb6e7-110">Channel</span></span>|<span data-ttu-id="cb6e7-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="cb6e7-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="f3fb6-112">描述</span><span class="sxs-lookup"><span data-stu-id="f3fb6-112">Description</span></span>  
- <span data-ttu-id="f3fb6-113">完成將所有接聽項通道執行個體關閉時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="f3fb6-113">This event is emitted when the closing of all listener channel instances is  completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="cb6e7-112">描述</span><span class="sxs-lookup"><span data-stu-id="cb6e7-112">Description</span></span>  
+ <span data-ttu-id="cb6e7-113">完成將所有接聽項通道執行個體關閉時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="cb6e7-113">This event is emitted when the closing of all listener channel instances is  completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="f3fb6-114">訊息</span><span class="sxs-lookup"><span data-stu-id="f3fb6-114">Message</span></span>  
- <span data-ttu-id="f3fb6-115">已關閉所有完成的接聽項通道執行個體。</span><span class="sxs-lookup"><span data-stu-id="f3fb6-115">Was closing all listener channel instances completed.</span></span>  
+## <a name="message"></a><span data-ttu-id="cb6e7-114">訊息</span><span class="sxs-lookup"><span data-stu-id="cb6e7-114">Message</span></span>  
+ <span data-ttu-id="cb6e7-115">已關閉所有完成的接聽項通道執行個體。</span><span class="sxs-lookup"><span data-stu-id="cb6e7-115">Was closing all listener channel instances completed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="f3fb6-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="f3fb6-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="cb6e7-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="cb6e7-116">Details</span></span>

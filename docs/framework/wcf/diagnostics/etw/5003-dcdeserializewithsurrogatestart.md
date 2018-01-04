@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c7cafb0c6c58a1d685398c0f5829a611d7383b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d436c926535f4430c700ebf74f69ac55cb107197
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5003---dcdeserializewithsurrogatestart"></a><span data-ttu-id="e49c4-102">5003 - DCDeserializeWithSurrogateStart</span><span class="sxs-lookup"><span data-stu-id="e49c4-102">5003 - DCDeserializeWithSurrogateStart</span></span>
-## <a name="properties"></a><span data-ttu-id="e49c4-103">屬性</span><span class="sxs-lookup"><span data-stu-id="e49c4-103">Properties</span></span>  
+# <a name="5003---dcdeserializewithsurrogatestart"></a><span data-ttu-id="e53b1-102">5003 - DCDeserializeWithSurrogateStart</span><span class="sxs-lookup"><span data-stu-id="e53b1-102">5003 - DCDeserializeWithSurrogateStart</span></span>
+## <a name="properties"></a><span data-ttu-id="e53b1-103">屬性</span><span class="sxs-lookup"><span data-stu-id="e53b1-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="e49c4-104">ID</span><span class="sxs-lookup"><span data-stu-id="e49c4-104">ID</span></span>|<span data-ttu-id="e49c4-105">5003</span><span class="sxs-lookup"><span data-stu-id="e49c4-105">5003</span></span>|  
-|<span data-ttu-id="e49c4-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="e49c4-106">Keywords</span></span>|<span data-ttu-id="e49c4-107">序列化</span><span class="sxs-lookup"><span data-stu-id="e49c4-107">Serialization</span></span>|  
-|<span data-ttu-id="e49c4-108">層級</span><span class="sxs-lookup"><span data-stu-id="e49c4-108">Level</span></span>|<span data-ttu-id="e49c4-109">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="e49c4-109">Verbose</span></span>|  
-|<span data-ttu-id="e49c4-110">通道</span><span class="sxs-lookup"><span data-stu-id="e49c4-110">Channel</span></span>|<span data-ttu-id="e49c4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e49c4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e53b1-104">ID</span><span class="sxs-lookup"><span data-stu-id="e53b1-104">ID</span></span>|<span data-ttu-id="e53b1-105">5003</span><span class="sxs-lookup"><span data-stu-id="e53b1-105">5003</span></span>|  
+|<span data-ttu-id="e53b1-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="e53b1-106">Keywords</span></span>|<span data-ttu-id="e53b1-107">序列化</span><span class="sxs-lookup"><span data-stu-id="e53b1-107">Serialization</span></span>|  
+|<span data-ttu-id="e53b1-108">層級</span><span class="sxs-lookup"><span data-stu-id="e53b1-108">Level</span></span>|<span data-ttu-id="e53b1-109">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="e53b1-109">Verbose</span></span>|  
+|<span data-ttu-id="e53b1-110">通道</span><span class="sxs-lookup"><span data-stu-id="e53b1-110">Channel</span></span>|<span data-ttu-id="e53b1-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e53b1-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="e49c4-112">描述</span><span class="sxs-lookup"><span data-stu-id="e49c4-112">Description</span></span>  
- <span data-ttu-id="e49c4-113">當 DataContract 使用代理還原序列化開始時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="e49c4-113">This event is emitted when the DataContract deserialize with surrogates starts.</span></span>  
+## <a name="description"></a><span data-ttu-id="e53b1-112">描述</span><span class="sxs-lookup"><span data-stu-id="e53b1-112">Description</span></span>  
+ <span data-ttu-id="e53b1-113">當 DataContract 使用代理還原序列化開始時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="e53b1-113">This event is emitted when the DataContract deserialize with surrogates starts.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="e49c4-114">訊息</span><span class="sxs-lookup"><span data-stu-id="e49c4-114">Message</span></span>  
- <span data-ttu-id="e49c4-115">DataContract 使用代理還原序列化 %1 開始。</span><span class="sxs-lookup"><span data-stu-id="e49c4-115">DataContract deserialize %1 with surrogates start.</span></span>  
+## <a name="message"></a><span data-ttu-id="e53b1-114">訊息</span><span class="sxs-lookup"><span data-stu-id="e53b1-114">Message</span></span>  
+ <span data-ttu-id="e53b1-115">DataContract 使用代理還原序列化 %1 開始。</span><span class="sxs-lookup"><span data-stu-id="e53b1-115">DataContract deserialize %1 with surrogates start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="e49c4-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="e49c4-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e53b1-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="e53b1-116">Details</span></span>

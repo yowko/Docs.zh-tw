@@ -19,16 +19,17 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: eac01ce31e850eb02af84c0b84e58c1f0142242d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c35bbfef62f65a9a401d00f9ae56e2f4c00bb0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="804f9-102">CorLocalRefPreservation 列舉</span><span class="sxs-lookup"><span data-stu-id="804f9-102">CorLocalRefPreservation Enumeration</span></span>
-<span data-ttu-id="804f9-103">包含代表本機參考處理方式的旗標值。</span><span class="sxs-lookup"><span data-stu-id="804f9-103">Contains flag values for the treatment of local references.</span></span>  
+# <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="6137d-102">CorLocalRefPreservation 列舉</span><span class="sxs-lookup"><span data-stu-id="6137d-102">CorLocalRefPreservation Enumeration</span></span>
+<span data-ttu-id="6137d-103">包含代表本機參考處理方式的旗標值。</span><span class="sxs-lookup"><span data-stu-id="6137d-103">Contains flag values for the treatment of local references.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="804f9-104">語法</span><span class="sxs-lookup"><span data-stu-id="804f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6137d-104">語法</span><span class="sxs-lookup"><span data-stu-id="6137d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorLocalRefPreservation  
@@ -39,20 +40,20 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="804f9-105">成員</span><span class="sxs-lookup"><span data-stu-id="804f9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6137d-105">成員</span><span class="sxs-lookup"><span data-stu-id="6137d-105">Members</span></span>  
   
-|<span data-ttu-id="804f9-106">成員</span><span class="sxs-lookup"><span data-stu-id="804f9-106">Member</span></span>|<span data-ttu-id="804f9-107">說明</span><span class="sxs-lookup"><span data-stu-id="804f9-107">Description</span></span>|  
+|<span data-ttu-id="6137d-106">成員</span><span class="sxs-lookup"><span data-stu-id="6137d-106">Member</span></span>|<span data-ttu-id="6137d-107">描述</span><span class="sxs-lookup"><span data-stu-id="6137d-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|<span data-ttu-id="804f9-108">保留本機參考。</span><span class="sxs-lookup"><span data-stu-id="804f9-108">Preserve no local references.</span></span>|  
-|`MDPreserveLocalTypeRef`|<span data-ttu-id="804f9-109">保留本機類型參考。</span><span class="sxs-lookup"><span data-stu-id="804f9-109">Preserve local type references.</span></span>|  
-|`MDPreserveLocalMemberRef`|<span data-ttu-id="804f9-110">保留本機成員的參考。</span><span class="sxs-lookup"><span data-stu-id="804f9-110">Preserve local member references.</span></span>|  
+|`MDPreserveLocalRefsNone`|<span data-ttu-id="6137d-108">保留本機參考。</span><span class="sxs-lookup"><span data-stu-id="6137d-108">Preserve no local references.</span></span>|  
+|`MDPreserveLocalTypeRef`|<span data-ttu-id="6137d-109">保留本機類型參考。</span><span class="sxs-lookup"><span data-stu-id="6137d-109">Preserve local type references.</span></span>|  
+|`MDPreserveLocalMemberRef`|<span data-ttu-id="6137d-110">保留本機成員的參考。</span><span class="sxs-lookup"><span data-stu-id="6137d-110">Preserve local member references.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="804f9-111">需求</span><span class="sxs-lookup"><span data-stu-id="804f9-111">Requirements</span></span>  
- <span data-ttu-id="804f9-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="804f9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6137d-111">需求</span><span class="sxs-lookup"><span data-stu-id="6137d-111">Requirements</span></span>  
+ <span data-ttu-id="6137d-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6137d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="804f9-113">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="804f9-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="6137d-113">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="6137d-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="804f9-114">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="804f9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="6137d-114">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6137d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="804f9-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="804f9-115">See Also</span></span>  
- [<span data-ttu-id="804f9-116">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="804f9-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="6137d-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="6137d-115">See Also</span></span>  
+ [<span data-ttu-id="6137d-116">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="6137d-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

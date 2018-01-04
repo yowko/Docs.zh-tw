@@ -21,16 +21,17 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 015bf62bdca1c7437afb26a5d08d21bd276cd3db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d3585778d9076cb313ffed69a0e126891c4ce49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadatatablesgetnextguid-method"></a><span data-ttu-id="54a4d-102">IMetaDataTables::GetNextGuid 方法</span><span class="sxs-lookup"><span data-stu-id="54a4d-102">IMetaDataTables::GetNextGuid Method</span></span>
-<span data-ttu-id="54a4d-103">取得目前的資料表資料行中的下一個 GUID 值的索引。</span><span class="sxs-lookup"><span data-stu-id="54a4d-103">Gets the index of the next GUID value in the current table column.</span></span>  
+# <a name="imetadatatablesgetnextguid-method"></a><span data-ttu-id="33574-102">IMetaDataTables::GetNextGuid 方法</span><span class="sxs-lookup"><span data-stu-id="33574-102">IMetaDataTables::GetNextGuid Method</span></span>
+<span data-ttu-id="33574-103">取得目前的資料表資料行中的下一個 GUID 值的索引。</span><span class="sxs-lookup"><span data-stu-id="33574-103">Gets the index of the next GUID value in the current table column.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54a4d-104">語法</span><span class="sxs-lookup"><span data-stu-id="54a4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33574-104">語法</span><span class="sxs-lookup"><span data-stu-id="33574-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextGuid (  
@@ -39,25 +40,25 @@ HRESULT GetNextGuid (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="54a4d-105">參數</span><span class="sxs-lookup"><span data-stu-id="54a4d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="33574-105">參數</span><span class="sxs-lookup"><span data-stu-id="33574-105">Parameters</span></span>  
  `ixGuid`  
- <span data-ttu-id="54a4d-106">[in]GUID 的資料表資料行的索引值。</span><span class="sxs-lookup"><span data-stu-id="54a4d-106">[in] The index value from a GUID table column.</span></span>  
+ <span data-ttu-id="33574-106">[in]GUID 的資料表資料行的索引值。</span><span class="sxs-lookup"><span data-stu-id="33574-106">[in] The index value from a GUID table column.</span></span>  
   
  `pNext`  
- <span data-ttu-id="54a4d-107">[out]索引的下一個 GUID 值的指標。</span><span class="sxs-lookup"><span data-stu-id="54a4d-107">[out] A pointer to the index of the next GUID value.</span></span>  
+ <span data-ttu-id="33574-107">[out]索引的下一個 GUID 值的指標。</span><span class="sxs-lookup"><span data-stu-id="33574-107">[out] A pointer to the index of the next GUID value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="54a4d-108">備註</span><span class="sxs-lookup"><span data-stu-id="54a4d-108">Remarks</span></span>  
- <span data-ttu-id="54a4d-109">我們不建議使用這個方法，因為它不會傳回一致的結果。</span><span class="sxs-lookup"><span data-stu-id="54a4d-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="54a4d-110">如 GUID 資料表的相關資訊，請參閱 Common Language Infrastructure (CLI) 文件，尤其是 < 磁碟分割 II： 中繼資料定義和語意 >。</span><span class="sxs-lookup"><span data-stu-id="54a4d-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="54a4d-111">您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](http://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。</span><span class="sxs-lookup"><span data-stu-id="54a4d-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33574-108">備註</span><span class="sxs-lookup"><span data-stu-id="33574-108">Remarks</span></span>  
+ <span data-ttu-id="33574-109">我們不建議使用這個方法，因為它不會傳回一致的結果。</span><span class="sxs-lookup"><span data-stu-id="33574-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="33574-110">如 GUID 資料表的相關資訊，請參閱 Common Language Infrastructure (CLI) 文件，尤其是 < 磁碟分割 II： 中繼資料定義和語意 >。</span><span class="sxs-lookup"><span data-stu-id="33574-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="33574-111">您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](http://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。</span><span class="sxs-lookup"><span data-stu-id="33574-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54a4d-112">需求</span><span class="sxs-lookup"><span data-stu-id="54a4d-112">Requirements</span></span>  
- <span data-ttu-id="54a4d-113">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="54a4d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33574-112">需求</span><span class="sxs-lookup"><span data-stu-id="33574-112">Requirements</span></span>  
+ <span data-ttu-id="33574-113">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="33574-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54a4d-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54a4d-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="33574-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="33574-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="54a4d-115">**程式庫：**做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="54a4d-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="33574-115">**程式庫：**做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="33574-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="54a4d-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54a4d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="33574-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33574-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54a4d-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="54a4d-117">See Also</span></span>  
- [<span data-ttu-id="54a4d-118">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="54a4d-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="54a4d-119">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="54a4d-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="33574-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="33574-117">See Also</span></span>  
+ [<span data-ttu-id="33574-118">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="33574-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [<span data-ttu-id="33574-119">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="33574-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
