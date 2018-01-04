@@ -17,36 +17,37 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="9fdd5-102">主要畫面格動畫 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="9fdd5-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="9fdd5-103">本節中的主題將示範如何使用超過兩個屬性值和控制項插補的動畫主要畫面格動畫。</span><span class="sxs-lookup"><span data-stu-id="9fdd5-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="90d5e-102">主要畫面格動畫 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="90d5e-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="90d5e-103">本節中的主題將示範如何使用超過兩個屬性值和控制項插補的動畫主要畫面格動畫。</span><span class="sxs-lookup"><span data-stu-id="90d5e-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9fdd5-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="9fdd5-104">In This Section</span></span>  
- [<span data-ttu-id="9fdd5-105">使用主要畫面格建立物件的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-106">使用主要畫面格建立布林值的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-107">使用主要畫面格建立雙精度浮點數的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-108">使用主要畫面格建立矩陣的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-109">使用主要畫面格建立點的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-110">使用主要畫面格建立矩形幾何的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-111">使用主要畫面格建立字串的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-112">使用主要畫面格建立色彩的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-113">使用主要畫面格建立大小變更的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-114">使用主要畫面格建立框線粗細的動畫</span><span class="sxs-lookup"><span data-stu-id="9fdd5-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="9fdd5-115">控制主要畫面格動畫執行時間</span><span class="sxs-lookup"><span data-stu-id="9fdd5-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="90d5e-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="90d5e-104">In This Section</span></span>  
+ [<span data-ttu-id="90d5e-105">使用主要畫面格建立物件的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-106">使用主要畫面格建立布林值的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-107">使用主要畫面格建立雙精度浮點數的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-108">使用主要畫面格建立矩陣的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-109">使用主要畫面格建立點的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-110">使用主要畫面格建立矩形幾何的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-111">使用主要畫面格建立字串的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-112">使用主要畫面格建立色彩的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-113">使用主要畫面格建立大小變更的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-114">使用主要畫面格建立框線粗細的動畫</span><span class="sxs-lookup"><span data-stu-id="90d5e-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="90d5e-115">控制主要畫面格動畫執行時間</span><span class="sxs-lookup"><span data-stu-id="90d5e-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="9fdd5-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="9fdd5-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="90d5e-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="90d5e-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="9fdd5-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9fdd5-117">See Also</span></span>  
- [<span data-ttu-id="9fdd5-118">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="9fdd5-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="9fdd5-119">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="9fdd5-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="9fdd5-120">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="9fdd5-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="90d5e-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="90d5e-117">See Also</span></span>  
+ [<span data-ttu-id="90d5e-118">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="90d5e-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="90d5e-119">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="90d5e-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="90d5e-120">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="90d5e-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

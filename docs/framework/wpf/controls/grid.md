@@ -18,19 +18,20 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58d4bb7974da8f68d7711ec27c914ecac2bb4f93
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0e380f239b85eaa743ceec998c866fdfe07e7c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="grid"></a><span data-ttu-id="a515d-102">Grid</span><span class="sxs-lookup"><span data-stu-id="a515d-102">Grid</span></span>
-<span data-ttu-id="a515d-103"><xref:System.Windows.Controls.Grid>項目用以精確地將內容放置在資料列和資料行中。</span><span class="sxs-lookup"><span data-stu-id="a515d-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="66a11-102">Grid</span><span class="sxs-lookup"><span data-stu-id="66a11-102">Grid</span></span>
+<span data-ttu-id="66a11-103"><xref:System.Windows.Controls.Grid>項目用以精確地將內容放置在資料列和資料行中。</span><span class="sxs-lookup"><span data-stu-id="66a11-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a515d-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="a515d-104">In This Section</span></span>  
- [<span data-ttu-id="a515d-105">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="a515d-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66a11-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="66a11-104">In This Section</span></span>  
+ [<span data-ttu-id="66a11-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="66a11-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a515d-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="a515d-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66a11-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="66a11-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -45,9 +46,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="a515d-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="a515d-107">Related Sections</span></span>  
- [<span data-ttu-id="a515d-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="a515d-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="66a11-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="66a11-107">Related Sections</span></span>  
+ [<span data-ttu-id="66a11-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="66a11-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="a515d-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="a515d-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="66a11-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="66a11-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="a515d-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="a515d-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="66a11-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="66a11-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -17,22 +17,23 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 628dd919ccb03b39a198f00ed092f24048ad9f5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0717e3b7f4dc72c2e5a75149b88f1f1d1285dad1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="combobox"></a><span data-ttu-id="99c86-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="99c86-102">ComboBox</span></span>
-<span data-ttu-id="99c86-103"><xref:System.Windows.Controls.ComboBox>控制向使用者呈現選項的清單。</span><span class="sxs-lookup"><span data-stu-id="99c86-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="99c86-104">清單會顯示和隱藏控制項展開和摺疊。</span><span class="sxs-lookup"><span data-stu-id="99c86-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="99c86-105">在其預設狀態下，清單會摺疊，顯示只有一個選擇。</span><span class="sxs-lookup"><span data-stu-id="99c86-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="99c86-106">使用者按一下按鈕以查看完整的選項清單。</span><span class="sxs-lookup"><span data-stu-id="99c86-106">The user clicks a button to see the complete list of options.</span></span>  
+# <a name="combobox"></a><span data-ttu-id="f203f-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="f203f-102">ComboBox</span></span>
+<span data-ttu-id="f203f-103"><xref:System.Windows.Controls.ComboBox>控制向使用者呈現選項的清單。</span><span class="sxs-lookup"><span data-stu-id="f203f-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="f203f-104">清單會顯示和隱藏控制項展開和摺疊。</span><span class="sxs-lookup"><span data-stu-id="f203f-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="f203f-105">在其預設狀態下，清單會摺疊，顯示只有一個選擇。</span><span class="sxs-lookup"><span data-stu-id="f203f-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="f203f-106">使用者按一下按鈕以查看完整的選項清單。</span><span class="sxs-lookup"><span data-stu-id="f203f-106">The user clicks a button to see the complete list of options.</span></span>  
   
- <span data-ttu-id="99c86-107">下圖顯示<xref:System.Windows.Controls.ComboBox>不同狀態。</span><span class="sxs-lookup"><span data-stu-id="99c86-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
+ <span data-ttu-id="f203f-107">下圖顯示<xref:System.Windows.Controls.ComboBox>不同狀態。</span><span class="sxs-lookup"><span data-stu-id="f203f-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
   
- <span data-ttu-id="99c86-108">![下拉式方塊的預設和按下狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="99c86-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
-<span data-ttu-id="99c86-109">摺疊和展開</span><span class="sxs-lookup"><span data-stu-id="99c86-109">Collapsed and expanded</span></span>  
+ <span data-ttu-id="f203f-108">![下拉式方塊的預設和按下狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="f203f-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
+<span data-ttu-id="f203f-109">摺疊和展開</span><span class="sxs-lookup"><span data-stu-id="f203f-109">Collapsed and expanded</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="99c86-110">本章節內容</span><span class="sxs-lookup"><span data-stu-id="99c86-110">In This Section</span></span>  
- [<span data-ttu-id="99c86-111">如何： 取得 ComboBoxItem</span><span class="sxs-lookup"><span data-stu-id="99c86-111">How to: Get a ComboBoxItem</span></span>](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+## <a name="in-this-section"></a><span data-ttu-id="f203f-110">本節內容</span><span class="sxs-lookup"><span data-stu-id="f203f-110">In This Section</span></span>  
+ [<span data-ttu-id="f203f-111">如何： 取得 ComboBoxItem</span><span class="sxs-lookup"><span data-stu-id="f203f-111">How to: Get a ComboBoxItem</span></span>](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
-## <a name="reference"></a><span data-ttu-id="99c86-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="99c86-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f203f-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="f203f-112">Reference</span></span>  
  <xref:System.Windows.Controls.ComboBox>

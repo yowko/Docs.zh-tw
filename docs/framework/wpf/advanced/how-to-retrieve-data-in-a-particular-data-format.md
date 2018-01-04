@@ -20,33 +20,34 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e6513fd6d8d443b76059626c0e40991e35830c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 884b017a69e55cfccc9201ad2d101017b0c290b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-retrieve-data-in-a-particular-data-format"></a><span data-ttu-id="870d0-102">如何：擷取特定資料格式的資料</span><span class="sxs-lookup"><span data-stu-id="870d0-102">How to: Retrieve Data in a Particular Data Format</span></span>
-<span data-ttu-id="870d0-103">下列範例會示範如何從指定的格式中的資料物件擷取資料。</span><span class="sxs-lookup"><span data-stu-id="870d0-103">The following examples show how to retrieve data from a data object in a specified format.</span></span>  
+# <a name="how-to-retrieve-data-in-a-particular-data-format"></a><span data-ttu-id="2afae-102">如何：擷取特定資料格式的資料</span><span class="sxs-lookup"><span data-stu-id="2afae-102">How to: Retrieve Data in a Particular Data Format</span></span>
+<span data-ttu-id="2afae-103">下列範例會示範如何從指定的格式中的資料物件擷取資料。</span><span class="sxs-lookup"><span data-stu-id="2afae-103">The following examples show how to retrieve data from a data object in a specified format.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="870d0-104">範例</span><span class="sxs-lookup"><span data-stu-id="870d0-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2afae-104">範例</span><span class="sxs-lookup"><span data-stu-id="2afae-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="870d0-105">說明</span><span class="sxs-lookup"><span data-stu-id="870d0-105">Description</span></span>  
- <span data-ttu-id="870d0-106">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%29>多載來檢查指定的資料設定格式 （原生或自動轉換）; 如果指定的格式使用時，此範例會擷取資料使用<xref:System.Windows.DataObject.GetData%28System.String%29>方法。</span><span class="sxs-lookup"><span data-stu-id="870d0-106">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload to first check if a specified data format is available (natively or by auto-convert); if the specified format is available, the example retrieves the data by using the <xref:System.Windows.DataObject.GetData%28System.String%29> method.</span></span>  
+### <a name="description"></a><span data-ttu-id="2afae-105">描述</span><span class="sxs-lookup"><span data-stu-id="2afae-105">Description</span></span>  
+ <span data-ttu-id="2afae-106">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%29>多載來檢查指定的資料設定格式 （原生或自動轉換）; 如果指定的格式使用時，此範例會擷取資料使用<xref:System.Windows.DataObject.GetData%28System.String%29>方法。</span><span class="sxs-lookup"><span data-stu-id="2afae-106">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload to first check if a specified data format is available (natively or by auto-convert); if the specified format is available, the example retrieves the data by using the <xref:System.Windows.DataObject.GetData%28System.String%29> method.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="870d0-107">程式碼</span><span class="sxs-lookup"><span data-stu-id="870d0-107">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="2afae-107">程式碼</span><span class="sxs-lookup"><span data-stu-id="2afae-107">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat)]  
   
-## <a name="example"></a><span data-ttu-id="870d0-108">範例</span><span class="sxs-lookup"><span data-stu-id="870d0-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2afae-108">範例</span><span class="sxs-lookup"><span data-stu-id="2afae-108">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="870d0-109">說明</span><span class="sxs-lookup"><span data-stu-id="870d0-109">Description</span></span>  
- <span data-ttu-id="870d0-110">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29>多載，先檢查是否指定的資料格式是使用原生 （自動轉換的資料格式已篩選）; 如果指定的格式使用時，此範例會擷取資料使用<xref:System.Windows.DataObject.GetData%28System.String%29>方法。</span><span class="sxs-lookup"><span data-stu-id="870d0-110">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> overload to first check if a specified data format is available natively (auto-convertible data formats are filtered); if the specified format is available, the example retrieves the data by using the <xref:System.Windows.DataObject.GetData%28System.String%29> method.</span></span>  
+### <a name="description"></a><span data-ttu-id="2afae-109">描述</span><span class="sxs-lookup"><span data-stu-id="2afae-109">Description</span></span>  
+ <span data-ttu-id="2afae-110">下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29>多載，先檢查是否指定的資料格式是使用原生 （自動轉換的資料格式已篩選）; 如果指定的格式使用時，此範例會擷取資料使用<xref:System.Windows.DataObject.GetData%28System.String%29>方法。</span><span class="sxs-lookup"><span data-stu-id="2afae-110">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> overload to first check if a specified data format is available natively (auto-convertible data formats are filtered); if the specified format is available, the example retrieves the data by using the <xref:System.Windows.DataObject.GetData%28System.String%29> method.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="870d0-111">程式碼</span><span class="sxs-lookup"><span data-stu-id="870d0-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="2afae-111">程式碼</span><span class="sxs-lookup"><span data-stu-id="2afae-111">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat_Native](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat_native)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat_Native](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat_native)]  
   
-## <a name="see-also"></a><span data-ttu-id="870d0-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="870d0-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2afae-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="2afae-112">See Also</span></span>  
  <xref:System.Windows.IDataObject>  
- [<span data-ttu-id="870d0-113">拖放概觀</span><span class="sxs-lookup"><span data-stu-id="870d0-113">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+ [<span data-ttu-id="2afae-113">拖放概觀</span><span class="sxs-lookup"><span data-stu-id="2afae-113">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

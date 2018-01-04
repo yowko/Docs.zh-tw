@@ -17,33 +17,34 @@ caps.latest.revision: "61"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 405c9485e61692df83337740c2ccdae0408c1c0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf54273ba040b82a3e292f82680a480b8a807a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="01a8b-102">XAML 命名空間 (x:) 語言功能</span><span class="sxs-lookup"><span data-stu-id="01a8b-102">XAML Namespace (x:) Language Features</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="01a8b-103">本章節內容</span><span class="sxs-lookup"><span data-stu-id="01a8b-103">In This Section</span></span>  
- [<span data-ttu-id="01a8b-104">x:Array 標記延伸</span><span class="sxs-lookup"><span data-stu-id="01a8b-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
- [<span data-ttu-id="01a8b-105">x:Class 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-105">x:Class Directive</span></span>](x-class-directive.md)  
- [<span data-ttu-id="01a8b-106">x:ClassModifier 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
- [<span data-ttu-id="01a8b-107">x:Code 內建 XAML 類型</span><span class="sxs-lookup"><span data-stu-id="01a8b-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
- [<span data-ttu-id="01a8b-108">x:FieldModifier 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
- [<span data-ttu-id="01a8b-109">x:Key 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-109">x:Key Directive</span></span>](x-key-directive.md)  
- [<span data-ttu-id="01a8b-110">x:Member 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-110">x:Member Directive</span></span>](x-member-directive.md)  
- [<span data-ttu-id="01a8b-111">x:Members 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-111">x:Members Directive</span></span>](x-members-directive.md)  
- [<span data-ttu-id="01a8b-112">x:Name 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-112">x:Name Directive</span></span>](x-name-directive.md)  
- [<span data-ttu-id="01a8b-113">x:Null 標記延伸</span><span class="sxs-lookup"><span data-stu-id="01a8b-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
- [<span data-ttu-id="01a8b-114">x:Shared 屬性</span><span class="sxs-lookup"><span data-stu-id="01a8b-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
- [<span data-ttu-id="01a8b-115">x:Property 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-115">x:Property Directive</span></span>](x-property-directive.md)  
- [<span data-ttu-id="01a8b-116">x:Static 標記延伸</span><span class="sxs-lookup"><span data-stu-id="01a8b-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
- [<span data-ttu-id="01a8b-117">x:Subclass 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
- [<span data-ttu-id="01a8b-118">x:Type 標記延伸模組</span><span class="sxs-lookup"><span data-stu-id="01a8b-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
- [<span data-ttu-id="01a8b-119">x:TypeArguments 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
- [<span data-ttu-id="01a8b-120">x:Uid 指示詞</span><span class="sxs-lookup"><span data-stu-id="01a8b-120">x:Uid Directive</span></span>](x-uid-directive.md)  
- [<span data-ttu-id="01a8b-121">x:XData 內建 XAML 類型</span><span class="sxs-lookup"><span data-stu-id="01a8b-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
- [<span data-ttu-id="01a8b-122">XamlName 文法</span><span class="sxs-lookup"><span data-stu-id="01a8b-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
- [<span data-ttu-id="01a8b-123">{} 逸出序列標記延伸</span><span class="sxs-lookup"><span data-stu-id="01a8b-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
- [<span data-ttu-id="01a8b-124">XAML 中的 xml:lang 處理</span><span class="sxs-lookup"><span data-stu-id="01a8b-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
- [<span data-ttu-id="01a8b-125">XAML 中的 xml:space 處理</span><span class="sxs-lookup"><span data-stu-id="01a8b-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)
+# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="5bd06-102">XAML 命名空間 (x:) 語言功能</span><span class="sxs-lookup"><span data-stu-id="5bd06-102">XAML Namespace (x:) Language Features</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="5bd06-103">本節內容</span><span class="sxs-lookup"><span data-stu-id="5bd06-103">In This Section</span></span>  
+ [<span data-ttu-id="5bd06-104">x:Array 標記延伸</span><span class="sxs-lookup"><span data-stu-id="5bd06-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
+ [<span data-ttu-id="5bd06-105">x:Class 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-105">x:Class Directive</span></span>](x-class-directive.md)  
+ [<span data-ttu-id="5bd06-106">x:ClassModifier 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
+ [<span data-ttu-id="5bd06-107">x:Code 內建 XAML 類型</span><span class="sxs-lookup"><span data-stu-id="5bd06-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="5bd06-108">x:FieldModifier 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
+ [<span data-ttu-id="5bd06-109">x:Key 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-109">x:Key Directive</span></span>](x-key-directive.md)  
+ [<span data-ttu-id="5bd06-110">x:Member 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-110">x:Member Directive</span></span>](x-member-directive.md)  
+ [<span data-ttu-id="5bd06-111">x:Members 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-111">x:Members Directive</span></span>](x-members-directive.md)  
+ [<span data-ttu-id="5bd06-112">x:Name 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-112">x:Name Directive</span></span>](x-name-directive.md)  
+ [<span data-ttu-id="5bd06-113">x:Null 標記延伸</span><span class="sxs-lookup"><span data-stu-id="5bd06-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
+ [<span data-ttu-id="5bd06-114">x:Shared 屬性</span><span class="sxs-lookup"><span data-stu-id="5bd06-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
+ [<span data-ttu-id="5bd06-115">x:Property 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-115">x:Property Directive</span></span>](x-property-directive.md)  
+ [<span data-ttu-id="5bd06-116">x:Static 標記延伸</span><span class="sxs-lookup"><span data-stu-id="5bd06-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
+ [<span data-ttu-id="5bd06-117">x:Subclass 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
+ [<span data-ttu-id="5bd06-118">x:Type 標記延伸模組</span><span class="sxs-lookup"><span data-stu-id="5bd06-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
+ [<span data-ttu-id="5bd06-119">x:TypeArguments 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
+ [<span data-ttu-id="5bd06-120">x:Uid 指示詞</span><span class="sxs-lookup"><span data-stu-id="5bd06-120">x:Uid Directive</span></span>](x-uid-directive.md)  
+ [<span data-ttu-id="5bd06-121">x:XData 內建 XAML 類型</span><span class="sxs-lookup"><span data-stu-id="5bd06-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="5bd06-122">XamlName 文法</span><span class="sxs-lookup"><span data-stu-id="5bd06-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
+ [<span data-ttu-id="5bd06-123">{} 逸出序列標記延伸</span><span class="sxs-lookup"><span data-stu-id="5bd06-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
+ [<span data-ttu-id="5bd06-124">XAML 中的 xml:lang 處理</span><span class="sxs-lookup"><span data-stu-id="5bd06-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="5bd06-125">XAML 中的 xml:space 處理</span><span class="sxs-lookup"><span data-stu-id="5bd06-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)

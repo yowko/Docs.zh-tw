@@ -24,20 +24,21 @@ caps.latest.revision: "97"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d7dce942499984c24f982e321d976982e404978
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4c2fb9d69e7b0ccfc2b87aea0cda5e7b4804f416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="bc0da-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="bc0da-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="bc0da-103">Visual Studio 2015 中的 Windows Presentation Foundation (WPF) 為開發人員提供了統一的程式撰寫模型，可在 Windows 上建置新式的企業營運桌面應用程式。</span><span class="sxs-lookup"><span data-stu-id="bc0da-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="1c24e-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="1c24e-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="1c24e-103">Visual Studio 2015 中的 Windows Presentation Foundation (WPF) 為開發人員提供了統一的程式撰寫模型，可在 Windows 上建置新式的企業營運桌面應用程式。</span><span class="sxs-lookup"><span data-stu-id="1c24e-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bc0da-104">Mozilla Firefox 瀏覽器會停用 Microsoft Framework Assistant 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="bc0da-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="bc0da-105">如需如何從 Firefox 移除延伸模組的資訊，請參閱 [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) (如何移除適用於 Firefox 的 .NET Framework Assistant)。</span><span class="sxs-lookup"><span data-stu-id="bc0da-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
+>  <span data-ttu-id="1c24e-104">Mozilla Firefox 瀏覽器會停用 Microsoft Framework Assistant 延伸模組。</span><span class="sxs-lookup"><span data-stu-id="1c24e-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="1c24e-105">如需如何從 Firefox 移除延伸模組的資訊，請參閱 [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) (如何移除適用於 Firefox 的 .NET Framework Assistant)。</span><span class="sxs-lookup"><span data-stu-id="1c24e-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [<span data-ttu-id="bc0da-106">使用 Windows Presentation Foundation 建立新式桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="bc0da-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="1c24e-106">使用 Windows Presentation Foundation 建立新式桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="1c24e-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
- [<span data-ttu-id="bc0da-107">在 Visual Studio 和 Blend for Visual Studio 中設計 XAML</span><span class="sxs-lookup"><span data-stu-id="bc0da-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="1c24e-107">在 Visual Studio 和 Blend for Visual Studio 中設計 XAML</span><span class="sxs-lookup"><span data-stu-id="1c24e-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="bc0da-108">取得 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="bc0da-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="1c24e-108">取得 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1c24e-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

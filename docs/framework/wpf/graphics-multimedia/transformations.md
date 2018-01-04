@@ -26,21 +26,22 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b26b2945f35e0ba96cc76e7bce460c06ab9887e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da061a85338e4a9afb530a2986942950b7dcc136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transformations"></a><span data-ttu-id="3a82d-102">轉換</span><span class="sxs-lookup"><span data-stu-id="3a82d-102">Transformations</span></span>
-<span data-ttu-id="3a82d-103">轉型可用來旋轉、 縮放、 轉譯，或扭曲<xref:System.Windows.FrameworkElement>物件。</span><span class="sxs-lookup"><span data-stu-id="3a82d-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="4a244-102">轉換</span><span class="sxs-lookup"><span data-stu-id="4a244-102">Transformations</span></span>
+<span data-ttu-id="4a244-103">轉型可用來旋轉、 縮放、 轉譯，或扭曲<xref:System.Windows.FrameworkElement>物件。</span><span class="sxs-lookup"><span data-stu-id="4a244-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a82d-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="3a82d-104">In This Section</span></span>  
- [<span data-ttu-id="3a82d-105">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="3a82d-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="3a82d-106">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="3a82d-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4a244-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="4a244-104">In This Section</span></span>  
+ [<span data-ttu-id="4a244-105">轉換概觀</span><span class="sxs-lookup"><span data-stu-id="4a244-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="4a244-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="4a244-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3a82d-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a82d-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4a244-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="4a244-107">See Also</span></span>  
  <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="3a82d-108">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="3a82d-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="3a82d-109">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="3a82d-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="3a82d-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="3a82d-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+ [<span data-ttu-id="4a244-108">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="4a244-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="4a244-109">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="4a244-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="4a244-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="4a244-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

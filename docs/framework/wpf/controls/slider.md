@@ -17,23 +17,24 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0390a8c19cf14ef3fa7ce08bdfb30592b5294377
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7516dfafeb4ff5a2adcbf6b2bb51efd07945cb35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="slider"></a><span data-ttu-id="d0262-102">滑桿</span><span class="sxs-lookup"><span data-stu-id="d0262-102">Slider</span></span>
-<span data-ttu-id="d0262-103"><xref:System.Windows.Controls.Slider>可讓您選取的值範圍從移動<xref:System.Windows.Controls.Primitives.Thumb>沿著<xref:System.Windows.Controls.Primitives.Track>。</span><span class="sxs-lookup"><span data-stu-id="d0262-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="43e72-102">滑桿</span><span class="sxs-lookup"><span data-stu-id="43e72-102">Slider</span></span>
+<span data-ttu-id="43e72-103"><xref:System.Windows.Controls.Slider>可讓您選取的值範圍從移動<xref:System.Windows.Controls.Primitives.Thumb>沿著<xref:System.Windows.Controls.Primitives.Track>。</span><span class="sxs-lookup"><span data-stu-id="43e72-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="d0262-104">下圖顯示在水平的範例<xref:System.Windows.Controls.Slider>控制項。</span><span class="sxs-lookup"><span data-stu-id="d0262-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="43e72-104">下圖顯示在水平的範例<xref:System.Windows.Controls.Slider>控制項。</span><span class="sxs-lookup"><span data-stu-id="43e72-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="d0262-105">![具有刻度記號的水平滑桿](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="d0262-105">![Horizontal slider with tick marks](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="43e72-105">![具有刻度記號的水平滑桿](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="43e72-105">![Horizontal slider with tick marks](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d0262-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="d0262-106">In This Section</span></span>  
- [<span data-ttu-id="d0262-107">自訂滑桿上的刻度</span><span class="sxs-lookup"><span data-stu-id="d0262-107">Customize the Ticks on a Slider</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="43e72-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="43e72-106">In This Section</span></span>  
+ [<span data-ttu-id="43e72-107">自訂滑桿上的刻度</span><span class="sxs-lookup"><span data-stu-id="43e72-107">Customize the Ticks on a Slider</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="d0262-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="d0262-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="43e72-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="43e72-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>

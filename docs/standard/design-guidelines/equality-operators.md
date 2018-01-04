@@ -19,43 +19,46 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 55c0505f5a06dfc87897fa59e9d6083cbd63c8ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5aa37d2ee6b3b18d9decbc98bd1c427168e8ab35
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="equality-operators"></a><span data-ttu-id="cc8f0-102">等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="cc8f0-102">Equality Operators</span></span>
-<span data-ttu-id="cc8f0-103">本節討論多載等號比較運算子，而是指`operator==`和`operator!=`為等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-103">This section discusses overloading equality operators and refers to `operator==` and `operator!=` as equality operators.</span></span>  
+# <a name="equality-operators"></a><span data-ttu-id="28787-102">等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="28787-102">Equality Operators</span></span>
+<span data-ttu-id="28787-103">本節討論多載等號比較運算子，而是指`operator==`和`operator!=`為等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="28787-103">This section discusses overloading equality operators and refers to `operator==` and `operator!=` as equality operators.</span></span>  
   
- <span data-ttu-id="cc8f0-104">**X 不**的等號比較運算子，但是其中一個多載。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-104">**X DO NOT** overload one of the equality operators and not the other.</span></span>  
+ <span data-ttu-id="28787-104">**X 不**的等號比較運算子，但是其中一個多載。</span><span class="sxs-lookup"><span data-stu-id="28787-104">**X DO NOT** overload one of the equality operators and not the other.</span></span>  
   
- <span data-ttu-id="cc8f0-105">**✓ 不要**確定<xref:System.Object.Equals%2A?displayProperty=nameWithType>和等號比較運算子有完全相同的語意和類似的效能特性。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-105">**✓ DO** ensure that <xref:System.Object.Equals%2A?displayProperty=nameWithType> and the equality operators have exactly the same semantics and similar performance characteristics.</span></span>  
+ <span data-ttu-id="28787-105">**✓ 不要**確定<xref:System.Object.Equals%2A?displayProperty=nameWithType>和等號比較運算子有完全相同的語意和類似的效能特性。</span><span class="sxs-lookup"><span data-stu-id="28787-105">**✓ DO** ensure that <xref:System.Object.Equals%2A?displayProperty=nameWithType> and the equality operators have exactly the same semantics and similar performance characteristics.</span></span>  
   
- <span data-ttu-id="cc8f0-106">這通常表示`Object.Equals`需要覆寫等號比較運算子經過多載。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-106">This often means that `Object.Equals` needs to be overridden when the equality operators are overloaded.</span></span>  
+ <span data-ttu-id="28787-106">這通常表示`Object.Equals`需要覆寫等號比較運算子經過多載。</span><span class="sxs-lookup"><span data-stu-id="28787-106">This often means that `Object.Equals` needs to be overridden when the equality operators are overloaded.</span></span>  
   
- <span data-ttu-id="cc8f0-107">**請避免 x**擲回例外狀況，從等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-107">**X AVOID** throwing exceptions from equality operators.</span></span>  
+ <span data-ttu-id="28787-107">**請避免 x**擲回例外狀況，從等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="28787-107">**X AVOID** throwing exceptions from equality operators.</span></span>  
   
- <span data-ttu-id="cc8f0-108">例如，傳回 false，如果其中一個引數為 null，而不是擲回`NullReferenceException`。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-108">For example, return false if one of the arguments is null instead of throwing `NullReferenceException`.</span></span>  
+ <span data-ttu-id="28787-108">例如，傳回 false，如果其中一個引數為 null，而不是擲回`NullReferenceException`。</span><span class="sxs-lookup"><span data-stu-id="28787-108">For example, return false if one of the arguments is null instead of throwing `NullReferenceException`.</span></span>  
   
-## <a name="equality-operators-on-value-types"></a><span data-ttu-id="cc8f0-109">實值類型上的等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="cc8f0-109">Equality Operators on Value Types</span></span>  
- <span data-ttu-id="cc8f0-110">**✓ 不要**多載等號比較運算子實值型別，如果是有意義的等號比較。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-110">**✓ DO** overload the equality operators on value types, if equality is meaningful.</span></span>  
+## <a name="equality-operators-on-value-types"></a><span data-ttu-id="28787-109">實值類型上的等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="28787-109">Equality Operators on Value Types</span></span>  
+ <span data-ttu-id="28787-110">**✓ 不要**多載等號比較運算子實值型別，如果是有意義的等號比較。</span><span class="sxs-lookup"><span data-stu-id="28787-110">**✓ DO** overload the equality operators on value types, if equality is meaningful.</span></span>  
   
- <span data-ttu-id="cc8f0-111">在大部分的程式設計語言中，沒有預設實作的`operator==`實值型別。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-111">In most programming languages, there is no default implementation of `operator==` for value types.</span></span>  
+ <span data-ttu-id="28787-111">在大部分的程式設計語言中，沒有預設實作的`operator==`實值型別。</span><span class="sxs-lookup"><span data-stu-id="28787-111">In most programming languages, there is no default implementation of `operator==` for value types.</span></span>  
   
-## <a name="equality-operators-on-reference-types"></a><span data-ttu-id="cc8f0-112">參考類型的等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="cc8f0-112">Equality Operators on Reference Types</span></span>  
- <span data-ttu-id="cc8f0-113">**請避免 x**多載可變動參考類型的等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-113">**X AVOID** overloading equality operators on mutable reference types.</span></span>  
+## <a name="equality-operators-on-reference-types"></a><span data-ttu-id="28787-112">參考類型的等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="28787-112">Equality Operators on Reference Types</span></span>  
+ <span data-ttu-id="28787-113">**請避免 x**多載可變動參考類型的等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="28787-113">**X AVOID** overloading equality operators on mutable reference types.</span></span>  
   
- <span data-ttu-id="cc8f0-114">許多語言有參考類型的內建的等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-114">Many languages have built-in equality operators for reference types.</span></span> <span data-ttu-id="cc8f0-115">內建運算子通常會實作參考相等，以及預設的行為變更為實值相等時，許多開發人員會感到驚訝。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-115">The built-in operators usually implement the reference equality, and many developers are surprised when the default behavior is changed to the value equality.</span></span>  
+ <span data-ttu-id="28787-114">許多語言有參考類型的內建的等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="28787-114">Many languages have built-in equality operators for reference types.</span></span> <span data-ttu-id="28787-115">內建運算子通常會實作參考相等，以及預設的行為變更為實值相等時，許多開發人員會感到驚訝。</span><span class="sxs-lookup"><span data-stu-id="28787-115">The built-in operators usually implement the reference equality, and many developers are surprised when the default behavior is changed to the value equality.</span></span>  
   
- <span data-ttu-id="cc8f0-116">因為不變性會讓它更難發現參考相等與值相等性之間的差異，不可變的參考類型以降低這個問題。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-116">This problem is mitigated for immutable reference types because immutability makes it much harder to notice the difference between reference equality and value equality.</span></span>  
+ <span data-ttu-id="28787-116">因為不變性會讓它更難發現參考相等與值相等性之間的差異，不可變的參考類型以降低這個問題。</span><span class="sxs-lookup"><span data-stu-id="28787-116">This problem is mitigated for immutable reference types because immutability makes it much harder to notice the difference between reference equality and value equality.</span></span>  
   
- <span data-ttu-id="cc8f0-117">**請避免 x**如果實作可能會大幅低於參考相等的多載參考類型的等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="cc8f0-117">**X AVOID** overloading equality operators on reference types if the implementation would be significantly slower than that of reference equality.</span></span>  
+ <span data-ttu-id="28787-117">**請避免 x**如果實作可能會大幅低於參考相等的多載參考類型的等號比較運算子。</span><span class="sxs-lookup"><span data-stu-id="28787-117">**X AVOID** overloading equality operators on reference types if the implementation would be significantly slower than that of reference equality.</span></span>  
   
- <span data-ttu-id="cc8f0-118">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="cc8f0-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="28787-118">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="28787-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="cc8f0-119">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="cc8f0-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="28787-119">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="28787-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc8f0-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc8f0-120">See Also</span></span>  
- [<span data-ttu-id="cc8f0-121">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="cc8f0-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
- [<span data-ttu-id="cc8f0-122">使用指導方針</span><span class="sxs-lookup"><span data-stu-id="cc8f0-122">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="28787-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="28787-120">See Also</span></span>  
+ [<span data-ttu-id="28787-121">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="28787-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="28787-122">用法方針</span><span class="sxs-lookup"><span data-stu-id="28787-122">Usage Guidelines</span></span>](../../../docs/standard/design-guidelines/usage-guidelines.md)

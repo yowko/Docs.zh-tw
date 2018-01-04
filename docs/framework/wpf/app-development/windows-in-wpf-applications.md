@@ -17,27 +17,28 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="fd632-102">WPF 應用程式中的視窗</span><span class="sxs-lookup"><span data-stu-id="fd632-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="fd632-103">使用者透過 windows 應用程式與互動。</span><span class="sxs-lookup"><span data-stu-id="fd632-103">Users interact with applications through windows.</span></span> <span data-ttu-id="fd632-104">視窗的主要目的是將裝載，並顯示內容。</span><span class="sxs-lookup"><span data-stu-id="fd632-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="fd632-105">確認視窗主機取決於資料類型，應用程式上運作，其中可包含媒體、 Extensible Application Markup Language (XAML) 頁面、 網頁、 文件、 資料庫資料表和記錄，以及系統資訊的內容類型。</span><span class="sxs-lookup"><span data-stu-id="fd632-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="a9a73-102">WPF 應用程式中的視窗</span><span class="sxs-lookup"><span data-stu-id="a9a73-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="a9a73-103">使用者透過 windows 應用程式與互動。</span><span class="sxs-lookup"><span data-stu-id="a9a73-103">Users interact with applications through windows.</span></span> <span data-ttu-id="a9a73-104">視窗的主要目的是將裝載，並顯示內容。</span><span class="sxs-lookup"><span data-stu-id="a9a73-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="a9a73-105">確認視窗主機取決於資料類型，應用程式上運作，其中可包含媒體、 Extensible Application Markup Language (XAML) 頁面、 網頁、 文件、 資料庫資料表和記錄，以及系統資訊的內容類型。</span><span class="sxs-lookup"><span data-stu-id="a9a73-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fd632-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="fd632-106">In This Section</span></span>  
- [<span data-ttu-id="fd632-107">WPF 視窗概觀</span><span class="sxs-lookup"><span data-stu-id="fd632-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [<span data-ttu-id="fd632-108">對話方塊概觀</span><span class="sxs-lookup"><span data-stu-id="fd632-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [<span data-ttu-id="fd632-109">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="fd632-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a9a73-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="a9a73-106">In This Section</span></span>  
+ [<span data-ttu-id="a9a73-107">WPF 視窗概觀</span><span class="sxs-lookup"><span data-stu-id="a9a73-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [<span data-ttu-id="a9a73-108">對話方塊概觀</span><span class="sxs-lookup"><span data-stu-id="a9a73-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [<span data-ttu-id="a9a73-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="a9a73-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="fd632-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="fd632-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a9a73-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="a9a73-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="fd632-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="fd632-111">Related Sections</span></span>  
- [<span data-ttu-id="fd632-112">應用程式管理概觀</span><span class="sxs-lookup"><span data-stu-id="fd632-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="fd632-113">瀏覽概觀</span><span class="sxs-lookup"><span data-stu-id="fd632-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="fd632-114">裝載</span><span class="sxs-lookup"><span data-stu-id="fd632-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [<span data-ttu-id="fd632-115">建置和部署</span><span class="sxs-lookup"><span data-stu-id="fd632-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="a9a73-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="a9a73-111">Related Sections</span></span>  
+ [<span data-ttu-id="a9a73-112">應用程式管理概觀</span><span class="sxs-lookup"><span data-stu-id="a9a73-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [<span data-ttu-id="a9a73-113">瀏覽概觀</span><span class="sxs-lookup"><span data-stu-id="a9a73-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+  [<span data-ttu-id="a9a73-114">裝載</span><span class="sxs-lookup"><span data-stu-id="a9a73-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+  [<span data-ttu-id="a9a73-115">建置和部署</span><span class="sxs-lookup"><span data-stu-id="a9a73-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

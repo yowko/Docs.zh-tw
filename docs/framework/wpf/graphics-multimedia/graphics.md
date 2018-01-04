@@ -17,27 +17,28 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics"></a><span data-ttu-id="c35d5-102">圖形</span><span class="sxs-lookup"><span data-stu-id="c35d5-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c35d5-103">提供整合支援多媒體、 向量圖形、 動畫和內容的組合，方便開發人員建置有趣的使用者介面和內容。</span><span class="sxs-lookup"><span data-stu-id="c35d5-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="d3b8c-102">圖形</span><span class="sxs-lookup"><span data-stu-id="d3b8c-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d3b8c-103">提供整合支援多媒體、 向量圖形、 動畫和內容的組合，方便開發人員建置有趣的使用者介面和內容。</span><span class="sxs-lookup"><span data-stu-id="d3b8c-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c35d5-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="c35d5-104">In This Section</span></span>  
- [<span data-ttu-id="c35d5-105">點陣圖效果</span><span class="sxs-lookup"><span data-stu-id="c35d5-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="c35d5-106">筆刷</span><span class="sxs-lookup"><span data-stu-id="c35d5-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="c35d5-107">繪圖</span><span class="sxs-lookup"><span data-stu-id="c35d5-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="c35d5-108">幾何</span><span class="sxs-lookup"><span data-stu-id="c35d5-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="c35d5-109">影像</span><span class="sxs-lookup"><span data-stu-id="c35d5-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="c35d5-110">圖形</span><span class="sxs-lookup"><span data-stu-id="c35d5-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="c35d5-111">轉換</span><span class="sxs-lookup"><span data-stu-id="c35d5-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="c35d5-112">圖形轉譯登錄設定</span><span class="sxs-lookup"><span data-stu-id="c35d5-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="c35d5-113">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="c35d5-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d3b8c-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d3b8c-104">In This Section</span></span>  
+ [<span data-ttu-id="d3b8c-105">點陣圖效果</span><span class="sxs-lookup"><span data-stu-id="d3b8c-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [<span data-ttu-id="d3b8c-106">筆刷</span><span class="sxs-lookup"><span data-stu-id="d3b8c-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
+ [<span data-ttu-id="d3b8c-107">繪圖</span><span class="sxs-lookup"><span data-stu-id="d3b8c-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
+ [<span data-ttu-id="d3b8c-108">幾何</span><span class="sxs-lookup"><span data-stu-id="d3b8c-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [<span data-ttu-id="d3b8c-109">影像</span><span class="sxs-lookup"><span data-stu-id="d3b8c-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [<span data-ttu-id="d3b8c-110">圖形</span><span class="sxs-lookup"><span data-stu-id="d3b8c-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
+ [<span data-ttu-id="d3b8c-111">轉換</span><span class="sxs-lookup"><span data-stu-id="d3b8c-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [<span data-ttu-id="d3b8c-112">圖形轉譯登錄設定</span><span class="sxs-lookup"><span data-stu-id="d3b8c-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="d3b8c-113">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="d3b8c-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c35d5-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c35d5-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d3b8c-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="d3b8c-114">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="c35d5-115">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="c35d5-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="c35d5-116">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="c35d5-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="c35d5-117">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="c35d5-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="d3b8c-115">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="d3b8c-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="d3b8c-116">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="d3b8c-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="d3b8c-117">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="d3b8c-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

@@ -18,18 +18,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d0238c2c1606358a8cc2374e209a8f385c4d0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bd43baee7ed7ab75a85775a4abecf38aa41faf93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="5e0d0-102">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="5e0d0-102">How-to Topics</span></span>
-<span data-ttu-id="5e0d0-103">下列主題示範如何建立[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]增益集。</span><span class="sxs-lookup"><span data-stu-id="5e0d0-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="cb22d-102">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="cb22d-102">How-to Topics</span></span>
+<span data-ttu-id="cb22d-103">下列主題示範如何建立[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]增益集。</span><span class="sxs-lookup"><span data-stu-id="cb22d-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5e0d0-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="5e0d0-104">In This Section</span></span>  
- [<span data-ttu-id="5e0d0-105">建立傳回 UI 的增益集</span><span class="sxs-lookup"><span data-stu-id="5e0d0-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="5e0d0-106">建立本身為 UI 的增益集</span><span class="sxs-lookup"><span data-stu-id="5e0d0-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cb22d-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="cb22d-104">In This Section</span></span>  
+ [<span data-ttu-id="cb22d-105">建立傳回 UI 的增益集</span><span class="sxs-lookup"><span data-stu-id="cb22d-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="cb22d-106">建立本身為 UI 的增益集</span><span class="sxs-lookup"><span data-stu-id="cb22d-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="5e0d0-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="5e0d0-107">Related Sections</span></span>  
- [<span data-ttu-id="5e0d0-108">WPF 增益集概觀</span><span class="sxs-lookup"><span data-stu-id="5e0d0-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="cb22d-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="cb22d-107">Related Sections</span></span>  
+ [<span data-ttu-id="cb22d-108">WPF 增益集概觀</span><span class="sxs-lookup"><span data-stu-id="cb22d-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

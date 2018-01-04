@@ -17,29 +17,30 @@ caps.latest.revision: "76"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbec8435c82e795d48544a366eeced2419f6d8c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 301532e640273073a884d62d24363557b4ce1e04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="3cf6a-102">輸入和命令 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="3cf6a-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="3cf6a-103">本節中的主題描述如何使用中的輸入和命令的基礎結構[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3cf6a-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="66a10-102">輸入和命令 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="66a10-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="66a10-103">本節中的主題描述如何使用中的輸入和命令的基礎結構[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="66a10-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3cf6a-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="3cf6a-104">In This Section</span></span>  
- [<span data-ttu-id="3cf6a-105">啟用命令</span><span class="sxs-lookup"><span data-stu-id="3cf6a-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [<span data-ttu-id="3cf6a-106">變更游標類型</span><span class="sxs-lookup"><span data-stu-id="3cf6a-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="3cf6a-107">使用焦點事件變更元素的色彩</span><span class="sxs-lookup"><span data-stu-id="3cf6a-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="3cf6a-108">對控制項套用 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="3cf6a-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="3cf6a-109">偵測何時按下 Enter 鍵</span><span class="sxs-lookup"><span data-stu-id="3cf6a-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="3cf6a-110">使用事件建立變化效果</span><span class="sxs-lookup"><span data-stu-id="3cf6a-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="3cf6a-111">設定物件隨滑鼠指標移動</span><span class="sxs-lookup"><span data-stu-id="3cf6a-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="3cf6a-112">建立 RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="3cf6a-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="3cf6a-113">實作 ICommandSource</span><span class="sxs-lookup"><span data-stu-id="3cf6a-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [<span data-ttu-id="3cf6a-114">將命令與沒有命令支援的控制項連結</span><span class="sxs-lookup"><span data-stu-id="3cf6a-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="3cf6a-115">將命令與含有命令支援的控制項連結</span><span class="sxs-lookup"><span data-stu-id="3cf6a-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66a10-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="66a10-104">In This Section</span></span>  
+ [<span data-ttu-id="66a10-105">啟用命令</span><span class="sxs-lookup"><span data-stu-id="66a10-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [<span data-ttu-id="66a10-106">變更游標類型</span><span class="sxs-lookup"><span data-stu-id="66a10-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="66a10-107">使用焦點事件變更元素的色彩</span><span class="sxs-lookup"><span data-stu-id="66a10-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="66a10-108">對控制項套用 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="66a10-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="66a10-109">偵測何時按下 Enter 鍵</span><span class="sxs-lookup"><span data-stu-id="66a10-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="66a10-110">使用事件建立變化效果</span><span class="sxs-lookup"><span data-stu-id="66a10-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="66a10-111">設定物件隨滑鼠指標移動</span><span class="sxs-lookup"><span data-stu-id="66a10-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="66a10-112">建立 RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="66a10-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="66a10-113">實作 ICommandSource</span><span class="sxs-lookup"><span data-stu-id="66a10-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="66a10-114">將命令與沒有命令支援的控制項連結</span><span class="sxs-lookup"><span data-stu-id="66a10-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="66a10-115">將命令與含有命令支援的控制項連結</span><span class="sxs-lookup"><span data-stu-id="66a10-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="3cf6a-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="3cf6a-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66a10-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="66a10-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="3cf6a-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="3cf6a-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="66a10-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="66a10-117">Related Sections</span></span>

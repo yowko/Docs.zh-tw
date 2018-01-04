@@ -12,43 +12,46 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 862bea7fa17638b6f3c5ca8afb43a76dc7ed85b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5001b31e11432c36c08f43bfa06b95483b247115
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="schemaimporterextension-technology-sample"></a><span data-ttu-id="314df-102">SchemaImporterExtension 技術範例</span><span class="sxs-lookup"><span data-stu-id="314df-102">SchemaImporterExtension Technology Sample</span></span>
-[<span data-ttu-id="314df-103">下載範例</span><span class="sxs-lookup"><span data-stu-id="314df-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
+# <a name="schemaimporterextension-technology-sample"></a><span data-ttu-id="bc485-102">SchemaImporterExtension 技術範例</span><span class="sxs-lookup"><span data-stu-id="bc485-102">SchemaImporterExtension Technology Sample</span></span>
+[<span data-ttu-id="bc485-103">下載範例</span><span class="sxs-lookup"><span data-stu-id="bc485-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
   
- <span data-ttu-id="314df-104">這個範例示範了自訂的 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>，它能夠在匯入 XML 結構描述時，精細地控制程式碼的產生。</span><span class="sxs-lookup"><span data-stu-id="314df-104">This sample demonstrates a custom <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> that allows fine control over code generation when an XML schema is imported.</span></span> <span data-ttu-id="314df-105">應用程式中會示範如何建置、註冊及叫用 (Invoke) 這個擴充功能。</span><span class="sxs-lookup"><span data-stu-id="314df-105">The application shows how to build, register and invoke this extension.</span></span>  
+ <span data-ttu-id="bc485-104">這個範例示範了自訂的 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>，它能夠在匯入 XML 結構描述時，精細地控制程式碼的產生。</span><span class="sxs-lookup"><span data-stu-id="bc485-104">This sample demonstrates a custom <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> that allows fine control over code generation when an XML schema is imported.</span></span> <span data-ttu-id="bc485-105">應用程式中會示範如何建置、註冊及叫用 (Invoke) 這個擴充功能。</span><span class="sxs-lookup"><span data-stu-id="bc485-105">The application shows how to build, register and invoke this extension.</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="314df-106">若要使用命令提示字元建置範例</span><span class="sxs-lookup"><span data-stu-id="314df-106">To build the sample using the command prompt</span></span>  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="bc485-106">若要使用命令提示字元建置範例</span><span class="sxs-lookup"><span data-stu-id="bc485-106">To build the sample using the command prompt</span></span>  
   
-1.  <span data-ttu-id="314df-107">開啟 [命令提示字元] 視窗，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="314df-107">Open a Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1.  <span data-ttu-id="bc485-107">開啟 [命令提示字元] 視窗，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="bc485-107">Open a Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  <span data-ttu-id="314df-108">在命令列鍵入 **msbuild.exe OrderSchemaImporterExtension.sln**。</span><span class="sxs-lookup"><span data-stu-id="314df-108">Type **msbuild.exe OrderSchemaImporterExtension.sln** at the command line.</span></span>  
+2.  <span data-ttu-id="bc485-108">在命令列鍵入 **msbuild.exe OrderSchemaImporterExtension.sln**。</span><span class="sxs-lookup"><span data-stu-id="bc485-108">Type **msbuild.exe OrderSchemaImporterExtension.sln** at the command line.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="314df-109">若要使用 Visual Studio 建置範例</span><span class="sxs-lookup"><span data-stu-id="314df-109">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="bc485-109">若要使用 Visual Studio 建置範例</span><span class="sxs-lookup"><span data-stu-id="bc485-109">To build the sample using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="314df-110">開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="314df-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1.  <span data-ttu-id="bc485-110">開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="bc485-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  <span data-ttu-id="314df-111">按兩下 [OrderSchemaImporterExtension.sln] 的圖示，在 Visual Studio 中開啟這個檔案。</span><span class="sxs-lookup"><span data-stu-id="314df-111">Double-click the icon for OrderSchemaImporterExtension.sln to open the file in Visual Studio.</span></span>  
+2.  <span data-ttu-id="bc485-111">按兩下 [OrderSchemaImporterExtension.sln] 的圖示，在 Visual Studio 中開啟這個檔案。</span><span class="sxs-lookup"><span data-stu-id="bc485-111">Double-click the icon for OrderSchemaImporterExtension.sln to open the file in Visual Studio.</span></span>  
   
-3.  <span data-ttu-id="314df-112">在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。</span><span class="sxs-lookup"><span data-stu-id="314df-112">On the **Build** menu, click **Build Solution**.</span></span>  
+3.  <span data-ttu-id="bc485-112">在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。</span><span class="sxs-lookup"><span data-stu-id="bc485-112">On the **Build** menu, click **Build Solution**.</span></span>  
   
- <span data-ttu-id="314df-113">應用程式便會建置在預設的 \bin 或 \bin\Debug 目錄中。</span><span class="sxs-lookup"><span data-stu-id="314df-113">The application will be built in the default \bin or \bin\Debug directory.</span></span>  
+ <span data-ttu-id="bc485-113">應用程式便會建置在預設的 \bin 或 \bin\Debug 目錄中。</span><span class="sxs-lookup"><span data-stu-id="bc485-113">The application will be built in the default \bin or \bin\Debug directory.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="314df-114">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="314df-114">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="bc485-114">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="bc485-114">To run the sample</span></span>  
   
-1.  <span data-ttu-id="314df-115">使用 [命令提示字元]，巡覽至包含新可執行檔的目錄。</span><span class="sxs-lookup"><span data-stu-id="314df-115">Navigate to the directory containing the new executable, using the command prompt.</span></span>  
+1.  <span data-ttu-id="bc485-115">使用 [命令提示字元]，巡覽至包含新可執行檔的目錄。</span><span class="sxs-lookup"><span data-stu-id="bc485-115">Navigate to the directory containing the new executable, using the command prompt.</span></span>  
   
-2.  <span data-ttu-id="314df-116">在命令列鍵入 **[exe name]**。</span><span class="sxs-lookup"><span data-stu-id="314df-116">Type **[exe name]** at the command line.</span></span>  
+2.  <span data-ttu-id="bc485-116">在命令列鍵入 **[exe name]**。</span><span class="sxs-lookup"><span data-stu-id="bc485-116">Type **[exe name]** at the command line.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="314df-117">備註</span><span class="sxs-lookup"><span data-stu-id="314df-117">Remarks</span></span>  
- <span data-ttu-id="314df-118">如需二進位碼建立和註冊步驟之範例的詳細資訊，請參閱原始程式碼和 build.proj 檔案中的註解。</span><span class="sxs-lookup"><span data-stu-id="314df-118">For more information about sample binary creation and registration steps, see the comments in the source code and build.proj files.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc485-117">備註</span><span class="sxs-lookup"><span data-stu-id="bc485-117">Remarks</span></span>  
+ <span data-ttu-id="bc485-118">如需二進位碼建立和註冊步驟之範例的詳細資訊，請參閱原始程式碼和 build.proj 檔案中的註解。</span><span class="sxs-lookup"><span data-stu-id="bc485-118">For more information about sample binary creation and registration steps, see the comments in the source code and build.proj files.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="314df-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="314df-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bc485-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="bc485-119">See Also</span></span>  
  <xref:System.CodeDom.CodeCompileUnit>  
  <xref:System.CodeDom.CodeNamespace>  
  <xref:System.CodeDom.CodeNamespaceImport>  

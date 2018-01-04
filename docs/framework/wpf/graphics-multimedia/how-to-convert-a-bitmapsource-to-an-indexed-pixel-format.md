@@ -27,15 +27,16 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4c905b73eca1466116d1f51922a2102c4286054
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37a65a9ba9e8ea8e0571ff1068523897b054abf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="5a5f1-102">如何：將 BitmapSource 轉換為索引像素格式</span><span class="sxs-lookup"><span data-stu-id="5a5f1-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
-<span data-ttu-id="5a5f1-103">這個範例示範如何將轉換<xref:System.Windows.Media.Imaging.BitmapSource>索引像素格式。</span><span class="sxs-lookup"><span data-stu-id="5a5f1-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  
+# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="59269-102">如何：將 BitmapSource 轉換為索引像素格式</span><span class="sxs-lookup"><span data-stu-id="59269-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
+<span data-ttu-id="59269-103">這個範例示範如何將轉換<xref:System.Windows.Media.Imaging.BitmapSource>索引像素格式。</span><span class="sxs-lookup"><span data-stu-id="59269-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5a5f1-104">範例</span><span class="sxs-lookup"><span data-stu-id="5a5f1-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="59269-104">範例</span><span class="sxs-lookup"><span data-stu-id="59269-104">Example</span></span>  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample2.cs#formatconvertedbitmapcodeexample2wholepage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample2.vb#formatconvertedbitmapcodeexample2wholepage)]

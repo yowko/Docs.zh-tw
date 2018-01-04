@@ -17,20 +17,21 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="62a29-102">數位筆墨 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="62a29-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="62a29-103">本章節內容</span><span class="sxs-lookup"><span data-stu-id="62a29-103">In This Section</span></span>  
- [<span data-ttu-id="62a29-104">從自訂控制項選取筆墨</span><span class="sxs-lookup"><span data-stu-id="62a29-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="62a29-105">將自訂資料新增至筆墨資料</span><span class="sxs-lookup"><span data-stu-id="62a29-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="62a29-106">清除自訂控制項上的筆墨</span><span class="sxs-lookup"><span data-stu-id="62a29-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="62a29-107">辨認應用程式筆勢</span><span class="sxs-lookup"><span data-stu-id="62a29-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="62a29-108">拖放筆墨</span><span class="sxs-lookup"><span data-stu-id="62a29-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="62a29-109">將資料繫結至 InkCanvas</span><span class="sxs-lookup"><span data-stu-id="62a29-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="62a29-110">以分析提示分析筆墨</span><span class="sxs-lookup"><span data-stu-id="62a29-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="62a29-111">旋轉筆墨</span><span class="sxs-lookup"><span data-stu-id="62a29-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [<span data-ttu-id="62a29-112">停用 WPF 應用程式的 RealTimeStylus</span><span class="sxs-lookup"><span data-stu-id="62a29-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="239cb-102">數位筆墨 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="239cb-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="239cb-103">本節內容</span><span class="sxs-lookup"><span data-stu-id="239cb-103">In This Section</span></span>  
+ [<span data-ttu-id="239cb-104">從自訂控制項選取筆墨</span><span class="sxs-lookup"><span data-stu-id="239cb-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="239cb-105">將自訂資料新增至筆墨資料</span><span class="sxs-lookup"><span data-stu-id="239cb-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="239cb-106">清除自訂控制項上的筆墨</span><span class="sxs-lookup"><span data-stu-id="239cb-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="239cb-107">辨認應用程式筆勢</span><span class="sxs-lookup"><span data-stu-id="239cb-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="239cb-108">拖放筆墨</span><span class="sxs-lookup"><span data-stu-id="239cb-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="239cb-109">將資料繫結至 InkCanvas</span><span class="sxs-lookup"><span data-stu-id="239cb-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="239cb-110">以分析提示分析筆墨</span><span class="sxs-lookup"><span data-stu-id="239cb-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="239cb-111">旋轉筆墨</span><span class="sxs-lookup"><span data-stu-id="239cb-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
+  [<span data-ttu-id="239cb-112">停用 WPF 應用程式的 RealTimeStylus</span><span class="sxs-lookup"><span data-stu-id="239cb-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)

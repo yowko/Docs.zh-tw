@@ -17,21 +17,22 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 551813a2e5209d1c0ed9fdd124586f98508a0f42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 65243113b0d186d6f391b2e39d776141ffa9922f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="button"></a><span data-ttu-id="4a6ca-102">按鈕</span><span class="sxs-lookup"><span data-stu-id="4a6ca-102">Button</span></span>
-<span data-ttu-id="4a6ca-103">A<xref:System.Windows.Controls.Button>控制項從滑鼠、 鍵盤、 手寫筆或其他輸入的裝置及引發回應使用者輸入<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="4a6ca-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="4a6ca-104">A<xref:System.Windows.Controls.Button>是基本[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]元件，可包含簡單內容，例如文字，而且也可以包含複雜的內容，例如影像和<xref:System.Windows.Controls.Panel>控制項。</span><span class="sxs-lookup"><span data-stu-id="4a6ca-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  
+# <a name="button"></a><span data-ttu-id="21ca0-102">按鈕</span><span class="sxs-lookup"><span data-stu-id="21ca0-102">Button</span></span>
+<span data-ttu-id="21ca0-103">A<xref:System.Windows.Controls.Button>控制項從滑鼠、 鍵盤、 手寫筆或其他輸入的裝置及引發回應使用者輸入<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="21ca0-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="21ca0-104">A<xref:System.Windows.Controls.Button>是基本[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]元件，可包含簡單內容，例如文字，而且也可以包含複雜的內容，例如影像和<xref:System.Windows.Controls.Panel>控制項。</span><span class="sxs-lookup"><span data-stu-id="21ca0-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  
   
- <span data-ttu-id="4a6ca-105">![按鈕狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span><span class="sxs-lookup"><span data-stu-id="4a6ca-105">![Button states](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span></span>  
+ <span data-ttu-id="21ca0-105">![按鈕狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span><span class="sxs-lookup"><span data-stu-id="21ca0-105">![Button states](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4a6ca-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="4a6ca-106">In This Section</span></span>  
- [<span data-ttu-id="4a6ca-107">建立具有影像的按鈕</span><span class="sxs-lookup"><span data-stu-id="4a6ca-107">Create a Button That Has an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="21ca0-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="21ca0-106">In This Section</span></span>  
+ [<span data-ttu-id="21ca0-107">建立具有影像的按鈕</span><span class="sxs-lookup"><span data-stu-id="21ca0-107">Create a Button That Has an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="4a6ca-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="4a6ca-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="21ca0-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="21ca0-108">Reference</span></span>  
  <xref:System.Windows.Controls.Button>  
  <xref:System.Windows.Controls.Primitives.ButtonBase>  
  <xref:System.Windows.Controls.RadioButton>  

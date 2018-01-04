@@ -15,28 +15,29 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d99817976d37d4da4429d79032e66fb2908b6c99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 512fdb59998961013a3412c3c85820d1cff2eab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="base-elements-how-to-topics"></a><span data-ttu-id="5233b-102">基底項目 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="5233b-102">Base Elements How-to Topics</span></span>
-<span data-ttu-id="5233b-103">本節中的主題描述如何使用四個 WPF 基底項目： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="5233b-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
+# <a name="base-elements-how-to-topics"></a><span data-ttu-id="a3519-102">基底項目 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="a3519-102">Base Elements How-to Topics</span></span>
+<span data-ttu-id="a3519-103">本節中的主題描述如何使用四個 WPF 基底項目： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="a3519-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5233b-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="5233b-104">In This Section</span></span>  
- [<span data-ttu-id="5233b-105">將 UIElement 設為透明或半透明</span><span class="sxs-lookup"><span data-stu-id="5233b-105">Make a UIElement Transparent or Semi-Transparent</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [<span data-ttu-id="5233b-106">建立 FrameworkElement 大小的動畫</span><span class="sxs-lookup"><span data-stu-id="5233b-106">Animate the Size of a FrameworkElement</span></span>](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [<span data-ttu-id="5233b-107">決定 Freezable 是否凍結</span><span class="sxs-lookup"><span data-stu-id="5233b-107">Determine Whether a Freezable Is Frozen</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [<span data-ttu-id="5233b-108">處理 Loaded 事件</span><span class="sxs-lookup"><span data-stu-id="5233b-108">Handle a Loaded Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [<span data-ttu-id="5233b-109">設定元素和控制項的邊界</span><span class="sxs-lookup"><span data-stu-id="5233b-109">Set Margins of Elements and Controls</span></span>](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [<span data-ttu-id="5233b-110">建立 Freezable 唯讀</span><span class="sxs-lookup"><span data-stu-id="5233b-110">Make a Freezable Read-Only</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [<span data-ttu-id="5233b-111">取得唯讀 Freezable 的可寫入複本</span><span class="sxs-lookup"><span data-stu-id="5233b-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [<span data-ttu-id="5233b-112">水平或垂直翻轉 UIElement</span><span class="sxs-lookup"><span data-stu-id="5233b-112">Flip a UIElement Horizontally or Vertically</span></span>](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [<span data-ttu-id="5233b-113">使用 ThicknessConverter 物件</span><span class="sxs-lookup"><span data-stu-id="5233b-113">Use a ThicknessConverter Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [<span data-ttu-id="5233b-114">處理 ContextMenuOpening 事件</span><span class="sxs-lookup"><span data-stu-id="5233b-114">Handle the ContextMenuOpening Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a3519-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="a3519-104">In This Section</span></span>  
+ [<span data-ttu-id="a3519-105">將 UIElement 設為透明或半透明</span><span class="sxs-lookup"><span data-stu-id="a3519-105">Make a UIElement Transparent or Semi-Transparent</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [<span data-ttu-id="a3519-106">建立 FrameworkElement 大小的動畫</span><span class="sxs-lookup"><span data-stu-id="a3519-106">Animate the Size of a FrameworkElement</span></span>](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
+ [<span data-ttu-id="a3519-107">決定 Freezable 是否凍結</span><span class="sxs-lookup"><span data-stu-id="a3519-107">Determine Whether a Freezable Is Frozen</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
+ [<span data-ttu-id="a3519-108">處理 Loaded 事件</span><span class="sxs-lookup"><span data-stu-id="a3519-108">Handle a Loaded Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
+ [<span data-ttu-id="a3519-109">設定元素和控制項的邊界</span><span class="sxs-lookup"><span data-stu-id="a3519-109">Set Margins of Elements and Controls</span></span>](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
+ [<span data-ttu-id="a3519-110">建立 Freezable 唯讀</span><span class="sxs-lookup"><span data-stu-id="a3519-110">Make a Freezable Read-Only</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
+ [<span data-ttu-id="a3519-111">取得唯讀 Freezable 的可寫入複本</span><span class="sxs-lookup"><span data-stu-id="a3519-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [<span data-ttu-id="a3519-112">水平或垂直翻轉 UIElement</span><span class="sxs-lookup"><span data-stu-id="a3519-112">Flip a UIElement Horizontally or Vertically</span></span>](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [<span data-ttu-id="a3519-113">使用 ThicknessConverter 物件</span><span class="sxs-lookup"><span data-stu-id="a3519-113">Use a ThicknessConverter Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
+ [<span data-ttu-id="a3519-114">處理 ContextMenuOpening 事件</span><span class="sxs-lookup"><span data-stu-id="a3519-114">Handle the ContextMenuOpening Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="5233b-115">參考資料</span><span class="sxs-lookup"><span data-stu-id="5233b-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a3519-115">參考資料</span><span class="sxs-lookup"><span data-stu-id="a3519-115">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="5233b-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="5233b-116">Related Sections</span></span>  
- [<span data-ttu-id="5233b-117">基底項目</span><span class="sxs-lookup"><span data-stu-id="5233b-117">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)
+## <a name="related-sections"></a><span data-ttu-id="a3519-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="a3519-116">Related Sections</span></span>  
+ [<span data-ttu-id="a3519-117">基底項目</span><span class="sxs-lookup"><span data-stu-id="a3519-117">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)

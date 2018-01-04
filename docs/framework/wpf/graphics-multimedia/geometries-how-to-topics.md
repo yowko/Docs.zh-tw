@@ -15,34 +15,35 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="8ddb5-102">幾何 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="8ddb5-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="8ddb5-103">此章節的主題示範如何使用<xref:System.Windows.Media.Geometry>應用程式中的物件。</span><span class="sxs-lookup"><span data-stu-id="8ddb5-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="f3520-102">幾何 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="f3520-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="f3520-103">此章節的主題示範如何使用<xref:System.Windows.Media.Geometry>應用程式中的物件。</span><span class="sxs-lookup"><span data-stu-id="f3520-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8ddb5-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="8ddb5-104">In This Section</span></span>  
- [<span data-ttu-id="8ddb5-105">建立 EllipseGeometry 的動畫</span><span class="sxs-lookup"><span data-stu-id="8ddb5-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="8ddb5-106">建立 ArcSegment 大小的動畫</span><span class="sxs-lookup"><span data-stu-id="8ddb5-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="8ddb5-107">控制複合圖案的填色</span><span class="sxs-lookup"><span data-stu-id="8ddb5-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="8ddb5-108">建立合併幾何</span><span class="sxs-lookup"><span data-stu-id="8ddb5-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="8ddb5-109">建立複合圖案</span><span class="sxs-lookup"><span data-stu-id="8ddb5-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="8ddb5-110">建立三次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="8ddb5-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="8ddb5-111">使用 LineGeometry 建立線條</span><span class="sxs-lookup"><span data-stu-id="8ddb5-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="8ddb5-112">在 PathGeometry 中建立 LineSegment</span><span class="sxs-lookup"><span data-stu-id="8ddb5-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="8ddb5-113">使用 PathGeometry 建立圖案</span><span class="sxs-lookup"><span data-stu-id="8ddb5-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="8ddb5-114">使用 StreamGeometry 建立圖案</span><span class="sxs-lookup"><span data-stu-id="8ddb5-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="8ddb5-115">建立二次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="8ddb5-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="8ddb5-116">建立橢圓形弧線</span><span class="sxs-lookup"><span data-stu-id="8ddb5-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="8ddb5-117">在 PathGeometry 內建立多個子路徑</span><span class="sxs-lookup"><span data-stu-id="8ddb5-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="8ddb5-118">使用 RectangleGeometry 定義矩形</span><span class="sxs-lookup"><span data-stu-id="8ddb5-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="8ddb5-119">將 RectangleGeometry 的邊角設為圓角</span><span class="sxs-lookup"><span data-stu-id="8ddb5-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f3520-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="f3520-104">In This Section</span></span>  
+ [<span data-ttu-id="f3520-105">建立 EllipseGeometry 的動畫</span><span class="sxs-lookup"><span data-stu-id="f3520-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="f3520-106">建立 ArcSegment 大小的動畫</span><span class="sxs-lookup"><span data-stu-id="f3520-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="f3520-107">控制複合圖案的填色</span><span class="sxs-lookup"><span data-stu-id="f3520-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="f3520-108">建立合併幾何</span><span class="sxs-lookup"><span data-stu-id="f3520-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="f3520-109">建立複合圖案</span><span class="sxs-lookup"><span data-stu-id="f3520-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="f3520-110">建立三次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="f3520-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="f3520-111">使用 LineGeometry 建立線條</span><span class="sxs-lookup"><span data-stu-id="f3520-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="f3520-112">在 PathGeometry 中建立 LineSegment</span><span class="sxs-lookup"><span data-stu-id="f3520-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="f3520-113">使用 PathGeometry 建立圖案</span><span class="sxs-lookup"><span data-stu-id="f3520-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="f3520-114">使用 StreamGeometry 建立圖案</span><span class="sxs-lookup"><span data-stu-id="f3520-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="f3520-115">建立二次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="f3520-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="f3520-116">建立橢圓形弧線</span><span class="sxs-lookup"><span data-stu-id="f3520-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="f3520-117">在 PathGeometry 內建立多個子路徑</span><span class="sxs-lookup"><span data-stu-id="f3520-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="f3520-118">使用 RectangleGeometry 定義矩形</span><span class="sxs-lookup"><span data-stu-id="f3520-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="f3520-119">將 RectangleGeometry 的邊角設為圓角</span><span class="sxs-lookup"><span data-stu-id="f3520-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8ddb5-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ddb5-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f3520-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="f3520-120">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="8ddb5-121">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="8ddb5-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="8ddb5-122">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="8ddb5-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="f3520-121">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="f3520-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="f3520-122">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="f3520-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

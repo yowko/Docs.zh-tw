@@ -20,25 +20,26 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809b3b22a276be985802c22ac2f71642f478dcb4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 96c65c1f2a68c9af9275e071beda3b38b8e94f59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="expander"></a><span data-ttu-id="e836e-102">展開工具</span><span class="sxs-lookup"><span data-stu-id="e836e-102">Expander</span></span>
-<span data-ttu-id="e836e-103"><xref:System.Windows.Controls.Expander>允許使用者檢視標頭，然後展開該標頭可查看進一步的詳細資訊，或若要摺疊至標頭區段。</span><span class="sxs-lookup"><span data-stu-id="e836e-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="f24e4-102">展開工具</span><span class="sxs-lookup"><span data-stu-id="f24e4-102">Expander</span></span>
+<span data-ttu-id="f24e4-103"><xref:System.Windows.Controls.Expander>允許使用者檢視標頭，然後展開該標頭可查看進一步的詳細資訊，或若要摺疊至標頭區段。</span><span class="sxs-lookup"><span data-stu-id="f24e4-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="e836e-104">下圖提供此控制項中展開位置的範例。</span><span class="sxs-lookup"><span data-stu-id="e836e-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="f24e4-104">下圖提供此控制項中展開位置的範例。</span><span class="sxs-lookup"><span data-stu-id="f24e4-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
- <span data-ttu-id="e836e-105">![Expander 範例](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="e836e-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
-<span data-ttu-id="e836e-106">Expander 控制項</span><span class="sxs-lookup"><span data-stu-id="e836e-106">Expander control</span></span>  
+ <span data-ttu-id="f24e4-105">![Expander 範例](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="f24e4-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
+<span data-ttu-id="f24e4-106">Expander 控制項</span><span class="sxs-lookup"><span data-stu-id="f24e4-106">Expander control</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e836e-107">本章節內容</span><span class="sxs-lookup"><span data-stu-id="e836e-107">In This Section</span></span>  
- [<span data-ttu-id="e836e-108">Expander 概觀</span><span class="sxs-lookup"><span data-stu-id="e836e-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [<span data-ttu-id="e836e-109">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="e836e-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f24e4-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="f24e4-107">In This Section</span></span>  
+ [<span data-ttu-id="f24e4-108">Expander 概觀</span><span class="sxs-lookup"><span data-stu-id="f24e4-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [<span data-ttu-id="f24e4-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="f24e4-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e836e-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="e836e-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f24e4-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="f24e4-110">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="e836e-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="e836e-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f24e4-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="f24e4-111">Related Sections</span></span>

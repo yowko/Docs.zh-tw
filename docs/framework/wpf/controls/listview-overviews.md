@@ -17,24 +17,25 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="313c9-102">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="313c9-102">ListView Overviews</span></span>
-<span data-ttu-id="313c9-103">此章節的主題會示範如何使用<xref:System.Windows.Controls.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="313c9-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="1a0f7-102">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="1a0f7-102">ListView Overviews</span></span>
+<span data-ttu-id="1a0f7-103">此章節的主題會示範如何使用<xref:System.Windows.Controls.ListView>控制項。</span><span class="sxs-lookup"><span data-stu-id="1a0f7-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="313c9-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="313c9-104">In This Section</span></span>  
- [<span data-ttu-id="313c9-105">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="313c9-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="313c9-106">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="313c9-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="313c9-107">GridView 資料行標頭樣式和範本概觀</span><span class="sxs-lookup"><span data-stu-id="313c9-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1a0f7-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="1a0f7-104">In This Section</span></span>  
+ [<span data-ttu-id="1a0f7-105">ListView 概觀</span><span class="sxs-lookup"><span data-stu-id="1a0f7-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="1a0f7-106">GridView 概觀</span><span class="sxs-lookup"><span data-stu-id="1a0f7-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="1a0f7-107">GridView 資料行標頭樣式和範本概觀</span><span class="sxs-lookup"><span data-stu-id="1a0f7-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="313c9-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="313c9-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1a0f7-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="1a0f7-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="313c9-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="313c9-109">Related Sections</span></span>  
- [<span data-ttu-id="313c9-110">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="313c9-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="1a0f7-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="1a0f7-109">Related Sections</span></span>  
+ [<span data-ttu-id="1a0f7-110">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="1a0f7-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

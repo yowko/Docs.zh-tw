@@ -13,24 +13,25 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9182c95b9770cac94b2a747e277fcd0cc02b387f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a125aa0968abbd69580cab46f3231a6536eff9c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="behavior-security"></a><span data-ttu-id="6b859-102">行為安全性</span><span class="sxs-lookup"><span data-stu-id="6b859-102">Behavior Security</span></span>
-<span data-ttu-id="6b859-103">本節包含示範設定服務行為之安全性的範例。</span><span class="sxs-lookup"><span data-stu-id="6b859-103">This section includes samples that demonstrate configuring security for service behaviors.</span></span>  
+# <a name="behavior-security"></a><span data-ttu-id="290ef-102">行為安全性</span><span class="sxs-lookup"><span data-stu-id="290ef-102">Behavior Security</span></span>
+<span data-ttu-id="290ef-103">本節包含示範設定服務行為之安全性的範例。</span><span class="sxs-lookup"><span data-stu-id="290ef-103">This section includes samples that demonstrate configuring security for service behaviors.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6b859-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="6b859-104">In This Section</span></span>  
- [<span data-ttu-id="6b859-105">服務稽核行為</span><span class="sxs-lookup"><span data-stu-id="6b859-105">Service Auditing Behavior</span></span>](../../../../docs/framework/wcf/samples/service-auditing-behavior.md)  
- <span data-ttu-id="6b859-106">這個範例會示範如何使用 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 以啟用稽核服務作業期間的安全性事件。</span><span class="sxs-lookup"><span data-stu-id="6b859-106">This sample demonstrates how to use the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> to enable auditing of security events during service operations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="290ef-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="290ef-104">In This Section</span></span>  
+ [<span data-ttu-id="290ef-105">服務稽核行為</span><span class="sxs-lookup"><span data-stu-id="290ef-105">Service Auditing Behavior</span></span>](../../../../docs/framework/wcf/samples/service-auditing-behavior.md)  
+ <span data-ttu-id="290ef-106">這個範例會示範如何使用 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 以啟用稽核服務作業期間的安全性事件。</span><span class="sxs-lookup"><span data-stu-id="290ef-106">This sample demonstrates how to use the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> to enable auditing of security events during service operations.</span></span>  
   
- [<span data-ttu-id="6b859-107">成員資格和角色提供者</span><span class="sxs-lookup"><span data-stu-id="6b859-107">Membership and Role Provider</span></span>](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
- <span data-ttu-id="6b859-108">這個範例會示範服務如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格和角色提供者來驗證及授權用戶端。</span><span class="sxs-lookup"><span data-stu-id="6b859-108">This sample demonstrates how a service can use the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership and role providers to authenticate and authorize clients.</span></span>  
+ [<span data-ttu-id="290ef-107">成員資格和角色提供者</span><span class="sxs-lookup"><span data-stu-id="290ef-107">Membership and Role Provider</span></span>](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
+ <span data-ttu-id="290ef-108">這個範例會示範服務如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格和角色提供者來驗證及授權用戶端。</span><span class="sxs-lookup"><span data-stu-id="290ef-108">This sample demonstrates how a service can use the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership and role providers to authenticate and authorize clients.</span></span>  
   
- [<span data-ttu-id="6b859-109">授權存取服務作業</span><span class="sxs-lookup"><span data-stu-id="6b859-109">Authorizing Access to Service Operations</span></span>](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- <span data-ttu-id="6b859-110">這個範例會示範如何使用[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)若要允許使用<xref:System.Security.Permissions.PrincipalPermissionAttribute>來授權存取服務作業的屬性。</span><span class="sxs-lookup"><span data-stu-id="6b859-110">This sample demonstrates how to use the [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) to enable use of the <xref:System.Security.Permissions.PrincipalPermissionAttribute> attribute to authorize access to service operations.</span></span>  
+ [<span data-ttu-id="290ef-109">授權存取服務作業</span><span class="sxs-lookup"><span data-stu-id="290ef-109">Authorizing Access to Service Operations</span></span>](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ <span data-ttu-id="290ef-110">這個範例會示範如何使用[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)若要允許使用<xref:System.Security.Permissions.PrincipalPermissionAttribute>來授權存取服務作業的屬性。</span><span class="sxs-lookup"><span data-stu-id="290ef-110">This sample demonstrates how to use the [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) to enable use of the <xref:System.Security.Permissions.PrincipalPermissionAttribute> attribute to authorize access to service operations.</span></span>  
   
- [<span data-ttu-id="6b859-111">模擬用戶端</span><span class="sxs-lookup"><span data-stu-id="6b859-111">Impersonating the Client</span></span>](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- <span data-ttu-id="6b859-112">這個範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫端存取系統資源。</span><span class="sxs-lookup"><span data-stu-id="6b859-112">This sample demonstrates how to impersonate the caller application at the service so that the service can access system resources on behalf of the caller.</span></span>
+ [<span data-ttu-id="290ef-111">模擬用戶端</span><span class="sxs-lookup"><span data-stu-id="290ef-111">Impersonating the Client</span></span>](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ <span data-ttu-id="290ef-112">這個範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫端存取系統資源。</span><span class="sxs-lookup"><span data-stu-id="290ef-112">This sample demonstrates how to impersonate the caller application at the service so that the service can access system resources on behalf of the caller.</span></span>

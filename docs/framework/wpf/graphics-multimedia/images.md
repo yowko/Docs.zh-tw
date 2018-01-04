@@ -19,26 +19,27 @@ caps.latest.revision: "83"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7acf8f9dee0301ef7326f5bd688171adc13faea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e4f15083cb3718134a3015d801be5f3c0b71bda8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="images"></a><span data-ttu-id="d410c-102">影像</span><span class="sxs-lookup"><span data-stu-id="d410c-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d410c-103"> 針對多種影像格式、高畫質影像轉譯和轉碼器擴充性提供內建支援。</span><span class="sxs-lookup"><span data-stu-id="d410c-103"> provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="0cf19-102">影像</span><span class="sxs-lookup"><span data-stu-id="0cf19-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="0cf19-103"> 針對多種影像格式、高畫質影像轉譯和轉碼器擴充性提供內建支援。</span><span class="sxs-lookup"><span data-stu-id="0cf19-103"> provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d410c-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d410c-104">In This Section</span></span>  
- [<span data-ttu-id="d410c-105">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="d410c-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="d410c-106">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="d410c-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0cf19-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="0cf19-104">In This Section</span></span>  
+ [<span data-ttu-id="0cf19-105">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="0cf19-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="0cf19-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="0cf19-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d410c-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="d410c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0cf19-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="0cf19-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="d410c-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d410c-108">See Also</span></span>  
- [<span data-ttu-id="d410c-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="d410c-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="d410c-110">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="d410c-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="0cf19-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="0cf19-108">See Also</span></span>  
+ [<span data-ttu-id="0cf19-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="0cf19-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="0cf19-110">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="0cf19-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

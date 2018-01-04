@@ -17,53 +17,54 @@ caps.latest.revision: "81"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01966709941d9aa1f4d430e8eac4a5c6787e315b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5980673372e52255808bb1d04c804e86f2116100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data-binding-how-to-topics"></a><span data-ttu-id="e1ea7-102">資料繫結 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e1ea7-102">Data Binding How-to Topics</span></span>
-<span data-ttu-id="e1ea7-103">本節中的主題描述如何使用資料繫結至資料繫結元素，從各種資料來源的 common language runtime (CLR) 物件和 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="e1ea7-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-how-to-topics"></a><span data-ttu-id="5fa33-102">資料繫結 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="5fa33-102">Data Binding How-to Topics</span></span>
+<span data-ttu-id="5fa33-103">本節中的主題描述如何使用資料繫結至資料繫結元素，從各種資料來源的 common language runtime (CLR) 物件和 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="5fa33-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e1ea7-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="e1ea7-104">In This Section</span></span>  
- [<span data-ttu-id="e1ea7-105">建立簡單繫結</span><span class="sxs-lookup"><span data-stu-id="e1ea7-105">Create a Simple Binding</span></span>](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [<span data-ttu-id="e1ea7-106">指定繫結來源</span><span class="sxs-lookup"><span data-stu-id="e1ea7-106">Specify the Binding Source</span></span>](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [<span data-ttu-id="e1ea7-107">讓資料可於 XAML 中繫結</span><span class="sxs-lookup"><span data-stu-id="e1ea7-107">Make Data Available for Binding in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [<span data-ttu-id="e1ea7-108">控制 TextBox 文字更新來源的時機</span><span class="sxs-lookup"><span data-stu-id="e1ea7-108">Control When the TextBox Text Updates the Source</span></span>](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [<span data-ttu-id="e1ea7-109">指定繫結的方向</span><span class="sxs-lookup"><span data-stu-id="e1ea7-109">Specify the Direction of the Binding</span></span>](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [<span data-ttu-id="e1ea7-110">繫結至集合並根據選取項目顯示資訊</span><span class="sxs-lookup"><span data-stu-id="e1ea7-110">Bind to a Collection and Display Information Based on Selection</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [<span data-ttu-id="e1ea7-111">繫結至列舉</span><span class="sxs-lookup"><span data-stu-id="e1ea7-111">Bind to an Enumeration</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [<span data-ttu-id="e1ea7-112">繫結兩個控制項的屬性</span><span class="sxs-lookup"><span data-stu-id="e1ea7-112">Bind the Properties of Two Controls</span></span>](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [<span data-ttu-id="e1ea7-113">實作繫結驗證</span><span class="sxs-lookup"><span data-stu-id="e1ea7-113">Implement Binding Validation</span></span>](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [<span data-ttu-id="e1ea7-114">對自訂物件實作驗證邏輯</span><span class="sxs-lookup"><span data-stu-id="e1ea7-114">Implement Validation Logic on Custom Objects</span></span>](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [<span data-ttu-id="e1ea7-115">從繫結的目標屬性取得繫結物件</span><span class="sxs-lookup"><span data-stu-id="e1ea7-115">Get the Binding Object from a Bound Target Property</span></span>](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [<span data-ttu-id="e1ea7-116">實作 CompositeCollection</span><span class="sxs-lookup"><span data-stu-id="e1ea7-116">Implement a CompositeCollection</span></span>](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [<span data-ttu-id="e1ea7-117">轉換繫結的資料</span><span class="sxs-lookup"><span data-stu-id="e1ea7-117">Convert Bound Data</span></span>](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [<span data-ttu-id="e1ea7-118">使用程式碼建立繫結</span><span class="sxs-lookup"><span data-stu-id="e1ea7-118">Create a Binding in Code</span></span>](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [<span data-ttu-id="e1ea7-119">取得資料集合的預設檢視</span><span class="sxs-lookup"><span data-stu-id="e1ea7-119">Get the Default View of a Data Collection</span></span>](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [<span data-ttu-id="e1ea7-120">透過資料 CollectionView 中的物件巡覽</span><span class="sxs-lookup"><span data-stu-id="e1ea7-120">Navigate Through the Objects in a Data CollectionView</span></span>](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [<span data-ttu-id="e1ea7-121">篩選檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="e1ea7-121">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [<span data-ttu-id="e1ea7-122">排序檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="e1ea7-122">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [<span data-ttu-id="e1ea7-123">使用 XAML 中的檢視排序和群組資料</span><span class="sxs-lookup"><span data-stu-id="e1ea7-123">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [<span data-ttu-id="e1ea7-124">使用含階層式資料的主從式模式</span><span class="sxs-lookup"><span data-stu-id="e1ea7-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [<span data-ttu-id="e1ea7-125">使用含階層式 XML 資料的主從式模式</span><span class="sxs-lookup"><span data-stu-id="e1ea7-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [<span data-ttu-id="e1ea7-126">根據繫結項目的清單產生值</span><span class="sxs-lookup"><span data-stu-id="e1ea7-126">Produce a Value Based on a List of Bound Items</span></span>](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [<span data-ttu-id="e1ea7-127">實作屬性變更通知</span><span class="sxs-lookup"><span data-stu-id="e1ea7-127">Implement Property Change Notification</span></span>](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [<span data-ttu-id="e1ea7-128">建立和繫結至 ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="e1ea7-128">Create and Bind to an ObservableCollection</span></span>](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [<span data-ttu-id="e1ea7-129">實作 PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="e1ea7-129">Implement PriorityBinding</span></span>](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [<span data-ttu-id="e1ea7-130">使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料</span><span class="sxs-lookup"><span data-stu-id="e1ea7-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [<span data-ttu-id="e1ea7-131">繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ</span><span class="sxs-lookup"><span data-stu-id="e1ea7-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [<span data-ttu-id="e1ea7-132">在資料繫結中使用 XML 命名空間</span><span class="sxs-lookup"><span data-stu-id="e1ea7-132">Use XML Namespaces in Data Binding</span></span>](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [<span data-ttu-id="e1ea7-133">繫結至 ADO.NET 資料來源</span><span class="sxs-lookup"><span data-stu-id="e1ea7-133">Bind to an ADO.NET Data Source</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [<span data-ttu-id="e1ea7-134">繫結至方法</span><span class="sxs-lookup"><span data-stu-id="e1ea7-134">Bind to a Method</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [<span data-ttu-id="e1ea7-135">設定繫結更新的通知</span><span class="sxs-lookup"><span data-stu-id="e1ea7-135">Set Up Notification of Binding Updates</span></span>](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [<span data-ttu-id="e1ea7-136">清除繫結</span><span class="sxs-lookup"><span data-stu-id="e1ea7-136">Clear Bindings</span></span>](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [<span data-ttu-id="e1ea7-137">尋找 DataTemplate 產生的元素</span><span class="sxs-lookup"><span data-stu-id="e1ea7-137">Find DataTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [<span data-ttu-id="e1ea7-138">繫結至 Web 服務</span><span class="sxs-lookup"><span data-stu-id="e1ea7-138">Bind to a Web Service</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [<span data-ttu-id="e1ea7-139">繫結至 LINQ 查詢的結果</span><span class="sxs-lookup"><span data-stu-id="e1ea7-139">Bind to the Results of a LINQ Query</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5fa33-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="5fa33-104">In This Section</span></span>  
+ [<span data-ttu-id="5fa33-105">建立簡單繫結</span><span class="sxs-lookup"><span data-stu-id="5fa33-105">Create a Simple Binding</span></span>](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
+ [<span data-ttu-id="5fa33-106">指定繫結來源</span><span class="sxs-lookup"><span data-stu-id="5fa33-106">Specify the Binding Source</span></span>](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
+ [<span data-ttu-id="5fa33-107">讓資料可於 XAML 中繫結</span><span class="sxs-lookup"><span data-stu-id="5fa33-107">Make Data Available for Binding in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
+ [<span data-ttu-id="5fa33-108">控制 TextBox 文字更新來源的時機</span><span class="sxs-lookup"><span data-stu-id="5fa33-108">Control When the TextBox Text Updates the Source</span></span>](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [<span data-ttu-id="5fa33-109">指定繫結的方向</span><span class="sxs-lookup"><span data-stu-id="5fa33-109">Specify the Direction of the Binding</span></span>](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
+ [<span data-ttu-id="5fa33-110">繫結至集合並根據選取項目顯示資訊</span><span class="sxs-lookup"><span data-stu-id="5fa33-110">Bind to a Collection and Display Information Based on Selection</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [<span data-ttu-id="5fa33-111">繫結至列舉</span><span class="sxs-lookup"><span data-stu-id="5fa33-111">Bind to an Enumeration</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
+ [<span data-ttu-id="5fa33-112">繫結兩個控制項的屬性</span><span class="sxs-lookup"><span data-stu-id="5fa33-112">Bind the Properties of Two Controls</span></span>](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
+ [<span data-ttu-id="5fa33-113">實作繫結驗證</span><span class="sxs-lookup"><span data-stu-id="5fa33-113">Implement Binding Validation</span></span>](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
+ [<span data-ttu-id="5fa33-114">對自訂物件實作驗證邏輯</span><span class="sxs-lookup"><span data-stu-id="5fa33-114">Implement Validation Logic on Custom Objects</span></span>](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
+ [<span data-ttu-id="5fa33-115">從繫結的目標屬性取得繫結物件</span><span class="sxs-lookup"><span data-stu-id="5fa33-115">Get the Binding Object from a Bound Target Property</span></span>](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [<span data-ttu-id="5fa33-116">實作 CompositeCollection</span><span class="sxs-lookup"><span data-stu-id="5fa33-116">Implement a CompositeCollection</span></span>](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
+ [<span data-ttu-id="5fa33-117">轉換繫結的資料</span><span class="sxs-lookup"><span data-stu-id="5fa33-117">Convert Bound Data</span></span>](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
+ [<span data-ttu-id="5fa33-118">使用程式碼建立繫結</span><span class="sxs-lookup"><span data-stu-id="5fa33-118">Create a Binding in Code</span></span>](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
+ [<span data-ttu-id="5fa33-119">取得資料集合的預設檢視</span><span class="sxs-lookup"><span data-stu-id="5fa33-119">Get the Default View of a Data Collection</span></span>](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
+ [<span data-ttu-id="5fa33-120">透過資料 CollectionView 中的物件巡覽</span><span class="sxs-lookup"><span data-stu-id="5fa33-120">Navigate Through the Objects in a Data CollectionView</span></span>](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [<span data-ttu-id="5fa33-121">篩選檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="5fa33-121">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
+ [<span data-ttu-id="5fa33-122">排序檢視中的資料</span><span class="sxs-lookup"><span data-stu-id="5fa33-122">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
+ [<span data-ttu-id="5fa33-123">使用 XAML 中的檢視排序和群組資料</span><span class="sxs-lookup"><span data-stu-id="5fa33-123">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [<span data-ttu-id="5fa33-124">使用含階層式資料的主從式模式</span><span class="sxs-lookup"><span data-stu-id="5fa33-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [<span data-ttu-id="5fa33-125">使用含階層式 XML 資料的主從式模式</span><span class="sxs-lookup"><span data-stu-id="5fa33-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [<span data-ttu-id="5fa33-126">根據繫結項目的清單產生值</span><span class="sxs-lookup"><span data-stu-id="5fa33-126">Produce a Value Based on a List of Bound Items</span></span>](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [<span data-ttu-id="5fa33-127">實作屬性變更通知</span><span class="sxs-lookup"><span data-stu-id="5fa33-127">Implement Property Change Notification</span></span>](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
+ [<span data-ttu-id="5fa33-128">建立和繫結至 ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="5fa33-128">Create and Bind to an ObservableCollection</span></span>](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
+ [<span data-ttu-id="5fa33-129">實作 PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="5fa33-129">Implement PriorityBinding</span></span>](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
+ [<span data-ttu-id="5fa33-130">使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料</span><span class="sxs-lookup"><span data-stu-id="5fa33-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="5fa33-131">繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ</span><span class="sxs-lookup"><span data-stu-id="5fa33-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [<span data-ttu-id="5fa33-132">在資料繫結中使用 XML 命名空間</span><span class="sxs-lookup"><span data-stu-id="5fa33-132">Use XML Namespaces in Data Binding</span></span>](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
+ [<span data-ttu-id="5fa33-133">繫結至 ADO.NET 資料來源</span><span class="sxs-lookup"><span data-stu-id="5fa33-133">Bind to an ADO.NET Data Source</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
+ [<span data-ttu-id="5fa33-134">繫結至方法</span><span class="sxs-lookup"><span data-stu-id="5fa33-134">Bind to a Method</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
+ [<span data-ttu-id="5fa33-135">設定繫結更新的通知</span><span class="sxs-lookup"><span data-stu-id="5fa33-135">Set Up Notification of Binding Updates</span></span>](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
+ [<span data-ttu-id="5fa33-136">清除繫結</span><span class="sxs-lookup"><span data-stu-id="5fa33-136">Clear Bindings</span></span>](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
+ [<span data-ttu-id="5fa33-137">尋找 DataTemplate 產生的元素</span><span class="sxs-lookup"><span data-stu-id="5fa33-137">Find DataTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
+ [<span data-ttu-id="5fa33-138">繫結至 Web 服務</span><span class="sxs-lookup"><span data-stu-id="5fa33-138">Bind to a Web Service</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
+ [<span data-ttu-id="5fa33-139">繫結至 LINQ 查詢的結果</span><span class="sxs-lookup"><span data-stu-id="5fa33-139">Bind to the Results of a LINQ Query</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
   
-## <a name="reference"></a><span data-ttu-id="e1ea7-140">參考資料</span><span class="sxs-lookup"><span data-stu-id="e1ea7-140">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5fa33-140">參考資料</span><span class="sxs-lookup"><span data-stu-id="5fa33-140">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="e1ea7-141">相關章節</span><span class="sxs-lookup"><span data-stu-id="e1ea7-141">Related Sections</span></span>  
- [<span data-ttu-id="e1ea7-142">資料繫結</span><span class="sxs-lookup"><span data-stu-id="e1ea7-142">Data Binding</span></span>](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="5fa33-141">相關章節</span><span class="sxs-lookup"><span data-stu-id="5fa33-141">Related Sections</span></span>  
+ [<span data-ttu-id="5fa33-142">資料繫結</span><span class="sxs-lookup"><span data-stu-id="5fa33-142">Data Binding</span></span>](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
   
- [<span data-ttu-id="e1ea7-143">資料繫結</span><span class="sxs-lookup"><span data-stu-id="e1ea7-143">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [<span data-ttu-id="5fa33-143">資料繫結</span><span class="sxs-lookup"><span data-stu-id="5fa33-143">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)

@@ -17,25 +17,26 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-wpf"></a><span data-ttu-id="f6b19-102">輸入 (WPF)</span><span class="sxs-lookup"><span data-stu-id="f6b19-102">Input (WPF)</span></span>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="f6b19-103">包含數種輸入的支援。</span><span class="sxs-lookup"><span data-stu-id="f6b19-103"> includes support for several types of input.</span></span> <span data-ttu-id="f6b19-104">此輸入包含文字、 觸控、 滑鼠、 命令、 焦點、 觸控、 拖放及數位筆跡。</span><span class="sxs-lookup"><span data-stu-id="f6b19-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="f6b19-105">本章節描述在 WPF 中輸入的相關主題。</span><span class="sxs-lookup"><span data-stu-id="f6b19-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="70188-102">輸入 (WPF)</span><span class="sxs-lookup"><span data-stu-id="70188-102">Input (WPF)</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="70188-103">包含數種輸入的支援。</span><span class="sxs-lookup"><span data-stu-id="70188-103"> includes support for several types of input.</span></span> <span data-ttu-id="70188-104">此輸入包含文字、 觸控、 滑鼠、 命令、 焦點、 觸控、 拖放及數位筆跡。</span><span class="sxs-lookup"><span data-stu-id="70188-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="70188-105">本章節描述在 WPF 中輸入的相關主題。</span><span class="sxs-lookup"><span data-stu-id="70188-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f6b19-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="f6b19-106">In This Section</span></span>  
- [<span data-ttu-id="f6b19-107">輸入概觀</span><span class="sxs-lookup"><span data-stu-id="f6b19-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [<span data-ttu-id="f6b19-108">命令概觀</span><span class="sxs-lookup"><span data-stu-id="f6b19-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [<span data-ttu-id="f6b19-109">焦點概觀</span><span class="sxs-lookup"><span data-stu-id="f6b19-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [<span data-ttu-id="f6b19-110">設定控制項中焦點的樣式和 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="f6b19-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="f6b19-111">逐步解說：建立您的第一個觸控應用程式</span><span class="sxs-lookup"><span data-stu-id="f6b19-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="f6b19-112">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="f6b19-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="f6b19-113">數位筆跡</span><span class="sxs-lookup"><span data-stu-id="f6b19-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="70188-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="70188-106">In This Section</span></span>  
+ [<span data-ttu-id="70188-107">輸入概觀</span><span class="sxs-lookup"><span data-stu-id="70188-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="70188-108">命令概觀</span><span class="sxs-lookup"><span data-stu-id="70188-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="70188-109">焦點概觀</span><span class="sxs-lookup"><span data-stu-id="70188-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [<span data-ttu-id="70188-110">設定控制項中焦點的樣式和 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="70188-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="70188-111">逐步解說：建立您的第一個觸控應用程式</span><span class="sxs-lookup"><span data-stu-id="70188-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="70188-112">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="70188-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="70188-113">數位筆跡</span><span class="sxs-lookup"><span data-stu-id="70188-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="f6b19-114">參考資料</span><span class="sxs-lookup"><span data-stu-id="f6b19-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="70188-114">參考資料</span><span class="sxs-lookup"><span data-stu-id="70188-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="f6b19-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="f6b19-115">Related Sections</span></span>  
- [<span data-ttu-id="f6b19-116">控制項</span><span class="sxs-lookup"><span data-stu-id="f6b19-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
-  [<span data-ttu-id="f6b19-117">事件</span><span class="sxs-lookup"><span data-stu-id="f6b19-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="70188-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="70188-115">Related Sections</span></span>  
+ [<span data-ttu-id="70188-116">控制項</span><span class="sxs-lookup"><span data-stu-id="70188-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+  [<span data-ttu-id="70188-117">事件</span><span class="sxs-lookup"><span data-stu-id="70188-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)

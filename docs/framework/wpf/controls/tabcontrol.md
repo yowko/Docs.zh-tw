@@ -17,22 +17,23 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eed0485fd823caea1f332262edd9bcd8817bc31a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cc7e81e3735baff267b09ae59b80f53f80170354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tabcontrol"></a><span data-ttu-id="567eb-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="567eb-102">TabControl</span></span>
-<span data-ttu-id="567eb-103"><xref:System.Windows.Controls.TabControl>項目會透過選取適當的索引標籤的離散頁面上顯示內容。每個索引標籤包含<xref:System.Windows.Controls.TabItem>。</span><span class="sxs-lookup"><span data-stu-id="567eb-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
+# <a name="tabcontrol"></a><span data-ttu-id="8389d-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="8389d-102">TabControl</span></span>
+<span data-ttu-id="8389d-103"><xref:System.Windows.Controls.TabControl>項目會透過選取適當的索引標籤的離散頁面上顯示內容。每個索引標籤包含<xref:System.Windows.Controls.TabItem>。</span><span class="sxs-lookup"><span data-stu-id="8389d-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
   
- <span data-ttu-id="567eb-104">下圖顯示<xref:System.Windows.Controls.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="567eb-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
+ <span data-ttu-id="8389d-104">下圖顯示<xref:System.Windows.Controls.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="8389d-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
   
- <span data-ttu-id="567eb-105">![索引標籤控制項](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="567eb-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
-<span data-ttu-id="567eb-106">一般 TabControl</span><span class="sxs-lookup"><span data-stu-id="567eb-106">Typical TabControl</span></span>  
+ <span data-ttu-id="8389d-105">![索引標籤控制項](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="8389d-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
+<span data-ttu-id="8389d-106">一般 TabControl</span><span class="sxs-lookup"><span data-stu-id="8389d-106">Typical TabControl</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="567eb-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="567eb-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8389d-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="8389d-107">Reference</span></span>  
  <xref:System.Windows.Controls.TabControl>  
   <xref:System.Windows.Controls.TabItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="567eb-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="567eb-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8389d-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="8389d-108">Related Sections</span></span>

@@ -19,28 +19,29 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a2ec81fa63b07a33f79a54b500ae3d7e62f367f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0159848e8add1f66ca7690c0fc692522102e74d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="07e78-102">轉換 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="07e78-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="07e78-103">本節中的主題描述如何將不同的轉換套用至物件。</span><span class="sxs-lookup"><span data-stu-id="07e78-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="655db-102">轉換 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="655db-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="655db-103">本節中的主題描述如何將不同的轉換套用至物件。</span><span class="sxs-lookup"><span data-stu-id="655db-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="07e78-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="07e78-104">In This Section</span></span>  
- [<span data-ttu-id="07e78-105">在事件發生時套用轉換至元素</span><span class="sxs-lookup"><span data-stu-id="07e78-105">Apply a Transform to an Element When an Event Occurs</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="07e78-106">將多個轉換套用至物件</span><span class="sxs-lookup"><span data-stu-id="07e78-106">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="07e78-107">使元素就地旋轉</span><span class="sxs-lookup"><span data-stu-id="07e78-107">Make an Element Spin in Place</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="07e78-108">旋轉物件</span><span class="sxs-lookup"><span data-stu-id="07e78-108">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [<span data-ttu-id="07e78-109">縮放元素</span><span class="sxs-lookup"><span data-stu-id="07e78-109">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [<span data-ttu-id="07e78-110">扭曲元素</span><span class="sxs-lookup"><span data-stu-id="07e78-110">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [<span data-ttu-id="07e78-111">使用相對值指定轉換的原點</span><span class="sxs-lookup"><span data-stu-id="07e78-111">Specify the Origin of a Transform by Using Relative Values</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="07e78-112">平移元素</span><span class="sxs-lookup"><span data-stu-id="07e78-112">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [<span data-ttu-id="07e78-113">使用 MatrixTransform 建立自訂轉換</span><span class="sxs-lookup"><span data-stu-id="07e78-113">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="655db-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="655db-104">In This Section</span></span>  
+ [<span data-ttu-id="655db-105">在事件發生時套用轉換至元素</span><span class="sxs-lookup"><span data-stu-id="655db-105">Apply a Transform to an Element When an Event Occurs</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="655db-106">將多個轉換套用至物件</span><span class="sxs-lookup"><span data-stu-id="655db-106">Apply Multiple Transforms to an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="655db-107">使元素就地旋轉</span><span class="sxs-lookup"><span data-stu-id="655db-107">Make an Element Spin in Place</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="655db-108">旋轉物件</span><span class="sxs-lookup"><span data-stu-id="655db-108">Rotate an Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
+ [<span data-ttu-id="655db-109">縮放元素</span><span class="sxs-lookup"><span data-stu-id="655db-109">Scale an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
+ [<span data-ttu-id="655db-110">扭曲元素</span><span class="sxs-lookup"><span data-stu-id="655db-110">Skew an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
+ [<span data-ttu-id="655db-111">使用相對值指定轉換的原點</span><span class="sxs-lookup"><span data-stu-id="655db-111">Specify the Origin of a Transform by Using Relative Values</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="655db-112">平移元素</span><span class="sxs-lookup"><span data-stu-id="655db-112">Translate an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
+ [<span data-ttu-id="655db-113">使用 MatrixTransform 建立自訂轉換</span><span class="sxs-lookup"><span data-stu-id="655db-113">Use a MatrixTransform to Create Custom Transforms</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="07e78-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="07e78-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="655db-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="655db-114">See Also</span></span>  
  <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="07e78-115">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="07e78-115">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="07e78-116">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="07e78-116">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="07e78-117">版面配置</span><span class="sxs-lookup"><span data-stu-id="07e78-117">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+ [<span data-ttu-id="655db-115">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="655db-115">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="655db-116">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="655db-116">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="655db-117">版面配置</span><span class="sxs-lookup"><span data-stu-id="655db-117">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

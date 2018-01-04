@@ -17,16 +17,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d3b7f26922b7f4691b2db35f27d5529c5eb9a64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d338321544b3c092d64ab520f822e6d593d8ae0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="passwordbox"></a><span data-ttu-id="f0d0b-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="f0d0b-102">PasswordBox</span></span>
-<span data-ttu-id="f0d0b-103"><xref:System.Windows.Controls.PasswordBox>控制項用來輸入機密或私人資訊。</span><span class="sxs-lookup"><span data-stu-id="f0d0b-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="b5c91-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="b5c91-102">PasswordBox</span></span>
+<span data-ttu-id="b5c91-103"><xref:System.Windows.Controls.PasswordBox>控制項用來輸入機密或私人資訊。</span><span class="sxs-lookup"><span data-stu-id="b5c91-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0d0b-104">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f0d0b-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b5c91-104">請參閱</span><span class="sxs-lookup"><span data-stu-id="b5c91-104">See Also</span></span>  
  <xref:System.Windows.Controls.TextBox>  
  <xref:System.Windows.Controls.RichTextBox>  
- [<span data-ttu-id="f0d0b-105">控制項程式庫</span><span class="sxs-lookup"><span data-stu-id="f0d0b-105">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)
+ [<span data-ttu-id="b5c91-105">控制項程式庫</span><span class="sxs-lookup"><span data-stu-id="b5c91-105">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)

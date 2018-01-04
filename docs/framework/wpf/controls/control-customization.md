@@ -17,21 +17,22 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f09c1aac387d26d44398331d62b25e588d4bbdc1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d9bec0b3edd6a5ab3997c42e3b8154f0c41531d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="control-customization"></a><span data-ttu-id="0cace-102">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="0cace-102">Control Customization</span></span>
-<span data-ttu-id="0cace-103">這個類別涵蓋了不同的基底類別、 介面和其他項目以及用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。</span><span class="sxs-lookup"><span data-stu-id="0cace-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="cab34-102">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="cab34-102">Control Customization</span></span>
+<span data-ttu-id="cab34-103">這個類別涵蓋了不同的基底類別、 介面和其他項目以及用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。</span><span class="sxs-lookup"><span data-stu-id="cab34-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0cace-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="0cace-104">In This Section</span></span>  
- [<span data-ttu-id="0cace-105">控制項撰寫概觀</span><span class="sxs-lookup"><span data-stu-id="0cace-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [<span data-ttu-id="0cace-106">設計可設定樣式控制項的方針</span><span class="sxs-lookup"><span data-stu-id="0cace-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="0cace-107">裝飾項</span><span class="sxs-lookup"><span data-stu-id="0cace-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
- [<span data-ttu-id="0cace-108">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="0cace-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [<span data-ttu-id="0cace-109">WPF 自訂控制項的 UI 自動化</span><span class="sxs-lookup"><span data-stu-id="0cace-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cab34-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="cab34-104">In This Section</span></span>  
+ [<span data-ttu-id="cab34-105">控制項撰寫概觀</span><span class="sxs-lookup"><span data-stu-id="cab34-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [<span data-ttu-id="cab34-106">設計可設定樣式控制項的方針</span><span class="sxs-lookup"><span data-stu-id="cab34-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="cab34-107">裝飾項</span><span class="sxs-lookup"><span data-stu-id="cab34-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
+ [<span data-ttu-id="cab34-108">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="cab34-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="cab34-109">WPF 自訂控制項的 UI 自動化</span><span class="sxs-lookup"><span data-stu-id="cab34-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0cace-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0cace-110">See Also</span></span>  
- [<span data-ttu-id="0cace-111">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="0cace-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="cab34-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="cab34-110">See Also</span></span>  
+ [<span data-ttu-id="cab34-111">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="cab34-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

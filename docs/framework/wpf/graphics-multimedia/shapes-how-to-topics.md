@@ -19,23 +19,24 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d226040e531b8e14ff3dae9df2d6353acbbead3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7fb96bd78f2462ece3e1a7cb9f0dc8c5c0988f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="94410-102">圖案 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="94410-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="94410-103">此章節的主題示範如何使用<xref:System.Windows.Shapes.Shape>繪製螢幕的基本圖案的物件。</span><span class="sxs-lookup"><span data-stu-id="94410-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="7315c-102">圖案 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="7315c-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="7315c-103">此章節的主題示範如何使用<xref:System.Windows.Shapes.Shape>繪製螢幕的基本圖案的物件。</span><span class="sxs-lookup"><span data-stu-id="7315c-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="94410-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="94410-104">In This Section</span></span>  
- [<span data-ttu-id="94410-105">使用 Polygon 元素繪製封閉的圖形</span><span class="sxs-lookup"><span data-stu-id="94410-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="94410-106">繪製橢圓形或圓形</span><span class="sxs-lookup"><span data-stu-id="94410-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="94410-107">繪製線條</span><span class="sxs-lookup"><span data-stu-id="94410-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="94410-108">使用 Polyline 元素繪製聚合線</span><span class="sxs-lookup"><span data-stu-id="94410-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="94410-109">繪製矩形</span><span class="sxs-lookup"><span data-stu-id="94410-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="94410-110">修改線條或線段結尾的端點</span><span class="sxs-lookup"><span data-stu-id="94410-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7315c-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="7315c-104">In This Section</span></span>  
+ [<span data-ttu-id="7315c-105">使用 Polygon 元素繪製封閉的圖形</span><span class="sxs-lookup"><span data-stu-id="7315c-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="7315c-106">繪製橢圓形或圓形</span><span class="sxs-lookup"><span data-stu-id="7315c-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="7315c-107">繪製線條</span><span class="sxs-lookup"><span data-stu-id="7315c-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [<span data-ttu-id="7315c-108">使用 Polyline 元素繪製聚合線</span><span class="sxs-lookup"><span data-stu-id="7315c-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="7315c-109">繪製矩形</span><span class="sxs-lookup"><span data-stu-id="7315c-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="7315c-110">修改線條或線段結尾的端點</span><span class="sxs-lookup"><span data-stu-id="7315c-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="94410-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="94410-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7315c-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="7315c-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="94410-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="94410-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="7315c-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="7315c-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

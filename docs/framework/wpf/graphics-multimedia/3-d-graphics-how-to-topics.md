@@ -17,35 +17,36 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e3c52b7deaa27862fe8dedc0b3c91a96597461f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 42a57e029c642aa01cd290db0971a70f27e25739
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="b58f1-102">立體圖形 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="b58f1-102">3-D Graphics How-to Topics</span></span>
-<span data-ttu-id="b58f1-103">此章節的主題示範如何使用[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]中的圖形[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="b58f1-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="72b90-102">立體圖形 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="72b90-102">3-D Graphics How-to Topics</span></span>
+<span data-ttu-id="72b90-103">此章節的主題示範如何使用[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]中的圖形[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="72b90-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b58f1-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="b58f1-104">In This Section</span></span>  
- [<span data-ttu-id="b58f1-105">建立立體場景</span><span class="sxs-lookup"><span data-stu-id="b58f1-105">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="b58f1-106">套用繪圖至立體模型</span><span class="sxs-lookup"><span data-stu-id="b58f1-106">Apply a Drawing to a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [<span data-ttu-id="b58f1-107">對立體物件的前後套用材質</span><span class="sxs-lookup"><span data-stu-id="b58f1-107">Apply Material to the Front and Back of a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [<span data-ttu-id="b58f1-108">將射出材質套用至立體物件</span><span class="sxs-lookup"><span data-stu-id="b58f1-108">Apply Emissive Material to a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [<span data-ttu-id="b58f1-109">轉換立體模型的比例</span><span class="sxs-lookup"><span data-stu-id="b58f1-109">Transform the Scale of a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [<span data-ttu-id="b58f1-110">對立體模型套用多重轉換</span><span class="sxs-lookup"><span data-stu-id="b58f1-110">Apply Multiple Transformations to a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [<span data-ttu-id="b58f1-111">建立立體轉譯動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-111">Animate 3-D Translations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [<span data-ttu-id="b58f1-112">使用分鏡腳本建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-112">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [<span data-ttu-id="b58f1-113">使用 Rotation3DAnimation 建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [<span data-ttu-id="b58f1-114">使用四元數建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-114">Animate a 3-D Rotation Using Quaternions</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [<span data-ttu-id="b58f1-115">使用主要畫面格建立立體旋轉的動畫 (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="b58f1-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [<span data-ttu-id="b58f1-116">使用主要畫面格建立立體旋轉的動畫 (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="b58f1-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [<span data-ttu-id="b58f1-117">在立體場景中建立鏡頭位置和方向的動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-117">Animate Camera Position and Direction in a 3D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [<span data-ttu-id="b58f1-118">使用主要畫面格建立鏡頭位置和方向的動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-118">Animate Camera Position and Direction Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [<span data-ttu-id="b58f1-119">在立體場景中建立材質屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="b58f1-119">Animate Material Properties in a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [<span data-ttu-id="b58f1-120">Viewport3D 中的點擊測試</span><span class="sxs-lookup"><span data-stu-id="b58f1-120">Hit Test in a Viewport3D</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [<span data-ttu-id="b58f1-121">測試 Point4D 結構是否相等和不相等</span><span class="sxs-lookup"><span data-stu-id="b58f1-121">Test Point4D structures for equality and inequality</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+## <a name="in-this-section"></a><span data-ttu-id="72b90-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="72b90-104">In This Section</span></span>  
+ [<span data-ttu-id="72b90-105">建立立體場景</span><span class="sxs-lookup"><span data-stu-id="72b90-105">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="72b90-106">套用繪圖至立體模型</span><span class="sxs-lookup"><span data-stu-id="72b90-106">Apply a Drawing to a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [<span data-ttu-id="72b90-107">對立體物件的前後套用材質</span><span class="sxs-lookup"><span data-stu-id="72b90-107">Apply Material to the Front and Back of a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [<span data-ttu-id="72b90-108">將射出材質套用至立體物件</span><span class="sxs-lookup"><span data-stu-id="72b90-108">Apply Emissive Material to a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [<span data-ttu-id="72b90-109">轉換立體模型的比例</span><span class="sxs-lookup"><span data-stu-id="72b90-109">Transform the Scale of a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
+ [<span data-ttu-id="72b90-110">對立體模型套用多重轉換</span><span class="sxs-lookup"><span data-stu-id="72b90-110">Apply Multiple Transformations to a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [<span data-ttu-id="72b90-111">建立立體轉譯動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-111">Animate 3-D Translations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
+ [<span data-ttu-id="72b90-112">使用分鏡腳本建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-112">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="72b90-113">使用 Rotation3DAnimation 建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [<span data-ttu-id="72b90-114">使用四元數建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-114">Animate a 3-D Rotation Using Quaternions</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [<span data-ttu-id="72b90-115">使用主要畫面格建立立體旋轉的動畫 (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="72b90-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [<span data-ttu-id="72b90-116">使用主要畫面格建立立體旋轉的動畫 (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="72b90-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [<span data-ttu-id="72b90-117">在立體場景中建立鏡頭位置和方向的動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-117">Animate Camera Position and Direction in a 3D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [<span data-ttu-id="72b90-118">使用主要畫面格建立鏡頭位置和方向的動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-118">Animate Camera Position and Direction Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [<span data-ttu-id="72b90-119">在立體場景中建立材質屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="72b90-119">Animate Material Properties in a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [<span data-ttu-id="72b90-120">Viewport3D 中的點擊測試</span><span class="sxs-lookup"><span data-stu-id="72b90-120">Hit Test in a Viewport3D</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
+ [<span data-ttu-id="72b90-121">測試 Point4D 結構是否相等和不相等</span><span class="sxs-lookup"><span data-stu-id="72b90-121">Test Point4D structures for equality and inequality</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
-## <a name="reference"></a><span data-ttu-id="b58f1-122">參考資料</span><span class="sxs-lookup"><span data-stu-id="b58f1-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="72b90-122">參考資料</span><span class="sxs-lookup"><span data-stu-id="72b90-122">Reference</span></span>  
  <xref:System.Windows.Controls.Viewport3D>  
   
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Media.Media3D.Material>  
   
-## <a name="related-sections"></a><span data-ttu-id="b58f1-123">相關章節</span><span class="sxs-lookup"><span data-stu-id="b58f1-123">Related Sections</span></span>  
- [<span data-ttu-id="b58f1-124">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="b58f1-124">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="72b90-123">相關章節</span><span class="sxs-lookup"><span data-stu-id="72b90-123">Related Sections</span></span>  
+ [<span data-ttu-id="72b90-124">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="72b90-124">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

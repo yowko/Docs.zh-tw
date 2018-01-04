@@ -17,19 +17,20 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81217c3ce9ee9f29b92ad63cb94c61bf6a316b0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b59711d308d267cb30be134e4fd35bbb69f8ebc5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="dockpanel"></a><span data-ttu-id="88436-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="88436-102">DockPanel</span></span>
-<span data-ttu-id="88436-103"><xref:System.Windows.Controls.DockPanel>元素用來將子內容版面配置容器的邊緣。</span><span class="sxs-lookup"><span data-stu-id="88436-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="f8692-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="f8692-102">DockPanel</span></span>
+<span data-ttu-id="f8692-103"><xref:System.Windows.Controls.DockPanel>元素用來將子內容版面配置容器的邊緣。</span><span class="sxs-lookup"><span data-stu-id="f8692-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="88436-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="88436-104">In This Section</span></span>  
- [<span data-ttu-id="88436-105">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="88436-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f8692-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="f8692-104">In This Section</span></span>  
+ [<span data-ttu-id="f8692-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="f8692-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="88436-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="88436-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f8692-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="f8692-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -44,9 +45,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="88436-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="88436-107">Related Sections</span></span>  
- [<span data-ttu-id="88436-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="88436-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="f8692-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="f8692-107">Related Sections</span></span>  
+ [<span data-ttu-id="f8692-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="f8692-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="88436-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="88436-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="f8692-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="f8692-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="88436-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="88436-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="f8692-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="f8692-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

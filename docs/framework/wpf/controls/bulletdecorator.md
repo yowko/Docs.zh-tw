@@ -17,18 +17,19 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11fde99942a99c84cd9997a23b9938660a6589d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dccf2514a19aee5ce559e3874dfeaa8a63100a64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="bulletdecorator"></a><span data-ttu-id="bac5f-102">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="bac5f-102">BulletDecorator</span></span>
-<span data-ttu-id="bac5f-103"><xref:System.Windows.Controls.Primitives.BulletDecorator>有兩個內容屬性：<xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>和<xref:System.Windows.Controls.Decorator.Child%2A>。</span><span class="sxs-lookup"><span data-stu-id="bac5f-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> has two content properties: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> and <xref:System.Windows.Controls.Decorator.Child%2A>.</span></span> <span data-ttu-id="bac5f-104"><xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>屬性會定義<xref:System.Windows.UIElement>来做為項目符號。</span><span class="sxs-lookup"><span data-stu-id="bac5f-104">The <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> property defines the <xref:System.Windows.UIElement> to use as a bullet.</span></span> <span data-ttu-id="bac5f-105"><xref:System.Windows.Controls.Decorator.Child%2A>屬性會定義<xref:System.Windows.UIElement>，以視覺化方式對齊項目符號。</span><span class="sxs-lookup"><span data-stu-id="bac5f-105">The <xref:System.Windows.Controls.Decorator.Child%2A> property defines a <xref:System.Windows.UIElement> that visually aligns with the bullet.</span></span>  
+# <a name="bulletdecorator"></a><span data-ttu-id="1466a-102">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="1466a-102">BulletDecorator</span></span>
+<span data-ttu-id="1466a-103"><xref:System.Windows.Controls.Primitives.BulletDecorator>有兩個內容屬性：<xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>和<xref:System.Windows.Controls.Decorator.Child%2A>。</span><span class="sxs-lookup"><span data-stu-id="1466a-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> has two content properties: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> and <xref:System.Windows.Controls.Decorator.Child%2A>.</span></span> <span data-ttu-id="1466a-104"><xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>屬性會定義<xref:System.Windows.UIElement>来做為項目符號。</span><span class="sxs-lookup"><span data-stu-id="1466a-104">The <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> property defines the <xref:System.Windows.UIElement> to use as a bullet.</span></span> <span data-ttu-id="1466a-105"><xref:System.Windows.Controls.Decorator.Child%2A>屬性會定義<xref:System.Windows.UIElement>，以視覺化方式對齊項目符號。</span><span class="sxs-lookup"><span data-stu-id="1466a-105">The <xref:System.Windows.Controls.Decorator.Child%2A> property defines a <xref:System.Windows.UIElement> that visually aligns with the bullet.</span></span>  
   
- <span data-ttu-id="bac5f-106">下圖顯示使用控制項的範例<xref:System.Windows.Controls.Primitives.BulletDecorator>。</span><span class="sxs-lookup"><span data-stu-id="bac5f-106">The following illustration shows examples of controls that use a <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span></span>  
+ <span data-ttu-id="1466a-106">下圖顯示使用控制項的範例<xref:System.Windows.Controls.Primitives.BulletDecorator>。</span><span class="sxs-lookup"><span data-stu-id="1466a-106">The following illustration shows examples of controls that use a <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span></span>  
   
- <span data-ttu-id="bac5f-107">![3 個 Bulletdecorator: CheckBox、 RadioButton、 TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")</span><span class="sxs-lookup"><span data-stu-id="bac5f-107">![3 BulletDecorators: CheckBox, RadioButton, TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")</span></span>  
+ <span data-ttu-id="1466a-107">![3 個 Bulletdecorator: CheckBox、 RadioButton、 TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")</span><span class="sxs-lookup"><span data-stu-id="1466a-107">![3 BulletDecorators: CheckBox, RadioButton, TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="bac5f-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="bac5f-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1466a-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="1466a-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>
