@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c6a15424758ea90623afb37258827a8766a90aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7a6ca13864d703e905cc77409ba12fc8883798d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="502---compilationstop"></a><span data-ttu-id="3400d-102">502 - CompilationStop</span><span class="sxs-lookup"><span data-stu-id="3400d-102">502 - CompilationStop</span></span>
-## <a name="properties"></a><span data-ttu-id="3400d-103">屬性</span><span class="sxs-lookup"><span data-stu-id="3400d-103">Properties</span></span>  
+# <a name="502---compilationstop"></a><span data-ttu-id="c7c0f-102">502 - CompilationStop</span><span class="sxs-lookup"><span data-stu-id="c7c0f-102">502 - CompilationStop</span></span>
+## <a name="properties"></a><span data-ttu-id="c7c0f-103">屬性</span><span class="sxs-lookup"><span data-stu-id="c7c0f-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3400d-104">ID</span><span class="sxs-lookup"><span data-stu-id="3400d-104">ID</span></span>|<span data-ttu-id="3400d-105">502</span><span class="sxs-lookup"><span data-stu-id="3400d-105">502</span></span>|  
-|<span data-ttu-id="3400d-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="3400d-106">Keywords</span></span>|<span data-ttu-id="3400d-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="3400d-107">WebHost</span></span>|  
-|<span data-ttu-id="3400d-108">層級</span><span class="sxs-lookup"><span data-stu-id="3400d-108">Level</span></span>|<span data-ttu-id="3400d-109">資訊</span><span class="sxs-lookup"><span data-stu-id="3400d-109">Information</span></span>|  
-|<span data-ttu-id="3400d-110">通道</span><span class="sxs-lookup"><span data-stu-id="3400d-110">Channel</span></span>|<span data-ttu-id="3400d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="3400d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c7c0f-104">ID</span><span class="sxs-lookup"><span data-stu-id="c7c0f-104">ID</span></span>|<span data-ttu-id="c7c0f-105">502</span><span class="sxs-lookup"><span data-stu-id="c7c0f-105">502</span></span>|  
+|<span data-ttu-id="c7c0f-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="c7c0f-106">Keywords</span></span>|<span data-ttu-id="c7c0f-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="c7c0f-107">WebHost</span></span>|  
+|<span data-ttu-id="c7c0f-108">層級</span><span class="sxs-lookup"><span data-stu-id="c7c0f-108">Level</span></span>|<span data-ttu-id="c7c0f-109">資訊</span><span class="sxs-lookup"><span data-stu-id="c7c0f-109">Information</span></span>|  
+|<span data-ttu-id="c7c0f-110">通道</span><span class="sxs-lookup"><span data-stu-id="c7c0f-110">Channel</span></span>|<span data-ttu-id="c7c0f-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="c7c0f-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3400d-112">描述</span><span class="sxs-lookup"><span data-stu-id="3400d-112">Description</span></span>  
- <span data-ttu-id="3400d-113">當 ServiceHost 編譯結束時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="3400d-113">This event is emitted when the servicehost compilation ends.</span></span>  
+## <a name="description"></a><span data-ttu-id="c7c0f-112">描述</span><span class="sxs-lookup"><span data-stu-id="c7c0f-112">Description</span></span>  
+ <span data-ttu-id="c7c0f-113">當 ServiceHost 編譯結束時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="c7c0f-113">This event is emitted when the servicehost compilation ends.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3400d-114">訊息</span><span class="sxs-lookup"><span data-stu-id="3400d-114">Message</span></span>  
- <span data-ttu-id="3400d-115">結束編譯。</span><span class="sxs-lookup"><span data-stu-id="3400d-115">End compilation.</span></span>  
+## <a name="message"></a><span data-ttu-id="c7c0f-114">訊息</span><span class="sxs-lookup"><span data-stu-id="c7c0f-114">Message</span></span>  
+ <span data-ttu-id="c7c0f-115">結束編譯。</span><span class="sxs-lookup"><span data-stu-id="c7c0f-115">End compilation.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3400d-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="3400d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c7c0f-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="c7c0f-116">Details</span></span>

@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef6e6db874540d0776aaaae353d5084859313a65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56b30aedcb35b6509529bfc9b9b82d861789b9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="namedpipetransportbindingelement"></a><span data-ttu-id="28650-102">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="28650-102">NamedPipeTransportBindingElement</span></span>
-<span data-ttu-id="28650-103">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="28650-103">NamedPipeTransportBindingElement</span></span>  
+# <a name="namedpipetransportbindingelement"></a><span data-ttu-id="73721-102">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="73721-102">NamedPipeTransportBindingElement</span></span>
+<span data-ttu-id="73721-103">NamedPipeTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="73721-103">NamedPipeTransportBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28650-104">語法</span><span class="sxs-lookup"><span data-stu-id="28650-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73721-104">語法</span><span class="sxs-lookup"><span data-stu-id="73721-104">Syntax</span></span>  
   
 ```  
 class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -31,24 +32,24 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="28650-105">方法</span><span class="sxs-lookup"><span data-stu-id="28650-105">Methods</span></span>  
- <span data-ttu-id="28650-106">NamedPipeTransportBindingElement 類別沒有定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="28650-106">The NamedPipeTransportBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="73721-105">方法</span><span class="sxs-lookup"><span data-stu-id="73721-105">Methods</span></span>  
+ <span data-ttu-id="73721-106">NamedPipeTransportBindingElement 類別沒有定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="73721-106">The NamedPipeTransportBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="28650-107">屬性</span><span class="sxs-lookup"><span data-stu-id="28650-107">Properties</span></span>  
- <span data-ttu-id="28650-108">NamedPipeTransportBindingElement 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="28650-108">The NamedPipeTransportBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="73721-107">屬性</span><span class="sxs-lookup"><span data-stu-id="73721-107">Properties</span></span>  
+ <span data-ttu-id="73721-108">NamedPipeTransportBindingElement 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="73721-108">The NamedPipeTransportBindingElement class has the following property:</span></span>  
   
-### <a name="connectionpoolsettings"></a><span data-ttu-id="28650-109">ConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="28650-109">ConnectionPoolSettings</span></span>  
- <span data-ttu-id="28650-110">資料型別：NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="28650-110">Data type: NamedPipeConnectionPoolSettings</span></span>  
+### <a name="connectionpoolsettings"></a><span data-ttu-id="73721-109">ConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="73721-109">ConnectionPoolSettings</span></span>  
+ <span data-ttu-id="73721-110">資料型別：NamedPipeConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="73721-110">Data type: NamedPipeConnectionPoolSettings</span></span>  
   
- <span data-ttu-id="28650-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="28650-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="73721-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="73721-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="28650-112">連線集區設定。</span><span class="sxs-lookup"><span data-stu-id="28650-112">The connection pool settings.</span></span>  
+ <span data-ttu-id="73721-112">連線集區設定。</span><span class="sxs-lookup"><span data-stu-id="73721-112">The connection pool settings.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="28650-113">需求</span><span class="sxs-lookup"><span data-stu-id="28650-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73721-113">需求</span><span class="sxs-lookup"><span data-stu-id="73721-113">Requirements</span></span>  
   
-|<span data-ttu-id="28650-114">MOF</span><span class="sxs-lookup"><span data-stu-id="28650-114">MOF</span></span>|<span data-ttu-id="28650-115">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="28650-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="73721-114">MOF</span><span class="sxs-lookup"><span data-stu-id="73721-114">MOF</span></span>|<span data-ttu-id="73721-115">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="73721-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="28650-116">命名空間</span><span class="sxs-lookup"><span data-stu-id="28650-116">Namespace</span></span>|<span data-ttu-id="28650-117">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="28650-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="73721-116">命名空間</span><span class="sxs-lookup"><span data-stu-id="73721-116">Namespace</span></span>|<span data-ttu-id="73721-117">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="73721-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="28650-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="28650-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="73721-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="73721-118">See Also</span></span>  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

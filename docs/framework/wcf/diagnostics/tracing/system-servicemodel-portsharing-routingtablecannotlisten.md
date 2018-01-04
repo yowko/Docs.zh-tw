@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b54af31fac5ae7e3ba2fa1686093f55e5d7eeeb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cc37273b7808c90833a0f765a7731ddacef7a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingroutingtablecannotlisten"></a><span data-ttu-id="110ae-102">System.ServiceModel.PortSharing.RoutingTableCannotListen</span><span class="sxs-lookup"><span data-stu-id="110ae-102">System.ServiceModel.PortSharing.RoutingTableCannotListen</span></span>
-<span data-ttu-id="110ae-103">System.ServiceModel.PortSharing.RoutingTableCannotListen</span><span class="sxs-lookup"><span data-stu-id="110ae-103">System.ServiceModel.PortSharing.RoutingTableCannotListen</span></span>  
+# <a name="systemservicemodelportsharingroutingtablecannotlisten"></a><span data-ttu-id="09abe-102">System.ServiceModel.PortSharing.RoutingTableCannotListen</span><span class="sxs-lookup"><span data-stu-id="09abe-102">System.ServiceModel.PortSharing.RoutingTableCannotListen</span></span>
+<span data-ttu-id="09abe-103">System.ServiceModel.PortSharing.RoutingTableCannotListen</span><span class="sxs-lookup"><span data-stu-id="09abe-103">System.ServiceModel.PortSharing.RoutingTableCannotListen</span></span>  
   
-## <a name="description"></a><span data-ttu-id="110ae-104">描述</span><span class="sxs-lookup"><span data-stu-id="110ae-104">Description</span></span>  
- <span data-ttu-id="110ae-105">無法接聽路由表。</span><span class="sxs-lookup"><span data-stu-id="110ae-105">The routing table cannot listen.</span></span>  
+## <a name="description"></a><span data-ttu-id="09abe-104">描述</span><span class="sxs-lookup"><span data-stu-id="09abe-104">Description</span></span>  
+ <span data-ttu-id="09abe-105">無法接聽路由表。</span><span class="sxs-lookup"><span data-stu-id="09abe-105">The routing table cannot listen.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="110ae-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="110ae-106">See Also</span></span>  
- [<span data-ttu-id="110ae-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="110ae-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="110ae-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="110ae-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="110ae-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="110ae-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="09abe-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="09abe-106">See Also</span></span>  
+ [<span data-ttu-id="09abe-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="09abe-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="09abe-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="09abe-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="09abe-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="09abe-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

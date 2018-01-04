@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edb8618a53566cf17c489455d35672d7944ab739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7a6883f950a35c4ccdcfe229826e2a0974fd6af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityauditwrittensuccess"></a><span data-ttu-id="bdde5-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="bdde5-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>
-<span data-ttu-id="bdde5-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="bdde5-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>  
+# <a name="systemservicemodelsecuritysecurityauditwrittensuccess"></a><span data-ttu-id="87fec-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="87fec-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>
+<span data-ttu-id="87fec-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="87fec-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bdde5-104">描述</span><span class="sxs-lookup"><span data-stu-id="bdde5-104">Description</span></span>  
- <span data-ttu-id="bdde5-105">順利寫入安全性稽核記錄。</span><span class="sxs-lookup"><span data-stu-id="bdde5-105">The security audit log is written successfully.</span></span>  
+## <a name="description"></a><span data-ttu-id="87fec-104">描述</span><span class="sxs-lookup"><span data-stu-id="87fec-104">Description</span></span>  
+ <span data-ttu-id="87fec-105">順利寫入安全性稽核記錄。</span><span class="sxs-lookup"><span data-stu-id="87fec-105">The security audit log is written successfully.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdde5-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bdde5-106">See Also</span></span>  
- [<span data-ttu-id="bdde5-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="bdde5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bdde5-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="bdde5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bdde5-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="bdde5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="87fec-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="87fec-106">See Also</span></span>  
+ [<span data-ttu-id="87fec-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="87fec-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="87fec-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="87fec-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="87fec-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="87fec-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

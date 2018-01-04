@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15be4b6bfb84a0aa843e3d62861a9195e125a04e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e72d3e400440b830b689f476753a7c8c40fe2586
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="msmq"></a><span data-ttu-id="23e91-102">MSMQ</span><span class="sxs-lookup"><span data-stu-id="23e91-102">MSMQ</span></span>
-<span data-ttu-id="23e91-103">在 MSMQ 應用程式中，沒有其他活動會從佇列通道傳輸至 MSMQ 或從 MSMQ 傳輸至佇列通道。</span><span class="sxs-lookup"><span data-stu-id="23e91-103">In an MSMQ application, no additional activity is transferred from the queued channel to MSMQ and from MSMQ to the queued channel.</span></span>  
+# <a name="msmq"></a><span data-ttu-id="1efce-102">MSMQ</span><span class="sxs-lookup"><span data-stu-id="1efce-102">MSMQ</span></span>
+<span data-ttu-id="1efce-103">在 MSMQ 應用程式中，沒有其他活動會從佇列通道傳輸至 MSMQ 或從 MSMQ 傳輸至佇列通道。</span><span class="sxs-lookup"><span data-stu-id="1efce-103">In an MSMQ application, no additional activity is transferred from the queued channel to MSMQ and from MSMQ to the queued channel.</span></span>  
   
- <span data-ttu-id="23e91-104">此外，系統也會追蹤 MSMQ 訊息識別碼和 SOAP 訊息識別碼 (若有活動識別碼，一樣會進行追蹤)，做為傳送作業中佇列通道追蹤的一部分。</span><span class="sxs-lookup"><span data-stu-id="23e91-104">In addition, MSMQ Message ID and SOAP message ID (along with Activity ID, if one exists) are traced as part of queued channel traces on a Send operation.</span></span>  
+ <span data-ttu-id="1efce-104">此外，系統也會追蹤 MSMQ 訊息識別碼和 SOAP 訊息識別碼 (若有活動識別碼，一樣會進行追蹤)，做為傳送作業中佇列通道追蹤的一部分。</span><span class="sxs-lookup"><span data-stu-id="1efce-104">In addition, MSMQ Message ID and SOAP message ID (along with Activity ID, if one exists) are traced as part of queued channel traces on a Send operation.</span></span>  
   
- <span data-ttu-id="23e91-105">系統會追蹤 MSMQ 訊息識別碼和 SOAP 訊息識別碼 (若有活動識別碼，一樣會進行追蹤)，做為接收作業中佇列通道追蹤的一部分。</span><span class="sxs-lookup"><span data-stu-id="23e91-105">MSMQ Message ID and SOAP message ID (along with activity ID, if one exists) are traced as part of queued channel traces on a Receive operation.</span></span>  
+ <span data-ttu-id="1efce-105">系統會追蹤 MSMQ 訊息識別碼和 SOAP 訊息識別碼 (若有活動識別碼，一樣會進行追蹤)，做為接收作業中佇列通道追蹤的一部分。</span><span class="sxs-lookup"><span data-stu-id="1efce-105">MSMQ Message ID and SOAP message ID (along with activity ID, if one exists) are traced as part of queued channel traces on a Receive operation.</span></span>  
   
- <span data-ttu-id="23e91-106">接收作業上必要的傳輸動作，其執行方法類似其他傳輸 (接收位元組 -> 處理序訊息 -> 作業)。</span><span class="sxs-lookup"><span data-stu-id="23e91-106">The required transfers on the Receive operation are executed similarly to any other transport (receive bytes->Process message-> operation).</span></span>
+ <span data-ttu-id="1efce-106">接收作業上必要的傳輸動作，其執行方法類似其他傳輸 (接收位元組 -> 處理序訊息 -> 作業)。</span><span class="sxs-lookup"><span data-stu-id="1efce-106">The required transfers on the Receive operation are executed similarly to any other transport (receive bytes->Process message-> operation).</span></span>

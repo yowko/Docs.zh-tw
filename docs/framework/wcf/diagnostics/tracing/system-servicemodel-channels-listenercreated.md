@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76ff0523b9f6fe2ab1b733c381f22b23d9f5478a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b364d8fca9a6d562d8e1e44818780a8436baa9c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelslistenercreated"></a><span data-ttu-id="4ce67-102">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="4ce67-102">System.ServiceModel.Channels.ListenerCreated</span></span>
-<span data-ttu-id="4ce67-103">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="4ce67-103">System.ServiceModel.Channels.ListenerCreated</span></span>  
+# <a name="systemservicemodelchannelslistenercreated"></a><span data-ttu-id="f18b1-102">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="f18b1-102">System.ServiceModel.Channels.ListenerCreated</span></span>
+<span data-ttu-id="f18b1-103">System.ServiceModel.Channels.ListenerCreated</span><span class="sxs-lookup"><span data-stu-id="f18b1-103">System.ServiceModel.Channels.ListenerCreated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4ce67-104">描述</span><span class="sxs-lookup"><span data-stu-id="4ce67-104">Description</span></span>  
- <span data-ttu-id="4ce67-105">建立的接聽項。</span><span class="sxs-lookup"><span data-stu-id="4ce67-105">Listener created.</span></span>  
+## <a name="description"></a><span data-ttu-id="f18b1-104">描述</span><span class="sxs-lookup"><span data-stu-id="f18b1-104">Description</span></span>  
+ <span data-ttu-id="f18b1-105">建立的接聽項。</span><span class="sxs-lookup"><span data-stu-id="f18b1-105">Listener created.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ce67-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ce67-106">See Also</span></span>  
- [<span data-ttu-id="4ce67-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="4ce67-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4ce67-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="4ce67-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4ce67-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="4ce67-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f18b1-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="f18b1-106">See Also</span></span>  
+ [<span data-ttu-id="f18b1-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="f18b1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f18b1-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="f18b1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f18b1-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="f18b1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

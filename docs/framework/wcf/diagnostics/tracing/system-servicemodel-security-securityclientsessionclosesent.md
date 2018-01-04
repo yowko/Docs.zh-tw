@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 21fe1ae1c3c247987d045ae7f454d18b622b9b9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7023ef8bdcb7507d11f1b3d7dab035aecd947202
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityclientsessionclosesent"></a><span data-ttu-id="c507a-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="c507a-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>
-<span data-ttu-id="c507a-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="c507a-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityclientsessionclosesent"></a><span data-ttu-id="49294-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="49294-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>
+<span data-ttu-id="49294-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="49294-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c507a-104">描述</span><span class="sxs-lookup"><span data-stu-id="c507a-104">Description</span></span>  
- <span data-ttu-id="c507a-105">用戶端安全性工作階段已傳送「關閉」訊息。</span><span class="sxs-lookup"><span data-stu-id="c507a-105">A Close message was sent by the client security session.</span></span>  
+## <a name="description"></a><span data-ttu-id="49294-104">描述</span><span class="sxs-lookup"><span data-stu-id="49294-104">Description</span></span>  
+ <span data-ttu-id="49294-105">用戶端安全性工作階段已傳送「關閉」訊息。</span><span class="sxs-lookup"><span data-stu-id="49294-105">A Close message was sent by the client security session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c507a-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c507a-106">See Also</span></span>  
- [<span data-ttu-id="c507a-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="c507a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c507a-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="c507a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c507a-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="c507a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="49294-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="49294-106">See Also</span></span>  
+ [<span data-ttu-id="49294-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="49294-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="49294-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="49294-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="49294-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="49294-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

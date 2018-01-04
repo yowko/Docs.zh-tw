@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ee638ef31325d2e9758d5cced21e5d79b06a7d7a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b316ffe44d86ef6946f989994085840a09e3e421
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityissuancetokenproviderbeginsecuritynegotiation"></a><span data-ttu-id="8b016-102">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="8b016-102">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span></span>
-<span data-ttu-id="8b016-103">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="8b016-103">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span></span>  
+# <a name="systemservicemodelsecurityissuancetokenproviderbeginsecuritynegotiation"></a><span data-ttu-id="5c735-102">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="5c735-102">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span></span>
+<span data-ttu-id="5c735-103">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="5c735-103">System.ServiceModel.Security.IssuanceTokenProviderBeginSecurityNegotiation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8b016-104">描述</span><span class="sxs-lookup"><span data-stu-id="8b016-104">Description</span></span>  
- <span data-ttu-id="8b016-105">IssuanceTokenProvider 已經啟動新的安全性交涉。</span><span class="sxs-lookup"><span data-stu-id="8b016-105">The IssuanceTokenProvider has started a new security negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="5c735-104">描述</span><span class="sxs-lookup"><span data-stu-id="5c735-104">Description</span></span>  
+ <span data-ttu-id="5c735-105">IssuanceTokenProvider 已經啟動新的安全性交涉。</span><span class="sxs-lookup"><span data-stu-id="5c735-105">The IssuanceTokenProvider has started a new security negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b016-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b016-106">See Also</span></span>  
- [<span data-ttu-id="8b016-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="8b016-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8b016-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="8b016-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8b016-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="8b016-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5c735-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="5c735-106">See Also</span></span>  
+ [<span data-ttu-id="5c735-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="5c735-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5c735-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="5c735-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5c735-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="5c735-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

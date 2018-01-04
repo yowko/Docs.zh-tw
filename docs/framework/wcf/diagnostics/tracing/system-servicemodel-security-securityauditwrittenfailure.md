@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e49ee35f57d2fef2ffb98d3459c5d1e52a0eff1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b21296d9480584d2f14b0242c33ffedab58ce3c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityauditwrittenfailure"></a><span data-ttu-id="432a0-102">System.ServiceModel.Security.SecurityAuditWrittenFailure</span><span class="sxs-lookup"><span data-stu-id="432a0-102">System.ServiceModel.Security.SecurityAuditWrittenFailure</span></span>
-<span data-ttu-id="432a0-103">System.ServiceModel.Security.SecurityAuditWrittenFailure</span><span class="sxs-lookup"><span data-stu-id="432a0-103">System.ServiceModel.Security.SecurityAuditWrittenFailure</span></span>  
+# <a name="systemservicemodelsecuritysecurityauditwrittenfailure"></a><span data-ttu-id="a718c-102">System.ServiceModel.Security.SecurityAuditWrittenFailure</span><span class="sxs-lookup"><span data-stu-id="a718c-102">System.ServiceModel.Security.SecurityAuditWrittenFailure</span></span>
+<span data-ttu-id="a718c-103">System.ServiceModel.Security.SecurityAuditWrittenFailure</span><span class="sxs-lookup"><span data-stu-id="a718c-103">System.ServiceModel.Security.SecurityAuditWrittenFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="432a0-104">描述</span><span class="sxs-lookup"><span data-stu-id="432a0-104">Description</span></span>  
- <span data-ttu-id="432a0-105">寫入安全性稽核記錄時發生失敗。</span><span class="sxs-lookup"><span data-stu-id="432a0-105">A failure occurred while writing to the security audit log.</span></span>  
+## <a name="description"></a><span data-ttu-id="a718c-104">描述</span><span class="sxs-lookup"><span data-stu-id="a718c-104">Description</span></span>  
+ <span data-ttu-id="a718c-105">寫入安全性稽核記錄時發生失敗。</span><span class="sxs-lookup"><span data-stu-id="a718c-105">A failure occurred while writing to the security audit log.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="432a0-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="432a0-106">See Also</span></span>  
- [<span data-ttu-id="432a0-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="432a0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="432a0-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="432a0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="432a0-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="432a0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a718c-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="a718c-106">See Also</span></span>  
+ [<span data-ttu-id="a718c-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="a718c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a718c-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="a718c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a718c-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="a718c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

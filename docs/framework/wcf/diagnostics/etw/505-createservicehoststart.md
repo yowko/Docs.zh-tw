@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da643d1d35f48b907676df9ba223ec2ee6fb0658
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d031447a424aa3576bfab20bc17b1756d85b965
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="505---createservicehoststart"></a><span data-ttu-id="69efe-102">505 - CreateServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="69efe-102">505 - CreateServiceHostStart</span></span>
-## <a name="properties"></a><span data-ttu-id="69efe-103">屬性</span><span class="sxs-lookup"><span data-stu-id="69efe-103">Properties</span></span>  
+# <a name="505---createservicehoststart"></a><span data-ttu-id="e8cf3-102">505 - CreateServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="e8cf3-102">505 - CreateServiceHostStart</span></span>
+## <a name="properties"></a><span data-ttu-id="e8cf3-103">屬性</span><span class="sxs-lookup"><span data-stu-id="e8cf3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="69efe-104">ID</span><span class="sxs-lookup"><span data-stu-id="69efe-104">ID</span></span>|<span data-ttu-id="69efe-105">505</span><span class="sxs-lookup"><span data-stu-id="69efe-105">505</span></span>|  
-|<span data-ttu-id="69efe-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="69efe-106">Keywords</span></span>|<span data-ttu-id="69efe-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="69efe-107">WebHost</span></span>|  
-|<span data-ttu-id="69efe-108">層級</span><span class="sxs-lookup"><span data-stu-id="69efe-108">Level</span></span>|<span data-ttu-id="69efe-109">資訊</span><span class="sxs-lookup"><span data-stu-id="69efe-109">Information</span></span>|  
-|<span data-ttu-id="69efe-110">通道</span><span class="sxs-lookup"><span data-stu-id="69efe-110">Channel</span></span>|<span data-ttu-id="69efe-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="69efe-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e8cf3-104">ID</span><span class="sxs-lookup"><span data-stu-id="e8cf3-104">ID</span></span>|<span data-ttu-id="e8cf3-105">505</span><span class="sxs-lookup"><span data-stu-id="e8cf3-105">505</span></span>|  
+|<span data-ttu-id="e8cf3-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="e8cf3-106">Keywords</span></span>|<span data-ttu-id="e8cf3-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="e8cf3-107">WebHost</span></span>|  
+|<span data-ttu-id="e8cf3-108">層級</span><span class="sxs-lookup"><span data-stu-id="e8cf3-108">Level</span></span>|<span data-ttu-id="e8cf3-109">資訊</span><span class="sxs-lookup"><span data-stu-id="e8cf3-109">Information</span></span>|  
+|<span data-ttu-id="e8cf3-110">通道</span><span class="sxs-lookup"><span data-stu-id="e8cf3-110">Channel</span></span>|<span data-ttu-id="e8cf3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e8cf3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="69efe-112">描述</span><span class="sxs-lookup"><span data-stu-id="69efe-112">Description</span></span>  
- <span data-ttu-id="69efe-113">當 CreateServiceHost 開始時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="69efe-113">This event is emitted when CreateServiceHost begins.</span></span>  
+## <a name="description"></a><span data-ttu-id="e8cf3-112">描述</span><span class="sxs-lookup"><span data-stu-id="e8cf3-112">Description</span></span>  
+ <span data-ttu-id="e8cf3-113">當 CreateServiceHost 開始時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="e8cf3-113">This event is emitted when CreateServiceHost begins.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="69efe-114">訊息</span><span class="sxs-lookup"><span data-stu-id="69efe-114">Message</span></span>  
- <span data-ttu-id="69efe-115">開始 CreateServiceHost。</span><span class="sxs-lookup"><span data-stu-id="69efe-115">Begin CreateServiceHost.</span></span>  
+## <a name="message"></a><span data-ttu-id="e8cf3-114">訊息</span><span class="sxs-lookup"><span data-stu-id="e8cf3-114">Message</span></span>  
+ <span data-ttu-id="e8cf3-115">開始 CreateServiceHost。</span><span class="sxs-lookup"><span data-stu-id="e8cf3-115">Begin CreateServiceHost.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="69efe-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="69efe-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e8cf3-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="e8cf3-116">Details</span></span>

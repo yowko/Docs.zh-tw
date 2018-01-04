@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76e704b8513a7d2f31a2c9ab9d78b8ed7e154d75
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5f9a0b43c13eaf24dbb04424947f7d8c02409ed8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetconfigurationsection"></a><span data-ttu-id="dd772-102">System.ServiceModel.GetConfigurationSection</span><span class="sxs-lookup"><span data-stu-id="dd772-102">System.ServiceModel.GetConfigurationSection</span></span>
-<span data-ttu-id="dd772-103">System.ServiceModel.GetConfigurationSection</span><span class="sxs-lookup"><span data-stu-id="dd772-103">System.ServiceModel.GetConfigurationSection</span></span>  
+# <a name="systemservicemodelgetconfigurationsection"></a><span data-ttu-id="1c077-102">System.ServiceModel.GetConfigurationSection</span><span class="sxs-lookup"><span data-stu-id="1c077-102">System.ServiceModel.GetConfigurationSection</span></span>
+<span data-ttu-id="1c077-103">System.ServiceModel.GetConfigurationSection</span><span class="sxs-lookup"><span data-stu-id="1c077-103">System.ServiceModel.GetConfigurationSection</span></span>  
   
-## <a name="description"></a><span data-ttu-id="dd772-104">描述</span><span class="sxs-lookup"><span data-stu-id="dd772-104">Description</span></span>  
- <span data-ttu-id="dd772-105">取得組態區段。</span><span class="sxs-lookup"><span data-stu-id="dd772-105">Get configuration section.</span></span>  
+## <a name="description"></a><span data-ttu-id="1c077-104">描述</span><span class="sxs-lookup"><span data-stu-id="1c077-104">Description</span></span>  
+ <span data-ttu-id="1c077-105">取得組態區段。</span><span class="sxs-lookup"><span data-stu-id="1c077-105">Get configuration section.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd772-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd772-106">See Also</span></span>  
- [<span data-ttu-id="dd772-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="dd772-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="dd772-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="dd772-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="dd772-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="dd772-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1c077-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="1c077-106">See Also</span></span>  
+ [<span data-ttu-id="1c077-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="1c077-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="1c077-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="1c077-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="1c077-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="1c077-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

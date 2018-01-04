@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2258a32f5eb3a0d4b01845fcba6d82c826367f04
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9cddb2209fd6958fbca8018603b7d15b36aff575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a><span data-ttu-id="80b3f-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="80b3f-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>
-<span data-ttu-id="80b3f-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="80b3f-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>  
+# <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a><span data-ttu-id="fedb6-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="fedb6-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>
+<span data-ttu-id="fedb6-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="fedb6-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>  
   
-## <a name="description"></a><span data-ttu-id="80b3f-104">描述</span><span class="sxs-lookup"><span data-stu-id="80b3f-104">Description</span></span>  
- <span data-ttu-id="80b3f-105">裝載環境已找到服務的基底位址。</span><span class="sxs-lookup"><span data-stu-id="80b3f-105">The hosting environment found the base address for the service.</span></span>  
+## <a name="description"></a><span data-ttu-id="fedb6-104">描述</span><span class="sxs-lookup"><span data-stu-id="fedb6-104">Description</span></span>  
+ <span data-ttu-id="fedb6-105">裝載環境已找到服務的基底位址。</span><span class="sxs-lookup"><span data-stu-id="fedb6-105">The hosting environment found the base address for the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80b3f-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="80b3f-106">See Also</span></span>  
- [<span data-ttu-id="80b3f-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="80b3f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="80b3f-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="80b3f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="80b3f-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="80b3f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fedb6-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="fedb6-106">See Also</span></span>  
+ [<span data-ttu-id="fedb6-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="fedb6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="fedb6-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="fedb6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fedb6-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="fedb6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

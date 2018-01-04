@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d0a2bbe1c881f371b0f2200d0195a1216beb52
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8996572c8941c3045d643353a7b081f8e74a4b62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingsharedmanagerserviceendpointnotexist"></a><span data-ttu-id="041d7-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="041d7-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>
-<span data-ttu-id="041d7-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="041d7-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>  
+# <a name="systemservicemodelportsharingsharedmanagerserviceendpointnotexist"></a><span data-ttu-id="9be76-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="9be76-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>
+<span data-ttu-id="9be76-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="9be76-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>  
   
-## <a name="description"></a><span data-ttu-id="041d7-104">描述</span><span class="sxs-lookup"><span data-stu-id="041d7-104">Description</span></span>  
- <span data-ttu-id="041d7-105">指定服務的端點共用記憶體不存在。</span><span class="sxs-lookup"><span data-stu-id="041d7-105">The shared memory for the endpoint of the specified service does not exist.</span></span> <span data-ttu-id="041d7-106">可能無法啟動服務。</span><span class="sxs-lookup"><span data-stu-id="041d7-106">The service may not be started.</span></span>  
+## <a name="description"></a><span data-ttu-id="9be76-104">描述</span><span class="sxs-lookup"><span data-stu-id="9be76-104">Description</span></span>  
+ <span data-ttu-id="9be76-105">指定服務的端點共用記憶體不存在。</span><span class="sxs-lookup"><span data-stu-id="9be76-105">The shared memory for the endpoint of the specified service does not exist.</span></span> <span data-ttu-id="9be76-106">可能無法啟動服務。</span><span class="sxs-lookup"><span data-stu-id="9be76-106">The service may not be started.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="041d7-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="041d7-107">See Also</span></span>  
- [<span data-ttu-id="041d7-108">追蹤</span><span class="sxs-lookup"><span data-stu-id="041d7-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="041d7-109">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="041d7-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="041d7-110">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="041d7-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9be76-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="9be76-107">See Also</span></span>  
+ [<span data-ttu-id="9be76-108">追蹤</span><span class="sxs-lookup"><span data-stu-id="9be76-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9be76-109">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="9be76-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9be76-110">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="9be76-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

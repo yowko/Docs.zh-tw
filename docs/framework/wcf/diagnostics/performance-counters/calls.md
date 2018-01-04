@@ -1,5 +1,5 @@
 ---
-title: "呼叫"
+title: "呼叫數"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,14 +13,15 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6650d4978e9d27bcb4635adfdde1e88156f0cdd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfb0b32c6ed867e2330d6e712f9e6ed23bd4934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="calls"></a><span data-ttu-id="eaa05-102">呼叫</span><span class="sxs-lookup"><span data-stu-id="eaa05-102">Calls</span></span>
-<span data-ttu-id="eaa05-103">計數器名稱：呼叫數</span><span class="sxs-lookup"><span data-stu-id="eaa05-103">Counter Name: Calls</span></span>  
+# <a name="calls"></a><span data-ttu-id="1cada-102">呼叫數</span><span class="sxs-lookup"><span data-stu-id="1cada-102">Calls</span></span>
+<span data-ttu-id="1cada-103">計數器名稱：呼叫數</span><span class="sxs-lookup"><span data-stu-id="1cada-103">Counter Name: Calls</span></span>  
   
-## <a name="description"></a><span data-ttu-id="eaa05-104">描述</span><span class="sxs-lookup"><span data-stu-id="eaa05-104">Description</span></span>  
- <span data-ttu-id="eaa05-105">對這個作業的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="eaa05-105">Number of calls to this operation.</span></span>
+## <a name="description"></a><span data-ttu-id="1cada-104">描述</span><span class="sxs-lookup"><span data-stu-id="1cada-104">Description</span></span>  
+ <span data-ttu-id="1cada-105">對這個作業的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="1cada-105">Number of calls to this operation.</span></span>

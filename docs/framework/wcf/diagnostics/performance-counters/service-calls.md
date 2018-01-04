@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6ed6f7975ba16aa90dd892f06b9b0c73b8ead37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3459db437c5dbeba55cd18629c180a4da819403f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-calls"></a><span data-ttu-id="2ee28-102">服務：呼叫數</span><span class="sxs-lookup"><span data-stu-id="2ee28-102">Service: Calls</span></span>
-<span data-ttu-id="2ee28-103">計數器名稱：呼叫數。</span><span class="sxs-lookup"><span data-stu-id="2ee28-103">Counter Name: Calls.</span></span>  
+# <a name="service-calls"></a><span data-ttu-id="986ee-102">服務：呼叫數</span><span class="sxs-lookup"><span data-stu-id="986ee-102">Service: Calls</span></span>
+<span data-ttu-id="986ee-103">計數器名稱：呼叫數。</span><span class="sxs-lookup"><span data-stu-id="986ee-103">Counter Name: Calls.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2ee28-104">描述</span><span class="sxs-lookup"><span data-stu-id="2ee28-104">Description</span></span>  
- <span data-ttu-id="2ee28-105">對這個服務的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="2ee28-105">Number of calls to this service.</span></span>
+## <a name="description"></a><span data-ttu-id="986ee-104">描述</span><span class="sxs-lookup"><span data-stu-id="986ee-104">Description</span></span>  
+ <span data-ttu-id="986ee-105">對這個服務的呼叫數。</span><span class="sxs-lookup"><span data-stu-id="986ee-105">Number of calls to this service.</span></span>

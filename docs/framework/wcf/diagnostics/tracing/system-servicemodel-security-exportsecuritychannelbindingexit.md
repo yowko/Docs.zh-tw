@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8fe5b8922c53622c5af09675acea570f87362fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b555660449a036892c4053470e144665c0f5ec42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="f78d1-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="f78d1-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
-<span data-ttu-id="f78d1-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="f78d1-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="e316f-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="e316f-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
+<span data-ttu-id="e316f-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="e316f-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f78d1-104">描述</span><span class="sxs-lookup"><span data-stu-id="f78d1-104">Description</span></span>  
- <span data-ttu-id="f78d1-105">完成安全性 ExportChannelBinding。</span><span class="sxs-lookup"><span data-stu-id="f78d1-105">The Security ExportChannelBinding finished.</span></span>  
+## <a name="description"></a><span data-ttu-id="e316f-104">描述</span><span class="sxs-lookup"><span data-stu-id="e316f-104">Description</span></span>  
+ <span data-ttu-id="e316f-105">完成安全性 ExportChannelBinding。</span><span class="sxs-lookup"><span data-stu-id="e316f-105">The Security ExportChannelBinding finished.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f78d1-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f78d1-106">See Also</span></span>  
- [<span data-ttu-id="f78d1-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="f78d1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f78d1-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="f78d1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f78d1-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="f78d1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e316f-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="e316f-106">See Also</span></span>  
+ [<span data-ttu-id="e316f-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="e316f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e316f-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="e316f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e316f-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="e316f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
