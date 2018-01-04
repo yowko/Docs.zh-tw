@@ -17,35 +17,36 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5187d457e39993413ab6c281433ab604bc384fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eae4b64f2a632330b1b72f3ec5786884c272967c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="panel-control-windows-forms"></a><span data-ttu-id="032bb-102">Panel 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="032bb-102">Panel Control (Windows Forms)</span></span>
-<span data-ttu-id="032bb-103">Windows Form`Panel`控制項可用來提供其他控制項可識別的群組。</span><span class="sxs-lookup"><span data-stu-id="032bb-103">Windows Forms `Panel` controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="032bb-104">一般而言，您可以使用面板細分函式表單。</span><span class="sxs-lookup"><span data-stu-id="032bb-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="032bb-105">`Panel`控制項是類似於<xref:System.Windows.Forms.GroupBox>控制項等控制項，不過，只有`Panel`控制項有捲軸僅限和<xref:System.Windows.Forms.GroupBox>控制項顯示的標題。</span><span class="sxs-lookup"><span data-stu-id="032bb-105">The `Panel` control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the `Panel` control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  
+# <a name="panel-control-windows-forms"></a><span data-ttu-id="33667-102">Panel 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="33667-102">Panel Control (Windows Forms)</span></span>
+<span data-ttu-id="33667-103">Windows Form`Panel`控制項可用來提供其他控制項可識別的群組。</span><span class="sxs-lookup"><span data-stu-id="33667-103">Windows Forms `Panel` controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="33667-104">一般而言，您可以使用面板細分函式表單。</span><span class="sxs-lookup"><span data-stu-id="33667-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="33667-105">`Panel`控制項是類似於<xref:System.Windows.Forms.GroupBox>控制項等控制項，不過，只有`Panel`控制項有捲軸僅限和<xref:System.Windows.Forms.GroupBox>控制項顯示的標題。</span><span class="sxs-lookup"><span data-stu-id="33667-105">The `Panel` control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the `Panel` control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="032bb-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="032bb-106">In This Section</span></span>  
- [<span data-ttu-id="032bb-107">Panel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="032bb-107">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- <span data-ttu-id="032bb-108">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="032bb-108">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="33667-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="33667-106">In This Section</span></span>  
+ [<span data-ttu-id="33667-107">Panel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="33667-107">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ <span data-ttu-id="33667-108">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="33667-108">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="032bb-109">操作說明：搭配 Windows Forms Panel 控制項使用設計工具群組控制項</span><span class="sxs-lookup"><span data-stu-id="032bb-109">How to: Group Controls with the Windows Forms Panel Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
- <span data-ttu-id="032bb-110">描述如何使用設計工具面板群組控制項。</span><span class="sxs-lookup"><span data-stu-id="032bb-110">Describes how to group controls with a panel using the designer.</span></span>  
+ [<span data-ttu-id="33667-109">操作說明：搭配 Windows Forms Panel 控制項使用設計工具群組控制項</span><span class="sxs-lookup"><span data-stu-id="33667-109">How to: Group Controls with the Windows Forms Panel Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
+ <span data-ttu-id="33667-110">描述如何使用設計工具面板群組控制項。</span><span class="sxs-lookup"><span data-stu-id="33667-110">Describes how to group controls with a panel using the designer.</span></span>  
   
- [<span data-ttu-id="032bb-111">操作說明：使用設計工具設定 Windows Forms 面板的背景</span><span class="sxs-lookup"><span data-stu-id="032bb-111">How to: Set the Background of a Windows Forms Panel Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)  
- <span data-ttu-id="032bb-112">描述如何使用設計工具在面板上顯示的背景色彩和背景影像。</span><span class="sxs-lookup"><span data-stu-id="032bb-112">Describes how to display a background color and a background image on a panel using the designer.</span></span>  
+ [<span data-ttu-id="33667-111">操作說明：使用設計工具設定 Windows Forms 面板的背景</span><span class="sxs-lookup"><span data-stu-id="33667-111">How to: Set the Background of a Windows Forms Panel Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)  
+ <span data-ttu-id="33667-112">描述如何使用設計工具在面板上顯示的背景色彩和背景影像。</span><span class="sxs-lookup"><span data-stu-id="33667-112">Describes how to display a background color and a background image on a panel using the designer.</span></span>  
   
- [<span data-ttu-id="032bb-113">操作說明：設定面板背景</span><span class="sxs-lookup"><span data-stu-id="032bb-113">How to: Set the Background of a Panel</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)  
- <span data-ttu-id="032bb-114">描述如何在面板上顯示的背景色彩和背景影像。</span><span class="sxs-lookup"><span data-stu-id="032bb-114">Describes how to display a background color and a background image on a panel.</span></span>  
+ [<span data-ttu-id="33667-113">操作說明：設定面板背景</span><span class="sxs-lookup"><span data-stu-id="33667-113">How to: Set the Background of a Panel</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)  
+ <span data-ttu-id="33667-114">描述如何在面板上顯示的背景色彩和背景影像。</span><span class="sxs-lookup"><span data-stu-id="33667-114">Describes how to display a background color and a background image on a panel.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="032bb-115">參考資料</span><span class="sxs-lookup"><span data-stu-id="032bb-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="33667-115">參考資料</span><span class="sxs-lookup"><span data-stu-id="33667-115">Reference</span></span>  
  <xref:System.Windows.Forms.Panel>  
- <span data-ttu-id="032bb-116">說明這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="032bb-116">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="33667-116">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="33667-116">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="032bb-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="032bb-117">Related Sections</span></span>  
- [<span data-ttu-id="032bb-118">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="032bb-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="032bb-119">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="032bb-119">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="33667-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="33667-117">Related Sections</span></span>  
+ [<span data-ttu-id="33667-118">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="33667-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="33667-119">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="33667-119">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [<span data-ttu-id="032bb-120">操作說明：在執行階段時從控制項集合新增或移除</span><span class="sxs-lookup"><span data-stu-id="032bb-120">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
- <span data-ttu-id="032bb-121">描述如何將控制項加入和移除您表單上的任何容器控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="032bb-121">Describes how to add controls to and remove controls from any container control on your forms.</span></span>
+ [<span data-ttu-id="33667-120">操作說明：在執行階段時從控制項集合新增或移除</span><span class="sxs-lookup"><span data-stu-id="33667-120">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
+ <span data-ttu-id="33667-121">描述如何將控制項加入和移除您表單上的任何容器控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="33667-121">Describes how to add controls to and remove controls from any container control on your forms.</span></span>

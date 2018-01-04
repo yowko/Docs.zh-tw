@@ -23,21 +23,22 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae228835fb150b1d65f7405a10813f24e707268f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9eb984e18f2126664344639335fd786b4f325468
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="31482-102">如何：回應 Windows Form DataGrid 控制項中的按選動作</span><span class="sxs-lookup"><span data-stu-id="31482-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="1414b-102">如何：回應 Windows Form DataGrid 控制項中的按選動作</span><span class="sxs-lookup"><span data-stu-id="1414b-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="31482-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="31482-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="31482-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="31482-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+>  <span data-ttu-id="1414b-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="1414b-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="1414b-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="1414b-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="31482-105">在 Windows Form 後<xref:System.Windows.Forms.DataGrid>連接至資料庫時，您可以監視其儲存格使用者按下。</span><span class="sxs-lookup"><span data-stu-id="31482-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
+ <span data-ttu-id="1414b-105">在 Windows Form 後<xref:System.Windows.Forms.DataGrid>連接至資料庫時，您可以監視其儲存格使用者按下。</span><span class="sxs-lookup"><span data-stu-id="1414b-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="31482-106">若要偵測何時 DataGrid 的使用者選取不同的儲存格</span><span class="sxs-lookup"><span data-stu-id="31482-106">To detect when the user of the DataGrid selects a different cell</span></span>  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="1414b-106">若要偵測何時 DataGrid 的使用者選取不同的儲存格</span><span class="sxs-lookup"><span data-stu-id="1414b-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
--   <span data-ttu-id="31482-107">在<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>事件處理常式，撰寫程式碼來適當地回應。</span><span class="sxs-lookup"><span data-stu-id="31482-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
+-   <span data-ttu-id="1414b-107">在<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>事件處理常式，撰寫程式碼來適當地回應。</span><span class="sxs-lookup"><span data-stu-id="1414b-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -57,18 +58,18 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-     <span data-ttu-id="31482-108">(Visual C#)下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="31482-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="1414b-108">(Visual C#)下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="1414b-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="31482-109">若要判斷哪一個部分 DataGrid 的使用者按下</span><span class="sxs-lookup"><span data-stu-id="31482-109">To determine which part of the DataGrid the user clicked</span></span>  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="1414b-109">若要判斷哪一個部分 DataGrid 的使用者按下</span><span class="sxs-lookup"><span data-stu-id="1414b-109">To determine which part of the DataGrid the user clicked</span></span>  
   
--   <span data-ttu-id="31482-110">呼叫<xref:System.Windows.Forms.DataGrid.HitTest%2A>中適當的事件處理常式，例如，用於方法<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="31482-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
+-   <span data-ttu-id="1414b-110">呼叫<xref:System.Windows.Forms.DataGrid.HitTest%2A>中適當的事件處理常式，例如，用於方法<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="1414b-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     <span data-ttu-id="31482-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A>方法會傳回<xref:System.Windows.Forms.DataGrid.HitTestInfo>物件，其中包含資料列並按下區域的資料行。</span><span class="sxs-lookup"><span data-stu-id="31482-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
+     <span data-ttu-id="1414b-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A>方法會傳回<xref:System.Windows.Forms.DataGrid.HitTestInfo>物件，其中包含資料列並按下區域的資料行。</span><span class="sxs-lookup"><span data-stu-id="1414b-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-     <span data-ttu-id="31482-112">(Visual C#)下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="31482-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="1414b-112">(Visual C#)下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="1414b-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -150,6 +151,6 @@ ms.lasthandoff: 11/21/2017
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="31482-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="31482-113">See Also</span></span>  
- [<span data-ttu-id="31482-114">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="31482-114">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [<span data-ttu-id="31482-115">操作說明：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料</span><span class="sxs-lookup"><span data-stu-id="31482-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a><span data-ttu-id="1414b-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="1414b-113">See Also</span></span>  
+ [<span data-ttu-id="1414b-114">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="1414b-114">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="1414b-115">操作說明：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料</span><span class="sxs-lookup"><span data-stu-id="1414b-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -17,22 +17,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content"></a><span data-ttu-id="61805-102">非固定格式內容</span><span class="sxs-lookup"><span data-stu-id="61805-102">Flow Content</span></span>
-<span data-ttu-id="61805-103">動態內容項目提供用於建立適用於裝載在非固定格式內容的建置組塊<xref:System.Windows.Documents.FlowDocument>。</span><span class="sxs-lookup"><span data-stu-id="61805-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="9e039-102">非固定格式內容</span><span class="sxs-lookup"><span data-stu-id="9e039-102">Flow Content</span></span>
+<span data-ttu-id="9e039-103">動態內容項目提供用於建立適用於裝載在非固定格式內容的建置組塊<xref:System.Windows.Documents.FlowDocument>。</span><span class="sxs-lookup"><span data-stu-id="9e039-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="61805-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="61805-104">In This Section</span></span>  
- [<span data-ttu-id="61805-105">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="61805-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="61805-106">TextElement 內容模型概觀</span><span class="sxs-lookup"><span data-stu-id="61805-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [<span data-ttu-id="61805-107">資料表概觀</span><span class="sxs-lookup"><span data-stu-id="61805-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [<span data-ttu-id="61805-108">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="61805-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9e039-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="9e039-104">In This Section</span></span>  
+ [<span data-ttu-id="9e039-105">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="9e039-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="9e039-106">TextElement 內容模型概觀</span><span class="sxs-lookup"><span data-stu-id="9e039-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [<span data-ttu-id="9e039-107">資料表概觀</span><span class="sxs-lookup"><span data-stu-id="9e039-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [<span data-ttu-id="9e039-108">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="9e039-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="61805-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="61805-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9e039-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="9e039-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="61805-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="61805-110">Related Sections</span></span>  
- [<span data-ttu-id="61805-111">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="61805-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="9e039-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="9e039-110">Related Sections</span></span>  
+ [<span data-ttu-id="9e039-111">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="9e039-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
