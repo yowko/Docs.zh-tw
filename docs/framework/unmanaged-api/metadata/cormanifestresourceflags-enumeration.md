@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5cdaba8b1186d1720ff8b64f50a8effc4691fe8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a1ad2aa505ba77f136a28b2cfa9f1fa357c37ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="c9345-102">CorManifestResourceFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="c9345-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="c9345-103">表示資源的組件資訊清單中編碼的可見性。</span><span class="sxs-lookup"><span data-stu-id="c9345-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="70baa-102">CorManifestResourceFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="70baa-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="70baa-103">表示資源的組件資訊清單中編碼的可見性。</span><span class="sxs-lookup"><span data-stu-id="70baa-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9345-104">語法</span><span class="sxs-lookup"><span data-stu-id="c9345-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70baa-104">語法</span><span class="sxs-lookup"><span data-stu-id="70baa-104">Syntax</span></span>  
   
 ```  
 typedef enum CorManifestResourceFlags {  
@@ -40,20 +41,20 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c9345-105">成員</span><span class="sxs-lookup"><span data-stu-id="c9345-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="70baa-105">成員</span><span class="sxs-lookup"><span data-stu-id="70baa-105">Members</span></span>  
   
-|<span data-ttu-id="c9345-106">成員</span><span class="sxs-lookup"><span data-stu-id="c9345-106">Member</span></span>|<span data-ttu-id="c9345-107">說明</span><span class="sxs-lookup"><span data-stu-id="c9345-107">Description</span></span>|  
+|<span data-ttu-id="70baa-106">成員</span><span class="sxs-lookup"><span data-stu-id="70baa-106">Member</span></span>|<span data-ttu-id="70baa-107">描述</span><span class="sxs-lookup"><span data-stu-id="70baa-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="c9345-108">保留的。</span><span class="sxs-lookup"><span data-stu-id="c9345-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="c9345-109">資源為公用。</span><span class="sxs-lookup"><span data-stu-id="c9345-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="c9345-110">資源是私用。</span><span class="sxs-lookup"><span data-stu-id="c9345-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="70baa-108">保留的。</span><span class="sxs-lookup"><span data-stu-id="70baa-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="70baa-109">資源為公用。</span><span class="sxs-lookup"><span data-stu-id="70baa-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="70baa-110">資源是私用。</span><span class="sxs-lookup"><span data-stu-id="70baa-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c9345-111">需求</span><span class="sxs-lookup"><span data-stu-id="c9345-111">Requirements</span></span>  
- <span data-ttu-id="c9345-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c9345-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70baa-111">需求</span><span class="sxs-lookup"><span data-stu-id="70baa-111">Requirements</span></span>  
+ <span data-ttu-id="70baa-112">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="70baa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9345-113">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c9345-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="70baa-113">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="70baa-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="c9345-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9345-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="70baa-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70baa-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9345-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9345-115">See Also</span></span>  
- [<span data-ttu-id="c9345-116">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="c9345-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="70baa-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="70baa-115">See Also</span></span>  
+ [<span data-ttu-id="70baa-116">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="70baa-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

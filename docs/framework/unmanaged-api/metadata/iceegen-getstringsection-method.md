@@ -21,18 +21,19 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce511b4610a6ff681eb70bfeb6a7a7afe162818e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 240fad6c53fc0db3c55296069ca91998b7c530f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iceegengetstringsection-method"></a><span data-ttu-id="62b3e-102">ICeeGen::GetStringSection 方法</span><span class="sxs-lookup"><span data-stu-id="62b3e-102">ICeeGen::GetStringSection Method</span></span>
-<span data-ttu-id="62b3e-103">取得指定的控制代碼所參考的程式碼區段的字串表示。</span><span class="sxs-lookup"><span data-stu-id="62b3e-103">Gets a string representation of the code section referenced by the specified handle.</span></span>  
+# <a name="iceegengetstringsection-method"></a><span data-ttu-id="9a4c4-102">ICeeGen::GetStringSection 方法</span><span class="sxs-lookup"><span data-stu-id="9a4c4-102">ICeeGen::GetStringSection Method</span></span>
+<span data-ttu-id="9a4c4-103">取得指定的控制代碼所參考的程式碼區段的字串表示。</span><span class="sxs-lookup"><span data-stu-id="9a4c4-103">Gets a string representation of the code section referenced by the specified handle.</span></span>  
   
- <span data-ttu-id="62b3e-104">這個方法已經過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="62b3e-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="9a4c4-104">這個方法已經過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="9a4c4-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62b3e-105">語法</span><span class="sxs-lookup"><span data-stu-id="62b3e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a4c4-105">語法</span><span class="sxs-lookup"><span data-stu-id="9a4c4-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStringSection (  
@@ -40,18 +41,18 @@ HRESULT GetStringSection (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62b3e-106">參數</span><span class="sxs-lookup"><span data-stu-id="62b3e-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9a4c4-106">參數</span><span class="sxs-lookup"><span data-stu-id="9a4c4-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="62b3e-107">[in、 out]程式碼區段之控制代碼。</span><span class="sxs-lookup"><span data-stu-id="62b3e-107">[in, out] The handle to the code section.</span></span>  
+ <span data-ttu-id="9a4c4-107">[in、 out]程式碼區段之控制代碼。</span><span class="sxs-lookup"><span data-stu-id="9a4c4-107">[in, out] The handle to the code section.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62b3e-108">需求</span><span class="sxs-lookup"><span data-stu-id="62b3e-108">Requirements</span></span>  
- <span data-ttu-id="62b3e-109">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="62b3e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a4c4-108">需求</span><span class="sxs-lookup"><span data-stu-id="9a4c4-108">Requirements</span></span>  
+ <span data-ttu-id="9a4c4-109">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9a4c4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62b3e-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="62b3e-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9a4c4-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a4c4-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="62b3e-111">**程式庫：**做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="62b3e-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9a4c4-111">**程式庫：**做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9a4c4-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="62b3e-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62b3e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9a4c4-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a4c4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62b3e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62b3e-113">See Also</span></span>  
- [<span data-ttu-id="62b3e-114">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="62b3e-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9a4c4-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="9a4c4-113">See Also</span></span>  
+ [<span data-ttu-id="9a4c4-114">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="9a4c4-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

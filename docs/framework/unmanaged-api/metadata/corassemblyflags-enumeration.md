@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 67057944705a1cecd1754c3c11da08725c9a93f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 059d896842c285bb071a25990ae9178c34ab802a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="1ea2b-102">CorAssemblyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="1ea2b-102">CorAssemblyFlags Enumeration</span></span>
-<span data-ttu-id="1ea2b-103">包含值，這些值描述套用至組件編譯的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
+# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="7ec4c-102">CorAssemblyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="7ec4c-102">CorAssemblyFlags Enumeration</span></span>
+<span data-ttu-id="7ec4c-103">包含值，這些值描述套用至組件編譯的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ea2b-104">語法</span><span class="sxs-lookup"><span data-stu-id="1ea2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ec4c-104">語法</span><span class="sxs-lookup"><span data-stu-id="7ec4c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorAssemblyFlags {  
@@ -57,35 +58,35 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1ea2b-105">成員</span><span class="sxs-lookup"><span data-stu-id="1ea2b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7ec4c-105">成員</span><span class="sxs-lookup"><span data-stu-id="7ec4c-105">Members</span></span>  
   
-|<span data-ttu-id="1ea2b-106">成員</span><span class="sxs-lookup"><span data-stu-id="1ea2b-106">Member</span></span>|<span data-ttu-id="1ea2b-107">說明</span><span class="sxs-lookup"><span data-stu-id="1ea2b-107">Description</span></span>|  
+|<span data-ttu-id="7ec4c-106">成員</span><span class="sxs-lookup"><span data-stu-id="7ec4c-106">Member</span></span>|<span data-ttu-id="7ec4c-107">描述</span><span class="sxs-lookup"><span data-stu-id="7ec4c-107">Description</span></span>|  
 |------------|-----------------|  
-|`afPublicKey`|<span data-ttu-id="1ea2b-108">表示組件參考會保留完整的未雜湊的公用金鑰。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
-|`afPA_None`|<span data-ttu-id="1ea2b-109">表示未指定的處理器架構。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-109">Indicates that the processor architecture is unspecified.</span></span>|  
-|`afPA_MSIL`|<span data-ttu-id="1ea2b-110">指示處理器架構是中性 (PE32)。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
-|`afPA_x86`|<span data-ttu-id="1ea2b-111">指示處理器架構為 x86 (PE32)。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
-|`afPA_IA64`|<span data-ttu-id="1ea2b-112">指示處理器架構為 Itanium （PE32 +）。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
-|`afPA_AMD64`|<span data-ttu-id="1ea2b-113">表示的處理器架構的 AMD X64 （PE32 +）。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
-|`afPA_ARM`|<span data-ttu-id="1ea2b-114">指示處理器架構是 ARM (PE32)。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
-|`afPA_NoPlatform`|<span data-ttu-id="1ea2b-115">表示組件的參考組件。也就是說，它會適用於任何架構，但無法在任何架構上執行。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="1ea2b-116">因此，此旗標等同於`afPA_Mask`。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
-|`afPA_Specified`|<span data-ttu-id="1ea2b-117">指示處理器架構旗標，應該傳播至`AssemblyRef`記錄。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
-|`afPA_Mask`|<span data-ttu-id="1ea2b-118">遮罩描述處理器架構。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-118">A mask that describes the processor architecture.</span></span>|  
-|`afPA_FullMask`|<span data-ttu-id="1ea2b-119">指定包含處理器架構的說明。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-119">Specifies that the processor architecture description is included.</span></span>|  
-|`afPA_Shift`|<span data-ttu-id="1ea2b-120">表示排班中的計數與索引的處理器架構旗標。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
-|`afEnableJITcompileTracking`|<span data-ttu-id="1ea2b-121">表示對應的值從<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afDisableJITcompileOptimizer`|<span data-ttu-id="1ea2b-122">表示對應的值從<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afRetargetable`|<span data-ttu-id="1ea2b-123">指出的組件可能會被重定在執行階段組件從不同的發行者。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
-|`afContentType_Mask`|<span data-ttu-id="1ea2b-124">遮罩描述的內容類型。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-124">A mask that describes the content type.</span></span>|  
-|`afContentType_Default`|<span data-ttu-id="1ea2b-125">表示預設內容類型。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-125">Indicates the default content type.</span></span>|  
-|`afContentType_WindowsRuntime`|<span data-ttu-id="1ea2b-126">指出[!INCLUDE[wrt](../../../../includes/wrt-md.md)]內容類型。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-126">Indicates the [!INCLUDE[wrt](../../../../includes/wrt-md.md)] content type.</span></span>|  
+|`afPublicKey`|<span data-ttu-id="7ec4c-108">表示組件參考會保留完整的未雜湊的公用金鑰。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
+|`afPA_None`|<span data-ttu-id="7ec4c-109">表示未指定的處理器架構。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-109">Indicates that the processor architecture is unspecified.</span></span>|  
+|`afPA_MSIL`|<span data-ttu-id="7ec4c-110">指示處理器架構是中性 (PE32)。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
+|`afPA_x86`|<span data-ttu-id="7ec4c-111">指示處理器架構為 x86 (PE32)。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
+|`afPA_IA64`|<span data-ttu-id="7ec4c-112">指示處理器架構為 Itanium （PE32 +）。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
+|`afPA_AMD64`|<span data-ttu-id="7ec4c-113">表示的處理器架構的 AMD X64 （PE32 +）。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
+|`afPA_ARM`|<span data-ttu-id="7ec4c-114">指示處理器架構是 ARM (PE32)。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
+|`afPA_NoPlatform`|<span data-ttu-id="7ec4c-115">表示組件的參考組件。也就是說，它會適用於任何架構，但無法在任何架構上執行。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="7ec4c-116">因此，此旗標等同於`afPA_Mask`。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
+|`afPA_Specified`|<span data-ttu-id="7ec4c-117">指示處理器架構旗標，應該傳播至`AssemblyRef`記錄。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
+|`afPA_Mask`|<span data-ttu-id="7ec4c-118">遮罩描述處理器架構。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-118">A mask that describes the processor architecture.</span></span>|  
+|`afPA_FullMask`|<span data-ttu-id="7ec4c-119">指定包含處理器架構的說明。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-119">Specifies that the processor architecture description is included.</span></span>|  
+|`afPA_Shift`|<span data-ttu-id="7ec4c-120">表示排班中的計數與索引的處理器架構旗標。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
+|`afEnableJITcompileTracking`|<span data-ttu-id="7ec4c-121">表示對應的值從<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afDisableJITcompileOptimizer`|<span data-ttu-id="7ec4c-122">表示對應的值從<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afRetargetable`|<span data-ttu-id="7ec4c-123">指出的組件可能會被重定在執行階段組件從不同的發行者。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
+|`afContentType_Mask`|<span data-ttu-id="7ec4c-124">遮罩描述的內容類型。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-124">A mask that describes the content type.</span></span>|  
+|`afContentType_Default`|<span data-ttu-id="7ec4c-125">表示預設內容類型。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-125">Indicates the default content type.</span></span>|  
+|`afContentType_WindowsRuntime`|<span data-ttu-id="7ec4c-126">指出[!INCLUDE[wrt](../../../../includes/wrt-md.md)]內容類型。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-126">Indicates the [!INCLUDE[wrt](../../../../includes/wrt-md.md)] content type.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1ea2b-127">需求</span><span class="sxs-lookup"><span data-stu-id="1ea2b-127">Requirements</span></span>  
- <span data-ttu-id="1ea2b-128">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1ea2b-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ec4c-127">需求</span><span class="sxs-lookup"><span data-stu-id="7ec4c-127">Requirements</span></span>  
+ <span data-ttu-id="7ec4c-128">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ec4c-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1ea2b-129">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1ea2b-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="7ec4c-129">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="7ec4c-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="1ea2b-130">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ea2b-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7ec4c-130">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ec4c-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ea2b-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1ea2b-131">See Also</span></span>  
- [<span data-ttu-id="1ea2b-132">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="1ea2b-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="7ec4c-131">請參閱</span><span class="sxs-lookup"><span data-stu-id="7ec4c-131">See Also</span></span>  
+ [<span data-ttu-id="7ec4c-132">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="7ec4c-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

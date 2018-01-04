@@ -21,37 +21,38 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f1622fdbbeb1f200f996e49c432600165a029aa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 22b6d4ca72b0ee95af1c7baae63223cb09435971
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackclassloadstarted-method"></a><span data-ttu-id="cb351-102">ICorProfilerCallback::ClassLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="cb351-102">ICorProfilerCallback::ClassLoadStarted Method</span></span>
-<span data-ttu-id="cb351-103">通知分析工具載入的類別。</span><span class="sxs-lookup"><span data-stu-id="cb351-103">Notifies the profiler that a class is being loaded.</span></span>  
+# <a name="icorprofilercallbackclassloadstarted-method"></a><span data-ttu-id="f6c7e-102">ICorProfilerCallback::ClassLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="f6c7e-102">ICorProfilerCallback::ClassLoadStarted Method</span></span>
+<span data-ttu-id="f6c7e-103">通知分析工具載入的類別。</span><span class="sxs-lookup"><span data-stu-id="f6c7e-103">Notifies the profiler that a class is being loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb351-104">語法</span><span class="sxs-lookup"><span data-stu-id="cb351-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6c7e-104">語法</span><span class="sxs-lookup"><span data-stu-id="f6c7e-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassLoadStarted(  
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb351-105">參數</span><span class="sxs-lookup"><span data-stu-id="cb351-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f6c7e-105">參數</span><span class="sxs-lookup"><span data-stu-id="f6c7e-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="cb351-106">[in]識別要載入的類別。</span><span class="sxs-lookup"><span data-stu-id="cb351-106">[in] Identifies the class that is being loaded.</span></span>  
+ <span data-ttu-id="f6c7e-106">[in]識別要載入的類別。</span><span class="sxs-lookup"><span data-stu-id="f6c7e-106">[in] Identifies the class that is being loaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb351-107">備註</span><span class="sxs-lookup"><span data-stu-id="cb351-107">Remarks</span></span>  
- <span data-ttu-id="cb351-108">值`classId`不正確的資訊要求，直到[icorprofilercallback:: Classloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="cb351-108">The value of `classId` is not valid for an information request until the [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6c7e-107">備註</span><span class="sxs-lookup"><span data-stu-id="f6c7e-107">Remarks</span></span>  
+ <span data-ttu-id="f6c7e-108">值`classId`不正確的資訊要求，直到[icorprofilercallback:: Classloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="f6c7e-108">The value of `classId` is not valid for an information request until the [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb351-109">需求</span><span class="sxs-lookup"><span data-stu-id="cb351-109">Requirements</span></span>  
- <span data-ttu-id="cb351-110">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cb351-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6c7e-109">需求</span><span class="sxs-lookup"><span data-stu-id="f6c7e-109">Requirements</span></span>  
+ <span data-ttu-id="f6c7e-110">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f6c7e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb351-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cb351-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f6c7e-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f6c7e-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cb351-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb351-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6c7e-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6c7e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb351-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb351-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f6c7e-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6c7e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb351-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb351-114">See Also</span></span>  
- [<span data-ttu-id="cb351-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="cb351-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f6c7e-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="f6c7e-114">See Also</span></span>  
+ [<span data-ttu-id="f6c7e-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="f6c7e-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
