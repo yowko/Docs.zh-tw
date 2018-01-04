@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 188d080d32a1f9463dd8d576fdd4154ad893c8ff
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c2f27c6d6f4970d8ea49af02355be95e5d66d77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldiagnosticsmessagenotloggedquotaexceeded"></a>System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded
 System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded  
@@ -25,7 +26,7 @@ System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded
 ## <a name="description"></a>描述  
  因為訊息大小超出設定的配額，所以無法記錄訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

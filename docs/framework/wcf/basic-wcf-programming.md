@@ -19,16 +19,17 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83404a56de68de8f8aec271c28e9896c4fa8702b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-wcf-programming"></a>基本 WCF 程式設計
 本章節將說明建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式的基礎概念。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  說明設計、建置及部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務和用戶端應用程式的生命週期。  
   

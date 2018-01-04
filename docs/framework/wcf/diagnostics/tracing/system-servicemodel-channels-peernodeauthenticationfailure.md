@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38abf80f81a8a885f719603bc93bf1b3687e9938
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4ffca9a587bdb32afc252f9719eb35e3139dd3f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a>System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 與未來芳鄰的安全性交換失敗。  
@@ -30,8 +31,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="troubleshooting"></a>疑難排解  
  請確認所有芳鄰都有適當的安全性認證。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對等通道安全性](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

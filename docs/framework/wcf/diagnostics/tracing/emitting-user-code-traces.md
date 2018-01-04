@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>發出使用者程式碼追蹤
 除了在組態中啟用追蹤來收集由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 產生的檢測資料之外，您也可以在使用者程式碼中，透過程式設計方式發出追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。  
@@ -150,5 +151,5 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  定義活動和傳播活動識別碼可讓我們在端點之間執行直接錯誤相互關聯。 如此一來，就可以更迅速地找到錯誤的根本原因。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)

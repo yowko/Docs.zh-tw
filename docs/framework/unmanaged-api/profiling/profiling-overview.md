@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>分析概觀
 <a name="top"></a>分析工具是一種工具，監視執行的另一個應用程式。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。  
@@ -235,9 +236,9 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
-|[設定程式碼剖析環境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|說明如何初始化分析工具、設定事件通知，以及為 Windows 服務進行分析。|  
+|[設定分析環境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|說明如何初始化分析工具、設定事件通知，以及為 Windows 服務進行分析。|  
 |[分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|說明分析 API 所使用的 Unmanaged 介面。|  
 |[分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|說明分析 API 所使用的 Unmanaged 全域靜態函式。|  
 |[分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|說明分析 API 所使用的 Unmanaged 列舉。|  

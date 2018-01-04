@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a993ec836417906229e47b7f415f4aee8b1a9eb1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="propagation"></a>傳播
 本主題描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 追蹤模型中的活動傳播。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="synchronization"></a>同步處理  
  若要在執行於不同電腦的端點之間同步處理事件，請將 CorrelationId 新增至訊息中所傳播的 ActivityId 標頭。 工具可以使用這個識別碼，在時鐘不一致的電腦之間同步處理事件。 具體來說，「服務追蹤檢視器」工具會使用這個識別碼來顯示端點之間的訊息流動。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

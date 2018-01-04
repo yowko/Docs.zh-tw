@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6030b1ad1dc3953137d3b068be1bceb99975a5f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce62eb348cb57ce6137c58fbc50a32e829980c0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monitoring-service-operation-failures"></a>監控服務作業失敗
 如果您為應用程式啟用分析追蹤，可以在事件檢視器中輕鬆監視服務失敗。  本主題示範如何判斷服務作業失敗的時間，以及如何判斷造成失敗的原因。  

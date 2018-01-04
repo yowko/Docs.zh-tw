@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c198a9f9507af583f4718c636cd00c9d65a25695
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: e59ef3f65b75a91708dc65f7d4e3d811dc2d3f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="next-function"></a>下一個函式
 擷取列舉開頭的呼叫中的下一個屬性[BeginEnumeration](beginenumeration.md)。  
@@ -66,7 +67,7 @@ HRESULT Next (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
@@ -86,7 +87,7 @@ HRESULT Next (
 
 如果`plFlavor`不`null`、`LONG`值接收資訊屬性的原點，如下所示：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別： 屬性繼承自父類別。 </br> 執行個體： 屬性繼承自父類別，而尚未修改的執行個體。  |
@@ -99,5 +100,5 @@ HRESULT Next (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

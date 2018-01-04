@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c126ccd99323fa6f37714f21e95780053ff96f6b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7c3386270bb0d98f9351275805563c2f127ed728
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="404---resumesignpostevent"></a>404 - ResumeSignpostEvent
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|404|  
+|識別碼|404|  
 |關鍵字|疑難排解|  
 |層級|資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

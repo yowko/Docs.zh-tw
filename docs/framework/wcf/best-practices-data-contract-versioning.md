@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
 本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]資料合約，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/02/2017
   
  當情況特殊時，可以放心略過此處列出的一些指導方針。 在違背指導方針之前，請確定您完全瞭解其中的序列化、還原序列化以及結構描述機制。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  

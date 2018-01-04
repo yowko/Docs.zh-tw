@@ -13,17 +13,18 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddb199ff1d83bef64735dd1425ec955dda83140d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fb46ad5fe95405c78baf3173a982969e0e7092fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>使用追蹤來疑難排解應用程式
 本節中的各個主題會說明如何使用追蹤來排解應用程式的問題。  
   
-## <a name="in-this-section"></a>本章節內容  
- [追蹤和訊息記錄的建議的設定](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
+## <a name="in-this-section"></a>本節內容  
+ [追蹤與訊息記錄的建議設定](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
  說明實際執行環境與偵錯環境中的建議設定。  
   
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  [重大追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 所發出之主要追蹤的清單。  
   
- [用戶端上的偵錯](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
+ [用戶端偵錯](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  讓用戶端能夠對您的應用程式進行偵錯。  
   
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  說明如何透過使用者程式碼以程式設計方式發出追蹤，方便您主動建立檢測資料以便稍後用在診斷用途上，並與 WCF 追蹤產生關聯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [端對端追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

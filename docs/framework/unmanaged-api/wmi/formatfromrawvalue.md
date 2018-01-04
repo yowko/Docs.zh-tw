@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c01db47b5362d7048e2e5ecd1b63acfe03eff860
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函式
 將指定的格式，一個的未經處理的效能資料值或兩個原始效能資料值的轉換，如果格式轉換是以時間為基礎。   
@@ -46,7 +47,7 @@ int FormatFromRawValue (
 `dwFormat`  
 [in]要轉換的未經處理的效能資料的格式。 它可以是下列值之一：
 
-|常數  |值  |說明 |
+|常數  |值  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 傳回的導出的值做為雙精確度浮點數值。 | 
 | `PDH_FMT_LARGE` | 0x00000400 | 以 64 位元整數的形式傳回導出的值。 |
@@ -54,7 +55,7 @@ int FormatFromRawValue (
 
 其中一個先前的值可以是其中一個下列調整旗標 ORed:
 
-|常數  |值  |說明 |
+|常數  |值  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | 不會套用計數器的縮放比例。 |
 | `PDH_FMT_1000` | 0x00002000 | 最終的值乘以 1000。 | 
@@ -89,5 +90,5 @@ int FormatFromRawValue (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

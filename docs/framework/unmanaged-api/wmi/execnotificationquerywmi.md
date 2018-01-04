@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f42878c146d478d5183342c3a743f3bd208008b
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函式
 執行查詢，以接收事件。 呼叫會立即傳回，且呼叫端可以輪詢事件傳回的列舉值到達時。 釋出傳回的列舉值會取消查詢。  
@@ -54,7 +55,7 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`   
 [in]此函式的行為會影響下列兩個旗標的組合。 這些值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中。 
 
-| 常數 | 值  | 說明  |
+| 常數 | 值  | 描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 旗標會造成半同步呼叫。 如果未設定此旗標，呼叫就會失敗。 這是因為會持續收到的事件，這表示使用者必須輪詢傳回列舉值。 無限期地封鎖此呼叫，可讓，不可能。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函數會傳回順向的列舉值。 一般而言，順向的列舉程式會更快，並使用較少的記憶體比傳統的列舉值，但不是允許呼叫[複製](clone.md)。 |
@@ -86,7 +87,7 @@ HRESULT ExecNotificationQueryWmi (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有檢視一或多個函式可以傳回的類別權限。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生意外的錯誤。 |
@@ -120,5 +121,5 @@ HRESULT ExecNotificationQueryWmi (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

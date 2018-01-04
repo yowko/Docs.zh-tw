@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6b66eeab2cba18268b602350c8bc8f489d943309
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 函式
 擷取列舉型別呼叫啟動下一步的限定詞[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。   
@@ -62,7 +63,7 @@ HRESULT QualifierSet_Next (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 呼叫端沒有呼叫[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)。 |
@@ -85,5 +86,5 @@ HRESULT QualifierSet_Next (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

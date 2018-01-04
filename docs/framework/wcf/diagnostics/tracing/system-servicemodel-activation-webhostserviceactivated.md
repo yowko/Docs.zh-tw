@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e43d3e0a8c58bdbf9a0dc0495934dae906e49095
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71acaa96a5ca25b4820a89549611a3ee72d4e241
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationwebhostserviceactivated"></a>System.ServiceModel.Activation.WebHostServiceActivated
 System.ServiceModel.Activation.WebHostServiceActivated  
@@ -25,7 +26,7 @@ System.ServiceModel.Activation.WebHostServiceActivated
 ## <a name="description"></a>描述  
  會在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 上所裝載的服務已完全啟動且開始接聽訊息時發生。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

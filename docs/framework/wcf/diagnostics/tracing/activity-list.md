@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c3b478d88eff022d8cb28f4123291f4662644ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-list"></a>活動清單
 本主題將列出所有由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 定義的活動。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="servicemodel-activities"></a>ServiceModel 活動  
  下表列出主要使用方式案例的所有活動。  
   
-|標籤|活動名稱|活動類型|描述|  
+|ThisAddIn|活動名稱|活動類型|描述|  
 |-----------|-------------------|-------------------|-----------------|  
 |A、M|環境活動|N/A (此活動非由 ServiceModel 控制)|在任何 ServiceModel 程式碼的呼叫 (用戶端或伺服器端) 之前，於 TLS 內設定其識別碼的活動。<br /><br /> 範例：在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 用戶端上呼叫而開啟，或呼叫 serviceHost.open 而開啟的活動。|  
 |B|建構<br /><br /> ChannelFactory。 ContractType：‘[Type]’。|建構||  

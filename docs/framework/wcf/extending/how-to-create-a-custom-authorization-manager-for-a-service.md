@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cba64767aaac4092f3c6103f7417a9d707b9a380
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1977a26f3185ad1ef85584b0da7d63826b7f93ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>HOW TO：為服務建立自訂授權管理員
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的「身分識別模型」基礎結構支援可延伸的宣告授權模型。 從語彙基元擷取的宣告可以選擇性地由自訂授權原則進行處理並放入 <xref:System.IdentityModel.Policy.AuthorizationContext>。 授權管理員會檢查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的宣告來做出授權決策。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)  
  [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)

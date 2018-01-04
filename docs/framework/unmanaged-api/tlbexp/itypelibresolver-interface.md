@@ -19,18 +19,19 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed1b4dd4816f67bb98472b7150f3da3bd5b927b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2c9b23472cdeee15788d496fae160c3e7d2de20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver 介面
 提供[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)，這會解析類型程式庫的檔案路徑。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|藉由傳回其完整的路徑來解析類型程式庫的簡單名稱。|  
   
@@ -43,6 +44,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：** 4、 3.5、 3.0、 2.0  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx 函式](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

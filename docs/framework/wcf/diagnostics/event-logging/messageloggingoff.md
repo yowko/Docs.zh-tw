@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b444c0eb59ab7df7254c40f72e6f7685f9aa232
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15f21781b3b277ccea1627d6d9ed9113313c7535
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messageloggingoff"></a>MessageLoggingOff
 Id: 117  
@@ -29,6 +30,6 @@ Id: 117
 ## <a name="description"></a>描述  
  這個事件表示已關閉訊息記錄。 此事件會列出處理序名稱和處理序識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

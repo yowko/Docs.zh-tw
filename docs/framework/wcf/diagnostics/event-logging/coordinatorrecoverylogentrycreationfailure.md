@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd311267ff3640412d9a749ba72ec16398220a79
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a6d39f66f18038677165eb8b73e5cef895dc70cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinatorrecoverylogentrycreationfailure"></a>CoordinatorRecoveryLogEntryCreationFailure
 Id: 140  
@@ -27,8 +28,8 @@ Id: 140
  分類：TransactionBridge  
   
 ## <a name="description"></a>描述  
- 無法產生修復記錄項目供協調器登記。 將會中止該交易。 此事件會列出異動識別碼、原因、例外狀況、處理序名稱和處理序識別碼。  
+ 無法產生修復記錄項目供協調器登記。 將會中止該異動。 此事件會列出異動識別碼、原因、例外狀況、處理序名稱和處理序識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

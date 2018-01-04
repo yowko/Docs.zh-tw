@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3d436690108158cfd7675cf00788a564b8a1dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-wcf"></a>延伸 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允許您修改及延伸執行階段元件，以精確控制及延伸服務應用程式。 本節中的主題將深入說明延伸性結構。 如需基本程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [擴充 ServiceHost 與服務模型層](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
  服務模型層負責從基礎通道提取傳入訊息，將它們以應用程式碼轉譯成方法叫用，然後將結果傳回給呼叫者。  服務模型延伸會修改或實作涉及發送器功能、自訂行為、訊息與參數攔截與其他延伸性功能的執行或通訊行為與功能。  
   

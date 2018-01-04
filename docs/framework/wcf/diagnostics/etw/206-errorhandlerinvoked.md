@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ff48217b1430002e1590ec3fdb1707d65075ffe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 43acd7ae7bbfc84e1d1ffb1bf4fa49a3dd3f191a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="206---errorhandlerinvoked"></a>206 - ErrorHandlerInvoked
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|206|  
+|識別碼|206|  
 |關鍵字|Troubleshooting，ServiceModel|  
 |層級|資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

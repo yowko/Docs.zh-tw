@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a2d856aad069a5e532ba893185b6222ee1db0f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-logging-in-wcf"></a>WCF 的事件記錄
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 會追蹤 Windows 事件記錄檔中的內部事件。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/02/2017
   
  當您按一下 [詳細資訊] 時使用事件檢視器中檢視事件，事件檢視器可能會透過網際網路傳送資訊。 如需詳細資訊，請參閱「事件檢視器」的說明。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

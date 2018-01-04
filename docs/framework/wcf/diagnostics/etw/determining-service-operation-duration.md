@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24f1bc22e088c0198ec8a8f8183611d2b43941b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-service-operation-duration"></a>判斷服務作業持續時間
 如果已啟用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 應用程式中的分析追蹤，則透過檢查事件記錄檔就能輕鬆判斷出服務作業的執行持續時間。  本主題示範如何判斷服務作業完成所需的時間。  

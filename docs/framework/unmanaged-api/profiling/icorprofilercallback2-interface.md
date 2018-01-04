@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d1afed1aefbdd8a2733697c342fcf7aafabd8f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7927d3b4d41731c9b69154fa8895a8f698f53e31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 介面
 提供用來在分析工具已訂閱的事件發生時，通知程式碼分析工具 common language runtime (CLR) 的方法。 `ICorProfilerCallback2`介面是延伸[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。 也就是說，它會提供.NET Framework 2.0 版中導入新的回呼。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[FinalizeableObjectQueued 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|通知程式碼分析工具的物件具有完成項佇列中的完成項執行緒執行其`Finalize`方法。|  
 |[GarbageCollectionFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|記憶體回收回收完成，並為其已發行所有記憶體回收回呼通知分析工具。|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  [ICorProfilerCallback3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  

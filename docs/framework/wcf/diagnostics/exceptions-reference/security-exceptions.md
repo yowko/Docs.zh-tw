@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0c1b3e921714d104ab2bb5018184a9517c7ad345
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 431226f8ce56300f83df64a713b477f0065e2f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-exceptions"></a>安全性例外狀況
 本主題會列出所有安全性例外狀況。  
@@ -164,5 +165,5 @@ ms.lasthandoff: 10/18/2017
 |UnknownEncodingInBinarySecurityToken|讀取二進位安全性權杖時發生無法辨識的編碼。|  
 |UnsecuredMessageFaultReceived|從另一方接收了不安全的錯誤。 如需錯誤碼及詳細資料，請參閱內部 FaultException。|  
 |UnsupportedPasswordType|指定的使用者名稱權杖具有不支援的密碼類型。|  
-|UnsupportedSecureConversationBootstrapProtectionRequirements|無法匯入安全性原則。 不支援安全交談啟動載入器繫結的保護需求。 安全交談啟動載入器繫結的保護需求強調要求及回應都必須簽署並加密。|  
+|UnsupportedSecureConversationBootstrapProtectionRequirements|無法匯入安全性原則。 不支援安全交談啟動載入器繫結程序的保護需求。 安全交談啟動載入器繫結程序的保護需求強調要求及回應都必須簽署並加密。|  
 |UnsupportedSecurityPolicyAssertion|指定的安全性原則匯入期間，偵測到不支援的安全性原則判斷提示。|

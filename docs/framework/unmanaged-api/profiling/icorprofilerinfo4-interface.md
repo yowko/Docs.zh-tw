@@ -19,18 +19,19 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: db91347ad2c951c28ea7b653336450929d37bdcb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83629d0fc8288d118ec31c38473cb63335bb1d48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 介面
-提供程式碼分析工具用於和 common language runtime (CLR)，以控制事件監視以及要求資訊通訊的方法。 . `ICorProfilerInfo4`介面是其他擴充功能`ICorProfilerInfo`介面。 它會提供新方法來支援在 just-in-time (JIT) 重新編譯中加入[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+提供程式碼分析工具用於和 common language runtime (CLR)，以控制事件監視以及要求資訊通訊的方法。 。 `ICorProfilerInfo4`介面是其他擴充功能`ICorProfilerInfo`介面。 它會提供新方法來支援在 just-in-time (JIT) 重新編譯中加入[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[EnumJITedFunctions2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md)|傳回所有先前 JIT 編譯和 JIT 重新編譯的函式的列舉值。|  
 |[EnumThreads 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumthreads-method.md)|取得可提供方法，以循序逐一查看集合的已分析的處理序中的所有 managed 執行緒的列舉值。|  
@@ -55,6 +56,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

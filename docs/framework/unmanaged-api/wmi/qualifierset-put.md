@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7fdb6759d4e39ad9ab6bd6da2c2a0e2abfbe5d56
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函式
 寫入具名的辨識符號和值。 新限定詞會覆寫先前同名的值。 如果不存在限定詞，則會建立它。 
@@ -64,7 +65,7 @@ HRESULT QualifierSet_Put (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 曾不合法嘗試指定**金鑰**不得為索引鍵屬性上的限定詞。 指定索引鍵 om c，則為物件的協助定義，且無法變更針對每個執行個體。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
@@ -83,5 +84,5 @@ HRESULT QualifierSet_Put (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

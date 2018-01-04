@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3f9834e99fb7fa98e2f986a1ce5460aa387143f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-performance-counters"></a>WCF 效能計數器
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 包含大量的效能計數器，可協助您測量應用程式的效能。  
@@ -83,7 +84,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>效能計數器類型  
  效能計數器分成三種不同的層級：服務、端點和作業。  
   
- 您可以使用 WMI 擷取效能計數器執行個體的名稱。 例如：  
+ 您可以使用 WMI 擷取效能計數器執行個體的名稱。 例如，套用至物件的  
   
 -   服務計數器執行個體名稱可透過 WMI[服務](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)執行個體的 「 CounterInstanceName"屬性。  
   
@@ -147,5 +148,5 @@ ServiceName@ServiceBaseAddress
   
  如需有關如何以程式設計方式存取計數器的詳細資訊，請參閱[效能計數器程式設計架構](http://go.microsoft.com/fwlink/?LinkId=95179)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

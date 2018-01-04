@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb5dd9a8cd480f7a51dd2660ba7eaba4fcf873c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f166b3be31ffc1c23a51111ea12780bb721bf5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failedtoremoveperformancecounter"></a>FailedToRemovePerformanceCounter
 識別碼：119  
@@ -29,6 +30,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="description"></a>描述  
  這個事件指出效能計數器沒有移除。 此事件會列出類別名稱、計數器名稱、執行個體名稱、例外狀況、處理序名稱和處理序識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

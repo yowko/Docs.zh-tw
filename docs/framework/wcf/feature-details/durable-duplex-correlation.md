@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9371729dcac22b0611f8ea3ec29cc59daf5d67b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-duplex-correlation"></a>永久性雙工相互關聯
 永久性雙工相互關聯也稱為回呼相互關聯，在工作流程服務需要傳送回呼至初始呼叫端時相當實用。 與 WCF 雙工不同的是，回呼可以在未來隨時進行，並且不受限於相同通道或通道存留期；唯一的需求是呼叫端擁有主動端點，可接聽回呼訊息。 如此可讓兩項工作流程服務在長時間執行的對話中彼此通訊。 本主題提供永久性雙工相互關聯的概觀。  
@@ -210,5 +211,5 @@ WF1 - Items Received
   
  在這個範例中，兩個工作流程都會使用 <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer> 明確管理相互關聯。 由於上述這些範例工作流程中只有單一相互關聯，因此預設的 <xref:System.ServiceModel.Activities.CorrelationHandle> 管理就已經足夠。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [永久性雙工 &#91;WF 範例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca34f04fe4ffa53bcb9bd85e5a6f3aa69b96465
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-wsdl"></a>HOW TO：匯出自訂的 WSDL
 本主題將說明如何匯出自訂的 WSDL 資訊。 為了要這麼做，我們定義了一個名為 `WsdlDocumentationAttribute` 的新程式碼屬性，會將自訂的資訊加入至服務所產生的 WSDL。  
@@ -205,5 +206,5 @@ return lines;
   }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

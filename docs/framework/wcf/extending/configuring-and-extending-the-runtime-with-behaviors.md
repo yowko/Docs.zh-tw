@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7eb8e0853adbc24deb43fc1006804d7707d9a4b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行為來設定與擴充執行階段
 行為讓您能在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和服務應用程式中修改預設行為，並且新增可檢查與驗證服務組態的自訂延伸，或是修改執行階段行為。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需有關如何使用系統提供行為的詳細資訊，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  

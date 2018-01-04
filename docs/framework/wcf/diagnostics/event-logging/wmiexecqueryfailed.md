@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7281521f47bd8e96f13c7db9015ff860773c2fd0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: defcc2725e38bca75a0693f87f7947e24d82f424
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmiexecqueryfailed"></a>WmiExecQueryFailed
 Id: 124  
@@ -29,6 +30,6 @@ Id: 124
 ## <a name="description"></a>描述  
  此事件表示 WMI ExecQuery 要求尚未處理。 此事件會列出例外狀況、處理序名稱和處理序識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

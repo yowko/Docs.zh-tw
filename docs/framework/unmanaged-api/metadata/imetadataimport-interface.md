@@ -19,18 +19,19 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6c7f1c7e99df61cc0cd33e1697de52a039d412df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1067582b506d60092bef9639dc4a96ba41306437
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 介面
 提供從可攜式執行檔 (PE) 或其他來源匯入及管理現有中繼資料的方法，例如類型程式庫或獨立的執行階段中繼資料二進位檔。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[CloseEnum 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-closeenum-method.md)|關閉具有指定控制代碼的列舉程式。|  
 |[CountEnum 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-countenum-method.md)|取得具有指定控制代碼之列舉程式中的項目數目。|  
@@ -115,6 +116,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 413adbc25e2f92ae2e989290685db6dfeaf58368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-formatters"></a>自訂訊息格式器
 訊息中的內容常使用 XML 格式，這對於應用程式通常並不方便。 應用程式會操作物件，取得及設定其屬性。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]使用*資料合約*轉換<xref:System.ServiceModel.Channels.Message>成為能夠輕易處理應用程式物件的物件。 這些處理程序稱為序列化和還原序列化。 請注意，這些相同的詞彙用於描述由傳輸層在往來訊息 Wire 格式之間進行的序列化和還原序列化，是不相關的處理程序。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
   
  如果要將自訂格式器插入服務應用程式中，請使用作業行為將 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 物件指派給 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 屬性。 行為的相關資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
- [設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

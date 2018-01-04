@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-client-behaviors"></a>設定用戶端行為
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 會以兩種方式設定行為：一種是參考行為組態 (定義於用戶端應用程式組態檔的 `<behavior>` 區段中)，另一種是透過呼叫應用程式，以程式設計的方式設定。 這個主題將描述這兩種方法。  
@@ -61,5 +62,5 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

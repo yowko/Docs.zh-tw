@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1b768292811a752e7a319f853ca8eff85f1bb08
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 1379adbce449ac3255c359249b0296da96a659a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 函式
 結束呼叫啟動列舉順序[BeginMethodEnumeration 函式](beginmethodenumeration.md)。  
@@ -46,7 +47,7 @@ HRESULT EndMethodEnumeration (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 發生內部錯誤。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
@@ -64,5 +65,5 @@ HRESULT EndMethodEnumeration (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a69acb9b640c17e6641efc6c30798e3856ef6e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-exceptions-and-faults"></a>處理例外狀況和錯誤
 例外狀況是用來在本機上傳送服務或用戶端實作內發生的錯誤。 另一方面，錯誤 (Fault) 是用來傳送跨越服務界限 (例如從伺服器到用戶端，反之亦然) 發生的錯誤 (Error)。 除了錯誤 (Fault) 以外，傳輸通道也經常會使用傳輸特定的機制來傳送傳輸層級的錯誤 (Error)。 例如，HTTP 傳輸會使用 404 等狀態碼來傳送不存在的端點 URL (表示沒有端點可傳回錯誤)。 本文件包含的三個章節都提供指引給自訂通道作者。 第一個章節會提供關於何時與如何定義及擲回例外狀況的指引， 而第二個章節會提供關於產生和使用錯誤的指引， 第三個章節則會說明如何提供追蹤資訊，以協助自訂通道的使用者針對執行中的應用程式進行疑難排解。  
@@ -193,7 +194,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 1.  遍佈在整個堆疊中的錯誤。 這些錯誤可能會出現在通道堆疊的任何一層，例如 InvalidCardinalityAddressingException。  
   
-2.  可能出現在堆疊中特定層上方任何位置的錯誤，例如某些與流動的交易或安全性角色有關的錯誤。  
+2.  可能出現在堆疊中特定層上方任何位置的錯誤，例如某些與流動的異動或安全性角色有關的錯誤。  
   
 3.  導向到堆疊中單一層的錯誤 (Fault) ，例如 WS-RM 序號錯誤 (Fault) 等錯誤 (Error)。  
   

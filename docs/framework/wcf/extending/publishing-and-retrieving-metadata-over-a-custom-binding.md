@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f66821f38e8915ee93cf5b1b77dd75e32662121
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>發行與擷取自訂繫結上的中繼資料
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供新增中繼資料端點到服務的支援。 這些中繼資料端點可以回應 HTTP GET 要求 URL，其中具有`?wsdl`querystring 和 Ws-transfer GET 要求 Ws-metadataexchange (MEX) 規格中所定義。 MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 合約。  
@@ -37,8 +38,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="security"></a>安全性  
  發行自訂繫結上的中繼資料時，繫結務必要提供您中繼資料所需的安全性支援。 例如，若要避免資訊洩漏，並且確定您的用戶端有權限可取得中繼資料，您可將 <xref:System.ServiceModel.Description.IMetadataExchange> 端點設為需要驗證和加密，讓中繼資料和應用程式更安全。 此範例[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示範此案例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [保護服務安全](../../../../docs/framework/wcf/securing-services.md)  
- [Ws-metadataexchange 繫結](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
- [如何： 設定自訂 Ws-metadata Exchange 繫結](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [如何： 擷取中繼資料透過非 MEX 繫結](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+ [WS-MetadataExchange 繫結](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [如何：設定自訂 WS-Metadata Exchange 繫結](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [如何：透過非 MEX 繫結擷取中繼資料](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

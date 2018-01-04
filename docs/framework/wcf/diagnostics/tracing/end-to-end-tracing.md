@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing"></a>端對端追蹤
 「端對端 (e2e) 追蹤」可讓開發人員追蹤 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 基礎結構中程式碼執行的情況，以便調查程式碼路徑失敗的原因，或是針對容量規劃與效能分析提供詳細的追蹤。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供三種相互關聯的機制，協助診斷錯誤的成因：活動、傳輸和傳播。  
   
  請參閱[端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)如需端對端追蹤案例，以及其個別活動和追蹤設計的清單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [活動](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md)： 描述中的活動追蹤[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]追蹤模型。  
   
  [傳輸](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md)： 描述傳輸中的[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]追蹤模型中，以及使用傳輸關聯端點內的活動。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
   
  提供所有活動追蹤類型的摘要  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

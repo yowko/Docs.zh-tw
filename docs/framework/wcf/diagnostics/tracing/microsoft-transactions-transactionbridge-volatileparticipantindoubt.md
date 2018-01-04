@@ -13,14 +13,15 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98ce61e4a46f8853e61e0ef44fdc78cf3e94431a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0dbfd04ed20a92a2ecf827ef3d6aa4f378eb6a15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
-WS-AT 通訊協定服務已收到「已準備」或「重新執行」訊息，但均來自無法辨識的變動參與者。 錯誤已傳回給參與者，宣告交易結果不確定。  
+WS-AT 通訊協定服務已收到「已準備」或「重新執行」訊息，但均來自無法辨識的變動參與者。 錯誤已傳回給參與者，宣告異動結果不確定。  
   
 ## <a name="description"></a>描述  
  在本機交易管理員收到來自其已忘記的變動登記之「已準備」或「重新執行」訊息時追蹤。  
@@ -28,7 +29,7 @@ WS-AT 通訊協定服務已收到「已準備」或「重新執行」訊息，�
 ## <a name="troubleshooting"></a>疑難排解  
  調查來自變動參與者的晚期訊息潛在原因。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

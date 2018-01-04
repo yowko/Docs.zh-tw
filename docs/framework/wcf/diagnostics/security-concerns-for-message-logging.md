@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1f3d62e8b6771666dd3a55855ca0c5e41853f439
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -119,6 +120,6 @@ ms.lasthandoff: 11/21/2017
   
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需詳細資訊，請參閱[事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [安全性考量及實用秘訣，追蹤](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+ [追蹤的安全性考量及實用秘訣](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

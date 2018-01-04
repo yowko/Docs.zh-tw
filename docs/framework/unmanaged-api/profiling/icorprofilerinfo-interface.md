@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fadffa55541723b89d7a41178a5ac6506dd07d6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08852b10f59e9c400b60287d78c8eb8eed5f109f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 介面
 提供程式碼分析工具用來通訊與 common language runtime (CLR)，以控制事件監視及要求資訊的方法。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[BeginInprocDebugging 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md)|初始化同處理序偵錯支援。 這個方法是.NET Framework 2.0 版中已過時。|  
 |[EndInprocDebugging 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-endinprocdebugging-method.md)|關閉同處理序的偵錯工作階段。 這個方法是.NET Framework 2.0 版中已過時。|  
@@ -85,6 +86,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

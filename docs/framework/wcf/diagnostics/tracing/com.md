@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2393b72d121f45262693494f6921a523b6b02b1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d48677f476e179afe555b1396a65e29dcf9a2687
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com"></a>COM+
 下圖將說明如何在 COM+ 應用程式中使用活動追蹤。 我們可以將每個方法呼叫的 COM+ 活動定義為 COM+ 物件模型，而不是直接在伺服器上執行使用者程式碼。  

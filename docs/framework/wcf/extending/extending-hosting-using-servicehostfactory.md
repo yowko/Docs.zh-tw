@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05cce66a1b03bee91672cd65bae78305c290c410
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>使用 ServiceHostFactory 擴充裝載
 用於將服務裝載到 <xref:System.ServiceModel.ServiceHost> 的標準 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] API 是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 架構中的擴充點。 使用者可以從 <xref:System.ServiceModel.ServiceHost> 衍生自己的主機類別，通常要覆寫 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> 以使用 <xref:System.ServiceModel.Description.ServiceDescription> 以便在開啟服務之前以命令方式新增預設端點或修改行為。  

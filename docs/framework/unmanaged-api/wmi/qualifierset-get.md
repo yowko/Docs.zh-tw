@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: aaf5de5b8e16ee2f96c7bc29dbb09f93298dd185
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 93ba4e59dda4806931ba085f8c63b63a1d8bd797
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get 函式
 取得指定的具名的限定詞。  
@@ -62,7 +63,7 @@ HRESULT QualifierSet_Get (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 |`WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | 指定的限定詞不存在。 |
@@ -79,5 +80,5 @@ HRESULT QualifierSet_Get (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

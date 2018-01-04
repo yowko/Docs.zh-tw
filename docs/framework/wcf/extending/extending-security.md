@@ -14,16 +14,17 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a3950b156ede806382bbe4e013db5d94a8b20a23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecbbaac0023ca528967abe2cb60c3d790772fb2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-security"></a>擴充安全性
 若要建立新的宣告類型和自訂權杖，您可以擴充 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的安全性基礎結構。 本章節中的主題會示範如何做到這點。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)  
  逐步解說 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性系統的基礎結構。  
   
@@ -36,16 +37,16 @@ ms.lasthandoff: 10/18/2017
  [自訂授權](../../../../docs/framework/wcf/extending/custom-authorization.md)  
  說明如何實作自訂授權。  
   
- [覆寫服務進行驗證的身分識別](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ [覆寫服務的身分識別以進行驗證](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  說明如何覆寫服務的身分識別來進行驗證。  
   
- [如何： 建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [如何：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  示範如何驗證自訂端點身分識別。  
   
- [如何： 使用個別 X.509 憑證來簽署和加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ [如何：使用個別 X.509 憑證簽署與加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  訊息通常會以單一憑證來簽署和加密。 本主題會說明如何能在必要時使用兩份憑證。  
   
- [如何： 變更 X.509 憑證之私密金鑰的密碼編譯提供者](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [如何：變更 X.509 憑證私密金鑰的密碼編譯提供者](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  說明如何變更用來提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何將該提供者整合到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 架構中。  
   
 ## <a name="reference"></a>參考資料  
@@ -66,5 +67,5 @@ ms.lasthandoff: 10/18/2017
   
  [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)

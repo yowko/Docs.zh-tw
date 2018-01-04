@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20b061418ee2dc6c3adcde5553d29e680d739582
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-stream-upgrades"></a>自訂資料流升級
 以資料流為導向的傳輸 (例如 TCP 和具名管道) 會在用戶端和伺服器之間的連續位元組資料流上進行作業。 透過 <xref:System.IO.Stream> 物件即可實現此資料流。 在資料流升級中，用戶端會想將選用通訊協定層新增至通道堆疊，並也要求其他通訊通道端也這樣執行。 資料流升級包含使用升級的物件取代原始的 <xref:System.IO.Stream> 物件。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  每次呼叫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 和 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 之後，就會升級資料流。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
  <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  

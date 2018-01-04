@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>追蹤
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供應用程式檢測與診斷資料，以便進行錯誤監視與分析。 您可以不使用偵錯工具而改用追蹤，以了解應用程式行為以及發生錯誤的原因。 您也可以將各元件的錯誤與處理相互關聯，以提供端對端的經驗。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/02/2017
   
 -   追蹤功能故障時出現的 Windows 錯誤事件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
  此主題描述如何設定不同的追蹤層級以符合特定需求。  
@@ -37,11 +38,11 @@ ms.lasthandoff: 12/02/2017
   
  本節描述如何將活動追蹤和散佈用於端對端的相互關聯，以便協助偵錯。  
   
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  本節描述如何使用追蹤為應用程式偵錯。  
   
- [安全性考量及實用秘訣，追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [追蹤的安全性考量及實用秘訣](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
  此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
   
@@ -49,5 +50,5 @@ ms.lasthandoff: 12/02/2017
   
  此主題會列出 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 產生的所有追蹤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a63f9a4e982e4065f55b15ec28be5afbf2d89fcc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 12df9e3760774b4dc8d4e8f73a09df5e79c2453e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>設定用於 Windows Communication Foundation 的 Windows Process Activation Service
 本主題說明設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中 Windows Process Activation Service (亦稱為 WAS) 來裝載無法透過 HTTP 網路通訊協定進行通訊的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時所需的步驟。 下列各節將概述此組態的各項步驟：  
@@ -106,6 +107,6 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
   
  如需有關建立 WAS 啟動的詳細指示[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務，請參閱[How to： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows 處理序啟用服務中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

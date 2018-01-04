@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1894ee59b6120abfe4cb216baba086fcd1650f77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bca09510a73a74b039ec18934c0be39629c4ce39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  
@@ -122,5 +123,5 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

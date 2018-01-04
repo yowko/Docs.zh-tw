@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1067fa6738b23492b3a58500b4cb6ba1d030304f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a3014c8b00cb431c2c5b101e17dc51f49bf73f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>ICorProfilerFunctionEnum 介面
 提供方法以循序逐一查看 Common Language Runtime 中的函式集合。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|取得這個 `ICorProfilerFunctionEnum` 介面複本的介面指標。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|取得應用程式已載入的或分析工具強制載入的函式數目。|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [EnumJITedFunctions 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)

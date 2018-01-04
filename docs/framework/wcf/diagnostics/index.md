@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供豐富的功能，這些功能可協助您監視應用程式的各生命階段。 例如，您可以使用組態在部署時設定服務與用戶端。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含大量的效能計數器，可協助您測量應用程式的效能。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 亦會透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可以同時協助程式開發人員與 IT 專業人員，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式發生錯誤行為時進行疑難排解。  
@@ -49,8 +50,8 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也提供幾種 GUI 與命令列工具，讓您輕鬆建立、部署與管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Communication Foundation 工具](../../../../docs/framework/wcf/tools.md)。 例如，您可以使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)建立和編輯[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用精靈，而不直接編輯 XML 的組態設定。 您也可以使用[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)若要檢視、 分組和篩選追蹤訊息，以便您可以診斷、 修復，並確認問題[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務。  
   
-## <a name="see-also"></a>另請參閱  
- [設定您的應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
+## <a name="see-also"></a>請參閱  
+ [設定應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
  [部署服務](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
  [例外狀況參考](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
  [事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  

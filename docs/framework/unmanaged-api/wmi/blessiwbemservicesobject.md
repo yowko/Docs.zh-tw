@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebba6df29b814315180e9c8e936e5e1ad175ecf8
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 2430358e5ea21468c2e975c2a26f20fe801ee546
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函式
 表示使用者認證是否允許存取指定[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)物件。   
@@ -59,7 +60,7 @@ HRESULT BlessIWbemServicesObject (
 
 這個函式傳回下列值會定義在*WinError.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 一或多個引數均為無效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 為 `null`。 | 
@@ -74,5 +75,5 @@ HRESULT BlessIWbemServicesObject (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

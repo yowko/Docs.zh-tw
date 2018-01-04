@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ced290c0644fcf89fdf3f87778e705794164b0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework"></a>服務架構
 此主題會列出服務架構資料產生的所有例外狀況。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 |BaseAddressCannotHaveUserInfo|起始位址無法包含統一資源識別元使用者資訊區段。|  
 |BaseAddressDuplicateScheme|此集合已包含具有指定配置的位址。 在此集合中，每個配置只允許一個位址。|  
 |BaseAddressMustBeAbsolute|只有一個絕對的統一資源識別元可以用來當做起始位址。|  
-|BindingDoesnTSupportAnyChannelTypes1|指定的繫結不支援建立任何通道類型。 自訂繫結中的繫結項目堆疊方式有誤或堆疊順序不正確。 傳輸是堆疊最下方的必要項。 繫結項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。|  
+|BindingDoesnTSupportAnyChannelTypes1|指定的繫結不支援建立任何通道類型。 自訂繫結中的繫結項目堆疊方式有誤或堆疊順序不正確。 傳輸是堆疊最下方的必要項。 繫結程序項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。|  
 |BindingDoesnTSupportDuplexButContractRequires1|合約需要 Duplex。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingDoesnTSupportOneWayButContractRequires1|合約需要 OneWay。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingDoesnTSupportRequestReplyButContract1|合約需要 Request/Reply。 指定的繫結不支援它，或是未正確設定來支援它。|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
 |MultipleMebesInParameters|在 BindingContext 的 BindingParameters 中找到一個以上的 MessageEncodingBindingElement。 CustomBinding 無法包含多個 MessageEncodingBindingElements。 請移除全部項目，只留下其中一個項目。|  
 |MultipleStreamUpgradeProvidersInParameters|在 BindingContext 的 BindingParameters 中找到一個以上的 IStreamUpgradeProviderElement。 CustomBinding 只能包含一個 IStreamUpgradeProviderElements。 請移除全部項目，只留下其中一個項目。|  
 |NoChannelBuilderAvailable|由於繫結並未包含 TransportBindingElement，因此無法用來建立通道處理站或通道接聽項。 每一個繫結都至少必須有一個衍生自 TransportBindingElement 的繫結項目。|  
-|NotAllBindingElementsBuilt|在建置通道處理站與通道接聽項時，並未採用此繫結中的某些繫結項目。 繫結項目的順序不正確。 繫結項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。  請注意，TransportBindingElement 必須排在最後一個。 尚未建置指定的繫結項目。|  
+|NotAllBindingElementsBuilt|在建置通道處理站與通道接聽項時，並未採用此繫結中的某些繫結項目。 繫結項目的順序不正確。 繫結程序項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。  請注意，TransportBindingElement 必須排在最後一個。 尚未建置指定的繫結項目。|  
 |RuntimeRequiresInvoker0|分派作業需要 Invoker。|  
 |ServiceHasZeroAppEndpoints|指定的 Service 不包含應用程式 (非基礎結構) 端點。 這是因為找不到應用程式的任何組態檔，或者因為組態檔中找不到任何符合服務名稱的服務項目，又或因為服務項目中未定義任何端點所導致。|  
 |SFxActionMismatch|因為動作不符而無法建立具型別的訊息。 預期發生指定的動作但卻發生另一個動作。|  
@@ -129,7 +130,7 @@ ms.lasthandoff: 12/02/2017
 |SFxInvalidMessageBodyErrorDeserializingParameter|嘗試還原序列化指定的參數時發生錯誤。 如需詳細資訊，請參閱 InnerException。|  
 |SFxInvalidMessageBodyErrorSerializingParameter|嘗試序列化指定的參數時發生錯誤。 已指定 InnerException 訊息。  如需詳細資訊，請參閱 InnerException。|  
 |SFxInvalidMessageBodyUnexpectedNode|還原序列化參數時，發生來自指定命名空間之指定的未預期節點。|  
-|SFxInvalidMessageContractSignature|指定的作業可能包含參數，或是標示為 MessageContractAttribute 的傳回類型。 使用訊息合約來代表要求訊息時，作業必須具有標示為 MessageContractAttribute 的單一參數。 使用訊息合約來代表回應訊息時，作業的傳回值必須是標示為 MessageContractAttribute 的類型。 作業不可具有任何 'out' 或 'ref' 參數。|  
+|SFxInvalidMessageContractSignature|指定的作業可能包含參數，或是標示為 MessageContractAttribute 的傳回型別。 使用訊息合約來代表要求訊息時，作業必須具有標示為 MessageContractAttribute 的單一參數。 使用訊息合約來代表回應訊息時，作業的傳回值必須是標示為 MessageContractAttribute 的類型。 作業不可具有任何 'out' 或 'ref' 參數。|  
 |SFxInvalidReplyAction|作業的傳出回覆訊息已經指定 Action，但是該作業的合約卻指定另一個 ReplyAction。 訊息中指定的 Action 必須符合合約中的 ReplyAction，或者作業合約必須指定 ReplyAction='*'。|  
 |SFxInvalidRequestAction|作業的傳出要求訊息已經指定 Action，但是該作業的合約卻指定另一個 RequestAction。 訊息中指定的 Action 必須符合合約中的 RequestAction，或者作業合約必須指定 RequestAction='*'。|  
 |SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|靜態 CreateChannel 方法不能與指定的合約一起使用，因為該合約會定義回呼合約。 使用其中一個靜態 CreateChannel 多載上 DuplexChannelFactory\<TChannel >。|  
@@ -165,7 +166,7 @@ ms.lasthandoff: 12/02/2017
 |SFxTerminateRequestProcessingException|作業管線中的延伸必須結束處理此訊息。|  
 |SFxTerminatingOperationAlreadyCalled1|此通道不會傳送更多的訊息，因為已呼叫 IsTerminating 作業。|  
 |SFxThrottleLimitMustBeGreaterThanZero0|節流閥限制必須大於零。 若要停用節流閥限制，請將值設為 Int32.MaxValue。|  
-|SFxTypedOrUntypedMessageCannotBeMixedWithVoidInRpc|使用 RPC 編碼的樣式時，訊息合約類型或 System.ServiceModel.Channels.Message 類型在作業不包含參數或具有 void 傳回值時將無法使用。 請將空白的訊息合約類型當成參數或傳回類型，新增至指定的作業中。|  
+|SFxTypedOrUntypedMessageCannotBeMixedWithVoidInRpc|使用 RPC 編碼的樣式時，訊息合約類型或 System.ServiceModel.Channels.Message 類型在作業不包含參數或具有 void 傳回值時將無法使用。 請將空白的訊息合約類型當成參數或傳回型別，新增至指定的作業中。|  
 |SFxUserCodeThrewException|指定的使用者作業已擲回使用者程式碼中未處理的例外狀況。 如果這個問題重複發生，可能代表在實作指定的方法時出現錯誤。|  
 |SfxUseTypedMessageForCustomAttributes|指定的參數無法對應至作業參數，因為它需要額外的屬性。|  
 |SFxVersionMismatchInOperationContextAndMessage2|無法將傳出的標頭新增至訊息，因為 OperationContext.Current 中的 MessageVersion 與正在處理的訊息標頭版本不符。|  

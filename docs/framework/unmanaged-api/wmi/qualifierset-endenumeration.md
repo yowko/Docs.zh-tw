@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7868a0c0ba5abb880af201ce73b35f5ffed6f223
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7d8e6bb24eb471d807af2493f82b6be4f644124f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函式
 結束呼叫開始列舉[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。  
@@ -64,5 +65,5 @@ HRESULT QualifierSet_EndEnumeration (
   
 **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

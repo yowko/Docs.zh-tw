@@ -14,11 +14,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4decb820f012d3f4b2a9855cd08701f14dcc5431
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔來設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可讓您在部署時 (而不是在設計階段) 彈性提供端點與服務行為資料。 本主題概要說明可用的主要技巧。  
@@ -271,7 +272,7 @@ ms.lasthandoff: 12/02/2017
   
  如果子行為集合包含已經存在父行為集合中的行為，子行為就會覆寫父代。 因此，如果父行為集合具有`<serviceMetadata httpGetEnabled="False" />`而且子行為集合具有`<serviceMetadata httpGetEnabled="True" />`，子行為就會覆寫行為集合中的父行為，而且 httpGetEnabled 會是"true"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
  [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  

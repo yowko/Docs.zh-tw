@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e2e969cae4b2f18ddea9bf5e839a019cd3c08620
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44e8d4f144db36528d944b1a2335a41bead36c04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securitynegotiationsuccess"></a>SecurityNegotiationSuccess
 Id: 171  
@@ -29,6 +30,6 @@ Id: 171
 ## <a name="description"></a>描述  
  這個事件表示安全性交涉成功，並列出服務名稱、行動、用戶端識別、ActivityId 和交涉。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

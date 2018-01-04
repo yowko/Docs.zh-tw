@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 12a742774bff22030bdfaaa34e431059e016a4bf
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函式
 將列舉值重設回列舉的開頭。  
@@ -49,7 +50,7 @@ HRESULT BeginEnumeration (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 中的旗標的組合`lEnumFlags`無效，或是無效的引數所指定。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 第二個呼叫`BeginEnumeration`所沒有的中間呼叫[ `EndEnumeration` ](endenumeration.md)。 |
@@ -64,21 +65,21 @@ HRESULT BeginEnumeration (
 
 **群組 1**
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 包含構成只在索引鍵屬性。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 包含僅限物件參考的內容。 |
 
 **群組 2**
 
-常數  |值  |說明  |
+常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 限制只系統屬性的列舉型別。 |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 包含本機和傳播屬性，但排除在列舉中的系統屬性。 |
 
 針對類別：
 
-常數  |值  |說明  |
+常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 限制覆寫類別定義中的屬性的列舉型別。 |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 限制覆寫目前的類別定義中的屬性並定義於類別的新屬性的列舉型別。 |
@@ -88,7 +89,7 @@ HRESULT BeginEnumeration (
 
 執行個體：
 
-常數  |值  |說明  |
+常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制屬性所定義或修改此類別本身中的列舉型別。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制的列舉型別都繼承自基底類別的屬性。 |
@@ -101,5 +102,5 @@ HRESULT BeginEnumeration (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

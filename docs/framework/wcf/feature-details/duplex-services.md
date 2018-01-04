@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5c7cb9d963e56c6a6e06421afdb14427440643c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex-services"></a>雙工服務
 雙工服務合約為訊息交換模式，其中的兩個端點可以彼此獨立地傳送訊息。 因此，雙工服務可以將訊息傳送回用戶端端點，以提供類似事件的行為。 用戶端建立與服務的連線，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 請注意，雙工服務的類似事件行為只會在工作階段內運作。  
@@ -94,7 +95,7 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
 > [!WARNING]
 >  此雙工模型不會自動偵測服務或用戶端關閉其通道的時間。 因此，如果某個用戶端意外終止，預設不會通知此服務，或者如果某個用戶端意外終止，也不會通知此服務。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。  
   
-## <a name="see-also"></a>另請參閱  
- [雙工](../../../../docs/framework/wcf/samples/duplex.md)  
+## <a name="see-also"></a>請參閱  
+ [雙面](../../../../docs/framework/wcf/samples/duplex.md)  
  [指定用端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [如何： 建立通道處理站，並用來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+ [如何：建立通道處理站並使用它來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

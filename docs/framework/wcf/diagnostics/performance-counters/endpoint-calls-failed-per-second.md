@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b41a1fba1c1630532524bb4d6bc759ec21e2865
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a6aaf1e504909805a542840fe92a6591c9083d8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-calls-failed-per-second"></a>端點：每秒失敗的呼叫數
 計數器名稱：每秒失敗的呼叫數。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 12/02/2017
   
  每當這個端點有未處理的例外狀況時，這個計數器就會遞增。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指定及處理合約與服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

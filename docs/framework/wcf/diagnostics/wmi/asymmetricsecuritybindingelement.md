@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 104810fc24cfe7c4c6ddf7ee5ece9f16a345c80c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 82e5365a440d103727f354e682d0ebecb5f46a46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
 AsymmetricSecurityBindingElement  
@@ -58,5 +59,5 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

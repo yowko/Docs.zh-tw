@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 322268f5b11a5078545ae120440f91d327d6a615
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 服務模型組態工具 (ComSvcConfig.exe)
 COM+ 服務模型組態命令列工具 (ComSvcConfig.exe) 可讓您設定要公開為 Web 服務的 COM+ 介面。  
@@ -44,7 +45,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  下表說明可以和 ComSvcConfig.exe 搭配使用的模式。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`install`|安裝服務模型整合的 COM+ 介面組態。<br /><br /> 簡短形式：`/i`。|  
 |`uninstall`|解除安裝服務模型整合的 COM+ 介面組態。<br /><br /> 簡短形式：`/u`。|  
@@ -52,7 +53,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  下表說明可以和 ComSvcConfig.exe 搭配使用的旗標。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`/application:`\< *ApplicationID* &#124;*應用程式名稱*\>|指定要設定的 COM+ 應用程式。<br /><br /> 簡短形式：`/a`。|  
 |`/contract:`\< *ClassID* &#124;*ProgID* &#124;\*，*InterfaceID* &#124;*InterfaceName* &#124;\*\>|指定要設定為服務合約的 COM+ 元件和介面。<br /><br /> 簡短形式：`/c`。<br /><br /> 而萬用字元 (\*) 可以用於當您指定的元件和介面的名稱，我們建議您不要使用它，因為您可能會公開您不想要的介面。|  
@@ -104,5 +105,5 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
 ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 使用 COM + 服務模型組態工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a>請參閱  
+ [如何：使用 COM+ 服務模型組態工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

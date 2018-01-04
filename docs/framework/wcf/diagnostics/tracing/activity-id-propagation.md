@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bb8ae9388a9f56ad35697a391137c06ed3ae80b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f7543a79f351cf1f1e9c6d8c316684d9bfc3155
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-id-propagation"></a>活動識別碼傳播
 傳播會在 ServiceModel 活動追蹤啟用 (ServiceModel 傳播) 或停用 (使用者對使用者活動傳播) 時發生。  

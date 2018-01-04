@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92fc3886f81ee401cbd3de2fb6ef251e4c340394
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>設定 Windows Communication Foundation 服務的繫結
 建立應用程式時，您經常會需要在應用程式部署後，延後系統管理員的決定。 例如，我們很多時都無法預知服務位址，或統一資源識別元 (URI)。 這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。 這樣的靈活性是透過組態達成。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="servicemodel-elements"></a>ServiceModel 項目  
  您可以使用界限的區段`system.ServiceModel`項目來設定服務類型與一或多個端點，以及服務的設定。 然後可以使用位址、合約與繫結來設定每個端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]端點，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如果沒有指定任何端點，則執行階段會加入預設端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
- 繫結指定傳輸 (HTTP、TCP、管道、訊息佇列) 與通訊協定 (安全性、可靠性、交易流) 並且包含繫結項目，每個皆指定端點如何與外界通訊。  
+ 繫結程序指定傳輸 (HTTP、TCP、管道、訊息佇列) 與通訊協定 (安全性、可靠性、異動流) 並且包含繫結程序項目，每個皆指定端點如何與外界通訊。  
   
  例如，指定[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)指出端點使用 HTTP 做為傳輸的項目。 這是在執行階段，當使用此端點的服務開啟時，用來連接端點。  
   
@@ -63,8 +64,7 @@ ms.lasthandoff: 12/02/2017
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 ```  
   
@@ -89,8 +89,7 @@ ms.lasthandoff: 12/02/2017
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -113,12 +112,11 @@ ms.lasthandoff: 12/02/2017
 </behaviors>  
 <services>  
     <service   
-       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
+       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
        <endpoint   
           address="http://computer:8080/Hello"  
           contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-          binding="basicHttpBinding" />  
-       </endpoint>  
+          binding="basicHttpBinding" />
     </service>  
 </services>  
 ```  
@@ -136,14 +134,12 @@ ms.lasthandoff: 12/02/2017
         address="http://computer:8080/Hello1"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="shortTimeout"  
-    </endpoint>  
+        bindingConfiguration="shortTimeout" />
     <endpoint  
         address="http://computer:8080/Hello2"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="Secure"  
-     </endpoint>  
+        bindingConfiguration="Secure" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -151,8 +147,9 @@ ms.lasthandoff: 12/02/2017
         timeout="00:00:00:01"   
      />  
      <basicHttpBinding   
-        name="Secure" />  
+        name="Secure">  
         <Security mode="Transport" />  
+     </basicHttpBinding>
 </bindings>  
 ```  
   
@@ -174,7 +171,7 @@ ms.lasthandoff: 12/02/2017
 </bindings>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
  [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  

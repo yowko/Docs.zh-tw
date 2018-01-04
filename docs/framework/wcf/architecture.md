@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7be93c5949966c052e77adebe8bb4d7aac9149bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
 下圖說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的各主要層。  
@@ -48,13 +49,13 @@ ms.lasthandoff: 12/02/2017
   
  通訊協定通道會實作訊息處理通訊協定，而此通常是藉由讀取或寫入訊息的額外標頭來完成。 這類通訊協定的範例包括 WS-Security 和 WS-Reliability。  
   
- 訊息層說明資料的可能格式與交換模式。 WS-Security 是 WS-Security 規格的實作 (Implementation)，此規格會啟用訊息層的安全性。 WS-Reliable 訊息通道可保證訊息的傳遞。 編碼器會提供可以用來滿足訊息需要的各種編碼方式。 HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 (Hypertext Transfer Protocol，HTTP)。 同樣地，TCP 通道會指定 TCP 通訊協定。 交易流程通道會管理交易的訊息模式。 具名管道通道會啟用處理序間通訊。 MSMQ 通道會啟用與 MSMQ 應用程式的互通。  
+ 訊息層說明資料的可能格式與交換模式。 WS-Security 是 WS-Security 規格的實作 (Implementation)，此規格會啟用訊息層的安全性。 WS-Reliable 訊息通道可保證訊息的傳遞。 編碼器會提供可以用來滿足訊息需要的各種編碼方式。 HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 (Hypertext Transfer Protocol，HTTP)。 同樣地，TCP 通道會指定 TCP 通訊協定。 異動流程通道會管理異動的訊息模式。 具名管道通道會啟用處理序間通訊。 MSMQ 通道會啟用與 MSMQ 應用程式的互通。  
   
 ### <a name="hosting-and-activation"></a>裝載和啟動  
  服務的最終形式就是程式。 就像其他的程式，服務必須在可執行檔中執行。 這稱為*自我裝載*服務。  
   
  服務也可以是*裝載*，或是執行受外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 的可執行檔中。 WAS 讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式能在部署到執行 WAS 的電腦上時自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM+ 元件也可以裝載為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和效能計數器 （Unmanaged API 參考）
 
@@ -22,19 +23,19 @@ ms.lasthandoff: 11/22/2017
   
 此 API 包含下列功能：
 
-| 函式 | 說明 |
+| 功能 | 描述 |
 |---------|---------|
 | [BeginEnumeration 函式](beginenumeration.md) | 將列舉值重設 WMI 物件屬性之列舉的開頭。 |
 | [BeginMethodEnumeration 函式](beginmethodenumeration.md) |  開始列舉物件的可用方法的型別。 |
 | [BlessIWbemServices 函式](blessiwbemservices.md) | 表示使用者認證是否允許存取指定的 IWbemServices 類別。 |
 | [BlessIWbemServicesObject 函式](blessiwbemservicesobject.md) | 表示使用者認證是否允許存取指定的 IWbem 服務物件。 |
-| [複製函式](clone.md) | 傳回目前物件的完整複本的新物件。 |
+| [Clone 函式](clone.md) | 傳回目前物件的完整複本的新物件。 |
 | [CloneEnumWbemClassObject 函式](cloneenumwbemclassobject.md) | 讓列舉值，並保留其目前位置列舉中的邏輯副本。 |
 | [CompareTo 函式](compareto.md) | 比較物件與另一個 Windows 管理物件。 |
 | [ConnectServerWmi 函式](connectserverwmi.md) | 指定在電腦上建立的 WMI 命名空間透過與 DCOM 的連線。 |
 | [CreateClassEnumWmi 函式](createclassenumwmi.md) | 傳回符合指定的選取準則的所有類別的列舉值。 |
 | [CreateInstanceEnumWmi 函式](createinstanceenumwmi.md) | 傳回列舉值，傳回符合指定的選取準則 platform 中指定的類別。 |
-| [刪除函式](delete.md) | 從類別定義和所有其限定詞會刪除指定的屬性。 |
+| [Delete 函式](delete.md) | 從類別定義和所有其限定詞會刪除指定的屬性。 |
 | [DeleteMethod 函式](deletemethod.md) | 從 CIM 類別定義中刪除指定的方法。 |
 | [EndEnumeration 函式](endenumeration.md) | 終止列舉序列。 | 
 | [EndMethodEnumeration 函式](endmethodenumeration.md) | 列舉序列結尾有啟動藉由呼叫[BeginMethodEnumeration 函式](beginmethodenumeration.md)。 |
@@ -76,5 +77,5 @@ ms.lasthandoff: 11/22/2017
 | [VerifyClient 函式](verifyclientkey.md) | 可確保用戶端金鑰具有正確的安全性。 |
 | [WritePropertyValue 函式](writepropertyvalue.md) | 寫入屬性控制代碼所識別的屬性中指定的位元組數目。 |
 
- ## <a name="see-also"></a>請參閱
+ ## <a name="see-also"></a>另請參閱
 [Unmanaged 的 API 參考](../index.md) 

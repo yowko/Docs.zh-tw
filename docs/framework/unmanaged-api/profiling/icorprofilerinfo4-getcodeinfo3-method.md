@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87a93220bbaf3930f8ac2671efc0f19b2df8aee5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b669714774ecfccad436f064350569d27ef13883
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>ICorProfilerInfo4::GetCodeInfo3 方法
 取得與經過 JIT 重新編譯的指定函式版本關聯的機器碼範圍。  
@@ -68,7 +69,7 @@ HRESULT GetCodeInfo3(
   
  之後`GetCodeInfo3`傳回時，您必須確認`codeInfos`緩衝區的大小足以包含所有[COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)結構。 若要執行這項作業，請比較 `cCodeInfos` 的值和 `cchName` 參數的值。 如果`cCodeInfos`除以大小[COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)結構小於`pcCodeInfos`，配置較大`codeInfos`緩衝區，更新`cCodeInfos`以新、 較大的大小和呼叫`GetCodeInfo3`一次。  
   
- 此外，您可以先使用長度為零的 `codeInfos` 緩衝區來呼叫 `GetCodeInfo3`，以取得正確的緩衝區大小。 然後您可以設定`codeInfos`緩衝區大小中傳回的值為`pcCodeInfos`大小乘以[COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)結構，並呼叫`GetCodeInfo3`一次。  
+ 此外，您也可以先使用長度為零的 `codeInfos` 緩衝區來呼叫 `GetCodeInfo3`，以取得正確的緩衝區大小。 然後您可以設定`codeInfos`緩衝區大小中傳回的值為`pcCodeInfos`大小乘以[COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)結構，並呼叫`GetCodeInfo3`一次。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -79,7 +80,7 @@ HRESULT GetCodeInfo3(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [GetCodeInfo2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  
  [ICorProfilerInfo4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

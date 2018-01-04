@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a79a9c3362bd2a186d09f7337c0f742b91871c9e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-dispatchers"></a>擴充發送器
 發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。 發送器擴充可讓您修改這個處理。  您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。  您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。  
@@ -136,9 +137,9 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 屬性可以讓您插入可用來檢查或修改參數和傳回值的自訂參數偵測器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime>  
  <xref:System.ServiceModel.Dispatcher.DispatchOperation>  
- [如何： 檢查及修改服務上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  
- [如何： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)  
- [如何： 鎖定企業的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+ [如何：檢查及修改服務中的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  
+ [如何：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)  
+ [如何：鎖定企業的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

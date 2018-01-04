@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4da4509a6e8b87490cee076b403f3fa525de91e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66f22557dd6020ff5040d5aaf76cb12e9ae9965c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-global-static-functions"></a>分析全域靜態函式
 本節說明分析 API 所使用的 unmanaged 應用程式開發介面函式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 ## <a name="net-framework-version-1-profiling-functions"></a>.NET framework 第 1 版程式碼剖析函式  
  [FunctionEnter 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/18/2017
  通知分析工具目前執行函式即將執行 tail 呼叫另一個函式，並提供的控制代碼，可以傳遞至[icorprofilerinfo3:: Getfunctiontailcall3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)擷取堆疊框架。  
   
 ## <a name="related-sections"></a>相關章節  
- [程式碼剖析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   

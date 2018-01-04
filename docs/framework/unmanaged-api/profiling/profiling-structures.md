@@ -17,16 +17,17 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42762812c9d27073fac34b20df5011b386f05740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b29c63ea9dfbd69863aad1afa712444405be763e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-structures"></a>分析結構
 本節說明分析 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  提供在執行組件參考結束查核時，所應考量的參考組件相關資訊給通用語言執行平台。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/18/2017
   
  COR_IL_MAP  
   
- [程式碼剖析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>通道模型概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆疊是一種分層式的通訊堆疊，其具有一個或多個處理訊息的通道。 堆疊底部為傳輸通道，其負責針對基礎傳輸進行調整 (例如，TCP、HTTP、SMTP 和其他的傳輸類型)。 通道會提供低階的程式設計模型來傳送及接收訊息。 這個程式設計模型依賴多個介面和其他類型，一般統稱為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道模型。 本主題將討論通道形狀、建構基本通道接聽程式 (在服務上) 以及通道處理站 (在用戶端上)。  
@@ -79,11 +80,11 @@ ms.lasthandoff: 12/02/2017
   
  下列主題會說明通道物件模型，以及有助於建置自訂通道的各種開發區域。  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
-|[服務： 通道接聽程式和通道](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|說明通道接聽程式，此接聽項會接聽服務應用程式中的傳入通道。|  
-|[用戶端： 通道處理站和通道](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|說明通道處理站，此處理站會建立可連接至服務應用程式的通道。|  
+|[服務：通道接聽程式與通道](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|說明通道接聽程式，此接聽項會接聽服務應用程式中的傳入通道。|  
+|[用戶端：通道處理站與通道](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|說明通道處理站，此處理站會建立可連接至服務應用程式的通道。|  
 |[了解狀態變更](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|說明 <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> 介面模型狀態在通道中的變更方式。|  
 |[選擇訊息交換模式](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|說明通道可支援的六種基本訊息交換模式。|  
-|[處理例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|說明如何處理在自訂通道中的錯誤和例外狀況。|  
-|[設定和中繼資料支援](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|說明如何支援從應用程式模型使用自訂通道，以及如何使用繫結和繫結項目來匯出及匯入中繼資料。|
+|[處理例外狀況和失敗](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|說明如何處理在自訂通道中的錯誤和例外狀況。|  
+|[組態與中繼資料支援](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|說明如何支援從應用程式模型使用自訂通道，以及如何使用繫結和繫結項目來匯出及匯入中繼資料。|

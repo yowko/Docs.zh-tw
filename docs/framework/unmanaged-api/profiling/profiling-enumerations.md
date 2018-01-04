@@ -17,16 +17,17 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e0b539c8e455040cc97f37f75476b0efe796abb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84ac67b35bdbf686edb2fa35cc651aad4c19516b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-enumerations"></a>分析列舉
 本節描述分析 API 所使用的 Unmanaged 列舉。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [COR_PRF_CLAUSE_TYPE 列舉](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)  
  指出剛輸入或留下的程式碼的 exception 子句類型。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/18/2017
  指出從 Managed 程式碼轉換為 Unmanaged 程式碼 (反之亦然) 的原因。  
   
 ## <a name="related-sections"></a>相關章節  
- [程式碼剖析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   

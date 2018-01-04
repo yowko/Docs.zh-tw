@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5fb11f5dbdcd0cf0a6d7b8bcf51b71c44b5f52af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e798c0be052dc0d7987d99263117bf21a93ba9c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificateinvalid"></a>System.ServiceModel.Channels.HttpsClientCertificateInvalid
 用戶端憑證無效。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="description"></a>描述  
  這個追蹤表示發現 HTTPS 接聽項視用戶端提供的憑證為無效。 HTTPS 接聽項嘗試使用這個憑證驗證用戶端的真實性。 如果裝載服務的伺服器無法辨識其憑證授權單位，憑證可能無效。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a838b2dd2367bed3fb3ffa3248e67c23f7917d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41eb191a08aba0f84a677087a3771b6d8e90efcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-order"></a>資料成員順序
 在某些應用程式中，知道來自各個資料成員之資料的傳送順序或是資料的預期收到順序是十分有用的 (例如，資料出現在序列化 XML 中的順序)。 有時候可能需要變更這個順序。 本主題將說明排序規則。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

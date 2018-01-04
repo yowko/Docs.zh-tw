@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70c94d38a50425c702e382edcd7290cba3d61e91
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>HOW TO：建立自訂用戶端身分識別驗證器
 *識別*功能[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別  (如身分識別，以及它的運作方式的說明，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  <xref:System.ServiceModel.EndpointIdentity>  
  <xref:System.ServiceModel.Security.IdentityVerifier>  

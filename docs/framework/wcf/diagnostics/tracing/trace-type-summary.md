@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1570832e5f179b6d2685ad33fad743c9530bb16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe4222ac124174341a28035c955a2a9bef4a167c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-type-summary"></a>追蹤類型摘要
 [來源層級](http://go.microsoft.com/fwlink/?LinkID=94943)定義各種不同的追蹤層級： 重大、 錯誤、 警告、 資訊和詳細資訊，以及做為提供描述`ActivityTracing`切換輸出的旗標追蹤界限與活動傳輸事件。  

@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c580316415a1186bbdee518e201fb4c88419a72
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定企業的端點
 大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，以用於驗證所有安裝在電腦上的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式。  
@@ -73,6 +74,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  您可能也要加密組態檔項目。 如需詳細資訊，請參閱「請參閱」一節。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 DPAPI 的加密組態檔項目](http://go.microsoft.com/fwlink/?LinkId=94954)  
  [使用 RSA 加密組態檔項目](http://go.microsoft.com/fwlink/?LinkId=94955)

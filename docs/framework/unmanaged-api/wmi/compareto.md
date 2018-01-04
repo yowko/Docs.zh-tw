@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dacb1516bebfc73ae9e16b03f3755ab49382e571
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compareto-function"></a>CompareTo 函式
 比較物件與另一個 Windows 管理物件。  
@@ -55,7 +56,7 @@ HRESULT CompareTo (
 
 這個函式傳回下列值會定義在*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 發生意外的錯誤。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
@@ -70,7 +71,7 @@ HRESULT CompareTo (
 
 可以做為傳遞的旗標`lEnumFlags`引數中所定義*WbemCli.h*標頭檔，或者您可以定義它們以常數的形式在程式碼中。 您可以藉由指定下列旗標的位元組合，指定比較中涉及的個別特性：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略來源 （伺服器和來源的命名空間）。 |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 略過所有限定詞 (包括**金鑰**和**動態**) |
@@ -92,5 +93,5 @@ HRESULT CompareTo (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

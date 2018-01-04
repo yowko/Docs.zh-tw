@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca7eb8ca574ffd98bc6e62fd8fb6568398f80066
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 52d02d83314889ac7a2333db841867756029e910
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webhostunhandledexception"></a>WebHostUnhandledException
 Id: 109  
@@ -29,6 +30,6 @@ Id: 109
 ## <a name="description"></a>描述  
  這個事件會指出已發生 WebHost 未處理例外狀況。 此事件會列出寄件者資訊、例外狀況、處理序名稱和處理序識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b0a29b59b6b2f7b8dd3a430b2395b18c1e4f83fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>透過 TCP 與 SOAP 安全性的 HTTPS 與 SSL 之間的憑證驗證差異
 除了 HTTP (HTTPS) 或 TCP 之上的傳輸層安全性 (TLS) 外，您還可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 裡含訊息層 (SOAP) 安全性的憑證。 此主題說明這類憑證的不同驗證方法。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Net.Security.RemoteCertificateValidationCallback>  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

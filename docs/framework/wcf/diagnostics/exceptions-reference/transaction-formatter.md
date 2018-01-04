@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89e554e3345157701257d0954cb9b6718f8e2a95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f2a16d005f3bf750040000fa0885eb914283459
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-formatter"></a>異動格式器
 此主題會列出異動格式器產生的所有例外狀況。  
   
-## <a name="exception"></a>例外狀況  
+## <a name="exception"></a>例外  
   
 |資源程式碼|資源字串|  
 |-------------------|---------------------|  
-|TMCommunicationError|與分散式交易管理員通訊時發生錯誤。|  
+|TMCommunicationError|與分散式異動管理員通訊時發生錯誤。|  
 |WhereaboutsNoHostName|MSDTC 位置資訊未包含主機名稱。|  
 |WhereaboutsReadFailed|無法還原序列化 MSDTC 位置資訊。|  
 |WhereaboutsSignatureMissing|MSDTC 位置資訊中找不到標準位置簽章。|  

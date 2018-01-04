@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8698e0657de31d78699df478da5e716bf831fc4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
 建立服務之後，下一個步驟就是建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy。 用戶端應用程式會使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy 與服務進行通訊。 用戶端應用程式通常會匯入服務的中繼資料，以產生可用來叫用服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼。  
@@ -192,13 +193,13 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
  發生這類例外狀況時，最佳的解決方式是開啟服務端的追蹤功能，並且判斷該處發生哪種例外狀況。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]追蹤，請參閱[追蹤](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [如何： 存取使用雙工合約的服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [如何： 以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [如何： 存取服務使用單向和要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [如何： 存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [如何：使用雙面合約存取服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [如何：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [如何：使用單向和要求-回覆合約來存取服務](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [如何：存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
  [了解產生的用戶端程式碼](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [如何： 改善啟動時間的 WCF 用戶端應用程式使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
  [指定用端執行階段行為](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)

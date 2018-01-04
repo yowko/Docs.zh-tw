@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a65104a6fe76c22fca308091cc02e9496912129c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4828b9a6b20c11f1f234f0ef521686164c7f8c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
 ServiceTimeoutsBehavior  
@@ -50,5 +51,5 @@ class ServiceTimeoutsBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

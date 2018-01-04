@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfac12fc0c5fbaabf612bbd8cc950f93a59a54c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-message-flow-tracing"></a>設定訊息流程追蹤
 啟用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 活動追蹤，就會為整個 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 堆疊的邏輯活動指派端對端活動識別碼。 現在，[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 針對這項功能提供了具備更高效能且可搭配 Windows 事件追蹤 (ETW) 使用的版本，也就是所謂的訊息流程追蹤。 啟用之後，就會取得傳入訊息的端對端活動識別碼 (若是空的則會指派)，並且傳播給在通道將訊息解碼之後發出的所有追蹤事件。 在解碼之後，客戶可以使用這項功能，利用來自不同服務的追蹤記錄重新建構訊息流程。  

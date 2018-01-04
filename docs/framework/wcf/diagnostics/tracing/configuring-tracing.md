@@ -14,11 +14,12 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -189,8 +190,8 @@ ms.lasthandoff: 12/02/2017
   
  您無法使用具有使用者定義追蹤來源的 `propagateActivity` 屬性。 若要進行使用者程式碼活動識別碼傳播，請確定您未設定 ServiceModel `ActivityTracing`，而且讓 ServiceModel `propagateActivity` 屬性仍舊設定為 `true`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [如何： 建立和初始化追蹤接聽項](http://go.microsoft.com/fwlink/?LinkId=94648)  
+ [如何：建立和初始設定追蹤接聽項](http://go.microsoft.com/fwlink/?LinkId=94648)  
  [建立自訂 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)

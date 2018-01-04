@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e8769966ab82b5702166eb9d6b43187cd25979a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e0c9d8e5f58296b9913eb06177cbd60963e2269
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedserviceendpoint"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint  
@@ -25,7 +26,7 @@ System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoi
 ## <a name="description"></a>描述  
  ComPlus: 已建立服務端點。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

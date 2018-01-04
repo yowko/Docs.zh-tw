@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 174459c23bd6ecd336394146b6d91e265cb820d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools"></a>工具
 本主題將列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 工具所產生的所有例外狀況。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/02/2017
 |ErrDuplicateValuePassedToTypeArg|指定值已經多次傳送至指定選項。 每種型別只能指定一次。|  
 |ErrInputEPRFileParseError|無法從指定項目讀取端點參照。 請驗證 XML 格式正確而且有效。|  
 |ErrCouldNotCreateCodeProvider|您無法針對已經傳送至 /{1} 引數的指定值建立程式碼提供者。 請驗證程式碼提供者已安裝且設定妥當。|  
-|ErrPathTooLongDirOnly|結果指定路徑太長。 請檢視指定引數。|  
+|ErrPathTooLongDirOnly|結果指定路徑太長。 請檢閱指定引數。|  
 |HelpDataContractSerializer|產生使用 DataContract 序列化程式以進行序列化與還原序列化的資料型別。|  
 |ErrUnableToExportEndpoint|匯出指定命名空間之指定端點名稱時發生錯誤，此命名空間可在組件所載入的組態檔之指定服務型別中找到。|  
 |HelpUsage1|顯示說明用法。|  
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/02/2017
 |ErrCannotDisambiguateSpecifiedTypes|一個以上具有相同名稱的型別存在參照的組件集中。 請使用符合組件規格的名稱來區分指定選項的各個指定型別。|  
 |RetreivingMetadataWithMexOnly|使用 WS-Metadata Exchange 嘗試從指定位置下載中繼資料。 這個 URL 不支援 DISCO。|  
 |ErrInvalidTarget|使用指定項目來指定時，指定目標將失效。 已指定支援目標。|  
-|ErrPathTooLong|結果路徑太長。 請檢視指定引數。|  
+|ErrPathTooLong|結果路徑太長。 請檢閱指定引數。|  
 |HelpCommonOptionsCategory|-= 常見問題 =-|  
 |ParametersServiceName|\<serviceConfigName >|  
 |ErrNoValidInputFilesSpecified|未指定有效的輸入檔。 請指定中繼資料文件或組件檔。|  

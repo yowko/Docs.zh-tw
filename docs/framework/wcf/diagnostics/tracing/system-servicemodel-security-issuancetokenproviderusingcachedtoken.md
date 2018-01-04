@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: fa1fef8e46ec98ddc6eae1928621e2b84eb6ec1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5f2c8a640d42c37a3c4cb936d9fc4cc4dd68a67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecurityissuancetokenproviderusingcachedtoken"></a>System.ServiceModel.Security.IssuanceTokenProviderUsingCachedToken
 System.ServiceModel.Security.IssuanceTokenProviderUsingCachedToken  
@@ -25,7 +26,7 @@ System.ServiceModel.Security.IssuanceTokenProviderUsingCachedToken
 ## <a name="description"></a>描述  
  IssuanceTokenProvider 已使用快取的服務權杖。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

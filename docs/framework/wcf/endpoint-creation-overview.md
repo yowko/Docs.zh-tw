@@ -17,11 +17,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309d19ee75f506ab781703ebe1068d6d90d9c47c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-creation-overview"></a>端點建立概觀
 所有與通訊[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]服務會透過*端點*的服務。 端點可讓用戶端存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。  
@@ -207,5 +208,5 @@ serviceHost.Open()
   
  如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]預設端點，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
