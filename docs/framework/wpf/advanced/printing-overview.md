@@ -26,11 +26,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7234dfd3c1a80ebd2c21d3748bc3281573bb4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-overview"></a>列印概觀
 透過 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，使用 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 的應用程式開發人員擁有一組功能豐富的新列印和列印系統管理 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **ZIP 壓縮**。 所有 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文件使用 ZIP 壓縮。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.PrintDialog>  
  <xref:System.Windows.Xps.XpsDocumentWriter>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Printing.PrintCapabilities>  
  <xref:System.Printing.PrintServer>  
  <xref:System.Printing.PrintQueue>  
- [操作說明主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [XPS](http://www.microsoft.com/xps)  
  [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  

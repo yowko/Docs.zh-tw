@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 241fe815f1a7c2e70a664068a47d511a3dbd7e0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
 <a name="introduction"></a>程式碼後置是用來描述與標記定義的物件，聯結的程式碼的詞彙時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是標記編譯。 本主題描述程式碼後置的需求，以及程式碼中的替代的內嵌程式碼機制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="inline-code-limitations"></a>內嵌程式碼的限制  
  您應該考慮避免或限制的內嵌程式碼使用。 架構和程式碼撰寫原理，維護的區隔標記和程式碼後置會保留的設計工具和開發人員角色更多相異。 在更多技術層級，您為內嵌程式碼撰寫的程式碼可以是很冗長，因此若要撰寫，因為永遠寫入至[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]產生部分類別，且只能使用預設 XML 命名空間對應。 因為您無法將`using`陳述式，您必須完整限定的許多[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]您進行的呼叫。 預設值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對應包含大部分但非全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]中出現的命名空間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件; 您必須完整限定型別和成員包含在其他的 CLR 命名空間內的呼叫。 您也不能超過的部分類別的任何項目中定義內嵌程式碼，且您參考的所有使用者程式碼實體都必須是成員或產生的部分類別中的變數。 其他語言特定程式設計功能，例如巨集或`#ifdef`針對全域變數或建置變數，也會不提供。 如需詳細資訊，請參閱[X:code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [x:Code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
  [建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  

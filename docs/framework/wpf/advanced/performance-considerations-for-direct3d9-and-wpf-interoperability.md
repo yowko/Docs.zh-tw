@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 886ef6c8c9df9d14b5c2a805da2e3948d5e55f69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8142125eae26b15f12652d28fdf0c34f19d49c4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 和 WPF 互通性的效能考量
 您可以使用主控 Direct3D9 內容<xref:System.Windows.Interop.D3DImage>類別。 裝載 Direct3D9 內容可能會影響應用程式的效能。 本主題說明裝載 Direct3D9 Windows Presentation Foundation (WPF) 應用程式中的內容時最佳化效能的最佳作法。 這些最佳作法 」 包含如何使用<xref:System.Windows.Interop.D3DImage>和最佳作法，當您使用 Windows Vista、 Windows XP 中，並多螢幕顯示。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 |D3DFMT_A8R8G8B8 （不可鎖定型）|**硬體更新**|軟體更新|軟體更新|軟體更新|  
 |D3DFMT_A8R8G8B8 （可鎖定型）|**硬體更新**|軟體更新|**硬體更新**|軟體更新|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Interop.D3DImage>  
  [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
  [逐步解說：建立裝載於 WPF 中的 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  

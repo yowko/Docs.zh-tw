@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的虛擬模式
 虛擬模式中，您可以管理之間的互動<xref:System.Windows.Forms.DataGridView>控制項和自訂資料快取。 若要實作虛擬模式時，設定<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性`true`並處理一個或多個本主題中所述的事件。 您通常會處理最少為`CellValueNeeded`事件，可讓資料快取中的值控制查閱。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  只會發生下列事件時<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性設定為`true`。  
   
-|事件|說明|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|用於控制項所顯示的資料快取中擷取資料格的值。 僅針對未繫結的資料行中的資料格就會發生此事件。|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|用來讓資料快取認可資料格的使用者輸入控制項。 僅針對未繫結的資料行中的資料格就會發生此事件。<br /><br /> 呼叫<xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>方法時變更快取的值之外的<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件處理常式，以確保目前的值會顯示在控制項中，並套用目前作用中的任何自動調整大小模式。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  下列事件可用於虛擬模式，但可用不論<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性設定。  
   
-|事件|說明|  
+|事件|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|使用控制項來表示當資料列遭到刪除，或您加入，以便能據以更新資料快取。|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|使用格式儲存格的值來控制顯示，並且將剖析和驗證使用者輸入。|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="best-practices-in-virtual-mode"></a>虛擬模式中的最佳作法  
  如果您要實作虛擬模式，才能有效地使用大量的資料，您也會想要確保您會使用有效率地<xref:System.Windows.Forms.DataGridView>控制本身。 儲存格樣式、 自動調整大小、 選取項目，和共用資料列的有效率地使用的相關資訊，請參閱[縮放 Windows Form DataGridView 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  

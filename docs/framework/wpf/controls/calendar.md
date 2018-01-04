@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04d602161a20e56395e978dfeeb7ec5e756af7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calendar"></a>行事曆
 行事曆可讓使用者使用視覺化月曆顯示來選取日期。  
@@ -61,6 +62,6 @@ Calendar 控制項
 |CTRL+向下鍵|任何|切換至下一個較小<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。 如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已經<xref:System.Windows.Controls.CalendarMode.Month>，採取任何動作。|  
 |空白鍵或 ENTER|<xref:System.Windows.Controls.CalendarMode.Year> 或 <xref:System.Windows.Controls.CalendarMode.Decade>|交換器<xref:System.Windows.Controls.Calendar.DisplayMode%2A>至<xref:System.Windows.Controls.CalendarMode.Month>或<xref:System.Windows.Controls.CalendarMode.Year>焦點的項目所表示。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [控制項](../../../../docs/framework/wpf/controls/index.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

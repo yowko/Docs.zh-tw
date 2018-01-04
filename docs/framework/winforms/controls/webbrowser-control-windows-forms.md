@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控制項 (Windows Form)
 Windows Form`WebBrowser`控制項裝載的網頁，並提供網頁瀏覽至您的應用程式的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WebBrowser 控制項概觀](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -53,10 +54,10 @@ Windows Form`WebBrowser`控制項裝載的網頁，並提供網頁瀏覽至您�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.WebBrowser> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  
  描述這個委派。  
@@ -65,19 +66,19 @@ Windows Form`WebBrowser`控制項裝載的網頁，並提供網頁瀏覽至您�
  描述這個列舉型別以及其所有的值。  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>  
  描述這個委派。  
   
  <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>  
  描述這個委派。  
   
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventHandler>  
  描述這個委派。  
@@ -88,5 +89,5 @@ Windows Form`WebBrowser`控制項裝載的網頁，並提供網頁瀏覽至您�
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  描述這個列舉型別以及其所有的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

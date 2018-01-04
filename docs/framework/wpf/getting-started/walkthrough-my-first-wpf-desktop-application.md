@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說： 第一個 WPF 桌面應用程式
 本逐步解說提供的應用程式開發簡介[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]包含項目通用於大多數的應用程式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式：[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]標記、 程式碼後置、 應用程式定義、 控制項、 版面配置，資料繫結和樣式。 
@@ -461,7 +462,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  

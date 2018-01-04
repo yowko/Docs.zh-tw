@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06a515b266b2787c24e95b461075d9059e4311dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>操作說明：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 這個範例示範如何將繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]資料使用<xref:System.Windows.Data.XmlDataProvider>。  
@@ -68,10 +69,10 @@ ms.lasthandoff: 11/21/2017
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Data.ObjectDataProvider>  
  [繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
  [使用含階層式 XML 資料的主從式模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
  [繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

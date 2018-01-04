@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3edbe30347580bb4f9677d7fb98d3b4fd8b92cff
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 90e346990696301d27ea329ea4255258562b353c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>操作說明：使用影像繪製區域
 這個範例示範如何使用<xref:System.Windows.Media.ImageBrush>類別，以使用影像繪製區域。 <xref:System.Windows.Media.ImageBrush>會顯示所指定的單一映像及其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/22/2017
   
  這個程式碼範例是所提供之較大範例的一部分<xref:System.Windows.Media.ImageBrush>類別。 如需完整範例，請參閱[ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

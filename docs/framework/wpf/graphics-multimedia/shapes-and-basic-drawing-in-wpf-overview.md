@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 134f42da7e4366d4d5bb971aaf26b2a3b57a4c1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中圖案和基本繪圖概觀
 本主題概要說明如何繪製具有<xref:System.Windows.Shapes.Shape>物件。 A<xref:System.Windows.Shapes.Shape>是一種<xref:System.Windows.UIElement>，可讓您繪製圖形至螢幕。 UI 項目，因為<xref:System.Windows.Shapes.Shape>物件可以用內<xref:System.Windows.Controls.Panel>項目和大部分的控制項。  
@@ -228,7 +229,7 @@ myPolygon.StrokeThickness = 2;
   
  在上一個範例中，已將單一轉換套用至每個圖形物件。 若要將多個轉換套用至圖形 （或其他 UI 項目），使用<xref:System.Windows.Media.TransformGroup>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  

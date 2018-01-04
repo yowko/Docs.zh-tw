@@ -18,11 +18,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 651fb2ca3a3ea81a8a4e894c5f6a71bcf9ac3a50
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 34f20e45c9e4c1a165c31208220e6bae9a77b7c1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-deserialize-an-object"></a>HOW TO：還原序列化物件
 當您還原序列化物件時，傳輸格式決定您會建立資料流或檔案物件。 決定傳輸格式後，您可視需要呼叫 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 或 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法。  
@@ -60,6 +63,6 @@ ms.lasthandoff: 12/02/2017
     mySerializer.Deserialize(myFileStream)  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)

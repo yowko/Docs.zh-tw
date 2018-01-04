@@ -17,16 +17,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styles-and-templates"></a>樣式和範本
 Windows Presentation Foundation (WPF) 設定樣式和範本是指一套功能 （樣式、 範本、 觸發程序和分鏡腳本） 可讓應用程式、 文件或使用者介面 (UI) 設計工具來建立美觀的應用程式，並標準化其產品的特定外觀。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [操作說明：尋找 ControlTemplate 產生的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
   

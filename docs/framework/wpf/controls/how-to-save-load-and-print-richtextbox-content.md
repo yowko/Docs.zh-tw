@@ -23,11 +23,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca969848ae82d567642cd0f4174c52ebc24ef5d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45cd99332ca5ea87bf70c9b881da7daa3705ec25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>如何：儲存、載入和列印 RichTextBox 內容
 下列範例示範如何將儲存的內容<xref:System.Windows.Controls.RichTextBox>至檔案，載入該內容回<xref:System.Windows.Controls.RichTextBox>，列印內容。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b39c45a7c85155a0fb46e8e176da5979e52e6e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ceb6023157d487aebeff4fb5335b58c0958f2851
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>如何：繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ
 此範例示範如何將繫結至 XML 資料<xref:System.Windows.Controls.ItemsControl>使用<xref:System.Xml.Linq.XDocument>。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XLinqExample#BindToResults](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#bindtoresults)]
  [!code-vb[XLinqExample#BindToResults](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
  [WPF 資料繫結與 LINQ to XML 概觀](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
  [使用 LINQ to XML 的 WPF 資料繫結範例](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)  

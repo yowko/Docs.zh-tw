@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20de05b5df3737ccc525cb50c81b51bcba766287
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 388fd8d3e7f23dc55d46c5a097be99e9f1c34ab0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>滑鼠輸入在 Windows Form 中的運作方式
 接收和處理滑鼠輸入為每個 Windows 應用程式中很重要的一部分。 您可以處理應用程式中執行動作的滑鼠事件，或使用滑鼠位置資訊來執行的點擊測試或其他動作。 此外，您可以變更您的應用程式中的控制項處理滑鼠輸入的方式。 本主題將描述這些中的滑鼠事件的詳細資料，以及如何取得及變更滑鼠的系統設定。 如需詳細資訊，使用滑鼠提供之資料的相關事件，以滑鼠按一下事件的順序引發，請參閱[Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="mouse-events"></a>滑鼠事件  
  處理滑鼠事件為主要方式來回應滑鼠輸入。 下表顯示滑鼠事件，並描述它們時引發的方法。  
   
-|滑鼠事件|說明|  
+|滑鼠事件|描述|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.Click>|放開滑鼠按鈕時，通常之前時，就會發生此事件<xref:System.Windows.Forms.Control.MouseUp>事件。 這個事件的處理常式會接收 <xref:System.EventArgs> 類型的引數。 處理當您只需要判斷時按一下，就會發生這個事件。|  
 |<xref:System.Windows.Forms.Control.MouseClick>|當使用者按一下控制項，使用滑鼠，就會發生此事件。 這個事件的處理常式會接收 <xref:System.Windows.Forms.MouseEventArgs> 類型的引數。 處理這個事件，當您需要按一下發生時取得的滑鼠相關資訊。|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>變更滑鼠輸入，以及偵測系統設定  
  您可以偵測並變更控制項的滑鼠輸入透過處理衍生自控制項及使用的方式<xref:System.Windows.Forms.Control.GetStyle%2A>和<xref:System.Windows.Forms.Control.SetStyle%2A>方法。 <xref:System.Windows.Forms.Control.SetStyle%2A>方法會採用的位元組合<xref:System.Windows.Forms.ControlStyles>值來判斷控制項是否有按一下或按兩下行為的標準，或如果此控制項將處理滑鼠處理。 此外，<xref:System.Windows.Forms.SystemInformation>類別所包含的屬性描述滑鼠的功能，並指定與作業系統的滑鼠互動方式。 下表摘要說明這些屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|取得為像素為單位，區域中，使用者必須按兩次，要考慮這兩個作業系統的按下滑鼠按鍵。|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|取得最大的第一次按和作業系統，才能將滑鼠動作視為按兩下滑鼠的第二個點擊之間所經過的毫秒數。|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|取得單一滑鼠滾輪旋轉增量的差異值數量。|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|取得轉動滑鼠滾輪時要捲動的行數。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  [Windows Forms 中的滑鼠捕捉](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
  [Windows Forms 中的滑鼠指標](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)

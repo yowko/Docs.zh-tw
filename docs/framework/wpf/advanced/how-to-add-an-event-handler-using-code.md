@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 348136a1feaf6e0a0824cf183a2eeec4e10b77fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用程式碼加入事件處理常式
 這個範例示範如何使用程式碼，將事件處理常式加入至項目。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  加入事件處理常式中一開始剖析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是更簡單。 在您要加入事件處理常式物件的項目，加入的屬性符合您想要處理之事件的名稱。 然後指定該屬性的值做為您的程式碼後置檔案中定義的事件處理常式方法名稱[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面。 如需詳細資訊，請參閱[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)或[路由傳送事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

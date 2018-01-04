@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2129ea06e8c92b3912d2abdd3d1a63e651ac59e1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ba6cb3483c983ddbcd3fac2281fe40aef31301b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>操作說明：使用分鏡腳本建立屬性的動畫
 這個範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>以動畫方式顯示屬性。 若要建立屬性的動畫使用<xref:System.Windows.Media.Animation.Storyboard>，建立您想要建立動畫，並建立每一個屬性的動畫<xref:System.Windows.Media.Animation.Storyboard>包含動畫。  

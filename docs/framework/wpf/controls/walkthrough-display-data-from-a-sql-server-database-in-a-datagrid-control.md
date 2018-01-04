@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c89ed9425920602f80a2407b7529b3eb215a2e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
 在本逐步解說中，從 SQL Server 資料庫擷取資料並顯示在該資料<xref:System.Windows.Controls.DataGrid>控制項。 您可以使用 ADO.NET Entity Framework 來建立實體類別，表示資料，並使用 LINQ 來撰寫查詢以擷取指定的資料從實體類別。  
@@ -111,6 +112,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DataGrid>  
  [如何 i： 開始使用 WPF 應用程式中的 Entity Framework？](http://go.microsoft.com/fwlink/?LinkId=159868)

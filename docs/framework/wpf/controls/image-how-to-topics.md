@@ -17,16 +17,17 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>影像 HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.Image>項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 Image 元素](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
   [將影像轉換為灰階](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
   [裁剪影像](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

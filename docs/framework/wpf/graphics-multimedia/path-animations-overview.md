@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 237dbe83fa52bb967d2f2429fb2beb021c084f23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10f2e27a2f68dd784c6fce66ae63873436923d63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animations-overview"></a>路徑動畫概觀
 <a name="introduction"></a> 本主題將介紹路徑動畫，它可讓您使用幾何路徑來產生輸出值。 路徑動畫很適合用來沿著複雜路徑移動和旋轉物件。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
  區段的類型繁多。  
   
-|區段類型|說明|  
+|區段類型|描述|  
 |------------------|-----------------|  
 |<xref:System.Windows.Media.ArcSegment>|在兩個點之間建立橢圓形弧線。|  
 |<xref:System.Windows.Media.BezierSegment>|在兩個點之間建立三次方貝茲曲線。|  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  如需有關使用中的路徑語法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]範例中，請參閱[路徑標記語法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概觀。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路徑動畫範例](http://go.microsoft.com/fwlink/?LinkID=160028)  
  [路徑標記語法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  

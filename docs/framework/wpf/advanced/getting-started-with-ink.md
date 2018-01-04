@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc8ffe9ad68060d9dfbcafe99133a736237a2bb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-ink"></a>筆墨入門
 數位筆跡併入您的應用程式是比以往更為容易。 從 COM 和 Windows Form 的方法達到完整地整合到程式設計必然發展筆墨[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您不需要安裝個別的 Sdk 或執行階段程式庫。  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)  
  [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
  [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  

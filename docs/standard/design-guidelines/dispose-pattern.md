@@ -19,11 +19,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97f0c63857b7af408613e1ffdfecb157d1e2c704
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dispose-pattern"></a>Dispose 模式
 所有程式執行期間都取得一或多個系統資源，例如記憶體、 系統處理或資料庫連接。 開發人員需要時請小心使用這類的系統資源，因為它們已取得並使用之後必須釋放它們。  
@@ -286,9 +289,9 @@ public class ComplexResourceHolder : IDisposable {
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  
  <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [常見的設計模式](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [一般設計模式](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  [記憶體回收](../../../docs/standard/garbage-collection/index.md)

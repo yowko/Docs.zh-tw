@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e10f7136b636829f99da34388db7676810cd06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="focus-overview"></a>焦點概觀
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有兩個關於焦點的主要概念︰鍵盤焦點和邏輯焦點。  鍵盤焦點是指接收鍵盤輸入的項目，邏輯焦點是指焦點範圍中具有焦點的項目。  本概觀會詳細討論這些概念。  了解這些概念的差異對建立複雜的應用程式很重要，這些應用程式有多個可取得焦點的區域。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/21/2017
   
  邏輯焦點與相關的事件是<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  這些事件上定義<xref:System.Windows.Input.FocusManager>為附加的事件，但<xref:System.Windows.Input.FocusManager>不會公開 CLR 事件包裝函式。  <xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>更方便地公開 （expose) 這些事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Input.FocusManager>  
  <xref:System.Windows.UIElement>  
  <xref:System.Windows.ContentElement>  

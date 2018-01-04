@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4fc0cb9183fde33887a3e84bb30cc3f79892586e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bc298ad41884bfda84771a729990ebb4e6f776b7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 做為與其他命名指導方針，命名的命名空間時的目標建立足夠的清楚起見使用 framework 立即知道命名空間的內容可能是程式設計人員。 下列範本會指定為命名空間進行的一般規則：  
@@ -93,6 +96,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

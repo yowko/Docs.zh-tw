@@ -19,16 +19,17 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61e2bc470641279b594b8f77eb924a47d8a063ac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a1b3e78bac5c388bbca4afa6354e5f9aee02c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-wpf"></a>屬性 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組可用來擴充 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性功能的服務。 整體而言，這些服務通常稱為 WPF 屬性系統。 受到 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 屬性系統支援的屬性則稱為相依性屬性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
  [相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/22/2017
  [DependencyObject 的安全建構函式模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
  [集合類型的相依性屬性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
  [XAML 載入和相依性屬性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.DependencyProperty>  

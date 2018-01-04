@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c65fdca99bb12cccf70273194e3294c71a2f5a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7a9face3d38f7f64e3bda9d5dbe9ecfb7f730ee8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Form 中的使用者輸入
 Windows Form 包含一種使用者輸入模型，這種模型是以在處理相關 Windows 訊息時所引發的事件為基礎。 本節中的主題提供滑鼠和鍵盤使用者輸入的相關資訊，包括示範如何執行特定工作的程式碼範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 應用程式中的使用者輸入](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
  提供使用者輸入事件的概觀和處理 Windows 訊息的方法。  
   

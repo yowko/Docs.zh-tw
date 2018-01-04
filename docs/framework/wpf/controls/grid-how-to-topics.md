@@ -17,16 +17,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grid-how-to-topics"></a>格線 HOW TO 主題
 本節中的主題描述如何使用的項目位置<xref:System.Windows.Controls.Grid>項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 Grid 建置標準 UI 對話方塊](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
  [建立複雜的 Grid](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
  [建立 Grid 元素](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  

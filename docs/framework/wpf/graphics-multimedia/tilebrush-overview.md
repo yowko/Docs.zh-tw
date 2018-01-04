@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tilebrush-overview"></a>TileBrush 概觀
 <xref:System.Windows.Media.TileBrush>物件會提供您有大量的影像，以繪製區域的控制權來控制<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。 本主題描述如何使用<xref:System.Windows.Media.TileBrush>功能更充分掌控如何<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>繪製區域。  
@@ -131,13 +132,13 @@ TileMode 為 Tile 之 TileBrush 的元件
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.ImageBrush>  
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)

@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ee7b227d4e2ea5dfcb0b8870d77d03abf08db8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-overview"></a>快顯功能表概觀
 <xref:System.Windows.Controls.Primitives.Popup>控制項可用來在漂浮在目前應用程式視窗相對於指定的項目或螢幕座標的另一個視窗中顯示內容。 本主題將介紹<xref:System.Windows.Controls.Primitives.Popup>控制項，並提供其用途的相關資訊。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Controls.Primitives.Popup>控制維護參考其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容做為邏輯的子系。 當建立新的視窗，內容<xref:System.Windows.Controls.Primitives.Popup>變成視窗的視覺子項的邏輯子系，並且<xref:System.Windows.Controls.Primitives.Popup>。 相反地，<xref:System.Windows.Controls.Primitives.Popup>維持的邏輯父系其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Primitives.Popup>  
  <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>  
  <xref:System.Windows.Controls.Primitives.PlacementMode>  
@@ -106,5 +107,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipService>  
- [操作說明主題](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

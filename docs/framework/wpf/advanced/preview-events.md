@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>預覽事件
 預覽事件，也就是通道事件，是路由的事件，其中的路由方向是從應用程式根目錄，向引發事件，且會回報為事件資料來源的項目。 並非所有事件案例支援或需要預覽事件。本主題描述的情況下，其中預覽事件存在，應用程式或元件應如何處理它們和情況下，建立自訂元件或類別中預覽事件可能會適當。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
  每個這些技術有副作用或限制。 處理預覽事件的副作用是此時處理的事件可能會停用處理反昇事件中，預期的處理常式，因此限制是，它通常不建議您將事件處理仍在 Previ 時標記路由的新增部分。 限制`handledEventsToo`技巧是，您不能指定`handledEventsToo`中的處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]做為屬性，您必須註冊事件處理常式程式碼中取得要附加的處理常式的所在的物件參考的項目之後。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將路由事件標記為已處理以及類別處理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

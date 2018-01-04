@@ -17,16 +17,17 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8991a8f839520196addc235c4731246e448dcfa8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cd1cc6914a8bd22d1cc8787a45328716a6c4c97f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-how-to-topics"></a>ListBox HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.ListBox>控制項來顯示可選取項目清單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [將 ListBox 繫結至資料](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [取得 ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
  [如何： 將資料加入至 ItemsControl](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  

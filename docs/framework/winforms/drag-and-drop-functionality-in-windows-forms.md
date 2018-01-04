@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f86ff2fbb3944ce2ed381cb29e2b3c6df39b62bf
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 86234aca209c5533abf9025911b22c391b0ef22b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Form 中的拖放功能
 Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主題提供 Windows Form 中的拖放功能支援概觀。  另請參閱[拖放作業和剪貼簿支援](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  
@@ -34,7 +35,7 @@ Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主
 ### <a name="events-on-the-current-target"></a>目前目標所發生的事件  
  下表顯示拖放作業的目前目標所發生的事件。  
   
-|滑鼠事件|說明|  
+|滑鼠事件|描述|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.DragEnter>|這個事件會在將物件拖曳至控制項的界限內時發生。 這個事件的處理常式會接收 <xref:System.Windows.Forms.DragEventArgs> 類型的引數。|  
 |<xref:System.Windows.Forms.Control.DragOver>|這個事件會在滑鼠指標位於控制項界限內的情況下拖曳物件時發生。 這個事件的處理常式會接收 <xref:System.Windows.Forms.DragEventArgs> 類型的引數。|  
@@ -46,12 +47,12 @@ Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主
 ### <a name="events-on-the-source"></a>來源所發生的事件  
  下表顯示拖放作業的來源所發生的事件。  
   
-|滑鼠事件|說明|  
+|滑鼠事件|描述|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.GiveFeedback>|這個事件會在拖曳作業期間發生。 它提供了一個可對正在發生拖放作業的使用者顯示視覺提示的機會，例如變更滑鼠指標。 這個事件的處理常式會接收 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 類型的引數。|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|這個事件會在拖放作業期間引發，讓拖曳來源能夠決定是否應取消拖放作業。 這個事件的處理常式會接收 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類型的引數。|  
   
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

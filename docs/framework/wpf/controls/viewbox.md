@@ -19,16 +19,17 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bd9723b6f31f23c409e37eb5f28f1849929af9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20b32eab7255f64ab16580d6c66adfcc8bb38036
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewbox"></a>Viewbox
 <xref:System.Windows.Controls.Viewbox>控制項來放大或調整的子項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [將 Stretch 屬性套用至 Viewbox 的內容](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
 ## <a name="reference"></a>參考資料  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 控制項陳列庫範例](http://go.microsoft.com/fwlink/?LinkID=160053)

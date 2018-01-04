@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75915c92390be1698f5a972901c1defc8003e096
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 462812070446e9013c2cf2c4d3e2f15831e84e70
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-how-to-topics"></a>序列化 HOW TO 主題
 下列清單包含序列化概念文件的使用 HOW TO 主題的連結。  
@@ -40,5 +43,5 @@ ms.lasthandoff: 12/02/2017
   
 -   [如何：區塊序列化資料](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [序列化](../../../docs/standard/serialization/index.md)

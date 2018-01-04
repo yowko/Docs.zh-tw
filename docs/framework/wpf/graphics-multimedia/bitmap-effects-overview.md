@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76b767fd210deed536b4452dc6d7bb505f5bd3e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f642c699a0ecf3e3cce328363f90110766002e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitmap-effects-overview"></a>點陣圖效果概觀
 點陣圖效果可讓設計人員與開發人員對轉譯的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 內容套用視覺效果。 例如，點陣圖效果可讓您輕鬆地套用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果的影像或按鈕。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-custom-effects"></a>建立自訂效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也提供 Unmanaged 介面以建立可在 Managed [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中使用的自訂效果。 如需建立自訂點陣圖效果的其他參考資料，請參閱 [Unmanaged WPF 點陣圖效果 (英文)](https://msdn.microsoft.com/library/ms735092.aspx) 文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
  <xref:System.Windows.Media.Effects.BitmapEffectInput>  
  <xref:System.Windows.Media.Effects.BitmapEffectCollection>  

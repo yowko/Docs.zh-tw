@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 229601515442b5e84f6c4278b17db7ae25945a42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a75a5e6c6e6f627606ef5883655b6780e7519bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>適用於類型轉換子和標記延伸的服務內容
 在撰寫類型來支援使用類型轉換子和標記延伸時，通常必須先知道會在標記或周圍物件圖形結構中的何處使用類型轉換子和標記延伸。 要有這些資訊，才能正確地具現化所提供的物件，或是在物件圖形中建立對現有物件的物件參考。 使用 .NET Framework XAML 服務時，可能需要的內容會以一系列服務介面的形式公開。 類型轉換子或標記延伸支援程式碼可以使用從 <xref:System.Xaml.XamlObjectWriter> 或相關類型傳來的可用服務提供者內容，來查詢服務。 XAML 結構描述內容可透過這類服務直接提供。 本主題說明如何透過值轉換器實作存取服務內容，並列出通常可用的服務及其角色。  
@@ -195,7 +196,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  如需詳細資訊，請參閱 <xref:System.Xaml.IDestinationTypeProvider>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Markup.MarkupExtension>  
  <xref:System.Xaml.XamlObjectWriter>  
  [XAML 標記延伸概觀](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  

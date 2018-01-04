@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用視覺化樣式呈現控制項
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會使用作業系統支援的視覺化樣式，來支援控制項和其他 Windows 使用者介面 (UI) 項目的呈現。 本主題說明在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中使用作業系統目前的視覺化樣式，來呈現控制項和其他 UI 項目的數種支援層級。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/22/2017
 ## <a name="checking-for-visual-styles-support"></a>檢查視覺化樣式支援  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 類別的 <xref:System.Windows.Forms.Application> 屬性會指出目前的應用程式是否使用視覺化樣式繪製控制項。 在繪製自訂控制項時，您可以檢查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值，以決定是否要使用視覺化樣式呈現控制項。 下表列出四個條件，唯有這些條件成立， <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 才會傳回 `true`。  
   
-|條件|備註|  
+|條件|注意|  
 |---------------|-----------|  
 |作業系統支援視覺化樣式。|若要個別驗證這個條件，請使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> 類別的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 屬性。|  
 |使用者已經啟用作業系統中的視覺化樣式。|若要個別驗證這個條件，請使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> 類別的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 屬性。|  
@@ -88,5 +89,5 @@ ms.lasthandoff: 10/22/2017
 > [!IMPORTANT]
 >  如果您想在使用者啟用或切換視覺化樣式時使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 呈現控制項或 UI 項目，請務必在處理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件時進行此作業，而不是在處理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件時這麼做。 如果您在處理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 時使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>類別，便會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
- [自訂控制項繪製和轉譯](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+## <a name="see-also"></a>請參閱  
+ [自訂控制項繪製和轉譯 ](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)

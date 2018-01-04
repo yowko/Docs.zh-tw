@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e63428400a7868b71a2d8e52637e4b22e4c44ee7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization"></a>序列化
 序列化是將物件轉換成可以輕易地保存或傳輸之格式的程序。 例如，您可以將物件序列化、 傳輸透過網際網路使用 HTTP，並還原序列化該目的地電腦上。  
@@ -109,6 +112,6 @@ public class Person : ISerializable {
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [使用指導方針](../../../docs/standard/design-guidelines/usage-guidelines.md)
+ [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

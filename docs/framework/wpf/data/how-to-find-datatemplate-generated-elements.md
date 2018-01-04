@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d5f393d376935f04459e2713e9658c80af6efa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 481a22cfd9419d36473c77b5d2282a711259e031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>如何：尋找 DataTemplate 產生的項目
 這個範例示範如何尋找所產生的項目<xref:System.Windows.DataTemplate>。  
@@ -47,10 +48,10 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[FindGeneratedItems#FVC](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#fvc)]
  [!code-vb[FindGeneratedItems#FVC](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：尋找 ControlTemplate 產生的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [WPF XAML 名稱範圍](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
  [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

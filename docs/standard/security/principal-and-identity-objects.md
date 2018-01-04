@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="principal-and-identity-objects"></a>Principal 和 Identity 物件
 Managed 程式碼可以找出身分識別或透過主體的角色<xref:System.Security.Principal.IPrincipal>物件，其中包含的參考<xref:System.Security.Principal.IIdentity>物件。 它可能有助於您比較 Identity 和 Principal 物件，以熟悉例如使用者和群組帳戶的概念。 在大部分網路環境中，使用者帳戶代表人員或程式，而群組帳戶代表特定類別的使用者和他們擁有的權限。 同樣地，.NET Framework Identity 物件代表使用者，而角色代表成員資格和安全性內容。 在 .NET Framework 中，Principal 物件會封裝身分識別物件和角色。 .NET framework 應用程式會根據主體的身分識別或更常見的是其角色成員資格，授與主體權限。  
@@ -49,7 +52,7 @@ Managed 程式碼可以找出身分識別或透過主體的角色<xref:System.Se
   
  跨應用程式定義域但是在相同處理序內傳輸 **Principal** 物件時 (因此是在同一部電腦上)，遠端基礎結構會將參考複製到 **Principal** 物件，該物件將呼叫者的內容與被呼叫端的內容產生關聯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：建立 WindowsPrincipal 物件](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
  [操作說明：建立 GenericPrincipal 和 GenericIdentity 物件](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
  [取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)  

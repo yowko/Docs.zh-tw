@@ -15,20 +15,21 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b393ca5048d9b96c6803cd536110ea2261daae
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 89c2e2fb12a91e06b3c4347b6f65c6fa91636911
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements"></a>基底項目
 四個重要類別-<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-實作大量百分比的 WPF 程式設計中可用的常見項目功能。 這四個類別被指在此 SDK 中的基底項目類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [對齊、邊界和填補概觀](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.UIElement>  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/22/2017
   [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)  
   [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [資源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)

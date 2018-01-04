@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 80b75897f54136849aa4b356c414145510d9cd3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML 中的泛空白字元處理
 XAML 的語言規則表示 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器實作必須處理必要的空白字元。 本主題說明這些 XAML 語言規則， 並同時說明 XAML 處理器和 XAML 寫入器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作針對序列化所定義的額外空白字元處理方式。  
@@ -84,7 +85,7 @@ XAML 的語言規則表示 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharpt
   
  此外，非固定格式文件模型中某些代表分行符號的內嵌項目，即使在需要空白字元的集合中，也應該刻意不引入額外的空格。 例如，<xref:System.Windows.Documents.LineBreak>項目具有相同目的\<b R / > 標記中[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，而且為方便在標記中，閱讀通常<xref:System.Windows.Documents.LineBreak>任何後續文字以撰寫的換行字元分隔。 該換行字元不應該正規化為下一行的前置空格。 為了允許該行為， <xref:System.Windows.Documents.LineBreak> 項目的類別定義會套用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，然後由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器解譯為一律修剪 <xref:System.Windows.Documents.LineBreak> 周圍的空白字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XML 字元實體和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
  [XAML 中的 xml:space 處理](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

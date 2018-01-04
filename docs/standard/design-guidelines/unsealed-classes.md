@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f950d8de2681868fe28e09e4b51bd8156cd12e94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec66fb3dea74e6f738ec308ce0f88945526a0a77
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="unsealed-classes"></a>非密封類別
 密封的類別無法被繼承，以及它們會防止擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  [密封](../../../docs/standard/design-guidelines/sealing.md)

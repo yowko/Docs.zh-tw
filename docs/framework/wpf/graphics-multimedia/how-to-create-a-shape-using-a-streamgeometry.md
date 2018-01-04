@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: caa97d0dbd4c847892e164ecb168349c38f7f271
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a333fd6c1906eaea2c8eaf2c3b07502b5a9c4d40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>如何：使用 StreamGeometry 建立圖案
 <xref:System.Windows.Media.StreamGeometry>輕量級替代方案<xref:System.Windows.Media.PathGeometry>建立幾何圖案。 使用<xref:System.Windows.Media.StreamGeometry>何時該添來描述複雜的幾何，但不是想支援資料繫結、 動畫或修改的額外負荷。 例如，由於其效率，<xref:System.Windows.Media.StreamGeometry>類別是用來描述裝飾項不錯的選擇。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[GeometriesMiscSnippets_procedural_snip#StreamGeometryExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/CSharp/StreamGeometryExample.cs#streamgeometryexamplewholepage)]
  [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryexample.vb#streamgeometryexamplewholepage)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.StreamGeometry>  
  <xref:System.Windows.Media.StreamGeometryContext>  

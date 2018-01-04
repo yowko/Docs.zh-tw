@@ -17,16 +17,17 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 188c9c484d6cdb8f1175bd9ac88791e3fbdf23bc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 189cec2bec9364e4f03ec3a3e0e8c8420dbfcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes-how-to-topics"></a>筆刷 HOW TO 主題
 下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]才能繪製到螢幕內容的筆刷。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立 SolidColorBrush 色彩或不透明效果的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
  [建立漸層停駐點位置或色彩的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
  [建立反映](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  

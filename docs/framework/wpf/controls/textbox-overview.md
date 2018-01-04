@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>TextBox 概觀
 <xref:System.Windows.Controls.TextBox>類別可讓您顯示或編輯未格式化的文字。 常見用法<xref:System.Windows.Controls.TextBox>正在編輯未格式化的文字，在表單中。 例如，要求使用者的名稱、 電話號碼，表單等會使用<xref:System.Windows.Controls.TextBox>文字輸入控制項。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供有關如何使用中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]。  
@@ -33,8 +34,8 @@ ms.lasthandoff: 11/21/2017
   
 |控制項|即時拼字檢查|操作功能表|格式等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument>類似影像、 段落、 資料表等內容。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|是|是|否|否。|  
-|<xref:System.Windows.Controls.RichTextBox>|是|是|是 (請參閱 [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|是 (請參閱 [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  
+|<xref:System.Windows.Controls.TextBox>|[是]|是|否|否。|  
+|<xref:System.Windows.Controls.RichTextBox>|[是]|[是]|是 (請參閱 [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|是 (請參閱 [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  
   
 > [!NOTE]
 >  雖然<xref:System.Windows.Controls.TextBox>並支援格式相關編輯命令類似<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，例如許多基本命令支援這兩個控制項<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。 如需詳細資訊，請參閱 <xref:System.Windows.Documents.EditingCommands>。  
@@ -77,6 +78,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="detect-when-content-changes"></a>偵測內容變更  
  通常<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件應該用來偵測每次中的文字<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>變更，而不是<xref:System.Windows.UIElement.KeyDown>如您所預期。 如需範例，請參閱[偵測 TextBox 中的文字變更](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明主題](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+## <a name="see-also"></a>請參閱  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

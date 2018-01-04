@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e5aa633e3d788ac8acaa09684c92b8608e7cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload: dotnet
+ms.openlocfilehash: caf652f8a80da8e927a74ffc012d09b2389b1b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
 要放置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式會使用<xref:System.Windows.Interop.HwndSource>，這樣會提供包含 HWND 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 第一次建立<xref:System.Windows.Interop.HwndSource>，讓它類似於 CreateWindow 參數。  接著您告訴<xref:System.Windows.Interop.HwndSource>有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容您想要在其中。  最後，您取得的 HWND 出<xref:System.Windows.Interop.HwndSource>。 這個逐步解說將說明如何建立了混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]reimplements 作業系統的應用程式**日期和時間內容**對話方塊。  
@@ -90,7 +91,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- 這個屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，它會初始化時[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，應該使用單一執行緒的 apartment 模型 (STA)，這是所需的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
+ 這個屬性會告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，它會初始化時[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，應該使用單一執行緒的 apartment 模型 (STA)，這是所需的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)](和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
   
 ## <a name="create-a-windows-presentation-framework-page"></a>建立 Windows Presentation Framework 頁面  
  接下來，您可以建立定義 DLL [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>。 通常是最簡單的方式建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>做為獨立應用程式，以及寫入和偵錯[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]部分的方式。  一旦完成，該專案可以開啟 dll 中以滑鼠右鍵按一下專案，按一下**屬性**、 移至應用程式，以及輸出類型變更為 Windows 類別庫。  
@@ -235,7 +236,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  若要比較您產生這個螢幕擷取畫面的程式碼的最後結果，請參閱[Win32 時鐘的互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Interop.HwndSource>  
  [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
  [Win32 時鐘交互操作範例](http://go.microsoft.com/fwlink/?LinkID=160051)

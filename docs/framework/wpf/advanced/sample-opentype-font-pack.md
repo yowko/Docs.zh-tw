@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bbc5caeab5a77518e160bacb9722e50ff7abbfb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7390c8c84caa17b984d5a16b7ac6b9704b8f3c6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sample-opentype-font-pack"></a>範例 OpenType 字型套件
 本主題提供範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型的概觀，此字型是隨著 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 所散發。 範例字型支援延伸的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 功能，此功能可供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式使用。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType 字型套件中的字型  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 提供一組範例 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 字型，您可以在建立 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 應用程式時使用此字型。 範例字型是根據 Ascender Corporation 的授權來提供。 這些字型只會實作透過 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 格式所定義之全體功能的子集。 下表列出範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型的名稱。  
   
-|**Name**|**檔案**|  
+|**名稱**|**檔案**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -63,7 +64,7 @@ OpenType 字型套件中的字型
 ## <a name="using-the-fonts"></a>使用字型  
  有兩種方式可讓您在應用程式中使用字型。 您可將字型新增到您的應用程式以做為專案內容項目，此項目並未內嵌為組件中的資源。 或者，您可以將字型新增到您的應用程式，以做為內嵌於您應用程式組件檔中的專案資源項目。 如需詳細資訊，請參閱[將字型與應用程式一起封裝](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Documents.Typography>  
  [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
  [將字型與應用程式一起封裝](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

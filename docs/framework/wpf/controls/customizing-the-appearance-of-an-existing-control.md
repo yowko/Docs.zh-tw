@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>透過建立 ControlTemplate 自訂現有控制項的外觀
 <a name="introduction"></a>A<xref:System.Windows.Controls.ControlTemplate>指定的視覺化結構和控制項的視覺行為。 您可以自訂控制項的外觀，提供新的 it <xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.Controls.ControlTemplate>，您不需要變更它的功能取代現有的控制項的外觀。 例如，您可以讓按鈕在您的應用程式而不是預設的方形，round，但仍會引發按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
@@ -271,5 +272,5 @@ ms.lasthandoff: 10/22/2017
   
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

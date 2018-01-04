@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41978e7b91c50b33649bd88e23d22fce7a272c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ea5d269c3d455a4fbe3a34dca4335e0d8999d80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource 標記延伸
 指定屬性<xref:System.Windows.Data.RelativeSource>內要使用的繫結來源[繫結標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)，或設定時<xref:System.Windows.Data.Binding.RelativeSource%2A>屬性<xref:System.Windows.Data.Binding>在 XAML 中建立的項目。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/21/2017
   
  `RelativeSource` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 所有標記延伸在 XAML 使用`{`和`}`其屬性的語法，這是的慣例，XAML 處理器會辨識的標記延伸必須處理屬性中的字元。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Data.Binding>  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

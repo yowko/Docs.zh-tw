@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80621a12a4ccd5008a0331af005629d45f60abdf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox 控制項 (Windows Form)
 Windows Form`RichTextBox`控制項用來顯示、 輸入及管理具有格式的文字。 `RichTextBox`控制項執行的所有項目<xref:System.Windows.Forms.TextBox>控制項，但同時，也顯示字型、 色彩和連結; 載入文字和內嵌的影像檔案，則復原和重做的編輯作業，並尋找指定的字元。 `RichTextBox`控制項通常用來提供操作文字，並顯示類似於文書處理應用程式，例如 Microsoft Word 的功能。 像<xref:System.Windows.Forms.TextBox>控制項，`RichTextBox`控制項可以顯示捲軸，但不同的是<xref:System.Windows.Forms.TextBox>控制項，其中預設會顯示水平與垂直捲軸，而沒有其他的捲軸設定。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [RichTextBox 控制項概觀](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)  
  導入的一般概念`RichTextBox`控制項，可讓使用者輸入、 顯示和操作文字格式化選項。  
   
@@ -56,7 +57,7 @@ Windows Form`RichTextBox`控制項用來顯示、 輸入及管理具有格式的
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.RichTextBox> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

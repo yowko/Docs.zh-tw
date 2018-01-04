@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 XAML 讀取器和 XAML 寫入器在 .NET Framework XAML 服務中實作，根據 XAML 節點資料流的設計概念。 XAML 節點資料流是一組 XAML 節點的概念化。 在此概念化中，XAML 處理器會逐步查核 XAML 中的節點關聯性結構，一次一個 XAML。 在任何時候，只能有一個目前的記錄或目前的位置存在於開啟的 XAML 節點資料流中，而應用程式開發介面的許多層面只會報告從該位置取得的資訊。 XAML 節點資料流中的目前節點可以描述成物件、成員或值。 若將 XAML 視為 XAML 節點資料流，XAML 讀取器可以與 XAML 寫入器進行通訊，並可讓程式在有關 XAML 的載入路徑或儲存路徑作業期間，檢視、變更 XAML 節點資料流的內容，或與其互動。 XAML 讀取器和寫入器應用程式開發介面的設計和 XAML 節點資料流概念，類似先前相關讀取器和寫入器的設計和概念，例如 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ，以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 本主題討論 XAML 節點資料流概念，並說明如何撰寫在 XAML 節點層級與 XAML 表示法互動的常式。  
@@ -208,7 +209,7 @@ public class GameBoard {
   
 -   **標記延伸的位置參數：** 此成員節點的名稱是 `_PositionalParameters`，且其定義在 XAML 語言 XAML 命名空間中。 它一律包含物件的泛型清單，每個物件都是位置參數，以 `,` 分隔符號字元預先分隔，和輸入 XAML 中所提供的一樣。 您可以從 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>取得位置參數指示詞的靜態實體。  
   
--   **未知的內容：** 此成員節點的名稱是 `_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent`的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。  
+-   **未知的內容：** 此成員節點的名稱是 `_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent` 的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。  
   
 -   **集合的集合屬性：**雖然用於 XAML 之集合類別的支援 CLR 類型，通常會有專用具名屬性可保存集合項目，但是在支援類型解析之前，XAML 類型系統並不知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。  
   
@@ -227,7 +228,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` 表示 XAML 節點，其中，XAML 物件寫入器並不是要建構新的物件，而是應該要取得物件的包含屬性值。 在支援類型的物件模型中，當包含屬性是刻意唯讀時，在 XAML 節點資料流中遇到 `GetObject` 節點這種一般情況，會發生於集合物件或字典物件。 在此情節中，通常會由擁有者類型的初始化邏輯來建立及初始化集合或字典 (通常是空的)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xaml.XamlObjectReader>  
  [XAML Services](../../../docs/framework/xaml-services/index.md)  
  [XAML 命名空間](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

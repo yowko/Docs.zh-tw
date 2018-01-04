@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15e24e0350071fabd32342402abdf497937ee90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯的類別提供一般架構合併工具列、 狀態列和功能表的使用者介面項目。 <xref:System.Windows.Forms.ToolStrip>控制項提供豐富的設計階段經驗，包括在就地啟用和編輯、 自訂配置] 和 [浮動定位，這是工具列共用水平或垂直空間的能力。  
@@ -55,7 +56,7 @@ Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯�
   
 ### <a name="important-toolstrip-members"></a>重要的 ToolStrip 成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|取得或設定父容器的邊緣<xref:System.Windows.Forms.ToolStrip>停駐於。|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|取得或設定值，表示拖放動作和項目的重新排序是否由 <xref:System.Windows.Forms.ToolStrip> 類別私下處理。|  
@@ -71,7 +72,7 @@ Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯�
   
 ### <a name="important-toolstrip-companion-classes"></a>重要的 ToolStrip 附屬類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|取代，並將功能加入<xref:System.Windows.Forms.MainMenu>類別。|  
 |<xref:System.Windows.Forms.StatusStrip>|取代，並將功能加入<xref:System.Windows.Forms.StatusBar>類別。|  
@@ -88,7 +89,7 @@ Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯�
   
  如需詳細資訊，請參閱[ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)和[ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>  

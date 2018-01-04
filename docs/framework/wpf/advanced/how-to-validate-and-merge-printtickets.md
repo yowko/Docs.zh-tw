@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2c2929f37895f0dee5529a5bf90f84146585032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5cf2091d50433bb936b3d4976d1c3eabea73edc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：驗證和合併 PrintTickets
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [列印結構描述](http://go.microsoft.com/fwlink/?LinkId=186397)包含彈性和可延伸<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>項目。 前者逐項列出的列印裝置的功能，後者會指定如何裝置應該使用那些功能相對於特定的一連串的文件、 個別的文件或個別頁面。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Printing.PrintCapabilities>  
  <xref:System.Printing.PrintTicket>  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  

@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45d01da6f9a851a0e51f9d614e84a3fba91e4d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-keyboard-input-works"></a>鍵盤輸入的運作方式
 Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)。  
@@ -45,7 +46,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
   
 ### <a name="preprocessing-for-a-keydown-event"></a>KeyDown 事件前置處理  
   
-|動作|相關方法|備註|  
+|動作|相關方法|注意|  
 |------------|--------------------|-----------|  
 |檢查命令按鍵，例如快速鍵或功能表捷徑。|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|這個方法會處理命令按鍵，其優先於一般按鍵。 如果此方法傳回 `true`，就不會發送按鍵訊息，也不會發生按鍵事件。 如果它傳回`false`，<xref:System.Windows.Forms.Control.IsInputKey%2A>稱為`.`|  
 |檢查是否有需要前置處理的特殊按鍵或一般字元鍵應該引發<xref:System.Windows.Forms.Control.KeyDown>事件並分派至控制項。|<xref:System.Windows.Forms.Control.IsInputKey%2A>|如果此方法會傳回`true`，表示控制項是正規字元和<xref:System.Windows.Forms.Control.KeyDown>就會引發事件。 如果`false`，<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>呼叫。 **注意：**為了確保取得控制項的索引鍵或索引鍵的組合，您可以處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件以及組<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>至`true`針對您想要的索引鍵。|  
@@ -53,7 +54,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
   
 ### <a name="preprocessing-for-a-keypress-event"></a>KeyPress 事件前置處理  
   
-|動作|相關方法|備註|  
+|動作|相關方法|注意|  
 |------------|--------------------|-----------|  
 |查看按鍵是否為應由控制項處理的標準字元|<xref:System.Windows.Forms.Control.IsInputChar%2A>|如果字元是一般字元，則這個方法會傳回`true`、<xref:System.Windows.Forms.Control.KeyPress>就會引發事件，並不進行任何前置處理，就會發生。 否則<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>將呼叫。|  
 |查看此字元是否為助憶鍵 (例如按鈕上 &OK)|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|這個方法類似於<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>，將會呼叫控制項階層架構。 如果控制項是一個容器控制項，它會檢查助憶鍵藉由呼叫<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>本身和其子控制項。 如果<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>傳回`true`、<xref:System.Windows.Forms.Control.KeyPress>事件不會發生。|  
@@ -78,7 +79,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
 |執行特殊處理的輸入或瀏覽期間<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在清單控制項中按住 "r" 按鍵，可略過以字母 r 開頭的項目。|覆寫 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |執行自訂助憶鍵處理；例如，您想要處理工具列內含主控描繪按鈕上的助憶鍵。|覆寫 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.WndProc%2A>  
  <xref:System.Windows.Forms.Control.PreProcessMessage%2A>  

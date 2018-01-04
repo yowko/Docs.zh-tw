@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 56838fc4c1c1e7cb8723beee3f0e6b23515d43f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 692a5803ddb538de6dc5f061c18cc0b250d0f4ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="virtual-members"></a>虛擬成員
 虛擬成員會覆寫，因此變更子類別的行為。 它們是回呼提供，擴充性方面相當類似，但是可以執行效能和記憶體耗用量方面更好。 此外，虛擬成員感覺更自然的案例中，需要建立一個特殊種類的現有類型 （特製化）。  
@@ -46,6 +49,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

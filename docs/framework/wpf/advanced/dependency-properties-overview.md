@@ -21,11 +21,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa1ad02de74cc73ea67267de7548442078a2f5db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -202,7 +203,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 
 - 相依性屬性通常應該視為公用屬性，任何可存取執行個體的呼叫端皆可存取或至少可探索它們。 如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [唯讀相依性屬性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

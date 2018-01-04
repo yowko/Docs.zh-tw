@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f60668f1bdac6607383b2ddf5c5ab1e41e31862b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供的概觀與封裝字型與您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。  
@@ -182,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
 -   萬一其中含有不正確的參考，應用程式就會回復以使用可用字型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Documents.Typography>  
  <xref:System.Windows.Media.FontFamily>  
  [Microsoft 印刷樣式： 連結、 新聞和連絡人](http://www.microsoft.com/typography/links/)  

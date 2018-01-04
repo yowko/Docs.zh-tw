@@ -19,11 +19,12 @@ caps.latest.revision: "44"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a64ca2f0da2e10a3042b5f9c30baf3caa37534e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
  下列是針對轉譯層 1 和轉譯層 2 提供硬體加速的功能：  
   
-|功能|備註|  
+|功能|注意|  
 |-------------|-----------|  
 |2D 轉譯|大部分 2D 轉譯都予以支援。|  
 |3D 點陣化|支援大部分的 3D 點陣化。|  
@@ -88,13 +89,13 @@ ms.lasthandoff: 11/21/2017
   
  下列是僅針對轉譯層 2 提供硬體加速的功能：  
   
-|功能|備註|  
+|功能|注意|  
 |-------------|-----------|  
 |3D 消除鋸齒|只有支援 Windows 顯示驅動程式模型 (WDDM) 的作業系統才支援 3D 消除鋸齒，例如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]。|  
   
  下列是**未**提供硬體加速的功能：  
   
-|功能|備註|  
+|功能|注意|  
 |-------------|-----------|  
 |列印的內容|所有列印的內容都是使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 軟體管線所轉譯。|  
 |使用點陣化內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|使用呈現任何內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。|  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/21/2017
  ![螢幕擷取畫面： DirectX 診斷工具](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX 診斷工具主要視窗  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.RenderCapability>  
  <xref:System.Windows.Media.RenderOptions>  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

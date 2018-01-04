@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6df7c6e8f7670648405400cf48e4a1d54cdd7e34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 類型轉換子概觀
 物件寫入器的類型轉換器供應邏輯，可將 XAML 標記中的字串轉換為物件圖形中的特定物件。 在 .NET Framework XAML 服務中，類型轉換器必須是衍生自 <xref:System.ComponentModel.TypeConverter>的類別。 有些轉換器也支援 XAML 儲存路徑，而且可用來將序列化標記中的物件序列化成字串格式。 本主題描述如何以及何時叫用 XAML 中的類型轉換器，並提供 <xref:System.ComponentModel.TypeConverter>之方法覆寫的實作建議。  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="implementing-convertto"></a>實作 ConvertTo  
  <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 可能用於序列化支援。 透過自訂類型和其類型轉換器之 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 的序列化支援不是絕對需求。 不過，如果您正在實作控制項，或使用功能某部分的序列化或類別設計，則應該實作 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>。  
   
- 若要可做為支援 XAML 的 <xref:System.ComponentModel.TypeConverter> 實作來重複使用，該轉換器的 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 方法必須接受所支援類型 (或值) 的執行個體做為 `value` 參數。 `destinationType` 參數的類型是 <xref:System.String>時，傳回的物件必須可以轉型為 <xref:System.String>。 傳回的字串必須代表 `value`的序列化值。 理想上，您選擇的序列化格式應該可以產生相同的值，就像將該字串傳遞給相同轉換器的 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 實作，而不會明顯遺失資訊。  
+ 若要可做為支援 XAML 的 <xref:System.ComponentModel.TypeConverter> 實作來重複使用，該轉換器的 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 方法必須接受所支援類型 (或值) 的執行個體做為 `value` 參數。 `destinationType` 參數的類型是 <xref:System.String>時，傳回的物件必須可以轉型為 <xref:System.String>。 傳回的字串必須代表 `value` 的序列化值。 理想上，您選擇的序列化格式應該可以產生相同的值，就像將該字串傳遞給相同轉換器的 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 實作，而不會明顯遺失資訊。  
   
  如果無法序列化值，或轉換器不支援序列化，則 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 實作必須傳回 `null` 並可能會擲回例外狀況。 不過，如果您確實擲回例外狀況，則應該報告無法使用該轉換做為 <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 實作的一部分；因此，支援先使用 <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 檢查以避免例外狀況的最佳做法。  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="type-converters-in-the-xaml-node-stream"></a>XAML 節點資料流中的類型轉換器  
  如果您是使用 XAML 節點資料流，則尚未執行類型轉換器的動作或最終結果。 在載入路徑中，最後需要進行類型轉換才能載入的屬性字串仍然維持為開始成員和結束成員內的文字值。 使用 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> 屬性可以判定這項作業最後需要的類型轉換器。 不過，從 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> 取得有效值是依賴具有 XAML 結構描述內容 (可透過基礎成員存取這類資訊) 或成員所使用物件值的類型。 叫用類型轉換行為時也需要 XAML 結構描述內容，因為這需要類型對應以及建立轉換器執行個體。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ComponentModel.TypeConverterAttribute>  
  [XAML 的類型轉換子和標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07ac582841fd6b5b6a24c63896821c65eb6687e4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d991895b7c10ee5c210b252855e5affcfcb22a9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-placement-behavior"></a>快顯功能表放置行為
 A<xref:System.Windows.Controls.Primitives.Popup>控制會漂浮在應用程式的另一個視窗，顯示內容。 您可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相對於控制項、 滑鼠或使用螢幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>屬性。  這些屬性搭配使用可讓您在指定位置的彈性<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -237,5 +238,5 @@ Placement 為 Mouse 且快顯遇到畫面下邊緣
 ### <a name="customizing-popup-placement"></a>自訂快顯位置  
  您可以設定連線，來自訂目標原點，並且快顯對齊點<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>屬性<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然後定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委派，會傳回一組可能的定位點和 （依喜好設定順序） 的主座標軸的<xref:System.Windows.Controls.Primitives.Popup>。 顯示的最大一部分的點<xref:System.Windows.Controls.Primitives.Popup>已選取。  位置<xref:System.Windows.Controls.Primitives.Popup>會自動調整大小，如果<xref:System.Windows.Controls.Primitives.Popup>隱藏螢幕的邊緣。 如需範例，請參閱[指定自訂快顯位置](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快顯位置範例](http://go.microsoft.com/fwlink/?LinkID=160032)

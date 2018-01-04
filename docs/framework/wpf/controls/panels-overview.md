@@ -20,11 +20,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f89ea3308d0e6cffc3ed50809f0e87e7ba854ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel>項目會控制的項目轉譯的元件，其大小和維度，其位置和其子內容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個預先定義<xref:System.Windows.Controls.Panel>項目，以及能夠建構自訂<xref:System.Windows.Controls.Panel>項目。  
@@ -72,18 +73,18 @@ ms.lasthandoff: 11/21/2017
   
  每個面板元素都會封裝自己的特殊功能，如下表所示。  
   
-|元素名稱|UI 面板？|說明|  
+|元素名稱|UI 面板？|描述|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|是|定義在其中您可以明確定位子項目座標相對於區域<xref:System.Windows.Controls.Canvas>區域。|  
-|<xref:System.Windows.Controls.DockPanel>|是|定義一個區域，可供您在其中以子項目彼此間相對的水平或垂直方式排列子項目。|  
-|<xref:System.Windows.Controls.Grid>|是|定義由資料行與資料列組成的彈性方格區域。 子項目的<xref:System.Windows.Controls.Grid>可以精確地使用放置<xref:System.Windows.FrameworkElement.Margin%2A>屬性。|  
-|<xref:System.Windows.Controls.StackPanel>|是|將子元素排成單一行，以水平或垂直方式排列。|  
+|<xref:System.Windows.Controls.Canvas>|[是]|定義在其中您可以明確定位子項目座標相對於區域<xref:System.Windows.Controls.Canvas>區域。|  
+|<xref:System.Windows.Controls.DockPanel>|[是]|定義一個區域，可供您在其中以子項目彼此間相對的水平或垂直方式排列子項目。|  
+|<xref:System.Windows.Controls.Grid>|[是]|定義由資料行與資料列組成的彈性方格區域。 子項目的<xref:System.Windows.Controls.Grid>可以精確地使用放置<xref:System.Windows.FrameworkElement.Margin%2A>屬性。|  
+|<xref:System.Windows.Controls.StackPanel>|[是]|將子元素排成單一行，以水平或垂直方式排列。|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|否|處理索引標籤中的按鈕的配置<xref:System.Windows.Controls.TabControl>。|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|否|排列內容內<xref:System.Windows.Controls.ToolBar>控制項。|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|否|<xref:System.Windows.Controls.Primitives.UniformGrid>用來排列子系，在方格中的所有相等的儲存格的大小。|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|否|為面板提供一個可將其子集合「虛擬化」的基底類別。|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|是|將內容以單行水平方向或垂直方向來排列並虛擬化。|  
-|<xref:System.Windows.Controls.WrapPanel>|是|<xref:System.Windows.Controls.WrapPanel>從左到右，從內容換至下一行，在容器方塊邊緣的連續位置放置子項目。 後續排序作業會以循序方式從上或由右至左，根據的值<xref:System.Windows.Controls.WrapPanel.Orientation%2A>屬性。|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|[是]|將內容以單行水平方向或垂直方向來排列並虛擬化。|  
+|<xref:System.Windows.Controls.WrapPanel>|[是]|<xref:System.Windows.Controls.WrapPanel>從左到右，從內容換至下一行，在容器方塊邊緣的連續位置放置子項目。 後續排序作業會以循序方式從上或由右至左，根據的值<xref:System.Windows.Controls.WrapPanel.Orientation%2A>屬性。|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>使用者介面面板  
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/21/2017
   
  如需有關建立具有可當地語系化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的其他資訊，請參閱[使用自動版面配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
  [WPF 版面配置庫範例](http://go.microsoft.com/fwlink/?LinkID=160054)  
  [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  

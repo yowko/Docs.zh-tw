@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ce82724a4e9a547b8441628f43621f29eab6307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2579926dfc71028590e09993e2773ee2cfac1505
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-systemfonts"></a>如何：使用 SystemFonts
 這個範例示範如何使用的靜態資源<xref:System.Windows.SystemFonts>類別才能設定或自訂按鈕的樣式。  
@@ -46,12 +47,12 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.SystemFonts>  
  [使用系統筆刷繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
  [使用 SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
  [使用系統字型索引鍵](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)  
  [x:Static 標記延伸](../../../../docs/framework/xaml-services/x-static-markup-extension.md)  
  [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [DynamicResource 標記延伸](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

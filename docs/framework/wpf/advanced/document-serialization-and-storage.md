@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34b517366a5f143a86388abff5ae13022bc710c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 提供強大的環境來建立和顯示高品質的文件。  增強的功能包括同時支援固定文件和非固定格式文件、進階檢視控制項，再加上強大的 2D 和 3D 圖形功能，可將 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 應用程式帶往更高品質和使用者體驗的全新境界。  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的一項重要功能，就是能夠彈性地管理在記憶體內部表示的文件，而幾乎所有應用程式都必須能夠有效率地將文件儲存至資料存放區，以及從資料存放區載入文件。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  建立外掛程式序列化程式之後，實作用於散發和安裝 (及解除安裝) 外掛程式的安裝指令碼 (請參閱上面的＜[安裝外掛程式序列化程式](#InstallingPluginSerializers)＞)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Documents.Serialization>  
  <xref:System.Windows.Xps.XpsDocumentWriter>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  

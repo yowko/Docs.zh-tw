@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6c23f894b6fa93a3889356416bd95f61fff8beb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f110bcea76a61d46932c9e1aacf27f6f3255a91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>操作說明：使用主要畫面格建立矩形幾何的動畫
 此範例示範如何以動畫方式顯示<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>所使用的主要畫面格。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.RectangleGeometry>  
  <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
  <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  

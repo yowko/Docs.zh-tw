@@ -22,11 +22,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 74cd3df645c2490bcf98533ca8846ddfb742f67f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7006c07d32a9f0adbafce1c83c1b29842f634a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型確保您的類別庫中的資源，可從多個平台。 這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含下表列出的四個 <xref:System.Resources.ResourceManager> 成員。 這些建構函式和方法可讓您具現化 <xref:System.Resources.ResourceManager> 物件並擷取字串資源。  
   
-|`ResourceManager` 成員|說明|  
+|`ResourceManager` 成員|描述|  
 |------------------------------|-----------------|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|建立 <xref:System.Resources.ResourceManager> 執行個體以存取所指定組件中的具名資源檔。|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|建立對應所指定類型的 <xref:System.Resources.ResourceManager> 執行個體。|  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Resources.ResourceManager>  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
  [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

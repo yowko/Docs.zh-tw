@@ -24,11 +24,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dde3adbb7640978829dea4b977ed14eec38a9077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="general-naming-conventions"></a>一般命名慣例
 本章節描述一般命名慣例與相關單字的選擇，如何避免使用特定語言的名稱中使用縮寫和首字母縮略字和建議的指導方針。  
@@ -106,6 +109,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

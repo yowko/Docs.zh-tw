@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intercepting-input-from-the-stylus"></a>攔截手寫筆的輸入
 <xref:System.Windows.Input.StylusPlugIns>架構提供一個機制，透過實作的低階控制<xref:System.Windows.Input.Stylus>輸入和建立數位筆跡<xref:System.Windows.Ink.Stroke>物件。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別提供您實作自訂行為，並將它套用到來自手寫筆裝置以獲得最佳的效能資料的資料流的機制。  
@@ -80,6 +81,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="conclusion"></a>結論  
  由衍生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別，並將其插入<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>集合，您可以大幅強化您的數位筆跡的行為。 您可以存取<xref:System.Windows.Input.StylusPoint>產生做為它的資料，讓您有機會自訂<xref:System.Windows.Input.Stylus>輸入。 因為這類低層級存取<xref:System.Windows.Input.StylusPoint>資料，您可以為您的應用程式實作筆墨收集和呈現以獲得最佳效能。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [筆跡進階處理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [存取和管理畫筆輸入](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

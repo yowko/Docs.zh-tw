@@ -40,11 +40,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0aa85c9ec6e6b911444b07a4169dc769ac4df816
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題中定義的詞彙用於描述 XAML 語法的項目。 這些條款常用的這份文件，WPF 文件的其餘具體而言，適用於其他使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題詳述主題所介紹的基本術語[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -325,7 +326,7 @@ ms.lasthandoff: 11/21/2017
   
  但就像*typeName*。*memberName*表單的屬性，*產生*。*memberName*是不佳的樣式，在標記中，而且您應該避免這樣。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  

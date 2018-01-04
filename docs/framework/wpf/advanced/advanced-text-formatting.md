@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1828b6ffe2d24c2bfb98b4668a9540adf5978e5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bb2664b267301fdf1e3a67e385595a5d28212bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-text-formatting"></a>進階文字格式化
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供一組強固的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]在您的應用程式中包含文字。 版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，例如<xref:System.Windows.Controls.TextBlock>、 提供最常見和一般使用的文字表示的項目。 繪製[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，例如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供一種機制，在 繪圖中包含格式化的文字。 在最進階級[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供可延伸的文字格式設定引擎來控制每個層面的文字表示，例如文字存放區管理、 執行文字格式設定管理，以及內嵌的物件管理。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示一些預先定義之<xref:System.Windows.Media.TextFormatting.TextRun>物件。  
   
-|TextRun 類型|使用方式|  
+|TextRun 類型|使用量|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|用來將字元圖像 (glyph) 的表示法傳回文字格式子的特殊文字執行。|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|用來提供內容的特殊文字執行，在這些內容中會整體進行測量、點擊測試和繪製，例如文字內的按鈕或影像。|  
@@ -104,6 +105,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="specifying-formatting-properties"></a>指定格式設定屬性  
  <xref:System.Windows.Media.TextFormatting.TextRun>物件使用來格式化的文字存放區所提供的屬性。 這些屬性有兩種類型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>處理段落 （含） 的屬性，例如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties>是可以執行例如前景筆刷，段落中的每個文字不同的屬性<xref:System.Windows.Media.Typeface>，和字型大小。 若要實作自訂的段落，並執行屬性類型的自訂文字，您的應用程式必須建立衍生自的<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

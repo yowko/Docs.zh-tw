@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 502fb9ae0c488f5f3e438a3ae0a7087538183f1b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>逐步解說：建立您的第一個觸控應用程式
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓應用程式要碰觸的回應。 例如，您可以使用其中一個應用程式與互動或觸控式裝置，例如本逐步解說建立的應用程式，可讓使用者移動，觸控螢幕上的多個指調整大小或旋轉使用觸控的單一物件。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
  若要使慣性，快速引發從螢幕手指與您執行先前的操作。 <xref:System.Windows.Shapes.Rectangle>移動、 調整大小或旋轉數秒鐘，它會停止之前會繼續。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
  <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
  <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

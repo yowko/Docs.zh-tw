@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d7b680c3377cbfa40734a57f9408d9487dbf3769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 739f86acd534549bc997dc7a939cf43a0c6fc3cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="abstract-class-design"></a>抽象類別設計
 **X 不**抽象型別中定義公用或受保護的內部建構函式。  
@@ -45,6 +48,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [型別設計指導方針](../../../docs/standard/design-guidelines/type.md)  
+## <a name="see-also"></a>請參閱  
+ [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d006c8d0937a454dcbe092dcc3e35c4644088e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
 參考任何靜態值的程式碼實體中定義[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 相容的方式。 參考的靜態屬性可以用來提供屬性，以在 XAML 中的值。  
@@ -40,9 +41,9 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`prefix`|選擇項。 是指對應、 非預設 XAML 命名空間前置詞。 `prefix`顯示明確使用因為您很少會參考來自預設 XAML 命名空間的靜態屬性。 請參閱＜備註＞。|  
-|`typeName`|必要項。 定義所需的靜態成員的型別名稱。|  
-|`staticMemberName`|必要項。 （常數、 靜態屬性、 欄位或列舉值） 所需的靜態值成員的名稱。|  
+|`prefix`|選擇性。 是指對應、 非預設 XAML 命名空間前置詞。 `prefix`顯示明確使用因為您很少會參考來自預設 XAML 命名空間的靜態屬性。 請參閱＜備註＞。|  
+|`typeName`|必要。 定義所需的靜態成員的型別名稱。|  
+|`staticMemberName`|必要。 （常數、 靜態屬性、 欄位或列舉值） 所需的靜態值成員的名稱。|  
   
 ## <a name="remarks"></a>備註  
  參考的程式碼實體必須是下列其中一項：  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
   
  如需有關如何使用前置詞和 XAML 命名空間的 WPF 的詳細資訊，請參閱[XAML 命名空間和 WPF XAML 命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
  [從 WPF 移轉至 System.Xaml 的類型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

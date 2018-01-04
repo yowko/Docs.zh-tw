@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f24be0ce97071905ce53610e5b44db8f92f24e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>操作說明：在按一下標頭時排序 GridView 資料行
 這個範例示範如何建立<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView>檢視模式和資料內容，當使用者按一下資料行標頭來排序。  
@@ -228,9 +229,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
         End Sub  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

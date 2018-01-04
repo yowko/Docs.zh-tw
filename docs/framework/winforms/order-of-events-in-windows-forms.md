@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f822133b44f0f32224402463b4332811f8cd52b5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 03d2661752e5c0acb36fe76a8fa72b0638b4ad54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Form 中事件的順序
 關於 Windows Forms 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 特定的滑鼠輸入事件順序的詳細資訊，請參閱[Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。 如需 Windows Form 中事件的概觀，請參閱[事件概觀](../../../docs/framework/winforms/events-overview-windows-forms.md)。 如需結構的事件處理常式的詳細資訊，請參閱[事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
@@ -90,5 +91,5 @@ ms.lasthandoff: 10/22/2017
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

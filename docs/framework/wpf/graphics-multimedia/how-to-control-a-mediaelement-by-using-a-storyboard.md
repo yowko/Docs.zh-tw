@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2341d2814e5bd42c652865c76d115defcc5b15b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f52801ee3704c13ec5213cfc54b6392baa97e245
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>如何：使用腳本控制 MediaElement
 這個範例示範如何控制<xref:System.Windows.Controls.MediaElement>使用<xref:System.Windows.Media.MediaTimeline>中<xref:System.Windows.Media.Animation.Storyboard>。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaTimelineExample.xaml.cs#codebehindmediatimelineexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.MediaElement>  
  <xref:System.Windows.Media.MediaTimeline>  
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -53,5 +54,5 @@ ms.lasthandoff: 11/21/2017
  [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

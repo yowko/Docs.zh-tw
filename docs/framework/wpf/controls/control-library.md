@@ -17,16 +17,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d1ea41597f0bba7aed61854119ee33136ed07d5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: bc2186c4b1acaf06ec7c6adf0d5ef8460957869b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-library"></a>控制項程式庫
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 控制項程式庫包含 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 所提供之控制項的資訊 (依照字母順序列出)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Border](../../../../docs/framework/wpf/controls/border.md)  
  [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
  [Button](../../../../docs/framework/wpf/controls/button.md)  

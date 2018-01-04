@@ -17,11 +17,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36a751f9aac69119b539bd1008c6478f6ce71688
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6a24cbabcad7ff534a2b3d66b2f17959c959c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview"></a>ListView
 <xref:System.Windows.Controls.ListView>控制項提供基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。  
@@ -30,9 +31,9 @@ ms.lasthandoff: 10/18/2017
   
  ![含有 GridView 輸出的 ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [概觀](../../../../docs/framework/wpf/controls/listview-overviews.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ListView>  

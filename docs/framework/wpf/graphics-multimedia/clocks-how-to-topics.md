@@ -19,16 +19,17 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f6acbc61d68e32846e055125ad8042a9ea55db
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: bf4e6efe35234a6ea86b3b1af5561a1ceb10af18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clocks-how-to-topics"></a>時鐘 HOW TO 主題
 下列主題描述如何使用<xref:System.Windows.Media.Animation.Clock>維護計時狀態資訊的物件<xref:System.Windows.Media.Animation.Timeline>。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 AnimationClock 建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
  [以互動方式控制時鐘](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
  [同步搜尋時鐘](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  

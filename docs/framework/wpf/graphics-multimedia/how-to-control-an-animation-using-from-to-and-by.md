@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aab775ab1c2f55d79da0773f81c006015c349f8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17f87c8bcf09022aa389df779e29f5e5affabc20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>操作說明：使用 From、To 和 By 控制動畫
 「 從/至/者 」 或 「 基本動畫 」 會建立兩個目標值之間的轉換 (請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)的不同類型的動畫簡介)。 若要設定的基本動畫目標值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  下表摘要說明如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>可能使用屬性一起或分開來判斷動畫的目標值。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
  [From、To 和 By 動畫目標值範例](http://go.microsoft.com/fwlink/?LinkID=159988)

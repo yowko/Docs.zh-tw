@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d93b60a4172f7acebb5c9ec533efdff9a61d959c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb882dbdc8b394fe416b0e173129c745977566db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView>控制項可以顯示階層式結構中使用可摺疊的節點。  
@@ -31,9 +32,9 @@ ms.lasthandoff: 10/18/2017
   
  ![TreeView 圖例](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [TreeView 概觀](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.TreeView>  

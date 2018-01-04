@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 47dd34db82e796418b68fcf9b28ef3e4d4eaca4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3dad1600d93f53198d7ca7842148612b7755fc10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中的 xml:lang 處理
 `xml:lang` 屬性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定義的屬性，會宣告 XML 中項目的語言和文化特性資訊。 在 XAML 中有保存與這個屬性相同的意義，但仍須考量一些其他事項。  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="wpf-usage-nodes"></a>WPF 使用量節點  
  若項目是 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>的衍生類別，您可以使用對等的 <xref:System.Windows.FrameworkElement.Language%2A> 相依性屬性 (Property)，而非 `xml:lang` 屬性 (Attribute)。 根據預設，如果沒有透過屬性 (Property) 或是透過處理 <xref:System.Windows.FrameworkElement.Language%2A> 屬性 (Attribute) 另外設定，則 `xml:lang` 屬性會使用 "en-US"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

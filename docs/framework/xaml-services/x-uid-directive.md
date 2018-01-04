@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4d49e9630b481b2daf103feabd225dd5ef0c8ca2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9abd4a1851ce21a1858f51ff4ce42998c20639e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xuid-directive"></a>x:Uid 指示詞
 提供唯一的識別項的標記項目。 在許多案例中，這個唯一識別碼使用 XAML 當地語系化程序和工具。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
  如需有關角色`x:Uid`WPF 當地語系化程序在和 BAML 形式的 XAML，請參閱[WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
  <xref:Microsoft.Build.Tasks.Windows.UidManager>  
  [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

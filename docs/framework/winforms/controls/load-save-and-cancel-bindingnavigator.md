@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4bc4f53c404e3767b9f98ca5ab46b19db31f9c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dd45b33fb1f99c280e126b9e601692a85da5dba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：將載入、儲存和取消按鈕加入至 Windows Form BindingNavigator 控制項
 <xref:System.Windows.Forms.BindingNavigator>控制項是特殊用途<xref:System.Windows.Forms.ToolStrip>適用於巡覽及操作控制項在表單上的繫結至資料的控制項。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>方法的範圍為資料列。 儲存您在檢視該個別記錄之前瀏覽至下一筆記錄時所做的變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.ToolStrip>  

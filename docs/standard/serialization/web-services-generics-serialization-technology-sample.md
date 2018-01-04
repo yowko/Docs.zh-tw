@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0ec4f05fd68c523bcffcb9173de7e66d0dcc9a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e9d5ed7a1bb55803cd1df8c6c6c740e8facb306e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web 服務泛型序列化技術範例
 [下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -72,7 +75,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>備註  
  範例會顯示預設的 ASP.NET 網頁，其中包含 Web 服務定義的連結。 除了修改 Web 服務的原始程式碼之外，您還可以自訂顯示內容。 如需詳細資訊，請參閱[建置 XML Web Service 用戶端](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  

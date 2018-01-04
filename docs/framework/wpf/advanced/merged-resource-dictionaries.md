@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce02b772bacf2115a1bb74039fdff30a46fea8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cbea4316db159582790f371844f6e65fc22fd5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merged-resource-dictionaries"></a>合併的資源字典
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資源支援合併的資源字典功能。 這項功能提供一種方法，定義已編譯之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 應用程式之外的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的資源部分。 然後，資源可在應用程式間共用，也更方便隔離進行當地語系化。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="localization"></a>當地語系化  
  如果需要當地語系化的資源隔離至合併到主要字典的字典，並保持鬆散如 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，則這些檔案可以分別進行當地語系化。 這項技術是當地語系化附屬資源組件的輕量型替代方案。 如需詳細資訊，請參閱 [WPF 全球化和當地語系化概觀](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.ResourceDictionary>  
  [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)  

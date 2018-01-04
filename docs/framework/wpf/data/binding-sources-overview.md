@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806a62d57e1099bb9d7cdcca657be500c33b0df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -87,8 +88,8 @@ ms.lasthandoff: 11/21/2017
 |屬性類型<br /><br /> (所有存取修飾詞)|動態物件屬性|動態物件屬性|CLR 屬性|CLR 屬性|相依性屬性|相依性屬性|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**信任層級**|**完全信任**|**部分信任**|**完全信任**|**部分信任**|**完全信任**|**部分信任**|  
-|公用類別|是|是|是|是|是|是|  
-|非公用類別|是|否|是|否|是|是|  
+|公用類別|[是]|是|是|是|是|[是]|  
+|非公用類別|[是]|否|是|否|是|[是]|  
   
  這個表格說明資料繫結中使用權限需求的下列相關重點：  
   
@@ -104,11 +105,11 @@ ms.lasthandoff: 11/21/2017
   
  如需部分信任安全性的詳細資訊，請參閱 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Data.ObjectDataProvider>  
  <xref:System.Windows.Data.XmlDataProvider>  
  [指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [WPF 資料繫結與 LINQ to XML 概觀](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)

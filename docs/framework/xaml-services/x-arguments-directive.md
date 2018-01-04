@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指示詞
 在 XAML 中、 非預設建構函式物件項目宣告或 factory 方法物件宣告，封裝建構引數。  
@@ -116,6 +117,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [定義可搭配 .NET Framework XAML 服務使用的自訂類型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a9a233df95f69a68c5410c5836dacd5ab2c239a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7945728386c01d6137cbc422f0d7fb410a18d57e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>如何：在 PathGeometry 內建立多個子路徑
 這個範例示範如何建立多個子路徑中的<xref:System.Windows.Media.PathGeometry>。 若要建立多個路徑，您建立<xref:System.Windows.Media.PathFigure>的每一個子路徑。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/22/2017
   
  (請注意，此屬性的語法確實建立<xref:System.Windows.Media.StreamGeometry>的輕量型版本<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱[路徑標記語法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)頁面。)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

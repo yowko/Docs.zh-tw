@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d1b21e2a654b18547c8da7da724c87946724f71f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 內建 XAML 類型
 允許在 XAML 生產的程式碼的位置。 這類程式碼可以編譯任何 XAML 處理器實作編譯 XAML 或由執行階段在 XAML 生產的更新版本使用，如解譯左邊。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   部分類別的 CLR 命名空間外部的程式碼實體的參考都必須完全符合規定。 如果宣告的成員會覆寫部分的類別可覆寫的成員，這必須指定以特定語言覆寫的關鍵字。 如果成員宣告中`x:Code`與從 XAML 建立部分類別的成員衝突的範圍、 的方式，編譯器會回報衝突，XAML 檔案無法編譯或載入。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
  [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

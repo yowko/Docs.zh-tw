@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自訂類型和程式庫的 XAML 相關 CLR 屬性
 本主題會描述通用語言執行階段 (CLR) 屬性所定義的.NET Framework XAML 服務。 它也會說明其他 CLR 具有的屬性定義在.NET Framework 組件或類型的應用程式的 XAML 相關案例。 屬性的組件、 類型或成員設定這些 CLR 屬性提供 XAML 類型系統資訊與您的型別。 任何直接處理 XAML 節點資料流，或透過專用的 XAML 讀取器和 XAML 寫入器會使用.NET Framework XAML 服務的 XAML 取用者會提供資訊。  
@@ -277,6 +278,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  .NET framework XAML 服務也會定義 XAML 相關屬性<xref:System.Windows.Markup.RootNamespaceAttribute>。 這個屬性是專案系統支援，組件層級屬性，並不是與 XAML 自訂型別相關。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Attribute>  
  [定義可搭配 .NET Framework XAML 服務使用的自訂類型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)

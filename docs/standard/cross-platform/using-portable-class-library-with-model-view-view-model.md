@@ -19,11 +19,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e39a8df5c8aee05414e778f15a29bbeda8dba930
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: da1a05a6003d93727efd5749aac9a055c8c80d38
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並且跨多平台共用組件。  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/18/2017
   
  編譯模型後，當您檢視模型專案時，會參考包含此檢視的應用程式中的這些組件。 檢視只會與檢視模型互動時，如果您只需要參考組件包含檢視模型。  
   
-### <a name="model"></a>模型  
+### <a name="model"></a>型號  
  下列範例示範的簡化的模型類別，可能位於[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。  
   
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -96,5 +99,5 @@ ms.lasthandoff: 10/18/2017
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

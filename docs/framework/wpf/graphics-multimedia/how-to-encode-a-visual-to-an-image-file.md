@@ -20,11 +20,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a1ff9de1f5ddfdabbf7af7fef5f78046c14f8ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88a5d93c9c4726d1f6493df28d0a2a559394ef74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>如何：將 Visual 編碼為影像檔
 此範例示範如何編碼<xref:System.Windows.Media.Visual>映像檔使用的物件<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  A<xref:System.Windows.Media.Imaging.PngBitmapEncoder>已用於此範例中，但所衍生的任何<xref:System.Windows.Media.Imaging.BitmapEncoder>物件可能已用來建立映像檔。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.DrawingContext>  
  [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
  [繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  

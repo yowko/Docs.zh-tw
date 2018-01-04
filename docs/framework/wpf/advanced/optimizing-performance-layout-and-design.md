@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13763e0487314fdbe7ab6fcb8b7b8711715e7a6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df87170b05f830916ef2f77fd4cb5a4abab42faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-layout-and-design"></a>最佳化效能：配置與設計
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的設計可能會因為在計算版面配置和驗證物件參考而產生不必要的額外負荷，進而影響其效能。 物件的建構，特別是在執行階段，可能會影響應用程式的效能特性。  
@@ -79,14 +80,14 @@ ms.lasthandoff: 11/21/2017
   
  如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
  [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [文字](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
  [版面配置](../../../../docs/framework/wpf/advanced/layout.md)

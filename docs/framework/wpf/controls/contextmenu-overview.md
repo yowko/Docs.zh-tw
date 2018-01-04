@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3061b7fed225f00bf6bb91efe529de35a5a036a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0776e7960aa76a76422d01180af5fd6a089bc98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 概觀
 <xref:System.Windows.Controls.ContextMenu>類別代表使用特定內容公開功能的項目<xref:System.Windows.Controls.Menu>。 一般而言，使用者會公開<xref:System.Windows.Controls.ContextMenu>中[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以滑鼠右鍵按一下滑鼠按鈕。 本主題將介紹<xref:System.Windows.Controls.ContextMenu>項目，並提供如何使用中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和程式碼。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 </Style>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.ContextMenu>  
  <xref:System.Windows.Style>  
  <xref:System.Windows.Controls.Menu>  

@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb666c41f849ac39386c3eaf85bbaf8b19053e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-overview"></a>Windows Form 概觀
 以下概觀將討論智慧型用戶端應用程式的優點、Windows Form 程式設計的主要功能，以及如何使用 Windows Form 來建置智慧型用戶端，以符合當今企業和終端使用者的需求。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |在表單上使用控制項|[操作說明：將控制項新增至 Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|  
 |使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[操作說明：使用設計工具建立具有標準項目的基本 ToolStrip](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|  
 |使用 <xref:System.Drawing> 建立圖形|[圖形程式設計入門](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
-|建立自訂控制項|[如何：繼承自 UserControl 類別](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
+|建立自訂控制項|[操作說明：繼承自 UserControl 類別](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ### <a name="displaying-and-manipulating-data"></a>顯示和操作資料  
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供名為 <xref:System.Windows.Forms.DataGridView> 控制項的彈性控制項，以傳統的資料列和資料行格式，來顯示這類表格式資料，讓每項資料佔有自己的儲存格。 當您使用 <xref:System.Windows.Forms.DataGridView> 時，您可以自訂個別儲存格的外觀、將任意資料列和資料行鎖定位置，以及顯示儲存格中的複雜控制項，還有其他功能。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 |描述|說明主題|  
 |-----------------|----------------|  
 |使用 <xref:System.Windows.Forms.BindingSource> 元件|[操作說明：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[如何：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
+|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[操作說明：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
 |使用資料來源視窗|[逐步解說：顯示 Windows Form 上的資料](http://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
 |使用應用程式設定|[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
 |列印表單的內容|[如何：列印 Windows Forms 中的圖形](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：在 Windows Forms 中列印多頁文字檔](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|  
 |深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [建立新的 Windows Forms](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
  [ToolStrip 控制項概觀](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  

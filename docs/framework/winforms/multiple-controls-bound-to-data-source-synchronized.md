@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：確保繫結至相同資料來源的多個控制項都能保持同步
 有時候當使用 Windows Form 中的資料繫結時，多個控制項所繫結至相同的資料來源。 在某些情況下，可能必須採取額外步驟以確保控制項的繫結的內容中與其他每個及資料來源同步處理。 這些步驟是兩個情況中，必須：  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   表單具有<xref:System.Windows.Forms.Form.Load>處理事件和呼叫`InitializeControlsAndDataSource`從表單的範例方法<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：使用 BindingSource 元件跨表單共用繫結資料](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
  [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  

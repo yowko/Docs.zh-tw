@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>當開發[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]獨立和瀏覽器裝載的應用程式，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式都執行不受限制的權限 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)、 是否使用 Windows Installer (.msi)、 XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱[WPF 增益集概觀](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="application-navigation-security"></a>應用程式巡覽安全性  
  應用程式瀏覽安全無虞的如果可以使用組件識別[!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]，可支援四種類型的內容：  
   
-|內容類型|說明|URI 範例|  
+|內容類型|描述|URI 範例|  
 |------------------|-----------------|-----------------|  
 |資源|加入至組建類型為專案的檔案**資源**。|`pack://application:,,,/MyResourceFile.xaml`|  
 |內容|加入至組建類型為專案的檔案**內容**。|`pack://application:,,,/MyContentFile.xaml`|  
@@ -281,7 +282,7 @@ ms.lasthandoff: 11/21/2017
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
  [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
  [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  

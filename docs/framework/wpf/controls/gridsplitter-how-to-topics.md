@@ -17,16 +17,17 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2770f1a0c965dc956e837c5c362e5767d0c9cea
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5256c0ffffb219776a8705dfee0409ebde07a7ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridsplitter-how-to-topics"></a>GridSplitter HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.GridSplitter>控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 GridSplitter 調整資料列的大小](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
  [使用 GridSplitter 調整資料行的大小](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
  [確保 GridSplitter 是可見的](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-overview"></a>GridView 概觀
 <xref:System.Windows.Controls.GridView>檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別可讓您和您的使用者通常使用按鈕為互動式的資料行標頭的資料表中檢視項目集合。 本主題將介紹<xref:System.Windows.Controls.GridView>類別，並且摘要說明其用途。  
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.ListViewItem>  
  <xref:System.Windows.Controls.GridViewColumn>  
@@ -148,4 +149,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.ViewBase>  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [在按一下標頭時排序 GridView 資料行](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

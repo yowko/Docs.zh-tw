@@ -18,16 +18,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>事件 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 介紹可以叫用處理常式的路由事件，此處理常式存在於應用程式項目樹狀結構的不同接聽程式上。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [附加事件概觀](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
  [物件存留期事件](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/22/2017
  [屬性變更事件](../../../../docs/framework/wpf/advanced/property-change-events.md)  
  [Visual Basic 和 WPF 事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
  [弱式事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [「如何」主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.RoutedEvent>  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/22/2017
   [屬性](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
   [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [資源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
   [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)

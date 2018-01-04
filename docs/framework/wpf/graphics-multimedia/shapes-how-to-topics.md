@@ -19,16 +19,17 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d226040e531b8e14ff3dae9df2d6353acbbead3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7fb96bd78f2462ece3e1a7cb9f0dc8c5c0988f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-how-to-topics"></a>圖案 HOW TO 主題
 此章節的主題示範如何使用<xref:System.Windows.Shapes.Shape>繪製螢幕的基本圖案的物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 Polygon 元素繪製封閉的圖形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
  [繪製橢圓形或圓形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
  [繪製線條](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
  [繪製矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [修改線條或線段結尾的端點](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Shapes.Shape>  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)

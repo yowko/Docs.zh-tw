@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>路徑標記語法
 路徑中會討論[圖案和基本繪圖概觀 WPF 中](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，不過，本主題說明的詳細資料指定路徑，您可以使用功能強大且複雜的迷你語言使用更簡潔的幾何[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`M` *startPoint*<br /><br /> -或-<br /><br /> `m` *startPoint*|  
   
-|詞彙|說明|  
+|詞彙|描述|  
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 新圖表的起點。|  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`Q` `controlPoint` `endPoint`<br /><br /> -或-<br /><br /> `q` `controlPoint` `endPoint`|  
   
-|詞彙|說明|  
+|詞彙|描述|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲線的控制點，它能決定曲線的起始正切函數和結束正切函數。|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲線要繪製到的點。|  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`T` `controlPoint` `endPoint`<br /><br /> -或-<br /><br /> `t` `controlPoint` `endPoint`|  
   
-|詞彙|說明|  
+|詞彙|描述|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲線的控制點，它能決定曲線的起始正切函數。|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲線要繪製到的點。|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -或-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
-|詞彙|說明|  
+|詞彙|描述|  
 |----------|-----------------|  
 |`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> 弧線的半徑 X 和 Y。|  
 |`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> 橢圓形的旋轉 (以角度為單位)。|  
@@ -214,7 +215,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`x` `,` `y`<br /><br /> -或-<br /><br /> `x` `y`|  
   
-|詞彙|說明|  
+|詞彙|描述|  
 |----------|-----------------|  
 |`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> 點的 X 座標。|  
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> 點的 Y 座標。|  
@@ -234,11 +235,11 @@ ms.lasthandoff: 11/21/2017
   
  您也可以使用科學記號標記法。 例如，`+1.e17`是有效的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.StreamGeometry>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.PathFigureCollection>  
  [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

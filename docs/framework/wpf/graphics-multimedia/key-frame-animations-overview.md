@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
 本主題介紹主要畫面格動畫。 主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/21/2017
   
 8.  也就是排序順序的解決時間 （主索引鍵） 和宣告 （次要索引鍵） 的順序中的主要畫面格，請使用穩定的排序是根據已解決的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Animation.KeyTime>  
  <xref:System.Windows.Media.Animation.KeySpline>  
  <xref:System.Windows.Media.Animation.Timeline>  

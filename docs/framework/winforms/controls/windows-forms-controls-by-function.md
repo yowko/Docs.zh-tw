@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
 Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windows Form 控制項和元件，依據一般函式。 此外，其中有多個控制項提供相同的功能，建議使用的控制項都會列出其所取代的控制項的相關附註。 在後續另一個表格中，已被取代的控制項會列出與其建議的取代項目。  
@@ -31,7 +32,7 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
   
 ## <a name="recommended-controls-and-components-by-function"></a>建議的控制項和元件，由函式  
   
-|函式|控制項|描述|  
+|功能|控制項|描述|  
 |--------------|-------------|-----------------|  
 |顯示資料|<xref:System.Windows.Forms.DataGridView> 控制項|<xref:System.Windows.Forms.DataGridView>控制項提供可自訂的資料表，以顯示資料。 <xref:System.Windows.Forms.DataGridView>類別可讓您自訂的資料格、 資料列、 資料行和框線。 **注意：** <xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱[差異之間 Windows Form DataGridView 和 DataGrid 控制項](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |資料繫結和瀏覽|<xref:System.Windows.Forms.BindingSource>元件|藉由提供貨幣管理、 變更通知，以及其他服務，可簡化將控制項繫結至資料的表單上。|  
@@ -84,7 +85,7 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
   
 ## <a name="superseded-controls-and-components-by-function"></a>取代控制項和元件，由函式  
   
-|函式|已取代的控制項|建議的替代|  
+|功能|已取代的控制項|建議的替代|  
 |--------------|------------------------|-----------------------------|  
 |顯示資料|<xref:System.Windows.Forms.DataGrid>|<xref:System.Windows.Forms.DataGridView>|  
 |資訊顯示 （唯讀控制項）|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
@@ -94,6 +95,6 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |表單配置|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

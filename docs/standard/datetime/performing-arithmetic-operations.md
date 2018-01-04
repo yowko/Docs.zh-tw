@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: def43f84186b53f9b0d2ade0a5a92e59606ee2af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: edad8fc6643b90afc8327b574e19b178270829b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和時間執行算術運算
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29>方法會報告本機時間早於 (或低於) 的 UTC 時間，且減法運算會指出在美國太平洋時區中 UTC 與本地時間，系統之間的差異太平洋標準時間時區系統來說相差七個小時。 但因為這兩個值提供單一時間點的不同表示，所以在此情況下，此時間間隔很明顯地完全歸因於當地時區與 UTC 的位移。
 
-較常見地，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性不會影響所傳回的結果<xref:System.DateTime.Kind>比較和算術方法 （如比較的兩個相同時間點表示），但是它可能會影響這些結果的解譯。 例如：
+較常見地，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性不會影響所傳回的結果<xref:System.DateTime.Kind>比較和算術方法 （如比較的兩個相同時間點表示），但是它可能會影響這些結果的解譯。 例如: 
 
 * 任何算術運算的結果上執行兩個日期和時間值的<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性都等於<xref:System.DateTimeKind>反映出兩個值之間的實際時間間隔。 同樣地，兩個這類日期和時間值的比較會精確地反映時間的關聯性。
 
@@ -92,7 +95,7 @@ A<xref:System.DateTimeOffset>值包含不只一個日期和時間，還能明確
 [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [日期、 時間和時區](../../../docs/standard/datetime/index.md)
 [How to： 在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

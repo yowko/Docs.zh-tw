@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca2bac983e25ab7453230a6718fe7eaa98e82275
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Form 控制項開發的基本概念
 Windows Form 控制項是一個類別，是直接或間接衍生自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 下列清單描述開發 Windows Form 控制項的常見案例：  
@@ -40,7 +41,7 @@ Windows Form 控制項是一個類別，是直接或間接衍生自<xref:System.
   
  Windows Form 控制項的基底類別<xref:System.Windows.Forms.Control>，提供所需的用戶端 Windows 架構應用程式中的視覺顯示。 <xref:System.Windows.Forms.Control>提供的視窗控制代碼，會處理訊息路由，並可提供滑鼠和鍵盤事件，以及許多其他的使用者介面事件。 它提供進階的版面配置，而且有特定的視覺顯示 屬性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>， <xref:System.Windows.Forms.Control.Width%2A>，及其他等等。 此外，它會提供安全性，執行緒處理的支援，以及 ActiveX 控制項與互通性。 因為基底類別提供了非常多的基礎結構，所以開發您自己的 Windows Forms 控制項相對容易。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [開發複合 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
  [操作說明：建立顯示進度的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  

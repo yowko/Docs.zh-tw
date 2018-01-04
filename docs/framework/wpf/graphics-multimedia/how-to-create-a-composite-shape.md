@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ded7bd25f7f416bc512051f883b4ae12b2fa56d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ecb4ecdc5c83cbb6f2b4faee9cb3654939bd346
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-composite-shape"></a>如何：建立複合圖案
 這個範例示範如何建立使用複合圖形<xref:System.Windows.Media.Geometry>物件，並顯示它們使用<xref:System.Windows.Shapes.Path>項目。 在下列範例中， <xref:System.Windows.Media.LineGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和<xref:System.Windows.Media.RectangleGeometry>搭配<xref:System.Windows.Media.GeometryGroup>建立複合的圖形。 使用再繪製幾何<xref:System.Windows.Shapes.Path>項目。  

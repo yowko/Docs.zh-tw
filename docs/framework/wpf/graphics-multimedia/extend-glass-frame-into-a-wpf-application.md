@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d943d0b91d6f740144399d758a5ed80460f0eb6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>將玻璃框架擴充至 WPF 應用程式中
 本主題示範如何將 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 玻璃框架擴充至 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式的工作區中。  
@@ -159,7 +160,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  ![擴充至 WPF 應用程式中的玻璃框架。](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [桌面視窗管理員概觀](https://msdn.microsoft.com/library/aa969540.aspx)  
  [桌面視窗管理員模糊概觀](https://msdn.microsoft.com/library/aa969537.aspx)  
  [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)

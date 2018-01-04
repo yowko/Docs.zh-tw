@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 Windows Form 資料繫結，您可以從資料庫，以及其他結構，例如陣列和集合中的資料存取資料，只要符合特定最低需求。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Data.DataViewManager>. A<xref:System.Data.DataViewManager>是自訂的檢視，將整個<xref:System.Data.DataSet>，類似於<xref:System.Data.DataView>，但是使用包含的關聯。 與<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，則您可以設定預設篩選和排序選項的任何檢視<xref:System.Data.DataViewManager>具有指定的資料表。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

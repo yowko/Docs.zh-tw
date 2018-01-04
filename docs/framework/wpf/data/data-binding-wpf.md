@@ -17,21 +17,22 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809f63d0057dd55d092343578d2952b2abdc0812
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23fba12742943720f5b73db708015e798f0ac886
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-wpf"></a>資料繫結 (WPF)
 Windows Presentation Foundation (WPF) 資料繫結會提供簡單且一致的方式呈現，並與資料互動的應用程式。 項目可以從各種不同的 common language runtime (CLR) 物件和 XML 形式的資料來源的繫結至資料之用。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
  [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Data>  

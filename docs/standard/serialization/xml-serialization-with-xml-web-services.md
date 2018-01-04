@@ -27,11 +27,14 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f174ef3ada619e20d375035bee82b0ed9bbc145
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b3846e1c932ed23c61d3102d19ed3a039284aa4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>以 XML Web 服務進行 XML 序列化
 XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web Service 的詳細資訊，請參閱[使用 ASP.NET 建置 XML Web Service](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c)。  
@@ -266,7 +269,7 @@ public class Order{
 </BookOrderForm>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  

@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8dcd1003b3f93db733ece4f90340d1d98867d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-design"></a>事件設計
 事件是最常使用的回呼 （允許呼叫使用者程式碼架構的建構） 形式。 其他的回撥機制包括委派、 虛擬成員和介面為基礎的外掛程式取得的成員。資料可用性研究表示大部分的開發人員可以更輕鬆地使用事件，比使用其他的回撥機制。 事件會正確地切割整合與 Visual Studio 和許多語言。  
@@ -78,6 +81,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [成員設計指導方針](../../../docs/standard/design-guidelines/member.md)  
+## <a name="see-also"></a>請參閱  
+ [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0b35c35be7351fdf45157153ce6ca55fc763c3ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定義可搭配 .NET Framework XAML 服務使用的自訂類型
 當您定義了商務物件的自訂型別，或在特定架構上沒有相依性的類型時，但有特定的 XAML，您可以遵循的最佳作法。 如果您依照這些作法，可以發現 XAML 特性，您的型別.NET Framework XAML 服務和 XAML 讀取器和 XAML 寫入器，並提供適當的表示，使用 XAML 類型系統的 XAML 節點資料流。 本主題說明類型定義、 成員定義和 CLR 設定其屬性的型別或成員的最佳作法。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
  如需每個 XAML 相關屬性的 XAML 支援，您的自訂型別相關的清單，請參閱[XAML-Related CLR 屬性之自訂類型和程式庫](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  使用自訂類型需要標記作者必須對應包含自訂類型的組件和 CLR 命名空間的前置詞。 此程序不會記載於本主題中。  
   
 ## <a name="access-level"></a>存取層級  
@@ -123,6 +124,6 @@ ms.lasthandoff: 11/21/2017
   
  在 WPF XAML 術語*內部型別*是由相同組件也包含參考的 XAML 定義的類型。 這種型別可以對應透過故意省略組件的 XAML 命名空間 = 部分的對應，例如`xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 參考內部的型別和型別具有`internal`存取層級，這會產生`GeneratedInternalTypeHelper`組件的類別。 如果您想要避免`GeneratedInternalTypeHelper`，您可能必須使用`public`存取層級，或必須相關的類別，分解到不同的組件並讓這個組件相依。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [自訂類型和程式庫的 XAML 相關 CLR 屬性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)  
  [XAML Services](../../../docs/framework/xaml-services/index.md)

@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8fb1a3f752114d72f7a89b641dcaf69bd61c3264
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：將對稱金鑰儲存在金鑰容器中
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[了解電腦層級和使用者層級的 RSA 金鑰容器](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  
@@ -230,7 +233,7 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
  [加密資料](../../../docs/standard/security/encrypting-data.md)  
  [解密資料](../../../docs/standard/security/decrypting-data.md)  

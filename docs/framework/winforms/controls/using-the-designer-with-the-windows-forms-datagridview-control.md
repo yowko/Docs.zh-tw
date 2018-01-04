@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b29904954a593607a7872c0b59265bbf241dce98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9df10ecabc8f61c3ef984adb6466f195395fd181
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>使用設計工具搭配 Windows Form DataGridView 控制項
 Visual Studio 提供的設計工具支援`DataGridView`控制項，可讓您無須撰寫程式碼執行安裝程式工作。 這些工作包括繫結控制項至資料來源，修改的資料行用來顯示資料，以及調整的外觀和基本行為的控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  描述如何使用**加入資料行**和**編輯資料行**對話方塊，以填入和修改資料行集合。  
   
@@ -64,5 +65,5 @@ Visual Studio 提供的設計工具支援`DataGridView`控制項，可讓您無�
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

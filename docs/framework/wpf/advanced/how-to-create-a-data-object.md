@@ -20,25 +20,26 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b002e1c7a9eea2592de58aac3b838b9f6f982ce
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 014d5229026a6fdaab203c82932742c7b2c7639e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-data-object"></a>如何：建立資料物件
 下列範例顯示建立資料物件，使用所提供的建構函式的各種方式<xref:System.Windows.DataObject>類別。  
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例程式碼會建立新的資料物件，並使用其中一個多載建構函式 (<xref:System.Windows.DataObject.%23ctor%28System.Object%29>) 來初始化資料物件的字串。  在此情況下，根據儲存的資料類型自動決定適當的資料格式，預設會允許儲存資料的自動轉換。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_simple)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_simple)]  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列程式碼範例是上述程式碼壓縮的版本。  
   
 ### <a name="code"></a>程式碼  
@@ -47,14 +48,14 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例程式碼會建立新的資料物件，並使用其中一個多載建構函式 (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%29>) 來初始化資料物件和指定的資料格式的字串。  的字串; 在此情況下指定的資料格式<xref:System.Windows.DataFormats>類別會提供一組預先定義的型別字串。 根據預設，允許使用預存資料的自動轉換。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列程式碼範例是上述程式碼壓縮的版本。  
   
 ### <a name="code"></a>程式碼  
@@ -63,14 +64,14 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例程式碼會建立新的資料物件，並使用其中一個多載建構函式 (<xref:System.Windows.DataObject.%23ctor%2A>) 來初始化資料物件和指定的資料格式的字串。  在此情況下所指定的資料格式<xref:System.Type>參數。  根據預設，允許使用預存資料的自動轉換。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_type)]  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列程式碼範例是上述程式碼壓縮的版本。  
   
 ### <a name="code"></a>程式碼  
@@ -79,19 +80,19 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例程式碼會建立新的資料物件，並使用其中一個多載建構函式 (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%2CSystem.Boolean%29>) 來初始化資料物件和指定的資料格式的字串。  的字串; 在此情況下指定的資料格式<xref:System.Windows.DataFormats>類別會提供一組預先定義的型別字串。 這個特定的建構函式多載可讓呼叫端指定是否允許自動轉換。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_autoconvert)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert)]  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列程式碼範例是上述程式碼壓縮的版本。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_autoconvert_condensed)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert_condensed)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.IDataObject>

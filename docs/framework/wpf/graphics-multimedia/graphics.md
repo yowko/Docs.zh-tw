@@ -17,16 +17,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>圖形
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供整合支援多媒體、 向量圖形、 動畫和內容的組合，方便開發人員建置有趣的使用者介面和內容。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [點陣圖效果](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
  [筆刷](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
  [繪圖](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
@@ -35,9 +36,9 @@ ms.lasthandoff: 11/21/2017
  [圖形](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
  [轉換](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
  [圖形轉譯登錄設定](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  

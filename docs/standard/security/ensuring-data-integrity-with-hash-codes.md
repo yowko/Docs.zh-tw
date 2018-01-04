@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b5d54a608ae87a1b453b4fa2b4b351ac5fc9f068
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fcede920b0e57dee0449d8ff6d7c935b177dcbcd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>使用雜湊程式碼確定資料完整性
 雜湊值是可唯一識別資料的固定長度數值。 雜湊值以較小的數值代表大量的資料，所以可和數位簽章一起使用。 比起簽署更大的值，簽署雜湊值更有效率。 如需驗證透過不安全的通道傳送的資料完整性，雜湊值會相當有用。 可比較已接收資料的雜湊值和該資料傳送時的雜湊值，來判斷資料是否已變更。  
@@ -65,5 +68,5 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

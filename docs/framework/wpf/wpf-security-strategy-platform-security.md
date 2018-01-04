@@ -28,11 +28,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc8914f4bc891aefa191ba5cf2b659afda0f905b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 除了提供各種安全性服務之外，還會利用基礎平台 (包括作業系統、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 和 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]) 的安全性功能。 這三層安全性功能一起為 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了強大、深入防禦的安全性模型，即使其中一層失敗，還有兩層可以幫忙把關，如下圖所示：  
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **限制的網站**。 使用者指定不要信任的應用程式 (未受信任)。  
   
- [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對上述每個區域各提供一個預先定義的權限集合，而每個權限集合都包含符合其區域信任層級的權限。 這些活動包括：  
+ [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對上述每個區域各提供一個預先定義的權限集合，而每個權限集合都包含符合其區域信任層級的權限。 它們包括：  
   
 -   **FullTrust**。 從啟動的應用程式的**我的電腦**區域。 會授與所有可能的權限。  
   
@@ -218,7 +219,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] 加入並擴充了 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 中的安全性功能，以便繼續提供更好的安全性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [了解在 Windows XP SP2 的 Microsoft Internet Explorer 6 中的安全性](http://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
  [了解與在受保護的模式的 Internet Explorer 中工作](http://msdn.microsoft.com/library/bb250462.aspx)  
  [Windows XP Service Pack 3](http://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  

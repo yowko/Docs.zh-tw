@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5973c67b26e07bba69383cc625ff34493d825a41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字元實體和 XAML
 XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一些特定字元實體，以及針對 XAML 中其他 XML 概念的一般考量。  
@@ -54,13 +55,13 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
 ## <a name="xml-character-entities"></a>XML 字元實體  
  如前所述，通常用於撰寫 XAML 標記的大多數字元實體和逸出序列都是由 XML 定義的。 本主題並未提供這些實體的完整清單，您可以在外部文件 (例如 XML 規格) 中找到這些實體的詳細參考資料。 不過，為了方便起見，本主題會列出 XAML 標記中常用的 XML 字元實體。  
   
-|字元|實體|備註|  
+|字元|實體|注意|  
 |---------------|------------|-----------|  
-|& (連字號)|&amp;|必須用於屬性值和項目內容。|  
-|> (大於字元)|&gt;|必須用於屬性值，但可接受 > 做為項目內容，只要前面沒有 < 即可。|  
-|< (小於字元)|&lt;|必須用於屬性值，但\<是只要項目的內容可接受 > 未遵循。|  
-|" (雙引號)|&quot;|必須用於屬性值，但可接受雙引號 (") 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
-|' (單引號)|&apos;|必須用於屬性值，但可接受單引號 (') 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
+|& (連字號)|\&amp;|必須用於屬性值和項目內容。|  
+|> (大於字元)|\&gt;|必須用於屬性值，但可接受 > 做為項目內容，只要前面沒有 < 即可。|  
+|< (小於字元)|\&lt;|必須用於屬性值，但\<是只要項目的內容可接受 > 未遵循。|  
+|" (雙引號)|\&quot;|必須用於屬性值，但可接受雙引號 (") 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
+|' (單引號)|\&apos;|必須用於屬性值，但可接受單引號 (') 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
 |(數字字元對應)|&#*[整數]*; 或 （& s) #x*[十六進位]*;|XAML 支援將數字字元對應至使用中的編碼方式。|  
 |(不分行空格)|&\#160;（假設 utf-8 編碼）|對於非固定格式文件項目，或是接受文字的項目 (例如 WPF <xref:System.Windows.Controls.TextBox>)，即使 `xml:space="default"`，也不會在標記外部將不分行空格標準化。 (如需詳細資訊，請參閱[XAML 中的空白字元處理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)|  
   
@@ -72,7 +73,7 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
 ## <a name="xml-processing-instructions"></a>XML 處理指令  
  XAML 會根據 XML 規格來處理 XML 處理指令，該規格表示必須將指令傳遞通過。 .NET Framework XAML 服務中的 XAML 處理不使用任何處理指示。 其他使用 XAML 的現有架構，也都不會使用 XAML 的處理指令。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md)  

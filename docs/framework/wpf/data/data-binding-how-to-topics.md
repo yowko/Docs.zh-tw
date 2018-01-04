@@ -17,16 +17,17 @@ caps.latest.revision: "81"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01966709941d9aa1f4d430e8eac4a5c6787e315b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5980673372e52255808bb1d04c804e86f2116100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-how-to-topics"></a>資料繫結 HOW TO 主題
 本節中的主題描述如何使用資料繫結至資料繫結元素，從各種資料來源的 common language runtime (CLR) 物件和 XML 格式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立簡單繫結](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
  [指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [讓資料可於 XAML 中繫結](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  

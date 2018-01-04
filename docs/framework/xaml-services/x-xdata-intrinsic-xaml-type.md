@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 內建 XAML 類型
 可讓在 XAML 生產的 XML 資料島的放置。 XML 項目內`x:XData`應該不會視為 XAML 處理器來做預設 XAML 命名空間的一部分或任何其他的 XAML 命名空間。 `x:XData`可以包含任意格式正確的 XML。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |`elementDataRoot`|括住的資料島的單一根項目。 大部分的最終取用者，並沒有單一根節點的 XML 會被視為無效。 特別是，單一根節點時需要`x:XData`適用於 WPF 或許多其他 XML 來源使用資料繫結的技術做為 XML 資料來源。|  
-|`[elementData]`|選擇項。 代表 XML 資料的 XML。 項目資料可包含任意數目的項目和其他項目; 中可包含巢狀項目不過，適用於 XML 的一般規則。|  
+|`[elementData]`|選擇性。 代表 XML 資料的 XML。 項目資料可包含任意數目的項目和其他項目; 中可包含巢狀項目不過，適用於 XML 的一般規則。|  
   
 ## <a name="remarks"></a>備註  
  中的 XML 元素`x:XData`所有可能的命名空間和前置詞的資料中包含的 XMLDOM 物件可以重新宣告。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  技術上來說，`x:XData`可用來當做類型的任何屬性的內容<xref:System.Xml.Serialization.IXmlSerializable>。 不過，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是僅提供顯著的實作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Data.XmlDataProvider>  
  [資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Binding 標記延伸](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

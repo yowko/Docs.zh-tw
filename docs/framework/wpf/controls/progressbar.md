@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 871b81d8b1acff8a4c133251847cb143bc878450
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 403c95f77916742ccedc48ab002106c844313b5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar"></a>進度列
 A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。 <xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗，隨著作業的進度填滿系統的醒目提示色彩。  
@@ -30,7 +31,7 @@ A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。 <xref:System
   
  ![進度列](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ProgressBar>  

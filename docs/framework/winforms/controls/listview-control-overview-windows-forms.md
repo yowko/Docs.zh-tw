@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bda009beb429345d05aeba4e04f2ce1f07e627da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。 控制項有四個檢視模式： 使用 LargeIcon、 SmallIcon、 清單和詳細資料。  
@@ -43,12 +44,12 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
 |<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> 方法|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.Columns%2A> 屬性|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.DrawSubItem>事件|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、<xref:System.Windows.Forms.View.List> 或 <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、 <xref:System.Windows.Forms.View.List>或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法|<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.Groups%2A> 屬性|以外的所有模式<xref:System.Windows.Forms.View.List>|  
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 屬性|<xref:System.Windows.Forms.View.Details>.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性|<xref:System.Windows.Forms.View.LargeIcon>、<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性|<xref:System.Windows.Forms.View.LargeIcon>、 <xref:System.Windows.Forms.View.SmallIcon>或 <xref:System.Windows.Forms.View.Tile>|  
   
  索引鍵內容<xref:System.Windows.Forms.ListView>控制項是<xref:System.Windows.Forms.ListView.Items%2A>，其中包含由控制項所顯示的項目。 <xref:System.Windows.Forms.ListView.SelectedItems%2A>屬性包含控制項中目前選取的項目集合。 使用者可以選取多個項目，例如拖放到另一個控制項，一次的數個項目，如果<xref:System.Windows.Forms.ListView.MultiSelect%2A>屬性設定為`true`。 <xref:System.Windows.Forms.ListView>控制項可以顯示的項目旁邊的核取方塊，如果<xref:System.Windows.Forms.ListView.CheckBoxes%2A>屬性設定為`true`。  
   
@@ -56,7 +57,7 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
   
  <xref:System.Windows.Forms.ListView>控制項也支援視覺化樣式和其他可用的功能在 Windows XP 平台，包括群組、 並排顯示檢視和 插入標記。 如需詳細資訊，請參閱[Windows XP 功能和 Windows Form 控制項](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ListView>  
  [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  

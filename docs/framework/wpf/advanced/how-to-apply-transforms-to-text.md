@@ -26,11 +26,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ed10a00d3d62f7eae91e5932a917be692de868b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9c1e26b31907e7794492b88ea3a696d3db4d37d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-transforms-to-text"></a>如何：對文字套用轉換
 轉換可以變更應用程式中文字的顯示。 下列範例會使用不同類型的呈現轉換來影響的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/22/2017
 > [!NOTE]
 >  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>提供一組豐富的功能提供陰影效果。 如需詳細資訊，請參閱[建立文字陰影](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對文字套用動畫](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)

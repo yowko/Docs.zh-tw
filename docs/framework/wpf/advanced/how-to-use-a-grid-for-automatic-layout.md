@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d18563c44381a276d15996dff3f9552c46833b4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbd8bd7e36b7b773837b839e77ec88a8e7c8f0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>如何：針對自動配置使用格線
 此範例說明如何使用自動版面配置方法中的格線，以建立當地語系化的應用程式。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
  ![格線範例](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
 Grid  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)

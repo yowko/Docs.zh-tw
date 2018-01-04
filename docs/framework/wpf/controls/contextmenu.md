@@ -18,11 +18,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5098672b52f54ac618731a7007758a5dd516379
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a917a74650893aa7e8a4a10758aab48e164b822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu>可讓控制項以顯示<xref:System.Windows.Controls.Menu>專屬於控制項的內容。 一般而言，<xref:System.Windows.Controls.ContextMenu>中公開[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]透過滑鼠按鈕或鍵盤的功能表按鈕。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
  ![ContextMenu 狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 ContextMenu 不同狀態  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
   
 ## <a name="reference"></a>參考資料  

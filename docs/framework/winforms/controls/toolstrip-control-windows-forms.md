@@ -16,16 +16,17 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1ce887d47e82a3981eb745f23c881d54c38927e1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3f5f8ca82cf128647e7dd80676cad629f8480a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 控制項 (Windows Form)
 <xref:System.Windows.Forms.ToolStrip> 控制項可以在 Windows Form 應用程式中裝載功能表、控制項和使用者控制項的工具列。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ToolStrip> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.ToolStrip>  
  描述 <xref:System.Windows.Forms.ToolStrip> 類別並且連結到它所有的成員。  

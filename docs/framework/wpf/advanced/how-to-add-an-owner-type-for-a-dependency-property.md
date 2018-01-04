@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 079f08e1c330b710748ea6bb1aab8ccfb7ae7016
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b93934c8f84a7257445b530e27896342bdd73aea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>如何：加入相依性屬性的擁有者類型
 這個範例示範如何將類別加入做為註冊不同類型的相依性屬性的擁有者。 這樣做， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]讀取器和屬性系統都能夠辨識類別做為其他擁有者的屬性。 選擇性地加入做為擁有者可讓加入的類別，以提供特定類型的中繼資料。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 11/21/2017
 [!code-csharp[PropertySystemEsoterics#UnrelatedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#unrelatedstatecontrol)]
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

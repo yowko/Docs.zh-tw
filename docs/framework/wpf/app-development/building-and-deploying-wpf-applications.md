@@ -18,11 +18,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-deploying-wpf-applications"></a>建置和部署 WPF 應用程式
 建置和部署模型可讓您建置和部署應用程式，在本機和遠端電腦上，包括下列：  
@@ -33,10 +34,10 @@ ms.lasthandoff: 10/22/2017
   
 -   ClickOnce 部署：.NET 發行與部署系統。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
  [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [操作說明主題](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  MSBuild  

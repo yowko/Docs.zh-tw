@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42f208d10b1c111f98af3c803148590466baddf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
 .NET Framework 會提供您能夠輕鬆地開發您自己的控制項。 您可以建立使用者控制項，也就是一組標準的控制項繫結在一起的程式碼，或您可以設計自己的控制項，從頭組成。 您甚至可以使用繼承建立繼承自現有的控制項的控制項，並將新增到其繼承的功能。 方法使用時，.NET Framework 提供的功能，以繪製自訂的圖形化介面，任何您所建立的控制項。  
@@ -85,7 +86,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 > [!NOTE]
 >  使用<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>實作非矩形控制項的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.Region%2A>  
  <xref:System.Windows.Forms.ControlStyles>  
  <xref:System.Drawing.Graphics>  

@@ -26,11 +26,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08cdc3dcb9e6d73b0d3b95915bf955ee27782782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸模組概念，包括其語法規則、用途，以及其根據的類別物件模型。 標記延伸模組是 XAML 語言的一般功能，以及 XAML 服務之 .NET 實作的一般功能。 本主題會具體詳述 WPF XAML 中所使用的標記延伸模組。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/21/2017
   
  用於物件項目語法以填入屬性項目時，大部分標記延伸模組內不會有內容或任何進一步屬性項目語法。 因此，您可以關閉物件項目標記，且不提供任何子項目。 只要 XAML 處理器遇到任何物件項目時，就會呼叫該類別的建構函式，以具現化從剖析的項目所建立的物件。 標記延伸模組類別並無不同︰如果您想要標記延伸模組可用於物件項目語法，則必須提供預設建構函式。 某些現有標記延伸模組有至少一個必要屬性值，而且必須指定一個必要屬性值才能進行有效初始化。 如果是這樣，該屬性值一般會指定為物件項目上屬性 (property) 的屬性 (attribute)。 在 [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)和 [WPF XAML 延伸功能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)參考頁面中，將會標註具有必要屬性 (和必要屬性的名稱) 的延伸模組。 參考頁面也會標註是否不允許特定標記延伸模組的物件項目語法或屬性語法。 值得注意的案例是 [x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)，這無法支援屬性語法，因為必須在標記內將該陣列的內容指定為內容。 陣列內容會當成一般物件處理；因此，沒有屬性的預設類型轉換子是可行的。 此外，[x:Array 標記延伸模組](../../../../docs/framework/xaml-services/x-array-markup-extension.md)需要 `type` 參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  

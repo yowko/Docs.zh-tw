@@ -24,11 +24,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b75319b5a07ac2ee1601f30394da641eb2b781c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commanding-overview"></a>命令概觀
 <a name="introduction"></a> 命令是處理比裝置輸入更接近語意層級的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的輸入機制。 命令範例包含許多應用程式中都有的 [複製]、[剪下] 和 [貼上] 作業。  
@@ -193,7 +194,7 @@ ms.lasthandoff: 11/21/2017
   
  如需建立自訂的範例<xref:System.Windows.Input.RoutedCommand>，請參閱[建立自訂的 RoutedCommand 範例](http://go.microsoft.com/fwlink/?LinkID=159980)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Input.RoutedCommand>  
  <xref:System.Windows.Input.CommandBinding>  
  <xref:System.Windows.Input.InputBinding>  

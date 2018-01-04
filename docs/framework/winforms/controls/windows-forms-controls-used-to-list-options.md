@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>用來列出選項的 Windows Form 控制項
 如果您想要為使用者提供一份可從中選擇的選項，您可以加入 Windows Form 加入各種不同的控制項。 多少根據您想要限制使用者的輸入，您可以加入<xref:System.Windows.Forms.ListBox>控制項，<xref:System.Windows.Forms.ComboBox>控制項，或<xref:System.Windows.Forms.CheckedListBox>控制項。 使用下列連結來判斷最佳的控制項符合您的需求。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [何時使用 Windows Forms ComboBox 取代 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  建議您根據需求和限制您的 Windows Form 的適當清單為基礎控制項。  
   
@@ -46,13 +47,13 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.CheckedListBox>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.ComboBox>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.ListBox>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  

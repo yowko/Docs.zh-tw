@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f9d0ff535d0784343b36d0b2df48b123ff3beef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱[資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.DataTemplate>也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A>也可以指定為型別名稱，而不是使用明確[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱[資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.ResourceDictionary>  
  [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
  [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)  

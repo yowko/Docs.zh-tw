@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6c8cd779dba0e7ce559e29af7b16bf04b3d0dc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96264456ac6afc569c46caf5faed6c37ea22bc8e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>實作抽象的基底類別
 嚴格來說，當另一個類別會從其衍生類別成為基底類別。 不過，為了本節中，基底類別是主要設計成提供的通用抽象概念，或重複使用一些其他類別的預設實作透過繼承的類別。 繼承階層架構的抽象概念，在階層的根和數個在底部的自訂實作之間的中間通常坐基底類別。  
@@ -41,6 +44,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

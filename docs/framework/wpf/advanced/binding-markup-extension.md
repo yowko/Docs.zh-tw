@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d2bbca799e1eda1abae3d199dd71e004b17c4c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-markup-extension"></a>繫結標記延伸
 延後建立中繼運算式物件及解譯資料內容套用至項目，且在執行階段與其繫結的繫結的資料值的屬性值。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 識別可能的繫結群組的字串。 這是相對較進階的繫結的概念。請參閱 < 參考頁面的<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Converter%2A>： 可設定為`bindProp` = `value`字串在運算式中，但若要這樣做需要物件參考的值，例如[StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。 值在此情況下會為自訂轉換子類別的執行個體。  
   
@@ -77,15 +78,15 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可設定為`bindProp` = `value`字串運算式，但這會相依於所傳遞的值的類型。 如果傳遞參考類型，需要物件參考，例如巢狀[StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.IsAsync%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Mode%2A>:*值*是中的常數名稱<xref:System.Windows.Data.BindingMode>列舉型別。 例如，`{Binding Mode=OneWay}`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Path%2A>： 為資料物件或一種一般的物件模型描述路徑的字串。 格式提供數個不同的慣例周遊無法充分說明本主題中的物件模型。 請參閱[PropertyPath XAML 語法](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)。  
   
@@ -99,9 +100,9 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是中的常數名稱<xref:System.Windows.Data.UpdateSourceTrigger>列舉型別。 例如，`{Binding UpdateSourceTrigger=LostFocus}`。 特定控制項可能會有不同的預設值，這個繫結屬性。 請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
+-   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。 請參閱＜備註＞。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>： 布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
+-   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>： 布林值，可以是`true`或`false`。 預設值為 `false`。 請參閱＜備註＞。  
   
 -   <xref:System.Windows.Data.Binding.XPath%2A>： 描述 XML 資料來源的 XMLDOM 路徑的字串。 請參閱[繫結至使用 XMLDataProvider 和 XPath 查詢 XML 資料](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
  `Binding`是中的非典型的標記延伸<xref:System.Windows.Data.Binding>實作 WPF 的 XAML 實作的擴充功能的類別也會實作數個其他的方法和不與 XAML 相關的屬性。 其他成員主要要讓<xref:System.Windows.Data.Binding>更具彈性且獨立的類別可以處理許多的資料繫結案例，除了以 XAML 標記延伸的方式運作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Data.Binding>  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc77668d9544cb37a8c9d1fcbdc3ed0351bc9eef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35bcd5b3f53e8da72e8bd598641f1da87d424a2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>如何：在 TextBox 控制項中啟用定位字元
 這個範例示範如何啟用做為標準輸入中的定位字元接受<xref:System.Windows.Controls.TextBox>控制項。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[TextBox_EnablingTab#_AcceptsTab](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_EnablingTab/CS/Window1.xaml#_acceptstab)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

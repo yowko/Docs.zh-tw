@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5718f19318121c2025b9d92a5947574289c1f4d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-serialization"></a>自訂序列化
 自訂序列化是控制型別序列化與還原序列化的程序。 控制序列化就可確保序列化相容性，也就是在類型版本之間進行序列化與還原序列化的作業，而不違反類型的核心功能性。 例如，在第一版的型別中，可能只有兩個欄位。 在型別的下一版中，加入了更多的欄位。 然而第二版的應用程式必須對這兩種型別進行序列化及還原序列化。 下列章節會說明控制序列化的方法。
@@ -189,7 +192,7 @@ End Class
   
  物件由內向外重新建構；在還原序列化期間呼叫方法可能會造成無法想像的副作用，因為呼叫的方法可能參考該呼叫尚未還原序列化時的物件參考。 如果還原序列化的類別實作 <xref:System.Runtime.Serialization.IDeserializationCallback>，在整個物件圖形還原序列化後，即自動呼叫 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> 方法。 此時，所有參考的子物件已完整還原。 雜湊表是不使用事件接聽程式就很難還原序列化的常見類別範例。 在還原序列化期間擷取索引鍵與值組很容易，但將這些物件加回雜湊表卻會造成問題，因為無法保證從雜湊表衍生的類別已還原序列化。 因此於此階段呼叫雜湊表上的方法實屬不當。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [二進位序列化](binary-serialization.md)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  
  [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

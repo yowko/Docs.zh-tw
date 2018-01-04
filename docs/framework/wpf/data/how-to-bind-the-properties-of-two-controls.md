@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff3da19d33e747ec514de9cd24fa08ccd6ab13bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e79b1f9f00e8c76f94bf4386a284607f526624a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>操作說明：繫結兩個控制項的屬性
 這個範例示範如何將一個具現化的控制項屬性繫結至另一個使用<xref:System.Windows.Data.Binding.ElementName%2A>屬性。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 11/21/2017
   
  **請注意**繫結目標屬性 (在此範例中，<xref:System.Windows.Controls.Panel.Background%2A>屬性) 必須是相依性屬性。 如需詳細資訊，請參閱 [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

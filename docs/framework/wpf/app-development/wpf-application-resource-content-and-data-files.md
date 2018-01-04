@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19fd82daabd5ed12776b2deee6bc850529a6ef23
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]應用程式通常取決於檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 提供設定、識別及使用這些資料檔案類型 (稱為應用程式資料檔案) 的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
@@ -248,5 +249,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="rebuilding-after-changing-build-type"></a>在變更組建類型之後重建  
  在變更應用程式資料檔案的組建類型之後，您必須重建整個應用程式，以確認套用這些變更。 若您只建置應用程式，則不會套用變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

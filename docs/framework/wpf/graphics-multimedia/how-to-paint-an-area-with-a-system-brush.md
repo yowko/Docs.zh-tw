@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 355df3718d90768cdfa8bc9780c44c19eb4bf9bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>操作說明：使用系統筆刷繪製區域
 <xref:System.Windows.SystemColors>類別提供的存取權系統筆刷和色彩，例如<xref:System.Windows.SystemColors.ControlBrush%2A>， <xref:System.Windows.SystemColors.ControlBrushKey%2A>，和<xref:System.Windows.SystemColors.DesktopBrush%2A>。 系統筆刷<xref:System.Windows.Media.SolidColorBrush>使用指定的系統色彩繪製區域的物件。 系統筆刷只能產生純色填滿，因此無法用於產生漸層。  
@@ -57,6 +58,6 @@ ms.lasthandoff: 11/21/2017
   
  如需示範如何使用系統色彩漸層中的範例，請參閱[漸層中使用系統色彩](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在漸層中使用系統色彩](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
  [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

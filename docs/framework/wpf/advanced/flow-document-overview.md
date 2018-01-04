@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="flow-document-types"></a>非固定格式文件類型  
  非固定格式文件內容的外觀和顯示方式，取決於裝載非固定格式內容的物件。 有四個控制項支援的非固定格式內容的檢視： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。 以下簡短說明這些控制項。  
   
- **注意：** <xref:System.Windows.Documents.FlowDocument>無須直接裝載非固定格式內容，因此所有的這些檢視控制項耗用<xref:System.Windows.Documents.FlowDocument>可以讓非固定格式內容的裝載。  
+ **注意：** <xref:System.Windows.Documents.FlowDocument>無須直接裝載非固定格式內容，因此所有的這些檢視控制項耗用<xref:System.Windows.Documents.FlowDocument>可以讓非固定格式內容的裝載。
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>包含可讓使用者以動態方式選擇不同的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個頁面-a-次 （活頁簿讀取格式） 檢視模式，以及連續捲動 （無底邊） 的檢視模式的功能。 如需有關這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。 如果您不需要不同的檢視模式之間動態切換<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供輕量型流程固定的特定檢視模式的內容檢視器。  
@@ -358,10 +359,10 @@ ms.lasthandoff: 11/21/2017
   
  請參閱[WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)如需有關印刷樣式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
  [TextElement 內容模型概觀](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a0af1015747e2f27b19c2cac2c896dd60214264
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 615d46b949a70c337204552b7bcf8b2934054b77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Form 和 WPF 屬性對應
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]技術有兩個類似但不同屬性的模型。 *屬性對應*支援兩種架構之間的互通性，並提供下列功能：  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/21/2017
   
 -   父代  
   
--   Region  
+-   區域  
   
 -   RightToLeft  
   
@@ -144,7 +145,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No> 對應至 <xref:System.Windows.FlowDirection.LeftToRight>。<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes> 對應至 <xref:System.Windows.FlowDirection.RightToLeft>。|  
 |<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Integration.ElementHost>控制集<xref:System.Windows.UIElement.Visibility%2A>屬性上裝載的項目，使用下列規則：<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true`對應至<xref:System.Windows.Visibility.Visible>。<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false`對應至<xref:System.Windows.Visibility.Hidden>。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  

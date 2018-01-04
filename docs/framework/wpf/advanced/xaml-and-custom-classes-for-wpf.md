@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c494b386cc52786c5adfbcbbea78b912bbf9887d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 架構中所實作的 XAML 支援使用任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 語言定義自訂類別或結構，然後使用 XAML 標記來存取該類別。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="serializing-xaml"></a>序列化 XAML  
  在特定情況下，例如，如果您是控制項作者，則可能也要確保可在 XAML 中具現化的任何物件表示也都可以序列化回對等的 XAML 標記。 本主題未描述序列化需求。 請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)和[項目樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  

@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-ink-input-control"></a>建立筆墨輸入控制項
 您可以建立的自訂控制項，動態及靜態呈現筆墨。 這就是，轉譯為使用者繪製筆觸，導致出現 「 資料流程 」 從 tablet 畫筆，並後顯示筆墨會加入至控制項，透過 tablet 畫筆，從剪貼簿 貼上或從檔案載入的筆墨的筆墨。 若要以動態方式呈現筆墨，必須使用您的控制項<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以靜態方式轉譯筆墨，您必須覆寫手寫筆事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，和<xref:System.Windows.UIElement.OnStylusUp%2A>) 來收集<xref:System.Windows.Input.StylusPoint>資料，建立筆觸，並將其新增<xref:System.Windows.Controls.InkPresenter>（呈現在控制項上的筆墨）。  
@@ -108,6 +109,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="conclusion"></a>結論  
  您可以建立會收集並呈現筆墨藉由覆寫手寫筆事件方法的控制項。 藉由建立您自己的控制項，衍生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別，並將它們插入到<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>，您可以實作幾乎任何想像數位筆跡與行為。 您可以存取<xref:System.Windows.Input.StylusPoint>產生做為它的資料，讓您有機會自訂<xref:System.Windows.Input.Stylus>輸入，並轉譯為適合您的應用程式畫面上。 因為這類低層級存取<xref:System.Windows.Input.StylusPoint>資料，您可以實作筆墨收集及呈現它以獲得最佳效能，您的應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [筆跡進階處理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [存取和管理畫筆輸入](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

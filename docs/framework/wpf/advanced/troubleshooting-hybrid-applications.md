@@ -20,11 +20,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2bcd9572ab5f8547916d95fc11e0cffc864ad2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da0fed9a491c91881a9e0296e2c849d8430bb954
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合應用程式疑難排解
 <a name="introduction"></a> 本主題列出一些會在撰寫混合式應用程式時發生的常見問題，這類應用程式同時使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術。  
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="elementhost-and-ime"></a>ElementHost 和 IME  
  WPF 控制項裝載於<xref:System.Windows.Forms.Integration.ElementHost>目前不支援<xref:System.Windows.Forms.Control.ImeMode%2A>屬性。 若要變更<xref:System.Windows.Forms.Control.ImeMode%2A>裝載的控制項將會忽略。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 設計工具中的互通性](http://msdn.microsoft.com/en-us/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d117d57e5cc761aa2f31fd6531bff8d96ea30dc3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c6b4dc6ee04b20f47599bad84dda4648da255ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>操作說明：使用主要畫面格建立色彩的動畫
 此範例示範如何以動畫方式顯示<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>所使用的主要畫面格。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.SolidColorBrush.Color%2A>  
  <xref:System.Windows.Media.SolidColorBrush>  
  <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>  

@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
 簡單的方法，使用這個章節配置中的指導方針情況下，當套用一致的方式，請識別項的類型、 成員和參數容易閱讀。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 |介面|依照 pascal 命名法|`public interface IEnumerable { ... }`|  
 |方法|依照 pascal 命名法|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |屬性|依照 pascal 命名法|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|事件|依照 pascal 命名法|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Event - 事件|依照 pascal 命名法|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |欄位|依照 pascal 命名法|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |列舉值|依照 pascal 命名法|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |參數|依照 camel 命名法|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
@@ -112,6 +115,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

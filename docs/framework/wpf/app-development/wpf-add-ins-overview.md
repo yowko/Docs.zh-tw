@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 290682542a0accaf38408127f7358625abca14af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。本主題說明 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何擴大 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型來啟用這些案例、其背後的架構、其優點及其限制。  
@@ -292,10 +293,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="performance-optimization"></a>效能最佳化  
  根據預設，當使用多個應用程式定義域時，每個應用程式需要的各種 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件都會載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會提供方法讓您降低啟動時間，如已載入，指示應用程式在各應用程式定義域間共用組件。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.LoaderOptimizationAttribute>  
  [增益集和擴充性](../../../../docs/framework/add-ins/index.md)  
  [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)  
  [.NET framework 遠端處理概觀](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [讓物件可遠端處理](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
- [操作說明主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)

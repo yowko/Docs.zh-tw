@@ -15,16 +15,17 @@ caps.latest.revision: "90"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ecb85c1cb6bca654433ccddfb895bc361a4e2b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd866c67a5885a378dace6e14e280b5efe630695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography-how-to-topics"></a>印刷樣式 HOW TO 主題
 本節中的主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支援豐富您的應用程式中的文字。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立文字裝飾](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
  [指定超連結是否要加上底線](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [對文字套用轉換](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [繪製文字至視覺效果](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
  [在 XAML 中使用特殊字元](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Documents.Typography>  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [OpenType 字型功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

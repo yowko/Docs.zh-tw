@@ -23,11 +23,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16c3184c329fa83ddf091326c97d6faf2e2c88f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用影像、繪圖和視覺效果繪製
 本主題描述如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>物件以使用影像繪製區域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -144,7 +145,7 @@ DrawingBrush 所繪製的物件
   
  如需有關的並排顯示功能<xref:System.Windows.Media.TileBrush>物件，請參閱[TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.ImageBrush>  
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  

@@ -18,11 +18,12 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fcef86bb9cb0ee2cb038b4737af3f54f8c505b31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e13ad75ca7c6b027ea1423e13934228a2ace4c2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wrappanel"></a>WrapPanel
 <xref:System.Windows.Controls.WrapPanel>元素的從左到右，從內容換至下一行，其包含的方塊邊緣的連續位置放置子項目。  

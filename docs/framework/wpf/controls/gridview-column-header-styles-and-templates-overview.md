@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 資料行行首樣式和範本概觀
 這個概觀討論的屬性，用來自訂中的資料行標頭的優先順序<xref:System.Windows.Controls.GridView>檢視模式<xref:System.Windows.Controls.ListView>控制項。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  <sup>1</sup>如**標頭範本內容**，如果您設定範本及範本選擇器內容、 範本屬性會優先採用。 例如，如果您同時設定<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>屬性<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>屬性會優先。  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+## <a name="see-also"></a>請參閱  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)

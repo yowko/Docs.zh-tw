@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26df55c9658721eb907db5837ac467a5899e84eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大化 WPF 3D 效能
 當您使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]建置 3D 控制項，並包含在應用程式中的 3D 場景，它是很重要考量效能最佳化。 本主題提供 3D 類別和應用程式，以及當您使用這些最佳化效能的建議事項會影響效能的屬性的清單。  
@@ -68,5 +69,5 @@ ms.lasthandoff: 10/18/2017
 |亮色調|黑色燈號不會顯示，但是這些物件會加入要呈現的時間;請考慮省略它們。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|最小化的大型集合，在建構階段[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，例如 MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>，和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，預先調整大小的集合值的母體擴展之前。 可能的話，請傳遞的集合的建構函式已預先填入的資料結構，例如陣列或清單。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

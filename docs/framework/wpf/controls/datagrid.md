@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63eb1b7aec0c65192f67035fc7bc624fa1d2ae81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid>控制項可讓您顯示和編輯資料從許多不同來源，例如，從 SQL 資料庫、 LINQ 查詢或任何其他可繫結的資料來源。 如需詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|描述如何設定新的 WPF 專案，加入實體架構項目、 設定來源，以及顯示資料的<xref:System.Windows.Controls.DataGrid>。|  
 |[操作說明：將資料列詳細資料加入至 DataGrid 控制項](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|描述如何建立資料列詳細資料，如<xref:System.Windows.Controls.DataGrid>。|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 |[操作說明：在 DataGrid 控制項中分組、排序和篩選資料](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何檢視中的資料<xref:System.Windows.Controls.DataGrid>透過分組、 排序和篩選的資料不同的方式。|  
 |[DataGrid 控制項中的調整大小選項](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|描述如何控制中的絕對和自動調整大小<xref:System.Windows.Controls.DataGrid>。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DataGrid>  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  

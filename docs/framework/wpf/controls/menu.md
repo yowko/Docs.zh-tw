@@ -17,11 +17,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0939788210819279059729e21f9827124eb13f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba9f7b729210224571d973519c08737ac386cfa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menu"></a>功能表
 A<xref:System.Windows.Controls.Menu>是控制項可讓命令或事件處理常式相關聯的項目階層式組織。 每個<xref:System.Windows.Controls.Menu>可以包含多個<xref:System.Windows.Controls.MenuItem>控制項。 每個<xref:System.Windows.Controls.MenuItem>可以叫用命令，或叫用`Click`事件處理常式。 A<xref:System.Windows.Controls.MenuItem>也可以有多個<xref:System.Windows.Controls.MenuItem>做為子系，形成子功能表項目。  
@@ -31,7 +32,7 @@ A<xref:System.Windows.Controls.Menu>是控制項可讓命令或事件處理常�
  ![功能表狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
 功能表中的不同狀態  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [功能表概觀](../../../../docs/framework/wpf/controls/menu-overview.md)  
   
 ## <a name="reference"></a>參考資料  

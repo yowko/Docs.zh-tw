@@ -17,16 +17,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468ba5546670a0aec6e1f6c59b7d19b83e6ff24f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 05bf330f17e5ebfb00037fae5dd8c44ce337322d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollbar"></a>ScrollBar
 A<xref:System.Windows.Controls.Primitives.ScrollBar>可讓您檢視的內容在目前的檢視區之外滑動<xref:System.Windows.Controls.Primitives.Thumb>來顯示內容。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [自訂 ScrollBar 上捲動方塊的大小](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
 ## <a name="reference"></a>參考資料  

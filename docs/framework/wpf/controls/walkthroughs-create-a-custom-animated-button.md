@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>逐步解說：建立自訂動畫按鈕
 正如其名，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]適合用來對客戶的豐富經驗。 這些逐步解說會示範如何自訂的外觀和行為 （包括動畫） 的按鈕。 完成這項自訂，讓您可以套用這個自訂按鈕輕鬆地至任何按鈕在應用程式中使用的樣式和範本。 下圖將顯示您將建立的自訂的按鈕。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  向量圖形組成按鈕的外觀會建立使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]將會功能更強大且可延伸，則會是類似於 HTML。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]您可以在使用 Microsoft Visual Studio 或在 [記事本]，以手動方式輸入，或者您可以使用視覺化設計工具，例如 Microsoft Expression Blend。 Expression Blend 的運作方式是建立基礎[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼，因此這兩種方法建立相同的圖形。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 Microsoft Expression Blend 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  示範如何建立具有自訂行為的按鈕，使用 Expression Blend 設計工具功能。  
   

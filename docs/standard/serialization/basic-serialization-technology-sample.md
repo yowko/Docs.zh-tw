@@ -12,11 +12,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae1d5be9a8e6e13473bd537ba3b0742cf131fad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3d269b7603c63db73fdcbab91b777e69b228cc9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 [下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -87,7 +90,7 @@ ms.lasthandoff: 12/02/2017
   
     -   <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO>  
  <xref:System.IO.File>  
  <xref:System.IO.FileStream>  

@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cb3a5391d6e24643b03a880d3695a11baceca3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-content-model"></a>WPF 內容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是展示平台，提供許多以顯示不同類型內容為主要目的的控制項和類控制項類型。 為了判斷要使用哪一種控制項或從哪一種控制項衍生，您應該了解特定控制項顯示哪些物件的效果最佳。  
@@ -262,5 +263,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="classes-that-format-your-text"></a>格式化文字的類別  
  <xref:System.Windows.Documents.TextElement>和其相關的類別可讓您格式化文字。 <xref:System.Windows.Documents.TextElement>物件包含與格式化文字方塊中的<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>物件。 兩種主要類型<xref:System.Windows.Documents.TextElement>物件<xref:System.Windows.Documents.Block>項目和<xref:System.Windows.Documents.Inline>項目。 A<xref:System.Windows.Documents.Block>項目代表一個區塊的文字，例如段落或清單。 <xref:System.Windows.Documents.Inline>元素代表區塊中文字的一部分。 許多<xref:System.Windows.Documents.Inline>類別可讓您指定要套用的文字格式。 每個<xref:System.Windows.Documents.TextElement>具有自己的內容模型。 如需詳細資訊，請參閱 [TextElement 內容模型概觀](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [進階](../../../../docs/framework/wpf/advanced/index.md)

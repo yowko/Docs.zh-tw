@@ -17,14 +17,15 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-how-to-topics"></a>數位筆墨 HOW TO 主題
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [從自訂控制項選取筆墨](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
   [將自訂資料新增至筆墨資料](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
   [清除自訂控制項上的筆墨](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Form 中的使用者輸入驗證
 當使用者將資料輸入您的應用程式時，您可以確認資料有效，您的應用程式使用它之前。 您可能需要某些文字欄位不是零長度、 欄位會格式化為電話號碼或其他類型的格式正確的資料，或字串不包含任何不安全的字元可用來對資料庫的安全性造成損害。 Windows Form 提供幾種方式可以驗證您的應用程式中的輸入。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  如果您強制以這種方式關閉表單，表單的控制項中有未儲存的任何資料會遺失。 此外，強制回應表單不會驗證控制項的內容，在關閉時。 您仍然可以使用控制項驗證鎖定焦點至控制項，但是您不必擔心與關閉表單相關聯的行為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
  <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>  

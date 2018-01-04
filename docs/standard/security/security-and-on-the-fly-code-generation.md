@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c00c66be812f2a1cdfdf761f681d2a0561a284bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c6bb895979fb44616349505a07591f9ced9fedac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和產生作業中的程式碼
 某些程式庫的運作方式為產生程式碼，然後執行這個程式碼以進行呼叫端的特定作業。 這種方法的基本問題在於程式庫可能會代表較不受信任的程式碼來產生程式碼，然後以較高的信任層級來執行這個程式碼。 當呼叫端可能影響程式碼產生時，這個問題會更嚴重，因此您必須確保產生的程式碼只會是您認為安全的程式碼。  
@@ -33,5 +36,5 @@ ms.lasthandoff: 10/18/2017
   
  當您編譯程式碼時，請考慮惡意程式是否有可能修改程式碼。 在編譯器讀取原始程式碼之前，或在您的程式碼載入 .dll 檔案之前，是不是有空檔時間可以讓惡意程式碼變更磁碟上的原始程式碼？ 如果是，您必須視需要使用檔案系統中的存取控制清單，來保護含有這些檔案的目錄。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55b707e4738a77a8fb093071ef6f5105b2200c16
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f1da933a2ee7c179a55da7d33c61539d440eabc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>如何：使用放射狀漸層繪製區域
 這個範例示範如何使用<xref:System.Windows.Media.RadialGradientBrush>類別來使用放射狀漸層繪製區域。  

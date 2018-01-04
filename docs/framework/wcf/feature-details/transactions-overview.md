@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 480c7ca971eeb7f232517057efe4033f177b26b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 異動概觀
 異動提供了將一組動作或作業分組為單一個不可分割的執行單位。 交易就是具有下列屬性的作業集合：  
@@ -50,6 +51,6 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 交易屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [ServiceModel 交易屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- [啟用交易流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+## <a name="see-also"></a>請參閱  
+ [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
+ [啟用異動流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

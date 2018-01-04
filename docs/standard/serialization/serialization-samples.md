@@ -12,16 +12,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8db55e7206571fd09cb8a8ffe40992d135433919
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae2d60e6997271ad32271d0e21dc0894def485e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>.NET Framework 的序列化範例
 這個章節示範如何在 .NET Framework 序列化物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [基本序列化技術範例](../../../docs/standard/serialization/basic-serialization-technology-sample.md)  
  示範如何將記憶體中的物件 Graph 序列化成資料流。  
   

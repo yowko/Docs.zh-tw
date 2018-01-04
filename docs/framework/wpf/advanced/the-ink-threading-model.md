@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efbd05f88b962363e3b866fbf914f6d3a37823cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-ink-threading-model"></a>筆墨執行緒模型
 其中一個 Tablet PC 上的優點是筆墨的，它感覺更像是撰寫使用一般紙筆。  若要達成此目的，tablet 畫筆會收集輸入的資料，以更高的速率超過沒有滑鼠，而且會筆跡轉譯成使用者寫入。  應用程式的使用者介面 (UI) 執行緒不足，無法收集畫筆資料及呈現筆墨，因為它可能會被封鎖。  若要解決此，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用者撰寫的筆墨時，應用程式會使用兩個額外的執行緒。  

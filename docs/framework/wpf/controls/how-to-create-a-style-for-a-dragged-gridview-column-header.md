@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 503683de875b8853e219139800eef2a5417a1574
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 001d0ec45ad990ef366e7fc1216a7370aade9cb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>如何：為已拖曳的 GridView 資料行行首建立樣式
 這個範例示範如何變更外觀拖曳的<xref:System.Windows.Controls.GridViewColumnHeader>當使用者變更資料行的位置。  
@@ -39,11 +40,11 @@ ms.lasthandoff: 11/21/2017
 [!code-xaml[ListViewHeaderRoleStyle#ControlTemplateTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersend)]  
 [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.GridViewColumnHeader>  
  <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)

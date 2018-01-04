@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5fd9b374f9e2c367daa9869862ab717828049887
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 樣式和範本
 本主題描述樣式和範本<xref:System.Windows.Controls.DataGrid>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="datagrid-parts"></a>DataGrid 的組件  
  下表列出的具名組件<xref:System.Windows.Controls.DataGrid>控制項。  
   
-|組件|類型|說明|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|包含資料行標頭的資料列。|  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader 組件  
  下表列出的具名組件<xref:System.Windows.Controls.Primitives.DataGridRowHeader>項目。  
   
-|組件|類型|說明|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用來調整資料列行首，從頂端的項目。|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用來調整資料列行首，從最下方的項目。|  
@@ -132,14 +133,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter 組件  
  下表列出的具名組件<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>項目。  
   
-|組件|類型|說明|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|資料行標頭預留位置。|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter 狀態  
  下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>項目。  
   
-|VisualState 名稱|VisualStateGroup 名稱|說明|  
+|VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |InvalidFocused|ValidationStates|資料格不正確，而且具有焦點。|  
 |InvalidUnfocused|ValidationStates|資料格不是有效的而且沒有焦點。|  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader 組件  
  下表列出的具名組件<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>項目。  
   
-|組件|類型|說明|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用來調整資料行行首從左邊的項目。|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|用來調整資料行行首從右邊項目。|  
@@ -179,7 +180,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

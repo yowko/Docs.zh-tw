@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcc37651d6f1f304f15d3244c2504517a2a9fb76
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: eec4ec2fc7ba99081eaafa6803d20c99bebc6c2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>如何：使用線形漸層繪製區域
 這個範例示範如何使用<xref:System.Windows.Media.LinearGradientBrush>類別來使用線形漸層繪製區域。 在下列範例中，<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>與從黃色轉換成紅色以藍色至暗綠對角線性漸層繪製。  

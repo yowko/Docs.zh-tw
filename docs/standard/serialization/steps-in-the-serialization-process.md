@@ -11,11 +11,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2709af8e63428db2165ecd1256bce4f6690ae0a6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c232a76c8a000fcf4ac6c98d3f5c19e50869a362
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="steps-in-the-serialization-process"></a>序列化程序中的步驟
 在[格式子](xref:System.Runtime.Serialization.Formatter)上呼叫 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法時，物件序列化會遵循下列規則順序繼續進行：
@@ -30,6 +33,6 @@ ms.lasthandoff: 12/02/2017
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [二進位序列化](binary-serialization.md)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

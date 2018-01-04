@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eee894b536b19ec38a9809ab5dc49f5682c1df9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid 控制項中的調整大小選項
 各種選項可用來控制如何<xref:System.Windows.Controls.DataGrid>調整大小。 <xref:System.Windows.Controls.DataGrid>，個別的資料列和資料行中的<xref:System.Windows.Controls.DataGrid>、 可以設定為其內容自動調整大小，或可以設定為特定值。 根據預設，<xref:System.Windows.Controls.DataGrid>會成長並縮小為容納其內容的大小。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="setting-the-datagrid-size"></a>設定資料格大小  
  <xref:System.Windows.Controls.DataGrid>可以設定為自動在指定的界限內的大小或<xref:System.Windows.Controls.DataGrid>可以設定為特定的大小。 下表顯示可以將控制項的屬性<xref:System.Windows.Controls.DataGrid>大小。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Windows.FrameworkElement.Height%2A>|設定特定高度<xref:System.Windows.Controls.DataGrid>。|  
 |<xref:System.Windows.FrameworkElement.MaxHeight%2A>|設定的高度上限<xref:System.Windows.Controls.DataGrid>。 <xref:System.Windows.Controls.DataGrid>將垂直成長，直到達到此高度。|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示所提供的值<xref:System.Windows.Controls.DataGridLengthUnitType>結構。  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|自動調整大小模式大小預設<xref:System.Windows.Controls.DataGrid>儲存格和資料行標頭的內容為基礎的資料行。|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|資料格為基礎的自動調整大小模式大小<xref:System.Windows.Controls.DataGrid>資料行，不包含資料行標頭中的儲存格的內容為基礎的資料行。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
  中的資料行<xref:System.Windows.Controls.DataGrid>也可以設定為自動只在指定的界限內的大小或資料行可以設定為特定的大小。 下表顯示可以設定來控制資料行大小的屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|設定中的所有資料行上限<xref:System.Windows.Controls.DataGrid>。|  
 |<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|設定個別資料行的上限。 覆寫<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>。|  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="resizing-with-the-mouse"></a>使用滑鼠調整大小  
  使用者可以調整大小<xref:System.Windows.Controls.DataGrid>資料列和資料行，拖曳資料行或資料列行首分割線。 <xref:System.Windows.Controls.DataGrid>也支援自動調整大小的資料列和資料行按兩下資料列或資料行行首分割線。 若要防止使用者調整特定資料行大小，將<xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType>屬性`false`個別資料行。 若要防止使用者調整所有資料行大小，請設定<xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType>屬性`false`。 若要防止使用者調整所有資料列，將<xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType>屬性`false`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DataGrid>  
  <xref:System.Windows.Controls.DataGridColumn>  
  <xref:System.Windows.Controls.DataGridLength>  

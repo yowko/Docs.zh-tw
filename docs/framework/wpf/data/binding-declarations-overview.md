@@ -23,11 +23,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28b139f6ea2aad41e4d733e8c622699f2474b3e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 本主題討論可以用來宣告繫結的不同方法。  
@@ -137,8 +138,8 @@ ms.lasthandoff: 11/21/2017
   
 -   預設值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值而異<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>和<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>依據的繫結的相依性屬性。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [PropertyPath XAML 語法](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

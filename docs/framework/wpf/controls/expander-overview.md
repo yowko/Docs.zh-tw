@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff0a4432f6de8458e89132bbf46bab7568a04b60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f0623ed4c84247cc1759a203e3b95dd895cee2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expander-overview"></a>Expander 概觀
 <xref:System.Windows.Controls.Expander>控制項可用來提供可展開的區域，類似一個視窗，且包含標頭中的內容。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-the-alignment-properties"></a>使用對齊屬性  
  您可以藉由設定對齊內容<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>和<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>屬性<xref:System.Windows.Controls.Expander>控制項。 當您設定這些屬性時，對齊方式會套用到標頭，也會套用到所展開的內容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Expander>  
  <xref:System.Windows.Controls.ExpandDirection>  
- [操作說明主題](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

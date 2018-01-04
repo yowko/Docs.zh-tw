@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec61fdedc78b785dccf2c235cd17fd20b6d5abc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d29a572e2989ffb800434fdaab9756cb651c0816
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>操作說明：使用相對值指定轉換的原點
 此範例示範如何使用相對的值來指定來源的<xref:System.Windows.UIElement.RenderTransform%2A>套用至<xref:System.Windows.FrameworkElement>。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  如需有關轉換<xref:System.Windows.FrameworkElement>物件，請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Transform>  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

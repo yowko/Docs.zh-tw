@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 標記延伸概觀
 標記延伸是一種 XAML 技巧，用於取得不是基本類型和特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET Framework XAML 服務時，您可以使用 System.Xaml 組件中的一些預先定義 XAML 語言標記延伸。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者，您可以使用特定架構所定義的標記延伸 (如果已參考該架構)。  
@@ -164,7 +165,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  如果您是在儲存路徑上使用 XAML 節點資料流，則物件圖形呈現中通常不會有任何項目可通知您：要序列化的物件一開始是由標記延伸使用方式和 `ProvideValue` 結果所提供。 如果案例需要針對來回處理保存標記延伸使用方式，同時擷取物件圖形中的其他變更，則必須設計自己的技術來保留原始 XAML 輸入中的標記延伸使用方式知識。 例如，若要還原標記延伸使用方式，您可能需要在儲存路徑上使用節點資料流才能還原標記延伸使用方式，或在原始 XAML 與往返 XAML 之間執行某種類型的合併。 一些實作 XAML 的架構 (例如 WPF) 使用中繼類型 (運算式)，協助代表標記延伸使用方式提供值的情況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Markup.MarkupExtension>  
  [XAML 的類型轉換子和標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
  [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

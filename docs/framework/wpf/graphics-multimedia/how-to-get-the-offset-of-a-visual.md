@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22c35a683f479660a17f11e44f9a0721f9d35968
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee18503bdd6100cbe7a62ac70d7ea0848fb124eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>如何：取得 Visual 的位移
 這些範例會示範如何擷取相對於其父代，或任何上階或下階的視覺物件的位移的值。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
  位移會考量<xref:System.Windows.FrameworkElement.Margin%2A>所有物件的值。 在此情況下，<xref:System.Windows.Vector.X%2A>為-4，和<xref:System.Windows.Vector.Y%2A>為-4。 位移的值是負值，因為父物件的位移負相對於它的子物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

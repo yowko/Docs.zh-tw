@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56edfe456dcb97b1d9de906ee3e3d1d09bfcf109
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94f6b89b4e23f2610bdc3c834279eeb3eb9c9815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="repeatbutton"></a>RepeatButton
 <xref:System.Windows.Controls.Primitives.RepeatButton>類似於<xref:System.Windows.Controls.Button>。 不過，<xref:System.Windows.Controls.Primitives.RepeatButton>項目可讓您控制何時以及如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>就會發生事件。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  ![重複按鈕狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 典型的 RepeatButton  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  

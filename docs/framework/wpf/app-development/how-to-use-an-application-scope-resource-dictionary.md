@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 417fea4dcbb5a8d0a27f9605be19de5921aaf0ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>如何：使用應用程式範圍的資源字典
 此範例示範如何定義和使用應用程式範圍自訂資源字典。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  有兩個使用時的考量<xref:System.Windows.Application.Resources%2A>。 首先，字典*金鑰*不是物件，因此您必須使用完全相同物件執行個體時設定和取得屬性值。 (請注意，使用字串時，索引鍵會區分大小寫)。其次，字典*值*是物件，所以您必須取得的屬性值時，就將值轉換成所需的類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.ResourceDictionary>  
  <xref:System.Windows.Application.Resources%2A>  
  [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  

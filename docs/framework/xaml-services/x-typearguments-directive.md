@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a63a8080c71ad026664e2e14fc1762fcdd4bdb36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
 將型別引數的泛型型別建構函式的泛型條件約束的傳遞。  
@@ -91,7 +92,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  在 WPF 中，並為目標時[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用 XAML 2009 功能與搭配`x:TypeArguments`但僅針對鬆散的 XAML (未標記編譯 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果您需要以標記編譯 XAML，您必須以"XAML 2006 and WPF 泛型 XAML 使用方法 」 一節所述的限制來運作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
  [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
  [通用 XAML 語言基本類型的內建類型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  

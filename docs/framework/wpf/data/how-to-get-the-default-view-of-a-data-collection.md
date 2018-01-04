@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d1ababcb7a00496b59005b5e90f875511fefc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebb74e1db2e63269f70a13ef8520ab1383ecae08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>如何：取得資料集合的預設檢視
 檢視可讓在不同的方式，根據排序、 篩選或群組準則中檢視相同的資料集合。 每個集合有一個共用的預設檢視，可做為實際的繫結來源時繫結指定作為其來源集合。 這個範例示範如何取得集合的預設檢視。  
@@ -42,6 +43,6 @@ ms.lasthandoff: 11/21/2017
   
  集合檢視所提供之功能的範例，請參閱[檢視中排序資料](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)，[檢視中的篩選資料](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)，和[瀏覽到中的物件資料 CollectionView](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 XAML 中的檢視排序和群組資料](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

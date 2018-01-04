@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 948aa340436b51b6e8cbb09f4b0791535ca5ecd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc9eea56d9070d33820f8e2ef1bd8eba3ec04303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a>操作說明：建立 EllipseGeometry 的動畫
 此範例示範如何以動畫方式顯示<xref:System.Windows.Media.Geometry>內<xref:System.Windows.Shapes.Path>項目。 在下列範例中，<xref:System.Windows.Media.Animation.PointAnimation>用來建立動畫<xref:System.Windows.Media.EllipseGeometry.Center%2A>的<xref:System.Windows.Media.EllipseGeometry>。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[animatepath_snip#201](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animatepath_snip/VisualBasic/EllipseGeometryExample.vb#201)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

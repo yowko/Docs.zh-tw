@@ -18,16 +18,19 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework 中的安全性
 Common Language Runtime 和 .NET Framework 提供了許多有用的類別和服務，可讓開發人員輕鬆地撰寫安全程式碼，以及讓系統管理員自訂權限授與程式碼，使其可以存取受保護的資源。 此外，執行階段和 .NET Framework 提供實用的類別和服務，方便使用密碼編譯和以角色為基礎的安全性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [安全性變更](../../../docs/framework/security/security-changes.md)  
  描述 .NET Framework 安全性系統的重要變更。  
   

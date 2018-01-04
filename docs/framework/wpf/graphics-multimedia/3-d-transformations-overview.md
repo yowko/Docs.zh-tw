@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 431f4abd55da3b8c4e348d3abbd107e2f6344d5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-transformations-overview"></a>立體轉換概觀
 本主題說明如何對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形系統中的 3D 模型套用轉換。 轉換可讓開發人員重新置放模型、調整模型大小，以及調整模型方向，而不需要變更定義模型的基底值。  
@@ -115,7 +116,7 @@ ScaleVector 範例
   
  因為觀景窗也是模型，所以同樣可以轉換觀景窗屬性。  雖然您可以轉換觀景窗位置或平面距離來變更場景的外觀 (實際上是轉換整個場景投影)，但請注意，以這種方式達成的許多效果就觀者的「視覺感受」來說，會比對場景中的模型位置套用轉換來得少。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)

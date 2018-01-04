@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbbab88a22a4350626a36f79236aab67da24a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 控制項中的預設鍵盤和滑鼠行為
 本主題描述使用者可以互動<xref:System.Windows.Controls.DataGrid>使用鍵盤和滑鼠控制。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="default-mouse-behavior"></a>預設滑鼠行為。  
  下表列出的預設滑鼠行為<xref:System.Windows.Controls.DataGrid>。  
   
-|滑鼠動作|說明|  
+|滑鼠動作|描述|  
 |------------------|-----------------|  
 |按一下未選取的資料列|目前的資料列，並按下儲存格的目前儲存格，可按的資料列。|  
 |按一下目前的資料格|目前的儲存格置於編輯模式。|  
@@ -106,6 +107,6 @@ ms.lasthandoff: 11/21/2017
   
  CTRL + shift 鍵可以結合以選取非相鄰的範圍內的相鄰的資料列。 若要這樣做，請選取第一個範圍，使用 SHIFT + 滑鼠左鍵如先前所述。 選取的資料列的第一個範圍後，使用 CTRL + 按一下以在下一個範圍中，選取第一個資料列，然後按一下下一個範圍中的最後一個資料列時按住 CTRL + SHIFT。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DataGrid>  
  <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

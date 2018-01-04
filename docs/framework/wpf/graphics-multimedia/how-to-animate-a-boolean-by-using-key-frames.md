@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ac129bf133cca88a6d2f6a724d25ea2519cb72e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910210b8360956b9e92b613fad52e7bfc7f5e49e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>如何：使用主要畫面格建立布林值的動畫
 這個範例示範如何建立動畫的布林屬性值<xref:System.Windows.Controls.Button>控制項使用的主要畫面格。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
  <xref:System.Windows.UIElement.IsEnabled%2A>  
  <xref:System.Windows.Controls.Button>  

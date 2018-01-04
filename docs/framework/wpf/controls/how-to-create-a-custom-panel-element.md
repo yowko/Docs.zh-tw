@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7e7cca5b6f7a0d5085e70c4ab6ac33ff83b75217
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eacc5435e259c20c25b64d6e82c33d07338602a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>如何：建立自訂面板項目
 ## <a name="example"></a>範例  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
  [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Panel>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [建立自訂的內容換行面板範例](http://go.microsoft.com/fwlink/?LinkID=159979)

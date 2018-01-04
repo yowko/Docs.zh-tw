@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Form 中更安全的檔案和資料存取
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
@@ -368,7 +369,7 @@ public void Write()
   
  因為您無法在部分信任下存取登錄，您可能需要尋找儲存資料的其他方法。 當您儲存應用程式設定時，使用隔離儲存區，而不是登錄。 隔離儲存區也可以用來儲存其他應用程式特定的檔案。 您也可以儲存與伺服器或來源網站相關的全域應用程式資訊，因為根據預設，應用程式被授與存取其來源網站的權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 中更安全的列印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
  [Windows Forms 中的其他安全性考量](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
  [Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  

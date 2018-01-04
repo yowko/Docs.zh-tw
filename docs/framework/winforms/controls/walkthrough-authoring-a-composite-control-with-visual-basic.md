@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c31e76e9f190990f0a3dddab359ef9523783d955
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 撰寫複合控制項
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。  
@@ -69,8 +70,8 @@ ms.lasthandoff: 11/21/2017
   
     |屬性|變更為|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
-    |**文字**|`(blank space)`|  
+    |**名稱**|`lblDisplay`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -254,8 +255,8 @@ ms.lasthandoff: 11/21/2017
   
     |屬性|設定|  
     |--------------|-------------|  
-    |**Name**|`lblAlarm`|  
-    |**文字**|**Alarm!**|  
+    |**名稱**|`lblAlarm`|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**可見**|`False`|  
   
@@ -368,9 +369,9 @@ ms.lasthandoff: 11/21/2017
   
     |控制項|屬性|值|  
     |-------------|--------------|-----------|  
-    |`label1`|**文字**|`(blank space)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    |`label1`|**Text**|`(blank space)`|  
+    ||**名稱**|`lblTest`|  
+    |`dateTimePicker1`|**名稱**|`dtpTest`|  
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. 在設計工具中，按兩下 [dtpTest]。  
@@ -405,7 +406,7 @@ ms.lasthandoff: 11/21/2017
   
      本逐步解說涵蓋了數個重要概念。 您已經了解藉由將控制項和元件合併成複合控制項容器，來建立複合控制項。 您已經了解將屬性新增至您的控制項，以及撰寫程式碼來實作自訂功能。 在最後一節中，您會了解透過繼承擴充指定複合控制項的功能，並且藉由覆寫這些方法來變更主方法的功能。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [操作說明：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [操作說明：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  

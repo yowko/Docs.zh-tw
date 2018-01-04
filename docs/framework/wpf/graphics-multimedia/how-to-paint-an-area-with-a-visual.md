@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cd1bafb528613f15ec5eb597179bc0dd05ace0f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 183117472cc74c958bdd7f807236eded97610b1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>如何：使用 Visual 繪製區域
 這個範例示範如何使用<xref:System.Windows.Media.VisualBrush>類別來使用繪製區域<xref:System.Windows.Media.Visual>。  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/22/2017
   
  這個程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.VisualBrush>類別。 如需完整範例，請參閱[VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

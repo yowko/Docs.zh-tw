@@ -17,16 +17,17 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-overviews"></a>ListView 概觀
 此章節的主題會示範如何使用<xref:System.Windows.Controls.ListView>控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)  
  [GridView 資料行標頭樣式和範本概觀](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>相關章節  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

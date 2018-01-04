@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f574f85a5840e8bbe2d6c026d57a4cc28bd8a797
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c115d31c6ace26f8fd9dd6cff3fdeead89eea33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>操作說明：使用主要畫面格建立點的動畫
 這個範例示範如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>類別以動畫方式顯示<xref:System.Windows.Point>。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  此範例的程式碼版本使用的其他動畫範例的一致性，<xref:System.Windows.Media.Animation.Storyboard>物件以套用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>。 不過，當套用程式碼中的單一動畫，它會更容易使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法，而不要使用<xref:System.Windows.Media.Animation.Storyboard>。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
  <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Media.EllipseGeometry>  

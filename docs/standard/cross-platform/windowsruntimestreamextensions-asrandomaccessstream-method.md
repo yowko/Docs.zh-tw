@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be93ddc0f3bf0a5079f31bfa0ff5caa882342c37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9057eabb7e3dfdfaa872fbcf2fe1180d0bbc7920
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
 [在 .NET Framework 4.5.1 及更新版本中支援]  
@@ -59,7 +62,7 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]隨機存取資料流，表示已�
   
 ## <a name="exceptions"></a>例外狀況  
   
-|例外狀況|條件|  
+|例外|條件|  
 |---------------|---------------|  
 |<xref:System.NotSupportedException>|要轉換的資料流不支援搜尋功能。|  
   
@@ -74,6 +77,6 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]隨機存取資料流，表示已�
   
  支援：Windows 8.1  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions`  
  [操作說明：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 056aeaf1dfb7db420ce5359849a9a409dcd3fe13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4adfabba76e9f6bf32e47fe4e52e42b68676bc0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>操作說明：使用 DockPanel 元素分割空間
 下列範例會建立簡單[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]framework 使用<xref:System.Windows.Controls.DockPanel>項目。 <xref:System.Windows.Controls.DockPanel>分割可用空間其子項目。  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
   
  ![典型的 DockPanel 案例。](../../../../docs/framework/wpf/controls/media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DockPanel>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)

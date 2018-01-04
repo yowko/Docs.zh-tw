@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4911aea91416fb84e9a18d54c145b494737ef9dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88d667e8654f72226dc609a14aec650effe2d5c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line"></a>如何：繪製線條
 此範例將示範如何使用的繪製線條<xref:System.Windows.Shapes.Line>項目。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 11/21/2017
   
  這個範例是較大範例的一部分如需完整範例，請參閱[圖形項目範例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Shapes.Line>  
  [圖形項目範例](http://go.microsoft.com/fwlink/?LinkID=160037)

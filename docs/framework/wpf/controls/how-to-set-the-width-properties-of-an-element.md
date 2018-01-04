@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 830289f13ac89601f0d3539e2f4400e56a2476f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b27eb8f12e10f98d585f8f9bc445dba0118988fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>如何：設定項目的寬度屬性
 ## <a name="example"></a>範例  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整範例，請參閱[寬度屬性比較範例](http://go.microsoft.com/fwlink/?LinkID=160050)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.ListBox>  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.FrameworkElement.ActualWidth%2A>  

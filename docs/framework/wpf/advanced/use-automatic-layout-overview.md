@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c9f5b9a6665778bc313febb039aeeeb2e484a6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]耗時的程序。 每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是改為所需的像素的像素調整。 使用正確的設計和編碼標準，右邊今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可用於建構，所以當地語系化人員需要小於調整大小和執行重新調整位置。 撰寫應用程式都可以更輕鬆地調整大小和重新定位的方法在呼叫自動配置，而且可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- 在範例中，您唯一需要對西班牙文按鈕做的是變更文字。 例如：  
+ 在範例中，您唯一需要對西班牙文按鈕做的是變更文字。 例如，套用至物件的  
   
  [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
@@ -85,7 +86,7 @@ Grid
   
  **請注意**完整的程式碼範例，請參閱[共用大小屬性之間格線](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
  [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

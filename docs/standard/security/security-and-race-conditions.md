@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c092113f670c5799d98dcb13c9c713bbd1a47fb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 73664df9c072189f11d451da46bc3019c8593ec9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-race-conditions"></a>安全性和競爭情形
 值得注意的另一個部分是利用競爭情形的安全性漏洞的可能性。 有幾種的方式可能造成此。 請依照下列子主題簡述一些主要開發人員必須避免的陷阱。  
@@ -111,5 +114,5 @@ void DoOtherWork()
 ## <a name="race-conditions-in-finalizers"></a>完成項中的競爭情形  
  物件，參考的靜態或未受管理的資源，然後釋放其完成項中也可能會發生競爭情形。 如果多個物件共用資源的操作中類別的完成項，則物件必須同步處理所有對該資源的存取。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4989a13ef16445bc19b3dc3c6d265d943a464c62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f73a336da5b61de90a67a8392b5cfc8f28619254
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-overview-windows-forms"></a>事件概觀 (Windows Form)
 事件是您可以透過程式碼加以回應或「處理」的動作。 使用者動作 (例如按一下滑鼠按鈕或按下按鍵)、程式碼或系統都可以產生事件。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 11/21/2017
   
  委派會隨機使用繫結機制，其可能在執行時繫結到任何簽章符合事件處理程式簽章的方法。 您可以利用此功能視條件設定或變更繫結方法，以及隨機將事件處理常式連結至控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

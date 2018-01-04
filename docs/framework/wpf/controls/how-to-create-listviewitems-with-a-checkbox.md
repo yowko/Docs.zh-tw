@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cc6ebb3671dcc65d690fde5d4796c9034553eb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be87183efd8101233bd5cbda49d556d09802b630
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>操作說明：使用 CheckBox 建立 ListViewItems
 這個範例示範如何顯示的資料行<xref:System.Windows.Controls.CheckBox>控制項<xref:System.Windows.Controls.ListView>使用控制項<xref:System.Windows.Controls.GridView>。  
@@ -38,10 +39,10 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[ListViewChkBox#GridViewColumnCheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#gridviewcolumncheckbox)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Control>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)

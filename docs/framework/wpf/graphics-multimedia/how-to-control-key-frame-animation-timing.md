@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc3566cf25282749a09c5f2372cd1c81e3ce881
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 252da422ffb34e5865a29112e349e18d0f40327f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>如何：控制主要畫面格動畫執行時間
 這個範例示範如何控制內主要畫面格動畫主要畫面格的時機。 如同其他動畫主要畫面格動畫具有<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。 除了指定動畫的持續時間，您需要指定該期間的哪個部分會分配給每個主要畫面格。 若要配置的時間，您指定<xref:System.Windows.Media.Animation.KeyTime>動畫中的每一個主要畫面格。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。 如需主要畫面格動畫的詳細資訊，請參閱[主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

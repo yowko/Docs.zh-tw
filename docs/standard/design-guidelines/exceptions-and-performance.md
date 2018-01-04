@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c2d7cfcb228c492d2adbe614d0ed88a3b02bb68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-and-performance"></a>例外狀況和效能
 一個常見的問題相關的例外狀況是針對經常失敗的程式碼使用例外狀況，如果實作的效能將會無法接受。 這是有效的問題。 當成員擲回例外狀況時，其效能可能會大幅度速度較慢。 不過，它是達成目標時不允許使用錯誤碼的例外狀況指導方針嚴格遵守良好的效能。 本節中所述的兩種模式提供的建議執行這項操作。  
@@ -80,6 +83,6 @@ public struct DateTime {
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [例外狀況的設計指導方針](../../../docs/standard/design-guidelines/exceptions.md)
+ [例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)

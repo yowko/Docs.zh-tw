@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daa4caac0046293e8b86a773bfffd46cf30e835b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d3b8f1ca1dbf7ba5452acffc62fdf0b655c9c12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>操作說明：使用子時間軸簡化動畫
 這個範例示範如何使用子簡化動畫<xref:System.Windows.Media.Animation.ParallelTimeline>物件。 A<xref:System.Windows.Media.Animation.Storyboard>是一種<xref:System.Windows.Media.Animation.Timeline>提供它所包含的時間軸的目標資訊。 使用<xref:System.Windows.Media.Animation.Storyboard>提供目標的資訊，包括物件和屬性資訊的時間軸。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [指定分鏡腳本動畫之間的 HandoffBehavior](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)

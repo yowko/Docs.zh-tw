@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56fcba73e9b3dac40f4723e9aeb8c8f6169a9b2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-how-to-topics"></a>列印 HOW TO 主題
 此章節的主題示範如何使用 列印和列印系統管理功能隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]列印路徑。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [叫用列印對話方塊](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
  XAML 標記宣告的指示[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]列印對話方塊物件和使用程式碼來叫用從對話方塊[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  [驗證和合併 PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  檢查列印票證無效，而且，它不會要求任何項目不支援的印表機的指示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  

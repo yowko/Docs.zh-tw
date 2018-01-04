@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1566d2b67e1dda5b0b221a2c10affb6bdaea888
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值類型通常稱為結構，其 C# 關鍵字。 本節提供一般結構設計指導方針。  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [型別設計指導方針](../../../docs/standard/design-guidelines/type.md)  
+## <a name="see-also"></a>請參閱  
+ [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
- [類別和結構之間選擇](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+ [在類別和結構之間選擇](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

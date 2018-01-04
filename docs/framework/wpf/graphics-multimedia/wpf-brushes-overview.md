@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de5bcaeffb77f52b80c229cf0402c2c090e40d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-brushes-overview"></a>WPF 筆刷概觀
 螢幕上看見的項目是可見的因為它已繪製的筆刷。 例如，筆刷用來描述的按鈕、 文字、 前景和填滿圖形的背景。 本主題介紹的概念與繪製[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]筆刷，並提供範例。 筆刷可讓您以任何項目 (從簡單的純色到複雜的圖樣和影像集) 繪製 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 物件。  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/21/2017
   
  如需有關為什麼<xref:System.Windows.Media.VisualBrush>物件不能是凍結時，請參閱<xref:System.Windows.Media.VisualBrush>類型 頁面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Brushes>  
  [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
@@ -178,5 +179,5 @@ ms.lasthandoff: 11/21/2017
  [筆刷範例](http://go.microsoft.com/fwlink/?LinkID=159973)  
  [ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

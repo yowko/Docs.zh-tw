@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8828ff0f263943c6094af0073ec4cad6068c6e1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55c9482ecb540baab3ddd57ca9350fd7265ac251
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>最佳化效能：運用硬體
 內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有兩個呈現管線、 硬體和軟體。 本主題提供可協助您做出有關您的應用程式的效能最佳化這些轉譯管線的相關資訊。  
@@ -64,13 +65,13 @@ ms.lasthandoff: 11/21/2017
   
  如需有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯層，請參閱[圖形呈現層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [版面配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
  [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [文字](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

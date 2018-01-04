@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>例如 s<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.ItemsControl>例如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有內建的功能，可啟用彈性樣式的單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -439,11 +440,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="debugging-mechanism"></a>偵錯機制  
  您可以設定附加的屬性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上繫結相關的物件，以擷取特定的繫結的相關狀態資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DataErrorValidationRule>  
  [WPF 第 4.5 版的新功能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
  [繫結至 LINQ 查詢的結果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [資料繫結示範](http://go.microsoft.com/fwlink/?LinkID=163703)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [繫結至 ADO.NET 資料來源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

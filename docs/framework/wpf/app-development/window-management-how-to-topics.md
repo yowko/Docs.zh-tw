@@ -15,16 +15,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd3771e0fcbf83b00f52d78a5c63793dae116e4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7fea4c74fc837181e1b0a007fb83ddce1c4cd52a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="window-management-how-to-topics"></a>視窗管理的如何主題
 下列主題示範如何管理[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [自動調整視窗大小以符合其內容](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
   [取得應用程式中的所有視窗](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
   [取得與設定主應用程式視窗](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  

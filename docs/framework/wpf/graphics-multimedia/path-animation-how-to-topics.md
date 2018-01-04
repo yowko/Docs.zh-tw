@@ -17,16 +17,17 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dcda3888df64e95704e726db118bf75c92deaa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c1eeb859ecb39c5c2bb7eaef480e32c17d391cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animation-how-to-topics"></a>路徑動畫 HOW TO 主題
 本節中的主題將示範如何建立動畫物件沿著路徑。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [沿著路徑建立物件的動畫 (Double 動畫)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
  [沿著路徑建立物件的動畫 (點動畫)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
  [沿著路徑建立物件的動畫 (矩陣動畫)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

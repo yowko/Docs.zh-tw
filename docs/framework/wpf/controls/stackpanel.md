@@ -18,17 +18,18 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e50c6abac6e949245c89b8f25a093ba72a3eb530
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a473b9972cd300dc45212e47292b73c3ca2c2221
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackpanel"></a>StackPanel
 <xref:System.Windows.Controls.StackPanel>元素用來水平或垂直堆疊子項目。  
   
-## <a name="in-this-section"></a>本章節內容  
- [操作說明主題](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a>本節內容  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  

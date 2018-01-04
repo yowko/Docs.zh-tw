@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83a3f58fc13eb1aaacb99a3f35c3149d78451c23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="role-based-security"></a>以角色為基礎的安全性
 角色通常用在財務和商務應用程式中以強制執行原則。 例如，應用程式可能會根據提出要求的使用者是否為指定角色的成員，而限制正在處理之交易的大小。 職員可能具有授權，可以處理小於指定臨界值的交易，監督員可能有更高的限制，而副總裁可能有再更高的限制 (或根本沒有限制)。 以角色為基礎的安全性也可用於應用程式需要多重許可才能完成動作之時。 這樣的情況可能是採購系統，任何員工可以產生採購要求，但只有採購人員可以將該要求轉換成可以傳送給供應商的訂單。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)|說明如何設定和管理 Windows 和泛型識別和主體。|  
 |[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)|介紹您在使用 .NET Framework 安全性之前必須了解的基本概念。|  

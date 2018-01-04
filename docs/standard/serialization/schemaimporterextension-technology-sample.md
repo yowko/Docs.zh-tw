@@ -12,11 +12,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 862bea7fa17638b6f3c5ca8afb43a76dc7ed85b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5001b31e11432c36c08f43bfa06b95483b247115
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 技術範例
 [下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -48,7 +51,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>備註  
  如需二進位碼建立和註冊步驟之範例的詳細資訊，請參閱原始程式碼和 build.proj 檔案中的註解。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.CodeDom.CodeCompileUnit>  
  <xref:System.CodeDom.CodeNamespace>  
  <xref:System.CodeDom.CodeNamespaceImport>  

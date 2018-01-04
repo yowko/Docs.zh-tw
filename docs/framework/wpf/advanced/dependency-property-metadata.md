@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f7a5af655586a62776a8c470f2e1c9811f91d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-metadata"></a>相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統包含中繼資料報告系統，其針對屬性所報告的內容比透過反映或一般[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性報告的內容還多。 相依性屬性的中繼資料也可由定義相依性屬性的類別唯一指派、在相依性屬性新增至不同類別時變更，以及由從定義的基底類別繼承相依性屬性的所有衍生類別明確覆寫。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
 #### <a name="addowner-and-attached-properties"></a>AddOwner 和附加屬性  
  您可以呼叫<xref:System.Windows.DependencyProperty.AddOwner%2A>相依性屬性為附加屬性的擁有者類別所定義。 一般這麼做的原因是要將先前的附加屬性公開為非附加相依性屬性。 然後會公開<xref:System.Windows.DependencyProperty.AddOwner%2A>傳回值為`public static readonly`欄位作為相依性屬性的識別項，並將定義適當 「 包裝函式 」 屬性，使屬性成員資料表中隨即出現，並支援非附加的屬性在您類別中的使用方式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.PropertyMetadata>  
  <xref:System.Windows.DependencyObject>  
  <xref:System.Windows.DependencyProperty>  

@@ -35,11 +35,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73bb3a2f43c5bd91d7a107a0a053381ca7bc0559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]支援兩種類型的應用程式中可用的瀏覽器樣式瀏覽： 獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 封裝內容以進行巡覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>類別。 您可以從一個導覽<xref:System.Windows.Controls.Page>到另一個以宣告方式，利用<xref:System.Windows.Documents.Hyperlink>，或以程式設計的方式，利用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。  
@@ -739,12 +740,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="security"></a>安全性  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]瀏覽支援可讓[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]來瀏覽至跨網際網路，而且可讓應用程式裝載協力廠商內容。 若要從有害行為，保護應用程式和使用者[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供各種不同的安全性功能所討論的[安全性](../../../../docs/framework/wpf/security-wpf.md)和[WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Application.SetCookie%2A>  
  <xref:System.Windows.Application.GetCookie%2A>  
  [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [結構化巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
  [巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
  [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

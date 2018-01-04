@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d737959ee0ecab4c611cebf996741516fc7be031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>逐步解說：建立未繫結的 Windows Form DataGridView 控制項
 您可能常要顯示不是來自資料庫的表格式資料。 比方說，您可能想要顯示字串的二維陣列的內容。 <xref:System.Windows.Forms.DataGridView>類別會提供簡單高度可自訂的方式顯示資料，而不繫結至資料來源。 本逐步解說示範如何以填入<xref:System.Windows.Forms.DataGridView>控制和管理的新增和刪除 「 未繫結 」 模式中的資料列。 根據預設，使用者可以加入新的資料列。 若要避免資料列加入，將<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>屬性是`false`。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
   
 -   自訂儲存格的外觀。 如需詳細資訊，請參閱[How to： 自訂 Windows Form DataGridView 控制項中的儲存格外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[How to： 設定預設儲存格樣式的 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [在 Windows Forms DataGridView 控制項中顯示資料](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
  [操作說明：建立未繫結的 Windows Forms DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  

@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40d99e090a0599c98560e4102d18d35ee7174259
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0274a0f078c378a101bdf4a4ae456fd2ce9f4185
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>如何：在 StackPanel 和 DockPanel 之間選擇
 這個範例示範如何使用之間選擇<xref:System.Windows.Controls.StackPanel>或<xref:System.Windows.Controls.DockPanel>您堆疊內容中的，當<xref:System.Windows.Controls.Panel>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
  [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.StackPanel>  
  <xref:System.Windows.Controls.DockPanel>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)

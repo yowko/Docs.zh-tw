@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e628835f0e5fb315f15b9e9946c48f7017092bae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73f611eab7f75d1578652a8a9f5bb05d9720e851
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：在混合應用程式中啟用視覺化樣式
 本主題說明如何啟用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上的視覺樣式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]與預設系統樣式繪製控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  
  <xref:System.Windows.Forms.VisualStyles>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80edbd452be52e77a464ab29347dbe5d4067d0e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>設計可設定樣式控制項的方針
 本文摘要說明當設計要能夠容易設定樣式及範本化的控制項時，可考量的一組最佳做法。 我們是在研究內建之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，經過許多嘗試和錯誤，才得出這組最佳做法。 我們了解到成功的樣式設定對設計良好的物件模型來說，不僅是樣式本身，也是一項功能。 本文件的適用對象是控制項作者，而不是樣式作者。  
@@ -128,6 +129,6 @@ ms.lasthandoff: 11/21/2017
   
 -   **佈景主題樣式不需要在所有佈景主題都具有一致的「版面配置」語意**。 例如，預設樣式不需要保證控制項在所有佈景主題中都佔據相同的大小，或是保證控制項在所有佈景主題中都具有相同的內容邊界/邊框間距。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

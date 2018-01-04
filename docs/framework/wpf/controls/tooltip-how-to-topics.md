@@ -17,14 +17,15 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad3fd6a1bdecf9d6187f3592fe4771bbb0b0e98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 214fdff11b5b64c78b2719e66813b5210884e318
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-how-to-topics"></a>ToolTip HOW TO 主題
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [置放工具提示](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
   [使用 BetweenShowDelay 屬性](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
   
@@ -38,4 +39,4 @@ ms.lasthandoff: 10/22/2017
 ## <a name="related-sections"></a>相關章節  
  [快顯功能表概觀](../../../../docs/framework/wpf/controls/popup-overview.md)  
   
- [操作說明主題](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

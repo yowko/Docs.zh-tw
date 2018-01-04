@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bd85383cc27687974fbf3689793a60569a4f97a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-and-templating"></a>樣式設定和範本化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 樣式設定和範本化係指一套功能 (樣式、範本、觸發程序及分鏡腳本)，可讓開發人員和設計人員創造引人注目的效果，並為其產品建立一致的外觀。 雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 便有提供該模型。  
@@ -208,7 +209,7 @@ ms.lasthandoff: 11/21/2017
   
  如果您要為自訂控制項建立佈景主題，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)的＜外部控制項程式庫＞一節。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [操作說明：尋找 ControlTemplate 產生的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
  [尋找 DataTemplate 產生的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

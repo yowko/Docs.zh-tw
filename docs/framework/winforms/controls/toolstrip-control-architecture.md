@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6884598e6b883ab5e6369be5f2f796a194c7f930
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b112cb1e383b092c1bcc4403e04938b3b83c5ecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控制項架構
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>類別可提供彈性、 可延伸系統顯示工具列、 狀態和功能表項目。 這些類別包含在<xref:System.Windows.Forms>命名空間和其所有通常以"ToolStrip"前置詞命名 (例如<xref:System.Windows.Forms.ToolStripOverflow>) 或 「 帶狀 」 的後置詞 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -170,7 +171,7 @@ ToolStrip 物件模型
   
 -   存取索引鍵不是處理時<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>未授與。  
   
-#### <a name="usage"></a>使用方式  
+#### <a name="usage"></a>使用量  
  下列的使用模式有並無影響<xref:System.Windows.Forms.ToolStrip>版面配置、 鍵盤互動和使用者行為：  
   
 -   在中聯結<xref:System.Windows.Forms.ToolStripPanel>  
@@ -274,7 +275,7 @@ ToolStripItem 物件模型
   
 |包含的項目|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|是|否|否|否|是|  
+|<xref:System.Windows.Forms.ToolStripButton>|[是]|否|否|否|是|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|是|是|是|否|是|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|是|否|否|是|是|  
 |<xref:System.Windows.Forms.ToolStripLabel>|是|否|否|是|是|  
@@ -284,7 +285,7 @@ ToolStripItem 物件模型
 |<xref:System.Windows.Forms.ToolStripMenuItem>|否|是|是|否|否|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|否|否|否|是|否|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|是|否|否|是|否|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|是|是|否|是|是|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|是|是|否|是|[是]|  
   
 ### <a name="toolstripbutton"></a>ToolStripButton  
  <xref:System.Windows.Forms.ToolStripButton>按鈕項目<xref:System.Windows.Forms.ToolStrip>。 您可以使用各種框線樣式，其顯示，您可以使用它來代表，並啟用的操作狀態。 您也可以定義為預設有焦點。  
@@ -341,7 +342,7 @@ ToolStripItem 物件模型
   
 -   處理影像  
   
--   對齊方式  
+-   對齊  
   
 -   文字和影像的關聯性  
   
@@ -361,7 +362,7 @@ ToolStripItem 物件模型
   
     -   如果<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>是`false`和<xref:System.Windows.Forms.ToolStripItemImageScaling>是<xref:System.Windows.Forms.ToolStripItemImageScaling.None>，都沒有映像，也不<xref:System.Windows.Forms.ToolStrip>調整，就會發生。  
   
-#### <a name="alignment"></a>對齊方式  
+#### <a name="alignment"></a>對齊  
  值<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>屬性會決定結尾<xref:System.Windows.Forms.ToolStrip>在出現的項目。 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>屬性的運作方式時，才的配置樣式<xref:System.Windows.Forms.ToolStrip>設為其中一個堆疊溢位值。  
   
  項目會置於<xref:System.Windows.Forms.ToolStrip>中之項目的項目集合中出現的順序。 若要以程式設計方式變更項目已配置版面、 使用<xref:System.Windows.Forms.ToolStripItemCollection.Insert%2A>方法來移動項目集合中。 這個方法會移動的項目，但不會複製。  
@@ -387,7 +388,7 @@ ToolStripItem 物件模型
   
 -   <xref:System.Windows.Forms.ToolStripPanel>提供位置來移動和排列<xref:System.Windows.Forms.ToolStrip>控制項。 如果您選擇這樣做，可以使用只有一個面板和<xref:System.Windows.Forms.ToolStripPanel>在 MDI 狀況下順利運作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)  
  [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  

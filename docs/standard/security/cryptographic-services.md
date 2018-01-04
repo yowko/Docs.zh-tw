@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 <a name="top"></a> 公用網路（例如網際網路）無法在兩實體之間提供一種可安全通訊的方式。 這類網路上的通訊很容易被人讀取，或是被未經授權的協力廠商所修改。 密碼編譯有助於保護資料不受人檢視，可提供一種方式來偵測資料是否已遭修改，比起其他非安全的通道，它有助提供安全的通訊方式。 比方說，可以利用密碼編譯演算法來加密資料，並以加密的狀態傳送，而稍後由指定的一方解密資料。 假使第三方攔截到加密資料，也難以破解。  
@@ -315,7 +318,7 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[加密模型](../../../docs/standard/security/cryptography-model.md)|描述基底類別程式庫中如何實作密碼編譯。|  
 |[逐步解說： 建立密碼編譯的應用程式](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|示範基本的加密和解密工作。|  

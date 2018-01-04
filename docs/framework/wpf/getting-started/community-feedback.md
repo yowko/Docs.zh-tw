@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-feedback"></a>WPF 社群意見回應
 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 公開各種社群資源供您學習、討論及提供有關 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 的意見反應，包括 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 小組成員和社群領導人建立的部落格、論壇及 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 產品意見反應中心。 每一種社群資源分別提供不同的優點。 本文中會說明這些優點，以及利用各項優點的最佳做法，以確保所有社群和 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 都能提供最佳的回應。  

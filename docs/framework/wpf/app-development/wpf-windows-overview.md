@@ -39,11 +39,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3323efa3306fd55d7c1d43cbc6eeaaf846e373ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者是透過視窗與 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式使用，提供它們自己的視窗<xref:System.Windows.Window>類別。 本主題將介紹<xref:System.Windows.Window>之前涵蓋建立和管理 windows 獨立應用程式中的基本概念。  
@@ -501,7 +502,7 @@ ms.lasthandoff: 11/21/2017
   
  對話方塊是經常用來從使用者收集資訊以完成一項功能的視窗。 例如，當使用者想要開啟檔案，**開啟檔案**從使用者取得檔案名稱的應用程式通常會顯示對話方塊。 如需詳細資訊，請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Window>  
  <xref:System.Windows.MessageBox>  
  <xref:System.Windows.Navigation.NavigationWindow>  

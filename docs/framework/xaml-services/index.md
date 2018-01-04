@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: b8d1214e011e4a6569b5612d7be93ed05b776166
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.workload: dotnet
+ms.openlocfilehash: 458b4c94d26b7bc083c5d31fcbccf05b42bba52e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-services"></a>XAML 服務
 本主題描述技術集稱為.NET Framework XAML 服務的功能。 大部分的服務和應用程式開發介面所描述的位於 System.Xaml，也就是組件所導入的組件[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].NET core 組件集合。 服務包括讀取器和寫入器，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言的內建支援和其他 XAML 語言功能。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  如果您要尋找的 XAML 語言的簡介資料，您可能會嘗試[XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 該主題討論 XAML。 新的對象， [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ，也可以使用 XAML 標記和 XAML 語言功能。 另一個有用的文件是在簡介資料[XAML 語言規格](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服務和 System.Xaml 中的.NET 架構  
- 在舊版的[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]，支援 XAML 語言功能實作的架構上建置[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]和[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)])，並因此改變其行為和依據所用的 API您已使用特定的架構。 這包含 XAML 剖析器和它的物件圖形建立機制、 XAML 語言內建函式、 序列化支援等等。  
+ 在舊版的[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]，支援 XAML 語言功能實作的架構上建置[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]和[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)])，並因此改變其行為和依據所用的 API您已使用特定的架構。 這包含 XAML 剖析器和它的物件圖形建立機制、 XAML 語言內建函式、 序列化支援等等。  
   
  在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服務和 System.Xaml 組件定義大部分的所需的支援 XAML 語言功能。 這包括基底類別的 XAML 讀取器和 XAML 寫入器。 加入未出現在任何架構特定 XAML 實作的.NET Framework XAML 服務最重要功能是 xaml 類型系統表示法。 類型系統表示法呈現 XAML 著重的 XAML 功能但不採取特定功能的架構相依性物件導向的方式。  
   

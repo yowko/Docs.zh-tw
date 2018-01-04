@@ -17,16 +17,17 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4403d508f0a99b4cefd3ef59e6d1caf746f31fec
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 38da15eee931d2519efa0c502cfaa61ed0691a8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-how-to-topics"></a>資源 HOW TO 主題
 本節中的主題描述如何使用[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]資源。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [定義和參考資源](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
  [使用應用程式資源](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
  [使用 SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  

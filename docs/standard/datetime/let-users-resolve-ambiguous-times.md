@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6409e676944f64931b197fda1a6a7b392c268c97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0122ca1469b32692fa9c4ef2bd37cda39622bd7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>如何： 讓使用者解決模稜兩可的時間
 
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/18/2017
 
 * 確認<xref:System>以匯入命名空間`using`陳述式 （C# 程式碼所需）。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [日期、 時間和時區](../../../docs/standard/datetime/index.md)
 [如何： 解決模稜兩可的時間](../../../docs/standard/datetime/resolve-ambiguous-times.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alignment-margins-and-padding-overview"></a>對齊、邊界和填補概觀
 <xref:System.Windows.FrameworkElement>類別會公開數個屬性，可用來明確地說放置子項目。 本主題討論四個最重要的屬性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 一定要了解這些屬性的作用，因為它們提供控制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中項目位置的基礎。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="horizontalalignment-property"></a>HorizontalAlignment 屬性  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性會宣告要套用至項目子系的水平對齊特性。 下表顯示每個可能的值<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性。  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.HorizontalAlignment.Left>|子項目對齊父項目的已配置版面配置空間的左側。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="verticalalignment-property"></a>VerticalAlignment 屬性  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性會描述要套用至子元素的垂直對齊特性。 下表顯示每個可能的值為<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性。  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.VerticalAlignment.Top>|子項目對齊父項目的已配置版面配置空間的頂端。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/21/2017
   
  有更詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置的其他資源可供使用。 [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)主題包含有關在各種詳細<xref:System.Windows.Controls.Panel>項目。 本主題[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)導入了進階的技術，將元件，並將其動作繫結至資料來源使用版面配置項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  

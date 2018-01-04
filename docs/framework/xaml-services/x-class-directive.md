@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>x:Class 指示詞
 設定要加入標記和程式碼後置的部分類別的 XAML 標記編譯。 在不同的程式碼檔案中定義的程式碼的部分類別[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]語言，而標記的部分類別通常在 XAML 編譯期間產生的程式碼來建立。  
@@ -42,8 +43,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`namespace`|選擇項。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]包含所識別的部分類別的命名空間`classname`。 如果`namespace`指定，則句點 （.） 分隔`namespace`和`classname`。 請參閱＜備註＞。|  
-|`classname`|必要項。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]的部分類別載入的 XAML 和程式碼後置該 XAML 的連接名稱。|  
+|`namespace`|選擇性。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]包含所識別的部分類別的命名空間`classname`。 如果`namespace`指定，則句點 （.） 分隔`namespace`和`classname`。 請參閱＜備註＞。|  
+|`classname`|必要。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]的部分類別載入的 XAML 和程式碼後置該 XAML 的連接名稱。|  
   
 ## <a name="dependencies"></a>相依性  
  `x:Class`只有在 XAML 生產的根項目上指定。 `x:Class`具有父代在 XAML 生產環境中的任何物件上無效。 如需詳細資訊，請參閱[ \[MS-XAML\]區段 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="silverlight-usage-notes"></a>Silverlight 的使用方式附註  
  `x:Class`silverlight 被說明文件。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x:Subclass 指示詞](../../../docs/framework/xaml-services/x-subclass-directive.md)  
  [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [x:ClassModifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  

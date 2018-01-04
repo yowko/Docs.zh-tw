@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a695e10ae9b074f0f9dc913d2f687c82e00475dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 27423607959af4b3201da8d83630b7827b2eeeb6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -143,10 +146,10 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [資料合約序列化程式所支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
  [二進位序列化](binary-serialization.md)  
  [遠端物件](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)  

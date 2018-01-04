@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc4411c8141579150cde1bda2e46d7d2abe42e9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題提供概觀[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的登錄設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="registry-settings"></a>登錄設定  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定四個登錄設定來控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：  
   
-|設定|說明|  
+|設定|描述|  
 |-------------|-----------------|  
 |[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 層級|描述的層級[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。|  
 |色差補正層級|說明顯示裝置的像素色彩元件層級。|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="pixel-structure"></a>像素結構  
  像素結構說明構成顯示裝置的像素類型。 像素結構定義有三種類型︰  
   
-|類型|值|說明|  
+|類型|值|描述|  
 |----------|-----------|-----------------|  
 |一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 永遠不會套用至轉譯的文字。|  
 |RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 套用至轉譯的文字。|  
@@ -124,6 +125,6 @@ ms.lasthandoff: 11/21/2017
   
  ![登錄編輯程式中的 ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
  [ClearType 消除鋸齒功能](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)

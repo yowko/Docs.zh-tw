@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0d53db49961c2a75e4547f6b57240cefd2cc17c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指示詞
 指定 XAML 處理器必須用來解決它支援的型別之後初始化物件的建構函式以外的方法。  
@@ -66,5 +67,5 @@ ms.lasthandoff: 10/18/2017
   
  `x:FactoryMethod`當項目必須在任何其他屬性項目之前，必須優先於任何`x:Arguments`也提供做為項目，而且必須在前面的任何內容/內部文字/初始化文字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x:Arguments 指示詞](../../../docs/framework/xaml-services/x-arguments-directive.md)

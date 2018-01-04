@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動將自訂元件填入工具箱
 如果您的元件會由目前開啟的方案中的專案，會自動將會出現在**工具箱**，而不需要您所需的動作。 您也可以手動填入**工具箱**與使用自訂元件[選擇工具箱項目 對話方塊 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>後續步驟  
  本逐步解說會示範**工具箱**考慮專案的元件，但**工具箱**也是會考慮控制項。 實驗您自己的自訂控制項加入和移除控制項的專案，從您的方案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [選項對話方塊、 Windows Form 設計工具，一般](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [如何：操作工具箱索引標籤](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
  [選擇工具箱項目對話方塊 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  

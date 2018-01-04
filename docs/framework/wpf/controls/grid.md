@@ -18,17 +18,18 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58d4bb7974da8f68d7711ec27c914ecac2bb4f93
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0e380f239b85eaa743ceec998c866fdfe07e7c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grid"></a>Grid
 <xref:System.Windows.Controls.Grid>項目用以精確地將內容放置在資料列和資料行中。  
   
-## <a name="in-this-section"></a>本章節內容  
- [操作說明主題](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+## <a name="in-this-section"></a>本節內容  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  

@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc5f0fab7c380268dfc041d6105595858c2fed93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
 當您建立自訂控制項時，您通常會發現它需要偵錯設計階段行為。 特別是如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱[逐步解說： 建立 Windows Form 控制項，會利用的 Visual Studio 設計階段功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
@@ -182,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
 -   您可以撰寫自訂的設計工具為您的自訂控制項。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構的設計經驗的完整控制權。 如需詳細資訊，請參閱[逐步解說： 建立 Windows Form 控制項，會利用的 Visual Studio 設計階段功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [如何： 存取設計階段服務](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
  [如何： 存取 Windows Form 中的設計階段支援](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

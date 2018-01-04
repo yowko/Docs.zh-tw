@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c20753aab569bf90b7db2f062050c7e185d638fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-and-windows-forms"></a>資料繫結和 Windows Form
 在 Windows Forms 中，您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。 您可以繫結至執行階段計算、從檔案讀取，或衍生自其他控制項之值的值陣列。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 |主從式關係|主從式應用程式是查看相關資料的一種格式。 明確地說，有兩個具有相連關係的資料表 — 在一般的商業範例中，「客戶」資料表和「訂單」資料表，它們之間連結了客戶和個別訂單的關係。 如需有關建立主從式應用程式使用兩個 Windows Form<xref:System.Windows.Forms.DataGridView>控制項，請參閱[How to： 建立主從式表單使用兩個 Windows Form DataGridView 控制項](../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)|  
 |查閱資料表|另一個常見的資料展示/管理案例是資料表查閱。 通常，在較大的資料顯示中，<xref:System.Windows.Forms.ComboBox> 控制項是用來顯示和管理資料。 關鍵在於 <xref:System.Windows.Forms.ComboBox> 控制項中顯示的資料與寫入資料庫的資料不同。 例如，如果您有 <xref:System.Windows.Forms.ComboBox> 控制項，顯示可從雜貨店取得的項目，您可能會想看到產品的名稱 (麵包、牛奶、蛋)。 不過，為了簡化資料庫中的資訊擷取以及資料庫的正規化，您可能會將特定訂單的特定項目資訊儲存為項目編號 (#501、#603 等)。 因此，表單上 <xref:System.Windows.Forms.ComboBox> 控制項中的雜貨項目的「易記名稱」，與訂單中出現的相關項目編號，兩者之間有隱含的連接。 這是資料表查閱的本質。 如需詳細資訊，請參閱[How to： 使用 Windows Form BindingSource 元件建立查閱資料表](../../../docs/framework/winforms/controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Binding>  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [操作說明：將 Windows Forms DataGrid 控制項繫結至資料來源](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  

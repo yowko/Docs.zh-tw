@@ -17,11 +17,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b241e9a2dbe84833f43dadb2e979e5ee079706a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 內容可以由裝載[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可以由組件的頁面組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]，而且透過超連結導覽。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
   
  在其他情況下，應用程式可能會令相依於結構化巡覽的複雜巡覽拓撲有效運作。 如需詳細資訊，請參閱[巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  
  [巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

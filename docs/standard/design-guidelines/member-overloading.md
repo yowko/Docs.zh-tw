@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b54a99ab88e4cfa0569b2095a0be3750c91f244
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c84d70fb8c05dc295fc807c9a59085c47d0f455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-overloading"></a>成員多載
 成員多載是指只有不同數目或類型的參數，但具有相同名稱的相同型別上建立兩個或多個成員。 例如，在下列程式碼，`WriteLine`方法多載：  
@@ -65,6 +68,6 @@ public static class Console {
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [成員設計指導方針](../../../docs/standard/design-guidelines/member.md)  
+## <a name="see-also"></a>請參閱  
+ [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

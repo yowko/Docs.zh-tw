@@ -19,16 +19,17 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a2ec81fa63b07a33f79a54b500ae3d7e62f367f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0159848e8add1f66ca7690c0fc692522102e74d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transformations-how-to-topics"></a>轉換 HOW TO 主題
 本節中的主題描述如何將不同的轉換套用至物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [在事件發生時套用轉換至元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
  [將多個轉換套用至物件](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
  [使元素就地旋轉](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
  [平移元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
  [使用 MatrixTransform 建立自訂轉換](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Transform>  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  

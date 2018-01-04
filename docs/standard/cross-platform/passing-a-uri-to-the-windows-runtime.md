@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4ef77fb9e196abf046e0d4648a49b5d4d3fad47e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>傳遞 URI 給 Windows 執行階段
 Windows Runtime 方法僅接受絕對 URI。 如果您傳遞相關 URI 至 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 方法，則會擲回 <xref:System.ArgumentException> 例外狀況。 原因如下： 當您使用[!INCLUDE[wrt](../../../includes/wrt-md.md)]在.NET Framework 程式碼， [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)類別會顯示為<xref:System.Uri?displayProperty=nameWithType>在 Intellisense 中。 <xref:System.Uri?displayProperty=nameWithType>類別允許相對 Uri，但[Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)類別並不會。 對於您公開在 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件中的方法也是如此。 如果您的元件公開採用 URI 的方法，則程式碼中的簽章包含 <xref:System.Uri?displayProperty=nameWithType>。 不過，您的元件的使用者，簽章包含[Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)。 傳遞至元件的 URI 必須是絕對 URI。  
@@ -44,5 +47,5 @@ Windows Runtime 方法僅接受絕對 URI。 如果您傳遞相關 URI 至 [!INC
   
  如需這些結構描述的詳細資訊，請參閱[URI 配置](http://msdn.microsoft.com/library/windows/apps/jj655406.aspx)Windows 開發人員中心。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 849082fc1b933c4172c0d22ec3c9c2a1644a32fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac69ec232485ebd3097f2db3b31d3fd43d0ccc99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>如何：測試 Point4D 結構是否相等和不相等
 這個範例示範如何測試<xref:System.Windows.Media.Media3D.Point4D>結構相等和不等。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>  
  <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>  
  <xref:System.Windows.Media.Media3D.Point4D.Equals%2A>

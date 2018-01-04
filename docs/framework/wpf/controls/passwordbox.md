@@ -17,16 +17,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d3b7f26922b7f4691b2db35f27d5529c5eb9a64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d338321544b3c092d64ab520f822e6d593d8ae0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="passwordbox"></a>PasswordBox
 <xref:System.Windows.Controls.PasswordBox>控制項用來輸入機密或私人資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.TextBox>  
  <xref:System.Windows.Controls.RichTextBox>  
  [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)

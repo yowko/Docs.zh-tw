@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-design-guidelines"></a>成員設計方針
 方法、 屬性、 事件、 建構函式，以及欄位統稱為成員。 成員是最終 framework 功能向架構的使用者。  
@@ -31,9 +34,9 @@ ms.lasthandoff: 10/18/2017
   
  此章節提供基本設計的任何類型的成員時，應遵循的指導方針。  
   
-## <a name="in-this-section"></a>本章節內容  
- [多載成員](../../../docs/standard/design-guidelines/member-overloading.md)  
- [屬性的設計](../../../docs/standard/design-guidelines/property.md)  
+## <a name="in-this-section"></a>本節內容  
+ [成員多載](../../../docs/standard/design-guidelines/member-overloading.md)  
+ [屬性設計](../../../docs/standard/design-guidelines/property.md)  
  [建構函式設計](../../../docs/standard/design-guidelines/constructor.md)  
  [事件設計](../../../docs/standard/design-guidelines/event.md)  
  [欄位設計](../../../docs/standard/design-guidelines/field.md)  
@@ -44,5 +47,5 @@ ms.lasthandoff: 10/18/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

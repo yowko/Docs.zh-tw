@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82f5f69390f2b4d27f1f41050971afa9faede960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout"></a>配置
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
  下表摘要說明可用的配置<xref:System.Windows.Controls.Panel>項目。  
   
-|面板名稱|說明|  
+|面板名稱|描述|  
 |----------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|定義在其中您可以明確定位子項目座標相對於區域<xref:System.Windows.Controls.Canvas>區域。|  
 |<xref:System.Windows.Controls.DockPanel>|定義一個區域，可供您在其中以子項目彼此間相對的水平或垂直方式排列子項目。|  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="whats-next"></a>後續步驟  
  了解如何測量和排列項目是了解版面配置的第一個步驟。 如需有關可用<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。 若要進一步了解會影響版面配置的各種定位屬性，請參閱[對齊、邊界和填補概觀](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。 如需自訂的範例<xref:System.Windows.Controls.Panel>項目，請參閱[自訂放射狀面板範例](http://go.microsoft.com/fwlink/?LinkID=159982)。 當您準備好要將其全部一起放在輕量應用程式時，請參閱[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.UIElement>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  

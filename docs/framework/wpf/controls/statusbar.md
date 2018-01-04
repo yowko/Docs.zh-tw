@@ -17,11 +17,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ddb23b6c5ec85fd034c767684a04cc1c91620a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 051082c2ed7dd6ab664c2258c7dbbdf4f15524a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statusbar"></a>StatusBar
 A<xref:System.Windows.Controls.Primitives.StatusBar>是應用程式可以在其中顯示狀態資訊在視窗底部的水平區域。  
@@ -30,7 +31,7 @@ A<xref:System.Windows.Controls.Primitives.StatusBar>是應用程式可以在其�
   
  ![狀態列](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Primitives.StatusBar>  

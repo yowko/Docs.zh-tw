@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7027fbee6a35b9219e65c9964db9a038e942f14e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33631b0a63b69f848cb3f09b4dcb617fb328b06c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documentviewer-styles-and-templates"></a>DocumentViewer 樣式和範本
 本主題描述樣式和範本<xref:System.Windows.Controls.DocumentViewer>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="documentviewer-parts"></a>DocumentViewer 的組件  
  下表列出的具名組件<xref:System.Windows.Controls.DocumentViewer>控制項。  
   
-|組件|類型|說明|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|內容，而且可捲動區域。|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|搜尋方塊中，依預設底部。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

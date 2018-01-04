@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2f6015d25ee8868fe9b4c6dcf3bf145d413521e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93919f691b51d5f177b074e5d9cef2c140458e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：取得列印系統物件屬性但不使用反映
 使用反映詳細列出的物件上的屬性 （和這些屬性的類型） 不會降低應用程式的效能。 <xref:System.Printing.IndexedProperties>命名空間提供方法來取得這項資訊與使用反映。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Printing.IndexedProperties.PrintProperty>  
  <xref:System.Printing.PrintSystemObject>  
  <xref:System.Printing.IndexedProperties>  

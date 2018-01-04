@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>類型設計方針
 CLR 觀點中，有類型只有兩個類別，參考類型和實值類型 — 但架構設計的相關討論，為了分割類型分成多個邏輯群組，每個都有它自己的特定設計規則。  
@@ -41,11 +44,11 @@ CLR 觀點中，有類型只有兩個類別，參考類型和實值類型 — �
   
  **✓ 不要**確保每個類型的一組妥善定義之相關成員，不只是隨機的不相關的功能集合。  
   
-## <a name="in-this-section"></a>本章節內容  
- [類別和結構之間選擇](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+## <a name="in-this-section"></a>本節內容  
+ [在類別和結構之間選擇](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
  [抽象類別設計](../../../docs/standard/design-guidelines/abstract-class.md)  
  [靜態類別設計](../../../docs/standard/design-guidelines/static-class.md)  
- [介面的設計](../../../docs/standard/design-guidelines/interface.md)  
+ [介面設計](../../../docs/standard/design-guidelines/interface.md)  
  [結構設計](../../../docs/standard/design-guidelines/struct.md)  
  [列舉設計](../../../docs/standard/design-guidelines/enum.md)  
  [巢狀型別](../../../docs/standard/design-guidelines/nested-types.md)  
@@ -53,5 +56,5 @@ CLR 觀點中，有類型只有兩個類別，參考類型和實值類型 — �
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

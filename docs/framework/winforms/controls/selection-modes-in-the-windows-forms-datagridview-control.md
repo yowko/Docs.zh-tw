@@ -16,18 +16,19 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的選取模式
 有時候您想要根據使用者選取項目內執行動作的應用程式<xref:System.Windows.Forms.DataGridView>控制項。 根據動作，您可以限制選取的可能類型。 例如，假設您的應用程式可以列印報表，以針對目前選取的記錄。 在此情況下，您可能想要設定<xref:System.Windows.Forms.DataGridView>控制項，以便一律任意處按一下資料列內選取整個資料列，並因此選取一次該只有一個資料列。  
   
  您可以指定允許藉由設定的選取項目<xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>屬性，以下列其中一種<xref:System.Windows.Forms.DataGridViewSelectionMode>列舉值。  
   
-|DataGridViewSelectionMode 值|說明|  
+|DataGridViewSelectionMode 值|描述|  
 |-------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|按一下儲存格選取它。 資料列和資料行標頭不能用於選取項目。|  
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|按一下儲存格選取它。 按一下資料行標頭選取整個資料行。 資料行標頭不能用來排序。|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 > [!TIP]
 >  範例程式碼，示範如何以程式設計方式使用選取的資料格位於<xref:System.Windows.Forms.DataGridView>類別概觀。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  

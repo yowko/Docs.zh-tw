@@ -17,21 +17,22 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f09c1aac387d26d44398331d62b25e588d4bbdc1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d9bec0b3edd6a5ab3997c42e3b8154f0c41531d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-customization"></a>控制項自訂
 這個類別涵蓋了不同的基底類別、 介面和其他項目以及用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
  [設計可設定樣式控制項的方針](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
  [裝飾項](../../../../docs/framework/wpf/controls/adorners.md)  
  [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
  [WPF 自訂控制項的 UI 自動化](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

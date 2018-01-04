@@ -17,16 +17,17 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2799bd6652c9f575be8758f47c9770d3fde93580
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms"></a>Windows Forms
 由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為了達到這個目的，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 提供整合式開發環境 (IDE) 以協助您撰寫程式碼，並且提供一組以 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 撰寫的豐富控制項。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  提供如何控制 Windows Form 的能力，以更強固的安全性輕鬆地顯示資料、處理使用者輸入和部署應用程式的相關主題連結。  
   

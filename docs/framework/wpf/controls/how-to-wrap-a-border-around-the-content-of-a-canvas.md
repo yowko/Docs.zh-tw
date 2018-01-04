@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 410bb4fdd171a63038703366c6c4616dc7563ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cbcc13512427d02867a50b17aeb75180ede28f3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>如何：在畫布內容周圍加上框線
 這個範例示範如何包裝<xref:System.Windows.Controls.Canvas>具有項目<xref:System.Windows.Controls.Border>。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[CanvasHelloWorldBorder#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasHelloWorldBorder/CS/default.xaml#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Canvas>  
  <xref:System.Windows.Controls.Border>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)

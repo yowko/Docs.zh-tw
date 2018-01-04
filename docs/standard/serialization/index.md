@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8f86b66e92ea250fbe20e8bcb27e6706302db4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a0d9f5fd32b5610e3d7b05455c7bd3c55b5b77e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-in-net"></a>.NET 的序列化
 序列化是將物件的狀態轉換成可保存或傳輸之形式的程序。 序列化的互補方法是還原序列化，它將資料流轉換成為物件。 將這些程序搭配在一起，可讓資料輕鬆地儲存與傳輸。  
@@ -33,7 +36,7 @@ ms.lasthandoff: 12/02/2017
   
 -   XML 序列化程序僅對公用屬性與欄位進行序列化，並不保留型別精確度。 當您不想限制使用資料的應用程式，而能提供或使用資料時，這種做法就很有用。 因為 XML 為開放標準，因此是在 Web 上共用資料的很好選擇。 同樣是開放標準的 SOAP，也是一項很好的選擇。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 [序列化「如何」主題](../../../docs/standard/serialization/serialization-how-to-topics.md)  
 列出本節中所含的 HOW TO 主題的連結。
   

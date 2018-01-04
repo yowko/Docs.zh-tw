@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 475607381f16d7b42f26f12809a11d5eaf4e74bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6809ce2f51af8a1baf535afa8fe80f4e5b5f53e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar 樣式和範本
 本主題描述樣式和範本<xref:System.Windows.Controls.ProgressBar>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="progressbar-parts"></a>ProgressBar 組件  
  下表列出的具名組件<xref:System.Windows.Controls.ProgressBar>控制項。  
   
-|組件|類型|說明|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|物件，表示進度。|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|定義進度列指示器的路徑物件。|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="progressbar-states"></a>進度列狀態  
  下表列出的視覺狀態<xref:System.Windows.Controls.ProgressBar>控制項。  
   
-|VisualState 名稱|VisualStateGroup 名稱|說明|  
+|VisualState 名稱|VisualStateGroup 名稱|描述|  
 |----------------------|---------------------------|-----------------|  
 |確定|CommonStates|<xref:System.Windows.Controls.ProgressBar>報告進度根據<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>屬性。|  
 |不定|CommonStates|<xref:System.Windows.Controls.ProgressBar>報告泛型的進度，以重複模式。|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

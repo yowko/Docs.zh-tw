@@ -15,16 +15,17 @@ caps.latest.revision: "86"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 921a9f3abd8c4cba8cfa0f59b8321ee309642dbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58f65d6c25627ba84ffe83677bbaadfc2e55e6f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documents"></a>文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組多功能的元件，可讓開發人員透過進階的文件功能和改良的閱讀經驗來建置應用程式。 除了增強功能和品質，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也針對文件封裝、安全性和儲存提供簡化的管理服務。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [文件序列化與儲存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
  [註釋](../../../../docs/framework/wpf/advanced/annotations.md)  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  [印刷樣式](../../../../docs/framework/wpf/advanced/typography.md)  
  [列印和列印系統管理](../../../../docs/framework/wpf/advanced/printing-and-print-system-management.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  

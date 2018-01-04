@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf50346cc179a5aae860a7651d28e104bac3c2ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-overview"></a>TreeView 概觀
 <xref:System.Windows.Controls.TreeView>控制項可用來顯示階層式結構的資訊，使用可摺疊的節點。 本主題將介紹<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控制項，並提供其用法的簡單範例。  
@@ -83,8 +84,8 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
- [操作說明主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
  [WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)

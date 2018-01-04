@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c04a2860b46460065a09de3dafedc7010753d36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload: dotnet
+ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 一次存取資料時，應用程式可以從快取，而要擷取的原始來源取得資料。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -83,12 +84,12 @@ ms.lasthandoff: 11/21/2017
   
 6.  選取**為方案建立目錄**核取方塊。  
   
-7.  按一下 [確定]。  
+7.  按一下 [確定 **Deploying Office Solutions**]。  
   
      WPF 設計工具會在中開啟**設計**檢視，並顯示 MainWindow.xaml 檔案。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]建立**我的專案**資料夾、 Application.xaml 檔案和 MainWindow.xaml 檔案。  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>以.NET Framework 為目標，並加入快取的組件的參考  
- 根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式中的命名空間，應用程式必須為目標[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。  
+ 根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式中的命名空間，應用程式必須為目標[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)](不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。  
   
  因此下, 一個步驟為變更.NET Framework 目標，並將參考加入<xref:System.Runtime.Caching>命名空間。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  在**目標 framework （所有組態）**清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
      **目標 Framework 變更**對話方塊隨即出現。  
   
@@ -335,7 +336,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Caching.MemoryCache>  
  <xref:System.Runtime.Caching.ObjectCache>  
  <xref:System.Runtime.Caching>  

@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e58e49ecc852b87d03d4112208354e608248984
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>操作說明：在事件發生時套用轉換至元素
 這個範例示範如何套用<xref:System.Windows.Media.ScaleTransform>事件發生時。 這裡所示範的概念，與您用來套用其他類型轉換的概念相同。 如需可用的轉換類型的詳細資訊，請參閱<xref:System.Windows.Media.Transform>類別或[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
@@ -45,9 +46,9 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
  [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.ScaleTransform>  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

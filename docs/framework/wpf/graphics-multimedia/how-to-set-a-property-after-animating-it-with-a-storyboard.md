@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 357a9bb6c1a01b00e7f9bcfc17267797f20366b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>如何：使用腳本建立屬性的動畫後進行設定
 在某些情況下，它可能會出現，動畫之後，您無法變更屬性的值。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  這項技術也適用於非分鏡腳本動畫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
  <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Media.Animation.RemoveStoryboard>  

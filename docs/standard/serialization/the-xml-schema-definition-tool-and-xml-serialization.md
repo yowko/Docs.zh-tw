@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bd462714ada242062c9e2e23f924868f5870ef8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67451a30e5681718e5b9cdd07468ac5bf20322bc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 結構描述定義工具和 XML 序列化
 XML 結構描述定義工具 ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) 會隨 .NET Framework 工具當作 Windows® 軟體開發套件 (SDK) 的一部分安裝。 該工具的設計主要有兩個目的：  
@@ -32,7 +35,7 @@ XML 結構描述定義工具 ([XML Schema Definition Tool (Xsd.exe)](../../../do
   
  如需這項工具和其他工具的詳細資訊，請參閱[工具](../../../docs/framework/tools/index.md)。 如需工具選項的資訊，請參閱 [XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataSet>  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  

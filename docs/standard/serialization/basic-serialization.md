@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd047d1c099cf926760c4e4efcdbe2101ce0853c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 822b05758c7751e6f82f7a7f46a219d2c0001cd1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -98,6 +101,6 @@ public class MyStuff : MyObject
   
  使用 [Serializable](xref:System.SerializableAttribute) 屬性十分方便，但有上述限制。 如需何時應將類別標示為序列化的資訊，請參閱[序列化方針](serialization-guidelines.md)。 類別在編譯後即無法在其中新增序列化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [二進位序列化](binary-serialization.md)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

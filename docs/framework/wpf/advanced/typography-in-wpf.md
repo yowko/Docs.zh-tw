@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28c51c6208bfdfe068b9fb3ed2cdc58dd0350fdb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/21/2017
   
  如需如何建立自訂文字版面配置的詳細資訊，請參閱[進階文字格式化](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.FormattedText>  
  <xref:System.Windows.Media.TextFormatting.TextFormatter>  
  [ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  

@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4538407bc66ad7974a9a4998c8e5d7ccb38fab4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 600dbb98264c4750db1ffb98b757ad191eaf4fe5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>如何： 存取預先定義的 UTC 與本地時間區域物件
 
@@ -62,7 +65,7 @@ ms.lasthandoff: 10/18/2017
 
 * 確認<xref:System>以匯入命名空間`using`陳述式 （C# 程式碼所需）。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [日期、 時間和時區](../../../docs/standard/datetime/index.md)
 [尋找本機系統上所定義的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

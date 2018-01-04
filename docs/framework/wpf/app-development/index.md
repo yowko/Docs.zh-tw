@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff8f8ab85cda7bdbf66b000a89d8a862e765d561
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67a49e1b27c227623d01dba17b7b0a1aea7c1290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a>
@@ -120,7 +121,7 @@ ms.lasthandoff: 10/22/2017
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也支援一種特殊的瀏覽類型，稱為結構化瀏覽。 結構化瀏覽可用來呼叫一或多個頁面，這些頁面會以與呼叫函式一致的結構化且可預期方式傳回資料。 此功能相依於 <xref:System.Windows.Navigation.PageFunction%601> 類別，這在[結構化巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)中將進一步說明。 <xref:System.Windows.Navigation.PageFunction%601> 也可用來簡化複雜瀏覽拓撲的建立，這在[巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)中將進行說明。  
   
 <a name="Hosting"></a>   
-## <a name="hosting"></a>架設  
+## <a name="hosting"></a>裝載  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以裝載於 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox。 每個裝載模型有各自的一組考量和條件約束，[裝載](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)中將進行說明。  
   
 <a name="Build_and_Deploy"></a>   

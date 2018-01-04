@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c276e9da3eaaf786038a117532848364b03e9b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45f2a141b09c52085c13803b8d338fdc9eebf135
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-method"></a>操作說明：繫結至方法
 下列範例示範如何將繫結至方法，使用<xref:System.Windows.Data.ObjectDataProvider>。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
  `InvalidationCharacterRule`是<xref:System.Windows.Controls.ValidationRule>，會檢查是否有無效的字元。 預設錯誤範本，也就是紅色框線周圍<xref:System.Windows.Controls.TextBox>，出現時輸入的值不是雙精度浮點數值通知使用者。  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+## <a name="see-also"></a>請參閱  
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [繫結至列舉](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)

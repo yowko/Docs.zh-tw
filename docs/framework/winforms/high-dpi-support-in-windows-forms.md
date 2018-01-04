@@ -17,15 +17,16 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a2461c507c0d2a27f1c2bdfe85327d11318b17ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a68c9278d4e8092be5c744109e56f7cb52498095
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>在 Windows Form 中的高 DPI 支援
 
-從.NET Framework 4.7 開始，Windows Form 包含常見的高 DPI 與動態 DPI 情節的增強功能。 這些活動包括： 
+從.NET Framework 4.7 開始，Windows Form 包含常見的高 DPI 與動態 DPI 情節的增強功能。 它們包括： 
 
 - 改良的縮放比例和 Windows Form 的數字的版面配置控制項，例如<xref:System.Windows.Forms.MonthCalendar>控制項和<xref:System.Windows.Forms.CheckedListBox>控制項。 
 
@@ -103,7 +104,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="new-helper-methods-and-properties"></a>新的協助程式方法和屬性
 
-.NET Framework 4.7 也會加入許多新的 helper 方法和屬性，提供 DPI 縮放比例的相關資訊，讓您執行 DPI 縮放比例。 這些活動包括：
+.NET Framework 4.7 也會加入許多新的 helper 方法和屬性，提供 DPI 縮放比例的相關資訊，讓您執行 DPI 縮放比例。 它們包括：
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>可將值從邏輯轉換成裝置像素為單位。
 
@@ -137,7 +138,7 @@ Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Windows Form 加入組態項目](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)  
 [調整 Windows Forms 的大小和比例](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)

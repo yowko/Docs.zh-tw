@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d21077e6012f8e48a1418f67e8f0d156d82003c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 項目的配置考量
 本主題描述如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目互動[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置系統。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  在 版面配置[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]是裝置而異，更容易為靜態。 一般而言，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]使用硬體像素為單位指定維度的表單上控制項絕對定位。 不過，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]並支援某些動態配置功能，在下表將摘要說明。  
   
-|版面配置功能|說明|  
+|版面配置功能|描述|  
 |--------------------|-----------------|  
 |自動調整大小|某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項調整大小，才能夠正確顯示其內容。 如需詳細資訊，請參閱[AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。|  
 |錨定和停駐|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項支援定位和調整大小基礎的父容器。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
  除了擴充之外，<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目會處理捨入和溢位的情況下下, 表中所述。  
   
-|轉換問題|說明|  
+|轉換問題|描述|  
 |----------------------|-----------------|  
 |四捨五入|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]裝置獨立畫素維度已指定為`double`，和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]硬體像素維度已指定為`int`。 萬一其中`double`-根據的維度會轉換成`int`-基礎維度<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目使用標準的捨入，以便小於 0.5 小數的值會無條件捨去至 0。|  
 |溢位|當<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素將從轉換`double`值`int`值，可能會溢位。 值大於<xref:System.Int32.MaxValue>設為<xref:System.Int32.MaxValue>。|  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
   
 -   如果<xref:System.Windows.Forms.Control.Size%2A>屬性會傳回與指定的條件約束，較小的大小<xref:System.Windows.Forms.Integration.WindowsFormsHost>接受這個大小值，並傳回值，以[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置系統。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [逐步解說：在 WPF 中排列 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  

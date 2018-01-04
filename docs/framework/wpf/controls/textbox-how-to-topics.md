@@ -17,16 +17,17 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e21053043a48b68dce229a7de20c4a7e38f7a62c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd716f4d9f072284b29958c79350d497442cf41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-how-to-topics"></a>TextBox HOW TO 主題
 本節提供範例示範如何完成一般工作，使用<xref:System.Windows.Controls.TextBox>控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立多行 TextBox 控制項](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
  [偵測 TextBox 中的文字何時變更](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
  [在 TextBox 控制項中啟用定位字元](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 控制項陳列庫範例](http://go.microsoft.com/fwlink/?LinkID=160053)  
  [TextBox 樣式和範本](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

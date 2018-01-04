@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49778dc9551652ee4a4d36426b4b396652b9dcd2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 可凍結的物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  
@@ -171,7 +172,7 @@ mc:Ignorable="PresentationOptions"
   
  如需自訂的範例<xref:System.Windows.Freezable>類別，請參閱[自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Freezable>  
  [自訂動畫範例](http://go.microsoft.com/fwlink/?LinkID=159981)  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  

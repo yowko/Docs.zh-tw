@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-rendering-ink"></a>自訂呈現筆墨
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>屬性為筆劃的端點可讓您指定的外觀為筆劃的端點，例如其大小、 色彩和形狀，但有時可能會想要自訂外觀以外的視野<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允許。 您可能想要自訂筆跡外觀，轉譯具噴槍、油畫及許多其他效果的外觀。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]可讓您自訂要實作自訂轉譯筆墨<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>物件。  
@@ -101,5 +102,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="conclusion"></a>結論  
  您可以藉由衍生您自己自訂的筆墨外觀<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>， <xref:System.Windows.Ink.Stroke>，和<xref:System.Windows.Controls.InkCanvas>類別。 當使用者繪製並收集筆劃後，這些類別可合力確保筆劃外觀的一致。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [筆跡進階處理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

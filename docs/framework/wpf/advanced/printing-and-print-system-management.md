@@ -16,23 +16,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5be4840f059467556e131e41dfa9ae9aac3bea34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077b98eb63559a0a4bb691b4b35949aa98d0592c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-and-print-system-management"></a>列印和列印系統管理
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]和[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]導入新的列印路徑 — 替代[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]列印 — 組大幅擴充的列印系統管理和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  新的列印路徑的討論和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
- [操作說明主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  示範如何使用新的列印路徑的文件的一組和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  

@@ -14,11 +14,14 @@ ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: b29435b3e9918caf130bb9a0a3a81707a069b4c7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8ae76c100cdf448bd0e9625e6b3378b6b9e25324
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="binary-serialization"></a>二進位序列化
 

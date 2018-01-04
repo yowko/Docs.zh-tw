@@ -19,11 +19,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d5b89392801e7cf85fcda121a86d0bda4e7ac18
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參數和傳回值，轉換 (序列化) 為與特定 XML 結構描述 (Schema) 定義語言 (XSD) 文件相符的 XML 資料流。 XML 序列化會產生強型別 (Strongly Typed) 類別，其中包含的公用屬性和欄位都轉換為序列格式 (此例為 XML) 以進行儲存或傳輸。  
@@ -34,7 +37,7 @@ XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參
   
  若要序列化或還原序列化物件，請使用 <xref:System.Xml.Serialization.XmlSerializer> 類別。 若要建立要序列化的類別，請使用 XML 結構描述定義工具。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  提供序列化的一般定義，特別是 XML 序列化。  
   
@@ -86,7 +89,7 @@ XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參
  [\<schemaImporterExtensions>元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
  包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別使用的類型。  
   
- [\<xmlSchemaImporterExtensions> 的 \<add> 元素](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+ [\<xmlSchemaImporterExtensions> 的 \<add> 項目](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
  新增 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別使用的類型。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -96,5 +99,5 @@ XML 序列化會將物件的公用 (Public) 欄位和屬性，或是方法的參
  [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
  提供一個主題，說明並解釋如何設計使用 ASP.NET 的 XML Web 服務。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全性
 <a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和用戶端指令碼語言都不能存取重要的系統資源。 因為[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]可以從瀏覽器啟動瀏覽器裝載的應用程式，其應符合一組類似的限制。 強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依賴兩者[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]和[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](請參閱[WPF 安全性策略-平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 根據預設，瀏覽器裝載的應用程式要求網際網路區域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]組權限，不論是從網際網路、 近端內部網路或在本機電腦的啟動與否。 使用少於完整權限集執行的應用程式便是以部分信任執行。  
@@ -140,23 +141,23 @@ ms.lasthandoff: 11/21/2017
   
 |權限|屬性|LocalIntranet|網際網路|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|存取 DNS 伺服器|是|否|  
-|環境變數|讀取|是|否|  
-|檔案對話方塊|開啟|是|是|  
-|檔案對話方塊|無限制的|是|否|  
-|隔離儲存區|依據使用者隔離組件|是|否|  
-|隔離儲存區|未知的隔離|是|是|  
-|隔離儲存區|無限制的使用者配額|是|否|  
-|媒體|安全的音訊、視訊和影像|是|是|  
-|列印|預設列印|是|否|  
-|列印|安全列印|是|是|  
-|反射|發出|是|否|  
-|安全性|Managed 程式碼執行|是|是|  
-|安全性|判斷提示授與權限|是|否|  
-|使用者介面|無限制的|是|否|  
-|使用者介面|安全的最上層視窗|是|是|  
-|使用者介面|擁有剪貼簿|是|是|  
-|網頁瀏覽器|HTML 框架安全瀏覽|是|是|  
+|DNS|存取 DNS 伺服器|[是]|否|  
+|環境變數|讀取|[是]|否|  
+|檔案對話方塊|開啟|[是]|[是]|  
+|檔案對話方塊|無限制的|[是]|否|  
+|隔離儲存區|依據使用者隔離組件|[是]|否|  
+|隔離儲存區|未知的隔離|[是]|[是]|  
+|隔離儲存區|無限制的使用者配額|[是]|否|  
+|媒體|安全的音訊、視訊和影像|[是]|[是]|  
+|列印|預設列印|[是]|否|  
+|列印|安全列印|[是]|[是]|  
+|反射|發出|[是]|否|  
+|安全性|Managed 程式碼執行|[是]|[是]|  
+|安全性|判斷提示授與權限|[是]|否|  
+|使用者介面|無限制的|[是]|否|  
+|使用者介面|安全的最上層視窗|[是]|[是]|  
+|使用者介面|擁有剪貼簿|[是]|[是]|  
+|網頁瀏覽器|HTML 框架安全瀏覽|[是]|[是]|  
   
 > [!NOTE]
 >  在部分信任中，只有在使用者啟動時，才允許剪下和貼上。  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
   
  或者，您可以使用 ClickOnce 受信任部署模型，以從任何安全性區域進行完全信任部署。 如需詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)和[安全性](../../../docs/framework/wpf/security-wpf.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性](../../../docs/framework/wpf/security-wpf.md)  
  [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
  [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

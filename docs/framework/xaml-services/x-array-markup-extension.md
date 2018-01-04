@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2cefdee5ca2d1b0a6c79325365aa101d767b6926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc2304ba68956b705904c72e29a17bdac4536c79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xarray-markup-extension"></a>x:Array 標記延伸
 提供一般支援用於在 XAML 中透過標記延伸的物件陣列。 這會對應至`x:ArrayExtension`[MS-XAML] 中的 XAML 型別。  
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
   
  自訂型別做為陣列項目，此類別也必須支援做為物件項目在 XAML 中所產生的需求。 如需詳細資訊，請參閱[XAML 和自訂類別 wpf](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [從 WPF 移轉至 System.Xaml 的類型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

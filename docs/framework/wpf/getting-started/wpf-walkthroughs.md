@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-walkthroughs"></a>WPF 逐步解說
 逐步解說提供常見情節的逐步指示。 因此是開始學習產品或特定功能領域的最佳入門。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="wpf-designer-walkthroughs"></a>WPF 設計工具的逐步解說  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[逐步解說： 建置簡單的 WPF 應用程式使用 WPF 設計工具](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|示範如何建置簡單的 WPF 應用程式與[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。|  
 |[逐步解說： 建構動態的版面配置](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|示範如何建立動態的版面配置使用<xref:System.Windows.Controls.Grid>面板控制項。|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="wpf-walkthroughs"></a>WPF 逐步解說  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|示範如何建立 WPF 應用程式使用許多 WPF 包括控制項、 版面配置和資料繫結的常見功能。|  
 |[使用 XAML 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|示範如何建立動畫的按鈕。|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="migration-and-interoperability-in-wpf"></a>移轉和互通性，在 WPF 中  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|示範如何裝載 Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF 應用程式中的控制項。|  
 |[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|示範如何裝載[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]資料輸入中的複合控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。|  
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="related-sections"></a>相關章節  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[Visual Studio 逐步解說](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|提供所有區域的程式設計，Visual Studio 中的逐步解說相關的清單。|

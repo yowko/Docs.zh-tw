@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b960e52d8d7dca590411f1c5f096a6942e1ade9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>通用 XAML 語言基本類型的內建類型
 XAML 2009 引進數種資料類型的 XAML 語言層級支援，而這些資料類型是 Common Language Runtime (CLR) 和其他程式設計語言中的常用基本類型。 XAML 2009 新增下列基本類型的支援： `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`和 `x:Array`。  
@@ -81,7 +82,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
  如需 XAML 語言規格定義，請參閱[ \[MS-XAML\]第 5.2.14 和 5.4.8 節](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xsingle"></a>x:Single  
- 對於 CLR 支援，`x:Single` 基本類型對應至 <xref:System.Single>。  
+ 對於 CLR 支援， `x:Single` 基本類型對應至 <xref:System.Single>。  
   
  除了數值之外，`x:Single` 的文字語法也允許語彙基元 `Infinity``-Infinity` 和 `NaN`。 這些語彙基元視為區分大小寫。  
   
@@ -90,7 +91,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
  如需 XAML 語言規格定義，請參閱[ \[MS-XAML\]第 5.2.8 和 5.4.2 節](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ### <a name="xdouble"></a>x:Double  
- 對於 CLR 支援，`x:Double` 基本類型對應至 <xref:System.Double>。  
+ 對於 CLR 支援， `x:Double` 基本類型對應至 <xref:System.Double>。  
   
  除了數值之外，`x:Double` 的文字語法還允許語彙基元 `Infinity``-Infinity` 和 `NaN`。 這些語彙基元視為區分大小寫。  
   

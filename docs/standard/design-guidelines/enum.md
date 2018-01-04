@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7e1686dca2b96e339917b6dd4861f0f43d20d66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="enum-design"></a>列舉設計
 列舉是特殊類型的實值型別。 有兩種類型的列舉： 簡單列舉和旗標的列舉。  
@@ -104,6 +107,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [型別設計指導方針](../../../docs/standard/design-guidelines/type.md)  
+## <a name="see-also"></a>請參閱  
+ [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

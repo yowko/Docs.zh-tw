@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22b0354a0821021239140527793dc34e3911a733
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名稱範圍
 XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍中的名稱可以用來建立物件的 XAML 定義名稱與其在物件樹狀結構中的執行個體對等項目之間的關聯性。 一般而言，載入 XAML 應用程式的個別 XAML 頁面根時，會建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Managed 程式碼中的 XAML 名稱範圍。 XAML 名稱範圍，以程式設計的物件會由<xref:System.Windows.Markup.INameScope>介面，並由實際類別也實作<xref:System.Windows.NameScope>。  
@@ -106,6 +107,6 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
   
 -   <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF XAML 的 XAML 命名空間和命名空間對應](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
  [x:Name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)

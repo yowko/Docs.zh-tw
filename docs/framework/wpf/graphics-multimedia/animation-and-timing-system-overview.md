@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484aa47744de95c849b237112f1a383c2c2cb0b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87e3b1b63c8582a322f74659f03803d1dbb19621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-and-timing-system-overview"></a>動畫和計時系統概觀
 本主題描述如何計時系統使用動畫， <xref:System.Windows.Media.Animation.Timeline>，和<xref:System.Windows.Media.Animation.Clock>以動畫方式顯示屬性的類別。  
@@ -92,7 +93,7 @@ ClockGroup
   
  當您以動畫顯示屬性，<xref:System.Windows.Media.Animation.AnimationClock>設定的屬性*目前*值。 擷取透過其 CLR 存取子屬性的值或<xref:System.Windows.DependencyObject.GetValue%2A>方法傳回的輸出<xref:System.Windows.Media.Animation.AnimationClock>時<xref:System.Windows.Media.Animation.AnimationClock>是<xref:System.Windows.Media.Animation.ClockState.Active>或<xref:System.Windows.Media.Animation.ClockState.Filling>。 您可以使用來擷取屬性的基底值<xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A>方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
  [計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

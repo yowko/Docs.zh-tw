@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>檔案對話方塊自訂位置的已知資料夾 GUID
 您使用<xref:System.Guid>指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知資料夾，當您加入資料夾來<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知資料夾 Guid 不區分大小寫，且 KnownFolders.h 檔中定義[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/21/2017
  GameTasks  
  054FAE61-4DD8-4787-80B6-090220C4B700  
   
- 記錄  
+ 歷程  
  D9DC8A3B-B784-432E-A781-5A1130A75963  
   
  網際網路  
@@ -296,6 +297,6 @@ ms.lasthandoff: 11/21/2017
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.FileDialogCustomPlace>  
  [操作說明：將自訂位置加入至檔案對話方塊](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

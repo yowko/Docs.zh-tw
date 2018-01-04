@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0c98422e337678e68a8e4b72979635e8c867b4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 091be80e055279685c9dba33dd6b6635e64eaff0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-to-a-control39s-background"></a>如何：繪製文字至控制項的背景
 您可以直接對控制項的背景繪製文字的文字字串轉換成<xref:System.Windows.Media.FormattedText>物件，然後再加入控制項的繪製物件<xref:System.Windows.Media.DrawingContext>。 您也可以使用這項技術，物件的背景繪製衍生自<xref:System.Windows.Controls.Panel>，例如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.StackPanel>。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.FormattedText>  
  [繪製格式化的文字](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

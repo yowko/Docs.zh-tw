@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>計時事件概觀
 本主題描述如何使用五個可用的計時事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>物件。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="public-events"></a>公用事件  
  <xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>這兩個類別會提供五個計時事件。 下表列出這些事件和觸發它們的條件。  
   
-|事件|觸發互動式作業|其他觸發程序|  
+|Event - 事件|觸發互動式作業|其他觸發程序|  
 |-----------|--------------------------------------|--------------------|  
 |**Completed**|跳至填滿|時鐘完成。|  
 |**CurrentGlobalSpeedInvalidated**|暫停、繼續、搜尋、設定速率、跳至填滿、停止|時鐘反轉、加速、啟動或停止。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  當您註冊<xref:System.Windows.Media.Animation.Timeline.Completed>時間表上的事件，例如，您正在實際告訴系統註冊<xref:System.Windows.Media.Animation.Clock.Completed>事件的時間軸會建立每個時鐘。 程式碼中，您必須註冊此事件之前<xref:System.Windows.Media.Animation.Clock>建立的這個時間軸中; 否則您不會收到通知。 發生這種情況中自動[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 剖析器會自動註冊的事件之前<xref:System.Windows.Media.Animation.Clock>建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac6671033a439051b062ddae70649a63bacd4979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-behaviors-overview"></a>計時行為概觀
 本主題描述的執行時間行為的動畫和其他<xref:System.Windows.Media.Animation.Timeline>物件。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  從時間軸類別繼承的類別提供額外功能，例如，動畫和媒體播放。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供下列<xref:System.Windows.Media.Animation.Timeline>型別。  
   
-|時間軸型別|說明|  
+|時間軸型別|描述|  
 |-------------------|-----------------|  
 |<xref:System.Windows.Media.Animation.AnimationTimeline>|抽象基底類別<xref:System.Windows.Media.Animation.Timeline>產生輸出值建立屬性的物件。|  
 |<xref:System.Windows.Media.MediaTimeline>|從媒體檔案產生輸出。|  
@@ -132,9 +133,9 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>的時間軸在減速。 如需範例，請參閱[如何： 加速或減速動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
  [動畫計時行為範例](http://go.microsoft.com/fwlink/?LinkID=159970)

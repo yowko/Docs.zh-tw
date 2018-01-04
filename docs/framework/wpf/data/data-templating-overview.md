@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91ab838ec543e2cc17e380ee9ec0d629989a003e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
 WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題首先會示範如何定義<xref:System.Windows.DataTemplate>和再導入了其他的資料範本化功能，例如根據自訂邏輯以及支援的階層式資料的顯示範本選擇。  
@@ -202,7 +203,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  ![HierarchicalDataTemplate 範例螢幕擷取畫面](../../../../docs/framework/wpf/data/media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [尋找 DataTemplate 產生的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

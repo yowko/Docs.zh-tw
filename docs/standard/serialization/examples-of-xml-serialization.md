@@ -23,11 +23,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550b1e8bf04bf7e2cec52ce26d647022688c4004
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ee2baef3ddcaebb494f1eae2813e861f93e489dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 XML 序列化的形式不只一種，從簡單到複雜都有。 例如，您可序列化僅包含公用欄位及屬性的類別，如 [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下列程式碼範例說明各種不同的進階案例，包括如何使用 XML 序列化以產生符合特定 XML 結構描述 (XSD) 文件的 XML 資料流。  
@@ -771,7 +774,7 @@ public class Test
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
  [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  

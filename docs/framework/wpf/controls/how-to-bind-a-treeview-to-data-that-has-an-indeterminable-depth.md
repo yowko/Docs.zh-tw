@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b16cae3a91eae73a4480484d89bb075862256b25
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be21ecb75420b6499e5b95d5f4d93a5f079f9646
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>如何：將樹狀檢視繫結至未知深度的資料
 有時當您想要繫結<xref:System.Windows.Controls.TreeView>深度不知道資料來源。  發生這個問題的資料是遞迴的本質，例如檔案系統，其中的資料夾可以包含資料夾或公司的組織結構，其中員工的直屬員工的其他員工。  
@@ -34,6 +35,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)

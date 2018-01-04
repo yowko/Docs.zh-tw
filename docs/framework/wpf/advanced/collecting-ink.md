@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81ed657de0c0e4d07fcb10b099cbf5e5c80a71fc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cbf55b5d84420a6aa7af06e94497a85a2b54a0c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collecting-ink"></a>收集筆墨
 [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) 平台收集數位筆跡當成其功能的核心部分。 本主題討論 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 中收集筆跡的方法。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  請注意如何<xref:System.Windows.Controls.StackPanel>將上方的按鈕<xref:System.Windows.Controls.InkCanvas>。 如果您嘗試透過頂端的按鈕時，筆墨<xref:System.Windows.Controls.InkCanvas>收集並呈現按鈕之後的筆墨。 這是因為按鈕的同層級<xref:System.Windows.Controls.InkCanvas>而不是子系。 而且按鈕的級別高於疊置順序，所以筆跡轉譯在其後。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Ink.DrawingAttributes>  
  <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>  
  <xref:System.Windows.Ink>

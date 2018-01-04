@@ -21,11 +21,14 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6f2ffaeeb8a92dd7ab16b4ba233196230b595af2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ce442c679425e5d069a0e5e163cbe2ad46702480
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="decrypting-data"></a>解密資料
 解密是加密的反向作業。 針對秘密金鑰加密，您必須同時知道金鑰和用來加密資料的 IV。 針對公開金鑰加密，您必須知道公開金鑰 (如果使用私密金鑰來加密資料) 或私密金鑰 (如果使用公開金鑰來加密資料)。  
@@ -209,7 +212,7 @@ SymmetricKey = RSA.Decrypt( EncryptedSymmetricKey, false);
 SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
  [加密資料](../../../docs/standard/security/encrypting-data.md)  
  [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

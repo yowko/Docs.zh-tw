@@ -17,16 +17,17 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74f5a19e891bf0b86f91fcbe4f6b59b4d6acc8bb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3735bfc7b759f48a9dc580210f3a6f1c89782d30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-in-wpf"></a>WPF 中的 XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]一種宣告式應用程式標記語言的程式設計。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]實作 aXAML 處理器實作，並提供 XAML 語言支援。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類型會實作，它們可以提供所需的類型，XAML 表示法的備份。 一般情況下，您可以建立的大部分程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 標記中的應用程式 UI。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [WPF 中的程式碼後置和 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/22/2017
   [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)  
   [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [資源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)

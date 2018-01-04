@@ -16,11 +16,12 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-an-application"></a>如何：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 >  LocBaml 工具不是可實際執行的應用程式。 這只是個範例，示範如何使用一些當地語系化的 API，並說明如何撰寫當地語系化工具。  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此討論提供將應用程式當地語系化的逐步方法。 首先，您要準備您的應用程式，以便從中擷取要轉譯的文字。 轉譯文字之後，您要轉譯的文字合併至原始應用程式的新複本中。  
   
 <a name="Requirements"></a>   
@@ -215,6 +216,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="whats-next"></a>後續步驟  
  您現在對於如何使用 LocBaml 工具，應該有基本的了解。  您應該能夠建立包含 UID 的檔案。 藉由使用 LocBaml 工具，您應該能夠剖析檔案來擷取可當地語系化的內容，而在內容轉譯之後，您應該能夠產生將轉譯內容合併的 .resources.dll 檔案。 本主題可能無法顧及所有細節，但是您現在已經有了使用 LocBaml 將應用程式當地語系化所需的知識。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

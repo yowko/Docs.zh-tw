@@ -16,11 +16,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.workload: dotnet
+ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a>本主題包含新功能和增強功能的相關資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。  
@@ -135,5 +136,5 @@ ms.lasthandoff: 11/11/2017
 ## <a name="markup-extensions-for-events"></a>事件的標記延伸  
  WPF 4.5 支援事件的標記延伸。  WPF 不會定義要用於事件的標記延伸，協力廠商可以建立可與事件一起使用的標記延伸。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Framework 的新功能](../../../../docs/framework/whats-new/index.md)

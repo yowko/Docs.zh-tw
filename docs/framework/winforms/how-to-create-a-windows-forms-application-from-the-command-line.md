@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6ddb27f724e30071be339ac753cfd85599ccd86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 從命令列建立 Windows Forms 應用程式
 下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/21/2017
   
 -   若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Control>  
  [變更 Windows Forms 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  

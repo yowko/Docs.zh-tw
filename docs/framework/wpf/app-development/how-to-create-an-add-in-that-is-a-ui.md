@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9151dd5fa36e3691361bcf6d7c7b281646982f3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>如何：建立本身為 UI 的增益集
 這個範例示範如何建立增益集是[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]由其中裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式。  
@@ -114,6 +115,6 @@ ms.lasthandoff: 11/21/2017
   
  此活動完全與主應用程式隔離。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [增益集和擴充性](../../../../docs/framework/add-ins/index.md)  
  [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

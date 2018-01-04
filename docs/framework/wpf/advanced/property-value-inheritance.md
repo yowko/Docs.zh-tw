@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 538b2e9cc1ce11dc336a8d90ec84ba504baa6f2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac3e03cfc0ca8bbb6f61f1bc6663c67fd6303f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-value-inheritance"></a>屬性值繼承
 屬性值繼承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的功能。 屬性值繼承可讓元素樹狀結構中的子元素，在將它設定於最接近之父元素中的任一處時，可從父元素中取得特殊屬性的值，並繼承該值。 父元素可能也會透過屬性值繼承來取得它的值，因此，系統有可能會不停地遞迴到頁面根元素。 屬性值繼承不是預設的屬性系統行為；屬性必須使用特殊的中繼資料值來建立，才能讓該屬性起始子元素上的屬性值繼承。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="inheriting-property-values-across-tree-boundaries"></a>跨樹狀結構界限繼承屬性值  
  屬性繼承的運作方式是周遊元素的樹狀結構。 此樹狀結構通常會與邏輯樹狀結構平行。 不過，每當您加入 WPF 核心層級物件定義的項目樹狀結構，例如在標記中<xref:System.Windows.Media.Brush>，您已建立不連續的邏輯樹狀結構。 True 的邏輯樹狀結構不會在概念上延伸透過<xref:System.Windows.Media.Brush>，因為邏輯樹狀結構是 WPF 架構層級的概念。 您可以查看這反映在結果中的方法時<xref:System.Windows.LogicalTreeHelper>。 不過，屬性值繼承可以差距邏輯樹狀結構中，而且只要可繼承的屬性已註冊為附加的屬性並沒有刻意繼承封鎖界限，則仍然可以傳遞，透過繼承的值 (例如<xref:System.Windows.Controls.Frame>) 為止。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
  [相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5e2ad03fcb52db1ffdd01849381a392187082991
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c73cf28905e1dd0f3056ab0eed953d6f05b0a7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xkey-directive"></a>x:Key 指示詞
 可唯一識別所建立和定義 XAML 的字典中所參考的項目。 加入`x:Key`XAML 物件項目值是最常見的方式來識別資源字典，例如在 WPF 中的資源<xref:System.Windows.ResourceDictionary>。  
@@ -120,7 +121,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight 的使用方式附註  
  `x:Key`silverlight 被說明文件。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [資源和程式碼](../../../docs/framework/wpf/advanced/resources-and-code.md)  
  [StaticResource 標記延伸](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0b40e09a9a2c534d3376fa6930d8166591873a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333e99997bad3852ae34753165aa736ef32ac004
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
@@ -95,7 +98,7 @@ RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
 RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [加密資料](../../../docs/standard/security/encrypting-data.md)  
  [解密資料](../../../docs/standard/security/decrypting-data.md)  
  [The signature is valid](../../../docs/standard/security/cryptographic-services.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 791b1b134717859a0e90914bf118fcf1dc3e1e4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
@@ -268,7 +269,7 @@ ms.lasthandoff: 10/22/2017
   
 |資源索引鍵|分類|可讀取|可修改|註解|值|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|此字元是當成裝飾規則使用。|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字元是當成裝飾規則使用。|&#124;|  
   
  使用下列語法，可以放入任何項目之內容或屬性的註解︰  
   

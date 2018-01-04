@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: db227b5c7915b6ce0b0fe8400a8545256ea6d6b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>從 WPF 移轉至 System.Xaml 的類型
 在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 和 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]中， [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 都隨附 XAML 語言實作。 有許多為 WPF XAML 實作提供擴充性的公用類型，存在於 WindowsBase、PresentationCore 和 PresentationFramework 組件中。 同樣地，也有為 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML 提供擴充性的公用類型，存在於 System.Workflow.ComponentModel 組件中。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，某些與 XAML 相關的類型已移轉至 System.Xaml 組件。 .NET Framework 有一項常見的 XAML 語言服務實作，可用以執行許多 XAML 擴充性情節，這些情節原先由特定架構的 XAML 實作所定義，但現在已納入整體 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 語言支援中。 本主題會列出移轉的類型，並討論與移轉相關的問題。  
@@ -135,5 +136,5 @@ ms.lasthandoff: 10/18/2017
   
  如果您同時納入 WPF 組件和 System.Xaml 的參考，並且同時對 `include` 和 <xref:System.Windows.Markup> 命名空間使用 <xref:System.Xaml> 陳述式，則您可能必須完整限定對這些 API 的呼叫，以明確解析類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML Services](../../../docs/framework/xaml-services/index.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 774c612b09d5cb0ffdf36024a7e6a543f407cf67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 958595cdfa521b372270d6283c7134ef0ba0ef79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>如何：覆寫 Panel 的 OnRender 方法
 這個範例示範如何覆寫<xref:System.Windows.Controls.Panel.OnRender%2A>方法<xref:System.Windows.Controls.Panel>以便將自訂的圖形效果新增至版面配置項目。  
@@ -40,8 +41,8 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[LightWeightCustomPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
  [!code-vb[LightWeightCustomPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Panel>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [自訂放射狀面板範例](http://go.microsoft.com/fwlink/?LinkID=159982)  
- [操作說明主題](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)

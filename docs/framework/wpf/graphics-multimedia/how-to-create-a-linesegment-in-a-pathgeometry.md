@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa7ea915afa2dc80e19d270abb86ec12a39d5865
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 96ad746edc45e7482ac7e8d36a8bb881923c0f04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>操作說明：在 PathGeometry 中建立 LineSegment
 這個範例會示範如何建立線段 。 若要建立直線線段，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.LineSegment>類別。  
@@ -111,7 +112,7 @@ Dim myPathFigure As New PathFigure()
   
  這個範例屬於較大型的範例；如需完整範例，請參閱[幾何範例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.PathFigure>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.GeometryDrawing>  

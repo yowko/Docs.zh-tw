@@ -23,11 +23,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb803d8cf1a51acf76fb1ef264e0fe63b8a21073
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
@@ -202,21 +203,21 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.DragDrop.DragEnter> 事件會在將資料拖曳到置放目標的界限內時發生。 您通常會處理這個事件來預覽拖放作業的效果 (如果適用於應用程式的話)。 請勿在 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 事件中設定 <xref:System.Windows.DragDrop.DragEnter> 屬性，因為它會在 <xref:System.Windows.DragDrop.DragOver> 事件中遭到覆寫。  
   
- 下列範例示範 <xref:System.Windows.DragDrop.DragEnter> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼會儲存目前的 <xref:System.Windows.Shapes.Shape.Fill%2A> 筆刷，來預覽拖放作業的效果。 接著它會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法來檢查是否將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會使用 <xref:System.Windows.DataObject.GetData%2A> 方法擷取資料。 接著它會轉換成 <xref:System.Windows.Media.Brush> 並套用至橢圓形。 這項變更會在 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式中還原。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
+ 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式。 這個程式碼會儲存目前的 <xref:System.Windows.Shapes.Shape.Fill%2A> 筆刷，來預覽拖放作業的效果。 接著它會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法來檢查是否將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會使用 <xref:System.Windows.DataObject.GetData%2A> 方法擷取資料。 接著它會轉換成 <xref:System.Windows.Media.Brush> 並套用至橢圓形。 這項變更會在 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式中還原。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
   
  [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
  [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  <xref:System.Windows.DragDrop.DragOver> 事件會在將資料拖曳到置放目標上時持續發生。 這個事件會搭配拖曳來源上的 <xref:System.Windows.DragDrop.GiveFeedback> 事件。 在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中，您通常會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 和 <xref:System.Windows.DataObject.GetData%2A> 方法來檢查傳送的資料格式是否為置放目標可以處理的格式。 您也可以檢查是否按下任何輔助按鍵，這通常會指出使用者是否想要移動或複製動作。 執行這些檢查之後，您可以設定 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性，以通知拖曳來源有關置放資料的效果。 拖曳來源會以 <xref:System.Windows.DragDrop.GiveFeedback> 事件引數接收這項資訊，並可設定適當的資料指標來提供回饋給使用者。  
   
- 下列範例示範 <xref:System.Windows.DragDrop.DragOver> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.Copy>。 這會向拖曳來源表示資料可以複製到橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。 這會向拖曳來源表示橢圓形不是資料的有效置放目標。  
+ 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragOver> 事件處理常式。 這個程式碼會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.Copy>。 這會向拖曳來源表示資料可以複製到橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。 這會向拖曳來源表示橢圓形不是資料的有效置放目標。  
   
  [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
  [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  <xref:System.Windows.DragDrop.DragLeave> 事件會在將資料拖曳出目標的界限但未置放時發生。 您可以處理這個事件，以復原您在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的任何動作。  
   
- 下列範例示範 <xref:System.Windows.DragDrop.DragLeave> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.Media.Brush> 套用至橢圓形，來復原在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的預覽。  
+ 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.Media.Brush> 套用至橢圓形，來復原在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的預覽。  
   
  [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
@@ -228,8 +229,8 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Clipboard>  
  [逐步解說：在使用者控制項上啟用拖放功能](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
  [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)

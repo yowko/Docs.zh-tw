@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88e248c7c8e60fbe8e55567cb642200820b25214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f4bcde15940e76e1d022658e32ff6ef8676e45e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-bound-data"></a>如何：轉換繫結的資料
 這個範例示範如何套用資料繫結中所使用的轉換。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  在上述範例中所參考的樣式資源不會顯示在本主題中的資源區段中定義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作繫結驗證](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

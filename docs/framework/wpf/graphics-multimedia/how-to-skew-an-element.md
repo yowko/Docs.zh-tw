@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5c46b8c64a26d83ba6d8f018b9a1f8ca8250a57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9da10e4eb6cf045c6c4936b76f847f21ea1495e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-skew-an-element"></a>操作說明：扭曲元素
 這個範例示範如何使用<xref:System.Windows.Media.SkewTransform>扭曲項目。 扭曲也稱為傾斜，這種轉換會以非一致的方式延伸座標空間。 一般用途之一<xref:System.Windows.Media.SkewTransform>是模擬[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]深度[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]物件。  
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
   
  如需完整範例，請參閱 [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.SkewTransform>  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

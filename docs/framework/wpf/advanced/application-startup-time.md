@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1e39bf6db28290b7cba600ea1d2012c58633587
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af07e1876666351d72eada56e7af3e787ccc90f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -132,7 +133,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
 ## <a name="set-data-binding-programmatically"></a>以程式設計的方式設定資料繫結  
  而不是使用 XAML 設定<xref:System.Windows.FrameworkElement.DataContext%2A>以宣告方式主要視窗中，請考慮將其設定以程式設計方式在<xref:System.Windows.Application.OnActivated%2A>方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.SplashScreen>  
  <xref:System.AppDomain>  
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  

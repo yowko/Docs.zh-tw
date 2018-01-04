@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f26ab394ea94b27257b6d0b662f3a78f3e68ca99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用純色和漸層繪製的概觀
 本主題描述如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>來使用純色，線性漸層和放射狀漸層繪製的物件。  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="painting-with-images-drawings-visuals-and-patterns"></a>使用影像、繪圖、視覺效果及圖樣繪製  
  <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>類別可讓您使用影像、 繪圖、 或視覺效果繪製區域。 如需使用影像、繪圖及圖樣繪製的相關資訊，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.SolidColorBrush>  
  <xref:System.Windows.Media.LinearGradientBrush>  

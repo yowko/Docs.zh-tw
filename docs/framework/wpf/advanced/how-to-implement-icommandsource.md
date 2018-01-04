@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdff5ebeb51daff4e8848e9a7c8282c2eee6f208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-icommandsource"></a>如何：實作 ICommandSource
 這個範例示範如何建立命令來源藉由實作<xref:System.Windows.Input.ICommandSource>。  命令來源是知道如何叫用命令的物件。  <xref:System.Windows.Input.ICommandSource>介面會公開三個成員： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A>是將會叫用的命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是從命令來源傳遞至方法，這個方法會處理命令的使用者定義資料類型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是正在其執行命令的物件。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Input.ICommandSource>  
  <xref:System.Windows.Input.ICommand>  
  <xref:System.Windows.Input.RoutedCommand>  

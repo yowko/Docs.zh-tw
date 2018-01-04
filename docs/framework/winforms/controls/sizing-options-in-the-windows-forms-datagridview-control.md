@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a4819f0c4596c34312bf689d57cca687641d6a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cefca8e6856680d509d6166eec4d97855f1babc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的調整大小選項
 <xref:System.Windows.Forms.DataGridView>資料列、 資料行和標頭可以變更大小，因為許多不同的項目。 下表顯示這些項目。  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="content-based-sizing-options"></a>以內容為基礎的調整大小選項  
  調整大小屬性和方法所使用的列舉型別有類似的值，以內容為基礎的大小。 使用這些值，您可以限制哪些儲存格用來計算的慣用的大小。 所有的調整大小列舉名稱來指稱顯示的資料格的值會將計算中顯示的資料列的資料格限制。 排除的資料列適合您正在使用大量資料列時避免對效能帶來負面影響。 您也可以限制在標頭或非行首儲存格的計算。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>  

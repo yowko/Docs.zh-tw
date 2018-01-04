@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a8d858228630147e1fbcdfab6a52fba5a63a566
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7cd45c85f155da975ca17961ca49a5dc89800a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="varieties-of-custom-controls"></a>各種自訂控制項
 使用 .NET Framework，您可以開發及實作新的控制項。 您可以擴充熟悉的使用者控制項的功能，以及透過繼承擴充現有的控制項。 您也可以撰寫自訂控制項來執行它們自己的繪製。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
  使用<xref:System.ComponentModel.DesignerAttribute>與您的設計工具中的控制項。 如需詳細資訊，請參閱[擴充設計階段支援](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：建立採用設計階段功能的 Windows Forms 控制項](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [操作說明：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [開發複合 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  

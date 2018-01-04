@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c6b05adf92800b2f2c7119bb44cec109765727
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 606499a57dbad3c812b57b4a3d598218c0565742
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a>如何：將 BitmapSource 轉換成不同的 PixelFormat
 這個範例示範如何將轉換<xref:System.Windows.Media.Imaging.BitmapSource>物件 (<xref:System.Windows.Media.Imaging.BitmapImage>) 到不同<xref:System.Windows.Media.PixelFormat>使用<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/22/2017
  [!code-csharp[ImagingSnippetGallery_procedural_snip#PixelFormatConversion](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/PixelFormatsExample.cs#pixelformatconversion)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#PixelFormatConversion](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/PixelFormatsExample.vb#pixelformatconversion)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

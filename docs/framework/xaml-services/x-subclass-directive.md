@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指示詞
 修改 XAML 標記編譯行為時`x:Class`也會提供。 而不是建立部分類別，根據`x:Class`，提供`x:Class`建立為中繼類別，而且應該然後根據您提供的衍生的類別`x:Class`。  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`namespace`|選擇項。 指定 CLR 命名空間包含`classname`。 如果`namespace`指定，則句點 （.） 分隔`namespace`和`classname`。|  
-|`classname`|必要項。 指定連接載入的 XAML 和程式碼後置該 XAML 的部分類別的 CLR 名稱。 請參閱＜備註＞。|  
-|`subclassNamespace`|選擇項。 可能會不同於`namespace`如果每個命名空間可以解析其他。 指定 CLR 命名空間包含`subclassName`。 如果`subclassName`指定，則句點 （.） 分隔`subclassNamespace`和`subclassName`。|  
-|`subclassName`|必要項。 指定子類別的 CLR 名稱。|  
+|`namespace`|選擇性。 指定 CLR 命名空間包含`classname`。 如果`namespace`指定，則句點 （.） 分隔`namespace`和`classname`。|  
+|`classname`|必要。 指定連接載入的 XAML 和程式碼後置該 XAML 的部分類別的 CLR 名稱。 請參閱＜備註＞。|  
+|`subclassNamespace`|選擇性。 可能會不同於`namespace`如果每個命名空間可以解析其他。 指定 CLR 命名空間包含`subclassName`。 如果`subclassName`指定，則句點 （.） 分隔`subclassNamespace`和`subclassName`。|  
+|`subclassName`|必要。 指定子類別的 CLR 名稱。|  
   
 ## <a name="dependencies"></a>相依性  
  [X:class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)也必須提供相同的物件，而該物件必須是在 XAML 生產的根項目。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 11/21/2017
   
  當您同時定義`x:Class`和`x:Subclass`，您不需要提供任何實作類別所參考的`x:Class`。 您只需要提供給它透過名稱`x:Class`屬性，讓編譯器在有一些指導方針所建立的中繼檔案 （編譯器不會選取預設名稱在此情況下） 的類別。 您可以提供`x:Class`類別的實作; 不過，這不使用這兩個的典型範例`x:Class`和`x:Subclass`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
  [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

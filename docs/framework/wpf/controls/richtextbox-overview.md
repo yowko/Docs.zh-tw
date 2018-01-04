@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41b423235fc2ed9c0e0612c90017d41ab0e83d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 概觀
 <xref:System.Windows.Controls.RichTextBox>控制項可讓您顯示或編輯包括段落、 影像、 資料表及多個非固定格式內容。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供有關如何使用中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]。  
@@ -35,8 +36,8 @@ ms.lasthandoff: 11/21/2017
   
 |控制項|即時拼字檢查|操作功能表|格式等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument>類似影像、 段落、 資料表等內容。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|是|是|否|否。|  
-|<xref:System.Windows.Controls.RichTextBox>|是|是|是|是|  
+|<xref:System.Windows.Controls.TextBox>|[是]|是|否|否。|  
+|<xref:System.Windows.Controls.RichTextBox>|[是]|是|是|[是]|  
   
  **注意：**雖然<xref:System.Windows.Controls.TextBox>不支援格式化相關的命令，例如<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，例如許多基本命令支援這兩個控制項<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。  
   
@@ -104,6 +105,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## <a name="see-also"></a>另請參閱  
- [操作說明主題](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+## <a name="see-also"></a>請參閱  
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)

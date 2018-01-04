@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98cfa63eac4bc697c5412616de71395624408c63
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5421ed8b45c21e229d6c2682703cd9c7ee486e27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-speed-of-a-clock-without-changing-the-speed-of-its-timeline"></a>如何：變更時鐘的速度而不變更其時刻表的速度
 A<xref:System.Windows.Media.Animation.ClockController>物件的<xref:System.Windows.Media.Animation.ClockController.SpeedRatio%2A>屬性可讓您變更的速度<xref:System.Windows.Media.Animation.Clock>而不用更改<xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>的時鐘的<xref:System.Windows.Media.Animation.Timeline>。 在下列範例中，<xref:System.Windows.Media.Animation.ClockController>用來以互動方式修改<xref:System.Windows.Media.Animation.ClockController.SpeedRatio%2A>的時鐘。 <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeedInvalidated>事件與時鐘的<xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed%2A>屬性用來顯示時鐘的目前全域速度每次它互動式<xref:System.Windows.Media.Animation.ClockController.SpeedRatio%2A>變更。  

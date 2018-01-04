@@ -15,16 +15,17 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9f75ed7436b5a4d333d6d82f35b8c1a5601f9b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cfdd416337a10797f374be566816ec61ca4ee3cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-how-to-topics"></a>巡覽 HOW TO 主題
 下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]瀏覽。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [呼叫頁面函式](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
   [取得頁面函式的傳回值](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
   [在巡覽記錄中前移或後移](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  

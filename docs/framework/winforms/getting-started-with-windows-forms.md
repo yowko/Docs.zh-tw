@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7735e721917c5f78b791a200a670599fe3cff310
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Form 使用者入門
 您可以使用 Windows Form 建立功能強大的 Windows 應用程式。 下列主題說明如何利用 Windows Form 顯示資料、 處理使用者輸入和部署您的應用程式，以增強安全性輕鬆能力深入了解。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 概觀](../../../docs/framework/winforms/windows-forms-overview.md)  
  包含 Windows Form 和智慧型用戶端應用程式的概觀。  
   

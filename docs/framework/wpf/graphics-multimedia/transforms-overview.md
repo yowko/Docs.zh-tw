@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transforms-overview"></a>轉換概觀
 本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>旋轉、 縮放、 移動類別 （轉換） 和傾斜<xref:System.Windows.FrameworkElement>物件。  
@@ -159,8 +160,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="freezable-features"></a>Freezable 功能  
  因為它繼承自<xref:System.Windows.Freezable>類別<xref:System.Windows.Media.Transform>類別提供數個特殊功能：<xref:System.Windows.Media.Transform>物件可以宣告為[資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 變成唯讀，以改善的多個物件之間共用效能考量，複製，而且進行安全執行緒。 如需有關各項功能所提供的<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Matrix>  
- [操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
  [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)

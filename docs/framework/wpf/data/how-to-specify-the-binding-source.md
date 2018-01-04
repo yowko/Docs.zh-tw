@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05f77e8939b9b81a9e3861df6a44bc3585a0a504
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-binding-source"></a>操作說明：指定繫結來源
 在資料繫結中，繫結來源物件是指您的資料取得來源物件。 本主題說明指定繫結來源的不同方式。  
@@ -47,16 +48,16 @@ ms.lasthandoff: 11/21/2017
   
  或者，如果您想明確指定個別繫結的來源，則有以下選擇。 這些屬性優先於繼承的資料內容。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Windows.Data.Binding.Source%2A>|使用這個屬性將來源設定為物件的執行個體。 如果您不需要的功能建立的執行範圍的數個屬性繼承相同的資料內容，您可以使用<xref:System.Windows.Data.Binding.Source%2A>屬性而非`DataContext`屬性。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.Source%2A>。|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|當您想以相對於繫結目標的位置指定來源，這十分有用。 使用這個屬性的常見案例是，當您想將元素的一個屬性繫結至同一元素的其他屬性時，或當您正在樣式或範本中定義繫結時。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
 |<xref:System.Windows.Data.Binding.ElementName%2A>|指定一個字串來代表您想繫結至的元素。 當您想要繫結至應用程式中其他元素的屬性時，這十分有用。 例如，如果您想要使用<xref:System.Windows.Controls.Slider>來控制應用程式中的另一個控制項的高度或如果您想要繫結<xref:System.Windows.Controls.ContentControl.Content%2A>至控制項的<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>屬性您<xref:System.Windows.Controls.ListBox>控制項。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.ElementName%2A>。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
  <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
  [屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [繫結宣告概觀](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

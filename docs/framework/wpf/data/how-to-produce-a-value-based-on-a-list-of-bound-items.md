@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d16a198ed78c1ffd9dcaad595e9cc9be3cb2de0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c3987690a1acb180ee22fa02e399accd9c5d481d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>操作說明：根據繫結項目的清單產生值
 <xref:System.Windows.Data.MultiBinding>可讓您將繫結目標屬性繫結至來源屬性的清單，然後再套用邏輯，以產生使用給定的輸入值。 這個範例示範如何使用<xref:System.Windows.Data.MultiBinding>。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  `NameConverter` 會實作 <xref:System.Windows.Data.IMultiValueConverter> 介面。 `NameConverter` 會從個別繫結取得值，然後將這些值儲存在 values 物件陣列中。 順序<xref:System.Windows.Data.Binding>項目會出現在<xref:System.Windows.Data.MultiBinding>項目是儲存在陣列中的這些值的順序。 值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>屬性的參數引數由參考<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，用於執行參數來判斷如何格式化名稱在參數上。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [轉換繫結的資料](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

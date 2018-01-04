@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-change-events"></a>屬性變更事件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 會定義數個要引發來回應屬性值變更的事件。 屬性通常是相依性屬性。 事件本身有時是路由事件，有時是標準的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定義會因案例而異，因為某些屬性變更較適合透過元素樹狀結構進行路由傳送，而其他屬性變更通常只會與變更屬性的物件有關。  
@@ -71,6 +72,6 @@ ms.lasthandoff: 11/21/2017
   
  若要深入了解屬性觸發程序，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

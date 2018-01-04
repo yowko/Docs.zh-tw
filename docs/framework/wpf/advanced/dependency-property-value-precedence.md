@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b52b809b732f3859a7ce02a4433b2387e797932
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 和值優先順序  
  <xref:System.Windows.DependencyObject.ClearValue%2A>方法提供代替品表示若要清除的設定項目的相依性屬性的任何本機套用的值。 不過，呼叫<xref:System.Windows.DependencyObject.ClearValue%2A>並不保證，如同在屬性註冊期間所建立中繼資料中的預設值是新生效的值。 值優先順序中的所有其他參與者仍在作用中。 只有在本機設定的值會從優先順序移除。 例如，如果您呼叫<xref:System.Windows.DependencyObject.ClearValue%2A>從中佈景主題樣式，也會設定該屬性，然後再佈景主題會套用的值為新的值，而不是中繼資料為基礎的預設屬性。 如果您想要採用跨處理序的所有屬性值參與者，並將值設為預設的已註冊的中繼資料，您可以取得預設值，肯定是藉由查詢相依性屬性中繼資料，然後可以在本機使用的預設值設定屬性，藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.DependencyObject>  
  <xref:System.Windows.DependencyProperty>  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  

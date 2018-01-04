@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtype-markup-extension"></a>x:Type 標記延伸
 提供 CLR<xref:System.Type>是指定的 XAML 類型的基礎類型的物件。  
@@ -50,8 +51,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`prefix`|選擇項。 將非預設 XAML 命名空間對應前置詞。 指定前置詞通常是不必要。 請參閱＜備註＞。|  
-|`typeNameValue`|必要項。 型別名稱解析成目前的預設 XAML 命名空間;或指定的對應前置詞，如果`prefix`提供。|  
+|`prefix`|選擇性。 將非預設 XAML 命名空間對應前置詞。 指定前置詞通常是不必要。 請參閱＜備註＞。|  
+|`typeNameValue`|必要。 型別名稱解析成目前的預設 XAML 命名空間;或指定的對應前置詞，如果`prefix`提供。|  
   
 ## <a name="remarks"></a>備註  
  `x:Type`標記延伸可以類似的函式來`typeof()`中的運算子[!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]或`GetType`中的運算子[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
  在 WPF 中，您可以使用 XAML 2009 功能，但是僅針對鬆散的 XAML (未標記編譯 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Style>  
  [樣式設定和範本化](../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

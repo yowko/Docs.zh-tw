@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcf8baa87038bc5625d46968b39d759daae25cbc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3122100f93d15c04c109564e1abd2dc13f37990
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之間共用訊息迴圈
 本主題描述如何實作與互通的訊息迴圈[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，藉由使用現有訊息中的迴圈曝光<xref:System.Windows.Threading.Dispatcher>或藉由建立個別的訊息迴圈上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]這邊的交互操作的程式碼。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  移至的鍵盤接收器的訊息可能不會傳送到 HWND 如果使用加入的訊息勾點<xref:System.Windows.Interop.HwndSource.AddHook%2A>方法。 訊息可能已經直接而不提交至訊息幫浦層級處理`DispatchMessage`函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Interop.ComponentDispatcher>  
  <xref:System.Windows.Interop.IKeyboardInputSink>  
  [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  

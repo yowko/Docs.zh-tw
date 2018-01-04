@@ -18,11 +18,12 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5393505a5824594850b682f5a0dd8d9cef76319
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35048ae8298a75ad26d880909463ee1115056e38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog>控制項用來具現化的標準列印對話方塊會自動設定<xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintQueue>根據使用者輸入。  
@@ -34,6 +35,6 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [列印概觀](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

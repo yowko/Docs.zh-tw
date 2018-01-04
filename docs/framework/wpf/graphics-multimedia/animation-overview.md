@@ -19,11 +19,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15eeb27d493cd1138b0d3d41b55a57228a226a11
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-overview"></a>動畫概觀
 <a name="introduction"></a>
@@ -352,7 +353,7 @@ ms.lasthandoff: 10/22/2017
 |[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|描述如何使用有多個時間軸的分鏡腳本建立複雜的動畫。|  
 |[計時行為概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|描述<xref:System.Windows.Media.Animation.Timeline>型別和用於動畫的屬性。|  
 |[計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|描述用於事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>物件的執行程式碼，在時間表中，時間點開始、 暫停、 繼續、 略過，或停止。|  
-|[操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|  
+|[HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|  
 |[時鐘操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|包含程式碼範例使用<xref:System.Windows.Media.Animation.Clock>應用程式中的物件。|  
 |[主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|包含在應用程式中使用主要畫面格動畫的程式碼範例。|  
 |[路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|包含在應用程式中使用路徑動畫的程式碼範例。|  

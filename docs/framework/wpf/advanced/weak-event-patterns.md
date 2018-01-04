@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
 在應用程式，它可能會附加到事件來源的處理常式不會終結搭配此處理常式附加到來源的接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]導入了可用來解決這個問題，提供專用的管理員類別的特定事件，該事件的接聽項上實作介面的設計模式。 此設計模式又稱為*弱式事件模式*。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 12/14/2017
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.WeakEventManager>  
  <xref:System.Windows.IWeakEventListener>  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

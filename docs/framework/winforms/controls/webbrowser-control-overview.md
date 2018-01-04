@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控制項概觀
 <xref:System.Windows.Forms.WebBrowser>控制項提供 WebBrowser ActiveX 控制項 managed 包裝函式。 Managed 包裝函式可讓您在 Windows Form 用戶端應用程式中顯示網頁。 您可以使用<xref:System.Windows.Forms.WebBrowser>控制項複製 Internet Explorer Web 瀏覽功能，您的應用程式，或者您可以停用預設的 Internet Explorer 功能和控制項做為簡單的 HTML 文件檢視器。 您也可以使用此控制項將 DHTML 為基礎的使用者介面項目加入至表單，隱藏的事實，它們會裝載在<xref:System.Windows.Forms.WebBrowser>控制項。 這種方法可讓您順暢地結合到單一應用程式的 Windows Form 控制項使用的 Web 控制項。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.WebBrowser.Stop%2A> 方法|中止目前的巡覽和停止音效及動畫等動態頁面項目。|  
 |<xref:System.Windows.Forms.WebBrowser.Url%2A> 屬性|取得或設定目前網頁的 URL。 設定這個屬性可巡覽至新的 URL 控制項。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  

@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9229ce86dbe640c4eb960c455dd049ff40b38d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0beb22ba78c6fc99951bc2d780c1c5defa32e637
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-text-decoration"></a>如何：建立文字裝飾
 A<xref:System.Windows.TextDecoration>物件是視覺裝飾，您可以加入文字。 文字裝飾的四種類型： 底線、 基準、 刪除線和頂線。 下列範例顯示相對於文字的文字裝飾的位置。  
@@ -74,7 +75,7 @@ A<xref:System.Windows.TextDecoration>物件是視覺裝飾，您可以加入文�
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.TextDecoration>  
  <xref:System.Windows.Documents.Hyperlink>  
  [指定超連結是否要加上底線](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)

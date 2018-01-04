@@ -19,11 +19,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49fbb0c71b13ee7d7ca04e0d40c1f9e32230d805
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試的支援可讓您判斷幾何或點的值是否落目的呈現內容<xref:System.Windows.Media.Visual>，讓您實作使用者介面的行為，例如選取矩形來選取多個物件。  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
  <xref:System.Windows.Media.HitTestResult>  
  <xref:System.Windows.Media.HitTestResultCallback>  

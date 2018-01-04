@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9746683ec5b7ad142591c2b419f9af21be8d69c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d62d657b886b867481088e32fe1dd0614377e146
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a>如何：尋找事件處理常式中的來源項目
 這個範例示範如何尋找來源項目中的事件處理常式。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[RoutedEventSource#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventSource/CSharp/default.xaml.cs#handler)]
  [!code-vb[RoutedEventSource#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventSource/VisualBasic/default.xaml.vb#handler)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.RoutedEventArgs>  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

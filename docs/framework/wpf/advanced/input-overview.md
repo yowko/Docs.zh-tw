@@ -35,11 +35,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c12d8655babeb45800f4a5c068cb2ab74faac3d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-overview"></a>輸入概觀
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 子系統提供一個功能強大的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，以取得來自各種裝置的輸入，包括滑鼠、鍵盤、觸控和手寫筆。 本主題描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的服務，以及說明輸入系統的架構。  
@@ -403,7 +404,7 @@ ms.lasthandoff: 11/21/2017
   
  具有其他資源可詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構項目和事件路由。 如需詳細資訊，請參閱下列概觀：[命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)、[焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)、[基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)、[WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)和[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)  
  [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

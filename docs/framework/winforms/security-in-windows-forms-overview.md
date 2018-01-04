@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e34e9dc864ffa3960c7c4f60f84b4996bab0bb28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63b7b704cf5d69ea2186ddef6e86f5c6d7993778
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 發行之前，在使用者電腦上執行的所有程式碼，對資源的存取權限都和電腦的使用者相同。 例如，如果使用者可以存取檔案系統，程式碼就可以存取檔案系統，如果使用者可以存取某個資料庫，程式碼就可以存取該資料庫。 就使用者明確安裝在本機電腦上的可執行檔中的程式碼而言，也許這些權限是可接受的，但是就來自網際網路或近端內部網路的潛在惡意程式碼而言，可能就無法接受了。 不應該讓這個程式碼在沒有權限的情況下，存取使用者的電腦資源。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="testing-the-application"></a>測試應用程式  
  如果您已使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 來部署您的 Windows Form 應用程式，您可以從開發環境啟用部分信任中的偵錯或受限制的權限集合。  另請參閱[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 安全性](../../../docs/framework/winforms/windows-forms-security.md)  
  [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)  
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)  

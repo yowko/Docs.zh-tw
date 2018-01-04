@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3032f46843c6d8efc53c45a927feae7068c3eb5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157bc01e23c304531f04b0a1cc7a66bad4bb3934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-reflection"></a>如何：建立反映
 這個範例示範如何使用<xref:System.Windows.Media.VisualBrush>來建立反映。 因為<xref:System.Windows.Media.VisualBrush>可顯示現有的 visual，您可以使用這項功能來產生有趣的視覺效果，例如反射和縮放比例。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
  如需完整的範例中，包括範例，說明如何放大螢幕的部分，以及如何建立反射，請參閱[VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.VisualBrush>  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

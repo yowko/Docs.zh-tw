@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: befbf9960afffcd30bc96863dcc00b4acad2c21a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8419a1e89d5e94b9868b0fd1fb81540253efca5d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 逸出序列 / 標記延伸
 提供 XAML 逸出序列的屬性值。 逸出序列必須解譯成常值屬性中讓後續的值。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 的類型轉換子和標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
  [XML 字元實體和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)

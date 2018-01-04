@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bb350d454d2fcb0f38d092240c98c1b87966be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。  
@@ -35,13 +38,13 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 ## <a name="argument"></a>引數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*file.extension*|指定要轉換的輸入檔。 您必須指定以下所列的副檔名：.xdr、.xml、.xsd、.dll 或 .exe。<br /><br /> 如果指定 XDR 結構描述檔 (副檔名為 .xdr )，Xsd.exe 會將 XDR 結構描述轉換成 XSD 結構描述。 輸出檔有和 XDR 結構描述一樣的名稱，但是具有 .xsd 副檔名。<br /><br /> 如果指定 XML 檔 (副檔名為 .xml )，Xsd.exe 會從檔案中的資料推斷結構描述，然後產生 XSD 結構描述。 輸出檔有和 XML 檔一樣的名稱，但是具有 .xsd 副檔名。<br /><br /> 如果指定 XML 結構描述檔 (.xsd 副檔名)，Xsd.exe 會產生對應到 XML 結構描述之 Runtime 物件的原始程式碼。<br /><br /> 如果指定執行階段組件檔 (.exe 或 .dll 副檔名)，Xsd.exe 會產生該組件中一個或多個型別的結構描述。 您可以使用 `/type` 選項來指定要產生結構描述的型別。 輸出結構描述被命名為 schema0.xsd、schema1.xsd 等等。 只有在指定的型別使用 `XMLRoot` 自訂屬性來指定命名空間 (Namespace) 時，Xsd.exe 才能產生多個結構描述。|  
   
 ## <a name="general-options"></a>一般選項  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/h**[**elp**]|顯示工具的命令語法和選項。|  
 |**/o**[**utputdir**]**:***directory*|指定輸出檔的目錄。 這個引數只可以使用一次。 預設為目前的目錄。|  
@@ -51,14 +54,14 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 ## <a name="xsd-file-options"></a>XSD 檔案選項  
  您只能為 .xsd 檔指定下列其中一個選項：  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/c**[**lasses**]|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 `System.Xml.Serialization.XmlSerializer.Deserializer` 方法。|  
 |**/d**[**ataset**]|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 `System.Data.DataSet.ReadXml` 方法。|  
   
  您也可以為 .xsd 檔指定下列任何選項：  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/e**[**lement**]**:***element*|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|  
 |**/enableDataBinding**|在所有產生的型別上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結 (Data Binding)。 簡短形式為 `/edb`。|  
@@ -73,7 +76,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 ## <a name="dll-and-exe-file-options"></a>DLL 和 EXE 檔案選項  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/t**[**ype**]**:***typename*|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|  
   
@@ -130,7 +133,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
  您只能為 `\<generateSchemas>` 項目指定下列其中一個選項。  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |\<assembly>|指定要產生結構描述的組件。|  
 |\<type>|指定在組件中找到的型別，以用於產生結構描述。|  
@@ -149,7 +152,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
  您可以對 `\<generateClasses>` 項目設定的選項包括下列各項。  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |\<element>|指定要產生程式碼之 .xsd 檔案中的項目。|  
 |\<schemaImporterExtensions>|指定衍生自 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 類別的型別。|  
@@ -175,7 +178,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
  您可以對 `<generateDataSet\>` 項目設定的選項包括下列各項。  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |\<schema>|指定用於產生程式碼的 XML 結構描述檔案。 多個 XML 結構描述檔案可以使用多個 \<schema> 元素指定。|  
   
@@ -230,7 +233,7 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [工具](../../../docs/framework/tools/index.md)      

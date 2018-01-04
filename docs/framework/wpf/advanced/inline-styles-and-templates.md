@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2acb455db8f8bdc5a95bfd2462b651cebbb692c3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5dccf0b274121ff4fe88c9270119a2f631ffcf29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inline-styles-and-templates"></a>內嵌樣式和範本
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供<xref:System.Windows.Style>物件和範本物件 (<xref:System.Windows.FrameworkTemplate>子類別) 做為在資源定義元素的視覺外觀的方式，以便它們可以用於多次。 基於這個理由中的屬性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可接受型別<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>幾乎資源參考現有的樣式和範本，而非定義新的內嵌。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/22/2017
   
  傳回物件的標記延伸模組所啟用的其他語法是樣式和範本允許的。 有可能的案例的兩個這類延伸包括[TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)和<xref:System.Windows.Data.Binding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

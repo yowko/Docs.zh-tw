@@ -25,11 +25,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f90cf4e481d8ce8f5f34c3aaab3e544e37e1481
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 36df7286bad0d26108b726d2499bbeb0b2caa198
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
 屬性可用來控制物件的 XML 序列化或從相同的類別集建立其他的 XML 資料流。 如需建立替代 XML 資料流的詳細資料，請參閱[如何：指定 XML 資料流的替代項目名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。  
@@ -316,7 +319,7 @@ public class Group{
 ## <a name="preventing-serialization-with-the-xmlignoreattribute"></a>避免以 XmlIgnoreAttribute 序列化  
  也有可能不需將公用屬性或欄位序列化的狀況。 例如，欄位或屬性可用來包含中繼資料。 在這樣的情況下，套用 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 至欄位或屬性，且將略過 <xref:System.Xml.Serialization.XmlSerializer>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [可控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
  [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  

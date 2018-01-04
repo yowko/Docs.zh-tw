@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>應用程式管理概觀
 所有應用程式通常會共用一組適用於應用程式實作和管理的通用功能。 本主題提供中的功能概觀<xref:System.Windows.Application>類別，用於建立和管理應用程式。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |取得及設定應用程式範圍的屬性|請使用 <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> 屬性。|  
 |取得及儲存應用程式的狀態|請參閱[保存及還原應用程式範圍的屬性可以跨應用程式工作階段](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。|  
 |管理非程式碼資料檔案，包括資源檔、內容檔案和來源網站檔案。|請參閱[WPF 應用程式資源、 內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。|  
-|管理獨立應用程式中的視窗|請參閱[WPF Windows 概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。|  
+|管理獨立應用程式中的視窗|請參閱 [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。|  
 |追蹤及管理瀏覽|請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。|  
   
 <a name="The_Application_Definition"></a>   
@@ -374,7 +375,7 @@ ms.lasthandoff: 11/21/2017
   
  ![XBAP &#45; 應用程式物件事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Application>  
  [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)  

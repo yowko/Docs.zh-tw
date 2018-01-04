@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dad0cd8aaa81e6a458307ec69ec60ed369ca6b03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 449b55d07aa0119ff23c8642ca83b0989f5b1d4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-routedcommand"></a>如何：建立 RoutedCommand
 這個範例示範如何建立自訂<xref:System.Windows.Input.RoutedCommand>以及如何實作自訂的命令，藉由建立<xref:System.Windows.Input.ExecutedRoutedEventHandler>和<xref:System.Windows.Input.CanExecuteRoutedEventHandler>和附加， <xref:System.Windows.Input.CommandBinding>。  如需命令的詳細資訊，請參閱[指揮概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 11/21/2017
   
  按一下按鈕時，<xref:System.Windows.Input.RoutedCommand.Execute%2A>方法上自訂<xref:System.Windows.Input.RoutedCommand>呼叫。  <xref:System.Windows.Input.RoutedCommand>引發<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>路由事件。  這些事件尋找項目樹狀目錄中周遊<xref:System.Windows.Input.CommandBinding>此特定的命令。  如果<xref:System.Windows.Input.CommandBinding>找到，<xref:System.Windows.Input.ExecutedRoutedEventHandler>聯<xref:System.Windows.Input.CommandBinding>呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Input.RoutedCommand>  
  [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)

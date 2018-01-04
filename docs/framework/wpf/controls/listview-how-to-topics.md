@@ -17,16 +17,17 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98b0d38ab78bb36337461495cc6e8e782160617a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1f937232119281f4e94dcee9013546a56a67265
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-how-to-topics"></a>ListView HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.ListView>控制項來顯示一組資料的項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [在按一下標頭時排序 GridView 資料行](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
  [建立 ListView 的自訂檢視模式](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
  [使用範本為使用 GridView 的 ListView 設定樣式](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  

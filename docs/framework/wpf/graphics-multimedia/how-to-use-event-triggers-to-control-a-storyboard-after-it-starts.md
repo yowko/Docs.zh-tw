@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d9e096969713cc4b9c42261b238691d51cb49d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80871d9daeec257351134e9f7a72a10b697e842a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>如何：在腳本開始後使用事件觸發程式進行控制
 這個範例示範如何控制<xref:System.Windows.Media.Animation.Storyboard>之後啟動。 若要啟動<xref:System.Windows.Media.Animation.Storyboard>使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，這會發佈這些物件和屬性，其以動畫顯示，然後啟動 分鏡腳本動畫。 如果您提供<xref:System.Windows.Media.Animation.BeginStoryboard>藉由指定的名稱及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>屬性，使其可控制的分鏡腳本。 您可以再以互動方式控制分鏡腳本之後啟動。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  如需其他範例，請參閱[動畫範例圖庫](http://go.microsoft.com/fwlink/?LinkID=159969)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Media.Animation.ResumeStoryboard>  
  <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>  
  <xref:System.Windows.Media.Animation.SkipStoryboardToFill>  

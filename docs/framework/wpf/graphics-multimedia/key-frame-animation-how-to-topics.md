@@ -17,16 +17,17 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animation-how-to-topics"></a>主要畫面格動畫 HOW TO 主題
 本節中的主題將示範如何使用超過兩個屬性值和控制項插補的動畫主要畫面格動畫。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用主要畫面格建立物件的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
  [使用主要畫面格建立布林值的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
  [使用主要畫面格建立雙精度浮點數的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

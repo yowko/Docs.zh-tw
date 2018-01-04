@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c80d975e756fab449c254b9e1d8d1bc99a25652e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f6c8500f9b9cd6d617789a2da3444519971ae81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 標記延伸
 提供的任何值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可以延遲是定義資源的參考值的屬性。 該資源的查閱行為相當於執行階段查閱。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`key`|要求之資源的索引鍵。 此機碼一開始指派[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)如果資源在標記中，建立或提供做為`key`參數呼叫時<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果此資源原先建立在程式碼中。|  
+|`key`|要求資源的金鑰。 此機碼一開始指派[X:key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)如果資源在標記中，建立或提供做為`key`參數呼叫時<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果此資源原先建立在程式碼中。|  
   
 ## <a name="remarks"></a>備註  
  A`DynamicResource`會建立暫存的運算式，在初始的編譯期間和直到實際需要才能建構物件，而要求的資源值，因此延遲的資源查閱。 這可能很之後[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入頁面。 資源值會根據針對從目前的頁面範圍，開始的所有作用中的資源字典的索引鍵搜尋找到並取代為來自編譯預留位置的運算式。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  `DynamicResource` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
  [x:Key 指示詞](../../../../docs/framework/xaml-services/x-key-directive.md)  

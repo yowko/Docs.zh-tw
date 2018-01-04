@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e062b82e698a99705a2b06588aa9aae3a0c93157
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d2cd55de403b766344749259068ccd313558f89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>如何：修改線條或線段結尾的端點
 這個範例示範如何修改開頭或結尾開啟圖形<xref:System.Windows.Shapes.Shape>項目。 若要變更的開啟開頭 cap <xref:System.Windows.Shapes.Shape>，使用其<xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>屬性。 若要變更已開啟的結尾處的 cap <xref:System.Windows.Shapes.Shape>，使用其<xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>屬性。 若要檢視可用的線條端點，請參閱<xref:System.Windows.Media.PenLineCap>列舉型別。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
   
  這個範例是較大範例的一部分如需完整範例，請參閱[圖形項目範例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Shapes.Polyline>  
  <xref:System.Windows.Media.PenLineCap>

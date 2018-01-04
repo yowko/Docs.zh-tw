@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 90f0d27f3bf5adffe8a9b47940451e71fda082b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 676f7f696fda26ee9d86d14f06dc7b70e2565157
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xname-directive"></a>x:Name 指示詞
 可唯一識別已定義 XAML 的 XAML 名稱範圍中的項目。 XAML 名稱範圍和其唯一性模型可以套用至具現化物件，架構會提供 Api，或實作行為，在執行階段存取 XAML 建立的物件圖形時。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="silverlight-usage-notes"></a>Silverlight 的使用方式附註  
  `x:Name`silverlight 被說明文件。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
  <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
  [WPF 中的樹狀結構](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

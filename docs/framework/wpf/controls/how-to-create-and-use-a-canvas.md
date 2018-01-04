@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8925b9b6cd6cea1a29592f591f9c1c89d32d49e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 562531f75d6a800ff93a02709a053b790de52ea2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>如何：建立和使用 Canvas
 這個範例示範如何建立和使用的執行個體<xref:System.Windows.Controls.Canvas>。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CanvasCode#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.Canvas>  
  <xref:System.Windows.Controls.TextBlock>  
  <xref:System.Windows.Controls.Canvas.SetTop%2A>  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Canvas.Top%2A>  
  <xref:System.Windows.Controls.Canvas.Left%2A>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
+ [HOW-TO 主題](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)

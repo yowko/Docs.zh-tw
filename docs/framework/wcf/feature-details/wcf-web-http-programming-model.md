@@ -17,26 +17,27 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 程式設計模型
 開發人員可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型，公開 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務作業給非 SOAP 的端點。 本章節中的主題會詳細檢查這項功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  提供 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型的概觀。  
   
  [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  討論 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型及其運作方式。  
   
- [如何： 建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [如何：建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  描述如何撰寫公開非 SOAP 端點的基本服務。  
   
- [如何： 公開給 SOAP 和 Web 用戶端合約](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ [如何：將合約公開給 SOAP 和 Web 用戶端](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
  描述如何撰寫將相同合約同時公開至 SOAP 與非 SOAP 用戶端的基本服務。  
   
  [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  

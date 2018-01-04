@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -226,9 +229,9 @@ Visual Studio 2012 中的變更目標對話方塊
 </div>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [搭配 MVVM 使用可攜式類別庫](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [多個平台為目標的程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [以多平台為目標之程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [部署](../../../docs/framework/deployment/net-framework-applications.md)

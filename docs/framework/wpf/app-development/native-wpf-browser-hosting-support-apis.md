@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff548f490d76215305d2e22878bc35a54e3bd009
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 87b7b8491fe07f5ab1f93ba332e50333a366f109
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>裝載支援 API 的原生 WPF 瀏覽器
 裝載的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]網頁瀏覽器中的應用程式透過使用中文件 (也稱為 DocObject) 已註冊的伺服器超出 WPF 主機的協助。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]可以直接啟動，並與主動式文件整合。 Xbap 和鬆散的 XAML 文件中 Mozilla 瀏覽器中，裝載[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]提供 NPAPI 外掛程式，可提供相似的主控環境來[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]主動式文件與伺服器[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]沒有。 不過，其他瀏覽器中的最簡單的實用方式裝載 Xbap 和 XAML 文件，而且獨立應用程式是透過 Internet Explorer Web 瀏覽器控制項。 網頁瀏覽器控制項提供複雜使用中文件伺服器主控環境中，但它可讓它自己的主應用程式來自訂和擴充該環境及直接與目前現用的文件物件通訊。  
@@ -40,6 +41,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO 指示 PresentationHost 將焦點切換至其內容，根據 Shift 鍵的狀態中的第一個或最後一個可設定焦點項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
  [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>合併 Windows Form MenuStrip 控制項中的功能表項目
 如果您有多個文件介面 (MDI) 應用程式，您可以合併到父表單的功能表的功能表項目或從子表單的整個功能表。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  您可以觸發自動合併藉由啟用<xref:System.Windows.Forms.MenuStrip>MDI 來源。 在啟動過程中，來源<xref:System.Windows.Forms.MenuStrip>合併到 MDI 目標。 當新的表單變成作用中時，合併會還原上一個表單，而且觸發新的表單上。 您可以設定來控制此行為<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>屬性視需要在每個<xref:System.Windows.Forms.ToolStripItem>，以及設定<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>上每個屬性<xref:System.Windows.Forms.MenuStrip>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStripManager>  
  <xref:System.Windows.Forms.MenuStrip>  
  [MenuStrip 控制項](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  

@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d04011622321638e1f3b0c5f4d270f840c7070e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc7185f9541952d528de38b627052239f5d8b4ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="interface-design"></a>介面設計
 雖然大部分的應用程式開發介面最能模擬使用類別和結構，但是有些的狀況介面比較適合或是唯一的選項。  
@@ -56,6 +59,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [型別設計指導方針](../../../docs/standard/design-guidelines/type.md)  
+## <a name="see-also"></a>請參閱  
+ [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

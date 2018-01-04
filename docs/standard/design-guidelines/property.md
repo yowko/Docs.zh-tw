@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 477b3b69ce1b8a3bb160e8e120885239e3d99e56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f9c65dc6265daa793656177f066b97373f48ab8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="property-design"></a>屬性設計
 雖然技術上非常類似於方法內容，但它們是根據它們的使用案例相當不同。 這些應該視為智慧型欄位。 有的欄位，呼叫的語法和方法的彈性。  
@@ -95,6 +98,6 @@ ms.lasthandoff: 11/21/2017
   
  *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>另請參閱  
- [成員設計指導方針](../../../docs/standard/design-guidelines/member.md)  
+## <a name="see-also"></a>請參閱  
+ [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58ed9a97d9a1eb09ccbcf832c62bbdfb990c7838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="deploying-an-xbap"></a>部署 XBAP  
  當您建置 XBAP 時，輸出會包含下列三個檔案︰  
   
-|檔案|說明|  
+|檔案|描述|  
 |----------|-----------------|  
 |可執行檔 (.exe)|它包含已編譯的程式碼，副檔名為 .exe。|  
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|  
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/21/2017
   
 7.  在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
   
-8.  按一下 [確定]。  
+8.  按一下 [確定 **Deploying Office Solutions**]。  
   
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
@@ -196,6 +197,6 @@ ms.lasthandoff: 11/21/2017
   
  此外，改善的並行 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下載序列，會改善最多 10% 的開始時間。 在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下載和驗證資訊清單之後，應用程式下載會啟動且更新進度列開始更新。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
  [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

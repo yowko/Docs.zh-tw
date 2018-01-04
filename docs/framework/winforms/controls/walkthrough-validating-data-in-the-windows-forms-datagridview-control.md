@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b460afb393c1b88b34281a8db1b61203e5c5962
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2ede616b311119d174534e53cb3aaf9e366c7c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>逐步解說：驗證 Windows Form DataGridView 控制項中的資料
 當您向使用者顯示資料輸入功能時，您經常需要驗證您的表單中輸入的資料。 <xref:System.Windows.Forms.DataGridView>類別會提供便利的方式，資料就會認可至資料存放區之前，先執行驗證。 您可以藉由處理驗證資料<xref:System.Windows.Forms.DataGridView.CellValidating>事件，就會引發<xref:System.Windows.Forms.DataGridView>目前儲存格的變更時。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
 -   自訂儲存格的外觀。 如需詳細資訊，請參閱[How to： 自訂 Windows Form DataGridView 控制項中的儲存格外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[How to： 設定字型和色彩樣式，在 Windows Form DataGridView 控制項中](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  [Windows Forms DataGridView 控制項中的資料輸入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f51505a2b532da47591f2be4d767247c519aec40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f5f3bb1856a83309483119ded600396218b81fb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
 在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。 您可以藉由修改變更控制項的外觀和結構<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分的視覺化樹狀結構的控制項。若要變更的視覺化樹狀結構的控制項，您必須設定<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
 |Royale.NormalColor.xaml|Windows XP Media Center Edition 作業系統上的預設佈景主題。|  
 |Aero.NormalColor.xaml|Windows Vista 作業系統上的預設佈景主題。|  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Button 樣式和範本](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
  [Calendar 樣式和範本](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
  [CheckBox 樣式和範本](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
@@ -84,4 +85,4 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>相關章節  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

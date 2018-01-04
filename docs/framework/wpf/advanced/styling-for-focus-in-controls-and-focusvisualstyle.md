@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf04af2baa037b2df9e2980cc2347460de961c39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>設定控制項中焦點的樣式和 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供兩種平行機制，在控制項接收到鍵盤焦點時，用來變更它的視覺外觀。 第一種機制是使用屬性 setter 的屬性，例如<xref:System.Windows.UIElement.IsKeyboardFocused%2A>樣式或範本套用至控制項內。 第二種機制是要提供不同的樣式的值為<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性;"專注視覺化樣式 」 建立個別的視覺化樹狀結構控制項，而不是變更或其他 UI 控制項的視覺化樹狀結構上方繪製到裝飾項藉由取代它的項目。 本主題將討論每一種機制的適用案例。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="other-focus-properties"></a>其他焦點屬性  
  如果您希望所有的可能原因變更焦點以產生視覺化的行為，您應該基底 setter 或觸發程序上<xref:System.Windows.UIElement.IsFocused%2A>相依性屬性，或者在<xref:System.Windows.UIElement.GotFocus>或<xref:System.Windows.UIElement.LostFocus>用於事件<xref:System.Windows.EventSetter>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)  

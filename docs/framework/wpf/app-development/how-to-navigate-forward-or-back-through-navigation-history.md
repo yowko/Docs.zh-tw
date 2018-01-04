@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ad909af071d4006346d64ad8e4bd7b57c4eefad
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 78fd9fec6a93c100da6b4e7174376a963ae8beb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>如何：在巡覽記錄中前移或後移
 此範例說明如何巡覽向前或向後巡覽記錄中的項目。  

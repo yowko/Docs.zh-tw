@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbab05c3a6b630f3ba191ff9e4903b9c44823aad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 46a6ccde7c978fe18737c6ae8733dd2e1e1ec858
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 在 .NET Framework 1.0 和 1.1 版中，建立可以從應用程式的某個版本，延續到下一個版本使用的可序列化型別，有其問題存在。 如果型別因加入其他欄位而變更，將會發生下列問題：  
@@ -285,7 +288,7 @@ End Class
   
 -   避免分支版本控制。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.SerializableAttribute>  
  <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
  <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  

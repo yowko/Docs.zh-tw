@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f11a6c42aaf1ddc0d19cc54580cb44501b9307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox HOW TO 主題
 本節提供範例示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [擷取 RichTextBox 的文字內容](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
  [以程式設計方式變更 RichTextBox 中的選項](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [儲存、載入和列印 RichTextBox 內容](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [在 RichTextBox 中放置自訂內容功能表](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
  [如何： 取代在 RichTextBox 的預設內容主機](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.TextBox>  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

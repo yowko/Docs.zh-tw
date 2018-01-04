@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9e91889947a17f8cba66d822b857e1c8bc875cab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18f575e9bae37b66526d7b61a641374266ba627b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
 若要連線至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務並進行通訊，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端應用程式必須具備詳細的服務位址、繫結組態和服務合約。  
@@ -66,5 +67,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 > [!NOTE]
 >  如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 註冊並設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>請參閱  
+ [如何：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

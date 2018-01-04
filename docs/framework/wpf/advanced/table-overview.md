@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb9edf0439c985af015d6badd11c026449a82f57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="table-overview"></a>資料表概觀
 <xref:System.Windows.Documents.Table>是支援的非固定格式文件內容的方格呈現的區塊層級項目。 此元素的彈性讓它更為實用，但也讓您更難了解並正確使用。  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [使用 XAML 定義表格](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

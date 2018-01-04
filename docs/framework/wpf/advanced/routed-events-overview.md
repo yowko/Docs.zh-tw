@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be4447570f89637910506b6257c092c86f24991b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主題會定義路由事件的術語、說明如何透過元素的樹狀結構路由傳送路由事件、摘要說明如何處理路由事件，以及介紹如何建立您自己的自訂路由事件。
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="more-about-routed-events"></a>深入了解路由事件  
  本主題主要是從描述基本概念並提供如何及何時回應路由事件的觀點來討論路由事件，而路由事件已經存在於各種基底元素和控制項中。 不過，您可以在自訂類別上建立自己的路由事件以及所有必要的支援，例如特製化的事件資料類別和委派。 路由的事件的擁有者可以是任何類別，但必須引發和處理路由的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>衍生類別才能發揮作用。 如需自訂事件的詳細資訊，請參閱[建立自訂路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.EventManager>  
  <xref:System.Windows.RoutedEvent>  
  <xref:System.Windows.RoutedEventArgs>  

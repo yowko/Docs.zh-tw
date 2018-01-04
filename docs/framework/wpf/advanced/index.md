@@ -19,16 +19,17 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8935616159d2ea55e5616b6d7f4ebc4ff2c61e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2952c1c59e5a60cbc51d505d3a53e063ec3351d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-windows-presentation-foundation"></a>進階 (Windows Presentation Foundation)
 本節說明 WPF 中的一些進階區域。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
  [基底項目](../../../../docs/framework/wpf/advanced/base-elements.md)  
  [項目樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  

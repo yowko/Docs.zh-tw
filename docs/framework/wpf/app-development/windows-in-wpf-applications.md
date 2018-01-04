@@ -17,19 +17,20 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 應用程式中的視窗
 使用者透過 windows 應用程式與互動。 視窗的主要目的是將裝載，並顯示內容。 確認視窗主機取決於資料類型，應用程式上運作，其中可包含媒體、 Extensible Application Markup Language (XAML) 頁面、 網頁、 文件、 資料庫資料表和記錄，以及系統資訊的內容類型。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Window>  

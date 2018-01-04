@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f614e244293d08cd836edaf82496ca9e7b51423e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41895974b7e6c128d979e362f2dcef1c68e0a5c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>如何：對控制項套用 FocusVisualStyle
 此範例將示範如何建立資源中的焦點視覺化樣式，並套用樣式至控制項，使用<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  焦點視覺樣式應該一致使用跨主題或 UI，而不是使用不同的另一個用於每個可設定焦點的項目。 如需詳細資訊，請參閱[樣式的焦點在控制項和 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [設定控制項中焦點的樣式和 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)

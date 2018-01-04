@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 750e5c42158a87c04a7fb0f2a83f126a698bb93f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
 本逐步解說示範如何建立適用於 Windows Presentation Foundation (WPF) 應用程式中裝載的 Direct3D9 內容。 如需有關裝載 WPF 應用程式中的 Direct3D9 內容的詳細資訊，請參閱[WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/21/2017
   
 -   裝載 Direct3D9 內容，在 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說： 裝載 Direct3D9 內容在 WPF 中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Interop.D3DImage>  
  [Direct3D9 和 WPF 互通性的效能考量](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
  [逐步解說：在 WPF 中裝載 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
