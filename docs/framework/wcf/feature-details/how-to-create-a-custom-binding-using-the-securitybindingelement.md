@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括數個系統提供之繫結，您可以對這些繫結進行設定，但是自訂這些繫結並不具有設定所有安全性選項時 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的完整彈性。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立自訂繫結，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   合約中指定的訊息交換模式 (MEP)。  
   
- 下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。 請注意，這些都是基本需求。 您可以將其他繫結項目加入繫結中，如訊息編碼繫結項目、交易繫結項目以及其他繫結項目。  
+ 下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。 請注意，這些都是基本需求。 您可以將其他繫結程序項目加入繫結程序中，如訊息編碼繫結程序項目、異動繫結程序項目以及其他繫結程序項目。  
   
 |安全性模式|Transport|合約訊息交換模式|合約訊息交換模式|合約訊息交換模式|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  建立新自訂繫結，方式是建立 <xref:System.ServiceModel.Channels.CustomBinding> 類別的執行個體，並將 `outputBec` 集合傳遞至建構函式。  
   
-7.  產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。 其他兩項可透過使用標準繫結上的設定來控制。  
+7.  產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。 其他兩項可透過使用標準繫結程序上的設定來控制。  
   
 ## <a name="example"></a>範例  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
  <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  

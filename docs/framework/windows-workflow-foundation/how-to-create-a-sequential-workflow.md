@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 285450f3c9e724bcf449f638ee1922751c9cebaf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6888d13c982f282b0d3d939c1396bfaddd673efc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>HOW TO：建立循序工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題逐步說明建立使用這兩個內建的活動，例如工作流程<xref:System.Activities.Statements.Sequence>活動，並從先前的自訂活動[How to： 建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -166,7 +167,7 @@ ms.lasthandoff: 12/02/2017
   
      如需有關如何執行工作流程，指示，請參閱下一個主題中，[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果您已經完成[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)步驟與工作流程的不同的樣式和想要使用此步驟中的循序工作流程執行該，跳到[建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)區段[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.Statements.Flowchart>  
  <xref:System.Activities.Statements.FlowDecision>  
  [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)  

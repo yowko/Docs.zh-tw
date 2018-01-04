@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e29ae3a0374f6ee027180835629eacceaa928d2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
 同時使用傳輸與訊息認證來保護服務的安全時，需要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中同時運用最佳的傳輸與訊息安全性模式。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定安全性模式，請參閱[How to： 設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/21/2017
     </bindings>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
  [保護服務安全](../../../../docs/framework/wcf/securing-services.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

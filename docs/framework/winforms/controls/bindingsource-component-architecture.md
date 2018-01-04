@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 元件架構
 與<xref:System.Windows.Forms.BindingSource>元件，都將資料來源所有 Windows Form 控制項繫都結。  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="integration-with-bindingnavigator"></a>BindingNavigator 與整合  
  您可以使用<xref:System.Windows.Forms.BindingSource>元件任何 Windows Form 控制項繫結到資料來源，但<xref:System.Windows.Forms.BindingNavigator>控制項特別設計來搭配<xref:System.Windows.Forms.BindingSource>元件。 <xref:System.Windows.Forms.BindingNavigator>控制項提供使用者介面控制<xref:System.Windows.Forms.BindingSource>元件的目前項目。 根據預設，<xref:System.Windows.Forms.BindingNavigator>控制項提供對應的巡覽方法的按鈕<xref:System.Windows.Forms.BindingSource>元件。 如需詳細資訊，請參閱[How to： 使用 Windows Form BindingNavigator 控制項的瀏覽資料](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [BindingSource 元件概觀](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  

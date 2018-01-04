@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 544e505dd182d331179d9a6d3da4815b849fdd95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 第 1 版實作了 WS-Atomic 交易與 WS-Coordination 通訊協定 1.0 版。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]版本 1.1，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
@@ -29,13 +30,13 @@ ms.lasthandoff: 12/02/2017
   
  這些通訊協定規格的互通性需要滿足兩個層級：在應用程式之間，以及在交易管理員之間的層級 (請參閱下圖)。 規格詳細描述兩種互通性層級的訊息格式和訊息交換。 對應用程式之間的交換也會如同針對標準應用程式交換一樣，套用特定安全性、可靠性和編碼。 但是，交易管理員之間若要成功地達成互通性，便需要有一致的特定繫結，因為使用者通常不會設定它。  
   
- 此主題描述 WS-Atomic 交易 (WS-AT) 安全性規格的組成，並且描述使用在交易管理員之間通訊的安全繫結。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
+ 此主題描述 WS-Atomic 異動 (WS-AT) 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
   
  下圖描述兩個異動管理員之間：異動管理員 1 和異動管理員 2，以及兩個應用程式之間：應用程式 1 和應用程式 2 的互通性。  
   
  ![交易通訊協定](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "異動管理員")  
   
- 使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有交易管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
+ 使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有異動管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
   
 |||  
 |-|-|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
 |10.註冊 (永久性)|21.已認可 (2PC)|  
 |11.RegisterResponse|22.已認可 (2PC)|  
   
- 此文件描述 WS-AtomicTransaction 安全性規格的組成，並且描述使用在交易管理員之間通訊的安全繫結。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試。  
+ 此文件描述 WS-AtomicTransaction 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試。  
   
  圖形與表格會從安全性觀點顯示四種訊息類別：  
   
@@ -104,14 +105,14 @@ ms.lasthandoff: 12/02/2017
  這是替代 （混合模式） 繫結該使用傳輸安全性和 Ws-coordination 發行權杖模型針對識別建立目的。  啟動與登錄是兩個繫結之間唯一不同的項目。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
- X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
+ X.509 憑證會用來建立異動管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
   
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
  B1221:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 的啟動訊息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
- 第 8 節的 WS-Atomic 交易規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
+ 第 8 節的 WS-Atomic 異動規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
 -   R1222：在接收到 `CreateCoordinationContext` 後，協調器必須使用關聯的密碼 `SecurityContextToken` 發行 `STx`。 在符合 WS-Trust 規格的 `t:IssuedTokens` 標頭中會傳回這個權杖。  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 12/02/2017
  B2131: 實作必須支援`wsa:ReferenceParameters`如所述以達到相互關聯的 WS 定址[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的 2PC 訊息。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
- 應用程式可以隨意使用應用程式之間訊息的任何特定繫結，只要繫結符合下列安全性需求：  
+ 應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
   
 -   R2001：應用程式之間的訊息必須將 `t:IssuedTokens` 標頭與訊息標頭中的 `CoordinationContext` 一起流通。  
   

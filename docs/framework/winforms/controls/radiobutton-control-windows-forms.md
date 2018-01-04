@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b763217527a2306bfe648e3b327124408cea62f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 206a2632221f2521992a43e72abc152923dd85a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton 控制項 (Windows Form)
 Windows Form`RadioButton`控制項向使用者顯示一組兩個或多個互斥。 選項按鈕和核取方塊看起來可能類似函式，而是一項重要差異： 無法選取以及當使用者選取選項按鈕，在相同群組中的其他選項按鈕。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [RadioButton 控制項概觀](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -37,7 +38,7 @@ Windows Form`RadioButton`控制項向使用者顯示一組兩個或多個互斥�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.RadioButton> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

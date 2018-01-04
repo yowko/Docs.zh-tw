@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc52dd1b629829564532fd93650737f51e5d7f24
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d81a1936d8a6159c6225a12f712c546fe9beeb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>如何：使用 ToolStrip 控制項中的工具提示
 您可以顯示<xref:System.Windows.Forms.ToolTip>如<xref:System.Windows.Forms.ToolStrip>您想要藉由設定控制項的控制項<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性`true`。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  如果您設定<xref:System.Windows.Forms.ToolStripItemDisplayStyle>至<xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>或<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>，任何文字會出現在按鈕上，但仍會顯示工具提示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
  <xref:System.Windows.Forms.ToolStripButton>  
  <xref:System.Windows.Forms.ToolStripDropDownButton>  

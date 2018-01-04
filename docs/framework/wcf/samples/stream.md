@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0cbbae6ae8ba486791c525b70e8d208880661d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab56dd7938f2c7594627b54b4cb61b4e0f6b28fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stream"></a>資料流
 這個資料流範例將示範資料流傳輸模式通訊的使用。 服務會公開數個傳送和接收資料流的作業。 這個範例會自我裝載。 用戶端和服務都是主控台程式。  
@@ -51,7 +52,7 @@ public interface IStreamingSample
 ## <a name="enabling-streamed-transfers"></a>啟用資料流處理的傳輸  
  如先前所述，定義作業合約就可以在程式設計模型層級上提供資料流。 如果您在此停止作業，則傳輸仍然會緩衝整個訊息內容。 若要啟用傳輸資料流，請在傳輸的繫結項目上選取傳輸模式。 繫結項目包含可設為 `TransferMode`、`Buffered`、`Streamed` 或 `StreamedRequest` 的 `StreamedResponse` 屬性。 將傳輸模式設為 `Streamed` 可啟用雙向資料流通訊。 將傳輸模式設為 `StreamedRequest` 或 `StreamedResponse` 可以分別啟用只有要求或回應方向的資料流通訊。  
   
- `basicHttpBinding` 也會公開繫結上的 `TransferMode` 屬性，就像 `NetTcpBinding` 和 `NetNamedPipeBinding` 一樣。 如果是其他傳輸模式，您必須建立自訂繫結才能設定傳輸模式。  
+ `basicHttpBinding` 也會公開繫結上的 `TransferMode` 屬性，就像 `NetTcpBinding` 和 `NetNamedPipeBinding` 一樣。 如果是其他傳輸模式，您必須建立自訂繫結程序才能設定傳輸模式。  
   
  範例中的下列組態程式碼示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理：  
   
@@ -195,4 +196,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

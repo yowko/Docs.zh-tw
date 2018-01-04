@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有 ASP.NET 相容性模式選項，可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式以類似 ASP.NET Web 服務的方式來進行程式設計和組態，並且可模擬其行為。 下列章節將根據使用這兩種技術來開發應用程式時的需求，比較 ASP.NET Web 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的開發通常也是從定義複雜類型開始。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以設定為使用與 ASP.NET Web 服務相同的 .NET Framework 型別。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以新增至 .NET Framework 型別，以表示要將型別的執行個體序列化為 XML，以及要序列化型別的哪些特定欄位或屬性，如下列範例程式碼所示。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute>和<xref:System.Runtime.Serialization.DataMemberAttribute>可以加入表示類型的執行個體已序列化為 XML，以及哪些特定欄位或屬性的型別進行序列化，如下列範例所示的.NET Framework 型別程式碼。  
   
 ```  
 //Example One:   
@@ -760,5 +761,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>全球化  
  ASP.NET 設定語言可讓您指定個別服務的文化特性。 除非是在 ASP.NET 相容性模式下，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援此組態設定。 若要當地語系化未使用 ASP.NET 相容性模式的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請將服務類型編譯為文化特性特定的組件，並為各個文化特性特定的組件設定個別的文化特性特定端點。  
   
-## <a name="see-also"></a>另請參閱  
- [比較 ASP.NET Web 服務與 WCF 依據用途與使用的標準](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>請參閱  
+ [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

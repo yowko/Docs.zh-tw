@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33147ef4f06a449f74ee683d04225bf31fbff8f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 043172f854c6165019517a1a48f8d41e632afa52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-description"></a>服務描述
 服務描述範例會示範服務如何在執行階段擷取其服務描述資訊。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，以定義要傳回之服務的描述性資訊的其他服務作業。 傳回的資訊會列出服務的基底位址與端點。 服務會使用 <xref:System.ServiceModel.OperationContext>、<xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.Description.ServiceDescription> 類別提供這項資訊。  
@@ -112,4 +113,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

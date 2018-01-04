@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70e38e3fe1a07613b0e5b219922c95cdc3bcda41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37125ed8211578e221b24e6aed1fc57b2fc0f518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clients"></a>用戶端
 本節的主題涵蓋用戶端結構、如何存取 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務、如何設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端以及一些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的安全性考量。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WCF 用戶端架構](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
  描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端結構。  
   
@@ -35,5 +36,5 @@ ms.lasthandoff: 12/02/2017
  [保護用戶端安全](../../../../docs/framework/wcf/securing-clients.md)  
  描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的一些安全性考量。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [用戶端範例](http://msdn.microsoft.com/en-us/849fc452-8718-4d4e-ba57-905eed943f63)

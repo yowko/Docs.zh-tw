@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e43a23d632b397889721373471a8fa165052d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f266af44f954cb8416e1f7672f6642ab7c6995b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：排序 Windows Form 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容
 當資料繫結 Windows Form 控制項將不會排序。 若要顯示已排序的資料，請使用支援排序的資料來源，然後排序的資料來源。 支援排序的資料來源是資料的檢視、 資料檢視管理員和排序陣列。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
      這項設定會依排序順序，重新調整所有現有的清單項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6f0d73ba01ec51fe2fcd00f33bbd3183e382c74
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02611dc44b98c1b8b5ef5ae74559f9f370483792
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 此範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 實作與設定一般服務和用戶端。 這個範例是所有其他基本技術範例的基礎。  
@@ -88,6 +89,6 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 管理範例](http://go.microsoft.com/fwlink/?LinkId=193960)  
  [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)

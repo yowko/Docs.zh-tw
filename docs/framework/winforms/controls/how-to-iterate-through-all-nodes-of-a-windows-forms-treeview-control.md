@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057612bfb28333df0aebaa5ca19555f4c4951687
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02dfe1cb494df91a2a3ef3a6bba533306d61edef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>如何：逐一查看 Windows Forms TreeView 控制項的所有節點
 可能會很有用，檢查 Windows Form 中的每個節點<xref:System.Windows.Forms.TreeView>才能執行某些計算節點值上的控制項。 使用遞迴程序 (採用 C# 和 C++ 的遞迴方法) 來逐一查看每個樹狀集合中的每個節點，即可完成這項作業。  
@@ -133,6 +134,6 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
  [遞迴程序](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

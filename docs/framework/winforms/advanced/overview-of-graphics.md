@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0a3286cbcaa0eebf59500582a749804b5e1b8ba
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3438fe2f1c3a6fc40efda0ff2583208f38bf7d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-graphics"></a>圖形概觀
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]為應用程式開發介面 (API) 構成 Microsoft Windows 作業系統的子系統。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]會負責顯示螢幕和印表機上的資訊。 正如其名， [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 的後置項，該繪圖裝置介面包含在舊版 Windows 中。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
   
  圖形裝置介面，例如[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以在螢幕或印表機上顯示資訊，而不須關心特定顯示裝置的詳細資料。 程式設計師會呼叫 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 類別所提供的方法。 這些方法接著會適當地呼叫特定裝置驅動程式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 會從圖形硬體隔離應用程式。 它是隔離會讓程式設計人員能夠建立與裝置無關的應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [圖形概觀](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)

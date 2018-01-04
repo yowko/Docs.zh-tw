@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3ef21d4ab431ea4e1e1ac0392b3f088a7053c80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 496c1191ebb55181ddb999a5a4327d5ff699828c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-networking"></a>對等網路
 對等通道為 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的多方對等 (P2P) 通訊技術。 它為應用程式開發人員提供了安全、可擴充的訊息 P2P 通訊通道。 像「交談」這樣的共同作業應用程式，即是受惠於對等通道多方應用程式的其中一個例子；一群人可以在這裡透過對等方式彼此交談，而不需要伺服器。 對等通道能夠進行 P2P 共同作業、內容散發、負載平衡，以及消費者和企業案例的分散式處理。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
   
  下列各節包含有關對等網路的資訊，並且說明如何使用對等通道類別，建立已啟用對等之網路應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [對等通道案例](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)： 描述支援的對等通道應用程式開發介面，開發案例，例如發行/訂閱訊息、 共同作業、 分散式處理和遊戲。  
   
  [對等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)： 說明對等網狀結構、 對等節點、 對等通道安全性和對等解析程式。  

@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 345fb44bed207d5d5e2c30bf4dd6e6ace27d7511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b46597e16156db3d36fef97040104d8497294ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-approval-process"></a>文件核准程序
 這個範例示範許多 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能併用的方式。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。  

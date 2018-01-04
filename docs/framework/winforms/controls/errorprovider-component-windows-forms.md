@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1dd0cfd8062274d4e2ad9ce75ae41ed69e703d4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0dbebd020d4512b90215dae781f359a3a633c609
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider 元件 (Windows Form)
 Windows Form`ErrorProvider`元件可用來讓使用者不會造成干擾的方式有不對勁的錯誤。 通常用於搭配驗證表單上的使用者輸入或顯示資料集內的錯誤。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ErrorProvider 元件概觀](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
  說明此元件是什麼及其重要功能與屬性。  
   
@@ -38,7 +39,7 @@ Windows Form`ErrorProvider`元件可用來讓使用者不會造成干擾的方�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ErrorProvider>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

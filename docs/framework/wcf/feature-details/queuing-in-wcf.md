@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>WCF 中的佇列
 本節說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列通訊。  
@@ -115,28 +116,28 @@ ms.lasthandoff: 12/02/2017
 ### <a name="sample-code"></a>程式碼範例  
  如需如何撰寫使用 MSMQ 之 WCF 服務的逐步指示，請參閱下列主題：  
   
--   [如何： 與 WCF 端點交換訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [如何： Exchange 佇列與 WCF 端點的訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  如需示範在 WCF 中使用 MSMQ 的完整程式碼範例，請參閱下列主題：  
   
--   [交易的 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+-   [異動 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
 -   [變動性佇列通訊](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [寄不出信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [無效信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
 -   [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
 -   [雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)  
   
--   [交易的批次處理](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [異動批次處理](../../../../docs/framework/wcf/samples/transacted-batching.md)  
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [透過訊息佇列的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Web 裝載佇列的應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

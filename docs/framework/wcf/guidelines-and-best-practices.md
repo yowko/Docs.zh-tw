@@ -19,16 +19,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12599c0bdf249271e8cd28e5a7591c130b1fd920
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-and-best-practices"></a>方針及最佳作法
 本章節所包含的主題，提供建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式的方針。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [最佳做法：資料合約版本設定](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  說明如何及何時建立不會在未來版本建立時中斷的資料合約。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
   
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 範例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54acfb1a130c8a790411a05958518665ef790e53
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28f5f4a57f8fd6ee8b739b38735d41a118abc0cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-from-xaml"></a>從 XAML 載入
 這個範例示範如何動態載入 XAML 工作流程，而不必執行 XamlBuildTask 工具。 這個範例會改為呼叫 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 方法。 這個範例是 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 用戶端應用程式，會使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 類別載入 XAML 工作流程並且執行。 使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 類別載入工作流程之後，就會傳回可以執行的 <xref:System.Activities.DynamicActivity%601>。  

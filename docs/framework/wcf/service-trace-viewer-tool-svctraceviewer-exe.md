@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務追蹤檢視器工具可協助您分析由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 產生的診斷追蹤。 服務追蹤檢視器提供一種輕鬆合併、檢視和篩選記錄內追蹤訊息的方式，方便您診斷、修復以及驗證 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的問題。  
@@ -287,7 +288,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  請至少指定一個篩選器名稱與 XPath 運算式。  
   
-4.  按一下 [確定]。  
+4.  按一下 [確定 **Deploying Office Solutions**]。  
   
 ###### <a name="applying-a-custom-filter"></a>套用自訂篩選器  
  建立自訂篩選器後，可透過篩選器工具列存取自訂篩選器。 選取您想要在中套用的篩選器**搜尋**欄位的篩選器工具列。 針對先前的範例選取 [Thread ID]。  
@@ -412,12 +413,12 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="activity-tracing-traces"></a>活動追蹤  
   
-|圖示|說明|  
+|圖示|描述|  
 |----------|-----------------|  
 |![警告追蹤](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|警告追蹤：在警告層級發出的追蹤。|  
 |![錯誤追蹤](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|錯誤追蹤：在錯誤層級發出的追蹤。|  
 |![活動開始追蹤：](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|活動開始追蹤：標記活動開始的追蹤， 其中包含了活動的名稱。 身為應用程式設計師或開發人員，您應對每個處理序或執行緒的每個活動識別碼定義一個活動「開始」追蹤。<br /><br /> 如果活動識別碼的傳播因為追蹤相互關聯而跨越追蹤，您會看到同一個活動識別碼有多個「開始」(每個追蹤來源一個)。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「開始」追蹤。|  
-|![活動停止追蹤](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|活動停止追蹤：標記活動停止的追蹤， . 其中包含了活動的名稱。 身為應用程式設計師或開發人員，您應對每個追蹤來源的每個活動定義一個活動「停止」追蹤。 在指定的追蹤來源發出活動「停止」後，不會出現該追蹤來源的追蹤，除非追蹤時間精細度不夠小。 發生這種情況時，時間相同的兩個追蹤 (包括「停止」) 可能會在顯示時交錯。 如果活動識別碼的傳播因為追蹤相互關聯而跨越追蹤，您會看到同一個活動識別碼有多個「停止」(每個追蹤來源一個)。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「停止」追蹤。|  
+|![活動停止追蹤](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|活動停止追蹤：標記活動停止的追蹤， 。 其中包含了活動的名稱。 身為應用程式設計師或開發人員，您應對每個追蹤來源的每個活動定義一個活動「停止」追蹤。 在指定的追蹤來源發出活動「停止」後，不會出現該追蹤來源的追蹤，除非追蹤時間精細度不夠小。 發生這種情況時，時間相同的兩個追蹤 (包括「停止」) 可能會在顯示時交錯。 如果活動識別碼的傳播因為追蹤相互關聯而跨越追蹤，您會看到同一個活動識別碼有多個「停止」(每個追蹤來源一個)。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「停止」追蹤。|  
 |![活動暫止追蹤](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|活動暫止追蹤：標記活動暫停時間的追蹤。 在活動繼續執行之前，暫止活動中不會發出追蹤。 暫止活動代表追蹤來源範圍內的該活動中沒有發生處理。 暫止/繼續追蹤對於分析很有用。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「暫止」追蹤。|  
 |![活動繼續追蹤](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|活動繼續追蹤：標記活動在暫止後恢復繼續之時間的追蹤。 該活動中會再次發出追蹤。 暫止/繼續追蹤對於分析很有用。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「繼續」追蹤。|  
 |![傳輸](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|傳輸：當邏輯控制流程從一個活動傳輸至另一個活動時發出的追蹤。 傳輸起源的活動會繼續執行工作，與傳輸移至的活動平行。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「傳輸」追蹤。|  
@@ -426,7 +427,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="wcf-traces"></a>WCF 追蹤  
   
-|圖示|說明|  
+|圖示|描述|  
 |----------|-----------------|  
 |![訊息記錄追蹤](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|訊息記錄追蹤：當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤來源已啟用時，某個 `System.ServiceModel.MessageLogging` 訊息由訊息記錄功能記錄時所發出的追蹤。 按一下此追蹤會顯示訊息。 訊息有四個可設定記錄點：ServiceLevelSendRequest、TransportSend、TransportReceive 和 ServiceLevelReceiveRequest，也可以由訊息記錄追蹤中的 `messageSource` 屬性來指定。|  
 |![收到的訊息追蹤](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|已接收訊息追蹤：如果已在「資訊」層級或「詳細資訊」層級啟用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤來源而收到 `System.ServiceModel` 訊息時，便會發出此追蹤。 此追蹤是不可或缺的活動中檢視訊息相互關聯箭頭**圖形**檢視。|  
@@ -434,14 +435,14 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="activities"></a>活動  
   
-|圖示|說明|  
+|圖示|描述|  
 |----------|-----------------|  
 |![活動](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|活動：表示目前活動為一般活動。|  
 |![根活動](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|根活動：表示處理序的根活動。|  
   
 ### <a name="wcf-activities"></a>WCF 活動  
   
-|圖示|說明|  
+|圖示|描述|  
 |----------|-----------------|  
 |![環境活動](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|環境活動：可建立、開啟或關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 主機或用戶端的活動。 在這些階段內發生的錯誤會出現在這個活動中。|  
 |![接聽活動](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|接聽活動：記錄與接聽項相關之追蹤的活動。 在這個活動內，我們可以檢視接聽項資訊和連線要求。|  
@@ -459,7 +460,7 @@ ms.lasthandoff: 12/02/2017
   
  如果您開啟的是使用阿拉伯文作業系統建立的追蹤記錄，可能會發現時間篩選器無法運作。 例如，2005 年對應到阿拉伯曆的 1427 年。 但是，服務追蹤檢視器工具篩選器所支援的時間範圍並不支援 1752 年之前的日期。 這就表示您無法在該篩選器中選取正確的日期。 若要解決這個問題，您可以建立自訂篩選器 (**檢視/自訂篩選**) 使用 XPath 運算式來包含特定時間範圍。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [活動追蹤和散佈用於端對端追蹤相互關聯](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)

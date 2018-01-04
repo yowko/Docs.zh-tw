@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12204ebe9720fb8f894046622d6bb81b1c7d5706
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="store-extensibility"></a>存放區擴充性
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 可讓使用者提升應用程式專屬的自訂屬性，用來查詢持續性資料庫中的執行個體。 提升屬性的動作會讓值用於資料庫中的特殊檢視表。 這些提升屬性 (可用於使用者查詢中的屬性) 可以屬於簡單型別 (例如 Int64、GUID、String 及 DateTime)，也可以屬於序列化的二進位型別 (byte[])。  

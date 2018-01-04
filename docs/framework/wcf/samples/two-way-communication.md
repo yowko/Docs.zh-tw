@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d17c9c97e98a62cf0cbda38bae4adad32c4b5eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="two-way-communication"></a>雙向通訊
 這個範例會示範如何透過 MSMQ 來執行交易雙向佇列通訊。 這個範例會使用 `netMsmqBinding` 繫結。 在此範例中，服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -341,4 +342,4 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

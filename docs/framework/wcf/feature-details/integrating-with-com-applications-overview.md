@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM 應用程式概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 為 Managed 程式碼開發人員提供了一個資源豐富的作業環境，讓他們可以建立相關應用程式。 不過，如果您對 Unmanaged COM 架構程式碼做了大筆投資，而且不想進行移轉，則仍舊可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務 Moniker 將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服務直接移轉至現有的程式碼。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="parameters-supported-by-the-service-moniker"></a>服務 Moniker 支援的參數  
  下表顯示服務 Moniker 所支援的參數。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`address`|服務的 URL 位置。|  
 |`binding`|應用程式組態中的繫結區段名稱。|  
@@ -74,5 +75,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 註冊並設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>請參閱  
+ [如何：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是指資料[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用以建立宣告的身分識別或功能。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題將說明認證、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用，以及如何為應用程式選擇正確的認證。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證以及安全工作階段，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
@@ -121,6 +122,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

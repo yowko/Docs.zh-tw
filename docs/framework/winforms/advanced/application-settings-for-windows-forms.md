@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382d20c66728869ce006c35a1e44e3a56217e1c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Form 的應用程式設定
 Windows Form 的應用程式設定功能可讓您輕鬆地在用戶端上建立、儲存及維護自訂應用程式和使用者偏好設定。 利用應用程式設定，您不只可以儲存應用程式資料 (例如資料庫連接字串)，也可以儲存使用者專屬資料 (例如工具列位置和最近使用的清單)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [應用程式設定概觀](~/docs/framework/winforms/advanced/application-settings-overview.md)  
  討論如何代表您的應用程式和使用者來建立及儲存設定資料。  
   
@@ -50,6 +51,6 @@ Windows Form 的應用程式設定功能可讓您輕鬆地在用戶端上建立�
 [Windows Form 的組態區段](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
 文件中 Windows Form 應用程式從.NET Framework 4.7 支援啟用高 DPI 的設定。
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [Windows Forms](../index.md)

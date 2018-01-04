@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e4f93da8a2a5be00d798d64caba0f54bfd71ceb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-services"></a>如何：啟動服務
 安裝服務之後，它必須啟動。 開始呼叫<xref:System.ServiceProcess.ServiceBase.OnStart%2A>服務類別上的方法。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法來定義服務將會執行實際工作。 服務啟動之後，它會保持有效，直到以手動方式暫停或停止。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  呼叫 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法啟動服務。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

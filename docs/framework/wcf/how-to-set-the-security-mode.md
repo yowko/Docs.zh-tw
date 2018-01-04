@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-security-mode"></a>HOW TO：設定安全性模式
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安全性具有三種常見的安全性模式，可在下列最預先定義的繫結中找到：傳輸、訊息與「使用訊息認證進行傳輸」。 另外有兩種額外的模式適用於下列兩種繫結：<xref:System.ServiceModel.BasicHttpBinding> 上的「僅限傳輸-認證」以及 <xref:System.ServiceModel.NetMsmqBinding> 上的「兩者並存」模式。 然而，此主題將著重在三種常見的安全性模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 與 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
@@ -123,9 +124,9 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 使用傳輸安全性和訊息認證](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 使用 SSL 憑證設定連接埠](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [如何： 使用傳輸安全性和訊息認證](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+## <a name="see-also"></a>請參閱  
+ [如何：使用 SSL 憑證設定連接埠](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [如何：使用傳輸安全性和訊息認證](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security.md)  
  [訊息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)  

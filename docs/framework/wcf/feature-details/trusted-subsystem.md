@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3d4979513df5eb6908974480a19374a5c6a2233
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trusted-subsystem"></a>受信任的子系統
 用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務的設計會將對其他資源 (例如資料庫或其他 Web 服務) 的存取封裝在 Web 服務的商務邏輯中。 這些資源必須受到保護，以避免未經授權的存取。 下圖說明受信任的子系統處理序。  
@@ -220,6 +221,6 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

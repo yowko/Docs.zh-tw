@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 180367920eb6f900fbb6b234b94f3b3a2c7fe52f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e011eb2f22abdc06a35fb7f656e180a4537245d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、設定，以及使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端或通道物件來與服務通訊。 [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件和建立基本用戶端和通道物件，以及使用它們的相關步驟的概觀。  
@@ -103,11 +104,11 @@ ms.lasthandoff: 12/02/2017
   
  使用隱含方式的應用程式會叫用使用者介面初始設定式，但若應用程式的使用者無法在繫結的傳送逾時期限之內回應，當使用者介面傳回時就會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [如何： 存取服務使用單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [如何： 存取使用雙工合約的服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [如何： 存取 WSE 3.0 服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [如何： 以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [如何：使用單向和要求-回覆合約來存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [如何：使用雙面合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [如何：存取 WSE 3.0 服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
+ [如何：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
  [中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

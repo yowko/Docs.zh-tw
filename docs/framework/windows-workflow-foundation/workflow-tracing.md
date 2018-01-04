@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7cc400c2925d1a4a1810780528bad6da3ad492eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-tracing"></a>工作流程追蹤
 工作流程追蹤提供使用 .NET Framework 追蹤接聽程式擷取診斷資訊的方式。 如果偵測到應用程式的問題，可以啟用追蹤，等到問題解決再停用追蹤。 您可以運用兩種方式啟用工作流程的偵錯追蹤。 您可以使用事件追蹤檢視器加以設定，也可以使用 <xref:System.Diagnostics>，將追蹤事件傳送至檔案。  
@@ -78,6 +79,6 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

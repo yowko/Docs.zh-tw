@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32cb95eebbc5738204b063f1cf5f8264e775791f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 在具有型別之合約的 COM 應用程式中使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker 之前，您必須使用 COM 註冊必要的屬性化型別，並以必要的繫結組態設定 COM 應用程式和 Moniker。  
@@ -107,5 +108,5 @@ ms.lasthandoff: 12/02/2017
   
      這樣會修改匯入的介面定義，讓所有方法都會傳回 `HResult`。 其他傳回值都會轉換為 Out 參數。 整體的執行方法仍然相同。 這樣可讓您在 Proxy 上呼叫方法時，判斷發生例外狀況的原因。 不過這個功能只能用於 C++ 程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

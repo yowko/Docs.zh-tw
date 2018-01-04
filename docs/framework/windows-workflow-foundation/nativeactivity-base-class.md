@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f5a925aa9fc14c370c50ab0877742b207461c1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e53471a2d0245b1547ae5ee3c3a147e024aedefb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
 <xref:System.Activities.NativeActivity> 是具有受保護建構函式的抽象類別。 如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。 不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 物件，存取工作流程執行階段的所有公開功能。  

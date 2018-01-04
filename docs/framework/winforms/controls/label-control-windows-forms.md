@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90a870c71bc7e5d853049d363c27a29d00be3f6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76c02e3ae30bc3699b6fcddc07709d4b419d2a7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label-control-windows-forms"></a>Label 控制項 (Windows Form)
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
  Windows Form<xref:System.Windows.Forms.Label>控制項用來顯示文字或影像，使用者無法編輯。 它們可用來識別表單的物件，提供特定控制項的描述按一下將執行動作，例如，或在執行階段事件或應用程式中的處理序的回應中顯示資訊。 因為<xref:System.Windows.Forms.Label>控制項無法接收焦點，它也可用來建立其他控制項的便捷鍵。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Label 控制項概觀](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.Label>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

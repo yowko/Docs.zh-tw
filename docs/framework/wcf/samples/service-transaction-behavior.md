@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4777136c80f7dba368c85fac7d7dd1db9c945c5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4c7c9c78b821f7457f193d24bae031d49b301ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
 這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)實作的計算器服務，但會擴充以維護伺服器記錄檔中的資料庫資料表和累計總數的計算機作業可設定狀態的執行作業。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 服務的合約會定義所有作業都需要交易與要求一起流動：  
+ 服務的合約會定義所有作業都需要異動與要求一起流動：  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
@@ -99,7 +100,7 @@ Console.WriteLine("Transaction committed");
 client.Close();  
 ```  
   
- 在服務上，有三個屬性會影響服務交易行為，而影響的方式如下：  
+ 在服務上，有三個屬性會影響服務異動行為，而影響的方式如下：  
   
 -   在 `ServiceBehaviorAttribute` 上：  
   
@@ -200,11 +201,11 @@ Creating new service instance...
   Writing row 4 to database: Dividing 495 by 15  
 ```  
   
- 請注意，除了持續計算執行總數以外，服務還會報告執行個體的建立動作 (這個範例建立一個執行個體)，並將作業要求記錄至資料庫。 由於所有要求都會流動用戶端的交易，若發生任何失敗而無法完成該交易，就會導致回復所有資料庫作業。 下列方式可以示範此情形：  
+ 請注意，除了持續計算執行總數以外，服務還會報告執行個體的建立動作 (這個範例建立一個執行個體)，並將作業要求記錄至資料庫。 由於所有要求都會流動用戶端的異動，若發生任何失敗而無法完成該異動，就會導致回復所有資料庫作業。 下列方式可以示範此情形：  
   
 -   註解 `tx.Complete`() 的用戶端呼叫並重新執行 - 這會使用戶端離開交易範圍，而不會完成它的交易。  
   
--   註解 Divide 服務作業的呼叫 - 這會導致 Multiply 作業初始化的動作無法完成，最後用戶端的交易也因此而無法完成。  
+-   註解 Divide 服務作業的呼叫 - 這會導致 Multiply 作業初始化的動作無法完成，最後用戶端的異動也因此而無法完成。  
   
 -   在用戶端交易範圍的任何地方擲回未處理的例外狀況 - 這同樣會令用戶端無法完成它的交易。  
   
@@ -274,4 +275,4 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

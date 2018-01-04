@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2bb7251b87356361844e075831c95885879476
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c606406fb47d6297e70bfa3db5fc17631969e4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.CheckedListBox>控制項延伸<xref:System.Windows.Forms.ListBox>控制項。 它會執行幾乎所有項目清單方塊沒有和也可以顯示在清單中項目旁的核取記號。 其他兩個控制項之間的差異是，檢查清單方塊只支援<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 的檢查清單方塊只能有一個項目，或不選取。 請注意會反白顯示在表單上選取的項目，而且不是已檢查的項目一樣。  
   
  檢查清單方塊會在設計階段使用加入的項目**字串集合編輯器**或其項目可以動態方式加入，集合在執行階段，使用<xref:System.Windows.Forms.CheckedListBox.Items%2A>屬性。 如需詳細資訊，請參閱[如何： 加入和移除 Windows Form ComboBox、 ListBox 或 CheckedListBox 控制項中的項目](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.CheckedListBox>  
  <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>  

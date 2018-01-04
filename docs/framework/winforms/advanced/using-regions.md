@@ -16,18 +16,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b53501e2f1e10cb3f8936434b63557d221c91bbc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9a7cbd5226bc1ff1a92b7eb8af5f5241c32ce399
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-regions"></a>使用區域
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region>類別可讓您定義自訂形狀。 圖形可以組成線條、 多邊形和曲線。  
   
  測試和結束時間裁剪時，會叫用兩種常見用途區域。 點擊測試，可決定是否將螢幕的某些區域中按下滑鼠。 裁剪為特定地區繪圖限制。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：使用區域的點擊測試](../../../../docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md)  
  示範如何使用<xref:System.Drawing.Region>執行點擊的測試。  
   

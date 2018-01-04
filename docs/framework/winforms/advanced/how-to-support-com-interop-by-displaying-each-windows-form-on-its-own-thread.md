@@ -20,18 +20,19 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c772f547dc87af6618b92603ed1e709efc511b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60e52bc1486f74bdce44062a4ac861032b7b660c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>如何：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示表單來解決 COM 互通性問題，這可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法來建立。  
   
  若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行表單。 若要執行此工作，請使用下列的其中一個方法：  
   
--   使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Form。 如需詳細資訊，請參閱 [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)。  
+-   使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Form。 如需詳細資訊，請參閱[如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)。  
   
 -   在個別執行緒上顯示每個 Windows Form。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 -   請將 `COMForm`、 `Form1`和 `FormManager` 類型編譯至稱為 `COMWinform.dll`的組件中。 請使用 [Packaging an Assembly for COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)所述的其中一種方法來登錄 COM Interop 組件。 您現在可以在 Unmanaged 應用程式中使用該組件和對應的類型程式庫 (.tlb) 檔案。 例如，您可以使用類型程式庫做為 Visual Basic 6.0 可執行檔專案中的參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [封裝 COM 的組件](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
  [向 COM 註冊組件](../../../../docs/framework/interop/registering-assemblies-with-com.md)  

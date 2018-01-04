@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5f57e0a7981e8cae93960c8ffc3ed2168594cf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d139c283d002ac76005f22385d83190144c5082
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-pop-up-help"></a>如何：顯示快顯說明
 Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題列，可透過存取右側的按鈕<xref:System.Windows.Forms.Form.HelpButton%2A>屬性。 這種顯示 [說明] 的方式非常適合與對話方塊一起使用。 以強制回應方式 (使用 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法) 顯示的對話方塊無法啟動外部 [說明] 系統，因為將焦點轉換至另一個視窗之前，必須先關閉強制回應對話方塊。 此外，使用**協助**按鈕需要有沒有**最小化**按鈕或**最大化**標題列中顯示的按鈕。 這是標準的對話方塊慣例，而表單則通常具有**最小化**和**最大化**按鈕。  
@@ -34,7 +35,7 @@ Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題
  請注意，您也可以使用 <xref:System.Windows.Forms.HelpProvider> 元件將控制項連結至 [說明] 系統中的檔案，即使您已實作快顯 [說明] 亦然。 如需詳細資訊，請參閱[Windows 應用程式中提供說明](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-display-pop-up-help"></a>顯示快顯說明  
   
@@ -52,7 +53,7 @@ Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題
   
 6.  按**協助**按鈕標題列上，按一下的控制項，供您設定的說明字串。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
  [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

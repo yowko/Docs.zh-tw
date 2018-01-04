@@ -26,11 +26,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0e2aec42fa3656b64140134efa27fe8e940e1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 003770e5d21383973946c4ebb83d560f0fa23207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>如何：將檔案載入 Windows Form RichTextBox 控制項
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純文字、Unicode 純文字或 Rich Text 格式 (RTF) 檔案。 執行方式是呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 您也可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法從資料流載入資料。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
@@ -41,7 +42,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純�
   
 2.  呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 方法，指定要載入的檔案，也可指定檔案類型。 在下例中，要載入的檔案取自 <xref:System.Windows.Forms.OpenFileDialog> 元件的 <xref:System.Windows.Forms.FileDialog.FileName%2A> 屬性。 如果呼叫的方法以檔案名稱為其唯一引數，則檔案類型會假設為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
   
-     在下例中，按一下按鈕即會顯示 <xref:System.Windows.Forms.OpenFileDialog> 元件。 所選檔案會隨即開啟，並顯示在 <xref:System.Windows.Forms.RichTextBox> 控制項中。 本例假設表單有`btnOpenFile`按鈕。  
+     在下例中，按一下按鈕即會顯示 <xref:System.Windows.Forms.OpenFileDialog> 元件。 所選檔案會隨即開啟，並顯示在 <xref:System.Windows.Forms.RichTextBox> 控制項中。 本例假設表單有 `btnOpenFile` 按鈕。  
   
     ```vb  
     Private Sub btnOpenFile_Click(ByVal sender As System.Object, _  
@@ -90,7 +91,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純�
     > [!IMPORTANT]
     >  若要執行此程序，您的組件可能需要由 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../docs/framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

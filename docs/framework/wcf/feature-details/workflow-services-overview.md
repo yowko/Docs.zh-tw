@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services-overview"></a>工作流程服務概觀
 工作流程服務是以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為主的服務，這些服務是使用工作流程實作的。 工作流程服務是使用傳訊活動傳送及接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息的工作流程。 .NET Framework 4.5 引入了許多傳訊活動，可讓您從工作流程內傳送及接收訊息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]傳訊活動，以及如何使用它們來實作不同訊息交換模式，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  

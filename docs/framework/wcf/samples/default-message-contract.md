@@ -14,11 +14,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1219f2c1a173f454827c7450e66d90a500d87e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-message-contract"></a>預設訊息合約
 預設訊息合約範例會示範一個服務，在這個服務中可以對服務作業來回傳遞自訂的使用者定義訊息。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機介面，以具型別的服務。 而不是個別服務作業的加法、 減法、 乘法和除法用於[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此範例會傳遞包含運算元和運算子，並傳回的自訂訊息算術運算的結果。  
@@ -192,4 +193,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

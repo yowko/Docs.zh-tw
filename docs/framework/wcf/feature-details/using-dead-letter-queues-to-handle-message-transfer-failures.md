@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd717b24eaf161145249e175425bd5296f3ef727
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用寄不出的信件佇列來處理訊息傳輸失敗
 佇列訊息可能會傳遞失敗。 這些失敗的訊息都會記錄在寄不出的信件佇列中。 造成傳遞失敗的原因可能是網路失敗、佇列已刪除、佇列已滿、驗證失敗，或是未能準時傳遞。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/02/2017
   
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [如何： Exchange 佇列與 WCF 端點的訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

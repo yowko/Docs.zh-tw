@@ -16,16 +16,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4800b06b5d0bbc5ce51d7cf00798ca98ef8bf656
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d606140a5be2b1770bc5a16159e96e20b0fccdd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox 控制項 (Windows Form)
 Windows Form 的文字方塊會用來從使用者取得輸入或顯示的文字。 `TextBox`控制項通常用於編輯的文字，不過它也可以設定為唯讀。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 `TextBox`控制項可讓單一文字在控制項中輸入或顯示格式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -49,7 +50,7 @@ Windows Form 的文字方塊會用來從使用者取得輸入或顯示的文字�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.TextBox> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

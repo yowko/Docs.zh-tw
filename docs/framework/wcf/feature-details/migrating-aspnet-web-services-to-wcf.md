@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ca1eb73842f3f7dac5557c1eafff637396d317a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>將 ASP.NET Web 服務移轉至 WCF
 ASP.NET 提供 .NET Framework 類別程式庫與工具以建立 Web 服務，並提供在 Internet Information Services (IIS) 中裝載服務所需的功能。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會提供 .NET Framework 類別程式庫、工具和裝載功能，讓軟體實體可以使用任何通訊協定(包括 Web 服務使用的通訊協定) 進行通訊。  將 ASP.NET Web 服務移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以讓您的應用程式利用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 專屬的新功能與改進措施。  
@@ -45,9 +46,9 @@ ASP.NET 提供 .NET Framework 類別程式庫與工具以建立 Web 服務，並
   
  本章節會詳細描述這些選項、比較 ASP.NET Web 服務與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，並且提供如何將 ASP.NET Web 服務程式碼移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的指示。  
   
-## <a name="see-also"></a>另請參閱  
- [預計採用 Windows Communication Foundation： 簡化未來移轉](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
- [預計採用 Windows Communication Foundation： 簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
+## <a name="see-also"></a>請參閱  
+ [預計採用 Windows Communication Foundation：簡化未來移轉](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
+ [預計採用 Windows Communication Foundation：簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
  [採用 Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
- [比較 ASP.NET Web 服務與 WCF 依據用途與使用的標準](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
- [比較 ASP.NET Web 服務與 WCF 架構開發](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+ [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
+ [根據開發情況比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

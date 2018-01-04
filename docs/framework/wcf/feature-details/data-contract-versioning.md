@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68d9d153127f3f34c6546cef9f2b3ab5fc668899
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-versioning"></a>資料合約版本控制
 隨著應用程式的發展，您也必須變更服務所使用的資料合約。 本主題說明如何設定資料合約的版本。 本主題描述資料合約版本控制的機制。 如需完整的概觀和規定的版本控制指導方針，請參閱[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -125,7 +126,7 @@ ms.lasthandoff: 12/02/2017
  大多數的集合變更是不中斷的，因為大部份的集合類型可以在資料合約模型內互相交換。 不過，將非自訂的集合進行自訂 (反之亦然) 則是中斷變更。 同時，變更集合的自訂設定是中斷變更，也就是變更其資料合約名稱和命名空間、重複元素名稱、主要元素名稱，以及值元素名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]集合自訂化，請參閱[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 當然，變更集合之內容的資料合約 (例如，從整數的清單變更為字串的清單) 是中斷變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

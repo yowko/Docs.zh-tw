@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1b7ab4ed91487965ac8b0d78a9a44818cfee9eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5dcefa658aec37b9af3c4f9285ec76a0d549b868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>HOW TO：取得憑證 (WCF)
 為了使用任何一種使用 X.509 憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能，您必須先取得憑證。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 12/02/2017
     > [!NOTE]
     >  不管您採用哪個方法，包含 X.509 憑證之 SOAP 要求的收件者都必須信任 X.509 憑證。 這表示憑證鏈結中的 X.509 憑證或簽發者是在受信任人憑證存放區中，而 X.509 憑證不在不受信任的憑證存放區中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何： 建立開發時使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+ [如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

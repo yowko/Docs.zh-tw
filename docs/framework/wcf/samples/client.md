@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def4536fb40820372bf473d1752bb73d525db2e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11a02fc857fa3c03b11b549013550e557933820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client"></a>用戶端
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [用戶端互通性](../../../../docs/framework/wcf/samples/client-interoperability.md)  
  示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與其他技術之間的互通性。  
   
@@ -41,5 +42,5 @@ ms.lasthandoff: 12/02/2017
  [避免 Using 陳述式發生問題](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
  說明使用具型別用戶端時，為什麼不能使用 C# "using" 陳述式自動清除資源。  
   
- [型別用戶端](../../../../docs/framework/wcf/samples/typed-client.md)  
+ [具類型用戶端](../../../../docs/framework/wcf/samples/typed-client.md)  
  示範如何取得所產生的型別用戶端資訊[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。

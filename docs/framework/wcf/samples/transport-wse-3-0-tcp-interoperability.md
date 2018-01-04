@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bd1492c4e2e8941a77f344c04414a763390e89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，以做為自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟會顯示如何建置此自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸：  
@@ -205,4 +206,4 @@ Symbols:
   
     8.  會在新主控台中啟動 TCP 傳輸測試用戶端。 用戶端要求積存會從服務進行引用，並在其主控台視窗中顯示結果。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

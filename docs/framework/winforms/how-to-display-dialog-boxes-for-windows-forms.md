@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3f827e9052260c1b836246d38c55e2cb2a9e5cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 46e4d019bbd586c0ed46794f55c65da7bcc657f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>如何：顯示 Windows Form 的對話方塊
 您在您的應用程式中顯示任何其他形式的相同方式顯示的對話方塊。 執行應用程式時，會自動載入啟動表單。 若要讓第二個表單或對話方塊會出現在應用程式中，撰寫程式碼載入和顯示它。 同樣地，若要讓表單或對話方塊消失，請撰寫程式碼來卸載或隱藏它。  

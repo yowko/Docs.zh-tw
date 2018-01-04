@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 03ee173d25600be437f322d232b791543831df80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99d091e5ef0998a3818609b7d52ecd62a609eeb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。
 WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。  當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。 本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。  
@@ -328,6 +329,6 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [使用 NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

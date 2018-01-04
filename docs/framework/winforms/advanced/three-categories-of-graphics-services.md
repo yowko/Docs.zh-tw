@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53429513426d3b197da4740e5e92d44d8b3a5533
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 305ffae04b6f1ddb94081f8a6ee334f8195caba3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="three-categories-of-graphics-services"></a>圖形服務的三個分類
 在 Windows Form 中的圖形供應項目可分為下列三個主要類別：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  此外，Windows Form 提供繪製文字的選項[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中的功能及其<xref:System.Windows.Forms.TextRenderer>類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [圖形概觀](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
  [關於 GDI+ Managed 程式碼](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
  [使用 Managed 圖形類別](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

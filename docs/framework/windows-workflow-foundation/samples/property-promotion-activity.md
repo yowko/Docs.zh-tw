@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e1237c0732b5422034db7c83c665c57c48486d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-promotion-activity"></a>屬性促銷活動
 此範例提供了端對端方案，此方案會將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接整合到工作流程撰寫經驗。 將會提供組態元素、工作流程活動、可簡化使用提升功能之工作流程延伸模組的集合。 此外，此範例也包含一個簡單的工作流程，可示範如何使用這個集合。  
@@ -199,5 +200,5 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b9b72cb2ef0a7704c4f06464fc0b82d92abcb372
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bd85a820f2c1ab1dd07387d815247a6a11c9c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritysecurityidentityhostnamenormalizationfailure"></a>System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure
 System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure  
@@ -25,7 +26,7 @@ System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure
 ## <a name="description"></a>描述  
  端點位址的 HostName 部分無法正規化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

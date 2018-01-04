@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eabb1ed36ff6f653361a64960e4d02037ab42980
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>HOW TO：實作 Windows Communication Foundation 服務合約
 這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務及可以呼叫該服務的用戶端時，必須進行的六個工作中的第二個。 如需所有六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -277,6 +278,6 @@ End Namespace
 ## <a name="compiling-the-code"></a>編譯程式碼  
  如果您使用 Visual Studio，在 建置 功能表上按一下 建置方案 （或按 CTRL + SHIFT + B）。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)

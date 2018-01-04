@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9a42d644d4d51332c89764a4e6516c7d15e828d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 20d192aed423aa6cda2ead2c214ddf4374028699
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 變更密碼編譯提供者的 X.509 憑證 &#39; s 私密金鑰
 本主題將說明如何變更用於提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何將提供者整合至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性架構中。 如需有關如何使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
@@ -86,15 +87,15 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_CustomX509Token#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#7)]
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>  
  <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>  
  <xref:System.IdentityModel.Tokens.SecurityKey>  
  <xref:System.Security.Cryptography.AsymmetricAlgorithm>  
  <xref:System.Security.Cryptography.HashAlgorithm>  
  <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>  
- [逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [如何： 建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [如何： 建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [如何： 建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
+ [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
  [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

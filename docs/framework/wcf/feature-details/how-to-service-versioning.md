@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-service-versioning"></a>HOW TO：服務版本控制
 本主題概要說明建立路由組態服務時所需的基本步驟，該組態可傳送訊息至相同服務的不同版本。 在此範例中，會將訊息傳送至兩個不同版本的計算器服務，`roundingCalc` (v1) 和 `regularCalc` (v2)。 兩項實作都支援相同的作業，不過較舊的服務 `roundingCalc` 會在傳回之前將所有的計算結果捨入至最接近的整數值。 用戶端應用程式必須能夠表示是否可使用較新的 `regularCalc` 服務。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 -   乘法  
   
--   Divide  
+-   分割  
   
  因為這兩項服務實作會處理相同的作業，而且它們與不是由其傳回的資料完全相同，所以包含在來自用戶端應用程式之訊息中的基底資料的唯一性質不足，無法藉此判斷路由要求方式。 例如，無法使用動作篩選條件，因為兩項服務的預設動作均相同。  
   
@@ -334,5 +335,5 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)

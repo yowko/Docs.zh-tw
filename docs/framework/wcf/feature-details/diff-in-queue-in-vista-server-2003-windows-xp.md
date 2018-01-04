@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669c6be6756d79b30266c9fda0909fedc71aeae3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異
 本主題會摘要 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、[!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 之間的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 佇列功能差異。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 提供應用程式特定之寄不出的信件佇列。 應用程式特定之寄不出的信件佇列無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中使用，且應用程式必須使用整個系統之寄不出的信件佇列。  
   
 ## <a name="poison-message-handling"></a>有害訊息處理  
- 有害訊息是超過嘗試傳遞至接收應用程式之次數上限的訊息。 當從交易式佇列讀取訊息的應用程式因錯誤無法立即處理訊息時，便會引起這種情況。 如果應用程式中止收到佇列訊息的交易，會將訊息傳回佇列。 然後應用程式會嘗試在新的交易中再次擷取訊息。 如果沒有更正造成錯誤的問題，接收應用程式會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數上限為止，而形成有害訊息。  
+ 有害訊息是超過嘗試傳遞至接收應用程式之次數上限的訊息。 當從異動式佇列讀取訊息的應用程式因錯誤無法立即處理訊息時，便會引起這種情況。 如果應用程式中止收到佇列訊息的交易，會將訊息傳回佇列。 然後應用程式會嘗試在新的異動中再次擷取訊息。 如果沒有更正造成錯誤的問題，接收應用程式會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數上限為止，而形成有害訊息。  
   
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上的訊息佇列 (MSMQ) 之間，與有害處理有關的主要差別包括下列：  
   
@@ -41,9 +42,9 @@ ms.lasthandoff: 12/02/2017
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支援訊息屬性，持續計算嘗試傳遞訊息的次數。 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在記憶體中維護中止計數，因此當 Web 伺服陣列中超過一個以上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務讀取相同的訊息時，這個屬性可能沒有包含精確的值。  
   
-## <a name="remote-transactional-read"></a>遠端交易式讀取  
+## <a name="remote-transactional-read"></a>遠端異動式讀取  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支援遠端交易式讀取。 這允許從佇列讀取的應用程式裝載在與裝載佇列不同的電腦上。 這可以確保讓服務的伺服陣列從中央佇列讀取的能力，以增加系統的整體輸送量。 它也可以確保當讀取及處理訊息、異動復原以及訊息保留在佇列中以供日後處理時，是否會發生失敗。  
   
-## <a name="see-also"></a>另請參閱  
- [使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+## <a name="see-also"></a>請參閱  
+ [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

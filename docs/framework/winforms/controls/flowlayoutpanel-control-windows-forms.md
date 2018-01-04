@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f901377af4faf907a9640c6931d10fc1710aa71a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d038790f47ab405504faed7fb8a1bc7948c9ea82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel 控制項 (Windows Form)
 `FlowLayoutPanel` 控制項會以水平或垂直的流動方向來排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。  
   
  本節中的主題描述可讓您將 `FlowLayoutPanel` 功能建置在應用程式中的概念和技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [FlowLayoutPanel 控制項概觀](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
  介紹 `FlowLayoutPanel` 控制項的一般概念，這個控制項可讓您建立水平或垂直流動的配置。  
   

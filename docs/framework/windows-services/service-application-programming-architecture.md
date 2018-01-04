@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e9c16f2e603a3ce9bbc59be4e01aa492239d2c63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式為基礎的類別，繼承自<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>類別。 您覆寫這個類別的方法，並定義它們，以判斷您的服務行為的功能。  
@@ -58,7 +59,7 @@ Windows 服務應用程式為基礎的類別，繼承自<xref:System.ServiceProc
 > [!NOTE]
 >  這些方法表示服務在其存留期間，通過的狀態服務從某個狀態轉換到下一步。 例如，將永遠不會取得服務回應<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>命令之前，先<xref:System.ServiceProcess.ServiceBase.OnStart%2A>已呼叫。  
   
- 有數個其他屬性和感興趣的方法。 這些活動包括：  
+ 有數個其他屬性和感興趣的方法。 它們包括：  
   
 -   <xref:System.ServiceProcess.ServiceBase.Run%2A>方法<xref:System.ServiceProcess.ServiceBase>類別。 這是服務的主要進入點。 當您建立使用 Windows 服務範本的服務時，程式碼會在您的應用程式中插入`Main`方法來執行服務。 此程式碼看起來像這樣：  
   
@@ -75,6 +76,6 @@ Windows 服務應用程式為基礎的類別，繼承自<xref:System.ServiceProc
   
  您也可以使用名為的元件<xref:System.ServiceProcess.ServiceController>進行通訊，並控制現有服務的行為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+ [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

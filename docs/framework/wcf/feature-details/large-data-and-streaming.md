@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是 XML 通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
   
  根據預設，每個標準繫結都包括預先設定的編碼器，讓前置詞為 Net* 的繫結使用二進位編碼器 (藉由包含 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 類別)，而 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WSHttpBinding> 類別則使用文字訊息編碼器 (藉由 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 類別)。  
   
-|編碼器繫結項目|說明|  
+|編碼器繫結項目|描述|  
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文字訊息編碼器是所有 HTTP 繫結的預設編碼器，以及所有優先考量互通性之自訂繫結的適當選擇。 此編碼器不需特別處理二進位資料，即可讀取及撰寫標準 SOAP 1.1/SOAP 1.2 文字訊息。 如果訊息的 <xref:System.ServiceModel.Channels.MessageVersion> 設定為 `None`，SOAP 信封包裝函式會從輸出中省略，而只會序列化訊息本文內容。|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 訊息編碼器是實作二進位資料特殊處理的文字編碼器，根據預設，它並非用於任何標準繫結中，因為它完全是依個案執行的最佳化公用程式。 如果訊息包含達到 MTOM 編碼可產生功效之臨界值的二進位資料，資料便會在訊息封套之後外顯化為 MIME 部分。 請參閱本節稍後的「啟用 MTOM」。|  
@@ -248,5 +249,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 在產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端至服務之後，您必須為要搭配資料流傳輸使用的服務編輯組態檔，以設定模式。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>請參閱  
+ [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

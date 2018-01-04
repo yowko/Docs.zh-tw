@@ -13,11 +13,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5300f22ba1cb44016fee64be4e85120da45a3edf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 程式設計物件模型
 WCF WEB HTTP 程式設計模型可讓開發人員透過基本 HTTP 要求即可公開 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web 服務，而不需要使用 SOAP。 WCF WEB HTTP 程式設計模型建置在現有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充性模型之上。 這個模型會定義下列類別：  
@@ -109,7 +110,7 @@ WCF WEB HTTP 程式設計模型可讓開發人員透過基本 HTTP 要求即可�
 ## <a name="security"></a>安全性  
  由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 程式設計模型不支援 WS-* 通訊協定，要保護 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 程式設計模型上所建置 Web 服務安全的唯一方法，即是運用 SSL 公開服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定搭配 SSL[!INCLUDE[iisver](../../../../includes/iisver-md.md)]看到[如何在 IIS 中實作 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>  
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  

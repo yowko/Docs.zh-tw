@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7404087117ec45e09495897905094690c01fbaa8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-authenticator"></a>權杖驗證器
 這個範例示範如何實作自訂權杖驗證器。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的權杖驗證器用於驗證搭配訊息使用的權杖、確認其前後一致，以及驗證與權杖關聯的身分識別。  
@@ -377,4 +378,4 @@ static void DisplayIdentityInformation()
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

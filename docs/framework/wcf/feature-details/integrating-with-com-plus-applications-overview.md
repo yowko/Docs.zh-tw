@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用來建立分散式應用程式的豐富環境。 若您已正在使用裝載於 COM+ 之中的元件架構應用程式邏輯，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而不必重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
@@ -111,5 +112,5 @@ ms.lasthandoff: 12/02/2017
   
  在整合應用程式上無法使用 COM+ 處理序回收功能。 如果應用程式是設定為使用處理序回收，而且是在 COM+ 主控的處理序中執行元件，將無法啟動服務。 這項需求不包括使用 Web 主控同處理序模式的服務，因為這個服務中未套用處理序回收設定。  
   
-## <a name="see-also"></a>另請參閱  
- [整合 COM 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>請參閱  
+ [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

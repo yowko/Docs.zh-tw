@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23cdd79d72f7cb40758fafb63ee4d0f725cbfc1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d56c435088be383821d17250e230cae848d2bab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
 這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。 請參閱[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)之自我裝載的版本，討論深度的服務實作此案例的範例。 本主題著重在 ASP.NET 輸出快取整合功能。  

@@ -13,14 +13,15 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>在 Managed 應用程式中裝載
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務可以裝載於任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。 自我裝載服務是最彈性的裝載選項，因為它只需要最基本的基礎結構就可部署。 但是，它同時也是最不穩固的裝載選項，因為 Managed 應用程式無法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中提供其他裝載選項的進階裝載與管理功能，例如網際網路資訊服務 (IIS) 和 Windows 服務。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務可以裝載於任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。 自我裝載服務是最彈性的裝載選項，因為它只需要最基本的基礎結構就可部署。 但是，它同時也是最不穩固的裝載選項，因為 Managed 應用程式無法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供其他裝載選項的進階裝載與管理功能，例如網際網路資訊服務 (IIS) 和 Windows 服務。  
   
  若要建立自我裝載服務，請建立並開啟 <xref:System.ServiceModel.ServiceHost>的執行個體，以便啟動服務來接聽訊息。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 將 WCF 服務裝載於 Managed 應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
@@ -34,6 +35,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="rich-client-applications"></a>豐富型用戶端應用程式  
  其他自我裝載選項所啟用的常見案例包括豐富型用戶端應用程式，例如以 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 為基礎的應用程式，或是 Windows Forms (WinForms)。 這個裝載選項同時可讓豐富型用戶端應用程式 (例如， [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 和 WinForms 應用程式) 更容易與外界通訊。 例如，使用 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 做為使用者介面，並同時裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務以允許其他用戶端與其連線並共用資訊的對等共同作業用戶端。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
  [快速入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)

@@ -16,16 +16,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5efd63e971ea3ae2fa5cfd03a148fa453130c646
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式
 Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，以符合您的使用者的特定需求。 下列主題將描述這些功能及其用法。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  其中包含主題的連結，說明並示範如何使用 Windows Form 中的圖形介面。  
   

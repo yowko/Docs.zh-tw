@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4651ca9707dcf0fac2edea0f004275cfcf18cf2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e2b9c0a7b19df62867a4148b60e24b7d3ba9bcce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>在 Windows Form 控制項中的多執行緒
 在許多應用程式，您可以讓您的使用者介面 (UI) 更能有效回應執行耗時的作業，另一個執行緒上。 數個工具可供多執行緒 Windows Form 控制項，包括<xref:System.Threading>命名空間，<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法，而`BackgroundWorker`元件。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/22/2017
 > [!NOTE]
 >  `BackgroundWorker`元件取代，並將功能加入<xref:System.Threading>命名空間和<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法; 不過，這些會保留回溯相容性及未來使用，如果您選擇。 如需詳細資訊，請參閱[BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：進行對 Windows Forms 控制項的安全執行緒呼叫](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  示範如何進行安全執行緒呼叫 Windows Form 控制項。  
   

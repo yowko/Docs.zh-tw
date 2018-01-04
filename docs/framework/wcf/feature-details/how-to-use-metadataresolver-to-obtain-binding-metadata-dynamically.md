@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8f3d8245b9d5bf05297b4d1edfba1926d2104ce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 640d053e0186766e5acdbef692f4e7fae59337b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>HOW TO：使用 MetadataResolver 來動態取得繫結中繼資料
 本主題示範如何使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來動態取得繫結中繼資料。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

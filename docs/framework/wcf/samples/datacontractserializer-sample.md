@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17b0d3166b742aacfb935b8ab8ba4864bf1f7188
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99ef79ee9e17074989bcf5a2d4e586dc790373c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 範例
 DataContractSerializer 範例會示範執行資料合約類別之一般序列化與還原序列化服務的 <xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會建立`Record`物件、 將其序列化為記憶體資料流，並以另一個記憶體資料流還原序列化`Record`要示範如何使用物件<xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會接著會序列化使用二進位寫入器的 `Record` 物件，以便示範該寫入器會如何影響序列化。  
@@ -151,4 +152,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

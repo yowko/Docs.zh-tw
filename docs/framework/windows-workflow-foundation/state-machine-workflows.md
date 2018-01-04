@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d2f387ddc6671c640ce47759050f27dbdaf7146
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f28c0c4956c5e32dac204a99967ddd4b6352484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-workflows"></a>狀態機器工作流程
 狀態機器是用來開發程式的知名範例。 <xref:System.Activities.Statements.StateMachine> 活動以及 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 和其他活動皆可用來建置狀態機器工作流程程式。 本主題提供建立狀態機器工作流程的概觀。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/02/2017
  最終狀態  
  代表狀態機器完成的狀態。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  [StateMachine 活動設計工具](/visualstudio/workflow-designer/statemachine-activity-designer)  
  [State 活動設計工具](/visualstudio/workflow-designer/state-activity-designer)  

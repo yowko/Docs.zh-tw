@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1cfce32a7e7099a601c76874c8ca951488335fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>HOW TO：匯出自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。 服務應用程式可使用服務中繼資料中的自訂原則判斷提示，與用戶端應用程式進行端點、繫結或合約自訂資訊的通訊。 您可使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 附加於端點、作業或訊息物件 WSDL 繫結的原則運算式匯出判斷提示，根據您通訊的功能或要求而定。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.IPolicyImportExtension>  
  <xref:System.ServiceModel.Description.IPolicyExportExtension>  
- [如何： 匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+ [如何：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

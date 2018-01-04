@@ -13,15 +13,16 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 133275212fcc8b04045c9d5003c79e0e041ccf79
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e8898c0c341ac45df224082a3c447d4c8f21c444
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-security"></a>服務安全性
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務安全性的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
  這個範例會示範如何設定服務的識別。

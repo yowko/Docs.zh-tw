@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a286b5f12635d2a4444b5dd5ec7888864a211366
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 143cff3fce6786429e2d2658014e85f22bf097b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelwarnhelppageenablednobaseaddress"></a>System.ServiceModel.WarnHelpPageEnabledNoBaseAddress
 System.ServiceModel.WarnHelpPageEnabledNoBaseAddress  
@@ -25,7 +26,7 @@ System.ServiceModel.WarnHelpPageEnabledNoBaseAddress
 ## <a name="description"></a>描述  
  因為沒有基底位址，所以 ServiceDebugBehavior 說明網頁已在相對位址啟用且無法建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

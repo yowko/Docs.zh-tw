@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>在聯合案例中混合信任通信協定
 有些情況下，聯合用戶端會與信任版本不相同的服務和安全性權杖服務 (STS) 進行通訊。 WSDL 服務可包含 `RequestSecurityTokenTemplate` 判斷提示 (Assertion)，其中 WS-Trust 項目的版本與 STS 不同。 在這個情況下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端會將從 `RequestSecurityTokenTemplate` 收到的 WS-Trust 元素轉換成符合 STS 信任版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只會處理標準繫結的不相符信任版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以識別的所有標準演算法參數都包含在標準繫結中。 本主題將透過該服務和 STS 之間的各種信任設定來說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的行為。  

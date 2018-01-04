@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057bc7bbfb9c1653fd4857ccc43fb6fc324e4c92
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>使用筆刷填滿形狀
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush>物件用來填滿的封閉圖形內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]定義數個填滿樣式： 單色、 規劃圖樣、 映像紋理和色彩漸層。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：使用純色填滿形狀](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
  描述如何使用純色筆刷填滿形狀。  
   

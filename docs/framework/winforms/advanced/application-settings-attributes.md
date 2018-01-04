@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-attributes"></a>應用程式設定屬性
 應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作所述需求的自訂包裝函式。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  自訂設定提供者會衍生自<xref:System.Configuration.SettingsProvider>類別，只需辨識下列三個屬性： **ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，和**DefaultSettingValueAttribute**。  
   
-|屬性|目標|說明|  
+|屬性|目標|描述|  
 |---------------|------------|-----------------|  
 |<xref:System.Configuration.SettingsProviderAttribute>|兩種模式|指定要用於持續性的設定提供者的簡短名稱。<br /><br /> 如果未提供這個屬性，預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會假設。|  
 |<xref:System.Configuration.UserScopedSettingAttribute>|兩種模式|做為使用者範圍的應用程式設定中定義的屬性。|  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  *類別*表示屬性可以套用至應用程式設定包裝函式類別只。 *屬性*指出屬性可以套用的設定內容。 *同時*表示可以在其中一個層級套用屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

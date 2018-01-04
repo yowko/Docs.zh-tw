@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2746171c08cb5094b4ad39e753a20c595d48514e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a22cf5ae3434e0f79a4cba1b772b02316ccdb007
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expressions"></a>運算式
 這個範例示範如何在工作流程中使用基本運算式。 其中包含的工作流程會計算某虛構公司兩個員工的基本薪資統計資料。 兩個類別 `Employee` 和 `SalaryStats` 定義於 Employee.cs 和 SalaryStats.cs。 工作流程中使用這些類別，示範如何對複雜類型的變數屬性執行簡單算術和字串運算。  

@@ -12,17 +12,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acd8d5925e1aea82f53d222daf9ccc8063ae7841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24655f8e230cf2286dc451ab8a26f1a4ccf445a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activities"></a>自訂活動
 本節中的範例示範如何建立 [!INCLUDE[wf](../../../../includes/wf-md.md)] 自訂活動。  
   
-## <a name="in-this-section"></a>本章節內容  
- [程式碼主體](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
+## <a name="in-this-section"></a>本節內容  
+ [Code-Bodied](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
  包含以程式碼宣告方式建立的自訂活動範例。  
   
  [複合](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  

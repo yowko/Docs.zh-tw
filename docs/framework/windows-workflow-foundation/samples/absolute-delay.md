@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94eb9f401786ef05beaa51077ff4ddc170595752
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="absolute-delay"></a>絕對延遲
 這個範例的主要案例是在工作流程應用程式中使用永久性計時器，以便延遲到指定的 <xref:System.DateTime> 為止。 這項作業與使用內建的 <xref:System.Activities.Statements.Delay> 活動不同，因為這樣做只會允許您延遲給定的 <xref:System.TimeSpan> (或分鐘/秒數)。  

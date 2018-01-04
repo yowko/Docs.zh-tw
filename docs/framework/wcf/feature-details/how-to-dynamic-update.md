@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 70f9bb374405496c62650ee3fb715f059e91cd7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 748286b4f6fa22b23423ff5c176c76d11fbe742d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dynamic-update"></a>HOW TO：動態更新
 本主題概要說明建立和動態更新路由組態所需的基本步驟。 在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。  
@@ -306,5 +307,5 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -18,16 +18,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>使用畫筆繪製線條和形狀
 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`繪製直線線段、 曲線和形狀框線的物件。 在本節中，*列*指的是這些項目，除非另有指定，意指只直線線段。 設定的畫筆用來控制色彩、 寬度、 對齊方式和使用該畫筆繪製的直線樣式屬性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：使用畫筆繪製線條](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
  說明如何繪製線條。  
   
@@ -51,4 +52,4 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Drawing.Pen>  
- 說明這個類別，並且提供其所有成員的連結。
+ 描述這個類別，並且提供其所有成員的連結。

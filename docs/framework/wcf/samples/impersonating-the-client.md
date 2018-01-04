@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15f0b0427dcbf12f476470369945044815cb3269
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
@@ -135,4 +136,4 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 5.  當您執行用戶端時，請注意用戶端在使用不同認證執行前後所具有的身分識別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

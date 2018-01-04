@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28f81efa3d9f63127ad9748aaba9ce3483246a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2785b666039b9a8594e86cdd3a6fb25b9c382158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具設定 Windows Form DataGridView 控制項的預設儲存格樣式和資料格式
 <xref:System.Windows.Forms.DataGridView>控制項可讓您指定預設儲存格樣式和儲存格整個控制項、 特定的資料行、 資料列和資料行標頭，以及替代建立分類帳效果的資料列的資料格式。 設定整個控制項的預設樣式會覆寫預設值設為資料行和替代的資料列的樣式。 此外，您在個別的資料列和資料格的程式碼中設定的樣式會覆寫預設樣式。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
  下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項。 設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>若要設定控制項中的所有資料格的預設樣式  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  如果您要繫結<xref:System.Windows.Forms.DataGridView>控制項至資料來源可能包含 null 值，填寫**Null 值**文字方塊。 這個值會顯示當儲存格的值等於 null 參考 (`Nothing`在 Visual Basic 中) 或<xref:System.DBNull.Value?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  

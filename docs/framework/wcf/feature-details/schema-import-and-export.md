@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a65f2c1daaac7e0e795412d666bb7d15e639361
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-import-and-export"></a>結構描述匯入和匯出
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含新的序列化 (Serialization) 引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 除了序列化程式本身，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還包含關聯的結構描述匯入與結構描述匯出機制。 *結構描述*是正式、 精確且可供電腦讀取或還原序列化程式可以存取之序列化程式所產生之 XML 的外觀的描述。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用「全球資訊網協會」(W3C) XML 結構描述定義 (XSD) 語言做為其結構描述表示，該語言可廣泛地在許多協力廠商平台互通。  
@@ -69,9 +70,9 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用<xref:System.Runtime.Serialization.XsdDataContractExporter>，請參閱[匯出類別中的結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [匯入結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
+ [匯入結構描述以產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
  [從類別匯出結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)

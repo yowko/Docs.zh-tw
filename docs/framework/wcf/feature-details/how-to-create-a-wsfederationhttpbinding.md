@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03734babf27ac4350580e7bed03645f3049c956
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>HOW TO：建立 WSFederationHttpBinding
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>類別 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)組態中) 會提供一個機制來公開聯合的服務。 也就是，要求用戶端使用由安全性權杖服務發出的安全性權杖進行驗證的一種服務。 這個主題會表示如何在程式碼和組態中設定 <xref:System.ServiceModel.WSFederationHttpBinding>。 一旦建立了繫結，就可以設定端點以使用該繫結。  
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)] 
  [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
- [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [如何： 停用安全工作階段在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+ [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [如何：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

@@ -12,26 +12,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 642ba5100cca17623a07e5de613b6d6aa26bd23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15282ae7d1988e560877d10c249fa026510e1d64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-activities"></a>內建活動
 本節包含的範例會示範內建的 [!INCLUDE[wf](../../../../includes/wf-md.md)] 活動。  
   
-## <a name="in-this-section"></a>本章節內容  
- [錯誤處理流程圖活動使用 TryCatch](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+## <a name="in-this-section"></a>本節內容  
+ [使用 TryCatch 錯誤處理流程圖活動](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
  示範 <xref:System.Activities.Statements.TryCatch> 活動在複雜控制流程活動中的使用方式。  
   
- [一段中的模擬中斷活動](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
+ [While 活動中的模擬中斷](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
  示範如何中斷下列活動的迴圈機制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
  [DynamicActivity 建立](../../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)  
  示範在執行階段使用 <xref:System.Activities.DynamicActivity> 活動建立活動的兩種不同方式。  
   
- [搭配.NET Framework 3.5 Ruleset 使用變數](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
+ [使用變數搭配 .NET Framework 3.5 Ruleset](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
  示範如何建立使用 <xref:System.Activities.Statements.Interop> 活動整合 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中使用原則和規則所撰寫自訂活動的工作流程。  
   
  [從 XAML 載入](../../../../docs/framework/windows-workflow-foundation/samples/load-from-xaml.md)  
@@ -52,11 +53,11 @@ ms.lasthandoff: 12/02/2017
  [使用 CancellationScope](../../../../docs/framework/windows-workflow-foundation/samples/using-cancellationscope.md)  
  示範如何使用 <xref:System.Activities.Statements.CancellationScope> 活動取消應用程式中的工作。  
   
- [叫用方法](../../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+ [InvokeMethod](../../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
  示範以不同的方式使用 <xref:System.Activities.Statements.InvokeMethod> 活動叫用類別的方法。  
   
- [使用自訂類型之切換活動的使用方式](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  
+ [使用自訂類型之切換活動的使用](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  
  描述如何啟用 <xref:System.Activities.Statements.Switch%601> 活動，在執行階段評估使用者定義的複雜類型。  
   
- [Interop 和 3.5 規則集](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
+ [與 3.5 規則集互通](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
  示範使用 <xref:System.Activities.Statements.Interop> 活動透過 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 和規則整合 <xref:System.Workflow.Activities.PolicyActivity> 中的自訂活動。

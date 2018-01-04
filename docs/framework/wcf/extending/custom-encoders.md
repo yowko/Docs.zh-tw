@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b1370adc510b26b14bff0dec45d83513a2f13b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
   
  有兩個範例隨附[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，說明此範例程式碼的程序：[自訂訊息編碼器： 自訂文字編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自訂訊息編碼器： 壓縮編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
  <xref:System.ServiceModel.Channels.MessageEncoder>  

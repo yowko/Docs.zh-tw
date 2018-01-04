@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5868e03ee05a744be3f1c3782613e11e71352024
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-http-and-https"></a>設定 HTTP 和 HTTPS
 WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。 在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。 如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。  
@@ -99,6 +100,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 的特定問題  
  IIS 不支援在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上共用連接埠。 如果 IIS 正在執行，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務嘗試使用帶有相同連接埠的命名空間，則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會無法啟動。 IIS 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 都預設為使用連接埠 80。 請針對其中一項服務變更其連接埠指派，或是使用 IP 接聽清單將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務指派給 IIS 不使用的網路介面卡。 IIS 6.0 (含) 以後版本已經重新設計，可以使用 HTTP 伺服器 API。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [如何： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 905d010c1ecdab1fc7b2c99e6d720b85ad40be32
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b78cfbd63687fc7288c945ebcbec790150efed61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Windows Forms 用戶端中的資料繫結
 這個範例會示範如何在 Windows Form 應用程式中繫結 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務所傳回的資料。  
@@ -48,4 +49,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

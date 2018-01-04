@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c49d05a9ca09a12044c0846db381368166e105bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：偵錯 Windows 服務應用程式
 服務必須從服務控制管理員內容之中執行，而不是從 Visual Studio 之中執行。 因此，對服務進行偵錯不像是對其他 Visual Studio 應用程式類型進行偵錯那樣簡單直接。 若要對服務進行偵錯，您必須啟動服務，然後將偵錯工具附加至執行中的處理序。 之後就可以使用 Visual Studio 所有的標準偵錯功能，對應用程式進行偵錯。  
@@ -121,8 +122,8 @@ ms.lasthandoff: 11/21/2017
   
  在某些情況下 (例如當您想要偵錯只在系統啟動時發生的問題時)，您必須使用 Windows 偵錯工具。 安裝[Debugging Tools for Windows](http://msdn.microsoft.com/windows/hardware/hh852365)並查看[如何偵錯 Windows 服務](http://support.microsoft.com/kb/824344)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何： 啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
  [偵錯服務](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)

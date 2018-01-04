@@ -16,11 +16,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd2740cfef2a618e4ab220f7db84fc78a10e0980
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>HOW TO：建立 Windows Communication Foundation 用戶端
 這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時，必須進行的六個工作中的第四個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -61,9 +62,9 @@ ms.lasthandoff: 12/02/2017
   
  現在您已建立用戶端應用程式將用來呼叫計算機服務的 Proxy。 移到數列中的下一個主題： [How to： 設定用戶端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)  
- [如何： 使用組態檔的服務發行中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [如何： 使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+ [如何：使用組態檔發行服務的中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [如何：使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

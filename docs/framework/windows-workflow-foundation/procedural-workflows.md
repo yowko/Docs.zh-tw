@@ -12,17 +12,18 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd879d138a95c003ca0ffb12b3ce010534c3e158
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10cf83264fbdc2ed3dc088c11865c630c0b8f4f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="procedural-workflows"></a>程序性工作流程
 程序式工作流程使用的流程控制方法類似於程序式語言中的流程控制方法。 這些建構包括 `While` 和 `If`。 使用其他流程控制活動 (例如 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence>) 即可自由撰寫這些工作流程。  
   
 ## <a name="controlling-execution-flow"></a>控制執行流程  
- 工作流程活動程式庫具有程序式語言中用於建立大多數流程控制方法之模型的活動， 這些活動包括：  
+ 工作流程活動程式庫具有程序式語言中用於建立大多數流程控制方法之模型的活動， 它們包括：  
   
 -   <xref:System.Activities.Statements.While>  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  如果使用 [!INCLUDE[dublin](../../../includes/dublin-md.md)]將工作流程裝載到 Web 伺服陣列，AppFabric 會在不同的 AppFabric 伺服器之間移動執行個體。 所有節點必須能夠共用資源，才能這麼做。  所有預設的 NET 4 工作流程活動皆不包含任何存取本機資源的作業。 由於 AppFabric 沒有提供任何機制可將工作流程標記為不可移動，因此開發人員不得建立會在工作流程移動時失敗的自訂活動。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [流程圖工作流程](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

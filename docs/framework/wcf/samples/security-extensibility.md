@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-extensibility"></a>安全性擴充
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自訂安全性的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [永久性發行權杖提供者](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  示範如何實作自訂用戶端發出的權杖提供者。  
   

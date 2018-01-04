@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7396c5ca2119dcf096036695233d5c89a3f014f7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ff5eb09acea16ac125fac5d9e3ed875c9095e1c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX 中的永久性延遲
 這個範例示範如何使用永久性延遲，此延遲會在延遲期間將工作流程保存至永久性裝置。  

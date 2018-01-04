@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>佇列概觀
 本節將介紹已佇列通訊背後的一般和核心概念。 後續各節將詳細說明有關此處所述的佇列概念如何顯露在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中。  
@@ -82,14 +83,14 @@ ms.lasthandoff: 12/02/2017
 ## <a name="poison-message-queue-programming"></a>有害訊息佇列程式設計  
  在訊息到達目標佇列之後，服務可能會重複失敗而無法處理訊息。 例如，在交易下從佇列讀取訊息並更新資料庫的應用程式可能會發現資料庫暫時斷線。 在這種情況下，交易會復原，建立新的交易，然後從佇列重新讀取訊息。 第二次嘗試可能會成功或失敗。 在某些情況中，訊息可能會重複失敗而無法傳遞至應用程式，這要視錯誤的原因而定。 在這種情況下，會將訊息視為「有害」。 此類訊息會移到有害佇列中，可由有害處理的應用程式讀取。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [寄不出信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+ [無效信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  [變動性佇列通訊](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [訊息佇列整合繫結範例](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [透過訊息佇列的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

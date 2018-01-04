@@ -17,11 +17,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 本節所包含的主題主要是讓您快速獲得 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 完成這個入門課程之後，您將對建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務與用戶端應用程式所需的步驟有初步的了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，位址的繫結，其中包含說明定義功能的合約與服務，用戶端必須之間的通訊資訊提供服務給其用戶端。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
   
  如需建立服務和用戶端相關的深入資訊，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  說明如何利用使用者定義的介面來建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 合約。 合約會定義服務所公開的功能。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
   
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
  [文件指南](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

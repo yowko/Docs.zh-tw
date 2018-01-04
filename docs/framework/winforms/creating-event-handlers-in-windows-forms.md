@@ -19,16 +19,17 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0625d5272b4c3ae4f21793d0b0fc8645158e6a2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>在 Windows Form 中建立事件處理常式
 事件處理常式是程式碼中的一項程序，可以決定發生事件時 (例如當使用者按一下按鈕，或訊息佇列收到訊息時) 所應執行的動作。 當事件引發時，收到事件的事件處理常式或處理常式會隨即執行。 事件可以指派給多個處理常式，而處理特定事件的方法也可隨機變更。 您也可以使用 Windows Forms 設計工具建立事件處理常式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [事件概觀](../../../docs/framework/winforms/events-overview-windows-forms.md)  
  說明事件模型與委派的角色。  
   

@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96f18f02f82b0e7f9f517890ec963b43fa8d8f60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目
 可以加入至 Windows Form 下拉式方塊、 清單方塊中，或檢查清單方塊中的各種不同的方式，因為這些控制項可以繫結至各種資料來源項目。 不過，本主題會示範最簡單的方法，並需要沒有資料繫結。 顯示的項目通常是字串。不過，您可以使用任何物件。 顯示在控制項中的文字是由物件所傳回的值`ToString`方法。  
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/21/2017
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  

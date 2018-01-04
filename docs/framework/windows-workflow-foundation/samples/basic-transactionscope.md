@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e610d11afe0b6b4016478a5c8c1ea9ef747b5a55
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78b6faacb131adf18417bf8b9e77182e8e0f8938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-transactionscope"></a>基本 TransactionScope
 這個範例包含四個案例，會示範如何巢狀處理 <xref:System.Activities.Statements.TransactionScope> 執行個體。 第一個案例會示範巢狀處理協力廠商活動，作者對於這個活動的結構並不清楚。 第二和第三個案例示範如何採用逾時，最後一個案例則示範 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 設定。  

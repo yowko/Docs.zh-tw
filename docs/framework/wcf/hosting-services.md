@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>裝載服務
 如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務是設計為在支援 Managed 程式碼的 Windows 處理序中執行的。  
@@ -64,17 +65,17 @@ ms.lasthandoff: 12/02/2017
 |-------------------------|---------------------------|--------------------------|-------------------------------------|  
 |Managed 應用程式 (「自我裝載」)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|  
 |Windows 服務 (之前稱為 NT 服務)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|  
-|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|  
-|[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|是|  
-|Windows Process Activation Service (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|是|  
+|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|[是]|  
+|[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|[是]|  
+|Windows Process Activation Service (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|[是]|  
   
  從未受信任的主機執行服務或任何延伸項目都會破壞安全性，這點請您務必注意。 同時，請注意當您開啟模擬下的 <xref:System.ServiceModel.ServiceHost> 時，應用程式必須確定使用者尚未登出，例如，藉由快取使用者的 <xref:System.Security.Principal.WindowsIdentity> 來判斷。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [系統需求](../../../docs/framework/wcf/wcf-system-requirements.md)  
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [如何：在 IIS 中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [如何：在 WAS 中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [如何： 將 WCF 服務裝載於 Managed 的 Windows 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [如何：在 Managed Windows 服務中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [如何：於受管理的應用程式中裝載 WCF 服務](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

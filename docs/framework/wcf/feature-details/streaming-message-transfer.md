@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>資料流訊息傳輸
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸支援兩種傳輸訊息的模式：  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="enabling-streamed-transfers"></a>啟用資料流處理的傳輸  
  在設定傳輸的繫結項目時，便已完成選取使用緩衝處理的傳輸模式還是資料流處理的傳輸模式。 繫結項目包含可設為 <xref:System.ServiceModel.TransferMode>、`Buffered`、`Streamed` 或 `StreamedRequest` 的 `StreamedResponse` 屬性。 將傳輸模式設為 `Streamed` 可啟用雙向資料流通訊。 將傳輸模式設為 `StreamedRequest` 或 `StreamedResponse` 只能啟用指定方向的資料流通訊。  
   
- <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 繫結會公開 <xref:System.ServiceModel.TransferMode> 屬性。 如果是其他傳輸模式，您必須建立自訂繫結才能設定傳輸模式。  
+ <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 繫結會公開 <xref:System.ServiceModel.TransferMode> 屬性。 如果是其他傳輸模式，您必須建立自訂繫結程序才能設定傳輸模式。  
   
  使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸模式，則傳輸模式不會在連線之間，或是在伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 在產生服務的用戶端類別之後，您必須為搭配資料流傳輸使用的服務編輯其組態檔，以設定模式。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
@@ -56,5 +57,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>緩衝處理的傳輸與資料流處理的傳輸之間的差異  
  將傳輸模式由緩衝處理變更為資料流處理，會同時變更 TCP 與具名管道傳輸的原生通道類型。 對於緩衝處理的傳輸來說，原生的通道類型為 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>。 對於資料流處理的傳輸來說，原生通道為 <xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>。 在直接使用這些傳輸 (亦即，並未透過服務合約) 的現有應用程式中變更傳輸模式，需要變更通道處理站與接聽項的預期通道類型。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>請參閱  
+ [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

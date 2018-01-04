@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23919145a04bb4b3d1674b153649aca2228364eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03e663f455a348b2699331ec5bf1ea6df2e54493
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>如何：在 Windows Form 上繪製文字
 下列程式碼範例示範如何使用<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>表單上繪製文字。 或者，您可以使用<xref:System.Windows.Forms.TextRenderer>的表單上繪製文字。 如需詳細資訊，請參閱[How to： 使用 GDI 繪製的文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   新細明體字型未安裝。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Graphics.DrawString%2A>  
  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>  
  <xref:System.Drawing.StringFormat.FormatFlags%2A>  

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 329e50b8580776dac035a3160bb6b9cceb5858e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 驗證模式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供數個模式，可讓用戶端和服務用來相互驗證。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
@@ -130,6 +131,6 @@ ms.lasthandoff: 11/21/2017
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  在此驗證模式中，用戶端會使用當做簽署支援權杖 (也就是由訊息簽章簽署的權杖) 出現在 SOAP 層中的「使用者名稱權杖」進行驗證。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 安全性繫結項目是由 `TransportSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `UserNameOverTransport`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [如何： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+ [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

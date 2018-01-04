@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12913a9afc0003b041b260379a55e469273c5910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way-services"></a>單向服務
 服務作業的預設行為是要求-回覆模式。 在要求-回覆模式中，用戶端也都會等候回覆訊息，即使該服務作業已透過程式碼表示為 `void` 方法也是如此。 在單向作業中，只會傳輸一則訊息。 接收者不會傳送回覆訊息，傳送者也不會期待回覆訊息。  
@@ -64,5 +65,5 @@ public interface IOneWayCalculator
   
  因此，建議的做法是檢查服務及用戶端上的各種控制項，然後測試您的應用程式案例以判斷兩端的最佳組態。 例如，如果使用工作階段會封鎖服務上的訊息處理，您可以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall> 以使每則訊息都能由不同的服務執行個體處理，並將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 設定為 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，以便一次讓一個以上的執行緒發送訊息。 另一種處理方法則是增加服務與用戶端繫結的讀取配額。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [單向](../../../../docs/framework/wcf/samples/one-way.md)

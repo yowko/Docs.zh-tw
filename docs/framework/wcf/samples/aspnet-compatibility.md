@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c8cf38e65bbc917720b1a1c5b604d81ca536c14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 相容性
 這個範例會示範如何在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 中啟用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 相容模式。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容模式中執行的服務會完全參與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式管線，並且會利用像是檔案/URL 授權、工作階段狀態，以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 類別等 <xref:System.Web.HttpContext> 功能。 <xref:System.Web.HttpContext> 類別允許存取 Cookie、工作階段以及其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  
@@ -135,5 +136,5 @@ Press <ENTER> to terminate client.
   
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

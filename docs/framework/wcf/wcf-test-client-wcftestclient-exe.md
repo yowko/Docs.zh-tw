@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 868e76b39156dc2fff85da2afe3501e39faf8812
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28098a4e598d1c3bede3b05e3afe1001c3944d42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可以讓使用者用來輸入測試參數、將該輸入送出至服務，以及檢視服務傳回的回應。 與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。  
@@ -175,5 +176,5 @@ ms.lasthandoff: 12/02/2017
   
 -   以滑鼠右鍵按一下**WCF 服務主機**圖示在通知區域中，然後按一下**結束。** 這會同時關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，並且停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f81cf7df0272a1b90de77332712b3b8a9e202de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e1b34881b86d9962603118b93c9dc5d866794397
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>如何：依據 Windows Form DataGridView 控制項儲存格的變更執行自訂動作
 <xref:System.Windows.Forms.DataGridView>控制項有一些可用來偵測的狀態變更事件<xref:System.Windows.Forms.DataGridView>資料格。 兩個最常使用的是<xref:System.Windows.Forms.DataGridView.CellValueChanged>和<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>  

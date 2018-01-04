@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9330efdfdb9a92449e155a265d1c2c18cd3a310
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 699a8315cc300a241cc7004901fde9e207e56603
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-and-creating-activities"></a>使用與建立活動
 本節中的主題描述 [!INCLUDE[wf](../../../includes/wf-md.md)] 中可用的系統提供活動。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [內建活動程式庫](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)  
  描述 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中可用的系統提供活動。  
   

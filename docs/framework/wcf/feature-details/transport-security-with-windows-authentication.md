@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 68550646f806b30f072b4270a336698011db54d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f5f81617a8962eeb8748e2c5c35ea34f7a1705f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
 下列案例會顯示 Windows 安全性所保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]程式設計，請參閱[How to： 安全 Windows 認證的服務](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [如何：利用 Windows 認證保護服務的安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

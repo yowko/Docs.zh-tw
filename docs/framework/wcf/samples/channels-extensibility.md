@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcda7f9edc741e8f0c9c56214119255ca2777d77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>通道擴充性
 本節包含示範自訂通道的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [本機通道](../../../../docs/framework/wcf/samples/local-channel.md)  
  示範邏輯通道，也就是在相同的應用程式網域中，用於通訊的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸通道。  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  [區塊處理通道](../../../../docs/framework/wcf/samples/chunking-channel.md)  
  示範如何限制使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 緩衝大型訊息所使用的記憶體數量。  
   
- [HTTP 確認通道](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
+ [HTTP 通知通道](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
  示範變更單向訊息模式的層次通道。  
   
  [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  

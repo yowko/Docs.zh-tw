@@ -20,16 +20,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>使用影像、點陣圖、圖示和中繼檔
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 `Bitmap` 類別來使用點陣影像，且提供 `Metafile` 類別來使用向量影像。 `Bitmap` 類別和 `Metafile` 類別都是繼承自 `Image` 類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：將現有點陣圖描繪至螢幕](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
  描述如何載入及繪製點陣圖。  
   

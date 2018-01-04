@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ceeedf3d6b73d08ce8aeade74288dc797d462123
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 47410b2a0259e81e7009d547b0c2d6c742b15f25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>變更 Windows Form 的外觀
-您可以使用許多不同的方式，來自訂 Windows Form 應用程式的外觀，例如變更框線、不透明度、形狀、樣式，或設定 Windows Form 應用程式的背景影像。  
+您可以使用許多不同的方式，來自訂 Windows Forms 應用程式的外觀，例如變更框線、不透明度、形狀、樣式，或設定 Windows Forms 應用程式的背景影像。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：變更 Windows Forms 的框線](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
  示範如何變更表單的框線樣式。  
   

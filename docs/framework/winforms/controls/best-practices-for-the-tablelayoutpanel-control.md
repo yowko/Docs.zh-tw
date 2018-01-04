@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 802cc501b695f6c5cfe990bf72a4d9d2af68ba2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f2c5a16ea1f07f7688c9df14bdb6b29350f3acf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 控制項的最佳作法
 <xref:System.Windows.Forms.TableLayoutPanel>控制項提供功能強大的配置功能，您應該先在 Windows Form 上使用仔細考慮。  
@@ -65,6 +66,6 @@ ms.lasthandoff: 11/21/2017
 ### <a name="avoid-visual-inheritance"></a>避免視覺化繼承  
  <xref:System.Windows.Forms.TableLayoutPanel>控制項不支援在 Windows Form 設計工具的視覺化繼承。 A <xref:System.Windows.Forms.TableLayoutPanel> 「 已鎖定 」 在設計階段，會出現在衍生類別中的控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel>

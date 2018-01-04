@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c46886879d19d612827b94821e0105c68c437c56
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>HOW TO：自訂系統提供的繫結
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 所包含的數種系統提供繫結可讓您設定一些基礎繫結項目的屬性，但不包含所有屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#3)]
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.BasicHttpBinding>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

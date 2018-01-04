@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性機制主要取決於所使用的繫結和傳輸。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系統提供繫結中所使用的主要傳輸安全性機制。  
@@ -130,5 +131,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 和 NetMsmqBinding  
  如需完整討論傳輸的安全性與訊息佇列 （先前稱為 MSMQ），請參閱[保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26385d91b4201820a5f6ba77b512e7bcfd5372c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity"></a>HOW TO：建立活動
 活動是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的行為核心單位。 活動的執行邏輯可以實作在 Managed 程式碼中，或是使用其他活動來實作。 本主題示範如何建立兩個活動。 第一個活動是簡單的活動，使用程式碼來實作其執行邏輯。 第二個活動的實作則是使用其他活動來定義。 教學課程中的下列步驟將會使用這些活動。  
@@ -115,10 +116,10 @@ ms.lasthandoff: 12/02/2017
   
      如需如何使用這些活動，來建立工作流程的指示，請參閱下一個步驟教學課程中， [How to： 建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.CodeActivity>  
  <xref:System.Activities.NativeActivity%601>  
  [設計及實作自訂活動](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
  [快速入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
  [如何：建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [使用自訂活動設計工具中的 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [在自訂活動設計工具中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

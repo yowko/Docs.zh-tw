@@ -19,16 +19,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4e1beb6311604de5d0c59a29de2d1b6c50c2993
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 控制項 (Windows Form)
 關於本主題會連結到其他人`MaskedTextBox`控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [逐步解說：使用 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
  示範的主要功能`MaskedTextBox`控制項。  
   

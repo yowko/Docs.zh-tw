@@ -17,18 +17,19 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
 本節中的各個主題將說明 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性功能，以及如何使用這些功能來協助保護訊息的安全。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric 和安全性，請參閱[安全性模型的 Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全性功能。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  安全性導向的繫結檢視，包括示範如何建立自訂安全性繫結的各個主題。  
   
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  說明如何透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性功能來保護訊息的安全。  
   
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/18/2017
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  說明如何稽核安全性事件。  
   
- [安全性指導方針和最佳作法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  建立安全 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方針。  
   
 ## <a name="reference"></a>參考資料  
@@ -79,5 +80,5 @@ ms.lasthandoff: 10/18/2017
   
  [概念性概觀](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>另請參閱  
- [設定您的應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+## <a name="see-also"></a>請參閱  
+ [設定應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

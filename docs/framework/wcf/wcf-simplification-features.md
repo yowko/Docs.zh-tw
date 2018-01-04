@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 533176b3859c820d3549e5162dcbe5d80e5fcee9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 211a52288010adabb712618cee40dbdd9d8b5262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 本主題探討讓撰寫 WCF 應用程式更簡單的新功能。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="new-transport-default-values"></a>新的傳輸預設值  
  下列資料表說明已變更的設定以及可找到其他資訊的位置。  
   
-|屬性|開啟|新的預設值|其他資訊|  
+|屬性|開啟|新的預設值|更多資訊|  
 |--------------|--------|-----------------|----------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|這個屬性決定 TCP 連接可以花費多少時間來使用 .Net Framing 通訊協定自行驗證。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 逾時會故意設定為小於 ReceiveTimeout (10 分鐘)，使未經驗證的惡意用戶端無法長時間保持與伺服器的連接。 預設值為 30 秒。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 處理器數量|此為通訊端層級的屬性，用來說明要排入佇列之「擱置接受」要求的數目。 如果接聽待處理項目佇列已滿，將會拒絕新的通訊端要求。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas  
  <xref:System.Xml.XmlDictionaryReaderQuotas> 包含 XML 字典讀取器的可設定配額值，這些值會限制編碼器在建立訊息時使用的記憶體量。 雖然這些配額是可設定的，但變更為預設值可降低開發人員必須明確設定這些值的機率。 目前尚未變更 `MaxReceivedMessageSize` 配額，因此這個配額仍然可以限制記憶體耗用，避免您遇到必須處理 <xref:System.Xml.XmlDictionaryReaderQuotas> 的複雜狀況。 下表顯示配額、新的預設值和每個配額用途的簡要說明。  
   
-|配額名稱|預設值|說明|  
+|配額名稱|預設值|描述|  
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|取得和設定允許的陣列長度上限。 這個配額會限制 XML 讀取器將會傳回之基本陣列的大小上限，包括位元組陣列。 這個配額不會限制 XML 讀取器本身的記憶體消耗，但會限制正在使用讀取器之任何元件中的記憶體消耗。 例如，當 <xref:System.Runtime.Serialization.DataContractSerializer> 使用以 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>保護的讀取器時，它不會還原序列化大於這個配額的位元組陣列。|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|取得和設定允許每個讀取動作傳回的位元組上限。 這個配額會限制讀取項目開始標記和其屬性時，在單一「讀取」作業中讀取的位元組數目。 (在非資料流處理的情況中，項目名稱本身不會納入配額的計數)。 使用太多 XML 屬性可能會耗盡不當比例的處理時間，因為必須檢查屬性名稱的唯一性。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 可降低這個威脅。|  

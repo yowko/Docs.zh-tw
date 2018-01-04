@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation-overview"></a>相互關聯概觀
 相互關聯是一種機制，可將工作流程服務訊息彼此產生關聯性、將工作流程服務訊息與應用程式執行個體狀態 (例如針對初始要求的回覆) 產生關聯性，或者是將特定的訂單 ID 與訂單處理工作流程的保存狀態產生關聯性。 本主題提供相互關聯的概觀。 本節的其他主題則會提供各種相互關聯類型的其他資訊。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="content-based-correlation"></a>以內容為基礎的相互關聯  
  以內容為基礎的相互關聯會利用訊息中的部分資訊片段，將其與特定執行個體產生關聯。 不同於以通訊協定為主的相互關聯，以內容為主的相互關聯會要求應用程式作者明確陳述這項資料在每個相關訊息中的位置。 使用以內容為主的相互關聯的活動會使用 <xref:System.ServiceModel.MessageQuerySet> 來指定這項訊息資料。 與不使用其中一種內容繫結 (例如 <xref:System.ServiceModel.BasicHttpContextBinding>) 的服務通訊時，以內容為基礎的相互關聯非常有用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]以內容為基礎的相互關聯，請參閱[內容基礎](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)。 範例程式碼，請參閱[內容架構相互關聯](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)和[相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [以內容為基礎的相互關聯](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [永久性雙工 &#91;WF 範例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  

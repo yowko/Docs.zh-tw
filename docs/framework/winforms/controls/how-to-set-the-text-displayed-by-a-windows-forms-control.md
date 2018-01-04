@@ -32,11 +32,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a81c2202400968b4d4c95b40de7476fbd68d6182
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 858d1d9b80af89be3e029ce59c521fa6e4d24c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>如何：設定由 Windows Form 控制項所顯示的文字
 Windows Form 控制項通常會顯示與控制項主要功能相關的一些文字。 例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出當按下按鈕時，就會執行什麼動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。 您也可以使用設計工具來設定文字。  另請參閱[How to： 建立存取金鑰的 Windows Form 控制項使用設計工具](http://msdn.microsoft.com/library/ms233673\(v=vs.110\))， [How to： 設定 Windows Form 控制項使用的文字顯示在設計工具](http://msdn.microsoft.com/library/ms233665\(v=vs.110\))， [How to： 設定影像顯示 Windows Form 控制項使用設計工具](http://msdn.microsoft.com/library/ms233656\(v=vs.110\))。  
@@ -81,7 +82,7 @@ Windows Form 控制項通常會顯示與控制項主要功能相關的一些文�
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
  [操作說明：建立 Windows Forms 控制項的便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
  [操作說明：回應 Windows Forms Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

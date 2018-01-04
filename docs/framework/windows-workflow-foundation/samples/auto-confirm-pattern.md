@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aaf4d72396438178d807f28ba8cb0ac5c5cb368e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c3595e501341f64883ce2552f0a3c0850691f38c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auto-confirm-pattern"></a>自動確認模式
 這個範例包含三個狀況，其執行示範自訂 `AutoConfirmScope` 活動。 第一個範例顯示四個可補償活動的序列成功執行，其中第二個和第三個可補償活動以巢狀方式置於 `AutoConfirmScope` 中。 第二個範例顯示相同序列，但在第四個 <xref:System.Activities.Statements.CompensableActivity> 執行後發生例外狀況。 第三個狀況顯示相同序列，但在第二個  `AutoConfirmScope` 完成後於 <xref:System.Activities.Statements.CompensableActivity> 中發生例外狀況。  

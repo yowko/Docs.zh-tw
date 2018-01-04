@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>資訊洩露
 資訊洩漏讓攻擊者可以取得與系統有關的寶貴資訊。 因此，公開資訊時，請務必考慮您要公開的是哪些資訊，以及是否會遭到惡意使用者的使用。 下列列出可能的資訊洩漏攻擊，並針對各種攻擊提供減少受到攻擊的方法。  
@@ -66,10 +67,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  如果有指定網域，但使用端點識別功能來指定無效的服務主體名稱，則會使用 NTLM。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何指定端點身分識別，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [提高權限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [遭到竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
  [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

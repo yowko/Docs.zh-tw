@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9b707108d5849db57dcebfb4cb1f7b18378bff0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 同時描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 對部署聯合安全性架構的支援。 示範同盟的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="elements-of-a-federated-security-architecture"></a>聯合安全性架構的項目  
  聯合安全性架構有三個索引鍵項目，如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |網域/領域|安全性管理或信任的單一單位。 一般的網域會包含單一組織。|  
 |同盟|已建立信任的網域集合。 信任的層級可能會有所不同，但是一般來說會包含驗證，並且幾乎都包含授權。 一般的聯合可能會包含一些組織，這些組織已建立對資源集合之共用存取的信任。|  
@@ -299,5 +300,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ## <a name="summary"></a>總結  
  聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 做為建置與部署分散式應用程式的平台，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供實作聯合安全性的原生支援。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

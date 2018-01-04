@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5662089990ee2775d8e2399e2d5e7770bbf4364
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc92bd92f688ae2b12889779083142e6ddd481d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
@@ -264,4 +265,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

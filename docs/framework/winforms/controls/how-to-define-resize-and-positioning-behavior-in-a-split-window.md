@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db4a99c7dae7783e8ea51f43ad51fcd2214997e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed78a49119c87c52a07cc2ade030e66087d3f420
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>如何：定義分隔視窗的調整大小和位置行為
 個面板<xref:System.Windows.Forms.SplitContainer>控制項擔任也正在調整大小，並由使用者操作。 不過，可能會當您將想要以程式設計方式控制分隔器，它會定位，並且程度就可以移動它。  
@@ -73,6 +74,6 @@ ms.lasthandoff: 11/21/2017
   
      稍微向左或向右移動分隔器不會影響差別。不過，當滑鼠指標進入任一方向的 10 個像素，分隔器會貼齊至新位置中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

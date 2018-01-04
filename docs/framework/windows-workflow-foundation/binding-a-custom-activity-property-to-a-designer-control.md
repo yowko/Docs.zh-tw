@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07a39983d0e561fdad4c09e641912b0d15aa4033
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ceeb7406fdae9b4044053e12bec2aad926f26e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>將自訂活動屬性繫結至設計工具控制項
 將文字方塊設計工具控制項繫結至活動引數相當簡單。不過，將複雜的設計工具控制項 (例如下拉式方塊) 繫結至活動引數可能會呈現挑戰。 本主題討論如何將活動引數繫結至自訂活動設計工具上的下拉式方塊控制項。  

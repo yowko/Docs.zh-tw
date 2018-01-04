@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e749594d7a37b89d5dbf02013b2f667d923af7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-architecture"></a>用戶端架構
 應用程式會使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端物件來叫用服務作業。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通道，以及它們與基礎通道架構之間的關係。 如需的基本概觀[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端物件，請參閱[WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]通道層，請參閱[擴充通道層](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  服務模型執行階段會建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，該用戶端是由下列項目所組成：  
   
 -   自動產生的服務合約用戶端實作，它會將您應用程式程式碼的呼叫轉變為傳出訊息，並將回應訊息轉變為輸出參數，然後傳回您應用程式可以擷取的值。  

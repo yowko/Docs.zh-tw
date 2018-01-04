@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題將說明選擇 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含的三種主要傳輸的準則：HTTP、TCP 和具名管道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也包括訊息佇列 (亦稱為 MSMQ) 傳輸，但是本文件不討論訊息佇列。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
 |輸送量|Throughput 是測量可以在指定的時間內傳輸及處理的資料量。 和延遲時間一樣，所選擇的傳輸會影響服務作業的輸送量。 將傳輸的輸送量最大化需要最小化傳輸內容的額外負荷，以及最小化等待訊息交換完成所花費的時間。 TCP 和具名管道傳輸都會為訊息本文增加少許額外負荷，並支援減少等候訊息回覆時間的原生雙工類型。|TCP、具名管道|  
 |Tooling|Tooling 代表開發、診斷、裝載和其他活動之通訊協定的協力廠商應用程式支援。 開發搭配 HTTP 通訊協定使用的工具和軟體代表極大的投資。|HTTP|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.BasicHttpBinding>  
  <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
   <<!--zz <xref:System.ServiceModel.WsDualHttpBinding> --> `System.ServiceModel.WsDualHttpBinding`

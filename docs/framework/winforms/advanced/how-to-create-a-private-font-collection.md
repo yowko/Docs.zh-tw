@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3016fb9a1b1d8466137bcaddb0b885c02c399baf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：建立私用字型集合
 <xref:System.Drawing.Text.PrivateFontCollection>類別繼承自<xref:System.Drawing.Text.FontCollection>抽象基底類別。 您可以使用<xref:System.Drawing.Text.PrivateFontCollection>来維護一組專為您的應用程式的字型的物件。 私用字型集合可以包含已安裝的系統字型，以及在電腦尚未安裝的字型。 若要將字型檔案加入至私用字型集合中，呼叫<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法<xref:System.Drawing.Text.PrivateFontCollection>物件。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Text.PrivateFontCollection>  
  [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

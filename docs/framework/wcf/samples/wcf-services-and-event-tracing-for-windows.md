@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ed3b7b370ed6b1d9a900579ff0e6f1b0a22290c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF 服務及 Windows 的事件追蹤
 這個範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的分析追蹤功能發出 Windows 事件追蹤 (ETW) 中的事件。 分析追蹤是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆疊中的關鍵點發出，該堆疊允許在實際執行環境中進行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的疑難排解。  
@@ -97,5 +98,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

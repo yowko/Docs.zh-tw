@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>服務版本控制
 在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題將說明，如何考量 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本控制。  
@@ -185,7 +186,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  服務合約會更新，以加入根據 `PurchaseOrderV2` 所撰寫的新作業。 根據 `IPurchaseOrderV1` 撰寫的現有商務邏輯會在 `PurchaseOrderV2` 中繼續運作，而需要 `OrderDate` 屬性的新商務邏輯則會根據 `IPurchaseOrderV2` 撰寫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

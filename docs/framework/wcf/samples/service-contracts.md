@@ -13,17 +13,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdbd6260cc435094b499b9e4f3b7bf02f32e27a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c8984016f1f8ad77ab41aa49f8bcc2583406a465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contracts"></a>服務合約
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中服務合約的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
- [雙工](../../../../docs/framework/wcf/samples/duplex.md)  
+## <a name="in-this-section"></a>本節內容  
+ [雙面](../../../../docs/framework/wcf/samples/duplex.md)  
  示範如何定義與實作雙工合約。  
   
  [錯誤合約](../../../../docs/framework/wcf/samples/fault-contract.md)  

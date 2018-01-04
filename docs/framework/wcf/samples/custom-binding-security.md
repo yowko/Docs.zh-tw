@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 943a56095707efdba0e20c40b2c96e24e8fd4ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6ac67f79a5fb527acd793778111dad6970922d71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。  
@@ -196,4 +197,4 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 -   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

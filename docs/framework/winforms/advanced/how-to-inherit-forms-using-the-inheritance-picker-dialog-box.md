@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50521591af6f77b98e52aa4a847216f63186d78b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  為了繼承包含 [繼承選取器] 對話方塊的表單，包含該表單的專案必須已建置為可執行檔或 DLL。 若要建置專案，請從 [建置] 功能表中選擇 [建置方案]。  
 >   
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>使用繼承選取器建立繼承自現有表單的 Windows Form   
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  當您將繼承的控制項和元件與標準控制項和 Windows Form 上的元件結合時，您可能會遇到疊置順序衝突。 您可以藉由修改疊置順序來修正，其作法是在 [格式]  功能表中按一下，指向 [順序]，然後按一下 [提到最上層] 或 [移到最下層]。 如需控制項疊置順序的相關資訊，請參閱[如何：將 Windows Forms 上的物件分層](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
  [using](~/docs/csharp/language-reference/keywords/using.md)  
  [修改基底表單外觀的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  

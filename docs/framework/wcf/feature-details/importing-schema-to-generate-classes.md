@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 如果要從可在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用的結構描述產生類別，請使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 類別。 這個主題將說明處理程序和變化。  
@@ -189,7 +190,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  

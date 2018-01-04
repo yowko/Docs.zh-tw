@@ -12,11 +12,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1ae5a2c4682ce49501dcdce30cd1c9ed3e64112a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 工作流程可透過三種方法執行：  
@@ -262,6 +263,6 @@ invoker.Invoke();
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

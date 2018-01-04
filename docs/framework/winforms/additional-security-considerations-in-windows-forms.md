@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8b693f7faf9abb71d214ca755fc9587a1dcc0ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Form 中的其他安全性考量
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性設定可能導致您的應用程式在部分信任環境和本機電腦上以不同方式執行。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制存取重要的本機資源，例如檔案系統、網路和 Unmanaged API 等。 安全性設定會影響能否呼叫 Microsoft Win32 API，或其他無法由安全性系統驗證的 API。 安全性也會影響應用程式的其他層面，包括檔案和資料存取及列印。 如需在部分信任環境中存取檔案和資料的詳細資訊，請參閱 [Windows Forms 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)。 如需在部分信任環境中列印的詳細資訊，請參閱 [Windows Forms 中更安全的列印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="clipboard-access"></a>剪貼簿存取  
  <xref:System.Security.Permissions.UIPermission>類別控制存取剪貼簿，以及相關聯<xref:System.Security.Permissions.UIPermissionClipboard>列舉值表示的存取層級。 下表顯示可能的權限層級。  
   
-|UIPermissionClipboard 值|說明|  
+|UIPermissionClipboard 值|描述|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|可以不受限制使用剪貼簿。|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|可以在受到部分限制下使用剪貼簿。 能夠不受限制將資料放在剪貼簿 (複製或剪下命令作業)。 接受貼上的內建控制項 (例如文字方塊) 可以接受剪貼簿資料，但無法以程式設計方式從剪貼簿讀取使用者控制項。|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  根據預設，近端內部網路區域會接收<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>存取和網際網路區域接收<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>存取。 這表示在網際網路區域中，應用程式可以執行大部分的視窗和 UI 動作，但視窗的外觀會經過修改。 修改過的視窗會在第一次執行時顯示氣球通知、包含修改過的標題列文字，而且在標題列上需要有關閉按鈕。 氣球通知和標題列讓應用程式的使用者知道，應用程式正在部分信任下執行。  
   
-|UIPermissionWindow 值|說明|  
+|UIPermissionWindow 值|描述|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|使用者可以無限制使用所有視窗和使用者輸入事件。|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|使用者只能使用較安全的最上層視窗和較安全的子視窗來繪圖，且只能使用這些最上層視窗和子視窗內之使用者介面的使用者輸入事件。 這些較安全的視窗有清楚的標籤，也有大小上限和下限的限制。 限制可防止可能有害的詐騙攻擊，例如模仿系統登入畫面或系統桌面，並限制為父視窗、 焦點相關的 Api，以及使用以程式設計方式存取<xref:System.Windows.Forms.ToolTip>控制項，|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
  呼叫 Unmanaged 程式碼的權限可讓應用程式執行大部分的動作。 因此，呼叫 Unmanaged 程式碼的權限應該只授與來自受信任來源的應用程式。 另外，視應用程式而定，應用程式功能中會呼叫 Unmanaged 程式碼的部分可以是選擇性，或只在完全信任環境中啟用。 如需危險性權限的詳細資訊，請參閱[危險性權限和原則管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)。 如需提高權限的詳細資訊，請參閱 [NIB：一般安全性原則管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
  [Windows Forms 中更安全的列印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
  [Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  

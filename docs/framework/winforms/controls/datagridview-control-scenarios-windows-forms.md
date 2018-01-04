@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控制項案例 (Windows Form)
 與<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示各種資料來源的表格式資料。 簡單的用途，您可以手動填入<xref:System.Windows.Forms.DataGridView>和操作直接透過控制項的資料。 一般而言，不過，會將資料儲存在外部資料來源，然後將控制項繫結，透過<xref:System.Windows.Forms.BindingSource>元件。  
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
   
 -   您可以實作您自己的儲存格和資料行的類別，以提供的內建的資料行類型以外的主控制項。 如需詳細資訊，請參閱[How to： 在 Windows Form DataGridView 儲存格的主控制項](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

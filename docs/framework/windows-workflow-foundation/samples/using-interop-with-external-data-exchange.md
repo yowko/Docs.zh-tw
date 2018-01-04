@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f62d5a468e3730ec4f636d57cb9d0c6c3973a8d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b777cab4caf5b2b02c66e8378a7efce265157df0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-interop-with-external-data-exchange"></a>與外部資料交換服務互通使用
 <xref:System.Activities.Statements.Interop> 活動可用來從 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 及 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF3) 執行活動，以及從 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF4) 的 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 執行工作流程。 此範例示範如何使用 WF4 工作流程服務中的 <xref:System.Workflow.Activities.ExternalDataExchangeService> 活動，以設定及執行 WF3 工作流程來使用 <xref:System.Activities.Statements.Interop> (以及用來呼叫方法和處理事件的對應自訂活動)。  

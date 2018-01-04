@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安全性，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  如需 NTLM 轉寄攻擊的概觀，請移至[http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571)。  
   
 ## <a name="always-revert-after-impersonation"></a>在模擬完畢後一律還原  
- 在使用可啟用用戶端模擬的 API 時，請務必還原成原始身分識別。 例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 時，請使用 C# `using` 陳述式或 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 陳述式，如下列程式碼所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 類別會實作 <xref:System.IDisposable> 介面，因此 Common Language Runtime (CLR) 會在程式碼離開 `using` 區塊後，自動還原成原始身分識別。  
+ 在使用可啟用用戶端模擬的 API 時，請務必還原成原始身分識別。 例如，當使用<xref:System.Security.Principal.WindowsIdentity>和<xref:System.Security.Principal.WindowsImpersonationContext>，使用 C#`using`陳述式或[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using`陳述式，如下列程式碼所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 類別會實作 <xref:System.IDisposable> 介面，因此 Common Language Runtime (CLR) 會在程式碼離開 `using` 區塊後，自動還原成原始身分識別。  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>在自訂繫結上，將 SecurityBindingElement.IncludeTimestamp 設定為 True  
  當您建立自訂繫結時，您必須將 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `true`。 否則，如果 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `false`，而且用戶端使用以非對稱金鑰為基礎的權杖 (如 X509 憑證)，則不會簽署訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [使用中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+ [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

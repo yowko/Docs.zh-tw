@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 117011d0ceecf04b6c73655873985dbd08768ab6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服務執行階段行為
 一旦您設計好服務合約 ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 並實作服務合約 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))，就可以設定服務執行階段的作業行為。 本主題討論系統提供的服務與作業行為，並說明哪裡可以找到更多資訊以建立新行為。 儘管有些行為會以屬性形式來套用，許多行為還是需要透過應用程式組態檔或以程式設計方式來套用。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 設定服務應用程式的詳細資訊，請參閱 [Configuring Services](../../../docs/framework/wcf/configuring-services.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  合約會定義輸入、輸出、資料型別，以及該類型服務的功能。 實作服務合約會建立一個類別，此類別在使用位址上的繫結進行設定時會實行類別所實作的合約。 合約、繫結和位址資訊皆為用戶端所熟知，若缺乏這些資訊，用戶端就無法使用服務。  
   
  但是，用戶端並不清楚執行緒問題或執行個體管理之類的作業細節。 一旦您實作了服務合約，就可以透過「 *行為*」(Behavior) 來設定大量的作業特性。 行為是一種物件，可以藉由設定執行階段屬性或將自訂類型插入執行階段來修改 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 執行階段。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 藉由建立使用者定義行為來修改執行階段的詳細資訊，請參閱 [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
@@ -130,6 +131,6 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. 指定服務作業接受異動標頭時所在的層級。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- [如何： 控制服務執行個體](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+ [如何：控制服務執行個體](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

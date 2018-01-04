@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0dc272e26124acf5c6bd5cf3030941c26c021c49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1764b55232d1883516c2cc8684e3ee1b0cb5c05b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：判斷 Windows Form RichTextBox 控制項中的格式屬性何時變更
 Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項已格式化文字的字型選項或段落樣式等屬性。 您的應用程式可能需要追蹤的文字格式設定用來顯示工具列，就像許多文書處理應用程式中的任何變更。  
@@ -90,7 +91,7 @@ Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項已�
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.RichTextBox.SelectionChanged>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

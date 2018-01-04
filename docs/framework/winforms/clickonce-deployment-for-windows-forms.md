@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550ef4951cc7d5b0a9b25c5e7d038588b0a911f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f157ea4afcaccfffde548c26a440fa6686c87aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Form 的 ClickOnce 部署
 下列主題描述 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，您可以使用這項技術輕鬆地將 Windows Form 應用程式部署到用戶端電腦。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
  [如何：在 ClickOnce 應用程式中納入資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  示範如何標記檔案，以便在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 資料目錄中使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)  
  [從命令列建置 ClickOnce 應用程式](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  

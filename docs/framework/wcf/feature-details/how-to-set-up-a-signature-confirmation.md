@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fced2ddd16ae244e2ea3d945082f48ffd23302e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 53e38658671f3a36da67619c796667ecad61f286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>HOW TO：設定簽章確認
 *簽章確認*是確保收到的回覆已產生寄件者的原始訊息的回應是訊息啟動器的機制。 簽章確認是定義在 WS-Security 1.1 規格中。 如果端點支援 WS-Security 1.0，您就無法使用簽章確認。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  新增 `<security>` 子項目並將 `requireSignatureConfirmation` 屬性設定為 `true`。  
   
-5.  選擇項。 若要啟用期間啟動安裝程式的簽章確認，新增[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子元素，並設定`equireSignatureConfirmation`屬性`true`。  
+5.  選擇性。 若要啟用期間啟動安裝程式的簽章確認，新增[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子元素，並設定`equireSignatureConfirmation`屬性`true`。  
   
 6.  新增適當的傳輸項目。 下列範例會將[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
@@ -76,9 +77,9 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_SignatureConfirmation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_signatureconfirmation/cs/source.cs#1)]
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>  
- [如何： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [如何： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+ [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

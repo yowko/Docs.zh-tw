@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 47a70e55d0f5b6197dc7c77b9e95f2279b814737
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-path-gradient"></a>如何：建立路徑漸層
 <xref:System.Drawing.Drawing2D.PathGradientBrush>類別可讓您自訂您漸層色彩填滿圖形的方式。 比方說，您可以指定一個色彩為路徑的中央和路徑的界限的另一種色彩。 您也可以指定不同的色彩，每個界限的幾個點的路徑。  
@@ -120,5 +121,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  前面的範例專為搭配 Windows Form 使用，而且會要求<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用漸層筆刷填滿形狀](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

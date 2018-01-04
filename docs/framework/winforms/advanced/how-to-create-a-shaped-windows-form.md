@@ -29,11 +29,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 981256c2447a53aef8e1ea676db38ce693d1337e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0641adfcd7fa8e1d3367ea55d00830dd5a60706
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>如何：建立具圖案的 Windows Form
 此範例提供表單的表單會調整大小的橢圓形。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
  這個範例會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以變更表單的圖形。 若要使用此程式碼，將複製的方法宣告，以及在方法內的繪圖程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  <xref:System.Drawing.Region>  
  <xref:System.Drawing>  

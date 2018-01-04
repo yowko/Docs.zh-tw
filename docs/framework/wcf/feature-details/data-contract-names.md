@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>資料合約名稱
 有時候用戶端和服務不會共用相同的類型。 只要兩邊的資料合約都相同，仍然可以相互傳遞資料。 [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)根據資料合約與資料成員名稱，並因此提供的機制是將對應的類型和成員到這些名稱。 此主題說明資料合約的命名規則，以及當建立名稱時 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基礎結構的預設行為。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/02/2017
   
  在此例中，型別 `Drawing<Square,RegularRedBrush>` 的資料合約名稱為 "Drawing_using_RedBrush_brush_and_Square_shape"。 請注意，因為在 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 屬性中有一個 "{#}"，而雜湊不是名稱的一部分，所以型別就容易發生命名衝突；例如型別 `Drawing<Square,SpecialRedBrush>` 可能會擁有完全相同的資料合約名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  

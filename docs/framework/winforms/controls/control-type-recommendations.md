@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a5996c398e4f864da4b505020974307b0e0e316
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-type-recommendations"></a>控制項類型建議
 .NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。  
@@ -55,25 +56,25 @@ ms.lasthandoff: 11/21/2017
   
 -   您需要實作無法透過標準控制項使用的自訂功能。  
   
--   [如何：在選擇工具箱項目對話方塊中顯示控制項](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [操作說明：在選擇工具箱項目對話方塊中顯示控制項](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
 -   [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
 -   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
   
--   [如何：為控制項提供工具箱點陣圖](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [操作說明：為控制項提供工具箱點陣圖](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [如何：繼承自現有的 Windows Forms 控制項](http://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [操作說明：繼承自現有的 Windows Forms 控制項](http://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
 -   [逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項](http://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
 -   [如何：繼承自 Control 類別](http://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [如何：測試 UserControl 的執行階段行為](http://msdn.microsoft.com/library/ms171738\(v=vs.110\))  
+-   [操作說明：測試 UserControl 的執行階段行為](http://msdn.microsoft.com/library/ms171738\(v=vs.110\))  
   
--   [如何：在設計階段將控制項對齊表單邊緣](http://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [操作說明：在設計階段將控制項對齊表單邊緣](http://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
--   [如何：繼承自 UserControl 類別](http://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [操作說明：繼承自 UserControl 類別](http://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
 -   [如何：撰寫 Windows Forms 的控制項](http://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
@@ -89,6 +90,6 @@ ms.lasthandoff: 11/21/2017
   
 -   [如何：建立採用設計階段功能的 Windows Forms 控制項](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：開發簡單的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

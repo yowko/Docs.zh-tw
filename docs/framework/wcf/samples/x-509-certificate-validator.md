@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2d177045f82f9df5318a38c67a23d6b9fa2d268
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0717aae2c13c9fa5fcbf0ea47d344cac5675fbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="x509-certificate-validator"></a>X.509 憑證驗證程式
 這個範例會示範如何實作自訂 X.509 憑證驗證程式。 當內建的 X.509 憑證驗證程式模式都不符合應用程式需求時，這個驗證程式就很有用。 這個範例示範的服務具有可接受自動發行之憑證的自訂驗證程式。 用戶端會使用這類憑證來向服務驗證。  
@@ -366,4 +367,4 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 > [!NOTE]
 >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

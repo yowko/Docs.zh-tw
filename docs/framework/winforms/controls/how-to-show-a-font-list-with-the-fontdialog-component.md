@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd04a44e6f6e3df26a643a8937e20e232e7471a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>如何：使用 FontDialog 元件顯示字型清單
 [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)元件可讓使用者選取字型，以及變更其顯示層面，例如其加權和大小。  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.FontDialog>  
  [FontDialog 元件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

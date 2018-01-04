@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9decba052589bfcc3ecd7b2861dad51e9c51378a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00c43ff4ca418d272dc00132907c5bcbc0c5bc8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>如何：完成 Windows Form 列印工作
 通常，文書處理器和其他應用程式牽涉到列印會提供選項，以顯示訊息給使用者，列印工作已完成。 您可以在 Windows Form 提供這項功能，藉由處理<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件<xref:System.Drawing.Printing.PrintDocument>元件。  
@@ -90,6 +91,6 @@ ms.lasthandoff: 11/21/2017
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Printing.PrintDocument>  
  [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

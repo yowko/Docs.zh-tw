@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d071bf182fb231b08f397db163059fda730fca21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5af5840dde2cb72ee6b39b75ece3606e3c58b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用複雜型別的 AJAX 服務範例
 這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 來建立 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務，此服務會建立複雜型別的執行個體，並在服務和用戶端之間以 Javascript 物件標記法 (JSON) 進行傳送。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
@@ -76,5 +77,5 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

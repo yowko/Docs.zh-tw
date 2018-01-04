@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解譯 wsatConfig.exe 傳回的錯誤碼
 本主題列出 WS-AtomicTransaction 組態公用程式 (wsatConfig.exe) 產生的錯誤碼，以及建議採取的動作。  
@@ -77,5 +78,5 @@ ms.lasthandoff: 12/02/2017
 |55|在嘗試啟動 ETW 追蹤工作階段時發生非預期的錯誤。|請連絡 Microsoft。|  
 |56|在嘗試啟動 ETW 追蹤工作階段時發生非預期的錯誤。|請連絡 Microsoft。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

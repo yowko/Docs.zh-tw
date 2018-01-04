@@ -22,16 +22,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcbc786c19ad1af74114915b0fd0689d466fcbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6d83ff69053a71626d0bf9a844d9e94235080d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 元件
 `BackgroundWorker`元件可讓您的表單或控制項加入執行非同步作業。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
  描述`BackgroundWorker`元件，可讓您執行這些耗時的作業，以非同步方式 （「 在背景中 」），不同於您的應用程式的主要 UI 執行緒的執行緒。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.ComponentModel.BackgroundWorker>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.ComponentModel.RunWorkerCompletedEventArgs>  
  描述保留的資料類型<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件。  

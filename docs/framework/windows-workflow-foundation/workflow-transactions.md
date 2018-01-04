@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dba6762017877824308608bc58f80aed71ca9f21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d9cc01d929421b8065a3df21374150bc68fd968
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-transactions"></a>工作流程異動
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 使用 <xref:System.Transactions> 活動來限定工作交易單元的範圍，以支援參與 <xref:System.Activities.Statements.TransactionScope> 交易。 <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> 必須明確地完成，而 <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> 活動則會在順利完成時隱含地呼叫交易。 <xref:System.Activities.Statements.TransactionScope.Body%2A> 活動的 <xref:System.Activities.Statements.TransactionScope> 中包含的任何活動都會參與交易。 WF 可以透過使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動，將交易流動至工作流程。 如同 <xref:System.Activities.Statements.TransactionScope> 活動，<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> 中所含的所有活動都會參與交易。 WF 會確定相依於 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 的活動都能與 <xref:System.Activities.Statements.TransactionScope> 和 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 共同運作。 如果系統提供的活動無法符合所有需求，可以使用 <xref:System.Activities.RuntimeTransactionHandle> 建置自訂活動，以啟用進階流程及交易控制案例。  
@@ -57,7 +58,7 @@ static Activity ScenarioOne()
   
  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]基本[交易](../../../docs/framework/windows-workflow-foundation/samples/transactions.md)範例和案例的基礎[交易](../../../docs/framework/windows-workflow-foundation/samples/transactions.md)範例。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]有關使用<xref:System.ServiceModel.Activities.TransactedReceiveScope>，請參閱[流動交易，進出工作流程服務](../../../docs/framework/wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.Statements.TransactionScope>  
  <xref:System.Transactions.TransactionScope>  
  <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType>

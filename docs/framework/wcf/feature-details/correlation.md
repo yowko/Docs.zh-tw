@@ -13,35 +13,36 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc1608cc4e746af56e7d89237f0c1f5e6cc3bc7e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a0be008eae45ca5bbe6ca77383bde433931b72e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation"></a>相互關聯
 當工作流程服務應用程式與其他服務通訊時，將其中的訊息分派至正確的工作流程執行個體是相當重要的。 相互關聯可提供此操作的機制。 本節中的主題提供相互關聯的概要以及說明如何在不同的工作流程服務案例中加以使用。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [相互關聯概觀](../../../../docs/framework/wcf/feature-details/correlation-overview.md)  
  提供適用於 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的相互關聯類型概要。  
   
  [內容交換](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
  說明內容交換相互關聯。  
   
- [永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
+ [永久性雙面](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
  說明永久性雙面相互關聯。  
   
- [基礎的內容](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
+ [以內容為主](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
  說明以內容為基礎的相互關聯。  
   
  [要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
  說明要求-回覆相互關聯。  
   
- [疑難排解相互關聯](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
+ [為相互關聯進行疑難排解](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
  提供疑難排解相互關聯的方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Activities.CorrelationHandle>  
  <xref:System.ServiceModel.Activities.Send>  
  <xref:System.ServiceModel.Activities.Receive>  

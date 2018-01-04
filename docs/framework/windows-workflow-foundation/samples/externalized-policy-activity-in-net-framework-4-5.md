@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468d0ca5f4afa4e84b69f58887672ffcf1a14fa6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9dc86cd8ff3cce31e67c146e099f70181ad1e33a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 這個範例會示範 ExternalizedPolicy4 活動如何讓執行現有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 是直接使用 WF 3.5 隨附的規則引擎。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WF 3.5 規則引擎的 Windows Workflow Foundation，一部分請閱讀[Windows Workflow Foundation 規則引擎簡介](http://go.microsoft.com/fwlink/?LinkId=166079)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]移轉的規則，以[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，請閱讀上的移轉指引[移轉指引](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  

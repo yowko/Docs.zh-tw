@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8860749430d1c6ec1f9b89c1a9740b836ff28ae9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>單一 ListenUri 的多個端點
 這個範例會示範在單一 `ListenUri` 裝載多個端點的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。  
@@ -89,4 +90,4 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3154080682d406598b47122c64cc856ff8cb1f15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-secure-sessions"></a>安全工作階段的安全性考量
 您必須考量下列會在實作安全工作階段時影響安全性的項目。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安全性考量，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)和[安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  這意味著如果您希望衍生自訂權扙，必須將以 `SecurityTokenReference` 項目包裝它的子句型別。 也可以選擇關閉衍生，但是預設值為會衍生金鑰。 如果您無法包裝金鑰，序列化衍生金鑰權杖仍會繼續進行，但是嘗試還原序列化時，便會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 停用安全工作階段在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+## <a name="see-also"></a>請參閱  
+ [如何：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [安全性最佳作法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+ [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

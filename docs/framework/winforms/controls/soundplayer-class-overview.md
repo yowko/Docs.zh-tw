@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6df44df3582ed806d338e2d4565c5c11f69ce21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3dc355fbe0d8262cb24779b99375d6075f758bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer 類別概觀
 <xref:System.Media.SoundPlayer> 類別可讓您輕鬆地在應用程式中包含音效。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Media.SoundPlayer.Stop%2A> 方法|停止任何目前正在播放的音效。|  
 |<xref:System.Media.SoundPlayer.LoadCompleted>事件|在嘗試載入音效之後引發。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Media.SoundPlayer>  
  <xref:System.Media.SystemSounds>

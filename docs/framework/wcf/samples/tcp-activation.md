@@ -13,11 +13,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 25dc9f7e09b4761dd1232700f43019c8ee51f0e2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e12f6df86e5ee24152fe0ec7835301c100e4ba19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tcp-activation"></a>TCP 啟用
 這個範例會示範裝載使用 Windows Process Activation Service (WAS) 的服務，以便啟用透過 net.tcp 通訊協定進行通訊的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -215,5 +216,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  這個命令必須輸入為單行文字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

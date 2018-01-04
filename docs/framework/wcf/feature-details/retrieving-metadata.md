@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e41a3cc65df5576c538864aa9e1fe1aacbe7e94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfc96c585ba55fbf63283d7cb23fae5b364b0465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-metadata"></a>擷取中繼資料
 中繼資料擷取程序會要求和擷取中繼資料端點內的中繼資料，這些端點包括像是 WS-MetadataExchange (MEX) 中繼資料端點或 HTTP/GET 中繼資料端點。  
@@ -31,15 +32,15 @@ ms.lasthandoff: 12/02/2017
   
  根據預設，<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 執行個體與單一的 <xref:System.ServiceModel.ChannelFactory> 執行個體有密切的關係。 您可以透過覆寫 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 虛擬方法，以變更或取代 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 所使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 執行個體。 同樣地，您可以覆寫 <xref:System.Net.HttpWebRequest> 虛擬方法，以變更或取代由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 執行個體。  
   
-## <a name="in-this-section"></a>本章節內容  
- [如何： 使用 Svcutil.exe 來下載中繼資料文件](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+## <a name="in-this-section"></a>本節內容  
+ [如何：使用 Svcutil.exe 來下載中繼資料文件](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  判斷如何使用 Svcutil.exe 來下載中繼資料文件。  
   
- [如何： 使用 MetadataResolver 來動態取得繫結中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [如何：使用 MetadataResolver 來動態取得繫結中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  示範如何使用 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> 在執行階段動態地取得中繼資料。  
   
- [如何： 使用 MetadataExchangeClient 來擷取中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [如何：使用 MetadataExchangeClient 來擷取中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  示範如何使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 類別將中繼資料檔案下載到包含 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 物件的 <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> 物件，以供寫入至檔案或其他用途。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.MetadataExchangeClient>

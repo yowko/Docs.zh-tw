@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cfe522817fdc9a2aea23b1c9e8dce3b658d892c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 862c5635dd98933f57ec15ddcd20de043da69117
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 註冊工具 (ServiceModelReg.exe)
 這個命令列工具可讓您在單一電腦上管理 WCF 及 WF 元件的註冊。 在一般情況下，您應該不需要使用這個工具，因為安裝時已對 WCF 及 WF 元件進行設定。 但如果您遇到服務啟用的問題，您可以嘗試使用這個工具來註冊元件。  
@@ -38,7 +39,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
   
  下表說明可與 ServiceModelReg.exe 搭配使用的選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`-ia`|安裝所有 WCF 和 WF 元件。|  
 |`-ua`|解除安裝所有 WCF 和 WF 元件。|  

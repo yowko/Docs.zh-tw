@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
 您可以使用 MSMQ 整合繫結來轉換傳入與傳出 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的 MSMQ 訊息，藉此將現有的訊息佇列 (MSMQ) 應用程式與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 進行整合。 這樣一來，您就可以從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端對 MSMQ 接收者應用程式進行呼叫，並從 MSMQ 傳送者應用程式對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務進行呼叫。  
@@ -72,10 +73,10 @@ ms.lasthandoff: 12/02/2017
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [如何： Exchange 佇列與 WCF 端點的訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [透過訊息佇列的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

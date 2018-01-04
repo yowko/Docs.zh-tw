@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 729bf8bd1371bf64b9b05a235331120608824083
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 765efb43efc0ea60ebb71bc8cdb5bd8edf973c2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>已啟用 ReceiveContext 的 WCF 通道
 這個範例示範具備 <xref:System.ServiceModel.Channels.ReceiveContext> 能力之 WCF 通道的用處。 這個範例會實作服務，以使用 NetMSMQ 通道尋找兩個數字的乘積。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
             -   MSMQ HTTP 支援  
   
-        4.  按一下 [確定]。  
+        4.  按一下 [確定 **Deploying Office Solutions**]。  
   
         5.  如果提示您重新啟動電腦時，請按一下**確定**以完成安裝。  
   

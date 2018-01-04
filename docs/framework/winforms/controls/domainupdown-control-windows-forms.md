@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 485640dc320809e9be5550d380b4fc9a2326e027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown 控制項 (Windows Form)
 Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項看起來對按鈕及文字方塊中的組合的清單中向上或向下移動。 控制項顯示，並設定選項的清單中的文字字串。 按一下向上和向下按鈕移動清單、 按向上鍵和向下鍵，或輸入清單中的項目相符的字串，使用者可以選取的字串。 這個控制項的其中一個可能的使用是從依字母順序排序的名稱清單中選取項目。 (若要排序清單，請設定<xref:System.Windows.Forms.DomainUpDown.Sorted%2A>屬性`true`。)這個控制項的功能清單方塊或下拉式方塊中，非常類似，但是它會佔用很少的空間。  
@@ -32,7 +33,7 @@ Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項看起來對按鈕�
   
  此控制項顯示只是文字字串。 如果您想要顯示數值的控制項，使用<xref:System.Windows.Forms.NumericUpDown>控制項。 如需詳細資訊，請參閱[NumericUpDown 控制項](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DomainUpDown 控制項概觀](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
  導入的一般概念<xref:System.Windows.Forms.DomainUpDown>控制項，可讓使用者瀏覽並選取從文字字串的清單。  
   
@@ -44,7 +45,7 @@ Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項看起來對按鈕�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.DomainUpDown>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.NumericUpDown>  
  描述這個類別，並且提供其所有成員都的連結...  

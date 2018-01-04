@@ -19,25 +19,26 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c730f4ea5a83efcfad15d181ac182fbd232690cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar 和 VScrollBar 控制項 (Windows Form)
 Windows Form 捲軸控制項可用來在應用程式或控制項內以水平或垂直方式捲動，能夠輕鬆瀏覽一長串的項目或大量的資訊。 捲軸是 Windows 介面中的常見項目。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [HScrollBar 和 VScrollBar 控制項概觀](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  導入 <xref:System.Windows.Forms.HScrollBar> 和 <xref:System.Windows.Forms.VScrollBar> 控制項的一般概念，可以讓使用者水平和垂直地捲動大量資訊。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.HScrollBar>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.VScrollBar>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

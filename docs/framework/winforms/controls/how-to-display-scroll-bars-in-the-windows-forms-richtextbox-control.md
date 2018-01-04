@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b20c526b27eb185bf79eaf0ace47e5a9fded42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4645e502544072cbc6268ae07e054ea5450d9c5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>如何：在 Windows Form RichTextBox 控制項中顯示捲軸
 根據預設，Windows Form<xref:System.Windows.Forms.RichTextBox>控制項顯示成必要的水平和垂直捲軸。 有七個可能的值為<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>屬性<xref:System.Windows.Forms.RichTextBox>控制項，如下表所述。  
@@ -44,12 +45,12 @@ ms.lasthandoff: 11/21/2017
   
 3.  將 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 屬性設定為適當值。  
   
-    |值|說明|  
+    |值|描述|  
     |-----------|-----------------|  
     |`false`|控制項中的文字不會自動調整為超過控制項的寬度，因此它會向右捲動，直到達到分行符號。 如果您選擇上方的水平捲軸或兩者，請使用此值。|  
     |`true` (預設值)|控制項中的文字會自動調整以配合控制項的寬度。 不會出現水平捲軸。 如果您選擇垂直捲軸或 none、 上方，顯示一或多個段落，請使用此值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.RichTextBoxScrollBars>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

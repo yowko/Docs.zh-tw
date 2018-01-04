@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d47add27fb1170ae1bc14b99342ea0222be3549
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用兩種不同的序列化技術，將您應用程式中的資料轉換成 XML，在用戶端和服務之間傳輸，這種處理稱為序列化。  
@@ -214,11 +215,11 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>`參數只能在執行.NET Framework 4.5 或更新版本的電腦上運作。 上述`appSettings`方法適用於所有.NET Framework 版本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.DataContractFormatAttribute>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [如何： 改善啟動時間的 WCF 用戶端應用程式使用 XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+ [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

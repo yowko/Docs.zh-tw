@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d1b22babcc653f999ff500a5e52a12616fc1ae4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc782ba262527a319cbb05cc6d36ca568afc55c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>如何：使用表單和控制項的雙重緩衝以減少圖形重繪閃動
 雙重緩衝會使用記憶體緩衝區來解決多個與繪製作業建立關聯的閃爍問題。 啟用雙重緩衝時，會將所有繪製作業都轉譯到記憶體緩衝區，而不是螢幕上的繪圖介面。 在所有繪製作業都完成之後，會直接將記憶體緩衝區複製到與其建立關聯的繪圖介面。 因為只有一個圖形作業在螢幕上執行，所以複雜繪製作業相關聯的影像閃爍會被刪除。對於大部分的應用程式，預設雙重緩衝提供[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]會提供最佳的結果。 標準的 Windows Form 控制項是雙重緩衝的預設值。 您可以啟用雙重緩衝在表單中的預設值，並撰寫兩種方式的控制項。 您可以設定<xref:System.Windows.Forms.Control.DoubleBuffered%2A>屬性`true`，或您可以呼叫<xref:System.Windows.Forms.Control.SetStyle%2A>方法，以設定<xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer>旗標設為`true`。 這兩種方法將會啟用預設的雙重緩衝您的表單或控制項，並提供閃爍的圖形轉譯。 呼叫<xref:System.Windows.Forms.Control.SetStyle%2A>方法建議只用於已寫入所有的轉譯程式碼的自訂控制項。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
  <xref:System.Windows.Forms.Control.SetStyle%2A>  
  [雙重緩衝的圖形](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  

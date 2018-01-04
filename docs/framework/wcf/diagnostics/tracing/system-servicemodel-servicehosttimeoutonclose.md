@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c633953747b34573d4dba68da55a764bd2ccb7e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71baadeae73c2cbaf203fc141e6f002c5ae9902d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicehosttimeoutonclose"></a>System.ServiceModel.ServiceHostTimeoutOnClose
 System.ServiceModel.ServiceHostTimeoutOnClose  
@@ -25,7 +26,7 @@ System.ServiceModel.ServiceHostTimeoutOnClose
 ## <a name="description"></a>描述  
  ServiceHost 關閉作業已逾時。這表示某些工作階段通道並未由用戶端正確關閉，而且可能已經中止。 請修改預設時間來調整關閉逾時。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: c9d0c81d715b2e876fe8144d4cff198f3321a22e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d24e517a8fd63a3363d080ebbabf2c1e3306b76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-filters"></a>自訂篩選器
 自訂篩選可讓您定義無法使用系統所提供訊息篩選完成的比對邏輯。 例如，您可能會建立自訂篩選，此篩選會雜湊特殊訊息項目，然後檢查值，判斷篩選應傳回 true 或 false。  
@@ -64,7 +65,7 @@ public class MyMessageFilter: MessageFilter
   
  在實際執行環境中使用自訂篩選之前，您應該執行效能測試，以判斷篩選評估訊息所需的平均時間長度。 結合其他篩選在篩選資料表中使用之平均處理時間時，這可讓您正確判斷用戶端應用程式應該指定的最大逾時值。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  若要使用自訂篩選搭配路由服務，您必須將它加入篩選資料表藉由指定新的篩選器項目類型的 「 自訂 」 的訊息篩選條件，完整限定的類型名稱和組件的名稱。  就像使用其他 MessageFilters 一般，您可以指定 filterData 字串，這個字串將傳遞至自訂篩選的建構函式。  
   
  下列範例示範使用自訂篩選搭配路由服務：  

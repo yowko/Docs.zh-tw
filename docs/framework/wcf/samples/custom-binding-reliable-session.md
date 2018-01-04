@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84c4ed6f27e98bcbb94b63a48f19b2d20aca7507
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c94219054beacfd746c3e55092a6403641224845
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-reliable-session"></a>自訂繫結可靠工作階段
 自訂繫結由經過排序的獨立繫結項目清單所定義。 此範例示範如何使用各種傳輸與訊息編碼項目設定自訂繫結，特別是啟用可靠工作階段。  
@@ -133,4 +134,4 @@ Press <ENTER> to terminate client.
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

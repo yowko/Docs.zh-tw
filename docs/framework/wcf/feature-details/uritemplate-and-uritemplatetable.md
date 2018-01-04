@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 新增了兩個類別，讓開發人員可以更充分的掌控其 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中構成 URI 分派引擎的基礎。 這些類別可以自行利用，讓開發人員充分運用範本與 URI 對應機制，而無須實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
@@ -342,9 +343,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 >  當字元 á 與 Á 出現在 URI 路徑或 <xref:System.UriTemplate> 路徑片段常值中時，兩者將被視為不同的字元 (但是字元 a 與 A 則被視為相同)。 當字元 á 與 Á 出現在 <xref:System.UriTemplate> {variableName} 或查詢字串中時，兩者將被視為相同的字元 (而且字元 a 與 A 亦將被視為相同)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplate 表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate 表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+ [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [UriTemplate 資料表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3738b484321a9c6a3cbcb2a59854bb91770bf8bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c7383d899af741e4a6c85b40e2316a6b759aa416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-tracking-and-tracing"></a>工作流程追蹤與追查
 Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。 它提供追蹤基礎架構，可追蹤工作流程執行個體的執行。 WF 追蹤基礎結構會透明化地檢測工作流程，在執行期間發出記錄以反映重要事件。 根據預設，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程都可使用這個功能。 不需要對 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流程做任何變更，即可進行追蹤。 只需決定您想接收多少追蹤資料即可。 當工作流程執行個體開始或完成時，會發出處理的追蹤記錄。 追蹤也可以擷取與工作流程變數相關聯的商務相關資料。 例如，如果工作流程代表訂單處理系統，則訂單識別碼可與 <xref:System.Activities.Tracking.TrackingRecord> 物件一併擷取。 一般而言，啟用 WF 追蹤有助於對從執行工作流程而存取的資料進行診斷或業務分析。  
@@ -43,7 +44,7 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
   
  ![工作流程追蹤基礎結構](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [追蹤記錄](../../../docs/framework/windows-workflow-foundation/tracking-records.md)  
  描述工作流程執行階段發出的追蹤記錄。  
   
@@ -62,5 +63,5 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
  [使用追蹤判斷工作流程的執行期間](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
  說明如何使用追蹤訊息，以判斷工作流程執行持續期間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL 追蹤](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

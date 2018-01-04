@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 001cc32aa9e1f31695f3b349480b6dd5154b31a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>如何：為 Windows Form NumericUpDown 控制項設定格式
 您可以設定 Windows Form 中值的顯示方式<xref:System.Windows.Forms.NumericUpDown>控制項。 <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>屬性決定多少號碼會出現在小數點後面，則為預設值為 0。 <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>屬性會決定是否將每隔三個十進位數字之間插入分隔符號，預設值為`false`。 此控制項可以顯示的值而不是十進位格式的十六進位表示的如果<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>屬性設定為`true`; 預設值是`false`。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  即使將會顯示值為十六進位表單上，任何測試您在上執行<xref:System.Windows.Forms.NumericUpDown.Value%2A>屬性測試其十進位值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.NumericUpDown>  
  [NumericUpDown 控制項](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
  [NumericUpDown 控制項概觀](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

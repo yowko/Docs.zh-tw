@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988c41bb691d27e819710bbc2cd48bc1c844e7c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-filters"></a>進階篩選
 此範例示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例會調整標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 計算機範例，以便使用路由服務進行通訊。 此範例示範如何透過訊息篩選與訊息篩選資料表的使用，定義以內容為基礎的路由邏輯。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="sample-details"></a>範例詳細資料  
  下表顯示加入至路由服務之訊息篩選資料表的訊息篩選。  
   
-|篩選|規則|優先權|  
+|篩選器|規則|優先權|  
 |------------|----------|--------------|  
 |If (有標頭)|四捨五入|2|  
 |If (顯示在 Ep2 上)|Regular|1|  
@@ -163,5 +164,5 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
 ### <a name="real-world-scenario"></a>真實情節  
  Contoso 想要虛擬化其所有服務，僅公開一個端點，透過這個端點可以存取多個不同類型的服務。 在此情況下，它們會利用路由服務以內容為基礎的路由功能，決定應該將傳入要求傳送至何處。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

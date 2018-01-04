@@ -16,16 +16,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dd584896dd8698dc881eb00186c6a550f36c75f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button-control-windows-forms"></a>Button 控制項 (Windows Form)
 Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Button` 控制項可以顯示文字和影像。 按一下按鈕時，按鈕看起來就像被推入又釋放。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -45,7 +46,7 @@ Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Butto
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.Button> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

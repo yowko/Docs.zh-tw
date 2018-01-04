@@ -12,11 +12,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92cc99a80c718811d0184a557efd38dd93fcc949
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f65d5d2f9bfee144f59d9ecf11cd26ab15113139
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼 &#39; s.NET 4.5 中 Windows Workflow Foundation 的新功能
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進許多新功能，如新增活動、設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]新功能所支援，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  型別將不會使用 <xref:System.Runtime.Serialization.ISerializable> 或 <xref:System.SerializableAttribute> 進行序列化，要序列化的型別必須支援 <xref:System.Runtime.Serialization.DataContractSerializer>。  
   
-6.  使用 <xref:System.Activities.Expressions.LambdaValue%601> 的運算式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下運作。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流程應將這些運算式改為從 <xref:System.Activities.CodeActivity%601> 衍生而來的活動。 .  
+6.  使用 <xref:System.Activities.Expressions.LambdaValue%601> 的運算式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下運作。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流程應將這些運算式改為從 <xref:System.Activities.CodeActivity%601> 衍生而來的活動。 。  
   
 7.  在部分信任下不能使用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler> 或裝載 Visual Basic 的編譯器來編譯運算式，但可以執行先前編譯的運算式。  
   

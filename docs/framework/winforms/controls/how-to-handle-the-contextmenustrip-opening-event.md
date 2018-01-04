@@ -22,11 +22,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 354631e514d9e2ece39d16bf7f259c36e4f90c32
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5de244abd35c83bce329882d679df8303ef3a833
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>如何：處理 ContextMenuStrip Opening 事件
 您可以自訂的行為您<xref:System.Windows.Forms.ContextMenuStrip>處理控制項<xref:System.Windows.Forms.ToolStripDropDown.Opening>事件。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  設定<xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType>屬性`true`以防止開啟功能表。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ContextMenuStrip>  
  <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>  
  <xref:System.Windows.Forms.ToolStripDropDown>  

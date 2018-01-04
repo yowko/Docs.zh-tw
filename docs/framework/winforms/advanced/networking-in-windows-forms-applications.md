@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b9c8a66d2b1d60226ad814730125754c7253ca94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows Forms 應用程式中的網路
 .NET Framework 會提供顯示網頁、 網頁內容下載、 互動使用檔案傳輸通訊協定 (FTP) 網站時，和使用 Web 服務，以便輕鬆地建置到應用程式的網路功能類別。 下列資源會協助您了解.NET Framework 和如何您可以將它們整合到 Windows Form 的網路技術。  

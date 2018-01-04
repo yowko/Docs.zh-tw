@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b382e0e1a627d7f61ce8ac664ac47d98c3725cad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40520f566beafc83075d0563148b5d0f9bd4fe85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>如何：從直線、曲線和形狀建立圖形
 若要建立圖，建構<xref:System.Drawing.Drawing2D.GraphicsPath>，然後呼叫方法，例如<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>和<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>、 加入路徑中的基本項目。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  先前的範例搭配 Windows Form 使用所設計，以及它們需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
  [建構和繪製路徑](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
  [使用畫筆繪製線條和形狀](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

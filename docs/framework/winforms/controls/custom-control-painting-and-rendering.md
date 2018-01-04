@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 355a5842348aa4395d1841d0343080ddef634456
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-control-painting-and-rendering"></a>自訂控制項繪製和轉譯
 自訂繪製的控制項是容易由.NET Framework 的許多複雜工作。 撰寫的自訂控制項，當您有許多有關控制項的圖形的外觀。 如果您撰寫控制項是繼承自`Control`，您必須提供程式碼，讓您的控制項轉譯其圖形表示。 如果您要建立使用者控制項透過繼承自`UserControl`，繼承或從其中一個 Windows Form 控制項，您可能會覆寫標準的圖形表示，並提供您自己的圖形的程式碼。 如果您想要提供自訂的構成控制項轉譯`UserControl`撰寫時，您的選項變得更小，但仍然可讓各種不同的圖形化的控制項和應用程式的可能性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [呈現 Windows Forms 控制項](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  示範如何撰寫程式顯示控制項的邏輯。  
   

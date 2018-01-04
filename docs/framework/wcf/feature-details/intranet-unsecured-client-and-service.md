@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a3faa27d54f2aa67cd974bc1827d71163e411b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
 下圖說明為了在安全私人網路上提供資訊給 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式而開發的簡單 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 因為資料重要性低、預期網路本質上是安全的，或者安全性已由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構的下一層提供，所以不需要安全性。  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.NetTcpBinding>  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

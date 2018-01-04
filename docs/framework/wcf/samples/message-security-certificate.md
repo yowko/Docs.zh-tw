@@ -14,11 +14,12 @@ caps.latest.revision: "51"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0587883a7f354ec03e3fd47ea362b93f006028ba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d21bda439e40880a389ccbb9bb28a45a16735805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-certificate"></a>訊息安全性憑證
 這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配 X.509 v3 憑證驗證的 WS-Security，並要求使用伺服器之 X.509 v3 憑證進行驗證的伺服器。 這個範例會使用預設的設定值，使所有在用戶端與伺服器之間的應用程式訊息進行簽署與加密。 這個範例根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)和用戶端主控台程式和網際網路資訊服務 (IIS) 裝載的服務程式庫所組成。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -343,4 +344,4 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

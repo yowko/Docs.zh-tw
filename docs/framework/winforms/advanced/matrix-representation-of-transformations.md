@@ -27,11 +27,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10babac22fd94bd00b14b7f861fe99469d3ecbda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c68a79f2a40117a980cb6206b74d42f885874aa8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="matrix-representation-of-transformations"></a>以矩陣來表示轉換
 M × n 矩陣是一組數字中的資料列 m 和 n 個資料行排列。 下圖將顯示數個矩陣。  
@@ -113,6 +114,6 @@ M × n 矩陣是一組數字中的資料列 m 和 n 個資料行排列。 下圖
   
  ![轉換](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

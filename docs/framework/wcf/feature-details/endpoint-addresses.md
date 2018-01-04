@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 端點位址是由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別在 <xref:System.ServiceModel.EndpointAddress> 程式設計模型中表示，這個類別包含選擇性的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 屬性，而這個屬性可讓與某個端點交換訊息的其他端點驗證該端點；此外，這個類別也包含一組選擇性的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性，這些屬性則會定義取用服務時所需的其他任何 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
@@ -147,6 +148,6 @@ ms.lasthandoff: 12/02/2017
   
  在某些情況中，端點會接收抵達基礎傳輸的所有訊息，而不只有包含適當 `To` 標頭的訊息。 若要啟用這項功能，使用者可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

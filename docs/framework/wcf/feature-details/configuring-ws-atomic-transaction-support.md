@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d398df112a7309979ba35020fa1d9538aa0ce5d6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>設定 WS-Atomic 異動支援
 這個主題說明如何使用 [WS-AT 組態公用程式] 來設定 WS-AtomicTransaction (WS-AT) 支援。  
@@ -127,6 +128,6 @@ ms.lasthandoff: 12/02/2017
   
 -   31：詳細資訊  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
  [WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

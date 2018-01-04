@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 265a81d8af566a54172fa73230ac388b8f0b848e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3863812bc3c83b346f2340bcfbc609a1024c3c6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>HOW TO：還原序列化執行個體資料屬性
 有時候，使用者或工作流程管理員可能會想要手動檢查持續工作流程執行個體的狀態。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供公開下列四個資料行的執行個體資料表檢視：  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd4bf1a97a544730714c46c1ba6f7f102166da35
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 511f5177e1b9d2660daf887cc13728aed2c9de0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>設定 Internet Information Services 7.0 for Windows Communication Foundation
 Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您選擇性地安裝所需的元件。 這項設計是以 [!INCLUDE[wv](../../../../includes/wv-md.md)]中引進的新資訊清單驅動元件化技術為基礎。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 有超過 40 項可以個別安裝的獨立功能元件。 這讓 IT 專業人員能夠輕鬆地依其需要自訂安裝。 本主題會討論如何設定 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 以搭配 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用，並判斷需要哪些元件。  
@@ -79,8 +80,8 @@ Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您�
   
  `</system.webServer>`  
   
-## <a name="see-also"></a>另請參閱  
- [WAS 啟動架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
+## <a name="see-also"></a>請參閱  
+ [WAS 啟用架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
  [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [如何： 安裝及設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7367cabecc18f32860e0a391ce5cf48d54503dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-equivalence"></a>資料合約等價
 若要讓用戶端成功地將特定型別的資料傳送至服務，或讓服務成功地將資料傳送至用戶端，傳送的型別不一定要存在於接收端。 唯一的需求是這兩個型別的資料合約必須相等  (某些情況下，嚴格對等不是必要項目，如所述[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  
@@ -69,9 +70,9 @@ ms.lasthandoff: 12/02/2017
   
  在應用程式之間傳遞參數和傳回值時，如果預期型別是介面，它相當於 <xref:System.Object> 型別的預期型別。 因為每個型別最終都是衍生自 <xref:System.Object>，所以每個資料合約最終都會衍生自 <xref:System.Object> 的資料合約。 因此，如果需要介面，則可以傳遞任何資料合約類型。 若要順利使用的介面; 不需要其他步驟如需詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  [資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

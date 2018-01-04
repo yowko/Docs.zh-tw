@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284bd30a0a42f245c6b75d916853b264c7f72e6a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 83ee8c5e0cd578a0eb821a35a27c5ff0072e5533
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>如何：存取 Managed HTML 文件物件模型
 您可以從兩種類型的應用程式中，存取受管理的「HTML 文件物件模型」(DOM)：  
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/22/2017
   
 1.  您的應用程式或 <xref:System.Windows.Forms.UserControl> 需要完全信任，才能存取受管理的 HTML DOM。 若要部署使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 的 Windows Forms 應用程式，可以使用「使用權限提高」或「受信任的應用程式部署」要求完全信任；如需詳細資料，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

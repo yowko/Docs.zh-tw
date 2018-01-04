@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="why-transformation-order-is-significant"></a>為何轉換順序很重要
 單一<xref:System.Drawing.Drawing2D.Matrix>物件可儲存單一轉換的序列。 後者稱為複合轉換。 取得複合的轉換矩陣乘以個別轉換的矩陣。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  前一個範例的結果是相同的此主題中的第一個範例的結果。 這是因為我們反轉方法呼叫的順序和矩陣乘法的順序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Drawing2D.Matrix>  
  [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

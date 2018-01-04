@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee1da95a61153b3a2a8478e63bac21271120890d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 946f024ee0c0bf421a00ef2708c436003949f3b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 元件 (Windows Form)
 Windows Form `ImageList` 元件可用來儲存影像，然後可以用控制項來顯示這些影像。 影像清單可讓您針對單一且一致的影像目錄來撰寫程式碼。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ImageList 元件概觀](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
  說明此元件是什麼，並說明其主要功能與屬性。  
   
@@ -36,7 +37,7 @@ Windows Form `ImageList` 元件可用來儲存影像，然後可以用控制項�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ImageList>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

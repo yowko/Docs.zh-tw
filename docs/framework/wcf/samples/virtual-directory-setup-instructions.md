@@ -13,11 +13,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72487c4a6720f80119beb837fbb3b5ea25ac3b93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例的目的是共用名為 servicemodelsamples 的共用虛擬目錄，它會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
   
 6.  設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的實體路徑。  建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
-7.  按一下 [確定]。 隨即為 WCF 範例建立 Web 應用程式。  
+7.  按一下 [確定 **Deploying Office Solutions**]。 隨即為 WCF 範例建立 Web 應用程式。  
   
     > [!NOTE]
     >  這個工作只需執行一次，因為所有的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例都使用相同的 servicemodelsamples Web 應用程式。  
@@ -200,5 +201,5 @@ ms.lasthandoff: 12/02/2017
   
     3.  在**群組**資料行，請檢查值**ASPNET**是 「 使用者 」。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

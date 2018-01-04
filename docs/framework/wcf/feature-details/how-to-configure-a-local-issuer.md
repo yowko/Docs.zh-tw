@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90edf0735d890e0abc1560de5a7f523ee2faa7c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-local-issuer"></a>HOW TO：設定本機簽發者
 本主題會說明如何將用戶端設定成使用已發行權杖的本機簽發者。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  選擇項。 將本機簽發者的已設定端點行為新增到 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 屬性所傳回的集合，即可新增該行為。  
+5.  選擇性。 將本機簽發者的已設定端點行為新增到 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 屬性所傳回的集合，即可新增該行為。  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
@@ -77,14 +78,14 @@ ms.lasthandoff: 12/02/2017
   
 3.  將 `binding` 和 `bindingConfiguration` 屬性設定為會參考當與本機簽發者端點進行通訊時所使用之適當繫結的值。  
   
-4.  選擇項。 設定[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)做為子元素 <`localIssuer`> 項目，並指定本機簽發者的身分識別資訊。  
+4.  選擇性。 設定[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)做為子元素 <`localIssuer`> 項目，並指定本機簽發者的身分識別資訊。  
   
-5.  選擇項。 設定[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)做為子元素 <`localIssuer`> 項目，並指定正確定址本機簽發者所需的其他標頭。  
+5.  選擇性。 設定[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)做為子元素 <`localIssuer`> 項目，並指定正確定址本機簽發者所需的其他標頭。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請注意，如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 `null`。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [如何： 建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [如何： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+## <a name="see-also"></a>請參閱  
+ [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

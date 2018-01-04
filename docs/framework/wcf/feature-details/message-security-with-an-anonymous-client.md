@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
 下列案例會顯示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息安全性所保護的用戶端和服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用豐富的宣告進行授權，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
@@ -141,7 +142,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  

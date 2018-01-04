@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29d276cba34ad00b9d6048701cd76bb64513087d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f0d5c25e2b2d3dac042ef93e5a174b25ce17314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-sample"></a>基本範例
 這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。  
@@ -111,4 +112,4 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

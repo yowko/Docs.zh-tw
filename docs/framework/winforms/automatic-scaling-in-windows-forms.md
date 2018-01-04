@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4eefab1dccc295557d95485d6f38add41e634fa4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>自動縮放 Windows Form
 自動縮放功能允許某部電腦上以特定顯示解析度或系統字型所設計的表單和其控制項，可以在另一部電腦上以不同的顯示解析度或系統字型正確地顯示。 如此可確保表單和其控制項利用智慧方式調整大小，以便與使用者和其他開發人員電腦上的原生視窗和其他應用程式保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 對自動縮放和視覺化樣式的支援，可以讓 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式在與每個使用者電腦上的原生 Windows 應用程式相較下，都能保有一致的外觀和風格。
@@ -107,7 +108,7 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 
     - 可以覆寫 <xref:System.Windows.Forms.Control.ScaleControl%2A> 方法，以變更目前控制項的縮放邏輯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>  
  <xref:System.Windows.Forms.Control.Scale%2A>  
  <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  

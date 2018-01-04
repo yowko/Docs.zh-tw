@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65882925c6fbe3e9b393b139a937bc9a1f95ed04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 579bce312296d9799f9f7c739f740e2c9111ccff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Form
 本逐步解說示範如何將 Windows Presentation Foundation (WPF) 控制項從一個 Windows Form 複製到另一個 Windows Form。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 -   複製 WPF 控制項。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
      由於複製的控制項是 `Form2` 類別的私用欄位，因此該控制項的名稱也是 `elementHost1`。 這樣並不會與 `Form1` 類別中的 `elementHost1` 產生名稱衝突。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  

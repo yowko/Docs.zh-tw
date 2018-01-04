@@ -12,16 +12,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4b890b80880638fae62c1ae79f8d2f436ef309
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 368e6a4514eafdf4d3c5b38c5e31ff21e56f67e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區的屬性
 本節中的主題描述 SQL 工作流程執行個體存放區的詳細資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [執行個體編碼選項](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   
@@ -35,6 +36,6 @@ ms.lasthandoff: 12/02/2017
   
 -   [連接字串與連接字串名稱](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Server App Fabric 執行個體存放區](http://go.microsoft.com/fwlink/?LinkId=201201)  
  [App Fabric SQL Server 持續性資料庫](http://go.microsoft.com/fwlink/?LinkId=201202)

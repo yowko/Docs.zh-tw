@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9a9355c223d3d37811383d52d64f0ac6ddeeaea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="jsonp"></a>JSONP
 此範例示範如何在 WCF REST 服務中支援 JSON with Padding (JSONP)。 JSONP 是一項慣例，透過在目前文件中產生指令碼標記，用來叫用 (Invoke) 跨網域指令碼。 結果會傳回到指定的回呼函式 (Callback Function)。 JSONP 的基礎概念是，之類的標記\<src ="http:/ /..."> 可以評估指令碼，來自任何網域，而這些標記擷取的指令碼中的其他函式可能已定義範圍內進行評估。  

@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的儲存格樣式
 每個資料格內<xref:System.Windows.Forms.DataGridView>控制項可以有它自己的樣式，例如，文字格式、 背景色彩、 前景色彩和字型。 通常，不過，多個資料格會共用特定的樣式特性。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
  下表列出主屬性，取得或設定<xref:System.Windows.Forms.DataGridViewCellStyle>物件。  
   
-|屬性|類別|說明|  
+|屬性|類別|描述|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView><xref:System.Windows.Forms.DataGridViewColumn>， <xref:System.Windows.Forms.DataGridViewRow>，和衍生類別|取得或設定整個控制項 （包括標題儲存格），資料行或資料列中的所有資料格所使用的預設樣式。|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|取得或設定控制項中的所有資料列所使用的預設儲存格樣式。 這不包括標頭資料格。|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  快取儲存在儲存格的值<xref:System.Windows.Forms.DataGridViewCell.Style%2A>屬性是非常重要，不論設定特定的樣式值。 如果您暫時取代樣式設定，將其還原至其原始的 「 未設定 」 狀態可確保，資料格會回到繼承較高層級的樣式設定。 如果您需要決定作用中的儲存格值，不管是否繼承樣式的實際樣式，請使用儲存格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  

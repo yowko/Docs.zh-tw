@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afc08d08a8843460972daf259027475cbbc10b66
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>HOW TO：將中繼資料匯入服務端點
 本主題說明如何匯入服務端點的集合中的中繼資料以及如何使用服務中定義[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主題將示範如何建立用戶端應用程式，從服務匯入中繼資料，然後在服務上呼叫 `Add` 方法。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 12/02/2017
   
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)  
  [快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)

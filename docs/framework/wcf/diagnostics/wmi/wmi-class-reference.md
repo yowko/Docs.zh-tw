@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>WMI 類別參考
 本節將列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI 提供者公開的所有 WMI 類別。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="accessing-wmi-instances"></a>存取 WMI 執行個體  
  WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以從 [端點執行個體] -> [繫結] -> [BindingElements] 來存取 TransportBindingElement 執行個體。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
   
  [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
- [繫結](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [Binding](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
  [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
@@ -56,13 +57,13 @@ ms.lasthandoff: 12/02/2017
   
  [ConnectionOrientedTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
   
- [合約](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [Contract](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
   
  [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
  [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [端點](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
  [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 12/02/2017
   
  [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [服務](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
  [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   

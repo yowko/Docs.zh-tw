@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1078488ca1443b4e2336386eff1ac3a117a71501
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3149a0629fab704dbcae92095b3ef62dc5f9c36c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls"></a>Windows Form 控制項
 當您設計及修改 Windows Forms 應用程式的使用者介面時，您必須新增、對齊和調整控制項的位置。 控制項是表單物件內所包含的物件。 每一種控制項都有自己適合特定用途的一組屬性、方法和事件。 您可以在設計工具中操作控制項和撰寫程式碼以在執行階段以動態方式加入控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [將控制項加入 Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
  提供將控制項加入表單的相關連結。  
   

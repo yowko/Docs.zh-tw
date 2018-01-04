@@ -13,11 +13,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd656bed608811a5a04a47849bf915f708a62a9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-msmq-binding"></a>交易 MSMQ 繫結
 這個範例會示範如何使用訊息佇列 (MSMQ) 執行交易佇列通訊。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/02/2017
   
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。  
   
- 當交易是用於傳送與接收訊息時，實際上會出現兩個不同的交易。 當用戶端在交易範圍內傳送訊息時，對用戶端與用戶端佇列管理員來說，交易屬於本機範圍。 當服務在交易範圍內接收訊息時，對服務與接收佇列管理員來說，交易屬於本機範圍。 您一定要記住，用戶端與服務並未參與相同的交易，而是在配合佇列執行其作業時 (例如傳送與接收) 使用不同的交易。  
+ 當交易是用於傳送與接收訊息時，實際上會出現兩個不同的交易。 當用戶端在異動範圍內傳送訊息時，對用戶端與用戶端佇列管理員來說，異動屬於本機範圍。 當服務在交易範圍內接收訊息時，對服務與接收佇列管理員來說，交易屬於本機範圍。 您一定要記住，用戶端與服務並未參與相同的異動，而是在配合佇列執行其作業時 (例如傳送與接收) 使用不同的異動。  
   
  在這個範例中，用戶端會從交易範圍內將訊息批次傳送至服務。 接著，服務會在所定義的交易範圍內接收傳送至佇列的訊息。  
   
@@ -42,7 +43,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- 服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為， 這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同交易範圍。 這種行為也會確保當方法擲回例外狀況時，訊息會傳回至佇列。 如果未設定這個作業行為，已佇列通道所建立的交易就會從佇列讀取訊息、並且在分派前就自動進行認可，因此，如果此作業失敗，訊息就會遺失。 最常見的案例，就是登記於用來從佇列讀取訊息之交易的服務作業，如下列程式碼所示範。  
+ 服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為， 這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同異動範圍。 這種行為也會確保當方法擲回例外狀況時，訊息會傳回至佇列。 如果未設定這個作業行為，已佇列通道所建立的交易就會從佇列讀取訊息、並且在分派前就自動進行認可，因此，如果此作業失敗，訊息就會遺失。 最常見的案例，就是登記於用來從佇列讀取訊息之異動的服務作業，如下列程式碼所示範。  
   
 ```  
  // This service class that implements the service contract.  
@@ -101,7 +102,7 @@ public static void Main()
 > [!NOTE]
 >  使用 <xref:System.Messaging> 來建立佇列時，佇列會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 端點會使用包含 net.msmq 配置的佇列位址、使用 "localhost" 代表本機電腦，並在其路徑中使用正斜線。  
   
- 用戶端會建立一個交易範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫交易範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可交易。  
+ 用戶端會建立一個異動範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫交易範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可交易。  
   
 ```  
 // Create a client.  
@@ -248,4 +249,4 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

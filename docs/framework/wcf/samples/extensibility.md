@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>擴充性
 本節包含的範例將處理 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的自訂擴充性和其他功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [通道擴充性](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  示範自訂通道。  
   
@@ -41,10 +42,10 @@ ms.lasthandoff: 12/02/2017
  [中繼資料擴充性](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
  示範自訂中繼資料。  
   
- [安全性擴充性](../../../../docs/framework/wcf/samples/security-extensibility.md)  
+ [安全性擴充](../../../../docs/framework/wcf/samples/security-extensibility.md)  
  示範自訂安全性。  
   
- [新聞訂閱擴充性範例](../../../../docs/framework/wcf/samples/syndication-extensibility-samples.md)  
+ [摘要整合擴充性範例](../../../../docs/framework/wcf/samples/syndication-extensibility-samples.md)  
  示範自訂新聞訂閱。  
   
  [傳輸擴充性](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/02/2017
  [作業格式器和作業選取器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  示範擴充點如何使用自訂訊息資料格式。  
   
- [自訂訊息篩選條件](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
+ [自訂訊息篩選](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
  示範如何取代 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用來將訊息分派至端點的訊息篩選器。  
   
  [自訂服務主機](../../../../docs/framework/wcf/samples/custom-service-host.md)  

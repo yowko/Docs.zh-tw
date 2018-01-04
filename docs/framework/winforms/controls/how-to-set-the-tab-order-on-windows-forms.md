@@ -21,17 +21,18 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d514b20381b44102076c776d12181df3838e4eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：在 Windows Form 上設定定位順序
 定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。 每個表單都有它自己的定位順序。 根據預設，定位順序是用來建立控制項的順序相同。 定位順序編號從 0 開始。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>若要設定控制項的定位順序  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  選項按鈕群組有一個索引標籤停止在執行階段。 選取的按鈕 (也就是具有按鈕其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性會自動設定為`true`，其他按鈕有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性設定為`false`。 如需有關群組<xref:System.Windows.Forms.RadioButton>控制項，請參閱[函式，為一組群組 Windows Form RadioButton 控制項](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

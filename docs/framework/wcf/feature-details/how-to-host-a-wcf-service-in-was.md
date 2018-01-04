@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33387a9b155a471209039e5977bc7134b1439ff3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>HOW TO：在 WAS 中裝載 WCF 服務
 本主題概要說明建立 Windows Process Activation Services (又稱為 WAS) 所裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，必要的基本步驟。 WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用接聽項配接器介面與透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的非 HTTP 通訊協定 (例如 TCP、具名管道，與訊息佇列) 接收的啟用要求進行通訊。  
@@ -108,6 +109,6 @@ ms.lasthandoff: 12/02/2017
   
 6.  請編譯並執行用戶端。  
   
-## <a name="see-also"></a>另請參閱  
- [TCP 啟動](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+## <a name="see-also"></a>請參閱  
+ [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

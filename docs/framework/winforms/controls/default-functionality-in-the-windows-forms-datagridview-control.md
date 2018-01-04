@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的預設功能
 Windows Form<xref:System.Windows.Forms.DataGridView>控制為使用者提供相當大的預設功能。  
@@ -56,6 +57,6 @@ Windows Form<xref:System.Windows.Forms.DataGridView>控制為使用者提供相�
   
 -   自動排序依據基礎資料，當使用者按一下資料行標頭的資料列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

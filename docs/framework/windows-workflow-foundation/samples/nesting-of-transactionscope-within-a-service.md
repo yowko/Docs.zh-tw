@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7455f2b45e47a6d72118055bd891f7c297b56483
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>巢狀處理服務中的 TransactionScope
 這個範例是由兩個執行的案例所組成，可示範如何在服務中處理 <xref:System.Activities.Statements.TransactionScope> 活動執行個體。 首先，交易是使用 <xref:System.Activities.Statements.TransactionScope> 活動 (可在用戶端建立新交易) 及 <xref:System.ServiceModel.Activities.TransactedReceiveScope> (可在伺服器上接收交易存留期及設定其範圍) 所起始。 服務內的第一個案例會執行次要 <xref:System.Activities.Statements.TransactionScope> 活動，以示範服務內 <xref:System.Activities.Statements.TransactionScope> 活動的巢狀結構。 第二個案例會示範如何在巢狀 <xref:System.Activities.Statements.TransactionScope> 活動內遵守逾時。  

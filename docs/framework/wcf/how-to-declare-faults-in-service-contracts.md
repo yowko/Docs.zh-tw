@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f53f8396dc16f9f4538b772d376287cc1695ff47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>HOW TO：在服務合約中宣告錯誤
 在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。 不過在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，藉由在服務合約中宣告 SOAP 錯誤，服務合約便可指定傳回用戶端的錯誤資訊。 如需例外狀況和錯誤之間的關聯性的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -54,6 +55,6 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[FaultContractAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
  <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

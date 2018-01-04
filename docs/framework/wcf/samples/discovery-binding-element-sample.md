@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b658cc481d3ca5e87b5b9e2aab6b7561be2c65b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-binding-element-sample"></a>探索繫結項目範例
 此範例示範如何使用探索用戶端繫結項目探索服務。 此功能可讓開發人員將探索用戶端通道加入至其現有的用戶端通道堆疊中，讓程式設計模型變得非常直覺。 開啟相關聯的通道時，就會使用探索解析服務的位址。 這個範例包含下列專案：  
@@ -130,4 +131,4 @@ CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBinding
   
 4.  請注意，用戶端不需知道位址，就能找到此服務。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2538a9c483b949dfef1c60bd2225f5daf4e01117
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1cbe73468e2ce1c8a4fe81a676c819b04d2ef760
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-lifetime"></a>自訂存留期
 此範例示範如何撰寫 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 延伸模組以便針對共用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務執行個體提供自訂存留時間服務。  
@@ -232,4 +233,4 @@ public class EchoService : IEchoService
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

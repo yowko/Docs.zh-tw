@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>HOW TO：建立聯合用戶端
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，建立的用戶端*同盟服務*包含三個主要步驟：  
@@ -61,14 +62,14 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-2.  如果不需要權杖快取，請將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> 屬性設為 `false`。 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> 屬性控制是否快取來自安全性權杖服務的這類權杖。 如果此屬性設為 `false`，每當用戶端必須向聯合服務重新驗證自己時，不管前一個權杖是否仍舊有效，都會向安全性權杖服務要求新的權杖。 如果此屬性設為 `true`，每當用戶端必須向聯合服務重新驗證自己時，只要權杖尚未到期，用戶端都會重複使用現有的權杖。 預設為 `true`。  
+2.  如果不需要權杖快取，請將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> 屬性設為 `false`。 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> 屬性控制是否快取來自安全性權杖服務的這類權杖。 如果此屬性設為 `false`，每當用戶端必須向聯合服務重新驗證自己時，不管前一個權杖是否仍舊有效，都會向安全性權杖服務要求新的權杖。 如果此屬性設為 `true`，每當用戶端必須向聯合服務重新驗證自己時，只要權杖尚未到期，用戶端都會重複使用現有的權杖。 預設值為 `true`。  
   
 3.  如果必須在快取的權杖上設定時間限制，請將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> 屬性設為 <xref:System.TimeSpan> 值。 此屬性會指定多久快取權杖一次。 一旦經過了指定的時間範圍，就會從用戶端快取中移除權杖。 根據預設，權杖無快取時間限制。 下列範例會將時間範圍設為 10 分鐘。  
   
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4.  選擇項。 將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> 設為百分比。 預設為 60%。 此屬性會指定權杖的有效期間百分比。 例如，如果發行權杖有效時間是 10 小時，而 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> 設為 80，則權杖會在 8 小時後更新。 下例範例會將值設為 80%。  
+4.  選擇性。 將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> 設為百分比。 預設為 60%。 此屬性會指定權杖的有效期間百分比。 例如，如果發行權杖有效時間是 10 小時，而 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> 設為 80，則權杖會在 8 小時後更新。 下例範例會將值設為 80%。  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/02/2017
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6.  選擇項。 設定所建立的任何特定發行者的自訂端點行為 <`issuerChannelBehaviors`> 元素的子系 <`issuedToken`> 項目。 每個行為，建立 <`add`> 元素的子系 <`issuerChannelBehaviors`> 項目。 設定指定之行為的簽發者位址`issuerAddress`屬性 <`add`> 項目。 指定本身的行為，藉由設定`behaviorConfiguration`屬性 <`add`> 項目。  
+6.  選擇性。 設定所建立的任何特定發行者的自訂端點行為 <`issuerChannelBehaviors`> 元素的子系 <`issuedToken`> 項目。 每個行為，建立 <`add`> 元素的子系 <`issuerChannelBehaviors`> 項目。 設定指定之行為的簽發者位址`issuerAddress`屬性 <`add`> 項目。 指定本身的行為，藉由設定`behaviorConfiguration`屬性 <`add`> 項目。  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -170,11 +171,11 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  用戶端對於規範到特定 URI 範圍的憑證概念，只會套用到對服務 (可在這些 URI 上公開端點) 執行傳出呼叫的應用程式上。 不適用於用來簽署發行的權杖，例如所傳回的集合中的伺服器上設定的憑證<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>的<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>類別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [如何： 停用安全工作階段在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [如何： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [如何： 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [如何： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [使用中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [How to： 安全中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+## <a name="see-also"></a>請參閱  
+ [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [如何：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [如何：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [如何：保護中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

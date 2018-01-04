@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>匯出和匯入中繼資料
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，匯出中繼資料是一項程序，描述服務端點並將其投射至並行標準化表示法，使得用戶端了解如何使用服務。 匯入服務中繼資料是從服務中繼資料產生 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體或組件的程序。  
@@ -56,17 +57,17 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.Description.WsdlExporter> 型別會在匯出處理期間重新擲回所有攔截到的例外狀況。 這些例外狀況不會在 `Errors` 屬性中當成錯誤來擷取。 一旦 <xref:System.ServiceModel.Description.WsdlExporter> 擲回例外狀況，就會呈現錯誤狀態而無法重複使用。 當因為使用萬用字元動作而無法匯出作業，以及當碰到重複的繫結名稱時，<xref:System.ServiceModel.Description.WsdlExporter> 就會將警告新增至自身的 `Errors` 屬性中。  
   
-## <a name="in-this-section"></a>本章節內容  
- [如何： 匯入到服務端點的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+## <a name="in-this-section"></a>本節內容  
+ [如何：將中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  說明如何將下載的中繼資料匯入描述物件中。  
   
- [如何： 從服務端點匯出中繼資料](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [如何：從服務端點匯出中繼資料](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  說明如何將描述物件匯出至中繼資料。  
   
  [ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  說明描述物件與 WSDL 之間的對應。  
   
- [如何： 使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [如何：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  說明使用 Svcutil.exe 來匯出編譯組件中有關服務、合約與資料型別的中繼資料。  
   
  [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -77,6 +78,6 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
-## <a name="see-also"></a>另請參閱  
- [匯出 WCF 擴充的自訂中繼資料](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- [將自訂的中繼資料匯入 WCF 延伸模組](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+## <a name="see-also"></a>請參閱  
+ [匯出 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
+ [匯入 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

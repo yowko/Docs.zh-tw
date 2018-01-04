@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f48027e413f9573158cfa2c3748fc93408b3f83
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="images-bitmaps-and-metafiles"></a>影像、點陣圖和中繼檔
 `Image` 類別為抽象基底類別，提供使用點陣影像 (點陣圖) 和向量影像 (中繼檔) 的方法。 `Bitmap` 類別和 <xref:System.Drawing.Imaging.Metafile> 類別都是繼承自 `Image` 類別。 `Bitmap` 類別透過提供載入、儲存和管理點陣影像的其他方法，來擴充 `Image` 類別的功能。 <xref:System.Drawing.Imaging.Metafile> 類別透過提供記錄和檢查向量影像的其他方法，來擴充 `Image` 類別的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [點陣圖類型](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
  討論各種影像格式。  
   

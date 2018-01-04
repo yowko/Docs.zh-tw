@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a3bc0116ec34a3370012472c31a9191cf26f720
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d6b0620e9cb2575bcfe9cd6f01b5d87669df69b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -125,7 +126,7 @@ class ServiceBehaviorAttribute : Behavior
   
  存取類型：唯讀  
   
- 指定當目前的工作階段關閉時，是否會完成暫止的交易。  
+ 指定當目前的工作階段關閉時，是否會完成暫止的異動。  
   
 ### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
  資料型別：字串  
@@ -139,7 +140,7 @@ class ServiceBehaviorAttribute : Behavior
   
  存取類型：唯讀  
   
- 交易必須完成的期間。  
+ 異動必須完成的期間。  
   
 ### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  資料型別：布林值  
@@ -161,5 +162,5 @@ class ServiceBehaviorAttribute : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>

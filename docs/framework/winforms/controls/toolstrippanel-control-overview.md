@@ -17,18 +17,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bed2f4cbdc2f7d2e2647e39163959aaf42ae8bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7976e4641f5bda02d6569ab17e7f1de139c59a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 控制項概觀
 A<xref:System.Windows.Forms.ToolStripPanel>提供單一區域的定位和浮動定位<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控制項。 多個<xref:System.Windows.Forms.ToolStrip>控制項垂直或水平堆疊取決於<xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A>的<xref:System.Windows.Forms.ToolStripPanel>。  
   
 ### <a name="important-toolstrippanel-members"></a>重要 ToolStripPanel 成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|取得或設定值，指出水平或垂直方向<xref:System.Windows.Forms.ToolStripPanel>。|  
 |<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|取得或設定<xref:System.Windows.Forms.ToolStripRenderer>用於自訂的外觀<xref:System.Windows.Forms.ToolStripPanel>。|  
@@ -37,7 +38,7 @@ A<xref:System.Windows.Forms.ToolStripPanel>提供單一區域的定位和浮動�
 |<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|取得<xref:System.Windows.Forms.ToolStripPanelRow>以此<xref:System.Windows.Forms.ToolStripPanel>。|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|新增<xref:System.Windows.Forms.ToolStrip>至<xref:System.Windows.Forms.ToolStripPanel>。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  [ToolStrip 範例](http://msdn.microsoft.com/en-us/b7352439-184a-4a3a-b2ad-07465d3af9ed)

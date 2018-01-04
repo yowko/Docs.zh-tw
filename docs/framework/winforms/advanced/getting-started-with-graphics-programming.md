@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-graphics-programming"></a>圖形程式設計入門
 本節說明如何開始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Windows Forms 應用程式。 下列主題示範如何完成數個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]工作，例如繪製和填滿圖形和文字。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  示範如何建立<xref:System.Drawing.Graphics>繪圖的物件。  
   

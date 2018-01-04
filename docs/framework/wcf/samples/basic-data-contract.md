@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: adba148a6e61437ba4e4089efb7a77efe3a785a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f8beb306321c5cf334951d54dd8da80892005c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-data-contract"></a>基本資料合約
 這個範例會示範如何實作資料合約。 資料合約可以讓您在服務間來回傳遞結構化資料。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)但會使用複數，而不是基本數值類型。  
@@ -152,4 +153,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

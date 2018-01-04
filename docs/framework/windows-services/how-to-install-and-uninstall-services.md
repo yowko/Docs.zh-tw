@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d52512ef98596e1e3d5f0acb3b1bbc0eebffe867
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf767813f965b2c52a5061f74bbf2fab4572791b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-uninstall-services"></a>如何：安裝及解除安裝服務
 如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用稱為 InstallUtil.exe 的命令列公用程式來快速安裝服務應用程式。 如果您是開發人員並且想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 請參閱[Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)。  
@@ -71,8 +72,8 @@ ms.lasthandoff: 11/21/2017
   
 3.  有時候，刪除服務的可執行檔之後，服務可能還是會在登錄中。 在此情況下，使用命令[sc delete](http://technet.microsoft.com/library/cc742045.aspx)從登錄移除服務項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [Installutil.exe (安裝程式工具)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c122931b0a00f487ddab07550913988462cfd50e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 74735afcb1d6be319ad5d497615a3b725a4d5574
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>多重文件介面 (MDI) 應用程式
 多重文件介面 (MDI) 應用程式可讓您在相同的時間，顯示多個文件，與它自己的視窗中顯示每個文件。 MDI 應用程式通常具有視窗功能表項目具有子功能表視窗或文件之間切換。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
 > [!NOTE]
 >  沒有 Windows Form 中 MDI 表單和 windows 單一文件介面 (SDI) 之間的一些行為差異。 `Opacity`屬性不會影響 MDI 子表單的外觀。 此外，<xref:System.Windows.Forms.Form.CenterToParent%2A>方法不會影響行為的 MDI 子表單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
  說明如何建立在 MDI 應用程式內的多個文件容器。  
   

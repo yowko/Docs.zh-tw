@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows Form 上使用的控制項
 以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。 除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。 如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。 如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/14/2017
 > [!NOTE]
 >  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 控制項是根據 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 所提供的類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
  根據 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，列出和描述 Windows Forms 控制項。  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在 Managed Windows 服務中裝載 WCF 服務
 本主題概要說明建立可由 Windows 服務裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，必要的基本步驟。 此案例是由 Managed Windows 服務裝載選項所啟用，就是在非訊息啟動的安全環境中由網際網路資訊服務 (IIS) 外部所裝載的長期執行之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
@@ -144,8 +145,8 @@ ms.lasthandoff: 12/02/2017
   
  就像「自我裝載」選項一樣，Windows 服務裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 服務會實作成為主控台應用程式並包含專屬的裝載程式碼。 在其他裝載環境中，例如 Internet Information Services (IIS) 所裝載的 Windows 處理序啟用服務 (WAS)，開發人員就不需要撰寫裝載程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)  
- [受管理的應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [在 Managed 應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
  [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

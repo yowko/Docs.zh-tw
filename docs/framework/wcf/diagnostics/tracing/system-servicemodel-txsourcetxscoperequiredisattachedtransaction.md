@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284e0851f08d8d06faaea1b6bd98d4b0b0af5130
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f6c34c02067c3cf6788dd98512941da5182b50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction
 從 InstanceContext 異動接收到指定之作業的指定異動。  
   
 ## <a name="description"></a>描述  
- 如果提供給使用者程式碼的交易是由此叫用之前呼叫的 AutoComplete=false 方法所留下，則會進行追蹤。  
+ 如果提供給使用者程式碼的異動是由此叫用之前呼叫的 AutoComplete=false 方法所留下，則會進行追蹤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

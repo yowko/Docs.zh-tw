@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 937e879fc6104f06234ab5201eae8e330dbb68f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>HOW TO：建立基本 Atom 摘要
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  
@@ -106,6 +107,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

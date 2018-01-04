@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bfefd41a4773c81757f73e725095057f988cef2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>縮放 Windows Form DataGridView 控制項的最佳作法
 <xref:System.Windows.Forms.DataGridView>控制項用來提供最大的延展性。 如果您需要顯示大量的資料，您應該遵循本主題，以避免消耗大量的記憶體，或降低使用者介面 (UI) 的回應中所述的指導方針。 本主題將討論下列問題：  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/21/2017
   
 -   請勿呼叫`Sort(IComparer)`多載<xref:System.Windows.Forms.DataGridView.Sort%2A>方法。 使用自訂比較子排序會導致變成非共用的所有資料列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
  [Windows Forms DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  

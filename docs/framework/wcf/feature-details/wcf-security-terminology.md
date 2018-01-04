@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 386e58c5b04ed82f9ee42c7f04eacd4610c2a598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
 您可能會對討論安全性時使用的一些用語感到陌生。 本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/21/2017
  X.509  
  國際認可的標準，適用於定義其所需部分的憑證。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Communication Foundation 的基本概念](../../../../docs/framework/wcf/fundamental-concepts.md)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

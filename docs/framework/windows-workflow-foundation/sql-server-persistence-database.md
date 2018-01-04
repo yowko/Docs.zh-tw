@@ -12,16 +12,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a86cbe3d36383623c70c6a0588d3c0e8fe0bf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 持續性資料庫
 本節提供有關 SQL 工作流程執行個體存放區所支援之公用資料庫檢視表的詳細資料，並示範如何還原序列化基本執行個體資料屬性以及如何查詢非保存的執行個體。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [持續性資料庫結構描述](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
   
@@ -29,5 +30,5 @@ ms.lasthandoff: 12/02/2017
   
 -   [如何：非保存執行個體的查詢](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [App Fabric SQL Server 持續性資料庫](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

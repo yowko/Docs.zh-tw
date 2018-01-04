@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78f963f61c7ec67d6104a90c047ce78b0470568a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f8138fb94de953f133ab21cc2320e0914bc380fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>在工作流程服務中設定序列化
 工作流程服務是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，因此具有使用 <xref:System.Runtime.Serialization.DataContractSerializer> (預設值) 或 <xref:System.Xml.Serialization.XmlSerializer> 的選項。 撰寫非工作流程服務時，要使用的序列化程式型別會指定於服務或作業合約上。 建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作流程服務時，您不會在程式碼中指定這些合約，而是由合約推斷在執行階段中產生合約。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]合約推斷，請參閱[工作流程中使用的合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  序列化程式是使用 <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> 屬性來指定。 您可以在設計工具中設定此屬性，如下圖所示。  

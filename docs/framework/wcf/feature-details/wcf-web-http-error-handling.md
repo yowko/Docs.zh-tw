@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 156960a6594f5475e339b36e5dabf46f26d13d62
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 錯誤處理
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 錯誤處理可以傳回 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 服務產生的錯誤，除了明確指定 HTTP 狀態碼之外，也會使用與作業相同的格式 (例如 XML 或 JSON) 傳回錯誤詳細資料。  
@@ -59,9 +60,9 @@ Public string Operation2()
   
  <xref:System.ServiceModel.Web.WebFaultException> 是一個 <xref:System.ServiceModel.FaultException>，因此可以針對公開 SOAP 端點以及 Web HTTP 端點的服務，用來當做服務的錯誤例外狀況程式撰寫模型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
  [定義並指定錯誤](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
- [處理例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
+ [處理例外狀況和失敗](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
  [傳送及接收錯誤](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

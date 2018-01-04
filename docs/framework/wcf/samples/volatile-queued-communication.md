@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 67fa95ffb23aee4dc3137dcab23eade8f87e9b9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="volatile-queued-communication"></a>變動性佇列通訊
 這個範例會示範如何透過訊息佇列 (MSMQ) 傳輸來執行變動性佇列通訊。 這個範例會使用 <xref:System.ServiceModel.NetMsmqBinding>。 這個案例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  在特定案例中，當及時傳遞比遺失訊息更重要時，您可能想要透過佇列傳送不具保證的變動性訊息。 如果佇列管理員毀損，變動性訊息不會存留。 因此，如果佇列管理員毀損，用於儲存變動性訊息的非交易式佇列會存留，但訊息本身無法存留，因為訊息並未儲存在磁碟中。  
   
 > [!NOTE]
->  您無法使用 MSMQ 在交易的範圍內傳送不具保證的變動性訊息。 此外，您必須建立非交易式佇列，才能傳送變動性訊息。  
+>  您無法使用 MSMQ 在交易的範圍內傳送不具保證的變動性訊息。 此外，您必須建立非異動式佇列，才能傳送變動性訊息。  
   
  此範例中的服務合約為 `IStockTicker`，這個合約會定義最適合與佇列一起使用的單向服務。  
   
@@ -127,7 +128,7 @@ public static void Main()
 </system.serviceModel>  
 ```  
   
- 由於此範例使用非交易式的佇列來傳送佇列訊息，因此無法將交易訊息傳送至佇列。  
+ 由於此範例使用非異動式的佇列來傳送佇列訊息，因此無法將異動訊息傳送至佇列。  
   
 ```  
 // Create a client.  
@@ -237,4 +238,4 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

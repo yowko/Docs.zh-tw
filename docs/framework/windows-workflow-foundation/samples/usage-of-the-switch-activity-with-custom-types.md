@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fbf80f0038ad830ab35fdb55272e45d8a6bffdc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61485a59ae3af17bef58c0fccbe062c8b9171a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>使用自訂類型之切換活動的使用
 這個範例描述如何啟用 <xref:System.Activities.Statements.Switch%601> 活動，在執行階段評估使用者定義的複雜類型。 在大部分傳統的程序性程式語言，[切換](http://go.microsoft.com/fwlink/?LinkId=180521)陳述式選取根據變數的條件評估的執行邏輯。 傳統上，`switch` 陳述式適用於可靜態評估的運算式。 例如，在 C# 中，這表示僅支援基本型別 (例如 <xref:System.Boolean>、<xref:System.Int32> 和 <xref:System.String>)，以及列舉型別。  
@@ -139,5 +140,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [內建活動程式庫](../../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)

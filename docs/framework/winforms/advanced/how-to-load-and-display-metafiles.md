@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 722b6d36801c69e500535a32e952ef8f45634d03
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d7d0f2f15fc9e1dce77b9d8183e2e17b7c35b928
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-and-display-metafiles"></a>如何：載入和顯示中繼檔
 <xref:System.Drawing.Imaging.Metafile>類別，繼承自<xref:System.Drawing.Image>類別，提供記錄、 顯示和檢查向量影像的方法。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

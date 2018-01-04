@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ab38de1fb2a932fefd4e37cbfab3d9bfbea616
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>竄改
 *竄改*會改變一則訊息或傳遞的訊息，並使用修改的訊息用於不它適用於的行為。  
@@ -29,10 +30,10 @@ ms.lasthandoff: 12/02/2017
   
  為減少這種情況發生，絕不要將 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 屬性設為 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>，同時避免使用 <xref:System.ServiceModel.Channels.MessageVersion>，例如靜態 <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> 屬性，這類屬性會將 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 屬性設為 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [提高權限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
  [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

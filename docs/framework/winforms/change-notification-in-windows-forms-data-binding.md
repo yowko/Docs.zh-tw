@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Form 資料繫結中的變更告知
 其中一個最重要的 Windows Form 資料繫結的概念是*變更通知*。 若要確保您的資料來源和繫結的控制項一直擁有最新的資料，您必須加入資料繫結變更通知。 具體來說，您想要確保繫結的控制項的資料來源，所做的變更會收到通知，而且資料來源會通知控制項的繫結的屬性所做的變更。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="change-notification-for-custom-controls"></a>自訂控制項變更通知  
  最後，從控制項端必須將公開*PropertyName*設計來繫結至資料的每一個屬性已變更 」 事件。 控制項屬性的變更會再傳播到繫結的資料來源。 如需詳細資訊，請參閱[如何： 套用 PropertyNameChanged 模式](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.ComponentModel.INotifyPropertyChanged>  
  <xref:System.ComponentModel.BindingList%601>  

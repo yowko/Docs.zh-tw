@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8ba8145d371a8773d860e88f073bcc5b732f1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-encoder"></a>選擇訊息編碼器
 本主題說明從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中所包含的訊息編碼器進行選擇的準則：二進位、文字和「訊息傳輸最佳化機制」(Message Transmission Optimization Mechanism，MTOM)。  
@@ -92,6 +93,6 @@ IgnoreWhitespace 設定會遭到忽略。
 
 用戶端和服務都必須同意傳送並接收壓縮的訊息，因此必須在用戶端和服務的 binaryMessageEncoding 元素上設定 compressionFormat 屬性。 如果服務或用戶端未設定使用壓縮，但另一方已設定，則會擲回 ProtocolException。啟用壓縮應仔細考慮。 如果網路頻寬形成瓶頸，壓縮多半是有用的。 在 CPU 成為瓶頸所在的情況下，壓縮會減少輸送量。 必須在模擬環境中進行適當測試，以確認這項功能對應用程式有益。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)

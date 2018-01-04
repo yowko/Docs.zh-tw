@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82f47fb0b789e41c332ebae2cfeaeb350ff0fddd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 017a14794dfb2cb2c49cc32df038600a984acf3f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>使用唯一的接聽 URI 模式探索服務範例
 此範例示範如何探索其 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 屬性設定為 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 的服務。 當 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 屬性設定為 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 時，透過將連接埠設定成唯一的，或者透過附加 GUID 讓路徑變成唯一的，來確保 ListenUri 是唯一的。  
@@ -49,4 +50,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\UniqueListenUriMode`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

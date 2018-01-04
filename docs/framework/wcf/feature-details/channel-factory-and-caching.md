@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b06d290760afa9a52274c30899e25f00bc18af2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-factory-and-caching"></a>通道處理站和快取
 WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立與 WCF 服務的通訊通道。  建立 <xref:System.ServiceModel.ChannelFactory%601> 執行個體會產生額外負荷，因為這涉及到下列作業：  
@@ -40,7 +41,7 @@ WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601>
 ## <a name="specifying-caching-behavior"></a>指定快取行為  
  快取行為是藉由將 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 屬性設定為下列其中一個值所指定。  
   
-|快取設定值|說明|  
+|快取設定值|描述|  
 |-------------------------|-----------------|  
 |<xref:System.ServiceModel.CacheSetting.AlwaysOn>|應用程式定義域內 <xref:System.ServiceModel.ClientBase%601> 的所有執行個體都可以參與快取。 開發人員已經確定對快取沒有不利的安全性影響。 快取將不會關閉即使 「 安全性敏感 」 屬性<xref:System.ServiceModel.ClientBase%601>存取。 「 安全性敏感 」 屬性<xref:System.ServiceModel.ClientBase%601>是<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>，<xref:System.ServiceModel.ClientBase%601.Endpoint%2A>和<xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>。|  
 |<xref:System.ServiceModel.CacheSetting.Default>|只有從定義於組態檔之端點建立的 <xref:System.ServiceModel.ClientBase%601> 執行個體才會在應用程式定義域中參與快取。 任何以程式設計方式在應用程式定義域內建立的 <xref:System.ServiceModel.ClientBase%601> 執行個體都不會參與快取。 此外，將會停用快取的執行個體<xref:System.ServiceModel.ClientBase%601>之後的任何 「 安全性敏感 」 屬性存取。|  
@@ -121,9 +122,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  在上述範例中，`TestClient` 的所有執行個體都會使用不同的通道處理站。 當每個端點各有不同的安全性需求，而進行快取沒有意義時，這種方式非常有用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ClientBase%601>  
  [建置用戶端](../../../../docs/framework/wcf/building-clients.md)  
  [用戶端](../../../../docs/framework/wcf/feature-details/clients.md)  
  [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

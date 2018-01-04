@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>保護服務的安全
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的安全性是由兩個主要需求所組成：傳輸安全性和授權 (第三個需求，安全性事件稽核的述[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，即可輕鬆實作這兩個主要需求。  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="protection-levels"></a>保護層級  
  `ProtectionLevel` 屬性 (Property) 會出現在多個屬性 (Attribute) 類別 (例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別)。 保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)，及程式設計範例，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如需在內容中使用 `ProtectionLevel` 來設計服務合約的詳細資訊，請參閱 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)」(Credential)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel>  
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  

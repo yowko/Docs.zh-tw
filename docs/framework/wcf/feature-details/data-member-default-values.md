@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c7d6aa8d695dd6fc79b23e6cbb69bf523ef680f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-default-values"></a>資料成員預設值
 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，類型內含有的概念*預設值*。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 12/02/2017
   
  在結構描述匯入時，無論偵測到之前提到之 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 專屬附註的時機為何，`false` 屬性都會自動設為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 針對 `false` 屬性設為 `nillable` 的參考型別，此屬性也會設為 `false`，以支援常在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務時發生的特定互通性案例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>

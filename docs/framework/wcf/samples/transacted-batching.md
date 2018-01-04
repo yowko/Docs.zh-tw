@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc04f0ce1d303a32cbf2232c76bfc4ef1143c9ea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-batching"></a>交易的批次處理
 這個範例會示範如何使用訊息佇列 (MSMQ) 批次處理交易讀取作業。 「交易的批次處理」是效能最佳化功能，可用於佇列通訊中的交易讀取作業。  
@@ -384,4 +385,4 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

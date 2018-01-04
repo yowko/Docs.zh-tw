@@ -12,16 +12,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41d0b2ccd126416a625e37e6bfdca8f4fd96faf2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-bodied"></a>Code-Bodied
 本節包含以程式碼宣告方式建立的自訂活動範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [書籤](../../../../docs/framework/windows-workflow-foundation/samples/bookmarks.md)  
  這個範例示範如何撰寫自訂活動，建立可接收外部輸入的書籤。  
   
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
  [執行屬性](../../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)  
  這個範例示範如何使用定義及使用自訂活動中的執行屬性。  
   
- [公開及叫用 ActivityActions](../../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)  
+ [公開和叫用 ActivityActions](../../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)  
  這個範例示範如何開發有 <xref:System.Activities.ActivityAction> 的自訂活動。  
   
  [在活動中使用 AsyncCodeActivityContext](../../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)  

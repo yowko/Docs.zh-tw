@@ -18,16 +18,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d87d1968b2a605a45f9cb0a918e6345679aa9c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 514f4e4835a047c8c340c0026aa5b59f6f3f7822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 控制項 (Windows Form)
 Windows Form`DateTimePicker`控制項可讓使用者選取單一項目從清單中的日期或時間。 用來代表日期時，它會出現在兩個部分： 以文字和一個方格，其中會顯示當您按一下清單旁邊的向下箭號表示日期的下拉式清單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DateTimePicker 控制項概觀](../../../../docs/framework/winforms/controls/datetimepicker-control-overview-windows-forms.md)  
  導入的一般概念`DateTimePicker`控制項，可讓使用者選取單一項目從清單中的日期或時間。  
   
@@ -42,10 +43,10 @@ Windows Form`DateTimePicker`控制項可讓使用者選取單一項目從清單�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.DateTimePicker>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.MonthCalendar>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

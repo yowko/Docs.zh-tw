@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ecac6917d47604aa66e9cdc0d845e76ad2de5d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76770eff76a7a641ee853f314b5d2c14a56737c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>預計採用 Windows Communication Foundation：簡化未來移轉
 為確保未來 ASP.NET 新應用程式更容易移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請遵循上述建議和下列建議。  
@@ -134,5 +135,5 @@ throw new SoapException(
   
 -   考慮使用 ASP.NET 2.0 角色提供者，來授權存取服務資源。  
   
-## <a name="see-also"></a>另請參閱  
- [預計採用 Windows Communication Foundation： 簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+## <a name="see-also"></a>請參閱  
+ [預計採用 Windows Communication Foundation：簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

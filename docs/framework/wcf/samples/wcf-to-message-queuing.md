@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d3a9dd8c17b39ae52fffb5995f4763b250a3551
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 90013752ed03f24c0995bc837efde5f20bf272c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
 這個範例會示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式如何將訊息傳送至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。  
@@ -84,7 +85,7 @@ public static void ProcessOrder(Object source,
 > [!NOTE]
 >  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。  
   
- 用戶端會建立採購單，然後在交易範圍內提交採購單，如下列範例程式碼所示。  
+ 用戶端會建立採購單，然後在異動範圍內提交採購單，如下列範例程式碼所示。  
   
 ```  
 // Create the purchase order  
@@ -183,6 +184,6 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 與 WCF 端點交換訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+## <a name="see-also"></a>請參閱  
+ [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94968)

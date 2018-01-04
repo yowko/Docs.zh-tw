@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5894a8b5d4d0873a231927498a8d1e2c4e18afd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-control-endpoint"></a>工作流程控制端點
 工作流程控制端點可讓開發人員呼叫控制作業，以便從遠端控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 所裝載的工作流程執行個體。 這項功能可以使用程式設計的方式執行多種控制作業，像是暫停、繼續及終止。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
  作用中  
  工作流程執行個體尚未達到完成狀態，而且不是在暫停狀態。 處於此狀態時，工作流程執行個體將會執行及處理應用程式訊息。  
   
- 暫停  
+ 擱置  
  處於此狀態時，即使有活動尚未開始執行或已執行一部分，工作流程執行個體也不會執行。  
   
  已完成  
@@ -50,10 +51,10 @@ ms.lasthandoff: 12/02/2017
 |暫止|工作流程執行個體從作用中狀態轉換為已暫停狀態。|  
 |結束|工作流程執行個體從作用中或已暫停狀態轉換為已完成狀態。|  
 |Unsuspend|工作流程執行個體從已暫停狀態轉換為作用中狀態。|  
-|TransactedCancel|執行交易 (從用戶端流動進入或在本機建立) 之下的 [取消] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
-|TransactedRun|執行交易 (從用戶端流動進入或在本機建立) 之下的 [執行] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
+|TransactedCancel|執行異動 (從用戶端流動進入或在本機建立) 之下的 [取消] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
+|TransactedRun|執行異動 (從用戶端流動進入或在本機建立) 之下的 [執行] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
 |TransactedSuspend|執行交易 (從用戶端流動進入或在本機建立) 之下的 [暫停] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
-|TransactedTerminate|執行交易 (從用戶端流動進入或在本機建立) 之下的 [結束] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
+|TransactedTerminate|執行異動 (從用戶端流動進入或在本機建立) 之下的 [結束] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
 |TransactedUnsuspend|執行交易 (從用戶端流動進入或在本機建立) 之下的 [取消暫停] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
   
  <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 合約並未提供建立新工作流程執行個體的方法，只能管理現有的工作流程執行個體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]從遠端建立新的工作流程執行個體，請參閱[工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  

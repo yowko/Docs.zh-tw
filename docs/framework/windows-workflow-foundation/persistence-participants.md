@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-participants"></a>持續性參與者
 持續性參與者可參與由應用程式主機所觸發的持續性作業 (「儲存」或「載入」)。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附兩個抽象類別， **PersistenceParticipant**和**PersistenceIOParticipant**，讓您可以用來建立持續性參與者。 持續性參與者會衍生自這些類別的其中一個、實作感興趣的方法，然後將類別的執行個體加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 應用程式主機保存工作流程執行個體時，可能會尋找此類工作流程擴充功能，並且在適當的時間於持續性參與者上叫用適當的方法。  
@@ -65,9 +66,9 @@ ms.lasthandoff: 12/02/2017
   
  鎖定逾時值預設為 5 分鐘，您可以在呼叫 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A> 時指定不同的逾時值。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [如何：建立自訂持續性參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [存放區擴充性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)

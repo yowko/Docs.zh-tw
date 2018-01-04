@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef105626d2427f0ea6dd49f696b78ffac4834f92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 這個範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，以及如何在要求/回應案例中將傳送者與接收者應用程式之間的訊息相互關聯。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
@@ -322,6 +323,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94968)

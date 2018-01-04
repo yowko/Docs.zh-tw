@@ -17,16 +17,17 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a34e2726182c194882d94fe4b8d1164993d8284
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-managed-graphics-classes"></a>使用 Managed 圖形類別
 下列主題描述如何使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]managed 的類別 framework 中的應用程式開發介面。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [圖形程式設計入門](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
  描述如何完成基本工作，與[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   

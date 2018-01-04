@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19ff205fd1e76a5d2ee787522cc5d94916b0c11c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這項功能可以防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
@@ -121,12 +122,12 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]堆疊繫結正確的自訂繫結項目，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立自訂繫結與<xref:System.ServiceModel.Channels.SecurityBindingElement>，請參閱[How to： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [如何： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- [如何： 建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+## <a name="see-also"></a>請參閱  
+ [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [如何：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [建立使用者定義繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
- [如何： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

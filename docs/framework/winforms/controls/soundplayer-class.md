@@ -15,18 +15,19 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fccf64215c38a3aee0b367866dd2371b483b0a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5379da3361a8a4b2115f46d0d2db80a565f6bfc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 類別
 `SoundPlayer` 類別可讓您輕鬆地在應用程式中包含音效。  
   
  您也可以使用 <xref:System.Media.SystemSounds> 類別來播放常見的系統音效，包括嗶聲。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SoundPlayer 類別概觀](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  介紹類別以及其常用的屬性、方法和事件。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Media.SoundPlayer>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  

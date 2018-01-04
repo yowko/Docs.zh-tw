@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e1d808d4daf91b5ff89b05cab8359c90090f293
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
 有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 時，這種情況的服務作業必須傳回格式不支援資料[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 有鑑於此，這個主題會探討如何運用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 程式設計模型建立這類服務。 該項服務提供一種會傳回資料流的作業。  
@@ -185,5 +186,5 @@ namespace RawImageService
   
 -   編譯範例程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

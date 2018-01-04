@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf12cac374759c1cb45a7086ac771a982758e78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-internals"></a>工作流程服務主機內部
 <xref:System.ServiceModel.WorkflowServiceHost> 會提供工作流程服務的主機。 它會負責接聽傳入訊息並將訊息路由傳送至適當的工作流程服務執行個體、控制閒置工作流程的卸載和保存作業，以及其他作業。 本主題描述 WorkflowServiceHost 如何處理傳入訊息。  
@@ -59,11 +60,11 @@ ms.lasthandoff: 12/02/2017
 > [!WARNING]
 >  如果 SQL Server 設定為只在 NamedPipe 通訊協定上接聽，工作流程服務主機將無法開啟。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [裝載工作流程服務](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
  [工作流程控制端點](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- [如何： 設定工作流程未處理的例外狀況行為以 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
- [建立長時間執行工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+ [如何：使用 WorkflowServiceHost 設定工作流程未處理例外狀況行為](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

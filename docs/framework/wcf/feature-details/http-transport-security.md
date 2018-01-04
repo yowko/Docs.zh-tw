@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 414ae499b777be5536e64a86fa0c60f9cd2da25a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 這個主題會說明 SSL 的運作方式，以及如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中實作 SSL。  
@@ -62,6 +63,6 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 HttpCfg.exe 工具來設定連接埠使用 X.509 憑證，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

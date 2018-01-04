@@ -14,11 +14,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14f516ed32ecbada0b612cf06179e47acf18ddc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-transaction-flow"></a>WS 異動流程
 這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務，但作業屬於示範如何使用`TransactionFlowAttribute`與**transactionflowoption 設定**若要判斷何種程度交易啟用流程列舉型別。 在流動的交易範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調交易之前都會保存該記錄檔。如果用戶端交易未完成，Web 服務交易一定不會認可對資料庫進行適當的更新。  
@@ -197,7 +198,7 @@ Console.WriteLine("Transaction committed");
   
 -   第二個 `Subtract` 要求會在以 `TransactionScopeOption.Suppress` 選項宣告的新交易範圍內執行。 這樣做會隱藏用戶端的初始外部交易，而且要求不會將交易流動至服務。 這個方法可讓用戶端明確地不參與，並在不需要將交易流動至服務時，防止進行此動作。 會在新的和未連接的異動範圍內發生服務動作。  
   
--   `Multiply` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義包含設定為 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
+-   `Multiply`要求不會流動至服務的交易，因為用戶端產生的定義`ICalculator`介面包括<xref:System.ServiceModel.TransactionFlowAttribute>設<xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`。  
   
 -   `Divide` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義再次不包含 `TransactionFlowAttribute`。 再次會在其他新的和未連接的交易範圍內發生服務動作。  
   

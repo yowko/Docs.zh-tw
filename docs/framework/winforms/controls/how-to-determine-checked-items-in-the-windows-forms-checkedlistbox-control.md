@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45006b437ad0a2fa537e6b8ea4312ab0060c882
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 63960740b2fc0cb2c96f9a853480f37857c7901b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：判斷 Windows Form CheckedListBox 控制項中的已核取項目
 呈現 Windows Form 中的資料時<xref:System.Windows.Forms.CheckedListBox>控制項，您可以請逐一查看集合中儲存<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>屬性或清單使用逐步執行<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法來判斷哪些項目會檢查。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法會採用做為其引數的項目索引編號，並傳回`true`或`false`。 Fci 不如預期，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>屬性不會決定會檢查哪些項目，它們會判斷哪些項目會反白顯示。  
@@ -121,5 +122,5 @@ ms.lasthandoff: 10/22/2017
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

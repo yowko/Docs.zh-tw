@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acc7131d02f1f4e3cde0df152bdfbc591724b600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-syndication-overview"></a>WCF 新聞訂閱概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會針對公開來自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的新聞訂閱摘要提供支援。 新聞訂閱是一種應用程式整合機制，可讓伺服器透過稱為摘要的互通格式來公開一些應用程式資料。 摘要是一種應用程式資料的集合，內含一些摘要層級的中繼資料 (標題、作者、URL 與其他中繼資料) 以及一系列的摘要項目。 摘要中的項目通常會依照時間順序，從距今最近的時間往回排列。 摘要項目包含一組標準的項目層級中繼資料 (標題、URL、建立日期、分類，與其他項目層級的中繼資料) 以及任意數量的特定應用程式資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時支援 Really Simple Syndication (RSS) 2.0 和 Atom 1.0 這兩種最常見的新聞訂閱摘要類型。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="syndication-formats"></a>新聞訂閱格式  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱平台支援 RSS 2.0 和 Atom 1.0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

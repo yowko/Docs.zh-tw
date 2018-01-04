@@ -14,11 +14,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 210f0ba6e205dcd383a96b1da75367c308d15837
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 472bc9cc1ff18c7e199a1133a1d54994cea21055
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-nettcpbinding"></a>預設 NetTcpBinding
 此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  
@@ -131,4 +132,4 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -17,16 +17,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efdde6367d54d4cdc8d9992d2b3f44a366227069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a3f4ba9f57718e3ae4a3751f44e6257a335cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 控制項
 <xref:System.Windows.Forms.ToolStripStatusLabel>提供中的顯示區域<xref:System.Windows.Forms.StatusStrip>文字、 影像，或兩者。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ToolStripStatusLabel 控制項概觀](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control-overview.md)  
  提供描述 Windows Form <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項的用途和主要概念的主題。  
   
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Windows.Forms.ToolStripProgressBar>  
  提供 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項的參考文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

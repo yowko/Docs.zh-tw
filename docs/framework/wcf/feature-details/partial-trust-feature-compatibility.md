@@ -13,11 +13,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f36d944814adaf4a90a04715c60f2fe732cb544a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
 當[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在部分信任的環境中執行時，僅支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
@@ -169,7 +170,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="unlisted-features"></a>未列出的功能  
  在部分信任環境中執行時，要找到不可用的資訊片段或動作的最好方式，就是嘗試在 `try` 區塊內部存取資源或執行動作，然後捕捉 ( `catch` ) 失敗。 為了避免在追蹤檔中大量出現重複錯誤， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  

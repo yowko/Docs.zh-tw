@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 440f3ee85fe24707c6bb433736bf6104d9e0dfc5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d75f03a9af5caa5569cbfd4d1d09cda8936f6562
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-activity-validation"></a>設定活動驗證
 活動驗證可讓活動作者和使用者在執行前，先在活動的組態中識別及報告錯誤。 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供下列三種活動驗證：  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/02/2017
   
  指出活動需要特定引數的 `RequiredArgument` 和 `OverloadGroup` 屬性。 命令式的程式碼式驗證提供讓活動自我驗證的簡易方式，而宣告式條件約束則可用於驗證活動及活動與包含該活動之工作流程的關聯性。 如果未根據驗證需求正確設定活動，就會傳回驗證錯誤與警告。 如果包含該活動的工作流程是使用工作流程設計工具建立的，則任何驗證錯誤與警告都會顯示在設計工具中。 如果工作流程是在工作流程設計工具以外建立的，則會在叫用該工作流程時傳回所有驗證錯誤。 無論工作流程的建立方式為何，含驗證錯誤的工作流程永遠不能執行。 本節提供這些活動驗證類型與活動驗證叫用方式的概觀。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [必要引數與多載群組](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)  
  描述如何使用 `RequiredArgument`和 `OverloadGroup` 屬性提供驗證。  
   

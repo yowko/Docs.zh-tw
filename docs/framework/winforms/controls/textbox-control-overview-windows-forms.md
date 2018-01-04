@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8c75392f12b87c7495b1fcdf5419f2463067161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d7312246c43157ca9cd6c7b41d2b110586721c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 控制項概觀 (Windows Form)
 Windows Form 的文字方塊會用來從使用者取得輸入或顯示的文字。 <xref:System.Windows.Forms.TextBox>控制項通常用於編輯的文字，不過它也可以設定為唯讀。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 <xref:System.Windows.Forms.TextBox>控制項提供單一的格式樣式的文字顯示，或輸入控制項。 若要顯示多種類型的格式化的文字，請使用<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱[RichTextBox 控制項概觀](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)。  
@@ -58,7 +59,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.TextBox>  
  [操作說明：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
  [操作說明：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  

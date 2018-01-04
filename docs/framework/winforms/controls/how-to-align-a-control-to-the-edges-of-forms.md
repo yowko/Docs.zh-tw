@@ -21,16 +21,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a55212ac4d770848355ace1b0ef3fff3cc50f871
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7979b58d52c6df7341259af50a39e104781dd148
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>如何：將控制項和表單邊緣對齊
 您可設定 <xref:System.Windows.Forms.Control.Dock%2A> 屬性讓控制項對齊表單邊緣。 這個屬性會指定您的控制項在表單中的位置。 可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：  
   
-|設定值|對控制項的影響|  
+|設定|對控制項的影響|  
 |-------------|----------------------------|  
 |<xref:System.Windows.Forms.DockStyle.Bottom>|停駐在表單下方。|  
 |<xref:System.Windows.Forms.DockStyle.Fill>|填滿表單中剩下的空間。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
     UserControl1.Dock = DockStyle.Top;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  

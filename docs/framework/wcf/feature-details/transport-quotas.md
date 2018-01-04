@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4de910e2e66bc480abefe228bd183fe95270fb69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-quotas"></a>傳輸配額
 傳輸配額是用來判斷連線何時過度使用資源的原則機制。 配額是硬性限制，一旦超出配額值，就會無法使用其他資源。 傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
   
  每個配額設定都各有型別、最小值和預設值。 配額的最大值受到其型別限制。 由於機器限制，不一定都能將配額設定為最大值。  
   
-|名稱|類型|最小<br /><br /> value|預設<br /><br /> value|說明|  
+|名稱|類型|最小<br /><br /> value|預設<br /><br /> value|描述|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 次滴答聲|5 秒|初始讀取期間，等待連線傳送前序編碼 (Preamble) 的最長時間。 在發生驗證之前會接收到這項資料。 這個設定通常比 `ReceiveTimeout` 配額值小很多。|  
 |`CloseTimeout`|TimeSpan|0|1 分鐘|在傳輸引發例外狀況之前，等待連線關閉的最長時間。|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="controlling-transport-quotas-from-configuration"></a>從組態控制傳輸配額  
  應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。 在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。 例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>資料合約中的 XML 與 ADO.NET 型別
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 資料合約模型支援直接代表 XML 的特定型別。 當這些型別序列化為 XML 時，序列化程式會寫出這些型別的 XML 內容，而不做更進一步的處理。 支援的型別為 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的陣列 (但不是 `XmlNode` 型別本身) 以及實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 型別以及具型別資料集都常用於資料庫程式撰寫中。 這些型別會實作 `IXmlSerializable` 介面，因此在資料合約模型中是可序列化的。 在本主題最後，會列出這些型別的一些特別考量。  
@@ -212,8 +213,8 @@ ms.lasthandoff: 12/02/2017
   
  支援資料合約模型中具有型別的資料集是受限制的。 具有型別的資料集可以序列化和還原序列化，並可以匯出其結構描述。 但是，資料合約結構描述匯入無法從結構描述產生新的具有型別資料集型別，因為它只會重複使用現有的資料集型別。 您可以在 Svcutil.exe 上使用 `/r` 參數來指向現有具有型別的資料集。 如果您嘗試在使用具型別資料集的服務上使用 Svcutil.exe，但不使用 `/r` 參數，則會自動選取替代的序列化程式 (XmlSerializer)。 如果您必須使用 DataContractSerializer，且必須從結構描述產生資料集，您可以使用下列程序：產生具有型別的資料集型別 (透過在服務上使用 Xsd.exe 工具並加上 `/d` 參數)、編譯該型別，然後在 Svcutil.exe 上使用 `/r` 參數來指向這些型別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.IXmlSerializable>  
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [資料合約序列化程式所支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

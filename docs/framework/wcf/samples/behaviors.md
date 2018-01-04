@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd6d3e24becfe1cf8a30d6006087fe74e9487fbe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d4c3a91d69fd7adc863c6e947b72aa9134c376b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="behaviors"></a>「行為」
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務行為的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [並行](../../../../docs/framework/wcf/samples/concurrency.md)  
  示範搭配 <xref:System.ServiceModel.ServiceBehaviorAttribute> 列舉使用 <xref:System.ServiceModel.ConcurrencyMode>，以控制服務的執行個體要循序處理或並行處理訊息。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [服務偵錯行為](../../../../docs/framework/wcf/samples/service-debug-behavior.md)  
  示範如何設定服務偵錯行為設定。  
   
- [節流設定](../../../../docs/framework/wcf/samples/throttling.md)  
+ [節流](../../../../docs/framework/wcf/samples/throttling.md)  
  示範節流控制項的用法。  
   
  [行為安全性](../../../../docs/framework/wcf/samples/behavior-security.md)  

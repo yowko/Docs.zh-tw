@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7cb24fd36bdee76fa80a87d48f41b72f01c8f263
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6f5491cfbfc312b2ce3e35170ddc4edc8ee39a61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hide-toolstripmenuitems"></a>如何：隱藏 ToolStripMenuItems
 隱藏功能表項目是來控制您的應用程式的使用者介面，並限制使用者命令的方法。 通常，您要隱藏整個功能表，當所有在其上的功能表項目都無法使用。 這代表使用者的分心。 此外，您可能想要隱藏並停用功能表或功能表項目，如單獨隱藏不會阻止使用者使用快速鍵來存取功能表命令。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
     menuItem3->Visible = false;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStripItem.Visible%2A>  
  <xref:System.Windows.Forms.MenuStrip>  
  [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  

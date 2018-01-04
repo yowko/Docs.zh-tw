@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9d0c50fe8f99df471376d31a2258912c870dd37
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的鍵盤輸入
 Windows Form 包含可讓您回應特定按鍵，並提供方法讓您攔截、 修改和使用在應用程式中，表單中，按下按鍵及控制層級的標準鍵盤事件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)  
  描述如何鍵盤訊息處理和轉換成鍵盤事件。  
   

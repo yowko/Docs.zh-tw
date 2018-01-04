@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f012cc43d7160b737e5a9a5d4ceb5e50e91d07a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11d693e35017d7290e1cf1209dc3d6423afc38b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>使用探索用戶端通道
 撰寫 WCF 用戶端應用程式時，您需要知道您所呼叫之服務的端點位址。 在很多情況下，無法事先知道服務的端點位址，或是服務的位址可能會隨著時間改變。 探索用戶端通道可讓您撰寫 WCF 用戶端應用程式、描述您要呼叫的服務，然後用戶端會自動傳送探查要求。 服務回應的時候，探索用戶端通道會從探查回應擷取服務的端點位址，並且使用此位址呼叫服務。  

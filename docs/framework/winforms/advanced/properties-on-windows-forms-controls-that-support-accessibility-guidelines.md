@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 967b4a0e883338c756aceef37d11edecfb978527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>支援可及性方針的 Windows Form 控制項屬性
 控制項 Windows Form 的標準工具箱支援許多協助工具的指導方針，包括鍵盤焦點，而且已公開螢幕項目。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
 |Backcolor|如果這個屬性設定為預設值，然後將會在表單上使用使用者的色彩設定。|  
 |BackgroundImage|將此屬性保留空白，讓文字更容易閱讀。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：建立 Windows 架構的協助工具應用程式](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

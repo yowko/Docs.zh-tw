@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c44b09f512a7625360ca5036316d03a4602c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>HOW TO：使用服務 Moniker 搭配 WSDL 合約
 在某些情況中，您可能會想要有完全獨立的 COM Interop 用戶端。 您要呼叫的服務可能不會公開 MEX 端點，而且系統可能也不會註冊 COM Interop 的 WCF 用戶端 DLL。 在這些情況中，您可以建立 WSDL 檔案，使其描述服務並傳遞至 WCF 服務 Moniker 中。 本主題說明如何使用 WCF WSDL Moniker 來呼叫使用者入門 WCF 範例。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 12/02/2017
   
 7.  執行 Visual Basic 應用程式。 訊息方塊會和呼叫 Subtract(145, 76.54) 的結果一起顯示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [整合 COM 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

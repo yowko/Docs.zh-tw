@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>HOW TO：使用雙工合約存取服務
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 其中一項功能，就是建立使用雙工訊息模式的服務。 這個模式可讓服務透過回呼與用戶端通訊。 本主題將說明在會實作回呼介面的用戶端類別中，建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的步驟。  
@@ -97,9 +98,9 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [如何： 建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [如何：建立雙面合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [如何：建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

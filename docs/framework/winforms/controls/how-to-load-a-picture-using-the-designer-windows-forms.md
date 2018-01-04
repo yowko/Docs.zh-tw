@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9049bf5f9467401bff098459b8f5ed55c1ee1975
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ca3e3eef1aa9e7414d3c279de5943585703bf9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用設計工具載入圖片 (Windows Form)
 使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項，您可以載入並設定在表單上顯示圖片在設計階段<xref:System.Windows.Forms.PictureBox.Image%2A>有效圖片的屬性。 下表顯示可接受的檔案類型。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 |JPEG|.jpg|  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-display-a-picture-at-design-time"></a>若要在設計階段顯示的圖片  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  在**屬性**視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，以滑鼠右鍵按一下映像物件的名稱左邊的小型縮圖影像。 選擇**重設**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.PictureBox>  
  [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
  [操作說明：於執行階段修改圖片的大小或位置](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  

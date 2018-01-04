@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ecc0fce00dbef1f5b91aad16f32cb7dd7759ac8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ccd63cb88661db7601b87eec6bdf3a959afb8bbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>如何：使用設計工具在工具列控制項中加入按鈕
 > [!NOTE]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
  下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.ToolBar>控制項。 設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-buttons-at-design-time"></a>若要在設計階段加入按鈕  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  設定的屬性中的個別按鈕**屬性**出現在編輯器的右側窗格中的視窗。 下表顯示一些要考慮的重要屬性。  
   
-    |屬性|說明|  
+    |屬性|描述|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|設定要顯示在下拉式清單工具列按鈕的功能表。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設定為<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>。 這個屬性可接受的執行個體<xref:System.Windows.Forms.ContextMenu>類別做為參考。|  
     |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|設定是否為部分壓下切換樣式工具列按鈕。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設定為<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  按一下**確定**關閉對話方塊並建立指定的面板。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolBar>  
  [操作說明：定義工具列按鈕的圖示](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
  [操作說明：觸發工具列按鈕的功能表事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  

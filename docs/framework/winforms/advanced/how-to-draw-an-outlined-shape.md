@@ -29,11 +29,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05247d24f3db95d042cb4ac34ec6ed648ec1d997
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eace68b646b3cdf75546527204bc41584ba64f85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>如何：繪製外框形狀
 這個範例會在表單上繪製含外框的橢圓形和矩形。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>和<xref:System.Drawing.Graphics>物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Graphics.DrawEllipse%2A>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  <xref:System.Drawing.Graphics.DrawRectangle%2A>  

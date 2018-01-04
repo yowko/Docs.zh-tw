@@ -12,18 +12,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>等候輸入活動
 此範例示範如何在工作流程中建立具名書籤。 [!INCLUDE[wf](../../../../includes/wf-md.md)] 不提供用於以宣告式建立書籤的活動。 因此，當您想要在工作流程中建立書籤時，您必須撰寫可建立書籤的自訂活動。 此範例中定義的 `WaitForInput` 活動會提供這個功能，所以使用者可在工作流程中以宣告方式建立書籤。  
   
 ## <a name="projects-in-this-sample"></a>這個範例中的專案  
   
-|**專案名稱**|**說明**|**主要檔案**|  
+|**專案名稱**|**描述**|**主要檔案**|  
 |-|-|-|  
 |WaitForInput|包含 `WaitForInput` 活動和其設計工具|WaitForInput.cs<br /><br /> `WaitForInput` 活動定義。|  
 |||WaitForInputDesigner.xaml<br /><br /> `WaitForInput` 活動的自訂設計工具。|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
   
  此活動有三個套用的屬性，可繫結設計工具、加入可以更新的泛型引數功能，以及將預設泛型型別設定為字串。 此活動也有列於下表的引數。  
   
-|**Name**|**Type**|**說明**|  
+|**名稱**|**Type**|**描述**|  
 |-|-|-|  
 |TResult|泛型引數 (TResult)|書籤的型別。 這是當書籤繼續時要傳遞給書籤的資料型別。|  
 |BookmarkName|InArgument\<字串 >|書籤的名稱。|  

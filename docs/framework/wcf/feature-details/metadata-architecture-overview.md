@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>中繼資料架構概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供豐富的基礎結構，讓您匯出、發行、擷取與匯入服務中繼資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務使用中繼資料描述如何與服務端點互動，讓 Svcutil.exe 之類的工具可以自動產生用戶端程式碼來存取服務。  
@@ -96,12 +97,12 @@ ms.lasthandoff: 12/02/2017
 ## <a name="dynamic-bindings"></a>動態繫結  
  當端點繫結變更，或當您想要建立使用相同合約但具有不同繫結的端點通道時，可以針對用來建立服務端點通道的繫結進行動態更新。 您可以針對可實作特定合約的服務端點使用 <xref:System.ServiceModel.Description.MetadataResolver> 靜態類別，於執行階段擷取並匯入中繼資料。 您可以接著使用匯入的 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 物件來建立所需端點的用戶端或通道處理站。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description>  
  [中繼資料格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
  [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [擷取中繼資料](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [使用中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

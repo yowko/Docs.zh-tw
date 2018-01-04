@@ -13,16 +13,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d1350cc5a348bf320f0719043bbefcd2b0dd083
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dffdadf9b6896e61dfa23c17ef4d17180be99259
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation 資料模型
 Windows Workflow Foundation 資料模型是由三種概念組成：變數、引數和運算式。 變數表示資料的存放區，而引數表示進出活動之資料的流程。 引數會使用可參照變數的運算式來繫結 (指派值)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [變數和引數](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
  描述變數與引數的概念及其使用方式。  
   

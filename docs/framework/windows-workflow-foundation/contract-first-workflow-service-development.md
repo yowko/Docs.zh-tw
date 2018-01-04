@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3d22c83f5fbc1144d139c9e7ba6a43137f6d144
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract-first-workflow-service-development"></a>合約優先工作流程服務開發
 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，[!INCLUDE[wf](../../../includes/wf-md.md)] 即採用合約優先工作流程開發形式，在 Web 服務與工作流程之間提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。 本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。 建立合約優先工作流程服務的逐步範例，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
@@ -61,8 +62,8 @@ ms.lasthandoff: 12/02/2017
 |CallbackContract|否|當合約是雙工合約時，取得或設定回呼合約的型別。|(N/A)|  
 |ConfigurationName|否|取得或設定用來在應用程式組態檔中尋找服務的名稱。|(N/A)|  
 |HasProtectionLevel|是|取得指出成員是否已指派保護層級的值。|Receive.ProtectionLevel 不應為 null。|  
-|名稱|是|取得或設定的名稱\<連接埠類型 > 項目中 Web 服務描述語言 (WSDL)。|Receive.ServiceContractName.LocalName 應相符。|  
-|命名空間|是|取得或設定的命名空間\<連接埠類型 > 項目中 Web 服務描述語言 (WSDL)。|Receive.ServiceContractName.NameSpace 應相符|  
+|名稱|[是]|取得或設定的名稱\<連接埠類型 > 項目中 Web 服務描述語言 (WSDL)。|Receive.ServiceContractName.LocalName 應相符。|  
+|命名空間|[是]|取得或設定的命名空間\<連接埠類型 > 項目中 Web 服務描述語言 (WSDL)。|Receive.ServiceContractName.NameSpace 應相符|  
 |ProtectionLevel|是|指定合約的繫結是否必須支援 ProtectionLevel 屬性的值。|Receive.ProtectionLevel 應相符。|  
 |SessionMode|否|取得或設定是否允許工作階段、不允許工作階段，或需要工作階段。|(N/A)|  
 |TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。 (繼承自屬性。)|(N/A)|  

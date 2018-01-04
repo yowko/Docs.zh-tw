@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd0752502bdbd7da9d749ae4f71ea869a4c1ec95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6f20ff0577e43106886f5910b8f6a69578d1b3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-editing-scope"></a>使用編輯範圍
 這個範例示範如何批次處理一組變更，以便在單一不可部分完成的單位中復原這些變更。 根據預設，活動設計工具作者所執行的動作會自動整合至復原/取消復原系統。  

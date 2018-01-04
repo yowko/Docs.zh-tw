@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d097068720bb937911316fdb29a83ba0e8e67713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>進出工作流程服務的異動流動
 工作流程服務與用戶端都可以參與異動。  若要讓服務作業變成環境交易的一部分，請將 <xref:System.ServiceModel.Activities.Receive> 活動放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 內所進行的任何呼叫也會在環境交易中進行。 工作流程用戶端應用程式可以使用 <xref:System.Activities.Statements.TransactionScope> 活動建立環境交易，然後使用環境交易呼叫服務作業。 本主題逐步帶領您建立參與交易的工作流程服務和工作流程用戶端。  
@@ -322,7 +323,7 @@ ms.lasthandoff: 12/02/2017
         }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Windows Communication Foundation 交易概觀](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
+ [Windows Communication Foundation 異動概觀](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  [TransactedReceiveScope 的使用](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)

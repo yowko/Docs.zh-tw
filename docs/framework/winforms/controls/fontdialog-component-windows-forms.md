@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92ce3e74ee4da518b78f8ab4ac5015a50a547b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97f2db18737578087f4db151669d6d3b05cf3598
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 元件 (Windows Form)
-Windows Form <xref:System.Windows.Forms.FontDialog> 元件是預先設定的對話方塊。 它會是相同**字型**Windows 作業系統所公開的對話方塊。 該元件繼承自<xref:System.Windows.Forms.CommonDialog>類別。  
+Windows Form <xref:System.Windows.Forms.FontDialog> 元件是預先設定的對話方塊， 它會是相同**字型**Windows 作業系統所公開的對話方塊。 該元件繼承自<xref:System.Windows.Forms.CommonDialog>類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [FontDialog 元件概觀](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
  導入的一般概念<xref:System.Windows.Forms.FontDialog>元件，以用來顯示一個預先設定的對話方塊。 使用者可以使用對話方塊中，管理字型和其設定。  
   

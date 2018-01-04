@@ -16,16 +16,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a98e57d325fc7fd9413babb45d235cbb353a0c86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行排序模式
 <xref:System.Windows.Forms.DataGridView>資料行有三種排序模式。 每個資料行的排序模式透過指定<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行，可以設定為下列其中一種屬性<xref:System.Windows.Forms.DataGridViewColumnSortMode>列舉值。  
   
-|`DataGridViewColumnSortMode` 值|說明|  
+|`DataGridViewColumnSortMode` 值|描述|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|文字資料行的預設值。 按一下資料行標頭會自動排序資料行標頭來選取項目，除非<xref:System.Windows.Forms.DataGridView>依據此資料行，並顯示圖像，表示排序順序。|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非文字方塊的資料行的預設值。 您可以排序此資料行，以程式設計的方式;不過，它不是適合進行排序，因此會不保留任何空間排序圖像。|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView.SortCompare>不會發生事件時<xref:System.Windows.Forms.DataGridView.DataSource%2A>屬性設定或當<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性值是`true`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>  

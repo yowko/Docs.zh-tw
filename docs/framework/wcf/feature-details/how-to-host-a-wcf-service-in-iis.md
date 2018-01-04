@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 934b5d16cdea7026e0e7874cf04ab53c8fbdf58e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
 本主題概要說明建立裝載在網際網路資訊服務 (IIS) 中的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]請參閱 IIS [Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449)。 在 IIS 環境中執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務能夠充分善用 IIS 功能，例如處理序回收、閒置關機、處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
@@ -85,8 +86,8 @@ ms.lasthandoff: 12/02/2017
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>另請參閱  
- [裝載在 Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+## <a name="see-also"></a>請參閱  
+ [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
  [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)  

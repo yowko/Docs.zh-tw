@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  請留意，在模擬服務上的用戶端時，服務會以用戶端的認證執行，而該認證的權限可能高於伺服器處理序。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  一般而言，用戶端會呼叫服務，讓服務代表用戶端執行一些動作。 模擬可讓服務在執行動作時擔任用戶端。 委派可讓前端服務將用戶端的要求轉寄到後端服務，如此一來，後端服務也可以模擬用戶端。 模擬是最常用來檢查用戶端是否經過授權可執行特定動作的方法，而委派則是一種將模擬功能連同用戶端的身分識別一起流動至後端服務的方法。 委派是 Windows 網域功能，可以在執行 Kerberos 驗證時使用。 委派與身分識別流動不同，並且由於委派會傳輸此功能以模擬用戶端，而又不需擁有用戶端的密碼，因此它的作業權限比身分識別流動高得多。  
   
  模擬與委派兩者都需要用戶端具有 Windows 身分識別。 如果用戶端沒有 Windows 身分識別，則唯一的選擇就是將用戶端的身分識別流動至第二個服務。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/02/2017
   
 -   任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 已設定為 `requireCancellation` 的 `true`  (此屬性可在下列類別上使用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 及 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>)。如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
   
--   用戶端在其中提供使用者名稱認證的任何 <xref:System.ServiceModel.Channels.CustomBinding>。 如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
+-   用戶端在其中提供使用者名稱認證的任何 <xref:System.ServiceModel.Channels.CustomBinding> 。 如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
   
 ### <a name="s4u-based-impersonation"></a>S4U 架構模擬  
  您可以用下列項目來執行 S4U 架構模擬：  
@@ -102,10 +103,10 @@ ms.lasthandoff: 12/02/2017
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|行為|  
 |---------------------------|------------------------------------------------|--------------|  
-|必要項|N/A|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模擬呼叫者|  
-|Allowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模擬呼叫者|  
+|必要|N/A|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模擬呼叫者|  
+|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模擬呼叫者|  
 |Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模擬呼叫者|  
-|NotAllowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模擬呼叫者|  
+|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模擬呼叫者|  
 |NotAllowed|true|不允許。 (擲回 <xref:System.InvalidOperationException> )。|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>從 Windows 認證和快取權杖模擬取得的模擬等級  
@@ -123,13 +124,13 @@ ms.lasthandoff: 12/02/2017
   
 |`AllowedImpersonationLevel` 值|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|匿名|是|N/A|模擬|  
+|匿名|[是]|N/A|模擬|  
 |匿名|否|N/A|識別|  
 |識別|N/A|N/A|識別|  
-|模擬|是|N/A|模擬|  
+|模擬|[是]|N/A|模擬|  
 |模擬|否|N/A|識別|  
-|委派|是|是|委派|  
-|委派|是|否|模擬|  
+|委派|[是]|[是]|委派|  
+|委派|[是]|否|模擬|  
 |委派|否|N/A|識別|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>從使用者名稱認證和快取權杖模擬取得的模擬等級  
@@ -137,16 +138,16 @@ ms.lasthandoff: 12/02/2017
   
 |`AllowedImpersonationLevel`|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|N/A|是|是|委派|  
-|N/A|是|否|模擬|  
+|N/A|[是]|[是]|委派|  
+|N/A|[是]|否|模擬|  
 |N/A|否|N/A|識別|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>從 S4U 架構模擬取得的模擬等級  
   
 |服務具有 `SeTcbPrivilege`|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|是|是|N/A|模擬|  
-|是|否|N/A|識別|  
+|[是]|[是]|N/A|模擬|  
+|[是]|否|N/A|識別|  
 |否|N/A|N/A|識別|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>將用戶端憑證對應至 Windows 帳戶  
@@ -191,7 +192,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|否|否|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|是|否|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|是|是|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|是|[是]|  
   
  下列程式碼範例示範如何使用委派。  
   
@@ -215,7 +216,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 -   [Kerberos 通訊協定轉換與限制委派 (英文)](http://go.microsoft.com/fwlink/?LinkId=36725)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.OperationBehaviorAttribute>  
  <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>  
  <xref:System.ServiceModel.ImpersonationOption>  

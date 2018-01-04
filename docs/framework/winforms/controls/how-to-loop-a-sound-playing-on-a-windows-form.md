@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e61a15a7a249a90ce9eca035ebe6fd67275bb74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7ade624f57f58a5ec91a5d993375c73d1cc26fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>如何：在 Windows Form 上循環播放音效
 下列程式碼範例會重複播放音效。 當 `stopPlayingButton_Click` 事件處理常式中的程式碼執行時，會停止目前正在播放任何聲音。 如果未播放聲音，就不會發生任何事。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿根據檔案名稱來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Media.SoundPlayer.PlayLooping%2A>  
  [操作說明：播放 Windows Forms 中的音效](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  [SoundPlayer 類別概觀](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

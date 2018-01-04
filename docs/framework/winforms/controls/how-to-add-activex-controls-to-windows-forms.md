@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9328400917208dde9f81b493fbf26c6080dc9c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>如何：將 ActiveX 控制項加入至 Windows Form
 Windows Form 設計工具最適合主機的 Windows Form 控制項，而您也可以使 Windows Form 上的 ActiveX 控制項。  
@@ -32,7 +33,7 @@ Windows Form 設計工具最適合主機的 Windows Form 控制項，而您也�
  您將 ActiveX 控制項加入至表單之前，您必須將他們加入 [工具箱]。 如需詳細資訊，請參閱[COM 元件、 自訂工具箱對話方塊](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>若要將 ActiveX 控制項加入至您的 Windows Form  
   
@@ -43,7 +44,7 @@ Windows Form 設計工具最適合主機的 Windows Form 控制項，而您也�
     > [!NOTE]
     >  Windows Form ActiveX 控制項匯入工具 (AxImp.exe) 超過預期的 ActiveX 動態連結程式庫匯入作業時，會建立不同類型的事件引數。 AxImp.exe 所建立的引數都與下列類似： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，當`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`預期。 請注意，此不規則不會阻止程式碼正常運作。 如需詳細資訊，請參閱[Windows Form ActiveX 控制項匯入工具 (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [比較各種語言和程式庫的控制項與可以透過程式設計的物件](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

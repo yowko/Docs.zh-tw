@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d0f1ec3f1fe0b078da92c93cbb928075d7d462c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的預設鍵盤和滑鼠處理
 下表描述使用者可以互動<xref:System.Windows.Forms.DataGridView>透過鍵盤和滑鼠控制。  
@@ -120,6 +121,6 @@ ms.lasthandoff: 11/21/2017
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>、 在按下 SHIFT 或 ctrl 鍵同時按一下儲存格的行為相同的方式，除非該只有完整的資料列和資料行會受到影響。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>如何：將資料繫結至 MaskedTextBox 控制項
 您可以將資料繫結<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他 Windows Form 控制項。 不過，如果資料庫中資料的格式不符合遮罩定義所預期的格式，您必須將資料重新格式化。 下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>事件<xref:System.Windows.Forms.Binding>類別來顯示個別的電話號碼和電話做為單一的可編輯欄位的擴充功能的資料庫欄位。  
@@ -259,5 +260,5 @@ ms.lasthandoff: 10/22/2017
   
 -   編譯應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：使用 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

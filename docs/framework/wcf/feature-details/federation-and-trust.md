@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5228ffaab43e24849d461080cdf3ef09b2fa6c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-trust"></a>聯合與信任
 本主題涵蓋與聯合應用程式、信任界限和組態，以及在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內使用發行權杖相關的各個層面。  
@@ -46,8 +47,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="issued-tokens-and-inclusionmode"></a>發行的權杖和 InclusionMode  
  從用戶端傳送至聯合端點的訊息中，其發行的權杖是否已序列化是由設定 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> 類別的 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 屬性所控制。 這個屬性可以設定為 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> 列舉值的其中一個值，但是這在大部分的聯合案例中沒有作用。 `SecurityTokenInclusionMode.Never` 和 `SecurityTokenInclusionMode.AlwaysToInitiator` 值會使用戶端將權杖參考，傳送給安全性權杖服務所發行給信賴憑證者的權杖。 除非信賴憑證者持有發行權杖的複本，否則驗證將會因為無法解析權杖參考而失敗。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會將 `SecurityTokenInclusionMode.Once` 視同為 `SecurityTokenInclusionMode.AlwaysToRecipient`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>  
- [如何： 建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [如何： 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [如何： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+ [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

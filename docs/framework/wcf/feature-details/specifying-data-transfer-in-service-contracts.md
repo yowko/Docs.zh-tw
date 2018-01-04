@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be6262714ad2753d3a6f62a2956a31529641a246
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c650a59402099e1fe71a0292dd0ccfc409d3448d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>指定服務合約中的資料傳輸
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以想成是訊息基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  
@@ -583,7 +584,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]進階序列化概念，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- [如何： 啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
- [如何： 建立基本的資料合約的類別或結構](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
+ [如何：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

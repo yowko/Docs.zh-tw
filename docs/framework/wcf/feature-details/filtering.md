@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a5b2c78ef7e675a656caf00e9d0ba0c9eb0630b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>篩選
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 篩選系統可以使用宣告式篩選條件比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  
@@ -93,5 +94,5 @@ ms.lasthandoff: 12/02/2017
   
 -   如 `EndpointAddress` 所指定，<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中的其餘端點參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料傳輸與序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

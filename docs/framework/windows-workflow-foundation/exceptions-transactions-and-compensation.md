@@ -1,5 +1,5 @@
 ---
-title: "例外狀況、交易與補償"
+title: "例外狀況、異動與補償"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,16 +13,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fab7247540ba4e098a793adebab54ca4219e503
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e83661ba66ca6a71f26c11172902d5bc602a2f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-transactions-and-compensation"></a>例外狀況、異動與補償
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 提供數種不同的機制，可用於處理工作流程中的執行階段錯誤狀況。 工作流程可以合併運用例外狀況處理常式、異動、取消與補償來處理錯誤狀況，並從錯誤狀況正常復原。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [例外狀況](../../../docs/framework/windows-workflow-foundation/exceptions.md)  
  示範如何使用 <xref:System.Activities.Statements.TryCatch> 活動處理工作流程中的例外狀況。  
   

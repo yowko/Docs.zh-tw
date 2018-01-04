@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2059a5918a7b24b69d047de652eab6fa6616385
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽 WCF WEB HTTP 服務，且在 URL 結尾附加 "/Help" 時 (例如 http://localhost:8000/Customers/Help)，便會顯示如下列說明頁面的畫面。  

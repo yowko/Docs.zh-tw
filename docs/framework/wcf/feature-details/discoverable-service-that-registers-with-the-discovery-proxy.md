@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffe4a94328d2728ca936425a58d4d641922356a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>HOW TO：實作以探索 Proxy 註冊的可探索服務
 本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在先前的主題， [How to： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 在這個主題中，您會建立一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，這個服務會傳送公告訊息 (`Hello` 和 `Bye`) 至探索 Proxy，使其向探索 Proxy 註冊和取消註冊其本身。  
@@ -294,7 +295,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 探索](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [如何： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [如何： 實作使用探索 Proxy 來尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [如何：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

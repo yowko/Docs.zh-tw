@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18856fe11d95d5b54bc580b83eae35badb4d86e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ccabcda9e26751db80ee7e955458d0eee0cae7e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-localization"></a>活動當地語系化
 若可能需要將工作流程應用程式與元件當地語系化為其他文化特性和語言，則應使用資源字串，如此一來，不需重新編譯，即可當地語系化這些應用程式與元件。  

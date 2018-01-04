@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c04e8095d84468ee7574b31f0a30fb6f2d2b03a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11d5de760b8a03d7bc35adabb631048a70e20264
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip 控制項概觀
 > [!NOTE]
@@ -34,13 +35,13 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示重要<xref:System.Windows.Forms.ContextMenuStrip>附屬類別。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|表示可選取選項，顯示在<xref:System.Windows.Forms.MenuStrip>或<xref:System.Windows.Forms.ContextMenuStrip>。|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|代表可讓使用者選取單一項目從清單中會顯示當使用者按一下控制項<xref:System.Windows.Forms.ToolStripDropDownButton>或更高層級的功能表項目。|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|提供基本功能的控制項衍生自<xref:System.Windows.Forms.ToolStripItem>顯示時按下的下拉式清單項目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>  

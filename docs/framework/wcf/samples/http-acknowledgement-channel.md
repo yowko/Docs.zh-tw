@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9081b47284b63315d950ef791389312df32815f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 要求認可通道
 HTTP 確認通道 (HTTP Acknowledgement Channel) 是層次通道的一個範例，此通道可以變更單向訊息模式，讓服務確認或拒絕傳入訊息，而不會在收到後就自動傳送確認。 HTTP 確認通道也會讓服務延遲確認，直到它可以保證商務層級的訊息將經過處理。  

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad9aa3ced90793b8051b377f499c94466bc3751a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b64cab6815b408b438d5ca93c3c7166aa940bf67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>如何：將功能表項目加入至 ContextMenuStrip
 您可以一次新增一個功能表項目或數個項目<xref:System.Windows.Forms.ContextMenuStrip>。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/22/2017
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ContextMenuStrip 控制項](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)

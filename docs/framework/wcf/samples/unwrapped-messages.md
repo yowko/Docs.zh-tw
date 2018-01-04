@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 476a708acebc7c671e8d7f6ef1812a34e5221db8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6014ee5fa7f714340f7069e5b5d39e6b4146dbb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unwrapped-messages"></a>未包裝的訊息
 此範例示範未包裝的訊息。 根據預設，訊息本文會格式化，以便包裝服務作業的參數。 下列範例說明對包裝模式中對 `Add` 服務的 `ICalculator` 要求訊息。  
@@ -122,4 +123,4 @@ public class ResponseMessage
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

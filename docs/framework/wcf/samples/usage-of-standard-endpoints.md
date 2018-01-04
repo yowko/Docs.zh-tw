@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8e8851f40c4c5e5c1a9399e5dec1f56aa0a5509
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ac8a9c639099e952f6030f5625958dd2bf84757
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="usage-of-standard-endpoints"></a>使用標準端點
 這個範例示範如何在服務組態檔中使用標準端點。 標準端點可讓使用者透過使用單一屬性描述位址、繫結和合約組合，並且將其他屬性與該屬性產生關聯的方式簡化端點定義。 這個範例示範如何定義及實作自訂標準端點，以及如何定義端點中的特定屬性。  
@@ -179,4 +180,4 @@ public class CustomEndpoint : ServiceEndpoint
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

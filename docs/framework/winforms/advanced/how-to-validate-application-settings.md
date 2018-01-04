@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>如何：驗證應用程式設定
 本主題示範如何在保存應用程式設定之前先行驗證。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  您所使用的事件取決於何時需要驗證設定，如下表所述。  
   
-|事件|發生時機和用途|  
+|Event - 事件|發生時機和用途|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|在初次載入設定屬性群組之後發生。<br /><br /> 使用此事件可先驗證整個屬性群組的初始值，然後才將值用於應用程式。|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|在單一設定屬性值變更之前發生。<br /><br /> 使用此事件可先驗證單一屬性，然後才將它變更。 它可立即為使用者提供有關其動作和選擇的意見回應。|  
@@ -170,6 +171,6 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

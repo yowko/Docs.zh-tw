@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee57276efda7edcc464c300e2f1d100b6a7c9109
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
 本主題說明設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中 Windows Process Activation Service (亦稱為 WAS) 來裝載無法透過 HTTP 網路通訊協定進行通訊的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時所需的步驟。 下列各節將概述此組態的各項步驟：  
@@ -109,8 +110,8 @@ ms.lasthandoff: 12/02/2017
     > [!NOTE]
     >  這個命令是單行文字。  
   
-## <a name="see-also"></a>另請參閱  
- [TCP 啟動](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+## <a name="see-also"></a>請參閱  
+ [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [NamedPipe 啟用](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

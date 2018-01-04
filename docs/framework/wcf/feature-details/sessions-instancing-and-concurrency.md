@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>工作階段、執行個體與並行
 「 *工作階段* 」(Session) 是兩個端點之間所傳送之所有訊息的相互關聯。 「*執行個體* 」(Instancing) 是指控制使用者定義之服務物件的存留時間，以及其相關的 <xref:System.ServiceModel.InstanceContext> 物件。 「*並行* 」(Concurrency) 是指控制在 <xref:System.ServiceModel.InstanceContext> 中同時執行的執行緒數目。  
@@ -117,10 +118,10 @@ public class CalculatorService : ICalculatorConcurrency
 |PerSession|-工作階段通道的行為： 工作階段和<xref:System.ServiceModel.InstanceContext>每個通道。<br />的無工作階段通道行為： 擲回例外狀況。|-工作階段通道的行為： 工作階段和<xref:System.ServiceModel.InstanceContext>每個通道。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>每個呼叫。|-工作階段通道的行為： 擲回例外狀況。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>每個呼叫。|  
 |Single|-工作階段通道的行為： 工作階段，另一個<xref:System.ServiceModel.InstanceContext>所有呼叫。<br />的無工作階段通道行為： 擲回例外狀況。|-工作階段通道的行為： 工作階段和<xref:System.ServiceModel.InstanceContext>建立或使用者指定 singleton。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>建立或使用者指定 singleton。|-工作階段通道的行為： 擲回例外狀況。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>每個建立之單一個體或使用者指定之單一。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用工作階段](../../../../docs/framework/wcf/using-sessions.md)  
- [如何： 建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [如何： 控制服務執行個體](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [如何：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [如何：控制服務執行個體](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [並行](../../../../docs/framework/wcf/samples/concurrency.md)  
  [執行個體](../../../../docs/framework/wcf/samples/instancing.md)  
  [工作階段](../../../../docs/framework/wcf/samples/session.md)

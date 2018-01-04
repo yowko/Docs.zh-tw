@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa0f4aec0a673a07c6b6d752d8609caedbcfa4b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13001ff291c1d2874e5c9ce6e427afe09067432a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-channel-factory"></a>組態通道處理站
 此範例涵蓋 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的使用方法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 允許從中央管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端組態。 如果在應用程式網域載入時間之後選取或變更組態，這可能也相當實用。  

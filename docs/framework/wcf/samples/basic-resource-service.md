@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-resource-service"></a>基本資源服務
 此範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 程式設計模型實作 HTTP 的服務，此模型會公開一組支援擷取、加入、刪除和取代作業的客戶。 此範例由兩個元件所組成：自我裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服務 (Service.cs)，以及建立服務並呼叫該服務的主控台應用程式 (program.cs)。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  [自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

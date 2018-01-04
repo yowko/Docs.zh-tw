@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4823b7d7411b7896e723683b70021292dd989aa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ed5ccd46a6563ced2cf5946304a36d0c204a00a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar 控制項 (Windows Form)
 Windows Form`MonthCalendar`控制項提供直覺式的圖形化介面，以便讓使用者檢視並設定日期資訊。 控制項會顯示包含編號的日期的月份，在下一周天數的資料行中排列方格。 您可以透過按一下月份標題的任一邊的箭號按鈕選取不同的月份。 不同於類似<xref:System.Windows.Forms.DateTimePicker>控制項，您可以選取範圍的日期與此控制項; 不過，<xref:System.Windows.Forms.DateTimePicker>控制項可讓您設定的時間以及日期。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [MonthCalendar 控制項概觀](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)  
  導入的一般概念`MonthCalendar`控制項，可讓使用者檢視和設定應用程式的日期資訊。  
   

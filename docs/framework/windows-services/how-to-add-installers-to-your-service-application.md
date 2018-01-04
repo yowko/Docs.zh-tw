@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：加入 Installer 至服務應用程式
 Visual Studio 隨附安裝的元件，可將其與您的服務應用程式相關聯的資源。 安裝元件登錄的方法，它可以安裝，並讓服務控制管理員知道服務存在於的系統上的個別服務。 當您使用的服務應用程式時，您可以自動將適當的安裝程式新增至您的專案屬性 視窗中選取的連結。  
@@ -38,7 +39,7 @@ Visual Studio 隨附安裝的元件，可將其與您的服務應用程式相關
  您不需要任何特殊的安裝程式正確安裝程式服務中編碼方式。 不過，您偶爾可能需要以修改安裝程式的內容，如果您需要加入特殊功能的安裝程序。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-installers-to-your-service-application"></a>若要加入 installer 至服務應用程式  
   
@@ -69,8 +70,8 @@ Visual Studio 隨附安裝的元件，可將其與您的服務應用程式相關
     > [!NOTE]
     >  針對每個專案中的其他服務，您必須加入額外<xref:System.ServiceProcess.ServiceInstaller>元件在專案的`ProjectInstaller`類別。 <xref:System.ServiceProcess.ServiceProcessInstaller>三個步驟中加入元件適用於所有專案中的個別服務安裝程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何： 啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何： 指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [如何：指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

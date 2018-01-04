@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing"></a>路由
 本節中的主題涵蓋路由服務。 路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  提供路由服務的功能概觀。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/18/2017
  [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  說明路由服務可以處理的訊息模式。  
   
- [訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+ [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  討論如何將訊息篩選用於以內容為基礎的路由。  
   
  [路由案例](../../../../docs/framework/wcf/feature-details/routing-scenarios.md)  

@@ -17,26 +17,27 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>WCF 功能詳細資料
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允許對應用程式的訊息功能擴充控制。 本節的主題將詳述可用的功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]基本程式設計，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  描述如何建立和設定工作流程服務。  
   
- [端點： 位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  描述如何控制服務的多種層面。  
   
  [資料傳輸與序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  說明資料的序列化如何針對互通或未來相容性而量身打造。  
   
- [工作階段中，執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [工作階段、執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
  說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的執行個體與工作階段模式，以及如何為應用程式選取正確的模式。  
   
  [傳輸](../../../../docs/framework/wcf/feature-details/transports.md)  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
  說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性如何助您建立具有機密性與完整性的應用程式。 驗證、授權和稽核功能皆可使用。  
   
- [對等網路功能](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [對等網路](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  詳述如何建立對等式服務與用戶端。  
   
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)  
@@ -63,13 +64,13 @@ ms.lasthandoff: 12/02/2017
  [裝載](../../../../docs/framework/wcf/feature-details/hosting.md)  
  說明裝載。 服務可以由另一個應用程式裝載，或是自我裝載。  
   
- [互通性與整合](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
+ [互通性和整合](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  說明若您長期開發裝載於 COM+ 的元件架構應用程式邏輯，該如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而非重新撰寫。  
   
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  說明允許開發者對非 SOAP 端點公開 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務作業的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 程式設計模型。  
   
- [WCF 新聞訂閱](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
+ [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  說明對來自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之簡易公開新聞訂閱摘要的支援。  
   
  [AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  

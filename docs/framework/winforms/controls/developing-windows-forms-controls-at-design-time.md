@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4f9680bb64339f2f232793beb9c47a36c07aa4a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9910aa1849ed9288eca7003408c0afc39c641dbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>在設計階段開發 Windows Form 控制項
 針對控制項作者，.NET Framework 提供豐富的控制項撰寫技術。 作者不再只能設計作為預先存在之控制項集合的複合控制項。 透過繼承，您可以從預先存在的複合控制項或預先存在的 Windows Forms 控制項來建立自己的控制項。 您也可以設計可實作自訂繪製的專屬控制項。 這些選項可提供視覺介面設計和功能的大量彈性。 若要利用這些功能，您應該熟悉物件程式設計概念。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/22/2017
   
  如果您想要建立自訂控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  示範如何在 Visual Basic 中建立簡單的複合控制項。  
   
@@ -59,10 +60,10 @@ ms.lasthandoff: 10/22/2017
  [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  示範如何將複合控制項緊密整合至設計環境。  
   
- [如何：撰寫 Windows Forms 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [操作說明：撰寫 Windows Forms 的控制項](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
  提供 Windows Forms 控制項實作考量的概觀。  
   
- [如何：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ [操作說明：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  示範如何透過繼承自複合控制項來建立控制項。  
   
  [如何：繼承自 UserControl 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  

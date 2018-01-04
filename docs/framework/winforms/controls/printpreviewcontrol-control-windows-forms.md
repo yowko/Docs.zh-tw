@@ -18,16 +18,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca40e8837669424865debc70c2289d6381902cf9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6be7ff61dad214c9e4caa90682a45922f2c9c69b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl 控制項 (Windows Form)
 Windows Form `PrintPreviewControl` 可用來將文件顯示成其列印時的外觀。 這個控制項沒有任何按鈕或其他使用者介面項目，因此，通常只有當您想要撰寫您自己的預覽列印使用者介面時，才會使用 `PrintPreviewControl`。 如果您想要標準使用者介面，請使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [PrintPreviewControl 控制項概觀](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
  介紹 `PrintPreviewControl` 的一般概念，您可以使用這個控制項來設計自己的預覽列印對話方塊或元件。  
   

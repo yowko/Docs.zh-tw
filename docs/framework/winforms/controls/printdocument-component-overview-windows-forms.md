@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f052283b743d5f1a7ed9d2bb6576390e5343dcae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 414a7972550558b40403b7f4cbfd9a49194666be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument 元件概觀 (Windows Form)
 Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 元件可用來設定描述列印項目的屬性，以及在 Windows 應用程式中列印文件的能力。 它可以與 [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 元件一起使用，以控制文件列印的各個方面。  
@@ -35,7 +36,7 @@ Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/print
   
  當加入至表單，<xref:System.Drawing.Printing.PrintDocument>元件會出現在 Windows Form 設計工具底部的紙匣。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Printing.PrintDocument>  
  [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  

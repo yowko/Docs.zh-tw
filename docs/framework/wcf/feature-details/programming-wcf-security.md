@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>WCF 安全性程式設計
 本主題說明用來建立安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式的基本程式設計工作。 本主題涵蓋驗證、 機密性和完整性，統稱為*傳輸安全性*。 本主題並未涵蓋授權 （控制存取資源或服務）;如需授權資訊，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
@@ -110,6 +111,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

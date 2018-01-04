@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dad8fe137cfc495d1edc6936d13830861e1654e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6584f71450917669024c965c121edebb7dffc677
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>HOW TO：將摘要同時公開為 Atom 和 RSS
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開新聞訂閱摘要的服務。 本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。 此服務會公開可傳回任何一種新聞訂閱格式的端點。 為了簡要說明，此範例中使用的服務為自我裝載。 在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]不同[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]裝載選項，請參閱[主控](../../../../docs/framework/wcf/feature-details/hosting.md)。  
@@ -105,6 +106,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

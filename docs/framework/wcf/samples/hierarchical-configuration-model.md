@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcef9ebe1b4876e429da97b3e217dd32286e4d6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cf8e7b37b6430be1eed9bc037bfa06aeb825b866
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchical-configuration-model"></a>階層式組態模型
 此範例示範如何針對服務實作組態檔的階層。 它也會示範如何從階層中較高的層級繼承繫結、服務行為與端點行為。  
@@ -83,5 +84,5 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 管理範例](http://go.microsoft.com/fwlink/?LinkId=193960)

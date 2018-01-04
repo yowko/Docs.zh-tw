@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf46a3d5207f3414bc8abd5fd7bdb904e91f07d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 291ceb32d7128a63ba9a251ce916c18adb100100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 元件概觀
 <xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingList>，可取得或設定用來排序的資料行名稱，以及排序次序資訊。 如果資料來源是 <xref:System.ComponentModel.IBindingListView> 並支援進階排序，可取得用來排序的多個資料行名稱，以及排序次序資訊。|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingListView>，可取得或設定用來篩選所檢視之資料列的運算式。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [BindingSource 元件架構](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05fe983832eb3931549bbda5ee7db7c70766cd3c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="addressing"></a>定址
 此定址範例會示範端點位址的各方面與功能。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此範例中的服務會自動裝載。 服務和用戶端都是主控台應用程式。 服務會定義使用相對與絕對端點位址組合的多個端點。  
@@ -146,4 +147,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

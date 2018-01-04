@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6ca4b3e254055c7142259ea6022a53f003ea25f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions-overview"></a>可靠的工作階段概觀
 
@@ -75,9 +76,9 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 | 支援的可靠工作階段通道型別 &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
-| `IOutputSessionChannel`                         | 是               | 是                      | 是              | 是                     |
+| `IOutputSessionChannel`                         | [是]               | 是                      | 是              | 是                     |
 | `IRequestSessionChannel`                        | 是               | 是                      | 否               | 否                      |
-| `IDuplexSessionChannel`                         | 否                | 否                       | 是              | 是                     |
+| `IDuplexSessionChannel`                         | 否                | 否                       | 是              | [是]                     |
 
 &#8224;支援的通道型別是供泛型值`TChannel`參數值傳遞到<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>方法。
 
@@ -85,9 +86,9 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 | 支援的可靠工作階段通道型別 &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
-| `IInputSessionChannel`                          | 是             | 是                    | 是              | 是                     |
+| `IInputSessionChannel`                          | [是]             | 是                    | 是              | 是                     |
 | `IReplySessionChannel`                          | 是             | 是                    | 否               | 否                      |
-| `IDuplexSessionChannel`                         | 否              | 否                     | 是              | 是                     |
+| `IDuplexSessionChannel`                         | 否              | 否                     | 是              | [是]                     |
 
 &#8225;支援的通道型別是供泛型值`TChannel`參數值傳遞到<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>方法。
 
@@ -135,7 +136,7 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 - 透過 HTTP 工作階段
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用繫結來設定服務和用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
 [WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)

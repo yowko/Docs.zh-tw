@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式
 在您開發 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 新聞訂閱服務時，會使用下列類別來建立摘要與項目：  
@@ -407,9 +408,9 @@ ms.lasthandoff: 12/02/2017
   
  `</content>`  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [新聞訂閱架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [如何： 建立基本 RSS 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [如何： 建立基本 Atom 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [如何： 公開的摘要為這兩個 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>請參閱  
+ [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [摘要整合架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [如何：建立基本 RSS 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [如何：建立基本 Atom 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [如何：將摘要同時公開為 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

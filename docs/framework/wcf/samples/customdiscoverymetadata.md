@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b4a68204d8ae5d2a338d60498522810a557e575
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2e13fde338075d9ef16c205efcfcb452235f0af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 這個範例示範如何將自訂 XML 中繼資料插入服務公開之可探索端點的探索中繼資料。 接著在範例中會示範用戶端如何搜尋服務及擷取這項自訂資料。 這個範例包含二個專案，也就是服務和用戶端。  
@@ -45,4 +46,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DiscoveryExtensibility\CustomDiscoveryMetadata`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

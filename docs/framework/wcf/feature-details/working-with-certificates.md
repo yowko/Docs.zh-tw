@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將扼要說明 X.509 數位憑證功能及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與憑證來完成一般工作的方法說明提供連結。  
@@ -179,9 +180,9 @@ ms.lasthandoff: 12/02/2017
   
  在第一版的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels>  
  <xref:System.ServiceModel.Security>  
  <xref:System.ServiceModel>  
  <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

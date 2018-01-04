@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 62ea53cf5a96519c864e48dc48e28ed81e3b6d8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4f989c46deff9c38e4737e48e077bf07240fa98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-scenarios"></a>對等通道案例
 對等通道 API 支援下列開發案例。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="gaming"></a>遊戲  
  使用對等通道時，應用程式開發人員可以建立無伺服器版本的遊戲，也就是透過對等機制而非中央伺服器，傳輸遊戲進度並與其他玩家同步。 針對小型 ISV，這個機制可以省下部署、維護和保養中央伺服器的相關作業成本。 使用對等架構撰寫的遊戲可以在整個網際網路、有線或無線區域網路上進行。 您也可以使用對等網路開發輔助遊戲活動，例如大廳和在遊戲中交談。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

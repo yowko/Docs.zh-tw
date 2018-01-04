@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06cd4e812f4acf546dad577a2e1ddc571281ebe3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb27503fffc798b644f95fd213f8f23bdb3e228a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 控制項概觀 (Windows Form)
 功能表會公開給您的使用者功能，藉由在一般情況下分組的命令。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示一些特別重要的屬性<xref:System.Windows.Forms.MenuStrip>和相關聯的類別。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|取得或設定<xref:System.Windows.Forms.ToolStripMenuItem>用來顯示 MDI 子表單的清單。|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|取得或設定子功能表要如何與 MDI 應用程式中的父功能表合併。|  
@@ -56,14 +57,14 @@ ms.lasthandoff: 11/21/2017
   
  下表顯示重要<xref:System.Windows.Forms.MenuStrip>附屬類別。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|表示可選取選項，顯示在<xref:System.Windows.Forms.MenuStrip>或<xref:System.Windows.Forms.ContextMenuStrip>。|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|代表捷徑功能表。|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|代表控制項，可讓使用者從顯示當使用者按一下清單中選取單一項目<xref:System.Windows.Forms.ToolStripDropDownButton>或更高層級的功能表項目。|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|提供基本功能的控制項衍生自<xref:System.Windows.Forms.ToolStripItem>顯示時按下的下拉式清單項目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>  

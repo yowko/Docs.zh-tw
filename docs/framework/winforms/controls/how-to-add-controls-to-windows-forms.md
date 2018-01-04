@@ -20,17 +20,18 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1f5f739afa914a69017dbba2a9a4afb990f6e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d9075c93181b68828a307924259a9170c046baa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：將控制項加入至 Windows Form
 大部分表單都設計成將控制項加入至表單的表面，以定義使用者介面 (UI)。 A*控制項*是用來顯示資訊或可接受使用者輸入表單上的元件。 如需將控制項的詳細資訊，請參閱[Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要繪製控制項在表單上  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
     > [!IMPORTANT]
     >  您可能會藉由參考惡意公開本機電腦透過網路的安全性風險`UserControl`。 這只會考量使用者惡意破壞性的自訂控制項，且您不小心將其加入您專案的建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [操作說明：重新調整 Windows Forms 上控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  

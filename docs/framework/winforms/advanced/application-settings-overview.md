@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d617ce5b4e7222b60ce711e2e081e0bf3cb8065d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f74595ce672079db69fd36fb2b2eb982bc90b448
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-overview"></a>應用程式設定概觀
 本主題討論如何代表您的應用程式和使用者來建立及儲存設定資料。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  設定會在組態檔中儲存為 XML 片段。 應用程式範圍的設定由 `<application.Settings>` 項目代表，且通常會放在 *app*.exe.config，其中 *app* 是您主要可執行檔的名稱。 使用者範圍的設定由 `<userSettings>` 項目代表，放在 *user*.config，其中 *user* 是目前正在執行應用程式之人員的使用者名稱。 您必須根據應用程式部署 *app*.exe.config 檔案；該設定架構將會依應用程式第一次儲存該使用者設定的需要來建立 *user*.config 檔案。 您也可以在 `<userSettings>` app *.exe.config 中定義*區塊，以提供使用者範圍設定的預設值。  
   
- 自訂控制項也可以藉由實作 <xref:System.Configuration.IPersistComponentSettings> 介面來儲存自己的設定，這介面會公開 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。 Windows Form <xref:System.Windows.Forms.ToolStrip> 控制項實作此介面，以便儲存應用程式工作階段之間工具列和工具列項目的位置。 如需自訂控制項和應用程式設定的詳細資訊，請參閱 [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)。  
+ 自訂控制項也可以藉由實作 <xref:System.Configuration.IPersistComponentSettings> 介面來儲存自己的設定，這介面會公開 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。 Windows Form <xref:System.Windows.Forms.ToolStrip> 控制項實作此介面，以便儲存應用程式工作階段之間工具列和工具列項目的位置。 如需自訂控制項和應用程式設定的詳細資訊，請參閱[自訂控制項的應用程式設定](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)。  
   
 ## <a name="limitations-of-application-settings"></a>應用程式設定的限制  
  您無法在裝載 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 Unmanaged 應用程式使用應用程式設定。 設定將不會在這類環境中運作，如 Visual Studio 增益集、Microsoft Office 的 C++ 及裝載於 Internet Explorer 或 Microsoft Outlook 增益集及專案中的控制項。  
@@ -52,11 +53,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="getting-started-with-application-settings"></a>開始使用應用程式設定  
  如果您使用 Visual Studio，您可以在 Windows Form 設計工具中使用 [屬性]  視窗中的 **(ApplicationSettings)** 屬性定義設定。 當您以這種方式定義設定時，Visual Studio 會自動建立自訂的 Managed 包裝函式類別，這會以類別屬性與每個設定產生關聯。 Visual Studio 也會負責將設定繫結到表單或控制項上的屬性，以便於在表單顯示時自動還原控制項設定，以及在表單關閉時會自動儲存控制項設定。  
   
- 如果您想要更進一步控制您的設定，您可以定義自己的自訂應用程式設定包裝函式類別。 這可以藉由衍生自 <xref:System.Configuration.ApplicationSettingsBase>的類別來完成，以及藉由加入對應至每個設定的屬性，並將特殊屬性套用至這些屬性。 如需建立包裝函式類別的詳細資訊，請參閱 [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ 如果您想要更進一步控制您的設定，您可以定義自己的自訂應用程式設定包裝函式類別。 這可以藉由衍生自 <xref:System.Configuration.ApplicationSettingsBase>的類別來完成，以及藉由加入對應至每個設定的屬性，並將特殊屬性套用至這些屬性。 如需有關建立包裝函式類別的詳細資訊，請參閱[應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
   
  您也可以使用 <xref:System.Windows.Forms.Binding> 類別以程式設計的方式來繫結設定至表單和控制項上的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  <xref:System.Configuration.LocalFileSettingsProvider>  

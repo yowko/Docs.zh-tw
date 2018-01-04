@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97fa3ad3a92500614e1c174c516883a2ee2e0202
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cabff74808b25ba523d61931afc624d0353b2be1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>.NET Framework 4.5 內建活動程式庫
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含具有擴充功能的新活動程式庫。 活動的類型包含下列項目：  

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f2a9f2f44f5dfd44f00ae580423b1d2781ae5bd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
 這個案例會顯示以訊息安全性模式保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
@@ -126,6 +127,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

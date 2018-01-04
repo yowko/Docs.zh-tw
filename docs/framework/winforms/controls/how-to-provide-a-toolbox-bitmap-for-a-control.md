@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2d1ab49b6596c6feaa2ead5bbb92525f0ddb356d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：為控制項提供工具箱點陣圖
 如果您想要有特殊的圖示，為您的控制項出現在**工具箱**，您可以指定特定的映像使用<xref:System.Drawing.ToolboxBitmapAttribute>。 此類別是一個「屬性」，一種您可以附加至其他類別的特殊類別。 如需屬性的詳細資訊，請參閱[不在組建中︰Visual Basic 中的屬性概觀](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) (適用於 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) 和[屬性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) (適用於 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)])。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  點陣圖並不會針對自動產生的控制項和元件出現在工具箱中。 若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。 如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.ToolboxBitmapAttribute>  
  [逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  [在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  

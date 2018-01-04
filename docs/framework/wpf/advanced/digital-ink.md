@@ -17,18 +17,19 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0c283c58f2c39087c3d08b235b9056040971330
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 395d1a8d0536445cc1bcbc33b13d40c2bfc27fc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink"></a>數位筆跡
 本章節將討論使用中的數位筆跡[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 傳統上只有在 Tablet PC SDK 中找到，數位筆跡現已推出的核心 Windows Presentation Foundation。 這表示您現在可以使用 Windows Presentation Foundation 的開發單純的 Tablet PC 應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [概觀](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [操作說明主題](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+  [HOW-TO 主題](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>相關章節  
  [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)

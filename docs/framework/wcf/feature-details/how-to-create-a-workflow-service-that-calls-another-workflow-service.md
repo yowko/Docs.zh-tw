@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54c1ffcef9946d2be174f92545cdba3181b0d8ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>HOW TO：建立會呼叫其他工作流程服務的工作流程服務
 有時工作流程服務需要從另一個工作流程服務取得資訊。  本主題示範如何從另一個工作流程服務呼叫某個工作流程服務。 在本主題中，我們會建立兩個工作流程服務，其中一個服務的方法會反轉輸入字串，而另一個服務則會在反轉使用第一個服務的字串之後，將輸入字串轉換成大寫。  
@@ -124,7 +125,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  將名為 Client 的新主控台應用程式專案加入至方案中。  
   
-2.  以滑鼠右鍵按一下 用戶端專案，然後選取**加入服務參考**。 在出現的視窗中，按一下**探索**。 選取 StringReverserService.xamlx 並輸入 ReverseService 當做命名空間。  按一下 [確定]。  
+2.  以滑鼠右鍵按一下 用戶端專案，然後選取**加入服務參考**。 在出現的視窗中，按一下**探索**。 選取 StringReverserService.xamlx 並輸入 ReverseService 當做命名空間。  按一下 [確定 **Deploying Office Solutions**]。  
   
 3.  用下列程式碼取代 Program.cs 中的 Main 方法。  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b929765580f392b5fbd825a9c14bdc6f53c1e96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 您可以選擇將 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務裝載於網際網路資訊服務 (IIS) 應用程式內。 這個裝載模型與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET (ASMX) Web 服務所使用的模型很類似。  
@@ -65,10 +66,10 @@ ms.lasthandoff: 12/02/2017
 ## <a name="wcf-services-and-aspnet"></a>WCF 服務與 ASP.NET  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以同時與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 裝載在一起，或是裝載在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式中，以讓服務充分善用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式平台所提供的種種優勢。 如需這些功能的討論，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 ServiceHostFactory 擴充裝載](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [部署網際網路資訊服務裝載的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
+ [部署已裝載 Internet Information Services 的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
  [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [網際網路資訊服務裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Internet Information Services 裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [設定 Internet Information Services 7.0 for Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

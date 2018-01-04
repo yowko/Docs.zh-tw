@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6e3d87ab31b7a0910b270e81c28985ffe9279d4c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2969ccf059a32fb2751259bdd1fa6686f69058d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-over-message-queuing"></a>訊息佇列上的訊息安全性
 這個範例示範如何實作應用程式，該應用程式會針對用戶端使用具有 X.509v3 憑證驗證的 WS-Security，並透過 MSMQ 使用伺服器的 X.509v3 憑證來要求伺服器驗證。 有時候，為了確保 MSMQ 存放區中的訊息持續加密，並且讓應用程式可以執行其本身的訊息驗證，使用訊息安全性所產生的效果更為理想。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/18/2017
   
  此範例示範如何將訊息層級上的相互驗證與 MSMQ 搭配使用。 憑證是透過超出範圍之外的方式進行交換。 對佇列應用程式而言，一定都會採用這種方式，因為服務和用戶端並不需要同時啟動和執行。  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  範例用戶端與服務程式碼會與相同[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例有一點。 作業合約附有保護層級的標註，這表示訊息必須經過簽署並加密。  
   
 ```  
@@ -355,4 +356,4 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

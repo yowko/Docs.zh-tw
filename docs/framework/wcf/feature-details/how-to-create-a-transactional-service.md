@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 647b551e9b78d89cee3ddaf8f47ba8174a23fc5a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd0812125c63a5a89cf8a87f0ca72cf9a9f168d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-transactional-service"></a>HOW TO：建立異動式服務
 這個範例示範建立異動式服務的各層面，以及使用用戶端初始化的異動以協調服務作業。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/02/2017
     </bindings>  
     ```  
   
-### <a name="supporting-multiple-transaction-protocols"></a>支援多個交易通訊協定  
+### <a name="supporting-multiple-transaction-protocols"></a>支援多個異動通訊協定  
   
 1.  如需最佳效能，對於與使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 撰寫用戶端與服務有關的案例，您應該使用 OleTransactions 通訊協定。 但是，WS-AtomicTransaction (WS-AT) 通訊協定在需要協力廠商堆疊之互通性的案例中很有用。 您可以使用適當的通訊協定特定繫結提供多重端點，以設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務同時接受兩種通訊協定，如同下列範例組態所示。  
   
@@ -192,7 +193,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>控制交易式服務執行個體的存留時間  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性指定當交易完成時是否要釋放基礎服務執行個體。 因為這個預設值為 `true`，除非另外設定，不然 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會顯示有效率與可預測的 "just-in-time" 啟動行為。 呼叫後續交易的服務，可以確保新服務執行個體不會有之前交易狀態的殘餘資料。 雖然這方法通常很有用，但是有時候您可能會想要在交易完成之外維護服務執行個體中的狀態。 這種情況的範例是，當必要的狀態或資源控制代碼很難擷取或重組時。 藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性設定為 `false`，您可以達到這個目的。 使用這項設定時，後續呼叫就可以使用執行個體與任何關聯的狀態。 當使用這項功能時，請特別考量清除與完成狀態及交易的時機與方式。 下列範例示範如何使用 `runningTotal` 變數來維護執行個體以進行這項作業。  
+1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性指定當交易完成時是否要釋放基礎服務執行個體。 因為這個預設值為 `true`，除非另外設定，不然 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會顯示有效率與可預測的 "just-in-time" 啟動行為。 呼叫後續異動的服務，可以確保新服務執行個體不會有之前異動狀態的殘餘資料。 雖然這方法通常很有用，但是有時候您可能會想要在異動完成之外維護服務執行個體中的狀態。 這種情況的範例是，當必要的狀態或資源控制代碼很難擷取或重組時。 藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性設定為 `false`，您可以達到這個目的。 使用這項設定時，後續呼叫就可以使用執行個體與任何關聯的狀態。 當使用這項功能時，請特別考量清除與完成狀態及交易的時機與方式。 下列範例示範如何使用 `runningTotal` 變數來維護執行個體以進行這項作業。  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

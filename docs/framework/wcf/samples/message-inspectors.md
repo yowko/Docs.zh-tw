@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d601a2dfb0daab4e54d6caac6940b4826cee0b01
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ed4f31e004ddeb69a29568b3892ab7379715457
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-inspectors"></a>訊息偵測器
 這個範例會示範如何實作與設定用戶端和服務訊息偵測器。  
@@ -423,4 +424,4 @@ catch (Exception e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

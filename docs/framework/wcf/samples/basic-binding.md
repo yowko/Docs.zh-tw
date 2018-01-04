@@ -13,20 +13,21 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f001f4f8fac2e0366aa705d1998fe33d6dc4438
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>基本繫結
 本節包含示範使用端點項目之繫結屬性的基本範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  示範如何實作使用 `basicHttpBinding` 和訊息安全性的應用程式。  
   
- [搭配傳輸安全性的 BasicBinding](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
+ [具備傳輸安全性的 BasicBinding](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
  示範透過基本繫結使用 SSL 傳輸安全性。  
   
  [BasicBinding](../../../../docs/framework/wcf/samples/basicbinding.md)  

@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b89453b427e6a9552416f95c488f0c2a575b5cb4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d44805021f0070109ce67f28126d59d36e4175f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinate-systems-and-transformations"></a>座標系統和轉換
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供自然變換和頁面轉換，以便您可以將轉換 （旋轉、 縮放、 轉譯，等等） 繪製的項目。 在兩次轉換也可讓您能夠以各種不同的座標系統。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [座標系統類型](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
  導入了座標系統和轉換。  
   

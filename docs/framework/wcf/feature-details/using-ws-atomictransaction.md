@@ -14,14 +14,15 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12e6e2be3e01ea920b45cce7a27814dd19c00935
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124c5dc0f6db94ae459fe140bd7a4290aa56e04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-ws-atomictransaction"></a>使用 WS-AtomicTransaction
-WS-AtomicTransaction (WS-AT) 是一種互通的異動通訊協定， 可讓您使用 Web 服務訊息來流動分散式交易，並且以互通的方式在異質性交易基礎結構之間進行協調。 WS-AT 使用兩階段的認可通訊協定，能夠在分散型應用程式、交易管理員和資源管理員之間促成不可部分完成的結果。  
+WS-AtomicTransaction (WS-AT) 是一種互通的異動通訊協定， 可讓您使用 Web 服務訊息來流動分散式異動，並且以互通的方式在異質性異動基礎結構之間進行協調。 WS-AT 使用兩階段的認可通訊協定，能夠在分散型應用程式、交易管理員和資源管理員之間促成不可部分完成的結果。  
   
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的 WS-AT 實作包括內建於 Microsoft Distributed Transaction Coordinator (MSDTC) 交易管理員的通訊協定服務。 使用 WS-AT，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式就可以將交易流動到其他應用程式，包括使用協力廠商技術建置的可互通 Web 服務。  
   
@@ -29,11 +30,11 @@ WS-AtomicTransaction (WS-AT) 是一種互通的異動通訊協定， 可讓您�
   
  選擇的通訊協定會影響：  
   
--   用來將交易從用戶端流動至伺服器的訊息標頭格式。  
+-   用來將異動從用戶端流動至伺服器的訊息標頭格式。  
   
--   用來在用戶端交易管理員和伺服器交易之間執行兩階段認可通訊協定的網路通訊協定，能夠解析交易的結果。  
+-   用來在用戶端異動管理員和伺服器異動之間執行兩階段認可通訊協定的網路通訊協定，能夠解析異動的結果。  
   
  如果伺服器和用戶端使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 寫入，您就不需要使用 WS-AT。 您可以改為使用已啟用 `NetTcpBinding` 屬性的 `TransactionFlow` 預設值，這樣就會使用 `OleTransactions` 通訊協定來替代。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。 否則，如果您要流動異動至使用協力廠商技術建置的 Web 服務，就必須使用 WS-AT。  
   
-## <a name="see-also"></a>另請參閱  
- [設定 Ws-atomic 交易支援](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a>請參閱  
+ [設定 WS-Atomic 異動支援](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

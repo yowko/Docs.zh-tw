@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5981e68ebe2870870fff5e92e87d7582ac2c42b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>HOW TO：使用 MMC 嵌入式管理單元來檢視憑證
 常見的認證類型是 X.509 憑證。 當建立安全服務或用戶端時，您可以藉由使用像是 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 方法，指定用來當做用戶端或服務認證的憑證。 方法需要各種參數，例如儲存憑證的存放區，以及當搜尋憑證時要使用的值。 下列程序示範如何檢視電腦上的存放區，以尋找適當的憑證。 尋找憑證指紋的範例，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
@@ -47,9 +48,9 @@ ms.lasthandoff: 12/02/2017
   
 11. 在**主控台根目錄**視窗中，按一下 **憑證 （本機電腦）**以檢視憑證存放區的電腦。  
   
-12. 選擇項。 若要檢視您帳戶的憑證，請重複步驟 3 到 6。 在步驟 7，而不是選取**電腦帳戶**，按一下 **我的使用者帳戶**並重複步驟 8 到 10。  
+12. 選擇性。 若要檢視您帳戶的憑證，請重複步驟 3 到 6。 在步驟 7，而不是選取**電腦帳戶**，按一下 **我的使用者帳戶**並重複步驟 8 到 10。  
   
-13. 選擇項。 在**檔案**功能表上，按一下 **儲存**或**存**。 儲存主控台檔案供稍後使用。  
+13. 選擇性。 在**檔案**功能表上，按一下 **儲存**或**存**。 儲存主控台檔案供稍後使用。  
   
 ## <a name="viewing-certificates-with-internet-explorer"></a>使用 Internet Explorer 檢視憑證  
  您也可以使用 Internet Explorer 檢視、匯出、匯入和刪除憑證。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  若要檢視任何憑證的詳細資料、 選取憑證按一下**檢視**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何： 建立開發時使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
- [如何： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
+ [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

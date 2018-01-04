@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cfbda764984305c141fd416baea8efa6aef4591
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="listener-adapters"></a>接聽項配接器  
  接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通訊協定的接聽項配接器。  
   
-|接聽項配接器服務名稱|通訊協定|備註|  
+|接聽項配接器服務名稱|通訊協定|注意|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|同時為 IIS 7.0 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供 HTTP 啟動的通用元件。|  
 |NetTcpActivator|net.tcp|取決於 NetTcpPortSharing 服務。|  
@@ -95,6 +96,6 @@ ms.lasthandoff: 12/02/2017
 </system.web>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54f5b25a4391b4758e1798bce6e03f4534332db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-user-defined-bindings"></a>建立使用者定義繫結
 您有幾種方式可以建立系統不提供的繫結：  
@@ -127,6 +128,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>衍生自標準繫結  
  您可以不建立全新的繫結類別，而改為擴充其中一個現有的系統提供繫結。 與先前的情況非常類似，這次您必須覆寫 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 屬性的 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.Binding>  
  [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1518f3f89a1c7e5096ab1bee3461be84a0a87777
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e28158076fcedf8c7d14d598b1c2ba0a25ff1f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
 Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 工具的設計是為了讓您能夠更輕鬆地建立、部署和管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式。 本章節內容包含工具的詳細資訊。 請注意，並不支援這些工具。  
@@ -29,7 +30,7 @@ Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 工具的設計�
   
  下表列出這些工具，並提供簡短描述。  
   
-|工具|說明|  
+|工具|描述|  
 |----------|-----------------|  
 |[ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。|  
 |[尋找私密金鑰工具 (FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|從指定的存放區擷取私密金鑰。|  

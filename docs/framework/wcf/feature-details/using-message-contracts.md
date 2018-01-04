@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
 通常當建置 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，程式開發人員會特別注意資料結構與序列化的問題，並且本身不需要考慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -222,7 +223,7 @@ public class BankingDepositLog
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>簽署和加密部分訊息  
  訊息合約可以表示是否應該數位簽署與加密訊息的標頭和/或本文。  
   
- 藉由設定 <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性 (Attribute) 的 <xref:System.ServiceModel.MessageBodyMemberAttribute> 屬性 (Property) 可以達到此目的。 這個型別是 <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> 型別的列舉，並且可以設定為 <xref:System.Net.Security.ProtectionLevel.None> (無加密或簽章)、<xref:System.Net.Security.ProtectionLevel.Sign> (只有數位簽章) 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (同時使用加密和數位簽章)。 預設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
+ 藉由設定 <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性 (Attribute) 的 <xref:System.ServiceModel.MessageBodyMemberAttribute> 屬性 (Property) 可以達到此目的。 這個型別是 <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> 型別的列舉，並且可以設定為 <xref:System.Net.Security.ProtectionLevel.None> (無加密或簽章)、<xref:System.Net.Security.ProtectionLevel.Sign> (只有數位簽章) 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (同時使用加密和數位簽章)。 預設值為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
  若要讓這些安全性功能運作，您必須正確設定繫結與行為。 如果沒有透過正確的組態 (例如，嘗試在不提供認證的情況下簽署訊息) 使用這些安全性功能，就會在驗證階段發生例外狀況。  
   
@@ -456,6 +457,6 @@ public class OperationDetails
   
  如果您要接收訊息物件做為 `Result` 屬性，並讓傳回的值做為該物件的屬性，則使用 `/messageContract` 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)

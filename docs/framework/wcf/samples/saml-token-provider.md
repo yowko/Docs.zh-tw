@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44455f6509778a84d39a0cba167328c4a7801fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7afdbcde68a811dd8fb2be84c1ae298496992c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
 這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附預設的認證管理員權杖提供者。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
@@ -409,4 +410,4 @@ ms.lasthandoff: 12/02/2017
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

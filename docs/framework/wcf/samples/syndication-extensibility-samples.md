@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b356fd413ab61990b685d3104b9f1bc00dfbd71c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 938c358f6de717ceaf05b4e6c887904a9996f2ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility-samples"></a>新聞訂閱擴充性範例
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自訂新聞訂閱的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
- [強型別延伸](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
+## <a name="in-this-section"></a>本節內容  
+ [強型別延伸模組](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
  示範如何實作在建議的 Atom Threading Extensions RFC 中定義的延伸項目。  
   
  [摘要格式器 (JSON)](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  

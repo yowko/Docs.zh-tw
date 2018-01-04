@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3e63a11ce87c95a5afc8e7f60c8e262da5c6bd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 這個範例示範 SQL 工作流程執行個體存放區中已提升屬性的使用方式和組態。 SQL 工作流程執行個體存放區是以 SQL 為基礎的執行個體存放區實作。 它允許執行個體在 SQL Server 或 SQL Server Express 資料庫中來回儲存及載入其狀態。 存放區擴充性功能可讓使用者定義儲存在執行個體存放區中的屬性。 這些屬性會顯示在提升屬性檢視表中，供使用者查詢屬性。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

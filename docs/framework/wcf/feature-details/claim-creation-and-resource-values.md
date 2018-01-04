@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8213931a7509378fde6df19eeb189abd8a81e96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8afcd09e09cefcd08e3cb92aba980f599cf44d11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claim-creation-and-resource-values"></a>宣告建立與資源值
 <xref:System.IdentityModel.Claims.Claim> 類別提供幾種建立內建宣告類型之執行個體的方法。 這些方法的下列幾項不會對提供的資源執行語意或格式檢查：  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
- [管理宣告和授權與身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44a51c1bc9bd17cab7e3ba59ad36aa6700f82f71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 所有 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的通訊都會透過其端點進行。 每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/02/2017
   
  如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.EndpointAddress>  
  [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  

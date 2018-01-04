@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87a27bb3e33b0dd78fdb2dfa206bbde098c8b769
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e56b54b5d49fcd307821211e7db858299f9f446d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>HOW TO：使用 HTTPS 建立自訂可靠工作階段繫結
 
@@ -79,6 +80,6 @@ ms.lasthandoff: 12/02/2017
 
 因為此範例中使用的憑證是使用建立的測試憑證*Makecert.exe*，當您嘗試存取 HTTPS 位址，例如，會顯示安全性警示`https://localhost/servicemodelsamples/service.svc`，從您的瀏覽器。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

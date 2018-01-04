@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c8243524b2de57c58143b7dfb74050a116c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8591a2b42f375f0b0e275fa9f6e34e69e7c054ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-serializer"></a>資料合約序列化程式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基礎結構會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別做為預設的序列化程式。 本章節中的主題將提供使用它做為獨立序列化程式的詳細資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
  如何使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別序列化物件圖形，以及將 XML 文件還原序列化為物件的詳細資訊。  
   
@@ -47,6 +48,6 @@ ms.lasthandoff: 12/02/2017
   
  [資料傳輸與序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

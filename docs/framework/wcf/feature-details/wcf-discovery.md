@@ -17,23 +17,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c9b083180870e451816b54dddc10068ca7ec5db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c11daa14a3897b05947dd6f8c3f3be99eb69c377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-discovery"></a>WCF 探索
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支援以使用 WS-Discovery 通訊協定的互通方式，在執行階段能夠找到服務。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以使用多點傳送訊息，向網路公告其可用性，或向探索 Proxy 伺服器公告。 用戶端應用程式可搜尋網路或探索 Proxy 伺服器，來尋找符合整組準則的服務。 本節中的主題提供概要並詳細說明此功能的程式設計模型。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
  提供 WS-Discovery 支援的概要 (由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供)。  
   
  [WCF 探索物件模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)  
  說明物件模型中的類別以及 WS-Discovery 支援的擴充性。  
   
- [如何： 以程式設計方式將探索能力加入至 WCF 服務和用戶端](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
+ [如何：以程式設計方式將探索能力新增至 WCF 服務和用戶端](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
  示範如何讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務呈現可探索狀態。  
   
  [實作探索 Proxy](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  

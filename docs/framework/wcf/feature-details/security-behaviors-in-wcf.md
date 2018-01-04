@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，行為會修改服務層級或端點層級的執行階段行為  ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]行為一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*讓您控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
@@ -227,6 +228,6 @@ ms.lasthandoff: 11/21/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

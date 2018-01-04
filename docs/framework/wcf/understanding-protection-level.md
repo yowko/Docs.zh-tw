@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>了解保護層級
 在許多不同的類別上都可找到 `ProtectionLevel` 屬性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別。 此屬性會控制如何保護訊息的部分 (或全部) 內容。 本主題會說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 功能及其運作方式。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 12/02/2017
   
  當用戶端呼叫 `Price` 方法時，它會在從服務接收回覆時擲回例外狀況。 這個例外狀況的發生是因為用戶端沒有在 `ProtectionLevel` 上指定 `ServiceContractAttribute`，使得用戶端對包括 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 方法的所有方法使用預設值 (`Price`)。 然而，此服務會傳回使用 <xref:System.Net.Security.ProtectionLevel.Sign> 層級的值，因為服務合約會定義將其保護層級設定為 <xref:System.Net.Security.ProtectionLevel.Sign> 的單一方法。 在此情況下，在驗證來自於服務的回應時，用戶端便會擲回錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  <xref:System.ServiceModel.FaultContractAttribute>  

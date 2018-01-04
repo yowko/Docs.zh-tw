@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55f7ef12f67bd719f72f158a1fca6f120b4f448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6fba00dc98f6b5525e1cb9588ed52bc483a665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -86,7 +87,7 @@ class ClientCredentials : Behavior
   
  指定認證是否支援互動式交涉的布林值。  
   
-### <a name="username"></a>UserName  
+### <a name="username"></a>使用者名稱  
  資料型別：字串  
   
  存取類型：唯讀  
@@ -106,5 +107,5 @@ class ClientCredentials : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.ClientCredentials>

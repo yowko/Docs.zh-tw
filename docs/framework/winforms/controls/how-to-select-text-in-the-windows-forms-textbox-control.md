@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ad19f3daca43fb33e845b632ac7d92b00f544c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 535ee9e7359782f24d48d895f094afbe47e1023b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>如何：在 Windows Form TextBox 控制項中選取文字
 您可以在 Windows Form 中，以程式設計方式選取文字<xref:System.Windows.Forms.TextBox>控制項。 比方說，如果您建立的搜尋文字的特定字串的函式，您可以選取要以視覺化方式警示找到的字串位置的讀取器的文字。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.TextBox>  
  [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  [操作說明：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  

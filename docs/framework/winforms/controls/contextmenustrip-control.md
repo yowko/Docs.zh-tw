@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a6c9ced35b68cf1c3bbb216f0b34b6eabe9dba1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 318ad936a5977f8a2dcb0a9de7cf1c5c3f7b52b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip 控制項
 <xref:System.Windows.Forms.ContextMenuStrip> 控制項提供您要使其與控制項產生關聯的捷徑功能表。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ContextMenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   

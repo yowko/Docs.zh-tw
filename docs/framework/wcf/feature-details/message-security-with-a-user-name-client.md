@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-user-name-client"></a>使用者名稱用戶端的訊息安全性
 下圖示範使用訊息層級安全性保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務與用戶端。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  

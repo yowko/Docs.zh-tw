@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 726ce98f3fe11bbc3cd13d90cdae335c0741efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be200882b59af3604a88c33ad1b3a99687ded860
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="formatting-messages-in-workflow-services"></a>工作流程服務中的格式化訊息
 這個範例示範不同使用者類型在訊息活動中的使用方式 (WF 服務)。 範例服務是簡單的經費支出核准服務，會公開三個作業。 `ApproveExpense` 採用資料合約型別，並示範如何使用已知的型別。 作業會根據支出金額傳回 `true` 或 `false`。 `ApprovePO`會採用 XmlSerializer 型別並傳回`true`或`false`根據支出金額。`ApprovedVendor` 採用訊息合約型別，並傳回`true`或`false`如果廠商在核准廠商清單中，或者要求來自財務部門 （財務部門可以使用任何廠商）。  

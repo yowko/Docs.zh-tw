@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a07b5d3b3451a9e5e29680fb74ea8411db6d11f7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="declarative-constraints"></a>宣告式條件約束
 宣告式條件約束提供強大的驗證方法，適用於驗證活動及該活動與其他活動之間的關聯性。 條件約束是在撰寫處理序期間針對活動所設定的，但工作流程主機亦可指定其他條件約束。 本主題介紹使用宣告式條件約束來提供活動驗證的概觀。  

@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>逐步解說：在元件設計工具中建立 Windows 服務應用程式
 本文示範如何在 Visual Studio 中建立簡單的 Windows 服務應用程式，以將訊息寫入至事件記錄檔。 以下是建立及使用服務的基本執行步驟：  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/23/2017
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-2.  在 Visual Basic 或 Visual C# 專案範本清單中，選擇 [Windows 服務] ，並將專案命名為 **MyNewService**。 選擇 [ **確定**]。  
+2.  在 Visual Basic 或 Visual C# 專案範本清單中，選擇 [Windows 服務] ，並將專案命名為 **MyNewService**。 選擇 [確定] 。  
   
      專案範本會自動加入繼承自 `Service1` 且名稱為 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的元件類別。  
   
@@ -275,7 +276,7 @@ ms.lasthandoff: 11/23/2017
 6.  (選擇性) 為 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法重複這個程序。  
   
 > [!CAUTION]
->  [服務控制管理員](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) 使用 `dwWaitHint` 和 `dwCheckpoint` 和 [dwCheckpoint](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) 來判斷啟動或關閉 Windows 服務需要多少時間。 如果您的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法需長時間執行，則您可以使用遞增的 [dwCheckPoint](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) 值再次呼叫 `dwCheckPoint` ，以要求更多時間。  
+>   [服務控制管理員](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) 使用 `dwWaitHint` 和 `dwCheckpoint` 和 [dwCheckpoint](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) 來判斷啟動或關閉 Windows 服務需要多少時間。 如果您的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法需長時間執行，則您可以使用遞增的 [dwCheckPoint](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) 值再次呼叫 `dwCheckPoint` ，以要求更多時間。  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>將安裝程式加入服務  
@@ -487,8 +488,8 @@ End Sub
   
  您可以使用安裝程式，在安裝應用程式時建立事件記錄檔，而不是在應用程式執行時才建立事件記錄檔。 此外在應用程式解除安裝時，安裝程式會刪除事件記錄檔。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLogInstaller> 參考頁面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [服務 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

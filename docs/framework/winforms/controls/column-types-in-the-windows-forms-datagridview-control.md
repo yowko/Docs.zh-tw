@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行類型
 <xref:System.Windows.Forms.DataGridView>控制項使用數個資料行類型來顯示它的資訊，並讓使用者修改或新增資訊。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  下表描述可用於不同的資料行類別<xref:System.Windows.Forms.DataGridView>控制項。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|搭配使用以文字為基礎的值。 繫結至數字與字串時自動產生。|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|搭配<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 繫結至這些類型的值時自動產生。|  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Forms.DataGridViewLinkColumn>類別提供數個屬性，修改連結的外觀之前,、 期間和之後按一下。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
  <xref:System.Windows.Forms.DataGridViewButtonColumn>  

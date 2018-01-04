@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b92fec7565aad2a881f714f9232eae10bf7633c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5f5c7d856991ae8e0bf7caff656bf7010255628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows Form DateTimePicker 控制項顯示自訂格式的日期
 Windows Form<xref:System.Windows.Forms.DateTimePicker>控制項可讓您格式化的日期和時間在控制項中的顯示的彈性。 <xref:System.Windows.Forms.DateTimePicker.Format%2A>屬性可讓您從預先定義的格式，清單中選取<xref:System.Windows.Forms.DateTimePickerFormat>。 其中一個項目是否適合您的目的，您可以建立您自己使用中所列的格式字元的格式樣式<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>。  
@@ -73,6 +74,6 @@ Windows Form<xref:System.Windows.Forms.DateTimePicker>控制項可讓您格式�
   
      根據文化特性設定，可能會變更任何不在單引號中的字元。 例如，上述的格式字串會顯示目前的日期格式 」 現在： 05:30:31 星期五 2012 年 3 月 02，「 英文 （美國） 文化特性。 請注意第一個冒號會括在單引號中，因為它不是分隔字元，因為它是"ss"。 另一個文化特性中，格式可能會顯示為 「 目前是： 05.30.31 2012 年 3 月 02 日星期五"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DateTimePicker 控制項](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
  [操作說明：使用 Windows Forms DateTimePicker 控制項設定和傳回日期](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

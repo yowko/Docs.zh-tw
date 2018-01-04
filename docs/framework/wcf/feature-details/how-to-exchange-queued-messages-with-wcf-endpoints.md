@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6c50d9c6740b0c680e349a71bf4b3bdece2b34f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 975c5ea5d5b3ab81d37b713e84f273e4c2c1c0b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
 佇列可確保用戶端與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務之間發生可靠的傳訊，即使服務在通訊時無法使用也一樣。 下列程序顯示如何在實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，使用標準佇列繫結確保在用戶端與服務間建立永久性通訊。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[S_Msmq_Transacted#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#3)]
      [!code-vb[S_Msmq_Transacted#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#3)]  
   
-     請注意，<xref:System.ServiceModel.OperationBehaviorAttribute> 放置在 `SubmitPurchaseOrder` 方法上。 其用意是指定必須在交易內呼叫此作業，而且交易會隨著方法完成而自動完成。  
+     請注意，<xref:System.ServiceModel.OperationBehaviorAttribute> 放置在 `SubmitPurchaseOrder` 方法上。 其用意是指定必須在異動內呼叫此作業，而且異動會隨著方法完成而自動完成。  
   
 4.  使用 <xref:System.Messaging> 來建立交易式佇列。 您可以選擇使用 Microsoft Message Queuing (MSMQ) Microsoft Management Console (MMC) 建立佇列。 若是這樣，請確定您建立異動式佇列。  
   
@@ -93,13 +94,13 @@ ms.lasthandoff: 12/02/2017
   
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.NetMsmqBinding>  
- [交易的 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+ [異動 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [如何： 與 WCF 端點交換訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [訊息佇列整合繫結範例](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [透過訊息佇列的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

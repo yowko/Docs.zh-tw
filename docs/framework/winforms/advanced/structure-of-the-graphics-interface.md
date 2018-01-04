@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43bd899a1dd53dc8cdae4f81e90b1aa74c29cb67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structure-of-the-graphics-interface"></a>圖形介面的結構
 Managed 的類別介面，以[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]包含約 60 類別、 50 的列舉型別，以及 8 結構。 <xref:System.Drawing.Graphics>類別的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]功能; 它是實際繪製線條、 曲線、 圖形、 影像和文字的類別。  
@@ -32,7 +33,7 @@ Managed 的類別介面，以[!INCLUDE[ndptecgdiplus](../../../../includes/ndpte
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]定義數個列舉型別，這是集合相關的常數。 例如，<xref:System.Drawing.Drawing2D.LineJoin>列舉包含的項目<xref:System.Drawing.Drawing2D.LineJoin.Bevel>， <xref:System.Drawing.Drawing2D.LineJoin.Miter>，和<xref:System.Drawing.Drawing2D.LineJoin.Round>，它會指定可用於聯結兩個線條的樣式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [圖形概觀](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
  [關於 GDI+ Managed 程式碼](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
  [使用 Managed 圖形類別](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

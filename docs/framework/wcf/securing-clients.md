@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]建立安全的服務，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/21/2017
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.ClientBase%601>  
  <xref:System.ServiceModel.Description.ClientCredentials>  

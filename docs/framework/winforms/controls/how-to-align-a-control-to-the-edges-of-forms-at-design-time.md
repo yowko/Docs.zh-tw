@@ -16,16 +16,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86134902a6645d2c9bf7bcef2cf93bf543d8c9bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ca5f32d95ddaa2dac03ad55e2599bafe5af502f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>如何：在設計階段將控制項對齊表單邊緣
 您可以讓控制項對齊表單邊緣藉由設定<xref:System.Windows.Forms.Control.Dock%2A>。 這個屬性會指定您的控制項在表單中的位置。 可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：  
   
-|設定值|對控制項的影響|  
+|設定|對控制項的影響|  
 |-------------|----------------------------|  
 |<xref:System.Windows.Forms.DockStyle.Bottom>|停駐在表單下方。|  
 |<xref:System.Windows.Forms.DockStyle.Fill>|填滿表單中剩下的空間。|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
  也可以在程式碼中設定這些值。 如需詳細資訊，請參閱[How to： 將控制項至表單的邊緣對齊](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>若要在設計階段設定控制項的 Dock 屬性  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  控制項現在會設定所指定的方式停駐。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
  [操作說明：將控制項和表單邊緣對齊](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  

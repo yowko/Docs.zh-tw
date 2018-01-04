@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f6f432742c966e3f17a7b7fa84628f24109d08e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recoloring-images"></a>將影像重新著色
 重新著色，以便是調整影像色彩的程序。 重新著色的一些範例會變更為另一個，調整相對於另一種色彩的色彩濃度、 調整亮度或對比的所有色彩，以及將色彩轉換成灰階的一種色彩。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：使用色彩矩陣轉換單一色彩](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
  說明如何使用色彩矩陣轉換色彩。  
   

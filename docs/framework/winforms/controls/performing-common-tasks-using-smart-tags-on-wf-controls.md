@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7a29b7224a3f4b692fdfb3afaf58d9744bafcc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
 Windows Form 應用程式中建構表單和控制項，有許多工作，您將會重複執行。 以下是一些經常執行的工作，您將會遇到的：  
@@ -75,7 +76,7 @@ Windows Form 應用程式中建構表單和控制項，有許多工作，您將�
   
 6.  按一下智慧標籤圖像 （glyph）。 在字符旁邊會出現快顯功能表中選取**水平分隔器方向**項目。 觀察<xref:System.Windows.Forms.SplitContainer>控制項的分隔列現在是水平方向。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.TextBox>  
  <xref:System.Windows.Forms.TabControl>  
  <xref:System.Windows.Forms.SplitContainer>  

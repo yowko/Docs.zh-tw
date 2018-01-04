@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53bb63fbbcf92650085514118a5e9464ab2dea30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions"></a>可靠工作階段
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 
 若要配合 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式使用可靠工作階段，請使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中預設或選擇性支援可靠工作階段的其中一個系統提供繫結，或是自行建立支援工作階段的自訂繫結。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
 [可靠工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
 說明可靠工作階段、使用時機、支援可靠工作階段的各種不同繫結，以及這些工作階段的運作方式。
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
 
 <xref:System.ServiceModel.ReliableSession>
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [佇列和可靠工作階段](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)   
-[工作階段中，執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+[工作階段、執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)

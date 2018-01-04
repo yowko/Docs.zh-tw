@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4409e0d603bf667ee041725dbe02b3e2f3a82e73
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51f5c91ae63f7c483aab08affe53d6d4b6ceaa01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。  
@@ -331,4 +332,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。 這樣會從憑證存放區中移除伺服器憑證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

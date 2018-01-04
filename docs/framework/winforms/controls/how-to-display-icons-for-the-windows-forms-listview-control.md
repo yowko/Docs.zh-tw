@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9a8bdc54f3f321b37bda897aac1f340f7a46aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3a19bdd7007a7e47fa1a8ad975112e53c1b6eb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>如何：顯示 Windows Form ListView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個影像清單中的圖示。 清單、 詳細資料，以及 SmallIcon 檢視會顯示從影像清單中指定的映像<xref:System.Windows.Forms.ListView.SmallImageList%2A>屬性。 使用 LargeIcon 檢視會顯示從影像清單中指定的映像<xref:System.Windows.Forms.ListView.LargeImageList%2A>屬性。 清單檢視也可以顯示一組額外的設定的圖示<xref:System.Windows.Forms.ListView.StateImageList%2A>大型或小型圖示旁邊的屬性。 如需影像清單的詳細資訊，請參閱[ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)和[如何： 加入或移除映像使用 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
@@ -47,7 +48,7 @@ Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個影�
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#42)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ListView 控制項概觀](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
  [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  [操作說明：將資料行加入至 Windows Forms ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  

@@ -14,11 +14,12 @@ caps.latest.revision: "52"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 561e451656cd725a732ea727badeb47087252b9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 769869fb00c5cc8352ebe8c3952b3d7a9aa75abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-anonymous"></a>訊息安全性匿名
 訊息安全性匿名範例會示範如何實作 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式，這個應用程式所使用的訊息層級安全性並不會透過用戶端驗證，而是要求以伺服器的 X.509 憑證進行伺服器驗證。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 這個範例根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -249,4 +250,4 @@ Press <ENTER> to terminate client.
 > [!NOTE]
 >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

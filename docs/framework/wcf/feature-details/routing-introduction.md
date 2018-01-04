@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnet
+ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -368,18 +369,18 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |單向||||是|嘗試在備份端點上重新傳送訊息。 如果此訊息為多點傳送，則只有在失敗通道上的訊息會移到備份目的地。|  
 |單向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
-|單向|||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|是|嘗試在備份端點上重新傳送訊息。 成功接收訊息之後，完成所有接收內容。 如果任何端點未成功接收訊息，則不會完成接收內容。<br /><br /> 如果此訊息為多點傳送，則至少有一個端點 (主要或備份) 成功接收訊息才會完成接收內容。 如果任何多點傳送路徑中沒有任何端點成功接收訊息，則不會完成接收內容。|  
-|單向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|是|中止之前的交易、建立新交易，然後重新傳送所有訊息。 發生錯誤的訊息會傳送至備份目的地。<br /><br /> 建立其中所有傳輸都成功的交易之後，完成接收內容並認可交易。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||是|嘗試在備份端點上重新傳送訊息。 在多點傳送的情況下，只有在發生錯誤之工作階段中的訊息，或是工作階段關閉失敗之工作階段中的訊息，才會重新傳送至備份目的地。|  
+|單向|||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|嘗試在備份端點上重新傳送訊息。 成功接收訊息之後，完成所有接收內容。 如果任何端點未成功接收訊息，則不會完成接收內容。<br /><br /> 如果此訊息為多點傳送，則至少有一個端點 (主要或備份) 成功接收訊息才會完成接收內容。 如果任何多點傳送路徑中沒有任何端點成功接收訊息，則不會完成接收內容。|  
+|單向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|中止之前的交易、建立新交易，然後重新傳送所有訊息。 發生錯誤的訊息會傳送至備份目的地。<br /><br /> 建立其中所有傳輸都成功的交易之後，完成接收內容並認可交易。|  
+|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||[是]|嘗試在備份端點上重新傳送訊息。 在多點傳送的情況下，只有在發生錯誤之工作階段中的訊息，或是工作階段關閉失敗之工作階段中的訊息，才會重新傳送至備份目的地。|  
 |單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|是|嘗試在備份端點上重新傳送訊息。 所有訊息傳送完成且未發生錯誤之後，工作階段會指出沒有其他訊息，且路由服務成功關閉所有傳出工作階段通道，所有接收內容都已完成，以及傳入工作階段通道已關閉。|  
-|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|是|中止目前的交易，並且建立新交易。 重新傳送工作階段中所有之前的訊息。 建立其中所有訊息已成功送出的交易，且工作階段指出沒有其他訊息之後，所有傳出工作階段通道都會關閉、交易的接收內容會全部完成、傳入工作階段通道會關閉，並且會認可交易。<br /><br /> 在多點傳送訊息的情況下，未發生錯誤的訊息會如以往重新傳送至相同的目的地，而發生錯誤的訊息則會傳送至備份目的地。|  
+|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|嘗試在備份端點上重新傳送訊息。 所有訊息傳送完成且未發生錯誤之後，工作階段會指出沒有其他訊息，且路由服務成功關閉所有傳出工作階段通道，所有接收內容都已完成，以及傳入工作階段通道已關閉。|  
+|單向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|[是]|中止目前的交易，並且建立新交易。 重新傳送工作階段中所有之前的訊息。 建立其中所有訊息已成功送出的交易，且工作階段指出沒有其他訊息之後，所有傳出工作階段通道都會關閉、交易的接收內容會全部完成、傳入工作階段通道會關閉，並且會認可交易。<br /><br /> 在多點傳送訊息的情況下，未發生錯誤的訊息會如以往重新傳送至相同的目的地，而發生錯誤的訊息則會傳送至備份目的地。|  
 |雙向||||是|傳送至備份目的地。  通道傳回回應訊息之後，將回應傳回至原始用戶端。|  
-|雙向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||是|將通道上的所有訊息傳送至備份目的地。  通道傳回回應訊息之後，將回應傳回至原始用戶端。|  
+|雙向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||[是]|將通道上的所有訊息傳送至備份目的地。  通道傳回回應訊息之後，將回應傳回至原始用戶端。|  
 |雙向||![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
 |雙向|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")||否|擲回例外狀況，且交易會復原。|  
 |雙工||||否|目前不支援非工作階段雙工通訊。|  
-|雙工|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||是|傳送至備份目的地。|  
+|雙工|![核取記號](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "核取記號")|||[是]|傳送至備份目的地。|  
   
 ## <a name="hosting"></a>裝載  
  由於路由服務會當做 WCF 服務實作，因此必須在應用程式內自我裝載或是由 IIS 或 WAS 裝載。 建議您在 IIS、WAS 或 Windows 服務應用程式中裝載路由服務，以便利用這些裝載環境中提供的自動啟動和生命週期管理功能。  
@@ -411,7 +412,7 @@ using (ServiceHost serviceHost =
   
  若要搭配路由服務使用 Windows 認證模擬，您必須同時設定認證與服務。 用戶端認證物件 (<xref:System.ServiceModel.Security.WindowsClientCredential>，可從 <xref:System.ServiceModel.ChannelFactory> 中存取) 定義允許模擬所必須設定的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 屬性來存取。 最後，您必須在服務上設定 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行為，才能將 `ImpersonateCallerForAllOperations` 設定為 `true`。 路由服務會使用這個旗標決定是否要建立用戶端，用來轉送已啟用模擬的訊息。  
   
-## <a name="see-also"></a>另請參閱  
- [訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+## <a name="see-also"></a>請參閱  
+ [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [選擇篩選](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

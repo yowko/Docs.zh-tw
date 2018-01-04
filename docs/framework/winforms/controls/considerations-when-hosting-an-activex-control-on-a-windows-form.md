@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ec828ca0b2bd8231d0baca72bf97bef566f2651
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e35679245d93a98b76bff31d97c6111146348a00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>在 Windows Form 上裝載 ActiveX 控制項的考慮因素
 雖然 Windows Forms 已進行最佳化來裝載 Windows Forms 控制項，但是您仍然可以使用 ActiveX 控制項。 規劃使用 ActiveX 控制項的應用程式時，請注意下列考量：  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  如果 ActiveX 控制項的成員名稱符合已定義的名稱[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，ActiveX 控制項匯入工具會使用成員名稱的首碼則**Ctl**當建立<xref:System.Windows.Forms.AxHost>衍生的類別。 例如，如果您的 ActiveX 控制項有一個名為 **Layout** 的成員，它在 AxHost 衍生類別中就會被重新命名為 **CtlLayout**，因為 **Layout** 事件是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定義的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  [程式碼存取安全性](../../../../docs/framework/misc/code-access-security.md)  
  [比較各種語言和程式庫的控制項與可以透過程式設計的物件](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  

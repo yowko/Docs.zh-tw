@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40973353a0057bcd23c76c03eb1ce6406c95aca6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75ae86f399c525176c41dec5265c282adfd41652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="feedback-and-community"></a>意見與社群
 我們十分感謝您對於 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 或 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 文件的意見與問題。 在 SDK 中每一頁的底部都有一句「請將您對這個主題的意見傳送至 Microsoft」。 請按一下 [意見] 連結，提供您對於特定主題的看法或建議。  

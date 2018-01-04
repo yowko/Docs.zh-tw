@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9b19e111e11097cbb4b4af60ae0b28956a4a381
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 開發與部署由 Internet Information Services (IIS) 裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務包含下列工作：  
@@ -112,7 +113,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
  例如，設定為使用 HTTP 摘要式驗證的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點必須駐留在同時設定為允許使用 HTTP 摘要式驗證的 IIS 虛擬目錄中。 如果 IIS 設定與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點設定組合不相符，會在服務啟動期間導致錯誤。  
   
-## <a name="see-also"></a>另請參閱  
- [裝載在 Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [網際網路資訊服務裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+## <a name="see-also"></a>請參閱  
+ [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internet Information Services 裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名用戶端的傳輸安全性
 這個 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 案例會使用傳輸安全性 (HTTPS) 來確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 |--------------------|-----------------|  
 |安全性模式|Transport|  
 |互通性|與現有的 Web 服務和用戶端|  
-|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是<br /><br /> 應用程式層 ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援)|  
+|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|[是]<br /><br /> 應用程式層 ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援)|  
 |完整性|是|  
 |機密性|是|  
 |Transport|HTTPS|  
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [WS 傳輸安全性](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  [傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  

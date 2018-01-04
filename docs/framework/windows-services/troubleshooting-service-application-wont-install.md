@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 82eb870761a7865385631cd9961ce99e0b0d3502
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 43c973d83d2d1b614cf0ce49ba8d4af24123b47e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>疑難排解： 服務應用程式成交 &#39; t 安裝
 如果您的服務應用程式將無法正確安裝，請檢查並確定<xref:System.ServiceProcess.ServiceBase.ServiceName%2A>該服務的安裝程式中所顯示的服務類別的屬性設定為相同的值。 值必須是相同的兩個執行個體，為了讓您的服務已正確安裝。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/18/2017
   
  您也應該檢查以判斷您是否有另一個服務，已安裝相同的名稱。 服務名稱必須是唯一的才能成功安裝。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

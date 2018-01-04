@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="b233zier-splines-in-gdi"></a>B &#233; zier GDI + 中的曲線
 貝茲曲線是四個點所指定的曲線： 兩個結束點 （p1 和 p2） 和兩個控制點 （c1 和 c2）。 曲線開始 p1 和 p2 當做結尾。 曲線不會通過的控點，但控點做為磁鐵曲線納入特定指示和影響曲線彎曲的方式。 下圖顯示其端點和控制點貝茲曲線。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  ![路徑](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  

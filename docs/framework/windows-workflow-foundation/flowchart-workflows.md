@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5975cff014c1d74b9935a7cc95a6b2f25359db5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ddfa98a8b9de0b362a27b55d4cd9a4c02ac8a761
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowchart-workflows"></a>Flowchart 工作流程
 流程圖是設計程式的常見範例。 Flowchart 活動通常用於實作非循序性的工作流程，但如果沒有使用 `FlowDecision` 節點，也可用於循序性的工作流程。  

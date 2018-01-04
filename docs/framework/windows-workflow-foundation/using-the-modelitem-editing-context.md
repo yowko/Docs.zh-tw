@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30c8b2544fc4a7b5e93fa1e00bfed5fe3bbe9908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d52c0a2305a3f38cf9a228f211021006ee8b131
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-modelitem-editing-context"></a>使用 ModelItem 編輯內容
 <xref:System.Activities.Presentation.Model.ModelItem> 編輯內容是主機應用程式用來與設計工具通訊的物件。 <xref:System.Activities.Presentation.EditingContext> 公開兩個可使用的方法：<xref:System.Activities.Presentation.EditingContext.Items%2A> 和 <xref:System.Activities.Presentation.EditingContext.Services%2A>  
@@ -114,7 +115,7 @@ protected override void OnModelItemChanged(object newItem)
   
 -   <xref:System.Activities.Presentation.View.Selection>：定義目前選取的物件集合。  
   
--   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
+-   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>：  
   
 -   <xref:System.Activities.Presentation.WorkflowFileItem>：提供目前編輯工作階段所依據之檔案的相關資訊。  
   

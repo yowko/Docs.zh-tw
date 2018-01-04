@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd208cf361b78da7f755bbe77070d440fe07b4ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 276dd3cc84c15c66adeab30f86583e6d9eec4144
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>HOW TO：實作非同步服務作業
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，服務作業可以透過非同步或同步方式實作，不需規定用戶端呼叫服務作業的方式。 例如，非同步服務作業可以利用同步方式呼叫，而同步服務作業可以透過非同步方式呼叫。 如需示範如何在用戶端應用程式中以非同步方式呼叫作業的範例，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]同步和非同步作業，請參閱[設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)和[同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主題描述非同步服務作業的基本結構，程式碼尚未完成。 如需服務及用戶端的完整範例請參閱[非同步](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7)。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)  
  [同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

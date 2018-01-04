@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>HOW TO：實作探索 Proxy
 本主題說明如何實作探索 Proxy。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]中的探索功能[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，請參閱[WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult>看到[System.IAsyncResult 介面](xref:System.IAsyncResult)。
@@ -329,7 +330,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
- OnBegin.. / OnEnd.. 方法提供後續探索作業的邏輯。 例如，<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 方法可實作探索 Proxy 的尋找邏輯。 當探索 Proxy 收到檢測訊息時，便會執行這些方法來傳送回應至用戶端。 您可以修改尋找邏輯，例如，您可透過演算法或應用程式特定 XML 中繼資料剖析的方式，加入自訂範圍比對，做為尋找作業的一部分。  
+ OnBegin. / OnEnd. 方法提供後續探索作業的邏輯。 例如，<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 方法可實作探索 Proxy 的尋找邏輯。 當探索 Proxy 收到檢測訊息時，便會執行這些方法來傳送回應至用戶端。 您可以修改尋找邏輯，例如，您可透過演算法或應用程式特定 XML 中繼資料剖析的方式，加入自訂範圍比對，做為尋找作業的一部分。  
   
 ### <a name="to-implement-the-asyncresult-class"></a>若要實作 AsyncResult 類別  
   
@@ -987,8 +988,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [如何： 實作使用探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [如何： 實作使用探索 Proxy 來尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [如何： 測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+ [如何：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [如何：測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d9012d1a31eeaf50560b6166d32ac58662c5aa4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
 覆寫中定義的任何事件的基本步驟[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]是一樣的並在下列清單摘要說明。  
@@ -96,7 +97,7 @@ public class PaintEventArgs : EventArgs {
   
  控制項叫用其<xref:System.Windows.Forms.Control.OnPaint%2A>方法每當程式需要變更其視覺顯示。 此方法接著就會引發<xref:System.Windows.Forms.Control.Paint>事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件](../../../../docs/standard/events/index.md)  
  [呈現 Windows Forms 控制項](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  [定義事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-based-correlation"></a>以內容為主的相互關聯
 工作流程服務與用戶端及其他服務通訊時，交換的訊息中通常會含有能夠將訊息透過唯一方式關聯特定執行個體的資料。 以內容為主的相互關聯會利用訊息中的此項資料 (例如客戶編號或訂單 ID)，將訊息路由至適當的工作流程執行個體。 本主題說明如何在工作流程中使用以內容為主的相互關聯。  

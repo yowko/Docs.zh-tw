@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b7d3ddb090488f6503c0765f6054308c28d4ab9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4059e3b4ad4c687234f2bc0c66c680b2c857cfe7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何：使用 Windows Form CheckBox 控制項設定選項
 Windows Form<xref:System.Windows.Forms.CheckBox>控制項可用來給予使用者 True/False 或 Yes/No 選項。 選取時，控制項就會顯示核取記號。  
@@ -74,7 +75,7 @@ Windows Form<xref:System.Windows.Forms.CheckBox>控制項可用來給予使用�
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.CheckBox>  
  [CheckBox 控制項概觀](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
  [操作說明：回應 Windows Forms CheckBox 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  

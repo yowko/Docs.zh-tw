@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cd7cc9da457424dede6f62ecefca8cee0d94fb88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
 下圖顯示公開、不安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端與服務範例。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

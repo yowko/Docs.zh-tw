@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>路由案例
 若路由服務的自訂性相當高，在從頭建立新組態時設計足夠的路由邏輯可能會相當困難。  不過，大多數路由服務組態會遵循數種常見案例。 雖然這些案例可能無法直接套用於特定的組態，但若了解如何設定路由服務處理這些案例，就能協助您了解路由服務。  
@@ -76,14 +77,14 @@ ms.lasthandoff: 10/18/2017
   
  如需用來設定錯誤處理的步驟，請參閱[How To： 錯誤處理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)。 如需實作錯誤處理的範例，請參閱[橋接及錯誤處理](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)和[進階的錯誤處理](../../../../docs/framework/wcf/samples/advanced-error-handling.md)範例。  
   
-### <a name="in-this-section"></a>本章節內容  
- [How To： 服務版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+### <a name="in-this-section"></a>本節內容  
+ [如何：服務版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [How To： 服務資料分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [如何：服務資料分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [如何： 動態更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [如何：動態更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [How To： 錯誤處理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [如何：錯誤處理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

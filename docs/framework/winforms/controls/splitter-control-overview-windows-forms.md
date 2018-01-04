@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4602796a1a7740adb9a352d0a21fb6c2a58959d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32d8829e7303ce23a22d0a01f2428a889ce4ae0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter 控制項概觀 (Windows Form)
 > [!IMPORTANT]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="working-with-the-splitter-control"></a>使用分隔器控制項  
  當使用者將滑鼠指標指向未停駐控制項可以調整大小的分隔器控制項的邊緣時，指標會變更其外觀，表示控制項可以調整大小。 使用分隔器控制項，使用者可以調整大小它前面的停駐的控制項。 因此，若要讓使用者在執行階段調整停駐的控制項的大小，停駐控制項的容器，邊緣所能調整並接著將分隔器控制項停駐容器的同一邊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  [操作說明：將控制項停駐在 Windows Forms 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

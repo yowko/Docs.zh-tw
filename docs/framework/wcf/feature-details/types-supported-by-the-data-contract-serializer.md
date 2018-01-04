@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>資料合約序列化程式支援的型別
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 <xref:System.Runtime.Serialization.DataContractSerializer> 做為預設的序列化引擎，以將資料轉換為 XML 並將 XML 轉換回資料。 <xref:System.Runtime.Serialization.DataContractSerializer> 主要是用來序列化「 *資料合約* 」(Data Contract) 型別。 但是，它支援其他許多型別，而您可將這些視為擁有隱含資料合約。 下列是可以序列化的完整型別清單：  
@@ -76,9 +77,9 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.DBNull> 型別會被特別處理。 它是一種單一型別，且在還原序列化時，還原序列化程式會尊重單一限制並將所有 `DBNull` 參考指向單一執行個體。 由於 `DBNull` 是一種可序列化型別，它需要 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 權限。  
   
-## <a name="see-also"></a>另請參閱  
- [XML 和 ADO.NET 資料合約中的型別](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
+## <a name="see-also"></a>請參閱  
+ [資料合約中的 XML 與 ADO.NET 類型](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [可序列化型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [資料合約中的集合型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
- [資料合約中的列舉型別](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+ [可序列化類型](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
+ [資料合約中的集合類型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
+ [資料合約中的列舉類型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

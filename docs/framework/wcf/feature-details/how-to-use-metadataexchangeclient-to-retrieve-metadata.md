@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cccbf343acc74b3e0da0f55e497f19ca15e27892
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 119e23c5834fdc646a793a4e84f191a37bca2f63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>HOW TO：使用 MetadataExchangeClient 來擷取中繼資料
 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 類別，即可使用 WS-MetadataExchange (MEX) 通訊協定來下載中繼資料。 所擷取的中繼資料檔案會當做 <xref:System.ServiceModel.Description.MetadataSet> 物件傳回。 傳回的 <xref:System.ServiceModel.Description.MetadataSet> 物件包含 <xref:System.ServiceModel.Description.MetadataSection> 物件的集合，其中每一個都會包含特定的中繼資料方言和識別項。 您可以將傳回的中繼資料寫入至檔案，或者當傳回的中繼資料含有 Web 服務描述語言 (WSDL) 文件時，您便可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 來匯入中繼資料。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯這個程式碼範例，您必須參考 System.ServiceModel.dll 組件並匯入 <xref:System.ServiceModel.Description> 命名空間 (Namespace)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.MetadataResolver>  
  <xref:System.ServiceModel.Description.MetadataExchangeClient>  
  <xref:System.ServiceModel.Description.WsdlImporter>

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-clients"></a>擴充用戶端
 在呼叫應用程式中，服務模型層會負責使用應用程式程式碼將方法引動過程轉譯到傳出訊息中、將這些訊息推送到基礎通道、將結果轉譯回應用程式程式碼中的傳回值與 out 參數，並將結果傳回到呼叫端。 服務模型延伸會修改或實作涉及用戶端或發送器功能、自訂行為、訊息與參數攔截以及其他擴充性功能的執行或通訊行為與功能。  
@@ -123,8 +124,8 @@ ms.lasthandoff: 12/02/2017
   
  如需範例，示範如何攔截跨[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
  <xref:System.ServiceModel.Dispatcher.ClientOperation>  
- [如何： 檢查或修改用戶端上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
- [如何： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+ [如何：檢查或修改用戶端上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
+ [如何：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

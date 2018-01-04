@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a942a26ad239233f13ee8791d1178fb47573e710
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 此範例示範如何使用 ASP.NET 路由裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 服務。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 路由的詳細資訊，請參閱 <xref:System.Web.Routing>。  
@@ -71,4 +72,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

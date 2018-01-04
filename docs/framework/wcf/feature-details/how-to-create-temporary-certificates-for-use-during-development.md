@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83f93d6bac0e16fe0b44ea5aba718ddb4dcf7c6e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4d6c955c3498c830403f628b4805611fadc44d68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
 當使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]開發安全的服務或用戶端時，常常必須提供要用來做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步帶領您使用由 [SDK 所提供的](http://go.microsoft.com/fwlink/?LinkId=248185)憑證建立工具 (MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 來建立這兩種憑證。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請用滑鼠右鍵按一下憑證，然後按一下 [ **刪除** ]，以確定從 [ **受信任的根憑證授權單位** ] 和 [ **個人**] 資料夾中刪除暫時的根授權憑證。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何： 檢視憑證 MMC 嵌入式管理單元](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [如何：使用 MMC 嵌入式管理單元來檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

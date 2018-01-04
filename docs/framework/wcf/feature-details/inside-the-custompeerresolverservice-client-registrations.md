@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7daa3c08bb15b13543a4f972d7e4c5e4929e16e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 內部：用戶端登錄
 網狀結構中的每一個節點都會將自己的端點資訊透過 `Register` 函式發佈給解析程式服務。 解析程式服務會儲存這項資訊做為註冊記錄。 這份記錄會包含該節點的唯一識別碼 (RegistrationID) 以及端點資訊 (PeerNodeAddress)。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime 與 Refresh  
  當一個節點註冊到解析程式服務時，該節點會收到來自服務的 <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> 物件。 指定新的時間量的 `RegistrationLifetime`，註冊項目將在經過這段時間後到期並由解析程式服務移除。 例如，假設 `RegistrationLifetime` 為 2 分鐘，那麼節點必須在 2 分鐘內呼叫 `Refresh`，才能確保記錄的更新狀況且沒有被刪除。 解析程式服務收到 `Refresh` 要求時，服務會檢查該記錄並且重設到期時間。 Refresh 會連同 <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> 屬性傳回 `RegistrationLifetime` 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對等解析程式](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

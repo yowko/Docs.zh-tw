@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RadioButton>控制項向使用者顯示一組兩個或多個互斥。 選項按鈕和核取方塊看起來可能類似函式，而是一項重要差異： 無法選取以及當使用者選取選項按鈕，在相同群組中的其他選項按鈕。 相反地，您可以選取任意數目的核取方塊。 定義選項按鈕群組會告知使用者，"以下是選擇其中之一，您可以選擇一組 」。  
@@ -33,7 +34,7 @@ Windows Form<xref:System.Windows.Forms.RadioButton>控制項向使用者顯示�
   
  <xref:System.Windows.Forms.RadioButton>控制項可以看起來像是命令按鈕，如果已經選取，如果壓下<xref:System.Windows.Forms.RadioButton.Appearance%2A>屬性設定為<xref:System.Windows.Forms.Appearance.Button>。 選項按鈕也可以顯示使用的影像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>屬性。 如需詳細資訊，請參閱[How to： 設定 Windows Form 控制項所顯示的影像](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.RadioButton>  
  [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  [GroupBox 控制項概觀](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  

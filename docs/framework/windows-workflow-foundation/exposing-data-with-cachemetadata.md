@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c68c24ad525d077d26f0b7bd917a936372e0a5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a25e658d512cf0575a4e3902a9a951099675e29a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-data-with-cachemetadata"></a>使用 CacheMetadata 公開資料
 執行活動之前，工作流程執行階段會取得維持其執行作業所需的所有活動相關資訊。 工作流程執行階段會在 <xref:System.Activities.Activity.CacheMetadata%2A> 方法執行期間取得這項資訊。 此方法的預設實作會為執行階段提供活動執行時所公開的所有公用引數、變數和子活動。如果活動需要提供更多資訊給執行階段 (例如私用成員或要由活動排程的其他活動)，您就可以覆寫此方法以提供這些資訊。  

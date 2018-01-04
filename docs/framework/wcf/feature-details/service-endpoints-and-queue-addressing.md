@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您，下列圖例將顯示典型的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 佇列應用程式部署。  
@@ -114,5 +115,5 @@ ms.lasthandoff: 12/02/2017
   
  請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 由於 `MsmqIntegrationBinding` 支援自由格式的 MSMQ 格式名稱定址，您可以透過使用此繫結的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來使用 MSMQ 中的多點傳送與通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
-## <a name="see-also"></a>另請參閱  
- [Web 裝載佇列的應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>請參閱  
+ [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 72bc3dfcc91cb0fe5b393c9735c83b6331d5e0dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d6852a3162b3a8666c711d455e72517a91c4477
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-examine-the-security-context"></a>HOW TO：檢查安全性內容
 在進行 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的程式設計時，服務安全性內容可讓您決定用來向服務進行驗證的用戶端認證及宣告的詳細資料。 這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。  
@@ -64,6 +65,6 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
  [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

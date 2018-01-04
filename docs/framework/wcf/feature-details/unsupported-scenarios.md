@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 由於各種因素使然，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 並不支援某些特定的安全性案例。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援在該平台上使用 Windows 驗證來執行服務。 當您在 Windows XP Home Edition 下執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，則支援如使用者名稱/密碼與 HTTP/HTTPS 整合式驗證之類的其他驗證機制。  
@@ -118,10 +119,10 @@ ms.lasthandoff: 12/02/2017
   
  解決方式是匯入之後直接在用戶端修改繫結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [提高權限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [遭到竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

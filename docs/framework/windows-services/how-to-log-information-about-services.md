@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 612b983f53f147102ddf7bab03d4ec6783dc4026
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2dabc20c3cd3a97ed86dc45436eaad5e7a07c91a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-log-information-about-services"></a>如何：記錄關於服務的資訊
 根據預設，所有的 Windows 服務專案都能與應用程式事件記錄檔互動，並在其中寫入資訊和例外狀況。 您使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性來表示在您的應用程式中是否要這項功能。 根據預設，會為您以 Windows 服務專案範本建立任何服務開啟記錄。 您可以使用靜態形式的 <xref:System.Diagnostics.EventLog> 類別將服務資訊寫入記錄檔，而不需要建立 <xref:System.Diagnostics.EventLog> 元件的執行個體或手動註冊來源。  
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/18/2017
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

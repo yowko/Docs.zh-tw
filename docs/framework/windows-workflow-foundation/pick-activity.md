@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edc9e285faab064b8552263bd48e6d2ad43d5ec2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce650c931e94c76c669ee99068d2356f4b2ec32f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pick-activity"></a>Pick 活動
 <xref:System.Activities.Statements.Pick> 活動會簡化一組後續有對應處理常式之事件觸發程序的模型。  <xref:System.Activities.Statements.Pick> 活動包含<xref:System.Activities.Statements.PickBranch> 活動的集合，其中每個 <xref:System.Activities.Statements.PickBranch> 是 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活動和 <xref:System.Activities.Statements.PickBranch.Action%2A> 活動間的配對。  在執行時間，會平行執行所有分支的觸發程序。  當一個觸發程序完成時，就會執行對應的動作，然後取消所有其他的觸發程序。  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> 活動的行為與 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity> 活動相似。  

@@ -13,21 +13,22 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 開發工具
-本節說明可協助您開發 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服務的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 開發工具。  
+本章節描述[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[indigo1](../../../includes/indigo1-md.md)]開發工具，可協助您開發程式[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務。  
   
- 您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 範本做為基礎，快速建置自己的服務，然後使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端來偵錯並測試您的服務。 這些工具都提供了迅速完善的偵錯與測試循環，而且在早期階段不需要認可裝載模型。  
+ 您可以使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]範本做為基礎，快速建立您自己的服務，然後使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務自動主機和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端來偵錯和測試您的服務。 這些工具都提供了迅速完善的偵錯與測試循環，而且在早期階段不需要認可裝載模型。  
   
 ## <a name="the-wcf-developer-tools"></a>WCF 開發者工具  
  [WCF Visual Studio 範本](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- 您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中預先定義的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 專案和項目範本，快速建置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務和相關的應用程式。  
+ 您可以使用預先定義[!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中的專案和項目範本[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]快速建置[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務和相關的應用程式。  
   
  [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
@@ -52,7 +53,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Netsh.exe，請參閱[如何使用 Netsh.exe 工具和命令列參數](http://go.microsoft.com/fwlink/?LinkId=97877)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Visual Studio 範本](../../../docs/framework/wcf/wcf-vs-templates.md)  
  [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
  [WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84915ecf08c9ef5471ec3a48685893c42ef13013
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19997c206e118353c4b712ac8c5650cd71ed3a58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>如何：重新調整 Windows Form 上控制項的大小
 您也可以調整個別控制項，以及您可以多個調整控制項的大小相同或不同的種類，例如<xref:System.Windows.Forms.Button>和<xref:System.Windows.Forms.GroupBox>控制項。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在**格式**功能表上，選擇**成相同大小**，然後選取四個選項的其中一個。 前三個命令會變更以符合第一個選取的控制項控制項的大小。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  

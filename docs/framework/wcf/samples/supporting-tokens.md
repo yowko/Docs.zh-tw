@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab728751a01d16c6b3d2d14de4dd09c2d2b0a17a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea429e16914d737547885b6667fc1d81b23a0f0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -477,4 +478,4 @@ iisreset
 > [!NOTE]
 >  跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨機器使用憑證的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

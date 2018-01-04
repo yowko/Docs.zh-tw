@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef8a2f43138eba1189f9e56419b9f95a5a9a043f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-syndication"></a>新聞訂閱架構
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以便在網路上透過各種格式來撰寫新聞訂閱內容。 抽象資料模型包含下列類別：  
@@ -87,7 +88,7 @@ ms.lasthandoff: 12/02/2017
   
 -   擴充性是新聞訂閱通訊協定的一項重要功能。 Atom 1.0 和 RSS 2.0 都可讓您將屬性與項目新增至規格中未定義的新聞訂閱摘要。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱程式設計模型提供兩種使用自訂屬性與延伸的方式：衍生新類別，與鬆散型別的存取。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][新聞訂閱擴充性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [WCF 新聞訂閱物件模型如何對應至 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+## <a name="see-also"></a>請參閱  
+ [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [WCF 摘要整合物件模型對應到 Atom 和 RSS 的方式](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

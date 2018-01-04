@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
 安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。 根據預設，SAML 權杖[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]聯合的安全性案例中的用法是*發行的權杖*。  
@@ -52,14 +53,14 @@ ms.lasthandoff: 12/02/2017
 ## <a name="from-samlattributes-to-claims"></a>從 SamlAttributes 到宣告  
  當 SAML 權杖在訊息內接收時，SAML 權杖內的各種陳述式會轉變成 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 物件，置於 <xref:System.IdentityModel.Policy.AuthorizationContext>之內。 來自每個 SAML 陳述式的宣告均由 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 屬性傳回，並且可進行檢查以決定是否驗證並授權使用者。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Policy.AuthorizationContext>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
- [如何： 建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [如何： 設定聯合服務認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [管理宣告和授權與身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [如何： 建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+ [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

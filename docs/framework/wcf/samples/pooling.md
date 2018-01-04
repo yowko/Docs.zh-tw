@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb45a08e9f21578b69dedbe504cfb8bbd21193bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd1874004af1ebbde69c622853d5fdcd982005
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pooling"></a>Pooling
 這個範例會示範如何延伸 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 以支援物件共用 (Object Pooling)。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
@@ -111,9 +112,9 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，它會檢查服務型別定義中使用的屬性，然後將可用的行為加入至服務描述的行為集合。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在初始化 <xref:System.ServiceModel.ServiceHost> 時呼叫這個方法。 傳遞至這個方法中的參數如下：  
+ <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在初始化 <xref:System.ServiceModel.ServiceHost> 時呼叫這個方法。 傳遞至這個方法中的參數如下：  
   
--   `Description`：這個引數會為整個服務提供服務描述。 這可以用來檢查有關服務之端點、合約、繫結及其他資料的描述資料。  
+-   `Description`：這個引數會為整個服務提供服務描述。 這可以用來檢查有關服務之端點、合約、繫結程序及其他資料的描述資料。  
   
 -   `ServiceHostBase`：這個引數會提供目前在初始化中的 <xref:System.ServiceModel.ServiceHostBase>。  
   
@@ -265,4 +266,4 @@ Press <ENTER> to exit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

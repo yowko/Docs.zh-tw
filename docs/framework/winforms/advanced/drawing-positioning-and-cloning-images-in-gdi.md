@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbff4023a51687539472ac3e040b125f2f92fc28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>在 GDI+ 中繪製、定位和複製影像
 您可以使用<xref:System.Drawing.Bitmap>類別來載入及顯示點陣影像，而且您可以使用<xref:System.Drawing.Imaging.Metafile>類別來載入及顯示向量影像。 <xref:System.Drawing.Bitmap>和<xref:System.Drawing.Imaging.Metafile>類別繼承自<xref:System.Drawing.Image>類別。 若要顯示的向量映像，您需要的執行個體<xref:System.Drawing.Graphics>類別和<xref:System.Drawing.Imaging.Metafile>。 若要顯示點陣影像，您需要的執行個體<xref:System.Drawing.Graphics>類別和<xref:System.Drawing.Bitmap>。 執行個體<xref:System.Drawing.Graphics>類別提供<xref:System.Drawing.Graphics.DrawImage%2A>方法，這個方法會接收<xref:System.Drawing.Imaging.Metafile>或<xref:System.Drawing.Bitmap>做為引數。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  ![裁剪](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [操作說明：建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

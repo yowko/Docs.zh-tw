@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 280445240dae215013069c65ab12b9e38227f5c1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8861138f7763f413f06983bbfba5f6e0ec3c8b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loosely-typed-extensions-sample"></a>鬆散型別延伸範例
 新聞訂閱物件模型對使用延伸資料 (即以新聞訂閱摘要 XML 表示法呈現，但是尚未經由像是 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等類別明確公開的資訊) 提供大量支援。 這個範例說明使用延伸資料的基本技術。  
@@ -165,6 +166,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a>另請參閱  
- [強型別延伸](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- [WCF 新聞訂閱](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a>請參閱  
+ [強型別延伸模組](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
+ [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

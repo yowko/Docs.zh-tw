@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e820815a7047d91065db5308cc289f063191511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db9f09236764697aff4e57ace593827193c6e07d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>HOW TO：建立自訂執行個體存放區
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，這是使用 SQL Server 來保存工作流程資料的執行個體存放區。 如果您的應用程式需要將工作流程資料保存在另一個媒體中，例如不同的資料庫或檔案系統，您可以實作自訂的執行個體存放區。 擴充抽象的 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別，並實作進行實作所需的方法，即可建立自訂執行個體存放區。 自訂執行個體存放區的完整實作，請參閱[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。  

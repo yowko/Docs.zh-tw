@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6fe8fb972f8080bbffeed5db2063d8c0484aec4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控制項
 您可以在 Windows form 應用程式中使用 Windows Presentation Foundation (WPF) 控制項。 雖然這些是兩個不同的檢視技術，但是它們順暢的互通。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/22/2017
   
  您也可以使用 Windows Form 控制項以 WPF 為基礎的應用程式中。 如需詳細資訊，請參閱[WPF 設計工具](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：在設計階段複製和貼上 ElementHost 控制項](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  示範如何複製 Windows Form 上的 Windows Presentation Foundation 控制項。  
   

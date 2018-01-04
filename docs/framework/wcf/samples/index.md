@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2d618fee858a9a3b864d4213c940cd28fd5e1be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4ccab2f885a6e177cb81cce153aa92c457b4fb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) 範例
 這些範例會針對 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的各種層面提供指示。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
   
  若要安裝的文件集和說明檢視器的單機版本，請下載[Microsoft Windows SDK v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [基本](../../../../docs/framework/wcf/samples/basic.md)  
  顯示說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基本功能的範例。  
   

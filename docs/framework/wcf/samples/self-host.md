@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1513d0e534da4ef12d8bcf345bdb34ac40912b4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b662c034e4c3d7c21c9a48537cd7f80f4bb6b659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="self-host"></a>自我裝載
 這個範例會示範如何在主控台應用程式中實作自我裝載的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服務的組態檔已經從 Web.config 重新命名為 App.config，並且修改為設定主機使用的基底位址。 服務的原始程式碼已經修改為實作靜態 `Main` 函式，這個函式會建立和開啟提供已設定之基底位址的服務主機。 服務實作已經修改為將每個作業的輸出寫入至主控台。 除了設定服務的正確端點位址外，用戶端未經過修改。  
@@ -85,5 +86,5 @@ public static void Main()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

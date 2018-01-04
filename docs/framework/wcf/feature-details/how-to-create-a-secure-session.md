@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f2393209352f18eb25b9837ca1ad8ca2746b91d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cd4f91ef5389dd4b8ecb63c1148d3a86918f2d10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-secure-session"></a>HOW TO：建立安全工作階段
 除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結中的系統提供繫結[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]自動使用訊息安全性啟用時的安全工作階段。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 10/18/2017
     |系統提供的繫結|組態項目|訊息安全性預設為開啟|  
     |------------------------------|---------------------------|------------------------------------|  
     |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|否|  
-    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|是|  
-    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|是|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|是|  
+    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|[是]|  
+    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|[是]|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|[是]|  
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|否|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|否|  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  您可以關閉安全工作階段的[ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)藉由設定`establishSecurityContext`屬性`false`。 對於其他系統提供的繫結，安全工作階段只能藉由建立自訂繫結來關閉。  
+    >  您可以關閉安全工作階段的[ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)藉由設定`establishSecurityContext`屬性`false`。 對於其他系統提供的繫結程序，安全工作階段只能藉由建立自訂繫結程序來關閉。  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>使用自訂繫結來指定服務使用安全工作階段  
   
@@ -92,5 +93,5 @@ ms.lasthandoff: 10/18/2017
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 繫結概觀](../../../../docs/framework/wcf/bindings-overview.md)

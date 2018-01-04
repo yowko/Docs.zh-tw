@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2428aead99f387d4fffe3d583b9843cb7492c1ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee7c5320caa3b7704813b94d4ddfbf1ce0fecf96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>使用命令式程式碼撰寫工作流程、活動和運算式
 工作流程定義是配置之活動物件的樹狀。 有很多方式可定義這個活動的樹狀結構，包含手動編輯 XAML 或使用工作流程設計工具來產生 XAML。 不過，XAML 並非必要條件。 您也可以程式設計的方式建立工作流程定義。 本主題提供使用程式碼來建立工作流程定義、活動和運算式的概觀。 如需使用 XAML 工作流程使用程式碼的範例，請參閱[序列化工作流程和活動 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  

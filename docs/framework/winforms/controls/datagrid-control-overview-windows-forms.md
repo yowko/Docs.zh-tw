@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13adfeb8a6cffb94ed4cfdc06c3932b5cc336f60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/21/2017
   
  資料行類型的集合可以用擴充具有豐富格式化和編輯功能的 <xref:System.Windows.Forms.DataGridColumnStyle> 類別。 所有資料行類型皆繼承自 <xref:System.Windows.Forms.DataGridColumnStyle> 基底類別。 所建立的類別取決於 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataColumn.DataType%2A> 屬性，其為 <xref:System.Web.UI.WebControls.DataGridColumn> 的基礎。 例如，將 <xref:System.Data.DataColumn.DataType%2A> 屬性設為 <xref:System.Boolean> 的 <xref:System.Data.DataColumn>，將會與 <xref:System.Windows.Forms.DataGridBoolColumn> 相關聯。 下表針對每個資料行類型進行說明。  
   
-|資料行型別|說明|  
+|資料行型別|描述|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridTextBoxColumn>|接受並顯示資料為格式化或未格式化的字串。 編輯功能與在簡單 <xref:System.Windows.Forms.TextBox> 中編輯資料時的功能相同。 繼承自 <xref:System.Windows.Forms.DataGridColumnStyle>。|  
 |<xref:System.Windows.Forms.DataGridBoolColumn>|接受並顯示 `true`、`false` 和 null 值。 繼承自 <xref:System.Windows.Forms.DataGridColumnStyle>。|  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="events"></a>事件  
  除了 <xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.Enter> 和 <xref:System.Windows.Forms.DataGrid.Scroll> 之類的一般控制項事件，<xref:System.Windows.Forms.DataGrid> 控制項還可支援在格線內編輯和巡覽的相關聯事件。 <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> 屬性會決定選取哪一個儲存格。 當使用者巡覽至新的儲存格時，會引發 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件。 當使用者透過父/子關聯性，巡覽至新的資料表時，會引發 <xref:System.Windows.Forms.DataGrid.Navigate> 事件。 如果使用者在檢視子資料表時按一下上一頁按鈕，會引發 <xref:System.Windows.Forms.DataGrid.BackButtonClick> 事件，按一下顯示/隱藏父資料列圖示時，會引發 <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> 事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  [操作說明：將 Windows Forms DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  [操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb5e3cc0e33947f1797e283461738f96b6d4a8b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 243dbd73d60577cbda2d8cf4fad1fd2e510d87ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>HOW TO：設定聯合服務的認證
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，建立聯合服務認證的過程包含了下列主要程序：  
@@ -38,14 +39,14 @@ ms.lasthandoff: 12/02/2017
   
 1.  使用 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 類別的 <xref:System.ServiceModel.Description.ServiceCredentials> 屬性，傳回 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 執行個體 (Instance) 的參照。 此屬性可從 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 類別的 <xref:System.ServiceModel.ServiceHostBase> 屬性存取。  
   
-2.  如果是要驗證類似 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡的自行發行權杖，則將 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。 預設為 `false`。  
+2.  如果是要驗證類似 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡的自行發行權杖，則將 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。 預設值為 `false`。  
   
 3.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回的集合填入 (Populate) <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。 每個執行個體都代表服務將會從該處驗證權杖的簽發者。  
   
     > [!NOTE]
     >  不同於 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 屬性所傳回的用戶端集合，已知憑證集合並不是有索引鍵的集合。 無論傳送包含已發行權杖之訊息的用戶端位址為何，服務都會接受已指定憑證所發行的權杖 (仍有其他條件限制，將於本主題稍後內容中說明)。  
   
-4.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性設定為其中一個 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列舉值。 只有透過程式碼才能做到這點。 預設為 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>。  
+4.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性設定為其中一個 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列舉值。 只有透過程式碼才能做到這點。 預設值為 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>。  
   
 5.  如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性是設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>，則會將自訂 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性。  
   
@@ -81,12 +82,12 @@ ms.lasthandoff: 12/02/2017
   
  例如，將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>，便會對任何簽署憑證是位於 `TrustedPeople` 憑證存放區中的憑證進行驗證。 在此情況下，請將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>。 您可以選擇包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 的其他模式。 若是選擇 `Custom`，您就必須將 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 屬性。 自訂驗證器可以使用其所偏好的任何準則來驗證憑證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 建立採用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
- [聯合與信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
- [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [如何： 停用安全工作階段在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [如何： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [如何： 建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [同盟和信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [如何：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [如何：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

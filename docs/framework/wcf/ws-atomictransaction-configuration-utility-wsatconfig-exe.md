@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 59b56b542a1624f1bae332ab91e1ac835aa47c8b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: adb44bfee98d01594c9babcf19e19fbf11ba3878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)
 WS-AtomicTransaction 組態公用程式用於設定基本的 WS-AtomicTransaction 支援設定。  
@@ -42,7 +43,7 @@ wsatConfig [Options]
 > [!NOTE]
 >  為選取的連接埠設定 SSL 憑證時，如果與該連接埠關聯的原始 SSL 憑證存在的話，將會覆寫該憑證。  
   
-|選項|說明|  
+|選項|描述|  
 |-------------|-----------------|  
 |-帳戶：\<帳戶 >|指定可以參與 WS-AtomicTransaction 的帳戶逗號分隔清單。 這些帳戶的有效性並未經過檢查。|  
 |-accountsCerts:\<thumb > &#124;"Issuer\SubjectName">|指定可以參與 WS-AtomicTransaction 的憑證逗號分隔清單。 憑證由指紋或 Issuer\SubjectName 配對所指定。 如果主體名稱為空白，請使用 {EMPTY} 做為主體名稱。|  
@@ -59,6 +60,6 @@ wsatConfig [Options]
 |-show|顯示目前的 WS-AtomicTransaction 通訊協定設定。|  
 |-virtualServer:\<虛擬伺服器 >|指定 DTC 資源叢集名稱。|  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Ws-atomictransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- [設定 Ws-atomic 交易支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a>請參閱  
+ [使用 WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [設定 WS-Atomic 異動支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

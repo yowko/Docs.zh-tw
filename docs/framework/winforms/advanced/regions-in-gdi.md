@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0525e7b58353909d41e5367aa52a17aa56bcd77c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d3805c2d67f5241425ef72d3802aba996d33cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regions-in-gdi"></a>GDI+ 中的區域
 區域是輸出裝置的顯示區域的一部分。 區域可以是簡單 （單一矩形） 或複雜 （多邊形和封閉型曲線的組合）。 下圖顯示兩個區域： 其中一個矩形中，從建構和路徑中的其他建構。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[LinesCurvesAndShapes#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#61)]
  [!code-vb[LinesCurvesAndShapes#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Region?displayProperty=nameWithType>  
  [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [使用區域](../../../../docs/framework/winforms/advanced/using-regions.md)

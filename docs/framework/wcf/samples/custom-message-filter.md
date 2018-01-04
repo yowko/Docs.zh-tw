@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf8950ae023d60222ccd843035b5fb808de39c84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37b8721fe1e56bda400f3254fd5d19f828df523e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-filter"></a>自訂訊息篩選條件
 這個範例會示範如何取代 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用來將訊息分派至端點的訊息篩選條件。  
@@ -145,4 +146,4 @@ Hello
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

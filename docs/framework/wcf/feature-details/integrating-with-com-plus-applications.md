@@ -20,30 +20,31 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02e0fbf7c8b6ddfe0d722575042b4cbc82ba9bb3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1a29b28608c9ca16dd5a2023bd3d9e135618d753
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications"></a>整合 COM+ 應用程式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用來建立分散式應用程式的豐富環境。 若您長期開發 COM+ 裝載之元件架構應用程式邏輯，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而不必重新撰寫程式碼。 本節主題描述如何使用具有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 COM+。  
   
-## <a name="in-this-section"></a>本章節內容  
- [整合 COM + 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+## <a name="in-this-section"></a>本節內容  
+ [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  對何時及如何整合 COM+ 元件提供概觀。  
   
- [如何： 使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ [如何：使用 COM+ 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
  解釋如何使用 COM+ 服務模型組態指令行工具 (ComSvcConfig.exe) 設定您要公開為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的應用程式介面。  
   
- [如何： 設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [如何：設定 COM+ 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
  解釋如何設定 COM+ 物件為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
   
- [如何： 部署 COM + 整合應用程式](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ [如何：部署 COM+ 整合應用程式](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  解釋如何移動 COM+ 整合應用程式。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

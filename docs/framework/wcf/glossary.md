@@ -16,11 +16,12 @@ caps.latest.revision: "243"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 的 Windows Communication Foundation 字彙
 以下是專為 Windows Communication Foundation 文件所定義的詞彙。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 |Initiating Operation - 初始化作業|此作業是指，新工作階段的第一個作業。 只有在已呼叫至少一個初始化作業後才能呼叫非初始化作業。|  
 |Instancing Model - 執行個體模型|服務具有執行個體模型 (Instancing Model)。 有三個執行個體模型： &quot;single、&quot;所在單一的 CLR 物件會服務所有用戶端。&quot;每一呼叫&quot;中新 CLR 物件建立來處理每個用戶端呼叫，並&quot;每個工作階段，&quot;中的一組 CLR 物件會建立，每個個別工作階段的其中一個。 執行個體模型的選擇取決於應用程式需求和預期的服務使用模式。|  
 |訊息|訊息是獨立的資料單位，由數個部分組成，其中包括本文和標頭。|  
-|訊息合約|訊息連絡人描述訊息的格式。 例如，它會宣告訊息項目應放在標頭或本文、應該將哪個層級的安全性套用至哪些訊息的項目等等。|  
+|訊息合約|訊息合約描述訊息的格式。 例如，它會宣告訊息項目應放在標頭或本文、應該將哪個層級的安全性套用至哪些訊息的項目等等。|  
 |訊息安全性模式|訊息安全性模式會指定藉由實作一或多個安全性規格來提供安全性。 每個訊息都會包含必要機制，以便在訊息傳輸期間提供安全性，並讓接收者可以偵測竄改及解密訊息。 就這個意義而言，安全性是封裝在每個訊息內，可以在多個躍點間提供端對端安全性。 因為安全性資訊成為訊息的一部分，所以也可以將多種認證包含在訊息中 (稱為「宣告」(Claim))。 這個方法的優點是，訊息可以透過任何傳輸安全地傳送，包括來源和目的地之間的多個傳輸。 缺點是使用的密碼編譯機制很複雜，因此會影響效能。|  
 |中繼資料|服務的中繼資料描述服務的特性，外部實體必須瞭解這些服務特性，才能與此服務通訊。 ServiceModel 中繼資料公用程式工具 (Svcutil.exe) 可以取用中繼資料，以產生 WCF 用戶端，以及用戶端應用程式可用來與服務互動的伴隨組態。  服務公開的中繼資料包括 XML 結構描述文件 (定義服務的資料合約) 和 WSDL 文件 (描述服務的方法)。  啟用時，WCF 會藉由檢查服務及其端點，自動產生服務的中繼資料。 若要從服務發行中繼資料，您必須明確啟用中繼資料行為。|  
 |Operation Contract - 作業合約|作業合約會定義作業的參數和傳回型別。 當建立會定義服務合約的介面時，您可以將 T:System.ServiceModel.OperationContractAttribute 屬性套用至屬於合約一部分的每個方法定義，來表示作業合約。 作業可以模式化成接受單一訊息且傳回單一訊息，或者接受一組型別且傳回一個型別。 在後者中，系統會判斷該作業要交換之訊息的格式。|  

@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b74ecc3363e84d006d82ecb14accbf40de7e2738
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dce6962feb0f425958f89182ee7695332389b567
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
 工作流程是一組元素的單元*活動*，會儲存為描述真實世界的處理序模型。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  
@@ -50,5 +51,5 @@ ms.lasthandoff: 12/02/2017
   
 -   衍生自 <xref:System.Activities.CodeActivity>抽象類別的自訂活動。 <xref:System.Activities.CodeActivity> 可存取使用 <xref:System.Activities.CodeActivityContext> 而可用來做為 <xref:System.Activities.CodeActivity.Execute%2A> 方法之參數的執行階段功能 (例如追蹤與屬性)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]這些執行階段功能，請參閱[工作流程追蹤](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[工作流程執行屬性](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [BizTalk Server 2006 或 WF？為您的專案選擇正確的工作流程工具](http://go.microsoft.com/fwlink/?LinkId=154901)

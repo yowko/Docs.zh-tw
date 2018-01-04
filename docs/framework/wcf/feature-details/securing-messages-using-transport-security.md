@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f36351c04b3849b5364e00cec55769628d89af11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
@@ -104,9 +105,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="msmq-hash-algorithm"></a>MSMQ 雜湊演算法  
  雜湊演算法會指定建立 MSMQ 訊息數位簽章所使用的演算法。 接收佇列管理員會使用與此相同的演算法，驗證 MSMQ 訊息。 只有在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 設為 <xref:System.Net.Security.ProtectionLevel.Sign> 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 時，才會使用這個屬性。  
   
- 支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。  
+ 支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設值為 `SHA1`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訊息佇列](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

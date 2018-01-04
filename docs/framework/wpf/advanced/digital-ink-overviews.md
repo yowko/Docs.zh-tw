@@ -17,14 +17,15 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33a2e7200a1154bbe79190809511401e6f12b370
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 378dac360e94d07bf8475286559e6aeed5321bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-overviews"></a>數位筆墨概觀
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [筆墨入門](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
   [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
   [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  

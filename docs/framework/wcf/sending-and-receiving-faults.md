@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5897d107fc27b56ffd1eb476dff1fa1d507f5de5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-and-receiving-faults"></a>傳送和接收錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 一般來說，服務會定義自訂錯誤內容，並指定透過哪項作業來傳回這些內容 (如需詳細資訊，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主題將說明在發生錯誤情況時，服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤。 如需中的錯誤處理的概觀[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]應用程式，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -113,7 +114,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.FaultException>  
  <xref:System.ServiceModel.FaultException%601>  
  <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  

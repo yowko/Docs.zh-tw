@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9752b5779f4fbb525488e88f2f11c98de7b4ba8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c83f4167ce1947b10f97e0cab5b5ddd2f8e00c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-policy"></a>進階原則
 這個範例會延續簡單原則範例。 除了簡單原則範例的住家折扣和商務折扣規則外，還新增數個規則。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Workflow.Activities.Rules.RuleSet>  
  <xref:System.Workflow.Activities.PolicyActivity>  
  [簡單原則](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)

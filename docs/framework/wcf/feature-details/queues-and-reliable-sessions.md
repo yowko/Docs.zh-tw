@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2ad869e8127bcaf513bee82e3175b35349d922
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9a78bab9f7c4af23cf01c44e1d22a41a87a96f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-and-reliable-sessions"></a>佇列和可靠的工作階段
 佇列和可靠工作階段是實作可信賴傳訊的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的功能。 本章節中的主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可信賴傳訊功能。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
  佇列之間的區隔性以及可信賴傳訊，可讓鬆散耦合的應用程式進行可靠的通訊。 與可靠工作階段不同的是，來源和目的地不需要同時執行。 這個特點促使當來源的訊息生產率與目的地的訊息消耗率不相同時，作用中的佇列會被用來當做負載平衡機制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]佇列，請參閱[WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0465f50de37d7276cad5920c4b9fb9e544caf57
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aad62d8532fff09157d53f8307fb2b9dcd506cd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
 
 ## <a name="example"></a>範例
 
-好幾個系統提供的繫結預設都支援可靠工作階段。 這些活動包括：
+好幾個系統提供的繫結預設都支援可靠工作階段。 它們包括：
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -87,6 +88,6 @@ ms.lasthandoff: 12/02/2017
 
 如需如何建立支援可靠工作階段的自訂繫結的範例，請參閱[How to： 使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

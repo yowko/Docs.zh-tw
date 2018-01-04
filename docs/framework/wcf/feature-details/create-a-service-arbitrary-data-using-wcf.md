@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7f868f02f309401c60737af8a69434d175eee1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
 有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 例如，服務作業必須以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援的格式傳回資料時。 本主題探討如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型建立接收任意資料的服務。  
@@ -203,7 +204,7 @@ namespace ReceiveRawData
   
 -   編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

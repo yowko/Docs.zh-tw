@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f93b1e9fdb1569507937c5381b157204ac88f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-state-changes"></a>了解狀態變更
 本主題說明通道具有的狀態和轉換、用來建構通道狀態的型別，以及如何實作。  
@@ -145,15 +146,15 @@ ms.lasthandoff: 12/02/2017
   
  擲回的例外狀況取決於狀態。 下表說明不同狀態，以及在狀態下藉由呼叫 ThrowIfXxx 擲回的對應例外狀況型別。  
   
-|狀態|是否已呼叫 Abort？|例外狀況|  
+|狀況|是否已呼叫 Abort？|例外|  
 |-----------|----------------------------|---------------|  
 |建立時間|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |正在開啟|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Closing|是|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Closing|[是]|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|是|在先前明確呼叫 Abort 而關閉物件的情況下，為 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果在此物件上呼叫 Close，則會擲回 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
-|已關閉|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Closed|[是]|在先前明確呼叫 Abort 而關閉物件的情況下，為 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果在此物件上呼叫 Close，則會擲回 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
+|Closed|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Faulted|N/A|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>逾時  

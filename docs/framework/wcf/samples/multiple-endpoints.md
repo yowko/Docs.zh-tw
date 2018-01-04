@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87846ca624b557f39bcb61d467a270779f399f6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints"></a>多個端點
 多個端點範例會示範如何在服務上設定多個端點，以及如何從用戶端與每個端點進行通訊。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服務組態已修改成定義支援 `ICalculator` 合約的兩個端點，但是每個端點會位在不同的位址，同時使用不同的繫結。 用戶端組態與程式碼已修改成可與這兩個服務端點進行通訊。  
@@ -128,4 +129,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

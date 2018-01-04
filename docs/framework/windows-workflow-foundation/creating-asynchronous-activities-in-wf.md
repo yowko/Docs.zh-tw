@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa388328b1fee73aef829a512dcbcadbd3889781
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中建立非同步活動
 <xref:System.Activities.AsyncCodeActivity> 會提供活動作者可用的基底類別，此類別可讓衍生活動實作非同步執行邏輯。 若自訂活動必須執行非同步工作而不保存工作流程排程器執行緒，並且封鎖任何能夠平行執行的活動，則此功能非常實用。 本主題提供如何使用 <xref:System.Activities.AsyncCodeActivity> 建立自訂非同步活動的概觀。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>使用 AsyncCodeActivity 排定動作或子活動  
  <xref:System.Activities.AsyncCodeActivity> 衍生的自訂活動提供根據工作流程執行緒非同步執行工作的方法，但不提供排定子活動或動作的功能。 但是，可以透過撰寫方式將非同步行為納入子活動排程。 您可以建立非同步活動，然後以 <xref:System.Activities.Activity> 或 <xref:System.Activities.NativeActivity> 衍生活動來撰寫該活動，以提供非同步行為，並排定子活動或動作。 例如，您可以建立衍生自 <xref:System.Activities.Activity> 的活動，並且實作包含該非同步活動及其他實作活動邏輯之活動的 <xref:System.Activities.Statements.Sequence>。 如需其他範例，撰寫使用活動的<xref:System.Activities.Activity>和<xref:System.Activities.NativeActivity>，請參閱[How to： 建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)，[活動撰寫選項](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)，而[複合](../../../docs/framework/windows-workflow-foundation/samples/composite.md)活動範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Action>  
  <xref:System.Func%602>  
- [使用活動中的 AsyncOperationContext](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+ [在活動中使用 AsyncOperationContext](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)

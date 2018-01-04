@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fb471a0d91c350bf5df320b8f2ea3b32e74d9ab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41dfc85df1b706028fd95465596a980c040d512
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a>HOW TO：建立通道處理站並使用它來建立與管理通道
 針對可供用戶端用來傳送與接收在服務端點之間往返之訊息的不同雙工通道類型，<xref:System.ServiceModel.DuplexChannelFactory%601> 類別提供了這些雙工通道的建立與管理方式。  
@@ -27,5 +28,5 @@ ms.lasthandoff: 12/02/2017
   
  [!code-csharp[S_CustomAuthentication#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_customauthentication/cs/instance.cs#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.DuplexChannelFactory%601>

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65aa61ec53c00ed69d55d36fb023dc92c77e1f13
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-long-running-workflow-service"></a>建立長期執行的工作流程服務
 本主題會說明如何建立長時間執行的工作流程服務。 長時間執行的工作流程服務可能會執行一段很長的時間。 有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。 發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。 當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。  在本案例中，您要實作非常簡化的訂購系統。  用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。 然後，服務會將訂單 ID 傳回給用戶端。 此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。  當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。 在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。 此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。 本主題假設您知道如何建立 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 專案和方案。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
   
          這樣就會建立新的訂單 ID 並將此值放入 orderId 變數中。  
   
-    6.  選取**ReplyToStartOrder**活動。 在 屬性 視窗中按一下 省略符號按鈕**CorrelationInitializers**。 選取**新增初始設定式**連結並輸入`orderIdHandle`在初始設定式 文字方塊中，選取查詢相互關聯類型的相互關聯初始設定式，並在 XPATH 查詢 下拉式方塊底下選取 p_orderId。 下圖將顯示這些設定。 按一下 [確定]。  這樣就會初始化用戶端與這個工作流程服務執行個體之間的相互關聯。 收到包含此訂單 ID 的訊息時，它就會路由傳送至這個工作流程服務執行個體。  
+    6.  選取**ReplyToStartOrder**活動。 在 屬性 視窗中按一下 省略符號按鈕**CorrelationInitializers**。 選取**新增初始設定式**連結並輸入`orderIdHandle`在初始設定式 文字方塊中，選取查詢相互關聯類型的相互關聯初始設定式，並在 XPATH 查詢 下拉式方塊底下選取 p_orderId。 下圖將顯示這些設定。 按一下 [確定 **Deploying Office Solutions**]。  這樣就會初始化用戶端與這個工作流程服務執行個體之間的相互關聯。 收到包含此訂單 ID 的訊息時，它就會路由傳送至這個工作流程服務執行個體。  
   
          ![加入相互關聯初始設定式](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")  
   
@@ -208,5 +209,5 @@ ms.lasthandoff: 12/02/2017
     Sending add item messageService returned: Item added to orderPress any key to continue . . .  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)

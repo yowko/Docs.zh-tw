@@ -25,11 +25,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb7ffb8a7f20c1e53b24a1db8bda326d73743a93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 93f49a8fbd2cc8ffae94e4dcbbc4babf7c1137cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：為 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表
 在 Windows Form 上以方便使用的格式來顯示資料，但以對程式更有意義的格式來存放資料，這樣的做法有時候相當實用。 例如，食品的訂單表單可能會在清單方塊中依名稱來顯示功能表項目。 但是，記錄訂單的資料表則會包含代表食品的唯一 ID 編號。 下表將顯示如何存放並顯示食品訂單表單資料的範例。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|名稱|  
+|識別碼|名稱|  
 |--------|----------|  
 |12|馬鈴薯|  
 |13|雞肉|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料繫結和 Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  [ListBox 控制項概觀](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
  [ComboBox 控制項概觀](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  

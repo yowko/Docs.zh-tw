@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988dbef057b5980ac3f23b88c39669706d44557e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用追蹤擷取 WF 資料
 此範例會示範如何使用工作流程追蹤，從活動中擷取工作流程變數和引數。 也會示範如何加入追蹤記錄的註釋，以及在自訂追蹤記錄內擷取資料裝載。 此範例會使用 Windows 事件追蹤 (ETW) 追蹤參與者，從工作流程中擷取資料。  
@@ -164,5 +165,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

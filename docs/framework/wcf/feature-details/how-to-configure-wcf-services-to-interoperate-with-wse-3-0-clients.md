@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5589ad8e4193416738da98676551bbf82c128a79
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c93b91123c7622bea125bfa702c53a697b1ac84c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務設定為使用 WS-Addressing August 2004 版本規格時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的連線層級與 Microsoft .NET 用戶端的 Web Services Enhancements (WSE) 3.0 相容。  
@@ -100,5 +101,5 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+## <a name="see-also"></a>請參閱  
+ [如何：自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

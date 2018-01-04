@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a686a07ed41aafd476dbb1934c178558d90d948
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42d9fad968b471c63dbdac2145bb9e84afed183b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="confirmation"></a>組態
 這個範例示範四個有關 <xref:System.Activities.Statements.CompensableActivity> 和確認用法的一般案例。 範例中會執行四個工作流程以示範確認。 這個範例有宣告式和命令式版本。  

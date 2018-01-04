@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c60927451ad4350ef507f2e2a661bcfaab4ea788
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0ad5ba4bdd283e411c746906adfed53282c55b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 控制項 (Windows Form)
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  將 `DataGrid` 控制項設定為有效資料來源時，會自動填入控制項，並根據資料的形狀來建立資料行和資料列。 `DataGrid` 控制項可以用來顯示單一資料表，或一組資料表之間的階層關聯性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DataGrid 控制項概觀](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  描述 `DataGrid` 控制項的基本功能。  
   
@@ -87,6 +88,6 @@ ms.lasthandoff: 11/21/2017
  [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  提供 Windows Forms 中資料繫結主題的連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

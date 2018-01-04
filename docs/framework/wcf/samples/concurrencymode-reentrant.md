@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf852c67bec8abb2af3593d537010e5cc2718176
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 450d47a9cdff709657458ed3fcc4b5948ccb960c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
 這個範例示範在服務實作上使用 ConcurrencyMode.Reentrant 的必要性與隱含意義。 ConcurrencyMode.Reentrant 意指在指定的時間裡，服務 (或回呼) 只會處理一則訊息 (類似於 `ConcurencyMode.Single`)。 為確保執行緒安全，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會鎖定處理訊息的 `InstanceContext`，使它無法處理任何其他訊息。 在 Reentrant 模式的情況下，會在服務即將進行傳出呼叫之前解除鎖定 `InstanceContext` (因此允許進行後續呼叫，而這個呼叫可能是可重新進入 (Reentrant) 的，如範例中所示)，以便在下次進入服務時取得鎖定。 為方便示範行為，範例會顯示用戶端與服務如何使用雙工合約相互傳送訊息。  
@@ -92,4 +93,4 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

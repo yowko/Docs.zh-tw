@@ -15,16 +15,17 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc2f081411577094ea1b95c25478822a6c1747c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f25058071e041ac1e14de2c223750013c8ef1d30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 本節包含逐步解說主題集，可引導您進行 [!INCLUDE[wf](../../../includes/wf-md.md)] 應用程式的程式設計。 您可以遵循這些主題的程序進行，建置一個數字猜測遊戲應用程式。 教學課程中的第一個主題會引導您透過步驟來建立工作流程所需的自訂活動。 在第二個主題中，這些活動會隨著內建工作流程活動組裝至流程圖工作流程。 在第三個主題中，會設定主應用程式執行工作流程，並在最後一個主題中介紹持續性。 這個程序中的每一個步驟都與之前的步驟息息相關，因此建議您最好依照順序完成。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
  描述如何建立衍生自 <xref:System.Activities.NativeActivity%601> 的自訂活動，以及如何使用活動設計工具，將這個活動連同內建活動撰寫成複合活動。  
   
@@ -46,5 +47,5 @@ ms.lasthandoff: 12/02/2017
  [如何：更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)  
  說明如何使用動態更新來修改執行中的工作流程執行個體。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)

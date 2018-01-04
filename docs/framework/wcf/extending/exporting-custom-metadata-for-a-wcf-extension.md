@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abe0bd7b08d254e97eef74ad1a99b1bcf6dd997e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>匯出 WCF 擴充的自訂中繼資料
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，中繼資料匯出是一項程序，描述服務端點並將其投射至並行標準化表示法，使得用戶端了解如何使用服務。 自訂中繼資料包含系統提供之中繼資料匯出工具所無法匯出的 XML 項目。 通常這包括使用者定義行為的自訂 WSDL 項目和繫結項目，以及有關繫結與合約功能和需求的原則判斷提示。  
   
  本章節將說明匯出自訂 WSDL 或原則判斷提示，但重點不會放在匯出程序本身。 如需如何使用匯出和匯入中繼資料，不論中繼資料是自訂或系統建構的類型的詳細資訊，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 發行中繼資料時會檢查 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>，並且會針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 透過系統提供的屬性和繫結所支援的所有合約和繫結，產生 XSD 和 WSDL (包括原則判斷提示)。 不過，必須支援自訂行為屬性或繫結項目，才能將它們正確匯出。  
   
  本章節內容：  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
  如需詳細資訊，請參閱[How to： 匯出自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [如何： 匯出自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
- [將自訂的中繼資料匯入 WCF 延伸模組](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+## <a name="see-also"></a>請參閱  
+ [如何：匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [如何：匯出自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [匯入 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

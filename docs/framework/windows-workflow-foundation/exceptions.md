@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545049900ec632aaaf3955656bcd93e845b094de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions"></a>例外狀況
 工作流程可以利用 <xref:System.Activities.Statements.TryCatch> 活動處理在工作流程執行期間引發的例外狀況。 工作流程可以處理這些例外狀況，也可以利用 <xref:System.Activities.Statements.Rethrow> 活動重新擲回。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 區段中的活動是在 <xref:System.Activities.Statements.TryCatch.Try%2A> 區段或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 區段完成時執行的。 由工作流程裝載<xref:System.Activities.WorkflowApplication>也可以使用執行個體<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>處理不會處理的例外狀況的事件處理常式<xref:System.Activities.Statements.TryCatch>活動。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="exception-handling-versus-compensation"></a>例外狀況處理與補償  
  例外狀況處理與補償之間的不同在於，例外狀況處理會發生於活動執行期間。 補償則是發生於活動順利完成後。 例外狀況處理可讓您在活動引發例外狀況後進行清理，而補償則提供一種機制，利用這種機制即可復原先前完成之活動順利完成的工作。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][補償](../../../docs/framework/windows-workflow-foundation/compensation.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.Statements.TryCatch>  
  <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>  
  <xref:System.Activities.Statements.CompensableActivity>

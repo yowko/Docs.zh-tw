@@ -16,16 +16,17 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e88737d50b24f524e4a33fd51ee16678c1928b1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-instructions"></a>設定指示
 這一組主題會說明如何設定執行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時所需要的服務。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
  概述設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例的步驟。  
   

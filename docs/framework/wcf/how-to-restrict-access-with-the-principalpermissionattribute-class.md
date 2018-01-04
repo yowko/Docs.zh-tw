@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ddfb7b343bf4eb551b5029c538d29f104698adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
 控制 Windows 網域電腦上資源的存取，是基本的安全性工作。 例如，只有特定使用者能夠檢視機密資料 (如薪資資料)。 本主題說明如何透過將使用者歸屬到預先定義的群組，以限制方法的存取。 如需實用範例，請參閱[授權存取服務作業](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  <xref:System.Security.Permissions.SecurityAction.Demand>  

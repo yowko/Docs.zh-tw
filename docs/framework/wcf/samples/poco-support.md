@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ae39738284a28e5415b9650349b40a16993e1ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c471a6726d8f7e621d666e014b2363c088e2b0e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poco-support"></a>POCO 支援
 這個範例會示範對未標記型別的序列化支援，此種型別就是尚未套用序列化屬性的型別，有時亦稱為「單純舊 CLR 物件」(Plain Old CLR Object，POCO) 型別。 <xref:System.Runtime.Serialization.DataContractSerializer> 會對所有具有預設建構函式 (Constructor) 的公用未標記型別推斷資料合約。 資料合約可以讓您在服務間來回傳遞結構化資料。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]未標記型的別，請參閱[可序列化型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
@@ -66,6 +67,6 @@ public class ComplexNumber
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
- [可序列化型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+ [可序列化類型](../../../../docs/framework/wcf/feature-details/serializable-types.md)

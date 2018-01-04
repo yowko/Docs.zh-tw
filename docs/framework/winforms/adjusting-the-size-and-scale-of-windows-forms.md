@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 64e1376ff2792043f1cec1e1f5e62b29e79df373
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb05ba1045eff3dbcade62e5167953d1d2a17475
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>調整大小和小數位數為 Windows Form
 本主題提供有關調整 Windows Form 大小的資訊連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：調整 Windows Forms 的大小](~/docs/framework/winforms/how-to-resize-windows-forms.md)  
  提供指定 Windows Form 大小的指示。  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cc3dab3acafdb151cf14f81145ef47e5a6ff689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c8de64ac28fe57e3c448c671859053fad4aae3b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>如何：控制 Windows Form TextBox 控制項的插入點
 當 Windows Form<xref:System.Windows.Forms.TextBox>控制項第一次收到焦點時，預設值插入文字方塊內的左側時，任何現有的文字。 使用者可以移動插入點與鍵盤或滑鼠。 如果文字方塊中遺失，並重新取得焦點，將會插入點，使用者上次放置的任一處它。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 -   設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.Control.TabIndex%2A>屬性`0`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.TextBox>  
  [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  [操作說明：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  

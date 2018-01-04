@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bcb67fa4f51318ef7afa69e37d03bb80400539
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c0857830b52b2f71df5d81f4bd232b62b894da63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variable-and-argument-tracking"></a>變數及引數追蹤
 追蹤工作流程的執行時，擷取資料通常很實用。 它可在存取追蹤記錄後期執行時，提供額外的內容。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以在使用追蹤的工作流程中的任何活動範圍內擷取任何可見的變數或引數。 追蹤設定檔讓擷取資料變得非常容易。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 12/02/2017
   
 3.  若為自訂追蹤參與者，請確定 WF 程式碼不會公開儲存在變數或引數中的機密資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

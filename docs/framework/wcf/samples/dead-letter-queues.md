@@ -13,11 +13,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2cd61bf9c1e3d7165b76f55f1808b04c979d4d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它基礎[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -371,4 +372,4 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

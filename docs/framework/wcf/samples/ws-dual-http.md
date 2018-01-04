@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c45801ba4b2d1fa2a9dafd14a5bc1b2f2221055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57fea95db5bf1536b41b282bedab55a9deef8e8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-dual-http"></a>WS 雙重 Http
 雙重 Http 範例會示範如何設定 `WSDualHttpBinding` 繫結。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 在此範例中，`ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 `WSDualHttpBinding` 繫結支援雙工通訊。  
@@ -114,4 +115,4 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     </wsDualHttpBinding>  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -14,16 +14,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 240901f4fa04a2468d5964821680506ea117bf7f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7d305adf1810832016cdafbb60fc025f17e0786
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>將 .NET 遠端處理應用程式移轉到 WCF
 **本主題專門說明一項為了在現有應用程式中提供回溯相容性而保留的舊有技術，不建議用於新的開發工作。分散式應用程式現在應該可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 開發。**  
   
  有兩種方法可以利用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 搭配現有的 .NET 遠端處理應用程式：整合與移轉。 整合可以讓您同時執行 .Net Remoting 2.0 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，以便能同時公開兩種技術的相同商務物件，而不需要修改現有的 .Net Remoting 2.0 程式碼。 整合需要在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 (含) 以上版本執行。 如果您想要利用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能，而且不需要與 Remoting 2.0 系統的網路相容性，可以將整個服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 從 .NET Remoting 2.0 移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 需要變更遠端物件的介面及其組態設定。 這兩個主題中涵蓋[從遠端處理到 Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=74403)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念性概觀](../../../../docs/framework/wcf/conceptual-overview.md)

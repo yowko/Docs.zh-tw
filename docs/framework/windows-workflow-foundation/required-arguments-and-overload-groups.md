@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5d94c64c25f1b50601888eccbe8b4522d7b618c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  

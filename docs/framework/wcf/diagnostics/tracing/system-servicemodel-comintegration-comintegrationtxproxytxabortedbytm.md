@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8c74c6982658722b7bfcff93786baed8d62adb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef58b44e2fe6242a4f6e3b7f2af56e92b3dc79cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbytm"></a>System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM
 System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM  
@@ -25,7 +26,7 @@ System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM
 ## <a name="description"></a>描述  
  ComPlus：已由異動管理員中止此異動。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用追蹤來疑難排解您的應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

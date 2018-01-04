@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa5394e874e35b80b01796642e18d69c71e867dc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b073efc47ccc1708bf4c58153b1001a21eee25f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -58,7 +59,7 @@ class TransactionFlowBindingElement : BindingElement
   
  存取類型：唯讀  
   
- 代表是否支援傳入交易。  
+ 代表是否支援傳入異動。  
   
 ## <a name="requirements"></a>需求  
   
@@ -66,5 +67,5 @@ class TransactionFlowBindingElement : BindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

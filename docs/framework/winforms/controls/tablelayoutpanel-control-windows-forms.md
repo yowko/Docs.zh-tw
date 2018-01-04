@@ -20,16 +20,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f8f949edcf637f4b56ab0bcfdd121c5cb29e543
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4205e39ad8ace594eb6b86c04e45c9685db559cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 控制項 (Windows Form)
 <xref:System.Windows.Forms.TableLayoutPanel> 控制項會在格線中排列其內容。 由於配置會在設計階段和執行階段執行，因此當應用程式環境變更時，配置也會隨著動態變更。 這可讓面板中的控制項按比例調整大小，以便回應變更 (例如，由於當地語系化所造成的父控制項調整大小或文字長度變更)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [TableLayoutPanel 控制項概觀](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)  
  介紹 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的一般概念，這個控制項可讓您建立具有資料列和資料行的配置。  
   

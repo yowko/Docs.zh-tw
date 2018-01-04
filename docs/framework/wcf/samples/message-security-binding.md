@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ca1ce99fae09ef7d3c9ad3ea47984b671cadb27c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f0c8b125d3fc313dca4140b871ccea8165329fda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-binding"></a>訊息安全性繫結
 本節包含示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中 Windows 服務之訊息安全性繫結的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  這個範例會示範如何實作 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式，這個應用程式所使用的訊息層級安全性並不會透過用戶端驗證，而是要求以伺服器的 X.509 憑證進行伺服器驗證。  
   

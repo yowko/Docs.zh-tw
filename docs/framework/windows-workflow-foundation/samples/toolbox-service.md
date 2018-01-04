@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 294c530072b2d694f9aeb54d04b36d72bb6da637
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b800f2d250a918ea2b6c49b121c4ca9040b20631
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbox-service"></a>工具箱服務
 這個範例示範如何根據工作流程的內容來更新 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 工具箱活動。 此範例包含會隨著自訂活動是否選取而變更工具箱內容的工作流程。  

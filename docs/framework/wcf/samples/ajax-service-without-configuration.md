@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf0ed4e1c06bc464b8ebeffbf3be10de3064f479
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82d9bb27ef20aa4e425e232a23c785af3b7e6e5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-without-configuration"></a>無組態的 AJAX 服務
 這個範例會示範如何在不使用任何組態設定的情況下，使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 來建立基本 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務 (指您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取的服務)。 此服務會在 .svc 檔中使用特殊語法以自動啟用 AJAX 端點。  
@@ -60,5 +61,5 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  執行這個範例時，請確定 IIS 中 ServiceModelSamples 資料夾的匿名驗證與 Windows 驗證並未同時啟用。 如果是這種情況，請停用 Windows 驗證。 在執行範例之後，請啟用 Windows 驗證並執行「iisreset」。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

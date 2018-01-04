@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f2789c6756d8e22dae9eb3189dfb616d162ad906
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-feeds-sample"></a>資料流摘要範例
 這個範例會示範如何管理含有大量項目的新聞訂閱摘要。 在伺服器上，此範例會示範如何在項目即將寫入網路資料流的之前立即延遲建立摘要中個別的 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。  
@@ -128,5 +129,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [獨立診斷摘要](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

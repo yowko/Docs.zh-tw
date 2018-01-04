@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97a795930eb6965bd0ed15254969a72f45700306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型上未公開的成員
 Managed HTML 文件物件模型 (DOM) 包含一種類別稱為<xref:System.Windows.Forms.HtmlElement>會公開屬性、 方法和所有 HTML 項目都有通用的事件。 有時候，不過，您將需要存取的受管理的介面不會直接公開的成員。 本主題討論兩種方式來存取未公開的成員，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]和網頁內所定義的 VBScript 函式。  
@@ -81,5 +82,5 @@ Managed HTML 文件物件模型 (DOM) 包含一種類別稱為<xref:System.Windo
   
  您可以呼叫您定義在 HTML 頁面使用的任何指令碼函式<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。 如果指令碼方法傳回的 HTML 項目，您可以使用轉型將這個傳回結果至轉換<xref:System.Windows.Forms.HtmlElement>。 如需詳細資訊和範例程式碼，請參閱<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

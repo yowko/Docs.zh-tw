@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。  
@@ -36,10 +37,10 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |工作|主題|  
 |----------|-----------|  
 |從執行中服務或靜態中繼資料文件產生程式碼。|[從服務中繼資料產生 WCF 用戶端](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|從編譯的程式碼匯出中繼資料文件。|[如何： 使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|驗證編譯的服務程式碼。|[如何： 使用 Svcutil.exe 來驗證已編譯的服務程式碼](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|從執行中服務下載中繼資料文件。|[如何： 使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|產生序列化程式碼。|[如何： 改善啟動時間的 WCF 用戶端應用程式使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|從編譯的程式碼匯出中繼資料文件。|[如何：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|驗證編譯的服務程式碼。|[如何：使用 Svcutil.exe 來驗證已編譯服務程式碼](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|從執行中服務下載中繼資料文件。|[如何：使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|產生序列化程式碼。|[如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  如果做為參數所提供的名稱相同，則 Svcutil 將覆寫磁碟上現有的檔案。 這會包括程式碼檔案、組態或中繼資料檔案。 為了在產生程式碼和組態檔時避免這種情況，請使用 `/mergeConfig` 參數。  
@@ -60,7 +61,7 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 ### <a name="common-usages"></a>常見使用方式  
  下表顯示這個工具的一些常用選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |/ 目錄：\<目錄 >|要建立檔案的目錄。<br /><br /> 預設：目前的目錄。<br /><br /> 簡短形式：`/d`|  
 |/help|顯示工具的命令語法和選項。<br /><br /> 簡短形式：`/?`|  
@@ -124,7 +125,7 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |--------------|-----------------|  
 |`assemblyPath`|指定包含要匯出之服務、合約或資料合約類型的組件路徑。 標準命令列萬用字元可用於提供多個檔案做為輸入。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |/serviceName:\<serviceConfigName >|指定要匯出的服務其組態名稱。 如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。 Svcutil.exe 會搜尋所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。 如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 (Behavior、Binding 和 BindingElement)，請使用這個選項找出不在 GAC 中的擴充功能組件。<br /><br /> 簡短形式：`/r`|  
@@ -185,7 +186,7 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |--------------|-----------------|  
 |`assemblyPath`|指定包含服務合約類型之組件的路徑。 會針對每個合約中的所有 Xml 可序列化型別產生序列化型別。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。<br /><br /> 簡短形式：`/r`|  
 |/excludeType:\<類型 >|指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
@@ -271,7 +272,7 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
   
  最後，您不應該在應用程式的中介層 (Middle Tier) 使用這個工具，因為它可能會對目前處理序造成阻絕服務攻擊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

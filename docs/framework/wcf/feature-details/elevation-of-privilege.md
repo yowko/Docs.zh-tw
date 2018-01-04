@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e44d0ecf6afb81928d83ea925f836f8b6927d97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elevation-of-privilege"></a>權限提高
 *提高權限*得到的權限高於原先賦予攻擊者的授權。 例如，具有「唯讀」權限的攻擊者以不明方式將權限提高為「讀取和寫入」。  
@@ -92,10 +93,10 @@ ms.lasthandoff: 12/02/2017
   
  若要緩解這個情況，請以另一種方式來參照 X.509 憑證，例如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [遭到竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>Web
 本節包含 Web 裝載的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
- [進階的格式選取](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
+## <a name="in-this-section"></a>本節內容  
+ [進階格式選取](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  示範如何擴充 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 程式設計模型，以支援新的傳出回應格式。  
   
  [自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
@@ -50,8 +51,8 @@ ms.lasthandoff: 12/02/2017
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  示範與 <xref:System.UriTemplate> 相關的主要概念。  
   
- [UriTemplate 表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  示範 <xref:System.UriTemplateTable> 類別如何提供可用來處理 <xref:System.UriTemplate> 執行個體集合的字典式關聯表結構。  
   
- [UriTemplate 表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
+ [UriTemplate 資料表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  
  示範使用 <xref:System.UriTemplateTable> 建立的基本分派引擎，這是 <xref:System.UriTemplateTable> 類別的常用案例。

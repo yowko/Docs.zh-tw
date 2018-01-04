@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6d60bec8c3b69d9fd094f59b1f4d8c9ec4d8dff
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 665e05907f837887a7dd0375e540b6e9167a820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>含 JSON 和 XML 的 AJAX 服務範例
 這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立會傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript 與 XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
@@ -121,5 +122,5 @@ xmlHttp.onreadystatechange=function(){
   
 3.  瀏覽到 http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (不要使用瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm)。  
   
-## <a name="see-also"></a>另請參閱  
- [AJAX 服務使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+## <a name="see-also"></a>請參閱  
+ [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3c59a574d2206de7722958f676a721b51fbc2d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 517b37ca1ed92cf36f447a4d634b8f487f2b4abe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
 這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 平台實作自訂編碼器。  
@@ -365,4 +366,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8518fdcaca7ebed65d0923b9bc1fe1a6797b97c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6f03f65c878e72a8ec4b7f8bb447a1d6cf820690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>如何：格式化 Windows Form DataGrid 控制項
 > [!NOTE]
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  視需要設定下列屬性：  
   
-    |屬性|說明|  
+    |屬性|描述|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A>屬性定義的方格其偶數資料列的色彩。 當您將<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>為不同的色彩屬性，每個資料列設定為這個新的色彩 （1、 3、 5 和等等的資料列）。|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|方格其偶數資料列的背景色彩 （0、 2、 4、 6 和等等的資料列）。|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.GridTableStylesCollection>  
  <xref:System.Windows.Forms.GridColumnStylesCollection>  
  <xref:System.Windows.Forms.DataGrid>  

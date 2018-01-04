@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c08d57f36d733312793ab9de1699b83a1e22ce31
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-activities"></a>傳訊活動
 訊息傳遞活動允許工作流程傳送和接收 WCF 訊息。 藉由將訊息傳遞活動加入至工作流程，您就可以製作任何複雜訊息交換模式 (MEP) 的模型。  
@@ -113,6 +114,6 @@ Request = rcv
 ## <a name="messaging-activities-and-transactions"></a>訊息傳遞活動和異動  
  呼叫工作流程服務時，您可能想要讓交易流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的交易會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流程和交易，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何傳送及接收工作流程服務中的錯誤](http://go.microsoft.com/fwlink/?LinkId=189151)  
- [建立長時間執行工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+ [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)

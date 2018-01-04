@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0089d08604f5d738e04461f4ed5f8efcb1140420
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96a8b8321239e3f01b30bcbe0400930a292a8f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-guidance"></a>移轉指引
 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，Microsoft 發佈了 [!INCLUDE[wf](../../../includes/wf-md.md)] 的第二個主要版本。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中發佈 (其中包含 System.Workflow.* 命名空間中的型別；現在則是指 WF3)，並在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中增強。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但有與新的工作流程技術 (System.Activities。 類型\*命名空間; 指 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 12/02/2017
  [WF 指引： 工作流程服務](http://go.microsoft.com/fwlink/?LinkId=275564)  
  提供範例導向的逐步指示，示範如何針對全新活動的一般狀況，將實作 WF3 中建立之 Windows Communication Foundation (WCF) Web 服務 (通常稱為工作流程服務) 的工作流程，重新設計成使用 WF4。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.Statements.Interop>

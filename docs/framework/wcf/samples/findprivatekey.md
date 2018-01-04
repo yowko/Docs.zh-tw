@@ -10,11 +10,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29489cd1b82cf1c31f178d8a305a21371b542f15
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnet
+ms.openlocfilehash: 32e1a4a3de01371d67be8d19613b1f29c1ce3c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey 範例
 
@@ -69,7 +70,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  「\<*值*> 」 表示輸入參數值。
 
-## <a name="usage"></a>使用方式
+## <a name="usage"></a>使用量
 
 ```
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]

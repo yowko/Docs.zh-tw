@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>安全性概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是 SOAP 訊息架構的分散式程式設計平台，而確保用戶端和服務之間的訊息安全，對保護資料而言是最基本的要務。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會根據現有安全性基礎結構和認可的 SOAP 訊息安全性標準，提供交換安全訊息的多用途和互通平台。  
@@ -107,17 +108,17 @@ ms.lasthandoff: 11/21/2017
 ### <a name="auditing"></a>稽核  
  *稽核*是 Windows 事件記錄檔的安全性事件記錄。 您可以記錄安全性相關的事件，例如驗證失敗 (或成功)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。 程式設計的詳細資訊，請參閱[How to： 稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  [保護服務安全](../../../../docs/framework/wcf/securing-services.md)  
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [安全性指導方針和最佳作法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [使用設定檔設定服務](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)  

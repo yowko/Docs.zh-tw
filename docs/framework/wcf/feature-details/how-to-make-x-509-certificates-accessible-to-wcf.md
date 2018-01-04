@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e03a38e2a93dd866bc3da65527d5410b09009e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
 若要讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 能夠存取 X.509 憑證，應用程式程式碼必須指定憑證存放區名稱及位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得與憑證存放區中 X.509 憑證相關聯的私密金鑰，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 必須有進行這項作業的權限。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
@@ -39,10 +40,10 @@ ms.lasthandoff: 12/02/2017
   
         |X.509 憑證使用方式|私密金鑰|  
         |---------------------------|-----------------|  
-        |數位簽署傳出的 SOAP 訊息。|是|  
+        |數位簽署傳出的 SOAP 訊息。|[是]|  
         |確認傳入之 SOAP 訊息的簽章。|否|  
         |加密傳出的 SOAP 訊息。|否|  
-        |解密傳入的 SOAP 訊息。|是|  
+        |解密傳入的 SOAP 訊息。|[是]|  
   
     2.  判斷憑證存放於其中的憑證存放區位置和名稱。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/02/2017
         cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R  
         ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
- [如何： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+ [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

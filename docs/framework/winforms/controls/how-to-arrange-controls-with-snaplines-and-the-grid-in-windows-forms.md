@@ -18,17 +18,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ab199f390fa6a704ad3b3d2a17387d034cf2e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7e3754df2930503e7e7a123ffdb4d4b787338c20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>如何：使用 Windows Form 中的對齊線和格線排列控制項
 使用的版面配置功能[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，您可以精確地控制項在表單上放置的位置。 控制項加入表單，或移到表單上自動對齊的資料列和資料行的 Windows Form 設計工具方格中，或您可以使用對齊線功能對齊控制項。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>貼齊至方格的所有控制項  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
      如需詳細資訊，請參閱[逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。 您現在可以使用對齊線對齊及排列表單上的控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [選項對話方塊、 Windows Form 設計工具，一般](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a460a3fdd48813801b18af5a896252134687816d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
 您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證是*支援認證*。 這個主題會說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端中實作這類認證。  
@@ -90,5 +91,5 @@ ms.lasthandoff: 12/02/2017
 ### <a name="code"></a>程式碼  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>請參閱  
+ [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -16,16 +16,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本格式化和樣式設定
 `DataGridView`控制項讓您輕鬆地定義儲存格的基本外觀和儲存格的值顯示格式。 您可以定義外觀和格式樣式的個別資料格、 特定資料行和資料列中的資料格或控制項中的所有資料格所設定的屬性`DataGridViewCellStyle`存取透過各種物件`DataGridView`控制屬性。 此外，您可以修改這些樣式以動態方式會根據所處理的因素，例如儲存格的值`CellFormatting`事件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：變更 Windows Forms DataGridView 控制項中的框線和格線樣式](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
  描述如何設定`DataGridView`定義控制項框線和界限之間的線條的儲存格的外觀屬性。  
   
@@ -67,5 +68,5 @@ ms.lasthandoff: 10/22/2017
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供主題描述常用的資料格、 列和資料行的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

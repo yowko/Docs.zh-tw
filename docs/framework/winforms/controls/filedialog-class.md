@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 432b9935113a700160f89ad427ebf5cade6d0e99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 40c304ba3af28b20dfe158a40ef9cf2e7dd5b083
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filedialog-class"></a>FileDialog 類別
 Windows Form<xref:System.Windows.Forms.FileDialog>類別是常見的基底類別，<xref:System.Windows.Forms.OpenFileDialog>和<xref:System.Windows.Forms.SaveFileDialog>元件。 您可以變更<xref:System.Windows.Forms.FileDialog>影響的外觀和行為，這些對話方塊，根據的應用程式執行的 Windows 版本的類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：選擇不自動升級檔案對話方塊](../../../../docs/framework/winforms/controls/how-to-opt-out-of-file-dialog-box-automatic-upgrade.md)  
  描述如何退出自動樣式升級檔案對話方塊中。  
   

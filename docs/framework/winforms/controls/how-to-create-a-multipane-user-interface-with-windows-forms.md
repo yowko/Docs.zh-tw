@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>逐步解說：利用 Windows Form 建立多窗格使用者介面
 在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。 這種排列方式被達成透過停駐控制項的表單來達成。  
@@ -186,7 +187,7 @@ ms.lasthandoff: 11/21/2017
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  [操作說明：使用設計工具，以 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

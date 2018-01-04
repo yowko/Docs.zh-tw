@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f5d8dd02d325d196cdceccea37624c9b2c1a01d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 854aeac936d3f911f2613c6e315ab81347f64a25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-with-35-rule-set"></a>和 3.5 規則集互通
 這個範例示範如何使用<xref:System.Activities.Statements.Interop>活動中的自訂活動整合[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]使用<!--zz <xref:System.Workflow.Activities.Policy> -->`System.Workflow.Activities.Policy`和規則。 範例中會透過將 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 變數繫結至自訂活動公開之相依性屬性的方式，將資料傳遞至自訂活動。  

@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: afc1e0def03040acaa5cffe3f67339a61cda7d5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
 下列狀況顯示使用訊息安全性模式加以保障的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端及服務。 用戶端與服務皆以憑證驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  

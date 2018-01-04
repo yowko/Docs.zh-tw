@@ -18,11 +18,12 @@ caps.latest.revision: "42"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內之系統提供的繫結，提供了一種快速設計 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
@@ -200,14 +201,14 @@ ms.lasthandoff: 11/21/2017
   
 |繫結|傳輸模式支援|訊息模式支援|TransportWithMessageCredential 支援|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
-|`BasicHttpBinding`|是|是|是|  
+|`BasicHttpBinding`|[是]|是|是|  
 |`WSHttpBinding`|是|是|是|  
 |`WSDualHttpBinding`|否|是|否|  
 |`NetTcpBinding`|是|是|是|  
 |`NetNamedPipeBinding`|是|否|否|  
 |`NetMsmqBinding`|是|是|否|  
 |`MsmqIntegrationBinding`|是|否|否|  
-|`wsFederationHttpBinding`|否|是|是|  
+|`wsFederationHttpBinding`|否|是|[是]|  
   
 ## <a name="transport-credentials-in-bindings"></a>繫結中的傳輸認證  
  下表列出在傳輸安全性模式中使用 `BasicHttpBinding` 或 `WSHttpBinding` 時，可以使用的用戶端認證類型。  
@@ -229,13 +230,13 @@ ms.lasthandoff: 11/21/2017
 |----------|-----------------|  
 |無|允許服務與匿名用戶端互動。|  
 |Windows|允許在 Windows 認證的已驗證內容中進行 SOAP 訊息交換。|  
-|UserName|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為 `TransportWithMessageCredential` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要或使用密碼衍生金鑰，甚至針對訊息模式安全性使用該金鑰。 基於這個理由，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在利用使用者名稱認證時，強制保護傳輸安全。|  
+|使用者名稱|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為 `TransportWithMessageCredential` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要或使用密碼衍生金鑰，甚至針對訊息模式安全性使用該金鑰。 基於這個理由，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在利用使用者名稱認證時，強制保護傳輸安全。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
 |IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  

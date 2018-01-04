@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>選擇篩選
 設定路由服務時，務必選取正確的訊息篩選條件，並將它們設定為可針對您所接收的訊息進行正確的比對。 如果您選取的篩選條件在比對中過度廣泛，或設定不正確，則無法正確傳送訊息。 如果篩選條件過於嚴格，則部分訊息可能會沒有可用的有效路由。  
@@ -145,6 +146,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設計 XPath 查詢時，請參閱[的 XPath 語法](http://go.microsoft.com/fwlink/?LinkId=164592)。  
   
-## <a name="see-also"></a>另請參閱  
- [訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [如何： 使用篩選器](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+## <a name="see-also"></a>請參閱  
+ [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+ [如何：使用篩選](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

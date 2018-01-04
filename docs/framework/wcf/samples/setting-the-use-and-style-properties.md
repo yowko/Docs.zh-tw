@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6a8e4b990c7ae9815c8792c0be456463b10660b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f69ce60e6c9ab98ef773fa54b1c057d3c2b3b48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-the-use-and-style-properties"></a>設定 Use 與 Style 屬性
 這個範例會示範如何在 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 和 <xref:System.ServiceModel.DataContractFormatAttribute> 上使用 Use 和 Style 屬性。 這些屬性會影響訊息的格式化方式。 根據預設，會以設為 <xref:System.ServiceModel.OperationFormatStyle.Document> 的樣式來格式化訊息本文。 這些設定可以指定於服務合約層級或作業合約層級。  
@@ -104,4 +105,4 @@ public interface IUseAndStyleCalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

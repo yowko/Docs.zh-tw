@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e8f39e031835275818504151e66834f0634b7f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5dca8d0f869702dee50bf851a2099317c45aa842
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>如何：檢視 Windows Form TextBox 控制項中的多行
 根據預設，Windows Form<xref:System.Windows.Forms.TextBox>控制項顯示單行文字，並不會顯示捲軸。 文字的長度超過可用的空間，部分文字可見。 您可以變更此預設行為，藉由設定<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>屬性，以適當的值。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  將 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 屬性設定為適當值。  
   
-    |值|說明|  
+    |值|描述|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|使用此值，如果文字段落，幾乎永遠符合控制項。 如果文字太長而無法顯示一次，四處移動控制項內，使用者可以使用滑鼠指標。|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果您想要顯示的行，其中有些可能會超過寬度的清單，請使用這個值<xref:System.Windows.Forms.TextBox>控制項。|  
@@ -51,12 +52,12 @@ ms.lasthandoff: 11/21/2017
   
 3.  將 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 屬性設定為適當值。  
   
-    |值|說明|  
+    |值|描述|  
     |-----------|-----------------|  
     |`false`|控制項中的文字將不會自動換行，因此它會向右捲動，直到達到分行符號。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Horizontal>捲軸或<xref:System.Windows.Forms.ScrollBars.Both>上述。|  
     |`true` (預設值)|不會出現水平捲軸。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Vertical>捲軸或<xref:System.Windows.Forms.ScrollBars.None>上述，以顯示一或多個段落。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.TextBox>  
  [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  [操作說明：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  

@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
 繫結是指定連接端點所需要之通訊詳細資料的物件。 更明確的說，繫結包含藉由定義傳輸、網路格式 (訊息編碼) 的細節，用於建立用戶端或服務執行階段的組態資訊，以及用於個別端點或用戶端通道的通訊協定。 如果要建立可以運作的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務，服務中每個端點都需要繫結。 本主題將說明什麼是繫結、如何定義繫結，以及如何為端點指定特定繫結。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [如何： 設定用戶端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)提供建立使用設定的用戶端的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [如何：在設定中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
  [如何：在程式碼中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  

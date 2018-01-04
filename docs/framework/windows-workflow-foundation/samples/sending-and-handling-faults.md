@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97a957932c04f52a4a77d7d636cda08a63121f2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc91b431123ff8776910550151a7783b2690d383
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-and-handling-faults"></a>傳送及處理錯誤
 這個範例示範如何使用 <xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 訊息活動，傳送及接收預期和非預期的錯誤。 在這個案例中，第一個用戶端要求產生已包含在 <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> 集合中的預期錯誤。 後面幾個用戶端要求會在最終要求成功之前產生非預期的錯誤。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  執行服務專案。  
   
-    1.  在**方案總管] 中**，以滑鼠右鍵按一下`FaultService`專案，然後選取**設定為啟始專案**。  
+    1.  在**方案總管 中**，以滑鼠右鍵按一下`FaultService`專案，然後選取**設定為啟始專案**。  
   
     2.  按下 CTRL+F5。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 7.  執行用戶端專案。  
   
-    1.  在**方案總管] 中**，以滑鼠右鍵按一下`FaultClient`專案，然後選取**設定為啟始專案**。  
+    1.  在**方案總管 中**，以滑鼠右鍵按一下`FaultClient`專案，然後選取**設定為啟始專案**。  
   
     2.  按下 CTRL+F5。  
   

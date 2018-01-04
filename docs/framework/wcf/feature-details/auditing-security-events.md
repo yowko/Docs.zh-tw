@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 以 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立的應用程式可以使用稽核功能記錄安全性事件 (可能為成功、失敗或兩者並存)。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="auditing-classes"></a>稽核類別  
  下表描述用來程式設計稽核行為的類別和屬性。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|將稽核的設定選項啟用為服務行為。|  
 |<xref:System.ServiceModel.AuditLogLocation>|用於指定寫入哪個記錄檔的列舉。 可能的值為 [預設]、[應用程式] 和 [安全性]。 當您選取 [預設] 時，作業系統會判斷實際的記錄檔位置。 如需詳細資訊，請參閱本主題稍後「應用程式或安全性事件記錄檔選擇」一節的說明。|  
@@ -107,12 +108,12 @@ ms.lasthandoff: 11/21/2017
 |稽核原則管理|不適用。|安全性記錄檔也可以藉由本機安全性授權 (LSA) 原則與組態來加以控制。 您也必須啟用 [稽核物件存取] 類別。|  
 |預設的使用者經驗|所有通過驗證的使用者都可以寫入應用程式記錄檔，因此不需要為應用程式處理序額外執行設定權限的步驟。|應用程式處理序 (內容) 必須具有 `SeAuditPrivilege`。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [How to： 稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [如何：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f825371d3849e96ace627e660fd7c59bd290185
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>如何：使用影像並排顯示圖案
 磚可以放在相鄰涵蓋樓層，如同可以相鄰放置矩形的映像，填滿 （磚） 圖形。 若要並排顯示圖案的內部，使用紋理筆刷。 當您建構<xref:System.Drawing.TextureBrush>物件，其中您傳遞給建構函式的引數為<xref:System.Drawing.Image>物件。 當您使用的材質筆刷繪製圖形內部時，此映像的重複複本填滿的圖案。  
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/22/2017
  [!code-csharp[System.Drawing.UsingABrush#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用筆刷填滿形狀](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

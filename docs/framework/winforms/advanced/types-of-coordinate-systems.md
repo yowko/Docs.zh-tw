@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-coordinate-systems"></a>座標系統類型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]會使用三種座標空間： world、 頁面和裝置。 全局座標是用來建立模型特定的圖形範圍的座標，您將傳遞至方法在.NET Framework 中的座標。 頁面座標是指繪圖介面，例如表單或控制項所使用的座標系統。 裝置座標是實體裝置，例如螢幕或紙張繪製所使用的座標。 當您進行的呼叫`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，傳遞至的點<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`— 中全局座標空間。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在螢幕上繪製線條，通過一連串的轉換的座標。 一個轉換，稱為全局轉換，將全局座標轉換為頁面座標和另一個轉換，稱為 「 頁面 」 轉換，將頁面座標轉換為裝置座標。  
@@ -104,6 +105,6 @@ ms.lasthandoff: 11/21/2017
 |頁面|（2，0.5） 到 （4，1.5）|  
 |裝置|（192，48） 到 （384、 144）|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [以矩陣來表示轉換](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

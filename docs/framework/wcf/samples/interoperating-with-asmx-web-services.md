@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b852e579918dfd43589d31b607b19713e54e8be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce0f548f345e3711edfd547b2e6879fafdbd0ad4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperating-with-asmx-web-services"></a>與 ASMX Web 服務交互操作
 這個範例會示範如何整合 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式與現有的 ASMX Web 服務。  
@@ -141,4 +142,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

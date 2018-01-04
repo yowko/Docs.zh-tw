@@ -16,16 +16,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94296e623407aad2fecb52b9e6ece7500778931b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 70eb72b8755b24e0ee91c2a77b562984422b0c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-accessibility"></a>Windows Forms 協助工具
 Windows Forms 的協助工具功能可讓您將應用程式提供給各式各樣的使用者。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [逐步解說：建立 Windows 架構的協助工具應用程式](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
  描述為了提高可及性應支援的所有功能。  
   

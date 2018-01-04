@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38471f3b41f636a8294c4e240d452361c969ac58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什麼 &#39; s Windows Workflow Foundation 的新功能
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 改變了舊版的數種開發架構。 現在，建立、執行與維護工作流程以及實作新功能的主機都變得更簡單了。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  

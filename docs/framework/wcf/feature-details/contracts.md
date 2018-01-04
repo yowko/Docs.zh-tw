@@ -17,18 +17,19 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc7f90ed679abc55a62ca5ab6028af4c86bd52a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a45fc606ac962b4dc7aac8b49ed9a3c6c421ccd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contracts"></a>合約
 本節將說明如何定義和實作 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 合約。 服務合約會指定端點與外界溝通的內容。 更具體來說，這是關於一組會組織到基本訊息交換模式 (MEP) 之特定訊息的聲明，而這些交換模式包括要求/回覆、單向和雙工。 如果服務合約為一組邏輯相關的訊息交換，則服務作業就是單一的訊息交換。 例如，`Hello` 作業一定會明確地接收一個訊息 (這樣呼叫端才能宣告歡迎畫面)，但卻不一定會傳回訊息 (需視作業的禮節而定)。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]合約和其他核心[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]概念，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。 本主題將著重於讓您了解服務合約。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何建置用戶端，使用服務合約，連線至服務，請參閱[WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]用戶端通道，用戶端架構，以及其他用戶端的問題，請參閱[用戶端](../../../../docs/framework/wcf/feature-details/clients.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  本主題會提供在設計和實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時的高層級概念方向。 副標題則提供設計和實作之細節的詳細資訊。 在設計及實作您的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式之前，建議您先：  
   
 -   瞭解服務合約是什麼、如何使用它，以及如何建立它。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
   
  在設計、實作、設定和裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務應用程式時，必須特別注意這項附加的需求程序。 例如，合約可以指定必須支援某個工作階段。 若是如此，您就必須將繫結設定成可支援該合約需求，否則服務實作將無法運作。 或者，如果您的服務需要整合式 Windows 驗證而且已裝載於網際網路資訊服務 (IIS)，則服務所在的 Web 應用程式必須啟用整合式 Windows 驗證並關閉匿名支援。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]功能和影響不同的服務主機應用程式類型，請參閱[主控](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [端點： 位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+## <a name="see-also"></a>請參閱  
+ [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)  
  [履行服務合約](../../../../docs/framework/wcf/implementing-service-contracts.md)

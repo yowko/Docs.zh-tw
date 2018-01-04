@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>系統提供的繫結
 在與端點對話時，繫結會指定要使用的通訊機制，並指出如何連接至端點。 繫結包含下列項目：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
  一個安全、互通，且可支援 WS-Federation 通訊協定的繫結，此繫結可讓聯合組織有效率地驗證並授權使用者。  
   
 > [!IMPORTANT]
->  請務必選取包含安全性的繫結。 根據預設，所有的繫結，除了[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)元素有已啟用安全性。 如果您沒有選取安全繫結或是停用了安全性，請記得透過某種方式來保護您的資料，例如儲存在安全的資料中心或是另外放在隔離的網路上。  
+>  請務必選取包含安全性的繫結。 根據預設，所有的繫結，除了[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)元素有已啟用安全性。 如果您沒有選取安全繫結程序或是停用了安全性，請記得透過某種方式來保護您的資料，例如儲存在安全的資料中心或是另外放在隔離的網路上。  
   
 > [!IMPORTANT]
 >  請勿使用不支援或已停用安全性的繫結來搭配雙工合約一起使用，除非您能夠以其他方式來保護資料的安全。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  下列繫結會隨附於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。  
   
-|繫結|組態項目|說明|  
+|繫結|組態項目|描述|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|適合用來與 WS-Basic Profile 相容之 Web 服務通訊的繫結，例如，以 ASP.NET Web 服務 (ASMX) 為基礎的服務。 此繫結使用 HTTP 做為傳輸，並使用文字/XML 做為預設的訊息編碼。|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|適用在非雙工服務合約上的安全且互通的繫結。|  
@@ -64,19 +65,19 @@ ms.lasthandoff: 12/02/2017
   
 |繫結|互通性|安全性 (預設值)|工作階段<br /><br /> (預設值)|異動|雙工|編碼 (預設值)|資料流<br /><br /> (預設值)|  
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|是<br /><br /> (緩衝)|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|[是]<br /><br /> (緩衝)|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|傳輸、(訊息)、混合|(無)、可靠工作階段、安全性工作階段|(無)、是|N/A|(文字)、MTOM|否|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(訊息)、無|(可靠工作階段)、安全性工作階段|(無)、是|是|(文字)、MTOM|否|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(訊息)、無|(可靠工作階段)、安全性工作階段|(無)、是|[是]|(文字)、MTOM|否|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(訊息)、混合、無|(無)、可靠工作階段、安全性工作階段|(無)、是|否|(文字)、MTOM|否|  
 |<xref:System.ServiceModel.NetHttpBinding>|.NET|(無)、傳輸、訊息、TransportWithMessageCredential、TransportCredentialOnly|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|是 (緩衝)|  
 |<xref:System.ServiceModel.NetHttpsBinding>|.NET|(傳輸)、TransportWithMessageCredential|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|是 (緩衝)|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|是|二元|是<br /><br /> (緩衝)|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(傳輸)、無|無、(傳輸)|(無)、是|是|二元|是<br /><br /> (緩衝)|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|[是]|二元|[是]<br /><br /> (緩衝)|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(傳輸)、無|無、(傳輸)|(無)、是|[是]|二元|[是]<br /><br /> (緩衝)|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|訊息、(傳輸)、無|(無)、傳輸|無、(是)|否|二元|否|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|對等|(傳輸)|(無)|(無)|是||否|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|對等|(傳輸)|(無)|(無)|[是]||否|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(傳輸)|(無)|無、(是)|N/A|N/A|否|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|是<br /><br /> (緩衝)|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|是|二元|是<br /><br /> (緩衝)|  
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(無)、傳輸、訊息、混合|(無)|(無)|N/A|文字、(MTOM)|[是]<br /><br /> (緩衝)|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|[是]|二元|[是]<br /><br /> (緩衝)|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|傳輸、(訊息)、混合|(無)、可靠工作階段、安全性工作階段|(無)、是|N/A|文字、(MTOM)|否|  
 |<xref:System.ServiceModel.UdpBinding>|.NET**附註：**互通性可以藉由實作這個繫結所實作的標準 SOAP-over-UDP 規格來達成。|(無)|(無)|(無)|N/A|(文字)|否|  
   
@@ -90,12 +91,12 @@ ms.lasthandoff: 12/02/2017
 |互通性類型|表示繫結一定可與其互通的通訊協定或技術。|  
 |安全性|指定保護通道的方式：<br /><br /> -無： SOAP 訊息並不安全，而且無法驗證用戶端。<br />傳輸： 已滿足傳輸層安全性需求。<br />-訊息： 已滿足訊息層安全性需求。<br />混合： 已包含宣告訊息。完整性和機密性需求已滿足傳輸層級。|  
 |工作階段|指定此繫結是否支援工作階段合約。|  
-|異動|指定是否已啟用交易。|  
+|異動|指定是否已啟用異動。|  
 |雙工|指定是否支援雙工合約。 請注意，此功能需要繫結對工作階段的支援。|  
 |編碼|請指定訊息的 Wire 格式。 允許的值包括：<br /><br /> 文字： 例如 utf-8。<br />-二進位<br />訊息傳輸最佳化機制 (MTOM): 編碼方式，有效率地在 SOAP 封套內容中的二進位 XML 項目。|  
 |資料流|指定傳入與傳出的訊息是否支援資料流。 請使用繫結上的 `TransferMode` 屬性來設定該值。 允許的值包括：<br /><br /> -   <xref:System.ServiceModel.TransferMode.Buffered>: 要求和回應訊息皆以緩衝處理。<br />-   <xref:System.ServiceModel.TransferMode.Streamed>: 要求和回應訊息會以資料流處理。<br />-   <xref:System.ServiceModel.TransferMode.StreamedRequest>： 要求訊息資料流處理，並緩衝處理回應訊息。<br />-   <xref:System.ServiceModel.TransferMode.StreamedResponse>： 要求訊息經過緩衝處理和資料流處理回應訊息。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)

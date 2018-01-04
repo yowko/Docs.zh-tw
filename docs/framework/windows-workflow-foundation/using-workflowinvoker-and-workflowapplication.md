@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1e4bb05f1b5f14554ff5183b42bbc8884cb114f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 669e1bd1daeb8f2569a851e21d10f250d1bc2204
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 與 WorkflowApplication
 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供幾個裝載工作流的方法。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 支援傳訊活動，主要搭配工作流程服務使用。 本主題會向您介紹如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 進行工作流程裝載。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]裝載工作流程與<xref:System.ServiceModel.Activities.WorkflowServiceHost>，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)和[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  

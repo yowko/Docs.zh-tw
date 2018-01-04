@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b3c0ee3ec82d4d8447c43b7dc9b275591ebe890
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Alpha 混色線條和填色
 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，色彩是與 8 位元每個 alpha、 紅、 綠和藍 32 位元值。 Alpha 值表示色彩的透明度，以背景色彩的色彩會混合的範圍。 從 0 到 255，其中 0 代表完全透明的色彩，到 255 的 alpha 值範圍表示完全不透明的色彩。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/22/2017
   
  150 × 200 / 255 + 100 × (255 – 200) / 255 = 139  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：繪製不透明和半透明線條](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)  
  示範如何繪製 alpha 混色線條。  
   

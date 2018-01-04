@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 25a6e333b81b337ad0c34de0c0ae097a5cff5601
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b7f5d064f49553ca64b72bec0e7c0dd4dc74d13b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-protocols"></a>安全性通訊協定
 Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本章節描述下列 Web 服務安全性通訊協定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 詳細資料 (在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中實作)。  
@@ -81,7 +82,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |------------|---------------|  
 |s|http://www.w3.org/2003/05/soap-envelope|  
 |sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|a|http://www.w3.org/2005/08/addressing|  
+|一個|http://www.w3.org/2005/08/addressing|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
 |wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  

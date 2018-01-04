@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acbe1fc52cec011863dea8f3ae81492e3661cd97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-data-contracts"></a>使用資料合約
 「 *資料合約* 」(Data Contract) 是服務與用戶端之間的正式合約，其中會抽象地描述要交換的資料。 也就是說，若要進行通訊，用戶端與服務並不需要共用相同的型別，而只需要共用相同的資料合約。 資料合約會針對每個參數或傳回型別精確地定義哪些資料要序列化 (變成 XML) 才能進行交換。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[C_DataContract#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#2)]
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
-### <a name="notes"></a>備註  
+### <a name="notes"></a>注意  
  下列注意事項提供在建立資料合約時的考慮項目：  
   
 -   <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 屬性只有在搭配未標記的型別使用時才會被接受。 其中包含未使用 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>或 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性其中一個所標記的型別，或未透過任何其他方式 (例如 <xref:System.Xml.Serialization.IXmlSerializable>) 標記為可序列化的型別。  
@@ -76,17 +77,17 @@ ms.lasthandoff: 12/02/2017
   
  如需定義資料合約的 WCF 服務完整程式碼範例，請參閱 [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) 範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
- [可序列化型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
+ [可序列化類型](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
  [資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
  [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
  [資料成員預設值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
- [資料合約序列化程式所支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [如何： 建立基本的資料合約的類別或結構](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [如何：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

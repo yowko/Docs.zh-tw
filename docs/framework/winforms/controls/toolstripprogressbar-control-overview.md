@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 控制項概觀
 <xref:System.Windows.Forms.ToolStripProgressBar>結合浮動定位和所有的轉譯功能<xref:System.Windows.Forms.ToolStrip>其一般的程序追蹤功能使用的控制項。 A<xref:System.Windows.Forms.ToolStripProgressBar>最通常由<xref:System.Windows.Forms.StatusStrip>，且較不頻繁的<xref:System.Windows.Forms.ToolStrip>。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/22/2017
   
 ### <a name="important-toolstripprogressbar-members"></a>重要 ToolStripProgressBar 成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|取得或設定值，表示每個之間的延遲<xref:System.Windows.Forms.ProgressBarStyle.Marquee>顯示更新，以毫秒為單位。|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|取得或設定定義這個範圍的上限<xref:System.Windows.Forms.ToolStripProgressBar>。|  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
 |<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|取得或設定目前的值<xref:System.Windows.Forms.ToolStripProgressBar>。|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|進度列的目前位置前移數量<xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>屬性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStripProgressBar>

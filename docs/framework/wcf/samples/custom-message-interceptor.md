@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7774af6c1531e48be29351299555a650548687f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-interceptor"></a>自訂訊息攔截器
 這個範例示範通道擴充性模型的使用方式。 尤其，這個範例會示範如何實作建立通道處理站和通道接聽程式的自訂繫結項目，以攔截執行階段堆疊中特定點的所有傳入與傳出訊息。 範例也包含用戶端和伺服器，以示範這些自訂處理站的使用方式。  
@@ -171,4 +172,4 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

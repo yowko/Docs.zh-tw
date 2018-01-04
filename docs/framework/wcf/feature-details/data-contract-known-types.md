@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 範例。  
@@ -177,12 +178,12 @@ ms.lasthandoff: 12/02/2017
   
  在先前的組態檔中，會宣告稱為 `MyCompany.Library.Shape` 的資料合約型別，而讓 `MyCompany.Library.Circle` 做為已知的型別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.KnownTypeAttribute>  
  <xref:System.Collections.Hashtable>  
  <xref:System.Object>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
- [已知型別](../../../../docs/framework/wcf/samples/known-types.md)  
+ [已知類型](../../../../docs/framework/wcf/samples/known-types.md)  
  [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)

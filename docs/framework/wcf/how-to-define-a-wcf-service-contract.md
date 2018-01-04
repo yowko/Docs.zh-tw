@@ -14,11 +14,12 @@ caps.latest.revision: "58"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062167742a70307949624066b8607a37d5c7ed71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>HOW TO：定義 Windows Communication Foundation 服務合約
 這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六項工作中的第一項。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
     > [!NOTE]
     >  使用屬性來標註介面、成員或類別時，您可以在屬性名稱中省略 "Attribute" 的部分。 因此，<xref:System.ServiceModel.ServiceContractAttribute> 在 C# 中會變成 `[ServiceContract]`，而在 Visual Basic 中會變成 `<ServiceContract>`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [如何：履行服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  

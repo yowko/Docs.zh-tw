@@ -21,22 +21,23 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbfd7be17e2e9472afbd5ad00dad2ca104ee1854
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e9191778cdb8c57c5cf4628a072ea20fae532e81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-and-localization"></a>全球化和當地語系化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]開發世界性的應用程式提供更詳盡的支援。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WPF 全球化和當地語系化概觀](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
  [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [當地語系化屬性和註解](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
  [WPF 中的雙向功能概觀](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Globalization>  

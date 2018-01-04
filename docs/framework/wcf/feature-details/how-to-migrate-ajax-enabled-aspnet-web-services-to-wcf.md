@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe09e2c91df0c25f070e06a39ce5e94a54062a20
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 本主題將概述用來將基本 ASP.NET AJAX 服務移轉至相等之啟用 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的程序。 其中將示範如何建立功能相等的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本的 ASP.NET AJAX 服務。 然後這兩項服務可以並存使用，或是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以用於取代 ASP.NET AJAX 服務。  
@@ -222,5 +223,5 @@ d.Add("two", 2);
 |字典表示法|陣列的 KeyValuePair\<K，V >，可處理不是字串的索引鍵類型。|做為實際的 JSON 物件 - 但只能處理屬於字串的金鑰型別。|  
 |逸出字元|一律使用逸出正斜線 (/)；絕不允許使用未逸出的無效 JSON 字元，例如 "\n"。|使用逸出斜線 (/) 做為 DateTime 值。|  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+## <a name="see-also"></a>請參閱  
+ [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

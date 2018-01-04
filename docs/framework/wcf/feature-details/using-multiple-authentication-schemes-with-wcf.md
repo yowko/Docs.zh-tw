@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf74b38c15cf8dc68218c39246c8999c4ec44493
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>搭配 WCF 使用多個驗證配置
 WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。 自我裝載服務可以指定可使用的驗證配置。 如需有關如何在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](http://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -129,10 +130,10 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [端點： 位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [設定系統提供繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)  
  [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)  

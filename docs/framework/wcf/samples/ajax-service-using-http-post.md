@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 59195742fb799e9bc26034d5689f0be196e5362d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2447f641748cdcc3419fda2a6ae8f02d68ed98e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服務
 這個範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立會使用 HTTP POST 的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript 與 XML (AJAX) 服務。 AJAX 是可從 Web 瀏覽器用戶端使用基本 JavaScript 程式碼存取的一種服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例; 兩個樣本之間的唯一差異就是使用 HTTP POST，而不是 HTTP GET。  
@@ -63,4 +64,4 @@ ms.lasthandoff: 12/02/2017
   
 3.  瀏覽到 http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (不要使用瀏覽器從專案目錄開啟 PostAjaxClientPage.aspx)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

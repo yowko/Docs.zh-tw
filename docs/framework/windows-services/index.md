@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 2912568e967c8c6096842b1b4f24eac88318dffb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-service-applications"></a>開發 Windows 服務應用程式
 使用 Microsoft[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，您可以輕鬆地建立服務所建立的應用程式，安裝為服務。 這種類型的應用程式稱為 Windows 服務。 透過架構功能，您可以建立服務、 加以安裝，以及啟動、 停止及控制它們的行為。  
@@ -33,17 +34,17 @@ ms.lasthandoff: 10/18/2017
 > [!WARNING]
 >  C + + 的 Windows 服務範本未包含在 Visual Studio 2010。 若要建立 Windows 服務，您可以在 Visual C# 或 Visual Basic，可以與視需要現有的 c + + 程式碼交互操作，在 managed 程式碼建立服務，或您也可以使用原生 c + + 中建立 Windows 服務[ATL 專案精靈](/cpp/atl/reference/atl-project-wizard).  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  概略說明 Windows 服務應用程式、 服務和服務應用程式有何不同於其他常見的專案類型的存留期。  
   
- [逐步解說： 在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
  提供建立服務中的範例[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]和 Visual C#。  
   
  [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  說明在服務程式設計中使用的語言項目。  
   
- [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  說明建立和設定 Windows 服務使用 Windows 服務專案範本的程序。  
   
 ## <a name="related-sections"></a>相關章節  

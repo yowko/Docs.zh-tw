@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0b1f27af6b4ec372b9dbd63e4bc89a5c435efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>HOW TO：建立自訂活動設計工具
 通常實作自訂活動設計工具的方式，是讓其相關聯活動能夠透過其他活動組合，這些活動的設計工具能夠隨著活動放到設計介面上。 這項功能需要自訂活動設計工具提供 「 卸除區 」 可以放置任意活動的位置以及管理設計介面上的項目產生集合的方法。 本主題說明如何建立包含這種卸除區的自訂活動設計工具，以及如何建立能夠提供管理設計工具項目集合所需之編輯功能的自訂活動設計工具。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 7.  在**方案**方塊中，接受預設值。  
   
-8.  按一下 [確定]。  
+8.  按一下 [確定 **Deploying Office Solutions**]。  
   
 9. 以滑鼠右鍵按一下 MainWindows.xaml 檔案中的**方案總管 中**，選取**刪除**並確認**確定**中**Microsoft Visual Studio** 對話方塊。  
   
@@ -351,7 +352,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.Presentation.ActivityDesigner>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
  <xref:System.Activities.Presentation.WorkflowItemsPresenter>  

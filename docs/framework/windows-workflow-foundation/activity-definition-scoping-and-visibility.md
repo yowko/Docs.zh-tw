@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94ab623713a419426cbfd023c684741c69d3c8d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb1b48bf06d024183a22027cb12dbca78f272085
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活動定義範圍和可視性
 就像物件的範圍和可視性一樣，活動定義範圍和可視性是其他物件或活動存取活動成員的能力。 活動定義是由下列實作所執行：  

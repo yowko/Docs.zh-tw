@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d7e9540c933a53bd4692aa09850a96977bfb6b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee8666ca70d12e1198e34a11dcd429568e07201e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 元件 (Windows Form)
-Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊。 它會是相同**開啟檔案**Windows 作業系統所公開的對話方塊。 它繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
+Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊， 它會是相同**開啟檔案**Windows 作業系統所公開的對話方塊。 它繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [OpenFileDialog 元件概觀](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.OpenFileDialog> 元件的一般概念，這個元件可讓您顯示一個預先設定的對話方塊，使用者可用來開啟檔案。  
   

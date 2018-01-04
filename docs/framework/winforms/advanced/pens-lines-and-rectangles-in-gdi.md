@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f21564c800dd960a96dfc024fa2cccc6b27780f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的畫筆、線條和矩形
 若要使用繪製線條[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]您需要建立<xref:System.Drawing.Graphics>物件和<xref:System.Drawing.Pen>物件。 <xref:System.Drawing.Graphics>物件提供的方法，實際進行繪製，而<xref:System.Drawing.Pen>物件會儲存屬性，例如線條色彩、 寬度和樣式。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
  A<xref:System.Drawing.Rectangle>物件具有方法與屬性，來操作和收集矩形的相關資訊。 例如，<xref:System.Drawing.Rectangle.Inflate%2A>和<xref:System.Drawing.Rectangle.Offset%2A>方法變更矩形的位置和大小。 <xref:System.Drawing.Rectangle.IntersectsWith%2A>方法會告訴您矩形是否相交另一個指定的矩形，而<xref:System.Drawing.Rectangle.Contains%2A>方法會告訴您指定的點是否在矩形內部。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  

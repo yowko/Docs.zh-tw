@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61c7dd84b802d116721170080bb55a0be1ef1dfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 60a2537f1ddc4563c1514032f7df4894f6ef47af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-service-instancing"></a>HOW TO：控制服務執行個體
 設定服務的執行個體模式，可讓您指定 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (及其相關之使用者定義的服務物件) 建立的時機。 如需可能的模式，請參閱 <xref:System.ServiceModel.InstanceContextMode> 列舉。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]行為，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。 如需實用範例，請參閱[行為](../../../../docs/framework/wcf/samples/behaviors.md)。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_ControlServiceInstancing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_controlserviceinstancing/cs/source.cs#2)]
  [!code-vb[c_ControlServiceInstancing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>  
  <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>  
  <xref:System.ServiceModel.InstanceContextMode>  

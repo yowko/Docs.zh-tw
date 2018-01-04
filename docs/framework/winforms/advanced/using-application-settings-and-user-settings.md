@@ -16,18 +16,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-settings-and-user-settings"></a>使用應用程式設定和使用者設定
 從.NET Framework 2.0 開始，您可以建立並存取應用程式執行的工作階段之間保存的值。 這些值稱為*設定*。 設定可以代表使用者喜好設定，或需要使用應用程式的重要資訊。 例如，您可能會建立一系列的應用程式的色彩配置的使用者喜好設定儲存的設定。 或者，您可能會儲存連接字串，指定您的應用程式使用的資料庫。 設定可讓您保留很重要的應用程式外部程式碼，以及建立儲存個別使用者的喜好設定的設定檔的資訊。  
   
  本節中的主題描述如何在設計階段使用的設定和執行階段。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：在設計階段建立新設定](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
  說明如何使用 Visual Studio 來建立新的應用程式設定。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/18/2017
   
  詳細說明如何使用 C# 應用程式中加入多組設定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 的應用程式設定](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

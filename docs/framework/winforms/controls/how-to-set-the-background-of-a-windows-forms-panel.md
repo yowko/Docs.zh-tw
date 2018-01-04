@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60a1c89375ac7ce9bdefaa051b51ac50be861903
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d56b6c1392c618581790f47ab978c67a6ce0187e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>如何：設定 Windows Form 面板的背景
 Windows Form<xref:System.Windows.Forms.Panel>控制項可以顯示的背景色彩和背景影像。 <xref:System.Windows.Forms.Control.BackColor%2A>屬性會設定為包含的控制項，例如，標籤和選項按鈕的背景色彩。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未設定屬性，<xref:System.Windows.Forms.Control.BackColor%2A>選取項目將會填滿整個面板。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>屬性設定，將包含的控制項後面顯示的影像。  
@@ -77,7 +78,7 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項可以顯示的背景色�
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.BackColor%2A>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
  [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  

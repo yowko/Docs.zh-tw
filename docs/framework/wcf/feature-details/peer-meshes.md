@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d747b2916f544294bb69f01aadc1321370878689
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-meshes"></a>對等網狀結構
 A *mesh*是對等節點可以彼此之間互相通訊，而且唯一的網狀結構識別碼所識別的具名的集合 （相互連結的圖形） 每一個節點都會連接到多個不同節點。 在正常連接的網狀結構中，兩個節點之間會有一個路徑，位在網狀結構最遠邊緣上節點之間的躍點數目相對較少，而即使某些節點或連線中斷，網狀結構將維持連接狀態。網狀結構中的使用中節點會以相對應的網狀結構識別碼發行其端點資訊，如此可讓其他對等節點也能找到這些節點。  

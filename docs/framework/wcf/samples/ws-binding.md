@@ -13,20 +13,21 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef396a909b26110267b03f42728589640c7e2242
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f733aaf62d37f9c8ca853a0958e627a4f354121d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-binding"></a>WS 繫結
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中 Windows 服務繫結的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
- [WS 交易流程](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
+## <a name="in-this-section"></a>本節內容  
+ [WS 異動流程](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
  示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。  
   
- [WS 2007 聯合 HTTP 繫結](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
+ [WS 2007 同盟 HTTP 繫結](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
  示範 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的使用方式。  
   
  [WS 雙重 Http](../../../../docs/framework/wcf/samples/ws-dual-http.md)  

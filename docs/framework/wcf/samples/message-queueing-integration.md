@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2e4771ac7ed2c9dce94bc4e9da62bb0017daa30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e27134c9a18d5125566b582ac17cf6a95b3b83f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-queueing-integration"></a>訊息佇列整合
 本節包含示範訊息佇列與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 間之整合的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
   

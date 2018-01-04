@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 481239b472ced5ef6251b665dad16e83a170607d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d0ede88d8f9b4c15cd3e0f141870b9a5e747aa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-application-settings"></a>如何：建立應用程式設定
 您可以使用 Managed 程式碼來建立新的應用程式設定，並將設定繫結至表單或表單控制項的屬性，以便在執行階段自動載入及儲存這些設定。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  預設的設定提供者 <xref:System.Configuration.LocalFileSettingsProvider> 將資訊以純文字格式保存於組態檔。 這會將安全性限定為目前使用者之作業系統所提供的檔案存取安全性。 因此，您必須小心使用儲存在組態檔中的資訊。 例如，應用程式設定的常見用途之一，是儲存指向應用程式資料存放區的連接字串。 不過，基於安全性考量，這類字串不應包含密碼。 如需連接字串的詳細資訊，請參閱 <xref:System.Configuration.SpecialSetting>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.SpecialSettingAttribute>  
  <xref:System.Configuration.LocalFileSettingsProvider>  
  [應用程式設定概觀](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  

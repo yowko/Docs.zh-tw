@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1554e8594a611aa75876d14ee7ad0689932372e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
 本主題示範如何讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務使用 Windows 網域使用者名稱與密碼來驗證用戶端。 這裡假設您有運作中的自我裝載 WCF 服務。 如需範例，建立基本自我裝載的 WCF 服務，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主題假設服務是在程式碼中進行設定。 如果您想要看到的設定類似的服務，使用組態檔範例請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
     // Call the service operation using the proxy  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
  <xref:System.ServiceModel.WSHttpSecurity>  
  <xref:System.ServiceModel.SecurityMode>  

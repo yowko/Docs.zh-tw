@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29e4fb590733392ebae10fe1ad18781653c0d202
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caff90b66007310c7b3ad24f2f084cc2282a7021
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-extensibility"></a>工作流程服務主機擴充性
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 提供用於裝載工作流程服務的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別。 若您要在 Managed 應用程式或 Windows 服務中自我裝載工作流程服務，則可使用此類別。 此類別還可在透過網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載工作流程時使用。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別會提供擴充點，讓您加入自訂擴充、變更閒置行為，以及裝載非服務工作流程 (不使用訊息傳遞活動的工作流程)。  
@@ -58,6 +59,6 @@ host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action =
 ## <a name="hosting-non-service-workflows"></a>裝載非服務工作流程  
  <xref:System.ServiceModel.Activities.WorkflowServiceHost> 可以用來裝載非服務工作流程，或者不是以 <xref:System.ServiceModel.Activities.Receive> 活動開始的工作流程，或不使用訊息傳遞活動的工作流程。 工作流程服務通常會以 <xref:System.ServiceModel.Activities.Receive> 活動開始。 當 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 接收工作流程服務的訊息時，如果尚未執行 (或已保存)，則會建立新的工作流程服務執行個體。 如果工作流程不是以接收活動開始，則無法藉由傳送訊息的方式啟動，因為沒有接收訊息的活動。 若要裝載非服務工作流程，請從 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 衍生類別，並且覆寫 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>、<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> 和 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnResolveBookmark%2A>。 如果您要提供慣用的執行個體 ID，請覆寫 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>。 覆寫 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>，即可建立自訂的工作流程建立內容，或是填入現有 <xref:System.ServiceModel.Activities.WorkflowCreationContext> 的執行個體。 覆寫 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnResolveBookmark%2A>，即可從傳入訊息手動擷取書籤。 如果您覆寫此方法，就必須在其主體中叫用 <xref:System.ServiceModel.Activities.WorkflowHostingResponseContext.SendResponse%2A>，以便回應傳送至 WorkflowHostingEndpoint 的訊息。 如果您沒有這樣做，最後可能會超過 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> 限制。 在雙向合約中，您可以偵測由於用戶端無法接收回應所導致的 <xref:System.ServiceModel.Activities.WorkflowHostingResponseContext.SendResponse%2A> 叫用失敗。 在單向合約中，您可能要等到超過 <xref:System.ServiceModel.Activities.WorkflowHostingResponseContext.SendResponse%2A> 節流閥限制之後，才能辨識無法呼叫 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> 的錯誤，但是卻為時已晚。 如需詳細資訊，請參閱[WorkflowHostingEndpoint 繼續書籤](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)若要建立非服務工作流程的新執行個體，宣告定義建立的新執行個體的作業的服務合約。 建立作業應採用 Idictionary<string\<字串、 物件 > 來傳遞任何必要的工作流程參數。 此合約會由 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 衍生的類別以隱含方式實作。 當裝載工作流程，加入執行個體<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>-主機衍生類別，藉由呼叫<xref:System.ServiceModel.Activities.WorkflowServiceHost.AddServiceEndpoint%2A>呼叫<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`。 若要建立工作流程的執行個體，請建立服務合約型別的 <xref:System.ServiceModel.ChannelFactory%601>，並且呼叫 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>。 接著，您可以呼叫服務合約中定義的建立作業。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

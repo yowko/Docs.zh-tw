@@ -13,11 +13,12 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4a460adfb8076f5d2c0fe273511e6de80be4ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-demux"></a>自訂 Demux
 這個範例會示範 MSMQ 訊息標頭如何對應至不同的服務作業以便[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服務使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>不限於使用一項服務作業中所示[訊息佇列Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  
@@ -203,6 +204,6 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [訊息佇列](http://go.microsoft.com/fwlink/?LinkId=95143)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>匯入 WCF 擴充的自訂中繼資料
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，中繼資料匯入指的是從中繼資料中產生服務的抽象表示法或其元件部分的處理序。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以從 WSDL 文件中為服務匯入 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體、<xref:System.ServiceModel.Channels.Binding> 執行個體或 <xref:System.ServiceModel.Description.ContractDescription> 執行個體。 若要將服務中繼資料匯入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請使用 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 抽象類別的實作。 衍生自 <xref:System.ServiceModel.Description.MetadataImporter> 類別實作的型別，會支援匯入中繼資料格式以利用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 WS-Policy 匯入邏輯。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
   
  本節說明如何匯入自訂 WSDL 延伸與原則判斷提示， 但不強調如何匯入處理序。 如需如何使用匯出和匯入中繼資料，不論中繼資料是自訂或系統支援的類型的詳細資訊，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 型別是包含在 <xref:System.ServiceModel.Description.MetadataImporter> 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 抽象類別的實作。 <xref:System.ServiceModel.Description.WsdlImporter> 型別會匯入具有與 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 物件組合在一起之附加原則的 WSDL 中繼資料。 預設之匯入工具無法辨識的原則判斷提示與 WSDL 延伸會傳遞至任何已註冊的自訂原則與 WSDL 匯入工具以便匯入。 一般來說，匯入工具經過實作後，可支援使用者定義的繫結項目或是可修改匯入的合約。  
   
  本章節內容：  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  無效或不適當的中繼資料可以傳遞至匯入工具。 請確定自訂匯入工具禁得起所有格式的 XML 使用。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
- [如何： 匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
- [如何： 撰寫 servicecontractgenerator 的擴充功能](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+## <a name="see-also"></a>請參閱  
+ [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
+ [如何：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
+ [如何：撰寫 ServiceContractGenerator 的延伸模組](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

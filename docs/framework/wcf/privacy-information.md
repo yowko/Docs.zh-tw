@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b03a2fb49774c425882183bf7fcda8b6e5c3de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 3.0 版建置應用程式時，該應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您本人或使用者選擇將資訊傳送給我們。  
@@ -411,6 +412,6 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [安全性](../../../docs/framework/wcf/feature-details/security.md)

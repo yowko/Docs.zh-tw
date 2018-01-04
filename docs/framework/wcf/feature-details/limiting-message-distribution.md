@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limiting-message-distribution"></a>限制訊息散發
 對等通道在設計上即是廣播 mesh。 其基本流動模型牽涉到將 mesh 的任何成員所傳送的每個訊息，散發給該 mesh 的所有其他成員。 當成員產生的每個訊息對所有其他成員而言，是相關的且有用的訊息的情況下 (例如聊天室的案例)，這就是理想的方式。 然而，許多應用程式偶爾會需要限制訊息的散發。 例如，在新成員加入 mesh 並想要擷取透過 mesh 傳送的上一個訊息時，這個要求並不需要流向 mesh 的每個成員。 您可以限制要求流向至近鄰，或者可以篩選掉本機產生的訊息。而訊息也可以傳送到 mesh 上的個別節點。 本主題討論使用躍點計數、訊息傳播篩選條件、本機篩選條件或直接連接，控制訊息在整個 mesh 間的轉送方式，並提供用於選擇適當方法的一般方針。  
@@ -74,5 +75,5 @@ ms.lasthandoff: 12/02/2017
   
     -   *低*： 可能不需要任何，直接連線。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建置對等通道應用程式](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

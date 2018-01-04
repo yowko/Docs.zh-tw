@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4ff6670c8e4d8ab735323fe13549e34c6cfd55f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05c993763bdc436b5912515e0aa83e3a29f7bb83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>如何：在 Windows Form 中非同步地載入音效
 下列程式碼範例會以非同步方式從 URL 載入音效，然後在新的執行緒上播放。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿根據檔案名稱來判斷檔案內容。 例如，`Form1.vb` 檔案可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
  <xref:System.Media.SoundPlayer.LoadCompleted>  
  <xref:System.Media.SoundPlayer.Play%2A>  

@@ -22,11 +22,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711f823e418a1bbea1479b9d6a8d70d4fa506365
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。 在本逐步解說中，您將建立基底表單，並編譯為類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。 在這個逐步解說期間，您將了解如何：  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  最後，本逐步解說將示範繼承的表單上私用和受保護控制項之間的差異。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 > [!CAUTION]
 >  並非所有控制項都支援來自基底表單的視覺化繼承。 下列控制項並不支援在此逐步解說中所描述的案例：  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>後續步驟  
  使用者控制項的繼承以非常類似的方式運作。 開啟一個新的類別庫專案，並加入使用者控制項。 將構成控制項放在上面，然後編譯專案。 開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。 此外，請嘗試加入繼承的控制項 (透過**加入新項目**對話方塊) 至專案並使用**繼承選取器**。 加入一個使用者控制項，並變更 `Inherits` 陳述式 ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`)。 如需詳細資訊，請參閱[如何： 繼承 Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
  [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

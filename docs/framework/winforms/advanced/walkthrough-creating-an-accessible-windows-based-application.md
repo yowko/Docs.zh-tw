@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5b52f9f06e2a4adf401367e337be81684f661e1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的可及性應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  

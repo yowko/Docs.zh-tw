@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6cd38a2fd0a682ebae0a32cc1fec31a3ac40851
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 與 DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是用於用戶端的兩個類別，可搜尋服務。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 可提供您服務清單，用來比對一組特定準則，並讓您連接至服務。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 可執行相同作業，而且可自動連接至找到的其中一項服務。 任何端點都可成為 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可在組態中加入搜尋準則，因此當您需要在方案中探索，但不想修改用戶端邏輯時 (您只需要修改端點)，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 便非常有用。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 也可對搜尋作業進行更細微的控制。 上述的用法和優點在下方有更詳盡的說明。  
@@ -117,7 +118,7 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [探索範圍](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [非同步尋找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

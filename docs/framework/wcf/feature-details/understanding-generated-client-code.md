@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 935f3fe168ebafd7a62c54d2aec1c8336a31a54a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c57469b61a12ff5043632cf2b6f4fe3a8a53d56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-generated-client-code"></a>了解產生的用戶端程式碼
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 會產生用戶端程式碼和用戶端應用程式組態檔，用於建置用戶端應用程式。 本主題將提供產生之程式碼範例的導覽，用於標準服務合約情節。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用產生之程式碼建置用戶端應用程式的詳細資訊，請參閱 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  如果您使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 為您的專案產生 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端類型，通常不需要檢查產生的用戶端程式碼。 如果您不是使用為您執行相同服務的開發環境，可以使用如 Svcutil.exe 等工具來產生用戶端程式碼，然後使用該程式碼來開發您的用戶端應用程式。  
   
  由於 Svcutil.exe 有許多選項可修改產生的型別資訊，因此本主題不會討論所有的案例。 然而，下列標準工作包含找出產生的程式碼：  
@@ -90,5 +91,5 @@ ms.lasthandoff: 12/02/2017
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)

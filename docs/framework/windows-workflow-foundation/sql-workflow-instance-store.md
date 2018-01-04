@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 638ad75155bae30f3cd1d126d27e8e0542026ab0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4608a91c905122a1ec4698990debbf5038599801
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 隨附於 SQL 工作流程執行個體存放區，可讓工作流程將有關工作流程執行個體的狀態資訊保存在 SQL Server 2005 或 SQL Server 2008 資料庫中。 這項功能主要是以 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 類別的形式實作，該類別衍生自持續性架構的抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別。 SQL 工作流程執行個體存放區功能會構成 SQL 持續性提供者，該提供者是持續性 API 的具象實作，主機會運用此 API 將持續性命令傳送至存放區。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/02/2017
   
  Windows Server App Fabric 提供其本身的執行個體存放區和工具，可簡化執行個體存放區的設定和使用。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]請參閱[Windows Server App Fabric 執行個體存放區](http://go.microsoft.com/fwlink/?LinkId=201201)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]此 App Fabric SQL Server 持續性資料庫，請參閱[App Fabric SQL Server 持續性資料庫](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [SQL 工作流程執行個體屬性的存放區](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
   
 -   [SQL Server 持續性資料庫](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [持續性範例](http://go.microsoft.com/fwlink/?LinkID=177735)

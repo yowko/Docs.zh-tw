@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>調整 Windows Form DataGridView 控制項中資料行和資料列的大小
 `DataGridView`控制項提供許多自訂其資料行和資料列的調整大小行為的選項。 一般而言，`DataGridView`不調整大小的資料格根據其內容。 相反地，它們會裁剪任何大於儲存格的顯示值。 如果內容可以顯示為字串，則資料格會顯示其工具提示中。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  `DataGridView`控制項提供屬性、 方法和事件，可讓您自訂或停用所有這些使用者導向的行為。 此外，您也可以透過程式設計方式調整資料列、 資料行和標頭，以適合其內容，或者您可以將其設定為每當內容變更時自動調整本身大小。 您也可以設定自動分割中您所指定的比例控制項可用寬度的資料行。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms DataGridView 控制項中的調整大小選項](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
  描述調整資料列、 資料行和標頭的選項。 也提供調整大小相關的屬性和方法的詳細資訊，並說明常見使用案例。  
   
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

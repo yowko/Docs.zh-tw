@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: daebd84c9cef5e64ea7ed55c27b671ba01d14df0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3d70368f7514b64d67a186b328b1f19d231fe0c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-contracts"></a>路由合約
 路由合約會定義路由服務可以處理的訊息模式。  每一個合約都是無型別合約，可讓服務在不知道訊息結構描述或動作的情況下接收訊息。 如此可讓路由服務以一般方式路由傳送訊息，而不需要額外設定所路由傳送之基礎訊息的細節。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由服務](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

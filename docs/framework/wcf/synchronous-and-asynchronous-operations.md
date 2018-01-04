@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fce4129924b4f0ce4542f2d274d2cc4031928c9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -192,6 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  如果您想要接收的訊息物件做為`Result`屬性，並沒有傳回的值物件，該物件上的屬性，請使用**/messageContract**命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

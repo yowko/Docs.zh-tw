@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b99b4f77f43f8ca9ac1516be2bf6a671810e7d90
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b200489c4b7fb06f2eb98c0ec9c84da42f18a395
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>如何：以程式設計的方式將項目插入文字
 下列範例示範如何使用兩個<xref:System.Windows.Documents.TextPointer>物件，指定要套用的文字內的範圍<xref:System.Windows.Documents.Span>項目。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/22/2017
   
  ![已套用至某一文字範圍的 Span 項目](../../../../docs/framework/wpf/advanced/media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

@@ -15,16 +15,17 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-how-to-topics"></a>事件 HOW TO 主題
 本節中的主題描述如何在 WPF 中使用的事件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用程式碼加入事件處理常式](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
  [處理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
  [建立自訂路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  

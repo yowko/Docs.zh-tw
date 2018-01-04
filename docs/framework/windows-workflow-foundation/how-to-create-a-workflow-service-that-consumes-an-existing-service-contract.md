@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb58664b57261eb09886ec0e8f97fcdbe45cdd4f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>HOW TO：建立會取用現有服務合約的工作流程服務
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 採用合約優先工作流程開發形式，可在 Web 服務和工作流程中提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。  
@@ -58,15 +59,15 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="importing-the-service-contract"></a>匯入服務合約  
   
-1.  中的專案上按一下滑鼠右鍵**方案總管 中**選取**匯入服務合約**。 在下**\<目前專案 >**，開啟所有的子節點並選取**IBookService**。 按一下 [確定]。  
+1.  中的專案上按一下滑鼠右鍵**方案總管 中**選取**匯入服務合約**。 在下**\<目前專案 >**，開啟所有的子節點並選取**IBookService**。 按一下 [確定 **Deploying Office Solutions**]。  
   
-2.  隨即會開啟一個對話方塊，警告您作業已成功完成，且所產生的活動將會在您建置專案後出現在工具箱中。 按一下 [確定]。  
+2.  隨即會開啟一個對話方塊，警告您作業已成功完成，且所產生的活動將會在您建置專案後出現在工具箱中。 按一下 [確定 **Deploying Office Solutions**]。  
   
 3.  建置專案時按**Ctrl + Shift + B**，如此一來，匯入的活動將會出現在工具箱中。  
   
 4.  在**方案總管 中**，開啟.service1.xamlx。 工作流程服務會出現在設計工具中。  
   
-5.  選取**順序**活動。 在 [屬性] 視窗中，按一下**...** 按鈕**ImplementedContract**屬性。 在**型別集合編輯器**視窗中，按一下 **類型**下拉式清單中，然後選取**瀏覽型別...** 項目。 在**瀏覽並選取.Net 型別**對話方塊下方**\<目前專案 >**，開啟所有的子節點並選取**IBookService**。 按一下 [確定]。 在**型別集合編輯器**] 對話方塊中，按一下 [**確定**。  
+5.  選取**順序**活動。 在 [屬性] 視窗中，按一下**...** 按鈕**ImplementedContract**屬性。 在**型別集合編輯器**視窗中，按一下 **類型**下拉式清單中，然後選取**瀏覽型別...** 項目。 在**瀏覽並選取.Net 型別**對話方塊下方**\<目前專案 >**，開啟所有的子節點並選取**IBookService**。 按一下 [確定 **Deploying Office Solutions**]。 在**型別集合編輯器**] 對話方塊中，按一下 [**確定**。  
   
 6.  選取並刪除**ReceiveRequest**和**SendResponse**活動。  
   

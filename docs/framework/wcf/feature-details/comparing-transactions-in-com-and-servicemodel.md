@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5229c872c4843df916cf538b7f2e88e451dc6b9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87e3df31060a9c71e0b2868aa34373bca221fa79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>比較 COM+ 與 ServiceModel 的異動
 這個主題會討論如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 命名空間提供的 <xref:System.ServiceModel> 屬性，來模擬交易 COM+ 服務的行為。  

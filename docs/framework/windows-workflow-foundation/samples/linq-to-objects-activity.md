@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 811ffe44a65dea13482d600a09989ce42f6580dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ff77211000cfdda9c35e5a0dcbc69fc0eaf5c3be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-objects-activity"></a>LINQ to Objects 活動
 這個範例示範如何建立活動，以使用 LINQ to Objects 查詢集合項目。  
@@ -122,6 +123,6 @@ Activity sampleWorkflow = new Sequence
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Lambda 運算式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=150381)  
  [LINQ to Objects](http://go.microsoft.com/fwlink/?LinkID=150380)

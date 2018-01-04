@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 程式設計模型提供了使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 建置 WEB HTTP 服務所需的基本項目。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服務的設計可供最廣泛用戶端存取，包括具有下列獨特需求的網頁瀏覽器：  
@@ -153,7 +154,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 程式設計模型疑難排解  
  當呼叫 WCF WEB HTTP 服務以使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 建立通道時，<xref:System.ServiceModel.Description.WebHttpBehavior> 會使用組態檔中設定的 <xref:System.ServiceModel.EndpointAddress>，即便傳遞至 <xref:System.ServiceModel.EndpointAddress> 的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 是另一個值亦然。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 新聞訂閱](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
+## <a name="see-also"></a>請參閱  
+ [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

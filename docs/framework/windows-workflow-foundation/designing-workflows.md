@@ -13,16 +13,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24bcc7377cad408d2cfe4c9e0f3fb60fe4b0327b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15e2a70b89c3ea42442262cc41c03e78de596ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-workflows"></a>設計工作流程
 本節主題描述工作流程開發中使用的流程控制開發架構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [流程圖工作流程](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
  示範如何使用熟悉的流程圖開發架構建立工作流程。  
   

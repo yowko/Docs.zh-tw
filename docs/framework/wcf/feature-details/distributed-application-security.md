@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 842ce0efefcc026ad33d9be3b2b681fcfc9c0b59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性分為三個主要的功能區域：傳輸安全性、存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
@@ -30,16 +31,16 @@ ms.lasthandoff: 11/21/2017
 ## <a name="transfer-security-scenarios"></a>傳輸安全性案例  
  採用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸安全性的常見案例包括下列各項：  
   
--   使用 Windows 保護傳輸。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務會部署在 Windows 網域中 (或 Windows 樹系)。 由於訊息包含個人資料，因此要求會包括用戶端和服務的雙向驗證、訊息完整性及訊息機密性。 此外，特殊交易發生時需要證明，例如訊息接收者應記錄簽章資訊。  
+-   使用 Windows 保護傳輸。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務會部署在 Windows 網域中 (或 Windows 樹系)。 由於訊息包含個人資料，因此要求會包括用戶端和服務的雙向驗證、訊息完整性及訊息機密性。 此外，特殊異動發生時需要證明，例如訊息接收者應記錄簽章資訊。  
   
 -   使用 `UserName` 和 HTTPS 保護傳輸。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務需要經過開發才能跨網際網路運作。 用戶端認證會根據使用者名稱/密碼組的資料庫進行驗證。 服務會使用受信任的安全通訊端層 (SSL) 憑證部署在 HTTPS 位址。 由於訊息會透過網際網路傳輸，因此用戶端和服務需要經過雙向驗證，而且必須維持傳輸期間訊息的機密性與完整性。  
   
--   使用憑證保護傳輸。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務需要經過開發才能透過公用網際網路運作。 用戶端和服務都有憑證，可以用來保護訊息的安全。 用戶端和服務會使用網際網路彼此通訊，以及執行要求有訊息完整性、機密性與雙向驗證的高價值交易。  
+-   使用憑證保護傳輸。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務需要經過開發才能透過公用網際網路運作。 用戶端和服務都有憑證，可以用來保護訊息的安全。 用戶端和服務會使用網際網路彼此通訊，以及執行要求有訊息完整性、機密性與雙向驗證的高價值異動。  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>完整性、機密性與驗證  
  完整性、機密性及驗證這三項功能合稱為傳輸安全性。 傳輸安全性所提供的各種功能，會協助減少分散式應用程式的威脅。 下表簡要說明構成傳輸安全性的這三項功能。  
   
-|函式|描述|  
+|功能|描述|  
 |--------------|-----------------|  
 |完整性|*完整性*是指保證資料完整且正確，尤其是它從某個端點傳送到另一個，而且可能被許多參與者讀取過之後。 完整性必須維持，才能避免資料竄改，而且通常是藉由訊息數位簽署達成這個目的。|  
 |機密性|*機密性*是未預期的讀者以外的人讀取訊息的保證。 例如，信用卡號在透過網際網路傳送時必須保持其機密。 機密性通常是藉由使用公開金鑰/私密金鑰配置加密資料的方式提供。|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
   
  訊息安全性模式還可讓您執行傳輸安全性，如此服務認證就會在初始交涉的過程中與用戶端交換。 若要啟用交涉，請將 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設為 `true`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  

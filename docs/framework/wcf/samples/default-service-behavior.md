@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 57d534a1af16790aa6c3477629f0d4b6e2604179
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6b693c2030cd5da1aac49b9bb87d2eac3630627
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-service-behavior"></a>預設服務行為
 這個範例會示範如何設定服務行為設定。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性明確地定義服務行為與作業行為。 您可以在組態檔中設定行為，也可以在程式碼中以命令方式設定 (如這個範例所示)。  
@@ -57,7 +58,7 @@ public class CalculatorService : ICalculator
   
  服務行為是以 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性指定。 下表會介紹其中一些行為。  
   
-|服務行為|說明|  
+|服務行為|描述|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|在用戶端要求時自動關閉工作階段。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|指定每個服務執行個體的並行模式。|  
@@ -69,9 +70,9 @@ public class CalculatorService : ICalculator
   
  作業行為是以 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性所指定。 下表會介紹其中一些行為。  
   
-|作業行為|說明|  
+|作業行為|描述|  
 |------------------------|-----------------|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|判定服務作業完成是否會認可目前交易。|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|判定服務作業完成是否會認可目前異動。|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|判定服務作業是否會登記在用戶端流動的異動中。|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|判定服務作業是否會模擬呼叫者身分識別。|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|判定服務執行個體是否會在服務作業呼叫的開始與結束時回收。|  
@@ -104,4 +105,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

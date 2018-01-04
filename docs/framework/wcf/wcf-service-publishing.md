@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行可協助您從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端提供的早期開發環境，進入實際部署應用程式至實際執行環境進行測試。 在認可最後開發計畫之前，您可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行確認 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務正確執行，而且可開始發行。 您也可以選擇將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫部署到各種不同的目標位置進行測試。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="security"></a>安全性  
  發行到本機 IIS 時需要具有系統管理員權限，因為 IIS 需要使用 Administrator 帳戶執行。 如果由不具系統管理員權限的使用者開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行，IIS 就不能做為目標位置使用。 發行至檔案系統或 FTP 站台的運作方式沒有系統管理員權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF Visual Studio 範本](../../../docs/framework/wcf/wcf-vs-templates.md)  
  [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
  [WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

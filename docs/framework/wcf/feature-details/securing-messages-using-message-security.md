@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5106e066de71c8cf5be472ae831adf3cd29e300d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
 本章節會討論使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.NetMsmqBinding>時的  訊息安全性。  
@@ -73,8 +74,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-transport-and-message-security"></a>使用傳輸和訊息安全性  
  當同時使用傳輸安全性和訊息安全性時，在傳輸層級和 SOAP 訊息層級中用來保護訊息安全的必須是相同的憑證。  
   
-## <a name="see-also"></a>另請參閱  
- [使用傳輸安全性保障訊息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [透過訊息佇列的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+## <a name="see-also"></a>請參閱  
+ [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

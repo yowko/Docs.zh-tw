@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 242a9e32063deda0593552b70bf91dec3af7c346
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationscope"></a>OperationScope
 這個範例示範 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 訊息活動如何用來將現有自訂活動公開成為工作流程服務中的作業。 這個範例包含一個名為 `OperationScope` 的新自訂活動。 它可讓使用者將作業主體分別撰寫成自訂活動，然後使用 `OperationScope` 活動，將它們輕鬆公開為服務作業，以便於開發工作流程服務。 例如，接收兩個 `Add` 引數並傳回一個 `in` 引數的自訂 `out` 活動，可以藉由放置在 `Add` 中，公開為工作流程服務的 `OperationScope` 作業。  

@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80ec592bf83969ae57495b0df2af110b5622ea11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7a6f1d569234f7cee4b5eedc81fcc68a41fcf0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 和 VScrollBar 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ScrollBar>控制項可用來捲動的水平或垂直應用程式或控制項內提供輕鬆瀏覽一長串的項目或大量的資訊。 捲軸是通用的項目，Windows 介面，所以<xref:System.Windows.Forms.ScrollBar>控制項則通常會搭配控制項不是衍生自<xref:System.Windows.Forms.ScrollableControl>類別。 同樣地，許多開發人員選擇加入<xref:System.Windows.Forms.ScrollBar>控制製作自己的使用者控制項時。  
@@ -45,7 +46,7 @@ Windows Form<xref:System.Windows.Forms.ScrollBar>控制項可用來捲動的水�
   
  當使用者按下一個箭號的索引鍵或按下捲軸按鈕中，其中<xref:System.Windows.Forms.ScrollBar.Value%2A>屬性變更的設定值根據<xref:System.Windows.Forms.ScrollBar.SmallChange%2A>屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.HScrollBar>  
  <xref:System.Windows.Forms.VScrollBar>  
  [Windows form 的新增項目，適用於.NET Framework 2.0](http://msdn.microsoft.com/en-us/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  

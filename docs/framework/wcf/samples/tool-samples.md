@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5994a8d3526bde8f06e30b16157a0823f5249813
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bffd493d0680400da635797dffc2e03780d95809
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tool-samples"></a>工具範例
 本節包括 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 工具。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)  
  說明如何使用 ConfigurationCodeGenerator.exe 工具對組態系統公開自訂通道實作。  
   

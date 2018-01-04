@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5065d90e0c2fb123518d5394fb0c2902bf3edf11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df5e05b1896ee272e286102a6c9433fad51b3c98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows 市集用戶端應用程式存取 WCF 服務
 Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 這些應用程式都是以觸控式螢幕介面為設計主軸。 .NET Framework 4.5 可讓 Windows 市集應用程式呼叫 WCF 服務。  
@@ -183,7 +184,7 @@ void async SomeMethod()
   
  請注意，在進行非同步呼叫的方法上使用 async 關鍵字，並在呼叫非同步方法時使用 await 關鍵字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 中 Windows 市集應用程式部落格](http://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
  [WCF Windows 市集用戶端與安全性](http://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
  [Windows 市集應用程式與跨電腦呼叫](http://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  

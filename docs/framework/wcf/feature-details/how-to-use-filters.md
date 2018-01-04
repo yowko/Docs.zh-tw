@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 20e9fd7bd962adb20d2c4bc394012603c7e0f2ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-filters"></a>HOW TO：使用篩選
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
@@ -335,5 +336,5 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)

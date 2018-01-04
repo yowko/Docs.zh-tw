@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f089abdf4c534a5016185e5a6f52067f46693604
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invoking-activity-validation"></a>叫用活動驗證
 活動驗證提供的方法可在活動執行前識別及報告任何活動之組態中的錯誤。 在工作流程設計工具中修改工作流程時，若工作流程設計工具中顯示任何驗證錯誤或警告，就會進行驗證。 叫用工作流程時，也會在執行階段進行驗證，而且如果發生任何驗證錯誤，預設驗證邏輯會擲回 <xref:System.Activities.InvalidWorkflowException>。 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供 <xref:System.Activities.Validation.ActivityValidationServices> 類別，可讓工作流程應用程式和工具開發人員用來明確驗證活動。 本主題描述如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 執行活動驗證。  

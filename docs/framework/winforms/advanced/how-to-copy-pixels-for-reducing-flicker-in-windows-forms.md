@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ed463b41d3c2a51b0f9be3d4ddabfd2d54a3c07
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17253e21739911d4aa0541fde9ae205b0be1c5a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：複製像素以降低 Windows Form 的閃動
 當您以動畫顯示簡單的圖形時，使用者可以有時會遇到，閃爍或其他不想要的視覺效果。 限制這個問題的一種方式是在圖形上使用 「 bitblt 」 程序。 Bitblt 即是 」 位元區塊傳送 」 的色彩資料從起點的像素矩形到目的地矩形的像素為單位。  
@@ -72,7 +73,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述程式碼執行的表單中<xref:System.Windows.Forms.Control.Paint>事件處理常式，讓圖形保存表單會重新繪製時。 因此，請勿呼叫圖形相關的方法<xref:System.Windows.Forms.Form.Load>事件處理常式，因為內容將不會重新繪製如果調整大小或遮蔽另一種形式的形式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.CopyPixelOperation>  
  <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  

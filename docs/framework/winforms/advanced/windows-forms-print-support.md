@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 029d5ed424061807cf04446cbb10424ae20afba2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 81f89ee41eb9f8b492ab12e30ae4580cdffbd8f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-print-support"></a>Windows Form 列印支援
 在 Windows Form 中的列印工作主要是使用[PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)元件，讓使用者列印，而[PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)控制項， [PrintDialog元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)和[PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)習慣使用 Windows 作業系統的使用者提供熟悉的圖形化介面的元件。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
   
  從 windows 應用程式，列印過程<xref:System.Drawing.Printing.PrintDocument>元件將會顯示一個中止的列印對話方塊，警告使用者正在發生之列印的事實，並允許列印工作取消。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：建立標準的 Windows Forms 列印工作](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
  說明如何使用<xref:System.Drawing.Printing.PrintDocument>列印 Windows Form 中的元件。  
   

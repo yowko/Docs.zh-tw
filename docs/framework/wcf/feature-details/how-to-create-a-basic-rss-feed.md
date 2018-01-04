@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54b9932e081ab5f35b3c15c9e7d4025dfbb3703b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79e5bc1bedbe6fd0911931c83878ed20bc4bd17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>HOW TO：建立基本 RSS 摘要
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 RSS 新聞訂閱摘要的新聞訂閱服務。  
@@ -104,6 +105,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21f39aa1f85e06f1967d278e07731b73dcf7cb10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13aad22dca249147e3037bcef6da755c264021db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
 .NET Framework 提供各種不同的屬性，供您套用至自訂控制項和元件的成員。 其中一些屬性會影響類別的執行階段行為，有些則會影響設計階段行為。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="attributes-for-control-and-component-properties"></a>控制項和元件屬性 (Property) 的屬性 (Attribute)  
  下表描述的屬性 (Attribute) 可套用至自訂控制項和元件的屬性 (Property) 或其他成員。 如需有關使用許多這些屬性的範例，請參閱[如何：在 Windows Forms 控制項中套用屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|指定要傳遞至屬性的值，讓屬性從其他來源取得其值。 這稱為「環境」。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|指定是否應該在 [屬性] 視窗中顯示屬性或事件。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="attributes-for-data-binding-properties"></a>資料繫結屬性 (Property) 的屬性 (Attribute)  
  下表顯示您可以套用的屬性，以指定自訂控制項和元件如何資料繫結互動。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|指定屬性是否通常用於繫結。|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|指定元件的資料來源和資料成員屬性。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="attributes-for-classes"></a>類別的屬性  
  下表顯示您可以套用的屬性，以指定自訂控制項和元件在設計階段的行為。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|指定元件的預設事件。|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|指定元件的預設屬性。|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ComponentModel.ToolboxItemAttribute>|代表工具箱項目的屬性。|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|指定用於工具箱項目的篩選字串和篩選類型。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Attribute>  
  [操作說明：在 Windows Forms 控制項中套用屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
  [擴充設計階段支援](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  

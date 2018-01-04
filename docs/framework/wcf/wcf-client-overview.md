@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6333db92d010eab7765cfc62a9f64601d5b82d55
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2d6dd9e34561f397c581e148a549ad85762c81e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節描述用戶端應用程式的功能、[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端的設定、建立和使用方式，以及保護用戶端應用程式安全的方法。  
@@ -180,6 +181,6 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>使用 WCF 用戶端通道呼叫服務  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端型別會擴充 <xref:System.ServiceModel.ClientBase%601>，而後者則是從 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 介面衍生以公開基礎通道系統。 您可以搭配 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 類別使用目標服務合約來叫用服務。 如需詳細資訊，請參閱[WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
  <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

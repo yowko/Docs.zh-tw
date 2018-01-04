@@ -17,18 +17,19 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dafd27209d6cc4de3f66c5529fbda363354c6922
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b6170ddd69088ae04f06b2ebe994458c46ce7bd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator 控制項 (Windows Form)
 `BindingNavigator`控制項是繫結至資料之控制項的瀏覽和操作使用者介面 (UI)。 `BindingNavigator` 控制項可讓使用者巡覽和操作 Windows Form 上的資料。  
   
  本節中的主題提供 `BindingNavigator` 控制項的概觀，並提供如何使用控制項巡覽資料並在 <xref:System.Data.DataSet> 中移動的逐步指示。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [BindingNavigator 控制項概觀](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
  介紹 `BindingNavigator` 控制項的一般概念，讓使用者在資料來源的項目中移動。  
   

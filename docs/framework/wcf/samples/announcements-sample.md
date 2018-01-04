@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 045807df433d519b00969812afb0ae2feac94b75
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 485a5f98ead246b02aab4ffc5abebd5c88ea92dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="announcements-sample"></a>公告範例
 此範例示範如何使用探索功能的公告功能。 公告功能可讓服務送出包含服務相關中繼資料的公告訊息。 當服務啟動時，預設會傳送一個 Hello 公告，而當服務關閉時，則會傳送一個 Bye 公告。 這些公告可以多點傳送，也可以點對點傳送。 這個範例包含兩個專案，也就是服務和用戶端。  
@@ -97,4 +98,4 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

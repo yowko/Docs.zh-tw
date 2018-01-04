@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
 JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中建立的 ASP.NET AJAX 服務所使用的預設資料格式。  
@@ -31,18 +32,18 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 ## <a name="mapping-net-types-to-json-types"></a>將 .NET 型別對應至 JSON 型別  
  下表說明由序列化和還原序列化程序對應時，.NET 型別和 JSON/JavaScript 型別之間的對應關係。  
   
-|.NET 型別|JSON/JavaScript|備註|  
+|.NET 型別|JSON/JavaScript|注意|  
 |----------------|----------------------|-----------|  
-|所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|數字|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|  
-|<xref:System.Enum>|數字|請參閱本主題稍後的＜列舉與 JSON＞。|  
+|所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|number|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|  
+|<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|  
 |<xref:System.Boolean>|Boolean|--|  
-|<xref:System.String>, <xref:System.Char>|字串|--|  
+|<xref:System.String>, <xref:System.Char>|String|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON 中這些型別的格式和 XML 中相同 (本質上如同 ISO 8601 Duration 格式中的 TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB" 格式中的 GUID，以及如 "http://www.example.com" 的自然字串形式的 URI)。 精確的資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
-|<xref:System.Xml.XmlQualifiedName>|字串|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|  
+|<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|  
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|  
 |<xref:System.DateTime>|DateTime 或字串|請參閱本主題稍後的＜日期/時間與 JSON＞。|  
 |<xref:System.DateTimeOffset>|複雜類型|請參閱本主題稍後的＜日期/時間與 JSON＞。|  
-|XML 和 ADO.NET 型別 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> 的陣列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|請參閱本主題的＜XML 型別與 JSON＞一節。|  
+|XML 和 ADO.NET 型別 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> 的陣列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>)。|String|請參閱本主題的＜XML 型別與 JSON＞一節。|  
 |<xref:System.DBNull>|空的複雜型別|--|  
 |集合、字典與陣列|陣列|請參閱本主題的＜集合、字典與陣列＞一節。|  
 |複雜型別 (已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 或 <xref:System.SerializableAttribute>)|複雜類型|資料成員成為 JavaScript 複雜類型的成員。|  
@@ -270,5 +271,5 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>有效的 JSON 索引鍵名稱  
  序列化程式 XML 會編碼不是有效的 XML 名稱的索引鍵名稱。 例如，資料成員的 「 123 」 的名稱會有編碼的名稱這類 「 _x0031\__x0032\__x0033\_"因為"123"是無效的 XML 項目名稱 （以數字開始）。 有些在 XML 名稱中無效的國際字元集可能會引起類似的情況。 如需 XML 對 JSON 處理這個影響的說明，請參閱[對應之間 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

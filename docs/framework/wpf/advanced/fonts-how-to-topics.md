@@ -15,20 +15,21 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f0ff080218b459625bb98803216fae88c3aadd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e4df7bac45abe367f985167b354b515f247ae90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-how-to-topics"></a>字型 HOW TO 主題
 此章節的主題示範如何使用隨附的字型功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [列舉系統字型](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
  [使用 FontSizeConverter 類別](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

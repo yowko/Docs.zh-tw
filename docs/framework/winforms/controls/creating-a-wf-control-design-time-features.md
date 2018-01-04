@@ -21,11 +21,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba195656363b15407aed6a4da0ab804421a3d964
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項
 撰寫相關聯的自訂設計工具，可以增進自訂控制項的設計階段經驗。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
  如需完整的程式碼清單，請參閱[How to： 建立 Windows Form 控制項，會利用的設計階段功能](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
@@ -642,7 +643,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   控制如何序列化您的控制項，並為其產生程式碼的方式。 如需詳細資訊，請參閱[動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.UserControl>  
  <xref:System.Windows.Forms.Design.ParentControlDesigner>  
  <xref:System.Windows.Forms.Design.DocumentDesigner>  

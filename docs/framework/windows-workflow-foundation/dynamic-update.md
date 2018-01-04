@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bd320b9875f7ed2d5acb124feb4b7d3bb82d62e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee6b228d729958e9e5f14cadb1e378a2944c4f85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-update"></a>動態更新
 動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 這可以是實作錯誤修復、新要求，或是適應突如其來的變化。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的動態更新功能概觀。  

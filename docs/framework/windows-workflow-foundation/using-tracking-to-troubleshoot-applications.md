@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用追蹤來疑難排解應用程式
 [!INCLUDE[wf](../../../includes/wf-md.md)] 可讓您追蹤工作流程相關資訊，提供有關 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 應用程式或服務執行的詳細資訊。 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 主機可以在工作流程執行個體執行期間擷取工作流程事件。 如果您的工作流程產生錯誤或例外狀況，您可以使用 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 追蹤詳細資訊來疑難排解其處理程序。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 12/02/2017
   
  如果使用 ETW 追蹤參與者啟用追蹤，會將錯誤事件發出至 ETW 工作階段。 使用事件檢視器即可檢視這些事件。 在節點下找到此**事件檢視器-> 應用程式及服務記錄檔]-> [Microsoft]-> [Windows]-> [應用程式伺服器-應用程式**在分析通道。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

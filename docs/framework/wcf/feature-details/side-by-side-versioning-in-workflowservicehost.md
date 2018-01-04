@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost 中的並存版本控制
 在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中引入的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 並存版本控制提供可在單一端點上裝載多個工作流程服務版本的功能。 提供的並存功能可讓工作流程服務進行設定，以便工作流程服務的新執行個體是使用新的工作流程定義所建立，而執行中的執行個體則是使用現有的定義完成。 本主題提供使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 並存執行工作流程服務的概觀。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 -   在其 <xref:System.ServiceModel.Activities.Receive> 中，不得包含任何不在主要版本中的 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 活動，而且這些活動必須符合作業合約。  
   
--   具有唯一的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 一個 (且僅限一個) 工作流程定義可以有 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
+-   具有唯一的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 可能只有一個工作流程定義`null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
   
  允許部分變更。 版本之間的下列項目可能不同：  
   

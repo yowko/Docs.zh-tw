@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-windows-services"></a>如何：建立 Windows 服務
 當您建立服務時，您可以使用 Visual Studio 專案範本，呼叫**Windows 服務**。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  
@@ -76,12 +77,12 @@ ms.lasthandoff: 11/21/2017
   
 8.  安裝服務。 如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
- [如何： 加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [如何： 記錄服務的相關資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [如何： 啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何： 指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
- [如何： 安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [逐步解說： 在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [如何：以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
+ [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：記錄關於服務的資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [如何：指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
+ [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

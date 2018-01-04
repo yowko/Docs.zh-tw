@@ -16,16 +16,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd42299a217cef6125f348d47e0a5216f9e8205f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 程式設計
 本節包含入門主題集，您必須了解這些主題才能成為熟練的 [!INCLUDE[wf](../../../includes/wf-md.md)] 程式設計人員。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  描述工作流程開發中使用之流程控制開發架構的主題。  
   

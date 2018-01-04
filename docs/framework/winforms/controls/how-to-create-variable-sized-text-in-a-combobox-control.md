@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8658b51515d8d3934613b40a8d4bec0ab9bf618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>如何：在 ComboBox 控制項中建立各種大小的文字
 這個範例會示範自訂繪圖中的文字<xref:System.Windows.Forms.ComboBox>控制項。 當項目符合特定準則時，它是在較大的字型中繪製，變成紅色。  
@@ -76,7 +77,7 @@ End Sub
   
 -   <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空間的參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ComboBox.DrawItem>  
  <xref:System.Windows.Forms.DrawItemEventArgs>  
  <xref:System.Windows.Forms.ComboBox.MeasureItem>  

@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 93849fc315409b769a06cdd216bbc86e83cf6155
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 39f805da7570b81ff1f6593e82f5d0a9310ee9c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例會示範如何控制 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的數個安全性相關功能：  
@@ -152,5 +153,5 @@ ms.lasthandoff: 10/18/2017
   
 1.  編輯 Machine.config 以將 `enableLoggingKnownPii` 屬性設定為 `false`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

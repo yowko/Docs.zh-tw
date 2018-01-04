@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4810faa05feab0817c26a9ea70bea412d9e0451a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91aac8cddf799d4025f901d7979b5028995742f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
@@ -45,7 +46,7 @@ class XmlSerializerOperationBehavior : Behavior
   
  定義 SOAP 訊息的樣式。  
   
-### <a name="use"></a>用法  
+### <a name="use"></a>使用  
  資料型別：字串  
   
  存取類型：唯讀  
@@ -58,5 +59,5 @@ class XmlSerializerOperationBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

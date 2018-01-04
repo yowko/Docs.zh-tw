@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1ae4172dbdf82b4bd5bdd9a7f8afc1901fcfa3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 619c4832626693a56280c70af3ade5dbb9e9d4de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>如何：管理 Windows Form 中的 ToolStrip 溢位
 當上的所有項目<xref:System.Windows.Forms.ToolStrip>控制項無法放入配置的空間，您可以在啟用溢位功能<xref:System.Windows.Forms.ToolStrip>和決定特定的溢位行為<xref:System.Windows.Forms.ToolStripItem>s。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-enable-overflow-on-a-toolstrip-control"></a>若要啟用溢位在 ToolStrip 控制項  
   
--   請確認<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>屬性未設定為`false`如<xref:System.Windows.Forms.ToolStrip>。 預設為 `True`。  
+-   請確認<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>屬性未設定為`false`如<xref:System.Windows.Forms.ToolStrip>。 預設值為 `True`。  
   
      當<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>是`True`（預設）、<xref:System.Windows.Forms.ToolStripItem>傳送至下拉式溢位功能表時的內容<xref:System.Windows.Forms.ToolStripItem>超過水平寬度<xref:System.Windows.Forms.ToolStrip>或高度的垂直<xref:System.Windows.Forms.ToolStrip>。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
     System.Windows.Forms.ToolStripItemOverflow.Never;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripOverflowButton>  
  <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  

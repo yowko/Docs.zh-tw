@@ -16,17 +16,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
 在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為服務或用戶端的開發人員的您，必須同時了解 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何處理資料與資料序列化，以建立有效率且容易維護的應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+## <a name="in-this-section"></a>本節內容  
+ [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  說明在服務中進行資料傳輸的基本概念。  
   
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/02/2017
  [篩選](../../../../docs/framework/wcf/feature-details/filtering.md)  
  說明可依據不同準則對訊息進行前置處理的篩選功能。  
   
- [大型的資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [大型資料和資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  說明如何傳送大型資料區塊，例如二進位檔。  
   
  [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
@@ -70,6 +71,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="related-sections"></a>相關章節  
  [擴充編碼器與序列化程式](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [最佳做法：資料合約版本設定](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  [服務版本設定](../../../../docs/framework/wcf/service-versioning.md)

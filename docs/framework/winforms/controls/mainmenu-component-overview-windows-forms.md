@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f5cfe3a97bbbd4d5ba2d3ba089736599b6a2190
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c8681635f2f97e74893704513f57313106168e52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>MainMenu 元件概觀 (Windows Form)
 > [!IMPORTANT]
@@ -31,10 +32,10 @@ ms.lasthandoff: 11/21/2017
   
  Windows Form<xref:System.Windows.Forms.MainMenu>元件會在執行階段顯示的功能表。 所有的個別項目與主功能表的子功能表卻<xref:System.Windows.Forms.MenuItem>物件。  
   
-## <a name="key-properties"></a>索引鍵屬性  
+## <a name="key-properties"></a>索引鍵內容  
  功能表項目可以指定為預設項目，藉由設定<xref:System.Windows.Forms.MenuItem.DefaultItem%2A>屬性`true`。 在按下功能表時以粗體文字顯示的預設項目。 功能表項目的<xref:System.Windows.Forms.MenuItem.Checked%2A>屬性`true`或`false`，並指出是否已選取功能表項目。 功能表項目的<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>屬性自訂選取之項目的外觀： 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>設`true`，選項按鈕旁邊的項目; 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>設`false`，項目旁邊的核取記號會出現。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.MainMenu>  
  <xref:System.Windows.Forms.Menu>  
  <xref:System.Windows.Forms.MenuItem>  

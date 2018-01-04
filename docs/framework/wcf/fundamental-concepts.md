@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
 本文件提供 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的高階檢視， 以說明重要概念，以及如何搭配運用這些概念。 如需教學課程建立的簡單版本[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務與用戶端，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -162,7 +163,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  一組發展中 Web 服務 (WS) 規格的縮寫，例如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所實作的 WS-Security 與 WS-ReliableMessaging 等等。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)  
  [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

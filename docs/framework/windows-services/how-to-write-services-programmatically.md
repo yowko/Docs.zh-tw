@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 1721417b8d1fc799e6af5d09762ee852d9fbfb03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-services-programmatically"></a>如何：以程式設計方式撰寫服務
 如果您選擇不使用 Windows 服務專案範本，您可以藉由建立繼承和其他基礎結構項目自行撰寫您自己的服務。 當您以程式設計方式建立服務時，您必須執行幾個範本會為您處理的步驟：  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
     3.  捲動到**System.ServiceProcess.dll**按一下**選取**。  
   
-    4.  按一下 [確定]。  
+    4.  按一下 [確定 **Deploying Office Solutions**]。  
   
 2.  加入類別，並將它設定為繼承自<xref:System.ServiceProcess.ServiceBase>:  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 11/21/2017
   
 10. 安裝服務。 如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [如何： 記錄服務的相關資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [逐步解說： 在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：記錄關於服務的資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1eda65837bc6f58201652938751959f28da63db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>基本 Windows Workflow 概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的工作流程開發運用了一些開發人員可能未曾使用過的概念。 本主題描述其中的部分概念及其實作方式。  

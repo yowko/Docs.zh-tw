@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b60b31133a3721611285b5b4caa93d3c34e193f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-schemas-from-classes"></a>從類別匯出結構描述
 如果要從用於資料合約模型中的類別產生 XML 結構描述定義語言 (XSD)，請使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 類別。 這個主題將說明建立結構描述的程序。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="the-export-process"></a>匯出程序  
  結構描述匯出程序是以一個或多個類型開始，然後產生描述這些類型的 XML 規劃的 <xref:System.Xml.Schema.XmlSchemaSet> 。  
   
- `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的結構描述物件模型 (SOM) 的一部分，代表一組 XSD 結構描述文件。 如果要從 `XmlSchemaSet`建立 XSD 文件，請使用來自 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 類別之 `XmlSchemaSet` 屬性的結構描述集合。 然後使用 <xref:System.Xml.Schema.XmlSchema> 序列化各個 <xref:System.Xml.Serialization.XmlSerializer>物件。  
+ `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的結構描述物件模型 (SOM) 的一部分，代表一組 XSD 結構描述文件。 如果要從 `XmlSchemaSet`建立 XSD 文件，請使用來自 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 類別之 `XmlSchemaSet` 屬性的結構描述集合。 然後使用 <xref:System.Xml.Schema.XmlSchema> 序列化各個 <xref:System.Xml.Serialization.XmlSerializer>物件。  
   
 #### <a name="to-export-schemas"></a>匯出結構描述  
   
@@ -68,9 +69,9 @@ ms.lasthandoff: 12/02/2017
   
  匯出選項會影響所有這些方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
  [結構描述匯入和匯出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [匯入結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+ [匯入結構描述以產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

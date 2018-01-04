@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: adc55d137a5578dbe8649afa02ab8525d4913cd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c0766c989df7c2329aa4d36af834378b02b1301
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>如何：使用區域的使用點擊測試
 點擊測試的目的是要判斷游標是否在指定的物件，例如圖示或按鈕。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Region>  
  [GDI+ 中的區域](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  [操作說明：使用區域的裁剪](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)

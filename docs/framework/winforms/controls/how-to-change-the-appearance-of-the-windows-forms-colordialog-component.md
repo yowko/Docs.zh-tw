@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11edb1019b8fedde368d712ab27dd0954a2de50a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>如何：變更 Windows Form ColorDialog 元件的外觀
 您可以設定 Windows Form 的外觀<xref:System.Windows.Forms.ColorDialog>元件使用其屬性的數目。 此對話方塊包含兩個區段，其中顯示基本色彩，可讓使用者定義自訂色彩的其中一個。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ColorDialog>  
  [ColorDialog 元件](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
  [ColorDialog 元件概觀](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

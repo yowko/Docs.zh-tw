@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f016cc075b98b03c17959280215f7aa64f44e24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c07130715b0416e7a8603b46a1c39c2f22dd7d2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-reliable-session"></a>WS 可靠工作階段
 這個範例會示範可靠工作階段的使用方式。 可靠工作階段會支援可信賴傳訊和工作階段。 可信賴傳訊失敗時會重試通訊，而且允許指定傳遞保證，例如訊息依序到達。 工作階段會保持呼叫之間的用戶端狀態。 此範例會實作維持用戶端狀態的工作階段，並且指定依序傳遞保證。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 端點包含參考名為 "Binding1." 之繫結組態的 `bindingConfiguration` 屬性。 繫結組態會啟用可靠工作階段設定`enabled`屬性[ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)至`true`。 已排序工作階段之傳遞保證的控制方式，是將已排序的屬性設定為 `true` 或 `false`。 預設為 `true`。  
+ 端點包含參考名為 "Binding1." 之繫結組態的 `bindingConfiguration` 屬性。 繫結組態會啟用可靠工作階段設定`enabled`屬性[ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)至`true`。 已排序工作階段之傳遞保證的控制方式，是將已排序的屬性設定為 `true` 或 `false`。 預設值為 `true`。  
   
 ```xml  
 <bindings>  
@@ -94,4 +95,4 @@ Press <ENTER> to terminate client.
   
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73d12bb38e4929582a8317d8ab3d7b23a7d1f603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a533f4cbf5000489e774ba8661c3ab03cea4948a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：將工具提示加入至 Windows Form DataGridView 控制項中的個別儲存格
 根據預設，工具提示會用來顯示的值<xref:System.Windows.Forms.DataGridView>太小，無法顯示其全部內容的資料格。 您可以設定個別資料格的工具提示文字值不過，覆寫這個行為。 這是要顯示給使用者的其他資訊的資料格，或儲存格內容的其他描述為使用者提供很有用。 比方說，如果您有顯示狀態圖示的資料列時，您可能要提供使用工具提示的文字說明。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  當您繫結<xref:System.Windows.Forms.DataGridView>控制權傳輸至外部資料來源或提供您自己的資料來源藉由實作虛擬模式，您可能會遇到效能問題。 若要使用大量的資料時，請避免對效能帶來負面影響，處理<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>事件，而不是設定<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>多個儲存格的屬性。 當您處理這個事件，取得儲存格的值<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>屬性引發事件，並傳回值<xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>屬性設為指定的事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>  

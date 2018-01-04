@@ -16,11 +16,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7354306b5385ef135ea496766026c3ac99505ffe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f1026320114592c25bb5fd123bf92227b26b015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 此處提供有關 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 文件的指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 中支援的 WS-* 通訊協定  
  若要查看支援的系統提供繫結中的通訊協定清單，請參閱[Web 服務之互通性繫結所支援的通訊協定](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系統提供繫結的清單，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Communication Foundation 範例](../../../docs/framework/wcf/samples/index.md)  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
  [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  

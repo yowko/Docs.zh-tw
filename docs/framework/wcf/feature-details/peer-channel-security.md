@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>對等通道安全性
 「對等通道」能夠啟用各種相依於多方通訊的分散式應用程式類型。 有些範例會包含網際網路範圍的內容散發，其中受信任的來源會散發內容 (例如媒體或軟體更新)、朋友們會互相交換音樂或相片，或是同事們一起編輯文件。 每個案例都需要唯一的安全性模型。 「對等通道」安全性模型的設計目的，是處理這些案例並提供聲音安全性模型，以滿足不同識別、驗證和授權模型的個別需求。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
   
  只要應用程式選擇其中一個支援的權杖類型，對等通道就不需要特定的識別模型。 應用程式完全擁有這些識別和驗證決策的生命週期。  
   
-## <a name="see-also"></a>另請參閱  
- [保護對等通道應用程式](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+## <a name="see-also"></a>請參閱  
+ [保護對等通道應用程式的安全](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [對等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
  [建置對等通道應用程式](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

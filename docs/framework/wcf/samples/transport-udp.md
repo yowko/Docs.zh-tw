@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>傳輸：UDP
 這個 UDP 傳輸範例示範如何實作做為自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸的 UDP 單點傳送 (Unicast) 和多點傳送 (Multicast)。 範例會使用通道架構並遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法，以說明在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中建立自訂傳輸的建議程序。 建立自訂傳輸的步驟如下：  
@@ -404,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 測試服務和用戶端  
- 您可以在 UdpTestService 和 UdpTestClient 目錄中，找到使用此範例傳輸的測試程式碼。 服務程式碼由兩項測試組成：其中一項測試會從程式碼設定繫結和端點，而另一項則是透過組態進行設定。 這兩項測試都會使用兩個端點。 有一個端點會使用`SampleUdpProfileBinding`與[ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)設`true`。 另一個端點會使用包含 `UdpTransportBindingElement` 的自訂繫結。 這相當於使用`SampleUdpProfileBinding`與[ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)設`false`。 這兩項測試都會建立服務、為每個繫結新增端點、開啟服務，然後等候使用者按下 ENTER，再關閉服務。  
+ 您可以在 UdpTestService 和 UdpTestClient 目錄中，找到使用此範例傳輸的測試程式碼。 服務程式碼由兩項測試組成：其中一項測試會從程式碼設定繫結程序和端點，而另一項則是透過組態進行設定。 這兩項測試都會使用兩個端點。 有一個端點會使用`SampleUdpProfileBinding`與[ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)設`true`。 另一個端點會使用包含 `UdpTransportBindingElement` 的自訂繫結。 這相當於使用`SampleUdpProfileBinding`與[ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)設`false`。 這兩項測試都會建立服務、為每個繫結新增端點、開啟服務，然後等候使用者按下 ENTER，再關閉服務。  
   
  當啟動服務的測試應用程式時，您應該會看見下列輸出。  
   

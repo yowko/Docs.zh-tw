@@ -17,18 +17,19 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 722c37645d95009ce03bbbf813bc9f9fb2418e60
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 27ba3e94e28a1e26d370fa6daf7c93019d1e2428
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>拖放作業和剪貼簿支援
 若要在 Windows 架構應用程式內啟用使用者拖放作業，您可以處理一系列的事件，最值得注意的是 <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave> 和 <xref:System.Windows.Forms.Control.DragDrop> 事件。  
   
  您也可以使用簡單的方法呼叫，將使用者剪下/複製/貼上支援和使用者資料傳輸實作至 Windows 架構應用程式中的剪貼簿。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [逐步解說：在 Windows Forms 中執行拖放作業](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
  說明如何開始拖放作業。  
   

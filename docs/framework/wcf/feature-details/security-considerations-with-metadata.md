@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 75191aa28be76da549d38403c4a6f019c6f54bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-with-metadata"></a>中繼資料的安全性考量
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的中繼資料功能時，請考量發行、擷取和使用服務中繼資料的安全性影響。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="protecting-application-configuration-files"></a>保護應用程式組態檔  
  服務的應用程式組態檔可能會控制發行中繼資料的方法以及是否發行中繼資料。 強烈建議您透過適當的存取控制清單 (ACL) 來保護應用程式組態檔，以確保攻擊者無法修改這類設定。  
   
-## <a name="see-also"></a>另請參閱  
- [How to： 安全中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
+## <a name="see-also"></a>請參閱  
+ [如何：保護中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

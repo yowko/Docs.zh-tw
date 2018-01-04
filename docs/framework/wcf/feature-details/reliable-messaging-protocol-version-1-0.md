@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a32c16067446459817e9943c2d729a67373a0333
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging Protocol 1.0 版
 本主題涵蓋了 WS-Reliable Messaging February 2005 (1.0 版) 通訊協定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 實作詳細資料，這個通訊協定是使用 HTTP 傳輸來進行交互操作時所需的通訊協定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循本主題所述 WS-Reliable Messaging 規格的條件約束及說明。 請注意，[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 中開始實作 WS-ReliableMessaging 1.0 版通訊協定。  
@@ -36,18 +37,18 @@ ms.lasthandoff: 12/02/2017
 |------------|---------------|  
 |wsrm|http://schemas.xmlsoap.org/ws/2005/02/rm|  
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
+|秒|http://www.w3.org/2003/05/soap-envelope|  
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
   
-## <a name="messaging"></a>傳訊  
+## <a name="messaging"></a>訊息  
   
 ### <a name="sequence-establishment-messages"></a>序列建立訊息  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會實作 `CreateSequence` 和 `CreateSequenceResponse` 訊息以建立可靠訊息序列。 以下是適用的條件約束：  
   
 -   B1101：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 啟動器不會在 `CreateSequence` 訊息中產生選用的 Expires 項目，或當 `CreateSequence` 訊息包含 `Offer` 項目時，在 `Expires` 項目中產生選用的 `Offer` 項目。  
   
--   B1102：在存取 `CreateSequence` 訊息時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`Responder` 會同時傳送與接收 `Expires` 項目 (如果兩者都存在的話)，但是不會使用它們的值。  
+-   B1102： 存取時`CreateSequence`訊息， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Responder`傳送和接收兩者`Expires`如果存在，但不會使用其值的項目。  
   
  WS-Reliable 訊息會使用 `Offer` 機制來建立兩個反向關聯序列以形成工作階段。  
   
@@ -284,7 +285,7 @@ ms.lasthandoff: 12/02/2017
   
 -   B3001：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會將 `wsrm:RMAssertion` WS-Policy 判斷提示附加至 `wsdl:binding` 元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時支援附加至 `wsdl:binding` 和 `wsdl:port` 元素。  
   
--   B3002：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援下列選用的 WS-Reliable 訊息判斷提示屬性，並在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableMessagingBindingElement` 上針對它們提供控制：  
+-   B3002:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援下列選用的 Ws-reliable 訊息判斷提示屬性，並提供控制它們[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   

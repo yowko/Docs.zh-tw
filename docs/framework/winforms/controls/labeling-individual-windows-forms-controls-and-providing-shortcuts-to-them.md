@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32aa83e69d1159b2afa376a7155c40e2a36d7684
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5e64a2a858b9506ec08beff728e23da0f817f170
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>標記個別 Windows Form 控制項並提供其捷徑
 加入 Windows Form 的控制項具有可用來進一步特製化使用者經驗的屬性和方法。 對於設計良好的 Windows 應用程式而言，依使用者的需要自訂使用者介面是非常重要的。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：設定由 Windows Forms 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
  描述如何將文字標籤指派給控制項。  
   

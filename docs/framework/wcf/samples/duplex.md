@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88ad38a6a93a897e2362d61c1166b87813ab7859
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0baf0a188ccb67f50a57ea0a56bb16dc40c53bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex"></a>雙工
 雙工範例示範如何定義和實作雙工合約。 用戶端建立與服務的工作階段，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 雙工合約被定義為一對介面，其中的主要介面從用戶端到服務，回呼介面從服務到用戶端。 在此範例中，`ICalculatorDuplex` 介面允許用戶端執行數學運算，透過工作階段執行結果。 服務傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。  
@@ -201,4 +202,4 @@ client.Close();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

@@ -29,11 +29,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4209866f63931fb3d80f35e211bd5f9b35ed48bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d9cc6568813af866acaf20696b870bedc3099be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Forms.DataGridView>控制項高度可設定且可延伸的而且它會提供許多屬性、 方法和事件，以自訂其外觀和行為。 當您想要 Windows Forms 應用程式顯示表格式資料時，請考慮使用<xref:System.Windows.Forms.DataGridView>再其他控制項 (例如， <xref:System.Windows.Forms.DataGrid>)。 如果您要顯示小型的唯讀值方格，或如果您正在啟用使用者編輯數百萬筆記錄，與資料表<xref:System.Windows.Forms.DataGridView>控制項提供您隨時可程式化、 記憶體有效率的解決方案。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DataGridView 控制項技術摘要](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
  摘要說明<xref:System.Windows.Forms.DataGridView>控制概念和相關的類別使用。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
  [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供主題描述處理大量資料時，如何有效率地使用控制項來避免發生效能問題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  

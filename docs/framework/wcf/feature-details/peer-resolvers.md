@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dbc09bd409dc106046d6c5e51dae8932c9eba326
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-resolvers"></a>對等解析程式
 為了連線至網狀結構，對等節點會需要其他節點的 IP 位址。 IP 位址是透過連絡解析程式服務取得，解析程式服務會取得網狀結構識別碼，並傳回其中位址會對應至以該特定網狀結構識別碼登錄之節點的位址清單。 解析程式會保留已登錄位址的清單，而透過服務登錄網狀結構中的每個節點就可建立此清單。  
@@ -44,10 +45,10 @@ ms.lasthandoff: 12/02/2017
   
  如需示範如何實作自訂解析程式，請參閱[對等通道自訂對等解析程式](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)。  
   
-## <a name="in-this-section"></a>本章節內容  
- [Custompeerresolverservice： 用戶端登錄](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+## <a name="in-this-section"></a>本節內容  
+ [CustomPeerResolverService 內部：用戶端註冊](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
  [對等通道安全性](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
  [建置對等通道應用程式](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

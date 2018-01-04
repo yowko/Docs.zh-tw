@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5963a1b2600066020562c1d17b0d2d2eb6eb67c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef5a499e6d940e45e0c9aab093b0a1c00bb6cc32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-performance-counters"></a>使用效能計數器
 這個範例會示範如何存取 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 效能計數器，以及如何建立使用者定義的效能計數器。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -86,5 +87,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

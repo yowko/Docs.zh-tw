@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 312a4b854cb527e63d6866247d4147720ce0710c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 944e9974ac5cb84aa0dd7e732c35752cb4ea749e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證簽署與加密
 本主題顯示如何設定 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，以在用戶端和服務上的訊息簽章和加密中使用各種憑證。  
@@ -99,10 +100,10 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
  <xref:System.ServiceModel.Security.IdentityVerifier>  
- [逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+ [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

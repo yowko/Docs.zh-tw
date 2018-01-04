@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37d8571624272f62c6ce327b0ed25e082c5cf713
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c92048374941f735568bcd758ed475eba78b81e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>如何：將 Windows Form RadioButton 控制項群組成集合使用
 Windows Form<xref:System.Windows.Forms.RadioButton>控制項的設計，讓使用者在兩個或多個設定，其中只有一個可以指派給程序或物件之間的選擇。 例如，一群<xref:System.Windows.Forms.RadioButton>控制項可能會顯示各種封裝承運業者寄送的訂單，但是會使用承運業者寄送的其中之一。 因此只有一個<xref:System.Windows.Forms.RadioButton>一次可以選取，即使它是功能群組的一部分。  
@@ -35,7 +36,7 @@ Windows Form<xref:System.Windows.Forms.RadioButton>控制項的設計，讓使�
   
 2.  繪製<xref:System.Windows.Forms.RadioButton>控制項<xref:System.Windows.Forms.GroupBox>或<xref:System.Windows.Forms.Panel>控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.RadioButton>  
  [RadioButton 控制項概觀](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
  [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  

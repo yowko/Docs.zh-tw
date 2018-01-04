@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 109b6e8e2bc678aa9f238840b7634bc20a2eb01b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 這個範例根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -335,4 +336,4 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

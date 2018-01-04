@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dc7ad932ea114e2751fa86ceb757dc795795f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-configuration"></a>用戶端組態
 您可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端組態來指定位址、繫結、行為以及合約 (亦即用戶端端點的 "ABC" 屬性，用戶端會使用此屬性來連接至服務端點)。 [\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)其屬性用來設定端點 Abc 的項目。 本主題的「設定端點」一節將討論這些屬性。  
@@ -103,6 +104,6 @@ ms.lasthandoff: 12/02/2017
 ### <a name="configuring-metadata"></a>設定中繼資料  
  [\<中繼資料 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)元素用來指定用來註冊中繼資料的設定匯入延伸。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]擴充中繼資料系統，請參閱[擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [端點： 位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+## <a name="see-also"></a>請參閱  
+ [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [設定用戶端行為](../../../../docs/framework/wcf/configuring-client-behaviors.md)

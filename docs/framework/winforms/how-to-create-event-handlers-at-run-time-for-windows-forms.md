@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53664bcf8c776338399297687a16ec430bca128b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a636e42c85ef3703a2831583aea9839e13effeaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>如何：建立 Windows Forms 的執行階段事件處理常式
 除了使用 Windows Forms 設計工具建立事件以外，您也可以在執行階段建立事件處理常式。 這個動作可讓您在執行階段根據程式碼中的條件來連接事件處理常式，而不需要程式一開始啟動時進行連接。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
      <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>上述的 Visual Basic 程式碼所示的方法會建立按鈕 click 事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
  [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

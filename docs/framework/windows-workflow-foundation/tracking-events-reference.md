@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9eaf7f8bd4d477b08cda16ca544f240a417f6b21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-events-reference"></a>追蹤事件參考
 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行工作流程期間，會引發追蹤事件，因為工作流程會通過生命週期的各種階段。 主機可訂閱這些事件，並保持工作流程在其生命週期時的進度狀態更新。 本節中將討論引發的追蹤事件。  

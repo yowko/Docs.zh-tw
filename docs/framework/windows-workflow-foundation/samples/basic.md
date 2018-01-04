@@ -12,16 +12,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfd3075ef58114d50be07e4070cfaa4492408e83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>基本
 本節提供示範基本 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [內建活動](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
  包含使用內建活動程式庫的範例。  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
  [設計工具](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
  包含示範如何使用 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 的範例。  
   
- [重新裝載設計工具](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
+ [設計工具重新裝載](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
  包含示範重新裝載活動設計工具的範例。  
   
  [執行](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  

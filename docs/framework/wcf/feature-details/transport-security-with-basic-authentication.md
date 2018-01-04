@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f7b744fff9e779db842402c5328dfeb5f3904071
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe6b996c37e66f41c3946b8ef3437f8fa82c5201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
 下列示範顯示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]啟用基本驗證的網際網路資訊服務 (IIS)，請參閱[http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822)。  
@@ -120,11 +121,11 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

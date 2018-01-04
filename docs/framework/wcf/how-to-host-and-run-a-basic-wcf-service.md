@@ -14,11 +14,12 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92aa512a12911913c1d4d7ca1587bb04df0a501d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的第三個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -425,6 +426,6 @@ End Module
   
  服務目前正在執行中。 若要繼續[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需疑難排解資訊，請參閱[疑難排解入門教學課程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)

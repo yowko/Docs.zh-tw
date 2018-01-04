@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4e26e332cc67fc462c703c502594a8a36758501
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82db4ec7dfd1dd10837f2b2424615f8afbe81932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-transport-and-encoding"></a>自訂繫結傳輸和編碼
 自訂繫結由經過排序的獨立繫結項目清單所定義。 這個範例會示範如何使用各種傳輸與訊息編碼項目來設定自訂繫結。  
@@ -96,4 +97,4 @@ client.Close()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

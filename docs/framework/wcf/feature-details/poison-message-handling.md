@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的交易，則會讓訊息留在佇列中，而訊息將會在新的交易中重試。 如果造成交易中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -115,7 +116,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援能夠保留嘗試傳遞訊息之計數的訊息屬性 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在記憶體中保留中止計數，因此當伺服陣列中超過一個以上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務讀取相同的訊息時，這個屬性可能就無法包含精確的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [在 Windows Vista、 Windows Server 2003 和 Windows XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  [指定及處理合約與服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

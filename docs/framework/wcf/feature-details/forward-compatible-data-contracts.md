@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>向前相容資料合約
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 資料合約系統的其中一個特點是合約可以隨著時間持續發展。 也就是說，有舊版資料合約的用戶端可以與有新版相同資料合約的服務通訊，或是有新版資料合約的用戶端可以與有舊版相同資料合約通訊。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
   
  在 `ignoreExtensionDataObject` 建構函式中將 `true` 設定為 <xref:System.Runtime.Serialization.DataContractSerializer> 或針對 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 將 `true` 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute>，即可關閉往返功能。 此功能關閉時，還原序列化程式將不會填入 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 屬性，而且序列化程式將不會發出屬性內容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.IExtensibleDataObject>  
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  [資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  

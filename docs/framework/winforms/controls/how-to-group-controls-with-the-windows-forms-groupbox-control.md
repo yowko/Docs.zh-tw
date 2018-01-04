@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d29de04b4e221105bb02e58de01344f13af69f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ecdb7b8682b13f93f59d1de21552abfa91b8f50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>如何：以 Windows Form GroupBox 控制項來群組控制項
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來將其他控制項組成群組。 群組控制項的三個原因有：  
@@ -42,6 +43,6 @@ Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來將其他控�
   
 3.  設定<xref:System.Windows.Forms.GroupBox.Text%2A>屬性群組方塊，以適當的標題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.GroupBox>  
  [GroupBox 控制項](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

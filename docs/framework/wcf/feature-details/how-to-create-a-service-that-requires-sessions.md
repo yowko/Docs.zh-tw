@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f9cff53b598d4e477488bcb5b5e87be62e78bb9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fba00b6b8aed8e27d5f16612bb77191f6674abe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>HOW TO：建立需要工作階段的服務
 工作階段會在兩個或更多的端點之間建立共用狀態，以啟用諸如回呼、多重躍點安全性之類的有用功能，並在用戶端與服務執行個體之間建立關聯。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]中的工作階段[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]應用程式，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
  [!code-vb[SCA.Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]      
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]     
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>  
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>

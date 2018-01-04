@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b8fe20b1a5d65a011ec0315773eafd6b4dd6ade
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ab5ea1204a4fbb8ef623191d54d1b24f3dc8f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlreader-sample"></a>XmlReader 範例
 XmlReader 範例會示範使用 <xref:System.Xml.XmlReader> 處理訊息本文。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作計算機服務。 範例中所新增的另一項服務作業 `Sum`，會接受內含要一起加總之值陣列的訊息。 服務會使用 <xref:System.Xml.XmlReader> 讀取訊息。  
@@ -117,4 +118,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

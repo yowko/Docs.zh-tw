@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8d353b50cf9439a9741199a52ca650e02e4d49f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是資料合約模型上建置的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
@@ -200,7 +201,7 @@ ms.lasthandoff: 12/02/2017
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.IDataContractSurrogate>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  

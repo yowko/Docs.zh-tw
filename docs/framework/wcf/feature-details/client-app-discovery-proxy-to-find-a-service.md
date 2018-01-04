@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
 本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在先前的主題， [How to： 實作使用探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，實作您[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]向探索 proxy 註冊其本身的服務。 在本主題中，您會建立使用探索 Proxy 來尋找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，。  
@@ -291,7 +292,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [如何： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [如何： 實作使用探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+ [如何：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

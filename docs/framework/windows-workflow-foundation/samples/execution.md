@@ -12,16 +12,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0849f1e086a99539978e2c3c978807d2f83ae7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution"></a>執行
 本節中的範例示範如何執行 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流程。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
  示範如何使用工作流程控制端點，在本機和遠端建立及執行工作流程。  
   
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
  [WorkflowApplication ReadLine 主機](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
  示範如何建立泛型 ReadLine 主機。  
   
- [建立和執行工作流程執行個體](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
+ [建立與執行工作流程執行個體](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
  示範如何執行工作流程執行個體。 範例中會示範如何以同步和非同步方式執行。  
   
  [WorkflowHostingEndpoint 繼續書籤](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  

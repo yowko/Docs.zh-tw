@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>使用漸層筆刷填滿形狀
 您可以使用漸層筆刷填滿圖形的逐漸變更的色彩。 例如，您可以使用水平漸層來填滿色彩逐漸變更在左邊緣圖案移右邊緣的形狀。 假設有一個矩形，為黑色的左邊緣 （代表紅色、 綠色和藍色元件 0，0，0） 和右邊緣是紅色 （由 255，0，0）。 如果矩形是 256 像素寬，給定的像素的紅色元件將會大於其左側的像素的紅色元件。 資料列中最左邊的像素會有色彩元件 （0，0，0）、 第二個像素 （1，0，0），第三個像素的 （2，0，0），並依此類推，直到到達最右邊像素的色彩元件 （255，0，0）。 這些插補的色彩值便會產生之色彩漸層。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
   
  ![漸層停駐](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：建立線性漸層](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
  示範如何建立線形漸層停駐 using<xref:System.Drawing.Drawing2D.LinearGradientBrush>類別。  
   

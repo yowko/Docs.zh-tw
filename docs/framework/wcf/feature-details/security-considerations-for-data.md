@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 處理 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中的資料時，必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供可減輕這些威脅的工具。  
@@ -202,7 +203,7 @@ ms.lasthandoff: 11/21/2017
  下列各節將進一步說明威脅的這些類別。  
   
 ## <a name="datacontractserializer"></a>DataContractSerializer  
- (如需有關 <xref:System.Xml.Serialization.XmlSerializer> 的安全性資訊，請參閱相關文件)。<xref:System.Xml.Serialization.XmlSerializer> 的安全性模型與 <xref:System.Runtime.Serialization.DataContractSerializer> 的類似，而差異大部分是在細節方面。 例如，<xref:System.Xml.Serialization.XmlIncludeAttribute> 屬性是用於型別內含而不是 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 然而，本主題稍後將說明 <xref:System.Xml.Serialization.XmlSerializer> 的一些專有威脅。  
+ (如需有關 <xref:System.Xml.Serialization.XmlSerializer> 的安全性資訊，請參閱相關文件)。<xref:System.Xml.Serialization.XmlSerializer> 的安全性模型與 <xref:System.Runtime.Serialization.DataContractSerializer> 的類似，而差異大部分是在細節方面。 例如， <xref:System.Xml.Serialization.XmlIncludeAttribute> 屬性是用於型別內含而不是 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 然而，本主題稍後將說明 <xref:System.Xml.Serialization.XmlSerializer> 的一些專有威脅。  
   
 ### <a name="preventing-unintended-types-from-being-loaded"></a>防止載入非預期的型別  
  載入非預期的型別可能會有重大的影響，不論此型別是否為惡意或只是有安全性敏感的副作用。 型別可能含有可利用的安全性弱點、在其建構函式或類別建構函式中執行安全性敏感的動作、具有加速阻絕服務攻擊的大型記憶體使用量，或是擲回不可復原的例外狀況。 型別可能會具有類別建構函式，會在載入型別時及建立執行個體之前立刻執行。 因此，控制還原序列化程式可能會載入的這組型別十分重要。  
@@ -264,7 +265,7 @@ ms.lasthandoff: 11/21/2017
   
 -   請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中許多都是設計來使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理，只用於受信任的資料。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。  
   
--   就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 `DataMemberAttribute` 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、 `zero`或 `invalid`。  
+-   就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 `DataMemberAttribute` 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、`zero` 或 `invalid`。  
   
 -   在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
@@ -363,8 +364,8 @@ ms.lasthandoff: 11/21/2017
   
 -   一般來說，當使用接受配額的元件時，請了解它的安全性含意並設定為安全值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.XmlDictionaryReader>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

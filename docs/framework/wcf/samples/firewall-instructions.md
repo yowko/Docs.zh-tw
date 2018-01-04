@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38d1f0f6bf9245048f21bbe1cb0aa6a0b8d768dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="firewall-instructions"></a>防火牆指示
 您必須啟用防火牆中的數個連接埠或程式，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例才能運作。 許多範例都使用範圍 8000-8003 中的連接埠以及連接埠 9000 進行通訊。 防火牆預設為開啟狀態，可防止對這些連接埠的存取。 若要為範例啟用防火牆，請視您的需求和安全性環境，完成下列其中一個程序：  

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6959ec7f2226f0d6554e9210b3ee1311871cdcf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24336c180ad8d10a60567ebfeb0f0899f972e2c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>HOW TO：指定用戶端認證類型
 在設定過安全性模式 (傳輸或訊息) 後，您就會擁有設定用戶端認證類型的選項。 這個屬性會指定用戶端必須提供給服務以進行驗證的認證類型。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]設定安全性模式 （之前設定用戶端認證類型的必要步驟），請參閱[How to： 設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 12/02/2017
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
  [如何：設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

@@ -19,17 +19,18 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e6133576d65e95ac42a1680de152d84892e2c5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6049e5e0f2d79bab8ad90b6e63e91d4d4fa705ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>如何：繼承自現有的 Windows Forms 控制項
 如果您想要擴充現有控制項的功能，您可以透過繼承來建立衍生自現有控制項的控制項。 繼承自現有的控制項時，您會繼承該控制項的所有功能和視覺屬性。 例如，如果您已建立的控制項，繼承自<xref:System.Windows.Forms.Button>、 看起來您的新控制項和動作一樣標準<xref:System.Windows.Forms.Button>控制項。 您就可以透過實作自訂方法和屬性，來擴充或修改新控制項的功能。 在某些控制項中，您也可以變更繼承的控制項的視覺外觀藉由覆寫其<xref:System.Windows.Forms.Control.OnPaint%2A>方法。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-create-an-inherited-control"></a>建立繼承的控制項  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
 11. 儲存並測試您的控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [操作說明：繼承自 Control 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
  [操作說明：繼承自 UserControl 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  

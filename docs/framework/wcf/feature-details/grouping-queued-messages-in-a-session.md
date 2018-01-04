@@ -17,14 +17,15 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>在工作階段中群組佇列訊息
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會提供工作階段，讓您將一系列相關的訊息群組在一起，以便透過單一接收應用程式進行處理。 本身是工作階段一部分的訊息，也必須是屬於相同的交易。 由於所有訊息都屬於相同的交易，所以如果有任何一個訊息無法進行處理，就會回復整個工作階段。 工作階段對於寄不出的信件佇列與有害佇列，會採取類似行為。 針對工作階段在佇列繫結上設定的存留時間 (TTL) 屬性會完整地套用到工作階段。 如果工作階段中只有部分訊息在 TTL 到期之前傳送出去，則整個工作階段將置於寄不出的信件佇列中。 同樣地，當工作階段中的訊息無法從應用程式佇列傳送到應用程式的話，則整個工作階段將置於有害佇列 (如果有的話)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會提供工作階段，讓您將一系列相關的訊息群組在一起，以便透過單一接收應用程式進行處理。 本身是工作階段一部分的訊息，也必須是屬於相同的交易。 由於所有訊息都屬於相同的異動，所以如果有任何一個訊息無法進行處理，就會回復整個工作階段。 工作階段對於寄不出的信件佇列與有害佇列，會採取類似行為。 針對工作階段在佇列繫結上設定的存留時間 (TTL) 屬性會完整地套用到工作階段。 如果工作階段中只有部分訊息在 TTL 到期之前傳送出去，則整個工作階段將置於寄不出的信件佇列中。 同樣地，當工作階段中的訊息無法從應用程式佇列傳送到應用程式的話，則整個工作階段將置於有害佇列 (如果有的話)。  
   
 ## <a name="message-grouping-example"></a>訊息群組範例  
  舉例來說，當您將訂單處理應用程式實作為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會發現群組訊息做法非常有用。 例如，用戶端將訂單提交給包含一些項目的應用程式。 接著，用戶端針對每個項目向服務進行呼叫，以便分別傳送每個訊息。 情況可能變成：伺服器 A 收到第一個項目，而伺服器 B 則收到第二個項目。 每次新增一個項目時，負責處理該項目的伺服器就必須找到適當的順序，並將該項目附加上去，如此一來就會變得很沒效率。 就算只有一部伺服器在處理所有要求，效率仍舊可能不彰，因為伺服器必須追蹤目前正在處理的所有訂單，並判斷新增的項目歸屬哪個訂單。 將單一訂單上的所有要求加以群組可大幅簡化此類應用程式的實作。 用戶端應用程式將單一訂單的所有項目傳送到工作階段，這樣一來，當服務處理訂單時，就會立即處理整個工作階段。 \  
@@ -94,6 +95,6 @@ ms.lasthandoff: 12/02/2017
   
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46947e314394d56b5ef0439f33910bb493012db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 310f90c7b95d74f1fab8ab2e9871d6c1a0937c52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料
 您可以排序和篩選功能來公開<xref:System.Windows.Forms.BindingSource>透過控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性。 您可以套用簡單排序基礎資料來源時<xref:System.ComponentModel.IBindingList>，您可以套用篩選和進階資料來源時排序<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>屬性需要標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]語法： 字串，表示資料來源中的資料行的名稱後面加上`ASC`或`DESC`，表示是否應該以遞增或遞減順序排序清單。 您可以設定進階排序，或多個資料行排序逗號分隔符號以區隔每個資料行。 <xref:System.Windows.Forms.BindingSource.Filter%2A>屬性會接受字串運算式。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要執行此範例中，貼上程式碼包含表單的<xref:System.Windows.Forms.BindingSource>名為`BindingSource1`和<xref:System.Windows.Forms.DataGridView>名為`dataGridView1`。 處理<xref:System.Windows.Forms.Form.Load>事件表單，並呼叫`InitializeSortedFilteredBindingSource`load 事件處理常式方法中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.BindingSource.Sort%2A>  
  <xref:System.Windows.Forms.BindingSource.Filter%2A>  
  [如何：安裝範例資料庫](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  

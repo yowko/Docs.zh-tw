@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
 當以使用傳輸安全性的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別建立自我裝載的 <xref:System.ServiceModel.WSHttpBinding> 服務時，也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -139,5 +140,5 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

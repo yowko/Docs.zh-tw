@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ebb19cb7fab8221ac1eb534777afffa0bad328
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 異動屬性
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供三個標準 <xref:System.ServiceModel> 屬性 (Attribute) 的屬性 (Property)，能夠讓您設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的交易行為：  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 指定當交易完成時是否要釋放基礎服務執行個體。 這個屬性的預設值為 `true`。 下一個傳入訊息會導致建立新的基礎執行個體，並捨棄之前執行個體可能持有的任何每個交易狀態。 釋放服務執行個體是服務執行的內部動作，並且不會影響用戶端可能已建立的任何現有連線或工作階段。 這個功能等同於 COM+ 提供的 Just-in-Time 啟動功能。 如果屬性是 `true`，則 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 必須等於 <xref:System.ServiceModel.ConcurrencyMode.Single>。 否則，在啟動期間服務會發生無效組態驗證例外狀況。  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 指定服務內交易所使用的隔離等級，這個屬性會使用其中一個 <xref:System.Transactions.IsolationLevel> 值。 如果本機隔離等級屬性不是 <xref:System.Transactions.IsolationLevel.Unspecified>，則傳入交易的隔離等級必須符合此本機屬性的設定。 否則，就會拒絕傳入交易並且將錯誤傳回用戶端。 如果 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 是 `true`，並且沒有流動的交易，這個屬性會判定在本機建立之交易要使用的 <xref:System.Transactions.IsolationLevel> 值。 如果 <xref:System.Transactions.IsolationLevel> 設定為 <xref:System.Transactions.IsolationLevel.Unspecified>，就會使用 <xref:System.Transactions.IsolationLevel><xref:System.Transactions.IsolationLevel.Serializable>。  
+-   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 指定服務內交易所使用的隔離等級，這個屬性會使用其中一個 <xref:System.Transactions.IsolationLevel> 值。 如果本機隔離等級屬性不是 <xref:System.Transactions.IsolationLevel.Unspecified>，則傳入交易的隔離等級必須符合此本機屬性的設定。 否則，就會拒絕傳入異動並且將錯誤傳回用戶端。 如果 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 是 `true`，並且沒有流動的交易，這個屬性會判定在本機建立之交易要使用的 <xref:System.Transactions.IsolationLevel> 值。 如果<xref:System.Transactions.IsolationLevel>設<xref:System.Transactions.IsolationLevel.Unspecified>， <xref:System.Transactions.IsolationLevel> <xref:System.Transactions.IsolationLevel.Serializable>用。  
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 指定在服務所建立之新交易必須完成的時間間隔。 如果達到這個時間而交易尚未完成的話，交易就會中止。 <xref:System.TimeSpan> 會用來當做將 <xref:System.Transactions.TransactionScope> 設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 之任何作業，以及建立新交易的 `true` 逾時。 從建立交易到完成兩階段交易認可通訊協定中的階段 1，所允許的逾時期間上限。 所使用的逾時值永遠都是 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 屬性和 `transactionTimeout` 組態設定之間較低的值。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
   
  這個屬性 (Attribute) 有下列交易特定屬性 (Property)：  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 指定方法是否必須在現用交易的範圍內執行。 預設為 `false`。 如果沒有為方法設定 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性，這也表示該方法不會在交易中執行。 如果作業不需要交易範圍，則存在於訊息標頭中的任何交易都不會啟動，而且保持為 <xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> 的 <xref:System.ServiceModel.OperationContext> 項目。 如果作業需要交易範圍，則交易來源會衍生自下列其中一個：  
+-   <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 指定方法是否必須在現用交易的範圍內執行。 預設值為 `false`。 如果沒有為方法設定 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性，這也表示該方法不會在交易中執行。 如果作業不需要交易範圍，則存在於訊息標頭中的任何交易都不會啟動，而且保持為 <xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> 的 <xref:System.ServiceModel.OperationContext> 項目。 如果作業需要異動範圍，則異動來源會衍生自下列其中一個：  
   
     -   如果交易從用戶端流入，則會在使用分散式交易建立的交易範圍內執行方法。  
   

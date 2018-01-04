@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
 授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支援兩種執行授權程序的機制。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是宣告為基礎的模型，又稱為*身分識別模型*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用「識別模型」從傳入訊息中建立宣告；「識別模型」類別可加以擴充，以便支援用於自訂授權配置的新宣告類型。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  
@@ -154,7 +155,7 @@ ms.lasthandoff: 12/02/2017
   
  下列類別也會用於識別模型程式設計中，但不存在於 <xref:System.IdentityModel.Policy> 或 <xref:System.IdentityModel.Claims> 命名空間。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager>|類別，它可提供方法 (<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>) 來對服務中的每項作業執行宣告架構的授權檢查。 您必須衍生自類別並覆寫該方法。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|密封類別，它會提供當服務與授權有關時與該服務行為關聯的各種屬性。|  
@@ -163,13 +164,13 @@ ms.lasthandoff: 12/02/2017
 ### <a name="significant-members"></a>顯著性成員  
  下列成員經常用來建立新的宣告類型。  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|衍生類別會實作這個方法，以便在執行服務中的作業之前先執行宣告架構的存取檢查。 在已提供 <xref:System.ServiceModel.OperationContext> 或其他地方的任何資訊以及所有資訊，可以在做出存取檢查決策時加以檢查。 如果 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 傳回 `true`，則會授與存取並允許作業執行。 如果 `CheckAccessCore` 傳回 `false`，則會拒絕存取且不會執行作業。 如需範例，請參閱[How to： 建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|傳回服務的 <xref:System.ServiceModel.ServiceAuthorizationManager>。 <xref:System.ServiceModel.ServiceAuthorizationManager> 負責做出授權決策。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|對此服務所指定的自訂授權原則集合。 除了與傳入訊息中之認證關聯的原則以外，這些原則也會加以評估。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Policy.AuthorizationContext>  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Policy.EvaluationContext>  
@@ -183,9 +184,9 @@ ms.lasthandoff: 12/02/2017
  [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [宣告與拒絕資源的存取](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [如何： 建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [如何： 比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [如何： 建立自訂授權原則](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [如何： 建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [如何：建立自訂授權原則](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [如何：為服務建立自訂授權管理員](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

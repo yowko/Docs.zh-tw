@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-balancing"></a>負載平衡
 將 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式部署到負載平衡的伺服器陣列來加以放大，就是一種擴大應用程式容量的方法。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式可以透過標準負載平衡技術來達到負載平衡，這類技術包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
@@ -100,5 +101,5 @@ ms.lasthandoff: 12/02/2017
   
  為了在負載平衡案例中創造最佳效能，請考慮使用 <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> 或 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)。  
   
-## <a name="see-also"></a>另請參閱  
- [網際網路資訊服務裝載最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+## <a name="see-also"></a>請參閱  
+ [Internet Information Services 裝載最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0fac2e73e76ad49a5b1ce6942f3ae2b4c0584e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d0f4eb14fbb459f6844053507d1eb4f0a46cede3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>如何：存取 Windows Form DataGridViewComboBoxCell 下拉式清單中的物件
 像<xref:System.Windows.Forms.ComboBox>控制項，<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>類型可讓您將任意的物件加入至他們的下拉式清單。 利用此功能，您可以表示複雜下拉式清單中的狀態而不需要對應的物件儲存在不同的集合。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
 -   System 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>  

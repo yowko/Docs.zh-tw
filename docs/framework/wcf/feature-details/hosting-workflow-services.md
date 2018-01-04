@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
 您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息基礎結構，因此會以類似的方式裝載。 就像 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，工作流程服務可以裝載在任何 Managed 應用程式中、裝載在 Internet Information Services (IIS) 底下，或是裝載在 Windows Process Activation Services (WAS) 底下。 此外，工作流程服務也可以裝載在 Windows Server App Fabric 底下。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric，請參閱[Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=196494)，和[AppFabric 主控概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]主機的各種方式[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務，請參閱[裝載服務](../../../../docs/framework/wcf/hosting-services.md)。  
@@ -63,6 +64,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="deployment"></a>部署  
  Web 部署工具的建立，是要讓部署的工作更容易進行。 此工具可讓您在 IIS 6.0 與 IIS 7.0 之間移轉應用程式、同步處理伺服器陣列，以及封裝、封存及部署 Web 應用程式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][MS 部署工具](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作流程服務主機內部](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
  [設定 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)

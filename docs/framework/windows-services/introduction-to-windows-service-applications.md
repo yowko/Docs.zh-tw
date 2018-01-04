@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
 Microsoft Windows 服務，之前稱為 NT 服務可讓您建立自己的 Windows 工作階段中執行的長時間執行可執行應用程式。 當電腦開機時，自動啟動這些服務也可以暫停或重新啟動，且並未顯示任何使用者介面。 這些功能可讓服務特別適用於在伺服器上，或者每當您需要長時間執行的功能，不會干擾正在同一部電腦的其他使用者。 您也可以在不同於登入使用者的特定使用者帳戶或預設電腦帳戶的安全性內容中執行服務。 如需有關服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 的文件。  
@@ -88,12 +89,12 @@ Microsoft Windows 服務，之前稱為 NT 服務可讓您建立自己的 Window
   
 -   專案包含 Windows 服務必須有專案和其服務的安裝元件。 這可以輕鬆地完成從**屬性**視窗。 如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)  
  [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [如何： 建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何： 啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何： 偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [逐步解說： 在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [如何： 加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

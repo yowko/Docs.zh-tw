@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 476c28305935ec8930091d5c3700afe9dd6c2450
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b423158cc3c38e92897d0dc5e48c22cf28396ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  
@@ -160,7 +161,7 @@ ms.lasthandoff: 12/02/2017
   
  本主題顯示實作和使用自訂權杖所需的各種程式碼。 若要查看完整的範例，說明如何搭配所有這些程式碼片段，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IdentityModel.Tokens.SecurityToken>  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>  
  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>  
@@ -172,7 +173,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [如何： 建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [如何： 建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

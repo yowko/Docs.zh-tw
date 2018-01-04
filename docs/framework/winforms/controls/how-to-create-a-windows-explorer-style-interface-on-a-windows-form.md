@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96f2ca8189d6840bc68f063ef9b97539c24b0e6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c30dd18e7303cf9fe913760da3f9dad7bca3c95
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows Form 建立 Windows 檔案總管樣式的介面
 Windows 檔案總管 是常見的使用者介面方式的應用程式，因為其程度。  
@@ -31,7 +32,7 @@ Windows 檔案總管 是常見的使用者介面方式的應用程式，因為�
  下列步驟顯示如何排列在 Windows 檔案總管類似的表單中的控制項。 他們不要顯示如何將檔案瀏覽功能的 Windows 檔案總管應用程式。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>若要建立 Windows 檔案總管樣式的 Windows Form  
   
@@ -59,7 +60,7 @@ Windows 檔案總管 是常見的使用者介面方式的應用程式，因為�
     > [!NOTE]
     >  當您拖曳分隔器時，面板自動調整。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  [逐步解說：利用 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  [操作說明：定義分隔視窗的調整大小和位置行為](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  

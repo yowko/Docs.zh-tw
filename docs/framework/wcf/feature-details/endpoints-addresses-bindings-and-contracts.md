@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0b13ee48ed729d89f4b4b506e3608abe7e82b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>端點：位址、繫結和合約
 所有與通訊[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服務會透過*端點*的服務。 端點針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務所提供的功能提供了用戶端存取。  
@@ -76,27 +77,27 @@ ms.lasthandoff: 12/02/2017
 ## <a name="defining-endpoints"></a>定義端點  
  您可以透過命令式程式碼或是宣告式組態來指定服務端點。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[How to： 在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  本章節說明繫結、端點與位址的用途；說明如何設定繫結與端點；並示範如何使用 `ClientVia` 行為和 `ListenUri` 屬性。  
   
- [地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
+ [位址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
  說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何處理端點。  
   
  [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)  
- 說明如何使用繫結來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。  
+ 說明如何使用繫結程序來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。  
   
  [合約](../../../../docs/framework/wcf/feature-details/contracts.md)  
  說明合約如何定義服務方法。  
   
- [如何： 在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [如何：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  說明如何透過組態建立服務端點。  
   
- [如何： 在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [如何：在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  說明如何透過程式碼建立服務端點。  
   
- [如何： 使用 Svcutil.exe 來驗證已編譯的服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [如何：使用 Svcutil.exe 來驗證已編譯服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  描述如何在服務實作和組態中偵測錯誤，而不需要裝載服務會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定服務](../../../../docs/framework/wcf/configuring-services.md)  
  [擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)

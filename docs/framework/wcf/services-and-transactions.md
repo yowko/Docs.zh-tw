@@ -14,14 +14,15 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 680a86d453dd8ca7c78d0ca6ba60cbaa691e44f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6256db06825a79b5235b92e2ed205608f04aac7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services-and-transactions"></a>服務與異動
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式可以初始化用戶端內的交易，並協調服務作業中的交易。 用戶端可以初始化交易並叫用數個服務作業，同時確保服務作業已認可，或是復原為單一單位。  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式可以初始化用戶端內的交易，並協調服務作業中的交易。 用戶端可以初始化異動並叫用數個服務作業，同時確保服務作業已認可，或是復原為單一單位。  
   
  對於需要用戶端交易的服務作業，您可以指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 並設定服務合約的 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性，藉此啟用服務合約中的交易行為。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 參數指定如果沒有擲回任何未處理的例外狀況，執行該方法的交易是否會自動完成。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]這些屬性，請參閱[ServiceModel 交易屬性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   
@@ -97,7 +98,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [System.ServiceModel 中的交易支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [交易模型](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [WS 交易流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>請參閱  
+ [System.ServiceModel 中的異動式支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
+ [異動模型](../../../docs/framework/wcf/feature-details/transaction-models.md)  
+ [WS 異動流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

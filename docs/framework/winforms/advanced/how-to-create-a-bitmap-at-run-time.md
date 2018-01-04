@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 57682ce5486bc3b7ce1c0db525c7948b1c6a00cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4769a44358dc19c9897c6d6ee29f0c7b8426ed7b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>如何：在執行階段時建立點陣圖
 這個範例會建立並繪製<xref:System.Drawing.Bitmap>物件，並顯示現有的 Windows Form 中<xref:System.Windows.Forms.PictureBox>控制項。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 11/21/2017
   
 -   System、 System.Drawing 和 System.Windows.Forms 組件會匯入在 Windows Form。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Bitmap>  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

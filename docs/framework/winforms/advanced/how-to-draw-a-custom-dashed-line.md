@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90fcc99414e8d5c9542d643677c85d4ff670f50f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 770ce290b21f7d0094a487c30079063b79a7c08d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>如何：繪製自訂短折線
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供數種中所列的虛線樣式<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 Windows 表單，並處理表單的<xref:System.Windows.Forms.Control.Paint>事件。 貼上上述程式碼到<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用畫筆繪製線條和形狀](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

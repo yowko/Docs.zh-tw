@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c153fc3fa44b6f84d5aa11a7f20dcce3df533c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，這些錯誤會由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提出。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -154,7 +155,7 @@ ms.lasthandoff: 12/02/2017
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.Security.WindowsServiceCredential>  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  

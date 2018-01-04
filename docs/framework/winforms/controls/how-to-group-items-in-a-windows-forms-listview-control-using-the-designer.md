@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c9dc3a12227d3c9bfd64c97be61e69b50d2bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 537aff8a49e42fe521ca6e0b2b698a461d4f5eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用設計工具群組 Windows Form ListView 控制項中的項目
 分組功能<xref:System.Windows.Forms.ListView>控制項可讓您以顯示群組中的項目相關的設定。 這些群組是在螢幕上分隔包含群組標題的水平群組標頭。 您可以使用<xref:System.Windows.Forms.ListView>群組，使導覽更容易的大型清單分組為項目依字母順序，依日期，或任何其他邏輯群組。 下圖顯示一些群組項目。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Windows.Forms.ListView>群組是僅適用於[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法。 在舊版作業系統，與群組相關的任何程式碼都無效，不會出現群組。 如需詳細資訊，請參閱<xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>。  
 >   
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>若要加入或移除群組，在設計工具  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  選取<xref:System.Windows.Forms.ListViewItem.Group%2A>屬性，並從下拉式清單中選擇群組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.ListView.Groups%2A>  
  <xref:System.Windows.Forms.ListViewGroup>  

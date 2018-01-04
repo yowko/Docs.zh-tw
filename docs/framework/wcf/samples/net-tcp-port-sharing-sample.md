@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7410f57d7b86bf719a368f1efcc8c82d41c82d11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 範例
 TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。 如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。 其他應用程式將無法同時接聽該連接埠。  
@@ -150,4 +151,4 @@ Press <ENTER> to terminate client.
   
 5.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

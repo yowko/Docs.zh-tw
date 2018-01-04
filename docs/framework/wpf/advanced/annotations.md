@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations"></a>標註
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供文件檢視支援註解文件內容的控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [註釋概觀](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
   [附註結構描述](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   

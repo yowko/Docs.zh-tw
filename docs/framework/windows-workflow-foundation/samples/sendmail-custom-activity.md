@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fb8454d3e1e679154bc016e37b83c3ac4ff6768
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自訂活動
 此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 此自訂活動會使用 <xref:System.Net.Mail.SmtpClient> 的功能，以非同步方式傳送電子郵件及傳送具有驗證的郵件。 也會提供一些使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  

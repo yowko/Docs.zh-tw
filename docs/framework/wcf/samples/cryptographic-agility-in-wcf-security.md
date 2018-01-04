@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8b07b23f4428053964fa33150c4300645242f918
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d99ada67255d0ced8bbabc2ab6fc645e6ba9e35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 安全性中的加密彈性
 本範例示範如何在標準/自訂演算法中指定，以便在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和服務中提供敏捷的密碼編譯實作。 此範例是由下列專案所組成：  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/18/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

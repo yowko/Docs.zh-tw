@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9f05e59f0df6326fe3ba68e35d83e3eda880ee8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 854e04c53bf438c3356072d762f129b7f21b7dd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-convoy-scope"></a>異動防護範圍
 這個範例示範如何建立 Parallel Convoy 訊息活動模式搭配 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，以建立多個作業可依任何順序同時在相同交易中發生的通訊協定模型。 這個範例也示範 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 如何在沒有交易流向伺服器時自動建立新交易，因此用戶端不會利用任何交易。  

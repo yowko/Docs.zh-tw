@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06a302b13db3b82dabb43989ac272df0d9aac008
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db4110ca8ce72b43bf5771db5b1020a826bc058f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-xaml-only-service"></a>基本 XAML 僅服務
 這個範例會示範如何建立僅限 XAML 的服務。 此案例是針對汽車相關問題的診斷服務。 服務會實作為工作流程，要求客戶回答一系列的問題來診斷此問題。 此服務可以診斷兩種問題 (汽車無法啟動或是空調無法運作)。 工作流程會使用設計工具中的「要求/回覆」範本，公開三個簡單的服務作業。 該服務會裝載在 IIS 中，其做法是在 IIS 中建立虛擬目錄，然後將 service1.xamlx 和 Web.config 檔複製到該虛擬目錄，不需編譯程式碼。 依預設這個範例會自動將複製所需的檔案到當您遵循 WCF 和 WF 範例的安裝指示所建立的虛擬目錄：[的 Windows Communication Foundation範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010 中建立。  

@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 87965b8802dd770d6977154ab805889838e9c5e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 975014007ed57cc7e4b1035972923f61753c6d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-provider"></a>權杖提供者
 這個範例會示範如何實作自訂權杖提供者。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附預設的認證管理員權杖提供者。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
@@ -303,4 +304,4 @@ static void DisplayIdentityInformation()
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

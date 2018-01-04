@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控制項技術摘要 (Windows Form)
 本主題提供有關 `DataGridView` 控制項及支援這些控制項之類別的摘要資訊。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Forms.DataGridView>控制項可以關閉搭配運作<xref:System.Windows.Forms.BindingSource>元件。 此元件設計為表單的主要資料來源。 它可以管理之間的互動<xref:System.Windows.Forms.DataGridView>控制項和其資料來源，不論資料來源類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
  [DataGridView 控制項架構](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
  [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)

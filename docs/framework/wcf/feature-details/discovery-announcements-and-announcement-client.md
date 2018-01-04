@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6da9c2e251a6592bb0af039d552d02e7e4fd3fd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>探索公告與公告用戶端
 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 探索功能可讓元件公告其可用性。 如果進行此設定，服務會傳送 Hello 和 Bye 公告。 用戶端或其他元件可以接聽此類公告訊息，然後採取行動。 此方法是讓用戶端注意服務存在的替代方法。 公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。 透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以想成是訊息基礎架構。 它可以接收訊息、加以處理，然後分派到使用者程式碼執行進一步動作，或是使用使用者程式碼提供的資料建構訊息，然後傳遞到目的地。 此主題將針對進階程式開發人員，描述處理訊息與所包含資料的架構。 如需如何傳送與接收資料的簡化型工作導向檢視，請參閱 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -89,8 +90,8 @@ ms.lasthandoff: 12/02/2017
 |訊息類型|訊息中的本文資料|寫入 (OnWriteBodyContents) 實作|讀取 (OnGetReaderAtBodyContents) 實作|  
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |傳出，從經過非資料流處理的程式設計模型建立|寫入訊息需要的資料 (例如，物件與需要序列化它的 <xref:System.Runtime.Serialization.DataContractSerializer> 執行個體)*|自訂邏輯以根據儲存資料寫出訊息 (例如，呼叫 `WriteObject` 上的 `DataContractSerializer` (如果這是使用中的序列化程式))*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
-|傳出，從經過資料流處理的程式設計模型建立|使用要寫入之資料的 `Stream` *|使用 <xref:System.Xml.IStreamProvider> 機制從儲存的資料流寫出資料*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
-|從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 `XmlReader`|  
+|傳出，從經過資料流處理的程式設計模型建立|使用要寫入之資料的 `Stream`*|使用 <xref:System.Xml.IStreamProvider> 機制從儲存的資料流寫出資料*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
+|從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|使用 `XmlReader` 從儲存的 `WriteNode` 寫出內容|傳回儲存的 `XmlReader`|  
 |從非資料流的通道堆疊傳入|包含搭配 `XmlReader` 之本文資料的緩衝區|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 lang|  
   
  \*這些項目都不會直接實作在`Message`子類別，但在子類別的<xref:System.ServiceModel.Channels.BodyWriter>類別。 如需 <xref:System.ServiceModel.Channels.BodyWriter>的詳細資訊，請參閱 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
@@ -236,7 +237,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- 標記為要序列化的項目 (使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相關屬性) 必須可序列化，才能參與訊息合約。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜序列化＞一節。  
+ 標記為要序列化的項目 (使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相關屬性) 必須可序列化，才能參與訊息合約。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主題稍後的＜序列化＞一節。  
   
 ### <a name="4-parameters"></a>4.參數  
  想要描述作業而在多個資料片段執行作業的程式開發人員，通常不需要訊息合約提供的控制等級。 例如，當建立新的服務時，人們通常不想決定要使用不包裝或包裝模式，以及決定包裝函式項目的名稱。 做這些決定通常需要深入了解 Web 服務與 SOAP。  
@@ -281,5 +282,5 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分別負責插入 `DataContractSerializer` 與 `XmlSerializer`之訊息格式器的作業行為。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為實際上能夠與任何衍生自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的序列化程式共同運作，其中包含 <xref:System.Runtime.Serialization.NetDataContractSerializer> (在「使用獨立序列化」中會詳細描述)。 行為會呼叫其中一個 `CreateSerializer` 虛擬方法多載以取得序列化程式。 若要插入不同的序列化程式，請建立新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子類別，然後同時覆寫 `CreateSerializer` 多載。  
   
-## <a name="see-also"></a>另請參閱  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>請參閱  
+ [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

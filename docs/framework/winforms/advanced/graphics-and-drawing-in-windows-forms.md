@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2e8bde5d1c2904723282f03a815f17c5cc7622d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8ae9810b10a7357f7f8d00783335335a391a5211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows Form 中的圖形和繪圖
 Common Language Runtime 使用 Windows 圖形裝置介面 ([!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]) 的進階實作，稱為 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。 透過 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以建立圖形、繪製文字，並將圖形影像當做物件來管理。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 的設計目的在於提升效能和方便使用。 您可以使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在 Windows Form 和控制項上呈現圖形影像。 雖然您無法直接在 Web Form 上使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，但是您可以透過 Image Web 伺服器控制項顯示圖形影像。  
@@ -31,7 +32,7 @@ Common Language Runtime 使用 Windows 圖形裝置介面 ([!INCLUDE[ndptecgdi](
   
  如果您想要參與並立即開始，請參閱[圖形程式設計入門](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)。 它包含如何使用程式碼在 Windows 表單上繪製線條、圖形、文字和其他項目的主題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [圖形概觀](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
  介紹與圖形相關的 Managed 類別。  
   

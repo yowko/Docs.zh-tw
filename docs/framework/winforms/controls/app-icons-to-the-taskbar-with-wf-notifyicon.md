@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows Form NotifyIcon 元件將應用程式圖示加入至 TaskBar
 Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會在工作列的狀態通知區域中顯示一個圖示。 若要在 [狀態] 區域中顯示多個圖示，您必須有多個<xref:System.Windows.Forms.NotifyIcon>表單上的元件。 若要設定顯示控制項的圖示，請使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 您也可以撰寫程式碼<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件處理常式，因此當使用者按兩下圖示時，會發生的事情的情況。 例如，您可以進行設定圖示所代表的背景處理序的使用者出現的對話方塊。  
@@ -80,7 +81,7 @@ Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會在工作列的狀態
     notifyIcon1->Text = "Antivirus program";  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.NotifyIcon>  
  <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
  [操作說明：將捷徑功能表與 Windows Forms NotifyIcon 元件關聯](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  

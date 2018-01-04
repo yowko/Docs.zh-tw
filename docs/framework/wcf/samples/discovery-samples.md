@@ -13,17 +13,18 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b759580a93f6b0ab0e3d84295b7ab8a0c48a7bb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a29ceb6dd90645bc34c440117bafcd8afd774422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-samples"></a>探索 (範例)
 本節包含與探索功能相關的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
- [宣告](../../../../docs/framework/wcf/samples/announcements-sample.md)  
+## <a name="in-this-section"></a>本節內容  
+ [公告](../../../../docs/framework/wcf/samples/announcements-sample.md)  
  示範如何搭配探索功能使用公告。  
   
  [非同步尋找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [探索 Proxy 範例](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
  示範如何建立探索 Proxy 的實作以儲存現有服務的相關資訊，以及用戶端如何查詢該 Proxy 的資訊。  
   
- [探索服務，以唯一的接聽 Uri 模式範例](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
+ [使用唯一接聽 URI 模式探索服務範例](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
  示範如何探索其 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 屬性設定為 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 的服務。  
   
  [探索範圍](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  

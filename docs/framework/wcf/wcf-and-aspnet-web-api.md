@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 932db4ef12666d20ba497cc8f6d78b43c7670373
-ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
+ms.workload: dotnet
+ms.openlocfilehash: 1270eb202a1e8cbf1a297a13593dd0aa6046cb6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web 應用程式開發介面
 WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應用程式。 開發人員可運用它來建置安全、可靠與可交易性的方案，且這些方案會跨平台進行整合，並與現有投資交互操作。 [ASP.NET Web API](http://www.asp.net/web-api)是一種架構，可讓您更輕鬆地建立連線的用戶端，包括瀏覽器和行動裝置的較大範圍的 HTTP 服務。 ASP.NET Web 應用程式開發介面是在 .NET Framework 上建置 RESTful 應用程式的理想平台。 本主題提供部分指引，協助您決定最符合需求的技術。  
@@ -36,6 +37,6 @@ WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應�
   
  使用 WCF 建立可靠、安全且可透過各種傳輸存取的 Web 服務。 使用 ASP.NET Web 應用程式開發介面，建立可從各種用戶端存取的 HTTP 服務。 如果您要建立及設計新的 REST 樣式服務，請使用 ASP.NET Web 應用程式開發介面。 雖然 WCF 有提供撰寫 REST 樣式服務的部分支援，但在 ASP.NET Web 應用程式開發介面中的 REST 支援更加完整，此外，未來所有 REST 的功能改良都會在 ASP.NET Web 應用程式開發介面中進行。 如果您有現有的 WCF 服務，且您想公開其他 REST 端點，請使用 WCF 與 <xref:System.ServiceModel.WebHttpBinding>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所實作的 Web 服務通訊協定清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
 |WS-SecureConversation|[Web 服務安全轉換語言](http://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Web 服務信任語言](http://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Web 服務安全轉換語言](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> 已由提交至 OASIS WS-SX 技術委員會的勘誤表修訂。<br /><br /> [ws-sx 訊息](http://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS-ReliableMessaging 1.1|[Reliable Messaging Protocol 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|WS-ReliableMessaging 1.1|[可靠傳訊通訊協定 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 支援下表中的規格。  
   
@@ -110,13 +111,13 @@ ms.lasthandoff: 12/02/2017
   
 -   [基本的安全性設定檔 1.0 工作草稿](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>另請參閱  
- [Web 服務系統提供的互通性繫結所支援的通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+## <a name="see-also"></a>請參閱  
+ [系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL 和原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
+ [WSDL 與原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Reliable Messaging Protocol 1.0 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Reliable Messaging Protocol 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
+ [可靠傳訊通訊協定 1.0 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
+ [可靠傳訊通訊協定 1.1 版](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [傳輸通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
  [內容交換通訊協定](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

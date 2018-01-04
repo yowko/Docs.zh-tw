@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b244930f0837d3b1d548e0f7a8c77dd80e1ce039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61fb11b79459da14384af974dbc403024faa377f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>如何：變更 Windows Form TabControl 的外觀
 您可以使用的屬性，以變更 Windows Form 中的索引標籤的外觀<xref:System.Windows.Forms.TabControl>和<xref:System.Windows.Forms.TabPage>組成個別的索引標籤控制項上的物件。 藉由設定這些屬性，您可以顯示索引標籤上的映像、 顯示垂直而非水平索引標籤、 顯示多個資料列的索引標籤，和啟用或以程式設計的方式停用索引標籤。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
 -   設定<xref:System.Windows.Forms.TabControl.Appearance%2A>屬性<xref:System.Windows.Forms.TabControl>至<xref:System.Windows.Forms.TabAppearance.Buttons>或<xref:System.Windows.Forms.TabAppearance.FlatButtons>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
  [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  [操作說明：將控制項加入至索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  

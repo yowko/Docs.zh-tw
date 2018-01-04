@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e12f39a63a4f81e6deec4512a4e18ad2bda7e5e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7600ae42194b3333c404d217c2605a226df99e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="power-management-in-windows-forms"></a>Windows Form 中的電源管理
 Windows Forms 應用程式可以利用電源管理功能的 Windows 作業系統中。 您的應用程式可以監視電腦的電源狀態，並採取動作，發生狀態變更時。 例如，如果可攜式電腦上執行您的應用程式，您可以停用您的應用程式中的特定功能，當電腦的電池電力低於特定層級。  
@@ -42,7 +43,7 @@ Windows Forms 應用程式可以利用電源管理功能的 Windows 作業系統
  [!code-csharp[PowerMode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
  [!code-vb[PowerMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>  
  <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>  
  <xref:System.Windows.Forms.Application.SetSuspendState%2A>  

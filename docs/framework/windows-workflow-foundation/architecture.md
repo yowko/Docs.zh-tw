@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b58456fe99331a47871fbf4b1ad86cd43c53c2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流程架構
 [!INCLUDE[wf](../../../includes/wf-md.md)] 會引發開發互動式長期執行應用程式的抽象層級。 工作的單元會封裝為活動。 活動會在環境中執行，該環境會為流程控制、例外狀況處理、錯誤傳播、狀態資料保存、從記憶體載入及卸載處理中的工作流程、追蹤，以及交易流程提供機能。  

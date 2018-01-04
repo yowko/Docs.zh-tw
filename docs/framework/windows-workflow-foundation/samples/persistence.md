@@ -12,20 +12,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb1a20df4217177d1742f46df16ebae0a84424
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence"></a>持續性
 本節包含示範如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中將工作流程保存到永久性媒體的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
- [保存工作流程應用程式](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
+## <a name="in-this-section"></a>本節內容  
+ [持續工作流程應用程式](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
  示範如何執行 <xref:System.Activities.WorkflowApplication>，當它變成閒置時加以卸載，然後重新載入以繼續執行。  
   
- [內建的設定](../../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)  
+ [內建組態](../../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)  
  示範 SQL 工作流程執行個體存放區的使用方式和組態。  
   
  [SQLStoreExtensibility](../../../../docs/framework/windows-workflow-foundation/samples/sqlstoreextensibility.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ed270aeba08dfaf67e376b9116d5f8572b3c11b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 44577450bb81e255caf22f306dcd0276821d262c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designer-rehosting"></a>設計工具重新裝載
 設計工具重新裝載是在自訂應用程式中裝載工作流程設計畫布的一般案例。 大多數人熟悉的裝載應用程式是 Visual Studio，但在一些情況下，在應用程式中顯示工作流程設計工具可能很有用：  

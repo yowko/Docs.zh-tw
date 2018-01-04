@@ -19,16 +19,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c64715fbc976af5c765da2efe563acdc3d2ae13c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f62b4538b5f91c2f57cab52fa7563680016903a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog 元件 (Windows Form)
 Windows Form `PrintDialog` 元件是預先設定的對話方塊，用來選取印表機、選擇要列印的頁面以及決定 Windows 架構應用程式中的其他列印相關設定。 使用它做為印表機和列印相關設定選擇的簡單解決方案，就不需設定您自己的對話方塊。 您可以讓使用者列印文件中的許多部分：列印全部、列印指定的頁面範圍或列印選取的範圍。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [PrintDialog 元件概觀](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
  介紹 `PrintDialog` 元件的一般概念，這個元件可讓您顯示一個預先設定的對話方塊，使用者可以在這個對話方塊中選取印表機、選擇要列印的頁面，以及決定與列印相關的設定。  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8766e33f0fb253d532ff7161ed0a1e7842d0c50
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9355596982025bf9834924a0de8e79e7073fc0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型中的框架
 某些 HTML 文件所組成出*框架*，或可以保存自己相異 HTML 文件的視窗。 使用框架可讓您輕鬆地建立 HTML 網頁，該 HTML 網頁的其中一個或多個頁面片段維持靜態，例如導覽列，而其他框架則不斷變更其內容。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
   
  如需跨網站指令碼的詳細資訊，請參閱[關於跨框架指令碼和安全性](http://msdn.microsoft.com/library/ms533028.aspx)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [框架項目 &#124;框架物件](http://msdn.microsoft.com/library/ms535250.aspx)  
  [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

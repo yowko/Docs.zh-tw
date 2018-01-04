@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1f2fe2b7634b57e424773c16023fb657f09f23a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6879694c0c6490de5f591f9aed82075c539fbc1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：透過非 MEX 繫結擷取中繼資料
 本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 此範例中的程式碼根據[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例。  
@@ -133,5 +134,5 @@ ms.lasthandoff: 12/02/2017
   
 5.  此時，您會擁有服務端點的集合。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]匯入中繼資料，請參閱[How to： 匯入到服務端點的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

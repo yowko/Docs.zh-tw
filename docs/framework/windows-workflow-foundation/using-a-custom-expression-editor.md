@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a809c1d0eeb8f45d55f4e1f436b70ceb01b4a2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自訂運算式編輯器
 可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。 在一些案例中，您可能會想要使用自訂運算式編輯器：  
@@ -287,7 +288,7 @@ namespace WpfApplication1
 ### <a name="notes"></a>注意  
  如果您使用**ExpressionTextBox**控制項中的自訂活動設計工具中，則不需要建立和終結運算式編輯器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>和<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法<xref:System.Activities.Presentation.View.IExpressionEditorService>介面。 <xref:System.Activities.Presentation.View.ExpressionTextBox> 類別會為您管理這項工作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Activities.Presentation.View.IExpressionEditorService>  
  <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [使用自訂活動設計工具中的 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [在自訂活動設計工具中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

@@ -18,16 +18,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eebd0f36fbf1bf3bfc37b8fa836d318a9b8ac007
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c70e1a88384041a2a1d958e48c672a961752202b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能
 許多的基本行為的`DataGridView`藉由設定單一屬性，則可以修改資料格、 列和資料行。 本節中的主題會說明有幾個最常使用這些功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：隱藏 Windows Forms DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  若要防止特定資料行出現在控制項中的說明。  
   
@@ -63,6 +64,6 @@ ms.lasthandoff: 11/21/2017
  [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  提供主題描述如何使用儲存格、資料列和資料行物件進行程式設計。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

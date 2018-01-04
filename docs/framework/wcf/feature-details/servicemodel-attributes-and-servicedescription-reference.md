@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 屬性與 ServiceDescription 參考
 *描述樹狀目錄*是類型的階層 (從<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>類別)，描述服務的每個層面。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用描述樹狀目錄來建置有效的服務執行階段，以發行 Web 服務描述語言 (WSDL)、XML 結構描述定義語言 (XSD)，以及用戶端可用來連接和使用服務之服務的相關原則判斷提示 (中繼資料)，並產生描述樹狀目錄值的各種程式碼和組態檔表示法。  
@@ -71,12 +72,12 @@ ms.lasthandoff: 12/02/2017
   
 |DataContractFormatAttribute 值|受影響的描述樹狀目錄值|  
 |---------------------------------------|-------------------------------------|  
-|用法|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 值是在操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 上設定。|  
+|使用|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 值是在操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 上設定。|  
   
 |XmlSerializerFormatAttribute 值|受影響的描述樹狀目錄值|  
 |----------------------------------------|-------------------------------------|  
 |樣式|此 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上設定。|  
-|用法|<xref:System.ServiceModel.XmlSerializerFormatAttribute> 是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上設定。|  
+|使用|<xref:System.ServiceModel.XmlSerializerFormatAttribute> 是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上設定。|  
   
 |TransactionFlowAttribute 值|受影響的描述樹狀目錄值|  
 |------------------------------------|-------------------------------------|  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
 |--------------------------------------|-------------------------------------|  
 |名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |命名空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|順序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|訂單|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 值|受影響的描述樹狀目錄值|  
@@ -123,5 +124,5 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何描述樹狀目錄值會轉換成中繼資料，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

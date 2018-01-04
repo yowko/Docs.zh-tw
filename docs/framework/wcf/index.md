@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184a5b8eeafd68907c76655cfed82634de106185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b21dc040cc464495c06e8c824354563307622ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>使用 WCF 開發以服務為導向的應用程式
 文件的這一節提供 Windows Communication Foundation (WCF) 的詳細資訊，這是用於建置服務導向應用程式的統一程式設計模型。 開發人員可運用它來建置安全、可靠與可交易性的方案，且這些方案會跨平台進行整合，並與現有投資交互操作。

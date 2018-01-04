@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 202dd34cfc02fd17b9edaa558fe64ea44ddd6f71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b54982439f621ea504c91c264dde002751ec9185
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作成為 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程式的清單架構發行訂閱模式。  
@@ -171,4 +172,4 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

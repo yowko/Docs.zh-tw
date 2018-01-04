@@ -18,16 +18,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6244b21c2729df3bfe5899a4f4970f4b48030057
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9112269da02bd7eff9838509673db7adbc3fb53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout-in-windows-forms-controls"></a>Windows Form 控制項中的配置
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 <xref:System.Windows.Forms?displayProperty=nameWithType>命名空間提供您許多版面配置工具，可完成這項作業。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  描述<xref:System.Windows.Forms.Control.AutoSize%2A>屬性和其配置中的角色。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  提供 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的參考文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  [操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  [操作說明：設計可適當回應當地語系化的 Windows Forms 配置](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  

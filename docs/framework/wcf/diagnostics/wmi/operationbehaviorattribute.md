@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da0bc2ac9a4283ec9b23a1d4767f664de071ef47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63824ae2171053bee2af204e748a6fa811f2ba82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  
@@ -67,14 +68,14 @@ class OperationBehaviorAttribute : Behavior
   
  存取類型：唯讀  
   
- 表示未發生未處理的例外狀況時是否要自動認可目前的交易。  
+ 表示未發生未處理的例外狀況時是否要自動認可目前的異動。  
   
 ### <a name="transactionscoperequired"></a>TransactionScopeRequired  
  資料型別：布林值  
   
  存取類型：唯讀  
   
- 表示作業是否需要交易。  
+ 表示作業是否需要異動。  
   
 ## <a name="requirements"></a>需求  
   
@@ -82,5 +83,5 @@ class OperationBehaviorAttribute : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.OperationBehaviorAttribute>

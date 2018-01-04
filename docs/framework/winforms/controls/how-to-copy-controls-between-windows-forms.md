@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb60b1fde9ffadca20cc84a2739955c8687ed0b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47cae789fb816286a9a22b87a2a86638c7876bda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>如何：在 Windows Form 之間複製控制項
 相同表單上、 拖曳另一個表單，在專案中，或到剪貼簿，以便用於其他方案，可能會複製控制項。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  這個控制項現在貼上任何接受該類型的控制項的表單。 此外，控制項已經新增到剪貼簿。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [操作說明：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

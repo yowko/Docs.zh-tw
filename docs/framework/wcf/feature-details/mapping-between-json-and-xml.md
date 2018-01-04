@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bf104af8c88413298412d3ec3a29cd934558e2d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之間的對應
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 所產生的讀取器與寫入器會透過 JavaScript 物件標記法 (JSON) 內容來提供 XML API。 JSON 使用 JavaScript 物件常值的子集對資料進行編碼。 當您使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式並透過 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> 或 <xref:System.ServiceModel.WebHttpBinding> 來傳送或接收 JSON 內容時，也可以使用此處理站所產生的讀取器與寫入器。  
@@ -240,7 +241,7 @@ ms.lasthandoff: 12/02/2017
   
  `["myValue1",2,[true,null]]`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
  [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)

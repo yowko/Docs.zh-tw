@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 423f138ea4a9a76a105faca27956e9025dbe0c76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c437f305b847ff7922c98b4917e86ebd39ee100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
  您的提供者不需要支援所有屬性中定義的設定<xref:System.Configuration?displayProperty=nameWithType>命名空間，但它必須在最小支援<xref:System.Configuration.ApplicationScopedSettingAttribute>和<xref:System.Configuration.UserScopedSettingAttribute>，而且應該還支援<xref:System.Configuration.DefaultSettingValueAttribute>。 對於不支援的屬性，您的提供者應該失敗且不需要通知，也就是不應該擲回例外狀況。 如果設定類別使用的無效組合的屬性，不過 — 例如套用<xref:System.Configuration.ApplicationScopedSettingAttribute>和<xref:System.Configuration.UserScopedSettingAttribute>設定 — 您的提供者應該擲回例外狀況，而且也會停止作業。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  <xref:System.Configuration.LocalFileSettingsProvider>  

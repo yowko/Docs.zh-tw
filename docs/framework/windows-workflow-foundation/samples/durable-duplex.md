@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 014604262952d3aef3676318042ae3c96dc07c89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-duplex"></a>永久性雙工
 這個範例示範如何透過 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的訊息活動來設定永久性的雙工訊息交換。 永久性的雙工訊息交換是長時間進行的雙向訊息交換。 此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。  

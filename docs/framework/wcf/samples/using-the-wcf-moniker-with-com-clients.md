@@ -13,11 +13,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a44ea352f5ff82294a9a28acb5a6b7f0730cf24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbda85f056d7e8a465127bff948dcaaaf41094d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker，以將 Web 服務整合至 COM 開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -247,4 +248,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   基於安全性目的，請在完成範例之後，移除虛擬目錄定義以及安裝步驟中所授與的權限。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

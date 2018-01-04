@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>使用模擬搭配傳輸安全性
 *模擬*是上的用戶端識別讓伺服器應用程式的能力。 對服務而言，驗證存取資源時使用模擬是很常見的。 伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。 傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。 本主題說明如何搭配模擬功能來使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]模擬使用訊息安全性，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |匿名|伺服器應用程式可以根據用戶端的認證執行存取檢查，但不會接收任何有關用戶端身分識別的資訊。 模擬等級只對電腦上的通訊有意義，例如具名管道。 使用 `Anonymous` 搭配遠端連線將模擬等級提升至識別。|  
 |識別|伺服器應用程式知道用戶端的身分，而且可以根據用戶端的認證執行存取驗證，但無法模擬用戶端。 若權杖提供者未提供不同的模擬等級，則識別是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中搭配 SSPI 認證使用的預設模擬等級。|  
 |Impersonate|除了執行存取檢查外，伺服器應用程式可以存取做為用戶端的伺服器電腦上的資源。 伺服器應用程式無法使用用戶端識別存取遠端電腦上的資源，因為模擬的權杖沒有網路認證。|  
-|委派|除了擁有與 `Impersonate` 相同的功能外，「委派」模擬等級也可以使用用戶端識別讓伺服器應用程式存取遠端電腦上的資訊，並且將識別傳遞到其他應用程式。<br /><br /> **重要**伺服器網域帳戶必須標示為受信任可以委派的網域控制站，才能使用這些額外的功能。 這個模擬等級無法搭配標示為敏感的用戶端網域帳戶使用。|  
+|Delegate - 委派|除了擁有與 `Impersonate` 相同的功能外，「委派」模擬等級也可以使用用戶端識別讓伺服器應用程式存取遠端電腦上的資訊，並且將識別傳遞到其他應用程式。<br /><br /> **重要**伺服器網域帳戶必須標示為受信任可以委派的網域控制站，才能使用這些額外的功能。 這個模擬等級無法搭配標示為敏感的用戶端網域帳戶使用。|  
   
  最常搭配傳輸安全性層級為`Identify`和`Impersonate`。 不建議將 `None` 和 `Anonymous` 等級使用於一般用途，而且很多傳輸不支援使用這些等級進行驗證。 請小心使用 `Delegate` 等級的強大功能， 僅將委派憑證的使用權限提供給受信任的伺服器應用程式。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP 傳輸，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [如何：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  

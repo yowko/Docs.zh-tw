@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87121270d45637834b9499228075f49710073d21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility"></a>新聞訂閱擴充性
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以允許以各種格式將新聞訂閱內容寫入網路中。 抽象資料模型包含下列類別：  
@@ -54,6 +55,6 @@ ms.lasthandoff: 12/02/2017
   
 -   覆寫 MyExtensionFeed 類別中的 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> 以產生 MyExtensionItem，而不是預設的 <xref:System.ServiceModel.Syndication.SyndicationItem>。 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 中定義了一系列的方法，可建立 <xref:System.ServiceModel.Syndication.SyndicationLink>、<xref:System.ServiceModel.Syndication.SyndicationCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationPerson> 物件 (例如，<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>)。 這些全部都可加以覆寫，以建立自訂的衍生類別。  
   
-## <a name="see-also"></a>另請參閱  
- [WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [新聞訂閱架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+## <a name="see-also"></a>請參閱  
+ [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [摘要整合架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

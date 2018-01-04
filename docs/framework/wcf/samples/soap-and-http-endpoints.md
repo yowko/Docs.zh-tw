@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d122512a16a0959d60bfa658d96aa87a52e40299
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef5059a886012c00d3d33327baeaae49a9d5b54c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 及 HTTP 端點
 這個範例會示範如何實作以 RPC 為基礎的服務，並將它公開 SOAP 格式和"Plain Old XML"(POX) 格式使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web 程式設計模型。 請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)服務的 HTTP 繫結的更多詳細的範例。 這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。  

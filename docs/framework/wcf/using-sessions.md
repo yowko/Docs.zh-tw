@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82fab5b5d7c702bc9f5e595572b8eba821159cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，「 *工作階段* 」(Session) 會使一組訊息相互關連至對話。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作階段不同於 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中可用的工作階段物件，而且支援不同的行為，控制的方式也不一樣。 本主題說明工作階段在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中啟用的功能及其用法。  
@@ -154,6 +155,6 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  此時 MaxConcurrentSessions 沒有作用，因為只有一個可用的「工作階段」。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

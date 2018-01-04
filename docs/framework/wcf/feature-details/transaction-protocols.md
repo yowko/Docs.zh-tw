@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6343a67f7fc333b863aee4fc5ab31edd15efabe1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13784a3a5062705abba1b3bbb33a04e66bd22072
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols"></a>傳輸通訊協定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會實作 WS-Atomic Transaction 和 WS-Coordination 通訊協定。  
@@ -27,15 +28,15 @@ ms.lasthandoff: 12/02/2017
 |WS-Coordination|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
 |WS-AtomicTransaction|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
   
- 這些通訊協定規格的互通性需要滿足兩個層級：在應用程式之間，以及在交易管理員之間的層級 (請參閱下圖)。 規格詳細描述兩種互通性層級的訊息格式和訊息交換。 對應用程式之間的交換也會如同針對標準應用程式交換一樣，套用特定安全性、可靠性和編碼。 但是，交易管理員之間若要成功地達成互通性，便需要有一致的特定繫結，因為使用者通常不會設定它。  
+ 這些通訊協定規格的互通性需要滿足兩個層級：在應用程式之間，以及在異動管理員之間的層級 (請參閱下圖)。 規格詳細描述兩種互通性層級的訊息格式和訊息交換。 對應用程式之間的交換也會如同針對標準應用程式交換一樣，套用特定安全性、可靠性和編碼。 但是，交易管理員之間若要成功地達成互通性，便需要有一致的特定繫結，因為使用者通常不會設定它。  
   
- 此主題描述 WS-Atomic 交易 (WS-AT) 安全性規格的組成，並且描述使用在交易管理員之間通訊的安全繫結。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
+ 此主題描述 WS-Atomic 異動 (WS-AT) 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
   
  下圖描述兩個異動管理員之間：異動管理員 1 和異動管理員 2，以及兩個應用程式之間：應用程式 1 和應用程式 2 的互通性。  
   
  ![交易通訊協定](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "異動管理員")  
   
- 使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有交易管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
+ 使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有異動管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
   
 |||  
 |-|-|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
 |10.註冊 (永久性)|21.已認可 (2PC)|  
 |11.RegisterResponse|22.已認可 (2PC)|  
   
- 此文件描述 WS-AtomicTransaction 安全性規格的組成，並且描述使用在交易管理員之間通訊的安全繫結。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試。  
+ 此文件描述 WS-AtomicTransaction 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試。  
   
  圖形與表格會從安全性觀點顯示四種訊息類別：  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
 |o||[http://go.microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
 |xsd||[http://go.microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
   
-## <a name="transaction-manager-bindings"></a>交易管理員繫結  
+## <a name="transaction-manager-bindings"></a>異動管理員繫結程序  
  R1001： 參與 WS-AT 1.0 交易的交易管理員必須使用 SOAP 1.1 和 Ws-addressing 2004/08 以便 Ws-atomic Transaction 和 Ws-coordination 訊息交換。  
   
  R1002：參與 WS-AT 1.1 交易的交易管理員必須使用 SOAP 1.1，並使用 WS-Addressing 2005/08 以便交換 WS-Atomic Transaction 和 WS-Coordination 訊息。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 12/02/2017
  這是個替代 (混合模式) 繫結，會針對識別建立目的同時使用傳輸安全性和 WS-Coordination 發行權杖模型。 啟動與登錄是兩個繫結之間唯一不同的項目。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
- X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
+ X.509 憑證會用來建立異動管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
   
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
@@ -136,7 +137,7 @@ ms.lasthandoff: 12/02/2017
  B1241：實作必須支援 `wsa:ReferenceParameters`，如同 WS-Addressing 中所述以達到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 2PC 訊息相互關聯。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
- 應用程式可以隨意使用應用程式之間訊息的任何特定繫結，只要繫結符合下列安全性需求：  
+ 應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
   
 -   R2001：應用程式之間的訊息必須將 `t:IssuedTokens` 標頭與訊息標頭中的 `CoordinationContext` 一起流通。  
   

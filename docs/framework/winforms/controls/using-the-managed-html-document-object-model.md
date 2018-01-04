@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff1004248e709b4b4913b90eb81f0726ab390c54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 876cee67f917291214d6ea8b9abf7d2975c1fd25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用 Managed HTML 文件物件模型
 Managed HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 Internet Explorer 所公開的 HTML 類別。 使用這些類別來管理裝載於 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或是要建立新的頁面開始。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：存取 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/how-to-access-the-managed-html-document-object-model.md)  
  說明如何取得有效的執行個體<xref:System.Windows.Forms.HtmlDocument>從 Windows Form 應用程式或<xref:System.Windows.Forms.UserControl>裝載於 Internet Explorer。  
   
@@ -49,5 +50,5 @@ Managed HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dn
 ## <a name="related-sections"></a>相關章節  
  [WebBrowser 控制項](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關於 DHTML 物件模型](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/om/doc_object.asp)

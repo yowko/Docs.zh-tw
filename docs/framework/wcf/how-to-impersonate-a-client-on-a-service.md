@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de7bfb7d926f9aa75ccfcfe8a550a0dbae4e12ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c868e2b31fa15d0f0c9228828beba03666d5591
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>HOW TO：在服務上模擬用戶端
 模擬 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務上的用戶端使服務可以代表用戶端執行動作。 關於存取控制清單 (ACL) 檢查的動作，例如存取機器上的目錄和檔案或存取 SQL Server 資料庫，請根據用戶端使用者帳戶檢查 ACL。 本主題說明在 Windows 網域中啟用用戶端以設定用戶端模擬等級所需的基本步驟。 如需此文件的實用範例，請參閱 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]用戶端模擬，請參閱[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_SimpleImpersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#1)]
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.OperationBehaviorAttribute>  
  <xref:System.Security.Principal.TokenImpersonationLevel>  
  [模擬用戶端](../../../docs/framework/wcf/samples/impersonating-the-client.md)  

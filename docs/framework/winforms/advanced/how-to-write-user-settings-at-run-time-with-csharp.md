@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5966aef77c994d2657bd282ad15e8f59a64eeb47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 274a104d194c9db13d69d2024dc54595690c2ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-user-settings-at-run-time-with-c"></a>如何：在執行階段使用 C# 撰寫使用者設定 #
 應用程式範圍的設定是唯讀的，並只能在設計階段變更，或藉由更改應用程式工作階段之間的 .config 檔案變更。 不過，使用者範圍的設定可以在執行階段撰寫，就如同您變更任何屬性值一樣。 新的值在應用程式工作階段期間保存。 您可以藉由呼叫 Save 方法在應用程式工作階段之間保存設定的變更。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
      使用者設定會儲存在使用者的本機隱藏應用程式儲存資料夾的子資料夾內。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用應用程式設定和使用者設定](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [操作說明：在執行階段使用 C# 讀取設定](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
  [應用程式設定概觀](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

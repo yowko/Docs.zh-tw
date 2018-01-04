@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b717a5448a32eea3957e1e7e45c4dfc2f8801775
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 155726e5cd65c2f31a3205a8d18f662b66fb40e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 自訂活動
 這個範例示範 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的數個關鍵功能，包括如何建立簡單的自訂活動。 這個範例中示範的部分功能是以 C# 建立自訂活動，以及使用 `in` 和 `out` 引數 (<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>)。  

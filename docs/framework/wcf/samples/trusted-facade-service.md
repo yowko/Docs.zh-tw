@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65a9f5ca09fd93861df19af1ced86f7b74af93ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4147f00b9396609ae80091a02c3f7d2450db34f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 這個案例範例會示範如何將呼叫者的身分識別資訊從一個服務流動到另一個使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性基礎結構的服務。  
@@ -301,4 +302,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

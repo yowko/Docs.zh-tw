@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 154c60112e74371f0d4d9afb2fbb38aaa32221c7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2e78ce6b61ed1c6755072729b08a76d402e021b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timer-component-windows-forms"></a>Timer 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.Timer> 是定期引發事件的元件。 這個元件是專為 Windows Form 環境所設計。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Timer 元件概觀](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.Timer> 元件的一般概念，這個元件可讓您設定應用程式以回應週期性事件。  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01c1bc2d202080349db32452adfe549d7a6dd3cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 46994828124452d00ae74c30142dd62c52000b39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="session"></a>工作階段
 工作階段範例會示範如何實作需要工作階段的合約。 工作階段提供執行多個作業的內容。 這可以讓服務將狀態與指定工作階段相關聯，如此一來後續作業就能夠使用之前作業的狀態。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作計算機服務。 `ICalculator` 合約已修改成允許執行一組算數運算，並同時保留執行結果。 `ICalculatorSession` 合約會定義這項功能。 此服務會維護用戶端的狀態，因為在進行計算時已呼叫了多個服務作業。 用戶端會呼叫 `Result()` 以擷取目前的結果，並且呼叫 `Clear()` 將結果清除為零。  
@@ -101,4 +102,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

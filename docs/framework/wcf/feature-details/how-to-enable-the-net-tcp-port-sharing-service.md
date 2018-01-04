@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>HOW TO：啟用 Net.TCP 連接埠共用服務
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用名為 Net.TCP 連接埠共用服務的 Windows 服務來協助多個處理序共用 TCP 連接埠。 這項服務會安裝為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的一部份，但是為了安全起見預設不會啟用此服務，因此您必須在第一次使用時手動加以啟用。 本主題說明如何使用 Microsoft Management Console (MMC) 嵌入式管理單元，來設定 Net TCP Port Sharing Service。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="example"></a>範例  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Net.TCP 連接埠共用](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [設定 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+ [設定 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63478620a2b604d27f2d9d154383cb0bae6b6da
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>HOW TO：部署 COM+ 整合應用程式
 撰寫好 COM+ 整合應用程式後，您可能會想要將它部署在其他機器上。 此主題描述如何將 COM+ 整合應用程式從一部機器移到另一部機器。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  從機器 A 的 VRoot，將 .svc 檔 (componentName.svc) 和 Web.config 檔複製到機器 B 上新建立的 VRoot。  
   
-## <a name="see-also"></a>另請參閱  
- [整合 COM + 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- [如何： 設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- [如何： 使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a>請參閱  
+ [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [如何：設定 COM+ 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [如何：使用 COM+ 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0220dffd07f41210051953130cf99ebbfd4f0173
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea54b2f84c9de233ff2560795dc97f79c15aa0af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>HOW TO：指定組態中的服務繫結
 在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。 如需如何設定此服務，使用程式碼，而不組態的說明，請參閱[How to： 指定程式碼中的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  
@@ -102,6 +103,6 @@ ms.lasthandoff: 12/02/2017
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

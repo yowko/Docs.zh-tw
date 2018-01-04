@@ -16,20 +16,21 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 83e455c2377168c316bf34c25b687cde48b0fa3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3dc0e44e7f561e39128e32d3af5fbd495316fdd3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>HOW TO：為安全工作階段建立安全性內容權杖
-在安全工作階段中使用具狀態的安全性內容權杖時，工作階段可以承受正在回收的服務。 例如，當安全工作階段使用沒有狀態的 SCT 而且重設了網際網路資訊服務 (IIS)，則與該服務相關聯的工作階段資料就會遺失。 這個工作階段資料包含 SCT 權杖快取。 因此，下一次當用戶端傳送的服務是沒有狀態的 SCT 時，便會傳回錯誤，因為無法擷取與 SCT 相關聯的金鑰。 但是，如果使用可設定狀態的 SCT，則與 SCT 相關聯的金鑰就會包含在 SCT 中。 由於金鑰是包含在 SCT (因此也包含在訊息中)，安全工作階段就不會受到正在回收的服務所影響。 根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會在安全工作階段中使用沒有狀態的 SCT。 此主題將詳細說明如何在安全工作階段中使用可設定狀態的 SCT。  
+在安全工作階段中使用具狀態的安全性內容權杖時，工作階段可以承受正在回收的服務。 例如，當安全工作階段使用無狀態的 SCT 而且重設了網際網路資訊服務 (IIS)，則與該服務相關聯的工作階段資料就會遺失。 這個工作階段資料包含 SCT 權杖快取。 因此，下一次當用戶端傳送的服務是無狀態的 SCT 時，便會傳回錯誤，因為無法擷取與 SCT 相關聯的金鑰。 但是，如果使用具狀態的 SCT，則與 SCT 相關聯的金鑰就會包含在 SCT 中。 由於金鑰是包含在 SCT (因此也包含在訊息中)，安全工作階段就不會受到正在回收的服務所影響。 根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會在安全工作階段中使用沒有狀態的 SCT。 此主題將詳細說明如何在安全工作階段中使用具狀態的 SCT。  
   
 > [!NOTE]
 >  您無法在安全工作階段 (與衍生自 <xref:System.ServiceModel.Channels.IDuplexChannel> 的合約相關) 中使用可設定狀態的 SCT。  
   
 > [!NOTE]
->  對於在安全工作階段中使用可設定狀態之 SCT 的應用程式來說，服務的執行緒識別必須是具有相關使用者設定檔的使用者帳戶。 如果服務透過不具備使用者設定檔的帳戶來執行，例如 `Local Service`，可能會擲回例外狀況。  
+>  對於在安全工作階段中使用具狀態之 SCT 的應用程式來說，服務的執行緒識別必須是具有相關使用者設定檔的使用者帳戶。 如果服務透過不具備使用者設定檔的帳戶來執行，例如 `Local Service`，可能會擲回例外狀況。  
   
 > [!NOTE]
 >  當 Windows XP 需要模擬時，請使用不包含可設定狀態之 SCT 的安全工作階段。 當可設定狀態的 SCT 與模擬一起使用時，就會擲回 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
@@ -119,5 +120,5 @@ ms.lasthandoff: 10/18/2017
 </customBinding>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ee7376f87fd0e4ce15d192dd53f872e84187acc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b7812023fbe2159daba205727e20e1b69b84686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-formats"></a>中繼資料格式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支援下表中的中繼資料格式。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 12/02/2017
 |WS 中繼資料交換|[Web 服務中繼資料交換 (Ws-metadataexchange) 1.1 版](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-MetadataExchange 以擷取 XML 結構描述、WSDL 和 WS-Policy。|  
 |WSDL 的 WS 定址繫結|[Web 服務定址 1.0-WSDL 繫結](http://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WSDL 的 WS-Addressing 繫結，以便將定址資訊附加到 WSDL。|  
   
-## <a name="see-also"></a>另請參閱  
- [Web 服務系統提供的互通性繫結所支援的通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [WSDL 和原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+## <a name="see-also"></a>請參閱  
+ [系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [WSDL 與原則](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)

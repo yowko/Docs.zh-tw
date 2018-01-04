@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69999e598bfc57278c1793d3cc82e0055026267d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5153f6389c4477a18c647d7cdaf7b49b43bb7ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>如何：擷取與 Windows Form 中檔案相關的圖示
 許多檔案都已內嵌提供相關聯的檔案類型的視覺表示法的圖示。 例如，Microsoft Word 文件包含它們識別為 Word 文件的圖示。 當清單控制項或資料表控制項中顯示檔案，您可能要顯示的檔案類型，每個檔案名稱旁邊的圖示。 您可以輕鬆地使用<xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>方法。  
@@ -42,6 +43,6 @@ ms.lasthandoff: 11/21/2017
   
      您必須先確定您的表單匯入<xref:System.IO>命名空間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

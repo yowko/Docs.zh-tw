@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 <xref:System.Activities.Statements.Interop> 活動是 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活動，它會將 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活動包裝在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程中。 WF 3 活動可以是單一分葉活動，也可以是完整的活動樹狀結構。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動的執行 (包括取消及例外狀況處理) 與保存會發生於執行中的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程執行個體的內容中。  
@@ -63,5 +64,5 @@ ms.lasthandoff: 12/02/2017
   
 4.  WF 3 自訂活動可以使用互通環境內的工作流程佇列存取資料，方式就和在 WF3 工作流程執行階段中完全相同。 不需要變更任何自訂活動程式碼。 在主機上，資料會透過繼續 <xref:System.Activities.Bookmark> 而加入 WF3 工作流程佇列。 書籤的名稱是 <xref:System.IComparable> 工作流程佇列名稱的字串形式。  
   
-## <a name="see-also"></a>另請參閱  
- [.NET Framework 4.5 工作流程中使用.NET Framework 3.0 或.NET Framework 3.5 活動](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+## <a name="see-also"></a>請參閱  
+ [在 .NET Framework 4.5 工作流程中使用 .NET Framework 3.0 或 .NET Framework 3.5 活動](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)

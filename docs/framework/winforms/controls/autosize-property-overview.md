@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8216880ebdede03bbd01fe53b622c14ca8c514d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34f92bdc80f62225efe5e008f0893905f49da970
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="autosize-property-overview"></a>AutoSize 屬性概觀
 <xref:System.Windows.Forms.Control.AutoSize%2A>屬性可讓控制項來變更其大小，如有必要，以達到所指定的值<xref:System.Windows.Forms.Control.PreferredSize%2A>屬性。 設定調整為特定控制項的調整大小行為`AutoSizeMode`屬性。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  若要提升生產力，Windows Form 設計工具陰影<xref:System.Windows.Forms.Control.AutoSize%2A>屬性<xref:System.Windows.Forms.Form>類別。 在設計階段，在表單的行為一樣<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設定為`false`，不論其實際的設定。 在執行階段，進行任何特殊住宿，而<xref:System.Windows.Forms.Control.AutoSize%2A>屬性到底要套用屬性的設定值所指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.Control.AutoSize%2A>  
  <xref:System.Windows.Forms.Control.PreferredSize%2A>  
  <xref:System.Windows.Forms.Control.GetPreferredSize%2A>
