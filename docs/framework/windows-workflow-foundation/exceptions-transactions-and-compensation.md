@@ -1,5 +1,5 @@
 ---
-title: "例外狀況、交易與補償"
+title: "例外狀況、異動與補償"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,27 +13,28 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fab7247540ba4e098a793adebab54ca4219e503
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e83661ba66ca6a71f26c11172902d5bc602a2f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="exceptions-transactions-and-compensation"></a><span data-ttu-id="98cea-102">例外狀況、異動與補償</span><span class="sxs-lookup"><span data-stu-id="98cea-102">Exceptions, Transactions, and Compensation</span></span>
-[!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="98cea-103"> 提供數種不同的機制，可用於處理工作流程中的執行階段錯誤狀況。</span><span class="sxs-lookup"><span data-stu-id="98cea-103"> provides several different mechanisms for handling run-time error conditions in workflows.</span></span> <span data-ttu-id="98cea-104">工作流程可以合併運用例外狀況處理常式、異動、取消與補償來處理錯誤狀況，並從錯誤狀況正常復原。</span><span class="sxs-lookup"><span data-stu-id="98cea-104">Workflows can use a combination of exception handlers, transactions, cancellation, and compensation to handle and recover gracefully from error conditions.</span></span>  
+# <a name="exceptions-transactions-and-compensation"></a><span data-ttu-id="0114e-102">例外狀況、異動與補償</span><span class="sxs-lookup"><span data-stu-id="0114e-102">Exceptions, Transactions, and Compensation</span></span>
+[!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="0114e-103"> 提供數種不同的機制，可用於處理工作流程中的執行階段錯誤狀況。</span><span class="sxs-lookup"><span data-stu-id="0114e-103"> provides several different mechanisms for handling run-time error conditions in workflows.</span></span> <span data-ttu-id="0114e-104">工作流程可以合併運用例外狀況處理常式、異動、取消與補償來處理錯誤狀況，並從錯誤狀況正常復原。</span><span class="sxs-lookup"><span data-stu-id="0114e-104">Workflows can use a combination of exception handlers, transactions, cancellation, and compensation to handle and recover gracefully from error conditions.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="98cea-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="98cea-105">In This Section</span></span>  
- [<span data-ttu-id="98cea-106">例外狀況</span><span class="sxs-lookup"><span data-stu-id="98cea-106">Exceptions</span></span>](../../../docs/framework/windows-workflow-foundation/exceptions.md)  
- <span data-ttu-id="98cea-107">示範如何使用 <xref:System.Activities.Statements.TryCatch> 活動處理工作流程中的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="98cea-107">Demonstrates how to use the <xref:System.Activities.Statements.TryCatch> activity to handle exceptions in a workflow.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0114e-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="0114e-105">In This Section</span></span>  
+ [<span data-ttu-id="0114e-106">例外狀況</span><span class="sxs-lookup"><span data-stu-id="0114e-106">Exceptions</span></span>](../../../docs/framework/windows-workflow-foundation/exceptions.md)  
+ <span data-ttu-id="0114e-107">示範如何使用 <xref:System.Activities.Statements.TryCatch> 活動處理工作流程中的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="0114e-107">Demonstrates how to use the <xref:System.Activities.Statements.TryCatch> activity to handle exceptions in a workflow.</span></span>  
   
- [<span data-ttu-id="98cea-108">異動</span><span class="sxs-lookup"><span data-stu-id="98cea-108">Transactions</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)  
- <span data-ttu-id="98cea-109">示範如何使用 <xref:System.Activities.Statements.TransactionScope> 活動運用工作流程中的交易。</span><span class="sxs-lookup"><span data-stu-id="98cea-109">Demonstrates how to use the <xref:System.Activities.Statements.TransactionScope> activity to use transactions in a workflow.</span></span>  
+ [<span data-ttu-id="0114e-108">異動</span><span class="sxs-lookup"><span data-stu-id="0114e-108">Transactions</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)  
+ <span data-ttu-id="0114e-109">示範如何使用 <xref:System.Activities.Statements.TransactionScope> 活動運用工作流程中的交易。</span><span class="sxs-lookup"><span data-stu-id="0114e-109">Demonstrates how to use the <xref:System.Activities.Statements.TransactionScope> activity to use transactions in a workflow.</span></span>  
   
- [<span data-ttu-id="98cea-110">補償</span><span class="sxs-lookup"><span data-stu-id="98cea-110">Compensation</span></span>](../../../docs/framework/windows-workflow-foundation/compensation.md)  
- <span data-ttu-id="98cea-111">描述工作流程中的補償，並且示範如何使用 <xref:System.Activities.Statements.CompensableActivity>、<xref:System.Activities.Statements.Compensate> 和 <xref:System.Activities.Statements.Confirm> 等補償活動。</span><span class="sxs-lookup"><span data-stu-id="98cea-111">Describes compensation in workflows and demonstrates how to use compensation activities such as <xref:System.Activities.Statements.CompensableActivity>, <xref:System.Activities.Statements.Compensate>, and <xref:System.Activities.Statements.Confirm>.</span></span>  
+ [<span data-ttu-id="0114e-110">補償</span><span class="sxs-lookup"><span data-stu-id="0114e-110">Compensation</span></span>](../../../docs/framework/windows-workflow-foundation/compensation.md)  
+ <span data-ttu-id="0114e-111">描述工作流程中的補償，並且示範如何使用 <xref:System.Activities.Statements.CompensableActivity>、<xref:System.Activities.Statements.Compensate> 和 <xref:System.Activities.Statements.Confirm> 等補償活動。</span><span class="sxs-lookup"><span data-stu-id="0114e-111">Describes compensation in workflows and demonstrates how to use compensation activities such as <xref:System.Activities.Statements.CompensableActivity>, <xref:System.Activities.Statements.Compensate>, and <xref:System.Activities.Statements.Confirm>.</span></span>  
   
- [<span data-ttu-id="98cea-112">取消</span><span class="sxs-lookup"><span data-stu-id="98cea-112">Cancellation</span></span>](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)  
- <span data-ttu-id="98cea-113">描述如何使用內建活動以及自訂活動，在工作流程中執行取消處理。</span><span class="sxs-lookup"><span data-stu-id="98cea-113">Describes how to perform cancellation handling in workflows using built-in activities as well as custom activities.</span></span>  
+ [<span data-ttu-id="0114e-112">取消</span><span class="sxs-lookup"><span data-stu-id="0114e-112">Cancellation</span></span>](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)  
+ <span data-ttu-id="0114e-113">描述如何使用內建活動以及自訂活動，在工作流程中執行取消處理。</span><span class="sxs-lookup"><span data-stu-id="0114e-113">Describes how to perform cancellation handling in workflows using built-in activities as well as custom activities.</span></span>  
   
- [<span data-ttu-id="98cea-114">偵錯工作流程</span><span class="sxs-lookup"><span data-stu-id="98cea-114">Debugging Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/debugging-workflows.md)  
- <span data-ttu-id="98cea-115">描述如何偵錯工作流程。</span><span class="sxs-lookup"><span data-stu-id="98cea-115">Describes how to debug workflows.</span></span>
+ [<span data-ttu-id="0114e-114">偵錯工作流程</span><span class="sxs-lookup"><span data-stu-id="0114e-114">Debugging Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/debugging-workflows.md)  
+ <span data-ttu-id="0114e-115">描述如何偵錯工作流程。</span><span class="sxs-lookup"><span data-stu-id="0114e-115">Describes how to debug workflows.</span></span>

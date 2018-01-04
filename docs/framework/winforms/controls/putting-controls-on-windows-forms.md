@@ -15,37 +15,38 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eccefd35e34ec2909cee81561576f8792e50e4e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a78c7a76c907e4b6d49963c76cfe98c099a391d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="putting-controls-on-windows-forms"></a><span data-ttu-id="da27b-102">將控制項加入 Windows Form</span><span class="sxs-lookup"><span data-stu-id="da27b-102">Putting Controls on Windows Forms</span></span>
-<span data-ttu-id="da27b-103">有各種不同的控制項，您可以放在 Windows Form 上，根據您的應用程式的需求。</span><span class="sxs-lookup"><span data-stu-id="da27b-103">There are a wide variety of controls that you can put on Windows Forms, depending on the needs of your application.</span></span>  
+# <a name="putting-controls-on-windows-forms"></a><span data-ttu-id="a3225-102">將控制項加入 Windows Form</span><span class="sxs-lookup"><span data-stu-id="a3225-102">Putting Controls on Windows Forms</span></span>
+<span data-ttu-id="a3225-103">有各種不同的控制項，您可以放在 Windows Form 上，根據您的應用程式的需求。</span><span class="sxs-lookup"><span data-stu-id="a3225-103">There are a wide variety of controls that you can put on Windows Forms, depending on the needs of your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da27b-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="da27b-104">In This Section</span></span>  
- [<span data-ttu-id="da27b-105">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da27b-105">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- <span data-ttu-id="da27b-106">說明如何將控制項附加至您的表單。</span><span class="sxs-lookup"><span data-stu-id="da27b-106">Gives directions for attaching controls to your form.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a3225-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="a3225-104">In This Section</span></span>  
+ [<span data-ttu-id="a3225-105">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a3225-105">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ <span data-ttu-id="a3225-106">說明如何將控制項附加至您的表單。</span><span class="sxs-lookup"><span data-stu-id="a3225-106">Gives directions for attaching controls to your form.</span></span>  
   
- [<span data-ttu-id="da27b-107">操作說明：將沒有使用者介面的控制項加入至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da27b-107">How to: Add Controls Without a User Interface to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
- <span data-ttu-id="da27b-108">說明如何將沒有使用者介面控制項附加至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="da27b-108">Gives directions for appending controls with no user interface to your application.</span></span>  
+ [<span data-ttu-id="a3225-107">操作說明：將沒有使用者介面的控制項加入至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a3225-107">How to: Add Controls Without a User Interface to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
+ <span data-ttu-id="a3225-108">說明如何將沒有使用者介面控制項附加至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="a3225-108">Gives directions for appending controls with no user interface to your application.</span></span>  
   
- [<span data-ttu-id="da27b-109">操作說明：在執行階段時從控制項集合新增或移除</span><span class="sxs-lookup"><span data-stu-id="da27b-109">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
- <span data-ttu-id="da27b-110">說明如何加入和移除面板上的控制項在執行階段。</span><span class="sxs-lookup"><span data-stu-id="da27b-110">Explains how to add and remove controls on a panel at run time.</span></span>  
+ [<span data-ttu-id="a3225-109">操作說明：在執行階段時從控制項集合新增或移除</span><span class="sxs-lookup"><span data-stu-id="a3225-109">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
+ <span data-ttu-id="a3225-110">說明如何加入和移除面板上的控制項在執行階段。</span><span class="sxs-lookup"><span data-stu-id="a3225-110">Explains how to add and remove controls on a panel at run time.</span></span>  
   
- [<span data-ttu-id="da27b-111">逐步解說：自動將自訂元件填入工具箱</span><span class="sxs-lookup"><span data-stu-id="da27b-111">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- <span data-ttu-id="da27b-112">示範如何進行自訂元件會自動出現在**工具箱**建立元件之後。</span><span class="sxs-lookup"><span data-stu-id="da27b-112">Demonstrates how you can make a custom component automatically appear in the **Toolbox** once the component is created.</span></span>  
+ [<span data-ttu-id="a3225-111">逐步解說：自動將自訂元件填入工具箱</span><span class="sxs-lookup"><span data-stu-id="a3225-111">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ <span data-ttu-id="a3225-112">示範如何進行自訂元件會自動出現在**工具箱**建立元件之後。</span><span class="sxs-lookup"><span data-stu-id="a3225-112">Demonstrates how you can make a custom component automatically appear in the **Toolbox** once the component is created.</span></span>  
   
- [<span data-ttu-id="da27b-113">操作說明：將 ActiveX 控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da27b-113">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- <span data-ttu-id="da27b-114">說明如何使用舊版的 ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="da27b-114">Gives directions for working with legacy ActiveX controls.</span></span>  
+ [<span data-ttu-id="a3225-113">操作說明：將 ActiveX 控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a3225-113">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ <span data-ttu-id="a3225-114">說明如何使用舊版的 ActiveX 控制項。</span><span class="sxs-lookup"><span data-stu-id="a3225-114">Gives directions for working with legacy ActiveX controls.</span></span>  
   
- [<span data-ttu-id="da27b-115">在 Windows Forms 上裝載 ActiveX 控制項的考慮因素</span><span class="sxs-lookup"><span data-stu-id="da27b-115">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
- <span data-ttu-id="da27b-116">描述規劃使用 ActiveX 控制項的應用程式時，請記住的事項。</span><span class="sxs-lookup"><span data-stu-id="da27b-116">Describes things to keep in mind when planning an application that uses ActiveX controls.</span></span>  
+ [<span data-ttu-id="a3225-115">在 Windows Forms 上裝載 ActiveX 控制項的考慮因素</span><span class="sxs-lookup"><span data-stu-id="a3225-115">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+ <span data-ttu-id="a3225-116">描述規劃使用 ActiveX 控制項的應用程式時，請記住的事項。</span><span class="sxs-lookup"><span data-stu-id="a3225-116">Describes things to keep in mind when planning an application that uses ActiveX controls.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="da27b-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="da27b-117">Related Sections</span></span>  
- [<span data-ttu-id="da27b-118">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="da27b-118">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- <span data-ttu-id="da27b-119">提供控制項，您可以執行與其簡介主題的連結。</span><span class="sxs-lookup"><span data-stu-id="da27b-119">Provides links to introductory topics on controls and what you can do with them.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="a3225-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="a3225-117">Related Sections</span></span>  
+ [<span data-ttu-id="a3225-118">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="a3225-118">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="a3225-119">提供控制項，您可以執行與其簡介主題的連結。</span><span class="sxs-lookup"><span data-stu-id="a3225-119">Provides links to introductory topics on controls and what you can do with them.</span></span>  
   
- [<span data-ttu-id="da27b-120">Windows Forms 中的使用者輸入驗證</span><span class="sxs-lookup"><span data-stu-id="da27b-120">User Input Validation in Windows Forms</span></span>](../../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- <span data-ttu-id="da27b-121">說明的基本概念以及理論後驗證 Windows Form 控制項的內容。</span><span class="sxs-lookup"><span data-stu-id="da27b-121">Explains the basics of and theory behind validating the contents of Windows Forms controls.</span></span>
+ [<span data-ttu-id="a3225-120">Windows Forms 中的使用者輸入驗證</span><span class="sxs-lookup"><span data-stu-id="a3225-120">User Input Validation in Windows Forms</span></span>](../../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
+ <span data-ttu-id="a3225-121">說明的基本概念以及理論後驗證 Windows Form 控制項的內容。</span><span class="sxs-lookup"><span data-stu-id="a3225-121">Explains the basics of and theory behind validating the contents of Windows Forms controls.</span></span>

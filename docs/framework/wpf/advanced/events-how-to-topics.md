@@ -15,27 +15,28 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="3297b-102">事件 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="3297b-102">Events How-to Topics</span></span>
-<span data-ttu-id="3297b-103">本節中的主題描述如何在 WPF 中使用的事件。</span><span class="sxs-lookup"><span data-stu-id="3297b-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="0f42a-102">事件 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="0f42a-102">Events How-to Topics</span></span>
+<span data-ttu-id="0f42a-103">本節中的主題描述如何在 WPF 中使用的事件。</span><span class="sxs-lookup"><span data-stu-id="0f42a-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3297b-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="3297b-104">In This Section</span></span>  
- [<span data-ttu-id="3297b-105">使用程式碼加入事件處理常式</span><span class="sxs-lookup"><span data-stu-id="3297b-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="3297b-106">處理路由事件</span><span class="sxs-lookup"><span data-stu-id="3297b-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="3297b-107">建立自訂路由事件</span><span class="sxs-lookup"><span data-stu-id="3297b-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="3297b-108">尋找事件處理常式中的來源元素</span><span class="sxs-lookup"><span data-stu-id="3297b-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="3297b-109">加入路由事件的類別處理</span><span class="sxs-lookup"><span data-stu-id="3297b-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0f42a-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="0f42a-104">In This Section</span></span>  
+ [<span data-ttu-id="0f42a-105">使用程式碼加入事件處理常式</span><span class="sxs-lookup"><span data-stu-id="0f42a-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="0f42a-106">處理路由事件</span><span class="sxs-lookup"><span data-stu-id="0f42a-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="0f42a-107">建立自訂路由事件</span><span class="sxs-lookup"><span data-stu-id="0f42a-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="0f42a-108">尋找事件處理常式中的來源元素</span><span class="sxs-lookup"><span data-stu-id="0f42a-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="0f42a-109">加入路由事件的類別處理</span><span class="sxs-lookup"><span data-stu-id="0f42a-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="3297b-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="3297b-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0f42a-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="0f42a-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="3297b-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="3297b-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="0f42a-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="0f42a-111">Related Sections</span></span>

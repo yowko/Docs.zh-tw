@@ -21,28 +21,29 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="bb132-102">如何：將資料繫結至 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="bb132-102">How to: Bind Data to the MaskedTextBox Control</span></span>
-<span data-ttu-id="bb132-103">您可以將資料繫結<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="bb132-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="bb132-104">不過，如果資料庫中資料的格式不符合遮罩定義所預期的格式，您必須將資料重新格式化。</span><span class="sxs-lookup"><span data-stu-id="bb132-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="bb132-105">下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>事件<xref:System.Windows.Forms.Binding>類別來顯示個別的電話號碼和電話做為單一的可編輯欄位的擴充功能的資料庫欄位。</span><span class="sxs-lookup"><span data-stu-id="bb132-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="c92b0-102">如何：將資料繫結至 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c92b0-102">How to: Bind Data to the MaskedTextBox Control</span></span>
+<span data-ttu-id="c92b0-103">您可以將資料繫結<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="c92b0-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="c92b0-104">不過，如果資料庫中資料的格式不符合遮罩定義所預期的格式，您必須將資料重新格式化。</span><span class="sxs-lookup"><span data-stu-id="c92b0-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="c92b0-105">下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>事件<xref:System.Windows.Forms.Binding>類別來顯示個別的電話號碼和電話做為單一的可編輯欄位的擴充功能的資料庫欄位。</span><span class="sxs-lookup"><span data-stu-id="c92b0-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
   
- <span data-ttu-id="bb132-106">下列程序，就需要使用 Northwind 範例資料庫，安裝 SQL Server 資料庫的存取權。</span><span class="sxs-lookup"><span data-stu-id="bb132-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
+ <span data-ttu-id="c92b0-106">下列程序，就需要使用 Northwind 範例資料庫，安裝 SQL Server 資料庫的存取權。</span><span class="sxs-lookup"><span data-stu-id="c92b0-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="bb132-107">將資料繫結至 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="bb132-107">To bind data to a MaskedTextBox control</span></span>  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="c92b0-107">將資料繫結至 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c92b0-107">To bind data to a MaskedTextBox control</span></span>  
   
-1.  <span data-ttu-id="bb132-108">建立新的 Windows Form 專案。</span><span class="sxs-lookup"><span data-stu-id="bb132-108">Create a new Windows Forms project.</span></span>  
+1.  <span data-ttu-id="c92b0-108">建立新的 Windows Form 專案。</span><span class="sxs-lookup"><span data-stu-id="c92b0-108">Create a new Windows Forms project.</span></span>  
   
-2.  <span data-ttu-id="bb132-109">拖放兩<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中; 它們的名稱`FirstName`和`LastName`。</span><span class="sxs-lookup"><span data-stu-id="bb132-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
+2.  <span data-ttu-id="c92b0-109">拖放兩<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中; 它們的名稱`FirstName`和`LastName`。</span><span class="sxs-lookup"><span data-stu-id="c92b0-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
   
-3.  <span data-ttu-id="bb132-110">拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項拖曳至表單，則其命名`PhoneMask`。</span><span class="sxs-lookup"><span data-stu-id="bb132-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
+3.  <span data-ttu-id="c92b0-110">拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項拖曳至表單，則其命名`PhoneMask`。</span><span class="sxs-lookup"><span data-stu-id="c92b0-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
   
-4.  <span data-ttu-id="bb132-111">設定<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性`PhoneMask`至`(000) 000-0000 x9999`。</span><span class="sxs-lookup"><span data-stu-id="bb132-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
+4.  <span data-ttu-id="c92b0-111">設定<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性`PhoneMask`至`(000) 000-0000 x9999`。</span><span class="sxs-lookup"><span data-stu-id="c92b0-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
   
-5.  <span data-ttu-id="bb132-112">加入下列命名空間匯入至表單。</span><span class="sxs-lookup"><span data-stu-id="bb132-112">Add the following namespace imports to the form.</span></span>  
+5.  <span data-ttu-id="c92b0-112">加入下列命名空間匯入至表單。</span><span class="sxs-lookup"><span data-stu-id="c92b0-112">Add the following namespace imports to the form.</span></span>  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/22/2017
     Imports System.Data.SqlClient  
     ```  
   
-6.  <span data-ttu-id="bb132-113">以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="bb132-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="bb132-114">在您的表單類別中的任意位置放置這段程式碼。</span><span class="sxs-lookup"><span data-stu-id="bb132-114">Place this code anywhere in your form class.</span></span>  
+6.  <span data-ttu-id="c92b0-113">以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="c92b0-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="c92b0-114">在您的表單類別中的任意位置放置這段程式碼。</span><span class="sxs-lookup"><span data-stu-id="c92b0-114">Place this code anywhere in your form class.</span></span>  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -146,7 +147,7 @@ ms.lasthandoff: 10/22/2017
     End Sub  
     ```  
   
-7.  <span data-ttu-id="bb132-115">加入事件處理常式<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>，結合，並將事件`PhoneNumber`和`Extension`從繫結欄位<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="bb132-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
+7.  <span data-ttu-id="c92b0-115">加入事件處理常式<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>，結合，並將事件`PhoneNumber`和`Extension`從繫結欄位<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="c92b0-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -214,7 +215,7 @@ ms.lasthandoff: 10/22/2017
     End Sub  
     ```  
   
-8.  <span data-ttu-id="bb132-116">加入兩個<xref:System.Windows.Forms.Button>控制項加入表單。</span><span class="sxs-lookup"><span data-stu-id="bb132-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="bb132-117">它們的名稱`previousButton`和`nextButton`。</span><span class="sxs-lookup"><span data-stu-id="bb132-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="bb132-118">按兩下每個按鈕，新增<xref:System.Windows.Forms.Control.Click>事件處理常式，並填滿的事件處理常式，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="bb132-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
+8.  <span data-ttu-id="c92b0-116">加入兩個<xref:System.Windows.Forms.Button>控制項加入表單。</span><span class="sxs-lookup"><span data-stu-id="c92b0-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="c92b0-117">它們的名稱`previousButton`和`nextButton`。</span><span class="sxs-lookup"><span data-stu-id="c92b0-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="c92b0-118">按兩下每個按鈕，新增<xref:System.Windows.Forms.Control.Click>事件處理常式，並填滿的事件處理常式，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="c92b0-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -238,26 +239,26 @@ ms.lasthandoff: 10/22/2017
     End Sub  
     ```  
   
-9. <span data-ttu-id="bb132-119">執行範例。</span><span class="sxs-lookup"><span data-stu-id="bb132-119">Run the sample.</span></span> <span data-ttu-id="bb132-120">編輯資料，並使用**上一步**和**下一步**按鈕以查看正確的資料保存到<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="bb132-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
+9. <span data-ttu-id="c92b0-119">執行範例。</span><span class="sxs-lookup"><span data-stu-id="c92b0-119">Run the sample.</span></span> <span data-ttu-id="c92b0-120">編輯資料，並使用**上一步**和**下一步**按鈕以查看正確的資料保存到<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="c92b0-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb132-121">範例</span><span class="sxs-lookup"><span data-stu-id="bb132-121">Example</span></span>  
- <span data-ttu-id="bb132-122">下列程式碼範例會列出該結果，無法完成先前的程序的完整程式碼。</span><span class="sxs-lookup"><span data-stu-id="bb132-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="c92b0-121">範例</span><span class="sxs-lookup"><span data-stu-id="c92b0-121">Example</span></span>  
+ <span data-ttu-id="c92b0-122">下列程式碼範例會列出該結果，無法完成先前的程序的完整程式碼。</span><span class="sxs-lookup"><span data-stu-id="c92b0-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
  [!code-vb[MaskedTextBoxData#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bb132-123">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="bb132-123">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c92b0-123">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c92b0-123">Compiling the Code</span></span>  
   
--   <span data-ttu-id="bb132-124">建立[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]或[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]專案。</span><span class="sxs-lookup"><span data-stu-id="bb132-124">Create a [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] or [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] project.</span></span>  
+-   <span data-ttu-id="c92b0-124">建立[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]或[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]專案。</span><span class="sxs-lookup"><span data-stu-id="c92b0-124">Create a [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] or [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] project.</span></span>  
   
--   <span data-ttu-id="bb132-125">新增<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控制項至表單，先前的程序中所述。</span><span class="sxs-lookup"><span data-stu-id="bb132-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
+-   <span data-ttu-id="c92b0-125">新增<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控制項至表單，先前的程序中所述。</span><span class="sxs-lookup"><span data-stu-id="c92b0-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
   
--   <span data-ttu-id="bb132-126">開啟專案的預設表單的原始程式碼檔。</span><span class="sxs-lookup"><span data-stu-id="bb132-126">Open the source code file for the project's default form.</span></span>  
+-   <span data-ttu-id="c92b0-126">開啟專案的預設表單的原始程式碼檔。</span><span class="sxs-lookup"><span data-stu-id="c92b0-126">Open the source code file for the project's default form.</span></span>  
   
--   <span data-ttu-id="bb132-127">上的 < 程式碼 > 一節列出的程式碼取代此檔案中的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="bb132-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
+-   <span data-ttu-id="c92b0-127">上的 < 程式碼 > 一節列出的程式碼取代此檔案中的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="c92b0-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
   
--   <span data-ttu-id="bb132-128">編譯應用程式。</span><span class="sxs-lookup"><span data-stu-id="bb132-128">Compile the application.</span></span>  
+-   <span data-ttu-id="c92b0-128">編譯應用程式。</span><span class="sxs-lookup"><span data-stu-id="c92b0-128">Compile the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb132-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bb132-129">See Also</span></span>  
- [<span data-ttu-id="bb132-130">逐步解說：使用 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="bb132-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a><span data-ttu-id="c92b0-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="c92b0-129">See Also</span></span>  
+ [<span data-ttu-id="c92b0-130">逐步解說：使用 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="c92b0-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

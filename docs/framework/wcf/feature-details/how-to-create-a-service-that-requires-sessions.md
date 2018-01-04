@@ -16,39 +16,40 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f9cff53b598d4e477488bcb5b5e87be62e78bb9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fba00b6b8aed8e27d5f16612bb77191f6674abe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-create-a-service-that-requires-sessions"></a><span data-ttu-id="1e314-102">HOW TO：建立需要工作階段的服務</span><span class="sxs-lookup"><span data-stu-id="1e314-102">How to: Create a Service That Requires Sessions</span></span>
-<span data-ttu-id="1e314-103">工作階段會在兩個或更多的端點之間建立共用狀態，以啟用諸如回呼、多重躍點安全性之類的有用功能，並在用戶端與服務執行個體之間建立關聯。</span><span class="sxs-lookup"><span data-stu-id="1e314-103">Sessions create a shared state between two or more endpoints that enables useful features such as callbacks, multi-hop security, and associations between clients and service instances.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1e314-104">中的工作階段[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]應用程式，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。</span><span class="sxs-lookup"><span data-stu-id="1e314-104"> sessions in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] applications, see [Using Sessions](../../../../docs/framework/wcf/using-sessions.md).</span></span>  
+# <a name="how-to-create-a-service-that-requires-sessions"></a><span data-ttu-id="00f5d-102">HOW TO：建立需要工作階段的服務</span><span class="sxs-lookup"><span data-stu-id="00f5d-102">How to: Create a Service That Requires Sessions</span></span>
+<span data-ttu-id="00f5d-103">工作階段會在兩個或更多的端點之間建立共用狀態，以啟用諸如回呼、多重躍點安全性之類的有用功能，並在用戶端與服務執行個體之間建立關聯。</span><span class="sxs-lookup"><span data-stu-id="00f5d-103">Sessions create a shared state between two or more endpoints that enables useful features such as callbacks, multi-hop security, and associations between clients and service instances.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="00f5d-104">中的工作階段[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]應用程式，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。</span><span class="sxs-lookup"><span data-stu-id="00f5d-104"> sessions in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] applications, see [Using Sessions](../../../../docs/framework/wcf/using-sessions.md).</span></span>  
   
-### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a><span data-ttu-id="1e314-105">指定合約需要自身繫結來支援工作階段</span><span class="sxs-lookup"><span data-stu-id="1e314-105">To specify that a contract require its binding to support sessions</span></span>  
+### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a><span data-ttu-id="00f5d-105">指定合約需要自身繫結來支援工作階段</span><span class="sxs-lookup"><span data-stu-id="00f5d-105">To specify that a contract require its binding to support sessions</span></span>  
   
-1.  <span data-ttu-id="1e314-106">建立其中至少包含一個作業的服務合約。</span><span class="sxs-lookup"><span data-stu-id="1e314-106">Create a service contract with at least one operation.</span></span> <span data-ttu-id="1e314-107">如需如何建立服務合約的範例，請參閱[如何： 定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="1e314-107">For an example of how to create a service contract, see [How to: Define a Service Contract](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).</span></span>  
+1.  <span data-ttu-id="00f5d-106">建立其中至少包含一個作業的服務合約。</span><span class="sxs-lookup"><span data-stu-id="00f5d-106">Create a service contract with at least one operation.</span></span> <span data-ttu-id="00f5d-107">如需如何建立服務合約的範例，請參閱[如何： 定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="00f5d-107">For an example of how to create a service contract, see [How to: Define a Service Contract](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).</span></span>  
   
-2.  <span data-ttu-id="1e314-108">將 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 屬性設為下列其中一項，以修改宣告合約的 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>：</span><span class="sxs-lookup"><span data-stu-id="1e314-108">Modify the <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> that declares the contract by setting the <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> property to either:</span></span>  
+2.  <span data-ttu-id="00f5d-108">將 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 屬性設為下列其中一項，以修改宣告合約的 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>：</span><span class="sxs-lookup"><span data-stu-id="00f5d-108">Modify the <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> that declares the contract by setting the <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> property to either:</span></span>  
   
-    -   <span data-ttu-id="1e314-109"><xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> (如果必須在工作階段內執行合約的話)。</span><span class="sxs-lookup"><span data-stu-id="1e314-109"><xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> if this contract must be run within a session.</span></span>  
+    -   <span data-ttu-id="00f5d-109"><xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> (如果必須在工作階段內執行合約的話)。</span><span class="sxs-lookup"><span data-stu-id="00f5d-109"><xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> if this contract must be run within a session.</span></span>  
   
-    -   <span data-ttu-id="1e314-110"><xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> (如果可以在工作階段內執行合約的話)。</span><span class="sxs-lookup"><span data-stu-id="1e314-110"><xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> if this contract can be run within a session.</span></span>  
+    -   <span data-ttu-id="00f5d-110"><xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> (如果可以在工作階段內執行合約的話)。</span><span class="sxs-lookup"><span data-stu-id="00f5d-110"><xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> if this contract can be run within a session.</span></span>  
   
-    -   <span data-ttu-id="1e314-111"><xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> (如果不得在工作階段內執行合約的話)。</span><span class="sxs-lookup"><span data-stu-id="1e314-111"><xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> if this contract must not be run within a session.</span></span>  
+    -   <span data-ttu-id="00f5d-111"><xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> (如果不得在工作階段內執行合約的話)。</span><span class="sxs-lookup"><span data-stu-id="00f5d-111"><xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> if this contract must not be run within a session.</span></span>  
   
-3.  <span data-ttu-id="1e314-112">將您的服務端點設定為使用支援工作階段的繫結。</span><span class="sxs-lookup"><span data-stu-id="1e314-112">Configure your service endpoint to use a binding that supports sessions.</span></span> <span data-ttu-id="1e314-113">下列組態範例說明可支援 WS<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>ReliableMessaging 工作階段的 `-` 用法。</span><span class="sxs-lookup"><span data-stu-id="1e314-113">The following configuration example shows the use of the <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, which supports a WS`-`ReliableMessaging session.</span></span>  
+3.  <span data-ttu-id="00f5d-112">將您的服務端點設定為使用支援工作階段的繫結。</span><span class="sxs-lookup"><span data-stu-id="00f5d-112">Configure your service endpoint to use a binding that supports sessions.</span></span> <span data-ttu-id="00f5d-113">下列組態範例說明可支援 WS<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>ReliableMessaging 工作階段的 `-` 用法。</span><span class="sxs-lookup"><span data-stu-id="00f5d-113">The following configuration example shows the use of the <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, which supports a WS`-`ReliableMessaging session.</span></span>  
   
      [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]   
   
-## <a name="example"></a><span data-ttu-id="1e314-114">範例</span><span class="sxs-lookup"><span data-stu-id="1e314-114">Example</span></span>  
- <span data-ttu-id="1e314-115">下列程式碼範例說明如何指定合約層級的工作階段需求，以及透過組態檔並使用 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 繫結來支援該需求。</span><span class="sxs-lookup"><span data-stu-id="1e314-115">The following example code shows how to specify a contract-level session requirement and use a configuration file to support that requirement with the <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> binding.</span></span>  
+## <a name="example"></a><span data-ttu-id="00f5d-114">範例</span><span class="sxs-lookup"><span data-stu-id="00f5d-114">Example</span></span>  
+ <span data-ttu-id="00f5d-115">下列程式碼範例說明如何指定合約層級的工作階段需求，以及透過組態檔並使用 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 繫結來支援該需求。</span><span class="sxs-lookup"><span data-stu-id="00f5d-115">The following example code shows how to specify a contract-level session requirement and use a configuration file to support that requirement with the <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> binding.</span></span>  
   
  [!code-csharp[SCA.Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/services.cs#1)] 
  [!code-vb[SCA.Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]      
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]     
   
-## <a name="see-also"></a><span data-ttu-id="1e314-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e314-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="00f5d-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="00f5d-116">See Also</span></span>  
  <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>  
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>

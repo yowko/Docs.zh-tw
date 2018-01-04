@@ -20,34 +20,35 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ce828cc55e5e83d7129409330e64f1f763dee76b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 934be102373440c9eb867e33addd96c544599a87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-provide-standard-menu-items-to-a-form"></a><span data-ttu-id="9298e-102">如何：對表單提供標準功能表項目</span><span class="sxs-lookup"><span data-stu-id="9298e-102">How to: Provide Standard Menu Items to a Form</span></span>
-<span data-ttu-id="9298e-103">您可以使用 <xref:System.Windows.Forms.MenuStrip> 控制項來為您的表單提供標準功能表。</span><span class="sxs-lookup"><span data-stu-id="9298e-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
+# <a name="how-to-provide-standard-menu-items-to-a-form"></a><span data-ttu-id="c698f-102">如何：對表單提供標準功能表項目</span><span class="sxs-lookup"><span data-stu-id="c698f-102">How to: Provide Standard Menu Items to a Form</span></span>
+<span data-ttu-id="c698f-103">您可以使用 <xref:System.Windows.Forms.MenuStrip> 控制項來為您的表單提供標準功能表。</span><span class="sxs-lookup"><span data-stu-id="c698f-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
   
- <span data-ttu-id="9298e-104">在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]中對這項功能有廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="9298e-104">There is extensive support for this feature in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
+ <span data-ttu-id="c698f-104">在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]中對這項功能有廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="c698f-104">There is extensive support for this feature in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
- <span data-ttu-id="9298e-105">另請參閱[逐步解說：對表單提供標準功能表項目](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="9298e-105">Also see [Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="c698f-105">另請參閱[逐步解說：對表單提供標準功能表項目](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="c698f-105">Also see [Walkthrough: Providing Standard Menu Items to a Form](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9298e-106">範例</span><span class="sxs-lookup"><span data-stu-id="9298e-106">Example</span></span>  
- <span data-ttu-id="9298e-107">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.MenuStrip> 控制項來建立具有標準功能表的表單。</span><span class="sxs-lookup"><span data-stu-id="9298e-107">The following code example demonstrates how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span> <span data-ttu-id="9298e-108"><xref:System.Windows.Forms.StatusStrip> 控制項中會顯示功能表項目選項。</span><span class="sxs-lookup"><span data-stu-id="9298e-108">Menu item selections are displayed in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="c698f-106">範例</span><span class="sxs-lookup"><span data-stu-id="c698f-106">Example</span></span>  
+ <span data-ttu-id="c698f-107">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.MenuStrip> 控制項來建立具有標準功能表的表單。</span><span class="sxs-lookup"><span data-stu-id="c698f-107">The following code example demonstrates how to use a <xref:System.Windows.Forms.MenuStrip> control to create a form with a standard menu.</span></span> <span data-ttu-id="c698f-108"><xref:System.Windows.Forms.StatusStrip> 控制項中會顯示功能表項目選項。</span><span class="sxs-lookup"><span data-stu-id="c698f-108">Menu item selections are displayed in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9298e-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="9298e-109">Compiling the Code</span></span>  
- <span data-ttu-id="9298e-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="9298e-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c698f-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c698f-109">Compiling the Code</span></span>  
+ <span data-ttu-id="c698f-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="c698f-110">This example requires:</span></span>  
   
--   <span data-ttu-id="9298e-111">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="9298e-111">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="c698f-111">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="c698f-111">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="9298e-112">如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="9298e-112">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="9298e-113">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="9298e-113">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="9298e-114">另請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="9298e-114">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="c698f-112">如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="c698f-112">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="c698f-113">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="c698f-113">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="c698f-114">另請參閱 [如何：使用 Visual Studio 編譯及執行完整的 Windows Form 程式碼範例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="c698f-114">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9298e-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9298e-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c698f-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="c698f-115">See Also</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.StatusStrip>  
- [<span data-ttu-id="9298e-116">MenuStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="9298e-116">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+ [<span data-ttu-id="c698f-116">MenuStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c698f-116">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

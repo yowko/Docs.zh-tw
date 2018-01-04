@@ -16,47 +16,48 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data-transfer-and-serialization"></a><span data-ttu-id="1f059-102">資料傳輸與序列化</span><span class="sxs-lookup"><span data-stu-id="1f059-102">Data Transfer and Serialization</span></span>
-<span data-ttu-id="1f059-103">在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。</span><span class="sxs-lookup"><span data-stu-id="1f059-103">In a connected system, services and clients depend on the exchange of data to accomplish any task.</span></span> <span data-ttu-id="1f059-104">身為服務或用戶端的開發人員的您，必須同時了解 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何處理資料與資料序列化，以建立有效率且容易維護的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1f059-104">As a developer of a service or client, you must also understand how [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] handles data and data serialization in order to create applications that are efficient and easy to maintain.</span></span>  
+# <a name="data-transfer-and-serialization"></a><span data-ttu-id="ee57a-102">資料傳輸與序列化</span><span class="sxs-lookup"><span data-stu-id="ee57a-102">Data Transfer and Serialization</span></span>
+<span data-ttu-id="ee57a-103">在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。</span><span class="sxs-lookup"><span data-stu-id="ee57a-103">In a connected system, services and clients depend on the exchange of data to accomplish any task.</span></span> <span data-ttu-id="ee57a-104">身為服務或用戶端的開發人員的您，必須同時了解 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何處理資料與資料序列化，以建立有效率且容易維護的應用程式。</span><span class="sxs-lookup"><span data-stu-id="ee57a-104">As a developer of a service or client, you must also understand how [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] handles data and data serialization in order to create applications that are efficient and easy to maintain.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1f059-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="1f059-105">In This Section</span></span>  
- [<span data-ttu-id="1f059-106">Specifying Data Transfer in Service Contracts</span><span class="sxs-lookup"><span data-stu-id="1f059-106">Specifying Data Transfer in Service Contracts</span></span>](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- <span data-ttu-id="1f059-107">說明在服務中進行資料傳輸的基本概念。</span><span class="sxs-lookup"><span data-stu-id="1f059-107">Describes the basic concepts of data transfer in services.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ee57a-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="ee57a-105">In This Section</span></span>  
+ [<span data-ttu-id="ee57a-106">指定服務合約中的資料傳輸</span><span class="sxs-lookup"><span data-stu-id="ee57a-106">Specifying Data Transfer in Service Contracts</span></span>](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ <span data-ttu-id="ee57a-107">說明在服務中進行資料傳輸的基本概念。</span><span class="sxs-lookup"><span data-stu-id="ee57a-107">Describes the basic concepts of data transfer in services.</span></span>  
   
- [<span data-ttu-id="1f059-108">使用資料合約</span><span class="sxs-lookup"><span data-stu-id="1f059-108">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- <span data-ttu-id="1f059-109">說明何謂資料合約以及如何建立與使用它們。</span><span class="sxs-lookup"><span data-stu-id="1f059-109">Describes what data contracts are and how to create and use them.</span></span>  
+ [<span data-ttu-id="ee57a-108">使用資料合約</span><span class="sxs-lookup"><span data-stu-id="ee57a-108">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ <span data-ttu-id="ee57a-109">說明何謂資料合約以及如何建立與使用它們。</span><span class="sxs-lookup"><span data-stu-id="ee57a-109">Describes what data contracts are and how to create and use them.</span></span>  
   
- [<span data-ttu-id="1f059-110">資料合約序列化程式</span><span class="sxs-lookup"><span data-stu-id="1f059-110">Data Contract Serializer</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- <span data-ttu-id="1f059-111">說明如何透過 <xref:System.Runtime.Serialization.DataContractSerializer> 類別，或 <xref:System.Runtime.Serialization.XmlObjectSerializer> 類別的任何延伸來完成資料的序列化作業。</span><span class="sxs-lookup"><span data-stu-id="1f059-111">Describes how to accomplish serialization of data with the <xref:System.Runtime.Serialization.DataContractSerializer> class or any extension of the <xref:System.Runtime.Serialization.XmlObjectSerializer> class.</span></span>  
+ [<span data-ttu-id="ee57a-110">資料合約序列化程式</span><span class="sxs-lookup"><span data-stu-id="ee57a-110">Data Contract Serializer</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ <span data-ttu-id="ee57a-111">說明如何透過 <xref:System.Runtime.Serialization.DataContractSerializer> 類別，或 <xref:System.Runtime.Serialization.XmlObjectSerializer> 類別的任何延伸來完成資料的序列化作業。</span><span class="sxs-lookup"><span data-stu-id="ee57a-111">Describes how to accomplish serialization of data with the <xref:System.Runtime.Serialization.DataContractSerializer> class or any extension of the <xref:System.Runtime.Serialization.XmlObjectSerializer> class.</span></span>  
   
- [<span data-ttu-id="1f059-112">使用 XmlSerializer 類別</span><span class="sxs-lookup"><span data-stu-id="1f059-112">Using the XmlSerializer Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- <span data-ttu-id="1f059-113">說明如何與為何使用 <xref:System.Xml.Serialization.XmlSerializer> 類別 (<xref:System.Runtime.Serialization.DataContractSerializer> 類別的替代項目)。</span><span class="sxs-lookup"><span data-stu-id="1f059-113">Describes how and why to use the <xref:System.Xml.Serialization.XmlSerializer> class, an alternative to the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span>  
+ [<span data-ttu-id="ee57a-112">使用 XmlSerializer 類別</span><span class="sxs-lookup"><span data-stu-id="ee57a-112">Using the XmlSerializer Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ <span data-ttu-id="ee57a-113">說明如何與為何使用 <xref:System.Xml.Serialization.XmlSerializer> 類別 (<xref:System.Runtime.Serialization.DataContractSerializer> 類別的替代項目)。</span><span class="sxs-lookup"><span data-stu-id="ee57a-113">Describes how and why to use the <xref:System.Xml.Serialization.XmlSerializer> class, an alternative to the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span>  
   
- [<span data-ttu-id="1f059-114">使用訊息合約</span><span class="sxs-lookup"><span data-stu-id="1f059-114">Using Message Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
- <span data-ttu-id="1f059-115">說明訊息合約如何允許對 SOAP 訊息進行精密控制。</span><span class="sxs-lookup"><span data-stu-id="1f059-115">Describes how message contracts allow fine control over SOAP messages.</span></span>  
+ [<span data-ttu-id="ee57a-114">使用訊息合約</span><span class="sxs-lookup"><span data-stu-id="ee57a-114">Using Message Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
+ <span data-ttu-id="ee57a-115">說明訊息合約如何允許對 SOAP 訊息進行精密控制。</span><span class="sxs-lookup"><span data-stu-id="ee57a-115">Describes how message contracts allow fine control over SOAP messages.</span></span>  
   
- [<span data-ttu-id="1f059-116">使用 Message 類別</span><span class="sxs-lookup"><span data-stu-id="1f059-116">Using the Message Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
- <span data-ttu-id="1f059-117">說明如何使用 Message 類別功能。</span><span class="sxs-lookup"><span data-stu-id="1f059-117">Describes how to use Message class features.</span></span>  
+ [<span data-ttu-id="ee57a-116">使用 Message 類別</span><span class="sxs-lookup"><span data-stu-id="ee57a-116">Using the Message Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
+ <span data-ttu-id="ee57a-117">說明如何使用 Message 類別功能。</span><span class="sxs-lookup"><span data-stu-id="ee57a-117">Describes how to use Message class features.</span></span>  
   
- [<span data-ttu-id="1f059-118">篩選</span><span class="sxs-lookup"><span data-stu-id="1f059-118">Filtering</span></span>](../../../../docs/framework/wcf/feature-details/filtering.md)  
- <span data-ttu-id="1f059-119">說明可依據不同準則對訊息進行前置處理的篩選功能。</span><span class="sxs-lookup"><span data-stu-id="1f059-119">Describes filtering, which enables pre-processing of a message based on various criteria.</span></span>  
+ [<span data-ttu-id="ee57a-118">篩選</span><span class="sxs-lookup"><span data-stu-id="ee57a-118">Filtering</span></span>](../../../../docs/framework/wcf/feature-details/filtering.md)  
+ <span data-ttu-id="ee57a-119">說明可依據不同準則對訊息進行前置處理的篩選功能。</span><span class="sxs-lookup"><span data-stu-id="ee57a-119">Describes filtering, which enables pre-processing of a message based on various criteria.</span></span>  
   
- [<span data-ttu-id="1f059-120">大型的資料與資料流</span><span class="sxs-lookup"><span data-stu-id="1f059-120">Large Data and Streaming</span></span>](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- <span data-ttu-id="1f059-121">說明如何傳送大型資料區塊，例如二進位檔。</span><span class="sxs-lookup"><span data-stu-id="1f059-121">Describes how to send a large block of data, such as a binary file.</span></span>  
+ [<span data-ttu-id="ee57a-120">大型資料和資料流</span><span class="sxs-lookup"><span data-stu-id="ee57a-120">Large Data and Streaming</span></span>](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ <span data-ttu-id="ee57a-121">說明如何傳送大型資料區塊，例如二進位檔。</span><span class="sxs-lookup"><span data-stu-id="ee57a-121">Describes how to send a large block of data, such as a binary file.</span></span>  
   
- [<span data-ttu-id="1f059-122">資料的安全性考量</span><span class="sxs-lookup"><span data-stu-id="1f059-122">Security Considerations for Data</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- <span data-ttu-id="1f059-123">說明在設計資料傳輸與序列化的程式時，要注意的項目。</span><span class="sxs-lookup"><span data-stu-id="1f059-123">Describes items to be aware of when programming data transfer and serialization.</span></span>  
+ [<span data-ttu-id="ee57a-122">資料的安全性考量</span><span class="sxs-lookup"><span data-stu-id="ee57a-122">Security Considerations for Data</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ <span data-ttu-id="ee57a-123">說明在設計資料傳輸與序列化的程式時，要注意的項目。</span><span class="sxs-lookup"><span data-stu-id="ee57a-123">Describes items to be aware of when programming data transfer and serialization.</span></span>  
   
- [<span data-ttu-id="1f059-124">資料傳輸架構概觀</span><span class="sxs-lookup"><span data-stu-id="1f059-124">Data Transfer Architectural Overview</span></span>](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- <span data-ttu-id="1f059-125">說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的整體資料傳輸設計觀點。</span><span class="sxs-lookup"><span data-stu-id="1f059-125">Describes a view of the overall design of data transfer in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+ [<span data-ttu-id="ee57a-124">資料傳輸架構概觀</span><span class="sxs-lookup"><span data-stu-id="ee57a-124">Data Transfer Architectural Overview</span></span>](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
+ <span data-ttu-id="ee57a-125">說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的整體資料傳輸設計觀點。</span><span class="sxs-lookup"><span data-stu-id="ee57a-125">Describes a view of the overall design of data transfer in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="1f059-126">參考資料</span><span class="sxs-lookup"><span data-stu-id="1f059-126">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ee57a-126">參考資料</span><span class="sxs-lookup"><span data-stu-id="ee57a-126">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -67,9 +68,9 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.Xml.Serialization>  
   
-## <a name="related-sections"></a><span data-ttu-id="1f059-127">相關章節</span><span class="sxs-lookup"><span data-stu-id="1f059-127">Related Sections</span></span>  
- [<span data-ttu-id="1f059-128">擴充編碼器與序列化程式</span><span class="sxs-lookup"><span data-stu-id="1f059-128">Extending Encoders and Serializers</span></span>](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+## <a name="related-sections"></a><span data-ttu-id="ee57a-127">相關章節</span><span class="sxs-lookup"><span data-stu-id="ee57a-127">Related Sections</span></span>  
+ [<span data-ttu-id="ee57a-128">擴充編碼器與序列化程式</span><span class="sxs-lookup"><span data-stu-id="ee57a-128">Extending Encoders and Serializers</span></span>](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1f059-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1f059-129">See Also</span></span>  
- [<span data-ttu-id="1f059-130">最佳做法：資料合約版本設定</span><span class="sxs-lookup"><span data-stu-id="1f059-130">Best Practices: Data Contract Versioning</span></span>](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [<span data-ttu-id="1f059-131">服務版本設定</span><span class="sxs-lookup"><span data-stu-id="1f059-131">Service Versioning</span></span>](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a><span data-ttu-id="ee57a-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="ee57a-129">See Also</span></span>  
+ [<span data-ttu-id="ee57a-130">最佳做法：資料合約版本設定</span><span class="sxs-lookup"><span data-stu-id="ee57a-130">Best Practices: Data Contract Versioning</span></span>](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [<span data-ttu-id="ee57a-131">服務版本設定</span><span class="sxs-lookup"><span data-stu-id="ee57a-131">Service Versioning</span></span>](../../../../docs/framework/wcf/service-versioning.md)

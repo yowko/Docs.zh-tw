@@ -16,39 +16,40 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dd584896dd8698dc881eb00186c6a550f36c75f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="button-control-windows-forms"></a><span data-ttu-id="4bd05-102">Button 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="4bd05-102">Button Control (Windows Forms)</span></span>
-<span data-ttu-id="4bd05-103">Windows Form `Button` 控制項可讓使用者按一下以執行動作。</span><span class="sxs-lookup"><span data-stu-id="4bd05-103">The Windows Forms `Button` control allows the user to click it to perform an action.</span></span> <span data-ttu-id="4bd05-104">`Button` 控制項可以顯示文字和影像。</span><span class="sxs-lookup"><span data-stu-id="4bd05-104">The `Button` control can display both text and images.</span></span> <span data-ttu-id="4bd05-105">按一下按鈕時，按鈕看起來就像被推入又釋放。</span><span class="sxs-lookup"><span data-stu-id="4bd05-105">When the button is clicked, it looks as if it is being pushed in and released.</span></span>  
+# <a name="button-control-windows-forms"></a><span data-ttu-id="04757-102">Button 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="04757-102">Button Control (Windows Forms)</span></span>
+<span data-ttu-id="04757-103">Windows Form `Button` 控制項可讓使用者按一下以執行動作。</span><span class="sxs-lookup"><span data-stu-id="04757-103">The Windows Forms `Button` control allows the user to click it to perform an action.</span></span> <span data-ttu-id="04757-104">`Button` 控制項可以顯示文字和影像。</span><span class="sxs-lookup"><span data-stu-id="04757-104">The `Button` control can display both text and images.</span></span> <span data-ttu-id="04757-105">按一下按鈕時，按鈕看起來就像被推入又釋放。</span><span class="sxs-lookup"><span data-stu-id="04757-105">When the button is clicked, it looks as if it is being pushed in and released.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4bd05-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="4bd05-106">In This Section</span></span>  
- [<span data-ttu-id="4bd05-107">Button 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="4bd05-107">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- <span data-ttu-id="4bd05-108">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="4bd05-108">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="04757-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="04757-106">In This Section</span></span>  
+ [<span data-ttu-id="04757-107">Button 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="04757-107">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ <span data-ttu-id="04757-108">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="04757-108">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="4bd05-109">操作說明：回應 Windows Forms Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="4bd05-109">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- <span data-ttu-id="4bd05-110">說明 Windows Form 上按鈕的最基本用法。</span><span class="sxs-lookup"><span data-stu-id="4bd05-110">Explains the most basic use of a button on a Windows Form.</span></span>  
+ [<span data-ttu-id="04757-109">操作說明：回應 Windows Forms Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="04757-109">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ <span data-ttu-id="04757-110">說明 Windows Form 上按鈕的最基本用法。</span><span class="sxs-lookup"><span data-stu-id="04757-110">Explains the most basic use of a button on a Windows Form.</span></span>  
   
- [<span data-ttu-id="4bd05-111">操作說明：將 Windows Forms 中的 Button 指定為接受按鈕</span><span class="sxs-lookup"><span data-stu-id="4bd05-111">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
- <span data-ttu-id="4bd05-112">說明如何指定 `Button` 控制項為接受按鈕，也稱為預設按鈕。</span><span class="sxs-lookup"><span data-stu-id="4bd05-112">Explains how to designate a `Button` control to be the accept button, also known as the default button.</span></span>  
+ [<span data-ttu-id="04757-111">操作說明：將 Windows Forms 中的 Button 指定為接受按鈕</span><span class="sxs-lookup"><span data-stu-id="04757-111">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ <span data-ttu-id="04757-112">說明如何指定 `Button` 控制項為接受按鈕，也稱為預設按鈕。</span><span class="sxs-lookup"><span data-stu-id="04757-112">Explains how to designate a `Button` control to be the accept button, also known as the default button.</span></span>  
   
- [<span data-ttu-id="4bd05-113">操作說明：將 Windows Forms 中的 Button 指定為取消按鈕</span><span class="sxs-lookup"><span data-stu-id="4bd05-113">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- <span data-ttu-id="4bd05-114">說明如何指定 `Button` 控制項為取消按鈕，每當使用者按下 ESC 鍵時就會被按下。</span><span class="sxs-lookup"><span data-stu-id="4bd05-114">Explains how to designate a `Button` control to be the cancel button, which is clicked whenever the user presses the ESC key.</span></span>  
+ [<span data-ttu-id="04757-113">操作說明：將 Windows Forms 中的 Button 指定為取消按鈕</span><span class="sxs-lookup"><span data-stu-id="04757-113">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
+ <span data-ttu-id="04757-114">說明如何指定 `Button` 控制項為取消按鈕，每當使用者按下 ESC 鍵時就會被按下。</span><span class="sxs-lookup"><span data-stu-id="04757-114">Explains how to designate a `Button` control to be the cancel button, which is clicked whenever the user presses the ESC key.</span></span>  
   
- [<span data-ttu-id="4bd05-115">選取 Windows Forms Button 控制項的方法</span><span class="sxs-lookup"><span data-stu-id="4bd05-115">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- <span data-ttu-id="4bd05-116">列出選取按鈕的方法。</span><span class="sxs-lookup"><span data-stu-id="4bd05-116">Lists methods of selecting a button.</span></span>  
+ [<span data-ttu-id="04757-115">選取 Windows Forms Button 控制項的方法</span><span class="sxs-lookup"><span data-stu-id="04757-115">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ <span data-ttu-id="04757-116">列出選取按鈕的方法。</span><span class="sxs-lookup"><span data-stu-id="04757-116">Lists methods of selecting a button.</span></span>  
   
- <span data-ttu-id="4bd05-117">另請參閱[How to： 將 Windows Form 按鈕指定為接受按鈕使用設計工具](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)和[How to： 將 Windows Form 按鈕指定為取消按鈕使用設計工具](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="4bd05-117">Also see [How to: Designate a Windows Forms Button as the Accept Button Using the Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) and [How to: Designate a Windows Forms Button as the Cancel Button Using the Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).</span></span>  
+ <span data-ttu-id="04757-117">另請參閱[How to： 將 Windows Form 按鈕指定為接受按鈕使用設計工具](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)和[How to： 將 Windows Form 按鈕指定為取消按鈕使用設計工具](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="04757-117">Also see [How to: Designate a Windows Forms Button as the Accept Button Using the Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) and [How to: Designate a Windows Forms Button as the Cancel Button Using the Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4bd05-118">參考資料</span><span class="sxs-lookup"><span data-stu-id="4bd05-118">Reference</span></span>  
- <span data-ttu-id="4bd05-119"><xref:System.Windows.Forms.Button> 類別</span><span class="sxs-lookup"><span data-stu-id="4bd05-119"><xref:System.Windows.Forms.Button> class</span></span>  
- <span data-ttu-id="4bd05-120">說明這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="4bd05-120">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="04757-118">參考資料</span><span class="sxs-lookup"><span data-stu-id="04757-118">Reference</span></span>  
+ <span data-ttu-id="04757-119"><xref:System.Windows.Forms.Button> 類別</span><span class="sxs-lookup"><span data-stu-id="04757-119"><xref:System.Windows.Forms.Button> class</span></span>  
+ <span data-ttu-id="04757-120">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="04757-120">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="4bd05-121">相關章節</span><span class="sxs-lookup"><span data-stu-id="4bd05-121">Related Sections</span></span>  
- [<span data-ttu-id="4bd05-122">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="4bd05-122">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="4bd05-123">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="4bd05-123">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="04757-121">相關章節</span><span class="sxs-lookup"><span data-stu-id="04757-121">Related Sections</span></span>  
+ [<span data-ttu-id="04757-122">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="04757-122">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="04757-123">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="04757-123">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="4bd05-124">另請參閱[使用者輸入到對話方塊](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55)和[如何： 關閉對話方塊並保留使用者輸入](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)。</span><span class="sxs-lookup"><span data-stu-id="4bd05-124">Also see [User Input to Dialog Boxes](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) and [How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).</span></span>
+ <span data-ttu-id="04757-124">另請參閱[使用者輸入到對話方塊](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55)和[如何： 關閉對話方塊並保留使用者輸入](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)。</span><span class="sxs-lookup"><span data-stu-id="04757-124">Also see [User Input to Dialog Boxes](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) and [How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).</span></span>

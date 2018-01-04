@@ -12,22 +12,23 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07a39983d0e561fdad4c09e641912b0d15aa4033
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ceeb7406fdae9b4044053e12bec2aad926f26e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="5cc1d-102">將自訂活動屬性繫結至設計工具控制項</span><span class="sxs-lookup"><span data-stu-id="5cc1d-102">Binding a custom activity property to a designer control</span></span>
-<span data-ttu-id="5cc1d-103">將文字方塊設計工具控制項繫結至活動引數相當簡單。不過，將複雜的設計工具控制項 (例如下拉式方塊) 繫結至活動引數可能會呈現挑戰。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="5cc1d-104">本主題討論如何將活動引數繫結至自訂活動設計工具上的下拉式方塊控制項。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  
+# <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="4f7c7-102">將自訂活動屬性繫結至設計工具控制項</span><span class="sxs-lookup"><span data-stu-id="4f7c7-102">Binding a custom activity property to a designer control</span></span>
+<span data-ttu-id="4f7c7-103">將文字方塊設計工具控制項繫結至活動引數相當簡單。不過，將複雜的設計工具控制項 (例如下拉式方塊) 繫結至活動引數可能會呈現挑戰。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="4f7c7-104">本主題討論如何將活動引數繫結至自訂活動設計工具上的下拉式方塊控制項。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  
   
-#### <a name="creating-the-combo-box-item-converter"></a><span data-ttu-id="5cc1d-105">建立下拉式方塊項目轉換器</span><span class="sxs-lookup"><span data-stu-id="5cc1d-105">Creating the combo box item converter</span></span>  
+#### <a name="creating-the-combo-box-item-converter"></a><span data-ttu-id="4f7c7-105">建立下拉式方塊項目轉換器</span><span class="sxs-lookup"><span data-stu-id="4f7c7-105">Creating the combo box item converter</span></span>  
   
-1.  <span data-ttu-id="5cc1d-106">在 Visual Studio 中建立名為 CustomProperty 的空白新方案。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-106">Create a new empty solution in Visual Studio called CustomProperty.</span></span>  
+1.  <span data-ttu-id="4f7c7-106">在 Visual Studio 中建立名為 CustomProperty 的空白新方案。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-106">Create a new empty solution in Visual Studio called CustomProperty.</span></span>  
   
-2.  <span data-ttu-id="5cc1d-107">建立名為 ComboBoxItemConverter 的新類別。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-107">Create a new class called ComboBoxItemConverter.</span></span> <span data-ttu-id="5cc1d-108">加入 System.Windows.Data 的參考，並且讓此類別衍生自 <xref:System.Windows.Data.IValueConverter>。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-108">Add a reference to System.Windows.Data, and have the class derive from <xref:System.Windows.Data.IValueConverter>.</span></span> <span data-ttu-id="5cc1d-109">讓 Visual Studio 實作此介面，以便產生 `Convert` 和 `ConvertBack` 的 Stub。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-109">Have Visual Studio implement the interface to generate stubs for `Convert` and `ConvertBack`.</span></span>  
+2.  <span data-ttu-id="4f7c7-107">建立名為 ComboBoxItemConverter 的新類別。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-107">Create a new class called ComboBoxItemConverter.</span></span> <span data-ttu-id="4f7c7-108">加入 System.Windows.Data 的參考，並且讓此類別衍生自 <xref:System.Windows.Data.IValueConverter>。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-108">Add a reference to System.Windows.Data, and have the class derive from <xref:System.Windows.Data.IValueConverter>.</span></span> <span data-ttu-id="4f7c7-109">讓 Visual Studio 實作此介面，以便產生 `Convert` 和 `ConvertBack` 的 Stub。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-109">Have Visual Studio implement the interface to generate stubs for `Convert` and `ConvertBack`.</span></span>  
   
-3.  <span data-ttu-id="5cc1d-110">將下列程式碼加入至 `Convert` 方法。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-110">Add the following code to the `Convert` method.</span></span> <span data-ttu-id="5cc1d-111">這段程式碼會將型別為 <xref:System.Activities.InArgument%601> 的活動 <xref:System.String> 轉換成要置於設計工具中的值。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-111">This code converts the activity's <xref:System.Activities.InArgument%601> of type <xref:System.String> to the value to be placed in the designer.</span></span>  
+3.  <span data-ttu-id="4f7c7-110">將下列程式碼加入至 `Convert` 方法。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-110">Add the following code to the `Convert` method.</span></span> <span data-ttu-id="4f7c7-111">這段程式碼會將型別為 <xref:System.Activities.InArgument%601> 的活動 <xref:System.String> 轉換成要置於設計工具中的值。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-111">This code converts the activity's <xref:System.Activities.InArgument%601> of type <xref:System.String> to the value to be placed in the designer.</span></span>  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
     return null;  
     ```  
   
-     <span data-ttu-id="5cc1d-112">您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼片段中的運算式。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-112">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
+     <span data-ttu-id="4f7c7-112">您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼片段中的運算式。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-112">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/02/2017
     return null;  
     ```  
   
-4.  <span data-ttu-id="5cc1d-113">將下列程式碼加入至 `ConvertBack` 方法。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-113">Add the following code to the `ConvertBack` method.</span></span> <span data-ttu-id="5cc1d-114">這段程式碼會將傳入的下拉式方塊項目轉換回 <xref:System.Activities.InArgument%601>。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-114">This code converts the incoming combo box item back to an <xref:System.Activities.InArgument%601>.</span></span>  
+4.  <span data-ttu-id="4f7c7-113">將下列程式碼加入至 `ConvertBack` 方法。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-113">Add the following code to the `ConvertBack` method.</span></span> <span data-ttu-id="4f7c7-114">這段程式碼會將傳入的下拉式方塊項目轉換回 <xref:System.Activities.InArgument%601>。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-114">This code converts the incoming combo box item back to an <xref:System.Activities.InArgument%601>.</span></span>  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/02/2017
                 return inArgument;  
     ```  
   
-     <span data-ttu-id="5cc1d-115">您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼片段中的運算式。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-115">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
+     <span data-ttu-id="4f7c7-115">您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼片段中的運算式。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-115">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -101,13 +102,13 @@ ms.lasthandoff: 12/02/2017
                 return inArgument;  
     ```  
   
-#### <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a><span data-ttu-id="5cc1d-116">將 ComboBoxItemConverter 加入至活動的自訂設計工具</span><span class="sxs-lookup"><span data-stu-id="5cc1d-116">Adding the ComboBoxItemConverter to the custom designer of an activity</span></span>  
+#### <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a><span data-ttu-id="4f7c7-116">將 ComboBoxItemConverter 加入至活動的自訂設計工具</span><span class="sxs-lookup"><span data-stu-id="4f7c7-116">Adding the ComboBoxItemConverter to the custom designer of an activity</span></span>  
   
-1.  <span data-ttu-id="5cc1d-117">將新的項目加入至專案。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-117">Add a new item to the project.</span></span> <span data-ttu-id="5cc1d-118">在 [新增項目] 對話方塊中，選取 [工作流程] 節點，然後選取 [活動設計工具] 當做新項目的型別。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-118">In the New Item dialog, select the Workflow node and select Activity Designer as the type of the new item.</span></span> <span data-ttu-id="5cc1d-119">將此項目命名為 CustomPropertyDesigner。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-119">Name the item CustomPropertyDesigner.</span></span>  
+1.  <span data-ttu-id="4f7c7-117">將新的項目加入至專案。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-117">Add a new item to the project.</span></span> <span data-ttu-id="4f7c7-118">在 [新增項目] 對話方塊中，選取 [工作流程] 節點，然後選取 [活動設計工具] 當做新項目的型別。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-118">In the New Item dialog, select the Workflow node and select Activity Designer as the type of the new item.</span></span> <span data-ttu-id="4f7c7-119">將此項目命名為 CustomPropertyDesigner。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-119">Name the item CustomPropertyDesigner.</span></span>  
   
-2.  <span data-ttu-id="5cc1d-120">將下拉式方塊加入至新的設計工具。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-120">Add a Combo Box to the new designer.</span></span> <span data-ttu-id="5cc1d-121">在 [項目] 屬性中，將一些項目加入至 [內容] 值為「項目 1」和「項目 2」的下拉式方塊。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-121">In the Items property, add a couple of items to the combo box, with Content values of "Item1" and 'Item2".</span></span>  
+2.  <span data-ttu-id="4f7c7-120">將下拉式方塊加入至新的設計工具。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-120">Add a Combo Box to the new designer.</span></span> <span data-ttu-id="4f7c7-121">在 [項目] 屬性中，將一些項目加入至 [內容] 值為「項目 1」和「項目 2」的下拉式方塊。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-121">In the Items property, add a couple of items to the combo box, with Content values of "Item1" and 'Item2".</span></span>  
   
-3.  <span data-ttu-id="5cc1d-122">修改下拉式方塊的 XAML，以便加入新的項目轉換器當做要用於下拉式方塊的項目轉換器。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-122">Modify the XAML of the combo box to add the new item converter as the item converter to be used for the combo box.</span></span> <span data-ttu-id="5cc1d-123">此轉換器會加入成為 ActivityDesigner.Resources 區段中的資源，並且在 <xref:System.Windows.Controls.ComboBox> 的 Converter 屬性中指定轉換器。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-123">The converter is added as a resource in the ActivityDesigner.Resources segment, and specifies the converter in the Converter attribute for the <xref:System.Windows.Controls.ComboBox>.</span></span> <span data-ttu-id="5cc1d-124">請注意，此專案的命名空間指定於活動設計工具的 namespaces 屬性中。如果此設計工具要用於不同的專案，就必須變更這個命名空間。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-124">Note that the namespace of the project is specified in the namespaces attributes for the activity designer; if the designer is to be used in a different project, this namespace will need to be changed.</span></span>  
+3.  <span data-ttu-id="4f7c7-122">修改下拉式方塊的 XAML，以便加入新的項目轉換器當做要用於下拉式方塊的項目轉換器。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-122">Modify the XAML of the combo box to add the new item converter as the item converter to be used for the combo box.</span></span> <span data-ttu-id="4f7c7-123">此轉換器會加入成為 ActivityDesigner.Resources 區段中的資源，並且在 <xref:System.Windows.Controls.ComboBox> 的 Converter 屬性中指定轉換器。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-123">The converter is added as a resource in the ActivityDesigner.Resources segment, and specifies the converter in the Converter attribute for the <xref:System.Windows.Controls.ComboBox>.</span></span> <span data-ttu-id="4f7c7-124">請注意，此專案的命名空間指定於活動設計工具的 namespaces 屬性中。如果此設計工具要用於不同的專案，就必須變更這個命名空間。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-124">Note that the namespace of the project is specified in the namespaces attributes for the activity designer; if the designer is to be used in a different project, this namespace will need to be changed.</span></span>  
   
     ```  
     <sap:ActivityDesigner x:Class="CustomProperty.CustomPropertyDesigner"  
@@ -131,14 +132,14 @@ ms.lasthandoff: 12/02/2017
     </sap:ActivityDesigner>  
     ```  
   
-4.  <span data-ttu-id="5cc1d-125">建立型別為 <xref:System.Activities.CodeActivity> 的新項目。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-125">Create a new item of type <xref:System.Activities.CodeActivity>.</span></span> <span data-ttu-id="5cc1d-126">活動 IDE 所建立的預設程式碼將足以說明此範例。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-126">The default code created by the IDE for the activity will be sufficient for this example.</span></span>  
+4.  <span data-ttu-id="4f7c7-125">建立型別為 <xref:System.Activities.CodeActivity> 的新項目。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-125">Create a new item of type <xref:System.Activities.CodeActivity>.</span></span> <span data-ttu-id="4f7c7-126">活動 IDE 所建立的預設程式碼將足以說明此範例。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-126">The default code created by the IDE for the activity will be sufficient for this example.</span></span>  
   
-5.  <span data-ttu-id="5cc1d-127">將下列屬性加入至類別定義：</span><span class="sxs-lookup"><span data-stu-id="5cc1d-127">Add the following attribute to the class definition:</span></span>  
+5.  <span data-ttu-id="4f7c7-127">將下列屬性加入至類別定義：</span><span class="sxs-lookup"><span data-stu-id="4f7c7-127">Add the following attribute to the class definition:</span></span>  
   
     ```  
     [Designer(typeof(CustomPropertyDesigner))]  
     ```  
   
-     <span data-ttu-id="5cc1d-128">這一行程式碼會將新的設計工具與新的類別產生關聯。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-128">This line associates the new designer with the new class.</span></span>  
+     <span data-ttu-id="4f7c7-128">這一行程式碼會將新的設計工具與新的類別產生關聯。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-128">This line associates the new designer with the new class.</span></span>  
   
- <span data-ttu-id="5cc1d-129">此時，新活動應該會與設計工具相關聯。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-129">The new activity should now be associated with the designer.</span></span> <span data-ttu-id="5cc1d-130">若要測試新活動，請將它加入至工作流程，並將下拉式方塊設定為兩個值。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-130">To test the new activity, add it to a workflow, and set the combo box to the two values.</span></span> <span data-ttu-id="5cc1d-131">然後，[屬性] 視窗應該會更新以反映下拉式方塊的值。</span><span class="sxs-lookup"><span data-stu-id="5cc1d-131">The properties window should update to reflect the combo box value.</span></span>
+ <span data-ttu-id="4f7c7-129">此時，新活動應該會與設計工具相關聯。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-129">The new activity should now be associated with the designer.</span></span> <span data-ttu-id="4f7c7-130">若要測試新活動，請將它加入至工作流程，並將下拉式方塊設定為兩個值。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-130">To test the new activity, add it to a workflow, and set the combo box to the two values.</span></span> <span data-ttu-id="4f7c7-131">然後，[屬性] 視窗應該會更新以反映下拉式方塊的值。</span><span class="sxs-lookup"><span data-stu-id="4f7c7-131">The properties window should update to reflect the combo box value.</span></span>

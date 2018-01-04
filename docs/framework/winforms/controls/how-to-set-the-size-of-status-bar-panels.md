@@ -21,21 +21,22 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc9eca130b238ac686e88ebbc6e8491bc7be93bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c348e421fd7b14dd27495c793e9f9038330d9374
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a><span data-ttu-id="6e445-102">如何：設定狀態列面板的大小</span><span class="sxs-lookup"><span data-stu-id="6e445-102">How to: Set the Size of Status-Bar Panels</span></span>
+# <a name="how-to-set-the-size-of-status-bar-panels"></a><span data-ttu-id="01190-102">如何：設定狀態列面板的大小</span><span class="sxs-lookup"><span data-stu-id="01190-102">How to: Set the Size of Status-Bar Panels</span></span>
 > [!NOTE]
->  <span data-ttu-id="6e445-103"><xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="6e445-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control; however, the <xref:System.Windows.Forms.StatusBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="01190-103"><xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="01190-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> control; however, the <xref:System.Windows.Forms.StatusBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="6e445-104">每個執行個體<xref:System.Windows.Forms.StatusBarPanel>類別內[StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控制項的動態屬性，以決定其寬度和調整大小行為在執行階段數目。</span><span class="sxs-lookup"><span data-stu-id="6e445-104">Each instance of the <xref:System.Windows.Forms.StatusBarPanel> class within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control has a number of dynamic properties that determine its width and resize behavior at run time.</span></span>  
+ <span data-ttu-id="01190-104">每個執行個體<xref:System.Windows.Forms.StatusBarPanel>類別內[StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控制項的動態屬性，以決定其寬度和調整大小行為在執行階段數目。</span><span class="sxs-lookup"><span data-stu-id="01190-104">Each instance of the <xref:System.Windows.Forms.StatusBarPanel> class within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control has a number of dynamic properties that determine its width and resize behavior at run time.</span></span>  
   
-### <a name="to-set-the-size-of-a-panel"></a><span data-ttu-id="6e445-105">若要設定面板的大小</span><span class="sxs-lookup"><span data-stu-id="6e445-105">To set the size of a panel</span></span>  
+### <a name="to-set-the-size-of-a-panel"></a><span data-ttu-id="01190-105">若要設定面板的大小</span><span class="sxs-lookup"><span data-stu-id="01190-105">To set the size of a panel</span></span>  
   
-1.  <span data-ttu-id="6e445-106">在程序，設定<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>， <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>，和<xref:System.Windows.Forms.StatusBarPanel.Width%2A>屬性 (或任何子集其中) 的狀態列面板使用其索引則是透過傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性<xref:System.Windows.Forms.StatusBarPanel>集合。</span><span class="sxs-lookup"><span data-stu-id="6e445-106">In a procedure, set the <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, and <xref:System.Windows.Forms.StatusBarPanel.Width%2A> properties (or any subset therein) for the status-bar panels using their index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property of the <xref:System.Windows.Forms.StatusBarPanel> collection.</span></span>  
+1.  <span data-ttu-id="01190-106">在程序，設定<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>， <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>，和<xref:System.Windows.Forms.StatusBarPanel.Width%2A>屬性 (或任何子集其中) 的狀態列面板使用其索引則是透過傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性<xref:System.Windows.Forms.StatusBarPanel>集合。</span><span class="sxs-lookup"><span data-stu-id="01190-106">In a procedure, set the <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, and <xref:System.Windows.Forms.StatusBarPanel.Width%2A> properties (or any subset therein) for the status-bar panels using their index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property of the <xref:System.Windows.Forms.StatusBarPanel> collection.</span></span>  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -75,9 +76,9 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6e445-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6e445-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="01190-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="01190-107">See Also</span></span>  
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [<span data-ttu-id="6e445-108">逐步解說：在執行階段更新狀態列資訊</span><span class="sxs-lookup"><span data-stu-id="6e445-108">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [<span data-ttu-id="6e445-109">操作說明：判斷在 Windows Forms StatusBar 控制項中按下的面板</span><span class="sxs-lookup"><span data-stu-id="6e445-109">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [<span data-ttu-id="6e445-110">StatusBar 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="6e445-110">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+ [<span data-ttu-id="01190-108">逐步解說：在執行階段更新狀態列資訊</span><span class="sxs-lookup"><span data-stu-id="01190-108">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [<span data-ttu-id="01190-109">操作說明：判斷在 Windows Forms StatusBar 控制項中按下的面板</span><span class="sxs-lookup"><span data-stu-id="01190-109">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [<span data-ttu-id="01190-110">StatusBar 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="01190-110">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

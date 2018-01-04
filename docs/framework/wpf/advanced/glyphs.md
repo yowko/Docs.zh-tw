@@ -20,22 +20,23 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c384e9e77eeee29cf91cceca3863f54c0ad1654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9737a006e7f3591defeaf7039236bd1768aa5361
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="glyphs"></a><span data-ttu-id="572e9-102">字符</span><span class="sxs-lookup"><span data-stu-id="572e9-102">Glyphs</span></span>
-<span data-ttu-id="572e9-103">圖像 （glyph） 是字元的要在螢幕上繪製的低階描述。</span><span class="sxs-lookup"><span data-stu-id="572e9-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="572e9-104">可直接存取圖像 （glyph） 的客戶想要攔截，並將保存完成格式化後的文字。</span><span class="sxs-lookup"><span data-stu-id="572e9-104"> provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  
+# <a name="glyphs"></a><span data-ttu-id="da494-102">字符</span><span class="sxs-lookup"><span data-stu-id="da494-102">Glyphs</span></span>
+<span data-ttu-id="da494-103">圖像 （glyph） 是字元的要在螢幕上繪製的低階描述。</span><span class="sxs-lookup"><span data-stu-id="da494-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="da494-104">可直接存取圖像 （glyph） 的客戶想要攔截，並將保存完成格式化後的文字。</span><span class="sxs-lookup"><span data-stu-id="da494-104"> provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="572e9-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="572e9-105">In This Section</span></span>  
- [<span data-ttu-id="572e9-106">GlyphRun 物件和 Glyphs 元素簡介</span><span class="sxs-lookup"><span data-stu-id="572e9-106">Introduction to the GlyphRun Object and Glyphs Element</span></span>](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [<span data-ttu-id="572e9-107">操作說明：使用圖像繪製文字</span><span class="sxs-lookup"><span data-stu-id="572e9-107">How to: Draw Text Using Glyphs</span></span>](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+## <a name="in-this-section"></a><span data-ttu-id="da494-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="da494-105">In This Section</span></span>  
+ [<span data-ttu-id="da494-106">GlyphRun 物件和 Glyphs 元素簡介</span><span class="sxs-lookup"><span data-stu-id="da494-106">Introduction to the GlyphRun Object and Glyphs Element</span></span>](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [<span data-ttu-id="da494-107">操作說明：使用圖像繪製文字</span><span class="sxs-lookup"><span data-stu-id="da494-107">How to: Draw Text Using Glyphs</span></span>](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a><span data-ttu-id="572e9-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="572e9-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="da494-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="da494-108">See Also</span></span>  
  <xref:System.Windows.Media.GlyphRun>  
  <xref:System.Windows.Media.DrawingContext.DrawText%2A>  
  <xref:System.Windows.Documents.Glyphs>  
- [<span data-ttu-id="572e9-109">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="572e9-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="572e9-110">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="572e9-110">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [<span data-ttu-id="da494-109">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="da494-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="da494-110">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="da494-110">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

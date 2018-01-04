@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 885ca7407f009d379686ee59ff2d3cd86d0ff354
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7bc2b46623164755cedb8870d7b3f8a03072de09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingroutingtableunsupportedprotocol"></a><span data-ttu-id="b0f60-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="b0f60-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>
-<span data-ttu-id="b0f60-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="b0f60-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>  
+# <a name="systemservicemodelportsharingroutingtableunsupportedprotocol"></a><span data-ttu-id="ea31d-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="ea31d-102">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>
+<span data-ttu-id="ea31d-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span><span class="sxs-lookup"><span data-stu-id="ea31d-103">System.ServiceModel.PortSharing.RoutingTableUnsupportedProtocol</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b0f60-104">描述</span><span class="sxs-lookup"><span data-stu-id="b0f60-104">Description</span></span>  
- <span data-ttu-id="b0f60-105">不支援此通訊協定。</span><span class="sxs-lookup"><span data-stu-id="b0f60-105">The protocol is not supported.</span></span>  
+## <a name="description"></a><span data-ttu-id="ea31d-104">描述</span><span class="sxs-lookup"><span data-stu-id="ea31d-104">Description</span></span>  
+ <span data-ttu-id="ea31d-105">不支援此通訊協定。</span><span class="sxs-lookup"><span data-stu-id="ea31d-105">The protocol is not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0f60-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b0f60-106">See Also</span></span>  
- [<span data-ttu-id="b0f60-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="b0f60-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="b0f60-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="b0f60-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="b0f60-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="b0f60-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ea31d-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="ea31d-106">See Also</span></span>  
+ [<span data-ttu-id="ea31d-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="ea31d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ea31d-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="ea31d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ea31d-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="ea31d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

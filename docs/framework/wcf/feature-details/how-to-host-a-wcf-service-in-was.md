@@ -13,51 +13,52 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33387a9b155a471209039e5977bc7134b1439ff3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="52ce8-102">HOW TO：在 WAS 中裝載 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="52ce8-102">How to: Host a WCF Service in WAS</span></span>
-<span data-ttu-id="52ce8-103">本主題概要說明建立 Windows Process Activation Services (又稱為 WAS) 所裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，必要的基本步驟。</span><span class="sxs-lookup"><span data-stu-id="52ce8-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="52ce8-104">WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。</span><span class="sxs-lookup"><span data-stu-id="52ce8-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="52ce8-105"> 使用接聽項配接器介面與透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的非 HTTP 通訊協定 (例如 TCP、具名管道，與訊息佇列) 接收的啟用要求進行通訊。</span><span class="sxs-lookup"><span data-stu-id="52ce8-105"> uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], such as TCP, named pipes, and Message Queuing.</span></span>  
+# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="84719-102">HOW TO：在 WAS 中裝載 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="84719-102">How to: Host a WCF Service in WAS</span></span>
+<span data-ttu-id="84719-103">本主題概要說明建立 Windows Process Activation Services (又稱為 WAS) 所裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，必要的基本步驟。</span><span class="sxs-lookup"><span data-stu-id="84719-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="84719-104">WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。</span><span class="sxs-lookup"><span data-stu-id="84719-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="84719-105"> 使用接聽項配接器介面與透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的非 HTTP 通訊協定 (例如 TCP、具名管道，與訊息佇列) 接收的啟用要求進行通訊。</span><span class="sxs-lookup"><span data-stu-id="84719-105"> uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], such as TCP, named pipes, and Message Queuing.</span></span>  
   
- <span data-ttu-id="52ce8-106">這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。</span><span class="sxs-lookup"><span data-stu-id="52ce8-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="52ce8-107">安裝和設定 WAS，請參閱[如何： 安裝及設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。</span><span class="sxs-lookup"><span data-stu-id="52ce8-107"> installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
+ <span data-ttu-id="84719-106">這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。</span><span class="sxs-lookup"><span data-stu-id="84719-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="84719-107">安裝和設定 WAS，請參閱[如何： 安裝及設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。</span><span class="sxs-lookup"><span data-stu-id="84719-107"> installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="52ce8-108">如果 Web 伺服器的要求處理管線設定為「傳統」模式，就不支援 WAS 啟動。</span><span class="sxs-lookup"><span data-stu-id="52ce8-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="52ce8-109">若要使用 WAS 啟動，Web 伺服器的要求處理管線就必須設定為「整合」模式。</span><span class="sxs-lookup"><span data-stu-id="52ce8-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
+>  <span data-ttu-id="84719-108">如果 Web 伺服器的要求處理管線設定為「傳統」模式，就不支援 WAS 啟動。</span><span class="sxs-lookup"><span data-stu-id="84719-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="84719-109">若要使用 WAS 啟動，Web 伺服器的要求處理管線就必須設定為「整合」模式。</span><span class="sxs-lookup"><span data-stu-id="84719-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
   
- <span data-ttu-id="52ce8-110">透過 WAS 裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會以一般方式來使用標準繫結。</span><span class="sxs-lookup"><span data-stu-id="52ce8-110">When a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="52ce8-111">但是，當透過 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 來設定 WAS 裝載的服務時，就必須滿足下列限制。</span><span class="sxs-lookup"><span data-stu-id="52ce8-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="52ce8-112">當不同的端點使用同一個傳輸，繫結設定必須符合下列七項屬性：</span><span class="sxs-lookup"><span data-stu-id="52ce8-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
+ <span data-ttu-id="84719-110">透過 WAS 裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會以一般方式來使用標準繫結。</span><span class="sxs-lookup"><span data-stu-id="84719-110">When a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="84719-111">但是，當透過 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 來設定 WAS 裝載的服務時，就必須滿足下列限制。</span><span class="sxs-lookup"><span data-stu-id="84719-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="84719-112">當不同的端點使用同一個傳輸，繫結設定必須符合下列七項屬性：</span><span class="sxs-lookup"><span data-stu-id="84719-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
   
--   <span data-ttu-id="52ce8-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="52ce8-113">ConnectionBufferSize</span></span>  
+-   <span data-ttu-id="84719-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="84719-113">ConnectionBufferSize</span></span>  
   
--   <span data-ttu-id="52ce8-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="52ce8-114">ChannelInitializationTimeout</span></span>  
+-   <span data-ttu-id="84719-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="84719-114">ChannelInitializationTimeout</span></span>  
   
--   <span data-ttu-id="52ce8-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="52ce8-115">MaxPendingConnections</span></span>  
+-   <span data-ttu-id="84719-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="84719-115">MaxPendingConnections</span></span>  
   
--   <span data-ttu-id="52ce8-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="52ce8-116">MaxOutputDelay</span></span>  
+-   <span data-ttu-id="84719-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="84719-116">MaxOutputDelay</span></span>  
   
--   <span data-ttu-id="52ce8-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="52ce8-117">MaxPendingAccepts</span></span>  
+-   <span data-ttu-id="84719-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="84719-117">MaxPendingAccepts</span></span>  
   
--   <span data-ttu-id="52ce8-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="52ce8-118">ConnectionPoolSettings.IdleTimeout</span></span>  
+-   <span data-ttu-id="84719-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="84719-118">ConnectionPoolSettings.IdleTimeout</span></span>  
   
--   <span data-ttu-id="52ce8-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="52ce8-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
+-   <span data-ttu-id="84719-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="84719-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
   
- <span data-ttu-id="52ce8-120">否則，先初始化的端點一律直接決定這些屬性的值，而稍後新增的端點則會在這些屬性值未符合上述設定值時擲回 <xref:System.ServiceModel.ServiceActivationException>。</span><span class="sxs-lookup"><span data-stu-id="52ce8-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
+ <span data-ttu-id="84719-120">否則，先初始化的端點一律直接決定這些屬性的值，而稍後新增的端點則會在這些屬性值未符合上述設定值時擲回 <xref:System.ServiceModel.ServiceActivationException>。</span><span class="sxs-lookup"><span data-stu-id="84719-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
   
- <span data-ttu-id="52ce8-121">此範例的來源副本，請參閱[TCP 啟動](../../../../docs/framework/wcf/samples/tcp-activation.md)。</span><span class="sxs-lookup"><span data-stu-id="52ce8-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
+ <span data-ttu-id="84719-121">此範例的來源副本，請參閱[TCP 啟動](../../../../docs/framework/wcf/samples/tcp-activation.md)。</span><span class="sxs-lookup"><span data-stu-id="84719-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
   
-### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="52ce8-122">若要建立 WAS 裝載的基本服務</span><span class="sxs-lookup"><span data-stu-id="52ce8-122">To create a basic service hosted by WAS</span></span>  
+### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="84719-122">若要建立 WAS 裝載的基本服務</span><span class="sxs-lookup"><span data-stu-id="84719-122">To create a basic service hosted by WAS</span></span>  
   
-1.  <span data-ttu-id="52ce8-123">定義服務類型的服務合約。</span><span class="sxs-lookup"><span data-stu-id="52ce8-123">Define a service contract for the type of service.</span></span>  
+1.  <span data-ttu-id="84719-123">定義服務類型的服務合約。</span><span class="sxs-lookup"><span data-stu-id="84719-123">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  <span data-ttu-id="52ce8-124">在服務類別中實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="52ce8-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="52ce8-125">請注意，服務的實作內並未指定位址或繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="52ce8-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="52ce8-126">同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。</span><span class="sxs-lookup"><span data-stu-id="52ce8-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
+2.  <span data-ttu-id="84719-124">在服務類別中實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="84719-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="84719-125">請注意，服務的實作內並未指定位址或繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="84719-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="84719-126">同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。</span><span class="sxs-lookup"><span data-stu-id="84719-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  <span data-ttu-id="52ce8-127">建立 Web.config 檔案，定義 <xref:System.ServiceModel.NetTcpBinding> 端點要使用的 `CalculatorService` 繫結。</span><span class="sxs-lookup"><span data-stu-id="52ce8-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
+3.  <span data-ttu-id="84719-127">建立 Web.config 檔案，定義 <xref:System.ServiceModel.NetTcpBinding> 端點要使用的 `CalculatorService` 繫結。</span><span class="sxs-lookup"><span data-stu-id="84719-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -74,40 +75,40 @@ ms.lasthandoff: 12/02/2017
     </configuration>  
     ```  
   
-4.  <span data-ttu-id="52ce8-128">建立包含下列程式碼的 Service.svc 檔案。</span><span class="sxs-lookup"><span data-stu-id="52ce8-128">Create a Service.svc file that contains the following code.</span></span>  
+4.  <span data-ttu-id="84719-128">建立包含下列程式碼的 Service.svc 檔案。</span><span class="sxs-lookup"><span data-stu-id="84719-128">Create a Service.svc file that contains the following code.</span></span>  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  <span data-ttu-id="52ce8-129">將 Service.svc 檔放入您的 IIS 虛擬目錄中。</span><span class="sxs-lookup"><span data-stu-id="52ce8-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
+5.  <span data-ttu-id="84719-129">將 Service.svc 檔放入您的 IIS 虛擬目錄中。</span><span class="sxs-lookup"><span data-stu-id="84719-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
   
-### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="52ce8-130">若要建立用戶端來使用服務</span><span class="sxs-lookup"><span data-stu-id="52ce8-130">To create a client to use the service</span></span>  
+### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="84719-130">若要建立用戶端來使用服務</span><span class="sxs-lookup"><span data-stu-id="84719-130">To create a client to use the service</span></span>  
   
-1.  <span data-ttu-id="52ce8-131">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從命令列從服務中繼資料產生程式碼。</span><span class="sxs-lookup"><span data-stu-id="52ce8-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
+1.  <span data-ttu-id="84719-131">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從命令列從服務中繼資料產生程式碼。</span><span class="sxs-lookup"><span data-stu-id="84719-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  <span data-ttu-id="52ce8-132">所產生的用戶端會包含 `ICalculator` 介面，其中定義了用戶端實作所必須滿足的服務合約。</span><span class="sxs-lookup"><span data-stu-id="52ce8-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
+2.  <span data-ttu-id="84719-132">所產生的用戶端會包含 `ICalculator` 介面，其中定義了用戶端實作所必須滿足的服務合約。</span><span class="sxs-lookup"><span data-stu-id="84719-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  <span data-ttu-id="52ce8-133">產生的用戶端應用程式也包含 `ClientCalculator` 的實作。</span><span class="sxs-lookup"><span data-stu-id="52ce8-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="52ce8-134">請注意，服務的實作內部並未指定位址和繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="52ce8-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="52ce8-135">同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。</span><span class="sxs-lookup"><span data-stu-id="52ce8-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
+3.  <span data-ttu-id="84719-133">產生的用戶端應用程式也包含 `ClientCalculator` 的實作。</span><span class="sxs-lookup"><span data-stu-id="84719-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="84719-134">請注意，服務的實作內部並未指定位址和繫結資訊。</span><span class="sxs-lookup"><span data-stu-id="84719-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="84719-135">同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。</span><span class="sxs-lookup"><span data-stu-id="84719-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  <span data-ttu-id="52ce8-136">使用 <xref:System.ServiceModel.NetTcpBinding> 的用戶端組態也是由 Svcutil.exe 所產生的。</span><span class="sxs-lookup"><span data-stu-id="52ce8-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="52ce8-137">使用 Visual Studio 時，此檔案應該命名為 App.config。</span><span class="sxs-lookup"><span data-stu-id="52ce8-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
+4.  <span data-ttu-id="84719-136">使用 <xref:System.ServiceModel.NetTcpBinding> 的用戶端組態也是由 Svcutil.exe 所產生的。</span><span class="sxs-lookup"><span data-stu-id="84719-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="84719-137">使用 Visual Studio 時，此檔案應該命名為 App.config。</span><span class="sxs-lookup"><span data-stu-id="84719-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  <span data-ttu-id="52ce8-138">在應用程式中建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。</span><span class="sxs-lookup"><span data-stu-id="52ce8-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
+5.  <span data-ttu-id="84719-138">在應用程式中建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。</span><span class="sxs-lookup"><span data-stu-id="84719-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  <span data-ttu-id="52ce8-139">請編譯並執行用戶端。</span><span class="sxs-lookup"><span data-stu-id="52ce8-139">Compile and run the client.</span></span>  
+6.  <span data-ttu-id="84719-139">請編譯並執行用戶端。</span><span class="sxs-lookup"><span data-stu-id="84719-139">Compile and run the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52ce8-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52ce8-140">See Also</span></span>  
- [<span data-ttu-id="52ce8-141">TCP 啟動</span><span class="sxs-lookup"><span data-stu-id="52ce8-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [<span data-ttu-id="52ce8-142">Windows Server App Fabric 裝載功能</span><span class="sxs-lookup"><span data-stu-id="52ce8-142">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="84719-140">請參閱</span><span class="sxs-lookup"><span data-stu-id="84719-140">See Also</span></span>  
+ [<span data-ttu-id="84719-141">TCP 啟用</span><span class="sxs-lookup"><span data-stu-id="84719-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [<span data-ttu-id="84719-142">Windows Server App Fabric 裝載功能</span><span class="sxs-lookup"><span data-stu-id="84719-142">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -13,14 +13,15 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 476a708acebc7c671e8d7f6ef1812a34e5221db8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6014ee5fa7f714340f7069e5b5d39e6b4146dbb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="unwrapped-messages"></a><span data-ttu-id="ee4c0-102">未包裝的訊息</span><span class="sxs-lookup"><span data-stu-id="ee4c0-102">Unwrapped Messages</span></span>
-<span data-ttu-id="ee4c0-103">此範例示範未包裝的訊息。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="ee4c0-104">根據預設，訊息本文會格式化，以便包裝服務作業的參數。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="ee4c0-105">下列範例說明對包裝模式中對 `Add` 服務的 `ICalculator` 要求訊息。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
+# <a name="unwrapped-messages"></a><span data-ttu-id="75d8e-102">未包裝的訊息</span><span class="sxs-lookup"><span data-stu-id="75d8e-102">Unwrapped Messages</span></span>
+<span data-ttu-id="75d8e-103">此範例示範未包裝的訊息。</span><span class="sxs-lookup"><span data-stu-id="75d8e-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="75d8e-104">根據預設，訊息本文會格式化，以便包裝服務作業的參數。</span><span class="sxs-lookup"><span data-stu-id="75d8e-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="75d8e-105">下列範例說明對包裝模式中對 `Add` 服務的 `ICalculator` 要求訊息。</span><span class="sxs-lookup"><span data-stu-id="75d8e-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
   
 ```xml  
 <s:Envelope   
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
 </s:Envelope>  
 ```  
   
- <span data-ttu-id="ee4c0-106">訊息本文中的 `<Add>` 項目會包裝 `n1` 和 `n2` 參數。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="ee4c0-107">相反地，下列範例說明未包裝模式中的對等訊息。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
+ <span data-ttu-id="75d8e-106">訊息本文中的 `<Add>` 項目會包裝 `n1` 和 `n2` 參數。</span><span class="sxs-lookup"><span data-stu-id="75d8e-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="75d8e-107">相反地，下列範例說明未包裝模式中的對等訊息。</span><span class="sxs-lookup"><span data-stu-id="75d8e-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
   
 ```xml  
 <s:Envelope   
@@ -55,12 +56,12 @@ ms.lasthandoff: 12/02/2017
 </MessageLogTraceRecord>  
 ```  
   
- <span data-ttu-id="ee4c0-108">未包裝的訊息不會包裝在包含項目中的 `n1` 和 `n2` 參數，它們是 SOAP 本文項目的直接子系。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
+ <span data-ttu-id="75d8e-108">未包裝的訊息不會包裝在包含項目中的 `n1` 和 `n2` 參數，它們是 SOAP 本文項目的直接子系。</span><span class="sxs-lookup"><span data-stu-id="75d8e-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ee4c0-109">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="75d8e-109">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="75d8e-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="ee4c0-110">在此範例中，未包裝訊息的建立方式是將 <xref:System.ServiceModel.MessageContractAttribute> 套用至服務作業參數型別和傳回值型別，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
+ <span data-ttu-id="75d8e-110">在此範例中，未包裝訊息的建立方式是將 <xref:System.ServiceModel.MessageContractAttribute> 套用至服務作業參數型別和傳回值型別，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="75d8e-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -99,27 +100,27 @@ public class ResponseMessage
 }  
 ```  
   
- <span data-ttu-id="ee4c0-111">為了可讓您看到正在傳送和接收的訊息，此範例使用追蹤。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="ee4c0-112">此外，<xref:System.ServiceModel.WSHttpBinding> 已設定為不帶安全性，可減少其記錄的訊息數量。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
+ <span data-ttu-id="75d8e-111">為了可讓您看到正在傳送和接收的訊息，此範例使用追蹤。</span><span class="sxs-lookup"><span data-stu-id="75d8e-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="75d8e-112">此外，<xref:System.ServiceModel.WSHttpBinding> 已設定為不帶安全性，可減少其記錄的訊息數量。</span><span class="sxs-lookup"><span data-stu-id="75d8e-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
   
- <span data-ttu-id="ee4c0-113">產生追蹤記錄檔 (c:\logs\Message.log) 都可使用[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="ee4c0-114">若要檢視訊息內容，請選取**訊息**左和右窗格的 服務追蹤檢視器工具中。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="ee4c0-115">此範例中的追蹤記錄是設定為產生至 C:\LOGS 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="ee4c0-116">請先建立這個資料夾，然後再執行範例並給予使用者這個目錄的網路服務寫入權限。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
+ <span data-ttu-id="75d8e-113">產生追蹤記錄檔 (c:\logs\Message.log) 都可使用[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="75d8e-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="75d8e-114">若要檢視訊息內容，請選取**訊息**左和右窗格的 服務追蹤檢視器工具中。</span><span class="sxs-lookup"><span data-stu-id="75d8e-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="75d8e-115">此範例中的追蹤記錄是設定為產生至 C:\LOGS 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="75d8e-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="75d8e-116">請先建立這個資料夾，然後再執行範例並給予使用者這個目錄的網路服務寫入權限。</span><span class="sxs-lookup"><span data-stu-id="75d8e-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ee4c0-117">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="ee4c0-117">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="75d8e-117">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="75d8e-117">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ee4c0-118">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="75d8e-118">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="75d8e-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="ee4c0-119">建立用於記錄訊息的 C:\LOGS 目錄。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="ee4c0-120">給予使用者這個目錄的網路服務寫入權限。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-120">Give the user Network Service write permissions for this directory.</span></span>  
+2.  <span data-ttu-id="75d8e-119">建立用於記錄訊息的 C:\LOGS 目錄。</span><span class="sxs-lookup"><span data-stu-id="75d8e-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="75d8e-120">給予使用者這個目錄的網路服務寫入權限。</span><span class="sxs-lookup"><span data-stu-id="75d8e-120">Give the user Network Service write permissions for this directory.</span></span>  
   
-3.  <span data-ttu-id="ee4c0-121">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="75d8e-121">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="75d8e-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="ee4c0-122">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="75d8e-122">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="75d8e-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ee4c0-123">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ee4c0-124">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-124">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="75d8e-123">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="75d8e-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="75d8e-124">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="75d8e-124">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ee4c0-125">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ee4c0-126">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="ee4c0-126">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="75d8e-125">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="75d8e-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="75d8e-126">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="75d8e-126">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## <a name="see-also"></a><span data-ttu-id="ee4c0-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ee4c0-127">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75d8e-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="75d8e-127">See Also</span></span>

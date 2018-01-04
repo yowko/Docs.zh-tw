@@ -20,22 +20,23 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f495135b3210f430c887451844bec8b154db33c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 634689b0b39510cbcc9dc49b1f4717e7e07f88d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="28603-102">如何：列印 Windows Form 中的圖形</span><span class="sxs-lookup"><span data-stu-id="28603-102">How to: Print Graphics in Windows Forms</span></span>
-<span data-ttu-id="28603-103">通常您會想要列印在 Windows 架構應用程式中的圖形。</span><span class="sxs-lookup"><span data-stu-id="28603-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="28603-104"><xref:System.Drawing.Graphics>類別提供方法來繪製至裝置，例如螢幕或印表機的物件。</span><span class="sxs-lookup"><span data-stu-id="28603-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
+# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="606fc-102">如何：列印 Windows Form 中的圖形</span><span class="sxs-lookup"><span data-stu-id="606fc-102">How to: Print Graphics in Windows Forms</span></span>
+<span data-ttu-id="606fc-103">通常您會想要列印在 Windows 架構應用程式中的圖形。</span><span class="sxs-lookup"><span data-stu-id="606fc-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="606fc-104"><xref:System.Drawing.Graphics>類別提供方法來繪製至裝置，例如螢幕或印表機的物件。</span><span class="sxs-lookup"><span data-stu-id="606fc-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
   
-### <a name="to-print-graphics"></a><span data-ttu-id="28603-105">若要列印的圖形</span><span class="sxs-lookup"><span data-stu-id="28603-105">To print graphics</span></span>  
+### <a name="to-print-graphics"></a><span data-ttu-id="606fc-105">若要列印的圖形</span><span class="sxs-lookup"><span data-stu-id="606fc-105">To print graphics</span></span>  
   
-1.  <span data-ttu-id="28603-106">新增<xref:System.Drawing.Printing.PrintDocument>元件加入至表單。</span><span class="sxs-lookup"><span data-stu-id="28603-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1.  <span data-ttu-id="606fc-106">新增<xref:System.Drawing.Printing.PrintDocument>元件加入至表單。</span><span class="sxs-lookup"><span data-stu-id="606fc-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  <span data-ttu-id="28603-107">在<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>屬性<xref:System.Drawing.Printing.PrintPageEventArgs>指示何種列印圖形上的印表機的類別。</span><span class="sxs-lookup"><span data-stu-id="28603-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
+2.  <span data-ttu-id="606fc-107">在<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>屬性<xref:System.Drawing.Printing.PrintPageEventArgs>指示何種列印圖形上的印表機的類別。</span><span class="sxs-lookup"><span data-stu-id="606fc-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
   
-     <span data-ttu-id="28603-108">下列程式碼範例顯示用來建立的藍色橢圓形的週框矩形內的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="28603-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="28603-109">矩形的位置及尺寸： 開始 100，150 250 寬度與高度為 250。</span><span class="sxs-lookup"><span data-stu-id="28603-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
+     <span data-ttu-id="606fc-108">下列程式碼範例顯示用來建立的藍色橢圓形的週框矩形內的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="606fc-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="606fc-109">矩形的位置及尺寸： 開始 100，150 250 寬度與高度為 250。</span><span class="sxs-lookup"><span data-stu-id="606fc-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     <span data-ttu-id="28603-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="28603-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="606fc-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="606fc-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="28603-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="28603-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="606fc-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="606fc-111">See Also</span></span>  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Brush>  
- [<span data-ttu-id="28603-112">Windows Forms 列印支援</span><span class="sxs-lookup"><span data-stu-id="28603-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [<span data-ttu-id="606fc-112">Windows Forms 列印支援</span><span class="sxs-lookup"><span data-stu-id="606fc-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

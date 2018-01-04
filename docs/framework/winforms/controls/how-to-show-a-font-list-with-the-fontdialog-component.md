@@ -24,26 +24,27 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd04a44e6f6e3df26a643a8937e20e232e7471a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="adc7c-102">如何：使用 FontDialog 元件顯示字型清單</span><span class="sxs-lookup"><span data-stu-id="adc7c-102">How to: Show a Font List with the FontDialog Component</span></span>
-<span data-ttu-id="adc7c-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)元件可讓使用者選取字型，以及變更其顯示層面，例如其加權和大小。</span><span class="sxs-lookup"><span data-stu-id="adc7c-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="85b1e-102">如何：使用 FontDialog 元件顯示字型清單</span><span class="sxs-lookup"><span data-stu-id="85b1e-102">How to: Show a Font List with the FontDialog Component</span></span>
+<span data-ttu-id="85b1e-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)元件可讓使用者選取字型，以及變更其顯示層面，例如其加權和大小。</span><span class="sxs-lookup"><span data-stu-id="85b1e-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
   
- <span data-ttu-id="adc7c-104">在對話方塊中選取的字型會傳入<xref:System.Windows.Forms.FontDialog.Font%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="adc7c-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="adc7c-105">因此，利用使用者選取的字型就像是容易讀取的屬性。</span><span class="sxs-lookup"><span data-stu-id="adc7c-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
+ <span data-ttu-id="85b1e-104">在對話方塊中選取的字型會傳入<xref:System.Windows.Forms.FontDialog.Font%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="85b1e-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="85b1e-105">因此，利用使用者選取的字型就像是容易讀取的屬性。</span><span class="sxs-lookup"><span data-stu-id="85b1e-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
   
-### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="adc7c-106">若要選取的字型屬性使用 FontDialog 元件</span><span class="sxs-lookup"><span data-stu-id="adc7c-106">To select font properties using the FontDialog Component</span></span>  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="85b1e-106">若要選取的字型屬性使用 FontDialog 元件</span><span class="sxs-lookup"><span data-stu-id="85b1e-106">To select font properties using the FontDialog Component</span></span>  
   
-1.  <span data-ttu-id="adc7c-107">顯示對話方塊方塊使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="adc7c-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+1.  <span data-ttu-id="85b1e-107">顯示對話方塊方塊使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="85b1e-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2.  <span data-ttu-id="adc7c-108">使用<xref:System.Windows.Forms.DialogResult>屬性來決定對話方塊關閉的方式。</span><span class="sxs-lookup"><span data-stu-id="adc7c-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
+2.  <span data-ttu-id="85b1e-108">使用<xref:System.Windows.Forms.DialogResult>屬性來決定對話方塊關閉的方式。</span><span class="sxs-lookup"><span data-stu-id="85b1e-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3.  <span data-ttu-id="adc7c-109">使用<xref:System.Windows.Forms.FontDialog.Font%2A>屬性來設定所需的字型。</span><span class="sxs-lookup"><span data-stu-id="adc7c-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
+3.  <span data-ttu-id="85b1e-109">使用<xref:System.Windows.Forms.FontDialog.Font%2A>屬性來設定所需的字型。</span><span class="sxs-lookup"><span data-stu-id="85b1e-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
   
-     <span data-ttu-id="adc7c-110">在下列範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟<xref:System.Windows.Forms.FontDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="adc7c-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="adc7c-111">字型選擇和使用者時按下**確定**、<xref:System.Windows.Forms.FontDialog.Font%2A>屬性<xref:System.Windows.Forms.TextBox>表單上的控制項設為選擇的字型。</span><span class="sxs-lookup"><span data-stu-id="adc7c-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="adc7c-112">這個範例假設您的表單具有<xref:System.Windows.Forms.Button>控制項，<xref:System.Windows.Forms.TextBox>控制項和<xref:System.Windows.Forms.FontDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="adc7c-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
+     <span data-ttu-id="85b1e-110">在下列範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟<xref:System.Windows.Forms.FontDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="85b1e-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="85b1e-111">字型選擇和使用者時按下**確定**、<xref:System.Windows.Forms.FontDialog.Font%2A>屬性<xref:System.Windows.Forms.TextBox>表單上的控制項設為選擇的字型。</span><span class="sxs-lookup"><span data-stu-id="85b1e-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="85b1e-112">這個範例假設您的表單具有<xref:System.Windows.Forms.Button>控制項，<xref:System.Windows.Forms.TextBox>控制項和<xref:System.Windows.Forms.FontDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="85b1e-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     <span data-ttu-id="adc7c-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="adc7c-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="85b1e-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="85b1e-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="adc7c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="adc7c-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="85b1e-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="85b1e-114">See Also</span></span>  
  <xref:System.Windows.Forms.FontDialog>  
- [<span data-ttu-id="adc7c-115">FontDialog 元件</span><span class="sxs-lookup"><span data-stu-id="adc7c-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+ [<span data-ttu-id="85b1e-115">FontDialog 元件</span><span class="sxs-lookup"><span data-stu-id="85b1e-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

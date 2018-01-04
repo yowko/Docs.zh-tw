@@ -23,30 +23,31 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6382efab8dc5dde00c9debd408d70b0ad0e8e11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0db83277be1dcecc2463c45481671c2ee1ee737
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="ce7c0-102">如何：將按鈕加入至 ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="ce7c0-102">How to: Add Buttons to a ToolBar Control</span></span>
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="621f4-102">如何：將按鈕加入至 ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="621f4-102">How to: Add Buttons to a ToolBar Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="ce7c0-103"><xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="621f4-103"><xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="621f4-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="ce7c0-104">不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控制項是您加入的按鈕。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="ce7c0-105">這些可以用來讓您輕鬆存取功能表命令或者，或者，也可置於另一個區域中的命令公開給您的使用者無法使用功能表結構中的應用程式的使用者介面。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
+ <span data-ttu-id="621f4-104">不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控制項是您加入的按鈕。</span><span class="sxs-lookup"><span data-stu-id="621f4-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="621f4-105">這些可以用來讓您輕鬆存取功能表命令或者，或者，也可置於另一個區域中的命令公開給您的使用者無法使用功能表結構中的應用程式的使用者介面。</span><span class="sxs-lookup"><span data-stu-id="621f4-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
   
- <span data-ttu-id="ce7c0-106">下列範例假設<xref:System.Windows.Forms.ToolBar>控制項新增至 Windows Form (`Form1`)。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
+ <span data-ttu-id="621f4-106">下列範例假設<xref:System.Windows.Forms.ToolBar>控制項新增至 Windows Form (`Form1`)。</span><span class="sxs-lookup"><span data-stu-id="621f4-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
   
-### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="ce7c0-107">若要以程式設計方式加入按鈕</span><span class="sxs-lookup"><span data-stu-id="ce7c0-107">To add buttons programmatically</span></span>  
+### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="621f4-107">若要以程式設計方式加入按鈕</span><span class="sxs-lookup"><span data-stu-id="621f4-107">To add buttons programmatically</span></span>  
   
-1.  <span data-ttu-id="ce7c0-108">在程序，以建立工具列按鈕將它們加入至<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
+1.  <span data-ttu-id="621f4-108">在程序，以建立工具列按鈕將它們加入至<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。</span><span class="sxs-lookup"><span data-stu-id="621f4-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
   
-2.  <span data-ttu-id="ce7c0-109">藉由傳遞的按鈕索引，透過指定屬性設定為個別的按鈕<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
+2.  <span data-ttu-id="621f4-109">藉由傳遞的按鈕索引，透過指定屬性設定為個別的按鈕<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="621f4-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
   
-     <span data-ttu-id="ce7c0-110">以下範例假設的表單具有<xref:System.Windows.Forms.ToolBar>已經加入的控制項。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
+     <span data-ttu-id="621f4-110">以下範例假設的表單具有<xref:System.Windows.Forms.ToolBar>已經加入的控制項。</span><span class="sxs-lookup"><span data-stu-id="621f4-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="ce7c0-111"><xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合是以零為起始的集合，因此應視情況繼續執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="ce7c0-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
+    >  <span data-ttu-id="621f4-111"><xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合是以零為起始的集合，因此應視情況繼續執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="621f4-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -158,9 +159,9 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ce7c0-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce7c0-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="621f4-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="621f4-112">See Also</span></span>  
  <xref:System.Windows.Forms.ToolBar>  
- [<span data-ttu-id="ce7c0-113">操作說明：定義工具列按鈕的圖示</span><span class="sxs-lookup"><span data-stu-id="ce7c0-113">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [<span data-ttu-id="ce7c0-114">操作說明：觸發工具列按鈕的功能表事件</span><span class="sxs-lookup"><span data-stu-id="ce7c0-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [<span data-ttu-id="ce7c0-115">工具列控制項概觀</span><span class="sxs-lookup"><span data-stu-id="ce7c0-115">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [<span data-ttu-id="ce7c0-116">ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="ce7c0-116">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+ [<span data-ttu-id="621f4-113">操作說明：定義工具列按鈕的圖示</span><span class="sxs-lookup"><span data-stu-id="621f4-113">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [<span data-ttu-id="621f4-114">操作說明：觸發工具列按鈕的功能表事件</span><span class="sxs-lookup"><span data-stu-id="621f4-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [<span data-ttu-id="621f4-115">工具列控制項概觀</span><span class="sxs-lookup"><span data-stu-id="621f4-115">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [<span data-ttu-id="621f4-116">ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="621f4-116">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

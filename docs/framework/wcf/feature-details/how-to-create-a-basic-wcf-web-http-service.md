@@ -16,65 +16,66 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72e111340fc01df3def2fcb1d5360b00720af2f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a><span data-ttu-id="a395f-102">HOW TO：建立基本 WCF Web HTTP 服務</span><span class="sxs-lookup"><span data-stu-id="a395f-102">How to: Create a Basic WCF Web HTTP Service</span></span>
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="a395f-103"> 可以讓您建立公開 Web 端點的服務。</span><span class="sxs-lookup"><span data-stu-id="a395f-103"> allows you to create a service that exposes a Web endpoint.</span></span> <span data-ttu-id="a395f-104">Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。</span><span class="sxs-lookup"><span data-stu-id="a395f-104">Web endpoints send data by XML or JSON, there is no SOAP envelope.</span></span> <span data-ttu-id="a395f-105">本主題示範如何公開這類端點。</span><span class="sxs-lookup"><span data-stu-id="a395f-105">This topic demonstrates how to expose such an endpoint.</span></span>  
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a><span data-ttu-id="7b1de-102">HOW TO：建立基本 WCF Web HTTP 服務</span><span class="sxs-lookup"><span data-stu-id="7b1de-102">How to: Create a Basic WCF Web HTTP Service</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="7b1de-103"> 可以讓您建立公開 Web 端點的服務。</span><span class="sxs-lookup"><span data-stu-id="7b1de-103"> allows you to create a service that exposes a Web endpoint.</span></span> <span data-ttu-id="7b1de-104">Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。</span><span class="sxs-lookup"><span data-stu-id="7b1de-104">Web endpoints send data by XML or JSON, there is no SOAP envelope.</span></span> <span data-ttu-id="7b1de-105">本主題示範如何公開這類端點。</span><span class="sxs-lookup"><span data-stu-id="7b1de-105">This topic demonstrates how to expose such an endpoint.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a395f-106">保護 Web 端點的唯一方式，就是透過 HTTPS 運用傳輸安全性來加以公開。</span><span class="sxs-lookup"><span data-stu-id="a395f-106">The only way to secure a Web endpoint is to expose it through HTTPS, using transport security.</span></span> <span data-ttu-id="a395f-107">使用訊息安全性時，安全性資訊通常會放在 SOAP 標頭中，而傳送至非 SOAP 端點的訊息不包含任何 SOAP 封套，也就沒地方可以放置安全性資訊，因此您必須仰賴傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="a395f-107">When using message-based security, security information is usually placed in SOAP headers and because the messages sent to non-SOAP endpoints contain no SOAP envelope, there is nowhere to place the security information and you must rely on transport security.</span></span>  
+>  <span data-ttu-id="7b1de-106">保護 Web 端點的唯一方式，就是透過 HTTPS 運用傳輸安全性來加以公開。</span><span class="sxs-lookup"><span data-stu-id="7b1de-106">The only way to secure a Web endpoint is to expose it through HTTPS, using transport security.</span></span> <span data-ttu-id="7b1de-107">使用訊息安全性時，安全性資訊通常會放在 SOAP 標頭中，而傳送至非 SOAP 端點的訊息不包含任何 SOAP 封套，也就沒地方可以放置安全性資訊，因此您必須仰賴傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="7b1de-107">When using message-based security, security information is usually placed in SOAP headers and because the messages sent to non-SOAP endpoints contain no SOAP envelope, there is nowhere to place the security information and you must rely on transport security.</span></span>  
   
-### <a name="to-create-a-web-endpoint"></a><span data-ttu-id="a395f-108">若要建立 Web 端點</span><span class="sxs-lookup"><span data-stu-id="a395f-108">To create a Web endpoint</span></span>  
+### <a name="to-create-a-web-endpoint"></a><span data-ttu-id="7b1de-108">若要建立 Web 端點</span><span class="sxs-lookup"><span data-stu-id="7b1de-108">To create a Web endpoint</span></span>  
   
-1.  <span data-ttu-id="a395f-109">透過加上 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.Web.WebInvokeAttribute> 和 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標示的介面來定義服務合約。</span><span class="sxs-lookup"><span data-stu-id="a395f-109">Define a service contract using an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> and the <xref:System.ServiceModel.Web.WebGetAttribute> attributes.</span></span>  
+1.  <span data-ttu-id="7b1de-109">透過加上 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.Web.WebInvokeAttribute> 和 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標示的介面來定義服務合約。</span><span class="sxs-lookup"><span data-stu-id="7b1de-109">Define a service contract using an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> and the <xref:System.ServiceModel.Web.WebGetAttribute> attributes.</span></span>  
   
      [!code-csharp[htBasicService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#0)]
      [!code-vb[htBasicService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]  
   
     > [!NOTE]
-    >  <span data-ttu-id="a395f-110">根據預設，<xref:System.ServiceModel.Web.WebInvokeAttribute> 會將 POST 呼叫對應至作業。</span><span class="sxs-lookup"><span data-stu-id="a395f-110">By default, <xref:System.ServiceModel.Web.WebInvokeAttribute> maps POST calls to the operation.</span></span> <span data-ttu-id="a395f-111">但是，您可以指定 "method=" 參數，以指定要對應至作業的 HTTP 方法 (例如，HEAD、PUT 和 DELETE)。</span><span class="sxs-lookup"><span data-stu-id="a395f-111">You can, however, specify the HTTP method (for example, HEAD, PUT, or DELETE) to map to the operation by specifying a "method=" parameter.</span></span> <span data-ttu-id="a395f-112"><xref:System.ServiceModel.Web.WebGetAttribute> 沒有 "method=" 參數，只能將 GET 呼叫對應至服務作業。</span><span class="sxs-lookup"><span data-stu-id="a395f-112"><xref:System.ServiceModel.Web.WebGetAttribute> does not have a "method=" parameter and only maps GET calls to the service operation.</span></span>  
+    >  <span data-ttu-id="7b1de-110">根據預設，<xref:System.ServiceModel.Web.WebInvokeAttribute> 會將 POST 呼叫對應至作業。</span><span class="sxs-lookup"><span data-stu-id="7b1de-110">By default, <xref:System.ServiceModel.Web.WebInvokeAttribute> maps POST calls to the operation.</span></span> <span data-ttu-id="7b1de-111">但是，您可以指定 "method=" 參數，以指定要對應至作業的 HTTP 方法 (例如，HEAD、PUT 和 DELETE)。</span><span class="sxs-lookup"><span data-stu-id="7b1de-111">You can, however, specify the HTTP method (for example, HEAD, PUT, or DELETE) to map to the operation by specifying a "method=" parameter.</span></span> <span data-ttu-id="7b1de-112"><xref:System.ServiceModel.Web.WebGetAttribute> 沒有 "method=" 參數，只能將 GET 呼叫對應至服務作業。</span><span class="sxs-lookup"><span data-stu-id="7b1de-112"><xref:System.ServiceModel.Web.WebGetAttribute> does not have a "method=" parameter and only maps GET calls to the service operation.</span></span>  
   
-2.  <span data-ttu-id="a395f-113">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="a395f-113">Implement the service contract.</span></span>  
+2.  <span data-ttu-id="7b1de-113">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="7b1de-113">Implement the service contract.</span></span>  
   
      [!code-csharp[htBasicService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#1)]
      [!code-vb[htBasicService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#1)]  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="a395f-114">若要裝載服務</span><span class="sxs-lookup"><span data-stu-id="a395f-114">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="7b1de-114">若要裝載服務</span><span class="sxs-lookup"><span data-stu-id="7b1de-114">To host the service</span></span>  
   
-1.  <span data-ttu-id="a395f-115">建立 <xref:System.ServiceModel.Web.WebServiceHost> 物件。</span><span class="sxs-lookup"><span data-stu-id="a395f-115">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span>  
+1.  <span data-ttu-id="7b1de-115">建立 <xref:System.ServiceModel.Web.WebServiceHost> 物件。</span><span class="sxs-lookup"><span data-stu-id="7b1de-115">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span>  
   
      [!code-csharp[htBasicService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]  
   
-2.  <span data-ttu-id="a395f-116">新增包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 的 <xref:System.ServiceModel.Description.WebHttpBehavior>。</span><span class="sxs-lookup"><span data-stu-id="a395f-116">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+2.  <span data-ttu-id="7b1de-116">新增包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 的 <xref:System.ServiceModel.Description.WebHttpBehavior>。</span><span class="sxs-lookup"><span data-stu-id="7b1de-116">Add a <xref:System.ServiceModel.Description.ServiceEndpoint> with the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
      [!code-csharp[htBasicService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#3)]
      [!code-vb[htBasicService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]  
   
     > [!NOTE]
-    >  <span data-ttu-id="a395f-117">如果您沒有加入端點，<xref:System.ServiceModel.Web.WebServiceHost> 會自動建立預設端點。</span><span class="sxs-lookup"><span data-stu-id="a395f-117">If you do not add an endpoint, <xref:System.ServiceModel.Web.WebServiceHost> automatically creates a default endpoint.</span></span> <span data-ttu-id="a395f-118"><xref:System.ServiceModel.Web.WebServiceHost> 也會加入 <xref:System.ServiceModel.Description.WebHttpBehavior>，並停用 HTTP 說明網頁和 Web 服務描述語言 (WSDL) 的 GET 功能，使中繼資料端點不會干擾預設 HTTP 端點。</span><span class="sxs-lookup"><span data-stu-id="a395f-118"><xref:System.ServiceModel.Web.WebServiceHost> also adds <xref:System.ServiceModel.Description.WebHttpBehavior> and disables the HTTP Help page and the Web Services Description Language (WSDL) GET functionality so the metadata endpoint does not interfere with the default HTTP endpoint.</span></span>  
+    >  <span data-ttu-id="7b1de-117">如果您沒有加入端點，<xref:System.ServiceModel.Web.WebServiceHost> 會自動建立預設端點。</span><span class="sxs-lookup"><span data-stu-id="7b1de-117">If you do not add an endpoint, <xref:System.ServiceModel.Web.WebServiceHost> automatically creates a default endpoint.</span></span> <span data-ttu-id="7b1de-118"><xref:System.ServiceModel.Web.WebServiceHost> 也會加入 <xref:System.ServiceModel.Description.WebHttpBehavior>，並停用 HTTP 說明網頁和 Web 服務描述語言 (WSDL) 的 GET 功能，使中繼資料端點不會干擾預設 HTTP 端點。</span><span class="sxs-lookup"><span data-stu-id="7b1de-118"><xref:System.ServiceModel.Web.WebServiceHost> also adds <xref:System.ServiceModel.Description.WebHttpBehavior> and disables the HTTP Help page and the Web Services Description Language (WSDL) GET functionality so the metadata endpoint does not interfere with the default HTTP endpoint.</span></span>  
     >   
-    >  <span data-ttu-id="a395f-119">如果新增包含 "" 的 URL 非 SOAP 端點，會在嘗試呼叫端點上的作業時導致未預期的行為。</span><span class="sxs-lookup"><span data-stu-id="a395f-119">Adding a non-SOAP endpoint with a URL of "" causes unexpected behavior when an attempt is made to call an operation on the endpoint.</span></span> <span data-ttu-id="a395f-120">發生原因是因為端點的接聽 URI 與說明頁面 (當您瀏覽至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的基底位址時所顯示的頁面) 的 URI 相同。</span><span class="sxs-lookup"><span data-stu-id="a395f-120">The reason for this is the listen URI of the endpoint is the same as the URI for the help page (the page that is displayed when you browse to the base address of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service).</span></span>  
+    >  <span data-ttu-id="7b1de-119">如果新增包含 "" 的 URL 非 SOAP 端點，會在嘗試呼叫端點上的作業時導致未預期的行為。</span><span class="sxs-lookup"><span data-stu-id="7b1de-119">Adding a non-SOAP endpoint with a URL of "" causes unexpected behavior when an attempt is made to call an operation on the endpoint.</span></span> <span data-ttu-id="7b1de-120">發生原因是因為端點的接聽 URI 與說明頁面 (當您瀏覽至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的基底位址時所顯示的頁面) 的 URI 相同。</span><span class="sxs-lookup"><span data-stu-id="7b1de-120">The reason for this is the listen URI of the endpoint is the same as the URI for the help page (the page that is displayed when you browse to the base address of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service).</span></span>  
   
-     <span data-ttu-id="a395f-121">您可以執行下列其中一項動作來預防發生這種情況：</span><span class="sxs-lookup"><span data-stu-id="a395f-121">You can do one of the following actions to prevent this from happening:</span></span>  
+     <span data-ttu-id="7b1de-121">您可以執行下列其中一項動作來預防發生這種情況：</span><span class="sxs-lookup"><span data-stu-id="7b1de-121">You can do one of the following actions to prevent this from happening:</span></span>  
   
-    -   <span data-ttu-id="a395f-122">一律為非 SOAP 端點指定非空白的 URI。</span><span class="sxs-lookup"><span data-stu-id="a395f-122">Always specify a non-blank URI for a non-SOAP endpoint.</span></span>  
+    -   <span data-ttu-id="7b1de-122">一律為非 SOAP 端點指定非空白的 URI。</span><span class="sxs-lookup"><span data-stu-id="7b1de-122">Always specify a non-blank URI for a non-SOAP endpoint.</span></span>  
   
-    -   <span data-ttu-id="a395f-123">關閉說明頁面。</span><span class="sxs-lookup"><span data-stu-id="a395f-123">Turn off the help page.</span></span> <span data-ttu-id="a395f-124">運用下列程式碼即可達到這個目的。</span><span class="sxs-lookup"><span data-stu-id="a395f-124">This can be done with the following code.</span></span>  
+    -   <span data-ttu-id="7b1de-123">關閉說明頁面。</span><span class="sxs-lookup"><span data-stu-id="7b1de-123">Turn off the help page.</span></span> <span data-ttu-id="7b1de-124">運用下列程式碼即可達到這個目的。</span><span class="sxs-lookup"><span data-stu-id="7b1de-124">This can be done with the following code.</span></span>  
   
      [!code-csharp[htBasicService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]  
   
-3.  <span data-ttu-id="a395f-125">開啟服務主機並等候使用者按下 ENTER。</span><span class="sxs-lookup"><span data-stu-id="a395f-125">Open the service host and wait until the user presses ENTER.</span></span>  
+3.  <span data-ttu-id="7b1de-125">開啟服務主機並等候使用者按下 ENTER。</span><span class="sxs-lookup"><span data-stu-id="7b1de-125">Open the service host and wait until the user presses ENTER.</span></span>  
   
      [!code-csharp[htBasicService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]  
   
-     <span data-ttu-id="a395f-126">此範例示範如何使用主控台應用程式來裝載 Web 樣式服務。</span><span class="sxs-lookup"><span data-stu-id="a395f-126">This sample demonstrates how to host a Web-Style service with a console application.</span></span> <span data-ttu-id="a395f-127">您也可以透過 IIS 裝載這類服務。</span><span class="sxs-lookup"><span data-stu-id="a395f-127">You can also host such a service within IIS.</span></span> <span data-ttu-id="a395f-128">若要這麼做，請在 .svc 檔案中指定 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 類別，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="a395f-128">To do this, specify the <xref:System.ServiceModel.Activation.WebServiceHostFactory> class in a .svc file as the following code demonstrates.</span></span>  
+     <span data-ttu-id="7b1de-126">此範例示範如何使用主控台應用程式來裝載 Web 樣式服務。</span><span class="sxs-lookup"><span data-stu-id="7b1de-126">This sample demonstrates how to host a Web-Style service with a console application.</span></span> <span data-ttu-id="7b1de-127">您也可以透過 IIS 裝載這類服務。</span><span class="sxs-lookup"><span data-stu-id="7b1de-127">You can also host such a service within IIS.</span></span> <span data-ttu-id="7b1de-128">若要這麼做，請在 .svc 檔案中指定 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 類別，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="7b1de-128">To do this, specify the <xref:System.ServiceModel.Activation.WebServiceHostFactory> class in a .svc file as the following code demonstrates.</span></span>  
   
     ```  
           <%ServiceHost   
@@ -84,45 +85,45 @@ ms.lasthandoff: 12/02/2017
     Factory=System.ServiceModel.Activation.WebServiceHostFactory%>  
     ```  
   
-### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a><span data-ttu-id="a395f-129">若要在 Internet Explorer 中呼叫對應至 GET 的服務作業</span><span class="sxs-lookup"><span data-stu-id="a395f-129">To call service operations mapped to GET in Internet Explorer</span></span>  
+### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a><span data-ttu-id="7b1de-129">若要在 Internet Explorer 中呼叫對應至 GET 的服務作業</span><span class="sxs-lookup"><span data-stu-id="7b1de-129">To call service operations mapped to GET in Internet Explorer</span></span>  
   
-1.  <span data-ttu-id="a395f-130">開啟 Internet Explorer 並輸入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"然後按 ENTER。</span><span class="sxs-lookup"><span data-stu-id="a395f-130">Open Internet Explorer and type "`http://localhost:8000/EchoWithGet?s=Hello, world!`" and press ENTER.</span></span> <span data-ttu-id="a395f-131">URL 包含服務的基底位址 ("http://localhost:8000/")、端點的相對位址 ("")、要呼叫的服務作業 ("EchoWithGet")、問號，並於後面接續由連字號 (&) 分隔的具名參數清單。</span><span class="sxs-lookup"><span data-stu-id="a395f-131">The URL contains the base address of the service ("http://localhost:8000/"), the relative address of the endpoint (""), the service operation to call ("EchoWithGet"), and a question mark followed by a list of named parameters separated by an ampersand (&).</span></span>  
+1.  <span data-ttu-id="7b1de-130">開啟 Internet Explorer 並輸入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"然後按 ENTER。</span><span class="sxs-lookup"><span data-stu-id="7b1de-130">Open Internet Explorer and type "`http://localhost:8000/EchoWithGet?s=Hello, world!`" and press ENTER.</span></span> <span data-ttu-id="7b1de-131">URL 包含服務的基底位址 ("http://localhost:8000/")、端點的相對位址 ("")、要呼叫的服務作業 ("EchoWithGet")、問號，並於後面接續由連字號 (&) 分隔的具名參數清單。</span><span class="sxs-lookup"><span data-stu-id="7b1de-131">The URL contains the base address of the service ("http://localhost:8000/"), the relative address of the endpoint (""), the service operation to call ("EchoWithGet"), and a question mark followed by a list of named parameters separated by an ampersand (&).</span></span>  
   
-### <a name="to-call-service-operations-in-code"></a><span data-ttu-id="a395f-132">若要透過程式碼呼叫服務作業</span><span class="sxs-lookup"><span data-stu-id="a395f-132">To call service operations in code</span></span>  
+### <a name="to-call-service-operations-in-code"></a><span data-ttu-id="7b1de-132">若要透過程式碼呼叫服務作業</span><span class="sxs-lookup"><span data-stu-id="7b1de-132">To call service operations in code</span></span>  
   
-1.  <span data-ttu-id="a395f-133">建立的執行個體<!--zz <xref:System.ServiceModel.Web.WebChannelFactory>-->`System.ServiceModel.Web.WebChannelFactory`內`using`區塊。</span><span class="sxs-lookup"><span data-stu-id="a395f-133">Create an instance of <!--zz <xref:System.ServiceModel.Web.WebChannelFactory>--> `System.ServiceModel.Web.WebChannelFactory` within a `using` block.</span></span>  
+1.  <span data-ttu-id="7b1de-133">建立的執行個體<!--zz <xref:System.ServiceModel.Web.WebChannelFactory>-->`System.ServiceModel.Web.WebChannelFactory`內`using`區塊。</span><span class="sxs-lookup"><span data-stu-id="7b1de-133">Create an instance of <!--zz <xref:System.ServiceModel.Web.WebChannelFactory>--> `System.ServiceModel.Web.WebChannelFactory` within a `using` block.</span></span>  
   
      [!code-csharp[htBasicService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]  
   
-2.  <span data-ttu-id="a395f-134">將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至 <xref:System.ServiceModel.ChannelFactory> 所呼叫的端點。</span><span class="sxs-lookup"><span data-stu-id="a395f-134">Add <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint the <xref:System.ServiceModel.ChannelFactory> calls.</span></span>  
+2.  <span data-ttu-id="7b1de-134">將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至 <xref:System.ServiceModel.ChannelFactory> 所呼叫的端點。</span><span class="sxs-lookup"><span data-stu-id="7b1de-134">Add <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint the <xref:System.ServiceModel.ChannelFactory> calls.</span></span>  
   
      [!code-csharp[htBasicService#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#7)]
      [!code-vb[htBasicService#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#7)]  
   
-3.  <span data-ttu-id="a395f-135">建立通道並呼叫服務。</span><span class="sxs-lookup"><span data-stu-id="a395f-135">Create the channel and call the service.</span></span>  
+3.  <span data-ttu-id="7b1de-135">建立通道並呼叫服務。</span><span class="sxs-lookup"><span data-stu-id="7b1de-135">Create the channel and call the service.</span></span>  
   
      [!code-csharp[htBasicService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#8)]
      [!code-vb[htBasicService#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#8)]  
   
-4.  <span data-ttu-id="a395f-136">關閉 <xref:System.ServiceModel.Web.WebServiceHost>。</span><span class="sxs-lookup"><span data-stu-id="a395f-136">Close the <xref:System.ServiceModel.Web.WebServiceHost>.</span></span>  
+4.  <span data-ttu-id="7b1de-136">關閉 <xref:System.ServiceModel.Web.WebServiceHost>。</span><span class="sxs-lookup"><span data-stu-id="7b1de-136">Close the <xref:System.ServiceModel.Web.WebServiceHost>.</span></span>  
   
      [!code-csharp[htBasicService#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]  
   
-## <a name="example"></a><span data-ttu-id="a395f-137">範例</span><span class="sxs-lookup"><span data-stu-id="a395f-137">Example</span></span>  
- <span data-ttu-id="a395f-138">以下是這個範例的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="a395f-138">The following is the full code listing for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="7b1de-137">範例</span><span class="sxs-lookup"><span data-stu-id="7b1de-137">Example</span></span>  
+ <span data-ttu-id="7b1de-138">以下是這個範例的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="7b1de-138">The following is the full code listing for this example.</span></span>  
   
  [!code-csharp[htBasicService#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]
  [!code-vb[htBasicService#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#10)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a395f-139">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a395f-139">Compiling the Code</span></span>  
- <span data-ttu-id="a395f-140">編譯 Service.cs 時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。</span><span class="sxs-lookup"><span data-stu-id="a395f-140">When compiling Service.cs reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7b1de-139">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="7b1de-139">Compiling the Code</span></span>  
+ <span data-ttu-id="7b1de-140">編譯 Service.cs 時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。</span><span class="sxs-lookup"><span data-stu-id="7b1de-140">When compiling Service.cs reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a395f-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a395f-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7b1de-141">請參閱</span><span class="sxs-lookup"><span data-stu-id="7b1de-141">See Also</span></span>  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>  
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  
  <xref:System.ServiceModel.Web.WebServiceHost>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [<span data-ttu-id="a395f-142">WCF Web HTTP 程式設計模型</span><span class="sxs-lookup"><span data-stu-id="a395f-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [<span data-ttu-id="7b1de-142">WCF Web HTTP 程式設計模型</span><span class="sxs-lookup"><span data-stu-id="7b1de-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
