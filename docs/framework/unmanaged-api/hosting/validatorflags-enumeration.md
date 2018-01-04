@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f283beb79ec47454185800bd772904c3c696c7c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 952944e9ae9a8186a182796deb587b6fa6a0d6a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 列舉
 包含值，表示應該執行的呼叫中的驗證類型[iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法。  
@@ -42,7 +43,7 @@ enum ValidatorFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|指定應該驗證只的 Microsoft intermediate language (MSIL) 中的可執行檔。|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|指定應該驗證可執行檔的格式。|  
@@ -59,6 +60,6 @@ enum ValidatorFlags {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICLRErrorReportingManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

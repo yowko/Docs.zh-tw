@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1c17abfc501b0d44981d2ed6cf7d69d60d9948b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6be442dd74f6a71494e140b76357be1bc9e1b747
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 列舉
 包含值，這些值描述原生 Unmanaged 類型。  
@@ -91,7 +92,7 @@ typedef enum CorNativeType {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已過時。|  
 |`NATIVE_TYPE_VOID`|已過時。|  
@@ -148,6 +149,6 @@ typedef enum CorNativeType {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.UnmanagedType>  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

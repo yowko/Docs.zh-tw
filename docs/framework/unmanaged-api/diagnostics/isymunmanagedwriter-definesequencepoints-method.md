@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 836774114798324ac16d3263e58dd56665a9aa49
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e1dcc427a6d034ce108ca66f71cc24b1050a72f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
 在目前的方法內定義一組序列點。 每個起始行和起始資料行定義方法內的陳述式的開始。 每個結束行和結束資料行定義方法內的陳述式的結尾。 陣列的位移遞增順序排序。 永遠從開頭的方法，以位元組為單位測量位移。  
@@ -71,5 +72,5 @@ HRESULT DefineSequencePoints(
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

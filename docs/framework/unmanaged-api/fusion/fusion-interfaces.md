@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1742025bed977dfd377a78db42df42c1bc43966
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9226eba1b9f03138180430b2abb960f43f4b4260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-interfaces"></a>融合介面
 本章節描述融合 API 會使用來存取應用程式的資源的內容，並找出正確的版本的應用程式資源的 unmanaged 的介面。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [IAppIdAuthority 介面](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
  提供方法，產生並比較應用程式的身分識別與參考的索引鍵。  
   

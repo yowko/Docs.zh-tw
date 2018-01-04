@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 446967cc157962a1ec4a87193bbf84b1a356efa6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76d43a620b64c771427cd30af770e70642dabe7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 列舉
 指出欄位是否為靜態，若是靜態，則欄位套用的是靜態品質。 這些值可以表示的欄位具有多個使用位元 OR 運算結合不同的靜態品質。  
@@ -42,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|欄位不是靜態的。|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|此欄位是應用程式定義域靜態。|  
@@ -59,5 +60,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

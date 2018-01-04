@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b199764ea0fb2d02b01d7cf04d1fa8fad743109f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b5128ea59f7668737885835723156fc7f1786872
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 列舉
 包含值，這些值描述與欄位有關的中繼資料。  
@@ -62,7 +63,7 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|指定的協助工具資訊。|  
 |`fdPrivateScope`|指定的欄位不能參考。|  
@@ -91,5 +92,5 @@ typedef enum CorFieldAttr {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

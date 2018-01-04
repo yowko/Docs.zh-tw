@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3fc4d9f7a95a3283d87f036163592f43e87dd053
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c0d09bf4c24f977a490f946cbc35b2b3f53dfc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 結構
 包含有關屬性的中繼資料資訊[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)執行個體。  
@@ -40,7 +41,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`pszNamespace`|指向以 null 結束的字元字串，包含命名空間的屬性內。|  
 |`pszName`|以 null 結尾字元字串，包含屬性名稱的指標。|  
@@ -58,7 +59,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
  [IDENTITY_ATTRIBUTE_BLOB 結構](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
  [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

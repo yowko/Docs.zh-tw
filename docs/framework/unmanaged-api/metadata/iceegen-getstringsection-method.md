@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce511b4610a6ff681eb70bfeb6a7a7afe162818e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 240fad6c53fc0db3c55296069ca91998b7c530f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection 方法
 取得指定的控制代碼所參考的程式碼區段的字串表示。  
@@ -53,5 +54,5 @@ HRESULT GetStringSection (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 700e9bcfe33e5be3725bd24b212b3a77ad139b2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd30fe7904fa6c0685dd9c39931cc545e4e30583
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="osinfo-structure"></a>OSINFO 結構
 包含有關組件或模組的作業系統的詳細資料。  
@@ -40,7 +41,7 @@ typedef struct {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`dwOSPlatformId`|Microsoft Windows 平台函數所定義的識別碼值的其中一個`GetVersionEx`。 支援下列值：<br /><br /> -VER_PLATFORM_WIN32s 或 0x0000，指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS，或者 0x0001，指定 Windows 95、 Windows 98、 或從它們繼承而來的作業系統。<br />-VER_PLATFORM_WIN32_NT，或者 0x0010，指定 Windows NT 或從它繼承而來的作業系統。|  
 |`dwOSMajorVersion`|作業系統主要版本或 NULL 值，指出任何版本。|  
@@ -58,6 +59,6 @@ typedef struct {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
  [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

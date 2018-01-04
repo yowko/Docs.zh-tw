@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a296dd333579f9d0e734b7c00a8adb648605295d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69eec0c2dfccacee4c54c9f2493da523812259aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION 列舉
 指出記憶體回收產生。  
@@ -41,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_GC_GEN_0`|此物件會儲存成層代 0。|  
 |`COR_PRF_GC_GEN_1`|此物件會儲存為第 1 代。|  
@@ -64,5 +65,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

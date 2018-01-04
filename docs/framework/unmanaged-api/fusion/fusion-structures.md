@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eca1cba0f91805baf2277f3d3bc5e793d9e2ba1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c2d463ac5baf2067be8b5454407467c0e594e790
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-structures"></a>融合結構
 本章節描述融合 API 使用的 unmanaged 的結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ASSEMBLY_INFO 結構](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
  包含在全域組件快取中註冊組件的資訊。  
   

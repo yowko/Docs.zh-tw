@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eaff0133020fe84e58f8a130bffc8ddc2a55a19d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 630a3048072ed7b19b3250e75aca3b31e4dd7df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列舉
 描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。  
@@ -48,7 +49,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`eAll`|指定所有 managed 類別和成員，涵蓋的其他`EApiCategories`欄位遭到封鎖而無法在部分信任程式碼中執行。|  
 |`eExternalProcessMgmt`|指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部處理序在部分信任程式碼中執行。|  
@@ -76,6 +77,6 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICLRHostProtectionManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

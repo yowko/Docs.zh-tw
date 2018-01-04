@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a10143ff8fa4fd17937ec700f8ce8ed60121ceb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6dca48edebe63ae7752ad8b2256133373bcc9872
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem 介面
 代表安裝在全域組件快取的項目。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[GetReference 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|取得指標`FUSION_INSTALL_REFERENCE`結構所表示`IInstallReferenceItem`。|  
   
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  [FUSION_INSTALL_REFERENCE 結構](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

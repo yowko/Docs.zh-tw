@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c0f398c09569a855291a1565ce63b513161a803
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77a2cab35785aa39571d39bdd369fa26cdbcd1d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igchost-interface"></a>IGCHost 介面
 提供方法來取得記憶體回收系統的相關資訊，以及控制記憶體回收的某些層面。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[Collect 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-collect-method.md)|強制發生在指定的層代，不論目前的記憶體回收集合的狀態。|  
 |[GetStats 方法](../../../../docs/framework/unmanaged-api/hosting/igchost-getstats-method.md)|取得目前的記憶體回收系統狀態的統計資料。|  
@@ -53,6 +54,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

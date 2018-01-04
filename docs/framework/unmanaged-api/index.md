@@ -17,16 +17,17 @@ ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [一般資料類型](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
  列出使用的一般資料類型 (特別是用於 Unmanaged 分析及偵錯 API 中)。  
   

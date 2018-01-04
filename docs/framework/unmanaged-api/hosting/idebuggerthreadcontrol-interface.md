@@ -19,18 +19,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e3f8d04a47607958ff5d439b501a6de9bbc5b02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 297a66f9466b00dec4d32f7d8a6e2bd13b6e5655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>IDebuggerThreadControl 介面
 提供方法來通知主機有關封鎖及解除封鎖的執行緒，偵錯服務。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[ThreadIsBlockingForDebugger 方法](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|通知會傳送此回呼執行緒相關的主機至偵錯服務內的區塊。|  
 |[ReleaseAllRuntimeThreads 方法](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|通知主機有偵錯服務即將要釋放所有的執行緒所封鎖。|  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

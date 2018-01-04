@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebfb45e6d568b4fa1db209264e02332df636474f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ca2db0cd7082a596999f1d74c9092264a65692ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS 列舉
 包含值，表示啟動行為的 common language runtime (CLR)。 根據預設，記憶體回收是非並行，而且只基底類別程式庫載入定義域中性區域。  
@@ -57,7 +58,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|指定應該使用並行記憶體回收。 如果呼叫端要求的伺服器組建和並行記憶體回收在單一處理器電腦上，但是工作站組建和非並行記憶體回收會改為執行。 **注意：** WOW64 執行的應用程式中不支援並行記憶體回收 x86 實作 （之前稱為 ia-64） 的 Intel Itanium 架構的 64 位元系統上的模擬器。 如需使用 WOW64 在 64 位元 Windows 系統上的詳細資訊，請參閱[執行 32 位元應用程式](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx)。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|指定應該發生的載入器最佳化。|  
@@ -85,5 +86,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

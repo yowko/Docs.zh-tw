@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e2396219a5e4bfd95a9dc7134e2e603ed7a15a3d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03deb62a84a1e9c6cee898fe0023c34b8c538ece
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 函式
 驗證 managed 的模組映像，並已經載入後，通知作業系統載入器。  
@@ -47,7 +48,7 @@ STDAPI _CorValidateImage (
 ## <a name="return-value"></a>傳回值  
  此函式傳回的標準值`E_INVALIDARG`， `E_OUTOFMEMORY`， `E_UNEXPECTED`，和`E_FAIL`，以及下列值。  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|映像無效。 此值沒有 HRESULT 0xC000007BL。|  
 |`STATUS_SUCCESS`|影像是有效的。 此值沒有 HRESULT 0x00000000L。|  
@@ -84,5 +85,5 @@ STDAPI _CorValidateImage (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

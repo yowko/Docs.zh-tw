@@ -19,18 +19,19 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e6ed5ea00799fff70626114257efef2d06b505ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 介面
 提供可讓主應用程式設定的屬性<xref:System.AppDomain?displayProperty=nameWithType>型別之前呼叫[icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法來建立它。  
   
 ## <a name="properties"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.AppDomainSetup.ApplicationBase%2A>|取得或設定包含應用程式的目錄名稱。|  
 |<xref:System.AppDomainSetup.ApplicationName%2A>|取得或設定應用程式的名稱。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.AppDomain>  
  <xref:System.AppDomainSetup>  
  <xref:System.IAppDomainSetup>  

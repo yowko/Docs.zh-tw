@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5cdaba8b1186d1720ff8b64f50a8effc4691fe8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a1ad2aa505ba77f136a28b2cfa9f1fa357c37ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
 表示資源的組件資訊清單中編碼的可見性。  
@@ -42,7 +43,7 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`mrVisibilityMask`|保留的。|  
 |`mrPublic`|資源為公用。|  
@@ -55,5 +56,5 @@ typedef enum CorManifestResourceFlags {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

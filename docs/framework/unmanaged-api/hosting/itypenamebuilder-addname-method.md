@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fb732132606fca61593cb54d7ddcb221a065374b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b8aedfe2507c97ebe0cad9acb0424745341f8b89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="itypenamebuilderaddname-method"></a>ITypeNameBuilder::AddName 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -47,5 +48,5 @@ HRESULT AddName (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

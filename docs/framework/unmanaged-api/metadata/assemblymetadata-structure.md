@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5652907abc17868414c554cb5c87b0856d2c5a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 819510c14bd67e7fcc739a19ea945f16b2a66c9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 結構
 包含參考的組件，包括其版本和層級支援地區設定、 處理器和作業系統的相關資訊。  
@@ -47,7 +48,7 @@ typedef struct {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`usMajorVersion`|參考的組件的主要版本號碼。 此值不可為零。 如果所有的位元`usMajorVersion`設定，未指定的主要版本。|  
 |`usMinorVersion`|參考的組件的次要版本號碼。 此值不可為零。 如果所有的位元`usMinorVersion`設定，未指定的次要版本。|  
@@ -69,7 +70,7 @@ typedef struct {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
  [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
  [OSINFO 結構](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

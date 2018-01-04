@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 22bd851ded9b2aa3fd6d5b6bdf43bbf0be5b45af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d7b6ec470fae6adb76a9b78fdab9b871edc0ca49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 介面
 提供方法來存取在執行緒集區。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[CorRegisterWaitForSingleObject 方法](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|已保留供內部使用。|  
 |[CorUnregisterWait 方法](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|已保留供內部使用。|  
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

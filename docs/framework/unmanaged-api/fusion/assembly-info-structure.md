@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d532bbd2d338f942c09c4213620468a3361db5f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 215d80c3d207c2f50cfbd74386915b0467692b57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 結構
 包含在全域組件快取中註冊組件的資訊。  
@@ -42,7 +43,7 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|以位元組為單位的結構大小。 這個欄位被保留供未來擴充。|  
 |`dwAssemblyFlags`|旗標，表示組件的相關的安裝詳細資料。 支援下列值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 值，指出已安裝的組件。 目前的.NET framework 版本一律設定`dwAssemblyFlags`為這個值。<br />表示組件是常駐裝載-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 值。 目前的.NET framework 版本永遠不會設定`dwAssemblyFlags`為這個值。|  
@@ -57,6 +58,6 @@ typedef struct _ASSEMBLY_INFO {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
  [全域組件快取](../../../../docs/framework/app-domains/gac.md)

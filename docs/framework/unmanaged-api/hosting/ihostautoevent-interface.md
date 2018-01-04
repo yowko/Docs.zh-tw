@@ -19,18 +19,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c99bde7641ee640df06be71fc43a7f8774f7ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91e790cf7c97c0045535870c2d41d628f943a22d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent 介面
 提供主機的自動重設事件實作的表示法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[Set 方法](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|設定目前`IHostAutoEvent`收到信號狀態的執行個體。|  
 |[Wait 方法](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|造成目前`IHostAutoEvent`等候，直到擁有事件的執行個體或指定的經過時間量。|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [IHostManualEvent 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
  [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  

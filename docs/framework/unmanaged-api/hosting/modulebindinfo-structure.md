@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6488503e0300530b22c0c6f904e11db7f5d5b41c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399ba2471b4dc7c5e372a56a9dcab8117068a693
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 結構
 提供參考的模組和包含它的組件的詳細的資訊。  
@@ -40,7 +41,7 @@ typedef struct _ModuleBindInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`dwAppDomainId`|唯一識別碼`IStream`呼叫所傳回[ihostassemblystore:: Providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)從中參照的模組已載入的方法。|  
 |`lpAssemblyIdentity`|組件，其中包含參考之的模組的唯一識別碼。|  
@@ -58,7 +59,7 @@ typedef struct _ModuleBindInfo {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  [AssemblyBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
  [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  

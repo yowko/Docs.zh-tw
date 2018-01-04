@@ -17,18 +17,19 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3efdf649d0039f2eb6b39d5cb17c839b90e97508
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd954419f46313a239ddf5a309a646e3d2f1b9bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 裝載介面
 本節描述 unmanaged 介面主機可用於將 common language runtime (CLR) 整合到他們的應用程式。 資訊適用於.NET Framework 2.0 版和更新版本。 這些介面來控制許多層面的執行階段，比起 1.0 和 1.1 版，請將主機啟用，並提供更緊密的整合，則 CLR 與主機的執行模式之間。  
   
  在.NET Framework 1.0 和 1.1 版中，裝載模型啟用受管理的主機載入 CLR 程序，來設定特定的設定，以及接收事件通知。 不過，在一般情況下，主應用程式和 CLR 執行獨立該處理程序。 在.NET Framework 2.0 版和更新版本中，新的抽象層可讓主機提供多目前 Win32 組件中類型所提供的資源和擴充主應用程式可以設定的功能集。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [IActionOnCLREvent 介面](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
  提供方法，以執行已註冊的事件回呼。  
   
@@ -198,5 +199,5 @@ ms.lasthandoff: 10/18/2017
  [已被取代的 CLR 裝載介面和 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  包含的主題將描述裝載.NET Framework 1.0 和 1.1 版中提供的介面。  
   
- [在.NET Framework 4 和 4.5 加入的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  包含描述裝載介面中提供的主題[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。

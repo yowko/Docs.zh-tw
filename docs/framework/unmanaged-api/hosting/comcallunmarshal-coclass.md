@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2760fc84466c85e022421bcc17dcee6444ec859a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2cbaefd2b2c3b79a97107f4aaa394a3db2c68b33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal Coclass
 提供介面來管理的介面指標封送處理。  
@@ -38,7 +39,7 @@ coclass ComCallUnmarshal {
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |`IMarshal`|提供方法來建立、 初始化及管理用戶端處理序中的 proxy。|  
   
@@ -51,5 +52,5 @@ coclass ComCallUnmarshal {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

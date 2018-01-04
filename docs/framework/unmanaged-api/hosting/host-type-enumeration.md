@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e191293ff7bde6b1be2210af4e7830fec0d7290d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a8c910dd06109a8a69f29517812737d4b4dcef21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosttype-enumeration"></a>HOST_TYPE 列舉
 包含指定的啟動應用程式的主機類型的值。  
@@ -40,7 +41,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`HOST_TYPE_APPLAUNCH`|啟動應用程式從 AppLaunch.exe。<br /><br /> 部分信任應用程式使用此值。|  
 |`HOST_TYPE_CORFLAG`|直接啟動應用程式。 也就是啟動應用程式從其本身的.exe 檔案。<br /><br /> 使用此值為完全信任的應用程式。|  
@@ -55,5 +56,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -19,18 +19,19 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f88e400556421e0908e0a0b115f66ec3221124c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fc77f2106f5063b8db25f375c354a15f9f936e78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 介面
 可做為目前範圍中的程式碼物件的屬性的列舉值。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |`IEnumIDENTITY_ATTRIBUTE::Clone`|取得新的介面指標`IEnumIDENTITY_ATTRIBUTE`，其中包含這個相同的成員`IEnumIDENTITY_ATTRIBUTE`。|  
 |`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|將這個項目中所包含的資料寫入`IEnumIDENTITY_ATTRIBUTE`指定的資料緩衝區。|  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

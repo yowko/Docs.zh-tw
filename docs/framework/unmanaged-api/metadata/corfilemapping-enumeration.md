@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6736f154ef6b03c0bfe34d16a419955324316273
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5abde0d34baecf12628c9c6c99f04d6d81dd62fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corfilemapping-enumeration"></a>CorFileMapping 列舉
 包含描述的檔案會從呼叫傳回的對應型別值[imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)方法。  
@@ -41,7 +42,7 @@ typedef enum CorFileMapping {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`fmFlat`|做為資料檔對應檔。 也就是說，`SEC_IMAGE`旗標不傳遞至 Microsoft Win32`CreateFileMapping`函式。|  
 |`fmExecutableImage`|對於執行，使用對應檔`LoadLibrary`函式或`CreateFileMapping`函式與`SEC_IMAGE`旗標。|  
@@ -53,6 +54,6 @@ typedef enum CorFileMapping {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
  [GetFileMapping 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)

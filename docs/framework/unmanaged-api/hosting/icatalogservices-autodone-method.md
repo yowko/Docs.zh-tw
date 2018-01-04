@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 32efc50179b98d0c4f45b10eb46db1eddfe9578e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3cd44c2f21771ccda9a656bfe66f865e181fcee1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/18/2017
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
