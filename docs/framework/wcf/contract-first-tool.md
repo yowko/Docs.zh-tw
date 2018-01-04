@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00a4bac555166368114951625e18991e955cc02
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract-first-tool"></a>Contract-First 工具
 服務合約通常必須從現有的服務來建立。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約優先 (Contract-First) 工具自動從現有的服務建立資料合約類別。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。  

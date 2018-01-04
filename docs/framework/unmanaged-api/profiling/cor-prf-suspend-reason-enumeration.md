@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aef9688d3da047645d53f6fcf113153393780c8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 713360b3cdc30ce7bca3e0df115016d66e59b0df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
 指出執行階段已暫止的原因。  
@@ -44,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|執行階段會暫停，未指定原因。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行階段會暫停服務記憶體回收要求。<br /><br /> 記憶體回收相關集合回呼之間發生[icorprofilercallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)和[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼。|  
@@ -67,5 +68,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

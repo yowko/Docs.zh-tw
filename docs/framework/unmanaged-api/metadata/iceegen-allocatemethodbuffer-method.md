@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be288bedf12649b4356c68135868b9415840c4d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b92d42878e9f3a8778208d8acf89de7618fc7c54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer 方法
 建立方法，指定大小的緩衝區，並取得方法的相對虛擬位址。  
@@ -61,5 +62,5 @@ HRESULT AllocateMethodBuffer (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

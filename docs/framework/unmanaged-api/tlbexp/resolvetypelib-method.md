@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b430b050117243ced9d764045075071278841da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b668610f50c32373790130def17928b8b3b3d8b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 藉由傳回其完整的路徑來解析類型程式庫的簡單名稱。  
@@ -78,6 +79,6 @@ HRESULT ResolveTypeLib(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)

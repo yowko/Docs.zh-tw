@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f415b4f3062a83f97d2bf186981289cf16e555a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cc6b5df39c9fad6182f0ee6e4ff95638e9aaf448
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-enumerations"></a>裝載列舉
 本章節描述裝載 API 所使用的 unmanaged 的列舉。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CLSID_RESOLUTION_FLAGS 列舉](../../../../docs/framework/unmanaged-api/hosting/clsid-resolution-flags-enumeration.md)  
  包含值，表示 common language runtime (CLR) 應該要如何解決`CLSID`。  
   

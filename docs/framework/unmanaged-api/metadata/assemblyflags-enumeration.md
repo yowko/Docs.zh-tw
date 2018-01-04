@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 91760b6d16b663257bf3d89915da3bd88b3411bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 605817ef23246f708b6cf46a93072cde3003ab43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列舉
 包含描述的組件的執行階段功能的值。  
@@ -42,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`afImplicitExportedTypes`|指定匯出的類型定義是隱含構成組件檔案中。 在.NET framework 1.0 和 1.1 版中，這個值永遠是設定。|  
 |`afImplicitResources`|指定隱含構成組件檔案中定義的資源。 在.NET Framework 1.0 和 1.1 中，這個值永遠是設定。|  
@@ -62,6 +63,6 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
  [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

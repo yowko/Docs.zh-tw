@@ -19,18 +19,19 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83e9f6acf870e120a0fabd164ea099aff68a24e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c08dc8ea9af83e15b6736564eca5d376c6264387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 介面
 擴充[IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)以包含處理中繼資料資料流的方法。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[GetMetaDataStorage 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|取得大小與指定的區段中所儲存的中繼資料的內容。|  
 |[GetMetaDataStreamInfo 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|取得名稱、 大小和指定之索引處的中繼資料資料流內容。|  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

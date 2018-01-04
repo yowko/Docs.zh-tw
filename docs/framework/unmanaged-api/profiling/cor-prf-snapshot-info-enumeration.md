@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9c854360881426f2fc7fc9e401da1dc93b9bd84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4573ec44253b1b0f26ae62591db149f0447d3935
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfsnapshotinfo-enumeration"></a>COR_PRF_SNAPSHOT_INFO 列舉
 指定要傳遞的資料量隨同堆疊中的快照集每次呼叫程式碼剖析工具[StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)函式。  
@@ -40,7 +41,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 ## <a name="members"></a>成員  
   
-|Members|說明|  
+|成員|描述|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|表示值必須針對所有傳遞`StackSnapshotCallback`參數，除了`context`參數。|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|表示值必須針對所有傳遞`StackSnapshotCallback`參數，包括`context`參數。|  
@@ -58,6 +59,6 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DoStackSnapshot 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
  [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

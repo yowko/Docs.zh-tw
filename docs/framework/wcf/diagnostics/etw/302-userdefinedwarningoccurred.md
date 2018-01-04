@@ -13,18 +13,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61ec1e341d5220000b928409e006553c71ab379a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae455c9eec2335fcf6eb5473932bd8d9e5d2db95
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="302---userdefinedwarningoccurred"></a>302 - UserDefinedWarningOccurred
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|302|  
+|識別碼|302|  
 |關鍵字|Troubleshooting，HealthMonitoring，UserEvents，ServiceModel，EndToEndMonitoring|  
 |層級|警告|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

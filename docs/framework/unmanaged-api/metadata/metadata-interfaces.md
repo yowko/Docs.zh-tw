@@ -17,16 +17,17 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 638727dae1f0f32e5c92c0da7513719bd11ae8d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-interfaces"></a>中繼資料介面
 本節描述 Unmanaged 介面，這會提供您由 .NET Framework 類型、方法、欄位等所公開之中繼資料的存取權。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  提供動態程式碼編譯的方法。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  提供將類型程式庫對應至它們的中繼資料簽章，以及從一個轉換到另一個的方法。  
   
  [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` 已經過時。 請改用 `IMetaDataDispenserEx` 。  
+ `IMetaDataDispenser` 已經過時。 請改用 `IMetaDataDispenserEx`。  
   
  [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  提供方法，以對應建立或修改中繼資料的記憶體區域。  

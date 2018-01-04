@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 555f9a216c8e28f7f4fcd79babce77f929ecc072
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 18a5257dbc0272aedb8fe5c7ddec601b999c609b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-structures"></a>中繼資料結構
 本節說明中繼資料 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  ASSEMBLYMETADATA  
  儲存組件中繼資料供稍後使用。  
   

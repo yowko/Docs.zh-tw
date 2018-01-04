@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3e014443945574cff2733e5bc5d992691acc3fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e9af7bbb6dd7cfa488f72ec99f9cfd848f04e72f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
@@ -48,7 +49,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|表示預設行為，也就是略過已刪除的記錄。|  
 |`MDImportOptionAll`|表示應該列舉所有中繼資料。|  
@@ -67,5 +68,5 @@ typedef enum CorImportOptions {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

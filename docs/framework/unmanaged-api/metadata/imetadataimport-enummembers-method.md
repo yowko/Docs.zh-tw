@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc17437c18dd7a2cdc2fdabdc714b12f8d91cc7a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa7dabad0e555fe965cba4e5cbc69c10c9826b8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 列舉代表指定類型成員的 MemberDef 語彙基元。  
@@ -60,7 +61,7 @@ HRESULT EnumMembers (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMembers`已成功傳回。|  
 |`S_FALSE`|沒有列舉 MemberDef 語彙基元。 在此情況下，`pcTokens`為零。|  
@@ -77,6 +78,6 @@ HRESULT EnumMembers (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

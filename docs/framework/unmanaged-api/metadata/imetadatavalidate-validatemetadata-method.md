@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 260b4328b09e11e47f7029fbf5d0970a2acaae91
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 700913a271efab4370d448046c776ecc13dcee7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData 方法
 驗證目前中繼資料範圍內物件的中繼資料簽章。  
@@ -45,5 +46,5 @@ HRESULT ValidateMetaData ();
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IMetaDataValidate 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

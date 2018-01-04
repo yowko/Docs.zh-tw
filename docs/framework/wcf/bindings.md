@@ -14,16 +14,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 繫結
-繫結會指定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點與其他端點通訊的方式。 繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。 此外，您也可以透過繫結來設定其他特性，例如安全性與交易支援。  
+繫結會指定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點與其他端點通訊的方式。 繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。 此外，您也可以透過繫結程序來設定其他特性，例如安全性與異動支援。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)  
  有關 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 繫結的用途、系統提供哪些繫結，以及如何定義或修改這些繫結的概觀。  
   
@@ -40,9 +41,9 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>相關章節  
- [端點： 位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [端點：位址、繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [繫結](../../../docs/framework/wcf/feature-details/bindings.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)

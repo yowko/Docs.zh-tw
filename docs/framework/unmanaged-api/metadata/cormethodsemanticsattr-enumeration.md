@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c6dca24aad06b1c07c86cb716f4be344c8458471
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 09e0c1397a94b75a812e6cbdc52e612a930edae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 列舉
 包含值，這些值描述方法與關聯的屬性或事件之間的關聯性。  
@@ -45,7 +46,7 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`msSetter`|指定的方法是`set`屬性存取子。|  
 |`msGetter`|指定的方法是`get`屬性存取子。|  
@@ -61,5 +62,5 @@ typedef enum CorMethodSemanticsAttr {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

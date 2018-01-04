@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8932e295aa1a6c6cf961e7b3a218e76984da02cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 00f4aa4e87c0deb4b1326cb8bf4256a9307b3393
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 指定 common language runtime <xref:System.Type>、 型別修飾詞或中繼資料的類型簽章中類型的相關資訊。  
@@ -80,7 +81,7 @@ typedef enum CorElementType {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`ELEMENT_TYPE_END`|在內部使用。|  
 |`ELEMENT_TYPE_VOID`|Void 類型。|  
@@ -147,5 +148,5 @@ typedef enum CorElementType {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

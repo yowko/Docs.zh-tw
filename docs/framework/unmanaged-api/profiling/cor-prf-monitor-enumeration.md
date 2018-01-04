@@ -19,11 +19,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c0e2f774bd178676494f24364c7b8890665c3810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6dc135681d11a496dbc27553d46a5d101b6d7b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 列舉
 包含值，這些值用於指定分析工具想要訂閱的行為、功能或事件。  
@@ -124,7 +125,7 @@ typedef enum {
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>回呼旗標  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|啟用所有回呼事件。|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|控制項`AppDomainCreation*`和`AppDomainShutdown*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
@@ -150,7 +151,7 @@ typedef enum {
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>功能啟用旗標  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|允許擷取完全`ClassID`藉由呼叫泛型函式[GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法`COR_PRF_FRAME_INFO`所傳回的值[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)回呼。|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|啟用追蹤引數使用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)回呼或[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)回呼和[GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)方法。|  
@@ -164,7 +165,7 @@ typedef enum {
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>組態旗標  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|防止載入所有原生映像 (包含分析工具增強型映像)。  若指定此旗標及 `COR_PRF_USE_PROFILE_IMAGES` 旗標，則使用 `COR_PRF_DISABLE_ALL_NGEN_IMAGES`。|  
 |`COR_PRF_DISABLE_INLINING`|停用所有內嵌。|  
@@ -175,13 +176,13 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>組合旗標  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|代表所有 `COR_PRF_MONITOR` 旗標值。|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|代表所有 `COR_PRF_MONITOR` 旗標，這些旗標可在分析工具連結至執行中的應用程式之後加以設定。 語法區段指出此位元遮罩中存在的個別旗標。|  
 |`COR_PRF_MONITOR_ALL`|啟用所有回呼事件。|  
 |`COR_PRF_MONITOR_IMMUTABLE`|代表所有 `COR_PRF_MONITOR` 旗標，這些旗標只能在初始化期間加以設定。 嘗試在初始化之後變更任何這些旗標，會傳回指出失敗的 `HRESULT` 值。|  
-|`COR_PRF_REQUIRE_PROFILE_IMAGE`|代表需要分析增強型映像的所有 `COR_PRF_MONITOR` 旗標。|  
+|`COR_PRF_REQUIRE_PROFILE_IMAGE`|代表需要設定檔增強影像的所有 `COR_PRF_MONITOR` 旗標。|  
   
 ## <a name="remarks"></a>備註  
  A`COR_PRF_MONITOR`值可用於搭配[icorprofilerinfo:: Geteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)和[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法，定義 common language runtime 建立給事件通知程式碼剖析工具。  
@@ -195,7 +196,7 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
  [GetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
  [SetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)

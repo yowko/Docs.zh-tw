@@ -14,18 +14,19 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de970bf27fdf3365daa0ac515852a68d01a246eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services"></a>設定服務
 在設計並實作您的服務合約之後，就可開始設定您的服務。 您可在此處定義及自訂向用戶端公開服務的方式，包括指定所在的位址、用於傳送及接收訊息的傳輸和訊息編碼，以及所需要的安全性類型。  
   
  此處所使用的組態包括所有的方法，如命令式程式碼或使用組態檔，您可以在其中定義及自訂服務的各方面，例如指定端點位址、使用的傳輸以及安全性配置。 事實上，撰寫組態是程式設計 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式的主要部分。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
  從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]開始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 隨附可簡化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態需求的新預設組態模型。 如果您沒有對特定服務提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態，執行階段會以預設端點、繫結和行為自動設定服務。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
   
  [管理與診斷](../../../docs/framework/wcf/diagnostics/index.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
  [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)

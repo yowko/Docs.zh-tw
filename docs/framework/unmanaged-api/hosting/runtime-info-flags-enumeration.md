@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 697111efbb4e3f705c881ec677f781b6e3e6959d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d050972857ba652ae0b40727260f681c383208b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS 列舉
 包含值，指出應該傳回 common language runtime (CLR) 的相關資訊。  
@@ -47,7 +48,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|指出不應該包含目錄資訊。|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|指出不應該包含版本資訊。|  
@@ -76,5 +77,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

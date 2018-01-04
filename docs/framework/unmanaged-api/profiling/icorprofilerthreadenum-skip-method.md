@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f492a455165f3b49994beb3220334e2932bf214c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1840722a250dd627a5214700dca95c48aa2e8d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip 方法
 將列舉值的資料指標從其目前位置前移，以略過指定數目的項目。  
@@ -42,7 +43,7 @@ HRESULT Skip (    [in] ULONG celt
  [in]要略過的項目數目。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及 HRESULT 錯誤，以指出方法失敗。  
+ 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
@@ -61,6 +62,6 @@ HRESULT Skip (    [in] ULONG celt
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorProfilerThreadEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

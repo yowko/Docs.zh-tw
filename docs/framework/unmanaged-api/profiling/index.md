@@ -17,23 +17,24 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 26fa9471b46a7a963d66ebf0d5b3c6a0286ae640
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5583a9b81d81acfca80368ca54d5f97899daa1d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-unmanaged-api-reference"></a>分析 (Unmanaged API 參考)
 分析 API 可讓監視程式執行的 common language runtime (CLR) 分析工具。  
   
-## <a name="in-this-section"></a>本章節內容  
- [程式碼剖析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+## <a name="in-this-section"></a>本節內容  
+ [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
  說明服務與介面，CLR 會提供以支援.NET Framework 環境中的 程式碼剖析。  
   
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  說明分析 API 所使用的 Unmanaged 介面。  
   
- [設定程式碼剖析環境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
+ [設定分析環境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
  描述.NET Framework 應用程式設定檔時，必須採取的步驟。  
   
  [CLR 分析工具和 Windows 市集應用程式](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  

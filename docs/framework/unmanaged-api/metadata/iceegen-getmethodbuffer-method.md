@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be6b74de649a9b13092e6a5dcd2d2f80a215a16d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 23beea4bd991b21b30375c9297efb945c3dbab75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer 方法
 在指定的相對虛擬位址的方法取得適當大小的緩衝區。  
@@ -57,5 +58,5 @@ HRESULT GetMethodBuffer (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

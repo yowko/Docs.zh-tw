@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95d7a6097766c8e2389e9828f54e81e37ffea454
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e40613d790baed5bd89bee1e1f5ca57043bfe76a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 列舉
 包含描述值<xref:System.Type>參數的泛型型別，用於呼叫[imetadataemit2:: Definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)。  
@@ -49,7 +50,7 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`gpVarianceMask`|參數的變異數只適用於介面及委派的泛型參數。|  
 |`gpNonVariant`|表示變異數不存在。|  
@@ -68,5 +69,5 @@ typedef enum CorGenericParamAttr {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

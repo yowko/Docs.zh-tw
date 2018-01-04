@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 43cc6afc42fc1a02fd7d7b3df2973cc9b3e31251
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b337bc99f89b04145afb3994da840cff7e2c5c80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum 介面
 提供方法，以循序逐一查看由應用程式或分析工具所載入的模組集合。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|取得這個 `ICorProfilerModuleEnum` 介面複本的介面指標。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|取得已載入至應用程式之 Managed 模組的數目。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [EnumModules 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)

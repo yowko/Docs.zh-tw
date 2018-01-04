@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 031e97ad1b8180a64bc789ae52e141932d600782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f31d35f21a16983b6ab9c23f1f65c3916b5138d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets 方法
 列舉指定中繼資料範圍內的物件權限。  
@@ -64,7 +65,7 @@ HRESULT EnumPermissionSets
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|`EnumPermissionSets`已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`為零。|  
@@ -78,6 +79,6 @@ HRESULT EnumPermissionSets
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

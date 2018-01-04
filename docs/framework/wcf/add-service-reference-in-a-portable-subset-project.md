@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c39a60d3b34ca1b5c219d12bda4af5217f389f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a4074920d3ca616498c14511bf39763d7d87ed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>將服務參考加入至可攜式子集專案
 可攜式子集專案可讓.NET 組件程式設計人員維護單一來源的樹狀目錄和建置系統，同時還支援多個.NET 實作 （桌上型電腦、 Silverlight、 Windows Phone 和 XBOX）。 可攜式子集專案僅參考.NET 可攜式類別庫是.NET framework 組件可以使用任何.NET 實作上。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 12/02/2017
   
 14. 在可攜式子集專案中不支援 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  [可攜式類別庫](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))

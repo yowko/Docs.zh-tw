@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>組態編輯器工具 (SvcConfigEditor.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務組態編輯器 (SvcConfigEditor.exe) 可讓系統管理員和開發人員使用圖形使用者介面建立和修改 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的組態設定。 有了這項工具，您可以管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 繫結、行為、服務及診斷的設定，而不用直接編輯 XML 組態檔。  
@@ -118,7 +119,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  在對話方塊中輸入基底位址 URI。  
   
-4.  按一下 [確定]。  
+4.  按一下 [確定 **Deploying Office Solutions**]。  
   
 > [!NOTE]
 >  您無法編輯的值[ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)這項工具內部。 若要新增或修改這個項目，您應使用文字編輯器或 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。  
@@ -212,7 +213,7 @@ ms.lasthandoff: 12/02/2017
   
 #### <a name="editing-the-configuration-of-binding-element-extensions-in-a-custom-binding"></a>編輯自訂繫結中繫結項目擴充功能的組態  
   
-1.  選取樹狀目錄中的繫結節點。  
+1.  選取樹狀目錄中的繫結程序節點。  
   
 2.  選取包含您要編輯之項目的自訂繫結。  
   
@@ -326,7 +327,7 @@ ms.lasthandoff: 12/02/2017
 #### <a name="protocolmapping"></a>ProtocolMapping  
  這個區段可讓您透過通訊協定位址配置與可能的繫結之間已定義的對應，針對不同的通訊協定設定預設的繫結型別，例如 http、tcp、MSMQ 或 net.pipe。 您也可以加入其他通訊協定的新對應。  
   
-#### <a name="extensions"></a>擴充功能  
+#### <a name="extensions"></a>延伸模組  
  新繫結延伸、繫結項目延伸、標準端點延伸和行為延伸可以經過註冊，以便用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態中。 擴充功能是名稱/型別的配對。 名稱可定義組態中延伸的名稱，而型別則可實作延伸。 延伸有四種型別：  
   
 -   繫結延伸可定義整個繫結型別。 範例：`basicHttpBinding`。  
@@ -346,7 +347,7 @@ ms.lasthandoff: 12/02/2017
   
 2.  輸入名稱和型別。  
   
-3.  按一下 [確定]。  
+3.  按一下 [確定 **Deploying Office Solutions**]。  
   
 4.  擴充功能現在會出現在編輯器的適當位置中。 例如，如果您新增行為項目延伸，則這個功能會出現在可用延伸清單中。  
   

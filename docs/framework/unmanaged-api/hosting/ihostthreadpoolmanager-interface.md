@@ -19,18 +19,19 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2773042c695320ab1e90d4c5d341e2df5f0f778f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1cd58c53deec0a895ae6f67cccf26d2c8c2530be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 介面
 提供方法讓 common language runtime (CLR) 來設定執行緒集區，以及佇列的執行緒集區的工作項目。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[GetAvailableThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|取得目前未處理的工作項目之執行緒集區中的執行緒數目。|  
 |[GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|執行緒集區中，同時取得主機維護執行緒的數目上限。|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading>  
  <xref:System.Threading.ThreadPool>  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e4e791bdc41707133fb787a511a39d3ec3d7453a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e26377fe3c5cfbae68f90087e3fb624ae4db0dc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 結構
 代表函式的引數，順序由左至右。  
@@ -40,7 +41,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`numRanges`|引數的區塊數目。 也就是說，這個值是數目[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)中結構`ranges`陣列。|  
 |`totalArgumentSize`|所有引數的大小總計。 換句話說，這個值會是引數長度的總和。|  
@@ -62,5 +63,5 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

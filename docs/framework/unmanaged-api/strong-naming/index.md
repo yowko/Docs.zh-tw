@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 86d741a16a0293892d0d6d90f1763d744ed3675d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
 強式命名 API 可讓用戶端管理強式名稱簽署組件。  
   
  使用強式名稱簽署組件，就會將公開金鑰加密加入含有組件資訊清單的檔案中。 強式名稱簽署可協助驗證唯一名稱，可防止冒用名稱，並解析參考時呼叫端提供的唯一識別。 不過，任何層級不是信任的強式名稱與相關聯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [強式命名全域靜態函式](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  描述的 unmanaged 全域靜態函式強式命名 API 所使用。  
   
@@ -119,6 +120,6 @@ ms.lasthandoff: 11/21/2017
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  表示以二進位格式公開/私密金鑰組的公開金鑰。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
  [Unmanaged API 參考](../../../../docs/framework/unmanaged-api/index.md)

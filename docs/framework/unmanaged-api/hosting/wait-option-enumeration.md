@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08bdfc928c56d144f50399814a81795fea74574a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 143c191592efe8cfea8049f0dd5dc05a5bd4192f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION 列舉
 包含值，表示是否通用語言執行平台 (CLR) 區塊所要求的作業，應該採取動作的主機。  
@@ -40,7 +41,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`WAIT_ALERTABLE`|通知主機應該喚醒工作，如果 CLR 會呼叫[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。|  
 |`WAIT_MSGPUMP`|通知主機，它就必須提示上目前的作業系統執行緒的訊息，如果執行緒被封鎖。 執行階段指定這個值只在<xref:System.Threading.ApartmentState.STA>執行緒。|  
@@ -58,5 +59,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

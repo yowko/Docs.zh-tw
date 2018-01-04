@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
 本主題說明何謂服務合約、如何定義服務合約、能夠進行哪些作業 (以及對基礎訊息交換的影響)、使用哪些資料型別以及其他問題，協助您設計能夠適當滿足情況需求的作業。  
@@ -276,13 +277,13 @@ End Interface
 ##### <a name="names-namespaces-and-obfuscation"></a>名稱、命名空間和混淆  
  當合約轉換為 WSDL 時，以及當建立及傳送合約訊息時，合約定義和作業中的 .NET 型別名稱和命名空間是有意義的。 因此，強烈建議使用所有支援合約之屬性 (Attribute) (例如 `Name`、`Namespace`、<xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和其他合約屬性 (Attribute) 的 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Property)) 來明確設定服務合約名稱和命名空間。  
   
- 這麼做的結果就是，如果未明確設定名稱和命名空間，對組件使用 IL 模糊化會變更合約型別名稱和命名空間，並且導致 WSDL 遭到修改和連線交換 (通常會失敗)。 如果您未明確設定合約名稱和命名空間，但是想要使用模糊化，請使用 <xref:System.Reflection.ObfuscationAttribute> 和 <xref:System.Reflection.ObfuscateAssemblyAttribute> 屬性，以防止合約型別名稱和命名空間遭到修改。  
+ 這麼做的結果就是，如果未明確設定名稱和命名空間，對組件使用 IL 混淆會變更合約型別名稱和命名空間，並且導致 WSDL 遭到修改和連線交換 (通常會失敗)。 如果您未明確設定合約名稱和命名空間，但是想要使用模糊化，請使用 <xref:System.Reflection.ObfuscationAttribute> 和 <xref:System.Reflection.ObfuscateAssemblyAttribute> 屬性，以防止合約型別名稱和命名空間遭到修改。  
   
-## <a name="see-also"></a>另請參閱  
- [如何： 建立要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [如何： 建立單向合約](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [如何： 建立雙工合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [服務合約中的指定資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+## <a name="see-also"></a>請參閱  
+ [如何：建立要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [如何：建立單向合約](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
+ [如何：建立雙面合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [指定服務合約中的資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [使用工作階段](../../../docs/framework/wcf/using-sessions.md)  
  [同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  

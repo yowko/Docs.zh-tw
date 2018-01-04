@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 64312398c95a33c2bbe136b1c4d03c06cb09aeef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a04db61a16aeae24476fb0b191a3d2dc89743dee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 列舉
 包含值，表示造成堆疊溢位事件的根本原因。  
@@ -40,7 +41,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`SO_ClrEngine`|堆疊溢位是由執行引擎所造成的。|  
 |`SO_Managed`|堆疊溢位所造成的 managed 程式碼。|  
@@ -58,5 +59,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

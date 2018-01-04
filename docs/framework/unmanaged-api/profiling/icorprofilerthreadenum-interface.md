@@ -19,18 +19,19 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2ce48c836070018059becd1ece269ce7c878c7ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4758d97aab0b4827ba955922c6b14f35ff0f3f81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum 介面
 提供方法，以循序逐一查看 Common Language Runtime 中的執行緒集合。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|取得這個 `ICorProfilerThreadEnum` 介面複本的介面指標。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|取得應用程式所使用的執行緒數目。|  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

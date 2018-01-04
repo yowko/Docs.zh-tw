@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c02445a7a46bd9367b84edcf5ef5f012be5232e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ab7b6cc6360103c43430516490199cc278d2dfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory Coclass
 提供的介面，用於管理類型名稱的解構。  
@@ -38,7 +39,7 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |[ITypeNameFactory 介面](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|此介面支援 .NET Framework 結構而且並非設計直接從程式碼使用。|  
   
@@ -51,5 +52,5 @@ coclass TypeNameFactory {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

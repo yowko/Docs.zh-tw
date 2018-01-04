@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
 繫結是一種物件，可用來指定連線至 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點時所需的通訊詳細資料。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中的每個端點都需要繫結才能正確地指定。 這個主題會概述繫結所定義的通訊詳細資料類型、繫結項目、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的繫結以及對端點指定繫結的方式。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="code-and-configuration"></a>程式碼和組態  
  有兩種方法可讓您定義繫結：透過程示碼或透過組態。 這兩個方法與您是使用系統提供的繫結或自訂繫結無關。 一般來說，使用程式碼可讓您在設計階段時完全控制繫結的定義。 相反地，使用組態則可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務或用戶端的系統管理員或使用者變更繫結的參數，而不需要重新編譯服務應用程式。 使用者通常需要這種彈性，因為對於即將部署的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式來說，是沒有辦法預測特定的電腦需求。 將繫結 (和位址) 資訊留在程式碼外面，可在不需要重新編譯或重新部署應用程式的情況下，就可以變更繫結和位址資訊。 請注意，會先建立在組態中指定繫結，之後才建立在程式碼中定義的繫結，這樣可讓程式碼定義的繫結覆寫任何組態定義的繫結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

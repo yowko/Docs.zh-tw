@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-and-specifying-faults"></a>定義並指定錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何在服務或雙工用戶端，可以傳送這些錯誤和用戶端或服務的應用程式如何處理這些錯誤，請參閱[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需中的錯誤處理的概觀[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]應用程式，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>的 SOAP 錯誤。 未宣告的 SOAP 錯誤則是在作業的合約中未指定的 SOAP 錯誤。 本主題將協助您識別這些錯誤狀況，並為您的服務建立錯誤合約，讓用戶端在收到自訂 SOAP 錯誤的通知時，可以用於正確處理這些錯誤狀況。 基本的工作依序為：  
   
 1.  定義您服務的用戶端應該知道的錯誤狀況。  
@@ -97,7 +98,7 @@ End Class
   
  當存取產生錯誤的非服務時，會有特定限制。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 只支援有結構描述所描述以及與資料合約相容之詳細類型的錯誤。 例如，如上所述，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不支援在其詳細類型中使用 XML 屬性的錯誤，或在詳細資訊區段中有一個以上之最上層項目的錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
@@ -106,4 +107,4 @@ End Class
  [如何：在服務合約中宣告錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
  [了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)  
  [如何：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [服務合約中的指定資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [指定服務合約中的資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9952ea1d8c806c9d3ac5357d933092fb82351484
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 65025384aa94ac363336bae7f37f8ea88a3bab67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO 結構
 儲存特定例外狀況子句執行個體及其關聯框架的相關資訊。  
@@ -41,7 +42,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`clauseType`|值為[COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)列舉，指定例外狀況子句的程式碼輸入或留下的類型。|  
 |`programCounter`|子句的處理常式的原生進入點 — 比方說，X86 EIP 暫存器的內容。|  
@@ -74,5 +75,5 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
