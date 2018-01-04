@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6660cf0c7de11058aeb70c7f61cd3239dd7f0f04
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2183954363c03064d9d41480bb63e32cca58b857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 控制項 (Windows Form)
 Windows Form `TreeView` 控制項會顯示節點的階層，就像 Windows 作業系統中 Windows 檔案總管功能左窗格顯示檔案和資料夾的方式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [TreeView 控制項概觀](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -53,7 +54,7 @@ Windows Form `TreeView` 控制項會顯示節點的階層，就像 Windows 作�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.TreeView> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4897a195dcafb8264bbab619f1a46118a829f44e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc7227ee46f127070b44771a56a89b82bd0930ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>如何：將控制項停駐在 Windows Form 上
 您可以停駐控制項至表單的邊緣，或讓它們填滿控制項的容器 （表單或容器控制項）。 例如，Windows 檔案總管停駐於其<xref:System.Windows.Forms.TreeView>控制項視窗的左邊及其<xref:System.Windows.Forms.ListView>視窗右邊的控制項。 使用<xref:System.Windows.Forms.Control.Dock%2A>所有可見的 Windows Form 控制項定義的固定模式屬性。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  繼承的控制項必須是`Protected`能夠停駐。 若要變更控制項的存取層級，設定其**修飾詞**屬性 視窗中的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  

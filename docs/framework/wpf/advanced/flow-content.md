@@ -17,20 +17,21 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content"></a>非固定格式內容
 動態內容項目提供用於建立適用於裝載在非固定格式內容的建置組塊<xref:System.Windows.Documents.FlowDocument>。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [TextElement 內容模型概觀](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [操作說明主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [HOW-TO 主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Documents.FlowDocument>  

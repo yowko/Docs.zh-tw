@@ -19,17 +19,18 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b9c56d2d9df80745cec2b811c39f5e438d07c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7cbca79cd3541df1db7ace3a7d5f67bf3f2b2ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：繼承自 Control 類別
 如果您想要建立使用 Windows Form 上的完全自訂控制項，您應該繼承自<xref:System.Windows.Forms.Control>類別。 同時繼承自<xref:System.Windows.Forms.Control>類別會要求您執行詳細的規劃和實作，它也提供您選項的最大範圍。 繼承自<xref:System.Windows.Forms.Control>，繼承的非常基本的功能可讓工作的控制項。 繼承的功能<xref:System.Windows.Forms.Control>類別會處理透過鍵盤和滑鼠的使用者輸入，定義範圍和控制項的大小、 提供的 windows 控制代碼，並提供訊息處理和安全性。 它不會併入任何繪製功能 (在此例中是控制項圖形化介面的實際轉譯)，也不會併入任何特定的使用者互動功能。 您必須透過自訂程式碼來提供上述一切。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-create-a-custom-control"></a>建立自訂控制項  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 8.  儲存並測試您的控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [操作說明：繼承自 UserControl 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
  [操作說明：繼承自現有的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  

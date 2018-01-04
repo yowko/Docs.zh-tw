@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 499d5455be29572f3b45df7180d2d436ff53a1b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在 Windows Form 中使用控制項的概觀
 本主題描述 Windows Form 應用程式的基本項目，並提供簡單的範例，使用的控制項及處理 Windows Form 應用程式中的事件。  
@@ -233,6 +234,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [Windows Forms 控制項開發的基本概念](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

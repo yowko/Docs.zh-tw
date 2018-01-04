@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ce4f821a7b964b3ed2e03c795346b47bb88d618
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ccf386acd50338f1743bbf8f6be38b3267a7103
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>如何：測試 UserControl 的執行階段行為
 當您開發<xref:System.Windows.Forms.UserControl>，您要測試其執行階段行為。 您可以建立個別的 Windows 架構應用程式專案，並將您的控制項上測試表單，但此程序，是很方便。 更快且更容易的方式是使用**UserControl Test Container** Visual Studio 所提供。 這個測試容器啟動直接從您的 Windows 控制項程式庫專案。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 >  載入測試容器您<xref:System.Windows.Forms.UserControl>，控制項必須有至少一個公用建構函式。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 > [!NOTE]
 >  Visual c + + 控制項無法使用測試**UserControl Test Container**。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  使用**選取的使用者控制項**<xref:System.Windows.Forms.ComboBox>切換兩個使用者控制項，從**TestContainerExample**專案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.UserControl>  
  [操作說明：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  

@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d9f4d806b39e6e1272ddbb60befdaf8c76e46b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4bf42fc90e19cbac0f165b59c0c6d3dfb7456b5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>如何：設定由 Windows Form 控制項所顯示的影像
 數個 Windows Form 控制項可以顯示影像。 這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。 或者，圖示可以提供控制項的外觀和行為，您想要的背景影像。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Drawing.Image.FromFile%2A>  
  <xref:System.Drawing.Image>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>

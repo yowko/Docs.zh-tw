@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4027f3ae604f2a3ff4996855fa6dd34d4de8ea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2327c6d9696bc5fb54943eb8bbce9d4795a378b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中排序資料
 根據預設，使用者可以排序中的資料`DataGridView`依序按一下 [文字] 方塊中的資料行的標頭的控制項。 您可以修改`SortMode`允許使用者排序其他資料行型別時要執行這項操作的特定資料行的屬性。 您也以程式設計的方式排序資料，依任何資料行，或多個資料行。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms DataGridView 控制項中的資料行排序模式](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
  描述在控制項中排序資料的選項。  
   
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
  提供參考文件<xref:System.Windows.Forms.DataGridViewColumnSortMode>列舉型別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

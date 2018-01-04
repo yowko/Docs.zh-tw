@@ -22,16 +22,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56c0991bfbe8c190c06a7907cf04fa4576435864
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: eef312d7e7883e86bcbaa4dfb9733d567139fad9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 元件 (Windows Form)
 Windows Form`NotifyIcon`元件會顯示圖示在工作列的狀態通知區域中的處理程序在背景中執行，否則不會擁有使用者介面。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [NotifyIcon 元件概觀](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)  
  導入的一般概念`NotifyIcon`元件，可讓使用者看到的處理序在背景執行並沒有使用者介面的圖示。  
   

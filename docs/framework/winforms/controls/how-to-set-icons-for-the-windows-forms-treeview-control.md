@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5abe07a80e457c4a0254b4c1a734cba2f6ed1766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d6133a378c4939a20cef6bab8f3ee5f36b9c3cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>如何：設定 Windows Form TreeView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節點旁邊的圖示。 圖示位於節點文字的左邊。 若要顯示這些圖示，您必須建立關聯的樹狀檢視<xref:System.Windows.Forms.ImageList>控制項。 如需影像清單的詳細資訊，請參閱[ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)和[如何： 加入或移除映像使用 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
@@ -78,7 +79,7 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節�
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [TreeView 控制項概觀](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
  [操作說明：使用 Windows Forms TreeView 控制項加入和移除節點](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
  [操作說明：逐一查看 Windows Forms TreeView 控制項的所有節點](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  

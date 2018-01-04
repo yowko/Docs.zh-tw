@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ca0bab0d10f8bc8c08e441b7e92f5f938d65dac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：進行對 Windows Form 控制項的安全執行緒呼叫
 如果您使用多執行緒處理來改善 Windows Forms 應用程式的效能，您必須確定以安全執行緒的方式呼叫控制項。  
@@ -103,7 +104,7 @@ private:
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可幫助您偵測正在以不安全執行緒的方式存取控制項。 當您在偵錯工具執行應用程式時，如果非建立控制項的執行緒嘗試呼叫該控制項，則偵錯工具會引發 <xref:System.InvalidOperationException> ，並且會有訊息：「控制項 *控制項名稱* 已從建立它的執行緒以外的執行緒進行存取。」  
   
- 這個例外狀況一般發生在偵錯期間，並且在某些情況下會發生在執行階段。 當您在偵錯使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 之前的 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]所撰寫的應用程式時，可能會看到這個例外狀況。 強烈建議您在看到時修正這個問題，但您可以藉由將 <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> 屬性設定為 `false`來停用它。 這會使您的控制項像是在 Visual Studio.NET 2003 及 [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]之下執行。  
+ 這個例外狀況一般發生在偵錯期間，並且在某些情況下會發生在執行階段。 當您在偵錯使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 之前的 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 所撰寫的應用程式時，可能會看到這個例外狀況。 強烈建議您在看到時修正這個問題，但您可以藉由將 <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> 屬性設定為 `false`來停用它。 這會使您的控制項像是在 Visual Studio.NET 2003 及 [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]之下執行。  
   
 > [!NOTE]
 >  如果您在表單上使用 ActiveX 控制項，當您在偵錯工具下執行時，可能會收到跨執行緒的 <xref:System.InvalidOperationException> 。 發生這種情況時，ActiveX 控制項不支援多執行緒處理。 如需如何搭配使用 ActiveX 控制項與 Windows Forms 的詳細資訊，請參閱 [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)。 如果您使用 Visual Studio，可以停用 Visual Studio 的裝載處理序，以避免這個例外狀況，請參閱 [How to: Disable the Hosting Process](/visualstudio/ide/how-to-disable-the-hosting-process)。  
@@ -1049,14 +1050,14 @@ int main()
 }  
 ```  
   
- 當您執行應用程式，並按一下 [不安全的呼叫]  按鈕時，您會立即在文字方塊中看到「由主執行緒寫入」。 兩秒之後，嘗試不安全的呼叫時，Visual Studio 偵錯工具會指出發生例外狀況。 偵錯工具會停止在背景執行緒嘗試直接寫入文字方塊的那行。 您必須重新啟動應用程式來測試其他兩個按鈕。 當您按下 [安全呼叫]  按鈕時，文字方塊中會出現「由主執行緒寫入」。 兩秒之後，文字方塊會設定為「由背景執行緒 (Invoke) 寫入」，這表示呼叫了 <xref:System.Windows.Forms.Control.Invoke%2A> 方法。 當您按下 [安全 BW 呼叫]  按鈕時，文字方塊中會出現「由主執行緒寫入」。 兩秒之後，文字方塊設定為「由主執行緒在背景執行緒完成後寫入」，這表示呼叫了 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 的 <xref:System.ComponentModel.BackgroundWorker> 事件的處理常式。  
+ 當您執行應用程式，並按一下 [不安全的呼叫]  按鈕時，您會立即在文字方塊中看到「由主執行緒寫入」。 兩秒之後，嘗試不安全的呼叫時，Visual Studio 偵錯工具會指出發生例外狀況。 偵錯工具會停止在背景執行緒嘗試直接寫入文字方塊的那行。 您必須重新啟動應用程式來測試其他兩個按鈕。 當您按下 [安全呼叫]  按鈕時，文字方塊中會出現「由主執行緒寫入」。 兩秒之後，文字方塊會設定為「由背景執行緒 (Invoke) 寫入」，這表示呼叫了 <xref:System.Windows.Forms.Control.Invoke%2A> 方法。 當您按一下 [安全 BW 呼叫] 按鈕時，文字方塊中會出現「由主執行緒寫入」。 兩秒之後，文字方塊設定為「由主執行緒在背景執行緒完成後寫入」，這表示呼叫了 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 的 <xref:System.ComponentModel.BackgroundWorker> 事件的處理常式。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
   
 > [!CAUTION]
 >  當您使用任何類型的多執行緒處理時，您的程式碼很有可能會暴露在非常嚴重且複雜的錯誤下。 如需詳細資訊，請在實作使用多執行緒處理的任何方案之前參閱 [Managed 執行緒處理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ComponentModel.BackgroundWorker>  
  [操作說明：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  

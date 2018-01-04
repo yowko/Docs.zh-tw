@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb45f22a037b459556f6de2e8cda0e025b621686
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 56b267222f8e22d9d411d744f67d93cde6ba17a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的滑鼠輸入
 Windows Forms 包含各種滑鼠事件，並另外支援自訂的滑鼠游標、滑鼠捕捉和拖放行為。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [滑鼠輸入在 Windows Form 中的運作方式](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)  
  提供有關滑鼠事件和如何取得滑鼠最新資訊與系統設定的資訊。  
   

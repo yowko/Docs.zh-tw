@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae228835fb150b1d65f7405a10813f24e707268f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9eb984e18f2126664344639335fd786b4f325468
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>如何：回應 Windows Form DataGrid 控制項中的按選動作
 > [!NOTE]
@@ -150,6 +151,6 @@ ms.lasthandoff: 11/21/2017
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  [操作說明：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

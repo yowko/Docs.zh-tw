@@ -19,17 +19,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：為所有 Windows Form 設定格線選項
 當您成為用來在工作[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]開發環境中，您可以在 Windows Form 設計工具設定喜好設定的所有表單和您使用的專案。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-set-global-windows-forms-options"></a>若要設定全域 Windows Form 選項  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
      在右窗格中，在**版面配置設定**標題時，您可以設定預設方格設定為您建立的新表單。 這些設定包括格線大小，控制項是否貼齊，及是否它預設為開啟。 此外，您可以選取之間**SnapToGrid**和**對齊線**配置模式。 如需有關對齊線的詳細資訊，請參閱[逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [選項對話方塊、 Windows Form 設計工具，一般](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  

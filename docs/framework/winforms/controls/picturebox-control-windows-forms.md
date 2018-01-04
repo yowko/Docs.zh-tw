@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0438ff11577e74d7de0b0ca30abab74fcab953e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20c45ec8aa172edeb0c7babcb45c013330b9179b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox 控制項 (Windows Form)
 Windows Form`PictureBox`控制項用來顯示點陣圖、 GIF、 JPEG、 中繼檔或圖示格式的圖形。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -41,7 +42,7 @@ Windows Form`PictureBox`控制項用來顯示點陣圖、 GIF、 JPEG、 中繼�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.PictureBox>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

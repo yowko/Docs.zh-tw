@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bca9b56f37c815bfa9f1520467ae0ae864c14ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 852e82aff12dc39adeba6ea2dada5934ae55f951
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>如何：在 Windows Form 中存取索引集合
 -   您可以依索引鍵來存取個別的收集項目。 這項功能已加入 Windows Form 應用程式通常會使用的許多集合類別。 下列清單顯示一些具有可存取的索引的集合的集合類別：  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [操作說明：使用 Windows Forms ImageList 元件加入或移除影像](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

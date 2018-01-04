@@ -24,20 +24,21 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08a0cc15cff39bb936a78db95c73568aa643d0b6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 51f6765e5960ddadd27a476f7229a76fbfe985e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控制項 (Windows Form)
 `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用 `DataGridView` 控制來顯示少量資料的唯讀檢視，或者您可以調整它的大小，以顯示非常大的資料集之可編輯檢視。  
   
  您可以數種方式擴充 `DataGridView` 控制項，以建置自訂行為到您的應用程式中。 例如，您可以程式設計方式指定自己的排序演算法，而且也可以建立自己的儲存格類型。 您可以在數種屬性間做選擇，輕鬆自訂 `DataGridView` 控制項的外觀。 許多類型的資料儲存區可用來做為資料來源，不然 `DataGridView` 控制項可在不使用與其繫結的資料來源之情況下運作。  
   
- 本節中的主題描述您可以用來將 `DataGridView` 功能建置在應用程式中的概念和技術。  
+ 本節中的主題說明您可以用來將 `DataGridView` 功能建置在應用程式中的概念和技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
  提供描述 Windows Form `DataGridView` 控制項架構和核心概念的主題。  
   
@@ -92,5 +93,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Forms.BindingSource>  
  提供 <xref:System.Windows.Forms.BindingSource> 元件的參考文件。 <xref:System.Windows.Forms.DataGridView> 控制項和 <xref:System.Windows.Forms.BindingSource> 元件設計為可密切合作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

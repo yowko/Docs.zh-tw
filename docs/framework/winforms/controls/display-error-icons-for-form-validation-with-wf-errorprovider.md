@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02638ab59c0ba1c0eb0f8090be118b3d5a9111f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 738ca9670635f78e8cb04318b192127184766c3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows Form ErrorProvider 元件顯示表單驗證的錯誤圖示
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件，以顯示錯誤圖示，當使用者輸入無效的資料。 您必須擁有至少兩個索引標籤它們之間，並藉此叫用的驗證程式碼以表單上的控制項。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  執行專案。 在第一個控制項，然後第二個索引標籤中輸入無效 （在此範例中，非數字） 的資料。 當出現錯誤圖示時，指向它以查看錯誤文字的滑鼠指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ErrorProvider.SetError%2A>  
  [ErrorProvider 元件概觀](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
  [操作說明：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)

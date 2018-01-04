@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aada475af0ccac03dfa6ef9248b0fb07fd86b3ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22b44668b403b5a991c03de661b6e680ccde0a44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>如何：取得 Windows Form DataGridView 控制項中選取的儲存格、資料列和資料行
 您可以取得選取的資料格、 資料列或資料行從<xref:System.Windows.Forms.DataGridView>控制項使用對應的屬性： <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>， <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>，和<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>。 在下列程序中，您會取得選取的資料格，並顯示其資料列和資料行索引中的<xref:System.Windows.Forms.MessageBox>。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  本主題中所描述的集合不會執行有效率地大量的資料格、 資料列或資料行中選取時。 如需大量的資料搭配使用這些集合的詳細資訊，請參閱[縮放 Windows Form DataGridView 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
  <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>  

@@ -24,18 +24,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d926ce74db9723b6248dbb123513ca38d4adb1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe88ff8d31a83b8516b11cd9aadd4bc2d4bf99a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>如何：變更 Windows Form 中 ToolStrip 文字和影像的外觀
 您可以控制是否顯示文字和影像上<xref:System.Windows.Forms.ToolStripItem>和與彼此相對的對齊方式和<xref:System.Windows.Forms.ToolStrip>。  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>若要定義 ToolStripItem 上顯示的內容  
   
--   設定<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>屬性設為所需的值。 這些可能是`Image`， `ImageAndText`， `None`，和`Text`。 預設為 `ImageAndText`。  
+-   設定<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>屬性設為所需的值。 這些可能是`Image`， `ImageAndText`， `None`，和`Text`。 預設值為 `ImageAndText`。  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>至 ToolStripItem 上的文字對齊  
   
--   設定<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>屬性設為所需的值。 這些可能是上方、 中間與下方左、 置中與權限的任何組合。 預設為 `MiddleCenter`。  
+-   設定<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>屬性設為所需的值。 這些可能是上方、 中間與下方左、 置中與權限的任何組合。 預設值為 `MiddleCenter`。  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>若要對齊 ToolStripItem 上的影像  
   
--   設定<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>屬性設為所需的值。 這些可能是上方、 中間與下方左、 置中與權限的任何組合。 預設為 `MiddleLeft`。  
+-   設定<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>屬性設為所需的值。 這些可能是上方、 中間與下方左、 置中與權限的任何組合。 預設值為 `MiddleLeft`。  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>來定義如何顯示相對於彼此的 ToolStripItem 文字和影像  
   
--   設定<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>屬性設為所需的值。 這些可能是`ImageAboveText`， `ImageBeforeText`， `Overlay`， `TextAboveImage`，和`TextBeforeImage`。 預設為 `ImageBeforeText`。  
+-   設定<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>屬性設為所需的值。 這些可能是`ImageAboveText`， `ImageBeforeText`， `Overlay`， `TextAboveImage`，和`TextBeforeImage`。 預設值為 `ImageBeforeText`。  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  

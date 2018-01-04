@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02fb14b84341d594f35885be220027631999d202
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 元件概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.ImageList> 元件可用來儲存影像，然後可以用控制項來顯示這些影像。 影像清單可讓您針對單一且一致的影像目錄來撰寫程式碼。 例如，若要旋轉 <xref:System.Windows.Forms.Button> 控制項所顯示的影像，您只要變更按鈕的 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 或 <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> 屬性即可。 您也可以將相同的影像清單與多個控制項產生關聯。 例如，如果您同時使用 <xref:System.Windows.Forms.ListView> 控制項和 <xref:System.Windows.Forms.TreeView> 控制項來顯示相同的檔案清單，在影像清單中變更檔案的圖示將會導致新的圖示同時出現在這兩個檢視中。  
@@ -35,6 +36,6 @@ Windows Form <xref:System.Windows.Forms.ImageList> 元件可用來儲存影像�
   
  如果您使用 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，就可以存取一個大型的標準影像程式庫，並可將其用在您的應用程式中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ImageList>  
  [操作說明：使用 Windows Forms ImageList 元件加入或移除影像](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

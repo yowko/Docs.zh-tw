@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d5f7763ac7b5923f0eaec757df13d675971789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料輸入
 `DataGridView`控制項提供數種功能，可讓您變更使用者加入或修改控制項中的資料的方式。 比方說，您可以讓資料輸入更有效率的新資料列中提供預設值和錯誤發生時警示使用者。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：指定 Windows Forms DataGridView 控制項的編輯模式](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  描述如何變更使用者開始編輯儲存格的方式。  
   
@@ -62,6 +63,6 @@ ms.lasthandoff: 11/21/2017
  [在 Windows Forms DataGridView 控制項中顯示資料](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何以手動方式或從外部資料來源填入資料控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

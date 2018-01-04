@@ -16,16 +16,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af751c31de87ef2a299e66c82bc66e9f0b540fce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e051fa13eee9a9110654d8791d83b2ff51cbdb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip 元件 (Windows Form)
 當使用者指向控制項時，Windows Form <xref:System.Windows.Forms.ToolTip> 元件會顯示文字。 工具提示可以與任何控制項產生關聯。 使用此控制項的範例：為了節省表單空間，您可以在按鈕上顯示小圖示，並使用工具提示來說明按鈕的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ToolTip 元件概觀](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.ToolTip> 元件的一般概念，可讓使用者將滑鼠指向控制項時，就會看到文字。  
   

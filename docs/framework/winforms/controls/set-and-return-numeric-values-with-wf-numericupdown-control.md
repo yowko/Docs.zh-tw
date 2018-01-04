@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f31f0b247c882b8ccba84930f7e21f5eea088a35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>如何：使用 Windows Form NumericUpDown 控制項設定和傳回數值
 Windows Form 的數值<xref:System.Windows.Forms.NumericUpDown>控制項由其<xref:System.Windows.Forms.NumericUpDown.Value%2A>屬性。 您可以如同任何其他屬性撰寫條件測試控制項的值。 一次<xref:System.Windows.Forms.NumericUpDown.Value%2A>屬性設定，您可以調整它直接撰寫程式碼執行作業，或可以呼叫<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>和<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法。  
@@ -99,7 +100,7 @@ Windows Form 的數值<xref:System.Windows.Forms.NumericUpDown>控制項由其<x
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.NumericUpDown>  
  <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>  

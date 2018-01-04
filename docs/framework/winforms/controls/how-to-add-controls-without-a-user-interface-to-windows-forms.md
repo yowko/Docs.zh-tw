@@ -24,17 +24,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7deea3aca390ebfa4cc1fcbf16a0e898301ae434
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：將沒有使用者介面的控制項加入至 Windows Form
 隱藏式控制項 （或元件） 提供您的應用程式的功能。 不像其他控制項，並不提供給使用者的使用者介面元件，並因此不需要在 Windows Form 設計工具介面上顯示。 當元件加入至表單時，Windows Form 設計工具會顯示可調整大小的紙匣底端的表單顯示所有元件的位置。 一旦已將控制項加入至元件匣中，您可以選取的元件，並設定其屬性，就像處理任何其他控制項在表單上。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>若要將元件加入至 Windows Form  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
     > [!IMPORTANT]
     >  藉由參考惡意的使用者控制項，您可能會公開本機電腦透過網路的安全性風險。 這只會考量使用者惡意破壞性的自訂控制項，且您不小心將其加入您專案的建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [操作說明：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

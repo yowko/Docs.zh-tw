@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33e2810cf72117f0f6c74812dbd6bf07af05fa8f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 10b1d9134c34cbef9d34fe4a5fa37adb82b5a9a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statusstrip-control"></a>StatusStrip 控制項
 Windows Form `StatusStrip` 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 `StatusStrip` 控制項的上方通常會有 `ToolStripStatusLabel` 控制項，它們顯示文字或圖示以表示狀態，或 <xref:System.Windows.Forms.ToolStripProgressBar> 以圖形方式顯示處理程序的完成狀態。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [StatusStrip 控制項概觀](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -41,5 +42,5 @@ Windows Form `StatusStrip` 控制項在表單裡被當做區域來使用，通�
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  提供這個類別及其成員的相關參考資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f53dd2fdaa622e022f49c153b6dbc83030ae791
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1afe397a92ac6e79e84757baa0c41f6e0c54b7f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>如何：套用 PropertyNameChanged 模式
 下列程式碼範例示範如何套用*PropertyName*模式設為自訂控制項。 當您實作自訂控制項搭配 Windows Form 資料繫結引擎所使用時，適用於此模式。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 -   將程式碼貼到空白程式碼檔案。 您必須使用包含在 Windows Form 上的自訂控制項`Main`方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：實作 INotifyPropertyChanged 介面](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
  [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

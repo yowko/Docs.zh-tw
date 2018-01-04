@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4697ef7a74916bcc7b922f265262a83b8f0316d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e4d5bfb445ce6ed37ad1dc63d92fde833ac9870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>如何：在 Windows Form 控制項中套用屬性
 若要開發元件和控制項的設計環境中正確地互動，並且在執行階段正確地執行，您需要正確地將屬性套用至類別和成員。  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 -   表單裝載`AttributesDemoControl`需要參考`AttributesDemoControl`才能建置的組件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IComparable>  
  <xref:System.Windows.Forms.DataGridView>  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  

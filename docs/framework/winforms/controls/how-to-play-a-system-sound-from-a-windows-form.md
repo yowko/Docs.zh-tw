@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51de367f2558abfc28be740409d8a0d394065acf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b620b7386752e531a8d5252159c5f172176890a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>如何：播放 Windows Form 中的系統音效
 下列程式碼範例會在執行階段播放 `Exclamation` 系統音效。 如需系統音效的詳細資訊，請參閱<xref:System.Media.SystemSounds>。  
@@ -53,7 +54,7 @@ public void playExclamation()
   
 -   <xref:System.Media?displayProperty=nameWithType> 命名空間的參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Media.SoundPlayer>  
  <xref:System.Media.SystemSounds>  
  [操作說明：播放 Windows Forms 中的嗶聲](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  

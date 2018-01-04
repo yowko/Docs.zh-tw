@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c992197b653fb3999870247a3a4cdb4015612ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e07d4a5f0a4e66e412b22e1f6cabd24cd81b5ea4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-implementation-in-custom-controls"></a>自訂控制項中的方法實作
 在控制項中實作方法的方式，與在其他任何元件中實作方法的方式相同。  
@@ -85,6 +86,6 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件](../../../../docs/standard/events/index.md)  
  [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

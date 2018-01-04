@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd8d68aa57ffe8b6fb84ceddf9d01aed56d40bdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 614887524a49e1163b3049111895166995fdace4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel 控制項概觀
 <xref:System.Windows.Forms.TableLayoutPanel> 控制項會在格線中排列其內容。 由於配置會在設計階段和執行階段執行，因此當應用程式環境變更時，配置也會隨著動態變更。 這可讓面板中的控制項按比例調整大小，以便回應變更 (例如，由於當地語系化所造成的父控制項調整大小或文字長度變更)。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  <xref:System.Windows.Forms.TableLayoutSettings>  
  [操作說明：設計可適當回應當地語系化的 Windows Forms 配置](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  

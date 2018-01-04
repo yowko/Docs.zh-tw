@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0eadf9db9a952fdabe77100cb31501be1970e74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ListBox>控制項會顯示的清單，使用者可以從中選取一個或多個項目。 如果項目總數超過可以顯示的數字，捲軸會自動加入<xref:System.Windows.Forms.ListBox>控制項。 當<xref:System.Windows.Forms.ListBox.MultiColumn%2A>屬性設定為`true`，清單方塊會顯示在多個資料行中的項目，水平捲軸會顯示。 當<xref:System.Windows.Forms.ListBox.MultiColumn%2A>屬性設定為`false`，清單方塊會顯示單一資料行中的項目，而垂直捲軸會顯示。 當<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>設`true`，捲軸出現不論項目數目。 <xref:System.Windows.Forms.ListBox.SelectionMode%2A>屬性會決定可以一次選取清單項目數目。  
@@ -31,7 +32,7 @@ Windows Form<xref:System.Windows.Forms.ListBox>控制項會顯示的清單，使
   
  若要加入或刪除的項目<xref:System.Windows.Forms.ListBox>控制，請使用<xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>， <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>，<xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A>或<xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>方法。 或者，您可以加入項目清單使用<xref:System.Windows.Forms.ListBox.Items%2A>在設計階段屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ListBox>  
  [操作說明：從 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
  [操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  

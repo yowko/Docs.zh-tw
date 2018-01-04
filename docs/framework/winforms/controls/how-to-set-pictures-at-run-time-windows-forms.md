@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 429c0c928d8bff4f837186040288d9447fc18687
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fd0e990b494bc0b7a3008f211aa6ded9e04d732
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在執行階段設定圖片 (Windows Form)
 您可以透過程式設計方式設定 Windows Form 所顯示的影像<xref:System.Windows.Forms.PictureBox>控制項。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
      此程式碼將會清除映像，即使圖形在設計階段時載入控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.PictureBox>  
  <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
  [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  

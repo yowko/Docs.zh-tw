@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2db19d402f32bd43bb7053403428e8055755d017
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-tab-pages"></a>如何：停用索引標籤頁
 在某些情況下，您會想要限制存取您的 Windows Form 應用程式中使用的資料。 當您需要的索引標籤控制項; 索引標籤頁面中顯示的資料，可能是一個範例是系統管理員可能會有您想要限制 guest 帳戶或較低層級的使用者 索引標籤頁面上的資訊。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/21/2017
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  [操作說明：將控制項加入至索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
  [操作說明：使用 Windows Forms TabControl 加入和移除索引標籤](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  

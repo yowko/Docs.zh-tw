@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 336243cc4db7039225ba272cac1ba7a3f173f361
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66eb0e8fc630696c86c8b85c85b67023bd568dc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer 控制項 (Windows Form)
 Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
@@ -30,7 +31,7 @@ Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中�
   
  `SplitContainer` 控制項可讓您建立複雜的使用者介面；通常，在某個面板中選取的項目會決定在另一個面板中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 擁有兩個面板可讓您彙總區域中的資訊，而分隔列 (或「分隔器」) 可讓使用者輕鬆調整面板的大小。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SplitContainer 控制項概觀](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  介紹 `SplitContainer` 控制項，並描述常用的屬性、方法和事件。  
   
@@ -47,7 +48,7 @@ Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中�
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.SplitContainer> 類別  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  

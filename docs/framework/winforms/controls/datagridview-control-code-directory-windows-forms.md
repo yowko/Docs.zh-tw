@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89de7edc167ccc21ac2a31fa0de82299c5047969
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2be2e3e5ea1c829fac16cdbf072ddb5be4728f62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a>DataGridView 控制項程式碼目錄 (Windows Form)
 本主題提供的連結<xref:System.Windows.Forms.DataGridView>-相關文件中的程式碼範例。  
@@ -162,6 +163,6 @@ ms.lasthandoff: 11/21/2017
   
 -   [在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

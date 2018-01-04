@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計
 本節提供示範各種牽涉到儲存格、 列和資料行物件的程式設計工作的主題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：將工具提示加入至 Windows Forms DataGridView 控制項中的個別儲存格](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  描述如何處理<xref:System.Windows.Forms.DataGridView.CellFormatting>事件以提供不同的工具提示的個別資料格。  
   
@@ -64,6 +65,6 @@ ms.lasthandoff: 11/21/2017
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供主題描述常用的資料格、 列和資料行的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

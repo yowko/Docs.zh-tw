@@ -18,20 +18,21 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1e00fc074148ddd53885bafbb490a3e3868fc0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9e3018d024254adb249860f7736399e7f2da72a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog 元件概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.FontDialog>元件是預先設定的對話方塊，這是標準的 Windows**字型**對話方塊用來公開目前安裝在系統的字型。 使用 Windows 架構應用程式做為簡單的解決方案內它就不需設定您自己的對話方塊中的字型選項。  
   
  根據預設，對話方塊會顯示清單方塊的字型、 字型樣式和大小。刪除線及底線; 等效果的核取方塊下拉式清單，如指令碼。和字型會如何出現的範例。 （指令碼指不同的字元可供指定之字型的指令碼，例如希伯來文或日文）。若要顯示 [字型] 對話方塊，請呼叫<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
   
-## <a name="key-properties"></a>索引鍵屬性  
+## <a name="key-properties"></a>索引鍵內容  
  此元件的許多設定外觀屬性。 設定對話方塊中選取的屬性是<xref:System.Windows.Forms.FontDialog.Font%2A>和<xref:System.Windows.Forms.FontDialog.Color%2A>。 <xref:System.Windows.Forms.FontDialog.Font%2A>屬性會設定字型、 樣式、 大小、 指令碼，以及影響; 例如， `Arial, 10pt, style=Italic, Strikeout`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.FontDialog>  
  [FontDialog 元件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

@@ -17,16 +17,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36e978aedd1f1259ff99703e0b94d623d565a8ee
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 761a3217aa78f33cd781b9a4581eb6e409a5ff85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trackbar-control-windows-forms"></a>TrackBar 控制項 (Windows Form)
 Windows Form`TrackBar`控制項 （有時也稱為 「 滑桿 」 控制項） 用來瀏覽大量的資訊或以視覺方式調整數字設定。 `TrackBar`控制項有兩個部分： 也稱為滑桿，與刻度標記縮圖。 基本原則是可調整的部分。 它的位置對應至<xref:System.Windows.Forms.TrackBar.Value%2A>屬性。 刻度是定期為間距的視覺指標。 追蹤列移動您指定和可以對齊水平或垂直增量。 使用追蹤列的範例之一是讓設定游標閃爍的速率或滑鼠速度。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [TrackBar 控制項概觀](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
  導入的一般概念`TrackBar`控制項，可讓使用者瀏覽資訊以視覺方式調整數字設定。  
   

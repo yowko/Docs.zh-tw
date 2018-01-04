@@ -17,16 +17,17 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86f812c233a161764836c54817dc616577a4bb5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 84020af84822ca4a8815e516a882fb15100b22e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>項目樹狀結構和序列化 HOW TO 主題
 本節中的主題描述如何使用 WPF 項目樹狀結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [依名稱尋找元素](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
  [覆寫邏輯樹狀結構](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
   

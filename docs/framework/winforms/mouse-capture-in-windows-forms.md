@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8004b05ea25341a142bfcfd9ae812ee3bebd6d5b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7cc62780579c852aaa637a3ccc13ce2929423868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows Form 中的滑鼠捕捉
 *將滑鼠擷取*指的是當控制項接受所有的滑鼠輸入的命令。 當控制項捕捉住滑鼠時，不論是否在指標位於其框線內接收滑鼠輸入。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/22/2017
   
  前景視窗可以捕捉滑鼠。 當背景視窗嘗試捕捉滑鼠時，視窗會收到滑鼠指標位於視窗的可見部分時發生的滑鼠事件的訊息。 此外，即使前景視窗已捕捉滑鼠，使用者仍然可以按一下另一個視窗中，將其帶至前景。 當滑鼠捕捉時，快速鍵無法運作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

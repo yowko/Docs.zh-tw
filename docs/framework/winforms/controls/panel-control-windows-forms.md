@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5187d457e39993413ab6c281433ab604bc384fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eae4b64f2a632330b1b72f3ec5786884c272967c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-control-windows-forms"></a>Panel 控制項 (Windows Form)
 Windows Form`Panel`控制項可用來提供其他控制項可識別的群組。 一般而言，您可以使用面板細分函式表單。 `Panel`控制項是類似於<xref:System.Windows.Forms.GroupBox>控制項等控制項，不過，只有`Panel`控制項有捲軸僅限和<xref:System.Windows.Forms.GroupBox>控制項顯示的標題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -41,7 +42,7 @@ Windows Form`Panel`控制項可用來提供其他控制項可識別的群組。 
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.Panel>  
- 說明這個類別，並且提供其所有成員的連結。  
+ 描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

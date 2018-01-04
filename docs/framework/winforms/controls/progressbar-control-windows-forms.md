@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d46c27e57a7d71992a0b1378e0987a2c48a66ab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e34c86d63cc4d9eb2d6ba08466e72086719d880a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar 控制項 (Windows Form)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
   
  Windows Form<xref:System.Windows.Forms.ProgressBar>控制項顯示適當數目的矩形排列在水平列表示動作的進度。 動作完成時，會自動填入列。 進度列通常用來讓使用者瞭解長等待時間的動作完成 — 比方說，當載入的大型檔案時。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ProgressBar 控制項概觀](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  導入的一般概念<xref:System.Windows.Forms.ProgressBar>控制項，可讓您以圖形方式顯示作業的進度。  
   

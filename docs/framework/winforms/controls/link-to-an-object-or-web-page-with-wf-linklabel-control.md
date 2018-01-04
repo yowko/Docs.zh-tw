@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04566d96fe9031821b904df3bf9ec93244b62cfe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3921c15de59deaa68b63d7dbfbfeb18c776d31f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>如何：使用 Windows Form LinkLabel 控制項連結至物件或 Web 網頁
 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上建立 Web 樣式連結。 按一下連結時，您可以變更其色彩會以指出瀏覽的連結。 如需有關如何變更色彩的詳細資訊，請參閱[如何： 變更 Windows Form LinkLabel 控制項的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
@@ -188,7 +189,7 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
  [LinkLabel 控制項概觀](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
  [操作說明：變更 Windows Forms LinkLabel 控制項的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  

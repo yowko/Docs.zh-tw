@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27c1c6cd0e617c0940a734e7e16a3ec5d12f920d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 324e4ed290b98d2268dd82fa55b81deaeb849770
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows Forms BindingSource 元件建立查閱資料表
 查閱資料表是具有資料行的資料表，而此資料行會從相關資料表的記錄中顯示資料。 在下列程序中，會使用 <xref:System.Windows.Forms.ComboBox> 控制項顯示從父資料表到子資料表具有外部索引鍵關聯性的欄位。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 8.  從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結至您想要顯示的詳細資料欄位。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.BindingSource>  
  [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
  [ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
