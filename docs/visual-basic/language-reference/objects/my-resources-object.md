@@ -14,11 +14,11 @@ ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b2a2de7229f59e7deea29fe4186a5e466459d9fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myresources-object"></a>My.Resources 物件
 提供屬性和類別來存取應用程式的資源。  
@@ -26,14 +26,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>備註  
  `My.Resources`物件提供存取應用程式的資源，並可讓您以動態方式擷取資源應用程式。 如需詳細資訊，請參閱[管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
   
- `My.Resources`物件會公開只有全域資源。 它不提供與表單相關聯的資源檔案的存取權。 您必須在表單中存取的表單資源。 如需詳細資訊，請參閱[逐步解說：將 Windows Forms 當地語系化](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)。  
+ `My.Resources`物件會公開只有全域資源。 它不提供與表單相關聯的資源檔案的存取權。 您必須在表單中存取的表單資源。  
   
  您可以存取應用程式的特定文化特性資源檔從`My.Resources`物件。 根據預設，`My.Resources`物件查閱比對中的文化特性資源檔中的資源<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>屬性。 不過，您可以覆寫這個行為，並指定要用於資源的特定文化特性。 如需詳細資訊，請參閱[桌面應用程式中的資源](../../../framework/resources/index.md)。  
   
 ## <a name="properties"></a>屬性  
- 內容`My.Resources`物件提供唯讀存取您的應用程式資源。 若要新增或移除資源，使用**專案設計工具**。 如需詳細資訊，請參閱[如何： 加入或移除資源](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)。 您可以存取資源，透過新增**專案設計工具**使用`My.Resources.``resourceName`。  
+ 內容`My.Resources`物件提供唯讀存取您的應用程式資源。 若要新增或移除資源，使用**專案設計工具**。 您可以存取資源，透過新增**專案設計工具**使用`My.Resources.``resourceName`。  
   
- 您也可以新增或移除選取的專案中的資源檔**方案總管 中**按一下**加入新項目**或**加入現有項目**從**專案**功能表。 您可以存取資源利用這個方式加入`My.Resources.``resourceFileName`.`resourceName`。  
+ 您也可以新增或移除選取的專案中的資源檔**方案總管 中**按一下**加入新項目**或**加入現有項目**從**專案**功能表。 您可以存取資源利用這個方式加入`My.Resources.``resourceFileName`。`resourceName`。  
   
  每個資源都有名稱、 類別目錄和值，以及這些資源的設定會決定要存取資源的屬性會出現在`My.Resources`物件。 資源中加入**專案設計工具**:  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
  `My.Resources`物件會公開為具有共用的屬性類別的每個資源檔。 類別名稱是資源檔的名稱相同。 上一節所述，在資源檔中的資源會公開為類別中的屬性。  
   
 ## <a name="example"></a>範例  
- 此範例會設定表單的標題為指定的字串資源`Form1Title`應用程式資源檔中。 如範例能夠運作，應用程式必須具有名為字串`Form1Title`其資源檔中。 如需詳細資訊，請參閱[如何： 加入或移除資源](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)。  
+ 此範例會設定表單的標題為指定的字串資源`Form1Title`應用程式資源檔中。 如範例能夠運作，應用程式必須具有名為字串`Form1Title`其資源檔中。  
   
  [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
@@ -78,12 +78,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  這個範例會擷取字串資源的應用程式的法文文化特性版本。 資源名稱為`Message`。 若要變更文化特性的`My.Resources`物件使用，此範例會使用<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>。  
   
- 要讓範例能夠運作，應用程式必須具有名為字串`Message`中其資源檔和應用程式不能有該資源的檔案，Resources.fr FR.resx 法文文化特性版本。 如需詳細資訊，請參閱[如何： 加入或移除資源](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)。 如果應用程式並沒有法文文化特性的資源檔案版本，`My.Resource`物件會從預設文化特性資源檔擷取資源。  
+ 要讓範例能夠運作，應用程式必須具有名為字串`Message`中其資源檔和應用程式不能有該資源的檔案，Resources.fr FR.resx 法文文化特性版本。 如果應用程式並沒有法文文化特性的資源檔案版本，`My.Resource`物件會從預設文化特性資源檔擷取資源。  
   
  [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何：新增或移除資源](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)  
+## <a name="see-also"></a>請參閱  
  [管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)  
  [桌面應用程式中的資源](../../../framework/resources/index.md)  
- [逐步解說： 當地語系化 Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+

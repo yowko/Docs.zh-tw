@@ -17,13 +17,13 @@
 ### [.NET 微服務：容器化 .NET 應用程式的架構](standard/microservices-architecture/)
 ## [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](standard/choosing-core-framework-server.md)
 ## [什麼是「Managed 程式碼」？](standard/managed-code.md)
-### [自動管理記憶體](standard/automatic-memory-management.md) 
+### [自動管理記憶體](standard/automatic-memory-management.md)
 ## [通用語言執行平台 (CLR)](standard/clr.md)
 ## [語言獨立性](standard/language-independence.md)
 ### [語言獨立性以及與語言無關的元件](standard/language-independence-and-language-independent-components.md)
 ## [Framework 程式庫](standard/framework-libraries.md)
-### [類別庫概觀](standard/class-library-overview.md)  
-### [基底類型](standard/base-types/)  
+### [類別庫概觀](standard/class-library-overview.md)
+### [基底類型](standard/base-types/)
 ## [.NET 類別庫](standard/class-libraries.md)
 ## [可攜性分析器](standard/portability-analyzer.md)
 ## [處理和擲回例外狀況](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [建置 .NET Core 應用程式的 Docker 映像](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools for Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [單元測試](core/testing/index.md)
-### [使用 dotnet test 及 xUnit 執行單元測試](core/testing/unit-testing-with-dotnet-test.md)
-### [使用 dotnet test 及 MSTest 執行單元測試](core/testing/unit-testing-with-mstest.md)
-### [搭配 dotnet test 與 xUnit 的 F# 單元測試](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [搭配 dotnet test 與 MSTest 的 F# 單元測試](core/testing/unit-testing-fsharp-with-mstest.md)
+### [使用 xUnit 進行 C# 單元測試](core/testing/unit-testing-with-dotnet-test.md)
+### [使用 NUnit 進行 C# 單元測試](core/testing/unit-testing-with-nunit.md)
+### [使用 MSTest 進行 C# 單元測試](core/testing/unit-testing-with-mstest.md)
+### [使用 xUnit 進行 F# 單元測試](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [使用 NUnit 進行 F# 單元測試](core/testing/unit-testing-fsharp-with-nunit.md)
+### [使用 MSTest 進行 F# 單元測試](core/testing/unit-testing-fsharp-with-mstest.md)
+### [使用 xUnit 進行 VB 單元測試](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [使用 NUnit 進行 VB 單元測試](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [使用 MSTest 進行 VB 單元測試](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [執行選擇性單元測試](core/testing/selective-unit-tests.md)
 ### [單元測試已發行輸出](core/testing/unit-testing-published-output.md)
 ### [搭配 Visual Studio 的 .NET Core 專案即時單元測試](/visualstudio/test/live-unit-testing-start)
@@ -142,7 +147,7 @@
 ##### [dotnet add reference](core/tools/dotnet-add-reference.md)
 ##### [dotnet list reference](core/tools/dotnet-list-reference.md)
 ##### [dotnet remove reference](core/tools/dotnet-remove-reference.md)
-#### 封裝
+#### 套件
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
@@ -159,9 +164,9 @@
 
 <!-- .NET Framework Content -->
 # [.NET Framework 指南](framework/index.md)
-## [新功能](framework/whats-new/)
+## [新增功能](framework/whats-new/)
 ## [開始使用](framework/get-started/)
-## [安裝指南 (英文)](framework/install/)
+## [安裝指南](framework/install/)
 ## [移轉手冊](framework/migration-guide/)
 ## [Docker 上的 .NET Framework 指南](framework/docker/index.md)
 ### [在容器中執行主控台應用程式](framework//docker/console.md)
@@ -204,7 +209,7 @@
 ## [C# 的教學課程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# 的新功能](csharp/whats-new/index.md) 
+## [C# 的新功能](csharp/whats-new/index.md)
 ### [C# 7.2 的新功能](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1 的新功能](csharp/whats-new/csharp-7-1.md)
 ### [C# 7 的新功能](csharp/whats-new/csharp-7.md)
@@ -212,8 +217,6 @@
 ### [C# 版本歷程記錄](csharp/whats-new/csharp-version-history.md)
 ### [語言和架構之間的關係](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## C# 概念
 ### [C# 型別系統](csharp/programming-guide/types/index.md)
 ### [命名空間](csharp/programming-guide/namespaces/index.md)
@@ -223,8 +226,7 @@
 ### [元組](csharp/tuples.md)
 ### [解構 Tuple 和其他型別](csharp/deconstruct.md)
 ### [介面](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [方法](csharp/methods.md)
+#### [方法](csharp/methods.md)
 #### [Lambda 運算式](csharp/lambda-expressions.md)
 ### [屬性](csharp/properties.md)
 ### [索引子](csharp/indexers.md)
@@ -242,7 +244,6 @@
 #### [區別委派和事件](csharp/distinguish-delegates-events.md)
 ### [Language-Integrated Query (LINQ)](csharp/linq/)
 ### [非同步程式設計](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [模式比對](csharp/pattern-matching.md)
 ### [具備實值型別的參考語意](csharp/reference-semantics-with-value-types.md)
 ### [運算式樹狀結構](csharp/expression-trees.md)
@@ -254,11 +255,10 @@
 #### [轉譯運算式](csharp/expression-trees-translating.md)
 #### [摘要](csharp/expression-trees-summary.md)
 ### [原生互通性](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [加入程式碼註解](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [.NET 編譯器平台 SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 程式設計指南](csharp/programming-guide/)
 ## [語言參考](csharp/language-reference/)
 ## [逐步解說](csharp/walkthroughs.md)
@@ -267,7 +267,7 @@
 <!-- F# Content -->
 # [F# 指南](fsharp/index.md)
 
-## [F 的教學課程](fsharp/tour.md)
+## [F# 的教學課程](fsharp/tour.md)
 ## [開始使用](fsharp/get-started/index.md)
 ### [Visual Studio 使用者入門](fsharp/get-started/get-started-visual-studio.md)
 ### [開始使用 Visual Studio for Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
@@ -1035,7 +1035,7 @@
 #### [不支援 XML 實體參考](visual-basic/language-reference/error-messages/xml-entity-references-are-not-supported.md)
 #### [ASP.NET 中的內嵌式程式碼不支援 XML 常值和 XML 屬性](visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md)
 #### [XML 命名空間 URI '<uri>' 只能繫結至 'xmlns'](visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md)
-## [參考](visual-basic/reference/index.md)
+## [參考資料](visual-basic/reference/index.md)
 ### [命令列編譯器](visual-basic/reference/command-line-compiler/index.md)
 #### [從命令列建置](visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
 ##### [操作說明：叫用命令列編譯器](visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
