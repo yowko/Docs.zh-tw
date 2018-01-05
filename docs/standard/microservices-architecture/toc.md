@@ -41,6 +41,7 @@
 ### [針對開發或測試環境使用 RabbitMQ 實作事件匯流排](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [訂閱事件](multi-container-microservice-net-applications/subscribe-events.md)
 ### [測試 ASP.NET Core 服務和 Web 應用程式](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [在微服務中使用 IHostedService 實作背景工作](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 ## [解決具有 DDD 和 CQRS 模式之微服務中的商務複雜度](microservice-ddd-cqrs-patterns/index.md)
 ### [在微服務中套用簡化 CQRS 和 DDD 模式](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方式](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)
@@ -72,4 +73,4 @@
 ### [關於 .NET 微服務和 Web 應用程式中的授權](secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md)
 ### [在開發期間安全地儲存應用程式密碼](secure-net-microservices-web-applications/developer-app-secrets-storage.md)
 ### [使用 Azure Key Vault 在實際執行階段保護密碼](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
-## [金鑰附帶](key-takeaways.md)
+## [重點摘要](key-takeaways.md)
