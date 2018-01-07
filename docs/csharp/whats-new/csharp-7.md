@@ -31,7 +31,8 @@ productive as a developer.
 
 本方法提供 `out` 參數修飾詞改進。
 
-過往進行變數初始化，需要使用 `out` 參數修飾詞定義變數性質時，您必須個別定義變數及執行方法 ( method ) 中 `out` 參數修飾詞：
+過往進行變數初始化，需要使用 `out` 參數修飾詞定義變數性質時，您必須個別定義變數及執行方法 ( method ) 中
+`out` 參數修飾詞：
 
 ```csharp
 int numericResult;
@@ -50,7 +51,8 @@ else
     WriteLine("Could not parse input");
 ```
 
-或許您可能希望如上述明確指名使用 `out` 參數修飾詞變數類型，然而語法亦可支援使用 `var` 隱含類型區域變數定義的變數：
+或許您可能希望如上述明確指名使用 `out` 參數修飾詞變數類型，然而語法亦可支援使用 `var` 隱含類型區域變數
+定義的變數：
 
 ```csharp
 if (int.TryParse(input, out var answer))
@@ -66,8 +68,8 @@ else
 * 無需為區域變數指定初始值。
     - 過往使用 `out` 參數修飾詞時候，無法指定選用性，您必需明確指定區域變數值 ( Value ) 。
     
-本方法最常見使用情境為 `Try` 陳述式 ( try-catch-finally )  ，在使用此陳述式時，一個方法將擲回執行成功或執行失敗狀態，
-若使用 `out` 參數修飾詞修飾擲回狀態，將可確保擲回狀態正確輸出。
+本方法最常見使用情境為 `Try` 陳述式 ( try-catch-finally )  ，在使用此陳述式時，一個方法將擲回執行成
+功或執行失敗狀態，若使用 `out` 參數修飾詞修飾擲回狀態，將可確保擲回狀態正確輸出。
 
 When using the `out` variable declaration, the declared variable "leaks" into the outer scope of the if statement. This allows you to use the variable afterwards:
 
@@ -100,8 +102,9 @@ return result;
 
 本方法提供組件 <xref:System.ValueTuple> 改進。
 
-C# 提供許多解釋結構 ( Structure ) 方法可以應用在您所設計程式結構上，然而在許多時候您可能需要以最小成本花費來設計程式
-並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *Tuple* 類別能以更輕便的方式來表示多個個別元素結構。
+C# 提供許多解釋結構 ( Structure ) 方法可以應用在您所設計程式結構上，然而在許多時候您可能需要以最小
+成本花費來設計程式並能同時包括個別元素結構，因此 C# 為了能提供更好的解釋結構，提供了 *Tuple* 類別能
+以更輕便的方式來表示多個個別元素結構。
 
 需要注意本方法所解釋的個別元素結構並未經過驗證，您無法為個別定義定義方法 ( Methods ) 。
 
@@ -116,8 +119,8 @@ C# 提供許多解釋結構 ( Structure ) 方法可以應用在您所設計程�
 var letters = ("a", "b");
 ```
 
-*Tuple* 類別將會建立其成員 Tuple `Item1` 和 `Item2` ，您可以使用相同 Tuple 建立方式變更變數建立
-Tuple，當中提供語意到每個 Tuple 的成員名稱的語法：
+*Tuple* 類別將會建立其成員 Tuple `Item1` 和 `Item2` ，您可以使用相同 Tuple 建立方式變更變數建
+立 Tuple ，當中提供語意到每個 Tuple 的成員名稱的語法：
 
 ```csharp
 (string Alpha, string Beta) namedLetters = ("a", "b");
@@ -139,8 +142,8 @@ var alphabetStart = (Alpha: "a", Beta: "b");
 ```
 
 > [!NOTE]
-> 前述列會產生警告 `CS8123`，告訴您指派右邊的名稱 `Alpha` 和 `Beta` 會被忽略，因為它們與左邊的
-> 名稱 `First` 和 `Second` 發生衝突。
+> 前述列會產生警告 `CS8123`，告訴您指派右邊的名稱 `Alpha` 和 `Beta` 會被忽略，因為它們與左邊
+> 的名稱 `First` 和 `Second` 發生衝突。
 
 上述範例說明宣告 Tuple 的基本語法。 Tuple 適合使用於 `private` 和 `internal` 方法的傳回型別
 。 Tuple 提供簡易的語法可讓方法傳回多個離散值︰可以節省了撰寫定義傳回型別之 `class` 或 `struct` 
@@ -169,7 +172,8 @@ private static (int Max, int Min) Range(IEnumerable<int> numbers)
 * 無需要建立新的類型。
 * 語言增強功能讓您無需呼叫  <xref:System.Tuple.Create``1(``0)> 方法。
 
-方法的宣告提供所傳回 *tuple*  類別的名稱。 當您呼叫的方法時，傳回值是一個 Tuple，其欄位為 `Max` 和`Min`：
+方法的宣告提供所傳回 *tuple* 類別的名稱。 當您呼叫的方法時，傳回值是一個 Tuple，其欄位為 `Max` 
+和`Min`：
 
 ```csharp
 var range = Range(numbers);
@@ -182,9 +186,9 @@ var range = Range(numbers);
 (int max, int min) = Range(numbers);
 ```
 
-您也可以在 .NET 中為任何類型提供類似的解構。 這是藉由新增一個名稱為 `Deconstruct` 方法作為類別的成員而達成。
-`Deconstruct` 方法將會為您想要擷取的每個屬性提供一組 `out` 引數。 請參考以下 `Point` 類別範例，它會提供
-Deconstruct 方法來擷取 `X` 和 `Y` 座標︰
+您也可以在 .NET 中為任何類型提供類似的解構。 這是藉由新增一個名稱為 `Deconstruct` 方法作為類別
+的成員而達成。`Deconstruct` 方法將會為您想要擷取的每個屬性提供一組 `out` 引數。 請參考以下 
+`Point` 類別範例，它會提供Deconstruct 方法來擷取 `X` 和 `Y` 座標︰
 
 ```csharp
 public class Point
@@ -225,8 +229,8 @@ var p = new Point(3.14, 2.71);
 
 本方法提供臨時性變數應用。
 
-正常情境下，當解構 tuple 或呼叫方法含有 `out` 修飾詞參數時， C# 會強迫定義其值，然而若您並不在意
-且不想要定義其值時， C# 能提供暫存變數捨棄處理情境。
+正常情境下，當解構 tuple 或呼叫方法含有 `out` 修飾詞參數時， C# 會強迫定義其值，然而若您並
+不在意且不想要定義其值時， C# 能提供暫存變數捨棄處理情境。
 
 所謂捨棄，是唯讀的變數，其名稱是`_`（底線字元）; 您可以指定您想要捨棄至單一變數的值。 捨棄就
 像是未指派的變數。有個例外已賦予值語句，捨棄是無法使用於代碼之中。
@@ -276,32 +280,26 @@ public class Example
 //      Population change, 1960 to 2010: 393,149
 ```
 
-For more information, see [Discards](../discards.md).
+您可以在[Discards](../discards.md)主題中深入了解。
  
-## Pattern matching
+## 模式比對
 
-*Pattern matching* is a feature that allows you to implement method dispatch on
-properties other than the type of an object. You're probably already familiar
-with method dispatch based on the type of an object. In Object Oriented programming,
-virtual and override methods provide language syntax to implement method dispatching
-based on an object's type. Base and Derived classes provide different implementations. 
-Pattern matching expressions extend this concept so that you can easily
-implement similar dispatch patterns for types and data elements that are
-not related through an inheritance hierarchy. 
+本方法提供運算式的語言規則，可幫助您避免誤用比對運算式的結果。
 
-Pattern matching supports `is` expressions and `switch` expressions. Each
-enables inspecting an object and its properties to determine if that object
-satisfies the sought pattern. You use the `when` keyword to specify additional
-rules to the pattern.
+「模式比對」 是一個功能，允許您針對不同資料類型的變數進行屬性實作方法分派。或許您熟悉使用物件類型的方法
+分派。在物件導向程度設計中， 虛擬 ( `virtual` ) 方法與覆寫 ( `override`) 方法可以提供以實作來源為
+物件類型進行分派，而基底及其衍生的類別能提供不同的實作。模式比對運算式將會擴充這個觀念，讓您可以輕易為
+不是透過繼承階層架構而關聯的類型和資料項目實作類似的分派模式。
 
-### `is` expression
+模式比對支援 `is` 運算式與 `switch` 運算式，可以讓您能檢查物件和其屬性，以判斷該物件是否符合搜尋的模'
+式，您可以使用 `when` 關鍵字來指定其他規則給該模式。
 
-The `is` pattern expression extends the familiar `is` operator to query an object beyond its type.
+### `is` 運算式
 
-Let's start with a simple scenario. We'll add capabilities to this scenario
-that demonstrate how pattern matching expressions make algorithms that work
-with unrelated types easy. We'll start with a method that computes the sum
-of a number of die rolls:
+模式比對的 `is` 算式會擴充熟悉的 `is` 運算子，來查詢其類型之外的物件。
+
+以下範例會將功能加入此案例中，示範模式比對運算式如何讓非相關類型的演算法變的更簡單。 我們將從計算數次擲
+骰子總和的方法開始︰
 
 ```csharp
 public static int DiceSum(IEnumerable<int> values)
@@ -309,10 +307,8 @@ public static int DiceSum(IEnumerable<int> values)
     return values.Sum();
 }
 ```
-
-You might quickly find that you need to find the sum of die rolls where
-some of the rolls are made with more than one die. Part of the input
-sequence may be multiple results instead of a single number:
+您可能會發現您所需要找出的擲骰情境是以多個骰子所擲出的擲骰子總和。傳入的序列一部分可能是多個結果，而非單
+一數字︰
 
 ```csharp
 public static int DiceSum2(IEnumerable<object> values)
@@ -328,20 +324,16 @@ public static int DiceSum2(IEnumerable<object> values)
     return sum;
 }
 ```
+在此範例當中， `is` 模式運算式能完成此項工作。 在檢查類型時，您可以撰寫變數的初始化。 這會為已驗證的執行
+階段型別建立新的變數。
 
-The `is` pattern expression works quite well in this scenario. As part of
-checking the type, you write a variable initialization. This creates
-a new variable of the validated runtime type.
+當您繼續擴充這些案例時，您會發現您建立了更多 `if ` 和 `else if`  陳述式。 變得不便之後，您可能會想要切
+換為 `switch` 模式運算式。
 
-As you keep extending these scenarios, you may find that you build more
-`if` and `else if` statements. Once that becomes unwieldy, you'll likely
-want to switch to `switch` pattern expressions.
+### `switch` 運算式更新
 
-### `switch` statement updates
-
-The *match expression* has a familiar syntax, based on the `switch`
-statement already part of the C# language. Let's translate the existing code
-to use a match expression before adding new cases: 
+「運算式比對」的語法有似曾相識掰般的熟悉，其根據來源是已屬於 C# 語言一部分的 `switch` 陳述式。 讓我們先
+重新編寫現有程式碼，使用比對運算式，之後才新增案例︰
 
 ```cshsrp
 public static int DiceSum3(IEnumerable<object> values)
@@ -363,11 +355,9 @@ public static int DiceSum3(IEnumerable<object> values)
 }
 ```
 
-The match expressions have a slightly different syntax than the `is` expressions, where
-you declare the type and variable at the beginning of the `case` expression.
+運算式比對的語法與`is` 運算式稍微不同，您可在 `case` 運算式的開頭宣告類型和變數。
 
-The match expressions also support constants. This can save time by
-factoring out simple cases:
+運算式比對也支援常數。 如此可以節省時間，因為已分隔為單純的情境︰
 
 ```csharp
 public static int DiceSum4(IEnumerable<object> values)
