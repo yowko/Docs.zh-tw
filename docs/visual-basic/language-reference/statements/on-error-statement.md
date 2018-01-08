@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
 啟用錯誤處理常式，並指定位置的程序; 內的常式也可以用來停用錯誤處理常式。  
   
- 不含`On Error`陳述式，就會發生任何執行階段錯誤是嚴重錯誤： 會顯示錯誤訊息，並停止執行。  
+ 不需要錯誤處理發生的任何執行階段錯誤是嚴重錯誤： 會顯示錯誤訊息，並停止執行。  
   
  可能的話，我們建議您在使用結構化例外狀況處理程式碼中，而不是使用非結構化例外狀況處理和`On Error`陳述式。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
@@ -124,7 +124,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  **組件：** Visual Basic Runtime Library （位於 Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  

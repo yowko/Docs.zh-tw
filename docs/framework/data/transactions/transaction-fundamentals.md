@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>交易基礎觀念
 交易作業會將多項工作繫結在一起。 例如，想像應用程式正在執行兩項工作。 首先，它會在資料庫中建立新的表格。 接著，它會呼叫特定物件來收集與格式化資料，然後將資料插入新的表格中。 這兩項工作都是相關的，甚至是互相依存的，除非您可以在表格中填入資料，否則您會想要避免建立新的表格。 在單一交易範圍內執行這兩項工作，會將這兩項工作強制聯結在一起。 如果第二項工作失敗，第一項工作就會復原至建立新表格之前的時間點。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  當您使用 <xref:System.Transactions> 所提供的類別來開發交易式應用程式時，不用擔心需要哪種交易，或是會牽涉到那個交易管理員。 <xref:System.Transactions> 基礎結構會自動為您打點好所有事項。  
   
- 當您建立交易時，可以指定套用至交易的隔離等級。 由 <xref:System.Transactions.IsolationLevel> 類別所定義的隔離等級決定了其他交易對受到您的交易影響的資料，所要採取的存取等級。  
+ 當您建立異動時，可以指定套用至異動的隔離等級。 所定義的隔離層級<xref:System.Transactions.IsolationLevel>列舉會決定其他交易將會有資料受到您的交易存取層級為何。  
   
  您可以建立使用 ADO.NET，交易<xref:System.EnterpriseServices>，或所提供的交易程式設計模型<xref:System.Transactions>命名空間。 [System.Transactions 所提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)主題討論功能，您可以用來寫入異動式應用程式使用<xref:System.Transactions>命名空間。  
   

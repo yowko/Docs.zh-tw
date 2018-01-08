@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]是隨附於 Visual Studio 2015 和更新版本的先行編譯技術來建置和部署 Windows 應用程式。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   最佳化應用程式記憶體使用量。  
 
 > [!IMPORTANT]
-> 對於大部分的應用程式和案例中，.NET 原生提供更快的啟動時間和更優異的效能相較於應用程式編譯的 il 或 NGEN 映像。 不過，您的結果可能不同。 若要確保您的應用程式已經受益的.NET 原生的效能增強功能，您應該比較它與非-.NET 原生版本的應用程式的效能。 如需詳細資訊，請參閱[效能工作階段概觀](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
+> 對於大部分的應用程式和案例中，.NET 原生提供更快的啟動時間和更優異的效能相較於應用程式編譯的 il 或 NGEN 映像。 不過，您的結果可能不同。 若要確保您的應用程式已經受益的.NET 原生的效能增強功能，您應該比較它與非-.NET 原生版本的應用程式的效能。 如需詳細資訊，請參閱[效能工作階段概觀](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
  
 但是 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 牽涉到多項機器碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 特別之處在於：  
   

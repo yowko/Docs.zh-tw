@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 10/18/2017
 |`>?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「大於」運算。<br /></li><ul/>|
 |`>>`|[函式](../functions/index.md)|<ul><li>撰寫兩個函式 (正向撰寫運算子)。<br /></li><ul/>|
 |`>>>`|[位元運算子](bitwise-operators.md)|<ul><li>將左側數量中的位元，向右移位右側指定的位數。<br /></li><ul/>|
-|`>=`|[算術運算子](arithmetic-operators.md)|<ul><li>如果右側大於或等於左側，即傳回 `true`；否則傳回 `false`。<br /></li><ul/>|
+|`>=`|[算術運算子](arithmetic-operators.md)|<ul><li>傳回`true`的左邊是否大於或等於右側，即; 否則傳回`false`。<br /></li><ul/>|
 |`>=?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「大於或等於」運算。<br /></li><ul/>|
 |`?`|[參數和引數](../parameters-and-arguments.md)|<ul><li>指定選擇性引數。<br /></li><li>用做為動態方法及屬性呼叫的運算子。 您必須提供自己的實作。<br /></li><ul/>|
 |`? ... <- ...`|沒有可用的詳細資訊。|<ul><li>用來做為設定動態屬性的運算子。 您必須提供自己的實作。<br /></li><ul/>|
@@ -126,34 +126,34 @@ ms.lasthandoff: 10/18/2017
 |運算子|順序關聯性|
 |--------|-------------|
 |`as`|右|
-|`when`|右方|
-|<code>&#124;</code>（管線）|左方|
+|`when`|右|
+|<code>&#124;</code>（管線）|左|
 |`;`|右|
 |`let`|Nonassociative|
-|`function`, `fun`, `match`, `try`|Nonassociative|
+|`function`、`fun`、`match``try`|Nonassociative|
 |`if`|Nonassociative|
 |`->`|右|
 |`:=`|右|
 |`,`|Nonassociative|
 |`or`, <code>&#124;&#124;</code>|左|
 |`&`, `&&`|左|
-|`:>`, `:?>`|右方|
-|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*，`&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|左方|
-|`^`*op*<br /><br />(包括 `^^^`)|右方|
-|`::`|右方|
+|`:>`, `:?>`|右|
+|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*，`&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|左|
+|`^`*op*<br /><br />(包括 `^^^`)|右|
+|`::`|右|
 |`:?`|未關聯|
 |`-`*op*、`+`*op*|適用於這些符號的中置用法|
 |`*`*op*、`/`*op*、`%`*op*|左方|
 |`**`*op*|右方|
-|`f x` (函式應用程式)|左方|
-|<code>&#124;</code>（模式比對）|右方|
-|前置運算子 (`+`*op*、`-`*op*、`%`、`%%`、`&`、`&&`、`!`*op*、`~`*op*)|左方|
+|`f x` (函式應用程式)|左|
+|<code>&#124;</code>（模式比對）|右|
+|前置運算子 (`+`*op*、`-`*op*、`%`、`%%`、`&`、`&&`、`!`*op*、`~`*op*)|左|
 |`.`|左|
-|`f(x)`|左方|
-|`f<`*類型*`>`|左方|
+|`f(x)`|左|
+|`f<`*類型*`>`|左|
 F# 支援自訂運算子多載。 這表示您可以定義自己的運算子。 在上表中，*op* 可以是任何有效的 (可能是空的) 運算子字元序列，即內建或使用者定義的序列。 因此，您可以使用此表格來判斷要對自訂運算子使用什麼字元序列，以達到您想要的優先順序等級。 前置 `.` 字元在編譯器判斷優先順序時，會予以忽略。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 語言參考](../index.md)
 
 [運算子多載](../operator-overloading.md)

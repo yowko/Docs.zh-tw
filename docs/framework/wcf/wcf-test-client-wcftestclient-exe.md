@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 28098a4e598d1c3bede3b05e3afe1001c3944d42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可以讓使用者用來輸入測試參數、將該輸入送出至服務，以及檢視服務傳回的回應。 與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。  
   
- 您可以在下列位置中找到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe)：C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\  
+ 您通常可以找到[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端 (WcfTestClient.exe) 中的下列位置： C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE-社群可能是其中一種 「 企業 」、 「 人員 」 或 「 社群 」依據已安裝的 Visual Studio 層級。
   
 ## <a name="scenarios-for-using-test-client"></a>使用測試用戶端的案例  
  下列各節將討論一些可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端簡化開發程序的最常見案例。  
