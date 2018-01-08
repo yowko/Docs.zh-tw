@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任案例中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
@@ -219,6 +220,6 @@ ms.lasthandoff: 11/21/2017
   
 -   如果您在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中建置此程式碼範例，當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，即必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

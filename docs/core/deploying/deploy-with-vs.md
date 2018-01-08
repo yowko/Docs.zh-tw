@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
-ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.workload: dotnetcore
+ms.openlocfilehash: a2706aecb80f079e6e735310b09c1062a6953901
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -184,6 +185,6 @@ ms.lasthandoff: 11/18/2017
 
 請注意，您只能將具有協力廠商程式庫的自封式部署，部署到該程式庫支援的平台上。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
-# <a name="see-also"></a>請參閱
+# <a name="see-also"></a>另請參閱
 [.NET Core 應用程式部署](index.md)   
 [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)   

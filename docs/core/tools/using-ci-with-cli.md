@@ -10,15 +10,16 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.openlocfilehash: 596bc689e423082dcae0c79801e9f796b398391e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 
 本文件概述如何在組建伺服器上使用 .NET Core SDK 和其工具。 .NET Core 工具組可透過互動的方式運作 (開發人員在命令提示字元中輸入命令)，也可透過自動的方式運作 (持續整合 (CI) 伺服器執行建置指令碼)。 命令、選項、輸入和輸出都是相同的，您只需要提供取得工具的方式和建置應用程式的系統。 本文件著重於 CI 的工具取得案例，並包含設計建置指令碼並建立其結構的相關建議。
 
@@ -180,6 +181,6 @@ install:
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Ubuntu 取得步驟](https://www.microsoft.com/net/core#linuxubuntu) \(英文\)   

@@ -20,11 +20,11 @@ ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5f60dd4723e254b0af59a7794e251a082c9a40c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中建立登錄機碼並設定其值
 `My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。  
@@ -76,11 +76,11 @@ ms.lasthandoff: 11/21/2017
 -   登錄機碼為唯讀 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
+ 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
  <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
  [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [程式碼存取安全性的基本概念](https://msdn.microsoft.com/library/33tceax8)
+ [程式碼存取安全性的基本概念](../../../../framework/misc/code-access-security-basics.md)

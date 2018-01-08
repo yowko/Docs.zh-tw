@@ -11,11 +11,11 @@ ms.assetid: 63527447-9535-4880-8e95-35e2075827df
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 944b894e7e5f305d35d4db96d7426bf05322ca54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a53c6ba29837ad8827d97ea745be0462451eb145
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>如何：實作介面事件 (C# 程式設計手冊)
 [介面](../../../csharp/language-reference/keywords/interface.md)可以宣告[事件](../../../csharp/language-reference/keywords/event.md)。 下列範例示範如何在類別中實作介面事件。 基本上，規則與您在實作任何介面方法或屬性時相同。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 -   在類別中宣告事件，然後在適當的區域中加以叫用。  
   
-    ```  
+    ```csharp
     namespace ImplementInterfaceEvents  
     {  
         public interface IDrawingObject  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [事件](../../../csharp/programming-guide/events/index.md)  
  [委派](../../../csharp/programming-guide/delegates/index.md)  

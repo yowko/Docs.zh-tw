@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa8153fe680a8848ad19f32a2246d0f350c73c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何：偵錯 CLR 啟用問題
 如果以正確的通用語言執行平台 (CLR) 版本執行應用程式時發生問題，您可以檢視並偵錯 CLR 啟用記錄。 當您的應用程式載入不符預期的 CLR 版本，或完全不載入 CLR 時，這些記錄檔對判斷啟動問題的根本原因非常有幫助。 [NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) 會討論應用程式找不到任何 CLR 時的經驗。  
@@ -123,6 +124,6 @@ ms.lasthandoff: 11/21/2017
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署](../../../docs/framework/deployment/index.md)  
  [操作說明：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

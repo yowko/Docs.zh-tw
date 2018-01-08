@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c914b566727d882939c23a982fad5db12985de5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
 請遵循這些一般方針建立為並存執行而設計的 Managed 應用程式或元件：  
@@ -70,6 +71,6 @@ ms.lasthandoff: 11/21/2017
   
  當只有檔案版本號碼是新的時，[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 可讓您替換組件。 除非組件版本號碼比較高，否則安裝程式通常不會在組件上執行覆寫安裝。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)  
  [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

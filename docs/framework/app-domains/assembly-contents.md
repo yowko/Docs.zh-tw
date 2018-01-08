@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b51380126de164a4e0934068c7e0de55f5f3d92e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a0af2a90d4951b72f8c5100affd6d78ac7f31ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-contents"></a>組件內容
 一般而言，靜態組件可包含四個項目：  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  目前在設計原始程式碼時，您必須明確決定要如何將應用程式的功能分割在一個或多個檔案中。 在設計 .NET Framework 程式碼時，您也必須做出如何將功能分割為一個或多個組件的類似決定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)  
  [組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)

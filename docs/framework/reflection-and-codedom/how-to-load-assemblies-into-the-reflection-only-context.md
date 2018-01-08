@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebf25ec707ddb238431ffad35156b3a8cec7e4b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>如何：將組件載入僅限反映的內容
 僅限反映的載入內容可讓您檢查針對其他平台或其他 .NET Framework 版本所編譯的組件。 只能檢查載入至此內容的程式碼，而無法執行。 這表示無法建立物件，因為無法執行建構函式。 因為無法執行程式碼，所以不會自動載入相依性。 如果您需要檢查它們，則必須自行載入。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
  <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
  <xref:System.Reflection.CustomAttributeData>

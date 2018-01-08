@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd9f2bab23fff1bbc4ebb521b167ac8031af3bc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：建置單一檔案組件
 單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。 您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。 編譯器預設會建立副檔名為 .exe 的組件檔案。  
@@ -95,7 +96,7 @@ csc /out:myCodeLibrary.dll /t:library myCode.cs
 vbc /out:myCodeLibrary.dll /t:library myCode.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)  
  [操作說明：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  

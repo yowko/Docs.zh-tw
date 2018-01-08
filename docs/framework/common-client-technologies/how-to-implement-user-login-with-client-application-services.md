@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>如何：使用用戶端應用程式服務實作使用者登入
 您可以透過現有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務，使用用戶端應用程式服務來驗證使用者。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務的資訊，請參閱[使用表單驗證搭配Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  
   
- 下列程序描述當應用程式設定為使用其中一個用戶端驗證服務提供者時，如何透過驗證服務驗證使用者。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+ 下列程序描述當應用程式設定為使用其中一個用戶端驗證服務提供者時，如何透過驗證服務驗證使用者。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
  您通常會透過 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法執行所有驗證。 這個方法會透過已設定的驗證提供者管理與驗證服務的互動。 如需詳細資訊，請參閱[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  這個主題中的範例程式碼會示範 Windows 用戶端應用程式中驗證的最簡單用法。 當您使用用戶端應用程式服務與表單驗證呼叫 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法時，您的程式碼可能會擲回 <xref:System.Net.WebException>。 這表示驗證服務無法使用。 如需如何處理這個例外狀況的範例，請參閱[逐步解說：使用用戶端應用程式服務](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  

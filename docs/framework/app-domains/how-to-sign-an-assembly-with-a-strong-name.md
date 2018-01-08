@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
@@ -105,7 +106,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

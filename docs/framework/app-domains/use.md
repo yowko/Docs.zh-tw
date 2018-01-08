@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eade3728c8a51785214cf3d8de53d8a64a668f1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-domains"></a>使用應用程式定義域
 應用程式定義域為 Common Language Runtime 提供隔離單位。 它們是在處理序內建立和執行。 應用程式定義域通常是由執行階段主機所建立，這是負責將執行階段載入處理序以及在應用程式定義域中執行使用者程式碼的應用程式。 執行階段主機會建立處理序和預設的應用程式定義域，在內部執行 Managed 程式碼。 執行階段主機包括 ASP.NET、Microsoft Internet Explorer 和 Windows 殼層。  
   
  大部分的應用程式不需要建立自己的應用程式定義域，執行階段主機會為您建立任何必要的應用程式定義域。 但如果您的應用程式需要隔離程式碼或使用及卸載 DLL，您可以建立及設定其他應用程式定義域。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：建立應用程式定義域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  描述如何以程式設計方式建立應用程式定義域。  
   

@@ -14,11 +14,12 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -181,7 +182,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
   
 下表列出支援的語言。  
   
-| 語言              | 文化特性 |
+| 語言              | culture |
 | --------------------- | :-----: |
 | 阿拉伯文                | ar      |
 | 捷克文                 | cs      |
@@ -196,7 +197,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 | 義大利文               | it      |
 | 日文              | ja      |
 | 韓文                | ko      |
-| 挪威文             | no      |
+| 挪威文             | 否      |
 | 波蘭文                | pl      |
 | 葡萄牙文 (巴西)   | pt-BR   |
 | 葡萄牙文 (葡萄牙) | pt-PT   |
@@ -222,7 +223,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 請參閱 [.NET Framework 參考來源](http://referencesource.microsoft.com/)在線上瀏覽 .NET Framework 原始程式碼。 [Github](https://github.com/Microsoft/referencesource) 亦提供該參考來源。 您可以[下載參考來源](http://referencesource.microsoft.com/download.html)供離線檢視，以及在偵錯期間逐步執行原始檔 (包含修補程式和更新) 之用。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [開發人員部署手冊](~/docs/framework/deployment/deployment-guide-for-developers.md)   
 [系統管理員部署手冊](~/docs/framework/deployment/guide-for-administrators.md)   

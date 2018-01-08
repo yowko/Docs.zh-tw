@@ -21,11 +21,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8bd7baec77e6e776f93a2a13156d66c1199f918
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 的開發人員命令提示字元
 「Visual Studio 開發人員命令提示字元」會自動設定環境變數，讓您能夠輕鬆使用 .NET Framework 工具。 開發人員命令提示字元會隨 Visual Studio 的完整版本或 Community Edition 一起安裝， 但無法隨 Visual Studio 的 Express 版本一起安裝。  
@@ -94,6 +95,6 @@ ms.lasthandoff: 11/21/2017
   
  在這之後會加入新的功能表項目，而且您可以從 [工具] 功能表存取命令提示字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [管理外部工具](/visualstudio/ide/managing-external-tools)

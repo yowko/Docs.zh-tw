@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a0d1f54b417a9752ae96e52f78d9df7d2d60cbec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>如何：建立公開/私密金鑰組
 若要使用強式名稱簽署組件，您必須擁有公開/私密金鑰組。 這個公用和私密的密碼編譯金鑰組將在編譯期間用來建立強式名稱的組件。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 來建立金鑰組。 金鑰組檔案通常會有 .snk 副檔名。  
@@ -74,5 +75,5 @@ sn -p keypair.snk public.snk
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
  [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

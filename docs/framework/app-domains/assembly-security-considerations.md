@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f649c45420d111a1b94374f3025ef807eb3d8efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
 <a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  由於強式命名和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 的簽署可保證完整性，所以您可以讓程式碼存取安全性原則以這兩種形式的組件辨識項作為基礎。 強式命名和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 的簽署，可以透過數位簽章和憑證來保證完整性。 所有前述技術 (雜湊驗證、強式命名和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 的簽署)，合在一起即可確保組件沒有以任何方式改變。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)  
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md)

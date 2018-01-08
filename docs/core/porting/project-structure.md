@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-ms.openlocfilehash: 93bec65e3bbee93855d6f5bce5e2d6cea8bb9f3d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 08fe18233c13410f0fb970020bce090d3345ca84
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/18/2017
 * .NET Core 和現有的專案保存在不同的資料夾中。
     * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2017。 您可以建立不同的解決方案只開啟舊的專案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 如需移轉至 .NET Core 的詳細指引，請參閱 [.NET Core 移植文件][porting-doc]。
 

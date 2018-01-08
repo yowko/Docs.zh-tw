@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e61c037e85abfb362580930bbfeb7b06ba091f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d8c98f8a1f09488bb2d93c4fda531f695354059a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一個可能發生的例外狀況通知
 <xref:System.AppDomain> 類別的 <xref:System.AppDomain.FirstChanceException> 事件可讓您在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。  
@@ -110,5 +111,5 @@ ms.lasthandoff: 10/18/2017
   
 -   這個範例是命令列應用程式。 若要在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 中編譯和執行此程式碼，請在 `Main()` 結尾新增 C# 程式碼 `Console.ReadLine();` (在 Visual Basic 中，為 `Console.ReadLine()`)，防止在您讀取輸出之前關閉命令視窗。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.AppDomain.FirstChanceException>

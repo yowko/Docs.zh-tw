@@ -7,17 +7,18 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 3b372b55cbdd8e0e6cc6a6b1089915e0da802489
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet add package` - 將套件參考新增至專案檔。
 

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 18e580a67d5a983d61ab3c0b71cfc7d294468010
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32dad99e8d5caa7d88fa302a1bea8b83847bfde3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Common Language Runtime 中的類型轉送
 型別轉送可讓您將型別移至另一個組件，而無須重新編譯使用原始組件的應用程式。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您正在從命令列編譯 C# 檔案，請使用 [/reference (C# 編譯器選項) ](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 選項來指定包含型別的組件。 在 C++ 中，在來源檔案中使用 [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 指示詞以指定包含型別的組件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
  [類型轉送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
  [#using 指示詞](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)

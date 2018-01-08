@@ -26,11 +26,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71f0a8c8d0e5e09cb6f39e5b8b104c0848c4d8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -103,7 +104,7 @@ caspol [options]
   
  *flags* 引數是使用下列其中一種方式指定，並且可以搭配 **–addgroup** 和 **–chggroup** 選項使用。  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |**-description "** *description* **"**|如果搭配 **–addgroup** 選項使用，可指定要新增的程式碼群組描述。 如果搭配 **–chggroup** 選項使用，可指定要編輯的程式碼群組描述。 *description* 引數必須括在雙引號中。|  
 |**-exclusive** {**on**&#124;**off**}|設為 **on** 時，表示當部分程式碼符合程式碼群組的成員資格條件時，只會考慮與您要新增或修改的程式碼群組相關聯的權限集合。 這個選項設為 **off** 時，Caspol.exe 會考慮原則層級中所有相符程式碼群組的權限集合。|  
@@ -254,6 +255,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

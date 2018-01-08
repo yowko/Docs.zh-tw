@@ -9,11 +9,12 @@ ms.prod: .net-core
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1525bd3f9d249fe39fd65b53bc8d1e8eddb09ab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中透過 .NET Core 使用類別庫
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。
+1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
 
    ![[新增專案] 對話方塊](./media/consuming-library-with-visual-studio/addnewproject.png)
 

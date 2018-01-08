@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：取得 .NET Framework 4.5 安裝程式的進度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可轉散發套件的執行階段。 如果您為這個 .NET Framework 版本開發應用程式，可以在應用程式安裝程式中包含 (鏈結) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式做為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式 (可監控) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 取得進度資訊、取得詳細結果、回應訊息，以及取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式。  
@@ -316,6 +317,6 @@ ms.lasthandoff: 11/21/2017
   
  一般的伺服器會建立隨機的 MMIO 檔案名稱、建立檔案 (如先前 `Server::CreateSection` 的程式碼範例所示)，並使用 `CreateProcess` 方法以 `-pipe someFileSectionName` 選項傳遞管道名稱來啟動可轉散發套件。 伺服器應利用應用程式 UI 特定的程式碼實作 `OnProgress`、`Send` 和 `Finished` 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [部署](../../../docs/framework/deployment/index.md)

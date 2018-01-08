@@ -19,11 +19,12 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
@@ -40,11 +41,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyName*|要匯出類型程式庫的組件。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/asmpath:** *目錄*|指定要搜尋組件的位置。 如果使用這個選項，則必須明確指定要搜尋參考組件的位置，包括目前的目錄在內。<br /><br /> 當您使用 **asmpath** 選項時，型別程式庫匯出工具不會在全域組件快取 (GAC) 中尋找組件。|  
 |**/help**|顯示工具的命令語法和選項。|  
@@ -137,7 +138,7 @@ CSC Sample.cs /reference:myLib.dll /out:Sample.dll
 tlbexp Sample.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [工具](../../../docs/framework/tools/index.md)  
  [Regasm.exe (組件登錄工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Form 資源編輯器)
 Windows Form 資源編輯器 (Winres.exe) 是一項視覺化配置工具，可以幫助當地語系化專家將表單所使用的 Windows Form 使用者介面 (UI) 資源當地語系化。 做為 Winres.exe 輸入內容的 .resx 或 .resources 檔案，可以利用視覺化設計環境 (例如 Microsoft Visual Studio) 建立。 如需在 .NET Framework 應用程式中部署資源的資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。  
@@ -43,7 +44,7 @@ winres /?
   
 ## <a name="remarks"></a>備註  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |`resourceFile`|要當地語系化的資源檔。 這個檔案必須是 Visual Studio 設計工具所產生的 Windows Form 表單 .resx 或 .resources 檔案。 Winres.exe 無法開啟泛型 .resx 或 .resources 檔案。|  
   
@@ -141,7 +142,7 @@ winres /?
   
 5.  選取適當的文化特性和檔案模式，然後按一下 [確定]。 工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ComponentModel.LocalizableAttribute>  
  <xref:System.Globalization.CultureInfo>  
  <xref:System.Resources.ResourceManager>  

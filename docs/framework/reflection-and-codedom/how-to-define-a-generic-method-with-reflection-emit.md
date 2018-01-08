@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f894d032527611c036e41fff783b31920c354778
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 307347a1209a74c76e71c42a4cb9e3c3f814dee6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：使用反映發出定義泛型方法
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。  
@@ -178,6 +179,6 @@ ms.lasthandoff: 11/21/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection.Emit.MethodBuilder>  
  [操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0683ee1e79d9e5fd9bef7af3b6b85dd5a58c3845
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f95d8c5f78dfa9ec388cfa63b81857ffe580abf3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-assembly-attributes"></a>設定組件屬性
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：  
@@ -94,6 +95,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

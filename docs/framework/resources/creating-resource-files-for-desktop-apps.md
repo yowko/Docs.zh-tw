@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>建立桌面應用程式的資源檔
 您可以在資源檔中包括資源 (例如字串、影像或物件資料)，以讓應用程式輕鬆地使用它們。 .NET Framework 提供五種方式來建立資源檔：  
@@ -202,7 +203,7 @@ greeting=Hello, {0}!
   
  在編譯時間，Visual Studio 先將專案中的 .resx 檔案轉換成二進位資源檔 (.resources)，並將它們儲存在專案之 obj 目錄的子目錄中。 Visual Studio 會將未包含當地語系化資源的任何資源檔內嵌在專案所產生的主要組件中。 如果任何資源檔包含當地語系化資源，Visual Studio 會將其內嵌在每個當地語系化文化特性的個別附屬組件中。 它接著會將每個附屬組件儲存在名稱對應至當地語系化文化特性的目錄中。 例如，當地語系化的英文 (美國) 資源會儲存在 en-US 子目錄的附屬組件中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Resources>  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
  [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

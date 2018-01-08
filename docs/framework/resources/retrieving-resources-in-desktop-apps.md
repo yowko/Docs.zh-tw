@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c1b751fc5fb5717ad4bf030777359bef2e69545
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](http://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
@@ -208,7 +209,7 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Resources.ResourceManager>  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
  [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  

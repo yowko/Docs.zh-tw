@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0175b14f556a68f9c289d84d79ce10a6982ffb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e890ff68967d04d5c0f487508c9ce559f377e56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 /i:modules [/nologo] [/v]  
 ```  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/complist:** filename|指定要包含在 .licenses 檔案中含有授權元件清單的檔案名稱。 使用元件的完整名稱與每行只有一個元件方式參考每個元件。<br /><br /> 命令列使用者可以為專案中的每個表單指定個別的檔案。 Lc.exe 接受多個輸入檔並產生單一 .licenses 檔案。|  
 |**/h**[**elp**]|顯示工具的命令語法和選項。|  
@@ -102,7 +103,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

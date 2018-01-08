@@ -16,11 +16,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4c4e06a5969aa6f7555a191f9950ddf64879e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
@@ -42,7 +43,7 @@ MDbg [ProgramName[arguments]] [options]
   
  MDbg.exe 命令會區分大小寫。  
   
-|命令|說明|  
+|命令|描述|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|切換至另一個已偵錯的處理序，或列印可使用的處理序。 這些數字不是實際的處理序 ID (PID)，而是從 0 開始建立索引的清單。|  
 |**a**[**ttach**] [*pid*]|附加至處理序，或列印可使用的處理序。|  
@@ -114,6 +115,6 @@ mdbg>
   
 ## <a name="examples"></a>範例  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

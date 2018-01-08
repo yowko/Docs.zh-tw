@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 655f74def4d6163959d7dbbe605f7322fb0573c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 
 如果 `buildOptions\outputName` 屬性定義於 project.json，則 `<AssemblyName>` 會有與 `<PackageId>` 不同的值。 如需詳細資訊，請參閱[其他常見的建置選項](#other-common-build-options)。
 
-### <a name="version"></a>version
+### <a name="version"></a>版本
 
 ```json
 {
@@ -662,6 +663,6 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [CLI 中變更的高階概觀](../tools/cli-msbuild-architecture.md)

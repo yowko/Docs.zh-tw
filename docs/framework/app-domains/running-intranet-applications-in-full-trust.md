@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58eeda82c66ecda6ffd714e808b006634ccba804
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 51a9b9ee938d6a03330d53c25fdf0468781e02a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任環境下執行內部網路應用程式
 從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，應用程式及其程式庫組件可以當成來自網路共用的完全信任組件執行。 <xref:System.Security.SecurityZone.MyComputer> 區域辨識項會自動新增至從內部網路共用載入的組件。 這個辨識項會提供這些組件與電腦上組件相同的授權集 (通常為完全信任)。 此功能不適用於 ClickOnce 應用程式或專為主機設計執行的應用程式。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/18/2017
   
 -   在 64 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 機碼下，建立子機碼。 使用 DWORD 值為 1 的機碼名稱 LegacyMyComputerZone。 在 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 機碼下建立相同的子機碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

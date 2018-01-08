@@ -14,16 +14,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aaac046a6f5022e4b903faacd609748092d2809
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [應用程式基本概念](../../docs/standard/application-essentials.md)  
  提供基本應用程式開發工作的相關資訊，例如應用程式定義域和組件的程式設計、使用屬性、格式設定和分析基底類型、使用集合、處理事件和例外狀況、使用檔案和資料流，以及使用泛型。  
   

@@ -16,11 +16,11 @@ ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cfdae490a7d78e44f230e22f8431d5ee91461c22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fbbe0ec007911460dc2bda8c681775da9a6cb91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>如何：在 Visual Basic 中將文字寫入檔案
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可用來將文字寫入檔案。 如果指定的檔案不存在，則會建立該檔案。  
@@ -60,9 +60,9 @@ ms.lasthandoff: 11/21/2017
   
 -   磁碟已滿，且 `WriteAllText` 的呼叫失敗 (<xref:System.IO.IOException>)。  
   
- 如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
+ 如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
  [如何：從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

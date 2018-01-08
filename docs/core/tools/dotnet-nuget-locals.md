@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 9c8df8e457a9883b86abd0505c0c682d849bc7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet nuget locals` - 清除或列出本機 NuGet 資源。
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet nuget locals` 命令會清除或列出 http-request 快取、暫時快取，或整部電腦全域套件資料夾中的本機 NuGet 資源。
 

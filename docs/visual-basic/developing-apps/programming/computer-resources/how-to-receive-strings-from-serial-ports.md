@@ -15,11 +15,11 @@ ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6939dee58051e9a97fa704f063f35ff0ac440036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a58ce248404bfe4d6c55bba741b332acd7fcbf5c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中接收來自序列埠的字串
 本主題描述如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用 `My.Computer.Ports` 來接收來自電腦序列埠的字串。  
@@ -42,11 +42,11 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  使用 <xref:System.IO.Ports.SerialPort.ReadLine%2A> 方法來讀取來自序列埠的下一行可用文字。  
+5.  使用 <xref:System.IO.Ports.SerialPort.ReadLine> 方法來讀取來自序列埠的下一行可用文字。  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
-6.  使用 `If` 陳述式來判斷 <xref:System.IO.Ports.SerialPort.ReadLine%2A> 方法是否會傳回 `Nothing` (表示再也沒有可用的文字)。 如果它確實傳回 `Nothing`，請結束 `Do` 迴圈。  
+6.  使用 `If` 陳述式來判斷 <xref:System.IO.Ports.SerialPort.ReadLine> 方法是否會傳回 `Nothing` (表示再也沒有可用的文字)。 如果它確實傳回 `Nothing`，請結束 `Do` 迴圈。  
   
      [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  此範例使用 `Try...Catch...Finally` 區塊以確保應用程式會關閉序列埠，並攔截任何逾時例外狀況。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
  [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  

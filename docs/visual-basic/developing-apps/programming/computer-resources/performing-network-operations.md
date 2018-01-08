@@ -14,16 +14,16 @@ ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3a0a4d4bd6bc07f4ca60ac781365f49c4af9e156
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 515e91dcecad31c7abf65d7ea1744728004bd62f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="performing-network-operations-visual-basic"></a>執行網路作業 (Visual Basic)
 下表列出與 `My.Computer.Network` 物件建立關聯的工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：上傳檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  示範如何使用 `My.Computer.Network` 上傳檔案，並將它儲存到遠端位置。  
   
@@ -46,5 +46,5 @@ ms.lasthandoff: 10/18/2017
  <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
  描述 `UploadFile` 方法。  
   
- <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>  
  描述 `IsAvailable` 屬性。

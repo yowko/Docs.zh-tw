@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429a54340cef6d608692abd71311c012afe9a3d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77eec473b95720e432c94b79778fa518f3ecf1c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhanced-strong-naming"></a>進階強式命名
 強式名稱簽章是 .NET Framework 中的身分識別機制，用來識別組件。 它是公開金鑰數位簽章，通常用來驗證從建立者 (簽署者) 傳遞給收件者 (驗證者) 的資料完整性。 此簽章用來當作組件的唯一身分識別，並可確保對組件的參考不會模稜兩可。 組件在建置程序的一部分簽署，然後在載入時加以驗證。  
@@ -113,5 +114,5 @@ ms.lasthandoff: 10/18/2017
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

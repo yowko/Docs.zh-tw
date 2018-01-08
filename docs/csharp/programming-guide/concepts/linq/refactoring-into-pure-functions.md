@@ -8,11 +8,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36bb31975523055962fa9572109dab7e2ed47336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fe9a9250e0a87ecaa02258526b7cc796de8e387
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
 
@@ -35,21 +35,21 @@ ms.lasthandoff: 11/21/2017
  下列範例對照兩個非純虛擬函式與一個純虛擬函式。  
   
 ### <a name="non-pure-function-that-changes-a-class-member"></a>變更類別成員的非純虛擬函式  
- 在下列程式碼中，`HypenatedConcat` 函式不是純虛擬函式，因為它會修改類別中的 `aMember` 資料成員：  
+ 在下列程式碼中，`HyphenatedConcat` 函式不是純虛擬函式，因為它會修改類別中的 `aMember` 資料成員：  
   
 ```csharp  
 public class Program  
 {  
     private static string aMember = "StringOne";  
   
-    public static void HypenatedConcat(string appendStr)  
+    public static void HyphenatedConcat(string appendStr)  
     {  
         aMember += '-' + appendStr;  
     }  
   
     public static void Main()  
     {  
-        HypenatedConcat("StringTwo");  
+        HyphenatedConcat("StringTwo");  
         Console.WriteLine(aMember);  
     }  
 }  
@@ -69,7 +69,7 @@ StringOne-StringTwo
 ```csharp  
 public class Program  
 {  
-    public static void HypenatedConcat(StringBuilder sb, String appendStr)  
+    public static void HyphenatedConcat(StringBuilder sb, String appendStr)  
     {  
         sb.Append('-' + appendStr);  
     }  
@@ -77,19 +77,19 @@ public class Program
     public static void Main()  
     {  
         StringBuilder sb1 = new StringBuilder("StringOne");  
-        HypenatedConcat(sb1, "StringTwo");  
+        HyphenatedConcat(sb1, "StringTwo");  
         Console.WriteLine(sb1);  
     }  
 }  
 ```  
   
- 這個版本的程式會產生與第一版相同的輸出，因為 `HypenatedConcat` 函式已經叫用 <xref:System.Text.StringBuilder.Append%2A> 成員函式來變更其第一個參數的值 (狀態)。 請注意，雖然 `HypenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。  
+ 這個版本的程式會產生與第一版相同的輸出，因為 `HyphenatedConcat` 函式已經叫用 <xref:System.Text.StringBuilder.Append%2A> 成員函式來變更其第一個參數的值 (狀態)。 請注意，雖然 `HyphenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。  
   
 > [!IMPORTANT]
 >  若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。 這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。 對於要修改參數的函式，則不一定需要 Call-by-reference。  
   
 ### <a name="pure-function"></a>純虛擬函式  
-這個下一版的程式會顯示如何將 `HypenatedConcat` 函式實作為純虛擬函式。  
+這個下一版的程式會顯示如何將 `HyphenatedConcat` 函式實作為純虛擬函式。  
   
 ```csharp  
 class Program  
@@ -117,6 +117,6 @@ class Program
   
  如需詳細資訊，請參閱[標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

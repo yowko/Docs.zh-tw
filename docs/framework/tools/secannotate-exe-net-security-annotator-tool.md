@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f7051e753c324933828e2447752f9c5ea13ed9d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e68679464db3875a79d6aa07a6e10240ada13365
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator 工具)
 .NET Security Annotator 工具 (SecAnnotate.exe) 是識別一個或多個組件之 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令列應用程式。  
@@ -39,7 +40,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 #### <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`/a`<br /><br /> 或<br /><br /> `/showstatistics`|顯示要分析之組件中有關透明度使用的統計資料。|  
 |`/d:` *directory*<br /><br /> 或<br /><br /> `/referencedir:` *directory*|指定要在註釋期間搜尋相依組件的目錄。|  

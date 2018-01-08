@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>動態載入和使用類型
 反映會提供語言編譯器所使用的基礎結構，例如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript，以實作隱含晚期繫結。 繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。 當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 helper 方法，它會使用反映來取得物件類型。 傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。 這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。  
@@ -107,7 +108,7 @@ End Module
   
  <xref:System.Type> 類別具有 **Get** 方法，使用類型 **Binder** 的參數來解析對特定成員的參考。 <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>、<xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 和 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> 會搜尋目前類型的特定成員，方法是提供該成員的簽章資訊。 接著回來呼叫 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType>，選取適當方法的指定簽章資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  

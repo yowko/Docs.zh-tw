@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 037570e34ec8fd7959fa2a9fd8e22b61aa6db738
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c09604c66b4628291b8e3c444d4c47c7aec8c026
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
 CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言執行平台 (CLR) 版本。  
@@ -37,7 +38,7 @@ clrver [option]
   
 ## <a name="options"></a>選項  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`-all`|顯示電腦上所有正在使用 CLR 的處理序。|  
 |*pid*|顯示具有指定處理序 ID (PID) 的處理序所使用的 CLR 版本。|  
@@ -64,6 +65,6 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: adf48310c1c2e0c59224ab820211e818a2401579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7452a6001742bc9e0456ccb6339f13596a2ab72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>在 XNA 應用程式中使用操作和慣性
 本文說明如何在 Microsoft XNA 應用程式中使用操作和慣性處理，來控制遊戲個件的移動。 在閱讀本文之前，您應該先熟悉[操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)主題和基本 XNA 程式設計概念。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
  [完整程式碼清單](../../../docs/framework/common-client-technologies/full-code-listings.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Input.Manipulations>  
  [操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)

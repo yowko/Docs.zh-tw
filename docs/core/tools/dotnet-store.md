@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: fcf1eeba0709e05cff124bc3ae7bb93f4ca57128
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c8e09141eebef2cbddf6742cceeff05e11c25adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet store` - 會在[執行階段套件存放區](../deploying/runtime-store.md)中儲存指定的組件。
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet store` 會在[執行階段套件存放區](../deploying/runtime-store.md)中儲存指定的組件。 根據預設，會針對目標執行階段和架構最佳化組件。 如需詳細資訊，請參閱[執行階段套件存放區](../deploying/runtime-store.md)主題。
 

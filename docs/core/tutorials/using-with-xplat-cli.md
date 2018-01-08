@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-ms.openlocfilehash: 19622cca1dd28d4d2248d69f1b4081c352a0c4f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 544274783e8a77f55c8ec7e1da0069bf8bdf7b0b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core
 
@@ -45,7 +46,7 @@ $ dotnet run
 
    [`dotnet new`](../tools/dotnet-new.md) 使用建置主控台應用程式時所需的相依性，來建立最新的 `Hello.csproj` 專案檔。  它也會建立 `Program.cs`，這個基本檔案包含了應用程式的進入點。
    
-   `Hello.csproj`:
+   `Hello.csproj`：
 
    [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
 
@@ -161,6 +162,6 @@ $ dotnet run
 
 請注意，本教學課程中所示用於執行應用程式的命令和步驟，僅供開發階段期間使用。 準備好部署應用程式之後，您將需要檢視不同的 .NET Core 應用程式[部署策略](../deploying/index.md)及 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)

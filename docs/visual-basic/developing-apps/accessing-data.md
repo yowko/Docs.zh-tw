@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。  
@@ -30,11 +30,11 @@ ms.lasthandoff: 12/09/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  提供主題的連結，這些主題描述如何搭配使用 LINQ 與 Visual Basic。  
   
- [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  提供 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的相關資訊。 包括程式設計範例。  
   
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)  
- 提供主題的連結，這些主題與如何在應用程式中建立 [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) 物件模型相關。  
+ 提供主題的連結，這些主題與如何在應用程式中建立 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) 物件模型相關。  
   
  [使用多層式架構 (N-Tier) 應用程式中的資料集](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  提供主題的連結，這些主題與如何建立多層資料應用程式相關。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/09/2017
  [將資料儲存回資料庫](/visualstudio/data-tools/save-data-back-to-the-database)  
  提供頁面的連結，這些頁面說明如何將已更新資料從應用程式傳送至資料庫。  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  描述 ADO.NET 類別，此類別會將資料存取服務公開給 .NET Framework 程式設計人員。
 
  [Office 方案的資料](https://msdn.microsoft.com/library/xx069ybh)  

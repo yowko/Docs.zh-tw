@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0d1588dd6c1dacc70401c5143f53e8da1784c7e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 980ab21355e9f9fb130a7d17453861ae1daf626c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="full-code-listings"></a>完整程式碼清單
 本主題包含使用[操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)處理器的應用程式完整程式碼清單。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[ManipulationXNA#_Game1Class](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1class)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
  [建立 GamePiece 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  

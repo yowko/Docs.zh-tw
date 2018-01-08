@@ -21,11 +21,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e303246737d52f76d893074973804710b2dc9b71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -47,7 +48,7 @@ sn [-quiet][option [parameter(s)]]
   
 #### <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從檔案移轉到簽章金鑰。|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從金鑰容器移轉到簽章金鑰。|  
@@ -127,7 +128,7 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)  

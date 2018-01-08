@@ -16,16 +16,17 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1320c0364b1fdc3a67d2ac99d0591f37044c36a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本節 .NET Framework 文件為想要與應用程式一起安裝 .NET Framework 的開發人員，和想要在網路上部署 .NET Framework 系統管理員提供資訊。 它也討論與部署相關的啟用及重新啟動問題，以及如何監視 .NET Framework 安裝進度。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。  
   
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/18/2017
  [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  說明如何檢視並偵錯 CLR 啟用記錄，解決讓您的應用程式搭配正確的 CLR 版本執行時時可能發生的問題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開發指南](../../../docs/framework/development-guide.md)

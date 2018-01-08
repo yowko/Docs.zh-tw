@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c7b53a842dc4f9b6bfc04e058411e4a6d11a7bd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d5b99390e62984b37b0d7267c40b1221f556f60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>在 Windows 8、Windows 8.1 或 Windows 10 上執行 .NET Framework 1.1 應用程式
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 
 在 [!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)]、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 或 Windows 10 上無法手動安裝 .NET Framework 1.1。 它不再受支援。 如果您嘗試安裝該套件，便會顯示下面錯誤訊息：「安裝程式無法繼續，因為這個 .NET Framework 版本與之前安裝的版本不相容」。 若要解決這個問題，請安裝 [.NET Framework 3.5 SP1](http://www.microsoft.com/download/details.aspx?id=22)。 此版本包含 .NET Framework 2.0 (.NET Framework 1.1 的下一版)，[!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)] 及 Windows 10 全都支援此版本。 您一定要先嘗試安裝應用程式，判斷它是否會自動更新為較新版本的 .NET Framework。 如果沒有，請連絡您的 ISV 以取得應用程式更新。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)
 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)

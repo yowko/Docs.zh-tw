@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 396c3ac263f20608d69949c7ad5d9d5b1dffb555
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c70e2f1fec079e12605cbf3b72c60c0830723948
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>應用程式定義域和組件 HOW TO 主題
 下列各節包含使用應用程式定義域和組件設計程式之概念文件中所有「如何」主題的連結。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [操作說明：參考以強式名稱命名的組件](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
   
--   [操作說明：停用強式名稱略過功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+-   [如何：停用強式名稱略過功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 -   [操作說明：將組件安裝到全域組件快取](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/18/2017
   
 -   [操作說明：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [應用程式定義域和組件](../../../docs/framework/app-domains/index.md)

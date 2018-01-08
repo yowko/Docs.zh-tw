@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2b712f1b8b7800f2f02c9529114e92f77e32286
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| 成員            | 類型          | 說明 |
+| 成員            | 類型          | 描述 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
@@ -85,7 +86,7 @@ dotnet new -l
 
 將專案資料夾的內容及其 *.template.config/template.json* 檔案放入名為 *content* 的資料夾中。 在 *content* 資料夾旁邊，新增 [*nuspec* 檔案](/nuget/create-packages/creating-a-package)，它是 XML 資訊清單檔案，描述套件的內容及驅動建立 NuGet 套件的程序。 在 *nuspec* 檔案的 **\<packageTypes>** 項目內，包含 `name` 屬性值為 `Template` 的 **\<packageType>** 項目。 *content* 資料夾和 *nuspec* 檔案都應該位於相同的目錄中。 下表顯示將範本製作為 NuGet 套件所需之最小的 *nuspec* 檔案項目。
 
-| 項目            | 類型   | 說明 |
+| 元素            | 類型   | 描述 |
 | ------------------ | ------ | ----------- |
 | **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
 | **\<描述>** | 字串 | UI 顯示中的套件詳細描述。 |

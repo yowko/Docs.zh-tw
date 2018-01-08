@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 25a5092da1526bc266c5cc483cc3cd81d2ac3385
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
@@ -120,7 +121,7 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
 |[設定組件繫結重新導向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  

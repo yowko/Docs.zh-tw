@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 99d8da622b23a98b8a48ad6fcdb82c270d24ed22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 <a name="top"></a> 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
@@ -155,7 +156,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[如何：使用反映檢視和執行個體化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
 |[泛型](../../../docs/standard/generics/index.md)|說明泛型功能，及在 .NET Framework 下如何加以支援。|  

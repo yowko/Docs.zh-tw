@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者經驗
 Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。 在某些情況下，啟用系統可能找不到要載入的 CLR 版本。 應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。 如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。 本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。  
@@ -94,7 +95,7 @@ Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應�
   
  從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，已改善 CLR 啟用記錄，可包括記錄何時和為何顯示初始化錯誤訊息的記錄項目。 如需詳細資訊，請參閱[如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [操作說明：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
  [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  

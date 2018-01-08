@@ -14,11 +14,11 @@ ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c4d46bbd3e432e2551c60f9e2996cadeda39c8d7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e36652e50a9708ef523babde9372702dfcc3829c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>存取滑鼠 (Visual Basic)
 `My.Computer.Mouse` 物件提供尋找電腦滑鼠相關資訊的方法；例如，如有滑鼠，即為滑鼠按鈕數目及滑鼠滾輪詳細資料等資訊。  
@@ -28,9 +28,9 @@ ms.lasthandoff: 10/22/2017
   
 |以|請參閱|  
 |--------|---------|  
-|判斷滑鼠是否有滾輪。|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists%2A>|  
-|判斷是否已調換滑鼠的左右按鈕|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped%2A>|  
-|設定滑鼠滾輪轉動一個刻度時捲動的行數。|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines%2A>|  
+|判斷滑鼠是否有滾輪。|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|判斷是否已調換滑鼠的左右按鈕|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|設定滑鼠滾輪轉動一個刻度時捲動的行數。|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Devices.Mouse>

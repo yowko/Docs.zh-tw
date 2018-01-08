@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 327ef282c23fc02791eb7c531fd1ae25c6700fd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-versioning"></a>組件版本控制
 使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。 組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。 Runtime 的預設版本原則為，除非被組態檔 (應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
  資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 如需資訊版本屬性的詳細資訊，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [設定應用程式](../../../docs/framework/configure-apps/index.md)  
  [設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)  

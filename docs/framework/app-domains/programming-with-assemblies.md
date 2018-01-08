@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 368021062a3ad49d2c63f92797c59b8c0f1cddfc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 46cc7d1be867ff94ca25d0d6ffaaf46a6dc9514b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-assemblies"></a>使用組件設計程式
 組件是 .NET Framework 的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 它是建置來共同運作及構成一個功能邏輯單位的類型與資源集合。 對於執行階段而言，型別不會存在於組件的內容以外。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  從 .NET Framework 2.0 版開始，執行階段不會載入使用 .NET Framework 版本所編譯的組件，而這個版本的版本號碼高於目前載入的執行階段。 這適用於版本號碼的主要與次要元件組合。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  提供單一檔案和多檔案組件的概觀。  
   

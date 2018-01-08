@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca3e9dbe5578623ccc67898c6f08213c31ad8e23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 111c697d4d62cd52cd7913039e3c17e8a25ab50d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
@@ -38,11 +39,11 @@ CorFlags.exe assembly [options]
   
 #### <a name="parameters"></a>參數  
   
-|必要參數|說明|  
+|必要參數|描述|  
 |------------------------|-----------------|  
 |`assembly`|要設定其 CorFlags 的組件名稱。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|設定 32BITREQUIRED 旗標。|  
 |**/32BIT[REQ]-**|清除 32BITREQUIRED 旗標。|  
@@ -60,7 +61,7 @@ CorFlags.exe assembly [options]
 ## <a name="remarks"></a>備註  
  如果未指定任何選項，則 CorFlags 轉換工具會針對所指定組件顯示旗標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [64 位元應用程式](../../../docs/framework/64-bit-apps.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

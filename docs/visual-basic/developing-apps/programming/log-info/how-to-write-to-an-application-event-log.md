@@ -16,18 +16,18 @@ ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 018aff8dc130bfe7217c861a7d7bc8ae275ccc66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8225deaac92b4f375f57501875e13216b35a120d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>如何：寫入應用程式事件記錄檔 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件寫入發生在應用程式中之事件的相關資訊。 此範例示範如何設定事件記錄檔接聽程式，讓 `My.Application.Log` 將追蹤資訊寫入至應用程式事件記錄檔。  
   
  您無法寫入至安全性記錄檔。 要寫入至系統記錄檔，您必須是 LocalSystem 或 Administrator 帳戶的成員。  
   
- 若要檢視事件記錄檔，您可以使用 [伺服器總管]  或 [Windows 事件檢視器] 。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
+ 若要檢視事件記錄檔，您可以使用 [伺服器總管]  或 [Windows 事件檢視器] 。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。  
   
 > [!NOTE]
 >  在 Windows 95、Windows 98 或 Windows Millennium Edition 上不支援事件記錄檔。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
      設定組件的事件記錄檔接聽程式之後，接聽程式會接收從該組件寫入的所有訊息 `My.Applcation.Log` 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  

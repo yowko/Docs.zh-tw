@@ -22,11 +22,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
@@ -44,7 +45,7 @@ ilasm [options] filename [[options]filename...]
 
 #### <a name="parameters"></a>參數
 
-| 引數 | 說明 |
+| 引數 | 描述 |
 | -------- | ----------- |
 |`filename`|.il 原始程式檔的名稱。 這個檔案由中繼資料宣告指示詞和符號 IL 指令組成。 您可以提供多個來源檔案引數來使用 *Ilasm.exe* 產生單一 PE 檔。 **注意：**請確認 .il 原始程式檔的最後一行有後置空白字元或行結尾字元。|
 
@@ -235,7 +236,7 @@ public class Hello
 } // end of class Hello
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [工具](../../../docs/framework/tools/index.md)  
 [*Ildasm.exe* (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  

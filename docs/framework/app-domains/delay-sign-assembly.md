@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08f0f48a71415878cd24640272a41de4c0a5ade6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce40f08b8b31ae3a4647e8919b4ea862fc03506f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delay-signing-an-assembly"></a>延遲簽署組件
 組織可能會有開發人員無法每日存取的嚴密保護金鑰組。 公開金鑰經常都可以使用，但只有少數人才能存取私密金鑰。 在以強式名稱開發組件時，每個參考強式名稱目標組件的組件都包含用來指定目標組件的強式名稱的公開金鑰語彙基元。 這需要可在開發程序期間使用公開金鑰。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  

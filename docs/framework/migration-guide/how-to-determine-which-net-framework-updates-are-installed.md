@@ -15,11 +15,12 @@ ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9ff10928b87834f9b8e74e269082919f49497023
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.workload: dotnet
+ms.openlocfilehash: 1ad61ce44c24f48b51c32eb554e8d37932d119af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何：判斷安裝的 .NET Framework 安全性更新與 Hotfix
 
@@ -109,7 +110,7 @@ KB2600211
 KB2600217
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
 [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  

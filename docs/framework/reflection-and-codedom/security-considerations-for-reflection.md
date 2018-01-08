@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef0f9aac9222badb43e19c2901ff705485d5cf3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/21/2017
   
 -   從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Security.Permissions.ReflectionPermissionFlag>  
  <xref:System.Security.Permissions.ReflectionPermission>  
  <xref:System.Security.Permissions.SecurityPermission>  

@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f64bc6463c455a288a374604e42e6747f701b0e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
 
@@ -194,6 +195,6 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    ![應用程式輸出中的搜尋文字計數已變更為 999 的值](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 2017 for Mac 版本資訊](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)

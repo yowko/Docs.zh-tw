@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: dc4250ab7417c9f19babdf37c556daf7c3bd6a81
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload: dotnetcore
+ms.openlocfilehash: 52aac5ff1862397616287a77eac063582703d509
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet nuget push` - 將套件推送至伺服器並發行。
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 11/28/2017
 
 `dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet nuget push` 命令會將套件推送至伺服器並發行。 推送命令會使用在系統 NuGet 組態檔案或組態檔案鏈中找到的伺服器及認證詳細資料。 如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](/nuget/consume-packages/configuring-nuget-behavior)。 NuGet 預設組態的取得方式如下：載入 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS)，接著從磁碟機根目錄開始直到目前目錄，載入其中的任何 *nuget.config* 或 *.nuget\nuget.config*。
 
@@ -102,7 +103,3 @@ ms.lasthandoff: 11/28/2017
 將目前目錄中的所有 *.nupkg* 檔案推送至預設推送來源，指定自訂組態檔 *./config/My.Config*：
 
 `dotnet nuget push *.nupkg --config-file ./config/My.Config`
-
-將目前目錄中的所有 *.nupkg* 檔案推送至預設推送來源，並以最詳細的方式傳回命令執行結果：
-
-`dotnet nuget push *.nupkg --verbosity detailed`

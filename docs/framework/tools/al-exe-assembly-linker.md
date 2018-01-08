@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71600e0771c31392f568e11a7f51fc258ac5b362
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -45,7 +46,7 @@ al sources options
 
 您可以指定一個或多個下列 `sources`。
 
-| 來源 | 描述 |
+| 原始程式檔 | 描述 |
 | ------ | ----------- |
 |`file`[,`target`]|將 `file` (模組) 的內容複製到 `target` 所指定的檔案名稱中。 複製完成後，*Al.exe* 會將 `target` 編譯成組件。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
@@ -53,7 +54,7 @@ al sources options
 
 您可以指定下列 `options`，但是必須指定 **/out**。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/algid:** `id`|指定雜湊多檔案組件中所有檔案的演算法，但包含組件資訊清單的檔案除外。 預設演算法為 CALG_SHA1。 如需其他演算法，請參閱 Platform SDK 文件中的 ALG_ID。 對於第一版 .NET Framework，只有 CALG_SHA1 和 CALG_MD5 有效。<br /><br /> 雜湊值儲存在組件資訊清單的檔案表中。 在安裝和載入期間，系統會根據雜湊來檢查組件的檔案。<br /><br /> 您也可以在任何模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>)。|
 |**/base[address]:** `addr`|指定在執行期間將 DLL 載入使用者電腦上的目標位址。 如果您指定 DLL 的基底位址，而不是讓作業系統重新找出處理序空間中的 DLL，應用程式載入的速度會更快。|
@@ -181,7 +182,7 @@ al sources options
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  
 [工具](../../../docs/framework/tools/index.md)  
 [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  

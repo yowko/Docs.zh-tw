@@ -7,11 +7,12 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: b2b625729b5db22bc7b69194f20963857004e3e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -35,7 +36,7 @@ dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 (*\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
 

@@ -13,11 +13,12 @@ ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7c884985873679b25831c15ef5c8b6370ecd6460
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnetcore
+ms.openlocfilehash: fb5a23ccdcacadd70a58ec6c9a35fbee86af667b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試類別庫
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/21/2017
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 在方案總管 中，開啟 **ClassLibraryProject** 方案節點的內容功能表，然後選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
+1. 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
 
    ![[新增專案] 對話方塊](./media/testing-library-with-visual-studio/testproject.png)
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/21/2017
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. 在方案總管 中，開啟 **ClassLibraryProject** 方案節點的內容功能表，然後選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，選取 [Visual Basic] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
+1. 在 [新增專案] 對話方塊中，選取 [Visual Basic] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
 
    ![[新增專案] 對話方塊](./media/testing-library-with-visual-studio/vb-testproject.png)
 
@@ -93,7 +94,7 @@ Visual Studio 執行單元測試時，它會執行單元測試類別 (即套用 
 
 最常見的測試會呼叫 [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 它最常呼叫的一些方法如下表所示。
 
-Assert 方法 | 函式
+Assert 方法 | 功能
 --- | ---
 `Assert.AreEqual` | 驗證兩個值或物件相等。 如果值或物件不相等，判斷提示就會失敗。
 `Assert.AreSame` | 驗證兩個物件變數參考相同的物件。 如果變數參考不同的物件，判斷提示就會失敗。

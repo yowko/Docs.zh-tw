@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1eb17af8fef96f42973e65859bd17b1e835fa98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a74d25372b83c848621a44f6ea32a455a0f18ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>動態原始程式碼的產生和編譯
 .NET Framework 包含稱為程式碼文件物件模型 (CodeDOM) 的機制，它可讓發出原始程式碼的程式開發人員在執行階段，根據代表要呈現之程式碼的單一模型，產生多種程式語言的原始程式碼。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
   
  .NET Framework 包含 <xref:Microsoft.CSharp.CSharpCodeProvider>、<xref:Microsoft.JScript.JScriptCodeProvider> 和 <xref:Microsoft.VisualBasic.VBCodeProvider> 的程式碼產生器和程式碼編譯器。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
  說明常見的用法，並示範使用 CodeDOM 建置簡單的物件圖形。  
   

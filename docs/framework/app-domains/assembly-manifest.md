@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41dc27798e9d39d391e5958b86f691e3a0062582
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-manifest"></a>組件資訊清單
 每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以存放在具有 Microsoft Intermediate Language (MSIL) 程式碼的可移植執行檔 (PE) (.exe 或 .dll) 中，或者存放在只包含組件資訊清單的獨立 PE 檔中。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|-----------------|  
 |組件名稱|指定組件名稱的文字字串。|  
 |版本號碼|主要和次要版本號碼，以及修訂和組建編號。 Common Language Runtime 會使用這些編號來強制執行版本原則。|  
-|文化特性|有關組件所支援文化特性或語言的資訊。 這項資訊應該只用來將組件指定為包含文化特性或語言相關資訊的附屬組件 (具有文化特性資訊的組件會自動假設為附屬組件)。|  
+|culture|有關組件所支援文化特性或語言的資訊。 這項資訊應該只用來將組件指定為包含文化特性或語言相關資訊的附屬組件 (具有文化特性資訊的組件會自動假設為附屬組件)。|  
 |強式名稱資訊|如果已經為組件指定強式名稱，則為發行者 (Publisher) 的公開金鑰 (Public Key)。|  
 |組件中所有檔案的清單|組件中所含每一檔案的雜湊和檔名。 請注意，構成組件的所有檔案必須與含有組件資訊清單的檔案在同一個目錄中。|  
 |型別參考資訊|Runtime 用來將型別參考對應到含有其宣告和實作之檔案的資訊。 這是使用於從組件匯出之型別。|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 如需完整的組件屬性清單，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組件內容](../../../docs/framework/app-domains/assembly-contents.md)  
  [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
  [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  

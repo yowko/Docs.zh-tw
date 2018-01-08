@@ -14,11 +14,11 @@ ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1bda4a3465af4ed95de720117ea2e03f9a86b84
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: f141421350b0ad7b8287e43b676a9439eae1f24c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -41,11 +41,11 @@ ms.lasthandoff: 12/09/2017
   
  為了確保 `My.Application.Log` 使用記錄檔接聽程式，您應該建立強式名稱的組件以包含記錄檔接聽程式。  
   
- 下一個程序提供一些簡單的步驟，以建立強式名稱的記錄檔接聽程式組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
+ 下一個程序提供一些簡單的步驟，以建立強式名稱的記錄檔接聽程式組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>若要建立強式名稱的記錄檔接聽程式組件  
   
-1.  在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。   
   
 2.  按一下 [簽署]索引標籤。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/09/2017
   
     2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入]。  
+    3.  按一下 [加入] 。  
   
 2.  在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/09/2017
   
      將 `SimpleLogStrongName` 的值變更為接聽程式的強式名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
  [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  

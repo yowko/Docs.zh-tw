@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ad02ade9c9e60e53fa8fb91d9a38d6ec12bc2e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 170e9ca4ed2b9ad17ec9120321612c37da32e453
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。 這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。 這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。 通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。  
@@ -236,7 +237,7 @@ Discarding native image.
     > [!NOTE]
     >  只有在 Windows 8 (含) 以後版本中才會啟用這個方塊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.TypeLoadException>  
  [工具](../../../docs/framework/tools/index.md)  
  [全域組件快取](../../../docs/framework/app-domains/gac.md)  

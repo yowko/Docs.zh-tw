@@ -28,11 +28,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90c8a2467d48a45fe333cd07e34bca5ecfa5d727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (全域組件快取工具)
 全域組件快取工具可以讓您檢視和操作全域組件快取和下載快取的內容。  
@@ -49,13 +50,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 #### <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyName*|組件的名稱。 您可以提供如 `myAssembly` 的部分指定組件名稱，或如 `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5` 的完整指定組件名稱。|  
 |*assemblyPath*|含有組件資訊清單 (Assembly Manifest) 的檔案名稱。|  
 |*assemblyListFile*|列出要安裝或解除安裝之組件的 ANSI 文字檔路徑。 若要使用文字檔安裝組件，請在檔案的個別行上指定每個組件的路徑。 這個工具會解譯相對路徑 (相對於 *assemblyListFile* 的位置)。 若要使用文字檔來解除安裝組件，請在檔案的個別行上為每個組件指定完整的組件名稱。 請參閱本主題稍後的 *assemblyListFile* 內容範例。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/cdl**|刪除下載快取的內容。|  
 |**/f**|請使用 **/** 或 **/il** 選項指定這個選項，以強制進行組件的重新安裝。 如果具有相同名稱的組件已存在於全域組件快取中，則這個工具會覆寫它。|  
@@ -157,7 +158,7 @@ gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert 
 gacutil /l  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [全域組件快取](../../../docs/framework/app-domains/gac.md)  
  [Regasm.exe (組件登錄工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  

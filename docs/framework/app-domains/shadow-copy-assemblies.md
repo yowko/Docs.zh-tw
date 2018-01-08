@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2eb71e1d03da16581ee25bf972be51ee2f63f585
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 611af6226e28369c30b251a23e901c140433808a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="obsolete-methods"></a>已淘汰的方法  
  <xref:System.AppDomain> 類別有幾種方法，例如 <xref:System.AppDomain.SetShadowCopyFiles%2A> 和 <xref:System.AppDomain.ClearShadowCopyPath%2A>，可用來控制應用程式定義域上的陰影複製，但這些已經在 .NET Framework 2.0 版中標記為已淘汰。 建議使用 <xref:System.AppDomainSetup> 類別的屬性來設定用於陰影複製的應用程式定義域。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
  <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
  <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  

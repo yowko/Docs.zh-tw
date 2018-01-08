@@ -7,11 +7,12 @@ ms.date: 08/30/2017
 ms.topic: article
 dev_langs: fsharp
 ms.prod: .net-core
-ms.openlocfilehash: ad869d6b66ad5d966037a3ef38154fadcfa5978b
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.workload: dotnetcore
+ms.openlocfilehash: 6dc5388f8e5645530cdd12986a9e1e53e4115c9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
 

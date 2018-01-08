@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5f6051c3da274c6a8579516e073c0ea91a195d59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2b31c029eb18943c926dfd5ed5b0576e866067d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-type-information"></a>檢視類型資訊
 <xref:System.Type?displayProperty=nameWithType> 類別是反映的核心。 Common Language Runtime 會在反映提出要求時，建立載入類型的**類型**。 您可以使用**類型**物件的方法、欄位、屬性和巢狀類別，找出有關該類型的所有資訊。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection.BindingFlags>  
  <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>  

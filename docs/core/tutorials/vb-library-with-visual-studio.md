@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
 dev_langs: vb
-ms.openlocfilehash: 6572f35b1e2b652c9f2ff5448165ece104f0bdf6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: b8d87e3a97e2ffeb8e8712bfa5d178bb855f402d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
 
 建立您的類別庫專案：
 
-1. 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 [新增]  >  [新增專案]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 **[新增]** > **[新增專案]**。
 
 1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，然後選取後面跟著 [類別庫 (.NET Standard)] 專案範本的 [.NET Standard] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
 

@@ -7,11 +7,12 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f56ccc485884114262cd1364cf9398e302f2c48a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-clean"></a>dotnet-clean
 
@@ -35,7 +36,7 @@ dotnet clean [-h|--help]
 ```
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 

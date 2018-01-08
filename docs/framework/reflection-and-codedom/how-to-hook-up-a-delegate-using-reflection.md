@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 72d2061d8e4432422eeb2a30c916af7e254b4f81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ff800eb78b07fc79193c2aa8cb71a461be2fc1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
@@ -121,7 +122,7 @@ ms.lasthandoff: 11/21/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Emit.DynamicMethod>  
  <xref:System.Activator.CreateInstance%2A>  

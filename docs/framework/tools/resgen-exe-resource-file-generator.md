@@ -26,11 +26,12 @@ caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca54817183b5e659b62ef04b1693698bd689370b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)
 資源檔產生器 (Resgen.exe) 可以將文字檔 (.txt 或 .restext) 及 XML 架構資源格式檔 (.resx)，轉換成通用語言執行平台二進位檔 (.resources)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件  (請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md))。  
@@ -79,7 +80,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，支援文字資源檔 (.txt 或 .restext) 的條件式編譯。 如果 *symbol* 對應至在 `#ifdef` 建構內輸入文字檔中的符號，關聯字串資源會包含在 .resources 檔案中。 如果輸入文字檔包含有不是 `#if !` 參數所定義之符號的 `/define` 陳述式，關聯的字串資源會包含在資源檔中。<br /><br /> 使用非文字檔案則會忽略 `/define`。 符號會區分大小寫。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[條件式編譯資源](#Conditional)。|  
 |`useSourcePath`|具體指明輸入檔的目前目錄是用來解析相對檔案路徑。|  
@@ -337,7 +338,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
  [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

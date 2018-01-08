@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7505f44524ae8476842599b9dc4643128dea4bf2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式會使用[重新啟動管理員](http://go.microsoft.com/fwlink/?LinkId=231425)，盡可能在安裝時防止系統重新啟動。 如果您的應用程式安裝程式安裝 .NET Framework，則可以與 [重新啟動管理員] 互動來利用這項功能。 如需詳細資訊，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  如果您要使用鏈結的安裝程式，但不想要提供關閉應用程式的專屬訊息方塊，則可以在鏈結 .NET Framework 安裝程序時，於命令列上使用 `/showrmui` 和 `/passive` 選項。 當您一起使用這些選項時，安裝程式會顯示關閉可關閉之應用程式的訊息方塊，以避免重新啟動系統。 被動模式下之這個訊息方塊的行為與完整使用者介面的作用相同。 如需 .NET Framework 可轉散發套件的完整一組命令列選項，請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署](../../../docs/framework/deployment/index.md)  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

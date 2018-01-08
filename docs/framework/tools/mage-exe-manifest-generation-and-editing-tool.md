@@ -16,11 +16,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bb802df171990eca411dda37fc4743de15fc169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 「資訊清單產生和編輯工具」(Mage.exe) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 Mage.exe 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 (包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式) 中執行。  
@@ -202,7 +203,7 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)  

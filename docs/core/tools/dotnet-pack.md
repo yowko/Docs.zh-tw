@@ -7,17 +7,18 @@ ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnetcore
+ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet pack` - 將程式碼封裝到 NuGet 套件。
 
@@ -37,7 +38,7 @@ dotnet pack [-h|--help]
 ```
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件。 如果有 `--include-symbols` 選項，會建立另一個包含偵錯符號的套件。
 

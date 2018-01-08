@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8ac4bec06f2d5c7f8876c8e4e18a9d5c59f094fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0980488f3093bfcaedc730bac126b1b5b6505187
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-custom-attributes"></a>存取自訂屬性
 建立屬性與程式項目的關聯之後，就可以使用反映來查詢其存在狀況和值。 在 .NET Framework 1.0 和 1.1 版中，會檢查執行內容中的自訂屬性。 .NET Framework 2.0 版提供新的載入內容，就是僅限反映的內容，這可以用來檢查無法載入來執行的程式碼。  
@@ -80,7 +81,7 @@ public class LocalizationExtenderProvider
  [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>  
  <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  

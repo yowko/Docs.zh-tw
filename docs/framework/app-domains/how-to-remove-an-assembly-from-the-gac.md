@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a17478c350d789d320e97d6b50d6f5f9daaf6db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d50d6a1b27cf30511fece1540f002524238a424
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：從全域組件快取移除組件
 從全域組件快取 (GAC) 移除組件的方式有兩種：  
@@ -59,7 +60,7 @@ gacutil -u hello
     > [!NOTE]
     >  Windows Installer 會維護安裝在 GAC 中之組件的參考計數。 只有在組件的參考計數到達零時 (表示 Windows Installer 套件所安裝的任何應用程式都未使用這個組件)，才能從 GAC 中移除組件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [操作說明：將組件安裝到全域組件快取](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

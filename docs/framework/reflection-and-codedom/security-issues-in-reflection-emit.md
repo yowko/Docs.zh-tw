@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d143798c4344b385d954cc64bd63c8f81eb48750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2319ab244b2c2a296966692342df1f4967b85729
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -161,6 +162,6 @@ ms.lasthandoff: 11/21/2017
 ### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
  從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，取得非公用類型和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
  [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

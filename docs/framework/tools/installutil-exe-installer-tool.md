@@ -24,11 +24,12 @@ caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (安裝程式工具)
 安裝程式工具是一種命令列公用程式，可讓您透過執行指定之組件中的安裝程式元件，來安裝和解除安裝伺服器資源。 這個工具可以與 <xref:System.Configuration.Install> 命名空間中的類別一起使用。  
@@ -169,7 +170,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Configuration.Install>  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

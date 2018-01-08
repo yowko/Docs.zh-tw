@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 989883034b30c3ec67f5441c5512418643546519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 51494801773ac8724c2ca5392df8cb013e989466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-gamepiece-class"></a>建立 GamePiece 類別
 **GamePiece** 類別包含下列作業需要的所有功能：載入 Microsoft XNA 遊戲片段映像、追蹤與遊戲片段相關的滑鼠狀態、捕捉滑鼠、提供操作和慣性處理，以及提供當遊戲片段達到檢視區限制時的彈回功能。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
  [建立 GamePieceCollection 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  

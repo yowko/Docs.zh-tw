@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 33dc3bfd3c70d5ea1105fb47c283aa8cf1c827c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3eb975b7ee8fdbba8435937fcb6f976d464db932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolving-assembly-loads"></a>解析組件載入
 .NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
@@ -88,6 +89,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

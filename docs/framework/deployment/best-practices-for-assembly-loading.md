@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 302be9cafc0fd2ef327767cbf1178d4927757d2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb6671af34c22d824368de014362452ac9014279
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/21/2017
   
  請注意，您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法來載入這些組件。 因為它們現在是在探查路徑中，所以會將其載入到預設載入內容，而非載入來源內容。 不過，建議您切換成 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，並提供完整組件顯示名稱，確保一律使用正確版本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  

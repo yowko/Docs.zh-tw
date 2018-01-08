@@ -15,11 +15,12 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a7dfefc144d9b0b46aeca01c219b22aaa34df8f
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: f206dd52f5fd6dc114ea35ce22df05e0fcff956c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
 
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/01/2017
 
 - 在 64 位元作業系統上，.NET Framework 同時支援 WOW64 (在 64 位元電腦上進行 32 位元處理) 和原生 64 位元處理。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [安裝指南](../../../docs/framework/install/index.md)   
 [快速入門](../../../docs/framework/get-started/index.md)   

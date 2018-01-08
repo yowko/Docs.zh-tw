@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/09/2017
   
 -   **搜尋**。 您可以查詢和修改您在資料流中的位置。  
   
- 如需詳細資訊，請參閱 [Composing Streams](../../../../../docs/standard/io/composing-streams.md)。  
+ 如需詳細資訊，請參閱 [Composing Streams](../../../../standard/io/composing-streams.md)。  
   
 ## <a name="types-of-streams"></a>資料流類型  
  在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中，資料流是透過 <xref:System.IO.Stream> 類別呈現，以構成所有其他資料流的抽象類別。 您無法直接建立 <xref:System.IO.Stream> 類別執行個體，但必須使用它所實作的其中一個類別。  
@@ -65,13 +65,13 @@ ms.lasthandoff: 12/09/2017
   
 |以|請參閱|
 |---|---|   
-|讀取和寫入資料檔案|[如何：讀取和寫入新建立的資料檔案](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|讀取檔案中的文字|[如何：從檔案讀取文字](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|將文字寫入檔案中|[如何：將文字寫入檔案](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|讀取字串中的字元|[如何：從字串中讀取字元](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
-|將字元寫入字串中|[如何：將字元寫入至字串](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
-|加密資料|[加密資料](../../../../../docs/standard/security/encrypting-data.md)|  
-|解密資料|[解密資料](../../../../../docs/standard/security/decrypting-data.md)|  
+|讀取和寫入資料檔案|[如何：讀取和寫入新建立的資料檔案](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|讀取檔案中的文字|[如何：從檔案讀取文字](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|將文字寫入檔案中|[如何：將文字寫入檔案](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|讀取字串中的字元|[如何：從字串中讀取字元](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|將字元寫入字串中|[如何：將字元寫入至字串](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|加密資料|[加密資料](../../../../standard/security/encrypting-data.md)|  
+|解密資料|[解密資料](../../../../standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>檔案存取和屬性  
  您可以控制如何建立檔案、如何開啟檔案，以及如何與 <xref:System.IO.FileAccess>、<xref:System.IO.FileMode> 和 <xref:System.IO.FileShare> 列舉共用，而列舉包含 <xref:System.IO.FileStream> 類別的建構函式所使用的旗標。 例如，當您開啟或建立新 <xref:System.IO.FileStream> 時，<xref:System.IO.FileMode> 列舉可讓您指定是否開啟檔案以進行附加、是否在指定的檔案不存在時建立新檔案、是否覆寫檔案等等。  
@@ -82,11 +82,11 @@ ms.lasthandoff: 12/09/2017
   
 |以|請參閱|  
 |---|---|
-|開啟文字並將其附加至記錄檔|[如何：開啟並附加至記錄檔](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|開啟文字並將其附加至記錄檔|[如何：開啟並附加至記錄檔](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |判斷檔案的屬性|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>檔案權限  
- 使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 對於處理 Web Form (預設在名為 ASPNET 的特殊本機使用者帳戶內容內執行，而此帳戶是建立為 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 安裝的一部分) 的開發人員，則這可能特別重要。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱 [Security Permissions](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) 和 <xref:System.Security.Permissions.FileIOPermission>。  
+ 使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 對於處理 Web Form (預設在名為 ASPNET 的特殊本機使用者帳戶內容內執行，而此帳戶是建立為 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 安裝的一部分) 的開發人員，則這可能特別重要。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱<xref:System.Security.Permissions.FileIOPermission>。  
   
 ## <a name="isolated-file-storage"></a>隔離檔案儲存區  
  隔離儲存區是嘗試解決處理使用者或程式碼可能缺乏必要權限的檔案時所產生的問題。 隔離儲存區會將資料區間指派給每位使用者，以保留一或多個存放區。 存放區可以依使用者和組件彼此隔離。 只有建立存放區的使用者和組件才能存取存放區。 存放區是完整虛擬檔案系統；您可以在一個存放區內建立和管理目錄與檔案。  
@@ -95,19 +95,19 @@ ms.lasthandoff: 12/09/2017
   
 |以|請參閱|
 |---|---|  
-|建立隔離存放區|[如何：取得隔離儲存區的存放區](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|列舉隔離存放區|[如何：列舉隔離儲存區的存放區](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|刪除隔離存放區|[如何：刪除隔離儲存區中的存放區](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|在隔離儲存區中建立檔案或目錄|[如何：在隔離儲存區中建立檔案和目錄](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|在隔離儲存區中尋找檔案|[如何：尋找隔離儲存區中的現有檔案和目錄](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|讀取或寫入隔離儲存區中的檔案|[如何：讀取和寫入隔離儲存區中的檔案](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|刪除隔離儲存區中的檔案或目錄|[如何：刪除隔離儲存區中的檔案和目錄](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|建立隔離存放區|[操作說明：取得隔離儲存區的存放區](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|列舉隔離存放區|[操作說明：列舉隔離儲存區的存放區](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|刪除隔離存放區|[如何：刪除隔離儲存區中的存放區](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|在隔離儲存區中建立檔案或目錄|[操作說明：在隔離儲存區中建立檔案和目錄](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|在隔離儲存區中尋找檔案|[操作說明：尋找隔離儲存區中的現有檔案和目錄](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|讀取或寫入隔離儲存區中的檔案|[操作說明：讀取和寫入隔離儲存區中的檔案](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|刪除隔離儲存區中的檔案或目錄|[操作說明：刪除隔離儲存區中的檔案和目錄](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>檔案事件  
  <xref:System.IO.FileSystemWatcher> 元件可讓您監看系統或任何具有網路存取之電腦上的檔案和目錄變更。 例如，如果修改檔案，您可能要將已進行變更的警示傳送給使用者。 發生變更時，會引發一或多個事件、將其儲存在緩衝區中，並且交給 <xref:System.IO.FileSystemWatcher> 元件進行處理。  
   
-## <a name="see-also"></a>另請參閱  
- [撰寫資料流](../../../../../docs/standard/io/composing-streams.md)  
- [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)  
- [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)  
+## <a name="see-also"></a>請參閱  
+ [撰寫資料流](../../../../standard/io/composing-streams.md)  
+ [檔案和資料流 I/O](../../../../standard/io/index.md)  
+ [非同步檔案 I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

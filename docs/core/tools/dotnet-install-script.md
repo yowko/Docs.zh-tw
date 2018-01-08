@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.openlocfilehash: 2f15f37016fe824d76b501e4793e0b28bbdbe167
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -32,7 +33,7 @@ macOS/Linux：
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet-install` 指令碼可用來執行 .NET Core SDK 的非系統管理安裝，其中包含了 .NET Core CLI 工具和共用執行階段。
 
@@ -152,7 +153,7 @@ macOS/Linux：
 
 `curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [.NET Core 版本](https://github.com/dotnet/core/releases)   
 [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

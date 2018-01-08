@@ -17,11 +17,11 @@ ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f88401f6daa7a2108522496c845521474c22cc30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4aa939d7b2d89bd878705ac67f2b6f37838f6ea2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中讀取登錄機碼的值
 您可以使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取 Windows 登錄中的值。  
@@ -58,9 +58,9 @@ ms.lasthandoff: 11/21/2017
 -   機碼名稱超過 255 個字元的限制 (<xref:System.ArgumentException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
+ 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  <xref:Microsoft.Win32.RegistryHive>  
  [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

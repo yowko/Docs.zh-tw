@@ -10,11 +10,12 @@ ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e6cea26c07bc9c9d7d8bd590e5fbb13cf6d01a9e
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: 5875e5900f925e29fec303d276483947c994da8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/01/2017
   
 -   如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱 [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [版本相容性](../../../docs/framework/migration-guide/version-compatibility.md)   
 [Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/?LinkId=196607)   

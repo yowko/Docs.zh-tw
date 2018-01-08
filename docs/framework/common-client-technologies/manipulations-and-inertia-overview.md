@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: b9cfd81b966e2bab95aa780a4fbde26abec74b00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d6a0b8b62b997ab0dc7ff21375e82bda7e05d3c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作和慣性概觀
 「操作」可讓使用者使用「操作工具」來移動、旋轉和調整使用者介面 (UI) 項目大小。 操作工具代表滑鼠或 (在觸控式的情況下) 手寫筆或手指。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/18/2017
   
  慣性處理和操作處理通常一起使用。 其介面很類似，而且它們所引發的事件 (在某些情況下) 完全相同。 一般而言，當 UI 項目操作完成時，就會開始慣性處理。 這透過接聽 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件和從事件處理常式啟動慣性處理而完成。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Input.Manipulations>

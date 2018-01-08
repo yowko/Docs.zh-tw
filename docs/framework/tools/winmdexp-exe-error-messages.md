@@ -168,11 +168,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22f556c87f676b86228fbb68f66206f3c39140cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 錯誤訊息
 當您在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中使用 [[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件] 範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
@@ -181,6 +182,6 @@ ms.lasthandoff: 11/21/2017
   
  如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 或者，您也可以在 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/p/?LinkId=251130)上提報 Bug。 您也可以在 [Microsoft 論壇](http://go.microsoft.com/fwlink/p/?LinkId=251129)上尋找詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  [診斷 Windows 執行階段元件錯誤條件](http://go.microsoft.com/fwlink/p/?LinkId=251127)

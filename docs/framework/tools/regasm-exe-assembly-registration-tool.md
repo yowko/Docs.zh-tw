@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 組件註冊工具會讀取組件內的中繼資料，並將必要的項目加入至登錄，這樣可讓 COM 用戶端順利地建立 .NET Framework 類別。 註冊類別之後，任何 COM 用戶端都可以將它當做 COM 類別使用。 類別只會在安裝組件時註冊一次。 在實際註冊類別之後，才能從 COM 建立組件內類別的執行個體。  
@@ -39,11 +40,11 @@ regasm assemblyFile [options]
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*assemblyFile*|要向 COM 註冊的組件。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/codebase**|在登錄中建立一個程式碼基底項目。 程式碼基底項目會指定未安裝於全域組件快取中之組件的檔案路徑。 如果您將接著安裝要在全域組件快取中註冊的組件，則不應該指定這個選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。|  
 |**/registered**|指定這個工具只會參考已註冊的類型程式庫。|  
@@ -89,7 +90,7 @@ regasm myTest.dll /regfile:myTest.reg
 regasm myTest.dll /tlb:myTest.tlb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  

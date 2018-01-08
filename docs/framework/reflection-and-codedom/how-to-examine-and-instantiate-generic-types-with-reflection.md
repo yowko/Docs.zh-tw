@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f5439975adcb6329ef072ef5a2bc98155e56c033
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc95b8474cdf9398d5b6705cce1b98772e5add98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反映檢視和執行個體化泛型類型
 取得泛型型別相關資訊的方式和取得其他類型相關資訊的方式一樣：檢查代表泛型型別的 <xref:System.Type> 物件。 主要差異是泛型型別有代表其泛型型別參數的 <xref:System.Type> 物件清單。 本節的第一個程序是檢查泛型型別。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Type>  
  <xref:System.Reflection.MethodInfo>  
  [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  

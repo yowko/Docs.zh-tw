@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6da580d208736a64e2094f701fb4c1241a488322
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e92bc1ab55674a39331cef5d0450cd8e28ef55f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>風險降低︰使用 DataContractJsonSerializer 序列化控制字元
 
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/18/2017
 </runtime>
 ```
  
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

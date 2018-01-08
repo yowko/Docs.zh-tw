@@ -18,11 +18,11 @@ ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4df7a80907b29a5eea79992f46c46603cbe2cc81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f35a850a262e96762b4ada3fdff1f14634f77317
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：判斷 My.Application.Log 寫入資訊的位置 (Visual Basic)
 `My.Application.Log` 物件可以將資訊寫入數個記錄檔接聽程式。 記錄檔接聽程式由電腦組態檔所設定，而且可以由應用程式組態檔覆寫。 本主題將說明預設設定，以及如何判斷應用程式的設定。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
     -   如簡介中所述，<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式會寫入檔案記錄檔。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式會將資訊寫入由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管]  或 [Windows 事件檢視器] 。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式會將資訊寫入由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。  
   
     -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 接聽程式會寫入 `initializeData` 參數中指定的檔案。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
     -   如需其他記錄檔接聽程式類型在何處寫入資訊的相關資訊，請查閱該類型的文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.EventLogTraceListener>  
@@ -82,5 +82,5 @@ ms.lasthandoff: 11/21/2017
  [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
  [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [.NET Framework 中的 ETW 事件](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  
+ [.NET Framework 中的 ETW 事件](../../../../framework/performance/etw-events.md)  
  [疑難排解：記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反映
 <xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9)、[介面](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5)和[實值型別](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例說明如何搭配幾個反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性和事件的相關資訊。|  
 |[反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  

@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ce101a1770329ab54ec8be86ec537a77f0fc112
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f42726b24abe78b151e4174da37b7c7bfff4c8d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -44,7 +45,7 @@ ildasm [options] [PEfilename] [options]
 
 下列選項可用於 *.exe*、*.dll*、*.obj*、*.lib* 和 *.winmd* 檔案。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/out=** `filename`|建立具有指定 `filename` 的輸出檔案，而不是在圖形化使用者介面中顯示結果。|
 |**/rtf**|產生 Rich Text Format (RTF) 格式的輸出。 使用 **/text** 選項時無效。|
@@ -54,7 +55,7 @@ ildasm [options] [PEfilename] [options]
 
 下列其他選項可用於 *.exe*、*.dll* 和 *.winmd* 檔案。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/bytes**|顯示十六進位格式的實際位元組做為指令註解。|
 |**/caverbal**|以動詞化格式產生自訂屬性 BLOB。 預設為二進位格式。|
@@ -71,7 +72,7 @@ ildasm [options] [PEfilename] [options]
 
 下列選項只對檔案或主控台輸出的 *.exe*、*.dll* 和 *.winmd* 檔案有效。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/all**|指定 **/header**、**/bytes**、**/stats**、**/classlist** 與 **/tokens** 選項的組合。|
 |**/classlist**|包括模組中定義的類別清單。|
@@ -86,13 +87,13 @@ ildasm [options] [PEfilename] [options]
 
 下列選項只對檔案或主控台輸出的 *.exe*、*.dll*、*.obj*、*.lib* 和 *.winmd* 檔案有效。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|顯示中繼資料，其中 `specifier` 是：<br /><br /> **MDHEADER**：顯示中繼資料的標頭資訊和大小。<br /><br /> **HEX**：使用十六進位和文字顯示資訊。<br /><br /> **CSV**：顯示記錄計數和堆積大小。<br /><br /> **UNREX**：顯示無法解析的外部符號。<br /><br /> **SCHEMA**：顯示中繼資料的標頭和結構描述資訊。<br /><br /> **RAW**：顯示原始中繼資料表。<br /><br /> **HEAPS**：顯示原始的堆積。<br /><br /> **VALIDATE**：驗證中繼資料的一致性。<br /><br /> 您可以多次指定 **/metadata**，每次使用不同的 `specifier` 值。|
 
 下列選項只對檔案或主控台輸出的 *.lib* 檔案有效。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/objectfile**=`filename`|顯示所指定程式庫中單一物件檔案的中繼資料。|
 
@@ -192,7 +193,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 巢狀類型的前面必須加上它的包含類別，並以正斜線分隔。 例如，如果 `MyNamespace.MyClass` 類別包含名為 `NestedClass` 的巢狀類別，則該巢狀類別的識別方式如下：`class MyNamespace.MyClass/NestedClass`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [工具](../../../docs/framework/tools/index.md)  
 [Ilasm.exe (IL 組譯工具)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 57d4cc56cc8d3a4dc3614043779eb09d7a8b8e25
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 032d07b75b96809ff71c7735a267a7351ad25dda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-wpf-window-rendering"></a>風險降低：WPF 視窗呈現
 在 Windows 8 與更新版本中執行的 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 多重監視器案例中，如果視窗擴充到單一顯示畫面以外，可呈現完整視窗而不會將其裁剪。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
  在 Windows 8 和更新版本中，跨監視器呈現 WPF 視窗的影響涉及太多因素，因此無法精確量化。 在某些情況下，它仍可能會產生不良的效能影響，特別是針對執行使用大量圖形的應用程式並有跨監視器顯示視窗的使用者來說，更是明顯。 在其他情況下，您可能只需要 .NET Framework 版本之間保持一致的行為。  
   
 ## <a name="mitigation"></a>緩和  
- 您可以停用這項變更並還原為先前的行為，即可在超出單一顯示畫面時裁剪 WPF 視窗。 執行這項作業的方法有兩種：  
+ 您可以停用這項變更並還原為先前的行為，即可在超出單一顯示畫面時裁剪 WPF 視窗。 執行此作業的方法有兩種：  
   
 -   您可將 `<EnableMultiMonitorDisplayClipping>` 項目加入應用程式組態檔的 `<appSettings>` 區段，以針對在 Windows 8 或更新版本中執行的應用程式停用或啟用此行為。 例如，下列組態區段會停用呈現時不裁剪的行為：  
   
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/18/2017
   
 -   方法是在應用程式啟動時，將 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 屬性設定為 `true`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

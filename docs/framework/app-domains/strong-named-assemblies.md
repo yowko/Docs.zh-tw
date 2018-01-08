@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4165d968ff347dd9af3bff755be22484debc23c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1d9fb79fa6c58ada7c342bd1d56281c3fbab900
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strong-named-assemblies"></a>強式名稱的組件
 強式命名組件會為組件建立唯一識別，並可防止發生組件衝突。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
  如果您是開放原始碼開發人員並需要強式名稱組件的識別優點，請考慮將與組件相關聯的私密金鑰簽入原始檔控制系統中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域組件快取](../../../docs/framework/app-domains/gac.md)  
  [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  

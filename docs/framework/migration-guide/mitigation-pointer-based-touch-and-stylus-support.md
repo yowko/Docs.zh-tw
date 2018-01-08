@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 053ff4c5fba7b4f2b5a4c29a35c954e888cb095a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 78a7365d9bc82111ebd27f40e999c24d8f9ebfde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>風險降低︰以指標為基礎的觸控及手寫筆支援
 
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/18/2017
 
 移除此項目或將其值設為 `false` 可關閉這個選擇性的堆疊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

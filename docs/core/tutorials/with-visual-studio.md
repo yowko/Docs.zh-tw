@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 06fea0118d70079a34a6954eae49ace344262ea5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
 

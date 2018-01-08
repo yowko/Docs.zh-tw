@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 23a1d8c638b198c31d7c83aaf3f216b465f01453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47867a82432ec6abe2245a0421d800c242d92b2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>如何：將組件安裝到全域組件快取
 有兩種方式可以將強式名稱組件安裝到全域組件快取 (GAC) 中：  
@@ -85,7 +86,7 @@ gacutil -i hello.dll
   
     4.  將步驟 c 中的檔案拖曳至 [目的電腦的檔案] 窗格中 (或使用檔案的捷徑功能表上的 [複製] 和 [貼上] 命令)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [操作說明：從全域組件快取移除組件](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  

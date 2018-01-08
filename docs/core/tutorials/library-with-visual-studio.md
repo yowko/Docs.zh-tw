@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
-ms.openlocfilehash: 5806e3e71eabbc1d65ecffed72108ba548b57806
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: cc24c97e878362e91ab9d27452fd44d7df81ada7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
 
 1. 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[Visual C#]** 節點，然後選取後面跟著 **[類別庫 (.NET Standard)]** 專案範本的 **[.NET Standard]** 節點。 在 [名稱] 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
+1. 在 **[新增專案]** 對話方塊中，展開 **[Visual C#]** 節點，然後選取後面跟著 **[類別庫 (.NET Standard)]** 專案範本的 **[.NET Standard]** 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/libproject.png)
 

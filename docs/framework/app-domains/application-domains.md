@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains"></a>應用程式定義域
 作業系統和執行階段環境通常會在應用程式之間提供某種形式的隔離。 例如，Windows 會使用處理序來隔離應用程式。 這種隔離確保在某一應用程式中執行之程式碼不會對其他不相關應用程式造成負面影響。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [隔離應用程式的優點](#benefits)  
   
--   [參考](#reference)  
+-   [參考資料](#reference)  
   
 <a name="benefits"></a>   
 ## <a name="the-benefits-of-isolating-applications"></a>隔離應用程式的優點  
@@ -122,7 +123,7 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.AppDomain> 是應用程式定義域的程式設計介面。 這個類別包括了一些方法，可用來建立及卸載定義域、建立定義域中的型別執行個體，以及註冊各種告知 (例如，應用程式定義域的卸載)。 下表列出常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|說明|  
+|AppDomain 方法|描述|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|建立新的應用程式定義域。 建議您要使用指定 <xref:System.AppDomainSetup> 物件的這個方法多載。 這是設定新定義域之屬性的慣用方法，例如，應用程式基底或應用程式的根目錄；定義域組態檔的位置；以及 Common Language Runtime 要用來將組件載入定義域的搜尋路徑等屬性。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|執行應用程式定義域中的組件。 這是執行個體方法，所以可用來在另一個您擁有參考的應用程式定義域中執行程式碼。|  

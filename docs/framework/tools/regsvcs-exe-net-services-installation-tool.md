@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -49,11 +50,11 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/appdir:<路徑>** |指定應用程式的根目錄。|  
 |**/appname:<應用程式名稱>** |指定要尋找或建立之 COM+ 應用程式的名稱。|  
@@ -94,7 +95,7 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

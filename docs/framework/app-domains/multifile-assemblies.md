@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bded4fae854d10a17ddd03b8855f6096e18ab87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multifile-assemblies"></a>多檔案組件
 您可以搭配使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 與 Visual C++，來建立多個組件。 組件中的一個檔案必須包含組件資訊清單。 啟動應用程式的組件也必須包含進入點，例如 Main 或 WinMain 方法。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
   
  在您建立組件之後，可以簽署包含組件資訊清單 (因此包含組件) 的檔案，也可以指定檔案 (和組件) 的強式名稱，並將它放在全域組件快取中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作說明：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

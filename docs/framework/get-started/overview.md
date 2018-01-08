@@ -18,11 +18,12 @@ caps.latest.revision: "34"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c41a7760afb03f1d14d433a30cc12194dcecfcb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: de9d94c9b4dfbdccb4ea5b3a7281715460d076a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -99,7 +100,7 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化 Windows GUI 的開發。 如果要撰寫 ASP.NET Web Form 應用程式，即可使用 Web Form 類別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [系統需求](../../../docs/framework/get-started/system-requirements.md)   
 [安裝指南](../../../docs/framework/install/index.md)   

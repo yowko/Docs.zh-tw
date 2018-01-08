@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>如何：設定應用程式以支援 .NET Framework 4 或 4.5
 所有裝載通用語言執行平台 (CLR) 的應用程式都必須啟動或「啟用」CLR，才能執行 Managed 程式碼。 通常，.NET Framework 應用程式會在本身建置所在的 CLR 版本上執行，但是您可以使用應用程式組態檔 (有時稱為 app.config 檔案) 變更桌面應用程式的這個行為。 不過，您無法使用應用程式組態檔變更 Windows 市集應用程式或 Windows Phone 應用程式的預設啟用行為。 本文將說明如何讓您的桌面應用程式在另一個 .NET Framework 版本上執行，並且提供如何鎖定 4 或 4.5 版做為目標。  
@@ -89,6 +90,6 @@ ms.lasthandoff: 11/21/2017
   
  \*如需有關這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
  [移轉手冊](../../../docs/framework/migration-guide/index.md)

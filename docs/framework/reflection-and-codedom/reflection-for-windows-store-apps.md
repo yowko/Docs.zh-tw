@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 80429810a46438cdbf7cf2993e5f3b0779d300c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f015a8323079b4c63cc217826769316c44fa986d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>適用於 Windows 市集應用程式之 .NET Framework 中的反映
 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，.NET Framework 包含一組反映類型和成員，以便用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式。 這些類型和成員提供於完整 .NET Framework，以及[適用於 Windows 市集應用程式的 .NET](http://go.microsoft.com/fwlink/?LinkID=225700)。 本文件說明這些與其對應項目在 .NET Framework 4 和舊版之間的主要差異。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](http://go.microsoft.com/fwlink/?LinkID=225700)

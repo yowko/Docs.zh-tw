@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6e3736a1fa16b51262169d4d3efec56a958cedf6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 841bec105f171f3450bfc33ee9052ddb85814a5e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>如何：決定組件的完整名稱
 若要在全域組件快取中找到組件的完整名稱，請使用全域組件快取工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 請參閱[如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組件名稱](../../../docs/framework/app-domains/assembly-names.md)  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  

@@ -1,5 +1,5 @@
 ---
-title: Iterator
+title: "迭代器"
 description: "了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
-# <a name="iterators"></a>Iterator
+# <a name="iterators"></a>迭代器
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。 
 
@@ -171,7 +171,7 @@ private IEnumerable<int> IteratorMethod()
 
 ## <a name="deeper-dive-into-foreach"></a>深入探討 `foreach`
 
-`foreach` 陳述式會展開為一個標準慣例，該慣例使用 `IEnumable<T>` 和 `IEnumerator<T>` 介面來逐一查看集合的所有項目。 它也會將開發人員未正確管理資源時所發生的錯誤降到最低。 
+`foreach` 陳述式會展開為一個標準慣例，該慣例使用 `IEnumerable<T>` 和 `IEnumerator<T>` 介面來逐一查看集合的所有項目。 它也會將開發人員未正確管理資源時所發生的錯誤降到最低。 
 
 編譯器會將第一個範例中所示的 `foreach` 迴圈轉譯為類似下列建構的程式碼：
 
