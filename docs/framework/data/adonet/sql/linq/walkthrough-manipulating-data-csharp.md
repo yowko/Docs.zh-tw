@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 502023c3929ffaa6766c906ca32489b43915f0ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ac02ea6c07797c600fe9ce9c7b197a95fc84da61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
   
      如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
 -   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中建立 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/18/2017
   
 1.  在[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
   
-2.  在**專案類型**窗格**新專案**對話方塊中，按一下 **Visual C#**。  
+2.  在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual C#**。  
   
 3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/18/2017
   
 5.  在**位置**方塊中，確認您要儲存專案檔。  
   
-6.  按一下 [確定]。  
+6.  按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中的參考，請按照下列步驟所述將它加入：  
@@ -171,5 +172,5 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  送出變更以加入新的客戶之後，無法再照原狀執行這個方案。 若要重新執行方案，請變更要加入的客戶名稱和客戶識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

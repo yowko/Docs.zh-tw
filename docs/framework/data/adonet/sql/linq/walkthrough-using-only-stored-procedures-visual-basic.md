@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2facb328791f07d6def2d466c799f031fe500d6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2eed4db8ee76d6f7bea8b0628219e858a1db9695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>逐步解說：僅使用預存程序 (Visual Basic)
 本逐步解說會針對只用預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
      如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
 -   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中設定 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解決方案。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  在**名稱**方塊中，輸入**SprocOnlyApp**。  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定 **Deploying Office Solutions**]。  
   
      Windows Forms 設計工具隨即開啟。  
   
@@ -200,6 +201,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>後續步驟  
  您可以進行一些變更，以強化這個專案。 例如，您可以在清單方塊中列出可用的預存程序，讓使用者選取所要執行的程序。 您也可以將報表輸出送至文字檔。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
  [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

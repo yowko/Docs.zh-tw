@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 52c9cfeab362a1603c1d18a9caa1601cd76711b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b3cc18f481a0e66d52f021b7bf6b76938fc5018
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>逐步解說：僅使用預存程序 (C#)
 本逐步解說會針對只執行預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
      如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
 -   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中設定 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解決方案。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  在[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
   
-2.  在**專案類型**窗格**新專案**對話方塊中，按一下 **Visual C#**。  
+2.  在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual C#**。  
   
 3.  在 [範本]  窗格中，按一下 [Windows Form 應用程式] 。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  在**位置**方塊中，確認您要儲存專案檔。  
   
-6.  按一下 [確定]。  
+6.  按一下 [確定 **Deploying Office Solutions**]。  
   
      Windows Forms 設計工具隨即開啟。  
   
@@ -197,6 +198,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>後續步驟  
  您可以進行一些變更，以強化這個專案。 例如，您可以在清單方塊中列出可用的預存程序，讓使用者選取所要執行的程序。 您也可以將報表輸出送至文字檔。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
  [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

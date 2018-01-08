@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e077115863ab3371570463d0bfd9244b69888f9e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2d8e478eb9165b4aa5bf019f02f4f128931d928b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>ICorProfilerObjectEnum::Clone 方法
 取得這個複本的介面指標[ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)介面。  
@@ -39,7 +40,7 @@ HRESULT Clone (
   
 #### <a name="parameters"></a>參數  
  `ppEnum`  
- [out]介面指標，再依序指向 的副本的指標`ICorProfilerObjectEnum`介面。 複本會維護其本身列舉狀態分別從這一個。 不過，將會與此列舉值的目前游標位置相同的複本初始資料指標位置。  
+ [out]介面指標，再依序指向的副本的指標`ICorProfilerObjectEnum`介面。 複本會維護其本身列舉狀態分別從這一個。 不過，將會與此列舉值的目前游標位置相同的複本初始資料指標位置。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -50,5 +51,5 @@ HRESULT Clone (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ICorProfilerObjectEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
