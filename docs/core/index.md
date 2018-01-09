@@ -18,18 +18,18 @@ ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
-> 簽出[「入門」教學課程](get-started.md)以了解如何建立簡單的 .NET Core 應用程式。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
+> 查看[「.NET Core 使用者入門」](get-started.md)教學課程以了解如何建立簡單的 .NET Core 應用程式。只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
 
-.NET Core 是一般用途的開發平台，由 Microsoft 和 [GitHub](https://github.com/dotnet/core) 上的 .NET 社群共同維護。 它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌/IoT 案例。 
+.NET Core 是一般用途的開發平台，由 Microsoft 和 [GitHub](https://github.com/dotnet/core) 上的 .NET 社群共同維護。 它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌式系統/IoT等應用情境。 
 
 下列特性最能定義 .NET Core：
 
 - **彈性的部署︰**可以包含在應用程式內，或任何人、任何機器都可並行安裝。
-- **跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。 Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、Cpu 和應用程式案例，會隨著時間成長。
+- **跨平台支援︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。所[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、CPU 架構和應用情境，都將隨著時間不斷成長，由 Microsoft、其他公司或個人提供各種擴充。
 - **命令列工具︰**所有產品案例都可以在命令列操作。 
-- **相容︰**.NET Core 透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
-- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
-- **受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。
+- **架構相容性︰**.NET Core 透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
+- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。.NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
+- **受 Microsoft 支援︰**.NET Core 由 Microsoft 提供支援，依據 [.NET Core 支援政策](https://www.microsoft.com/net/core/support/)。
 
 ## <a name="composition"></a>組合
 
