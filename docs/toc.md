@@ -147,7 +147,7 @@
 ##### [dotnet add reference](core/tools/dotnet-add-reference.md)
 ##### [dotnet list reference](core/tools/dotnet-list-reference.md)
 ##### [dotnet remove reference](core/tools/dotnet-remove-reference.md)
-#### 套件
+#### 封裝
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
@@ -164,9 +164,9 @@
 
 <!-- .NET Framework Content -->
 # [.NET Framework 指南](framework/index.md)
-## [新增功能](framework/whats-new/)
+## [新功能](framework/whats-new/)
 ## [開始使用](framework/get-started/)
-## [安裝指南](framework/install/)
+## [安裝指南 (英文)](framework/install/)
 ## [移轉手冊](framework/migration-guide/)
 ## [Docker 上的 .NET Framework 指南](framework/docker/index.md)
 ### [在容器中執行主控台應用程式](framework//docker/console.md)
@@ -257,6 +257,7 @@
 ### [原生互通性](csharp/programming-guide/interop/index.md)
 ### [加入程式碼註解](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
+## [操作說明 C# 主題](csharp/how-to/index.md)
 <!-- End of C# Concepts section -->
 ## [.NET 編譯器平台 SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 程式設計指南](csharp/programming-guide/)
