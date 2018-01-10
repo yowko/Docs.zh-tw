@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58ed01520a9bbed53d32fc10e48a479e68f6ef7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="converting-times-between-time-zones"></a>在各時區間轉換時間
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="converting-to-coordinated-universal-time"></a>轉換為國際標準時間
 
-國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。 (如詳細資訊和其他使用日期和時間的最佳作法，請參閱[撰寫程式碼使用.NET Framework 中的日期時間的最佳作法](http://go.microsoft.com/fwlink/?LinkId=92342)。)將個別時區轉換為 UTC 可輕鬆地比較時間。
+國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。 (如詳細資訊和其他使用日期和時間的最佳作法，請參閱[撰寫程式碼使用.NET Framework 中的日期時間的最佳作法](https://msdn.microsoft.com/library/ms973825.aspx)。)將個別時區轉換為 UTC 可輕鬆地比較時間。
 
 > [!NOTE]
 > 您也可以序列化<xref:System.DateTimeOffset>結構，以明確地代表單一點的時間。 因為<xref:System.DateTimeOffset>物件儲存以及其與 UTC 相差的日期和時間值，但是它們總是代表特定點的關聯性中的時間為 UTC。
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/23/2017
 
 若要轉換 UTC 到本地時間，請參閱 「 轉換 UTC 到本地時間 」 一節。 若要轉換的時間，以您指定任何時區 UTC，呼叫<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>方法。 這個方法採用兩個參數：
 
-* 要轉換的 UTC。 這必須是<xref:System.DateTime>值其<xref:System.DateTime.Kind%2A>屬性設定為<xref:System.DateTimeKind?displayProperty=nameWithType>或<xref:System.DateTimeKind?displayProperty=nameWithType>。
+* 要轉換的 UTC。 這必須是<xref:System.DateTime>值其<xref:System.DateTime.Kind%2A>屬性設定為`Unspecified`或`Utc`。
 
 * 要將 UTC 轉換為的時區。
 
