@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: da1a05a6003d93727efd5749aac9a055c8c80d38
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc12a90025a1862fc6c588fe4425f3f8341da313
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並且跨多平台共用組件。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
   
  ![搭配 MVVM 圖表可攜式](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
   
- 本主題不提供 MVVM 模式的一般資訊。 它只會提供有關如何使用資訊[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]實作 MVVM。 如需 MVVM 的詳細資訊，請參閱[MVVM 快速入門](http://go.microsoft.com/fwlink/?LinkId=234934)。  
+ 本主題不提供 MVVM 模式的一般資訊。 它只會提供有關如何使用資訊[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]實作 MVVM。 如需 MVVM 的詳細資訊，請參閱[MVVM 快速入門](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx)。  
   
 ## <a name="classes-that-support-mvvm"></a>類別，可支援 MVVM  
  如果您的[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]專案是以 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]、Silverlight 或 Windows Phone 7.5 為目標，就可以使用下列類別實作 MVVM 模式：  

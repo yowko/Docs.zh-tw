@@ -1,7 +1,7 @@
 ---
 title: "&lt;AppContextSwitchOverrides&gt;項目"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -79,6 +79,7 @@ ms.lasthandoff: 12/22/2017
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|當設定為`false`，允許 FIPS 已啟用時，Visual Studio 的 XAML 型工作流程專案的偵錯。 未安裝， <xref:System.NullReferenceException> System.Activities 組件中的方法的呼叫中是否擲回。|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|控制偵錯工具中的工作流程執行個體的總和檢查碼是否使用 MD5 或 SHA1。 | .NET Framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|控制項是否<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>方法會擲回的例外狀況時<xref:System.Drawing.Icon>物件具有 PNG 畫面格。 如需詳細資訊，請參閱[風險降低：Icon 物件中的 PNG 畫面格](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md)。|.NET Framework 4.6|  
+|`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|控制項是否的效能<xref:System.Windows.Forms.PrintPreviewDialog>最適合用於網路印表機。 如需詳細資訊，請參閱[PrintPreviewDialog 控制項概觀](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)。|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|控制是否非同步作業不會流動從呼叫的執行緒內容。 如需詳細資訊，請參閱[CurrentCulture 和 CurrentUICulture 流經工作](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)。|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|控制項是否<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType>方法會嘗試比對的宣告類型，只能使用最後一個 DNS 項目。 如需詳細資訊，請參閱[風險降低：X509CertificateClaimSet.FindClaims 方法](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)。|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|控制項是否路徑長度超過`MAX_PATH`（260 個字元） 會擲回<xref:System.IO.PathTooLongException>。 如需詳細資訊，請參閱[長路徑支援](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)。|.NET Framework 4.6.2|  
