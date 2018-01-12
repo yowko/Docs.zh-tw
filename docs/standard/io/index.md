@@ -23,14 +23,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
-檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，[System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
+檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，`System.IO` 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
   
  檔案是具有永續性存放裝置的已排序具名位元組集合。 當您使用檔案時，也會處理目錄路徑、磁碟存放裝置，以及檔案和目錄名稱。 相反地，資料流是可以用來讀取和寫入備份存放區的位元組序列，這類備份存放區可以是數種儲存媒體的其中一種 (例如磁碟或記憶體)。 就像除了磁碟以外，還有多種備份存放區一樣，資料流的種類除了檔案資料流之外，還有其他數種，例如網路、記憶體和管道資料流。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/23/2017
   
  除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 類別針對檔案 I/O 提供的方法。  
   
- 請參閱[如何：複製目錄](../../../docs/standard/io/how-to-copy-directories.md)、[如何：建立目錄清單](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)，以及[如何：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
+ 請參閱[如何：複製目錄](../../../docs/standard/io/how-to-copy-directories.md)、[如何：建立目錄清單](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)，以及[如何：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
   
 ## <a name="streams"></a>資料流  
  抽象基底類別 <xref:System.IO.Stream> 支援讀取和寫入位元組。 代表繼承自 <xref:System.IO.Stream> 類別之資料流的所有類別。 <xref:System.IO.Stream> 類別和它的衍生類別提供了資料來源和儲存機制的一般觀點，並且將程式設計人員與作業系統和基礎裝置的特有詳細資料加以隔離。  
@@ -128,7 +128,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="isolated-storage"></a>隔離儲存區  
  隔離儲存區 (Isolated Storage) 為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 儲存區提供依使用者、組件和 (選擇性) 網域隔離的虛擬檔案系統。 隔離儲存區在應用程式未具備存取使用者檔案的權限時特別實用。 您可以藉由電腦的安全性原則所控制的方式儲存應用程式的設定或檔案。  
   
- 隔離儲存區不適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請改用 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空間中的應用程式資料類別。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175)。  
+ 隔離儲存區不適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請改用 [Windows.Storage](/uwp/api/Windows.Storage) 命名空間中的應用程式資料類別。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
  以下是實作隔離儲存區時經常使用的類別：  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 12/23/2017
   
 -   <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 因此，請改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空間中的類型，例如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
   
--   無法使用隔離儲存區，請改用[應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175)。  
+-   無法使用隔離儲存區，請改用[應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 -   使用非同步方法，例如 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>，防止封鎖 UI 執行緒。  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="io-and-security"></a>I/O 和安全性  
  當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
   
- 預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 對於傳統 .NET Framework 應用程式請改用[隔離儲存區](../../../docs/standard/io/isolated-storage.md)，對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式則改用[應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175)。  
+ 預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 對於傳統 .NET Framework 應用程式請改用[隔離儲存區](../../../docs/standard/io/isolated-storage.md)，對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式則改用[應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
  只會對已建構的資料流進行安全性檢查。 因此，請不要開啟資料流，然後將它傳遞至較不受信任的程式碼或應用程式定義域。  
   

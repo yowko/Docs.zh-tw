@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 .NET Framework 中的事件是以委派模型為基礎。 遵循觀察者設計模式的委派模型，它可讓訂閱者向提供者註冊，並且接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
@@ -102,6 +102,6 @@ ms.lasthandoff: 12/23/2017
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [事件和路由事件概觀 (Windows 市集應用程式)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [事件和路由事件概觀 (UWP 應用程式)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [事件 (C# 程式設計手冊)](../../csharp/programming-guide/events/index.md)

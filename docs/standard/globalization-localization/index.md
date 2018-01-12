@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>全球化和當地語系化 .NET Framework 應用程式
 開發[世界通用的應用程式](http://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/23/2017
   
  .NET Framework 提供各種開發世界通用及當地語系化應用程式的支援。 特別是，.NET Framework 類別庫中的許多類型成員會傳回反映目前使用者文化特性或特定文化特性慣例的值，藉以協助全球化。 此外，.NET Framework 還支援附屬組件，可簡化當地語系化應用程式的程序。  
   
- 如需詳細資訊，請參閱[全球化開發人員中心 (英文)](http://go.microsoft.com/fwlink/?LinkId=235015)。  
+ 如需其他資訊，請參閱[全球化文件](/globalization/)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  
