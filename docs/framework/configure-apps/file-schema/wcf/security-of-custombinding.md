@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: d669152a699ae8586114a12ff46b49f41c6d4475
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; 的 &lt;security&gt;
 指定自訂繫結的安全性選項。  
@@ -45,8 +45,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
    requireSecurityContextCancellation="Boolean"  
    requireSignatureConfirmation="Boolean"  
       securityHeaderLayout=  
-              "Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean">  
+              "Strict/Lax/LaxTimestampFirst/LaxTimestampLast">  
    <issuedTokenParameters />  
    <localClientSettings />  
    <localServiceSettings />  
@@ -65,13 +64,13 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |authenticationMode|選擇項。 指定啟動器和回應程式之間使用的驗證模式。 所有值如下所示。<br /><br /> 預設為 `sspiNegotiated`。|  
 |defaultAlgorithmSuite|選擇項。 設定訊息加密和金鑰包裝演算法。 這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 可能的值如下所示。 預設值是 `Basic256`。<br /><br /> 當使用另一個平台，且該平台選擇一組和預設值不同的演算法時，則使用這個屬性。 在修改這個設定時，您應該了解相關演算法的優點和缺點。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
 |includeTimestamp|布林值，指定每個訊息是否包含時間戳記。 預設為 `true`。|  
-|keyEntropyMode|指定保護訊息安全之金鑰的計算方法。 金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。 有效值為<br /><br /> -   `ClientEntropy`： 工作階段金鑰根據用戶端所提供的金鑰資料。<br />-   `ServerEntropy`： 工作階段金鑰根據伺服器提供的金鑰資料。<br />-   `CombinedEntropy`： 工作階段金鑰為基礎的用戶端和服務所提供的索引鍵資料。<br /><br /> 預設為 `CombinedEntropy`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
+|keyEntropyMode|指定保護訊息安全之金鑰的計算方法。 金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。 有效值為<br /><br /> -   `ClientEntropy`： 工作階段金鑰根據用戶端所提供的金鑰資料。<br />-   `ServerEntropy`： 工作階段金鑰根據伺服器提供的金鑰資料。<br />-   `CombinedEntropy`： 工作階段金鑰為基礎的用戶端和服務所提供的索引鍵資料。<br /><br /> 預設值為 `CombinedEntropy`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
 |messageProtectionOrder|設定順序，訊息層級安全性演算法會以這個順序套用至訊息。 有效值包括以下的值：<br /><br /> -   `SignBeforeEncrypt`： 先簽署，再加密。<br />-   `SignBeforeEncryptAndEncryptSignature`： 先簽署、 加密，再加密簽章。<br />-   `EncryptBeforeSign`： 先加密，再簽署。<br /><br /> 預設值取決於所使用的 WS-Security 版本。 使用 WS-Security 1.1 時，預設值為 `SignBeforeEncryptAndEncryptSignature`。 使用 WS-Security 1.0 時，預設值為 `SignBeforeEncrypt`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
 |messageSecurityVersion|選擇項。 設定使用的 WS-Security 版本。 有效值包括以下的值：<br /><br /> -WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 預設值為 WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11，而且可以使用 XML 格式單純表示為 `Default`。 此屬性的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。|  
 |requireDerivedKeys|布林值，指定是否可以從原始的證明金鑰衍生金鑰。 預設為 `true`。|  
 |requireSecurityContextCancellation|選擇項。 布林值，指定當不再需要安全性內容時是否應取消及終止它。 預設為 `true`。|  
 |requireSignatureConfirmation|選擇項。 布林值，指定是否啟用 WS-Security 簽章確認。 設定為 `true` 時，回應程式會確認訊息簽章。  當您針對相互憑證設定自訂繫結或將它設定為使用已發行的權杖 (WSS 1.1 繫結) 時，此屬性預設為 `true`。 否則，預設值為 `false`。<br /><br /> 簽章確認是用來確認服務的回應完全感知要求。|  
-|securityHeaderLayout|選擇項。 指定安全性標頭中的項目順序。 有效值為<br /><br /> -   `Strict`： 項目會加入至安全性標頭，根據 「 使用前宣告 」 的一般原則。<br />-   `Lax`： 項目加入至安全性標頭，以任何順序符合 WSS: SOAP 訊息安全性。<br />-   `LaxWithTimestampFirst`： 項目加入至安全性標頭，以任何順序符合 WSS: SOAP 訊息安全性之安全性標頭中的第一個項目必須是 wsse: timestamp 項目。<br />-   `LaxWithTimestampLast`： 項目加入至安全性標頭，以任何順序符合 WSS: SOAP 訊息安全性之安全性標頭中的最後一個項目必須是 wsse: timestamp 項目。<br /><br /> 預設為 `Strict`。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
+|securityHeaderLayout|選擇項。 指定安全性標頭中的項目順序。 有效值為<br /><br /> -   `Strict`： 項目會加入至安全性標頭，根據 「 使用前宣告 」 的一般原則。<br />-   `Lax`： 項目加入至安全性標頭，以任何順序符合 WSS: SOAP 訊息安全性。<br />-   `LaxWithTimestampFirst`： 項目加入至安全性標頭，以任何順序符合 WSS: SOAP 訊息安全性之安全性標頭中的第一個項目必須是 wsse: timestamp 項目。<br />-   `LaxWithTimestampLast`： 項目加入至安全性標頭，以任何順序符合 WSS: SOAP 訊息安全性之安全性標頭中的最後一個項目必須是 wsse: timestamp 項目。<br /><br /> 預設值為 `Strict`。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 屬性  
   

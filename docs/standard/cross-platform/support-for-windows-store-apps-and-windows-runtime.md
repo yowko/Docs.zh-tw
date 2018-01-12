@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支援多個 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的軟體開發案例。 這些案例可分成三個類別︰  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[使用 C# 或 Visual Basic 的 Windows 市集應用程式的藍圖](http://go.microsoft.com/fwlink/p/?LinkId=242212)|提供重要資源，協助您使用 C# 或 Visual Basic 開始開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，包括許多快速入門主題、指導方針和最佳做法。 (在 Windows 開發人員中心中。)|  
 |[開發 Windows 市集應用程式 (VB / C# / c + + 和 XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|提供重要資源，協助您使用 C# 或 Visual Basic 開始開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，包括許多快速入門主題、指導方針和最佳做法。 (在 Windows 開發人員中心中。)|  
 |[在 C# 和 Visual Basic 中建立 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/?LinkId=238313)|描述如何使用 .NET Framework 建立 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件、說明如何將其作為使用 JavaScript 為 Windows 建置的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式一部分，並說明如何使用 Visual Studio 為該組合偵錯。 (在 Windows 開發人員中心中。)|  
-|[Windows 執行階段參考](http://go.microsoft.com/fwlink/?LinkId=238319)|[!INCLUDE[wrt](../../../includes/wrt-md.md)] 的參考文件。 (在 Windows 開發人員中心中。)|  
+|[Windows 執行階段參考](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)] 的參考文件。 (在 Windows 開發人員中心中。)|  
 |[將 URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述當您從 Managed 程式碼將 URI 傳遞至 [!INCLUDE[wrt](../../../includes/wrt-md.md)]時可能發生的問題，以及如何加以避免。|

@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -57,7 +57,7 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
   
 |Visual Studio SKU|支援建立可攜式類別庫|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010、Professional、Premium 或 Ultimate|是的當您安裝[可攜式文件庫工具](http://go.microsoft.com/fwlink/?LinkId=210823)。|  
+|Visual Studio 2010、Professional、Premium 或 Ultimate|是的當您安裝[可攜式文件庫工具](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2)。|  
 |Visual Studio Express 2010 版本|否。|  
 |Visual Studio 2012、Professional、Premium 或 Ultimate|可以。 如需電話支援安裝[Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)。|  
 |Visual Studio Express 2012 版本|否。|  
@@ -171,7 +171,7 @@ Visual Studio 2012 中的變更目標對話方塊
   
  例如，只有在目標為 Windows 8.1 和 Windows Phone 8.1 時，可攜式類別庫才會包含 UI 相關類型。 此外，如果您的目標平台 (例如 Xbox、.NET Framework 4 和 Windows Phone 7) 是在引進可攜式類別庫之前發行，可能也會遇到一些限制。 .NET Framework 透過 NuGet 發行套件，NuGet 可改善對部分較舊平台的可攜式類別庫支援。 如需詳細資訊和 NuGet 套件清單，請參閱[的.NET Framework 和不足的頻外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
   
- 如果可攜式類別庫和您選取的目標可支援某成員，該成員就會出現在 IntelliSense 的專案中。 此外，可攜式類別庫圖示![可攜式程式庫所支援](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon")在成員資料表中，會出現在[.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkId=211358)受支援成員旁邊。 例如，下面的成員表格顯示，可攜式類別庫可支援 <xref:System.String.Chars%2A> 類別中的 <xref:System.String> 屬性：  
+ 如果可攜式類別庫和您選取的目標可支援某成員，該成員就會出現在 IntelliSense 的專案中。 此外，可攜式類別庫圖示![可攜式程式庫所支援](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon")在成員資料表中，會出現在[.NET Framework 類別庫](https://msdn.microsoft.com/library/mt472912.aspx)受支援成員旁邊。 例如，下面的成員表格顯示，可攜式類別庫可支援 <xref:System.String.Chars%2A> 類別中的 <xref:System.String> 屬性：  
   
  ![支援的成員圖示](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 可攜式類別庫圖示  
