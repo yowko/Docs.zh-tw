@@ -7,23 +7,24 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnetcore
+ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="dotnet-test"></a><span data-ttu-id="1fcc1-103">dotnet test</span><span class="sxs-lookup"><span data-stu-id="1fcc1-103">dotnet test</span></span>
+# <a name="dotnet-test"></a><span data-ttu-id="d38e9-103">dotnet test</span><span class="sxs-lookup"><span data-stu-id="d38e9-103">dotnet test</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="1fcc1-104">name</span><span class="sxs-lookup"><span data-stu-id="1fcc1-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="d38e9-104">名稱</span><span class="sxs-lookup"><span data-stu-id="d38e9-104">Name</span></span>
 
-<span data-ttu-id="1fcc1-105">`dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-105">`dotnet test` - .NET test driver used to execute unit tests.</span></span>
+<span data-ttu-id="d38e9-105">`dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。</span><span class="sxs-lookup"><span data-stu-id="d38e9-105">`dotnet test` - .NET test driver used to execute unit tests.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="1fcc1-106">概要</span><span class="sxs-lookup"><span data-stu-id="1fcc1-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="d38e9-106">概要</span><span class="sxs-lookup"><span data-stu-id="d38e9-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1fcc1-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1fcc1-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="d38e9-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="d38e9-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 
 ```
@@ -31,7 +32,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1fcc1-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1fcc1-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d38e9-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d38e9-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 ```
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -39,183 +40,183 @@ dotnet test [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="1fcc1-109">說明</span><span class="sxs-lookup"><span data-stu-id="1fcc1-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="d38e9-109">描述</span><span class="sxs-lookup"><span data-stu-id="d38e9-109">Description</span></span>
 
-<span data-ttu-id="1fcc1-110">`dotnet test` 命令是用來在指定的專案中執行單元測試。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-110">The `dotnet test` command is used to execute unit tests in a given project.</span></span> <span data-ttu-id="1fcc1-111">單元測試是與單元測試架構 (例如 MSTest、NUnit 或 xUnit) 具有相依性的主控台應用程式專案，以及該單元測試架構的 dotnet 測試執行器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-111">Unit tests are console application projects that have dependencies on the unit test framework (for example, MSTest, NUnit, or xUnit) and the dotnet test runner for the unit testing framework.</span></span> <span data-ttu-id="1fcc1-112">這些會封裝為 NuGet 套件，並還原為專案的一般相依性。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-112">These are packaged as NuGet packages and are restored as ordinary dependencies for the project.</span></span>
+<span data-ttu-id="d38e9-110">`dotnet test` 命令是用來在指定的專案中執行單元測試。</span><span class="sxs-lookup"><span data-stu-id="d38e9-110">The `dotnet test` command is used to execute unit tests in a given project.</span></span> <span data-ttu-id="d38e9-111">單元測試是與單元測試架構 (例如 MSTest、NUnit 或 xUnit) 具有相依性的主控台應用程式專案，以及該單元測試架構的 dotnet 測試執行器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-111">Unit tests are console application projects that have dependencies on the unit test framework (for example, MSTest, NUnit, or xUnit) and the dotnet test runner for the unit testing framework.</span></span> <span data-ttu-id="d38e9-112">這些會封裝為 NuGet 套件，並還原為專案的一般相依性。</span><span class="sxs-lookup"><span data-stu-id="d38e9-112">These are packaged as NuGet packages and are restored as ordinary dependencies for the project.</span></span>
 
-<span data-ttu-id="1fcc1-113">測試專案也必須指定測試執行器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-113">Test projects also must specify the test runner.</span></span> <span data-ttu-id="1fcc1-114">這是使用一般 `<PackageReference>` 元素所指定，如下列範例專案檔中所示：</span><span class="sxs-lookup"><span data-stu-id="1fcc1-114">This is specified using an ordinary `<PackageReference>` element, as seen in the following sample project file:</span></span>
+<span data-ttu-id="d38e9-113">測試專案也必須指定測試執行器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-113">Test projects also must specify the test runner.</span></span> <span data-ttu-id="d38e9-114">這是使用一般 `<PackageReference>` 元素所指定，如下列範例專案檔中所示：</span><span class="sxs-lookup"><span data-stu-id="d38e9-114">This is specified using an ordinary `<PackageReference>` element, as seen in the following sample project file:</span></span>
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="arguments"></a><span data-ttu-id="1fcc1-115">引數</span><span class="sxs-lookup"><span data-stu-id="1fcc1-115">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="d38e9-115">引數</span><span class="sxs-lookup"><span data-stu-id="d38e9-115">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="1fcc1-116">指定測試專案的路徑。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-116">Specifies a path to the test project.</span></span> <span data-ttu-id="1fcc1-117">如果省略，則會預設為目前目錄。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-117">If omitted, it defaults to current directory.</span></span>
+<span data-ttu-id="d38e9-116">指定測試專案的路徑。</span><span class="sxs-lookup"><span data-stu-id="d38e9-116">Specifies a path to the test project.</span></span> <span data-ttu-id="d38e9-117">如果省略，則會預設為目前目錄。</span><span class="sxs-lookup"><span data-stu-id="d38e9-117">If omitted, it defaults to current directory.</span></span>
 
-## <a name="options"></a><span data-ttu-id="1fcc1-118">選項</span><span class="sxs-lookup"><span data-stu-id="1fcc1-118">Options</span></span>
+## <a name="options"></a><span data-ttu-id="d38e9-118">選項</span><span class="sxs-lookup"><span data-stu-id="d38e9-118">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1fcc1-119">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1fcc1-119">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="d38e9-119">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="d38e9-119">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-<span data-ttu-id="1fcc1-120">在測試執行中，從指定的路徑使用自訂測試配接器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-120">Use the custom test adapters from the specified path in the test run.</span></span>
+<span data-ttu-id="d38e9-120">在測試執行中，從指定的路徑使用自訂測試配接器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-120">Use the custom test adapters from the specified path in the test run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="1fcc1-121">定義組建組態。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-121">Defines the build configuration.</span></span> <span data-ttu-id="1fcc1-122">預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-122">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
+<span data-ttu-id="d38e9-121">定義組建組態。</span><span class="sxs-lookup"><span data-stu-id="d38e9-121">Defines the build configuration.</span></span> <span data-ttu-id="d38e9-122">預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。</span><span class="sxs-lookup"><span data-stu-id="d38e9-122">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
 
 `--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-<span data-ttu-id="1fcc1-123">測試回合啟用資料收集器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-123">Enables data collector for the test run.</span></span> <span data-ttu-id="1fcc1-124">如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-124">For more information, see [Monitor and analyze test run](https://aka.ms/vstest-collect).</span></span>
+<span data-ttu-id="d38e9-123">測試回合啟用資料收集器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-123">Enables data collector for the test run.</span></span> <span data-ttu-id="d38e9-124">如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。</span><span class="sxs-lookup"><span data-stu-id="d38e9-124">For more information, see [Monitor and analyze test run](https://aka.ms/vstest-collect).</span></span>
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-<span data-ttu-id="1fcc1-125">針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-125">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
+<span data-ttu-id="d38e9-125">針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。</span><span class="sxs-lookup"><span data-stu-id="d38e9-125">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="1fcc1-126">尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-126">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="d38e9-126">尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。</span><span class="sxs-lookup"><span data-stu-id="d38e9-126">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="1fcc1-127">使用指定的運算式篩選出目前專案中的測試。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-127">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="1fcc1-128">如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-128">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="1fcc1-129">如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-129">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="d38e9-127">使用指定的運算式篩選出目前專案中的測試。</span><span class="sxs-lookup"><span data-stu-id="d38e9-127">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="d38e9-128">如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。</span><span class="sxs-lookup"><span data-stu-id="d38e9-128">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="d38e9-129">如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。</span><span class="sxs-lookup"><span data-stu-id="d38e9-129">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="1fcc1-130">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-130">Prints out a short help for the command.</span></span>
+<span data-ttu-id="d38e9-130">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="d38e9-130">Prints out a short help for the command.</span></span>
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-<span data-ttu-id="1fcc1-131">指定測試結果的記錄器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-131">Specifies a logger for test results.</span></span>
+<span data-ttu-id="d38e9-131">指定測試結果的記錄器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-131">Specifies a logger for test results.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="1fcc1-132">請不要在執行之前建置測試專案。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-132">Does not build the test project prior to running it.</span></span>
+<span data-ttu-id="d38e9-132">請不要在執行之前建置測試專案。</span><span class="sxs-lookup"><span data-stu-id="d38e9-132">Does not build the test project prior to running it.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="1fcc1-133">執行命令時，不執行隱含的還原。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-133">Doesn't perform an implicit restore when running the command.</span></span>
+<span data-ttu-id="d38e9-133">執行命令時，不執行隱含的還原。</span><span class="sxs-lookup"><span data-stu-id="d38e9-133">Doesn't perform an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="1fcc1-134">在其中尋找要執行的二進位檔的目錄。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-134">Directory in which to find the binaries to run.</span></span>
+<span data-ttu-id="d38e9-134">在其中尋找要執行的二進位檔的目錄。</span><span class="sxs-lookup"><span data-stu-id="d38e9-134">Directory in which to find the binaries to run.</span></span>
 
 `-r|--results-directory <PATH>`
 
-<span data-ttu-id="1fcc1-135">要放置測試結果的目錄。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-135">The directory where the test results are going to be placed.</span></span> <span data-ttu-id="1fcc1-136">指定的目錄如不存在即建立。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-136">The specified directory will be created if it doesn't exist.</span></span>
+<span data-ttu-id="d38e9-135">要放置測試結果的目錄。</span><span class="sxs-lookup"><span data-stu-id="d38e9-135">The directory where the test results are going to be placed.</span></span> <span data-ttu-id="d38e9-136">指定的目錄如不存在即建立。</span><span class="sxs-lookup"><span data-stu-id="d38e9-136">The specified directory will be created if it doesn't exist.</span></span>
 
 `-s|--settings <SETTINGS_FILE>`
 
-<span data-ttu-id="1fcc1-137">執行測試時要使用的設定。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-137">Settings to use when running tests.</span></span>
+<span data-ttu-id="d38e9-137">執行測試時要使用的設定。</span><span class="sxs-lookup"><span data-stu-id="d38e9-137">Settings to use when running tests.</span></span>
 
 `-t|--list-tests`
 
-<span data-ttu-id="1fcc1-138">列出在目前專案中探索到的所有測試。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-138">List all of the discovered tests in the current project.</span></span>
+<span data-ttu-id="d38e9-138">列出在目前專案中探索到的所有測試。</span><span class="sxs-lookup"><span data-stu-id="d38e9-138">List all of the discovered tests in the current project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="1fcc1-139">設定命令的詳細資訊層級。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-139">Sets the verbosity level of the command.</span></span> <span data-ttu-id="1fcc1-140">允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-140">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="d38e9-139">設定命令的詳細資訊層級。</span><span class="sxs-lookup"><span data-stu-id="d38e9-139">Sets the verbosity level of the command.</span></span> <span data-ttu-id="d38e9-140">允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="d38e9-140">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1fcc1-141">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1fcc1-141">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d38e9-141">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d38e9-141">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-<span data-ttu-id="1fcc1-142">在測試執行中，從指定的路徑使用自訂測試配接器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-142">Use the custom test adapters from the specified path in the test run.</span></span>
+<span data-ttu-id="d38e9-142">在測試執行中，從指定的路徑使用自訂測試配接器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-142">Use the custom test adapters from the specified path in the test run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="1fcc1-143">定義組建組態。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-143">Defines the build configuration.</span></span> <span data-ttu-id="1fcc1-144">預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-144">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
+<span data-ttu-id="d38e9-143">定義組建組態。</span><span class="sxs-lookup"><span data-stu-id="d38e9-143">Defines the build configuration.</span></span> <span data-ttu-id="d38e9-144">預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。</span><span class="sxs-lookup"><span data-stu-id="d38e9-144">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-<span data-ttu-id="1fcc1-145">針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-145">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
+<span data-ttu-id="d38e9-145">針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。</span><span class="sxs-lookup"><span data-stu-id="d38e9-145">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="1fcc1-146">尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-146">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="d38e9-146">尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。</span><span class="sxs-lookup"><span data-stu-id="d38e9-146">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="1fcc1-147">使用指定的運算式篩選出目前專案中的測試。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-147">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="1fcc1-148">如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-148">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="1fcc1-149">如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-149">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="d38e9-147">使用指定的運算式篩選出目前專案中的測試。</span><span class="sxs-lookup"><span data-stu-id="d38e9-147">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="d38e9-148">如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。</span><span class="sxs-lookup"><span data-stu-id="d38e9-148">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="d38e9-149">如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。</span><span class="sxs-lookup"><span data-stu-id="d38e9-149">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="1fcc1-150">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-150">Prints out a short help for the command.</span></span>
+<span data-ttu-id="d38e9-150">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="d38e9-150">Prints out a short help for the command.</span></span>
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-<span data-ttu-id="1fcc1-151">指定測試結果的記錄器。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-151">Specifies a logger for test results.</span></span>
+<span data-ttu-id="d38e9-151">指定測試結果的記錄器。</span><span class="sxs-lookup"><span data-stu-id="d38e9-151">Specifies a logger for test results.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="1fcc1-152">請不要在執行之前建置測試專案。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-152">Does not build the test project prior to running it.</span></span>
+<span data-ttu-id="d38e9-152">請不要在執行之前建置測試專案。</span><span class="sxs-lookup"><span data-stu-id="d38e9-152">Does not build the test project prior to running it.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="1fcc1-153">在其中尋找要執行的二進位檔的目錄。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-153">Directory in which to find the binaries to run.</span></span>
+<span data-ttu-id="d38e9-153">在其中尋找要執行的二進位檔的目錄。</span><span class="sxs-lookup"><span data-stu-id="d38e9-153">Directory in which to find the binaries to run.</span></span>
 
 `-s|--settings <SETTINGS_FILE>`
 
-<span data-ttu-id="1fcc1-154">執行測試時要使用的設定。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-154">Settings to use when running tests.</span></span>
+<span data-ttu-id="d38e9-154">執行測試時要使用的設定。</span><span class="sxs-lookup"><span data-stu-id="d38e9-154">Settings to use when running tests.</span></span>
 
 `-t|--list-tests`
 
-<span data-ttu-id="1fcc1-155">列出在目前專案中探索到的所有測試。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-155">List all of the discovered tests in the current project.</span></span>
+<span data-ttu-id="d38e9-155">列出在目前專案中探索到的所有測試。</span><span class="sxs-lookup"><span data-stu-id="d38e9-155">List all of the discovered tests in the current project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="1fcc1-156">設定命令的詳細資訊層級。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-156">Sets the verbosity level of the command.</span></span> <span data-ttu-id="1fcc1-157">允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-157">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="d38e9-156">設定命令的詳細資訊層級。</span><span class="sxs-lookup"><span data-stu-id="d38e9-156">Sets the verbosity level of the command.</span></span> <span data-ttu-id="d38e9-157">允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="d38e9-157">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="1fcc1-158">範例</span><span class="sxs-lookup"><span data-stu-id="1fcc1-158">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="d38e9-158">範例</span><span class="sxs-lookup"><span data-stu-id="d38e9-158">Examples</span></span>
 
-<span data-ttu-id="1fcc1-159">執行目前目錄之專案中的測試：</span><span class="sxs-lookup"><span data-stu-id="1fcc1-159">Run the tests in the project in the current directory:</span></span>
+<span data-ttu-id="d38e9-159">執行目前目錄之專案中的測試：</span><span class="sxs-lookup"><span data-stu-id="d38e9-159">Run the tests in the project in the current directory:</span></span>
 
 `dotnet test`
 
-<span data-ttu-id="1fcc1-160">執行 `test1` 專案中的測試︰</span><span class="sxs-lookup"><span data-stu-id="1fcc1-160">Run the tests in the `test1` project:</span></span>
+<span data-ttu-id="d38e9-160">執行 `test1` 專案中的測試︰</span><span class="sxs-lookup"><span data-stu-id="d38e9-160">Run the tests in the `test1` project:</span></span>
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-## <a name="filter-option-details"></a><span data-ttu-id="1fcc1-161">篩選選項詳細資料</span><span class="sxs-lookup"><span data-stu-id="1fcc1-161">Filter option details</span></span>
+## <a name="filter-option-details"></a><span data-ttu-id="d38e9-161">篩選選項詳細資料</span><span class="sxs-lookup"><span data-stu-id="d38e9-161">Filter option details</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="1fcc1-162">`<Expression>` 的格式為 `<property><operator><value>[|&<Expression>]`。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-162">`<Expression>` has the format `<property><operator><value>[|&<Expression>]`.</span></span>
+<span data-ttu-id="d38e9-162">`<Expression>` 的格式為 `<property><operator><value>[|&<Expression>]`。</span><span class="sxs-lookup"><span data-stu-id="d38e9-162">`<Expression>` has the format `<property><operator><value>[|&<Expression>]`.</span></span>
 
-<span data-ttu-id="1fcc1-163">`<property>` 為 `Test Case` 的屬性。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-163">`<property>` is an attribute of the `Test Case`.</span></span> <span data-ttu-id="1fcc1-164">以下為熱門單元測試架構所支援的屬性：</span><span class="sxs-lookup"><span data-stu-id="1fcc1-164">The following are the properties supported by popular unit test frameworks:</span></span>
+<span data-ttu-id="d38e9-163">`<property>` 為 `Test Case` 的屬性。</span><span class="sxs-lookup"><span data-stu-id="d38e9-163">`<property>` is an attribute of the `Test Case`.</span></span> <span data-ttu-id="d38e9-164">以下為熱門單元測試架構所支援的屬性：</span><span class="sxs-lookup"><span data-stu-id="d38e9-164">The following are the properties supported by popular unit test frameworks:</span></span>
 
-| <span data-ttu-id="1fcc1-165">測試架構</span><span class="sxs-lookup"><span data-stu-id="1fcc1-165">Test Framework</span></span> | <span data-ttu-id="1fcc1-166">支援的屬性</span><span class="sxs-lookup"><span data-stu-id="1fcc1-166">Supported properties</span></span>                                                                                      |
+| <span data-ttu-id="d38e9-165">測試架構</span><span class="sxs-lookup"><span data-stu-id="d38e9-165">Test Framework</span></span> | <span data-ttu-id="d38e9-166">支援的屬性</span><span class="sxs-lookup"><span data-stu-id="d38e9-166">Supported properties</span></span>                                                                                      |
 | :------------: | --------------------------------------------------------------------------------------------------------- |
-| <span data-ttu-id="1fcc1-167">MSTest</span><span class="sxs-lookup"><span data-stu-id="1fcc1-167">MSTest</span></span>         | <ul><li><span data-ttu-id="1fcc1-168">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="1fcc1-168">FullyQualifiedName</span></span></li><li><span data-ttu-id="1fcc1-169">名稱</span><span class="sxs-lookup"><span data-stu-id="1fcc1-169">Name</span></span></li><li><span data-ttu-id="1fcc1-170">ClassName</span><span class="sxs-lookup"><span data-stu-id="1fcc1-170">ClassName</span></span></li><li><span data-ttu-id="1fcc1-171">優先權</span><span class="sxs-lookup"><span data-stu-id="1fcc1-171">Priority</span></span></li><li><span data-ttu-id="1fcc1-172">TestCategory</span><span class="sxs-lookup"><span data-stu-id="1fcc1-172">TestCategory</span></span></li></ul> |
-| <span data-ttu-id="1fcc1-173">xUnit</span><span class="sxs-lookup"><span data-stu-id="1fcc1-173">Xunit</span></span>          | <ul><li><span data-ttu-id="1fcc1-174">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="1fcc1-174">FullyQualifiedName</span></span></li><li><span data-ttu-id="1fcc1-175">DisplayName</span><span class="sxs-lookup"><span data-stu-id="1fcc1-175">DisplayName</span></span></li><li><span data-ttu-id="1fcc1-176">特性</span><span class="sxs-lookup"><span data-stu-id="1fcc1-176">Traits</span></span></li></ul>                                   |
+| <span data-ttu-id="d38e9-167">MSTest</span><span class="sxs-lookup"><span data-stu-id="d38e9-167">MSTest</span></span>         | <ul><li><span data-ttu-id="d38e9-168">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="d38e9-168">FullyQualifiedName</span></span></li><li><span data-ttu-id="d38e9-169">名稱</span><span class="sxs-lookup"><span data-stu-id="d38e9-169">Name</span></span></li><li><span data-ttu-id="d38e9-170">ClassName</span><span class="sxs-lookup"><span data-stu-id="d38e9-170">ClassName</span></span></li><li><span data-ttu-id="d38e9-171">優先權</span><span class="sxs-lookup"><span data-stu-id="d38e9-171">Priority</span></span></li><li><span data-ttu-id="d38e9-172">TestCategory</span><span class="sxs-lookup"><span data-stu-id="d38e9-172">TestCategory</span></span></li></ul> |
+| <span data-ttu-id="d38e9-173">xUnit</span><span class="sxs-lookup"><span data-stu-id="d38e9-173">Xunit</span></span>          | <ul><li><span data-ttu-id="d38e9-174">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="d38e9-174">FullyQualifiedName</span></span></li><li><span data-ttu-id="d38e9-175">DisplayName</span><span class="sxs-lookup"><span data-stu-id="d38e9-175">DisplayName</span></span></li><li><span data-ttu-id="d38e9-176">特性</span><span class="sxs-lookup"><span data-stu-id="d38e9-176">Traits</span></span></li></ul>                                   |
 
-<span data-ttu-id="1fcc1-177">`<operator>` 描述屬性和值之間的關聯性：</span><span class="sxs-lookup"><span data-stu-id="1fcc1-177">The `<operator>` describes the relationship between the property and the value:</span></span>
+<span data-ttu-id="d38e9-177">`<operator>` 描述屬性和值之間的關聯性：</span><span class="sxs-lookup"><span data-stu-id="d38e9-177">The `<operator>` describes the relationship between the property and the value:</span></span>
 
-| <span data-ttu-id="1fcc1-178">運算子</span><span class="sxs-lookup"><span data-stu-id="1fcc1-178">Operator</span></span> | <span data-ttu-id="1fcc1-179">函式</span><span class="sxs-lookup"><span data-stu-id="1fcc1-179">Function</span></span>        |
+| <span data-ttu-id="d38e9-178">運算子</span><span class="sxs-lookup"><span data-stu-id="d38e9-178">Operator</span></span> | <span data-ttu-id="d38e9-179">功能</span><span class="sxs-lookup"><span data-stu-id="d38e9-179">Function</span></span>        |
 | :------: | --------------- |
-| `=`      | <span data-ttu-id="1fcc1-180">完全相符</span><span class="sxs-lookup"><span data-stu-id="1fcc1-180">Exact match</span></span>     |
-| `!=`     | <span data-ttu-id="1fcc1-181">不完全相符</span><span class="sxs-lookup"><span data-stu-id="1fcc1-181">Not exact match</span></span> |
-| `~`      | <span data-ttu-id="1fcc1-182">包含</span><span class="sxs-lookup"><span data-stu-id="1fcc1-182">Contains</span></span>        |
+| `=`      | <span data-ttu-id="d38e9-180">完全相符</span><span class="sxs-lookup"><span data-stu-id="d38e9-180">Exact match</span></span>     |
+| `!=`     | <span data-ttu-id="d38e9-181">不完全相符</span><span class="sxs-lookup"><span data-stu-id="d38e9-181">Not exact match</span></span> |
+| `~`      | <span data-ttu-id="d38e9-182">包含</span><span class="sxs-lookup"><span data-stu-id="d38e9-182">Contains</span></span>        |
 
-<span data-ttu-id="1fcc1-183">`<value>` 為字串。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-183">`<value>` is a string.</span></span> <span data-ttu-id="1fcc1-184">所有的查閱皆不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-184">All the lookups are case insensitive.</span></span>
+<span data-ttu-id="d38e9-183">`<value>` 為字串。</span><span class="sxs-lookup"><span data-stu-id="d38e9-183">`<value>` is a string.</span></span> <span data-ttu-id="d38e9-184">所有的查閱皆不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="d38e9-184">All the lookups are case insensitive.</span></span>
 
-<span data-ttu-id="1fcc1-185">沒有 `<operator>` 的運算式會自動被視為 `FullyQualifiedName` 屬性上的 `contains` (例如，`dotnet test --filter xyz` 等同於 `dotnet test --filter FullyQualifiedName~xyz`)。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-185">An expression without an `<operator>` is automatically considered as a `contains` on `FullyQualifiedName` property (for example, `dotnet test --filter xyz` is same as `dotnet test --filter FullyQualifiedName~xyz`).</span></span>
+<span data-ttu-id="d38e9-185">沒有 `<operator>` 的運算式會自動被視為 `FullyQualifiedName` 屬性上的 `contains` (例如，`dotnet test --filter xyz` 等同於 `dotnet test --filter FullyQualifiedName~xyz`)。</span><span class="sxs-lookup"><span data-stu-id="d38e9-185">An expression without an `<operator>` is automatically considered as a `contains` on `FullyQualifiedName` property (for example, `dotnet test --filter xyz` is same as `dotnet test --filter FullyQualifiedName~xyz`).</span></span>
 
-<span data-ttu-id="1fcc1-186">運算式可以使用條件運算子聯結：</span><span class="sxs-lookup"><span data-stu-id="1fcc1-186">Expressions can be joined with conditional operators:</span></span>
+<span data-ttu-id="d38e9-186">運算式可以使用條件運算子聯結：</span><span class="sxs-lookup"><span data-stu-id="d38e9-186">Expressions can be joined with conditional operators:</span></span>
 
-| <span data-ttu-id="1fcc1-187">運算子</span><span class="sxs-lookup"><span data-stu-id="1fcc1-187">Operator</span></span> | <span data-ttu-id="1fcc1-188">函式</span><span class="sxs-lookup"><span data-stu-id="1fcc1-188">Function</span></span> |
+| <span data-ttu-id="d38e9-187">運算子</span><span class="sxs-lookup"><span data-stu-id="d38e9-187">Operator</span></span> | <span data-ttu-id="d38e9-188">功能</span><span class="sxs-lookup"><span data-stu-id="d38e9-188">Function</span></span> |
 | :------: | :------: |
-| <code>&#124;</code>      | <span data-ttu-id="1fcc1-189">或</span><span class="sxs-lookup"><span data-stu-id="1fcc1-189">OR</span></span>       |
-| `&`      | <span data-ttu-id="1fcc1-190">AND</span><span class="sxs-lookup"><span data-stu-id="1fcc1-190">AND</span></span>      |
+| <code>&#124;</code>      | <span data-ttu-id="d38e9-189">OR</span><span class="sxs-lookup"><span data-stu-id="d38e9-189">OR</span></span>       |
+| `&`      | <span data-ttu-id="d38e9-190">AND</span><span class="sxs-lookup"><span data-stu-id="d38e9-190">AND</span></span>      |
 
-<span data-ttu-id="1fcc1-191">您也可以將運算式括在括號使用條件式運算子時 (例如， `(Name~TestMethod1) | (Name~TestMethod2)`)。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-191">You can enclose expressions in parenthesis when using conditional operators (for example, `(Name~TestMethod1) | (Name~TestMethod2)`).</span></span>
+<span data-ttu-id="d38e9-191">使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。</span><span class="sxs-lookup"><span data-stu-id="d38e9-191">You can enclose expressions in parenthesis when using conditional operators (for example, `(Name~TestMethod1) | (Name~TestMethod2)`).</span></span>
 
-<span data-ttu-id="1fcc1-192">如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。</span><span class="sxs-lookup"><span data-stu-id="1fcc1-192">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="d38e9-192">如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。</span><span class="sxs-lookup"><span data-stu-id="d38e9-192">For additional information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1fcc1-193">請參閱</span><span class="sxs-lookup"><span data-stu-id="1fcc1-193">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d38e9-193">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d38e9-193">See also</span></span>
 
- [<span data-ttu-id="1fcc1-194">架構與目標</span><span class="sxs-lookup"><span data-stu-id="1fcc1-194">Frameworks and Targets</span></span>](../../standard/frameworks.md)  
- [<span data-ttu-id="1fcc1-195">.NET Core 執行階段識別項 (RID) 目錄</span><span class="sxs-lookup"><span data-stu-id="1fcc1-195">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+ [<span data-ttu-id="d38e9-194">架構與目標</span><span class="sxs-lookup"><span data-stu-id="d38e9-194">Frameworks and Targets</span></span>](../../standard/frameworks.md)  
+ [<span data-ttu-id="d38e9-195">.NET Core 執行階段識別項 (RID) 目錄</span><span class="sxs-lookup"><span data-stu-id="d38e9-195">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
