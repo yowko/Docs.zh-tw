@@ -17,11 +17,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>發出動態方法和組件
 本節說明 <xref:System.Reflection.Emit> 命名空間中的一組 Managed 類型，它可讓編譯器或工具在執行階段發出中繼資料和 Microsoft 中繼語言 (MSIL)，以及選擇性地在磁碟上產生可攜式執行檔 (PE)。 指令碼引擎和編譯器是此命名空間的主要使用者。 在本節中，<xref:System.Reflection.Emit> 命名空間所提供的功能稱為反映發出。  
@@ -44,22 +45,22 @@ ms.lasthandoff: 10/18/2017
   
  另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 您可以在 [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) 以及 [Ecma 網站](http://go.microsoft.com/fwlink/?LinkId=116487)上，線上取得這份文件。  
   
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
   
 [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
 說明有關使用反映發出來建立動態組件的安全性問題。  
 
-[如何： 定義及執行動態方法](how-to-define-and-execute-dynamic-methods.md)   
-示範如何執行簡單的動態方法和繫結至類別的執行個體的動態方法。
+[如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)   
+顯示如何執行簡單的動態方法以及繫結至類別執行個體的動態方法。
 
-[如何： 定義泛型類型使用反映發出](how-to-define-a-generic-type-with-reflection-emit.md)   
-示範如何建立簡單的泛型型別具有兩個型別參數、 如何將類別、 介面和特殊條件約束套用至型別參數，以及如何建立類別的型別參數做為參數型別和傳回型別的 memers。
+[如何：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)   
+顯示如何建立具有兩個型別參數的簡單泛型型別、如何將類別、介面和特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回型別。
 
-[如何： 定義泛型方法使用反映發出](how-to-define-a-generic-method-with-reflection-emit.md)   
-示範如何建立、 發出，並叫用簡單的泛型方法。
+[如何：使用反映發出定義泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)   
+顯示如何建立、發出和叫用簡單泛型方法。
 
-[動態類型產生可回收組件](collectible-assemblies.md)   
-導入了可回收組件，也就是動態組件，而不卸載它們建立所在的應用程式定義域可以卸載。
+[動態類型產生的可回收組件](collectible-assemblies.md)   
+引進可回收組件，即動態組件，不需要卸載其建立所在的應用程式定義域即可予以卸載。
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -79,4 +80,4 @@ ms.lasthandoff: 10/18/2017
  說明如何探索中繼資料和 Managed 程式碼。  
   
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- 提供.NET 實作中的組件的概觀。
+ 提供 .NET 實作中組件的概觀。

@@ -12,11 +12,12 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: ce02033a7994d48494b4e627f1ed8f1dea4caadb
-ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
+ms.workload: dotnetcore
+ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/15/2017
 * [建置 .NET Core 應用程式的 Docker 映像](../docker/building-net-docker-images.md)
 
 
-### <a name="getting-net-docker-images"></a>取得.NET Docker 映像
+### <a name="getting-net-docker-images"></a>取得 .NET Docker 映像
 
 官方 .NET Docker 映像是由 Microsoft 所建立及最佳化。 它們在 Docker Hub 上的 Microsoft 存放庫中公開提供。 視 .NET 版本和 OS 版本而定，每個存放庫可能會包含多個映像。 大部分的映像存放庫提供大量的標籤，來協助您選取特定的架構版本和 OS (Linux 發行版本或 Windows 版本)。
 
@@ -69,7 +70,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 ### <a name="common-docker-development-scenarios"></a>常見的 Docker 開發案例
 
-#### <a name="net-core"></a>.NET Core
+#### <a name="net-core"></a>.NET 核心
 
 **.NET Core 資源**
 
@@ -103,7 +104,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 **.NET Framework 4.7**
 
-[dotnet-framework:4.7 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) \(英文\) 示範 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.7 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile) \(英文\) 建置及部署該應用程式。
+[dotnet-framework:4.7 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) 示範 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.7 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile) \(英文\) 建置及部署該應用程式。
 
 **.NET Framework 4.6.2**
 
@@ -204,4 +205,3 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 * [了解 .NET Core 的 Docker 基本概念](docker-basics-dotnet-core.md)
 * [建置 .NET Core Docker 映像](building-net-docker-images.md)
-\

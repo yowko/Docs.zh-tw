@@ -7,17 +7,18 @@ ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet run` - 執行原始程式碼，而不需要有任何明確的編譯或啟動命令。
 
@@ -39,7 +40,7 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet run` 命令提供方便的選項，以使用一個命令透過原始程式碼來執行應用程式。 可用於在命令列中快速進行反覆開發。 此命令仰賴 [`dotnet build`](dotnet-build.md) 命令來建置程式碼。 建置的任何需求 (例如必須先還原專案) 也同樣適用於 `dotnet run`。 
 
@@ -75,7 +76,7 @@ dotnet myapp.dll
 
 `--force`
 
-即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除*project.assets.json*。
+即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除 *project.assets.json*。
 
 `-h|--help`
 

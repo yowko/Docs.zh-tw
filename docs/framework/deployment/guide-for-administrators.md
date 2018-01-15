@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
  此主題包括下列章節：  
   
  [部署程序](#the_deployment_process)  
- [部署.NET Framework](#deploying_in_a_test_environment)  
+ [部署 .NET Framework](#deploying_in_a_test_environment)  
  [建立集合](#creating_a_collection)  
  [建立套件和程式](#creating_a_package)  
  [選取發佈點](#select_dist_point)  
@@ -132,13 +133,13 @@ ms.lasthandoff: 11/21/2017
   
  下表描述在步驟 7 中指定的命令列選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/q**|設定無訊息模式。 不需要使用者輸入，也不會顯示輸出。|  
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用這個選項，Configuration Manager 就必須處理電腦重新啟動。|  
 |**/chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 已註冊 [Microsoft 客戶經驗改進計劃](http://go.microsoft.com/fwlink/p/?LinkId=248244)的人將會收到這項資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如：**/chainingpackage "Chaining Product"**。|  
   
- 這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，並鏈結的應用程式必須擷取傳回碼，並處理重新開機。請參閱[從安裝套件取得進度資訊](http://go.microsoft.com/fwlink/?LinkId=179606)。  
+ 這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱[取得安裝套件的進度資訊](http://go.microsoft.com/fwlink/?LinkId=179606)。  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>選取發佈點  
@@ -264,6 +265,6 @@ ms.lasthandoff: 11/21/2017
   
 -   [Windows Update 代理程式結果碼](http://technet.microsoft.com/library/cc720442.aspx)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [系統需求](../../../docs/framework/get-started/system-requirements.md)

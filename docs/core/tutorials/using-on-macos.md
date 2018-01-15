@@ -9,11 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
 
@@ -80,7 +81,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-執行[ `dotnet restore` ](../tools/dotnet-restore.md)，([請參閱附註](#dotnet-restore-note)) 它將還原的相依性，並建立*obj*資料夾內*文件庫*三個檔案中，包括*project.assets.json*檔案：
+執行 [`dotnet restore`](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note))，以還原相依性，並在其中有三個檔案的 *library* 內建立 *obj* 資料夾，包含 *project.assets.json* 檔案：
 
 ```console
 dotnet restore
@@ -194,7 +195,7 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-執行`dotnet restore`([請參閱附註](#dotnet-restore-note)) 若要還原在方案中的三個專案的相依性。 開啟 *Program.cs*，並將 `Main` 方法的內容取代為下行：
+執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))，還原方案中三個專案的相依性。 開啟 *Program.cs*，並將 `Main` 方法的內容取代為下行：
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");

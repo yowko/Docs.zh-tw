@@ -6,11 +6,12 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: fdbba188cf939ce3eb969a1f780e086fcf17da13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="net-core-dependencies"></a>.NET Core 的相依性
 
-早於 Windows 10 和 Windows Server 2016 的 Windows 版本上執行時，.NET core 1.1 及更早版本需要 Visual c + + 可轉散發套件。 .NET Core 安裝程式會自動安裝此相依性。
+在 Windows 10 和 Windows Server 2016 之前的 Windows 版本上執行時，.NET Core 1.1 及舊版需要 Visual C++ 可轉散發套件。 .NET Core 安裝程式會自動安裝此相依性。
 
 必須手動安裝 [Microsoft Visual C++ 2015 可轉散發套件 Update 3](https://www.microsoft.com/download/details.aspx?id=52685) 的時機：
 

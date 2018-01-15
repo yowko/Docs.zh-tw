@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 6db2bb6003e630aab900222eb20e33af287cf9c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -33,7 +34,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 ```
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet` 是命令列介面 (CLI) 工具鏈的通用驅動器。 它會自行叫用，提供簡短的使用方式指示。
 
@@ -47,7 +48,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additionaldeps <PATH>`
 
-其他路徑*deps.json*檔案。
+其他 *deps.json* 檔案的路徑。
 
 `--additionalprobingpath <PATH>`
 
@@ -119,7 +120,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-| 命令                             | 函式                                                            |
+| 命令                             | 功能                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -137,7 +138,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| 命令                             | 函式                                                            |
+| 命令                             | 功能                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -155,7 +156,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="project-references"></a>專案參考
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 新增專案參考。
 [dotnet list reference](dotnet-list-reference.md) | 列出專案參考。
@@ -163,14 +164,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="nuget-packages"></a>NuGet 套件
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
 ### <a name="nuget-commands"></a>NuGet 命令
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。

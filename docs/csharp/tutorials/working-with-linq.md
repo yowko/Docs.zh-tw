@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -329,6 +329,6 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 ## <a name="conclusion"></a>結論
 
-這個範例為您示範了一些用於 LINQ 的方法，以及如何建立可輕鬆搭配啟用 LINQ 的程式碼使用的方法。 範例同時示範延遲評估和立即評估的差異，以及兩者對效能可能會產生的影響。
+這個範例為您示範了一些用於 LINQ 的方法，以及如何建立可輕鬆搭配啟用 LINQ 之程式碼來使用的方法。 範例同時示範延遲評估和立即評估的差異，以及兩者對效能可能會產生的影響。
 
 您學到了一點魔術師的技巧。 魔術師之所以使用完美洗牌，是因為他們可以控制每張牌在牌堆中的動向。 在某些戲法中，魔術師讓觀眾把紙牌放在牌堆最上方，並在洗牌數次之後，仍然能知道該紙牌的位置。 其他的魔術則需要以特定方式設置牌堆。 魔術師會在表演戲法之前會先將牌堆設置好。 然後她會使用內部洗牌將牌堆洗 5 次。 在舞台上，她可以展示看起來像是隨機順序的牌堆，然後將紙牌洗 3 次，這個手法正好會將牌堆洗為她所想要的設置。

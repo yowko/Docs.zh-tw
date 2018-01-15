@@ -24,16 +24,17 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
 您可以透過許多方式，使用 .NET Framework 開發在使用者電腦或裝置上本機執行的 Windows 應用程式。 本節中的主題說明如何使用 Windows Presentation Foundation (WPF) 或 Windows Form 建立 Windows 應用程式。 不過，您也可以使用 .NET Framework 來建立 Web 應用程式，以及適用於您透過「Windows 市集」或「Windows Phone 市集」提供之電腦或裝置上的用戶端應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
  提供使用 WPF 開發應用程式的相關資訊。  
   
@@ -59,9 +60,9 @@ ms.lasthandoff: 11/21/2017
  [開始使用 ASP.NET 網站](http://www.asp.net/get-started/websites)  
  描述您可以使用 ASP.NET 開發 Web 應用程式的方式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [可攜式類別庫](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
  [概觀](../../docs/framework/get-started/overview.md)  
  [開發指南](../../docs/framework/development-guide.md)  
- [如何： 建立 Windows 傳統型應用程式](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
+ [如何：建立 Windows 傳統型應用程式](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Windows 服務應用程式](../../docs/framework/windows-services/index.md)

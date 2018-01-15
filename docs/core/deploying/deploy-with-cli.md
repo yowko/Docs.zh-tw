@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.workload: dotnetcore
+ms.openlocfilehash: 302383ec44afd91d1df7f6c717b268d5f965c8c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
 
 1. 更新專案的相依性和工具。
  
-   執行[dotnet 還原](../tools/dotnet-restore.md)([請參閱附註](#dotnet-restore-note)) 命令還原您的專案中指定的相依性。
+   執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
 
 1. 建立應用程式的偵錯組建。
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/18/2017
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
 
-部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要這些相依性都可供專案使用。 您可以執行之前，兩個額外的步驟所需`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令：
+部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要這些相依性都可供專案使用。 在執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令之前，需要執行兩個額外步驟：
 
 1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會包含對 [Json.NET](http://www.newtonsoft.com/json) 的相依性作為協力廠商程式庫：
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
       </ItemGroup>
       ```
 
-1. 如果尚未如此做，請下載包含協力廠商相依性的 NuGet 封裝。 若要下載的套件，請執行`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令之後新增相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
+1. 如果尚未如此做，請下載包含協力廠商相依性的 NuGet 封裝。 若要下載套件，請在新增相依性後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
 
 請注意，具有協力廠商相依性的 Framework 相依部署，可攜性只與其協力廠商相依性一致。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
 
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/18/2017
 
 1. 更新專案的相依性和工具。
 
-   執行[dotnet 還原](../tools/dotnet-restore.md)([請參閱附註](#dotnet-restore-note)) 命令還原您的專案中指定的相依性。
+   執行 [dotnet restore](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note)) 命令以還原專案中指定的相依性。
 
 1. 建立應用程式的偵錯組建。
 
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/18/2017
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>有協力廠商相依性的自封式部署
 
-部署具有一或多個協力廠商相依性的自封式部署，涉及新增相依性。 您可以執行之前，兩個額外的步驟所需`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令：
+部署具有一或多個協力廠商相依性的自封式部署，涉及新增相依性。 在執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 命令之前，需要執行兩個額外步驟：
 
 1. 將任何協力廠商程式庫參考新增至您 *csproj* 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會使用 Json.NET 作為協力廠商程式庫。
 
@@ -164,7 +165,7 @@ ms.lasthandoff: 11/18/2017
       </ItemGroup>
     ```
 
-1. 如果尚未如此做，請將包含協力廠商相依性的 NuGet 封裝下載至您的系統。 若要讓相依性使用您的應用程式，請執行`dotnet restore`([請參閱附註](#dotnet-restore-note)) 命令之後新增相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
+1. 如果尚未如此做，請將包含協力廠商相依性的 NuGet 封裝下載至您的系統。 請在新增相依性後執行 `dotnet restore` ([請參閱注意](#dotnet-restore-note)) 命令，讓應用程式取得相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
 
 下面是此專案的完整 *csproj* 檔案：
 
@@ -188,7 +189,7 @@ ms.lasthandoff: 11/18/2017
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>請參閱
+# <a name="see-also"></a>另請參閱
 
 [.NET Core 應用程式部署](index.md)   
 [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)   

@@ -1,5 +1,5 @@
 ---
-title: "開始使用 C# 和 Visual Studio 程式碼的 C# 手冊"
+title: "C# 與 Visual Studio Code 使用者入門 - C# 指南"
 description: "了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。"
 keywords: "C#, 使用者入門, 取得, 安裝, Visual Studio Code, 跨平台"
 author: kendrahavens
@@ -10,11 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -34,20 +35,20 @@ ms.lasthandoff: 11/15/2017
 
     * 開啟 Visual Studio Code。
     * 按一下左側功能表上的 [檔案總管] 圖示，然後按一下 [開啟資料夾]。
-    * 選取**檔案** > **開啟資料夾**從主功能表開啟資料夾中，您要 C# 專案中，按一下**選取資料夾**。 範例中，我們正在建立資料夾，名為受測專案的*HelloWorld*。
+    * 從主要功能表中選取 [檔案] > [開啟資料夾]，以開啟您想要放置 C# 專案的資料夾，然後按一下 [選取資料夾]。 針對本範例，我們將為專案建立一個名為 *HelloWorld* 的資料夾。
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. 初始化 C# 專案：
-    * 選取從 Visual Studio 程式碼開啟整合式終端機**檢視** > **整合的終端機**從主功能表。
+    * 從主要功能表中選取 [檢視] > [整合式終端機]，以從 Visual Studio Code 開啟 [整合式終端機]。
     * 在終端機視窗中，輸入 `dotnet new console`。
-    * 此命令會建立`Program.cs`已經寫入，以及 C# 專案檔名為簡單"Hello World"程式資料夾中的檔案`HelloWorld.csproj`。
+    * 此命令會在您的資料夾中建立已撰寫簡單 "Hello World" 程式的 `Program.cs` 檔案，以及名為 `HelloWorld.csproj` 的 C# 專案檔。
 
       ![DotNet 新增命令](media/with-visual-studio-code/dotnetnew.png)
 
 3. 解析組建資產：
 
-    * 如**.NET Core 1.x**，型別`dotnet restore`。 執行 `dotnet restore` 可讓您存取建置專案所需的必要 .NET Core 封裝。
+    * 針對 **.NET Core 1.x**，鍵入 `dotnet restore`。 執行 `dotnet restore` 可讓您存取建置專案所需的必要 .NET Core 封裝。
 
       ![DotNet 還原命令](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -63,11 +64,11 @@ ms.lasthandoff: 11/15/2017
 
 ## <a name="debug"></a>偵錯
 
-1. 按一下 *Program.cs* 來開啟它。 您在 Visual Studio 程式碼中，開啟 C# 檔案的第一次[OmniSharp](http://www.omnisharp.net/)在編輯器中載入。
+1. 按一下 *Program.cs* 來開啟它。 在 Visual Studio Code 中第一次開啟 C# 檔案時，會在編輯器中載入 [OmniSharp](http://www.omnisharp.net/)。
 
     ![開啟 Program.cs 檔案](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio 程式碼應該會提示您將加入遺漏的資產建置及偵錯您的應用程式。 選取 [是]。 
+2. Visual Studio Code 應該會提示您新增遺失的資產，以建置和偵錯您的應用程式。 選取 [是]。 
 
     ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,12 +80,12 @@ ms.lasthandoff: 11/15/2017
 
     ![選取 .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. 將中斷點加入至專案，按一下 上**編輯器邊界**，也就是在編輯器中，第 9 行旁邊的行號左邊的空間。
+5. 按一下第 9 行旁邊的「編輯器邊界」(編輯器中行號左側的空白處)，將中斷點新增至您的專案。
 
     ![設定中斷點](media/with-visual-studio-code/setbreakpoint.png)
 
-6. 若要啟動偵錯，請選取<kbd>F5</kbd>或綠色箭號。 當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。
-    * 偵錯時，您可以檢視您的本機變數的最上層的左窗格中，或使用 偵錯主控台。
+6. 若要開始偵錯，請選取 <kbd>F5</kbd> 或綠色箭頭。 當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。
+    * 進行偵錯時，您可以在左上角窗格中檢視您的本機變數或使用偵錯主控台。
 
     ![執行和偵錯](media/with-visual-studio-code/rundebug.png)
 
@@ -93,6 +94,6 @@ ms.lasthandoff: 11/15/2017
 > [!TIP] 
 > 如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (設定 .NET Core 偵錯工具的指示)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [設定 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
 [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)

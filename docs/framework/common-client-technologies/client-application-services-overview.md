@@ -16,14 +16,15 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5719cf7cfb5ec99f1bfbf952048e98c9465e1fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services-overview"></a>用戶端應用程式服務概觀
-用戶端應用程式服務簡化了對 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色以及 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式的設定檔服務的存取。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務隨附於 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Microsoft ASP.NET 2.0 AJAX Extensions 中。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。  
+用戶端應用程式服務簡化了從 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式對 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔服務的存取。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務隨附於 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Microsoft ASP.NET 2.0 AJAX Extensions 中。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。  
   
  用戶端應用程式服務包含可以插入 Web 服務擴充性模型的用戶端服務提供者，讓 Windows 應用程式能夠提供下列功能：  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Web.Security.Membership.ValidateUser%2A> 方法會使用表單驗證傳回值，指出遠端服務是否已驗證使用者。 若驗證成功，驗證 cookie 會儲存在本機硬碟上。 在存取角色和設定服務時，會使用此 Cookie 來確認驗證。  
   
- 使用表單驗證時，您可以將使用者名稱和密碼傳遞給 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法。 您也可以傳遞空字串或 `null` 做為使用認證提供者的參數。 認證提供者是您在應用程式組態中所提供和指定的類別。 認證提供者類別必須實作具有名為 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 單一方法的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 介面。 您可透過使用認證提供者在多個應用程式之間分享單一登入對話方塊。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+ 使用表單驗證時，您可以將使用者名稱和密碼傳遞給 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法。 您也可以傳遞空字串或 `null` 做為使用認證提供者的參數。 認證提供者是您在應用程式組態中所提供和指定的類別。 認證提供者類別必須實作具有名為 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 單一方法的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 介面。 您可透過使用認證提供者在多個應用程式之間分享單一登入對話方塊。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
  當您設定應用程式使用具有表單驗證的認證提供者時，必須傳遞空字串或 `null` 做為 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法的參數。 服務提供者會接著呼叫您的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> 方法實作。 一般而言，您會實作此方法來顯示對話方塊，並傳回填入的 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 物件。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
  用戶端應用程式服務提供者實作或擴充標準 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 型別，但不實作這些型別所定義的每個成員和功能。 例如，您無法使用用戶端應用程式服務提供者，實作用以建立新使用者和管理角色成員資格的使用者管理應用程式。 若要實作這項功能，您必須已在使用 Web 應用程式和伺服器端程式碼。 若要判斷哪些成員尚未實作，請參閱參考文件。您可以從這份資料表中的連結來存取這份參考文件。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.Web.ClientServices.ClientFormsIdentity>|此類別會管理表單驗證的使用者識別身分與驗證 Cookie。<br /><br /> 直接存取此類別的主要原因是呼叫 <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> 方法，它以無訊息方式重新驗證使用者 (例如，從離線模式切換成線上模式時)。<br /><br /> 使用表單驗證來驗證使用者之後，您可以透過擷取自 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性之 <xref:System.Security.Principal.IPrincipal> 參考的 <xref:System.Security.Principal.IPrincipal.Identity%2A> 屬性來擷取此類別的執行個體。|  
 |<xref:System.Web.ClientServices.ClientRolePrincipal>|此類別會管理使用者角色。<br /><br /> 此類別沒有任何無法間接存取的成員。 不過，驗證使用者之後，您可以透過 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性存取此類別的執行個體。|  
@@ -80,13 +81,13 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>|此類別代表使用者認證。<br /><br /> 當您實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 介面時，您將只會使用此類別做為 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 方法的傳回值類型。|  
 |<xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider>|此類別會管理表單驗證的遠端驗證服務存取權。<br /><br /> 直接存取此類別的主要原因，在利用其 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> 和 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> 成員，而基底 <xref:System.Web.Security.MembershipProvider> 類別並未實作這兩個成員。 您也可以使用 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.ServiceUri%2A> 屬性，以程式設計方式來設定服務位置。<br /><br /> 您可以透過 `static` <xref:System.Web.Security.Membership.Provider%2A?displayProperty=nameWithType> 屬性擷取此類別的執行個體。|  
 |<xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider>|此類別會管理 Windows 驗證。<br /><br /> 直接存取此類別的主要原因是呼叫其 <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.Logout%2A> 方法。 登出後，使用者仍然會於 Windows 驗證，但無法存取遠端應用程式服務。<br /><br /> 您可以透過 `static` <xref:System.Web.Security.Membership.Provider%2A?displayProperty=nameWithType> 屬性擷取此類別的執行個體。|  
-|<xref:System.Web.ClientServices.Providers.ClientRoleProvider>|此類別會管理遠端角色服務的存取權。<br /><br /> 直接存取此類別的主要原因是呼叫其 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 方法。 如果您的應用程式設定為使用非零的角色服務快取逾時值，這會非常有用。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 您也可以使用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ServiceUri%2A> 屬性，以程式設計方式來設定服務位置。<br /><br /> 您可以透過 `static` <xref:System.Web.Security.Roles.Provider%2A?displayProperty=nameWithType> 屬性擷取此類別的執行個體。|  
+|<xref:System.Web.ClientServices.Providers.ClientRoleProvider>|此類別會管理遠端角色服務的存取權。<br /><br /> 直接存取此類別的主要原因是呼叫其 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 方法。 如果您的應用程式設定為使用非零的角色服務快取逾時值，這會非常有用。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 您也可以使用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ServiceUri%2A> 屬性，以程式設計方式來設定服務位置。<br /><br /> 您可以透過 `static` <xref:System.Web.Security.Roles.Provider%2A?displayProperty=nameWithType> 屬性擷取此類別的執行個體。|  
 |<xref:System.Web.ClientServices.Providers.ClientSettingsProvider>|此類別會管理遠端 Web 設定服務的存取權。<br /><br /> 直接存取此類別的主要原因是處理 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件。 您也可以使用 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.ServiceUri%2A> 屬性，以程式設計方式來設定服務位置。|  
-|<xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>|如前面本主題的 [驗證] 區段中所述，此介面會為您的應用程式提供間接取得使用者認證以進行驗證的方式。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。|  
+|<xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>|如前面本主題的 [驗證] 區段中所述，此介面會為您的應用程式提供間接取得使用者認證以進行驗證的方式。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。|  
 |<xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs>|此類別會提供用於 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> 事件處理常式的 <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> 屬性。|  
 |<xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>|此類別會提供用於 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> 事件處理常式的 <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs.UserName%2A> 屬性。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [操作說明：使用用戶端應用程式服務實作使用者登入](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
@@ -94,8 +95,8 @@ ms.lasthandoff: 11/21/2017
  [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [使用表單驗證搭配 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [使用角色資訊與 Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [與 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [透過 Microsoft Ajax 使用角色資訊](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [透過 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
  [ASP.NET 驗證](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [使用角色管理授權](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
  [建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

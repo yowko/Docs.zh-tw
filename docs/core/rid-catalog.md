@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -85,7 +86,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
 
-.NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值。 處理多個 Linux 散發版本時，變更就特別有用。
+.NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值。 處理多個 Linux 散發時，它們特別實用。
 
 下列清單顯示用於每個 OS 的最常見 RID。 它不涵蓋 `arm` 或 `corert` 值。
 
@@ -111,7 +112,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `win10-arm`
   - `win10-arm64`
 
-請參閱[必要條件適用於在 Windows 上的.NET Core](windows-prerequisites.md)如需詳細資訊。
+如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](windows-prerequisites.md)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -165,25 +166,25 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 或更新版本)
 
-請參閱[必要條件適用於 Linux 上的.NET Core](linux-prerequisites.md)如需詳細資訊。
+如需詳細資訊，請參閱 [Linux 上 .NET Core 的必要條件](linux-prerequisites.md)。
 
-## <a name="macos-rids"></a>macOS Rid
+## <a name="macos-rids"></a>macOS RID
 
-macOS Rid 使用較舊的 「 OSX"商標。
+macOS RID 使用較舊的 "OSX" 商標。
 
-- `osx-x64`(.NET core 2.0 或更新版本，最低版本是`osx.10.12-x64`)
+- `osx-x64` (.NET Core 2.0 或更新版本，最小版本為 `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 或更新版本)
 - `osx.10.13-x64`
 
-請參閱[必要條件適用於.NET Core 上 macOS](macos-prerequisites.md)如需詳細資訊。
+如需詳細資訊，請參閱 [macOS 上 .NET Core 的必要條件](macos-prerequisites.md)。
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID (.NET Core 2.0 或更新版本)
 
 - `android`
 - `android.21`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [執行階段識別碼](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

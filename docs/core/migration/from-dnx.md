@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 .NET Core 的 RC1 版本與 ASP.NET Core 1.0 引進了 DNX 工具。 .NET Core 的 RC2 版本與 ASP.NET Core 1.0 則從 DNX 進展到了 .NET Core CLI。
 
 現在，讓我們稍微複習一下什麼是 DNX。 DNX 是一種執行階段和工具組，可用來建置 .NET Core 和 ASP.NET Core 1.0 應用程式。 它由 3 個主要部分所組成：
@@ -60,7 +61,7 @@ CLI 工具已透過兩種主要方式進行封裝：
 | dnu pack                          | dotnet pack       | 封裝您程式碼的 NuGet 套件。                                                                          |
 | dnx \[command] (例如 "dnx web")   | N/A\*             | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                       |
 | dnu install                       | N/A\*             | 在 DNX 環境中，將套件安裝為相依性。                                                              |
-| dnu restore                       | dotnet restore    | 還原您在 project.json 中指定的相依性。 ([請參閱附註](#dotnet-restore-note))                                                               |
+| dnu restore                       | dotnet restore    | 還原您在 project.json 中指定的相依性。 ([請參閱注意事項](#dotnet-restore-note))                                                               |
 | dnu publish                       | dotnet publish    | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。    |
 | dnu wrap                          | N/A\*             | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                      |
 | dnu 命令                      | N/A\*             | 在 DNX 環境中，管理已全域安裝的命令。                                                             |
@@ -76,7 +77,7 @@ DNU 具有「全域命令」的概念。 基本上，這當中包括封裝為 Nu
 CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；您可使用熟悉的 `dotnet <command>` 語法叫用這些命令。
 
 ### <a name="installing-dependencies"></a>安裝相依性
-截至 v1 為止，.NET Core CLI 工具都沒有可安裝相依性的 `install` 命令。 若要安裝 NuGet 封裝，您需要將它加入至相依性為您`project.json`檔，然後再執行`dotnet restore`([請參閱附註](#dotnet-restore-note))。 
+截至 v1 為止，.NET Core CLI 工具都沒有可安裝相依性的 `install` 命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。 
 
 ### <a name="running-your-code"></a>執行您的程式碼
 有以下兩種執行程式碼的主要方式。 一個是使用 `dotnet run`，從來源執行。 不同於 `dnx run`，這麼做並不會執行任何記憶體中編譯。 實際上，它會叫用 `dotnet build` 以建置您的程式碼，然後執行建置的二進位檔。 
@@ -129,7 +130,7 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 您的 `project.json` 現已大致就緒。 接著，您必須檢查相依性清單，並將相依性更新為較新版本；如果您是使用 ASP.NET Core 相依性的話，更應注意這項作業。 如果您之前針對 BCL API 使用不同的套件，則可以使用[應用程式可攜性類型](../deploying/index.md)文件中所述的執行階段套件。 
 
-準備好後，您可以嘗試還原與`dotnet restore`([請參閱附註](#dotnet-restore-note))。 根據您的相依性版本而定，如果 NuGet 無法解析上述其中一個目標架構的相依性，就可能會發生錯誤。 這是「時間點」的問題，因為隨著時間過去，會有越來越多套件支援這些架構。 目前來看，如果您遇到這個問題，可以使用 `framework` 節點內的 `imports` 陳述式，指定 NuGet 可以還原目標為 "imports" 陳述式內之架構的套件。 在此情況下取得的還原錯誤應具有足夠資訊，可讓您知道需要匯入哪些架構。 如果您有點跟不上或對這方面不太熟悉，一般來說，只要在 `imports` 陳述式中指定 `dnxcore50` 和 `portable-net45+win8` 就可以達到目的。 下列 JSON 程式碼片段會示範這個過程：
+準備好後，您可以嘗試使用 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 進行還原。 根據您的相依性版本而定，如果 NuGet 無法解析上述其中一個目標架構的相依性，就可能會發生錯誤。 這是「時間點」的問題，因為隨著時間過去，會有越來越多套件支援這些架構。 目前來看，如果您遇到這個問題，可以使用 `framework` 節點內的 `imports` 陳述式，指定 NuGet 可以還原目標為 "imports" 陳述式內之架構的套件。 在此情況下取得的還原錯誤應具有足夠資訊，可讓您知道需要匯入哪些架構。 如果您有點跟不上或對這方面不太熟悉，一般來說，只要在 `imports` 陳述式中指定 `dnxcore50` 和 `portable-net45+win8` 就可以達到目的。 下列 JSON 程式碼片段會示範這個過程：
 
 ```json
     "frameworks": {

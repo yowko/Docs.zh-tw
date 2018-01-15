@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -37,11 +38,11 @@ ms.lasthandoff: 10/18/2017
 ### <a name="recommendations"></a>建議
 由於會隱含參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件，因此建議使用下列最佳做法：
 
-* 當目標為.NET Core 或.NET 標準，永遠都不需要的明確參考`Microsoft.NETCore.App`或`NetStandard.Library`透過 metapackages`<PackageReference>`專案檔中的項目。
-* 如果您需要特定版本的執行階段，當目標為.NET Core 時，您應該使用`<RuntimeFrameworkVersion>`專案中的屬性 (例如， `1.0.4`) 而不是參考 metapackage。
+* 以 .NET Core 或 .NET Standard 為目標時，絕不透過專案檔中的 `<PackageReference>` 項目明確參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件。
+* 如果您以 .NET Core 為目標時需要特定版本的執行階段，您應該使用專案中的 `<RuntimeFrameworkVersion>` 屬性 (例如 `1.0.4`)，而不是參考中繼套件。
     * 如果您使用[獨立性部署](../deploying/index.md#self-contained-deployments-scd)，並需要 1.0.0 LTS 執行階段的特定更新程式版本，就可能會發生此情況。
-* 如果您需要特定版本的`NetStandard.Library`metapackage 為目標的.NET 標準時，您可以使用`<NetStandardImplicitPackageVersion>`必要的屬性和設定的版本。
-* 請勿明確地新增或更新為參考`Microsoft.NETCore.App`或`NetStandard.Library`metapackage.NET Framework 的專案中。 如果任何版本的`NetStandard.Library`需要使用標準.NET 為基礎的 NuGet 套件，NuGet 會自動安裝該版本。
+* 如果您以 .NET Standard 為目標時需要特定版本的 `NetStandard.Library` 中繼套件，您可以使用 `<NetStandardImplicitPackageVersion>` 屬性並設定所需的版本。
+* 請不要在 .NET Framework 專案中明確地新增或更新 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件的參考。 如果使用 .NET Standard 型 NuGet 套件時需要任何版本的 `NetStandard.Library`，NuGet 會自動安裝該版本。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 專案中包含預設編譯
 隨著改為使用最新 SDK 版本中的 *csproj* 格式，編譯項目的預設包含項目和排除項目以及內嵌資源都已移至 SDK 屬性檔。 這表示您不再需要於專案檔中指定這些項目。 
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 
 下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))： 
 
-| 項目           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob                |
+| 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
@@ -71,9 +72,9 @@ ms.lasthandoff: 10/18/2017
 
 這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
-`<EnableDefaultCompileItems>`只會停用`Compile`globs 但不會影響其他 globs，像是隱含`None`glob，也適用於\*.cs 項目。 因此，**方案總管 中**會繼續顯示\*.cs 項目，做為專案的一部分，包含做為`None`項目。 您可以使用類似的方式，`<EnableDefaultNoneItems>`停用隱含`None`glob。
+`<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以使用 `<EnableDefaultNoneItems>` 停用隱含 `None` GLOB。
 
-若要停用**所有隱含 globs**，您可以設定`<EnableDefaultItems>`屬性`false`如下列範例所示：
+若要停用**所有隱含 GLOB**，您可以將 `<EnableDefaultItems>` 屬性設定為 `false`，如下列範例所示：
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -184,7 +185,7 @@ ms.lasthandoff: 10/18/2017
 隨著改為使用 MSbuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 使用 `dotnet pack` 命令或屬於 SDK 一部分的 `Pack` MSBuild 目標時，會將下列的屬性清單當成封裝處理序的輸入使用。 
 
 ### <a name="ispackable"></a>IsPackable
-布林值，指定是否可封裝專案。 預設值是 `true`。 
+布林值，指定是否可封裝專案。 預設值為 `true`。 
 
 ### <a name="packageversion"></a>PackageVersion
 指定所產生之套件的版本。 接受所有形式的 NuGet 版本字串。 預設為 `$(Version)` 的值，也就是專案中的屬性 `Version`。 
@@ -198,7 +199,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="authors"></a>作者
 以分號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些名稱會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 UI 顯示中的套件詳細描述。
 
 ### <a name="copyright"></a>Copyright

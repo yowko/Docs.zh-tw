@@ -7,11 +7,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 9a79468168979a7c89efe48e11175f926e39cf4f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。 執行命令之後，系統就會將 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素新增至專案檔。
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-目前目錄中加入多個專案的專案參考：
+新增目前目錄中專案的多個專案參考：
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

@@ -13,11 +13,12 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
 .NET Framework 會隨著時間改變。 每個新版本都會加入一些提供新功能的新類型和類型成員。 現有的類型及其成員也會隨著時間改變。 例如，當某些類型所支援的技術由新技術取代時，這些類型的重要性會降低，而且某些方法會由更方便或功能更完整的新方法取代。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
 |.NET Framework 版本|`version` 字串|
 |-|-|  
-|4.7 （包括 4.7.1）|4.0 版起|  
+|4.7 (包括 4.7.1)|4.0 版起|  
 |4.6 (包括 4.6.1 和 4.6.2)|4.0 版起|  
 |4.5 (包括 4.5.1 和 4.5.2)|4.0 版起|  
 |4|4.0 版起|  
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/18/2017
   
  [.NET Framework 2.0 的過時清單](http://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

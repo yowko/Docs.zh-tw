@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
-
-## <a name="introduction"></a>簡介
 
 本教學課程詳細說明在 Docker 容器中建置和部署 ASP.NET Core 微服務所需的工作。 您將在本教學課程中了解︰
 
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-這會將目前目錄中的專案檔案複製到 Docker VM，並還原所有封裝。 使用 DotNet CLI，表示 Docker 映像必須包含 .NET Core SDK。 之後，會複製您應用程式其餘的部分，然後 dotnet publish 命令會建置和封裝您的應用程式。
+這會將目前目錄中的專案檔案複製到 Docker VM，並還原所有套件。 使用 DotNet CLI，表示 Docker 映像必須包含 .NET Core SDK。 之後，會複製您應用程式其餘的部分，然後 dotnet publish 命令會建置和封裝您的應用程式。
 
 此檔案的最後一行會執行該應用程式︰
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-您會使用 docker build 命令來建置映像。 從包含您程式碼的目錄執行下列命令。
+您會使用 `docker build` 命令來建置映像。 從包含您程式碼的目錄執行下列命令。
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 `--sig-proxy=false` 引數表示不會將 `Ctrl-C` 命令傳送到此容器處理序，但會停止 `docker attach` 命令。 最後一個引數是要在 `docker run` 命令中提供給容器的名稱。 
 
 > [!NOTE]
-> 您也可以使用 Docker 指派的容器 ID 來參考任何容器。 如果您並未在 `docker run` 中為您的容器指定名稱 ，您必須使用容器的 ID。
+> 您也可以使用 Docker 指派的容器識別碼來參考任何容器。 如果您並未在 `docker run` 中為您的容器指定名稱 ，您必須使用容器的 ID。
 
 開啟瀏覽器，並瀏覽到您的服務。 您會在命令視窗中看到來自所附加執行中容器的診斷訊息。
 
@@ -346,7 +344,7 @@ docker rmi weather-microservice
 
 ## <a name="conclusion"></a>結論 
 
-在本教學課程中，您已建置 ASP.NET Core 微服務，並加入一些簡單的功能。
+在本教學課程中，您已建置 ASP.NET Core 微服務，並新增一些簡單的功能。
 
 您為該服務建置了 Docker 容器映像，並在您的機器上執行該容器。 您將終端機視窗附加至該服務，並看到來自您服務的診斷訊息。
 

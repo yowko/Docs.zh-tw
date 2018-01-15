@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 發行您的 Hello World 應用程式
 
@@ -39,19 +40,19 @@ ms.lasthandoff: 10/18/2017
 
       * *HelloWorld.deps.json*
 
-         應用程式的執行階段相依性檔案。 它會定義.NET 核心元件及執行您的應用程式所需的程式庫 （包括包含您的應用程式的動態連結程式庫）。 如需詳細資訊，請參閱[執行階段組態檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
+         應用程式的執行階段相依性檔案。 它會定義執行您應用程式所需的 .NET Core 元件和程式庫 (包含內含您應用程式的動態連結程式庫)。 如需詳細資訊，請參閱[執行階段組態檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
  
       * *HelloWorld.dll*
 
-         包含您的應用程式的檔案。 它是動態連結程式庫，可執行輸入`dotnet HelloWorld.dll`命令主控台視窗中。 
+         包含您應用程式的檔案。 它是動態連結程式庫，可在主控台視窗中輸入 `dotnet HelloWorld.dll` 命令予以執行。 
 
       * *HelloWorld.pdb* (對於部署為選用)
 
-         包含偵錯符號檔。 此檔案不需要隨您的應用程式部署，但當您需要對應用程式發行的版本進行偵錯，則應該儲存它。
+         包含偵錯符號的檔案。 此檔案不需要隨您的應用程式部署，但當您需要對應用程式發行的版本進行偵錯，則應該儲存它。
 
       * *HelloWorld.runtimeconfig.json*
 
-         應用程式的執行階段組態檔。 它會識別.NET Core 建置您的應用程式上執行的版本。 如需詳細資訊，請參閱[執行階段組態檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
+         應用程式的執行階段組態檔。 它會識別建置您應用程式以在其上執行的 .NET Core 版本。 如需詳細資訊，請參閱[執行階段組態檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
 
    ![主控台視窗顯示已發行的檔案](media/publishing-with-visual-studio/publishedfiles.png)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
 本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。  
@@ -338,7 +339,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
-9. 確定游標在 `IClientformsAuthenticationCredentialsProvider`之後，然後按 Enter 鍵產生 `GetCredentials` 方法。  
+9. 確定游標在 `IClientformsAuthenticationCredentialsProvider` 之後，然後按 Enter 鍵產生 `GetCredentials` 方法。  
   
 10. 找出 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 實作，然後以下列程式碼取代。  
   
@@ -394,7 +395,7 @@ ms.lasthandoff: 11/21/2017
      如果使用者的角色為 "manager"， `DisplayButtonForManagerRole` 方法會將 <xref:System.Windows.Forms.Control.Visible%2A> 的 `managerOnlyButton` 屬性設定為 `true`。 如果擲回 <xref:System.Net.WebException> 表示角色服務無法使用，這個方法也會顯示錯誤訊息。  
   
     > [!NOTE]
-    >  如果使用者登入已過期， <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法一律會傳回 `false` 。 如果應用程式在驗證後很短的時間內呼叫一次 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 (如本逐步解說的範例程式碼所示)，則不會發生這種情況。 如果應用程式必須在其他時間點擷取使用者角色，您可能會想要加入程式碼，以重新驗證登入已過期的使用者。 如果所有有效的使用者都獲派角色，您可以呼叫 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法以判斷登入是否過期。 如果沒有角色傳回，則表示登入已過期。 如需這項功能的範例，請參閱 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才需要這項功能。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+    >  如果使用者登入已過期， <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法一律會傳回 `false` 。 如果應用程式在驗證後很短的時間內呼叫一次 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 (如本逐步解說的範例程式碼所示)，則不會發生這種情況。 如果應用程式必須在其他時間點擷取使用者角色，您可能會想要加入程式碼，以重新驗證登入已過期的使用者。 如果所有有效的使用者都獲派角色，您可以呼叫 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法以判斷登入是否過期。 如果沒有角色傳回，則表示登入已過期。 如需這項功能的範例，請參閱 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才需要這項功能。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
@@ -448,7 +449,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]
      [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
   
-10. 在設計工具中選取表單，然後在 [屬性]  視窗中按一下 [事件]  按鈕。  
+10. 在設計工具中選取表單，然後在 [屬性] 視窗中按一下 [事件] 按鈕。  
   
 11. 選取 <xref:System.Windows.Forms.Form.FormClosing> 事件，然後按 ENTER 鍵產生事件處理常式。  
   
@@ -456,7 +457,7 @@ ms.lasthandoff: 11/21/2017
   
      <xref:System.Windows.Forms.Form.FormClosing> 事件處理常式會呼叫 `SaveSettings` 方法，下一節將加入的登出功能也會使用這個方法。 `SaveSettings` 方法會先確認使用者尚未登出，作法是檢查目前主體所傳回之 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 的 <xref:System.Security.Principal.IIdentity> 屬性。 目前的主體是透過 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 屬性所擷取。 如果使用者已經過驗證可使用用戶端應用程式服務，驗證類型將會是 "ClientForms"。 `SaveSettings` 方法不能只檢查 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> 屬性，因為使用者在登出後可能仍擁有有效的 Windows 識別。  
   
-     如果使用者尚未登出， `SaveSettings` 方法會呼叫在這個程序稍早所產生之 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 類別的 `Settings` 方法。 如果驗證 Cookie 已過期，這個方法會擲回 <xref:System.Net.WebException> 。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才會發生這種情況。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法會透過呼叫 <xref:System.Web.Security.Membership.ValidateUser%2A> 顯示 [登入] 對話方塊的方式，處理 Cookie 過期。 如果使用者成功登入， `SaveSettings` 方法會呼叫本身以嘗試再次儲存設定。  
+     如果使用者尚未登出， `SaveSettings` 方法會呼叫在這個程序稍早所產生之 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 類別的 `Settings` 方法。 如果驗證 Cookie 已過期，這個方法會擲回 <xref:System.Net.WebException> 。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才會發生這種情況。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法會透過呼叫 <xref:System.Web.Security.Membership.ValidateUser%2A> 顯示 [登入] 對話方塊的方式，處理 Cookie 過期。 如果使用者成功登入， `SaveSettings` 方法會呼叫本身以嘗試再次儲存設定。  
   
      如同先前的程式碼，如果遠端服務無法使用， `SaveSettings` 方法會顯示錯誤訊息。 如果設定提供者無法存取遠端服務，則設定仍然會儲存在本機快取中，然後在應用程式重新啟動時重新載入。  
   
@@ -536,7 +537,7 @@ ms.lasthandoff: 11/21/2017
   
  如此即完成範例應用程式。 若要測試離線功能，請執行應用程式，以 employee 或 manager 的身分登入，然後選取 [離線工作] 。 修改文字方塊中的值，然後關閉應用程式。 重新啟動應用程式。 登入前，以滑鼠右鍵按一下工作列上通知區域中的 ASP.NET 程式開發伺服器圖示，然後按一下 [停止] 。 接著以正常的方式登入。 即使伺服器不在執行中，您仍然可以登入。 修改文字方塊的值、結束，然後再重新啟動，以查看修改過的值。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  在本逐步解說中，您已了解如何在 Windows Form 應用程式中啟用及使用用戶端應用程式服務。 設定測試伺服器之後，您可以將程式碼加入應用程式以驗證使用者，並從伺服器擷取使用者角色和應用程式設定。 您也了解如何啟用離線模式，以便讓應用程式在無法連接時，使用本機資料快取而不是遠端服務。  
   
 ## <a name="next-steps"></a>後續步驟  
@@ -544,7 +545,7 @@ ms.lasthandoff: 11/21/2017
   
  為了加強應用程式的安全性，請務必在部署前徹底測試應用程式和伺服器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: "動態類型產生可回收組件"
+title: "動態類型產生的可回收組件"
 description: 
 ms.date: 08/29/2017
 ms.prod: .net
@@ -13,77 +13,78 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c9a613f4cc13c3e4189a59ace2e05d01d1bcb4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0756fe317469898dd165e55be7125922f5b692f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="collectible-assemblies-for-dynamic-type-generation"></a>動態類型產生可回收組件
+# <a name="collectible-assemblies-for-dynamic-type-generation"></a>動態類型產生的可回收組件
 
-*可回收組件*是動態組件，而不卸載它們建立所在的應用程式定義域可以卸載。 可回收組件和它所包含的型別所使用的所有 managed 和 unmanaged 記憶體回收。 組件名稱等資訊是從內部資料表中移除。
+「可回收組件」是動態組件，不需要卸載其建立所在的應用程式定義域即可予以卸載。 可以回收可回收組件所使用的所有受控和非受控記憶體與其包含的類型。 組件名稱這類資訊會從內部資料表中予以移除。
 
-若要啟用卸載，請使用<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType>旗標，當您建立動態組件。 組件是暫時性 （也就是它不能儲存） 而且受限於中所述限制[可回收組件的限制](#restrictions-on-collectible-assemblies)> 一節。 Common language runtime (CLR) 會自動卸載可回收組件，當您發行組件相關聯的所有物件。 在其他方面，可回收組件會建立和使用方式與其他動態組件相同。
+若要啟用卸載，請在建立動態組件時使用 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> 旗標。 組件是暫時性 (也就是無法儲存它) 並受限於[可回收組件的限制](#restrictions-on-collectible-assemblies)一節中所述的限制。 通用語言執行平台 (CLR) 會在您發行所有與組件建立關聯的物件時自動卸載可回收組件。 在所有其他方面，可回收組件的建立和使用方式都會與其他動態組件相同。
 
 ## <a name="lifetime-of-collectible-assemblies"></a>可回收組件的存留期
 
-可回收組件的存留期會控制所包含的類型以及從這些型別所建立的物件參考存在。 Common language runtime 不會卸載組件，只要有一個或多個項目存在 (`T`組件中定義的所有類型): 
+可回收組件的存留期受控於是否有其所含類型以及從這些型別所建立之物件的參考。 只要有下列其中一或多個項目，通用語言執行平台就不會卸載組件 (`T` 是組件中定義的任何類型)： 
 
 - `T` 的執行個體。
 
-- 陣列的執行個體`T`。
+- `T` 陣列的執行個體。
  
-- 具有泛型類型的執行個體`T`做為其中一個型別引數。 這包括的泛型集合`T`，即使該集合是空的。
+- 將 `T` 作為它的其中一個型別引數的泛型型別執行個體。 這包含 `T` 的泛型集合，即使該集合是空的也是一樣。
 
-- 執行個體<xref:System.Type>或<xref:System.Reflection.Emit.TypeBuilder>表示`T`。 
+- 表示 `T` 的 <xref:System.Type> 或 <xref:System.Reflection.Emit.TypeBuilder> 執行個體。 
 
    > [!IMPORTANT]
-   > 您必須釋放所有物件，代表組件的部分。 <xref:System.Reflection.Emit.ModuleBuilder>定義`T`會保留參考<xref:System.Reflection.Emit.TypeBuilder>，而<xref:System.Reflection.Emit.AssemblyBuilder>物件會保留參考<xref:System.Reflection.Emit.ModuleBuilder>，因此必須釋放這些物件的參考。 即使有<xref:System.Reflection.Emit.LocalBuilder>或<xref:System.Reflection.Emit.ILGenerator>之建構中使用`T`可避免卸載。
+   > 您必須發行所有代表組件各部分的物件。 定義 `T` 的 <xref:System.Reflection.Emit.ModuleBuilder> 會保留 <xref:System.Reflection.Emit.TypeBuilder> 的參考，而 <xref:System.Reflection.Emit.AssemblyBuilder> 物件會保留 <xref:System.Reflection.Emit.ModuleBuilder> 的參考，因此必須發行這些物件的參考。 即使建構 `T` 時已使用 <xref:System.Reflection.Emit.LocalBuilder> 或 <xref:System.Reflection.Emit.ILGenerator> 還是會防止卸載。
 
-- 靜態參考`T`其他動態定義的型別來`T1`這仍可執行程式碼。 例如，`T1`可能會衍生自`T`，或`T`可能是在方法中參數的型別`T1`。
+- 依另一個動態定義型別 `T1` 之 `T` 的靜態參考，而此動態定義型別仍然可以透過執行程式碼來取得。 例如，`T1` 可能衍生自 `T`，或 `T` 可能是 `T1` 的方法中的參數類型。
  
-- A **ByRef**至靜態欄位所屬`T`。
+- 屬於 `T` 之靜態欄位的 **ByRef**。
 
-- A <xref:System.RuntimeTypeHandle>， <xref:System.RuntimeFieldHandle>，或<xref:System.RuntimeMethodHandle>參考`T`或元件的`T`。
+- <xref:System.RuntimeTypeHandle>、<xref:System.RuntimeFieldHandle> 或 <xref:System.RuntimeMethodHandle>，可以參考 `T` 或 `T` 的元件。
 
-- 執行任何的個體無法間接使用的反映物件或直接存取<xref:System.Type>物件，代表`T`。 例如，<xref:System.Type>物件`T`可以從其項目類型是陣列型別取得`T`，或從具有泛型型別`T`作為類型引數。 
+- 任何反映物件執行個體，可以間接或直接用來存取代表 `T` 的 <xref:System.Type> 物件。 例如，`T` 的 <xref:System.Type> 物件可以從其項目類型為 `T` 的陣列類型取得，或從具有 `T` 作為型別引數的泛型型別取得。 
 
-- 方法`M`任何執行緒的呼叫堆疊上其中`M`是一種方法的`T`或組件中定義的模組層級方法。
+- 任何執行緒呼叫堆疊上的方法 `M`，其中 `M` 是 `T` 的方法或是組件中所定義的模型層級方法。
 
-- 定義組件的模組中的靜態方法的委派。
+- 定義於組件模組中之靜態方法的委派。
 
-如果只有一個項目從這個清單有只有一個型別或組件中的一個方法，執行階段無法卸載組件。
+如果組件中的一個類型或一個方法在此清單中只有一個項目，則執行階段無法卸載組件。
 
 > [!NOTE]
-> 執行階段不會實際卸載組件清單中的所有項目執行完成項之前。
+> 除非已針對清單中的所有項目執行完成項，否則執行階段不會實際卸載組件。
 
-基於追蹤存留期的詳細資訊，建構的泛型類型例如`List<int>`（C# 中） 或`List(Of Integer)`（在 Visual Basic)，是建立，而且用於產生可回收組件會被視為已定義組件中，包含泛型類型定義，或是在組件包含的其中一個型別引數的定義。 使用的確切組件是實作詳細資料和可能有所變更。
+基於追蹤存留期的目的，會將產生可回收組件時所建立和使用的建構化泛型型別 (例如，C# 中的 `List<int>` 或 Visual Basic 中的 `List(Of Integer)`) 視為已定義在包含泛型型別定義的組件中，或包含它的其中一個型別引號定義的組件中。 使用的確切組件是實作詳細資料，而且可能會變更。
  
 ## <a name="restrictions-on-collectible-assemblies"></a>可回收組件的限制
 
 下列限制適用於可回收組件： 
 
 - **靜態參考**   
-  一般的動態組件中的類型不能有靜態參考可回收組件中定義的類型。 例如，如果您定義一般型別繼承自可回收組件中的型別<xref:System.NotSupportedException>擲回例外狀況。 可回收組件中的型別可以有類型的靜態參考另一個可回收組件，但這會擴充參考的組件參考的組件的存留期的存留期。
+  一般動態組件中的類型不能有可回收組件中所定義型別的靜態參考。 例如，如果您定義繼承自可回收組件中類型的一般類型，則會擲回 <xref:System.NotSupportedException> 例外狀況。 可回收組件中的類型可以有另一個可回收組件中類型的靜態參考，但這會將已參考組件的存留期擴充為參考中組件的存留期。
 
-- **COM interop**   
-   COM 介面都不可以定義內可回收組件，並為可回收組件中類型的任何執行個體都可以轉換為 COM 物件。 可回收組件中的類型不能做為 COM 可呼叫包裝函式 (CCW) 或執行階段可呼叫包裝函式 (RCW)。 不過，可回收組件中的型別可以使用實作 COM 介面的物件。
+- **COM Interop**   
+   在可回收組件內無法定義 COM 介面，而且可回收組件內的型別執行個體無法轉換為 COM 物件。 可回收組件中的類型不能作為 COM 可呼叫包裝函式 (CCW) 或執行階段可呼叫包裝函式 (RCW)。 不過，可回收組件中的類型可以使用可實作 COM 介面的物件。
 
 - **平台叫用**   
-   具有方法<xref:System.Runtime.InteropServices.DllImportAttribute>可回收組件中宣告時，不會編譯屬性。 <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType>指令不能用於在可回收組件，類型的實作，這類類型無法封送處理至 unmanaged 程式碼。 不過，您可以呼叫原生程式碼使用宣告非可回收組件中的進入點。
+   具有 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性的方法在可回收組件中進行宣告時就不會進行編譯。 <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> 指令不能用於可回收組件中的類型實作，而且無法將此等類型封送處理至非受控碼。 不過，您可以使用非可回收組件中所宣告的進入點來呼叫原生程式碼。
  
 - **封送處理**   
-   無法封送處理 （特別是在委派） 中可回收組件中定義的物件。 這是所有的暫時性發出型別上的限制。
+   無法封送處理可回收組件中所定義的物件 (特別是委派)。 這是所有暫時發出型別的限制。
 
-- **載入的組件**   
-   反映發出時，才支援載入可回收組件的唯一機制。 載入使用其他任何形式的組件載入的組件無法卸載。
+- **組件載入**   
+   反映發出是唯一支援載入可回收組件的機制。 無法卸載使用其他任何形式的組件載入所載入的組件。
  
 - **內容繫結物件**    
-   不支援 context 靜態變數。 可回收組件中的類型無法擴充<xref:System.ContextBoundObject>。 不過，可回收組件中的程式碼可以其他地方使用內容繫結所定義的物件。
+   不支援內容靜態變數。 可回收組件中的類型無法擴充 <xref:System.ContextBoundObject>。 不過，可回收組件中的程式碼可以使用在其他位置定義的內容繫結物件。
 
 - **執行緒靜態資料**       
    不支援執行緒靜態變數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)

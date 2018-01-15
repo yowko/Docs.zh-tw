@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 10/18/2017
 本文假設您已具備下列條件：
 
 - 使用 Visual Studio 2017 或更新版本。
-  - .NET 核心不支援舊版的 Visual Studio
+  - 舊版 Visual Studio 不支援 .NET Core
 - 了解[建議的移植程序](index.md)。
 - 已解決任何[協力廠商相依性](third-party-deps.md)問題。
 
@@ -178,10 +179,10 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。 若要這樣做，您必須使用能針對 .NET Core 建置並執行測試的測試架構。 目前有三個選項︰
 
 - [xUnit](https://xunit.github.io/)
-  * [使用者入門](http://xunit.github.io/docs/getting-started-dotnet-core.html)
+  * [快速入門](http://xunit.github.io/docs/getting-started-dotnet-core.html)
   * [將 MSTest 專案轉換成 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](http://www.nunit.org/)
-  * [使用者入門](https://github.com/nunit/docs/wiki/Installation)
+  * [快速入門](https://github.com/nunit/docs/wiki/Installation)
   * [關於從 MSTest 移轉至 NUnit 的部落格文章](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 

@@ -9,13 +9,14 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 16f3cfd482bddfff1b9ad56e7ffe58ae2aed4980
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a>適用於.NET Core macOS 上的必要條件
+# <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先決條件
 
 本文章說明在 macOS 電腦上開發、部署和執行 .NET Core 應用程式，所需之支援的 macOS 版本和 .NET Core 的相依性。 下述支援的 OS 版本與相依性適用於三種在 Mac 上開發 .NET Core 應用程式的方式：透過[命令列搭配您慣用的編輯器](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) \(英文\)，以及 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)。
 
@@ -23,15 +24,15 @@ ms.lasthandoff: 10/27/2017
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET core 2.x 支援下列版本的 macOS:
+下列 macOS 版本支援 .NET Core 2.x：
 
-* macOS 10.12"利也"和更新版本
+* macOS 10.12 "Sierra" (含) 以上版本
 
 如需 .NET Core 2.x 支援的作業系統完整清單、不支援的作業系統版本，以及週期原則連結，請參閱 [.NET Core 2.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-.NET core 1.x 支援 macOS 下列版本：
+下列 macOS 版本支援 .NET Core 1.x：
 
 * macOS 10.12 "Sierra"
 * macOS 10.11 "El Capitan"
@@ -66,11 +67,11 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 ## <a name="increase-the-maximum-open-file-limit"></a>增加開啟檔案上限
 
-MacOS 的預設開啟的檔案限制可能無法完全針對.NET 核心工作負載，例如還原專案或執行單元測試。
+macOS 的預設開啟檔案限制可能對一些 .NET Core 工作負載而言不足，例如還原專案或執行單元測試。
 
-您可以增加此限制，依照下列步驟：
+您可以遵循下列步驟來增加此限制：
 
-1. 使用文字編輯器中，建立新的檔案_/Library/LaunchDaemons/limit.maxfiles.plist_，此內容中儲存檔案：
+1. 使用文字編輯器建立新檔案 _/Library/LaunchDaemons/limit.maxfiles.plist_，並儲存含此內容的檔案：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -102,7 +103,7 @@ MacOS 的預設開啟的檔案限制可能無法完全針對.NET 核心工作負
 echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 ```
 
-3. 重新啟動才能套用這些設定 Mac。
+3. 重新啟動 Mac，以套用這些設定。
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 

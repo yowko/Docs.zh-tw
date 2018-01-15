@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -62,33 +63,33 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux-distribution-dependencies"></a>Linux 發行版本相依性
 
-下列被要作為範例。 確切的版本和名稱會有些許上您所選擇的 Linux 散發。
+下列要作為範例。 確切的版本和名稱在您選擇的 Linux 發行版本上可能略有出入。
 
 ### <a name="ubuntu"></a>Ubuntu
 
 Ubuntu 發行版本需要安裝下列程式庫：
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
 * libkrb5
 * zlib1g
-* libicu52 （適用於 14.X)
-* libicu55 （適用於 16.X)
-* libicu57 （適用於 17.X)
+* libicu52 (適用於 14.X)
+* libicu55 (適用於 16.X)
+* libicu57 (適用於 17.X)
 
 ### <a name="centos"></a>CentOS
 
 CentOS 發行版本需要安裝下列程式庫：
 
 * libunwind
-* lttng ust
+* lttng-ust
 * libcurl
-* openssl 程式庫
+* openssl-libs
 * libuuid
-* krb5 程式庫
+* krb5-libs
 * libicu
 * zlib
 
@@ -105,7 +106,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>使用 .NET Core 安裝程式指令碼以指令碼進行安裝
 
-`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。 您可以下載從指令碼： https://dot.net/v1/dotnet-install.sh
+`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。 指令碼下載位置：https://dot.net/v1/dotnet-install.sh
 
 安裝程式 bash 指令碼是用於自動化案例和非系統管理員安裝。 此指令碼也能讀取 PowerShell 參數，所以它們可以搭配 Linux/OS X 系統上的指令碼一起使用。
 
@@ -211,6 +212,12 @@ Linux 上有兩個安裝程式套件選擇：
 
 3. 設定所需的裝載套件摘要版本。
 
+   **Ubuntu 17.10**
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+   sudo apt-get update
+   ```
    **Ubuntu 17.04**
 
    ```bash
@@ -235,7 +242,7 @@ Linux 上有兩個安裝程式套件選擇：
 4. 安裝 .NET Core。
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.0.0
+   sudo apt-get install dotnet-sdk-2.1.3
    ```
 
 4. 執行 `dotnet --version` 命令，以證明安裝成功。

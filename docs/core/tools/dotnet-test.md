@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnetcore
+ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。
 
@@ -39,7 +40,7 @@ dotnet test [-h|--help]
 ```
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet test` 命令是用來在指定的專案中執行單元測試。 單元測試是與單元測試架構 (例如 MSTest、NUnit 或 xUnit) 具有相依性的主控台應用程式專案，以及該單元測試架構的 dotnet 測試執行器。 這些會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
@@ -194,7 +195,7 @@ dotnet test [-h|--help]
 
 `<operator>` 描述屬性和值之間的關聯性：
 
-| 運算子 | 函式        |
+| 運算子 | 功能        |
 | :------: | --------------- |
 | `=`      | 完全相符     |
 | `!=`     | 不完全相符 |
@@ -206,16 +207,16 @@ dotnet test [-h|--help]
 
 運算式可以使用條件運算子聯結：
 
-| 運算子 | 函式 |
+| 運算子 | 功能 |
 | :------: | :------: |
-| <code>&#124;</code>      | 或       |
+| <code>&#124;</code>      | OR       |
 | `&`      | AND      |
 
-您也可以將運算式括在括號使用條件式運算子時 (例如， `(Name~TestMethod1) | (Name~TestMethod2)`)。
+使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
 
 如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  [架構與目標](../../standard/frameworks.md)  
  [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

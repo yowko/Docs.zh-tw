@@ -7,17 +7,18 @@ ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet publish` - 將應用程式與其相依性封裝至資料夾中，以部署至主機系統。
 
@@ -39,7 +40,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 輸出會包含下列內容：
 
@@ -91,11 +92,11 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
-如果提供相對路徑，則產生的輸出目錄是相對於專案檔案的位置，不會以目前的工作目錄。
+如果提供相對路徑，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
 
 `--self-contained`
 
-使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 如已指定執行階段識別碼，則其預設值是 `true`。 如需不同部署類型的詳細資訊，請參閱[.NET Core 應用程式部署](../deploying/index.md)。
+使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 如已指定執行階段識別碼，則其預設值是 `true`。 如需不同部署類型的詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -130,7 +131,7 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
-如果提供相對路徑，則產生的輸出目錄是相對於專案檔案的位置，不會以目前的工作目錄。
+如果提供相對路徑，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -164,7 +165,7 @@ dotnet publish [-h|--help]
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [目標架構](../../standard/frameworks.md)
 * [執行階段識別項 (RID) 目錄](../rid-catalog.md)

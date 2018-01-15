@@ -17,14 +17,15 @@ caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: efdb4bec75d160acd212b763690bd7a473c35eed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e000d0efbd999d228e10a5df8e6368cbf22c5088
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
-SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯 Managed 程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
+SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯受控程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
   
 > [!NOTE]
 >  如果您使用的是 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]，Visual Studio 中的 Windows 偵錯工具支援 SOS.dll，但是 Visual Studio 偵錯工具的即時運算視窗中則不支援。  
@@ -37,7 +38,7 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
   
 ## <a name="commands"></a>命令  
   
-|命令|說明|  
+|命令|描述|  
 |-------------|-----------------|  
 |**AnalyzeOOM** (**ao**)|顯示在記憶體回收堆積的配置要求上，最後發生之 OOM 的資訊。 (在伺服器記憶體回收中，它會顯示每個記憶體回收堆積上的 OOM (如果存在))。|  
 |**BPMD** [**-nofuturemodule**] [\<*module name*> \<*method name*>] [**-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*> **-clearall**|在所指定模組中的指定方法上建立中斷點。<br /><br /> 如果指定的模組和方法尚未載入，這個命令便會在建立中斷點之前，等待已載入模組和已完成 Just-in-Time (JIT) 編譯的通知。<br /><br /> 您可以使用 **-list**、**-clear** 和 **-clearall** 選項來管理暫止中斷點的清單：<br /><br /> **-list** 選項會產生所有暫止中斷點的清單。 如果暫止中斷點具有非零的模組 ID，就是該特殊載入模組中函式的特定中斷點。 如果暫止中斷點具有零模組 ID，該中斷點就會套用至尚未載入的模組。<br /><br /> 使用 **-clear** 或 **-clearall** 選項可從清單中移除暫止中斷點。|  
@@ -61,9 +62,9 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 |**DumpSigElem** \<*sigaddr*> \<*moduleaddr*>|顯示簽章物件的單一項目。 在大多數情況下，您都應該使用 **DumpSig** 來查看個別簽章物件。 不過，如果簽章已經以某種形式損毀，您可以使用 **DumpSigElem** 來讀取它的有效部分。|  
 |**DumpStackObjects** [**-verify**] [`top` *stack* [`bottom` *stack*]]<br /><br /> -或-<br /><br /> **DSO** [**-verify**] [`top` *stack* [`bottom` *stack*]]|顯示可在目前堆疊界限內找到的所有 Managed 物件。<br /><br /> **-verify** 選項會驗證物件欄位的每個非靜態 `CLASS` 欄位。<br /><br /> 使用 **DumpStackObject** 命令和追蹤命令 (例如 **K** 命令和 **CLRStack** 命令)，即可判斷區域變數和參數的值。|  
 |**DumpVC** \<*MethodTable address*> \<*Address*>|顯示在所指定位址之實值類別欄位的相關資訊。<br /><br /> **MethodTable** 參數可讓 **DumpVC** 命令正確地解譯欄位。 實值類別並未以方法資料表做為其第一個欄位。|  
-|**EEHeap** [**-gc**] [**-loader**]|顯示由內部通用語言執行平台資料結構使用的處理序記憶體相關資訊。<br /><br /> **-gc** 和 **-loader** 選項會將這個命令的輸出限制為記憶體回收行程或載入器資料結構。<br /><br /> 記憶體回收行程的資訊會列出 Managed 堆積中每個區段的範圍。  如果指標位於 **-gc** 所指定的區段範圍內，該指標就是物件指標。|  
+|**EEHeap** [**-gc**] [**-loader**]|顯示由內部 CLR 資料結構使用的處理序記憶體相關資訊。<br /><br /> **-gc** 和 **-loader** 選項會將這個命令的輸出限制為記憶體回收行程或載入器資料結構。<br /><br /> 記憶體回收行程的資訊會列出 Managed 堆積中每個區段的範圍。  如果指標位於 **-gc** 所指定的區段範圍內，該指標就是物件指標。|  
 |**EEStack** [**-short**] [**-EE**]|在處理序中的所有執行緒上執行 **DumpStack** 命令。<br /><br /> **-EE** 選項會直接傳遞到 **DumpStack** 命令。 **-short** 參數會將輸出限制到下列種類的執行緒：<br /><br /> 具有鎖定的執行緒。<br /><br /> 已經停止以便允許記憶體回收的執行緒。<br /><br /> 目前在 Managed 程式碼中的執行緒。|  
-|**EEVersion**|顯示通用語言執行平台版本。|  
+|**EEVersion**|顯示 CLR 版本。|  
 |**EHInfo** [\<*MethodDesc address*>] [\<*Code address*>]|顯示所指定方法中的例外狀況處理區塊。  這個命令會顯示子句區塊 (`try` 區塊) 和處理常式區塊 (`catch` 區塊) 的程式碼位址和位移。|  
 |**常見問題集**|顯示常見問題集。|  
 |**FinalizeQueue** [**-detail**] &#124; [**-allReady**] [**-short**]|顯示所有已註冊為完成項的物件。<br /><br /> **-detail** 選項會顯示需要清除之任何 `SyncBlocks` 的額外資訊，以及等待清除之任何 `RuntimeCallableWrappers` (RCW) 的額外資訊。 當完成項執行緒執行時，便會快取和清除這兩種資料結構。<br /><br /> `-allReady` 選項會顯示已準備好進行最終處理的所有物件，無論它們已經由記憶體回收這樣標記，或是將由下一個記憶體回收所標記，都會包括在內。 在「準備最終處理」清單中的物件，也就是不再是根目錄的可最終處理物件。 這個選項可能非常昂貴，因為它會驗證可最終處理佇列中的所有物件是否依然為根目錄。<br /><br /> `-short` 選項會將輸出限制為每個物件的位址。 如果搭配使用它與 **-allReady**，它就會列舉具有完成項且不再為根目錄的所有物件。 如果單獨使用，它就會在可進行最終處理和「準備最終處理」的佇列中列出所有物件。|  
@@ -95,7 +96,7 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 |**SyncBlk** [**-all** &#124; \<*syncblk number*>]|顯示所指定 `SyncBlock` 結構，或是所有的 `SyncBlock` 結構。  如果您沒有傳遞任何引數，**SyncBlk** 命令便會顯示屬於某執行緒擁有之物件的對應 `SyncBlock` 結構。<br /><br /> `SyncBlock` 結構是專門放置並非每一個物件都要建立之額外資訊的容器。 其中可以包含 COM Interop 資料、雜湊碼，以及安全執行緒作業的鎖定資訊。|  
 |**ThreadPool**|顯示 Managed 執行緒集區的相關資訊，其中包括佇列中工作要求的數目、完成連接埠執行緒的數目，以及計時器的數目。|  
 |**Token2EE** \<*module name*> \<*token*>|將所指定模組中的已指定中繼資料語彙基元轉變成 `MethodTable` 結構或 `MethodDesc` 結構。<br /><br /> 您可以將 `*` 當做模組名稱參數傳遞，便可了解該語彙基元對應至每一個載入之 Managed 模組中的哪個項目。 您也可以傳遞模組的偵錯工具名稱，例如 `mscorlib` 或 `image00400000`。|  
-|**Threads** [**-live**] [**-special**]|顯示處理序中的所有 Managed 執行緒。<br /><br /> **Threads** 命令會顯示偵錯工具簡略 ID、通用語言執行平台執行緒 ID，以及作業系統執行緒 ID。  此外，**Threads** 命令也會顯示 Domain 資料行、APT 資料行和 Exception 資料行，分別指出執行緒執行所在的應用程式定義域、COM Apartment 模式和執行緒中最近一次擲回的例外狀況。<br /><br /> **-live** 選項會顯示與運作中執行緒建立關聯的執行緒。<br /><br /> **-special** 選項會顯示由 CLR 建立的所有特殊執行緒。 特殊執行緒包括記憶體回收執行緒 (在並行和伺服器記憶體回收中)、偵錯工具 Helper 執行緒、完成項執行緒、<xref:System.AppDomain> 卸載執行緒，以及執行緒集區計時器執行緒。|  
+|**Threads** [**-live**] [**-special**]|顯示處理序中的所有 Managed 執行緒。<br /><br /> **Threads** 命令會顯示偵錯工具簡略識別碼、CLR 執行緒識別碼，以及作業系統執行緒識別碼。  此外，**Threads** 命令也會顯示 Domain 資料行、APT 資料行和 Exception 資料行，分別指出執行緒執行所在的應用程式定義域、COM Apartment 模式和執行緒中最近一次擲回的例外狀況。<br /><br /> **-live** 選項會顯示與運作中執行緒建立關聯的執行緒。<br /><br /> **-special** 選項會顯示由 CLR 建立的所有特殊執行緒。 特殊執行緒包括記憶體回收執行緒 (在並行和伺服器記憶體回收中)、偵錯工具 Helper 執行緒、完成項執行緒、<xref:System.AppDomain> 卸載執行緒，以及執行緒集區計時器執行緒。|  
 |**ThreadState \<** *State value field* **>**|顯示執行緒的狀態。 `value` 參數為 **Threads** 報告輸出中 `State` 欄位的值。<br /><br /> 範例：<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
 |**TraverseHeap** [**-xml**] \<*filename*>|使用 CLR 分析工具可了解的格式，將堆積資訊寫入至指定的檔案。 **-xml** 選項會使 **TraverseHeap** 命令將檔案的格式設定為 XML。<br /><br /> 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=67325)下載 CLR 分析工具。|  
 |**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|顯示由方法之 `MethodDesc` 結構指標，或是由方法主體內之程式碼位址所指定 Managed 方法的標註反組譯碼。 **U** 命令會顯示從開始到結束的整個方法，以及將中繼資料語彙基元轉換成名稱的註釋。<br /><br /> **-gcinfo** 選項會使 **U** 命令顯示方法的 `GCInfo` 結構。<br /><br /> **-ehinfo** 選項會顯示方法的例外狀況資訊。 您也可以使用 **EHInfo** 命令取得這項資訊。<br /><br /> **-n** 選項會停用原始程式檔名稱和行號的顯示。 如果偵錯工具有指定 SYMOPT_LOAD_LINES 選項，SOS 就會查詢每個 Managed 框架的符號，而且如果成功，就會顯示對應的原始程式檔名稱和行號。 您可以指定 **-n** 選項以停用這種行為。|  
@@ -105,7 +106,7 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 |**VMStat**|提供虛擬位址空間的摘要檢視，並依據套用至該記憶體的各種保護類型 (無限制、保留、認可、私用、對應、影像) 進行排列。 TOTAL 資料行會顯示 AVERAGE 資料行乘以 BLK COUNT 資料行的結果。|  
   
 ## <a name="remarks"></a>備註  
- SOS 偵錯擴充功能讓您能夠檢視在通用語言執行平台內執行之程式碼的相關資訊。 例如，您可以使用 SOS 偵錯擴充功能來顯示 Managed 堆積的相關資訊、尋找堆積損毀、顯示執行階段所使用的內部資料類型，並檢視在執行階段內執行之所有 Managed 程式碼的資訊。  
+ SOS 偵錯延伸模組讓您能夠檢視在 CLR 內執行之程式碼的相關資訊。 例如，您可以使用 SOS 偵錯擴充功能來顯示 Managed 堆積的相關資訊、尋找堆積損毀、顯示執行階段所使用的內部資料類型，並檢視在執行階段內執行之所有 Managed 程式碼的資訊。  
   
  若要在 Visual Studio 中使用 SOS 偵錯擴充功能，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。 如需 Visual Studio 的整合式偵錯環境的詳細資訊，請參閱 Windows 開發人員中心內的[Debugging Environments](http://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)(偵錯環境)。  
   
@@ -212,6 +213,6 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 !token2ee unittest.exe 02000003  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

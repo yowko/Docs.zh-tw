@@ -14,11 +14,11 @@ ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 96e6785086f8c97f983c6dcd6fd713c01e34e258
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1ce74601136c870097d6d558e1f3ff12ba1c212
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>如何：在 Visual Basic 中建立檔案
 這個範例會在 <xref:System.IO.File> 類別中使用 <xref:System.IO.File.Create%2A> 方法，以在指定的路徑中建立空白文字檔。  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
   
  如果使用者無權建立檔案，則會擲回 <xref:System.UnauthorizedAccessException>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO>  
  <xref:System.IO.File.Create%2A>  
- [從部分信任程式碼使用程式庫](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
- [程式碼存取安全性的基本概念](https://msdn.microsoft.com/library/33tceax8)
+ [從部分受信任程式碼使用程式庫](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
+ [程式碼存取安全性的基本概念](../../../../framework/misc/code-access-security-basics.md)

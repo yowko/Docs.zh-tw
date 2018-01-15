@@ -13,11 +13,11 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform (C# 編譯器選項)
 指定哪個 Common Language Runtime (CLR) 版本可以執行組件。  
@@ -40,11 +40,11 @@ ms.lasthandoff: 11/21/2017
   
 -   **ARM** 會將您的組件編譯為可在採用 Advanced RISC Machine (ARM) 處理器的電腦上執行。  
   
--   **x64** 會在支援 AMD64 或 EM64T 指令集的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。  
+-   在支援 AMD64 或 EM64T 指令集的電腦上，**x64** 會將組件編譯成由 64 位元 CLR 執行。  
   
--   **x86** 會編譯將由 32 位元、x86 相容的 Common Language Runtime 所執行的組件。  
+-   **x86** 會將組件編譯為以 32 位元、與 x86 相容的 CLR 執行。  
   
--   **Itanium** 會在使用 Itanium 處理器的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。  
+-   **Itanium** 會將組件編譯為可以在使用 Itanium 處理器的電腦上以 64 位元 CLR 執行。  
   
  在 64 位元 Windows 作業系統上：  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 11/21/2017
 csc /platform:anycpu filename.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 326b952b742dc3400b7a84ba35594b61aeaabb6c
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
@@ -37,7 +38,7 @@ signtool [command] [options] [file_name | ...]
   
 #### <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |`command`|四個命令之一 (`catdb`、`sign`、`Timestamp` 或 `Verify`)，指定要對檔案執行的操作。 如需每個命令的描述，請參閱下一個表格。|  
 |`options`|修改命令的選項。 除了全域 `/q` 和 `/v` 選項外，每個命令支援一組唯一的選項。|  
@@ -45,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  簽署工具支援下列命令。 每個命令都會搭配一組獨特選項使用，這些選項列於個別區段中。  
   
-|命令|說明|  
+|命令|描述|  
 |-------------|-----------------|  
 |`catdb`|在目錄資料庫中加入或移除目錄檔。 目錄資料庫可以用來自動查閱目錄檔，並且是由 GUID 所識別。 如需 `catdb` 命令支援選項的清單，請參閱 [catdb 命令選項](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
 |`sign`|數位簽署檔案。 數位簽章可以防止檔案遭到篡改，而且可讓使用者根據簽署憑證確認簽署者。 如需 `sign` 命令支援選項的清單，請參閱 [sign 命令選項](../../../docs/framework/tools/signtool-exe.md#sign)。|  
@@ -54,7 +55,7 @@ signtool [command] [options] [file_name | ...]
   
  下列選項適用於所有簽署工具命令。  
   
-|Global 選項|說明|  
+|Global 選項|描述|  
 |-------------------|-----------------|  
 |**/q**|如果命令成功執行則不顯示任何輸出，如果命令失敗則顯示最少的輸出。|  
 |**/v**|不論命令執行成功或失敗，都顯示詳細資訊輸出，並顯示警告訊息。|  
@@ -64,7 +65,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>catdb 命令選項  
  下表列出可以搭配 `catdb` 命令使用的選項。  
   
-|Catdb 選項|說明|  
+|Catdb 選項|描述|  
 |------------------|-----------------|  
 |`/d`|指示預設目錄資料庫已經更新。 如果未使用 `/d` 和 `/g` 選項，簽署工具就會更新系統元件和驅動程式資料庫。|  
 |`/g` *GUID*|指定由全域唯一識別項 *GUID* 所識別的目錄資料庫已更新。|  
@@ -75,7 +76,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Sign 命令選項  
  下表列出可以搭配 `sign` 命令使用的選項。  
   
-|Sign 命令選項|說明|  
+|Sign 命令選項|描述|  
 |-------------------------|-----------------|  
 |`/a`|自動選取最佳的簽署憑證。 簽署工具會找到滿足所有指定條件的所有有效憑證，並且選取有效時間最長的一個。 如果沒有這個選項，簽署工具只需要找出一個有效的簽署憑證。|  
 |`/ac`  *file*|從 *file* 將其他憑證加入至簽章區塊。|  
@@ -111,7 +112,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp 命令選項  
  下表列出可以搭配 `TimeStamp` 命令使用的選項。  
   
-|TimeStamp 選項|說明|  
+|TimeStamp 選項|描述|  
 |----------------------|-----------------|  
 |`/p7`|為 PKCS #7 檔案加上時間戳記。|  
 |`/t`  *URL*|指定時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/t` 或 `/tr` 任一選項。|  
@@ -124,7 +125,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>驗證命令選項  
   
-|Verify 選項|說明|  
+|Verify 選項|描述|  
 |-------------------|-----------------|  
 |`/a`|指定所有方法都可以用來驗證檔案。 首先會搜尋目錄資料庫，判斷檔案是否已在目錄中簽署。 如果檔案未在任何目錄中簽署，簽署工具便會嘗試驗證檔案的內嵌簽署。 驗證不一定已在目錄中簽署的檔案時，建議您採用這個選項。 這些檔案的範例包括 Windows 檔案或驅動程式。|  
 |`/ad`|使用預設目錄資料庫尋找目錄。|  
@@ -178,7 +179,7 @@ signtool sign /f MyCert.pfx /p MyPassword MyFile.exe
  下列命令會對檔案進行數位簽署和時間戳記。 用於簽署檔案的憑證存放在 PFX 檔中。  
   
 ```  
-signtool sign /f MyCert.pfx /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  下列命令會使用位於主旨名稱為 `My` 之 `My Company Certificate` 存放區中的憑證來簽署檔案。  
@@ -196,7 +197,7 @@ Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl
  下列命令會為已數位簽署的檔案加上時間戳記。  
   
 ```  
-signtool timestamp /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  下列命令會確認檔案是否已簽署。  
@@ -217,6 +218,6 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
