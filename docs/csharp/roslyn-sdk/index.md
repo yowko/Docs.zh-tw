@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 8bebb739805f28bdc192aef7678e762d0aa51016
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET 編譯器平台 SDK
 
-當編譯器驗證應用程式程式碼的語法和語意時，會同時建置該程式碼的詳細模型。 使用此模型可從原始程式碼建置可執行檔輸出。 .NET 編譯器平台 SDK 提供對此模型的存取權。 目前，我們越來越依賴整合式開發環境 (IDE) 功能來提高我們的生產力，例如 IntelliSense、重構、智慧型重新命名、「尋找所有參考」和「移至定義」。 我們依賴程式碼分析工具來改善程式碼品質，並依賴程式碼產生器來協助建構應用程式。 隨著這些工具變得越來越聰明，當它們處理應用程式程式碼時，需要存取越來越多只有編譯器會建立的模型。 這就是 Roslyn API 的核心任務：開啟黑箱並允許工具和使用者共用編譯器所擁有關於程式碼的豐富資訊。
+當編譯器驗證應用程式程式碼的語法和語意時，會同時建置該程式碼的詳細模型。 其使用此模型從原始程式碼建置可執行檔輸出。 .NET 編譯器平台 SDK 提供對此模型的存取權。 目前，我們越來越依賴整合式開發環境 (IDE) 功能來提高我們的生產力，例如 IntelliSense、重構、智慧型重新命名、「尋找所有參考」和「移至定義」。 我們依賴程式碼分析工具來改善程式碼品質，並依賴程式碼產生器來協助建構應用程式。 隨著這些工具變得越來越聰明，當它們處理應用程式程式碼時，需要存取越來越多只有編譯器會建立的模型。 這就是 Roslyn API 的核心任務：開啟黑箱並允許工具和使用者共用編譯器所擁有關於程式碼的豐富資訊。
 相對於不透明的原始程式碼輸入和目的碼輸出轉譯器，透過 Roslyn，編譯器變成了平台：也就是您可以針對您的工具和應用程式中的程式碼相關工作所使用的 API。
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET 編譯器平台 SDK 概念

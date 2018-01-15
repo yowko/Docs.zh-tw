@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: f7b002c1439a95929ca177aeced91164430220c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d9498454cfee02e5749a7ed87783b5476469b8d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="local-transactions"></a>本機異動
 當您要將多個工作繫結在一起，以讓它們當做單一的工作單位來執行時，便會使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的交易。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果其中任何一項失敗，然後這兩個更新會回復。  
@@ -29,10 +29,10 @@ ms.lasthandoff: 12/22/2017
 ## <a name="determining-the-transaction-type"></a>決定異動類型  
  交易是被視為本機交易時它是單一階段交易並直接處理資料庫。 交易是被視為分散式的交易時，它由交易監視器進行協調，並使用保全機制 （如兩階段認可） 進行異動解析。  
   
- 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都有它自己的 `Transaction` 物件，以執行本機交易。 如果您需要在 SQL Server 資料庫中執行交易，請選擇 <xref:System.Data.SqlClient> 交易。 若為 Oracle 交易，請使用 <xref:System.Data.OracleClient> 提供者。 此外，新 <xref:System.Data.Common.DbTransaction> 類別可用於寫入獨立於提供者以外且需要交易的程式碼。  
+ 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都有它自己的 `Transaction` 物件，以執行本機交易。 如果您需要在 SQL Server 資料庫中執行交易，請選擇 <xref:System.Data.SqlClient> 交易。 若為 Oracle 交易，請使用 <xref:System.Data.OracleClient> 提供者。 此外，還有<xref:System.Data.Common.DbTransaction>適用於撰寫需要交易的提供者獨立程式碼的類別。  
   
 > [!NOTE]
->  在伺服器上執行交易是最有效率的。 如果您使用的 SQL Server 資料庫大量使用明確的交易，請考慮使用 Transact-SQL BEGIN TRANSACTION 陳述式，將它們寫入為預存程序。 如需執行伺服器端交易的詳細資訊，請參閱《SQL Server 線上叢書》。  
+>  在伺服器上執行異動是最有效率的。 如果您使用的 SQL Server 資料庫大量使用明確的交易，請考慮使用 Transact-SQL BEGIN TRANSACTION 陳述式，將它們寫入為預存程序。 如需執行伺服器端交易的詳細資訊，請參閱《SQL Server 線上叢書》。  
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>使用單一連接執行交易  
  在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，您會使用 `Connection` 物件控制交易。 您可使用 `BeginTransaction` 方法來起始本機交易。 開始交易之後，您可使用 `Transaction` 物件的 `Command` 屬性，在該交易中登記命令。 然後，您可根據交易元件的成敗，來認可或復原對資料來源所做的修改。  

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>執行運算式樹狀架構
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/18/2017
 
 在大多數情況下，這會在運算式和其對應委派之間建立一個簡單的對應。 例如，由 `Expression<Func<int>>` 表示的運算式樹狀架構會轉換成 `Func<int>` 類型的委派。 對於具有任何傳回型別和引數清單的 Lambda 運算式，會有一個委派類型，它是由該 Lambda 運算式表示之可執行程式碼的目標類型。
 
-`LamdbaExpression` 類型包含將運算式樹狀架構轉換成可執行程式碼時所使用的 `Compile` 和 `CompileToMethod` 成員。 `Compile` 方法會建立委派。 `ConmpileToMethod` 方法會以表示運算式樹狀架構之編譯輸出的 IL 來更新 `MethodBuilder` 物件。 請注意，`CompileToMethod` 僅適用於完整桌面架構，而不適用於 .NET Core 架構。
+`LamdbaExpression` 類型包含將運算式樹狀架構轉換成可執行程式碼時所使用的 `Compile` 和 `CompileToMethod` 成員。 `Compile` 方法會建立委派。 `CompileToMethod` 方法會以表示運算式樹狀架構之編譯輸出的 IL 來更新 `MethodBuilder` 物件。 請注意，`CompileToMethod` 僅適用於完整桌面架構，而不適用於 .NET Core 架構。
 
 或者，您也可以提供 `DebugInfoGenerator`，以接收所產生之委派物件的符號偵錯資訊。 這可讓您將運算式樹狀架構轉換成委派物件，並具有所產生之委派的完整偵錯資訊。
 
