@@ -11,11 +11,11 @@ ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
 caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7445a2919baaa477b4611c4c5ee5a0031539ca30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 628f08aaebfa209fc9cb7cfb2b506fc67d5424f9
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>物件和集合初始設定式 (C# 程式設計手冊)
 物件初始設定式可讓您在建立期間將值指派給物件的任何可存取欄位或屬性，而不用叫用後面接著幾行指派陳述式的建構函式。 物件初始設定式語法可讓您為建構函式指定引數或省略引數 (以及括號語法)。  下列範例將示範如何使用有具名類型 `Cat` 的物件初始設定式，以及如何叫用預設建構函式。 請注意 `Cat` 類別中自動實作屬性的用法。 如需詳細資訊，請參閱[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)] 
  
-物件初始設定式語法可讓您建立執行個體，並後，它會指派新建立的物件，使用其指派的屬性中指派, 的變數。
+物件初始設定式語法可讓您建立執行個體，然後將新建立的物件及其指派的屬性指派給指派作業中的變數。
   
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名類型的物件初始設定式  
  雖然物件初始設定式可以用於任何內容，但是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
@@ -80,10 +80,21 @@ var numbers = new Dictionary<int, string> {
 };  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="examples"></a>範例
+
+ 下列範例結合了物件和集合初始設定式的概念。
+
  [!code-csharp[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
-  
-## <a name="see-also"></a>另請參閱  
+ 
+ 如下列範例所示，實作 <xref:System.Collections.IEnumerable> 的物件包含了具有多個參數的 `Add` 方法，讓集合初始設定式可以處理對應 `Add` 方法簽章的清單中每個項目的多個元素。 
+ 
+ [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
+ 
+ 如下列範例所示，`Add` 方法可以使用 `params` 關鍵字來接受各種數目的引數。 此範例示範索引子的自訂實作，以及使用索引來初始化集合。
+ 
+ [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
+ 
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

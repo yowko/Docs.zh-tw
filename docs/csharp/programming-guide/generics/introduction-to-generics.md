@@ -9,11 +9,11 @@ ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>泛型簡介 (C# 程式設計手冊)
 泛型類別和方法將再使用性、型別安全和效率三者結合在一起，發揮了非泛型類別和方法所無法提供的功能。 泛型最常搭配在其上操作的集合和方法使用。 .NET Framework 2.0 版類別庫提供了新的命名空間 <xref:System.Collections.Generic>，其中包含數個新的泛型集合類別。 建議以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 和更新版本為目標的所有應用程式都使用新的泛型集合類別，而不是舊版的非泛型集合類別，例如 <xref:System.Collections.ArrayList>。 如需詳細資訊，請參閱 [.NET Framework 類別庫](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
@@ -22,9 +22,9 @@ ms.lasthandoff: 11/21/2017
   
 -   作為 `AddHead` 方法中的方法參數類型。  
   
--   作為公用方法 `GetNext` 的傳回型別，以及巢狀 `Node` 類別中的 `Data` 屬性。  
+-   作為巢狀 `Node` 類別中 `Data` 屬性的傳回型別。  
   
--   作為巢狀類別中的私用成員資料類型。  
+-   作為巢狀類別中私用成員 `data` 的類型。  
   
  請注意，T 可用於巢狀 `Node` 類別。 當 `GenericList<T>` 以具象類型具現化時 (例如具現化為 `GenericList<int>`)，所出現的每個 `T` 都會以 `int` 取代。  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Generic>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)
