@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2573ff7ff4a03d5ec8a56ef311a3c065d040ccf9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支援與不支援的 LINQ 方法 (LINQ to Entities)
 本章節提供的資訊是有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢所支援或不支援的 Language-Integrated Query (LINQ) 標準查詢運算子。 許多 LINQ 標準查詢運算子都有一個可接受整數引數的多載版本。 整數引數對應到所操作，序列中以零為起始的索引<xref:System.Collections.Generic.IEqualityComparer%601>，或<xref:System.Collections.Generic.IComparer%601>。 除非另外指定，否則不支援 LINQ 標準查詢運算子的這些多載版本，而且嘗試使用它們將會擲回例外狀況。  

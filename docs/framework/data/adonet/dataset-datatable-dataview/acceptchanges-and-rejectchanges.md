@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 72868cb81c8abb988dd765f4b3ed68bf3c4a71da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c7d86aed61957d15d9c37f494bf80088b164dea
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 和 RejectChanges
 在驗證中的資料所做的變更的正確性之後<xref:System.Data.DataTable>，您可以接受變更<xref:System.Data.DataRow.AcceptChanges%2A>方法<xref:System.Data.DataRow>， <xref:System.Data.DataTable>，或<xref:System.Data.DataSet>，它會將設定**目前**資料列值為**原始**值，並將設定**RowState**屬性**Unchanged**。 接受或拒絕變更會清除任何**RowError**資訊，並且**HasErrors**屬性**false**。 接受或拒絕變更也會影響資料來源中的資料更新。 如需詳細資訊，請參閱[以 Dataadapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  

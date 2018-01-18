@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b30f4e36ffd98289bb971e04b55b0249138e0efd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45061ed18d5854092db4a8d90bc18d48e2e6e6db
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET 中的資料類型對應
 .NET Framework 是以一般型別系統為基礎，其中定義了型別在執行階段的宣告、使用和管理方式。 它同時包含了都衍生自 <xref:System.Object> 基底類型的實值型別 (Value Type) 和參考型別 (Reference Type)。 使用資料來源時，如果沒有明確指定資料型別，就會從資料提供者 (Data Provider) 推斷資料型別。 例如，<xref:System.Data.DataSet> 物件與任何特定資料來源無關。 `DataSet` 內的資料是由資料來源擷取而來，且變更會藉由 `DataAdapter` 存回資料來源； 也就是說，當 `DataAdapter` 將來自資料來源的值填入 <xref:System.Data.DataTable> 內的 `DataSet`時，`DataTable` 內資料行的結果資料型別屬於 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，而非 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者用於連接資料來源的特定型別。  

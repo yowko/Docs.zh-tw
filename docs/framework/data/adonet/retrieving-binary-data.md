@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 43e937836911808789e2cad8affb395cc73ceb68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b32002b8bb9b1eaf7a72a8fac306ecdd5f2e5931
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="retrieving-binary-data"></a>擷取二進位資料
 根據預設， **DataReader**整列資料可用時，內送資料載入為資料列。 但是二進位大型物件 (BLOB) 需要不同的處理方式，因為它們所包含的資料可能高達數 GB，無法包含在單一資料列內。 **Command.ExecuteReader**方法具有多載會採用<xref:System.Data.CommandBehavior>引數以修改預設行為**DataReader**。 您可以傳遞<xref:System.Data.CommandBehavior.SequentialAccess>至**ExecuteReader**方法，以修改預設行為**DataReader**以便而不是正在載入的資料列，它將會載入資料以循序方式在接收時。 這種方式相當適於載入 BLOB 或其他大型資料結構。 請注意，這個行為取決於您的資料來源。 例如，從 Microsoft Access 傳回 BLOB 會將整個正在載入的 BLOB 載入記憶體，而不是在接收時循序載入。  

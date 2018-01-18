@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 執行個體 (ADO.NET)
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 允許應用程式在目前網路內尋找 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 執行個體。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會將此資訊公開至應用程式開發人員，並提供包含所有可見伺服器之相關資訊的 <xref:System.Data.DataTable>。 傳回這個資料表包含一份符合使用者嘗試建立新的連接時所提供的清單，並展開下拉式清單包含所有可用的伺服器上的網路上可用的伺服器執行個體**連線屬性** 對話方塊。 顯示的結果不一定是完整的。  
@@ -56,10 +56,10 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Column|描述|  
 |------------|-----------------|  
-|**伺服器名稱**|伺服器名稱。|  
-|**執行個體名稱**|伺服器執行個體的名稱。 如果伺服器做為預設執行個體執行，則此處為空白。|  
+|**ServerName**|伺服器名稱。|  
+|**InstanceName**|伺服器執行個體的名稱。 如果伺服器做為預設執行個體執行，則此處為空白。|  
 |**IsClustered**|表示伺服器是否為叢集的一部分。|  
-|**版本**|伺服器版本。 例如: <br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012年)|  
+|**版本**|伺服器版本。 例如: <br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
   
 ## <a name="enumeration-limitations"></a>列舉型別限制  
  可能會，也可能不會列出所有可用的伺服器。 此清單需視逾時及網路流量之類的因素而定。 這可能會導致兩個連續呼叫的清單不同， 而只會列出相同網路上的伺服器。 廣播封包通常不會周遊路由器，因此您可能看不到某個列出的伺服器，但它在所有呼叫中都是穩定的。  

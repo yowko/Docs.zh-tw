@@ -1,5 +1,5 @@
 ---
-title: ". (成員存取) (Entity SQL)"
+title: "。 (成員存取) (Entity SQL)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 36699b403241e9a5496e722e81c833be0ed63101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c90c908e567ac05f344292411978ff0c80919a65
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="-member-access-entity-sql"></a>。 (成員存取) (Entity SQL)
 點運算子 （.） 是[!INCLUDE[esql](../../../../../../includes/esql-md.md)]成員存取運算子。 使用成員存取運算子可產生結構化概念模型型別執行個體之屬性或欄位的值。  

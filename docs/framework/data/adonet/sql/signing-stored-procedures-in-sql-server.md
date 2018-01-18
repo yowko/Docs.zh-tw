@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b3d90579e28fde40d461bdb511d797e5d7f6f179
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中簽署預存程序
 您可以使用憑證或非對稱金鑰來簽署預存程序。 這是針對無法透過擁有權鏈結繼承權限或擁有權鏈結中斷 (例如動態 SQL) 的案例所設計。 然後，您可以建立對應至憑證的使用者，並授與該預存程序需要存取之物件的權限給憑證使用者。  

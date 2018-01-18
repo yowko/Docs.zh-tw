@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>DataTable 條件約束
 您可以使用條件約束，強制使用 <xref:System.Data.DataTable> 中的資料限制，以維持資料的完整性。 條件約束是指套用到資料行或相關資料行的自動規則，當資料列的值變更時，條件約束可決定採取的動作。 強制使用條件約束時`System.Data.DataSet.EnforceConstraints`屬性<xref:System.Data.DataSet>是**true**。 如需示範如何設定 `EnforceConstraints` 屬性的程式碼範例，請參閱 <xref:System.Data.DataSet.EnforceConstraints%2A> 參考主題。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 |規則設定|描述|  
 |------------------|-----------------|  
-|**重疊顯示**|刪除或更新關聯資料列。|  
+|**Cascade**|刪除或更新關聯資料列。|  
 |**SetNull**|在相關資料列中設定值**DBNull**。|  
 |**SetDefault**|將關聯資料列中的值設為預設值。|  
 |**無**|不對關聯資料列採取任何動作。 這是預設值。|  
@@ -71,7 +71,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |規則設定|描述|  
 |------------------|-----------------|  
-|**重疊顯示**|接受或拒絕子資料列的變更。|  
+|**Cascade**|接受或拒絕子資料列的變更。|  
 |**無**|不對子資料列採取任何動作。 這是預設值。|  
   
 ### <a name="example"></a>範例  

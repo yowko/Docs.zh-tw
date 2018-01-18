@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99845420549393829582ade11f38b75e3ebff484
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB 的 SqlClient 支援
 從 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 開始，將可使用名為 LocalDB 的程式名稱 Denali ( [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]的輕量型版本)。 本主題討論如何連接到 LocalDB 資料庫。  

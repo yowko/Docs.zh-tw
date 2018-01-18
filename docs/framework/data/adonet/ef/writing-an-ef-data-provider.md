@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80f425f6e2a9d583ec221b91ae9bb2cd2604ff54
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>撰寫 Entity Framework 資料提供者
 本節將討論如何撰寫 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供者來支援 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 以外的資料來源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 包含可支援 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的提供者。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 -   透過概念模型公開中繼資料 (如資料表和檢視表)。  
   
- ![b42a7a5c &#45; 0ac0 &#45; 4911 &#45; 86be &#45; 0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
+ ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>範例  
  請參閱[Entity Framework 範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)某個[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不是支援的資料來源的提供者[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。  

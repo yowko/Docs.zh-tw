@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="architecture-and-design"></a>架構與設計
 中的 SQL 產生模組[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)實作為上代表命令樹運算式樹狀結構的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 -   若要重新命名別名，您必須識別所有使用的別名，才能避免在重新命名期間發生衝突。 若要在 SqlBuilder 中延後重新命名選擇，請使用 Symbol 物件來代表成為重新命名候選的資料行。  
   
- ![圖表](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  在第一個階段中，造訪運算式樹狀時，運算式會組成 SqlSelectStatement、聯結會扁平化，而且聯結別名也會扁平化。 在這個行程中，Symbol 物件代表可重新命名的資料行或輸入別名。  
   

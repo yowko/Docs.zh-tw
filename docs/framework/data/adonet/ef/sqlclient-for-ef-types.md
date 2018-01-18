@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50898395dcba9e33544cae63208b352c7a6fb6f4
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>適用於 Entity Framework 之 SqlClient 的類型
 .NET Framework Data Provider for SQL Server (SqlClient) 提供者資訊清單檔案包含下列的清單：提供者基本型別 (Primitive Type)、每個型別的 Facet、概念和儲存體模型基本型別之間的對應，以及概念和儲存體模型基本型別之間的提升及轉換規則。  
@@ -34,13 +34,13 @@ ms.lasthandoff: 12/22/2017
 |`bigint`|N/A|`Edm.Int64`|N/A|  
 |`float`|N/A|`Edm.Double`|N/A|  
 |`real`|N/A|`Edm.Double`|N/A|  
-|`decimal`|N/A|`Edm.Decimal`|有效位數：<br /><br /> -最小值： 1<br /><br /> -最大： 38<br /><br /> -預設值： 18<br /><br /> -常數： False<br /><br /> 小數位數：<br /><br /> -最小值： 0<br /><br /> -最大： 38<br /><br /> -預設值： 0<br /><br /> -常數： False|  
-|`numeric`|N/A|`Edm.Decimal`|有效位數：<br /><br /> -最小值： 1<br /><br /> -最大： 38<br /><br /> -預設值： 18<br /><br /> -常數： False<br /><br /> 小數位數：<br /><br /> -最小值： 0<br /><br /> -最大： 38<br /><br /> -預設值： 0<br /><br /> -常數： False|  
+|`decimal`|N/A|`Edm.Decimal`|有效位數：<br /><br /> - Minimum: 1<br /><br /> -最大： 38<br /><br /> -預設值： 18<br /><br /> -常數： False<br /><br /> 小數位數：<br /><br /> - Minimum: 0<br /><br /> -最大： 38<br /><br /> -預設值： 0<br /><br /> -常數： False|  
+|`numeric`|N/A|`Edm.Decimal`|有效位數：<br /><br /> - Minimum: 1<br /><br /> -最大： 38<br /><br /> -預設值： 18<br /><br /> -常數： False<br /><br /> 小數位數：<br /><br /> - Minimum: 0<br /><br /> -最大： 38<br /><br /> -預設值： 0<br /><br /> -常數： False|  
 |`smallmoney`|N/A|`Edm.Decimal`|有效位數：<br /><br /> -預設值： 10<br /><br /> -常數： True<br /><br /> 小數位數：<br /><br /> -預設值： 4<br /><br /> -常數： True|  
 |`money`|N/A|`Edm.Decimal`|有效位數：<br /><br /> -預設值： 19<br /><br /> -常數： True<br /><br /> 小數位數：<br /><br /> -預設值： 4<br /><br /> -常數： True|  
-|`binary`|N/A|`Edm.Binary`|MaxLength:<br /><br /> -最小值： 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
-|`varbinary`|N/A|`Edm.Binary`|MaxLength:<br /><br /> -最小值： 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
-|`varbinary(max)`<br /><br /> 注意： 此類型不支援[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]。|N/A|`Edm.Binary`|MaxLength:<br /><br /> -預設值： 214748364780<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
+|`binary`|N/A|`Edm.Binary`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
+|`varbinary`|N/A|`Edm.Binary`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
+|`varbinary(max)`<br /><br /> 注意： 此類型不支援[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]。|N/A|`Edm.Binary`|MaxLength:<br /><br /> - Default: 214748364780<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
 |`image`|N/A|`Edm.Binary`|MaxLength:<br /><br /> -預設值： 2147483647<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
 |`timestamp`|N/A|`Edm.Binary`|MaxLength:<br /><br /> -預設值： 8<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
 |`rowversion`|N/A|`Edm.Binary`|MaxLength:<br /><br /> -預設值： 8<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
@@ -50,10 +50,10 @@ ms.lasthandoff: 12/22/2017
 |`time`<br /><br /> 注意： 在 SQL Server 2005 和 SQL Server 2000 中不支援此類型。|N/A|`Edm.Time`|有效位數：<br /><br /> -預設值： 7<br /><br /> -常數： False|  
 |`datetime2`<br /><br /> 注意： 在 SQL Server 2005 和 SQL Server 2000 中不支援此類型。|N/A|`Edm.DateTime`|有效位數：<br /><br /> -預設值： 7<br /><br /> -常數： False|  
 |`datetimeoffset`<br /><br /> 注意： 在 SQL Server 2005 和 SQL Server 2000 中不支援此類型。|N/A|`Edm.DateTimeOffset`|有效位數：<br /><br /> -預設值： 7<br /><br /> -常數： False|  
-|`nvarchar`<br /><br /> 注意： 此類型不支援[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]。|N/A|`Edm.String`|MaxLength:<br /><br /> -最小值： 1<br /><br /> -最大： 4000<br /><br /> -預設值： 4000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設值： True<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
-|`varchar`<br /><br /> 注意： 此類型不支援[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]。|N/A|`Edm.String`|MaxLength:<br /><br /> -最小值： 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設： False<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
-|`char`|N/A|`Edm.String`|MaxLength:<br /><br /> -最小值： 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設： False<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
-|`nchar`|N/A|`Edm.String`|MaxLength:<br /><br /> -最小值： 1<br /><br /> -最大： 4000<br /><br /> -預設值： 4000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設值： True<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
+|`nvarchar`<br /><br /> 注意： 此類型不支援[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]。|N/A|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -最大： 4000<br /><br /> -預設值： 4000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設值： True<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
+|`varchar`<br /><br /> 注意： 此類型不支援[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]。|N/A|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設： False<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
+|`char`|N/A|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -最大： 8000<br /><br /> -預設值： 8000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設： False<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
+|`nchar`|N/A|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -最大： 4000<br /><br /> -預設值： 4000<br /><br /> -常數： False<br /><br /> Unicode:<br /><br /> -預設值： True<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設值： True<br /><br /> -常數： True|  
 |`varchar`(`max`)|N/A|`Edm.String`|MaxLength:<br /><br /> -預設值： 2147483647<br /><br /> -常數： True<br /><br /> Unicode:<br /><br /> -預設： False<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
 |`nvarchar`(`max`)|N/A|`Edm.String`|MaxLength:<br /><br /> -預設值： 1073741823<br /><br /> -常數： True<br /><br /> Unicode:<br /><br /> -預設值： True<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  
 |`ntext`|相等比較： False<br /><br /> 可比較順序： False|`Edm.String`|MaxLength:<br /><br /> -預設值： 1073741823<br /><br /> -常數： True<br /><br /> Unicode:<br /><br /> -預設： False<br /><br /> -常數： True<br /><br /> FixedLength:<br /><br /> -預設： False<br /><br /> -常數： True|  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 62c5cef51e125443d87c47f7f62dc76aa5d352b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a13d6ee9345731e097d0bdc9b6e59772d29b554
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>對資料集執行 XPath 查詢
 同步處理之間的關聯性<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>可讓您使用 XML 服務，例如 XML 路徑語言 (XPath) 查詢，存取**XmlDataDocument**且執行某些功能更方便比存取**資料集**直接。 例如，而不是使用**選取**方法<xref:System.Data.DataTable>巡覽關聯性中的其他資料表到**資料集**，您可以針對執行 XPath 查詢**XmlDataDocument**同步處理與**資料集**，若要取得的 XML 項目清單的形式<xref:System.Xml.XmlNodeList>。 中的節點**XmlNodeList**轉換為<xref:System.Xml.XmlElement>節點，然後傳遞至**Xmldatadocument**方法**XmlDataDocument**，表示傳回比對<xref:System.Data.DataRow>處於同步處理資料表的資料列的參考**資料集**。  

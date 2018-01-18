@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6d22b72e05e6293a7fd3bcf7ddfba6e116e441f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>比較語意 (Entity SQL)
 執行以下任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子都會牽涉到型別執行個體的比較：  
@@ -77,15 +77,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="supported-combinations"></a>支援的組合  
  以下資料表針對每一種型別顯示比較運算子的所有支援組合：  
   
-|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **相異**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**為 NULL**<br /><br /> **不是 NULL**|  
+|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**為 NULL**<br /><br /> **不是 NULL**|  
 |-|-|-|-|-|-|-|-|  
-|實體類型|Ref<sup>1</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|Ref<sup>1</sup>|  
-|複雜類型|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  
-|表格列|所有屬性<sup>4</sup>|所有屬性<sup>4</sup>|所有屬性<sup>4</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|所有屬性<sup>4</sup>|擲回<sup>3</sup>|  
+|實體類型|Ref<sup>1</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
+|複雜類型|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|表格列|所有屬性<sup>4</sup>|所有屬性<sup>4</sup>|所有屬性<sup>4</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|所有屬性<sup>4</sup>|Throw<sup>3</sup>|  
 |基本型別|提供者特定|提供者特定|提供者特定|提供者特定|提供者特定|提供者特定|提供者特定|  
-|多重集|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  
+|多重集|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
 |參考|[是]<sup>5</sup>|[是]<sup>5</sup>|[是]<sup>5</sup>|[是]<sup>5</sup>|Throw|Throw|[是]<sup>5</sup>|  
-|關聯<br /><br /> 類型|擲回<sup>3</sup>|Throw|Throw|Throw|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  
+|關聯<br /><br /> 類型|Throw<sup>3</sup>|Throw|Throw|Throw|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
   
  <sup>1</sup>給定的實體類型執行個體的參考會以隱含方式相較之下，如下列範例所示：  
   

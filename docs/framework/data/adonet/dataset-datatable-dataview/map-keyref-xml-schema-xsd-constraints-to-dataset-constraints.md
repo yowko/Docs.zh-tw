@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f888a682510dbf768e5eab2ffdd530e2ac7cf635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 **Keyref**元素可讓您建立文件內的項目之間的連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果結構描述指定**keyref**項目，項目會轉換的對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序期間<xref:System.Data.DataSet>。 根據預設， **keyref**項目也會產生關聯，與**ParentTable**， **ChildTable**， **ParentColumn**，和**ChildColumn**在關聯上指定的屬性。  
@@ -27,8 +27,8 @@ ms.lasthandoff: 12/22/2017
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**msdata: constraintonly**|如果**ConstraintOnly ="true"**上指定**keyref**結構描述中的項目，條件約束會建立，但不會建立關聯。 如果未指定此屬性 (或設為**False**)，條件約束和關聯性會建立在**資料集**。|  
-|**即**|如果**ConstraintName**屬性已指定，則會使用該值做為條件約束的名稱。 否則，**名稱**屬性**keyref**結構描述中的項目會提供中的條件約束名稱**資料集**。|  
+|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"**上指定**keyref**結構描述中的項目，條件約束會建立，但不會建立關聯。 如果未指定此屬性 (或設為**False**)，條件約束和關聯性會建立在**資料集**。|  
+|**msdata:ConstraintName**|如果**ConstraintName**屬性已指定，則會使用該值做為條件約束的名稱。 否則，**名稱**屬性**keyref**結構描述中的項目會提供中的條件約束名稱**資料集**。|  
 |**msdata:UpdateRule**|如果**UpdateRule**屬性中指定**keyref**結構描述中的元素，其值指派給**UpdateRule**中的條件約束屬性**資料集**。 否則**UpdateRule**屬性設定為**Cascade**。|  
 |**msdata:DeleteRule**|如果**DeleteRule**屬性中指定**keyref**結構描述中的元素，其值指派給**DeleteRule**中的條件約束屬性**資料集**。 否則**DeleteRule**屬性設定為**Cascade**。|  
 |**msdata:AcceptRejectRule**|如果**AcceptRejectRule**屬性中指定**keyref**結構描述中的元素，其值指派給**AcceptRejectRule** 中的條件約束屬性**資料集**。 否則**AcceptRejectRule**屬性設定為**無**。|  

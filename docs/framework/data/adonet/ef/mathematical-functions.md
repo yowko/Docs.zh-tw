@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ea933d1e6c0245f3bc6cc2a0767b593957b0598a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b4ef03a2a517b9ce53954bc4576b655afdafc03
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="mathematical-functions"></a>數學函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將描述 SqlClient 數學函式。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |`PI()`|以 `Double` 形式傳回 pi 的常數值。<br /><br /> **傳回值**<br /><br /> `Double`。<br /><br /> **範例**<br /><br /> `SqlServer.PI()`|  
 |`POWER(` `numeric_expression, power_expression` `)`|將指定之運算式的值計算至指定的乘冪。<br /><br /> **引數**<br /><br /> `numeric_expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。<br /><br /> `power_expression`：代表 `Double` 乘冪數的 `numeric_expression`。<br /><br /> **傳回值**<br /><br /> 指定之 `numeric_expression` 自乘至指定之 `power_expression` 的值。<br /><br /> **範例**<br /><br /> `SqlServer.POWER(2,7)`|  
 |`RADIANS(` `expression` `)`|將度數轉換成弧度。<br /><br /> **引數**<br /><br /> `expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。<br /><br /> **傳回值**<br /><br /> `Int32`， `Int64`，<br /><br /> `Double` 或<br /><br /> `Decimal`.<br /><br /> **範例**<br /><br /> `SqlServer.RADIANS(360.0)`|  
-|`RAND(`[識別值種子]`)`|傳回 0 到 1 的隨機值。<br /><br /> **引數**<br /><br /> 將初始值當做 `Int32` 傳回。 如果沒有指定初始值，SQL Server Database Engine 就會隨機指派一個初始值。 只要指定初始值之後，傳回的結果一律相同。<br /><br /> **傳回值**<br /><br /> 0 到 1 的隨機 `Double` 值。<br /><br /> **範例**<br /><br /> `SqlServer.RAND()`|  
+|`RAND(`[seed]`)`|傳回 0 到 1 的隨機值。<br /><br /> **引數**<br /><br /> 將初始值當做 `Int32` 傳回。 如果沒有指定初始值，SQL Server Database Engine 就會隨機指派一個初始值。 只要指定初始值之後，傳回的結果一律相同。<br /><br /> **傳回值**<br /><br /> 0 到 1 的隨機 `Double` 值。<br /><br /> **範例**<br /><br /> `SqlServer.RAND()`|  
 |`ROUND(` `numeric_expression, length` [ ,`function` ]`)`|傳回已經進位到指定長度或有效位數的數值運算式。<br /><br /> **引數**<br /><br /> `numeric_expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。<br /><br /> `length`：`Int32`，代表 `numeric_expression` 要四捨五入的精確度。 當 `length` 是正數時，`numeric_expression` 會四捨五入到 `length` 所指定的十進位數。 當 `length` 是負數時，`numeric_expression` 會依照 `length` 所指定，在小數點左側四捨五入。<br /><br /> `function`: (選擇性) `Int32` ，代表要執行的作業類型。 當省略 function，或具有值為 0 （預設）、`numeric_expression`會捨入。 指定 0 以外的值時，`numeric_expression`會被截斷。<br /><br /> **傳回值**<br /><br /> 指定之 `numeric_expression` 自乘至指定之 `power_expression` 的值。<br /><br /> **範例**<br /><br /> `SqlServer.ROUND(748.58, -3)`|  
 |`SIGN(` `expression` `)`|傳回指定運算式的正 (+1)、零 (0) 或負 (-1) 號。<br /><br /> **引數**<br /><br /> `expression`：`Int32`、`Int64`、`Double` 或 `Decimal`<br /><br /> **傳回值**<br /><br /> `Int32`， `Int64`， `Double`，或`Decimal`。<br /><br /> **範例**<br /><br /> `SqlServer.SIGN(-10)`|  
 |`SIN(` `expression` `)`|計算指定之角度的三角正弦函數 (Sine) (以弧度為單位)，並傳回 `Double` 運算式。<br /><br /> **引數**<br /><br /> `expression`：`Double`。<br /><br /> **傳回值**<br /><br /> `Double`。<br /><br /> **範例**<br /><br /> `SqlServer.SIN(20)`|  

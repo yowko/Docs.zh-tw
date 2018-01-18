@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee6109e497c0fda59169b394287db9abd4b3d76a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3a11b4dfde2afcf738f125a1fd7324ceff74669
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="boolean-data-types"></a>Boolean 資料類型
 除了不會轉譯最少運算行為以外，在 Common Language Runtime (CLR) 中布林運算子會如預期運作。 例如，Visual Basic `AndAlso` 運算子的行為方式如同 `And` 運算子。 而 C# `&&` 運算子的行為方式則如同 `&` 運算子。  
@@ -29,8 +29,8 @@ ms.lasthandoff: 12/22/2017
 |------------------|---------|  
 |[And 運算子](~/docs/visual-basic/language-reference/operators/and-operator.md)|[& 運算子](~/docs/csharp/language-reference/operators/and-operator.md)|  
 |[AndAlso 運算子](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[&& 運算子](~/docs/csharp/language-reference/operators/conditional-and-operator.md)|  
-|[Or 運算子](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124;運算子](~/docs/csharp/language-reference/operators/or-operator.md)|  
-|[OrElse 運算子](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124; &#124;運算子](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
+|[Or 運算子](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/or-operator.md)|  
+|[OrElse 運算子](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124; Operator](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
 |[Xor 運算子](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ 運算子](~/docs/csharp/language-reference/operators/xor-operator.md)|  
 |[Not 運算子](~/docs/visual-basic/language-reference/operators/not-operator.md)|[!運算子](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   

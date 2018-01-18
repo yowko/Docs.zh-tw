@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 712630938989e2187042e8ab143361da664e6bcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d81a79b549d877467cde427265fb4c65f27caf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server 中的 XML 資料
 SQL Server 會在 .NET Framework 內公開 SQLXML 的功能。 開發人員可以撰寫從 SQL Server 執行個體存取 XML 資料的應用程式、將資料置於 .NET Framework 環境、處理資料，以及將更新傳回 SQL Server。 在 SQL Server 中可透過數種方式來使用 XML 資料，包括資料儲存及用來擷取資料的參數值。 **SqlXml** .NET Framework 中的類別會提供用戶端支援使用儲存在 SQL Server 中的 XML 資料行中的資料。 如需詳細資訊，請參閱《SQL Server 線上叢書》的＜SQLXML Managed 類別＞(英文)。  

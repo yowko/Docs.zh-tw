@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5634a20c51dd86bd383286735ee094d8746615d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78f3e701e63d83a8aa6ae1350ed10229e0200d37
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比較 DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定義了許多設定運算子，可比較來源項目以便查看它們是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 會提供下列設定運算子：  

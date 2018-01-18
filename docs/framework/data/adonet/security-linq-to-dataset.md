@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f67ad1947d421a5221a34ad8392242e4d18039f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305ff1232b21def3c8e7dcb1bec529f81c4e701a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="security-linq-to-dataset"></a>安全性 (LINQ to DataSet)
 本主題討論 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性問題。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="external-input"></a>外部輸入  
  應用程式通常採用外部輸入 (從使用者或其他外部代理程式)，並根據該輸入執行動作。  如果是[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]，應用程式可能會建構以特定方式，根據外部輸入或使用外部查詢中輸入查詢。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 應用程式開發人員應該使用參數化的查詢，而非將常值從外部代理程式直接插入到查詢中。  
   
- 從使用者或外部代理程式直接或間接衍生的任何輸入都可能具備運用目標語言之語法的內容，藉以執行未經授權的動作。 這是所謂的 SQL 插入式攻擊，這是以目標語言為 Transact-SQL 的攻擊模式來命名的。 直接插入到查詢的使用者輸入用於卸除資料庫資料表、造成阻絕服務，或變更要執行之作業的本質。 雖然可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢不是由在 TRANSACT-SQL 中並不容易受到 SQL 插入式攻擊，在傳統意義上，使用字串操作或串連組成。  
+ 從使用者或外部代理程式直接或間接衍生的任何輸入都可能具備運用目標語言之語法的內容，藉以執行未經授權的動作。 這是所謂的 SQL 插入式攻擊，這是以目標語言為 Transact-SQL 的攻擊模式來命名的。 直接插入到查詢的使用者輸入用於置放資料庫資料表、造成阻絕服務，或變更要執行之作業的本質。 雖然可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢不是由在 TRANSACT-SQL 中並不容易受到 SQL 插入式攻擊，在傳統意義上，使用字串操作或串連組成。  
   
 ## <a name="see-also"></a>請參閱  
  [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

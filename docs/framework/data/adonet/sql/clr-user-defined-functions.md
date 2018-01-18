@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a556bf85e68cc123bd16feb1020c341ab2a74a59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7e1703dc8b9ae3c98bcc1d73e15b09cf3e66878
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函式
 使用者定義函式是可以使用參數、執行計算或其他動作，並傳回結果的常式。 您可以使用任何 Microsoft .NET Framework 程式設計語言 (如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 撰寫使用者定義函式。  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f7353ecd6f4e2db60db1c77c7771af43d68be760
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1d263f74f312b34c97f54cd970334017a797652
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔離
 快照隔離可強化 OLTP 應用程式的並行功能。  
@@ -110,7 +110,7 @@ SqlTransaction sqlTran =
   
 -   它會開啟第三個連接並初始使用 READ COMMITTED 隔離等級的交易，以嘗試讀取資料表中的資料。 在這種情況下，程式碼無法讀取資料，因為第一個交易在資料表上設定的鎖定阻止其讀取資料並發生逾時。如果使用 REPEATABLE READ 及 SERIALIZABLE 隔離等級也會導致相同的結果，因為第一個交易設定的鎖定也會阻止這些隔離等級進行讀取。  
   
--   它會開啟第四個連接並初始使用 READ UNCOMMITTED 隔離等級的交易，其會執行對 sqlTransaction1 中未認可值的 Dirty 讀取。 若未認可第一個交易，則資料庫實際上可能從未擁有此值。  
+-   它會開啟第四個連接並初始使用 READ UNCOMMITTED 隔離等級的交易，其會執行對 sqlTransaction1 中未認可值的 Dirty 讀取。 若未認可第一個異動，則資料庫實際上可能從未擁有此值。  
   
 -   它會復原第一筆交易，並透過刪除清除**TestSnapshot**資料表以及關閉快照集隔離的**AdventureWorks**資料庫。  
   

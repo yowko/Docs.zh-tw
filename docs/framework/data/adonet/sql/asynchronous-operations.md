@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6f631d785698ae59370053c4e35307514c44087c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 293f1ff1fad193c019a42372a30ae6466c074515
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="asynchronous-operations"></a>非同步作業
 某些資料庫作業 (如命令執行) 要花費相當長的時間才能完成。 在此情況下，單一執行緒應用程式必須封鎖其他作業並等待命令完成後，才能繼續它們自己的作業。 相反的，將長期執行作業指派給背景執行緒，可讓前景執行緒在作業過程中保持作用中狀態。 例如，若在 Windows 應用程式中將長期執行作業委派給背景執行緒，可讓使用者介面執行緒在作業執行時保持回應狀態。  

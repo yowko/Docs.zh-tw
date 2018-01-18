@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c232ca2888c957bea33d06c84a62b00fdc7fd80c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-typed-datasets"></a>查詢具類型資料集
 如果在應用程式設計階段中便已知 <xref:System.Data.DataSet> 的結構描述，我們建議您在使用 <xref:System.Data.DataSet> 時使用具型別 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 具型別的<xref:System.Data.DataSet>是衍生自類別<xref:System.Data.DataSet>。 因此，它繼承了 <xref:System.Data.DataSet> 所有的方法、事件和屬性。 此外，具類型<xref:System.Data.DataSet>提供強型別的方法、 事件和屬性。 這表示，您可以依照名稱存取資料表和資料行，而不需要使用以集合為基礎的方法。 這讓查詢更簡單且更方便讀取。 如需詳細資訊，請參閱[型別資料集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  

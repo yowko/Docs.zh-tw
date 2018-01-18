@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
@@ -129,7 +129,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>將 Null 值與 SqlType 及 CLR 型別進行比較  
- 比較 Null 值時，瞭解 `Equals` 方法評估 <xref:System.Data.SqlTypes> 中 Null 值的方式，與其處理 CLR 型別之方式相比較的差異很重要。 所有 <xref:System.Data.SqlTypes>`Equals` 方法都是使用資料庫語意來評估 Null 值：如果其中一個值或兩個值同時為 Null，則該比較會產生 Null。 另一方面，針對兩個 `Equals` 使用 CLR <xref:System.Data.SqlTypes> 方法時，如果二者都為 Null，則會產生 True。 這反映出使用執行個體方法 (例如 CLR `String.Equals` 方法) 與使用靜態/共用方法 (`SqlString.Equals`) 之間的差異。  
+ 比較 Null 值時，瞭解 `Equals` 方法評估 <xref:System.Data.SqlTypes> 中 Null 值的方式，與其處理 CLR 型別之方式相比較的差異很重要。 所有的<xref:System.Data.SqlTypes>`Equals`方法是使用資料庫語意來評估 null 值： 如果其中一個或兩個值是 null，則該比較會產生 null。 另一方面，針對兩個 `Equals` 使用 CLR <xref:System.Data.SqlTypes> 方法時，如果二者都為 Null，則會產生 True。 這反映出使用執行個體方法 (例如 CLR `String.Equals` 方法) 與使用靜態/共用方法 (`SqlString.Equals`) 之間的差異。  
   
  下列範例示範當針對每個方法傳遞一對 Null 值，然後傳遞一對空字串時，`SqlString.Equals` 方法及 `String.Equals` 方法之間結果的差異。  
   

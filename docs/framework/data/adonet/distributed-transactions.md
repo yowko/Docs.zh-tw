@@ -10,18 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6bc9a754325f7d01ee36622a23efde1cbc7c4812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-transactions"></a>分散式異動
-交易是一組相關工作，尤其是它會做為一個單位的成功 (認可) 或失敗 (中止)。 A*分散式交易*是影響幾個資源的交易。 對於要認可的分散式交易，所有參與者都必須保證資料的任何變更都是永久的。 不管系統是否當機，還是發生其他不可預見的事件，變更必須持續。 如果單一參與者無法做出此保證，則整個交易會失敗，交易範圍內的任何資料變更都將復原。  
+異動是一組相關工作，尤其是它會做為一個單位的成功 (認可) 或失敗 (中止)。 A*分散式交易*是影響幾個資源的交易。 對於要認可的分散式異動，所有參與者都必須保證資料的任何變更都是永久的。 不管系統是否當機，還是發生其他不可預見的事件，變更必須持續。 如果單一參與者無法做出此保證，則整個交易會失敗，交易範圍內的任何資料變更都將復原。  
   
 > [!NOTE]
 >  如果在交易作用期間啟動了 `DataReader`，而您嘗試認可或復原該交易，就會擲回例外狀況 (Exception)。  

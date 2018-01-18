@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 模型和對應檔案的命令列工具。 您可以使用 EdmGen.exe 工具執行下列動作：  
@@ -54,26 +54,26 @@ EdmGen /mode:choice [options]
   
 |選項|描述|  
 |------------|-----------------|  
-|`/p[roject]:`\<字串 >|指定要使用的專案名稱。 專案名稱會當成命名空間 (Namespace) 設定的預設值、模型和對應檔案的名稱、物件來源檔案的名稱和檢視表產生來源檔案的名稱。 實體容器名稱設\<專案 > 內容。|  
-|`/prov[ider]:`\<字串 >|要用來產生儲存模型 (.ssdl) 檔案的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者的名稱。 預設提供者是[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|  
+|`/p[roject]:`\<string>|指定要使用的專案名稱。 專案名稱會當成命名空間 (Namespace) 設定的預設值、模型和對應檔案的名稱、物件來源檔案的名稱和檢視表產生來源檔案的名稱。 實體容器名稱設\<專案 > 內容。|  
+|`/prov[ider]:`\<string>|要用來產生儲存模型 (.ssdl) 檔案的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者的名稱。 預設提供者是[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|  
 |`/c[onnectionstring]:`\<連接字串 >|指定用來連接至資料來源的字串。|  
-|`/incsdl:`\<檔案 >|指定 .csdl 檔案或 .csdl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .csdl 檔案。 當概念模型被分割成數個檔案後，指定多個目錄會有助於產生類別 (`/mode:EntityClassGeneration`) 或檢視表 (`/mode:ViewGeneration`)， 而這也有助於驗證多個模型 (`/mode:ValidateArtifacts`)。|  
-|`/refcsdl:`\<檔案 >|指定用於解析來源 .csdl 檔案中任何參考的其他 .csdl 檔案  (來源 .csdl 檔案是由 `/incsdl` 選項所指定的檔案)。 `/refcsdl` 檔案包含來源 .csdl 檔案相依的類型。 這個引數可多次指定。|  
-|`/inmsl:`\<檔案 >|指定 .msl 檔案或 .msl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .msl 檔案。 當概念模型被分割成數個檔案後，指定多個目錄會有助於產生檢視表 (`/mode:ViewGeneration`)， 而這也有助於驗證多個模型 (`/mode:ValidateArtifacts`)。|  
-|`/inssdl:`\<檔案 >|指定 .ssdl 檔案或 .ssdl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .ssdl 檔案。 這有助於驗證多個模型 (`(/mode:ValidateArtifacts)`)。|  
-|`/outcsdl:`\<檔案 >|指定將建立的 .csdl 檔案名稱。|  
-|`/outmsl:`\<檔案 >|指定將建立的 .msl 檔案名稱。|  
-|`/outssdl:`\<檔案 >|指定將建立的 .ssdl 檔案名稱。|  
-|`/outobjectlayer:`\<檔案 >|指定原始程式碼檔案，其中包含從 .csdl 檔案產生的物件。|  
-|`/outviews:`\<檔案 >|指定原始程式碼檔案，其中包含已產生的檢視表。|  
-|`/language:`[VB &#124;CSharp]|指定所產生之原始程式碼檔案的語言。 預設語言為 C#。|  
-|`/namespace:`\<字串 >|指定要使用的模型命名空間。 執行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 時會在 .csdl 檔案中設定命名空間。 執行 `/mode:EntityClassGeneration` 時不會使用命名空間。|  
-|`/entitycontainer:`\<字串 >|指定要套用到產生的模型和對應檔案中 `<EntityContainer>` 項目的名稱。|  
+|`/incsdl:`\<file>|指定 .csdl 檔案或 .csdl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .csdl 檔案。 當概念模型被分割成數個檔案後，指定多個目錄會有助於產生類別 (`/mode:EntityClassGeneration`) 或檢視表 (`/mode:ViewGeneration`)， 而這也有助於驗證多個模型 (`/mode:ValidateArtifacts`)。|  
+|`/refcsdl:`\<file>|指定用於解析來源 .csdl 檔案中任何參考的其他 .csdl 檔案  (來源 .csdl 檔案是由 `/incsdl` 選項所指定的檔案)。 `/refcsdl` 檔案包含來源 .csdl 檔案相依的類型。 這個引數可多次指定。|  
+|`/inmsl:`\<file>|指定 .msl 檔案或 .msl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .msl 檔案。 當概念模型被分割成數個檔案後，指定多個目錄會有助於產生檢視表 (`/mode:ViewGeneration`)， 而這也有助於驗證多個模型 (`/mode:ValidateArtifacts`)。|  
+|`/inssdl:`\<file>|指定 .ssdl 檔案或 .ssdl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .ssdl 檔案。 這有助於驗證多個模型 (`(/mode:ValidateArtifacts)`)。|  
+|`/outcsdl:`\<file>|指定將建立的 .csdl 檔案名稱。|  
+|`/outmsl:`\<file>|指定將建立的 .msl 檔案名稱。|  
+|`/outssdl:`\<file>|指定將建立的 .ssdl 檔案名稱。|  
+|`/outobjectlayer:`\<file>|指定原始程式碼檔案，其中包含從 .csdl 檔案產生的物件。|  
+|`/outviews:`\<file>|指定原始程式碼檔案，其中包含已產生的檢視表。|  
+|`/language:`[VB&#124;CSharp]|指定所產生之原始程式碼檔案的語言。 預設語言為 C#。|  
+|`/namespace:`\<string>|指定要使用的模型命名空間。 執行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 時會在 .csdl 檔案中設定命名空間。 執行 `/mode:EntityClassGeneration` 時不會使用命名空間。|  
+|`/entitycontainer:`\<string>|指定要套用到產生的模型和對應檔案中 `<EntityContainer>` 項目的名稱。|  
 |`/pl[uralize]`|將英語的單數和複數規則套用到概念模型中的 `Entity`、`EntitySet` 和 `NavigationProperty` 名稱。 這個選項會執行下列動作：<br /><br /> -請所有`EntityType`單數名稱。<br />-請所有`EntitySet`複數名稱。<br />-針對每個`NavigationProperty`，傳回最多一個實體，讓名稱成為唯一。<br />-針對每個`NavigationProperty`傳回多個實體，讓名稱成為複數。|  
 |`/SupressForeignKeyProperties or /nofk`|防止外部索引鍵資料行公開為概念模型中實體類型上的純量屬性。|  
 |`/help` 或 `?`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏著作權訊息。|  
-|`/targetversion:`\<字串 >|用於編譯產生的程式碼的 .NET Framework 版本。 支援的版本為 4 和 4.5。 預設為 4。|  
+|`/targetversion:` \<string>|用於編譯產生的程式碼的 .NET Framework 版本。 支援的版本為 4 和 4.5。 預設為 4。|  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="annotating-typed-datasets"></a>註釋具類型資料集
 註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改您的基礎結構描述中的項目名稱可能會造成具型別的**資料集**來執行不存在於資料來源，也會遺失的資料來源中存在的物件參考的物件參考。  
@@ -56,8 +56,8 @@ ms.lasthandoff: 12/22/2017
   
 |註釋|描述|  
 |----------------|-----------------|  
-|**Customer**|物件名稱。|  
-|**Customers**|物件集合名稱。|  
+|**typedName**|物件名稱。|  
+|**typedPlural**|物件集合名稱。|  
 |**typedParent**|在父關聯性中所參考的物件名稱。|  
 |**typedChildren**|從子關聯性傳回物件的方法名稱。|  
 |**nullValue**|值，如果基礎值為**DBNull**。 請參閱下的表針對**nullValue**註解。 預設值是**_throw**。|  

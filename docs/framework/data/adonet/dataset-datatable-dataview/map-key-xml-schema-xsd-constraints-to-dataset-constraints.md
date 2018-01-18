@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 key XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 在結構描述中，您可以指定的項目上的索引鍵條件約束，或屬性使用**金鑰**項目。 具有指定索引鍵條件約束的項目或屬性，在任何結構描述執行個體中都必須具有唯一的值，且不可具有 Null 值。  
@@ -29,8 +29,8 @@ ms.lasthandoff: 12/22/2017
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**即**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則，**名稱**屬性提供條件約束名稱的值。|  
-|**msdata**|如果`PrimaryKey="true"`沒有、 **IsPrimaryKey**條件約束屬性設定為**true**，因此讓它成為主索引鍵。 **AllowDBNull**資料行屬性設定為**false**，因為主索引鍵不能有 null 值。|  
+|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則，**名稱**屬性提供條件約束名稱的值。|  
+|**msdata:PrimaryKey**|如果`PrimaryKey="true"`沒有、 **IsPrimaryKey**條件約束屬性設定為**true**，因此讓它成為主索引鍵。 **AllowDBNull**資料行屬性設定為**false**，因為主索引鍵不能有 null 值。|  
   
  在轉換結構描述在指定索引鍵條件約束時，對應處理序會建立唯一條件約束的資料表上**AllowDBNull** column 屬性設定為**false**中每個資料行條件約束。 **IsPrimaryKey**唯一條件約束的屬性也會設為**false**除非您已指定`msdata:PrimaryKey="true"`上**金鑰**項目。 它與結構描述 (其中 `PrimaryKey="true"`) 中唯一的條件約束相同。  
   

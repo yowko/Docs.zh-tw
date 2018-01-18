@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 77658b1c4b40090b8e532f1a0566ecb927328d65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6593e075d1a9d672f414cfa0cd8652f760b084e1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL Server 為基礎，可支援大部分資料庫引擎的功能。 其設計方式是在預設情況下關閉非必要的功能和網路連接。 這樣做可減少受到惡意使用者攻擊的表面區域。  
@@ -44,7 +44,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL S
 |-|-|  
 |[SQL Server 線上叢書](http://msdn.microsoft.com/library/bb543165.aspx)|包含 SQL Server Express 的相關文件。|  
 |[連接到 SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) SQL Server 線上叢書中|說明如何在網路上使用 SQL Server Express Edition。|  
-|[Microsoft SQL Server 2005 Express Edition 線上叢書](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition 的完整文件。|  
+|[Microsoft SQL Server 2005 Express Edition Books Online](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition 的完整文件。|  
 |[非系統管理員的使用者執行個體](http://msdn.microsoft.com/library/ms143684.aspx)SQL Server 線上叢書中|說明如何建立和部署使用者執行個體。|  
 |[SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|說明 ADO.NET 應用程式中的使用者執行個體功能。 提供有關如何啟用使用者執行個體、使用 <xref:System.Data.SqlClient.SqlConnection> 來連接至使用者執行個體、使用者執行個體存留期 (Lifetime) 和使用者執行個體案例的資訊。|  
   

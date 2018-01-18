@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a547bbb38d58d5b4c22e78bfd64fef4094865143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -243,7 +243,7 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[日期和時間資料類型與函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|提供所有 Transact-SQL 日期及時間資料型別與函式的概觀。|  
 |[使用日期和時間資料](http://go.microsoft.com/fwlink/?LinkId=98361)|提供有關日期和時間資料型別與函式的詳細資訊，以及使用這些項目的範例。|  
-|[資料類型 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
+|[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
   
 ## <a name="see-also"></a>請參閱  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

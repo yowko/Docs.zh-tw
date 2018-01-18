@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 015003becc47910b875629f021a9e196ba8445f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ce85e61ac001ec07c14cebbc8d07e6c031498fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二進位和大量數值資料
 SQL Server 提供 `max` 規範，可擴充 `varchar`、`nvarchar` 和 `varbinary` 資料類型的儲存容量。 `varchar(max)``nvarchar(max)`，和`varbinary(max)`統稱為 「*大數值資料型別*。 您可以使用大數值資料型別來儲存最多可達 2^31-1 位元組的資料。  

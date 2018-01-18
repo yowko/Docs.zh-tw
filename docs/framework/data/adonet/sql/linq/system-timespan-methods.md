@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 257fff19d10c4b803ec6fc539087cc558bd07a0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baec7609ce1d2f04b1c24165c53bc7cce425f06d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 方法
 <xref:System.TimeSpan?displayProperty=nameWithType> 的成員支援主要取決於您所使用的 .NET Framework 和 Microsoft SQL Server 版本。  
