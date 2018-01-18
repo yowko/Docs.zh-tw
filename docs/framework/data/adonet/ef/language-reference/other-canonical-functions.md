@@ -10,24 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1018456dbfa83961e11c1f684e2c7c5c793cfc1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f433380a96b78791e2230edf0fe25b3e0efc6cc7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="other-canonical-functions"></a><span data-ttu-id="2cd7b-102">其他標準函式</span><span class="sxs-lookup"><span data-stu-id="2cd7b-102">Other Canonical Functions</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="2cd7b-103"> 包括一些未分類為位元運算、彙總、數學、日期/時間或字串的標準函式。</span><span class="sxs-lookup"><span data-stu-id="2cd7b-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  
+# <a name="other-canonical-functions"></a><span data-ttu-id="628cd-102">其他標準函式</span><span class="sxs-lookup"><span data-stu-id="628cd-102">Other Canonical Functions</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="628cd-103"> 包括一些未分類為位元運算、彙總、數學、日期/時間或字串的標準函式。</span><span class="sxs-lookup"><span data-stu-id="628cd-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  
   
- <span data-ttu-id="2cd7b-104">下表所示為其他 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。</span><span class="sxs-lookup"><span data-stu-id="2cd7b-104">The following table shows the other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+ <span data-ttu-id="628cd-104">下表所示為其他 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。</span><span class="sxs-lookup"><span data-stu-id="628cd-104">The following table shows the other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
-|<span data-ttu-id="2cd7b-105">函式</span><span class="sxs-lookup"><span data-stu-id="2cd7b-105">Function</span></span>|<span data-ttu-id="2cd7b-106">描述</span><span class="sxs-lookup"><span data-stu-id="2cd7b-106">Description</span></span>|  
+|<span data-ttu-id="628cd-105">函式</span><span class="sxs-lookup"><span data-stu-id="628cd-105">Function</span></span>|<span data-ttu-id="628cd-106">描述</span><span class="sxs-lookup"><span data-stu-id="628cd-106">Description</span></span>|  
 |--------------|-----------------|  
-|`NewGuid()`|<span data-ttu-id="2cd7b-107">傳回新的 GUID。</span><span class="sxs-lookup"><span data-stu-id="2cd7b-107">Returns a new GUID.</span></span><br /><br /> <span data-ttu-id="2cd7b-108">**範例**</span><span class="sxs-lookup"><span data-stu-id="2cd7b-108">**Example**</span></span><br /><br /> `NewGuid()`|  
+|`NewGuid()`|<span data-ttu-id="628cd-107">傳回新的 GUID。</span><span class="sxs-lookup"><span data-stu-id="628cd-107">Returns a new GUID.</span></span><br /><br /> <span data-ttu-id="628cd-108">**範例**</span><span class="sxs-lookup"><span data-stu-id="628cd-108">**Example**</span></span><br /><br /> `NewGuid()`|  
   
-## <a name="see-also"></a><span data-ttu-id="2cd7b-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="2cd7b-109">See Also</span></span>  
- [<span data-ttu-id="2cd7b-110">標準函式</span><span class="sxs-lookup"><span data-stu-id="2cd7b-110">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="628cd-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="628cd-109">See Also</span></span>  
+ [<span data-ttu-id="628cd-110">標準函式</span><span class="sxs-lookup"><span data-stu-id="628cd-110">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

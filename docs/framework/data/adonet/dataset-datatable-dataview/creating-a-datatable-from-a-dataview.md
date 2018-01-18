@@ -13,25 +13,25 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 52f26358a933844d27dea790cee15a73d2f71bf2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1dff746ff4767f2d0f9a9ab66275ee4d9fc8d3e0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="98653-102">從 DataView 建立 DataTable</span><span class="sxs-lookup"><span data-stu-id="98653-102">Creating a DataTable from a DataView</span></span>
-<span data-ttu-id="98653-103">從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。</span><span class="sxs-lookup"><span data-stu-id="98653-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="98653-104"><xref:System.Data.DataView> 類別使這成為可行。</span><span class="sxs-lookup"><span data-stu-id="98653-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="98653-105">此外，如果您需要建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>，您可以使用<xref:System.Data.DataView.ToTable%2A>方法，將所有資料列和資料行或資料的子集複製到新<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="98653-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="98653-106"><xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：</span><span class="sxs-lookup"><span data-stu-id="98653-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
+# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="37e89-102">從 DataView 建立 DataTable</span><span class="sxs-lookup"><span data-stu-id="37e89-102">Creating a DataTable from a DataView</span></span>
+<span data-ttu-id="37e89-103">從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。</span><span class="sxs-lookup"><span data-stu-id="37e89-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="37e89-104"><xref:System.Data.DataView> 類別使這成為可行。</span><span class="sxs-lookup"><span data-stu-id="37e89-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="37e89-105">此外，如果您需要建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>，您可以使用<xref:System.Data.DataView.ToTable%2A>方法，將所有資料列和資料行或資料的子集複製到新<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="37e89-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="37e89-106"><xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：</span><span class="sxs-lookup"><span data-stu-id="37e89-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
   
--   <span data-ttu-id="98653-107">建立含有資料行的 <xref:System.Data.DataTable>，其中的資料行是 <xref:System.Data.DataView> 之資料行的子集。</span><span class="sxs-lookup"><span data-stu-id="98653-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
+-   <span data-ttu-id="37e89-107">建立含有資料行的 <xref:System.Data.DataTable>，其中的資料行是 <xref:System.Data.DataView> 之資料行的子集。</span><span class="sxs-lookup"><span data-stu-id="37e89-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
   
--   <span data-ttu-id="98653-108">建立<xref:System.Data.DataTable>包含從只包含相異資料列<xref:System.Data.DataView>，類似地以在 TRANSACT-SQL 的 DISTINCT 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="98653-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
+-   <span data-ttu-id="37e89-108">建立<xref:System.Data.DataTable>包含從只包含相異資料列<xref:System.Data.DataView>，類似地以在 TRANSACT-SQL 的 DISTINCT 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="37e89-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98653-109">範例</span><span class="sxs-lookup"><span data-stu-id="98653-109">Example</span></span>  
- <span data-ttu-id="98653-110">下列主控台應用程式範例會建立<xref:System.Data.DataTable>，其中包含從資料**Person.Contact**資料表中**AdventureWorks**範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="98653-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="98653-111">接下來，此範例會建立已排序和篩選的<xref:System.Data.DataView>根據<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="98653-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="98653-112">顯示的內容之後<xref:System.Data.DataTable>和<xref:System.Data.DataView>，此範例會建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>藉由呼叫<xref:System.Data.DataView.ToTable%2A>方法中，選取可用的資料行的子集。</span><span class="sxs-lookup"><span data-stu-id="98653-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="98653-113">最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。</span><span class="sxs-lookup"><span data-stu-id="98653-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
+## <a name="example"></a><span data-ttu-id="37e89-109">範例</span><span class="sxs-lookup"><span data-stu-id="37e89-109">Example</span></span>  
+ <span data-ttu-id="37e89-110">下列主控台應用程式範例會建立<xref:System.Data.DataTable>，其中包含從資料**Person.Contact**資料表中**AdventureWorks**範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="37e89-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="37e89-111">接下來，此範例會建立已排序和篩選的<xref:System.Data.DataView>根據<xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="37e89-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="37e89-112">顯示的內容之後<xref:System.Data.DataTable>和<xref:System.Data.DataView>，此範例會建立新<xref:System.Data.DataTable>從<xref:System.Data.DataView>藉由呼叫<xref:System.Data.DataView.ToTable%2A>方法中，選取可用的資料行的子集。</span><span class="sxs-lookup"><span data-stu-id="37e89-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="37e89-113">最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。</span><span class="sxs-lookup"><span data-stu-id="37e89-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -214,9 +214,9 @@ Console.WriteLine();
 }  
 ```  
   
- <span data-ttu-id="98653-114">}</span><span class="sxs-lookup"><span data-stu-id="98653-114">}</span></span>  
+ <span data-ttu-id="37e89-114">}</span><span class="sxs-lookup"><span data-stu-id="37e89-114">}</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98653-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="98653-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="37e89-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="37e89-115">See Also</span></span>  
  <xref:System.Data.DataView.ToTable%2A>  
- [<span data-ttu-id="98653-116">DataView</span><span class="sxs-lookup"><span data-stu-id="98653-116">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="98653-117">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="98653-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="37e89-116">DataView</span><span class="sxs-lookup"><span data-stu-id="37e89-116">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="37e89-117">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="37e89-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

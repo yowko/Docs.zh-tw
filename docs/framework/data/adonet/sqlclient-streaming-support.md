@@ -10,32 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99b5af9f33fa92c6e635ee0190893e377724d970
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sqlclient-streaming-support"></a><span data-ttu-id="76438-102">SqlClient 資料流支援</span><span class="sxs-lookup"><span data-stu-id="76438-102">SqlClient Streaming Support</span></span>
-<span data-ttu-id="76438-103">[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和應用程式之間的資料流支援 ([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的新功能) 可支援伺服器上非結構化的資料 (文件、影像及媒體檔案)。</span><span class="sxs-lookup"><span data-stu-id="76438-103">Streaming support between [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="76438-104">[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料庫可以儲存二進位大型物件 (BLOB)，但擷取 BLOB 可能會佔用很多記憶體。</span><span class="sxs-lookup"><span data-stu-id="76438-104">A [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>  
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="6030b-102">SqlClient 資料流支援</span><span class="sxs-lookup"><span data-stu-id="6030b-102">SqlClient Streaming Support</span></span>
+<span data-ttu-id="6030b-103">[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和應用程式之間的資料流支援 ([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的新功能) 可支援伺服器上非結構化的資料 (文件、影像及媒體檔案)。</span><span class="sxs-lookup"><span data-stu-id="6030b-103">Streaming support between [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="6030b-104">[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料庫可以儲存二進位大型物件 (BLOB)，但擷取 BLOB 可能會佔用很多記憶體。</span><span class="sxs-lookup"><span data-stu-id="6030b-104">A [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>  
   
- <span data-ttu-id="76438-105">處理 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 之間的資料流支援可簡化以資料流方式處理資料的應用程式撰寫，而不需將資料完全載入記憶體，因此可以減少記憶體溢位例外狀況。</span><span class="sxs-lookup"><span data-stu-id="76438-105">Streaming support to and from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>  
+ <span data-ttu-id="6030b-105">處理 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 之間的資料流支援可簡化以資料流方式處理資料的應用程式撰寫，而不需將資料完全載入記憶體，因此可以減少記憶體溢位例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6030b-105">Streaming support to and from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>  
   
- <span data-ttu-id="76438-106">尤其是在商務物件連接到 SQL Azure 以傳送、擷取及管理大型 BLOB 的情況下，資料流支援也可以讓中介層應用程式擴充得更好。</span><span class="sxs-lookup"><span data-stu-id="76438-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>  
+ <span data-ttu-id="6030b-106">尤其是在商務物件連接到 SQL Azure 以傳送、擷取及管理大型 BLOB 的情況下，資料流支援也可以讓中介層應用程式擴充得更好。</span><span class="sxs-lookup"><span data-stu-id="6030b-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="76438-107">如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="76438-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
+>  <span data-ttu-id="6030b-107">如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="6030b-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
 >   
->  <span data-ttu-id="76438-108">加入以支援資料流的成員可用於擷取查詢中的資料，以及將參數傳遞至查詢及預存程序。</span><span class="sxs-lookup"><span data-stu-id="76438-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="76438-109">資料流功能適用於基本的 OLTP 和資料移轉案例，亦適用於內部及外部資料移轉環境。</span><span class="sxs-lookup"><span data-stu-id="76438-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on premise and off premise data migrations.environments.</span></span>  
+>  <span data-ttu-id="6030b-108">加入以支援資料流的成員可用於擷取查詢中的資料，以及將參數傳遞至查詢及預存程序。</span><span class="sxs-lookup"><span data-stu-id="6030b-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="6030b-109">資料流功能適用於基本的 OLTP 和資料移轉案例，亦適用於內部及外部資料移轉環境。</span><span class="sxs-lookup"><span data-stu-id="6030b-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on premise and off premise data migrations.environments.</span></span>  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="76438-110">處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援</span><span class="sxs-lookup"><span data-stu-id="76438-110">Streaming Support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
- <span data-ttu-id="76438-111">處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援在 <xref:System.Data.Common.DbDataReader> 和 <xref:System.Data.SqlClient.SqlDataReader> 類別中引進新功能，以取得 <xref:System.IO.Stream>、<xref:System.Xml.XmlReader> 和 <xref:System.IO.TextReader> 物件及回應這些物件。</span><span class="sxs-lookup"><span data-stu-id="76438-111">Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span>  <span data-ttu-id="76438-112">這些類別用於從查詢中擷取資料。</span><span class="sxs-lookup"><span data-stu-id="76438-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="76438-113">因此，處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援適用於 OLTP 案例，亦適用於內部及外部環境。</span><span class="sxs-lookup"><span data-stu-id="76438-113">As a result, Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] addresses OLTP scenarios and applies to on-premise and off-premise environments.</span></span>  
+## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="6030b-110">處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援</span><span class="sxs-lookup"><span data-stu-id="6030b-110">Streaming Support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="6030b-111">處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援在 <xref:System.Data.Common.DbDataReader> 和 <xref:System.Data.SqlClient.SqlDataReader> 類別中引進新功能，以取得 <xref:System.IO.Stream>、<xref:System.Xml.XmlReader> 和 <xref:System.IO.TextReader> 物件及回應這些物件。</span><span class="sxs-lookup"><span data-stu-id="6030b-111">Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span>  <span data-ttu-id="6030b-112">這些類別用於從查詢中擷取資料。</span><span class="sxs-lookup"><span data-stu-id="6030b-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="6030b-113">因此，處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援適用於 OLTP 案例，亦適用於內部及外部環境。</span><span class="sxs-lookup"><span data-stu-id="6030b-113">As a result, Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] addresses OLTP scenarios and applies to on-premise and off-premise environments.</span></span>  
   
- <span data-ttu-id="76438-114">已在 <xref:System.Data.SqlClient.SqlDataReader> 中加入下列成員，以啟用處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援：</span><span class="sxs-lookup"><span data-stu-id="76438-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
+ <span data-ttu-id="6030b-114">已在 <xref:System.Data.SqlClient.SqlDataReader> 中加入下列成員，以啟用處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援：</span><span class="sxs-lookup"><span data-stu-id="6030b-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- <span data-ttu-id="76438-115">已在 <xref:System.Data.Common.DbDataReader> 中加入下列成員，以啟用處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援：</span><span class="sxs-lookup"><span data-stu-id="76438-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
+ <span data-ttu-id="6030b-115">已在 <xref:System.Data.Common.DbDataReader> 中加入下列成員，以啟用處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流支援：</span><span class="sxs-lookup"><span data-stu-id="6030b-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,35 +57,35 @@ ms.lasthandoff: 12/22/2017
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="76438-116">將資料流處理至 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的支援</span><span class="sxs-lookup"><span data-stu-id="76438-116">Streaming Support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
- <span data-ttu-id="76438-117">將資料流處理至 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的支援在 <xref:System.Data.SqlClient.SqlParameter> 類別中寫入新功能，以便接受並回應 <xref:System.Xml.XmlReader>、<xref:System.IO.Stream> 和 <xref:System.IO.TextReader> 物件。</span><span class="sxs-lookup"><span data-stu-id="76438-117">Streaming support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="76438-118"><xref:System.Data.SqlClient.SqlParameter> 用於將參數傳遞給查詢和預存程序。</span><span class="sxs-lookup"><span data-stu-id="76438-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>  
+## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="6030b-116">將資料流處理至 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的支援</span><span class="sxs-lookup"><span data-stu-id="6030b-116">Streaming Support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="6030b-117">將資料流處理至 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的支援在 <xref:System.Data.SqlClient.SqlParameter> 類別中寫入新功能，以便接受並回應 <xref:System.Xml.XmlReader>、<xref:System.IO.Stream> 和 <xref:System.IO.TextReader> 物件。</span><span class="sxs-lookup"><span data-stu-id="6030b-117">Streaming support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="6030b-118"><xref:System.Data.SqlClient.SqlParameter> 用於將參數傳遞給查詢和預存程序。</span><span class="sxs-lookup"><span data-stu-id="6030b-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>  
   
- <span data-ttu-id="76438-119">您必須取消所有資料流作業，才能處置 <xref:System.Data.SqlClient.SqlCommand> 物件或呼叫 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>。</span><span class="sxs-lookup"><span data-stu-id="76438-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="76438-120">如果應用程式傳送 <xref:System.Threading.CancellationToken>，就不保證能取消。</span><span class="sxs-lookup"><span data-stu-id="76438-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>  
+ <span data-ttu-id="6030b-119">您必須取消所有資料流作業，才能處置 <xref:System.Data.SqlClient.SqlCommand> 物件或呼叫 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>。</span><span class="sxs-lookup"><span data-stu-id="6030b-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="6030b-120">如果應用程式傳送 <xref:System.Threading.CancellationToken>，就不保證能取消。</span><span class="sxs-lookup"><span data-stu-id="6030b-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>  
   
- <span data-ttu-id="76438-121">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 型別將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.Stream>。</span><span class="sxs-lookup"><span data-stu-id="76438-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>  
+ <span data-ttu-id="6030b-121">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 型別將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.Stream>。</span><span class="sxs-lookup"><span data-stu-id="6030b-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>  
   
--   <span data-ttu-id="76438-122">**Binary**</span><span class="sxs-lookup"><span data-stu-id="76438-122">**Binary**</span></span>  
+-   <span data-ttu-id="6030b-122">**Binary**</span><span class="sxs-lookup"><span data-stu-id="6030b-122">**Binary**</span></span>  
   
--   <span data-ttu-id="76438-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="76438-123">**VarBinary**</span></span>  
+-   <span data-ttu-id="6030b-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="6030b-123">**VarBinary**</span></span>  
   
- <span data-ttu-id="76438-124">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 型別將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.TextReader>。</span><span class="sxs-lookup"><span data-stu-id="76438-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>  
+ <span data-ttu-id="6030b-124">下列 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 型別將接受 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 的 <xref:System.IO.TextReader>。</span><span class="sxs-lookup"><span data-stu-id="6030b-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>  
   
--   <span data-ttu-id="76438-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="76438-125">**Char**</span></span>  
+-   <span data-ttu-id="6030b-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="6030b-125">**Char**</span></span>  
   
--   <span data-ttu-id="76438-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="76438-126">**NChar**</span></span>  
+-   <span data-ttu-id="6030b-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="6030b-126">**NChar**</span></span>  
   
--   <span data-ttu-id="76438-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="76438-127">**NVarChar**</span></span>  
+-   <span data-ttu-id="6030b-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="6030b-127">**NVarChar**</span></span>  
   
--   <span data-ttu-id="76438-128">**Xml**</span><span class="sxs-lookup"><span data-stu-id="76438-128">**Xml**</span></span>  
+-   <span data-ttu-id="6030b-128">**Xml**</span><span class="sxs-lookup"><span data-stu-id="6030b-128">**Xml**</span></span>  
   
- <span data-ttu-id="76438-129">**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>型別將接受<xref:System.Data.SqlClient.SqlParameter.Value%2A>的<xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="76438-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>  
+ <span data-ttu-id="6030b-129">**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>型別將接受<xref:System.Data.SqlClient.SqlParameter.Value%2A>的<xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="6030b-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>  
   
- <span data-ttu-id="76438-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> 可接受型別 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 的值。</span><span class="sxs-lookup"><span data-stu-id="76438-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>  
+ <span data-ttu-id="6030b-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> 可接受型別 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 的值。</span><span class="sxs-lookup"><span data-stu-id="6030b-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>  
   
- <span data-ttu-id="76438-131"><xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。</span><span class="sxs-lookup"><span data-stu-id="76438-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>  
+ <span data-ttu-id="6030b-131"><xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。</span><span class="sxs-lookup"><span data-stu-id="6030b-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="76438-132">範例：處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流</span><span class="sxs-lookup"><span data-stu-id="76438-132">Sample -- Streaming from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
- <span data-ttu-id="76438-133">使用下列 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="76438-133">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
+## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="6030b-132">範例：處理來自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流</span><span class="sxs-lookup"><span data-stu-id="6030b-132">Sample -- Streaming from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="6030b-133">使用下列 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="6030b-133">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
   
 ```  
 CREATE DATABASE [Demo]  
@@ -104,17 +104,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO  
 ```  
   
- <span data-ttu-id="76438-134">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="76438-134">The sample shows how to do the following:</span></span>  
+ <span data-ttu-id="6030b-134">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="6030b-134">The sample shows how to do the following:</span></span>  
   
--   <span data-ttu-id="76438-135">提供擷取大型檔案的非同步方法，避免封鎖使用者介面執行緒。</span><span class="sxs-lookup"><span data-stu-id="76438-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>  
+-   <span data-ttu-id="6030b-135">提供擷取大型檔案的非同步方法，避免封鎖使用者介面執行緒。</span><span class="sxs-lookup"><span data-stu-id="6030b-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>  
   
--   <span data-ttu-id="76438-136">從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 傳輸大型文字檔。</span><span class="sxs-lookup"><span data-stu-id="76438-136">Transfer a large text file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+-   <span data-ttu-id="6030b-136">從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 傳輸大型文字檔。</span><span class="sxs-lookup"><span data-stu-id="6030b-136">Transfer a large text file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   <span data-ttu-id="76438-137">從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 傳輸大型 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="76438-137">Transfer a large XML file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+-   <span data-ttu-id="6030b-137">從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 傳輸大型 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="6030b-137">Transfer a large XML file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   <span data-ttu-id="76438-138">從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 擷取資料。</span><span class="sxs-lookup"><span data-stu-id="76438-138">Retrieve data from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
+-   <span data-ttu-id="6030b-138">從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 擷取資料。</span><span class="sxs-lookup"><span data-stu-id="6030b-138">Retrieve data from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
--   <span data-ttu-id="76438-139">從某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料庫傳輸大型檔案 (BLOB) 到另一個資料庫，同時確保記憶體充足。</span><span class="sxs-lookup"><span data-stu-id="76438-139">Transfer large files (BLOBs) from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database to another without running out of memory.</span></span>  
+-   <span data-ttu-id="6030b-139">從某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料庫傳輸大型檔案 (BLOB) 到另一個資料庫，同時確保記憶體充足。</span><span class="sxs-lookup"><span data-stu-id="6030b-139">Transfer large files (BLOBs) from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database to another without running out of memory.</span></span>  
   
 ```  
 using System;  
@@ -305,8 +305,8 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="76438-140">範例：將資料流處理至 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76438-140">Sample -- Streaming to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
- <span data-ttu-id="76438-141">使用下列 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="76438-141">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
+## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="6030b-140">範例：將資料流處理至 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6030b-140">Sample -- Streaming to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="6030b-141">使用下列 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 建立範例資料庫：</span><span class="sxs-lookup"><span data-stu-id="6030b-141">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
   
 ```  
 CREATE DATABASE [Demo2]  
@@ -327,19 +327,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO  
 ```  
   
- <span data-ttu-id="76438-142">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="76438-142">The sample shows how to do the following:</span></span>  
+ <span data-ttu-id="6030b-142">範例顯示如何執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="6030b-142">The sample shows how to do the following:</span></span>  
   
--   <span data-ttu-id="76438-143">將大型 BLOB 傳輸到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="76438-143">Transferring a large BLOB to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+-   <span data-ttu-id="6030b-143">將大型 BLOB 傳輸到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6030b-143">Transferring a large BLOB to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   <span data-ttu-id="76438-144">將大型文字檔傳輸到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="76438-144">Transferring a large text file to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+-   <span data-ttu-id="6030b-144">將大型文字檔傳輸到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6030b-144">Transferring a large text file to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   <span data-ttu-id="76438-145">使用新的非同步功能傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="76438-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>  
+-   <span data-ttu-id="6030b-145">使用新的非同步功能傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="6030b-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>  
   
--   <span data-ttu-id="76438-146">使用新的非同步功能及 await 關鍵字傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="76438-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>  
+-   <span data-ttu-id="6030b-146">使用新的非同步功能及 await 關鍵字傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="6030b-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>  
   
--   <span data-ttu-id="76438-147">取消傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="76438-147">Cancelling the transfer of a large BLOB..</span></span>  
+-   <span data-ttu-id="6030b-147">取消傳輸大型 BLOB。</span><span class="sxs-lookup"><span data-stu-id="6030b-147">Cancelling the transfer of a large BLOB..</span></span>  
   
--   <span data-ttu-id="76438-148">使用新的非同步功能將來自某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流處理到另一個。</span><span class="sxs-lookup"><span data-stu-id="76438-148">Streaming from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another using the new asynchronous feature.</span></span>  
+-   <span data-ttu-id="6030b-148">使用新的非同步功能將來自某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的資料流處理到另一個。</span><span class="sxs-lookup"><span data-stu-id="6030b-148">Streaming from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another using the new asynchronous feature.</span></span>  
   
 ```  
 using System;  
@@ -461,8 +461,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="76438-149">範例：從某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料流處理到另一個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76438-149">Sample -- Streaming From One [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to Another [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
- <span data-ttu-id="76438-150">此範例示範如何將大型 BLOB 從某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 非同步資料流處理到另一個，同時支援取消作業。</span><span class="sxs-lookup"><span data-stu-id="76438-150">This sample demonstrates how to asynchronously stream a large BLOB from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another, with support for cancellation.</span></span>  
+## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="6030b-149">範例：從某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料流處理到另一個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6030b-149">Sample -- Streaming From One [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to Another [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="6030b-150">此範例示範如何將大型 BLOB 從某個 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 非同步資料流處理到另一個，同時支援取消作業。</span><span class="sxs-lookup"><span data-stu-id="6030b-150">This sample demonstrates how to asynchronously stream a large BLOB from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another, with support for cancellation.</span></span>  
   
 ```  
 using System;  
@@ -527,5 +527,5 @@ namespace StreamingFromServerToAnother {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="76438-151">請參閱</span><span class="sxs-lookup"><span data-stu-id="76438-151">See Also</span></span>  
- [<span data-ttu-id="76438-152">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="76438-152">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+## <a name="see-also"></a><span data-ttu-id="6030b-151">請參閱</span><span class="sxs-lookup"><span data-stu-id="6030b-151">See Also</span></span>  
+ [<span data-ttu-id="6030b-152">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="6030b-152">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

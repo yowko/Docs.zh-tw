@@ -13,31 +13,31 @@ dev_langs:
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ac0e595140c11039d5a30f0e1f40c75e4a898002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c4a77e2a27d65ada6767811ea80722c3a90962c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="method-based-query-syntax-examples-element-operators"></a><span data-ttu-id="af568-102">以方法為基礎的查詢語法範例：項目運算子</span><span class="sxs-lookup"><span data-stu-id="af568-102">Method-Based Query Syntax Examples: Element Operators</span></span>
-<span data-ttu-id="af568-103">本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.First%2A>方法來查詢[AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)使用以方法為基礎的查詢語法。</span><span class="sxs-lookup"><span data-stu-id="af568-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="af568-104">這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。</span><span class="sxs-lookup"><span data-stu-id="af568-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="method-based-query-syntax-examples-element-operators"></a><span data-ttu-id="7f514-102">以方法為基礎的查詢語法範例：項目運算子</span><span class="sxs-lookup"><span data-stu-id="7f514-102">Method-Based Query Syntax Examples: Element Operators</span></span>
+<span data-ttu-id="7f514-103">本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.First%2A>方法來查詢[AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)使用以方法為基礎的查詢語法。</span><span class="sxs-lookup"><span data-stu-id="7f514-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="7f514-104">這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。</span><span class="sxs-lookup"><span data-stu-id="7f514-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="af568-105">本主題中的範例使用下列`using` / `Imports`陳述式：</span><span class="sxs-lookup"><span data-stu-id="af568-105">The example in this topic uses the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="7f514-105">本主題中的範例使用下列`using` / `Imports`陳述式：</span><span class="sxs-lookup"><span data-stu-id="7f514-105">The example in this topic uses the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="first"></a><span data-ttu-id="af568-106">First</span><span class="sxs-lookup"><span data-stu-id="af568-106">First</span></span>  
+## <a name="first"></a><span data-ttu-id="7f514-106">First</span><span class="sxs-lookup"><span data-stu-id="7f514-106">First</span></span>  
   
-### <a name="example"></a><span data-ttu-id="af568-107">範例</span><span class="sxs-lookup"><span data-stu-id="af568-107">Example</span></span>  
- <span data-ttu-id="af568-108">下列範例會使用 <xref:System.Linq.Enumerable.First%2A> 方法來尋找以 'caroline' 開頭的第一筆電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="af568-108">The following example uses the <xref:System.Linq.Enumerable.First%2A> method to find the first e-mail address that starts with 'caroline'.</span></span>  
+### <a name="example"></a><span data-ttu-id="7f514-107">範例</span><span class="sxs-lookup"><span data-stu-id="7f514-107">Example</span></span>  
+ <span data-ttu-id="7f514-108">下列範例會使用 <xref:System.Linq.Enumerable.First%2A> 方法來尋找以 'caroline' 開頭的第一筆電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="7f514-108">The following example uses the <xref:System.Linq.Enumerable.First%2A> method to find the first e-mail address that starts with 'caroline'.</span></span>  
   
  [!code-csharp[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#firstcondition_mq)]
  [!code-vb[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#firstcondition_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="af568-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="af568-109">See Also</span></span>  
- [<span data-ttu-id="af568-110">LINQ to Entities 中的查詢</span><span class="sxs-lookup"><span data-stu-id="af568-110">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="7f514-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="7f514-109">See Also</span></span>  
+ [<span data-ttu-id="7f514-110">LINQ to Entities 中的查詢</span><span class="sxs-lookup"><span data-stu-id="7f514-110">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

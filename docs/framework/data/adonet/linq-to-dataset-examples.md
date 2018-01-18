@@ -10,59 +10,59 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e05042b8b94949c44e8a7a4942f02e7b7a84dd8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61e2e107c3e62569a47b4bd84e451ff55adab208
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="linq-to-dataset-examples"></a><span data-ttu-id="dd6da-102">LINQ to DataSet 範例</span><span class="sxs-lookup"><span data-stu-id="dd6da-102">LINQ to DataSet Examples</span></span>
-<span data-ttu-id="dd6da-103">本節提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式設計使用標準查詢運算子的範例。</span><span class="sxs-lookup"><span data-stu-id="dd6da-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="dd6da-104"><xref:System.Data.DataSet>這些範例中使用填入的方式是使用`FillDataSet`方法中所指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="dd6da-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="dd6da-105">如需詳細資訊，請參閱[標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="dd6da-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
+# <a name="linq-to-dataset-examples"></a><span data-ttu-id="bc78b-102">LINQ to DataSet 範例</span><span class="sxs-lookup"><span data-stu-id="bc78b-102">LINQ to DataSet Examples</span></span>
+<span data-ttu-id="bc78b-103">本節提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式設計使用標準查詢運算子的範例。</span><span class="sxs-lookup"><span data-stu-id="bc78b-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="bc78b-104"><xref:System.Data.DataSet>這些範例中使用填入的方式是使用`FillDataSet`方法中所指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="bc78b-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="bc78b-105">如需詳細資訊，請參閱[標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="bc78b-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dd6da-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="dd6da-106">In This Section</span></span>  
- [<span data-ttu-id="dd6da-107">查詢運算式範例</span><span class="sxs-lookup"><span data-stu-id="dd6da-107">Query Expression Examples</span></span>](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
- <span data-ttu-id="dd6da-108">包含下列範例：</span><span class="sxs-lookup"><span data-stu-id="dd6da-108">Contains the following examples:</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="bc78b-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="bc78b-106">In This Section</span></span>  
+ [<span data-ttu-id="bc78b-107">查詢運算式範例</span><span class="sxs-lookup"><span data-stu-id="bc78b-107">Query Expression Examples</span></span>](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ <span data-ttu-id="bc78b-108">包含下列範例：</span><span class="sxs-lookup"><span data-stu-id="bc78b-108">Contains the following examples:</span></span>  
   
--   [<span data-ttu-id="dd6da-109">投影</span><span class="sxs-lookup"><span data-stu-id="dd6da-109">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+-   [<span data-ttu-id="bc78b-109">投影</span><span class="sxs-lookup"><span data-stu-id="bc78b-109">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
--   [<span data-ttu-id="dd6da-110">限制</span><span class="sxs-lookup"><span data-stu-id="dd6da-110">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+-   [<span data-ttu-id="bc78b-110">限制</span><span class="sxs-lookup"><span data-stu-id="bc78b-110">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
--   [<span data-ttu-id="dd6da-111">資料分割</span><span class="sxs-lookup"><span data-stu-id="dd6da-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+-   [<span data-ttu-id="bc78b-111">資料分割</span><span class="sxs-lookup"><span data-stu-id="bc78b-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [<span data-ttu-id="dd6da-112">排序</span><span class="sxs-lookup"><span data-stu-id="dd6da-112">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="bc78b-112">排序</span><span class="sxs-lookup"><span data-stu-id="bc78b-112">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [<span data-ttu-id="dd6da-113">項目運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-113">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="bc78b-113">項目運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-113">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [<span data-ttu-id="dd6da-114">彙總運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-114">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="bc78b-114">彙總運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-114">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [<span data-ttu-id="dd6da-115">聯結運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-115">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+-   [<span data-ttu-id="bc78b-115">聯結運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-115">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [<span data-ttu-id="dd6da-116">以方法為基礎的查詢範例</span><span class="sxs-lookup"><span data-stu-id="dd6da-116">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
- <span data-ttu-id="dd6da-117">包含下列範例：</span><span class="sxs-lookup"><span data-stu-id="dd6da-117">Contains the following examples:</span></span>  
+ [<span data-ttu-id="bc78b-116">以方法為基礎的查詢範例</span><span class="sxs-lookup"><span data-stu-id="bc78b-116">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ <span data-ttu-id="bc78b-117">包含下列範例：</span><span class="sxs-lookup"><span data-stu-id="bc78b-117">Contains the following examples:</span></span>  
   
--   [<span data-ttu-id="dd6da-118">投影</span><span class="sxs-lookup"><span data-stu-id="dd6da-118">Projection</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+-   [<span data-ttu-id="bc78b-118">投影</span><span class="sxs-lookup"><span data-stu-id="bc78b-118">Projection</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
--   [<span data-ttu-id="dd6da-119">資料分割</span><span class="sxs-lookup"><span data-stu-id="dd6da-119">Partitioning</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+-   [<span data-ttu-id="bc78b-119">資料分割</span><span class="sxs-lookup"><span data-stu-id="bc78b-119">Partitioning</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [<span data-ttu-id="dd6da-120">排序</span><span class="sxs-lookup"><span data-stu-id="dd6da-120">Ordering</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="bc78b-120">排序</span><span class="sxs-lookup"><span data-stu-id="bc78b-120">Ordering</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [<span data-ttu-id="dd6da-121">集合運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-121">Set Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [<span data-ttu-id="bc78b-121">集合運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-121">Set Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
--   [<span data-ttu-id="dd6da-122">轉換運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-122">Conversion Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+-   [<span data-ttu-id="bc78b-122">轉換運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-122">Conversion Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
--   [<span data-ttu-id="dd6da-123">項目運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-123">Element Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="bc78b-123">項目運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-123">Element Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [<span data-ttu-id="dd6da-124">彙總運算子</span><span class="sxs-lookup"><span data-stu-id="dd6da-124">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="bc78b-124">彙總運算子</span><span class="sxs-lookup"><span data-stu-id="bc78b-124">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [<span data-ttu-id="dd6da-125">Join</span><span class="sxs-lookup"><span data-stu-id="dd6da-125">Join</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+-   [<span data-ttu-id="bc78b-125">Join</span><span class="sxs-lookup"><span data-stu-id="bc78b-125">Join</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [<span data-ttu-id="dd6da-126">資料集專屬運算子範例</span><span class="sxs-lookup"><span data-stu-id="dd6da-126">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- <span data-ttu-id="dd6da-127">包含一些示範如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 類別 (Class) 的範例。</span><span class="sxs-lookup"><span data-stu-id="dd6da-127">Contains examples that demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
+ [<span data-ttu-id="bc78b-126">資料集專屬運算子範例</span><span class="sxs-lookup"><span data-stu-id="bc78b-126">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ <span data-ttu-id="bc78b-127">包含一些示範如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 類別 (Class) 的範例。</span><span class="sxs-lookup"><span data-stu-id="bc78b-127">Contains examples that demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd6da-128">請參閱</span><span class="sxs-lookup"><span data-stu-id="dd6da-128">See Also</span></span>  
- [<span data-ttu-id="dd6da-129">程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="dd6da-129">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [<span data-ttu-id="dd6da-130">將資料載入至資料集</span><span class="sxs-lookup"><span data-stu-id="dd6da-130">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="bc78b-128">請參閱</span><span class="sxs-lookup"><span data-stu-id="bc78b-128">See Also</span></span>  
+ [<span data-ttu-id="bc78b-129">程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="bc78b-129">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="bc78b-130">將資料載入至資料集</span><span class="sxs-lookup"><span data-stu-id="bc78b-130">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

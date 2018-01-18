@@ -10,38 +10,38 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8807564cb9acf8c50aed43ee11441ebdfbbcea78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09d4d1e6d2e69d805c316f60e6d6e91d094e68cb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="grouppartition-entity-sql"></a><span data-ttu-id="1a048-102">GROUPPARTITION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1a048-102">GROUPPARTITION (Entity SQL)</span></span>
-<span data-ttu-id="1a048-103">傳回引數值的集合，該集合會將目前的群組分割投影至其相關的彙總。</span><span class="sxs-lookup"><span data-stu-id="1a048-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="1a048-104">`GroupPartition` 彙總是以群組為基礎的彙總，不具有以集合為基礎的形式。</span><span class="sxs-lookup"><span data-stu-id="1a048-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  
+# <a name="grouppartition-entity-sql"></a><span data-ttu-id="2b423-102">GROUPPARTITION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2b423-102">GROUPPARTITION (Entity SQL)</span></span>
+<span data-ttu-id="2b423-103">傳回引數值的集合，該集合會將目前的群組分割投影至其相關的彙總。</span><span class="sxs-lookup"><span data-stu-id="2b423-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="2b423-104">`GroupPartition` 彙總是以群組為基礎的彙總，不具有以集合為基礎的形式。</span><span class="sxs-lookup"><span data-stu-id="2b423-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a048-105">語法</span><span class="sxs-lookup"><span data-stu-id="1a048-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b423-105">語法</span><span class="sxs-lookup"><span data-stu-id="2b423-105">Syntax</span></span>  
   
 ```  
 GROUPPARTITION( [ALL|DISTINCT] expression )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="1a048-106">引數</span><span class="sxs-lookup"><span data-stu-id="1a048-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="2b423-106">引數</span><span class="sxs-lookup"><span data-stu-id="2b423-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="1a048-107">任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算式。</span><span class="sxs-lookup"><span data-stu-id="1a048-107">Any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression.</span></span>  
+ <span data-ttu-id="2b423-107">任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算式。</span><span class="sxs-lookup"><span data-stu-id="2b423-107">Any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1a048-108">備註</span><span class="sxs-lookup"><span data-stu-id="1a048-108">Remarks</span></span>  
- <span data-ttu-id="1a048-109">下列查詢會產生產品清單，以及每項產品的訂單產品線數量集合：</span><span class="sxs-lookup"><span data-stu-id="1a048-109">The following query produces a list of products and a collection of order line quantities per each product:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b423-108">備註</span><span class="sxs-lookup"><span data-stu-id="2b423-108">Remarks</span></span>  
+ <span data-ttu-id="2b423-109">下列查詢會產生產品清單，以及每項產品的訂單產品線數量集合：</span><span class="sxs-lookup"><span data-stu-id="2b423-109">The following query produces a list of products and a collection of order line quantities per each product:</span></span>  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol  
   group by ol.Product as p  
 ```  
   
- <span data-ttu-id="1a048-110">以下兩個查詢的語意相同：</span><span class="sxs-lookup"><span data-stu-id="1a048-110">The following two queries are semantically equal:</span></span>  
+ <span data-ttu-id="2b423-110">以下兩個查詢的語意相同：</span><span class="sxs-lookup"><span data-stu-id="2b423-110">The following two queries are semantically equal:</span></span>  
   
 ```  
 select p, Sum(GroupPartition(ol.Quantity)) from LOB.OrderLines as ol  
@@ -50,26 +50,26 @@ select p, Sum(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p  
 ```  
   
- <span data-ttu-id="1a048-111">`GROUPPARTITION` 運算子可以搭配使用者定義的彙總函式使用。</span><span class="sxs-lookup"><span data-stu-id="1a048-111">The `GROUPPARTITION` operator can be used in conjunction with user-defined aggregate functions.</span></span>  
+ <span data-ttu-id="2b423-111">`GROUPPARTITION` 運算子可以搭配使用者定義的彙總函式使用。</span><span class="sxs-lookup"><span data-stu-id="2b423-111">The `GROUPPARTITION` operator can be used in conjunction with user-defined aggregate functions.</span></span>  
   
- <span data-ttu-id="1a048-112">`GROUPPARTITION` 是特殊的彙總運算子，可保留群組輸入集的參考。</span><span class="sxs-lookup"><span data-stu-id="1a048-112">`GROUPPARTITION` is a special aggregate operator that holds a reference to the grouped input set.</span></span> <span data-ttu-id="1a048-113">若 GROUP BY 在範圍內，即可在查詢中任何位置使用此參考。</span><span class="sxs-lookup"><span data-stu-id="1a048-113">This reference can be used anywhere in the query where GROUP BY is in scope.</span></span> <span data-ttu-id="1a048-114">例如：</span><span class="sxs-lookup"><span data-stu-id="1a048-114">For example,</span></span>  
+ <span data-ttu-id="2b423-112">`GROUPPARTITION` 是特殊的彙總運算子，可保留群組輸入集的參考。</span><span class="sxs-lookup"><span data-stu-id="2b423-112">`GROUPPARTITION` is a special aggregate operator that holds a reference to the grouped input set.</span></span> <span data-ttu-id="2b423-113">若 GROUP BY 在範圍內，即可在查詢中任何位置使用此參考。</span><span class="sxs-lookup"><span data-stu-id="2b423-113">This reference can be used anywhere in the query where GROUP BY is in scope.</span></span> <span data-ttu-id="2b423-114">例如：</span><span class="sxs-lookup"><span data-stu-id="2b423-114">For example,</span></span>  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  
 ```  
   
- <span data-ttu-id="1a048-115">搭配標準 GROUP BY，會隱藏群組的結果。</span><span class="sxs-lookup"><span data-stu-id="1a048-115">With a regular GROUP BY, the results of the grouping are hidden.</span></span> <span data-ttu-id="1a048-116">您只能在彙總函式中使用結果。</span><span class="sxs-lookup"><span data-stu-id="1a048-116">You can only use the results in an aggregate function.</span></span> <span data-ttu-id="1a048-117">若要查看群組的結果，您必須使用子查詢，讓群組和輸入集互相關聯。</span><span class="sxs-lookup"><span data-stu-id="1a048-117">In order to see the results of the grouping, you have to correlate the results of the grouping and the input set by using a subquery.</span></span> <span data-ttu-id="1a048-118">下列兩個查詢的用法相同：</span><span class="sxs-lookup"><span data-stu-id="1a048-118">The following two queries are equivalent:</span></span>  
+ <span data-ttu-id="2b423-115">搭配標準 GROUP BY，會隱藏群組的結果。</span><span class="sxs-lookup"><span data-stu-id="2b423-115">With a regular GROUP BY, the results of the grouping are hidden.</span></span> <span data-ttu-id="2b423-116">您只能在彙總函式中使用結果。</span><span class="sxs-lookup"><span data-stu-id="2b423-116">You can only use the results in an aggregate function.</span></span> <span data-ttu-id="2b423-117">若要查看群組的結果，您必須使用子查詢，讓群組和輸入集互相關聯。</span><span class="sxs-lookup"><span data-stu-id="2b423-117">In order to see the results of the grouping, you have to correlate the results of the grouping and the input set by using a subquery.</span></span> <span data-ttu-id="2b423-118">下列兩個查詢的用法相同：</span><span class="sxs-lookup"><span data-stu-id="2b423-118">The following two queries are equivalent:</span></span>  
   
 ```  
 select p, (select q from GroupPartition(ol.Quantity) as q) from LOB.OrderLines as ol group by ol.Product as p  
 select p, (select ol.Quantity as q from LOB.OrderLines as ol2 where ol2.Product = p) from LOB.OrderLines as ol group by ol.Product as p  
 ```  
   
- <span data-ttu-id="1a048-119">如範例所示，GROUPPARTITION 彙總運算子可讓您更容易在群組之後參考輸入集。</span><span class="sxs-lookup"><span data-stu-id="1a048-119">As seen from the example, the GROUPPARTITION aggregate operator makes it easier to get a reference to the input set after the grouping.</span></span>  
+ <span data-ttu-id="2b423-119">如範例所示，GROUPPARTITION 彙總運算子可讓您更容易在群組之後參考輸入集。</span><span class="sxs-lookup"><span data-stu-id="2b423-119">As seen from the example, the GROUPPARTITION aggregate operator makes it easier to get a reference to the input set after the grouping.</span></span>  
   
- <span data-ttu-id="1a048-120">當您使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參數時，GROUPPARTITION 運算子可以指定運算子輸入中的任何 `expression` 運算式。</span><span class="sxs-lookup"><span data-stu-id="1a048-120">The GROUPPARTITION operator can specify any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression in the operator input when you use the `expression` parameter.</span></span>  
+ <span data-ttu-id="2b423-120">當您使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參數時，GROUPPARTITION 運算子可以指定運算子輸入中的任何 `expression` 運算式。</span><span class="sxs-lookup"><span data-stu-id="2b423-120">The GROUPPARTITION operator can specify any [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression in the operator input when you use the `expression` parameter.</span></span>  
   
- <span data-ttu-id="1a048-121">下列針對群組分割的所有輸入運算式在執行個體中皆有效：</span><span class="sxs-lookup"><span data-stu-id="1a048-121">For instance all of the following input expressions to the group partition are valid:</span></span>  
+ <span data-ttu-id="2b423-121">下列針對群組分割的所有輸入運算式在執行個體中皆有效：</span><span class="sxs-lookup"><span data-stu-id="2b423-121">For instance all of the following input expressions to the group partition are valid:</span></span>  
   
 ```  
 select groupkey, GroupPartition(b) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
@@ -80,7 +80,7 @@ select groupkey, GroupPartition({42}) from {1,2,3} as a inner join {4,5,6} as b 
 select groupkey, GroupPartition(b > a) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
 ```  
   
-## <a name="example"></a><span data-ttu-id="1a048-122">範例</span><span class="sxs-lookup"><span data-stu-id="1a048-122">Example</span></span>  
- <span data-ttu-id="1a048-123">下列範例示範如何使用 GROUPPARTITION 子句搭配 GROUP BY 子句。</span><span class="sxs-lookup"><span data-stu-id="1a048-123">The following example shows how to use the GROUPPARTITION clause with the GROUP BY clause.</span></span> <span data-ttu-id="1a048-124">GROUP BY 子句會依 `SalesOrderHeader` 將 `Contact`實體進行分組。</span><span class="sxs-lookup"><span data-stu-id="1a048-124">The GROUP BY clause groups `SalesOrderHeader` entities by their `Contact`.</span></span> <span data-ttu-id="1a048-125">GROUPPARTITION 子句接著會投影每個群組的 `TotalDue` 屬性，以產生十進位集合。</span><span class="sxs-lookup"><span data-stu-id="1a048-125">The GROUPPARTITION clause then projects the `TotalDue` property for each group, resulting in a collection of decimals.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b423-122">範例</span><span class="sxs-lookup"><span data-stu-id="2b423-122">Example</span></span>  
+ <span data-ttu-id="2b423-123">下列範例示範如何使用 GROUPPARTITION 子句搭配 GROUP BY 子句。</span><span class="sxs-lookup"><span data-stu-id="2b423-123">The following example shows how to use the GROUPPARTITION clause with the GROUP BY clause.</span></span> <span data-ttu-id="2b423-124">GROUP BY 子句會依 `SalesOrderHeader` 將 `Contact`實體進行分組。</span><span class="sxs-lookup"><span data-stu-id="2b423-124">The GROUP BY clause groups `SalesOrderHeader` entities by their `Contact`.</span></span> <span data-ttu-id="2b423-125">GROUPPARTITION 子句接著會投影每個群組的 `TotalDue` 屬性，以產生十進位集合。</span><span class="sxs-lookup"><span data-stu-id="2b423-125">The GROUPPARTITION clause then projects the `TotalDue` property for each group, resulting in a collection of decimals.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]

@@ -10,44 +10,44 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3059adbc9cd2c67035d5f6579e292df80cd87ef3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: caacb4c3b877ce6bf7ba11001f602a76ad7f9734
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="how-to-manage-change-conflicts"></a><span data-ttu-id="b8154-102">如何：管理變更衝突</span><span class="sxs-lookup"><span data-stu-id="b8154-102">How to: Manage Change Conflicts</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b8154-103">提供 Api，可協助您探索、 評估並解決並行衝突的集合。</span><span class="sxs-lookup"><span data-stu-id="b8154-103"> provides a collection of APIs to help you discover, evaluate, and resolve concurrency conflicts.</span></span>  
+# <a name="how-to-manage-change-conflicts"></a><span data-ttu-id="9926a-102">如何：管理變更衝突</span><span class="sxs-lookup"><span data-stu-id="9926a-102">How to: Manage Change Conflicts</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="9926a-103">提供 Api，可協助您探索、 評估並解決並行衝突的集合。</span><span class="sxs-lookup"><span data-stu-id="9926a-103"> provides a collection of APIs to help you discover, evaluate, and resolve concurrency conflicts.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b8154-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="b8154-104">In This Section</span></span>  
- [<span data-ttu-id="b8154-105">如何：偵測和解決發生衝突的提交內容</span><span class="sxs-lookup"><span data-stu-id="b8154-105">How to: Detect and Resolve Conflicting Submissions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
- <span data-ttu-id="b8154-106">描述如何偵測和解決並行存取衝突。</span><span class="sxs-lookup"><span data-stu-id="b8154-106">Describes how to detect and resolve concurrency conflicts.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9926a-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="9926a-104">In This Section</span></span>  
+ [<span data-ttu-id="9926a-105">如何：偵測和解決發生衝突的提交內容</span><span class="sxs-lookup"><span data-stu-id="9926a-105">How to: Detect and Resolve Conflicting Submissions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
+ <span data-ttu-id="9926a-106">描述如何偵測和解決並行存取衝突。</span><span class="sxs-lookup"><span data-stu-id="9926a-106">Describes how to detect and resolve concurrency conflicts.</span></span>  
   
- [<span data-ttu-id="b8154-107">如何：指定並行例外狀況的擲回時機</span><span class="sxs-lookup"><span data-stu-id="b8154-107">How to: Specify When Concurrency Exceptions are Thrown</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
- <span data-ttu-id="b8154-108">描述如何指定應該通知您發生並行存取衝突的時機。</span><span class="sxs-lookup"><span data-stu-id="b8154-108">Describes how to specify when you should be informed of concurrency conflicts.</span></span>  
+ [<span data-ttu-id="9926a-107">如何：指定並行例外狀況的擲回時機</span><span class="sxs-lookup"><span data-stu-id="9926a-107">How to: Specify When Concurrency Exceptions are Thrown</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
+ <span data-ttu-id="9926a-108">描述如何指定應該通知您發生並行存取衝突的時機。</span><span class="sxs-lookup"><span data-stu-id="9926a-108">Describes how to specify when you should be informed of concurrency conflicts.</span></span>  
   
- [<span data-ttu-id="b8154-109">如何：指定用於測試並行衝突的成員</span><span class="sxs-lookup"><span data-stu-id="b8154-109">How to: Specify Which Members are Tested for Concurrency Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
- <span data-ttu-id="b8154-110">描述如何將成員加上屬性 (Attribute)，以指定是否要檢查這些屬性是否發生並行存取衝突。</span><span class="sxs-lookup"><span data-stu-id="b8154-110">Describes how to attribute members to specify whether they are checked for concurrency conflicts.</span></span>  
+ [<span data-ttu-id="9926a-109">如何：指定用於測試並行衝突的成員</span><span class="sxs-lookup"><span data-stu-id="9926a-109">How to: Specify Which Members are Tested for Concurrency Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
+ <span data-ttu-id="9926a-110">描述如何將成員加上屬性 (Attribute)，以指定是否要檢查這些屬性是否發生並行存取衝突。</span><span class="sxs-lookup"><span data-stu-id="9926a-110">Describes how to attribute members to specify whether they are checked for concurrency conflicts.</span></span>  
   
- [<span data-ttu-id="b8154-111">如何：擷取實體衝突資訊</span><span class="sxs-lookup"><span data-stu-id="b8154-111">How to: Retrieve Entity Conflict Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
- <span data-ttu-id="b8154-112">描述如何蒐集實體衝突的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="b8154-112">Describes how to gather information about entity conflicts.</span></span>  
+ [<span data-ttu-id="9926a-111">如何：擷取實體衝突資訊</span><span class="sxs-lookup"><span data-stu-id="9926a-111">How to: Retrieve Entity Conflict Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
+ <span data-ttu-id="9926a-112">描述如何蒐集實體衝突的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9926a-112">Describes how to gather information about entity conflicts.</span></span>  
   
- [<span data-ttu-id="b8154-113">如何：擷取成員衝突資訊</span><span class="sxs-lookup"><span data-stu-id="b8154-113">How to: Retrieve Member Conflict Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
- <span data-ttu-id="b8154-114">描述如何蒐集成員衝突的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="b8154-114">Describes how to gather information about member conflicts.</span></span>  
+ [<span data-ttu-id="9926a-113">如何：擷取成員衝突資訊</span><span class="sxs-lookup"><span data-stu-id="9926a-113">How to: Retrieve Member Conflict Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
+ <span data-ttu-id="9926a-114">描述如何蒐集成員衝突的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="9926a-114">Describes how to gather information about member conflicts.</span></span>  
   
- [<span data-ttu-id="b8154-115">如何：藉由保留資料庫值來解決衝突</span><span class="sxs-lookup"><span data-stu-id="b8154-115">How to: Resolve Conflicts by Retaining Database Values</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
- <span data-ttu-id="b8154-116">描述如何以資料庫值覆寫目前值。</span><span class="sxs-lookup"><span data-stu-id="b8154-116">Describes how to overwrite current values with database values.</span></span>  
+ [<span data-ttu-id="9926a-115">如何：藉由保留資料庫值來解決衝突</span><span class="sxs-lookup"><span data-stu-id="9926a-115">How to: Resolve Conflicts by Retaining Database Values</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
+ <span data-ttu-id="9926a-116">描述如何以資料庫值覆寫目前值。</span><span class="sxs-lookup"><span data-stu-id="9926a-116">Describes how to overwrite current values with database values.</span></span>  
   
- [<span data-ttu-id="b8154-117">如何：藉由覆寫資料庫值來解決衝突</span><span class="sxs-lookup"><span data-stu-id="b8154-117">How to: Resolve Conflicts by Overwriting Database Values</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
- <span data-ttu-id="b8154-118">描述如何覆寫資料庫值來保留目前值。</span><span class="sxs-lookup"><span data-stu-id="b8154-118">Describes how to keep current values by overwriting database values.</span></span>  
+ [<span data-ttu-id="9926a-117">如何：藉由覆寫資料庫值來解決衝突</span><span class="sxs-lookup"><span data-stu-id="9926a-117">How to: Resolve Conflicts by Overwriting Database Values</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
+ <span data-ttu-id="9926a-118">描述如何覆寫資料庫值來保留目前值。</span><span class="sxs-lookup"><span data-stu-id="9926a-118">Describes how to keep current values by overwriting database values.</span></span>  
   
- [<span data-ttu-id="b8154-119">如何：藉由與資料庫值合併來解決衝突</span><span class="sxs-lookup"><span data-stu-id="b8154-119">How to: Resolve Conflicts by Merging with Database Values</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
- <span data-ttu-id="b8154-120">描述如何合併資料庫和目前值來解決衝突。</span><span class="sxs-lookup"><span data-stu-id="b8154-120">Describes how to resolve a conflict by merging database and current values.</span></span>  
+ [<span data-ttu-id="9926a-119">如何：藉由與資料庫值合併來解決衝突</span><span class="sxs-lookup"><span data-stu-id="9926a-119">How to: Resolve Conflicts by Merging with Database Values</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
+ <span data-ttu-id="9926a-120">描述如何合併資料庫和目前值來解決衝突。</span><span class="sxs-lookup"><span data-stu-id="9926a-120">Describes how to resolve a conflict by merging database and current values.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="b8154-121">相關章節</span><span class="sxs-lookup"><span data-stu-id="b8154-121">Related Sections</span></span>  
- [<span data-ttu-id="b8154-122">開放式並行存取：概觀</span><span class="sxs-lookup"><span data-stu-id="b8154-122">Optimistic Concurrency: Overview</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
- <span data-ttu-id="b8154-123">說明適用於 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中開放式並行存取 (Optimistic Concurrency) 的詞彙。</span><span class="sxs-lookup"><span data-stu-id="b8154-123">Explains the terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9926a-121">相關章節</span><span class="sxs-lookup"><span data-stu-id="9926a-121">Related Sections</span></span>  
+ [<span data-ttu-id="9926a-122">開放式並行存取：概觀</span><span class="sxs-lookup"><span data-stu-id="9926a-122">Optimistic Concurrency: Overview</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ <span data-ttu-id="9926a-123">說明適用於 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中開放式並行存取 (Optimistic Concurrency) 的詞彙。</span><span class="sxs-lookup"><span data-stu-id="9926a-123">Explains the terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>

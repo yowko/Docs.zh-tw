@@ -10,24 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19bb2794-b4e7-402e-8307-1d1517381a08
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c898d8448b39fc5da63e5eda2046d0747837509b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e15f0194586cc8d4e069f04a95089cbef709581f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="inheritance-support"></a><span data-ttu-id="eeeb2-102">繼承支援</span><span class="sxs-lookup"><span data-stu-id="eeeb2-102">Inheritance Support</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="eeeb2-103">支援*單一資料表對應*。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-103"> supports *single-table mapping*.</span></span> <span data-ttu-id="eeeb2-104">換句話說，完整的繼承階層架構 (Inheritance Hierarchy) 會儲存在單一資料庫資料表中。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-104">In other words, a complete inheritance hierarchy is stored in a single database table.</span></span> <span data-ttu-id="eeeb2-105">這張資料表包含整個階層架構中所有可能之資料行的平面聯集 </span><span class="sxs-lookup"><span data-stu-id="eeeb2-105">The table contains the flattened union of all possible data columns for the whole hierarchy.</span></span> <span data-ttu-id="eeeb2-106">(聯集是指將兩張原始資料表中的資料列集結，並去除重複資料列後所得到的單一資料表結果)。如果資料行不適用於資料列所代表之執行個體的型別，則該資料列中的該資料行會是 null。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-106">(A union is the result of combining two tables into one table that has the rows that were present in either of the original tables.) Each row has nulls in the columns that do not apply to the type of the instance represented by the row.</span></span>  
+# <a name="inheritance-support"></a><span data-ttu-id="9bc58-102">繼承支援</span><span class="sxs-lookup"><span data-stu-id="9bc58-102">Inheritance Support</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="9bc58-103">支援*單一資料表對應*。</span><span class="sxs-lookup"><span data-stu-id="9bc58-103"> supports *single-table mapping*.</span></span> <span data-ttu-id="9bc58-104">換句話說，完整的繼承階層架構 (Inheritance Hierarchy) 會儲存在單一資料庫資料表中。</span><span class="sxs-lookup"><span data-stu-id="9bc58-104">In other words, a complete inheritance hierarchy is stored in a single database table.</span></span> <span data-ttu-id="9bc58-105">這張資料表包含整個階層架構中所有可能之資料行的平面聯集 </span><span class="sxs-lookup"><span data-stu-id="9bc58-105">The table contains the flattened union of all possible data columns for the whole hierarchy.</span></span> <span data-ttu-id="9bc58-106">(聯集是指將兩張原始資料表中的資料列集結，並去除重複資料列後所得到的單一資料表結果)。如果資料行不適用於資料列所代表之執行個體的型別，則該資料列中的該資料行會是 null。</span><span class="sxs-lookup"><span data-stu-id="9bc58-106">(A union is the result of combining two tables into one table that has the rows that were present in either of the original tables.) Each row has nulls in the columns that do not apply to the type of the instance represented by the row.</span></span>  
   
- <span data-ttu-id="eeeb2-107">單一資料表對應策略是最簡單的繼承表示，並且可以在許多不同類別的查詢中提供良好的效能特性。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-107">The single-table mapping strategy is the simplest representation of inheritance and provides good performance characteristics for many different categories of queries.</span></span>  
+ <span data-ttu-id="9bc58-107">單一資料表對應策略是最簡單的繼承表示，並且可以在許多不同類別的查詢中提供良好的效能特性。</span><span class="sxs-lookup"><span data-stu-id="9bc58-107">The single-table mapping strategy is the simplest representation of inheritance and provides good performance characteristics for many different categories of queries.</span></span>  
   
- <span data-ttu-id="eeeb2-108">若要在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中實作這個對應，則必須在繼承階層架構的根類別中指定屬性 (Attribute) 和屬性的屬性 (Attribute Property)。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-108">To implement this mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you must specify the attributes and attribute properties on the root class of the inheritance hierarchy.</span></span> <span data-ttu-id="eeeb2-109">如需詳細資訊，請參閱[如何： 對應繼承階層架構](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-109">For more information, see [How to: Map Inheritance Hierarchies](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).</span></span>  
+ <span data-ttu-id="9bc58-108">若要在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中實作這個對應，則必須在繼承階層架構的根類別中指定屬性 (Attribute) 和屬性的屬性 (Attribute Property)。</span><span class="sxs-lookup"><span data-stu-id="9bc58-108">To implement this mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you must specify the attributes and attribute properties on the root class of the inheritance hierarchy.</span></span> <span data-ttu-id="9bc58-109">如需詳細資訊，請參閱[如何： 對應繼承階層架構](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。</span><span class="sxs-lookup"><span data-stu-id="9bc58-109">For more information, see [How to: Map Inheritance Hierarchies](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).</span></span>  
   
- <span data-ttu-id="eeeb2-110">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的開發人員也可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來對應繼承階層架構。</span><span class="sxs-lookup"><span data-stu-id="eeeb2-110">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map inheritance hierarchies.</span></span>  
+ <span data-ttu-id="9bc58-110">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的開發人員也可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來對應繼承階層架構。</span><span class="sxs-lookup"><span data-stu-id="9bc58-110">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map inheritance hierarchies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eeeb2-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="eeeb2-111">See Also</span></span>  
- [<span data-ttu-id="eeeb2-112">背景資訊</span><span class="sxs-lookup"><span data-stu-id="eeeb2-112">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="9bc58-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="9bc58-111">See Also</span></span>  
+ [<span data-ttu-id="9bc58-112">背景資訊</span><span class="sxs-lookup"><span data-stu-id="9bc58-112">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
