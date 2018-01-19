@@ -11,11 +11,11 @@ ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1cdd319ef6bbb296c7afa5195563b92bdd361f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8d395bcb179650fe29ab0918e7f91f3c8b6197b5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="arrays-c-programming-guide"></a>陣列 (C# 程式設計手冊)
 您可以在陣列資料結構中儲存相同類型的多個變數。 您可以指定陣列元素的類型來宣告陣列。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Array 集合類型 (英文)](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+ [Array 集合類型 (英文)](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

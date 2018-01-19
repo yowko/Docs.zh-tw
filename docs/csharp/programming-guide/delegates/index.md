@@ -11,11 +11,11 @@ ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6649537238af38e073eeb8747487822d058b7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c78b06b23805082251db8bbd7b377ffd36c6ef03
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
   
 -   C# 2.0 版開始引進[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)的概念。此方法能夠以參數的方式傳遞程式碼區塊，取代了個別定義方法的作法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [使用委派](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [何時應使用委派，而不使用介面 （C# 程式設計指南）](http://msdn.microsoft.com/en-us/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [何時應使用委派，而不使用介面 （C# 程式設計指南）](http://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
   
 -   [具名方法委派與匿名方法委派](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  [Delegates and Events](http://go.microsoft.com/fwlink/?LinkId=195418) in [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Delegate>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [事件](../../../csharp/programming-guide/events/index.md)

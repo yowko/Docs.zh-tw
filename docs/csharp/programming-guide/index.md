@@ -14,11 +14,11 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
  [XML 文件註解](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>平台章節  
- [應用程式定義域 (C# 和 Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [應用程式定義域 (C# 和 Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [組件和全域組件快取](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
@@ -89,6 +89,6 @@ ms.lasthandoff: 11/21/2017
   
  [反映](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../csharp/language-reference/index.md)  
  [C#](../../csharp/index.md)
