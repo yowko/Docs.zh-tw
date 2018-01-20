@@ -16,38 +16,38 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;項目
+
 指定應用程式支援的通用語言執行平台版本。 所有以 .NET Framework 1.1 (含) 以後版本建置的應用程式都應使用這個項目。  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>屬性  
+## <a name="attributes"></a>屬性
   
 |屬性|描述|  
 |---------------|-----------------|  
 |**version**|選擇性屬性。<br /><br /> 字串值，用於指定這個應用程式支援的通用語言執行平台 (CLR) 版本。 如需有效值的`version`屬性，請參閱[「 執行階段版本 」 值](#version)> 一節。 **注意：**透過.NET Framework 3.5，「*執行階段版本*"值的形式*主要*。*次要*。*建置*。 從 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，只需要主要和次要版本號碼 (也就是 "v4.0"，不需要 "v4.0.30319")。 建議使用較短的字串。|  
 |**sku**|選擇性屬性。<br /><br /> 字串值，指定庫存單位 (SKU)，進而指定哪些應用程式支援的.NET Framework 版本。<br /><br /> 從.NET Framework 4.0 使用`sku`屬性建議。  該屬性存在時，會指出應用程式作為目標的 .NET Framework 版本。<br /><br /> 如需 sku 屬性的有效值，請參閱[「 sku 識別碼 」 值](#sku)> 一節。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
+
 如果 **\<supportedRuntime >**項目不存在於應用程式組態檔，在使用執行階段用來建置應用程式的版本。  
 
- **\<SupportedRuntime >**使用 1.1 版或更新版本的執行階段所建置的所有應用程式應該使用項目。 只支援 1.0 版的執行階段建置的應用程式必須使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)項目。  
+**\<SupportedRuntime >**使用 1.1 版或更新版本的執行階段所建置的所有應用程式應該使用項目。 只支援 1.0 版的執行階段建置的應用程式必須使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)項目。  
   
 > [!NOTE]
 >  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函式指定組態檔，您必須使用`<requiredRuntime>`執行階段的所有版本的項目。 `<supportedRuntime>`使用時，便會忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -72,9 +72,9 @@ ms.lasthandoff: 12/22/2017
 |3.5|"v2.0.50727"|  
 |4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>「SKU 識別碼」值  
+## <a name="sku-id-values"></a>「SKU 識別碼」值
+
 `sku`屬性會使用目標 framework moniker (TFM)，以指出應用程式為目標，且需要執行的.NET framework 版本。 下表列出支援的有效值`sku`屬性，從.NET Framework 4 開始。
   
 |.NET Framework 版本|`sku` 屬性|  
@@ -92,9 +92,9 @@ ms.lasthandoff: 12/22/2017
 |4.5.2|".NETFramework,Version=v4.5.2"|  
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
-|4.6.2|".NETFramework，Version = v4.6.2"|  
-|4.7|".NETFramework，Version = v4.7"|
-|4.7.1|".NETFramework，Version = 4.7.1"|
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>範例  
  下列範例將示範如何在設定檔中指定支援的執行階段版本。 組態檔會指出應用程式的目標.NET Framework 4.7。  
@@ -107,10 +107,12 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>組態檔  
- 這個項目可以在應用程式組態檔中使用。  
-  
-## <a name="see-also"></a>請參閱  
+## <a name="configuration-file"></a>組態檔
+
+這個項目可以在應用程式組態檔中使用。
+
+## <a name="see-also"></a>另請參閱
+
  [啟動設定結構描述](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [同處理序並存執行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [同處理序並存執行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
