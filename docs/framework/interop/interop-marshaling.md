@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 <a name="top"></a> Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。 Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  將 C# 用戶端的執行緒設定為 STA 之後，對 MTA COM 元件的呼叫會需要跨 Apartment 封送處理。  
   
- 如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)。  
+ 如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)。  
   
  [回到頁首](#top)  
   
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/22/2017
  ![SOAP 或 TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫  
   
- 某些 Unmanaged 呼叫可以透過 SOAP 進行傳送，例如 [Serviced 元件](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c)和 COM 之間的呼叫。  
+ 某些 Unmanaged 呼叫可以透過 SOAP 進行傳送，例如 [Serviced 元件](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c)和 COM 之間的呼叫。  
   
  [回到頁首](#top)  
   
@@ -159,10 +159,10 @@ ms.lasthandoff: 12/22/2017
 |[使用 COM Interop 封送處理資料](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|  
 |[如何：將 Managed 程式碼 DCOM 移轉至 WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|  
 |[操作說明：對應 HRESULT 和例外狀況](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|  
-|[使用泛型型別互通](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述使用泛型類型來取得 COM 互通性時所支援的動作。|  
+|[使用泛型型別互通](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述使用泛型類型來取得 COM 互通性時所支援的動作。|  
 |[與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)|描述 Common Language Runtime 提供的互通性服務。|  
-|[進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|  
-|[交互操作的設計考量](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|提供撰寫整合式 COM 元件的秘訣。|  
+|[進階 COM 互通性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|  
+|[交互操作的設計考量](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|提供撰寫整合式 COM 元件的秘訣。|  
   
  [回到頁首](#top)  
   

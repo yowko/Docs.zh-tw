@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ed3e933e1c3468a09b1d6b089b4abf52dad85017
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cc5e0b2aa52c8fa37e6148f66dc24fca273a640
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt; 的 &lt;transport&gt;
 指定傳輸層級安全性設定，當使用[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<netPeerTcpBinding >  
-\<繫結 >  
-\<安全性 >  
-\<傳輸 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netPeerTcpBinding>  
+\<binding>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定義安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定義安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
@@ -75,5 +75,5 @@ ms.lasthandoff: 12/22/2017
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

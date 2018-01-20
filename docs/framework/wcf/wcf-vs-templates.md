@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 範本
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 範本是預先定義的專案和項目範本，您可以在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中用來快速建置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務和相關的應用程式。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  如果現有專案是 Web 專案，也會建立服務主機檔案 (service1.svc)。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服務專案和項目範本。  
- 這些範本會建立裝載工作流程服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，這個工作流程可以當做像是 Web 服務一般來存取。 XAML 或命令式程式撰寫模型各有不同的範本。 您可以使用這些範本來建立循序或狀態機器工作流程。 如需有關這些類型的工作流程的詳細資訊，請參閱[Windows Workflow Foundation 教學課程](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]建立工作流程專案，請參閱[建立舊版工作流程專案](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
+ 這些範本會建立裝載工作流程服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，這個工作流程可以當做像是 Web 服務一般來存取。 XAML 或命令式程式撰寫模型各有不同的範本。 您可以使用這些範本來建立循序或狀態機器工作流程。 如需有關這些類型的工作流程的詳細資訊，請參閱[Windows Workflow Foundation 教學課程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]建立工作流程專案，請參閱[建立舊版工作流程專案](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
   
  當您使用 XOML 類型的工作流程，而不使用以程式碼為主的工作流程時，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 設計工具的回應會更為迅速。 XOML 工作流程是預設要建立的工作流程類型。  
   

@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cdb11f83ed2b7d3d371d7dc5475f4ce3672bb8c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef23ba0fa39b01a7cf55c8b2b6cb0beb20be8631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;commonParameters&gt; 的 &lt;add&gt;
 指定跨多項服務全域使用之名稱/值組的參數。 這個參數通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
   
- \<系統。ServiceModel >  
-\<行為 >  
-\<serviceBehaviors >  
-\<行為 >  
-\<workflowRuntime >  
-\<一般參數 >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<serviceBehaviors>  
+\<behavior>  
+\<workflowRuntime>  
+\<commonParameters>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<一般參數 >](http://msdn.microsoft.com/en-us/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|服務所使用的一般參數集合。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。|  
+|[\<commonParameters>](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|服務所使用的一般參數集合。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。|  
   
 ## <a name="remarks"></a>備註  
  `<commonParameters>` 項目定義全球多種服務間使用的所有參數，例如在使用 `ConnectionString` 時的 <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
  請注意，`EnableRetries`可以設定參數在全域層級 (如中所示*CommonParameters* > 一節) 或個別服務支援`EnableRetries`(中所示*服務*> 一節)。  
   
- 如需有關使用組態檔來控制行為的<xref:System.Workflow.Runtime.WorkflowRuntime>物件的 Windows Workflow Foundation 主應用程式，請參閱[工作流程組態檔](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)。  
+ 如需有關使用組態檔來控制行為的<xref:System.Workflow.Runtime.WorkflowRuntime>物件的 Windows Workflow Foundation 主應用程式，請參閱[工作流程組態檔](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)。  
   
 ## <a name="example"></a>範例  
   
@@ -96,5 +96,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [工作流程組態檔](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [\<一般參數 >](http://msdn.microsoft.com/en-us/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+ [工作流程組態檔](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [\<commonParameters>](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)

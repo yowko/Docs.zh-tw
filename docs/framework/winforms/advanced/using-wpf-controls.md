@@ -17,18 +17,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e616019d53648058d51a3d0df457b1380aaf3b1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控制項
 您可以在 Windows form 應用程式中使用 Windows Presentation Foundation (WPF) 控制項。 雖然這些是兩個不同的檢視技術，但是它們順暢的互通。  
   
  Windows Form 設計工具提供視覺化設計環境來裝載 Windows Presentation Foundation 控制項。 由名為特殊 Windows Form 控制項裝載 WPF 控制項<xref:System.Windows.Forms.Integration.ElementHost>。 這個控制項可讓 WPF 控制項加入表單的版面配置，並接收鍵盤和滑鼠的訊息。 您可以在設計階段排列<xref:System.Windows.Forms.Integration.ElementHost>控制就如同任何 Windows Form 控制項。  
   
- 您也可以使用 Windows Form 控制項以 WPF 為基礎的應用程式中。 如需詳細資訊，請參閱[WPF 設計工具](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)。  
+ 您也可以使用 Windows Form 控制項以 WPF 為基礎的應用程式中。 如需詳細資訊，請參閱[WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [操作說明：在設計階段複製和貼上 ElementHost 控制項](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
@@ -63,5 +63,5 @@ ms.lasthandoff: 12/22/2017
  [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  描述 Windows Presentation Foundation 和 Windows Form 技術之間的互通性。  
   
- [WPF 設計工具](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  描述如何設計中的 Windows Presentation Foundation 控制項[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。

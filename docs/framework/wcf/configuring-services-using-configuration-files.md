@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔來設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可讓您在部署時 (而不是在設計階段) 彈性提供端點與服務行為資料。 本主題概要說明可用的主要技巧。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="the-services-element"></a>\<服務 > 項目  
  `services` 項目包含所有由應用程式裝載的服務規格。 從 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]簡化的組態模型開始，本節為選擇性。  
   
- [\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>\<服務 > 項目  
  每項服務都有下列屬性：  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `behaviorConfiguration`. 指定在 `behavior` 項目中找到的其中一個 `behaviors` 項目名稱。 指定的行為會掌管服務是否允許模擬之類的動作。 如果其值為空白名稱或未提供 `behaviorConfiguration` ，則會將一組預設的服務行為加入至服務。  
   
--   [\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<結束點 > 項目  
  每個端點都需要下列屬性代表的位址、繫結和合約：  
@@ -101,29 +101,29 @@ ms.lasthandoff: 12/22/2017
   
 -   `contract`. 指定可定義合約的介面。 這個介面是由 `name` 項目的 `service` 屬性所指定的 Common Language Runtime (CLR) 型別所實作。  
   
--   [\<結束點 > 項目參考](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<結束點 > 項目參考](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<繫結 > 項目  
  `bindings` 項目包含所有繫結的規格，在任何服務中定義的任何端點都可以使用這些繫結。  
   
- [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<繫結 > 項目  
  `binding`內的項目`bindings`項目可以是其中一個系統提供的繫結 (請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 設定服務與用戶端的詳細資訊，請參閱 [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]設定服務和用戶端，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
- [\<繫結 >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<行為 > 項目  
  這是定義服務行為之 `behavior` 項目的容器項目。  
   
- [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<行為 > 項目  
  每個 `behavior` 項目都是由 `name` 屬性所識別，並可提供系統提供的行為，例如 <`throttling`>，或是自訂行為。 如果未指定名稱，則該行為項目會對應於預設服務或端點行為。  
   
- [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用繫結與行為組態  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可讓您輕易地透過組態的參考系統在端點之間共用組態。 與其直接指派組態值給端點，繫結相關的組態值會被分類到 `bindingConfiguration` 區段的 `<binding>` 項目群組中。 一個繫結組態是繫結上的一個具名的設定群組。 然後，端點可以依照名稱來參考 `bindingConfiguration` 。  
@@ -274,6 +274,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>請參閱  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
- [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<繫結 >](../../../docs/framework/misc/binding.md)
+ [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)

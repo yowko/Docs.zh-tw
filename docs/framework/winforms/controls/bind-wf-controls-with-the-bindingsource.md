@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 73b397d750d3883bf7613756889726a52e1233cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cb803b3f08a2ac9bc2b0cb2dc6da2a72e92a0f7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用設計工具將 Windows Form 控制項和 BindingSource 元件加以繫結
 您加入至您的表單控制項，並判斷您的應用程式的使用者介面之後，可以將控制項繫結至資料來源，以便在執行階段，使用者可以改變，並將儲存應用程式的相關資料。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
  若要完成此程序，則會假設您將繫結至衍生自資料庫的資料來源。 如需有關如何從其他資料存放區中建立資料來源的詳細資訊，請參閱[加入新的資料來源](/visualstudio/data-tools/add-new-data-sources)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-bind-a-control-at-design-time"></a>在設計階段繫結控制項  
   

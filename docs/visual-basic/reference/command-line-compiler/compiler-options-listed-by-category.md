@@ -11,11 +11,11 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4ba86f15e51fdceb09c7e005e2af4fa0f9f592f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出 Visual Basic 編譯器選項
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器可作為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 編譯程式的替代方法。 以下是依功能分類排序的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器選項清單。  
@@ -127,8 +127,8 @@ ms.lasthandoff: 11/21/2017
 |`/parallel[+&#124;-]`|指定是否要使用並行組建 (+)。|  
 |`/checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [專案設計工具簡介](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)

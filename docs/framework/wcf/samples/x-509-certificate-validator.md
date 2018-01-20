@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0717aae2c13c9fa5fcbf0ea47d344cac5675fbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08ccbbf50db089841d2af2205c7a7cb289a8767c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="x509-certificate-validator"></a>X.509 憑證驗證程式
 這個範例會示範如何實作自訂 X.509 憑證驗證程式。 當內建的 X.509 憑證驗證程式模式都不符合應用程式需求時，這個驗證程式就很有用。 這個範例示範的服務具有可接受自動發行之憑證的自訂驗證程式。 用戶端會使用這類憑證來向服務驗證。  
@@ -328,7 +328,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -358,7 +358,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 13. 在伺服器電腦上，從命令提示字元視窗啟動 Service.exe。  
   
-14. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+14. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

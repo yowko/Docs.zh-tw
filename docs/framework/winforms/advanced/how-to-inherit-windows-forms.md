@@ -21,18 +21,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5f190fb101a3ff666d194d854c9ce152657ebf85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b91cde9e04ab37f0dca7b1e36be8608310ac35db
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-windows-forms"></a>如何：繼承 Windows Form
 藉由繼承自基底表單建立新的 Windows Form，可以很快地複製您的最佳成果，而無須在每次需要它時都要完成重建表單的程序。  
   
  如需在設計階段使用 [繼承選取器] 對話方塊繼承表單的詳細資訊，以及如何以視覺化方式區分繼承控制項的安全性層級，請參閱[如何：使用繼承選取器對話方塊繼承表單](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)。  
   
- **附註：**為了繼承自表單，包含該表單的檔案或命名空間必須已建置為可執行檔或 DLL。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。 此外，命名空間的參考也必須加入至繼承表單的類別。 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+ **附註：**為了繼承自表單，包含該表單的檔案或命名空間必須已建置為可執行檔或 DLL。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。 此外，命名空間的參考也必須加入至繼承表單的類別。 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-inherit-a-form-programmatically"></a>以程式設計方式繼承表單  
   

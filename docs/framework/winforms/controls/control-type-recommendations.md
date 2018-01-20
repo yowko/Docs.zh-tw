@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>控制項類型建議
 .NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [操作說明：為控制項提供工具箱點陣圖](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [逐步解說：使用 Visual Basic 撰寫複合控制項](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [逐步解說：使用 Visual C# 撰寫複合控制項](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [逐步解說：使用 Visual C# 撰寫複合控制項](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

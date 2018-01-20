@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5406a7a2912554552697c11fd7aa7a2c0e643fa0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f75a9b532e91966d6b0be9ac6602080eac896ed8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 介面
 定義方法，讓主應用程式取得要求的工作的相關資訊，並在同步處理實作偵測死結。  
@@ -50,5 +50,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>請參閱  
  <xref:System.Threading.Thread>  
  [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Managed 和 Unmanaged 執行緒處理](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [Managed 和 Unmanaged 執行緒處理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

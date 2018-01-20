@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>重新導向組件版本
 您可以將編譯時間繫結參考重新導向至 .NET Framework 組件、協力廠商組件或您自己的應用程式組件。 您可以用多種方式將應用程式重新導向為使用其他版本的組件：透過發行者原則、透過應用程式設定檔或透過電腦設定檔。 本文討論 .NET Framework 中的組件繫結如何運作，以及其設定方式。  
@@ -170,7 +170,7 @@ ms.lasthandoff: 12/22/2017
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [設定應用程式](../../../docs/framework/configure-apps/index.md)  
- [設定.NET Framework 應用程式](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [執行階段設定結構描述](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  [如何：建立發行者原則](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

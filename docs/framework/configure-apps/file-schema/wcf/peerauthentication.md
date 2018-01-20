@@ -14,22 +14,22 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b1de8b8ceaf56931dfd3f09e5cc21ac939c49b4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a900a1f3fc2e07cffe04833cc3c7d3ccd063e24a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 指定等節點使用之對等憑證的驗證設定。  
   
- \<系統。ServiceModel >  
-\<行為 >  
-\<serviceBehaviors >  
-\<行為 >  
-\<serviceCredentials >  
-\<對等 >  
-\<peerAuthentication >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceCredentials>  
+\<peer>  
+\<peerAuthentication>  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<對等 >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|指定對等節點的目前認證。|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|指定對等節點的目前認證。|  
   
 ## <a name="remarks"></a>備註  
  `<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 類別。 這個項目會指定驗證程式，當網狀結構中進行鄰居對鄰居驗證時，就會叫用此驗證程式。 當新對等嘗試建立鄰居連線時，它會將自己的認證傳遞至對應的對等。 會叫用回應程式的驗證器來驗證遠端方的認證。 每次在網狀結構中建立對等連線時，對等的兩方會互相驗證，亦即會叫用兩端的驗證程式。  
@@ -74,6 +74,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [對等通道訊息驗證](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [對等通道自訂驗證](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [對等通道訊息驗證](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [對等通道自訂驗證](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

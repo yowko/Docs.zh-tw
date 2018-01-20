@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a31b407360467f37c2e60b1a3f4f4c72e80e13a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a3c7422bc83c7ee1f09bac05333799708cd2f2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
 您可以使用設計工具來連接<xref:System.Windows.Forms.DataGridView>多種不同的不同，包括資料庫、 商務物件或 Web 服務的資料來源的控制項。 控制當您將控制項繫結至資料來源，使用設計工具時，自動繫結至<xref:System.Windows.Forms.BindingSource>代表資料來源的元件。 此外，控制項中會自動產生資料行，以符合資料來源所提供的結構描述資訊。  
@@ -31,10 +31,10 @@ ms.lasthandoff: 12/22/2017
   
  您也可以繫結多個<xref:System.Windows.Forms.DataGridView>控制項加入相關資料表來建立主從式關聯性。 在此組態中，一個控制項會顯示父資料表，而另一個控制項只會顯示子資料表中與父資料表中的目前資料列相關的資料列。 如需詳細資訊，請參閱[如何：在 Windows Forms 應用程式中顯示相關的資料](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)。  
   
- 下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項或主要/詳細資料關聯性的兩個控制項。 如需啟動這類專案的相關資訊，請參閱[如何︰建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何︰將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項或主要/詳細資料關聯性的兩個控制項。 如需啟動這類專案的相關資訊，請參閱[如何︰建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何︰將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>將控制項繫結至資料來源  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
  [操作說明：使用設計工具凍結 Windows Forms DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
  [操作說明：使用設計工具隱藏 Windows Forms DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)  
  [操作說明：使用設計工具將 Windows Forms DataGridView 控制項中的資料行設為唯讀](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)  
- [如何： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [如何： 建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
  [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [資料來源視窗](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)  
  [如何：在 Windows Forms 應用程式中顯示相關的資料](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)

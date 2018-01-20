@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 應用程式基本概念 (Visual Basic)
 很重要的一部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是建立本機使用者的電腦執行的 Windows Form 應用程式的能力。 您可以使用 Visual Studio 來建立使用 Windows Form 應用程式和使用者介面。 在 Windows Forms 應用程式中的類別上建立<xref:System.Windows.Forms>命名空間。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 |以|請參閱|  
 |--------|---------|  
-|建立新的 Windows Form 應用程式使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|建立新的 Windows Form 應用程式使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |使用表單上的控制項|[操作說明：將控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |建立與圖形<xref:System.Drawing>|[圖形程式設計入門](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |建立自訂控制項|[操作說明：繼承自 UserControl 類別](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

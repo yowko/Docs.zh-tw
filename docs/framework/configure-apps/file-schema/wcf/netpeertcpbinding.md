@@ -15,18 +15,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d20faaee94363a1f54cf398d72955f376087b36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a890243ee12202efa9743a6151255525c7f78be2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 為對等通道特定的 TCP 訊息定義繫結。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<netPeerTcpBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netPeerTcpBinding>  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,21 +69,21 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
-|[\<解析程式 >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|指定這個繫結使用的對等解析程式，將對等網狀結構 ID 解析為對等網狀結構內節點的端點 IP 位址。|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|指定這個繫結使用的對等解析程式，將對等網狀結構 ID 解析為對等網狀結構內節點的端點 IP 位址。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  這個繫結使用透過 TCP 的對等傳輸，藉此支援對等或多方應用程式的建立。 每個對等節點都可以裝載多個以這個繫結類型所定義的對等通道。  
   
 ## <a name="example"></a>範例  
- 下列範例示範使用 NetPeerTcpBinding 繫結，此繫結會使用對等通道提供多方通訊。 使用此繫結的詳細案例，請參閱[網路對等 TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)。  
+ 下列範例示範使用 NetPeerTcpBinding 繫結，此繫結會使用對等通道提供多方通訊。 使用此繫結的詳細案例，請參閱[網路對等 TCP](http://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)。  
   
 ```xml  
 <configuration>  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
- [Net TCP 對等](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [Net TCP 對等](http://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)  
  [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

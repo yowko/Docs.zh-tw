@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-resources"></a>WCF 資料服務資源
 下列位置可以找到 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的簡介主題。 這些主題中有許多也包含其中含有詳細資訊的相關主題連結。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  [應用程式案例](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  提供以工作為基礎的方法來建立[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和存取的應用程式[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。  
   
- [Visual Studio 和.NET Framework 詞彙](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio 和.NET Framework 詞彙](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  包含用於[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]文件。  
   
 ## <a name="external-resources"></a>外部資源  

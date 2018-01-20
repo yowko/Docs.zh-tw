@@ -25,17 +25,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 200c5bbb5a162c1e585fc35f9c8cb3f63eb0368e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
-其中一個 Visual Studio 的優點是時間的能夠建立專業的 Windows Form 應用程式在短量。 透過常見的案例所建立的使用者介面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管功能的控制項。 Windows 檔案總管會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
+其中一個 Visual Studio 的優點是時間的能夠建立專業的 Windows Form 應用程式在短量。 透過常見的案例所建立的使用者介面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管 功能的控制項。 Windows 檔案總管 會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>若要建立包含 ListView 和 TreeView 控制項的表單  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在類別中，選擇**Visual Basic**或**Visual C#**。  
   
-    2.  在範本清單中，選擇 **Windows Forms 應用程式**。  
+    2.  在範本清單中，選擇  **Windows Forms 應用程式**。  
   
 3.  按一下 [確定 **Deploying Office Solutions**]。 建立新的 Windows Form 專案。  
   

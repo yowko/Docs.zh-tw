@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 377a67edb37ada5c9e1b022d50a4718b5740afd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>HOW TO：設定基本 Windows Communication Foundation 用戶端
 這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六項工作中的第五項。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>若要設定 Windows Communication Foundation 用戶端  
   
-1.  從 GettingStartedClient 專案開啟產生的組態檔 (App.config)。 下列範例是產生之組態檔的外觀。 在下[ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)區段中，尋找[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+1.  從 GettingStartedClient 專案開啟產生的組態檔 (App.config)。 下列範例是產生之組態檔的外觀。 在下[ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)區段中，尋找[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

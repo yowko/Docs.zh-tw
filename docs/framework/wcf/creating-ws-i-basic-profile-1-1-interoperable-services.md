@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61c4f26c9880d8a7f6a8fb356bafcc0d312509dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6bef68c8ba433e902cfd50e59a3b343e3af08cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>建立 WS-I Basic Profile 1.1 互通服務
 將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務端點設成與 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 服務用戶端互通：  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 值所控制的訊息安全性，提供符合 WS-I Basic Security Profile 1.0 的 WS-Security 支援。 將此屬性保留為預設值，也就是 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> 不使用 WS-Security。  
   
- 若要將中繼資料給[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]可用來服務[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服務用戶端產生工具： [Web 服務描述語言工具 (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)， [Web 服務探索工具 (Disco.exe)](http://msdn.microsoft.com/en-us/acd88078-c581-42bc-94ca-6633e2851979)，而`Add Web Reference`功能[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; 您必須啟用發行中繼資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][發行中繼資料端點](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
+ 若要將中繼資料給[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]可用來服務[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服務用戶端產生工具： [Web 服務描述語言工具 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)， [Web 服務探索工具 (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)，而`Add Web Reference`功能[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; 您必須啟用發行中繼資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][發行中繼資料端點](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
   
 ## <a name="example"></a>範例  
   

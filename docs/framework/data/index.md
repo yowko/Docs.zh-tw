@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的資料與模型化
 本節將提供如何使用 ADO.NET、Language Integrated Query (LINQ)、WCF 資料服務和 XML 來存取資料的相關資訊。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 架構，以及如何使用 ADO.NET 類別來管理應用程式資料並與資料來源互動，包括 Microsoft SQL Server、OLE DB 資料來源和 XML。  
   
- [LINQ 入口網站](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ 入口網站](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  提供 Language Integrated Query (LINQ) 相關文件的連結。  
   
  [交易處理](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  [XML 文件和資料](../../../docs/standard/data/xml/index.md)  
  提供用於 .NET Framework 中 XML 文件和資料的全面性整合類別集合的概觀。  
   
- [XML 標準參考](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML 標準參考](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  提供 Microsoft 所支援的 XML 標準的參考資訊。  
   
 ## <a name="related-sections"></a>相關章節  

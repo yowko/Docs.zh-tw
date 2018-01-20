@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  [常數](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  描述定義於 CorSym.idl 中的常數。  
   
- [自訂介面屬性](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [自訂介面屬性](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  描述元件物件模型 (COM) 自訂介面屬性。  
   
  [偵錯](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -73,4 +73,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>相關章節  
  [開發指南](../../../docs/framework/development-guide.md)  
   
- [.NET Framework 的進階閱讀](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [.NET Framework 的進階閱讀](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3149a0629fab704dbcae92095b3ef62dc5f9c36c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b990c0a6084f3d2866c16aed3a390fdf7717596
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-controls"></a>Windows Form 控制項
 當您設計及修改 Windows Forms 應用程式的使用者介面時，您必須新增、對齊和調整控制項的位置。 控制項是表單物件內所包含的物件。 每一種控制項都有自己適合特定用途的一組屬性、方法和事件。 您可以在設計工具中操作控制項和撰寫程式碼以在執行階段以動態方式加入控制項。  
@@ -50,5 +50,5 @@ ms.lasthandoff: 12/22/2017
  [用戶端應用程式](../../../../docs/framework/develop-client-apps.md)  
  提供開發 Windows 應用程式的概觀。  
   
- [Windows Forms 逐步解說](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ [Windows Forms 逐步解說](http://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
  列出有關 Windows Forms 和控制項的逐步解說主題。

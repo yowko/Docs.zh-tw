@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>隱私權和資料安全性
 如何保護及管理 ADO.NET 應用程式中的機密資訊，是依據建立資訊時所使用的基礎產品及技術而定。 ADO.NET 並未直接針對資料的保護或加密提供服務。  
   
 ## <a name="cryptography-and-hash-codes"></a>加密和雜湊程式碼  
- 您可以從 ADO.NET 應用程式使用 .NET Framework <xref:System.Security.Cryptography> 命名空間 (Namespace) 中的類別 (Class)，以防止未獲授權的第三方讀取或修改資料。 某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則是 Managed 實作 (Implementation)。 [密碼編譯服務](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)主題提供.NET Framework 中的密碼編譯的概觀，描述 cryptograph 實作方式，以及如何執行特定的密碼編譯工作。  
+ 您可以從 ADO.NET 應用程式使用 .NET Framework <xref:System.Security.Cryptography> 命名空間 (Namespace) 中的類別 (Class)，以防止未獲授權的第三方讀取或修改資料。 某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則是 Managed 實作 (Implementation)。 [密碼編譯服務](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)主題提供.NET Framework 中的密碼編譯的概觀，描述 cryptograph 實作方式，以及如何執行特定的密碼編譯工作。  
   
  加密可進行先加密再解密資料；而雜湊資料則是單向的處理序。 當您想要檢查資料未經改變，以防止他人篡改資料時，雜湊資料很有用：提供相同的輸入字串，雜湊演算法一定可以產生相同且簡短的輸出值，讓您輕鬆進行比較。 [使用雜湊程式碼確定資料完整性](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md)說明如何產生及驗證雜湊值。  
   

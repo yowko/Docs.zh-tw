@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 823f2e0b542f5a9d8868cd3b71adb9a8cca4ec6a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd22f655fa28e59386c5393d44af4bce85cb1b7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hosting-unmanaged-api-reference"></a>裝載 (Unmanaged API 參考)
 裝載應用程式開發介面可讓 Unmanaged 主應用程式將 Common Language Runtime (CLR) 整合至其應用程式中。  
@@ -44,5 +44,5 @@ ms.lasthandoff: 12/22/2017
  描述裝載應用程式開發介面使用的 Unmanaged 結構。  
   
 ## <a name="related-sections"></a>相關章節  
- [執行階段主機](http://msdn.microsoft.com/en-us/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [執行階段主機](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  描述 .NET Framework 隨附的執行階段主應用程式。

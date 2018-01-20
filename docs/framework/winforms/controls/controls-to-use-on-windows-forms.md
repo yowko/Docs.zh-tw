@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows Form 上使用的控制項
 以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。 除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。 如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。 如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/22/2017
  [在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  提供下列項目的連結：逐步執行主題、要建立之控制項類型的建議，以及建立您自己的控制項的其他資訊。  
   
- [比較各種語言和程式庫的控制項與可以透過程式設計的物件](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [比較各種語言和程式庫的控制項與可以透過程式設計的物件](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  提供資料表，以將 Visual Basic 6.0 中的控制項對應至 [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] 中的對應控制項。 請注意，控制項現在是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的類別。  
   
  [如何：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

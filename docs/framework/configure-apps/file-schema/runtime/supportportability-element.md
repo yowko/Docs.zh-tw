@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;項目
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 |值|描述|  
 |-----------|-----------------|  
 |true|啟用支援不同的實作指定的.NET Framework 組件的可攜性。 這是預設值。|  
-|false|停用指定的.NET Framework 組件實作之間的可攜性的支援。 這可讓應用程式具備多個指定的組件實作的參考。|  
+|False|停用指定的.NET Framework 組件實作之間的可攜性的支援。 這可讓應用程式具備多個指定的組件實作的參考。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -89,4 +89,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>請參閱  
  [/appconfig （C# 編譯器選項）](http://msdn.microsoft.com/library/ee523958.aspx)  
- [.NET framework 組件統一概觀](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [.NET framework 組件統一概觀](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

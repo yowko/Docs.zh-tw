@@ -14,24 +14,24 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: eed1bac41babb970e3d85a8ae1aa5132f44e3621
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2b0195ec042a0ad342f199f0bf9c2fd3a19821f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; 項目
 指定對等用戶端的驗證選項。  
   
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]對等的程式設計，請參閱[對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
- \<系統。ServiceModel >  
-\<行為 >  
-\<endpointBehaviors >  
-\<行為 >  
-\<clientCredentials >  
-\<對等 >  
-\<PeerAuthentication >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<clientCredentials>  
+\<peer>  
+\<PeerAuthentication>  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +54,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`customCertificateValidatorType`|選擇性字串。 用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
 |`certifcateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設為 `ChainTrust`。|  
 |`revocationMode`|選擇性列舉。 用於檢查撤銷憑證清單 (CRL) 的模式之一。 預設為 `Online`。|  
-|`trustedStoreLocation`|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設為 `CurrentUser`。|  
+|`trustedStoreLocation`|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設值為 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 屬性  
   
@@ -66,13 +66,13 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設值為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設為 `Online`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設值為 `Online`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 屬性  
   
@@ -87,7 +87,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<對等 >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定向對等服務驗證用戶端時所使用的認證。|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定向對等服務驗證用戶端時所使用的認證。|  
   
 ## <a name="remarks"></a>備註  
  `<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 類別。 這個項目會指定驗證程式，當網狀結構中進行鄰居對鄰居驗證時，就會叫用此驗證程式。 當新對等嘗試建立鄰居連線時，它會將自己的認證傳遞至對應的對等。 會叫用回應程式的驗證器來驗證遠端方的認證。 每次在網狀結構中建立對等連線時，對等的兩方會互相驗證，亦即會叫用兩端的驗證程式。  
@@ -121,6 +121,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [對等通道訊息驗證](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [對等通道自訂驗證](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [對等通道訊息驗證](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [對等通道自訂驗證](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>指定組件 &#39; s 位置
 有兩種方式來指定組件的位置：  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   使用[\<探查 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)項目。  
   
- 您也可以使用[.NET Framework 組態工具 (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764)來指定組件的位置，或指定的 common language runtime 來探查組件位置。  
+ 您也可以使用[.NET Framework 組態工具 (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)來指定組件的位置，或指定的 common language runtime 來探查組件位置。  
   
 ## <a name="using-the-codebase-element"></a>使用\<程式碼基底 > 項目  
  您可以使用**\<程式碼基底 >**只能在電腦組態檔或發行者原則檔，也會重新導向組件版本中的項目。 當執行階段會判定要使用的組件版本時，它會套用決定版本的檔案的程式碼基底設定。 如果指示沒有程式碼基底，執行階段會以一般方式探查組件。 如需詳細資訊，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
@@ -80,4 +80,4 @@ ms.lasthandoff: 12/22/2017
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [設定.NET Framework 應用程式](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="simplified-configuration"></a>簡化的組態
 設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可能是一個複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的靈活度，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
@@ -126,5 +126,5 @@ ms.lasthandoff: 12/22/2017
  [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [設定系統提供的繫結](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [在程式碼中設定 WCF 服務](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

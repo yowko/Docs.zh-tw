@@ -18,11 +18,11 @@ author: tdykstra
 ms.author: tdykstra
 manager: wpickett
 ms.workload: tdykstra
-ms.openlocfilehash: d72099543292a89f930135689358b37f87aac44f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9429a1a1eeef82c7587ef573f6413e45a4e97a91
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 應用程式中的快取
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 >  當您開發新的應用程式時，建議您使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 <xref:System.Runtime.Caching> 命名空間中所提供的 API 就像 <xref:System.Web.Caching.Cache> 命名空間中提供的 API。 因此，如果您已在舊版 ASP.NET 中使用快取，則會熟悉 API。 如需如何在 ASP.NET 應用程式中使用快取的範例，請參閱[逐步解說：在 ASP.NET 中快取應用程式資料](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)。  
   
 ### <a name="output-caching"></a>輸出快取  
- 若要手動快取應用程式資料，您可以在 ASP.NET 中使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 ASP.NET 也支援輸出快取，以將所產生的頁面、控制項和 HTTP 回應輸出儲存至記憶體中。 您可以在 ASP.NET 網頁中透過宣告方式設定輸出快取，或使用 Web.config 檔案中的設定來設定輸出快取。 如需詳細資訊，請參閱[快取的 outputCache 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee)。  
+ 若要手動快取應用程式資料，您可以在 ASP.NET 中使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 ASP.NET 也支援輸出快取，以將所產生的頁面、控制項和 HTTP 回應輸出儲存至記憶體中。 您可以在 ASP.NET 網頁中透過宣告方式設定輸出快取，或使用 Web.config 檔案中的設定來設定輸出快取。 如需詳細資訊，請參閱[快取的 outputCache 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee)。  
   
  ASP.NET 可讓您建立自訂輸出快取提供者來擴充輸出快取。 使用自訂提供者，即可使用其他存放裝置 (例如磁碟、雲端存放裝置和分散式快取引擎) 來儲存快取的內容。 為了建立自訂輸出快取提供者，您可以建立衍生自 <xref:System.Web.Caching.OutputCacheProvider> 類別的類別，並設定應用程式使用自訂輸出快取提供者。  
   

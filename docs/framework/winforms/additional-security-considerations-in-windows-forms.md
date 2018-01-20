@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Form 中的其他安全性考量
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性設定可能導致您的應用程式在部分信任環境和本機電腦上以不同方式執行。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制存取重要的本機資源，例如檔案系統、網路和 Unmanaged API 等。 安全性設定會影響能否呼叫 Microsoft Win32 API，或其他無法由安全性系統驗證的 API。 安全性也會影響應用程式的其他層面，包括檔案和資料存取及列印。 如需在部分信任環境中存取檔案和資料的詳細資訊，請參閱 [Windows Forms 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)。 如需在部分信任環境中列印的詳細資訊，請參閱 [Windows Forms 中更安全的列印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|可以在受到部分限制下使用剪貼簿。 能夠不受限制將資料放在剪貼簿 (複製或剪下命令作業)。 接受貼上的內建控制項 (例如文字方塊) 可以接受剪貼簿資料，但無法以程式設計方式從剪貼簿讀取使用者控制項。|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.NoClipboard>|無法使用剪貼簿。|  
   
- 根據預設，近端內部網路區域會接收<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>存取和網際網路區域接收<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>存取。 這表示應用程式可以將資料複製到剪貼簿，但應用程式無法以程式設計方式在剪貼簿中貼上或讀取。 這些限制會防止未受完全信任的程式讀取另一個應用程式複製到剪貼簿的內容。 如果您的應用程式需要完整的剪貼簿存取，但您沒有權限，您必須提高應用程式的權限。 如需提高權限的詳細資訊，請參閱[一般安全性原則管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
+ 根據預設，近端內部網路區域會接收<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>存取和網際網路區域接收<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>存取。 這表示應用程式可以將資料複製到剪貼簿，但應用程式無法以程式設計方式在剪貼簿中貼上或讀取。 這些限制會防止未受完全信任的程式讀取另一個應用程式複製到剪貼簿的內容。 如果您的應用程式需要完整的剪貼簿存取，但您沒有權限，您必須提高應用程式的權限。 如需提高權限的詳細資訊，請參閱[一般安全性原則管理](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
   
 ## <a name="window-manipulation"></a>視窗操作  
  <xref:System.Security.Permissions.UIPermission>類別也會控制執行視窗操作和其他 UI 相關的動作，和相關聯的權限<xref:System.Security.Permissions.UIPermissionWindow>列舉值表示的存取層級。 下表顯示可能的權限層級。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  如果您的應用程式沒有權限呼叫 unmanaged 程式碼，您的應用程式必須要求<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>權限，或是您必須考慮實作功能的替代方式，在許多情況下，Windows Form 提供 Win32 應用程式開發介面的 managed 替代用法函式。 如果沒有替代做法，但應用程式必須存取 Unmanaged 程式碼，您必須提高應用程式的權限。  
   
- 呼叫 Unmanaged 程式碼的權限可讓應用程式執行大部分的動作。 因此，呼叫 Unmanaged 程式碼的權限應該只授與來自受信任來源的應用程式。 另外，視應用程式而定，應用程式功能中會呼叫 Unmanaged 程式碼的部分可以是選擇性，或只在完全信任環境中啟用。 如需危險性權限的詳細資訊，請參閱[危險性權限和原則管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)。 如需提高權限的詳細資訊，請參閱 [NIB：一般安全性原則管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
+ 呼叫 Unmanaged 程式碼的權限可讓應用程式執行大部分的動作。 因此，呼叫 Unmanaged 程式碼的權限應該只授與來自受信任來源的應用程式。 另外，視應用程式而定，應用程式功能中會呼叫 Unmanaged 程式碼的部分可以是選擇性，或只在完全信任環境中啟用。 如需危險性權限的詳細資訊，請參閱[危險性權限和原則管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)。 如需提高權限的詳細資訊，請參閱 [NIB：一般安全性原則管理](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
   
 ## <a name="see-also"></a>請參閱  
  [Windows Forms 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  

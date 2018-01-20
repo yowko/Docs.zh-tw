@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ea429e16914d737547885b6667fc1d81b23a0f0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b6838f6914ed7430fc420705af2ff461ccde8e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -441,7 +441,7 @@ iisreset
   
 2.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-3.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ##### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
@@ -469,7 +469,7 @@ iisreset
   
 12. 在伺服器上執行 ImportClientCert.bat，這樣會從 Client.cer 檔案中將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
   
-13. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+13. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ##### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

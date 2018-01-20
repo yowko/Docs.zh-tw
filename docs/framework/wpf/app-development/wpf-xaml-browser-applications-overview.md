@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)  
- 建立新的 XBAP 專案最簡單的方法是使用 [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
+ 建立新的 XBAP 專案最簡單的方法是使用 [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
   
  當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您從 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 針對 XBAP 進行偵錯時，應用程式會使用網際網路區域權限執行，因此如果超過這些權限，則會擲回安全性例外狀況。 如需詳細資訊，請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   

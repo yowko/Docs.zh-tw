@@ -15,17 +15,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 59c1c6be1f02477c7ad2d4c90d09173f9296d1e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
+ \<system.ServiceModel>  
+\<bindings>  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>語法  
@@ -96,13 +96,13 @@ msmqIntegrationBinding
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  這個繫結項目可以用來讓 Windows Communication Foundation (WCF) 應用程式傳送訊息至和接收訊息，從現有的 MSMQ 應用程式使用 COM、 MSMQ 原生 Api 或定義中的型別<xref:System.Messaging?displayProperty=nameWithType>命名空間您可以使用這個組態項目，來指定如何定址佇列、 傳輸保證是否永久儲存訊息，以及應如何保護和驗證訊息。 如需詳細資訊，請參閱[How to： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
@@ -144,8 +144,8 @@ msmqIntegrationBinding
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27068808dcf45a2a210258d45faa894524bd883f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9636585fe9671b8822a6510d405eef5e6f23527e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Forms.TableLayoutPanel>排列其內容在方格中，提供的功能類似於 HTML\<表格 > 項目。 <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您將控制項放在格線版面配置，而不需要精確指定每個個別控制項的位置。 其儲存格依資料列和資料行排列，大小可以各不相同。 跨越資料列和資料行，可以合併資料格。 資料格可以包含任何項目可以包含表單，並在做為容器的大部分其他方面的行為相同。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供比例調整大小功能在執行階段，好讓您配置也可能變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制也適用於資料輸入表單和當地語系化應用程式之類的目的。 如需詳細資訊，請參閱[逐步解說： 建立可調整大小的 Windows Form 用於資料輸入](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[逐步解說： 建立可當地語系化的 Windows Form](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控制項也提供比例調整大小功能在執行階段，好讓您配置也可能變更順暢地調整表單大小時。 這可讓<xref:System.Windows.Forms.TableLayoutPanel>控制也適用於資料輸入表單和當地語系化應用程式之類的目的。 如需詳細資訊，請參閱[逐步解說： 建立可調整大小的 Windows Form 用於資料輸入](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[逐步解說： 建立可當地語系化的 Windows Form](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
   
  一般情況下，您不應該使用<xref:System.Windows.Forms.TableLayoutPanel>做為整個版面配置容器的控制項。 使用<xref:System.Windows.Forms.TableLayoutPanel>控制項，以提供的配置部分的比例調整大小功能。  
   
@@ -58,14 +58,14 @@ ms.lasthandoff: 12/22/2017
  完成後，您就會了解這些重要配置功能所扮演的角色。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立 Windows 應用程式專案，稱為 「 TableLayoutPanelExample"。 如需詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立 Windows 應用程式專案，稱為 「 TableLayoutPanelExample"。 如需詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  選取的表單中**Windows** **Form 設計工具**。  
   
@@ -195,8 +195,8 @@ ms.lasthandoff: 12/22/2017
  [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
- [逐步解說： 建立可當地語系化的 Windows Form](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)  
+ [逐步解說：建立適用於資料輸入且可調整大小的 Windows Form](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
+ [逐步解說： 建立可當地語系化的 Windows Form](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)  
  [TableLayoutPanel 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
  [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [操作說明：將控制項停駐在 Windows Forms 上](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  

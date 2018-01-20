@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
 當您建立自訂控制項時，您通常會發現它需要偵錯設計階段行為。 特別是如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱[逐步解說： 建立 Windows Form 控制項，會利用的 Visual Studio 設計階段功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
@@ -55,14 +55,14 @@ ms.lasthandoff: 12/22/2017
  當您完成時，您必須了解偵錯自訂控制項的設計階段行為的必要工作。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立應用程式專案。 您將使用此專案來建置裝載自訂控制項的應用程式。  
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
--   建立 Windows 應用程式專案，稱為 「 DebuggingExample"。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+-   建立 Windows 應用程式專案，稱為 「 DebuggingExample"。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 ## <a name="creating-a-control-library-project"></a>建立控制項程式庫專案  
  下一個步驟是建立控制項程式庫專案並設定自訂控制項。  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/22/2017
   
 1.  新增**Windows 控制項程式庫**專案加入方案。  
   
-2.  加入新**UserControl** DebugControlLibrary 專案項目。 如需詳細資訊，請參閱[NIB： 如何： 加入新的專案項目](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 提供新的來源檔案的"DebugControl 「 基底名稱。  
+2.  加入新**UserControl** DebugControlLibrary 專案項目。 如需詳細資訊，請參閱[NIB： 如何： 加入新的專案項目](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 提供新的來源檔案的"DebugControl 「 基底名稱。  
   
-3.  使用**方案總管 中**，刪除專案的預設控制項的基底名稱與程式碼檔案中刪除 「`UserControl1`"。 如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+3.  使用**方案總管 中**，刪除專案的預設控制項的基底名稱與程式碼檔案中刪除 「`UserControl1`"。 如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 4.  建置方案。  
   
@@ -186,4 +186,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>請參閱  
  [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [如何： 存取設計階段服務](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [如何： 存取 Windows Form 中的設計階段支援](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+ [如何：在 Windows Forms 中存取設計階段支援](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

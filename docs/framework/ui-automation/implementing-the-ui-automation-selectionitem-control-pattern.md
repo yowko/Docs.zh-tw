@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5722896b1f1b8b639152179194668105d8fafdf5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ec9ee61973adacfc44c5fa7d8f1e6812e9950fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>實作 UI 自動化 SelectionItem 控制項模式
 > [!NOTE]
@@ -42,12 +42,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-iselectionitemprovider"></a>ISelectionItemProvider 的必要成員  
  實作 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>需要下列屬性、方法和事件。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|方法|無|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|事件|當容器中的選項大幅變更，需要傳送比 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 常數所允許的更多 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 和 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 事件時，就會引發此事件。|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Event - 事件|當容器中的選項大幅變更，需要傳送比 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 常數所允許的更多 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 和 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 事件時，就會引發此事件。|  
   
 -   如果 <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>、 <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>或 <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> 的結果是單一選取的項目，則應引發 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ，否則應視情況傳送 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 。  
   
@@ -66,4 +66,4 @@ ms.lasthandoff: 12/22/2017
  [實作 UI 自動化 Selection 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
  [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [片段提供者範例](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [片段提供者範例](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

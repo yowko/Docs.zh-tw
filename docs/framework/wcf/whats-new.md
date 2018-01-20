@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 091925dd1f505693df0d1eb770bca604cf038667
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>什麼 &#39; s Windows Communication Foundation 4.5 的新功能
 本主題討論 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的新功能。  
@@ -77,9 +77,9 @@ ms.lasthandoff: 12/22/2017
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 處理器的數量|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[設定 Net.TCP Port Sharing Service](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[設定 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 處理器的數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 秒|[設定 Net.TCP 連接埠共用服務](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|receiveTimeout|SMSvcHost.exe|30 秒|[設定 Net.TCP 連接埠共用服務](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
 ## <a name="xml-editor-tooltips"></a>XML 編輯器工具提示  
  為了協助新的和現有的 WCF 服務開發人員設定其服務，現在每個屬於服務組態檔之一部分的組態項目及其屬性，Visual Studio XML 編輯器都有提供工具提示。  

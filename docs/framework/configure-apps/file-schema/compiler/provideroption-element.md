@@ -19,17 +19,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1f91b9fcd7ef9c9c616a7a41ced6be1cda365509
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;項目
 指定語言提供者的編譯器版本屬性。  
   
  \<組態項目 >  
-\<system.codedom 項目 >  
+\<system.codedom Element>  
 \<編譯器項目 >  
 \<編譯器 > 項目  
 \<providerOption > 項目  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 |項目|描述|  
 |-------------|-----------------|  
 |[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|  
-|[\<system.codedom > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
 |[\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目; 容器包含零或多個`<compiler>`項目。|  
 |[\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
   
@@ -105,4 +105,4 @@ ms.lasthandoff: 12/22/2017
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [指定完整的類型名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [編譯器元素編譯器編譯 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [編譯器元素編譯器編譯 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

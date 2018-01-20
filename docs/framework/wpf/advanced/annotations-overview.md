@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fe3f0caa8f23a3b68f1017254a770af766f83f81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cc7b09211bc9168bbab85105a0574dc142542ba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="annotations-overview"></a>附註概觀
 在書面文件上撰寫附註或註解是相當稀鬆平常的事，我們幾乎將它視為理所當然。 這些附註或註解是我們新增至文件的「註釋」，用以標記資訊，或反白顯示感興趣的項目以供日後參考。 雖然在書面文件上撰寫附註很容易且平常，不過在電子文件中新增個人註解的功能通常非常有限，如果有的話。  
@@ -86,4 +86,4 @@ ms.lasthandoff: 12/22/2017
  [ContextMenu 概觀](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [如何：將命令新增至 MenuItem](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)
+ [如何：將命令新增至 MenuItem](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

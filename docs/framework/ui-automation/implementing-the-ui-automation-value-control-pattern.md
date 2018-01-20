@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4811b3273ba829882dadffe95ff8c29fb8ee7400
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f74b103092032e35cce47d893f9e3b6e9d7727b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>實作 UI 自動化 Value 控制項模式
 > [!NOTE]
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.IValueProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|屬性|無|  
 |<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|無|  
@@ -78,6 +78,6 @@ ms.lasthandoff: 12/22/2017
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [TextPattern 插入文字範例](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [TextPattern 插入文字範例](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

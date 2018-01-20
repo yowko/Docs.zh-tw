@@ -18,17 +18,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8585840f57d75220d9c616eee1e90006f604adf4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="panel-how-to-topics"></a>Panel HOW TO 主題
 本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目與相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何： 將 LayoutTransform 套用至項目](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [如何： 將 LayoutTransform 套用至項目](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [建立自訂面板元素](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [覆寫 Panel 的 OnRender 方法](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [設定元素的高度屬性](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

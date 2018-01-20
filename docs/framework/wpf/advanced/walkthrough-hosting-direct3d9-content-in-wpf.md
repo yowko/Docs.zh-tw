@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 10558348a963f0b243dcfbe23171f6e24da6da0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ad6ac99a77e3477499a871e269cc7faa7a59f12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：在 WPF 中裝載 Direct3D9 內容
 本逐步解說示範如何裝載 Direct3D9 Windows Presentation Foundation (WPF) 應用程式中的內容。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-wpf-project"></a>若要建立 WPF 專案  
   
--   建立新的 WPF 應用程式專案在 Visual C# 中名為`D3DHost`。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
+-   建立新的 WPF 應用程式專案在 Visual C# 中名為`D3DHost`。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
   
      在中開啟 MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   

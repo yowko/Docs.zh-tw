@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3b423158cc3c38e92897d0dc5e48c22cf28396ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  如需其他代表安全性權杖的類別，請參閱 <xref:System.IdentityModel.Tokens> 命名空間。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證、 安全性權杖管理員，以及提供者和驗證器類別，請參閱[安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證、 安全性權杖管理員，以及提供者和驗證器類別，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>程序  
  您必須提供用戶端應用程式為安全性基礎結構指定信用卡資訊的方式， 此資訊可由自訂用戶端認證類別提供給應用程式使用。 第一步就是為自訂用戶端認證建立代表信用卡資訊的類別。  
@@ -176,4 +176,4 @@ ms.lasthandoff: 12/22/2017
  [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

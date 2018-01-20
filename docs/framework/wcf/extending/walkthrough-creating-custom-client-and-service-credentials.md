@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3a56a3fa5ed8d470216e9c96b53e1ea21762bd2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端與服務認證
 此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別都繼承自定義傳回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 之合約的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證類別，以及它們納入如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性架構，請參閱[安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證類別，以及它們納入如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性架構，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供的預設實作會支援系統提供的認證類型，並且建立能夠處理那些認證類型的安全性權杖管理員。  
   

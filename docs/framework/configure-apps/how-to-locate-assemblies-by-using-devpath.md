@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4ee4200a67ef9d9d123be3bc32b02ac61512d23b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0944f2798c45a039149baaa6e46ce2b56eb5c5df
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：使用 DEVPATH 找出組件
 開發人員可能想要確定他們建立的共用組件的多個應用程式正常運作。 而不是持續將組件在全域組件快取中，在開發期間，開發人員可以建立 DEVPATH 環境變數指向的組件的組建輸出目錄。  
@@ -55,4 +55,4 @@ ms.lasthandoff: 12/22/2017
 >  使用此設定只在開發階段。 執行階段不會檢查 DEVPATH 中找到的強式名稱組件上的版本。 它只會使用第一個找到的組件。  
   
 ## <a name="see-also"></a>請參閱  
- [設定.NET Framework 應用程式](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

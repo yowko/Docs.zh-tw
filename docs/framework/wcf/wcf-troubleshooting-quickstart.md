@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需設定追蹤的詳細資訊，請參閱： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需追蹤檔案檢視器的詳細資訊，請參閱： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -113,7 +113,7 @@ public class MyServiceHost : ServiceHost
   
 -   您可能需要對應用程式開放連接埠。 如需詳細資料，請參閱 SDK 範例的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
   
--   有關其他可能的問題，請參閱範例主題 [Running the Samples in a Workgroup and Across Machines](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)。  
+-   如需其他可能的問題，請參閱範例主題[在工作群組與跨電腦執行範例](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)。  
   
 -   如果您的用戶端是使用 Windows 認證，且例外狀況為 <xref:System.ServiceModel.Security.SecurityNegotiationException>，請設定 Kerberos 如下。  
   

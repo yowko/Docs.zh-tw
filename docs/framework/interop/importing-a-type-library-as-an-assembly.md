@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e2866ef2b8f1c869da7c5989e892c1e3a5dd19fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b7b0e6e93660dd49b670975112380420d7d8f0b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。 這兩種類型資訊的來源有相當大的差異。 本主題描述從型別程式庫產生中繼資料的技術。 產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。  
@@ -40,7 +40,7 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
 -   使用僅限設計階段的 Interop 組件：從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以指示編譯器將 Interop 組件的類型資訊內嵌到可執行檔。 編譯器只會內嵌應用程式使用的類型資訊。 您不必與應用程式一起部署 Interop 組件。 這是建議使用的技巧。  
   
--   部署 Interop 組件：您可以建立 Interop 組件的標準參考。 在此情況下，Interop 組件必須與您的應用程式一起部署。 如果您運用這項技巧，但不使用私用的 COM 元件，請一律參考 COM 元件作者發佈的主要 Interop 組件 (PIA)，這是您想要併入 Managed 程式碼的 COM 元件。 如需產生和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)。  
+-   部署 Interop 組件：您可以建立 Interop 組件的標準參考。 在此情況下，Interop 組件必須與您的應用程式一起部署。 如果您運用這項技巧，但不使用私用的 COM 元件，請一律參考 COM 元件作者發佈的主要 Interop 組件 (PIA)，這是您想要併入 Managed 程式碼的 COM 元件。 如需產生和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080)。  
   
  當您使用僅限設計階段的 Interop 組件時，可以內嵌 COM 元件作者所發佈之主要 Interop 組件的類型資訊。 不過，您不必與應用程式一起部署主要 Interop 組件。  
   
@@ -75,17 +75,17 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
     -   型別程式庫轉換為組件的轉換規則知識。  
   
-     撰寫自訂包裝函式是進階技術。 如需如何產生自訂包裝函式的詳細資訊，請參閱[自訂標準包裝函式](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)。  
+     撰寫自訂包裝函式是進階技術。 如需如何產生自訂包裝函式的詳細資訊，請參閱[自訂標準包裝函式](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d)。  
   
- 如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)。  
+ 如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [自訂標準包裝函式](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
- [在 Managed 程式碼中使用 COM 類型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [自訂標準包裝函式](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [在 Managed 程式碼中使用 COM 類型](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [如何：將參考加入至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

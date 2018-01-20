@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
@@ -111,4 +111,4 @@ ms.lasthandoff: 12/22/2017
  [快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [文件指南](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Communication Foundation 範例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Windows Communication Foundation 範例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

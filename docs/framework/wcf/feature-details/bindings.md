@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communcation Foundation 繫結
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會區分應用程式的軟體撰寫方式，以及與其他軟體的通訊方式。 繫結可用來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用繫結來產生端點的基礎 Wire 表示，因此大部分的繫結詳細資料必須由參與通訊的各方同意才行。 要達到這個目的之最簡單方式，就是讓服務用戶端使用服務端點所使用的相同繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何執行這項操作，請參閱[使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會區分應用程式的軟體撰寫方式，以及與其他軟體的通訊方式。 繫結可用來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用繫結來產生端點的基礎 Wire 表示，因此大部分的繫結詳細資料必須由參與通訊的各方同意才行。 要達到這個目的之最簡單方式，就是讓服務用戶端使用服務端點所使用的相同繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何執行這項操作，請參閱[使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
   
  繫結是由繫結項目集合所組成。 每個項目負責針對端點與用戶端通訊的方式稍加描述。 繫結程序必須包含至少一個傳輸繫結程序項目、一個訊息編碼繫結程序項目 (根據預設，可由傳輸繫結程序項目來提供)，以及任意數量的其他通訊協定繫結程序項目。 由此描述來建立執行階段的處理序，可讓每個繫結項目將程式碼撰寫到該執行階段中。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  說明如何使用與修改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供來支援一般案例的繫結。  
   
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  說明如何使用命令式程式碼以及宣告式組態來定義服務與用戶端的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 繫結。  
   
  [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)  

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 57fea95db5bf1536b41b282bedab55a9deef8e8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7720194f68f941d4c59dc279ae2b86a98ed6a58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ws-dual-http"></a>WS 雙重 Http
 雙重 Http 範例會示範如何設定 `WSDualHttpBinding` 繫結。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 在此範例中，`ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 `WSDualHttpBinding` 繫結支援雙工通訊。  
@@ -98,7 +98,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!IMPORTANT]
-    >  當用戶端執行跨電腦組態中時，務必取代 localhost，在這兩`address`屬性[端點](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目和`clientBaseAddress`屬性[ \<繫結 >](../../../../docs/framework/misc/binding.md)元素[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)所示的適當電腦名稱項目：  
+    >  當用戶端執行跨電腦組態中時，務必取代 localhost，在這兩`address`屬性[端點](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目和`clientBaseAddress`屬性[ \<繫結 >](../../../../docs/framework/misc/binding.md)元素[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)所示的適當電腦名稱項目：  
   
     ```xml  
     <client>  

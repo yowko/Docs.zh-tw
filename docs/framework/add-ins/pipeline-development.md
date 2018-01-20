@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>管線開發
 增益集管線是主應用程式和增益集必須用來與對方進行通訊管線區段的路徑。  
@@ -41,14 +41,14 @@ ms.lasthandoff: 12/22/2017
   
  如果成個別的應用程式定義域中載入主機和增益集，您必須隔離界限分隔主應用程式範圍從增益集的範圍。 合約是只有主機和增益集應用程式定義域中載入的組件。 主機和中的每個參考其檢視的合約方法。 因此，它們被分隔的從合約的抽象層。  
   
- 若要開發管線區段，您必須建立包含它們的目錄結構。 如需開發需求與範圍的指導方針的詳細資訊，請參閱[管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+ 若要開發管線區段，您必須建立包含它們的目錄結構。 如需開發需求與範圍的指導方針的詳細資訊，請參閱[管線開發需求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
  下圖顯示管線區段所組成的類型。 在圖例中顯示的型別名稱是任意的但主機和主機以外的所有類型都檢視的增益集需要屬性，所以建構資訊存放區的方法可以找到它們。  
   
  ![新增 &#45; 所需屬性的型別與模型中。] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 具有類型的增益集管線  
   
- 下表描述用於啟用增益集管線區段。 如需有關這些區段的詳細資訊，請參閱[合約、 檢視和配接器](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)。  
+ 下表描述用於啟用增益集管線區段。 如需有關這些區段的詳細資訊，請參閱[合約、 檢視和配接器](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)。  
   
 |管線區段|描述|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ ms.lasthandoff: 12/22/2017
   
      描述主控件執行加法、 減法、 乘法和除法計算的計算機增益集。  
   
--   [逐步解說： 啟用主機變更為回溯相容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [逐步解說： 啟用主機變更為回溯相容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      說明 [小算盤] 增益集與計算增強的功能，以及如何維護與第一個計算機增益集的相容性。  
   
--   [主控件與增益集之間的逐步解說： 傳遞集合](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [主控件與增益集之間的逐步解說： 傳遞集合](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      描述如何通過管線使用案例的資料集合。  
   
 ## <a name="see-also"></a>請參閱  
- [增益集管線案例](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [增益集管線案例](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [增益集和擴充性](../../../docs/framework/add-ins/index.md)

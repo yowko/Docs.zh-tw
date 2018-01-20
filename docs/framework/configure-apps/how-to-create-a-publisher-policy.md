@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 組件的廠商可以狀態的應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔。 發行者原則檔會指定組件重新導向和程式碼基底的設定，並使用相同的格式為應用程式組態檔。 發行者原則檔會編譯的組件，並放置於全域組件快取。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
     -   *PublisherPolicyAssemblyFile*引數是此命令會產生發行者原則組件名稱。 組件檔案名稱必須遵循格式：  
   
-         **原則。** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**  
+         **原則。** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile*引數是包含金鑰組的檔案名稱。 您必須簽署的組件和發行者原則組件具有相同的金鑰組。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  在命令提示字元中輸入下列命令：  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      下列命令會將`policy.1.0.myAssembly.dll`至全域組件快取。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [設定應用程式](../../../docs/framework/configure-apps/index.md)  
- [設定.NET Framework 應用程式](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [執行階段設定結構描述](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

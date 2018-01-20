@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：  
@@ -47,7 +47,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
   
      可實作類別介面 (COM Interop 產生的介面) 的 Managed 類別受到版本設定限制。  
   
-     如需使用類別介面的方針，請參閱[類別介面簡介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
+     如需使用類別介面的方針，請參閱[類別介面簡介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
   
 -   部署指示  
   
@@ -69,7 +69,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
   
      不論您選擇的機制為何，只有所提供組件中定義的公用類型才會包含在所產生的型別程式庫中。  
   
-     您可以將型別程式庫包裝為個別檔案，或將它當成 Win32 資源檔內嵌在 .NET 架構應用程式內。 Microsoft Visual Basic 6.0 已自動為您執行這項工作；不過，使用 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 時，您必須手動內嵌型別程式庫。 如需指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)。  
+     您可以將型別程式庫包裝為個別檔案，或將它當成 Win32 資源檔內嵌在 .NET 架構應用程式內。 Microsoft Visual Basic 6.0 已自動為您執行這項工作；不過，使用 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 時，您必須手動內嵌型別程式庫。 如需指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)。  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>類型程式庫匯出工具  
@@ -94,8 +94,8 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [類別介面簡介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [類別介面簡介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [向 COM 註冊組件](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

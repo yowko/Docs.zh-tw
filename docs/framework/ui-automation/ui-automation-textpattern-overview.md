@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自動化 TextPattern 概觀
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  若要公開控制項的文字內容，您可以使用 <xref:System.Windows.Automation.TextPattern> 控制項模式，它會將文字容器的內容表示成文字資料流。 接著， <xref:System.Windows.Automation.TextPattern> 會需要 <xref:System.Windows.Automation.Text.TextPatternRange> 類別的支援來公開格式和樣式屬性。 <xref:System.Windows.Automation.Text.TextPatternRange> 可支援 <xref:System.Windows.Automation.TextPattern> ，其方法是使用 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 和 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點的集合，來表示文字容器中的連續或多個非連續文字範圍。 <xref:System.Windows.Automation.Text.TextPatternRange> 可支援選取、比較、擷取和周遊之類的功能。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> 類別沒有提供插入或修改文字的方法。 不過，依據控制項，可能可以藉由 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或透過直接鍵盤輸入來完成此作業。 如需範例，請參閱 [TextPattern Insert Text Sample](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16) 。  
+>  <xref:System.Windows.Automation.TextPattern> 類別沒有提供插入或修改文字的方法。 不過，依據控制項，可能可以藉由 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或透過直接鍵盤輸入來完成此作業。 請參閱[TextPattern 插入文字範例](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)的範例。  
   
  對輔助技術廠商及其使用者而言，本概觀中所描述的功能非常重要。 輔助技術可以使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 來收集使用者的完整文字格式化資訊，並依 <xref:System.Windows.Automation.Text.TextUnit> (字元、單字、字行或段落) 提供以程式設計方式巡覽和選取文字的功能。  
   

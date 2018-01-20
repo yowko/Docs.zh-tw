@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量型的，可在資料來源與程式碼之間建立最小層，以提升效能而不會犧牲功能。  
@@ -166,7 +166,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]' Data Provider for Oracle|建議使用 Oracle 資料來源的中介層及單層應用程式採用。|  
   
 ## <a name="entityclient-provider"></a>EntityClient 提供者  
- EntityClient 提供者是用於根據實體資料模型 (EDM) 存取資料。 與其他 .NET Framework 資料提供者不同的是，它不會直接與資料來源互動。 不過，它會使用 Entity SQL 與基礎資料提供者進行通訊。 如需詳細資訊，請參閱 [EntityClient and Entity SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
+ EntityClient 提供者是用於根據實體資料模型 (EDM) 存取資料。 與其他 .NET Framework 資料提供者不同的是，它不會直接與資料來源互動。 不過，它會使用 Entity SQL 與基礎資料提供者進行通訊。 如需詳細資訊，請參閱[EntityClient 和 Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
   
 ## <a name="see-also"></a>請參閱  
  [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  

@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b668610f50c32373790130def17928b8b3b3d8b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 藉由傳回其完整的路徑來解析類型程式庫的簡單名稱。  
@@ -45,7 +45,7 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>參數  
  `bstrSimpleName`  
- [in]A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含的類型程式庫的簡單名稱。  
+ [in]A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含的類型程式庫的簡單名稱。  
   
  `tlbid`  
  [in]指派給類型程式庫中登錄的 GUID。  
@@ -60,15 +60,15 @@ HRESULT ResolveTypeLib(
  [in]類型程式庫的次要版本號碼。 例如，針對版本*x.y*，次要版本號碼是*y*。  
   
  `syskind`  
- [in]A [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1)識別的作業環境的旗標。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
+ [in]A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1)識別的作業環境的旗標。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
   
  `pbstrResolvedTlbName`  
- [out]指標[BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含名為中的類型程式庫的完整路徑`bstrSimpleName`參數。  
+ [out]指標[BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含名為中的類型程式庫的完整路徑`bstrSimpleName`參數。  
   
 ## <a name="remarks"></a>備註  
  `ResolveTypeLib`方法透過呼叫[LoadTypeLibWithResolver 函式](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md)期間[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)處理。  
   
- 此介面的自訂實作必須傳回[BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含名為中的類型程式庫的完整路徑`bstrSimpleName`參數。  
+ 此介面的自訂實作必須傳回[BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) ，其中包含名為中的類型程式庫的完整路徑`bstrSimpleName`參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -81,4 +81,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>請參閱  
  [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)

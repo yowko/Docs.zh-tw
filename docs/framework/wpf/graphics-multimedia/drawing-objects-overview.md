@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: abdc98a6fbf48a30f2f5702e7c2d78396381de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-objects-overview"></a>繪圖物件概觀
 本主題將介紹<xref:System.Windows.Media.Drawing>物件，並說明如何使用它們來有效率地繪製圖案、 點陣圖、 文字與媒體。 使用<xref:System.Windows.Media.Drawing>物件，當您建立美工圖案、 繪製<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>物件。  
@@ -191,12 +191,12 @@ DrawingGroup 作業的順序
   
 |屬性|描述|圖例|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|變更的選定部分的不透明度<xref:System.Windows.Media.DrawingGroup>內容。 如需範例，請參閱[操作說明︰控制繪圖的不透明度](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee)。|![具有不透明度遮罩的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|一致的方式變更的不透明度<xref:System.Windows.Media.DrawingGroup>內容。 使用這個屬性來讓<xref:System.Windows.Media.Drawing>透明或半透明。 如需範例，請參閱[操作說明︰對繪圖套用不透明度遮罩](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f)。|![具有不同不透明度設定的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|適用於<xref:System.Windows.Media.Effects.BitmapEffect>至<xref:System.Windows.Media.DrawingGroup>內容。 如需範例，請參閱[操作說明︰對繪圖套用 BitmapEffect](http://msdn.microsoft.com/en-us/c5b1de83-8d09-47fb-96db-5f174471f4b5)。|![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|剪輯<xref:System.Windows.Media.DrawingGroup>內容區域，您將描述如何使用<xref:System.Windows.Media.Geometry>。 如需範例，請參閱[操作說明︰裁剪繪圖](http://msdn.microsoft.com/en-us/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。|![具有已定義之裁剪區域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|變更的選定部分的不透明度<xref:System.Windows.Media.DrawingGroup>內容。 如需範例，請參閱[操作說明︰控制繪圖的不透明度](http://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee)。|![具有不透明度遮罩的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|一致的方式變更的不透明度<xref:System.Windows.Media.DrawingGroup>內容。 使用這個屬性來讓<xref:System.Windows.Media.Drawing>透明或半透明。 如需範例，請參閱[操作說明︰對繪圖套用不透明度遮罩](http://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f)。|![具有不同不透明度設定的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|適用於<xref:System.Windows.Media.Effects.BitmapEffect>至<xref:System.Windows.Media.DrawingGroup>內容。 如需範例，請參閱[操作說明︰對繪圖套用 BitmapEffect](http://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5)。|![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|剪輯<xref:System.Windows.Media.DrawingGroup>內容區域，您將描述如何使用<xref:System.Windows.Media.Geometry>。 如需範例，請參閱[操作說明︰裁剪繪圖](http://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。|![具有已定義之裁剪區域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|沿著指定的標線將裝置獨立像素貼齊裝置像素。 這個屬性可用於確保在低 DPI 顯示器上呈現清晰的細緻圖形。 如需範例，請參閱[對繪圖套用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)。|![具有與不具 GuidelineSet 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|轉換<xref:System.Windows.Media.DrawingGroup>內容。 如需範例，請參閱[操作說明︰對繪圖套用轉換](http://msdn.microsoft.com/en-us/0d525f2b-682d-4d67-9660-cf46929fbabd)。|![旋轉後的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|轉換<xref:System.Windows.Media.DrawingGroup>內容。 如需範例，請參閱[操作說明︰對繪圖套用轉換](http://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd)。|![旋轉後的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>將繪圖顯示為影像  

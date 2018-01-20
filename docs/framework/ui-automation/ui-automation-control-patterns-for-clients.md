@@ -17,11 +17,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 45eca9205e56d1245720425c36c6adfacae720a2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7de91de7d2b738d92920ffc691133f8f7608e203
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>用戶端的 UI 自動化控制項模式
 > [!NOTE]
@@ -61,6 +61,6 @@ ms.lasthandoff: 12/22/2017
  [使用 UI 自動化叫用控制項](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
  [使用 UI 自動化取得核取方塊的切換狀態](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [TextPattern 插入文字範例](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
- [TextPattern 搜尋和選取範例](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
- [InvokePattern 和 ExpandCollapsePattern 功能表項目範例](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+ [TextPattern 插入文字範例](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [TextPattern 搜尋和選取範例](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
+ [InvokePattern 和 ExpandCollapsePattern 功能表項目範例](http://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

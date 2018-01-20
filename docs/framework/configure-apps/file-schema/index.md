@@ -33,11 +33,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 283faabf0f23df2650f8d87fdebae1102b83235d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4af28280de24f3e25362f18985c209b1a2f29523
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework 的組態檔結構描述
 
@@ -86,10 +86,10 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="related-sections"></a>相關章節
 
-[遠端設定結構描述](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) - 描述設定實作遠端處理之用戶端和伺服器應用程式的項目。
+[遠端設定結構描述](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) - 描述設定實作遠端處理之用戶端和伺服器應用程式的項目。
 
 [ASP.NET 設定結構描述](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) - 描述控制 ASP.NET Web 應用程式之行為的項目。
 
-[Web 服務設定結構描述](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e) - 描述控制 ASP.NET Web 服務和其用戶端之行為的項目。
+[Web 服務設定結構描述](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) - 描述控制 ASP.NET Web 服務和其用戶端之行為的項目。
 
-[設定 .NET Framework 應用程式](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) - 描述如何在 .NET Framework 中設定安全性、組件繫結和遠端處理。
+[設定 .NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) - 描述如何在 .NET Framework 中設定安全性、組件繫結和遠端處理。

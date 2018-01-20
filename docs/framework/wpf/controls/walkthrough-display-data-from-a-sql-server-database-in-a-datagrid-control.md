@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
 在本逐步解說中，從 SQL Server 資料庫擷取資料並顯示在該資料<xref:System.Windows.Controls.DataGrid>控制項。 您可以使用 ADO.NET Entity Framework 來建立實體類別，表示資料，並使用 LINQ 來撰寫查詢以擷取指定的資料從實體類別。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  選取 <xref:System.Windows.Window>。  
   
-5.  使用 [屬性] 視窗或 XAML 編輯器，建立事件處理常式<xref:System.Windows.Window>名為`Window_Loaded`如<xref:System.Windows.FrameworkElement.Loaded>事件。 如需詳細資訊，請參閱[How to： 建立簡單的事件處理常式](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480)。  
+5.  使用 [屬性] 視窗或 XAML 編輯器，建立事件處理常式<xref:System.Windows.Window>名為`Window_Loaded`如<xref:System.Windows.FrameworkElement.Loaded>事件。 如需詳細資訊，請參閱[How to： 建立簡單的事件處理常式](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。  
   
      下圖顯示 XAML mainwindow.xaml。  
   

@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1caae9411ca0ba8896613a38b446a3f0d190bb18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe36a801565af0d3664e5c827f8ce903be3b5c7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;netHttpBinding 的 &gt;security&lt;
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<netHttpBinding >  
-\<繫結 >  
-\<安全性 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netHttpBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|選擇項。 指定使用的安全性類型。 預設為 `None`。 這個屬性是屬於型別<!--zz <xref:System.ServiceModel.NetHttpSecurityMode> --> `System.ServiceModel.NetHttpSecurityMode`。|
+|模式|選擇項。 指定使用的安全性類型。 預設值為 `None`。 這個屬性是屬於型別<!--zz <xref:System.ServiceModel.NetHttpSecurityMode> --> `System.ServiceModel.NetHttpSecurityMode`。|
   
 ## <a name="mode-attribute"></a>mode 屬性  
   
@@ -66,8 +66,8 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<傳輸 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nethttpbinding.md)|定義基本 HTTP 服務的傳輸安全性設定。 這個項目對應於 <xref:System.ServiceModel.HttpTransportSecurity>。|  
-|[\<訊息 >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-nethttpbinding.md)|定義基本 HTTP 服務的訊息安全性設定。 這個項目對應至<!--zz <xref:System.ServiceModel.NetHttpMessageSecurity> --> `System.ServiceModel.NetHttpMessageSecurity`。|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nethttpbinding.md)|定義基本 HTTP 服務的傳輸安全性設定。 這個項目對應於 <xref:System.ServiceModel.HttpTransportSecurity>。|  
+|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-nethttpbinding.md)|定義基本 HTTP 服務的訊息安全性設定。 這個項目對應至<!--zz <xref:System.ServiceModel.NetHttpMessageSecurity> --> `System.ServiceModel.NetHttpMessageSecurity`。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -85,5 +85,5 @@ ms.lasthandoff: 12/22/2017
  [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

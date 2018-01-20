@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5af5840dde2cb72ee6b39b75ece3606e3c58b32b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c83da8aba2e1a88665f4443d98dbebbd5b1962b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用複雜型別的 AJAX 服務範例
 這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 來建立 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務，此服務會建立複雜型別的執行個體，並在服務和用戶端之間以 Javascript 物件標記法 (JSON) 進行傳送。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 AJAX 支援已針對透過 <xref:System.Web.UI.ScriptManager> 控制項來搭配 ASP.NET AJAX 使用完成最佳化。 如需使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]與 ASP.NET AJAX，請參閱[AJAX 範例](http://msdn.microsoft.com/en-us/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 AJAX 支援已針對透過 <xref:System.Web.UI.ScriptManager> 控制項來搭配 ASP.NET AJAX 使用完成最佳化。 如需使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]與 ASP.NET AJAX，請參閱[AJAX 範例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  

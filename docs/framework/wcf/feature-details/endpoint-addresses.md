@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 端點位址是由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別在 <xref:System.ServiceModel.EndpointAddress> 程式設計模型中表示，這個類別包含選擇性的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 屬性，而這個屬性可讓與某個端點交換訊息的其他端點驗證該端點；此外，這個類別也包含一組選擇性的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性，這些屬性則會定義取用服務時所需的其他任何 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
 -   在程式碼中，可以使用 <xref:System.ServiceModel.Channels.AddressHeader> 類別來建立自訂位址標頭，然後用來建構 <xref:System.ServiceModel.EndpointAddress>。  
   
--   在組態中，自訂[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)所指定的子系[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+-   在組態中，自訂[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)所指定的子系[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
  與程式碼相較之下，建議您使用組態，因為程式碼可讓您在部署後變更標頭。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/22/2017
   
 -   在程式碼中，可以將 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別新增至端點的行為集合中，以指定自訂接聽位址。  
   
--   在組態中，指定自訂接聽位址與`ListenUri`的服務屬性[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+-   在組態中，指定自訂接聽位址與`ListenUri`的服務屬性[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
 ### <a name="custom-soap-address-filter"></a>自訂 SOAP 位址篩選條件  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> 可以與任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性搭配使用，以定義端點的 SOAP 位址篩選條件 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 根據預設，這項篩選條件會確認傳入訊息所包含的 `To` 訊息標頭符合端點 URI，而且所有必要的端點標頭都出現在訊息中。  

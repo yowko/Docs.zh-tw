@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d459ac318f2c4a3911830d08e26b31ae5366e896
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 產生主要 Interop 組件
 有兩種方式可產生主要 Interop 組件：  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  安裝在目前的目錄時，無法探索與原始類型程式庫版本號碼不同的相依主要 Interop 組件。 您必須在 Windows 登錄中登錄相依的主要 Interop 組件，或使用 **/reference** 選項，以確定 Tlbimp.exe 能找到相依的 DLL。  
   
- 您也可以包裝類型程式庫的多個版本。 如需相關指示，請參閱[如何：包裝型別程式庫的多個版本](http://msdn.microsoft.com/en-us/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f)。  
+ 您也可以包裝類型程式庫的多個版本。 如需相關指示，請參閱[如何：包裝型別程式庫的多個版本](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f)。  
   
 ## <a name="example"></a>範例  
  下列範例會匯入 COM 類型程式庫  `LibUtil.tlb`，並使用金鑰檔案 `CompanyA.snk` 將組件 `LibUtil.dll` 簽署為強式名稱。 藉由略過特定命名空間名稱，此範例會產生預設的命名空間 `LibUtil`。  

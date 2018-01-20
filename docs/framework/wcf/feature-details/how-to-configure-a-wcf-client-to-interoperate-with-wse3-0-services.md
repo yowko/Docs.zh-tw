@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 214e0de13ba362bf4f101a665e943a424c56363c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>HOW TO：將 WCF 用戶端設為與 WSE3.0 服務交互操作
 當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端設定為使用 WS-Addressing August 2004 版本規格時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的連線層級與 Microsoft .NET 服務的 Web Services Enhancements (WSE) 3.0 相容。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  建立類別，表示可與 WSE 3.0 Web 服務通訊的繫結。  
   
-     下列類別是一部分[與 WSE 互通](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)範例。  
+     下列類別是一部分[與 WSE 互通](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)範例。  
   
     1.  建立從 <xref:System.ServiceModel.Channels.Binding> 類別衍生的類別。  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Channels.Binding>  
- [與 WSE 互通](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [與 WSE 互通](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

@@ -18,11 +18,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing"></a>路由
 本節中的主題涵蓋路由服務。 路由服務是可設定的泛型 SOAP 媒介，可讓您設定以內容為基礎的路由、設定通訊協定橋接、處理通訊錯誤，以及在執行階段動態更新路由邏輯。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  提供路由服務的功能概觀。  
   
- [路由服務](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [路由服務](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  說明路由服務的各項功能。  
   
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

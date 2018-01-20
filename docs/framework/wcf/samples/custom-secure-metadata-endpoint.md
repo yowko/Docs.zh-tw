@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: cad98ab0df372b19efcf102cce3f80e3f7b0632f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4ec6efa2a2b0993f7088e4424de86b3d3ad6c8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自訂安全中繼資料端點
 這個範例會示範如何實作與使用其中一種非中繼資料交換繫結，安全的中繼資料端點的服務，以及如何設定[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或擷取的用戶端從中繼資料端點的中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
@@ -153,7 +153,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  從 \MetadataResolverClient\bin 或 \SvcutilClient\bin 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-3.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 4.  當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
@@ -179,7 +179,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. 在用戶端機器上，從 VS 執行 MetadataResolverClient 或 SvcutilClient。  
   
-    1.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

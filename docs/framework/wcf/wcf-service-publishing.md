@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行可協助您從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端提供的早期開發環境，進入實際部署應用程式至實際執行環境進行測試。 在認可最後開發計畫之前，您可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行確認 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務正確執行，而且可開始發行。 您也可以選擇將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫部署到各種不同的目標位置進行測試。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   新聞訂閱服務程式庫。  
   
- 您可以找到這些服務範本選擇**檔案** -> **新專案** -> **Visual Basic**或**Visual C#**  ->  **WCF**。 在此位置 （包括 WCF 工作流程服務應用程式和 WCF 服務應用程式） 的其他 WCF 範本可以使用發行[單鍵發行 web 應用程式的](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx)。  
+ 您可以找到這些服務範本選擇**檔案** -> **新專案** -> **Visual Basic**或**Visual C#**  ->  **WCF**。 在此位置 （包括 WCF 工作流程服務應用程式和 WCF 服務應用程式） 的其他 WCF 範本可以使用發行[單鍵發行 web 應用程式的](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx)。  
   
  此服務可以發行至下列目標位置。  
   

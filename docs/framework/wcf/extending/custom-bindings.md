@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d51e6e5b72deea417b7313d88a4d58610b401244
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a3da437f742c46a2229aa00db732b5437ec15e3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-bindings"></a>自訂繫結
-當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](http://msdn.microsoft.com/en-us/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 ## <a name="construction-of-a-custom-binding"></a>建構自訂繫結  
  在建構自訂繫結時，會使用依特定順序堆疊的繫結項目集合中的 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 建構函式：  
@@ -88,5 +88,5 @@ ms.lasthandoff: 12/22/2017
  [使用繫結設定服務與用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [如何：自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [自訂繫結](../../../../docs/framework/wcf/samples/custom-binding.md)

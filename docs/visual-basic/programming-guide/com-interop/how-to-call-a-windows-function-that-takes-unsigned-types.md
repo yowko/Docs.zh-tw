@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：呼叫使用不帶正負號類型的 Windows 函式 (Visual Basic)
 如果您正在耗用類別、 模組或具有不帶正負號的整數類型的成員的結構，您可以存取這些成員與[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/21/2017
     >  呼叫 unmanaged 程式碼，例如 Windows 應用程式開發介面 (API)，會公開您的程式碼有潛在的安全性風險。  
   
     > [!IMPORTANT]
-    >  呼叫 Windows API 需要 unmanaged 程式碼權限，這可能會影響在部分信任情況下執行。 如需詳細資訊，請參閱<xref:System.Security.Permissions.SecurityPermission>和[程式碼存取權限](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675)。  
+    >  呼叫 Windows API 需要 unmanaged 程式碼權限，這可能會影響在部分信任情況下執行。 如需詳細資訊，請參閱<xref:System.Security.Permissions.SecurityPermission>和[程式碼存取權限](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。  
   
 ## <a name="see-also"></a>請參閱  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

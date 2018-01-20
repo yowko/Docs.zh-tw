@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ebc9bb8b128f4b4097d4f470920dbd28d17e6f00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 385831b820de77006dffb6206c34baa8620ca5da
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;transport&gt;
 定義服務端點 (此服務端點是設定來接收 HTTP 要求的) 之傳輸層級安全性設定。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<w >  
-\<繫結 >  
-\<安全性 >  
-\<傳輸 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<webHttpBinding>  
+\<binding>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|代表的安全性功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|代表的安全性功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目。|  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.HttpTransportSecurity>  
@@ -103,6 +103,6 @@ ms.lasthandoff: 12/22/2017
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

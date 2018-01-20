@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 428d8febe5a789f22eef97301fca3aa4b22f25b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8ef62b06e97e5db22fde0085e21d7a998bfdf22
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>操作說明：建立具有便捷鍵和自動換行功能的控制項
 此範例示範如何建立具有便捷鍵並支援自動換行的控制項。 此範例會使用<xref:System.Windows.Controls.Label>來說明這些概念的控制項。  
@@ -48,4 +48,4 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>請參閱  
- [操作說明：設定標籤的目標屬性](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+ [操作說明：設定標籤的目標屬性](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

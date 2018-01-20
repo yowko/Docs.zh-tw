@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 188609e1bb6e5ec3a51aa4411e23742c42d691c9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f9f97f0ae0a75dd15edcb2256d991e987388f1ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-types-and-functions"></a>資料類型與函式
 下表所列的主題將針對 Common Language Runtime (CLR) 的成員、建構和轉換描述 LINQ to SQL 支援。 支援的成員和建構可用於您的 LINQ to SQL 查詢中。  
@@ -45,4 +45,4 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>請參閱  
  [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [在 Visual Studio 中的.NET framework 類別庫](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [在 Visual Studio 中的.NET framework 類別庫](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

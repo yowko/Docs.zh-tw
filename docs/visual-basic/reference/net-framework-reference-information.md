@@ -12,11 +12,11 @@ ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b52323cb5c7049f87b27c24a987fcb7ba1834b6a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 320d9c88bde76ec27fa23c97de78122d88cb6824
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 參考資訊 (Visual Basic)
 本主題提供有關如何使用資訊的連結[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別庫。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
  [工具](../../framework/tools/index.md)  
  說明可用來開發、 設定及使用.NET Framework 技術來部署應用程式的工具。  
   
- [.NET Framework 範例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [.NET Framework 範例](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  提供示範.NET Framework 技術的範例應用程式的連結。  
   
  [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  

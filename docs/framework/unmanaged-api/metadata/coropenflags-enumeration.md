@@ -20,11 +20,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 39645de71913baeaa39524e1cae081de9cac3442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列舉
 包含在開啟資訊清單檔案時控制中繼資料行為的旗標值。  
@@ -62,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|已過時。 會忽略此旗標。|  
 |`ofManifestMetadata`|已過時。 會忽略此旗標。|  
 |`ofReadOnly`|指出應該開啟檔案進行讀取，且呼叫`QueryInterface`如[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)無法進行。|  
-|`ofTakeOwnership`|指出使用的呼叫配置的記憶體[CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c)和中繼資料，將會釋放。|  
+|`ofTakeOwnership`|指出使用的呼叫配置的記憶體[CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c)和中繼資料，將會釋放。|  
 |`ofNoTypeLib`|已過時。 會忽略此旗標。|  
 |`ofNoTransform`|指出應停用 .winmd 檔案的自動轉換。 換言之，應停用 Windows 執行階段類型對 .NET Framework 類型的投影。 如需詳細資訊，請參閱[.NET 和 Windows 執行階段與下面其實](http://msdn.microsoft.com/magazine/jj651569.aspx)。|  
 |`ofReserved1`|保留供內部使用。|  

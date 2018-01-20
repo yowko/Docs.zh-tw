@@ -15,17 +15,17 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: ecbbaac0023ca528967abe2cb60c3d790772fb2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extending-security"></a>擴充安全性
 若要建立新的宣告類型和自訂權杖，您可以擴充 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的安全性基礎結構。 本章節中的主題會示範如何做到這點。  
   
 ## <a name="in-this-section"></a>本節內容  
- [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)  
+ [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
  逐步解說 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性系統的基礎結構。  
   
  [自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  

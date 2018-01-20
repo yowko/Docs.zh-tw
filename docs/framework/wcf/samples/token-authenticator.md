@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="token-authenticator"></a>權杖驗證器
 這個範例示範如何實作自訂權杖驗證器。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的權杖驗證器用於驗證搭配訊息使用的權杖、確認其前後一致，以及驗證與權杖關聯的身分識別。  
@@ -350,7 +350,7 @@ static void DisplayIdentityInformation()
   
 3.  從 \client\bin 啟動 client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -372,7 +372,7 @@ static void DisplayIdentityInformation()
   
 9. 在用戶端電腦上，從命令提示字元啟動 Client.exe。  
   
-10. 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果用戶端和服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

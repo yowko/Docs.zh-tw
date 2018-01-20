@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 參考
 本節內容包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參考主題。 本主題將摘要說明 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子並將它們依分類群組。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/17/2018
 |[!(邏輯 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|邏輯 NOT。|  
 |[&#124;&#124; (Logical OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|邏輯 OR。|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|評估一組布林運算式來得出結果。|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|結果[時](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998)子句時評估為 true。|  
+|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|結果[時](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)子句時評估為 true。|  
   
 ## <a name="query-operators"></a>查詢運算子  
  查詢運算子是用來定義傳回實體資料的查詢運算式。 以下資料表列出查詢運算子。  

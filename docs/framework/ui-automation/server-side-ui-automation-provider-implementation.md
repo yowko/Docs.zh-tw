@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>伺服器端 UI 自動化提供者實作
 > [!NOTE]
@@ -187,5 +187,5 @@ ms.lasthandoff: 12/22/2017
  [UI 自動化提供者引發事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [在 UI 自動化片段提供者中啟用導覽](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [簡單的提供者範例](http://msdn.microsoft.com/en-us/c10a6255-e8dc-494b-a051-15111b47984a)  
- [片段提供者範例](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [簡單的提供者範例](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [片段提供者範例](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

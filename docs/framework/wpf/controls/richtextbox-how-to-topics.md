@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4375803ab51b139a66ac789f0670fce1e5f64682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox HOW TO 主題
 本節提供範例示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  [以程式設計方式變更 RichTextBox 中的選項](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [儲存、載入和列印 RichTextBox 內容](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [在 RichTextBox 中放置自訂內容功能表](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [如何： 取代在 RichTextBox 的預設內容主機](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [如何： 取代在 RichTextBox 的預設內容主機](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Controls.TextBox>  

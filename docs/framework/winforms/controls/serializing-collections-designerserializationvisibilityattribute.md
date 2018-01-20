@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
 您的自訂控制項有時會公開為屬性的集合。 本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。 套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保屬性會序列化。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  若要為單一列出本主題中複製的程式碼，請參閱[How to： 序列化集合的標準類型使用 designerserializationvisibilityattribute 序列化](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
@@ -47,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>若要建立具有可序列化集合的控制項  
   
-1.  建立 Windows 控制項程式庫專案，稱為`SerializationDemoControlLib`。 如需詳細資訊，請參閱[Windows 控制項程式庫範本](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
+1.  建立 Windows 控制項程式庫專案，稱為`SerializationDemoControlLib`。 如需詳細資訊，請參閱[Windows 控制項程式庫範本](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
   
-2.  重新命名`UserControl1`至`SerializationDemoControl`。 如需詳細資訊，請參閱[如何： 重新命名識別項](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
+2.  重新命名`UserControl1`至`SerializationDemoControl`。 如需詳細資訊，請參閱[如何： 重新命名識別項](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
   
 3.  在**屬性**視窗中，設定的值<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>屬性`10`。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
     |屬性|變更為|  
     |--------------|---------------|  
     |**多行**|`true`|  
-    |**停駐**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
     |**捲軸**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   

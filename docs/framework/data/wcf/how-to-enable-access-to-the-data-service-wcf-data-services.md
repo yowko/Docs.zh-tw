@@ -18,17 +18,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3f6c44a6d4182311b263d4c5570ebacf15200acc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f481a3a918282bf598277dcd4e1bf29d63edddc1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>HOW TO：啟用資料服務的存取 (WCF Data Services)
 在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中，您必須明確授與資料服務所公開之資源的存取權。 這表示當您建立新的資料服務之後，您仍然必須明確提供個別資源的存取權當做實體集。 本主題說明如何啟用讀取和寫入存取權之實體的其中五個設定當您完成建立 Northwind 資料服務中[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 因為 <xref:System.Data.Services.EntitySetRights> 列舉的定義方式是透過使用 <xref:System.FlagsAttribute>，所以您可以使用邏輯 OR 運算子為單一實體集指定多個權限。  
   
 > [!NOTE]
->  任何可以存取 ASP.NET 應用程式的用戶端也可以存取資料服務公開的資源。 在實際執行的資料服務中，若要避免未經授權存取資源，您也應該要保護應用程式本身的安全。 如需詳細資訊，請參閱[NIB: ASP.NET 安全性](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)。  
+>  任何可以存取 ASP.NET 應用程式的用戶端也可以存取資料服務公開的資源。 在實際執行的資料服務中，若要避免未經授權存取資源，您也應該要保護應用程式本身的安全。 如需詳細資訊，請參閱[NIB: ASP.NET 安全性](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)。  
   
 ### <a name="to-enable-access-to-the-data-service"></a>啟用存取資料服務  
   

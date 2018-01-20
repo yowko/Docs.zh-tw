@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd44502b5aa07e1421b6b226188155cac56d3473
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 60328d766a931abd7a1a3e9dc08c68928e01f2d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="retrieving-data-using-a-datareader"></a>使用 DataReader 擷取資料
 擷取使用資料**DataReader**牽涉到建立的執行個體**命令**物件，然後再建立**DataReader**藉由呼叫**Command.ExecuteReader**從資料來源擷取資料列。 下列範例說明如何使用**DataReader**其中`reader`代表有效的 DataReader 和`command`代表有效的命令物件。  
@@ -260,7 +260,7 @@ adapter.Fill(ds);
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [使用 Datareader](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [使用 Datareader](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  

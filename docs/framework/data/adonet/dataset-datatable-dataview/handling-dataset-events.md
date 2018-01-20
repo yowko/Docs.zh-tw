@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6c87e805bd710b49ce805af8223cddb5c7036c50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-dataset-events"></a>處理 DataSet 的事件
 <xref:System.Data.DataSet> 物件提供三個事件： <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>和 <xref:System.Data.DataSet.MergeFailed>。  
@@ -62,7 +62,7 @@ private static void DataSetMergeFailed(
  `DataSet` 是衍生自 <xref:System.ComponentModel.MarshalByValueComponent> 類別 (Class)，此類別會公開 (Expose) <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 方法和 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件加入事件處理常式來接聽元件上清除的事件。 您可以使用<xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件`DataSet`如果您想要執行程式碼時<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>方法呼叫。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>所使用的資源釋出<xref:System.ComponentModel.MarshalByValueComponent>。  
   
 > [!NOTE]
->  `DataSet`和`DataTable`物件繼承自<xref:System.ComponentModel.MarshalByValueComponent>和支援<xref:System.Runtime.Serialization.ISerializable>遠端執行功能的介面。 這些是唯一可以進行遠端通訊的 ADO.NET 物件。 如需詳細資訊，請參閱 [Remote Objects](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)。  
+>  `DataSet`和`DataTable`物件繼承自<xref:System.ComponentModel.MarshalByValueComponent>和支援<xref:System.Runtime.Serialization.ISerializable>遠端執行功能的介面。 這些是唯一可以進行遠端通訊的 ADO.NET 物件。 如需詳細資訊，請參閱[遠端物件](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)。  
   
  如需有關使用時可使用其他事件資訊`DataSet`，請參閱[處理 DataTable 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)和[處理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   

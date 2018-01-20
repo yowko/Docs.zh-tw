@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ab311974b1fe8cbc2707ee0818806d6264a1573
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="context-exchange-correlation"></a>內容交換相互關聯
 內容相互關聯根據所述的內容交換機制[.NET 內容交換通訊協定規格](http://go.microsoft.com/fwlink/?LinkId=166059)。 內容相互關聯使用一般熟知的內容標頭或 Cookie，將訊息關聯至正確的執行個體。 若要使用內容相互關聯，您必須在提供給 <xref:System.ServiceModel.BasicHttpContextBinding> 的端點上使用以內容為基礎的繫結，例如 <xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 本主題說明如何在工作流程服務中使用內容相互關聯搭配訊息活動。  
@@ -109,6 +109,6 @@ Send request2 = new Send
 };  
 ```  
   
- 請注意，在這些範例中，內容相互關聯已明確設定。 如果用戶端工作流程並沒有同時裝載在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中，除非這些活動已包含在 <xref:System.ServiceModel.Activities.CorrelationScope> 活動內，否則相互關聯必須明確設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]內容相互關聯，請參閱[NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)範例。  
+ 請注意，在這些範例中，內容相互關聯已明確設定。 如果用戶端工作流程並沒有同時裝載在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中，除非這些活動已包含在 <xref:System.ServiceModel.Activities.CorrelationScope> 活動內，否則相互關聯必須明確設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]內容相互關聯，請參閱[NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)範例。  
   
  如果正在呼叫工作流程服務的用戶端不是工作流程，只要該用戶端明確傳遞回第一個工作流程服務呼叫傳回的內容，它仍然可以重複呼叫。 根據預設，透過在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中加入服務參考而產生的 Proxy，將會儲存並傳遞這項內容。

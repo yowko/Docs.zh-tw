@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae44c80f99b2753b4914ff0844fd9538f3ac3f34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab40ab1cd889665829e42072803010ad49e717a9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;message&gt; 項目
 定義的訊息層級安全性需求與設定之端點的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<netTcpBinding >  
-\<繫結 >  
-\<安全性 >  
-\<訊息 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netTcpBinding>  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|定義 <xref:System.ServiceModel.Configuration.NetTcpBindingElement> 的安全性功能。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|定義 <xref:System.ServiceModel.Configuration.NetTcpBindingElement> 的安全性功能。|  
   
 ## <a name="remarks"></a>備註  
  訊息會使用訊息層級安全性達成 SOAP 訊息的完整性與機密性，以及通訊對等兩端的交互驗證。 如果繫結上選取了這個安全性模式，通道堆疊會以訊息安全性繫結項目進行設定，且 SOAP 訊息的安全性會符合 WS-Security* 標準。  
@@ -99,5 +99,5 @@ ms.lasthandoff: 12/22/2017
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

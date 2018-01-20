@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 7a713c22b307f10ef529de5c78c002e8d67a38e8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ec20542ad452bcefbe2b6d286e68ad8bbfb5adb9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>如何：在查詢中呼叫模型定義函式
 本主題描述如何從 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢內呼叫概念模型中所定義的函式。  
   
- 以下程序提供從 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢內呼叫模型定義函式的高階概述。 程序後的範例提供程序中之步驟相關詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱[如何： 定義概念模型中的自訂函式](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f)。  
+ 以下程序提供從 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢內呼叫模型定義函式的高階概述。 程序後的範例提供程序中之步驟相關詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱[如何： 定義概念模型中的自訂函式](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)。  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>呼叫概念模型中定義的函式  
   
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/17/2018
 2.  在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中呼叫函式。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢內呼叫概念模型中所定義的函式。 範例使用 School 模型。 School 模型的相關資訊，請參閱[建立 School 範例資料庫](http://msdn.microsoft.com/en-us/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0)和[產生學校.edmx 檔案](http://msdn.microsoft.com/en-us/c48b3907-a8be-4fe6-884c-e95af1852758)。  
+ 下列範例示範如何從 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢內呼叫概念模型中所定義的函式。 範例使用 School 模型。 School 模型的相關資訊，請參閱[建立 School 範例資料庫](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0)和[產生學校.edmx 檔案](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758)。  
   
- 下列概念模型函式會傳回講師受雇之後經過的年份。 概念模型中加入函式的相關資訊，請參閱[如何： 定義概念模型中的自訂函式](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f)。)  
+ 下列概念模型函式會傳回講師受雇之後經過的年份。 概念模型中加入函式的相關資訊，請參閱[如何： 定義概念模型中的自訂函式](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)。)  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/17/2018
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>請參閱  
- [.edmx 檔案概觀](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [.edmx 檔案概觀](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [在 LINQ to Entities 查詢中呼叫函式](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
  [如何：將模型定義函式當作物件方法來呼叫](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)

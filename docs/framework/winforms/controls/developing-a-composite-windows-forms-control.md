@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06ad98fef8c51cb995644c3b29236a9b0f8cfe29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>開發複合 Windows Form 控制項
 您可以結合其他的 Windows Form 控制項來開發複合 Windows Form 控制項。 複合控制項衍生自<xref:System.Web.UI.UserControl>稱為使用者控制項。 基底類別 <xref:System.Windows.Forms.UserControl> 提供鍵盤路徑給子控制項，以確保子控制項可以接收焦點。 如需使用者控制項的範例，請參閱<xref:System.Windows.Forms.UserControl>範例[How to： 適用於 Windows Form 控制項中的屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/en-us/09476da0-8d4c-4a4c-b969-649519dfb438))  
+-   [逐步解說：使用 Visual C# 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438))  
   
 -   [操作說明：為控制項提供工具箱點陣圖](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [逐步解說：使用 Visual Basic 撰寫複合控制項](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [逐步解說：使用 Visual C# 撰寫複合控制項](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f))  
+-   [逐步解說：使用 Visual C# 撰寫複合控制項](http://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f))  
   
 -   [逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

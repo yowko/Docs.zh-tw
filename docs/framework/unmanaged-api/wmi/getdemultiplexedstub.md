@@ -15,13 +15,13 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6ba7ca9941dc148444a4c605fecc8aaf150e8601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函式
+# <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub function
 建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,7 +39,7 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>參數
 
 `pObject`  
-[in]用戶端的程序中實作的指標[IWbemObjectSink](https://msdn.microsoft.com/en-us/library/aa391787(v=vs.85).aspx)。
+[in]用戶端的程序中實作的指標[IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx)。
 
 `isLocal`  
 [in]指出事件是否位於本機的旗標 (`true`)，否則`false`。

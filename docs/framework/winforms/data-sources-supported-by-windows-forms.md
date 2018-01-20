@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 Windows Form 資料繫結，您可以從資料庫，以及其他結構，例如陣列和集合中的資料存取資料，只要符合特定最低需求。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
  Windows Form 支援的物件使用執行個體上的公用屬性的資料繫結控制屬性<xref:System.Windows.Forms.Binding>型別。 Windows Form 也支援基礎清單控制項繫結，例如<xref:System.Windows.Forms.ListControl>物件執行個體時<xref:System.Windows.Forms.BindingSource>用。  
   
  陣列或集合  
- 若要做為資料來源，必須實作清單<xref:System.Collections.IList>介面; 其中一個範例是陣列，其中是的執行個體<xref:System.Array>類別。 如需陣列的詳細資訊，請參閱[How to： 建立陣列的物件 (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3)。  
+ 若要做為資料來源，必須實作清單<xref:System.Collections.IList>介面; 其中一個範例是陣列，其中是的執行個體<xref:System.Array>類別。 如需陣列的詳細資訊，請參閱[How to： 建立陣列的物件 (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
   
  一般情況下，您應該使用<xref:System.ComponentModel.BindingList%601>當您建立資料繫結的物件清單。 <xref:System.ComponentModel.BindingList%601>泛型版本<xref:System.ComponentModel.IBindingList>介面。 <xref:System.ComponentModel.IBindingList>介面延伸<xref:System.Collections.IList>加屬性、 方法和所需的雙向資料繫結事件的介面。  
   

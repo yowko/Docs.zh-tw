@@ -17,11 +17,11 @@ ms.author: mairaw
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5547322759dcafb25e9f1c8541fa67876d0cd401
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7d67bacab3f8f8f4c21c5048d3ffb332ae6e8d77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -375,8 +375,8 @@ ms.lasthandoff: 01/09/2018
  [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)  
  說明在撰寫執行序列化的程式碼時要遵循的安全程式碼撰寫方針。  
   
- [遠端物件](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [遠端物件](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  說明 .NET Framework 中可用來進行遠端通訊的各種通訊方法。  
   
- [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  提供一個主題，說明並解釋如何設計使用 ASP.NET 建立的 XML Web 服務。

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 模型和對應檔案的命令列工具。 您可以使用 EdmGen.exe 工具執行下列動作：  
@@ -29,7 +29,7 @@ EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-e
   
 -   產生 C# 或 Visual Basic 程式碼檔案，其中包含從概念模型 (.csdl) 檔案產生的物件類別 (Class)。 如需詳細資訊，請參閱[How to： 使用 EdmGen.exe 產生物件層程式碼](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
   
--   產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊， [How to: Pre-Generate 檢視，以改善查詢效能](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
+-   產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊， [How to: Pre-Generate 檢視，以改善查詢效能](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
   
  EdmGen.exe 工具是安裝在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目錄。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以從 Visual Studio 命令提示字元存取 EdmGen.exe 工具 (按一下**啟動**，指向 **所有程式**，指向  **Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然後按一下  **Visual Studio 2010 命令提示字元**)。  
   
@@ -83,6 +83,6 @@ EdmGen /mode:choice [options]
  [如何：使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>請參閱  
- [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+ [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)  
  [CSDL、SSDL 和 MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

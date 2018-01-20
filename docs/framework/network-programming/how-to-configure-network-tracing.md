@@ -22,11 +22,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a6b277b2676409bebc059637daca5681b853f03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b58887dc2614ab31a422eb74ce8d0805cf8153bf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：設定網路追蹤
 應用程式或電腦組態檔都會保存可決定網路追蹤格式和內容的設定。 在執行這個程序之前，請確認已啟用追蹤。 如需啟用追蹤的詳細資訊，請參閱[啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
@@ -110,4 +110,4 @@ ms.lasthandoff: 12/22/2017
  [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)  
  [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [檢測和追蹤的簡介](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [檢測和追蹤的簡介](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

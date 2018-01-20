@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 472bc9cc1ff18c7e199a1133a1d54994cea21055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: acaaee2a34fad776847f3f2a89d458b49d817d30
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-nettcpbinding"></a>預設 NetTcpBinding
 此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 用戶端和服務的組態檔中會指定繫結。 中會指定繫結類型`binding`屬性[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例組態所示。  
+ 用戶端和服務的組態檔中會指定繫結。 中會指定繫結類型`binding`屬性[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例組態所示。  
   
 ```xml  
 <endpoint address=""  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e2d95b1c63cf751a694051e5def09e20dd7ab7a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 08f662d41f1a147970ae7611f4fe061dd86bac1f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>適用於 Entity Framework 的 SqlClient
 本節將描述可讓 Entity Framework 透過 Microsoft SQL Server 運作的 .NET Framework Data Provider for SQL Server (SqlClient)。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
  若要使用 SqlClient，請將字串 "System.Data.SqlClient" 指派給 `Provider` 項目的 `Schema` 屬性。  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 結構描述屬性  
- 在 SSDL 中，`ProviderManifestToken` 是 `Schema` 項目的必要屬性。 這個語彙基元 (Token) 是用來載入提供者資訊清單以供離線案例使用。 如需有關`ProviderManifestToken`屬性，請參閱[結構描述項目 (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222)。  
+ 在 SSDL 中，`ProviderManifestToken` 是 `Schema` 項目的必要屬性。 這個語彙基元 (Token) 是用來載入提供者資訊清單以供離線案例使用。 如需有關`ProviderManifestToken`屬性，請參閱[結構描述項目 (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)。  
   
  SqlClient 可當做不同 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 版本的資料提供者 (Data Provider) 使用。 這些版本具有不同的功能。 例如，[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 不支援 `varchar(max)` 所導入的 `nvarchar(max)` 和 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 型別。  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/17/2018
 |2000|2005|2008|  
   
 > [!NOTE]
->  從開始[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]2010年[ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)不支援 SQL Server 2000。  
+>  從開始[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]2010年[ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)不支援 SQL Server 2000。  
   
 ## <a name="provider-namespace-name"></a>提供者命名空間名稱  
  所有提供者都必須指定命名空間。 這個屬性會告知 Entity Framework 此提供者對特定建構 (例如型別和函式) 所使用的前置詞。 SqlClient 提供者資訊清單的命名空間是 `SqlServer`。 如需命名空間的詳細資訊，請參閱[命名空間](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)。  

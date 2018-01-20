@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 190e64945658f81400c2cc68beff82ccc38144f5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 100def5fdf531527705fb0c1aebdc20674e0ce60
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-client-applications"></a>保護用戶端應用程式的安全
 應用程式通常含有許多部分，而這所有的部分都必須受到保護，以免產生漏洞而造成資料遺失，或因其他原因而危及系統。 建立安全的使用者介面可以避免許多問題，因為可以在攻擊者存取資料或系統資源之前就加以防堵。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/17/2018
  [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  說明如何在 Windows Forms 應用程式中與 Unmanaged 應用程式互動。  
   
- [ClickOnce 部署適用於 Windows Forms 應用程式](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [ClickOnce 部署適用於 Windows Forms 應用程式](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
  說明如何在 Windows Form 應用程式中使用 `ClickOnce` 部署，並討論安全性含意。  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET 和 XML Web Service  
@@ -62,23 +62,23 @@ ms.lasthandoff: 01/17/2018
   
 |資源|描述|  
 |--------------|-----------------|  
-|[NIB: ASP.NET 安全性](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|討論如何保護 ASP.NET 應用程式。|  
-|[保護使用 ASP.NET 建立 XML Web 服務](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|討論如何實作 ASP.NET Web 服務的安全性。|  
+|[NIB: ASP.NET 安全性](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|討論如何保護 ASP.NET 應用程式。|  
+|[保護使用 ASP.NET 建立 XML Web 服務](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|討論如何實作 ASP.NET Web 服務的安全性。|  
 |[指令碼擅用概觀](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|說明如何防堵指令碼式攻擊，此類攻擊會嘗試在網頁中插入惡意的字元。|  
-|[NIB： 基本的 ASP.NET Web 應用程式的安全性做法](http://msdn.microsoft.com/en-us/94a52ab8-731d-417e-b997-721baf43df38)|一般安全性資訊以及進階討論區的連結。|  
+|[NIB： 基本的 ASP.NET Web 應用程式的安全性做法](http://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|一般安全性資訊以及進階討論區的連結。|  
   
 ## <a name="remoting"></a>遠端處理  
  .NET 遠端處理可讓您輕鬆建置四處分散的應用程式，不論應用程式元件全都集中在同一台電腦或散佈在全世界各個角落。 您可以建置用戶端應用程式，讓它們使用相同電腦 (或其網路上可連接的任何其他電腦) 上其他處理序中的物件。 也可以使用 .NET 遠端處理，與同一處理序中的其他應用程式定義域通訊。  
   
 |資源|描述|  
 |--------------|-----------------|  
-|[遠端應用程式的組態](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097)|討論如何設定遠端處理應用程式以避免常見問題。|  
-|[在遠端處理中的安全性](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|說明驗證和加密，以及與遠端處理相關的其他安全性主題。|  
+|[遠端應用程式的組態](http://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|討論如何設定遠端處理應用程式以避免常見問題。|  
+|[在遠端處理中的安全性](http://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|說明驗證和加密，以及與遠端處理相關的其他安全性主題。|  
 |[安全性和遠端處理考量](../../../../docs/framework/misc/security-and-remoting-considerations.md)|說明受保護的物件和跨應用程式定義域的安全性問題。|  
   
 ## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [資料存取策略的建議](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [設定應用程式的安全性](/visualstudio/ide/securing-applications)  
  [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e8c39d3c84fe24f86692c289860f22381a3cf5a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 當 COM 用戶端呼叫 .NET 物件時，Common Language Runtime 會建立 Managed 物件和物件的 COM 可呼叫包裝函式 (CCW)。 無法直接參考 .NET 物件，因此 COM 用戶端使用 CCW 做為 Managed 物件的 Proxy。  
@@ -190,6 +190,6 @@ public class LoanApp : IAnother {
  [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)  
  [COM 包裝函式](../../../docs/framework/interop/com-wrappers.md)  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [模擬 COM 介面](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [模擬 COM 介面](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
  [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)

@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc771b81e1db87f3d881dc2a0ab84f7aad93247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8328bc705349ffeaa78d95e95ed0955ac6faa5c3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控制項 (Windows Form)
 Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。  
@@ -93,7 +93,7 @@ Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建�
  [逐步解說：利用 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  提供配置具有多個窗格的 Windows Form 的指示。  
   
- [Windows XP 功能和 Windows Forms 控制項](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Windows XP 功能和 Windows Forms 控制項](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  說明如何利用適用於 <xref:System.Windows.Forms.ListView> 控制項的 Windows XP 特定功能。  
   
 ## <a name="see-also"></a>請參閱  

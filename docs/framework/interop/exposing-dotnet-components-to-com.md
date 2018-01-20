@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d34c60a5c2cae5abaa6763b935f6d11a29a39e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-net-framework-components-to-com"></a>將 .NET Framework 元件公開給 COM
 撰寫 .NET 類型和從 Unmanaged 程式碼取用該類型，對開發人員來說是不同的活動。 本節描述幾個撰寫與 COM 用戶端交互操作之 Managed 程式碼的祕訣：  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/22/2017
   
      COM 開發人員可以使用目前所用的相同工具和技術，參考組件中的類型。  
   
-3.  [呼叫 .NET 物件](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)。  
+3.  [呼叫 .NET 物件](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)。  
   
      COM 開發人員可以用在任何 Unmanaged 類型上呼叫方法的相同方式，在 .NET 物件上呼叫方法。 例如，COM **CoCreateInstance** API 會啟動 .NET 物件。  
   
-4.  [部署供 COM 存取的應用程式](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)。  
+4.  [部署供 COM 存取的應用程式](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)。  
   
      強式名稱組件可以安裝在全域組件快取，而且需要其發行者的簽章。 沒有強式名稱的組件必須安裝在用戶端的應用程式目錄中。  
   

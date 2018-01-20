@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a704930f707895e7f343566fab544e2f8b32b22c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -183,6 +183,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>請參閱  
  [免註冊的 COM Interop](../../../docs/framework/interop/registration-free-com-interop.md)  
- [免註冊 COM Interop 的需求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [設定 COM 元件，免註冊啟動](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
+ [免註冊 COM Interop 的需求](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [設定 COM 元件，免註冊啟動](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [免註冊啟用 .NET 元件：逐步解說](http://go.microsoft.com/fwlink/?LinkId=158812)

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a0bd0f8dcde95dcbb5ef8fcf398256b6931859c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f5cd70e71a4a8bc48a3240055117dadc1086a50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>如何：鎖定 Windows Form 的控制項
 當您設計 Windows 應用程式的使用者介面 (UI) 時，您可以在之後的位置正確，如此您不小心移動或調整其大小，設定其他屬性時，鎖定控制項。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  此外，您可以鎖定與解除鎖定所有表單上的控制項，這可能會很有幫助的表單具有許多控制項，或您可以解除鎖定個別控制項。 一旦您在表單上所需的位置放置所有控制項，可鎖定這些所有方式可避免錯誤的移動。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-lock-a-control"></a>若要鎖定控制項  
   

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d46ea30a0e6a509d6a6cac6d8686e5f5307f0cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 本逐步解說會示範如何當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的項目[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-混合式應用程式。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-host-project"></a>建立主專案  
   
-1.  建立 WPF 應用程式專案，名為`LocalizingWpfInWf`。 如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立 WPF 應用程式專案，名為`LocalizingWpfInWf`。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  新增[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>項目稱為`SimpleControl`至專案。  
   
@@ -180,5 +180,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [逐步解說： 當地語系化 Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)  
- [WPF 設計工具](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)
+ [逐步解說： 當地語系化 Windows Form](http://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)  
+ [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)

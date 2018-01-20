@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自動化和畫面縮放比例
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     這個函式會讓整個處理序成為 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，表示屬於該處理序的所有視窗都是未縮放。 例如，在 [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)中，構成反白顯示矩型的四個視窗是位在取自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的實體座標，而非邏輯座標。 如果這個範例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，就會在桌面的邏輯座標上繪製反白顯示，而在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中，這會造成放置不正確的情況。  
+     這個函式會讓整個處理序成為 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，表示屬於該處理序的所有視窗都是未縮放。 在[螢光筆範例](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)，比方說，構成反白顯示矩形四個視窗是位在取自實體座標[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，非邏輯座標。 如果這個範例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知，就會在桌面的邏輯座標上繪製反白顯示，而在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中，這會造成放置不正確的情況。  
   
 2.  若要取得游標座標，請呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `GetPhysicalCursorPos`。 下列範例顯示如何宣告及使用這個函式。  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  如果您的應用程式與非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的應用程式執行直接跨處理序通訊，您可能必須使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`，在邏輯與實體座標之間轉換。  
   
 ## <a name="see-also"></a>請參閱  
- [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [螢光筆範例](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

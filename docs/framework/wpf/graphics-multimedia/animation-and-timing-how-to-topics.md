@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e3123df62e66354b35da26bbda894c5828136d05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86258ae472a39451359dec7e6bfe7fe2e5b4d0c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-and-timing-how-to-topics"></a>動畫和計時 HOW TO 主題
 下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]動畫和您的應用程式中的計時系統。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  [使用 From、To 和 By 控制動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [定義名稱範圍](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [時鐘的狀態變更時接收通知](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [如何： 移除分鏡腳本](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)  
+ [如何： 移除分鏡腳本](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [重複動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [尋找分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [同步搜尋分鏡腳本](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

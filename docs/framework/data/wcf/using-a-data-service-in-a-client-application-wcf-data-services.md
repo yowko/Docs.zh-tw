@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91edecf9b500c316b915e908bbbd412a47d86dac
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在用戶端應用程式中使用資料服務 (WCF 資料服務)
 您可以存取服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要將 URI 提供給 Web 瀏覽器。 URI 可提供資源的位址，而要求訊息會傳送至這些位址，以存取或變更資源所代表的基礎資料。 瀏覽器會發出 HTTP GET 命令，並且以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的形式傳回要求的資源。 如需詳細資訊，請參閱[從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  HTTP 要求訊息的標頭中會要求裝載的訊息格式。 如需詳細資訊，請參閱[OData： 作業](http://go.microsoft.com/fwlink/?LinkID=185792)。  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>使用用戶端程式庫存取及變更資料  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包含用戶端程式庫可讓您更輕鬆地取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從.NET Framework 和 Silverlight 為基礎的用戶端應用程式摘要。 這些程式庫會簡化 HTTP 訊息的傳送與接收。 他們也會將訊息承載轉譯為代表實體資料的 CLR 物件。 用戶端程式庫具有兩個核心類別： <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 這些類別可讓您查詢資料服務，然後使用傳回的實體資料當做 CLR 物件。 如需詳細資訊，請參閱[WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)和[WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包含用戶端程式庫可讓您更輕鬆地取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從.NET Framework 和 Silverlight 為基礎的用戶端應用程式摘要。 這些程式庫會簡化 HTTP 訊息的傳送與接收。 他們也會將訊息承載轉譯為代表實體資料的 CLR 物件。 用戶端程式庫具有兩個核心類別： <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 這些類別可讓您查詢資料服務，然後使用傳回的實體資料當做 CLR 物件。 如需詳細資訊，請參閱[WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)和[WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)。  
   
  您可以使用**加入服務參考**將參考加入至資料服務的 Visual Studio 中的對話方塊。 此工具會從參考的資料服務要求服務中繼資料，並產生代表資料服務的 <xref:System.Data.Services.Client.DataServiceContext>，同時也會產生代表實體的用戶端資料服務類別。 如需詳細資訊，請參閱[產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。  
   

@@ -14,20 +14,20 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: c0ef60cdb53ed504d1738e4e17329f7420943312
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d61075bc96427736f7e6f5a39302bbd59d434f9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;security&gt;
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<basicHttpBinding >  
-\<繫結 >  
-\<安全性 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<basicHttpBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,8 +66,8 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<傳輸 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|定義基本 HTTP 服務的傳輸安全性設定。 這個項目對應於 <xref:System.ServiceModel.HttpTransportSecurity>。|  
-|[\<訊息 >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|定義基本 HTTP 服務的訊息安全性設定。 這個項目對應於 <xref:System.ServiceModel.BasicHttpMessageSecurity>。|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|定義基本 HTTP 服務的傳輸安全性設定。 這個項目對應於 <xref:System.ServiceModel.HttpTransportSecurity>。|  
+|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|定義基本 HTTP 服務的訊息安全性設定。 這個項目對應於 <xref:System.ServiceModel.BasicHttpMessageSecurity>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -87,5 +87,5 @@ ms.lasthandoff: 12/22/2017
  [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

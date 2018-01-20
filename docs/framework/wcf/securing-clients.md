@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]建立安全的服務，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- 若要在組態中設定用戶端認證，將[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)至組態檔項目。 此外，您必須將新增的行為項目連結至服務的端點使用`behaviorConfiguration`屬性[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例所示。 `behaviorConfiguration` 屬性的值必須與 `name` 屬性的值相符。  
+ 若要在組態中設定用戶端認證，將[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)至組態檔項目。 此外，您必須將新增的行為項目連結至服務的端點使用`behaviorConfiguration`屬性[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例所示。 `behaviorConfiguration` 屬性的值必須與 `name` 屬性的值相符。  
   
  `<configuration>`  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [設定編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
  [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

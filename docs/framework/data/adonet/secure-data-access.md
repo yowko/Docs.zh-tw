@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c26854af585fc026ba9abee77bc3b8a95bcaba79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/17/2018
 |資源|描述|  
 |--------------|-----------------|  
 |[保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
-|[資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
+|[資料存取策略的建議](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
 |[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)|說明如何在執行階段從使用者輸入建立連接字串。|  
 |[SQL Server 安全性概觀](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|說明 SQL Server 安全性架構。|  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/17/2018
   
 |資源|描述|  
 |--------------|-----------------|  
-|[COM + 角色為基礎的安全性和.NET Framework](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|討論如何整合 Managed 程式碼和 COM+ 安全性服務。|  
+|[COM + 角色為基礎的安全性和.NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|討論如何整合 Managed 程式碼和 COM+ 安全性服務。|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>與 Unmanaged 程式碼互通  
  .NET Framework 可用於與 Unmanaged 程式碼互動，這包括 COM 元件、COM+ 服務、外部型別程式庫以及許多作業系統服務。 使用 Unmanaged 程式碼時需要越過 Managed 程式碼的安全性範疇。 您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了 <xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>)。 Unmanaged 程式碼可能會在應用程式中引入非預期的安全性漏洞； 因此，除非絕對必要，否則應該避免與 Unmanaged 程式碼互通。  
@@ -99,12 +99,12 @@ ms.lasthandoff: 01/17/2018
 |資源|描述|  
 |--------------|-----------------|  
 |[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|  
-|[進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|  
+|[進階 COM 互通性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|  
   
 ## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [資料存取策略的建議](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

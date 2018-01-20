@@ -29,11 +29,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來標註方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
@@ -92,7 +92,7 @@ using namespace System::Runtime::InteropServices;
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|啟用或停用自動調整對應。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定用來傳遞方法引數的呼叫慣例。 預設值是 `WinAPI` ，它對應至適用於 32 位元 Intel 平台的 `__stdcall` 。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控制項名稱的損害以及字串引數的方式應該封送處理至函式。 預設為 `CharSet.Ansi`。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控制項名稱的損害以及字串引數的方式應該封送處理至函式。 預設值為 `CharSet.Ansi`。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|指定要呼叫 DLL 進入點。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|控制是否應修改進入點以對應至字元集。 預設值依程式語言而異。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|控制是否應將 Managed 方法簽章轉換成 Unmanaged 簽章，其會傳回 HRESULT 且傳回值會有額外的 [out, retval] 引數。<br /><br /> 預設值是 `true` (簽章不應該轉換)。|  
@@ -107,7 +107,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>平台叫用範例  
  本節中的平台叫用範例將說明如何使用具有堆疊查核行程修飾詞的  `RegistryPermission` 屬性。  
   
- 在下列程式碼範例中，<xref:System.Security.Permissions.SecurityAction>`Assert` 、 `Deny` 和 `PermitOnly` 修飾詞會被忽略。  
+ 在下列程式碼範例中， <xref:System.Security.Permissions.SecurityAction> `Assert`， `Deny`，和`PermitOnly`修飾詞會被忽略。  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -235,7 +235,7 @@ interface IDemandStubsItf
  [指定進入點](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [指定字元集](../../../docs/framework/interop/specifying-a-character-set.md)  
  [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [平台叫用的安全性考量](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [平台叫用的安全性考量](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
  [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)

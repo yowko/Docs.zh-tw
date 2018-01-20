@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務追蹤檢視器工具可協助您分析由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 產生的診斷追蹤。 服務追蹤檢視器提供一種輕鬆合併、檢視和篩選記錄內追蹤訊息的方式，方便您診斷、修復以及驗證 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的問題。  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/22/2017
 |![活動停止追蹤](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|活動停止追蹤：標記活動停止的追蹤， 。 其中包含了活動的名稱。 身為應用程式設計師或開發人員，您應對每個追蹤來源的每個活動定義一個活動「停止」追蹤。 在指定的追蹤來源發出活動「停止」後，不會出現該追蹤來源的追蹤，除非追蹤時間精細度不夠小。 發生這種情況時，時間相同的兩個追蹤 (包括「停止」) 可能會在顯示時交錯。 如果活動識別碼的傳播因為追蹤相互關聯而跨越追蹤，您會看到同一個活動識別碼有多個「停止」(每個追蹤來源一個)。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「停止」追蹤。|  
 |![活動暫止追蹤](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|活動暫止追蹤：標記活動暫停時間的追蹤。 在活動繼續執行之前，暫止活動中不會發出追蹤。 暫止活動代表追蹤來源範圍內的該活動中沒有發生處理。 暫止/繼續追蹤對於分析很有用。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「暫止」追蹤。|  
 |![活動繼續追蹤](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|活動繼續追蹤：標記活動在暫止後恢復繼續之時間的追蹤。 該活動中會再次發出追蹤。 暫止/繼續追蹤對於分析很有用。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「繼續」追蹤。|  
-|![傳輸](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|傳輸：當邏輯控制流程從一個活動傳輸至另一個活動時發出的追蹤。 傳輸起源的活動會繼續執行工作，與傳輸移至的活動平行。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「傳輸」追蹤。|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|傳輸：當邏輯控制流程從一個活動傳輸至另一個活動時發出的追蹤。 傳輸起源的活動會繼續執行工作，與傳輸移至的活動平行。 如果追蹤來源的 ActivityTracing 已啟用，便會發出「傳輸」追蹤。|  
 |![從傳輸](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|傳輸來源：可定義從另一個活動傳輸至目前活動的追蹤。|  
 |![傳送至](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|傳輸目標：可定義從目前活動傳輸至另一個活動之邏輯控制流程的追蹤。|  
   
@@ -437,7 +437,7 @@ ms.lasthandoff: 12/22/2017
   
 |圖示|描述|  
 |----------|-----------------|  
-|![活動](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|活動：表示目前活動為一般活動。|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|活動：表示目前活動為一般活動。|  
 |![根活動](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|根活動：表示處理序的根活動。|  
   
 ### <a name="wcf-activities"></a>WCF 活動  
@@ -463,4 +463,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>請參閱  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [活動追蹤和散佈用於端對端追蹤相互關聯](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [活動追蹤和散佈用於端對端追蹤相互關聯](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

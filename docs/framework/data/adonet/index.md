@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: cecb38e13a9539dcf92f1dcc7eecbd35c493a3f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cebd146505cd714a77c30cffe8fd3440c2d9f3cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
@@ -55,7 +55,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  說明 Oracle 的 .NET Framework 資料提供者特定的功能與行為。  
   
 ## <a name="related-sections"></a>相關章節  
- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  提供 Visual Studio、.NET Framework 和密碼編譯的安全性主題連結。  
   
  [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

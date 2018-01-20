@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a25b0dc81a6511698394eb86343f09051befc87f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee932e7cb4a3333ac56242e281ec64d3016746f9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：使用設計工具將 Windows Forms 控制項繫結至型別
 當您在建立與資料互動的控制項時，有時需要將控制項繫結至類型，而非物件。 您在設計階段通常需要將控制項繫結至類型，當時資料可能無法使用，但您仍希望資料繫結的控制項顯示類型公用介面中的資料。 下列程序示範如何建立新<xref:System.Windows.Forms.BindingSource>也就是繫結型別，以及如何將繫結至型別之屬性的其中一個<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  建立 Windows Forms 專案。  
   
-     如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+     如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  在**設計**檢視中，拖曳<xref:System.Windows.Forms.BindingSource>元件拖曳至表單。  
   

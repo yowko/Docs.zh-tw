@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;應用程式集區&gt;項目 （Web 設定）
 指定用來管理整個處理序的行為，以整合模式上執行 ASP.NET 應用程式時由 ASP.NET 組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  如`maxConcurrentRequestsPerCPU`，預設值為"5000 」 中設定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]有效地將關閉要求節流也就由 ASP.NET，除非您真的有 5000 個以上每一 CPU 的要求。 預設值改為取決於以自動管理每一 CPU 的並行存取 CLR 執行緒集區。 應用程式，讓使用大量的非同步要求處理，或有多長時間執行要求被封鎖於網路 I/O，將受益於在增加的預設限制[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。 設定`maxConcurrentRequestsPerCPU`為零會關閉使用的 managed 執行緒處理 ASP.NET 要求。 當應用程式 IIS 集區中，執行應用程式時，要求停留在 IIS I/O 執行緒，然後因此並行執行緒的 IIS 設定的。  
   
- `requestQueueLimit`設定的運作方式相同`requestQueueLimit`屬性[processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)項目，它會設定 ASP.NET 應用程式的 Web.config 檔中。 不過， `requestQueueLimit` aspnet.config 檔案中的設定會覆寫`requestQueueLimit`Web.config 檔中設定。 換句話說，如果已設定這兩個屬性 （根據預設，這是 true）， `requestQueueLimit` aspnet.config 檔案中的設定的優先順序。  
+ `requestQueueLimit`設定的運作方式相同`requestQueueLimit`屬性[processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)項目，它會設定 ASP.NET 應用程式的 Web.config 檔中。 不過， `requestQueueLimit` aspnet.config 檔案中的設定會覆寫`requestQueueLimit`Web.config 檔中設定。 換句話說，如果已設定這兩個屬性 （根據預設，這是 true）， `requestQueueLimit` aspnet.config 檔案中的設定的優先順序。  
   
 ## <a name="example"></a>範例  
  下列範例會示範如何在下列情況下 aspnet.config 檔案中設定 ASP.NET 整個處理序的行為：  

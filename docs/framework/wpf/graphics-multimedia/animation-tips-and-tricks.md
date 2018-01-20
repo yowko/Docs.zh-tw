@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>動畫秘訣和訣竅
 當使用中的動畫[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 有一些秘訣和技巧，讓您的動畫執行得更好，並可節省挫折度。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/22/2017
   
  移除動畫有許多不同的方式。 下列技術可用來移除屬於動畫<xref:System.Windows.Media.Animation.Storyboard>。  
   
--   若要移除<xref:System.Windows.Media.Animation.Storyboard>您一開始事件觸發程序，請參閱[如何： 移除分鏡腳本](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)。  
+-   若要移除<xref:System.Windows.Media.Animation.Storyboard>您一開始事件觸發程序，請參閱[如何： 移除分鏡腳本](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)。  
   
 -   若要使用程式碼來移除<xref:System.Windows.Media.Animation.Storyboard>，請參閱<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
   

@@ -18,16 +18,16 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: eedb351e5651ffc2637c413450db40ff5a59d516
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>HOW TO：建立自訂安全性權杖驗證器
 本主題會示範如何建立自訂安全性權杖驗證器，以及如何將其與自訂的安全性權杖管理員整合。 安全性權杖驗證器會驗證傳入訊息所提供之安全性權杖的內容。 如果驗證成功，驗證器便會傳回在進行評估時會傳回一組宣告之 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。  
   
- 若要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用自訂安全性權杖驗證器，您必須先建立自訂認證和安全性權杖管理員實作 (Implementation)。 如需有關如何建立自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。 如需有關認證、 安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱[安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 若要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用自訂安全性權杖驗證器，您必須先建立自訂認證和安全性權杖管理員實作 (Implementation)。 如需有關如何建立自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。 如需有關認證、 安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>程序  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
  [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

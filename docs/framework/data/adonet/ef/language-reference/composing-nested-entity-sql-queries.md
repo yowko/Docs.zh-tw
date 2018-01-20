@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>撰寫巢狀 Entity SQL 查詢
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一個豐富的功能性語言。 建置組塊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是運算式。 不像傳統的 SQL[!INCLUDE[esql](../../../../../../includes/esql-md.md)]不限於表格式結果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援撰寫複雜的運算式包含常值、 參數或巢狀的運算式。 運算式中的值可以參數化，或某些其他運算式所組成。  
@@ -57,7 +57,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 下列範例示範如何適當地巢狀化運算式在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[如何： 排序等位的兩個查詢](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313)。  
+ 下列範例示範如何適當地巢狀化運算式在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[如何： 排序等位的兩個查詢](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的巢狀查詢  
  投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。 在包括 SQL Server 的某些後端伺服器上，這樣可能會導致 TempDB 資料表變得相當大，因而對伺服器效能造成不良影響。  

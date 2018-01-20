@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: eaccace7a333903e236107a72dbc17e19dc8d48a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4ffb3071e9788ef4442127118c00e23c8a11530b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 的 EntityClient 提供者
 EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型中所描述之資料的資料提供者。 概念模型的相關資訊，請參閱[模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。 EntityClient 會使用其他 .NET Framework 資料提供者來存取資料來源。 例如，EntityClient 會在存取 SQL Server 資料庫時使用 .NET Framework Data Provider for SQL Server (SqlClient)。 如需 SqlClient 提供者資訊，請參閱[適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。 EntityClient 提供者是在 <xref:System.Data.EntityClient> 命名空間 (Namespace) 中實作的。  
@@ -51,7 +51,7 @@ EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型�
 ## <a name="managing-transactions"></a>異動管理  
  Entity Framework 中有兩種使用交易的方式：自動與明確。 自動交易會使用 <xref:System.Transactions> 命名空間，而明確交易會使用 <xref:System.Data.EntityClient.EntityTransaction> 類別。  
   
- 若要更新概念模型中; 透過公開的資料請參閱[如何： 管理 Entity Framework 中的交易](http://msdn.microsoft.com/en-us/4a55eb7f-f826-4a48-9df1-aebe2352ebef)。  
+ 若要更新概念模型中; 透過公開的資料請參閱[如何： 管理 Entity Framework 中的交易](http://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建置 EntityCollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -75,6 +75,6 @@ EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型�
  [如何：使用 Navigate 運算子導覽關聯性 ](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>請參閱  
- [管理連接與交易](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [管理連接與交易](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [語言參考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

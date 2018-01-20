@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 本節所包含的主題主要是讓您快速獲得 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 完成這個入門課程之後，您將對建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務與用戶端應用程式所需的步驟有初步的了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，位址的繫結，其中包含說明定義功能的合約與服務，用戶端必須之間的通訊資訊提供服務給其用戶端。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  如果您正在[!INCLUDE[wv](../../../includes/wv-md.md)]或更新版本的 Windows 作業系統，您必須啟動[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]先移至 [開始] 功能表，以滑鼠右鍵按一下 Visual Studio 2011，再選取**系統管理員身分執行**。 若要一律以您可以建立快速鍵，以滑鼠右鍵按一下該快速鍵，選取屬性，選取系統管理員身分啟動 Visual Studio 2011**相容性**索引標籤，然後檢查**以系統管理員身分執行此程式**核取方塊。 當您使用此快速鍵啟動 Visual Studio 2011 時，以後就會固定以系統管理員身分執行。  
   
- 範例應用程式會將下載到您的硬碟和執行，請參閱中的主題[Windows Communication Foundation 範例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。 如本主題中，特別是，請參閱[入門](../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+ 範例應用程式會將下載到您的硬碟和執行，請參閱中的主題[Windows Communication Foundation 範例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。 如本主題中，特別是，請參閱[入門](../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
  如需建立服務和用戶端相關的深入資訊，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>相關章節  
- [Windows Communication Foundation 範例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 範例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

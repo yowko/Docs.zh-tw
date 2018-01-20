@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 概觀
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 是 ADO.NET 中的一組技術，可支援資料導向軟體應用程式的開發。 資料導向應用程式的架構設計人員和開發人員經常致力於滿足達成兩個迥異目標的需求。 他們必須針對所解決之商務問題的實體、關聯性和邏輯建立模型，而且也必須使用用來儲存和擷取資料的資料引擎。 這項資料可能會跨越多個儲存系統，而且每個系統都有自己的通訊協定 (Protocol)。即使是使用單一儲存系統的應用程式都必須在儲存系統的需求與撰寫有效率和可維護應用程式程式碼的需求之間取得平衡。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  下列主題可讓您了解 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的詳細資訊：  
   
  [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- 提供有關如何啟動資訊及執行使用快速[快速入門](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675)，其示範如何建立簡單[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式。  
+ 提供有關如何啟動資訊及執行使用快速[快速入門](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675)，其示範如何建立簡單[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式。  
   
  [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  定義實體資料模型和 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 所導入以及 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 文件所使用的許多詞彙。  

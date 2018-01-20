@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您，下列圖例將顯示典型的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 佇列應用程式部署。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  接聽項會使用佇列位址來當成接聽 URI 以讀取訊息。 換句話說，佇列位址等於 TCP 通訊端的接聽連接埠。  
   
- 當端點要從佇列中讀取時，必須以先前開啟 ServiceHost 時所指定的相同配置來指定佇列位址。 如需範例，請參閱[Net MSMQ 繫結](../../../../docs/framework/wcf/samples/net-msmq-binding.md)和[訊息佇列整合繫結範例](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)。  
+ 當端點要從佇列中讀取時，必須以先前開啟 ServiceHost 時所指定的相同配置來指定佇列位址。 如需範例，請參閱[Net MSMQ 繫結](../../../../docs/framework/wcf/samples/net-msmq-binding.md)和[訊息佇列整合繫結範例](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>佇列中多個合約  
  佇列中的訊息可以實作不同的合約。 在此情況下，下列任何一項必須為真，以順利讀取並處理所有訊息：  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
   
 |以 WCF URI 為基礎的佇列位址|使用 Active Directory 屬性|佇列傳輸通訊協定屬性|最後的 MSMQ 格式名稱|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<機器名稱 >/私用/abc|False (預設)|Native (預設)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<機器名稱 >/私用/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
-|Net.msmq://\<機器名稱 >/私用/abc|True|原生|PUBLIC=some-guid (佇列的 GUID)|  
+|Net.msmq://\<machine-name>/private/abc|False (預設)|Native (預設)|DIRECT=OS:machine-name\private$\abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|True|原生|PUBLIC=some-guid (佇列的 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>從寄不出的信件佇列或有害訊息佇列讀取訊息  
  若要從屬於目標佇列之子佇列的有害訊息佇列中讀取訊息，請使用子佇列位址來開啟 `ServiceHost`。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 與服務定址  
  `MsmqIntegrationBinding` 是用來與傳統 MSMQ 應用程式進行通訊的。 為了簡化與現有 MSMQ 應用程式的互通性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 僅支援格式名稱定址。 因此，使用此繫結來傳送的訊息必須符合下列 URI 配置：  
   
- msmq.formatname:\<*MSMQ 格式名稱*>>  
+ msmq.formatname:\<*MSMQ-format-name*>>  
   
  MSMQ 格式名稱為 MSMQ 中指定的格式[有關訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
   

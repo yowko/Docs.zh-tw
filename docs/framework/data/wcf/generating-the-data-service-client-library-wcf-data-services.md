@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6adbaafe170cf3f5398677d5df3b3d2ff0a95abe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72b75451d69e107b78152b301027f902ff77a25d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>產生資料服務用戶端程式庫 (WCF 資料服務)
 資料服務可實作[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以傳回描述資料模型所公開服務中繼資料文件[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 如需詳細資訊，請參閱[OData： 服務中繼資料文件](http://go.microsoft.com/fwlink/?LinkId=186070)。 您可以使用**加入服務參考**將參考加入至 Visual Studio 中的對話方塊[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的服務。 當您使用此工具將參考加入至所傳回的中繼資料[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要的用戶端專案中，執行下列動作：  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  傳回的中繼資料會以 .edmx 檔案形式儲存在用戶端專案中。 這個 .edmx 檔案不能使用實體資料模型設計工具開啟，因為它的格式與 Entity Framework 使用的 .edmx 檔案格式不同。 您可以使用 XML 編輯器或任何文字編輯器檢視此中繼資料。 如需詳細資訊，請參閱[ \[MC-EDMX\]： 資料服務封裝格式的實體資料模型](http://go.microsoft.com/fwlink/?LinkID=178833)規格  
   
--   產生服務的表示，成為繼承自 <xref:System.Data.Services.Client.DataServiceContext> 的實體容器類別。 這樣產生的實體容器類別與實體資料模型工具產生的實體容器相似。 如需詳細資訊，請參閱[物件服務概觀 (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)。  
+-   產生服務的表示，成為繼承自 <xref:System.Data.Services.Client.DataServiceContext> 的實體容器類別。 這樣產生的實體容器類別與實體資料模型工具產生的實體容器相似。 如需詳細資訊，請參閱[物件服務概觀 (Entity Framework)](http://msdn.microsoft.com/library/43014cf9-c9cb-4538-bfbb-197820b60038)。  
   
 -   針對在服務中繼資料中找到的資料模型型別產生資料類別。  
   

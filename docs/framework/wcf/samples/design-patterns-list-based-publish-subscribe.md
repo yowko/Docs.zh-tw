@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b54982439f621ea504c91c264dde002751ec9185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作成為 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程式的清單架構發行訂閱模式。  
@@ -135,7 +135,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  執行 \datasource\bin Datasource.exe\\，將語言特定資料夾下。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
   
-4.  如果用戶端、 資料來源和程式服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果用戶端、 資料來源和程式服務無法通訊，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   

@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。 控制項有四個檢視模式： 使用 LargeIcon、 SmallIcon、 清單和詳細資料。  
@@ -55,7 +55,7 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
   
  <xref:System.Windows.Forms.ListView.Activation%2A>屬性會決定使用者必須採取的動作類型啟用清單中的項目： 選項<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick>啟用需要只要按一下来啟動的項目。 <xref:System.Windows.Forms.ItemActivation.TwoClick>啟用要求使用者按兩下以啟動項目。只要按一下變更項目文字的色彩。 <xref:System.Windows.Forms.ItemActivation.Standard>啟用要求使用者按兩下以啟動項，但項目不會變更外觀。  
   
- <xref:System.Windows.Forms.ListView>控制項也支援視覺化樣式和其他可用的功能在 Windows XP 平台，包括群組、 並排顯示檢視和 插入標記。 如需詳細資訊，請參閱[Windows XP 功能和 Windows Form 控制項](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
+ <xref:System.Windows.Forms.ListView>控制項也支援視覺化樣式和其他可用的功能在 Windows XP 平台，包括群組、 並排顯示檢視和 插入標記。 如需詳細資訊，請參閱[Windows XP 功能和 Windows Form 控制項](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Windows.Forms.ListView>  

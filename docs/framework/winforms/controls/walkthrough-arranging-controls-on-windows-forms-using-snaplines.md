@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 028b66fea2b35e7b36760ec7c606f81ca2301620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd8bc5e227bd68fc3c5c59d80549322ca742bcf9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Form 上的控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具提供您許多版面配置工具，可完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -59,14 +59,14 @@ ms.lasthandoff: 12/22/2017
  當您完成時，您必須了解版面配置功能所扮演角色的對齊線。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立 Windows 架構應用程式專案，稱為 「 SnaplineExample"。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立 Windows 架構應用程式專案，稱為 「 SnaplineExample"。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  在表單設計工具中選取的表單。  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>若要停用在設計環境中的對齊線  
   
-1.  從**工具**功能表中，開啟**選項** 對話方塊。 開啟 [Windows Form 設計工具] 對話方塊。 如需詳細資訊，請參閱[一般]、 [Windows Form 設計工具、 [選項] 對話方塊](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)。  
+1.  從**工具**功能表中，開啟**選項** 對話方塊。 開啟 [Windows Form 設計工具] 對話方塊。 如需詳細資訊，請參閱[一般]、 [Windows Form 設計工具、 [選項] 對話方塊](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)。  
   
 2.  選取**一般**節點。 在**版面配置模式**區段中，變更選取項目從**對齊線**至**SnapToGrid**。  
   

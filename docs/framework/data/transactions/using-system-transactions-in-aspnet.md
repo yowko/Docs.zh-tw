@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c94cd0a6cdddc4b49a59d6420d2ec28864285aa8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主題說明如何成功運用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 安全性原則，請參閱 [securityPolicy 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]安全性原則，請參閱[securityPolicy 項目 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)。  
   
 ## <a name="dynamic-compilation"></a>動態編譯  
  如果您希望匯入並使用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] (在存取時動態編譯)，您可以在組態檔中放置 <xref:System.Transactions> 組件的參考。 具體來說，您應該將參考加入預設根 **Web.config**/**compilation** / **assemblies** 區段底下。 下列範例為其示範。  
@@ -67,9 +67,9 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [編譯組件的 add 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4)。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][新增項目 （ASP.NET 設定結構描述） 編譯組件的](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4)。  
   
 ## <a name="see-also"></a>請參閱  
  [ASP.NET 的信任層級和原則檔](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy 項目 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [securityPolicy 項目 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [異動管理擴大規模](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

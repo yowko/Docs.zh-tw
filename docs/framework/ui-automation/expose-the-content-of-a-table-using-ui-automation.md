@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>利用 UI 自動化公開資料表的內容
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  下列程式碼範例示範如何取得<xref:System.Windows.Automation.AutomationElement>表示表格儲存格的內容，則也會取得儲存格內容，例如資料列和資料行的索引、 資料列和資料範圍和資料列和資料行的標頭資訊。 此範例使用的焦點變更事件處理常式來模擬鍵盤周遊實作表格控制項[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 焦點變更事件上公開的每個資料表項目資訊。  
   
 > [!NOTE]
->  由於焦點變更全域桌面的事件，應篩選至資料表外部的焦點變更事件。 請參閱[TrackFocus 範例](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9)相關的實作。  
+>  由於焦點變更全域桌面的事件，應篩選至資料表外部的焦點變更事件。 請參閱[TrackFocus 範例](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9)相關的實作。  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

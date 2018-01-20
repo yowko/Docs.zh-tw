@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1659e6352fa195bae56b764c80a08dee56b4c9e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 對使用者提供訊息堆疊的完整控制權。  
   
- \<system.serviceModel >  
-\<繫結 >  
-\<customBinding >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
   
 ## <a name="syntax"></a>語法  
   
@@ -202,13 +202,13 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|指定自訂繫結的雙向傳訊。 它是和本身不允許雙工通訊的傳輸一起使用，例如 HTTP。 相反地，TCP 本身就允許雙工通訊，因此不需要使用這個繫結項目也可讓服務將訊息傳回用戶端。<br /><br /> 用戶端必須公開位址，才能讓服務接觸並建立連接。 這個用戶端位址是由 `ClientBaseAddress` 屬性提供。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|  
-|[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定對等名稱解析通訊協定 (PNRP) 對等名稱解析程式。 此項目的型別為 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|  
-|[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS-Reliable 訊息設定。 將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。 此項目的型別為 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.SecurityElement>。|  
-|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 資料流繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|  
-|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定繫結應支援交易流程，並指定 `transactionProtocol` 屬性使用的通訊協定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|  
-|[\<windowsstreamsecurity 正在 >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自訂繫結的資料流 (Streaming) 安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|  
+|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|指定自訂繫結的雙向傳訊。 它是和本身不允許雙工通訊的傳輸一起使用，例如 HTTP。 相反地，TCP 本身就允許雙工通訊，因此不需要使用這個繫結項目也可讓服務將訊息傳回用戶端。<br /><br /> 用戶端必須公開位址，才能讓服務接觸並建立連接。 這個用戶端位址是由 `ClientBaseAddress` 屬性提供。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|  
+|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定對等名稱解析通訊協定 (PNRP) 對等名稱解析程式。 此項目的型別為 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|  
+|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS-Reliable 訊息設定。 將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。 此項目的型別為 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.SecurityElement>。|  
+|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 資料流繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|  
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定繫結應支援交易流程，並指定 `transactionProtocol` 屬性使用的通訊協定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|  
+|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自訂繫結的資料流 (Streaming) 安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -310,11 +310,11 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

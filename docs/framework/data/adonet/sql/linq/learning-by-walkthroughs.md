@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 56852fece0ca1f2dbb70b1bb29c09205b97faf56
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件集會提供幾個逐步解說。 本主題會處理某些一般逐步解說問題 (包含疑難排解)，並提供數個入門級逐步解說的連結，供您學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]逐步解說通常需要 Northwind 範例資料庫。 如需詳細資訊，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
--   您在逐步解說中看到的對話方塊與功能表命令，可能會因您所使用的設定或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本，而與說明中所述不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+-   您在逐步解說中看到的對話方塊與功能表命令，可能會因您所使用的設定或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本，而與說明中所述不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 -   在專門處理多層式案例的逐步解說中，伺服器必須位於與開發電腦不同的電腦上，而且您必須具有存取該伺服器的適當權限。  
   

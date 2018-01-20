@@ -18,11 +18,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>使映像偵錯更容易
 當編譯 Unmanaged 程式碼時，您可以設定 IDE 參數或命令列選項，設定可執行映像進行偵錯。 例如，您可以在 Visual C++ 中使用 /**Zi** 命令列選項，要求它發出偵錯符號檔 (副檔名為 .pdb)。 同樣地，/**Od** 命令列選項會通知編譯器停用最佳化。 要是此為必要，產生的程式碼執行速度較慢，但更容易偵錯。  
@@ -67,4 +67,4 @@ AllowOptimize=0
 ## <a name="see-also"></a>請參閱  
  [偵錯、追蹤和程式碼剖析](../../../docs/framework/debug-trace-profile/index.md)  
  [啟用 JIT 附加偵錯](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- [啟用分析](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [啟用分析](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

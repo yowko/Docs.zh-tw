@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="button-control-windows-forms"></a>Button 控制項 (Windows Form)
 Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Button` 控制項可以顯示文字和影像。 按一下按鈕時，按鈕看起來就像被推入又釋放。  
@@ -52,4 +52,4 @@ Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Butto
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
- 另請參閱[使用者輸入到對話方塊](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55)和[如何： 關閉對話方塊並保留使用者輸入](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)。
+ 另請參閱[使用者輸入到對話方塊](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55)和[如何： 關閉對話方塊並保留使用者輸入](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d)。

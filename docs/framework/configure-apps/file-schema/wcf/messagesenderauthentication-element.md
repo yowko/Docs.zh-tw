@@ -14,24 +14,24 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 41e65ca61a176359a593a8e03c5b763bc4d28592
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt; 項目
 指定對等訊息寄件者的驗證選項。  
   
  如需端對端程式設計的詳細資訊，請參閱[對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
- \<系統。ServiceModel >  
-\<行為 >  
-\<endpointBehaviors >  
-\<行為 >  
-\<clientCredentials >  
-\<對等 >  
-\<messageSenderAuthentication >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<clientCredentials>  
+\<peer>  
+\<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,19 +66,19 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|選擇項。 下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設為 `ChainTrust`。 預設為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|列舉|選擇項。 下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設為 `ChainTrust`。 預設值為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設為 `Online`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設值為 `Online`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：`LocalMachine` 或 `CurrentUser`。 預設為 `CurrentUser`。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。 預設為 `CurrentUser`。|  
+|列舉|下列其中一個值：`LocalMachine` 或 `CurrentUser`。 預設為 `CurrentUser`。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。 預設值為 `CurrentUser`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -87,7 +87,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<對等 >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定向對等服務驗證用戶端時所使用的認證。|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|指定向對等服務驗證用戶端時所使用的認證。|  
   
 ## <a name="remarks"></a>備註  
  如果已選取訊息驗證，則必須設定這個項目。 輸出通道的每個訊息會使用簽章所提供的憑證[\<憑證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)。 所有訊息在傳遞至應用程式之前，都會使用這個項目的 `customCertificateValidatorType` 之屬性所指定的驗證程式來檢查訊息認證。 驗證器可接受或拒絕認證。  
@@ -120,6 +120,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [對等通道訊息驗證](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [對等通道自訂驗證](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [對等通道訊息驗證](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [對等通道自訂驗證](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

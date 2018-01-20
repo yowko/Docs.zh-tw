@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。  應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。  透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。  當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3：使用良好工具的成果大不相同  
- 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。  Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](http://www.microsoft.com/download/details.aspx?id=28567)。  
+ 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。  Microsoft 提供各種效能工具，例如 [Visual Studio 程式碼剖析工具](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](http://www.microsoft.com/download/details.aspx?id=28567)。  
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。  您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。  PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](http://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。  
   

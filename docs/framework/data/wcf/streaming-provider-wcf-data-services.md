@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來擷取二進位資料所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  如需詳細資訊，請參閱[資料流訊息傳輸](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)和[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   
- 根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要啟用資料服務來接收大於 4 MB 的資料流，在 IIS 上執行時，您也必須設定`maxRequestLength`屬性[httpRuntime 元素 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369)中`<system.web />`組態區段，做為下列範例所示：  
+ 根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要啟用資料服務來接收大於 4 MB 的資料流，在 IIS 上執行時，您也必須設定`maxRequestLength`屬性[httpRuntime 元素 （ASP.NET 設定結構描述）](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)中`<system.web />`組態區段，做為下列範例所示：  
   
   
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
 -   當您實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法時，您必須使用當做方法參數提供的 eTag 和 Content-Type 值。 請勿在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者實作中設定 eTag 或 Content-Type 標頭。  
   
--   根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此 Web 伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需有關[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱[ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
+-   根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此 Web 伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需有關[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱[ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>版本控制需求  

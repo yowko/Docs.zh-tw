@@ -20,18 +20,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46aae3ad287c2626123cf3f513fc72bc1acdd06e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt;項目
 指定 Common Language Runtime 是否執行伺服器記憶體回收。  
   
  \<configuration>  
-\<執行階段 >  
-\<gcServer >  
+\<runtime>  
+\<gcServer>  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -91,4 +91,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何： 停用並行記憶體回收](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [如何： 停用並行記憶體回收](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

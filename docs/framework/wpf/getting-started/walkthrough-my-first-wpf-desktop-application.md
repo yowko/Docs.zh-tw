@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說： 第一個 WPF 桌面應用程式
 本逐步解說提供的應用程式開發簡介[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]包含項目通用於大多數的應用程式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式：[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]標記、 程式碼後置、 應用程式定義、 控制項、 版面配置，資料繫結和樣式。 
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="creating-the-application-project"></a>建立應用程式專案  
  在本節中，您會建立應用程式基礎結構，包括一個應用程式定義、兩個頁面和一個影像。 
   
-1. 在 Visual Basic 或 Visual C# 中，建立名為 `ExpenseIt` 的新 WPF 應用程式專案。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。 
+1. 在 Visual Basic 或 Visual C# 中，建立名為 `ExpenseIt` 的新 WPF 應用程式專案。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。 
   
     > [!NOTE]
     >  本逐步解說使用<xref:System.Windows.Controls.DataGrid>使用.NET Framework 4 中的控制項。 為確定您的專案目標.NET Framework 4 或更新版本。 如需詳細資訊，請參閱[How to： 以.NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。 
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="adding-files-to-the-application"></a>將檔案加入至應用程式  
  在本節中，您要加入兩個頁面及一個影像到應用程式中。 
   
-1. 將新的頁面 (WPF) 加入至名為專案`ExpenseItHome.xaml`。 如需詳細資訊，請參閱[如何： 加入新項目加入至 WPF 專案](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad)。 
+1. 將新的頁面 (WPF) 加入至名為專案`ExpenseItHome.xaml`。 如需詳細資訊，請參閱[如何： 加入新項目加入至 WPF 專案](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad)。 
   
      這個頁面是應用程式啟動時顯示的第一個頁面。 它會顯示一份人員清單，使用者可從中選取一名人員查看其費用報表。 
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/22/2017
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. 將名為 watermark.png 的影像加入至專案。 您可以建立自己的影像，或是從範例程式碼複製檔案。 如需詳細資訊，請參閱[NIB： 如何： 加入現有項目加入至專案](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。 
+10. 將名為 watermark.png 的影像加入至專案。 您可以建立自己的影像，或是從範例程式碼複製檔案。 如需詳細資訊，請參閱[NIB： 如何： 加入現有項目加入至專案](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。 
 
 ## <a name="building-and-running-the-application"></a>建置和執行應用程式  
  在本節中，您會建置和執行應用程式。 
@@ -280,7 +280,7 @@ ms.lasthandoff: 12/22/2017
   
 1. 開啟 ExpenseItHome.xaml。 
   
-2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[How to： 建立簡單的事件處理常式](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480)。 
+2. 新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[How to： 建立簡單的事件處理常式](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

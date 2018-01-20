@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 28203dc428db6a2dd06e9c1e85b64ef80e81ffbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90769d4eec98fc7554294c73086446bba71a400
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>類型等價和內嵌 Interop 類型
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，通用語言執行平台支援將 COM 類型的類型資訊直接內嵌到 Managed 組件，而不需要 Managed 組件從 Interop 組件取得 COM 類型的類型資訊。 因為內嵌類型資訊僅包含 Managed 組件實際所使用的類型和成員，所以兩個 Managed 組件可能對於相同的 COM 類型會有非常不同的檢視。 每個 Managed 組件有不同的 <xref:System.Type> 物件以代表其 COM 類型檢視。 通用語言執行平台支援介面、結構、列舉和委派等這些不同檢視之間的類型等價。  
@@ -61,5 +61,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Type.IsEquivalentTo%2A>  
- [在 Managed 程式碼中使用 COM 類型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [在 Managed 程式碼中使用 COM 類型](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [匯入類型程式庫做為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

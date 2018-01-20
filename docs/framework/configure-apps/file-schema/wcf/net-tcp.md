@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3d22b6feef80dbff8c7f20b130ce2b0f9702c9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定 NET.TCP Port Sharing Service 的組態設定，此服務允許多個處理序共用相同的 TCP 連接埠。  
   
- \<system.serviceModel.activation >  
-\<net.tcp >  
+ \<system.serviceModel.activation>  
+\<net.tcp>  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
  `Type`  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -67,13 +67,13 @@ ms.lasthandoff: 12/22/2017
 |`maxPendingAccepts`|整數，指定共用服務之接聽端點上、未完成之並行接收執行緒的數目上限。 預設值為 2。|  
 |`MaxPendingConnections`|接聽項上等待應用程式接受連線的最大數目。 當超過這個配額值時，新的傳入連線會被捨棄，而不是等待被接受。 如訊息安全性等連線功能，可能會導致用戶端開啟一個以上的連線。 在設定這個配額值時，服務系統管理員應該考量到其他連線。 預設值為 10。|  
 |`receiveTimeout`|`TimeSpan`，指定讀取框架資料以及從基礎連線執行連線分派的逾時。 預設為 "00:00:10"。|  
-|`teredoEnabled`|布林值，指出此連接埠共用服務是否使用 Microsoft Teredo 服務代表 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務來接聽 TCP 連接埠。 預設為 `false`。|  
+|`teredoEnabled`|布林值，指出此連接埠共用服務是否使用 Microsoft Teredo 服務代表 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務來接聽 TCP 連接埠。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|組態項目的集合，其中包含 `securityIdentifier` 屬性，此屬性可為裝載 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務且已授權可連線共用服務的處理序指定使用者帳戶。|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|組態項目的集合，其中包含 `securityIdentifier` 屬性，此屬性可為裝載 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務且已授權可連線共用服務的處理序指定使用者帳戶。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -82,9 +82,9 @@ ms.lasthandoff: 12/22/2017
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   
 ## <a name="remarks"></a>備註  
- 如需有關連接埠共用的詳細資訊，請參閱[Net.TCP 連接埠共用](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)。 若要了解如何設定連接埠共用服務，請參閱[設定 Net.TCP Port Sharing Service](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。  
+ 如需有關連接埠共用的詳細資訊，請參閱[Net.TCP 連接埠共用](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)。 若要了解如何設定連接埠共用服務，請參閱[設定 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Net.TCP 連接埠共用](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
- [設定 Net.TCP 連接埠共用服務](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Net.TCP 連接埠共用](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [設定 Net.TCP 連接埠共用服務](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

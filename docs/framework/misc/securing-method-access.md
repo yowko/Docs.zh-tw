@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 36c8ae484120fc835bf341d37cda72b22b401117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf894239db623b34d23757edd1c39d3652a7e0f7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   限制類別、 組件、 或衍生類別的存取範圍，如果其可以信任。 這是最簡單限制方法存取權的方式。 請注意，一般而言，衍生類別可能比它們衍生自的類別還不可靠，雖然在某些情況下它們共用父類別的識別。 特別是，不會推斷的關鍵字的信任**保護**，不一定中所用的安全性內容。  
   
--   限制指定身分識別基本上，任何特定的呼叫端的方法存取[辨識項](http://msdn.microsoft.com/en-us/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)選擇 （強式名稱、 發行者、 區域等等）。  
+-   限制指定身分識別基本上，任何特定的呼叫端的方法存取[辨識項](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da)選擇 （強式名稱、 發行者、 區域等等）。  
   
 -   限制具有您選取權限之呼叫端的方法存取權。  
   

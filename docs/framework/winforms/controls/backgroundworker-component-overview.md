@@ -28,11 +28,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2e49c9c3a8f2b133337ee3c153841a7daeff178
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96fc5e1929589321872ba30d8c3821b4fd47ca8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 元件概觀
 有許多經常執行的作業都需要長時間執行。 例如：  
@@ -71,5 +71,5 @@ ms.lasthandoff: 12/22/2017
  如需有關使用<xref:System.ComponentModel.BackgroundWorker>類別，請參閱[How to： 在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。  
   
 ## <a name="see-also"></a>請參閱  
- [不在組建中： Visual Basic 中的多執行緒](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [不在組建中： Visual Basic 中的多執行緒](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

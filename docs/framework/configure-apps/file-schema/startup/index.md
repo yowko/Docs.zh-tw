@@ -18,16 +18,16 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 0536197d4cb8b30d99f514d8066e94bf84bffdf3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f344139fd7d7c84aa75ab5e17b6312f3b0c3e031
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="startup-settings-schema"></a>啟動設定結構描述
 啟動設定會指定應執行應用程式之 Common Language Runtime 的版本。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|指定應用程式只支援 Common Language Runtime 1.0 版。 使用執行階段版本 1.1 建置的應用程式應該使用 **\<supportedRuntime>** 項目。|  
 |[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|指定應用程式支援的通用語言執行平台版本。|  
@@ -35,4 +35,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>請參閱  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 指定要使用哪一個執行階段版本](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> 指定要使用哪一個執行階段版本](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

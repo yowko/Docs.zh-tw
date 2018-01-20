@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支援的公開及取用資料做為一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
@@ -48,11 +48,11 @@ ms.lasthandoff: 12/22/2017
 -   [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  在以 Silverlight 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [如何： 將資料服務的資料繫結至控制項 (WCF 資料服務/Silverlight)](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [如何： 將資料服務的資料繫結至控制項 (WCF 資料服務/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  在以 AJAX 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。  
  -   [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
  公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，含有存取及變更資料流的形式的二進位大型物件。  
  -   [資料流提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

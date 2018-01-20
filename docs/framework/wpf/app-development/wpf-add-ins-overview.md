@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。本主題說明 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何擴大 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型來啟用這些案例、其背後的架構、其優點及其限制。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   具有<xref:System.SerializableAttribute>套用的屬性。  
   
 > [!NOTE]
->  如需建立可遠端處理之 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件的詳細資訊，請參閱[讓物件變成可遠端處理](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)。  
+>  如需建立可遠端處理之 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件的詳細資訊，請參閱[讓物件變成可遠端處理](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 類型不能從遠端處理。 為解決此問題，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會擴充 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型，從主應用程式顯示增益集建立的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 這項支援係由[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]依兩種類型：<xref:System.AddIn.Contract.INativeHandleContract>介面和實作的兩個靜態方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>類別：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 概括而言，這些類型和方法的使用方式如下︰  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [增益集和擴充性](../../../../docs/framework/add-ins/index.md)  
  [應用程式定義域](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework 遠端處理概觀](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [讓物件可遠端處理](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [.NET framework 遠端處理概觀](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [讓物件可遠端處理](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [HOW-TO 主題](../../../../docs/framework/wpf/app-development/how-to-topics.md)

@@ -14,20 +14,20 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 3afd67e7f2d42cec458db7919529e09e4607f1ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc7edf528f509c725672036329989f9b7a9bfec2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;security&gt;
 指定與設定之端點的安全性需求[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<w >  
-\<繫結 >  
-\<安全性 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<webHttpBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -68,13 +68,13 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<傳輸 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|定義傳輸安全性設定。 這個項目對應至 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 型別。|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|定義傳輸安全性設定。 這個項目對應至 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 型別。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<w >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|繫結項目，用於設定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web 服務的端點，這些服務則會回應 HTTP 要求，而不是 SOAP 訊息。|  
+|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|繫結項目，用於設定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web 服務的端點，這些服務則會回應 HTTP 要求，而不是 SOAP 訊息。|  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
@@ -86,6 +86,6 @@ ms.lasthandoff: 12/22/2017
  [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

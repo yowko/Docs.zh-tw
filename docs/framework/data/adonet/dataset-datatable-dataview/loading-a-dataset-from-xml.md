@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>從 XML 載入資料集
 可以從 XML 資料流或文件建立 ADO.NET <xref:System.Data.DataSet> 的內容。 此外，使用 .NET Framework 可讓您在決定從 XML 載入何種資訊，以及如何建立 <xref:System.Data.DataSet> 的結構描述或關聯式結構時，擁有相當大的彈性。  
   
- 填滿<xref:System.Data.DataSet>從 XML 資料，使用**ReadXml**方法<xref:System.Data.DataSet>物件。 **ReadXml**方法會讀取檔案時，資料流，或**XmlReader**，並做為引數來源的 XML 加上選擇性**XmlReadMode**引數。 (如需有關**XmlReader**，請參閱[NIB： 讀取 XML 資料與 XmlTextReader](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540)。)**ReadXml**方法讀取 XML 資料流或文件和載入內容<xref:System.Data.DataSet>與資料。 它也會建立的關聯式結構描述<xref:System.Data.DataSet>取決於**XmlReadMode**指定，而不論是否關聯式結構描述已經存在。  
+ 填滿<xref:System.Data.DataSet>從 XML 資料，使用**ReadXml**方法<xref:System.Data.DataSet>物件。 **ReadXml**方法會讀取檔案時，資料流，或**XmlReader**，並做為引數來源的 XML 加上選擇性**XmlReadMode**引數。 (如需有關**XmlReader**，請參閱[NIB： 讀取 XML 資料與 XmlTextReader](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540)。)**ReadXml**方法讀取 XML 資料流或文件和載入內容<xref:System.Data.DataSet>與資料。 它也會建立的關聯式結構描述<xref:System.Data.DataSet>取決於**XmlReadMode**指定，而不論是否關聯式結構描述已經存在。  
   
  下表描述的選項**XmlReadMode**引數。  
   

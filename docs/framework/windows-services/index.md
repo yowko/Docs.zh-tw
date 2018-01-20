@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-windows-service-applications"></a>開發 Windows 服務應用程式
 使用 Microsoft[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，您可以輕鬆地建立服務所建立的應用程式，安裝為服務。 這種類型的應用程式稱為 Windows 服務。 透過架構功能，您可以建立服務、 加以安裝，以及啟動、 停止及控制它們的行為。  
@@ -57,5 +57,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceProcess.ServiceInstaller>  
  說明的功能<xref:System.ServiceProcess.ServiceInstaller>類別，可搭配沿著<xref:System.ServiceProcess.ServiceProcessInstaller>安裝和解除安裝您的服務類別。  
   
- [NIB 從範本建立專案](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB 從範本建立專案](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  描述專案中這一章，以及如何選擇兩者之間使用的類型。

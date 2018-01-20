@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>逐步解說：建立專業樣式的 ToolStrip 控制項
 您可以提供您的應用程式<xref:System.Windows.Forms.ToolStrip>撰寫您自己的類別衍生自控制項專業外觀和行為<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型別。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
  若要為單一列出本主題中複製的程式碼，請參閱[How to： 建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  在**方案總管 中**，藉由刪除來源檔案，視您所選擇的語言而定，名為"UserControl1.cs"或"UserControl1.vb"，刪除專案的預設控制項。  
   
-     如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+     如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 3.  加入新<xref:System.Windows.Forms.UserControl>項目**StackViewLibrary**專案。 提供新的來源檔案的基底名稱`StackView`。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/22/2017
     |--------------|-----------|  
     |名稱|`mailStackButton`|  
     |CheckOnClick|true|  
-    |已核取 CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
+    |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  重新命名`mailStackButton_Click`事件處理常式來`stackButton_Click`。  
   
-     如需詳細資訊，請參閱[如何： 重新命名識別項 (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
+     如需詳細資訊，請參閱[如何： 重新命名識別項 (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
   
 9. 插入下列程式碼`stackButton_Click`事件處理常式。  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 12. 重複步驟 10 和 11 for`contactsStackButton`和`tasksStackButton`控制項。  
   
 ## <a name="defining-icons"></a>定義圖示  
- 每個`StackView`按鈕具有相關聯的圖示。 為了方便起見，每個圖示表示為 Base64 編碼的字串，這會還原序列化前<xref:System.Drawing.Bitmap>從它所建立。 在生產環境中，您將點陣圖資料儲存為資源，並圖示會出現在 Windows Form 設計工具。 如需詳細資訊，請參閱[如何： 加入背景影像加入 Windows Form](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
+ 每個`StackView`按鈕具有相關聯的圖示。 為了方便起見，每個圖示表示為 Base64 編碼的字串，這會還原序列化前<xref:System.Drawing.Bitmap>從它所建立。 在生產環境中，您將點陣圖資料儲存為資源，並圖示會出現在 Windows Form 設計工具。 如需詳細資訊，請參閱[如何： 加入背景影像加入 Windows Form](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
   
 #### <a name="to-define-icons"></a>若要定義圖示  
   

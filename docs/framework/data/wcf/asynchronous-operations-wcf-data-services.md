@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 18e8be0668fa13c43f31d5314cacf91165ba8519
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79112878141fd791c2fba183d2d1fec9f1b7044
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>非同步作業 (WCF 資料服務)
 相較於在內部網路中執行的應用程式，Web 應用程式必須可容納用戶端與伺服器之間更高的延遲。 若要最佳化應用程式的效能及使用者經驗，我們建議您在透過 Web 存取 <xref:System.Data.Services.Client.DataServiceContext> 伺服器時，使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 和 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 類別的非同步方法。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |將物件的變更儲存於 <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>非同步作業的執行緒考量  
- 在多執行緒應用程式中，叫用委派註冊為非同步作業的回呼時不一定用來呼叫相同執行緒上*開始*方法，建立初始要求。 在必須叫用回呼在特定執行緒上應用程式中，您必須明確封送處理的執行*結束*方法，用來處理回應，以所需的執行緒。 例如，在以 Windows Presentation Foundation (WPF) 為基礎的應用程式與以 Silverlight 為基礎的應用程式中，必須在 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 物件上使用 <xref:System.Windows.Threading.Dispatcher> 方法將回應封送回 UI 執行緒。 如需詳細資訊，請參閱[查詢資料服務 (WCF 資料服務/Silverlight)](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b)。  
+ 在多執行緒應用程式中，叫用委派註冊為非同步作業的回呼時不一定用來呼叫相同執行緒上*開始*方法，建立初始要求。 在必須叫用回呼在特定執行緒上應用程式中，您必須明確封送處理的執行*結束*方法，用來處理回應，以所需的執行緒。 例如，在以 Windows Presentation Foundation (WPF) 為基礎的應用程式與以 Silverlight 為基礎的應用程式中，必須在 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 物件上使用 <xref:System.Windows.Threading.Dispatcher> 方法將回應封送回 UI 執行緒。 如需詳細資訊，請參閱[查詢資料服務 (WCF 資料服務/Silverlight)](http://msdn.microsoft.com/library/3a7cdc07-c37e-4da2-b98b-c3763fd0970b)。  
   
 ## <a name="see-also"></a>請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

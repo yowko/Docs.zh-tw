@@ -14,11 +14,11 @@ ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7090142f940ae42f554fc0ba16bcc80d8537e38a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c36cdcaf8d2db0b08e262d6ba8ff2bb774fb233
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bugreport"></a>/bugreport
 建立檔案錯誤報告時，您可以使用的檔案。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |詞彙|定義|  
 |---|---|  
-|`file`|必要項。 將包含錯誤報告的檔案名稱。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
+|`file`|必要。 將包含錯誤報告的檔案名稱。 將檔案名稱括在引號 ("") 如果名稱包含空格。|  
   
 ## <a name="remarks"></a>備註  
  下列資訊加入至`file`:  
@@ -67,9 +67,9 @@ ms.lasthandoff: 11/21/2017
 vbc /bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
  [/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [securityPolicy （ASP.NET 設定結構描述） 的 trustLevel 項目](http://msdn.microsoft.com/en-us/729ab04c-03da-4ee5-86b1-be9d08a09369)
+ [securityPolicy （ASP.NET 設定結構描述） 的 trustLevel 項目](http://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)

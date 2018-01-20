@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-formatted-text"></a>繪製格式化的文字
 本主題提供的功能概觀<xref:System.Windows.Media.FormattedText>物件。 這個物件提供在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中繪製文字的低階控制項。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/22/2017
  ![遵循之路徑幾何的文字範圍](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 遵循文字之路徑幾何的範圍  
   
- 如需詳細資訊，請參閱[如何：建立文字的 PathGeometry 動畫](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)。  
+ 如需詳細資訊，請參閱[如何：建立文字的 PathGeometry 動畫](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)。  
   
  轉換成之後，您可以建立其他有趣的使用者，格式化文字的<xref:System.Windows.Media.PathGeometry>物件。 例如，您可以裁剪視訊以顯示在其中。  
   
@@ -139,4 +139,4 @@ ms.lasthandoff: 12/22/2017
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [建立外框文字](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [如何︰建立文字的 PathGeometry 動畫](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)
+ [如何︰建立文字的 PathGeometry 動畫](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

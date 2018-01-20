@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c12892c4761f0158153c87464066dd727c83bfc3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aaee6f1d650e6af57ab05ad56b5578e094ee50ef
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
 如果您有要花費很長的時間才能完成，作業和不想使用者介面 (UI) 停止回應或 「 擱置 」，您可以使用<xref:System.ComponentModel.BackgroundWorker>類別，以另一個執行緒上執行作業。  
@@ -51,14 +51,14 @@ ms.lasthandoff: 12/22/2017
  如需此範例中使用之程式碼的完整清單，請參閱[如何：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
 #### <a name="to-create-a-form-that-uses-a-background-operation"></a>若要實作使用背景作業的表單  
   
-1.  建立以 Windows 為基礎的應用程式專案，名為 `BackgroundWorkerExample`。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立以 Windows 為基礎的應用程式專案，名為 `BackgroundWorkerExample`。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  在 [方案總管] 中，以滑鼠右鍵按一下 [Form1]，然後從捷徑功能表選取 [重新命名]。 將檔案名稱變更為 `FibonacciCalculator`。 當系統詢問您是否要重新命名程式碼元素 '`Form1`' 的所有參考時，按一下 [是]按鈕。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  重新命名的第一個<xref:System.Windows.Forms.Button>控制項`startAsyncButton`並設定<xref:System.Windows.Forms.Control.Text%2A>屬性`Start Async`。 重新命名第二個<xref:System.Windows.Forms.Button>控制項`cancelAsyncButton`，並設定<xref:System.Windows.Forms.Control.Text%2A>屬性`Cancel Async`。 設定其<xref:System.Windows.Forms.Control.Enabled%2A>屬性`false`。  
   
-6.  建立事件處理常式的兩個<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。 如需詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+6.  建立事件處理常式的兩個<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。 如需詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 7.  拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至表單並將它重新命名`resultLabel`。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>若要實作非同步事件處理常式  
   
-1.  在**屬性**視窗中，與<xref:System.ComponentModel.BackgroundWorker>元件仍選取，按一下**事件** 按鈕。 按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。 如需如何建立事件處理常式的詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+1.  在**屬性**視窗中，與<xref:System.ComponentModel.BackgroundWorker>元件仍選取，按一下**事件** 按鈕。 按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。 如需如何建立事件處理常式的詳細資訊，請參閱[如何：使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 2.  在表單中，建立名為 `ComputeFibonacci` 的新方法。 這個方法會執行實際的工作，並且會在背景執行。 此程式碼會示範 Fibonacci 演算法的遞迴實作，它非常沒有效率，對於較大的數字要耗費更長的時間才能完成。 它在這裡是針對說明目的使用，以示範會導致應用程式長時間延遲的作業。  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ComponentModel.BackgroundWorker>  
  [Managed 執行緒處理的最佳實施方針](../../../../docs/standard/threading/managed-threading-best-practices.md)  
  [元件中的多執行緒](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [不在組建中： Visual Basic 中的多執行緒](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [不在組建中： Visual Basic 中的多執行緒](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [逐步解說：在背景執行作業](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

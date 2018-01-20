@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d4364e35bbce3261c8f6e6c45002d5a603007b85
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 37437d827fc0ff6583178f33f4cceaa86f5175dd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server 中的 CLR 整合安全性
 Microsoft SQL Server 提供 .NET Framework 之 Common Language Runtime (CLR) 元件的整合。 CLR 整合可讓您使用任意 .NET Framework 語言 (包括 Microsoft Visual Basic .NET 或 Microsoft Visual C#)，撰寫預存程序 (Stored Procedure)、觸發程序 (Trigger)、使用者定義型別、使用者定義函式、使用者定義彙總及資料流資料表值函式等。  
@@ -30,7 +30,7 @@ Microsoft SQL Server 提供 .NET Framework 之 Common Language Runtime (CLR) 元
   
 |資源|描述|  
 |--------------|-----------------|  
-|[程式碼存取安全性](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的主題。|  
+|[程式碼存取安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的主題。|  
 |[CLR 整合安全性](http://go.microsoft.com/fwlink/?LinkId=59998)|討論在 SQL Server 內部執行之 Managed 程式碼的安全性模型。|  
   
 ## <a name="see-also"></a>請參閱  

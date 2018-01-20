@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項
 撰寫相關聯的自訂設計工具，可以增進自訂控制項的設計階段經驗。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  如需完整的程式碼清單，請參閱[How to： 建立 Windows Form 控制項，會利用的設計階段功能](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
--   建立 Windows Forms 應用程式專案，稱為 「 MarqueeControlTest。 」 如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+-   建立 Windows Forms 應用程式專案，稱為 「 MarqueeControlTest。 」 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 ## <a name="creating-a-control-library-project"></a>建立控制項程式庫專案  
  下一個步驟是建立控制項程式庫專案。 您將建立新的自訂控制項和其相對應的自訂設計工具。  
@@ -95,11 +95,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  將 Windows Form 控制項程式庫專案加入方案。 專案"MarqueeControlLibrary。 」  
   
-2.  使用**方案總管 中**，藉由刪除來源檔案，視您所選擇的語言而定，名為"UserControl1.cs"或"UserControl1.vb"，刪除專案的預設控制項。 如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+2.  使用**方案總管 中**，藉由刪除來源檔案，視您所選擇的語言而定，名為"UserControl1.cs"或"UserControl1.vb"，刪除專案的預設控制項。 如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 3.  加入新<xref:System.Windows.Forms.UserControl>項目`MarqueeControlLibrary`專案。 提供新的來源檔案的基底名稱"MarqueeControl。 」  
   
-4.  使用**方案總管 中**，建立新的資料夾中`MarqueeControlLibrary`專案。 如需詳細資訊，請參閱[NIB： 如何： 加入新的專案項目](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 將新的資料夾命名為 [設計]。  
+4.  使用**方案總管 中**，建立新的資料夾中`MarqueeControlLibrary`專案。 如需詳細資訊，請參閱[NIB： 如何： 加入新的專案項目](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 將新的資料夾命名為 [設計]。  
   
 5.  以滑鼠右鍵按一下**設計**資料夾並加入新的類別。 提供的原始程式檔的基底名稱"MarqueeControlRootDesigner。 」  
   

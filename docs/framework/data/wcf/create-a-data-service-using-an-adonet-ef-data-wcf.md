@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET Entity Framework 資料來源建立資料服務 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將實體資料公開為資料服務。 當資料來源為關聯式資料庫時，這個實體資料會由 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供。 本主題示範如何在以現有資料庫為基礎的 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 應用程式中建立 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 架構資料模型，並使用此資料模型建立新的資料服務。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將實體資料公開為資料服務。 此實體的資料由[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]當資料來源為關聯式資料庫。 本主題示範如何在以現有資料庫為基礎的 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 應用程式中建立 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 架構資料模型，並使用此資料模型建立新的資料服務。  
   
  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 也提供命令列工具，可在 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 專案以外產生 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 模型。 如需詳細資訊，請參閱[How to： 使用 EdmGen.exe 產生模型和對應檔](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 按一下**完成**以完成精靈。  
   
-     這樣會根據特定資料庫建立預設資料模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 可讓您自訂資料模型。 如需詳細資訊，請參閱[工作](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)。  
+     這樣會根據特定資料庫建立預設資料模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 可讓您自訂資料模型。 如需詳細資訊，請參閱[工作](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)。  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>若要使用新的資料模型建立資料服務  
   

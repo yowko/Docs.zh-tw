@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a24b8fe5d0da4b3fa3a13db15bd91be83f102dcf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL 多層式架構與 Web 服務
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]是專門用來在鬆散結合的資料存取層 (DAL) 例如 Web 服務中介層上使用。 如果展示層是 ASP.NET 網頁，那麼您可以使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 伺服器控制項，管理使用者介面與中介層上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之間的資料傳輸。 如果展示層不是 ASP.NET 網頁，則中介層和展示層都必須額外執行一些工作，以管理資料的序列化 (Serialization) 和還原序列化 (Deserialization)。  
@@ -49,4 +49,4 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="see-also"></a>請參閱  
  [使用 LINQ to SQL 的多層式架構和遠端應用程式](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: LinqDataSource Web 伺服器控制項概觀](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)
+ [NIB: LinqDataSource Web 伺服器控制項概觀](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

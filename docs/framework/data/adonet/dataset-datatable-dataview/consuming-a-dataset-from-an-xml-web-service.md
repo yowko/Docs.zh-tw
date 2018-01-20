@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f60a26d94734dacaba7e540c0584c8eb1ada803
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>從 XML Web Service 使用資料集
 <xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 **資料集**是 「 序列化 」，它可以指定為輸入或輸出 XML Web services 但沒有任何額外的程式碼所需的內容串流**資料集**從 XML Web service用戶端的來回。 **資料集**是隱含地轉換成使用 DiffGram 格式的 XML 資料流，透過網路傳送，然後重新建構 XML 資料流，做為從**資料集**接收端上。 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 如需有關 DiffGram 格式的詳細資訊，請參閱[DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
  下列範例示範如何建立 XML Web 服務和用戶端會使用**資料集**傳輸關聯式資料 （包括修改的資料），並解決任何更新回原始的資料來源。  
   
 > [!NOTE]
->  建立 XML Web Service 時，建議您務必考量涉及的安全性課題。 如需設定 XML Web 服務安全性資訊，請參閱[保護 Web 服務使用 ASP.NET 建立 XML](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)。  
+>  建立 XML Web Service 時，建議您務必考量涉及的安全性課題。 如需設定 XML Web 服務安全性資訊，請參閱[保護 Web 服務使用 ASP.NET 建立 XML](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)。  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>若要建立傳回和使用 DataSet 的 XML Web Service  
   
@@ -277,5 +277,5 @@ ms.lasthandoff: 01/17/2018
  [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [使用 DataAdapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Web 服務描述語言工具 (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [Web 服務描述語言工具 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

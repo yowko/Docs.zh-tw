@@ -11,11 +11,11 @@ ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -470,7 +470,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>定義自訂集合  
- 您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。 如需詳細資訊，請參閱[列舉集合](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f)。  
+ 您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。 如需詳細資訊，請參閱[列舉集合](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)。  
   
  雖然您可以定義自訂集合，但是使用包含在 .NET Framework 中的集合 (本主題稍早在[集合的種類](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)中所述) 通常會比較好。  
   
@@ -547,7 +547,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterator  
+##  <a name="iterators"></a>迭代器  
  「迭代器」是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用[產生](../../../visual-basic/language-reference/statements/yield-statement.md)陳述式來傳回一次一個集合的每個項目。  
   
  您可以使用呼叫迭代器[每個...下一步](../../../visual-basic/language-reference/statements/for-each-next-statement.md)陳述式。 `For Each` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `Yield` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
@@ -578,14 +578,14 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [程式設計概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
  [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [集合和資料結構](../../../standard/collections/index.md)  
- [建立和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [建立和操作集合](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)  
  [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

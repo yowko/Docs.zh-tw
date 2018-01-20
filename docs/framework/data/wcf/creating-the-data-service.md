@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-the-data-service"></a>建立資料服務
 在這個工作中，您將建立使用的範例資料服務[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]Northwind 範例資料庫為基礎的摘要。 這個工作包含下列基本步驟：  
@@ -114,4 +114,4 @@ ms.lasthandoff: 12/22/2017
  [從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>請參閱  
- [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

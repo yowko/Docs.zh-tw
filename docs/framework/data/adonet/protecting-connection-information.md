@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d4161d1fd0f78dcd59c650b08bb336a48d381c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ffd77bb1875b2de47602a6bd766463b0a274fadc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="protecting-connection-information"></a>保護連接資訊
 保護應用程式時的最重要目標之一就是保護資料來源的存取。 連接字串如果沒有受到保護，就可能造成安全性漏洞。 以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。 連接字串內嵌在您的程式碼可以使用讀取[Ildasm.exe （IL 解譯器）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要檢視已編譯的組件中的 Microsoft intermediate language (MSIL)。  
@@ -53,5 +53,5 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [使用受保護的組態加密組態資訊](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

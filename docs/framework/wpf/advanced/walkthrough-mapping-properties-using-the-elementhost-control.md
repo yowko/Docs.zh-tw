@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0db7b9677b5c8c415b6d0b3f49bd149c06843a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030183e77a141036416a3bcb8a4c4018df0a7e65
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>逐步解說：使用 ElementHost 控制項對應屬性
 本逐步解說會示範如何使用<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>屬性，對應[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上裝載的對應屬性的屬性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式專案，名為`PropertyMappingWithElementHost`。 如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式專案，名為`PropertyMappingWithElementHost`。 如需詳細資訊，請參閱[如何：建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  在方案總管 中，加入下列參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  在 Windows Form 設計工具中開啟 `Form1`。 按兩下表單，加入事件處理常式<xref:System.Windows.Forms.Form.Load>事件。  
   
-5.  返回 Windows Form 設計工具，並加入表單的事件處理常式<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱[How to： 使用設計工具建立事件處理常式](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+5.  返回 Windows Form 設計工具，並加入表單的事件處理常式<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱[How to： 使用設計工具建立事件處理常式](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
   
 6.  宣告<xref:System.Windows.Forms.Integration.ElementHost>欄位`Form1`類別。  
   
@@ -153,5 +153,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Windows Forms 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [WPF 設計工具](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b68bce0e3f1139b48446200decca5beb0a1a1a71
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e6eea471aa421cf5a154e6873c7ea64b71733bfd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-system-entity-sql"></a>類型系統 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援數種類型：  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
   
 -   沒有在結構描述中明確定義的匿名型別：<xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.RefType>。  
   
- 本章節將討論沒有在結構描述中明確定義但是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援的匿名型別。 如需基本和名義型別資訊，請參閱[概念模型型別 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)。  
+ 本章節將討論沒有在結構描述中明確定義但是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援的匿名型別。 如需基本和名義型別資訊，請參閱[概念模型型別 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。  
   
 ## <a name="rows"></a>列  
  資料列的結構取決於此資料列所包含之具型別和具名成員的序列。 資料列型別沒有任何識別 (Identity)，而且無法從中繼承。 如果這些成員分別對等，相同資料列型別的執行個體 (Instance) 就會對等。 除了結構化對等以外，資料列沒有任何行為，而且在 Common Language Runtime 中沒有對等項目。 查詢可能會產生包含資料列或資料列集合的結構。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢與主應用程式 (Host) 語言之間的 API 繫結會定義如何在產生結果的查詢中實現資料列。 如需如何建構資料列執行個體資訊，請參閱[建構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  

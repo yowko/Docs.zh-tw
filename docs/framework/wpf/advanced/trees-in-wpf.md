@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 73c34f8edfa735e361bf294f08cefd285be3e898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 363d81ff0e4262ce0c8252ada3625bb9a157f5a1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="trees-in-wpf"></a>WPF 中的樹狀結構
 在許多技術中，元素和元件都會組織成樹狀結構，開發人員可直接管理樹狀結構中的物件節點來影響應用程式的轉譯或行為。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也會使用數個樹狀結構比喻來定義程式元素之間的關聯性。 在大部分情形下，WPF 開發人員在概念上思考物件樹狀結構比喻時，可以使用程式碼建立應用程式或使用 XAML 定義應用程式的部分，但將會呼叫特定的 API 或使用特定標記來進行這些作業，而不是使用某些一般的物件樹狀結構管理 API，就像您可能在 XML DOM 中使用的方式。 WPF 會公開兩個 helper 類別，提供的樹狀目錄象徵檢視，<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>。 WPF 文件中也會使用視覺化樹狀結構和邏輯樹狀結構等詞彙，因為這些相同的樹狀結構在了解某些主要的 WPF 功能時非常好用。 本主題定義代表項目的視覺化樹狀結構與邏輯樹狀結構、 討論這類樹狀結構與整體的物件樹狀結構概念，並介紹<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>s。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>邏輯樹狀結構  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，您要將內容加入至 UI 元素，方法則是為支援這些元素的物件設定屬性。 例如，您將項目加入<xref:System.Windows.Controls.ListBox>操縱控制其<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性。 這樣做，您會放置到的項目<xref:System.Windows.Controls.ItemCollection>也就是<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性值。 同樣地，若要加入物件到<xref:System.Windows.Controls.DockPanel>，您可以管理其<xref:System.Windows.Controls.Panel.Children%2A>屬性值。 在這裡，您會將物件新增至<xref:System.Windows.Controls.UIElementCollection>。 如需程式碼範例，請參閱[以動態方式加入元素](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)。  
+ 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，您要將內容加入至 UI 元素，方法則是為支援這些元素的物件設定屬性。 例如，您將項目加入<xref:System.Windows.Controls.ListBox>操縱控制其<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性。 這樣做，您會放置到的項目<xref:System.Windows.Controls.ItemCollection>也就是<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性值。 同樣地，若要加入物件到<xref:System.Windows.Controls.DockPanel>，您可以管理其<xref:System.Windows.Controls.Panel.Children%2A>屬性值。 在這裡，您會將物件新增至<xref:System.Windows.Controls.UIElementCollection>。 如需程式碼範例，請參閱[以動態方式加入元素](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)。  
   
  在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，當您放置清單項目中的<xref:System.Windows.Controls.ListBox>或控制項或其他 UI 元素<xref:System.Windows.Controls.DockPanel>，也使用<xref:System.Windows.Controls.ItemsControl.Items%2A>和<xref:System.Windows.Controls.Panel.Children%2A>屬性，明確或隱含的如下列範例所示。  
   

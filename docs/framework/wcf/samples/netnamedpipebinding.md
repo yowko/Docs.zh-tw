@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1eab181ec63da5f0494ce5c4acabe6c6f868be15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 此範例示範 `netNamedPipeBinding` 繫結，這會在相同電腦上提供跨處理序通訊。 具名通道不會跨電腦作業。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)計算機服務。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 用戶端和服務的組態檔中會指定繫結。 中會指定繫結類型`binding`屬性[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例組態所示：  
+ 用戶端和服務的組態檔中會指定繫結。 中會指定繫結類型`binding`屬性[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目，如下列範例組態所示：  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

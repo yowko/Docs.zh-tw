@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 您可以使用檢視編譯成應用程式的原始碼的未加密的連接字串[Ildasm.exe （IL 解譯器）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果您要建立 ASP.NET 應用程式，您可以使用<xref:System.Web.Configuration.WebConfigurationManager>類別，可提供相同的功能，還可讓您存取 ASP.NET 應用程式，例如所特有的設定中找到時 **\<system.web >**。  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)。  
+>  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)。  
   
 ### <a name="appconfig-example"></a>App.config 範例  
  此範例示範如何切換加密**connectionStrings**一節中**app.config** Windows 應用程式檔案。 在此範例中，程序會採用應用程式的名稱做為引數，例如 "MyApplication.exe"。 **App.config**檔案接著會加密，並複製到在"MyApplication.exe.config"的名稱下可執行檔所在的資料夾。  
@@ -178,7 +178,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 保護 ASP.NET 應用程式的詳細資訊，請參閱[NIB: ASP.NET 安全性](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)和[ASP.NET 2.0 安全性作法一眼](http://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET 開發人員中心。  
+ 保護 ASP.NET 應用程式的詳細資訊，請參閱[NIB: ASP.NET 安全性](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)和[ASP.NET 2.0 安全性作法一眼](http://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET 開發人員中心。  
   
 ## <a name="see-also"></a>請參閱  
  [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  

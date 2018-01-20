@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="development-and-deployment-considerations"></a>開發及部署考量因素
 本節中的主題陳述在開發或部署以 ADO.NET Entity Framework 為基礎之應用程式時要考量的問題。  
@@ -36,4 +36,4 @@ ms.lasthandoff: 01/17/2018
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

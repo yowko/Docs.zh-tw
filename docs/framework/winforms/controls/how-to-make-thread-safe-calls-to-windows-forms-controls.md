@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cca363be57e5c5022c70c62d876f62cebc6e9c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：進行對 Windows Form 控制項的安全執行緒呼叫
 如果您使用多執行緒處理來改善 Windows Forms 應用程式的效能，您必須確定以安全執行緒的方式呼叫控制項。  
@@ -415,7 +415,7 @@ private:
  下列程式碼範例是完整的 Windows Forms 應用程式，此應用程式由具有三個按鈕和一個文字方塊的表單所組成。 第一個按鈕示範不安全的跨執行緒存取，第二個按鈕示範使用 <xref:System.Windows.Forms.Control.Invoke%2A>的安全存取，第三個按鈕示範使用 <xref:System.ComponentModel.BackgroundWorker>的安全存取。  
   
 > [!NOTE]
->  如需如何執行範例的指示，請參閱 [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 此範例必須參考 System.Drawing 和 System.Windows.Forms 組件。  
+>  如需如何執行這個範例的相關指示，請參閱[如何：使用 Visual Studio 編譯及執行完整的 Windows Forms 程式碼範例](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 此範例必須參考 System.Drawing 和 System.Windows.Forms 組件。  
   
 ```csharp  
 using System;  

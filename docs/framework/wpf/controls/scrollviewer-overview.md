@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0d060e0b511f17a68edb013ae7241e1accbc7dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概觀
 使用者介面內的內容常常會大於電腦螢幕的顯示區域。 <xref:System.Windows.Controls.ScrollViewer>控制項提供便利的方式，若要啟用的內容中捲動[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 本主題將介紹<xref:System.Windows.Controls.ScrollViewer>項目，並提供數種使用方式範例。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Controls.ScrollViewer>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [建立捲動檢視器](http://msdn.microsoft.com/en-us/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
+ [建立捲動檢視器](http://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [ScrollBar 樣式和範本](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [控制項](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

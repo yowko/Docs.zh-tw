@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c83c1883d00db1da8f0e7945d9cda5f2eb3f56a0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings"></a>連接字串
 連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。 它們也包含必要之模型和對應檔的相關資訊。  
   
  EntityClient 提供者會在存取模型和對應中繼資料，以及連接至資料來源時使用連接字串。 您可以透過 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性來存取或設定連接字串。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class) 可用來以程式設計方式建構或存取連接字串中的參數。 如需詳細資訊，請參閱[如何： 建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
   
- [Entity Data Model 工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)產生連接字串儲存在應用程式的組態檔中。 <xref:System.Data.Objects.ObjectContext> 會在建立物件查詢時自動擷取這個連接資訊。 您可以從 <xref:System.Data.EntityClient.EntityConnection> 屬性中存取 <xref:System.Data.Objects.ObjectContext> 執行個體 (Instance) 所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 如需詳細資訊，請參閱[管理連接與交易](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ [Entity Data Model 工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)產生連接字串儲存在應用程式的組態檔中。 <xref:System.Data.Objects.ObjectContext> 會在建立物件查詢時自動擷取這個連接資訊。 您可以從 <xref:System.Data.EntityClient.EntityConnection> 屬性中存取 <xref:System.Data.Objects.ObjectContext> 執行個體 (Instance) 所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 如需詳細資訊，請參閱[管理連接與交易](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
   
 ## <a name="connection-string-parameters"></a>連接字串參數  
  連接字串的格式是分號分隔的索引鍵/值參數組清單：  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 |`Metadata`|如果沒有指定 `Name` 關鍵字，就是必要項。 目錄、檔案和資源位置的垂直線分隔清單，您可在其中尋找中繼資料和對應資訊。 以下是一個範例：<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 忽略垂直線分隔符號兩端的空白。<br /><br /> 此關鍵字與 `Name` 關鍵字互斥。|  
 |`Name`|應用程式可選擇性的在應用程式組態檔中指定連接名稱，以提供必要的關鍵字/值連接字串值。 在此情況下，您不能在連接字串中直接提供這些值。 在組態檔中不允許 `Name` 關鍵字。<br /><br /> 當 `Name` 關鍵字未包含在連接字串中時，需要 Provider 關鍵字的非空白值。<br /><br /> 此關鍵字與所有其他連接字串關鍵字互斥。|  
   
- 下列是範例的連接字串的[AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)儲存在應用程式組態檔：  
+ 下列是範例的連接字串的[AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)儲存在應用程式組態檔：  
   
   
   
@@ -121,5 +121,5 @@ Metadata=.\
 ## <a name="see-also"></a>請參閱  
  [處理資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [管理連接與交易](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [管理連接與交易](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)

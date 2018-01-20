@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 所有 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的通訊都會透過其端點進行。 每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  使用 IIS 裝載時，您不用自行管理 <xref:System.ServiceModel.ServiceHost> 執行個體。 裝載於 IIS 時，基底位址一律是服務的 .svc 檔案中指定的位址。 因此請務必針對 IIS 裝載的服務端點使用相對端點位址。 在部署服務時，提供完整的端點位址可能會導致錯誤。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][部署網際網路資訊服務裝載的 WCF 服務](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在組態中定義端點位址  
- 若要在組態檔中定義的端點，使用[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
+ 若要在組態檔中定義的端點，使用[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

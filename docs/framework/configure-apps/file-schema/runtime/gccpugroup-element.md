@@ -17,18 +17,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 510896c6993008f30e7eacf2628ae4cceadea7e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dcead28d7bf66e0626a0108015add4f22c5fa476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt;項目
 指定記憶體回收是否支援多個 CPU 群組。  
   
  \<configuration>  
-\<執行階段 >  
-\<GCCpuGroup >  
+\<runtime>  
+\<GCCpuGroup>  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -84,5 +84,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何： 停用並行記憶體回收](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [如何： 停用並行記憶體回收](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [工作站和伺服器記憶體回收](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

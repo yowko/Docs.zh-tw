@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3481d0f0be5a52b33125e2a92849f402cce82d93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e8bbf6d72e07820256f69a06020354ef3ba3977
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
 本節中的範例將顯示如何藉由使用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 物件，間接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:System.Data.SqlClient.SqlDependency> 來接聽通知並正確地更新快取。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/17/2018
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  加入兩個 Helper 方法：`GetConnectionString` 及 `GetSQL`。 定義的連接字串會使用整合安全性。 您必須確認您使用的帳戶具有必要的資料庫使用權限，且範例資料庫中， **AdventureWorks**，已啟用通知。 如需詳細資訊，請參閱[特殊考量時使用查詢通知](http://msdn.microsoft.com/en-us/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7)。  
+5.  加入兩個 Helper 方法：`GetConnectionString` 及 `GetSQL`。 定義的連接字串會使用整合安全性。 您必須確認您使用的帳戶具有必要的資料庫使用權限，且範例資料庫中， **AdventureWorks**，已啟用通知。 如需詳細資訊，請參閱[特殊考量時使用查詢通知](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7)。  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

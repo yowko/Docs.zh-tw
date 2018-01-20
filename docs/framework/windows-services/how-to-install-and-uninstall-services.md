@@ -23,14 +23,14 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: bf767813f965b2c52a5061f74bbf2fab4572791b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcbc8e7a84b16d244561e0cd69f8661236e63de
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-install-and-uninstall-services"></a>如何：安裝及解除安裝服務
-如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用稱為 InstallUtil.exe 的命令列公用程式來快速安裝服務應用程式。 如果您是開發人員並且想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 請參閱[Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)。  
+如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用稱為 InstallUtil.exe 的命令列公用程式來快速安裝服務應用程式。 如果您是開發人員並且想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 請參閱[Windows Installer 部署](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。  
   
 > [!WARNING]
 >  如果您想要從電腦解除安裝服務，則不要遵循本文中的步驟。 相反地，了解的程式或軟體套件安裝服務，然後選擇**新增/移除程式**在控制台中解除安裝該程式。 請注意，許多服務都是 Windows 不可或缺的一部分；如果移除這些服務，可能會導致系統不穩定。  

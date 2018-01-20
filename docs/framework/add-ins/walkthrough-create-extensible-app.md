@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>逐步解說：建立可延伸應用程式
 本逐步解說描述如何建立會執行簡單的計算機功能的增益集的管線。 不會示範真實世界的實例。相反地，它會示範在管線，以及如何增益集可以提供主機服務的基本功能。  
@@ -52,11 +52,11 @@ ms.lasthandoff: 12/22/2017
   
 -   執行主應用程式。  
   
- 此管線傳遞僅可序列化的型別 (<xref:System.Double>和<xref:System.String>)、 主機和增益集之間。 如需示範如何將複雜資料型別集合的範例，請參閱[逐步解說： 將傳遞主機集合與增益集](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)。  
+ 此管線傳遞僅可序列化的型別 (<xref:System.Double>和<xref:System.String>)、 主機和增益集之間。 如需示範如何將複雜資料型別集合的範例，請參閱[逐步解說： 將傳遞主機集合與增益集](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)。  
   
  這個管線的合約會定義四個的算術運算的物件模型： 加入、 減、 乘、 和分割。 使用公式來計算，例如 2 + 2，主機會提供增益集和增益集傳回結果至主機。  
   
- 第 2 版的計算機增益集提供更多計算的可能性，並示範版本控制。 中描述[逐步解說： 為您的主機變更啟用回溯相容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+ 第 2 版的計算機增益集提供更多計算的可能性，並示範版本控制。 中描述[逐步解說： 為您的主機變更啟用回溯相容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列項目才能完成本逐步解說：  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 2.  將方案命名`CalculatorV1`。  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>建立管線目錄結構  
- 增益集模型要求管線區段組件應置於指定的目錄結構。 如需管線結構的詳細資訊，請參閱[管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+ 增益集模型要求管線區段組件應置於指定的目錄結構。 如需管線結構的詳細資訊，請參閱[管線開發需求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>若要建立管線目錄結構  
   
@@ -92,10 +92,10 @@ ms.lasthandoff: 12/22/2017
       HostSideAdapters  
     ```  
   
-     不需要將管線資料夾結構放在應用程式資料夾。完成以下只是為了方便起見。 在適當的步驟，逐步解說會說明如何變更程式碼，如果管線資料夾結構是在不同的位置。 請參閱中的管線目錄需求的討論[管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+     不需要將管線資料夾結構放在應用程式資料夾。完成以下只是為了方便起見。 在適當的步驟，逐步解說會說明如何變更程式碼，如果管線資料夾結構是在不同的位置。 請參閱中的管線目錄需求的討論[管線開發需求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
     > [!NOTE]
-    >  `CalcV2`資料夾不是在本逐步解說，它是一個預留位置，如[逐步解說： 為您的主機變更啟用回溯相容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+    >  `CalcV2`資料夾不是在本逐步解說，它是一個預留位置，如[逐步解說： 為您的主機變更啟用回溯相容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="creating-the-contract-and-views"></a>建立合約和檢視  
  此管線的合約區段會定義`ICalc1Contract`介面，定義四種方法： `add`， `subtract`， `multiply`，和`divide`。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/22/2017
   
  在此管線中，增益集提供服務給主機和類型流程從增益集至主機。 由於沒有型別從主機到增益集，您不必包括檢視合約介面卡。  
   
- 若要實作生命週期管理，請使用<xref:System.AddIn.Pipeline.ContractHandle>物件存留期語彙基元附加的合約。 您必須將此控制代碼的參考在存留期管理工作的順序。 套用語彙基元之後，任何其他程式設計需要不，因為增益集系統可以處置的物件時便不再使用，讓它們可供記憶體回收。 如需詳細資訊，請參閱 [生命週期管理](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 若要實作生命週期管理，請使用<xref:System.AddIn.Pipeline.ContractHandle>物件存留期語彙基元附加的合約。 您必須將此控制代碼的參考在存留期管理工作的順序。 套用語彙基元之後，任何其他程式設計需要不，因為增益集系統可以處置的物件時便不再使用，讓它們可供記憶體回收。 如需詳細資訊，請參閱[生命週期管理](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
 #### <a name="to-create-the-host-side-adapter"></a>若要建立主應用程式端配接器  
   
@@ -339,7 +339,7 @@ ms.lasthandoff: 12/22/2017
     |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  如果您決定要在應用程式資料夾以外的位置中放置管線資料夾結構，您必須修改顯示在資料表中的對應路徑。 請參閱中的管線目錄需求的討論[管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+    >  如果您決定要在應用程式資料夾以外的位置中放置管線資料夾結構，您必須修改顯示在資料表中的對應路徑。 請參閱中的管線目錄需求的討論[管線開發需求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
 2.  建置 Visual Studio 方案。  
   
@@ -348,7 +348,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  如果您沒有變更**複製到本機**至**False**如`Calc1AddInView`專案中的參考`AddInCalcV1`專案中，載入器環境問題會造成增益集無法找到。  
   
-     如需部署到管線的相關資訊，請參閱[管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+     如需部署到管線的相關資訊，請參閱[管線開發需求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
 ## <a name="running-the-host-application"></a>執行主應用程式  
  現在您已經準備好要執行主機及互動 增益集。  
@@ -364,8 +364,8 @@ ms.lasthandoff: 12/22/2017
 4.  型別**結束**按**Enter**鍵以關閉應用程式。  
   
 ## <a name="see-also"></a>請參閱  
- [逐步解說： 啟用主機變更為回溯相容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [主控件與增益集之間的逐步解說： 傳遞集合](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [管線開發需求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [合約、 檢視和配接器](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [逐步解說： 啟用主機變更為回溯相容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [主控件與增益集之間的逐步解說： 傳遞集合](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [管線開發需求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [合約、 檢視和配接器](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [管線開發](../../../docs/framework/add-ins/pipeline-development.md)

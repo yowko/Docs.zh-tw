@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>安全性概觀
 保護應用程式是持續進行的工作。 開發人員無法絕對保證應用程式可避開所有攻擊，因為您無法預測未來的新科技會帶來哪些類型的攻擊。 反之，也不能因為至目前為止，沒有人察覺 (或公佈) 系統上的安全性漏洞，就表示安全性漏洞確實存在或確實不存在。 您需要在專案的設計階段就進行安全性的規劃，也必須規劃該如何在應用程式的存留期維護安全性。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/17/2018
 |資源|描述|  
 |--------------|-----------------|  
 |[程式碼存取安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|從 ADO.NET 應用程式的角度，描述在程式碼存取安全性、以角色為基礎的安全性與部分信任環境之間的互動。|  
-|[程式碼存取安全性](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|  
+|[程式碼存取安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|  
   
 ## <a name="database-security"></a>資料庫安全性  
  最小權限的原則也適用於資料來源。 資料庫安全性的一些一般方針包括：  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/17/2018
 |資源|描述|  
 |--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|使用應用程式案例提供 SQL Server 安全性概觀，可針對建立以 SQL Server 為目標的安全 ADO.NET 應用程式提供指引。|  
-|[資料存取策略的建議](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
+|[資料存取策略的建議](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
   
 ## <a name="security-policy-and-administration"></a>安全性原則和管理  
  如果程式碼存取安全性 (CAS) 原則管理不當，可能會造成安全上的弱點。 部署應用程式後，必須使用監視安全性的技術，並評估新威脅所帶來的風險。  
@@ -109,11 +109,11 @@ ms.lasthandoff: 01/17/2018
   
 |資源|描述|  
 |--------------|-----------------|  
-|[NIB： 安全性原則管理](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供建立和管理安全性原則的資訊。|  
-|[NIB： 安全性原則的最佳作法](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供說明如何管理安全性原則的連結。|  
+|[NIB： 安全性原則管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供建立和管理安全性原則的資訊。|  
+|[NIB： 安全性原則的最佳作法](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供說明如何管理安全性原則的連結。|  
   
 ## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE 機器碼和 .NET Framework 程式碼中的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

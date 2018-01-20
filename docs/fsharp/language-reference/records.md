@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: f5ade1db39431d99f10eb6967f02335123b83d34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="records"></a>資料錄
 
@@ -49,7 +49,7 @@ type [accessibility-modifier] typename = {
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-之標籤的 最近宣告的型別會優先於先前宣告的型別，因此在上述範例中，`mypoint3D`就會推斷`Point3D`。 您可以明確指定記錄類型，如下列程式碼所示。
+之標籤的 [最近宣告的型別會優先於先前宣告的型別，因此在上述範例中，`mypoint3D`就會推斷`Point3D`。 您可以明確指定記錄類型，如下列程式碼所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
@@ -122,13 +122,13 @@ Point is at (10.000000, 0.000000, -1.000000).
 
 如果您需要參考相等的記錄，將屬性加入`[<ReferenceEquality>]`上述記錄。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 類型](fsharp-types.md)
 
 [類別](classes.md)
 
 [F# 語言參考](index.md)
 
-[參考相等](https://msdn.microsoft.com/en-us/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+[Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 
 [模式比對](pattern-matching.md)

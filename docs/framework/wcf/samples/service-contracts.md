@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c8984016f1f8ad77ab41aa49f8bcc2583406a465
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3ed2fa4439edd157fa7f009b63f20b21e2bb6fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-contracts"></a>服務合約
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中服務合約的範例。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  [資料流](../../../../docs/framework/wcf/samples/stream.md)  
  示範串流傳輸模式通訊的使用。  
   
- [非同步](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7)  
+ [非同步](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)  
  示範用戶端如何以非同步方式存取服務作業，以及服務如何以非同步方式實作其作業。  
   
  [XmlSerializer 錯誤](../../../../docs/framework/wcf/samples/xmlserializer-faults.md)  

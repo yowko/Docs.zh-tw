@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
@@ -108,6 +108,6 @@ ms.lasthandoff: 12/22/2017
  支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設值為 `SHA1`。  
   
 ## <a name="see-also"></a>請參閱  
- [訊息佇列](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [訊息佇列](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

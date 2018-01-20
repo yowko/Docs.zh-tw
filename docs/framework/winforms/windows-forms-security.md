@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-security"></a>Windows Form 安全性
 Windows Form 功能的程式碼為基礎 （安全性層級會設定為程式碼，不論執行的程式碼的使用者） 的安全性模型。 這是除了可能已在您的電腦系統上的位置中任何安全性結構描述。 這些可以包含位於瀏覽器 （例如區域為基礎的安全性在 Internet Explorer 中可用） 或作業系統 （例如 Windows NT 的認證為基礎的安全性）。  
@@ -44,10 +44,10 @@ Windows Form 功能的程式碼為基礎 （安全性層級會設定為程式碼
  描述執行視窗操作、 使用剪貼簿，以及呼叫 unmanaged 程式碼在完全信任的環境中。  
   
 ## <a name="related-sections"></a>相關章節  
- [NIB： 預設的安全性原則](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB： 預設的安全性原則](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  列出在完全信任、 近端內部網路和網際網路權限集授與的預設權限。  
   
- [NIB： 一般安全性原則管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [NIB： 一般安全性原則管理](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
  提供.NET Framework 安全性原則管理和提高權限的相關資訊。  
   
  [危險的使用權限和原則管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -56,7 +56,7 @@ Windows Form 功能的程式碼為基礎 （安全性層級會設定為程式碼
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)  
  主題連結，說明安全地撰寫.NET Framework 程式碼的最佳作法。  
   
- [NIB： 要求權限](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [NIB： 要求權限](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  討論使用屬性，讓執行階段知道您的程式碼需要執行哪些權限。  
   
  [重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)  
@@ -65,8 +65,8 @@ Windows Form 功能的程式碼為基礎 （安全性層級會設定為程式碼
  [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)  
  討論.NET Framework 執行階段安全性原則所使用基本的概念。  
   
- [NIB： 決定修改安全性原則](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ [NIB： 決定修改安全性原則](http://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
  說明如何判斷您的應用程式需要從預設的安全性原則有所分歧時。  
   
- [NIB： 部署的安全性原則](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [NIB： 部署的安全性原則](http://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
  討論部署的安全性原則變更的最佳方式。

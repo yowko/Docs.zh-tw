@@ -18,11 +18,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: e776b04c626fac134e2fc9c1b9fd0ae63a50b5d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>HOW TO：建立自訂安全性權杖提供者
 這個主題會說明如何以自訂安全性權杖提供者建立新的權杖型別，以及如何整合提供者和自訂安全性權杖管理員。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  如需自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
- 如需有關認證的詳細資訊，安全性權杖管理員、 提供者和驗證器類別，請參閱[安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 如需有關認證的詳細資訊，安全性權杖管理員、 提供者和驗證器類別，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>建立自訂安全性權杖提供者  
   
@@ -71,4 +71,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.IdentityModel.Tokens.X509SecurityToken>  
  [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
 強式命名 API 可讓用戶端管理強式名稱簽署組件。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  使用強式名稱簽署組件，就會將公開金鑰加密加入含有組件資訊清單的檔案中。 強式名稱簽署可協助驗證唯一名稱，可防止冒用名稱，並解析參考時呼叫端提供的唯一識別。 不過，任何層級不是信任的強式名稱與相關聯。  
   
 ## <a name="in-this-section"></a>本節內容  
- [強式命名全域靜態函式](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [強式命名全域靜態函式](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  描述的 unmanaged 全域靜態函式強式命名 API 所使用。  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [StrongNameTokenFromPublicKey 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  取得代表公開金鑰的語彙基元。 起過時的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
   
- [強式命名結構](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [強式命名結構](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  描述強式命名 API 來管理強式名稱簽署組件所使用的 unmanaged 的結構...  
   
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

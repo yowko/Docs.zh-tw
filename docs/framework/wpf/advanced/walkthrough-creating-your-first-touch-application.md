@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 502fb9ae0c488f5f3e438a3ae0a7087538183f1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08f4004329d15b527a889cd7b437a7f18278fc79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>逐步解說：建立您的第一個觸控應用程式
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓應用程式要碰觸的回應。 例如，您可以使用其中一個應用程式與互動或觸控式裝置，例如本逐步解說建立的應用程式，可讓使用者移動，觸控螢幕上的多個指調整大小或旋轉使用觸控的單一物件。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-application"></a>若要建立應用程式  
   
-1.  在 Visual Basic 或 Visual C# 中，建立名為 `BasicManipulation` 的新 WPF 應用程式專案。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
+1.  在 Visual Basic 或 Visual C# 中，建立名為 `BasicManipulation` 的新 WPF 應用程式專案。 如需詳細資訊，請參閱[如何：建立新的 WPF 應用程式專案](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
   
 2.  以下列 XAML 取代 MainWindow.xaml 的內容。  
   

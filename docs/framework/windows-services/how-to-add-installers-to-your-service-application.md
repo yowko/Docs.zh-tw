@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：加入 Installer 至服務應用程式
 Visual Studio 隨附安裝的元件，可將其與您的服務應用程式相關聯的資源。 安裝元件登錄的方法，它可以安裝，並讓服務控制管理員知道服務存在於的系統上的個別服務。 當您使用的服務應用程式時，您可以自動將適當的安裝程式新增至您的專案屬性 視窗中選取的連結。  
@@ -39,7 +39,7 @@ Visual Studio 隨附安裝的元件，可將其與您的服務應用程式相關
  您不需要任何特殊的安裝程式正確安裝程式服務中編碼方式。 不過，您偶爾可能需要以修改安裝程式的內容，如果您需要加入特殊功能的安裝程序。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-installers-to-your-service-application"></a>若要加入 installer 至服務應用程式  
   

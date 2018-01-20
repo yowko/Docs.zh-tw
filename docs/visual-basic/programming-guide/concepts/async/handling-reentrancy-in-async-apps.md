@@ -12,11 +12,11 @@ ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c2f80eb8a0fbc655143ca02ead5f6f46f102918
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。  
@@ -67,7 +67,7 @@ TOTAL bytes returned:  890591
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
 2. msdn.microsoft.com/library/aa578028.aspx               205273  
 6. msdn.microsoft.com/library/ms404677.aspx               197325  
-3. msdn.microsoft.com/en-us/library/jj155761.aspx                29019  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
 7. msdn.microsoft.com                                            42972  
 4. msdn.microsoft.com/library/hh290140.aspx               117152  
 8. msdn.microsoft.com/library/ff730837.aspx               146159  
@@ -685,6 +685,6 @@ End Function
   
 12. 從[停用開始按鈕](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)、[取消後再重新啟動作業](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)或[執行多個作業並將輸出加入佇列](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)進行變更以處理重新進入。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

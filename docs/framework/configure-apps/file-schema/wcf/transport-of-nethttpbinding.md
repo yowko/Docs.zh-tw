@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8fe84a5ceb8871d4dfd172cbe90dda01350da687
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 870e08f644f58d49f0165e1f97279adcf2e5445a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;transport&gt;
 定義可控制 HTTP 傳輸之驗證參數的屬性。  
   
-\<system.serviceModel >  
-\<繫結 >  
-\<netHttpBinding >  
-\<繫結 >  
-\<安全性 >  
-\<傳輸 >  
+\<system.serviceModel>  
+\<bindings>  
+\<netHttpBinding>  
+\<binding>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,13 +49,13 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|clientCredentialType|-指定要執行使用 HTTP 驗證的用戶端驗證時使用的認證類型。  預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
+|clientCredentialType|-指定要執行使用 HTTP 驗證的用戶端驗證時使用的認證類型。  預設值為 `None`。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
 |proxyCredentialType|-指定要執行使用 proxy over HTTP 的網域內，從用戶端驗證時使用的認證類型。 這個屬性僅適用於父 `mode` 項目的 `security` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
 |realm|字串，指定摘要式驗證或基本驗證的 HTTP 驗證配置所使用的領域。 預設為空字串。|  
 |policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定義之安全性功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定義之安全性功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。|  
   
 ## <a name="example"></a>範例  
  下列範例示範透過基本繫結來使用 SSL 傳輸安全性。 根據預設，基本繫結支援 HTTP 通訊。  
@@ -131,5 +131,5 @@ ms.lasthandoff: 12/22/2017
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a29f761b4a3718293c1786d23d425265603f8c84
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="correlation-overview"></a>相互關聯概觀
 相互關聯是一種機制，可將工作流程服務訊息彼此產生關聯性、將工作流程服務訊息與應用程式執行個體狀態 (例如針對初始要求的回覆) 產生關聯性，或者是將特定的訂單 ID 與訂單處理工作流程的保存狀態產生關聯性。 本主題提供相互關聯的概觀。 本節的其他主題則會提供各種相互關聯類型的其他資訊。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="protocol-based-correlation"></a>以通訊協定為主的相互關聯  
  以通訊協定為主的相互關聯會使用傳輸機制將訊息彼此產生關聯性，以及將訊息與適當的執行個體產生關聯性。 某些由系統提供的通訊協定相互關聯會包含要求-回覆相互關聯，以及以內容為主的相互關聯。 要求-回覆相互關聯用於將單獨一組的傳訊活動相互關聯，以形成雙向作業，例如 <xref:System.ServiceModel.Activities.Send> 搭配 <xref:System.ServiceModel.Activities.ReceiveReply>，或是 <xref:System.ServiceModel.Activities.Receive> 搭配 <xref:System.ServiceModel.Activities.SendReply>。 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 工作流程設計工具也提供一組活動範本，可供您快速實作這個模式。 以內容為主的相互關聯根據所述的內容交換機制[.NET 內容交換通訊協定規格](http://go.microsoft.com/fwlink/?LinkID=166059)。 若要使用以內容為主的相互關聯，必須在端點上使用以內容為主的繫結，例如 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 或 <xref:System.ServiceModel.NetTcpContextBinding>。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]通訊協定相互關聯，請參閱[Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)，[永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)，和[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]工作流程設計工具的活動範本，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 範例程式碼，請參閱[永久性雙工 &#91;WF 範例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)和[NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)範例。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]通訊協定相互關聯，請參閱[Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)，[永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)，和[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]工作流程設計工具的活動範本，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 範例程式碼，請參閱[永久性雙工 &#91;WF 範例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)和[NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)範例。  
   
 ## <a name="content-based-correlation"></a>以內容為基礎的相互關聯  
  以內容為基礎的相互關聯會利用訊息中的部分資訊片段，將其與特定執行個體產生關聯。 不同於以通訊協定為主的相互關聯，以內容為主的相互關聯會要求應用程式作者明確陳述這項資料在每個相關訊息中的位置。 使用以內容為主的相互關聯的活動會使用 <xref:System.ServiceModel.MessageQuerySet> 來指定這項訊息資料。 與不使用其中一種內容繫結 (例如 <xref:System.ServiceModel.BasicHttpContextBinding>) 的服務通訊時，以內容為基礎的相互關聯非常有用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]以內容為基礎的相互關聯，請參閱[內容基礎](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)。 範例程式碼，請參閱[內容架構相互關聯](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)和[相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)範例。  
@@ -40,4 +40,4 @@ ms.lasthandoff: 12/22/2017
  [以內容為基礎的相互關聯](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [永久性雙工 &#91;WF 範例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+ [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

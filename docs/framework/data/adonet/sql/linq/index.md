@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 15a6585e0653fd87730abd1aef08ffd392cf8c87
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 62f7a3b0fcefa9eb6f5b56d96217a9988a193104
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 為 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 3.5 版的元件，它所提供的執行階段基礎結構可將關聯式資料當作物件管理。  
@@ -52,14 +52,14 @@ ms.lasthandoff: 01/17/2018
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  針對 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 使用者描述 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 技術。  
   
- [LINQ to ADO.NET](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 入口網站的連結。  
   
- [LINQ to SQL 逐步解說](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [LINQ to SQL 逐步解說](http://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
  列出 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可用的逐步解說。  
   
  [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  描述如何下載文件中所用的範例程式庫。  
   
- [LinqDataSource 技術概觀](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [LinqDataSource 技術概觀](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  描述 <xref:System.Web.UI.WebControls.LinqDataSource> 控制項如何透過 [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] 資料來源控制項架構，將 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] 公開給 Web 程式開發人員。

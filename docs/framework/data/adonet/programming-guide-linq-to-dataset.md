@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fc7c58f7062871fc3f6ac084bdeafcb12dad1f86
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bf5734aca0d6ec6d54b690a5fb0f63ac2de306e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="programming-guide-linq-to-dataset"></a>程式設計手冊 (LINQ to DataSet)
 本節提供使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 進行程式設計的概念性資訊和範例。  
@@ -64,6 +64,6 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Data.DataView>  
   
 ## <a name="see-also"></a>請參閱  
- [LINQ to ADO.NET](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [不在組建中： LINQ 一般程式設計指南](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [LINQ 架構](http://msdn.microsoft.com/en-us/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+ [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [不在組建中： LINQ 一般程式設計指南](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
+ [LINQ 架構](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)

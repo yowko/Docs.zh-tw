@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。 在本逐步解說中，您將建立基底表單，並編譯為類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。 在這個逐步解說期間，您將了解如何：  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  最後，本逐步解說將示範繼承的表單上私用和受保護控制項之間的差異。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 > [!CAUTION]
 >  並非所有控制項都支援來自基底表單的視覺化繼承。 下列控制項並不支援在此逐步解說中所描述的案例：  

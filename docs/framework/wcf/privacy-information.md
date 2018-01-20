@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 3.0 版建置應用程式時，該應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您本人或使用者選擇將資訊傳送給我們。  
@@ -138,7 +138,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  移除的金鑰：  
   
- \-Xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
@@ -174,13 +174,13 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  >  
   
- \<條件 NotBefore ="[dateTime]"NotOnOrAfter ="[dateTime]">  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<對象 > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition / > *  
   
@@ -194,9 +194,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  \<建議 >  
   
- \<AssertionIDReference > [識別碼]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<判斷提示 > [判斷提示]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
@@ -206,9 +206,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  \<陳述式 / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<主題 >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -222,19 +222,19 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [任何]\</SubjectConfirmationData > 嗎？  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds:KeyInfo >...\</ds:KeyInfo > 嗎？  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation > 嗎？  
+ \</SubjectConfirmation>?  
   
- \</ 主題 >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -266,9 +266,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [主旨]  
   
@@ -282,33 +282,33 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ 屬性 > +  
+ \</Attribute>+  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- 決策 ="[允許 &#124; 拒絕 &#124; 不定]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [主旨]  
   
- \<動作命名空間 ="[uri]"> [字串]\</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<辨識項 >  
   
- \<AssertionIDReference > [識別碼]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<判斷提示 > [判斷提示]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ 證據 > 嗎？  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ 判斷提示 >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>記錄解密/未加密訊息時，從訊息本文中移除的資訊  
  如先前所述，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會針對記錄的解密/未加密訊息，從訊息標頭中移除金鑰和已知的可能個人資訊。 此外，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會針對下列清單中的本文項目和動作，從訊息本文中移除金鑰和已知的可能個人資訊，而這些項目和動作會描述與金鑰交換相關的安全性訊息。  
@@ -413,5 +413,5 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
 ## <a name="see-also"></a>請參閱  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [安全性](../../../docs/framework/wcf/feature-details/security.md)

@@ -17,21 +17,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;項目
 指定是否從遠端來源的組件應該被授與完全信任。  
   
 > [!NOTE]
->  如果您已導向至本主題，因為 Visual Studio 專案錯誤清單或建置錯誤中的錯誤訊息，請參閱[How to： 使用 Visual Studio 中的 從 Web 組件](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  如果您已導向至本主題，因為 Visual Studio 專案錯誤清單或建置錯誤中的錯誤訊息，請參閱[How to： 使用 Visual Studio 中的 從 Web 組件](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
   
  \<configuration>  
-\<執行階段 >  
-\<loadFromRemoteSources >  
+\<runtime>  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 975c5ea5d5b3ab81d37b713e84f273e4c2c1c0b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
 佇列可確保用戶端與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務之間發生可靠的傳訊，即使服務在通訊時無法使用也一樣。 下列程序顯示如何在實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，使用標準佇列繫結確保在用戶端與服務間建立永久性通訊。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]組態，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+5.  在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]組態，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
   
   
@@ -101,6 +101,6 @@ ms.lasthandoff: 12/22/2017
  [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [訊息佇列整合繫結範例](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [訊息佇列整合繫結範例](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -14,14 +14,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9409c17065b0421ec32a61352f9c0b975095ab44
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 24f620319cd469538cf4454be7caffececdf9213
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 和 LINQ to SQL
-SQL Server Compact 是與 Visual Studio 一起安裝的預設資料庫。 如需詳細資訊，請參閱[PAVE 透過使用 SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/en-us/13320dd1-94e5-4077-bf76-8df253695ccc)。  
+SQL Server Compact 是與 Visual Studio 一起安裝的預設資料庫。 如需詳細資訊，請參閱[PAVE 透過使用 SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc)。  
   
  本主題概述使用方式、 設定、 功能集和範圍的主要差異[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援。  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1e8773b0b99e6394dcc3675b21f4a9454444b617
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式可以建置為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可執行檔 (.exe)、程式庫 (.dll)，或這兩種組件類型的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Microsoft Build Engine (MSBuild)。 除了程式碼和 XAML 檔案，應用程式還必須包含 MSBuild 專案檔。 如需詳細資訊，請參閱＜MSBuild＞。  
   
--   Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱 [Visual Studio 應用程式開發](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68)和 [WPF 設計工具](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)。  
+-   Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱 [Visual Studio 應用程式開發](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68)和 [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF 組建管線  

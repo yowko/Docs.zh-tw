@@ -21,19 +21,19 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dd24ae9e5659deff7ddbe4183c70d5b442542cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;項目
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
   
  \<configuration>  
-\<執行階段 >  
-\<assemblyBinding >  
-\<qualifyAssembly >  
+\<runtime>  
+\<assemblyBinding>  
+\<qualifyAssembly>  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB： 部分組件參考](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB： 部分組件參考](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

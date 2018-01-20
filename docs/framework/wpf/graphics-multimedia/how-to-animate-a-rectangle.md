@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2176682a5e3f396cc9d9fc60baf409fd1e9ba807
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f34a43a482791d31f6265575b8cbb2c8190779a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-animate-a-rectangle"></a>操作說明：建立矩形動畫
 這個範例示範如何以動畫顯示矩形的大小和位置變更。  
@@ -42,5 +42,5 @@ ms.lasthandoff: 12/22/2017
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [動畫和計時](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [動畫和計時](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

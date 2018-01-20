@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，「 *工作階段* 」(Session) 會使一組訊息相互關連至對話。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作階段不同於 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中可用的工作階段物件，而且支援不同的行為，控制的方式也不一樣。 本主題說明工作階段在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中啟用的功能及其用法。  
@@ -147,7 +147,7 @@ ms.lasthandoff: 12/22/2017
  合約內的 <xref:System.ServiceModel.SessionMode> 列舉與 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性之間會進行互動，以控制通道和特定服務物件之間的關聯。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][工作階段中，執行個體與並行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
   
 ### <a name="sharing-instancecontext-objects"></a>共用 InstanceContext 物件  
- 您也可以自行執行該關聯，以控制哪個工作階段架構通道或呼叫與哪個 <xref:System.ServiceModel.InstanceContext> 物件關聯。 如需完整的範例，請參閱 [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
+ 您也可以自行執行該關聯，以控制哪個工作階段架構通道或呼叫與哪個 <xref:System.ServiceModel.InstanceContext> 物件關聯。 如需完整範例，請參閱[InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
   
 ## <a name="sessions-and-streaming"></a>工作階段和資料流  
  當您有大量資料要傳輸時，除了將記憶體中的訊息全部經過緩衝並處理的預設行為外，也可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的資料流傳輸模式。 使用工作階段架構繫結對呼叫進行資料流處理時，可能會遇到未預期的行為。 即使使用的繫結已設定為使用工作階段，所有資料流處理呼叫還是會透過不支援工作階段的單一通道 (資料包通道) 來進行。 如果多個用戶端透過工作階段架構繫結對同一個服務物件進行資料流處理呼叫，而且服務物件的並行模式已設為單一且其執行個體內容模式已設為 `PerSession`，則所有呼叫必須經過資料包通道，所以一次只能處理一個呼叫。 一或多個用戶端可能會因此逾時。您可以將服務物件的 `InstanceContextMode` 設為 `PerCall` 或是將並行模式設為多重來解決這個問題。  

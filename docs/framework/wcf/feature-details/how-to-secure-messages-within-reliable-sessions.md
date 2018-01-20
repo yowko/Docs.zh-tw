@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 254cc241edf2d1c53ce9dd14eee41cd8bf6eaa76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2604b9dacf11b9971b10d23d9a807092ddf07830
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>HOW TO：保護可靠工作階段內的訊息
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 
 1. 指定要向服務驗證用戶端時，用戶端必須使用的用戶端認證類型。
 
-請務必在第一個工作中，端點組態項目包含`bindingConfiguration`屬性必須參考名為 （在此範例中） 的繫結組態`MessageSecurity`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目，然後參考此名稱，藉此啟用可靠工作階段`enabled`屬性[  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)元素`true`。 您可以將 `ordered` 屬性設為 `true`，要求在可靠工作階段中提供依順序遞送的保證。
+請務必在第一個工作中，端點組態項目包含`bindingConfiguration`屬性必須參考名為 （在此範例中） 的繫結組態`MessageSecurity`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目，然後參考此名稱，藉此啟用可靠工作階段`enabled`屬性[  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)元素`true`。 您可以將 `ordered` 屬性設為 `true`，要求在可靠工作階段中提供依順序遞送的保證。
 
 此組態程序所依據的範例的來源副本，請參閱[WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 

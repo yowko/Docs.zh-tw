@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 97c0ad9c64046e9c93ce8690016f71d0950fb2d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1c30ba2995a0f8768292dd71733d3e6f4c3799f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; 的 &lt;message&gt; 項目
 定義的訊息層級安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。  
   
- \<系統。ServiceModel >  
-\<繫結 >  
-\<ws2007FederationHttpBinding >  
-\<繫結 >  
-\<安全性 >  
-\<訊息 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<ws2007FederationHttpBinding>  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>語法  
   
@@ -92,14 +92,14 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
 |`algorithmSuite`|選擇項。 設定訊息加密、簽章和金鑰包裝演算法。 這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 請參閱下表列出的可能值。 預設值為 Basic256。|  
-|`issuedKeyType`|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> 預設為 SymmetricKey。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|`issuedKeyType`|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> 預設為 SymmetricKey。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |`issuedTokenType`|URI，指定要發行的權杖型別。 預設為 `null`。|  
 |`negotiateServiceCredential`|這個值會指定服務認證是否應交換做為交涉的一部分，或可供超出範圍使用。 預設為 `true`，意指交涉服務認證。|  
   
@@ -128,16 +128,16 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<q >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
-|[\<簽發者 >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定簽發者的端點位址。|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定簽發者的端點位址。|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|定義繫結的安全性設定。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|定義繫結的安全性設定。|  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
@@ -146,5 +146,5 @@ ms.lasthandoff: 12/22/2017
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

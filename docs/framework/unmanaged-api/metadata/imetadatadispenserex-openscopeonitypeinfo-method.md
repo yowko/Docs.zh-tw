@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e13211a43c42d66fccd88473c8f881b9edd071d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45c65d0194ed44122a87dcd000359187fc020d0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法
 這個方法尚未實作。 如果呼叫，它會傳回 E_NOTIMPL。  
@@ -44,7 +44,7 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>參數  
  `pITI`  
- [in]指標[ITypeInfo](http://msdn.microsoft.com/en-us/f3356463-3373-4279-bae1-953378aa2680)提供要開啟範圍的類型資訊的介面。  
+ [in]指標[ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680)提供要開啟範圍的類型資訊的介面。  
   
  `dwOpenFlags`  
  [in]開啟模式的旗標。  

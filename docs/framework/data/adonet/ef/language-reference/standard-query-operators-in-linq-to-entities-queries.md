@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的標準查詢運算子
 在查詢中，您可以指定要從資料來源擷取的資訊。 此外，查詢也可以指定該項資訊傳回之前應該如何排序、分組和成形。 LINQ 提供一組可在查詢中使用的標準查詢方法。 大部分的這些方法可用於序列。在此內容中，序列是的物件的型別實作<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 標準查詢運算子的查詢功能包括篩選、投影、彙總、排序、群組、分頁等等。 某些更常用的標準查詢運算子具有專用的關鍵字語法，因此可以使用查詢運算式語法來呼叫它們。 相較於以方法為根據的同等項目，查詢運算式是一個不同且更具可讀性之表示查詢的方式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。 如需標準查詢運算子且運算子具有對等查詢運算式子句的清單，請參閱[標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/17/2018
 |`Sum`|傳回 null。|傳回 null。|傳回序列中非 null 值的總和。|計算數值序列的總和。|  
   
 ## <a name="type-methods"></a>型別方法  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 的內容中支援處理型別轉換和測試的兩個 LINQ 方法。 這表示，只有支援的型別是對應到適當 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 型別的型別。 如需這些類型的清單，請參閱[概念模型型別 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)。 型別方法為 `Convert` 和 `OfType`。  
+ [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 的內容中支援處理型別轉換和測試的兩個 LINQ 方法。 這表示，只有支援的型別是對應到適當 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 型別的型別。 如需這些類型的清單，請參閱[概念模型型別 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 型別方法為 `Convert` 和 `OfType`。  
   
  實體類型支援 `OfType`。 概念模型基本型別支援 `Convert`。  也支援 C# `is` 和 `as` 方法。  
   

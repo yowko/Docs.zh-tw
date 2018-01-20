@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e34a0b267e9a1dc7cf545ae981211cabf220e0d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1102243eaf43eeb87b16bb654568ef15a821214c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](../../../docs/framework/interop/copying-and-pinning.md)。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/22/2017
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) 是自訂的 Unmanaged 程式庫，包含先前所列出函式和 2 個結構變數的實作： **MYPOINT** 和 **MYPERSON**。 這些結構包含下列項目：  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614)是自訂的 unmanaged 程式庫，包含先前所列出的函式和兩個結構變數的實作**MYPOINT**和**MYPERSON**。 這些結構包含下列項目：  
   
 ```  
 typedef struct _MYPOINT  
@@ -124,6 +124,6 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>請參閱  
- [封送處理類型的陣列](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
- [平台叫用資料類型](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [封送處理類型的陣列](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
+ [平台叫用資料類型](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

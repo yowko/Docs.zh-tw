@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>增益集和擴充性
 <a name="top"></a> 增益集可以為主應用程式提供擴充的功能或服務。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供程式設計模型，開發人員可用來開發增益集，並且在其主應用程式中加以啟動。 模型的做法是在主應用程式與增益集之間建構通訊管線。 此模型是藉由使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空間中的類型來實作。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="discovery-and-activation"></a>探索和啟動  
  若要啟動增益集，您可以使用從資訊存放區找到之增益集集合中的語彙基元。 若要尋找增益集，您可以搜尋用來定義增益集之主應用程式檢視的類型。 您也可以依據定義增益集的類型來尋找特定增益集。 資訊存放區是由兩個快取檔案所組成：管線存放區和增益集存放區。  
   
- 如需更新和重建資訊存放區的相關資訊，請參閱 [增益集探索](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421)。 如需啟動增益集的相關資訊，請參閱 [增益集啟動](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) 和 [如何：以不同的隔離和安全性啟動增益集](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
+ 更新和重建資訊存放區的相關資訊，請參閱[增益集探索](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421)。 如需啟動增益集的相關資訊，請參閱[增益集啟動](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f)和[如何： 啟動增益集具有不同的隔離和安全性](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
   
 ### <a name="isolation-levels-and-external-processes"></a>隔離等級和外部處理序  
  此增益集模型可支援增益集及其主應用程式之間或增益集之間的數個隔離等級。從最低的隔離等級開始，這些等級如下：  
@@ -96,10 +96,10 @@ ms.lasthandoff: 12/22/2017
   
 -   每個增益集都在外部處理序中，獨自載入至其本身的應用程式定義域中。 這是隔離等級最高的案例。  
   
- 如需有關使用外部處理序的詳細資訊，請參閱 [如何：以不同的隔離和安全性來啟動增益集](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
+ 如需有關使用外部處理序的詳細資訊，請參閱[如何： 啟動增益集具有不同的隔離和安全性](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
   
 ### <a name="lifetime-management"></a>存留期管理  
- 由於增益集模型跨越應用程式定義域和處理序界限，因此記憶體回收本身並不足以釋放及回收物件。 增益集模型提供一種生命週期管理機制，其使用語彙基元和參考計數，而且通常不需要額外的程式設計。 如需詳細資訊，請參閱 [生命週期管理](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 由於增益集模型跨越應用程式定義域和處理序界限，因此記憶體回收本身並不足以釋放及回收物件。 增益集模型提供一種生命週期管理機制，其使用語彙基元和參考計數，而且通常不需要額外的程式設計。 如需詳細資訊，請參閱[生命週期管理](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
  [回到頁首](#top)  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|說明從主應用程式到增益集之區段的通訊管道。 提供逐步解說主題中的程式碼範例，說明如何建構管線，以及如何將區段部署至 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中的管線。|  
-|[應用程式定義域和組件](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|說明應用程式定義域 (針對安全性、可靠性和版本控制提供隔離界限) 與組件之間的關係。|  
+|[應用程式定義域和組件](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|說明應用程式定義域 (針對安全性、可靠性和版本控制提供隔離界限) 與組件之間的關係。|  
   
  [回到頁首](#top)  
   

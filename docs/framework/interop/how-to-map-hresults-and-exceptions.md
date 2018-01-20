@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6b2c19e6076be6364f6a14159a5376a0c8c45731
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>如何：對應 HRESULT 和例外狀況
 COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。 執行階段則負責處理兩者之間的轉換。 .NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。  
@@ -151,5 +151,5 @@ CMyClass::MethodThatThrows
  如 **Message**、**Source** 和 **StackTrace** 之類的例外狀況欄位，並不適用於 **StackOverflowException**。  
   
 ## <a name="see-also"></a>請參閱  
- [進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [進階 COM 互通性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [例外狀況](../../../docs/standard/exceptions/index.md)

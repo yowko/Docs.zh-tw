@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱[安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/17/2018
   
      使用者可能會透過提供惡意輸入給查詢述詞 (Predicate) 和參數名稱所使用的值，在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中執行 SQL 插入式攻擊。 若要避免 SQL 插入式攻擊的風險，請勿結合使用者輸入與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文字。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用查詢產生器方法安全地建構[Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用查詢產生器方法安全地建構[Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 插入式攻擊：  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 01/17/2018
  下列安全性考量會在產生和使用實體類型時適用。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>請勿在應用程式定義域中共用 ObjectContext。  
- 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。 您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。 如需詳細資訊，請參閱[序列化物件](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
+ 與多個應用程式定義域共用 <xref:System.Data.Objects.ObjectContext> 可能會公開連接字串中的資訊。 您應該改為將序列化物件或物件圖形傳輸至其他應用程式定義域，然後將這些物件附加至該應用程式定義域中的 <xref:System.Data.Objects.ObjectContext>。 如需詳細資訊，請參閱[序列化物件](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
   
 #### <a name="prevent-type-safety-violations"></a>避免型別安全 (Type Safety) 違規。  
  如果違反了型別安全，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 便無法保證物件中資料的完整性。 如果您允許未受信任的應用程式使用完全信任的程式碼存取安全性來執行，可能就會發生型別安全違規。  

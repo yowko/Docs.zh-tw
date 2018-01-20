@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75b594d01c8a9297f3383c2648b3853c2c024b9b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="client-configuration"></a>用戶端組態
-您可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端組態來指定位址、繫結、行為以及合約 (亦即用戶端端點的 "ABC" 屬性，用戶端會使用此屬性來連接至服務端點)。 [\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)其屬性用來設定端點 Abc 的項目。 本主題的「設定端點」一節將討論這些屬性。  
+您可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端組態來指定位址、繫結、行為以及合約 (亦即用戶端端點的 "ABC" 屬性，用戶端會使用此屬性來連接至服務端點)。 [\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其屬性用來設定端點 Abc 的項目。 本主題的「設定端點」一節將討論這些屬性。  
   
- [\<端點 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目也包含[\<中繼資料 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)用來匯入和匯出中繼資料，為指定的設定項目[ \<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)包含自訂位址標頭集合的項目和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)項目，讓其他端點端點的驗證交換訊息。 [\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)元素都屬於<xref:System.ServiceModel.EndpointAddress>中討論[位址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)主題。 本主題的「設定中繼資料」小節提供中繼資料擴充使用方式的說明主題連結。  
+ [\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目也包含[\<中繼資料 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)用來匯入和匯出中繼資料，為指定的設定項目[ \<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)包含自訂位址標頭集合的項目和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)項目，讓其他端點端點的驗證交換訊息。 [\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)元素都屬於<xref:System.ServiceModel.EndpointAddress>中討論[位址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)主題。 本主題的「設定中繼資料」小節提供中繼資料擴充使用方式的說明主題連結。  
   
 ## <a name="configuring-endpoints"></a>設定端點  
  用戶端組態的設計可讓用戶端指定其中一個或多個端點，各有自己的名稱、 位址、 和合約，與每個參照[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)和[ \<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)来用來設定該端點的用戶端組態中的項目。 用戶端組態檔應該命名為 "App.config"，因為這是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段所預期的名稱。 下列範例示範用戶端組態檔。  
