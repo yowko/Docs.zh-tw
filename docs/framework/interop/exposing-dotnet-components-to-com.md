@@ -18,47 +18,47 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d34c60a5c2cae5abaa6763b935f6d11a29a39e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="955f1-102">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="955f1-102">Exposing .NET Framework Components to COM</span></span>
-<span data-ttu-id="955f1-103">撰寫 .NET 類型和從 Unmanaged 程式碼取用該類型，對開發人員來說是不同的活動。</span><span class="sxs-lookup"><span data-stu-id="955f1-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="955f1-104">本節描述幾個撰寫與 COM 用戶端交互操作之 Managed 程式碼的祕訣：</span><span class="sxs-lookup"><span data-stu-id="955f1-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  
+# <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="35712-102">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="35712-102">Exposing .NET Framework Components to COM</span></span>
+<span data-ttu-id="35712-103">撰寫 .NET 類型和從 Unmanaged 程式碼取用該類型，對開發人員來說是不同的活動。</span><span class="sxs-lookup"><span data-stu-id="35712-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="35712-104">本節描述幾個撰寫與 COM 用戶端交互操作之 Managed 程式碼的祕訣：</span><span class="sxs-lookup"><span data-stu-id="35712-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  
   
--   <span data-ttu-id="955f1-105">[限定交互操作的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="955f1-105">[Qualifying .NET types for interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).</span></span>  
+-   <span data-ttu-id="35712-105">[限定交互操作的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="35712-105">[Qualifying .NET types for interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).</span></span>  
   
-     <span data-ttu-id="955f1-106">所有您想要公開給 COM 的 Managed 類型、方法、屬性、欄位和事件，都必須是公用的。</span><span class="sxs-lookup"><span data-stu-id="955f1-106">All managed types, methods, properties, fields, and events that you want to expose to COM must be public.</span></span> <span data-ttu-id="955f1-107">類型必須有公用的預設建構函式，它是唯一可透過 COM 叫用的建構函式。</span><span class="sxs-lookup"><span data-stu-id="955f1-107">Types must have a public default constructor, which is the only constructor that can be invoked through COM.</span></span>  
+     <span data-ttu-id="35712-106">所有您想要公開給 COM 的 Managed 類型、方法、屬性、欄位和事件，都必須是公用的。</span><span class="sxs-lookup"><span data-stu-id="35712-106">All managed types, methods, properties, fields, and events that you want to expose to COM must be public.</span></span> <span data-ttu-id="35712-107">類型必須有公用的預設建構函式，它是唯一可透過 COM 叫用的建構函式。</span><span class="sxs-lookup"><span data-stu-id="35712-107">Types must have a public default constructor, which is the only constructor that can be invoked through COM.</span></span>  
   
--   <span data-ttu-id="955f1-108">[套用 Interop 屬性](../../../docs/framework/interop/applying-interop-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="955f1-108">[Applying interop attributes](../../../docs/framework/interop/applying-interop-attributes.md).</span></span>  
+-   <span data-ttu-id="35712-108">[套用 Interop 屬性](../../../docs/framework/interop/applying-interop-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="35712-108">[Applying interop attributes](../../../docs/framework/interop/applying-interop-attributes.md).</span></span>  
   
-     <span data-ttu-id="955f1-109">Managed 程式碼中的自訂屬性，可以加強元件的互通性。</span><span class="sxs-lookup"><span data-stu-id="955f1-109">Custom attributes within managed code can enhance the interoperability of a component.</span></span>  
+     <span data-ttu-id="35712-109">Managed 程式碼中的自訂屬性，可以加強元件的互通性。</span><span class="sxs-lookup"><span data-stu-id="35712-109">Custom attributes within managed code can enhance the interoperability of a component.</span></span>  
   
--   <span data-ttu-id="955f1-110">[封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。</span><span class="sxs-lookup"><span data-stu-id="955f1-110">[Packaging an assembly for COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).</span></span>  
+-   <span data-ttu-id="35712-110">[封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。</span><span class="sxs-lookup"><span data-stu-id="35712-110">[Packaging an assembly for COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).</span></span>  
   
-     <span data-ttu-id="955f1-111">COM 開發人員可能會要求您彙總參考及部署組件的相關步驟。</span><span class="sxs-lookup"><span data-stu-id="955f1-111">COM developers might require that you summarize the steps involved in referencing and deploying your assemblies.</span></span>  
+     <span data-ttu-id="35712-111">COM 開發人員可能會要求您彙總參考及部署組件的相關步驟。</span><span class="sxs-lookup"><span data-stu-id="35712-111">COM developers might require that you summarize the steps involved in referencing and deploying your assemblies.</span></span>  
   
- <span data-ttu-id="955f1-112">此外，本節還會找出與從 COM 用戶端取用 Managed 類型的相關工作。</span><span class="sxs-lookup"><span data-stu-id="955f1-112">Additionally, this section identifies the tasks related to consuming a managed type from a COM client.</span></span>  
+ <span data-ttu-id="35712-112">此外，本節還會找出與從 COM 用戶端取用 Managed 類型的相關工作。</span><span class="sxs-lookup"><span data-stu-id="35712-112">Additionally, this section identifies the tasks related to consuming a managed type from a COM client.</span></span>  
   
-#### <a name="to-consume-a-managed-type-from-com"></a><span data-ttu-id="955f1-113">從 COM 取用 Managed 類型</span><span class="sxs-lookup"><span data-stu-id="955f1-113">To consume a managed type from COM</span></span>  
+#### <a name="to-consume-a-managed-type-from-com"></a><span data-ttu-id="35712-113">從 COM 取用 Managed 類型</span><span class="sxs-lookup"><span data-stu-id="35712-113">To consume a managed type from COM</span></span>  
   
-1.  <span data-ttu-id="955f1-114">[向 COM 登錄組件](../../../docs/framework/interop/registering-assemblies-with-com.md)。</span><span class="sxs-lookup"><span data-stu-id="955f1-114">[Register assemblies with COM](../../../docs/framework/interop/registering-assemblies-with-com.md).</span></span>  
+1.  <span data-ttu-id="35712-114">[向 COM 登錄組件](../../../docs/framework/interop/registering-assemblies-with-com.md)。</span><span class="sxs-lookup"><span data-stu-id="35712-114">[Register assemblies with COM](../../../docs/framework/interop/registering-assemblies-with-com.md).</span></span>  
   
-     <span data-ttu-id="955f1-115">組件 (與型別程式庫) 中的類型必須在設計階段登錄。</span><span class="sxs-lookup"><span data-stu-id="955f1-115">Types in an assembly (and type libraries) must be registered at design time.</span></span> <span data-ttu-id="955f1-116">如果安裝程式不登錄組件，請指示 COM 開發人員使用 Regasm.exe。</span><span class="sxs-lookup"><span data-stu-id="955f1-116">If an installer does not register the assembly, instruct COM developers to use Regasm.exe.</span></span>  
+     <span data-ttu-id="35712-115">組件 (與型別程式庫) 中的類型必須在設計階段登錄。</span><span class="sxs-lookup"><span data-stu-id="35712-115">Types in an assembly (and type libraries) must be registered at design time.</span></span> <span data-ttu-id="35712-116">如果安裝程式不登錄組件，請指示 COM 開發人員使用 Regasm.exe。</span><span class="sxs-lookup"><span data-stu-id="35712-116">If an installer does not register the assembly, instruct COM developers to use Regasm.exe.</span></span>  
   
-2.  <span data-ttu-id="955f1-117">[參考 COM 的 .NET 類型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。</span><span class="sxs-lookup"><span data-stu-id="955f1-117">[Reference .NET types from COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).</span></span>  
+2.  <span data-ttu-id="35712-117">[參考 COM 的 .NET 類型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。</span><span class="sxs-lookup"><span data-stu-id="35712-117">[Reference .NET types from COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).</span></span>  
   
-     <span data-ttu-id="955f1-118">COM 開發人員可以使用目前所用的相同工具和技術，參考組件中的類型。</span><span class="sxs-lookup"><span data-stu-id="955f1-118">COM developers can reference types in an assembly using the same tools and techniques they use today.</span></span>  
+     <span data-ttu-id="35712-118">COM 開發人員可以使用目前所用的相同工具和技術，參考組件中的類型。</span><span class="sxs-lookup"><span data-stu-id="35712-118">COM developers can reference types in an assembly using the same tools and techniques they use today.</span></span>  
   
-3.  <span data-ttu-id="955f1-119">[呼叫 .NET 物件](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)。</span><span class="sxs-lookup"><span data-stu-id="955f1-119">[Call a .NET object](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).</span></span>  
+3.  <span data-ttu-id="35712-119">[呼叫 .NET 物件](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)。</span><span class="sxs-lookup"><span data-stu-id="35712-119">[Call a .NET object](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33).</span></span>  
   
-     <span data-ttu-id="955f1-120">COM 開發人員可以用在任何 Unmanaged 類型上呼叫方法的相同方式，在 .NET 物件上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="955f1-120">COM developers can call methods on the .NET object the same way they call methods on any unmanaged type.</span></span> <span data-ttu-id="955f1-121">例如，COM **CoCreateInstance** API 會啟動 .NET 物件。</span><span class="sxs-lookup"><span data-stu-id="955f1-121">For example, the COM **CoCreateInstance** API activates .NET objects.</span></span>  
+     <span data-ttu-id="35712-120">COM 開發人員可以用在任何 Unmanaged 類型上呼叫方法的相同方式，在 .NET 物件上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="35712-120">COM developers can call methods on the .NET object the same way they call methods on any unmanaged type.</span></span> <span data-ttu-id="35712-121">例如，COM **CoCreateInstance** API 會啟動 .NET 物件。</span><span class="sxs-lookup"><span data-stu-id="35712-121">For example, the COM **CoCreateInstance** API activates .NET objects.</span></span>  
   
-4.  <span data-ttu-id="955f1-122">[部署供 COM 存取的應用程式](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)。</span><span class="sxs-lookup"><span data-stu-id="955f1-122">[Deploy an application for COM access](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).</span></span>  
+4.  <span data-ttu-id="35712-122">[部署供 COM 存取的應用程式](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)。</span><span class="sxs-lookup"><span data-stu-id="35712-122">[Deploy an application for COM access](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce).</span></span>  
   
-     <span data-ttu-id="955f1-123">強式名稱組件可以安裝在全域組件快取，而且需要其發行者的簽章。</span><span class="sxs-lookup"><span data-stu-id="955f1-123">A strong-named assembly can be installed in the global assembly cache and requires a signature from its publisher.</span></span> <span data-ttu-id="955f1-124">沒有強式名稱的組件必須安裝在用戶端的應用程式目錄中。</span><span class="sxs-lookup"><span data-stu-id="955f1-124">Assemblies that are not strong named must be installed in the application directory of the client.</span></span>  
+     <span data-ttu-id="35712-123">強式名稱組件可以安裝在全域組件快取，而且需要其發行者的簽章。</span><span class="sxs-lookup"><span data-stu-id="35712-123">A strong-named assembly can be installed in the global assembly cache and requires a signature from its publisher.</span></span> <span data-ttu-id="35712-124">沒有強式名稱的組件必須安裝在用戶端的應用程式目錄中。</span><span class="sxs-lookup"><span data-stu-id="35712-124">Assemblies that are not strong named must be installed in the application directory of the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="955f1-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="955f1-125">See Also</span></span>  
- [<span data-ttu-id="955f1-126">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="955f1-126">Interoperating with Unmanaged Code</span></span>](../../../docs/framework/interop/index.md)  
- [<span data-ttu-id="955f1-127">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="955f1-127">COM Interop Sample: COM Client and .NET Server</span></span>](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+## <a name="see-also"></a><span data-ttu-id="35712-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="35712-125">See Also</span></span>  
+ [<span data-ttu-id="35712-126">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="35712-126">Interoperating with Unmanaged Code</span></span>](../../../docs/framework/interop/index.md)  
+ [<span data-ttu-id="35712-127">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="35712-127">COM Interop Sample: COM Client and .NET Server</span></span>](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

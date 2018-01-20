@@ -14,22 +14,22 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 4b90bd304ef8d87593c5b78febc0182c8fa2f091
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6680d01b068a6ac1c4f9abcda69779c9cd0786a0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="c4983-102">&lt;wsDualHttpBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="c4983-102">&lt;security&gt; of &lt;wsDualHttpBinding&gt;</span></span>
-<span data-ttu-id="c4983-103">定義的安全性功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="c4983-103">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
+# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="17e3f-102">&lt;wsDualHttpBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="17e3f-102">&lt;security&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="17e3f-103">定義的安全性功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="17e3f-103">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- <span data-ttu-id="c4983-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c4983-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="c4983-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="c4983-105">\<bindings></span></span>  
-<span data-ttu-id="c4983-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="c4983-106">\<wsDualHttpBinding></span></span>  
-<span data-ttu-id="c4983-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="c4983-107">\<binding></span></span>  
-<span data-ttu-id="c4983-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="c4983-108">\<security></span></span>  
+ <span data-ttu-id="17e3f-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="17e3f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="17e3f-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="17e3f-105">\<bindings></span></span>  
+<span data-ttu-id="17e3f-106">\<wsDualHttpBinding></span><span class="sxs-lookup"><span data-stu-id="17e3f-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="17e3f-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="17e3f-107">\<binding></span></span>  
+<span data-ttu-id="17e3f-108">\<security></span><span class="sxs-lookup"><span data-stu-id="17e3f-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4983-109">語法</span><span class="sxs-lookup"><span data-stu-id="c4983-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17e3f-109">語法</span><span class="sxs-lookup"><span data-stu-id="17e3f-109">Syntax</span></span>  
   
 ```xml  
 <security mode="Message/None">  
@@ -40,42 +40,42 @@ ms.lasthandoff: 12/22/2017
 </security>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c4983-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c4983-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c4983-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c4983-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="17e3f-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="17e3f-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="17e3f-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="17e3f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c4983-112">屬性</span><span class="sxs-lookup"><span data-stu-id="c4983-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="17e3f-112">屬性</span><span class="sxs-lookup"><span data-stu-id="17e3f-112">Attributes</span></span>  
   
-|<span data-ttu-id="c4983-113">屬性</span><span class="sxs-lookup"><span data-stu-id="c4983-113">Attribute</span></span>|<span data-ttu-id="c4983-114">描述</span><span class="sxs-lookup"><span data-stu-id="c4983-114">Description</span></span>|  
+|<span data-ttu-id="17e3f-113">屬性</span><span class="sxs-lookup"><span data-stu-id="17e3f-113">Attribute</span></span>|<span data-ttu-id="17e3f-114">描述</span><span class="sxs-lookup"><span data-stu-id="17e3f-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c4983-115">模式</span><span class="sxs-lookup"><span data-stu-id="c4983-115">mode</span></span>|<span data-ttu-id="c4983-116">選擇性的。</span><span class="sxs-lookup"><span data-stu-id="c4983-116">-   Optional.</span></span> <span data-ttu-id="c4983-117">指定套用的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="c4983-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="c4983-118">預設值是 `Message`。</span><span class="sxs-lookup"><span data-stu-id="c4983-118">The default value is `Message`.</span></span> <span data-ttu-id="c4983-119">此屬性的型別為 <xref:System.ServiceModel.WSDualHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="c4983-119">This attribute is of type <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>|  
+|<span data-ttu-id="17e3f-115">模式</span><span class="sxs-lookup"><span data-stu-id="17e3f-115">mode</span></span>|<span data-ttu-id="17e3f-116">選擇性的。</span><span class="sxs-lookup"><span data-stu-id="17e3f-116">-   Optional.</span></span> <span data-ttu-id="17e3f-117">指定套用的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="17e3f-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="17e3f-118">預設值是 `Message`。</span><span class="sxs-lookup"><span data-stu-id="17e3f-118">The default value is `Message`.</span></span> <span data-ttu-id="17e3f-119">此屬性的型別為 <xref:System.ServiceModel.WSDualHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="17e3f-119">This attribute is of type <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="c4983-120">Mode 屬性</span><span class="sxs-lookup"><span data-stu-id="c4983-120">Mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="17e3f-120">Mode 屬性</span><span class="sxs-lookup"><span data-stu-id="17e3f-120">Mode Attribute</span></span>  
   
-|<span data-ttu-id="c4983-121">值</span><span class="sxs-lookup"><span data-stu-id="c4983-121">Value</span></span>|<span data-ttu-id="c4983-122">描述</span><span class="sxs-lookup"><span data-stu-id="c4983-122">Description</span></span>|  
+|<span data-ttu-id="17e3f-121">值</span><span class="sxs-lookup"><span data-stu-id="17e3f-121">Value</span></span>|<span data-ttu-id="17e3f-122">描述</span><span class="sxs-lookup"><span data-stu-id="17e3f-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="c4983-123">無</span><span class="sxs-lookup"><span data-stu-id="c4983-123">None</span></span>|<span data-ttu-id="c4983-124">停用安全性。</span><span class="sxs-lookup"><span data-stu-id="c4983-124">Security is disabled.</span></span>|  
-|<span data-ttu-id="c4983-125">訊息</span><span class="sxs-lookup"><span data-stu-id="c4983-125">Message</span></span>|<span data-ttu-id="c4983-126">系統會使用 SOAP 訊息安全性來提供安全性。</span><span class="sxs-lookup"><span data-stu-id="c4983-126">Security is provided using SOAP message security.</span></span>|  
+|<span data-ttu-id="17e3f-123">無</span><span class="sxs-lookup"><span data-stu-id="17e3f-123">None</span></span>|<span data-ttu-id="17e3f-124">停用安全性。</span><span class="sxs-lookup"><span data-stu-id="17e3f-124">Security is disabled.</span></span>|  
+|<span data-ttu-id="17e3f-125">訊息</span><span class="sxs-lookup"><span data-stu-id="17e3f-125">Message</span></span>|<span data-ttu-id="17e3f-126">系統會使用 SOAP 訊息安全性來提供安全性。</span><span class="sxs-lookup"><span data-stu-id="17e3f-126">Security is provided using SOAP message security.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c4983-127">子元素</span><span class="sxs-lookup"><span data-stu-id="c4983-127">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="17e3f-127">子元素</span><span class="sxs-lookup"><span data-stu-id="17e3f-127">Child Elements</span></span>  
   
-|<span data-ttu-id="c4983-128">項目</span><span class="sxs-lookup"><span data-stu-id="c4983-128">Element</span></span>|<span data-ttu-id="c4983-129">描述</span><span class="sxs-lookup"><span data-stu-id="c4983-129">Description</span></span>|  
+|<span data-ttu-id="17e3f-128">項目</span><span class="sxs-lookup"><span data-stu-id="17e3f-128">Element</span></span>|<span data-ttu-id="17e3f-129">描述</span><span class="sxs-lookup"><span data-stu-id="17e3f-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c4983-130">\<訊息 ></span><span class="sxs-lookup"><span data-stu-id="c4983-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|<span data-ttu-id="c4983-131">定義訊息層級安全性的設定。</span><span class="sxs-lookup"><span data-stu-id="c4983-131">Defines the settings for the message-level security.</span></span> <span data-ttu-id="c4983-132">此項目的型別為 <xref:System.ServiceModel.MessageSecurityOverHttp>。</span><span class="sxs-lookup"><span data-stu-id="c4983-132">This element is of type <xref:System.ServiceModel.MessageSecurityOverHttp>.</span></span>|  
+|[<span data-ttu-id="17e3f-130">\<message></span><span class="sxs-lookup"><span data-stu-id="17e3f-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|<span data-ttu-id="17e3f-131">定義訊息層級安全性的設定。</span><span class="sxs-lookup"><span data-stu-id="17e3f-131">Defines the settings for the message-level security.</span></span> <span data-ttu-id="17e3f-132">此項目的型別為 <xref:System.ServiceModel.MessageSecurityOverHttp>。</span><span class="sxs-lookup"><span data-stu-id="17e3f-132">This element is of type <xref:System.ServiceModel.MessageSecurityOverHttp>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="c4983-133">父項目</span><span class="sxs-lookup"><span data-stu-id="c4983-133">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="17e3f-133">父項目</span><span class="sxs-lookup"><span data-stu-id="17e3f-133">Parent Elements</span></span>  
   
-|<span data-ttu-id="c4983-134">項目</span><span class="sxs-lookup"><span data-stu-id="c4983-134">Element</span></span>|<span data-ttu-id="c4983-135">描述</span><span class="sxs-lookup"><span data-stu-id="c4983-135">Description</span></span>|  
+|<span data-ttu-id="17e3f-134">項目</span><span class="sxs-lookup"><span data-stu-id="17e3f-134">Element</span></span>|<span data-ttu-id="17e3f-135">描述</span><span class="sxs-lookup"><span data-stu-id="17e3f-135">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c4983-136">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="c4983-136">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="c4983-137">定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="c4983-137">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
+|[<span data-ttu-id="17e3f-136">\<binding></span><span class="sxs-lookup"><span data-stu-id="17e3f-136">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="17e3f-137">定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="17e3f-137">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c4983-138">備註</span><span class="sxs-lookup"><span data-stu-id="c4983-138">Remarks</span></span>  
- <span data-ttu-id="c4983-139">雙重繫結會向服務公開用戶端的 IP 位址，</span><span class="sxs-lookup"><span data-stu-id="c4983-139">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="c4983-140">用戶端應該使用安全性確保本身只連接其信任的服務。</span><span class="sxs-lookup"><span data-stu-id="c4983-140">The client should use security to ensure that it only connects to services it trusts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="17e3f-138">備註</span><span class="sxs-lookup"><span data-stu-id="17e3f-138">Remarks</span></span>  
+ <span data-ttu-id="17e3f-139">雙重繫結會向服務公開用戶端的 IP 位址，</span><span class="sxs-lookup"><span data-stu-id="17e3f-139">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="17e3f-140">用戶端應該使用安全性確保本身只連接其信任的服務。</span><span class="sxs-lookup"><span data-stu-id="17e3f-140">The client should use security to ensure that it only connects to services it trusts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4983-141">請參閱</span><span class="sxs-lookup"><span data-stu-id="c4983-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="17e3f-141">請參閱</span><span class="sxs-lookup"><span data-stu-id="17e3f-141">See Also</span></span>  
  <xref:System.ServiceModel.WSDualHttpSecurity>  
  <xref:System.ServiceModel.BasicHttpSecurity>  
- [<span data-ttu-id="c4983-142">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="c4983-142">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="c4983-143">繫結</span><span class="sxs-lookup"><span data-stu-id="c4983-143">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="c4983-144">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="c4983-144">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="c4983-145">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="c4983-145">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="c4983-146">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="c4983-146">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="17e3f-142">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="17e3f-142">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="17e3f-143">繫結</span><span class="sxs-lookup"><span data-stu-id="17e3f-143">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="17e3f-144">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="17e3f-144">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="17e3f-145">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="17e3f-145">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="17e3f-146">\<binding></span><span class="sxs-lookup"><span data-stu-id="17e3f-146">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

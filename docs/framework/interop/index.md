@@ -1,12 +1,8 @@
 ---
-title: "與 Unmanaged 程式碼互通"
-ms.custom: 
-ms.date: 03/30/2017
+title: "與 unmanaged 程式碼互通"
+ms.date: 01/17/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -17,47 +13,53 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38c569633304ed9e6f86e7a04ef7b0dfa79b6704
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="40951-102">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="40951-102">Interoperating with Unmanaged Code</span></span>
-<span data-ttu-id="40951-103">.NET Framework 可促進與 COM 元件、COM+ 服務、外部型別程式庫和許多作業系統服務進行的互動。</span><span class="sxs-lookup"><span data-stu-id="40951-103">The .NET Framework promotes interaction with COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="40951-104">資料類型、方法簽章和錯誤處理機制因 Managed 和 Unmanaged 物件模型而有所不同。</span><span class="sxs-lookup"><span data-stu-id="40951-104">Data types, method signatures, and error-handling mechanisms vary between managed and unmanaged object models.</span></span> <span data-ttu-id="40951-105">為了簡化 .NET Framework 元件與 Unmanaged 程式碼之間的互通性，以及簡化移轉路徑，通用語言執行平台會對用戶端與伺服器隱匿這些物件模型中的差異。</span><span class="sxs-lookup"><span data-stu-id="40951-105">To simplify interoperation between .NET Framework components and unmanaged code and to ease the migration path, the common language runtime conceals from both clients and servers the differences in these object models.</span></span>  
-  
- <span data-ttu-id="40951-106">在執行階段的控制之下執行的程式碼稱為 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="40951-106">Code that executes under the control of the runtime is called managed code.</span></span> <span data-ttu-id="40951-107">相反地，在執行階段外部執行的程式碼稱為 Unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="40951-107">Conversely, code that runs outside the runtime is called unmanaged code.</span></span> <span data-ttu-id="40951-108">COM 元件、ActiveX 介面及 Win32 API 函式都是 Unmanaged 程式碼的範例。</span><span class="sxs-lookup"><span data-stu-id="40951-108">COM components, ActiveX interfaces, and Win32 API functions are examples of unmanaged code.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="40951-109">本節內容</span><span class="sxs-lookup"><span data-stu-id="40951-109">In This Section</span></span>  
- [<span data-ttu-id="40951-110">與 Unmanaged 程式碼交互操作的「如何」主題</span><span class="sxs-lookup"><span data-stu-id="40951-110">Interoperating with Unmanaged Code How-to Topics</span></span>](http://msdn.microsoft.com/en-us/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
- <span data-ttu-id="40951-111">提供概念文件中所有與 Unmanaged 程式碼交互操作之「如何」主題的連結。</span><span class="sxs-lookup"><span data-stu-id="40951-111">Provides links to all How-to topics found in the conceptual documentation for interoperating with unmanaged code.</span></span>  
-  
- [<span data-ttu-id="40951-112">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="40951-112">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)  
- <span data-ttu-id="40951-113">描述如何從 .NET Framework 應用程式使用 COM 元件。</span><span class="sxs-lookup"><span data-stu-id="40951-113">Describes how to use COM components from .NET Framework applications.</span></span>  
-  
- [<span data-ttu-id="40951-114">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="40951-114">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- <span data-ttu-id="40951-115">描述如何從 COM 應用程式使用 .NET Framework 元件。</span><span class="sxs-lookup"><span data-stu-id="40951-115">Describes how to use .NET Framework components from COM applications.</span></span>  
-  
- [<span data-ttu-id="40951-116">使用 Unmanaged DLL 函式</span><span class="sxs-lookup"><span data-stu-id="40951-116">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- <span data-ttu-id="40951-117">描述如何使用平台叫用呼叫 Unmanaged DLL 函式。</span><span class="sxs-lookup"><span data-stu-id="40951-117">Describes how to call unmanaged DLL functions using platform invoke.</span></span>  
-  
- [<span data-ttu-id="40951-118">交互操作的設計考量</span><span class="sxs-lookup"><span data-stu-id="40951-118">Design Considerations for Interoperation</span></span>](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
- <span data-ttu-id="40951-119">提供撰寫整合式 COM 元件的秘訣。</span><span class="sxs-lookup"><span data-stu-id="40951-119">Provides tips for writing integrated COM components.</span></span>  
-  
- [<span data-ttu-id="40951-120">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="40951-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
- <span data-ttu-id="40951-121">描述適用於 COM Interop 和平台叫用的封送處理。</span><span class="sxs-lookup"><span data-stu-id="40951-121">Describes marshaling for COM interop and platform invoke.</span></span>  
-  
- [<span data-ttu-id="40951-122">操作說明：對應 HRESULT 和例外狀況</span><span class="sxs-lookup"><span data-stu-id="40951-122">How to: Map HRESULTs and Exceptions</span></span>](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
- <span data-ttu-id="40951-123">描述例外狀況與 HRESULT 之間的對應。</span><span class="sxs-lookup"><span data-stu-id="40951-123">Describes the mapping between exceptions and HRESULTs.</span></span>  
-  
- [<span data-ttu-id="40951-124">使用泛型型別交互操作</span><span class="sxs-lookup"><span data-stu-id="40951-124">Interoperating Using Generic Types</span></span>](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
- <span data-ttu-id="40951-125">描述泛型型別在 COM Interop 中使用時的行為。</span><span class="sxs-lookup"><span data-stu-id="40951-125">Describes the behavior of generic types when used in COM interop.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="40951-126">相關章節</span><span class="sxs-lookup"><span data-stu-id="40951-126">Related Sections</span></span>  
- [<span data-ttu-id="40951-127">進階 COM 互通性</span><span class="sxs-lookup"><span data-stu-id="40951-127">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- <span data-ttu-id="40951-128">提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。</span><span class="sxs-lookup"><span data-stu-id="40951-128">Provides links to more information about incorporating COM components into your .NET Framework application.</span></span>
+# <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="5fb2a-102">與 unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="5fb2a-102">Interoperating with unmanaged code</span></span>
+
+<span data-ttu-id="5fb2a-103">.NET Framework 可促進與 COM 元件、COM+ 服務、外部型別程式庫和許多作業系統服務進行的互動。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-103">The .NET Framework promotes interaction with COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="5fb2a-104">資料類型、方法簽章和錯誤處理機制因 Managed 和 Unmanaged 物件模型而有所不同。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-104">Data types, method signatures, and error-handling mechanisms vary between managed and unmanaged object models.</span></span> <span data-ttu-id="5fb2a-105">為了簡化 .NET Framework 元件與 Unmanaged 程式碼之間的互通性，以及簡化移轉路徑，通用語言執行平台會對用戶端與伺服器隱匿這些物件模型中的差異。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-105">To simplify interoperation between .NET Framework components and unmanaged code and to ease the migration path, the common language runtime conceals from both clients and servers the differences in these object models.</span></span>
+
+<span data-ttu-id="5fb2a-106">在執行階段的控制之下執行的程式碼稱為 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-106">Code that executes under the control of the runtime is called managed code.</span></span> <span data-ttu-id="5fb2a-107">相反地，在執行階段外部執行的程式碼稱為 Unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-107">Conversely, code that runs outside the runtime is called unmanaged code.</span></span> <span data-ttu-id="5fb2a-108">COM 元件、ActiveX 介面及 Win32 API 函式都是 Unmanaged 程式碼的範例。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-108">COM components, ActiveX interfaces, and Win32 API functions are examples of unmanaged code.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="5fb2a-109">本節內容</span><span class="sxs-lookup"><span data-stu-id="5fb2a-109">In this section</span></span>
+
+[<span data-ttu-id="5fb2a-110">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5fb2a-110">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)  
+<span data-ttu-id="5fb2a-111">描述如何從 .NET Framework 應用程式使用 COM 元件。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-111">Describes how to use COM components from .NET Framework applications.</span></span>
+
+[<span data-ttu-id="5fb2a-112">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="5fb2a-112">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)  
+<span data-ttu-id="5fb2a-113">描述如何從 COM 應用程式使用 .NET Framework 元件。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-113">Describes how to use .NET Framework components from COM applications.</span></span>
+
+[<span data-ttu-id="5fb2a-114">使用 Unmanaged DLL 函式</span><span class="sxs-lookup"><span data-stu-id="5fb2a-114">Consuming Unmanaged DLL Functions</span></span>](consuming-unmanaged-dll-functions.md)  
+<span data-ttu-id="5fb2a-115">描述如何使用平台叫用呼叫 Unmanaged DLL 函式。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-115">Describes how to call unmanaged DLL functions using platform invoke.</span></span>
+
+[<span data-ttu-id="5fb2a-116">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="5fb2a-116">Interop Marshaling</span></span>](interop-marshaling.md)  
+<span data-ttu-id="5fb2a-117">描述適用於 COM Interop 和平台叫用的封送處理。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-117">Describes marshaling for COM interop and platform invoke.</span></span>
+
+[<span data-ttu-id="5fb2a-118">操作說明：對應 HRESULT 和例外狀況</span><span class="sxs-lookup"><span data-stu-id="5fb2a-118">How to: Map HRESULTs and Exceptions</span></span>](how-to-map-hresults-and-exceptions.md)  
+<span data-ttu-id="5fb2a-119">描述例外狀況與 HRESULT 之間的對應。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-119">Describes the mapping between exceptions and HRESULTs.</span></span>
+
+[<span data-ttu-id="5fb2a-120">COM 包裝函式</span><span class="sxs-lookup"><span data-stu-id="5fb2a-120">COM Wrappers</span></span>](com-wrappers.md)  
+<span data-ttu-id="5fb2a-121">描述由 COM interop 包裝函式。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-121">Describes the wrappers provided by COM interop.</span></span>
+
+[<span data-ttu-id="5fb2a-122">類型等價和內嵌 Interop 類型</span><span class="sxs-lookup"><span data-stu-id="5fb2a-122">Type Equivalence and Embedded Interop Types</span></span>](type-equivalence-and-embedded-interop-types.md)  
+<span data-ttu-id="5fb2a-123">描述如何將 COM 類型的類型資訊內嵌在組件和 common language runtime 如何決定內嵌 COM 類型相等。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-123">Describes how type information for COM types is embedded in assemblies, and how the common language runtime determines the equivalence of embedded COM types.</span></span>
+
+[<span data-ttu-id="5fb2a-124">如何：使用 Tlbimp.exe 產生主要 Interop 組件</span><span class="sxs-lookup"><span data-stu-id="5fb2a-124">How to: Generate Primary Interop Assemblies Using Tlbimp.exe</span></span>](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+<span data-ttu-id="5fb2a-125">本文說明如何產生主要 interop 組件使用*Tlbimp.exe* （類型程式庫匯入工具）。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-125">Describes how to produce primary interop assemblies using *Tlbimp.exe* (Type Library Importer).</span></span>
+
+[<span data-ttu-id="5fb2a-126">如何：登錄主要 Interop 組件</span><span class="sxs-lookup"><span data-stu-id="5fb2a-126">How to: Register Primary Interop Assemblies</span></span>](how-to-register-primary-interop-assemblies.md)  
+<span data-ttu-id="5fb2a-127">說明如何註冊主要 interop 組件之前您可以在專案中參考它們。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-127">Describes how to register the primary interop assemblies before you can reference them in your projects.</span></span>
+
+[<span data-ttu-id="5fb2a-128">免註冊的 COM Interop</span><span class="sxs-lookup"><span data-stu-id="5fb2a-128">Registration-Free COM Interop</span></span>](registration-free-com-interop.md)  
+<span data-ttu-id="5fb2a-129">描述 COM interop 如何不使用 Windows 登錄啟動元件。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-129">Describes how COM interop can activate components without using the Windows registry.</span></span>
+
+[<span data-ttu-id="5fb2a-130">如何：設定免註冊啟用的 .NET Framework 架構 COM 元件</span><span class="sxs-lookup"><span data-stu-id="5fb2a-130">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>](configure-net-framework-based-com-components-for-reg.md)  
+<span data-ttu-id="5fb2a-131">描述如何建立應用程式資訊清單以及如何建立和內嵌元件資訊清單。</span><span class="sxs-lookup"><span data-stu-id="5fb2a-131">Describes how to create an application manifest and how to create and embed a component manifest.</span></span>

@@ -18,30 +18,30 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a013eac5b3306339c82abaa62f97e4aad7d8ed76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35be6df4f31c30c738aebdba95daf0e3b38c651b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="d8872-102">音訊和視訊 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="d8872-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="d8872-103">下列主題示範如何使用<xref:System.Windows.Controls.MediaElement>整合您的應用程式中的音訊及視訊內容。</span><span class="sxs-lookup"><span data-stu-id="d8872-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="e4084-102">音訊和視訊 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e4084-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="e4084-103">下列主題示範如何使用<xref:System.Windows.Controls.MediaElement>整合您的應用程式中的音訊及視訊內容。</span><span class="sxs-lookup"><span data-stu-id="e4084-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d8872-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d8872-104">In This Section</span></span>  
- [<span data-ttu-id="d8872-105">如何： 以動態方式加入項目</span><span class="sxs-lookup"><span data-stu-id="d8872-105">How to: Add an Element Dynamically</span></span>](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [<span data-ttu-id="d8872-106">控制 MediaElement (播放、暫停、停止、音量和速度)</span><span class="sxs-lookup"><span data-stu-id="d8872-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="d8872-107">使用分鏡腳本控制 MediaElement</span><span class="sxs-lookup"><span data-stu-id="d8872-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="d8872-108">以使用者事件觸發媒體播放</span><span class="sxs-lookup"><span data-stu-id="d8872-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="d8872-109">重複播放媒體</span><span class="sxs-lookup"><span data-stu-id="d8872-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [<span data-ttu-id="d8872-110">以動畫播放媒體</span><span class="sxs-lookup"><span data-stu-id="d8872-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [<span data-ttu-id="d8872-111">對 MediaElement 使用轉換</span><span class="sxs-lookup"><span data-stu-id="d8872-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e4084-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e4084-104">In This Section</span></span>  
+ [<span data-ttu-id="e4084-105">如何： 以動態方式加入項目</span><span class="sxs-lookup"><span data-stu-id="e4084-105">How to: Add an Element Dynamically</span></span>](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [<span data-ttu-id="e4084-106">控制 MediaElement (播放、暫停、停止、音量和速度)</span><span class="sxs-lookup"><span data-stu-id="e4084-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="e4084-107">使用分鏡腳本控制 MediaElement</span><span class="sxs-lookup"><span data-stu-id="e4084-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="e4084-108">以使用者事件觸發媒體播放</span><span class="sxs-lookup"><span data-stu-id="e4084-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="e4084-109">重複播放媒體</span><span class="sxs-lookup"><span data-stu-id="e4084-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="e4084-110">以動畫播放媒體</span><span class="sxs-lookup"><span data-stu-id="e4084-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="e4084-111">對 MediaElement 使用轉換</span><span class="sxs-lookup"><span data-stu-id="e4084-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="d8872-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="d8872-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e4084-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="e4084-112">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="d8872-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="d8872-113">Related Sections</span></span>  
- [<span data-ttu-id="d8872-114">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="d8872-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="e4084-113">相關章節</span><span class="sxs-lookup"><span data-stu-id="e4084-113">Related Sections</span></span>  
+ [<span data-ttu-id="e4084-114">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="e4084-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

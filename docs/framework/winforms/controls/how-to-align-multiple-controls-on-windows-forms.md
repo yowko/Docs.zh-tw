@@ -19,33 +19,33 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 42a1cf56fb4b2c6cd368d4bbc0ddeb8ae5a2ea9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f106189297d4334f8752f3b96ff4bf63ea6d8b41
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="b8ef9-102">如何：對齊 Windows Form 上的多個控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-102">How to: Align Multiple Controls on Windows Forms</span></span>
-<span data-ttu-id="b8ef9-103">若要標準化 Windows 架構應用程式的使用者介面 (UI) 的配置，您可以放置之控制項的單一命令的群組。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="72aeb-102">如何：對齊 Windows Form 上的多個控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-102">How to: Align Multiple Controls on Windows Forms</span></span>
+<span data-ttu-id="72aeb-103">若要標準化 Windows 架構應用程式的使用者介面 (UI) 的配置，您可以放置之控制項的單一命令的群組。</span><span class="sxs-lookup"><span data-stu-id="72aeb-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b8ef9-104">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="b8ef9-105">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="b8ef9-106">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="b8ef9-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="72aeb-104">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="72aeb-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="72aeb-105">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="72aeb-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="72aeb-106">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="72aeb-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="b8ef9-107">若要對齊表單上的多個控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-107">To align multiple controls on a form</span></span>  
+### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="72aeb-107">若要對齊表單上的多個控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-107">To align multiple controls on a form</span></span>  
   
-1.  <span data-ttu-id="b8ef9-108">開啟包含您要放置在的控制項的表單**Windows Form 設計工具**。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-108">Open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>  
+1.  <span data-ttu-id="72aeb-108">開啟包含您要放置在的控制項的表單**Windows Form 設計工具**。</span><span class="sxs-lookup"><span data-stu-id="72aeb-108">Open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>  
   
-2.  <span data-ttu-id="b8ef9-109">選取您想要對齊，讓您選取的第一個控制項的其他人應該對齊的主要控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-109">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>  
+2.  <span data-ttu-id="72aeb-109">選取您想要對齊，讓您選取的第一個控制項的其他人應該對齊的主要控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="72aeb-109">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>  
   
-3.  <span data-ttu-id="b8ef9-110">在**格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。</span><span class="sxs-lookup"><span data-stu-id="b8ef9-110">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>  
+3.  <span data-ttu-id="72aeb-110">在**格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。</span><span class="sxs-lookup"><span data-stu-id="72aeb-110">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8ef9-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="b8ef9-111">See Also</span></span>  
- [<span data-ttu-id="b8ef9-112">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-112">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- [<span data-ttu-id="b8ef9-113">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b8ef9-113">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [<span data-ttu-id="b8ef9-114">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-114">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [<span data-ttu-id="b8ef9-115">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [<span data-ttu-id="b8ef9-116">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-116">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [<span data-ttu-id="b8ef9-117">逐步解說：使用對齊線排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-117">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [<span data-ttu-id="b8ef9-118">逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-118">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [<span data-ttu-id="b8ef9-119">逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項</span><span class="sxs-lookup"><span data-stu-id="b8ef9-119">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [<span data-ttu-id="b8ef9-120">操作說明：將現有控制項重新指派至不同的父代</span><span class="sxs-lookup"><span data-stu-id="b8ef9-120">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a><span data-ttu-id="72aeb-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="72aeb-111">See Also</span></span>  
+ [<span data-ttu-id="72aeb-112">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-112">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="72aeb-113">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="72aeb-113">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="72aeb-114">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-114">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="72aeb-115">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="72aeb-116">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-116">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [<span data-ttu-id="72aeb-117">逐步解說：使用對齊線排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-117">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="72aeb-118">逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-118">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="72aeb-119">逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項</span><span class="sxs-lookup"><span data-stu-id="72aeb-119">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="72aeb-120">操作說明：將現有控制項重新指派至不同的父代</span><span class="sxs-lookup"><span data-stu-id="72aeb-120">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)

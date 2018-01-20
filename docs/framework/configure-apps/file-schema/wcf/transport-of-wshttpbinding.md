@@ -14,23 +14,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 57496371032fd8f07f69bf71cc5c266d977bf57d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b73a3810376cf05e8b47e29d3997d6a935c9646
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="2f383-102">&lt;wsHttpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="2f383-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
-<span data-ttu-id="2f383-103">定義 HTTP 傳輸的驗證設定。</span><span class="sxs-lookup"><span data-stu-id="2f383-103">Defines authentication settings for the HTTP transport.</span></span>  
+# <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="f2b10-102">&lt;wsHttpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="f2b10-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
+<span data-ttu-id="f2b10-103">定義 HTTP 傳輸的驗證設定。</span><span class="sxs-lookup"><span data-stu-id="f2b10-103">Defines authentication settings for the HTTP transport.</span></span>  
   
- <span data-ttu-id="2f383-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="2f383-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="2f383-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="2f383-105">\<bindings></span></span>  
-<span data-ttu-id="2f383-106">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="2f383-106">\<wsHttpBinding></span></span>  
-<span data-ttu-id="2f383-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="2f383-107">\<binding></span></span>  
-<span data-ttu-id="2f383-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="2f383-108">\<security></span></span>  
-<span data-ttu-id="2f383-109">\<傳輸 ></span><span class="sxs-lookup"><span data-stu-id="2f383-109">\<transport></span></span>  
+ <span data-ttu-id="f2b10-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="f2b10-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="f2b10-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="f2b10-105">\<bindings></span></span>  
+<span data-ttu-id="f2b10-106">\<wsHttpBinding></span><span class="sxs-lookup"><span data-stu-id="f2b10-106">\<wsHttpBinding></span></span>  
+<span data-ttu-id="f2b10-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="f2b10-107">\<binding></span></span>  
+<span data-ttu-id="f2b10-108">\<security></span><span class="sxs-lookup"><span data-stu-id="f2b10-108">\<security></span></span>  
+<span data-ttu-id="f2b10-109">\<transport></span><span class="sxs-lookup"><span data-stu-id="f2b10-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f383-110">語法</span><span class="sxs-lookup"><span data-stu-id="2f383-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2b10-110">語法</span><span class="sxs-lookup"><span data-stu-id="f2b10-110">Syntax</span></span>  
   
 ```xml  
 <wsHttpBinding>  
@@ -49,59 +49,59 @@ ms.lasthandoff: 12/22/2017
 </wsHttpBinding>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="2f383-111">類型</span><span class="sxs-lookup"><span data-stu-id="2f383-111">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="f2b10-111">類型</span><span class="sxs-lookup"><span data-stu-id="f2b10-111">Type</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2f383-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2f383-112">Attributes and Elements</span></span>  
- <span data-ttu-id="2f383-113">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2f383-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f2b10-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f2b10-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="f2b10-113">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f2b10-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2f383-114">屬性</span><span class="sxs-lookup"><span data-stu-id="2f383-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f2b10-114">屬性</span><span class="sxs-lookup"><span data-stu-id="f2b10-114">Attributes</span></span>  
   
-|<span data-ttu-id="2f383-115">屬性</span><span class="sxs-lookup"><span data-stu-id="2f383-115">Attribute</span></span>|<span data-ttu-id="2f383-116">描述</span><span class="sxs-lookup"><span data-stu-id="2f383-116">Description</span></span>|  
+|<span data-ttu-id="f2b10-115">屬性</span><span class="sxs-lookup"><span data-stu-id="f2b10-115">Attribute</span></span>|<span data-ttu-id="f2b10-116">描述</span><span class="sxs-lookup"><span data-stu-id="f2b10-116">Description</span></span>|  
 |---------------|-----------------|  
-|`clientCredentialType`|<span data-ttu-id="2f383-117">指定用來對服務驗證用戶端的認證。</span><span class="sxs-lookup"><span data-stu-id="2f383-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="2f383-118">此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="2f383-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
-|`proxyCredentialType`|<span data-ttu-id="2f383-119">指定用來對網域 Proxy 驗證用戶端的認證。</span><span class="sxs-lookup"><span data-stu-id="2f383-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="2f383-120">此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="2f383-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
-|`realm`|<span data-ttu-id="2f383-121">指定摘要式驗證或基本驗證之驗證領域的字串。</span><span class="sxs-lookup"><span data-stu-id="2f383-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="2f383-122">預設為空字串。</span><span class="sxs-lookup"><span data-stu-id="2f383-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="2f383-123">驗證領域至少會指定負責執行驗證之主機的名稱，</span><span class="sxs-lookup"><span data-stu-id="2f383-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="2f383-124">也可以指定具有存取權之使用者的集合。</span><span class="sxs-lookup"><span data-stu-id="2f383-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="2f383-125">使用者可以查詢驗證領域，以確定可以使用的其中一組使用者名稱和密碼。</span><span class="sxs-lookup"><span data-stu-id="2f383-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
-|`policyEnforcement`|<span data-ttu-id="2f383-126">此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。</span><span class="sxs-lookup"><span data-stu-id="2f383-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="2f383-127">1.Never：絕不強制執行此原則 (延伸保護已停用)。</span><span class="sxs-lookup"><span data-stu-id="2f383-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="2f383-128">2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。</span><span class="sxs-lookup"><span data-stu-id="2f383-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="2f383-129">3.Always：一律強制執行此原則。</span><span class="sxs-lookup"><span data-stu-id="2f383-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="2f383-130">不支援延伸保護的用戶端將無法驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
+|`clientCredentialType`|<span data-ttu-id="f2b10-117">指定用來對服務驗證用戶端的認證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="f2b10-118">此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="f2b10-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
+|`proxyCredentialType`|<span data-ttu-id="f2b10-119">指定用來對網域 Proxy 驗證用戶端的認證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="f2b10-120">此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="f2b10-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
+|`realm`|<span data-ttu-id="f2b10-121">指定摘要式驗證或基本驗證之驗證領域的字串。</span><span class="sxs-lookup"><span data-stu-id="f2b10-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="f2b10-122">預設為空字串。</span><span class="sxs-lookup"><span data-stu-id="f2b10-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="f2b10-123">驗證領域至少會指定負責執行驗證之主機的名稱，</span><span class="sxs-lookup"><span data-stu-id="f2b10-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="f2b10-124">也可以指定具有存取權之使用者的集合。</span><span class="sxs-lookup"><span data-stu-id="f2b10-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="f2b10-125">使用者可以查詢驗證領域，以確定可以使用的其中一組使用者名稱和密碼。</span><span class="sxs-lookup"><span data-stu-id="f2b10-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
+|`policyEnforcement`|<span data-ttu-id="f2b10-126">此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。</span><span class="sxs-lookup"><span data-stu-id="f2b10-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="f2b10-127">1.Never：絕不強制執行此原則 (延伸保護已停用)。</span><span class="sxs-lookup"><span data-stu-id="f2b10-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="f2b10-128">2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。</span><span class="sxs-lookup"><span data-stu-id="f2b10-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="f2b10-129">3.Always：一律強制執行此原則。</span><span class="sxs-lookup"><span data-stu-id="f2b10-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="f2b10-130">不支援延伸保護的用戶端將無法驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
   
-## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="2f383-131">clientCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="2f383-131">clientCredentialType Attribute</span></span>  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="f2b10-131">clientCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="f2b10-131">clientCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="2f383-132">值</span><span class="sxs-lookup"><span data-stu-id="2f383-132">Value</span></span>|<span data-ttu-id="2f383-133">描述</span><span class="sxs-lookup"><span data-stu-id="2f383-133">Description</span></span>|  
+|<span data-ttu-id="f2b10-132">值</span><span class="sxs-lookup"><span data-stu-id="f2b10-132">Value</span></span>|<span data-ttu-id="f2b10-133">描述</span><span class="sxs-lookup"><span data-stu-id="f2b10-133">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="2f383-134">停用安全性。</span><span class="sxs-lookup"><span data-stu-id="2f383-134">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="2f383-135">使用基本驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-135">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="2f383-136">使用摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-136">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="2f383-137">使用 NTLM 驗證做為 Windows 網域的後援。</span><span class="sxs-lookup"><span data-stu-id="2f383-137">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="2f383-138">使用整合式 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-138">Uses integrated Windows authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="2f383-139">使用 X.509 憑證來驗證用戶端。</span><span class="sxs-lookup"><span data-stu-id="2f383-139">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`None`|<span data-ttu-id="f2b10-134">停用安全性。</span><span class="sxs-lookup"><span data-stu-id="f2b10-134">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="f2b10-135">使用基本驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-135">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="f2b10-136">使用摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-136">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="f2b10-137">使用 NTLM 驗證做為 Windows 網域的後援。</span><span class="sxs-lookup"><span data-stu-id="f2b10-137">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="f2b10-138">使用整合式 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-138">Uses integrated Windows authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="f2b10-139">使用 X.509 憑證來驗證用戶端。</span><span class="sxs-lookup"><span data-stu-id="f2b10-139">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="2f383-140">proxyCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="2f383-140">proxyCredentialType Attribute</span></span>  
+## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="f2b10-140">proxyCredentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="f2b10-140">proxyCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="2f383-141">值</span><span class="sxs-lookup"><span data-stu-id="2f383-141">Value</span></span>|<span data-ttu-id="2f383-142">描述</span><span class="sxs-lookup"><span data-stu-id="2f383-142">Description</span></span>|  
+|<span data-ttu-id="f2b10-141">值</span><span class="sxs-lookup"><span data-stu-id="f2b10-141">Value</span></span>|<span data-ttu-id="f2b10-142">描述</span><span class="sxs-lookup"><span data-stu-id="f2b10-142">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="2f383-143">停用安全性。</span><span class="sxs-lookup"><span data-stu-id="2f383-143">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="2f383-144">使用基本驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-144">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="2f383-145">使用摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-145">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="2f383-146">使用 NTLM 做為 Windows 網域的後援。</span><span class="sxs-lookup"><span data-stu-id="2f383-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="2f383-147">使用整合式 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="2f383-147">Uses integrated Windows authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="2f383-148">使用 X.509 憑證來驗證用戶端。</span><span class="sxs-lookup"><span data-stu-id="2f383-148">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`None`|<span data-ttu-id="f2b10-143">停用安全性。</span><span class="sxs-lookup"><span data-stu-id="f2b10-143">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="f2b10-144">使用基本驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-144">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="f2b10-145">使用摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-145">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="f2b10-146">使用 NTLM 做為 Windows 網域的後援。</span><span class="sxs-lookup"><span data-stu-id="f2b10-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="f2b10-147">使用整合式 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="f2b10-147">Uses integrated Windows authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="f2b10-148">使用 X.509 憑證來驗證用戶端。</span><span class="sxs-lookup"><span data-stu-id="f2b10-148">Uses X.509 certificates to authenticate the client.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2f383-149">子元素</span><span class="sxs-lookup"><span data-stu-id="2f383-149">Child Elements</span></span>  
- <span data-ttu-id="2f383-150">無。</span><span class="sxs-lookup"><span data-stu-id="2f383-150">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f2b10-149">子元素</span><span class="sxs-lookup"><span data-stu-id="f2b10-149">Child Elements</span></span>  
+ <span data-ttu-id="f2b10-150">無。</span><span class="sxs-lookup"><span data-stu-id="f2b10-150">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2f383-151">父項目</span><span class="sxs-lookup"><span data-stu-id="2f383-151">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f2b10-151">父項目</span><span class="sxs-lookup"><span data-stu-id="f2b10-151">Parent Elements</span></span>  
   
-|<span data-ttu-id="2f383-152">項目</span><span class="sxs-lookup"><span data-stu-id="2f383-152">Element</span></span>|<span data-ttu-id="2f383-153">描述</span><span class="sxs-lookup"><span data-stu-id="2f383-153">Description</span></span>|  
+|<span data-ttu-id="f2b10-152">項目</span><span class="sxs-lookup"><span data-stu-id="f2b10-152">Element</span></span>|<span data-ttu-id="f2b10-153">描述</span><span class="sxs-lookup"><span data-stu-id="f2b10-153">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2f383-154">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="2f383-154">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="2f383-155">代表的安全性功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="2f383-155">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
+|[<span data-ttu-id="f2b10-154">\<security></span><span class="sxs-lookup"><span data-stu-id="f2b10-154">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|<span data-ttu-id="f2b10-155">代表的安全性功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="f2b10-155">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2f383-156">請參閱</span><span class="sxs-lookup"><span data-stu-id="2f383-156">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f2b10-156">請參閱</span><span class="sxs-lookup"><span data-stu-id="f2b10-156">See Also</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
  <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>  
  <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [<span data-ttu-id="2f383-157">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="2f383-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="2f383-158">繫結</span><span class="sxs-lookup"><span data-stu-id="2f383-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="2f383-159">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="2f383-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="2f383-160">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="2f383-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="2f383-161">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="2f383-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="f2b10-157">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="f2b10-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="f2b10-158">繫結</span><span class="sxs-lookup"><span data-stu-id="f2b10-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="f2b10-159">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="f2b10-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="f2b10-160">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="f2b10-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="f2b10-161">\<binding></span><span class="sxs-lookup"><span data-stu-id="f2b10-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

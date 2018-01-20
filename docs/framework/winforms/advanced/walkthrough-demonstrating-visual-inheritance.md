@@ -23,30 +23,30 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a><span data-ttu-id="37a77-102">逐步解說：示範視覺化繼承</span><span class="sxs-lookup"><span data-stu-id="37a77-102">Walkthrough: Demonstrating Visual Inheritance</span></span>
-<span data-ttu-id="37a77-103">視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。</span><span class="sxs-lookup"><span data-stu-id="37a77-103">Visual inheritance enables you to see the controls on the base form and to add new controls.</span></span> <span data-ttu-id="37a77-104">在本逐步解說中，您將建立基底表單，並編譯為類別庫。</span><span class="sxs-lookup"><span data-stu-id="37a77-104">In this walkthrough you will create a base form and compile it into a class library.</span></span> <span data-ttu-id="37a77-105">您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。</span><span class="sxs-lookup"><span data-stu-id="37a77-105">You will import this class library into another project and create a new form that inherits from the base form.</span></span> <span data-ttu-id="37a77-106">在這個逐步解說期間，您將了解如何：</span><span class="sxs-lookup"><span data-stu-id="37a77-106">During this walkthrough, you will learn how to:</span></span>  
+# <a name="walkthrough-demonstrating-visual-inheritance"></a><span data-ttu-id="07c60-102">逐步解說：示範視覺化繼承</span><span class="sxs-lookup"><span data-stu-id="07c60-102">Walkthrough: Demonstrating Visual Inheritance</span></span>
+<span data-ttu-id="07c60-103">視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。</span><span class="sxs-lookup"><span data-stu-id="07c60-103">Visual inheritance enables you to see the controls on the base form and to add new controls.</span></span> <span data-ttu-id="07c60-104">在本逐步解說中，您將建立基底表單，並編譯為類別庫。</span><span class="sxs-lookup"><span data-stu-id="07c60-104">In this walkthrough you will create a base form and compile it into a class library.</span></span> <span data-ttu-id="07c60-105">您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。</span><span class="sxs-lookup"><span data-stu-id="07c60-105">You will import this class library into another project and create a new form that inherits from the base form.</span></span> <span data-ttu-id="07c60-106">在這個逐步解說期間，您將了解如何：</span><span class="sxs-lookup"><span data-stu-id="07c60-106">During this walkthrough, you will learn how to:</span></span>  
   
--   <span data-ttu-id="37a77-107">建立包含基底表單的類別庫專案。</span><span class="sxs-lookup"><span data-stu-id="37a77-107">Create a class library project containing a base form.</span></span>  
+-   <span data-ttu-id="07c60-107">建立包含基底表單的類別庫專案。</span><span class="sxs-lookup"><span data-stu-id="07c60-107">Create a class library project containing a base form.</span></span>  
   
--   <span data-ttu-id="37a77-108">加入屬性可由基底表單衍生類別修改的按鈕。</span><span class="sxs-lookup"><span data-stu-id="37a77-108">Add a button with properties that derived classes of the base form can modify.</span></span>  
+-   <span data-ttu-id="07c60-108">加入屬性可由基底表單衍生類別修改的按鈕。</span><span class="sxs-lookup"><span data-stu-id="07c60-108">Add a button with properties that derived classes of the base form can modify.</span></span>  
   
--   <span data-ttu-id="37a77-109">加入無法由基底表單繼承者修改的按鈕。</span><span class="sxs-lookup"><span data-stu-id="37a77-109">Add a button that cannot be modified by inheritors of the base form.</span></span>  
+-   <span data-ttu-id="07c60-109">加入無法由基底表單繼承者修改的按鈕。</span><span class="sxs-lookup"><span data-stu-id="07c60-109">Add a button that cannot be modified by inheritors of the base form.</span></span>  
   
--   <span data-ttu-id="37a77-110">建立包含繼承自 `BaseForm` 表單的專案。</span><span class="sxs-lookup"><span data-stu-id="37a77-110">Create a project containing a form that inherits from `BaseForm`.</span></span>  
+-   <span data-ttu-id="07c60-110">建立包含繼承自 `BaseForm` 表單的專案。</span><span class="sxs-lookup"><span data-stu-id="07c60-110">Create a project containing a form that inherits from `BaseForm`.</span></span>  
   
- <span data-ttu-id="37a77-111">最後，本逐步解說將示範繼承的表單上私用和受保護控制項之間的差異。</span><span class="sxs-lookup"><span data-stu-id="37a77-111">Ultimately, this walkthrough will demonstrate the difference between private and protected controls on an inherited form.</span></span>  
+ <span data-ttu-id="07c60-111">最後，本逐步解說將示範繼承的表單上私用和受保護控制項之間的差異。</span><span class="sxs-lookup"><span data-stu-id="07c60-111">Ultimately, this walkthrough will demonstrate the difference between private and protected controls on an inherited form.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="37a77-112">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="37a77-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="37a77-113">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="37a77-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="37a77-114">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="37a77-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="07c60-112">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="07c60-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="07c60-113">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="07c60-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="07c60-114">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="07c60-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="37a77-115">並非所有控制項都支援來自基底表單的視覺化繼承。</span><span class="sxs-lookup"><span data-stu-id="37a77-115">Not all controls support visual inheritance from a base form.</span></span> <span data-ttu-id="37a77-116">下列控制項並不支援在此逐步解說中所描述的案例：</span><span class="sxs-lookup"><span data-stu-id="37a77-116">The following controls do not support the scenario described in this walkthrough:</span></span>  
+>  <span data-ttu-id="07c60-115">並非所有控制項都支援來自基底表單的視覺化繼承。</span><span class="sxs-lookup"><span data-stu-id="07c60-115">Not all controls support visual inheritance from a base form.</span></span> <span data-ttu-id="07c60-116">下列控制項並不支援在此逐步解說中所描述的案例：</span><span class="sxs-lookup"><span data-stu-id="07c60-116">The following controls do not support the scenario described in this walkthrough:</span></span>  
 >   
 >  <xref:System.Windows.Forms.WebBrowser>  
 >   
@@ -60,42 +60,42 @@ ms.lasthandoff: 12/22/2017
 >   
 >  <xref:System.Windows.Forms.DataGridView>  
 >   
->  <span data-ttu-id="37a77-117">繼承的表單中的這些控制項永遠唯讀，不論您使用的修飾詞為何 (`private``protected` 或 `public`)。</span><span class="sxs-lookup"><span data-stu-id="37a77-117">These controls in the inherited form are always read-only regardless of the modifiers you use (`private`, `protected`, or `public`).</span></span>  
+>  <span data-ttu-id="07c60-117">繼承的表單中的這些控制項永遠唯讀，不論您使用的修飾詞為何 (`private``protected` 或 `public`)。</span><span class="sxs-lookup"><span data-stu-id="07c60-117">These controls in the inherited form are always read-only regardless of the modifiers you use (`private`, `protected`, or `public`).</span></span>  
   
-## <a name="scenario-steps"></a><span data-ttu-id="37a77-118">案例步驟</span><span class="sxs-lookup"><span data-stu-id="37a77-118">Scenario Steps</span></span>  
- <span data-ttu-id="37a77-119">第一個步驟是建立基底表單。</span><span class="sxs-lookup"><span data-stu-id="37a77-119">The first step is to create the base form.</span></span>  
+## <a name="scenario-steps"></a><span data-ttu-id="07c60-118">案例步驟</span><span class="sxs-lookup"><span data-stu-id="07c60-118">Scenario Steps</span></span>  
+ <span data-ttu-id="07c60-119">第一個步驟是建立基底表單。</span><span class="sxs-lookup"><span data-stu-id="07c60-119">The first step is to create the base form.</span></span>  
   
-#### <a name="to-create-a-class-library-project-containing-a-base-form"></a><span data-ttu-id="37a77-120">建立包含基底表單的類別庫專案：</span><span class="sxs-lookup"><span data-stu-id="37a77-120">To create a class library project containing a base form</span></span>  
+#### <a name="to-create-a-class-library-project-containing-a-base-form"></a><span data-ttu-id="07c60-120">建立包含基底表單的類別庫專案：</span><span class="sxs-lookup"><span data-stu-id="07c60-120">To create a class library project containing a base form</span></span>  
   
-1.  <span data-ttu-id="37a77-121">從**檔案**功能表上，選擇**新增**，然後**專案**開啟**新專案** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="37a77-121">From the **File** menu, choose **New**, and then **Project** to open the **New Project** dialog box.</span></span>  
+1.  <span data-ttu-id="07c60-121">從**檔案**功能表上，選擇**新增**，然後**專案**開啟**新專案** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="07c60-121">From the **File** menu, choose **New**, and then **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  <span data-ttu-id="37a77-122">建立 Windows Form 應用程式名為`BaseFormLibrary`。</span><span class="sxs-lookup"><span data-stu-id="37a77-122">Create a Windows Forms application named `BaseFormLibrary`.</span></span>  
+2.  <span data-ttu-id="07c60-122">建立 Windows Form 應用程式名為`BaseFormLibrary`。</span><span class="sxs-lookup"><span data-stu-id="07c60-122">Create a Windows Forms application named `BaseFormLibrary`.</span></span>  
   
-3.  <span data-ttu-id="37a77-123">若要建立類別庫，而不是標準的 Windows Form 應用程式，在**方案總管 中**，以滑鼠右鍵按一下**BaseFormLibrary**專案節點，然後選取**屬性**.</span><span class="sxs-lookup"><span data-stu-id="37a77-123">To create a class library instead of a standard Windows Forms application, in **Solution Explorer**, right-click the **BaseFormLibrary** project node and then select **Properties**.</span></span>  
+3.  <span data-ttu-id="07c60-123">若要建立類別庫，而不是標準的 Windows Form 應用程式，在**方案總管 中**，以滑鼠右鍵按一下**BaseFormLibrary**專案節點，然後選取**屬性**.</span><span class="sxs-lookup"><span data-stu-id="07c60-123">To create a class library instead of a standard Windows Forms application, in **Solution Explorer**, right-click the **BaseFormLibrary** project node and then select **Properties**.</span></span>  
   
-4.  <span data-ttu-id="37a77-124">在專案屬性中，變更**輸出類型**從**Windows 應用程式**至**類別庫**。</span><span class="sxs-lookup"><span data-stu-id="37a77-124">In the properties for the project, change the **Output type** from **Windows Application** to **Class Library**.</span></span>  
+4.  <span data-ttu-id="07c60-124">在專案屬性中，變更**輸出類型**從**Windows 應用程式**至**類別庫**。</span><span class="sxs-lookup"><span data-stu-id="07c60-124">In the properties for the project, change the **Output type** from **Windows Application** to **Class Library**.</span></span>  
   
-5.  <span data-ttu-id="37a77-125">從**檔案**功能表上，選擇**全部儲存**，將專案和檔案儲存到預設位置。</span><span class="sxs-lookup"><span data-stu-id="37a77-125">From the **File** menu, choose **Save All** to save the project and files to the default location.</span></span>  
+5.  <span data-ttu-id="07c60-125">從**檔案**功能表上，選擇**全部儲存**，將專案和檔案儲存到預設位置。</span><span class="sxs-lookup"><span data-stu-id="07c60-125">From the **File** menu, choose **Save All** to save the project and files to the default location.</span></span>  
   
- <span data-ttu-id="37a77-126">下面兩個程序將按鈕加入至基底表單。</span><span class="sxs-lookup"><span data-stu-id="37a77-126">The next two procedures add buttons to the base form.</span></span> <span data-ttu-id="37a77-127">為了示範視覺化繼承，您將藉由設定 `Modifiers` 屬性，授與這些按鈕不同存取層級。</span><span class="sxs-lookup"><span data-stu-id="37a77-127">To demonstrate visual inheritance, you will give the buttons different access levels by setting their `Modifiers` properties.</span></span>  
+ <span data-ttu-id="07c60-126">下面兩個程序將按鈕加入至基底表單。</span><span class="sxs-lookup"><span data-stu-id="07c60-126">The next two procedures add buttons to the base form.</span></span> <span data-ttu-id="07c60-127">為了示範視覺化繼承，您將藉由設定 `Modifiers` 屬性，授與這些按鈕不同存取層級。</span><span class="sxs-lookup"><span data-stu-id="07c60-127">To demonstrate visual inheritance, you will give the buttons different access levels by setting their `Modifiers` properties.</span></span>  
   
-#### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a><span data-ttu-id="37a77-128">加入基底表單繼承者可以修改的按鈕：</span><span class="sxs-lookup"><span data-stu-id="37a77-128">To add a button that inheritors of the base form can modify</span></span>  
+#### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a><span data-ttu-id="07c60-128">加入基底表單繼承者可以修改的按鈕：</span><span class="sxs-lookup"><span data-stu-id="07c60-128">To add a button that inheritors of the base form can modify</span></span>  
   
-1.  <span data-ttu-id="37a77-129">開啟**Form1**設計工具中。</span><span class="sxs-lookup"><span data-stu-id="37a77-129">Open **Form1** in the designer.</span></span>  
+1.  <span data-ttu-id="07c60-129">開啟**Form1**設計工具中。</span><span class="sxs-lookup"><span data-stu-id="07c60-129">Open **Form1** in the designer.</span></span>  
   
-2.  <span data-ttu-id="37a77-130">上**所有 Windows Form**  索引標籤**工具箱**，連按兩下**按鈕**新增按鈕到表單。</span><span class="sxs-lookup"><span data-stu-id="37a77-130">On the **All Windows Forms** tab of the **Toolbox**, double-click **Button** to add a button to the form.</span></span> <span data-ttu-id="37a77-131">使用滑鼠來定位並調整按鈕的大小。</span><span class="sxs-lookup"><span data-stu-id="37a77-131">Use the mouse to position and resize the button.</span></span>  
+2.  <span data-ttu-id="07c60-130">上**所有 Windows Form**  索引標籤**工具箱**，連按兩下**按鈕**新增按鈕到表單。</span><span class="sxs-lookup"><span data-stu-id="07c60-130">On the **All Windows Forms** tab of the **Toolbox**, double-click **Button** to add a button to the form.</span></span> <span data-ttu-id="07c60-131">使用滑鼠來定位並調整按鈕的大小。</span><span class="sxs-lookup"><span data-stu-id="07c60-131">Use the mouse to position and resize the button.</span></span>  
   
-3.  <span data-ttu-id="37a77-132">在屬性視窗中設定下列按鈕屬性：</span><span class="sxs-lookup"><span data-stu-id="37a77-132">In the Properties window, set the following properties of the button:</span></span>  
+3.  <span data-ttu-id="07c60-132">在屬性視窗中設定下列按鈕屬性：</span><span class="sxs-lookup"><span data-stu-id="07c60-132">In the Properties window, set the following properties of the button:</span></span>  
   
-    -   <span data-ttu-id="37a77-133">設定**文字**屬性**Say Hello**。</span><span class="sxs-lookup"><span data-stu-id="37a77-133">Set the **Text** property to **Say Hello**.</span></span>  
+    -   <span data-ttu-id="07c60-133">設定**文字**屬性**Say Hello**。</span><span class="sxs-lookup"><span data-stu-id="07c60-133">Set the **Text** property to **Say Hello**.</span></span>  
   
-    -   <span data-ttu-id="37a77-134">設定**（名稱）**屬性**btnProtected**。</span><span class="sxs-lookup"><span data-stu-id="37a77-134">Set the **(Name)** property to **btnProtected**.</span></span>  
+    -   <span data-ttu-id="07c60-134">設定**（名稱）**屬性**btnProtected**。</span><span class="sxs-lookup"><span data-stu-id="07c60-134">Set the **(Name)** property to **btnProtected**.</span></span>  
   
-    -   <span data-ttu-id="37a77-135">設定**修飾詞**屬性**保護**。</span><span class="sxs-lookup"><span data-stu-id="37a77-135">Set the**Modifiers** property to **Protected**.</span></span> <span data-ttu-id="37a77-136">這可讓繼承自表單**Form1**修改屬性**btnProtected**。</span><span class="sxs-lookup"><span data-stu-id="37a77-136">This makes it possible for forms that inherit from **Form1** to modify the properties of **btnProtected**.</span></span>  
+    -   <span data-ttu-id="07c60-135">設定**修飾詞**屬性**保護**。</span><span class="sxs-lookup"><span data-stu-id="07c60-135">Set the**Modifiers** property to **Protected**.</span></span> <span data-ttu-id="07c60-136">這可讓繼承自表單**Form1**修改屬性**btnProtected**。</span><span class="sxs-lookup"><span data-stu-id="07c60-136">This makes it possible for forms that inherit from **Form1** to modify the properties of **btnProtected**.</span></span>  
   
-4.  <span data-ttu-id="37a77-137">按兩下**Say Hello**按鈕加入事件處理常式**按一下**事件。</span><span class="sxs-lookup"><span data-stu-id="37a77-137">Double-click the **Say Hello** button to add an event handler for the **Click** event.</span></span>  
+4.  <span data-ttu-id="07c60-137">按兩下**Say Hello**按鈕加入事件處理常式**按一下**事件。</span><span class="sxs-lookup"><span data-stu-id="07c60-137">Double-click the **Say Hello** button to add an event handler for the **Click** event.</span></span>  
   
-5.  <span data-ttu-id="37a77-138">將下列這行程式碼加入至事件處理常式：</span><span class="sxs-lookup"><span data-stu-id="37a77-138">Add the following line of code to the event handler:</span></span>  
+5.  <span data-ttu-id="07c60-138">將下列這行程式碼加入至事件處理常式：</span><span class="sxs-lookup"><span data-stu-id="07c60-138">Add the following line of code to the event handler:</span></span>  
   
     ```vb  
     MessageBox.Show("Hello, World!")  
@@ -105,19 +105,19 @@ ms.lasthandoff: 12/22/2017
     MessageBox.Show("Hello, World!");  
     ```  
   
-#### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a><span data-ttu-id="37a77-139">加入無法由基底表單繼承者修改的按鈕：</span><span class="sxs-lookup"><span data-stu-id="37a77-139">To add a button that cannot be modified by inheritors of the base form</span></span>  
+#### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a><span data-ttu-id="07c60-139">加入無法由基底表單繼承者修改的按鈕：</span><span class="sxs-lookup"><span data-stu-id="07c60-139">To add a button that cannot be modified by inheritors of the base form</span></span>  
   
-1.  <span data-ttu-id="37a77-140">切換到設計檢視，即可**Form1.vb [設計]，Form1.cs [Design]，or Form1.jsl [Design]**  索引標籤上方的程式碼編輯器 中，或按 f7 鍵。</span><span class="sxs-lookup"><span data-stu-id="37a77-140">Switch to design view by clicking the **Form1.vb [Design], Form1.cs [Design], or Form1.jsl [Design]** tab above the code editor, or by pressing F7.</span></span>  
+1.  <span data-ttu-id="07c60-140">切換到設計檢視，即可**Form1.vb [設計]，Form1.cs [Design]，or Form1.jsl [Design]**  索引標籤上方的程式碼編輯器 中，或按 f7 鍵。</span><span class="sxs-lookup"><span data-stu-id="07c60-140">Switch to design view by clicking the **Form1.vb [Design], Form1.cs [Design], or Form1.jsl [Design]** tab above the code editor, or by pressing F7.</span></span>  
   
-2.  <span data-ttu-id="37a77-141">加入第二個按鈕，並設定其屬性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="37a77-141">Add a second button and set its properties as follows:</span></span>  
+2.  <span data-ttu-id="07c60-141">加入第二個按鈕，並設定其屬性，如下所示：</span><span class="sxs-lookup"><span data-stu-id="07c60-141">Add a second button and set its properties as follows:</span></span>  
   
-    -   <span data-ttu-id="37a77-142">設定**文字**屬性**Say Goodbye**。</span><span class="sxs-lookup"><span data-stu-id="37a77-142">Set the **Text** property to **Say Goodbye**.</span></span>  
+    -   <span data-ttu-id="07c60-142">設定**文字**屬性**Say Goodbye**。</span><span class="sxs-lookup"><span data-stu-id="07c60-142">Set the **Text** property to **Say Goodbye**.</span></span>  
   
-    -   <span data-ttu-id="37a77-143">設定**（名稱）**屬性**btnPrivate**。</span><span class="sxs-lookup"><span data-stu-id="37a77-143">Set the **(Name)** property to **btnPrivate**.</span></span>  
+    -   <span data-ttu-id="07c60-143">設定**（名稱）**屬性**btnPrivate**。</span><span class="sxs-lookup"><span data-stu-id="07c60-143">Set the **(Name)** property to **btnPrivate**.</span></span>  
   
-    -   <span data-ttu-id="37a77-144">設定**修飾詞**屬性**私人**。</span><span class="sxs-lookup"><span data-stu-id="37a77-144">Set the **Modifiers** property to **Private**.</span></span> <span data-ttu-id="37a77-145">這可讓繼承自表單**Form1**修改屬性**btnPrivate**。</span><span class="sxs-lookup"><span data-stu-id="37a77-145">This makes it impossible for forms that inherit from **Form1** to modify the properties of **btnPrivate**.</span></span>  
+    -   <span data-ttu-id="07c60-144">設定**修飾詞**屬性**私人**。</span><span class="sxs-lookup"><span data-stu-id="07c60-144">Set the **Modifiers** property to **Private**.</span></span> <span data-ttu-id="07c60-145">這可讓繼承自表單**Form1**修改屬性**btnPrivate**。</span><span class="sxs-lookup"><span data-stu-id="07c60-145">This makes it impossible for forms that inherit from **Form1** to modify the properties of **btnPrivate**.</span></span>  
   
-3.  <span data-ttu-id="37a77-146">按兩下**Say Goodbye**按鈕加入事件處理常式**按一下**事件。</span><span class="sxs-lookup"><span data-stu-id="37a77-146">Double-click the **Say Goodbye** button to add an event handler for the **Click** event.</span></span> <span data-ttu-id="37a77-147">將下列這行程式碼放在事件程序：</span><span class="sxs-lookup"><span data-stu-id="37a77-147">Place the following line of code in the event procedure:</span></span>  
+3.  <span data-ttu-id="07c60-146">按兩下**Say Goodbye**按鈕加入事件處理常式**按一下**事件。</span><span class="sxs-lookup"><span data-stu-id="07c60-146">Double-click the **Say Goodbye** button to add an event handler for the **Click** event.</span></span> <span data-ttu-id="07c60-147">將下列這行程式碼放在事件程序：</span><span class="sxs-lookup"><span data-stu-id="07c60-147">Place the following line of code in the event procedure:</span></span>  
   
     ```vb  
     MessageBox.Show("Goodbye!")  
@@ -127,54 +127,54 @@ ms.lasthandoff: 12/22/2017
     MessageBox.Show("Goodbye!");  
     ```  
   
-4.  <span data-ttu-id="37a77-148">從**建置**功能表上，選擇**建置 BaseForm 程式庫**建置類別庫。</span><span class="sxs-lookup"><span data-stu-id="37a77-148">From the **Build** menu, choose **Build BaseForm Library** to build the class library.</span></span>  
+4.  <span data-ttu-id="07c60-148">從**建置**功能表上，選擇**建置 BaseForm 程式庫**建置類別庫。</span><span class="sxs-lookup"><span data-stu-id="07c60-148">From the **Build** menu, choose **Build BaseForm Library** to build the class library.</span></span>  
   
-     <span data-ttu-id="37a77-149">一旦建立程式庫之後，您可建立新專案，其繼承自剛建立的表單。</span><span class="sxs-lookup"><span data-stu-id="37a77-149">Once the library is built, you can create a new project that inherits from the form you just created.</span></span>  
+     <span data-ttu-id="07c60-149">一旦建立程式庫之後，您可建立新專案，其繼承自剛建立的表單。</span><span class="sxs-lookup"><span data-stu-id="07c60-149">Once the library is built, you can create a new project that inherits from the form you just created.</span></span>  
   
-#### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a><span data-ttu-id="37a77-150">若要建立包含表單的專案，其表單繼承自基底表單</span><span class="sxs-lookup"><span data-stu-id="37a77-150">To create a project containing a form that inherits from the base form</span></span>  
+#### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a><span data-ttu-id="07c60-150">若要建立包含表單的專案，其表單繼承自基底表單</span><span class="sxs-lookup"><span data-stu-id="07c60-150">To create a project containing a form that inherits from the base form</span></span>  
   
-1.  <span data-ttu-id="37a77-151">從**檔案**功能表上，選擇**新增**然後**新專案**開啟**加入新的專案** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="37a77-151">From the **File** menu, choose **Add** and then **New Project** to open the **Add New Project** dialog box.</span></span>  
+1.  <span data-ttu-id="07c60-151">從**檔案**功能表上，選擇**新增**然後**新專案**開啟**加入新的專案** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="07c60-151">From the **File** menu, choose **Add** and then **New Project** to open the **Add New Project** dialog box.</span></span>  
   
-2.  <span data-ttu-id="37a77-152">建立 Windows Form 應用程式名為`InheritanceTest`。</span><span class="sxs-lookup"><span data-stu-id="37a77-152">Create a Windows Forms application named `InheritanceTest`.</span></span>  
+2.  <span data-ttu-id="07c60-152">建立 Windows Form 應用程式名為`InheritanceTest`。</span><span class="sxs-lookup"><span data-stu-id="07c60-152">Create a Windows Forms application named `InheritanceTest`.</span></span>  
   
-#### <a name="to-add-an-inherited-form"></a><span data-ttu-id="37a77-153">若要加入繼承的表單</span><span class="sxs-lookup"><span data-stu-id="37a77-153">To add an inherited form</span></span>  
+#### <a name="to-add-an-inherited-form"></a><span data-ttu-id="07c60-153">若要加入繼承的表單</span><span class="sxs-lookup"><span data-stu-id="07c60-153">To add an inherited form</span></span>  
   
-1.  <span data-ttu-id="37a77-154">在**方案總管 中**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**新增**，然後選取**新項目**。</span><span class="sxs-lookup"><span data-stu-id="37a77-154">In **Solution Explorer**, right-click the **InheritanceTest** project, select **Add**, and then select**New Item**.</span></span>  
+1.  <span data-ttu-id="07c60-154">在**方案總管 中**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**新增**，然後選取**新項目**。</span><span class="sxs-lookup"><span data-stu-id="07c60-154">In **Solution Explorer**, right-click the **InheritanceTest** project, select **Add**, and then select**New Item**.</span></span>  
   
-2.  <span data-ttu-id="37a77-155">在**加入新項目**對話方塊中，選取**Windows Form**類別目錄 （如果您有一個類別目錄清單），然後選取**繼承的表單**範本。</span><span class="sxs-lookup"><span data-stu-id="37a77-155">In the **Add New Item** dialog box, select the **Windows Forms** category (if you have a list of categories) and then select the **Inherited Form** template.</span></span>  
+2.  <span data-ttu-id="07c60-155">在**加入新項目**對話方塊中，選取**Windows Form**類別目錄 （如果您有一個類別目錄清單），然後選取**繼承的表單**範本。</span><span class="sxs-lookup"><span data-stu-id="07c60-155">In the **Add New Item** dialog box, select the **Windows Forms** category (if you have a list of categories) and then select the **Inherited Form** template.</span></span>  
   
-3.  <span data-ttu-id="37a77-156">保留預設名稱`Form2`，然後按一下 **新增**。</span><span class="sxs-lookup"><span data-stu-id="37a77-156">Leave the default name of `Form2` and then click **Add**.</span></span>  
+3.  <span data-ttu-id="07c60-156">保留預設名稱`Form2`，然後按一下 **新增**。</span><span class="sxs-lookup"><span data-stu-id="07c60-156">Leave the default name of `Form2` and then click **Add**.</span></span>  
   
-4.  <span data-ttu-id="37a77-157">在**繼承選取器**對話方塊中，選取**Form1**從**BaseFormLibrary**表單繼承，並按一下 專案**確定**.</span><span class="sxs-lookup"><span data-stu-id="37a77-157">In the **Inheritance Picker** dialog box, select **Form1** from the **BaseFormLibrary** project as the form to inherit from and click **OK**.</span></span>  
+4.  <span data-ttu-id="07c60-157">在**繼承選取器**對話方塊中，選取**Form1**從**BaseFormLibrary**表單繼承，並按一下 專案**確定**.</span><span class="sxs-lookup"><span data-stu-id="07c60-157">In the **Inheritance Picker** dialog box, select **Form1** from the **BaseFormLibrary** project as the form to inherit from and click **OK**.</span></span>  
   
-     <span data-ttu-id="37a77-158">這會建立在表單**InheritanceTest**衍生自表單中的專案**BaseFormLibrary**。</span><span class="sxs-lookup"><span data-stu-id="37a77-158">This creates a form in the **InheritanceTest** project that derives from the form in **BaseFormLibrary**.</span></span>  
+     <span data-ttu-id="07c60-158">這會建立在表單**InheritanceTest**衍生自表單中的專案**BaseFormLibrary**。</span><span class="sxs-lookup"><span data-stu-id="07c60-158">This creates a form in the **InheritanceTest** project that derives from the form in **BaseFormLibrary**.</span></span>  
   
-5.  <span data-ttu-id="37a77-159">開啟繼承的表單 (**Form2**) 在設計工具中按兩下，如果它尚未開啟。</span><span class="sxs-lookup"><span data-stu-id="37a77-159">Open the inherited form (**Form2**) in the designer by double-clicking it, if it is not already open.</span></span>  
+5.  <span data-ttu-id="07c60-159">開啟繼承的表單 (**Form2**) 在設計工具中按兩下，如果它尚未開啟。</span><span class="sxs-lookup"><span data-stu-id="07c60-159">Open the inherited form (**Form2**) in the designer by double-clicking it, if it is not already open.</span></span>  
   
-     <span data-ttu-id="37a77-160">在設計師中，繼承的按鈕有符號 (![VisualBasicInheritanceSymbol 螢幕擷取畫面](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 在其上方角落，表示受到繼承。</span><span class="sxs-lookup"><span data-stu-id="37a77-160">In the designer, the inherited buttons have a symbol (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) in their upper corner, indicating they are inherited.</span></span>  
+     <span data-ttu-id="07c60-160">在設計師中，繼承的按鈕有符號 (![VisualBasicInheritanceSymbol 螢幕擷取畫面](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 在其上方角落，表示受到繼承。</span><span class="sxs-lookup"><span data-stu-id="07c60-160">In the designer, the inherited buttons have a symbol (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) in their upper corner, indicating they are inherited.</span></span>  
   
-6.  <span data-ttu-id="37a77-161">選取**Say Hello**按鈕，並觀察調整大小控點。</span><span class="sxs-lookup"><span data-stu-id="37a77-161">Select the **Say Hello** button and observe the resize handles.</span></span> <span data-ttu-id="37a77-162">因為此按鈕已受到保護，所以繼承者可以移動它、調整大小、變更標題和進行其他修改。</span><span class="sxs-lookup"><span data-stu-id="37a77-162">Because this button is protected, the inheritors can move it, resize it, change its caption, and make other modifications.</span></span>  
+6.  <span data-ttu-id="07c60-161">選取**Say Hello**按鈕，並觀察調整大小控點。</span><span class="sxs-lookup"><span data-stu-id="07c60-161">Select the **Say Hello** button and observe the resize handles.</span></span> <span data-ttu-id="07c60-162">因為此按鈕已受到保護，所以繼承者可以移動它、調整大小、變更標題和進行其他修改。</span><span class="sxs-lookup"><span data-stu-id="07c60-162">Because this button is protected, the inheritors can move it, resize it, change its caption, and make other modifications.</span></span>  
   
-7.  <span data-ttu-id="37a77-163">選取 私用**Say Goodbye**按鈕，並注意它沒有調整大小控點。</span><span class="sxs-lookup"><span data-stu-id="37a77-163">Select the private **Say Goodbye** button, and notice that it does not have resize handles.</span></span> <span data-ttu-id="37a77-164">此外，在**屬性**視窗中，這個按鈕的屬性會呈現灰色，表示它們不能修改。</span><span class="sxs-lookup"><span data-stu-id="37a77-164">Additionally, in the **Properties** window, the properties of this button are grayed to indicate they cannot be modified.</span></span>  
+7.  <span data-ttu-id="07c60-163">選取 私用**Say Goodbye**按鈕，並注意它沒有調整大小控點。</span><span class="sxs-lookup"><span data-stu-id="07c60-163">Select the private **Say Goodbye** button, and notice that it does not have resize handles.</span></span> <span data-ttu-id="07c60-164">此外，在**屬性**視窗中，這個按鈕的屬性會呈現灰色，表示它們不能修改。</span><span class="sxs-lookup"><span data-stu-id="07c60-164">Additionally, in the **Properties** window, the properties of this button are grayed to indicate they cannot be modified.</span></span>  
   
-8.  <span data-ttu-id="37a77-165">如果您使用的是 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]：</span><span class="sxs-lookup"><span data-stu-id="37a77-165">If you are using [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:</span></span>  
+8.  <span data-ttu-id="07c60-165">如果您使用的是 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]：</span><span class="sxs-lookup"><span data-stu-id="07c60-165">If you are using [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:</span></span>  
   
-    1.  <span data-ttu-id="37a77-166">在**方案總管 中**，以滑鼠右鍵按一下**Form1**中**InheritanceTest**專案，然後選擇**刪除**。</span><span class="sxs-lookup"><span data-stu-id="37a77-166">In **Solution Explorer**, right-click **Form1** in the **InheritanceTest** project and then choose **Delete**.</span></span> <span data-ttu-id="37a77-167">在隨即出現訊息方塊中，按一下 **確定**確認刪除。</span><span class="sxs-lookup"><span data-stu-id="37a77-167">In the message box that appears, click **OK** to confirm the deletion.</span></span>  
+    1.  <span data-ttu-id="07c60-166">在**方案總管 中**，以滑鼠右鍵按一下**Form1**中**InheritanceTest**專案，然後選擇**刪除**。</span><span class="sxs-lookup"><span data-stu-id="07c60-166">In **Solution Explorer**, right-click **Form1** in the **InheritanceTest** project and then choose **Delete**.</span></span> <span data-ttu-id="07c60-167">在隨即出現訊息方塊中，按一下 **確定**確認刪除。</span><span class="sxs-lookup"><span data-stu-id="07c60-167">In the message box that appears, click **OK** to confirm the deletion.</span></span>  
   
-    2.  <span data-ttu-id="37a77-168">開啟 Program.cs 檔案並變更 `Application.Run(new Form1());` 為 `Application.Run(new Form2());`。</span><span class="sxs-lookup"><span data-stu-id="37a77-168">Open the Program.cs file and change the line `Application.Run(new Form1());` to `Application.Run(new Form2());`.</span></span>  
+    2.  <span data-ttu-id="07c60-168">開啟 Program.cs 檔案並變更 `Application.Run(new Form1());` 為 `Application.Run(new Form2());`。</span><span class="sxs-lookup"><span data-stu-id="07c60-168">Open the Program.cs file and change the line `Application.Run(new Form1());` to `Application.Run(new Form2());`.</span></span>  
   
-9. <span data-ttu-id="37a77-169">在**方案總管 中**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="37a77-169">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Set As Startup Project**.</span></span>  
+9. <span data-ttu-id="07c60-169">在**方案總管 中**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="07c60-169">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Set As Startup Project**.</span></span>  
   
-10. <span data-ttu-id="37a77-170">在**方案總管 中**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="37a77-170">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Properties**.</span></span>  
+10. <span data-ttu-id="07c60-170">在**方案總管 中**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="07c60-170">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Properties**.</span></span>  
   
-11. <span data-ttu-id="37a77-171">在**InheritanceTest**屬性頁設定**啟始物件**要繼承的表單 (**Form2**)。</span><span class="sxs-lookup"><span data-stu-id="37a77-171">In the **InheritanceTest** property pages, set the **Startup object** to be the inherited form (**Form2**).</span></span>  
+11. <span data-ttu-id="07c60-171">在**InheritanceTest**屬性頁設定**啟始物件**要繼承的表單 (**Form2**)。</span><span class="sxs-lookup"><span data-stu-id="07c60-171">In the **InheritanceTest** property pages, set the **Startup object** to be the inherited form (**Form2**).</span></span>  
   
-12. <span data-ttu-id="37a77-172">按 F5 執行應用程式，並觀察繼承的表單之行為。</span><span class="sxs-lookup"><span data-stu-id="37a77-172">Press F5 to run the application, and observe the behavior of the inherited form.</span></span>  
+12. <span data-ttu-id="07c60-172">按 F5 執行應用程式，並觀察繼承的表單之行為。</span><span class="sxs-lookup"><span data-stu-id="07c60-172">Press F5 to run the application, and observe the behavior of the inherited form.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="37a77-173">後續步驟</span><span class="sxs-lookup"><span data-stu-id="37a77-173">Next Steps</span></span>  
- <span data-ttu-id="37a77-174">使用者控制項的繼承以非常類似的方式運作。</span><span class="sxs-lookup"><span data-stu-id="37a77-174">Inheritance for user controls works in much the same way.</span></span> <span data-ttu-id="37a77-175">開啟一個新的類別庫專案，並加入使用者控制項。</span><span class="sxs-lookup"><span data-stu-id="37a77-175">Open a new class library project and add a user control.</span></span> <span data-ttu-id="37a77-176">將構成控制項放在上面，然後編譯專案。</span><span class="sxs-lookup"><span data-stu-id="37a77-176">Place constituent controls on it and compile the project.</span></span> <span data-ttu-id="37a77-177">開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="37a77-177">Open another new class library project and add a reference to the compiled class library.</span></span> <span data-ttu-id="37a77-178">此外，請嘗試加入繼承的控制項 (透過**加入新項目**對話方塊) 至專案並使用**繼承選取器**。</span><span class="sxs-lookup"><span data-stu-id="37a77-178">Also, try adding an inherited control (through the **Add New Items** dialog box) to the project and using the **Inheritance Picker**.</span></span> <span data-ttu-id="37a77-179">加入一個使用者控制項，並變更 `Inherits` 陳述式 ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`)。</span><span class="sxs-lookup"><span data-stu-id="37a77-179">Add a user control, and change the `Inherits` (`:` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) statement.</span></span> <span data-ttu-id="37a77-180">如需詳細資訊，請參閱[如何： 繼承 Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="37a77-180">For more information, see [How to: Inherit Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="07c60-173">後續步驟</span><span class="sxs-lookup"><span data-stu-id="07c60-173">Next Steps</span></span>  
+ <span data-ttu-id="07c60-174">使用者控制項的繼承以非常類似的方式運作。</span><span class="sxs-lookup"><span data-stu-id="07c60-174">Inheritance for user controls works in much the same way.</span></span> <span data-ttu-id="07c60-175">開啟一個新的類別庫專案，並加入使用者控制項。</span><span class="sxs-lookup"><span data-stu-id="07c60-175">Open a new class library project and add a user control.</span></span> <span data-ttu-id="07c60-176">將構成控制項放在上面，然後編譯專案。</span><span class="sxs-lookup"><span data-stu-id="07c60-176">Place constituent controls on it and compile the project.</span></span> <span data-ttu-id="07c60-177">開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="07c60-177">Open another new class library project and add a reference to the compiled class library.</span></span> <span data-ttu-id="07c60-178">此外，請嘗試加入繼承的控制項 (透過**加入新項目**對話方塊) 至專案並使用**繼承選取器**。</span><span class="sxs-lookup"><span data-stu-id="07c60-178">Also, try adding an inherited control (through the **Add New Items** dialog box) to the project and using the **Inheritance Picker**.</span></span> <span data-ttu-id="07c60-179">加入一個使用者控制項，並變更 `Inherits` 陳述式 ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`)。</span><span class="sxs-lookup"><span data-stu-id="07c60-179">Add a user control, and change the `Inherits` (`:` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) statement.</span></span> <span data-ttu-id="07c60-180">如需詳細資訊，請參閱[如何： 繼承 Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="07c60-180">For more information, see [How to: Inherit Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37a77-181">請參閱</span><span class="sxs-lookup"><span data-stu-id="37a77-181">See Also</span></span>  
- [<span data-ttu-id="37a77-182">如何：繼承 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="37a77-182">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [<span data-ttu-id="37a77-183">Windows Forms 視覺繼承</span><span class="sxs-lookup"><span data-stu-id="37a77-183">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [<span data-ttu-id="37a77-184">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="37a77-184">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="07c60-181">請參閱</span><span class="sxs-lookup"><span data-stu-id="07c60-181">See Also</span></span>  
+ [<span data-ttu-id="07c60-182">如何：繼承 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="07c60-182">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [<span data-ttu-id="07c60-183">Windows Forms 視覺繼承</span><span class="sxs-lookup"><span data-stu-id="07c60-183">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [<span data-ttu-id="07c60-184">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="07c60-184">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)
