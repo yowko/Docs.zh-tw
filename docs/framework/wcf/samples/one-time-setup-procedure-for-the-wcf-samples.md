@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例都是裝載在網際網路資訊服務 (IIS) 中，並且從共用虛擬目錄執行。 這個單次安裝程序會在磁碟上建立資料夾它也會將虛擬目錄加入至名為 IIS **ServiceModelSamples**。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  如果[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]未安裝，您的作業系統不是 Windows Server 2008 SP2 或更新版本中，安裝和[Hotfix 251798](http://go.microsoft.com/fwlink/?LinkId=184693)。  
   
-4.  執行下列命令。 如需為什麼必須執行這些命令的詳細資訊，請參閱[IIS 裝載的服務失敗](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。  
+4.  執行下列命令。 如需為什麼必須執行這些命令的詳細資訊，請參閱[IIS 裝載的服務失敗](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。  
   
     > [!WARNING]
     >  如果您重新安裝了 IIS，就必須再次執行下列命令。  

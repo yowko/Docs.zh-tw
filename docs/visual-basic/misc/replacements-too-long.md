@@ -9,11 +9,11 @@ ms.assetid: 398ff5eb-b580-456f-8f24-b7a8318e1193
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8eaef18e4b37e0bc3edc2c36ca9f6f0b0a8cec4c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fb1863f68a475b73ab78d50c1cdf801a61605965
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="replacements-too-long"></a>取代文字太長
 您指定的取代文字超過允許的長度。  
@@ -22,5 +22,5 @@ ms.lasthandoff: 10/18/2017
   
 1.  請參閱元件文件，以了解長度限制。  
   
-## <a name="see-also"></a>另請參閱  
- [如何：以互動方式搜尋](http://msdn.microsoft.com/en-us/e9fdbfab-bd59-401a-92d3-7ce1652b243c)
+## <a name="see-also"></a>請參閱  
+ [如何： 以互動方式搜尋](http://msdn.microsoft.com/library/e9fdbfab-bd59-401a-92d3-7ce1652b243c)

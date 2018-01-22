@@ -21,17 +21,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>如何：使用應用程式範圍的資源字典
 此範例示範如何定義和使用應用程式範圍自訂資源字典。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.Application>公開共用資源的應用程式範圍存放區： <xref:System.Windows.Application.Resources%2A>。 根據預設，<xref:System.Windows.Application.Resources%2A>屬性會初始化的執行個體<xref:System.Windows.ResourceDictionary>型別。 當您取得和設定應用程式領域屬性使用時，會使用此執行個體<xref:System.Windows.Application.Resources%2A>。 如需詳細資訊，請參閱[How to： 取得和設定應用程式範圍資源](http://msdn.microsoft.com/en-us/39e0420c-c9fc-47dc-8956-fdd95b214095)。
+ <xref:System.Windows.Application>公開共用資源的應用程式範圍存放區： <xref:System.Windows.Application.Resources%2A>。 根據預設，<xref:System.Windows.Application.Resources%2A>屬性會初始化的執行個體<xref:System.Windows.ResourceDictionary>型別。 當您取得和設定應用程式領域屬性使用時，會使用此執行個體<xref:System.Windows.Application.Resources%2A>。 如需詳細資訊，請參閱[How to： 取得和設定應用程式範圍資源](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095)。
   
  如果您有多個您設定使用的資源<xref:System.Windows.Application.Resources%2A>，您可以改用自訂資源字典來儲存這些資源和設定<xref:System.Windows.Application.Resources%2A>與其改為。 下圖顯示您將自訂的資源字典使用 XAML 的宣告。
   

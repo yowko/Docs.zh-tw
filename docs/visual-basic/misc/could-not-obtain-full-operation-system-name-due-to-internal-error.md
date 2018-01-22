@@ -9,11 +9,11 @@ ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c67d47126718c3d90d853add61b7d06aaf84fc70
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 6e90de5a2fd0699a449e05b9c32e7450b8bdc991
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>由於內部錯誤，無法取得完整作業系統名稱
 由於內部錯誤，無法取得完整作業系統名稱。 這可能是因為目前電腦上沒有 WMI 存在所造成。  
@@ -28,5 +28,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>請參閱  
  [My.Computer.Info.OSFullName](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
- [例外狀況和 Visual Basic 中的錯誤處理](http://msdn.microsoft.com/en-us/3e351e73-cf23-40ab-8b60-05794160529e)  
+ [例外狀況和 Visual Basic 中的錯誤處理](http://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
  [Try...Catch...Finally 陳述式](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

@@ -25,27 +25,27 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：將沒有使用者介面的控制項加入至 Windows Form
 隱藏式控制項 （或元件） 提供您的應用程式的功能。 不像其他控制項，並不提供給使用者的使用者介面元件，並因此不需要在 Windows Form 設計工具介面上顯示。 當元件加入至表單時，Windows Form 設計工具會顯示可調整大小的紙匣底端的表單顯示所有元件的位置。 一旦已將控制項加入至元件匣中，您可以選取的元件，並設定其屬性，就像處理任何其他控制項在表單上。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>若要將元件加入至 Windows Form  
   
-1.  開啟表單。 如需詳細資訊，請參閱[如何： 顯示 Windows Form 設計工具中](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  開啟表單。 如需詳細資訊，請參閱[如何： 顯示 Windows Form 設計工具中](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
   
 2.  在**工具箱**、 按一下元件，並將它拖曳至表單。  
   
      您的元件會出現在元件匣中。  
   
- 此外，元件可以在執行階段加入至表單。 這會是常見的案例中，尤其是因為元件沒有視覺化的運算式，不像具有使用者介面的控制項。 在下列範例中，<xref:System.Windows.Forms.Timer>在執行階段加入元件。 (請注意，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]包含的不同計時器的數字; 在此情況下，使用 Windows Form<xref:System.Windows.Forms.Timer>元件。 如需中的不同計時器[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，請參閱[伺服器為基礎的計時器簡介](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
+ 此外，元件可以在執行階段加入至表單。 這會是常見的案例中，尤其是因為元件沒有視覺化的運算式，不像具有使用者介面的控制項。 在下列範例中，<xref:System.Windows.Forms.Timer>在執行階段加入元件。 (請注意，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]包含的不同計時器的數字; 在此情況下，使用 Windows Form<xref:System.Windows.Forms.Timer>元件。 如需中的不同計時器[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，請參閱[伺服器為基礎的計時器簡介](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
   
 > [!CAUTION]
 >  元件通常具有必須設定元件，有效地運作的控制項特定屬性。 如果是<xref:System.Windows.Forms.Timer>元件下方，設定`Interval`屬性。 請記得，將元件加入至您的專案，確定您設定必要的屬性，該元件時。  

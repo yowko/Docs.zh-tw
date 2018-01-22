@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 變更 Windows Form MonthCalendar 控制項 &#39; s 外觀
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在許多方面的行事曆的外觀。 例如，您可以設定色彩配置，以及選擇要顯示或隱藏週數和目前的日期。  
@@ -53,7 +53,7 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在
     ```  
   
     > [!NOTE]
-    >  從開始使用 Windows Vista，並根據佈景主題，設定某些屬性可能不會變更行事曆外觀。 例如，如果 Windows 設定為使用 Aero 的佈景主題，設定<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>屬性沒有任何作用。 這是因為在執行階段衍生自目前作業系統的佈景主題的外觀呈現行事曆的更新的版本。 如果您想要使用這些屬性並啟用行事曆的舊版，您可以停用您的應用程式視覺化樣式。 停用視覺化樣式，可能會影響的外觀和行為的應用程式中其他控制項。 若要停用在 Visual Basic 中的視覺化樣式，請開啟 專案設計工具並取消核取**啟用 XP 視覺化樣式**核取方塊。 若要停用 C# 中的視覺化樣式，請開啟 Program.cs 並標記為註解`Application.EnableVisualStyles();`。 如需視覺化樣式的詳細資訊，請參閱[How to： 啟用 Windows XP 視覺化樣式](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
+    >  從開始使用 Windows Vista，並根據佈景主題，設定某些屬性可能不會變更行事曆外觀。 例如，如果 Windows 設定為使用 Aero 的佈景主題，設定<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>屬性沒有任何作用。 這是因為在執行階段衍生自目前作業系統的佈景主題的外觀呈現行事曆的更新的版本。 如果您想要使用這些屬性並啟用行事曆的舊版，您可以停用您的應用程式視覺化樣式。 停用視覺化樣式，可能會影響的外觀和行為的應用程式中其他控制項。 若要停用在 Visual Basic 中的視覺化樣式，請開啟 專案設計工具並取消核取**啟用 XP 視覺化樣式**核取方塊。 若要停用 C# 中的視覺化樣式，請開啟 Program.cs 並標記為註解`Application.EnableVisualStyles();`。 如需視覺化樣式的詳細資訊，請參閱[How to： 啟用 Windows XP 視覺化樣式](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控制項底部顯示目前的日期  
   
