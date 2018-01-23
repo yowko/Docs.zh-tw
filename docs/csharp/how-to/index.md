@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/17/2018
 - [修改字串內容](../programming-guide/strings/how-to-modify-string-contents.md)。
 - [判斷字串是否代表一個數字](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)。
 - [使用 `String.Split` 來分隔字串](parse-strings-using-split.md)。
-- [將多個字串合併為一個字串](../programming-guide/strings/how-to-concatenate-multiple-strings.md)。
+- [將多個字串合併為一個字串](concatenate-multiple-strings.md)。
 - [搜尋字串中的文字](../programming-guide/strings/how-to-search-strings-using-string-methods.md)。
 - [使用規則運算式搜尋字串](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md)。
 

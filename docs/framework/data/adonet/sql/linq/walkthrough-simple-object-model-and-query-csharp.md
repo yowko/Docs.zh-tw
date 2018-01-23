@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c118948f0eac8a9df81432b75297511172b10f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 444692cb035d97b0fe57c1ea9ba7802491ca2160
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  

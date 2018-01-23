@@ -11,15 +11,15 @@ ms.topic: article
 dev_langs: vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: abb5fd319630392f38effa21f351c1b656727bd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4bc7baee8e95243cf05a52f49c37aa2d8916666
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>逐步解說：操作資料 (Visual Basic)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
      您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
   
-     **sqlmetal /code:"c:\linqtest2\northwind.vb"/language: vb"C:\linqtest2\northwnd.mdf"/pluralize**  
+     **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
      如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   

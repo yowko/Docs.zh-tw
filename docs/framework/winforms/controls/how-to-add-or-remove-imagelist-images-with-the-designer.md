@@ -18,17 +18,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 05dd1e06c2cba31bca1282e8d409ab1b5610d1dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce14d6f060482eb521e9812a127c6b27431121c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>如何：使用設計工具加入或移除 ImageList 影像
 您可以將映像以<xref:System.Windows.Forms.ImageList>元件數個不同的方式。 您可以將影像加入使用智慧標籤相關聯的非常快速地<xref:System.Windows.Forms.ImageList>，或如果您要設定其他幾個屬性上<xref:System.Windows.Forms.ImageList>，可能會發現更方便地加入 [屬性] 視窗的影像。 您也可以使用程式碼，以新增映像。 如需如何新增程式碼的映像的詳細資訊，請參閱[如何： 加入或移除映像使用 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。 通常您填入<xref:System.Windows.Forms.ImageList>映像之前相關聯的控制項，但這不是必要元件。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>新增或移除映像使用 [屬性] 視窗  
   
