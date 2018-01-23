@@ -24,7 +24,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版導入了新的交易架構，可透過 <xref:System.Transactions> 命名空間 (Namespace) 進行存取。 此架構以完全整合到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)](包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]) 中的方式來公開交易。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版導入了新的交易架構，可透過 <xref:System.Transactions> 命名空間 (Namespace) 進行存取。 此架構以完全整合到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]) 中的方式來公開交易。  
   
  除了增強程式設計之外，在處理交易時， <xref:System.Transactions> 還會與 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 一起運作協調出最佳效能。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
   
