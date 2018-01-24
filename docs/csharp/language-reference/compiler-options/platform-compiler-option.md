@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (C# 編譯器選項)
+# <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
 指定哪個 Common Language Runtime (CLR) 版本可以執行組件。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -48,13 +48,13 @@ ms.lasthandoff: 12/23/2017
   
  在 64 位元 Windows 作業系統上：  
   
--   使用 **/platform:x86** 所編譯的組件會在 WOW64 下執行的 32 位元 CLR 上執行。  
+-   使用 **-platform:x86** 所編譯的組件會在 WOW64 下執行的 32 位元 CLR 上執行。  
   
--   使用 **/platform:anycpu** 所編譯的 DLL 會在與載入它的程序相同的 CLR 上執行。  
+-   使用 **-platform:anycpu** 所編譯的 DLL 會在與載入它的程序相同的 CLR 上執行。  
   
--   使用 **/platform:anycpu** 所編譯的可執行檔會在 64 位元 CLR 上執行。  
+-   使用 **-platform:anycpu** 所編譯的可執行檔會在 64 位元 CLR 上執行。  
   
--   使用 **/platform:anycpu32bitpreferred** 所編譯的可執行檔會在 32 位元 CLR 上執行。  
+-   使用 **-platform:anycpu32bitpreferred** 所編譯的可執行檔會在 32 位元 CLR 上執行。  
   
  **anycpu32bitpreferred** 設定只對可執行檔 (.EXE) 有效，而且需要 .NET Framework 4.5。  
   
@@ -68,15 +68,15 @@ ms.lasthandoff: 12/23/2017
   
 3.  修改**平台目標**屬性，並且針對以 .NET Framework 4.5 為目標的專案選取或清除 [建議使用 32 位元] 核取方塊。  
   
- 請注意，在 Visual C# Express 開發環境中無法使用 **/platform**。  
+ 請注意，在 Visual C# Express 開發環境中無法使用 **-platform**。  
   
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **/platform** 選項，指定應用程式應該在 64 位元 Windows 作業系統上以 64 位元 CLR 執行。  
+ 下列範例示範如何使用 **-platform** 選項，指定應用程式應該在 64 位元 Windows 作業系統上以 64 位元 CLR 執行。  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>請參閱  

@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (C# 編譯器選項)
+# <a name="-refonly-c-compiler-options"></a>-refonly (C# 編譯器選項)
 
-**/Refonly**選項指出參考組件應而不是實作組件，做為主要輸出的輸出。 `/refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
+**-refonly** 選項指出參考組件應是主要輸出的輸出，而不是實作組件。 `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
 
 ## <a name="syntax"></a>語法
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>備註
@@ -40,8 +41,8 @@ ms.lasthandoff: 11/21/2017
 - 所有虛擬方法都保留。 保留明確的介面實作。 保留明確實作的屬性和事件，因為它們的存取子都是虛擬的 (因此保留)。
 - 所有結構欄位都保留。 (這是 post-C#-7.1 細分的候選項目)
 
-`/refonly` 和 [`/refout`](refout-compiler-option.md) 選項互斥。
+`-refonly` 和 [`-refout`](refout-compiler-option.md) 選項互斥。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

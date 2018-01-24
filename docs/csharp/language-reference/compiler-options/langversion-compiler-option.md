@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (C# 編譯器選項)
+# <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 讓編譯器只接受所選擇 C# 語言規格中所含的語法。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -52,13 +52,13 @@ ms.lasthandoff: 12/06/2017
 
   
 ## <a name="remarks"></a>備註  
- C# 應用程式所參考的中繼資料不限於 **/langversion** 編譯器選項。  
+ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選項。  
   
- 因為每個版本的 C# 編譯器包含語言規格的延伸模組，所以 **/langversion** 不會提供舊版編譯器的相等功能。  
+ 因為每個版本的 C# 編譯器都包含語言規格的延伸模組，所以 **-langversion** 不會提供舊版編譯器的相等功能。  
  
  此外，雖然 C# 版本更新通常會與主要 .Net Framework 版本一致，但是新語法和功能不需要繫結至該特定架構版本。 雖然新功能一定需要也要與 C# 修訂一起發行的新編譯器更新，但是每個特定功能都有自己的最低 .Net API 或 Common Language Runtime 需求，可讓它包含 NuGet 套件或其他程式庫以在舊版架構上執行。
   
- 不論使用的 **/langversion** 設定為何，您都會使用目前版本的 Common Language Runtime 來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [/moduleassemblyname (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)，這些都是在 **/langversion:ISO-1** 下運作。  
+ 不論使用的 **-langversion** 設定為何，您都會使用目前版本的通用語言執行平台來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/06/2017
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。  
     
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  
  

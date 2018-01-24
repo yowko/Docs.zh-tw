@@ -9,11 +9,11 @@ ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8886f7601ce4d1de4a6b277a803ff87eb67bee78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac9b0ad47dc9608c3082167493caa7c4bc966497
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程式的一般結構 (C# 程式設計手冊)
 C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多個命名空間。 命名空間可以包含類別、結構、介面、列舉和委派等類型，以及他命名空間。 以下是 C# 程式的基本架構，其中包含上述所有項目。  
@@ -36,8 +36,8 @@ C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多�
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
  [C# 參考](../../../csharp/language-reference/index.md)  
- [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+ [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

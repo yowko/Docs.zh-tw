@@ -13,27 +13,27 @@ ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e02f82bb0dd2952bd2f192af7ff233194a045619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0a8cc66609fe542fc7db166cd208cfcedb204b8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="checked-c-compiler-options"></a>/checked (C# 編譯器選項)
-**/checked** 選項會指定產生超出該資料型別範圍之值且不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。  
+# <a name="-checked-c-compiler-options"></a>-checked (C# 編譯器選項)
+**-checked** 選項會指定產生超出該資料類型範圍之值且不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/checked[+ | -]  
+-checked[+ | -]  
 ```  
   
 ## <a name="remarks"></a>備註  
- 在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式不一定會有 **/checked** 選項的效果。  
+ 在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式不一定會有 **-checked** 選項的效果。  
   
- 如果不在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式產生超出該資料型別範圍的值，並在編譯時使用 **/checked+** (**/checked**)，則陳述式會在執行階段導致例外狀況。 如果在編譯時使用 **/checked-**，則該陳述式不會在執行階段導致例外狀況。  
+ 如果不在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式產生超出該資料類型範圍的值，並在編譯時使用 **-checked+** (**-checked**)，則該陳述式會在執行階段導致例外狀況。 如果在編譯時使用 **-checked-**，則該陳述式不會在執行階段導致例外狀況。  
   
- 這個選項的預設值是 **/checked-**。 使用 **/checked-** 的其中一個案例是建置大型應用程式。 自動化工具有時是用來建置這類應用程式，而且這類工具可能會將 **/checked** 自動設為 +。 您可以指定 **/checked-** 來覆寫工具的全域預設值。  
+ 這個選項的預設值是 **-checked-**。 使用 **-checked-** 的其中一個案例是建置大型應用程式。 自動化工具有時是用來建置這類應用程式，而且這類工具可能會將 **-checked** 自動設為 +。 您可以指定 **-checked-** 來覆寫工具的全域預設值。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -48,12 +48,12 @@ ms.lasthandoff: 11/21/2017
  若要以程式設計方式存取這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   
 ## <a name="example"></a>範例  
- 下列命令會編譯 `t2.cs`。 在命令中使用 `/checked` 會指定檔案中不在 `checked` 或 `unchecked` 關鍵字範圍內且產生超出該資料型別範圍之值的任何整數算術陳述式，都會在執行階段導致例外狀況。  
+ 下列命令會編譯 `t2.cs`。 在命令中使用 `-checked` 會指定檔案中不在 `checked` 或 `unchecked` 關鍵字範圍內且產生超出該資料型別範圍之值的任何整數算術陳述式，都會在執行階段導致例外狀況。  
   
 ```console  
-csc t2.cs /checked  
+csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  

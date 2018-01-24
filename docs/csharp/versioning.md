@@ -1,7 +1,7 @@
 ---
 title: "C# 版本控制 - C# 手冊"
 description: "了解 C# 和 .NET 的版本控制運作方式"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.date: 01/08/2017
@@ -10,11 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
@@ -57,7 +57,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="application-configuration-file"></a>應用程式組態檔
 
-身為 .NET 開發人員，您在大多數的專案類型中，有很大的機會遇到[`app.config` 檔案](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx)。
+身為 .NET 開發人員，您在大多數的專案類型中，有很大的機會遇到[`app.config` 檔案](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx)。
 這個簡單的組態檔要很長時間才能改善推出新的更新。 文件庫的設計通常應該是將可能定期變更的資訊儲存在 `app.config` 檔案中，因此當這類資訊更新時，只要將舊版的組態檔替換成新版即可，不需要重新編譯文件庫。
 
 ## <a name="consuming-libraries"></a>使用文件庫
@@ -68,7 +68,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="assembly-binding-redirection"></a>組件繫結重新導向
 
-您可以使用 `app.config` 檔案更新應用程式使用的文件庫版本。 新增所謂的[*繫結重新導向*](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx)，您可以使用新的文件庫版本，不必重新編譯應用程式。 下例示範如何更新應用程式的 `app.config` 檔案，使用 `ReferencedLibrary` 的 `1.0.1` 修補版本，不使用原先編譯的 `1.0.0` 版。
+您可以使用 `app.config` 檔案更新應用程式使用的文件庫版本。 新增所謂的[*繫結重新導向*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx)，您可以使用新的文件庫版本，不必重新編譯應用程式。 下例示範如何更新應用程式的 `app.config` 檔案，使用 `ReferencedLibrary` 的 `1.0.1` 修補版本，不使用原先編譯的 `1.0.0` 版。
 
 ```xml
 <dependentAssembly>

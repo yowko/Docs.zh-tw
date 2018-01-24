@@ -16,19 +16,19 @@ ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4c7e4e646e6796cff6bbfbe05038ff361fa80c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 273437a4250a393274fa20ad4c02b61dce35ed34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="define-c-compiler-options"></a>/define (C# 編譯器選項)
-**/define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。  
+# <a name="-define-c-compiler-options"></a>-define (C# 編譯器選項)
+**-define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/define:name[;name2]  
+-define:name[;name2]  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -36,16 +36,16 @@ ms.lasthandoff: 11/21/2017
  您要定義的一或多個符號之名稱。  
   
 ## <a name="remarks"></a>備註  
- **/define** 選項的作用與使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 前置處理器指示詞相同，不同之處在於編譯器選項對專案中的所有檔案都有效。 直到原始程式檔中的 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 指示詞移除符號的定義之前，符號在原始程式檔中都會維持已定義狀態。 使用 /define 選項時，某個檔案中的 `#undef` 指示詞不會對專案中的其他原始程式碼檔造成影響。  
+ **-define** 選項的作用與使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 前置處理器指示詞相同，不同之處在於編譯器選項對專案中的所有檔案都有效。 直到原始程式檔中的 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 指示詞移除符號的定義之前，符號在原始程式檔中都會維持已定義狀態。 使用 -define 選項時，某個檔案中的 `#undef` 指示詞不會對專案中的其他原始程式碼檔造成影響。  
   
  您可以使用此選項建立的符號，搭配 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)、[#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)、[#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) 和 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)，有條件地編譯原始程式檔。  
   
- **/d** 是 **/define** 的簡短形式。  
+ **-d** 是 **-define** 的簡短形式。  
   
- 您可以使用分號或逗號分隔符號名稱，以 **/define** 定義多個符號。 例如:   
+ 您可以使用分號或逗號分隔符號名稱，以 **-define** 定義多個符號。 例如:   
   
 ```console  
-/define:DEBUG;TUESDAY  
+-define:DEBUG;TUESDAY  
 ```  
   
  C# 編譯器本身不會定義任何您可以在原始程式碼中使用的符號或巨集；所有符號定義都必須是使用者定義。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 ```csharp  
 // preprocessor_define.cs  
-// compile with: /define:xx  
+// compile with: -define:xx  
 // or uncomment the next line  
 // #define xx  
 using System;  
@@ -82,6 +82,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

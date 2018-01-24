@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>備註  
  安全性原則是使用三個原則層級表示：電腦原則、使用者原則和企業原則。 組件收到的權限集合是由這三種原則層級允許的權限集合交集所決定。 每個原則層級是以程式碼群組的階層結構表示。 每個程式碼群組都具有成員資格條件，用以判斷哪一個程式碼是該群組的成員。 具名權限集合也會與每個程式碼群組相關聯。 這個權限集合會指定執行階段允許符合成員資格條件的程式碼具備的權限。 程式碼群組階層架構與相關聯的具名權限集合一起定義並維護每一個層級的安全性原則。 您可以使用 **–user**、**-customuser**、**–machine** 和 **-enterprise** 選項來設定安全性原則的層級。  
   
- 如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+ 如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>參考程式碼群組和權限集合  
  為了簡化階層架構中程式碼群組的參考，**-list** 選項會以縮排方式顯示程式碼群組清單與其數字標籤 (1、1.1、1.1.1，以此類推)。 其他以程式碼群組為目標的命令列作業也會使用數字標籤參考特定程式碼群組。  

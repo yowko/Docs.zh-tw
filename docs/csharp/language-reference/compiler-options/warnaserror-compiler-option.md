@@ -13,29 +13,29 @@ ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28c2cdc26d32d98e617a0c4b8cd282d2fbc87f4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0127f8982d4b8c487a7e243025052e3eb9a5ff75
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warnaserror-c-compiler-options"></a>/warnaserror (C# 編譯器選項)
-**/warnaserror+** 選項會將所有警告都視為錯誤。  
+# <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# 編譯器選項)
+**-warnaserror+** 選項會將所有警告都視為錯誤  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/warnaserror[<U>+</U> | -][:warning-list]  
+-warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
 ## <a name="remarks"></a>備註  
  任何原本報告為警告的訊息都會改成報告為錯誤，並中止建置程序 (不會建置輸出檔)。  
   
- 根據預設，**/warnaserror-** 會生效，這會導致無法產生輸出檔的警告。 **/warnaserror** 與 **/warnaserror+** 相同，都會將警告視為錯誤。  
+ 根據預設，**-warnaserror-** 會生效，這會導致無法產生輸出檔案的警告。 **-warnaserror** 與 **-warnaserror+** 相同，都會將警告視為錯誤。  
   
  選擇性，如果您只想要將少數特定警告視為錯誤，則可以指定將以逗號分隔的警告編號清單視為錯誤。  
   
- 使用 [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) 指定您想要編譯器顯示的警告層級。 使用 [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用特定警告。  
+ 使用 [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) 指定您想要編譯器顯示的警告層級。 使用 [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用特定警告。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
  編譯 `in.cs`，並讓編譯器不要顯示任何警告：  
   
 ```console  
-csc /warnaserror in.cs  
-csc /warnaserror:642,649,652 in.cs  
+csc -warnaserror in.cs  
+csc -warnaserror:642,649,652 in.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

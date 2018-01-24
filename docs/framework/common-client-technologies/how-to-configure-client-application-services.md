@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：設定用戶端應用程式服務
 本主題說明如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [專案設計工具] 啟用及設定用戶端應用程式服務。 您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。 設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  選取或清除 [在本機儲存密碼雜湊以啟用離線登入]。 當您選取這個選項時，即會在本機以加密格式快取使用者的密碼。 如果您實作應用程式的離線模式，這個選項會很有用。 選取這個選項時，即使 <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> 屬性已設定為 `true`，也可以驗證使用者。  
   
-3.  選取或清除 [要求使用者在伺服器 Cookie 過期時必須再次登入]。 驗證 Cookie 會在遠端服務上設定，表示使用者登入保持使用中的時間長度。 如需如何設定 Cookie 的詳細資訊，請參閱[驗證的 forms 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3) 中的 `timeout` 屬性。  
+3.  選取或清除 [要求使用者在伺服器 Cookie 過期時必須再次登入]。 驗證 Cookie 會在遠端服務上設定，表示使用者登入保持使用中的時間長度。 如需如何設定 Cookie 的詳細資訊，請參閱[驗證的 forms 項目 (ASP.NET 設定結構描述)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3) 中的 `timeout` 屬性。  
   
      如果您選取這個選項，在驗證 Cookie 過期後嘗試存取遠端角色或 Web 設定服務，將會擲回 <xref:System.Net.WebException>。 您可以處理這個例外狀況，然後顯示登入對話方塊以重新驗證使用者。 如需這個行為的範例，請參閱[逐步解說：使用用戶端應用程式服務](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。 您可以針對部署在公用位置的應用程式，使用這個選項來確保使用應用程式後讓應用程式繼續執行的使用者，不會無限期地保持已驗證的狀態。  
   

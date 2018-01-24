@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (C# 編譯器選項)
+# <a name="-refout-c-compiler-options"></a>-refout (C# 編譯器選項)
 
-**/refout** 選項指定參考組件應該輸出的檔案路徑。 這在發出 API 中會轉譯成 `metadataPeStream`。
+**-refout** 選項指定參考組件應該輸出的檔案路徑。 這在發出 API 中會轉譯成 `metadataPeStream`。
 
 ## <a name="syntax"></a>語法
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>引數
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/21/2017
 - 所有虛擬方法都保留。 保留明確的介面實作。 保留明確實作的屬性和事件，因為它們的存取子都是虛擬的 (因此保留)。
 - 所有結構欄位都保留。 (這是 post-C#-7.1 細分的候選項目)
 
-`/refout` 和 [`/refonly`](refonly-compiler-option.md) 選項互斥。
+`-refout` 和 [`-refonly`](refonly-compiler-option.md) 選項互斥。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

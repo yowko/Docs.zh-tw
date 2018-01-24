@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字串插值 #
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>字串插補如何運作
 
-在幕後，會由編譯器將這個字串插補轉譯成 String.Format。 因此，您可以執行[之前對 String.Format 所進行的相同型別操作](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx)。
+在幕後，會由編譯器將這個字串插補轉譯成 String.Format。 因此，您可以執行[之前對 String.Format 所進行的相同型別操作](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx)。
 
 例如，您可以新增填補和設定數字格式：
 

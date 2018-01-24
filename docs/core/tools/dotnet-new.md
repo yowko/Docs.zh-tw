@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ dotnet new [-h|--help]
 
 此命令包含預設的範本清單。 使用 `dotnet new -l` 以取得可用範本的清單。 下表顯示隨 .NET Core 2.0 SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。
 
-|範本描述                          | 範本名稱  | 語言     |
-|----------------------------------------------|----------------|---------------|
-| 主控台應用程式                          | 主控台        | [C#], F#, VB  |
-| 類別庫                                | classlib       | [C#], F#, VB  |
-| 單元測試專案                            | mstest         | [C#], F#, VB  |
-| xUnit 測試專案                           | xunit          | [C#], F#, VB  |
-| 空的 ASP.NET Core                           | web            | [C#]、F#      |
-| ASP.NET Core Web 應用程式 (模型檢視控制器) | mvc            | [C#]、F#      |
-| ASP.NET Core Web 應用程式                         | razor          | [C#]          |
-| ASP.NET Core 與 Angular                    | angular        | [C#]          |
-| ASP.NET Core 與 React.js                   | react          | [C#]          |
-| ASP.NET Core 與 React.js 和 Redux         | reactredux     | [C#]          |
-| ASP.NET Core Web API                         | webapi         | [C#]、F#      |
-| global.json 檔案                             | globaljson     |               |
-| Nuget 組態                                 | nugetconfig    |               |
-| Web 組態                                   | webconfig      |               |
-| 方案檔                                | sln            |               |
-| Razor 頁面                                   | 頁面           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|範本描述                          | 範本名稱 | 語言     |
+|----------------------------------------------|---------------|---------------|
+| 主控台應用程式                          | `console`     | [C#], F#, VB  |
+| 類別庫                                | `classlib`    | [C#], F#, VB  |
+| 單元測試專案                            | `mstest`      | [C#], F#, VB  |
+| xUnit 測試專案                           | `xunit`       | [C#], F#, VB  |
+| 空的 ASP.NET Core                           | `web`         | [C#]、F#      |
+| ASP.NET Core Web 應用程式 (模型檢視控制器) | `mvc`         | [C#]、F#      |
+| ASP.NET Core Web 應用程式                         | `razor`       | [C#]          |
+| ASP.NET Core 與 Angular                    | `angular`     | [C#]          |
+| ASP.NET Core 與 React.js                   | `react`       | [C#]          |
+| ASP.NET Core 與 React.js 和 Redux         | `reactredux`  | [C#]          |
+| ASP.NET Core Web API                         | `webapi`      | [C#]、F#      |
+| global.json 檔案                             | `globaljson`  |               |
+| Nuget 組態                                 | `nugetconfig` |               |
+| Web 組態                                   | `webconfig`   |               |
+| 方案檔                                | `sln`         |               |
+| Razor 頁面                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 此命令包含預設的範本清單。 使用 `dotnet new -all` 以取得可用範本的清單。 下表顯示隨 .NET Core 1.x SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。
 
-|範本描述  | 範本名稱  | 語言 |
-|----------------------|----------------|-----------|
-| 主控台應用程式  | 主控台        | [C#]、F#  |
-| 類別庫        | classlib       | [C#]、F#  |
-| 單元測試專案    | mstest         | [C#]、F#  |
-| xUnit 測試專案   | xunit          | [C#]、F#  |
-| 空的 ASP.NET Core   | web            | [C#]      |
-| ASP.NET Core Web 應用程式 | mvc            | [C#]、F#  |
-| ASP.NET Core Web API | webapi         | [C#]      |
-| Nuget 組態         | nugetconfig    |           |
-| Web 組態           | webconfig      |           |
-| 方案檔        | sln            |           |
+|範本描述  | 範本名稱 | 語言 |
+|----------------------|---------------|-----------|
+| 主控台應用程式  | `console`     | [C#]、F#  |
+| 類別庫        | `classlib`    | [C#]、F#  |
+| 單元測試專案    | `mstest`      | [C#]、F#  |
+| xUnit 測試專案   | `xunit`       | [C#]、F#  |
+| 空的 ASP.NET Core   | `web`         | [C#]      |
+| ASP.NET Core Web 應用程式 | `mvc`         | [C#]、F#  |
+| ASP.NET Core Web API | `webapi`      | [C#]      |
+| Nuget 組態         | `nugetconfig` |           |
+| Web 組態           | `webconfig`   |           |
+| 方案檔        | `sln`         |           |
 
 ---
 

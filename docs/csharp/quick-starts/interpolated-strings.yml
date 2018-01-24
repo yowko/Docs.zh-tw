@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: "C# 中的插入字串"
+metadata:
+  title: "C# 中的插入字串。 了解如何建構包含日期或數字這類其他值的字串。"
+  description: "在本教學課程中，您將使用瀏覽器，以互動方式使用 C# 插入字串功能。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。"
+  audience: Developer
+  ms.custom: mvc
+  ms.topic: get-started-article
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  nextTutorialHref: list-collection
+  nextTutorialTitle: "C# 中的集合"
+  ms.openlocfilehash: f54d8e5e3703556b333155fd9541f9d7c7e7fd1b
+  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 01/20/2018
+items:
+- durationInMinutes: 2
+  content: "本快速入門將教導您如何在 C# 中使用插入字串，以互動方式將值插入至單一輸出字串。 您可以使用瀏覽器撰寫 C# 程式碼，而且可以立即查看編譯和執行程式碼的結果。 快速入門包含一系列的課程，以串連字串、將值插入至字串，並以不同的方式格式化這些值。\n"
+- title: "建立插入字串"
+  durationInMinutes: 2
+  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中鍵入下列程式碼區塊 (將 \"\\<名稱>\" 取代為您的名稱)，然後按一下 [執行] 按鈕：\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\n當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。 \n\n這個簡單範例包含每個插入字串都必須要有的兩個項目： \n\n- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在互動式視窗中於 `$` 字元後面插入空格，然後按一下 [執行] 按鈕。 C# 編譯器抱怨「未預期的字元 '$'」)。 \n\n- 一或多個「插入運算式」。 插入運算式是以左右大括號 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。 \n\n嘗試更多包含一些其他資料類型的插入字串範例。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: "包含不同的資料類型"
+  durationInMinutes: 3
+  content: "在前一個快速入門中，您使用插入字串將某個字串插入至另一個字串內部。 不過，插入字串運算式可以是任意資料類型。 嘗試具有多個資料類型值的插入字串。 \n\n下列範例包含具有 `Vegetable` 物件的插入運算式、`Unit` 列舉的成員、<xref:System.DateTime> 值和 <xref:System.Decimal> 值。 在互動式視窗中執行它。\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic class Example\n{\n   public enum Unit { item, pound, ounce, dozen };\n\n   public static void Main()\n   {\n      var item = new Vegetable(\"eggplant\");\n      var date = DateTime.Now;\n      var price = 1.99m;\n      var unit = Unit.item;\n      Console.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n   }\n}\n```\n\n請注意，其中一個插入運算式包含向主控台顯示之結果字串中的 `item` 物件，而在此情況下，會將字串 \"eggplant\" 插入至結果字串。 原因是插入運算式的類型不是字串時，C# 編譯器會執行下列作業：\n\n- 如果插入運算式是 `null`，則插入運算式會傳回空字串 (\"\" 或 <xref:System.String.Empty?displayProperty=nameWithType>)。\n\n- 如果插入運算式不是 `null`，則會呼叫插入運算式類型的 `ToString` 方法。 您可以註銷範例中 `Vegetable.ToString` 方法的定義來進行測試，方式是在其前面放置註解符號 (`//`)。 在輸出中，字串 \"eggplant\" 會取代為完整類型名稱 (C# REPL 所定義的命名空間與類型名稱)，這是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的預設行為。   \n\n在此範例的輸出中，日期太過精確 (eggplant 價格不會因第二個而變更)，而價格值未指出貨幣單位。 在下一個步驟中，您將學習如何控制插入運算式所傳回字串的格式來修正這些問題。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: "控制插入運算式的格式"
+  durationInMinutes: 5
+  content: "在上一個課程中，已將兩個格式不佳的字串插入至結果字串。 其中一個是只有日期才適合的日期和時間值。 第二個是未指出其貨幣單位的價格。 這兩個問題都很容易解決。 插入運算式可以包含「格式字串」，以控制特定類型的格式。 修改前一個範例中的 `Console.WriteLine` 呼叫，使其包含日期和價位欄位的格式規範，如下行所示：\n\n```csharp\nConsole.WriteLine($\"On {date:d}, the price of {item} was {price:C2} per {unit}.\");\n```\n\n在插入運算式後面接著冒號和格式字串，即可指定格式字串。 \"d\" 是[標準日期和時間格式字串](../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 \"C2\" 是[標準數值格式字串](../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，可將數字呈現為小數點後面有兩位數的貨幣值。\n\n.NET Standard 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)一文中的[格式字串和 .NET 類別庫類型](../../standard/base-types/formatting-types.md#stringRef)。 任何類型都可以支援一組格式字串，而且您也可以開發自訂格式延伸模組，以提供現有類型的自訂格式。 如需透過提供 <xref:System.ICustomFormatter> 實作以自訂格式的資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)一文中的[使用 ICustomFormatter 的自訂格式](../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter)。\n\n嘗試在 **.NET 編輯器**中修改格式字串，以查看它們對日期和時間以及數值格式的影響。 將 `{date:d}` 中的 \"d\" 變更為 \"t\" (顯示簡短時間格式)、\"y\" (顯示年份和月份) 以及 \"yyyy\" (將年份顯示為四位數)。 將 `{price:C2}` 中的 \"C2\" 變更為 \"e\" (適用於指數標記法) 和 \"F3\" (適用於小數點後面有三位數的數值)。\n\n除了控制格式之外，您也可以控制插入運算式所傳回字串的欄位寬度和對齊方式。 在下一步，您將學習如何執行這項作業。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- title: "控制插入運算式的欄位寬度和對齊方式"
+  durationInMinutes: 6
+  content: "一般情況下，結果字串中包含插入運算式所傳回的字串時，不會有任何前置或尾端空格。 特別是使用一組資料時，插入運算式可讓您指定欄位寬度和其對齊方式。 若要查看此結果，請執行下列程式碼。\n\n```csharp\n  var inventory = new Dictionary<string, int>();\n  inventory.Add(\"hammer, ball pein\", 18);\n  inventory.Add(\"hammer, cross pein\", 5);\n  inventory.Add(\"screwdriver, Phillips #2\", 14);\n\n  Console.WriteLine($\"Inventory on {DateTime.Now:d}\");\n  Console.WriteLine(\" \");\n  Console.WriteLine($\"{\"Item\",-25}    {\"Quantity\",10}\");\n  Console.WriteLine(\" \"); \n  foreach (var item in inventory)\n     Console.WriteLine($\"{item.Key,-25}     {item.Value,10}\");\n```\n\n項目名稱會靠左對齊，而其數量會靠右對齊。 在運算式後面新增逗號 (\",\")，並指定欄位寬度，即可指定對齊方式。 如果欄位寬度是正數，則欄位會靠右對齊：\n\n```text\n{expression, width}\n```\n\n如果欄位寬度是負數，則欄位會靠左對齊：\n\n```text\n{expression, -width}\n```\n嘗試移除 `{\"Item\",-25}` 和 `{item.Key,-25}` 插入運算式中的負號，然後重新執行此範例。 目前，項目名稱會靠右對齊。\n\n您可以將欄位寬度和格式字串結合到單一插入運算式。 先出現欄位寬度，後面接著冒號和格式字串。 嘗試下列簡單程式，以顯示含有所定義欄位寬度的三個格式化字串。\n\n```csharp\nConsole.WriteLine($\"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15:N2} feet\");\n```\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- content: "您已完成插入字串快速入門。 \n\n您可以在自己的本機開發環境中繼續進行這些快速入門。 了解[本機開發](local-environment.md)的基本概念，然後選擇快速入門。 您可以嘗試這個相同的練習、直接移至下一個快速入門，或從 [C# 中的數字](numbers-in-csharp-local.md)快速入門重新開始。\n\n您可以在＜C# 參考＞的[插入字串](../language-reference/keywords/interpolated-strings.md)主題中，深入了解如何使用插入字串。\0"

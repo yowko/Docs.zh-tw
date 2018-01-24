@@ -16,11 +16,11 @@ ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 81eba9a71d90c79f72ccadfa65431754dfb0164e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a756be7f61c812269d5ee08d99ccf6785ddcc7df
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>如何：在 Visual Basic 中將文字寫入我的文件目錄中的檔案
 `My.Computer.FileSystem.SpecialDirectories` 物件可讓您存取特殊目錄，例如 [我的文件] 目錄。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。  
   
- 這個範例會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 [建立] 權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要 [寫入] 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 [讀取] 權限，而不授與資料夾的 [建立] 權限。 此外，將資料寫入使用者資料夾，而不是根資料夾或 **Program Files** 資料夾，也更加安全。 如需詳細資訊，請參閱 [ACL 技術概觀](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045)。  
+ 這個範例會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 [建立] 權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要 [寫入] 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 [讀取] 權限，而不授與資料夾的 [建立] 權限。 此外，將資料寫入使用者資料夾，而不是根資料夾或 **Program Files** 資料夾，也更加安全。 如需詳細資訊，請參閱 [ACL 技術概觀](http://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  

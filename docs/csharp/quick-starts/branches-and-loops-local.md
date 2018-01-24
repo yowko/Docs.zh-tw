@@ -4,16 +4,16 @@ description: "在這個關於分支和迴圈的快速入門中，您將會撰寫
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>分支和迴圈
 
@@ -254,7 +254,7 @@ for(int index = 0; index < 10; index++)
 
 您已經完成＜分支和迴圈＞快速入門。
 
-您可以在自己的開發環境中，繼續完成[陣列和集合](arrays-and-collections.md)快速入門中的內容。
+您可以在自己的開發環境中，繼續完成[插入字串](interpolated-strings-local.md)快速入門。
 
 您可以在下列主題中深入了解這些概念：
 

@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
@@ -99,7 +99,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  請注意，Tlbexp.exe 會忽略 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 欄位。  
   
- 由於類型程式庫無法容納這些組件中的所有資訊，因此，Tlbexp.exe 在匯出處理序時可能會捨棄一些資料。 如需轉換處理序的說明並且識別型別程式庫所發出每件資訊的來源，請參閱[組件至型別程式庫轉換的摘要](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)。  
+ 由於類型程式庫無法容納這些組件中的所有資訊，因此，Tlbexp.exe 在匯出處理序時可能會捨棄一些資料。 如需轉換處理序的說明並且識別型別程式庫所發出每件資訊的來源，請參閱[組件至型別程式庫轉換的摘要](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)。  
   
  請注意，類型程式庫匯出工具會將 <xref:System.TypedReference> 參數匯出為 `VARIANT` 的方法，即使 <xref:System.TypedReference> 物件在 Unmanaged 程式碼中不具任何意義。 當您匯出具有 <xref:System.TypedReference> 參數的方法時，類型程式庫匯出工具不會產生警告或錯誤，而使用結果類型程式庫的 Unmanaged 程式碼也將無法正常執行。  
   
@@ -142,6 +142,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [工具](../../../docs/framework/tools/index.md)  
  [Regasm.exe (組件登錄工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [組件至型別程式庫轉換的摘要](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [組件至型別程式庫轉換的摘要](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

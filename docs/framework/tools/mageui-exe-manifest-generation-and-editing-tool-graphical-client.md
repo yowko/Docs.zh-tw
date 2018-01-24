@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
 MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
@@ -138,7 +138,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
   
 |UI 項目|描述|  
 |----------------|-----------------|  
-|**使用權限集合類型**|指定要在用戶端上執行的應用程式所需的最低權限集合。 如需這些權限集合的描述和其所會要求的權限，請參閱 [NIB：具名使用權限集合](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
+|**使用權限集合類型**|指定要在用戶端上執行的應用程式所需的最低權限集合。 如需這些權限集合的描述和其所會要求的權限，請參閱 [NIB：具名使用權限集合](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
 |**詳細資料**|建立應用程式資訊清單的 XML 來表示權限設定。 除非您有充分的了解應用程式資訊清單 XML 格式，否則您應該手動編輯此 XML。 如需詳細資訊，請參閱 [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)。|  
   
 ### <a name="deployment-manifest-tab"></a>部署資訊清單索引標籤  

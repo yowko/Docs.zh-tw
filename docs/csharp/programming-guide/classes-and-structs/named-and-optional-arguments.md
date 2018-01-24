@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介紹具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -33,29 +33,29 @@ ms.lasthandoff: 11/21/2017
  具名和選擇性參數一起使用時，可讓您只為選擇性參數清單中的幾個參數提供引數。 這項功能大幅有助呼叫 COM 介面，例如 Microsoft Office Automation API。  
   
 ## <a name="named-arguments"></a>具名引數  
- 具名引數讓您不需要記住或查詢呼叫方法參數清單中的參數順序。 參數名稱可以指定每個引數的參數。 例如，函式會列印訂單詳細資料 (例如，賣方名稱、 訂單數目和產品名稱) 可以被呼叫，以標準方式傳送引數的位置，由函式定義的順序。
+ 具名引數讓您不需要記住或查詢呼叫方法參數清單中的參數順序。 參數名稱可以指定每個引數的參數。 例如，依函式定義的順序來傳送位置的引數，可透過標準方式呼叫可列印訂單詳細資料的函式 (例如，賣方名稱、訂單號碼和產品名稱)。
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- 如果您不記得參數的順序，但知道它們的名稱，您可以依任意順序傳送的引數。  
+ 如果您不記得參數的順序，但知道它們的名稱，則可以依照任何順序傳送引數。  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 具名引數也藉由識別每個引數所代表的意義，改善程式碼的可讀性。 在下列範例方法`sellerName`不可為 null 或空白。 兩者`sellerName`和`productName`是字串型別，而不會傳送引數的位置，合理來釐清兩者，並減少混淆的人閱讀程式碼使用具名引數。
+ 具名引數也藉由識別每個引數所代表的意義，改善程式碼的可讀性。 在下列範例方法中，`sellerName` 不可以為 Null 或空白。 因為 `sellerName` 和 `productName` 都是字串類型，所以可以使用具名引數來區分兩者，並減少讀取程式碼的任何人的混淆，而不是依位置傳送引數。
   
- 具名引數，使用具有位置引數時，是否有效，只要 
+ 在下列情況下，具名引數在與位置引數搭配使用時有效： 
 
-- 這些後面沒有任何位置的引數，或
+- 它們的後面沒有任何位置引數，或
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _開頭為 C# 7.2_，正確的位置中使用。 在下列範例中，參數`orderNum`處於正確的位置，但未明確命名。
+- _開頭為 C# 7.2_，它們會用於正確的位置。 在下列範例中，`orderNum` 參數位於正確位置，但未明確命名。
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 不過，次序不對的具名引數均為無效，如果它們後面接著位置引數。
+ 不過，如果失序具名引數的後面接著位置引數，則無效。
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  ```
   
 ## <a name="example"></a>範例  
- 下列程式碼會實作以及一些其他的本節中的範例。  
+ 下列程式碼會實作本節的範例，以及一些其他範例。  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ ExampleMethod 的選擇性參數
 ## <a name="com-interfaces"></a>COM 介面  
  具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。  
   
- 例如，Microsoft Office Excel [Range Interface](http://go.microsoft.com/fwlink/?LinkId=148196) (範圍介面) 的 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 方法有七個參數，它們都是選擇性參數。 下圖會顯示這些參數。  
+ 例如，Microsoft Office Excel [Range Interface](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) (範圍介面) 的 [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) 方法有七個參數，它們都是選擇性參數。 下圖會顯示這些參數。  
   
  ![IntelliSense 對於 AutoFormat 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat 參數  
@@ -133,7 +133,7 @@ AutoFormat 參數
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
  [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  

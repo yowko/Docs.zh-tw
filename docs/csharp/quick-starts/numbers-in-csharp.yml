@@ -4,147 +4,39 @@ metadata:
   title: "C# 中的數字"
   description: "在此快速入門中，您將使用瀏覽器以互動方式學習有關 C# 的數字型別。 您將要撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。"
   audience: Developer
+  ms.topic: get-started-article
   ms.custom: mvc
   level: Beginner
   nextTutorialHref: branches-and-loops
-  nextTutorialTitle: Branches and loops in C#
+  nextTutorialTitle: "C# 中的分支與迴圈"
   displayType: two-column
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 8c89963107a770e27c9345ee38ed6249a8177f02
-  ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+  ms.openlocfilehash: 7d18240b2871b5322c767287a737deda0b2ddefc
+  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/10/2018
+  ms.lasthandoff: 01/20/2018
 items:
 - durationInMinutes: 1
-  content: >
-    This quick start teaches you about the number types in C# interactively, using your browser to write C# and see the results of compiling and running your code. It contains a series of lessons that explore numbers and math operations in C#. These lessons teach you the fundamentals of the C# language.
+  content: "此快速入門會以互動方式進行 C# 中數字型別的教學，您可使用瀏覽器撰寫 C# 程式碼，並查看程式碼編譯及執行的結果。 內容包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。\n"
 - title: "探索整數運算"
   durationInMinutes: 4
-  content: "Run the following code in the interactive window. To do that, type the following code block in the interactive window and click the **Run** button:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nYou've just seen one of the fundamental math operations with integers. The `int` type represents an **integer**, a positive or negative whole number. You use the `+` symbol for addition. Other common mathematical operations for integers include:\n\n- `-` for subtraction\n- `*` for multiplication\n- `/` for division\n\n> [!TIP]\n> Throughout this quick start, you can explore on your own by modifying the code you've written in the interactive window. This quick start provides examples that you can try at each step.\n\nStart by exploring those different operations. Modify the third line to try each of these operations. After each edit, click the **Run** button.\n\nSubtraction:\n\n```csharp\nint c = a - b;\n```\n\nMultiplication:\n\n```csharp\nint c = a * b;\n```\n\nDivision: \n\n```csharp\nint c = a / b;\n```\n\nYou can also experiment by performing multiple mathematics operations in the same line, if you'd like.\n\n> [!TIP]\n> As you explore C# (or any programming language), you'll\n> make mistakes when you write code. The **compiler** will\n> find those errors and report them to you. When the output\n> contains error messages, look closely at the example code,\n> and the code in the interactive window to see what to fix.\n> That exercise will help you learn the structure of C# code.     \n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
+  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：\n\n- `-` 用於減法\n- `*` 用於乘法\n- `/` 用於除法\n\n> [!TIP]\n> 您可於此整個快速入門中，修改在互動式視窗中撰寫的程式碼，藉以自行探索各項內容。 本快速入門在每個步驟都有供您嘗試的範例。\n\n讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，按一下 [執行] 按鈕。\n\n減法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果您想要的話，也可以試著在同一行中執行多個數學運算。\n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。     \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "探索運算的順序"
   durationInMinutes: 7
-  content: >
-    The C# language defines the precedence of different mathematics operations
-
-    with rules consistent with the rules you learned in mathematics.
-
-    Multiplication and division take precedence over addition and subtraction.
-
-    Explore that by running the following code in the interactive window:
-
-
-    ```csharp
-
-    int a = 5;
-
-    int b = 4;
-
-    int c = 2;
-
-    int d = a + b * c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    The output demonstrates that the multiplication is performed before the addition.
-
-
-    You can force a different order of operation by adding parentheses around
-
-    the operation or operations you want performed first:
-
-
-    ```csharp
-
-    int a = 5;
-
-    int b = 4;
-
-    int c = 2;
-
-    int d = (a  + b) * c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    Explore more by combining many different operations. Replace the fourth line above with something like this:
-
-
-    ```csharp
-
-    int d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
-
-    ```
-
-
-    You may have noticed an interesting behavior for integers. Integer
-
-    division always produces an integer result, even when you'd expect
-
-    the result to include a decimal or fractional portion.
-
-
-    If you haven't seen this behavior, try the following:
-
-
-    ```csharp
-
-    int a = 7;
-
-    int b = 4;
-
-    int c = 3;
-
-    int d = (a  + b) / c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    Click **Run** again to see the results.
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "針對不同數學運算的優先順序，C# 語言所定義的規則與您在數學所學的規則一致。\n乘法和除法的優先順序高於加法和減法。\n請在互動式視窗中執行下列程式碼來探索上述優先順序：\n\n```csharp\nint a = 5;\nint b = 4;\nint c = 2;\nint d = a + b * c;\nConsole.WriteLine(d);\n```\n\n輸出示範了程式會先執行乘法，然後再執行加法。\n\n您可以在想要優先執行的一個或多個運算前後加上括號，以強制執行不同的運算順序：\n\n```csharp\nint a = 5;\nint b = 4;\nint c = 2;\nint d = (a  + b) * c;\nConsole.WriteLine(d);\n```\n\n結合許多不同的運算來深入探索。 將上面的第四行取代為如下的內容：\n\n```csharp\nint d = (a + b) - 6 * c + (12 * 4) / 3 + 12;\n```\n\n您可能已注意到整數某個有趣的行為。 整數的除法一律會產生整數結果，即使您認為結果應有小數或分數部分也一樣。\n\n如果您還沒看過這種行為，請嘗試下列運算：\n\n```csharp\nint a = 7;\nint b = 4;\nint c = 3;\nint d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\n再次按一下 [執行] 來查看結果。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "探索整數的精確度與限制"
   durationInMinutes: 5
-  content: "That last sample showed you that integer division truncates the result.\nYou can get the **remainder** by using the **modulo** operator, the `%` character:\n\n```csharp\nint a = 7;\nint b = 4;\nint c = 3;\nint d = (a  + b) / c;\nint e = (a + b) % c;\nConsole.WriteLine($\"quotient: {d}\");\nConsole.WriteLine($\"remainder: {e}\");\n```\n\nThe C# integer type differs from mathematical integers in one other\nway: the `int` type has minimum and maximum limits. Run this code\nin the interactive window to see those limits:\n\n```csharp\nint max = int.MaxValue;\nint min = int.MinValue;\nConsole.WriteLine($\"The range of integers is {min} to {max}\");\n```\n\nIf a calculation produces a value that exceeds those limits, you\nhave an **underflow** or **overflow** condition. The answer appears\nto wrap from one limit to the other. Add these two lines to the interactive\nwindow to see an example:\n\n```csharp\nint what = max + 3;\nConsole.WriteLine($\"An example of overflow: {what}\");\n```\n\nNotice that the answer is very close to the minimum (negative) integer. It's\nthe same as `min + 2`. \nThe addition operation **overflowed** the allowed values for integers.\nThe answer is a very large negative number because an overflow \"wraps around\"\nfrom the largest possible integer value to the smallest.\n\nThere are other numeric types with different limits and precision that you\nwould use when the `int` type doesn't meet your needs. Let's explore those next.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
+  content: "上一個範例示範了整數除法運算會將結果截斷。\n您可以使用**模數**運算子 (`%` 字元) 來取得**餘數**：\n\n```csharp\nint a = 7;\nint b = 4;\nint c = 3;\nint d = (a  + b) / c;\nint e = (a + b) % c;\nConsole.WriteLine($\"quotient: {d}\");\nConsole.WriteLine($\"remainder: {e}\");\n```\n\nC# 整數型別有一個地方與數學上的整數不同：`int` 型別有最小和最大限制。 請在互動式視窗中執行此程式碼來查看這些限制：\n\n```csharp\nint max = int.MaxValue;\nint min = int.MinValue;\nConsole.WriteLine($\"The range of integers is {min} to {max}\");\n```\n\n如果計算產生的值超出這些限制，就會發生**反向溢位**或**溢位**的情況。 答案看起來會是從其中一個限制回繞至另一個限制。 將這兩行程式碼加入互動式視窗來查看範例：\n\n```csharp\nint what = max + 3;\nConsole.WriteLine($\"An example of overflow: {what}\");\n```\n\n請注意，答案非常接近最小 (負) 整數。 這與 `min + 2` 相同。 此加法運算已**溢出**整數允許的值。\n此答案是非常大的負數，這是因為溢位會從最大整數值「回繞」至最小整數值。\n\n當 `int` 型別不符合您的需求時，還有其他具有不同限制和精確度的數字型別可供使用。 我們會在下一篇探索那些數字型別。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "使用 Double 型別"
   durationInMinutes: 5
-  content: "The `double` numeric type represents a double-precision floating point\nnumber. Those terms may be new to you. A **floating point** number is\nuseful to represent non-integral numbers that may be very large or small\nin magnitude. **Double-precision** means that these numbers are stored\nusing greater precision than **single-precision**. On modern computers,\nit is more common to use double precision than single precision numbers.\nLet's explore. Try the following code in the interactive window and see the result:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nNotice that the answer includes the decimal portion of the quotient. Try a slightly\nmore complicated expression with doubles:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\nThe range of a double value is much greater than integer values. Try the following\ncode in the interactive window:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nThese values are printed out in scientific notation. The number to\nthe left of the `E` is the significand. The number to the right is the exponent,\nas a power of 10. \n\nJust like decimal numbers in math, doubles in C# can have rounding errors. Try this code:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nYou know that `0.3` repeating is not exactly the same as `1/3`.\n\n***Challenge***\n\nTry other calculations with large numbers, small numbers, multiplication\nand division using the `double` type.  Try more complicated calculations.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
+  content: "`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點數**可用以代表非常大或非常小的非整數數字。 **雙精確度**表示這些數字使用比**單精確度**更高的精確度來儲存。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。\n讓我們開始探索吧。 在互動式視窗中嘗試下列程式碼並查看結果：\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\n請注意答案包括商數的小數部分。 請嘗試略為複雜的雙精確度浮點數運算式：\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a  + b) / c;\nConsole.WriteLine(d);\n```\n\n雙精確度浮點數值的範圍遠大於整數值。 在互動式視窗中嘗試下列程式碼：\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\n這些值會以科學記號標記法呈現。 `E` 左邊的數字是有效數字。 右邊的數字則為指數，亦即 10 的次方。 \n\n就像數學上的小數數字，C# 中的雙精確度浮點數會發生捨入誤差。 請嘗試此程式碼：\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\n如您所知，`0.3` 循環與 `1/3` 並不完全相同。\n\n***挑戰***\n\n嘗試使用 `double` 型別搭配大型數字、小型數字、乘法和除法的其他計算。  嘗試更複雜的計算。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "使用固定點型別"
   durationInMinutes: 8
-  content: "You've seen the basic numeric types in C#: integers and doubles.  There is one\nother type to learn: the `decimal` type. The `decimal` type has a smaller\nrange but greater precision than `double`. The term **fixed point** means\nthat the decimal point (or binary point) doesn't move. Let's take a look:\n\n```csharp\ndecimal min = decimal.MinValue;\ndecimal max = decimal.MaxValue;\nConsole.WriteLine($\"The range of the decimal type is {min} to {max}\");\n```\n\nNotice that the range is smaller than the `double` type. You can see the greater\nprecision with the decimal type by trying the following code:\n\n```csharp\ndouble a = 1.0;\ndouble b = 3.0;\nConsole.WriteLine(a / b);\n\ndecimal c = 1.0M;\ndecimal d = 3.0M;\nConsole.WriteLine(c / d);\n```\n\nThe `M` suffix on the numbers is how you indicate that a constant should use the\n`decimal` type.\n\nNotice that the math using the decimal type has more digits to the right\nof the decimal point. \n\n***Challenge***\n\nNow that you've seen the different numeric types, write code that calculates\nthe area of a circle whose radius is 2.50 inches. Remember that the area of a circle\nis the radius squared multiplied by PI. One hint: .NET contains a constant\nfor PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value. \n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n\nYou should get an answer between 19 and 20.\n"
+  content: "您已經看過 C# 中的基本數字型別：整數和雙精確度浮點數。  還有一個您要了解的其他型別：`decimal` 型別。 `decimal` 類型的範圍較小，但精確度較 `double` 來得高。 **固定點**這個詞代表小數點 (或二進位點) 不會移動。 讓我們來看一下：\n\n```csharp\ndecimal min = decimal.MinValue;\ndecimal max = decimal.MaxValue;\nConsole.WriteLine($\"The range of the decimal type is {min} to {max}\");\n```\n\n請注意該範圍小於 `double` 型別。 透過嘗試下列程式碼，您可以看到 decimal (小數) 型別有較高的精確度：\n\n```csharp\ndouble a = 1.0;\ndouble b = 3.0;\nConsole.WriteLine(a / b);\n\ndecimal c = 1.0M;\ndecimal d = 3.0M;\nConsole.WriteLine(c / d);\n```\n\n數字上的 `M` 尾碼乃是指示常數應使用 `decimal` 型別。\n\n請注意，使用 decimal (小數) 型別的運算在小數點右邊會有更多的數字。 \n\n***挑戰***\n\n您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 英吋的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。 \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n\n您應該會取得介於 19 和 20 的答案。\n"
 - title: "完成挑戰"
   durationInMinutes: 1
-  content: >
-    Did you come up with something like this?
-
-
-    ```csharp
-
-    double radius = 2.50;
-
-    double area = Math.PI * radius * radius;
-
-    Console.WriteLine(area);
-
-    ```
-
-
-    Try some other formulas if you'd like.
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
-- content: "You've completed the \"Numbers in C#\" quick start. \n\nYou can continue these quick starts on your own development environment. Learn the basics of [local development](local-environment.md) and then pick a quick start. You can try this same exercise, move directly to the next quick start, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.\n\nYou can learn more about numbers in C# in the following topics:\n\n[Integral Types Table](../language-reference/keywords/integral-types-table.md)   \n[Floating-Point Types Table](../language-reference/keywords/floating-point-types-table.md)   \n[Built-In Types Table](../language-reference/keywords/built-in-types-table.md)   \n[Implicit Numeric Conversions Table](../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[Explicit Numeric Conversions Table](../language-reference/keywords/explicit-numeric-conversions-table.md)\0"
+  content: "您是否有得到與下列程式碼類似的內容？\n\n```csharp\ndouble radius = 2.50;\ndouble area = Math.PI * radius * radius;\nConsole.WriteLine(area);\n```\n\n如果您想要的話，可以嘗試其他公式。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- content: "您已經完成＜C# 中的數字＞快速入門。 \n\n您可以在自己的開發環境中繼續進行這些快速入門。 了解[本機開發](local-environment.md)的基本概念，然後選擇快速入門。 您可以嘗試這個相同的練習、直接移至下一個快速入門，或從 [C# 中的數字](numbers-in-csharp-local.md)快速入門重新開始。\n\n您可以在下列主題中深入了解 C# 中的數字：\n\n[整數類型表](../language-reference/keywords/integral-types-table.md)   \n[浮點類型表](../language-reference/keywords/floating-point-types-table.md)   \n[內建類型表](../language-reference/keywords/built-in-types-table.md)   \n[隱含數值轉換表](../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[明確數值轉換表](../language-reference/keywords/explicit-numeric-conversions-table.md)\0"

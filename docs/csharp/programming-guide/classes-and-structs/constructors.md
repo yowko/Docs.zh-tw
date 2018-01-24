@@ -12,11 +12,11 @@ ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
 caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 65c50311548667ab5fdc685b70b6ab9e88376067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5897dd1c843633d38707112850a4be1151626185
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 每當建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)時，都會呼叫其建構函式。 類別或結構可有使用不同引數的多個建構函式。 建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。 如需詳細資訊和範例，請參閱[使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)和[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 
 如需詳細資訊及範例，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
   
  [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
@@ -60,9 +60,9 @@ ms.lasthandoff: 11/21/2017
   
  [如何：撰寫複製建構函式](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
  [static](../../../csharp/language-reference/keywords/static.md)  
- [為什麼初始設定式執行的順序與建構函式相反？第一部](http://go.microsoft.com/fwlink/?LinkId=112374)
+ [為什麼初始設定式執行的順序與建構函式相反？第一部](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

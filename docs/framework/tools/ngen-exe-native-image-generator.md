@@ -30,11 +30,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。  
@@ -57,12 +57,12 @@ ms.lasthandoff: 01/06/2018
   
 -   已經排除影像失效的某些原因。  
   
- 在 Windows 8 上，請參閱[原生映像工作](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)。  
+ 在 Windows 8 上，請參閱[原生映像工作](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb)。  
   
  如需使用 Ngen.exe 和原生映像服務的詳細資訊，請參閱[原生映像服務][Native Image Service]。  
   
 > [!NOTE]
->  您可以在[原生映像產生器 (Ngen.exe) 舊版語法](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324)中找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 語法。  
+>  您可以在[原生映像產生器 (Ngen.exe) 舊版語法](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)中找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 語法。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -523,7 +523,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  如需與原生映像服務相關的範例，請參閱[原生映像服務][Native Image Service]。  
   
 ## <a name="native-image-task"></a>原生映像工作  
- 原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 (請參閱[建立原生映像](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418))。它也可以讓安裝程式使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)，在延後的時間建立及更新原生映像。  
+ 原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 (請參閱[建立原生映像](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418))。它也可以讓安裝程式使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)，在延後的時間建立及更新原生映像。  
   
  針對電腦上支援的每個 CPU 架構，會各註冊一次原生映像工作，以允許針對以各架構為目標的應用程式進行編譯：  
   

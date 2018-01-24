@@ -1,12 +1,8 @@
 ---
 title: "Dynamic Language Runtime 概觀 | Microsoft Docs"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 「動態語言執行階段」(DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。 DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。  
@@ -52,10 +48,10 @@ ms.lasthandoff: 12/22/2017
   
  `scriptobj.Count += 1;`  
   
- 就像 CLR，DLR 是 .NET Framework 的一部分，並與 .NET Framework 和 Visual Studio 安裝套件一起提供。 DLR 的開放原始碼版本也可以在 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上下載。  
+ 就像 CLR，DLR 是 .NET Framework 的一部分，並與 .NET Framework 和 Visual Studio 安裝套件一起提供。 DLR 的開放原始碼版本也可以在 GitHub 的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr) 存放庫上下載。  
   
 > [!NOTE]
->  DLR 的開放原始碼版本有 Visual Studio 和 .NET Framework 中包含之 DLR 的所有功能。 它也提供其他支援給語言實作人員。 如需詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。  
+>  DLR 的開放原始碼版本有 Visual Studio 和 .NET Framework 中包含之 DLR 的所有功能。 它也提供其他支援給語言實作人員。 如需詳細資訊，請參閱 GitHub 的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr) 存放庫上的文件。 
   
  使用 DLR 語言開發的範例包括下列各項：  
   
@@ -98,7 +94,7 @@ DLR 架構
  DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framework，也與其他基礎結構和服務通訊，包括 Silverlight 和 COM。 繫結器會封裝語言的語意，並指定如何使用運算式樹狀架構在呼叫站台執行作業。 這樣可讓動態語言和使用 DLR 的靜態類型語言共用程式庫，以及存取 DLR 所支援的所有技術。  
   
 ## <a name="dlr-documentation"></a>DLR 文件  
- 如需如何使用 DLR 開放原始碼版本將動態行為加入至語言，或是如何使用動態語言搭配 .NET Framework 的詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。  
+ 如需如何使用 DLR 開放原始碼版本將動態行為新增至語言的詳細資訊，或如何搭配使用動態語言與 .NET Framework 的詳細資訊，請參閱 GitHub 的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 存放庫上的文件。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.Dynamic.ExpandoObject>  

@@ -13,19 +13,19 @@ ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc80c1f6614cdfc8e2f56855d0a0315977316f4c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keyfile-c-compiler-options"></a>/keyfile (C# 編譯器選項)
+# <a name="-keyfile-c-compiler-options"></a>-keyfile (C# 編譯器選項)
 指定包含密碼編譯金鑰的檔名。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/keyfile:file  
+-keyfile:file  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -37,11 +37,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>備註  
  使用此選項時，編譯器會從指定的檔案將公開金鑰插入資訊清單中，然後使用私密金鑰簽署最終組件。 若要產生金鑰檔，請在命令列鍵入 sn -k `file`。  
   
- 如果您使用 **/target:module** 進行編譯，則在使用 [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 編譯組件時，金鑰檔的名稱會保留在模組中並併入組件。  
+ 如果您使用 **-target:module** 進行編譯，則在使用 [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 編譯組件時，金鑰檔的名稱會保留在模組中並併入組件。  
   
- 您也可以使用 [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) 將加密資訊傳遞給編譯器。 如需部分簽署的組件，請使用 [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)。  
+ 您也可以使用 [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) 將加密資訊傳遞給編譯器。 如需部分簽署的組件，請使用 [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)。  
   
- 如果在相同編譯中同時指定 /keyfile 和 /keycontainer (藉由命令列選項或是自訂屬性指定)，編譯器會先嘗試使用金鑰容器。 如果這個動作成功，則會使用金鑰容器中的資訊來簽署組件。 如果編譯器找不到金鑰容器，則會嘗試使用以 /keyfile 指定的檔案。 如果這個動作成功，則會使用金鑰容器中的資訊來簽署組件，並將金鑰資訊安裝在金鑰容器中 (類似於 sn -i)，這樣在下次編譯時，金鑰容器就會是有效的。  
+ 如果在相同編譯中同時指定 -keyfile 和 -keycontainer (藉由命令列選項或是自訂屬性指定)，編譯器會先嘗試使用金鑰容器。 如果這個動作成功，則會使用金鑰容器中的資訊來簽署組件。 如果編譯器找不到金鑰容器，則會嘗試使用以 -keyfile 指定的檔案。 如果這個動作成功，則會使用金鑰容器中的資訊來簽署組件，並將金鑰資訊安裝在金鑰容器中 (類似於 sn -i)，這樣在下次編譯時，金鑰容器就會是有效的。  
   
  請注意，金鑰檔可能只包含公開金鑰。  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 11/21/2017
   
  您可以使用 <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>，以程式設計方式存取這個編譯器選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

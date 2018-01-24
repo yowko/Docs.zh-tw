@@ -14,19 +14,19 @@ ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a473c02dba1b69a34d601b4d49e02cc202eeb158
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2585e494cc87978b47fe2de5a05b6d2e031c8929
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo (C# 編譯器選項)
-**/nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。  
+# <a name="-nologo-c-compiler-options"></a>-nologo (C# 編譯器選項)
+**-nologo** 選項會隱藏編譯器啟動時的登入橫幅，以及編譯期間的資訊訊息。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -34,6 +34,6 @@ ms.lasthandoff: 11/21/2017
   
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -13,19 +13,19 @@ ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6dca6e62dbf69783babf2e16dc4e7c36c6705c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f1d06bf408f13a78df503ab10fe3c57b4ff68a3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="main-c-compiler-options"></a>/main (C# 編譯器選項)
+# <a name="-main-c-compiler-options"></a>-main (C# 編譯器選項)
 如果有多個類別包含 **Main** 方法，這個選項會指定含有程式進入點的類別。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/main:class  
+-main:class  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -51,9 +51,9 @@ ms.lasthandoff: 11/21/2017
  編譯 `t2.cs` 和 `t3.cs`，將 **Main** 方法的位置指定在 `Test2` 中：  
   
 ```console  
-csc t2.cs t3.cs /main:Test2  
+csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

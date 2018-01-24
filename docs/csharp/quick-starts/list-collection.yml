@@ -4,200 +4,37 @@ metadata:
   title: "C# 中的集合。 了解如何在 C# 中使用序列和集合。"
   description: "在本教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。"
   audience: Developer
+  ms.topic: get-started-article
   ms.custom: mvc
   level: Beginner
   displayType: two-column
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: a27e81de92bbae58fc72e9033a20f46bbe296bbe
-  ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+  ms.openlocfilehash: 57cdf4e5c82c0e50de5422051df251db8ddb5d83
+  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/10/2018
+  ms.lasthandoff: 01/20/2018
 items:
 - durationInMinutes: 1
-  content: >
-    This quick start teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code. It contains a series of lessons that create, modify and explore collections and arrays.
+  content: "此快速入門會以互動方式進行 C# 教學，您可使用瀏覽器撰寫 C# 程式碼，並查看程式碼編譯及執行的結果。 它包含一系列針對建立、修改及探索集合和陣列的課程。\n"
 - title: "建立清單"
   durationInMinutes: 2
-  content: >
-    Run the following code in the interactive window. To do that, type the following code block in the interactive window (replace "<name>" with your name) and click the **Run** button:
-
-
-    ```csharp
-
-    var names = new List<string> { "<name>", "Ana", "Felipe" };
-
-    foreach (var name in names)
-
-    {
-      Console.WriteLine($"Hello {name.ToUpper()}!");
-    }
-
-    ```
-
-
-    You've just created a list of strings, added three names to that list, and printed out the names in all CAPS. You're using concepts
-
-    that you've learned in earlier quick starts to loop through the list.
-
-
-    The code to display names makes use of **interpolated strings**.  When you precede a `string` with the `$` character, you can embed C# code in the string declaration. The actual string replaces that C# code with the value it generates. In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.
-
-
-    Let's keep exploring.
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊 (以您的名稱取代 \"<name>\")，然後按一下 [執行] 按鈕：\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前的快速入門中學習到的概念，來在清單中執行迴圈。\n\n顯示名稱的程式碼會運用**字串插值**。  當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。 實際的字串會以它所產生的值取代 C# 程式碼。 在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A> 方法。\n\n讓我們繼續探索。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "修改清單內容"
   durationInMinutes: 3
-  content: >
-    The collection you created uses the <xref:System.Collections.Generic.List%601> type. This type stores sequences of elements. You specify the type of the elements between the angle brackets.
-
-
-    One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements. Add the following code below the code you've already written:
-
-
-    ```csharp
-
-    Console.WriteLine();
-
-    names.Add("Maria");
-
-    names.Add("Bill");
-
-    names.Remove("Ana");
-
-    foreach (var name in names)
-
-    {
-      Console.WriteLine($"Hello {name.ToUpper()}!");
-    }
-
-    ```
-
-
-    You've added two more names to the end of the list. You've also removed one as well.
-
-
-    The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well. You access items using the `[` and `]` tokens. Add the following code below what you've already written and try it:
-
-
-    ```csharp
-
-    Console.WriteLine($"My name is {names[0]}.");
-
-    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
-
-    ```
-
-
-    You're not allowed to access past the end of the list. You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property. Add the following code to try it:
-
-
-    ```csharp
-
-    Console.WriteLine($"The list has {names.Count} people in it");
-
-    ```
-
-
-    Click **Run** again to see the results. In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "您所建立的集合會使用 <xref:System.Collections.Generic.List%601> 類型。 此類型會儲存元素的序列。 您會在角括弧之間指定元素的類型。\n\n此 <xref:System.Collections.Generic.List%601> 類型的其中一個重要層面，在於它可以擴張或縮小，使您可以新增或移除元素。 在您已撰寫的程式碼下方新增下列程式碼：\n\n```csharp\nConsole.WriteLine();\nnames.Add(\"Maria\");\nnames.Add(\"Bill\");\nnames.Remove(\"Ana\");\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n您已在清單末端新增兩個額外的名稱。 您也移除了一個名稱。\n\n<xref:System.Collections.Generic.List%601> 也可讓您透過**索引**參考個別的項目。 您使用 `[` 和 `]` 語彙基元存取項目。 在您已撰寫的程式碼下方新增下列程式碼，然後嘗試它：\n\n```csharp\nConsole.WriteLine($\"My name is {names[0]}.\");\nConsole.WriteLine($\"I've added {names[2]} and {names[3]} to the list.\");\n```\n\n您不能存取清單結尾之後的內容。 您可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 屬性檢查清單的長度。 新增下列程式碼以嘗試它：\n\n```csharp\nConsole.WriteLine($\"The list has {names.Count} people in it\");\n```\n\n再次按一下 [執行] 來查看結果。 在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "針對清單進行搜尋和排序"
   durationInMinutes: 5
-  content: >
-    Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands. To find elements in these larger collections, you need to search the list for different items. The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item. Try this to see how it works.  Add the following code below what you've written so far:
-
-
-    ```csharp
-
-    var index = names.IndexOf("Felipe");
-
-    if (index != -1)
-      Console.WriteLine($"The name {names[index]} is at index {index}");
-
-    var notFound = names.IndexOf("Not Found");
-      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
-    ```
-
-
-    You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>. If it is -1, the item was not found.
-
-
-    The items in your list can be sorted as well. The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings). Add this code and run again:
-
-
-    ```csharp
-
-    names.Sort();
-
-    foreach (var name in names)
-
-    {
-      Console.WriteLine($"Hello {name.ToUpper()}!");
-    }
-
-    ```
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "我們的範例所使用的清單相對較小，但是您的應用程式可能經常會建立具有更多元素的清單，數量甚至會達數千個之多。 若要在這些較大的集合中尋找元素，您需要在清單中搜尋不同的項目。 <xref:System.Collections.Generic.List%601.IndexOf%2A> 方法會搜尋項目，並傳回該項目的索引。 請嘗試以查看其運作方式。  在您目前已撰寫的程式碼下方新增下列程式碼：\n\n```csharp\nvar index = names.IndexOf(\"Felipe\");\nif (index != -1)\n  Console.WriteLine($\"The name {names[index]} is at index {index}\");\n\nvar notFound = names.IndexOf(\"Not Found\");\n  Console.WriteLine($\"When an item is not found, IndexOf returns {notFound}\");\n```\n\n您可能不清楚項目是否已位於清單中，因此您應該一律檢查由 <xref:System.Collections.Generic.List%601.IndexOf%2A> 所傳回的索引。 如果它的值是 -1，便代表找不到該項目。\n\n也可以對您清單中的項目進行排序。 <xref:System.Collections.Generic.List%601.Sort%2A> 方法會依項目的一般順序方式，對清單中的所有項目進行排序 (針對字串會依字母順序排列)。 新增下列程式碼，然後再次執行：\n\n```csharp\nnames.Sort();\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "其他類型的清單"
   durationInMinutes: 5
-  content: >
-    You've been using the `string` type in lists so far. Let's make a <xref:System.Collections.Generic.List%601> using a different type. Let's build a set of numbers. Delete the code you wrote so far, and replace it with this:
-
-
-    ```csharp
-
-    var fibonacciNumbers = new List<int> {1, 1};
-
-    ```
-
-
-    That creates a list of integers, and sets the first two integers to the value 1. These are the first two values of a *Fibonacci Sequence*, a sequence of numbers. Each next Fibonacci number is found by taking the sum of the previous two numbers. Add this code:
-
-
-    ```csharp
-
-    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
-
-    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
-
-
-    fibonacciNumbers.Add(previous + previous2);
-
-
-    foreach(var item in fibonacciNumbers)
-        Console.WriteLine(item);
-    ```
-
-
-    Press **Run** to see the results;
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "到目前為止，您都是使用清單中的 `string` 類型。 讓我們使用不同的類型建立 <xref:System.Collections.Generic.List%601>。 讓我們來建置一組數字。 刪除您到目前為止所撰寫的程式碼，並以下列內容取代它：\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\n這將會建立整數清單，並將前兩個整數設定為 1 的值。 這是*費氏數列*的前兩個值。 這兩個值之後每個費式數列數字，都會是其前兩個數字的總和。 新增下列程式碼：\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n按 [執行] 以查看結果。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "挑戰"
   durationInMinutes: 10
-  content: >
-    See if you can put together some of the concepts from this and earlier lessons. Expand on what you've built so far with Fibonacci Numbers. Try and write the code to generate the first 20 numbers in the sequence. (As a hint, the 20th Fibonacci number is 6765.)
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "看看您是否可以結合運用來自此課程和先前課程的概念。 請依費式數列數字，擴展您到目前為止所建立的內容。 請嘗試將程式碼撰寫成可產生該數列的前 20 個數字。 (小提示：第 20 個費式數列數字為 6765)。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: "完成挑戰"
   durationInMinutes: 3
-  content: "Did you come up with something like this?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nWith each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list. The loop repeats until you've added 20 items to the list.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
-- content: "You've completed the list quick start. This quick start is the final interactive quick start. You can continue these quick starts on your own development environment. Learn the basics of [local development](local-environment.md) and then pick a quick start. You can try this same exercise, move directly to the next quick start, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.\n\nYou can learn more about working with the `List` type in the\n[.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md). You'll also learn about many other collection types.\0"
+  content: "您是否有得到與下列程式碼類似的內容？\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。 迴圈會持續重複，直到將 20 個項目新增至清單為止。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+- content: "您已完成 list 快速入門。 此快速入門是最後一項互動式快速入門。 您可以在自己的開發環境中繼續進行這些快速入門。 了解[本機開發](local-environment.md)的基本概念，然後選擇快速入門。 您可以嘗試這個相同的練習、直接移至下一個快速入門，或從 [C# 中的數字](numbers-in-csharp-local.md)快速入門重新開始。\n\n您可以在關於[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主題中，深入了解 `List` 類型的使用方式。 您也能學習到許多其他的集合類型。\0"

@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 您可以在命令提示字元中輸入 C# 編譯器的可執行檔名稱 (*csc.exe*)，藉此叫用該編譯器。
@@ -70,42 +70,42 @@ csc File.cs
 - 編譯可產生 *File.dll* 的 *File.cs*：
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - 編譯 *File.cs* 並建立 *My.exe*：
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - 在啟用最佳化的情況下編譯目前目錄中的所有 C# 檔案，並定義 DEBUG 符號。 輸出為 *File2.exe*：
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - 編譯產生 *File2.dll* 偵錯版本之目前目錄中的所有 C# 檔案。 不會顯示標誌和警告：
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - 將目前目錄中的所有 C# 檔案都編譯為 *Something.xyz* (DLL)：
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 編譯器與 C++ 編譯器輸出的差異
 叫用 C# 編譯器時並不會建立目的檔 (*.obj*)，而是直接建立輸出檔。 因此，C# 編譯器不需要連結器。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [命令列引數](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [如何： 顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
  [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 當您定義泛型類別時，可以將限制套用至用戶端程式碼在具現化類別時可用於型別引數的類型種類。 如果用戶端程式碼嘗試使用條件約束不允許的類型來具現化類別，則結果是編譯時間錯誤。 這些限制稱為條件約束。 條件約束是使用 `where` 內容關鍵字所指定。 下表列出六種類型的條件約束：  
   
 |條件約束|描述|  
 |----------------|-----------------|  
-|其中 T: 結構|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable> 以外的任何實值型別。 如需詳細資訊，請參閱[使用可為 Null 的類型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)。|  
-|其中 T : 類別|型別引數必須是參考型別；這也適用於任何類別、介面、委派或陣列類型。|  
-|其中 T : new()|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。|  
-|其中 T : \<基底類別名稱>|型別引數必須是或衍生自指定的基底類別。|  
-|其中 T : \<介面名稱>|型別引數必須是或實作指定的介面。 您可以指定多個介面條件約束。 條件約束介面也是泛型。|  
-|其中 T : U|針對 T 提供的型別引數必須是或衍生自針對 U 所提供的引數。|  
+|`where T: struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable> 以外的任何實值型別。 如需詳細資訊，請參閱[使用可為 Null 的類型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)。|  
+|`where T : class`|型別引數必須是參考型別；這也適用於任何類別、介面、委派或陣列類型。|  
+|`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。|  
+|`where T : `\<基底類別名稱>|型別引數必須是或衍生自指定的基底類別。|  
+|`where T : `\<介面名稱>|型別引數必須是或實作指定的介面。 您可以指定多個介面條件約束。 條件約束介面也是泛型。|  
+|`where T : U`|針對 T 提供的型別引數必須是或衍生自針對 U 所提供的引數。|  
   
 ## <a name="why-use-constraints"></a>為什麼使用條件約束  
  如果您想要檢查泛型清單中的項目來判斷它是否有效，或比較它與某個其他項目，則編譯器必須保證用戶端程式碼所指定的任何型別引數將支援編譯器必須呼叫的運算子或方法。 這項保證是透過將一或多個條件約束套用至泛型類別定義來獲得。 例如，基底類別條件約束會告知編譯器只有這個類型的物件或衍生自這個類型的物件才會用作型別引數。 編譯器具有這項保證之後，就可以允許在泛型類別中呼叫該類型的方法。 條件約束是使用 `where` 內容關鍵字所套用。 下列程式碼範例示範我們可以套用基底類別條件約束來新增至 `GenericList<T>` 類別的功能 (在[泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)中)。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
  型別參數作為條件約束對泛型類別來說極不實用，因為編譯器除了會假設型別參數衍生自 `System.Object` 之外，不會再做其他任何假設。 如果您要強制兩個型別參數之間具有繼承關係，請在泛型類別上將型別參數用作條件約束。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Generic>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
