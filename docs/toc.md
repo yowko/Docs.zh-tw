@@ -262,6 +262,7 @@
 ### [版本控制](csharp/versioning.md)
 ## [操作說明 C# 主題](csharp/how-to/index.md)
 ### [如何使用 `String.Split` 來剖析字串](csharp/how-to/parse-strings-using-split.md)
+### [如何串連字串](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET 編譯器平台 SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 程式設計指南](csharp/programming-guide/)
