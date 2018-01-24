@@ -1,7 +1,7 @@
 ---
-title: "C# 的歷史" 
-description: "這個語言最初是什麼樣子？而這些年來又有哪些演進？" 
-keywords: "C#, .NET、.NET Core、最新動向、C# 歷史" 
+title: "C# 的歷史"
+description: "這個語言最初是什麼樣子？而這些年來又有哪些演進？"
+keywords: "C#, .NET、.NET Core、最新動向、C# 歷史"
 author: erikdietrich
 ms.author: wiwagn
 ms.date: 09/20/2017
@@ -17,7 +17,7 @@ ms.lasthandoff: 10/18/2017
 ---
 # <a name="the-history-of-c"></a>C# 的歷程記錄 #
 
-這個語言最初是什麼樣子？而這些年來又有哪些演進？
+這個語言最初是什麼樣子？ 而這些年來又有哪些演進？
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
