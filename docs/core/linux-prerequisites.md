@@ -4,258 +4,258 @@ description: "支援的 Linux 版本和 .NET Core 的相依性，以在 Linux �
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload: dotnetcore
-ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/20/2018
 ---
-# <a name="prerequisites-for-net-core-on-linux"></a><span data-ttu-id="5e458-104">Linux 上 .NET Core 的必要條件</span><span class="sxs-lookup"><span data-stu-id="5e458-104">Prerequisites for .NET Core on Linux</span></span>
+# <a name="prerequisites-for-net-core-on-linux"></a><span data-ttu-id="fc969-104">Linux 上 .NET Core 的必要條件</span><span class="sxs-lookup"><span data-stu-id="fc969-104">Prerequisites for .NET Core on Linux</span></span>
 
-<span data-ttu-id="5e458-105">本文會說明在 Linux 開發 .NET Core 應用程式所需的相依性。</span><span class="sxs-lookup"><span data-stu-id="5e458-105">This article shows the dependencies needed to develop .NET Core applications on Linux.</span></span> <span data-ttu-id="5e458-106">支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：</span><span class="sxs-lookup"><span data-stu-id="5e458-106">The supported Linux distributions/versions, and dependencies that follow apply to the two ways of developing .NET Core apps on Linux:</span></span>
+<span data-ttu-id="fc969-105">本文會說明在 Linux 開發 .NET Core 應用程式所需的相依性。</span><span class="sxs-lookup"><span data-stu-id="fc969-105">This article shows the dependencies needed to develop .NET Core applications on Linux.</span></span> <span data-ttu-id="fc969-106">支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：</span><span class="sxs-lookup"><span data-stu-id="fc969-106">The supported Linux distributions/versions, and dependencies that follow apply to the two ways of developing .NET Core apps on Linux:</span></span>
 
-* [<span data-ttu-id="5e458-107">使用命令列搭配您偏好的編輯器</span><span class="sxs-lookup"><span data-stu-id="5e458-107">Command-line with your favorite editor</span></span>](tutorials/using-with-xplat-cli.md)
-* [<span data-ttu-id="5e458-108">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5e458-108">Visual Studio Code</span></span>](https://code.visualstudio.com/)
+* [<span data-ttu-id="fc969-107">使用命令列搭配您偏好的編輯器</span><span class="sxs-lookup"><span data-stu-id="fc969-107">Command-line with your favorite editor</span></span>](tutorials/using-with-xplat-cli.md)
+* [<span data-ttu-id="fc969-108">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="fc969-108">Visual Studio Code</span></span>](https://code.visualstudio.com/)
 
-## <a name="supported-linux-versions"></a><span data-ttu-id="5e458-109">支援的 Linux 版本</span><span class="sxs-lookup"><span data-stu-id="5e458-109">Supported Linux versions</span></span>
+## <a name="supported-linux-versions"></a><span data-ttu-id="fc969-109">支援的 Linux 版本</span><span class="sxs-lookup"><span data-stu-id="fc969-109">Supported Linux versions</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-110">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-110">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-110">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-110">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="5e458-111">.NET Core 2.0 將 Linux 視為單一作業系統。</span><span class="sxs-lookup"><span data-stu-id="5e458-111">.NET Core 2.0 treats Linux as a single operating system.</span></span> <span data-ttu-id="5e458-112">針對每個支援的 Linux 發行版本與每種晶片架構，會有單一的 Linux 組建。</span><span class="sxs-lookup"><span data-stu-id="5e458-112">There is a single Linux build (per chip architecture) for supported Linux distros.</span></span>
+<span data-ttu-id="fc969-111">.NET Core 2.0 將 Linux 視為單一作業系統。</span><span class="sxs-lookup"><span data-stu-id="fc969-111">.NET Core 2.0 treats Linux as a single operating system.</span></span> <span data-ttu-id="fc969-112">針對每個支援的 Linux 發行版本與每種晶片架構，會有單一的 Linux 組建。</span><span class="sxs-lookup"><span data-stu-id="fc969-112">There is a single Linux build (per chip architecture) for supported Linux distros.</span></span>
 
-<span data-ttu-id="5e458-113">下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 2.x：</span><span class="sxs-lookup"><span data-stu-id="5e458-113">NET Core 2.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
+<span data-ttu-id="fc969-113">下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 2.x：</span><span class="sxs-lookup"><span data-stu-id="fc969-113">NET Core 2.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
 
- * <span data-ttu-id="5e458-114">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="5e458-114">Red Hat Enterprise Linux 7</span></span>
- * <span data-ttu-id="5e458-115">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="5e458-115">CentOS 7</span></span>
- * <span data-ttu-id="5e458-116">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="5e458-116">Oracle Linux 7</span></span>
- * <span data-ttu-id="5e458-117">Fedora 25, Fedora 26</span><span class="sxs-lookup"><span data-stu-id="5e458-117">Fedora 25, Fedora 26</span></span>
- * <span data-ttu-id="5e458-118">Debian 8.7 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="5e458-118">Debian 8.7 or later versions</span></span> 
- * <span data-ttu-id="5e458-119">Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="5e458-119">Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04</span></span>
- * <span data-ttu-id="5e458-120">Linux Mint 18, Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="5e458-120">Linux Mint 18, Linux Mint 17</span></span>
- * <span data-ttu-id="5e458-121">openSUSE 42.2 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="5e458-121">openSUSE 42.2 or later versions</span></span>
- * <span data-ttu-id="5e458-122">SUSE Enterprise Linux (SLES) 12 SP2 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="5e458-122">SUSE Enterprise Linux (SLES) 12 SP2 or later versions</span></span>
+ * <span data-ttu-id="fc969-114">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="fc969-114">Red Hat Enterprise Linux 7</span></span>
+ * <span data-ttu-id="fc969-115">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="fc969-115">CentOS 7</span></span>
+ * <span data-ttu-id="fc969-116">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="fc969-116">Oracle Linux 7</span></span>
+ * <span data-ttu-id="fc969-117">Fedora 25, Fedora 26</span><span class="sxs-lookup"><span data-stu-id="fc969-117">Fedora 25, Fedora 26</span></span>
+ * <span data-ttu-id="fc969-118">Debian 8.7 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="fc969-118">Debian 8.7 or later versions</span></span> 
+ * <span data-ttu-id="fc969-119">Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="fc969-119">Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04</span></span>
+ * <span data-ttu-id="fc969-120">Linux Mint 18, Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="fc969-120">Linux Mint 18, Linux Mint 17</span></span>
+ * <span data-ttu-id="fc969-121">openSUSE 42.2 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="fc969-121">openSUSE 42.2 or later versions</span></span>
+ * <span data-ttu-id="fc969-122">SUSE Enterprise Linux (SLES) 12 SP2 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="fc969-122">SUSE Enterprise Linux (SLES) 12 SP2 or later versions</span></span>
 
-<span data-ttu-id="5e458-123">如需 .NET Core 2.x 支援的作業系統完整清單、不支援的作業系統版本，以及週期原則連結，請參閱 [.NET Core 2.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="5e458-123">See [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) for the complete list of .NET Core 2.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
+<span data-ttu-id="fc969-123">如需 .NET Core 2.x 支援的作業系統完整清單、不支援的作業系統版本，以及週期原則連結，請參閱 [.NET Core 2.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="fc969-123">See [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) for the complete list of .NET Core 2.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-124">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-124">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-124">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-124">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-<span data-ttu-id="5e458-125">下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="5e458-125">.NET Core 1.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
+<span data-ttu-id="fc969-125">下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="fc969-125">.NET Core 1.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
 
-* <span data-ttu-id="5e458-126">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="5e458-126">Red Hat Enterprise Linux 7</span></span>
-* <span data-ttu-id="5e458-127">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="5e458-127">CentOS 7</span></span>
-* <span data-ttu-id="5e458-128">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="5e458-128">Oracle Linux 7</span></span>
-* <span data-ttu-id="5e458-129">Fedora 24</span><span class="sxs-lookup"><span data-stu-id="5e458-129">Fedora 24</span></span>
-* <span data-ttu-id="5e458-130">Debian 8.2 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="5e458-130">Debian 8.2 or later versions</span></span>
-* <span data-ttu-id="5e458-131">Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\\*</span><span class="sxs-lookup"><span data-stu-id="5e458-131">Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\\*</span></span>
- * <span data-ttu-id="5e458-132">最新的 .NET Core 1.1 修補程式版本支援 Ubuntu 16.10</span><span class="sxs-lookup"><span data-stu-id="5e458-132">Ubuntu 16.10 is supported by the latest patch release of .NET Core 1.1</span></span>
-* <span data-ttu-id="5e458-133">Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="5e458-133">Linux Mint 17</span></span>
-* <span data-ttu-id="5e458-134">openSUSE 42.1 或更新的版本 (.NET Core 1.1)</span><span class="sxs-lookup"><span data-stu-id="5e458-134">openSUSE 42.1 or later versions (.NET Core 1.1)</span></span>
+* <span data-ttu-id="fc969-126">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="fc969-126">Red Hat Enterprise Linux 7</span></span>
+* <span data-ttu-id="fc969-127">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="fc969-127">CentOS 7</span></span>
+* <span data-ttu-id="fc969-128">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="fc969-128">Oracle Linux 7</span></span>
+* <span data-ttu-id="fc969-129">Fedora 24</span><span class="sxs-lookup"><span data-stu-id="fc969-129">Fedora 24</span></span>
+* <span data-ttu-id="fc969-130">Debian 8.2 或更新的版本</span><span class="sxs-lookup"><span data-stu-id="fc969-130">Debian 8.2 or later versions</span></span>
+* <span data-ttu-id="fc969-131">Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\*</span><span class="sxs-lookup"><span data-stu-id="fc969-131">Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\*</span></span>
+ * <span data-ttu-id="fc969-132">最新的 .NET Core 1.1 修補程式版本支援 Ubuntu 16.10</span><span class="sxs-lookup"><span data-stu-id="fc969-132">Ubuntu 16.10 is supported by the latest patch release of .NET Core 1.1</span></span>
+* <span data-ttu-id="fc969-133">Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="fc969-133">Linux Mint 17</span></span>
+* <span data-ttu-id="fc969-134">openSUSE 42.1 或更新的版本 (.NET Core 1.1)</span><span class="sxs-lookup"><span data-stu-id="fc969-134">openSUSE 42.1 or later versions (.NET Core 1.1)</span></span>
 
-<span data-ttu-id="5e458-135">如需 .NET Core 1.x 支援的作業系統完整清單、不支援的作業系統版本，以及週期原則連結，請參閱 [.NET Core 1.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="5e458-135">See [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
+<span data-ttu-id="fc969-135">如需 .NET Core 1.x 支援的作業系統完整清單、不支援的作業系統版本，以及週期原則連結，請參閱 [.NET Core 1.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。</span><span class="sxs-lookup"><span data-stu-id="fc969-135">See [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
 
 ---
 
-## <a name="linux-distribution-dependencies"></a><span data-ttu-id="5e458-136">Linux 發行版本相依性</span><span class="sxs-lookup"><span data-stu-id="5e458-136">Linux distribution dependencies</span></span>
+## <a name="linux-distribution-dependencies"></a><span data-ttu-id="fc969-136">Linux 發行版本相依性</span><span class="sxs-lookup"><span data-stu-id="fc969-136">Linux distribution dependencies</span></span>
 
-<span data-ttu-id="5e458-137">下列要作為範例。</span><span class="sxs-lookup"><span data-stu-id="5e458-137">The following are intended to be examples.</span></span> <span data-ttu-id="5e458-138">確切的版本和名稱在您選擇的 Linux 發行版本上可能略有出入。</span><span class="sxs-lookup"><span data-stu-id="5e458-138">The exact versions and names may vary slightly on your Linux distribution of choice.</span></span>
+<span data-ttu-id="fc969-137">下列要作為範例。</span><span class="sxs-lookup"><span data-stu-id="fc969-137">The following are intended to be examples.</span></span> <span data-ttu-id="fc969-138">確切的版本和名稱在您選擇的 Linux 發行版本上可能略有出入。</span><span class="sxs-lookup"><span data-stu-id="fc969-138">The exact versions and names may vary slightly on your Linux distribution of choice.</span></span>
 
-### <a name="ubuntu"></a><span data-ttu-id="5e458-139">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="5e458-139">Ubuntu</span></span>
+### <a name="ubuntu"></a><span data-ttu-id="fc969-139">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="fc969-139">Ubuntu</span></span>
 
-<span data-ttu-id="5e458-140">Ubuntu 發行版本需要安裝下列程式庫：</span><span class="sxs-lookup"><span data-stu-id="5e458-140">Ubuntu distributions require the following libraries installed:</span></span>
+<span data-ttu-id="fc969-140">Ubuntu 發行版本需要安裝下列程式庫：</span><span class="sxs-lookup"><span data-stu-id="fc969-140">Ubuntu distributions require the following libraries installed:</span></span>
 
-* <span data-ttu-id="5e458-141">libunwind8</span><span class="sxs-lookup"><span data-stu-id="5e458-141">libunwind8</span></span>
-* <span data-ttu-id="5e458-142">liblttng-ust0</span><span class="sxs-lookup"><span data-stu-id="5e458-142">liblttng-ust0</span></span>
-* <span data-ttu-id="5e458-143">libcurl3</span><span class="sxs-lookup"><span data-stu-id="5e458-143">libcurl3</span></span>
-* <span data-ttu-id="5e458-144">libssl1.0.0</span><span class="sxs-lookup"><span data-stu-id="5e458-144">libssl1.0.0</span></span>
-* <span data-ttu-id="5e458-145">libuuid1</span><span class="sxs-lookup"><span data-stu-id="5e458-145">libuuid1</span></span>
-* <span data-ttu-id="5e458-146">libkrb5</span><span class="sxs-lookup"><span data-stu-id="5e458-146">libkrb5</span></span>
-* <span data-ttu-id="5e458-147">zlib1g</span><span class="sxs-lookup"><span data-stu-id="5e458-147">zlib1g</span></span>
-* <span data-ttu-id="5e458-148">libicu52 (適用於 14.X)</span><span class="sxs-lookup"><span data-stu-id="5e458-148">libicu52 (for 14.X)</span></span>
-* <span data-ttu-id="5e458-149">libicu55 (適用於 16.X)</span><span class="sxs-lookup"><span data-stu-id="5e458-149">libicu55 (for 16.X)</span></span>
-* <span data-ttu-id="5e458-150">libicu57 (適用於 17.X)</span><span class="sxs-lookup"><span data-stu-id="5e458-150">libicu57 (for 17.X)</span></span>
+* <span data-ttu-id="fc969-141">libunwind8</span><span class="sxs-lookup"><span data-stu-id="fc969-141">libunwind8</span></span>
+* <span data-ttu-id="fc969-142">liblttng-ust0</span><span class="sxs-lookup"><span data-stu-id="fc969-142">liblttng-ust0</span></span>
+* <span data-ttu-id="fc969-143">libcurl3</span><span class="sxs-lookup"><span data-stu-id="fc969-143">libcurl3</span></span>
+* <span data-ttu-id="fc969-144">libssl1.0.0</span><span class="sxs-lookup"><span data-stu-id="fc969-144">libssl1.0.0</span></span>
+* <span data-ttu-id="fc969-145">libuuid1</span><span class="sxs-lookup"><span data-stu-id="fc969-145">libuuid1</span></span>
+* <span data-ttu-id="fc969-146">libkrb5-3</span><span class="sxs-lookup"><span data-stu-id="fc969-146">libkrb5-3</span></span>
+* <span data-ttu-id="fc969-147">zlib1g</span><span class="sxs-lookup"><span data-stu-id="fc969-147">zlib1g</span></span>
+* <span data-ttu-id="fc969-148">libicu52 (適用於 14.X)</span><span class="sxs-lookup"><span data-stu-id="fc969-148">libicu52 (for 14.X)</span></span>
+* <span data-ttu-id="fc969-149">libicu55 (適用於 16.X)</span><span class="sxs-lookup"><span data-stu-id="fc969-149">libicu55 (for 16.X)</span></span>
+* <span data-ttu-id="fc969-150">libicu57 (適用於 17.X)</span><span class="sxs-lookup"><span data-stu-id="fc969-150">libicu57 (for 17.X)</span></span>
 
-### <a name="centos"></a><span data-ttu-id="5e458-151">CentOS</span><span class="sxs-lookup"><span data-stu-id="5e458-151">CentOS</span></span>
+### <a name="centos"></a><span data-ttu-id="fc969-151">CentOS</span><span class="sxs-lookup"><span data-stu-id="fc969-151">CentOS</span></span>
 
-<span data-ttu-id="5e458-152">CentOS 發行版本需要安裝下列程式庫：</span><span class="sxs-lookup"><span data-stu-id="5e458-152">CentOS distributions require the following libraries installed:</span></span>
+<span data-ttu-id="fc969-152">CentOS 發行版本需要安裝下列程式庫：</span><span class="sxs-lookup"><span data-stu-id="fc969-152">CentOS distributions require the following libraries installed:</span></span>
 
-* <span data-ttu-id="5e458-153">libunwind</span><span class="sxs-lookup"><span data-stu-id="5e458-153">libunwind</span></span>
-* <span data-ttu-id="5e458-154">lttng-ust</span><span class="sxs-lookup"><span data-stu-id="5e458-154">lttng-ust</span></span>
-* <span data-ttu-id="5e458-155">libcurl</span><span class="sxs-lookup"><span data-stu-id="5e458-155">libcurl</span></span>
-* <span data-ttu-id="5e458-156">openssl-libs</span><span class="sxs-lookup"><span data-stu-id="5e458-156">openssl-libs</span></span>
-* <span data-ttu-id="5e458-157">libuuid</span><span class="sxs-lookup"><span data-stu-id="5e458-157">libuuid</span></span>
-* <span data-ttu-id="5e458-158">krb5-libs</span><span class="sxs-lookup"><span data-stu-id="5e458-158">krb5-libs</span></span>
-* <span data-ttu-id="5e458-159">libicu</span><span class="sxs-lookup"><span data-stu-id="5e458-159">libicu</span></span>
-* <span data-ttu-id="5e458-160">zlib</span><span class="sxs-lookup"><span data-stu-id="5e458-160">zlib</span></span>
+* <span data-ttu-id="fc969-153">libunwind</span><span class="sxs-lookup"><span data-stu-id="fc969-153">libunwind</span></span>
+* <span data-ttu-id="fc969-154">lttng-ust</span><span class="sxs-lookup"><span data-stu-id="fc969-154">lttng-ust</span></span>
+* <span data-ttu-id="fc969-155">libcurl</span><span class="sxs-lookup"><span data-stu-id="fc969-155">libcurl</span></span>
+* <span data-ttu-id="fc969-156">openssl-libs</span><span class="sxs-lookup"><span data-stu-id="fc969-156">openssl-libs</span></span>
+* <span data-ttu-id="fc969-157">libuuid</span><span class="sxs-lookup"><span data-stu-id="fc969-157">libuuid</span></span>
+* <span data-ttu-id="fc969-158">krb5-libs</span><span class="sxs-lookup"><span data-stu-id="fc969-158">krb5-libs</span></span>
+* <span data-ttu-id="fc969-159">libicu</span><span class="sxs-lookup"><span data-stu-id="fc969-159">libicu</span></span>
+* <span data-ttu-id="fc969-160">zlib</span><span class="sxs-lookup"><span data-stu-id="fc969-160">zlib</span></span>
 
-<span data-ttu-id="5e458-161">如需有關相依性的詳細資訊，請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="5e458-161">For more information about the dependencies, see [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
+<span data-ttu-id="fc969-161">如需有關相依性的詳細資訊，請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="fc969-161">For more information about the dependencies, see [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
 
-## <a name="installing-net-core-dependencies-with-the-native-installers"></a><span data-ttu-id="5e458-162">使用原生安裝程式來安裝 .NET Core 相依性</span><span class="sxs-lookup"><span data-stu-id="5e458-162">Installing .NET Core dependencies with the native installers</span></span>
+## <a name="installing-net-core-dependencies-with-the-native-installers"></a><span data-ttu-id="fc969-162">使用原生安裝程式來安裝 .NET Core 相依性</span><span class="sxs-lookup"><span data-stu-id="fc969-162">Installing .NET Core dependencies with the native installers</span></span>
 
-<span data-ttu-id="5e458-163">受支援的 Linux 發行版本/版本可使用 .NET Core 原生安裝程式。</span><span class="sxs-lookup"><span data-stu-id="5e458-163">.NET Core native installers are available for supported Linux distributions/versions.</span></span> <span data-ttu-id="5e458-164">原生安裝程式需要伺服器的管理員 (sudo) 存取權。</span><span class="sxs-lookup"><span data-stu-id="5e458-164">The native installers require admin (sudo) access to the server.</span></span> <span data-ttu-id="5e458-165">使用原生安裝程式的優點在於它會安裝所有的 .NET Core 原生相依性。</span><span class="sxs-lookup"><span data-stu-id="5e458-165">The advantage of using a native installer is that all of the .NET Core native dependencies are installed.</span></span> <span data-ttu-id="5e458-166">原生安裝程式也會安裝 .NET Core SDK 全系統。</span><span class="sxs-lookup"><span data-stu-id="5e458-166">Native installers also install the .NET Core SDK system-wide.</span></span>
+<span data-ttu-id="fc969-163">受支援的 Linux 發行版本/版本可使用 .NET Core 原生安裝程式。</span><span class="sxs-lookup"><span data-stu-id="fc969-163">.NET Core native installers are available for supported Linux distributions/versions.</span></span> <span data-ttu-id="fc969-164">原生安裝程式需要伺服器的管理員 (sudo) 存取權。</span><span class="sxs-lookup"><span data-stu-id="fc969-164">The native installers require admin (sudo) access to the server.</span></span> <span data-ttu-id="fc969-165">使用原生安裝程式的優點在於它會安裝所有的 .NET Core 原生相依性。</span><span class="sxs-lookup"><span data-stu-id="fc969-165">The advantage of using a native installer is that all of the .NET Core native dependencies are installed.</span></span> <span data-ttu-id="fc969-166">原生安裝程式也會安裝 .NET Core SDK 全系統。</span><span class="sxs-lookup"><span data-stu-id="fc969-166">Native installers also install the .NET Core SDK system-wide.</span></span>
 
-<span data-ttu-id="5e458-167">Linux 上有兩個安裝程式套件選擇：</span><span class="sxs-lookup"><span data-stu-id="5e458-167">On Linux, there are two installer package choices:</span></span>
+<span data-ttu-id="fc969-167">Linux 上有兩個安裝程式套件選擇：</span><span class="sxs-lookup"><span data-stu-id="fc969-167">On Linux, there are two installer package choices:</span></span>
 
-* <span data-ttu-id="5e458-168">使用摘要型套件管理員，例如 Ubuntu 的 apt get 或 CentOS/RHEL 的 yum。</span><span class="sxs-lookup"><span data-stu-id="5e458-168">Using a feed-based package manager, such as apt-get for Ubuntu, or yum for CentOS/RHEL.</span></span>
-* <span data-ttu-id="5e458-169">使用套件本身，DEB 或 RPM。</span><span class="sxs-lookup"><span data-stu-id="5e458-169">Using the packages themselves, DEB or RPM.</span></span>
+* <span data-ttu-id="fc969-168">使用摘要型套件管理員，例如 Ubuntu 的 apt get 或 CentOS/RHEL 的 yum。</span><span class="sxs-lookup"><span data-stu-id="fc969-168">Using a feed-based package manager, such as apt-get for Ubuntu, or yum for CentOS/RHEL.</span></span>
+* <span data-ttu-id="fc969-169">使用套件本身，DEB 或 RPM。</span><span class="sxs-lookup"><span data-stu-id="fc969-169">Using the packages themselves, DEB or RPM.</span></span>
 
-### <a name="scripting-installs-with-the-net-core-installer-script"></a><span data-ttu-id="5e458-170">使用 .NET Core 安裝程式指令碼以指令碼進行安裝</span><span class="sxs-lookup"><span data-stu-id="5e458-170">Scripting Installs with the .NET Core installer script</span></span>
+### <a name="scripting-installs-with-the-net-core-installer-script"></a><span data-ttu-id="fc969-170">使用 .NET Core 安裝程式指令碼以指令碼進行安裝</span><span class="sxs-lookup"><span data-stu-id="fc969-170">Scripting Installs with the .NET Core installer script</span></span>
 
-<span data-ttu-id="5e458-171">`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。</span><span class="sxs-lookup"><span data-stu-id="5e458-171">The `dotnet-install` scripts are used to perform a non-admin install of the CLI toolchain and the shared runtime.</span></span> <span data-ttu-id="5e458-172">指令碼下載位置：https://dot.net/v1/dotnet-install.sh</span><span class="sxs-lookup"><span data-stu-id="5e458-172">You can download the script from: https://dot.net/v1/dotnet-install.sh</span></span>
+<span data-ttu-id="fc969-171">`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。</span><span class="sxs-lookup"><span data-stu-id="fc969-171">The `dotnet-install` scripts are used to perform a non-admin install of the CLI toolchain and the shared runtime.</span></span> <span data-ttu-id="fc969-172">指令碼下載位置：https://dot.net/v1/dotnet-install.sh</span><span class="sxs-lookup"><span data-stu-id="fc969-172">You can download the script from: https://dot.net/v1/dotnet-install.sh</span></span>
 
-<span data-ttu-id="5e458-173">安裝程式 bash 指令碼是用於自動化案例和非系統管理員安裝。</span><span class="sxs-lookup"><span data-stu-id="5e458-173">The installer bash script is used in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="5e458-174">此指令碼也能讀取 PowerShell 參數，所以它們可以搭配 Linux/OS X 系統上的指令碼一起使用。</span><span class="sxs-lookup"><span data-stu-id="5e458-174">This script also reads PowerShell switches, so they can be used with the script on Linux/OS X systems.</span></span>
+<span data-ttu-id="fc969-173">安裝程式 bash 指令碼是用於自動化案例和非系統管理員安裝。</span><span class="sxs-lookup"><span data-stu-id="fc969-173">The installer bash script is used in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="fc969-174">此指令碼也能讀取 PowerShell 參數，所以它們可以搭配 Linux/OS X 系統上的指令碼一起使用。</span><span class="sxs-lookup"><span data-stu-id="fc969-174">This script also reads PowerShell switches, so they can be used with the script on Linux/OS X systems.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="5e458-175">執行指令碼之前，請安裝所有必要的[相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。</span><span class="sxs-lookup"><span data-stu-id="5e458-175">Before running the script, install the required [dependencies](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span>
+> <span data-ttu-id="fc969-175">執行指令碼之前，請安裝所有必要的[相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。</span><span class="sxs-lookup"><span data-stu-id="fc969-175">Before running the script, install the required [dependencies](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span>
 
-## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="5e458-176">安裝 Red Hat Enterprise Linux (RHEL) 7 的 .NET Core</span><span class="sxs-lookup"><span data-stu-id="5e458-176">Install .NET Core for Red Hat Enterprise Linux (RHEL) 7</span></span>
+## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="fc969-176">安裝 Red Hat Enterprise Linux (RHEL) 7 的 .NET Core</span><span class="sxs-lookup"><span data-stu-id="fc969-176">Install .NET Core for Red Hat Enterprise Linux (RHEL) 7</span></span>
 
-<span data-ttu-id="5e458-177">若要在 RHEL 7 上安裝 .NET Core：</span><span class="sxs-lookup"><span data-stu-id="5e458-177">To install .NET Core on RHEL 7:</span></span>
+<span data-ttu-id="fc969-177">若要在 RHEL 7 上安裝 .NET Core：</span><span class="sxs-lookup"><span data-stu-id="fc969-177">To install .NET Core on RHEL 7:</span></span>
 
-1. <span data-ttu-id="5e458-178">啟用 Red Hat .NET 通道，位於 RHEL 7 訂閱底下。</span><span class="sxs-lookup"><span data-stu-id="5e458-178">Enable the Red Hat .NET channel, available under your RHEL 7 subscription.</span></span>
-    * <span data-ttu-id="5e458-179">Red Hat Enterprise 7 伺服器請使用：</span><span class="sxs-lookup"><span data-stu-id="5e458-179">For Red Hat Enterprise 7 Server, use:</span></span>
+1. <span data-ttu-id="fc969-178">啟用 Red Hat .NET 通道，位於 RHEL 7 訂閱底下。</span><span class="sxs-lookup"><span data-stu-id="fc969-178">Enable the Red Hat .NET channel, available under your RHEL 7 subscription.</span></span>
+    * <span data-ttu-id="fc969-179">Red Hat Enterprise 7 伺服器請使用：</span><span class="sxs-lookup"><span data-stu-id="fc969-179">For Red Hat Enterprise 7 Server, use:</span></span>
     
          ```bash
          subscription-manager repos --enable=rhel-7-server-dotnet-rpms
          ```
     
-    * <span data-ttu-id="5e458-180">Red Hat Enterprise 7 工作站請使用：</span><span class="sxs-lookup"><span data-stu-id="5e458-180">For Red Hat Enterprise 7 Workstation, use:</span></span>
+    * <span data-ttu-id="fc969-180">Red Hat Enterprise 7 工作站請使用：</span><span class="sxs-lookup"><span data-stu-id="fc969-180">For Red Hat Enterprise 7 Workstation, use:</span></span>
     
         ```bash
         subscription-manager repos --enable=rhel-7-workstation-dotnet-rpms
          ```
     
-    * <span data-ttu-id="5e458-181">Red Hat Enterprise 7 HPC 計算節點請使用：</span><span class="sxs-lookup"><span data-stu-id="5e458-181">For Red Hat Enterprise 7 HPC Compute Node, use:</span></span>
+    * <span data-ttu-id="fc969-181">Red Hat Enterprise 7 HPC 計算節點請使用：</span><span class="sxs-lookup"><span data-stu-id="fc969-181">For Red Hat Enterprise 7 HPC Compute Node, use:</span></span>
     
         ```bash
         subscription-manager repos --enable=rhel-7-hpc-node-dotnet-rpms
         ```
 
-2. <span data-ttu-id="5e458-182">安裝 scl 工具。</span><span class="sxs-lookup"><span data-stu-id="5e458-182">Install the scl tool.</span></span>
+2. <span data-ttu-id="fc969-182">安裝 scl 工具。</span><span class="sxs-lookup"><span data-stu-id="fc969-182">Install the scl tool.</span></span>
 
     ```bash
     yum install scl-utils
     ```
     
-3. <span data-ttu-id="5e458-183">安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="5e458-183">Install .NET Core</span></span>
+3. <span data-ttu-id="fc969-183">安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="fc969-183">Install .NET Core</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-184">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-184">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-184">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-184">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="5e458-185">安裝 .NET Core 2.0 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="5e458-185">Install .NET Core 2.0 SDK and Runtime:</span></span>
+<span data-ttu-id="fc969-185">安裝 .NET Core 2.0 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="fc969-185">Install .NET Core 2.0 SDK and Runtime:</span></span>
 
    ```bash
    yum install rh-dotnet20
    ```
 
-<span data-ttu-id="5e458-186">為環境啟用 .NET Core 2.0 SDK/執行階段：</span><span class="sxs-lookup"><span data-stu-id="5e458-186">Enable .NET Core 2.0 SDK/Runtime for your environment:</span></span>
+<span data-ttu-id="fc969-186">為環境啟用 .NET Core 2.0 SDK/執行階段：</span><span class="sxs-lookup"><span data-stu-id="fc969-186">Enable .NET Core 2.0 SDK/Runtime for your environment:</span></span>
 
    ```bash
    scl enable rh-dotnet20 bash
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-187">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-187">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-187">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-187">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-<span data-ttu-id="5e458-188">**.NET Core 1.1**</span><span class="sxs-lookup"><span data-stu-id="5e458-188">**.NET Core 1.1**</span></span>
+<span data-ttu-id="fc969-188">**.NET Core 1.1**</span><span class="sxs-lookup"><span data-stu-id="fc969-188">**.NET Core 1.1**</span></span>
 
-<span data-ttu-id="5e458-189">安裝 .NET Core 1.1 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="5e458-189">Install .NET Core 1.1 SDK and Runtime:</span></span>
+<span data-ttu-id="fc969-189">安裝 .NET Core 1.1 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="fc969-189">Install .NET Core 1.1 SDK and Runtime:</span></span>
 
    ```bash
    yum install rh-dotnetcore11
    ```
 
-<span data-ttu-id="5e458-190">為環境啟用 .NET Core 1.1 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="5e458-190">Enable .NET Core 1.1 SDK and Runtime for your environment:</span></span>
+<span data-ttu-id="fc969-190">為環境啟用 .NET Core 1.1 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="fc969-190">Enable .NET Core 1.1 SDK and Runtime for your environment:</span></span>
 
    ```bash
    scl enable rh-dotnetcore11 bash
    ```
 
-<span data-ttu-id="5e458-191">**.NET Core 1.0**</span><span class="sxs-lookup"><span data-stu-id="5e458-191">**.NET Core 1.0**</span></span>
+<span data-ttu-id="fc969-191">**.NET Core 1.0**</span><span class="sxs-lookup"><span data-stu-id="fc969-191">**.NET Core 1.0**</span></span>
 
-<span data-ttu-id="5e458-192">安裝 .NET Core 1.0 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="5e458-192">Install .NET Core 1.0 SDK and Runtime:</span></span>
+<span data-ttu-id="fc969-192">安裝 .NET Core 1.0 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="fc969-192">Install .NET Core 1.0 SDK and Runtime:</span></span>
 
    ```bash
    yum install rh-dotnetcore10
    ```
 
-<span data-ttu-id="5e458-193">為環境啟用 .NET Core 1.0 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="5e458-193">Enable .NET Core 1.0 SDK and Runtime for your environment:</span></span>
+<span data-ttu-id="fc969-193">為環境啟用 .NET Core 1.0 SDK 及執行階段：</span><span class="sxs-lookup"><span data-stu-id="fc969-193">Enable .NET Core 1.0 SDK and Runtime for your environment:</span></span>
 
    ```bash
    scl enable rh-dotnetcore10 bash
    ```
 
 ---
-4. <span data-ttu-id="5e458-194">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-194">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+4. <span data-ttu-id="fc969-194">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-194">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
      ```bash
      dotnet --version
      ```
 
-<span data-ttu-id="5e458-195">如需 Red Hat .NET 通道存取登錄說明，請參閱 Red Hat 的 [.NET Core 1.1 入門指南的第 1 章](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/)。</span><span class="sxs-lookup"><span data-stu-id="5e458-195">For Red Hat .NET channel access registration help, see [Chapter 1 of the .NET Core 1.1 Getting Started Guide](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) at Red Hat.</span></span>
+<span data-ttu-id="fc969-195">如需 Red Hat .NET 通道存取登錄說明，請參閱 Red Hat 的 [.NET Core 1.1 入門指南的第 1 章](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/)。</span><span class="sxs-lookup"><span data-stu-id="fc969-195">For Red Hat .NET channel access registration help, see [Chapter 1 of the .NET Core 1.1 Getting Started Guide](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) at Red Hat.</span></span>
 
-## <a name="install-net-core-for-ubuntu-1404-ubuntu-1604-ubuntu-1610--linux-mint-17-linux-mint-18-64-bit"></a><span data-ttu-id="5e458-196">安裝適用於 Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10 與 Linux Mint 17, Linux Mint 18 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="5e458-196">Install .NET Core for Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10 & Linux Mint 17, Linux Mint 18 (64 bit)</span></span>
+## <a name="install-net-core-for-ubuntu-1404-ubuntu-1604-ubuntu-1610--linux-mint-17-linux-mint-18-64-bit"></a><span data-ttu-id="fc969-196">安裝適用於 Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10 與 Linux Mint 17, Linux Mint 18 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="fc969-196">Install .NET Core for Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10 & Linux Mint 17, Linux Mint 18 (64 bit)</span></span>
 
-1. <span data-ttu-id="5e458-197">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="5e458-197">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+1. <span data-ttu-id="fc969-197">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="fc969-197">Remove any **previous preview** versions of .NET Core from your system.</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-198">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-198">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-198">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-198">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-2. <span data-ttu-id="5e458-199">註冊受信任的 Microsoft 產品金鑰。</span><span class="sxs-lookup"><span data-stu-id="5e458-199">Register the Microsoft Product key as trusted.</span></span>
+2. <span data-ttu-id="fc969-199">註冊受信任的 Microsoft 產品金鑰。</span><span class="sxs-lookup"><span data-stu-id="fc969-199">Register the Microsoft Product key as trusted.</span></span>
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
    sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
    ```
 
-3. <span data-ttu-id="5e458-200">設定所需的裝載套件摘要版本。</span><span class="sxs-lookup"><span data-stu-id="5e458-200">Set up the desired version host package feed.</span></span>
+3. <span data-ttu-id="fc969-200">設定所需的裝載套件摘要版本。</span><span class="sxs-lookup"><span data-stu-id="fc969-200">Set up the desired version host package feed.</span></span>
 
-   <span data-ttu-id="5e458-201">**Ubuntu 17.10**</span><span class="sxs-lookup"><span data-stu-id="5e458-201">**Ubuntu 17.10**</span></span>
+   <span data-ttu-id="fc969-201">**Ubuntu 17.10**</span><span class="sxs-lookup"><span data-stu-id="fc969-201">**Ubuntu 17.10**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
    sudo apt-get update
    ```
-   <span data-ttu-id="5e458-202">**Ubuntu 17.04**</span><span class="sxs-lookup"><span data-stu-id="5e458-202">**Ubuntu 17.04**</span></span>
+   <span data-ttu-id="fc969-202">**Ubuntu 17.04**</span><span class="sxs-lookup"><span data-stu-id="fc969-202">**Ubuntu 17.04**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-zesty-prod zesty main" > /etc/apt/sources.list.d/dotnetdev.list'
    sudo apt-get update
    ```
 
-   <span data-ttu-id="5e458-203">**Ubuntu 16.04 / Linux Mint 18**</span><span class="sxs-lookup"><span data-stu-id="5e458-203">**Ubuntu 16.04 / Linux Mint 18**</span></span>
+   <span data-ttu-id="fc969-203">**Ubuntu 16.04 / Linux Mint 18**</span><span class="sxs-lookup"><span data-stu-id="fc969-203">**Ubuntu 16.04 / Linux Mint 18**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
    sudo apt-get update
    ```
 
-   <span data-ttu-id="5e458-204">**Ubuntu 14.04 / Linux Mint 17**</span><span class="sxs-lookup"><span data-stu-id="5e458-204">**Ubuntu 14.04 / Linux Mint 17**</span></span>
+   <span data-ttu-id="fc969-204">**Ubuntu 14.04 / Linux Mint 17**</span><span class="sxs-lookup"><span data-stu-id="fc969-204">**Ubuntu 14.04 / Linux Mint 17**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
    sudo apt-get update
    ```
 
-4. <span data-ttu-id="5e458-205">安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="5e458-205">Install .NET Core.</span></span>
+4. <span data-ttu-id="fc969-205">安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="fc969-205">Install .NET Core.</span></span>
 
    ```bash
    sudo apt-get install dotnet-sdk-2.1.3
    ```
 
-4. <span data-ttu-id="5e458-206">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-206">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+4. <span data-ttu-id="fc969-206">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-206">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-207">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-207">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-207">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-207">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-2. <span data-ttu-id="5e458-208">設定所需的裝載套件摘要版本。</span><span class="sxs-lookup"><span data-stu-id="5e458-208">Set up the desired version host package feed.</span></span>
+2. <span data-ttu-id="fc969-208">設定所需的裝載套件摘要版本。</span><span class="sxs-lookup"><span data-stu-id="fc969-208">Set up the desired version host package feed.</span></span>
 
-   <span data-ttu-id="5e458-209">**Ubuntu 16.10**</span><span class="sxs-lookup"><span data-stu-id="5e458-209">**Ubuntu 16.10**</span></span>
+   <span data-ttu-id="fc969-209">**Ubuntu 16.10**</span><span class="sxs-lookup"><span data-stu-id="fc969-209">**Ubuntu 16.10**</span></span>
    
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ yakkety main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -263,7 +263,7 @@ ms.lasthandoff: 01/05/2018
    sudo apt-get update
    ```
 
-  <span data-ttu-id="5e458-210">**Ubuntu 16.04 / Linux Mint 18**</span><span class="sxs-lookup"><span data-stu-id="5e458-210">**Ubuntu 16.04 / Linux Mint 18**</span></span>
+  <span data-ttu-id="fc969-210">**Ubuntu 16.04 / Linux Mint 18**</span><span class="sxs-lookup"><span data-stu-id="fc969-210">**Ubuntu 16.04 / Linux Mint 18**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -271,7 +271,7 @@ ms.lasthandoff: 01/05/2018
    sudo apt-get update
    ```
     
-   <span data-ttu-id="5e458-211">**Ubuntu 14.04 / Linux Mint 17**</span><span class="sxs-lookup"><span data-stu-id="5e458-211">**Ubuntu 14.04 / Linux Mint 17**</span></span>
+   <span data-ttu-id="fc969-211">**Ubuntu 14.04 / Linux Mint 17**</span><span class="sxs-lookup"><span data-stu-id="fc969-211">**Ubuntu 14.04 / Linux Mint 17**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -279,13 +279,13 @@ ms.lasthandoff: 01/05/2018
    sudo apt-get update
    ```
 
-3. <span data-ttu-id="5e458-212">在 Ubuntu 或 Linux Mint 上安裝 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="5e458-212">Install .NET Core 1.x on Ubuntu or Linux Mint:</span></span>
+3. <span data-ttu-id="fc969-212">在 Ubuntu 或 Linux Mint 上安裝 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="fc969-212">Install .NET Core 1.x on Ubuntu or Linux Mint:</span></span>
 
    ```bash
    sudo apt-get install dotnet-dev-1.0.4
    ```
 
-4. <span data-ttu-id="5e458-213">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-213">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+4. <span data-ttu-id="fc969-213">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-213">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
@@ -293,92 +293,92 @@ ms.lasthandoff: 01/05/2018
 
 ---
 
- ## <a name="install-net-core-for-debian-8-or-debian-9-64-bit"></a><span data-ttu-id="5e458-214">安裝適用於 Debian 8 或 Debian 9 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="5e458-214">Install .NET Core for Debian 8 or Debian 9 (64 bit)</span></span>
+ ## <a name="install-net-core-for-debian-8-or-debian-9-64-bit"></a><span data-ttu-id="fc969-214">安裝適用於 Debian 8 或 Debian 9 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="fc969-214">Install .NET Core for Debian 8 or Debian 9 (64 bit)</span></span>
 
-<span data-ttu-id="5e458-215">若要在 Debian 8 或 Debian 9 上安裝 .NET Core (64 位元)：</span><span class="sxs-lookup"><span data-stu-id="5e458-215">To install .NET Core on Debian 8 or Debian 9 (64 bit):</span></span>
+<span data-ttu-id="fc969-215">若要在 Debian 8 或 Debian 9 上安裝 .NET Core (64 位元)：</span><span class="sxs-lookup"><span data-stu-id="fc969-215">To install .NET Core on Debian 8 or Debian 9 (64 bit):</span></span>
 
-1. <span data-ttu-id="5e458-216">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="5e458-216">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+1. <span data-ttu-id="fc969-216">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="fc969-216">Remove any **previous preview** versions of .NET Core from your system.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5e458-217">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="5e458-217">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+> <span data-ttu-id="fc969-217">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="fc969-217">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-218">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-218">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-218">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-218">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-2. <span data-ttu-id="5e458-219">安裝系統元件。</span><span class="sxs-lookup"><span data-stu-id="5e458-219">Install system components.</span></span>
+2. <span data-ttu-id="fc969-219">安裝系統元件。</span><span class="sxs-lookup"><span data-stu-id="fc969-219">Install system components.</span></span>
 
    ```bash
    sudo apt-get update
    sudo apt-get install curl libunwind8 gettext apt-transport-https
    ```
    
-3. <span data-ttu-id="5e458-220">註冊受信任的 Microsoft 產品金鑰。</span><span class="sxs-lookup"><span data-stu-id="5e458-220">Register the trusted Microsoft Product key.</span></span>
+3. <span data-ttu-id="fc969-220">註冊受信任的 Microsoft 產品金鑰。</span><span class="sxs-lookup"><span data-stu-id="fc969-220">Register the trusted Microsoft Product key.</span></span>
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
    sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
    ```
    
-4. <span data-ttu-id="5e458-221">註冊 Microsoft 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="5e458-221">Register the Microsoft Product feed.</span></span>
+4. <span data-ttu-id="fc969-221">註冊 Microsoft 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="fc969-221">Register the Microsoft Product feed.</span></span>
 
-   <span data-ttu-id="5e458-222">**Debian 9 (Stretch)**</span><span class="sxs-lookup"><span data-stu-id="5e458-222">**Debian 9 (Stretch)**</span></span>
+   <span data-ttu-id="fc969-222">**Debian 9 (Stretch)**</span><span class="sxs-lookup"><span data-stu-id="fc969-222">**Debian 9 (Stretch)**</span></span>
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/dotnetdev.list'
    ```
    
-   <span data-ttu-id="5e458-223">**Debian 8 (Jessie)**</span><span class="sxs-lookup"><span data-stu-id="5e458-223">**Debian 8 (Jessie)**</span></span>
+   <span data-ttu-id="fc969-223">**Debian 8 (Jessie)**</span><span class="sxs-lookup"><span data-stu-id="fc969-223">**Debian 8 (Jessie)**</span></span>
    
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
    ```
    
-5. <span data-ttu-id="5e458-224">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="5e458-224">Install .NET Core SDK.</span></span>
+5. <span data-ttu-id="fc969-224">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="fc969-224">Install .NET Core SDK.</span></span>
 
    ```bash
    sudo apt-get update
    sudo apt-get install dotnet-sdk-2.0.0
    ```
 
-6. <span data-ttu-id="5e458-225">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-225">Add dotnet to your PATH.</span></span>
+6. <span data-ttu-id="fc969-225">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-225">Add dotnet to your PATH.</span></span>
 
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
    
-7. <span data-ttu-id="5e458-226">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-226">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+7. <span data-ttu-id="fc969-226">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-226">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
    ```   
   
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-227">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-227">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-227">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-227">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-2. <span data-ttu-id="5e458-228">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="5e458-228">Get the prerequisites.</span></span>
+2. <span data-ttu-id="fc969-228">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="fc969-228">Get the prerequisites.</span></span>
 
    ```bash
    sudo apt-get install curl libunwind8 gettext
    ```
 
-3. <span data-ttu-id="5e458-229">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="5e458-229">Download the .NET Core SDK binaries (tarball).</span></span>
+3. <span data-ttu-id="fc969-229">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="fc969-229">Download the .NET Core SDK binaries (tarball).</span></span>
 
    ```bash
    curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
    ```
 
-4. <span data-ttu-id="5e458-230">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="5e458-230">Extract the .NET Core SDK binaries.</span></span>
+4. <span data-ttu-id="fc969-230">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="fc969-230">Extract the .NET Core SDK binaries.</span></span>
 
    ```bash
    sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
    ```
 
-5. <span data-ttu-id="5e458-231">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-231">Add dotnet to your PATH.</span></span>
+5. <span data-ttu-id="fc969-231">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-231">Add dotnet to your PATH.</span></span>
 
    ```bash
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
    ```
 
-6. <span data-ttu-id="5e458-232">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-232">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+6. <span data-ttu-id="fc969-232">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-232">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
@@ -386,32 +386,32 @@ ms.lasthandoff: 01/05/2018
 
 ---
 
-## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a><span data-ttu-id="5e458-233">安裝適用於 Fedora 24, Fedora 25 或 Fedora 26 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="5e458-233">Install .NET Core for Fedora 24, Fedora 25, or Fedora 26 (64 bit)</span></span>
+## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a><span data-ttu-id="fc969-233">安裝適用於 Fedora 24, Fedora 25 或 Fedora 26 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="fc969-233">Install .NET Core for Fedora 24, Fedora 25, or Fedora 26 (64 bit)</span></span>
 
-<span data-ttu-id="5e458-234">在 Fedora 26 或 Fedora 25 上安裝 .NET Core 2.x，或在 Fedora 24 上安裝 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="5e458-234">To install .NET Core 2.x on Fedora 26 or Fedora 25, or .NET Core 1.x on Fedora 24:</span></span>
+<span data-ttu-id="fc969-234">在 Fedora 26 或 Fedora 25 上安裝 .NET Core 2.x，或在 Fedora 24 上安裝 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="fc969-234">To install .NET Core 2.x on Fedora 26 or Fedora 25, or .NET Core 1.x on Fedora 24:</span></span>
 
-1. <span data-ttu-id="5e458-235">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="5e458-235">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+1. <span data-ttu-id="fc969-235">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="fc969-235">Remove any **previous preview** versions of .NET Core from your system.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5e458-236">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="5e458-236">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+> <span data-ttu-id="fc969-236">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="fc969-236">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-237">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-237">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-237">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-237">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="5e458-238">**Fedora 26 或 Fedora 25**</span><span class="sxs-lookup"><span data-stu-id="5e458-238">**Fedora 26 or Fedora 25**</span></span>
+<span data-ttu-id="fc969-238">**Fedora 26 或 Fedora 25**</span><span class="sxs-lookup"><span data-stu-id="fc969-238">**Fedora 26 or Fedora 25**</span></span>
 
-2. <span data-ttu-id="5e458-239">註冊 Microsoft 簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="5e458-239">Register the Microsoft signature key.</span></span>
+2. <span data-ttu-id="fc969-239">註冊 Microsoft 簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="fc969-239">Register the Microsoft signature key.</span></span>
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-3. <span data-ttu-id="5e458-240">新增 dotnet 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="5e458-240">Add the dotnet product feed.</span></span>
+3. <span data-ttu-id="fc969-240">新增 dotnet 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="fc969-240">Add the dotnet product feed.</span></span>
 
    ```bash
    sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
    ```
 
-4. <span data-ttu-id="5e458-241">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="5e458-241">Install the .NET Core SDK.</span></span>
+4. <span data-ttu-id="fc969-241">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="fc969-241">Install the .NET Core SDK.</span></span>
 
    ```bash
    sudo dnf update
@@ -419,35 +419,35 @@ ms.lasthandoff: 01/05/2018
    sudo dnf install dotnet-sdk-2.0.0
    ```
 
-5. <span data-ttu-id="5e458-242">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-242">Add dotnet to your PATH.</span></span>
+5. <span data-ttu-id="fc969-242">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-242">Add dotnet to your PATH.</span></span>
 
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-243">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-243">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-243">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-243">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-<span data-ttu-id="5e458-244">**Fedora 24**</span><span class="sxs-lookup"><span data-stu-id="5e458-244">**Fedora 24**</span></span>
+<span data-ttu-id="fc969-244">**Fedora 24**</span><span class="sxs-lookup"><span data-stu-id="fc969-244">**Fedora 24**</span></span>
 
-2. <span data-ttu-id="5e458-245">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="5e458-245">Get the prerequisites.</span></span>
+2. <span data-ttu-id="fc969-245">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="fc969-245">Get the prerequisites.</span></span>
 
    ```bash
    sudo dnf install libunwind libicu
    ```
 
-3. <span data-ttu-id="5e458-246">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="5e458-246">Download the .NET Core SDK binary  (tarball).</span></span>
+3. <span data-ttu-id="fc969-246">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="fc969-246">Download the .NET Core SDK binary  (tarball).</span></span>
 
    ```bash
    curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848833
    ```
 
-4. <span data-ttu-id="5e458-247">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="5e458-247">Extract the .NET Core SDK binaries.</span></span>
+4. <span data-ttu-id="fc969-247">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="fc969-247">Extract the .NET Core SDK binaries.</span></span>
 
    ```bash
    sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
    ```
 
-5. <span data-ttu-id="5e458-248">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-248">Add dotnet to your PATH.</span></span>
+5. <span data-ttu-id="fc969-248">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-248">Add dotnet to your PATH.</span></span>
 
    ```bash
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
@@ -455,36 +455,36 @@ ms.lasthandoff: 01/05/2018
    
 ---
 
-6. <span data-ttu-id="5e458-249">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-249">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+6. <span data-ttu-id="fc969-249">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-249">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
    ```
 
-## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a><span data-ttu-id="5e458-250">安裝 .NET Core for CentOS 7.1 (64 位元) 以及 Oracle Linux 7.1 (64 位元)</span><span class="sxs-lookup"><span data-stu-id="5e458-250">Install .NET Core for CentOS 7.1 (64 bit) & Oracle Linux 7.1 (64 bit)</span></span>
+## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a><span data-ttu-id="fc969-250">安裝 .NET Core for CentOS 7.1 (64 位元) 以及 Oracle Linux 7.1 (64 位元)</span><span class="sxs-lookup"><span data-stu-id="fc969-250">Install .NET Core for CentOS 7.1 (64 bit) & Oracle Linux 7.1 (64 bit)</span></span>
 
-<span data-ttu-id="5e458-251">安裝 .NET Core for CentOS 7.1 (64 位元) 與 Oracle Linux 7.1 (64 位元)：</span><span class="sxs-lookup"><span data-stu-id="5e458-251">To install .NET Core for CentOS 7.1 (64 bit) & Oracle Linux 7.1 (64 bit):</span></span>
+<span data-ttu-id="fc969-251">安裝 .NET Core for CentOS 7.1 (64 位元) 與 Oracle Linux 7.1 (64 位元)：</span><span class="sxs-lookup"><span data-stu-id="fc969-251">To install .NET Core for CentOS 7.1 (64 bit) & Oracle Linux 7.1 (64 bit):</span></span>
 
-1. <span data-ttu-id="5e458-252">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="5e458-252">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+1. <span data-ttu-id="fc969-252">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="fc969-252">Remove any **previous preview** versions of .NET Core from your system.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5e458-253">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="5e458-253">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+> <span data-ttu-id="fc969-253">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="fc969-253">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-254">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-254">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-254">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-254">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-2. <span data-ttu-id="5e458-255">註冊 Microsoft 簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="5e458-255">Register the Microsoft signature key.</span></span>
+2. <span data-ttu-id="fc969-255">註冊 Microsoft 簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="fc969-255">Register the Microsoft signature key.</span></span>
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-3. <span data-ttu-id="5e458-256">新增 Microsoft 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="5e458-256">Add the Microsoft Product feed.</span></span>
+3. <span data-ttu-id="fc969-256">新增 Microsoft 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="fc969-256">Add the Microsoft Product feed.</span></span>
 
    ```bash
    sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
    ```
 
-4. <span data-ttu-id="5e458-257">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="5e458-257">Install the .NET Core SDK.</span></span>
+4. <span data-ttu-id="fc969-257">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="fc969-257">Install the .NET Core SDK.</span></span>
 
    ```bash
    sudo yum update
@@ -492,33 +492,33 @@ ms.lasthandoff: 01/05/2018
    sudo yum install dotnet-sdk-2.0.0
    ```
 
-5. <span data-ttu-id="5e458-258">將 dotnet 新增至 PATH</span><span class="sxs-lookup"><span data-stu-id="5e458-258">Add dotnet to your PATH</span></span>
+5. <span data-ttu-id="fc969-258">將 dotnet 新增至 PATH</span><span class="sxs-lookup"><span data-stu-id="fc969-258">Add dotnet to your PATH</span></span>
 
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-259">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-259">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-259">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-259">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-2. <span data-ttu-id="5e458-260">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="5e458-260">Get the prerequisites.</span></span>
+2. <span data-ttu-id="fc969-260">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="fc969-260">Get the prerequisites.</span></span>
 
    ```bash
    sudo yum install libunwind libicu
    ```
    
-3. <span data-ttu-id="5e458-261">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="5e458-261">Download the .NET Core SDK binary (tarball).</span></span>
+3. <span data-ttu-id="fc969-261">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="fc969-261">Download the .NET Core SDK binary (tarball).</span></span>
 
    ```bash
    curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848821
    ```
 
-4. <span data-ttu-id="5e458-262">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="5e458-262">Extract the .NET Core SDK binaries.</span></span>
+4. <span data-ttu-id="fc969-262">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="fc969-262">Extract the .NET Core SDK binaries.</span></span>
 
    ```bash
    sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
    ```
 
-5. <span data-ttu-id="5e458-263">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-263">Add dotnet to your PATH.</span></span>
+5. <span data-ttu-id="fc969-263">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-263">Add dotnet to your PATH.</span></span>
 
    ```bash
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
@@ -526,26 +526,26 @@ ms.lasthandoff: 01/05/2018
 
 ---
 
-6. <span data-ttu-id="5e458-264">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-264">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+6. <span data-ttu-id="fc969-264">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-264">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
    ```
 
-## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a><span data-ttu-id="5e458-265">安裝適用於 SUSE Linux Enterprise Server 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="5e458-265">Install .NET Core for SUSE Linux Enterprise Server (64 bit)</span></span>
+## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a><span data-ttu-id="fc969-265">安裝適用於 SUSE Linux Enterprise Server 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="fc969-265">Install .NET Core for SUSE Linux Enterprise Server (64 bit)</span></span>
 
-<span data-ttu-id="5e458-266">安裝適用於 SUSE Linux Enterprise Server (SLES) 12 SP2 (64 位元) 的 .NET Core 2.x：</span><span class="sxs-lookup"><span data-stu-id="5e458-266">To install .NET Core 2.x for SUSE Linux Enterprise Server (SLES) 12 SP2 (64 bit):</span></span>
+<span data-ttu-id="fc969-266">安裝適用於 SUSE Linux Enterprise Server (SLES) 12 SP2 (64 位元) 的 .NET Core 2.x：</span><span class="sxs-lookup"><span data-stu-id="fc969-266">To install .NET Core 2.x for SUSE Linux Enterprise Server (SLES) 12 SP2 (64 bit):</span></span>
 
-1. <span data-ttu-id="5e458-267">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="5e458-267">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+1. <span data-ttu-id="fc969-267">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="fc969-267">Remove any **previous preview** versions of .NET Core from your system.</span></span>
 
-2. <span data-ttu-id="5e458-268">新增 dotnet 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="5e458-268">Add the dotnet product feed.</span></span>
+2. <span data-ttu-id="fc969-268">新增 dotnet 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="fc969-268">Add the dotnet product feed.</span></span>
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
    ```
 
-3. <span data-ttu-id="5e458-269">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="5e458-269">Install the .NET Core SDK.</span></span>
+3. <span data-ttu-id="fc969-269">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="fc969-269">Install the .NET Core SDK.</span></span>
 
    ```bash
    sudo zypper update
@@ -553,42 +553,42 @@ ms.lasthandoff: 01/05/2018
    sudo zypper install dotnet-sdk-2.0.0
    ```
 
-4. <span data-ttu-id="5e458-270">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-270">Add dotnet to your PATH.</span></span>
+4. <span data-ttu-id="fc969-270">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-270">Add dotnet to your PATH.</span></span>
 
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
 
-5. <span data-ttu-id="5e458-271">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-271">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+5. <span data-ttu-id="fc969-271">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-271">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
    ```
    
-## <a name="install-net-core-for-opensuse-64-bit"></a><span data-ttu-id="5e458-272">安裝適用於 openSUSE 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="5e458-272">Install .NET Core for openSUSE (64 bit)</span></span>
+## <a name="install-net-core-for-opensuse-64-bit"></a><span data-ttu-id="fc969-272">安裝適用於 openSUSE 的 .NET Core (64 位元)</span><span class="sxs-lookup"><span data-stu-id="fc969-272">Install .NET Core for openSUSE (64 bit)</span></span>
 
-<span data-ttu-id="5e458-273">安裝適用於 openSUSE 的 .NET Core 2.x 或適用於 openSUSE (64 位元) 的 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="5e458-273">To install .NET Core 2.x for openSUSE or .NET Core 1.x for openSUSE (64 bit):</span></span>
+<span data-ttu-id="fc969-273">安裝適用於 openSUSE 的 .NET Core 2.x 或適用於 openSUSE (64 位元) 的 .NET Core 1.x：</span><span class="sxs-lookup"><span data-stu-id="fc969-273">To install .NET Core 2.x for openSUSE or .NET Core 1.x for openSUSE (64 bit):</span></span>
 
-1. <span data-ttu-id="5e458-274">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="5e458-274">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+1. <span data-ttu-id="fc969-274">請移除系統中所有 .NET Core **先前的預覽版**。</span><span class="sxs-lookup"><span data-stu-id="fc969-274">Remove any **previous preview** versions of .NET Core from your system.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5e458-275">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="5e458-275">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+> <span data-ttu-id="fc969-275">需要使用者控制的目錄，以用於來自 tar.gz 的 Linux 系統安裝。</span><span class="sxs-lookup"><span data-stu-id="fc969-275">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="5e458-276">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="5e458-276">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="fc969-276">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fc969-276">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-2. <span data-ttu-id="5e458-277">註冊 Microsoft 簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="5e458-277">Register the Microsoft signature key.</span></span>
+2. <span data-ttu-id="fc969-277">註冊 Microsoft 簽章金鑰。</span><span class="sxs-lookup"><span data-stu-id="fc969-277">Register the Microsoft signature key.</span></span>
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
 
-3. <span data-ttu-id="5e458-278">新增 dotnet 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="5e458-278">Add the dotnet product feed.</span></span>
+3. <span data-ttu-id="fc969-278">新增 dotnet 產品摘要。</span><span class="sxs-lookup"><span data-stu-id="fc969-278">Add the dotnet product feed.</span></span>
 
    ```bash
    sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
    ``` 
 
-4. <span data-ttu-id="5e458-279">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="5e458-279">Install the .NET Core SDK.</span></span>
+4. <span data-ttu-id="fc969-279">安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="fc969-279">Install the .NET Core SDK.</span></span>
 
    ```bash
    sudo zypper update
@@ -596,33 +596,33 @@ ms.lasthandoff: 01/05/2018
    sudo zypper install dotnet-sdk-2.0.0
    ```
 
-5. <span data-ttu-id="5e458-280">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-280">Add dotnet to your PATH.</span></span>
+5. <span data-ttu-id="fc969-280">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-280">Add dotnet to your PATH.</span></span>
 
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="5e458-281">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="5e458-281">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="fc969-281">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="fc969-281">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-2. <span data-ttu-id="5e458-282">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="5e458-282">Get the prerequisites.</span></span>
+2. <span data-ttu-id="fc969-282">取得必要條件。</span><span class="sxs-lookup"><span data-stu-id="fc969-282">Get the prerequisites.</span></span>
 
    ```bash
    sudo zypper install libunwind libicu
    ```
 
-3. <span data-ttu-id="5e458-283">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="5e458-283">Download the .NET Core SDK binary (tarball).</span></span>
+3. <span data-ttu-id="fc969-283">下載 .NET Core SDK 二進位檔 (tarball)。</span><span class="sxs-lookup"><span data-stu-id="fc969-283">Download the .NET Core SDK binary (tarball).</span></span>
 
    ```bash
    curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848824
    ```
 
-4. <span data-ttu-id="5e458-284">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="5e458-284">Extract the .NET Core SDK binaries.</span></span>
+4. <span data-ttu-id="fc969-284">擷取 .NET Core SDK 二進位檔。</span><span class="sxs-lookup"><span data-stu-id="fc969-284">Extract the .NET Core SDK binaries.</span></span>
    
    ```bash
    sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
    ```
 
-5. <span data-ttu-id="5e458-285">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="5e458-285">Add dotnet to your PATH.</span></span>
+5. <span data-ttu-id="fc969-285">將 dotnet 新增至 PATH。</span><span class="sxs-lookup"><span data-stu-id="fc969-285">Add dotnet to your PATH.</span></span>
 
    ```bash
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
@@ -630,13 +630,13 @@ ms.lasthandoff: 01/05/2018
    
 ---
 
-6. <span data-ttu-id="5e458-286">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="5e458-286">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
+6. <span data-ttu-id="fc969-286">執行 `dotnet --version` 命令，以證明安裝成功。</span><span class="sxs-lookup"><span data-stu-id="fc969-286">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
 
    ```bash
    dotnet --version
    ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="5e458-287">如果支援的 Linux 發行版本/版本遇到 .NET Core 2.x 安裝問題，請參閱已安裝的發行版本/版本的 [2.0 已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.0)主題。</span><span class="sxs-lookup"><span data-stu-id="5e458-287">If you have problems with the .NET Core 2.x installation on a supported Linux distribution/version, consult the [2.0 Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.0) topic for your installed distributions/versions.</span></span> 
+> <span data-ttu-id="fc969-287">如果支援的 Linux 發行版本/版本遇到 .NET Core 2.x 安裝問題，請參閱已安裝的發行版本/版本的 [2.0 已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.0)主題。</span><span class="sxs-lookup"><span data-stu-id="fc969-287">If you have problems with the .NET Core 2.x installation on a supported Linux distribution/version, consult the [2.0 Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.0) topic for your installed distributions/versions.</span></span> 
 >
-> <span data-ttu-id="5e458-288">如果支援的 Linux 發行版本/版本遇到 .NET Core 1.x 安裝問題，請參閱已安裝的發行版本/版本的 [1.0.0 已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主題。</span><span class="sxs-lookup"><span data-stu-id="5e458-288">If you have problems with the .NET Core 1.x installation on a supported Linux distribution/version, consult the [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) and [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) topics for your installed distributions/versions.</span></span>
+> <span data-ttu-id="fc969-288">如果支援的 Linux 發行版本/版本遇到 .NET Core 1.x 安裝問題，請參閱已安裝的發行版本/版本的 [1.0.0 已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主題。</span><span class="sxs-lookup"><span data-stu-id="fc969-288">If you have problems with the .NET Core 1.x installation on a supported Linux distribution/version, consult the [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) and [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) topics for your installed distributions/versions.</span></span>

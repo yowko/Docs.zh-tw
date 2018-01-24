@@ -13,47 +13,47 @@ ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e02f82bb0dd2952bd2f192af7ff233194a045619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0a8cc66609fe542fc7db166cd208cfcedb204b8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="checked-c-compiler-options"></a><span data-ttu-id="60270-102">/checked (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="60270-102">/checked (C# Compiler Options)</span></span>
-<span data-ttu-id="60270-103">**/checked** 選項會指定產生超出該資料型別範圍之值且不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。</span><span class="sxs-lookup"><span data-stu-id="60270-103">The **/checked** option specifies whether an integer arithmetic statement that results in a value that is outside the range of the data type, and that is not in the scope of a [checked](../../../csharp/language-reference/keywords/checked.md) or [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword, causes a run-time exception.</span></span>  
+# <a name="-checked-c-compiler-options"></a><span data-ttu-id="6f213-102">-checked (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="6f213-102">-checked (C# Compiler Options)</span></span>
+<span data-ttu-id="6f213-103">**-checked** 選項會指定產生超出該資料類型範圍之值且不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6f213-103">The **-checked** option specifies whether an integer arithmetic statement that results in a value that is outside the range of the data type, and that is not in the scope of a [checked](../../../csharp/language-reference/keywords/checked.md) or [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword, causes a run-time exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60270-104">語法</span><span class="sxs-lookup"><span data-stu-id="60270-104">Syntax</span></span>  
-  
-```console  
-/checked[+ | -]  
-```  
-  
-## <a name="remarks"></a><span data-ttu-id="60270-105">備註</span><span class="sxs-lookup"><span data-stu-id="60270-105">Remarks</span></span>  
- <span data-ttu-id="60270-106">在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式不一定會有 **/checked** 選項的效果。</span><span class="sxs-lookup"><span data-stu-id="60270-106">An integer arithmetic statement that is in the scope of a `checked` or `unchecked` keyword is not subject to the effect of the **/checked** option.</span></span>  
-  
- <span data-ttu-id="60270-107">如果不在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式產生超出該資料型別範圍的值，並在編譯時使用 **/checked+** (**/checked**)，則陳述式會在執行階段導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="60270-107">If an integer arithmetic statement that is not in the scope of a `checked` or `unchecked` keyword results in a value outside the range of the data type, and **/checked+** (**/checked**) is used in the compilation, that statement causes an exception at run time.</span></span> <span data-ttu-id="60270-108">如果在編譯時使用 **/checked-**，則該陳述式不會在執行階段導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="60270-108">If **/checked-** is used in the compilation, that statement does not cause an exception at run time.</span></span>  
-  
- <span data-ttu-id="60270-109">這個選項的預設值是 **/checked-**。</span><span class="sxs-lookup"><span data-stu-id="60270-109">The default value for this option is **/checked-**.</span></span> <span data-ttu-id="60270-110">使用 **/checked-** 的其中一個案例是建置大型應用程式。</span><span class="sxs-lookup"><span data-stu-id="60270-110">One scenario for using **/checked-** is in building large applications.</span></span> <span data-ttu-id="60270-111">自動化工具有時是用來建置這類應用程式，而且這類工具可能會將 **/checked** 自動設為 +。</span><span class="sxs-lookup"><span data-stu-id="60270-111">Sometimes automated tools are used to build such applications, and such a tool might automatically set **/checked** to +.</span></span> <span data-ttu-id="60270-112">您可以指定 **/checked-** 來覆寫工具的全域預設值。</span><span class="sxs-lookup"><span data-stu-id="60270-112">You can override the tool's global default by specifying **/checked-**.</span></span>  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="60270-113">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="60270-113">To set this compiler option in the Visual Studio development environment</span></span>  
-  
-1.  <span data-ttu-id="60270-114">開啟專案的 [屬性] 頁面。</span><span class="sxs-lookup"><span data-stu-id="60270-114">Open the project's **Properties** page.</span></span> <span data-ttu-id="60270-115">如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。</span><span class="sxs-lookup"><span data-stu-id="60270-115">For more information, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
-  
-2.  <span data-ttu-id="60270-116">按一下 [建置] 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="60270-116">Click the **Build** property page.</span></span>  
-  
-3.  <span data-ttu-id="60270-117">按一下 [ **進階** ] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="60270-117">Click the **Advanced** button.</span></span>  
-  
-4.  <span data-ttu-id="60270-118">修改 [檢查算術溢位/反向溢位] 屬性。</span><span class="sxs-lookup"><span data-stu-id="60270-118">Modify the **Check for arithmetic overflow/underflow** property.</span></span>  
-  
- <span data-ttu-id="60270-119">若要以程式設計方式存取這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。</span><span class="sxs-lookup"><span data-stu-id="60270-119">To access this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="60270-120">範例</span><span class="sxs-lookup"><span data-stu-id="60270-120">Example</span></span>  
- <span data-ttu-id="60270-121">下列命令會編譯 `t2.cs`。</span><span class="sxs-lookup"><span data-stu-id="60270-121">The following command compiles `t2.cs`.</span></span> <span data-ttu-id="60270-122">在命令中使用 `/checked` 會指定檔案中不在 `checked` 或 `unchecked` 關鍵字範圍內且產生超出該資料型別範圍之值的任何整數算術陳述式，都會在執行階段導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="60270-122">The use of `/checked` in the command specifies that any integer arithmetic statement in the file that is not in the scope of a `checked` or `unchecked` keyword, and that results in a value that is outside the range of the data type, causes an exception at run time.</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f213-104">語法</span><span class="sxs-lookup"><span data-stu-id="6f213-104">Syntax</span></span>  
   
 ```console  
-csc t2.cs /checked  
+-checked[+ | -]  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="60270-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="60270-123">See Also</span></span>  
- [<span data-ttu-id="60270-124">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="60270-124">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="60270-125">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="60270-125">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+## <a name="remarks"></a><span data-ttu-id="6f213-105">備註</span><span class="sxs-lookup"><span data-stu-id="6f213-105">Remarks</span></span>  
+ <span data-ttu-id="6f213-106">在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式不一定會有 **-checked** 選項的效果。</span><span class="sxs-lookup"><span data-stu-id="6f213-106">An integer arithmetic statement that is in the scope of a `checked` or `unchecked` keyword is not subject to the effect of the **-checked** option.</span></span>  
+  
+ <span data-ttu-id="6f213-107">如果不在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式產生超出該資料類型範圍的值，並在編譯時使用 **-checked+** (**-checked**)，則該陳述式會在執行階段導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6f213-107">If an integer arithmetic statement that is not in the scope of a `checked` or `unchecked` keyword results in a value outside the range of the data type, and **-checked+** (**-checked**) is used in the compilation, that statement causes an exception at run time.</span></span> <span data-ttu-id="6f213-108">如果在編譯時使用 **-checked-**，則該陳述式不會在執行階段導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6f213-108">If **-checked-** is used in the compilation, that statement does not cause an exception at run time.</span></span>  
+  
+ <span data-ttu-id="6f213-109">這個選項的預設值是 **-checked-**。</span><span class="sxs-lookup"><span data-stu-id="6f213-109">The default value for this option is **-checked-**.</span></span> <span data-ttu-id="6f213-110">使用 **-checked-** 的其中一個案例是建置大型應用程式。</span><span class="sxs-lookup"><span data-stu-id="6f213-110">One scenario for using **-checked-** is in building large applications.</span></span> <span data-ttu-id="6f213-111">自動化工具有時是用來建置這類應用程式，而且這類工具可能會將 **-checked** 自動設為 +。</span><span class="sxs-lookup"><span data-stu-id="6f213-111">Sometimes automated tools are used to build such applications, and such a tool might automatically set **-checked** to +.</span></span> <span data-ttu-id="6f213-112">您可以指定 **-checked-** 來覆寫工具的全域預設值。</span><span class="sxs-lookup"><span data-stu-id="6f213-112">You can override the tool's global default by specifying **-checked-**.</span></span>  
+  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6f213-113">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6f213-113">To set this compiler option in the Visual Studio development environment</span></span>  
+  
+1.  <span data-ttu-id="6f213-114">開啟專案的 [屬性] 頁面。</span><span class="sxs-lookup"><span data-stu-id="6f213-114">Open the project's **Properties** page.</span></span> <span data-ttu-id="6f213-115">如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。</span><span class="sxs-lookup"><span data-stu-id="6f213-115">For more information, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+  
+2.  <span data-ttu-id="6f213-116">按一下 [建置] 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="6f213-116">Click the **Build** property page.</span></span>  
+  
+3.  <span data-ttu-id="6f213-117">按一下 [ **進階** ] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="6f213-117">Click the **Advanced** button.</span></span>  
+  
+4.  <span data-ttu-id="6f213-118">修改 [檢查算術溢位/反向溢位] 屬性。</span><span class="sxs-lookup"><span data-stu-id="6f213-118">Modify the **Check for arithmetic overflow/underflow** property.</span></span>  
+  
+ <span data-ttu-id="6f213-119">若要以程式設計方式存取這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。</span><span class="sxs-lookup"><span data-stu-id="6f213-119">To access this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="6f213-120">範例</span><span class="sxs-lookup"><span data-stu-id="6f213-120">Example</span></span>  
+ <span data-ttu-id="6f213-121">下列命令會編譯 `t2.cs`。</span><span class="sxs-lookup"><span data-stu-id="6f213-121">The following command compiles `t2.cs`.</span></span> <span data-ttu-id="6f213-122">在命令中使用 `-checked` 會指定檔案中不在 `checked` 或 `unchecked` 關鍵字範圍內且產生超出該資料型別範圍之值的任何整數算術陳述式，都會在執行階段導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6f213-122">The use of `-checked` in the command specifies that any integer arithmetic statement in the file that is not in the scope of a `checked` or `unchecked` keyword, and that results in a value that is outside the range of the data type, causes an exception at run time.</span></span>  
+  
+```console  
+csc t2.cs -checked  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="6f213-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="6f213-123">See Also</span></span>  
+ [<span data-ttu-id="6f213-124">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6f213-124">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="6f213-125">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="6f213-125">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
