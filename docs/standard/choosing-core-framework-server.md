@@ -21,13 +21,13 @@ ms.lasthandoff: 11/21/2017
 * 您有跨平台需求。
 * 您的目標為微服務。
 * 您正在使用 Docker 容器。
-* 您需要高效能且可延展的系統。
-* 您需要針對每個應用程式並存不同 .NET 版本。
+* 您需要高效能且可調整的系統。
+* 您需要依應用程式讓 .NET 版本並存。
 
 在下列情況中，請針對伺服器應用程式使用 .NET Framework：
 
 * 您的應用程式目前使用 .NET Framework (建議進行擴充，而不是移轉)。
-* 您的應用程式使用不適用於 .NET Core 的協力廠商 .NET 函式庫或 NuGet 套件。
+* 您的應用程式使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件。
 * 您的應用程式使用不適用於 .NET Core 的 .NET 技術。
 * 您的應用程式使用不支援 .NET Core 的平台。
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 
 您可以在自己的 Linux 或 Windows 基礎結構中，或在 [Azure Container Service](https://azure.microsoft.com/services/container-service/) 等雲端服務中裝載 Docker 容器。 Azure Container Service 可在雲端中管理、協調及調整容器型應用程式。
 
-### <a name="a-need-for-high-performance-and-scalable-systems"></a>需要高效能且可延展的系統
+### <a name="a-need-for-high-performance-and-scalable-systems"></a>需要高效能且可調整的系統
 
 當您的系統需要最佳效能和延展性時，.NET Core 和 ASP.NET Core 就是最好的選擇。 Windows Server 和 Linux 的高效能伺服器執行階段讓 .NET 成為 [TechEmpower 基準測試](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext)中效能最高的 Web 架構。
 
@@ -73,13 +73,13 @@ ms.lasthandoff: 11/21/2017
 
 在大多數的情況中，您不需將現有的應用程式移轉到 .NET Core， 而是建議您在擴充現有的應用程式時使用 .NET Core，例如，在 ASP.NET Core 中寫入新的 Web 服務。
 
-### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>需要使用的協力廠商的 .NET 函式庫或 NuGet 套件不適用 .NET Core
+### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>需要使用的協力廠商的 .NET 程式庫或 NuGet 套件不適用 .NET Core
 
-函式庫會快速採用 .NET Standard。 .NET Standard 可跨所有 .NET 實作 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，甚至會更容易達成：
+程式庫會快速採用 .NET Standard。 .NET Standard 可跨所有 .NET 實作 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，甚至會更容易達成：
 - API 介面變得更大。 
-- 引入了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 函式庫。 若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。
+- 引入了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 程式庫。 若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。
 
-因此，只有在函式庫或 NuGet 套件使用的技術不適用於 .NET Standard/.NET Core 時，才需要使用 .NET Framework。
+因此，只有在程式庫或 NuGet 套件使用的技術不適用於 .NET Standard/.NET Core 時，才需要使用 .NET Framework。
 
 ### <a name="a-need-to-use-net-technologies-not-available-for-net-core"></a>需要使用的 .NET 技術不適用 .NET Core
 
@@ -89,9 +89,9 @@ ms.lasthandoff: 11/21/2017
 
 * ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 ASP.NET Core [Razor 頁面](/aspnet/core/mvc/razor-pages/)與 Web Pages 有許多相似處。
 
-* ASP.NET SignalR 伺服器/用戶端實作。 目前，ASP.NET SignalR 不適用於 ASP.NET Core (不是用戶端或伺服器)。 ASP.NET Core 2.1 預定將使用 ASP.NET Core SignalR。 請參閱 [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap) (ASP.NET Core 排程和藍圖)。 預覽狀態適用於[伺服器端](https://github.com/aspnet/SignalR-Server)和[用戶端函式庫](https://github.com/aspnet/SignalR-Client-Net) GitHub 儲存機制。
+* ASP.NET SignalR 伺服器/用戶端實作。 目前，ASP.NET SignalR 不適用於 ASP.NET Core (不是用戶端或伺服器)。 ASP.NET Core 2.1 預定將使用 ASP.NET Core SignalR。 請參閱 [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap) (ASP.NET Core 排程和藍圖)。 預覽狀態適用於[伺服器端](https://github.com/aspnet/SignalR-Server)和[用戶端程式庫](https://github.com/aspnet/SignalR-Client-Net) GitHub 儲存機制。
 
-* WCF 服務實作。 即使已有 [WCF 用戶端函式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
+* WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 
 * 工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework。  目前並未規劃將 WF/WCF+WF/WCF Data Services 帶入 .NET Core。
 
