@@ -1,25 +1,20 @@
 ---
 title: "可延伸物件"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e7d7b5245130a7581efbf9badb0699f57a6743dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>可延伸物件
 可延伸物件模式是用於以新功能延伸現有的執行階段類別，或將新狀態新增至物件。 附加至其中一個可擴充物件的擴充功能會在處理程序中的各種不同階段啟用行為，以存取附加至它們可存取之一般可擴充物件的共用狀態與功能。  
@@ -48,15 +43,15 @@ where T : IExtensibleObject<T>
   
  當擴充功能加入至集合，<xref:System.ServiceModel.IExtension%601.Attach%2A>進入集合之前呼叫。 從集合中，移除擴充功能時<xref:System.ServiceModel.IExtension%601.Detach%2A>移除之後呼叫。 這表示 （假設適當的同步處理） 擴充功能可以倚賴才發現它在集合中是之間<xref:System.ServiceModel.IExtension%601.Attach%2A>和<xref:System.ServiceModel.IExtension%601.Detach%2A>。  
   
- 傳遞至 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> 或 <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> 的物件不需要是 <xref:System.ServiceModel.IExtension%601> (例如，您可以傳遞任何物件)，但是傳回的延伸是 <xref:System.ServiceModel.IExtension%601>。  
+ 傳遞至 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 或 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> 的物件不需要是 <xref:System.ServiceModel.IExtension%601> (例如，您可以傳遞任何物件)，但是傳回的延伸是 <xref:System.ServiceModel.IExtension%601>。  
   
- 如果集合中的任何延伸模組不是<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A>會傳回 null，和<xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A>會傳回空集合。 如果多個延伸模組實作<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A>傳回其中一個。 從 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> 傳回的值是快照。  
+ 如果集合中的任何延伸模組不是<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>會傳回 null，和<xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>會傳回空集合。 如果多個延伸模組實作<xref:System.ServiceModel.IExtension%601>，<xref:System.ServiceModel.IExtensionCollection%601.Find%2A>傳回其中一個。 從 <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> 傳回的值是快照。
   
  有兩個主要案例。 第一個案例是使用 <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> 屬性做為型別字典，將狀態插入物件，讓另一個元件可使用型別來查閱它。  
   
  第二個案例是使用 <xref:System.ServiceModel.IExtension%601.Attach%2A> 和 <xref:System.ServiceModel.IExtension%601.Detach%2A> 屬性，讓物件可參與自訂行為，例如註冊事件、監看狀態轉換等等。  
   
- <xref:System.ServiceModel.IExtensionCollection%601> 介面是 <xref:System.ServiceModel.IExtension%601> 物件的集合，這些物件允許依據 <xref:System.ServiceModel.IExtension%601> 的型別將其擷取。 <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType> 會傳回最近所加入屬於該型別之 <xref:System.ServiceModel.IExtension%601> 的物件。  
+ <xref:System.ServiceModel.IExtensionCollection%601> 介面是 <xref:System.ServiceModel.IExtension%601> 物件的集合，這些物件允許依據 <xref:System.ServiceModel.IExtension%601> 的型別將其擷取。 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> 會傳回最近所加入屬於該型別之 <xref:System.ServiceModel.IExtension%601> 的物件。  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation 中的可延伸物件  
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中有四種可延伸物件：  
