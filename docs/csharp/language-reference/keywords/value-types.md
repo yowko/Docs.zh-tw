@@ -1,5 +1,5 @@
 ---
-title: "實值類型 (C# 參考)"
+title: "實值型別 (C# 參考)"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology: devlang-csharp
