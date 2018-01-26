@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  本主題描述組態檔的語法，並提供有關組態檔的三種類型資訊：電腦、應用程式和安全性。  
   
 ## <a name="configuration-file-format"></a>組態檔格式  
- 組態檔包含一些項目，為設定組態資訊的邏輯資料結構。 在組態檔內，您要使用標記 (Tag) 來標記項目的開頭和結尾。 例如，`<runtime>` 項目是由 `<runtime>`*child elements*`</runtime>` 所組成。 空白項目會寫成 `<runtime/>` 或 `<runtime>``</runtime>`。  
+ 組態檔包含一些項目，為設定組態資訊的邏輯資料結構。 在組態檔內，您要使用標記 (Tag) 來標記項目的開頭和結尾。 例如，`<runtime>` 項目是由 `<runtime>`*child elements*`</runtime>` 所組成。 空白項目會寫成 `<runtime/>` 或 `<runtime></runtime>`。  
   
  就如同所有的 XML 檔，組態檔中的語法要區分大小寫。  
   
