@@ -1,8 +1,9 @@
 ---
 title: "如何：判斷安裝的 .NET Framework 版本"
-ms.date: 10/17/2017
+ms.date: 01/24/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,12 +16,13 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 使用者可以在電腦上安裝及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 請注意，.NET Framework 包含兩個主要元件，這兩個元件的版本控制會分開處理：  
@@ -87,6 +89,8 @@ ms.lasthandoff: 12/22/2017
 
      `Release` DWORD 的值表示安裝的 .NET Framework 版本。
 
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
     |Release DWORD 的值|版本|
     |--------------------------------|-------------|
     |378389|.NET Framework 4.5|
@@ -128,6 +132,8 @@ ms.lasthandoff: 12/22/2017
 1. `Release` DWORD 存在即表示電腦上已安裝 .NET Framework 4.5 或更新版本。 關鍵字的值表示已安裝的版本。 若要檢查此關鍵字，請使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 類別的 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> 和 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 方法，存取 Windows 登錄中 HKEY_LOCAL_MACHINE 底下的 Software\Microsoft\NET Framework Setup\NDP\v4\Full 子機碼。
 
 2. 檢查 `Release` 關鍵字的值，判斷已安裝的版本。 若要向前相容，您可以檢查大於或等於表格中所列值的值。 以下是 .NET Framework 版本及相關聯的 `Release` 關鍵字。
+
+    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
     |版本|Release DWORD 的值|
     |-------------|--------------------------------|

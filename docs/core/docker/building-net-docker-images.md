@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/23/2017
 * 根據**較大的** ASP.NET Core 建置 Docker 基底映像，以在容器中建置範例 
 * 根據**較小的** ASP.NET Core Docker 執行階段基底映像，以將最終建置結果複製至 Docker 映像
 
-> [!Note]
+> [!NOTE]
 > 組建映像包含建置應用程式但未建置執行階段映像的必要工具。
 
 ### <a name="prerequisites"></a>必要條件
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] `docker run` '-p' 引數會將您本機電腦上的連接埠 5000 對應至容器中的連接埠 80 (連接埠對應形式為 `host:container`)。 如需詳細資訊，請參閱命令列參數的 [docker run reference](https://docs.docker.com/engine/reference/commandline/exec/)。
+> [!NOTE]
+> `docker run` '-p' 引數會將您本機電腦上的連接埠 5000 對應至容器中的連接埠 80 (連接埠對應形式為 `host:container`)。 如需詳細資訊，請參閱命令列參數的 [docker run reference](https://docs.docker.com/engine/reference/commandline/exec/)。
 
 應用程式啟動之後，請在網頁瀏覽器中瀏覽 **http://localhost:5000**。
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * 執行 `docker exec aspnetcore_sample ipconfig`。
 * 複製容器 IP 位址，並將其貼入瀏覽器 (例如，172.29.245.43)。
 
-> [!Note]
+> [!NOTE]
 > Docker exec 支援使用名稱或雜湊來識別容器。 在我們的範例中，使用名稱 (aspnetcore_sample)。
 
 請參閱下列有關如何取得執行中 Windows 容器的 IP 位址的範例。
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Docker exec 會在執行中容器內執行新的命令。 如需詳細資訊，請參閱命令列參數的 [docker exec reference](https://docs.docker.com/engine/reference/commandline/exec/)。
 
 您可以使用 [dotnet publish](../tools/dotnet-publish.md) 命令，以在本機產生準備好部署至生產環境的應用程式。
@@ -224,7 +226,7 @@ Ethernet adapter Ethernet:
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > -c release 引數會以發行模式建置應用程式 (預設值是偵錯模式)。 如需詳細資訊，請參閱命令列參數的 [dotnet run reference](../tools/dotnet-run.md)。
 
 您可以使用下列命令，在 **Windows** 上執行應用程式。
@@ -265,5 +267,5 @@ dotnet published/aspnetapp.dll
 * [開始使用 Visual Studio for Mac、容器，以及雲端中的無伺服器程式碼](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) \(英文\)
 * [開始使用 Docker 和 Visual Studio for Mac 實驗室](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) \(英文\)
 
-> [!Note]
+> [!NOTE]
 > 如果您沒有 Azure 訂用帳戶，請[立即註冊](https://azure.microsoft.com/free/?b=16.48)可免費使用 30 天的帳戶，並獲得 $200 美元的 Azure 點數來試用其他的 Azure 服務組合。
