@@ -14,7 +14,7 @@ ms.lasthandoff: 11/21/2017
 ---
 #<a name="architectural-principles"></a>架構原則
 
-> 「 如果產生器建立建築物方式程式設計人員所撰寫的程式，然後以往第一個 woodpecker 會終結種族"。  
+> 「如果建築工人像工程師寫軟體那樣蓋房子，那第一隻飛來的啄木鳥就能毀掉人類文明。」  
 > _\-Gerald Weinberg_
 
 ## <a name="summary"></a>總結
