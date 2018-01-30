@@ -1,5 +1,5 @@
 # [快速入門](index.md)
-## [Visual Studio 2015 中的 WPF 簡介](introduction-to-wpf-in-vs.md)
+## [Visual Studio 中的 WPF 簡介](introduction-to-wpf-in-vs.md)
 ## [WPF 第 4.5 版的新功能](whats-new.md)
 ## [逐步解說：我的第一個 WPF 傳統型應用程式](walkthrough-my-first-wpf-desktop-application.md)
 ## [WPF 逐步解說](wpf-walkthroughs.md)

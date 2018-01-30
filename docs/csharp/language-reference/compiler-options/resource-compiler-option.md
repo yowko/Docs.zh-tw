@@ -2,9 +2,11 @@
 title: "-resource (C# 編譯器選項)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: /resource
+f1_keywords:
+- /resource
 helpviewer_keywords:
 - -resource compiler option [C#]
 - /resource compiler option [C#]
@@ -13,14 +15,14 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a305f98b09d390afbeba7b55ab44ff09abc74617
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# 編譯器選項)
 將指定的資源內嵌到輸出檔。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
  資源的存取範圍：公用或私用。 預設值是公用。  
   
 ## <a name="remarks"></a>備註  
- 使用 [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) 將資源連結至組件，而不是將資源檔新增至輸出檔。  
+ 使用 [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) 將資源連結至組件，而不將資源檔新增至輸出檔案。  
   
  根據預設，使用 C# 編譯器建立資源時，這些資源在組件中為公用狀態。 若要將資源設為私用，可將 `private` 指定為存取範圍修飾詞。 不允許 `public` 或 `private` 以外的其他存取範圍。  
   

@@ -2,7 +2,8 @@
 title: "依字母順序列出 C# 編譯器選項"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
 下列編譯器選項會依字母順序排序。 如需分類清單，請參閱[依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)。  
@@ -28,10 +29,10 @@ ms.lasthandoff: 01/19/2018
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|將使用方式訊息顯示到 stdout。|  
 |-additionalfile|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|將指定的模組連結至此組件|  
-|-analyzer|從這個組件執行分析器 (簡短形式：/a)|  
+|-analyzer|從這個組件執行分析器 (簡短形式：-a)|  
 |[-appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|指定組件繫結時的 app.config 位置。|  
 |.[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|指定要建置程式庫的基底位址。|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|建立「錯誤報告」檔案。 如果您搭配使用這個檔案與 /errorreport:prompt 或 /errorreport:send，則會將該檔案與任何損毀的資訊一起傳送。|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|建立「錯誤報告」檔案。 如果這個檔案與 -errorreport:prompt 或 -errorreport:send 搭配使用，就會與任何損毀資訊一併傳送。|  
 |[-checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|會導致編譯器產生溢位檢查。|  
 |-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|指定開啟原始程式檔時所要使用的字碼頁。|  
