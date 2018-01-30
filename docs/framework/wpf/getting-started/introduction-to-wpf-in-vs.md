@@ -1,11 +1,12 @@
 ---
-title: "Visual Studio 2015 中的 WPF 簡介"
+title: "在 Visual Studio 中的 WPF 簡介"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/26/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1e3a91c4943a4f052d8136eaf32c0c431dd4924
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 674389fdff4394bece5568dac81fdd0cc4bd8c99
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="introduction-to-wpf-in-visual-studio-2015"></a>Visual Studio 2015 中的 WPF 簡介
-Visual Studio 2015 中的 Windows Presentation Foundation (WPF) 為開發人員提供了統一的程式撰寫模型，可在 Windows 上建置新式的企業營運桌面應用程式。  
+# <a name="introduction-to-wpf-in-visual-studio"></a>在 Visual Studio 中的 WPF 簡介
+Windows Presentation Foundation (WPF) 在 Visual Studio 中開發人員提供了統一的程式設計模型建置在 Windows 上的特定業務桌面應用程式。  
   
- [使用 Windows Presentation Foundation 建立新式桌面應用程式](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [使用 Windows Presentation Foundation 建立桌面應用程式](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
  [在 Visual Studio 和 Blend for Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
   

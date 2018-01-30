@@ -1,27 +1,29 @@
 ---
 title: "應用程式開發"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/26/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67a49e1b27c227623d01dba17b7b0a1aea7c1290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a>
@@ -140,5 +142,5 @@ ms.lasthandoff: 12/22/2017
 |[瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)|提供有關管理在應用程式頁面之間瀏覽的概觀。|  
 |[裝載](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|提供 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 的概觀。|  
 |[建置和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|描述如何建置及部署 WPF 應用程式。|  
-|[Visual Studio 2015 中的 WPF 簡介](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|描述 WPF 的主要功能。|  
+|[在 Visual Studio 中的 WPF 簡介](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|描述 WPF 的主要功能。|  
 |[逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|示範如何建立使用頁面瀏覽、配置、控制項、影像、樣式和繫結之 WPF 應用程式的逐步解說。|
