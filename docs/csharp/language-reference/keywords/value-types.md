@@ -2,15 +2,17 @@
 title: "實值型別 (C# 參考)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.valuetypes
+f1_keywords:
+- cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
@@ -19,7 +21,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="value-types-c-reference"></a>實值類型 (C# 參考)
+# <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 實值型別包含兩種主要類別：  
   
 -   [結構](../../../csharp/language-reference/keywords/struct.md)  
