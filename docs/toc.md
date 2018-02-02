@@ -25,7 +25,9 @@
 ### [類別庫概觀](standard/class-library-overview.md)
 ### [基底類型](standard/base-types/)
 ## [.NET 類別庫](standard/class-libraries.md)
-## [可攜性分析器](standard/portability-analyzer.md)
+## 分析器
+### [API 分析器](standard/analyzers/api-analyzer.md) 
+### [可攜性分析器](standard/analyzers/portability-analyzer.md)
 ## [處理和擲回例外狀況](standard/exceptions/)
 ## [.NET 組件檔格式](standard/assembly-format.md)
 ## [記憶體回收](standard/garbage-collection/)
@@ -282,7 +284,6 @@
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## 教學課程
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
-#### [F# Interactive 選項](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [類型提供者](fsharp/tutorials/type-providers/index.md)
 #### [使用類型提供者存取 SQL 資料庫](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
 #### [使用類型提供者和實體存取 SQL 資料庫](fsharp/tutorials/type-providers/accessing-a-sql-database-entities.md)
@@ -408,6 +409,7 @@
 ### [已修正關鍵字](fsharp/language-reference/fixed.md)
 ### [編譯器指示詞](fsharp/language-reference/compiler-directives.md)
 ### [編譯器選項](fsharp/language-reference/compiler-options.md)
+### [F# Interactive 選項](fsharp/language-reference/fsharp-interactive-options.md)
 ### [原始碼程式行、檔案與路徑識別項](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [呼叫端資訊](fsharp/language-reference/caller-information.md)
 ### [詳細語法](fsharp/language-reference/verbose-syntax.md)
