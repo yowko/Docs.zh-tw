@@ -3,9 +3,11 @@ title: "SByte 資料類型 (Visual Basic)"
 ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.sbyte
+f1_keywords:
+- vb.sbyte
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -17,14 +19,14 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 資料類型 (Visual Basic)
 
@@ -51,6 +53,14 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 做為前置詞和十六進位、 二進位或八進位的數字之間的前置分隔符號。 例如: 
+
+```vb
+Dim number As SByte = &H_F9
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 如果整數常值超出 `SByte` 的範圍 (亦即，如果小於 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大於 <xref:System.SByte.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。 當整數常值有沒有後置詞，[整數](integer-data-type.md)會推斷而來。 如果整數常值超出範圍`Integer`型別，[長](long-data-type.md)會推斷而來。 這表示，在上一個範例中，數值常值`0x9A`和`0b10011010`會解譯為 32 位元帶正負號的整數值為 156，但這超過<xref:System.SByte.MaxValue?displayProperty=nameWithType>。 若要成功編譯程式碼如下指派至非十進位整數`SByte`，您可以執行下列其中一項：
 
 - 停用整數範圍檢查，藉由編譯與`/removeintchecks`編譯器參數。
@@ -69,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.SByte?displayProperty=nameWithType> 結構。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  <xref:System.SByte?displayProperty=nameWithType>  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

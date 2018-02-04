@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
 您可能會對討論安全性時使用的一些用語感到陌生。 本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用的字彙[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文件，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用的字彙[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文件，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
   
  Access Control List (ACL) - 存取控制清單 (ACL)  
  套用到物件的安全性保護清單  (物件可以是檔案、處理序、事件或具有安全性描述元的任何其他項目)。ACL 中的項目稱為存取控制項目 (ACE)。 ACL 有兩種：Discretionary 存取控制清單和系統存取控制清單。  

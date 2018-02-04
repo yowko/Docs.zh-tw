@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - .NET Framework, extensibility
 - versioning [.NET Framework], add-ins
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-ins-and-extensibility"></a>增益集和擴充性
 <a name="top"></a> 增益集可以為主應用程式提供擴充的功能或服務。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供程式設計模型，開發人員可用來開發增益集，並且在其主應用程式中加以啟動。 模型的做法是在主應用程式與增益集之間建構通訊管線。 此模型是藉由使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空間中的類型來實作。  
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>增益集與主應用程式的區別  
- 增益集與主應用程式之間的差異，只在於增益集是由主應用程式啟動。 主應用程式可以是兩者中較大的一個，例如文字處理應用程式及其拼字檢查工具；或者，主應用程式可以是兩者中較小的一個，例如內嵌媒體播放程式的立即訊息用戶端。 此增益集模型支援用戶端及伺服器案例中的增益集。 伺服器增益集的範例，包括為郵件伺服器提供病毒掃描、垃圾郵件篩選和 IP 保護的增益集。 用戶端增益集的範例，包括文書處理器的參考增益集、圖形程式和遊戲的特製化功能，以及本機電子郵件用戶端的病毒掃描。  
+ 增益集與主應用程式之間的差異，只在於增益集是由主應用程式啟動。 主應用程式可以是兩者中較大的一個，例如文字處理應用程式及其拼字檢查工具；或者，主應用程式可以是兩者中較小的一個，例如內嵌媒體播放程式的立即訊息用戶端。 此增益集模型支援用戶端及伺服器案例中的增益集。 伺服器增益集的範例，包括為郵件伺服器提供病毒掃描、垃圾郵件篩選和 IP 保護的增益集。 用戶端增益集範例包括參考增益集文字處理器、 圖形程式和遊戲，以及本機電子郵件用戶端掃描病毒的特製化功能。  
   
  [回到頁首](#top)  
   

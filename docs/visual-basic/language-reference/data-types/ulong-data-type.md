@@ -1,11 +1,13 @@
 ---
 title: "ULong 資料類型 (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.ulong
+f1_keywords:
+- vb.ulong
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afc52bfd16541feed599d5445adad7aba04f8e9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 606e0ef87b209bb2e75e28223f27d081713c1b7e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 資料類型 (Visual Basic)
 
@@ -53,10 +54,18 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 做為前置詞和十六進位、 二進位或八進位的數字之間的前置分隔符號。 例如: 
+
+```vb
+Dim number As ULong = &H_F9AC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 數值常值也可以包含`UL`或`ul`[類型字元](../../programming-guide\language-features\data-types/type-characters.md)代表`ULong`資料類型，如下列範例所示。
 
 ```vb
-Dim number = &H00_00_0A_96_2F_AC_14_D7ul
+Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 ```
 
 ## <a name="programming-tips"></a>程式設計提示
@@ -75,7 +84,7 @@ Dim number = &H00_00_0A_96_2F_AC_14_D7ul
   
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.UInt64?displayProperty=nameWithType> 結構。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  <xref:System.UInt64>  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

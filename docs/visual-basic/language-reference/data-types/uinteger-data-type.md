@@ -1,11 +1,13 @@
 ---
 title: "UInteger 資料類型"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.uinteger
+f1_keywords:
+- vb.uinteger
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - UInteger data type
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f3852bd56d11c19e327e6c2f3e23cfb082a54e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger 資料類型
 
@@ -53,10 +54,18 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 做為前置詞和十六進位、 二進位或八進位的數字之間的前置分隔符號。 例如: 
+
+```vb
+Dim number As UInteger = &H_0F8C_0326
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 數值常值也可以包含`UI`或`ui`[類型字元](../../programming-guide\language-features\data-types/type-characters.md)代表`UInteger`資料類型，如下列範例所示。
 
 ```vb
-Dim number = &H0FAC14D7ui
+Dim number = &H_0FAC_14D7ui
 ```
 
 ## <a name="programming-tips"></a>程式設計提示
@@ -75,7 +84,7 @@ Dim number = &H0FAC14D7ui
   
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.UInt32>  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 <a name="top"></a> 公用網路（例如網際網路）無法在兩實體之間提供一種可安全通訊的方式。 這類網路上的通訊很容易被人讀取，或是被未經授權的協力廠商所修改。 密碼編譯有助於保護資料不受人檢視，可提供一種方式來偵測資料是否已遭修改，比起其他非安全的通道，它有助提供安全的通訊方式。 比方說，可以利用密碼編譯演算法來加密資料，並以加密的狀態傳送，而稍後由指定的一方解密資料。 假使第三方攔截到加密資料，也難以破解。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
  私密金鑰加密的缺點是，它假設兩方都已同意一個金鑰與 IV，並且通訊過其值。 IV 不算是機密，而且能用訊息以純文字傳輸。 不過，金鑰必須保持機密，不可讓未授權使用者知道。 由於這些問題，私密金鑰加密通常會與公開金鑰加密搭配使用，以利私下通訊金鑰和 IV 的值。  
   
- 假設 Alice 和 Bob 是想要透過非安全通道進行通訊的兩方，它們可使用私密金鑰加密，如下所示：Alice 和 Bob 同意將特定金鑰和特定 IV 與一種特定演算法 (例如 AES) 搭配使用。 Alice 撰寫好訊息，並建立了要傳送訊息的網路資料流 (或許是具名管道或網路電子郵件)。 接下來，她使用金鑰和 IV 將文字加密，並透過內部網路傳送加密訊息和 IV 給 Bob。 Bob 收到加密文字，並使用該 IV 和先前同意的金鑰解密文字。 如果傳輸被攔截了，攔截者不知道金鑰，所以無法復原原始訊息。 在此案例中，要保持機密的僅有金鑰。 在真實案例中，Alice 或 Bob 兩方都沒有產生私密金鑰，而是使用公開金鑰 (非對稱式) 加密來傳輸私密 (對稱) 金鑰至其他對象。 (如需公開金鑰加密的詳細資訊，請參閱下一節)。  
+ 假設 Alice 和 Bob 是想要透過非安全通道進行通訊的兩方，它們可使用私密金鑰加密，如下所示：Alice 和 Bob 同意將特定金鑰和特定 IV 與一種特定演算法 (例如 AES) 搭配使用。 Alice 撰寫好訊息，並建立要傳送訊息的網路資料流 （或許是具名管道或網路電子郵件）。 接下來，她使用金鑰和 IV 將文字加密，並透過內部網路傳送加密訊息和 IV 給 Bob。 Bob 收到加密文字，並使用該 IV 和先前同意的金鑰解密文字。 如果傳輸被攔截了，攔截者不知道金鑰，所以無法復原原始訊息。 在此案例中，要保持機密的僅有金鑰。 在真實案例中，Alice 或 Bob 兩方都沒有產生私密金鑰，而是使用公開金鑰 (非對稱式) 加密來傳輸私密 (對稱) 金鑰至其他對象。 (如需公開金鑰加密的詳細資訊，請參閱下一節)。  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的以下類別可實作私密金鑰加密演算法：  
   

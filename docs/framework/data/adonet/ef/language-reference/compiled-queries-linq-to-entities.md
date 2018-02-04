@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c13450a7f05efd188607c80b920616f532f745d4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cdea4d0ca5a8f7b829b9d0a99a6097d164bbf21
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="compiled-queries--linq-to-entities"></a>已編譯的查詢 (LINQ to Entities)
 當您的應用程式執行了 Entity Framework 中結構類似的查詢多次時，您可經常增加效能，其方式是編譯查詢一次，然後使用不同的參數執行查詢多次。 例如，應用程式可能必須擷取特定城市中的所有客戶；此城市是使用者在執行階段於表單中所指定。 LINQ to Entities 支援針對這個用途所編譯的查詢。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>範例  
- 下列範例會先編譯然後再叫用接受 <xref:System.String> 輸入參數的查詢，然後傳回電子郵件地址以指定字串開始的 `Contact`：  
+ 下列範例會編譯，然後再叫用接受查詢<xref:System.String>輸入參數，然後傳回`Contact`其電子郵件地址開頭為指定的字串：  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  

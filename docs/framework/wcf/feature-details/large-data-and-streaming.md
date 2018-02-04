@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是 XML 通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  
   
 ## <a name="basic-considerations"></a>基本考量  
  為了提供有關 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之下列資訊的背景資訊，本節特別針對通常適用於已連線系統基礎結構的編碼、二進位資料以及資料流，提出一些一般性的問題與考量。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  在以 Base64 編碼的字串中，每個字元代表原始 8 位元資料中的 6 位元，造成 Base64 的 4:3 編碼與額外負荷比率，且不計算通常由慣例新增的額外格式設定字元 (歸位/換行字元)。 雖然 XML 和二進位編碼之間的差別大小要視案例而定，但是在傳輸 500 MB 承載時得到超過 33% 的大小通常是無法接受的。  
   
- 為避免這項編碼額外負荷，訊息傳輸最佳化機制 (MTOM) 標準允許外顯化 (Externalizing) 包含在訊息中的大型資料項目，並在不使用任何特殊編碼的情況下以二進位資料包含在訊息中。 使用 MTOM，訊息會以類似含有附件或內嵌內容 (圖片和其他內嵌內容) 的 Simple Mail Transfer Protocol (SMTP) 電子郵件訊息的方式進行交換；MTOM 訊息會封裝為多重區段/相關 MIME 順序，其中根部分是實際的 SOAP 訊息。  
+ 為避免這項編碼額外負荷，訊息傳輸最佳化機制 (MTOM) 標準允許外顯化 (Externalizing) 包含在訊息中的大型資料項目，並在不使用任何特殊編碼的情況下以二進位資料包含在訊息中。 使用 MTOM，訊息將以類似含有附件或內嵌的內容 （圖片和其他內嵌的內容;） 的 Simple Mail Transfer Protocol (SMTP) 電子郵件訊息的方式進行交換MTOM 訊息會封裝為多重區段/相關 MIME 順序，其中根部分實際的 SOAP 訊息。  
   
  MTOM SOAP 訊息是從其未編碼的版本修改，讓參照個別 MIME 部分的特殊項目標記取代包含二進位資料之訊息中的原始項目。 因此，SOAP 訊息會指向與其一起傳送的 MIME 部分，來參照二進位內容，否則就只會包含 XML 文字資料。 由於這個模型與已建立的 SMTP 模型非常接近，因此有廣泛的工具支援可在許多平台上編碼及解碼 MTOM 訊息，讓它具有極大的互通性選擇。  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="encodings"></a>編碼方式  
  *編碼*定義一組有關如何在網路上呈現訊息的規則。 *編碼器*實作這類編碼，並負責在寄件者端，encoder<xref:System.ServiceModel.Channels.Message>記憶體中訊息轉換成位元組資料流或位元組緩衝區可透過網路傳送。 在接收者端，編碼器會將位元組序列變成記憶體中的訊息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三種編碼器，並允許您撰寫及插入您自己的編碼器 (如有需要)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含三種編碼器，並可讓您撰寫及插入您自己的編碼器，如有必要。  
   
  根據預設，每個標準繫結都包括預先設定的編碼器，讓前置詞為 Net* 的繫結使用二進位編碼器 (藉由包含 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 類別)，而 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WSHttpBinding> 類別則使用文字訊息編碼器 (藉由 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 類別)。  
   

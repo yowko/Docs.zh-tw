@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>程式碼存取安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 現今高度連接的電腦系統，經常會暴露於源自各種可能未知來源的程式碼。 程式碼可以附加到電子郵件、包含在文件中，或透過網際網路下載。 不幸的是，許多電腦使用者都直接經歷過惡意行動程式碼的效應，包括病毒和蠕蟲，它們可能會損壞或摧毀資料，並造成時間和金錢上的損失。  
+ 現今高度連接的電腦系統，經常會暴露於源自各種可能未知來源的程式碼。 程式碼可以附加至電子郵件、 包含在文件，或透過網際網路下載。 不幸的是，許多電腦使用者都直接經歷過惡意行動程式碼的效應，包括病毒和蠕蟲，它們可能會損壞或摧毀資料，並造成時間和金錢上的損失。  
   
  最常見的安全性機制是根據使用者的登入認證 (通常是密碼) 來提供權限給使用者，並限制使用者可以存取的資源 (通常是目錄和檔案)。 不過，這個方法無法解決幾個問題：使用者從許多來源取得程式碼，其中有些可能不可靠；程式碼可能包含 Bug 或安全性弱點，而被惡意程式碼利用；而程式碼有時會做使用者不知道它會做的事情。 如此一來，當謹慎且值得信賴的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。 大部分作業系統安全性機制都會要求每個程式碼片段必須受到完全信任才能執行，但是網頁上的指令碼可能除外。 因此，還是需要可廣泛套用的安全性機制，讓源自於一部電腦系統的程式碼，在另一個系統上執行時可以受到保護，即使系統之間沒有信任關係也一樣。  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |-----------|-----------------|  
 |[程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)|說明程式碼存取安全性及其最常見的用法。|  
 |[安全性透明的程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|說明 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的安全性透明度模型。|  
-|[從部分信任程式碼使用程式庫](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|說明如何讓程式庫能夠與 Unmanaged 程式碼搭配使用，以及如何使用來自 Unmanaged 程式碼的程式庫。|  
+|[從部分受信任程式碼使用程式庫](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|說明如何讓程式庫能夠與 Unmanaged 程式碼搭配使用，以及如何使用來自 Unmanaged 程式碼的程式庫。|  
 |[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)|提供 .NET Framework 安全性系統中所使用之許多主要詞彙和概念的概觀。|  
 |[以角色為基礎的安全性](../../../docs/standard/security/role-based-security.md)|說明如何依據角色來納入安全性。|  
 |[The signature is valid](../../../docs/standard/security/cryptographic-services.md)|說明如何將密碼編譯納入您的應用程式中。|

@@ -1,11 +1,13 @@
 ---
 title: "Long 資料類型 (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Long
+f1_keywords:
+- vb.Long
 helpviewer_keywords:
 - identifier type characters [Visual Basic], &
 - numbers [Visual Basic], whole
@@ -25,11 +27,11 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 51cf03afc6b2e77ccca74fc26365fc50110e1f71
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="long-data-type-visual-basic"></a>Long 資料類型 (Visual Basic)
 
@@ -56,10 +58,18 @@ ms.lasthandoff: 10/22/2017
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 做為前置詞和十六進位、 二進位或八進位的數字之間的前置分隔符號。 例如: 
+
+```vb
+Dim number As Long = &H_0FAC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 數值常值也可以包含`L`[類型字元](../../programming-guide\language-features\data-types/type-characters.md)代表`Long`資料類型，如下列範例所示。
 
 ```vb
-Dim number = &H0FAC0326L
+Dim number = &H_0FAC_0326_1489_D68CL
 ```
 
 ## <a name="programming-tips"></a>程式設計提示
@@ -72,7 +82,7 @@ Dim number = &H0FAC0326L
   
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Int64?displayProperty=nameWithType> 結構。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <xref:System.Int64>[資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
 [整數資料類型](../../../visual-basic/language-reference/data-types/integer-data-type.md)   

@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>絕對延遲
 這個範例的主要案例是在工作流程應用程式中使用永久性計時器，以便延遲到指定的 <xref:System.DateTime> 為止。 這項作業與使用內建的 <xref:System.Activities.Statements.Delay> 活動不同，因為這樣做只會允許您延遲給定的 <xref:System.TimeSpan> (或分鐘/秒數)。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  這個範例也會示範如何開啟 <xref:System.Activities.WorkflowApplication> 的持續性。 在此特定範例中，我們將使用永久性計時器，以便在等候計時器過期的閒置時間內，將工作流程資料卸載至持續性資料庫中。 這項實作也可用於其他持續性動作。 此範例會示範如何使用 SQL Server 來設定持續性連接字串，以及如何建立執行個體存放區，以便保存工作流程執行個體的資料。 所提供的邏輯是有關如何在引發事件之後繼續工作流程，讓工作流程執行個體可執行。  
   
- 當您逐步執行這個範例時，您會看到內建延遲開始和完成的時間，接著導致系統傳送電子郵件訊息。 之後，AbsoluteDelay 活動將中止直到指定的 <xref:System.DateTime> (或 0 秒，如果 <xref:System.DateTime> 已過期的話) 為止，接著便在過期時送出電子郵件。 這將顯示內建 <xref:System.Activities.Statements.Delay> 功能與使用 AbsoluteDelay 活動的兩種不同使用案例。  
+ 當您逐步執行此範例中，您會看到的時間內建延遲開始和完成時，這又會導致傳送電子郵件訊息。 之後，AbsoluteDelay 活動將中止直到指定的 <xref:System.DateTime> (或 0 秒，如果 <xref:System.DateTime> 已過期的話) 為止，接著便在過期時送出電子郵件。 這將顯示內建 <xref:System.Activities.Statements.Delay> 功能與使用 AbsoluteDelay 活動的兩種不同使用案例。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

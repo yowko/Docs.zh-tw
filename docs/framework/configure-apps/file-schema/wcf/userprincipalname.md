@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34bfaeb563bd4979bf29a5e45a60730eb38700b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 指定要由用戶端驗證之服務的使用者主要名稱 (UPN)。  
   
  如需設定 UPN 的詳細資訊，請參閱[服務識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-\<身分識別 >  
-\<userPrincipalName >  
+\<identity>  
+\<userPrincipalName>  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
   
 ## <a name="remarks"></a>備註  
  使用這個身分識別連接至端點的安全 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 用戶端會在對端點進行 SSPI 驗證時使用 UPN。  
@@ -70,4 +72,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.UpnEndpointIdentity>  
  [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

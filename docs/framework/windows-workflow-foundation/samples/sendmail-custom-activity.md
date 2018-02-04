@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自訂活動
-此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 此自訂活動會使用 <xref:System.Net.Mail.SmtpClient> 的功能，以非同步方式傳送電子郵件及傳送具有驗證的郵件。 也會提供一些使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  
+此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 自訂活動會使用功能<xref:System.Net.Mail.SmtpClient>以非同步方式傳送電子郵件及傳送郵件的驗證。 也會提供一些終端使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  
   
  下表詳細說明 `SendMail` 活動的引數。  
   
@@ -31,17 +32,17 @@ ms.lasthandoff: 12/22/2017
 |EnableSsl|bool|指定 <xref:System.Net.Mail.SmtpClient> 是否使用 Secure Sockets Layer (SSL) 加密連接。|  
 |UserName|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的使用者名稱。|  
 |密碼|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的密碼。|  
-|主旨|<xref:System.Activities.InArgument%601>\<字串 >|訊息的主旨。|  
-|本文|<xref:System.Activities.InArgument%601>\<字串 >|訊息的本文。|  
-|附件|<xref:System.Activities.InArgument%601>\<字串 >|用於儲存附加到這個電子郵件訊息之資料的附件集合。|  
-|從|<xref:System.Net.Mail.MailAddress>|此電子郵件訊息的寄件者地址。|  
-|以|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息之收件者的地址集合。|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息之副本 (CC) 收件者的地址集合。|  
+|主旨|<xref:System.Activities.InArgument%601>\<string>|訊息的主旨。|  
+|本文|<xref:System.Activities.InArgument%601>\<string>|訊息的本文。|  
+|附件|<xref:System.Activities.InArgument%601>\<string>|用來儲存資料附加到這個電子郵件訊息的附件集合。|  
+|從|<xref:System.Net.Mail.MailAddress>|從這個電子郵件訊息的位址。|  
+|以|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息的收件者的地址集合。|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|位址集合，其中包含此電子郵件訊息副本 (CC) 收件者。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息之密件副本 (BCC) 收件者的地址集合。|  
 |語彙基元|<xref:System.Activities.InArgument%601>< IDictionary\<字串、 字串 >>|本文內所要取代的語彙基元。 此功能可讓使用者在本文中指定某些值，而之後可由使用這個屬性所提供的語彙基元所取代。|  
 |BodyTemplateFilePath|String|本文的範本路徑。 `SendMail` 活動會將這個檔案的內容複製到它的本文屬性。<br /><br /> 此範本包含的語彙基元可由語彙基元屬性的內容所取代。|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|當設定這個屬性時，所有電子郵件都會傳送給其中所指定的地址。<br /><br /> 當測試工作流程時，並不適合使用這個屬性。 例如，當您想要確定所有電子郵件都已傳送，而不想要傳送郵件給實際的收件者時。|  
-|TestDropPath|String|當設定這個屬性時，所有電子郵件也會儲存在指定的檔案中。<br /><br /> 當您正在測試或偵錯工作流程，以確定傳出的電子郵件格式與內容確實適合時，便可以使用這個屬性。|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|當設定這個屬性時，所有電子郵件會傳送至指定的地址。<br /><br /> 當測試工作流程時，並不適合使用這個屬性。 例如，當您想要確定所有電子郵件傳送而不將它們傳送到實際的收件者。|  
+|TestDropPath|String|當設定這個屬性時，所有電子郵件也會儲存在指定的檔案。<br /><br /> 這個屬性被要在測試或偵錯工作流程，以確定的格式和外寄電子郵件的內容是適當時使用。|  
   
 ## <a name="solution-contents"></a>方案內容  
  此方案包含兩個專案。  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>設定指示  
  這個範例需要 SMTP 伺服器的存取權。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定 SMTP 伺服器，請參閱下列連結。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 設定 SMTP 伺服器，請參閱下列連結。  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -133,9 +134,9 @@ new SendMail
   
 2.  確定您可以存取有效的 SMTP 伺服器。 請參閱設定指示。  
   
-3.  使用您的伺服器位址以及寄件者和收件者電子郵件地址來設定程式。  
+3.  將程式設定與您的伺服器位址，以及從名稱和電子郵件地址。  
   
-     若要正確執行這個範例，您可能需要在 Program.cs 和 Sequence.xaml 中設定寄件者和收件者電子郵件地址的值及 SMTP 伺服器的位址。 您需要在這兩個位置中變更地址，因為此程式會以兩個不同的方式傳送郵件。  
+     若要正確執行此範例中，您可能需要在 Program.cs 和 Sequence.xaml 中設定的值，從以及電子郵件地址和 SMTP 伺服器的位址。 您需要在這兩個位置中變更地址，因為此程式會以兩個不同的方式傳送郵件。  
   
 4.  若要建置此方案，請按 CTRL+SHIFT+B。  
   

@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
-當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者名稱，而另一個則可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
+當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者的名稱，另一個可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
   
  單一登入在這個模型中可以更輕鬆達成，而且應用程式也不必再對下列項目負責：  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  為了描述 Windows Identity Foundation (WIF) 中的程式設計模型，我們將使用「身分識別」一詞來表示一組屬性，這組屬性可用來描述要在系統中保護其安全性的使用者或其他某些實體。  
   
 ### <a name="claim"></a>宣告  
- 請想像將一個宣告當做一小段識別資訊 (例如姓名、電子郵件地址、年齡以及屬於業務角色) 的情況。 應用程式接收的宣告愈多，也能讓您愈了解使用者。 您可能會好奇為什麼要使用「宣告」一詞，而不是像通常用於描述企業目錄的「屬性」一詞。 其中原因和傳遞方法有關。 在這個模型中，應用程式不會在目錄中查詢使用者屬性， 而是使用者提供宣告給應用程式，然後應用程式再檢查這些宣告。 每個宣告都是由簽發者發出呈現，而且您信任宣告的程度就如同信任簽發者一樣。 例如，與使用者本身發出的宣告相比，您更信任公司的網域控制站發出的宣告。 WIF 表示的宣告都包含 <xref:System.Security.Claims.Claim> 類型，這個類型的 <xref:System.Security.Claims.Claim.Issuer%2A> 屬性可讓您了解宣告的簽發者是誰。  
+ 將宣告當做一小段識別資訊，例如名稱、 電子郵件地址、 年齡、 「 銷售 」 角色的成員資格。 應用程式接收的宣告愈多，也能讓您愈了解使用者。 您可能會好奇為什麼要使用「宣告」一詞，而不是像通常用於描述企業目錄的「屬性」一詞。 其中原因和傳遞方法有關。 在這個模型中，應用程式不會在目錄中查詢使用者屬性， 而是使用者提供宣告給應用程式，然後應用程式再檢查這些宣告。 每個宣告都是由簽發者發出呈現，而且您信任宣告的程度就如同信任簽發者一樣。 例如，與使用者本身發出的宣告相比，您更信任公司的網域控制站發出的宣告。 WIF 表示的宣告都包含 <xref:System.Security.Claims.Claim> 類型，這個類型的 <xref:System.Security.Claims.Claim.Issuer%2A> 屬性可讓您了解宣告的簽發者是誰。  
   
 ### <a name="security-token"></a>安全性權杖  
  使用者隨著要求提供一組宣告給應用程式。 在 Web 服務中，這些宣告是位於 SOAP 封套的安全性標頭內進行傳送。 在瀏覽器架構 Web 應用程式中，這些宣告則會從使用者的瀏覽器透過 HTTP POST 送出，而且如果工作階段有需要，之後就會被快取在 Cookie 中。 無論這些宣告如何抵達，都必須將它們序列化，這也是需要安全性權杖的地方。 安全性權杖是發行單位以數位方式簽署且經過序列化的宣告集合。 簽章重要之處在於，它可以確保使用者不是僅建立一大堆宣告然後就傳送給您。 雖然在不需要加密的低安全性情況下，您可以使用未簽署的權杖，但是這種情況不屬於本主題的說明範圍。  

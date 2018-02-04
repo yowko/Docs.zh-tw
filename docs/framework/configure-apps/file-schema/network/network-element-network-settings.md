@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,25 +16,26 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d3e99a10403a735383ee5e1a78c1f85ac7fd8281
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 913765a4d8ac12d25dff446439f6a7510e6067ae
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;網路&gt;項目 （網路設定）
 設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。  
   
  \<configuration>  
-\<system.net >  
-\<mailSettings >  
-\<smtp >  
-\<網路 >  
+\<system.net>  
+\<mailSettings>  
+\<smtp>  
+\<network>  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType>屬性可以用來取得目前的值`enableSsl`適用的組態檔中的屬性。  
   
 ## <a name="example"></a>範例  
- 下列範例會指定適當的 SMTP 參數使用預設網路認證傳送電子郵件。  
+ 下列範例會指定適當 SMTP 參數來傳送電子郵件使用預設網路認證。  
   
 ```xml  
 <configuration>  

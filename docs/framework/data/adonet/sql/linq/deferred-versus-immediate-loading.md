@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>延後和立即載入的比較
 當您查詢物件時，實際上只擷取了所要求的物件。 *相關*物件無法自動擷取一次。 (如需詳細資訊，請參閱[跨關聯性查詢](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)因為嘗試存取相關物件會產生對相關物件進行擷取的要求，所以您看不到相關物件尚未載入的事實。  
   
- 例如，您可能會想要查詢一組特定訂單，然後只偶爾將電子郵件告知傳送給特定客戶。 因此並不需要一開始就擷取每筆訂單的所有客戶資料。 您可以使用延後載入，將確切資訊的擷取延後至絕對需要的時候才進行擷取。 參考下列範例：  
+ 比方說，您可能想要查詢一組特定的訂單，以及偶爾才會將電子郵件通知傳送給特定的客戶。 因此並不需要一開始就擷取每筆訂單的所有客戶資料。 您可以使用延後載入，將確切資訊的擷取延後至絕對需要的時候才進行擷取。 參考下列範例：  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  

@@ -5,15 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.date: 11/06/2017
-ms.topic: article-type-from-white-list
+ms.topic: reference
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.workload: dotnet
-ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和效能計數器 （Unmanaged API 參考）
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 | [ExecQueryWmi 函式](execquerywmi.md) | 執行查詢以擷取物件。 |
 | [FormatFromRawValue 函式](formatfromrawvalue.md) | 將指定的格式，一個的未經處理的效能資料值或兩個原始效能資料值的轉換，如果格式轉換是以時間為基礎。 | 
 | [Get 函式](get.md) | 如果存在的話，擷取指定的屬性值。 |
-| [GetCurrentApartmentType 函式](getcurrentapartmenttype.md) | 擷取的 apartment 呼叫者正在執行的所在的型別。 |
+| [GetCurrentApartmentType function](getcurrentapartmenttype.md) | 擷取的 apartment 呼叫者正在執行的所在的型別。 |
 | [GetDemultiplexedStub 函式](getdemultiplexedstub.md) | 建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。 |
 | [GetErrorInfo 函式](geterrorinfo.md) | 從先前的函式呼叫中擷取資訊時發生錯誤。 | 
 | [GetMethod 函式](getmethod.md) | 擷取指定之方法的相關資訊。 | 
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 | [GetObjectText 函式](getobjecttext.md) | 傳回物件的文字呈現以 MOF 語法。 | 
 | [GetPropertyHandle 函式](getpropertyhandle.md) | 傳回唯一的控制代碼識別屬性。 |
 | [GetPropertyOrigin 函式](getpropertyorigin.md) | 決定在宣告屬性的類別。 |
-| [GetPropertyQualifierSet 函式](getpropertyqualifierset.md) | 擷取特定的屬性設定的限定詞。  |
+| [GetPropertyQualifierSet function](getpropertyqualifierset.md) | 擷取特定的屬性設定的限定詞。  |
 | [GetQualifierSet 函式](getqualifierset.md) | 擷取設定的類別執行個體或類別定義的限定詞。 |
 | [[Inheritsfrom] 函式](inheritsfrom.md) | 判斷目前的類別或執行個體是否衍生自指定的父類別。 |
 | [Initialize 函式](initialize.md) | 執行 WMI 初始化。 |
@@ -63,13 +64,13 @@ ms.lasthandoff: 12/22/2017
 | [PutClassWmi 函式](putclasswmi.md) | 建立新的類別或更新現有。 |
 | [PutInstanceWmi 函式](putinstancewmi.md) | 建立或更新現有類別的執行個體。 WMI 存放庫會寫入執行個體。 |
 | [PutMethod 函式](putmethod.md) | 建立方法。 |
-| [QualifierSet_BeginEnumeration 函式](qualifierset-beginenumeration.md) | 將物件的辨識符號的列舉值重設列舉的開頭。 |
+| [QualifierSet_BeginEnumeration function](qualifierset-beginenumeration.md) | 將物件的辨識符號的列舉值重設列舉的開頭。 |
 | [QualifierSet_Delete 函式](qualifierset-delete.md) | 依名稱刪除指定的限定詞。  |
-| [QualifierSet_EndEnumeration 函式](qualifierset-endenumeration.md) | 結束呼叫開始列舉`QualifierSet_BeginEnumeration`函式。 |
+| [QualifierSet_EndEnumeration function](qualifierset-endenumeration.md) | 結束呼叫開始列舉`QualifierSet_BeginEnumeration`函式。 |
 | [QualifierSet_Get 函式](qualifierset-get.md) | 取得指定的具名的限定詞。  |
-| [QualifierSet_GetNames 函式](qualifierset-getnames.md) | 擷取所有限定詞或都是從目前的物件或屬性的指定限定詞的名稱。 |
-| [QualifierSet_Next 函式](qualifierset-next.md) | 擷取列舉型別呼叫啟動下一步的限定詞[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。 |
-| [QualifierSet_Put 函式](qualifierset-put.md) | 寫入具名的辨識符號和值。 |
+| [QualifierSet_GetNames function](qualifierset-getnames.md) | 擷取所有限定詞或都是從目前的物件或屬性的指定限定詞的名稱。 |
+| [QualifierSet_Next function](qualifierset-next.md) | 擷取列舉型別呼叫啟動下一步的限定詞[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。 |
+| [QualifierSet_Put function](qualifierset-put.md) | 寫入具名的辨識符號和值。 |
 | [ResetSecurity 函式](resetsecurity.md) | 將提供的模擬語彙基元指派給目前的執行緒。 |
 | [SetSecurity 函式](setsecurity.md) | 擷取與目前執行緒相關聯的模擬權杖。 |
 | [SpawnDerivedClass 函式](spawnderivedclass.md) | 從指定的物件建立新的衍生類別物件。 | 

@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是指資料[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用以建立宣告的身分識別或功能。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題將說明認證、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用，以及如何為應用程式選擇正確的認證。  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >  SSL 安全性與 .NET Framework 3.5 (含) 以後版本搭配使用時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端會使用其憑證存放區中的中繼憑證以及在 SSL 交涉期間收到的中繼憑證，在服務的憑證上執行憑證鏈結驗證。 .NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。  
   
 #### <a name="out-of-band-negotiation"></a>超出範圍交涉  
- 如果停用自動交涉，在傳送任何訊息給服務之前，必須在用戶端提供服務認證。 這就是所謂*的頻外*佈建。 例如，如果指定的認證類型是憑證，且停用自動交涉，用戶端就必須連絡服務擁有者，以在執行用戶端應用程式的電腦上接收並安裝憑證。 例如，在商業案例中，當您希望嚴格控制哪些用戶端可以存取服務時，可能會完成這項操作。 這個超出範圍交涉可能會以電子郵件進行，且 X.509 憑證會透過如 Microsoft Management Console (MMC) 憑證嵌入式管理單元的工具儲存在 Windows 憑證存放區中。  
+ 如果停用自動交涉，在傳送任何訊息給服務之前，必須在用戶端提供服務認證。 這就是所謂*的頻外*佈建。 例如，如果指定的認證類型是憑證，且停用自動交涉，用戶端就必須連絡服務擁有者，以在執行用戶端應用程式的電腦上接收並安裝憑證。 例如，在商業案例中，當您希望嚴格控制哪些用戶端可以存取服務時，可能會完成這項操作。 電子郵件，可以透過此 out-的-超出範圍交涉和 X.509 憑證會儲存在 Windows 憑證存放區中，使用 Microsoft Management Console (MMC) 憑證嵌入式管理單元 」 之類的工具。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 屬性是用於為服務提供透過超出範圍交涉所取得的憑證。 這在使用 <xref:System.ServiceModel.BasicHttpBinding> 類別時是必要的，因為繫結不允許自動化交涉。 此屬性也用於沒有關聯的雙工案例中。 在這個案例中，用戶端不需要先將要求傳送至伺服器，伺服器就可以將訊息傳送到用戶端。 由於伺服器沒有來自用戶端的要求，因此必須使用用戶端的憑證來對用戶端加密訊息。  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  當無法切換身分識別時 (也就是，當開啟已建立之安全性內容時的預設行為)，有一種情況要注意。 如果您建立與第二個服務通訊的服務，就無法變更用於對第二個服務開啟 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的身分識別。 如果允許多個用戶端使用第一個服務，且該服務在存取第二個服務時模擬用戶端，這就會變成問題。 如果服務對所有的呼叫者重複使用相同的用戶端，第二個服務的所有呼叫都會在用於對第二個服務開啟用戶端之第一個呼叫者的身分識別下完成。 換言之，服務會對所有用戶端使用第一個用戶端的身分識別來與第二個服務通訊。 這會造成權限的升級。 如果這不是您的服務所需要的行為，您必須追蹤每個呼叫者，並為每個不同的呼叫者建立第二個服務的新用戶端，然後確保服務只對正確的呼叫者使用正確的用戶端，以與第二個服務通訊。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證以及安全工作階段，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 認證以及安全工作階段，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

@@ -1,22 +1,24 @@
 ---
 title: "Byte 資料類型 (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Byte
+f1_keywords:
+- vb.Byte
 helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 資料類型 (Visual Basic)
 保留範圍從 0 到 255 的不帶正負號的 8 位元 （1 個位元組） 整數。
@@ -42,6 +44,14 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 做為前置詞和十六進位、 二進位或八進位的數字之間的前置分隔符號。 例如: 
+
+```vb
+Dim number As Byte = &H_6A
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 ## <a name="programming-tips"></a>程式設計提示
 
 -   **負的數字。** 因為`Byte`是不帶正負號的類型，它無法表示為負數。 如果您使用一元減號 (`-`) 運算子的運算式評估為輸入`Byte`，Visual Basic 會將轉換的運算式`Short`第一次。
@@ -60,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
  <xref:System.Byte?displayProperty=nameWithType>  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
