@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
 
@@ -123,7 +124,7 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 
 下一個步驟是執行 API 可攜性分析器 (ApiPort)，以產生可用於分析的可攜性報告。
 
-請確定您了解 [API 可攜性分析器 (ApiPort)](~/docs/standard/portability-analyzer.md)，以及產生目標 .NET Core 之可攜性報告的方式。 作法因個人需求及品味而異。 以下是幾種不同的方法。 根據您的程式碼架構，可以混合使用這些方法的步驟。
+請確定您了解 [API 可攜性分析器 (ApiPort)](../../standard/analyzers/portability-analyzer.md)，以及產生目標 .NET Core 之可攜性報告的方式。 作法因個人需求及品味而異。 以下是幾種不同的方法。 根據您的程式碼架構，可以混合使用這些方法的步驟。
 
 ### <a name="dealing-primarily-with-the-compiler"></a>主要以編譯器處理
 
