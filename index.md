@@ -1,13 +1,13 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: ".NET 文件"
 description: "了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。"
-ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 02/01/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -538,7 +538,7 @@ ms.lasthandoff: 12/02/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
-                                                    <h3>Windows Form</h3>
+                                                    <h3>Windows Forms</h3>
                                                     <p>快速針對 Windows 桌面開發企業營運應用程式。</p>
                                                 </a>
                                             </div>
