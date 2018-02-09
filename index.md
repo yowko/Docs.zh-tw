@@ -3,11 +3,12 @@ layout: HubPage
 hide_bc: 
 title: ".NET 文件"
 description: "了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。"
-ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.custom: updateeachrelease
+ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/01/2018
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7">
+                <a href="/dotnet/api/?view=netframework-4.7.1">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
