@@ -14,25 +14,25 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76584e0d22b6e651dfd851675a72d1f0cb70feb1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f74c37821d730ec8dcaa74763967c662bafd6699
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="names-of-assemblies-and-dlls"></a>組件和 DLL 的名稱
 組件是部署和 managed 程式碼程式的身分識別的單位。 雖然組件可以跨一個或多個檔案，通常是組件以一對一對應的 DLL。 因此，本節會說明只 DLL 命名慣例，然後可以對應至組件命名慣例。  
   
  **✓ 不要**選擇的組件提供建議的功能，例如 System.Data 大型區塊的 Dll 名稱。  
   
- 組件和 DLL 名稱沒有對應至命名空間名稱，但是很合理命名組件時所應遵循的命名空間名稱。 最佳經驗法則是名稱的組件中所包含的組件的一般前置詞為基礎的 DLL。 例如，兩個命名空間，與組件`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，無法呼叫`MyCompany.MyTechnology.dll`。  
+ 組件和 DLL 名稱沒有對應至命名空間名稱，但是很合理命名組件時所應遵循的命名空間名稱。 最佳經驗法則是名稱的組件中包含的命名空間的一般前置詞為基礎的 DLL。 例如，兩個命名空間，與組件`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，無法呼叫`MyCompany.MyTechnology.dll`。  
   
  **✓ 考慮**命名 Dll 根據下列模式：  
   

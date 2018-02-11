@@ -5,17 +5,19 @@ ms.date: 04/23/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: tuples [Visual Basic]
+helpviewer_keywords:
+- tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be50b22e9acca9ff8cfbde798d78869ee1c72634
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuple (Visual Basic)
 
@@ -44,58 +46,87 @@ Visual Basic tuple 的欄位會讀取寫入;tuple 已具現化之後，您可以
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
-## <a name="tuples-versus-structures"></a>Tuple 與結構
+## <a name="inferred-tuple-element-names"></a>推斷的 tuple 項目名稱
 
-Visual Basic tuple 都是實值類型的其中一個執行個體**System.ValueTuple**泛型型別。 例如，`holiday`前一個範例中所定義的 tuple 都是執行個體<xref:System.ValueTuple%603>結構。 它被設計為資料的輕量型容器。 Tuple 旨在讓您輕鬆建立具有多個資料項目的物件，因為其欠缺的一些功能可能會有自訂的結構。 這些活動包括：
+從 Visual Basic 15.3 開始，Visual Basic 可推斷 tuple 項目; 的名稱您沒有明確指派給它們。 初始化變數，一組 tuple，而且您想要做為變數的名稱相同的 tuple 項目名稱時，推斷的 tuple 名稱很有用。 
 
-- 客戶成員。 您無法定義自己的屬性、 方法或事件的 tuple。
+下列範例會建立`stateInfo`tuple，其中包含三個明確的具名項目， `state`， `stateName`，和`capital`。 請注意，在中命名項目，tuple 的初始化陳述式只會指派具名項目同名的變數的值。
 
-- 驗證。 您無法驗證指派給欄位的資料。
+[!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
+ 
+項目和變數具有相同的名稱，因為 Visual Basic 編譯器可以推斷出欄位的名稱，如下列範例所示。
 
-- 不變性。 Visual Basic tuple 是可變動的。 相反地，自訂結構可讓您控制執行個體是否處於可變動或不變。
+[!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-自訂成員、 屬性和欄位驗證或不變性來說很重要，您應該使用 Visual Basic[結構](../../../language-reference/statements/structure-statement.md)陳述式來定義自訂值型別。
+若要啟用 interred 的 tuple 項目名稱，您必須定義要在 Visual Basic 專案中使用 Visual Basic 編譯器的版本 (\*.vbproj) 檔案： 
 
-Visual Basic tuple 沒有繼承的成員及其**ValueTuple**型別。 除了其欄位，這些需求包括下列方法：
+```xml 
+<PropertyGroup> 
+  <LangVersion>15.3</LangVersion> 
+</PropertyGroup> 
 
-| 成員 | 說明 |
+The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+
+In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+
+- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+
+- The candidate name is duplicated in the tuple.
+ 
+When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+  
+## Tuples versus structures
+
+A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+
+- Customer members. You cannot define your own properties, methods, or events for a tuple.
+
+- Validation. You cannot validate the data assigned to fields.
+
+- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+
+If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+
+A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+
+| Member | Description |
 | ---|---|
-| CompareTo | 比較目前的 tuple，至另一個 tuple 有相同數目的項目。 |
-| 等於 | 判斷目前的 tuple 是否等於另一個 tuple 或物件。 |
-| GetHashCode | 計算目前的執行個體的雜湊碼。 |
-| ToString | 傳回 tuple，其格式的字串表示`(Item1, Item2...)`，其中`Item1`和`Item2`代表 tuple 的欄位的值。 |
+| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
+| Equals | Determines whether the current tuple is equal to another tuple or object. |
+| GetHashCode | Calculates the hash code for the current instance. |
+| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
 
-此外， **ValueTuple**型別會實作<xref:System.Collections.IStructuralComparable>和<xref:System.Collections.IStructuralEquatable>介面，讓您定義客戶比較子。
+In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
 
-## <a name="assignment-and-tuples"></a>指派和 Tuple
+## Assignment and tuples
 
-Visual Basic 支援 tuple 類型有相同數目的欄位之間的指派。 如果下列其中一項為 true，則可以轉換的欄位型別：
+Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
 
-- 來源和目標欄位屬於相同類型。
+- The source and target field are of the same type.
 
-- 擴展 （或隱含） 的來源類型轉換成目標類型被定義。 
+- A widening (or implicit) conversion of the source type to the target type is defined. 
 
-- `Option Strict`是`On`，和縮小 （或明確） 的來源類型轉換成目標類型定義。 如果來源值是目標類型的範圍之外，這項轉換可以擲回例外狀況。
+- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
 
-不會考慮對指派進行其他轉換。 讓我們看看 Tuple 類型之間允許的指派類型。
+Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
 
-請考慮在下列範例中使用的這些參數：
+Consider these variables used in the following examples:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-前兩個變數，`unnamed`和`anonymous`，不會有語意提供欄位的名稱。 欄位名稱都是預設值`Item1`和`Item2`。 最後兩個變數，`named`和`differentName`語意的欄位名稱。 請注意，這兩個 Tuple 有不同的欄位名稱。
+The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
 
-所有的這些 tuple 的四個有相同數目的欄位 （稱為 'arity'），與這些欄位類型完全相同。 因此，所有這些指派都會運作︰
+All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-請注意，不會指派 Tuple 的名稱。 依欄位在 Tuple 中的順序，指派欄位的值。
+Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
 
-最後，請注意，我們可以將指派`named`tuple `conversion` tuple，即使的第一個欄位`named`是`Integer`，並將第一個欄位的`conversion`是`Long`。 此指派會成功，因為轉換`Integer`至`Long`擴展轉換。
+Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuple 不同數目的欄位不可以指派：
+Tuples with different numbers of fields are not assignable:
 
 ```vb
 ' Does not compile.
@@ -145,6 +176,6 @@ Visual Basic tuple 是其中一個的執行個體**System.ValueTuple** .NET Fram
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Basic 語言參考](index.md)  
