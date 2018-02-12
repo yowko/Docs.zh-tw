@@ -235,7 +235,7 @@
 #### [Lambda 運算式](csharp/lambda-expressions.md)
 ### [屬性](csharp/properties.md)
 ### [索引子](csharp/indexers.md)
-### [Discard - C# 指南](csharp/discards.md)
+### [捨棄](csharp/discards.md)
 ### [泛型](csharp/programming-guide/generics/index.md)
 ### [迭代器](csharp/iterators.md)
 ### [委派和事件](csharp/delegates-events.md)
