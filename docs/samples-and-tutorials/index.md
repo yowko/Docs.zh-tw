@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="samples-and-tutorials"></a>範例和教學課程
 
-.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您對使用線上程式碼編輯器探索 C# 有興趣，請嘗試這些[互動式教學課程 (英文)](http://go.microsoft.com/fwlink/p/?LinkId=817234)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
+.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您想要使用線上程式碼編輯器來探索 C#，可先從[這個互動式教學課程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)開始，再繼續進行 [C# 互動式快速入門](../csharp/quick-starts/index.md)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
 
-## <a name="net-core"></a>.NET Core
+## <a name="net-core"></a>.NET 核心
 
 ### <a name="samples"></a>範例
 
