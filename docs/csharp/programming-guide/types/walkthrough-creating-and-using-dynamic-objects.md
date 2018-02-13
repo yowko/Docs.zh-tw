@@ -2,7 +2,8 @@
 title: "逐步解說：建立和使用動態物件 (C# 和 Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 -   建立專案，以使用 `IronPython` 程式庫。  
   
 ## <a name="prerequisites"></a>必要條件  
-您需要[IronPython](http://ironpython.net/) for.NET，才能完成此逐步解說。 移至其[下載頁面](http://ironpython.net/download/)若要取得最新版本。
+您需具備適用於 .NET 的 [IronPython](http://ironpython.net/) 才能完成此逐步解說。 請移至[下載頁面](http://ironpython.net/download/)以取得最新版本。
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -172,10 +173,10 @@ ms.lasthandoff: 11/21/2017
   
 9. 儲存檔案，並按 CTRL+F5 建置及執行應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Dynamic?displayProperty=nameWithType>  
  <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
  [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [實作動態介面 (外部部落格)](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [實作動態介面 (Microsoft TechNet 的可下載 PDF)](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
