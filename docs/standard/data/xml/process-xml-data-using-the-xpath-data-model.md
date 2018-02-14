@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3d2c8db03d494be13a93df06a359e4e4294c22a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9992efa209773a6e9f74050183260346f7f1f0ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>使用 XPath 資料模型處理 XML 資料
 <xref:System.Xml?displayProperty=nameWithType> 命名空間會使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別，以程式設計方式來表示 XML 文件、片段、節點或記憶體中的節點集。  
@@ -26,11 +29,11 @@ ms.lasthandoff: 11/21/2017
   
  下列各節將根據會傳回 <xref:System.Xml.XPath.XPathNavigator> 類別的類別來說明此類別的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 XPathDocument 及 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  說明如何建立唯讀 <xref:System.Xml.XPath.XPathDocument> 類別物件以讀取 XML 文件，以及如何建立可編輯的 <xref:System.Xml.XmlDocument> 類別物件以讀取及編輯 XML 文件。 本主題還說明如何從每個類別傳回 <xref:System.Xml.XPath.XPathNavigator> 物件，以巡覽及編輯 XML 文件。  
   
- [選取、 評估及使用 XPathNavigator 比對 XML 資料](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ [使用 XPathNavigator 選取、評估及比對 XML 資料](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
  說明 <xref:System.Xml.XPath.XPathNavigator> 類別的方法，其用於使用 XPath 查詢來選取 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的節點、評估及檢查 XPath 運算式的結果，以及決定 XML 文件中的節點是否符合指定的 XPath 運算式。  
   
  [使用 XPathNavigator 存取 XML 資料](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
@@ -39,10 +42,10 @@ ms.lasthandoff: 11/21/2017
  [使用 XPathNavigator 編輯 XML 資料](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
  說明 <xref:System.Xml.XPath.XPathNavigator> 類別的方法，其用於插入、修改及移除 <xref:System.Xml.XmlDocument> 物件中包含之 XML 文件中的節點與值。  
   
- [使用 xpathnavigator 進行結構描述驗證](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
+ [使用 XPathNavigator 進行結構描述驗證](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  說明驗證 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中包含之 XML 內容的方式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  

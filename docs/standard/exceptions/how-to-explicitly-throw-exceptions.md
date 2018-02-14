@@ -18,15 +18,18 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c3fce332263dac3f9906d33fe3bd2590050b86f8
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02576db4b9920a367ac3111f2c2c49989ea45149
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>如何明確擲回例外狀況
 
@@ -37,5 +40,5 @@ ms.lasthandoff: 10/21/2017
 [!code-csharp[Exception.Throwing#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [例外狀況](index.md)

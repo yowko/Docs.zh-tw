@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: parallel programming, debugging and profiling tools
+helpviewer_keywords:
+- parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ad6875d4937ab0ee68dcb9c6d6f51d079851cdc5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-diagnostic-tools"></a>平行診斷工具
 [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] 可廣泛支援多執行緒應用程式的偵錯和分析。  
@@ -35,5 +39,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="profiling"></a>程式碼剖析  
  「並行視覺化檢視」報告檢視可讓您以視覺化方式呈現平行計劃中的執行緒如何彼此互動，以及如何與系統上其他處理序的執行緒互動。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [平行程式設計](../../../docs/standard/parallel-programming/index.md)

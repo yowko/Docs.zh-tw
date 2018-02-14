@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9dca33f01c119c185717efa0666146191503f577
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -124,7 +127,7 @@ LINQ 是一組強大的 C# 和 VB 功能，可讓您撰寫簡單的宣告式程�
 
 每個作業系統都包含提供系統服務的應用程式開發介面 (API)。 .NET 提供幾種方式來呼叫這些 API。
 
-執行原生互通性的主要方式是透過「平台叫用」(簡稱 P/Invoke)，這在 Linux 和 Windows 平台之間都受到支援。 另一項僅適用於 Windows 的原生互通性做法稱為 "COM Interop"，可用來處理 Managed 程式碼中的 [COM 元件](https://msdn.microsoft.com/library/bwa2bx93.aspx)。 它是以 P/Invoke 基礎結構為建置基礎，但運作方式稍有不同。
+執行原生互通性的主要方式是透過「平台叫用」(簡稱 P/Invoke)，這在 Linux 和 Windows 平台之間都受到支援。 另一項僅適用於 Windows 的原生互通性做法稱為 "COM Interop"，可用來處理 Managed 程式碼中的 [COM 元件](/cpp/atl/introduction-to-com)。 它是以 P/Invoke 基礎結構為建置基礎，但運作方式稍有不同。
 
 Mono (以及 Xamarin) 對 Java 和 Objective-C 的互通性支援大致上很類似；也就是說，它們使用相同的原則。
 

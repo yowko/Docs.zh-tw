@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: threading [.NET Framework], states
+helpviewer_keywords:
+- threading [.NET Framework], states
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 073fb19ef34ba32ccb5d5664413718a436563770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 956472ef0e3b0bab85a4eb0b5585f1a4d1e0a991
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-thread-states"></a>Managed 執行緒狀態
 屬性 <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 提供位元遮罩，表示執行緒的目前狀態。 執行緒一律是在 <xref:System.Threading.ThreadState> 列舉至少一個可能的狀態中，而且可能同時在多個狀態中。  
@@ -54,7 +58,7 @@ if ((state & (Unstarted | Stopped)) == 0)   // implies Running
   
  一旦執行緒因為呼叫 <xref:System.Threading.ThreadState.Unstarted> 而離開 <xref:System.Threading.Thread.Start%2A>狀態，它便無法再回到 <xref:System.Threading.ThreadState.Unstarted> 狀態。 執行緒永遠無法離開 <xref:System.Threading.ThreadState.Stopped> 狀態。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading.ThreadAbortException>  
  <xref:System.Threading.Thread>  
  <xref:System.Threading.ThreadState>  

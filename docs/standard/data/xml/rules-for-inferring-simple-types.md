@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9a74d111720eb9436f0cd71fd5acef7ea10939c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |時間|W3C 時間格式。|  
 |date|年份值限定於 0001 與 9999 之間。|  
 |gYearMonth|W3C 的西曆月份與年份格式。|  
-|string|一或多個 Unicode 字元。|  
+|字串|一或多個 Unicode 字元。|  
   
 ## <a name="type-promotion"></a>類型提升  
  <xref:System.Xml.Schema.XmlSchemaInference> 類別會逐一檢查屬性與項目的值。 若發現任何值，就會推斷最嚴格且不帶正負號的型別。 若在推斷屬性或項目的型別後，發現新的值不符合目前推斷的型別，則推斷的型別會提升為目前推斷型別與新值均適用的新型別。 <xref:System.Xml.Schema.XmlSchemaInference> 類別在提升推斷的型別時，會考量先前的值。  
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 |`xsi:schemaLocation`|如果發現 `xsi:schemaLocation`，則會加以忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果發現 `xsi:noNamespaceSchemaLocation`，則會加以忽略。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [推斷結構描述節點型別與結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+ [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

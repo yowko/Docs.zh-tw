@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e49c2130702fc7df223f2eab0ea0500b1c27b660
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72e3d707caf9c5e64c9860a8e79b5e151ce68852
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-xml-schemas"></a>建置 XML 結構描述
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別會對應至全球資訊網協會 (W3C) XML 結構描述建議事項中定義的結構，並可用於建置記憶體中的 XML 結構描述。  
@@ -95,11 +98,11 @@ ms.lasthandoff: 11/21/2017
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
  [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

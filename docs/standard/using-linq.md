@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -80,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 撰寫程式碼以手動周遊 XML 文件來執行此工作會是更大的挑戰。
 
-與 XML 互動不是您可以使用 LINQ 提供者來執行的唯一工作。 [Linq to SQL](https://msdn.microsoft.com/library/bb386976.aspx) 是相當基本的 MSSQL 伺服器資料庫物件關聯式對應程式 (ORM)。 [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 程式庫提供透過 LINQ 的具效率 JSON 文件周遊。 此外，如果沒有您所需的程式庫，您也可以[撰寫你自己的 LINQ 提供者](https://msdn.microsoft.com/library/Bb546158.aspx)！
+與 XML 互動不是您可以使用 LINQ 提供者來執行的唯一工作。 [Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) 是相當基本的 MSSQL 伺服器資料庫物件關聯式對應程式 (ORM)。 [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 程式庫提供透過 LINQ 的具效率 JSON 文件周遊。 此外，如果沒有您所需的程式庫，您也可以[撰寫你自己的 LINQ 提供者](https://msdn.microsoft.com/library/Bb546158.aspx)！
 
 ## <a name="why-use-the-query-syntax"></a>為何要使用查詢語法？
 
@@ -254,7 +257,7 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 ![PLINQ 圖表](./media/using-linq/plinq-diagram.png)
 
-可以輕鬆地透過 LINQ 表示可平行的 CPU-bound 工作 (亦即，純虛擬函式，而且沒有任何副作用)，是 PLINQ 的絕佳候選項目。 針對 _do_ 會產生副作用的工作，請考慮使用 [Task Parallel Library (TPL)](https://msdn.microsoft.com/library/dd460717.aspx) (工作平行程式庫)。
+可以輕鬆地透過 LINQ 表示可平行的 CPU-bound 工作 (亦即，純虛擬函式，而且沒有任何副作用)，是 PLINQ 的絕佳候選項目。 針對 _do_ 會產生副作用的工作，請考慮使用 [Task Parallel Library (TPL)](./parallel-programming/task-parallel-library-tpl.md) (工作平行程式庫)。
 
 ## <a name="further-resources"></a>其他資源︰
 

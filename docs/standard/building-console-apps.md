@@ -13,15 +13,18 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4e0bc3f14a3d21776506f0a269a1a8c9f970cac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8bcfa7d8a55cd2754965430db7ea6d2351892658
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>在 .NET Framework 中建置主控台應用程式
 .NET Framework 中的應用程式可以使用 <xref:System.Console?displayProperty=nameWithType> 類別從主控台讀取字元，以及將字元寫入主控台。 來自主控台的資料會從標準輸入資料流讀取，要傳送到主控台的資料會寫入至標準輸出資料流，而傳送給主控台的錯誤資料則會寫入至標準錯誤輸出資料流。 在應用程式啟動時，這些資料流會自動與主控台產生關聯，並且分別表示為 <xref:System.Console.In%2A>、<xref:System.Console.Out%2A> 和 <xref:System.Console.Error%2A> 屬性。  
@@ -39,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
  **System.Console** 類別具有可以從主控台讀取個別字元或整行的方法。 其他方法會轉換資料和格式字串，並接著將格式化的字串寫到主控台。 如需格式化字串的詳細資訊，請參閱[格式化類型](../../docs/standard/base-types/formatting-types.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Console?displayProperty=nameWithType>  
  [格式化類型](../../docs/standard/base-types/formatting-types.md)

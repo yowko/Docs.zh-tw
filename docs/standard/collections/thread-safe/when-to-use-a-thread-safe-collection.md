@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: thread-safe collections, when to upgrade
+helpviewer_keywords:
+- thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0bfb5ef2679c4e20e99a10dcf82a251673811b41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61444afd5afe52cbcb0f64074ec4479bd6252358
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 引進五種悉的集合類型，特別設計來支援多執行緒新增和移除作業。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="blockingcollection"></a>BlockingCollection  
  需要界限和封鎖語意時，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的執行速度可能會比任何自訂實作還要快。 它也支援大量取消、列舉和例外狀況處理。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)  
  [平行程式設計](../../../../docs/standard/parallel-programming/index.md)

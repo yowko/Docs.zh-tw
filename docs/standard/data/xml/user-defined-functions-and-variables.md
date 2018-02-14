@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e1327ac2a3df7a84c157e4bf60d2ad63d69b1677
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6870861541a063c56f83dcb286d21a5a970d1b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="user-defined-functions-and-variables"></a>使用者定義函式和變數
 <xref:System.Xml.XPath.XPathNavigator> 類別會提供一組可用來與 <xref:System.Xml.XPath.XPathDocument> 資料互動的方法。 您可以透過實作擴充函式和變數供 XPath 查詢運算式使用，提供標準 XPath 函式。 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 方法可以接受衍生自 <xref:System.Xml.Xsl.XsltContext> 的使用者定義內容。 使用者定義函式是由自訂內容解析。  

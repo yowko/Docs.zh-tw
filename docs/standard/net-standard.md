@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -80,7 +83,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="official-artifacts"></a>正式成品
 
-正式規格是一組定義 API 的 .cs 檔案，這些 API 是標準的一部分。 [dotnet/standard 存放庫](https://github.com/dotnet/corefx/tree/master/src)中的 [ref 目錄](https://github.com/dotnet/standard/tree/master/netstandard/ref)定義 .NET Standard API。
+正式規格是一組定義 API 的 .cs 檔案，這些 API 是標準的一部分。 [dotnet/standard 存放庫](https://github.com/dotnet/standard)中的 [ref 目錄](https://github.com/dotnet/standard/tree/master/netstandard/ref)定義 .NET Standard API。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 中繼套件 ([原始檔](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) 描述定義 (部分) 一或多個 .NET Standard 版本的程式庫集合。
 
@@ -148,5 +151,5 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 您可以搭配使用 `netstandard` 架構和 NETStandard.Library 中繼套件，來[建置 .NET Standard 程式庫](../core/tutorials/libraries.md)。 您可以查看[使用 .NET Core 工具將 .NET Standard 設為目標](../core/packages.md)的範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)

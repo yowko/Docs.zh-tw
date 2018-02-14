@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>從讀取器載入資料
 使用 <xref:System.Xml.XmlDocument.Load%2A> 方法及 <xref:System.Xml.XmlReader> 的參數載入 XML 文件所發生的行為，與從其他格式載入資料的行為相比會有所不同。 如果讀取器處於其初始狀態，則 <xref:System.Xml.XmlDocument.Load%2A> 會使用讀取器的整個內容，並利用讀取器中的所有資料建置 XML 文件物件模型 (DOM)。  
@@ -36,5 +39,5 @@ ms.lasthandoff: 10/18/2017
   
  依預設，<xref:System.Xml.XmlDocument.Load%2A> 不會使用文件類型定義 (DTD) 或結構描述驗證，來驗證 XML 是否有效。 它只會驗證 XML 的格式是否正確。 為了執行驗證，您需要使用 <xref:System.Xml.XmlReader> 類別來建立 <xref:System.Xml.XmlReaderSettings>。 <xref:System.Xml.XmlReader> 類別可以使用 DTD 或結構描述定義語言 (XSD) 結構描述來強制執行驗證。 <xref:System.Xml.ValidationType> 類別上的 <xref:System.Xml.XmlReaderSettings> 屬性可以決定 <xref:System.Xml.XmlReader> 執行個體是否能夠強制執行驗證。 如需驗證 XML 資料的詳細資訊，請參閱 <xref:System.Xml.XmlReader> 參考頁面的＜備註＞一節。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

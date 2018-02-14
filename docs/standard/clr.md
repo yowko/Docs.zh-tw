@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 .NET Framework 提供稱為 Common Language Runtime 的執行階段環境，它能執行程式碼，並提供使程式開發過程更為容易的服務。  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  編譯器和工具會公開 Common Language Runtime 的功能，並且可以讓您撰寫從這個 Managed 執行環境獲益的程式碼。 以 Runtime 為目標的語言編譯器所開發的程式碼稱為 Managed 程式碼；它可因某些功能而得到改進，例如跨程式語言整合、跨程式語言例外狀況處理 (Exception Handling)、增強的安全性、版本控制和部署支援、元件互動的簡化模型，以及偵錯和設定檔服務。  
   
 > [!NOTE]
->  編譯器和工具能夠產生 Common Language Runtime 可以使用的輸出，因為類型系統、中繼資料格式和執行階段環境 (虛擬執行系統) 都是以公用標準 ECMA 通用語言基礎結構規格來定義。 如需詳細資訊，請參閱 [ECMA C# 和通用語言基礎結構規格](http://go.microsoft.com/fwlink/?LinkId=99212)。  
+>  編譯器和工具能夠產生 Common Language Runtime 可以使用的輸出，因為類型系統、中繼資料格式和執行階段環境 (虛擬執行系統) 都是以公用標準 ECMA 通用語言基礎結構規格來定義。 如需詳細資訊，請參閱 [ECMA C# 和通用語言基礎結構規格](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)。  
   
  若要讓 Runtime 能夠提供服務給 Managed 程式碼，語言編譯器必須發出描述程式碼中型別、成員和參考的中繼資料。 中繼資料是與程式碼一起儲存；每一個可載入的 Common Language Runtime 可移植執行檔 (PE) 都包含中繼資料。 Runtime 使用中繼資料來找出並載入類別、配置記憶體中的執行個體 (Instance)、解析方法引動過程 (Method Invocation)、產生機器碼、強制使用安全性，和設定 Run-Time 內容界限 (Context Boundary)。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 10/18/2017
 |4|4|  
 |4.5 (包括 4.5.1 和 4.5.2)|4|  
 |4.6 (包括 4.6.1 和 4.6.2)|4|
-|4.7 （包括 4.7.1）|4|  
+|4.7 (包括 4.7.1)|4|  
   
 ## <a name="related-topics"></a>相關主題  
   
@@ -84,8 +87,8 @@ ms.lasthandoff: 10/18/2017
 |-----------|-----------------|  
 |[Managed 執行程序](../../docs/standard/managed-execution-process.md)|描述充分利用 Common Language Runtime 所需要的步驟。|  
 |[自動管理記憶體](../../docs/standard/automatic-memory-management.md)|說明記憶體回收行程如何配置和釋放記憶體。|  
-|[NIB：.NET Framework 概觀](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|說明重要的 .NET Framework 概念，例如一般型別系統、跨語言互通性 (Interoperability)、Managed 執行、應用程式定義域和組件。|  
+|[NIB：.NET Framework 概觀](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|說明重要的 .NET Framework 概念，例如一般型別系統、跨語言互通性 (Interoperability)、Managed 執行、應用程式定義域和組件。|  
 |[一般類型系統](../../docs/standard/base-types/common-type-system.md)|描述型別如何在執行階段中宣告、使用和管理，以支援跨程式語言整合。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [版本和相依性](../../docs/framework/migration-guide/versions-and-dependencies.md)

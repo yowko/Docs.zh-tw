@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b23a90de991b31005ba5a07a959c717c24869ffb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
@@ -147,7 +150,7 @@ public async Task<int> CalculateResult(InputData data)
 
 當您需要快速回應，`async` 與 `await` 是管理 CPU-bound 工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以這項新功能為主的程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C# 中的非同步程式設計](~/docs/csharp/async.md)   
 [F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   

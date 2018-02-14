@@ -9,22 +9,25 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 44ce1337e347020926fe2dee29d70fe226ad087a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b11fc10128807dfbd0082bbc1884068c5cde7d32
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-som"></a>XML 結構描述物件模型 (SOM)
 XML 結構描述是一種功能強大且複雜的工具，其用於在相容 XML 文件中建立及驗證結構。 與關聯式資料庫中的資料模型化相似，結構描述提供一種定義 XML 文件結構的方法，即指定可在文件中使用的項目，以及為了對該指定結構描述有效，這些項目必須遵循的結構及型別。  
   
  結構描述物件模型 (SOM) 在 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中提供了一組類別，可讓您從檔案讀取結構描述，或以程式設計方式建立記憶體中結構描述。 然後，可以周遊、編輯、編譯及驗證結構描述，或將其寫入檔案。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  說明結構描述物件模型 (SOM) 及其提供的功能及類別。  
   

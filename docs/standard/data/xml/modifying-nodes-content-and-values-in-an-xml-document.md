@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72039faef3bcde4db830d110938266c63689219e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>修改 XML 文件中的節點、內容和值
 有許多方法可以修改文件中的節點及內容。 您可以：  
@@ -53,5 +56,5 @@ ms.lasthandoff: 10/18/2017
   
  在可編輯之節點中加入或移除唯讀子節點有效。 不過，嘗試修改唯讀節點本身會擲回 <xref:System.InvalidOperationException>。 修改 <xref:System.Xml.XmlEntityReference> 節點的子節點便是一個範例。 子節點是唯讀的，而且無法修改。 對其進行修改的任何嘗試，都會擲回 <xref:System.InvalidOperationException>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -13,11 +13,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
@@ -170,11 +173,11 @@ End Class
 列舉 | [列舉](#enumerations) | 列舉的基礎類型應該是內建 CLS 整數類型，欄位的名稱應該是 "value__"，而且該欄位應該標記為 `RTSpecialName`。 |  7
 列舉 | [列舉](#enumerations) | 有兩種不同的列舉，由 [System.FlagsAttribute](xref:System.FlagsAttribute) (請參閱第四篇程式庫) 自訂屬性存在與否表示。 一個表示具名整數值；另一個則表示具名位元旗標 (可合併以產生未命名的值)。 `enum` 的值不限於指定的值。 |  8
 列舉 | [列舉](#enumerations) | 列舉的常值靜態欄位必須有列舉本身的類型。 |  9
-「事件」 | [事件](#events) | 實作事件的方法必須在中繼資料中標記為 `SpecialName`。 |29
-「事件」 | [事件](#events) | 事件及其存取子的存取範圍必須是相同的。 |30
-「事件」 | [事件](#events) | 事件的 `add` 和 `remove` 方法，兩者必須同時存在或同時不存在。 |31
-「事件」 | [事件](#events) | 事件的 `add` 和 `remove` 方法應各自採用一個其類型會定義事件類型的參數，而且必須是衍生自 [System.Delegate](xref:System.Delegate)。 |32
-「事件」 | [事件](#events) | 事件必須遵守特定的命名模式。 在適當的名稱比較中應忽略 CLS 第 29 條規則中所提及的 SpecialName 屬性，並且應遵循識別項規則。  |33
+事件 | [事件](#events) | 實作事件的方法必須在中繼資料中標記為 `SpecialName`。 |29
+事件 | [事件](#events) | 事件及其存取子的存取範圍必須是相同的。 |30
+事件 | [事件](#events) | 事件的 `add` 和 `remove` 方法，兩者必須同時存在或同時不存在。 |31
+事件 | [事件](#events) | 事件的 `add` 和 `remove` 方法應各自採用一個其類型會定義事件類型的參數，而且必須是衍生自 [System.Delegate](xref:System.Delegate)。 |32
+事件 | [事件](#events) | 事件必須遵守特定的命名模式。 在適當的名稱比較中應忽略 CLS 第 29 條規則中所提及的 SpecialName 屬性，並且應遵循識別項規則。  |33
 例外狀況 | [例外狀況](#exceptions) | 擲回之物件的類型必須為 [System.Exception](xref:System.Exception)，或繼承自它的類型。 然而，並不需要使用符合 CLS 標準的方法來封鎖其他類型例外狀況的傳播。 | 40
 一般 | [CLS 合規性規則](#cls-compliance-rules) | CLS 規則只適用於類型的那些在定義組件以外可存取或可見的部分。 | 1
 一般 | [CLS 合規性規則](#cls-compliance-rules) | 不符合 CLS 標準之類型的成員不得標記為符合 CLS 標準。 | 2
@@ -186,9 +189,9 @@ End Class
 泛型 | [泛型類型及成員](#generic-types-and-members) | 對於每個抽象或虛擬泛型方法，都必須具有預設具象 (非抽象) 實作 | 47
 介面 | [介面](#interfaces) | 符合 CLS 標準的介面不可要求不符合 CLS 標準之方法的定義來實作它們。 | 18
 介面 | [介面](#interfaces) | 符合 CLS 標準的介面不可定義靜態方法，也不可定義欄位。 | 19
-Members | [一般類型成員](#type-members-in-general) | 全域靜態欄位和方法不符合 CLS 標準。 | 36
+成員 | [一般類型成員](#type-members-in-general) | 全域靜態欄位和方法不符合 CLS 標準。 | 36
 成員 | -- | 常值靜態欄位的值是透過使用欄位初始化中繼資料來指定。 符合 CLS 標準的常值必須具有欄位初始化中繼資料所指定的值，這個中繼資料與常值有完全相同的類型 (如果該常值是 `enum`，則為基礎類型)。 | 13
-Members | [一般類型成員](#type-members-in-general) | vararg 條件約束不是 CLS 的一部分，CLS 所支援的唯一呼叫慣例是標準的 Managed 呼叫慣例。 | 15
+成員 | [一般類型成員](#type-members-in-general) | vararg 條件約束不是 CLS 的一部分，CLS 所支援的唯一呼叫慣例是標準的 Managed 呼叫慣例。 | 15
 命名規範 | [命名慣例](#naming-conventions) | 組件必須遵守 Unicode Standard 3.0 技術報告編號 15 附錄 7 的各項規則，它規定可以啟始並包含在識別項中的字元集，[Unicode Normalization Forms](http://www.unicode.org/unicode/reports/tr15/tr15-18.html) 線上提供這份報告。 識別項應使用 Unicode Normalization Form C 所定義的標準格式。基於 CLS 目的，如果其小寫對應 (如 Unicode 不區分地區設定、一對一小寫對應所指定) 相同，則兩個識別項相同。 也就是依據 CLS，兩個識別項若要被視為不同，不只是大小寫，還要有其他不同之處。 不過，為了覆寫繼承的定義，CLI 需要使用原始宣告的確切編碼。 | 4
 多載化 | [命名慣例](#naming-conventions) | 在符合 CLS 標準的範圍中引入的所有名稱，除了名稱完全相同且透過多載解析的情況之外，都必須是不同的獨立類型。 也就是說，CTS 允許單一類型對方法和欄位使用同樣的名稱，但 CLS 不允許。 | 5
 多載化 | [命名慣例](#naming-conventions) | 即使 CTS 允許區別不同簽章，還是必須單獨依據識別項比較來區別欄位和巢狀類型的不同。 經由識別項比較之後，具有相同名稱的方法、屬性和事件不可僅以傳回型別做區分，除非 CLS 第 39 條規則中另有指定 | 6
@@ -321,7 +324,7 @@ End Class
 .NET 的[一般型別系統](common-type-system.md)包含了幾個內建類型，這些內建類型直接受到 Common Language Runtime 的支援，並且在組譯碼的中繼資料中以特殊方式進行編碼。 在這些內建類型中，下表所列的類型符合 CLS 標準。 
 
 
-符合 CLS 標準的類型 | 說明
+符合 CLS 標準的類型 | 描述
 ------------------ | -----------
 [Byte](xref:System.Byte) | 8 位元不帶正負號的整數 
 [Int16](xref:System.Int16) | 16 位元帶正負號的整數 
@@ -2593,7 +2596,7 @@ End Structure
 
 * [String](xref:System.String)
 
-* [Type](xref:System.Type)
+* [類型](xref:System.Type)
 
 * 基礎類型為 `Byte`、`Int16`、`Int32` 或 `Int64` 的任何列舉類型。 
 

@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>以 SOS 偵錯  
- 您可以使用 [Windows 偵錯工具 (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) 來檢查 Managed 堆積上的物件。  
+ 您可以使用 [Windows 偵錯工具 (WinDbg)](/windows-hardware/drivers/debugger/index) 來檢查 Managed 堆積上的物件。  
   
  若要安裝 WinDbg，請從 [WDK 與開發人員工具網站](http://go.microsoft.com/fwlink/?LinkID=103787)安裝 Debugging Tools for Windows。  
   
@@ -422,7 +425,7 @@ ms.lasthandoff: 10/18/2017
   
      如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。  
   
-     您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如：  
+     您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如:   
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -785,5 +788,5 @@ ms.lasthandoff: 10/18/2017
   
      如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。 否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體回收](../../../docs/standard/garbage-collection/index.md)

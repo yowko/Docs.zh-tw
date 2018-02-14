@@ -17,15 +17,18 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 68f2093e32fe2f9fbc0f826d2293a7b7f2e3c238
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c55489a4c0b86142fcda99c5962c896b73691cd6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>如何建立使用者定義的例外狀況
 
@@ -40,5 +43,5 @@ ms.lasthandoff: 10/21/2017
 > [!NOTE]
 > 在您使用遠端功能的情況下，您必須確定任何使用者定義例外狀況的中繼資料是由伺服器 (被呼叫端) 提供，並提供給用戶端 (Proxy 物件或呼叫端)。 如需詳細資訊，請參閱[例外狀況的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [例外狀況](index.md)

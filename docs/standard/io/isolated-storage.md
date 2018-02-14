@@ -24,21 +24,24 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4279e7933a88a060de52199d9ea0e9f54863fb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a>對於[!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)]應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式無法使用隔離儲存區。 請改用 `Windows.Storage` 應用程式開發介面內含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空間中的應用程式資料類別來儲存本機資料和檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175) 。  
+>  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式無法使用隔離儲存區。 請改用 `Windows.Storage` 應用程式開發介面內含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空間中的應用程式資料類別來儲存本機資料和檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10)) 。  
   
  此主題包括下列章節：  
   
@@ -134,7 +137,7 @@ ms.lasthandoff: 10/18/2017
   
  隔離儲存區類別允許您建立、列舉和刪除隔離儲存區。 您可以透過 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 物件使用執行這些工作的方法。 某些作業會要求您擁有代表管理隔離儲存區權限的 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 權限，您可能也需要擁有作業系統權限才能存取檔案或目錄。  
   
- 如需示範常見隔離儲存區工作的一系列範例，請參閱 [相關主題](#related_topics)中所列的「如何」主題。  
+ 如需示範常見隔離儲存區工作的一系列範例，請參閱[相關主題](#related_topics)中所列的「如何」主題。  
   
   
 <a name="scenarios_for_isolated_storage"></a>   
@@ -166,8 +169,8 @@ ms.lasthandoff: 10/18/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[隔離的類型](../../../docs/standard/io/types-of-isolation.md)|描述各種類型的隔離。|  
-|[如何：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|  
-|[如何：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|  
+|[操作說明：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|  
+|[操作說明：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|  
 |[如何：刪除隔離儲存區中的存放區](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|  
 |[操作說明：預期隔離儲存區發生空間不足的情況](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|  
 |[如何：在隔離儲存區中建立檔案和目錄](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|  

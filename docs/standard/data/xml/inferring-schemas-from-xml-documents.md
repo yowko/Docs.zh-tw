@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aa4d6d2758392fc48969b08db30b91bdfe0eeaa1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8085ecb86018460f14a2532b55907472988b67b2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>從 XML 文件推斷結構描述
 本主題說明如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件結構推斷 XML 結構描述定義語言 (XSD) 結構描述。  
@@ -89,9 +92,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="schemas-that-cannot-be-refined"></a>無法進一步調整的結構描述  
  有些 W3C XML 結構描述建構在指定要調整的型別時會擲回例外狀況，則 XML 結構描述定義語言 (XSD) 結構描述 <xref:System.Xml.Schema.XmlSchemaInference> 處理序無法處理這類的結構描述。 最上層建構元不屬於序列的複雜型別即是一例。 在結構描述物件模型 (SOM) 中，它會對應至 <xref:System.Xml.Schema.XmlSchemaComplexType> 屬性不屬於 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 之執行個體的 <xref:System.Xml.Schema.XmlSchemaSequence>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.Schema.XmlSchemaInference>  
  [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [推斷結構描述節點型別與結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
- [推斷簡單型別的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+ [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+ [推斷簡單類型的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

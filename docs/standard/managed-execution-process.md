@@ -16,15 +16,18 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a47761acfabd3de77d65483d50fbe7a77f96e076
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 702ed3e73117fe01769ec9d7bf939ae8df523793
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
  [回到頁首](#introduction)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概觀](../../docs/framework/get-started/overview.md)  
  [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)  
  [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)  

@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 51ca7b5d18e4b664fcc5a56f7de004c42cb95c9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 716e9baca52e9f5b7f4f24821e50b6a16aef9136
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件
 依預設，<xref:System.Xml.XmlDocument> 類別不會根據 XML 結構描述定義語言 (XSD) 結構描述或文件類型定義 (DTD)，驗證文件物件模型 (DOM) 中的 XML；只會驗證 XML 的格式是否正確。  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/21/2017
   
  如需說明 <xref:System.Xml.Schema.ValidationEventHandler> 的範例，請參閱上述＜將 XML 文件載入到 DOM 時進行驗證＞及＜驗證 DOM 中的 XML 文件＞。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XmlReader>  
  <xref:System.Xml.Schema.ValidationEventHandler>  

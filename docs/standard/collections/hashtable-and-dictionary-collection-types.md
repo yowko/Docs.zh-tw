@@ -16,15 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ab3a6bb2128a3753cb80a60836a781d987ca253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 和 Dictionary 集合類型
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 類別以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 泛型類別會實作 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 介面。 <xref:System.Collections.Generic.Dictionary%602> 泛型類別還會實作 <xref:System.Collections.Generic.IDictionary%602> 泛型介面。 因此，這些集合中的每個項目是索引鍵-值組。  
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別的功能與 <xref:System.Collections.Hashtable> 類別相同。 特定類型 (<xref:System.Object> 以外的類型) 的 <xref:System.Collections.Generic.Dictionary%602> 提供比實值類型的 <xref:System.Collections.Hashtable> 更佳的效能。 這是因為 <xref:System.Collections.Hashtable> 的項目屬於 <xref:System.Object> 類型；因此，當您儲存或擷取實值類型時，通常會發生 Boxing 和 Unboxing。 當多個執行緒可能同時存取集合時，應該使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Hashtable>  
  <xref:System.Collections.IDictionary>  
  <xref:System.Collections.IHashCodeProvider>  

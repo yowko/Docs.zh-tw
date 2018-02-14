@@ -17,15 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的數值
 .NET Framework 除了沒有理論上限或下限的整數型別 <xref:System.Numerics.BigInteger>、代表複數的型別 <xref:System.Numerics.Complex>，以及 <xref:System.Numerics> 命名空間中一組支援 SIMD 的向量型別之外，也支援標準數值整數和浮點數基本型別。  
@@ -84,5 +87,5 @@ ms.lasthandoff: 10/18/2017
   
  SIMD 也可做為 [NuGet 套件](http://www.nuget.org/packages/System.Numerics.Vectors)下載。  NuGet 套件也包含泛型 <xref:System.Numerics.Vector%601> 結構，此結構可讓您建立任何基本數值型別的向量。 (基本數值類型包含 <xref:System> 命名空間中 <xref:System.Decimal> 以外的所有數值類型)。此外，<xref:System.Numerics.Vector%601> 結構還提供可供您在使用向量時呼叫的便利方法程式庫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [應用程式基本概念](../../docs/standard/application-essentials.md)

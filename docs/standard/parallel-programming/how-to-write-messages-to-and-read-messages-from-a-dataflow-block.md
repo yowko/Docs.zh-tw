@@ -1,12 +1,8 @@
 ---
 title: "如何：寫入訊息至資料流程區塊及讀取資料流程區塊中的訊息"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,22 +11,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bf609a8c350a44fc802cce0ec10693431bbf4f42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b64ef07c6ef28377c11dc879ad17f7c806e9f66a
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>如何：寫入訊息至資料流程區塊及讀取資料流程區塊中的訊息
 本文件將說明如何使用 TPL 資料流程程式庫，在資料流程區塊中寫物和讀取訊息。 TPL 資料流程程式庫提供了在資料流程區塊中寫入和讀取訊息的同步和非同步方法。 本文件將使用 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> 類別。 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 類別會緩衝訊息，並且同時做為訊息來源和訊息目標。  
-  
-> [!TIP]
->  TPL 資料流程程式庫 (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空間) 並未隨附於 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安裝<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並在搜尋線上`Microsoft.Tpl.Dataflow`封裝。  
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>在資料流程區塊中同步寫入和讀取  
  下列範例會使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 方法寫入 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 資料流程區塊，以及使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> 方法從同一個物件讀取。  
   
@@ -73,5 +70,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="next-steps"></a>後續步驟  
  這個範例將示範如何直接讀取和寫入訊息區塊。 您也可以連接資料流程區塊組成「管線」，這是資料流程區塊的線性序列，或是組成「網路」，這是資料流程區塊的圖形。 在管線或網路中，當資料可供使用時，來源會非同步散佈資料至目標。 如需建立基本資料流程管線的範例，請參閱[逐步解說：建立資料流程管線](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。 如需建立更複雜的資料流程網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -19,15 +19,18 @@ helpviewer_keywords:
 - finally blocks
 - ArgumentOutOfRangeException class
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b303582a62f211091b1ebee0e88cf380da8b03d9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 325be4836d661369326fbe3ea1f8b252bf251f3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-finally-blocks"></a>如何使用 finally 區塊
 
@@ -39,5 +42,5 @@ ms.lasthandoff: 10/21/2017
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [例外狀況](index.md)   

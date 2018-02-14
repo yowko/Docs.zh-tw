@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f36bae495631db68afb1404398cbf43e890d4f33
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-types-generics-overview"></a>泛型型別 (泛型) 概觀
 
@@ -22,7 +25,7 @@ ms.lasthandoff: 10/18/2017
 
 泛型是在 .NET Framework 2.0 中第一次引入，需要變更 C# 語言和 Common Language Runtime (CLR)。 **泛型**基本上是「程式碼範本」，可讓開發人員定義[型別安全](https://msdn.microsoft.com/library/hbzz1a9a.aspx)資料結構，而不需要認可至實際資料類型。 例如，`List<T>` 是可宣告的[泛型集合](xref:System.Collections.Generic)，並可搭配任何類型使用：`List<int>`、`List<string>`、`List<Person>` 等等。
 
-重點到底是什麼？ 為什麼泛型很有用？ 若要了解這一點，我們必須看看加入泛型前後的特定類別。 以 `ArrayList` 為例。 在 C# 1.0 中，`ArrayList` 項目的類型是 `object`。 這表示任何加入的項目都會以無訊息模式轉換成 `object`；讀取清單中的項目時也會發生相同的情況 (此程序分別稱為 [Boxing](https://msdn.microsoft.com/library/yz2be5wk.aspx) 和 Unboxing)。 Boxing 和 Unboxing 會影響效能。 此外，您無法在編譯時期判斷清單中資料的實際類型。 因此很容易產生一些易損壞的程式碼。 泛型可以解決這個問題，它提供額外的資訊，也就是每個清單執行個體將包含之資料的類型。 簡單來說，您只能將整數加入 `List<int>`、只能將 Persons 加入 `List<Person>`，依此類推。
+重點到底是什麼？ 為什麼泛型很有用？ 若要了解這一點，我們必須看看加入泛型前後的特定類別。 以 `ArrayList` 為例。 在 C# 1.0 中，`ArrayList` 項目的類型是 `object`。 這表示任何加入的項目都會以無訊息模式轉換成 `object`；讀取清單中的項目時也會發生相同的情況 (此程序分別稱為 [Boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) 和 Unboxing)。 Boxing 和 Unboxing 會影響效能。 此外，您無法在編譯時期判斷清單中資料的實際類型。 因此很容易產生一些易損壞的程式碼。 泛型可以解決這個問題，它提供額外的資訊，也就是每個清單執行個體將包含之資料的類型。 簡單來說，您只能將整數加入 `List<int>`、只能將 Persons 加入 `List<Person>`，依此類推。
 
 泛型也可用於執行階段，或加以**具體化**。 這表示執行階段知道您要使用的資料結構類型，因此可更有效率地將它儲存在記憶體中。
 
@@ -72,4 +75,4 @@ Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
 ## <a name="further-reading-and-resources"></a>延伸閱讀和資源
 
 *   [C# 泛型簡介](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [C# 程式設計手冊 - 泛型](https://msdn.microsoft.com/library/512aeb7t.aspx)
+*   [C# 程式設計手冊 - 泛型](../../docs/csharp/programming-guide/generics/index.md)

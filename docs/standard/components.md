@@ -7,11 +7,14 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/18/2017
 
 Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。
 
-### <a name="net-core"></a>.NET Core
+### <a name="net-core"></a>.NET 核心
 
 .NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 可在 Windows、macOS 及 Linux 執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 ASP.NET Core 會在 .NET Core 上執行。 
 
@@ -85,7 +88,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 - [NuGet](/nuget/)，適用於 .NET 的 Microsoft 套件管理員
 - 開放原始碼建置協調流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
 [.NET Standard](net-standard.md)  
 [.NET Core 指南](../core/index.md)  
