@@ -12,284 +12,287 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="garbage-collection-and-performance"></a><span data-ttu-id="dc8fb-102">記憶體回收和效能</span><span class="sxs-lookup"><span data-stu-id="dc8fb-102">Garbage Collection and Performance</span></span>
-<a name="top"></a> <span data-ttu-id="dc8fb-103">本主題描述記憶體回收和記憶體使用量的相關問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="dc8fb-104">它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="dc8fb-105">每個問題已連結至程序，可讓您用來調查問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-105">Each issue has links to procedures that you can use to investigate problems.</span></span>  
+# <a name="garbage-collection-and-performance"></a><span data-ttu-id="19cb0-102">記憶體回收和效能</span><span class="sxs-lookup"><span data-stu-id="19cb0-102">Garbage Collection and Performance</span></span>
+<a name="top"></a> <span data-ttu-id="19cb0-103">本主題描述記憶體回收和記憶體使用量的相關問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-103">This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="19cb0-104">它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。</span><span class="sxs-lookup"><span data-stu-id="19cb0-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="19cb0-105">每個問題已連結至程序，可讓您用來調查問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-105">Each issue has links to procedures that you can use to investigate problems.</span></span>  
   
- <span data-ttu-id="dc8fb-106">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-106">This topic contains the following sections:</span></span>  
+ <span data-ttu-id="19cb0-106">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="19cb0-106">This topic contains the following sections:</span></span>  
   
--   [<span data-ttu-id="dc8fb-107">效能分析工具</span><span class="sxs-lookup"><span data-stu-id="dc8fb-107">Performance Analysis Tools</span></span>](#performance_analysis_tools)  
+-   [<span data-ttu-id="19cb0-107">效能分析工具</span><span class="sxs-lookup"><span data-stu-id="19cb0-107">Performance Analysis Tools</span></span>](#performance_analysis_tools)  
   
--   [<span data-ttu-id="dc8fb-108">針對效能問題進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="dc8fb-108">Troubleshooting Performance Issues</span></span>](#troubleshooting_performance_issues)  
+-   [<span data-ttu-id="19cb0-108">針對效能問題進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="19cb0-108">Troubleshooting Performance Issues</span></span>](#troubleshooting_performance_issues)  
   
--   [<span data-ttu-id="dc8fb-109">疑難排解方針</span><span class="sxs-lookup"><span data-stu-id="dc8fb-109">Troubleshooting Guidelines</span></span>](#troubleshooting_guidelines)  
+-   [<span data-ttu-id="19cb0-109">疑難排解方針</span><span class="sxs-lookup"><span data-stu-id="19cb0-109">Troubleshooting Guidelines</span></span>](#troubleshooting_guidelines)  
   
--   [<span data-ttu-id="dc8fb-110">效能檢查程序</span><span class="sxs-lookup"><span data-stu-id="dc8fb-110">Performance Check Procedures</span></span>](#performance_check_procedures)  
+-   [<span data-ttu-id="19cb0-110">效能檢查程序</span><span class="sxs-lookup"><span data-stu-id="19cb0-110">Performance Check Procedures</span></span>](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
-## <a name="performance-analysis-tools"></a><span data-ttu-id="dc8fb-111">效能分析工具</span><span class="sxs-lookup"><span data-stu-id="dc8fb-111">Performance Analysis Tools</span></span>  
- <span data-ttu-id="dc8fb-112">下列各節說明可用來調查記憶體使用量和記憶體回收問題的工具。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-112">The following sections describe the tools that are available for investigating memory usage and garbage collection issues.</span></span> <span data-ttu-id="dc8fb-113">本主題稍後提供的[程序](#performance_check_procedures)會參考這些工具。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-113">The [procedures](#performance_check_procedures) provided later in this topic refer to these tools.</span></span>  
+## <a name="performance-analysis-tools"></a><span data-ttu-id="19cb0-111">效能分析工具</span><span class="sxs-lookup"><span data-stu-id="19cb0-111">Performance Analysis Tools</span></span>  
+ <span data-ttu-id="19cb0-112">下列各節說明可用來調查記憶體使用量和記憶體回收問題的工具。</span><span class="sxs-lookup"><span data-stu-id="19cb0-112">The following sections describe the tools that are available for investigating memory usage and garbage collection issues.</span></span> <span data-ttu-id="19cb0-113">本主題稍後提供的[程序](#performance_check_procedures)會參考這些工具。</span><span class="sxs-lookup"><span data-stu-id="19cb0-113">The [procedures](#performance_check_procedures) provided later in this topic refer to these tools.</span></span>  
   
 <a name="perf_counters"></a>   
-### <a name="memory-performance-counters"></a><span data-ttu-id="dc8fb-114">記憶體效能計數器</span><span class="sxs-lookup"><span data-stu-id="dc8fb-114">Memory Performance Counters</span></span>  
- <span data-ttu-id="dc8fb-115">您可以使用效能計數器來收集效能資料。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-115">You can use performance counters to gather performance data.</span></span> <span data-ttu-id="dc8fb-116">如需相關指示，請參閱[執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-116">For instructions, see [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md).</span></span> <span data-ttu-id="dc8fb-117">效能計數器的 .NET CLR 記憶體類別，如 [.NET Framework 中的效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)中所述，會提供記憶體回收行程的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-117">The .NET CLR Memory category of performance counters, as described in [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), provides information about the garbage collector.</span></span>  
+### <a name="memory-performance-counters"></a><span data-ttu-id="19cb0-114">記憶體效能計數器</span><span class="sxs-lookup"><span data-stu-id="19cb0-114">Memory Performance Counters</span></span>  
+ <span data-ttu-id="19cb0-115">您可以使用效能計數器來收集效能資料。</span><span class="sxs-lookup"><span data-stu-id="19cb0-115">You can use performance counters to gather performance data.</span></span> <span data-ttu-id="19cb0-116">如需相關指示，請參閱[執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-116">For instructions, see [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md).</span></span> <span data-ttu-id="19cb0-117">效能計數器的 .NET CLR 記憶體類別，如 [.NET Framework 中的效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)中所述，會提供記憶體回收行程的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="19cb0-117">The .NET CLR Memory category of performance counters, as described in [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), provides information about the garbage collector.</span></span>  
   
 <a name="sos"></a>   
-### <a name="debugging-with-sos"></a><span data-ttu-id="dc8fb-118">以 SOS 偵錯</span><span class="sxs-lookup"><span data-stu-id="dc8fb-118">Debugging with SOS</span></span>  
- <span data-ttu-id="dc8fb-119">您可以使用 [Windows 偵錯工具 (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) 來檢查 Managed 堆積上的物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-119">You can use the [Windows Debugger (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) to inspect objects on the managed heap.</span></span>  
+### <a name="debugging-with-sos"></a><span data-ttu-id="19cb0-118">以 SOS 偵錯</span><span class="sxs-lookup"><span data-stu-id="19cb0-118">Debugging with SOS</span></span>  
+ <span data-ttu-id="19cb0-119">您可以使用 [Windows 偵錯工具 (WinDbg)](/windows-hardware/drivers/debugger/index) 來檢查 Managed 堆積上的物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-119">You can use the [Windows Debugger (WinDbg)](/windows-hardware/drivers/debugger/index) to inspect objects on the managed heap.</span></span>  
   
- <span data-ttu-id="dc8fb-120">若要安裝 WinDbg，請從 [WDK 與開發人員工具網站](http://go.microsoft.com/fwlink/?LinkID=103787)安裝 Debugging Tools for Windows。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-120">To install WinDbg, install Debugging Tools for Windows from the [WDK and Developer Tools Web site](http://go.microsoft.com/fwlink/?LinkID=103787).</span></span>  
+ <span data-ttu-id="19cb0-120">若要安裝 WinDbg，請從 [WDK 與開發人員工具網站](http://go.microsoft.com/fwlink/?LinkID=103787)安裝 Debugging Tools for Windows。</span><span class="sxs-lookup"><span data-stu-id="19cb0-120">To install WinDbg, install Debugging Tools for Windows from the [WDK and Developer Tools Web site](http://go.microsoft.com/fwlink/?LinkID=103787).</span></span>  
   
 <a name="etw"></a>   
-### <a name="garbage-collection-etw-events"></a><span data-ttu-id="dc8fb-121">記憶體回收 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="dc8fb-121">Garbage Collection ETW Events</span></span>  
- <span data-ttu-id="dc8fb-122">Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析和偵錯支援的追蹤系統。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-122">Event tracing for Windows (ETW) is a tracing system that supplements the profiling and debugging support provided by the .NET Framework.</span></span> <span data-ttu-id="dc8fb-123">從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)會擷取有用的資訊，以便從統計的觀點來分析 Managed 堆積。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-123">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md) capture useful information for analyzing the managed heap from a statistical point of view.</span></span> <span data-ttu-id="dc8fb-124">例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-124">For example, the `GCStart_V1` event, which is raised when a garbage collection is about to occur, provides the following information:</span></span>  
+### <a name="garbage-collection-etw-events"></a><span data-ttu-id="19cb0-121">記憶體回收 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="19cb0-121">Garbage Collection ETW Events</span></span>  
+ <span data-ttu-id="19cb0-122">Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析和偵錯支援的追蹤系統。</span><span class="sxs-lookup"><span data-stu-id="19cb0-122">Event tracing for Windows (ETW) is a tracing system that supplements the profiling and debugging support provided by the .NET Framework.</span></span> <span data-ttu-id="19cb0-123">從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)會擷取有用的資訊，以便從統計的觀點來分析 Managed 堆積。</span><span class="sxs-lookup"><span data-stu-id="19cb0-123">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md) capture useful information for analyzing the managed heap from a statistical point of view.</span></span> <span data-ttu-id="19cb0-124">例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：</span><span class="sxs-lookup"><span data-stu-id="19cb0-124">For example, the `GCStart_V1` event, which is raised when a garbage collection is about to occur, provides the following information:</span></span>  
   
--   <span data-ttu-id="dc8fb-125">所收集物件的層代。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-125">Which generation of objects is being collected.</span></span>  
+-   <span data-ttu-id="19cb0-125">所收集物件的層代。</span><span class="sxs-lookup"><span data-stu-id="19cb0-125">Which generation of objects is being collected.</span></span>  
   
--   <span data-ttu-id="dc8fb-126">觸發記憶體回收的原因。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-126">What triggered the garbage collection.</span></span>  
+-   <span data-ttu-id="19cb0-126">觸發記憶體回收的原因。</span><span class="sxs-lookup"><span data-stu-id="19cb0-126">What triggered the garbage collection.</span></span>  
   
--   <span data-ttu-id="dc8fb-127">記憶體回收 (並行或不同時) 的類型。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-127">Type of garbage collection (concurrent or not concurrent).</span></span>  
+-   <span data-ttu-id="19cb0-127">記憶體回收 (並行或不同時) 的類型。</span><span class="sxs-lookup"><span data-stu-id="19cb0-127">Type of garbage collection (concurrent or not concurrent).</span></span>  
   
- <span data-ttu-id="dc8fb-128">ETW 事件記錄很有效率，且不會遮蓋與記憶體回收相關聯的任何效能問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-128">ETW event logging is efficient and will not mask any performance problems associated with garbage collection.</span></span> <span data-ttu-id="dc8fb-129">處理程序可以提供自己的事件來搭配 ETW 事件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-129">A process can provide its own events in conjunction with ETW events.</span></span> <span data-ttu-id="dc8fb-130">記錄時，應用程式的事件和記憶體回收事件都可以相互關聯，以判斷堆積問題發生的方式和時間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-130">When logged, both the application's events and the garbage collection events can be correlated to determine how and when heap problems occur.</span></span> <span data-ttu-id="dc8fb-131">例如，伺服器應用程式可以在用戶端要求開始和結束時提供事件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-131">For example, a server application could provide events at the start and end of a client request.</span></span>  
+ <span data-ttu-id="19cb0-128">ETW 事件記錄很有效率，且不會遮蓋與記憶體回收相關聯的任何效能問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-128">ETW event logging is efficient and will not mask any performance problems associated with garbage collection.</span></span> <span data-ttu-id="19cb0-129">處理程序可以提供自己的事件來搭配 ETW 事件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-129">A process can provide its own events in conjunction with ETW events.</span></span> <span data-ttu-id="19cb0-130">記錄時，應用程式的事件和記憶體回收事件都可以相互關聯，以判斷堆積問題發生的方式和時間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-130">When logged, both the application's events and the garbage collection events can be correlated to determine how and when heap problems occur.</span></span> <span data-ttu-id="19cb0-131">例如，伺服器應用程式可以在用戶端要求開始和結束時提供事件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-131">For example, a server application could provide events at the start and end of a client request.</span></span>  
   
 <a name="profiling_api"></a>   
-### <a name="the-profiling-api"></a><span data-ttu-id="dc8fb-132">程式碼剖析 API</span><span class="sxs-lookup"><span data-stu-id="dc8fb-132">The Profiling API</span></span>  
- <span data-ttu-id="dc8fb-133">Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期間受影響之物件的詳細相關資訊。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-133">The common language runtime (CLR) profiling interfaces provide detailed information about the objects that were affected during garbage collection.</span></span> <span data-ttu-id="dc8fb-134">當記憶體回收開始和結束時，會通知程式碼剖析工具。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-134">A profiler can be notified when a garbage collection starts and ends.</span></span> <span data-ttu-id="dc8fb-135">它可以提供 Managed 堆積上之物件的相關報告，包括每個層代中的物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-135">It can provide reports about the objects on the managed heap, including an identification of objects in each generation.</span></span> <span data-ttu-id="dc8fb-136">如需詳細資訊，請參閱[分析概觀](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-136">For more information, see [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).</span></span>  
+### <a name="the-profiling-api"></a><span data-ttu-id="19cb0-132">程式碼剖析 API</span><span class="sxs-lookup"><span data-stu-id="19cb0-132">The Profiling API</span></span>  
+ <span data-ttu-id="19cb0-133">Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期間受影響之物件的詳細相關資訊。</span><span class="sxs-lookup"><span data-stu-id="19cb0-133">The common language runtime (CLR) profiling interfaces provide detailed information about the objects that were affected during garbage collection.</span></span> <span data-ttu-id="19cb0-134">當記憶體回收開始和結束時，會通知程式碼剖析工具。</span><span class="sxs-lookup"><span data-stu-id="19cb0-134">A profiler can be notified when a garbage collection starts and ends.</span></span> <span data-ttu-id="19cb0-135">它可以提供 Managed 堆積上之物件的相關報告，包括每個層代中的物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="19cb0-135">It can provide reports about the objects on the managed heap, including an identification of objects in each generation.</span></span> <span data-ttu-id="19cb0-136">如需詳細資訊，請參閱[分析概觀](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-136">For more information, see [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).</span></span>  
   
- <span data-ttu-id="dc8fb-137">程式碼剖析工具可以提供完整的資訊。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-137">Profilers can provide comprehensive information.</span></span> <span data-ttu-id="dc8fb-138">不過，複雜的程式碼剖析工具可能會修改應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-138">However, complex profilers can potentially modify an application's behavior.</span></span>  
+ <span data-ttu-id="19cb0-137">程式碼剖析工具可以提供完整的資訊。</span><span class="sxs-lookup"><span data-stu-id="19cb0-137">Profilers can provide comprehensive information.</span></span> <span data-ttu-id="19cb0-138">不過，複雜的程式碼剖析工具可能會修改應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="19cb0-138">However, complex profilers can potentially modify an application's behavior.</span></span>  
   
-### <a name="application-domain-resource-monitoring"></a><span data-ttu-id="dc8fb-139">應用程式定義域資源監視</span><span class="sxs-lookup"><span data-stu-id="dc8fb-139">Application Domain Resource Monitoring</span></span>  
- <span data-ttu-id="dc8fb-140">從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，應用程式定義域資源監視 (ARM) 可讓主機監視應用程式定義域的 CPU 和記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-140">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Application domain resource monitoring (ARM) enables hosts to monitor CPU and memory usage by application domain.</span></span> <span data-ttu-id="dc8fb-141">如需詳細資訊，請參閱[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-141">For more information, see [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).</span></span>  
+### <a name="application-domain-resource-monitoring"></a><span data-ttu-id="19cb0-139">應用程式定義域資源監視</span><span class="sxs-lookup"><span data-stu-id="19cb0-139">Application Domain Resource Monitoring</span></span>  
+ <span data-ttu-id="19cb0-140">從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，應用程式定義域資源監視 (ARM) 可讓主機監視應用程式定義域的 CPU 和記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-140">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Application domain resource monitoring (ARM) enables hosts to monitor CPU and memory usage by application domain.</span></span> <span data-ttu-id="19cb0-141">如需詳細資訊，請參閱[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-141">For more information, see [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).</span></span>  
   
- [<span data-ttu-id="dc8fb-142">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dc8fb-142">Back to top</span></span>](#top)  
+ [<span data-ttu-id="19cb0-142">回到頁首</span><span class="sxs-lookup"><span data-stu-id="19cb0-142">Back to top</span></span>](#top)  
   
 <a name="troubleshooting_performance_issues"></a>   
-## <a name="troubleshooting-performance-issues"></a><span data-ttu-id="dc8fb-143">效能問題疑難排解</span><span class="sxs-lookup"><span data-stu-id="dc8fb-143">Troubleshooting Performance Issues</span></span>  
- <span data-ttu-id="dc8fb-144">第一個步驟是[判斷問題是否真的是記憶體回收](#IsGC)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-144">The first step is to [determine whether the issue is actually garbage collection](#IsGC).</span></span> <span data-ttu-id="dc8fb-145">如果您判斷是，則請從下列清單選取以疑難排解問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-145">If you determine that it is, select from the following list to troubleshoot the problem.</span></span>  
+## <a name="troubleshooting-performance-issues"></a><span data-ttu-id="19cb0-143">效能問題疑難排解</span><span class="sxs-lookup"><span data-stu-id="19cb0-143">Troubleshooting Performance Issues</span></span>  
+ <span data-ttu-id="19cb0-144">第一個步驟是[判斷問題是否真的是記憶體回收](#IsGC)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-144">The first step is to [determine whether the issue is actually garbage collection](#IsGC).</span></span> <span data-ttu-id="19cb0-145">如果您判斷是，則請從下列清單選取以疑難排解問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-145">If you determine that it is, select from the following list to troubleshoot the problem.</span></span>  
   
--   [<span data-ttu-id="dc8fb-146">擲回記憶體不足例外狀況</span><span class="sxs-lookup"><span data-stu-id="dc8fb-146">An out-of-memory exception is thrown</span></span>](#Issue_OOM)  
+-   [<span data-ttu-id="19cb0-146">擲回記憶體不足例外狀況</span><span class="sxs-lookup"><span data-stu-id="19cb0-146">An out-of-memory exception is thrown</span></span>](#Issue_OOM)  
   
--   [<span data-ttu-id="dc8fb-147">處理序使用太多記憶體</span><span class="sxs-lookup"><span data-stu-id="dc8fb-147">The process uses too much memory</span></span>](#Issue_TooMuchMemory)  
+-   [<span data-ttu-id="19cb0-147">處理序使用太多記憶體</span><span class="sxs-lookup"><span data-stu-id="19cb0-147">The process uses too much memory</span></span>](#Issue_TooMuchMemory)  
   
--   [<span data-ttu-id="dc8fb-148">記憶體回收行程回收物件速度不夠快</span><span class="sxs-lookup"><span data-stu-id="dc8fb-148">The garbage collector does not reclaim objects fast enough</span></span>](#Issue_NotFastEnough)  
+-   [<span data-ttu-id="19cb0-148">記憶體回收行程回收物件速度不夠快</span><span class="sxs-lookup"><span data-stu-id="19cb0-148">The garbage collector does not reclaim objects fast enough</span></span>](#Issue_NotFastEnough)  
   
--   [<span data-ttu-id="dc8fb-149">Managed 堆積太過分散</span><span class="sxs-lookup"><span data-stu-id="dc8fb-149">The managed heap is too fragmented</span></span>](#Issue_Fragmentation)  
+-   [<span data-ttu-id="19cb0-149">Managed 堆積太過分散</span><span class="sxs-lookup"><span data-stu-id="19cb0-149">The managed heap is too fragmented</span></span>](#Issue_Fragmentation)  
   
--   [<span data-ttu-id="dc8fb-150">記憶體回收暫停太長</span><span class="sxs-lookup"><span data-stu-id="dc8fb-150">Garbage collection pauses are too long</span></span>](#Issue_LongPauses)  
+-   [<span data-ttu-id="19cb0-150">記憶體回收暫停太長</span><span class="sxs-lookup"><span data-stu-id="19cb0-150">Garbage collection pauses are too long</span></span>](#Issue_LongPauses)  
   
--   [<span data-ttu-id="dc8fb-151">層代 0 太大</span><span class="sxs-lookup"><span data-stu-id="dc8fb-151">Generation 0 is too big</span></span>](#Issue_Gen0)  
+-   [<span data-ttu-id="19cb0-151">層代 0 太大</span><span class="sxs-lookup"><span data-stu-id="19cb0-151">Generation 0 is too big</span></span>](#Issue_Gen0)  
   
--   [<span data-ttu-id="dc8fb-152">在記憶體回收期間的 CPU 使用量太高</span><span class="sxs-lookup"><span data-stu-id="dc8fb-152">CPU usage during a garbage collection is too high</span></span>](#Issue_HighCPU)  
+-   [<span data-ttu-id="19cb0-152">在記憶體回收期間的 CPU 使用量太高</span><span class="sxs-lookup"><span data-stu-id="19cb0-152">CPU usage during a garbage collection is too high</span></span>](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a><span data-ttu-id="dc8fb-153">問題：擲回記憶體不足例外狀況</span><span class="sxs-lookup"><span data-stu-id="dc8fb-153">Issue: An Out-of-Memory Exception Is Thrown</span></span>  
- <span data-ttu-id="dc8fb-154">有兩種合理狀況會擲回 Managed <xref:System.OutOfMemoryException>：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-154">There are two legitimate cases for a managed <xref:System.OutOfMemoryException> to be thrown:</span></span>  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a><span data-ttu-id="19cb0-153">問題：擲回記憶體不足例外狀況</span><span class="sxs-lookup"><span data-stu-id="19cb0-153">Issue: An Out-of-Memory Exception Is Thrown</span></span>  
+ <span data-ttu-id="19cb0-154">有兩種合理狀況會擲回 Managed <xref:System.OutOfMemoryException>：</span><span class="sxs-lookup"><span data-stu-id="19cb0-154">There are two legitimate cases for a managed <xref:System.OutOfMemoryException> to be thrown:</span></span>  
   
--   <span data-ttu-id="dc8fb-155">虛擬記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-155">Running out of virtual memory.</span></span>  
+-   <span data-ttu-id="19cb0-155">虛擬記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="19cb0-155">Running out of virtual memory.</span></span>  
   
-     <span data-ttu-id="dc8fb-156">記憶體回收行程會以預先決定大小的區段，從系統配置記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-156">The garbage collector allocates memory from the system in segments of a pre-determined size.</span></span> <span data-ttu-id="dc8fb-157">如果配置需要額外的區段，但處理序的虛擬記憶體空間中沒有剩下連續的可用區塊，則 Managed 堆積配置將會失敗。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-157">If an allocation requires an additional segment, but there is no contiguous free block left in the process's virtual memory space, the allocation for the managed heap will fail.</span></span>  
+     <span data-ttu-id="19cb0-156">記憶體回收行程會以預先決定大小的區段，從系統配置記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-156">The garbage collector allocates memory from the system in segments of a pre-determined size.</span></span> <span data-ttu-id="19cb0-157">如果配置需要額外的區段，但處理序的虛擬記憶體空間中沒有剩下連續的可用區塊，則 Managed 堆積配置將會失敗。</span><span class="sxs-lookup"><span data-stu-id="19cb0-157">If an allocation requires an additional segment, but there is no contiguous free block left in the process's virtual memory space, the allocation for the managed heap will fail.</span></span>  
   
--   <span data-ttu-id="dc8fb-158">沒有足夠的實體記憶體可配置。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-158">Not having enough physical memory to allocate.</span></span>  
+-   <span data-ttu-id="19cb0-158">沒有足夠的實體記憶體可配置。</span><span class="sxs-lookup"><span data-stu-id="19cb0-158">Not having enough physical memory to allocate.</span></span>  
   
-|<span data-ttu-id="dc8fb-159">效能檢查</span><span class="sxs-lookup"><span data-stu-id="dc8fb-159">Performance checks</span></span>|  
+|<span data-ttu-id="19cb0-159">效能檢查</span><span class="sxs-lookup"><span data-stu-id="19cb0-159">Performance checks</span></span>|  
 |------------------------|  
-|[<span data-ttu-id="dc8fb-160">判斷記憶體不足例外狀況是否為 Managed。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-160">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)<br /><br /> [<span data-ttu-id="dc8fb-161">判斷可以保留多少虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-161">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="dc8fb-162">判斷是否有足夠的實體記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-162">Determine whether there is enough physical memory.</span></span>](#Physical)|  
+|[<span data-ttu-id="19cb0-160">判斷記憶體不足例外狀況是否為 Managed。</span><span class="sxs-lookup"><span data-stu-id="19cb0-160">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)<br /><br /> [<span data-ttu-id="19cb0-161">判斷可以保留多少虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-161">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="19cb0-162">判斷是否有足夠的實體記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-162">Determine whether there is enough physical memory.</span></span>](#Physical)|  
   
- <span data-ttu-id="dc8fb-163">如果您判斷例外狀況不合法，請連絡 Microsoft 客戶服務及支援，並提供下列資訊：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-163">If you determine that the exception is not legitimate, contact Microsoft Customer Service and Support with the following information:</span></span>  
+ <span data-ttu-id="19cb0-163">如果您判斷例外狀況不合法，請連絡 Microsoft 客戶服務及支援，並提供下列資訊：</span><span class="sxs-lookup"><span data-stu-id="19cb0-163">If you determine that the exception is not legitimate, contact Microsoft Customer Service and Support with the following information:</span></span>  
   
--   <span data-ttu-id="dc8fb-164">具有受管理的記憶體不足例外狀況的堆疊。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-164">The stack with the managed out-of-memory exception.</span></span>  
+-   <span data-ttu-id="19cb0-164">具有受管理的記憶體不足例外狀況的堆疊。</span><span class="sxs-lookup"><span data-stu-id="19cb0-164">The stack with the managed out-of-memory exception.</span></span>  
   
--   <span data-ttu-id="dc8fb-165">完整記憶體傾印。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-165">Full memory dump.</span></span>  
+-   <span data-ttu-id="19cb0-165">完整記憶體傾印。</span><span class="sxs-lookup"><span data-stu-id="19cb0-165">Full memory dump.</span></span>  
   
--   <span data-ttu-id="dc8fb-166">證明它是不合法的記憶體不足例外狀況的資料，包括顯示虛擬或實體記憶體不是問題的資料。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-166">Data that proves that it is not a legitimate out-of-memory exception, including data that shows that virtual or physical memory is not an issue.</span></span>  
+-   <span data-ttu-id="19cb0-166">證明它是不合法的記憶體不足例外狀況的資料，包括顯示虛擬或實體記憶體不是問題的資料。</span><span class="sxs-lookup"><span data-stu-id="19cb0-166">Data that proves that it is not a legitimate out-of-memory exception, including data that shows that virtual or physical memory is not an issue.</span></span>  
   
 <a name="Issue_TooMuchMemory"></a>   
-### <a name="issue-the-process-uses-too-much-memory"></a><span data-ttu-id="dc8fb-167">問題：處理序使用太多記憶體</span><span class="sxs-lookup"><span data-stu-id="dc8fb-167">Issue: The Process Uses Too Much Memory</span></span>  
- <span data-ttu-id="dc8fb-168">常見的假設是 Windows 工作管理員 [效能] 索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-168">A common assumption is that the memory usage display on the **Performance** tab of Windows Task Manager can indicate when too much memory is being used.</span></span> <span data-ttu-id="dc8fb-169">不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-169">However, that display pertains to the working set; it does not provide information about virtual memory usage.</span></span>  
+### <a name="issue-the-process-uses-too-much-memory"></a><span data-ttu-id="19cb0-167">問題：處理序使用太多記憶體</span><span class="sxs-lookup"><span data-stu-id="19cb0-167">Issue: The Process Uses Too Much Memory</span></span>  
+ <span data-ttu-id="19cb0-168">常見的假設是 Windows 工作管理員 [效能] 索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。</span><span class="sxs-lookup"><span data-stu-id="19cb0-168">A common assumption is that the memory usage display on the **Performance** tab of Windows Task Manager can indicate when too much memory is being used.</span></span> <span data-ttu-id="19cb0-169">不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="19cb0-169">However, that display pertains to the working set; it does not provide information about virtual memory usage.</span></span>  
   
- <span data-ttu-id="dc8fb-170">如果您判斷問題是 Managed 堆積所導致，您必須在一段時間內測量 Managed 堆積，以判斷任何模式。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-170">If you determine that the issue is caused by the managed heap, you must measure the managed heap over time to determine any patterns.</span></span>  
+ <span data-ttu-id="19cb0-170">如果您判斷問題是 Managed 堆積所導致，您必須在一段時間內測量 Managed 堆積，以判斷任何模式。</span><span class="sxs-lookup"><span data-stu-id="19cb0-170">If you determine that the issue is caused by the managed heap, you must measure the managed heap over time to determine any patterns.</span></span>  
   
- <span data-ttu-id="dc8fb-171">如果您判斷問題不是 Managed 堆積所導致，則您必須使用原生偵錯。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-171">If you determine that the problem is not caused by the managed heap, you must use native debugging.</span></span>  
+ <span data-ttu-id="19cb0-171">如果您判斷問題不是 Managed 堆積所導致，則您必須使用原生偵錯。</span><span class="sxs-lookup"><span data-stu-id="19cb0-171">If you determine that the problem is not caused by the managed heap, you must use native debugging.</span></span>  
   
-|<span data-ttu-id="dc8fb-172">效能檢查</span><span class="sxs-lookup"><span data-stu-id="dc8fb-172">Performance checks</span></span>|  
+|<span data-ttu-id="19cb0-172">效能檢查</span><span class="sxs-lookup"><span data-stu-id="19cb0-172">Performance checks</span></span>|  
 |------------------------|  
-|[<span data-ttu-id="dc8fb-173">判斷可以保留多少虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-173">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="dc8fb-174">判斷 Managed 堆積正在認可的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-174">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)<br /><br /> [<span data-ttu-id="dc8fb-175">判斷 Managed 堆積保留的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-175">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)<br /><br /> [<span data-ttu-id="dc8fb-176">判斷層代 2 的大型物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-176">Determine large objects in generation 2.</span></span>](#ExamineGen2)<br /><br /> [<span data-ttu-id="dc8fb-177">判斷物件的參考。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-177">Determine references to objects.</span></span>](#ObjRef)|  
+|[<span data-ttu-id="19cb0-173">判斷可以保留多少虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-173">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="19cb0-174">判斷 Managed 堆積正在認可的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-174">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)<br /><br /> [<span data-ttu-id="19cb0-175">判斷 Managed 堆積保留的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-175">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)<br /><br /> [<span data-ttu-id="19cb0-176">判斷層代 2 的大型物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-176">Determine large objects in generation 2.</span></span>](#ExamineGen2)<br /><br /> [<span data-ttu-id="19cb0-177">判斷物件的參考。</span><span class="sxs-lookup"><span data-stu-id="19cb0-177">Determine references to objects.</span></span>](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a><span data-ttu-id="dc8fb-178">問題：記憶體回收行程回收物件速度不夠快</span><span class="sxs-lookup"><span data-stu-id="dc8fb-178">Issue: The Garbage Collector Does Not Reclaim Objects Fast Enough</span></span>  
- <span data-ttu-id="dc8fb-179">當物件似乎未如預期般被回收以進行記憶體回收時，您必須判斷是否有對這些物件的任何強式參考。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-179">When it appears as if objects are not being reclaimed as expected for garbage collection, you must determine if there are any strong references to those objects.</span></span>  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a><span data-ttu-id="19cb0-178">問題：記憶體回收行程回收物件速度不夠快</span><span class="sxs-lookup"><span data-stu-id="19cb0-178">Issue: The Garbage Collector Does Not Reclaim Objects Fast Enough</span></span>  
+ <span data-ttu-id="19cb0-179">當物件似乎未如預期般被回收以進行記憶體回收時，您必須判斷是否有對這些物件的任何強式參考。</span><span class="sxs-lookup"><span data-stu-id="19cb0-179">When it appears as if objects are not being reclaimed as expected for garbage collection, you must determine if there are any strong references to those objects.</span></span>  
   
- <span data-ttu-id="dc8fb-180">如果包含無作用物件的層代已經沒有記憶體回收 (表示尚未執行無作用物件的完成項)，您也可能會遇到這個問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-180">You may also encounter this issue if there has been no garbage collection for the generation that contains a dead object, which indicates that the finalizer for the dead object has not been run.</span></span> <span data-ttu-id="dc8fb-181">比方說，這可能發生在您執行單一執行緒 Apartment (STA) 應用程式和服務完成項佇列的執行緒無法呼叫到它時。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-181">For example, this is possible when you are running a single-threaded apartment (STA) application and the thread that services the finalizer queue cannot call into it.</span></span>  
+ <span data-ttu-id="19cb0-180">如果包含無作用物件的層代已經沒有記憶體回收 (表示尚未執行無作用物件的完成項)，您也可能會遇到這個問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-180">You may also encounter this issue if there has been no garbage collection for the generation that contains a dead object, which indicates that the finalizer for the dead object has not been run.</span></span> <span data-ttu-id="19cb0-181">比方說，這可能發生在您執行單一執行緒 Apartment (STA) 應用程式和服務完成項佇列的執行緒無法呼叫到它時。</span><span class="sxs-lookup"><span data-stu-id="19cb0-181">For example, this is possible when you are running a single-threaded apartment (STA) application and the thread that services the finalizer queue cannot call into it.</span></span>  
   
-|<span data-ttu-id="dc8fb-182">效能檢查</span><span class="sxs-lookup"><span data-stu-id="dc8fb-182">Performance checks</span></span>|  
+|<span data-ttu-id="19cb0-182">效能檢查</span><span class="sxs-lookup"><span data-stu-id="19cb0-182">Performance checks</span></span>|  
 |------------------------|  
-|[<span data-ttu-id="dc8fb-183">檢查物件的參考。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-183">Check references to objects.</span></span>](#ObjRef)<br /><br /> [<span data-ttu-id="dc8fb-184">判斷是否已執行完成項。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-184">Determine whether a finalizer has been run.</span></span>](#Induce)<br /><br /> [<span data-ttu-id="dc8fb-185">判斷是否有等候完成的物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-185">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)|  
+|[<span data-ttu-id="19cb0-183">檢查物件的參考。</span><span class="sxs-lookup"><span data-stu-id="19cb0-183">Check references to objects.</span></span>](#ObjRef)<br /><br /> [<span data-ttu-id="19cb0-184">判斷是否已執行完成項。</span><span class="sxs-lookup"><span data-stu-id="19cb0-184">Determine whether a finalizer has been run.</span></span>](#Induce)<br /><br /> [<span data-ttu-id="19cb0-185">判斷是否有等候完成的物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-185">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a><span data-ttu-id="dc8fb-186">問題：Managed 堆積太過分散</span><span class="sxs-lookup"><span data-stu-id="dc8fb-186">Issue: The Managed Heap Is Too fragmented</span></span>  
- <span data-ttu-id="dc8fb-187">分散層級的計算方式是可用空間佔層代配置記憶體總數的比例。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-187">The fragmentation level is calculated as the ratio of free space over the total allocated memory for the generation.</span></span> <span data-ttu-id="dc8fb-188">針對層代 2，可接受的分散層級是不超過 20%。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-188">For generation 2, an acceptable level of fragmentation is no more than 20%.</span></span> <span data-ttu-id="dc8fb-189">層代 2 可能會非常大，因此分散比例比絕對值更重要。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-189">Because generation 2 can get very big, the ratio of fragmentation is more important than the absolute value.</span></span>  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a><span data-ttu-id="19cb0-186">問題：Managed 堆積太過分散</span><span class="sxs-lookup"><span data-stu-id="19cb0-186">Issue: The Managed Heap Is Too fragmented</span></span>  
+ <span data-ttu-id="19cb0-187">分散層級的計算方式是可用空間佔層代配置記憶體總數的比例。</span><span class="sxs-lookup"><span data-stu-id="19cb0-187">The fragmentation level is calculated as the ratio of free space over the total allocated memory for the generation.</span></span> <span data-ttu-id="19cb0-188">針對層代 2，可接受的分散層級是不超過 20%。</span><span class="sxs-lookup"><span data-stu-id="19cb0-188">For generation 2, an acceptable level of fragmentation is no more than 20%.</span></span> <span data-ttu-id="19cb0-189">層代 2 可能會非常大，因此分散比例比絕對值更重要。</span><span class="sxs-lookup"><span data-stu-id="19cb0-189">Because generation 2 can get very big, the ratio of fragmentation is more important than the absolute value.</span></span>  
   
- <span data-ttu-id="dc8fb-190">層代 0 中有很多可用空間不成問題，因為這是配置新物件配置所在的層代。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-190">Having lots of free space in generation 0 is not a problem because this is the generation where new objects are allocated.</span></span>  
+ <span data-ttu-id="19cb0-190">層代 0 中有很多可用空間不成問題，因為這是配置新物件配置所在的層代。</span><span class="sxs-lookup"><span data-stu-id="19cb0-190">Having lots of free space in generation 0 is not a problem because this is the generation where new objects are allocated.</span></span>  
   
- <span data-ttu-id="dc8fb-191">分散一律發生在大型物件堆積中，因為它不會壓縮。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-191">Fragmentation always occurs in the large object heap because it is not compacted.</span></span> <span data-ttu-id="dc8fb-192">相鄰的可用物件自然而然會聚攏成為單一空間，以滿足大型物件配置要求。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-192">Free objects that are adjacent are naturally collapsed into a single space to satisfy large object allocation requests.</span></span>  
+ <span data-ttu-id="19cb0-191">分散一律發生在大型物件堆積中，因為它不會壓縮。</span><span class="sxs-lookup"><span data-stu-id="19cb0-191">Fragmentation always occurs in the large object heap because it is not compacted.</span></span> <span data-ttu-id="19cb0-192">相鄰的可用物件自然而然會聚攏成為單一空間，以滿足大型物件配置要求。</span><span class="sxs-lookup"><span data-stu-id="19cb0-192">Free objects that are adjacent are naturally collapsed into a single space to satisfy large object allocation requests.</span></span>  
   
- <span data-ttu-id="dc8fb-193">分散可能會在層代 1 和層代 2 成為問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-193">Fragmentation can become a problem in generation 1 and generation 2.</span></span> <span data-ttu-id="dc8fb-194">如果這些層代在記憶體回收之後有大量的可用空間，應用程式的物件使用方式可能需要修改，而且您應該考慮重新評估長期物件的存留期。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-194">If these generations have a large amount of free space after a garbage collection, an application's object usage may need modification, and you should consider re-evaluating the lifetime of long-term objects.</span></span>  
+ <span data-ttu-id="19cb0-193">分散可能會在層代 1 和層代 2 成為問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-193">Fragmentation can become a problem in generation 1 and generation 2.</span></span> <span data-ttu-id="19cb0-194">如果這些層代在記憶體回收之後有大量的可用空間，應用程式的物件使用方式可能需要修改，而且您應該考慮重新評估長期物件的存留期。</span><span class="sxs-lookup"><span data-stu-id="19cb0-194">If these generations have a large amount of free space after a garbage collection, an application's object usage may need modification, and you should consider re-evaluating the lifetime of long-term objects.</span></span>  
   
- <span data-ttu-id="dc8fb-195">固定過多物件可能會增加分散。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-195">Excessive pinning of objects can increase fragmentation.</span></span> <span data-ttu-id="dc8fb-196">如果分散很高，可能是已固定太多物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-196">If fragmentation is high, too many objects could be pinned.</span></span>  
+ <span data-ttu-id="19cb0-195">固定過多物件可能會增加分散。</span><span class="sxs-lookup"><span data-stu-id="19cb0-195">Excessive pinning of objects can increase fragmentation.</span></span> <span data-ttu-id="19cb0-196">如果分散很高，可能是已固定太多物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-196">If fragmentation is high, too many objects could be pinned.</span></span>  
   
- <span data-ttu-id="dc8fb-197">如果虛擬記憶體的分散導致記憶體回收行程無法加入區段，原因可能是下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-197">If fragmentation of virtual memory is preventing the garbage collector from adding segments, the causes could be one of the following:</span></span>  
+ <span data-ttu-id="19cb0-197">如果虛擬記憶體的分散導致記憶體回收行程無法加入區段，原因可能是下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="19cb0-197">If fragmentation of virtual memory is preventing the garbage collector from adding segments, the causes could be one of the following:</span></span>  
   
--   <span data-ttu-id="dc8fb-198">經常載入及卸載許多小型組件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-198">Frequent loading and unloading of many small assemblies.</span></span>  
+-   <span data-ttu-id="19cb0-198">經常載入及卸載許多小型組件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-198">Frequent loading and unloading of many small assemblies.</span></span>  
   
--   <span data-ttu-id="dc8fb-199">與 Unmanaged 程式碼交互作用時，保留太多 COM 物件的參考。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-199">Holding too many references to COM objects when interoperating with unmanaged code.</span></span>  
+-   <span data-ttu-id="19cb0-199">與 Unmanaged 程式碼交互作用時，保留太多 COM 物件的參考。</span><span class="sxs-lookup"><span data-stu-id="19cb0-199">Holding too many references to COM objects when interoperating with unmanaged code.</span></span>  
   
--   <span data-ttu-id="dc8fb-200">建立大型的暫時性物件，這會造成大型物件堆積頻繁地配置和釋放堆積區段。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-200">Creation of large transient objects, which causes the large object heap to allocate and free heap segments frequently.</span></span>  
+-   <span data-ttu-id="19cb0-200">建立大型的暫時性物件，這會造成大型物件堆積頻繁地配置和釋放堆積區段。</span><span class="sxs-lookup"><span data-stu-id="19cb0-200">Creation of large transient objects, which causes the large object heap to allocate and free heap segments frequently.</span></span>  
   
-     <span data-ttu-id="dc8fb-201">裝載 CLR 時，應用程式可以要求記憶體回收行程保留其區段。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-201">When hosting the CLR, an application can request that the garbage collector retain its segments.</span></span> <span data-ttu-id="dc8fb-202">這會減少區段配置的頻率。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-202">This reduces the frequency of segment allocations.</span></span> <span data-ttu-id="dc8fb-203">這可以藉由使用 [STARTUP_FLAGS 列舉](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)中的 STARTUP_HOARD_GC_VM 旗標來達成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-203">This is accomplished by using the STARTUP_HOARD_GC_VM flag in the [STARTUP_FLAGS Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).</span></span>  
+     <span data-ttu-id="19cb0-201">裝載 CLR 時，應用程式可以要求記憶體回收行程保留其區段。</span><span class="sxs-lookup"><span data-stu-id="19cb0-201">When hosting the CLR, an application can request that the garbage collector retain its segments.</span></span> <span data-ttu-id="19cb0-202">這會減少區段配置的頻率。</span><span class="sxs-lookup"><span data-stu-id="19cb0-202">This reduces the frequency of segment allocations.</span></span> <span data-ttu-id="19cb0-203">這可以藉由使用 [STARTUP_FLAGS 列舉](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)中的 STARTUP_HOARD_GC_VM 旗標來達成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-203">This is accomplished by using the STARTUP_HOARD_GC_VM flag in the [STARTUP_FLAGS Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).</span></span>  
   
-|<span data-ttu-id="dc8fb-204">效能檢查</span><span class="sxs-lookup"><span data-stu-id="dc8fb-204">Performance checks</span></span>|  
+|<span data-ttu-id="19cb0-204">效能檢查</span><span class="sxs-lookup"><span data-stu-id="19cb0-204">Performance checks</span></span>|  
 |------------------------|  
-|[<span data-ttu-id="dc8fb-205">判斷 Managed 堆積中的可用空間數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-205">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)<br /><br /> [<span data-ttu-id="dc8fb-206">判斷被固定的物件數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-206">Determine the number of pinned objects.</span></span>](#Pinned)|  
+|[<span data-ttu-id="19cb0-205">判斷 Managed 堆積中的可用空間數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-205">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)<br /><br /> [<span data-ttu-id="19cb0-206">判斷被固定的物件數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-206">Determine the number of pinned objects.</span></span>](#Pinned)|  
   
- <span data-ttu-id="dc8fb-207">如果您認為是不合法的分散原因，請連絡 Microsoft 客戶服務及支援中心。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-207">If you think that there is no legitimate cause for the fragmentation, contact Microsoft Customer Service and Support.</span></span>  
+ <span data-ttu-id="19cb0-207">如果您認為是不合法的分散原因，請連絡 Microsoft 客戶服務及支援中心。</span><span class="sxs-lookup"><span data-stu-id="19cb0-207">If you think that there is no legitimate cause for the fragmentation, contact Microsoft Customer Service and Support.</span></span>  
   
 <a name="Issue_LongPauses"></a>   
-### <a name="issue-garbage-collection-pauses-are-too-long"></a><span data-ttu-id="dc8fb-208">問題：記憶體回收暫停太長</span><span class="sxs-lookup"><span data-stu-id="dc8fb-208">Issue: Garbage Collection Pauses Are Too Long</span></span>  
- <span data-ttu-id="dc8fb-209">記憶體回收以軟性即時方式運作，所以應用程式必須能夠容忍某些暫停。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-209">Garbage collection operates in soft real time, so an application must be able to tolerate some pauses.</span></span> <span data-ttu-id="dc8fb-210">軟性即時的準則是 95% 的作業必須準時完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-210">A criterion for soft real time is that 95% of the operations must finish on time.</span></span>  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a><span data-ttu-id="19cb0-208">問題：記憶體回收暫停太長</span><span class="sxs-lookup"><span data-stu-id="19cb0-208">Issue: Garbage Collection Pauses Are Too Long</span></span>  
+ <span data-ttu-id="19cb0-209">記憶體回收以軟性即時方式運作，所以應用程式必須能夠容忍某些暫停。</span><span class="sxs-lookup"><span data-stu-id="19cb0-209">Garbage collection operates in soft real time, so an application must be able to tolerate some pauses.</span></span> <span data-ttu-id="19cb0-210">軟性即時的準則是 95% 的作業必須準時完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-210">A criterion for soft real time is that 95% of the operations must finish on time.</span></span>  
   
- <span data-ttu-id="dc8fb-211">在並行記憶體回收中，Managed 執行緒可以在回收期間執行，這表示很少暫停。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-211">In concurrent garbage collection, managed threads are allowed to run during a collection, which means that pauses are very minimal.</span></span>  
+ <span data-ttu-id="19cb0-211">在並行記憶體回收中，Managed 執行緒可以在回收期間執行，這表示很少暫停。</span><span class="sxs-lookup"><span data-stu-id="19cb0-211">In concurrent garbage collection, managed threads are allowed to run during a collection, which means that pauses are very minimal.</span></span>  
   
- <span data-ttu-id="dc8fb-212">暫時記憶體回收 (層代 0 和 1) 只會持續幾毫秒，因此減少暫停通常並不可行。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-212">Ephemeral garbage collections (generations 0 and 1) last only a few milliseconds, so decreasing pauses is usually not feasible.</span></span> <span data-ttu-id="dc8fb-213">不過，您可以變更應用程式的配置要求模式，來減少在層代 2 回收中的暫停。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-213">However, you can decrease the pauses in generation 2 collections by changing the pattern of allocation requests by an application.</span></span>  
+ <span data-ttu-id="19cb0-212">暫時記憶體回收 (層代 0 和 1) 只會持續幾毫秒，因此減少暫停通常並不可行。</span><span class="sxs-lookup"><span data-stu-id="19cb0-212">Ephemeral garbage collections (generations 0 and 1) last only a few milliseconds, so decreasing pauses is usually not feasible.</span></span> <span data-ttu-id="19cb0-213">不過，您可以變更應用程式的配置要求模式，來減少在層代 2 回收中的暫停。</span><span class="sxs-lookup"><span data-stu-id="19cb0-213">However, you can decrease the pauses in generation 2 collections by changing the pattern of allocation requests by an application.</span></span>  
   
- <span data-ttu-id="dc8fb-214">另一個、更正確的方法是使用[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-214">Another, more accurate, method is to use [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md).</span></span> <span data-ttu-id="dc8fb-215">您可以藉由加入一系列事件的時間戳記差異來尋找回收的時機。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-215">You can find the timings for collections by adding the time stamp differences for a sequence of events.</span></span> <span data-ttu-id="dc8fb-216">整個回收順序包含擱置執行引擎、記憶體回收本身，以及繼續執行引擎。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-216">The whole collection sequence includes suspension of the execution engine, the garbage collection itself, and the resumption of the execution engine.</span></span>  
+ <span data-ttu-id="19cb0-214">另一個、更正確的方法是使用[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-214">Another, more accurate, method is to use [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md).</span></span> <span data-ttu-id="19cb0-215">您可以藉由加入一系列事件的時間戳記差異來尋找回收的時機。</span><span class="sxs-lookup"><span data-stu-id="19cb0-215">You can find the timings for collections by adding the time stamp differences for a sequence of events.</span></span> <span data-ttu-id="19cb0-216">整個回收順序包含擱置執行引擎、記憶體回收本身，以及繼續執行引擎。</span><span class="sxs-lookup"><span data-stu-id="19cb0-216">The whole collection sequence includes suspension of the execution engine, the garbage collection itself, and the resumption of the execution engine.</span></span>  
   
- <span data-ttu-id="dc8fb-217">您可以使用[記憶體回收通知](../../../docs/standard/garbage-collection/notifications.md)判斷伺服器是否即將有層代 2 回收，及將要求重設路徑到另一部伺服器是否可以緩解任何暫停問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-217">You can use [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) to determine whether a server is about to have a generation 2 collection, and whether rerouting requests to another server could ease any problems with pauses.</span></span>  
+ <span data-ttu-id="19cb0-217">您可以使用[記憶體回收通知](../../../docs/standard/garbage-collection/notifications.md)判斷伺服器是否即將有層代 2 回收，及將要求重設路徑到另一部伺服器是否可以緩解任何暫停問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-217">You can use [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) to determine whether a server is about to have a generation 2 collection, and whether rerouting requests to another server could ease any problems with pauses.</span></span>  
   
-|<span data-ttu-id="dc8fb-218">效能檢查</span><span class="sxs-lookup"><span data-stu-id="dc8fb-218">Performance checks</span></span>|  
+|<span data-ttu-id="19cb0-218">效能檢查</span><span class="sxs-lookup"><span data-stu-id="19cb0-218">Performance checks</span></span>|  
 |------------------------|  
-|[<span data-ttu-id="dc8fb-219">判斷記憶體回收的時間長度。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-219">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)<br /><br /> [<span data-ttu-id="dc8fb-220">判斷造成記憶體回收的原因。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-220">Determine what caused a garbage collection.</span></span>](#Triggered)|  
+|[<span data-ttu-id="19cb0-219">判斷記憶體回收的時間長度。</span><span class="sxs-lookup"><span data-stu-id="19cb0-219">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)<br /><br /> [<span data-ttu-id="19cb0-220">判斷造成記憶體回收的原因。</span><span class="sxs-lookup"><span data-stu-id="19cb0-220">Determine what caused a garbage collection.</span></span>](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### <a name="issue-generation-0-is-too-big"></a><span data-ttu-id="dc8fb-221">問題：層代 0 太大</span><span class="sxs-lookup"><span data-stu-id="dc8fb-221">Issue: Generation 0 Is Too Big</span></span>  
- <span data-ttu-id="dc8fb-222">層代 0 可能在 64 位元系統上，有較大量的物件，特別是當您使用伺服器記憶體回收，而不是工作站記憶體回收時。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-222">Generation 0 is likely to have a larger number of objects on a 64-bit system, especially when you use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="dc8fb-223">這是因為在這些環境中觸發層代 0 記憶體回收的臨界值較高，層代 0 回收可能會變大許多。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-223">This is because the threshold to trigger a generation 0 garbage collection is higher in these environments, and generation 0 collections can get much bigger.</span></span> <span data-ttu-id="dc8fb-224">當在觸發記憶體回收之前應用程式配置更多記憶體時，可提升效能。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-224">Performance is improved when an application allocates more memory before a garbage collection is triggered.</span></span>  
+### <a name="issue-generation-0-is-too-big"></a><span data-ttu-id="19cb0-221">問題：層代 0 太大</span><span class="sxs-lookup"><span data-stu-id="19cb0-221">Issue: Generation 0 Is Too Big</span></span>  
+ <span data-ttu-id="19cb0-222">層代 0 可能在 64 位元系統上，有較大量的物件，特別是當您使用伺服器記憶體回收，而不是工作站記憶體回收時。</span><span class="sxs-lookup"><span data-stu-id="19cb0-222">Generation 0 is likely to have a larger number of objects on a 64-bit system, especially when you use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="19cb0-223">這是因為在這些環境中觸發層代 0 記憶體回收的臨界值較高，層代 0 回收可能會變大許多。</span><span class="sxs-lookup"><span data-stu-id="19cb0-223">This is because the threshold to trigger a generation 0 garbage collection is higher in these environments, and generation 0 collections can get much bigger.</span></span> <span data-ttu-id="19cb0-224">當在觸發記憶體回收之前應用程式配置更多記憶體時，可提升效能。</span><span class="sxs-lookup"><span data-stu-id="19cb0-224">Performance is improved when an application allocates more memory before a garbage collection is triggered.</span></span>  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a><span data-ttu-id="dc8fb-225">問題：在記憶體回收期間的 CPU 使用量太高</span><span class="sxs-lookup"><span data-stu-id="dc8fb-225">Issue: CPU Usage During a Garbage Collection Is Too High</span></span>  
- <span data-ttu-id="dc8fb-226">在記憶體回收期間的 CPU 使用量會很高。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-226">CPU usage will be high during a garbage collection.</span></span> <span data-ttu-id="dc8fb-227">如果大量的處理序時間花在記憶體回收，則表示回收次數過於頻繁或是回收的持續時間太長。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-227">If a significant amount of process time is spent in a garbage collection, the number of collections is too frequent or the collection is lasting too long.</span></span> <span data-ttu-id="dc8fb-228">Managed 堆積上物件配置率增加，會導致更頻繁地進行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-228">An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</span></span> <span data-ttu-id="dc8fb-229">減少配置率可降低記憶體回收的頻率。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-229">Decreasing the allocation rate reduces the frequency of garbage collections.</span></span>  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a><span data-ttu-id="19cb0-225">問題：在記憶體回收期間的 CPU 使用量太高</span><span class="sxs-lookup"><span data-stu-id="19cb0-225">Issue: CPU Usage During a Garbage Collection Is Too High</span></span>  
+ <span data-ttu-id="19cb0-226">在記憶體回收期間的 CPU 使用量會很高。</span><span class="sxs-lookup"><span data-stu-id="19cb0-226">CPU usage will be high during a garbage collection.</span></span> <span data-ttu-id="19cb0-227">如果大量的處理序時間花在記憶體回收，則表示回收次數過於頻繁或是回收的持續時間太長。</span><span class="sxs-lookup"><span data-stu-id="19cb0-227">If a significant amount of process time is spent in a garbage collection, the number of collections is too frequent or the collection is lasting too long.</span></span> <span data-ttu-id="19cb0-228">Managed 堆積上物件配置率增加，會導致更頻繁地進行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-228">An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</span></span> <span data-ttu-id="19cb0-229">減少配置率可降低記憶體回收的頻率。</span><span class="sxs-lookup"><span data-stu-id="19cb0-229">Decreasing the allocation rate reduces the frequency of garbage collections.</span></span>  
   
- <span data-ttu-id="dc8fb-230">您可以使用 `Allocated Bytes/second` 效能計數器，以監視配置率。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-230">You can monitor allocation rates by using the `Allocated Bytes/second` performance counter.</span></span> <span data-ttu-id="dc8fb-231">如需詳細資訊，請參閱 [.NET Framework 中的效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-231">For more information, see [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).</span></span>  
+ <span data-ttu-id="19cb0-230">您可以使用 `Allocated Bytes/second` 效能計數器，以監視配置率。</span><span class="sxs-lookup"><span data-stu-id="19cb0-230">You can monitor allocation rates by using the `Allocated Bytes/second` performance counter.</span></span> <span data-ttu-id="19cb0-231">如需詳細資訊，請參閱 [.NET Framework 中的效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-231">For more information, see [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).</span></span>  
   
- <span data-ttu-id="dc8fb-232">回收的持續時間主要是配置後存留之物件數目的因素。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-232">The duration of a collection is primarily a factor of the number of objects that survive after allocation.</span></span> <span data-ttu-id="dc8fb-233">如果要收集許多物件，記憶體回收行程必須通過大量的記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-233">The garbage collector must go through a large amount of memory if many objects remain to be collected.</span></span> <span data-ttu-id="dc8fb-234">壓縮存留者的工作相當耗時。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-234">The work to compact the survivors is time-consuming.</span></span> <span data-ttu-id="dc8fb-235">若要判斷在回收期間處理的物件數目，請在指定層代的記憶體回收結尾處，在偵錯工具設定中斷點。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-235">To determine how many objects were handled during a collection, set a breakpoint in the debugger at the end of a garbage collection for a specified generation.</span></span>  
+ <span data-ttu-id="19cb0-232">回收的持續時間主要是配置後存留之物件數目的因素。</span><span class="sxs-lookup"><span data-stu-id="19cb0-232">The duration of a collection is primarily a factor of the number of objects that survive after allocation.</span></span> <span data-ttu-id="19cb0-233">如果要收集許多物件，記憶體回收行程必須通過大量的記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-233">The garbage collector must go through a large amount of memory if many objects remain to be collected.</span></span> <span data-ttu-id="19cb0-234">壓縮存留者的工作相當耗時。</span><span class="sxs-lookup"><span data-stu-id="19cb0-234">The work to compact the survivors is time-consuming.</span></span> <span data-ttu-id="19cb0-235">若要判斷在回收期間處理的物件數目，請在指定層代的記憶體回收結尾處，在偵錯工具設定中斷點。</span><span class="sxs-lookup"><span data-stu-id="19cb0-235">To determine how many objects were handled during a collection, set a breakpoint in the debugger at the end of a garbage collection for a specified generation.</span></span>  
   
-|<span data-ttu-id="dc8fb-236">效能檢查</span><span class="sxs-lookup"><span data-stu-id="dc8fb-236">Performance checks</span></span>|  
+|<span data-ttu-id="19cb0-236">效能檢查</span><span class="sxs-lookup"><span data-stu-id="19cb0-236">Performance checks</span></span>|  
 |------------------------|  
-|[<span data-ttu-id="dc8fb-237">判斷高 CPU 使用量是否由於記憶體回收所造成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-237">Determine if high CPU usage is caused by garbage collection.</span></span>](#HighCPU)<br /><br /> [<span data-ttu-id="dc8fb-238">在記憶體回收結尾處設定中斷點。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-238">Set a breakpoint at the end of garbage collection.</span></span>](#GenBreak)|  
+|[<span data-ttu-id="19cb0-237">判斷高 CPU 使用量是否由於記憶體回收所造成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-237">Determine if high CPU usage is caused by garbage collection.</span></span>](#HighCPU)<br /><br /> [<span data-ttu-id="19cb0-238">在記憶體回收結尾處設定中斷點。</span><span class="sxs-lookup"><span data-stu-id="19cb0-238">Set a breakpoint at the end of garbage collection.</span></span>](#GenBreak)|  
   
- [<span data-ttu-id="dc8fb-239">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dc8fb-239">Back to top</span></span>](#top)  
+ [<span data-ttu-id="19cb0-239">回到頁首</span><span class="sxs-lookup"><span data-stu-id="19cb0-239">Back to top</span></span>](#top)  
   
 <a name="troubleshooting_guidelines"></a>   
-## <a name="troubleshooting-guidelines"></a><span data-ttu-id="dc8fb-240">疑難排解方針</span><span class="sxs-lookup"><span data-stu-id="dc8fb-240">Troubleshooting Guidelines</span></span>  
- <span data-ttu-id="dc8fb-241">本節描述當您開始調查時，應該考慮的方針。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-241">This section describes guidelines that you should consider as you begin your investigations.</span></span>  
+## <a name="troubleshooting-guidelines"></a><span data-ttu-id="19cb0-240">疑難排解方針</span><span class="sxs-lookup"><span data-stu-id="19cb0-240">Troubleshooting Guidelines</span></span>  
+ <span data-ttu-id="19cb0-241">本節描述當您開始調查時，應該考慮的方針。</span><span class="sxs-lookup"><span data-stu-id="19cb0-241">This section describes guidelines that you should consider as you begin your investigations.</span></span>  
   
-### <a name="workstation-or-server-garbage-collection"></a><span data-ttu-id="dc8fb-242">工作站和伺服器記憶體回收</span><span class="sxs-lookup"><span data-stu-id="dc8fb-242">Workstation or Server Garbage Collection</span></span>  
- <span data-ttu-id="dc8fb-243">判斷您是否使用正確的記憶體回收類型。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-243">Determine if you are using the correct type of garbage collection.</span></span> <span data-ttu-id="dc8fb-244">如果您的應用程式使用多個執行緒和物件執行個體，請使用伺服器記憶體回收，而不要使用工作站記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-244">If your application uses multiple threads and object instances, use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="dc8fb-245">伺服器記憶體回收會在多個執行緒上運作，而工作站記憶體回收則需要應用程式的多個執行個體執行自己的記憶體回收執行緒，且會競爭 CPU 時間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-245">Server garbage collection operates on multiple threads, whereas workstation garbage collection requires multiple instances of an application to run their own garbage collection threads and compete for CPU time.</span></span>  
+### <a name="workstation-or-server-garbage-collection"></a><span data-ttu-id="19cb0-242">工作站和伺服器記憶體回收</span><span class="sxs-lookup"><span data-stu-id="19cb0-242">Workstation or Server Garbage Collection</span></span>  
+ <span data-ttu-id="19cb0-243">判斷您是否使用正確的記憶體回收類型。</span><span class="sxs-lookup"><span data-stu-id="19cb0-243">Determine if you are using the correct type of garbage collection.</span></span> <span data-ttu-id="19cb0-244">如果您的應用程式使用多個執行緒和物件執行個體，請使用伺服器記憶體回收，而不要使用工作站記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-244">If your application uses multiple threads and object instances, use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="19cb0-245">伺服器記憶體回收會在多個執行緒上運作，而工作站記憶體回收則需要應用程式的多個執行個體執行自己的記憶體回收執行緒，且會競爭 CPU 時間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-245">Server garbage collection operates on multiple threads, whereas workstation garbage collection requires multiple instances of an application to run their own garbage collection threads and compete for CPU time.</span></span>  
   
- <span data-ttu-id="dc8fb-246">具有低負載，且不常在背景中執行工作的應用程式，例如服務，可以使用工作站記憶體回收，並停用並行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-246">An application that has a low load and that performs tasks infrequently in the background, such as a service, could use workstation garbage collection with concurrent garbage collection disabled.</span></span>  
+ <span data-ttu-id="19cb0-246">具有低負載，且不常在背景中執行工作的應用程式，例如服務，可以使用工作站記憶體回收，並停用並行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-246">An application that has a low load and that performs tasks infrequently in the background, such as a service, could use workstation garbage collection with concurrent garbage collection disabled.</span></span>  
   
-### <a name="when-to-measure-the-managed-heap-size"></a><span data-ttu-id="dc8fb-247">測量 Managed 堆積大小的時機</span><span class="sxs-lookup"><span data-stu-id="dc8fb-247">When to Measure the Managed Heap Size</span></span>  
- <span data-ttu-id="dc8fb-248">除非您使用程式碼剖析工具，否則您必須建立一致的測量模式，才能有效地診斷效能問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-248">Unless you are using a profiler, you will have to establish a consistent measuring pattern to effectively diagnose performance issues.</span></span> <span data-ttu-id="dc8fb-249">建立排程時請考慮下列各點：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-249">Consider the following points to establish a schedule:</span></span>  
+### <a name="when-to-measure-the-managed-heap-size"></a><span data-ttu-id="19cb0-247">測量 Managed 堆積大小的時機</span><span class="sxs-lookup"><span data-stu-id="19cb0-247">When to Measure the Managed Heap Size</span></span>  
+ <span data-ttu-id="19cb0-248">除非您使用程式碼剖析工具，否則您必須建立一致的測量模式，才能有效地診斷效能問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-248">Unless you are using a profiler, you will have to establish a consistent measuring pattern to effectively diagnose performance issues.</span></span> <span data-ttu-id="19cb0-249">建立排程時請考慮下列各點：</span><span class="sxs-lookup"><span data-stu-id="19cb0-249">Consider the following points to establish a schedule:</span></span>  
   
--   <span data-ttu-id="dc8fb-250">如果您在層代 2 記憶體回收之後測量，整個 Managed 堆積都將沒有廢棄項目 (無作用物件)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-250">If you measure after a generation 2 garbage collection, the entire managed heap will be free of garbage (dead objects).</span></span>  
+-   <span data-ttu-id="19cb0-250">如果您在層代 2 記憶體回收之後測量，整個 Managed 堆積都將沒有廢棄項目 (無作用物件)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-250">If you measure after a generation 2 garbage collection, the entire managed heap will be free of garbage (dead objects).</span></span>  
   
--   <span data-ttu-id="dc8fb-251">如果層代 0 記憶體回收之後立即測量，此時尚不會回收層代 1 和 2 中的物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-251">If you measure immediately after a generation 0 garbage collection, the objects in generations 1 and 2 will not be collected yet.</span></span>  
+-   <span data-ttu-id="19cb0-251">如果層代 0 記憶體回收之後立即測量，此時尚不會回收層代 1 和 2 中的物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-251">If you measure immediately after a generation 0 garbage collection, the objects in generations 1 and 2 will not be collected yet.</span></span>  
   
--   <span data-ttu-id="dc8fb-252">如果在記憶體回收之前立即測量，您會測量到記憶體回收開始之前最多的可能配置。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-252">If you measure immediately before a garbage collection, you will measure as much allocation as possible before the garbage collection starts.</span></span>  
+-   <span data-ttu-id="19cb0-252">如果在記憶體回收之前立即測量，您會測量到記憶體回收開始之前最多的可能配置。</span><span class="sxs-lookup"><span data-stu-id="19cb0-252">If you measure immediately before a garbage collection, you will measure as much allocation as possible before the garbage collection starts.</span></span>  
   
--   <span data-ttu-id="dc8fb-253">在記憶體回收期間測量會有問題，因為記憶體回收行程資料結構不在周遊的有效狀態，而且可能無法提供完整的結果。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-253">Measuring during a garbage collection is problematic, because the garbage collector data structures are not in a valid state for traversal and may not be able to give you the complete results.</span></span> <span data-ttu-id="dc8fb-254">這是依設計的結果。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-254">This is by design.</span></span>  
+-   <span data-ttu-id="19cb0-253">在記憶體回收期間測量會有問題，因為記憶體回收行程資料結構不在周遊的有效狀態，而且可能無法提供完整的結果。</span><span class="sxs-lookup"><span data-stu-id="19cb0-253">Measuring during a garbage collection is problematic, because the garbage collector data structures are not in a valid state for traversal and may not be able to give you the complete results.</span></span> <span data-ttu-id="19cb0-254">這是依設計的結果。</span><span class="sxs-lookup"><span data-stu-id="19cb0-254">This is by design.</span></span>  
   
--   <span data-ttu-id="dc8fb-255">當您使用工作站記憶體回收與並行記憶體回收時，回收的物件不會壓縮，因此堆積大小可能相同或更大 (分散可能讓它看起來似乎較大)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-255">When you are using workstation garbage collection with concurrent garbage collection, the reclaimed objects are not compacted, so the heap size can be the same or larger (fragmentation can make it appear to be larger).</span></span>  
+-   <span data-ttu-id="19cb0-255">當您使用工作站記憶體回收與並行記憶體回收時，回收的物件不會壓縮，因此堆積大小可能相同或更大 (分散可能讓它看起來似乎較大)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-255">When you are using workstation garbage collection with concurrent garbage collection, the reclaimed objects are not compacted, so the heap size can be the same or larger (fragmentation can make it appear to be larger).</span></span>  
   
--   <span data-ttu-id="dc8fb-256">實體記憶體負載過高時，就會延遲層代 2 的並行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-256">Concurrent garbage collection on generation 2 is delayed when the physical memory load is too high.</span></span>  
+-   <span data-ttu-id="19cb0-256">實體記憶體負載過高時，就會延遲層代 2 的並行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-256">Concurrent garbage collection on generation 2 is delayed when the physical memory load is too high.</span></span>  
   
- <span data-ttu-id="dc8fb-257">下列程序描述如何設定中斷點，讓您可以測量 Managed 堆積。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-257">The following procedure describes how to set a breakpoint so that you can measure the managed heap.</span></span>  
+ <span data-ttu-id="19cb0-257">下列程序描述如何設定中斷點，讓您可以測量 Managed 堆積。</span><span class="sxs-lookup"><span data-stu-id="19cb0-257">The following procedure describes how to set a breakpoint so that you can measure the managed heap.</span></span>  
   
 <a name="GenBreak"></a>   
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a><span data-ttu-id="dc8fb-258">在記憶體回收結尾處設定中斷點</span><span class="sxs-lookup"><span data-stu-id="dc8fb-258">To set a breakpoint at the end of garbage collection</span></span>  
+##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a><span data-ttu-id="19cb0-258">在記憶體回收結尾處設定中斷點</span><span class="sxs-lookup"><span data-stu-id="19cb0-258">To set a breakpoint at the end of garbage collection</span></span>  
   
--   <span data-ttu-id="dc8fb-259">在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-259">In WinDbg with the SOS debugger extension loaded, type the following command:</span></span>  
+-   <span data-ttu-id="19cb0-259">在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-259">In WinDbg with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-260">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-260">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span></span>  
+     <span data-ttu-id="19cb0-260">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span><span class="sxs-lookup"><span data-stu-id="19cb0-260">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span></span>  
   
-     <span data-ttu-id="dc8fb-261">其中 **GcCondemnedGeneration** 設為所需的層代。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-261">where **GcCondemnedGeneration** is set to the desired generation.</span></span> <span data-ttu-id="dc8fb-262">此命令需要私用符號。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-262">This command requires private symbols.</span></span>  
+     <span data-ttu-id="19cb0-261">其中 **GcCondemnedGeneration** 設為所需的層代。</span><span class="sxs-lookup"><span data-stu-id="19cb0-261">where **GcCondemnedGeneration** is set to the desired generation.</span></span> <span data-ttu-id="19cb0-262">此命令需要私用符號。</span><span class="sxs-lookup"><span data-stu-id="19cb0-262">This command requires private symbols.</span></span>  
   
-     <span data-ttu-id="dc8fb-263">如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE**，則此命令會強制中斷。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-263">This command forces a break if **RestartEE** is executed after generation 2 objects have been reclaimed for garbage collection.</span></span>  
+     <span data-ttu-id="19cb0-263">如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE**，則此命令會強制中斷。</span><span class="sxs-lookup"><span data-stu-id="19cb0-263">This command forces a break if **RestartEE** is executed after generation 2 objects have been reclaimed for garbage collection.</span></span>  
   
-     <span data-ttu-id="dc8fb-264">在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE**，因此中斷點只會在層代 2 記憶體回收期間發生一次。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-264">In server garbage collection, only one thread calls **RestartEE**, so the breakpoint will occur only once during a generation 2 garbage collection.</span></span>  
+     <span data-ttu-id="19cb0-264">在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE**，因此中斷點只會在層代 2 記憶體回收期間發生一次。</span><span class="sxs-lookup"><span data-stu-id="19cb0-264">In server garbage collection, only one thread calls **RestartEE**, so the breakpoint will occur only once during a generation 2 garbage collection.</span></span>  
   
- [<span data-ttu-id="dc8fb-265">回到頁首</span><span class="sxs-lookup"><span data-stu-id="dc8fb-265">Back to top</span></span>](#top)  
+ [<span data-ttu-id="19cb0-265">回到頁首</span><span class="sxs-lookup"><span data-stu-id="19cb0-265">Back to top</span></span>](#top)  
   
 <a name="performance_check_procedures"></a>   
-## <a name="performance-check-procedures"></a><span data-ttu-id="dc8fb-266">效能檢查程序</span><span class="sxs-lookup"><span data-stu-id="dc8fb-266">Performance Check Procedures</span></span>  
- <span data-ttu-id="dc8fb-267">本節描述下列程序，以找出效能問題的原因：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-267">This section describes the following procedures to isolate the cause of your performance issue:</span></span>  
+## <a name="performance-check-procedures"></a><span data-ttu-id="19cb0-266">效能檢查程序</span><span class="sxs-lookup"><span data-stu-id="19cb0-266">Performance Check Procedures</span></span>  
+ <span data-ttu-id="19cb0-267">本節描述下列程序，以找出效能問題的原因：</span><span class="sxs-lookup"><span data-stu-id="19cb0-267">This section describes the following procedures to isolate the cause of your performance issue:</span></span>  
   
--   [<span data-ttu-id="dc8fb-268">判斷問題是否由於記憶體回收所造成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-268">Determine whether the problem is caused by garbage collection.</span></span>](#IsGC)  
+-   [<span data-ttu-id="19cb0-268">判斷問題是否由於記憶體回收所造成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-268">Determine whether the problem is caused by garbage collection.</span></span>](#IsGC)  
   
--   [<span data-ttu-id="dc8fb-269">判斷記憶體不足例外狀況是否為 Managed。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-269">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)  
+-   [<span data-ttu-id="19cb0-269">判斷記憶體不足例外狀況是否為 Managed。</span><span class="sxs-lookup"><span data-stu-id="19cb0-269">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)  
   
--   [<span data-ttu-id="dc8fb-270">判斷可以保留多少虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-270">Determine how much virtual memory can be reserved.</span></span>](#GetVM)  
+-   [<span data-ttu-id="19cb0-270">判斷可以保留多少虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-270">Determine how much virtual memory can be reserved.</span></span>](#GetVM)  
   
--   [<span data-ttu-id="dc8fb-271">判斷是否有足夠的實體記憶體。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-271">Determine whether there is enough physical memory.</span></span>](#Physical)  
+-   [<span data-ttu-id="19cb0-271">判斷是否有足夠的實體記憶體。</span><span class="sxs-lookup"><span data-stu-id="19cb0-271">Determine whether there is enough physical memory.</span></span>](#Physical)  
   
--   [<span data-ttu-id="dc8fb-272">判斷 Managed 堆積正在認可的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-272">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)  
+-   [<span data-ttu-id="19cb0-272">判斷 Managed 堆積正在認可的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-272">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)  
   
--   [<span data-ttu-id="dc8fb-273">判斷 Managed 堆積保留的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-273">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)  
+-   [<span data-ttu-id="19cb0-273">判斷 Managed 堆積保留的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-273">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)  
   
--   [<span data-ttu-id="dc8fb-274">判斷層代 2 的大型物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-274">Determine large objects in generation 2.</span></span>](#ExamineGen2)  
+-   [<span data-ttu-id="19cb0-274">判斷層代 2 的大型物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-274">Determine large objects in generation 2.</span></span>](#ExamineGen2)  
   
--   [<span data-ttu-id="dc8fb-275">判斷物件的參考。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-275">Determine references to objects.</span></span>](#ObjRef)  
+-   [<span data-ttu-id="19cb0-275">判斷物件的參考。</span><span class="sxs-lookup"><span data-stu-id="19cb0-275">Determine references to objects.</span></span>](#ObjRef)  
   
--   [<span data-ttu-id="dc8fb-276">判斷是否已執行完成項。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-276">Determine whether a finalizer has been run.</span></span>](#Induce)  
+-   [<span data-ttu-id="19cb0-276">判斷是否已執行完成項。</span><span class="sxs-lookup"><span data-stu-id="19cb0-276">Determine whether a finalizer has been run.</span></span>](#Induce)  
   
--   [<span data-ttu-id="dc8fb-277">判斷是否有等候完成的物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-277">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)  
+-   [<span data-ttu-id="19cb0-277">判斷是否有等候完成的物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-277">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)  
   
--   [<span data-ttu-id="dc8fb-278">判斷 Managed 堆積中的可用空間數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-278">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)  
+-   [<span data-ttu-id="19cb0-278">判斷 Managed 堆積中的可用空間數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-278">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)  
   
--   [<span data-ttu-id="dc8fb-279">判斷被固定的物件數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-279">Determine the number of pinned objects.</span></span>](#Pinned)  
+-   [<span data-ttu-id="19cb0-279">判斷被固定的物件數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-279">Determine the number of pinned objects.</span></span>](#Pinned)  
   
--   [<span data-ttu-id="dc8fb-280">判斷記憶體回收的時間長度。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-280">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)  
+-   [<span data-ttu-id="19cb0-280">判斷記憶體回收的時間長度。</span><span class="sxs-lookup"><span data-stu-id="19cb0-280">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)  
   
--   [<span data-ttu-id="dc8fb-281">判斷觸發記憶體回收的原因。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-281">Determine what triggered a garbage collection.</span></span>](#Triggered)  
+-   [<span data-ttu-id="19cb0-281">判斷觸發記憶體回收的原因。</span><span class="sxs-lookup"><span data-stu-id="19cb0-281">Determine what triggered a garbage collection.</span></span>](#Triggered)  
   
--   [<span data-ttu-id="dc8fb-282">判斷高 CPU 使用量是否由於記憶體回收所造成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-282">Determine whether high CPU usage is caused by garbage collection.</span></span>](#HighCPU)  
+-   [<span data-ttu-id="19cb0-282">判斷高 CPU 使用量是否由於記憶體回收所造成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-282">Determine whether high CPU usage is caused by garbage collection.</span></span>](#HighCPU)  
   
 <a name="IsGC"></a>   
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a><span data-ttu-id="dc8fb-283">判斷問題是否由於記憶體回收所造成</span><span class="sxs-lookup"><span data-stu-id="dc8fb-283">To determine whether the problem is caused by garbage collection</span></span>  
+##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a><span data-ttu-id="19cb0-283">判斷問題是否由於記憶體回收所造成</span><span class="sxs-lookup"><span data-stu-id="19cb0-283">To determine whether the problem is caused by garbage collection</span></span>  
   
--   <span data-ttu-id="dc8fb-284">檢查下列兩個記憶體效能計數器：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-284">Examine the following two memory performance counters:</span></span>  
+-   <span data-ttu-id="19cb0-284">檢查下列兩個記憶體效能計數器：</span><span class="sxs-lookup"><span data-stu-id="19cb0-284">Examine the following two memory performance counters:</span></span>  
   
-    -   <span data-ttu-id="dc8fb-285">**在 GC 的時間 %**。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-285">**% Time in GC**.</span></span> <span data-ttu-id="dc8fb-286">顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-286">Displays the percentage of elapsed time that was spent performing a garbage collection after the last garbage collection cycle.</span></span> <span data-ttu-id="dc8fb-287">使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-287">Use this counter to determine whether the garbage collector is spending too much time to make managed heap space available.</span></span> <span data-ttu-id="dc8fb-288">如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-288">If the time spent in garbage collection is relatively low, that could indicate a resource problem outside the managed heap.</span></span> <span data-ttu-id="dc8fb-289">與並行或背景記憶體回收相關時，這個計數器可能不正確。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-289">This counter may not be accurate when concurrent or background garbage collection is involved.</span></span>  
+    -   <span data-ttu-id="19cb0-285">**在 GC 的時間 %**。</span><span class="sxs-lookup"><span data-stu-id="19cb0-285">**% Time in GC**.</span></span> <span data-ttu-id="19cb0-286">顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。</span><span class="sxs-lookup"><span data-stu-id="19cb0-286">Displays the percentage of elapsed time that was spent performing a garbage collection after the last garbage collection cycle.</span></span> <span data-ttu-id="19cb0-287">使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。</span><span class="sxs-lookup"><span data-stu-id="19cb0-287">Use this counter to determine whether the garbage collector is spending too much time to make managed heap space available.</span></span> <span data-ttu-id="19cb0-288">如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-288">If the time spent in garbage collection is relatively low, that could indicate a resource problem outside the managed heap.</span></span> <span data-ttu-id="19cb0-289">與並行或背景記憶體回收相關時，這個計數器可能不正確。</span><span class="sxs-lookup"><span data-stu-id="19cb0-289">This counter may not be accurate when concurrent or background garbage collection is involved.</span></span>  
   
-    -   <span data-ttu-id="dc8fb-290">**已認可的位元組總數**。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-290">**# Total committed Bytes**.</span></span> <span data-ttu-id="dc8fb-291">顯示記憶體回收行程目前已認可的虛擬記憶體數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-291">Displays the amount of virtual memory currently committed by the garbage collector.</span></span> <span data-ttu-id="dc8fb-292">使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-292">Use this counter to determine whether the memory consumed by the garbage collector is an excessive portion of the memory that your application uses.</span></span>  
+    -   <span data-ttu-id="19cb0-290">**已認可的位元組總數**。</span><span class="sxs-lookup"><span data-stu-id="19cb0-290">**# Total committed Bytes**.</span></span> <span data-ttu-id="19cb0-291">顯示記憶體回收行程目前已認可的虛擬記憶體數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-291">Displays the amount of virtual memory currently committed by the garbage collector.</span></span> <span data-ttu-id="19cb0-292">使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-292">Use this counter to determine whether the memory consumed by the garbage collector is an excessive portion of the memory that your application uses.</span></span>  
   
-     <span data-ttu-id="dc8fb-293">大部分的記憶體效能計數器會在每次記憶體回收結束時更新。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-293">Most of the memory performance counters are updated at the end of each garbage collection.</span></span> <span data-ttu-id="dc8fb-294">因此，它們可能無法反映您要取得相關資訊的目前狀況。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-294">Therefore, they may not reflect the current conditions that you want information about.</span></span>  
+     <span data-ttu-id="19cb0-293">大部分的記憶體效能計數器會在每次記憶體回收結束時更新。</span><span class="sxs-lookup"><span data-stu-id="19cb0-293">Most of the memory performance counters are updated at the end of each garbage collection.</span></span> <span data-ttu-id="19cb0-294">因此，它們可能無法反映您要取得相關資訊的目前狀況。</span><span class="sxs-lookup"><span data-stu-id="19cb0-294">Therefore, they may not reflect the current conditions that you want information about.</span></span>  
   
 <a name="OOMIsManaged"></a>   
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a><span data-ttu-id="dc8fb-295">判斷記憶體不足例外狀況是否為 Managed</span><span class="sxs-lookup"><span data-stu-id="dc8fb-295">To determine whether the out-of-memory exception is managed</span></span>  
+##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a><span data-ttu-id="19cb0-295">判斷記憶體不足例外狀況是否為 Managed</span><span class="sxs-lookup"><span data-stu-id="19cb0-295">To determine whether the out-of-memory exception is managed</span></span>  
   
-1.  <span data-ttu-id="dc8fb-296">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-296">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the print exception (**pe**) command:</span></span>  
+1.  <span data-ttu-id="19cb0-296">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-296">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the print exception (**pe**) command:</span></span>  
   
-     <span data-ttu-id="dc8fb-297">**!pe**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-297">**!pe**</span></span>  
+     <span data-ttu-id="19cb0-297">**!pe**</span><span class="sxs-lookup"><span data-stu-id="19cb0-297">**!pe**</span></span>  
   
-     <span data-ttu-id="dc8fb-298">如果例外狀況為 Managed，<xref:System.OutOfMemoryException> 會顯示為例外狀況類型，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-298">If the exception is managed, <xref:System.OutOfMemoryException> is displayed as the exception type, as shown in the following example.</span></span>  
+     <span data-ttu-id="19cb0-298">如果例外狀況為 Managed，<xref:System.OutOfMemoryException> 會顯示為例外狀況類型，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-298">If the exception is managed, <xref:System.OutOfMemoryException> is displayed as the exception type, as shown in the following example.</span></span>  
   
     ```  
     Exception object: 39594518  
@@ -299,44 +302,44 @@ ms.lasthandoff: 10/18/2017
     StackTrace (generated):  
     ```  
   
-2.  <span data-ttu-id="dc8fb-299">如果輸出未指定例外狀況，您必須判斷記憶體不足例外狀況是來自哪一個執行緒。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-299">If the output does not specify an exception, you have to determine which thread the out-of-memory exception is from.</span></span> <span data-ttu-id="dc8fb-300">在偵錯工具中輸入下列命令，顯示所有執行緒與其呼叫堆疊：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-300">Type the following command in the debugger to show all the threads with their call stacks:</span></span>  
+2.  <span data-ttu-id="19cb0-299">如果輸出未指定例外狀況，您必須判斷記憶體不足例外狀況是來自哪一個執行緒。</span><span class="sxs-lookup"><span data-stu-id="19cb0-299">If the output does not specify an exception, you have to determine which thread the out-of-memory exception is from.</span></span> <span data-ttu-id="19cb0-300">在偵錯工具中輸入下列命令，顯示所有執行緒與其呼叫堆疊：</span><span class="sxs-lookup"><span data-stu-id="19cb0-300">Type the following command in the debugger to show all the threads with their call stacks:</span></span>  
   
-     <span data-ttu-id="dc8fb-301">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-301">**~\*kb**</span></span>  
+     <span data-ttu-id="19cb0-301">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="19cb0-301">**~\*kb**</span></span>  
   
-     <span data-ttu-id="dc8fb-302">堆疊具有例外狀況呼叫的執行緒會以 `RaiseTheException` 引數表示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-302">The thread with the stack that has exception calls is indicated by the `RaiseTheException` argument.</span></span> <span data-ttu-id="dc8fb-303">這是 Managed 例外狀況物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-303">This is the managed exception object.</span></span>  
+     <span data-ttu-id="19cb0-302">堆疊具有例外狀況呼叫的執行緒會以 `RaiseTheException` 引數表示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-302">The thread with the stack that has exception calls is indicated by the `RaiseTheException` argument.</span></span> <span data-ttu-id="19cb0-303">這是 Managed 例外狀況物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-303">This is the managed exception object.</span></span>  
   
     ```  
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  <span data-ttu-id="dc8fb-304">您可以使用下列命令來傾印巢狀例外狀況。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-304">You can use the following command to dump nested exceptions.</span></span>  
+3.  <span data-ttu-id="19cb0-304">您可以使用下列命令來傾印巢狀例外狀況。</span><span class="sxs-lookup"><span data-stu-id="19cb0-304">You can use the following command to dump nested exceptions.</span></span>  
   
-     <span data-ttu-id="dc8fb-305">**!pe -nested**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-305">**!pe -nested**</span></span>  
+     <span data-ttu-id="19cb0-305">**!pe -nested**</span><span class="sxs-lookup"><span data-stu-id="19cb0-305">**!pe -nested**</span></span>  
   
-     <span data-ttu-id="dc8fb-306">如果找不到任何例外狀況，表示記憶體不足例外狀況是源自於 Unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-306">If you do not find any exceptions, the out-of-memory exception originated from unmanaged code.</span></span>  
+     <span data-ttu-id="19cb0-306">如果找不到任何例外狀況，表示記憶體不足例外狀況是源自於 Unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="19cb0-306">If you do not find any exceptions, the out-of-memory exception originated from unmanaged code.</span></span>  
   
 <a name="GetVM"></a>   
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a><span data-ttu-id="dc8fb-307">判斷可以保留多少虛擬記憶體</span><span class="sxs-lookup"><span data-stu-id="dc8fb-307">To determine how much virtual memory can be reserved</span></span>  
+##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a><span data-ttu-id="19cb0-307">判斷可以保留多少虛擬記憶體</span><span class="sxs-lookup"><span data-stu-id="19cb0-307">To determine how much virtual memory can be reserved</span></span>  
   
--   <span data-ttu-id="dc8fb-308">在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，取得最大的可用區域：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-308">In WinDbg with the SOS debugger extension loaded, type the following command to get the largest free region:</span></span>  
+-   <span data-ttu-id="19cb0-308">在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，取得最大的可用區域：</span><span class="sxs-lookup"><span data-stu-id="19cb0-308">In WinDbg with the SOS debugger extension loaded, type the following command to get the largest free region:</span></span>  
   
-     <span data-ttu-id="dc8fb-309">**!address -summary**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-309">**!address -summary**</span></span>  
+     <span data-ttu-id="19cb0-309">**!address -summary**</span><span class="sxs-lookup"><span data-stu-id="19cb0-309">**!address -summary**</span></span>  
   
-     <span data-ttu-id="dc8fb-310">最大可用區域會顯示在下列輸出中。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-310">The largest free region is displayed as shown in the following output.</span></span>  
+     <span data-ttu-id="19cb0-310">最大可用區域會顯示在下列輸出中。</span><span class="sxs-lookup"><span data-stu-id="19cb0-310">The largest free region is displayed as shown in the following output.</span></span>  
   
     ```  
     Largest free region: Base 54000000 - Size 0003A980  
     ```  
   
-     <span data-ttu-id="dc8fb-311">在此範例中，最大可用區域的大小大約為 24000 KB (十六進位為 3A980)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-311">In this example, the size of the largest free region is approximately 24000 KB (3A980 in hexadecimal).</span></span> <span data-ttu-id="dc8fb-312">此區域是遠小於記憶體回收行程針對區段所需。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-312">This region is much smaller than what the garbage collector needs for a segment.</span></span>  
+     <span data-ttu-id="19cb0-311">在此範例中，最大可用區域的大小大約為 24000 KB (十六進位為 3A980)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-311">In this example, the size of the largest free region is approximately 24000 KB (3A980 in hexadecimal).</span></span> <span data-ttu-id="19cb0-312">此區域是遠小於記憶體回收行程針對區段所需。</span><span class="sxs-lookup"><span data-stu-id="19cb0-312">This region is much smaller than what the garbage collector needs for a segment.</span></span>  
   
-     <span data-ttu-id="dc8fb-313">-或-</span><span class="sxs-lookup"><span data-stu-id="dc8fb-313">-or-</span></span>  
+     <span data-ttu-id="19cb0-313">-或-</span><span class="sxs-lookup"><span data-stu-id="19cb0-313">-or-</span></span>  
   
--   <span data-ttu-id="dc8fb-314">使用 **vmstat** 命令︰</span><span class="sxs-lookup"><span data-stu-id="dc8fb-314">Use the **vmstat** command:</span></span>  
+-   <span data-ttu-id="19cb0-314">使用 **vmstat** 命令︰</span><span class="sxs-lookup"><span data-stu-id="19cb0-314">Use the **vmstat** command:</span></span>  
   
-     <span data-ttu-id="dc8fb-315">**!vmstat**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-315">**!vmstat**</span></span>  
+     <span data-ttu-id="19cb0-315">**!vmstat**</span><span class="sxs-lookup"><span data-stu-id="19cb0-315">**!vmstat**</span></span>  
   
-     <span data-ttu-id="dc8fb-316">最大可用區域是 MAXIMUM 資料行中的最大值，如下列輸出所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-316">The largest free region is the largest value in the MAXIMUM column, as shown in the following output.</span></span>  
+     <span data-ttu-id="19cb0-316">最大可用區域是 MAXIMUM 資料行中的最大值，如下列輸出所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-316">The largest free region is the largest value in the MAXIMUM column, as shown in the following output.</span></span>  
   
     ```  
     TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL  
@@ -349,37 +352,37 @@ ms.lasthandoff: 10/18/2017
     ```  
   
 <a name="Physical"></a>   
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a><span data-ttu-id="dc8fb-317">判斷是否有足夠的實體記憶體</span><span class="sxs-lookup"><span data-stu-id="dc8fb-317">To determine whether there is enough physical memory</span></span>  
+##### <a name="to-determine-whether-there-is-enough-physical-memory"></a><span data-ttu-id="19cb0-317">判斷是否有足夠的實體記憶體</span><span class="sxs-lookup"><span data-stu-id="19cb0-317">To determine whether there is enough physical memory</span></span>  
   
-1.  <span data-ttu-id="dc8fb-318">啟動 Windows 工作管理員。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-318">Start Windows Task Manager.</span></span>  
+1.  <span data-ttu-id="19cb0-318">啟動 Windows 工作管理員。</span><span class="sxs-lookup"><span data-stu-id="19cb0-318">Start Windows Task Manager.</span></span>  
   
-2.  <span data-ttu-id="dc8fb-319">在 [效能] 索引標籤上，查看已認可的值。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-319">On the **Performance** tab, look at the committed value.</span></span> <span data-ttu-id="dc8fb-320">(在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)</span><span class="sxs-lookup"><span data-stu-id="dc8fb-320">(In Windows 7, look at **Commit (KB)** in the **System group**.)</span></span>  
+2.  <span data-ttu-id="19cb0-319">在 [效能] 索引標籤上，查看已認可的值。</span><span class="sxs-lookup"><span data-stu-id="19cb0-319">On the **Performance** tab, look at the committed value.</span></span> <span data-ttu-id="19cb0-320">(在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)</span><span class="sxs-lookup"><span data-stu-id="19cb0-320">(In Windows 7, look at **Commit (KB)** in the **System group**.)</span></span>  
   
-     <span data-ttu-id="dc8fb-321">如果 [總計] 很接近 [限制]，則您的實體記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-321">If the **Total** is close to the **Limit**, you are running low on physical memory.</span></span>  
+     <span data-ttu-id="19cb0-321">如果 [總計] 很接近 [限制]，則您的實體記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="19cb0-321">If the **Total** is close to the **Limit**, you are running low on physical memory.</span></span>  
   
 <a name="ManagedHeapCommit"></a>   
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a><span data-ttu-id="dc8fb-322">判斷 Managed 堆積正在認可的記憶體數量</span><span class="sxs-lookup"><span data-stu-id="dc8fb-322">To determine how much memory the managed heap is committing</span></span>  
+##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a><span data-ttu-id="19cb0-322">判斷 Managed 堆積正在認可的記憶體數量</span><span class="sxs-lookup"><span data-stu-id="19cb0-322">To determine how much memory the managed heap is committing</span></span>  
   
--   <span data-ttu-id="dc8fb-323">使用 `# Total committed bytes` 記憶體效能計數器，以取得 Managed 堆積正在認可的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-323">Use the `# Total committed bytes` memory performance counter to get the number of bytes that the managed heap is committing.</span></span> <span data-ttu-id="dc8fb-324">記憶體回收行程會視需要認可區段上的區塊 (chunk)，而不是同時全部認可。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-324">The garbage collector commits chunks on a segment as needed, not all at the same time.</span></span>  
+-   <span data-ttu-id="19cb0-323">使用 `# Total committed bytes` 記憶體效能計數器，以取得 Managed 堆積正在認可的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-323">Use the `# Total committed bytes` memory performance counter to get the number of bytes that the managed heap is committing.</span></span> <span data-ttu-id="19cb0-324">記憶體回收行程會視需要認可區段上的區塊 (chunk)，而不是同時全部認可。</span><span class="sxs-lookup"><span data-stu-id="19cb0-324">The garbage collector commits chunks on a segment as needed, not all at the same time.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="dc8fb-325">請勿使用 `# Bytes in all Heaps` 效能計數器，因為它不代表 Managed 堆積的實際記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-325">Do not use the `# Bytes in all Heaps` performance counter, because it does not represent actual memory usage by the managed heap.</span></span> <span data-ttu-id="dc8fb-326">層代的大小包含在此值中，且為其實際閾值大小，也就是層代裝滿物件時引發記憶體回收的大小。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-326">The size of a generation is included in this value and is actually its threshold size, that is, the size that induces a garbage collection if the generation is filled with objects.</span></span> <span data-ttu-id="dc8fb-327">因此，這個值通常是零。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-327">Therefore, this value is usually zero.</span></span>  
+    >  <span data-ttu-id="19cb0-325">請勿使用 `# Bytes in all Heaps` 效能計數器，因為它不代表 Managed 堆積的實際記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-325">Do not use the `# Bytes in all Heaps` performance counter, because it does not represent actual memory usage by the managed heap.</span></span> <span data-ttu-id="19cb0-326">層代的大小包含在此值中，且為其實際閾值大小，也就是層代裝滿物件時引發記憶體回收的大小。</span><span class="sxs-lookup"><span data-stu-id="19cb0-326">The size of a generation is included in this value and is actually its threshold size, that is, the size that induces a garbage collection if the generation is filled with objects.</span></span> <span data-ttu-id="19cb0-327">因此，這個值通常是零。</span><span class="sxs-lookup"><span data-stu-id="19cb0-327">Therefore, this value is usually zero.</span></span>  
   
 <a name="ManagedHeapReserve"></a>   
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a><span data-ttu-id="dc8fb-328">判斷 Managed 堆積保留的記憶體數量</span><span class="sxs-lookup"><span data-stu-id="dc8fb-328">To determine how much memory the managed heap reserves</span></span>  
+##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a><span data-ttu-id="19cb0-328">判斷 Managed 堆積保留的記憶體數量</span><span class="sxs-lookup"><span data-stu-id="19cb0-328">To determine how much memory the managed heap reserves</span></span>  
   
--   <span data-ttu-id="dc8fb-329">使用 `# Total reserved bytes` 記憶體效能計數器。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-329">Use the `# Total reserved bytes` memory performance counter.</span></span>  
+-   <span data-ttu-id="19cb0-329">使用 `# Total reserved bytes` 記憶體效能計數器。</span><span class="sxs-lookup"><span data-stu-id="19cb0-329">Use the `# Total reserved bytes` memory performance counter.</span></span>  
   
-     <span data-ttu-id="dc8fb-330">記憶體回收行程會以區段來保留記憶體，您可以使用 **eeheap** 命令來判斷區段開始的位置。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-330">The garbage collector reserves memory in segments, and you can determine where a segment starts by using the **eeheap** command.</span></span>  
+     <span data-ttu-id="19cb0-330">記憶體回收行程會以區段來保留記憶體，您可以使用 **eeheap** 命令來判斷區段開始的位置。</span><span class="sxs-lookup"><span data-stu-id="19cb0-330">The garbage collector reserves memory in segments, and you can determine where a segment starts by using the **eeheap** command.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="dc8fb-331">雖然您可以判斷記憶體回收行程配置給每個區段的記憶體數量，但區段大小會依實作而定，而且隨時可能變更，包括定期更新。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-331">Although you can determine the amount of memory the garbage collector allocates for each segment, segment size is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="dc8fb-332">您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-332">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>  
+    >  <span data-ttu-id="19cb0-331">雖然您可以判斷記憶體回收行程配置給每個區段的記憶體數量，但區段大小會依實作而定，而且隨時可能變更，包括定期更新。</span><span class="sxs-lookup"><span data-stu-id="19cb0-331">Although you can determine the amount of memory the garbage collector allocates for each segment, segment size is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="19cb0-332">您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-332">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>  
   
--   <span data-ttu-id="dc8fb-333">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-333">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
+-   <span data-ttu-id="19cb0-333">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-333">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-334">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-334">**!eeheap -gc**</span></span>  
+     <span data-ttu-id="19cb0-334">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="19cb0-334">**!eeheap -gc**</span></span>  
   
-     <span data-ttu-id="dc8fb-335">結果如下所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-335">The result is as follows.</span></span>  
+     <span data-ttu-id="19cb0-335">結果如下所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-335">The result is as follows.</span></span>  
   
     ```  
     Number of GC Heaps: 2  
@@ -411,18 +414,18 @@ ms.lasthandoff: 10/18/2017
     GC Heap Size   0x24db8(150968)  
     ```  
   
-     <span data-ttu-id="dc8fb-336">「區段」所指定的位址是區段的起始位址。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-336">The addresses indicated by "segment" are the starting addresses of the segments.</span></span>  
+     <span data-ttu-id="19cb0-336">「區段」所指定的位址是區段的起始位址。</span><span class="sxs-lookup"><span data-stu-id="19cb0-336">The addresses indicated by "segment" are the starting addresses of the segments.</span></span>  
   
 <a name="ExamineGen2"></a>   
-##### <a name="to-determine-large-objects-in-generation-2"></a><span data-ttu-id="dc8fb-337">判斷層代 2 的大型物件</span><span class="sxs-lookup"><span data-stu-id="dc8fb-337">To determine large objects in generation 2</span></span>  
+##### <a name="to-determine-large-objects-in-generation-2"></a><span data-ttu-id="19cb0-337">判斷層代 2 的大型物件</span><span class="sxs-lookup"><span data-stu-id="19cb0-337">To determine large objects in generation 2</span></span>  
   
--   <span data-ttu-id="dc8fb-338">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-338">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
+-   <span data-ttu-id="19cb0-338">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-338">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-339">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-339">**!dumpheap –stat**</span></span>  
+     <span data-ttu-id="19cb0-339">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="19cb0-339">**!dumpheap –stat**</span></span>  
   
-     <span data-ttu-id="dc8fb-340">如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-340">If the managed heap is big, **dumpheap** may take a while to finish.</span></span>  
+     <span data-ttu-id="19cb0-340">如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-340">If the managed heap is big, **dumpheap** may take a while to finish.</span></span>  
   
-     <span data-ttu-id="dc8fb-341">您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-341">You can start analyzing from the last few lines of the output, because they list the objects that use the most space.</span></span> <span data-ttu-id="dc8fb-342">例如：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-342">For example:</span></span>  
+     <span data-ttu-id="19cb0-341">您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-341">You can start analyzing from the last few lines of the output, because they list the objects that use the most space.</span></span> <span data-ttu-id="19cb0-342">例如: </span><span class="sxs-lookup"><span data-stu-id="19cb0-342">For example:</span></span>  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -438,11 +441,11 @@ ms.lasthandoff: 10/18/2017
     Total 8454945 objects  
     ```  
   
-     <span data-ttu-id="dc8fb-343">所列的最後一個物件是一個字串，而且會佔用最多的空間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-343">The last object listed is a string and occupies the most space.</span></span> <span data-ttu-id="dc8fb-344">您可以檢查應用程式，了解如何最佳化您的字串物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-344">You can examine your application to see how your string objects can be optimized.</span></span> <span data-ttu-id="dc8fb-345">若要查看介於 150 到 200 個位元組的字串，請輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-345">To see strings that are between 150 and 200 bytes, type the following:</span></span>  
+     <span data-ttu-id="19cb0-343">所列的最後一個物件是一個字串，而且會佔用最多的空間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-343">The last object listed is a string and occupies the most space.</span></span> <span data-ttu-id="19cb0-344">您可以檢查應用程式，了解如何最佳化您的字串物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-344">You can examine your application to see how your string objects can be optimized.</span></span> <span data-ttu-id="19cb0-345">若要查看介於 150 到 200 個位元組的字串，請輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-345">To see strings that are between 150 and 200 bytes, type the following:</span></span>  
   
-     <span data-ttu-id="dc8fb-346">**!dumpheap -type System.String -min 150 -max 200**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-346">**!dumpheap -type System.String -min 150 -max 200**</span></span>  
+     <span data-ttu-id="19cb0-346">**!dumpheap -type System.String -min 150 -max 200**</span><span class="sxs-lookup"><span data-stu-id="19cb0-346">**!dumpheap -type System.String -min 150 -max 200**</span></span>  
   
-     <span data-ttu-id="dc8fb-347">結果的範例如下。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-347">An example of the results is as follows.</span></span>  
+     <span data-ttu-id="19cb0-347">結果的範例如下。</span><span class="sxs-lookup"><span data-stu-id="19cb0-347">An example of the results is as follows.</span></span>  
   
     ```  
     Address  MT           Size  Gen  
@@ -450,22 +453,22 @@ ms.lasthandoff: 10/18/2017
     …  
     ```  
   
-     <span data-ttu-id="dc8fb-348">針對識別碼使用整數而不使用字串，可能會更有效率。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-348">Using an integer instead of a string for an ID can be more efficient.</span></span> <span data-ttu-id="dc8fb-349">如果相同的字串重複數千次，請考慮字串拘留 (string interning)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-349">If the same string is being repeated thousands of times, consider string interning.</span></span> <span data-ttu-id="dc8fb-350">如需有關字串拘留的詳細資訊，請參閱 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法的參考主題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-350">For more information about string interning, see the reference topic for the <xref:System.String.Intern%2A?displayProperty=nameWithType> method.</span></span>  
+     <span data-ttu-id="19cb0-348">針對識別碼使用整數而不使用字串，可能會更有效率。</span><span class="sxs-lookup"><span data-stu-id="19cb0-348">Using an integer instead of a string for an ID can be more efficient.</span></span> <span data-ttu-id="19cb0-349">如果相同的字串重複數千次，請考慮字串拘留 (string interning)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-349">If the same string is being repeated thousands of times, consider string interning.</span></span> <span data-ttu-id="19cb0-350">如需有關字串拘留的詳細資訊，請參閱 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法的參考主題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-350">For more information about string interning, see the reference topic for the <xref:System.String.Intern%2A?displayProperty=nameWithType> method.</span></span>  
   
 <a name="ObjRef"></a>   
-##### <a name="to-determine-references-to-objects"></a><span data-ttu-id="dc8fb-351">判斷物件的參考</span><span class="sxs-lookup"><span data-stu-id="dc8fb-351">To determine references to objects</span></span>  
+##### <a name="to-determine-references-to-objects"></a><span data-ttu-id="19cb0-351">判斷物件的參考</span><span class="sxs-lookup"><span data-stu-id="19cb0-351">To determine references to objects</span></span>  
   
--   <span data-ttu-id="dc8fb-352">在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，列出物件的參考：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-352">In WinDbg with the SOS debugger extension loaded, type the following command to list references to objects:</span></span>  
+-   <span data-ttu-id="19cb0-352">在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，列出物件的參考：</span><span class="sxs-lookup"><span data-stu-id="19cb0-352">In WinDbg with the SOS debugger extension loaded, type the following command to list references to objects:</span></span>  
   
-     <span data-ttu-id="dc8fb-353">**!gcroot**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-353">**!gcroot**</span></span>  
+     <span data-ttu-id="19cb0-353">**!gcroot**</span><span class="sxs-lookup"><span data-stu-id="19cb0-353">**!gcroot**</span></span>  
   
      `-or-`  
   
--   <span data-ttu-id="dc8fb-354">若要判斷特定物件的參考，請包含位址：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-354">To determine the references for a specific object, include the address:</span></span>  
+-   <span data-ttu-id="19cb0-354">若要判斷特定物件的參考，請包含位址：</span><span class="sxs-lookup"><span data-stu-id="19cb0-354">To determine the references for a specific object, include the address:</span></span>  
   
-     <span data-ttu-id="dc8fb-355">**!gcroot 1c37b2ac**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-355">**!gcroot 1c37b2ac**</span></span>  
+     <span data-ttu-id="19cb0-355">**!gcroot 1c37b2ac**</span><span class="sxs-lookup"><span data-stu-id="19cb0-355">**!gcroot 1c37b2ac**</span></span>  
   
-     <span data-ttu-id="dc8fb-356">在堆疊上找到的根可能是誤判。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-356">Roots found on stacks may be false positives.</span></span> <span data-ttu-id="dc8fb-357">如需詳細資訊，請參閱 `!help gcroot` 命令。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-357">For more information, use the command `!help gcroot`.</span></span>  
+     <span data-ttu-id="19cb0-356">在堆疊上找到的根可能是誤判。</span><span class="sxs-lookup"><span data-stu-id="19cb0-356">Roots found on stacks may be false positives.</span></span> <span data-ttu-id="19cb0-357">如需詳細資訊，請參閱 `!help gcroot` 命令。</span><span class="sxs-lookup"><span data-stu-id="19cb0-357">For more information, use the command `!help gcroot`.</span></span>  
   
     ```  
     ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->  
@@ -483,12 +486,12 @@ ms.lasthandoff: 10/18/2017
     Scan Thread 6 OSTHread 484  
     ```  
   
-     <span data-ttu-id="dc8fb-358">**gcroot** 命令可能會執行很長的時間才能完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-358">The **gcroot** command can take a long time to finish.</span></span> <span data-ttu-id="dc8fb-359">不由記憶體回收所回收的任何物件便是實際物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-359">Any object that is not reclaimed by garbage collection is a live object.</span></span> <span data-ttu-id="dc8fb-360">這表示某些根是直接或間接緊守住物件，所以 **gcroot** 應該傳回物件的路徑資訊。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-360">This means that some root is directly or indirectly holding onto the object, so **gcroot** should return path information to the object.</span></span> <span data-ttu-id="dc8fb-361">您應該檢查傳回的圖形，並查看為什麼仍然參考這些物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-361">You should examine the graphs returned and see why these objects are still referenced.</span></span>  
+     <span data-ttu-id="19cb0-358">**gcroot** 命令可能會執行很長的時間才能完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-358">The **gcroot** command can take a long time to finish.</span></span> <span data-ttu-id="19cb0-359">不由記憶體回收所回收的任何物件便是實際物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-359">Any object that is not reclaimed by garbage collection is a live object.</span></span> <span data-ttu-id="19cb0-360">這表示某些根是直接或間接緊守住物件，所以 **gcroot** 應該傳回物件的路徑資訊。</span><span class="sxs-lookup"><span data-stu-id="19cb0-360">This means that some root is directly or indirectly holding onto the object, so **gcroot** should return path information to the object.</span></span> <span data-ttu-id="19cb0-361">您應該檢查傳回的圖形，並查看為什麼仍然參考這些物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-361">You should examine the graphs returned and see why these objects are still referenced.</span></span>  
   
 <a name="Induce"></a>   
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a><span data-ttu-id="dc8fb-362">判斷是否已執行完成項</span><span class="sxs-lookup"><span data-stu-id="dc8fb-362">To determine whether a finalizer has been run</span></span>  
+##### <a name="to-determine-whether-a-finalizer-has-been-run"></a><span data-ttu-id="19cb0-362">判斷是否已執行完成項</span><span class="sxs-lookup"><span data-stu-id="19cb0-362">To determine whether a finalizer has been run</span></span>  
   
--   <span data-ttu-id="dc8fb-363">執行測試程式，其中包含下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-363">Run a test program that contains the following code:</span></span>  
+-   <span data-ttu-id="19cb0-363">執行測試程式，其中包含下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="19cb0-363">Run a test program that contains the following code:</span></span>  
   
     ```  
     GC.Collect();  
@@ -496,22 +499,22 @@ ms.lasthandoff: 10/18/2017
     GC.Collect();  
     ```  
   
-     <span data-ttu-id="dc8fb-364">如果測試可以解決此問題，這表示記憶體回收行程未回收物件，因為這些物件的完成項已暫止。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-364">If the test resolves the problem, this means that the garbage collector was not reclaiming objects, because the finalizers for those objects had been suspended.</span></span> <span data-ttu-id="dc8fb-365"><xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法讓完成項能完成其工作，並修正問題。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-365">The <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method enables the finalizers to complete their tasks, and fixes the problem.</span></span>  
+     <span data-ttu-id="19cb0-364">如果測試可以解決此問題，這表示記憶體回收行程未回收物件，因為這些物件的完成項已暫止。</span><span class="sxs-lookup"><span data-stu-id="19cb0-364">If the test resolves the problem, this means that the garbage collector was not reclaiming objects, because the finalizers for those objects had been suspended.</span></span> <span data-ttu-id="19cb0-365"><xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法讓完成項能完成其工作，並修正問題。</span><span class="sxs-lookup"><span data-stu-id="19cb0-365">The <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method enables the finalizers to complete their tasks, and fixes the problem.</span></span>  
   
 <a name="Finalize"></a>   
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a><span data-ttu-id="dc8fb-366">判斷是否有等候完成的物件</span><span class="sxs-lookup"><span data-stu-id="dc8fb-366">To determine whether there are objects waiting to be finalized</span></span>  
+##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a><span data-ttu-id="19cb0-366">判斷是否有等候完成的物件</span><span class="sxs-lookup"><span data-stu-id="19cb0-366">To determine whether there are objects waiting to be finalized</span></span>  
   
-1.  <span data-ttu-id="dc8fb-367">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-367">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
+1.  <span data-ttu-id="19cb0-367">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-367">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-368">**!finalizequeue**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-368">**!finalizequeue**</span></span>  
+     <span data-ttu-id="19cb0-368">**!finalizequeue**</span><span class="sxs-lookup"><span data-stu-id="19cb0-368">**!finalizequeue**</span></span>  
   
-     <span data-ttu-id="dc8fb-369">查看準備好進行最終處理的物件數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-369">Look at the number of objects that are ready for finalization.</span></span> <span data-ttu-id="dc8fb-370">如果數量很高，您必須檢查為什麼這些完成項完全沒有進度，或進行的速度不夠快。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-370">If the number is high, you must examine why these finalizers cannot progress at all or cannot progress fast enough.</span></span>  
+     <span data-ttu-id="19cb0-369">查看準備好進行最終處理的物件數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-369">Look at the number of objects that are ready for finalization.</span></span> <span data-ttu-id="19cb0-370">如果數量很高，您必須檢查為什麼這些完成項完全沒有進度，或進行的速度不夠快。</span><span class="sxs-lookup"><span data-stu-id="19cb0-370">If the number is high, you must examine why these finalizers cannot progress at all or cannot progress fast enough.</span></span>  
   
-2.  <span data-ttu-id="dc8fb-371">若要取得執行緒的輸出，請輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-371">To get an output of threads, type the following command:</span></span>  
+2.  <span data-ttu-id="19cb0-371">若要取得執行緒的輸出，請輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-371">To get an output of threads, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-372">**threads -special**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-372">**threads -special**</span></span>  
+     <span data-ttu-id="19cb0-372">**threads -special**</span><span class="sxs-lookup"><span data-stu-id="19cb0-372">**threads -special**</span></span>  
   
-     <span data-ttu-id="dc8fb-373">這個命令會提供如下所示的輸出。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-373">This command provides output such as the following.</span></span>  
+     <span data-ttu-id="19cb0-373">這個命令會提供如下所示的輸出。</span><span class="sxs-lookup"><span data-stu-id="19cb0-373">This command provides output such as the following.</span></span>  
   
     ```  
        OSID     Special thread type  
@@ -520,16 +523,16 @@ ms.lasthandoff: 10/18/2017
     4    df0    GC SuspendEE   
     ```  
   
-     <span data-ttu-id="dc8fb-374">完成項執行緒會指出目前正在執行哪一個完成項 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-374">The finalizer thread indicates which finalizer, if any, is currently being run.</span></span> <span data-ttu-id="dc8fb-375">當完成項執行緒未在執行任何完成項時，它正在等候事件來告訴它要執行其工作。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-375">When a finalizer thread is not running any finalizers, it is waiting for an event to tell it to do its work.</span></span> <span data-ttu-id="dc8fb-376">大多數情況下會看見完成項執行緒處於此狀態，是因為它以 THREAD_HIGHEST_PRIORITY 執行，並且應該非常快速地完成執行完成項 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-376">Most of the time you will see the finalizer thread in this state because it runs at THREAD_HIGHEST_PRIORITY and is supposed to finish running finalizers, if any, very quickly.</span></span>  
+     <span data-ttu-id="19cb0-374">完成項執行緒會指出目前正在執行哪一個完成項 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-374">The finalizer thread indicates which finalizer, if any, is currently being run.</span></span> <span data-ttu-id="19cb0-375">當完成項執行緒未在執行任何完成項時，它正在等候事件來告訴它要執行其工作。</span><span class="sxs-lookup"><span data-stu-id="19cb0-375">When a finalizer thread is not running any finalizers, it is waiting for an event to tell it to do its work.</span></span> <span data-ttu-id="19cb0-376">大多數情況下會看見完成項執行緒處於此狀態，是因為它以 THREAD_HIGHEST_PRIORITY 執行，並且應該非常快速地完成執行完成項 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-376">Most of the time you will see the finalizer thread in this state because it runs at THREAD_HIGHEST_PRIORITY and is supposed to finish running finalizers, if any, very quickly.</span></span>  
   
 <a name="Fragmented"></a>   
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a><span data-ttu-id="dc8fb-377">判斷 Managed 堆積中的可用空間數量</span><span class="sxs-lookup"><span data-stu-id="dc8fb-377">To determine the amount of free space in the managed heap</span></span>  
+##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a><span data-ttu-id="19cb0-377">判斷 Managed 堆積中的可用空間數量</span><span class="sxs-lookup"><span data-stu-id="19cb0-377">To determine the amount of free space in the managed heap</span></span>  
   
--   <span data-ttu-id="dc8fb-378">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-378">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
+-   <span data-ttu-id="19cb0-378">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-378">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-379">**!dumpheap -type Free -stat**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-379">**!dumpheap -type Free -stat**</span></span>  
+     <span data-ttu-id="19cb0-379">**!dumpheap -type Free -stat**</span><span class="sxs-lookup"><span data-stu-id="19cb0-379">**!dumpheap -type Free -stat**</span></span>  
   
-     <span data-ttu-id="dc8fb-380">此命令會顯示 Managed 堆積中所有可用物件的大小總計，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-380">This command displays the total size of all the free objects on the managed heap, as shown in the following example.</span></span>  
+     <span data-ttu-id="19cb0-380">此命令會顯示 Managed 堆積中所有可用物件的大小總計，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-380">This command displays the total size of all the free objects on the managed heap, as shown in the following example.</span></span>  
   
     ```  
     total 230 objects  
@@ -539,11 +542,11 @@ ms.lasthandoff: 10/18/2017
     Total 230 objects  
     ```  
   
--   <span data-ttu-id="dc8fb-381">若要判斷層代 0 中的可用空間，請輸入下列命令以取得依層代的記憶體耗用量資訊：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-381">To determine the free space in generation 0, type the following command for memory consumption information by generation:</span></span>  
+-   <span data-ttu-id="19cb0-381">若要判斷層代 0 中的可用空間，請輸入下列命令以取得依層代的記憶體耗用量資訊：</span><span class="sxs-lookup"><span data-stu-id="19cb0-381">To determine the free space in generation 0, type the following command for memory consumption information by generation:</span></span>  
   
-     <span data-ttu-id="dc8fb-382">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-382">**!eeheap -gc**</span></span>  
+     <span data-ttu-id="19cb0-382">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="19cb0-382">**!eeheap -gc**</span></span>  
   
-     <span data-ttu-id="dc8fb-383">這個命令會顯示與下列類似的輸出。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-383">This command displays output similar to the following.</span></span> <span data-ttu-id="dc8fb-384">最後一行顯示暫時區段。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-384">The last line shows the ephemeral segment.</span></span>  
+     <span data-ttu-id="19cb0-383">這個命令會顯示與下列類似的輸出。</span><span class="sxs-lookup"><span data-stu-id="19cb0-383">This command displays output similar to the following.</span></span> <span data-ttu-id="19cb0-384">最後一行顯示暫時區段。</span><span class="sxs-lookup"><span data-stu-id="19cb0-384">The last line shows the ephemeral segment.</span></span>  
   
     ```  
     Heap 0 (0015ad08)  
@@ -559,21 +562,21 @@ ms.lasthandoff: 10/18/2017
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   <span data-ttu-id="dc8fb-385">計算層代 0 所使用的空間：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-385">Calculate the space used by generation 0:</span></span>  
+-   <span data-ttu-id="19cb0-385">計算層代 0 所使用的空間：</span><span class="sxs-lookup"><span data-stu-id="19cb0-385">Calculate the space used by generation 0:</span></span>  
   
-     <span data-ttu-id="dc8fb-386">**?49e05d04-0x49521f8c**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-386">**? 49e05d04-0x49521f8c**</span></span>  
+     <span data-ttu-id="19cb0-386">**?49e05d04-0x49521f8c**</span><span class="sxs-lookup"><span data-stu-id="19cb0-386">**? 49e05d04-0x49521f8c**</span></span>  
   
-     <span data-ttu-id="dc8fb-387">結果如下所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-387">The result is as follows.</span></span> <span data-ttu-id="dc8fb-388">層代 0 大約 9 MB。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-388">Generation 0 is approximately 9 MB.</span></span>  
+     <span data-ttu-id="19cb0-387">結果如下所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-387">The result is as follows.</span></span> <span data-ttu-id="19cb0-388">層代 0 大約 9 MB。</span><span class="sxs-lookup"><span data-stu-id="19cb0-388">Generation 0 is approximately 9 MB.</span></span>  
   
     ```  
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   <span data-ttu-id="dc8fb-389">下列命令會傾印在層代 0 範圍內的可用空間：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-389">The following command dumps the free space within the generation 0 range:</span></span>  
+-   <span data-ttu-id="19cb0-389">下列命令會傾印在層代 0 範圍內的可用空間：</span><span class="sxs-lookup"><span data-stu-id="19cb0-389">The following command dumps the free space within the generation 0 range:</span></span>  
   
-     <span data-ttu-id="dc8fb-390">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-390">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span></span>  
+     <span data-ttu-id="19cb0-390">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span><span class="sxs-lookup"><span data-stu-id="19cb0-390">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span></span>  
   
-     <span data-ttu-id="dc8fb-391">結果如下所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-391">The result is as follows.</span></span>  
+     <span data-ttu-id="19cb0-391">結果如下所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-391">The result is as follows.</span></span>  
   
     ```  
     ------------------------------  
@@ -596,16 +599,16 @@ ms.lasthandoff: 10/18/2017
     Total 409 objects  
     ```  
   
-     <span data-ttu-id="dc8fb-392">此輸出顯示堆積的層代 0 部分使用 9 MB 的物件空間，並有 7 MB 可用。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-392">This output shows that the generation 0 portion of the heap is using 9 MB of space for objects and has 7 MB free.</span></span> <span data-ttu-id="dc8fb-393">這項分析顯示層代 0 對分散的影響程度。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-393">This analysis shows the extent to which generation 0 contributes to fragmentation.</span></span> <span data-ttu-id="dc8fb-394">在計算長期物件的分散原因時，此堆積使用量應該從總數量扣除。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-394">This amount of heap usage should be discounted from the total amount as the cause of fragmentation by long-term objects.</span></span>  
+     <span data-ttu-id="19cb0-392">此輸出顯示堆積的層代 0 部分使用 9 MB 的物件空間，並有 7 MB 可用。</span><span class="sxs-lookup"><span data-stu-id="19cb0-392">This output shows that the generation 0 portion of the heap is using 9 MB of space for objects and has 7 MB free.</span></span> <span data-ttu-id="19cb0-393">這項分析顯示層代 0 對分散的影響程度。</span><span class="sxs-lookup"><span data-stu-id="19cb0-393">This analysis shows the extent to which generation 0 contributes to fragmentation.</span></span> <span data-ttu-id="19cb0-394">在計算長期物件的分散原因時，此堆積使用量應該從總數量扣除。</span><span class="sxs-lookup"><span data-stu-id="19cb0-394">This amount of heap usage should be discounted from the total amount as the cause of fragmentation by long-term objects.</span></span>  
   
 <a name="Pinned"></a>   
-##### <a name="to-determine-the-number-of-pinned-objects"></a><span data-ttu-id="dc8fb-395">判斷被固定的物件數目</span><span class="sxs-lookup"><span data-stu-id="dc8fb-395">To determine the number of pinned objects</span></span>  
+##### <a name="to-determine-the-number-of-pinned-objects"></a><span data-ttu-id="19cb0-395">判斷被固定的物件數目</span><span class="sxs-lookup"><span data-stu-id="19cb0-395">To determine the number of pinned objects</span></span>  
   
--   <span data-ttu-id="dc8fb-396">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-396">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
+-   <span data-ttu-id="19cb0-396">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-396">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     <span data-ttu-id="dc8fb-397">**!gchandles**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-397">**!gchandles**</span></span>  
+     <span data-ttu-id="19cb0-397">**!gchandles**</span><span class="sxs-lookup"><span data-stu-id="19cb0-397">**!gchandles**</span></span>  
   
-     <span data-ttu-id="dc8fb-398">顯示的統計資料包括固定控制代碼數目，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-398">The statistics displayed includes the number of pinned handles, as the following example shows.</span></span>  
+     <span data-ttu-id="19cb0-398">顯示的統計資料包括固定控制代碼數目，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="19cb0-398">The statistics displayed includes the number of pinned handles, as the following example shows.</span></span>  
   
     ```  
     GC Handle Statistics:  
@@ -614,15 +617,15 @@ ms.lasthandoff: 10/18/2017
     ```  
   
 <a name="TimeInGC"></a>   
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a><span data-ttu-id="dc8fb-399">判斷記憶體回收的時間長度</span><span class="sxs-lookup"><span data-stu-id="dc8fb-399">To determine the length of time in a garbage collection</span></span>  
+##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a><span data-ttu-id="19cb0-399">判斷記憶體回收的時間長度</span><span class="sxs-lookup"><span data-stu-id="19cb0-399">To determine the length of time in a garbage collection</span></span>  
   
--   <span data-ttu-id="dc8fb-400">檢查 `% Time in GC` 記憶體效能計數器。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-400">Examine the `% Time in GC` memory performance counter.</span></span>  
+-   <span data-ttu-id="19cb0-400">檢查 `% Time in GC` 記憶體效能計數器。</span><span class="sxs-lookup"><span data-stu-id="19cb0-400">Examine the `% Time in GC` memory performance counter.</span></span>  
   
-     <span data-ttu-id="dc8fb-401">值的計算是使用取樣間隔時間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-401">The value is calculated by using a sample interval time.</span></span> <span data-ttu-id="dc8fb-402">由於計數器會在每次記憶體回收結束時更新，如果在間隔期間未發生任何回收，則目前的取樣值將會與前一個取樣值相同。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-402">Because the counters are updated at the end of each garbage collection, the current sample will have the same value as the previous sample if no collections occurred during the interval.</span></span>  
+     <span data-ttu-id="19cb0-401">值的計算是使用取樣間隔時間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-401">The value is calculated by using a sample interval time.</span></span> <span data-ttu-id="19cb0-402">由於計數器會在每次記憶體回收結束時更新，如果在間隔期間未發生任何回收，則目前的取樣值將會與前一個取樣值相同。</span><span class="sxs-lookup"><span data-stu-id="19cb0-402">Because the counters are updated at the end of each garbage collection, the current sample will have the same value as the previous sample if no collections occurred during the interval.</span></span>  
   
-     <span data-ttu-id="dc8fb-403">回收時間是將取樣間隔時間乘上百分比值而取得。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-403">Collection time is obtained by multiplying the sample interval time with the percentage value.</span></span>  
+     <span data-ttu-id="19cb0-403">回收時間是將取樣間隔時間乘上百分比值而取得。</span><span class="sxs-lookup"><span data-stu-id="19cb0-403">Collection time is obtained by multiplying the sample interval time with the percentage value.</span></span>  
   
-     <span data-ttu-id="dc8fb-404">下列資料顯示四個兩秒的取樣間隔，也就是 8 秒的研究。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-404">The following data shows four sampling intervals of two seconds, for an 8-second study.</span></span> <span data-ttu-id="dc8fb-405">`Gen0`、`Gen1` 和 `Gen2` 資料行會顯示在該層代的間隔期間發生的記憶體回收數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-405">The `Gen0`, `Gen1`, and `Gen2` columns show the number of garbage collections that occurred during that interval for that generation.</span></span>  
+     <span data-ttu-id="19cb0-404">下列資料顯示四個兩秒的取樣間隔，也就是 8 秒的研究。</span><span class="sxs-lookup"><span data-stu-id="19cb0-404">The following data shows four sampling intervals of two seconds, for an 8-second study.</span></span> <span data-ttu-id="19cb0-405">`Gen0`、`Gen1` 和 `Gen2` 資料行會顯示在該層代的間隔期間發生的記憶體回收數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-405">The `Gen0`, `Gen1`, and `Gen2` columns show the number of garbage collections that occurred during that interval for that generation.</span></span>  
   
     ```  
     Interval    Gen0    Gen1    Gen2    % Time in GC  
@@ -632,9 +635,9 @@ ms.lasthandoff: 10/18/2017
            4      11       3       1               3  
     ```  
   
-     <span data-ttu-id="dc8fb-406">這項資訊不會顯示記憶體回收發生的時間，但您可以判斷在時間間隔中發生的記憶體回收數目。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-406">This information does not show when the garbage collection occurred, but you can determine the number of garbage collections that occurred in an interval of time.</span></span> <span data-ttu-id="dc8fb-407">假設在最壞的情況下，第十次層代 0 記憶體回收在第二個間隔開始時完成，而第十一次層代 0 記憶體回收在第五個間隔結束時完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-407">Assuming the worst case, the tenth generation 0 garbage collection finished at the start of the second interval, and the eleventh generation 0 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="dc8fb-408">第十次記憶體回收與第十一次記憶體回收結束之間的時間約 2 秒，而且效能計數器顯示 3%，因此第十一次層代 0 記憶體回收的持續時間為 (2 秒 * 3% = 60 毫秒)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-408">The time between the end of the tenth and the end of the eleventh garbage collection is about 2 seconds, and the performance counter shows 3%, so the duration of the eleventh generation 0 garbage collection was (2 seconds * 3% = 60ms).</span></span>  
+     <span data-ttu-id="19cb0-406">這項資訊不會顯示記憶體回收發生的時間，但您可以判斷在時間間隔中發生的記憶體回收數目。</span><span class="sxs-lookup"><span data-stu-id="19cb0-406">This information does not show when the garbage collection occurred, but you can determine the number of garbage collections that occurred in an interval of time.</span></span> <span data-ttu-id="19cb0-407">假設在最壞的情況下，第十次層代 0 記憶體回收在第二個間隔開始時完成，而第十一次層代 0 記憶體回收在第五個間隔結束時完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-407">Assuming the worst case, the tenth generation 0 garbage collection finished at the start of the second interval, and the eleventh generation 0 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="19cb0-408">第十次記憶體回收與第十一次記憶體回收結束之間的時間約 2 秒，而且效能計數器顯示 3%，因此第十一次層代 0 記憶體回收的持續時間為 (2 秒 \* 3% = 60 毫秒)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-408">The time between the end of the tenth and the end of the eleventh garbage collection is about 2 seconds, and the performance counter shows 3%, so the duration of the eleventh generation 0 garbage collection was (2 seconds \* 3% = 60ms).</span></span>  
   
-     <span data-ttu-id="dc8fb-409">在此範例中，有 5 個週期。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-409">In this example, there are 5 periods.</span></span>  
+     <span data-ttu-id="19cb0-409">在此範例中，有 5 個週期。</span><span class="sxs-lookup"><span data-stu-id="19cb0-409">In this example, there are 5 periods.</span></span>  
   
     ```  
     Interval    Gen0    Gen1    Gen2     % Time in GC  
@@ -645,11 +648,11 @@ ms.lasthandoff: 10/18/2017
            5      11       4       2               20  
     ```  
   
-     <span data-ttu-id="dc8fb-410">第二次層代 2 記憶體回收在第三個間隔期間開始，並在第五個間隔完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-410">The second generation 2 garbage collection started during the third interval and finished at the fifth interval.</span></span> <span data-ttu-id="dc8fb-411">假設在最壞的情況下，最後一次記憶體回收是針對層代 0 回收，其在第二個間隔開始時完成，且層代 2 記憶體回收在第五個間隔結束時完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-411">Assuming the worst case, the last garbage collection was for a generation 0 collection that finished at the start of the second interval, and the generation 2 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="dc8fb-412">因此，層代 0 記憶體回收結束與層代 2 記憶體回收結束之間的時間是 4 秒。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-412">Therefore, the time between the end of the generation 0 garbage collection and the end of the generation 2 garbage collection is 4 seconds.</span></span> <span data-ttu-id="dc8fb-413">由於 `% Time in GC` 計數器為 20%，因此層代 2 記憶體回收可能花費的最長時間量是 (4 秒 * 20% = 800 毫秒)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-413">Because the `% Time in GC` counter is 20%, the maximum amount of time the generation 2 garbage collection could have taken is (4 seconds * 20% = 800ms).</span></span>  
+     <span data-ttu-id="19cb0-410">第二次層代 2 記憶體回收在第三個間隔期間開始，並在第五個間隔完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-410">The second generation 2 garbage collection started during the third interval and finished at the fifth interval.</span></span> <span data-ttu-id="19cb0-411">假設在最壞的情況下，最後一次記憶體回收是針對層代 0 回收，其在第二個間隔開始時完成，且層代 2 記憶體回收在第五個間隔結束時完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-411">Assuming the worst case, the last garbage collection was for a generation 0 collection that finished at the start of the second interval, and the generation 2 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="19cb0-412">因此，層代 0 記憶體回收結束與層代 2 記憶體回收結束之間的時間是 4 秒。</span><span class="sxs-lookup"><span data-stu-id="19cb0-412">Therefore, the time between the end of the generation 0 garbage collection and the end of the generation 2 garbage collection is 4 seconds.</span></span> <span data-ttu-id="19cb0-413">由於 `% Time in GC` 計數器為 20%，因此層代 2 記憶體回收可能花費的最長時間量是 (4 秒 \* 20% = 800 毫秒)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-413">Because the `% Time in GC` counter is 20%, the maximum amount of time the generation 2 garbage collection could have taken is (4 seconds \* 20% = 800ms).</span></span>  
   
--   <span data-ttu-id="dc8fb-414">或者，您可以使用[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)來判斷記憶體回收的長度，並分析資訊來判斷記憶體回收的持續時間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-414">Alternatively, you can determine the length of a garbage collection by using [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md), and analyze the information to determine the duration of garbage collection.</span></span>  
+-   <span data-ttu-id="19cb0-414">或者，您可以使用[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)來判斷記憶體回收的長度，並分析資訊來判斷記憶體回收的持續時間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-414">Alternatively, you can determine the length of a garbage collection by using [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md), and analyze the information to determine the duration of garbage collection.</span></span>  
   
-     <span data-ttu-id="dc8fb-415">例如，下列資料顯示在非並行記憶體回收期間發生的事件序列。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-415">For example, the following data shows an event sequence that occurred during a non-concurrent garbage collection.</span></span>  
+     <span data-ttu-id="19cb0-415">例如，下列資料顯示在非並行記憶體回收期間發生的事件序列。</span><span class="sxs-lookup"><span data-stu-id="19cb0-415">For example, the following data shows an event sequence that occurred during a non-concurrent garbage collection.</span></span>  
   
     ```  
     Timestamp    Event name  
@@ -662,13 +665,13 @@ ms.lasthandoff: 10/18/2017
     517918        GCRestartEEEnd  
     ```  
   
-     <span data-ttu-id="dc8fb-416">暫止 Managed 執行緒花了 26 微秒 (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-416">Suspending the managed thread took 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).</span></span>  
+     <span data-ttu-id="19cb0-416">暫止 Managed 執行緒花了 26 微秒 (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-416">Suspending the managed thread took 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).</span></span>  
   
-     <span data-ttu-id="dc8fb-417">實際的記憶體回收花了 4.8 毫秒 (`GCEnd_V1` – `GCStart_V1`)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-417">The actual garbage collection took 4.8ms (`GCEnd_V1` – `GCStart_V1`).</span></span>  
+     <span data-ttu-id="19cb0-417">實際的記憶體回收花了 4.8 毫秒 (`GCEnd_V1` – `GCStart_V1`)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-417">The actual garbage collection took 4.8ms (`GCEnd_V1` – `GCStart_V1`).</span></span>  
   
-     <span data-ttu-id="dc8fb-418">繼續 Managed 執行緒花了 21 微秒 (`GCRestartEEEnd` – `GCRestartEEBegin`)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-418">Resuming the managed threads took 21us (`GCRestartEEEnd` – `GCRestartEEBegin`).</span></span>  
+     <span data-ttu-id="19cb0-418">繼續 Managed 執行緒花了 21 微秒 (`GCRestartEEEnd` – `GCRestartEEBegin`)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-418">Resuming the managed threads took 21us (`GCRestartEEEnd` – `GCRestartEEBegin`).</span></span>  
   
-     <span data-ttu-id="dc8fb-419">下列輸出提供背景記憶體回收的範例，並包含處理序、執行緒和事件欄位。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-419">The following output provides an example for background garbage collection, and includes the process, thread, and event fields.</span></span> <span data-ttu-id="dc8fb-420">(並非所有資料皆會顯示)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-420">(Not all data is shown.)</span></span>  
+     <span data-ttu-id="19cb0-419">下列輸出提供背景記憶體回收的範例，並包含處理序、執行緒和事件欄位。</span><span class="sxs-lookup"><span data-stu-id="19cb0-419">The following output provides an example for background garbage collection, and includes the process, thread, and event fields.</span></span> <span data-ttu-id="19cb0-420">(並非所有資料皆會顯示)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-420">(Not all data is shown.)</span></span>  
   
     ```  
     timestamp(us)    event name            process    thread    event field  
@@ -688,26 +691,26 @@ ms.lasthandoff: 10/18/2017
     89931464        GCHeapStats            Test.exe    4372          
     ```  
   
-     <span data-ttu-id="dc8fb-421">在 42504816 的 `GCStart_V1` 事件表示這是背景記憶體回收，因為最後一個欄位是 `1`。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-421">The `GCStart_V1` event at 42504816 indicates that this is a background garbage collection, because the last field is `1`.</span></span> <span data-ttu-id="dc8fb-422">這會變成記憶體回收第 </span><span class="sxs-lookup"><span data-stu-id="dc8fb-422">This becomes garbage collection No.</span></span> <span data-ttu-id="dc8fb-423">102019 號。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-423">102019.</span></span>  
+     <span data-ttu-id="19cb0-421">在 42504816 的 `GCStart_V1` 事件表示這是背景記憶體回收，因為最後一個欄位是 `1`。</span><span class="sxs-lookup"><span data-stu-id="19cb0-421">The `GCStart_V1` event at 42504816 indicates that this is a background garbage collection, because the last field is `1`.</span></span> <span data-ttu-id="19cb0-422">這會變成記憶體回收第 </span><span class="sxs-lookup"><span data-stu-id="19cb0-422">This becomes garbage collection No.</span></span> <span data-ttu-id="19cb0-423">102019 號。</span><span class="sxs-lookup"><span data-stu-id="19cb0-423">102019.</span></span>  
   
-     <span data-ttu-id="dc8fb-424">因為需要先進行暫時記憶體回收，才能開始背景記憶體回收，因此發生 `GCStart` 事件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-424">The `GCStart` event occurs because there is a need for an ephemeral garbage collection before you start a background garbage collection.</span></span> <span data-ttu-id="dc8fb-425">這會變成記憶體回收第 </span><span class="sxs-lookup"><span data-stu-id="dc8fb-425">This becomes garbage collection No.</span></span> <span data-ttu-id="dc8fb-426">102020 號。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-426">102020.</span></span>  
+     <span data-ttu-id="19cb0-424">因為需要先進行暫時記憶體回收，才能開始背景記憶體回收，因此發生 `GCStart` 事件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-424">The `GCStart` event occurs because there is a need for an ephemeral garbage collection before you start a background garbage collection.</span></span> <span data-ttu-id="19cb0-425">這會變成記憶體回收第 </span><span class="sxs-lookup"><span data-stu-id="19cb0-425">This becomes garbage collection No.</span></span> <span data-ttu-id="19cb0-426">102020 號。</span><span class="sxs-lookup"><span data-stu-id="19cb0-426">102020.</span></span>  
   
-     <span data-ttu-id="dc8fb-427">在 42514170 處，記憶體回收第</span><span class="sxs-lookup"><span data-stu-id="dc8fb-427">At 42514170, garbage collection No.</span></span> <span data-ttu-id="dc8fb-428">102020 號完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-428">102020 finishes.</span></span> <span data-ttu-id="dc8fb-429">Managed 執行緒會在此時重新啟動。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-429">The managed threads are restarted at this point.</span></span> <span data-ttu-id="dc8fb-430">此步驟會在執行緒 4372，觸發此背景記憶體回收完成。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-430">This is completed on thread 4372, which triggered this background garbage collection.</span></span>  
+     <span data-ttu-id="19cb0-427">在 42514170 處，記憶體回收第</span><span class="sxs-lookup"><span data-stu-id="19cb0-427">At 42514170, garbage collection No.</span></span> <span data-ttu-id="19cb0-428">102020 號完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-428">102020 finishes.</span></span> <span data-ttu-id="19cb0-429">Managed 執行緒會在此時重新啟動。</span><span class="sxs-lookup"><span data-stu-id="19cb0-429">The managed threads are restarted at this point.</span></span> <span data-ttu-id="19cb0-430">此步驟會在執行緒 4372，觸發此背景記憶體回收完成。</span><span class="sxs-lookup"><span data-stu-id="19cb0-430">This is completed on thread 4372, which triggered this background garbage collection.</span></span>  
   
-     <span data-ttu-id="dc8fb-431">在執行緒 4744 上發生擱置。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-431">On thread 4744, a suspension occurs.</span></span> <span data-ttu-id="dc8fb-432">這是背景記憶體回收唯一必須暫止 Managed 執行緒的時間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-432">This is the only time at which the background garbage collection has to suspend managed threads.</span></span> <span data-ttu-id="dc8fb-433">這段期間是大約 99 毫秒 ((63784407-63685394)/1000)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-433">This duration is approximately 99ms ((63784407-63685394)/1000).</span></span>  
+     <span data-ttu-id="19cb0-431">在執行緒 4744 上發生擱置。</span><span class="sxs-lookup"><span data-stu-id="19cb0-431">On thread 4744, a suspension occurs.</span></span> <span data-ttu-id="19cb0-432">這是背景記憶體回收唯一必須暫止 Managed 執行緒的時間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-432">This is the only time at which the background garbage collection has to suspend managed threads.</span></span> <span data-ttu-id="19cb0-433">這段期間是大約 99 毫秒 ((63784407-63685394)/1000)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-433">This duration is approximately 99ms ((63784407-63685394)/1000).</span></span>  
   
-     <span data-ttu-id="dc8fb-434">背景記憶體回收的 `GCEnd` 事件位於 89931423。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-434">The `GCEnd` event for the background garbage collection is at 89931423.</span></span> <span data-ttu-id="dc8fb-435">這表示背景記憶體回收持續大約 47 秒 ((89931423-42504816)/1000)。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-435">This means that the background garbage collection lasted for about 47seconds ((89931423-42504816)/1000).</span></span>  
+     <span data-ttu-id="19cb0-434">背景記憶體回收的 `GCEnd` 事件位於 89931423。</span><span class="sxs-lookup"><span data-stu-id="19cb0-434">The `GCEnd` event for the background garbage collection is at 89931423.</span></span> <span data-ttu-id="19cb0-435">這表示背景記憶體回收持續大約 47 秒 ((89931423-42504816)/1000)。</span><span class="sxs-lookup"><span data-stu-id="19cb0-435">This means that the background garbage collection lasted for about 47seconds ((89931423-42504816)/1000).</span></span>  
   
-     <span data-ttu-id="dc8fb-436">在 Managed 執行緒執行時，您可能看到發生任意數目的暫時記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-436">While the managed threads are running, you can see any number of ephemeral garbage collections occurring.</span></span>  
+     <span data-ttu-id="19cb0-436">在 Managed 執行緒執行時，您可能看到發生任意數目的暫時記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-436">While the managed threads are running, you can see any number of ephemeral garbage collections occurring.</span></span>  
   
 <a name="Triggered"></a>   
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a><span data-ttu-id="dc8fb-437">判斷觸發記憶體回收的原因</span><span class="sxs-lookup"><span data-stu-id="dc8fb-437">To determine what triggered a garbage collection</span></span>  
+##### <a name="to-determine-what-triggered-a-garbage-collection"></a><span data-ttu-id="19cb0-437">判斷觸發記憶體回收的原因</span><span class="sxs-lookup"><span data-stu-id="19cb0-437">To determine what triggered a garbage collection</span></span>  
   
--   <span data-ttu-id="dc8fb-438">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令以顯示所有執行緒及其呼叫堆疊：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-438">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command to show all the threads with their call stacks:</span></span>  
+-   <span data-ttu-id="19cb0-438">在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令以顯示所有執行緒及其呼叫堆疊：</span><span class="sxs-lookup"><span data-stu-id="19cb0-438">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command to show all the threads with their call stacks:</span></span>  
   
-     <span data-ttu-id="dc8fb-439">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-439">**~\*kb**</span></span>  
+     <span data-ttu-id="19cb0-439">**~\*kb**</span><span class="sxs-lookup"><span data-stu-id="19cb0-439">**~\*kb**</span></span>  
   
-     <span data-ttu-id="dc8fb-440">這個命令會顯示與下列類似的輸出。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-440">This command displays output similar to the following.</span></span>  
+     <span data-ttu-id="19cb0-440">這個命令會顯示與下列類似的輸出。</span><span class="sxs-lookup"><span data-stu-id="19cb0-440">This command displays output similar to the following.</span></span>  
   
     ```  
     0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect   
@@ -715,9 +718,9 @@ ms.lasthandoff: 10/18/2017
     0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48  
     ```  
   
-     <span data-ttu-id="dc8fb-441">如果記憶體回收的起因是來自作業系統的記憶體不足通知，則呼叫堆疊會很類似，只除了執行緒是完成項執行緒。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-441">If the garbage collection was caused by a low memory notification from the operating system, the call stack is similar, except that the thread is the finalizer thread.</span></span> <span data-ttu-id="dc8fb-442">完成項執行緒會收到非同步記憶體偏低通知，並引發記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-442">The finalizer thread gets an asynchronous low memory notification and induces the garbage collection.</span></span>  
+     <span data-ttu-id="19cb0-441">如果記憶體回收的起因是來自作業系統的記憶體不足通知，則呼叫堆疊會很類似，只除了執行緒是完成項執行緒。</span><span class="sxs-lookup"><span data-stu-id="19cb0-441">If the garbage collection was caused by a low memory notification from the operating system, the call stack is similar, except that the thread is the finalizer thread.</span></span> <span data-ttu-id="19cb0-442">完成項執行緒會收到非同步記憶體偏低通知，並引發記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-442">The finalizer thread gets an asynchronous low memory notification and induces the garbage collection.</span></span>  
   
-     <span data-ttu-id="dc8fb-443">如果記憶體回收的起因是記憶體配置，則堆疊會如下所示：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-443">If the garbage collection was caused by memory allocation, the stack appears as follows:</span></span>  
+     <span data-ttu-id="19cb0-443">如果記憶體回收的起因是記憶體配置，則堆疊會如下所示：</span><span class="sxs-lookup"><span data-stu-id="19cb0-443">If the garbage collection was caused by memory allocation, the stack appears as follows:</span></span>  
   
     ```  
     0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration  
@@ -731,13 +734,13 @@ ms.lasthandoff: 10/18/2017
     0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153  
     ```  
   
-     <span data-ttu-id="dc8fb-444">Just-In-Time 協助程式 (`JIT_New*`) 實際上呼叫 `GCHeap::GarbageCollectGeneration`。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-444">A just-in-time helper (`JIT_New*`) eventually calls `GCHeap::GarbageCollectGeneration`.</span></span> <span data-ttu-id="dc8fb-445">如果您判斷層代 2 記憶體回收起因是配置，則必須判斷層代 2 記憶體回收會回收哪些物件及如何加以避免。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-445">If you determine that generation 2 garbage collections are caused by allocations, you must determine which objects are collected by a generation 2 garbage collection and how to avoid them.</span></span> <span data-ttu-id="dc8fb-446">也就是您想要判斷層代 2 記憶體回收開始和結束之間的差異，以及造成層代 2 記憶體回收的物件。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-446">That is, you want to determine the difference between the start and the end of a generation 2 garbage collection, and the objects that caused the generation 2 collection.</span></span>  
+     <span data-ttu-id="19cb0-444">Just-In-Time 協助程式 (`JIT_New*`) 實際上呼叫 `GCHeap::GarbageCollectGeneration`。</span><span class="sxs-lookup"><span data-stu-id="19cb0-444">A just-in-time helper (`JIT_New*`) eventually calls `GCHeap::GarbageCollectGeneration`.</span></span> <span data-ttu-id="19cb0-445">如果您判斷層代 2 記憶體回收起因是配置，則必須判斷層代 2 記憶體回收會回收哪些物件及如何加以避免。</span><span class="sxs-lookup"><span data-stu-id="19cb0-445">If you determine that generation 2 garbage collections are caused by allocations, you must determine which objects are collected by a generation 2 garbage collection and how to avoid them.</span></span> <span data-ttu-id="19cb0-446">也就是您想要判斷層代 2 記憶體回收開始和結束之間的差異，以及造成層代 2 記憶體回收的物件。</span><span class="sxs-lookup"><span data-stu-id="19cb0-446">That is, you want to determine the difference between the start and the end of a generation 2 garbage collection, and the objects that caused the generation 2 collection.</span></span>  
   
-     <span data-ttu-id="dc8fb-447">例如，在偵錯工具中輸入下列命令以顯示層代 2 記憶體回收的開始：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-447">For example, type the following command in the debugger to show the beginning of a generation 2 collection:</span></span>  
+     <span data-ttu-id="19cb0-447">例如，在偵錯工具中輸入下列命令以顯示層代 2 記憶體回收的開始：</span><span class="sxs-lookup"><span data-stu-id="19cb0-447">For example, type the following command in the debugger to show the beginning of a generation 2 collection:</span></span>  
   
-     <span data-ttu-id="dc8fb-448">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-448">**!dumpheap –stat**</span></span>  
+     <span data-ttu-id="19cb0-448">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="19cb0-448">**!dumpheap –stat**</span></span>  
   
-     <span data-ttu-id="dc8fb-449">範例輸出 (經過刪減以顯示使用最大空間的物件)：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-449">Example output (abridged to show the objects that use the most space):</span></span>  
+     <span data-ttu-id="19cb0-449">範例輸出 (經過刪減以顯示使用最大空間的物件)：</span><span class="sxs-lookup"><span data-stu-id="19cb0-449">Example output (abridged to show the objects that use the most space):</span></span>  
   
     ```  
     79124228    31857      9862328 System.Object[]  
@@ -755,11 +758,11 @@ ms.lasthandoff: 10/18/2017
     Total 6471774 objects  
     ```  
   
-     <span data-ttu-id="dc8fb-450">在層代 2 結束時重複執行命令：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-450">Repeat the command at the end of generation 2:</span></span>  
+     <span data-ttu-id="19cb0-450">在層代 2 結束時重複執行命令：</span><span class="sxs-lookup"><span data-stu-id="19cb0-450">Repeat the command at the end of generation 2:</span></span>  
   
-     <span data-ttu-id="dc8fb-451">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="dc8fb-451">**!dumpheap –stat**</span></span>  
+     <span data-ttu-id="19cb0-451">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="19cb0-451">**!dumpheap –stat**</span></span>  
   
-     <span data-ttu-id="dc8fb-452">範例輸出 (經過刪減以顯示使用最大空間的物件)：</span><span class="sxs-lookup"><span data-stu-id="dc8fb-452">Example output (abridged to show the objects that use the most space):</span></span>  
+     <span data-ttu-id="19cb0-452">範例輸出 (經過刪減以顯示使用最大空間的物件)：</span><span class="sxs-lookup"><span data-stu-id="19cb0-452">Example output (abridged to show the objects that use the most space):</span></span>  
   
     ```  
     79124228    26648      9314256 System.Object[]  
@@ -776,14 +779,14 @@ ms.lasthandoff: 10/18/2017
     Total 6417525 objects  
     ```  
   
-     <span data-ttu-id="dc8fb-453">`double[]` 物件從輸出結束消失，這表示它們已被回收。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-453">The `double[]` objects disappeared from the end of the output, which means that they were collected.</span></span> <span data-ttu-id="dc8fb-454">這些物件大約 70 MB。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-454">These objects account for approximately 70 MB.</span></span> <span data-ttu-id="dc8fb-455">剩餘的物件變更不多。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-455">The remaining objects did not change much.</span></span> <span data-ttu-id="dc8fb-456">因此，這些 `double[]` 物件便是這個層代 2 記憶體回收發生的原因。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-456">Therefore, these `double[]` objects were the reason why this generation 2 garbage collection occurred.</span></span> <span data-ttu-id="dc8fb-457">您的下一個步驟是判斷 `double[]` 物件為何出現，以及其終止原因。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-457">Your next step is to determine why the `double[]` objects are there and why they died.</span></span> <span data-ttu-id="dc8fb-458">您可以要求程式碼開發人員這些物件的來源，或者您可以使用 **gcroot** 命令。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-458">You can ask the code developer where these objects came from, or you can use the **gcroot** command.</span></span>  
+     <span data-ttu-id="19cb0-453">`double[]` 物件從輸出結束消失，這表示它們已被回收。</span><span class="sxs-lookup"><span data-stu-id="19cb0-453">The `double[]` objects disappeared from the end of the output, which means that they were collected.</span></span> <span data-ttu-id="19cb0-454">這些物件大約 70 MB。</span><span class="sxs-lookup"><span data-stu-id="19cb0-454">These objects account for approximately 70 MB.</span></span> <span data-ttu-id="19cb0-455">剩餘的物件變更不多。</span><span class="sxs-lookup"><span data-stu-id="19cb0-455">The remaining objects did not change much.</span></span> <span data-ttu-id="19cb0-456">因此，這些 `double[]` 物件便是這個層代 2 記憶體回收發生的原因。</span><span class="sxs-lookup"><span data-stu-id="19cb0-456">Therefore, these `double[]` objects were the reason why this generation 2 garbage collection occurred.</span></span> <span data-ttu-id="19cb0-457">您的下一個步驟是判斷 `double[]` 物件為何出現，以及其終止原因。</span><span class="sxs-lookup"><span data-stu-id="19cb0-457">Your next step is to determine why the `double[]` objects are there and why they died.</span></span> <span data-ttu-id="19cb0-458">您可以要求程式碼開發人員這些物件的來源，或者您可以使用 **gcroot** 命令。</span><span class="sxs-lookup"><span data-stu-id="19cb0-458">You can ask the code developer where these objects came from, or you can use the **gcroot** command.</span></span>  
   
 <a name="HighCPU"></a>   
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a><span data-ttu-id="dc8fb-459">判斷高 CPU 使用量是否由於記憶體回收所造成</span><span class="sxs-lookup"><span data-stu-id="dc8fb-459">To determine whether high CPU usage is caused by garbage collection</span></span>  
+##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a><span data-ttu-id="19cb0-459">判斷高 CPU 使用量是否由於記憶體回收所造成</span><span class="sxs-lookup"><span data-stu-id="19cb0-459">To determine whether high CPU usage is caused by garbage collection</span></span>  
   
--   <span data-ttu-id="dc8fb-460">相互關聯 `% Time in GC` 記憶體效能計數器值與處理序時間。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-460">Correlate the `% Time in GC` memory performance counter value with the process time.</span></span>  
+-   <span data-ttu-id="19cb0-460">相互關聯 `% Time in GC` 記憶體效能計數器值與處理序時間。</span><span class="sxs-lookup"><span data-stu-id="19cb0-460">Correlate the `% Time in GC` memory performance counter value with the process time.</span></span>  
   
-     <span data-ttu-id="dc8fb-461">如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-461">If the `% Time in GC` value spikes at the same time as process time, garbage collection is causing a high CPU usage.</span></span> <span data-ttu-id="dc8fb-462">否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。</span><span class="sxs-lookup"><span data-stu-id="dc8fb-462">Otherwise, profile the application to find where the high usage is occurring.</span></span>  
+     <span data-ttu-id="19cb0-461">如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。</span><span class="sxs-lookup"><span data-stu-id="19cb0-461">If the `% Time in GC` value spikes at the same time as process time, garbage collection is causing a high CPU usage.</span></span> <span data-ttu-id="19cb0-462">否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。</span><span class="sxs-lookup"><span data-stu-id="19cb0-462">Otherwise, profile the application to find where the high usage is occurring.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc8fb-463">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dc8fb-463">See Also</span></span>  
- [<span data-ttu-id="dc8fb-464">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="dc8fb-464">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="19cb0-463">請參閱</span><span class="sxs-lookup"><span data-stu-id="19cb0-463">See Also</span></span>  
+ [<span data-ttu-id="19cb0-464">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="19cb0-464">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)
