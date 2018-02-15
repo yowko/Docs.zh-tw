@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure 裝載的 ASP.NET Core Web 應用程式的建議
 
 > 「 業務的 everywhere 會略過 IT 部門以取得從雲端 (也稱為 SaaS) 應用程式項目和支付它們，就像訂閱雜誌一樣。 然後當不再需要服務時，他們可以取消訂用帳戶的邊角中未使用任何設備。 」  
-> _\-Daryl Plummer，Gartner 分析師_
+> _\- Daryl Plummer，Gartner 分析師_
 
 ## <a name="summary"></a>總結
 
@@ -127,4 +130,4 @@ Azure 會提供各種不同的資料儲存體選項，以便您的應用程式�
     <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
-[上一個](開發的程序-如-azure.md)
+[Previous] (development-process-for-azure.md)

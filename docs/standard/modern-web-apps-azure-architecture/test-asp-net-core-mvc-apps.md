@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 4611ffa8334e124946e849306d3281b695830eb1
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -112,9 +115,9 @@ Martin Fowler 寫入有關測試金字塔圖，顯示的範例圖 9-1。
 
 這種方法的變化會結束 「 應該 」 與每個測試類別名稱，並稍微修改時態：
 
--   CatalogControllerGetImage**應該**。**呼叫**ImageServiceWithId
+-   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**應該**。**記錄**WarningGivenImageMissingException
+-   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 有些小組尋找第二個的命名方式更清楚，但是稍微更多詳細資料。 在任何情況下，嘗試使用提供深入了解測試的行為，使用命名慣例，如此當一或多個測試失敗時，它是明顯來自已失敗何種情況下，其名稱。 避免命名您的測試大致，例如 ControllerTests.Test1，這些都會提供任何值，當您在測試結果中看到。
 

@@ -1,15 +1,18 @@
 ---
 title: "Docker 應用程式的內部迴圈的開發工作流程"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 30c10b2407ab643e04eb44c00ddf4a89d369a025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
+ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈的開發工作流程
 
@@ -255,8 +258,8 @@ Docker 主機上，開啟瀏覽器並瀏覽至該網站。您應該會看到您�
 
 您也可以偵錯.NET Core 容器在 Docker 中的使用 Visual Studio 中下, 一節中所述。
 
-**更多資訊：** 若要了解有關偵錯 Node.js Docker 容器的詳細資訊，請移至<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/\ 使用者\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**更多資訊：** 若要了解有關偵錯 Node.js Docker 容器的詳細資訊，請移至<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/ \使用者\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
-[上一個](docker-應用程式層開發-environment.md) [下一步] (visual-studio-工具-如-docker.md)
+[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)

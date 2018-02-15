@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: e676c1225f7d11381808040cf101e897e0726ad4
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="development-process-for-azure"></a>Azure 的開發程序
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/21/2017
 
 是否完整且功能強大的 IDE 或套輕量型且敏捷式軟體開發編輯器想，Microsoft 會具有您涵蓋開發 ASP.NET Core 應用程式時。
 
-**Visual Studio 2017。** 如果您使用*Visual Studio 2017* ASP.NET Core 應用程式，只要您有*.NET Core 跨平台開發*安裝的工作負載。 圖 10-1 會顯示在 Visual Studio 2017 的 [設定] 對話方塊所需的工作負載。
+**Visual Studio 2017.** 如果您使用*Visual Studio 2017* ASP.NET Core 應用程式，只要您有*.NET Core 跨平台開發*安裝的工作負載。 圖 10-1 會顯示在 Visual Studio 2017 的 [設定] 對話方塊所需的工作負載。
 
 ![](./media/image10-1.png)
 
@@ -114,4 +117,4 @@ CI/CD 管線設定之後，您就可以只讓 web 應用程式的更新，並將
 
 
 >[!div class="step-by-step"]
-[上一個](test-asp-net-core-mvc-apps.md) [下一步] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[Previous] (test-asp-net-core-mvc-apps.md) [Next] (azure-hosting-recommendations-for-asp-net-web-apps.md)

@@ -1,15 +1,18 @@
 ---
 title: "Docker 術語"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: c3b4391a839db02d8bad8380013ea916100e4a57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a622b2949c1d2277bb3e82617a5bc2d8cb432263
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -47,4 +50,4 @@ ms.lasthandoff: 11/21/2017
 
 
 >[!div class="step-by-step"]
-[上一個](的模擬層是-docker.md) [下一步] (docker-容器-映像-和-registries.md)
+[Previous] (what-is-docker.md) [Next] (docker-containers-images-and-registries.md)

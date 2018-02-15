@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>開始使用 Azure 佇列儲存體使用 F # #
 
@@ -142,8 +142,8 @@ Azure 佇列儲存體提供雲端應用程式元件之間的傳訊。 在設計�
 
 既然您已經學會佇列儲存體的基本概念，請遵循下列連結，以了解更複雜的儲存體工作。
 
-- [儲存體用戶端程式庫.NET 參考](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [適用於.NET 的 azure 儲存體 Api](/dotnet/api/overview/azure/storage)
 - [Azure 儲存體型別提供者](https://github.com/fsprojects/AzureStorageTypeProvider)
 - [Azure 儲存體團隊部落格](http://blogs.msdn.com/b/windowsazurestorage/)
-- [設定連接字串](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [REST API 參考](http://msdn.microsoft.com/library/azure/dd179355)
+- [設定 Azure 儲存體連接字串](/azure/storage/common/storage-configure-connection-string)
+- [Azure 儲存體服務 REST API 參考](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

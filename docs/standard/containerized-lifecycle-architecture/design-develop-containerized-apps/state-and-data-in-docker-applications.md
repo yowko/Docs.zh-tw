@@ -1,15 +1,18 @@
 ---
 title: "狀態和 Docker 應用程式中的資料"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 61cd88ca8dd7e51759111d6a9357c008458ee41a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="state-and-data-in-docker-applications"></a>狀態和 Docker 應用程式中的資料
 

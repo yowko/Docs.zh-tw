@@ -1,15 +1,18 @@
 ---
 title: "監視進行容器化應用程式服務"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3e4a78eb47d0e6712919c89b6f52ec8e4248fb23
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="monitor-containerized-application-services"></a>監視進行容器化應用程式服務
 
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/23/2017
 
 ### <a name="operations-management-suitehttpmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](http://microsoft.com/oms) Docker 容器解決方案
 
-除了提供重要服務本身，Operations Management Suite 容器解決方案管理和監視 Docker 主機和容器，以顯示的詳細資訊，您的容器和容器主機，執行容器或失敗，並傳送至 Docker 精靈和容器記錄*stdout*和*stderr*。 它也會顯示效能度量，例如 CPU、 記憶體、 網路和儲存體容器和主機，以協助您疑難排解並尋找容器有很多雜訊的像素。
+除了提供重要服務本身，Operations Management Suite 容器解決方案管理和監視 Docker 主機和容器，以顯示的詳細資訊，您的容器和容器主機，執行容器或失敗，並傳送至 Docker 精靈和容器記錄*stdout*和*stderr*。 它也會顯示效能計量 (例如容器和主機的 CPU、記憶體、網路和儲存體)，以協助您進行疑難排解，並找出有雜訊的鄰近容器。
 
 ![](./media/image2.png)
 
@@ -88,13 +91,13 @@ Operations Management Suite 會實作為雲端式服務，因為您可以將它�
 
 您可以查看所執行的查詢類型的效能資訊 = 效能，如圖 6-3 所示。
 
-![DockerPerfMetricsView](./media/image3.png){寬度 ="5.78625 in"height ="3.25 in"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 圖 6-3： 效能度量的顯示 Operations Management Suite 的 Docker 主機
 
 儲存查詢也是在 Operations Management Suite 中的標準功能，可協助您讓查詢所找到有用，並找出您的系統中的趨勢。
 
-**進一歩** 找到有關安裝和設定 Docker 容器中的方案[Operations Management Suite](http://microsoft.com/oms)，請移至<https://docs.microsoft.com/azure/記錄檔-分析/記錄檔-分析-容器>。
+**進一歩** 找到有關安裝和設定 Docker 容器中的方案[Operations Management Suite](http://microsoft.com/oms)，請移至<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[上一個](管理-生產-docker-environments.md) [下一步] (.../key-takeaways/index.md)
+[Previous] (manage-production-docker-environments.md) [Next] (../key-takeaways/index.md)

@@ -5,27 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58bb7f0b5d6e43f4e157bda2f7dff5ad7c57a6c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcd6f8454f77cfd2fbd80ed0f77ce1549025a4d6
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interoperability-and-integration"></a>互通性與整合
 本章節涵蓋與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的互通性與整合的內容。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Web 服務通訊協定互通性手冊](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 已設計成與可支援一組規格 (即所謂的 Web 服務規格) 的 Web 服務相互操作。 本主題會列出支援的規格以及支援這些規格的繫結。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 建置與支援一組稱為 Web 服務規格的規格的 Web 服務交互操作。 本主題會列出支援的規格以及支援這些規格的繫結。  
   
  [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  討論如何將 COM+ 應用程式公開為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
@@ -61,4 +63,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相關章節  
- [擴充 WCF](../../../../docs/framework/wcf/extending/extending-wcf.md)
+ [擴充 WCF](../../../../docs/framework/wcf/extending/index.md)

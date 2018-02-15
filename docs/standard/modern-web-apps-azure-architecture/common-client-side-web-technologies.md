@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>常見的用戶端端 Web 技術
 
@@ -67,7 +70,7 @@ JavaScript 是動態、 解譯的程式設計語言標準化 ECMAScript 語言�
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs SPA 架構
 
-| **因素** | **jQuery** | **角度**|
+| **Factor** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
 | 擷取 DOM | **是** | **是** |
 | AJAX 支援 | **是** | **是** |
@@ -146,7 +149,7 @@ JavaScript 架構持續改良 breakneck 速度。 使用上面所列，來協助
 > ### <a name="references--client-web-technologies"></a>參考 – 用戶端 Web 技術
 > - **HTML 和 CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Vs sass 此類。較低**  
+> - **Vs sass 此類。LESS**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
 > - **設定 ASP.NET Core 應用程式，以更少、 Sass 和實用的字型樣式**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
@@ -156,9 +159,9 @@ JavaScript 架構持續改良 breakneck 速度。 使用上面所列，來協助
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **角度**  
+> - **Angular**  
 > <https://angular.io/>
-> - **回應**  
+> - 回應  
 > <https://facebook.github.io/react/>
 > - **React Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>

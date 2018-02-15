@@ -1,15 +1,18 @@
 ---
 title: "DevOps 共同作業基礎容器"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24aad577fca0fd540d66f9e037b58f53583d8fbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 832beea490bb8221c7aa4202316cbebee84ef32e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 共同作業基礎容器
 
@@ -68,4 +71,4 @@ DevOps 應該考量之旅，而不是目的地。 它就應該透過適當地限
 -   隨插即用許多現有的 DevOps 投資，包括開放原始碼中的投資與
 
 >[!div class="step-by-step"]
-[上一個](index.md) [下一步] (.../Microsoft-platform-tools-containerized-apps/index.md)
+[Previous] (index.md) [Next] (../Microsoft-platform-tools-containerized-apps/index.md)

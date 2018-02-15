@@ -4,17 +4,20 @@ description: "現代化現有的.NET 應用程式與 Azure 雲端和 Windows Con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 0bcc330a5970ab923b48d8790c4de93171283d94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e2f776b71fda9074605f072335a6e95366d2a97
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conclusions"></a>結論
 
 -   容器基礎的解決方案最終優點成本節約。 容器是部署問題的解決方案，因為他們移除摩擦實際執行環境中的相依性不存在所造成。 藉由移除這些問題，它開發/測試、 DevOps 及實際執行的作業可以大幅增加。
 
--   Docker 容器會變成標準的任何伺服器端應用程式或服務的部署單位。
+-   Docker 容器會變成任何以伺服器為基礎之應用程式或服務的標準部署單位。
 
 -   實際執行環境，您應該使用的協調者 （例如 Service Fabric 或 Kubernetes） 來裝載可擴充 Windows 容器型應用程式。
 

@@ -4,11 +4,14 @@ description: "現代化現有的.NET 應用程式與 Azure 雲端與 Windows 容
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 7f7715bb0ec323874271a7e9ce1c666e23e33b22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>提起並移動現有應用程式的 Azure IaaS
 
@@ -84,9 +87,9 @@ Azure 的移轉可讓您對於的信心，您的工作負載可以移轉與業�
 
 -   **Azure 移轉的資料工作表**
 
-    [https://aka.ms/azuremigration\_資料工作表](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Azure 移轉**
+-   **Azure Migrate**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

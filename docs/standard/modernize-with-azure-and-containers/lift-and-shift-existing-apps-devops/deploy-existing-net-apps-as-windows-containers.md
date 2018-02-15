@@ -4,11 +4,14 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |將現�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 87aa05895857a425f11820a564f2a249c77f98e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有的.NET 應用程式部署為 Windows 容器
 
@@ -92,14 +95,14 @@ Docker 容器 (為了簡單起見，*容器*) 可以原生 Linux 及 Windows 上
 
 當您將映像名稱加入您 Dockerfile 的檔案時，您可以選取使用的標記，如下列範例針對以.NET Framework 為基礎的 Windows 容器映像的作業系統和版本：
 
-> | **標記** | **系統與版本** |
+> | 標記 | **系統與版本** |
 > |---|---|
-> | **microsoft/dotnet framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 與其他 ASP.NET 自訂程序，在 Windows Server Core |
 
 適用於.NET Core （跨平台適用於 Linux 和 Windows），標記看起來會像這樣：
 
-> | **標記** | **系統與版本**
+> | 標記 | **系統與版本**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 執行階段僅 on Linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 執行階段僅限 Windows Nano Server 上 |

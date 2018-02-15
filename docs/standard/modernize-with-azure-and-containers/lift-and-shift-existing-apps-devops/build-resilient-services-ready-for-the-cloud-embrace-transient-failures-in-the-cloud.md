@@ -4,11 +4,14 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |建立�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c21ae37ad2e4fc318eb4b206069db7662bfc5d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建立具有恢復功能服務就緒定域機組： 面向的雲端中的暫時性失敗 
 
@@ -48,13 +51,13 @@ ms.lasthandoff: 11/21/2017
 
 -   **Entity Framework 連接恢復功能和重試邏輯 （6 或更新版本）**
 
-    [https://msdn.microsoft.com/en-us/library/dn456835 (v=vs.113).aspx](https://msdn.microsoft.com/en-us/library/dn456835(v=vs.113).aspx)
+    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **暫時性錯誤處理應用程式區塊**
 
 <!-- -->
 
--   [https://msdn.microsoft.com/en-us/library/hh680934 (v=pandp.50).aspx](https://msdn.microsoft.com/en-us/library/hh680934(v=pandp.50).aspx)
+-   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
 -   **具有恢復功能的 HTTP 通訊的 Polly 程式庫**
 

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>Dispose 模式
 所有程式執行期間都取得一或多個系統資源，例如記憶體、 系統處理或資料庫連接。 開發人員需要時請小心使用這類的系統資源，因為它們已取得並使用之後必須釋放它們。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
   
  不幸的是，受管理的記憶體只是許多類型的系統資源。 除了受管理的記憶體之外的資源仍必須明確釋放且稱為 unmanaged 資源。 GC 特別設計無法管理這類 unmanaged 的資源，這表示管理 unmanaged 的資源的責任在於開發人員提供的指針。  
   
- CLR 會提供一些幫助釋放 unmanaged 的資源。 <xref:System.Object?displayProperty=nameWithType>宣告虛擬方法<xref:System.Object.Finalize%2A>（也稱為完成項） 的 gc 之前呼叫物件的記憶體回收 gc 並會覆寫來釋放 unmanaged 的資源。 覆寫完成項的類型被指可最終處理的類型。  
+ CLR 會提供一些幫助釋放 unmanaged 的資源。 <xref:System.Object?displayProperty=nameWithType> 宣告虛擬方法<xref:System.Object.Finalize%2A>（也稱為完成項） 的 gc 之前呼叫物件的記憶體回收 gc 並會覆寫來釋放 unmanaged 的資源。 覆寫完成項的類型被指可最終處理的類型。  
   
  雖然在某些案例中清除有效完成項，但它們是使用兩個很大的缺點：  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  此外，本章節適用於具有未實作 Dispose 模式的基底類別。 如果您繼承自的類別已實作的模式，只是覆寫`Dispose(bool)`方法以提供額外的資源將清除邏輯。  
   
- **✓ 不要**宣告受保護的虛擬 void`Dispose(bool disposing)`來釋放 unmanaged 的資源相關的方法來集中管理所有邏輯。  
+ **✓ 不要**宣告`protected virtual void Dispose(bool disposing)`來釋放 unmanaged 的資源相關的方法來集中管理所有邏輯。  
   
  所有資源清除應都發生在這個方法。 方法呼叫來自完成項和`IDisposable.Dispose`方法。 參數會是如果正在從叫用完成項內則為 false。 它應該用於確保在最終處理期間執行的任何程式碼不會存取其他最終處理物件。 下一節會說明實作完成項的詳細資料。  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X 不**宣告的任何多載`Dispose`方法以外`Dispose()`和`Dispose(bool)`。  
   
- `Dispose`應視為協助編訂此模式並防止混淆實作者、 使用者和編譯器之間的保留的字。 某些語言可能會選擇自動在特定類型上實作此模式。  
+ `Dispose` 應視為協助編訂此模式並防止混淆實作者、 使用者和編譯器之間的保留的字。 某些語言可能會選擇自動在特定類型上實作此模式。  
   
  **✓ 不要**允許`Dispose(bool)`方法來呼叫一次以上。 此方法可能會選擇不執行任何動作後第一次呼叫。  
   

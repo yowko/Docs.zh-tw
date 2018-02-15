@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>逐步解說：使用型別提供者和實體存取 SQL 資料庫
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 10/18/2017
 3. 開啟新連接節點的捷徑功能表，然後選擇**新查詢**。
 <br />
 
-4. 開啟[建立 School 範例資料庫](http://go.microsoft.com/fwlink/?LinkID=237278)上 Microsoft 網站，然後複製並貼上將資料庫指令碼會建立學生資料庫到編輯器視窗。
+4. 開啟[建立 School 範例資料庫](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx)上 Microsoft 網站，然後複製並貼上將資料庫指令碼會建立 School 資料庫到編輯器視窗。
 <br />
 
 
@@ -113,8 +113,8 @@ open Microsoft.FSharp.Data.TypeProviders
 7. 在加入時反白顯示您加入的每一個程式碼區塊，然後選擇 Alt + Enter 鍵以 F# Interactive 執行。
 <br />
 
-## <a name="configure-the-type-provider-and-connect-to-the-entity-data-model"></a>設定類型提供者並連接至實體資料模型
-在這個步驟中，您將設定具有資料連接的類型提供者，並且取得可讓您使用資料的資料內容。
+## <a name="configure-the-type-provider-and-connect-to-the-entity-data-model"></a>設定型別提供者並連接至實體資料模型
+在這個步驟中，您將設定具有資料連接的型別提供者，並且取得可讓您使用資料的資料內容。
 
 
 #### <a name="to-configure-the-type-provider-and-connect-to-the-entity-data-model"></a>若要設定類型提供者並連接至實體資料模型
@@ -239,15 +239,10 @@ deleteInstructor("Parker", "Darren")
 瀏覽其他查詢選項藉由檢視中可用的查詢運算子[查詢運算式](../../language-reference/query-expressions.md)，並同時檢閱[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)來了解哪些功能時，您可以使用您使用這個型別提供者。
 
 
-## <a name="see-also"></a>另請參閱
-[類型提供者](index.md)
-
-[SqlEntityConnection 類型提供者](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[逐步解說： 從 EDMX 結構描述檔案產生 F # 類型](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[.edmx 檔案概觀](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[EDM 產生器 &#40;EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+## <a name="see-also"></a>請參閱
+[類型提供者](index.md)  
+[SqlEntityConnection 類型提供者](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[逐步解說： 從 EDMX 結構描述檔案產生 F # 類型](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[.edmx 檔案概觀](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[EDM 產生器 &#40;EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

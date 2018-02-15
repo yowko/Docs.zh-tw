@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -74,7 +77,7 @@ public class ProductsController : Controller
 > - **模型繫結**https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **模型驗證**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **篩選**https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filters** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>處理的相依性
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC 也使用的慣例，來找出檢視。 您可以覆寫它以自訂的慣例，以便檢視會位於功能資料夾 （使用上面 FeatureConvention 所提供的功能名稱）。 您可以深入了解這種方法，並從 MSDN 文章中，下載工作範例[功能配量的 ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx)。
 
-### <a name="cross-cutting-concerns"></a>跨領域考量
+### <a name="cross-cutting-concerns"></a>跨領域關注
 
 當應用程式成長時，會變得越來越重要分離出來跨領域考量，以消除重複，並維持一致性。 跨領域考量 ASP.NET Core 應用程式中的一些範例是驗證、 模型的驗證規則、 輸出快取和錯誤處理，雖然還有許多其他。 ASP.NET Core MVC[篩選](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)可讓您執行程式碼之前或之後要求處理管線中的特定步驟。 例如，篩選可以執行之前和之後模型繫結、 之前和之後的動作，或之前和之後的動作結果。 您也可以使用授權篩選條件來控制存取其餘的管線。 如果設定數字 7-2 會顯示如何篩選器，透過要求執行流程。
 
-![要求會透過授權篩選條件、 資源篩選器、 模型繫結、 動作篩選條件、 動作執行和動作結果轉換、 例外狀況篩選條件、 結果篩選條件，以及結果執行處理。 外的方式，是只處理要求結果篩選條件和資源的篩選條件才能成為傳送至用戶端的回應。](./media/image7-2.png)
+![要求處理會歷經授權篩選條件、資源篩選條件、模型繫結、動作篩選條件、動作執行和動作結果轉換、例外狀況篩選條件、結果篩選條件，以及結果執行。 在送出的過程，要求只會經過結果篩選條件和資源篩選條件的處理，然後便成為傳送至用戶端的回應。](./media/image7-2.png)
 
 圖 7-2 要求執行透過篩選器和要求管線。
 
@@ -453,7 +456,7 @@ public class Program
 > ### <a name="references--client-communication"></a>參考 – 用戶端通訊
 > - **ASP.NET Core SignalR**  
 > <https://github.com/aspnet/SignalR>
-> - **WebSocket 管理員**  
+> - **WebSocket Manager**  
 > https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>網域導向設計 – 應該套用嗎？
@@ -545,7 +548,7 @@ ASP.NET Core 應用程式是主控台應用程式，必須先啟動時開機伺�
 > ### <a name="references--deployment"></a>參考 – 部署
 > - **裝載和部署概觀**  
 > <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **使用 Kestrel 透過反向 proxy 的時機**  
+> - 使用 Kestrel 透過反向 proxy 的時機  
 > <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **在 Docker 主機 ASP.NET Core 應用程式**  
 > <https://docs.microsoft.com/aspnet/core/publishing/docker>

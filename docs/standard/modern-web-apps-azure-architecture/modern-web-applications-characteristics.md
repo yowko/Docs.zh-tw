@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
 > "… 使用適當的設計功能廉價地有。 這種方法是棘手，但會繼續成功 」。  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>總結
 
@@ -41,7 +44,7 @@ ASP.NET Core 最適合雲端 （公用雲端、 私人雲端、 任何雲端）�
 
 ## <a name="cross-platform"></a>跨平台
 
-ASP.NET Core 是跨平台，並可以在 Linux 和 MacOS，以及 Windows 上執行。 這會開啟許多新的開發和部署的應用程式以 ASP.NET Core 建置選項。 Docker 容器，通常今天執行 Linux，可以主控 ASP.NET Core 應用程式，讓他們可以運用的優點[容器和 microservices](../microservices-architecture)。
+ASP.NET Core 是跨平台，並可以在 Linux 和 MacOS，以及 Windows 上執行。 這會開啟許多新的開發和部署的應用程式以 ASP.NET Core 建置選項。 Docker 容器，通常今天執行 Linux，可以主控 ASP.NET Core 應用程式，讓他們可以運用的優點[容器和 microservices](../microservices-architecture/index.md)。
 
 ## <a name="modular-and-loosely-coupled"></a>模組化且鬆散偶合
 

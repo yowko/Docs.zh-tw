@@ -4,11 +4,14 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |移轉�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
-ms.openlocfilehash: 7394d0fd208e131b4e683298f6ca31a9eddade28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61b22e48afd543ac077ebb4fe1b7be200f9ec859
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>移轉至混合式雲端案例
 
@@ -20,7 +23,7 @@ Microsoft 提供最佳的混合式雲端解決方案，其中一個可以最佳�
 
 最後，您可以發佈和順暢地分析資料，請使用相同的查詢語言的雲端和內部部署資產，並套用分析和深入了解 Azure 來充實資料，不論其來源中。
 
-## <a name="azure-stack"></a>Azure 的堆疊
+## <a name="azure-stack"></a>Azure Stack
 
 Azure 堆疊是混合式雲端平台，可讓您提供 Azure 服務，從您組織的資料中心。 Azure 堆疊被設計來支援您在索引鍵的情況下，例如邊緣和未連接的環境中或符合特定的安全性與相容性需求的現代應用程式的新選項。
 
@@ -50,7 +53,7 @@ Microsoft Azure 堆疊開發套件是單一節點部署 Azure 堆疊，您可以
 
     [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Azure 的堆疊**
+-   **Azure Stack**
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 

@@ -4,11 +4,14 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |當 Ser
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 21b6c348991e07dac7dbc9d327b63fa88a588ba4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f848c61fe49f9c2e883b422b574758ffac931229
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>當 Service fabric 部署 Windows 容器
 

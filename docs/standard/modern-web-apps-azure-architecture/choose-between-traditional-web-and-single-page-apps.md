@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>傳統 Web 應用程式和單一頁面應用程式 (SPAs) 之間選擇
 
 > 「 Atwood 的法律： 任何應用程式都可以撰寫在 JavaScript 中，最後將以 JavaScript 撰寫。 」  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>總結
 
@@ -85,12 +88,12 @@ SPAs 可以支援豐富的用戶端功能，不需要重新載入該頁面，當
 
 下列的決策表摘要列出一些基本 SPA 傳統 web 應用程式之間選擇時要考慮的因素。
 
-  | **因素** | **傳統 Web 應用程式** | **單一頁面應用程式** |
+  | **Factor** | **傳統 Web 應用程式** | **單一頁面應用程式** |
   |---|---|---|
   | 必要的小組熟悉 JavaScript/TypeScript | **最小** | **必要** |
-  | 支援的瀏覽器不編寫指令碼 | **支援** | **不支援** |
-  | 最小的用戶端應用程式行為 | **適用於** | **大材小用** |
-  | 內容豐富且複雜的使用者介面需求 | **限制** | **適用於** |
+  | 支援的瀏覽器不編寫指令碼 | **支援** | 不支援 |
+  | 最小的用戶端應用程式行為 | **Well-Suited** | **大材小用** |
+  | 內容豐富且複雜的使用者介面需求 | **限制** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [上一個](現代的 web 層應用程式-characteristics.md)[下一步](architectural-principles.md)

@@ -1,15 +1,18 @@
 ---
 title: "Docker 是什麼？"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7b429f84f7714454d49be1cfa4f450d99fc47f66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-docker"></a>Docker 是什麼？
 
@@ -25,13 +28,13 @@ Docker 映像容器可以原生 Linux 及 Windows 上執行。 不過，Windows 
 
 若要裝載在開發環境中的容器，並提供額外的開發人員工具，Docker 隨附[Docker Community Edition (CE)](https://www.docker.com/community-edition) Windows 或 macOS。 這些產品會安裝必要的 VM （Docker 主機） 來裝載容器。 Docker 也會出現[Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition)，這針對企業開發所設計，並且由 IT 團隊建置、 出貨，而且在生產中執行大型的業務關鍵應用程式。
 
-若要執行[Windows 容器](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview)，有兩種類型的執行階段：
+若要執行[Windows 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)，有兩種類型的執行階段：
 
 -   **Windows Server 容器** 此執行階段提供透過程序和命名空間隔離技術的應用程式隔離。 Windows Server 容器與容器主機和主機上執行的所有容器與容器共用核心。
 
 -   **HYPER-V 容器** 這會展開，Windows Server 容器提供高度最佳化的 VM 中執行每個容器的隔離。 在此組態中，容器主機的核心不會與 HYPER-V 容器，提供更好的隔離共用。
 
-這些容器的映像建立相同的方式和功能相同。 不同之處在於從映像建立容器時，執行 HYPER-V 容器需要額外的參數。 如需詳細資訊，請參閱[HYPER-V 容器](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview)。
+這些容器的映像建立相同的方式和功能相同。 不同之處在於從映像建立容器時，執行 HYPER-V 容器需要額外的參數。 如需詳細資訊，請參閱[HYPER-V 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)。
 
 ## <a name="comparing-docker-containers-with-vms"></a>比較與 Vm 的 Docker 容器
 

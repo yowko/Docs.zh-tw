@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>常見的 Web 應用程式架構
 
@@ -169,7 +172,7 @@ UI 層基礎結構的專案中定義的型別上沒有直接的相依性，因�
 使用者介面層，ASP.NET Core MVC 應用程式中的將應用程式的進入點，且將 ASP.NET Core MVC 專案。 這個專案應參考該應用程式核心專案和其類型應與嚴格透過定義在應用程式核心介面的基礎結構互動。 沒有直接具現化 （或靜態的呼叫） 基礎結構層類型應該獲得許可 UI 層中。
 
 > ### <a name="ui-layer-types"></a>圖層的 UI 類型
-> -   控制站
+> -   Controllers
 > -   篩選條件
 > -   檢視
 > -   ViewModels

@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>架構原則
+# <a name="architectural-principles"></a>架構原則
 
 > 「如果建築工人像工程師寫軟體那樣蓋房子，那第一隻飛來的啄木鳥就能毀掉人類文明。」  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>總結
 
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
 ![](./media/image4-1.png)
 
-**圖 4-1。** 直接的相依性圖形。
+**圖 4-1.** 直接的相依性圖形。
 
 套用相依性反向原則允許 A 呼叫 B，讓其能夠 a 呼叫 B，在執行階段，會實作抽象方法但 b 相依於介面由控制的編譯時期 (因此，*反轉*一般編譯時間相依性）。 在執行階段，控制程式執行流程維持不變，但是介面簡介表示不同的實作這些介面可以輕鬆地裝載。
 
@@ -103,16 +106,16 @@ ms.lasthandoff: 11/21/2017
 最少個別 web 應用程式應該致力於自己已繫結的內容中，使用自己的持續性存放區，其商務模型，而不是與其他應用程式共用一個資料庫。 透過程式設計介面，而不是透過共用的資料庫，可讓商務邏輯，就會發生繫結的內容之間的通訊，事件才會將回應進行的變更。 與 historyinsert-spg 內容地圖密切 microservices，也理想的情況下實作為自己的個別繫結內容。
 
 > ### <a name="references--modern-web-applications"></a>參考 – 現代化 Web 應用程式
-> - **重要性分離**  
+> - 重要性分離  
 > <http://deviq.com/separation-of-concerns/>
-> - **封裝** <http://deviq.com/encapsulation/>
+> - **Encapsulation** <http://deviq.com/encapsulation/>
 > - **相依性反向原則**  
 > <http://deviq.com/dependency-inversion-principle/>
-> - **明確的相依性原則**  
+> - **明確相依性準則**  
 > <http://deviq.com/explicit-dependencies-principle/>
 > - **不要重複自行**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - **永續性無知之**  
+> - 永續性無知之  
 > <http://deviq.com/persistence-ignorance/>
 > - **已繫結的內容**  
 > <https://martinfowler.com/bliki/BoundedContext.html>

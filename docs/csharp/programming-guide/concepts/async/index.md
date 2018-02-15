@@ -2,17 +2,18 @@
 title: "使用 Async 和 Await 進行非同步程式設計 (C#)"
 ms.date: 05/22/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9ece88b666547677eba64b9d6976f1e4cc89e6b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f943bbc849c5c960884752780e48401f4cb59a7d
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
 | 應用程式區域    | 使用非同步方法的 .NET 類型     | 使用非同步方法的 Windows 執行階段類型  |
 |---------------------|-----------------------------------|-------------------------------------------|
-|Web 存取|<xref:System.Net.Http.HttpClient>|[SyndicationClient](http://go.microsoft.com/fwlink/p/?LinkId=259441)|
+|Web 存取|<xref:System.Net.Http.HttpClient>|<xref:Windows.Web.Syndication.SyndicationClient>|
 |處理檔案|<xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|[StorageFile](http://go.microsoft.com/fwlink/p/?LinkId=248220)|  
 |處理影像||[MediaCapture](http://go.microsoft.com/fwlink/p/?LinkId=261839)、[BitmapEncoder](http://go.microsoft.com/fwlink/p/?LinkId=261840)、[BitmapDecoder](http://go.microsoft.com/fwlink/p/?LinkId=261841)|  
 |WCF 程式設計|[同步和非同步作業](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)||  
@@ -339,6 +340,6 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)

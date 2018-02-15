@@ -1,15 +1,18 @@
 ---
 title: "協調 microservices 及 multicontainer 應用程式的高延展性和可用性"
-description: "Microsoft 平台和工具與 Docker 容器化應用程式生命週期"
+description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>協調 microservices 及 multicontainer 應用程式的高延展性和可用性
 
@@ -37,7 +40,7 @@ Docker 命令列介面 (CLI) 符合管理一部的主機上的一個容器的需
 
 表 4-1： 群集的容器、 協調流程，和排程的軟體平台
 
-| 平台 | 說明 |
+| 平台 | 描述 |
 |---|---|
 | Docker 群集<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker 群集會提供叢集和排程 Docker 容器的能力。 藉由使用群集，可以轉換成單一的虛擬的 Docker 主機的 Docker 主機的集區。 用戶端可以進行相同的方式表示，群集輕鬆的應用程式擴充至多部主機的主機進行應用程式開發介面要求群集。 <br /><br /> Docker 群集是從 Docker，公司的產品。 <br /><br /> Docker v1.12 或更新版本可以執行原生和內建廣域模式。 |
 | Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere 企業 DC/OS （根據 Apache Mesos） 是可實際執行的平台執行容器和分散式應用程式。 <br /><br /> DC/OS 運作方式是抽象化叢集中可用的資源集合，並讓這些資源可供在其上建置的元件。 馬拉松通常做為與 DC/OS 整合的排程器。 |
@@ -181,4 +184,4 @@ Service Fabric 是與您可以定義的實體實作於不同邏輯架構 （商�
 
 
 >[!div class="step-by-step"]
-[上一個](soa-applications.md) [下一步] (docker-應用程式層開發-environment.md)
+[Previous] (soa-applications.md) [Next] (docker-apps-development-environment.md)

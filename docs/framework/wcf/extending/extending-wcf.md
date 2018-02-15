@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="extending-wcf"></a>延伸 WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允許您修改及延伸執行階段元件，以精確控制及延伸服務應用程式。 本節中的主題將深入說明延伸性結構。 如需基本程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可讓您修改和擴充執行的階段元件，以精確地控制及延伸服務應用程式。 本節中的主題將深入說明延伸性結構。 如需基本程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [擴充 ServiceHost 與服務模型層](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  

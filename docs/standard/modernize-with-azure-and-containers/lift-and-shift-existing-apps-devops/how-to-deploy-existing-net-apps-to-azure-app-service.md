@@ -4,11 +4,14 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: c83703c6f3dede0f92263e0d46bf48525c3eefaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>如何將現有的.NET 應用程式部署至 Azure App Service 
 
