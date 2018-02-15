@@ -1,4 +1,4 @@
-# [擴充 WCF](extending-wcf.md)
+# [擴充 WCF](index.md)
 ## [擴充 ServiceHost 與服務模型層](extending-servicehost-and-the-service-model-layer.md)
 ### [擴充用戶端](extending-clients.md)
 #### [如何：檢查或修改用戶端上的訊息](how-to-inspect-or-modify-messages-on-the-client.md)
