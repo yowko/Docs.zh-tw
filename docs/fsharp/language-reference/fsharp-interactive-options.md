@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: 0fc369993b3ee4c8a9139e4a365330197fe66946
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 選項
 
@@ -42,9 +42,11 @@ F # 指令碼檔案的副檔名是`.fsx`。
 |**--**|用來指示 F # Interactive 命令列引數其餘引數視為 F # 程式或指令碼，您可以存取程式碼中使用清單**fsi.commandlineargs 存取**。|
 |**--checked**[**+**&#124;**-**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--codepage:&lt;int&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--consolecolors**[**+**&#124;**-**]|輸出警告和錯誤訊息中的色彩。|
 |**--crossoptimize**[**+**&#124;**-**]|啟用或停用跨模組最佳化。|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--define:&lt;string&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--deterministic**[**+**&#124;**-**]|產生的具決定性的組件 （包括模組版本 GUID 與時間戳記）。|
 |**--exec**|指示 F # interactive 結束之後載入檔案或執行命令列上指定的指令碼檔案。|
 |**--fullpaths**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--gui**[**+**&#124;**-**]|啟用或停用 Windows Form 事件迴圈。 會啟用預設值。|
@@ -61,7 +63,10 @@ F # 指令碼檔案的副檔名是`.fsx`。
 |**--quotations-debug**|指定的額外偵錯資訊應該發出對衍生自 F # 引號常值，而且反映定義的運算式。 偵錯資訊已加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱[程式碼引號](code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
 |**--readline**[**+**&#124;**-**]|啟用或停用在互動模式中的 tab 鍵自動完成。|
 |**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--shadowcopyreferences**[**+**&#124;**-**]|可避免參考遭 F # 互動式處理序。|
+|**--simpleresolution**|解決使用目錄為基礎的規則，而不是 MSBuild 解析的組件參考。|
 |**--tailcalls**[**+**&#124;**-**]|啟用或停用造成可重複使用之結尾遞迴函式的堆疊框架結尾 IL 指令的使用。 這個選項預設為啟用。|
+|**--targetprofile:&lt;string&gt;**|指定這個組件的目標 framework 設定檔。 有效值是 mscorlib、 netcore 或 netstandard。  預設值是 mscorlib。|
 |**--use:&lt;filename&gt;**|會告知使用指定的檔案，在啟動做為初始輸入的直譯器。|
 |**--utf8output**|Fsc.exe 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--warn:&lt;warning-level&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
