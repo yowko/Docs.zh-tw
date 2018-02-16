@@ -3,22 +3,25 @@ title: ".NET Framework 中的新功能"
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 <a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
@@ -80,15 +83,15 @@ ms.lasthandoff: 01/05/2018
 
 **執行階段功能偵測**
 
-<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> 類別提供機制，來判斷在編譯階段或執行階段，特定 .NET 實作上是否支援預先定義的功能。 在編譯階段，編譯器可以檢查是否有指定的欄位來判斷是否支援此功能；如果支援，則可以發出利用該功能的程式碼。 在執行階段，應用程式可以先呼叫 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> 方法，再於執行階段發出程式碼。 如需詳細資訊，請參閱[新增協助程式方法來描述執行階段所支援的功能](https://github.com/dotnet/corefx/issues/17116)。
+<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> 類別提供機制，來判斷在編譯階段或執行階段，特定 .NET 實作上是否支援預先定義的功能。 在編譯階段，編譯器可以檢查是否有指定的欄位來判斷是否支援此功能；如果支援，則可以發出利用該功能的程式碼。 在執行階段，應用程式可以先呼叫 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> 方法，再於執行階段發出程式碼。 如需詳細資訊，請參閱[新增協助程式方法來描述執行階段所支援的功能](https://github.com/dotnet/corefx/issues/17116)。
 
 **實值元組類型為可序列化**
 
-從 .NET Framework 4.7.1 開始，<xref:System.ValueTuple?displayProperty=fullName> 和其相關聯泛型型別會標示為 [Serializable](xref:System.SerializableAttribute)，以允許二進位序列化。 這應該會讓將元組類型 (例如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>) 移轉至實值元組類型更為簡單。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ValueTuple 可序列化＞。
+從 .NET Framework 4.7.1 開始，<xref:System.ValueTuple?displayProperty=nameWithType> 和其相關聯泛型型別會標示為 [Serializable](xref:System.SerializableAttribute)，以允許二進位序列化。 這應該會讓將元組類型 (例如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>) 移轉至實值元組類型更為簡單。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ValueTuple 可序列化＞。
 
 **唯讀參考的支援**
 
-.NET Framework 4.7.1 新增 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>。 語言編譯器會使用此屬性來標示具有唯讀 ref 傳回類型或參數的成員。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ReadOnlyReferences 支援＞。 如需 ref 傳回值的資訊，請參閱 [ref 傳回值和 ref 區域變數 (C# 指南)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) 和 [ref 傳回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
+.NET Framework 4.7.1 新增 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>。 語言編譯器會使用此屬性來標示具有唯讀 ref 傳回類型或參數的成員。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ReadOnlyReferences 支援＞。 如需 ref 傳回值的資訊，請參閱 [ref 傳回值和 ref 區域變數 (C# 指南)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) 和 [ref 傳回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
@@ -1446,7 +1449,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式是專為特定尺寸所設計，並且會利用 Windows 作業系統的強大功能。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可於使用 C# 或 Visual Basic 建置適用於 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時提供。 這個子集稱為 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 開發人員中心的[概觀](http://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式是專為特定尺寸所設計，並且會利用 Windows 作業系統的強大功能。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可於使用 C# 或 Visual Basic 建置適用於 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時提供。 這個子集稱為 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 開發人員中心的[概觀](http://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>可攜式類別庫
