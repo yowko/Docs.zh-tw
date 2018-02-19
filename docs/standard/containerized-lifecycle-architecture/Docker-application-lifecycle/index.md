@@ -10,7 +10,7 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: ae1d2c30da8a45cd7b6428fa08b32066e8b62b0f
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/23/2017
 ---
