@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 
 若要建立 Application Insights 資源，請遵循下列清單中顯示的文件中的指示。 Azure 入口網站會為您建立必要的指令碼。
 
--   **監視 Docker Application Insights 中的應用程式：**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **監視 Docker Application Insights 中的應用程式：**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **應用程式在 Docker Hub 和 Github Insights Docker 映像：**  
 [https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/)和<https://github.com/Microsoft/ApplicationInsights-Docker>
