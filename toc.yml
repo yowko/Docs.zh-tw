@@ -6,7 +6,7 @@
       tocHref: /dotnet/
       topicHref: /dotnet/index
       items:
-        - name: 應用程式開發介面參考
+        - name: .NET API 瀏覽器
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
         - name: .NET 指南
