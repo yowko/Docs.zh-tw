@@ -2,20 +2,21 @@
 title: "字串 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -125,7 +126,7 @@ string s = String.Empty;
 |[如何：修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|提供說明如何修改字串內容的程式碼範例。|  
 |[如何：串連多個字串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|說明如何使用 `+` 運算子和 `Stringbuilder` 類別，在編譯時期和執行階段聯結字串。|  
 |[如何：比較字串](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|示範如何執行字串的循序比較。|  
-|[如何：使用 String.Split 剖析字串](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
+|[如何：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
 |[如何：使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|說明如何使用特定方法來搜尋字串。|  
 |[如何：使用規則運算式搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|說明如何使用規則運算式來搜尋字串。|  
 |[如何：判斷字串是否表示數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  

@@ -1,5 +1,4 @@
 # [字串](index.md)
-## [如何：串連多個字串](how-to-concatenate-multiple-strings.md)
 ## [如何：修改字串內容](how-to-modify-string-contents.md)
 ## [如何：比較字串](how-to-compare-strings.md)
 ## [如何：使用字串方法搜尋字串](how-to-search-strings-using-string-methods.md)
