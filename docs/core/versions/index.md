@@ -3,17 +3,18 @@ title: ".NET Core 版本控制"
 description: "了解 .NET Core 的版本控制運作方式。"
 author: bleroy
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 
@@ -23,9 +24,13 @@ ms.lasthandoff: 12/23/2017
 
 .NET Core 中有許多活動的組件可獨立建立版本。 不過，從 .NET Core 2.0 開始，有一個大家都很容易明白的最上層版本號碼，就是 *".NET Core"*。 這份文件的其餘部分會深入說明所有這些組件的版本控制。 假如您是套件管理員，這些詳細資料就很重要。
 
+> [!IMPORTANT]
+> 本主題所說明的版本控制詳細資料，不適用於 .NET Core SDK 和執行階段目前的版本。
+> 版本配置將會在未來版本中出現變更。 您可以在 [dotnet/designs](https://github.com/dotnet/designs/pull/29) \(英文\) 存放庫中查看目前的提案。
+
 ## <a name="versioning-details"></a>版本控制的詳細資料
 
-從 .NET Core 2.0 開始，下載在其檔案名稱中只顯示單一版本號碼。 統一下列版本號碼：
+從 .NET Core 2.0 起，下載在其檔案名稱中只會顯示單一版本號碼。 統一下列版本號碼：
 
 * 共用的架構和相關聯的執行階段。
 * .NET Core SDK 和相關聯的 .NET Core CLI。
@@ -35,8 +40,8 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="installers"></a>安裝程式
 
-從 .NET Core 2.0 開始，[Daily Builds](https://github.com/dotnet/core-setup#daily-builds) (每日組建) 和[版本](https://www.microsoft.com/net/download/core)的下載會沿用容易了解的新命名配置。
-這些下載的安裝程式 UI 也經過修改，以清楚呈現要安裝元件的名稱和版本。 特別是，標題現在在下載檔案名稱中會顯示相同的版本號碼。
+從 .NET Core 2.0 起，[每日組建](https://github.com/dotnet/core-setup#daily-builds) \(英文\) 和[版本](https://www.microsoft.com/net/download/core) \(英文\) 的下載會沿用容易了解的新命名配置。
+那些下載的安裝程式 UI 也經過修改，以清楚呈現要安裝元件的名稱和版本。 特別是，標題現在在下載檔案名稱中會顯示相同的版本號碼。
 
 #### <a name="file-name-format"></a>檔案名稱格式
 
@@ -88,7 +93,7 @@ Microsoft 以外的其他實體也可以散佈 .NET Core。 特別是，Linux �
 #### <a name="minimum-package-set"></a>最小封裝集合
 
 * `dotnet-runtime-[major].[minor]`：指定版本的執行階段 (針對指定的主要 + 次要組合，套件管理員中僅可使用最新的更新程式版本)。 新的修補程式版本會更新套件，但新的次要版本或主要版本是個別的套件。
- 
+
   **相依性**：`dotnet-host`
 
 * `dotnet-sdk`：最新的 SDK。 `update` 會向前復原主要、次要和修補程式版本。
@@ -118,7 +123,7 @@ Microsoft 以外的其他實體也可以散佈 .NET Core。 特別是，Linux �
 
 SDK 標記應該更新，以表示 SDK 版本，而不是表示執行階段。
 
-我們可能也需要修復 .NET Core 工具，但重新附帶現有的執行階段。 在此情況下，SDK 版本會增加 (例如，變成 2.1.2)，然後執行階段下次趕上 (例如，執行階段和 SDK 下次都變成 2.1.3)。
+也有可能是 .NET Core CLI 工具 (包含於 SDK 中) 已修正，但是以現有的執行階段重新傳遞。 在此情況下，SDK 版本會增加 (例如，變成 2.1.2)，然後執行階段於下次傳遞時趕上 (例如，執行階段和 SDK 下次都會以 2.1.3 傳遞)。
 
 ## <a name="semantic-versioning"></a>語意版本控制
 
@@ -128,26 +133,29 @@ SDK 標記應該更新，以表示 SDK 版本，而不是表示執行階段。
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-選擇性的 `PRERELEASE` 和 `BUILDNUMBER` 組件只存在於本機從來源目標建置的每日組建中，絕不會屬於支援的版本和不支援的預覽版本。
+選擇性的 `PRERELEASE` 和 `BUILDNUMBER` 組件絕對不會是受支援版本的一部分，並只會存在於每日組建、來自來源目標的本機組建，以及未支援的預覽版本上。
 
 ### <a name="how-version-numbers-are-incremented"></a>版本號碼如何遞增？
 
 `MAJOR` 的遞增時機為：
-  - 不再支援舊版本。
-  - 採用現有相依性的較新 `MAJOR` 版本。
-  - 相容性實際的預設設定變更為 [關閉]。
+
+- 不再支援舊版本。
+- 採用現有相依性的較新 `MAJOR` 版本。
+- 相容性實際的預設設定變更為 [關閉]。
 
 `MINOR` 的遞增時機為：
-  - 新增公用 API 介面區。
-  - 新增新的行為。
-  - 採用現有相依性的較新 `MINOR` 版本。
-  - 引入新的相依性。
-  
+
+- 新增公用 API 介面區。
+- 新增新的行為。
+- 採用現有相依性的較新 `MINOR` 版本。
+- 引入新的相依性。
+
 `PATCH` 的遞增時機為：
-  - 已修正 Bug。
-  - 新增對較新平台的支援。
-  - 採用現有相依性的較新 `PATCH` 版本。
-  - 任何其他變更，不符合其中一個先前的案例。
+
+- 已修正 Bug。
+- 新增對較新平台的支援。
+- 採用現有相依性的較新 `PATCH` 版本。
+- 任何其他不符合其中一個先前案例的變更。
 
 當有多項變更時，因個別變更而影響的最高項目就會遞增，而下列項目會重設為零。 例如，當 `MAJOR` 遞增時，`MINOR` 和 `PATCH` 會重設為零。 當 `MINOR` 遞增時，`PATCH` 會重設為零而 `MAJOR` 保持不變。
 
@@ -176,7 +184,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Core 由下列組件構成：
 
-- 主機 (也稱為 muxer)：具有 `hostfxr` 原則庫的 `dotnet.exe`。
+- 主機：針對依賴架構的應用程式為 *dotnet.exe*，針對獨立性應用程式則為 *\<應用程式名稱>.exe*。
 - SDK (開發人員電腦上必要的工具集，但不是生產環境中必要的)。
 - 執行階段。
 - 共用架構實作，以套件進行散發。 每個套件會獨立建立版本，尤其是修補程式版本控制。
@@ -204,7 +212,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 例如，.NET Core 2.1.3 中繼套件的 `MAJOR` 和 `MINOR` 版本號碼應該全都有 2.1。
 
-每次更新參考的套件時，中繼套件的修補程式版本就會遞增。 修補程式版本不包含更新的架構版本。 因此，中繼套件並不與 SemVer 完相容，因為其版本控制配置並不代表基礎套件中的變更程度，而是主要代表 API 層級。 
+每次更新參考的套件時，中繼套件的修補程式版本就會遞增。 修補程式版本不包含更新的架構版本。 因此，中繼套件並不完全符合 SemVer 規範，因為其版本控制配置並不代表基礎套件中的變更程度，而是主要代表 API 層級。
 
 .NET Core 目前有兩個主要中繼套件：
 
@@ -226,7 +234,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="versioning-in-practice"></a>版本控制實作
 
-下載 .NET Core 時，您下載的檔案名稱攜有版本，例如 `dotnet-sdk-2.0.4-win10-x64.exe`。
+下載 .NET Core 時，下載的檔案名稱將帶有版本，例如 `dotnet-sdk-2.0.4-win10-x64.exe`。
 
 GitHub 上的 .NET Core 存放庫每天都有認可和提取要求，進而產生許多程式庫的新組建。 為每一項變更建立新的公用版本 .NET Core 並不實際。 相反地，會針對一段不定時間 (例如，數週或數個月) 彙總變更，然後才製作新的公用穩定 .NET Core 版本。
 
@@ -251,7 +259,8 @@ GitHub 上的 .NET Core 存放庫每天都有認可和提取要求，進而產�
 各種中繼套件會更新，參考更新過的 .NET Core 程式庫套件。 [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) 中繼套件和 `netcore` 目標架構建立的版本是符合新版 `MAJOR` 版本號碼的重大更新。
 
 ## <a name="see-also"></a>另請參閱
-[目標 Framework](../../standard/frameworks.md)   
-[.NET Core 發佈封裝](../build/distribution-packaging.md)   
-[.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)   
-[.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)   
+
+[目標架構](../../standard/frameworks.md)  
+[.NET Core 發佈封裝](../build/distribution-packaging.md)  
+[.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)  
+[.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)  
