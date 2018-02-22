@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 65a4695c6f4e5268582d83452246ed8262d6fe2f
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/19/2017
 
 每個編譯器都會將這些元件一起合併為單一端對端整體。
 
-這些 API 是與 Visual Studio 所使用的相同。 例如，概述和格式化功能的程式碼會使用語法樹狀結構、物件瀏覽器和導覽功能會使用符號表、重構和 [移至定義] 使用語意模型，而 [編輯後繼續] 會使用所有這些項目 (包含發出 API)。 
+這些 API 與 Visual Studio 使用的相同。 例如，概述和格式化功能的程式碼會使用語法樹狀結構、物件瀏覽器和導覽功能會使用符號表、重構和 [移至定義] 使用語意模型，而 [編輯後繼續] 會使用所有這些項目 (包含發出 API)。 
 
 ## <a name="api-layers"></a>API 層
 

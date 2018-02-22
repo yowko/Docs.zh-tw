@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.workload: dotnetcore
-ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -76,7 +77,7 @@ dotnet new [-h|--help]
 | Web 組態                                   | `webconfig`   |               |
 | 方案檔                                | `sln`         |               |
 | Razor 頁面                                   | `page`        |               |
-| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewImports                              | `viewimports` |               |
 | MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
