@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 本主題討論可以用來宣告繫結的不同方法。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  在標記中建立繫結宣告字串時，必須將這些字串附加至目標物件的特定相依性屬性。 下列範例示範如何將繫結<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>屬性使用的繫結延伸模組，指定<xref:System.Windows.Data.Binding.Source%2A>和<xref:System.Windows.Data.Binding.Path%2A>屬性。  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  您可以指定屬性的大部分<xref:System.Windows.Data.Binding>類別這種方式。 如需有關繫結延伸模組以及針對一份<xref:System.Windows.Data.Binding>屬性不能使用繫結延伸模組設定，請參閱[繫結標記延伸](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)概觀。  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding 和 PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>不支援 XAML 延伸語法。 因此，您必須使用物件項目語法如果您宣告<xref:System.Windows.Data.MultiBinding>或<xref:System.Windows.Data.PriorityBinding>在 XAML 中。  
+ <xref:System.Windows.Data.MultiBinding> 和<xref:System.Windows.Data.PriorityBinding>不支援 XAML 延伸語法。 因此，您必須使用物件項目語法如果您宣告<xref:System.Windows.Data.MultiBinding>或<xref:System.Windows.Data.PriorityBinding>在 XAML 中。  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>在程式碼中建立繫結  
@@ -77,8 +79,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  如果您要繫結的物件<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>可以呼叫`SetBinding`直接而不是使用在物件上的方法<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>。 如需範例，請參閱[使用程式碼建立繫結](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)。  
   

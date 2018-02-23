@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>設定繫結上的逾時值
 WCF 繫結有一些逾時設定可供使用。 正確設定這些逾時設定可以改善服務的效能，但也會對服務的可用性和安全性造成影響。 可在 WCF 繫結上使用的逾時如下：  
@@ -90,15 +92,15 @@ public static void Main()
   
 1.  SendTimeout – 用來初始化 OperationTimeout，這會控制整個傳送訊息程序，包括接收要求/回覆服務作業的回覆訊息。 從合約回呼方法傳送回覆郵件時，也適用這個逾時。  
   
-2.  OpenTimeout – 在沒有明確指定逾時值的情況下開啟通道時使用  
+2.  OpenTimeout – 使用開啟通道時未不指定任何明確的逾時的值。  
   
-3.  CloseTimeout – 在沒有明確指定逾時值的情況下關閉通道時使用  
+3.  CloseTimeout – 使用關閉通道時未不指定任何明確的逾時的值。  
   
-4.  ReceiveTimeout – 不使用  
+4.  ReceiveTimeout – 不在使用中。  
   
 ### <a name="service-side-timeouts"></a>服務端逾時  
  在服務端：  
   
-1.  SendTimeout、OpentTimeout、CloseTimeout 與用戶端上的相同  
+1.  SendTimeout、 OpenTimeout、 CloseTimeout 是用戶端上的一樣。  
   
 2.  ReceiveTimeout – 由服務架構層用來初始化工作階段閒置逾時，這會控制工作階段在逾時前可以處於閒置狀態多久。

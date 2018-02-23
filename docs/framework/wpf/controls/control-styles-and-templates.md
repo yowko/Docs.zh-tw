@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
 在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。 您可以藉由修改變更控制項的外觀和結構<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分的視覺化樹狀結構的控制項。若要變更的視覺化樹狀結構的控制項，您必須設定<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/19/2018
  [StatusBar 樣式和範本](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl 樣式和範本](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox 樣式和範本](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb 樣式和範本](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [捲動方塊樣式和範本](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
  [ToggleButton 樣式和範本](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar 樣式和範本](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip 樣式和範本](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  

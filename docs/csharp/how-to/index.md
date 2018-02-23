@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/23/2018
 
 - [判斷字串是否代表一個數字](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)。
 - [在代表十六進位數字的字串與數字之間轉換](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
-- [將字串轉換為 <xref:System.DateTime>](../programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)。
+- [將字串轉換為 `DateTime`](../../standard/base-types/parsing-datetime.md)。
 - [將位元組陣列轉換為 int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [將字串轉換為數字](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
 - [使用 `as` 與 `is` 安全地轉換為其他類型](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。
