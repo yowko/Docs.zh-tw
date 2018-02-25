@@ -2,21 +2,22 @@
 title: "可為 Null 的類型 (C# 程式設計手冊)"
 ms.date: 05/15/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b874b265f4adb131a056ea1ef6fb5ffc820343f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>可為 Null 的類型 (C# 程式設計手冊)
 可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=nameWithType> 結構的執行個體。 可為 Null 的型別可以代表其基礎值型別的正確值範圍，再加上額外的 `null` 值。 例如，您可以將範圍從 -2147483648 到 2147483647 的任何值指派給 `Nullable<Int32>` (發音為「Nullable of Int32」)，或為它指派 `null` 值。 您可以為 `Nullable<bool>` 指派下列值：[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md)。 當您正在處理包含可能不會指派值之元素的資料庫和其他資料型別時，將 `null` 指派為數字或布林值型別的功能特別有用。 例如，資料庫中的布林值欄位可以儲存 `true` 或 `false` 的值，而它也可能是未定義的。 
@@ -62,9 +63,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Nullable>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md)  
  [C# 參考](../../../csharp/language-reference/index.md)  
- [「增益」(Lift) 的真正意義是什麼？(英文)](http://go.microsoft.com/fwlink/?LinkId=112382)
+ [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
