@@ -4,11 +4,11 @@ hide_bc:
 title: ".NET 文件"
 description: "了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。"
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>使用 ASP.NET Core</h3>
-                                                    <p>了解如何使用 ASP.NET Core 建置新式 Web 應用程式。</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>ASP.NET Core 教學課程</h3>
+                                                    <p>探索不同的逐步指南，從中學習如何開發 ASP.NET Core 應用程式。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>什麼是 ASP.NET？</h3>
                                                     <p>了解如何建置 ASP.NET Web 應用程式。</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>Visual Studio 中的 ASP.NET Core</h3>
-                                                    <p>了解使用 Visual Studio 2015 建置 ASP.NET Core MVC Web 應用程式的基本知識。</p>
+                                                    <p>了解使用 Visual Studio 建置 ASP.NET Core MVC Web 應用程式的基礎概念。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>容器中的 ASP.NET 應用程式</h3>
-                                                    <p>了解如何使用 Docker 部署 ASP.NET 應用程式。</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>Windows 容器中的 ASP.NET MVC 應用程式</h3>
+                                                    <p>了解如何使用 Docker 部署 ASP.NET MVC 應用程式。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>macOS 及 Visual Studio Code 上的 ASP.NET</h3>
-                                                    <p>了解如何使用 Visual Studio Code 在 macOS 上設定、建置及部署 ASP.NET Core 應用程式。</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>ASP.NET Core 跨平台教學課程</h3>
+                                                    <p>了解如何使用 ASP.NET Core 建置 Web 應用程式或 Web API。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>.NET Azure 文件</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>適用於 .NET 的 Azure 文件</h3>
                                                     <p>了解 Web Apps、WebJobs、雲端服務及 VM 等 Azure 服務。</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Azure 儲存體</h3>
                                                     <p>了解 Azure 儲存體，並了解如何使用 Azure Blob、表格、佇列及檔案建立應用程式。</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
                                                     <p>WPF 提供開發人員以 XAML 為基礎的模型，可用於建置 Windows 上的傳統型應用程式。</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows Forms</h3>
                                                     <p>快速針對 Windows 桌面開發企業營運應用程式。</p>
                                                 </a>

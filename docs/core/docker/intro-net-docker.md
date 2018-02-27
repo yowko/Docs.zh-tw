@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.workload: dotnetcore
-ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/06/2018
 
 * [Windows 型容器：具企業級控制的新式應用程式開發。](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be) \(英文\)
 * [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\)
-* [Windows 容器上的 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
+* [Windows 容器上的 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [撰寫 Dockerfile 的最佳做法](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) \(英文\)
 * [建置 .NET Core 應用程式的 Docker 映像](../docker/building-net-docker-images.md)
 
@@ -183,7 +184,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 * [Docker Hub 上的 Microsoft Azure Cosmos DB 模擬器映像](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) \(英文\) 
 
-* [將 Azure Cosmos DB 模擬器用於本機開發及測試](/azure/cosmos-db/local-emulator.md#developing-with-the-emulator)
+* [將 Azure Cosmos DB 模擬器用於本機開發及測試](/azure/cosmos-db/local-emulator#developing-with-the-emulator)
 
 ## <a name="exploring-the-rich-docker-development-ecosystem"></a>探索豐富的 Docker 開發生態系統
 
@@ -192,10 +193,10 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 * [搭配使用 .NET 和 Docker](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) \(英文\)
 * [設計和開發多容器和微服務 .NET 應用程式](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker 擴充功能](https://code.visualstudio.com/docs/languages/dockerfile) \(英文\)
-* [了解如何使用 Azure Service Fabric](/azure/service-fabric/index.md)
+* [了解如何使用 Azure Service Fabric](/azure/service-fabric/index)
 * [Service Fabric 使用者入門範例](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/) \(英文\)
-* [Windows 容器的優點](/virtualization/windowscontainers/about/index.md#video-overview)
-* [使用 Visual Studio Docker 工具](/aspnet/core/publishing/visual-studio-tools-for-docker/index.md)
+* [Windows 容器的優點](/virtualization/windowscontainers/about/index#video-overview)
+* [使用 Visual Studio Docker 工具](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
 * [將 Docker 映像從 Azure Container Registry 部署到 Azure 容器執行個體](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) \(英文\)
 * [使用 Visual Studio Code 進行偵錯](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) \(英文\)
 * [開始使用 Visual Studio for Mac、容器，以及雲端中的無伺服器程式碼](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) \(英文\)
