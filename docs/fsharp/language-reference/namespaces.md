@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea42156f-e1b9-4535-9383-b45f46f3f7ca
-ms.openlocfilehash: 4378afebe6fd0d9317f734457576dc75d7488bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f3f73c4fe2197f1f3f2babbe6691ef6662d8f581
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="namespaces"></a>命名空間
 
@@ -77,7 +77,7 @@ Module2 5 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-##
+## <a name="recursive-namespaces"></a>遞迴命名空間
 
 F # 4.1 導入的命名空間可讓所有包含的程式碼是相互遞迴的概念。  這是透過`namespace rec`。  使用`namespace rec`可以減輕無法撰寫相互參考的程式碼類型和模組之間的一些難題。  此動作的範例如下：
 
@@ -123,7 +123,7 @@ module BananaHelpers =
 
 這項功能也會提供的最上層[模組](modules.md)在 F # 4.1 或更高版本。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 語言參考](index.md)
 
 [模組](modules.md)
