@@ -2,18 +2,19 @@
 title: Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96c7c93056b11c08ccdfa48a0d78f2996c2d86d4
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
 
@@ -21,9 +22,9 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
   
  這一代的 Visual Basic 延續傳統，依舊讓您快速輕易地建立 .NET Framework 應用程式。  
   
- 如果您還沒有 Visual Basic，您可以從 [Visual Studio](https://www.visualstudio.com/products/downloads) 網站取得免費包含 Visual Basic 的 Visual Studio 版本。  
+ 如果您還沒有 Visual Basic，您可以從 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 網站取得免費包含 Visual Basic 的 Visual Studio 版本。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [快速入門](../visual-basic/getting-started/index.md)  
  列出產品各種版本的新功能和可用項目，協助您開始進行。  
    
