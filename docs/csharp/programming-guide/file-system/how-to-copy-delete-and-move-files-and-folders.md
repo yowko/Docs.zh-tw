@@ -2,11 +2,13 @@
 title: "如何：複製、刪除和移動檔案和資料夾 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: I/O [C#]
+helpviewer_keywords:
+- I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 56383873674998fc0d6417a2abf4fa72e498f08f

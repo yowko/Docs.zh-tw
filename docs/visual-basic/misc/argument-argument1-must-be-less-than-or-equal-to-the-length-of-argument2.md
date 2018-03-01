@@ -2,11 +2,13 @@
 title: "引數 &#39;&lt;引數 1&gt;&#39; 必須是小於或等於引數的長度 &#39;&lt;引數 2&gt;&#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_IndexLELength2
+f1_keywords:
+- vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 78d240fef3388c53fdb79b2a56fbbbbd7b665c7d
