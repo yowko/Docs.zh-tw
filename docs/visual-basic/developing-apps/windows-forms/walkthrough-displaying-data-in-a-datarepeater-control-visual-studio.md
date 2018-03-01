@@ -3,14 +3,16 @@ title: "逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: DataRepeater, walkthrough
+helpviewer_keywords:
+- DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
