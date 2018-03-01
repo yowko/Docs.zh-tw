@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用 F # #
 
@@ -236,7 +236,7 @@ Azure 儲存體支援加密的用戶端和伺服器上的 blob 資料。
 現在，您學到 Blob 儲存體的基本概念，請遵循下列連結，以進一步了解。
 
 ### <a name="tools"></a>工具
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) F # 類型提供者可以用來瀏覽 Blob、 資料表和佇列的 Azure 儲存體資產，並輕鬆地套用在其上的 CRUD 作業。
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F # 類型提供者可以用來瀏覽 Blob、 資料表和佇列的 Azure 儲存體資產，並輕鬆地套用在其上的 CRUD 作業。
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F # 應用程式開發介面使用 Microsoft Azure 資料表儲存體服務
 - [Microsoft Azure 儲存體總管 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)是免費的可讓您能夠以視覺化方式使用 Azure 儲存體資料在 Windows、 OS X 和 Linux 上的 microsoft 獨立應用程式。
 
@@ -251,4 +251,4 @@ Azure 儲存體支援加密的用戶端和伺服器上的 blob 資料。
 - [使用 Windows 上的 AzCopy 命令列公用程式傳送資料](/azure/storage/common/storage-use-azcopy)
 - [傳輸資料與 Linux 上的 AzCopy 命令列公用程式](/azure/storage/common/storage-use-azcopy-linux)
 - [設定 Azure 儲存體連接字串](/azure/storage/common/storage-configure-connection-string)
-- [Azure 儲存體團隊部落格](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure 儲存體團隊部落格](https://blogs.msdn.microsoft.com/windowsazurestorage/)

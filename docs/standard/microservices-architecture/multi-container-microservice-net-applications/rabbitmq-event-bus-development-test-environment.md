@@ -1,30 +1,35 @@
 ---
-title: "實作與 RabbitMQ 事件匯流排的開發或測試環境"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |實作與 RabbitMQ 事件匯流排的開發或測試環境"
+title: "針對開發或測試環境使用 RabbitMQ 實作事件匯流排"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作事件匯流排"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>實作與 RabbitMQ 事件匯流排的開發或測試環境
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
-我們應該開始所說，是否您建立您的自訂事件匯流排根據 eShopOnContainers 應用程式會在容器中，執行 RabbitMQ，它應該只能用於您的開發和測試環境。 您應該不將它用於生產環境中，除非您正在建置它可實際執行的服務匯流排的一部分。 簡單的自訂事件匯流排可能會遺失許多商業服務匯流排具有可實際執行的重要功能。
+首先您應該知道，如果您根據容器中所執行的 RabbitMQ 來建立自訂事件匯流排 (如同 eShopOnContainers 應用程式的做法)，則只能用於開發和測試環境。 除非您將它當做準備好用於生產環境之服務匯流排的一部分來建置，否則不應該用於生產環境中。 簡單的自訂事件匯流排可能會遺失許多商業服務匯流排所具備並可供生產環境使用的重要功能。
 
-事件匯流排 eShopOnContainers 自訂實作基本上是使用 RabbitMQ API 程式庫。 實作讓 microservices 訂閱事件、 事件、 發行和接收事件，如圖 8-21 所示。
+eShopOnContainers 的其中一個事件匯流排自訂實作基本上是使用 RabbitMQ API 的程式庫 (另一個實作是以 Azure 服務匯流排為依據)。 
+
+使用 RabbitMQ 的事件匯流排實作可讓微服務訂閱事件、發行事件和接收事件，如圖 8-21 所示。
 
 ![](./media/image22.png)
 
-**圖 8-21。** 事件匯流排的 RabbitMQ 實作
+**圖 8-21：** 事件匯流排的 RabbitMQ 實作
 
-在程式碼的 EventBusRabbitMQ 類別會實作泛型 IEventBus 介面。 這根據相依性插入，因此，您可以交換從此開發/測試版本的實際執行版本。
+在程式碼中，EventBusRabbitMQ 類別會實作泛型 IEventBus 介面。 這是以相依性插入為基礎，因此您可以從此開發/測試版本切換至生產版本。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -33,11 +38,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-範例開發/測試事件匯流排的 RabbitMQ 實作是未定案程式碼。 必須處理 RabbitMQ 伺服器的連線，並提供程式碼發行至佇列的訊息事件。 它也必須實作的每個事件類型; 整合事件處理常式集合的字典這些事件類型可以有不同的具現化和不同的訂用帳戶的每個接收者微服務，如圖 8-21 所示。
+範例開發/測試事件匯流排的 RabbitMQ 實作是未定案程式碼。 它必須處理 RabbitMQ 伺服器的連接，並提供程式碼將訊息事件發行到佇列。 它也必須實作每個事件類型之整合事件處理常式集合的字典，這些事件類型可以針對每個接收器微服務有不同的具現化和不同的訂閱，如圖 8-21 所示。
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>實作簡單發行具有 RabbitMQ 方法
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>使用 RabbitMQ 實作簡單的發行方法
 
-下列程式碼是 RabbitMQ，eShopOnContainers 事件匯流排實作的一部分，因此您通常不需要進行改良，除非程式碼。 程式碼取得的連接和 RabbitMQ 的通道，建立訊息，並再將訊息發佈到佇列。
+下列程式碼是 RabbitMQ 之簡化事件匯流排的一部分，已在 eShopOnContainers 的[實際程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)中獲得改善。 除非您想要改進，否則您通常不需要撰寫其程式碼。 此程式碼會取得連至 RabbitMQ 的連接和通道、建立訊息，然後將訊息發行到佇列。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -65,45 +70,51 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-[實際程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)的 發佈 eShopOnContainers 應用程式中的方法使用來改善[Polly](https://github.com/App-vNext/Polly)重試原則，重試工作特定數目的時間，以防 RabbitMQ 容器未就緒。 發生此情況時 docker 撰寫正在啟動容器。例如，可能會比其他容器的放慢啟動 RabbitMQ 容器。
+eShopOnContainers 應用程式中發行方法的[實際程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)可透過使用 [Polly](https://github.com/App-vNext/Polly) 重試原則來改進，該原則會在 RabbitMQ 容器未就緒時，重試工作特定次數。 當 docker-compose 正在啟動容器時，就會發生此情況；例如，RabbitMQ 容器可能會比其他容器更慢啟動。
 
-如先前所述，有許多可能的組態中 RabbitMQ，因此這段程式碼應該只能用於開發/測試環境。
+如前所述，RabbitMQ 中有許多可能的組態，因此這段程式碼只應該用於開發/測試環境。
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>實作 RabbitMQ API 與訂用帳戶程式碼
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>使用 RabbitMQ API 實作訂閱程式碼
 
-發行程式碼後，下列程式碼是一部分的簡化主機的 RabbitMQ 事件匯流排實作。 同樣地，通常您不需要變更它，除非可改善。
+如同發行程式碼，下列程式碼是 RabbitMQ 之事件匯流排實作的一部分簡化。 同樣地，除非您想要改進，否則您通常不需要將它變更。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```
 
-每個事件類型有從 RabbitMQ 取得事件的相關的通道。 接著，您可以讓每個通道和事件類型，視需要最多的事件處理常式。
+每個事件類型會有相關的通道以從 RabbitMQ 取得事件。 之後，您可以視需要針對每個通道和事件類型，擁有許多事件處理常式。
 
-Subscribe 方法接受 IIntegrationEventHandler 物件，這就像在目前的微服務的回呼方法，再加上其相關的 IntegrationEvent 物件。 然後程式碼會將該事件處理常式加入每個用戶端微服務有每個整合的事件類型的事件處理常式的清單中。 如果用戶端程式碼已經並未訂閱事件，程式碼會建立事件類型的通道，所以從任何其他服務便會發行該事件時，它可以發送樣式會與 RabbitMQ 接收事件。
+Subscribe 方法接受 IIntegrationEventHandler 物件，就像是目前微服務及其相關 IntegrationEvent 物件中的回呼方法。 此程式碼接著會將該事件處理常式新增至事件處理常式清單，每個整合事件類型可根據每個用戶端微服務擁有這些事件處理常式。 如果用戶端程式碼尚未訂閱事件，程式碼會建立事件類型的通道，以便在從任何其他服務發行該事件時，可從 RabbitMQ 接收推送樣式的事件。
 
 
 >[!div class="step-by-step"]
-[上一個](整合-事件為基礎的微服務-communications.md) [下一步] (訂閱 events.md)
+[上一個] (integration-event-based-microservice-communications.md) [下一個] (subscribe-events.md)

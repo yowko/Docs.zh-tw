@@ -3,7 +3,8 @@ title: ".NET Framework 4.7、4.6 和 4.5 移轉手冊 "
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, migrating applications to
@@ -12,15 +13,16 @@ ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae193819b191e6a3a09f0556ff221960c1aeb7b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 59c4ae2961b3e029ddd5f67afc9644042af95efb
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7、4.6 和 4.5 移轉手冊 
-如果您使用舊版的 .NET Framework 建立應用程式，通常可以輕鬆地將它升級到 .NET Framework 4.5 及其點發行版本 (4.5.1 和 4.5.2)、.NET Framework 4.6 及其點發行版本 (4.6.1 和 4.6.2) 或 .NET Framework 4.7 及其點發行版本 (.NET Framework 4.7.1)。 在 Visual Studio 中開啟專案。 如果您的專案是使用舊版 Visual Studio 所建立，則會自動開啟 [專案相容性] 對話方塊。 如需升級 Visual Studio 專案的詳細資訊，請參閱[移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目標及相容性](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs)。  
+如果您使用舊版的 .NET Framework 建立應用程式，通常可以輕鬆地將它升級到 .NET Framework 4.5 及其點發行版本 (4.5.1 和 4.5.2)、.NET Framework 4.6 及其點發行版本 (4.6.1 和 4.6.2) 或 .NET Framework 4.7 及其點發行版本 (.NET Framework 4.7.1)。 在 Visual Studio 中開啟專案。 如果您的專案是使用舊版 Visual Studio 所建立，則會自動開啟 [專案相容性] 對話方塊。 如需升級 Visual Studio 專案的詳細資訊，請參閱[移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目標及相容性](/visualstudio/productinfo/vs2017-compatibility-vs)。  
   
  不過，.NET Framework 中的某些變更需要變更您的程式碼。 您也可能想要利用 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本、.NET Framework 4.7 及其點發行版本 (.NET Framework 4.7.1) 中的某些新功能。 針對新版 .NET Framework 對您應用程式所做之這些類型的變更通常稱為「移轉」。 如果您的應用程式不必移轉，您可以在 .NET Framework 4.5 或更新版本中執行它，而不需要重新編譯。  
   

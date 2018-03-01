@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: beee874e3a549531b520d4ac2150bc10dcab7725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>開始使用 F # 在 Visual Studio for Mac
 
-F # 和 Visual F # 工具支援 Visual Studio for Mac IDE。  若要開始，您應該[下載 Visual Studio for Mac](https://www.visualstudio.com/downloads/download-visual-studio-vs)，如果您還沒有這麼做。  本文使用 Visual Studio 社群 2017 for Mac，但是您可以使用 F # 與您所選擇的版本。
+F # 和 Visual F # 工具支援 Visual Studio for Mac IDE。  若要開始，您應該[下載 Visual Studio for Mac](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)，如果您還沒有這麼做。  本文使用 Visual Studio 社群 2017 for Mac，但是您可以使用 F # 與您所選擇的版本。
 
 ## <a name="installing-f"></a>正在安裝 F # #
 
@@ -126,9 +126,9 @@ val it : bool = true
 
 如果您還沒有這麼做，請參閱[教學課程的 F #](../tour.md)，其中涵蓋了某些 F # 語言的核心功能。  它會提供 F # 的功能概觀，並提供豐富的程式碼範例，您可以將複製到 Visual Studio for Mac 並執行。  也有一些絕佳的外部資源，您可以使用，在其中顯示[F # 指南](../index.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [Visual F#](../index.md)  
- [F 的教學課程](../tour.md)  
+ [F# 的教學課程](../tour.md)  
  [F # 語言參考](../language-reference/index.md)  
  [類型推斷](../language-reference/type-inference.md)  
  [符號和運算子參考](../language-reference/symbol-and-operator-reference/index.md)  

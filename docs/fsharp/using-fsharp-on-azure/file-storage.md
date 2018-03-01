@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>開始使用 Azure 檔案儲存體使用 F # #
 
@@ -97,7 +97,7 @@ Azure 檔案儲存體是一項服務，提供在雲端中使用標準的檔案�
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>設定檔案共用的大小上限
 
-下列範例會示範如何檢查共用資源的目前使用量以及如何設定共用的配額。 `FetchAttributes`必須先呼叫填入共用`Properties`，和`SetProperties`將本機變更傳播至 Azure 檔案儲存體。
+下列範例會示範如何檢查共用資源的目前使用量以及如何設定共用的配額。 `FetchAttributes` 必須先呼叫填入共用`Properties`，和`SetProperties`將本機變更傳播至 Azure 檔案儲存體。
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ Azure 儲存體分析度量資訊支援檔案存放裝置。 度量資料，您�
 
 - [Azure 檔案儲存體已上市](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [在 Azure 檔案儲存體](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [介紹 Microsoft Azure 檔案服務](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Microsoft Azure 檔案的持續連線](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [介紹 Microsoft Azure 檔案服務](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Microsoft Azure 檔案的持續連線](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>型別提供者
 
 > [!NOTE]
-本指南從 F # 3.0 開始撰寫，而且將更新。  請參閱 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
+本指南從 F # 3.0 開始撰寫，而且將更新。  請參閱 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
 
 F# 型別提供者是一個元件，該元件會提供類型、屬性和方法讓您在程式中使用。 類型提供者是 F# 3.0 支援中進行資訊豐富程式設計的重要部分。 資訊豐富程式設計的關鍵在於消除使用網際網路和時下企業環境中所找到各種資訊來源的障礙。 將資訊來源納入程式中的其中一項明顯障礙，就是需要以類型、屬性和方法來表示該資訊，才能在程式語言環境中使用。 手動撰寫這些類型相當耗時又難以維護。 一般替代方式是使用程式碼產生器將檔案加入您的專案中，不過，傳統程式碼產生類型無法與 F# 支援的程式設計探勘模式徹底整合，因為每次調整服務參考後，都必須取代產生的程式碼。
 
@@ -35,7 +35,7 @@ F# 包含數個內建的類型提供者，可供常用的網際網路和企業�
 ## <a name="related-topics"></a>相關主題
 
 
-|標題|說明|
+|標題|描述|
 |-----|-----------|
 |[逐步解說：使用型別提供者存取 SQL 資料庫](accessing-a-sql-database.md)|說明如何使用 SqlDataConnection 型別提供者，根據直接連接資料庫的連接字串存取 SQL 資料庫的資料表和預存程序。 存取是使用 LINQ to SQL 對應。|
 |[逐步解說：使用型別提供者和實體存取 SQL 資料庫](accessing-a-sql-database-entities.md)|說明如何使用 SqlEntityConnection 型別提供者，根據直接連接資料庫的連接字串存取 SQL 資料庫的資料表和預存程序。 存取是使用 LINQ to Entities 對應。 這個方法適用所有資料庫，但是所示範的範例是 SQL Server。|
@@ -47,7 +47,7 @@ F# 包含數個內建的類型提供者，可供常用的網際網路和企業�
 |[型別提供者安全性](type-provider-security.md)|提供開發型別提供者時的安全性考量相關資訊。|
 |[類型提供者疑難排解](troubleshooting-type-providers.md)|提供使用型別提供者時可能發生之常見問題的相關資訊，並且包括解決方案的建議。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 語言參考](../../language-reference/index.md)
 
 [Visual F#](../../index.md)

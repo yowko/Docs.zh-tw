@@ -1,6 +1,6 @@
 ---
-title: "在開發期間，安全地儲存應用程式密碼"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |在開發期間，安全地儲存應用程式密碼"
+title: "在開發期間安全地儲存應用程式祕密"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 在開發期間安全地儲存應用程式祕密"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: mjrousos
 ms.author: wiwagn
@@ -8,23 +8,26 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f1b8b257a3e677c7e665e1d394a8adf7e651bec2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f70f7c741da9653745e4f542125986c701b5d22d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="storing-application-secrets-safely-during-development"></a>在開發期間，安全地儲存應用程式密碼
+# <a name="storing-application-secrets-safely-during-development"></a>在開發期間安全地儲存應用程式祕密
 
-若要連接與受保護的資源和其他服務，ASP.NET Core 應用程式通常需要使用連接字串、 密碼或其他包含機密資訊的認證。 這些機密的資訊片段稱為*密碼*。 最佳作法是在原始程式碼中包含機密資料，當然不將密碼儲存在原始檔控制它。 相反地，您應該從更安全的位置讀取密碼使用 ASP.NET Core 組態模型。
+為了連接到受保護的資源和其他服務，ASP.NET Core 應用程式通常需要使用包含機密資訊的連接字串、密碼或其他認證。 這些機密資訊稱為「祕密」。 最佳做法是不要在原始程式碼中包含祕密，而且絕不要在原始檔控制中儲存秘密。 相反地，您應該使用 ASP.NET Core 組態模型，從更安全的位置讀取秘密。
 
-您應該將用於存取開發和暫存資源，因為不同的個人將需要存取這些不同的密碼，以存取實際執行資源使用的密碼。 若要儲存在開發期間使用的密碼，常見的方法是請將密碼儲存在環境變數，或使用 ASP.NET Core 密碼管理員工具。 在生產環境中更安全的儲存體，microservices 可以將密碼儲存在 Azure 金鑰保存庫。
+您應該將用於存取開發和暫存資源的秘密，與用於存取生產資源的秘密分開，因為不同的人需要存取不同組的秘密。 若要儲存在開發期間使用的秘密，常見的方法是將秘密儲存在環境變數中，或藉由使用 ASP.NET Core Secret Manager 工具來儲存。 為了在生產環境中更安全的儲存，微服務可以將秘密儲存在 Azure Key Vault 中。
 
-## <a name="storing-secrets-in-environment-variables"></a>環境變數中儲存機密資料
+## <a name="storing-secrets-in-environment-variables"></a>將秘密儲存在環境變數中
 
-保留原始程式碼出的機密資料的其中一個方法是讓開發人員設定字串為基礎的密碼，做為[環境變數](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables)其開發電腦上。 當您使用環境變數以儲存機密資料，有名為階層式 （其組態區段中的巢狀），建立包含密碼的名稱的完整階層架構的環境變數名稱時，會以冒號 （:） 分隔。
+將秘密與原始程式碼分開保存的一個方法，是由開發人員在其開發電腦上將字串型秘密設定為[環境變數](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables)。 當您使用環境變數來儲存具有階層式名稱 (巢狀於組態區段中) 的秘密時，請建立環境變數的名稱，其中包含秘密名稱的完整階層，並以冒號 (:) 分隔。
 
-例如，要進行偵錯設定環境變數記錄： LogLevel:Default 會等於下列 JSON 檔案中設定值：
+例如，將環境變數 Logging:LogLevel:Default 設定為 Debug 相當於下列 JSON 檔案中的組態值：
 
 ```json
 {
@@ -36,15 +39,15 @@ ms.lasthandoff: 10/18/2017
 }
 ```
 
-若要存取這些值從環境變數，應用程式只需要建構 IConfigurationRoot 物件時，呼叫其 ConfigurationBuilder AddEnvironmentVariables。
+若要從環境變數存取這些值，應用程式只需要在建構 IConfigurationRoot 物件時在其 ConfigurationBuilder 上呼叫 AddEnvironmentVariables 即可。
 
-請注意，環境變數通常會儲存為純文字，因此如果遭到入侵的電腦或使用環境變數的程序，會顯示環境變數值。
+請注意，環境變數通常會儲存為純文字，因此如果具有環境變數的電腦或處理序遭到入侵，就會顯示環境變數值。
 
-## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>儲存機密資料，使用 ASP.NET Core 密碼管理員
+## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>使用 ASP.NET Core Secret Manager 儲存秘密
 
-ASP.NET Core[密碼管理員](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager)工具提供的原始碼超出保密的另一種方法。 若要使用密碼管理員工具，包含的工具參考 (DotNetCliToolReference) Microsoft.Extensions.SecretManager.Tools 封裝專案檔中。 一旦該相依性存在，並且已還原，dotnet 使用者密碼命令可用來從命令列設定密碼的值。 這些密碼將儲存在使用者的設定檔目錄中 （詳細資料會因作業系統），遠離原始碼在 JSON 檔案中。
+ASP.NET Core [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) 工具提供另一種方法來將秘密與原始程式碼分開保存。 若要使用 Secret Manager 工具，請在您的專案檔中包含 Microsoft.Extensions.SecretManager.Tools 封裝的工具參考 (DotNetCliToolReference)。 一旦該相依性存在並已還原，即可使用 dotnet user-secrets 命令從命令列設定秘密的值。 這些秘密會儲存在使用者設定檔目錄中的 JSON 檔案中 (細目會因 OS 而異)，並遠離原始程式碼。
 
-密碼管理員工具來設定的密碼被依專案是使用密碼 UserSecretsId 屬性。 因此，您必須確定在專案檔 （如以下程式碼片段所示） 中設定 UserSecretsId 屬性。 用做為識別碼的實際字串並不重要，只要它是唯一的專案中。
+Secret Manager 工具所設定的秘密會依使用秘密之專案的 UserSecretsId 屬性來組織。 因此，您必須確定在專案檔中設定 UserSecretsId 屬性 (如下列程式碼片段所示)。 識別碼只要在專案中是唯一的，所使用的實際字串並不重要。
 
 ```xml
 <PropertyGroup>
@@ -52,8 +55,8 @@ ASP.NET Core[密碼管理員](https://docs.microsoft.com/aspnet/core/security/ap
 </PropertyGroup>
 ```
 
-使用儲存在應用程式中使用密碼管理員密碼都會伴隨著呼叫 AddUserSecrets&lt;T&gt; ConfigurationBuilder 執行個體，要在其組態中包含機密資料的應用程式上。 泛型參數 T 應該是來自 UserSecretId 已套用至組件的類型。 通常使用 AddUserSecrets&lt;啟動&gt;是正常的。
+若要使用 Secret Manager 儲存在應用程式中的秘密，請在 ConfigurationBuilder 執行個體上呼叫 AddUserSecrets&lt;T&gt; 以在其組態中包含應用程式的秘密。 泛型參數 T 應該是已套用 UserSecretId 之組件的類型。 通常使用 AddUserSecrets&lt;Startup&gt; 就可以。
 
 
 >[!div class="step-by-step"]
-[上一個](授權-網路-microservices-web-applications.md) [下一步] (azure-金鑰-保存庫-保護-secrets.md)
+[上一個] (authorization-net-microservices-web-applications.md) [下一個] (azure-key-vault-protects-secrets.md)

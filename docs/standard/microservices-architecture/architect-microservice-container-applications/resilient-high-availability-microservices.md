@@ -1,6 +1,6 @@
 ---
-title: "恢復功能和 microservices 的高可用性"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |恢復功能和 microservices 的高可用性"
+title: "微服務中的復原和高可用性"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 微服務中的復原和高可用性"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,77 +8,80 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 149e28ac7bd7383e4e960ed8a226943e2b9bdaa1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bbad2f0843e05f05e90e2e83c7c35cd4f06ed5e0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>恢復功能和 microservices 的高可用性
+# <a name="resiliency-and-high-availability-in-microservices"></a>微服務中的復原和高可用性
 
-處理未預期的錯誤是其中一個最困難的問題，若要解決，尤其是在分散式系統。 大部分的開發人員撰寫的程式碼牽涉到例外狀況處理、 和，這也在測試所花費最多時間。 問題會比撰寫程式碼以處理失敗更為複雜。 微服務執行所在的電腦失敗時，會發生什麼事？ 不只需要偵測此微服務失敗 （本身困難的問題），但您也需要某個動作，重新啟動您的微服務。
+處理未預期的失敗是最難解決的問題之一，尤其在分散式系統中。 開發人員撰寫的許多程式碼都是關於處理例外狀況，這也是測試時花費最多時間的部分。 問題比撰寫處理失敗的程式碼更為複雜。 當執行微服務的電腦失敗時，會發生什麼事？ 您不僅需要偵測此微服務失敗 (其本身的難題)，還需要一些東西重新啟動您的微服務。
 
-微服務需要處理失敗的彈性，並要能重新啟動通常可用性的另一部電腦上。 此復原也都是在向下微服務可以復原此狀態，以及是否可以成功地重新啟動的微服務微服務，代表儲存的狀態。 換句話說，需要具備中 （在任何時間，可以重新啟動處理程序） 的計算能力的恢復功能以及更有恢復狀態或資料 （無資料遺失和資料則維持一致）。
+微服務通常需要在有可用性的另一部電腦上復原失敗以及重新啟動。 此復原也會回復曾以微服務名義儲存的狀態，即微服務可以復原此狀態的來源，以及微服務是否可以成功重新啟動。 換句話說，計算能力需要有復原功能 (程序可以隨時重新啟動)，以及狀態或資料需有復原性 (無資料遺失且資料維持一致)。
 
-恢復功能的問題是複合性的其他案例，例如當應用程式在升級期間發生失敗期間。 微服務，使用與部署系統，您必須判斷是否可以繼續向前移到較新版本，或改為復原回先前的版本，以維護一致的狀態。 是否有可向前移動的保留足夠的電腦以及如何復原先前版本的微服務的問題需要考量。 這需要發出健康情況資訊，以便在整體的應用程式與 orchestrator 進行這些決定微服務。
+發生其他狀況時，復原功能的問題是複合性的，例如應用程式在升級期間發生錯誤。 配合部署系統工作的微服務，需判斷要繼續前進到較新版本，還是改復原回到前一版本，以維護一致的狀態。 需要考量的問題包括是否有足夠的電腦可用以繼續升級，以及如何復原舊版本的微服務等等。 這需要微服務發出健康狀態資訊，以便全體應用程式及協調器做出決定。
 
-此外，相關恢復功能如何以雲端為基礎的系統必須行為。 如前所述，以雲端為基礎的系統也必須不怕失敗，並必須嘗試自動修復它們。 比方說，在網路或容器失敗，用戶端應用程式或用戶端服務必須重試傳送訊息，或重試要求，因為在許多情況下，在雲端中的失敗是部分的策略。 [實作具有恢復功能的應用程式](#implementing_resilient_apps)> 一節中本指南說明如何處理部分失敗。 它說明使用類似的程式庫的技術，如使用指數型輪詢或.NET 核心中的斷路器模式的重試[Polly](https://github.com/App-vNext/Polly)，其中提供各種處理這個主體的原則。
+此外，復原功能與雲端式系統的必要行為方式有關。 如前所述，雲端式系統必須不怕失敗，也必須嘗試自動從失敗中復原。 例如，如果網路或容器發生錯誤，用戶端應用程式或用戶端服務必須有重試傳送訊息或重試要求的策略，因為在許多情況下，雲端的失敗僅為部分。 本指南的[實作復原應用程式](#implementing_resilient_apps)一節會說明如何處理部分失敗。 它描述使用類似 [Polly](https://github.com/App-vNext/Polly) 的程式庫，以 .NET Core 的指數型輪詢或斷路器模式重試等技術，提供各種處理此主體的原則。
 
-## <a name="health-management-and-diagnostics-in-microservices"></a>健康情況管理和診斷 microservices 中
+## <a name="health-management-and-diagnostics-in-microservices"></a>微服務的健康狀態管理與診斷
 
-很明顯，常被忽略，而微服務必須在其健康情況及診斷報告。 否則，會從作業觀點來看很少深入解析。 一組獨立的服務之間的關聯的診斷事件和處理電腦時鐘偏差的事件順序的意義是一項挑戰。 互動的微服務透過同意通訊協定和資料格式的相同方式，就需要來記錄健全狀況和最終都會進行查詢和檢視事件存放區中的診斷事件的方式標準化。 在 microservices 方法中，它是索引鍵不同小組同意在單一記錄格式。 需要一致的方法來檢視應用程式中的診斷事件。
+微服務必須報告其健康狀態及診斷，這似乎是很明顯的事，卻常被忽略。 否則，不會有來自作業觀點的深入解析。 在一群獨立服務之間建立診斷事件的關聯性，以及處理電腦時鐘偏差讓事件順序有意義，困難度很高。 以您與微服務透過協定的通訊協定和資料格式互動的相同方式，需要標準化健康狀態和診斷事件的記錄方式，這些事件最後都會進入事件存放區供查詢和檢視。 在微服務方法中，它是不同小組協定的單一記錄格式關鍵。 檢視應用程式的診斷事件需有一致的方法。
 
-### <a name="health-checks"></a>健康情況檢查
+### <a name="health-checks"></a>健康狀態檢查
 
-健全狀況是不同的診斷。 健全狀況是關於報告其目前的狀態，以採取適當的動作微服務。 使用良好的範例，當做維護可用性的升級與部署機制。 雖然服務目前可能處於狀況不良的狀態，因為處理序當機或電腦重新開機，服務可能依然可運作。 最後您需要為這個較差執行升級。 最好的方法是先進行調查或允許提供時間讓復原微服務。 從微服務的健全狀況事件，幫助我們做出明智的決策和作用中，幫助您建立自我修復服務。
+健康狀態與診斷不同。 健康狀態是微服務對其目前狀態採取之適當動作的報告。 使用升級與部署機制維護可用性是良好的範例。 雖然服務目前可能因為處理序當機或電腦重新開機而處於不良狀態，但服務也許還能運作。 您最後需要執行升級讓情況更為惡化。 最好的方法是先進行調查，或給微服務時間復原。 微服務的健康狀態事件能幫助我們做出明智的決定，並能確實幫助我們建立自我修復的服務。
 
-中實作健康情況檢查在 ASP.NET Core services 區段的本指南中，我們將說明如何使用新的 ASP.NET HealthChecks 文件庫中您 microservices，好讓它們可以報告其狀態至監視的服務，以採取適當的動作。
+在本指南的＜實作 ASP.NET Core 服務健康狀態檢查＞一節中，我們會說明如何使用您微服務的新 ASP.NET HealthChecks 程式庫，讓它們向監視服務報告其狀態，以採取適當的動作。
 
-### <a name="using-diagnostics-and-logs-event-streams"></a>使用診斷和記錄檔的事件資料流
+### <a name="using-diagnostics-and-logs-event-streams"></a>使用診斷和記錄檔事件資料流
 
-記錄檔會提供如何應用程式或服務正在執行，包括例外狀況、 警告和簡單的參考用訊息的相關資訊。 通常，每個記錄檔為文字格式，其中每個事件，一行雖然例外狀況通常也會顯示堆疊追蹤跨多行。
+記錄檔會提供應用程式或服務如何執行的資訊，包括例外狀況、警告和簡單參考訊息。 通常，每個記錄檔都是一行一事件的文字格式，雖然例外狀況通常也會跨多行顯示堆疊追蹤。
 
-整合伺服器型應用程式中，可以只是將記錄寫入磁碟 （記錄檔） 上的檔案，並使用任何工具分析。 因為應用程式執行時限制為固定的伺服器或 VM，通常不太複雜，無法分析的事件流程。 不過，在 orchestrator 叢集中許多節點之間執行多個服務的分散式應用程式，能夠將分散式的事件相互關聯是一項挑戰。
+在整合型伺服器應用程式中，您可以只將記錄寫入磁碟的檔案 (記錄檔)，再使用任何工具予以分析。 因為應用程式執行僅限於固定的伺服器或 VM，所以分析事件流程一般不會太複雜。 不過，在多項服務跨許多協調器叢集節點執行的分散式應用程式中，能夠讓分散式事件相互關聯是一項挑戰。
 
-微服務為基礎的應用程式應該不會嘗試儲存記錄檔或事件的輸出資料流本身，並管理路由至中央位置的事件甚至不能再一次。 它應該是透明的這表示每個處理序，應該只要撰寫其事件資料流至標準輸出的下方將會收集執行環境的基礎結構會由其執行位置。 舉例來說，這些事件資料流路由器是[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)，其中多個來源收集事件資料流，並將其輸出系統發佈。 這些可以包括簡單的標準輸出的開發環境，或是想要的雲端系統[Application Insights](https://azure.microsoft.com/services/application-insights/)， [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) （適用於內部部署應用程式），和[Azure 診斷](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). 也有良好的協力廠商記錄分析平台和工具，可以搜尋警示、 報表和監視記錄檔，即使在即時喜歡[Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)。
+微服務型應用程式不應該嘗試自行儲存事件或記錄檔的輸出資料流，甚至不應該嘗試管理事件路由至中央位置。 它應該是透明的，意即每個處理序都應該只將自己的事件資料流寫入標準輸出，隨後由其執行所在之執行環境基礎結構收集。 這些事件資料流路由器的範例之一是 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)，它會收集多個來源的事件資料流，並將它發佈至輸出系統。 這些包括開發環境或雲端系統的簡單標準輸出，例如 [Application Insights](https://azure.microsoft.com/services/application-insights/)、[OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (適用於內部部署應用程式) 和 [Azure 診斷](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics)。 也有良好的協力廠商記錄分析平台和工具，可以搜尋、警示、報告以及監視記錄，甚至是即時的，例如 [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)。
 
-### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestrators 管理健康情況和診斷資訊
+### <a name="orchestrators-managing-health-and-diagnostics-information"></a>協調器管理健康狀態和診斷資訊
 
-當您建立微服務為基礎的應用程式時，您需要處理複雜度。 當然，單一的微服務相當簡單，處理，但是數十份或數百個型別和無數 microservices 的執行個體是複雜的問題。 它就不會只建置您的微服務架構，您也需要高可用性、 可定址性、 復原、 健全狀況及診斷如果您想要擁有穩定且一致的系統。
+當您建立微服務型應用程式時，您需要處理複雜性。 當然，單一的微服務很好處理，但是數十或數百種和成千上萬的微服務執行個體就是很複雜的問題。 這不僅是建置您的微服務架構，如果您想要擁有穩定且一致的系統，您還需要高可用性、可定址性、復原力、健康狀態及診斷。
 
 ![](./media/image22.png)
 
-**圖 4-22**。 微服務平台為基礎的應用程式的健康情況管理
+**圖 4-22**。 微服務平台是應用程式健康狀態管理的基礎
 
-顯示在圖 4-22 中複雜的問題是很難將自行解決。 開發團隊應該專注於解決商務問題及建置自訂的應用程式的微服務為基礎的方法。 它們不應該專注於解決複雜的基礎結構發生問題;如果有，任何微服務為基礎的應用程式的成本是很大。 因此，有微服務導向的平台，稱為 orchestrators 」 或 「 微服務叢集，嘗試解決艱難問題的建置和執行服務和有效率地使用基礎結構資源。 這會減少建立使用 microservices 方法的應用程式的複雜性。
+圖 4-22 顯示的複雜問題，您很難自行解決。 開發小組應該專注於解決商務問題以及使用微服務型方法建置自訂的應用程式。 他們不應該專注於解決複雜的基礎結構問題，如果他們專注於此，則所有微服務型應用程式的成本就會很龐大。 因此有稱為協調器或微服務叢集的微服務導向平台，會嘗試解決建置與執行服務以及有效率使用基礎結構資源的難題。 這會減少使用微服務方法來建置應用程式的複雜性。
 
-不同 orchestrators 聽起來可能類似，不同的診斷和每個所提供的健康情況檢查功能和到期日，有時會根據作業系統平台的狀態下一節中所述。
+不同的協調器可能看似雷同，但它們提供的診斷和健康狀態檢查在功能和到期日各不相同，有時會隨作業系統平台而異，如下節所述。
 
 ## <a name="additional-resources"></a>其他資源
 
--   **12 個因素應用程式。XI。記錄檔： 將記錄視為事件資料流**
+-   **十二要素應用程式。XI.記錄檔：將記錄視為事件資料流**
     [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft 診斷 EventFlow 程式庫。** GitHub 儲存機制。
+-   **Microsoft 診斷 EventFlow 程式庫。** GitHub 存放庫。
 
     [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
--   **什麼是 Azure 診斷**
+-   **何謂 Azure 診斷**
     [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Windows 電腦連線到 Azure 中的記錄分析服務**
+-   **連線 Windows 電腦和 Azure Log Analytics 服務**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **記錄您平均： 使用語意記錄應用程式區塊**
+-   **記錄您的想法：使用語意記錄應用程式區塊**
     [*https://msdn.microsoft.com/library/dn440729 (v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk。** 官方網站。
     [*http://www.splunk.com*](http://www.splunk.com)
 
--   **EventSource 類別**。 追蹤 Windows (ETW) 事件的應用程式開發介面[ *https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+-   **EventSource 類別**。 Windows 事件追蹤 (ETW) API[*https://docs.microsoft.com/Dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 
 
 
 >[!div class="step-by-step"]
-[上一個](microservice-based-composite-ui-shape-layout.md) [下一步] (scalable-available-multi-container-microservice-applications.md)
+[上一頁] (microservice-based-composite-ui-shape-layout.md) [下一頁] (scalable-available-multi-container-microservice-applications.md)

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3cd8df9becac0d1a8842eb22e2f772eee6307acf
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>逐步解說：從 DBML 檔案產生 F# 類型
 
 > [!NOTE]
-本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
+本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
 
 > [!NOTE]
 應用程式開發介面參考連結將帶您到 MSDN。  docs.microsoft.com API 參考不完整。
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/09/2017
 6. (選擇性) 將您在上一個步驟中建立的.dbml 檔案複製和貼上的主要專案資料夾中的檔案。 此資料夾包含專案檔 (.fsproj) 和程式碼檔案。 在功能表列上選擇 **專案**，**加入現有項目**，然後指定.dbml 檔案，將它加入至您的專案。 如果您完成這些步驟，您可以省略 ResolutionFolder 靜態參數，在下一個步驟。
 <br />
 
-## <a name="configuring-the-type-provider"></a>設定類型提供者
+## <a name="configuring-the-type-provider"></a>設定型別提供者
 在本節中，您會建立型別提供者，並從.dbml 檔案中所述的結構描述產生類型。
 
 
@@ -154,7 +154,7 @@ let db = new dbml.MyDataContext(connectionString)
 您可以繼續使用其他查詢的運算式，或從資料內容取得資料庫連接和執行一般 ADO.NET 資料的作業。 如需其他步驟，請參閱章節 「 查詢資料 」 之後[逐步解說： 存取 SQL 資料庫所使用的型別提供者](accessing-a-sql-database.md)。
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [DbmlFile 類型提供者](https://msdn.microsoft.com/visualfsharpdocs/conceptual/dbmlfile-type-provider-%5bfsharp%5d)
 
 [類型提供者](index.md)

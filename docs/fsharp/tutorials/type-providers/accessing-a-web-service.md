@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 63374fa9-8fb8-43ac-bcb9-ef2290d9f851
-ms.openlocfilehash: 06d955033d465cf58af05f483d21175f90d1777a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2929198172a4e9f908daa64af19208e07859263f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-web-service-by-using-type-providers"></a>逐步解說：使用型別提供者存取 Web 服務
 
 > [!NOTE]
-本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
+本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
 
 > [!NOTE]
 應用程式開發介面參考連結將帶您到 MSDN。  docs.microsoft.com API 參考不完整。
@@ -64,7 +64,7 @@ ms.lasthandoff: 10/18/2017
 在此步驟中，您可以使用 WSDL 型別提供者產生 TerraServer web 服務的型別。
 
 
-#### <a name="to-configure-the-type-provider-and-generate-types"></a>若要設定類型提供者和產生類型
+#### <a name="to-configure-the-type-provider-and-generate-types"></a>若要設定型別提供者和產生類型
 
 1. 加入下列程式碼，以開啟型別提供者命名空間。
 <br />
@@ -80,7 +80,7 @@ open Microsoft.FSharp.Data.TypeProviders
 <br />
 
 ```fsharp
-type TerraService = WsdlService<" HYPERLINK "http://terraserver-usa.com/TerraService2.asmx?WSDL" http://msrmaps.com/TerraService2.asmx?WSDL">
+type TerraService = WsdlService<" HYPERLINK "https://terraserver-usa.com/TerraService2.asmx?WSDL" https://msrmaps.com/TerraService2.asmx?WSDL">
 ```
 
   如果服務 URI 拼錯，或者服務本身已關閉，或不執行底下這行程式碼會出現紅色曲線。 如果您指向程式碼時，錯誤訊息說明的問題。 您可以找到相同的資訊**錯誤清單**視窗或在**輸出 視窗**建置之後。
@@ -116,7 +116,7 @@ with
 <br />
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [WsdlService 類型提供者](https://msdn.microsoft.com/visualfsharpdocs/conceptual/wsdlservice-type-provider-%5bfsharp%5d)
 
 [類型提供者](index.md)

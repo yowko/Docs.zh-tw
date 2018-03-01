@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教學課程： 建立型別提供者
 
@@ -56,7 +56,7 @@ F # 3.0 包含數個內建型別提供者，供常用的網際網路和企業資
 
 
 ## <a name="a-simple-type-provider"></a>簡單的型別提供者
-這個範例是在 Samples.HelloWorldTypeProvider`SampleProviders\Providers`目錄[F # 3.0 的範例組件](http://fsharp3sample.codeplex.com)Codeplex 網站上。 提供者可提供 「 型別空間 」 含有 100 刪除的類型為下列程式碼顯示使用 F # 簽章語法並省略以外的所有詳細資料的`Type1`。 如需清除類型的詳細資訊，請參閱[詳細資料的相關清除提供型別](#details-about-erased-provided-types)本主題稍後。
+這個範例是在 Samples.HelloWorldTypeProvider`SampleProviders\Providers`目錄[F # 3.0 的範例組件](https://fsharp3sample.codeplex.com)Codeplex 網站上。 提供者可提供 「 型別空間 」 含有 100 刪除的類型為下列程式碼顯示使用 F # 簽章語法並省略以外的所有詳細資料的`Type1`。 如需清除類型的詳細資訊，請參閱[詳細資料的相關清除提供型別](#details-about-erased-provided-types)本主題稍後。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -407,7 +407,7 @@ t
   - 一組可能的清除提供之類型的物件會呼叫其表示法。 在本文範例中，類型的所有清除提供表示`Type1..Type100`一定是字串的物件。
 <br />
 
-提供之類型的所有表示都必須與所提供的型別清除相容。 （否則 F # 編譯器會產生錯誤的型別提供者，使用或將會產生無法驗證.NET 程式碼並不是有效的。 如果類型提供者傳回的程式碼提供了無效的表示方式，則該類型提供者無效。
+提供之類型的所有表示都必須與所提供的型別清除相容。 （否則 F # 編譯器會產生錯誤的型別提供者，使用或將會產生無法驗證.NET 程式碼並不是有效的。 如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。
 
 您可以使用下列方法，兩者都是很常見的選擇提供物件的表示法：
 
@@ -499,7 +499,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 - 每個具名的群組導致所提供的屬性，並存取屬性導致系統使用的相符項目上的索引子的`Groups`集合。
 <br />
 
-下列程式碼是核心的邏輯來實作這類提供者，以及這個範例省略了加入所有成員，以提供的類型。 每個加入的成員相關的資訊，請參閱本主題稍後的適當的區段。 完整程式碼中，下載範例的[F # 3.0 的範例組件](http://fsharp3sample.codeplex.com)Codeplex 網站上。
+下列程式碼是核心的邏輯來實作這類提供者，以及這個範例省略了加入所有成員，以提供的類型。 每個加入的成員相關的資訊，請參閱本主題稍後的適當的區段。 完整程式碼中，下載範例的[F # 3.0 的範例組件](https://fsharp3sample.codeplex.com)Codeplex 網站上。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ let data = connection.Astronomy.Asteroids
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 是 F # 3.0 版中的一部分 ProvidedTypes 0.2 協助程式程式碼只具有有限的支援，提供產生的型別。 下列陳述式必須是產生的型別定義，則為 true:
@@ -1196,10 +1196,10 @@ type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/
 您可能會發現下列秘訣有助於在開發程序。
 
 
-- `Run Two Instances of Visual Studio.`您可以開發一個執行個體中的型別提供者，並測試其他的提供者，因為測試 IDE 將會防止型別提供者正在重建的.dll 檔案鎖定。 因此，您必須關閉 Visual Studio 的第二個執行個體時，第一個執行個體中，內建提供者，然後您必須重新開啟第二個執行個體後建置提供者。
+- `Run Two Instances of Visual Studio.` 您可以開發一個執行個體中的型別提供者，並測試其他的提供者，因為測試 IDE 將會防止型別提供者正在重建的.dll 檔案鎖定。 因此，您必須關閉 Visual Studio 的第二個執行個體時，第一個執行個體中，內建提供者，然後您必須重新開啟第二個執行個體後建置提供者。
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`您可以使用下列工具來叫用型別提供者：
+- `Debug type providers by using invocations of fsc.exe.` 您可以使用下列工具來叫用型別提供者：
 <br />
   - fsc.exe （F # 命令列編譯器）
 <br />
@@ -1221,5 +1221,5 @@ type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/
 <br />
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [類型提供者](index.md)

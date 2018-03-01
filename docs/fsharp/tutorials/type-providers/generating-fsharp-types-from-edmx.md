@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>逐步解說：從 EDMX 結構描述檔案產生 F# 類型
 
 > [!NOTE]
-本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
+本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
 
 > [!NOTE]
 應用程式開發介面參考連結將帶您到 MSDN。  docs.microsoft.com API 參考不完整。
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/09/2017
 <br />
 
 ## <a name="creating-the-project"></a>建立專案
-在這個步驟中，您會建立專案並且在其中加入適當的參考，以便使用 EDMX 類型提供者。
+在這個步驟中，您會建立專案並且在其中加入適當的參考，以便使用 EDMX 型別提供者。
 
 
 #### <a name="to-create-and-set-up-an-f-project"></a>若要建立並設定 F# 專案
@@ -126,7 +126,7 @@ let getEDMConnection(dbConnectionString) =
 在這個步驟中，您將建立並設定包含 EDMX 連接字串的類型提供者，然後為 .edmx 檔案中定義的結構描述產生類型。
 
 
-#### <a name="to-configure-the-type-provider-and-generate-types"></a>若要設定類型提供者和產生類型
+#### <a name="to-configure-the-type-provider-and-generate-types"></a>若要設定型別提供者和產生類型
 
 1. 將您在這個逐步解說的第一個步驟中產生的 .edmx 檔案複製到專案資料夾。
 <br />
@@ -222,7 +222,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 1. 在功能表列上選擇  **SQL**， **TRANSACT-SQL 編輯器**，**新查詢**建立資料庫。 出現提示時，指定您的資料庫伺服器和執行個體。
 <br />
 
-2. 複製並貼上建立學生的資料庫，將資料庫指令碼的內容中所述[Entity Framework 文件](http://msdn.microsoft.com/data/JJ614587.aspx)資料開發人員中心。
+2. 複製並貼上建立學生的資料庫，將資料庫指令碼的內容中所述[Entity Framework 文件](https://msdn.microsoft.com/data/JJ614587.aspx)資料開發人員中心。
 <br />
 
 3. 選擇三角形符號的工具列按鈕，或選擇 Ctrl + Q 鍵以執行 SQL 指令碼。
@@ -268,14 +268,14 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 藉由查看可用的查詢運算子，如下所示瀏覽其他查詢[查詢運算式](../../language-reference/query-expressions.md)。
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [類型提供者](index.md)
 
 [EdmxFile 類型提供者](https://msdn.microsoft.com/visualfsharpdocs/conceptual/edmxfile-type-provider-%5bfsharp%5d)
 
 [逐步解說：使用型別提供者和實體存取 SQL 資料庫](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [.edmx 檔案概觀](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

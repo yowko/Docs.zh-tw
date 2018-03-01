@@ -1,91 +1,95 @@
 ---
-title: "網域的事件。 設計和實作"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |網域事件、 設計和實作"
+title: "領域事件： 設計和實作"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 領域事件、設計和實作"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2d98b302be4ee72d8225526944fc3e41cbadcb5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="domain-events-design-and-implementation"></a>網域事件： 設計和實作
+# <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
-使用網域事件來明確地實作您的網域中的變更的副作用。 在其他字，和使用 DDD 術語中，使用網域事件以明確實作跨多個彙總的副作用。 （選擇性） 更好的延展性較資料庫鎖定的影響，請使用相同的網域中的彙總之間的最終一致性。
+使用領域事件可明確實作您領域中變更的副作用。 換句話說 (以 DDD 術語來說)，使用領域事件可在多個彙總之間明確實作副作用。 為了提高延展性並降低資料庫鎖定的影響，您可以選擇在相同領域中的多個彙總之間使用最終一致性。
 
-## <a name="what-is-a-domain-event"></a>什麼是網域事件？
+## <a name="what-is-a-domain-event"></a>什麼是領域事件？
 
-事件是發生在過去的項目。 網域事件以邏輯方式，是發生在特定網域的項目，項目您想要注意和可能反應的相同網域 （同處理序） 的其他部分。
+事件是指過去發生的某件事。 領域事件邏輯上是指特定領域中發生的某件事，也是您想要相同領域 (同處理序) 的其他部分注意並可能回應的某件事。
 
-網域事件中的重要優點是之後在網域中發生問題的副作用可能會明確地以而不是以隱含方式。 這些效果必須一致，因此所有作業與商務工作相關的情形可能發生的側邊或無一。 此外，網域事件可讓更好的考量，在相同網域中的類別之間的分隔。
+領域事件的一項重要優點是，領域中發生某件事之後的副作用可以明確 (而不是隱含) 表示。 這些副作用必須一致，因此與商務工作相關的所有作業不是全部發生，就是完全不會發生。 此外，領域事件可以改進相同領域中類別之間的關注點分離。
 
-比方說，如果您只要使用只是 Entity Framework 和實體或甚至是彙總，如果必須有一個使用案例所觸發的副作用，這些會實作為繫結的程式碼中的隱含概念之後發生。 但是，如果您只看到該程式碼，您可能不知道該程式碼 （副作用） 有主要作業的一部分，或如果這是真的副作用。 相反地，使用網域事件可讓概念明確和通用語言的一部分。 比方說，eShopOnContainers 應用程式中建立訂單不幾乎的順序。它會更新，或建立買方彙總根據原始的使用者，因為使用者不是買方就地訂單之前。 如果您使用網域事件時，您可以明確地表示該網域以規則為基礎的通用網域專家所提供的語言。
+例如，如果您只使用 Entity Framework 和實體或甚至是彙總，而且使用案例必須引發副作用，則這些副作用會在發生某件事之後，以結合程式碼中的隱含概念來實作。 但如果您只看到該程式碼，您可能不知道該程式碼 (副作用) 是主要作業的一部分或真的是副作用。 相反地，使用領域事件可讓概念明確並成為通用語言的一部分。 例如，在 eShopOnContainers 應用程式中，建立訂單不只與訂單相關，還會根據原始使用者來更新或建立購買者彙總，因為使用者必須下訂單才會成為購買者。 如果您使用領域事件，您可以明確表示由領域專家所提供並以通用語言為基礎的領域規則。
 
-網域事件是有點像訊息樣式事件，但有一個重要的差異。 實際的訊息、 訊息佇列，訊息代理程式，或使用 AMPQ 服務匯流排，訊息一律以非同步方式傳送，並跨程序和機器通訊。 這是適用於多個繫結內容、 microservices 或甚至不同的應用程式整合。 然而，有網域事件中，您想要引發事件，從網域作業目前正在執行，但您想要在相同網域中發生任何副作用。
+領域事件有點類似傳訊樣式事件，但有一個重要的差異。 透過即時傳訊、訊息佇列、訊息代理程式或使用 AMPQ 的服務匯流排，訊息一律會以非同步方式傳送，並跨處理序與電腦通訊。 這有助於整合多個限定內容、微服務或甚至是不同的應用程式。 不過，使用領域事件時，您不只希望從目前正在執行的領域作業引發事件，也希望所有副作用都會出現在相同的領域中。
 
-網域事件和其副作用 （所觸發的動作之後所管理的事件處理常式） 應該幾乎會立即發生，通常是同處理序，並在相同網域中。 因此，網域事件可以同步或非同步。 整合事件，不過，應該一律為非同步。
+領域事件及其副作用 (之後會觸發並由事件處理常式管理的動作) 應該幾乎會在相同領域 (通常是同處理序) 中立即發生。 因此，領域事件可以為同步或非同步。 不過，整合事件應該一律為非同步。
 
-## <a name="domain-events-versus-integration-events"></a>網域與整合事件的事件
+## <a name="domain-events-versus-integration-events"></a>領域事件與整合事件的比較
 
-網域和整合事件語意上來說，是相同的東西： 項目剛好的通知。 不過，其實作必須不同。 定義域事件是只推入到網域事件發送器，這可能會實作為 IoC 容器或任何其他方法為基礎的記憶體中傳遞的訊息。
+語意上來說，領域事件與整合事件同義，兩者都會通知剛發生的某件事。 不過，其實作必須不同。 領域事件是推送至領域事件發送器的訊息，可實作為以 IoC 容器或任何其他方法為基礎的記憶體內部中繼程序。
 
-相反地，整合事件的目的是傳播已認可的交易與更新其他子系統，無論是其他 microservices、 繫結的內容或外部的應用程式。 因此，它們應該只当成功保存實體，因為在許多情況下如果失敗，整個作業實際上永遠不會發生。
+另一方面，整合事件的目的是將已認可的交易和更新傳播至其他子系統，不論是其他微服務、限定內容或甚至是外部應用程式。 因此，只有在成功保存實體時才應該出現，因為在許多情況下，如果失敗，整個作業實際上永遠不會發生。
 
-此外，以及所述，整合事件必須以多個 microservices （其他繫結內容中） 或外部系統/應用程式之間的非同步通訊。 因此，事件匯流排介面需要一些基礎結構間的程序及發佈潛在遠端服務之間的通訊。 它可以根據商業服務匯流排、 佇列、 共用的資料庫做為信箱，或任何其他分散式，並在理想情況下發送架構的傳訊系統。
+此外，如前所述，整合事件必須以多個微服務 (其他限定內容) 或甚至是外部系統/應用程式之間的非同步通訊為基礎。 因此，事件匯流排介面需要可在潛在遠端服務之間進行處理序間和分散式通訊的一些基礎結構。 它可以依據商業服務匯流排、佇列、用作信箱的共用資料庫，或任何其他分散式且最好為發送型傳訊系統。
 
-## <a name="domain-events-as-a-preferred-way-to-trigger-side-effects-across-multiple-aggregates-within-the-same-domain"></a>網域事件中當做觸發副作用跨多個相同的網域中的彙總的慣用方法
+## <a name="domain-events-as-a-preferred-way-to-trigger-side-effects-across-multiple-aggregates-within-the-same-domain"></a>領域事件是在相同領域中的多個彙總之間觸發副作用的慣用方法
 
-如果執行命令相關的其中一個彙總的執行個體都需要額外的定義域規則執行一個或多個其他彙總，您應該設計並實作網域事件所觸發的副作用。 顯示在圖 9-14，以及其中一個最重要的使用案例，網域事件應該用來散佈在相同的網域模型中的多個彙總的狀態變更。
+如果執行與一個彙總執行個體相關的命令需要在一或多個額外的彙總上執行其他領域規則，您應該設計並實作領域事件所要觸發的這些副作用。 如圖 9-14 所示 (這是其中一個最重要的使用案例)，您應該使用領域事件，在相同領域模型中的多個彙總之間傳播狀態變更。
 
 ![](./media/image15.png)
 
-**圖 9-14**。 若要強制執行相同的網域中的多個彙總之間的一致性定義域事件
+**圖 9-14**： 要在相同領域中的多個彙總之間強制執行一致性的領域事件
 
-在圖中，當使用者啟動的順序，OrderStarted 網域事件觸發程序建立買方物件在排序的微服務，根據原始使用者資訊識別微服務從 （與 CreateOrder 命令中提供的資訊）。 在第一次建立時，會產生順序彙總所網域事件。
+在圖中，當使用者起始訂單時，根據識別微服務中的原始使用者資訊 (以及 CreateOrder 命令中所提供的資訊)，OrderStarted 領域事件會觸發在訂購微服務中建立「購買者」物件的程序。 第一次建立訂單時，訂單彙總會產生領域事件。
 
-或者，您可以讓彙總根訂閱以供其彙總 （子實體） 的成員所引發的事件。 比方說，每個 OrderItem 子實體可以引發事件，當項目價格高於特定容量，或產品項目數量太高。 彙總根可以接收這些事件並執行全域的計算或彙總。
+或者，您可以讓彙總根訂閱其彙總成員 (子實體) 所引發的事件。 例如，當項目價格高於特定金額或產品項目金額太高時，每個 OrderItem 子實體都會引發一個事件。 然後，彙總根可接收這些事件，並執行全域計算或彙總。
 
-請務必了解，此事件為基礎的通訊不會實作直接在彙總; 內您需要實作網域事件處理常式。 處理網域事件是應用程式考量。 網域模型層應該只著重於網域邏輯 — 網域專家瞭解的重點，不像處理常式，並使用儲存機制的副作用是持續性動作的應用程式基礎結構。 因此，應用程式層級是您應該在其中有網域網域事件引發時，觸發動作的事件處理常式。
+請務必了解，此事件架構通訊不會直接在彙總內實作；您必須實作領域事件處理常式。 處理領域事件是應用程式考量。 領域模型層應該只著重於領域邏輯 (也就是領域專家了解的內容)，而不是應用程式基礎結構 (例如處理常式及使用儲存機制的副作用持續性動作)。 因此，應用程式層是引發領域事件時，您應該讓領域事件處理常式觸發動作的位置。
 
-網域事件也可用來觸發任何數目的應用程式的動作，並更重要的是，必須開啟才能解除解合的方式增加未來該數字。 比方說，當啟動順序時，您可以發佈網域事件傳播至其他彙總該資訊或甚至引發通知之類的應用程式動作。
+領域事件也可用來觸發任何數目的應用程式動作，而且更重要的是，必須沒有限制才能在未來以低耦合方式增加數目。 例如，啟動訂單時，您可能想要發行領域事件，將該資訊傳播至其他彙總，或甚至是引發通知等應用程式動作。
 
-重點是開啟的網域事件發生時要執行的動作數目。 最後，將會成長的動作和網域和應用程式中的規則。 複雜度或一些副作用動作發生情況時將會成長，但如果您的程式碼結合 「 黏附 」 (也就只具現化新的關鍵字在 C 中的物件\#)，則每當您需要加入新的動作，您必須變更原始的程式碼。 因為每個新的需求，您可能需要變更原始碼流程，這可能導致新的 bug。 這會針對[開啟/關閉原則](https://en.wikipedia.org/wiki/Open/closed_principle)從[實心](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))。 不僅如此，原始的協調作業的類別會成長，成長時，它會針對[單一責任原則 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
+重點是不要限制領域事件出現時所要執行的動作數目。 領域和應用程式中的動作和規則最終都會成長。 發生某件事時的副作用動作複雜度或數目會成長，但如果您的程式碼與 “glue” 結合 (亦即只使用 C\# 中的新關鍵字具現化物件)，則每次您需要新增動作時，都需要變更原始程式碼。 這可能會導致新的錯誤 (bug)，因為每個新的需求都需要您變更原始程式碼流程。 這違背 [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) 的[開閉原則](https://en.wikipedia.org/wiki/Open/closed_principle)。 不僅如此，協調作業的原始類別會不斷成長，這違背[單一功能原則 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
 
-相反地，如果您使用網域事件時，您可以建立更細緻和低耦合實作將分別存放於責任使用這種方法：
+相反地，如果您使用領域事件，就可以透過此方法分離職責，來建立更細緻且低耦合的實作：
 
-1.  傳送命令 (例如，CreateOrder)。
-2.  接收命令的命令處理常式中。
-    -   執行的單一彙總的交易。
-    -   （選擇性）引發網域副作用 (例如，OrderStartedDomainDvent) 事件。
-1.  控制代碼網域 （在目前的處理序） 內的事件 thast 中多個彙總或應用程式動作，將執行副作用中開啟的數目。 例如: 
-    -   請確認，或建立買方 」 和 「 付款方法。
-    -   建立並傳送到事件匯流排散佈 microservices 或觸發程序外部的動作，例如傳送電子郵件給買方的狀態相關的整合事件。
+1.  傳送命令 (例如 CreateOrder)。
+2.  接收命令處理常式中的命令。
+    -   執行單一彙總的交易。
+    -   (選擇性) 引發副作用的領域事件 (例如 OrderStartedDomainEvent)。
+1.  處理領域事件 (在目前的處理序中)，這些事件會在多個彙總或應用程式動作中執行不限數目的副作用。 例如: 
+    -   確認或建立購買者和付款方式。
+    -   建立相關的整合事件並傳送至事件匯流排，以在微服務之間傳播狀態，或觸發外部動作，例如將電子郵件傳送給購買者。
     -   處理其他副作用。
 
-所示圖 9-15，從相同的網域事件中，您可以處理多個網域或您要執行跨 microservices 與整合事件和事件匯流排連線的其他應用程式動作中的其他彙總相關的動作。
+如圖 9-15 所示，從同一個領域事件開始，您可以處理與領域中其他彙總相關的多個動作，或您需要在連接至整合事件和事件匯流排的微服務之間執行的其他應用程式動作。
 
 ![](./media/image16.png)
 
-**圖 9-15**。 處理每個網域的多個動作
+**圖 9-15**： 處理每個領域的多個動作
 
-事件處理常式通常是在應用程式層中，因為您將使用應用程式 API 等儲存機制的基礎結構物件的微服務的行為。 該意義而言，事件處理常式如下命令處理常式，因此兩者都是應用程式層的一部分。 重要的差異在於命令應該就可以一次處理。 網域事件可能是處理零或* n *逾時，因為如果可以由多個接收者或有不同的用途，每個處理常式的事件處理常式接收。
+事件處理常式通常是在應用程式層中，因為您會針對微服務的行為使用儲存機制或應用程式 API 等基礎結構物件。 就這點而言，事件處理常式類似命令處理常式，因此兩者都屬於應用程式層。 重要的差異在於命令只能處理一次。 而領域事件則可能處理零到 *n* 次，因為可能有多個接收者或事件處理常式 (每個處理常式的目的不同) 接收領域事件。
 
-開啟數目的每個網域事件處理常式的可能性，可讓您新增許多更多的定義域規則，而不會影響您目前的程式碼。 比方說，實作下列的商務規則必須在發生事件之後，就可能發生權限可能是，只要加入幾個事件處理常式 （或甚至只是其中一個）：
+每個領域事件之處理常式數目不限的可能性，讓您可以新增更多領域規則，而不影響您目前的程式碼。 例如，實作以下必須在事件之後立即發生的商務規則，可能與新增幾個事件處理常式 (或甚至只有一個) 一樣容易：
 
-當客戶購買的存放區中任何數目的訂單之間的總金額超過 $6000 時，10%折扣關閉套用於每個新的訂單，並通知未來訂單該折扣的相關電子郵件與客戶。
+當顧客在商店購買任意數目的訂單總金額超過 6000 USD 時，會對每個新的訂單套用 10% 的折扣，並以電子郵件通知顧客未來訂單的折扣。
 
-## <a name="implementing-domain-events"></a>實作定義域事件
+## <a name="implementing-domain-events"></a>實作領域事件
 
-在 C# 中，只需的網域事件是保存資料之結構或類別，例如 DTO，相關項目剛好在網域中，如下列範例所示的所有資訊：
+在 C# 中，領域事件單純是資料保留結構或類別 (例如 DTO)，其中包含與領域中剛發生的事件相關的所有資訊，如下列範例所示：
 
 ```csharp
-public class OrderStartedDomainEvent : IAsyncNotification
+public class OrderStartedDomainEvent : INotification
 {
+    public string UserId { get; private set; }
     public int CardTypeId { get; private set; }
     public string CardNumber { get; private set; }
     public string CardSecurityNumber { get; private set; }
@@ -94,9 +98,9 @@ public class OrderStartedDomainEvent : IAsyncNotification
     public Order Order { get; private set; }
 
     public OrderStartedDomainEvent(Order order,
-        int cardTypeId, string cardNumber,
-        string cardSecurityNumber, string cardHolderName,
-        DateTime cardExpiration)
+                                   int cardTypeId, string cardNumber,
+                                   string cardSecurityNumber, string cardHolderName,
+                                   DateTime cardExpiration)
     {
         Order = order;
         CardTypeId = cardTypeId;
@@ -108,42 +112,42 @@ public class OrderStartedDomainEvent : IAsyncNotification
 }
 ```
 
-這是基本上保留 OrderStarted 事件相關的所有資料的類別。
+這基本上是保留與 OrderStarted 事件相關之所有資料的類別。
 
-根據網域的通用語言事件是發生在過去，因為事件的類別名稱應該表示成過去式時態動詞命令，例如 OrderStartedDomainEvent 或 OrderShippedDomainEvent。 這是網域事件中 eShopOnContainers 中順序的微服務的實作方式。
+根據領域的通用語言，由於事件是過去發生的某件事，因此事件的類別名稱應該以過去式動詞來表示，例如 OrderStartedDomainEvent 或 OrderShippedDomainEvent。 這是在 eShopOnContainers 的訂購微服務中實作領域事件的方式。
 
-如我們所述，重要的特性的事件是因為事件是發生在過去，不應該變更的項目。 因此，它必須是不可變的類別。 您可以看到上述的屬性是唯讀狀態從外部物件的程式碼中。 更新物件的唯一方式是透過建構函式，當您建立事件物件。
+如稍早所述，事件的一個重要特性是，由於事件是過去發生的某件事，不應該變更。 因此，它必須是不可變的類別。 如您在上一個程式碼中所見，屬性在物件外部是唯讀的。 當您建立事件物件時，更新物件的唯一方式是透過建構函式。
 
-### <a name="raising-domain-events"></a>引發定義域事件
+### <a name="raising-domain-events"></a>引發領域事件
 
-下一個問題是如何引發網域事件，讓它達到其相關的事件處理常式。 您可以使用多個方法。
+下一個問題是如何引發領域事件，使它抵達其相關的事件處理常式。 您可以使用多個方法。
 
-Udi Dahan 原本 (例如，在幾個相關的文章，例如[網域事件 – 採用 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) 使用靜態類別，用於管理和引發事件。 這可能包括名為 DomainEvents，就會引發網域事件立即時呼叫它時，使用類似下面的 DomainEvents.Raise (事件 myEvent) 語法的靜態類別。 Jimmy Bogard 所撰寫的部落格文章 ([加強您的網域： 定義域事件](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) 的建議有類似的方法。
+Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相關的文章所示，例如 [Domain Events - Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (領域事件 - 續篇))。 這可能包含名為 DomainEvents 的靜態類別，該類別會在呼叫時，使用 DomainEvents.Raise(Event myEvent) 等語法立即引發領域事件。 Jimmy Bogard 所撰寫的部落格文章 ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (增強您的領域：領域事件)) 建議類似的方法。
 
-不過，靜態網域事件類別時，它也會分派至處理常式立即。 這使得測試和偵錯更加困難，因為具有副作用邏輯的事件處理常式就會引發事件之後立即執行。 當您測試和偵錯時，您想要在焦點時，就為什麼在目前的彙總類別。您不想突然重新導向至其他的事件處理常式與其他彙總或應用程式邏輯相關的副作用。 這就是為什麼進化其他方法下, 一節中所述。
+不過，當領域事件類別為靜態時，它也會立即分派至處理常式。 這會使得測試和偵錯更加困難，因為在引發事件之後會立即執行具有副作用邏輯的事件處理常式。 當您進行測試和偵錯時，您只想要專注於目前彙總類別中正在發生的事件，而不想要因為與其他彙總或應用程式邏輯相關的副作用，而突然被重新導向至其他事件處理常式。 這就是其他方法進化的原因，如下一節中所述。
 
-#### <a name="the-deferred-approach-for-raising-and-dispatching-events"></a>延後的方法，引發及分派事件
+#### <a name="the-deferred-approach-for-raising-and-dispatching-events"></a>引發和分派事件的延後方法
 
-更好的方法是將網域事件加入至集合而不是立即分派給網域的事件處理常式，然後再分派這些網域事件*前*或*右* *之後*（如同在 EF SaveChanges) 認可交易。 (這種方法所述的 Jimmy Bogard 這篇文章[更好的網域事件模式](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)。)
+您最好將領域事件新增至集合，然後在認可交易 (如同 EF 中的 SaveChanges)「之前」或「之後」分派這些領域事件，而不是直接分派至領域事件處理常式 (Jimmy Bogard 在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (更佳的領域事件模式) 的這篇文章中說明此方法)。
 
-決定是否網域事件傳送右或向右之前認可交易之後是交易的很重要，因為它會決定是否將包含副作用包含做為相同或在不同的交易的一部分。 在後者的情況下，您需要跨多個彙總處理最終一致性。 本主題下一節中討論。
+請務必決定在認可交易之前或之後傳送領域事件，因為這會決定您將副作用加入作為相同交易的一部分，還是加入不同的交易。 在後者的情況下，您需要處理多個彙總之間的最終一致性。 下一節將討論這個主題。
 
-延後的方法是何種 eShopOnContainers 使用。 首先，您將事件加入至集合或每個實體的事件清單中實體的情況。 該清單應使用屬於的實體物件，或更好的是，您的基底實體類別，如下列範例所示：
+eShopOnContainers 使用延後方法。 首先，您會將實體中正在發生的事件新增至每個實體的事件集合或清單。 該清單應該是實體物件的一部分，最好是基底實體類別的一部分，如實體基底類別的下列範例所示：
 
 ```csharp
 public abstract class Entity
 {
-    private List<IAsyncNotification> _domainEvents;
+     //... 
+    private List<INotification> _domainEvents;
+    public List<INotification> DomainEvents => _domainEvents;
 
-    public List<IAsyncNotification> DomainEvents => _domainEvents;
-
-    public void AddDomainEvent(IAsyncNotification eventItem)
+    public void AddDomainEvent(INotification eventItem)
     {
-        _domainEvents = _domainEvents ?? new List<IAsyncNotification>();
+        _domainEvents = _domainEvents ?? new List<INotification>();
         _domainEvents.Add(eventItem);
     }
 
-    public void RemoveDomainEvent(IAsyncNotification eventItem)
+    public void RemoveDomainEvent(INotification eventItem)
     {
         if (_domainEvents is null) return;
         _domainEvents.Remove(eventItem);
@@ -152,28 +156,29 @@ public abstract class Entity
 }
 ```
 
-當您想要引發事件時，您只將它加入至事件的集合，以便放置在彙總實體方法中，下列程式碼所示：
+當您想要引發事件時，您只要從彙總根實體之任何方法的程式碼將它新增至事件集合。
+
+下列程式碼 (屬於 [eShopOnContainers 的 OrderAggrergateRoot](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)) 顯示一個範例：
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
-    cardTypeId,
-    cardNumber,
-    cardSecurityNumber,
-    cardHolderName,
-    cardExpiration);
+                                                          cardTypeId, cardNumber,
+                                                          cardSecurityNumber,
+                                                          cardHolderName,
+                                                          cardExpiration);
 this.AddDomainEvent(orderStartedDomainEvent);
 ```
 
-請注意唯一 AddDomainEvent 方法正在進行的事情將事件加入至清單。 不會引發事件，以及尚未叫用事件處理常式。
+請注意，AddDomainEvent 方法只會將事件新增至清單。 尚未分派任何事件，而且尚未叫用任何事件處理常式。
 
-您實際想要分派事件之後，當您認可資料庫交易。 如果您使用 Entity Framework Core，就表示您 EF DbContext，如下列程式碼所示的 SaveChanges 方法：
+您實際上想要稍後在將交易認可至資料庫時分派事件。 如果您使用 Entity Framework Core，也就是在 EF DbContext 的 SaveChanges 方法中 (如下列程式碼所示)：
 
 ```csharp
 // EF Core DbContext
 public class OrderingContext : DbContext, IUnitOfWork
 {
     // ...
-    public async Task<int> SaveEntitiesAsync()
+    public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
     {
         // Dispatch Domain Events collection.
         // Choices:
@@ -182,8 +187,9 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.
+        // compensatory actions in case of failures.        
         await _mediator.DispatchDomainEventsAsync(this);
+
         // After this line runs, all the changes (from the Command Handler and Domain
         // event handlers) performed through the DbContext will be commited
         var result = await base.SaveChangesAsync();
@@ -191,53 +197,53 @@ public class OrderingContext : DbContext, IUnitOfWork
 }
 ```
 
-使用此程式碼中，您分派至其各自的事件處理常式的實體事件。
+在此程式碼中，您會將實體事件分派至其各自的事件處理常式。
 
-整體結果是，您必須分開 （簡單新增到清單中，在記憶體中） 的網域事件的引發分派給事件處理常式。 此外，根據您使用何種發送器，以同步或非同步方式無法分派事件。
+整體結果是您將引發領域事件 (記憶體內部清單中的一個簡單新增)，與將它分派至事件處理常式的職責分離。 此外，根據您使用的發送器類型，您可以利用同步或非同步方式來分派事件。
 
-請注意交易界限進入重大這裡播放。 如果您的工作和交易的單位可以跨越多個彙總 （如同使用 EF 核心和關聯式資料庫時），這可以正常運作。 但是，如果交易無法跨越彙總，例如當您使用類似 Azure DocumentDB 的 NoSQL 資料庫您必須實作額外的步驟，以達到一致性。 這是另一個原因永續性無知之不通用。這取決於您使用的儲存系統。
+請注意，交易界限在此扮演重要的角色。 如果您的工作單位和交易可跨多個彙總 (如同使用 EF Core 和關聯式資料庫時)，則會正常運作。 但如果交易不可跨多個彙總 (例如當您使用 Azure DocumentDB 等 NoSQL 資料庫時)，您必須實作額外的步驟，才能達到一致性。 這是永續性無知不通用的另一個原因，它需要您使用的儲存體系統。
 
-### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>單一交易上與最終一致性彙總的彙總
+### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>跨彙總的單一交易與跨彙總的最終一致性之比較
 
-是否要執行跨與信賴憑證者最終一致性跨這些彙總的彙總的單一交易的問題是爭議一個。 許多 DDD 作者像 Eric Evans 和 Vaughn Vernon 主張規則的一筆交易 = 一個彙總，並因此主張最終一致性跨彙總。 例如，在他的書*Domain-Driven 設計*，Eric Evans 表示：
+要在多個彙總之間執行單一交易，還是要依賴這些彙總之間的最終一致性，是具爭議性的問題。 許多 DDD 作者 (像是 Eric Evans 和 Vaughn Vernon) 提倡一個交易等於一個彙總的規則，因此支持在多個彙總之間取得最終一致性。 例如，Eric Evans 在 *Domain-Driven Design* 一書中表示：
 
-跨越彙總任何規則就不應該在任何時間都保持最新狀態。 事件處理、 批次的處理或其他的更新機制，透過其他相依性可以解決一些特定的時間內。 (pg。 128)
+任何跨彙總的規則不必總是處於最新狀態。 透過事件處理、批次處理或其他更新機制，即可解析一段特定時間內的其他相依性 (第 128 頁)。
 
-Vaughn Vernon 說明中的下列[有效彙總設計。第 II 部分︰ 進行彙總工作一起](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon 在 [Effective Aggregate DesignPart II: Making Aggregates Work Together](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (有效彙總設計第二部分：讓彙總搭配運作) 中表示：
 
-因此，如果其中一個彙總的執行個體都需要額外的商務規則執行一個或多個彙總上執行命令，使用 [最終一致性\[...\]沒有可行的方式，可支援 DDD 模型中的最終一致性。 彙總的方法發行時間傳遞給一個或多個非同步訂閱者的網域事件。
+因此，如果在一個彙總執行個體上執行命令需要在一或多個彙總上執行其他商務規則，請使用最終一致性 \[...\]沒有支援 DDD 模型中最終一致性的可行方法。 彙總方法會發行領域事件，及時傳遞至一或多個非同步訂閱者。
 
-這根據對照採用更細緻的交易，而不是跨越多個彙總或實體的交易。 作法是在第二個案例中，資料庫鎖定數目將會相當高的延展性需求的大型應用程式中。 採用高可擴充的應用程式需要具有多個彙總之間的即時交易一致性的事實會協助接受最終一致性的概念。 企業通常不需要不可部分完成的變更，它負責在任何情況下網域專家說出特定作業是否需要不可部分完成交易，或不。 如果作業一律需要多個彙總之間的不可部分完成交易，您可能會要求您彙總是否應該是較大，或設計不正確。
+此原理是以更細緻的交易為基礎，而不是以跨許多彙總或實體的交易為基礎。 其概念是在第二個案例中，資料庫鎖定數目在具有高延展性需求的大型應用程式中會很大。 可高度擴充的應用程式不需要在多個彙總之間有立即交易一致性，認清這點事實有助於接受最終一致性概念。 企業通常不需要不可部分完成變更，而且在任何情況下，領域專家都有責任指出特定作業是否需要不可部分完成交易。 如果作業一律需要在多個彙總之間有不可部分完成交易，您可能會詢問彙總是否應該更大或設計是否不正確。
 
-不過，其他開發人員和架構設計人員 Jimmy Bogard 像要橫跨數個彙總的單一交易，但只有當這些額外的彙總相關相同原始命令的副作用。 例如，在[更好的網域事件模式](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)，Bogard 表示：
+不過，其他開發人員以及像是 Jimmy Bogard 的架構設計人員接受單一交易橫跨數個彙總，但僅限於這些額外的彙總與相同原始命令的副作用相關時。 例如，Bogard 在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (更佳的領域事件模式) 中表示：
 
-一般而言，我想網域事件發生在相同的邏輯交易內，但不是一定相同範圍的乘冪，網域事件中的副作用\[...\]我們只認可我們交易之前，我們會分派至其個別的處理常式我們事件。
+一般而言，我希望領域事件的副作用出現在相同的邏輯交易內，但不一定要在引發領域事件的相同範圍內 \[...\]在我們認可交易之前，我們會將事件分派至其各自的處理常式。
 
-如果分派網域事件右邊*之前*認可原始交易，這是因為您想要在相同交易中包含這些事件產生的副作用。 例如，如果 EF DbContext SaveChanges 方法失敗，交易將會回復所有變更，包括任何相關的網域的事件處理常式所實作的副作用作業的結果。 這是因為 DbContext 生命範圍定義為預設 「 範圍限定。 」 因此，將 DbContext 物件共用跨多個具現化相同範圍或物件圖形內的儲存機制物件。 這會伴隨 HttpRequest 範圍，開發 Web 應用程式開發介面或 MVC 應用程式時。
+如果您在認可原始交易「之前」分派領域事件，這是因為您想要將這些事件的副作用包含在相同的交易中。 例如，如果 EF DbContext SaveChanges 方法失敗，交易將會復原所有變更，包括相關領域事件處理常式所實作之任何副作用作業的結果。 這是因為 DbContext 存留期範圍預設會定義為 "scoped"。 因此，DbContext 物件會在相同範圍或物件圖形內要具現化的多個儲存機制物件之間共用。 開發 Web API 或 MVC 應用程式時，這會與 HttpRequest 範圍一致。
 
-事實上，這兩種方法 （「 單一不可部分完成交易 」 和 「 最終一致性 」） 可以是權限。 它其實取決於您的網域或商務需求和目標網域專家告訴您。 它也取決於您需要的服務如何擴充 （更細微的交易都有較不會影響資料庫鎖定方面）。 同時，取決於多少投資您願意，讓您的程式碼中，因為最終一致性需要更複雜的程式碼，以便在彙總的需要實作的補償動作，以及偵測可能不一致。 請考量您與原始的彙總之後，當發送事件認可變更，如果沒有問題和事件處理常式無法認可其副作用，您必須彙總之間的不一致。
+事實上，這兩種方法 (單一不可部分完成交易和最終一致性) 都正確。 它其實取決於您的領域或商務需求，以及領域專家給您的建議。 它也取決於您需要的服務延展性 (交易越細緻，對資料庫鎖定的影響越低)。 此外，它取決您願意對程式碼的投資，因為最終一致性需要更複雜的程式碼，才能偵測彙總之間可能不一致性的情況，並需要實作補償動作。 請考慮下列情況，如果您將變更認可至原始彙總，之後當分派事件時發生問題，而且事件處理常式無法認可其副作用，則彙總之間會有不一致的情況。
 
-可補償動作的方法是在其他資料庫資料表中儲存網域事件，以便它們可以是原始交易的一部分。 之後，您可能會有批次程序偵測到不一致，並藉由比較事件的目前狀態的彙總清單中執行的補償動作。 補償動作是主題的一個複雜將會需要從端，其中包括討論與商務使用者 」 和 「 網域專家的深入分析的一部分。
+一個允許補償動作的方法是將領域事件儲存在其他資料庫資料表中，讓它們可以成為原始交易的一部分。 之後，您可以有一個批次程序，藉由比較事件清單與彙總的目前狀態，來偵測不一致性的情況並執行補償動作。 補償動作屬於複雜主題，需要您深入分析，包括與企業用戶以及領域專家進行討論。
 
-在任何情況下，您可以選擇您需要的方法。 初始延遲方法，但是 — 認可之前，引發事件，讓您使用單一交易 — 使用 EF 核心和關聯式資料庫時，是最簡單的方法。 它是您更輕鬆地實作和許多商業案例中有效。 它也是 eShopOnContainers 中順序的微服務中使用的方法。
+在任何情況下，您都可以選擇所需的方法。 但初始延後方法 (在認可前引發事件以便您使用單一交易) 是使用 EF Core 和關聯式資料庫時的最簡單方法。 實作起來更容易，而且在許多商務案例中很有效。 這也是 eShopOnContainers 中的訂購微服務所使用的方法。
 
-不過，如何執行您實際分派至其各自的事件處理常式的事件嗎？ 什麼是\_暫留處理器物件，您在上述範例中，請參閱？ 具有要執行動作的技術和成品，您可以使用事件和其事件處理常式之間進行對應。
+但您實際上如何將這些事件分派至其各自的事件處理常式？ 您在上一個範例中看到的 \_mediator 物件是什麼？ 這與您可以用來對應事件與其事件處理常式的技術和成品有關。
 
-### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>網域事件發送器： 從事件對應到事件處理常式
+### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>領域事件發送器：事件與事件處理常式的對應
 
-一旦您能夠分派或發行事件時，您需要某種類型的成品，讓每個相關的處理常式可以取得它，並根據該事件的處理程序的副作用，將發行事件。
+一旦您可以分派或發行事件，您需要某種會發行事件的成品，讓每個相關的處理常式可以取得它，並根據該事件來處理副作用。
 
-其中一個方法是真正的傳訊系統或甚至事件匯流排，可能會根據服務匯流排，而不是記憶體中的事件。 不過，第一個案例中，實際傳訊有點大材小用處理網域事件，因為您只需要處理這些相同的程序內的事件 (也就是相同的網域和應用程式層中)。
+一個方法是即時傳訊系統或甚至事件匯流排，可能會根據服務匯流排，而不是記憶體內部事件。 不過，在第一個案例中，即時傳訊對處理領域事件會過當，因為您只需要處理相同處理序 (也就是相同領域和應用程式層) 中的這些事件。
 
-將事件對應至多個事件處理常式的另一種方式是使用 IoC 容器中的型別註冊，讓您以動態方式可以推斷分派事件的位置。 換句話說，您需要知道需要取得的特定事件的事件處理常式。 圖 9 到 16 個顯示的簡單的方法。
+另一個方法是藉由在 IoC 容器中使用類型登錄，將事件對應至多個事件處理常式，讓您可以動態推斷分派事件的目的地。 換句話說，您需要知道需要取得特定事件的事件處理常式。 圖 9-16 顯示經過簡化的方法。
 
 ![](./media/image17.png)
 
-**圖 9 到 16 個**。 網域事件發送器使用 IoC
+**圖 9-16**： 使用 IoC 的領域事件發送器
 
-您可以建立所有的配管和方法實作自己的成品。 不過，您也可以使用可用的程式庫，例如[MediatR](https://github.com/jbogard/MediatR)，基本上它會使用您的 IoT 容器。 因此，您可以直接使用預先定義的介面和暫留處理器物件的發行/分派方法。
+您可以建立所有連接和成品，自行實作該方法。 不過，您也可以使用 [MediatR](https://github.com/jbogard/MediatR) 等可用的程式庫，這些程式庫基本上會使用您的 IoC 容器。 因此，您可以直接使用預先定義的介面和中繼程序物件的發行/分派方法。
 
-程式碼中，您必須先註冊事件處理常式型別在 IoC 容器中，如下列範例所示：
+在程式碼中，您必須先在 IoC 容器中登錄事件處理常式類型，如 [eShopOnContainers 訂購微服務](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs)的下列範例所示：
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -245,122 +251,125 @@ public class MediatorModule : Autofac.Module
     protected override void Load(ContainerBuilder builder)
     {
         // Other registrations ...
-        // Register the DomainEventHandler classes (they implement
-        // IAsyncNotificationHandler<>) in assembly holding the Domain Events
-        builder.RegisterAssemblyTypes(
-            typeof(ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler)
-            .GetTypeInfo().Assembly)
-            .Where(t => t.IsClosedTypeOf(typeof(IAsyncNotificationHandler<>)))
-            .AsImplementedInterfaces();
+        // Register the DomainEventHandler classes (they implement IAsyncNotificationHandler<>)
+        // in assembly holding the Domain Events
+        builder.RegisterAssemblyTypes(typeof(ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler)
+                                       .GetTypeInfo().Assembly)
+                                         .AsClosedTypesOf(typeof(IAsyncNotificationHandler<>));
         // Other registrations ...
     }
 }
 ```
 
-程式碼會先識別包含網域事件處理常式，找出保存任何處理常式的組件的組件 （使用 typeof(ValidateOrAddBuyerAggregateWhenXxxx)，但您也可以選擇任何其他事件處理常式來找出組件）。 因為所有的事件處理常式實作 IAsyncNotificationHandler 介面，然後只搜尋那些，程式碼類型和註冊事件處理常式。
+此程式碼會先尋找保留任何處理常式的組件，以識別包含領域事件處理常式的組件 (使用 typeof(ValidateOrAddBuyerAggregateWhenXxxx)，但您可以選擇任何其他事件處理常式來尋找組件)。 由於所有事件處理常式都會實作 IAsyncNotificationHandler 介面，因此程式碼會接著直接搜尋這些類型並登錄所有事件處理常式。
 
-### <a name="how-to-subscribe-to-domain-events"></a>如何訂閱定義域事件
+### <a name="how-to-subscribe-to-domain-events"></a>如何訂閱領域事件
 
-當您使用 MediatR 時，每個事件處理常式必須使用提供 IAsyncNotificationHandler 介面的泛型參數的事件類型，您可以在下列程式碼中看到如下：
+當您使用 MediatR 時，每個事件處理常式必須使用 INotificationHandler 介面的泛型參數所提供的事件類型，如下列程式碼所示：
 
 ```csharp
 public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
   : IAsyncNotificationHandler<OrderStartedDomainEvent>
 ```
 
-根據事件和事件處理常式，可視為訂用帳戶，之間的關聯性 MediatR 成品可以探索每個事件的所有事件處理常式，並觸發每個這些事件處理常式。
+根據事件與事件處理常式之間的關聯性 (可視為訂閱)，MediatR 成品可探索每個事件的所有事件處理常式，並觸發每個事件處理常式。
 
-### <a name="how-to-handle-domain-events"></a>如何處理定義域事件
+### <a name="how-to-handle-domain-events"></a>如何處理領域事件
 
-最後，此事件處理常式通常會實作會使用基礎結構的儲存機制，來取得所需的其他彙總，並執行副作用網域邏輯的應用程式層程式碼。 下列程式碼示範範例。
+最後，事件處理常式通常會實作應用程式層程式碼，該程式碼使用基礎結構儲存機制來取得所需的額外彙總，並執行副作用領域邏輯。 下列 [eShopOnContainers 領域事件處理常式程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/DomainEventHandlers/OrderStartedEvent/ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler.cs)顯示一個實作範例。
 
 ```csharp
 public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
-    : IAsyncNotificationHandler<OrderStartedDomainEvent>
+                   : INotificationHandler<OrderStartedDomainEvent>
 {
     private readonly ILoggerFactory _logger;
     private readonly IBuyerRepository<Buyer> _buyerRepository;
     private readonly IIdentityService _identityService;
+
     public ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler(
         ILoggerFactory logger,
         IBuyerRepository<Buyer> buyerRepository,
         IIdentityService identityService)
     {
-        // Parameter validations
-        //...
+        // ...Parameter validations...
     }
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ?
-            orderStartedEvent.CardTypeId : 1;
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
+
         if (!buyerOriginallyExisted)
         {
             buyer = new Buyer(userGuid);
         }
+
         buyer.VerifyOrAddPaymentMethod(cardTypeId,
-            $"Payment Method on {DateTime.UtcNow}",
-            orderStartedEvent.CardNumber,
-            orderStartedEvent.CardSecurityNumber,
-            orderStartedEvent.CardHolderName,
-            orderStartedEvent.CardExpiration,
-            orderStartedEvent.Order.Id);
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) :
-        _buyerRepository.Add(buyer);
-        await _buyerRepository.UnitOfWork.SaveEntitiesAsync();
+                                       $"Payment Method on {DateTime.UtcNow}",
+                                       orderStartedEvent.CardNumber,
+                                       orderStartedEvent.CardSecurityNumber,
+                                       orderStartedEvent.CardHolderName,
+                                       orderStartedEvent.CardExpiration,
+                                       orderStartedEvent.Order.Id);
+
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+                                                                      : _buyerRepository.Add(buyer);
+
+        await _buyerRepository.UnitOfWork
+                .SaveEntitiesAsync();
+
         // Logging code using buyerUpdated info, etc.
     }
 }
 ```
 
-此事件處理常式程式碼應用程式層程式碼，因此視為它會使用基礎結構儲存機制中，基礎結構保存層中下一節所說明。 事件處理常式也可以使用其他基礎結構元件。
+上述領域事件處理常式程式碼會視為應用程式層程式碼，因此它使用基礎結構儲存機制，如下一節的基礎結構持續性層中所述。 事件處理常式也可以使用其他基礎結構元件。
 
-#### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>可以產生整合事件發佈微服務界限以外的網域事件
+#### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>領域事件可以產生要在微服務界限以外發行的整合事件
 
-最後，請務必提到，您有時可能會想要跨多個 microservices 傳播事件。 這即視為整合事件，並無法從任何特定網域的事件處理常式的事件匯流排透過已發佈。
+最後值得一提的是，您有時可能會想要在多個微服務之間傳播事件。 這會視為整合事件，而且可透過事件匯流排從特定領域事件處理常式發行。
 
-## <a name="conclusions-on-domain-events"></a>結論定義域事件 
+## <a name="conclusions-on-domain-events"></a>領域事件結論
 
-如所述，使用網域事件明確實作您的網域中的變更的副作用。 若要使用 DDD 術語，用於網域事件明確實作跨一個或多個彙總的副作用。 此外，取得更好的延展性和較不影響資料庫鎖定，使用相同的網域中的彙總之間的最終一致性。
+如前所述，使用領域事件可明確實作您領域中變更的副作用。 以 DDD 術語來說，使用領域事件可在一或多個彙總之間明確實作副作用。 此外，為了提高延展性並降低資料庫鎖定的影響，請在相同領域中的多個彙總之間使用最終一致性。
 
-#### <a name="additional-resources"></a>其他資源
+## <a name="additional-resources"></a>其他資源
 
--   **Greg Young。什麼是網域事件？** 
-     [ *http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+-   **Greg Young：What is a Domain Event? (什麼是領域事件？)**
+    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg。網域事件和最終一致性**
+-   **Jan Stenberg：Domain Events and Eventual Consistency (領域事件和最終一致性)**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard：更好的網域事件模式**
+-   **Jimmy Bogard：A better domain events pattern (更佳的領域事件模式)**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon：有效彙總設計第 2 部分： 一起彙總工作進行**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_文章/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon：Effective Aggregate Design Part II: Making Aggregates Work Together (有效彙總設計第二部分：讓彙總搭配運作)**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard：加強您的網域： 定義域事件**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*
+-   **Jimmy Bogard：Strengthening your domain: Domain Events (增強您的領域：領域事件)**
+    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Tong Truong。網域事件模式範例**
+-   **Tony Truong：Domain Events Pattern Example (領域事件模式範例)**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan。如何建立完整封裝網域模型**
+-   **Udi Dahan：How to create fully encapsulated Domain Models (如何建立完全封裝的領域模型)**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan。網域事件 – 採用 2**
+-   **Udi Dahan：Domain Events - Take 2 (領域事件 - 續篇)**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan。網域事件 – 拯救**
+-   **Udi Dahan：Domain Events - Salvation (領域事件 - 終篇)**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist。不發行網域事件，將其傳回 ！** 
-     [ *https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+-   **Jan Kronquist：Don't publish Domain Events, return them! (不要發行領域事件，而是將它傳回！)**
+    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre：網域事件 vs。DDD 和 microservices 架構中的整合事件**
+-   **Cesar de la Torre：Domain Events vs.Integration Events in Domain-Driven Design and microservices architectures (領域導向設計和微服務架構中之領域事件與整合事件的比較)**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 
 >[!div class="step-by-step"]
-[上一個](用戶端-側邊-validation.md) [下一步] (基礎結構-持續性-層-design.md)
+[上一個] (client-side-validation.md) [下一個] (infrastructure-persistence-layer-design.md)

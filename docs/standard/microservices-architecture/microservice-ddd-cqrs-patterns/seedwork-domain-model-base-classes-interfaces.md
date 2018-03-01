@@ -1,43 +1,46 @@
 ---
-title: "Seedwork （可重複使用的基底類別和介面為您的網域模型）"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |Seedwork （可重複使用的基底類別和介面為您的網域模型）"
+title: "Seedwork (網域模型的可重複使用基底類別和介面)"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | Seedwork (網域模型的可重複使用基底類別和介面)"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 17602d94ea167997389a77f0d2358326258a8219
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork （可重複使用的基底類別和介面為您的網域模型）
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
-在方案資料夾包含*SeedWork*資料夾。 *SeedWork*資料夾包含自訂的基底類別，您可以使用做為基底網域實體與值物件。 使用這些基底類別，因此每個網域的物件類別中沒有多餘的程式碼。 這些類型的類別資料夾稱為*SeedWork*並不是類似*Framework*。 它會呼叫*SeedWork*因為資料夾包含只無法真正視為一種架構可重複使用類別的一小部分。 *Seedwork*詞彙所引入[Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826)和由 popularized [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html)但您也可以命名為該資料夾共同且 SharedKernel，或類似。
+方案資料夾中包含了一個 *SeedWork* 資料夾。 *SeedWork* 資料夾包含了自訂基底類別，可讓您用來作為領域實體和值物件的基底。 藉由使用這些基底類別，您的每個領域物件類別中便不會有冗餘的程式碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 它之所以名為 *SeedWork*，是因為資料夾僅包含了可重複使用類別的小型子集，而無法視為架構。 *SeedWork* 是一個由 [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
 
-圖 9-12 顯示形成的網域模型 seedwork 順序的微服務中的類別。 它有幾個自訂的基底類別，例如實體、 ValueObject 和列舉型別，再加上一些介面。 這些介面 （IRepository 和 IUnitOfWork） 通知基礎結構層級必須實作的項目。 這些介面也會從應用程式層使用透過相依性插入。
+圖 9-12 顯示了組成訂購微服務中領域模型 seedwork 的類別。 它有幾個自訂的基底類別，像是 Entity、ValueObject 及 Enumeration，以及其他幾個介面。 這些介面 (IRepository 和 IUnitOfWork) 會通知基礎結構層需要實作的內容。 這些介面也會透過來自應用程式層的相依性插入使用。
 
 ![](./media/image13.PNG)
 
-**圖 9-12**。 範例設定的網域模型 」 seedwork 「 基底類別和介面
+**圖 9-12**。 領域模型 “seedwork" 基底類別與介面的範例組
 
-這是許多開發人員共用專案，不是型式架構之間的複製和貼上重複使用的類型。 您可以讓 seedworks 任何圖層或程式庫中。 不過，如果一組類別和介面取得夠大，您可能想要建立單一類別庫。
+這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 然而，若類別和介面的組合變得更大，便建議您建立單一類別庫。
 
-## <a name="the-custom-entity-base-class"></a>自訂實體基底類別
+## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
-下列程式碼是實體基底類別的範例程式碼，可以由任何網域的實體，實體識別碼，例如使用相同的方式放置位置[等號比較運算子](https://msdn.microsoft.com/en-us/library/c35t2ffz.aspx)等等。
+下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal)、每的實體的領域事件清單等。
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
-## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>網域模型層中的儲存機制合約 （介面）
+先前使用每個實體領域事件清單的程式碼會在下一個聚焦於領域事件的章節中解釋。 
 
-儲存機制合約是只要.NET express 的儲存機制的合約需求，每個彙總使用的介面。 儲存機制本身，EF 核心程式碼或任何其他基礎結構的相依性和程式碼中，不能實作內的網域模型;儲存機制應該只實作您所定義的介面。
+## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>領域模型層中的存放庫合約 (介面)
 
-這種作法 （放置網域模型層中的儲存機制介面） 相關的模式為分隔介面模式。 做為[說明](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)Martin Fowler 的 「 使用分隔介面來定義介面，其中一個封裝，但實作在另一個。 如此一來用戶端所需介面的相依性可以完全不會察覺的實作。 」
+存放庫合約只是表達用於每個彙總之存放庫合約需求的 .NET 介面。 
 
-分隔介面模式來啟用 （在此情況下，微服務的 Web API 專案） 的應用程式層有相依於網域模型中定義的需求，但不是直接的相依關係到基礎結構/持續性圖層。 此外，您可以使用隔離的實作，實作基礎結構中的相依性插入 / 保存層中使用儲存機制。
+存放庫本身，包含 EF Core 程式碼或任何其他的基礎結構相依性和程式碼 (Linq、SQL 等) 都不可在領域模型中實作。存放庫應僅實作您定義的介面。 
 
-比方說，IOrderRepository 介面使用的下列範例會定義哪些 OrderRepository 類別需要實作基礎結構層級的作業。 在應用程式的目前實作中，程式碼只需要將訂單新增至資料庫，因為查詢是分割下列未實作 CQS 方法和訂單的更新。
+與這種做法 (將存放庫介面放置在領域模型層中) 有關的模式便是分離介面 (Separated Interface) 模式。 如同 Martin Fowler 所[解釋](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)的，「使用分離介面來在一個套件中定義介面，但在另外一個套件中實作它。 如此一來，需要相依於介面的用戶端便可以完全無須了解實作。」
+
+遵循分離介面模式可讓應用程式層 (在此案例中為微服務的 Web API 專案) 相依於領域模型中定義的需求，但不會直接相依於基礎結構/永續性層。 此外，您可以使用相依性插入來隔離使用存放庫在基礎結構/永續層中實作的實作。
+
+例如，下列使用 IOrderRepository 介面的範例定義了 OrderRepository 類別需要用來在基礎結構層實作的作業。 在目前的應用程式實作中，程式碼只需要將訂單新增或更新至資料庫，因為查詢已遵循簡化的 CQRS 方法進行分離。
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }
@@ -122,9 +145,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Martin Fowler：分隔的介面。** 
-     [ *http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html%20)
+-   **Martin Fowler：Separated Interface (分離介面)**
+    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]
-[上一個](net-核心-微服務-網域-model.md) [下一步] (實作的值-objects.md)
+[上一頁] (net-core-microservice-domain-model.md) [下一頁] (implement-value-objects.md)

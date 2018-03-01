@@ -1,52 +1,55 @@
 ---
-title: "設計基礎結構的持續性層級"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |設計基礎結構的持續性層級"
+title: "設計基礎結構持續性層"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計基礎結構持續性層"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ce0f1d608eed909a7707f3c580afc5253f3eef06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-the-infrastructure-persistence-layer"></a>設計基礎結構的持續性層級
+# <a name="designing-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
-資料持續性元件提供裝載界限內的微服務 （也就是微服務 」 資料庫） 資料的存取權。 它們包含的元件，例如儲存機制的實際實作和[工作單位](http://martinfowler.com/eaaCatalog/unitOfWork.html)類別，如自訂 EF DBContexts。
+資料持續性元件可讓您存取裝載於微服務界限 (也就是微服務的資料庫) 內的資料。 它們包含儲存機制和[工作單位](http://martinfowler.com/eaaCatalog/unitOfWork.html)類別 (例如自訂 EF DBContext) 等元件的實際實作。
 
 ## <a name="the-repository-pattern"></a>儲存機制模式
 
-儲存機制是類別或元件的封裝來存取資料來源所需的邏輯。 它們集中化通用資料存取功能，提供更佳的可維護性，並減少基礎結構或技術，用來存取資料庫，從網域模型層。 如果您使用 Entity Framework 像 ORM 時，必須實作的程式碼已經過簡化，這點受惠 LINQ 和強型別。 這可讓您將焦點放在資料持續性邏輯上，而不是資料存取配管。
+儲存機制是封裝存取資料來源所需邏輯的類別或元件。 它們會集中管理常見的資料存取功能，以提供更佳的可維護性，並將用來存取資料庫與用來存取領域模型層的基礎結構或技術分離。 如果您使用類似 ORM 的 Entity Framework，多虧有 LINQ 和強型別，必須實作的程式碼會經過簡化。 這可讓您專注於資料持續性邏輯，而不是資料存取連接。
 
-儲存機制模式會完善記載使用這種使用資料來源。 活頁簿中[企業應用程式架構模式](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)，Martin Fowler 描述儲存機制，如下所示：
+儲存機制模式是使用資料來源之妥善記載的方法。 在 [Patterns of Enterprise Application Architecture](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/) 一書中，Martin Fowler 對儲存機制有以下描述：
 
-儲存機制會執行之間的媒介，網域模型圖層與資料對應到記憶體中的網域物件的一組類似的方式做的工作。 用戶端物件以宣告方式建立查詢，並將它們傳送至儲存機制的答案。 就概念而言，儲存機制封裝一組儲存在資料庫和作業可執行的頁面，提供一種方式較接近保存層中的物件。 儲存機制中，此外，支援分隔，清楚地與一個方向工作網域 」 和 「 資料配置之間的相依性或對應的目的。
+儲存機制會在領域模型層與資料對應之間執行中繼工作，其作用類似於記憶體內部的一組領域物件。 用戶端物件以宣告方式建立查詢，並將它們傳送至儲存機制以尋求解答。 就概念而言，儲存機制會封裝一組儲存在資料庫中的物件，以及可在其上執行的作業，來提供接近持續性層的方式。 儲存機制也支援清楚且一個方向的分離用途，以及工作領域與資料配置或對應之間的一致性。
 
-### <a name="define-one-repository-per-aggregate"></a>定義彙總每一個儲存機制
+### <a name="define-one-repository-per-aggregate"></a>每個彙總定義一個儲存機制
 
-您應針對每個彙總或彙總根，建立一個儲存機制類別。 在微服務，根據網域導向設計模式，您應該使用以更新資料庫的通道唯一應該儲存機制。 這是因為它們具有一對一的關聯性的彙總根，控制彙總的非變異值與交易一致性。 還是可以查詢資料庫，透過其他通道 （因為您可以執行下列 CQRS 方法），因為查詢不會變更資料庫的狀態。 不過，交易式區域 — 更新 — 永遠必須控制儲存機制和彙總的根目錄。
+您應針對每個彙總或彙總根，建立一個儲存機制類別。 在以領域導向設計模式為基礎的微服務中，您唯一可用來更新資料庫的通道應該是儲存機制。 這是因為它們具有一對一關聯性和彙總根，可控制彙總的不變式和交易一致性。 您還是可以透過其他通道來查詢資料庫 (例如您可以遵循 CQRS 方法來這樣做)，因為查詢不會變更資料庫的狀態。 不過，交易區域 (更新) 必須一律受到儲存機制和彙總根的控制。
 
-基本上，儲存機制可讓您填入來自網域實體的表單中的資料庫的記憶體中的資料。 實體都在記憶體中之後，它們可以變更，然後回到交易透過資料庫保存。
+基本上，儲存機制可讓您將來自資料庫的資料，以領域實體形式填入記憶體。 一旦實體在記憶體中，就可以變更，然後透過交易保存回到資料庫。
 
-如前文所述，如果您使用 CQS/CQRS 架構模式，從網域模型，使用 Dapper 簡單的 SQL 陳述式所執行的側邊查詢來執行初始查詢。 這個方法是較具彈性的儲存機制，因此您可以查詢聯結任何資料表需要而且這些查詢不受限於的規則從彙總更多。 該資料將會移至展示層或用戶端應用程式。
+如稍早所述，如果您使用 CQS/CQRS 架構模式，來自領域模型端的查詢 (由使用 Dapper 的簡單 SQL 陳述式來執行) 會執行初始查詢。 此方法比儲存機制更有彈性，因為您可以查詢並聯結任何需要的資料表，而且這些查詢不會受到彙總規則的限制。 該資料將會移至展示層或用戶端應用程式。
 
-如果使用者對進行變更，更新的資料將來自用戶端應用程式或展示層到應用程式層 （例如 Web API 服務）。 當您收到的命令 （資料） 是命令處理常式中時，您可以使用儲存機制取得您想要從資料庫更新的資料。 您在記憶體中已使用更新的命令，傳遞的資訊，然後加入或更新交易透過資料庫中的資料 （網域實體）。
+如果使用者進行變更，資料會從用戶端應用程式或展示層更新至應用程式層 (例如 Web API 服務)。 當您在命令處理常式中收到命令 (含資料) 時，您可以使用儲存機制從資料庫取得您要更新的資料。 您在記憶體中將它更新為使用命令所傳遞的資訊，然後透過交易在資料庫中新增或更新資料 (領域實體)。
 
-我們必須強調一次，應該對於每個彙總根，定義只能有一個儲存機制，為顯示圖 9-17。 若要達到以維護交易一致性彙總中的所有物件之間的彙總根目標，您應該永遠不會在資料庫中建立每個資料表的儲存機制。
+請記住，每個彙總根只應該定義一個儲存機制，如圖 9-17 所示。 若要達到在彙總內所有物件之間維持交易一致性的彙總根目標，請絕對不要針對資料庫中的每個資料表建立儲存機制。
 
 ![](./media/image18.png)
 
-**圖 9-17**。 儲存機制、 彙總，以及資料庫資料表之間的關聯性
+**圖 9-17**： 儲存機制、彙總和資料庫資料表之間的關聯性
 
-### <a name="enforcing-one-aggregate-root-per-repository"></a>強制執行一個彙總根，每個儲存機制
+### <a name="enforcing-one-aggregate-root-per-repository"></a>每個儲存機制會強制執行一個彙總根
 
-它可以是實作您儲存機制的設計方式，它會強制執行彙總根只應該有儲存機制的規則有價值。 您可以建立會限制它以確定它們有 IAggregateRoot 標記介面使用的實體類型的泛型或基底的儲存機制類型。
+以此方式來實作您的儲存機制設計可能很重要，因為它會強制執行規則，只允許彙總根有儲存機制。 您可以建立泛型或基底儲存機制類型來限制可搭配使用的實體類型，確保這些實體具有 IAggregateRoot 標記介面。
 
-因此，在基礎結構層級實作每個儲存機制類別會實作自己的合約或介面，如下列程式碼所示：
+因此，在基礎結構層實作的每個儲存機制類別會實作自己的合約或介面，如下列程式碼所示：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
@@ -55,7 +58,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     {
 ```
 
-每個特定的儲存機制介面會實作泛型 IRepository 介面：
+每個特定儲存機制介面會實作泛型 IRepository 介面：
 
 ```csharp
 public interface IOrderRepository : IRepository<Order>
@@ -65,67 +68,106 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-不過，強制執行慣例使程式碼更好的方法，每個儲存機制應該與相關的單一彙總就是實作泛型的儲存機制類型，所以明確使用儲存機制為目標的特定彙總。 可以輕鬆地完成藉由實作該泛型 IRepository 基底介面中，如下列程式碼所示：
+不過，若要讓程式碼強制執行每個儲存機制應該與單一彙總關聯的慣例，建議實作泛型儲存機制類型，以明確指出您使用的儲存機制是以特定彙總為目標。 這可透過在 IRepository 基底介面中實作該泛型來輕鬆完成，如下列程式碼所示：
 
 ```csharp
   public interface IRepository<T> where T : IAggregateRoot
 ```
 
-### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>儲存機制模式可讓您更輕鬆地測試您的應用程式邏輯
+### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>儲存機制模式可讓您更輕鬆地測試應用程式邏輯
 
-儲存機制模式可讓您輕鬆地測試您的應用程式與單元測試。 請記住，單元測試只測試您的程式碼，不是基礎結構，因此儲存機制的抽象概念更輕鬆地達成這個目標。
+儲存機制模式可讓您使用單元測試輕鬆地測試應用程式。 請記住，單元測試只會測試您的程式碼，不會測試基礎結構，因此儲存機制抽象概念可讓您更輕鬆地達成該目標。
 
-如前一節中所述，建議您定義，並放置儲存機制介面網域模型層中讓應用程式層 （比方說，您 Web 應用程式開發介面微服務） 不會依賴直接基礎結構層級具有實作實際的儲存機制類別。 如此一來，並使用您的 Web API 控制器中的相依性插入，您可以實作模擬儲存機制從資料庫傳回假的資料，而非資料。 解除解合的方式可讓您建立，並執行的單元測試，可以測試應用程式的邏輯，而不需要連線到資料庫。
+如稍早一節所述，建議您定義儲存機制介面並將它放在領域模型層中，讓應用程式層 (例如您的 Web API 微服務) 不會直接相依於您實作實際儲存機制類別的基礎結構層。 藉由這樣做，以及在您的 Web API 的控制器中使用相依性插入，您就可以實作模擬儲存機制來傳回假的資料，而不是資料庫中的資料。 該低耦合方法可讓您建立並執行單元測試，只測試您應用程式的邏輯，而不需要連接到資料庫。
 
-資料庫的連線可能會失敗，並更重要的是，對資料庫執行數百項測試錯誤原因有兩個。 首先，因為大量的測試可能需要大量時間。 第二，可能會變更資料庫記錄，並影響您的測試結果，因此，它們可能不一致。 對資料庫的測試並不是單元測試整合測試。 您應該有許多的單元測試執行快速，但較少的整合測試針對資料庫。
+資料庫連接可能會失敗，而且更重要的是，對資料庫執行數百個測試不適當的原因有兩個。 首先，因為測試數目很大，所以可能需要很多時間。 其次，資料庫記錄可能會變更並影響您的測試結果，因此結果可能會不一致。 對資料庫進行的測試不是單元測試，而是整合測試。 您應該會有許多執行速度很快的單元測試，但對資料庫的整合測試則較少。
 
-單元測試的重要性分離，根據您的邏輯作業網域中的實體記憶體。 它會假設此儲存機制類別提供的。 一旦您的邏輯修改網域實體時，它會假設此儲存機制類別將能正確地儲存。 此處的重點是要建立單元測試對您的網域模型和其網域邏輯。 彙總的根目錄是 DDD 中的主要的一致性。
+從單元測試的關注點分離觀點來看，您的邏輯會在記憶體內部的領域實體上運作。 它假設儲存機制類別已達到這些目的。 一旦您的邏輯修改領域實體，它會假設儲存機制類別將會正確地儲存這些實體。 此處的重點是對領域模型及其領域邏輯建立單元測試。 彙總根是 DDD 中的主要一致性界限。
 
-### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>儲存機制模式與舊版的資料存取類別 （DAL 類別） 模式之間的差異
+### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>儲存機制模式與舊版資料存取類別 (DAL 類別) 模式之間的差異
 
-資料存取物件直接執行資料存取與持續性作業，對儲存體。 儲存機制標記，與您想要執行的工作物件 （如同在 EF 使用 DbContext 時)，但這些更新的一個單位的記憶體中作業的資料不會立即執行。
+資料存取物件會直接對儲存體執行資料存取和持續性作業。 儲存機制會以您要在工作單位物件的記憶體中執行的作業來標示資料 (如同使用 DbContext 時的 EF)，但不會立即執行這些更新。
 
-工作的單位被指視為單一交易，包括多項插入、 更新或刪除作業。 簡單來說，這表示，特定的使用者動作 （例如，在網站上註冊），所有插入、 更新和刪除交易都處理在單一交易中。 這是更有效率的 chattier 方式處理多個資料庫交易。
+工作單位是指涉及多項插入、更新或刪除作業的單一交易。 簡單來說，這表示針對特定使用者動作 (例如網站註冊)，所有插入、更新和刪除交易都會在單一交易中處理。 比起更耗時地處理多個資料庫交易，這樣做會更有效率。
 
-您的程式碼應用程式層命令它時，將會在單一動作中稍後執行這些多個持續性作業。 將記憶體中的變更套用至實際的資料庫儲存體的決策通常根據[工作單位模式](http://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF，工作單元模式會實作為 DBContext。
+稍後在單一動作中，當來自應用程式層的程式碼命令時，就會執行多個持續性作業。 將記憶體內部變更套用至實際資料庫儲存體的決策通常會採用[工作單位模式](http://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF 中，工作單位模式會實作為 DBContext。
 
-在許多情況下，此模式或套用對儲存體作業的方式可以提高應用程式效能，並降低不一致的可能性。 此外，它會降低交易封鎖資料庫的資料表，因為所有預期的作業都會認可為單一交易的一部分。 這是相較於執行許多對資料庫的隔離的作業更有效率。 因此，所選的 ORM 可以最佳化對資料庫執行分組為相同的交易，而不是許多小型和個別的交易執行中的數個更新動作。
+在許多情況下，此模式或對儲存體套用作業的方式可提高應用程式效能，並降低不一致的可能性。 此外，它會降低資料庫資料表中的交易封鎖，因為所有預期的作業都會認可為單一交易的一部分。 相較於對資料庫執行許多隔離作業，這樣做會更有效率。 因此，選取的 ORM 能夠藉由群組相同交易內的數個更新動作來最佳化對資料庫的執行，這與許多小型且個別的交易執行正好相反。
 
-### <a name="repositories-should-not-be-mandatory"></a>儲存機制不是強制性
+### <a name="repositories-should-not-be-mandatory"></a>儲存機制不應該是強制的
 
-由於稍早所提的原因很有用的自訂儲存機制，而這是在 eShopOnContainers 順序的微服務的方法。 不過，它不是實作 DDD 設計中，或甚至一般的.NET 中的程式開發基本模式。
+自訂儲存機制很有用 (原因如稍早所述)，而且是 eShopOnContainers 中訂購微服務的方法。 不過，它不是在 DDD 設計或甚至是一般 .NET 程式開發中實作的基本模式。
 
-比方說，Jimmy Bogard，本指南中，為提供直接的意見反應時說下列：
+例如，當 Jimmy Bogard 對本指南提供直接意見反應時表示：
 
-這可能會是大我的意見反應。 我實際上風扇的儲存機制中，主要是因為它們隱藏基礎持續性機制的重要詳細資料。 它的原因在哪裡尋求 MediatR 的命令，太。 我可以使用完整的持續性的圖層，並將所有網域行為都推送至我的彙總根。 通常不希望我的儲存機制的模擬 – 仍然需要的整合測試與實際的動作。 將 CQRS，目的在於我們真的沒有任何多具有儲存機制的需求。
+這可能是我最強烈的意見反應。 我其實不是儲存機制的愛好者，主要是因為儲存機制會隱藏基礎持續性機制的重要詳細資料。 這也是為什麼我使用 MediatR 命令的原因。 我可以利用持續性層的完整強大功能，並將所有領域行為推送至我的彙總根。 我通常不需要模擬儲存機制 (我仍需要使用真實內容進行整合測試)。 移至 CQRS 表示我們實際上不再需要儲存機制。
 
-我們有幫助，儲存機制，但我們了解它們並不重要的您 DDD，彙總模式和豐富的網域模型的方式。 因此，要使用儲存機制模式，如 調整。
+我們發現儲存機制雖然有用，但認為它對您的 DDD 並不如彙總模式和豐富領域模型同樣重要。 因此，是否使用儲存機制模式完全取決於您。
 
-#### <a name="additional-resources"></a>其他資源
+## <a name="the-specification-pattern"></a>規格模式
 
-##### <a name="the-repository-pattern"></a>儲存機制模式
+規格模式 (其全名會是查詢規格模式) 是領域導向設計模式，設計成您可以放置查詢定義以及選擇性排序和分頁邏輯的位置。
 
--   **愛德華 Hieatt 和 Rob 我。儲存機制模式。** 
-     [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+規格模式會定義物件中的查詢。 例如，若要封裝搜尋一些產品的分頁查詢，您可以建立 PagedProduct 規格來接受必要的輸入參數 (pageNumber、pageSize、filter 等)。 然後，在任何儲存機制方法中 (通常是 List() 多載)，它會接受 ISpecification 並根據規格執行預期的查詢。
 
--   **儲存機制模式**
-    [*https://msdn.microsoft.com/en-us/library/ff649690.aspx*](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+此方法有幾個好處：
 
--   **儲存機制模式： 資料持續性抽象**
+* 規格具有您可以討論的名稱 (而不是只有一些 LINQ 運算式)。
+
+* 規格可隔離進行單元測試，以確保其正確無誤。 如果您需要類似的行為，也很容易重複使用。 例如，在 MVC 檢視動作和 Web API 動作上，以及在各種服務中。
+
+* 規格也可用來描述要傳回之資料的圖形，讓查詢只傳回所需的資料。 這樣做可避免必須在 Web 應用程式中進行消極式載入 (通常並不建議)，也可協助防止儲存機制實作因為這些詳細資料而變得雜亂無章。
+
+泛型規格介面的一個範例是來自 [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb ) 的下列程式碼。
+
+```csharp
+// https://github.com/dotnet-architecture/eShopOnWeb 
+public interface ISpecification<T>
+{
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
+}
+```
+
+在接下來的章節中，將會說明如何使用 Entity Framework Core 2.0 來實作規格模式，以及如何從任何儲存機制類別來使用它。
+
+**重要事項：**規格模式是可透過許多不同方式實作的舊模式，如下列其他資源所示。 作為模式/概念，較舊的方法比較容易了解，但請注意，較舊的實作不會利用 Linq 和運算式等現代語言功能。
+
+## <a name="additional-resources"></a>其他資源
+
+### <a name="the-repository-pattern"></a>儲存機制模式
+
+-   **Edward Hieatt 和 Rob Mee：Repository (儲存機制) 模式**
+    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+
+-   **The Repository Pattern (儲存機制模式)**
+    [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
+
+-   **Repository Pattern: A data persistence abstraction (儲存機制模式：資料持續性抽象概念)**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans：網域導向設計： 解決核心軟體的複雜度。** （書籍; 儲存機制模式的討論包括）[ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software** (叢書，內含儲存機制模式的討論) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-##### <a name="unit-of-work-pattern"></a>工作模式的單位
+### <a name="unit-of-work-pattern"></a>工作單位模式
 
--   **Martin Fowler：工作模式的單位。** 
-     [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler：Unit of Work (工作單位) 模式**
+    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **ASP.NET MVC 應用程式中實作的儲存機制和工作模式單位**
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (在 ASP.NET MVC 應用程式中實作儲存機制和工作單位模式)**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
+### <a name="the-specification-pattern"></a>規格模式
+
+-   **Specification Pattern (規格模式)**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+
+-   **Eric Evans (2004)：Domain Driven Design，Addison-Wesley，第 224 頁。**
+
+-   **Specifications (規格)，Martin Fowler**
+    [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[上一個](網域-事件-設計-implementation.md) [下一步] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[上一個] (domain-events-design-implementation.md) [下一個] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

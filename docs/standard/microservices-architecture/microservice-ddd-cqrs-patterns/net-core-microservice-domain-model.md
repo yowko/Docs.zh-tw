@@ -1,85 +1,97 @@
 ---
-title: "實作.NET Core 的微服務網域模型"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |實作.NET Core 的微服務網域模型"
+title: "使用 .NET Core 實作微服務領域模型"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用 .NET Core 實作微服務領域模型"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 26c480a82ad7bb806734decebdfbe5b4a07998e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 07a79f3d52db400d1539fb4172166cccf8905fb8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>實作.NET Core 的微服務網域模型 
+# <a name="implementing-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型 
 
-上一節所說明的基本設計原則和設計網域模型的模式。 現在就可以瀏覽使用.NET 核心實作網域模型的可能方式 (一般 C\#程式碼) 和 EF 核心。 請注意，您的網域模型將由只是您的程式碼。 它會有 EF EF 核心模型需求，但不是實際的相依性。 網域模型中，您應該不需要硬式相依性或 EF 核心或任何其他 ORM 的參考。
+上一節解釋了設計領域模型的基本設計準則及模式。 現在是探索使用 .NET Core (純 C\# 程式碼) 及 EF Core 實作領域模型之可能方式的時候了。 請注意，您的領域模型會僅由您的程式碼組成。 它只會有 EF Core 模型需求，而非真正對 EF 的相依性。 您不應該在您的領域模型中對 EF Core 或任何其他的 ORM 具有硬式相依性或參考。
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>自訂的.NET 標準文件庫中的網域模型結構
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>自訂 .NET 標準程式庫中的領域模型結構
 
-EShopOnContainers 參考應用程式使用資料夾組織示範 DDD 模型應用程式。 您可能會發現不同的資料夾組織更清楚地進行通訊的應用程式的設計選擇。 您可以看到圖 9-10，排序網域模型中有兩個彙總、 順序彙總和買方彙總。 雖然您可能會有彙總以及組成的單一網域實體 （彙總根或根實體），每個彙總是網域實體和值物件的群組。
+用於 eShopOnContainers 參考應用程式的資料夾組織展示了應用程式的 DDD 模型。 您可能會發現不同的資料夾組織可以更清楚的與您為應用程式選擇的設計進行通訊。 如同您在圖 9-10 中所看到的，在訂購領域模型中有兩個彙總，即訂單 (order) 彙總和購買者 (buyer) 彙總。 每一個彙總都是一組領域實體和值物件，雖然您也可以使用單一領域實體 (彙總根或根實體) 來組成彙總。
 
 ![](./media/image11.png)
 
-**圖 9 10**。 EShopOnContainers 中順序的微服務的網域模型結構
+**圖 9-10**。 eShopOnContainers 訂購微服務的領域模型結構
 
-此外，網域模型層會包含您的網域模型的基礎結構需求的儲存機制合約 （介面）。 換句話說，這些介面 express 哪些基礎結構層級必須實作的儲存機制和方式。 請務必儲存機制的實作會位於外部網域模型中的圖層，基礎結構層文件庫，讓網域模型層不"contaminated 」 應用程式開發介面或從基礎結構技術，例如 Entity Framework 的類別。
+此外，領域模型層還包含了您領域模型之基礎結構需求的存放庫合約 (介面)。 換句話說，這些介面表達了基礎結構層應實作的存放庫以及實作的方式。 將存放庫的實作放置於基礎結構層程式庫及領域模型層之外是非常重要的，這可讓領域模型層不會受到基礎結構技術 (例如 Entity Framework) API 或類別的「污染」。
 
-您也可以查看[SeedWork](https://martinfowler.com/bliki/Seedwork.html)資料夾包含自訂的基底類別，您可以使用您的網域實體和值做為基底物件，因此每個網域的物件類別中沒有多餘的程式碼。
+您也可以查看包含了可讓您用來作為領域實體及值物件基底之自訂基底類別的 [SeedWork](https://martinfowler.com/bliki/Seedwork.html) 資料夾，以便您在每一個領域物件類別中不會有冗餘的程式碼。
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>建構自訂的.NET 標準程式庫中的彙總
+## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>在自訂 .NET 標準程式庫中建立彙總結構
 
-彙總是指叢集的網域物件群組在一起以符合交易一致性。 這些物件可能是的實體 （其中是彙總根或根實體） 的執行個體，再加上任何其他值的物件。
+「彙總」指的是為了符合交易一致性而群組在一起的領域物件所構成的叢集。 這些物件可以是實體的執行個體 (其中一個為彙總根或根實體) 加上任何額外的值物件。
 
-交易一致性表示彙總，就一定可以一致且結尾商務動作的最新狀態。 例如，順序彙總從順序微服務網域模型 eShopOnContainers 組成示圖 9-11。
+「交易一致性」表示彙總保證會在商務動作結束時維持一致及最新狀態。 例如，來自 eShopOnContainers 訂購微服務領域模型的訂單彙總是由圖 9-11 中的內容組成的。
 
 ![](./media/image12.png)
 
-**圖 9 11**。 Visual Studio 方案中的彙總順序
+**圖 9-11**。 Visual Studio 方案中的訂單彙總
 
-如果您開啟的任何檔案在彙總的資料夾中，您可以看到如何標示為自訂的基底類別或介面，像實體或值的物件，以實作[Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork)資料夾。
+若您在彙總資料夾中開啟了任何檔案，您可以看到其標示為自訂基底類別或介面 (像是實體或值物件) 的方式，如同在 [SeedWork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) 資料夾中所實作的。
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>POCO 類別以及實作網域實體
+## <a name="implementing-domain-entities-as-poco-classes"></a>將領域實體實作為 POCO 類別
 
-您實作網域模型，您可以在.NET 中建立 POCO 類別可實作網域實體。 在下列範例中，Order 類別被定義為實體和為彙總的根。 因為 Order 類別衍生自該實體的基底類別，它可以重複使用與實體相關的通用程式碼。 請記住，這些基底類別和介面會由您在網域模型專案中，因此您的程式碼，不像 EF ORM 從基礎結構程式碼。
+您可以藉由建立實作您領域實體的 POCO 類別，來在 .NET 中實作領域模型。 在下列範例中，Order 類別已定義為一個實體，同時也是彙總根。 因為 Order 類別衍生自 Entity 基底類別，它可重複使用與實體相關的常見程式碼。 請記住，這些基底類別和介面是您在領域模型物件中定義的，因此它是您的程式碼，而非來自像是 EF 之類的 ORM 的基礎結構程式碼。
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 1.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
-    public int BuyerId { get; private set; }
-    public DateTime OrderDate { get; private set; }
-    public int StatusId { get; private set; }
-    public ICollection<OrderItem> OrderItems { get; private set; }
-    public Address ShippingAddress { get; private set; }
-    public int PaymentId { get; private set; }
-    protected Order() { } //Design constraint needed only by EF Core
-    public Order(int buyerId, int paymentId)
+    private DateTime _orderDate;
+    public Address Address { get; private set; }
+    private int? _buyerId;
+
+    public OrderStatus OrderStatus { get; private set; }
+    private int _orderStatusId;
+
+    private string _description;
+    private int? _paymentMethodId;
+
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+  
+    public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
+            string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
-        BuyerId = buyerId;
-        PaymentId = paymentId;
-        StatusId = OrderStatus.InProcess.Id;
-        OrderDate = DateTime.UtcNow;
-        OrderItems = new List<OrderItem>();
+        _orderItems = new List<OrderItem>();
+        _buyerId = buyerId;
+        _paymentMethodId = paymentMethodId;
+        _orderStatusId = OrderStatus.Submitted.Id;
+        _orderDate = DateTime.UtcNow;
+        Address = address;
+
+        // ...Additional code ...
     }
 
-    public void AddOrderItem(productName,
-        pictureUrl,
-        unitPrice,
-        discount,
-        units)
+    public void AddOrderItem(int productId, string productName, 
+                            decimal unitPrice, decimal discount, 
+                            string pictureUrl, int units = 1)
     {
         //...
         // Domain rules/logic for adding the OrderItem to the order
         // ...
-        OrderItem item = new OrderItem(this.Id, ProductId, productName,
-            pictureUrl, unitPrice, discount, units);
+
+        var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
+        
+        _orderItems.Add(orderItem);
   
-        OrderItems.Add(item);
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -87,15 +99,21 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-請務必注意，這會是做 POCO 類別實作一個網域實體。 它並沒有直接的相依性 Entity Framework Core 上或任何其他基礎結構架構。 這個實作是正確的只要 C\#實作網域模型的程式碼。
+請務必注意，這是實作為 POCO 類別的領域實體。 它對 Entity Framework Core 或任何其他基礎結構架構都沒有任何直接相依性。 這項實作是以 DDD 方式進行的 (也應如此)，單純只是實作領域模型的 C\# 程式碼。
 
-此外，使用名為 IAggregateRoot 介面裝飾類別。 該介面是空的介面，有時也稱為*標記介面*，也就是只用於表示此實體類別也是彙總的根。
+此外，類別會使用名為 IAggregateRoot 的介面裝飾。 該介面是一個空介面，有時候稱之為*標記介面 (marker interface)*，單純用於指出此實體類別同時也是一個彙總根。
 
-是標記介面有時會被視為反面模式;但是，它也會標示類別，尤其是該介面可能會發展出簡潔的方法。 屬性可以是標記的其他選擇，但較快旁邊 IAggregate 介面，而不是讓上述類別彙總屬性標記，請參閱基底類別 （實體）。 在任何情況下，它是 metter 的喜好設定。
+標記介面有時候會被視為「反模式 (anti-pattern)」。然而，它同時也是一種標記類別的明瞭方式，尤其是在該介面可能會進一步發展的情況下。 屬性也可以是用於標記的另外一個選擇，但通常看見 IAggregate 介面旁邊的基底類別 (Entity)，會比將 Aggregate 屬性標記放在類別上方要來得更快。 這在任何案例中都只是一種喜好設定。
 
-具有彙總根表示大部分的程式碼相關的一致性，而且應該為 Order 彙總根類別 (例如，AddOrderItem 彙總將 OrderItem 物件時) 中的方法實作的彙總的實體的商務規則. 您不應該建立或更新 OrderItems 物件，獨立或直接;控制項和它的子實體的任何更新作業的一致性，必須保持 AggregateRoot 類別。
+擁有彙總根表示與一致性和彙總實體商務規則有關的大部分程式碼都應在 Order 彙總根類別中實作為方法 (例如：將 OrderItem 物件新增至彙總的 AddOrderItem)。 您不應獨立或直接建立或更新 OrderItems 物件。AggregateRoot 類別必須控制並使任何對其子實體所做出的更新作業保持一致。
 
-例如，您應該*不*執行任何命令處理常式方法或應用程式層的類別從下列動作：
+## <a name="encapsulating-data-in-the-domain-entities"></a>封裝領域實體內的資料
+
+實體模型中的常見問題之一便是他們會將集合導覽屬性作為可公開存取的清單類型公開。 這可讓任何共同作業的開發人員操縱這些集合類型的內容，使其略過與集合相關的重要商務規則，並可能讓物件處於無效狀態。 其中一個解決方案便是公開相關集合的唯讀存取，並明確提供定義用戶端可操縱他們之方式的方法。
+
+在先前的程式碼中，請注意許多屬性都是唯讀或私用，並且只能透過類別方法進行更新，以使得任何更新都必須考量到類別方法中指定的商務領域不區分及邏輯。
+
+例如，根據 DDD 模式，您*不*應從任何命令處理常式方法或應用程式層類別進行下列動作：
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -110,17 +128,17 @@ myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
 
-在此情況下，加入方法是完全加入資料、 直接存取 OrderItems 集合作業。 因此，大部分的網域邏輯、 規則或驗證相關的子實體的作業會分散應用程式層 （命令處理常式和 Web API 控制器）。
+在此案例下，Add 方法純粹只是新增資料的作業，可直接存取 OrderItems 集合。 因此，與該帶有子實體之作業相關的大部分領域邏輯、規則或驗證都會擴張至應用程式層 (命令處理常式及 Web API 控制器)。
 
-如果您移周圍彙總根，彙總根無法保證其非變異項目、 其有效性或其一致性。 最後將有之程式碼或交易式的指令碼。
+若您繞過了彙總根，彙總根便無法保證其不區分、有效性，或是一致性。 最後您便可能會擁有雜亂的程式碼或交易指令碼。
 
-若要依照 DDD 模式，實體必須沒有公用 setter 中的任何實體屬性。 在實體中的變更應該重點的明確方法以明確的通用語言與變更相關的實體中的執行。
+若要遵循 DDD 模式，實體便不可在任何實體屬性中具有公用的 setter。 實體的變更必須使用關於其在實體中執行之變更的明確通用語言，透過明確的方法來驅動。
 
-此外，實體 （例如訂單項目） 中的集合應該是唯讀屬性 （稍後說明 AsReadOnly 方法）。 您應該能夠加以只能從更新彙總根類別方法或子實體方法內。
+此外，實體中的集合 (例如訂購項目) 應為唯讀屬性 (即稍後解釋的 AsReadOnly 方法)。 您只能在彙總根類別方法或子實體方法中對其進行更新。
 
-您可以看到在程式碼順序的彙總根，所有 setter 應該都是私用或至少唯讀外部使用，以便透過實體類別的方法都來執行對實體的資料或它的子實體的任何作業。 受控制和物件導向的方式，而不是實作交易式的指令碼以維護一致性。
+如同您可在 Order 彙總根程式碼中所看到的，所有的 setter 都必須是私用的，或至少必須是外部唯讀的，以使得所有對實體資料或其子實體進行的作業都必須透過實體類別中的方法執行。 這可透過受控及物件導向的方式維持一致性，而非實作交易指令碼。
 
-下列程式碼片段會顯示程式碼新增 OrderItem 物件順序彙總的工作的正確方式。
+下列程式碼片段顯示了撰寫將 OrderItem 物件新增至 Order 彙總工作之程式碼的適當方式。
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
@@ -134,104 +152,38 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 //...
 ```
 
-在此片段中，大部分的驗證或 OrderItem 物件建立相關的邏輯會控制的順序彙總根 — AddOrderItem 方法中，特別是 「 驗證 」 和 「 邏輯相關的其他項目的彙總。 比方說，您可能會收到相同的產品項目為 AddOrderItem 多次呼叫的結果。 在該方法中，您無法檢查產品項目，並將相同的產品項目合併成單一 OrderItem 物件具有數個單位。 此外，如果不同折扣量，但產品識別碼都相同，您可能會套用更高的折扣。 此原則適用於任何其他網域邏輯 OrderItem 物件。
+在此片段中，與建立 OrderItem 物件相關的大部分驗證和邏輯都會受控於 Order 彙總根—於 AddOrderItem 方法中—尤其是與彙總內其他元素相關的驗證及邏輯。 例如，多次呼叫 AddOrderItem 的結果可能是您會取得相同的產品項目。 在該方法中，您可以檢查產品項目並將相同的產品項目合併為單一、帶有幾個單位的 OrderItem 物件。 此外，若有不同的折扣金額，但產品識別碼都是相同的，您也可以套用更高的折扣金額。 此準則適用於任何其他 OrderItem 物件的領域邏輯。
 
-此外，新 OrderItem(params) 作業也會是控制並從順序彙總根 AddOrderItem 方法所執行。 因此，大部分的邏輯或驗證相關作業 （特別是任何會影響其他子實體之間的一致性） 會在彙總的根目錄中的單一位置。 這是最終的彙總根模式的目的。
+此外，新的 OrderItem(params) 作業也會由 Order 彙總根的 AddOrderItem 方法控制及執行。 因此，與該作業相關的大多數邏輯或驗證 (尤其是任何會影響到與其他子實體間一致性的內容) 都會位於彙總根中的單一空間內。 這便是彙總根模式的最終目的。
 
-當您使用 Entity Framework 1.1 時，DDD 實體可以進一步表示因為 Entity Framework Core 1.1 的新功能之一是它可讓[將對應到欄位](https://docs.microsoft.com/ef/core/modeling/backing-field)除了屬性之外。 保護子實體或值物件的集合時，這非常有用。 這項增強功能，您可以使用簡單的私用欄位，而非屬性，您可以在公用方法中實作的欄位集合的任何更新，並透過 AsReadOnly 方法提供唯讀存取。
+當您使用 Entity Framework Core 1.1 或更新版本時，DDD 實體可以更好的方式進行表達，因為除了屬性之外，它還允許了[對應至欄位 (支援欄位)](https://docs.microsoft.com/ef/core/modeling/backing-field)。 這在保護子實體或值物件集合時將會很有用。 透過這項增強功能，您可以使用簡單的私用欄位 (而非屬性)，並且也能在公用方法中實作任何對欄位集合進行的更新，並透過 AsReadOnly 方法提供唯讀存取。
 
-因此在您想要更新之實體中之實體 （或建構函式） 以控制任何非變異值和資料的一致性方法只能透過 DDD，屬性會定義只能與 get 存取子。 屬性被支援私用欄位。 只有從在類別中存取私用成員。 不過，那里一個例外狀況： EF 核心，必須先設定這些欄位。
+在 DDD 中，您會希望只透過實體 (或建構函式) 中的方法來更新實體，以控制任何不區分及資料的一致性，使屬性可以只定義 get 存取子。 屬性會受私用欄位支援。 私用成員只能在類別中進行存取。 然而，有一項例外：即 EF Core 也必須設定那些欄位。
 
-```csharp
-// ENTITY FRAMEWORK CORE 1.1 OR LATER
-// Entity is a custom base class with the ID
-public class Order : Entity, IAggregateRoot
-{
-    // DDD Patterns comment
-    // Using private fields, allowed since EF Core 1.1, is a much better
-    // encapsulation aligned with DDD aggregates and domain entities (instead of
-    // properties and property collections)
-    private bool _someOrderInternalState;
-    private DateTime _orderDate;
-    public Address Address { get; private set; }
-    public Buyer Buyer { get; private set; }
-    private int _buyerId;
-    public OrderStatus OrderStatus { get; private set; }
-    private int _orderStatusId;
 
-    // DDD patterns comment
-    // Using a private collection field is better for DDD aggregate encapsulation.
-    // OrderItem objects cannot be added from outside the aggregate root
-    // directly to the collection, but only through the
-    // OrderAggrergateRoot.AddOrderItem method, which includes behavior.
-    private readonly List<OrderItem> _orderItems;
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
-    // Using List<>.AsReadOnly()
-    // This will create a read-only wrapper around the private list so it is
-    // protected against external updates. It's much cheaper than .ToList(),
-    // because it will not have to copy all items in a new collection.
-    // (Just one heap alloc for the wrapper instance)
-    // https://msdn.microsoft.com/en-us/library/e78dcd75(v=vs.110).aspx
-    public PaymentMethod PaymentMethod { get; private set; }
-    private int _paymentMethodId;
+### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>僅使用 Get 存取子來將屬性對應至資料庫資料表中的欄位
 
-    protected Order() { }
+將屬性對應至資料庫資料表資料行並非領域的責任，而是基礎結構及永續性層的一部份。 我們在此提到這個，以讓您了解到 EF Core 1.1 及更新版本中您可以為實體建立模型之方式的新功能。 本主題的其他詳細資料會在基礎結構及永續性一節解釋。
 
-    public Order(int buyerId, int paymentMethodId, Address address)
-    {
-        _orderItems = new List<OrderItem>();
-        _buyerId = buyerId;
-        _paymentMethodId = paymentMethodId;
-        _orderStatusId = OrderStatus.InProcess.Id;
-        _orderDate = DateTime.UtcNow;
-        Address = address;
-    }
+當您使用 EF Core 1.0 時，在 DbContext 中，您需要將只使用 getter 定義的屬性對應至資料庫資料表中的實際欄位。 這可透過 PropertyBuilder 類別的 HasField 方法來完成。
 
-    // DDD patterns comment
-    // The Order aggregate root method AddOrderitem() should be the only way
-    // to add items to the Order object, so that any behavior (discounts, etc.)
-    // and validations are controlled by the aggregate root in order to
-    // maintain consistency within the whole aggregate.
-    public void AddOrderItem(int productId, string productName, decimal unitPrice,
-        decimal discount, string pictureUrl, int units = 1)
-    {
-        // ...
-        // Domain rules/logic here for adding OrderItem objects to the order
-        // ...
-        OrderItem item = new OrderItem(this.Id, productId, productName,
-            pictureUrl, unitPrice, discount, units);
-        OrderItems.Add(item);
-    }
+### <a name="mapping-fields-without-properties"></a>不使用屬性來對應欄位
 
-    // ...
-    // Additional methods with domain rules/logic related to the Order aggregate
-    // ...
-}
-```
+藉由使用 EF Core 1.1 或更新版本中的功能來將資料行對應至欄位，您也可以不使用屬性。 相反的，您可以直接將資料表中的資料行對應至欄位。 常見的使用案例便是不需要從實體外部存取之內部狀態的私用欄位。
 
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>對應屬性只在資料庫資料表中的欄位 get 存取子
-
-對應至資料庫資料表資料行的內容不是網域的責任，而層基礎結構與持續性的一部分。 讓您了解如何建立模型實體與相關的 EF 1.1 中的新功能，我們曾經提到這裡只。 本主題中的其他詳細資料會由基礎結構與持續性 」 一節所述。
-
-當您使用 EF 1.0 時，DbContext 內您要將屬性所定義的 getter 資料庫資料表中的實際欄位只能對應。 做法是使用 HasField PropertyBuilder 類別方法。
-
-### <a name="mapping-fields-without-properties"></a>沒有內容的對應欄位
-
-使用 EF 核心 1.1，做為資料行對應至欄位中的新功能，所以也可以不使用屬性。 相反地，您可以對應至欄位的資料表中的資料行。 常見的使用案例，這是私用欄位的一不需要從外部實體存取的內部狀態。
-
-例如，在上述程式碼範例中， \_someOrderInternalState 欄位具有不相關的屬性 setter 或 getter。 也會計算訂單的商務邏輯中並使用順序的方法，從該欄位，但是它必須保存在資料庫中以及。 因此，在 EF 1.1 會有不相關的屬性將欄位對應到資料庫中的資料行的方法。 這也會說明在[基礎結構層](#the-infrastructure-layer)一節。
+例如，在上述的 OrderAggregate 程式碼範例中，有幾個私用欄位 (例如 `_paymentMethodId` 欄位) 針對 setter 或 getter 都不具有任何相關屬性。 該欄位也可以透過在訂單的商務邏輯內計算取得，並由訂單的方法使用，但它也必須永續保存在資料庫中。 因此，在 EF Core (v1.1 之後) 中，有一種方式可不使用相關屬性來將欄位對應至資料庫中的資料行。 這也會在本指南中的[基礎結構層](#the-infrastructure-layer)一節解釋。
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Vaughn Vernon：模型化 DDD 與 Entity Framework 的彙總。** 請注意，這是*不*Entity Framework Core。
+-   **Vaughn Vernon：使用 DDD 及 Entity Framework 為彙總建立模型** 請注意，這*並非* Entity Framework Core。
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman。網域導向設計撰寫程式碼： 資料已取得焦點的開發人員的秘訣**
+-   **Julie Lerman。Coding for Domain-Driven Design: Tips for Data-Focused Devs (為領域驅動設計撰寫程式碼：給專精於資料之開發人員的提示)**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan。如何建立完整封裝網域模型**
+-   **Udi Dahan。How to create fully encapsulated Domain Models (如何建立完全封裝的領域模型)**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 
 >[!div class="step-by-step"]
-[上一個](微服務-網域-model.md) [下一步] (seedwork-domain-model-base-classes-interfaces.md)
+[上一頁] (microservice-domain-model.md) [下一頁] (seedwork-domain-model-base-classes-interfaces.md)

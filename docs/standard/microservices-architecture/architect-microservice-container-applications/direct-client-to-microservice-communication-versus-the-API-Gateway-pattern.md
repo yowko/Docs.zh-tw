@@ -1,123 +1,126 @@
 ---
-title: "與 API 閘道模式的直接用戶端的微服務通訊"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |與 API 閘道模式的直接用戶端的微服務通訊"
-keywords: "Docker Microservices、 ASP.NET、 容器、 API 閘道"
+title: "直接用戶端與微服務通訊與 API 閘道模式"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 直接用戶端與微服務通訊與 API 閘道模式"
+keywords: "Docker, 微服務, ASP.NET, 容器, API 閘道"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c8227ec47888c7cf361f34c4c85a09c0666f886e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>與 API 閘道模式的直接用戶端的微服務通訊
+# <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>直接用戶端與微服務通訊與 API 閘道模式
 
-在 microservices 架構中，每個微服務會公開一組一般 fine‑grained 端點。 這項事實可能會影響 client‑to‑microservice 通訊，如本節所述。
+在微服務架構中，每個微服務都會公開一組 (通常) 微調端點。 這項事實可能會影響用戶端與微服務通訊，如本節所述。
 
-## <a name="direct-client-to-microservice-communication"></a>若要微服務的用戶端會直接通訊
+## <a name="direct-client-to-microservice-communication"></a>直接用戶端對微服務通訊
 
-可能的方法是使用直接通訊，用戶端的微服務架構。 這種方法，用戶端應用程式可以對要求直接某些 microservices，如圖 4-12 版中所示。
+可能的方法是使用直接用戶端對微服務通訊架構。 使用這種方法，用戶端應用程式可以直接對某些微服務提出要求，如圖 4-12 所示。
 
 ![](./media/image12.png)
 
-**圖 4-12**。 使用直接通訊，用戶端的微服務架構
+**圖 4-12**. 使用直接用戶端對微服務通訊架構
 
-在這種方法。 每個微服務有公用端點，有時會有不同的 TCP 連接埠的每個微服務。 針對特定服務的 URL 的範例可能是在 Azure 中的下列 URL:
+使用這種方法， 每個微服務都會有公用端點，有時每個微服務會有不同的 TCP 連接埠。 在 Azure 中，特定服務的 URL 範例可以是下列 URL：
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88 />
+<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 
-在生產環境中的叢集，URL 會對應至叢集中使用的負載平衡器為基礎的接著將要求分散到 microservices。 在實際執行環境中，您可能會有類似的應用程式傳遞控制站 (ADC) [Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction)您 microservices 與網際網路之間。 這可以做為透明的層，不會執行負載平衡，只保護您的服務供應項目 SSL 終止。 這可以改善您的主機負載卸載 CPU 運算密集 SSL 終止和其他路由的責任給 Azure 應用程式閘道。 在任何情況下，負載平衡器和 ADC 皆為透明從邏輯應用程式架構的觀點。
+在根據叢集的生產環境中，該 URL 會對應至叢集中所使用的負載平衡器，而負載平衡器接著會將要求分散到微服務。 在生產環境中，您在微服務與網際網路之間可能會有 [Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction)這類應用程式傳遞控制站 (ADC)。 這會作為透明層，不僅可執行負載平衡，也會透過提供 SSL 終止來保護您的服務。 這會改善主機的負載，方法是將 CPU 密集 SSL 終止和其他路由責任卸載給 Azure 應用程式閘道。 從邏輯應用程式架構觀點，在任何情況下，負載平衡器和 ADC 都是透明的。
 
-直接通訊，用戶端的微服務架構可能是適用於小型微服務應用程式中，特別是當用戶端應用程式是伺服器端 web 應用程式，例如 ASP.NET MVC 應用程式。 不過，當您建置大型且複雜微服務為基礎的應用程式 （例如，處理數十個微服務型別時），而且特別是當用戶端應用程式遠端行動裝置應用程式或 SPA web 應用程式，該方法會面臨的一些問題。
+直接用戶端對微服務通訊架構可能適用於小型微服務應用程式，特別是用戶端應用程式為 ASP.NET MVC 應用程式這類伺服器端 Web 應用程式時。 不過，如果您建置大型且複雜的微服務應用程式 (例如，處理數十個微服務型別時)，特別是用戶端應用程式為遠端行動應用程式或 SPA Web 應用程式時，該方法會面臨的一些問題。
 
-開發 microservices 為基礎的大型應用程式時，請考慮下列問題：
+開發根據微服務的大型應用程式時，請考慮下列問題：
 
--   *用戶端應用程式如何最小化後端要求的數目和減少至多個 microservices 多對話通訊？*
+-   *用戶端應用程式如何最小化後端要求數目以及減少與多個微服務的過於頻繁通訊？*
 
-在網際網路上會互動來建置單一 UI 畫面的多個 microservices 增加往返的次數。 這會增加延遲和 UI 端上的複雜性。 在理想情況下，回應應該有效率地彙總伺服器端 — 這會減少延遲，因為多個資料片段回來以平行方式，而且只要準備就緒時，某些 UI 可以顯示的資料。
+與多個微服務互動來建置單一 UI 畫面，會增加跨網際網路往返的次數。 這會增加 UI 端的延遲和複雜性。 在理想情況下，應該會在伺服器端有效率地彙總回應，而這樣做可減少延遲，因為會平行取得多個資料片段，而且只要準備就緒，某些 UI 就會顯示資料。
 
--   *您要如何處理跨領域的考量，如授權、 資料轉換和動態要求分派？*
+-   *如何處理授權、資料轉換和動態要求分派這類跨領域考量？*
 
-實作的安全性與跨領域考量，像是安全性和授權上每個微服務可能需要大量的開發工作。 可能的方法是讓這些服務內的 Docker 主機或內部的叢集，以限制他們從外部，直接存取，並在集中位置，例如應用程式開發介面 Gateway 實作這些跨領域的考量。
+實作安全性和跨領域考量 (例如每個微服務上的安全性和授權) 可能需要大量開發工作。 可能的方法是 Docker 主機或內部叢集內有這些服務，以限制從外部直接存取它們，並在集中位置 (例如 API 閘道) 實作這些跨領域考量。
 
--   *可以用戶端應用程式與通訊的方式使用非易記網際網路通訊協定的服務？*
+-   *用戶端應用程式如何與使用非友善網際網路通訊協定的服務通訊？*
 
-通常在用戶端應用程式中不支援通訊協定 （例如 AMQP 或二進位通訊協定） 的伺服器端上使用。 因此，要求必須透過如 HTTP/HTTPS 通訊協定來執行，而且之後轉譯成其他通訊協定。 A*攔截*方法可以在此情況下幫助。
+用戶端應用程式通常不支援伺服器端上使用的通訊協定 (例如 AMQP 或二進位通訊協定)。 因此，必須透過 HTTP/HTTPS 這類通訊協定執行要求，而且之後會轉譯成其他通訊協定。 在此情況下，「攔截式」方法可能有幫助。
 
--   *您要如何形成外觀，尤其是對行動裝置應用程式？*
+-   *如何形成特別針對行動應用程式所產生的外觀？*
 
-針對不同的用戶端應用程式的需求可能不會也設計多個 microservices API。 比方說，行動裝置應用程式的需求可能會與 web 應用程式的需求不同。 行動裝置應用程式，您可能需要更進一步最佳化，讓資料回應可能會更有效率。 您可能會從多個 microservices 彙總資料並傳回單一集合的資料，有時排除不需要行動裝置應用程式的回應中的任何資料，藉以執行這項操作。 而且，您可能會壓縮該資料。 同樣地，外觀或行動裝置應用程式和 microservices 之間的應用程式開發介面可以是此案例中很方便。
+多個微服務 API 的設計可能不是最適合不同用戶端應用程式的需求。 例如，行動應用程式需求可能會與 Web 應用程式需求不同。 針對行動應用程式，您甚至可能需要更進一步最佳化，讓資料回應更具效率。 作法是彙總多個微服務中的資料並傳回一組資料，有時會排除行動應用程式不需要之回應中的任何資料。 而且，您當然可以壓縮該資料。 同樣地，在此案例中，行動應用程式與微服務之間的外觀或 API 可能十分方便使用。
 
 ## <a name="using-an-api-gateway"></a>使用 API 閘道
 
-當您設計及建置大型或複雜微服務為基礎的應用程式使用多個用戶端應用程式時，可以是一個好的方法，考慮[API 閘道](http://microservices.io/patterns/apigateway.html)。 這是 microservices 的特定群組提供單一進入點的服務。 類似於[外觀模式](https://en.wikipedia.org/wiki/Facade_pattern)從 object‑oriented 設計，但在此情況下，它是分散式系統的一部分。 API 閘道模式有時也稱為 「 後端的 「 前端 」 [(BFF)](http://samnewman.io/patterns/architectural/bff/)因為您建置時思考用戶端應用程式的需求。
+當您使用多個用戶端應用程式來設計和建置大型或複雜微服務應用程式時，可以考慮使用的不錯方法是 [API 閘道](http://microservices.io/patterns/apigateway.html)。 這個服務提供特定一組微服務的單一進入點。 它與物件導向設計中的[外觀模式](https://en.wikipedia.org/wiki/Facade_pattern)類似但在此情況下，它是分散式系統的一部分。 API 閘道模式有時也稱為「前端的後端 [(BFF)](http://samnewman.io/patterns/architectural/bff/)」，因為您是在考量用戶端應用程式需求時建置它。
 
-圖 4-13 顯示自訂 API 閘道器如何納入微服務為基礎的架構。
-請務必中反白顯示，該圖表，您會使用單一自訂 API 閘道服務對向多個與不同的用戶端應用程式。 事實可以是重要的風險，因為將會成長及演變，您的應用程式開發介面的閘道服務會根據許多不同的需求，從用戶端應用程式。 最後，將予以繁雜因為這些不同的需求並有效地可能很類似於整合型應用程式或整合服務。 這是非常建議使用分割應用程式開發介面中的閘道多個服務或多個較小 API 閘道，其中每個表單係數類型執行個體的原因。
+圖 4-13 顯示自訂 API 閘道如何納入微服務架構。
+請務必在該圖表中將它反白顯示，您會使用面向多個和不同用戶端應用程式的單一自訂 API 閘道服務。 這項事實的風險可能十分重大，因為 API 閘道服務將會根據用戶端應用程式的許多不同需求而成長和演變。 最後，它會因為這些不同需求而十分繁雜，而且可能十分類似整合型應用程式或整合型服務。 這是極為建議將 API 閘道分割為多個服務或多個較小 API 閘道 (例如一個板型規格一個) 的原因。
 
 ![](./media/image13.png)
 
-**圖 4-13**。 使用 API 閘道實作為自訂的 Web API 服務
+**圖 4-13**. 使用實作為自訂 Web API 服務的 API 閘道
 
-在此範例中，API 閘道會實作為自訂的 Web API 服務執行的容器。
+在此範例中，API 閘道會實作為以容器形式執行的自訂 Web API 服務。
 
-如前所述，您應該實作數個應用程式開發介面閘道，以便您可以有不同的外觀，針對每個用戶端應用程式的需求。 每個 API 閘道可提供不同的應用程式開發介面量身訂做的每個用戶端應用程式中，可能甚至會根據用戶端衩怮藉由實作特定介面卡的下方呼叫多個內部 microservices 的程式碼。
+如前所述，您應該實作數個 API 閘道，以擁有每個用戶端應用程式需求的不同樣貌。 每個 API 閘道都可以提供針對每個用戶端應用程式量身訂做的不同 API，甚至可能會根據用戶端板型規格，方法是實作其下呼叫多個內部微服務的特定介面卡程式碼。
 
-由於自訂 API 閘道通常是資料彙總工具，您必須謹慎使用它。 通常最好是有單一彙總您的應用程式的所有內部 microservices API 閘道沒有資源。 若是如此，它會做為整合型彙總工具或 orchestrator，並藉由所有 microservices 違反自主微服務。 因此，應用程式開發介面閘道應該被隔離根據商務界限，並不針對做為整個應用程式彙總工具。
+因為自訂 API 閘道通常是資料彙總工具，所以您必須謹慎使用它。 通常不適合讓單一 API 閘道彙總您應用程式的所有內部微服務。 若是如此，它會作為整合型彙總工具或協調器，並且因結合所有微服務而違反微服務自主性。 因此，應該根據商務界限來隔離 API 閘道，而不是作為整個應用程式的彙總工具。
 
-有時候細微的 API 閘道可以也是微服務本身，而甚至可將網域或公司名稱及相關的資料。 擁有商務或網域所指定的 API 閘道的界限會幫助您獲得更好的設計。
+細微 API 閘道有時也可以是微服務本身，甚至具有領域或公司名稱和相關資料。 擁有商務或領域所指出的 API 閘道界限可幫助您獲得更好的設計。
 
-閘道應用程式開發介面層中的資料粒度可能特別適用於更進階的複合 UI 應用程式根據 microservices，因為更細緻的 API 閘道概念就類似於 UI 組合服務。 我們會討論這稍後在[根據建立複合 UI microservices](#creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices)。
+API 閘道層中的細微性可能特別適用於根據微服務的更進階複合 UI 應用程式，因為微調 API 閘道概念類似於 UI 組合服務。 我們稍後會在[建立根據微服務的複合 UI](#creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices) 中討論這點。
 
-因此，許多和大型-中型應用程式中使用自訂 API 閘道通常是較好的方法，但不是能作為單一龐大的彙總工具或唯一中央的自訂 API 閘道。
+因此，針對許多中型和大型應用程式，使用自訂建置的 API 閘道通常是不錯的方法，但不能作為單一整合型彙總工具或唯一中央自訂 API 閘道。
 
-另一個方法是使用像是產品[Azure API 管理](https://azure.microsoft.com/services/api-management/)如圖 4-14 版中所示。 這個方法不僅可以解決您的應用程式開發介面閘道需求，提供功能，例如收集 insights 從您的應用程式開發介面。 如果您使用 API 管理解決方案，API 閘道會是該完整的 API 管理方案中的元件。
+另一種方法是使用 [Azure API 管理](https://azure.microsoft.com/services/api-management/)這類產品，如圖 4-14 所示。 這種方法不僅可以解決 API 閘道需求，也可以提供收集 API 深入資訊這類功能。 如果您使用 API 管理解決方案，則 API 閘道只是該完整 API 管理解決方案內的元件。
 
 ![](./media/image14.png)
 
-**圖 4-14**。 您的應用程式開發介面閘道使用 Azure API 管理
+**圖 4-14**. 將 Azure API 管理用於 API 閘道
 
-在此情況下，當使用 Azure API 管理，您可能會有單一的應用程式開發介面閘道的事實等產品並不那麼風險因為這類的應用程式開發介面閘道 」 細"，這表示您不會實作自訂 C# 程式碼可能發展朝向整合元件。 
+在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道的這個事實的風險不大，因為這類 API 閘道較「輕量」，表示您未實作可能朝向整合型元件發展的自訂 C# 程式碼。 
 
-這種類型的產品更像是輸入通訊，其中也篩選從內部 microservices Api 以及將授權套用至已發行應用程式開發介面，此單一階層中的反向 proxy。
+這類型的產品更像是輸入通訊的反向 Proxy，在其中，您也可以從內部微服務篩選 API，以及將授權套用至這個單一階層的已發行 API。
 
-可從 API 管理系統說明的深入資訊了解您的應用程式開發介面的使用方式，而且正在執行的方式。 他們這麼做會讓您以接近即時的分析報告檢視及識別可能會影響您公司的趨勢。 此外，您可以要求和回應的活動，供進一步線上及離線分析的相關記錄檔。
+可從 API 管理系統取得的深入資訊可幫助您了解 API 使用方式和其執行方式。 作法是讓您檢視接近即時的分析報表，以及識別可能會影響您商務的趨勢。 此外，您可能會有要求和回應活動的記錄，以進行進一步線上及離線分析。
 
-使用 Azure API 管理，您可以保護您應用程式開發介面使用的索引鍵、 語彙基元，和 IP 篩選。 這些功能可讓您強制執行彈性且更細緻的配額和速率限制、 修改圖形和使用原則，您 Api 的行為，並改善快取回應的效能。
+使用 Azure API 管理，您可以使用金鑰、權杖和 IP 篩選來保護 API。 這些功能可讓您強制執行彈性且微調的配額和速率限制、使用原則修改您 API 的形狀和行為，並改善快取回應的效能。
 
-在本指南和參考範例應用程式 (eShopOnContainers) 中，我們會限制更簡單且自訂的容器化架構的架構，以便專注於一般的容器，而不需使用 Azure API 管理等的 PaaS 產品。 但對於大型微服務為基礎應用程式部署到 Microsoft Azure，建議您檢閱，並採用做為基底的 Azure API 管理的應用程式開發介面閘道。
+在本指南和參考範例應用程式 (eShopOnContainers) 中，我們會限制更簡單且自訂容器化架構的架構，以專注於一般容器，而不需要使用 Azure API 管理這類 PaaS 產品。 但對於部署至 Microsoft Azure 的大型微服務應用程式，建議您檢閱並採用作為 API 閘道基底的 Azure API 管理。
 
 ## <a name="drawbacks-of-the-api-gateway-pattern"></a>API 閘道模式的缺點
 
--   最重要的缺點是，當您實作應用程式開發介面閘道，您會結合該層內部 microservices 與。 像這樣的結合程度可能會造成嚴重的問題，您的應用程式。 Clemens Vaster，架構設計人員的 Azure 服務匯流排小組，是指在他此潛在難度"新 ESB 」 與 「[訊息和 Microservices](https://www.youtube.com/watch?v=rXi5CLjIQ9k)」 工作階段在 GOTO 2016。
+-   最大的缺點在於當您實作 API 閘道時，會結合該階層與內部微服務。 這類結合可能會造成您應用程式的嚴重問題。 Clemens Vaster 是 Azure 服務匯流排小組的架構設計人員，在他於 GOTO 2016 的 [Messaging and Microservices](https://www.youtube.com/watch?v=rXi5CLjIQ9k) (訊息和微服務) 講習會中將這項潛在困難稱為「新的 ESB」。
 
--   使用 API 閘道 microservices 建立其他可能單一失敗點。
+-   使用微服務 API 閘道會建立其他可能單一失敗點。
 
--   API 閘道可能導致回應時間增加由於額外的網路呼叫。 不過，這個額外的呼叫通常有較少的影響，而不需要用戶端介面，是太多話直接呼叫內部 microservices。
+-   API 閘道可能會導致因額外網路呼叫而增加回應時間。 不過，這個額外呼叫的影響通常會小於擁有過於頻繁直接呼叫內部微服務的用戶端介面。
 
--   如果未向外延展正確，API 閘道成為瓶頸。
+-   如果未正確地相應放大，則 API 閘道可能會成為瓶頸。
 
--   如果它包含自訂邏輯和資料彙總，API 閘道需要額外的開發成本和未來的維護。 開發人員必須更新 API 閘道，才能公開每個微服務端點。 此外，在內部 microservices 實作變更可能會導致 API 閘道層級的程式碼變更。 不過，如果應用程式開發介面閘道只將套用的安全性、 記錄和版本控制 （如同使用 Azure API 管理時），可能不會套用此額外的開發成本。
+-   如果 API 閘道包含自訂邏輯和資料彙總，則需要額外開發成本和未來維護。 開發人員必須更新 API 閘道，才能公開每個微服務的端點。 此外，內部微服務中的實作變更可能會導致 API 閘道層級的程式碼變更。 不過，如果 API 閘道只會套用安全性、記錄和版本控制 (就像使用 Azure API 管理時一樣)，可能不會套用這個額外的開發成本。
 
--   單一小組所開發的應用程式開發介面閘道，可以是開發瓶頸。 這是較佳的方法為何有數個不同的用戶端需要回應的處以精細 API 閘道的另一個原因。 您也可以在內部隔離 API 閘道為多個區域或不同處理內部 microservices 的小組所擁有的圖層。
+-   如果 API 閘道是由單一小組所開發，則可能會有開發瓶頸。 這是較佳方法是具有數個回應不同用戶端需求之微調 API 閘道的另一個原因。 您也可以在內部將 API 閘道區分為處理內部微服務之不同小組所擁有的多個區域或層級。
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Charles Richardson。模式： API 閘道 / 後的端前端**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson：Pattern: API Gateway / Backend for Front-End**
+    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html) (模式：API 閘道/前端的後端)
 
 -   **Azure API 管理**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 
--   **Udi Dahan。服務導向組合**\
+-   **Udi Dahan：Service Oriented Composition (服務導向組合)**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters。訊息和在 GOTO 2016 Microservices** （影片） [ *https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters：Messaging and Microservices at GOTO 2016** (影片) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k) (GOTO 2016 的訊息和微服務)
 
 
 >[!div class="step-by-step"]
-[上一個](識別的微服務-網域-模型-boundaries.md) [下一步] (通訊層中的微服務-architecture.md)
+[上一個] (identify-microservice-domain-model-boundaries.md) [下一個] (communication-in-microservice-architecture.md)

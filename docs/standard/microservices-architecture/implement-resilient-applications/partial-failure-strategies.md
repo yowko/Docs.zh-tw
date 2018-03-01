@@ -1,6 +1,6 @@
 ---
 title: "處理部分失敗的策略"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |處理部分失敗的策略"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 處理部分失敗的策略"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,45 +8,48 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>處理部分失敗的策略
 
-部分失敗的處理策略包括下列各項。
+處理部分失敗的策略包含下列項目。
 
-**使用非同步通訊 （例如，訊息為基礎的通訊） 跨內部 microservices**。 時，強烈建議建立跨內部 microservices 長的鏈結的同步 HTTP 呼叫，因為該錯誤的設計最後會變得不正確的潛在性中斷問題的主要原因。 相反地，除了用戶端應用程式與 microservices 或更細緻的 API 閘道的第一個層級之間的前端通訊，最好是使用只非同步 （訊息） 通訊的初始要求過去的一次 /回應循環，跨內部 microservices。 最終一致性和事件驅動的架構將有助於減少漣漪效果。 這些方法會強制執行較高層級的微服務自主性，以及因此防止此註明的問題。
+**使用跨內部微服務的非同步通訊 (例如以訊息為基礎的通訊)**。 我們強烈建議您不要跨內部微服務建立一長串的同步 HTTP 呼叫，因為不正確的設計最終可能會成為不良中斷的主要原因。 相反地，除了用戶端應用程式與微服務第一層或微調 API 閘道之間的前端通訊，通常建議在通過初始要求/回應循環之後僅使用跨內部微服務的非同步式 (以訊息為基礎) 通訊。 最終一致性和事件驅動架構會協助最小化漣漪效果。 這些方法會強制更高層級微服務的自主性，從而防止此處註明的問題。
 
-**重試使用指數型輪詢**。 這項技術有助於避免簡短，並藉由執行呼叫斷斷續續地發生失敗重試特定數目的時間，以防服務不是僅供一小段時間。 這可能是因為間歇性的網路問題或微服務/容器會移至叢集中不同節點。 不過，如果這些重試設計不是正確斷路器，它可以 aggravate 漣漪，最終甚至導致[阻絕服務 (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack)。
+**利用指數輪詢來使用重試**。 這項技術可在服務短時間內無法使用的情況下，藉由執行特定次數的呼叫重試，來協助避免簡短而間歇的失敗。 這可能會因為間歇性的網路問題或當微服務/容器移動到叢集中不同的節點時而發生。 然而，若這些重試並未適當的使用斷路器進行設計，它可能會加劇漣漪效果，並最終導致[enial of Service (DoS) (拒絕服務)](https://en.wikipedia.org/wiki/Denial-of-service_attack)。
 
-**因應措施網路逾時**。 一般情況下，用戶端應該正確不無限期地封鎖和等候回應時，一律使用逾時。 使用逾時，可確保，資源會永遠不會繫結起來，無限期。
+**網路逾時的因應措施**。 一般情況下，用戶端應設計成不會無限期的進行封鎖，並在等待回應時總是使用逾時。 使用逾時可確保資源不會無限期的遭到繫結。
 
-**使用斷路器模式**。 這種方法，用戶端處理序會追蹤失敗要求數目。 如果錯誤速率超過設定的限制時，「 斷路器 」 往返，以便進一步嘗試就會立即失敗。 （如果大量的要求失敗，這就表示服務無法使用，傳送要求，則不必。）逾時期限之後用戶端應該再試一次，如果新的要求成功，關閉斷路器。
+**使用斷路器模式**。 在這種方法中，用戶端處理序會追蹤失敗要求的次數。 若錯誤率超過設定的限制，則「斷路器」便會進行往返，使得更進一步的嘗試都會立即失敗。 (若有失敗的要求數目相當龐大，這表示服務無法使用，傳送要求沒有意義。)在逾時期間過後，用戶端應再試一次，並且當新的要求成功時，關閉斷路器。
 
-**提供後援**。 這種方法，用戶端處理序時，執行後援邏輯要求失敗，例如傳回快取的資料還是預設值。 這是一種方法適用於查詢，而且更複雜的更新或命令。
+**提供後援**。 在這種方法中，用戶端處理序會在要求失敗時執行後援邏輯，例如傳回快取資料或預設值。 這是一種適合查詢的方法，而針對更新或命令會更為複雜。
 
-**限制的佇列要求數目**。 用戶端應該也會造成未處理的用戶端微服務可以傳送給特定服務的要求數目上限。 如果已達到限制，它是提出其他要求，可能毫無意義，而且每次嘗試應該會立即失敗。 方面的實作，Polly[艙隔離](https://github.com/App-vNext/Polly/wiki/Bulkhead)原則可用來達到此需求。 這種方法是基本上與平行處理節流[SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1)做為實作。 它也允許艙以外的 「 佇列 」。 您可以主動剖析之前執行過多的負載，（比方說，因為容量會被視為完整）。 這可讓某些失敗情況下的其回應速度快過為斷路器，因為斷路器等候失敗。 Polly BulkheadPolicy 物件會公開多滿艙和佇列，以及提供事件發生溢位因此也可用來自動化的水平延展的磁碟機。
+**限制佇列要求的數目**。 用戶端也應設定用戶端微服務可傳送至特定服務之未處理要求的數目上限。 若達到該限制，則繼續傳送額外的要求可能會沒有意義，因此應讓那些嘗試立即失敗。 在實作方面，Polly [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) 原則可用於完成這項要求。 此方法本質上即是使用 [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) 作為實作的並行節流。 它也允許了艙壁之外的「佇列」。 您甚至可以在執行之前主動流出過量的負載 (例如因為容量被視為已滿)。 這可讓其回應特定失敗案例的速度比斷路器要來得更快，因為斷路器會等待失敗。 Polly 中的 BulkheadPolicy 物件會公開艙壁及佇列充滿的程度，並在溢位時提供事件，使其也可用於驅動自動化水平縮放。
 
 ## <a name="additional-resources"></a>其他資源
 
--   **恢復模式**
+-   **Resiliency patterns (復原模式)**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **新增恢復功能和最佳化效能**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+-   **Adding Resilience and Optimizing Performance (新增復原及最佳化效能)**
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **艙。** GitHub 儲存機制。 Polly 原則的實作。 \
+-   **Bulkhead。** GitHub 存放庫。 Polly 原則的實作。\
     [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **設計 Azure 的應用程式彈性**
+-   **Designing resilient applications for Azure (為 Azure 設計復原應用程式)**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   **暫時性錯誤處理**
+-   **Transient fault handling (暫時性錯誤處理)**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 
 >[!div class="step-by-step"]
-[上一個](控制代碼的部分-failure.md) [下一步] (實作-重試-指數-backoff.md)
+[上一頁] (handle-partial-failure.md) [下一頁] (implement-retries-exponential-backoff.md)

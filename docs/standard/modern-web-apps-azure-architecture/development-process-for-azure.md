@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Azure 的開發程序
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
 
 **圖 10-1。** 在 Visual Studio 2017 安裝.NET Core 工作負載。
 
-[下載 Visual Studio 2017](https://www.visualstudio.com/downloads/)
+[下載 Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio 程式碼和 dotnet CLI** （適用於 Mac、 Linux 和 Windows 的跨平台工具）。 如果您想支援任何開發語言的輕量型和跨平台編輯器，您可以使用 Microsoft Visual Studio 程式碼及 dotnet CLI。 這些產品提供簡化的開發人員工作流程的簡單但強大體驗。 此外，Visual Studio 程式碼支援擴充功能的 C\#及 web 程式開發，提供 intellisense 和快顯的工作，在編輯器中。
 
@@ -56,9 +56,9 @@ ms.lasthandoff: 12/23/2017
 
 若要建立您的應用程式的發行管線，您需要有原始檔控制中的應用程式程式碼。 設定本機儲存機制並將它連接至 team 專案中的遠端儲存機制。 遵循下列指示：
 
--   [Visual Studio 與 Git 共用程式碼](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs)或
+-   [Visual Studio 與 Git 共用程式碼](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
 
--   [與 TFVC 和 Visual Studio 共用程式碼](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [與 TFVC 和 Visual Studio 共用程式碼](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 建立 Azure 應用程式服務，您要在其中部署應用程式。 建立 Web 應用程式，請前往 Azure 入口網站上的 [應用程式服務] 刀鋒視窗。 按一下 [+ 新增]，選取的 Web 應用程式範本、 按一下 [建立] 並提供名稱和其他詳細資料。 Web 應用程式仍可從 {name}。 名稱是.azurewebsites.net。
 
@@ -68,13 +68,13 @@ ms.lasthandoff: 12/23/2017
 
 CI 的建置程序將會執行自動化的組建，每當新的程式碼致力於專案的原始檔控制儲存機制。 這可讓您建置程式碼的立即回應 （甚至是理想的情況下，會將自動化的測試的傳遞），而且可能部署。 這個 CI 組建將會產生 web 部署封裝成品並發佈它供您的 CD 程序。
 
-[定義 CI 建置流程](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[定義 CI 建置流程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 請務必啟用連續整合，因此系統將組建排入佇列中的某個人您的小組認可新的程式碼時。 測試建置，並確認它產生 web 部署套件做為其中一個及其成品。
 
 建置成功時，您的 CD 程序會加入至 Azure web 應用程式部署 CI 組建的結果。 若要設定這種情況，您需要建立及設定*發行*，這會將部署到您的 Azure 應用程式服務。
 
-[定義您的 CD 發行流程](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[定義您的 CD 發行流程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 CI/CD 管線設定之後，您就可以只讓 web 應用程式的更新，並將它們部署的原始檔控制中認可這些。
 
@@ -92,7 +92,7 @@ CI/CD 管線設定之後，您就可以只讓 web 應用程式的更新，並將
 
 #### <a name="step-2-application-code-repository"></a>步驟 2： 應用程式程式碼儲存機制
 
-當您準備好要與小組共用您的程式碼時，您應該從您的本機來源儲存機制推送變更至您的小組共用的原始程式碼儲存機制。 如果您已在自訂的分支中，這個步驟通常包含您的程式碼合併到共用的分支 (可能是透過的方式[提取要求](https://www.visualstudio.com/docs/git/pull-requests))。
+當您準備好要與小組共用您的程式碼時，您應該從您的本機來源儲存機制推送變更至您的小組共用的原始程式碼儲存機制。 如果您已在自訂的分支中，這個步驟通常包含您的程式碼合併到共用的分支 (可能是透過的方式[提取要求](https://docs.microsoft.com/vsts/git/pull-requests))。
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步驟 3： 持續整合組建伺服器:。 建置、 測試套件
 
@@ -113,7 +113,7 @@ CI/CD 管線設定之後，您就可以只讓 web 應用程式的更新，並將
 ## <a name="references"></a>參考
 
 **建置和部署您的 ASP.NET Core 應用程式至 Azure**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

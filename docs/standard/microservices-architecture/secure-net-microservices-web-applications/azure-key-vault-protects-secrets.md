@@ -1,6 +1,6 @@
 ---
-title: "在實際執行階段保護機密資訊使用 Azure 金鑰保存庫"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |在實際執行階段保護機密資訊使用 Azure 金鑰保存庫"
+title: "使用 Azure Key Vault 以在生產階段保護密碼"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Azure Key Vault 以在生產階段保護密碼"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: mjrousos
 ms.author: wiwagn
@@ -8,32 +8,35 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7f922997e8d0c63e206cd68f4efda14985c86b72
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>在實際執行階段保護機密資訊使用 Azure 金鑰保存庫
+# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 以在生產階段保護密碼
 
-密碼儲存為環境變數，或儲存的密碼管理員工具仍會儲存在本機，並在電腦上未加密。 儲存機密資料的更安全選項是[Azure 金鑰保存庫](https://azure.microsoft.com/services/key-vault/)，這樣會提供安全的中央位置來儲存金鑰和密碼。
+儲存為環境變數或由密碼管理員工具所儲存的密碼仍然會儲存在本機，而且在電腦上未加密。 儲存密碼的更安全選項是 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)，以提供安全且集中的位置來儲存金鑰和密碼。
 
-Microsoft.Extensions.Configuration.AzureKeyVault 封裝可讓 ASP.NET Core 應用程式來讀取 Azure 金鑰保存庫中的組態資訊。 若要開始使用 Azure 金鑰保存庫中的機密資料，您可以依照下列步驟：
+Microsoft.Extensions.Configuration.AzureKeyVault 套件允許 ASP.NET Core 應用程式從 Azure Key Vault 中讀取組態資訊。 若要開始使用 Azure Key Vault 中的密碼，您可以遵循下列步驟：
 
-首先，為 Azure AD 應用程式註冊您的應用程式。 （金鑰保存庫的存取是由 Azure AD 管理）。這可以透過 Azure 管理入口網站。
+首先，將應用程式註冊為 Azure AD 應用程式  (對金鑰保存庫的存取是由 Azure AD 所管理)。這可以透過 Azure 管理入口網站完成。
 
-或者，如果您希望應用程式使用憑證，而不密碼或用戶端密碼進行驗證，您可以使用[新增 AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) PowerShell cmdlet。 Azure 金鑰保存庫中註冊的憑證必須只有您的公開金鑰。 （您的應用程式會使用私密金鑰）。
+或者，如果您想要應用程式使用憑證進行驗證，而不是使用密碼或用戶端密碼，則可以使用 [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) PowerShell Cmdlet。 您向 Azure Key Vault 註冊的憑證只需要公開金鑰  (您的應用程式將會使用私密金鑰)。
 
-第二，提供已註冊的應用程式的存取金鑰保存庫，藉由建立新的服務主體。 您可以使用下列 PowerShell 命令：
+第二，建立新的服務主體，以提供已註冊應用程式對金鑰保存庫的存取。 您可以使用下列 PowerShell 命令執行這項作業：
 
 ```powershell
 $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
 Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
 ```
 
-第三，包含金鑰保存庫做為組態中的來源應用程式藉由呼叫 IConfigurationBuilder.AddAzureKeyVault 擴充方法，當您建立 IConfigurationRoot 執行個體。 請注意，呼叫 AddAzureKeyVault 將需要已註冊並提供存取金鑰保存庫在先前步驟中的應用程式識別碼。
+第三，在建立 IConfigurationRoot 執行個體時呼叫 IConfigurationBuilder.AddAzureKeyVault 擴充方法，以包含金鑰保存庫作為應用程式中的組態來源。 請注意，呼叫 AddAzureKeyVault 時需要已註冊並提供先前步驟中金鑰保存庫存取權的應用程式識別碼。
 
-  目前，標準.NET 和.NET Core 支援取得組態資訊從 Azure 金鑰保存庫使用用戶端識別碼和用戶端密碼。 .NET framework 應用程式可以使用 IConfigurationBuilder.AddAzureKeyVault 採用的憑證來取代用戶端密碼的多載。 工作是在撰寫本文[正在](https://github.com/aspnet/Configuration/issues/605)將該多載提供的標準.NET 和.NET 核心。 接受憑證可用於 AddAzureKeyVault 多載中，直到 ASP.NET Core 應用程式可以存取 Azure 金鑰保存庫憑證為基礎的驗證與明確建立 KeyVaultClient 物件，如下列範例所示：
+  目前，.NET Standard 和 .NET Core 支援使用用戶端識別碼和用戶端密碼，以從 Azure Key Vault 取得組態資訊。 .NET Framework 應用程式可以使用採用憑證來取代用戶端密碼的 IConfigurationBuilder.AddAzureKeyVault 多載。 從這項撰寫開始，工作[正在進行](https://github.com/aspnet/Configuration/issues/605)，讓該多載可在 .NET Standard 和 .NET Core 中使用。 除非接受憑證的 AddAzureKeyVault 多載可用，否則 ASP.NET Core 應用程式可以明確建立 KeyVaultClient 物件，以使用憑證型驗證來存取 Azure Key Vault，如下列範例所示：
 
 ```csharp
 // Configure Key Vault client
@@ -58,24 +61,24 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
         new DefaultKeyVaultSecretManager());
 ```
 
-在此範例中，AddAzureKeyVault 呼叫是在組態提供者登錄的結尾。 它是 Azure 金鑰保存庫註冊為最後的組態提供者，使其具有可以覆寫組態值，從上一個提供者，以及任何其他來源的組態值會覆寫從金鑰保存庫的最佳作法。
+在此範例中，AddAzureKeyVault 呼叫是在組態提供者登錄的結尾。 最好將 Azure Key Vault 註冊為最後一個組態提供者，讓它可以覆寫先前提供者中的組態值，因此其他來源中的組態值不會覆寫金鑰保存庫中的組態值。
 
 ## <a name="additional-resources"></a>其他資源
 
--   **使用 Azure 金鑰保存庫保護應用程式密碼**
+-   **使用 Azure Key Vault 保護應用程式密碼**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **在開發期間的應用程式密碼的安全存放**
+-   **在開發期間安全儲存應用程式密碼**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
 -   **設定資料保護**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
 -   **金鑰管理和存留期**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#資料保護的預設設定*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   **Microsoft.Extensions.Configuration.DockerSecrets。** GitHub 儲存機制。
+-   **Microsoft.Extensions.Configuration.DockerSecrets.** GitHub 存放庫。
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[上一個](開發人員為應用程式-機密-storage.md) [下一步] (.../ 索引鍵 takeaways.md）
+[上一個] (developer-app-secrets-storage.md) [下一個] (../key-takeaways.md)

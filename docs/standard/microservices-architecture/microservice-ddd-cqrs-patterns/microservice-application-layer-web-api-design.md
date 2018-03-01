@@ -1,54 +1,57 @@
 ---
-title: "設計微服務應用程式層和 Web API"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |設計微服務應用程式層和 Web API"
+title: "設計微服務應用程式層及 Web API"
+description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服務應用程式層及 Web API"
 keywords: "Docker, 微服務, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7509b470a30005dd48fa88eefa91f7ed241e4e09
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="designing-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層和 Web API
+# <a name="designing-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層及 Web API
 
-## <a name="using-solid-principles-and-dependency-injection"></a>使用純色的原則和相依性插入
+## <a name="using-solid-principles-and-dependency-injection"></a>使用 SOLID 準則及相依性插入
 
-純色的原則是重要的技術，以用於任何現代和業務關鍵應用程式，例如開發與 DDD 模式微服務。 實線是為縮寫字的五個群組的基本原則：
+SOLID 準則是用於任何現代及任務關鍵性應用程式的重要技術，例如使用 DDD 模式開發微服務。 SOLID 是五個基本準則的縮寫：
 
--   單一責任原則
+-   單一責任準則 (Single Responsibility principle)
 
--   開啟/關閉原則
+-   開啟/關閉準則 (Open/closed principle)
 
--   Liskov 替代的原則
+-   里斯可夫替代準則 (Liskov substitution principle)
 
--   反轉隔離原則
+-   反轉隔離準則 (Inversion segregation principle)
 
--   相依性反向原則
+-   相依性反轉準則 (Dependency Inversion principle)
 
-實線是更多有關您如何設計應用程式或微服務內部層級，以及減少之間的相依性。 沒有關聯到網域，但應用程式的技術設計。 最後一個原則，也就是相依性反向 (DI) 原則，可讓您分離其餘的圖層，可讓 DDD 圖層的好解除解合的實作基礎結構層。
+SOLID 與您設計應用程式或微服務的內部層及減少其之間的相依性關係更為密切。 它與領域無關，而是與應用程式的技術設計有關。 最後一個準則，相依性反轉 (DI) 準則，可允許您將基礎結構層和剩餘的層分離，使其可更進一步的分離 DDD 層的實作。
 
-DI 是一種方式實作的相依性反向原則。 它是針對達到物件及其相依性之間的鬆散偶合的技術。 而非直接具現化共同作業者，或使用靜態參考，才能執行其動作的類別需要的物件是提供給 （或 「 插入 」） 的類別。 大多數情況下，類別會宣告透過其建構函式，讓他們遵循明確的相依性原則及其相依性。 DI 通常根據特定的逆轉控制 (IoC) 容器。 ASP.NET Core 提供簡單的內建 IoC 容器，但您也可以使用您最愛的 IoC 容器，例如 Autofac 或 Ninject。
+DI 是一種實作相依性反轉準則的方式。 它是一種為了達到物件及其相依性間鬆散結合的技術。 類別要執行其動作所需的物件，會提供 (或「插入」) 給類別，而不是直接具現化共同作業者，或使用靜態參考。 大多數情況下，類別會透過其建構函式宣告它們的相依性，讓他們能遵循「明確相依性準則」。 DI 通常會基於特定的控制反轉 (IoC) 容器。 ASP.NET Core 提供了簡單的內建 IoC 容器，但您也可以使用您最愛的 IoC 容器，例如 Autofac 或 Ninject。
 
-依照實心原則，類別通常會自然小型、 構造良好且輕鬆地測試過。 但是，您要如何知道是否太多的相依性會被插入您的類別？ 如果您使用 DI 透過建構函式時，就可輕易偵測出只要查看您建構函式的參數數目。 如果有太多的相依性，這通常是一個符號 ([程式碼氣味](http://deviq.com/code-smells/)) 嘗試太多，您的類別，並可能會違反單一責任原則。
+藉由遵循 SOLID 準則，您的類別自然而然會傾向小型、構造良好且輕鬆的測試。 但是如何才能知道您的類別已插入太多相依性？ 若您是透過建構函式使用 DI，您可以藉由查看您建構函式參數的數量來進行偵測。 若有太多的相依性，這通常表示 ([code smell (程式碼異味)](http://deviq.com/code-smells/)) 您的類別嘗試完成太多事項，並且可能違反了單一責任準則。
 
-需要其他的指南，以涵蓋詳細的實線。 因此，本指南必須要有這些主題的最小知識。
+通常需要其他指南才能完整涵蓋 SOLID 的詳細資料。 因此，本指南僅需要您具備關於這些主題的最低程度知識。
 
 #### <a name="additional-resources"></a>其他資源
 
--   **實線： 基本 OOP 原則**
+-   **SOLID: Fundamental OOP Principles (SOLID：基礎 OOP 準則)**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **逆轉控制容器和相依性插入模式**
+-   **Inversion of Control Containers and the Dependency Injection pattern (控制反轉容器及相依性插入模式)**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith。新是黏附**
+-   **Steve Smith。New is Glue (新的便是黏的)**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 
 >[!div class="step-by-step"]
-[上一個](nosql-資料庫-持續性-infrastructure.md) [下一步] (microservice-application-layer-implementation-web-api.md)
+[上一頁] (nosql-database-persistence-infrastructure.md) [下一頁] (microservice-application-layer-implementation-web-api.md)

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>逐步解說：使用型別提供者存取 SQL 資料庫
 
 > [!NOTE]
-本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
+本指南針對 F # 3.0 所撰寫，而且會更新。  請參閱 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 以取得最新的跨平台型別提供者。
 
 > [!NOTE]
 應用程式開發介面參考連結將帶您到 MSDN。  docs.microsoft.com API 參考不完整。
@@ -96,7 +96,7 @@ open Microsoft.FSharp.Linq
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>若要設定從直接連接資料庫的型別提供者
 
-有兩個重要的行，您需要以建立可讓您查詢 SQL 資料庫使用的型別提供者類型的程式碼。 首先，您具現化型別提供者。 若要這樣做，建立 外觀類型縮寫`SqlDataConnection`與靜態泛型參數。 `SqlDataConnection`SQL 型別提供者，而且不應該與混淆`SqlConnection`類型，它是在 ADO.NET 程式設計中使用。 如果您有一個資料庫，您想要連接，而且連接字串，使用下列程式碼叫用型別提供者。 取代為指定的字串範例連接字串。 例如，如果您的伺服器 MYSERVER 和資料庫執行個體是執行個體、 資料庫名稱是 MyDatabase，和您想要使用 Windows 驗證來存取資料庫，則連接字串會是做為提供下列的範例程式碼。
+有兩個重要的行，您需要以建立可讓您查詢 SQL 資料庫使用的型別提供者類型的程式碼。 首先，您具現化型別提供者。 若要這樣做，建立 外觀類型縮寫`SqlDataConnection`與靜態泛型參數。 `SqlDataConnection` SQL 型別提供者，而且不應該與混淆`SqlConnection`類型，它是在 ADO.NET 程式設計中使用。 如果您有一個資料庫，您想要連接，而且連接字串，使用下列程式碼叫用型別提供者。 取代為指定的字串範例連接字串。 例如，如果您的伺服器 MYSERVER 和資料庫執行個體是執行個體、 資料庫名稱是 MyDatabase，和您想要使用 Windows 驗證來存取資料庫，則連接字串會是做為提供下列的範例程式碼。
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">
@@ -449,7 +449,7 @@ INSERT INTO Table3 (Id, Name, Data)
 ```
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [類型提供者](index.md)
 
 [SqlDataConnection 類型提供者](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqldataconnection-type-provider-%5bfsharp%5d)
