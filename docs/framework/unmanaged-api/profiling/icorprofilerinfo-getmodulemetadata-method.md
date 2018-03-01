@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorProfilerInfo.GetModuleMetaData
-api_location: mscorwks.dll
-api_type: COM
-f1_keywords: ICorProfilerInfo::GetModuleMetaData
+api_name:
+- ICorProfilerInfo.GetModuleMetaData
+api_location:
+- mscorwks.dll
+api_type:
+- COM
+f1_keywords:
+- ICorProfilerInfo::GetModuleMetaData
 helpviewer_keywords:
 - GetModuleMetaData method [.NET Framework profiling]
 - ICorProfilerInfo::GetModuleMetaData method [.NET Framework profiling]
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
-topic_type: apiref
-caps.latest.revision: "15"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ad52460bcd6eb320e970cd0ce2078f2e93df353
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -57,7 +64,7 @@ HRESULT GetModuleMetaData(
 ## <a name="remarks"></a><span data-ttu-id="f2da4-112">備註</span><span class="sxs-lookup"><span data-stu-id="f2da4-112">Remarks</span></span>  
  <span data-ttu-id="f2da4-113">您可能會在讀取/寫入模式中開啟中繼資料要求，但是這樣會導致程式的中繼資料執行速度緩慢，編譯器所顯示的一樣，因為變更無法最佳化中繼資料。</span><span class="sxs-lookup"><span data-stu-id="f2da4-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
   
- <span data-ttu-id="f2da4-114">某些模組 （例如資源模組） 會有任何中繼資料。</span><span class="sxs-lookup"><span data-stu-id="f2da4-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="f2da4-115">在這些情況下，`GetModuleMetaData`會傳回 S_FALSE 和中的 null 的 HRESULT 值 *`ppOut`。</span><span class="sxs-lookup"><span data-stu-id="f2da4-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.</span></span>  
+ <span data-ttu-id="f2da4-114">某些模組 （例如資源模組） 會有任何中繼資料。</span><span class="sxs-lookup"><span data-stu-id="f2da4-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="f2da4-115">在這些情況下，`GetModuleMetaData`會傳回 S_FALSE 和中的 null 的 HRESULT 值 \*`ppOut`。</span><span class="sxs-lookup"><span data-stu-id="f2da4-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
   
 ## <a name="requirements"></a><span data-ttu-id="f2da4-116">需求</span><span class="sxs-lookup"><span data-stu-id="f2da4-116">Requirements</span></span>  
  <span data-ttu-id="f2da4-117">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f2da4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  

@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: hosting services [WCF], WAS
+helpviewer_keywords:
+- hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |--------------|-------------------|----------------------|---------------------------|  
 |<span data-ttu-id="c6332-129">僅限 HTTP</span><span class="sxs-lookup"><span data-stu-id="c6332-129">HTTP Only</span></span>|<span data-ttu-id="c6332-130">http: *: 80:\*</span><span class="sxs-lookup"><span data-stu-id="c6332-130">http: *:80:\*</span></span>|<span data-ttu-id="c6332-131">/appTwo</span><span class="sxs-lookup"><span data-stu-id="c6332-131">/appTwo</span></span>|<span data-ttu-id="c6332-132">http://localhost/appTwo/</span><span class="sxs-lookup"><span data-stu-id="c6332-132">http://localhost/appTwo/</span></span>|  
 |<span data-ttu-id="c6332-133">HTTP 和非 HTTP 兩者</span><span class="sxs-lookup"><span data-stu-id="c6332-133">Both HTTP and Non-HTTP</span></span>|<span data-ttu-id="c6332-134">http: *: 80:\*</span><span class="sxs-lookup"><span data-stu-id="c6332-134">http: *:80:\*</span></span><br /><br /> <span data-ttu-id="c6332-135">net.tcp: 808:\*</span><span class="sxs-lookup"><span data-stu-id="c6332-135">net.tcp: 808:\*</span></span>|<span data-ttu-id="c6332-136">/appTwo</span><span class="sxs-lookup"><span data-stu-id="c6332-136">/appTwo</span></span>|<span data-ttu-id="c6332-137">http://localhost/appTwo/</span><span class="sxs-lookup"><span data-stu-id="c6332-137">http://localhost/appTwo/</span></span><br /><span data-ttu-id="c6332-138">net.tcp://localhost/appTwo/</span><span class="sxs-lookup"><span data-stu-id="c6332-138">net.tcp://localhost/appTwo/</span></span>|  
-|<span data-ttu-id="c6332-139">僅限非 HTTP</span><span class="sxs-lookup"><span data-stu-id="c6332-139">Non-HTTP only</span></span>|<span data-ttu-id="c6332-140">net.pipe: *</span><span class="sxs-lookup"><span data-stu-id="c6332-140">net.pipe: *</span></span>|<span data-ttu-id="c6332-141">/appThree</span><span class="sxs-lookup"><span data-stu-id="c6332-141">/appThree</span></span>|<span data-ttu-id="c6332-142">net.pipe://appThree/</span><span class="sxs-lookup"><span data-stu-id="c6332-142">net.pipe://appThree/</span></span>|  
+|<span data-ttu-id="c6332-139">僅限非 HTTP</span><span class="sxs-lookup"><span data-stu-id="c6332-139">Non-HTTP only</span></span>|<span data-ttu-id="c6332-140">net.pipe: \*</span><span class="sxs-lookup"><span data-stu-id="c6332-140">net.pipe: \*</span></span>|<span data-ttu-id="c6332-141">/appThree</span><span class="sxs-lookup"><span data-stu-id="c6332-141">/appThree</span></span>|<span data-ttu-id="c6332-142">net.pipe://appThree/</span><span class="sxs-lookup"><span data-stu-id="c6332-142">net.pipe://appThree/</span></span>|  
   
  <span data-ttu-id="c6332-143">您也可以針對應用程式中的服務與資源加以定址。</span><span class="sxs-lookup"><span data-stu-id="c6332-143">Services and resources within an application can also be addressed.</span></span> <span data-ttu-id="c6332-144">在應用程式中，應用程式資源會以相對於基底應用程式路徑的方式定址。</span><span class="sxs-lookup"><span data-stu-id="c6332-144">Within an application, application resources are addressed relative to the base application path.</span></span> <span data-ttu-id="c6332-145">例如，假定電腦名稱 contoso.com 上的某個網站同時包含 HTTP 和 Net.TCP 通訊協定的網站繫結。</span><span class="sxs-lookup"><span data-stu-id="c6332-145">For example, assume that a site on a machine name contoso.com has site bindings for both the HTTP and Net.TCP protocols.</span></span> <span data-ttu-id="c6332-146">同時假定該網站包含一個位於 /Billing 的應用程式，以便在 GetOrders.svc 公開服務。</span><span class="sxs-lookup"><span data-stu-id="c6332-146">Also assume that the site contains one application located at /Billing, which exposes a service at GetOrders.svc.</span></span> <span data-ttu-id="c6332-147">這時，如果 GetOrders.svc 服務公開了包含 SecureEndpoint 相對位址的端點，則服務端點會在下列兩個 URL 中公開：</span><span class="sxs-lookup"><span data-stu-id="c6332-147">Then, if the GetOrders.svc service exposed an endpoint with a relative address of SecureEndpoint, the service endpoint would be exposed at the following two URIs:</span></span>  
   

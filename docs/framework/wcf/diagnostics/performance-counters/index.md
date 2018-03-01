@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: performance counters [WCF]
+helpviewer_keywords:
+- performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <span data-ttu-id="0c093-109">ServiceOnly：只啟用 ServiceModelService 類別的計數器。</span><span class="sxs-lookup"><span data-stu-id="0c093-109">ServiceOnly: Only ServiceModelService category counters are enabled.</span></span> <span data-ttu-id="0c093-110">此為預設值。</span><span class="sxs-lookup"><span data-stu-id="0c093-110">This is the default value.</span></span>  
   
--   <span data-ttu-id="0c093-111">Off：ServiceModel* 效能計數器會停用。</span><span class="sxs-lookup"><span data-stu-id="0c093-111">Off: ServiceModel* performance counters are disabled.</span></span>  
+-   <span data-ttu-id="0c093-111">Off：ServiceModel\* 效能計數器會停用。</span><span class="sxs-lookup"><span data-stu-id="0c093-111">Off: ServiceModel\* performance counters are disabled.</span></span>  
   
  <span data-ttu-id="0c093-112">如果您要啟用所有 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 應用程式的效能計數器，可以將組態設定放在 Machine.config 檔案中。</span><span class="sxs-lookup"><span data-stu-id="0c093-112">If you want to enable performance counters for all [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] applications, you can place the configuration settings in the Machine.config file.</span></span>  <span data-ttu-id="0c093-113">請參閱**的效能計數器增加記憶體大小**下面章節，如需有關您電腦上設定足夠的記憶體效能計數器。</span><span class="sxs-lookup"><span data-stu-id="0c093-113">Please see the **Increasing Memory Size for Performance Counters** section below for more information on configuring sufficient memory for performance counters on your machine.</span></span>  
   

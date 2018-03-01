@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: COM+ [WCF], using service model configuration tool
+helpviewer_keywords:
+- COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd89a3333ab68b7d580c813a4b7741686b46c5b6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      <span data-ttu-id="17be8-117">此命令會將 `IFinances` 元件的 `ItemOrders.IFinancial` 介面 (來自 OnlineStore COM+ 應用程式) 新增到即將公開為 Web 服務的介面集合。</span><span class="sxs-lookup"><span data-stu-id="17be8-117">The command adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="17be8-118">服務將使用 COM+ 裝載模式，因此需要明確的應用程式啟動。</span><span class="sxs-lookup"><span data-stu-id="17be8-118">The service uses the COM+ hosting mode and therefore requires explicit application activation.</span></span>  
   
-     <span data-ttu-id="17be8-119">儘管萬用星號 (*) 字元可以用在元件與介面上，但是因為您可能只想要將選取的功能公開為 Web 服務，因此請避免使用該字元。</span><span class="sxs-lookup"><span data-stu-id="17be8-119">While the wildcard asterisk (*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="17be8-120">如果與此元件的未來版本一起執行，使用萬用字元會不小心將決定組態語法時尚不存在的介面一併公開出來。</span><span class="sxs-lookup"><span data-stu-id="17be8-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
+     <span data-ttu-id="17be8-119">儘管萬用星號 (\*) 字元可以用在元件與介面上，但是因為您可能只想要將選取的功能公開為 Web 服務，因此請避免使用該字元。</span><span class="sxs-lookup"><span data-stu-id="17be8-119">While the wildcard asterisk (\*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="17be8-120">如果與此元件的未來版本一起執行，使用萬用字元會不小心將決定組態語法時尚不存在的介面一併公開出來。</span><span class="sxs-lookup"><span data-stu-id="17be8-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
   
      <span data-ttu-id="17be8-121">/verbose 選項會指示工具在任何錯誤旁邊加上警告。</span><span class="sxs-lookup"><span data-stu-id="17be8-121">The /verbose option instructs the tool to display warnings in addition to any errors.</span></span>  
   
