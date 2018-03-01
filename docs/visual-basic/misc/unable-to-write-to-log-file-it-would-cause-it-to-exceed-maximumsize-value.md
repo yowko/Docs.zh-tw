@@ -2,11 +2,13 @@
 title: "無法寫入記錄檔，因為如果寫入，會使它超過 MaximumSize 值"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrApplicationLog_FileExceedsMaximumSize
+f1_keywords:
+- vbrApplicationLog_FileExceedsMaximumSize
 ms.assetid: 61747a9c-e460-424b-a365-73cdba9dd428
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4004dca2a3b9f13583cfdfe43f89bc4bff5dd6d6

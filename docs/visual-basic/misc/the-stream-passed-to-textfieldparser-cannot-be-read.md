@@ -2,11 +2,13 @@
 title: "無法讀取傳遞給 TextFieldParser 的資料流"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrTextFieldParser_StreamNotReadable
+f1_keywords:
+- vbrTextFieldParser_StreamNotReadable
 ms.assetid: b6ac8043-b939-441c-822f-de6f16f45525
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9891925798d610995d006bb8103ee5c7465d17be

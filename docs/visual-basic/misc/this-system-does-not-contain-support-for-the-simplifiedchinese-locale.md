@@ -2,11 +2,13 @@
 title: "此系統沒有包含簡體中文地區設定的支援"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_SCNotSupported
+f1_keywords:
+- vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 72e86b5b5132f4c7ffff31642d20455605179952
