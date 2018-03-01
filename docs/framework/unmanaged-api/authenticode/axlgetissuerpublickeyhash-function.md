@@ -5,18 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: _AxlGetIssuerPublicKeyHash
-api_location: clr.dll
-api_type: DLLExport
+api_name:
+- _AxlGetIssuerPublicKeyHash
+api_location:
+- clr.dll
+api_type:
+- DLLExport
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fee2b3e0e74ec13009a9b02d226c6a99b0e2f34b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -40,7 +45,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
  <span data-ttu-id="da12e-106">[in] CSP 公開金鑰 Blob。</span><span class="sxs-lookup"><span data-stu-id="da12e-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="da12e-107">請參閱[CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx)結構。</span><span class="sxs-lookup"><span data-stu-id="da12e-107">See the [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) structure.</span></span>  
   
  `ppwszPublicKeyHash`  
- <span data-ttu-id="da12e-108">[out] WCHAR * (要接收十六進位編碼的公開金鑰語彙基元) 的指標。</span><span class="sxs-lookup"><span data-stu-id="da12e-108">[out] A pointer to WCHAR * to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="da12e-108">[out] WCHAR \* (要接收十六進位編碼的公開金鑰語彙基元) 的指標。</span><span class="sxs-lookup"><span data-stu-id="da12e-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
 ## <a name="return-value"></a><span data-ttu-id="da12e-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="da12e-109">Return Value</span></span>  
  <span data-ttu-id="da12e-110">若函式成功則傳回 `S_OK`：反之則傳回 `S_FALSE`。</span><span class="sxs-lookup"><span data-stu-id="da12e-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  

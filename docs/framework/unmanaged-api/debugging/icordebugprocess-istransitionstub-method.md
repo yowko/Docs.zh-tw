@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.IsTransitionStub
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::IsTransitionStub
+api_name:
+- ICorDebugProcess.IsTransitionStub
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::IsTransitionStub
 helpviewer_keywords:
 - ICorDebugProcess::IsTransitionStub method [.NET Framework debugging]
 - IsTransitionStub method [.NET Framework debugging]
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9fe38cf5f53c2514b845238c1d52fa12df526fdd
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT IsTransitionStub(
  <span data-ttu-id="84085-106">[in]A`CORDB_ADDRESS`值，指定有問題的位址。</span><span class="sxs-lookup"><span data-stu-id="84085-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
   
  `pbTransitionStub`  
- <span data-ttu-id="84085-107">[out]為的布林值的指標`true`如果指定的位址是內部的虛設常式會將導致轉換為 managed 程式碼; 否則為 *`pbTransitionStub`是`false`。</span><span class="sxs-lookup"><span data-stu-id="84085-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise *`pbTransitionStub` is `false`.</span></span>  
+ <span data-ttu-id="84085-107">[out]為的布林值的指標`true`如果指定的位址是內部的虛設常式會將導致轉換為 managed 程式碼; 否則為 \*`pbTransitionStub`是`false`。</span><span class="sxs-lookup"><span data-stu-id="84085-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="84085-108">備註</span><span class="sxs-lookup"><span data-stu-id="84085-108">Remarks</span></span>  
  <span data-ttu-id="84085-109">`IsTransitionStub`決定何時將逐步執行控制權傳回給受管理的 stepper unmanaged 逐步執行程式碼可以使用方法。</span><span class="sxs-lookup"><span data-stu-id="84085-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
