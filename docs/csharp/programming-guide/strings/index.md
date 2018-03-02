@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/19/2018
  <xref:System.Console.WriteLine%2A> 方法的其中一個多載會採用格式字串作為參數。 因此，您可以僅內嵌格式字串常值，而不需要明確呼叫方法。 不過，如果您使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法，以在 Visual Studio [輸出] 視窗中顯示偵錯輸出，則必須明確呼叫 <xref:System.String.Format%2A> 方法，因為 <xref:System.Diagnostics.Trace.WriteLine%2A> 只接受字串，而不接受格式字串。 如需格式字串的詳細資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。  
   
 ## <a name="substrings"></a>子字串  
- 子字串是包含在字串中的任何字元序列。 使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。 您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。 使用 <xref:System.String.Replace%2A> 方法，以新字串取代所有指定的子字串。 與 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新字串，並不會修改原始字串。 如需詳細資訊，請參閱[如何︰使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)以及[如何︰修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
+ 子字串是包含在字串中的任何字元序列。 使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。 您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。 使用 <xref:System.String.Replace%2A> 方法，以新字串取代所有指定的子字串。 與 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新字串，並不會修改原始字串。 如需詳細資訊，請參閱[如何︰搜尋字串](../../how-to/search-strings.md)以及[如何︰修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[如何：串連多個字串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|說明如何使用 `+` 運算子和 `Stringbuilder` 類別，在編譯時期和執行階段聯結字串。|  
 |[如何：比較字串](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|示範如何執行字串的循序比較。|  
 |[如何：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
-|[如何：使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|說明如何使用特定方法來搜尋字串。|  
-|[如何：使用規則運算式搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|說明如何使用規則運算式來搜尋字串。|  
+|[如何：搜尋字串](../../how-to/search-strings.md)|說明如何使用特定方法來搜尋字串。|  
 |[如何：判斷字串是否表示數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
 |[如何：將字串轉換為 DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|示範如何將 "01/24/2008" 這類字串轉換為 <xref:System.DateTime?displayProperty=nameWithType> 物件。|  
 |[基本字串作業](../../../../docs/standard/base-types/basic-string-operations.md)|提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。|  

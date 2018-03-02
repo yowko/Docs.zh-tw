@@ -9,7 +9,6 @@
 ### [.NET Standard 的新功能](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [目標架構](standard/frameworks.md)
 ## [.NET 詞彙](standard/glossary.md)
-## [使用 mdoc 建置文件](standard/mdoc/index.md)
 ## [架構指引](standard/guidance-architecture.md)
 ### [使用 ASP.NET Core 和 Microsoft Azure 架構現代化 Web 應用程式](standard/modern-web-apps-azure-architecture/)
 ### [使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [類別庫概觀](standard/class-library-overview.md)
 ### [基底類型](standard/base-types/)
 ## [.NET 類別庫](standard/class-libraries.md)
-## 分析器
+## [分析器](standard/analyzers/index.md)
 ### [API 分析器](standard/analyzers/api-analyzer.md) 
 ### [可攜性分析器](standard/analyzers/portability-analyzer.md)
+### [架構分析器](standard/analyzers/framework-analyzer.md)
 ## [處理和擲回例外狀況](standard/exceptions/)
 ## [.NET 組件檔格式](standard/assembly-format.md)
 ## [記憶體回收](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [如何使用 `String.Split` 來剖析字串](csharp/how-to/parse-strings-using-split.md)
 ### [如何串連字串](csharp/how-to/concatenate-multiple-strings.md)
 ### [如何將字串轉換為 DateTime](standard/base-types/parsing-datetime.md)
+### [如何搜尋字串](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET 編譯器平台 SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 程式設計指南](csharp/programming-guide/)

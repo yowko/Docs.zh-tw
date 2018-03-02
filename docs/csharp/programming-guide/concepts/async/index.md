@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b845bf6f31ef84c78dcfd84832036ca2f2c4cae4
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6822143df2d02c284d7506d180139c18cfbaf370
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
  非同步方法會在設計非同步作業時，於選項清單中加入自動傳輸的對等項目讓您選擇。 也就是說，除了擁有傳統非同步程式設計的所有優點之外，開發人員所需投入的時間也大為減少。  
   
 ##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> 非同步方法比較容易撰寫  
- C# 中的 [async](../../../../csharp/language-reference/keywords/async.md) 和 [await](../../../../csharp/language-reference/keywords/await.md) 關鍵字都是非同步程式設計的核心。 您可以使用這兩個關鍵字，使用 .NET Framework、.NET Core 或 Windows 執行階段中的資源來建立非同步方法，幾乎就像建立同步方法一樣容易。 使用 `async` 和 `await` 定義的非同步方法稱為「非同步方法」。  
+ C# 中的 [async](../../../../csharp/language-reference/keywords/async.md) 和 [await](../../../../csharp/language-reference/keywords/await.md) 關鍵字都是非同步程式設計的核心。 您可以使用這兩個關鍵字，使用 .NET Framework、.NET Core 或 Windows 執行階段中的資源來建立非同步方法，幾乎就像建立同步方法一樣容易。 使用 `async` 關鍵字的非同步方法就稱為*非同步方法*。  
   
  下列範例將示範非同步方法。 程式碼中的一切對您而言應該幾乎完全熟悉。 註解會標註您加入以建立非同步的功能。  
   
@@ -92,21 +92,21 @@ string urlContents = await client.GetStringAsync();
   
 -   傳回類型是下列其中一種類型：  
   
-    -   如果方法的 return 陳述式中運算元的類型為 TResult，則為 <xref:System.Threading.Tasks.Task%601>。  
+    -   如果方法的 return 陳述式中運算元的類型為 `TResult`，則為 <xref:System.Threading.Tasks.Task%601>。  
   
     -   如果方法沒有 return 陳述式或是 return 陳述式沒有運算元，則為 <xref:System.Threading.Tasks.Task>。  
   
-    -   如果您撰寫的是非同步事件處理常式，則為 `Void`。  
+    -   如果您撰寫的是非同步事件處理常式，則為 `void`。  
 
     -   任何具有 `GetAwaiter` 方法的其他類型 (從 C# 7 開始)。
   
-     如需詳細資訊，請參閱本主題後段的＜傳回型別和參數＞。  
+     如需詳細資訊，請參閱[傳回型別和參數](#BKMK_ReturnTypesandParameters)一節。  
   
 -   方法通常至少包含一個 await 運算式，表示方法在等候的非同步作業完成後才能繼續的點。 此時，方法已暫停，而且控制權返回到方法的呼叫端。 本主題的下一節將說明暫停點會發生什麼情況。  
   
  在非同步方法中，您會使用提供的關鍵字和類型表示您想要執行的工作，而編譯器會完成其餘的部分，包括追蹤控制權返回已暫停方法中的等候點時必須進行的作業。 某些常式處理序像是迴圈和例外狀況處理，在傳統非同步程式碼中可能不容易處理。 在非同步方法中，您可以像在同步方案中一樣撰寫這些項目，如此就可以解決這個問題了。  
   
- 如需舊版 .NET Framework 中非同步的詳細資訊，請參閱 [TPL 和傳統 .NET Framework 非同步程式設計](http://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f)。  
+ 如需舊版 .NET Framework 中非同步的詳細資訊，請參閱 [TPL 和傳統 .NET Framework 非同步程式設計](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 非同步方法中執行了哪些工作  
  在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序。  
@@ -132,7 +132,7 @@ string urlContents = await client.GetStringAsync();
      因此，`AccessTheWebAsync` 會使用 await 運算子暫停其進度，並將控制權遞交 (Yield) 給呼叫 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 會將 `Task<int>` 傳回呼叫端。 這項工作代表承諾會產生相當於下載字串長度的整數結果。  
   
     > [!NOTE]
-    >  如果 `GetStringAsync` (和 `getStringTask`) 在 `AccessTheWebAsync` 等候它之前先完成，控制權仍會留在 `AccessTheWebAsync`。 如果呼叫的非同步處理序 (`AccessTheWebAsync`) 已完成，而 AccessTheWebSync 無需等候最終結果時，那麼暫停然後再返回 `getStringTask` 就是不必要的。  
+    >  如果 `GetStringAsync` (和 `getStringTask`) 在 `AccessTheWebAsync` 等候它之前先完成，控制權仍會留在 `AccessTheWebAsync`。 如果呼叫的非同步處理序 (`getStringTask`) 已完成，而 `AccessTheWebSync` 無需等候最終結果時，那麼暫停然後再返回 `AccessTheWebAsync` 就是不必要的。  
   
      在呼叫端 (在這個範例中是事件處理常式) 內，處理模式會持續進行。 呼叫端可能會在等候結果之前執行其他不取決於 `AccessTheWebAsync` 之結果的工作，或者呼叫端可能立即等候。   事件處理常式會等候 `AccessTheWebAsync`，而 `AccessTheWebAsync` 會等候 `GetStringAsync`。  
   
@@ -146,7 +146,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_APIAsyncMethods"></a> API 非同步方法  
  您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本以及 .NET Core 包含許多使用 `async` 和 `await` 的成員。 您也可以透過附加至成員名稱的 "Async" 後置字元以及傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 來進行辨識。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。  
   
- Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊和範例方法，請參閱[快速入門：使用 await 運算子進行非同步程式設計](/previous-versions/windows/apps/hh452713(v=win.10))、[非同步程式設計 (Windows 市集應用程式)](/previous-versions/windows/apps/hh464924(v=win.10)) 和 [WhenAny：銜接 .NET Framework 和 Windows 執行階段](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)。  
+ Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱適用於 UWP 開發的[執行緒和非同步程式設計](/windows/uwp/threading-async/)，如果您使用舊版的 Windows 執行階段，則請參閱[非同步程式設計 (Windows 市集應用程式)](/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：使用 await 運算子進行非同步程式設計](/previous-versions/windows/apps/hh452713(v=win.10))。  
   
 ##  <a name="BKMK_Threads"></a> 執行緒  
 非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法的 `await` 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。  
@@ -158,7 +158,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_AsyncandAwait"></a> async 和 await  
  如果您使用 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞來將方法指定為非同步方法，就會啟用下列兩項功能。  
   
--   標記的非同步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 來指定暫停點。 await 運算子會告知編譯器，非同步方法只有在等候的非同步處理序完成後，才能繼續通過該點。 同時，控制權會返回非同步方法的呼叫端。  
+-   標記的非同步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 來指定暫停點。 `await` 運算子會告知編譯器，非同步方法只有在等候的非同步處理序完成後，才能繼續通過該點。 同時，控制權會返回非同步方法的呼叫端。  
   
      非同步方法在 `await` 運算式上暫停時，並不構成從方法退出，而 `finally` 區塊也不會執行。  
   
@@ -232,8 +232,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-  
- 如需詳細資訊和範例，請參閱[快速入門：使用 await 運算子進行非同步程式設計](/previous-versions/windows/apps/hh452713(v=win.10))。  
+   
   
 ##  <a name="BKMK_NamingConvention"></a> 命名慣例  
  依照慣例，您會將 "Async" 附加至具有 `async` 修飾詞的方法名稱。  
@@ -340,6 +339,8 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)
+ [await](../../../../csharp/language-reference/keywords/await.md)  
+ [非同步程式設計](../../../../csharp/async.md)  
+ [非同步總覽](../../../../standard/async.md)  
