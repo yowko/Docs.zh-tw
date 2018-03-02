@@ -30,15 +30,18 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
 <a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 為了處理縮小轉換，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許類型定義 `Explicit` 運算子。 個別語言編譯器然後可以實作這個運算子使用自己的語法或隸屬<xref:System.Convert>類別可以呼叫以執行轉換。 (如需 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後的 [Convert 類別](#Convert))。下列範例說明如何使用語言功能，處理從這些可能超出範圍的整數值至 <xref:System.Int32> 值的明確轉換。  
+ 為了處理縮小轉換，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 (如需 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後的 [Convert 類別](#Convert))。下列範例說明如何使用語言功能，處理從這些可能超出範圍的整數值至 <xref:System.Int32> 值的明確轉換。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- 列出擴展和縮小轉換所支援的資料表<xref:System.Convert>類別，請參閱[類型轉換表](../../../docs/standard/base-types/conversion-tables.md)。  
+ 如需同時列出 <xref:System.Convert> 類別所支援之擴展和縮小轉換的表格，請參閱[類型轉換表](../../../docs/standard/base-types/conversion-tables.md)。  
   
 <a name="ChangeType"></a>   
 ### <a name="custom-conversions-with-the-changetype-method"></a>使用 ChangeType 方法的自訂轉換  
@@ -213,7 +216,7 @@ ms.lasthandoff: 11/21/2017
   
  如需使用類型轉換子執行轉換的詳細資訊，請參閱 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Convert?displayProperty=nameWithType>  
  <xref:System.IConvertible>  
  [類型轉換表](../../../docs/standard/base-types/conversion-tables.md)

@@ -1,5 +1,5 @@
 ---
-title: "快速入門 - 插入字串 - C# 指南"
+title: "插入字串教學課程 - C# 本機快速入門"
 description: "在這個有關插入字串的快速入門中，您可以撰寫 C# 程式碼，以將運算式結果包含在較大的字串中。"
 author: rpetrusha
 ms.author: ronpet
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>插入字串
 
-本快速入門將教導您如何在 C# 中使用插入字串，以將值插入至單一輸出字串。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 快速入門包含一系列的課程，以將值插入至字串，並以不同的方式格式化這些值。
+本快速入門將教導您如何在 C# 中使用插入字串，以將值插入至單一輸出字串。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 本快速入門包含一系列的課程，說明如何將值插入至字串，並以不同的方式設定那些值的格式。
 
 本快速入門需要您具備可用於開發的電腦。 .NET 主題[只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \(英文\) 中有關於在 Mac、PC 或 Linux 上設定本機開發環境的指示。 您可以在[本機快速入門簡介](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。 
 
@@ -37,11 +37,11 @@ dotnet new console -n interpolated -o .
 var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
-在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。 
+在主控台視窗中輸入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。 
     
 這個簡單範例包含每個插入字串都必須要有的兩個項目： 
 
-- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056: 未預期的字元 '$'」)。 
+- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中輸入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056: 未預期的字元 '$'」)。 
 
 - 一或多個「插入運算式」。 插入運算式是以左右大括號 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。 
 
@@ -106,7 +106,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 ## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>控制插入運算式的欄位寬度和對齊方式
 
-一般情況下，結果字串中包含插入運算式所傳回的字串時，不會有任何前置或尾端空格。 特別是使用一組資料時，插入運算式可讓您指定欄位寬度和其對齊方式。 若要確認這一點，請將文字編輯器中的所有程式碼都取代為下列程式碼，然後鍵入 `console run` 以執行程式：
+一般情況下，結果字串中包含插入運算式所傳回的字串時，不會有任何前置或尾端空格。 特別是使用一組資料時，插入運算式可讓您指定欄位寬度和其對齊方式。 若要確認這一點，請將文字編輯器中的所有程式碼都取代為下列程式碼，然後輸入 `console run` 以執行程式：
     
 ```csharp
 using System;
