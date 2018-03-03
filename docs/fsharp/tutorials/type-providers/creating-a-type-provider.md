@@ -10,25 +10,31 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教學課程： 建立型別提供者
 
-> [!NOTE]
-本指南針對 F # 3.0 所撰寫，而且會更新。
+F # 中的型別提供者機制是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者帶您逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需在 F # 類型提供者機制的詳細資訊，請參閱[型別提供者](index.md)。
 
-在 F # 3.0 的型別提供者機制是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者帶您逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需在 F # 類型提供者機制的詳細資訊，請參閱[型別提供者](index.md)。
+F # 生態系統包含常用的網際網路和企業資料服務的型別提供者的範圍。 例如: 
 
-F # 3.0 包含數個內建型別提供者，供常用的網際網路和企業資料服務。 這些型別提供者會提供簡單和規則的存取權 SQL 關聯式資料庫及網路 OData 和 WSDL 服務。 這些提供者也支援使用 F # LINQ 查詢，對這些資料來源。
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包含型別提供者的 JSON、 XML、 CSV 及 HTML 文件格式
+
+- [根據 SQLProvider](https://fsprojects.github.io/SQLProvider/)提供強型別存取 SQL 資料庫，透過物件對應和 F # LINQ 查詢對這些資料來源。
+
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)都有一組 com 型別提供者，檢查 T-SQL F # 中的內嵌堆時間
+
+- [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)較舊型別提供者存取 SQL、 Entity Framework、 OData 和 WSDL 資料服務的.NET Framework 程式設計只能搭配使用的設定。
 
 在需要時，您可以建立自訂型別提供者，或您可以參考其他人所建立的型別提供者。 例如，您的組織可能會有提供大量且不斷增加的具名資料集，每個都有自己的穩定資料結構描述的資料服務。 您可以建立型別提供者，讀取結構描述，並對程式設計人員呈現目前資料集，強類型方式。
 
 
 ## <a name="before-you-start"></a>在開始之前
+
 型別提供者機制主要設計使注入穩定資料和服務的資訊空間 F # 程式設計經驗。
 
 這項機制不被設計用於將資訊與程式邏輯的方式在程式執行期間變更其結構描述的空間。 此外，機制不被設計為內部語言中繼程式設計，即使該網域包含一些有效的用法。 只有在需要時，您應該使用這項機制，其中的型別提供者開發會產生非常高的值。
@@ -36,7 +42,6 @@ F # 3.0 包含數個內建型別提供者，供常用的網際網路和企業資
 您應該避免撰寫結構描述不可以是型別提供者。 同樣地，您應該避免使用一般 （或甚至現有） 撰寫型別提供者.NET 程式庫即已足夠。
 
 開始之前，您可能會詢問下列問題：
-
 
 - 您是否有結構描述資訊來源？ 如果是這樣，F # 和.NET 類型系統對應為何？
 
@@ -56,7 +61,8 @@ F # 3.0 包含數個內建型別提供者，供常用的網際網路和企業資
 
 
 ## <a name="a-simple-type-provider"></a>簡單的型別提供者
-這個範例是在 Samples.HelloWorldTypeProvider`SampleProviders\Providers`目錄[F # 3.0 的範例組件](https://fsharp3sample.codeplex.com)Codeplex 網站上。 提供者可提供 「 型別空間 」 含有 100 刪除的類型為下列程式碼顯示使用 F # 簽章語法並省略以外的所有詳細資料的`Type1`。 如需清除類型的詳細資訊，請參閱[詳細資料的相關清除提供型別](#details-about-erased-provided-types)本主題稍後。
+
+這個範例是類似的範例 Samples.HelloWorldTypeProvider`examples`目錄[F # 類型提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供者可提供 「 型別空間 」 含有 100 刪除的類型為下列程式碼顯示使用 F # 簽章語法並省略以外的所有詳細資料的`Type1`。 如需清除類型的詳細資訊，請參閱[詳細資料的相關清除提供型別](#details-about-erased-provided-types)本主題稍後。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -97,16 +103,16 @@ type Type100 =
 
 
 >[!WARNING] 
-可能有一些小的命名差異，這段程式碼與線上範例之間。
+可能有這段程式碼和線上範例之間的差異。
 
 ```fsharp
 namespace Samples.FSharp.HelloWorldTypeProvider
 
 open System
 open System.Reflection
-open Samples.FSharp.ProvidedTypes
-open Microsoft.FSharp.Core.CompilerServices
-open Microsoft.FSharp.Quotations
+open ProviderImplementation.ProvidedTypes
+open FSharp.Core.CompilerServices
+open FSharp.Quotations
 
 // This type defines the type provider. When compiled to a DLL, it can be added
 // as a reference to an F# command-line compilation, script, or project.
@@ -115,7 +121,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 
   // Inheriting from this type provides implementations of ITypeProvider 
   // in terms of the provided types below.
-  inherit TypeProviderForNamespaces()
+  inherit TypeProviderForNamespaces(config)
 
   let namespaceName = "Samples.HelloWorldTypeProvider"
   let thisAssembly = Assembly.GetExecutingAssembly()
@@ -173,6 +179,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 
 ### <a name="implementation-of-the-type-provider"></a>型別提供者實作
+
 本節將引導您透過型別提供者實作的主要區段。 首先，您可以定義類型的自訂型別提供者本身：
 
 ```fsharp
@@ -185,7 +192,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 接下來，您實作[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)介面。 在此情況下，您使用`TypeProviderForNamespaces`從`ProvidedTypes`應用程式開發介面的基底類型。 此協助程式類型可以立即提供有限的集合，提供命名空間，其中每個直接包含有限的固定，立即提供型別。 在此內容中，提供者*熱切*產生型別，即使它們不需要或使用。
 
 ```fsharp
-inherit TypeProviderForNamespaces()
+inherit TypeProviderForNamespaces(config)
 ```
 
 接下來，定義本機私用的值，指定的命名空間提供的類型，並尋找型別提供者組件本身。 這個組件稍後會使用所提供的清除類型的邏輯父型別。
@@ -221,6 +228,7 @@ do()
 ```
 
 ### <a name="providing-one-type-and-its-members"></a>提供一個型別和成員
+
 `makeOneProvidedType`函式會提供一種類型的實際工作。
 
 ```fsharp
@@ -233,19 +241,16 @@ let makeOneProvidedType (n:int) =
 ```fsharp
 // This is the provided type. It is an erased provided type and, in compiled code, 
 // will appear as type 'obj'.
-let t = ProvidedTypeDefinition(thisAssembly,namespaceName,
-"Type" + string n,
-baseType = Some typeof<obj>)
+let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
+                               "Type" + string n,
+                               baseType = Some typeof<obj>)
 ```
 
 您應該注意下列幾點：
 
-
 - 這提供型別會被清除。  因為您指出基底型別為`obj`，執行個體將會顯示類型的值為[obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)中編譯的程式碼。
-<br />
 
 - 當您指定的非巢狀類型時，您必須指定組件和命名空間。 對於清除類型，應該將組件類型提供者組件本身。
-<br />
 
 接下來，將 XML 文件集加入至類型。 這份文件會延遲，也就是，計算指定，如果主機編譯器需要它。
 
@@ -257,9 +262,9 @@ t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n
 
 ```fsharp
 let staticProp = ProvidedProperty(propertyName = "StaticProperty", 
-propertyType = typeof<string>, 
-IsStatic=true,
-GetterCode= (fun args -> <@@ "Hello!" @@>))
+                                  propertyType = typeof<string>, 
+                                  isStatic = true,
+                                  getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
 取得這個屬性永遠會評估為字串"Hello ！"。 `GetterCode`屬性使用 F # 引號，代表主機編譯器產生的取得此屬性的程式碼。 如需有關引號的詳細資訊，請參閱[程式碼引號 （F #）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。
@@ -280,7 +285,7 @@ t.AddMember staticProp
 
 ```fsharp
 let ctor = ProvidedConstructor(parameters = [ ], 
-InvokeCode= (fun args -> <@@ "The object data" :> obj @@>))
+                               invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
 `InvokeCode`的建構函式會傳回 F # 引號，代表呼叫建構函式時，主機編譯器產生的程式碼。 例如，您可以使用下列建構函式：
@@ -304,7 +309,7 @@ t.AddMember ctor
 ```fsharp
 let ctor2 = 
 ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ], 
-InvokeCode= (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
+                    invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
 `InvokeCode`的建構函式會再次傳回 F # 引號，代表主機編譯器產生的方法呼叫的程式碼。 例如，您可以使用下列建構函式：
@@ -317,10 +322,10 @@ new Type10("ten")
 
 ```fsharp
 let instanceProp = 
-ProvidedProperty(propertyName = "InstanceProperty", 
-propertyType = typeof<int>, 
-GetterCode= (fun args -> 
-<@@ ((%%(args.[0]) : obj) :?> string).Length @@>))
+    ProvidedProperty(propertyName = "InstanceProperty", 
+                     propertyType = typeof<int>, 
+                     getterCode= (fun args -> 
+                        <@@ ((%%(args.[0]) : obj) :?> string).Length @@>))
 instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
@@ -329,11 +334,11 @@ t.AddMember instanceProp
 
 ```fsharp
 let instanceMeth = 
-ProvidedMethod(methodName = "InstanceMethod", 
-parameters = [ProvidedParameter("x",typeof<int>)], 
-returnType = typeof<char>, 
-InvokeCode = (fun args -> 
-<@@ ((%%(args.[0]) : obj) :?> string).Chars(%%(args.[1]) : int) @@>))
+    ProvidedMethod(methodName = "InstanceMethod", 
+                   parameters = [ProvidedParameter("x",typeof<int>)], 
+                   returnType = typeof<char>, 
+                   invokeCode = (fun args -> 
+                       <@@ ((%%(args.[0]) : obj) :?> string).Chars(%%(args.[1]) : int) @@>))
 
 instanceMeth.AddXmlDocDelayed(fun () -> "This is an instance method")
 // Add the instance method to the type.
@@ -344,100 +349,86 @@ t.AddMember instanceMeth
 
 ```fsharp
 t.AddMembersDelayed(fun () -> 
-let nestedType = ProvidedTypeDefinition("NestedType",
-Some typeof<obj>
+  let nestedType = ProvidedTypeDefinition("NestedType", Some typeof<obj>)
 
-)
+  nestedType.AddMembersDelayed (fun () -> 
+    let staticPropsInNestedType = 
+      [ for i in 1 .. 100 do
+          let valueOfTheProperty = "I am string "  + string i
 
-nestedType.AddMembersDelayed (fun () -> 
-let staticPropsInNestedType = 
-[ for i in 1 .. 100 do
-let valueOfTheProperty = "I am string "  + string i
+          let p = 
+            ProvidedProperty(propertyName = "StaticProperty" + string i, 
+              propertyType = typeof<string>, 
+              isStatic = true,
+              getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
-let p = ProvidedProperty(propertyName = "StaticProperty" + string i, 
-propertyType = typeof<string>, 
-IsStatic=true,
-GetterCode= (fun args -> <@@ valueOfTheProperty @@>))
+          p.AddXmlDocDelayed(fun () -> 
+              sprintf "This is StaticProperty%d on NestedType" i)
 
-p.AddXmlDocDelayed(fun () -> 
-sprintf "This is StaticProperty%d on NestedType" i)
+          yield p ]
 
-yield p ]
-staticPropsInNestedType)
+    staticPropsInNestedType)
 
-[nestedType])
-
-// The result of makeOneProvidedType is the type.
-t
+  [nestedType])
 ```
 
 ### <a name="details-about-erased-provided-types"></a>清除之提供類型有關的詳細資料
+
 本節中的範例僅提供*清除提供的類型*，這是在下列情況中特別有用：
 
-
 - 當您要撰寫的提供者只包含資料和方法的資訊空間。
-<br />
 
 - 當您要撰寫精確的執行階段型別語意不重要的資訊空間的實際用途是提供者。
-<br />
 
 - 當您要撰寫的提供者的資訊空間，所以大型且相互連結，它不會產生實際的.NET 型別資訊空間就技術上而言可行。
-<br />
 
 在此範例中，提供的每一個型別會清除輸入`obj`，所有使用型別將會都顯示為型別和`obj`中編譯的程式碼。 事實上，在這些範例中的基礎物件是字串，但類型將會顯示為`System.Object`.net 編譯的程式碼。 所有使用的類型清除，您可以使用明確的 boxing，unboxing，以及轉型至破壞清除類型。 在此情況下，使用物件時，可能會造成不是有效的轉換例外狀況。 提供者執行階段可以定義自己的私用的表示法型別，以協助防範 false 表示相互轉換。 您無法在 F # 本身中定義它們的型別。 提供的類型可能會被清除。 您必須了解後果，這兩個實際會加以語意，請使用清除您的型別提供者或提供的提供者的類型清除類型。 清除的型別並沒有實際的.NET 類型。 因此，精準反映無法掌控型別，而且如果您使用執行階段轉換和其他技術，依賴確實執行階段的類型語意，您可能會破壞清除的類型。 清除型別的 subversion 經常會導致在執行階段類型轉型例外狀況。
 
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>選擇表示法的清除提供型別
+
 至於清除之提供類型的一些用法，不表示法。 例如，清除提供型別可能會包含靜態屬性及成員及任何建構函式，而沒有方法或屬性會傳回類型的執行個體。 如果您可以連線的清除執行個體提供之類型，您必須考慮下列問題：
 
+**清除所提供的型別是什麼？**
 
-- 清除所提供的型別是什麼？
-<br />
-  - 清除所提供的型別是型別如何出現在已編譯的.NET 程式碼。
-<br />
+- 清除所提供的型別是型別如何出現在已編譯的.NET 程式碼。
 
-  - 提供的清除的類別類型的清除永遠是第一個非清除基底類型繼承鏈結中的型別。
-<br />
+- 提供的清除的類別類型的清除永遠是第一個非清除基底類型繼承鏈結中的型別。
 
-  - 提供的清除的介面型別的清除永遠是`System.Object`。
-<br />
+- 提供的清除的介面型別的清除永遠是`System.Object`。
 
-- 所提供之類型的表示是什麼？
-<br />
-  - 一組可能的清除提供之類型的物件會呼叫其表示法。 在本文範例中，類型的所有清除提供表示`Type1..Type100`一定是字串的物件。
-<br />
+**所提供之類型的表示是什麼？**
+
+- 一組可能的清除提供之類型的物件會呼叫其表示法。 在本文範例中，類型的所有清除提供表示`Type1..Type100`一定是字串的物件。
 
 提供之類型的所有表示都必須與所提供的型別清除相容。 （否則 F # 編譯器會產生錯誤的型別提供者，使用或將會產生無法驗證.NET 程式碼並不是有效的。 如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。
 
 您可以使用下列方法，兩者都是很常見的選擇提供物件的表示法：
 
-
 - 如果您只透過現有的.NET 型別提供強類型包裝函式，很合理的清除為該類型，為表示法，或兩者都使用該類型的執行個體類型。 當現有的方法，該型別上的大部分仍能呼應使用強類型的版本時，這個方法是適當。
-<br />
 
 - 如果您想要從任何現有的.NET API 大幅建立不同的 API，因此才會建立執行階段類型將會針對提供的類型與類型清除。
-<br />
 
 這份文件中的範例會使用所提供之物件的表示為字串。 通常，它可能適合使用其他物件，用於表示法。 例如，您可能會使用字典當做屬性包：
 
 ```fsharp
 ProvidedConstructor(parameters = [], 
-InvokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
+    invokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
 ```
 
 或者，您可能會在您將在執行階段用來形成的表示法，以及一或多個執行階段作業的型別提供者定義類型：
 
 ```fsharp
 type DataObject() =
-let data = Dictionary<string,obj>()
-member x.RuntimeOperation() = data.Count
+    let data = Dictionary<string,obj>()
+    member x.RuntimeOperation() = data.Count
 ```
 
 提供的成員然後可以建構此物件類型的執行個體：
 
 ```fsharp
 ProvidedConstructor(parameters = [], 
-InvokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
+    invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
 在此情況下，您可能會 （選擇性） 使用此類型的類型清除為藉由指定此類型為`baseType`建構時`ProvidedTypeDefinition`:
@@ -448,24 +439,23 @@ ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
 ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), …)
 ```
 
-`Key Lessons`
+### <a name="key-lessons"></a>索引鍵的課程
 
 上一節將說明如何建立簡單清除型別提供者提供了各式各樣的型別、 屬性和方法。 本章節也說明的概念的類型清除，包括一些優點和缺點從型別提供者，提供它們的型別，並討論清除類型表示法。
 
 
 ## <a name="a-type-provider-that-uses-static-parameters"></a>使用靜態參數的型別提供者
+
 參數化的靜態資料的型別提供者的能力可讓許多有趣的情況下，即使在提供者不需要存取的任何本機或遠端資料時的情況下。 在本節中，您將學習一些基本技術搭配使用這類提供者。
 
 
 ### <a name="type-checked-regex-provider"></a>檢查 Regex 提供者類型。
+
 假設您想要實作規則運算式的型別提供者所包裝之.NET`System.Text.RegularExpressions.Regex`文件庫中的介面會提供下列編譯時間保證：
 
-
 - 正在驗證是否為有效的規則運算式。
-<br />
 
 - 提供具名的屬性比對規則運算式中的任何群組名稱為基礎。
-<br />
 
 本節示範如何使用型別提供者來建立`RegExProviderType`輸入規則運算式模式化為提供這些優點。 如果提供的模式不是有效的而且型別提供者可以擷取的群組模式中，讓您可以使用名為相符項目上的屬性來存取它們，則編譯器會回報錯誤。 當您設計的類型提供者時，您應該考慮其公開的 API 的外觀以一般使用者與此設計會轉譯成.NET 程式碼的方式。 下列範例會示範如何使用這類 API 來取得區域程式碼的元件：
 
@@ -486,18 +476,13 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 請注意下列重點：
 
-
 - 標準的 Regex 型別代表參數化`RegexTyped`型別。
-<br />
 
 - `RegexTyped`建構函式會導致 Regex 建構函式呼叫，在模式比對的靜態型別引數中傳遞。
-<br />
 
 - 結果`Match`方法都由標準`System.Text.RegularExpressions.Match`型別。
-<br />
 
 - 每個具名的群組導致所提供的屬性，並存取屬性導致系統使用的相符項目上的索引子的`Groups`集合。
-<br />
 
 下列程式碼是核心的邏輯來實作這類提供者，以及這個範例省略了加入所有成員，以提供的類型。 每個加入的成員相關的資訊，請參閱本主題稍後的適當的區段。 完整程式碼中，下載範例的[F # 3.0 的範例組件](https://fsharp3sample.codeplex.com)Codeplex 網站上。
 
@@ -511,43 +496,45 @@ open System.Text.RegularExpressions
 
 [<TypeProvider>]
 type public CheckedRegexProvider() as this =
-inherit TypeProviderForNamespaces()
+    inherit TypeProviderForNamespaces()
 
-// Get the assembly and namespace used to house the provided types
-let thisAssembly = Assembly.GetExecutingAssembly()
-let rootNamespace = "Samples.FSharp.RegexTypeProvider"
-let baseTy = typeof<obj>
-let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
+    // Get the assembly and namespace used to house the provided types
+    let thisAssembly = Assembly.GetExecutingAssembly()
+    let rootNamespace = "Samples.FSharp.RegexTypeProvider"
+    let baseTy = typeof<obj>
+    let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
 
-let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
+    let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
 
-do regexTy.DefineStaticParameters(
-parameters=staticParams, 
-instantiationFunction=(fun typeName parameterValues ->
+    do regexTy.DefineStaticParameters(
+        parameters=staticParams, 
+        instantiationFunction=(fun typeName parameterValues ->
 
-match parameterValues with 
-| [| :? string as pattern|] -> 
-// Create an instance of the regular expression. 
-//
-// This will fail with System.ArgumentException if the regular expression is not valid. 
-// The exception will escape the type provider and be reported in client code.
-let r = System.Text.RegularExpressions.Regex(pattern)            
+          match parameterValues with 
+          | [| :? string as pattern|] -> 
 
-// Declare the typed regex provided type.
-// The type erasure of this type is 'obj', even though the representation will always be a Regex
-// This, combined with hiding the object methods, makes the IntelliSense experience simpler.
-let ty = ProvidedTypeDefinition(
-thisAssembly, 
-rootNamespace, 
-typeName, 
-baseType = Some baseTy)
+            // Create an instance of the regular expression. 
+            //
+            // This will fail with System.ArgumentException if the regular expression is not valid. 
+            // The exception will escape the type provider and be reported in client code.
+            let r = System.Text.RegularExpressions.Regex(pattern)            
 
-...
+            // Declare the typed regex provided type.
+            // The type erasure of this type is 'obj', even though the representation will always be a Regex
+            // This, combined with hiding the object methods, makes the IntelliSense experience simpler.
+            let ty = 
+              ProvidedTypeDefinition(
+                thisAssembly, 
+                rootNamespace, 
+                typeName, 
+                baseType = Some baseTy)
 
-ty
-| _ -> failwith "unexpected parameter values")) 
+            ...
 
-do this.AddNamespace(rootNamespace, [regexTy])
+            ty
+          | _ -> failwith "unexpected parameter values")) 
+
+    do this.AddNamespace(rootNamespace, [regexTy])
 
 [<TypeProviderAssembly>]
 do ()
@@ -555,34 +542,28 @@ do ()
 
 請注意下列重點：
 
-
 - 型別提供者會採用兩個靜態參數： `pattern`，這是強制性，而`options`，這是選擇性的 （因為提供的預設值）。
-<br />
 
 - 提供靜態引數之後，您會建立規則運算式的執行個體。 如果 Regex 格式不正確，而且使用者會報告此錯誤，這個執行個體將會擲回例外狀況。
-<br />
 
 - 內`DefineStaticParameters`回呼，定義將會傳回之後提供的引數的型別。
-<br />
 
 - 這個程式碼設定`HideObjectMethods`為 true，讓 IntelliSense 經驗會保持流暢。 這個屬性會造成`Equals`， `GetHashCode`， `Finalize`，和`GetType`来隱藏的成員從提供的物件的 IntelliSense 清單。
-<br />
 
 - 您使用`obj`為基底類型的方法，但您將使用`Regex`物件做為此類型的執行階段表示下一個範例所示。
-<br />
 
 - 若要呼叫`Regex`建構函式會擲回`System.ArgumentException`當規則運算式不是有效的。 編譯器會攔截此例外狀況，並在編譯時期或 Visual Studio 編輯器中，向使用者回報的錯誤訊息。 這個例外狀況可讓規則運算式，而不需執行應用程式進行驗證。
-<br />
 
 因為它並未包含任何有意義的方法或屬性，沒有尚未作用上述定義的類型。 首先，新增靜態`IsMatch`方法：
 
 ```fsharp
-let isMatch = ProvidedMethod(
-methodName = "IsMatch", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = typeof<bool>, 
-IsStaticMethod = true,
-InvokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
+let isMatch = 
+    ProvidedMethod(
+        methodName = "IsMatch", 
+        parameters = [ProvidedParameter("input", typeof<string>)], 
+        returnType = typeof<bool>, 
+        isStatic = true,
+        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
 
 isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string." 
 ty.AddMember isMatch
@@ -593,10 +574,11 @@ ty.AddMember isMatch
 接下來，加入比對方法執行個體。 不過，此方法應傳回值提供的`Match`型別，如此群組可以存取在強型別的方式。 因此，您先宣告`Match`型別。 由於此類型取決於做為靜態引數提供的模式，這種類型都必須在參數化的類型定義中巢狀結構：
 
 ```fsharp
-let matchTy = ProvidedTypeDefinition(
-"MatchType", 
-baseType = Some baseTy, 
-HideObjectMethods = true)
+let matchTy = 
+    ProvidedTypeDefinition(
+        "MatchType", 
+        baseType = Some baseTy, 
+        hideObjectMethods = true)
 
 ty.AddMember matchTy
 ```
@@ -605,14 +587,15 @@ ty.AddMember matchTy
 
 ```fsharp
 for group in r.GetGroupNames() do
-// Ignore the group named 0, which represents all input.
-if group <> "0" then
-let prop = ProvidedProperty(
-propertyName = group, 
-propertyType = typeof<Group>, 
-GetterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
-matchTy.AddMember prop
+    // Ignore the group named 0, which represents all input.
+    if group <> "0" then
+    let prop = 
+      ProvidedProperty(
+        propertyName = group, 
+        propertyType = typeof<Group>, 
+        getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
+        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+    matchTy.AddMember prop
 ```
 
 同樣地，請注意，您要將 XML 文件新增到所提供的屬性。 另外請注意，如果可讀取屬性`GetterCode`提供函式，且可以寫入屬性，如果`SetterCode`提供函式，所以產生的屬性唯讀。
@@ -621,11 +604,12 @@ matchTy.AddMember prop
 
 ```fsharp
 let matchMethod = 
-ProvidedMethod(
-methodName = "Match", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = matchTy, 
-InvokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
+    ProvidedMethod(
+        methodName = "Match", 
+        parameters = [ProvidedParameter("input", typeof<string>)], 
+        returnType = matchTy, 
+        invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
+
 matchMeth.AddXmlDoc "Searches the specified input string for the first ocurrence of this regular expression" 
 
 ty.AddMember matchMeth
@@ -636,9 +620,11 @@ ty.AddMember matchMeth
 最後，建構函式提供，以便可以建立執行個體所提供的型別。
 
 ```fsharp
-let ctor = ProvidedConstructor(
-parameters = [], 
-InvokeCode = fun args -> <@@ Regex(pattern, options) :> obj @@>)
+let ctor = 
+    ProvidedConstructor(
+        parameters = [], 
+        invokeCode = fun args -> <@@ Regex(pattern, options) :> obj @@>)
+
 ctor.AddXmlDoc("Initializes a regular expression instance.")
 
 ty.AddMember ctor
@@ -656,136 +642,137 @@ open System.Text.RegularExpressions
 
 [<TypeProvider>]
 type public CheckedRegexProvider() as this =
-inherit TypeProviderForNamespaces()
+    inherit TypeProviderForNamespaces()
 
-// Get the assembly and namespace used to house the provided types.
-let thisAssembly = Assembly.GetExecutingAssembly()
-let rootNamespace = "Samples.FSharp.RegexTypeProvider"
-let baseTy = typeof<obj>
-let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
+    // Get the assembly and namespace used to house the provided types.
+    let thisAssembly = Assembly.GetExecutingAssembly()
+    let rootNamespace = "Samples.FSharp.RegexTypeProvider"
+    let baseTy = typeof<obj>
+    let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
 
-let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
+    let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
 
-do regexTy.DefineStaticParameters(
-parameters=staticParams, 
-instantiationFunction=(fun typeName parameterValues ->
+    do regexTy.DefineStaticParameters(
+        parameters=staticParams, 
+        instantiationFunction=(fun typeName parameterValues ->
 
-match parameterValues with 
-| [| :? string as pattern|] -> 
-// Create an instance of the regular expression. 
+            match parameterValues with 
+            | [| :? string as pattern|] -> 
 
+                // Create an instance of the regular expression. 
 
+                let r = System.Text.RegularExpressions.Regex(pattern)            
 
+                // Declare the typed regex provided type.
 
-let r = System.Text.RegularExpressions.Regex(pattern)            
+                let ty = 
+                    ProvidedTypeDefinition(
+                        thisAssembly, 
+                        rootNamespace, 
+                        typeName, 
+                        baseType = Some baseTy)
 
-// Declare the typed regex provided type.
+                ty.AddXmlDoc "A strongly typed interface to the regular expression '%s'"
 
+                // Provide strongly typed version of Regex.IsMatch static method.
+                let isMatch = 
+                    ProvidedMethod(
+                        methodName = "IsMatch", 
+                        parameters = [ProvidedParameter("input", typeof<string>)], 
+                        returnType = typeof<bool>, 
+                        isStatic = true,
+                        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
 
+                isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string"
 
-let ty = ProvidedTypeDefinition(
-thisAssembly, 
-rootNamespace, 
-typeName, 
-baseType = Some baseTy)
+                ty.AddMember isMatch
 
-ty.AddXmlDoc "A strongly typed interface to the regular expression '%s'"
+                // Provided type for matches
+                // Again, erase to obj even though the representation will always be a Match
+                let matchTy = 
+                    ProvidedTypeDefinition(
+                        "MatchType", 
+                        baseType = Some baseTy, 
+                        hideObjectMethods = true)
 
-// Provide strongly typed version of Regex.IsMatch static method.
-let isMatch = ProvidedMethod(
-methodName = "IsMatch", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = typeof<bool>, 
-IsStaticMethod = true,
-InvokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
+                // Nest the match type within parameterized Regex type.
+                ty.AddMember matchTy
 
-isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string"
+                // Add group properties to match type
+                for group in r.GetGroupNames() do
+                    // Ignore the group named 0, which represents all input.
+                    if group <> "0" then
+                        let prop = 
+                          ProvidedProperty(
+                            propertyName = group, 
+                            propertyType = typeof<Group>, 
+                            getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
+                        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+                        matchTy.AddMember(prop)
 
-ty.AddMember isMatch
+                // Provide strongly typed version of Regex.Match instance method.
+                let matchMeth = 
+                  ProvidedMethod(
+                    methodName = "Match", 
+                    parameters = [ProvidedParameter("input", typeof<string>)], 
+                    returnType = matchTy, 
+                    invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
+                matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
 
-// Provided type for matches
-// Again, erase to obj even though the representation will always be a Match
-let matchTy = ProvidedTypeDefinition(
-"MatchType", 
-baseType = Some baseTy, 
-HideObjectMethods = true)
+                ty.AddMember matchMeth
 
-// Nest the match type within parameterized Regex type.
-ty.AddMember matchTy
+                // Declare a constructor.
+                let ctor = 
+                  ProvidedConstructor(
+                    parameters = [], 
+                    invokeCode = fun args -> <@@ Regex(pattern) :> obj @@>)
 
-// Add group properties to match type
-for group in r.GetGroupNames() do
-// Ignore the group named 0, which represents all input.
-if group <> "0" then
-let prop = ProvidedProperty(
-propertyName = group, 
-propertyType = typeof<Group>, 
-GetterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
-matchTy.AddMember(prop)
+                // Add documentation to the constructor.
+                ctor.AddXmlDoc "Initializes a regular expression instance"
 
-// Provide strongly typed version of Regex.Match instance method.
-let matchMeth = ProvidedMethod(
-methodName = "Match", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = matchTy, 
-InvokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
-matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
+                ty.AddMember ctor
 
-ty.AddMember matchMeth
+                ty
+            | _ -> failwith "unexpected parameter values")) 
 
-// Declare a constructor.
-let ctor = ProvidedConstructor(
-parameters = [], 
-InvokeCode = fun args -> <@@ Regex(pattern) :> obj @@>)
-
-// Add documentation to the constructor.
-ctor.AddXmlDoc "Initializes a regular expression instance"
-
-ty.AddMember ctor
-
-ty
-| _ -> failwith "unexpected parameter values")) 
-
-do this.AddNamespace(rootNamespace, [regexTy])
+    do this.AddNamespace(rootNamespace, [regexTy])
 
 [<TypeProviderAssembly>]
 do ()
 ```
 
-`Key Lessons`
+### <a name="key-lessons"></a>索引鍵的課程
 
 本節說明如何建立作業的類型提供者在其靜態參數。 提供者會檢查靜態參數，並提供其值為基礎的作業。
 
 
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>型別提供者，並受到本機資料
+
 通常，您可能想顯示而不只是靜態參數從本機或遠端系統的資訊為基礎的應用程式開發介面的型別提供者。 本章節討論本機資料，例如本機資料檔為基礎的型別提供者。
 
 
 ### <a name="simple-csv-file-provider"></a>簡單的 CSV 檔案提供者
+
 為簡單的範例，請考慮存取以逗號分隔值 (CSV) 格式的科學資料型別提供者。 本節假設，CSV 檔案包含標頭資料列，再浮動點資料，如下列表格所示：
 
 
-
-|距離 （公尺）|時間 （秒）|
+```
+|Distance (meter)|Time (second)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
+```
+
 本節說明如何提供可用來取得資料列的型別`Distance`型別的屬性`float<meter>`和`Time`型別的屬性`float<second>`。 為了簡單起見，請進行下列假設：
 
-
 - 標頭名稱都是無單位的或具有 「 名稱 （單位） 」 的格式，且不能包含逗號。
-<br />
 
 - 單位是做為所有 Systeme 國際 (SI) 單位[Microsoft.FSharp.Data.UnitSystems.SI.UnitNames 模組 （F #）](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模組定義。
-<br />
 
 - 單位為所有簡單 （比方說，測量） 而非複合 （例如，計量表/秒）。
-<br />
 
 - 所有資料行包含浮動點資料。
-<br />
 
 更完整的提供者會放寬這些限制。
 
@@ -814,122 +801,122 @@ printfn "%f" (float time)
 ```fsharp
 // Simple type wrapping CSV data
 type CsvFile(filename) =
-// Cache the sequence of all data lines (all lines but the first)
-let data = 
-seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
-yield line.Split(',') |> Array.map float }
-|> Seq.cache
-member __.Data = data
+    // Cache the sequence of all data lines (all lines but the first)
+    let data = 
+        seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
+                 yield line.Split(',') |> Array.map float }
+        |> Seq.cache
+    member __.Data = data
 
 [<TypeProvider>]
 type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
-inherit TypeProviderForNamespaces()
+    inherit TypeProviderForNamespaces(cfg)
 
-// Get the assembly and namespace used to house the provided types.
-let asm = System.Reflection.Assembly.GetExecutingAssembly()
-let ns = "Samples.FSharp.MiniCsvProvider"
+    // Get the assembly and namespace used to house the provided types.
+    let asm = System.Reflection.Assembly.GetExecutingAssembly()
+    let ns = "Samples.FSharp.MiniCsvProvider"
 
-// Create the main provided type.
-let csvTy = ProvidedTypeDefinition(asm, ns, "MiniCsv", Some(typeof<obj>))
+    // Create the main provided type.
+    let csvTy = ProvidedTypeDefinition(asm, ns, "MiniCsv", Some(typeof<obj>))
 
-// Parameterize the type by the file to use as a template.
-let filename = ProvidedStaticParameter("filename", typeof<string>)
-do csvTy.DefineStaticParameters([filename], fun tyName [| :? string as filename |] ->
+    // Parameterize the type by the file to use as a template.
+    let filename = ProvidedStaticParameter("filename", typeof<string>)
+    do csvTy.DefineStaticParameters([filename], fun tyName [| :? string as filename |] ->
+    
+        // Resolve the filename relative to the resolution folder.
+        let resolvedFilename = Path.Combine(cfg.ResolutionFolder, filename)
 
-// Resolve the filename relative to the resolution folder.
-let resolvedFilename = Path.Combine(cfg.ResolutionFolder, filename)
+        // Get the first line from the file.
+        let headerLine = File.ReadLines(resolvedFilename) |> Seq.head
 
-// Get the first line from the file.
-let headerLine = File.ReadLines(resolvedFilename) |> Seq.head
+        // Define a provided type for each row, erasing to a float[].
+        let rowTy = ProvidedTypeDefinition("Row", Some(typeof<float[]>))
 
-// Define a provided type for each row, erasing to a float[].
-let rowTy = ProvidedTypeDefinition("Row", Some(typeof<float[]>))
+        // Extract header names from the file, splitting on commas.
+        // use Regex matching to get the position in the row at which the field occurs
+        let headers = Regex.Matches(headerLine, "[^,]+")
 
-// Extract header names from the file, splitting on commas.
-// use Regex matching to get the position in the row at which the field occurs
-let headers = Regex.Matches(headerLine, "[^,]+")
+        // Add one property per CSV field.
+        for i in 0 .. headers.Count - 1 do
+            let headerText = headers.[i].Value
 
-// Add one property per CSV field.
-for i in 0 .. headers.Count - 1 do
-let headerText = headers.[i].Value
+            // Try to decompose this header into a name and unit.
+            let fieldName, fieldTy =
+                let m = Regex.Match(headerText, @"(?<field>.+) \((?<unit>.+)\)")
+                if m.Success then
 
-// Try to decompose this header into a name and unit.
-let fieldName, fieldTy =
-let m = Regex.Match(headerText, @"(?<field>.+) \((?<unit>.+)\)")
-if m.Success then
+                    let unitName = m.Groups.["unit"].Value
+                    let units = ProvidedMeasureBuilder.Default.SI unitName
+                    m.Groups.["field"].Value, ProvidedMeasureBuilder.Default.AnnotateType(typeof<float>,[units])
 
+                else
+                    // no units, just treat it as a normal float
+                    headerText, typeof<float>
 
-let unitName = m.Groups.["unit"].Value
-let units = ProvidedMeasureBuilder.Default.SI unitName
-m.Groups.["field"].Value, ProvidedMeasureBuilder.Default.AnnotateType(typeof<float>,[units])
+            let prop = 
+                ProvidedProperty(fieldName, fieldTy, 
+                    getterCode = fun [row] -> <@@ (%%row:float[]).[i] @@>)
 
+            // Add metadata that defines the property's location in the referenced file.
+            prop.AddDefinitionLocation(1, headers.[i].Index + 1, filename)
+            rowTy.AddMember(prop) 
 
-else
-// no units, just treat it as a normal float
-headerText, typeof<float>
+        // Define the provided type, erasing to CsvFile.
+        let ty = ProvidedTypeDefinition(asm, ns, tyName, Some(typeof<CsvFile>))
 
-let prop = ProvidedProperty(fieldName, fieldTy, 
-GetterCode = fun [row] -> <@@ (%%row:float[]).[i] @@>)
+        // Add a parameterless constructor that loads the file that was used to define the schema.
+        let ctor0 = 
+            ProvidedConstructor([], 
+                invokeCode = fun [] -> <@@ CsvFile(resolvedFilename) @@>)
+        ty.AddMember ctor0
 
-// Add metadata that defines the property's location in the referenced file.
-prop.AddDefinitionLocation(1, headers.[i].Index + 1, filename)
-rowTy.AddMember(prop) 
+        // Add a constructor that takes the file name to load.
+        let ctor1 = ProvidedConstructor([ProvidedParameter("filename", typeof<string>)], 
+            invokeCode = fun [filename] -> <@@ CsvFile(%%filename) @@>)
+        ty.AddMember ctor1
 
-// Define the provided type, erasing to CsvFile.
-let ty = ProvidedTypeDefinition(asm, ns, tyName, Some(typeof<CsvFile>))
+        // Add a more strongly typed Data property, which uses the existing property at runtime.
+        let prop = 
+            ProvidedProperty("Data", typedefof<seq<_>>.MakeGenericType(rowTy), 
+                getterCode = fun [csvFile] -> <@@ (%%csvFile:CsvFile).Data @@>)
+        ty.AddMember prop
 
-// Add a parameterless constructor that loads the file that was used to define the schema.
-let ctor0 = ProvidedConstructor([], 
-InvokeCode = fun [] -> <@@ CsvFile(resolvedFilename) @@>)
-ty.AddMember ctor0
+        // Add the row type as a nested type.
+        ty.AddMember rowTy
+        ty)
 
-// Add a constructor that takes the file name to load.
-let ctor1 = ProvidedConstructor([ProvidedParameter("filename", typeof<string>)], 
-InvokeCode = fun [filename] -> <@@ CsvFile(%%filename) @@>)
-ty.AddMember ctor1
-
-// Add a more strongly typed Data property, which uses the existing property at runtime.
-let prop = ProvidedProperty("Data", typedefof<seq<_>>.MakeGenericType(rowTy), 
-GetterCode = fun [csvFile] -> <@@ (%%csvFile:CsvFile).Data @@>)
-ty.AddMember prop
-
-// Add the row type as a nested type.
-ty.AddMember rowTy
-ty)
-
-// Add the type to the namespace.
-do this.AddNamespace(ns, [csvTy])
+    // Add the type to the namespace.
+    do this.AddNamespace(ns, [csvTy])
 ```
 
 請注意下列有關實作的重點：
 
-
 - 多載建構函式可讓原始的檔案或已讀取相同的結構描述的其中一個。 當您撰寫本機或遠端資料來源的型別提供者及此模式可讓本機檔案要作為範本用於遠端資料，此模式相當常見。
-<br />  您可以使用[TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44)會傳遞至型別提供者建構函式，來解析相對檔案名稱中的值。
-<br />
+
+- 您可以使用[TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44)會傳遞至型別提供者建構函式，來解析相對檔案名稱中的值。
 
 - 您可以使用`AddDefinitionLocation`方法來定義提供內容的位置。 因此，如果您使用`Go To Definition`上提供的屬性，CSV 檔案會在 Visual Studio 中開啟。
-<br />
 
 - 您可以使用`ProvidedMeasureBuilder`查閱 SI 單位，並產生相關的型別`float<_>`型別。
-<br />
 
-`Key Lessons`
+### <a name="key-lessons"></a>索引鍵的課程
 
 本節說明如何使用簡單的結構描述包含在資料來源本身建立的本機資料來源的型別提供者。
 
 
 ## <a name="going-further"></a>繼續進行
+
 下列各節包含進一步研究的建議。
 
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>查看清除類型的已編譯的程式碼
+
 若要讓型別提供者的使用方式對應至，就會發出程式碼的一些概念，看看下列的函式使用`HelloWorldTypeProvider`稍早在本主題中使用。
 
 ```fsharp
 let function1 () = 
-let obj1 = Samples.HelloWorldTypeProvider.Type1("some data")
-obj1.InstanceProperty
+    let obj1 = Samples.HelloWorldTypeProvider.Type1("some data")
+    obj1.InstanceProperty
 ```
 
 以下是產生的程式碼解編使用 ildasm.exe 的映像：
@@ -966,33 +953,26 @@ IL_0017:  ret
 ### <a name="design-and-naming-conventions-for-type-providers"></a>設計和型別提供者的命名慣例
 撰寫型別提供者時，請觀察下列慣例。
 
-
-- `Providers for Connectivity Protocols`
-<br />  一般情況下，資料和服務的連線通訊協定，例如 OData 或 SQL 連接時，大部分提供者 Dll 的名稱應該結束`TypeProvider`或`TypeProviders`。 例如，使用類似如下的 DLL 名稱：
-<br />
+**連接通訊協定的提供者**一般情況下，資料和服務的連線通訊協定，例如 OData 或 SQL 連接時，大部分提供者 Dll 的名稱應該結束`TypeProvider`或`TypeProviders`。 例如，使用類似如下的 DLL 名稱：
 
 ```
   Fabrikam.Management.BasicTypeProviders.dll
 ```
 
-  請確定您提供的型別是對應的命名空間的成員，並指出您實作的連線通訊協定：
-<br />
+請確定您提供的型別是對應的命名空間的成員，並指出您實作的連線通訊協定：
 
 ```
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
 
-- `Utility Providers for General Coding`
-<br />  公用程式類型提供者的規則運算式，型別提供者可能是基底文件庫的一部分，如下列範例所示：
-<br />
+**公用程式的一般程式碼撰寫的提供者**。  公用程式類型提供者的規則運算式，型別提供者可能是基底文件庫的一部分，如下列範例所示：
 
 ```fsharp
   #r "Fabrikam.Core.Text.Utilities.dll"
 ```
 
-  在此情況下，提供的型別會根據一般的.NET 設計慣例的適當時機出現：
-<br />
+在此情況下，提供的型別會根據一般的.NET 設計慣例的適當時機出現：
 
 ```fsharp
   open Fabrikam.Core.Text.RegexTyped
@@ -1000,21 +980,19 @@ IL_0017:  ret
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-- `Singleton Data Sources`
-<br />  某些型別提供者連接到單一專用的資料來源，並提供只有資料。 在此情況下，您應該卸除`TypeProvider`尾碼和使用的.NET 命名標準的慣例：
-<br />
+**單一資料來源**。 某些型別提供者連接到單一專用的資料來源，並提供只有資料。 在此情況下，您應該卸除`TypeProvider`尾碼和使用的.NET 命名標準的慣例：
 
 ```fsharp
-  #r "Fabrikam.Data.Freebase.dll"
+#r "Fabrikam.Data.Freebase.dll"
   
-  let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
+let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
-  如需詳細資訊，請參閱`GetConnection`設計為在本主題稍後所述的慣例。
-<br />
+如需詳細資訊，請參閱`GetConnection`設計為在本主題稍後所述的慣例。
 
 
 ### <a name="design-patterns-for-type-providers"></a>型別提供者設計模式
+
 下列章節說明撰寫型別提供者時，您可以使用設計模式。
 
 
@@ -1032,54 +1010,48 @@ let data = connection.Astronomy.Asteroids
 ```
 
 #### <a name="type-providers-backed-by-remote-data-and-services"></a>備份遠端資料和服務的型別提供者
+
 建立遠端資料和服務所支援的類型提供者之前，您必須考慮各種連線程式設計中固有的問題。 其中包括下列考量：
 
-
 - 結構描述對應
-<br />
 
 - liveness 和結構描述變更時失效
-<br />
 
 - 結構描述快取
-<br />
 
 - 資料存取作業的非同步實作
-<br />
 
 - 支援的查詢，包括 LINQ 查詢
-<br />
 
 - 認證和驗證
-<br />
 
 本主題不會探索這些進一步的問題。
 
-
 ### <a name="additional-authoring-techniques"></a>其他撰寫技巧
+
 當您撰寫您自己的型別提供者時，您可以使用下列其他技巧。
 
+### <a name="creating-types-and-members-on-demand"></a>建立型別和成員視
 
-- `Creating Types and Members On-Demand`
-<br />  ProvidedType API 具有延遲 AddMember 的版本。
-<br />
+ProvidedType API 具有延遲 AddMember 的版本。
 
 ```fsharp
   type ProvidedType =
-  member AddMemberDelayed  : (unit -> MemberInfo)      -> unit
-  member AddMembersDelayed : (unit -> MemberInfo list) -> unit
+      member AddMemberDelayed  : (unit -> MemberInfo)      -> unit
+      member AddMembersDelayed : (unit -> MemberInfo list) -> unit
 ```
 
-  這些版本可用來建立隨空間的型別。
-<br />
+這些版本可用來建立隨空間的型別。
 
-- `Providing Array, ByRef, and Pointer types`
-<br />  使用一般進行 （其簽章包含陣列類型、 byref 類型和具現化的泛型型別） 的成員提供`MakeArrayType`， `MakePointerType`，和`MakeGenericType`System.Type，任何執行個體上包括`ProvidedTypeDefinitions`。
-<br />
+### <a name="providing-array-types-and-generic-type-instantiations"></a>提供陣列型別和泛型類型具現化
 
-- `Providing Unit of Measure Annotations`
-<br />  ProvidedTypes API 會提供協助提供量值的註解。 例如，若要提供的型別`float<kg>`，使用下列程式碼：
-<br />
+使用一般進行 （其簽章包含陣列類型、 byref 類型和具現化的泛型型別） 的成員提供`MakeArrayType`， `MakePointerType`，和`MakeGenericType`System.Type，任何執行個體上包括`ProvidedTypeDefinitions`。
+
+注意： 在某些情況下您可能要使用這個 helper `ProvidedTypeBuilder.MakeGenericType`。  請參閱更多詳細資料的型別提供者 SDK 文件。
+
+### <a name="providing-unit-of-measure-annotations"></a>提供的量值的附註的單位
+
+ProvidedTypes API 會提供協助提供量值的註解。 例如，若要提供的型別`float<kg>`，使用下列程式碼：
 
 ```fsharp
   let measures = ProvidedMeasureBuilder.Default
@@ -1089,7 +1061,6 @@ let data = connection.Astronomy.Asteroids
 ```
 
   若要提供型別`Nullable<decimal<kg/m^2>>`，使用下列程式碼：
-<br />
 
 ```fsharp
   let kgpm2 = measures.Ratio(kg, measures.Square m)
@@ -1097,44 +1068,34 @@ let data = connection.Astronomy.Asteroids
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-- `Accessing Project-Local or Script-Local Resources`
-<br />  每個型別提供者執行個體可以有`TypeProviderConfig`在建構期間的值。 這個值包含 「 解析資料夾 」 提供者 （也就是 [project] 資料夾的編譯或包含的指令碼的目錄）、 參考的組件的清單和其他資訊。
-<br />
+### <a name="accessing-project-local-or-script-local-resources"></a>存取專案本機或指令碼本機資源
 
-- `Invalidation`
-<br />  提供者可以引發失效信號，通知可能已變更的結構描述假設 F # 語言服務。 失效時，如果提供者裝載在 Visual Studio 中，會重做 typecheck。 F # Interactive 中或 F # 編譯器 (fsc.exe) 所裝載的提供者時，將會忽略此訊號。
-<br />
+每個型別提供者執行個體可以有`TypeProviderConfig`在建構期間的值。 這個值包含 「 解析資料夾 」 提供者 （也就是 [project] 資料夾的編譯或包含的指令碼的目錄）、 參考的組件的清單和其他資訊。
 
-- `Caching Schema Information`
-<br />  提供者通常必須快取結構描述資訊的存取權。 使用指定的檔案名稱，做為靜態參數或做為使用者資料應該儲存快取的資料。 舉例來說，結構描述快取是`LocalSchemaFile`參數中的型別提供者中`FSharp.Data.TypeProviders`組件。 在這些提供者實作中，這個靜態參數會指示要用於指定的本機檔案，而不是透過網路存取資料來源的結構描述資訊的類型提供者。 若要使用快取結構描述資訊，您也必須設定的靜態參數`ForceUpdate`至`false`。 若要啟用線上和離線的資料存取，您可以使用類似的技術。
-<br />
+### <a name="invalidation"></a>失效
 
-- `Backing Assembly`
-<br />  當您編譯.dll 或.exe 檔時，產生的型別支援.dll 檔是以靜態方式連結到產生的組件。 此連結會建立從備份組件到最終組件複製的中繼語言 (IL) 型別定義和任何 managed 的資源。 當您使用 F # Interactive 時，備份.dll 檔案不複製，並會改為直接載入至 F # 互動式處理序。
-<br />
+提供者可以引發失效信號，通知可能已變更的結構描述假設 F # 語言服務。 失效時，如果提供者裝載在 Visual Studio 中，會重做 typecheck。 F # Interactive 中或 F # 編譯器 (fsc.exe) 所裝載的提供者時，將會忽略此訊號。
 
-- `Exceptions and Diagnostics from Type Providers`
-<br />  使用提供的類型中的所有成員的所有可能會擲回例外狀況。 在所有情況下，型別提供者會擲回的例外狀況，如果主機編譯器屬性錯誤的特定型別提供者。
-<br />
-  - 內部編譯器錯誤應該永遠不會產生型別提供者的例外狀況。
-<br />
+### <a name="caching-schema-information"></a>快取的結構描述資訊
 
-  - 型別提供者無法報告警告。
-<br />
+提供者通常必須快取結構描述資訊的存取權。 使用指定的檔案名稱，做為靜態參數或做為使用者資料應該儲存快取的資料。 舉例來說，結構描述快取是`LocalSchemaFile`參數中的型別提供者中`FSharp.Data.TypeProviders`組件。 在這些提供者實作中，這個靜態參數會指示要用於指定的本機檔案，而不是透過網路存取資料來源的結構描述資訊的類型提供者。 若要使用快取結構描述資訊，您也必須設定的靜態參數`ForceUpdate`至`false`。 若要啟用線上和離線的資料存取，您可以使用類似的技術。
 
-  - 當型別提供者裝載在 F # 編譯器、 F # 開發環境中，或 F # Interactive 時，會攔截到該提供者的所有例外狀況。 訊息屬性一定是錯誤的文字，而且沒有堆疊追蹤會出現。 如果您將會擲回例外狀況，您可以擲回下列的範例：
-<br />
-    - `System.NotSupportedException`
-<br />
+### <a name="backing-assembly"></a>備份組件
 
-    - `System.IO.IOException`
-<br />
+當您編譯`.dll`或`.exe`檔案，備份.dll 檔案產生的型別以靜態方式連結到產生的組件。 此連結會建立從備份組件到最終組件複製的中繼語言 (IL) 型別定義和任何 managed 的資源。 當您使用 F # Interactive 時，備份.dll 檔案不複製，並會改為直接載入至 F # 互動式處理序。
 
-    - `System.Exception`
-<br />
+### <a name="exceptions-and-diagnostics-from-type-providers"></a>例外狀況及診斷從型別提供者
 
+使用提供的類型中的所有成員的所有可能會擲回例外狀況。 在所有情況下，型別提供者會擲回的例外狀況，如果主機編譯器屬性錯誤的特定型別提供者。
+
+- 內部編譯器錯誤應該永遠不會產生型別提供者的例外狀況。
+
+- 型別提供者無法報告警告。
+
+- 當型別提供者裝載在 F # 編譯器、 F # 開發環境中，或 F # Interactive 時，會攔截到該提供者的所有例外狀況。 訊息屬性一定是錯誤的文字，而且沒有堆疊追蹤會出現。 如果您將會擲回例外狀況，您可以擲回下列的範例： `System.NotSupportedException`， `System.IO.IOException`， `System.Exception`。
 
 #### <a name="providing-generated-types"></a>提供產生的型別
+
 目前為止，本文件說明如何提供它們的類型。 您也可以使用在 F # 中的型別提供者機制，提供產生的型別，可加入做為實際的.NET 型別定義，到使用者的程式。 您必須參考產生提供使用型別定義的類型。
 
 ```fsharp
@@ -1145,81 +1106,62 @@ type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc
 
 是 F # 3.0 版中的一部分 ProvidedTypes 0.2 協助程式程式碼只具有有限的支援，提供產生的型別。 下列陳述式必須是產生的型別定義，則為 true:
 
+- `isErased` 必須設定為`false`。
 
-- IsErased 必須設為`false`。
-<br />
+- 產生的型別必須新增至新建構`ProvidedAssembly()`，表示為產生的程式碼片段的容器。
 
 - 提供者必須具有相符的.dll 檔案在磁碟上的實際備份.NET.dll 檔案的組件。
-<br />
-
-您也必須呼叫`ConvertToGenerated`其巢狀型別形成的封閉的集合產生型別是提供的根類型上。 指定所提供的型別定義和其巢狀型別定義的組件就會發出此呼叫，並調整`Assembly`傳回該組件的所有提供的型別定義的屬性。 只有在組件屬性的根類型上第一次存取時，就會發出組件。 主機 F # 編譯器處理 generative 型別宣告類型時，沒有存取這個屬性。
 
 
 ## <a name="rules-and-limitations"></a>規則和限制
+
 當您撰寫型別提供者時，請記住下列規則和限制。
 
 
-- `Provided types must be reachable.`
-<br />  所有提供的類型應該是從非巢狀型別。 呼叫中指定的非巢狀型別`TypeProviderForNamespaces`建構函式或呼叫`AddNamespace`。 例如，如果提供者提供的型別`StaticClass.P : T`，您必須確定 T 的非巢狀類型或巢狀方式的其中一個。
-<br />  例如，某些提供者具有靜態類別，例如`DataTypes`，包含這些`T1, T2, T3, ...`型別。 否則，錯誤為找不到組件 A 中的型別 T 的參考，但在該組件中找不到型別。 如果出現這個錯誤，請確認您所有的子類型，可以達到從提供者類型。 注意： 這些`T1, T2, T3...`類型稱為*上即時*型別。 請記得將它們放在可存取的命名空間或父類型。
-<br />
+### <a name="provided-types-must-be-reachable"></a>提供的類型必須是可連線
 
-- `Limitations of the Type Provider Mechanism`
-<br />  F # 中的型別提供者機制有下列限制：
-<br />
-  - 提供給泛型類型或泛型方法所提供，不支援 F # 中的型別提供者的基礎結構。
-<br />
+所有提供的類型應該是從非巢狀型別。 呼叫中指定的非巢狀型別`TypeProviderForNamespaces`建構函式或呼叫`AddNamespace`。 例如，如果提供者提供的型別`StaticClass.P : T`，您必須確定 T 的非巢狀類型或巢狀方式的其中一個。
 
-  - 機制並不支援巢狀的類型的靜態參數。
-<br />
+例如，某些提供者具有靜態類別，例如`DataTypes`，包含這些`T1, T2, T3, ...`型別。 否則，錯誤為找不到組件 A 中的型別 T 的參考，但在該組件中找不到型別。 如果出現這個錯誤，請確認您所有的子類型，可以達到從提供者類型。 注意： 這些`T1, T2, T3...`類型稱為*上即時*型別。 請記得將它們放在可存取的命名空間或父類型。
 
-- `Limitations of the ProvidedTypes Support Code`
-<br />  `ProvidedTypes`支援程式碼具有下列規則和限制：
-<br />
-  1. 提供與索引的 getter 和 setter 的屬性未實作。
-<br />
+### <a name="limitations-of-the-type-provider-mechanism"></a>型別提供者機制的限制
 
-  2. 未實作所提供的事件。
-<br />
+F # 中的型別提供者機制有下列限制：
 
-  3. 提供的類型和資訊的物件應該只能用於 F # 中的型別提供者機制。 它們不是更廣泛做 System.Type 物件。
-<br />
+- 提供給泛型類型或泛型方法所提供，不支援 F # 中的型別提供者的基礎結構。
 
-  4. 您可以使用引號可定義方法實作中的建構有幾項限制。 您可以參考的原始程式碼 ProvidedTypes-*版本*以查看在引號內不支援的建構。
-<br />
-
-- `Type providers must generate output assemblies that are .dll files, not .exe files.`
-<br />
-
+- 機制並不支援巢狀的類型的靜態參數。
 
 ## <a name="development-tips"></a>開發秘訣
+
 您可能會發現下列秘訣有助於在開發程序。
 
+### <a name="run-two-instances-of-visual-studio"></a>執行 Visual Studio 的兩個執行個體
 
-- `Run Two Instances of Visual Studio.` 您可以開發一個執行個體中的型別提供者，並測試其他的提供者，因為測試 IDE 將會防止型別提供者正在重建的.dll 檔案鎖定。 因此，您必須關閉 Visual Studio 的第二個執行個體時，第一個執行個體中，內建提供者，然後您必須重新開啟第二個執行個體後建置提供者。
-<br />
+您可以開發一個執行個體中的型別提供者，並測試其他的提供者，因為測試 IDE 將會防止型別提供者正在重建的.dll 檔案鎖定。 因此，您必須關閉 Visual Studio 的第二個執行個體時，第一個執行個體中，內建提供者，然後您必須重新開啟第二個執行個體後建置提供者。
 
-- `Debug type providers by using invocations of fsc.exe.` 您可以使用下列工具來叫用型別提供者：
-<br />
-  - fsc.exe （F # 命令列編譯器）
-<br />
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>偵錯使用 fsc.exe 的引動過程的型別提供者
 
-  - fsi.exe （F # Interactive 編譯器）
-<br />
+您可以使用下列工具來叫用型別提供者：
 
-  - devenv.exe (Visual Studio)
-<br />
+- fsc.exe （F # 命令列編譯器）
 
-  您可以經常使用偵錯型別提供者最容易 fsc.exe 的測試指令碼檔案 (例如，script.fsx) 上。 您可以啟動偵錯工具從命令提示字元。
-<br />
+- fsi.exe （F # Interactive 編譯器）
+
+- devenv.exe (Visual Studio)
+
+您可以經常使用偵錯型別提供者最容易 fsc.exe 的測試指令碼檔案 (例如，script.fsx) 上。 您可以啟動偵錯工具從命令提示字元。
 
 ```
   devenv /debugexe fsc.exe script.fsx
 ```
 
   您可以使用列印至 stdout 記錄。
-<br />
 
 
 ## <a name="see-also"></a>請參閱
-[類型提供者](index.md)
+
+* [類型提供者](index.md)
+
+* [型別提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
+

@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 具有許多功能，可支援安全資料庫應用程式的建立。  
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 有許多功能可支援安全資料庫應用程式的建立。  
   
  資料竊取或破壞等一般的安全性考量，則適用於所有的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 版本。 資料完整性也應視為安全性問題。 如果資料未受保護，可以對其進行臨機操作 (Ad Hoc)，或用能夠用錯誤的值不小心或惡意地加以修改或全部刪除，資料就可能變得毫無價值。 此外，也經常會有必須遵循的法律需求，例如機密資訊的正確儲存方式等。 依照特定管轄區適用的法律而定，某些類型的個人資料可能完全不得儲存。  
   
@@ -44,13 +46,12 @@ ms.lasthandoff: 01/17/2018
  說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express 的安全性考量。  
   
 ## <a name="related-sections"></a>相關章節  
- [安全性與保護 (Database Engine)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- 《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》安全性主題。  
-  
- [SQL Server 的安全性考量](http://go.microsoft.com/fwlink/?LinkId=98587)  
- 《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》安全性主題。  
-  
+[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+描述 SQL Server 和 Azure SQL Database 的安全性考量。
+
+[SQL Server 安裝的安全性考量](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+描述安裝 SQL Server 之前應考量的安全性疑慮。
+
 ## <a name="see-also"></a>請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
