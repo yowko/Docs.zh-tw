@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 .NET Framework 提供一組完整且整合的類別，好讓您輕鬆地建置可感知 XML 的應用程式。 下列命名空間中的類別支援 XML 的剖析與撰寫、記憶體中 XML 資料的編輯、資料驗證和 XSLT 轉換。  
@@ -96,5 +96,3 @@ ms.lasthandoff: 12/23/2017
  [安全性](../../../../docs/standard/security/index.md)  
  提供 .NET Framework 安全性系統的概觀。  
   
- [XML 開發人員中心](http://go.microsoft.com/fwlink/?linkid=42458)  
- 為 XML 開發人員提供其他技術資訊、下載、新聞群組及其他資源。
