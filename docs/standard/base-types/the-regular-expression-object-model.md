@@ -48,11 +48,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含以下各節：  
@@ -211,7 +211,7 @@ ms.lasthandoff: 12/23/2017
   
 -   `Match.Captures` 屬性會傳回用法受限的 <xref:System.Text.RegularExpressions.CaptureCollection> 物件。 針對 <xref:System.Text.RegularExpressions.Match> 屬性為 `Success` 的 `false` 物件，不會填入集合。 否則，就會包含具有與 <xref:System.Text.RegularExpressions.Capture> 物件相同資訊的單一 <xref:System.Text.RegularExpressions.Match> 物件。  
   
- 如需這些物件的詳細資訊，請參閱本主題稍後的[群組集合](#GroupCollection)和[擷取集合](#CaptureCollection)一節。  
+ 如需這些物件的詳細資訊，請參閱本主題稍後的[群組集合](#GroupCollection)及[擷取集合](#CaptureCollection)兩節。  
   
  <xref:System.Text.RegularExpressions.Match> 類別的兩個其他屬性會提供比對的相關資訊。 `Match.Value` 屬性會傳回輸入字串中，符合規則運算式模式的子字串。 `Match.Index` 屬性會傳回輸入字串中相符字串以零起始的開始位置。  
   

@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>插入字串
 
@@ -37,11 +37,11 @@ dotnet new console -n interpolated -o .
 var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
-在主控台視窗中輸入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。 
+在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。 
     
 這個簡單範例包含每個插入字串都必須要有的兩個項目： 
 
-- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中輸入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056: 未預期的字元 '$'」)。 
+- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056: 未預期的字元 '$'」)。 
 
 - 一或多個「插入運算式」。 插入運算式是以左右大括號 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。 
 
@@ -106,7 +106,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 ## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>控制插入運算式的欄位寬度和對齊方式
 
-一般情況下，結果字串中包含插入運算式所傳回的字串時，不會有任何前置或尾端空格。 特別是使用一組資料時，插入運算式可讓您指定欄位寬度和其對齊方式。 若要確認這一點，請將文字編輯器中的所有程式碼都取代為下列程式碼，然後輸入 `console run` 以執行程式：
+一般情況下，結果字串中包含插入運算式所傳回的字串時，不會有任何前置或尾端空格。 特別是使用一組資料時，插入運算式可讓您指定欄位寬度和其對齊方式。 若要確認這一點，請將文字編輯器中的所有程式碼都取代為下列程式碼，然後鍵入 `console run` 以執行程式：
     
 ```csharp
 using System;
@@ -144,9 +144,9 @@ public class Example
 嘗試移除 `{"Author",-25}` 和 `{title.Key,-25}` 插入運算式中的負號，然後重新執行此範例，如下列程式碼所執行：
 
 ```csharp
-Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
 ```
 
 目前，作者資訊會靠右對齊。

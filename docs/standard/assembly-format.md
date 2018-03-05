@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 01/05/2018
 
 > 每個 CLI 元件都會攜帶該元件特定宣告、實作和參考的中繼資料。 因此，元件特定中繼資料是指元件中繼資料，而且產生的元件即為來自 ECMA 335 I.9.1 的自我描述元件和組件。
 
-格式會完整指定並標準化為 ECMA 335。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新之二進位格式的目前狀態已是互通性的主要優點 (即需求)。 這種格式上次在 2005 年進行重大更新 (.NET 2.0)，可容納泛型和處理器架構。
+格式會依 [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 來完整指定並標準化。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新之二進位格式的目前狀態已是互通性的主要優點 (即需求)。 這種格式上次在 2005 年進行重大更新 (.NET 2.0)，可容納泛型和處理器架構。
 
 格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 作業系統互通性的最重大選擇就是大部分值都是以位元組由小到大格式儲存。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
 
