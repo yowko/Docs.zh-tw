@@ -2,20 +2,21 @@
 title: "如何：逐一查看目錄樹狀 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：逐一查看目錄樹狀 (C# 程式設計手冊)
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  如果您必須儲存樹狀目錄的內容，不論是儲存在記憶體或磁碟中，最好的做法就是只儲存每個檔案的 <xref:System.IO.FileSystemInfo.FullName%2A> 屬性 (類型為 `string`)。 然後，您可以視需要使用此字串建立新的 <xref:System.IO.FileInfo> 或 <xref:System.IO.DirectoryInfo> 物件，或是開啟任何需要其他處理的檔案。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- 設計穩固的檔案逐一查看程式碼時，必須考慮檔案系統的許多複雜情況。 如需詳細資訊，請參閱 [NTFS Technical Reference](http://go.microsoft.com/fwlink/?LinkId=79488) (NTFS 技術參考)。  
+ 設計穩固的檔案逐一查看程式碼時，必須考慮檔案系統的許多複雜情況。 如需 Windows 檔案系統的詳細資訊，請參閱 [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4) (NTFS 技術參考)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO>  
- [LINQ 和檔案目錄](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ 和檔案目錄](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)

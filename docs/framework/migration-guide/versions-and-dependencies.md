@@ -3,19 +3,22 @@ title: ".NET Framework 版本和相依性"
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
-helpviewer_keywords: versions, .NET Framework
+helpviewer_keywords:
+- versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5875e5900f925e29fec303d276483947c994da8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b6c5699fdcf68e99cd3049cf3150e44d14f4e614
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  

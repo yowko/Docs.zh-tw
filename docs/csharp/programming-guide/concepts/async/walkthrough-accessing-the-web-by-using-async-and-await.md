@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 async 和 await 存取 Web (C#)
 您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。 您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
  本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。 然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。  
   
- 如果您不想要自行建置應用程式，可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載「非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)」。  
+ 如果您不想要自行建置應用程式，可以下載 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))。  
   
  在這個逐步解說中，您將完成下列工作：  
   
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
   
 -   [範例](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>必要條件  
- 您的電腦上必須安裝 Visual Studio 2012 或更新版本。 如需詳細資訊，請參閱 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkId=235233)。  
+> [!NOTE]
+>  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
   
 ###  <a name="CreateWPFApp"></a> 建立 WPF 應用程式  
   
@@ -731,12 +732,12 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [非同步範例： 存取 Web 逐步解說 （C# 和 Visual Basic）](http://go.microsoft.com/fwlink/?LinkId=255191)  
+## <a name="see-also"></a>請參閱  
+ [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)  
  [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [以工作為基礎的非同步程式設計 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957) (以工作為基礎的非同步程式設計 (TAP))  
  [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [如何：使用 async 和 await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

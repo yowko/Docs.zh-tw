@@ -2,28 +2,29 @@
 title: "字串插值 (C#)"
 ms.date: 10/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b8a1fe0be82a0e09d61c66ed463199ff626c9faa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>字串插值 (C# 參考)
 
-可用來建構字串。  字串插值類似包含「插入運算式」的範本字串。  字串插值會傳回一個字串，以將內含的插入運算式取代為運算式的字串表示。 C# 6 及更新版本中使用這項功能。
+可用來建構字串。  字串插值類似包含「插入運算式」的範本字串。  字串插值會傳回一個字串，以將內含的插入運算式取代為運算式的字串表示。 C# 6 及更新版本有提供這項功能。
 
 字串插值的引數比[複合格式字串](../../../standard/base-types/composite-formatting.md#composite-format-string)更容易了解。  例如，字串插值  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-包含兩個插值的運算式 '{name}' 和 ' {小時： hh}'。 對等的複合格式字串為：
+包含兩個插入運算式 '{name}' 和 '{hours:hh}'。 對等的複合格式字串為：
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -42,7 +43,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - *format-string* 是一個格式字串，適用於將格式化的物件類型。 例如，若為 <xref:System.DateTime> 值，它可能是標準日期和時間格式字串，像是 "D" 或 "d"。
 
 > [!IMPORTANT]
-> 您不能有任何空白字元之間`$`和`"`開頭的字串。 這樣做會讓編譯時期錯誤。
+> 字串開頭的 `$` 與 `"` 之間不能有空白字元。 這樣做會導致編譯時期錯誤。
 
  您可以在使用字串常值的任何位置使用字串插值。  每次執行含有字串插值的程式碼時，都會評估字串插值。 這可讓您分開定義和評估字串插值。  
   
@@ -52,14 +53,14 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings4.cs#1)]  
 
-逐字以內插值取代字串使用`$`字元後面`@`字元。 如需逐字字串的詳細資訊，請參閱[字串](string.md)主題。 下列程式碼是先前使用逐字字串插值的程式碼片段的修改的版本：
+逐字內插字串使用 `$` 字元，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](string.md)主題。 下列程式碼是先前使用逐字內插字串之程式碼片段的已修改版本：
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings5.cs#1)]  
 
-因為並不會遵照逐字字串格式的變更所需`\`逸出序列。
+由於逐字字串未遵循 `\` 逸出序列，因此需要格式變更。
 
 > [!IMPORTANT]
-> `$`必須出現在之前語彙基元`@`逐字字串插值中語彙基元。
+> `$` 語彙基元必須出現在逐字內插字串中的 `@` 語彙基元之前。
 
 
 ## <a name="implicit-conversions"></a>隱含轉換  
@@ -74,11 +75,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 2. 將字串插值轉換成 <xref:System.IFormattable> 變數，可讓您從單一 <xref:System.IFormattable> 執行個體建立多個具有特定文化特性內容的結果字串。 若要加入個別文化特性的正確數值和日期格式等項目時，這樣做會很有用。  在您明確或隱含呼叫 <xref:System.Object.ToString> 方法以格式化字串之前，所有出現的雙大括弧 ("{{" 和 "}}") 會保持為雙大括弧。  所有包含插值運算式會轉換成 {0}、\{1\} 等。  
 
-   下列範例使用反映來顯示成員，以及從字串插值建立之 <xref:System.IFormattable> 變數的欄位和屬性值。 它也會傳遞<xref:System.IFormattable>變數設為<xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>方法。
+   下列範例使用反映來顯示成員，以及從字串插值建立之 <xref:System.IFormattable> 變數的欄位和屬性值。 它也會將 <xref:System.IFormattable> 變數傳遞給 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法。
 
    [!code-csharp[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
 
-   請注意，只能使用反映來檢查字串插值。 如果將它傳遞為字串，例如格式化方法<xref:System.Console.WriteLine(System.String)>、 它的格式項目都已解決，而且傳回的結果字串。 
+   請注意，只能使用反映來檢查字串插值。 如果將它傳遞至字串格式化方法 (例如 <xref:System.Console.WriteLine(System.String)>)，則會解析其格式項目並傳回結果字串。 
 
 3. 將字串插值轉換成 <xref:System.FormattableString> 變數，以代表複合格式字串。 檢查複合格式字串及其如何轉譯為結果字串有助於在建立查詢時，防止插入式攻擊。 <xref:System.FormattableString> 也包含 <xref:System.FormattableString.ToString> 多載，可讓您產生 <xref:System.Globalization.CultureInfo.InvariantCulture> 和 <xref:System.Globalization.CultureInfo.CurrentCulture> 的結果字串。  在您格式化之前，所有出現的雙大括弧 ("{{" 和 "}}") 會保持為雙大括弧。  所有包含插值運算式會轉換成 {0}、\{1\} 等。  
 
@@ -87,7 +88,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 ## <a name="language-specification"></a>語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [C# 參考](../../../csharp/language-reference/index.md)  

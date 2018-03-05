@@ -1,23 +1,25 @@
 ---
 title: "Visual Basic 的新功能"
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -25,10 +27,13 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="current-version"></a>目前版本
 
-Visual Basic / Visual Studio .NET 2017   
-如需了解新功能，請參閱 [Visual Basic 2017](#visual-basic-2017)。
+Visual Basic 15.5   
+如需了解新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>舊版本
+
+Visual Basic 15.3   
+如需了解新功能，請參閱 [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic / Visual Studio .NET 2015   
 如需了解新功能，請參閱 [Visual Basic 14](#visual-basic-14)。
@@ -53,6 +58,41 @@ Visual Basic / Visual Studio .NET 2003
 
 Visual Basic / Visual Studio .NET 2002   
 第一版的 Visual Basic .NET
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[無後置具名引數](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+在 Visual Basic 15.3 和更早版本中，當方法呼叫同時包含位置和名稱引數時，位置引數必須在具名引數之前。 從 Visual Basic 15.5 開始，位置和具名引數可依任何順序顯示，但前提是最後一個位置引數之前的所有引數都位於正確位置。 當使用具名引數讓程式碼更容易閱讀時，這會特別有用。
+
+例如，下列方法呼叫在具名引數之間有兩個位置引數。 具名引數清楚指出值 19 表示年齡。
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**前置十六進位/二進位/八進位分隔符號**
+
+Visual Basic 2017 新增了將底線字元 (`_`) 當作數字分隔符號的支援。 從 Visual Basic 15.5 開始，您可以使用底線字元作為前置字元與十六進位、二進位或八進位數字之間的前置分隔符號。 下列範例使用前置數字分隔符號，將 3,271,948,384 定義為十六進位數字：
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+若要使用底線字元作為前置分隔符號，您必須將下列項目新增至 Visual Basic 專案 (*.vbproj) 檔：
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[具名元組推斷](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+當您從變數指派元組項目值時，Visual Basic 會從對應的變數名稱推斷元組項目的名稱；您不需要明確命名元組項目。 下列範例使用推斷來建立包含三個具名項目的元組：`state`、`stateName` 和 `capital`。
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -171,5 +211,5 @@ End Interface
   
  現在，編譯器會使用一般多載解析規則來選擇要呼叫的最適合 `GetDetails`，而且您可以在 Visual Basic 中宣告介面關聯性 (如範例所示)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-in-visual-studio)

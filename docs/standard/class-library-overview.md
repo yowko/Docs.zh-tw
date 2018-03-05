@@ -1,7 +1,7 @@
 ---
-title: ".NET Framework 類別庫概觀"
+title: ".NET 類別庫概觀"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/08/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - classes [.NET Framework], library overview
+- classes [.NET Core], library overview
+- .NET, library overview
 - class objects value type
 - naming conventions [.NET Framework]
 - types, .NET Framework
@@ -18,9 +20,9 @@ helpviewer_keywords:
 - data types [.NET Framework], C++
 - Visual C#, data types
 - libraries, .NET Framework class library
-- data types [.NET Framework], JScript
+- data types [.NET Framework], F#
 - System namespace
-- JScript, data types
+- F#, data types
 - .NET Framework, class library
 - type system [.NET Framework]
 - data types [.NET Framework]
@@ -41,23 +43,22 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ffa64d3a1f9ade7a97b15edfdecbad566c871c12
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="net-framework-class-library-overview"></a>.NET Framework 類別庫概觀
-[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包括類別、介面和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。 為了促進語言之間的互通性 (Interoperability)，大部分 .NET Framework 型別符合 CLS 標準，因而可以用於所有符合 Common Language Specification (CLS) 程式語言編譯器之中。  
+# <a name="net-class-library-overview"></a>.NET 類別庫概觀
+.NET 實作包括類別、介面、委派和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。 為了促進語言之間的互通性，大部分 .NET 類型符合 CLS 標準，因而可以透過其編譯器符合 Common Language Specification (CLS) 的任何程式設計語言來使用。  
   
- .NET Framework 型別是建置 .NET 應用程式、元件和控制項的基礎。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包含執行下列函式的型別：  
+ .NET 類型是建置 .NET 應用程式、元件和控制項的基礎。 .NET 實作包含執行下列函式的類型：  
   
 -   代表基底資料型別和例外狀況  
   
@@ -71,10 +72,10 @@ ms.lasthandoff: 12/23/2017
   
 -   提供資料存取、豐富型用戶端 (Rich Client) GUI 和伺服器控制的用戶端 GUI  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供相當豐富的介面，以及抽象和具體 (非抽象) 類別。 您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。 若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET Framework 類別之一來衍生類別。  
+ .NET 提供相當豐富的介面，以及抽象和具體 (非抽象) 類別。 您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。 若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET Framework 類別之一來衍生類別。  
   
 ## <a name="naming-conventions"></a>命名規範  
- .NET Framework 型別使用意味著階層架構的點語法命名配置。 這個技術將相關的型別群組至命名空間 (Namespace)，所以可以更容易地搜尋和參考它們。 完整名稱的第一部分 - 直到最右邊的點 - 是命名空間名稱。 最後部分是型別名稱。 例如，**System.Collections.ArrayList** 代表 **ArrayList** 類型，其屬於 **System.Collections** 命名空間。 **System.Collections** 中的類型可以用來操作物件的集合。  
+ .NET 類型使用意味著階層架構的點語法命名配置。 這個技術將相關的型別群組至命名空間 (Namespace)，所以可以更容易地搜尋和參考它們。 完整名稱的第一部分 - 直到最右邊的點 - 是命名空間名稱。 最後部分是型別名稱。 例如，**System.Collections.ArrayList** 代表 **ArrayList** 類型，其屬於 **System.Collections** 命名空間。 **System.Collections** 中的類型可以用來操作物件的集合。  
   
  這個命名配置使得程式庫開發人員更容易擴充 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 以建立階層式型別群組，並以一致且有意義的方式來命名它們。 此外還允許以完整名稱明確識別型別 (也就是藉由命名空間和型別名稱)，其可避免型別名稱衝突。 程式庫開發人員為其命名空間建立名稱時，應使用以下命名慣例：  
   
@@ -87,35 +88,35 @@ ms.lasthandoff: 12/23/2017
  如需命名空間和類型名稱的詳細資訊，請參閱[一般型別系統](../../docs/standard/base-types/common-type-system.md)。  
   
 ## <a name="system-namespace"></a>System 命名空間  
- <xref:System> 命名空間是 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中基礎型別的根 (Root) 命名空間。 這個命名空間包含的類別，代表所有應用程式使用的基底資料型別：<xref:System.Object> (繼承階層架構的根)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> 等等。 許多這些型別對應到您的程式語言所使用的原始資料型別。 當您使用 .NET Framework 型別撰寫程式碼時，您可以在需要 .NET Framework 基底資料型別時使用您語言的對應關鍵字。  
+ <xref:System> 命名空間是 .NET 中基本類型的根命名空間。 這個命名空間包含的類別，代表所有應用程式使用的基底資料型別：<xref:System.Object> (繼承階層架構的根)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> 等等。 許多這些型別對應到您的程式語言所使用的原始資料型別。 當您使用 .NET Framework 型別撰寫程式碼時，您可以在需要 .NET Framework 基底資料型別時使用您語言的對應關鍵字。  
   
- 下表列出 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 所提供基底型別的清單、簡要說明各型別，並且指示 Visual Basic、C#、C++ 和 JScript 中的對應型別。  
+ 下表列出 .NET 所提供基底類型的清單、簡要描述各類型，並且指示 Visual Basic、C#、C++ 和 F# 中的對應類型。  
   
-|分類|類別名稱|描述|Visual Basic 資料型別|C# 資料型別|C++ 資料型別|JScript 資料型別|  
+|分類|類別名稱|描述|Visual Basic 資料型別|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|整數|<xref:System.Byte>|8 位元不帶正負號的整數。|**Byte**|**byte**|**unsigned char**|**Byte**|  
-||<xref:System.SByte>|8 位元帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**SByte**|**sbyte**|**char**<br /><br /> -或-<br /><br /> **signed** **char**|**SByte**|  
-||<xref:System.Int16>|16 位元帶正負號的整數。|**Short**|**short**|**short**|**short**|  
+|整數|<xref:System.Byte>|8 位元不帶正負號的整數。|**Byte**|**byte**|**unsigned char**|**byte**|  
+||<xref:System.SByte>|8 位元帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**SByte**|**sbyte**|**char**<br /> -或-<br /> **signed** **char**|**sbyte**|  
+||<xref:System.Int16>|16 位元帶正負號的整數。|**Short**|**short**|**short**|**int16**|  
 ||<xref:System.Int32>|32 位元帶正負號的整數。|**Integer**|**int**|**int**<br /><br /> -或-<br /><br /> **long**|**int**|  
-||<xref:System.Int64>|64 位元帶正負號的整數。|**Long**|**long**|**__int64**|**long**|  
-||<xref:System.UInt16>|16 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|32 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UInteger**|**uint**|**unsigned int**<br /><br /> -或-<br /><br /> **unsigned long**|**UInt32**|  
-||<xref:System.UInt64>|64 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**ULong**|**ulong**|**unsigned __int64**|**UInt64**|  
-|浮點|<xref:System.Single>|單精確度 (32 位元) 浮點數。|**Single**|**float**|**float**|**float**|  
-||<xref:System.Double>|雙精度 (64 位元) 浮點數。|**Double**|**double**|**double**|**double**|  
+||<xref:System.Int64>|64 位元帶正負號的整數。|**Long**|**long**|**__int64**|**int64**|  
+||<xref:System.UInt16>|16 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UShort**|**ushort**|**unsigned short**|**uint16**|  
+||<xref:System.UInt32>|32 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UInteger**|**uint**|**unsigned int**<br /> -或-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt64>|64 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
+|浮點|<xref:System.Single>|單精確度 (32 位元) 浮點數。|**Single**|**float**|**float**|**float32**</br> 或</br>**single**|  
+||<xref:System.Double>|雙精度 (64 位元) 浮點數。|**Double**|**double**|**double**|**float**</br> 或 </br> **double**|  
 |邏輯|<xref:System.Boolean>|布林值 (true 或 false)。|**布林值**|**bool**|**bool**|**bool**|  
 |其他|<xref:System.Char>|Unicode (16 位元) 字元。|**Char**|**char**|**wchar_t**|**char**|  
-||<xref:System.Decimal>|這是一個 128 位元的十進位值。|**Decimal**|**decimal**|**Decimal**|**Decimal**|  
-||<xref:System.IntPtr>|帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**IntPtr**|  
-||<xref:System.UIntPtr>|不帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。<br /><br /> 不符合 CLS 標準。|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**|  
-ass 物件|<xref:System.Object>|物件階層架構的根。|**物件**|**object**|**Object\***|**物件**|  
-||<xref:System.String>|Unicode 字元，為不變且長度固定的字串。|**String**|**string**|**String\***|**String**|  
+||<xref:System.Decimal>|這是一個 128 位元的十進位值。|**Decimal**|**decimal**|**Decimal**|**decimal**|  
+||<xref:System.IntPtr>|帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**unativeint**|  
+||<xref:System.UIntPtr>|不帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。<br /><br /> 不符合 CLS 標準。|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**<br /><br /> 非內建型別|**unativeint**|  
+||<xref:System.Object>|物件階層架構的根。|**物件**|**object**|**Object^**|**obj**|  
+||<xref:System.String>|Unicode 字元，為不變且長度固定的字串。|**String**|**string**|**String^**|**string**|  
   
  除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。 <xref:System> 命名空間也包含許多第二層命名空間。  
   
- 如需命名空間的詳細資訊，請瀏覽 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195) (.NET Framework 類別庫)。 參考文件提供各個命名空間的簡要概觀，還有各個型別和它成員的正式說明。  
+ 如需命名空間的詳細資訊，請使用 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)來瀏覽 .NET 類別庫。 API 參考文件提供每個命名空間、其類型及其每個成員的相關文件。  
   
 ## <a name="see-also"></a>請參閱  
  [一般類型系統](../../docs/standard/base-types/common-type-system.md)  
- [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)  
  [概觀](../../docs/framework/get-started/overview.md)

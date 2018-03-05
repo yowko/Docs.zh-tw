@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -53,7 +53,7 @@ Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.
 
 ### <a name="mono"></a>Mono
 
-Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，主要著重於較小的使用量。
+Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，主要著重於較小的使用量。 Mono 也支援使用 Unity 引擎所建置的遊戲。
 
 它支援目前發行的所有 .NET Standard 版本。
 

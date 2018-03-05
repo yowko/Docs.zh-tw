@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,16 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>在桌面應用程式中封裝和部署資源
 應用程式會依賴 <xref:System.Resources.ResourceManager> 類別所代表的 .NET Framework Resource Manager，來擷取當地語系化的資源。 Resource Manager 假設使用中樞和支點模型來封裝和部署資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；如果找不到當地語系化的資源，則它是使用其資源的文化特性。 每個支點都會連線至附屬組件，其中包含單一文化特性但未包含任何程式碼的資源。  

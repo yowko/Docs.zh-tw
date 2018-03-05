@@ -2,18 +2,20 @@
 title: "new 修飾詞 (C# 參考)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new modifier keyword [C#]
+helpviewer_keywords:
+- new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4653cdc15415f0601d07cecb78d1c8e492994b11
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
 `new` 關鍵字做為宣告修飾詞使用時，會明確隱藏繼承自基底類別的成員。 當您隱藏繼承的成員時，該成員的衍生版本就會取代基底類別版本。 雖然您可以在不使用 `new` 修飾詞的情況下隱藏成員，但是編譯器會發出警告。 如果您使用 `new` 明確隱藏成員，它會隱藏這個警告。  
@@ -26,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  經由繼承隱藏的名稱會採用下列其中一種格式：  
   
--   一般而言，在類別或結構中引入的常數、欄位、屬性或類型會隱藏共用其名稱的所有基底類別成員。  不過有一些特殊案例。  例如，如果您宣告名為 `N` 的新欄位採用不可叫用的類型，而且基底類型將 `N` 宣告為方法，則新欄位不會隱藏引動過程語法中的基底宣告。  請參閱[5.0 C# 語言規格](http://go.microsoft.com/fwlink/?LinkId=199552)如需詳細資訊 （請參閱 < 運算式 > 一節中的 < 成員查詢 > 一節）。  
+-   一般而言，在類別或結構中引入的常數、欄位、屬性或類型會隱藏共用其名稱的所有基底類別成員。  不過有一些特殊案例。  例如，如果您宣告名為 `N` 的新欄位採用不可叫用的類型，而且基底類型將 `N` 宣告為方法，則新欄位不會隱藏引動過程語法中的基底宣告。  如需詳細資料，請參閱 [C# Language Specification 5.0](https://www.microsoft.com/download/details.aspx?id=7029) (C# 語言規格 5.0 ) (＜運算式＞一節中的＜成員查詢＞)。  
   
 -   類別或結構中引入的方法會隱藏在基底類別中共用該名稱的屬性、欄位和類型。 它也會隱藏所有具有相同簽章的基底類別方法。  
   
@@ -55,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

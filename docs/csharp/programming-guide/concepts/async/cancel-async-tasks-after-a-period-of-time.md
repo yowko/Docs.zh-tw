@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca4b411f8d8151b18c7e83be15191a843e628b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 717fffb21d38fb356110a3b492b5b9f540a17577
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>在一段時間後取消非同步工作 (C#)
 如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。 這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/21/2017
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
   
 ## <a name="downloading-the-example"></a>下載範例  
- 您可以從 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
+ 您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
 1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
@@ -98,7 +99,7 @@ Downloads canceled.
   
  請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
- 您可以從 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (非同步範例：微調應用程式) 下載專案。  
+ 您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
   
 ```csharp  
 using System;  
@@ -221,9 +222,9 @@ namespace CancelAfterTime
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [取消一項非同步工作或一份工作 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
+ [取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
  [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [非同步範例：微調應用程式 (英文)](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -2,25 +2,26 @@
 title: "泛型類別 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
 泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
   
- 對需要集合類別的大多數案例而言，建議的方法是使用 .NET Framework Class Library 中提供的那些類別。 如需使用這些類別的詳細資訊，請參閱 [.NET Framework Class Library 中的泛型](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
+ 對需要集合類別的大多數案例而言，建議的方法是使用 .NET 類別庫中提供的那些類別。 如需使用這些類別的詳細資訊，請參閱 [.NET 中的泛型集合](../../../standard/generics/collections.md)。  
   
  建立泛型類別一般是從現有的實體類別開始，一次將一個類型變更成型別參數，直到達成一般化和可用性的最佳平衡。 在建立您自己的泛型類別時，重要考量包括：  
   
@@ -70,9 +71,9 @@ ms.lasthandoff: 11/21/2017
   
  泛型類別都是非變異值。 換句話說，如果輸入參數指定 `List<BaseClass>`，您會在嘗試提供 `List<DerivedClass>` 時收到編譯時期錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Generic>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)  
- [儲存狀態的列舉值](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [繼承謎題，第一部](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (儲存列舉程式狀態)  
+ [繼承謎題，第一部](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

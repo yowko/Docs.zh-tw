@@ -2,21 +2,23 @@
 title: "decimal (C# 參考)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-helpviewer_keywords: decimal keyword [C#]
+helpviewer_keywords:
+- decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.openlocfilehash: 0da001851c681fe4d698b920d9668b2f6b731e3a
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="decimal-c-reference"></a>decimal (C# 參考)
 `decimal` 關鍵字表示 128 位元的資料類型。 相較於其他浮點類型，`decimal` 類型的精確度較高且範圍較小，因此非常適合財務和金融計算。 下表顯示 `decimal` 類型的大概範圍和精確度。  
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/25/2017
 |----------|-----------------------|---------------|-------------------------|  
 |`decimal`|(-7.9 x 10<sup>28</sup> 至 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> 至 10<sup>28</sup>)|28-29 個有效數字|<xref:System.Decimal?displayProperty=nameWithType>|  
 
-預設值`decimal`為 0 的 m。
+`decimal` 的預設值為 0m。
   
 ## <a name="literals"></a>常值  
  如果要將數值實數常值視為 `decimal` 處理，請使用後置字元 m 或 M，例如：  
@@ -64,6 +66,7 @@ myMoney = (decimal)x;
  下列範例會嘗試新增 [double](../../../csharp/language-reference/keywords/double.md) 和 `decimal` 變數，而造成編譯器錯誤。  
   
 ```csharp  
+decimal dec = 0m;
 double dub = 9;  
 // The following line causes an error that reads "Operator '+' cannot be applied to   
 // operands of type 'double' and 'decimal'"  
@@ -90,7 +93,7 @@ Console.WriteLine((double)dec + dub);
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Decimal>  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

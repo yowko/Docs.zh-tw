@@ -3,17 +3,17 @@ title: "dotnet 命令 - .NET Core CLI"
 description: "了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -200,6 +200,8 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="environment-variables"></a>環境變數
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `DOTNET_PACKAGES`
 
 主要套件快取。 如果未設定，預設為 `$HOME/.nuget/packages` (Unix) 或 `%HOME%\NuGet\Packages` (Windows)。
@@ -211,3 +213,23 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 指定是否收集 .NET Core 工作使用資料，並將其傳送給 Microsoft。 設定為 `true` 取消遙測功能 (可接受的值為 `true`、`1` 或 `yes`)；否則，設定為 `false` 加入遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能為使用中。
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+指定是否從全域位置解析 .NET Core 執行階段、共用架構或 SDK。 如果未設定，則預設為 `true`。 設定為 `false` 則不會從全域位置解析，而且會有獨立模式的 .NET Core 安裝 (接受 `0` 或 `false` 值)。 如需多層級查閱的詳細資訊，請參閱 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (多層級 SharedFX 查閱)。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+主要套件快取。 如果未設定，預設為 `$HOME/.nuget/packages` (Unix) 或 `%HOME%\NuGet\Packages` (Windows)。
+
+`DOTNET_SERVICING`
+
+指定載入執行階段時，共用主機所使用的服務索引位置。
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+指定是否收集 .NET Core 工作使用資料，並將其傳送給 Microsoft。 設定為 `true` 取消遙測功能 (可接受的值為 `true`、`1` 或 `yes`)；否則，設定為 `false` 加入遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能為使用中。
+
+---

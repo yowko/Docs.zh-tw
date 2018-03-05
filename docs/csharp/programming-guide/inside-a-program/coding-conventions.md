@@ -2,25 +2,24 @@
 title: "C# 編碼慣例 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
-[C# 語言規格](http://go.microsoft.com/fwlink/?LinkId=199552)不會定義編碼標準。 但 Microsoft 會利用本主題中的指導方針，開發範例與文件。  
-  
  編碼慣例有下列用途：  
   
 -   建立外觀一致的程式碼，讓讀者可以專注於內容，而非版面配置。  
@@ -30,6 +29,8 @@ ms.lasthandoff: 11/21/2017
 -   有助於複製、變更及維護程式碼。  
   
 -   示範 C# 的最佳作法。  
+
+ Microsoft 會利用本主題中的指導方針來開發範例與文件。  
   
 ## <a name="naming-conventions"></a>命名規範  
   
@@ -200,6 +201,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="security"></a>安全性  
  請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
  [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)

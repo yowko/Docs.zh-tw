@@ -1,92 +1,73 @@
 ---
 title: "Visual Basic 程式設計人員的其他資源"
-ms.date: 07/20/2015
+description: "探索網路上的資源，以學習、詢問問題及了解有關 Visual Basic 的更多資訊。"
+ms.date: 02/21/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, additional resources
-- Help
 - resources [Visual Basic], additional
-- Help, newsgroups
-- Web sites, Visual Studio
-- webcasts
 - Help, Visual Basic Web sites
-- newsgroups, Visual Studio
-- support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="additional-resources-for-visual-basic-programmers"></a>Visual Basic 程式設計人員的其他資源
-下列網站提供指引，可協助您尋找常見問題的解答。  
-  
-## <a name="microsoft-resources"></a>Microsoft 資源  
-  
-### <a name="on-the-web"></a>網站  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[Microsoft Visual Basic Developer Center](http://go.microsoft.com/fwlink/?LinkID=47768)|提供程式碼範例、升級資訊、影片、免費下載和技術性內容。|  
-|[Microsoft Visual Basic Team Blog](http://go.microsoft.com/fwlink/?LinkID=123815) (Microsoft Visual Basic 小組部落格)|提供存取 Visual Basic 小組部落格的存取。|  
-|[Microsoft ASP.NET](http://go.microsoft.com/fwlink/?LinkID=51657)|提供關於以 Visual Basic 進行網頁開發的文章、示範、工具預覽和其他資訊。|  
-|[MSDN Magazine](http://msdn.microsoft.com/magazine/cc159292.aspx)|提供關於 Visual Basic 的深入文章。|  
-|[Microsoft patterns & practices](http://msdn.microsoft.com/practices/default.aspx) (Microsoft 典範與實例)|提供應用工程指引，包括生產環境品質的原始程式碼和文件。|  
-  
-### <a name="code-samples"></a>程式碼範例  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[Code Gallery](http://code.msdn.microsoft.com/) (程式碼庫)|下載及與開發人員社群分享範例應用程式和其他資源。|  
-|[GitHub](http://www.github.com/)|其中存放了開放原始碼軟體專案。 您可以使用 GitHub 來尋找開放原始碼軟體或建立新的專案，與全世界分享。|  
-|[Visual Basic 程式碼範例](http://msdn.microsoft.com/vbasic/ms789074)|提供 Visual Basic 中的應用程式、Web 和資料範例。|  
-  
-### <a name="forums"></a>論壇  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[Visual Basic 語言](http://go.microsoft.com/fwlink/?LinkId=145963)|討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言語法和編譯器。|  
-|[Visual Basic Interop and Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966) (Visual Basic Interop 與升級)|討論升級至 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 及使用互通性功能。|  
-|[Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|討論在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境中工作。|  
-|[Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|討論 Visual Basic Power Pack 中的增益集、控制項、元件、範例及工具。|  
-|[Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973) (Visual Basic 一般)|討論其他論壇中未討論的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 問題。|  
-  
-### <a name="chats-and-discussion-groups"></a>聊天室和討論群組  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[MSDN 討論群組](http://go.microsoft.com/fwlink/?LinkId=145961)|提供新聞群組體驗，讓您能透過社群和世界各地的專家連絡。|  
-|[MSDN 交談](http://go.microsoft.com/fwlink/?LinkId=145962)|提供 Microsoft 產品或技術的相關討論。 每個聊天室都是由一或多位 Microsoft 專家主持。 此外，提供完整聊天內容的記錄。|  
-  
-### <a name="videos-and-webcasts"></a>視訊及網路廣播  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[Channel9](http://go.microsoft.com/fwlink/?LinkID=123827)|透過視訊、Wiki 和論壇，提供連續的社群。|  
-|[I'm a VB](http://msdn.microsoft.com/vbasic/dd776132)|觀看這些訪談，看看專家們喜愛 Visual Basic 和 Visual Studio 的原因。|  
-  
-### <a name="support"></a>支援  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[Microsoft 說明和支援](http://go.microsoft.com/fwlink/?LinkID=108287)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|  
-|[Microsoft Connect](http://connect.microsoft.com/)|可讓您提報 Visual Studio 相關的 Bug 給 Microsoft，或提供建議。 選擇 [說明] 功能表上的 [呈報錯誤]，也可以呈報錯誤。|  
-  
-## <a name="third-party-resources"></a>協力廠商資源  
- MSDN 網站提供目前協力廠商網站和您可能會感興趣的新聞群組的資訊。 如需最新的可用資源清單，請參閱 [MSDN Visual Basic 社群網站](http://go.microsoft.com/fwlink/?LinkID=77372)。  
-  
-|詞彙|定義|  
-|----------|----------------|  
-|[DevX Visual Basic Zone](http://go.microsoft.com/fwlink/?LinkId=145978)|為今日的 Visual Basic 開發人員提供深入的技術文章。|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|提供論壇，以在 DevX 論壇中討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 新功能。|  
-  
-## <a name="see-also"></a>另請參閱  
- [快速入門](../../visual-basic/getting-started/index.md)  
- [告訴我們](/visualstudio/ide/talk-to-us)
+# <a name="additional-resources"></a>其他資源
+
+下列網站提供指引，可協助您尋找常見問題的解答。
+
+## <a name="microsoft-resources"></a>Microsoft 資源
+
+### <a name="on-the-web"></a>網路上
+
+|詞彙|定義|
+|----------|----------------|
+|[Visual Basic .NET 語言設計](https://github.com/dotnet/vblang)|適用於 Visual Basic .NET 語言設計的官方 GitHub 存放庫。|
+|[Microsoft Visual Basic Team Blog](https://blogs.msdn.microsoft.com/vbteam/) (Microsoft Visual Basic 小組部落格)|提供存取 Visual Basic 小組部落格的存取。|
+
+### <a name="code-samples"></a>程式碼範例
+
+|詞彙|定義|
+|----------|----------------|
+|[Code Gallery](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET) (程式碼庫)|下載及與開發人員社群分享範例應用程式和其他資源。|
+|[Visual Basic 文件範例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|包含 Visual Basic 和 .NET 文件的所有使用範例。|
+
+### <a name="forums"></a>論壇
+
+|詞彙|定義|
+|----------|----------------|
+|[Visual Basic 論壇](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|討論一般 Visual Basic 問題。|
+
+### <a name="videos-and-webcasts"></a>影片及網路廣播
+
+|詞彙|定義|
+|----------|----------------|
+|[Channel9](https://channel9.msdn.com/)|透過視訊、Wiki 和論壇，提供連續的社群。|
+
+### <a name="support"></a>支援
+
+|詞彙|定義|
+|----------|----------------|
+|[Microsoft 支援服務](https://support.microsoft.com)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|
+|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您也可以在 Visual Studio 中選取 [說明] > [傳送意見] > [回報問題]，來回報錯誤。|
+
+## <a name="third-party-resources"></a>協力廠商資源
+
+|詞彙|定義|
+|----------|----------------|
+|[VBForums](http://www.vbforums.com/)|提供可討論 Visual Basic、.NET 等的論壇。|
+|[vbCity](http://vbcity.com/)|可讓使用者了解 Visual Basic 和 .NET 及詢問 相關問題的社群網站。|
+|[堆疊溢位](https://stackoverflow.com/questions/tagged/vb.net)|堆疊溢位是適用於開發人員的問與答網站。|
+
+## <a name="see-also"></a>另請參閱
+
+[開始使用 Visual Basic](../../visual-basic/getting-started/index.md)  
+[告訴我們](/visualstudio/ide/talk-to-us)  
