@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-ms.workload: dotnetcore
-ms.openlocfilehash: 06fea0118d70079a34a6954eae49ace344262ea5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="prerequisites"></a>必要條件
 
-已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 (英文)](https://www.visualstudio.com/downloads/)。 您可以使用 .NET Core 1.1 或 .NET Core 2.0 開發應用程式。
+已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 (英文)](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 您可以使用 .NET Core 1.1 或 .NET Core 2.0 開發應用程式。
 
 如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](../../core/windows-prerequisites.md)。
 

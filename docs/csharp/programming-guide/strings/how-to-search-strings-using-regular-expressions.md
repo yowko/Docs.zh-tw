@@ -2,20 +2,21 @@
 title: "如何：使用規則運算式搜尋字串 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c851c57b44f1343816b905db002e530121fb6c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>如何：使用規則運算式搜尋字串 (C# 程式設計手冊)
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別可以用來搜尋字串。 這些搜尋的複雜度範圍可以從非常簡單到充分運用規則運算式。 以下是使用 <xref:System.Text.RegularExpressions.Regex> 類別搜尋字串的兩個範例。 如需詳細資訊，請參閱 [.NET Framework 規則運算式](https://msdn.microsoft.com/library/hs600312)。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_2.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [字串](../../../csharp/programming-guide/strings/index.md)  

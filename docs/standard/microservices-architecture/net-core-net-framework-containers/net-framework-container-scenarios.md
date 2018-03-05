@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件
 
-協力廠商程式庫會快速採行 [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和以上版本，跨不同架構的 API 介面功能已明顯變大，而且，在 .NET Core 2.0 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱[相容性修正](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work))。
+協力廠商程式庫會快速採行 [.NET Standard](../../net-standard.md)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和以上版本，跨不同架構的 API 介面功能已明顯變大，而且，在 .NET Core 2.0 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱[相容性修正](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work))。
 
 不過，即使自 .NET Standard 2.0 和 .NET Core 2.0 開始有該例外進展，仍然可能有特定 NuGet 套件需要執行 Windows 而且可能不支援 .NET Core 的情況。 如果這些套件對您的應用程式十分重要，則需要在 Windows 容器上使用 .NET Framework。
 
@@ -56,16 +56,16 @@ ms.lasthandoff: 02/01/2018
 ### <a name="additional-resources"></a>其他資源
 
 -   **.NET Core 指南**
-    [*https://docs.microsoft.com/dotnet/core/index*](https://docs.microsoft.com/dotnet/core/index)
+    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **從 .NET Framework 移轉到 .NET Core**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](https://docs.microsoft.com/dotnet/core/porting/index)
+    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
 -   **Docker 上的 .NET Framework 指南**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](https://docs.microsoft.com/dotnet/framework/docker/)
+    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **.NET 元件概觀**
-    [*https://docs.microsoft.com/dotnet/standard/components*](https://docs.microsoft.com/dotnet/standard/components)
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

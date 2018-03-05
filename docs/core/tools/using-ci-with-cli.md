@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -44,7 +45,7 @@ macOS 使用者應使用 PKG 安裝程式。 在 Linux 上，您可以選擇使�
 
 ## <a name="ci-setup-examples"></a>CI 設定範例
 
-本節描述如何使用 PowerShell 或 Bash 指令碼進行手動設定，以及描述幾個軟體即服務 (SaaS) CI 解決方案。 涵蓋的 SaaS CI 解決方案包括 [Travis CI](https://travis-ci.org/) \(英文\)、[AppVeyor](https://www.appveyor.com/) \(英文\) 和 [Visual Studio Team Services 組建](https://www.visualstudio.com/docs/build/overview) \(英文\)。
+本節描述如何使用 PowerShell 或 Bash 指令碼進行手動設定，以及描述幾個軟體即服務 (SaaS) CI 解決方案。 涵蓋的 SaaS CI 解決方案包括 [Travis CI](https://travis-ci.org/) \(英文\)、[AppVeyor](https://www.appveyor.com/) \(英文\) 和 [Visual Studio Team Services 組建](https://docs.microsoft.com/vsts/build-release/index) \(英文\)。
 
 ### <a name="manual-setup"></a>手動設定
 
@@ -155,7 +156,7 @@ install:
 1. 使用您的命令從[手動設定步驟](#manual-setup)執行指令碼。
 1. 建立由數個設定為使用 .NET Core 工具的 VSTS 內建建置工作所組成的組建。
 
-這兩種解決方案都是可行的。 您可以使用手動設定指令碼來控制接收到的工具版本，因為那些工具是以組建之一部分的形式下載的。 組建會從您必須建立的指令碼執行。 本主題僅涵蓋手動選項。 如需搭配 VSTS 建置工作組成組建的詳細資訊，請造訪 VSTS [連續整合與部署](https://www.visualstudio.com/docs/build/overview) \(英文\) 主題。
+這兩種解決方案都是可行的。 您可以使用手動設定指令碼來控制接收到的工具版本，因為那些工具是以組建之一部分的形式下載的。 組建會從您必須建立的指令碼執行。 本主題僅涵蓋手動選項。 如需搭配 VSTS 建置工作組成組建的詳細資訊，請造訪 VSTS [連續整合與部署](https://docs.microsoft.com/vsts/build-release/index) \(英文\) 主題。
 
 若要在 VSTS 中使用手動設定指令碼，請建立新的組建定義，並指定要針對建置步驟執行的指令碼。 這可使用 VSTS 使用者介面來完成：
 
@@ -177,7 +178,7 @@ install:
 
 ## <a name="orchestrating-the-build"></a>協調組建
 
-本文件大部分內容為描述如何取得 .NET Core 工具及設定各種 CI 服務，並沒有提供如何使用 .NET Core 來協調或「實際建置」程式碼的相關資訊。 建置程序的結構方式取決於許多因素，無法在這裡以一一涵蓋。 請探索 [Travis CI](https://travis-ci.org/) \(英文\)、[AppVeyor](https://www.appveyor.com/) \(英文\) 和 [VSTS](https://www.visualstudio.com/docs/build/overview) \(英文\) 文件集中所提供的資源與範例，以取得搭配上述技術協調組建的詳細資訊。
+本文件大部分內容為描述如何取得 .NET Core 工具及設定各種 CI 服務，並沒有提供如何使用 .NET Core 來協調或「實際建置」程式碼的相關資訊。 建置程序的結構方式取決於許多因素，無法在這裡以一一涵蓋。 請探索 [Travis CI](https://travis-ci.org/) \(英文\)、[AppVeyor](https://www.appveyor.com/) \(英文\) 和 [VSTS](https://docs.microsoft.com/vsts/build-release/index) \(英文\) 文件集中所提供的資源與範例，以取得搭配上述技術協調組建的詳細資訊。
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
