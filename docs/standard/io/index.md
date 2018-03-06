@@ -16,18 +16,18 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，`System.IO` 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 01/09/2018
   
  如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 [System.IO.WindowsRuntimeStreamExtensions (英文)](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)。 <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- 如需 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱 Windows 開發人員中心的[快速入門：讀取和寫入檔案](http://go.microsoft.com/fwlink/p/?LinkId=243072)。  
+ 如需有關 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱[快速入門：讀取和寫入檔案](/previous-versions/windows/apps/hh758325(v=win.10))。  
   
 ## <a name="io-and-security"></a>I/O 和安全性  
  當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
