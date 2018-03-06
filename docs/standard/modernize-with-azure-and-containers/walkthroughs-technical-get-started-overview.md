@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術取得已啟動的概觀 
 
@@ -47,7 +47,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 在本逐步解說中，您可以瀏覽初始實作中的兩個範例舊版應用程式。 兩個範例應用程式整合的架構，並使用傳統 ASP.NET 所建立的。 一個應用程式根據 ASP.NET 4.x MVC;第二個應用程式是以 ASP.NET 4.x Web Form 為基礎。 這兩個應用程式處於[eShopModernizing GitHub 儲存機制](https://github.com/dotnet-architecture/eShopModernizing)。
 
-可以化兩個範例應用程式，其方式類似於可以化傳統[Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)取用做為桌面應用程式 (WCF) 應用程式。 如需範例，請參閱[eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)。
+可以化兩個範例應用程式，其方式類似於可以化傳統[Windows Communication Foundation](../../framework/wcf/whats-wcf.md)取用做為桌面應用程式 (WCF) 應用程式。 如需範例，請參閱[eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)。
 
 ### <a name="goals"></a>目標
 
@@ -97,7 +97,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 本逐步解說的目標是示範幾個選項用於 containerizing 現有的.NET Framework 應用程式。 您可以：
 
--   化您的應用程式使用[Visual Studio 2017 Tools for Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) （Visual Studio 2017 或更新版本）。
+-   化您的應用程式使用[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) （Visual Studio 2017 或更新版本）。
 
 -   化您的應用程式透過手動方式新增[Dockerfile](https://docs.docker.com/engine/reference/builder/)，然後使用[Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)。
 

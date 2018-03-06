@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>集合方針
 可以被視為特別設計用來管理群組物件都有某些共同特性的任何類型的集合。 這幾乎都適合實作這類類型<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，因此本節中，我們只考慮實作一或兩個介面的型別是集合。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/23/2017
   
  **X 不**使用<xref:System.Collections.ArrayList>或<xref:System.Collections.Generic.List%601>在公用 Api。  
   
- 這些類型是設計為可在內部實作中，不能在公用 Api 的資料結構。 `List<T>`已針對效能，但要付出的應用程式開發介面與彈性 cleanness 電源最佳化。 例如，如果您傳回`List<T>`，您將永遠無法接收通知，當用戶端程式碼會修改集合。 此外，`List<T>`公開許多成員，例如<xref:System.Collections.Generic.List%601.BinarySearch%2A>，不實用或適用於許多案例。 下列兩節則描述專為使用公用 Api 中設計的類型 （抽象）。  
+ 這些類型是設計為可在內部實作中，不能在公用 Api 的資料結構。 `List<T>` 已針對效能，但要付出的應用程式開發介面與彈性 cleanness 電源最佳化。 例如，如果您傳回`List<T>`，您將永遠無法接收通知，當用戶端程式碼會修改集合。 此外，`List<T>`公開許多成員，例如<xref:System.Collections.Generic.List%601.BinarySearch%2A>，不實用或適用於許多案例。 下列兩節則描述專為使用公用 Api 中設計的類型 （抽象）。  
   
  **X 不**使用`Hashtable`或`Dictionary<TKey,TValue>`在公用 Api。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 不要**使用<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>的子類別`ReadOnlyCollection<T>`，或在極少數的情況下`IEnumerable<T>`針對屬性或傳回值表示唯讀的集合。  
   
- 通常，最好`ReadOnlyCollection<T>`。 如果不符合某些需求 (例如，集合必須不會實作`IList`)，使用自訂的集合，藉由實作`IEnumerable<T>`， `ICollection<T>`，或`IList<T>`。 如果您實作自訂的唯讀集合，實作`ICollection<T>.ReadOnly`傳回 false。  
+ 通常，最好`ReadOnlyCollection<T>`。 如果不符合某些需求 (例如，集合必須不會實作`IList`)，使用自訂的集合，藉由實作`IEnumerable<T>`， `ICollection<T>`，或`IList<T>`。 如果您實作自訂的唯讀集合，實作`ICollection<T>.IsReadOnly`傳回`true`。  
   
  在要確定只有您想要支援的案例是順向的反覆項目的情況下，您可以直接使用`IEnumerable<T>`。  
   

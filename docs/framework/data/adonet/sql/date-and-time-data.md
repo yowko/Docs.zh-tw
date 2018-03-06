@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -60,7 +62,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
  如需有關 SQL Server 如何解譯日期和時間資料的詳細資訊，請參閱[使用日期和時間資料](http://go.microsoft.com/fwlink/?LinkID=98361)SQL Server 2008 線上叢書 》 中。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日期/時間資料型別和參數  
- 您可以使用其中一個 <xref:System.Data.SqlClient.SqlParameter> 列舉型別 (Enumeration) 來指定 <xref:System.Data.SqlDbType> 的資料型別。 <xref:System.Data.SqlDbType> 中已加入下列的列舉型別以支援新的日期及時間資料型別。  
+ <xref:System.Data.SqlDbType> 中已加入下列的列舉型別以支援新的日期及時間資料型別。  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+您可以指定的資料型別<xref:System.Data.SqlClient.SqlParameter>利用上述的其中一種<xref:System.Data.SqlDbType>列舉型別。 
+
+> [!NOTE]
+> 您不能設定`DbType`屬性`SqlParameter`至`SqlDbType.Date`。
+
  您也可以藉由將 <xref:System.Data.SqlClient.SqlParameter> 物件的 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 屬性設定為特定的 `SqlParameter` 列舉值，以一般的方式指定 <xref:System.Data.DbType> 的型別。 <xref:System.Data.DbType> 中已加入下列的列舉值以支援 `datetime2` 和 `datetimeoffset` 資料型別：  
   
 -   DbType.DateTime2  

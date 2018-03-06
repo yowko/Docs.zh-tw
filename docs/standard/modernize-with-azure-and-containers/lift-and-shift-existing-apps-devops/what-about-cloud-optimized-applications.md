@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>雲端最佳化應用程式呢？
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 建立新的應用程式，請勿使用 microservices 也有意義。 有許多新的和仍然現代案例所在 microservices 為基礎的方法可能會超過您的需求。 在某些情況下，您可能只想要建立簡單的龐大的 web 應用程式，或將粗略的服務加入多層式架構應用程式。 在這些情況下，您仍可完全使用雲端的 PaaS 功能，例如 Azure 應用程式服務所提供的項目。 您仍然可以減少維護工作的限制。
 
-此外，因為您在開發新的程式碼在雲端最佳化情況下 （完整的應用程式或部分的子系統），當您建立新的程式碼，您應該使用較新版本的.NET ([.NET Core](https://docs.microsoft.com/dotnet/core/)和[ASP.NET Core](https://docs.microsoft.com/aspnet/core/)，尤其)。 這是因為.NET Core 是簡式又快速的 framework，建立 microservices 和容器的特別有用。 您會取得小的記憶體使用量和快速開始在容器中，而且您的應用程式高效能。 這種方法完全符合的需求 microservices 和容器，因此您跨平台架構-能夠 Linux、 Windows Server 和 Mac (Mac 開發環境) 中執行相同的應用程式的優點。
+此外，因為您在開發新的程式碼在雲端最佳化情況下 （完整的應用程式或部分的子系統），當您建立新的程式碼，您應該使用較新版本的.NET ([.NET Core](../../../core/index.md)和[ASP.NET Core](/aspnet/core/)，尤其)。 這是因為.NET Core 是簡式又快速的 framework，建立 microservices 和容器的特別有用。 您會取得小的記憶體使用量和快速開始在容器中，而且您的應用程式高效能。 這種方法完全符合的需求 microservices 和容器，因此您跨平台架構-能夠 Linux、 Windows Server 和 Mac (Mac 開發環境) 中執行相同的應用程式的優點。
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>與雲端最佳化應用程式的雲端原生應用程式
 
@@ -65,7 +65,7 @@ Microservices 架構是針對全新或改良的現有應用程式建立的應用
 
 Microservices 架構成為分散式和大型或複雜關鍵任務應用程式為基礎的自發的服務形式的多個獨立子系統的慣用的方法。 在 microservices 基礎架構中，應用程式會建立可以是獨立開發、 測試、 版本設定，部署，以及調整的服務集合。 這可包括任何相關的自發每個資料庫微服務。
 
-您可以使用.NET 核心實作 microservices 架構的詳細檢視，請參閱可下載 PDF 電子書[.NET microservices： 容器化的.NET 應用程式的架構](https://aka.ms/microservicesebook)。 本指南也可以使用[線上](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)。
+您可以使用.NET 核心實作 microservices 架構的詳細檢視，請參閱可下載 PDF 電子書[.NET microservices： 容器化的.NET 應用程式的架構](https://aka.ms/microservicesebook)。 本指南也可以使用[線上](../../microservices-architecture/index.md)。
 
 但即使是個 microservices 提供功能強大的功能與獨立部署、 強式子系統界限和技術多樣化的案例-它們也會引發許多新的挑戰。 分散式應用程式開發，例如分散且獨立的資料模型中; 與挑戰相關達到復原 microservices; 之間的通訊最終一致性; 需要和操作的複雜性。 Microservices 導入相較於傳統的整合應用程式的複雜性較高的層的級。
 
