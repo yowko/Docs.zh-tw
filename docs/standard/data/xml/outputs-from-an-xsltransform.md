@@ -9,60 +9,63 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 92bf2d7184ca2eb8b17c1d83130c66d1f33f0483
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 647f3829f4b26791c063d5646669b2fcb7ab6684
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="outputs-from-an-xsltransform"></a><span data-ttu-id="b0e94-102">XslTransform 的輸出</span><span class="sxs-lookup"><span data-stu-id="b0e94-102">Outputs from an XslTransform</span></span>
-<span data-ttu-id="b0e94-103">由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。</span><span class="sxs-lookup"><span data-stu-id="b0e94-103">Since style sheets can determine the output format using an `<xsl:output>` statement with the `method` attribute, the following table describes what the output format is when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is used to write the output, and the output format is declared as a <xref:System.IO.Stream> or <xref:System.IO.TextWriter>.</span></span>  
+# <a name="outputs-from-an-xsltransform"></a><span data-ttu-id="b8968-102">XslTransform 的輸出</span><span class="sxs-lookup"><span data-stu-id="b8968-102">Outputs from an XslTransform</span></span>
+<span data-ttu-id="b8968-103">由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。</span><span class="sxs-lookup"><span data-stu-id="b8968-103">Since style sheets can determine the output format using an `<xsl:output>` statement with the `method` attribute, the following table describes what the output format is when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is used to write the output, and the output format is declared as a <xref:System.IO.Stream> or <xref:System.IO.TextWriter>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b0e94-104"><xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。</span><span class="sxs-lookup"><span data-stu-id="b0e94-104">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="b0e94-105">您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。</span><span class="sxs-lookup"><span data-stu-id="b0e94-105">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="b0e94-106">請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[移轉從 XslTransform 類別](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="b0e94-106">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+>  <span data-ttu-id="b8968-104"><xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。</span><span class="sxs-lookup"><span data-stu-id="b8968-104">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="b8968-105">您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。</span><span class="sxs-lookup"><span data-stu-id="b8968-105">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="b8968-106">如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。</span><span class="sxs-lookup"><span data-stu-id="b8968-106">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="b0e94-107">由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。</span><span class="sxs-lookup"><span data-stu-id="b0e94-107">Since style sheets can determine the output format using an `<xsl:output>` statement with the `method` attribute, the following table describes what the output format is when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is used to write the output, and the output format is declared as a <xref:System.IO.Stream> or <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="b0e94-108">下表說明在輸出型別由 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法進行宣告，並且搭配使用 `<xsl:output>` 陳述式時，將發生哪些情況：</span><span class="sxs-lookup"><span data-stu-id="b0e94-108">The following table describes what happens when an output type is declared by the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method in conjunction with the use of an `<xsl:output>` statement:</span></span>  
+ <span data-ttu-id="b8968-107">由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。</span><span class="sxs-lookup"><span data-stu-id="b8968-107">Since style sheets can determine the output format using an `<xsl:output>` statement with the `method` attribute, the following table describes what the output format is when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is used to write the output, and the output format is declared as a <xref:System.IO.Stream> or <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="b8968-108">下表說明在輸出型別由 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法進行宣告，並且搭配使用 `<xsl:output>` 陳述式時，將發生哪些情況：</span><span class="sxs-lookup"><span data-stu-id="b8968-108">The following table describes what happens when an output type is declared by the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method in conjunction with the use of an `<xsl:output>` statement:</span></span>  
   
-|<span data-ttu-id="b0e94-109">\<l: output method = > 屬性</span><span class="sxs-lookup"><span data-stu-id="b0e94-109">\<xsl:output method = > attribute</span></span>|<span data-ttu-id="b0e94-110">結果格式</span><span class="sxs-lookup"><span data-stu-id="b0e94-110">Result format</span></span>|  
+|<span data-ttu-id="b8968-109">\<xsl:output method = > 屬性</span><span class="sxs-lookup"><span data-stu-id="b8968-109">\<xsl:output method = > attribute</span></span>|<span data-ttu-id="b8968-110">結果格式</span><span class="sxs-lookup"><span data-stu-id="b8968-110">Result format</span></span>|  
 |-----------------------------------------|-------------------|  
-|<span data-ttu-id="b0e94-111">method="xml"</span><span class="sxs-lookup"><span data-stu-id="b0e94-111">method="xml"</span></span>|<span data-ttu-id="b0e94-112">XML</span><span class="sxs-lookup"><span data-stu-id="b0e94-112">XML</span></span>|  
-|<span data-ttu-id="b0e94-113">method="html"</span><span class="sxs-lookup"><span data-stu-id="b0e94-113">method="html"</span></span>|<span data-ttu-id="b0e94-114">HTML</span><span class="sxs-lookup"><span data-stu-id="b0e94-114">HTML</span></span>|  
-|<span data-ttu-id="b0e94-115">method="text"</span><span class="sxs-lookup"><span data-stu-id="b0e94-115">method="text"</span></span>|<span data-ttu-id="b0e94-116">Text</span><span class="sxs-lookup"><span data-stu-id="b0e94-116">Text</span></span>|  
+|<span data-ttu-id="b8968-111">method="xml"</span><span class="sxs-lookup"><span data-stu-id="b8968-111">method="xml"</span></span>|<span data-ttu-id="b8968-112">XML</span><span class="sxs-lookup"><span data-stu-id="b8968-112">XML</span></span>|  
+|<span data-ttu-id="b8968-113">method="html"</span><span class="sxs-lookup"><span data-stu-id="b8968-113">method="html"</span></span>|<span data-ttu-id="b8968-114">HTML</span><span class="sxs-lookup"><span data-stu-id="b8968-114">HTML</span></span>|  
+|<span data-ttu-id="b8968-115">method="text"</span><span class="sxs-lookup"><span data-stu-id="b8968-115">method="text"</span></span>|<span data-ttu-id="b8968-116">Text</span><span class="sxs-lookup"><span data-stu-id="b8968-116">Text</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="b0e94-117">注意：當 `<xsl:output>` 方法的輸出是 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 或 <xref:System.Xml.XmlReader> 時，將會忽略 <xref:System.Xml.XmlWriter> 陳述式。</span><span class="sxs-lookup"><span data-stu-id="b0e94-117">Note: The `<xsl:output>` statement is ignored when the output of the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is an <xref:System.Xml.XmlReader> or <xref:System.Xml.XmlWriter>.</span></span>  
+>  <span data-ttu-id="b8968-117">注意：當 `<xsl:output>` 方法的輸出是 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 或 <xref:System.Xml.XmlReader> 時，將會忽略 <xref:System.Xml.XmlWriter> 陳述式。</span><span class="sxs-lookup"><span data-stu-id="b8968-117">Note: The `<xsl:output>` statement is ignored when the output of the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is an <xref:System.Xml.XmlReader> or <xref:System.Xml.XmlWriter>.</span></span>  
   
- <span data-ttu-id="b0e94-118">當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，可支援下列屬性：</span><span class="sxs-lookup"><span data-stu-id="b0e94-118">The following attributes are supported when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method output is a <xref:System.IO.Stream> or <xref:System.IO.TextWriter>:</span></span>  
+ <span data-ttu-id="b8968-118">當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，可支援下列屬性：</span><span class="sxs-lookup"><span data-stu-id="b8968-118">The following attributes are supported when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method output is a <xref:System.IO.Stream> or <xref:System.IO.TextWriter>:</span></span>  
   
--   <span data-ttu-id="b0e94-119">encoding*</span><span class="sxs-lookup"><span data-stu-id="b0e94-119">encoding*</span></span>  
+-   <span data-ttu-id="b8968-119">encoding\*</span><span class="sxs-lookup"><span data-stu-id="b8968-119">encoding\*</span></span>  
   
--   <span data-ttu-id="b0e94-120">omit-xml-declaration</span><span class="sxs-lookup"><span data-stu-id="b0e94-120">omit-xml-declaration</span></span>  
+-   <span data-ttu-id="b8968-120">omit-xml-declaration</span><span class="sxs-lookup"><span data-stu-id="b8968-120">omit-xml-declaration</span></span>  
   
--   <span data-ttu-id="b0e94-121">獨立</span><span class="sxs-lookup"><span data-stu-id="b0e94-121">standalone</span></span>  
+-   <span data-ttu-id="b8968-121">獨立</span><span class="sxs-lookup"><span data-stu-id="b8968-121">standalone</span></span>  
   
--   <span data-ttu-id="b0e94-122">doctype-public</span><span class="sxs-lookup"><span data-stu-id="b0e94-122">doctype-public</span></span>  
+-   <span data-ttu-id="b8968-122">doctype-public</span><span class="sxs-lookup"><span data-stu-id="b8968-122">doctype-public</span></span>  
   
--   <span data-ttu-id="b0e94-123">doctype-system</span><span class="sxs-lookup"><span data-stu-id="b0e94-123">doctype-system</span></span>  
+-   <span data-ttu-id="b8968-123">doctype-system</span><span class="sxs-lookup"><span data-stu-id="b8968-123">doctype-system</span></span>  
   
--   <span data-ttu-id="b0e94-124">cdata-section-elements</span><span class="sxs-lookup"><span data-stu-id="b0e94-124">cdata-section-elements</span></span>  
+-   <span data-ttu-id="b8968-124">cdata-section-elements</span><span class="sxs-lookup"><span data-stu-id="b8968-124">cdata-section-elements</span></span>  
   
--   <span data-ttu-id="b0e94-125">indent</span><span class="sxs-lookup"><span data-stu-id="b0e94-125">indent</span></span>  
+-   <span data-ttu-id="b8968-125">indent</span><span class="sxs-lookup"><span data-stu-id="b8968-125">indent</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="b0e94-126">*當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法傳送它的輸出給 <xref:System.IO.TextWriter> 時，將會忽略編碼屬性。</span><span class="sxs-lookup"><span data-stu-id="b0e94-126">*the encoding attribute is ignored when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is sending its output to a <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="b0e94-127">會改用 <xref:System.IO.TextWriter> 上的編碼屬性。</span><span class="sxs-lookup"><span data-stu-id="b0e94-127">The encoding property on the <xref:System.IO.TextWriter> is used instead.</span></span>  
+    >  <span data-ttu-id="b8968-126">\*當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法傳送它的輸出給 <xref:System.IO.TextWriter> 時，將會忽略編碼屬性。</span><span class="sxs-lookup"><span data-stu-id="b8968-126">\*the encoding attribute is ignored when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is sending its output to a <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="b8968-127">會改用 <xref:System.IO.TextWriter> 上的編碼屬性。</span><span class="sxs-lookup"><span data-stu-id="b8968-127">The encoding property on the <xref:System.IO.TextWriter> is used instead.</span></span>  
   
- <span data-ttu-id="b0e94-128">當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出是 <xref:System.IO.Stream> 時，將會忽略下列屬性：</span><span class="sxs-lookup"><span data-stu-id="b0e94-128">The following attribute is ignored when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method output is a <xref:System.IO.Stream>:</span></span>  
+ <span data-ttu-id="b8968-128">當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出是 <xref:System.IO.Stream> 時，將會忽略下列屬性：</span><span class="sxs-lookup"><span data-stu-id="b8968-128">The following attribute is ignored when the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method output is a <xref:System.IO.Stream>:</span></span>  
   
--   <span data-ttu-id="b0e94-129">版本：版本一律為 1.0</span><span class="sxs-lookup"><span data-stu-id="b0e94-129">version: the version is always 1.0</span></span>  
+-   <span data-ttu-id="b8968-129">版本：版本一律為 1.0</span><span class="sxs-lookup"><span data-stu-id="b8968-129">version: the version is always 1.0</span></span>  
   
--   <span data-ttu-id="b0e94-130">媒體類型：媒體類型</span><span class="sxs-lookup"><span data-stu-id="b0e94-130">media-type: the media-type</span></span>  
+-   <span data-ttu-id="b8968-130">媒體類型：媒體類型</span><span class="sxs-lookup"><span data-stu-id="b8968-130">media-type: the media-type</span></span>  
   
-## <a name="escaping-special-characters"></a><span data-ttu-id="b0e94-131">逸出特殊字元</span><span class="sxs-lookup"><span data-stu-id="b0e94-131">Escaping Special Characters</span></span>  
- <span data-ttu-id="b0e94-132">`<xsl:text disable-output-escaping>` 標記可用來指示特殊字元是否必須逸出為 XML 格式 (例如，以 `<&lt>` 取代 `"<"` 符號)，或必須保持現有的狀況。</span><span class="sxs-lookup"><span data-stu-id="b0e94-132">The `<xsl:text disable-output-escaping>` tag is used to indicate whether or not special characters need to be escaped into an XML form (for example, using `<&lt>` in place of the `"<"` symbol) or left in the present condition.</span></span> <span data-ttu-id="b0e94-133">當轉換為 `disable-output-escaping` 或 <xref:System.Xml.XmlReader> 物件時，會忽略 <xref:System.Xml.XmlWriter> 屬性，這對於特殊字元不會有任何影響。</span><span class="sxs-lookup"><span data-stu-id="b0e94-133">The `disable-output-escaping` attribute is ignored when transforming to an <xref:System.Xml.XmlReader> or <xref:System.Xml.XmlWriter> object and has no effect on special characters.</span></span>  
+## <a name="escaping-special-characters"></a><span data-ttu-id="b8968-131">逸出特殊字元</span><span class="sxs-lookup"><span data-stu-id="b8968-131">Escaping Special Characters</span></span>  
+ <span data-ttu-id="b8968-132">`<xsl:text disable-output-escaping>` 標記可用來指示特殊字元是否必須逸出為 XML 格式 (例如，以 `<&lt>` 取代 `"<"` 符號)，或必須保持現有的狀況。</span><span class="sxs-lookup"><span data-stu-id="b8968-132">The `<xsl:text disable-output-escaping>` tag is used to indicate whether or not special characters need to be escaped into an XML form (for example, using `<&lt>` in place of the `"<"` symbol) or left in the present condition.</span></span> <span data-ttu-id="b8968-133">當轉換為 `disable-output-escaping` 或 <xref:System.Xml.XmlReader> 物件時，會忽略 <xref:System.Xml.XmlWriter> 屬性，這對於特殊字元不會有任何影響。</span><span class="sxs-lookup"><span data-stu-id="b8968-133">The `disable-output-escaping` attribute is ignored when transforming to an <xref:System.Xml.XmlReader> or <xref:System.Xml.XmlWriter> object and has no effect on special characters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0e94-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b0e94-134">See Also</span></span>  
- [<span data-ttu-id="b0e94-135">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="b0e94-135">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="b8968-134">請參閱</span><span class="sxs-lookup"><span data-stu-id="b8968-134">See Also</span></span>  
+ [<span data-ttu-id="b8968-135">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="b8968-135">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

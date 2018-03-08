@@ -5,30 +5,31 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 19820cd20ea87720968298aad8edef69d2bd1603
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: ee03c9cd64c3c3b251049be0826c7b29abe80bfa
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/05/2018
 ---
-# <a name="shape-of-wordprocessingml-documents-c"></a><span data-ttu-id="19698-102">WordprocessingML 文件的組織結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="19698-102">Shape of WordprocessingML Documents (C#)</span></span>
-<span data-ttu-id="19698-103">這個主題說明 WordprocessingML 文件的 XML 組織結構。</span><span class="sxs-lookup"><span data-stu-id="19698-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  
+# <a name="shape-of-wordprocessingml-documents-c"></a><span data-ttu-id="c47fa-102">WordprocessingML 文件的組織結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="c47fa-102">Shape of WordprocessingML Documents (C#)</span></span>
+<span data-ttu-id="c47fa-103">這個主題說明 WordprocessingML 文件的 XML 組織結構。</span><span class="sxs-lookup"><span data-stu-id="c47fa-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  
   
-## <a name="microsoft-office-formats"></a><span data-ttu-id="19698-104">Microsoft Office 格式</span><span class="sxs-lookup"><span data-stu-id="19698-104">Microsoft Office Formats</span></span>  
- <span data-ttu-id="19698-105">2007 Microsoft Office 系統的原始檔案格式為 Office Open XML (一般稱為 Open XML)。</span><span class="sxs-lookup"><span data-stu-id="19698-105">The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML).</span></span> <span data-ttu-id="19698-106">Open XML 是一種 Ecma 標準，而且目前正在通過 ISO-IEC 標準程序的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="19698-106">Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process.</span></span> <span data-ttu-id="19698-107">在 Open XML 中，字組處理檔案的標記語言稱為 WordprocessingML。</span><span class="sxs-lookup"><span data-stu-id="19698-107">The markup language for word processing files within Open XML is called WordprocessingML.</span></span> <span data-ttu-id="19698-108">這個教學課程會使用 WordprocessingML 原始程式檔做為範例的輸入。</span><span class="sxs-lookup"><span data-stu-id="19698-108">This tutorial uses WordprocessingML source files as input for the examples.</span></span>  
+## <a name="microsoft-office-formats"></a><span data-ttu-id="c47fa-104">Microsoft Office 格式</span><span class="sxs-lookup"><span data-stu-id="c47fa-104">Microsoft Office Formats</span></span>  
+ <span data-ttu-id="c47fa-105">2007 Microsoft Office 系統的原始檔案格式為 Office Open XML (一般稱為 Open XML)。</span><span class="sxs-lookup"><span data-stu-id="c47fa-105">The native file format for the 2007 Microsoft Office system is Office Open XML (commonly called Open XML).</span></span> <span data-ttu-id="c47fa-106">Open XML 是一種 Ecma 標準，而且目前正在通過 ISO-IEC 標準程序的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="c47fa-106">Open XML is an XML-based format that an Ecma standard and is currently going through the ISO-IEC standards process.</span></span> <span data-ttu-id="c47fa-107">在 Open XML 中，字組處理檔案的標記語言稱為 WordprocessingML。</span><span class="sxs-lookup"><span data-stu-id="c47fa-107">The markup language for word processing files within Open XML is called WordprocessingML.</span></span> <span data-ttu-id="c47fa-108">這個教學課程會使用 WordprocessingML 原始程式檔做為範例的輸入。</span><span class="sxs-lookup"><span data-stu-id="c47fa-108">This tutorial uses WordprocessingML source files as input for the examples.</span></span>  
   
- <span data-ttu-id="19698-109">如果您是使用 Microsoft Office 2003 且有安裝 Word、Excel 與 PowerPoint 2007 檔案格式的 Microsoft Office 相容性套件，便可以將文件儲存為 Office Open XML 格式。</span><span class="sxs-lookup"><span data-stu-id="19698-109">If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
+ <span data-ttu-id="c47fa-109">如果您是使用 Microsoft Office 2003 且有安裝 Word、Excel 與 PowerPoint 2007 檔案格式的 Microsoft Office 相容性套件，便可以將文件儲存為 Office Open XML 格式。</span><span class="sxs-lookup"><span data-stu-id="c47fa-109">If you are using Microsoft Office 2003, you can save documents in the Office Open XML format if you have installed the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
   
-## <a name="the-shape-of-wordprocessingml-documents"></a><span data-ttu-id="19698-110">WordprocessingML 文件的組織結構</span><span class="sxs-lookup"><span data-stu-id="19698-110">The Shape of WordprocessingML Documents</span></span>  
- <span data-ttu-id="19698-111">第一件要了解的事情是 WordprocessingML 文件的組織結構。</span><span class="sxs-lookup"><span data-stu-id="19698-111">The first thing to understand is the shape of WordprocessingML documents.</span></span> <span data-ttu-id="19698-112">WordprocessingML 文件包含具有文件段落的本文項目 (稱為 `w:body`)。</span><span class="sxs-lookup"><span data-stu-id="19698-112">A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document.</span></span> <span data-ttu-id="19698-113">每個段落都包含一或多個文字執行 (稱為 `w:r`)。</span><span class="sxs-lookup"><span data-stu-id="19698-113">Each paragraph contains one or more text runs (named `w:r`).</span></span> <span data-ttu-id="19698-114">每個文字執行都包含一或多個文字片段 (稱為 `w:t`)。</span><span class="sxs-lookup"><span data-stu-id="19698-114">Each text run contains one or more text pieces (named `w:t`).</span></span>  
+## <a name="the-shape-of-wordprocessingml-documents"></a><span data-ttu-id="c47fa-110">WordprocessingML 文件的組織結構</span><span class="sxs-lookup"><span data-stu-id="c47fa-110">The Shape of WordprocessingML Documents</span></span>  
+ <span data-ttu-id="c47fa-111">第一件要了解的事情是 WordprocessingML 文件的組織結構。</span><span class="sxs-lookup"><span data-stu-id="c47fa-111">The first thing to understand is the shape of WordprocessingML documents.</span></span> <span data-ttu-id="c47fa-112">WordprocessingML 文件包含具有文件段落的本文項目 (稱為 `w:body`)。</span><span class="sxs-lookup"><span data-stu-id="c47fa-112">A WordprocessingML document contains a body element (named `w:body`) that contains the paragraphs of the document.</span></span> <span data-ttu-id="c47fa-113">每個段落都包含一或多個文字執行 (稱為 `w:r`)。</span><span class="sxs-lookup"><span data-stu-id="c47fa-113">Each paragraph contains one or more text runs (named `w:r`).</span></span> <span data-ttu-id="c47fa-114">每個文字執行都包含一或多個文字片段 (稱為 `w:t`)。</span><span class="sxs-lookup"><span data-stu-id="c47fa-114">Each text run contains one or more text pieces (named `w:t`).</span></span>  
   
- <span data-ttu-id="19698-115">下列是非常簡單的 WordprocessingML 文件：</span><span class="sxs-lookup"><span data-stu-id="19698-115">The following is a very simple WordprocessingML document:</span></span>  
+ <span data-ttu-id="c47fa-115">下列是非常簡單的 WordprocessingML 文件：</span><span class="sxs-lookup"><span data-stu-id="c47fa-115">The following is a very simple WordprocessingML document:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -59,11 +60,11 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
 </w:document>  
 ```  
   
- <span data-ttu-id="19698-116">這份文件包含兩個段落。</span><span class="sxs-lookup"><span data-stu-id="19698-116">This document contains two paragraphs.</span></span> <span data-ttu-id="19698-117">這兩個段落都包含單一的文字執行，而且每個文字執行都包含單一的文字片段。</span><span class="sxs-lookup"><span data-stu-id="19698-117">They both contain a single text run, and each text run contains a single text piece.</span></span>  
+ <span data-ttu-id="c47fa-116">這份文件包含兩個段落。</span><span class="sxs-lookup"><span data-stu-id="c47fa-116">This document contains two paragraphs.</span></span> <span data-ttu-id="c47fa-117">這兩個段落都包含單一的文字執行，而且每個文字執行都包含單一的文字片段。</span><span class="sxs-lookup"><span data-stu-id="c47fa-117">They both contain a single text run, and each text run contains a single text piece.</span></span>  
   
- <span data-ttu-id="19698-118">查看 XML 格式之 WordprocessingML 文件內容最簡單的方式是使用 Microsoft Word 建立一個這種文件、儲存起來，然後執行下列程式，將 XML 列印到主控台。</span><span class="sxs-lookup"><span data-stu-id="19698-118">The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.</span></span>  
+ <span data-ttu-id="c47fa-118">查看 XML 格式之 WordprocessingML 文件內容最簡單的方式是使用 Microsoft Word 建立一個這種文件、儲存起來，然後執行下列程式，將 XML 列印到主控台。</span><span class="sxs-lookup"><span data-stu-id="c47fa-118">The easiest way to see the contents of a WordprocessingML document in XML form is to create one using Microsoft Word, save it, and then run the following program that prints the XML to the console.</span></span>  
   
- <span data-ttu-id="19698-119">這個範例會使用在 WindowsBase 組件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="19698-119">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="19698-120">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="19698-120">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="c47fa-119">這個範例會使用在 WindowsBase 組件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="c47fa-119">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="c47fa-120">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="c47fa-120">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -95,12 +96,12 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a><span data-ttu-id="19698-121">外部資源</span><span class="sxs-lookup"><span data-stu-id="19698-121">External Resources</span></span>  
- <span data-ttu-id="19698-122">[Introducing the Office (2007) Open XML File Formats](http://go.microsoft.com/fwlink/?LinkId=98093) (Office (2007) Open XML 檔案格式簡介)</span><span class="sxs-lookup"><span data-stu-id="19698-122">[Introducing the Office (2007) Open XML File Formats](http://go.microsoft.com/fwlink/?LinkId=98093)</span></span>  
+## <a name="external-resources"></a><span data-ttu-id="c47fa-121">外部資源</span><span class="sxs-lookup"><span data-stu-id="c47fa-121">External Resources</span></span>  
+ <span data-ttu-id="c47fa-122">[Introducing the Office (2007) Open XML File Formats](https://msdn.microsoft.com/library/ms406049.aspx) (Office (2007) Open XML 檔案格式簡介)</span><span class="sxs-lookup"><span data-stu-id="c47fa-122">[Introducing the Office (2007) Open XML File Formats](https://msdn.microsoft.com/library/ms406049.aspx)</span></span>  
+ <span data-ttu-id="c47fa-123">[Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx) (WordprocessingML 概觀)</span><span class="sxs-lookup"><span data-stu-id="c47fa-123">[Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)</span></span>  
+ <span data-ttu-id="c47fa-124">[WordProcessingML 檔案的結構](http://officeopenxml.com/anatomyofOOXML.php) \(英文\)</span><span class="sxs-lookup"><span data-stu-id="c47fa-124">[Anatomy of a WordProcessingML File](http://officeopenxml.com/anatomyofOOXML.php)</span></span>  
+ <span data-ttu-id="c47fa-125">[WordprocessingML 簡介](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)</span><span class="sxs-lookup"><span data-stu-id="c47fa-125">[Introduction to WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)</span></span>  
+ <span data-ttu-id="c47fa-126">[Office 2003: XML Reference Schemas Download page](https://www.microsoft.com/en-us/download/details.aspx?id=101) (Office 2003：XML 參考結構描述下載頁面)</span><span class="sxs-lookup"><span data-stu-id="c47fa-126">[Office 2003: XML Reference Schemas Download page](https://www.microsoft.com/en-us/download/details.aspx?id=101)</span></span>  
   
- <span data-ttu-id="19698-123">[Overview of WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094) (WordprocessingML 概觀)</span><span class="sxs-lookup"><span data-stu-id="19698-123">[Overview of WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)</span></span>  
-  
- <span data-ttu-id="19698-124">[Office 2003: XML Reference Schemas Download page](http://go.microsoft.com/fwlink/?LinkId=98095) (Office 2003：XML 參考結構描述下載頁面)</span><span class="sxs-lookup"><span data-stu-id="19698-124">[Office 2003: XML Reference Schemas Download page](http://go.microsoft.com/fwlink/?LinkId=98095)</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="19698-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19698-125">See Also</span></span>  
- [<span data-ttu-id="19698-126">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="19698-126">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="c47fa-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c47fa-127">See Also</span></span>  
+ [<span data-ttu-id="c47fa-128">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="c47fa-128">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
